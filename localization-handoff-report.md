@@ -1,28 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 10
+ Total Files | 9
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\plan-your-user-and-device-groups.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/DeployUse/plan-your-user-and-device-groups.md) | HandedOffSuccess | [Details](#f0693c1dc992e472ab354379982f4920182aee28196)
- [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/DeployUse/TOC.md) | HandedOffSuccess | [Details](#6751679d5a7d475551013ca10e4905e3a5224856212)
- [InTuneDocs\EndUser\media\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-Android-logo.JPG) | HandedOffFailed | [Details](#4004752da545e7c9c19b67ce8808ad3d3f0bd3a2302)
- [InTuneDocs\EndUser\media\Enroll-Apple-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-Apple-logo.JPG) | HandedOffFailed | [Details](#c13ff92646549eabc0c40c8dca41dae34521918c303)
- [InTuneDocs\EndUser\media\Enroll-windows-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-windows-logo.JPG) | HandedOffFailed | [Details](#6455011cf351fcecbd1579b74a9f491e8365466d304)
- [InTuneDocs\GetStarted\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/GetStarted/TOC.md) | HandedOffSuccess | [Details](#cee3624dee15ed4826b7f58599b3515881a63527469)
- [InTuneDocs\PlanDesign\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/PlanDesign/TOC.md) | HandedOffSuccess | [Details](#6b4ffc2eb3e6501af97c6677dbeea88c64eda3de1026)
- [InTuneDocs\Understand\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/Understand/TOC.md) | HandedOffSuccess | [Details](#527139bd2df5b3e7eb89071c97629d893c8544091082)
- [InTuneDocs\zDeletedTopics\plan-your-user-and-device-groups-old.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/zDeletedTopics/plan-your-user-and-device-groups-old.md) | HandedOffSuccess | [Details](#affc70456e63fdc436be309c0c2a103ea52d8ac01308)
- [migrated-03-14\Image\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/migrated-03-14/Image/Enroll-Android-logo.JPG) | HandedOffFailed | [Details](#4004752da545e7c9c19b67ce8808ad3d3f0bd3a21495)
+ [InTuneDocs\DeployUse\deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) | HandedOffSuccess | [Details](#9ba85c178eccda3b4167f6d084e805aa5f18af1f44)
+ [InTuneDocs\DeployUse\manage-access-to-email-and-O365-services-with-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/manage-access-to-email-and-O365-services-with-intune.md) | HandedOffSuccess | [Details](#2ac0a20fafcac98d68c2e77be620d28e8542cbc972)
+ [InTuneDocs\DeployUse\plan-your-user-and-device-groups.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/plan-your-user-and-device-groups.md) | HandedOffSuccess | [Details](#f0693c1dc992e472ab354379982f4920182aee28196)
+ [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/TOC.md) | HandedOffSuccess | [Details](#0921e7b779c53dc6def7d865a055391958b6080a212)
+ [InTuneDocs\EndUser\media\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-Android-logo.JPG) | HandedOffFailed | [Details](#4004752da545e7c9c19b67ce8808ad3d3f0bd3a2302)
+ [InTuneDocs\EndUser\media\Enroll-Apple-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-Apple-logo.JPG) | HandedOffFailed | [Details](#c13ff92646549eabc0c40c8dca41dae34521918c303)
+ [InTuneDocs\EndUser\media\Enroll-windows-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-windows-logo.JPG) | HandedOffFailed | [Details](#6455011cf351fcecbd1579b74a9f491e8365466d304)
+ [InTuneDocs\zDeletedTopics\plan-your-user-and-device-groups-old.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/zDeletedTopics/plan-your-user-and-device-groups-old.md) | HandedOffSuccess | [Details](#affc70456e63fdc436be309c0c2a103ea52d8ac01308)
+ [migrated-03-14\Image\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/migrated-03-14/Image/Enroll-Android-logo.JPG) | HandedOffFailed | [Details](#4004752da545e7c9c19b67ce8808ad3d3f0bd3a21495)
 
 ## Item Details
-##### <a name='f0693c1dc992e472ab354379982f4920182aee28196'></a> Source: [InTuneDocs\DeployUse\plan-your-user-and-device-groups.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/DeployUse/plan-your-user-and-device-groups.md)
+##### <a name='9ba85c178eccda3b4167f6d084e805aa5f18af1f44'></a> Source: [InTuneDocs\DeployUse\deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
+* Handoff File: [deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.2e5ae111a37151da00e40ad97dbdd53b77c8caf4.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c6a1b3927204865cec05516f33e168eda5db352/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.2e5ae111a37151da00e40ad97dbdd53b77c8caf4.pl-pl.xlf)
+* Handoff Datetime: 2016-03-22 18:56:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -30,11 +29,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6751679d5a7d475551013ca10e4905e3a5224856212'></a> Source: [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/DeployUse/TOC.md)
+##### <a name='2ac0a20fafcac98d68c2e77be620d28e8542cbc972'></a> Source: [InTuneDocs\DeployUse\manage-access-to-email-and-O365-services-with-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/manage-access-to-email-and-O365-services-with-intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
+* Handoff File: [manage-access-to-email-and-O365-services-with-intune.2518ef7342a58a741ccc90bec9bb6ae4b26c4efb.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c6a1b3927204865cec05516f33e168eda5db352/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/manage-access-to-email-and-O365-services-with-intune.2518ef7342a58a741ccc90bec9bb6ae4b26c4efb.pl-pl.xlf)
+* Handoff Datetime: 2016-03-22 18:56:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -42,7 +41,31 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4004752da545e7c9c19b67ce8808ad3d3f0bd3a2302'></a> Source: [InTuneDocs\EndUser\media\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-Android-logo.JPG)
+##### <a name='f0693c1dc992e472ab354379982f4920182aee28196'></a> Source: [InTuneDocs\DeployUse\plan-your-user-and-device-groups.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/plan-your-user-and-device-groups.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c6a1b3927204865cec05516f33e168eda5db352/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf)
+* Handoff Datetime: 2016-03-22 18:56:49
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='0921e7b779c53dc6def7d865a055391958b6080a212'></a> Source: [InTuneDocs\DeployUse\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/DeployUse/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c6a1b3927204865cec05516f33e168eda5db352/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/TOC.d669f1ddce84ce475f1caaaba10ea2dad4bca1c5.pl-pl.xlf)
+* Handoff Datetime: 2016-03-22 18:56:49
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='4004752da545e7c9c19b67ce8808ad3d3f0bd3a2302'></a> Source: [InTuneDocs\EndUser\media\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-Android-logo.JPG)
 * Status: HandedOffFailed
 * Target File: 
 * Handoff File: 
@@ -55,7 +78,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c13ff92646549eabc0c40c8dca41dae34521918c303'></a> Source: [InTuneDocs\EndUser\media\Enroll-Apple-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-Apple-logo.JPG)
+##### <a name='c13ff92646549eabc0c40c8dca41dae34521918c303'></a> Source: [InTuneDocs\EndUser\media\Enroll-Apple-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-Apple-logo.JPG)
 * Status: HandedOffFailed
 * Target File: 
 * Handoff File: 
@@ -68,7 +91,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6455011cf351fcecbd1579b74a9f491e8365466d304'></a> Source: [InTuneDocs\EndUser\media\Enroll-windows-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/EndUser/media/Enroll-windows-logo.JPG)
+##### <a name='6455011cf351fcecbd1579b74a9f491e8365466d304'></a> Source: [InTuneDocs\EndUser\media\Enroll-windows-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/EndUser/media/Enroll-windows-logo.JPG)
 * Status: HandedOffFailed
 * Target File: 
 * Handoff File: 
@@ -81,11 +104,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cee3624dee15ed4826b7f58599b3515881a63527469'></a> Source: [InTuneDocs\GetStarted\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/GetStarted/TOC.md)
+##### <a name='affc70456e63fdc436be309c0c2a103ea52d8ac01308'></a> Source: [InTuneDocs\zDeletedTopics\plan-your-user-and-device-groups-old.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/InTuneDocs/zDeletedTopics/plan-your-user-and-device-groups-old.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.fa7452f10c1ac8148ce488a34d334ba7b01068f4.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/TOC.fa7452f10c1ac8148ce488a34d334ba7b01068f4.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
+* Handoff File: [plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c6a1b3927204865cec05516f33e168eda5db352/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf)
+* Handoff Datetime: 2016-03-22 18:56:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -93,43 +116,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6b4ffc2eb3e6501af97c6677dbeea88c64eda3de1026'></a> Source: [InTuneDocs\PlanDesign\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/PlanDesign/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='527139bd2df5b3e7eb89071c97629d893c8544091082'></a> Source: [InTuneDocs\Understand\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/Understand/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.25973e7413a716a995daf5d2adc1c6c01a873f3f.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/TOC.25973e7413a716a995daf5d2adc1c6c01a873f3f.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='affc70456e63fdc436be309c0c2a103ea52d8ac01308'></a> Source: [InTuneDocs\zDeletedTopics\plan-your-user-and-device-groups-old.md](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/InTuneDocs/zDeletedTopics/plan-your-user-and-device-groups-old.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/755f7a7b4fcc20defec00286764708d30948c5e2/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/plan-your-user-and-device-groups.ef0bd04c09dd640f806c4a64d2843c0f4f730c8c.pl-pl.xlf)
-* Handoff Datetime: 2016-03-22 17:26:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='4004752da545e7c9c19b67ce8808ad3d3f0bd3a21495'></a> Source: [migrated-03-14\Image\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/26ec66d8f949b8f6960c99839d572f7cd950cf2b/migrated-03-14/Image/Enroll-Android-logo.JPG)
+##### <a name='4004752da545e7c9c19b67ce8808ad3d3f0bd3a21495'></a> Source: [migrated-03-14\Image\Enroll-Android-logo.JPG](https://github.com/Microsoft/IntuneDocs-pr/blob/ffa8008eceacbadac902a38455481d671fd2452a/migrated-03-14/Image/Enroll-Android-logo.JPG)
 * Status: HandedOffFailed
 * Target File: 
 * Handoff File: 
