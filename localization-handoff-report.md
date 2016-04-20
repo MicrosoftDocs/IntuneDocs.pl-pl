@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\introduction-to-device-compliance-policies-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/22ae81caf54476ddbfe9a0cdee7296352e9256b6/InTuneDocs/DeployUse/introduction-to-device-compliance-policies-in-microsoft-intune.md) | HandedOffSuccess | [Details](#092434fc9349f222a89a8d7d043b319836d8f15864)
- [InTuneDocs\DeployUse\protect-apps-and-data-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/22ae81caf54476ddbfe9a0cdee7296352e9256b6/InTuneDocs/DeployUse/protect-apps-and-data-with-microsoft-intune.md) | HandedOffSuccess | [Details](#a64a482466549174d0a5060894dc415060c5223c262)
+ [InTuneDocs\zDeletedTopics\Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6e0fe3f0ba131921b8814ea0592c481f15830300/InTuneDocs/zDeletedTopics/Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.md) | HandedOffSuccess | [Details](#710ad8d60bd427fdc2d566e7605db98d6b46c3eb1591)
 
 ## Item Details
-##### <a name='092434fc9349f222a89a8d7d043b319836d8f15864'></a> Source: [InTuneDocs\DeployUse\introduction-to-device-compliance-policies-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/22ae81caf54476ddbfe9a0cdee7296352e9256b6/InTuneDocs/DeployUse/introduction-to-device-compliance-policies-in-microsoft-intune.md)
+##### <a name='710ad8d60bd427fdc2d566e7605db98d6b46c3eb1591'></a> Source: [InTuneDocs\zDeletedTopics\Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6e0fe3f0ba131921b8814ea0592c481f15830300/InTuneDocs/zDeletedTopics/Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [introduction-to-device-compliance-policies-in-microsoft-intune.1cd77154e64631fcc324af8b8a9aaf322a160174.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/4235cb080681ecc5d1f0c0afaf5f957a0b7abfcd/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/introduction-to-device-compliance-policies-in-microsoft-intune.1cd77154e64631fcc324af8b8a9aaf322a160174.pl-pl.xlf)
-* Handoff Datetime: 2016-04-20 16:49:30
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a64a482466549174d0a5060894dc415060c5223c262'></a> Source: [InTuneDocs\DeployUse\protect-apps-and-data-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/22ae81caf54476ddbfe9a0cdee7296352e9256b6/InTuneDocs/DeployUse/protect-apps-and-data-with-microsoft-intune.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [protect-apps-and-data-with-microsoft-intune.6ccf429089e2e992c79d2e15ad0cedc79d68fd70.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/4235cb080681ecc5d1f0c0afaf5f957a0b7abfcd/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/protect-apps-and-data-with-microsoft-intune.6ccf429089e2e992c79d2e15ad0cedc79d68fd70.pl-pl.xlf)
-* Handoff Datetime: 2016-04-20 16:49:30
+* Handoff File: [Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.ad9ccc032e9f756e93f5b1ab59ec2f1994e07fc0.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/6d038a52856825aa1707459a31bdb5faa69089e7/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/Use-policies-to-manage-computers-and-mobile-devices-with-Microsoft-Intune.ad9ccc032e9f756e93f5b1ab59ec2f1994e07fc0.pl-pl.xlf)
+* Handoff Datetime: 2016-04-20 17:19:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
