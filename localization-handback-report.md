@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\includes\accessibility11-d_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility11-d_md.md) | InSyncHandedBackSuccess | [Details](#04a9cad3a03187390da0393af29c7abf25307271536)
 
 ## Item Details
+##### <a name='04a9cad3a03187390da0393af29c7abf25307271536'></a> Source: [InTuneDocs\includes\accessibility11-d_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility11-d_md.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\includes\accessibility11-d_md.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/8ff37e62d0f223af81be0bbda5c8c18edea3e346/InTuneDocs/includes/accessibility11-d_md.md)
+* Handoff File: [accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/13c750ca7bfd20f74d84c4f1ee647fe27446daf9/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf)
+* Handoff Datetime: 2016-05-01 18:01:02
+* Handoff Reason: Include
+* Archive File: [accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/92305674b70b23fee19a1b731f3022b2d611af41/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/archive/accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf)
+* Archive Datetime: 2016-05-09 14:49:06
+* Handback File: [accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/a40dce9a91d2afc53342074ce0512367deb50439/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/accessibility11-d_md.4e2e2b5a439129c40c240ca96c6b92bf14db4d52.pl-pl.xlf)
+* Handback Datetime: 2016-05-25 09:00:20
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
