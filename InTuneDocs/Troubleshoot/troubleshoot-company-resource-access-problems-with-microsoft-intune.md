@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Rozwiązywanie problemów z dostępem do zasobów firmy przy użyciu usługi Microsoft Intune
-Informacje przedstawione w tym temacie ułatwiają rozwiązywanie problemów w przypadku, gdy akcja usługi Microsoft Intune zwraca kod błędu.
+Kody błędów i stanów przedstawione w tym temacie ułatwiają rozwiązywanie problemów w przypadku, gdy akcja usługi Microsoft Intune zwraca kod błędu.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
@@ -374,9 +374,9 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |-2016346011|0x87D10065|Trwa wykonywanie określonego polecenia SyncML, ale polecenie nie zostało jeszcze zakończone.|
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

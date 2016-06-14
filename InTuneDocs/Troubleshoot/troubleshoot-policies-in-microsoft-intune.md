@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -47,44 +47,42 @@ W konsoli administracyjnej usługi Intune każde urządzenie ma kartę zasad w o
 
 Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 
--   Ustawienie **Zezwalaj na proste hasła** ma wartość **Tak**, jak pokazano w kolumnie **Wartość zamierzona**, ale jego ustawienie **Stan** ma wartość **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
+-   Opcja **Zezwalaj na proste hasła** jest ustawiona na **Tak**, jak przedstawiono w kolumnie **Wartość zamierzona**, ale jej **Stan** jest ustawiony na **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
 
 -   Podobnie rozwinięty element zasad **Ustawienia poczty e-mail dla urządzeń z systemem iOS** nie ma zastosowania do tego urządzenia, ponieważ jest to urządzenie z systemem Android.
 
 ![Zasady dotyczące urządzeń w usłudze Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE]
-> Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
+> [!NOTE] Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
 
 ## Odświeżanie zasad i interwały aktualizacji
 Należy pamiętać, że zasady są odświeżane i aktualizowane w regularnych odstępach czasu. Zwykle zasady powinny być rejestrowane na urządzeniach w ciągu 15 minut od dokonania zmiany. Poniżej przedstawiono więcej informacji na temat regularnych odstępów czasu odświeżania zasad:
 
 -   **Urządzenie z systemem Windows zarejestrowane w oprogramowaniu MDM**: wyzwalane na urządzeniu przez zaplanowane zadanie codziennie o 3:00 czasu lokalnego.
 
--   **Windows Phone**: zasady są aktualizowane co 8 godzin. Aktualizację można wymusić przez odświeżenie w portalu firmy w obszarze **Ustawienia**..
+-   **Windows Phone**: zasady są aktualizowane co 8 godzin. Aktualizację można wymusić przez odświeżenie w portalu firmy w obszarze **Ustawienia**.
 
--   **iOS**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając Portal firmy, wybierając urządzenie i klikając pozycję **Synchronizuj**..
+-   **iOS**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
 
--   **Android**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając Portal firmy, wybierając urządzenie i klikając pozycję **Synchronizuj**..
+-   **Android**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
 
 ## Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
 W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM błędy zasad w pliku policyplatform.log mogą wynikać z innych niż domyślne ustawień w Kontroli konta użytkownika systemu Windows na urządzeniu. Niektóre inne niż domyślne ustawienia funkcji Kontroli konta użytkownika mogą wpływać na instalacje klienta usługi Microsoft Intune i wykonywanie zasad.
 
 ### Aby rozwiązać problemy z Kontrolą konta użytkownika
 
-1.  Wycofaj komputer w sposób opisany w temacie [Wycofywanie urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management)..
+1.  Wycofaj komputer w sposób opisany w temacie [Wycofywanie urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
 2.  Zaczekaj 20 minut na usunięcie oprogramowania klienckiego.
 
-    > [!NOTE]
-    > Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
+    > [!NOTE] Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
 
 3.  W menu start wpisz wartość **Kontrola konta użytkownika**, aby otworzyć ustawienia Kontroli konta użytkownika.
 
 4.  Przesuń suwak powiadomień na ustawienie domyślne.
 
 ## Błąd 0x87D1FDE8 dla urządzenia KNOX
-**Problem**: po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się** na karcie zasad we właściwościach urządzenia.
+**Problem**: Po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się ** na karcie Zasady &gt; Właściwości w urządzeniu.
 
 Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowych. Opcja synchronizacji notatek urządzenia Samsung nie jest już obsługiwana i ta opcja nie powinna być wybrana w Twoim profilu. Upewnij się, że urządzenia miały wystarczająco dużo czasu na przetwarzanie zasad, nawet do 24 godzin.
 
@@ -102,8 +100,8 @@ Aby rozwiązać ten problem, ustaw czas w systemie lokalnym jak najbardziej zbli
 Urządzenia z systemem Windows Phone i Windows RT nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjne zasady zostały już zastosowane do urządzenia.
 
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
-Na przykład w systemie Windows RT na pulpicie szybko przesuń palcem od prawej strony, aby otworzyć pasek **Panele funkcji**, i kliknij pozycję **Ustawienia** &gt; **Panel sterowania**.  Wybierz aplet **Konta użytkowników** .
-W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Kliknij go, a następnie kliknij przycisk **Resetuj zasady** .
+Na przykład w systemie Windows RT na pulpicie szybko przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji** i wybierz pozycję **Ustawienia** &gt; **Panel sterowania**.  Wybierz aplet **Konta użytkowników** .
+W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
 
 ## Urządzenia z systemem Android nie wymuszają zmian zasad zabezpieczeń bez akceptacji użytkownika
@@ -115,9 +113,9 @@ W przeciwieństwie do innych platform urządzenia MDM z systemem Android nie poz
 **Rozwiązanie:** W [centrum administracyjnym usługi Office 365](https://portal.office.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Aktualizowanie aplikacji przy użyciu usługi Microsoft Intune | Microsoft Intune
+title: Aktualizowanie aplikacji | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -34,14 +34,14 @@ Po wydaniu nowej wersji wdrożonej aplikacji usługa Intune umożliwia aktualiza
 > [!IMPORTANT]
 > W przypadku wdrożenia aplikacji z akcją wdrożenia **Wymagana instalacja** i późniejszej zmiany akcji wdrożenia na **Dostępna instalacja**, aktualizacje aplikacji nie są automatycznie instalowane na urządzeniach, na których zainstalowano aplikację przed dokonaniem zmiany wdrożenia. Aby rozwiązać ten problem, można wykonać następujące czynności:
 > 
-> -   Użytkownik urządzenia powinien przejść do portalu firmy, wybrać zainstalowaną aplikację i kliknąć pozycję **Zainstaluj**..
-> -   Następnie należy zmienić akcję wdrażania na **Odinstaluj** i po odinstalowaniu aplikacji ponownie wdrożyć aplikację z akcją wdrożenia **Dostępna instalacja**..
+> -   Użytkownik urządzenia powinien przejść do portalu firmy, wybrać zainstalowaną aplikację i kliknąć pozycję **Instaluj**.
+> -   Następnie należy zmienić akcję wdrażania na **Odinstaluj**i po odinstalowaniu aplikacji ponownie wdrożyć aplikację z akcją wdrożenia **Dostępna instalacja**.
 
 ### Aby zaktualizować aplikację
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Aplikacje** &gt; **Aplikacje**..
+1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Aplikacje** &gt; **Aplikacje**.
 
-2.  Z listy **Aplikacje** wybierz aplikację, którą chcesz zaktualizować, a następnie kliknij pozycję **Edytuj**..
+2.  Z listy **Aplikacje** wybierz aplikację, którą chcesz zaktualizować, a następnie kliknij przycisk **Edytuj**.
 
 3.  W kreatorze **Edytowanie oprogramowania** podaj nowe szczegóły pakietu aplikacji.
 
@@ -53,6 +53,6 @@ Przy następnym sprawdzeniu dostępnych aplikacji przez urządzenia aplikacja zo
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

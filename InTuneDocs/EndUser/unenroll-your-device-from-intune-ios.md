@@ -15,7 +15,7 @@ ms.assetid: 28914db1-3e62-45f5-9632-b0d2a808a44d
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -34,7 +34,7 @@ Aby wyrejestrować urządzenie z usługi Intune, wykonaj następujące czynnośc
 
 1.  W aplikacji Portal firmy w obszarze **Moje urządzenia**wybierz urządzenie, którego rejestrację chcesz anulować.
 
-2.  Naciśnij pozycję **Usuń** &gt; **Usuń**..
+2.  Naciśnij pozycję **Usuń** &gt; **Usuń**.
 
 Po wyrejestrowaniu urządzenia z usługi Intune:
 
@@ -57,6 +57,6 @@ Po wyrejestrowaniu urządzenia z usługi Intune:
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

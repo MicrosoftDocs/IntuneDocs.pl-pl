@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -37,13 +37,13 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 1.  Sprawdź, czy Twoje konto istnieje w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i czy nie zostało wyłączone.
 
-2.  Upewnij się, że masz udostępnioną obsługę na tym koncie w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)..
+2.  Upewnij się, że masz udostępnioną obsługę na tym koncie w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
-3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że używasz prawidłowej nazwy użytkownika oraz hasła do logowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **jan@domena.com**..
+3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że używasz prawidłowej nazwy użytkownika oraz hasła do logowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**.
 
 ### Jeśli w Portalu firmy brakuje informacji kontaktowych działu IT
 
-1.  W konsoli administracyjnej usługi Intune kliknij kolejno pozycje **Administracja** &gt; **Portal firmy**..
+1.  W konsoli administracyjnej usługi Intune wybierz pozycję **Administrator** &gt; **Portal firmy**.
 
 2.  Ustaw szczegóły dla pozycji **Kontakt z działem IT** .
 
@@ -63,7 +63,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 4.  Jeśli pasek postępu pobierania aplikacji dla systemu iOS pokazuje ukończenie pobierania, ale instalacja aplikacji kończy się niepowodzeniem, przyczyną może być problem z udostępnionymi plikami aplikacji.
 
-### Jeśli po kliknięciu linku do aplikacji dla systemu iOS następuje przejście do poprzedniej lokalizacji w sklepie iTunes
+### Jeśli link do aplikacji dla systemu iOS umożliwia przejście do poprzedniej lokalizacji w sklepie iTunes
 
 1.  Bieżąca sesja sklepu iTunes App Store otwiera się na poprzedniej stronie aplikacji.
 
@@ -85,15 +85,15 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 2.  Więcej informacji zawiera dokumentacja dla deweloperów firmy Apple.
 
-### Błąd: Wydawca nie istnieje.
-Możesz użyć polecenia **Dodaj inną umowę dotyczącą oprogramowania**, aby dodać umowę licencyjną innej firmy. Możesz spróbować dodać wydawcę na stronie **Inne umowy licencjonowania oprogramowania**. Ta strona zawiera listę z istniejących wydawców w kolejności alfabetycznej.
-Po wprowadzeniu brakującego wydawcy występuje błąd **Wydawca nie istnieje**. 
+### Błąd: Wydawca nie istnieje
+Używasz polecenia **Dodaj inną umowę dotyczącą oprogramowania**, aby dodać umowę licencyjną innej firmy. Próbujesz dodać wydawcę na stronie **Inne umowy licencjonowania oprogramowania**. Ta strona zawiera listę istniejących wydawców w kolejności alfabetycznej.
+Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**. 
 
 To jest celowe. Usługa Intune zapewnia śledzenie licencji tylko dla popularnych tytułów oprogramowania. Usługa Intune wymaga co najmniej 4 osobnych kont raportujących oprogramowanie, zanim staje się dostępna jako opcja obciążenia związanego z licencjonowaniem.
 
 ### Jeśli zarządzane aplikacje nie zgłaszają stanu instalacji
 
-Przed zaktualizowaniem usługi Microsoft Intune w listopadzie 2014 r. nie zebrano informacji o stanie instalacji zarządzanych aplikacji. W przypadku urządzeń, na których zarządzane aplikacje zostały zainstalowane przed tą aktualizacją usługi, zaktualizuj każde skojarzone wdrożenie aplikacji przy użyciu odpowiedniej akcji wdrażania (na przykład **Dostępna instalacja**). Poszczególne urządzenia zaktualizują aplikacje podczas automatycznego sprawdzania dostępnych aplikacji. Aby uzyskać więcej informacji, zobacz [Aktualizowanie aplikacji przy użyciu usługi Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune)..
+Przed zaktualizowaniem usługi Microsoft Intune w listopadzie 2014 r. nie zebrano informacji o stanie instalacji zarządzanych aplikacji. W przypadku urządzeń, na których zarządzane aplikacje zostały zainstalowane przed tą aktualizacją usługi, zaktualizuj każde skojarzone wdrożenie aplikacji przy użyciu odpowiedniej akcji wdrażania (na przykład **Dostępna instalacja**). Poszczególne urządzenia zaktualizują aplikacje podczas automatycznego sprawdzania dostępnych aplikacji. Aby uzyskać więcej informacji, zobacz [Aktualizowanie aplikacji przy użyciu usługi Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune).
 
 ## <a name="BKMK_SoftDistErrorCodes"></a>Kody błędów wdrażania aplikacji
 Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podczas wdrażania aplikacji przy użyciu usługi Intune, ich prawdopodobne przyczyny oraz możliwe rozwiązania pomagające w rozwiązywaniu tych problemów.
@@ -106,9 +106,9 @@ Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podc
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 

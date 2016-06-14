@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -32,11 +32,11 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
 -   Jeśli w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) nie są wyświetlane dla komputera żadne alerty dotyczące wdrażania oprogramowania klienckiego, sprawdź łączność komputera z Internetem oraz konfigurację serwera i upewnij się, że komputer może komunikować się z adresem URL usługi: [https://manage.microsoft.com](https://manage.microsoft.com/). Następnie ponów próbę instalacji oprogramowania klienckiego.
 
--   Możesz ustawić wysyłanie wiadomości e-mail do wybranych adresatów, gdy występuje alert o niepowodzeniu wdrażania oprogramowania klienckiego, konfigurując regułę powiadomień w obszarze roboczym **Administrator** . Aby uzyskać więcej informacji, zobacz [Bądź na bieżąco dzięki alertom w usłudze Microsoft Intune](/intune/deploy-use/get-notified-by-microsoft-intune-alerts)..
+-   Możesz ustawić wysyłanie wiadomości e-mail do wybranych adresatów, gdy występuje alert o niepowodzeniu wdrażania oprogramowania klienckiego, konfigurując regułę powiadomień w obszarze roboczym **Administrator** . Aby uzyskać więcej informacji, zobacz [Bądź na bieżąco dzięki alertom w usłudze Microsoft Intune](/intune/deploy-use/get-notified-by-microsoft-intune-alerts).
 
 -   Usługa Intune wyświetla alert krytyczny **Wdrożenie oprogramowania klienckiego nie powiodło się**, gdy nie można wdrożyć oprogramowania klienckiego. Jest on wyświetlany na stronie **Przegląd systemu** oraz na stronach **Alerty** w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/). Oto jak sprawdzić alerty:
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Alerty** &gt; **Przegląd**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycje **Alerty** &gt; **Przegląd**.
 
 2.  Na stronie **Przegląd alertów** możesz przejrzeć następujące informacje:
 
@@ -44,7 +44,7 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
     -   Łączna liczba aktywnych alertów
 
-3.  Kliknij pozycję **Wszystkie alerty** , aby wyświetlić poniższe informacje na stronie **Alerty** . Alerty krytyczne są wyświetlane jako pierwsze:
+3.  Wybierz pozycję **Wszystkie alerty** , aby wyświetlić poniższe informacje na stronie **Alerty** . Alerty krytyczne są wyświetlane jako pierwsze:
 
     -   **Nazwa** — nazwa typu alertu, który wygenerował alert.
 
@@ -72,8 +72,7 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
 Może to być spowodowane brakiem krytycznych aktualizacji oprogramowania na komputerze.
 
-**Rozwiązanie:** 
-Upewnij się, że Twoje zasady aktualizacji oprogramowania umożliwiają instalację aktualizacji krytycznych, jak opisano w temacie [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune). 
+**Rozwiązanie:** Upewnij się, że Twoje zasady aktualizacji oprogramowania umożliwiają instalację aktualizacji krytycznych, jak opisano w temacie [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune) 
 
 
 ## Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
@@ -81,12 +80,11 @@ W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM b�
 
 ### Aby rozwiązać problemy z Kontrolą konta użytkownika
 
-1.  Wycofaj komputer w sposób opisany w temacie [Wycofywanie danych i urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management)..
+1.  Wycofaj komputer w sposób opisany w temacie [Wycofywanie danych i urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
 2.  Zaczekaj 20 minut na usunięcie oprogramowania klienckiego.
 
-    > [!NOTE]
-    > Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
+    > [!NOTE] Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
 
 3.  W menu start wpisz wartość **Kontrola konta użytkownika**, aby otworzyć ustawienia Kontroli konta użytkownika.
 
@@ -100,7 +98,7 @@ W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM b�
 
 2.  Przejdź do folderu *%programfiles%\Microsoft\OnlineManagement\Common*.
 
-3.  Uruchom następujące polecenie: ``ProvisioningUtil.exe /UninstallAgents /MicrosoftIntune``
+3.  Uruchom następujące polecenie ``ProvisioningUtil.exe /UninstallAgents /MicrosoftIntune``
 
 ## Kody błędów instalacji klienta
 W poniższej tabeli opisano kody błędów, które są wyświetlane w obszarze roboczym **Alerty** w przypadku niepowodzenia instalacji oprogramowania klienckiego. Zawiera ona sugestie dotyczące rozwiązywania problemów reprezentowanych przez poszczególne kody błędów.
@@ -112,26 +110,26 @@ W poniższej tabeli opisano kody błędów, które są wyświetlane w obszarze r
 |**0x80CF402C**|Nie można nawiązać połączenia z usługą Intune. Sprawdź łączność sieciową.|Sprawdź, czy komputer ma łączność sieciową. Upewnij się, że jest podłączony kabel sieciowy lub że sieć bezprzewodowa jest włączona.|
 |**0x80240438, 0x80CF0438**|Nie skonfigurowano ustawień serwera proxy w programie Internet Explorer i w systemie lokalnym.|Sprawdź ustawienia serwera proxy klienta i upewnij się, że konfiguracja serwera proxy na komputerze klienckim jest obsługiwana przez usługę Intune i że komputer kliencki ma dostęp do Internetu. Aby uzyskać więcej informacji dotyczących obsługiwanych konfiguracji serwera proxy, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).|
 |**0x80043001**|Pakiet rejestracyjny jest nieaktualny.|Pobierz i zainstaluj bieżący pakiet oprogramowania klienckiego z poziomu obszaru roboczego **Administrator** . Aby uzyskać instrukcje, zobacz temat [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/intune/deploy-use/install-the-windows-pc-client-with-microsoft-intune).|
-|**0x80043004**|Subskrypcja nie istnieje lub jest wyłączona.|Sprawdź, czy Twoje konto i subskrypcja usługi Intune są nadal aktywne. Aby wyświetlić ustawienia swojego konta, zaloguj się do niego w [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkId=698854%20)..|
-|**0x80043002**|Konto jest w trybie konserwacji.|Nie można zarejestrować nowych komputerów klienckich, gdy konto jest w trybie konserwacji. Aby wyświetlić ustawienia swojego konta, zaloguj się do niego w [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkId=698854%20)..|
+|**0x80043004**|Subskrypcja nie istnieje lub jest wyłączona.|Sprawdź, czy Twoje konto i subskrypcja usługi Intune są nadal aktywne. Aby wyświetlić ustawienia swojego konta, zaloguj się do niego w [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkId=698854%20).|
+|**0x80043002**|Konto jest w trybie konserwacji.|Nie można zarejestrować nowych komputerów klienckich, gdy konto jest w trybie konserwacji. Aby wyświetlić ustawienia swojego konta, zaloguj się do niego w [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkId=698854%20).|
 |**0x80043003**|Konto zostało usunięte.|Sprawdź, czy Twoje konto i subskrypcja usługi Intune są nadal aktywne. Aby wyświetlić ustawienia swojego konta, zaloguj się do niego.|
 |**0x80043005**|Komputer kliencki został wycofany.|Poczekaj kilka godzin, usuń wszelkie wcześniejsze wersje oprogramowania klienckiego z komputera, a następnie ponów próbę instalacji oprogramowania klienckiego. Instrukcje znajdują się w powyższym temacie **Co zrobić, jeśli klient nie zostanie odinstalowany z poziomu konsoli administratora usługi Microsoft Intune**.|
 |**0x80043006**|Osiągnięto maksymalną liczbę licencji na stanowiska dozwoloną dla konta.|Twoja organizacja musi zakupić dodatkowe licencje na stanowiska, aby można było zarejestrować więcej komputerów klienckich w usłudze.|
-|**0x80043007**|Nie można odnaleźć pliku certyfikatu w folderze programu instalacyjnego.|Wyodrębnij wszystkie pliki przed rozpoczęciem instalacji. Nie zmieniaj nazw wyodrębnionych plików ani ich nie przenoś: wszystkie pliki muszą znajdować się w tym samym folderze — w przeciwnym razie instalacja się nie powiedzie. Aby uzyskać więcej informacji, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/intune/deploy-use/install-the-windows-pc-client-with-microsoft-intune)..|
+|**0x80043007**|Nie można odnaleźć pliku certyfikatu w folderze programu instalacyjnego.|Wyodrębnij wszystkie pliki przed rozpoczęciem instalacji. Nie zmieniaj nazw wyodrębnionych plików ani ich nie przenoś: wszystkie pliki muszą znajdować się w tym samym folderze — w przeciwnym razie instalacja się nie powiedzie. Aby uzyskać więcej informacji, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/intune/deploy-use/install-the-windows-pc-client-with-microsoft-intune).|
 |**0x8024D015**, **0x00240005**, **0x80070BC2**, **0x80070BC9**, **0x80CFD015**|Nie można zainstalować oprogramowania, ponieważ komputer kliencki oczekuje na ponowne uruchomienie.|Uruchom ponownie komputer, a następnie ponów próbę instalacji oprogramowania klienckiego.|
-|**0x80070032**|Na komputerze klienckim nie odnaleziono co najmniej jednego wymagania wstępnego dotyczącego instalacji oprogramowania klienckiego.|Upewnij się, że na komputerze klienckim są zainstalowane wszystkie wymagane aktualizacje, a następnie ponów próbę instalacji oprogramowania klienckiego. Aby uzyskać więcej informacji na temat wymagań wstępnych dotyczących instalowania oprogramowania klienckiego, zobacz [Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)..|
-|**0x80043008**|Nie można uruchomić usługi Microsoft Online Management Updates.|Skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..|
-|**0x80043009**|Komputer kliencki jest już zarejestrowany w usłudze.|Aby móc ponownie zarejestrować komputer kliencki w usłudze, musisz go najpierw wycofać. Aby uzyskać instrukcje, zobacz [Wycofywanie danych i urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management)..|
-|**0x8004300B**|Nie można uruchomić pakietu instalacyjnego oprogramowania klienckiego, ponieważ wersja systemu Windows uruchomiona na kliencie jest nieobsługiwana.|Usługa Intune nie obsługuje wersji systemu Windows uruchomionej na komputerze klienckim. Aby wyświetlić listę obsługiwanych systemów operacyjnych, zobacz [Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)..|
-|**0xAB2**|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL może być konieczne użycie narzędzi opisanych w artykule KB198038 z bazy wiedzy pomocy technicznej firmy Microsoft: [Useful Tools for Package and Deployment Issues (Przydatne narzędzia w przypadku problemów z tworzeniem pakietów i wdrażaniem)](http://go.microsoft.com/fwlink/?LinkID=234255).|
+|**0x80070032**|Na komputerze klienckim nie odnaleziono co najmniej jednego wymagania wstępnego dotyczącego instalacji oprogramowania klienckiego.|Upewnij się, że na komputerze klienckim są zainstalowane wszystkie wymagane aktualizacje, a następnie ponów próbę instalacji oprogramowania klienckiego. Aby uzyskać więcej informacji na temat wymagań wstępnych dotyczących instalowania oprogramowania klienckiego, zobacz [Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
+|**0x80043008**|Nie można uruchomić usługi Microsoft Online Management Updates.|Skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
+|**0x80043009**|Komputer kliencki jest już zarejestrowany w usłudze.|Aby móc ponownie zarejestrować komputer kliencki w usłudze, musisz go najpierw wycofać. Aby uzyskać instrukcje, zobacz [Wycofywanie urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).|
+|**0x8004300B**|Nie można uruchomić pakietu instalacyjnego oprogramowania klienckiego, ponieważ wersja systemu Windows uruchomiona na kliencie jest nieobsługiwana.|Usługa Intune nie obsługuje wersji systemu Windows uruchomionej na komputerze klienckim. Aby wyświetlić listę obsługiwanych systemów operacyjnych, zobacz [Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
+|**0xAB2**|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL może być konieczne użycie narzędzi opisanych w artykule KB198038 z bazy wiedzy pomocy technicznej firmy Microsoft: [Useful Tools for Package and Deployment Issues](http://go.microsoft.com/fwlink/?LinkID=234255).|
 |**0x8004300f**|Nie można zainstalować oprogramowania, ponieważ jest już zainstalowany klient programu System Center Configuration Manager.|Usuń klienta programu Configuration Manager, a następnie ponów próbę instalacji oprogramowania klienckiego.|
 |**0x80043010**|Nie można zainstalować oprogramowania, ponieważ jest już zainstalowany klient programu Open Mobile Alliance Device Management (OMADM).|Wyrejestruj klienta programu OMADM, a następnie ponów próbę instalacji oprogramowania klienckiego.|
 Jeśli problemy z instalacją występują nadal, skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md). Przygotuj dziennik rejestracji komputerów klienckich (znajdujący się w pliku %*programfiles*%\Microsoft\OnlineManagement\Logs\Enrollment.log i %*userprofile*%\AppData\Local\Microsoft\OnlineManagement\Logs\Enrollement.log) oraz dziennik usługi Windows Update (znajdujący się w pliku %*windir*%\windowsupdate.log) do przedstawienia inżynierom pomocy technicznej.
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 
