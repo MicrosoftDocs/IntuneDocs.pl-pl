@@ -1,15 +1,20 @@
-# [Understand and Explore](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Get Started](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Poznawanie i eksplorowanie](/intune/understand-explore/introduction-to-microsoft-intune)
+# [Wprowadzenie](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Wdrażanie i użytkowanie](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 
-# [Troubleshoot](how-to-get-support-for-microsoft-intune.md)
-## [How to get support](how-to-get-support-for-microsoft-intune.md)
-## [Troubleshoot endpoint protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
-## [Troubleshoot company resource access problems](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
-## [Troubleshoot app deployment problems](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
-## [Troubleshoot device enrollment](troubleshoot-device-enrollment-in-intune.md)
-## [Troubleshoot policies](Troubleshoot-policies-in-microsoft-intune.md)
-## [Troubleshoot client setup](Troubleshoot-client-setup-in-microsoft-intune.md)
-## [Troubleshoot software updates](Troubleshoot-software-updates-in-microsoft-intune.md)
-## [Troubleshoot email profiles](Troubleshoot-email-profiles-in-microsoft-intune.md)
+# [Rozwiązywanie problemów](how-to-get-support-for-microsoft-intune.md)
+## [Jak uzyskać pomoc techniczną](how-to-get-support-for-microsoft-intune.md)
+## [Rozwiązywanie problemów z punktami końcowymi](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z dostępem do zasobów firmy](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
+## [Rozwiązywanie problemów z wdrażaniem aplikacji](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z rejestrowaniem urządzeń](troubleshoot-device-enrollment-in-intune.md)
+## [Rozwiązywanie problemów z zasadami](Troubleshoot-policies-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z konfigurowaniem klientów](Troubleshoot-client-setup-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z aktualizacjami oprogramowania](Troubleshoot-software-updates-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z profilami poczty e-mail](Troubleshoot-email-profiles-in-microsoft-intune.md)
+
+
+<!--HONumber=May16_HO1-->
+
+

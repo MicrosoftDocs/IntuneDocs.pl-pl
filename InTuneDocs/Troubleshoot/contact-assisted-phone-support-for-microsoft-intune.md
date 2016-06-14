@@ -1,19 +1,35 @@
 ---
-title: Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
-ms.custom: na
-ms.reviewer: na
-ms.service: microsoft-intune
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
+# required metadata
+
+title: Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Intune
+description:
+keywords:
 author: Nbigman
+manager: jeffgilb
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod:
+ms.service: microsoft-intune
+ms.technology:
+ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: jeffgilb
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
 
-## Numery telefonów i godziny pracy znajdują się w poniższej tabeli.
+## Numery telefonów i godziny pracy
 
-|Kraj/region|Godziny pomocy technicznej|Godziny pracy|Obsługiwane języki|Bezpłatne n umery telefonów|Lokalne numery telefonów|
+|Kraj/region|Godziny pomocy technicznej|Godziny pracy|Obsługiwane języki|Bezpłatne numery telefonów|Lokalne numery telefonów|
 |------------------|---------------------------|------------------|-----------------------|---------------------------|-----------------------|
 |Algieria|24 x 7|Niedziela — czwartek<br /><br />09:00 – 19:00 CET (UTC +2)|francuski&#42;, angielski||+213 21 89 10 70<br /><br />Krok 1: wybierz opcję 1<br /><br />Krok 2: wybierz opcję 9<br /><br />Krok 3: wprowadź kod: 7703|
 |Argentyna|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 ART (UTC -3)|hiszpański&#42;, angielski|0800 2660571|011 53542347|
@@ -70,7 +86,7 @@ author: Nbigman
 |Nigeria|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 WAT (UTC +1)|angielski||+234 127 10 156<br /><br />Krok 1: wybierz opcję: 9<br /><br />Krok 2: wprowadź kod: 7705|
 |Norwegia|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|norweski&#42;, angielski|80031068|22310748|
 |Oman|24 x 7|Niedziela — czwartek<br /><br />09:00 – 17:00 GST (UTC +4)|arabski, angielski|80073332<br /><br />Krok 1: wybierz opcję 1 dla języka arabskiego lub 2 dla języka angielskiego<br /><br />Krok 2: wybierz opcję 9<br /><br />Krok 3: wprowadź kod: 7702||
-|Pakistan|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 PKT (UTC +5)|angielski|Tylko o nline||
+|Pakistan|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 PKT (UTC +5)|angielski|Tylko online||
 |Panama|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC -5)|hiszpański&#42;, angielski|00-800-051-0398<br /><br />Krok 1: wybierz opcję 4 (na potrzeby dostępu specjalnego)<br /><br />Krok 2: wprowadź kod: 7007||
 |Paragwaj|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 PYST (UTC -3)|hiszpański&#42;, angielski|009-800-441-0088||
 |Peru|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 PET (UTC -5)|hiszpański&#42;, angielski|0800 77464||
@@ -107,6 +123,6 @@ author: Nbigman
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 
