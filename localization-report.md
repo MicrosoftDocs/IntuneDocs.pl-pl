@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 23
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 150
-[ In Sync Handback Files ](#insync-handback-success-list)| 251
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 149
+[ In Sync Handback Files ](#insync-handback-success-list)| 252
 [ Ignored Files ](#ignored-list)| 225
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -723,7 +723,6 @@
  [InTuneDocs\DeployUse\windows-team-configuration-policy-settings-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/42e21b802fb605c98f688485c3b77703b3950e94/InTuneDocs/DeployUse/windows-team-configuration-policy-settings-in-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#b08d52289b94429b1328a7470469a7efdf4d46a7265)
  [InTuneDocs\DeployUse\wipe-managed-company-app-data-with-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e/InTuneDocs/DeployUse/wipe-managed-company-app-data-with-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#ebc83611679f5128df45e4ca6b2f3b745f47061d267)
  [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/0bb435b87c937ea118a0794c8332b9a8f268d36e/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-android.md) | OutofSyncHandedBackSuccess | [Details](#620078cdd6a6d918153ab5a9813a14406c11acb4284)
- [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md) | OutofSyncHandedBackSuccess | [Details](#b42d1b78961590f44100a90f99b53bef514fa6fd285)
  [InTuneDocs\EndUser\enroll-your-device-in-Intune-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/0bb435b87c937ea118a0794c8332b9a8f268d36e/InTuneDocs/EndUser/enroll-your-device-in-Intune-android.md) | OutofSyncHandedBackSuccess | [Details](#76cc1a43e09039285be76858155ef22f7b41cf9b291)
  [InTuneDocs\EndUser\error-evaluating-device.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e52ebdd62ca68f1d9226def654961075400184a8/InTuneDocs/EndUser/error-evaluating-device.md) | OutofSyncHandedBackSuccess | [Details](#6c28c3d259f0678669117afbc8a897b0b77056bf300)
  [InTuneDocs\EndUser\existing-company-email-account-found.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e52ebdd62ca68f1d9226def654961075400184a8/InTuneDocs/EndUser/existing-company-email-account-found.md) | OutofSyncHandedBackSuccess | [Details](#02a07a6017ed2bb569dd9d3756f84b7b8078f630301)
@@ -878,6 +877,7 @@
  [InTuneDocs\EndUser\device-doesnt-have-bitlocker-enabled-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-bitlocker-enabled-windows.md) | InSyncHandedBackSuccess | [Details](#dcc3872c4237023c80324ee3dca927e5095b87be281)
  [InTuneDocs\EndUser\device-doesnt-have-code-integrity-enabled-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-code-integrity-enabled-windows.md) | InSyncHandedBackSuccess | [Details](#793a3eb17aaa5e04c27a31302d93bfc46ff71cac282)
  [InTuneDocs\EndUser\device-doesnt-have-secure-boot-enabled-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-secure-boot-enabled-windows.md) | InSyncHandedBackSuccess | [Details](#e4c2066c0acb1c410ad420ebd5918535b72a5559283)
+ [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md) | InSyncHandedBackSuccess | [Details](#b42d1b78961590f44100a90f99b53bef514fa6fd285)
  [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-windows.md) | InSyncHandedBackSuccess | [Details](#12e559f51419da6c3edfa7af1d8b0f09c99e4caa286)
  [InTuneDocs\EndUser\encrypt-your-device-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/39bcea03cad061e5b84e073cc5affcdd14fc6015/InTuneDocs/EndUser/encrypt-your-device-android.md) | InSyncHandedBackSuccess | [Details](#22e9071171d2dc63562e94cabe2abdec3b2bd85e288)
  [InTuneDocs\EndUser\encrypt-your-device-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/encrypt-your-device-windows.md) | InSyncHandedBackSuccess | [Details](#aeeb607e54a207792e1cc8c16ee2ecd25a553e34289)
@@ -5021,18 +5021,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b42d1b78961590f44100a90f99b53bef514fa6fd285'></a> Source: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/04ad56a3ac225c014b9a42a58def198480ff536b/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
 * Handoff File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/4294c847ae2496d5733384c13dffda83e1f3d81f/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
 * Handoff Datetime: 2016-06-09 00:51:33
 * Handoff Reason: Include
 * Archive File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9bea484fe316ad82c4d935a0b2a93f3231c68523/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/archive/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
 * Archive Datetime: 2016-06-09 02:16:17
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/33751adca90795140fb124fda3cae640e9fd672b/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
-* Current Handback File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/089d47a75e8d5acad19ce4a62189e59ee30995c4/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
-* Current Handback Datetime: 2016-06-14 02:45:57
+* Handback File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/7d7b5235525e6979bf9c59fbe8d7393b08b5315d/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
+* Handback Datetime: 2016-06-16 17:22:24
 * [Back to Top](#report-top)
 
 ##### <a name='12e559f51419da6c3edfa7af1d8b0f09c99e4caa286'></a> Source: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-windows.md)
