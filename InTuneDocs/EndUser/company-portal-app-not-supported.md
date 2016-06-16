@@ -18,7 +18,7 @@ ms.assetid: dea37b91-33fa-4d4a-ac44-560b450c02a6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,10 +26,12 @@ ms.suite: ems
 ---
 
 # Nieobsługiwana aplikacja Portal firmy
-Nie można już używać tej wersji Portalu firmy. Aby kontynuować, zainstaluj aplikację **Portal firmy** ze Sklepu Windows.
+Nie można już używać tej wersji Portalu firmy. Aby kontynuować, zainstaluj najnowszą aplikację **Portal firmy** ze Sklepu Windows.
 
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO2-->
 
 

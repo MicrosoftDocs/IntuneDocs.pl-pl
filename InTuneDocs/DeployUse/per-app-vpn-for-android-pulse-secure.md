@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: [Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure | Microsoft Intune]
+title: Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure | Microsoft Intune
 description:
 keywords:
-author: [nbigman]
-manager: [jeffgilb]
+author: nbigman
+manager: jeffgilb
 ms.date: 05/08/2016
 ms.topic: article
 ms.prod:
@@ -18,14 +18,14 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: chrisbal
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android
+# Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji na urządzeniach z systemem Android
 
 Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw zostanie utworzony profil sieci VPN korzystający z typu połączenia Pulse Secure, a następnie niestandardowe zasady konfiguracji kojarzące ten profil z określonymi aplikacjami. Po wdrożeniu tych zasad na urządzeniu z systemem Android lub w grupach użytkowników otwarcie jednej z określonych aplikacji na tych urządzeniach będzie powodować otwarcie połączenia sieci VPN dla danej aplikacji. 
 
@@ -82,6 +82,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -32,7 +32,7 @@ Jeśli zdecydujesz się zmienić nazwę urządzenia, możesz zrobić to zdalnie 
 
 Aby zmienić nazwę urządzenia:
 
-1.  Otwórz [witrynę Portalu firmy w sieci Web](http://portal.manage.microsoft.com) i naciśnij urządzenie, którego nazwę chcesz zmienić.
+1.  Otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com) i naciśnij urządzenie, którego nazwę chcesz zmienić.
 
 2.  Naciśnij opcję **Zmień nazwę**.
 
@@ -40,9 +40,11 @@ Aby zmienić nazwę urządzenia:
 
 3.  W polu, w którym pojawi się bieżącą nazwa urządzenia, wpisz nową nazwę dla danego urządzenia, a następnie naciśnij przycisk **Zmień nazwę**. Urządzenie będzie teraz widoczne z nową nazwą.
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

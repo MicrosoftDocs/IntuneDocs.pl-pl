@@ -18,7 +18,7 @@ ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -36,13 +36,13 @@ Android | Obsługiwane
 iOS | Obsługiwane
 Windows 10 Mobile | Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu     
 Windows 10 Desktop | Nieobsługiwane  
-Windows Phone 8,1 | Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu
+Windows Phone 8.1 | Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu
 Windows Phone 8.0 | Nieobsługiwane
 Komputer (Windows 8.0 i starsze) | Nieobsługiwane       
 Komputer (Windows 8.1) | Nieobsługiwane
 
 </br>
-Aby zablokować urządzenie przy użyciu opcji zdalnego blokowania:
+Aby zablokować urządzenie przy użyciu funkcji zdalnego blokowania:
 
 1.  W [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) naciśnij nazwę urządzenia, które chcesz zablokować.
 
@@ -50,7 +50,7 @@ Aby zablokować urządzenie przy użyciu opcji zdalnego blokowania:
 
     Po naciśnięciu pozycji **Zdalne blokowanie** zostanie wyświetlony stan „Oczekiwanie na zdalne blokowanie”.  Gdy zdalne blokowanie zakończy się powodzeniem, stan zmieni się na „Zdalne blokowanie pomyślne”.
 
-    Stan jest wyświetlany w trzech miejscach:
+    Stan zdalnego blokowania jest wyświetlany w trzech miejscach:
 
     * Obszar powiadomień witryny sieci Web. 
     * Strona szczegółów urządzenia.
@@ -60,10 +60,11 @@ Aby zablokować urządzenie przy użyciu opcji zdalnego blokowania:
 
     Jeśli ponowna próba nie powiedzie się, skontaktuj się z administratorem IT, aby uzyskać pomoc. Jeśli po użyciu opcji zdalnego blokowania odnajdziesz swoje urządzenie i zechcesz je odblokować, po prostu wprowadź kod dostępu.
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

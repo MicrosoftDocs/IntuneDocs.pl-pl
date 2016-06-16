@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Usuwanie urządzenia z Portalu firmy | Microsoft Intune
+title: Usuwanie urządzenia z portalu firmy | Microsoft Intune
 description:
 keywords:
 author: Staciebarker
@@ -18,7 +18,7 @@ ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,23 +28,25 @@ ms.suite: ems
 
 # Usuwanie urządzenia z Portalu firmy
 
-Jeśli zdecydujesz, że urządzenie nie ma już być zarządzane przez usługę Intune i administratora IT, możesz je usunąć z Portalu firmy przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
+Jeśli zdecydujesz, że urządzenie nie ma już być zarządzane przez usługę Intune i administratora IT, możesz je usunąć z portalu firmy przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
-Gdy urządzenie zostanie usunięte, nie będzie już widoczne w Portalu firmy, a ponadto możesz utracić dostęp do służbowych danych, aplikacji i poczty e-mail. 
+Gdy urządzenie zostanie usunięte, nie będzie już widoczne w portalu firmy, a ponadto możesz utracić dostęp do służbowych danych, aplikacji i poczty e-mail. 
 
 Aby usunąć urządzenie:
 
-1.  Otwórz [witrynę Portalu firmy w sieci Web](http://portal.manage.microsoft.com) i naciśnij urządzenie, którego nazwę chcesz zmienić.
+1.  Otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com) i naciśnij urządzenie, którego nazwę chcesz zmienić.
 
-2.  Naciśnij pozycję **Usuń**..
+2.  Naciśnij pozycję **Usuń**.
 
     ![remove-device](./media/iwp-1-tap-reset-passcode.png)
 
 Twoje urządzenie zostanie usunięte.
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

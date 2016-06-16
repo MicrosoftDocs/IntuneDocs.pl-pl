@@ -18,7 +18,7 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,16 +30,16 @@ Masz już konto firmowej poczty e-mail. Jeśli chcesz kontynuować nawiązywanie
 
 1.  W oknie **Ustawienia** na Twoim urządzeniu usuń uprzednio skonfigurowane połączenie z firmową pocztą e-mail.
 
-    Na przykład na urządzeniu z systemem iOS naciśnij pozycję **Ustawienia** &gt; **Poczta, Kontakty, Kalendarz**. Wybierz służbowe konto e-mail, a następnie kliknij pozycję **Usuń**..
+    Na przykład na urządzeniu z systemem iOS naciśnij pozycję **Ustawienia** &gt; **Poczta, Kontakty, Kalendarz**. Wybierz służbowe konto e-mail, a następnie kliknij pozycję **Usuń**.
 
-2.  Otwórz aplikację Portal firmy na urządzeniu i naciśnij pozycję **Sprawdź zgodność**..
+2.  Otwórz aplikację Portal firmy na urządzeniu i naciśnij pozycję **Sprawdź zgodność**.
 
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
-Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj się z administratorem IT.
+Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

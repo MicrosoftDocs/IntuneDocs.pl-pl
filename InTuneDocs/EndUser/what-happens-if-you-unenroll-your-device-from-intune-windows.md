@@ -18,7 +18,7 @@ ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?
 
-Odinstalowanie aplikacji Portal firmy z urządzenia powoduje także wyrejestrowanie tego urządzenia z usługi Intune. Aby uzyskać dodatkowe informacje na temat zachodzących działań, kliknij link odpowiadający typowi używanego urządzenia.
+Odinstalowanie aplikacji Portal firmy z urządzenia powoduje także wyrejestrowanie tego urządzenia z usługi Intune. Aby uzyskać dodatkowe informacje na temat zachodzących działań, użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia.
 
 - [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
 - [Windows 10, Windows 8.1 lub Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
@@ -43,8 +43,7 @@ Odinstalowanie aplikacji Portal firmy z urządzenia powoduje także wyrejestrowa
 
 -   Program Intune Endpoint Protection zostanie usunięty z komputera. Jeśli na komputerze jest zainstalowane inne oprogramowanie do ochrony przed wirusami, ale jest ono wyłączone, po usunięciu programu Intune Endpoint Protection będzie je można ponownie włączyć. Po usunięciu komputera z Portalu firmy należy go sprawdzić.
 
-    > [!IMPORTANT]
-    > Jeśli inne oprogramowanie ochrony przed wirusami nie zostanie ponownie włączone lub żadne inne oprogramowanie tego typu nie jest zainstalowane, komputer może być narażony na ataki wirusów i złośliwego oprogramowania.
+    > [!IMPORTANT] Jeśli inne oprogramowanie ochrony przed wirusami nie zostanie ponownie włączone lub żadne inne oprogramowanie tego typu nie jest zainstalowane, komputer może być narażony na ataki wirusów i złośliwego oprogramowania.
 
 -   Wszystkie ustawienia na urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu) nie będzie miało dłużej zastosowania.
 
@@ -93,10 +92,11 @@ Usunięcie urządzenia z systemem Windows RT wywoła następujące konsekwencje:
 
 -   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
 
+Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 3a435650-3891-4754-8abc-4bbac244f33b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: kmyrup
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,13 +30,13 @@ W tym temacie opisano elementy potrzebne do utworzenia i wdrożenia profilów ce
 
 Aby przeprowadzać uwierzytelnianie oparte na certyfikatach w organizacji, należy zastosować urząd certyfikacji przedsiębiorstwa.
 
-Aby korzystać z profilów certyfikatu SCEP w połączeniu z urzędem certyfikacji przedsiębiorstwa, wymaga się również następujących elementów:
+Do korzystania z profilów certyfikatu SCEP w połączeniu z urzędem certyfikacji przedsiębiorstwa są wymagane również następujące elementy:
 
 -   Serwer z uruchomioną usługą rejestracji urządzeń sieciowych (NDES)
 
 -   Łącznik certyfikatów usługi Intune instalowany na serwerze z systemem Windows Server 2012 R2, na którym jest uruchamiana usługa NDES
 
-Aby korzystać z profilów certyfikatu PFX w połączeniu z urzędem certyfikacji przedsiębiorstwa, wymaga się również następujących elementów:
+Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacji przedsiębiorstwa są wymagane również następujące elementy:
 
 -  Komputer, który może komunikować się z urzędem certyfikacji, lub komputer urzędu certyfikacji.
 
@@ -52,15 +52,15 @@ Aby korzystać z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
 
 -  **Serwer NDES** (tylko SCEP): na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do obsługi usługi rejestracji urządzeń sieciowych.|
 -  **Komputer, który może komunikować się z urzędem certyfikacji** (tylko PFX): alternatywnie można użyć komputera urzędu certyfikacji.
--  **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalator **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. W przypadku profilów certyfikatów PFX zainstaluj łącznik certyfikatów na komputerze, który komunikuje się z urzędem certyfikacji.
+-  **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. W przypadku profilów certyfikatów PFX zainstaluj łącznik certyfikatów na komputerze, który komunikuje się z urzędem certyfikacji.
 -  **Serwer proxy aplikacji sieci Web** (opcjonalnie): serwer z systemem Windows Server 2012 R2 lub nowszym może zostać użyty jako serwer proxy aplikacji sieci Web (WAP). Ta konfiguracja:
     -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
     -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
 > [!NOTE]           
-> -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769) lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
+> -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
 >-  Ponadto serwer, który jest hostem serwera WAP, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej do zewnętrznych klientów oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
-    Informacje na temat certyfikatów wymaganych przez serwer proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
+Informacje na temat certyfikatów wymaganych przez serwer proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
 ### Certyfikaty i szablony
@@ -83,7 +83,7 @@ Skonfigurowanie profili certyfikatów będzie możliwe po wykonaniu poniższych 
 
 **Zadanie 1** — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 
-**Zadanie 2** (tylko w przypadku profilu SCEP) — Konfigurowanie warunków wstępnych na serwerze NDES
+**Zadanie 2** (tylko w przypadku profilu SCEP) — Konfigurowanie wymagań wstępnych na serwerze NDES
 
 **Zadanie 3** (tylko w przypadku profilu SCEP) — Konfigurowanie usługi NDES do użycia z usługą Intune
 
@@ -94,8 +94,7 @@ To zadanie obejmuje:
 
 -   Tworzenie konta usługi NDES
 
-    > [!NOTE]
-    > Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
+    > [!NOTE] Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
 
 -   Konfigurowanie szablonu certyfikatu dla usługi NDES
 
@@ -113,17 +112,15 @@ To zadanie obejmuje:
 
     -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. (Zabezpieczenia są realizowane przez moduł zasad usługi Intune dla usługi NDES).
 
-    -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**..
+    -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**.
 
-        > [!IMPORTANT]
-        > W przypadku szablonów certyfikatów dla systemu iOS i Mac OS X na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
+        > [!IMPORTANT] W przypadku szablonów certyfikatów dla systemów iOS i Mac OS X na karcie **Rozszerzenia** zmodyfikuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
     -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu.
 
 3.  Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune korzysta z wartości ustawionej w szablonie. Można jednak skonfigurować urząd certyfikacji tak, aby umożliwiał żądającemu określenie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora w usłudze Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
 
-    > [!IMPORTANT]
-    > W przypadku platform iOS i Mac OS X wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
+    > [!IMPORTANT] W przypadku platform iOS i Mac OS X wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
 
     W celu skonfigurowania urzędu certyfikacji tak, aby umożliwiał żądającemu określenie okresu ważności, uruchom następujące polecenia w urzędzie certyfikacji:
 
@@ -135,7 +132,7 @@ To zadanie obejmuje:
 
 4.  Użyj przystawki Urząd certyfikacji dla wystawiającego urzędu certyfikacji, aby opublikować szablon certyfikatu.
 
-    1.  Zaznacz węzeł **Szablony certyfikatów**, kliknij pozycje **Akcja**-&gt; **Nowy** &gt; **Szablon certyfikatu do wystawienia**, a następnie wybierz szablon utworzony w kroku 2.
+    1.  Zaznacz węzeł **Szablony certyfikatów**, kliknij pozycję **Akcja**-&gt; **Nowy** &gt; **Szablon certyfikatu do wystawienia**, a następnie wybierz szablon utworzony w kroku 2.
 
     2.  Sprawdź, czy certyfikat został opublikowany, wyświetlając go w folderze **Szablony certyfikatów** .
 
@@ -163,13 +160,13 @@ To zadanie obejmuje:
 
         -   **Serwer sieci Web** &gt; **Zabezpieczenia** &gt; **Filtrowanie żądań**
 
-        -   **Serwer sieci Web** &gt; **Projektowanie aplikacji** &gt; **ASP.NET 3.5**. Podczas instalacji programu ASP .NET 3.5 zostanie zainstalowany program .NET Framework 3.5. Podczas instalacji platformy .NET Framework 3.5 należy zainstalować zarówno podstawowy składnik **.NET Framework 3.5** , jak i składnik **Aktywacja HTTP**.
+        -   **Serwer sieci Web** &gt; **Projektowanie aplikacji** &gt; **ASP.NET 3.5**. Podczas instalacji programu ASP .NET 3.5 zostanie zainstalowany program .NET Framework 3.5. Podczas instalacji programu .NET Framework 3.5 należy zainstalować zarówno podstawowy składnik **.NET Framework 3.5** , jak i składnik **Aktywacja HTTP**.
 
-        -   **Serwer sieci Web** &gt; **Projektowanie aplikacji** &gt; **ASP.NET 4.5**. Podczas instalacji programu ASP .NET 4.5 zostanie zainstalowany program .NET Framework 4.5. Podczas instalowania platformy .NET Framework 4.5 należy zainstalować podstawowy składnik **.NET Framework 4.5**, składnik **ASP .NET 4.5** oraz składnik **Usługi WCF** &gt; **Aktywacja HTTP**.
+        -   **Serwer sieci Web** &gt; **Projektowanie aplikacji** &gt; **ASP.NET 4.5**. Podczas instalacji programu ASP .NET 4.5 zostanie zainstalowany program .NET Framework 4.5. Podczas instalacji programu .NET Framework 4.5 należy zainstalować podstawową funkcję **.NET Framework 4.5**, **ASP.NET 4.5** oraz funkcję **Usługi WCF** &gt; **Aktywacja HTTP**.
 
         -   **Narzędzia do zarządzania** &gt; **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** &gt; **Zgodność z metabazą usług IIS 6**
 
-        -   **Narzędzia do zarządzania** &gt; **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** &gt; **Zgodność z usługą WMI dla usług IIS 6**
+        -   **Narzędzia do zarządzania** &gt; **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** &gt; **Zgodność z narzędziami WMI usług IIS w wersji 6**
 
 2.  Na serwerze dodaj konto usługi NDES jako członka grupy **IIS_IUSR**.
 
@@ -211,7 +208,7 @@ To zadanie obejmuje:
 
     -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\**
 
-    Aby edytować ten klucz, określ **cel** szablonu certyfikatu znajdujący się na karcie **Obsługiwanie żądań**, a następnie edytuj odpowiadający mu wpis w rejestrze, zamieniając istniejące dane na nazwę szablonu certyfikatu określoną w ramach zadania 1 (nie nazwę wyświetlaną szablonu). Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
+    Aby edytować ten klucz, określ **przeznaczenie** szablonu certyfikatu znajdujące się na karcie **Obsługiwanie żądań**, a następnie zmodyfikuj odpowiadający mu wpis w rejestrze, zamieniając istniejące dane na nazwę szablonu certyfikatu określoną w ramach zadania 1 (nie nazwę wyświetlaną szablonu). Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
 
     |Cel szablonu certyfikatu (na karcie Obsługiwanie żądań)|Wartość rejestru do edycji|Wartość wyświetlona w konsoli administratora usługi Intune dla danego profilu protokołu SCEP|
     |--------------------------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------|
@@ -235,8 +232,7 @@ To zadanie obejmuje:
 
     3.  W polu **Certyfikat SSL**określ certyfikat uwierzytelniania serwera.
 
-        > [!NOTE]
-        > Jeśli serwer NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, **Nazwa podmiotu** dla certyfikatu uwierzytelniania serwera musi zawierać zewnętrzną nazwę serwera publicznego, a **Alternatywna nazwa podmiotu** musi zawierać wewnętrzną nazwę serwera.
+        > [!NOTE] Jeśli serwer NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, **Nazwa podmiotu** dla certyfikatu uwierzytelniania serwera musi zawierać zewnętrzną nazwę serwera publicznego, a **Alternatywna nazwa podmiotu** musi zawierać wewnętrzną nazwę serwera.
 
 2.  Na serwerze usługi NDES zażądaj certyfikatu **uwierzytelniania klienta** od wewnętrznego lub publicznego urzędu certyfikacji i zainstaluj ten certyfikat. Może to być ten sam certyfikat, którego użyto jako certyfikatu uwierzytelniania serwera, o ile ma on obie funkcje.
 
@@ -248,7 +244,7 @@ To zadanie obejmuje:
 
 ##### Aby skonfigurować filtrowanie żądań w usługach IIS
 
-1.  Na serwerze NDES otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie otwórz pozycję **Filtrowanie żądań**.
+1.  Na serwerze NDES otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia** , a następnie otwórz **Filtrowanie żądań**.
 
 2.  Kliknij pozycję **Edytuj ustawienia funkcji**, a następnie wprowadź następujące ustawienia:
 
@@ -277,7 +273,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
 ##### Aby włączyć obsługę łącznika certyfikatów
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Administracja** &gt; **Łącznik certyfikatów**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycję **Administracja** &gt; **Łącznik certyfikatów**.
 
 2.  Kliknij pozycję **Skonfiguruj lokalny łącznik certyfikatów**.
 
@@ -289,7 +285,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
 2.  Po zakończeniu uruchom pobrany program instalacyjny (**ndesconnectorssetup.exe**):
 
-    -   W przypadku certyfikatów PFX uruchom instalatora na komputerze, który może połączyć się z urzędem certyfikacji. Wybierz opcję dystrybucji certyfikatu PFX i kliknij pozycję Zainstaluj. Po zakończeniu instalacji kontynuuj, tworząc profil certyfikatu zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](configure-intune-certificate-profiles.md).
+    -   W przypadku certyfikatów PFX uruchom instalatora na komputerze, który może połączyć się z urzędem certyfikacji. Wybierz opcję dystrybucji certyfikatu PFX i kliknij pozycję Zainstaluj. Po ukończeniu instalacji utwórz profil certyfikatu zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](configure-intune-certificate-profiles.md).
 
     -   W przypadku certyfikatów SCEP uruchom instalatora na serwerze Windows Server 2012 R2.
 
@@ -304,8 +300,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
 4.  Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
 
-    > [!TIP]
-    > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
+    > [!TIP] Jeśli zamkniesz kreatora przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz otworzyć go ponownie za pomocą następującego polecenia:
     >
     > **&lt;ścieżka_instalacji&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -319,7 +314,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
     Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
 
-6.  Otwórz wiersz polecenia, wpisz nazwę **services.msc**, a następnie naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika certyfikatów** i kliknij polecenie **Uruchom ponownie**.
+6.  Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika certyfikatów usługi Intune** i kliknij polecenie **Uruchom ponownie**.
 
 Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź następujący adres URL, co powinno spowodować zwrócenie błędu **403** :
 
@@ -329,6 +324,6 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
 Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](configure-intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

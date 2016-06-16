@@ -18,7 +18,7 @@ ms.assetid: 0f7dc155-cb8e-477b-ba02-2623194a9575
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: pbala
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,10 +33,10 @@ Będąc administratorem IT, chcesz monitorować stan urządzeń w swojej organiz
 
 -   Obszar roboczy **[Alerty](get-notified-by-microsoft-intune-alerts.md)** ułatwia monitorowanie kondycji urządzeń zarządzanych przez usługę Intune (w tym stanu programu Endpoint Protection i ostrzeżeń dotyczących złośliwego oprogramowania, łączności sieciowej lub wyczerpywania się miejsca na dysku).
 
--   Urządzenia i komputery zarządzane przez usługę Intune zwracają szczegółowe informacje dotyczące ich właściwości i zainstalowanego oprogramowania.  Usługa Intune udostępnia narzędzia i raporty do zbadania oraz przedstawienia tych danych. Aby uzyskać szczegółowe informacje, zobacz [Zrozumienie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md)..
+-   Urządzenia i komputery zarządzane przez usługę Intune zwracają szczegółowe informacje dotyczące ich właściwości i zainstalowanego oprogramowania.  Usługa Intune udostępnia narzędzia i raporty do badania oraz przedstawiania tych danych. Aby uzyskać szczegółowe informacje, zobacz [Understand your devices with inventory in Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

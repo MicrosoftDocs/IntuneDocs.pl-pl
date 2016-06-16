@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Korzystanie z witryny internetowej Portal firmy w usłudze Intune | Microsoft Intune
+title: Korzystanie z witryny Portal firmy w usłudze Intune | Microsoft Intune
 description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -42,7 +42,7 @@ Oferuje ona następujące możliwości:
 
 -   [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT)
+-   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT) Jeśli masz problem ze znalezieniem informacji, zobacz, czy są wyświetlane w [witrynie Portalu firmy w sieci Web](http://portal.manage.microsoft.com).
 
 -   Wyświetlanie szczegółowych informacji o urządzeniu, w tym informacji o zgodności z zasadami obowiązującymi w firmie lub szkole
 
@@ -52,9 +52,9 @@ W **witrynie Portalu firmy** można wykonać większość zadań, które można 
 
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 - [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-windows-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

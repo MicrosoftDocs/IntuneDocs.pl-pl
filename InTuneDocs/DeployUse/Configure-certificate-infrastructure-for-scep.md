@@ -17,7 +17,7 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: 
+ms.reviewer: kmyrup
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,28 +27,28 @@ W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia prof
 
 ### Infrastruktura lokalna
 
--    **Domena usługi Active Directory**: wszystkie serwery wymienione w tej sekcji (z wyjątkiem serwera proxy aplikacji sieci Web) muszą być przyłączone do Twojej domeny usługi Active Directory.
+-    **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji sieci Web) muszą należeć do Twojej domeny usługi Active Directory.
 
--  **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
+-  **Urząd certyfikacji (CA):** wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
 I
--  **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi rejestracji urządzeń sieciowych. Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie może znajdować się na tym samym serwerze co ten urząd. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/en-us/library/dn473016.aspx).
+-  **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do obsługi usługi rejestracji urządzeń sieciowych. Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie powinien znajdować się na serwerze z tym urzędem. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/en-us/library/dn473016.aspx).
 
--  **Łącznik certyfikatów usługi Microsoft Intune**: za pomocą konsoli administracyjnej usługi Intune możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów.
--  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) można użyć serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+-  **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów.
+-  **Serwer proxy aplikacji sieci Web** (opcjonalnie): serwer z systemem Windows Server 2012 R2 lub nowszym może zostać użyty jako serwer proxy aplikacji sieci Web (WAP). Ta konfiguracja:
     -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
     -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
  > [!NOTE]           
 > -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
->-  Ponadto serwer, który hostuje serwer proxy aplikacji sieci Web, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej dla klientów zewnętrznych oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
-Informacje na temat certyfikatów dla serwera proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).
+>-  Ponadto serwer, który jest hostem serwera WAP, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej do zewnętrznych klientów oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
+Informacje na temat certyfikatów wymaganych przez serwer proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
 
 ### Wymagania dotyczące sieci
 
-Z Internetu do sieci obwodowej — zezwól na ruch przez port 443 ze wszystkich hostów/adresów IP w Internecie do serwera usługi NDES.
+Z Internetu do sieci obwodowej — zezwalaj na ruch z portu 443 ze wszystkich adresów hostów/IP w Internecie do serwera usługi NDES.
 
-Z sieci obwodowej do sieci zaufanej — zezwól na ruch dotyczący wszystkich portów i protokołów wymaganych do zapewnienia dostępu do domeny na serwerze usługi NDES przyłączonym do domeny. Serwer usługi NDES musi uzyskiwać dostęp do serwerów certyfikatów, serwerów DNS, serwerów programu Configuration Manager i kontrolerów domeny.
+Z sieci obwodowej do sieci zaufanej — zezwalaj na ruch dla wszystkich portów i protokołów wymagany do zapewnienia dostępu do domeny na serwerze usługi NDES przyłączonym do domeny. Serwer usługi NDES musi uzyskać dostęp do serwerów certyfikatów, serwerów DNS, serwerów programu Configuration Manager i kontrolerów domeny.
 
 
 ### <a name="BKMK_CertsAndTemplates"></a>Certyfikaty i szablony
@@ -58,7 +58,7 @@ Z sieci obwodowej do sieci zaufanej — zezwól na ruch dotyczący wszystkich po
 |**Szablon certyfikatu**|Ten szablon należy skonfigurować na serwerze wystawiającego urzędu certyfikacji.|
 |**Certyfikat uwierzytelniania klienta**|Żądany od wystawiającego lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
 |**Certyfikat uwierzytelniania serwera**|Żądany od wystawiającego lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik **cer** z głównego urzędu certyfikacji lub dowolnego urządzenia uznającego główny urząd certyfikacji za zaufany, a następnie wdrożyć go na urządzeniach, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik w formacie **.cer** z głównego urzędu certyfikacji lub dowolnego urządzenia traktującego główny urząd certyfikatów jako zaufany, a następnie wdrożyć go na urządzeniach, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
 ### <a name="BKMK_Accounts"></a>Konta
 
@@ -71,7 +71,7 @@ Skonfigurowanie profili certyfikatów będzie możliwe po wykonaniu poniższych 
 
 **Zadanie 1**: Tworzenie konta usługi NDES
 
-**Zadanie 2**: Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
+**Zadanie 2**: Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
 
 **Zadanie 3**: Konfigurowanie wymagań wstępnych na serwerze usługi NDES
 
@@ -81,12 +81,12 @@ Skonfigurowanie profili certyfikatów będzie możliwe po wykonaniu poniższych 
 
 ### Zadanie 1 — Tworzenie konta usługi NDES
 
-Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
+Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje wdrożyły bardziej restrykcyjne zasady wykluczające te uprawnienia.
 
 
 
 
-### Zadanie 2 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
+### Zadanie 2 — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
 To zadanie obejmuje:
 
 -   Konfigurowanie szablonu certyfikatu dla usługi NDES
@@ -103,17 +103,17 @@ To zadanie obejmuje:
 
     -   Określ przyjazną **nazwę wyświetlaną szablonu** .
 
-    -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. (Zabezpieczenia są wymuszane przez moduł zasad usługi Intune dla usługi NDES).
+    -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. (Zabezpieczenia są realizowane przez moduł zasad usługi Intune dla usługi NDES).
 
     -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**.
 
         > [!IMPORTANT] W przypadku szablonów certyfikatów dla systemów iOS i Mac OS X na karcie **Rozszerzenia** zmodyfikuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
-    -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, którzy będą tworzyć profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
+    -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, tworzący profile SCEP, wymagają uprawnienia **Odczyt** umożliwiającego wyświetlenie szablonu podczas tworzenia profilów SCEP.
     
     > [!NOTE] Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
 
-3.  Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune używa wartości skonfigurowanej w szablonie. Można jednak skonfigurować urząd certyfikacji tak, aby umożliwiał żądającemu określenie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora w usłudze Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
+3.  Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune korzysta z wartości ustawionej w szablonie. Można jednak skonfigurować urząd certyfikacji tak, aby umożliwiał żądającemu określenie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora w usłudze Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
 
     > [!IMPORTANT] W przypadku platform iOS i Mac OS X wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
 
@@ -179,7 +179,7 @@ To zadanie obejmuje:
 
         -   **Narzędzia do zarządzania** &gt; **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** &gt; **Zgodność z narzędziami WMI usług IIS w wersji 6**
 
-  2.  Na serwerze dodaj konto usługi NDES jako element członkowski grupy **IIS_IUSR**.
+  2.  Na serwerze dodaj konto usługi NDES jako członka grupy **IIS_IUSR**.
 
    3.  Aby ustawić nazwę SPN konta usługi NDES, w oknie wiersza polecenia z podwyższonym poziomem uprawnień uruchom następujące polecenie:
 
@@ -219,16 +219,16 @@ To zadanie obejmuje:
 
     -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\**
 
-    Aby edytować ten klucz, określ wartość **Cel** szablonu certyfikatu znajdującą się na jego karcie **Obsługiwanie żądań**, a następnie zmodyfikuj odpowiadający mu wpis w rejestrze, zamieniając istniejące dane na nazwę szablonu certyfikatu określoną w zadaniu 1 (nie nazwę wyświetlaną szablonu). Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
+    Aby edytować ten klucz, określ **przeznaczenie** szablonu certyfikatu znajdujące się na karcie **Obsługiwanie żądań**, a następnie zmodyfikuj odpowiadający mu wpis w rejestrze, zamieniając istniejące dane na nazwę szablonu certyfikatu określoną w ramach zadania 1 (nie nazwę wyświetlaną szablonu). Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
 
-    |Cel szablonu certyfikatu (na karcie Obsługiwanie żądań)|Wartość rejestru do edycji|Wartość wyświetlona w konsoli administratora usługi Intune dla profilu SCEP|
+    |Cel szablonu certyfikatu (na karcie Obsługiwanie żądań)|Wartość rejestru do edycji|Wartość wyświetlona w konsoli administratora usługi Intune dla danego profilu protokołu SCEP|
     |--------------------------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------|
     |Podpis|SignatureTemplate|Podpis cyfrowy|
     |Szyfrowanie|EncryptionTemplate|Szyfrowanie klucza|
     |Podpis i szyfrowanie|GeneralPurposeTemplate|Szyfrowanie klucza<br /><br />Podpis cyfrowy|
     Na przykład jeśli Cel szablonu certyfikatu to **Szyfrowanie**, należy edytować wartość **EncryptionTemplate** i wprowadzić nazwę szablonu certyfikatu.
 
-3. Serwer usługi NDES będzie otrzymywać bardzo długie adresy URL (zapytania), co wymaga dodania dwóch wpisów rejestru:
+3. Serwer usługi NDES otrzymuje bardzo długie adresy URL (zapytania), które wymagają dodania dwóch wpisów rejestru:
 
     |Lokalizacja|Wartość|Typ|Dane|
     |-------|-----|----|----|
@@ -236,16 +236,16 @@ To zadanie obejmuje:
     |HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters|MaxRequestBytes|DWORD|65534 (dziesiętnie)|
 
 
-4. W Menedżerze usług IIS wybierz pozycję **Domyślna witryna sieci Web** -> **Filtrowanie żądań** -> **Edytuj ustawienia funkcji** i zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534*, tak jak pokazano.
+4. W Menedżerze usług IIS wybierz pozycje **Domyślna witryna sieci Web** -> **Filtrowanie żądań** -> **Edytuj ustawienia funkcji** i zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534*, tak jak pokazano.
 
-    ![Maksymalna długość adresu URL i zapytania w programie IIS](..\media\SCEP_IIS_max_URL.png) 
+    ![Maksymalna długość adresu URL i zapytania usług IIS](..\media\SCEP_IIS_max_URL.png) 
 
-5.  Uruchom ponownie serwer. Aby sfinalizować te zmiany, nie wystarczy uruchomić polecenie **iisreset** na serwerze.
-6. Przejdź do lokalizacji http://*nazwa_FQDN*/certsrv/mscep/mscep.dll. Powinna zostać wyświetlona strona usługi NDES podobna do następującej:
+5.  Uruchom ponownie serwer. Aby sfinalizować te zmiany, nie wystarczy uruchomić polecenia **iisreset** na serwerze.
+6. Przejdź do adresu http://*nazwa FQDN*/certsrv/mscep/mscep.dll. Powinna zostać wyświetlona strona usługi NDES podobna do następującej:
 
     ![Testowanie usługi NDES](..\media\SCEP_NDES_URL.png) 
 
-    Jeśli zostanie zwrócony komunikat **503 Usługa niedostępna**, sprawdź informacje w Podglądzie zdarzeń. Istnieje prawdopodobieństwo, że pula aplikacji jest zatrzymana z powodu braku prawa dla użytkownika usługi NDES. Te prawa opisano w zadaniu 1.
+    Jeśli zostanie wyświetlony błąd **503 Usługa niedostępna**, sprawdź informacje w Podglądzie zdarzeń. Istnieje prawdopodobieństwo, że pula aplikacji została zatrzymana z powodu braku uprawnienia dla użytkownika usługi NDES. Te uprawnienia opisano w sekcji dotyczącej zadania 1.
 
 ##### Aby zainstalować i powiązać certyfikaty na serwerze usługi NDES
 
@@ -260,7 +260,7 @@ To zadanie obejmuje:
 
     3.  W polu **Certyfikat SSL**określ certyfikat uwierzytelniania serwera.
 
-        > [!NOTE] Jeśli serwer usługi NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, certyfikat uwierzytelniania serwera musi mieć wartość **Nazwa podmiotu** zawierającą zewnętrzną nazwę serwera publicznego oraz mieć wartość **Alternatywna nazwa podmiotu** zawierającą wewnętrzną nazwę serwera.
+        > [!NOTE] Jeśli serwer NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, **Nazwa podmiotu** dla certyfikatu uwierzytelniania serwera musi zawierać zewnętrzną nazwę serwera publicznego, a **Alternatywna nazwa podmiotu** musi zawierać wewnętrzną nazwę serwera.
 
 2.  Na serwerze usługi NDES zażądaj certyfikatu **uwierzytelniania klienta** od wewnętrznego lub publicznego urzędu certyfikacji i zainstaluj ten certyfikat. Może to być ten sam certyfikat, którego użyto jako certyfikatu uwierzytelniania serwera, o ile ma on obie funkcje.
 
@@ -276,7 +276,7 @@ To zadanie obejmuje:
 
 2.  Kliknij pozycję **Edytuj ustawienia funkcji**, a następnie wprowadź następujące ustawienia:
 
-    **Długość ciągu zapytania (w bajtach)** = **65534**
+    **długość ciągu zapytania (w bajtach)** = **65534**
 
     **Maksymalna długość adresu URL (w bajtach)** = **65534**
 
@@ -295,9 +295,9 @@ To zadanie obejmuje:
 ### Zadanie 5 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 To zadanie obejmuje:
 
-Włączanie obsługi usługi NDES w usłudze Intune
+Włączanie obsługi usługi NDES w usłudze Intune.
 
-Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze usługi NDES
+Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze usługi NDES.
 
 ##### Aby włączyć obsługę łącznika certyfikatów
 
@@ -309,12 +309,12 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
 ##### Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com), a następnie kliknij pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Łącznik certyfikatów** &gt; **Pobierz łącznik certyfikatów**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com), a następnie kliknij kolejno pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Łącznik certyfikatów** &gt; **Pobierz łącznik certyfikatów**.
 
-2.  Po zakończeniu pobierania uruchom pobranego instalatora (**ndesconnectorssetup.exe**) na serwerze z systemem Windows Server 2012 R2. Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. (Usługa sieci Web CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.)
+2.  Po zakończeniu uruchom pobrany program instalacyjny (**ndesconnectorssetup.exe**) na serwerze z systemem Windows Server 2012 R2. Jednocześnie program instalacyjny zainstaluje moduł zasad dla usługi NDES i usługę sieci Web CRP. (Usługa sieci Web CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.)
 
     > [!NOTE]
-    > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP jest instalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku używania usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
+    > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP zostaje zainstalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku korzystania z usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
 
 3.  Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach Zadania 3.
 
@@ -336,16 +336,16 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 
     Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
 
-6.  Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i kliknij polecenie **Uruchom ponownie**.
+6.  Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika certyfikatów usługi Intune** i kliknij polecenie **Uruchom ponownie**.
 
 Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź następujący adres URL, co powinno spowodować zwrócenie błędu **403** :
 
-**http://&lt;nazwa_FQDN_serwera_usługi_NDES&gt;/certsrv/mscep/mscep.dll**
+**http:// &lt;nazwa_FQDN_serwera_usługi_NDES&gt;/certsrv/mscep/mscep.dll**
 
 ## Następne kroki
 Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,10 +15,10 @@ ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,11 +27,11 @@ ms.suite: ems
 
 # Using your iOS or Mac OS X device with Intune
 
-Poniższe kroki obejmują zadania, które należy wykonać na urządzeniu z systemem iOS lub Mac OS X, jeśli firma korzysta z usługi Microsoft Intune.
+Poniższe kroki obejmują zadania, które należy wykonać w urządzeniu z systemem iOS lub Mac OS X, jeśli firma korzysta z usługi Microsoft Intune.
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
-Informacje zamieszczone w tej sekcji ułatwią instalację Portalu firmy usługi Intune i rejestrowanie urządzeń z systemem iOS.
+Informacje przedstawione w tej sekcji ułatwiają instalację aplikacji Portal firmy usługi Intune i rejestrowanie urządzeń z systemem iOS.
 
 - [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)</br>
 - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md)</br>
@@ -40,9 +40,10 @@ Informacje zamieszczone w tej sekcji ułatwią instalację Portalu firmy usługi
 
 ## Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
 
-Informacje zamieszczone w tej sekcji ułatwią wykonywanie czynności po zarejestrowaniu urządzenia z systemem iOS w usłudze Intune.
+Informacje przedstawione w tej sekcji ułatwiają wykonywanie czynności po zarejestrowaniu urządzenia z systemem iOS w usłudze Intune.
 
 - [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)</br>
+- [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)</br>
 - [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-lost-or-stolen-device-ios.md)</br>
 - [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-ios.md)</br>
 - [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-ios.md)</br>
@@ -52,7 +53,7 @@ Informacje zamieszczone w tej sekcji ułatwią wykonywanie czynności po zarejes
 
 ## Rozwiązywanie problemów z urządzeniem
 
-Informacje zamieszczone w tej sekcji ułatwią rozwiązywanie problemów, które mogą występować w przypadku zarejestrowania urządzenia z systemem iOS w usłudze Intune.
+Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, które mogą występować w przypadku zarejestrowania urządzenia z systemem iOS w usłudze Intune.
 
 - [Wysyłanie błędów do administratora IT](send-errors-to-your-it-admin-ios.md)</br>
 - [Podczas korzystania z aplikacji Portal firmy występuje błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)</br>
@@ -65,6 +66,6 @@ Informacje zamieszczone w tej sekcji ułatwią rozwiązywanie problemów, które
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service:
@@ -19,7 +19,7 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: chrisgre
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,24 +28,24 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 
 # Hasło nie spełnia wymagań administratora IT
 
-Hasło nie spełnia co najmniej jednego wymagania skonfigurowanego dla urządzenia przez administratora IT. W zależności od zasad utworzonych przez administratora IT mogą występować następujące problemy:
+Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły nie spełnia co najmniej jednego wymagania, które administrator IT skonfigurował dla urządzenia. W zależności od zasad utworzonych przez administratora IT mogą występować następujące problemy:
 
 - Hasło nie zawiera znaków złożonych
 - Hasło jest zbyt proste i nie jest dostatecznie bezpieczne
 - Hasło wygasło
 - Hasło nie zostało ustawione
-- Hasło jest za krótkie
+- Hasło jest zbyt krótkie
 - Hasło było używane niedawno
-- Hasło nie jest dostatecznie złożone, dlatego nie spełnia wymagań
+- Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań
 
-Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT.
+Aby uzyskać informacje na temat ustawiania kodu PIN lub hasła albo innych zadań, które możesz wykonać przy użyciu urządzenia, kliknij link odpowiadający typowi używanego urządzenia:
 
-Aby uzyskać informacje o ustawianiu kodu PIN lub hasła albo informacje o innych zadaniach, które możesz wykonać przy użyciu swojego urządzenia, użyj linku odpowiadającego typowi używanego urządzenia:
+- [Ustaw numer PIN lub hasło dla urządzenia z systemem Android](set-your-pin-or-password-android.md)
+- [Ustaw lub zmień kod dostępu urządzenia z systemem iOS](set-or-change-your-passcode-ios.md)
+- [Ustaw lub zmień hasło urządzenia z systemem Windows](set-or-change-your-password-windows.md)
 
-- [Ustaw swój numer PIN lub hasło](set-your-pin-or-password-android.md)</br>
-- [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)</br>
-- - [Ustawianie lub zmienianie hasła](set-or-change-your-password-windows.md)
+Jeśli występują problemy z ustaleniem, jakie wymagania powinno spełniać hasło, należy skontaktować się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

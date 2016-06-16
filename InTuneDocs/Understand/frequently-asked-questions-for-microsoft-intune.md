@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Często zadawane pytania dotyczące usługi Microsoft Intune
-Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące usługi Intune. Jeśli nie widzisz tutaj odpowiedź na swoje pytanie, [daj nam znać](https://microsoftintune.uservoice.com/).
+Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące usługi Intune. Jeśli nie widzisz tutaj odpowiedzi na swoje pytanie, [daj nam znać](https://microsoftintune.uservoice.com/).
 
 ## Ogólne problemy
 
@@ -40,13 +40,13 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 -   **Czy dla urządzeń przenośnych w usłudze Intune jest dostępna funkcja Pomoc zdalna?**
 
-    Nie, nie jest. Przydatne mogą być aplikacje innych producentów, takie jak [Bomgar](http://www.bomgar.com/) i [TeamViewer](https://www.teamviewer.com/).
+    Nie, nie jest. Przydatne mogą być aplikacje innych producentów, takie jak [Bomgar](http://www.bomgar.com/) i <!---and [TeamViewer](https://www.teamviewer.com/)--->.
 
 ## Konta
 
 -   **Czy w przypadku rozpoczęcia ewaluacji usługi Intune i utworzenia nowej dzierżawy w wersji próbnej można dodać usługę Office 365 do środowiska ewaluacyjnego przy użyciu tej samej dzierżawy?**
 
-    Tak. Tak. Wystarczy zalogować się jako administrator globalny istniejącej subskrypcji/dzierżawy usługi Intune, np. *globaladmin@&lt;firma&gt;.onmicrosoft.com*.
+    Tak. Tak. Wystarczy zalogować się jako administrator globalny istniejącej subskrypcji/dzierżawy usługi Intune (np. *globaladmin@&lt;company&gt;.onmicrosoft.com*).
 
 -   **Czy jeśli przypiszę urząd zarządzania urządzeniami przenośnymi do usługi Intune w okresie próbnym subskrypcji utrudni to przełączenie się do usługi innej firmy w przypadku zmiany zdania na temat usługi Intune?**
 
@@ -86,7 +86,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
     -   **Czy można zablokować konkretne witryny sieci Web w przeglądarce urządzenia przenośnego za pośrednictwem usługi Intune?**
 
-        Nie w przeglądarce natywnej danej platformy. Możesz jednak zezwalać na przechodzenie pod adresy URL lub blokować adresy URL po wdrożeniu przeglądarki sieci Web zarządzanej przez usługę Intune na urządzeniach z systemem iOS i Android. Aby uzyskać więcej informacji, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser](/intune/Deploy-Use/Manage-Internet-access-using-managed-browser-policies-with-Microsoft-Intune.md).
+        Nie w przeglądarce natywnej danej platformy. Możesz jednak zezwalać na przechodzenie pod adresy URL lub blokować adresy URL po wdrożeniu przeglądarki Managed Browser zarządzanej przez usługę Intune na urządzeniach z systemem iOS i Android. Aby uzyskać więcej informacji, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser](/intune/Deploy-Use/Manage-Internet-access-using-managed-browser-policies-with-Microsoft-Intune.md).
 
     -   **Czy możemy uniemożliwić użytkownikowi odinstalowywanie aplikacji?**
 
@@ -94,7 +94,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
     -   **Czy istnieje sposób zarządzania użyciem danych mobilnych?**
 
-        Nie bezpośrednio, ale można zapewnić, że preferowaną metodą nawiązywania połączeń będzie sieć Wi-Fi, wypychając do urządzeń profile sieci Wi-Fi — zgodnie z opisem w temacie [Pomaganie użytkownikom w łączeniu się z sieciami firmowymi przy użyciu profilów sieci Wi-Fi](/intune/Deploy-Use/wi-fi-connections-in-microsoft-intune.md) Ponadto niektóre platformy (na przykład iOS i Android KNOX) umożliwiają sterowanie ustawieniami, takimi jak roaming danych i komunikacja głosowa.
+        Nie bezpośrednio, ale można zapewnić, że preferowaną metodą nawiązywania połączeń będzie sieć Wi-Fi, wypychając do urządzeń profile sieci Wi-Fi — zgodnie z opisem w temacie [Pomaganie użytkownikom w łączeniu się z sieciami firmowymi przy użyciu profilów sieci Wi-Fi](/intune/Deploy-Use/wi-fi-connections-in-microsoft-intune.md). Ponadto niektóre platformy (na przykład iOS i Android KNOX) umożliwiają sterowanie ustawieniami, takimi jak roaming danych i komunikacja głosowa.
 
     -   **Czy można uniemożliwić użytkownikowi anulowanie rejestracji urządzenia? Co jeśli jest to urządzenie będące własnością firmy?**
 
@@ -104,10 +104,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
         W niektórych sytuacjach można zmienić urząd zarządzania urządzeniami przenośnymi. W tym celu należy skontaktować się z pomocą techniczną zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](/intune/Troubleshoot/How-to-get-support-for-Microsoft-Intune.md). W poniższej tabeli opisano, jakie zmiany są możliwe. Zmiany dotyczące urzędu zarządzania urządzeniami przenośnymi wymagają ponownego zarejestrowania urządzeń.
 
-        ||**Do:** Intune!**Do:** O365|**Do:** Program Configuration Manager z usługą Intune|
-        |**Od:** Intune| |Tak&#42;|Tak|
-        |**Od:** O365||Tak&#42;||Tak|
-        |**Od:** Program Configuration Manager z usługą Intune|Tak|Tak| |
+        ||**Do:** Usługa Intune!**Do:** Usługa O365|**Do:** Program Configuration Manager z usługą Intune| |**Z:** Usługa Intune| |Tak&#42;|Tak| |**Z:** Usługa O365||Tak&#42;||Tak| |**Z:** Program Configuration Manager z usługą Intune|Tak|Tak| |
         
         &#42;Urzędy zarządzania urządzeniami przenośnymi usług O365 i Intune mogą współistnieć, co eliminuje konieczność ponownego rejestrowania urządzeń przenośnych.
 
@@ -143,8 +140,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
     **W jaki sposób jest tworzony token rejestracji aplikacji dla użytkowników usługi Intune?**
   Gdy administratorzy przekazują plik pfx skojarzony z certyfikatem firmy Symantec, usługa Intune automatycznie tworzy token rejestracji aplikacji i wdraża go na zarejestrowanych urządzeniach z systemem Windows Phone. Administratorzy usługi Intune nie muszą korzystać z narzędzia generatora tokenów rejestracji aplikacji, które jest dostępne w zestawie SDK systemu Windows Phone.
 
-      > [!IMPORTANT]
-        > Usługa Intune nie obsługuje ręcznego tworzenia tokenu rejestracji aplikacji i wdrażania go innym sposobem.
+      > [!IMPORTANT] Usługa Intune nie obsługuje ręcznego tworzenia tokenu rejestracji aplikacji i wdrażania go poza pasmem.
 
     **Co spowodowało rezygnację z wymagania certyfikatu firmy Symantec?**
        W wersji wydanej w listopadzie 2014 r. w usłudze Intune wprowadzono zmiany umożliwiające realizację scenariuszy, w których przedsiębiorstwa nie mają certyfikatu firmy Symantec.
@@ -174,7 +170,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
         > Narzędzie Wydawca oprogramowania usługi Intune nie weryfikuje podpisów aplikacji podczas ich przekazywania. W przypadku wdrożenia niepodpisanych aplikacji próba zainstalowania ich przez użytkowników zakończy się niepowodzeniem.
 
         **Co mogą zrobić użytkownicy, jeśli mają aplikację Portal firmy, ale nie dysponują certyfikatem firmy Symantec?**
-        Nie trzeba rejestrować urządzeń z systemem Windows Phone 8.1 przed zainstalowaniem aplikacji Portal firmy ze Sklepu. Jeśli urządzenie nie jest zarejestrowane, zostanie wyświetlony monit o zarejestrowanie go. Dotknięcie monitu w aplikacji Portal firmy spowoduje bezpośrednie przejście do pozycji **Ustawienia / Miejsce pracy**, która umożliwia zarejestrowanie urządzenia.
+        Nie trzeba rejestrować urządzeń z systemem Windows Phone 8.1 przed zainstalowaniem aplikacji Portal firmy ze Sklepu. Jeśli urządzenie nie jest zarejestrowane, zostanie wyświetlony monit o zarejestrowanie go. Dotknięcie monitu w portalu firmy spowoduje bezpośrednie przejście do pozycji **Ustawienia / Miejsce pracy**, która umożliwia zarejestrowanie urządzenia.
 
         Nawet jeśli urządzenie nie zostanie zarejestrowane, użytkownicy mogą wykonywać następujące czynności w aplikacji Portal firmy ze Sklepu:
 
@@ -277,7 +273,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 -   **Jak dodać zalecaną aplikację?**
 
-    W usłudze Intune te aplikacje są nazywane „polecanymi” lub „wyróżnionymi” i opisano je w temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](/Intune/Deploy-Use/deploy-apps-in-microsoft-intune.md)..
+    W usłudze Intune te aplikacje są nazywane „polecanymi” lub „wyróżnionymi” i opisano je w temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](/Intune/Deploy-Use/deploy-apps-in-microsoft-intune.md).
 
 -   **Czy można uzyskać dodatkową przestrzeń dyskową w chmurze na aplikacje do wdrożenia?**
 
@@ -291,7 +287,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 -   **Czy jeśli zaszyfruję tablet z systemem Windows 8 za pomocą funkcji BitLocker, to w przypadku kilku kolejnych niepomyślnych prób zalogowania się przez użytkownika mogę wymusić całkowite wyczyszczenie danych z urządzenia?**
 
-    Nie jest dostępna opcja całkowitego wyczyszczenia urządzenia z systemem Windows 8.1/RT dla żadnej usługi zarządzania urządzeniami przenośnymi, w tym usługi Intune. Usługa Intune umożliwia selektywne wyczyszczenie tych urządzeń. Aby uzyskać więcej informacji na temat czyszczenia/selektywnego czyszczenia danych w usłudze Intune, zobacz [Ochrona aplikacji i danych w usłudze Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md).
+    Nie jest dostępna opcja całkowitego wyczyszczenia urządzenia z systemem Windows 8.1/RT dla żadnej usługi zarządzania urządzeniami przenośnymi, w tym usługi Intune. Usługa Intune umożliwia selektywne wyczyszczenie tych urządzeń. Aby uzyskać więcej informacji na temat czyszczenia i selektywnego czyszczenia danych w usłudze Intune, zobacz [Ochrona aplikacji i danych w usłudze Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md).
 
 ## Portal firmy
 
@@ -315,6 +311,6 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

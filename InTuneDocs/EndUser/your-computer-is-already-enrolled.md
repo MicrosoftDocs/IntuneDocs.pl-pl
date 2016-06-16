@@ -18,7 +18,7 @@ ms.assetid: 8d3a40f5-99e9-48dc-9706-f7a3a23e5704
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,72 +27,19 @@ ms.suite: ems
 
 
 # Twój komputer jest już zarejestrowany
-Widzisz tę stronę, ponieważ została przez Ciebie uruchomiona instalacja oprogramowania klienckiego usługi Intune. Jednak to oprogramowanie jest już zainstalowane na Twoim komputerze i nie można kontynuować instalacji.
 
-Możliwe przyczyny:
+Jeśli wystąpi błąd z informacją, że Twój komputer jest już zarejestrowany, oznacza to, że komputer został już dodany do Portalu firmy, ale jeszcze nie jest połączony z Twoim kontem użytkownika. Wykonaj poniższą procedurę, aby połączyć komputer z kontem użytkownika i ukończyć proces.
 
--   Oprogramowanie klienckie zostało zainstalowane wcześniej, a program instalacyjny został uruchomiony ponownie.
+Aby połączyć komputer:
 
--   Program instalacyjny uruchomiono na komputerze po tym, jak administrator IT wycofał Twoje urządzenie z usługi Intune. Po wycofaniu urządzenia może upłynąć kilka godzin, zanim oprogramowanie klienckie zostanie usunięte z komputera.
+1.  Na komputerze, który chcesz połączyć ze swoim kontem, kliknij przycisk **Start**, a następnie kliknij pozycję **Microsoft Intune Center**.
 
--   Program instalacyjny wykrył niedawną nieudaną instalację lub nieudane usunięcie oprogramowania klienckiego.
+2.  Otwórz Portal firmy.
 
-## Co program instalacyjny instaluje na komputerze
-Program instalacyjny instaluje klienta usługi Intune. Po zakończeniu pracy programu instalacyjnego oprogramowanie klienckie jest nadal uruchomione w tle, ponieważ konfiguruje na komputerze używanie usługi Intune. Może to potrwać jakiś czas i obejmuje:
+3.  Postępuj zgodnie z monitami, aby połączyć komputer ze swoim kontem użytkownika.
 
--   Zarejestrowanie komputera w usłudze Intune
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
--   Przesłanie spisu informacji o sprzęcie komputera oraz zainstalowanym oprogramowaniu
-
--   Skonfigurowanie zasad usługi Intune, w tym zainstalowanie programu Endpoint Protection (jeśli jest to skonfigurowane)
-
--   Instalowanie programu Intune Center
-
-Po zainstalowaniu programu Intune Center można za jego pomocą uzyskać dostęp do portalu firmy, gdzie można połączyć komputer z kontem służbowym.
-
-## Microsoft Intune Center
-Program Intune Center jest instalowany jako aplikacja na komputerze po pomyślnym zainstalowaniu na komputerze oprogramowania klienckiego i zarejestrowaniu komputera w usłudze Intune. Oto co można zrobić w programie Intune Center:
-
--   **Pobierz aplikacje z Portalu firmy** — znajdź i zainstaluj aplikacje wdrożone przez administratora IT. Gdy pierwszy raz logujesz się do portalu firmy na nowo zarejestrowanym komputerze, jest Ci udostępniana opcja połączenia Twojego konta służbowego z tym komputerem.
-
--   **Sprawdź, czy są aktualizacje oprogramowania** — znajdź aktualizacje oprogramowania wdrożone przez administratora usługi Intune.
-
--   **Rozpocznij skanowanie komputera za pomocą programu Endpoint Protection** — możesz uruchomić skanowanie w poszukiwaniu złośliwego oprogramowania na komputerze.
-
--   **Poproś o pomoc zdalną** — ta opcja jest dostępna tylko w przypadku, gdy pomoc zdalna jest obsługiwana przez system operacyjny używanego komputera.
-
-## Sprawdzanie, czy oprogramowanie klienckie jest zainstalowane lub zostało usunięte
-**Sprawdzanie, czy klient jest zainstalowany:**
-Instalacja klienta usługi Intune została ukończona, gdy następujące aplikacje są dostępne na komputerze:
-
--   **Intune Center**
-
--   **Intune Endpoint Protection** (jeśli program Endpoint Protection został włączony przez administratora IT)
-
-Jeśli potrafisz używać Menedżera zadań, możesz wyszukać usługę klienta usługi Intune, która powinna być uruchomiona:
-
--   **OmcSvc**
-
-**Sprawdzanie, czy klient został usunięty:**
-Po odinstalowaniu z komputera klienta usługi Intune aplikacje, które zostały zainstalowane podczas instalacji klienta, są usuwane, także program Intune Center.
-
-Usługa klienta usługi Intune, **OmcSvc**, jest usuwana.
-
-## Jak usunąć z komputera oprogramowanie klienckie
-Domyślnie kilka godzin po wycofaniu komputera przez administratora IT w konsoli administracyjnej usługi Intune oprogramowanie klienckie usługi Intune zostanie odinstalowane.
-
-Aby ręcznie odinstalować oprogramowanie klienckie usługi Intune z komputera, można wymusić dezinstalację, wykonując następujące kroki:
-
-1.  Na komputerze otwórz wiersz polecenia w trybie administratora.
-
-2.  Przejdź do folderu **%programfiles%\Microsoft\OnlineManagement\Common**
-
-3.  Uruchom następujące polecenie: **ProvisioningUtil.exe /UninstallAgents /MicrosoftIntune**
-
-Spowoduje to zaplanowanie usunięcia oprogramowania klienckiego.
-
-
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

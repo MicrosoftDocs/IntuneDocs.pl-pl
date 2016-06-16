@@ -18,7 +18,7 @@ ms.assetid: cefb485f-f555-4da9-b4bf-d569cc4d5581
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,24 +28,24 @@ ms.suite: ems
 
 # Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia
 
-Jeśli zarejestrowane urządzenie z systemem Windows zostanie utracone lub skradzione, można je zresetować do domyślnych ustawień fabrycznych. W poniższych krokach przedstawiono sposób resetowania urządzenia przy użyciu aplikacji Portal firmy. Możesz również [zresetować urządzenie z poziomu witryny Portalu firmy w sieci Web](reset-your-device-cpwebsite.md)..
+Jeśli zarejestrowane urządzenie z systemem Windows zostanie utracone lub skradzione, można je zresetować do domyślnych ustawień fabrycznych. W poniższych krokach przedstawiono sposób resetowania urządzenia przy użyciu aplikacji Portal firmy. Możesz również [zresetować urządzenie z poziomu witryny sieci Web Portal firmy](reset-your-device-cpwebsite.md).
 
 
 > [!WARNING]
-> Zresetowanie urządzenia do ustawień fabrycznych powoduje usunięcie danych prywatnych i służbowych. Więcej informacji o tym, co się stanie w przypadku zresetowania urządzenia, znajdziesz w temacie [Co się stanie w przypadku zresetowania urządzenia przy użyciu Portalu firmy?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)..
+> Zresetowanie urządzenia do ustawień fabrycznych powoduje usunięcie danych prywatnych i służbowych. Więcej informacji o tym, co się stanie w przypadku zresetowania urządzenia, znajdziesz w temacie [What happens if you reset your device using the Company Portal?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md) (Co się stanie w przypadku zresetowania urządzenia przy użyciu Portalu firmy?).
 
 1.  W przeglądarce otwórz Portal firmy, a następnie zaloguj się na koncie służbowym.
 
 2.  W obszarze **Moje urządzenia** wybierz zgubione lub skradzione urządzenie.
 
-3.  Naciśnij pozycję **Resetuj** &gt; **Resetuj**..
+3.  Naciśnij kolejno pozycje **Zresetuj** &gt; **Zresetuj**.
 
 > [!NOTE]
-> Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go pracownika działu IT.
+> Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go pracownika działu IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

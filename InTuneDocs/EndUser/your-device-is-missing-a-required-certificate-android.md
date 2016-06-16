@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/05/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 9081b1d8-50e8-4bc2-ba37-766421364213
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,7 +33,7 @@ Jeśli urządzenie z systemem Android nie jest zarejestrowane w usłudze Intune 
 
 Aby rozwiązać ten problem i uzyskać wymagany certyfikat:
 
-1.  W przeglądarce przejdź do tej [strony certyfikatów firmy Digicert](https://www.digicert.com/digicert-root-certificates.htm)..
+1.  W przeglądarce przejdź do tej [strony certyfikatów firmy Digicert](https://www.digicert.com/digicert-root-certificates.htm).
 
 2.  Znajdź i pobierz certyfikat główny firmy CyberTrust Baltimore (https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt).
 
@@ -41,7 +41,7 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat:
 
 4.  W oknie dialogowym **Name the Certificate** (Nazwij certyfikat) zaakceptuj domyślną nazwę certyfikatu.
 
-5. Upewnij się, że ustawienie **Credential Use** (Użycie poświadczeń) ma wartość **Used for VPN and apps** (Używane w sieci VPN i aplikacjach), a następnie naciśnij przycisk **OK**.
+5. Upewnij się, że ustawienie **Credential Use** (Użycie poświadczeń) ma wartość **Used for VPN and apps** (Używane dla sieci VPN i aplikacji), a następnie naciśnij przycisk **OK**.
 
     ![Instalowanie certyfikatu w systemie Android — dodawanie nazwy certyfikatu](./media/andr-cert_install-2-add_cert_name.png)
 
@@ -49,6 +49,8 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat:
 
 7. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT.
 
-<!--HONumber=May16_HO1-->
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
+<!--HONumber=Jun16_HO1-->
 
 

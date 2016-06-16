@@ -15,10 +15,10 @@ ms.assetid: 98034875-cd3a-4367-a8d7-c5d4a438d496
 
 # optional metadata
 
-ROBOTS: noindex,nofollow
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,16 +28,16 @@ ms.suite: ems
 # Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android
 Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limitu czasu hasła na urządzeniu, wykonując następujące instrukcje:
 
-1.  W obszarze **Settings** (Ustawienia) na urządzeniu kliknij pozycję **Security** &gt; **Automatically Lock** (Zabezpieczenia > Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
+1.  W obszarze **Ustawienia** na urządzeniu kliknij pozycję **Zabezpieczenia** &gt;**Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
 
-    Jeśli pozycja **Zablokuj automatycznie** (**Zablokuj telefon po** na niektórych urządzeniach) nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt; **Blokada ekranu** &gt; **Hasło**..
+    Jeśli pozycja **Automatically Lock** („Zablokuj automatycznie”; na niektórych urządzeniach: **Lock phone after** — „Zablokuj telefon po”) nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt;**Blokada ekranu** &gt;**Hasło**.
 
 2.  Określ wartość limitu czasu hasła.
 
-3.  Upewnij się, że urządzenie jest zarejestrowane w usłudze Intune, postępując zgodnie z instrukcjami w temacie [Rejestrowanie urządzenia w celu używania go w pracy](http://go.microsoft.com/fwlink/?LinkId=519071)..
+3.  Upewnij się, że urządzenie jest zarejestrowane w usłudze Intune, postępując zgodnie z instrukcjami w temacie [Rejestrowanie urządzenia w celu używania go w pracy](http://go.microsoft.com/fwlink/?LinkId=519071).
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

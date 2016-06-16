@@ -18,7 +18,7 @@ ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,9 +48,11 @@ Jeśli masz problem z ustawieniem hasła spełniającego wszystkie wymagania dot
 4. Wprowadź nowe hasło w polu **Nowe hasło**, a następnie wprowadź ponownie nowe hasło w polu **Potwierdź hasło**.
 4. Naciśnij pozycję **Gotowe**.
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

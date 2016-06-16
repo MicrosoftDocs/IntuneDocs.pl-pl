@@ -18,7 +18,7 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Wyrejestrowywanie urządzenia z usługi Intune
 
-Po wyrejestrowaniu z usługi Intune urządzenie z systemem Android nie może uzyskiwać dostępu do zasobów firmy.  Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)..
+Po wyrejestrowaniu z usługi Intune urządzenie z systemem Android nie może uzyskiwać dostępu do zasobów firmy.  Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Portal firmy, wykonaj poniższe kroki lub obejrzyj ten [klip wideo](http://aka.ms/gyq2du):
 
@@ -46,10 +46,11 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
     ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

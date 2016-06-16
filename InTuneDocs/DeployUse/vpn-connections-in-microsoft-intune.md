@@ -18,7 +18,7 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,16 +48,20 @@ Usługa Intune umożliwia tworzenie profilów sieci VPN korzystających z nastę
 
 
 
-Typ połączenia |iOS i Mac OS X  |Android  |Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8,1  |Windows 10 Desktop i Mobile |
----------|---------|---------|---------|---------|---------
-Cisco AnyConnect |Tak |Tak   |Nie    |     Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
-Pulse Secure |Tak  |Tak |Tak   |Nie  |Tak  |Tak| Tak|        
-F5 Edge Client |Tak |Tak |Tak |Nie  |Tak  |   Tak |  Tak|   
-Dell SonicWALL Mobile Connect |Tak |Tak |Tak |Nie  |Tak |Tak |Tak|         
-CheckPoint Mobile VPN |Tak |Tak |Tak |Tak |Tak|Tak|Tak|
+Typ połączenia |iOS i Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
+----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
+Cisco AnyConnect|Tak |Tak   |Nie    |     Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
+Pulse Secure|Tak  |Tak |Tak   |Nie  |Tak  |Tak| Tak|        
+F5 Edge Client|Tak |Tak |Tak |Nie  |Tak  |   Tak |  Tak|   
+Dell SonicWALL Mobile Connect|Tak |Tak |Tak |Nie  |Tak |Tak |Tak|         
+CheckPoint Mobile VPN|Tak |Tak |Tak |Tak |Tak|Tak|Tak|
+Microsoft SSL (SSTP)|Nie |Nie |Nie |Nie |Nie|Nie|VPNv1 OMA-URI*|
+Tryb automatyczny firmy Microsoft|Nie |Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
+IKEv2|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
+PPTP|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Nie|Tak|
+L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
 
-
-
+\* Bez dodatkowych ustawień, które w przeciwnym razie są dostępne w systemie Windows 10.
 
 > [!IMPORTANT] Aby używanie profili sieci VPN wdrożonych na urządzeniu było możliwe, należy zainstalować odpowiednią do profilu aplikację VPN. W temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md) znajdziesz informacje, które pomogą Ci we wdrażaniu odpowiedniej aplikacji w usłudze Intune.  
 
@@ -81,7 +85,7 @@ Użytkownik jest uwierzytelniany w sieci VPN przez podanie swojej nazwy użytkow
 
 ## Tworzenie profilu sieci VPN
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady > Dodaj zasady**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady > Dodaj zasady**.
 2. Wybierz szablon nowych zasad, rozwijając odpowiedni typ urządzenia, a następnie wybierz profil sieci VPN dla tego urządzenia:
     * **Profil sieci VPN (system Android 4 i nowsze)**
     * **Profil sieci VPN (system iOS 7.1 i nowsze)**
@@ -102,15 +106,15 @@ Nazwa ustawienia  |Więcej informacji
 **Typ połączenia**     |  Wybierz jeden z następujących typów połączeń do użycia w danym profilu sieci VPN: **Cisco AnyConnect** (niedostępne dla systemów Windows 8.1 i Windows Phone 8.1), **Pulse Secure**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**
 **Opis serwera sieci VPN**     | Wprowadź opis serwera sieci VPN, z którym będą łączyć się urządzenia. **Przykład:** Serwer sieci VPN firmy Contoso Jeśli typ połączenia to **F5 Edge Client**, użyj pola **Lista serwerów**, aby określić listę opisów i adresów IP serwerów.
 **Adres IP lub nazwa FQDN serwera**    |Podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym będą łączyć się urządzenia. **Przykłady:** 192.168.1.1, vpn.contoso.com.  Jeśli typ połączenia to **F5 Edge Client**, użyj pola **Lista serwerów**, aby określić listę opisów i adresów IP serwerów.         |         
-**Lista serwerów**     |Kliknij pozycję **Dodaj**, aby dodać nowy serwer sieci VPN do użycia w celu połączenia z siecią VPN. Możesz również określić, który serwer będzie serwerem domyślnym dla danego połączenia. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **F5 Edge Client**.         
+**Lista serwerów**     |Wybierz pozycję **Dodaj**, aby dodać nowy serwer sieci VPN do użycia na potrzeby połączenia z siecią VPN. Możesz również określić, który serwer będzie serwerem domyślnym dla danego połączenia. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **F5 Edge Client**.         
 **Wyślij cały ruch sieciowy przez połączenie VPN**     |Jeśli zaznaczysz tę opcję, cały ruch sieciowy będzie przesyłany przez połączenie VPN. Jeśli nie zaznaczysz tej opcji, po połączeniu z serwerem sieci VPN innej firmy klient będzie w sposób dynamiczny negocjował trasy tunelowania podzielonego. Tylko połączenia z siecią firmową są przesyłane przez tunel VPN. Tunelowanie VPN nie jest używane w przypadku łączenia się z zasobami przez Internet.
 **Metoda uwierzytelniania**| Wybierz metodę uwierzytelniania stosowaną dla tego połączenia z siecią VPN: **Certyfikaty** lub **Nazwa użytkownika i hasło**. (Ustawienie Nazwa użytkownika i hasło jest niedostępne, gdy typ połączenia to Cisco AnyConnect.) Opcja **Metoda uwierzytelniania** jest niedostępna dla systemu Windows 8.1
 **Pamiętaj poświadczenia użytkownika przy każdym logowaniu**|Wybierz tę opcję, aby zapamiętać poświadczenia użytkownika, dzięki czemu użytkownik nie będzie musiał wprowadzać ich za każdym razem, gdy nawiązuje połączenie.
-**Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z siecią VPN. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md) Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.
+**Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z siecią VPN. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md). Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.
 **Rola**| Określ nazwę roli użytkownika, która ma dostęp do tego połączenia. Rola użytkownika definiuje ustawienia osobiste i opcje oraz włączenie lub wyłączenie określonych funkcji dostępu. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Pulse Secure**.
 **Obszar**|Określ nazwę obszaru uwierzytelniania, który ma być używany. Obszar uwierzytelniania to grupa zasobów uwierzytelniania używana przez typ połączenia Pulse Secure. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Pulse Secure**.
 **Grupa lub domena logowania**|Określ nazwę grupy lub domeny logowania, z którą chcesz nawiązać połączenie. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Dell SonicWALL Mobile Connect**.
-**Odcisk palca**|Określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, który będzie używany do sprawdzenia, czy dany serwer sieci VPN jest zaufany. Odcisk palca można: Wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, zostanie wyświetlony monit dotyczący zaufania serwerowi sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca serwera (użytkownik samodzielnie weryfikuje odcisk palca i klika pozycję **ufaj**, aby nawiązać połączenie). Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **CheckPoint Mobile VPN**.
+**Odcisk palca**|Określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, który będzie używany do sprawdzenia, czy dany serwer sieci VPN jest zaufany. Odcisk palca można: Wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, zostanie wyświetlony monit dotyczący zaufania serwerowi sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca (użytkownik samodzielnie weryfikuje odcisk palca i wybiera pozycję **ufaj**, aby nawiązać połączenie). Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **CheckPoint Mobile VPN**.
 **Sieć VPN dla aplikacji**|Wybierz tę opcję, jeśli chcesz powiązać to połączenie VPN z aplikacją dla systemu iOS lub Mac OS X, tak aby połączenie było otwierane w momencie uruchomienia aplikacji. Podczas wdrażania oprogramowania możesz powiązać ten profil sieci VPN z aplikacją. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 **Automatycznie wykrywaj ustawienia proxy** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, określ, czy chcesz, aby urządzenia automatycznie wykrywały ustawienia połączenia. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
 **Użyj skryptu automatycznej konfiguracji** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, określ, czy chcesz używać skryptu automatycznej konfiguracji do określenia ustawień, a następnie wprowadź adres URL pliku zawierającego ustawienia. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
@@ -131,6 +135,8 @@ Nazwa ustawienia  |Więcej informacji
 **Skojarzone aplikacje**     | Możesz podać listę aplikacji, które będą automatycznie korzystać z połączenia VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnych podaj nazwę rodziny pakietów, a w przypadku aplikacji klasycznych podaj ścieżkę pliku aplikacji.          
 
 
+> [!IMPORTANT] Zalecamy zabezpieczenie wszystkich list aplikacji kompilowanych do użytku w konfiguracji sieci VPN aplikacji. Jeśli nieautoryzowany użytkownik zmodyfikuje listę, po czym zaimportujesz listę do sieci VPN aplikacji, możesz potencjalnie autoryzować dostęp za pośrednictwem sieci VPN do aplikacji, które nie powinny mieć dostępu. Jednym ze sposobów na zabezpieczenie listy aplikacji jest użycie listy kontroli dostępu (ACL).
+
 Oto przykład sytuacji, w której można zastosować ustawień granic firmowych. Aby dla pulpitu zdalnego włączyć tylko sieć VPN, należy utworzyć regułę ruchu sieciowego umożliwiającą ruch protokołu numer 27 w porcie zewnętrznym 3996. Sieć VPN nie będzie używana w przypadku pozostałego ruchu.
 
 Definiowanie tras w ramach granic firmowych jest przydatne, jeśli typ połączenia VPN nie zezwala na określanie sposobu obsługi ruchu w przypadku tunelowania podzielonego. W takiej sytuacji do utworzenia listy tras, na których będzie używana sieć VPN, należy użyć ustawienia **Trasy**.
@@ -139,23 +145,26 @@ Tworząc niestandardową wartość ustawienia OMA-URI, można ograniczyć użyci
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady** .
 
-## Wdrożenie zasad
+## Wdrażanie zasad
 
-1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
+1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycje **Dodaj** &gt; **OK**.
 
-    -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
+    -   **Aby zamknąć okno dialogowe bez wdrażania** — wybierz pozycję **Anuluj**.
 
 
 Po pomyślnym wdrożeniu użytkownicy będą widzieli wprowadzoną przez Ciebie nazwę połączenia VPN na liście połączeń VPN na swoich urządzeniach.
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
 
+### Zobacz także
+[Konfiguracje niestandardowe dla profilów sieci VPN](Custom-configurations-for-VPN-profiles.md)
+[Sieć VPN dla aplikacji systemu Android korzystających z połączenia Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

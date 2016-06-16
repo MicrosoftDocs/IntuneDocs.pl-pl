@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,10 +15,10 @@ ms.assetid: ada223d7-2a80-4415-bd85-5bdf9eca7ace
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,12 +28,12 @@ ms.suite: ems
 
 # Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego
 
-Urządzenie z systemem iOS nie jest zgodne z zasadami administratora IT dotyczącymi maksymalnej wersji systemu operacyjnego. Aby uzyskać pomoc, skontaktuj się z administratorem IT.
+Urządzenie z systemem iOS nie jest zgodne z zasadami administratora IT dotyczącymi maksymalnej wersji systemu operacyjnego. Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

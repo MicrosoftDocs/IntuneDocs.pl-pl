@@ -18,7 +18,7 @@ ms.assetid: ed4a9f15-72fb-4171-84cb-63d2f1a6d04c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisbal
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,15 +30,17 @@ ms.suite: ems
 
 Jeśli administrator IT skonfigurował aplikację sieci VPN w taki sposób, aby umożliwiała łączenie się z zasobami firmy, na Twoim urządzeniu z systemem Android zostanie wyświetlone powiadomienie wskazujące, że musisz zainstalować aplikację sieci VPN. W celu zainstalowania aplikacji sieci VPN wykonaj następujące kroki:
 
-1.  Rozwiń menu powiadomień, a następnie wybierz pozycję **Naciśnij, aby zainstalować tę wymaganą aplikację**..
+1.  Rozwiń menu powiadomień, a następnie wybierz pozycję **Naciśnij, aby zainstalować tę wymaganą aplikację**.
 
 2.  W **Sklepie Play** kliknij pozycję **ZAINSTALUJ** i postępuj zgodnie z monitami dotyczącymi instalowania aplikacji.
 
 3.  Naciśnij pozycję **Zainstaluj profil firmowej sieci VPN** i postępuj zgodnie z monitami, aby zaakceptować i aktywować aplikację.
 
+Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO1-->
 
 

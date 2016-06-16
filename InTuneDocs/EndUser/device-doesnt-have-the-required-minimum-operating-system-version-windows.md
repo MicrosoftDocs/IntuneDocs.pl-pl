@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/30/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 2df6fca5-9731-4ea0-a8ee-45b648caa5b4
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,9 +37,11 @@ Aby sprawdzić wersję systemu Windows 10 i Windows 8.1, naciśnij klawisze **Wi
 - W przypadku systemu Windows 10 zignoruj numer wersji i sprawdź numer kompilacji systemu operacyjnego (np. OS Build 10586.29). Liczba „10” w numerze „10586.29” oznacza „Windows 10”.
 - W przypadku systemu Windows 8.1 sprawdź numer wersji. Numer będzie miał formę 6.3.xxxx, nie będzie zaczynać się od 8.1.
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
