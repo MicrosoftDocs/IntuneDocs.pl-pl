@@ -230,12 +230,6 @@
   "03ea704515f63f485c41ab196c876dc4edf87e9e": [
     "InTuneDocs\\EndUser\\error-evaluating-device.md"
   ],
-  "5a1a28b8718a44a055de3ffb6abb92413df1022d": [
-    "InTuneDocs\\EndUser\\error-evaluating-device.md"
-  ],
-  "ee368dcc2427b8917a6097ed08835d4963c68e12": [
-    "InTuneDocs\\EndUser\\error-evaluating-device.md"
-  ],
   "7ab9c5f283f65c82e1713d29923fa16a6a542352": [
     "InTuneDocs\\DeployUse\\exchange-activesync-policy-settings-in-microsoft-intune.md"
   ],
@@ -1381,15 +1375,6 @@
   "22e9071171d2dc63562e94cabe2abdec3b2bd85e": [
     "InTuneDocs\\EndUser\\encrypt-your-device-android.md"
   ],
-  "c7626bad72024575868a1d00c361cd9d60e5daf0": [
-    "InTuneDocs\\EndUser\\encrypt-your-device-android.md"
-  ],
-  "f25123fc86ce90148ff0a198f6c4deb1d4aa22d0": [
-    "InTuneDocs\\EndUser\\encrypt-your-device-android.md"
-  ],
-  "656bc3b8766582eddb5de765f923cdfc98bfb812": [
-    "InTuneDocs\\EndUser\\encrypt-your-device-android.md"
-  ],
   "aeeb607e54a207792e1cc8c16ee2ecd25a553e34": [
     "InTuneDocs\\EndUser\\encrypt-your-device-windows.md"
   ],
@@ -1399,40 +1384,10 @@
   "ee93d87aecd97cd6a58d516298db58441b4c1d7a": [
     "InTuneDocs\\EndUser\\enroll-your-device-in-Intune-android.md"
   ],
-  "167f456a060ed29c58a3405e489c6f27483e0557": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-Intune-android.md"
-  ],
-  "d04b05344a3e1da285b7c9c7866e188a6c7f4dab": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-Intune-android.md"
-  ],
   "305308aa94a7650df8b44710025620906714421b": [
     "InTuneDocs\\EndUser\\enroll-your-device-in-intune-ios.md"
   ],
-  "f92c9ba0e0003664a3d015c284af0104d4218c98": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-ios.md"
-  ],
-  "f83cae03ec5ab54cc7b8e23a40f05f5a2f5f56cc": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-ios.md"
-  ],
-  "9c7c52f3d20b493886b23e44cadb400d306c1e6f": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-ios.md"
-  ],
-  "b0cb97f8b7044894686e571b896a1c6c4955ac02": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-ios.md"
-  ],
   "b85d2ac62ca313f0740c68ff6d85918ff7bcd55a": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-mac-os-x.md"
-  ],
-  "ecb0e65219f78f48814abbffebf67b340c2960a5": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-mac-os-x.md"
-  ],
-  "6b173b76d6991ee888bc397c08897e22f8ee8870": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-mac-os-x.md"
-  ],
-  "8772fcbabd29e423d3624fe1779726c871cd1c36": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-mac-os-x.md"
-  ],
-  "7186959a4572054ecd3552ef62baa467f8c8cf40": [
     "InTuneDocs\\EndUser\\enroll-your-device-in-intune-mac-os-x.md"
   ],
   "e343905f7359e310bc5b171feb3311adf8b4012f": [
@@ -2390,49 +2345,13 @@
   "47341626bceaa5d4ad0775c3d22d80985ce699cc": [
     "InTuneDocs\\EndUser\\enroll-your-rt-windows.md"
   ],
-  "e1d63e4631cc468bd4b696b5dfe25c1164c019db": [
-    "InTuneDocs\\EndUser\\enroll-your-rt-windows.md"
-  ],
-  "9bd4e80cfc4a7ac69d1aeabdce25f9c1f6bf2071": [
-    "InTuneDocs\\EndUser\\enroll-your-rt-windows.md"
-  ],
-  "6f8cc6d3690609df03e4efa40339ec59e4746a67": [
-    "InTuneDocs\\EndUser\\enroll-your-rt-windows.md"
-  ],
   "543f0acd6fb3691ba31e9da6fec49b3f30f67613": [
-    "InTuneDocs\\EndUser\\enroll-your-w10-phone-or-w10-pc-windows.md"
-  ],
-  "6f5aa30efff3e62b89e18c35ed17d05b75813826": [
-    "InTuneDocs\\EndUser\\enroll-your-w10-phone-or-w10-pc-windows.md"
-  ],
-  "167aa517f99d01efbb0408074d2e103e3ec5ae1f": [
-    "InTuneDocs\\EndUser\\enroll-your-w10-phone-or-w10-pc-windows.md"
-  ],
-  "c581ccf3633a9445e7a58ea2fda8b0d61f884fb0": [
     "InTuneDocs\\EndUser\\enroll-your-w10-phone-or-w10-pc-windows.md"
   ],
   "6607ea6c355e0ec767e514ac0097789b83c5d8c7": [
     "InTuneDocs\\EndUser\\enroll-your-w81-or-rt81-windows.md"
   ],
-  "43a2c99ec40f0e1544712f936717c114dd230cbb": [
-    "InTuneDocs\\EndUser\\enroll-your-w81-or-rt81-windows.md"
-  ],
-  "236387d36b0b4b6de1382a29d2481bc3b8ab1445": [
-    "InTuneDocs\\EndUser\\enroll-your-w81-or-rt81-windows.md"
-  ],
-  "527c6267f394cabfd1af3bfdc5fa1d90a63f44f7": [
-    "InTuneDocs\\EndUser\\enroll-your-w81-or-rt81-windows.md"
-  ],
   "cc427327897084d6366ade896f7d760603d86eb7": [
-    "InTuneDocs\\EndUser\\enroll-your-wp81-windows.md"
-  ],
-  "b5caecca0c930b15ce3e90ab930516f68b41910e": [
-    "InTuneDocs\\EndUser\\enroll-your-wp81-windows.md"
-  ],
-  "eca516132f0a75d45d7bffbc31a5e129983b3020": [
-    "InTuneDocs\\EndUser\\enroll-your-wp81-windows.md"
-  ],
-  "c29cc0f9b4e0cae5b1deea9393247787f9c6ed85": [
     "InTuneDocs\\EndUser\\enroll-your-wp81-windows.md"
   ],
   "21e904766d1621b2182de8adde8142f5f7ad8e26": [
@@ -2817,9 +2736,6 @@
     "InTuneDocs\\EndUser\\device-compliance-state-is-unknown.md"
   ],
   "b38457634263b8fbda0c6b6e3e5d9156dd6668a8": [
-    "InTuneDocs\\EndUser\\enroll-your-device-in-intune-all.md"
-  ],
-  "614731350f28c84de57ac230d9ff70e6fd5cc03d": [
     "InTuneDocs\\EndUser\\enroll-your-device-in-intune-all.md"
   ],
   "29d409f272800e0c5ccaf71494b5e98d1edaae4e": [
