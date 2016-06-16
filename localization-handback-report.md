@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md) | InSyncHandedBackSuccess | [Details](#b42d1b78961590f44100a90f99b53bef514fa6fd285)
 
 ## Item Details
-##### <a name='b42d1b78961590f44100a90f99b53bef514fa6fd285'></a> Source: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/f83a539e9bec5207d7c1c682942b4bb6797d616c/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/04ad56a3ac225c014b9a42a58def198480ff536b/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
-* Handoff File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/4294c847ae2496d5733384c13dffda83e1f3d81f/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
-* Handoff Datetime: 2016-06-09 00:51:33
-* Handoff Reason: Include
-* Archive File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/9bea484fe316ad82c4d935a0b2a93f3231c68523/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/archive/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
-* Archive Datetime: 2016-06-09 02:16:17
-* Handback File: [device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/7d7b5235525e6979bf9c59fbe8d7393b08b5315d/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/device-doesnt-have-the-required-minimum-operating-system-version-ios.8cfe1fa5551ebba73b59209bdb7df89569b11b29.pl-pl.xlf)
-* Handback Datetime: 2016-06-16 17:22:24
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
