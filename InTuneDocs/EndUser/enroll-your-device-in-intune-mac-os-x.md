@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/30/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,10 +15,10 @@ ms.assetid: 58eb0e7a-1321-4c66-a281-88fb01e72c1c
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -45,7 +45,7 @@ Aby zarejestrować urządzenie z systemem Mac OS X:
 
     ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
 
-4.  W oknie dialogowym **Instalowanie profilu zarządzania** naciśnij pozycję **Zainstaluj**. Jeśli zostanie wyświetlone okno dialogowe z prośbą o podanie poświadczeń, wprowadź nazwę użytkownika i hasło, a następnie naciśnij kolejno pozycje **Kontynuuj** &gt; **Zainstaluj**.
+4.  W oknie dialogowym **Instalowanie profilu zarządzania** naciśnij pozycję **Zainstaluj**. Jeśli zostanie wyświetlone okno dialogowe z monitem o podanie poświadczeń, wprowadź nazwę użytkownika i hasło, a następnie naciśnij kolejno pozycje **Kontynuuj** &gt; **Zainstaluj**.
 
     ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
 
@@ -53,9 +53,11 @@ Aby zarejestrować urządzenie z systemem Mac OS X:
 
     ![management-profile-verified](./media/4-macosx-enroll-done.png) 
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,10 +15,10 @@ ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,9 +33,10 @@ Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować
 Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](enroll-your-device-in-intune-mac-os-x.md).
 
 
+
 **Aby zarejestrować urządzenie z systemem iOS:**
 
-1.  Wykonaj czynności opisane w części [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
+1.  Wykonaj czynności opisane w artykule [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
 2. Na stronie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **Rozpocznij**.
 
@@ -45,7 +46,7 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
     ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png) 
 
-4. Przejrzyj listę rzeczy, jakie administrator IT może zobaczyć na Twoim zarejestrowanym urządzeniu i jakich nie może, a następnie naciśnij pozycję **Kontynuuj**.
+4. Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim zarejestrowanym urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **Kontynuuj**.
 
     ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png) 
 
@@ -57,7 +58,7 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
     ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png) 
   
-7.  Naciśnij pozycję **Zainstaluj**.
+7.  Naciśnij przycisk **Zainstaluj**.
 
     ![ios-enroll-tap-install](./media/ios-enroll-3-mgt-profile-install-2.png)    
 
@@ -79,7 +80,7 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png) 
 
-12. Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **Kontynuuj** Jeśli administrator IT skonfigurował dodatkowe wymagania z zakresu bezpieczeństwa, np. potrzebę ustawienia hasła, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aż spełnisz wymagania zgodności i powrócisz do ekranu Konfiguracja dostępu do zasobów firmy. Następnie naciśnij przycisk **Kontynuuj**.
+12. Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **Kontynuuj**. Jeśli administrator IT skonfigurował dodatkowe wymagania z zakresu bezpieczeństwa, np. potrzebę ustawienia hasła, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aż spełnisz wymagania zgodności i powrócisz do ekranu Konfiguracja dostępu do zasobów firmy. Następnie naciśnij przycisk **Kontynuuj**.
 
     ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png) 
 
@@ -89,13 +90,11 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
 Urządzenie zostanie zarejestrowane w usłudze Intune. Użytkownik zostanie przeniesiony z powrotem do aplikacji Portal firmy.
 
-    
-
-  
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

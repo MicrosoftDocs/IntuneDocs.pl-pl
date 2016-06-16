@@ -18,7 +18,7 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune
 
-Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzenia umożliwia organizacji ochronę danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) oraz [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzenia umożliwia organizacji ochronę danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Aby zarejestrować urządzenie z systemem Windows Phone 8.1 w usłudze Intune, postępuj zgodnie z instrukcjami dotyczącymi Twojej firmy lub szkoły:
@@ -48,7 +48,7 @@ Instalowanie aplikacji Portal firmy na urządzeniu:
 
     ![Wyniki wyszukiwania portalu firmy](./media/WP81-1-CP-search-store-v2.png)
 
-4.  Naciśnij kolejno pozycje **Portal firmy**  &gt; **Zainstaluj**.
+4.  Naciśnij kolejno pozycje **Portal firmy** &gt; **Zainstaluj**.
 
     ![Instalowanie portalu firmy](./media/WP81-2-CP-install-v2.png)
 
@@ -64,7 +64,7 @@ Rejestrowanie urządzenia:
 
     ![Ekran „Naciśnij, aby zarejestrować lub zidentyfikować to urządzenie”](./media/WP81-enroll-1-swipe-my-devices.png)
 
-5.  Naciśnij pozycję **Zarejestruj to urządzenie**/.
+5.  Naciśnij pozycję **Zarejestruj to urządzenie**.
 
     ![Ekran „Zarejestruj to urządzenie”](./media/WP81-enroll-2-enroll-this-device.png)
 
@@ -72,13 +72,13 @@ Rejestrowanie urządzenia:
 
     ![Ekran ustawień miejsca pracy](./media/WP81-enroll-3-workplace-add-acct.png)
 
-7.  Wprowadź żądane dodatkowe informacje, a następnie naciśnij pozycję **Zaloguj się**, aby zakończyć rejestrację. Konto w miejscu pracy powinno być teraz wyświetlane na stronie otwieranej po wybraniu pozycji **Ustawienia** &gt; **Miejsce pracy**
+7.  Wprowadź żądane dodatkowe informacje, a następnie naciśnij pozycję **Zaloguj się**, aby zakończyć rejestrację. Konto w miejscu pracy powinno być teraz wyświetlane na stronie otwieranej po wybraniu pozycji **Ustawienia** &gt; **Miejsce pracy**.
 
     ![Ekran po dodaniu konta](./media/WP81-enroll-4-account-added.png)
 
 ## Jeśli nie możesz uzyskać dostępu do Sklepu Windows w systemie Windows Phone lub nie masz konta Microsoft
 
-1.  Dotknij kolejno pozycje **Ustawienia** &gt; **Miejsce pracy**.
+1.  Naciśnij kolejno pozycje **Ustawienia** &gt; **Miejsce pracy**.
 
 2.  Naciśnij pozycję **Dodaj konto**, a następnie zaloguj się przy użyciu swojego konta służbowego.
 
@@ -88,7 +88,7 @@ Rejestrowanie urządzenia:
 
 Jeśli administrator systemu informatycznego skonfigurował Portal firmy tak, aby został zainstalowany podczas rejestracji, Portal firmy pojawi się na liście aplikacji.
 
-
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md)</br>
@@ -96,6 +96,6 @@ Jeśli administrator systemu informatycznego skonfigurował Portal firmy tak, ab
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
