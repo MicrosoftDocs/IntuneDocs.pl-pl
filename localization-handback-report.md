@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\EndUser\your-device-is-rooted-and-you-cant-connect-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e52ebdd62ca68f1d9226def654961075400184a8/InTuneDocs/EndUser/your-device-is-rooted-and-you-cant-connect-android.md) | InSyncHandedBackSuccess | [Details](#c94414ee28e8fa808ba08a5c97624d3d9b95fecb471)
 
 ## Item Details
-##### <a name='c94414ee28e8fa808ba08a5c97624d3d9b95fecb471'></a> Source: [InTuneDocs\EndUser\your-device-is-rooted-and-you-cant-connect-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e52ebdd62ca68f1d9226def654961075400184a8/InTuneDocs/EndUser/your-device-is-rooted-and-you-cant-connect-android.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\EndUser\your-device-is-rooted-and-you-cant-connect-android.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/33927c066ae68a92a09b0a79410618bd89f73712/InTuneDocs/EndUser/your-device-is-rooted-and-you-cant-connect-android.md)
-* Handoff File: [your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/5202e9a47b19219487e4a1c5052b8d1cb7664610/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf)
-* Handoff Datetime: 2016-06-09 16:59:22
-* Handoff Reason: Include
-* Archive File: [your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/04e4812bbfa611bc8c23f7be9da2db4f5f451888/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/archive/your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf)
-* Archive Datetime: 2016-06-16 01:45:05
-* Handback File: [your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f2d915575b1fb1c1a29bcf59c1c2d24438706703/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.pl-pl.xlf)
-* Handback Datetime: 2016-06-17 12:55:16
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
