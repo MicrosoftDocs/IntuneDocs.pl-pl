@@ -34,11 +34,11 @@ Jeśli podczas próby rejestracji urządzenia z systemem iOS lub Mac OS X w usł
 2. Naciśnij pozycję **Kontynuuj**.
 3. Wprowadź cztery ostatnie znaki numeru seryjnego urządzenia, aby potwierdzić, że urządzenie jest zarejestrowane w usłudze Intune. Aby dowiedzieć się, jak znaleźć numer seryjny, zobacz [Jak znaleźć numer seryjny w urządzeniu?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

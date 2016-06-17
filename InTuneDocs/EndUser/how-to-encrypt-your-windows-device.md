@@ -35,10 +35,10 @@ Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, ab
 
 2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z wyświetlanymi instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

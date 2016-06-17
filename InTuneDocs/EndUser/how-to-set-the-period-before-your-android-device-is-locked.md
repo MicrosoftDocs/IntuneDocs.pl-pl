@@ -36,8 +36,8 @@ Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limitu
 
 3.  Upewnij się, że urządzenie jest zarejestrowane w usłudze Intune, postępując zgodnie z instrukcjami w temacie [Rejestrowanie urządzenia w celu używania go w pracy](http://go.microsoft.com/fwlink/?LinkId=519071).
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

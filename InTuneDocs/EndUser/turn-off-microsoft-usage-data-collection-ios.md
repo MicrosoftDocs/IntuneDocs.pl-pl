@@ -32,9 +32,11 @@ W celu ulepszania swoich produktów i usług firma Microsoft automatycznie zbier
 
 Zbieranie tych danych na urządzeniu z systemem iOS można wyłączyć za pomocą ustawienia **Dane użycia** w aplikacji Portal firmy. Administratorzy IT nie kontrolują zbierania tych danych i nie mogą zmienić wybranej wartości tego ustawienia.
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

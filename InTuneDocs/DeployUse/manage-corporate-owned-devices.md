@@ -83,7 +83,6 @@ Dowiedz się więcej na temat [programu DEP](ios-device-enrollment-program-in-mi
 
 ### USB-SA
 Połączenie USB, rejestracja za pomocą asystenta ustawień. Administrator tworzy zasady usługi Intune i eksportuje je do programu Apple Configurator. Połączone urządzenia USB są przygotowywane za pomocą zasad usługi Intune. Administrator musi ręcznie zarejestrować każde urządzenie. Użytkownicy odbierają swoje urządzenia i uruchamiają asystenta ustawień, rejestrując urządzenia. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
-  - Rejestrację zablokowaną
   - Dostęp warunkowy
   - Wykrywanie zdjęcia zabezpieczeń systemu
   - Zarządzanie aplikacjami mobilnymi
@@ -112,6 +111,6 @@ Określa, czy urządzenie można zablokować, aby uniemożliwić użytkownikowi 
 ([Z powrotem do tabeli](#overview-of corporate-owned-device-enrollment-methods)) ([Z powrotem do tabeli](#overview-of corporate-owned-device-enrollment-methods))
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

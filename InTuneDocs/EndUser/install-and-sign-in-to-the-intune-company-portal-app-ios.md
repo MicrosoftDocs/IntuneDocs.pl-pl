@@ -40,11 +40,11 @@ Portal firmy jest aplikacją instalowaną na urządzeniu z systemem iOS w celu u
 
     Jeśli logujesz się w aplikacji Portal firmy po raz pierwszy, a Twoja firma lub instytucja edukacyjna korzysta z usługi Intune, zostanie wyświetlony monit o zarejestrowanie urządzenia w usłudze Intune. Aby się zarejestrować, postępuj zgodnie z instrukcjami z tematu [Enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md) (Rejestrowanie urządzenia z systemem iOS w usłudze Intune) lub [Enroll your Mac OS X device in Intune](enroll-your-device-in-intune-mac-os-x.md) (Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune).
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

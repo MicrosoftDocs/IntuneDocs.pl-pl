@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/10/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -34,14 +34,12 @@ W celu zwiększenia bezpieczeństwa danych na urządzeniu z systemem Android adm
 
 2.  Określ wartość limitu czasu hasła.
 
-3.  Upewnij się, że urządzenie zostało zarejestrowane w usłudze Intune, postępując zgodnie z instrukcjami w temacie [Enroll your device in Intune](enroll-your-device-in-Intune-android.md) (Rejestrowanie urządzenia w usłudze Intune).
-
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -30,11 +30,11 @@ ms.suite: ems
 
 Na urządzeniu z systemem iOS 7.1 lub nowszym naciśnij ikonę **Ustawienia**, naciśnij pozycję **Ogólne** > **Informacje**, a następnie przewiń w dół do pozycji **Numer seryjny**.
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

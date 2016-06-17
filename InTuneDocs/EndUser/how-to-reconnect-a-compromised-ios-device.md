@@ -28,10 +28,10 @@ ms.suite: ems
 # Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami
 Administrator informatyczny wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że ograniczenia oprogramowania nakładane przez system iOS zostały usunięte, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy. W takim wypadku urządzenie nie będzie mieć już dostępu do zasobów firmy.
 
-Skontaktuj się z administratorem IT, aby pomógł Ci ponownie połączyć urządzenie. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

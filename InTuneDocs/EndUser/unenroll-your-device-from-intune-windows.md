@@ -30,7 +30,7 @@ ms.suite: ems
 
 Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do celów służbowych i nie musisz uzyskiwać dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz je wyrejestrować. Po wyrejestrowaniu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu urządzenia, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
-Aby wyrejestrować urządzenie, użyj linku znajdującego się powyżej w sekcji „W tym artykule”, odpowiadającego typowi używanego urządzenia:
+Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykule”, który odpowiada typowi używanego urządzenia:
 
 -   [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
 -   [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-8-1-computer)
@@ -44,11 +44,11 @@ Aby wyrejestrować urządzenie, użyj linku znajdującego się powyżej w sekcji
 
 3.  Na stronie **Moje urządzenia**wybierz urządzenie, które chcesz wyrejestrować.
 
-4.  Naciśnij pozycje **Usuń** &gt; **Usuń**.
+4.  Naciśnij pozycję **Usuń** &gt; **Usuń**.
 
 ## Wyrejestrowywanie komputera z systemem Windows 8.1
 
-1.  Przejdź kolejno do pozycji **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.
+1.  Przejdź do pozycji **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.
 
 2.  W obszarze **Dołącz do miejsca pracy** naciśnij przycisk **Opuść**.
 
@@ -58,7 +58,7 @@ Aby wyrejestrować urządzenie, użyj linku znajdującego się powyżej w sekcji
 
 ## Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1
 
-1.  Przejdź kolejno do pozycji **Ustawienia** &gt; **Miejsce pracy**.
+1.  Przejdź do pozycji **Ustawienia** &gt; **Miejsce pracy**.
 
 2.  Naciśnij konto firmowe, które chcesz wyrejestrować.
 
@@ -66,11 +66,11 @@ Aby wyrejestrować urządzenie, użyj linku znajdującego się powyżej w sekcji
 
 4.  W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

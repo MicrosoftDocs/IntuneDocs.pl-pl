@@ -32,9 +32,11 @@ W celu ulepszania swoich produktów i usług firma Microsoft automatycznie zbier
 
 Zbieranie tych danych na urządzeniu z systemem Windows można wyłączyć za pomocą ustawienia **Dane użycia** w aplikacji Portal firmy. Administratorzy IT nie kontrolują zbierania tych danych i nie mogą zmienić wybranej wartości tego ustawienia.
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

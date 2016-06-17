@@ -28,10 +28,10 @@ ms.suite: ems
 # Oczekiwanie na zakończenie oceniania urządzenia
 Urządzenie jest nadal oceniane pod kątem zgodności. Poczekaj jeszcze kilka minut na zakończenie sprawdzania zgodności.
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

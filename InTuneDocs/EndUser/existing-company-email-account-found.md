@@ -36,10 +36,10 @@ Masz już konto firmowej poczty e-mail. Jeśli chcesz kontynuować nawiązywanie
 
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
-Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -41,11 +41,11 @@ Jeśli zarejestrowane urządzenie z systemem Windows zostanie utracone lub skrad
 3.  Naciśnij kolejno pozycje **Zresetuj** &gt; **Zresetuj**.
 
 > [!NOTE]
-> Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go pracownika działu IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+> Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go pracownika działu IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

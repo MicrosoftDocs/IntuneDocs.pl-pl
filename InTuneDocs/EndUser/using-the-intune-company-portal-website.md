@@ -42,7 +42,7 @@ Oferuje ona następujące możliwości:
 
 -   [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT) Jeśli masz problem ze znalezieniem informacji, zobacz, czy są wyświetlane w [witrynie Portalu firmy w sieci Web](http://portal.manage.microsoft.com).
+-   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT) 
 
 -   Wyświetlanie szczegółowych informacji o urządzeniu, w tym informacji o zgodności z zasadami obowiązującymi w firmie lub szkole
 
@@ -55,6 +55,6 @@ W **witrynie Portalu firmy** można wykonać większość zadań, które można 
 - [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

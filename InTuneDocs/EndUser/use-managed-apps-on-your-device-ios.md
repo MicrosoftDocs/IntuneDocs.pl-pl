@@ -64,23 +64,12 @@ Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w ap
 
 -   Wymagania dotyczące szyfrowania danych
 
-Do typowych aplikacji, którymi może zarządzać dział IT, należą między innymi:
 
--   Zarządzana przeglądarka sieci Web
-
--   Zarządzana przeglądarka obrazów
-
--   Zarządzana przeglądarka plików PDF
-
--   Zarządzany odtwarzacz audio/wideo
-
--   Microsoft Word, Excel, PowerPoint
-
-Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

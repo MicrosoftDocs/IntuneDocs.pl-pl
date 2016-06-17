@@ -34,7 +34,7 @@ Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły 
 - Hasło jest zbyt proste i nie jest dostatecznie bezpieczne
 - Hasło wygasło
 - Hasło nie zostało ustawione
-- Hasło jest zbyt krótkie
+- Hasło jest za krótkie
 - Hasło było używane niedawno
 - Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań
 
@@ -44,8 +44,8 @@ Aby uzyskać informacje na temat ustawiania kodu PIN lub hasła albo innych zada
 - [Ustaw lub zmień kod dostępu urządzenia z systemem iOS](set-or-change-your-passcode-ios.md)
 - [Ustaw lub zmień hasło urządzenia z systemem Windows](set-or-change-your-password-windows.md)
 
-Jeśli występują problemy z ustaleniem, jakie wymagania powinno spełniać hasło, należy skontaktować się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

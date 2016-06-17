@@ -48,9 +48,11 @@ Portal firmy jest aplikacją instalowaną na urządzeniu z systemem Android w ce
 
 Aby zarejestrować urządzenie w usłudze Intune w celu uzyskiwania dostępu do danych i zasobów firmy, zobacz temat [Enroll your device in Intune](enroll-your-device-in-Intune-android.md) (Rejestrowanie urządzenia w usłudze Intune).
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

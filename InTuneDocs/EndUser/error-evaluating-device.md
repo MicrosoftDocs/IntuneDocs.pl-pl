@@ -31,10 +31,10 @@ Twoje urządzenie zostało uznane za niezgodne z zasadami firmy, a podczas oceny
 
 Aby rozwiązać ten problem, poczekaj kilka minut, a następnie naciśnij pozycję **Sprawdź zgodność**.
 
-Jeśli problem będzie nadal występować, skontaktuj się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli problem będzie nadal występować, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
