@@ -4,7 +4,7 @@
 title: Planowanie grup użytkowników i urządzeń | Microsoft Intune
 description:
 keywords:
-author: SanchuSa
+author: nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
@@ -40,7 +40,7 @@ Grupy w usłudze Intune zapewniają dużą elastyczność w zakresie zarządzani
 
 Domyślny widok węzła Grupy w konsoli administracyjnej usługi Intune jest następujący:
 
-![Zrzut ekranu przedstawiający widok domyślny węzła Grupy w konsoli usługi Intune](/intune/media/Group-planning/Intune_Planning_Groups_Default_small.png)
+![Zrzut ekranu przedstawiający widok domyślny węzła Grupy w konsoli usługi Intune](/intune/media/Intune_Planning_Groups_Default_small.png)
 
 Zasady są wdrażane do grup, dlatego hierarchia grupy jest jednym z najważniejszych zagadnień projektowych. Należy również pamiętać, że po utworzeniu grupy nie można zmienić grupy nadrzędnej, więc projekt grup jest bardzo ważny od początku korzystania z usługi Intune. Niektóre zalecane praktyki projektowania hierarchii grup odpowiednio do potrzeb organizacji są opisane poniżej.
 
@@ -92,7 +92,7 @@ Zasady są wdrażane do grup, dlatego hierarchia grupy jest jednym z najważniej
 
     * Grupa **Użytkownicy laptopów** jest elementem członkowskim grupy zabezpieczeń **Zatwierdzeni użytkownicy** .
 
-    * Tworzysz grupę w usłudze Intune używającą dynamicznego zapytania o członkostwo, które obejmuje członków grupy **Zatwierdzeni użytkownicy**. W rezultacie grupa użytkowników usługi Intune będzie zawierać użytkownika **Paweł**..
+    * Tworzysz grupę w usłudze Intune używającą dynamicznego zapytania o członkostwo, które obejmuje członków grupy **Zatwierdzeni użytkownicy**. W rezultacie grupa użytkowników usługi Intune będzie zawierać użytkownika **Paweł**.
 
 > [!TIP]
 > Podczas tworzenia grup należy wziąć pod uwagę, jak będą stosowane zasady. Na przykład są zasady właściwe dla systemów operacyjnych urządzeń i zasady właściwe dla różnych ról w organizacji lub jednostek organizacyjnych zdefiniowanych już w usłudze Active Directory. Niektórzy uważają, że warto mieć grupy urządzeń właściwe dla systemu iOS, Android i Windows, a także grupy użytkowników dla poszczególnych ról organizacyjnych.
@@ -131,22 +131,22 @@ Jeśli Twoja organizacja pozwala pracownikom korzystać w pracy z własnych urz�
 
 W przypadku modelu BYOD lub stosowania obu modeli należy dokładnie zaplanować zasady, tak aby nie naruszały lokalnych przepisów dotyczących zachowania poufności. Utwórz grupę nadrzędną dla wszystkich użytkowników, którzy będą przynosili własne urządzenia. Tej grupy będzie można używać do stosowania zasad dotyczących wszystkich użytkowników należących do tej kategorii.
 
-![Zrzut ekranu przedstawiający tworzenie grupy nadrzędnej BYOD](/intune/media/Group-planning/Intune_Planning_Groups_BYOD_small.png)
+![Zrzut ekranu przedstawiający tworzenie grupy nadrzędnej BYOD](/intune/media/Intune_Planning_Groups_BYOD_small.png)
 
 Podobnie można utworzyć w organizacji grupę dla użytkowników urządzeń należących do firmy:
 
-![Zrzut ekranu przedstawiający równorzędne grupy użytkowników (grupa BYOD i grupa dla urządzeń należących do firmy)](/intune/media/Group-planning/Intune_Planning_Groups_BYOD_Hierachy_View_small.png)
+![Zrzut ekranu przedstawiający równorzędne grupy użytkowników (grupa BYOD i grupa dla urządzeń należących do firmy)](/intune/media/Intune_Planning_Groups_BYOD_Hierachy_View_small.png)
 
 <!---START HERE--->
 
 ### Grupy dla regionów geograficznych
 Jeśli w Twojej organizacji są potrzebne zasady dla konkretnych regionów, możesz tworzyć grupy na podstawie tego kryterium. Można je utworzyć na podstawie grup regionalnych, które mogły już zostać utworzone w usłudze Active Directory (AD), a następnie zsynchronizować je z usługą Azure AD. Można je również utworzyć bezpośrednio w usłudze Azure AD.
 
-Te zrzuty ekranu pokazują, jak tworzyć grupy w usłudze Intune w oparciu o grupy synchronizowane z lokalnej usługi AD. W tym przykładzie przyjęto założenie, że istnieje grupa zabezpieczeń usługi AD o nazwie **US Users Group**..
+Te zrzuty ekranu pokazują, jak tworzyć grupy w usłudze Intune w oparciu o grupy synchronizowane z lokalnej usługi AD. W tym przykładzie obowiązuje założenie, że istnieje grupa zabezpieczeń usługi AD o nazwie **US Users Group**.
 
 1. Najpierw podaj informacje ogólne.
 
-    ![Zrzut ekranu przedstawiający obszar Edytowanie grupy](/intune/media/PlanDesign/Group-planning/Intune_Planning_Groups_AD_General_small.png)
+![Zrzut ekranu przedstawiający obszar Edytowanie grupy](/intune/media/Intune_Planning_Groups_AD_General_small.png)
 
 W obszarze Kryteria członkostwa wybierz grupę **US Users Group** zsynchronizowaną z usługi AD jako grupę zabezpieczeń do użycia w ramach reguł członkostwa.
 
@@ -158,8 +158,7 @@ Przejrzyj informacje i wybierz pozycję **Zakończ**, aby zakończyć tworzenie 
 
 W naszym przykładzie utworzona również została grupa MEA (Middle East and Asia).
 
-> [!NOTE]
-> Jeśli członkostwo w grupie nie zostanie wypełnione na podstawie przynależności do grupy zabezpieczeń, upewnij się, że do tych członków została przypisana licencja na usługę Intune.
+> [!NOTE] Jeśli członkostwo w grupie nie zostanie wypełnione na podstawie przynależności do grupy zabezpieczeń, upewnij się, że do tych członków została przypisana licencja na usługę Intune.
 
 ### Grupy dla konkretnego sprzętu
 Jeśli w Twojej organizacji są wymagane zasady dotyczące konkretnych typów sprzętu, możesz tworzyć grupy na podstawie tego kryterium. Można je utworzyć na podstawie określonych grup utworzonych już w lokalnej usłudze AD, a następnie zsynchronizować je z usługą Azure AD. Można je również utworzyć bezpośrednio w usłudze Azure AD. W tym przykładzie użyto grupy **US Users Group** jako nadrzędnej względem grupy **Laptop Users**.
@@ -168,15 +167,14 @@ Jeśli w Twojej organizacji są wymagane zasady dotyczące konkretnych typów sp
 
 W takim przypadku hierarchia grup powinna być taka jak pokazano poniżej. Jak widać, w grupie Intune **Laptop Users** istnieją teraz członkowie. Wszystkie zasady zastosowane do tej grupy będą teraz dotyczyć użytkowników laptopów BYOD z regionu Stanów Zjednoczonych.
 
-![Reprezentacja graficzna grupy użytkowników laptopów](/intune/media/Group-planning/Intune_Planning_Groups_Laptop_Hierarchy_small.png)
+![Reprezentacja graficzna grupy użytkowników laptopów](/intune/media/Intune_Planning_Groups_Laptop_Hierarchy_small.png)
 
 ### Grupy dla poszczególnych systemów operacyjnych
 Jeśli w Twojej organizacji są wymagane zasady dotyczące konkretnych systemów operacyjnych, takich jak Android, iOS i Windows, możesz tworzyć grupy na podstawie tego wymagania. Tak samo jak w poprzednich przykładach, można je utworzyć na podstawie grup, które dotyczą określonych systemów operacyjnych i zostały już utworzone w lokalnej usłudze AD, a następnie zsynchronizować je z usługą Azure AD. Można je również utworzyć bezpośrednio w usłudze Azure AD.
 
-Stosując taką samą metodę jak w poprzednich przykładach, można utworzyć grupy na podstawie użytkowników <!--devices?--> korzystających z określonych platform systemów operacyjnych.
+Stosując taką samą metodę jak w poprzednich przykładach, można utworzyć grupy na podstawie użytkowników <!--devices?--> przy użyciu określonych platform systemu operacyjnego.
 
-> [!NOTE]
-> Jeśli istnieją użytkownicy używający różnych platform mobilnych/systemów operacyjnych, a nie istnieje sposób automatycznej klasyfikacji użytkowników jako użytkowników systemu Android, iOS albo Windows, należy rozważyć stosowanie zasad na poziomie urządzeń, co zapewni większą elastyczność stosowania zasad dla konkretnych systemów operacyjnych.
+> [!NOTE] Jeśli istnieją użytkownicy używający różnych platform mobilnych/systemów operacyjnych, a nie istnieje sposób automatycznej klasyfikacji użytkowników jako użytkowników systemu Android, iOS albo Windows, należy rozważyć stosowanie zasad na poziomie urządzeń, co zapewni większą elastyczność stosowania zasad dla konkretnych systemów operacyjnych.
 >
 > Na podstawie systemu operacyjnego urządzenia nie można dynamicznie udostępniać grup. Można to zrobić przy użyciu grup zabezpieczeń usługi AD lub usługi AAD.
 
@@ -208,8 +206,7 @@ Kontynuuj tworzenie grup urządzeń aż do uzyskania hierarchii grup urządzeń 
 ## Hierarchie grup i konwencje nazewnictwa
 Aby ułatwić zarządzanie zasadami, zalecamy nadanie każdej zasadzie nazwy zgodnie z przeznaczeniem, platformą i zakresem, do którego jest stosowana. Ten standard nazewnictwa powinien być zgodny ze strukturą grup utworzoną podczas przygotowania do stosowania zasad.
 
-Na przykład w przypadku zasad systemu Android, które są stosowane do wszystkich firmowych urządzeń przenośnych z systemem Android na poziomie regionalnym USA, zasady mogą mieć nazwę:
-**CO_US_Mob_Android_General**.
+Na przykład w przypadku zasad systemu Android, które są stosowane do wszystkich firmowych urządzeń przenośnych z systemem Android na poziomie regionalnym USA, zasady mogą mieć nazwę: **CO_US_Mob_Android_General**.
 
 ![Tworzenie zasad dla systemu Android](/intune/media/Intune_planning_policy_android_small.png)
 
@@ -221,6 +218,6 @@ Nadawanie zasadom nazw w ten sposób umożliwi szybkie identyfikowanie zasad, ic
 [Tworzenie grup](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

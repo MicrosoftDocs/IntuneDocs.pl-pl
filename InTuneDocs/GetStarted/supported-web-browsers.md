@@ -31,8 +31,8 @@ Przed skonfigurowaniem usługi Intune przejrzyj ten temat i inne wymagania wymie
 
 |Funkcja usługi Intune |Obsługiwane przeglądarki|
 |---------|---------|
-|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox <br /><br />**Uwaga:** konsola administracyjna nie jest obecnie obsługiwana w programie Edge.                      
-|Portal administracyjny usługi Office 365     |Wszystkie przeglądarki  |
+|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox <br /><br />**Uwaga:** przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane w przypadku konsoli administracyjnej.                      
+|Portal administracyjny usługi Office 365     |Wszystkie przeglądarki, w tym przeglądarki dla urządzeń przenośnych i zarządzane przeglądarki  |
 |Witryna sieci Web Portal firmy     |**Urządzenia przenośne:** należy używać domyślnej przeglądarki sieci Web dla każdej z obsługiwanych platform   <br /><br />**Komputery z systemem Windows:** Internet Explorer 10 lub nowsza wersja albo Microsoft Edge<br /><br />**System Mac OS X 10.9 lub nowszy:** Apple Safari    |
 
 
@@ -42,6 +42,6 @@ Przed skonfigurowaniem usługi Intune przejrzyj ten temat i inne wymagania wymie
 
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

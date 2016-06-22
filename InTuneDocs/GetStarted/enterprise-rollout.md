@@ -79,17 +79,16 @@ Oto lista czynności ułatwiających rozpoczęcie fazy **Wdrożenie w przedsięb
 
 -   Zidentyfikuj grupy, które mogą wymagać nakierowanej komunikacji i szkolenia.
 
--   Dostosuj komunikację za pośrednictwem poczty e-mail, zaktualizuj witrynę intranetową.
-    Zidentyfikuj bieżącego właściciela na potrzeby aktualizacji komunikacji/zasobów.
+-   Dostosuj komunikację za pośrednictwem poczty e-mail, zaktualizuj witrynę intranetową, zidentyfikuj bieżącego właściciela na potrzeby aktualizacji komunikacji/zasobów.
 
 -   Zaplanuj metody szkoleniowe do użycia.
 
 -   Utwórz listę kontrolną „Wprowadzenie” i podręcznik rejestracji dla użytkowników.
     Wykorzystaj poniższe podręczniki użytkownika jako punkt początkowy:
-    -  [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-windows]
-    -  [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-android]
-    -  [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-ios]
-    -  [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x]
+    -  [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-windows)
+    -  [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-android)
+    -  [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-ios)
+    -  [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)
 
 -   Zdefiniuj proces aktualizowania materiałów szkoleniowych wedle potrzeb.
 
@@ -114,6 +113,6 @@ Poniżej przedstawiono niektóre wyzwania, jakie można napotkać w fazie **Wdro
 [Działanie i obsługa](operations-and-maintenance.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 
