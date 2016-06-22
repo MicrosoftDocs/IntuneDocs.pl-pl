@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Ustawienia zasad systemu iOS w usłudze Microsoft Intune | Microsoft Intune
+title: Ustawienia zasad systemu iOS | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -18,7 +18,7 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -38,7 +38,7 @@ ms.suite: ems
 -   **Zgodne i niezgodne aplikacje** — Określanie listy zgodnych i niezgodnych aplikacji w firmie. Na urządzeniach z systemami Android i iOS można użyć **Raportu o niezgodnych aplikacjach** , aby porównać aplikacje zainstalowane przez użytkowników z listą zgodnych aplikacji (ale nie można zablokować instalacji aplikacji).
 
 > [!TIP]
-> Można skonfigurować warunki i postanowienia dla użytkowników, aby wiedzieli oni, że aplikacje na urządzeniu, w tym również aplikacje osobiste, będą podlegały ocenie, a aplikacje niezgodne będą blokowane lub zgłaszane. Przed rejestracją urządzenia i rozpoczęciem korzystania z Portalu firmy w celu pobrania aplikacji użytkownicy muszą zaakceptować przedstawione warunki i postanowienia. Aby uzyskać więcej informacji na temat korzystania z warunków i postanowień, zobacz [Ustawienia zasad dotyczących warunków i postanowień w usłudze Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md)..
+> Można skonfigurować warunki i postanowienia dla użytkowników, aby wiedzieli oni, że aplikacje na urządzeniu, w tym również aplikacje osobiste, będą podlegały ocenie, a aplikacje niezgodne będą blokowane lub zgłaszane. Przed rejestracją urządzenia i rozpoczęciem korzystania z Portalu firmy w celu pobrania aplikacji użytkownicy muszą zaakceptować przedstawione warunki i postanowienia. Aby uzyskać więcej informacji na temat korzystania z warunków i postanowień, zobacz [Ustawienia zasad dotyczących warunków i postanowień w usłudze Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md).
 
 Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz **Ustawienia zasad niestandardowych** w dalszej części tego tematu.
 
@@ -99,7 +99,7 @@ Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć z
 |**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia dostęp do sklepu z aplikacjami z poziomu urządzenia.|Tak|
 |**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Tak|
 |**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|Tak|
-|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.|System iOS 7.1 lub nowszy|
+|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|System iOS 7.1 lub nowszy|
 |**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|System iOS 7.1 lub nowszy|
 |**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak Facetime, w urządzeniu.|Tak|
 |**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|Tak|
@@ -153,14 +153,14 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
-|**Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku**|Kliknij pozycję **Przeglądaj**, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz **Jak określać adresy URL sklepów z aplikacjami** w dalszej części tego tematu.|
+|**Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku**|Wybierz pozycję **Przeglądaj**, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz **Jak określać adresy URL sklepów z aplikacjami** w dalszej części tego tematu.|
 |**Zezwalaj na obsługę dotykową**|Włącza lub wyłącza ekran dotykowy na urządzeniu.|
 |**Zezwalaj na obracanie ekranu**|Włącza lub wyłącza zmianę orientacji ekranu podczas obracania urządzenia.|
 |**Zezwalaj na używanie przycisków regulacji głośności**|Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.|
 |**Zezwalaj na przełączanie dzwonka**|Włącza lub wyłącza przełączanie dzwonka (wyciszanie) na urządzeniu.|
 |**Zezwalaj na używanie przycisku usypiania/budzenia ekranu**|Włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.|
 |**Zezwalaj na automatyczne blokowanie**|Włącza lub wyłącza automatyczne blokowanie urządzenia.|
-|**Włącz dźwięk mono**|Włącza lub wyłącza ustawienie ułatwień dostępu **Dźwięk mono**..|
+|**Włącz dźwięk mono**|Włącza lub wyłącza ustawienie ułatwień dostępu **Dźwięk mono**.|
 |**Włącz lektora**|Włącza lub wyłącza funkcję ułatwień dostępu **VoiceOver** , która odczytuje na głos tekst wyświetlany na ekranie urządzenia.|
 |**Włącz korektę lektora**|Włącza lub wyłącza ustawienia funkcji VoiceOver (na przykład możliwość ustawienia tempa odczytywania tekstu z ekranu).|
 |**Włącz powiększenie**|Włącza lub wyłącza funkcję ułatwień dostępu **Zoom** umożliwiającą powiększenie fragmentu ekranu urządzenia za pomocą gestu.|
@@ -170,8 +170,7 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 |**Włącz obsługę dotykową z ułatwieniami**|Włącza lub wyłącza funkcję ułatwień dostępu **Assistive Touch** , która umożliwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.|
 |**Włącz korektę obsługi dotykowej z ułatwieniami**|Włącza lub wyłącza ustawienia funkcji Assistive Touch.|
 |**Włącz wybór mowy**|Włącza lub wyłącza funkcję ułatwień dostępu **wyboru mowy** , dzięki której zaznaczony tekst może zostać odczytany na głos przez urządzenie.|
-> [!NOTE]
-> Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
+> [!NOTE] Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
 > 
 > -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub menedżera rejestracji urządzeń w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 > -   Jeśli wskazana aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
@@ -185,7 +184,7 @@ Użyj **Raportu o niezgodnych aplikacjach** , aby wyświetlić zgodność dozwol
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Raporty** &gt; **Raport o niezgodnych aplikacjach**.
 
-2.  Wybierz grupy urządzeń, które chcesz sprawdzić, określ, czy sprawdzić aplikacje zgodne, niezgodne czy oba rodzaje, a następnie kliknij pozycję **Wyświetl raport**..
+2.  Wybierz grupy urządzeń, które chcesz sprawdzić, określ, czy sprawdzić aplikacje zgodne, niezgodne czy oba rodzaje, a następnie wybierz pozycję **Wyświetl raport**.
 
 #### Jak określać adresy URL sklepów z aplikacjami
 Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji **Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku** (tylko iOS), użyj następującego formatu:
@@ -194,10 +193,9 @@ Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz
 
 Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgodnych lub niezgodnych aplikacji lub aplikacji, która będzie działać w trybie kiosku.
 
-**Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Adres URL, którego użyjesz, to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**..
+**Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Adres URL, którego użyjesz, to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
-> [!NOTE]
-> Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
+> [!NOTE] Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
 
 
 ## Ustawienia zasad niestandardowych
@@ -224,7 +222,7 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 |Nazwa ustawienia|Szczegóły|
     |----------------|--------------------|
 |**Nazwa niestandardowego profilu konfiguracji (wyświetlana dla użytkowników)**|Podaj nazwę zasad, która będzie wyświetlana w urządzeniu i w raportach zasad usługi Intune.|
-|**Plik profilu konfiguracji**|Kliknij przycisk **Importuj**, następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web [Apple Developer](https://developer.apple.com/).|
+|**Plik profilu konfiguracji**|Wybierz pozycję **Importuj**, a następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web [Apple Developer](https://developer.apple.com/).|
     |**Szczegóły profilu konfiguracji**|Wyświetla kod XML zaimportowanego profilu konfiguracji.|
 
 ### Zobacz także
@@ -232,6 +230,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
