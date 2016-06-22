@@ -18,7 +18,7 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,33 +27,47 @@ ms.suite: ems
 
 # Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune
 W tym temacie opisano, co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi w portalu Azure.
-Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnym obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
+Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi i do ich tworzenia zalecane jest użycie tego portalu. Portal Azure obsługuje następujące scenariusze zarządzania aplikacjami mobilnymi:
+- Urządzenia zarejestrowane w usłudze Intune
+- Urządzenia zarządzane przez rozwiązanie MDM innej firmy
+- Urządzenia niezarządzane przez żadne rozwiązanie MDM (BYOD).
+
+Jeśli używasz portalu Azure po raz pierwszy, przeczytaj temat [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md), aby szybko zapoznać się z portalem.
+
+Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnym obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu **konsoli administracyjnej usługi Intune**, ale zalecane jest używanie portalu Azure nawet w przypadku urządzeń zarejestrowanych w usłudze Intune. Instrukcje dotyczące sposobu tworzenia zasad zarządzania aplikacjami mobilnymi za pomocą konsoli administracyjnej usługi Intune możesz znaleźć [tutaj](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
 >[!IMPORTANT]
-> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi.
+> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, zasady utworzone w portalu Azure zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
+
 
 ##  Obsługiwane platformy
 - System iOS 8.1 lub nowszy
 
 - System Android 4 lub nowszy
 
+Urządzenia z systemem Windows nie są obecne obsługiwane.
 ##  Obsługiwane aplikacje
-Pełna lista obsługiwanych aplikacji jest dostępna w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) na stronie partnerów aplikacji usługi Microsoft Intune.
-Kliknij aplikację, aby wyświetlić obsługiwane scenariusze i platformy, a także sprawdzić, czy aplikacja obsługuje wiele tożsamości.
+* **Aplikacje firmy Microsoft:** te aplikacje mają wbudowany zestaw SDK aplikacji usługi Intune i nie wymagają dalszego przetwarzania przed zastosowaniem zasad zarządzania aplikacjami mobilnymi.
+Pełna lista obsługiwanych aplikacji firmy Microsoft jest dostępna w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) na stronie partnerów aplikacji usługi Microsoft Intune. Kliknij aplikację, aby wyświetlić obsługiwane scenariusze i platformy, a także sprawdzić, czy aplikacja obsługuje wiele tożsamości.
+* Utworzone we własnym zakresie **aplikacje biznesowe:** wymagają przygotowania aplikacji do dołączenia do nich zestawu SDK aplikacji usługi Intune, zanim możliwe będzie zastosowanie zasad zarządzania aplikacjami mobilnymi.
+
+  * W przypadku urządzeń zarządzanych przez usługę Intune zobacz [Decide how to prepare apps for MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) (Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi).
+  * W przypadku urządzeń niezarządzanych, takich jak urządzenia należące do pracowników, lub urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami przenośnymi oferowane przez inną firmę, zobacz [Protect line of business apps and data on devices not enrolled in Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md) (Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach w usłudze Intune).
 
 **Przed** rozpoczęciem konfigurowania zasad zarządzania aplikacjami mobilnymi potrzebne będą:
 
 -   **Subskrypcja usługi Microsoft Intune**.    Użytkownicy końcowi potrzebują licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] w celu pobierania aplikacji z zasadami zarządzania aplikacjami mobilnymi.
 
--   Należy ustawić usługę Intune lub program Configuration Manager jako **urząd zarządzania urządzeniami przenośnymi**, zależnie od tego, czy używana jest tylko usługa **Intune**, czy program **Configuration manager** jest zintegrowany z usługą Intune w celu zarządzania urządzeniami. Jeśli używana jest wbudowana funkcja zarządzania urządzeniami przenośnymi w usłudze O365, należy zakupić subskrypcję usługi Intune i [ustawić usługę Intune jako urząd zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)..
 -   Subskrypcja **usługi Office 365 (O365)** jest wymagana do:
   - Stosowania zasad zarządzania aplikacjami mobilnymi do aplikacji z obsługą wielu tożsamości.
   - Tworzenia kont służbowych usług SharePoint Online i Exchange Online. Lokalna instalacja programu Exchange i lokalna instalacja programu SharePoint nie są obsługiwane.
+-    **Włączenie nowoczesnego uwierzytelniania** dla usługi **Skype dla firm Online**. Zaloguj się do witryny Microsoft Connect i wypełnij [ten formularz](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715), aby zostać zarejestrowanym w programie nowoczesnego uwierzytelniania.
 
 
 - **Usługa Azure Active Directory (Azure AD)** do tworzenia użytkowników. Usługa Azure AD uwierzytelnia użytkownika końcowego w momencie uruchomienia przez niego aplikacji i wprowadzenia poświadczeń służbowych.
 
-    > [!NOTE]
-    > Jeśli konfigurujesz użytkowników przy użyciu konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], pamiętaj, że konfiguracja zasad zarządzania aplikacjami mobilnymi będzie prowadzona od teraz w portalu Azure. Korzystanie z tego portalu wymaga skonfigurowania grup użytkowników usługi Azure AD przy użyciu portalu usługi Office 365.
+    > [!NOTE] Jeśli konfigurujesz użytkowników przy użyciu konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], pamiętaj, że konfiguracja zasad zarządzania aplikacjami mobilnymi będzie prowadzona od teraz w portalu Azure. Korzystanie z tego portalu wymaga skonfigurowania grup użytkowników usługi Azure AD przy użyciu portalu usługi Office 365.
 
 
 ## Tworzenie użytkowników i przypisywanie licencji usługi Microsoft Intune
@@ -87,7 +101,7 @@ W poniższej tabeli zamieszczono role i uprawnienia, które można przypisać ad
 
 ## Przypisywanie użytkownikowi roli współautora
 
-**Administratorzy globalni** mają dostęp do portalu Azure.  Jeśli chcesz, aby inni administratorzy mogli konfigurować zasady oraz wykonywać inne zadania związane z zarządzaniem aplikacjami mobilnymi, możesz przypisać użytkownikom **rolę współautora** zgodnie z poniższym opisem:
+**Administratorzy globalni** mają dostęp do [portalu Azure](https://portal.azure.com).  Jeśli chcesz, aby inni administratorzy mogli konfigurować zasady oraz wykonywać inne zadania związane z zarządzaniem aplikacjami mobilnymi, możesz przypisać użytkownikom **rolę współautora** zgodnie z poniższym opisem:
 
 
 1.  W bloku **Ustawienia** w sekcji **Zarządzanie zasobami** kliknij pozycję **Użytkownicy**.
@@ -104,13 +118,12 @@ W poniższej tabeli zamieszczono role i uprawnienia, które można przypisać ad
 
     ![Zrzut ekranu przedstawiający blok Dodawanie użytkowników w portalu Azure](../media/AppManagement/AzurePortal_MAM_AddusertoRole.png)
 
-    > [!IMPORTANT]
-    > Jeśli zostanie wybrany użytkownik bez przypisanej licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] , nie będzie on w stanie uzyskiwać dostępu do portalu.
+    > [!IMPORTANT] Jeśli zostanie wybrany użytkownik bez przypisanej licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], nie będzie on w stanie uzyskiwać dostępu do portalu.
 
 ## Następne kroki
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

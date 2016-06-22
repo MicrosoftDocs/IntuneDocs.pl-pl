@@ -1,13 +1,27 @@
 ---
-title: Wdrażanie aplikacji w usłudze Microsoft Intune | Microsoft Intune
-ms.custom: na
-ms.reviewer: na
-ms.service: microsoft-intune
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
+# required metadata
+
+title: Wdrażanie aplikacji | Microsoft Intune
+description:
+keywords:
 author: robstackmsft
+manager: jeffgilb
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod:
+ms.service: microsoft-intune
+ms.technology:
+ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mghadial
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 ---
 # Wdrażanie aplikacji w usłudze Microsoft Intune
 
@@ -19,7 +33,7 @@ Poniżej przedstawiono procedurę wdrażania aplikacji na wybranych urządzeniac
 
 ### Aby wdrożyć aplikację
 
-1. W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Aplikacje** &gt; **Aplikacje**, aby wyświetlić listę aplikacji, którymi zarządzasz.
+1. W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Aplikacje** &gt; **Aplikacje**, aby wyświetlić listę aplikacji, którymi zarządzasz.
 
 2.  Wybierz aplikację, którą chcesz wdrożyć, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
 
@@ -39,7 +53,7 @@ Poniżej przedstawiono procedurę wdrażania aplikacji na wybranych urządzeniac
     [Sprawdź, które aplikacje firmy Microsoft są zgodne z zasadami zarządzania aplikacjami mobilnymi.](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
 
 6. Jeśli wdrażana aplikacja jest zgodna z profilami sieci VPN w usłudze Intune, zostanie wyświetlona strona **Profil sieci VPN**. Na tej stronie można wybrać skojarzenie aplikacji systemu iOS z wdrożonym profilem sieci VPN. Połączenie sieci VPN zostanie automatycznie otwarte przy uruchomieniu aplikacji. Aby udostępnić profil sieci VPN, musi on mieć włączone ustawienie profilu **Na aplikację sieci VPN**.
- Aby uzyskać informacje dotyczące sposobu konfigurowania profilów sieci VPN, w tym obsługi kojarzenia profilów z aplikacjami, zobacz temat [Pomaganie użytkownikom w nawiązywaniu połączenia z siecią firmową za pomocą profilów sieci VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md).
+ Aby uzyskać informacje dotyczące sposobu konfigurowania profilów sieci VPN, w tym obsługi kojarzenia profilów z aplikacjami, zobacz [Pomaganie użytkownikom w nawiązywaniu połączenia z siecią firmową za pomocą profilów sieci VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md).
 
 ## Przykład
 
@@ -52,9 +66,9 @@ Jeśli aplikacja została wdrożona na urządzeniu z systemem iOS przy użyciu u
 
 ## Następne kroki
 
-Po wdrożeniu aplikacji możesz monitorować jej postęp. Aby uzyskać więcej informacji, zobacz [Monitorowanie aplikacji w usłudze Microsoft Intune](monitor-apps-in-microsoft-intune.md)..
+Po wdrożeniu aplikacji możesz monitorować jej postęp. Aby uzyskać więcej informacji, zobacz [Monitorowanie aplikacji w usłudze Microsoft Intune](monitor-apps-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

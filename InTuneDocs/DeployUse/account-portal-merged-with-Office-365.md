@@ -29,7 +29,7 @@ ms.assetid: 80f7d796-ad0e-4a50-a6e2-cdc52e7eb57e
 
 W zeszłym roku firma Microsoft rozpoczęła przenoszenie funkcji portalu konta usługi Intune do portalu zarządzania usługi Office 365. To przeniesienie zostało ukończone i portal konta usługi Intune został wycofany.
 
-Użytkownicy i grupy są zarządzani z poziomu odpowiednio nazwanych kart, a do zarządzania zakupami i subskrypcjami służy obecnie obszar Rozliczenia.
+Zarządzanie użytkownikami i grupami odbywa się teraz odpowiednio za pomocą kart **Użytkownicy** i **Grupy**, a zarządzanie zakupami i subskrypcjami jest dostępne po zalogowaniu się do obszaru **Rozliczenia** w [portalu zarządzania usługą Office 365](https://portal.office.com/Admin/Default.aspx). Aby zalogować się do portalu usługi Office 365, użyj swoich istniejących poświadczeń usługi Intune.
 
 W zależności od sposobu zakupu dostęp do materiałów do pobrania oprogramowania można uzyskiwać z portalu licencjonowania zbiorowego lub z [Portalu klientów w witrynie Microsoft Online Services](http://go.microsoft.com/fwlink/?LinkId=259567).
 
@@ -38,6 +38,6 @@ Należy pamiętać o zaktualizowaniu zakładek.
 Dowiedz się więcej o przeniesieniu z naszego [bloga usługi Microsoft Intune](https://blogs.technet.microsoft.com/microsoftintune/2015/09/01/intune-and-ems-subscriptions-now-available-in-the-office-365-portal/) lub przejdź bezpośrednio do nowego [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) pod adresem https://portal.office.com/Admin/Default.aspx, używając już posiadanych poświadczeń.
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

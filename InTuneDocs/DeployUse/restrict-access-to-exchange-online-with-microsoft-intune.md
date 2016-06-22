@@ -18,7 +18,7 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -43,8 +43,7 @@ Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczy
 
 -  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Microsoft Intune**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z usługą Microsoft Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
 
-   > [!NOTE]
-   > Nie należy konfigurować łącznika Service To Service Connector, jeśli zamierza się używać dostępu warunkowego zarówno dla usługi Exchange Online, jak i dla lokalnego programu Exchange.
+   > [!NOTE] Nie należy konfigurować łącznika Service To Service Connector, jeśli zamierza się używać dostępu warunkowego zarówno dla usługi Exchange Online, jak i dla lokalnego programu Exchange
 
    Aby uzyskać instrukcje dotyczące sposobu konfigurowania łącznika, zobacz [Łącznik Service To Service Connector usługi Intune](intune-service-to-service-exchange-connector.md)
 
@@ -78,8 +77,7 @@ Możliwe jest ograniczenie dostępu do usługi Exchange Online z poziomu program
 
  **Nowoczesne uwierzytelnianie** umożliwia klientom pakietu Microsoft Office logowanie się przy użyciu biblioteki uwierzytelniania usługi Active Directory (ADAL).
 
-> -   Uwierzytelnianie oparte na bibliotece ADAL umożliwia klientom pakietu Office korzystanie z uwierzytelniania za pomocą przeglądarki (nazywanego też uwierzytelnianiem pasywnym).  W celu uwierzytelnienia użytkownik jest kierowany do strony logowania. Ta nowa metoda logowania zapewnia większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**
-> W tym [artykule](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517) przedstawiono bardziej szczegółowe informacje dotyczące sposobu działania nowoczesnego uwierzytelniania.
+> -   Uwierzytelnianie oparte na bibliotece ADAL umożliwia klientom pakietu Office korzystanie z uwierzytelniania za pomocą przeglądarki (nazywanego też uwierzytelnianiem pasywnym).  W celu uwierzytelnienia użytkownik jest kierowany do strony logowania. Ta nowa metoda logowania zapewnia większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**. W tym [artykule](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517) przedstawiono bardziej szczegółowe informacje dotyczące sposobu działania nowoczesnego uwierzytelniania.
 
 
 Możesz ograniczyć dostęp do poczty e-mail programu Exchange z poziomu wbudowanego **klienta poczty e-mail programu Exchange ActiveSync** na następujących platformach:
@@ -104,7 +102,7 @@ Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznym
 
 -   [Należy włączyć nowoczesne uwierzytelnianie usługi Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
-    Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece uwierzytelniania usługi Active Directory (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
+    Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece Active Directory Authentication Library (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
 
 -   Aby zablokować nienowoczesne protokoły uwierzytelniania, należy skonfigurować reguły oświadczeń ADFS. Szczegółowe instrukcje zostały przedstawione w scenariuszu 3 — [całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
 
@@ -113,8 +111,7 @@ Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznym
 Upewnij się, że zasada zgodności zostanie [utworzona](create-a-device-compliance-policy-in-microsoft-intune.md) i [wdrożona](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) dla grup użytkowników, którzy otrzymają również zasady dostępu warunkowego.
 
 
-> [!IMPORTANT]
-> Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą uznawane za zgodne i będą miały dostęp do programu Exchange.
+> [!IMPORTANT] Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą uznawane za zgodne i będą miały dostęp do programu Exchange.
 
 ### Krok 2. Ocena wpływu zasad dostępu warunkowego
 Możliwe jest użycie **raportów ze spisu urządzeń przenośnych** w celu zidentyfikowania urządzeń, które mogą mieć zablokowany dostęp do programu Exchange po skonfigurowaniu zasad dostępu warunkowego.
@@ -138,8 +135,7 @@ Po uruchomieniu raportu sprawdź następujące cztery kolumny w celu określenia
 
 -   **Identyfikator programu Exchange ActiveSync** — urządzenia z systemami iOS i Android muszą mieć identyfikator programu Exchange ActiveSync skojarzony z rekordem rejestracji urządzenia w usłudze Azure Active Directory. Kojarzenie jest wykonywane, gdy użytkownik wybierze link **Uaktywnij pocztę e-mail** w wiadomości e-mail z kwarantanny.
 
-    > [!NOTE]
-    > Urządzenia z systemem Windows Phone zawsze wyświetlają wartość w tej kolumnie.
+    > [!NOTE] Urządzenia z systemem Windows Phone zawsze wyświetlają wartość w tej kolumnie.
 
 Urządzenia, które należą do grupy docelowej, nie będą mieć dostępu do programu Exchange, chyba że wartości w kolumnach są zgodne z wartościami w poniższej tabeli:
 
@@ -154,7 +150,7 @@ Możesz wyeksportować zawartość raportu i użyć kolumny **Adres e-mail**, ab
 ### Krok 3. Konfigurowanie grup użytkowników pod kątem zasad dostępu warunkowego
 Zasady dostępu warunkowego są przeznaczone dla innej grupy użytkowników zabezpieczeń usługi Azure Active Directory. Możliwe jest również wykluczenie niektórych grup użytkowników z tych zasad.  Jeśli zasady obejmują użytkownika, każde używane przez niego urządzenie musi być zgodne, aby mógł uzyskać dostęp do poczty e-mail.
 
-Możesz skonfigurować te grupy w **centrum administracyjnym usługi Office 365** lub w **portalu konta usługi Intune**.
+Możesz skonfigurować te grupy w **centrum administracyjnym usługi Office 365**lub w **portalu konta usługi Intune**.
 
 Możesz określić dwa typy grup dla każdej zasady:
 
@@ -171,12 +167,11 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Exchange Online**.
 ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online](../media/IntuneSA5dExchangeOnlinePolicy.png)
 
-2.  Na stronie **Zasady usługi Exchange Online** wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi Exchange Online**.
+2.  Na stronie **Zasady usługi Exchange Online** zaznacz opcję **Włącz zasady dostępu warunkowego dla usługi Exchange Online**.
 
-    > [!NOTE]
-    > Jeśli zasady zgodności nie zostały wdrożone, urządzenia są traktowane jako zgodne.
+    > [!NOTE] Jeśli zasady zgodności nie zostały wdrożone, urządzenia są traktowane jako zgodne.
     >
-    > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, będą musieli zarejestrować używane urządzenia w [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+    > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, będą musieli zarejestrować używane urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 3.  W obszarze **Dostęp do aplikacji** w przypadku aplikacji używających nowoczesnego uwierzytelniania użytkownik ma dwa sposoby wyboru platform, których mają dotyczyć zasady. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
 
@@ -184,7 +179,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
         W przypadku wybrania tego ustawienia wszystkie urządzenia próbujące uzyskać dostęp do usługi **Exchange Online** będą musiały być zarejestrowane w usłudze Intune i zgodne z zasadami.  Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego, a jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **Exchange Online** zostanie zablokowany.
         >[!TIP]
-           Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+           Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji, można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
 
     -   **Określone platformy**
 
@@ -195,8 +190,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 5.  W obszarze **Grupy docelowe**wybierz grupy zabezpieczeń użytkowników usługi Active Directory obejmowane przez te zasady. Można wybrać objęcie wszystkich użytkowników lub wybranej listy grup użytkowników.
 ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online, na której wyświetlone są opcje Grupy docelowe i Wykluczone grupy](../media/IntuneSA5eTargetedExemptedGroups.PNG)
-    > [!NOTE]
-    > W przypadku użytkowników należących do **grup docelowych** zasady usługi Intune spowodują zastąpienie reguł i zasad programu Exchange.
+    > [!NOTE]W przypadku użytkowników należących do **grup docelowych** zasady usługi Intune spowodują zastąpienie reguł i zasad programu Exchange.
     >
     > Program Exchange będzie tylko wymuszać reguły zezwalania, blokowania i kwarantanny programu Exchange oraz zasady programu Exchange w następujących sytuacjach:
     >
@@ -230,6 +224,6 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 [Ograniczanie dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

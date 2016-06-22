@@ -18,7 +18,7 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: andcerat
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -61,10 +61,11 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
 
   W przypadku urządzeń, które nie są zarejestrowane w usłudze Intune, linki sieci Web w aplikacjach zarządzanych przez zasady będą otwierane tylko w aplikacji Managed Browser korzystającej z zasad zarządzania aplikacjami mobilnymi.
 
-  Jeśli używasz usługi Intune do zarządzania swoimi urządzeniami, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md)..
+  Jeśli używasz usługi Intune do zarządzania swoimi urządzeniami, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
 
     **Wartość domyślna = Tak**
 - **Szyfruj dane aplikacji:** Wybierz opcję **Tak**, aby włączyć szyfrowanie. W przypadku włączenia tego ustawienia dla aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach. Zawartość w pamięci urządzenia zawsze jest zaszyfrowana.
+  >[!NOTE] Metoda szyfrowania nie ma certyfikatu FIPS 140-2
 
   **Wartość domyślna = Tak**
 
@@ -75,12 +76,13 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
 ##  Ustawienia zasad dostępu systemu Android
 Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji skonfigurowanych przy użyciu zasad zarządzania aplikacjami mobilnymi.
 
-- **Wymagaj prostego numeru PIN w celu udzielenia dostępu:** Wybierz opcję **Tak**, aby wymagać numeru PIN do korzystania z aplikacji zarządzanych przez zasady. Użytkownik zostanie poproszony o skonfigurowanie tego numeru przy pierwszym uruchomieniu aplikacji w kontekście pracy.
+- **Wymagaj numeru PIN w celu udzielenia dostępu:** wybierz pozycję **Tak**, aby wymagać numeru PIN do korzystania z aplikacji zarządzanych przez zasady. Użytkownik zostanie poproszony o skonfigurowanie tego numeru przy pierwszym uruchomieniu aplikacji w kontekście pracy.
 
  **Wartość domyślna = Tak**
-- **Liczba prób przed zresetowaniem numeru PIN:** określ liczbę prób wprowadzenia numeru PIN, po której użytkownik musi zresetować ten numer.
 
- **To ustawienie nie ma wartości domyślnej.**
+ -  **Zezwalaj na prosty numer PIN**: określ, czy użytkownicy mogą używać prostych sekwencji numeru PIN, takich jak 1234 lub 1111. **Wartość domyślna: Tak**.
+ - **Długość numeru PIN:** określ minimalną liczbę cyfr numeru PIN. **Wartość domyślna: 4**
+ - **Liczba prób przed zresetowaniem numeru PIN:** określ liczbę prób wprowadzenia numeru PIN, po której użytkownik musi zresetować ten numer. **To ustawienie nie ma wartości domyślnej.**
 - **Wymagaj poświadczeń firmowych w celu udzielenia dostępu:** wybierz opcję **Tak**, aby wymagać poświadczeń firmowych zamiast numeru PIN w celu uzyskania dostępu do aplikacji.  Wybranie opcji **Tak** przesłania wymagania dotyczące numeru PIN lub funkcji Touch ID.  Użytkownik zostanie poproszony o podanie swoich poświadczeń firmowych.
 
   **Wartość domyślna = Nie**
@@ -98,6 +100,6 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji skonfigurowanych
 - **Zablokuj przechwytywanie ekranu i asystenta systemu Android (system Android 6 Marshmallow lub nowszy):** Wybierz opcję **Tak**, aby blokować przechwytywanie ekranu i funkcje **asystenta systemu Android** podczas korzystania z tej aplikacji.
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

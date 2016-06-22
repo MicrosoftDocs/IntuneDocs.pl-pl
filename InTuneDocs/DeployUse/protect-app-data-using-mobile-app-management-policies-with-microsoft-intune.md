@@ -18,7 +18,7 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -41,8 +41,7 @@ Zasady MAM obsługują aplikacje działające na:
 
 -   **Urządzeniach zarządzanych i zarejestrowanych w rozwiązaniu do zarządzania urządzeniami przenośnymi innej firmy**.   Urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
-  > [!NOTE]
-  > Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami bezpiecznego kontenera ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
+  > [!NOTE] Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami do zabezpieczania kontenerów ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
 
 -   **Urządzenia niezarządzane**.  Urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
 
@@ -64,6 +63,7 @@ Stosowanie rozwiązań MDM jednocześnie z zasadami MAM jest możliwe i daje dod
 
 -   System Android 4 lub nowszy
 
+Urządzenia z systemem Windows nie są obecne obsługiwane.
 ##  Jak zasady MAM chronią dane aplikacji
 
 ####  Aplikacje bez zasad MAM:
@@ -77,9 +77,8 @@ W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mog�
 ![Obraz pokazujący sposób ochrony danych firmowych po zastosowaniu zasad MAM ](../media/Apps_with_mobile_app_policies.png)
 
 Zasady MAM umożliwiają zapobieganie zapisywaniu danych firmy w lokalnym magazynie urządzenia i ograniczanie ruchu danych do innych aplikacji, które nie są chronione przy użyciu zasad MAM. Ustawienia zasad MAM to:
-- Zasady przenoszenia danych, takie jak
- **Nie zezwalaj na używanie polecenia Zapisz jako**, **Ogranicz wycinanie, kopiowanie i wklejanie**.
-- Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu**, **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root**.
+- Zasady przenoszenia danych, takie jak **Nie zezwalaj na używanie polecenia Zapisz jako** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
+- Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu**, **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora**.
 
 ### Ochrona danych za pomocą zasad MAM na urządzeniach zarządzanych przez rozwiązanie MDM:
 
@@ -138,6 +137,6 @@ Wszystkie aplikacje mobilne pakietu Office obsługują wiele tożsamości.
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

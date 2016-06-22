@@ -18,7 +18,7 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,8 +33,7 @@ Wdróż [utworzone](create-a-device-compliance-policy-in-microsoft-intune.md) pr
 ![Zrzut ekranu przedstawiający stronę zasad zgodności z opcją menu Zarządzanie wdrażaniem u góry strony](./media/intune-sa-3c-deploy-compliance-policy2.png)
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycje **Dodaj > OK**.
-![Zrzut ekranu okna dialogowego zarządzania wdrażaniem](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png)
-Zasady zgodności można wdrożyć dla użytkowników i/lub urządzeń. Użyj utworzonych i zsynchronizowanych z usługą Intune grup usługi Active Directory lub utwórz te grupy ręcznie w konsoli usługi Intune. Aby dowiedzieć się więcej na temat wdrażania zasad, zobacz [Wdrażanie zasad konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+![Zrzut ekranu okna dialogowego zarządzania wdrażaniem](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png) Zasady zgodności można wdrożyć dla użytkowników i/lub urządzeń. Użyj utworzonych i zsynchronizowanych z usługą Intune grup usługi Active Directory lub utwórz te grupy ręcznie w konsoli usługi Intune. Aby dowiedzieć się więcej na temat wdrażania zasad, zobacz [Wdrażanie zasad konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 Podsumowanie stanu oraz alerty na stronie **Przegląd** obszaru roboczego **Zasady** umożliwiają zidentyfikowanie problemów z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym **Pulpit nawigacyjny** jest wyświetlane podsumowanie stanu.
 
@@ -62,7 +61,7 @@ Konflikty zasad mogą wystąpić z powodu zastosowania wielu zasad usługi Intun
 
 #### Aby wyświetlić raporty dotyczące zaświadczania kondycji
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Raporty**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz opcję **Raporty**.
 
 2.  Na stronie **Raport dotyczący zaświadczania kondycji — Utwórz nowy raport** można wyświetlić raport z wszystkimi danymi związanymi z zaświadczaniem kondycji systemu Windows 10 zbieranymi przez usługę Intune. Można również utworzyć raport z podzbiorem danych za pomocą filtrów. Filtry mogą być związane z typem urządzenia, systemem operacyjnym lub podzbiorem punktów danych.
 
@@ -77,6 +76,6 @@ Teraz możesz zacząć stosować zasady zgodności wraz z zasadami dostępu waru
 [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

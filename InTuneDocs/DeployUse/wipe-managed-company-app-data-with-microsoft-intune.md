@@ -18,7 +18,7 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,7 +40,7 @@ Aby wybiórczo usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia,
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune z kafelkiem Podsumowanie](../media/AppManagement/AzurePortal_MAM_WipeRequests.png)
 
-2.  Wybierz pozycję  **Nowe żądanie czyszczenia**.
+2.  Wybierz pozycję **Nowe żądania czyszczenia**.
 
     ![Zrzut ekranu przedstawiający blok Nowe żądanie czyszczenia](../media/AppManagement/AzurePortal_MAM_NewWipeRequest.png)
 
@@ -60,12 +60,12 @@ Blok **Zarządzanie aplikacjami mobilnymi w usłudze Intune** zawiera raport z p
 
 2.  W bloku **Żądanie czyszczenia** jest wyświetlana lista żądań pogrupowanych według użytkowników.  System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego może być wyświetlanych wiele żądań dla danego użytkownika.  Stan wskazuje, czy żądanie czyszczenia jest nadal **oczekujące**, **zakończone niepowodzeniem**czy **zakończone pomyślnie**.
 
-### Zobacz także
+### Zobacz też
 [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi ](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Korzystanie z portalu Azure](azure-portal-for-microsoft-intune-mam-policies.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

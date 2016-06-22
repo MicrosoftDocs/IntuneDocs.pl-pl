@@ -18,7 +18,7 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,8 +37,7 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 
 ## Ustawienia zabezpieczeń systemu
 ### Hasło
-- **Wymagaj hasła do odblokowania urządzeń przenośnych:** Uustaw tę opcję na **Tak**, aby wymagać od użytkowników podania hasła przed
-  uzyskaniem dostępu do urządzenia.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych:** ustaw tę pozycję na wartość **Tak**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do swojego urządzenia.
 
 -  **Minimalna długość hasła:** Określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło użytkownika.
 
@@ -52,39 +51,28 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 
 - **Liczba minut braku aktywności, zanim będzie wymagane hasło:** określa czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło.
 
-- **Wygaśnięcie hasła (dni):** Wybierz liczbę dni, po których hasło użytkownika wygasa
-  i należy utworzyć nowe.
+- **Wygaśnięcie hasła (dni):** wybierz liczbę dni, po których wygasa hasło użytkownika i należy utworzyć nowe.
 
-- **Pamiętaj historię haseł:** użyj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu używaniu poprzednich haseł**, aby uniemożliwić użytkownikowi
-  ponowne używanie wcześniej utworzonych haseł.
+- **Pamiętaj historię haseł:** używaj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu używaniu poprzednich haseł**, aby uniemożliwić użytkownikowi ponowne używanie wcześniej utworzonych haseł.
 
-- **Zapobiegaj ponownemu używaniu poprzednich haseł:** jeśli wybrano opcję **Pamiętaj historię haseł**, określ
-  liczbę wcześniej używanych haseł, których nie można użyć ponownie.
+- **Zapobiegaj ponownemu używaniu poprzednich haseł:** jeśli jest zaznaczona opcja **Pamiętaj historię haseł**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
 
-- **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:**
-  Tego ustawienia należy używać razem z ustawieniem **Liczba minut braku aktywności, zanim będzie wymagane hasło**. Użytkownicy końcowi otrzymają monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu
-  **Liczba minut braku aktywności, zanim będzie wymagane hasło**.
+- **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownicy końcowi otrzymają monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
 
 ### Szyfrowanie
-- **Wymagaj szyfrowania na urządzeniu przenośnym:** Ustaw tę opcję na **Tak**, aby wymagać
-  zaszyfrowania urządzenia w celu połączenia się z zasobami. Urządzenia są
-  szyfrowane po skonfigurowaniu ustawienia **Wymagaj hasła do
-  odblokowania urządzeń przenośnych**.
+- **Wymagaj szyfrowania na urządzeniu przenośnym:** ustaw tę pozycję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami. Urządzenia są szyfrowane po skonfigurowaniu ustawienia **Wymagaj hasła do odblokowania urządzeń przenośnych**.
 
 ## Ustawienia kondycji urządzenia
 
-- **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root:** w przypadku włączenia tego ustawienia
-  urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
+- **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root:** w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
 
 ## Ustawienia właściwości urządzenia
-- **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej
-  wersji systemu operacyjnego, zostaje zgłoszone jako niezgodne.
+- **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne.
   Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta
-  z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
+- **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

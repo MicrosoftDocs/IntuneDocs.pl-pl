@@ -18,7 +18,7 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -32,11 +32,11 @@ ms.suite: ems
 Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla następujących składników:
 - Aplikacje działające na urządzeniach **zarejestrowanych w usłudze Intune i zarządzanych przez nią**.
 - Aplikacje działające na urządzeniach, które **nie są zarejestrowane** w żadnym rozwiązaniu do zarządzania aplikacjami mobilnymi
-- Aplikacje działające na urządzeniach, które **są zarejestrowane w rozwiązaniu do zarządzania aplikacjami mobilnymi innej firmy**..
+- Aplikacje działające na urządzeniach, które **są zarejestrowane w rozwiązaniu do zarządzania aplikacjami mobilnymi innej firmy**.
 
 Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnym obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
-> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi.
+> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, zasady utworzone w portalu Azure zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
 
 ## Zaloguj się do portalu Azure i dostosuj swoją stronę początkową
 
@@ -50,7 +50,7 @@ Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarz�
 
 3.  W menu **Przeglądaj** znajdź pozycję **Intune**.![Zrzut ekranu przedstawiający menu Przeglądaj z wyróżnioną pozycją Intune](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
-4.  Kliknij pozycje **Intune > Zarządzanie aplikacjami mobilnymi w usłudze Intune > Ustawienia**..
+4.  Kliknij pozycję **Intune > Zarządzanie aplikacjami mobilnymi w usłudze Intune > Ustawienia**.
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
@@ -64,6 +64,6 @@ Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarz�
 [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: andcerat
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,12 +48,11 @@ Zasady zarządzania aplikacjami mobilnymi (mobile application management, MAM) s
 
     ![Zrzut ekranu monitu o podanie numeru PIN w aplikacji OneDrive](../media/AppManagement/iOS_AppPINPrompt.png)
 
-5.  Po ustawieniu i potwierdzeniu numeru PIN uzyskasz dostęp do plików w usłudze **OneDrive dla Firm**..
+5.  Po ustawieniu i potwierdzeniu numeru PIN uzyskasz dostęp do plików w usłudze **OneDrive dla firm**.
 
     ![Zrzut ekranu otwartej lokalizacji plików z listą istniejących plików](../media/AppManagement/iOS_OneDriveSuccess.png)
 
-    > [!NOTE]
-    > Jeśli zmienisz wdrożone zasady, zmiany te zostaną zastosowane przy następnym otwarciu aplikacji.
+    > [!NOTE] Jeśli zmienisz wdrożone zasady, zmiany te zostaną zastosowane przy następnym otwarciu aplikacji.
 
 ##  Uzyskiwanie dostępu do usługi OneDrive na urządzeniu z systemem Android
 
@@ -106,13 +105,13 @@ Jako przykład w tym scenariuszu użyto programu Microsoft Word.
 
     ![Zrzut ekranu wpisanego zdania w dokumencie programu Word](../media/AppManagement/iOS_WordCreateCompanyDoc.PNG)
 
-5.  Otwórz dokument zapisany w lokalizacji służbowej.  Skopiuj tekst, otwórz swoje prywatne konto w serwisie **Facebook**, a następnie spróbuj wkleić skopiowany tekst.  Powinno okazać się, że nie możesz wkleić zawartości do nowego wpisu w serwisie Facebook. Opcja wklejania nie jest nieaktywna, ale po naciśnięciu polecenia **Wklej** nic się nie dzieje..
+5.  Otwórz dokument zapisany w lokalizacji służbowej.  Skopiuj tekst, otwórz swoje prywatne konto w serwisie **Facebook**, a następnie spróbuj wkleić skopiowany tekst.  Powinno okazać się, że nie możesz wkleić zawartości do nowego wpisu w serwisie Facebook. Opcja wklejania nie jest nieaktywna, ale po naciśnięciu polecenia **Wklej**nic się nie dzieje.
 
     ![Zrzut ekranu z opcjami wycinania, kopiowania i wklejania](../media/AppManagement/iOS_WordCopyCompany.png)
 
     ![Zrzut ekranu przedstawiający brak wklejonych danych we wpisie w serwisie Facebook](../media/AppManagement/iOS_FacebookPasteCompany.png)
 
-6.  Powtórz teraz kroki 2 i 3, aby utworzyć nowy dokument, wpisz dowolne zdanie, ale zamiast zapisywać dokument w lokalizacji służbowej, zapisz go w lokalizacji prywatnej, na przykład **OneDrive — osobiste**..
+6.  Powtórz teraz kroki 2 i 3, aby utworzyć nowy dokument, wpisz dowolne zdanie, ale zamiast zapisywać dokument w lokalizacji służbowej, zapisz go w lokalizacji prywatnej, na przykład **OneDrive — osobiste**.
 
     ![Zrzut ekranu z opcjami wycinania, kopiowania i wklejania ze zdaniem zaznaczonym w celu skopiowania](../media/AppManagement/iOS_WordCopyPersonal.png)
 
@@ -134,27 +133,35 @@ W przypadku **aplikacji OneDrive i Outlook** możesz używać tylko jednego kont
 
 Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasady traktowania wielu kont użytkowników.
 
-Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady MAM za pomocą usługi Intune. **Firma X** wdraża zasady MAM **przed** **Firmą Y**. Zasady MAM zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane przez zasady MAM, musisz usunąć konto użytkownika skojarzone z Firmą X.
+Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady MAM za pomocą usługi Intune. **Firma X** wdraża zasady zarządzania aplikacjami mobilnymi **przed** **Firmą Y**. Zasady MAM zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane przez zasady MAM, musisz usunąć konto użytkownika skojarzone z Firmą X.
 ### Dodawanie drugiego konta
 #### System iOS
-Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym samym urządzeniu może zostać wyświetlony komunikat o blokadzie.  Zostanie również wyświetlona opcja usunięcia istniejącego konta i dodania nowego. Możesz to zrobić, klikając pozycję **Tak**..
+Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym samym urządzeniu może zostać wyświetlony komunikat o blokadzie.  Zostanie również wyświetlona opcja usunięcia istniejącego konta i dodania nowego. Możesz to zrobić, klikając pozycję **Tak**.
 
 ![Zrzut ekranu okna dialogowego z komunikatem o blokadzie i opcjami Tak i Nie](../media/AppManagement/iOS_SwitchUser.PNG)
 ####  Android
-Jeśli korzystasz z urządzenia z systemem Android, może zostać wyświetlony komunikat o blokadzie z instrukcjami usunięcia istniejącego konta i dodania nowego.  Aby usunąć istniejące konto na urządzeniu z systemem Android, przejdź do pozycji **Ustawienia &gt; Ogólne &gt; Menedżer aplikacji &gt; Portal firmy i wybierz pozycję „Wyczyść dane”**..
+Jeśli korzystasz z urządzenia z systemem Android, może zostać wyświetlony komunikat o blokadzie z instrukcjami usunięcia istniejącego konta i dodania nowego.  Aby usunąć istniejące konto na urządzeniu z systemem Android, przejdź do pozycji **Ustawienia &gt; Ogólne &gt; Menedżer aplikacji &gt; Portal firmy, a następnie wybierz pozycję „Wyczyść dane”**.
 
 ![Zrzut ekranu komunikatu o błędzie i instrukcjami dotyczącymi usunięcia konta](../media/AppManagement/Android_SwitchUser.png)
 
 ##  Wyświetlanie plików multimedialnych przy użyciu aplikacji do udostępniania usługi Rights Management
-Aby wyświetlać pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniach z systemem Android, użyj [aplikacji do udostępniania usługi Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)..
+Aby wyświetlać pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniach z systemem Android, użyj [aplikacji do udostępniania usługi Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
 
 Pobierz tę aplikację ze sklepu Google Play.  Po zainstalowaniu aplikacji na urządzeniu uruchom ją i uwierzytelnij się przy użyciu poświadczeń firmowych. Wyświetlanie niechronionych i chronionych plików z innych aplikacji zarządzanych przy użyciu zasad powinno być teraz możliwe.
 
+**Urządzenia z systemem Android, które nie zostały zarejestrowane w usłudze Intune**
 
-### Zobacz także
+Przed skorzystaniem z aplikacji do udostępniania usługi RMS do wyświetlania plików z innych aplikacji zarządzanych przez usługę Intune, uruchom aplikację RMS i uwierzytelnij się za pomocą swojego konta służbowego.  Po zalogowaniu się zostanie wyświetlony następujący komunikat **tylko, jeśli nie masz licencji usługi RMS**:
+
+**Pomyślnie ukończono uwierzytelnianie — możesz teraz wyświetlać pliki firmowe, ale Twoja organizacja nie została skonfigurowana, aby umożliwić ochronę plików. Aby uzyskać więcej szczegółów, skontaktuj się z administratorem IT.**
+
+Taka sytuacja nie uniemożliwia korzystania z aplikacji do udostępniania usługi RMS do wyświetlania plików firmowych. Nadal możesz otwierać i wyświetlać pliki firmowe z innych aplikacji zarządzanych przez usługę Intune, a zasady zarządzania aplikacjami mobilnymi nadal będą obowiązywać.  Ten komunikat świadczy tylko o tym, że nie będzie możliwe dodawanie dodatkowych funkcji ochrony zapewnianych przez aplikację do udostępniania usługi RMS.  Musisz mieć licencję aplikacji RMS, aby chronić swoje pliki. Aby uzyskać więcej informacji na temat funkcji ochrony plików aplikacji RMS, zobacz [Ochrona pliku na urządzeniu](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-in-place) i [Ochrona pliku udostępnionego pocztą e-mail](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-by-email).
+
+
+### Zobacz też
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

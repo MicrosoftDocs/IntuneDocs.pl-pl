@@ -18,7 +18,7 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,7 @@ ms.suite: ems
 W tym temacie opisano czynności służące do tworzenia zasad zgodności, które urządzenie musi spełnić, aby było uznane za zgodne.
 
 ##  Krok 1. Dodanie nowej zasady
-  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Zasady zgodności** &gt; **Dodaj**.
+  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Zasady zgodności** &gt; **Dodaj**.
 
   ![Zrzut ekranu strony zasad zgodności w konsoli administracyjnej usługi Intune przedstawiający opcję Dodaj w menu u góry strony](./media/intune-sa-3a-add-compliance-policy.png)
 
@@ -84,6 +84,6 @@ Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustaw
 [Wprowadzenie do zasad zgodności urządzeń](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

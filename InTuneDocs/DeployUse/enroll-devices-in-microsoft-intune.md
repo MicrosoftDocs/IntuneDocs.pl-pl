@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rejestrowanie urządzeń w usłudze Microsoft Intune | Microsoft Intune
+title: Rejestrowanie urządzeń | Microsoft Intune
 description:
 keywords:
 author: NathBarn
@@ -18,7 +18,7 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,6 +27,12 @@ ms.suite: ems
 
 # Rejestrowanie urządzeń do zarządzania w usłudze Intune
 Usługa zarządzania urządzeniami przenośnymi Microsoft Intune (MDM) używa rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów. Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. W scenariuszach opartych na strategii „przynieś własne urządzenie” (BYOD) i urządzeniach należących do firmy (COD) wymaga się procesu rejestracji urządzeń. Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać lżejszych metod zarządzania, w których nie wymaga się rejestracji urządzeń. Za pomocą oprogramowania klienckiego usługi Intune można również zarządzać komputerami z systemem Windows.
+
+###  Obsługiwane platformy urządzeń
+
+Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
+
+[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ## Włączanie rejestracji urządzeń  
  Rejestracja umożliwia użytkownikom uzyskiwanie dostępu do zasobów firmowych na swoich urządzeniach osobistych. Dzięki niej administrator może upewnić się, że urządzenia są zgodne z zasadami chroniącymi zasoby firmowe. Jest to najlepszy sposób na skorzystanie ze strategii „przynieś własne urządzenie” z usługą Intune. Administrator musi włączyć rejestrację w konsoli usługi Intune. Może to wymagać utworzenia zaufanej relacji z urządzeniem i przypisania licencji do użytkowników. Następnie urządzenie jest rejestrowane, zazwyczaj przez użytkowników, którzy muszą wprowadzić poświadczenia służbowe. Urządzenie otrzymuje zasady z usługi Intune i uzyskuje dostęp do zasobów.
@@ -58,6 +64,6 @@ Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Intune](manage-windows-pcs-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

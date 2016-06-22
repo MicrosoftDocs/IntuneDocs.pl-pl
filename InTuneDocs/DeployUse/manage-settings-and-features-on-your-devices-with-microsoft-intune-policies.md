@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune | Microsoft Intune
+title: Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,31 +37,30 @@ Zasady usługi Intune można podzielić na następujące kategorie. Używana kat
 - **Zasady zgodności urządzeń:** są to zasady definiujące reguły i ustawienia, z którymi urządzenie musi być zgodne, aby można je było uważać za spełniające zasady dostępu warunkowego. Zasady zgodności mogą być również wykorzystane do monitorowania i rozwiązywania kwestii związanych ze zgodnością urządzeń niezależnie od dostępu warunkowego.
 Aby uzyskać więcej informacji, zobacz [Zasady zgodności urządzeń w usłudze Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md).
 - **Zasady dostępu warunkowego:** zasady te ułatwiają zabezpieczanie poczty e-mail i innych usług w oparciu o wybrane warunki.
-Aby uzyskać szczegółowe informacje, zobacz temat [Ograniczanie dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
-- **Zasady rejestracji urządzeń firmowych:** informacje na temat zasad rejestracji urządzeń firmowych można znaleźć w temacie [Konfigurowanie zarządzania systemem iOS i komputerem Mac przy użyciu usługi Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md).
+Aby uzyskać szczegółowe informacje, zobacz [Ograniczanie dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+- **Zasady rejestracji urządzeń firmowych:** aby uzyskać informacje na temat zasad rejestracji urządzeń firmowych, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md).
 - **Zasady dostępu do zasobów:** zasady z tej grupy działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do skutecznej pracy, niezależnie od miejsca, w którym się znajdują.
-Aby uzyskać więcej informacji, zobacz temat [Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
+Aby uzyskać więcej informacji, zobacz [Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
 
 
-Aby uzyskać pełną listę zasad usługi Intune, zobacz temat [Informacje o zasadach usługi Microsoft Intune](microsoft-intune-policy-reference.md).
+Aby uzyskać pełną listę zasad usługi Intune, zobacz [Informacje o zasadach usługi Microsoft Intune](microsoft-intune-policy-reference.md).
 
 
 
 
 ## Tworzenie zasad konfiguracji
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Zasady** &gt; **Zasady konfiguracji** &gt; **Dodaj**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Zasady** &gt; **Zasady konfiguracji** &gt; **Dodaj**.
 
 2.  Wybierz zasady, a następnie wybierz opcję użycia zalecanych ustawień zasad (jeśli jest dostępna; te ustawienia można zmienić później) lub utworzenia niestandardowych zasad z własnymi ustawieniami.
 
-    > [!TIP]
-    > Aby uzyskać pomoc związaną z wyborem odpowiednich zasad, zobacz [Informacje o zasadach usługi Microsoft Intune](microsoft-intune-policy-reference.md).
+    > [!TIP] Aby uzyskać pomoc związaną z wyborem odpowiednich zasad, zobacz [Informacje o zasadach usługi Microsoft Intune](microsoft-intune-policy-reference.md).
 
-3.  Gdy skończysz, kliknij pozycję **Utwórz zasadę**.
+3.  Gdy skończysz, wybierz pozycję **Utwórz zasady**.
 
 4.  Na ekranie **Tworzenie zasad** skonfiguruj nazwę i opcjonalny opis zasad.
 
-5.  Skonfiguruj wymagane ustawienia zasad, a następnie kliknij pozycję **Zapisz zasady**.
+5.  Skonfiguruj wymagane ustawienia zasad, a następnie wybierz pozycję **Zapisz zasady**.
 
     Jeśli potrzebujesz pomocy związanej z ustawieniami zasad, wybierz typ zasad z następującej listy:
 
@@ -77,7 +76,7 @@ Aby uzyskać pełną listę zasad usługi Intune, zobacz temat [Informacje o zas
     - [Ustawienia zasad dotyczących warunków i postanowień](terms-and-condition-policy-settings-in-microsoft-intune.md)
     - [Ustawienia ogólne dotyczące urządzeń przenośnych (starszych)](mobile-device-security-policy-settings-in-microsoft-intune.md)
 
-4.  W oknie dialogowym z potwierdzeniem kliknij przycisk **Tak** , aby wdrożyć zasady teraz, lub kliknij przycisk **Nie** , aby utworzyć zasady bez ich wdrażania.
+4.  W oknie dialogowym z potwierdzeniem wybierz pozycję **Tak**, aby wdrożyć zasady teraz, lub wybierz pozycję **Nie**, aby utworzyć zasady bez ich wdrażania.
 
 Możesz wyświetlić i edytować nowe zasady, przeglądając sekcje dla każdego typu zasad w obszarze roboczym **Zasady** .
 
@@ -90,37 +89,28 @@ Teraz, gdy zasada została utworzona, zwykle można wdrożyć ją w co najmniej 
 
 ## Wdrażanie zasad konfiguracji
 
-1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
+1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycję **Dodaj** &gt; **OK**.
 
-    -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
+    -   **Aby zamknąć okno dialogowe bez wdrażania** — wybierz pozycję **Anuluj**.
 
 Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczących wdrożenia w dolnej części listy zasad.
 
 ## Zarządzanie zasadami
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/)kliknij pozycję **Zasady**, a następnie wyszukaj i wybierz zasady, którymi chcesz zarządzać.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Zasady**, a następnie wyszukaj i wybierz zasady, którymi chcesz zarządzać.
 
 2.  Wybierz jedno z następujących działań:
 
 - **Edytuj** — otwiera właściwości dla wybranych zasad i umożliwia wprowadzenie zmian.
 - **Usuń** — usuwa wybrane zasady.<br>Po usunięciu zasad są one usuwane ze wszystkich grup, w których zostały wdrożone.
-- **Zarządzanie wdrażaniem** — wybierz grupę, w której chcesz wdrożyć zasady, a następnie kliknij polecenie **Dodaj**.
+- **Zarządzanie wdrażaniem** — wybierz grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycję **Dodaj**.
 
-## Zadania zasad usługi Intune
 
-### Aby odświeżyć zasady na urządzeniu w celu zapewnienia ich aktualności (dotyczy wyłącznie komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune)
-
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/)kliknij pozycję **Grupy**, a następnie wybierz grupę urządzeń.
-
-2.  Wybierz urządzenia, na których chcesz odświeżyć zasady, a następnie kliknij pozycje **Zadania zdalne** &gt; **Odśwież zasady**.
-
-3.  Kliknij polecenie **Zadania zdalne** w prawym dolnym rogu konsoli administracyjnej usługi Intune w celu sprawdzenia stanu zadania.
-
-## Informacje o zasadach usługi Intune
+## Często zadawane pytania dotyczące zasad usługi Intune
 
 ### Jak długo trwa pobieranie zasad lub aplikacji przeznaczonych dla urządzeń przenośnych po ich wdrożeniu?
 Po wdrożeniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby powiadomienia urządzenia, które powinno zostać zaewidencjonowane przez usługę Intune. Trwa to zazwyczaj mniej niż 5 minut.
@@ -132,7 +122,8 @@ W takim przypadku urządzenie pobierze zasady podczas następnego zaplanowanego 
 - iOS — co 6 godzin
 - Android — co 8 godzin
 - Windows Phone — co 8 godzin
-- Komputery z systemem Windows zarejestrowane jako urządzenia — co 24 godziny
+- Zarejestrowane urządzenia z systemem Windows RT — co 24 godziny
+- Komputery z systemem Windows 8.1 i Windows 10 zarejestrowane jako urządzenia — co 8 godzin
 
 Jeśli urządzenie zostało właśnie zarejestrowane, częstotliwość zaewidencjonowania będzie większa:
 
@@ -172,7 +163,7 @@ Usługa Intune nie może oszacować ładunku plików konfiguracyjnych firmy Appl
 
 Dlatego podczas wdrażania niestandardowych zasad upewnij się, że skonfigurowane ustawienia nie pozostają w konflikcie z zasadami zgodności, konfiguracji lub innymi zasadami niestandardowymi. Jeśli wystąpią konflikty ustawień zasad niestandardowych, ustawienia będą stosowane w kolejności losowej.
 
-### Co się stanie, gdy zasady zostaną usunięte lub nie będą już miały zastosowania
+### Co się stanie, gdy zasady zostaną usunięte lub nie będą już miały zastosowania?
 Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożone zasady, powoduje usunięcie zasad i ustawień z urządzenia zgodnie z następującymi tabelami:
 
 #### zarejestrowane urządzenia
@@ -187,25 +178,7 @@ Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożon
         - Wymagany typ hasła
         - Wygaśnięcie hasła w dniach
         - Pamiętaj historię haseł
-        - Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia
-        - Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła
-        - Wymagany typ hasła — minimalna liczba zestawów znaków
-        - Zezwalaj na używanie aparatu
-        - Wymagaj szyfrowania na urządzeniu przenośnym
-        - Zezwalaj na używanie magazynu wymiennego
-        - Zezwalaj na używanie przeglądarki sieci Web
-        - Zezwalaj na korzystanie ze sklepu z aplikacjami
-        - Zezwalaj na przechwytywanie ekranu
-        - Zezwalaj na używanie funkcji geolokalizacji
-        - Zezwalaj na konto Microsoft
-        - Zezwalaj na kopiowanie i wklejanie
-        - Zezwalaj na tethering Wi-Fi
-        - Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi
-        - Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi
-        - Zezwalaj na resetowanie do ustawień fabrycznych
-        - Zezwalaj na połączenia Bluetooth
-        - Zezwalaj na komunikację NFC
-        - Zezwalaj na połączenia Wi-Fi
+        - Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia — Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła — Wymagany typ hasła — Minimalna liczba zestawów znaków — Zezwalaj na używanie aparatu — Wymagaj szyfrowania na urządzeniu przenośnym — Zezwalaj na używanie magazynu wymiennego — Zezwalaj na używanie przeglądarki sieci Web — Zezwalaj na korzystanie ze sklepu z aplikacjami — Zezwalaj na przechwytywanie ekranu — Zezwalaj na używanie funkcji geolokalizacji — Zezwalaj na konto Microsoft — Zezwalaj na kopiowanie i wklejanie — Zezwalaj na tethering Wi-Fi — Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi — Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi — Zezwalaj na resetowanie do ustawień fabrycznych — Zezwalaj na połączenia Bluetooth — Zezwalaj na komunikację NFC — Zezwalaj na połączenia Wi-Fi
     
     - **iOS** — wszystkie ustawienia są usuwane, z wyjątkiem:
         - Zezwalaj na roaming połączeń głosowych
@@ -220,9 +193,16 @@ Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożon
 - **Ustawienia Zapory systemu Windows** — zostaną przywrócone ustawienia domyślne odpowiednie dla systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 
+### Jak odświeżyć zasady na urządzeniu w celu zapewnienia ich aktualności (dotyczy wyłącznie komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune)?
+
+1.  W dowolnej grupie urządzeń wybierz urządzenia, na których chcesz odświeżyć zasady, a następnie wybierz pozycję **Zadania zdalne** &gt; **Odśwież zasady**.
+2.  Kliknij pozycję **Zadania zdalne** w prawym dolnym rogu konsoli administracyjnej usługi Intune w celu sprawdzenia stanu zadania.
+
+### Gdzie mogę znaleźć pomoc w rozwiązywaniu problemów dotyczących zasad?
+
+Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
 
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

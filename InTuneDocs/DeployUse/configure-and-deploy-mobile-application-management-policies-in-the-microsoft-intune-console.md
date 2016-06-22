@@ -18,7 +18,7 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,18 +34,21 @@ Zasady zarządzania aplikacjami mobilnymi obsługują następujące urządzenia:
 
 -   Urządzenia z systemem iOS w wersji 7 lub nowszej.
 
-> [!TIP]
-> Zasady zarządzania aplikacjami mobilnymi obsługują urządzenia zarejestrowane w usłudze Intune.
-> 
-> Informacje na temat tworzenia zasad zarządzania dla urządzeń niezarządzanych przez usługę Intune zawiera temat [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+> [!TIP] Zasady zarządzania aplikacjami mobilnymi obsługują urządzenia zarejestrowane w usłudze Intune.
+>
+> Informacje na temat tworzenia zasad zarządzania aplikacjami dla urządzeń niezarządzanych przez usługę Intune zawiera temat [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 W odróżnieniu od innych zasad usługi Intune, zasady zarządzania aplikacjami mobilnymi nie są wdrażane bezpośrednio. Zamiast tego należy je skojarzyć z aplikacją, która ma zostać ograniczona. Określone ustawienia zostaną zastosowane po wdrożeniu i zainstalowaniu aplikacji na urządzeniach.
 
-Aby zastosować ograniczenia dla aplikacji, musi ona zawierać zestaw Software Development Kit (SDK) aplikacji firmy Microsoft. Istnieją dwie metody uzyskania tego typu aplikacji:
+Aby zastosować ograniczenia dla aplikacji, musi ona zawierać zestaw SDK aplikacji usługi Microsoft Intune. Istnieją trzy metody uzyskania tego typu aplikacji:
 
 -   **Użycie aplikacji zarządzanej przez zasady** — takie aplikacje zawierają wbudowany zestaw SDK aplikacji. Aby dodać ten typ aplikacji, wystarczy podać link do wybranej aplikacji w sklepie z aplikacjami, takim jak iTunes lub Google Play. Żadne dalsze przetwarzanie nie jest wymagane w przypadku tego typu aplikacji. Wyświetl listę [aplikacji, których można używać z zasadami zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
 -   **Użycie opakowanej aplikacji** — są to aplikacje ponownie umieszczane w pakietach za pomocą **narzędzia opakowującego aplikacje w usłudze Microsoft Intune** w celu dodania do nich zestawu SDK aplikacji. To narzędzie jest zwykle używane do przetwarzania aplikacji firmowych utworzonych wewnętrznie. Nie można go używać do przetwarzania aplikacji, które zostały pobrane ze sklepu z aplikacjami. Zobacz [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+
+- **Napisz własną aplikację, która zawiera zestaw SDK aplikacji usługi Intune** — zestaw SDK aplikacji usługi Intune pozwala dołączyć funkcje zarządzania aplikacjami do aplikacji podczas jej pisania. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](/develop/intune-app-sdk)
+
+Aby łatwiej dokonać wyboru między narzędziem opakowującym aplikacje a zestawem SDK aplikacji usługi Intune, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
 
 Niektóre aplikacje zarządzane, takie jak aplikacja Outlook dla systemów iOS i Android, obsługują **wiele tożsamości**. Oznacza to, że usługa Intune stosuje ustawienia zarządzania tylko do firmowych kont lub danych w aplikacji.
 
@@ -57,12 +60,11 @@ Na przykład, jeśli używana jest aplikacja Outlook:
 
 -   Używane konto firmowe musi być tym samym kontem, które zostało użyte do rejestracji urządzenia w usłudze Intune.
 
-> [!TIP]
-> Jeśli używasz usługi Intune z programem Configuration Manager, zobacz [Sterowanie aplikacjami przy użyciu zasad zarządzania aplikacjami mobilnymi w programie Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
+> [!TIP] Jeśli używasz usługi Intune z programem Configuration Manager, zobacz [Sterowanie aplikacjami przy użyciu zasad zarządzania aplikacjami mobilnymi w programie Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
 
 ## Tworzenie i wdrażanie aplikacji podlegającej zasadom zarządzania aplikacjami mobilnymi
 
--   **Krok 1.** Uzyskiwanie linku do aplikacji zarządzanej przez zasady lub tworzenie opakowanej aplikacji
+-   **Krok 1.** Uzyskiwanie linku do aplikacji zarządzanej przez zasady, tworzenie opakowanej aplikacji lub używanie zestawu SDK aplikacji usługi Intune do napisania aplikacji objętej zarządzaniem aplikacjami mobilnymi.
 
 -   **Krok 2.** Publikowanie aplikacji w magazynie w chmurze
 
@@ -72,15 +74,12 @@ Na przykład, jeśli używana jest aplikacja Outlook:
 
 -   **Krok 5.** Monitorowanie wdrożenia aplikacji
 
-## **Krok 1.** Uzyskiwanie linku do aplikacji zarządzanej przez zasady lub tworzenie opakowanej aplikacji
+## **Krok 1.** Uzyskiwanie linku do aplikacji zarządzanej przez zasady, tworzenie opakowanej aplikacji lub używanie zestawu SDK aplikacji usługi Intune do napisania aplikacji objętej zarządzaniem aplikacjami mobilnymi.
 
--   **Aby uzyskać link do aplikacji zarządzanej przez zasady** — w sklepie z aplikacjami znajdź i zanotuj adres URL aplikacji zarządzanej przez zasady, którą chcesz wdrożyć.
+-   **Aby uzyskać link do aplikacji zarządzanej przez zasady w sklepie z aplikacjami** — w sklepie z aplikacjami znajdź i zanotuj adres URL aplikacji zarządzanej przez zasady, którą chcesz wdrożyć.
 
     Na przykład adres URL aplikacji Microsoft Word dla urządzenia iPad to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
--   **Aby utworzyć opakowaną aplikację**, użyj informacji zawartych w tematach [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) w celu utworzenia opakowanej aplikacji.
-
-    Narzędzie tworzy przetworzoną aplikację, którą można użyć podczas publikowania aplikacji w magazynie w chmurze.
 
 ## **Krok 2.** Publikowanie aplikacji w magazynie w chmurze
 Procedura publikowania aplikacji zarządzanej jest różna w zależności od tego, czy jest to aplikacja zarządzana przez zasady, czy aplikacja przetworzona za pomocą dostępnego w usłudze Microsoft Intune narzędzia opakowującego aplikacje dla systemu iOS.
@@ -89,7 +88,7 @@ Procedura publikowania aplikacji zarządzanej jest różna w zależności od teg
 
 1.  Gdy wszystko jest gotowe do przekazania aplikacji do magazynu w chmurze, postępuj zgodnie z instrukcjami w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
-2.  W przypadku aplikacji dla systemu iOS wybierz opcję **Zarządzana aplikacja systemu iOS ze sklepu App Store** w obszarze **Wybór sposobu udostępniania aplikacji dla urządzeń**.
+2.  W przypadku aplikacji dla systemu iOS wybierz opcję **Zarządzana aplikacja systemu iOS ze sklepu App Store**w obszarze **Wybór sposobu udostępniania aplikacji dla urządzeń**.
 
     W przypadku aplikacji dla systemu Android wybierz opcję **Zewnętrzny link**.
 
@@ -113,7 +112,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
 
 ## **Krok 3.** Tworzenie zasad zarządzania aplikacjami mobilnymi
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj i wdróż jedne z następujących zasad **Oprogramowania** , w zależności od typu urządzenia, dla którego chcesz skonfigurować aplikacje:
 
@@ -141,10 +140,10 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Wymagaj zgodności urządzenia z zasadami firmowymi w celu udzielenia dostępu**|Umożliwia korzystanie z aplikacji tylko wtedy, gdy urządzenie nie ma zdjętych zabezpieczeń systemu lub nie jest możliwy dostęp do urządzenia z uprawnieniami administratora.|
     |**Ponownie sprawdź wymagania dostępu po (w minutach)**|W polu **Limit czasu** określ częstotliwość sprawdzania wymagań dostępu aplikacji po jej uruchomieniu.|
     |**Okres karencji w trybie offline**|Jeśli urządzenie jest w trybie offline, określ czas do ponownego sprawdzenia wymagań dostępu aplikacji.|
-    |**Szyfruj dane aplikacji**|Określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane, w tym dane przechowywane zewnętrznie, np. na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia, które muszą być ustawione przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS 7 mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji we/wy na plikach zgodnie z ustawieniem w zasadach zarządzania aplikacjami mobilnymi. Aplikacje zarządzane w systemie Android używają szyfrowania AES-128 w trybie CBC przy użyciu bibliotek kryptografii platformy. Metoda szyfrowania nie ma certyfikatu FIPS 140-2. Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana.|
+    |**Szyfruj dane aplikacji**|Określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane, w tym dane przechowywane zewnętrznie, np. na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia, które muszą być ustawione przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS 7 mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Metoda szyfrowania nie ma certyfikatu FIPS 140-2.|
     |**Zablokuj przechwytywanie ekranu** (tylko urządzenia z systemem Android)|Określa, że możliwości przechwytywania ekranu urządzenia są blokowane podczas korzystania z tej aplikacji.|
 
-4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
+4.  Gdy skończysz, wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady** .
 
@@ -153,9 +152,8 @@ Wdróż aplikację, wybierając zasady zarządzania aplikacjami mobilnymi na str
 
 Aby uzyskać szczegółowe informacje, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
-> [!IMPORTANT]
-> Na urządzeniach z systemem operacyjnym wcześniejszym niż iOS 7.1 skojarzone zasady nie zostaną usunięte po odinstalowaniu aplikacji.
-> 
+> [!IMPORTANT] Na urządzeniach z systemem operacyjnym wcześniejszym niż iOS 7.1 skojarzone zasady nie zostaną usunięte po odinstalowaniu aplikacji.
+>
 > Jeśli urządzenie zostanie wyrejestrowane z usługi Intune, zasady nie zostaną usunięte z aplikacji. Ustawienia zasad będą nadal stosowane dla wszystkich aplikacji, dla których je skonfigurowano, nawet po odinstalowaniu i ponownym zainstalowaniu aplikacji.
 
 ### Co robić, jeśli aplikacja została już wdrożona na urządzeniach
@@ -165,23 +163,22 @@ W takim przypadku należy poprosić użytkownika o ręczne odinstalowanie niezar
 
 W przypadku urządzeń z systemem iOS 9 lub nowszym usługa Intune automatycznie poprosi użytkownika o zgodę na przejęcie zarządzania istniejącą aplikacją. Jeśli użytkownik wyrazi zgodę, aplikacja stanie się aplikacją zarządzaną przez usługę Intune , a wszystkie zasady zarządzania aplikacjami mobilnymi skojarzone z aplikacją również będą stosowane.
 
-> [!TIP]
-> Jeśli urządzenie działa w trybie nadzorowanym, usługa Intune przejmie zarządzanie istniejącymi aplikacjami bez pytania użytkowników o zgodę.
+> [!TIP] Jeśli urządzenie działa w trybie nadzorowanym, usługa Intune przejmie zarządzanie istniejącymi aplikacjami bez pytania użytkowników o zgodę.
 
 ## **Krok 5.** Monitorowanie wdrożenia aplikacji
 Po utworzeniu i wdrożeniu aplikacji skojarzonej z zasadami zarządzania aplikacjami mobilnymi używaj następujących procedur do monitorowania aplikacji i rozwiązywania konfliktów zasad.
 
 #### Aby wyświetlić stan wdrożenia
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Grupy** &gt; **Przegląd**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Grupy** &gt; **Przegląd**.
 
 2.  Wykonaj jeden z następujących kroków:
 
-    -   Kliknij polecenie **Wszyscy użytkownicy**, a następnie kliknij dwukrotnie użytkownika, którego urządzenia chcesz sprawdzić. Na stronie **Właściwości użytkownika** kliknij pozycję **Urządzenia**, a następnie kliknij dwukrotnie urządzenie do sprawdzenia.
+    -   Wybierz pozycję **Wszyscy użytkownicy**, a następnie kliknij dwukrotnie użytkownika, którego urządzenia chcesz sprawdzić. Na stronie **Właściwości użytkownika** wybierz pozycję **Urządzenia**, a następnie kliknij dwukrotnie urządzenie do sprawdzenia.
 
-    -   Kliknij pozycje **Wszystkie urządzenia** &gt; **Wszystkie urządzenia przenośne**. Na stronie **Właściwości grupy urządzeń** kliknij pozycję **Urządzenia**, a następnie kliknij dwukrotnie urządzenie do sprawdzenia.
+    -   Wybierz pozycję **Wszystkie urządzenia** &gt; **Wszystkie urządzenia przenośne**. Na stronie **Właściwości grupy urządzeń** wybierz pozycję **Urządzenia**, a następnie kliknij dwukrotnie urządzenie do sprawdzenia.
 
-3.  Na stronie **Właściwości urządzenia przenośnego** kliknij pozycję **Zasady** , aby wyświetlić listę zasad zarządzania aplikacjami mobilnymi, które zostały wdrożone na urządzeniu.
+3.  Na stronie **Właściwości urządzenia przenośnego** wybierz pozycję **Zasady**, aby wyświetlić listę zasad zarządzania aplikacjami mobilnymi, które zostały wdrożone na urządzeniu.
 
 4.  Wybierz zasady zarządzania aplikacjami mobilnymi, których stan chcesz sprawdzić. Szczegóły zasad będą widoczne w okienku u dołu. Rozwiń ich węzeł, aby wyświetlić ustawienia.
 
@@ -201,9 +198,6 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 -   Jeśli dla urządzenia nie wdrożono wcześniej żadnych zasad i zostaną wdrożone dwa ustawienia powodujące konflikt, będzie używane domyślne ustawienie urządzenia.
 
 
-
-
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -38,7 +38,7 @@ Jeśli wybrany użytkownik próbuje użyć usługi Skype dla firm Online na swoi
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi Skype fla firm Online, konieczne jest:
 - Posiadanie **subskrypcji usługi Skype dla firm Online** i przypisanie licencji usługi Skype dla firm Online użytkownikom.
-- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory — wersja Premium**.
+- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory w wersji Premium**.
 -   **Włączenie nowoczesnego uwierzytelniania** dla usługi Skype dla firm Online. Zaloguj się do witryny Microsoft Connect i wypełnij [ten formularz](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715), aby zostać zarejestrowanym w programie nowoczesnego uwierzytelniania.
 -  Wszyscy użytkownicy końcowi muszą używać usługi **Skype dla firm Online**. Jeśli wdrożenie obejmuje zarówno usługę Skype dla firm Online, jak i lokalną aplikację Skype dla firm, zasady dostępu warunkowego nie będą stosowane do użytkowników końcowych.
 
@@ -46,7 +46,7 @@ Jeśli wybrany użytkownik próbuje użyć usługi Skype dla firm Online na swoi
 
 -   Być urządzeniem z system **Android** lub **iOS**.
 
--   Być **zarejestrowane** w [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Być **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 -   Być **zgodne** ze wszystkimi wdrożonymi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
@@ -75,12 +75,10 @@ Jeśli użytkownik należy do obu grup, będzie wykluczony z zasad.
 ### Krok 2. Konfigurowanie i wdrażanie zasad zgodności
 [Utwórz](create-a-device-compliance-policy-in-microsoft-intune.md) i [wdróż](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zasady zgodności na wszystkich urządzeniach, które będą objęte zasadami. Będą to wszystkie urządzenia, które są używane przez użytkowników z **grup docelowych**.
 
-> [!NOTE]
-> Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
+> [!NOTE] Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
 
 
-> [!IMPORTANT]
-> Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą traktowane jako zgodne.
+> [!IMPORTANT] Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą traktowane jako zgodne.
 
 Gdy wszystko będzie gotowe, przejdź do **kroku 3**.
 
@@ -88,7 +86,7 @@ Gdy wszystko będzie gotowe, przejdź do **kroku 3**.
 Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miały dostęp do usługi Skype dla firm Online. Te zasady będą przechowywane w usłudze Azure Active Directory.
 
 ####
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Skype dla firm Online**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Zasady** > **Dostęp warunkowy** > **Skype dla firm Online — zasady**.
 
 ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Skype dla firm Online](./media/conditional_access_SFBPolicy.png)
 
@@ -121,6 +119,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 * **Urządzenia, które zostały zarejestrowane przy użyciu usługi AAD i są zgodne** — te urządzenia mogą uzyskiwać dostęp do usługi Skype dla firm Online.
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

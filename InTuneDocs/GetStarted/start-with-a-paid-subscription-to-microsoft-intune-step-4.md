@@ -26,10 +26,10 @@ ms.suite: ems
 ---
 
 # Zarządzanie licencjami usługi Intune
-Użytkownik musi mieć licencję na subskrypcję usługi Intune, aby móc zalogować się do usługi i korzystać z niej albo rejestrować swoje urządzenia w systemie zarządzania. Jeśli użytkownik ma licencję, należy do grupy użytkowników usługi [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)]. Do tej grupy należą wszyscy użytkownicy, którzy mają licencję do korzystania z subskrypcji. **Każda licencja użytkownika obsługuje rejestrację maksymalnie 5 urządzeń.**.
+Zanim użytkownicy będą mogli się zalogować w celu korzystania z usługi Intune lub rejestrowania urządzeń w systemie zarządzania, należy przypisać im licencję do swojej subskrypcji usługi Intune z poziomu [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Po przypisaniu licencji nazwy użytkowników będą wyświetlane w konsoli administracyjnej usługi Intune. Użytkownicy mogą zarejestrować maksymalnie pięć urządzeń.
 
 ## Przypisywanie licencji usługi Intune
-Gdy konta użytkowników są synchronizowane z lokalnej usługi Active Directory lub ręcznie dodawane do subskrypcji usług w chmurze za pośrednictwem portalu konta, licencja usługi Intune nie jest automatycznie przypisywana do nich. Zamiast tego administrator dzierżawy usługi Intune musi później edytować konto użytkownika w portalu konta w celu przypisania licencji do użytkownika.
+Gdy konta użytkowników są synchronizowane z lokalnej usługi Active Directory lub ręcznie dodawane do subskrypcji usług w chmurze za pośrednictwem [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), licencja usługi Intune nie jest automatycznie przypisywana do nich. Zamiast tego administrator dzierżawy usługi Intune musi później edytować konto użytkownika w portalu usługi Office 365 w celu przypisania licencji do użytkownika.
 
 Jeśli subskrypcja współużytkuje usługę Azure AD z innymi usługami w chmurze skojarzonymi z Twoją subskrypcją, masz również dostęp do użytkowników dodanych do tych usług. Ci użytkownicy nie mają licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], dopóki licencja nie zostanie przypisana do każdego z nich.
 
@@ -38,16 +38,16 @@ Jeśli subskrypcja współużytkuje usługę Azure AD z innymi usługami w chmu
 
 ## Przypisywanie licencji użytkownika usługi Intune
 
-**[!INCLUDE[wit_icp_2](../includes/wit_icp_2_md.md)]** jest używany do ręcznego dodawania użytkowników w chmurze oraz przypisywania licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
+[Portal usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
 
-1.  Zaloguj się do portalu konta usługi Intune przy użyciu poświadczeń administratora dzierżawy.
+1.  Zaloguj się do [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu poświadczeń administratora dzierżawy, a następnie wybierz pozycję **Osoby** > **Wszyscy użytkownicy**.
 
-2.  Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, i zaznacz pole wyboru **Microsoft Intune** we właściwościach konta użytkownika.
+2.  Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, a następnie zaznacz pole wyboru **Microsoft Intune** we właściwościach konta użytkownika.
 
-3.  Konto użytkownika zostanie dodane do grupy użytkowników usługi Microsoft Intune uprawnionych do korzystania z usługi i rejestrowania urządzeń w systemie zarządzania.
+3.  Konto użytkownika ma teraz wymagane uprawnienia do korzystania z usługi i rejestrowania urządzeń w systemie zarządzania.
 
 ### Selektywne zarządzanie licencjami użytkowników pakietu EMS przy użyciu programu PowerShell
-Niektórzy użytkownicy w organizacjach korzystających z pakietu EMS (Enterprise Mobility Suite) firmy Microsoft mogą wymagać tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzestaw usług przy użyciu [poleceń cmdlet środowiska PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).. 
+Niektórzy użytkownicy w organizacjach korzystających z pakietu EMS (Enterprise Mobility Suite) firmy Microsoft mogą wymagać tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzbiór usług przy użyciu [poleceń cmdlet programu PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx). 
 
 Aby selektywnie przypisywać licencje użytkowników dla usług pakietu EMS, należy otworzyć program PowerShell jako administrator na komputerze, na którym zainstalowano [moduł usługi Azure Active Directory dla programu Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). Program PowerShell można zainstalować na komputerze lokalnym lub serwerze usług ADFS.
 
@@ -57,8 +57,7 @@ Należy utworzyć nową definicję jednostki SKU licencji, która ma zastosowani
 
 Aby wykluczyć plan usługi Intune, można uruchomić poniższe polecenie. Można użyć tej samej metody do rozszerzenia całej grupy zabezpieczeń lub skorzystać z bardziej szczegółowych filtrów. 
 
-**Przykład 1**
-Utworzenie nowego użytkownika w wierszu polecenia i przypisanie licencji pakietu EMS bez włączania składnika Intune licencji:
+**Przykład 1** Utworzenie nowego użytkownika w wierszu polecenia i przypisanie licencji pakietu EMS bez włączania składnika Intune licencji:
 
     Connect-MsolService 
         
@@ -72,8 +71,7 @@ Weryfikacja:
 
     (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 
-**Przykład 2**
-Wyłączenie składnika Intune licencji pakietu EMS dla użytkownika, do którego przypisano już licencję:
+**Przykład 2** Wyłączenie składnika Intune licencji pakietu EMS dla użytkownika, do którego przypisano już licencję:
 
     Connect-MsolService 
     
@@ -89,12 +87,12 @@ Weryfikacja:
 ![PoSH-AddLic-Verify](./media/posh-addlic-verify.png)
 
 ### Następne kroki
-Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony..
+Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony.
 >[!div class="step-by-step"]
 
 >[&larr; **Synchronizowanie użytkowników z usługą Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Organizowanie użytkowników i urządzeń** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -44,7 +44,7 @@ Przy zakupie dodatkowego magazynu w chmurze dla usługi Intune mają zastosowani
 
 -   Aby kupić dodatkowy magazyn, trzeba mieć aktywną subskrypcję płatną.
 
--   Możliwość zakupu dodatkowego magazynu za pośrednictwem portalu konta usługi Intune mają tylko administratorzy rozliczeń lub administratorzy globalni dla usługi online firmy Microsoft. Aby dodać lub usunąć tych administratorów i zarządzać nimi, musisz być administratorem globalnym i zalogować się w portalu konta usługi Intune.
+-   Możliwość zakupu dodatkowego magazynu za pośrednictwem portalu zarządzania usługi Office 365 mają tylko administratorzy rozliczeń lub administratorzy globalni usług Microsoft Online Services. Aby dodać lub usunąć tych administratorów i zarządzać nimi, musisz być administratorem globalnym i zalogować się w portalu zarządzania usługi Office 365.
 
 -   Klienci objęci licencjonowaniem zbiorowym, którzy nabyli usługę Intune lub dodatek usługi Microsoft Intune w ramach umowy Enterprise Agreement, powinni skontaktować się z menedżerem ds. klientów firmy Microsoft lub partnerem firmy Microsoft w celu uzyskania informacji o cenach i zakupu dodatkowego magazynu.
 
@@ -61,10 +61,11 @@ Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdra�
 
 -   **Wymagana instalacja** — aplikacja jest instalowana na urządzeniu bez potrzeby interwencji użytkownika końcowego.
 
-    > [!TIP]
-    > W przypadku urządzeń z systemem iOS niebędących w trybie nadzorowanym oraz wszystkich urządzeń z systemem Android użytkownik musi zaakceptować ofertę aplikacji, zanim zostanie ona zainstalowana.
+    > [!TIP] W przypadku urządzeń z systemem iOS niebędących w trybie nadzorowanym oraz wszystkich urządzeń z systemem Android użytkownik musi zaakceptować ofertę aplikacji, zanim zostanie ona zainstalowana.
     >
     > Nie można już tworzyć nowych wdrożeń aplikacji na urządzeniach z systemem operacyjnym iOS w wersji starszej niż iOS 7.1. Wszystkie istniejące wdrożenia aplikacji na urządzeniach z systemem operacyjnym starszym niż iOS 7.1 będą w dalszym ciągu działać i będą zarządzane za pomocą usługi Intune.
+    > 
+    >  Jeśli użytkownik odinstaluje aplikację, która została wdrożona jako instalacja wymagana, usługa Intune automatycznie ponownie zainstaluje aplikację po następnym cyklu spisu, który ma miejsce zazwyczaj co 7 dni.
 
 -   **Dostępna instalacja** — aplikacja jest wyświetlana w portalu firmy i użytkownicy końcowi mogą zainstalować ją na żądanie.
 
@@ -86,8 +87,7 @@ Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdra�
 |Link zewnętrzny (wdrożenie w grupie urządzeń)|Nie|Nie|Nie|Nie|
 |Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie użytkowników)|Tak|Tak|Tak|Tak|
 |Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie urządzeń)|Tak|Nie|Tak|Tak|
-> [!TIP]
-> Jeśli podczas wdrażania aplikacji wybierzesz zarówno grupę użytkowników, jak i grupę urządzeń, możesz wdrożyć aplikację jedynie przy użyciu ustawienia **Dostępna instalacja**.
+> [!TIP] Jeśli podczas wdrażania aplikacji wybierzesz zarówno grupę użytkowników, jak i grupę urządzeń, możesz wdrożyć aplikację jedynie przy użyciu ustawienia **Dostępna instalacja**.
 
 ## Konflikty wdrażania
 W przypadku gdy urządzenie otrzymuje dwa wdrożenia z tą samą akcją wdrażania, stosowane są następujące reguły:
@@ -105,6 +105,6 @@ W przypadku gdy urządzenie otrzymuje dwa wdrożenia z tą samą akcją wdrażan
 
 Dowiedz się, jak [wdrażać aplikacje w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

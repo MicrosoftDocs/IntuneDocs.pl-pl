@@ -18,7 +18,7 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune
-Po skonfigurowaniu zasad zarządzania aplikacjami mobilnymi i zastosowaniu ich względem użytkowników można monitorować stan zgodności w portalu Azure. Portal Azure zawiera informacje o użytkownikach, których dotyczą zasady, o stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy końcowi.
+Po skonfigurowaniu zasad zarządzania aplikacjami mobilnymi i zastosowaniu ich względem użytkowników można monitorować stan zgodności w [portalu Azure](https://portal.azure.com). Portal Azure zawiera informacje o użytkownikach, których dotyczą zasady, o stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy końcowi.
 ## Widok podsumowania
 W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** widoczne jest podsumowanie stanu zgodności podobne do przedstawionego poniżej:
 
@@ -39,7 +39,7 @@ W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** widoczne jest p
 
 -   **BRAK ZASAD:** liczba użytkowników, którzy używają aplikacji powiązanych z zasadami, ale których nie dotyczą konkretne sprawdzane zasady.  Można rozważyć dodanie tych użytkowników do sprawdzanych zasad.
 
-- **Oflagowani użytkownicy:** liczba użytkowników, u których występują problemy. Obecnie tylko użytkownicy z urządzeniami ze zdjętymi zabezpieczeniami systemu są zgłaszani w sekcji **Użytkownicy oflagowani**.
+- **Oflagowani użytkownicy:** liczba użytkowników, u których występują problemy. Obecnie tylko użytkownicy z urządzeniami ze zdjętymi zabezpieczeniami systemu są zgłaszani w sekcji **Oflagowani użytkownicy**.
 
 
 ## Widok szczegółowy
@@ -77,6 +77,6 @@ W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używ
 [Środowisko użytkownika końcowego dla aplikacji objętej zarządzaniem aplikacjami mobilnymi](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

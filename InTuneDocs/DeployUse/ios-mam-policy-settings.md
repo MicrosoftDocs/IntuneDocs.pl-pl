@@ -18,7 +18,7 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: andcerat
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,8 +33,7 @@ Istnieją dwie kategorie ustawień zasad, Relokacja danych i Dostęp:
 ##  Ustawienia relokacji danych
 Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych przy użyciu zasad zarządzania aplikacjami mobilnymi.
 
-- **Zapobiegaj tworzeniu kopii zapasowych w programach iTunes i iCloud:**
-  Wybierz opcję **Tak**, aby wyłączyć, lub **Nie**, aby zezwalać na tworzenie kopii zapasowych danych firmy w aplikacjach zarządzanych przez zasady.
+- **Zapobiegaj tworzeniu kopii zapasowych w programach iTunes i iCloud:** wybierz pozycję **Tak**, aby wyłączyć tworzenie kopii zapasowych, lub pozycję **Nie**, aby zezwalać na tworzenie kopii zapasowych danych firmy z aplikacji zarządzanych przez zasady.
 
   **Wartość domyślna = Tak**
 
@@ -54,13 +53,11 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
 
   **Wartość domyślna = Wszystkie aplikacje**
 
-- **Nie zezwalaj na używanie polecenia „Zapisz jako”:**
-  Wybierz opcję **Tak** , aby zablokować używanie polecenia Zapisz jako we wszystkich aplikacjach korzystających z tych zasad. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako.
+- **Nie zezwalaj na używanie polecenia Zapisz jako:** Wybierz opcję **Tak**, aby zablokować używanie polecenia Zapisz jako we wszystkich aplikacjach korzystających z tych zasad. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako.
 
   **Wartość domyślna = Tak**
 
-- **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach:**
-Określ sytuacje, w których operacje wycinania, kopiowania i wklejania powinny być ograniczone. Wybierz spośród opcji:
+- **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach:** Określ sytuacje, w których operacje wycinania, kopiowania i wklejania powinny być ograniczone. Wybierz spośród opcji:
   -   **Zablokowane:** nie zezwalaj na operacje wycinania, kopiowania i wklejania między aplikacjami zarządzanymi przez zasady.
   -   **Aplikacje zarządzane przez zasady:** zezwalaj na operacje wycinania, kopiowania i wklejania tylko między aplikacjami zarządzanymi przez zasady.
   -   **Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych wyciętych lub skopiowanych z dowolnych aplikacji.
@@ -72,7 +69,7 @@ Określ sytuacje, w których operacje wycinania, kopiowania i wklejania powinny 
 
   W przypadku urządzeń, które nie zostały zarejestrowane w usłudze Intune, linki sieci Web w aplikacjach zarządzanych przez zasady mogą być otwierane tylko w aplikacji Managed Browser korzystającej z zasad zarządzania aplikacjami mobilnymi.
 
-  Jeśli używasz usługi Intune do zarządzania swoimi urządzeniami, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md)..
+  Jeśli używasz usługi Intune do zarządzania swoimi urządzeniami, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
 
     **Wartość domyślna = Tak**
 
@@ -93,16 +90,18 @@ Określ sytuacje, w których operacje wycinania, kopiowania i wklejania powinny 
   **Wartość domyślna = Tak**
 ##  Ustawienia zasad dostępu systemu iOS
 Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych przy użyciu zasad zarządzania aplikacjami mobilnymi.
-- **Wymagaj prostego numeru PIN w celu udzielenia dostępu:** wybierz opcję **Tak**, aby wymagać numeru PIN do korzystania z aplikacji zarządzanej przy użyciu zasad. Użytkownik zostanie poproszony o skonfigurowanie tego numeru przy pierwszym uruchomieniu aplikacji w kontekście pracy.
+- **Wymagaj numeru PIN w celu udzielenia dostępu:** wybierz pozycję **Tak**, aby wymagać numeru PIN do korzystania z aplikacji zarządzanych przez zasady. Użytkownik zostanie poproszony o skonfigurowanie tego numeru przy pierwszym uruchomieniu aplikacji w kontekście pracy.
 
   **Wartość domyślna = Tak**
-- **Liczba prób przed zresetowaniem numeru PIN:** określ liczbę prób wprowadzenia numeru PIN, po której użytkownik musi zresetować ten numer.
-
+    -  **Zezwalaj na prosty numer PIN**: określ, czy użytkownicy mogą używać prostych sekwencji numeru PIN, takich jak 1234 lub 1111. **Wartość domyślna: Tak**.
+    - **Długość numeru PIN:** określ minimalną liczbę cyfr numeru PIN. **Wartość domyślna: 4**
+    - **Liczba prób przed zresetowaniem numeru PIN:** określ liczbę prób wprowadzenia numeru PIN, po której użytkownik musi zresetować ten numer.
   **To ustawienie nie ma wartości domyślnej**.
-- **Wymagaj odcisku palca zamiast numeru PIN (system iOS 8.0 i nowsze):** wybierz opcję **Tak**, aby wymagać potwierdzenia tożsamości odciskiem palca zamiast numerem PIN w celu uzyskania dostępu do aplikacji.
+
+  - **Wymagaj odcisku palca zamiast numeru PIN (system iOS 8.0 i nowsze):** wybierz opcję **Tak**, aby wymagać potwierdzenia tożsamości odciskiem palca zamiast numerem PIN w celu uzyskania dostępu do aplikacji.
 Na urządzeniach z systemem iOS możesz zezwolić użytkownikom na identyfikację za pomocą odcisku palca zamiast identyfikacji przy użyciu numeru PIN. Gdy użytkownik końcowy podejmie próbę uzyskania dostępu do aplikacji przy użyciu konta służbowego, otrzyma monit o potwierdzenie tożsamości odciskiem palca, a nie numerem PIN.
 
-  **Wartość domyślna = Tak**
+    **Wartość domyślna = Tak**
 - **Wymagaj poświadczeń firmowych w celu udzielenia dostępu:** wybierz opcję **Tak**, aby wymagać poświadczeń firmowych zamiast numeru PIN w celu uzyskania dostępu do aplikacji. **Wybranie opcji Tak przesłania wymaganie numeru PIN lub użycia funkcji Touch ID.** Użytkownik zostanie poproszony o podanie swoich poświadczeń firmowych.
 
   **Wartość domyślna = Nie**
@@ -113,11 +112,11 @@ Na urządzeniach z systemem iOS możesz zezwolić użytkownikom na identyfikacj�
   -   **Okres karencji w trybie offline:** jeśli urządzenie znajduje się w trybie offline, określ czas (w minutach) przed ponownym sprawdzeniem wymagań dostępu do aplikacji.
 
   **Wartość domyślna = limit czasu 30 minut, okres karencji w trybie offline 720 minut**
-  - **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach):** możesz zdecydować się na wyczyszczenie danych firmowych w przypadku przebywania urządzenia w trybie offline przez wybrany okres.  W bloku ustawień zasad możesz określić liczbę dni, przez które urządzenie może pozostawać w trybie offline przed usunięciem z niego danych firmowych. **Wprowadzenie wartości 0 spowoduje wyłączenie tego ustawienia.**.
+  - **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach):** możesz zdecydować się na wyczyszczenie danych firmowych w przypadku przebywania urządzenia w trybie offline przez wybrany okres.  W bloku ustawień zasad możesz określić liczbę dni, przez które urządzenie może pozostawać w trybie offline przed usunięciem z niego danych firmowych. **Wprowadzenie wartości 0 spowoduje wyłączenie tego ustawienia**.
 
   **Wartość domyślna = 90 dni**
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

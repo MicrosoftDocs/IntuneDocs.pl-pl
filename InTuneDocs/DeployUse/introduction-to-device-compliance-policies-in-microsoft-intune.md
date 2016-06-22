@@ -18,7 +18,7 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,7 +30,7 @@ ms.suite: ems
 Aby chronić dane firmy, należy się upewnić, że urządzenia używane do uzyskiwania dostępu do aplikacji oraz danych firmowych spełniają pewne reguły, takie jak wymaganie użycia numeru PIN w celu uzyskania dostępu do urządzenia oraz szyfrowanie danych przechowywanych na urządzeniu. Zestaw takich reguł jest nazywany zasadami zgodności.
 
 ## Jak używać zasad zgodności?
-Zasad zgodności można używać z zasadami dostępu warunkowego, aby ograniczać dostęp do urządzeń, które spełniają reguły zasad zgodności. Aby zrozumieć, jak dwa zbiory zasad mogą być używane razem, przeczytaj artykuł [Ograniczanie dostępu do usługi poczty e-mail i usługi O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Zasad zgodności można używać z zasadami dostępu warunkowego, aby zezwolić na dostęp do poczty e-mail i innych usług tylko tym urządzeniom, które spełniają reguły zasad zgodności. Aby zrozumieć, jak dwa zbiory zasad mogą być używane razem, przeczytaj artykuł [Ograniczanie dostępu do usługi poczty e-mail i usługi O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Zasady zgodności mogą być również stosowane niezależnie od dostępu warunkowego. Jeśli używane są niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład może być potrzebny raport z liczbą urządzeń, które nie są szyfrowane, lub urządzeń, na których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Jednak w przypadku użycia niezależnego nie istnieją żadne domyślne ograniczenia dostępu do zasobów firmowych.
 
@@ -67,6 +67,6 @@ W poniższej tabeli przedstawiono typy urządzeń obsługiwanych przez zasady zg
 [Ograniczanie dostępu do usługi poczty e-mail i usługi O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,30 +26,30 @@ ms.suite: ems
 ---
 
 # Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune
-Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na zarządzanych komputerach. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Duża liczba ustawień usługi Intune jest podobnych do ustawień zasad grupy systemu Windows. Jednak czasami te metody mogą wchodzić ze sobą w konflikt.
+Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na zarządzanych komputerach z systemem Windows. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Duża liczba ustawień usługi Intune jest podobnych do ustawień zasad grupy systemu Windows. Jednak czasami te metody mogą wchodzić ze sobą w konflikt.
 
 Gdy wystąpi konflikt, zasady grupy na poziomie domeny mają pierwszeństwo przed zasadami usługi Intune, chyba że komputer nie może zalogować się do domeny. W takim przypadku na komputerze klienckim są stosowane zasady usługi Intune.
 
 ## Co zrobić, jeśli używasz zasad grupy
 Sprawdź, czy jakiekolwiek zasady, które stosujesz, nie są zarządzane przez zasady grupy. Aby uniknąć konfliktów, możesz wykonać jedno lub wiele z następujących działań:
 
--   Przed zainstalowaniem klienta usługi Intune przenieś komputery do jednostki organizacyjnej usługi Active Directory, dla której nie zastosowano ustawień zasad grupy. Możesz również zablokować dziedziczenie zasad grupy dla jednostek organizacyjnych, które zawierają komputery zarejestrowane usłudze Intune i dla których nie chcesz stosować ustawień zasad grupy.
+-   Przed zainstalowaniem klienta usługi Intune przenieś komputery do jednostki organizacyjnej usługi Active Directory, dla której nie zastosowano ustawień zasad grupy. Możesz również zablokować dziedziczenie zasad grupy dla jednostek organizacyjnych, które zawierają komputery zarejestrowane w usłudze Intune i dla których nie chcesz stosować ustawień zasad grupy.
 
--   Użyj filtru WMI lub filtru zabezpieczeń, aby ograniczyć obiekty zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune. Odpowiednie informacje i przykłady zawiera sekcja [Jak filtrować istniejące obiekty zasad grupy w celu uniknięcia konfliktów z zasadami usługi Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md#BKMK_Filter) poniżej.
+-   Użyj filtru grup zabezpieczeń, aby ograniczyć obiekty zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune. 
 
 -   Wyłącz lub usuń obiekty zasad grupy, które powodują konflikt z zasadami usługi Intune.
 
 Aby uzyskać więcej informacji na temat usługi Active Directory i zasad grupy systemu Windows, zapoznaj się z dokumentacją systemu Windows Server.
 
 ## Jak filtrować istniejące obiekty zasad grupy w celu uniknięcia konfliktów z zasadami usługi Intune
-Jeśli zidentyfikowano obiekty zasad grupy, których ustawienia powodują konflikt z zasadami usługi Intune, możesz użyć dowolnej z następujących metod filtrowania do ograniczenia tych obiektów zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune.
+Jeśli zidentyfikowano obiekty zasad grupy, których ustawienia powodują konflikt z zasadami usługi Intune, możesz użyć filtrów grup zabezpieczeń do ograniczenia tych obiektów zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune.
 
-### Używanie filtrów WMI
-Filtry WMI umożliwiają selektywne stosowanie obiektów zasad grupy dla komputerów, które spełniają warunki zapytania. Aby zastosować filtr WMI, wdróż wystąpienie klasy WMI na wszystkich komputerach w przedsiębiorstwie przed zarejestrowaniem jakiegokolwiek komputera w usłudze Intune.
+<!--- ### Use WMI filters
+WMI filters selectively apply GPOs to computers that satisfy the conditions of a query. To apply a WMI filter, deploy a WMI class instance to all PCs in the enterprise before you enroll any PCs in the Intune service.
 
-#### Stosowanie filtrów WMI dla obiektu zasad grupy
+#### To apply WMI filters to a GPO
 
-1.  Utwórz plik obiektu zarządzania, kopiując i wklejając następujący kod do pliku tekstowego, a następnie zapisując go w wybranej lokalizacji pod nazwą **WIT.mof**. Ten plik zawiera wystąpienie klasy WMI do wdrożenia na komputerach, które chcesz zarejestrować w usłudze Intune.
+1.  Create a management object file by copying and pasting the following into a text file, and then saving it to a convenient location as **WIT.mof**. The file contains the WMI class instance that you deploy to PCs that you want to enroll in the Intune service.
 
     ```
     //Beginning of MOF file.
@@ -79,38 +79,38 @@ Filtry WMI umożliwiają selektywne stosowanie obiektów zasad grupy dla kompute
     };
     ```
 
-2.  Wdróż plik za pomocą skryptu uruchomieniowego lub zasad grupy. Poniżej podano polecenie wdrożenia dla skryptu uruchomieniowego. Wystąpienie klasy WMI należy wdrożyć przed zarejestrowaniem komputerów klienckich w usłudze Intune.
+2.  Use either a startup script or Group Policy to deploy the file. The following is the deployment command for the startup script. The WMI class instance must be deployed before you enroll client PCs in the Intune service.
 
-    **C:/Windows/System32/Wbem/MOFCOMP &lt;ścieżka do pliku MOF&gt;\wit.mof**
+    **C:/Windows/System32/Wbem/MOFCOMP &lt;path to MOF file&gt;\wit.mof**
 
-3.  Uruchom dowolne z poniższych poleceń, aby utworzyć filtry WMI w zależności od tego, czy obiekt zasad grupy do filtrowania ma być stosowany dla komputerów zarządzanych przy użyciu usługi Intune, czy komputerów niezarządzanych przy użyciu usługi Intune.
+3.  Run either of the following commands to create the WMI filters, depending on whether the GPO you want to filter applies to PCs that are managed by using Intune or to PCs that are not managed by using Intune.
 
-    -   Dla obiektów zasad grupy, które mają być stosowane dla komputerów niezarządzanych przy użyciu usługi Intune, użyj następującego polecenia:
+    -   For GPOs that apply to PCs that are not managed by using Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=0
         ```
 
-    -   Dla obiektów zasad grupy, które mają być stosowane dla komputerów zarządzanych przy użyciu usługi Intune, użyj następującego polecenia:
+    -   For GPOs that apply to PCs that are managed by Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=1
         ```
 
-4.  Zmodyfikuj obiekt zasad grupy w konsoli zarządzania zasadami grupy, aby zastosować filtr WMI utworzony w poprzednim kroku.
+4.  Edit the GPO in the Group Policy Management console to apply the WMI filter that you created in the previous step.
 
-    -   Dla obiektów zasad grupy do stosowania tylko dla komputerów, które mają być zarządzane przy użyciu usługi Intune, zastosuj filtr **WindowsIntunePolicyEnabled=1**..
+    -   For GPOs that should apply only to PCs that you want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=1**.
 
-    -   Dla obiektów zasad grupy do stosowania tylko dla komputerów, które nie mają być zarządzane przy użyciu usługi Intune, zastosuj filtr **WindowsIntunePolicyEnabled=0**.
+    -   For GPOs that should apply only to PCs that you do not want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=0**.
 
-Aby uzyskać więcej informacji dotyczących sposobu stosowania filtrów WMI w zasadach grupy, zapoznaj się z wpisem w blogu [Filtrowanie zabezpieczeń, filtrowanie WMI i określanie elementów docelowych w preferencjach zasad grupy](http://go.microsoft.com/fwlink/?LinkId=177883).
+For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](http://go.microsoft.com/fwlink/?LinkId=177883). --->
 
-### Używanie filtrów grupy zabezpieczeń
+
 Zasady grupy umożliwiają zastosowanie obiektów zasad grupy tylko dla grup zabezpieczeń, które są określone w obszarze **Filtrowanie zabezpieczeń** w konsoli zarządzania zasadami grupy dla wybranego obiektu zasad grupy. Domyślnie obiekty zasad grupy są stosowane dla grupy **Użytkownicy uwierzytelnieni**.
 
--   W przystawce **Użytkownicy i komputery usługi Active Directory** utwórz nową grupę zabezpieczeń zawierającą konta komputerów i użytkowników, które nie mają być zarządzane za pomocą usługi Intune. Możesz ją nazwać na przykład **Nie w usłudze Intune**.
+-   W przystawce **Użytkownicy i komputery usługi Active Directory** utwórz nową grupę zabezpieczeń zawierającą konta komputerów i użytkowników, które nie mają być zarządzane za pomocą usługi Intune. Możesz ją nazwać na przykład **Nie w usłudze Microsoft Intune**.
 
 -   W konsoli zarządzania zasadami grupy na karcie **Delegowanie** wybranego obiektu zasad grupy kliknij prawym przyciskiem myszy nową grupę zabezpieczeń, aby delegować odpowiednie uprawnienia **Odczyt** i **Stosowanie zasad grupy** do użytkowników i komputerów w grupie zabezpieczeń. (Uprawnienia**Stosowanie zasad grupy** są dostępne w oknie dialogowym **Zaawansowane** ).
 
@@ -122,6 +122,6 @@ Nową grupę zabezpieczeń należy aktualizować zgodnie ze zmianami rejestracji
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

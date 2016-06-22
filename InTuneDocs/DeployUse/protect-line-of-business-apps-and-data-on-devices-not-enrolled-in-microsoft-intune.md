@@ -1,25 +1,25 @@
 ---
 # required metadata
 
-title: [Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach | Microsoft Intune]
+title: Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach | Microsoft Intune
 description:
 keywords:
-author: [karthikaraman]
-manager: [jeffgilb]
+author: karthikaraman
+manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid: [00219467-a62e-43b6-954b-3084f54c45ba]
+ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [joglocke]
-#ms.suite: ems
+ms.reviewer: joglocke
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -52,6 +52,11 @@ Aby skojarzyć aplikację biznesową z zasadami zarządzania aplikacjami mobilny
 
 ## Krok 3. Stosowanie zasad zarządzania aplikacjami mobilnymi
 Po przekazaniu metadanych aplikacji do usługi aplikacja będzie wyświetlana na liście aplikacji.  Możesz teraz [utworzyć nowe zasady lub użyć istniejących zasad](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) i zastosować je do aplikacji biznesowej dodanej w kroku 2.
+
+>[!IMPORTANT]
+>Należy wskazać zasady zarządzania aplikacjami mobilnymi dla użytkowników, którzy będą używać opakowanej aplikacji.  Użytkownicy, dla których ta zasada nie zostanie wdrożona, nie będą mogli korzystać z aplikacji.
+
+
   ![Zrzut ekranu przedstawiający blok listy aplikacji docelowych z wyświetloną nową aplikacją biznesową](../media/mam-azure-portal-lob-on-targeted-app-list.png)
 ## Krok 4. Rozpowszechnianie aplikacji
 Aplikacje można wdrażać na urządzeniach użytkowników końcowych, stosując następujące metody:
@@ -75,6 +80,6 @@ Aplikację biznesową można usunąć z listy aplikacji.  Spowoduje to usunięci
   Spowoduje to usunięcie aplikacji z listy aplikacji biznesowych i listy aplikacji docelowych w zasadach zarządzania aplikacjami mobilnymi.
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

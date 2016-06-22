@@ -18,7 +18,7 @@ ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -70,7 +70,7 @@ Następujący przepływ służy do określania, które urządzenia mogą uzyska�
 ## Żadne urządzenia z systemem Android nie mogą uzyskać dostępu do lokalnego programu Exchange.
 ### Wymagania dotyczące scenariusza
 - Wszystkie urządzenia z systemem Android powinny mieć zablokowany dostęp do programu Exchange.
-- Wszystkie inne obsługiwane urządzenia mogą uzyskać dostęp do programu Exchange, o ile są zarządzane przez [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+- Wszystkie inne obsługiwane urządzenia mogą uzyskać dostęp do programu Exchange, o ile są zarządzane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 W tym celu należy skonfigurować zasady dostępu warunkowego dla lokalnego programu Exchange z następującymi ustawieniami:
 
@@ -86,6 +86,6 @@ Następujący przepływ służy do określania, które urządzenia mogą uzyska�
 ![Przepływ dostępu do urządzeń](./media/ConditionalAccess8-4.png)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

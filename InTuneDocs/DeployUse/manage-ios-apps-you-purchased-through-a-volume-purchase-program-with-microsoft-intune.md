@@ -18,7 +18,7 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,28 +46,29 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. Można jednak w dowolnym momencie zainicjować ręczną synchronizację.
 * Po zaimportowaniu tokenu usługi VPP do usługi Intune nie należy importować tego samego tokenu do żadnego innego rozwiązania do zarządzania urządzeniami. Może to spowodować utratę przypisania licencji i rekordów użytkowników.
 * Przed rozpoczęciem korzystania z programu VPP dla systemu iOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta usługi VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami przenośnymi. Usługa Intune nie będzie synchronizować tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune będzie tylko synchronizować dane z usługą VPP firmy Apple, która została utworzona przez usługę Intune. 
+* Nie można wdrażać aplikacji usługi VPP systemu iOS na urządzeniach, które zostały zarejestrowane przy użyciu protokołu Device Enrollment Protocol (DEP).
 
 ## Aby uzyskać i przekazać token usługi VPP firmy Apple
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Administrator** &gt; **iOS i Mac OS X** &gt;  **Program zakupów zbiorczych**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administrator** &gt; **iOS i Mac OS X** &gt; **Volume Purchase Program**.
 
-2.  Kliknij link **Konto w usłudze VPP firmy Apple**, a jeśli jeszcze tego nie zrobiono, zarejestruj się w programie Volume Purchase Program for Business. Po utworzeniu nowego konta pobierz odpowiedni token Apple VPP.
+2.  Wybierz link **Konto w usłudze VPP firmy Apple**, a jeśli jeszcze tego nie zrobiono, zarejestruj się w programie Volume Purchase Program for Business. Po utworzeniu nowego konta pobierz odpowiedni token Apple VPP.
 
-3.  Na stronie **Zarządzaj programem VPP (ang. Volume Purchase Program — Program zakupów zbiorczych) firmy Apple** w konsoli usługi Intune i kliknij pozycję **Przekaż token VPP**.
+3.  Na stronie **Zarządzaj programem VPP (ang. Volume Purchase Program — Program zakupów zbiorczych) firmy Apple** w konsoli usługi Intune wybierz pozycję **Przekaż token VPP**.
 
-4.  W oknie dialogowym **Przekazywanie tokenu VPP** wpisz lub wklej nazwę tokenu VPP oraz identyfikator Apple ID, a następnie kliknij przycisk **Przekaż**.
+4.  W oknie dialogowym **Przekazywanie tokenu VPP** wpisz lub wklej nazwę tokenu VPP oraz identyfikator Apple ID, a następnie wybierz pozycję **Przekaż**.
 
-5.  W oknie dialogowym ostrzeżenia kliknij pole wyboru, aby wskazać, że rozumiesz, że nie można później zmienić konta na inne konto VPP, a następnie kliknij pozycję **Tak**.
+5.  W oknie dialogowym ostrzeżenia zaznacz pole wyboru, aby wskazać, że rozumiesz, że nie można później zmienić konta na inne konto VPP, a następnie wybierz pozycję **Tak**.
 
 Na stronie **Program zakupów zbiorczych** możesz teraz przeglądać informacje związane z tokenem Apple VPP, w tym datę jego ostatniej aktualizacji, datę wygaśnięcia oraz datę ostatniej synchronizacji z usługą Intune.
 
-Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizować z usługą Intune, klikając pozycję **Synchronizuj teraz**.
+Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizować z usługą Intune, wybierając pozycję **Synchronizuj teraz**.
 
-## Aby przekazać i wdrożyć aplikację nabytą w ramach zakupów zbiorczych
+## Aby wdrożyć aplikację nabytą w ramach zakupów zbiorczych
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Aplikacje** &gt; **Zarządzane oprogramowanie** &gt; **Aplikacje nabyte zbiorczo**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Zarządzane oprogramowanie** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**. Ta lista zawiera wszystkie aplikacje, które zostały zsynchronizowane z poziomu usługi VPP firmy Apple.
 
-2.  Postępuj zgodnie z instrukcjami w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md), aby zakończyć przekazywanie, tworzenie i wdrażanie aplikacji.
+2.  Wybierz aplikację, którą chcesz wdrożyć, wybierz pozycję **Zarządzaj wdrożeniem**, a następnie postępuj zgodnie z instrukcjami w temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md), aby zakończyć przekazywanie, tworzenie i wdrażanie aplikacji.
 
 Podczas wdrażania aplikacji jako **wymaganej** instalacji licencja jest używana przez każdego użytkownika, który instaluje aplikację.
 
@@ -75,22 +76,20 @@ Aby odzyskać licencję, należy zmienić akcję wdrażania na **Odinstaluj**. L
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP po raz pierwszy, zostanie poproszony o dołączenie do programu zakupów zbiorczych firmy Apple. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana.
 
-> [!TIP]
-> W kolumnie **Stan warunków VPP** sprawdź stan akceptacji dla poszczególnych użytkowników aplikacji, dla których wdrożono aplikację.
+> [!TIP] W kolumnie **Stan warunków VPP** sprawdź stan akceptacji dla poszczególnych użytkowników aplikacji, dla których wdrożono aplikację.
 
 Jeśli dodatkowe licencje nie są dostępne, wdrożenie zakończy się niepowodzeniem.
 
 ## Aby monitorować aplikacje programu VPP firmy Apple
-Możesz monitorować, które aplikacje programu VPP zostały wdrożone, oraz liczbę używanych licencji w obszarze roboczym **Aplikacje** w węźle **Zarządzane oprogramowanie** &gt; **Zbiorczo zakupione aplikacje**.
+Możesz monitorować, które aplikacje usługi VPP zostały wdrożone, oraz liczbę używanych licencji w obszarze roboczym **Aplikacje** w węźle **Zarządzane oprogramowanie** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**.
 
-> [!TIP]
-> Możesz również sprawdzać stan poszczególnych instalacji aplikacji przy użyciu **filtrów** aplikacji.
+> [!TIP] Możesz również sprawdzać stan poszczególnych instalacji aplikacji przy użyciu **filtrów** aplikacji.
 
 ### Zobacz też
-[Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md)
+[Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

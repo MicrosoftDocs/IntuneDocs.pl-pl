@@ -18,7 +18,7 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -39,16 +39,16 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 >[!IMPORTANT]
 >Dostęp warunkowy dla komputerów i urządzeń z systemem Windows 10 Mobile za pomocą aplikacji korzystających z nowoczesnego uwierzytelniania nie jest obecnie dostępny dla wszystkich klientów usługi Intune. Jeśli te funkcje są już używane, nie ma potrzeby podejmowania żadnych działań. Możesz nadal z nich korzystać.
 
->Jeśli zasady dostępu warunkowego dla komputerów lub urządzeń z systemem Windows 10 Mobile dla aplikacji korzystających z nowoczesnego uwierzytelniania nie zostały utworzone, a chcesz je utworzyć, musisz przesłać żądanie.  Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Jeśli zasady dostępu warunkowego dla komputerów lub urządzeń z systemem Windows 10 Mobile dla aplikacji korzystających z nowoczesnego uwierzytelniania nie zostały utworzone, a chcesz je utworzyć, musisz przesłać żądanie.  Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji, można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi SharePoint Online konieczne jest:
 - Posiadanie **subskrypcji usługi SharePoint Online**; ponadto użytkownicy muszą mieć licencję na usługę SharePoint Online.
-- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory — wersja Premium**.
+- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory w wersji Premium**.
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi:
 -   Zostać **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub na komputerze przyłączonym do domeny.
 
--   Zostać **zarejestrowane** w usłudze Azure Active Directory; dzieje się to automatycznie podczas rejestrowania urządzenia w [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   Zostać **zarejestrowane** w usłudze Azure Active Directory (dzieje się to automatycznie podczas rejestrowania urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
 
 
 -   Być zgodne z wdrożonymi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
@@ -78,7 +78,7 @@ Usługa AAD DRS zostanie automatycznie uaktywniona dla klientów usług Intune i
   - Jeśli zasady zostały ustawione tak, aby wymagane było przyłączenie do domeny lub zgodność, a komputer nie spełnia żadnego z tych wymagań, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy i rejestrowania.
 -    [Należy włączyć nowoczesne uwierzytelnianie usługi Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
-    Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece uwierzytelniania usługi Active Directory (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
+    Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece Active Directory Authentication Library (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
 
 
 ## Konfigurowanie warunkowego dostępu do usługi SharePoint Online
@@ -97,13 +97,11 @@ Jeśli użytkownik należy do obu grup, będzie wykluczony z zasad.
 ### Krok 2. Konfigurowanie i wdrażanie zasad zgodności
 Jeśli nie zostało zrobione to wcześniej, utwórz i wdróż zasady zgodności dla użytkowników, którzy będą objęci zasadami dostępu usługi SharePoint Online.
 
-> [!NOTE]
-> Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
+> [!NOTE] Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
 
 Aby uzyskać szczegółowe informacje o sposobie konfigurowania zasad zgodności, zobacz [Tworzenie zasad zgodności](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-> [!IMPORTANT]
-> Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą traktowane jako zgodne.
+> [!IMPORTANT] Jeśli zasady zgodności nie zostały wdrożone, urządzenia będą traktowane jako zgodne.
 
 Gdy wszystko będzie gotowe, przejdź do **kroku 3**.
 
@@ -115,7 +113,7 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi SharePoint Online**.
 ![Zrzut ekranu przedstawiający stronę zasad usługi SharePoint Online](../media/IntuneSASharePointOnlineCAPolicy.png)
 
-2.  Wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi SharePoint Online**..
+2.  Wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi SharePoint Online**.
 
 3.  W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
 
@@ -123,7 +121,7 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
         W przypadku wybrania tego ustawienia wszystkie urządzenia próbujące uzyskać dostęp do usługi **SharePoint Online** będą musiały być zarejestrowane w usłudze Intune i zgodne z zasadami.  Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **SharePoint Online** zostanie zablokowany.
         >[!TIP]
-        >Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+        >Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji, można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
 
     -   **Określone platformy**
 
@@ -131,7 +129,7 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
      Komputery z systemem Windows muszą zostać przyłączone do domeny lub zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i być zgodne. Można ustawić następujące wymagania:
 
-     -   **Urządzenia muszą zostać przyłączone do domeny lub być zgodne.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny lub zgodne z zasadami ustawionymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Jeśli komputer nie spełnia żadnego z tych wymagań, użytkownik zobaczy monit o zarejestrowanie urządzenia w [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+     -   **Urządzenia muszą zostać przyłączone do domeny lub być zgodne.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny lub zgodne z zasadami ustawionymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Jeśli komputer nie spełnia żadnego z tych wymagań, użytkownik zobaczy monit o zarejestrowanie urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
      -   **Urządzenia muszą zostać przyłączone do domeny.** Wybierz tę opcję, jeśli komputery muszą być przyłączone do domeny, aby mogły uzyskiwać dostęp do usługi Exchange Online. Jeśli komputer nie został przyłączony do domeny, dostęp do poczty e-mail będzie zablokowany, a użytkownik zostanie poproszony o skontaktowanie się z administratorem IT.
 
@@ -160,6 +158,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 [Ograniczanie dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
