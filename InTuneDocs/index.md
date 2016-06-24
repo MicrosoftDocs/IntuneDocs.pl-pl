@@ -21,7 +21,7 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
     <section id="hero-content">
       <h1>Dokumentacja usługi Microsoft Intune</h1>
       <h2>Dowiedz się, jak wdrażać usługę Microsoft Intune umożliwiającą zarządzanie urządzeniami przenośnymi i aplikacjami oraz jak nią zarządzać.</h2>
-      <h3>Zarządzasz usługą Intune za pomocą programu Configuration Manager? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">Wyświetl dokumentację programu Configuration Manager &rarr;</a></h3>
+      <h3>Zarządzasz usługą Intune za pomocą programu Configuration Manager? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Wyświetl dokumentację programu Configuration Manager &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Polecana zawartość</h2>
@@ -280,6 +280,6 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 </article>
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 
