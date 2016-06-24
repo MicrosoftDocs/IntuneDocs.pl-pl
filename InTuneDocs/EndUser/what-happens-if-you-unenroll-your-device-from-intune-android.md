@@ -44,11 +44,11 @@ Jeśli urządzenie jest skonfigurowane tylko do pobierania firmowych wiadomości
 
 Aby uzyskać instrukcje na temat sposobu wyrejestrowywania, zobacz [Wyrejestrowywanie urządzenia z usługi Intune przy użyciu aplikacji Portal firmy](unenroll-your-device-from-intune-android.md).
 
-Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

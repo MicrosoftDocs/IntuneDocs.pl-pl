@@ -125,12 +125,12 @@ W przypadku dodawania komputera:
 
 -   Administrator IT może wprowadzać zasady na komputerze. Od użytkownika może być na przykład wymagane, aby ustawił na komputerze hasło lub numer PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do komputera lub usunięcie wszystkich danych z dysku twardego.
 
-Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

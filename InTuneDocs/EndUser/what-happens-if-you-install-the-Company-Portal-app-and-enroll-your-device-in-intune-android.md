@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -38,7 +38,7 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 -   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
 
-Dodanie urządzenia z systemem Android spowoduje nadanie administratorowi IT uprawnień dostępu do tego urządzenia. Administratorzy mogą wykonywać następujące czynności:
+Zarejestrowanie urządzenia z systemem Android spowoduje nadanie administratorowi IT uprawnień dostępu do tego urządzenia. Administratorzy mogą wykonywać następujące czynności:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych. Jest to przydatne w przypadku utracenia lub kradzieży urządzenia.
 
@@ -60,11 +60,11 @@ Dodanie urządzenia z systemem Android spowoduje nadanie administratorowi IT upr
 
     -   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych (aktualizacje te nie zawierają danych osobowych).
 
-Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

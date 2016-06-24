@@ -63,7 +63,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 2.  Zaloguj się za pomocą Identyfikatora organizacji, korzystając z linku w lewej części strony.
 
-3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatną usługę Azure Active Directory**).
+3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
 
 4.  Wybierz pozycję **Active Directory** , a następnie wybierz organizację.
 
@@ -124,11 +124,11 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
     3.  Otwórz folder baz danych i znajdź, a następnie otwórz folder **CM_DBName**, gdzie DBName to nazwa bazy danych klienta.
 
-    4.  U góry wybierz pozycję **Nowe zapytanie** i wykonaj następujące zapytania:
+    4.  U góry wybierz pozycję **Nowa kwerenda** i wykonaj następujące zapytania:
 
         -   Aby wyświetlić wszystkich użytkowników: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Aby wyświetlić konkretnych użytkowników, użyj następującego zapytania, gdzie %testuser1% reprezentuje nazwę nazwa_uzytkownika@domena.com dla użytkownika, którego chcesz wyszukać: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        -   Aby wyświetlić konkretnych użytkowników, użyj następującego zapytania, gdzie % testuser1% reprezentuje nazwę nazwa_użytkownika@domena.com dla użytkownika, którego chcesz wyszukać: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         Po zapisaniu zapytania wybierz pozycję **!Wykonaj**.
         Po zwróceniu wyników poszukaj identyfikatora użytkownika chmury.  Jeśli identyfikator nie zostanie znaleziony, oznacza to, że użytkownik nie ma licencji na korzystanie z usługi Intune.
@@ -143,29 +143,6 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 
 **Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com) jest wymagane wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks.  Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
-
-### Komputer jest już zarejestrowany — błąd hr 0x8007064c
-**Problem:** Rejestracja kończy się niepowodzeniem z powodu błędu **Komputer jest już zarejestrowany**. Dziennik rejestracji zawiera błąd **hr 0x8007064c**.
-  
-Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używaniem na komputerze sklonowanego obrazu innego komputera, który został zarejestrowany. Certyfikat poprzedniego konta nadal istnieje na komputerze.
-
-
-
-**Rozwiązanie:** 
-
-1. W menu**Start** wybierz polecenie **Uruchom** -> **MMC**. 
-1. **Plik** -> **Dodawanie lub usuwanie przystawek**.
-1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera**, kliknij przycisk **Dalej** i wybierz pozycję **Komputer lokalny**.
-1. Kliknij dwukrotnie pozycję **Certyfikaty (komputer lokalny)** i wybierz pozycję **Osobiste/certyfikaty**. 
-1. Wyszukaj certyfikat usługi Intune wydany przez wydawcę Sc_Online_Issuing i usuń go, jeśli istnieje.
-1. Usuń następujący klucz rejestru, jeśli istnieje, oraz wszystkie klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
-1. Spróbuj ponownie wykonać rejestrację. 
-1. Jeśli nadal nie można zarejestrować komputera, wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Spróbuj ponownie wykonać rejestrację. 
-
-    > [!IMPORTANT]
-    > Ta sekcja, metoda lub zadanie zawiera kroki dotyczące sposobu modyfikowania rejestru. Jednak nieprawidłowa modyfikacja rejestru może powodować poważne problemy. Dlatego należy ostrożnie wykonywać te czynności. W celu zapewnienia dodatkowej ochrony utwórz kopię zapasową rejestru przed rozpoczęciem wprowadzania zmian. Dzięki temu w razie problemów będzie można przywrócić rejestr.
-    > Aby uzyskać więcej informacji na temat tworzenia kopii zapasowej i przywracania rejestru, przeczytaj temat [Jak wykonać kopię zapasową i przywrócić rejestr w systemie Windows XP](https://support.microsoft.com/en-us/kb/322756).
 
 
 ## Problemy z systemem android
@@ -205,7 +182,7 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 1. Wyłącz system iOS w łączniku usługi Windows Intune. 
     1. Kliknij prawym przyciskiem myszy subskrypcję usługi Intune i wybierz pozycję **Właściwości**.
-    1. Na karcie „iOS” usuń zaznaczenie pola wyboru „Włącz rejestrowanie dla systemu iOS”.
+    1. Na karcie „iOS” usuń zaznaczenie pola wyboru „Włącz rejestrację systemu iOS”.
 
 
 
@@ -249,6 +226,31 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 ### Inne błędy rejestracji urządzeń z systemem iOS
 Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
 
+## Problemy z komputerem PC
+
+### Maszyna jest już zarejestrowana — błąd hr 0x8007064c
+**Problem:** Rejestracja kończy się niepowodzeniem z powodu błędu **Maszyna jest już zarejestrowana**. Dziennik rejestracji zawiera błąd **hr 0x8007064c**.
+  
+Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używaniem na komputerze sklonowanego obrazu innego komputera, który został zarejestrowany. Certyfikat poprzedniego konta nadal istnieje na komputerze.
+
+
+
+**Rozwiązanie:** 
+
+1. W menu **Start** wybierz polecenie **Uruchom** -> **MMC**. 
+1. **Plik** -> **Dodawanie lub usuwanie przystawek**.
+1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera**, kliknij przycisk **Dalej** i wybierz pozycję **Komputer lokalny**.
+1. Kliknij dwukrotnie pozycję **Certyfikaty (komputer lokalny)** i wybierz pozycję **Osobiste/certyfikaty**. 
+1. Wyszukaj certyfikat usługi Intune wydany przez wydawcę Sc_Online_Issuing i usuń go, jeśli istnieje.
+1. Usuń następujący klucz rejestru, jeśli istnieje, oraz wszystkie klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
+1. Spróbuj ponownie wykonać rejestrację. 
+1. Jeśli nadal nie można zarejestrować maszyny, /wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
+1. Spróbuj ponownie wykonać rejestrację. 
+
+    > [!IMPORTANT]
+    > Ta sekcja, metoda lub zadanie zawiera kroki dotyczące sposobu modyfikowania rejestru. Jednak nieprawidłowa modyfikacja rejestru może powodować poważne problemy. Dlatego należy ostrożnie wykonywać te czynności. W celu zapewnienia dodatkowej ochrony utwórz kopię zapasową rejestru przed rozpoczęciem wprowadzania zmian. Dzięki temu w razie problemów będzie można przywrócić rejestr.
+    > Aby uzyskać więcej informacji na temat tworzenia kopii zapasowej i przywracania rejestru, przeczytaj temat [Jak wykonać kopię zapasową i przywrócić rejestr w systemie Windows XP](https://support.microsoft.com/en-us/kb/322756).
+
 ## Ogólne kody błędów rejestracji
 
 |Kod błędu|Możliwy problem|Sugerowane rozwiązanie|
@@ -268,7 +270,7 @@ Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dok
 |0x80043008, 0x80CF3008|Uruchomienie usługi Microsoft Online Management Updates nie powiodło się.|Skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).|
 |0x80043009, 0x80CF3009|Komputer kliencki jest już zarejestrowany w usłudze.|Aby móc ponownie zarejestrować komputer kliencki w usłudze, musisz go najpierw wycofać.|
 |0x8004300B, 0x80CF300B|Nie można uruchomić pakietu instalacyjnego oprogramowania klienckiego, ponieważ wersja systemu Windows uruchomiona na kliencie jest nieobsługiwana.|Usługa Intune nie obsługuje wersji systemu Windows uruchomionej na komputerze klienckim.|
-|0xAB2|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL może być konieczne użycie narzędzi opisanych w artykule KB198038 z bazy wiedzy pomocy technicznej firmy Microsoft: [Useful Tools for Package and Deployment Issues](https://support.microsoft.com/en-us/kb/198038) (Narzędzia przydatne podczas rozwiązywania problemów z pakietami i wdrożeniem).|
+|0xAB2|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL może być konieczne użycie narzędzi opisanych w artykule KB198038 z bazy wiedzy pomocy technicznej firmy Microsoft: [Useful Tools for Package and Deployment Issues](https://support.microsoft.com/en-us/kb/198038) (Przydatne narzędzia w przypadku problemów z tworzeniem pakietów i wdrażaniem).|
 |0x80cf0440|Połączenie z punktem końcowym usługi zostało zakończone.|Konto próbne lub płatne zostało zawieszone. Utwórz nowe konto próbne lub płatne i zarejestruj je ponownie.|
 
 

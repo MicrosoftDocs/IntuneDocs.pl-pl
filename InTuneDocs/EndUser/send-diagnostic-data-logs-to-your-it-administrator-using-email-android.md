@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail
 
-Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami firmowymi lub szkolnymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT rozpoznać i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz ustawienie Pełne rejestrowanie.
+Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami firmowymi lub szkolnymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT rozpoznać i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz ustawienie Pełne rejestrowanie. Przeczytaj więcej na temat [pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
 Aby włączyć pełne rejestrowanie:
 
@@ -54,6 +54,6 @@ Aby włączyć pełne rejestrowanie:
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

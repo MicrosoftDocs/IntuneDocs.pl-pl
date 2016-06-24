@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?
 
-Odinstalowanie aplikacji Portal firmy z urządzenia powoduje także wyrejestrowanie tego urządzenia z usługi Intune. Aby uzyskać dodatkowe informacje na temat zachodzących działań, użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia.
+Aby uzyskać dodatkowe informacje na temat zachodzących działań, użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia.
 
 - [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
 - [Windows 10, Windows 8.1 lub Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
@@ -92,11 +92,11 @@ Usunięcie urządzenia z systemem Windows RT wywoła następujące konsekwencje:
 
 -   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
 
-Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

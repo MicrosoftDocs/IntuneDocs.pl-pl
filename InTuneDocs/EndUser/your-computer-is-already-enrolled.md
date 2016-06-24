@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Twój komputer jest już zarejestrowany
 
-Jeśli wystąpi błąd z informacją, że Twój komputer jest już zarejestrowany, oznacza to, że komputer został już dodany do Portalu firmy, ale jeszcze nie jest połączony z Twoim kontem użytkownika. Wykonaj poniższą procedurę, aby połączyć komputer z kontem użytkownika i ukończyć proces.
+Jeśli wystąpi błąd z informacją, że Twój komputer jest już zarejestrowany, oznacza to, że komputer został już dodany do Portalu firmy, ale jeszcze nie jest połączony z Twoim kontem użytkownika. Wykonaj poniższą procedurę, aby połączyć komputer z kontem użytkownika i ukończyć proces.  
 
 Aby połączyć komputer:
 
@@ -38,8 +38,10 @@ Aby połączyć komputer:
 
 3.  Postępuj zgodnie z monitami, aby połączyć komputer ze swoim kontem użytkownika.
 
-Jeśli potrzebujesz pomocy i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli wolisz wyrejestrować urządzenie, skorzystaj z instrukcji dotyczących odpowiedniego typu urządzenia: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) lub [Windows](unenroll-your-device-from-intune-windows.md).
 
-<!--HONumber=Jun16_HO1-->
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
+<!--HONumber=Jun16_HO2-->
 
 

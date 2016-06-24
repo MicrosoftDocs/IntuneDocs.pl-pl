@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/11/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -66,22 +66,22 @@ Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w ap
 
 Do typowych aplikacji, którymi może zarządzać dział IT, należą między innymi:
 
--   Zarządzana przeglądarka sieci Web
+-   Intune Managed Browser
 
--   Zarządzana przeglądarka obrazów
+-   Intune Image Viewer
 
--   Zarządzana przeglądarka plików PDF
+-   Intune PDF Viewer
 
--   Zarządzany odtwarzacz audio/wideo
+-   Intune AV Player
 
 -   Microsoft Word, Excel, PowerPoint
 
-Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

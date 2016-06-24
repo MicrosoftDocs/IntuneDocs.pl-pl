@@ -31,7 +31,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie ustawień d
 
 ## Ustawienia ogólnych zasad konfiguracji
 
-**Ogólne zasady konfiguracji** usługi Microsoft Intune dla systemu Windows 10 umożliwiają konfigurowanie ogólnych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile:
+**Ogólne zasady konfiguracji** usługi Microsoft Intune dla systemu Windows 10 umożliwiają konfigurowanie ogólnych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile. Nie można używać tych zasad, gdy komputery z systemem Windows 10 są zarządzane przy użyciu oprogramowania klienckiego usługi Intune.
 
 
 ### Hasło
@@ -332,6 +332,6 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

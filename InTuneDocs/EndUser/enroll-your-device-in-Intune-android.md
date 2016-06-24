@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/24/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,7 @@ ms.suite: ems
 
 Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie z systemem Android, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Dzięki rejestracji urządzeń dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się stanie, jeśli zainstaluję aplikację Portal firmy i zarejestruję swoje urządzenie?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-android.md).
 
-Te instrukcje dotyczące rejestracji są przeznaczone dla urządzeń z systemem Android Samsung Knox i „natywnych” urządzeń z systemem Android (innych niż Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o telefonie**. Jeśli na tej liście nie widzisz słowa „Knox”, masz natywne urządzenie z systemem Android.
+Te instrukcje dotyczące rejestracji są przeznaczone dla urządzeń z systemem Android Samsung Knox i „natywnych” urządzeń z systemem Android (innych niż Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o urządzeniu**. Jeśli na tej liście nie widzisz pozycji „KNOX version” (Wersja systemu KNOX), oznacza to, że masz urządzenie z natywnym systemem Android.
 
 Przed zarejestrowaniem lub po nim może pojawić się monit o wybranie kategorii, która najlepiej opisuje Twój sposób korzystania z urządzenia. Ta kategoria pomoże administratorowi IT określić, do jakich aplikacji masz dostęp.
 
@@ -57,7 +57,7 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-    Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie opcji ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie nawiązuje za Ciebie połączeń telefonicznych ani nie zarządza nimi**. Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Zezwalając na dostęp, umożliwiasz urządzeniu tylko zapisywanie dzienników danych na karcie SD urządzenia, co pozwala na przenoszenie tych dzienników przy użyciu kabla USB. Użycie tej funkcji do wysłania dzienników do administratora IT może być konieczne, jeśli podczas korzystania z aplikacji Portal firmy wystąpią problemy. Dowiedz się, jak [wysyłać błędy rejestracji do administratora IT](send-enrollment-errors-to-your-it-administrator-android.md).
+    Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie opcji ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie nawiązuje za Ciebie połączeń telefonicznych ani nie zarządza nimi**. Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Zezwalając na dostęp, umożliwiasz urządzeniu tylko zapisywanie dzienników danych na karcie SD urządzenia, co pozwala na przenoszenie tych dzienników przy użyciu kabla USB.
 
     Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym logowaniu do Portalu firmy, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, zaznaczając pole wyboru **Nigdy nie pytaj ponownie**.  Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Telefon** i włącz uprawnienie.
 
@@ -65,7 +65,7 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie przycisku ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie uzyskuje dostępu do Twoich kontaktów**. Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Jeśli zezwolisz na dostęp, aplikacja Portal firmy będzie mogła uzyskać dostęp wyłącznie do dzienników danych, aby pomóc w rozwiązywaniu problemów z urządzeniem.
+    Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie przycisku ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie uzyskuje dostępu do Twoich kontaktów**. Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Jeśli zezwolisz na dostęp, aplikacja Portal firmy będzie mogła tylko utworzyć konto służbowe, korzystać z niego i zarządzać nim.
 
     Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym naciśnięciu przycisku **Wyślij dane**, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, zaznaczając pole wyboru **Nigdy nie pytaj ponownie**. Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Magazyn** i włącz uprawnienie.
 
@@ -97,7 +97,7 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![Wprowadzanie numeru PIN lub hasła](./media/and-enroll-6-PIN-native.png)
 
-13.  Postępuj zgodnie z poniższymi instrukcjami odpowiednimi do typu używanego urządzenia (natywne urządzenie z systemem Android lub urządzenie z systemem Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o telefonie**. Jeśli na tej liście nie widzisz słowa „Knox”, masz urządzenie z natywnym systemem Android.
+13.  Postępuj zgodnie z poniższymi instrukcjami odpowiednimi do typu używanego urządzenia (natywne urządzenie z systemem Android lub urządzenie z systemem Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o urządzeniu**. Jeśli na tej liście nie widzisz pozycji „KNOX version” (Wersja systemu KNOX), oznacza to, że masz urządzenie z natywnym systemem Android.
 
     -   Urządzenie natywne (bez systemu Samsung Knox): na ekranie **Nazwa certyfikatu** naciśnij przycisk **OK**, aby zaakceptować certyfikat domyślny.
 
@@ -119,7 +119,7 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![Ekran Konfigurowanie dostępu do zasobów firmy zostało zakończone](./media/and-enroll-10-comp-access-setup-complete.png)
 
-Zanim spróbujesz zainstalować aplikacje firmowe, przejdź do pozycji **Ustawienia** &gt; **Zabezpieczenia** i włącz ustawienie **Nieznane źródła**. Jeśli nie włączysz tej opcji przed próbą zainstalowania aplikacji, zostanie wyświetlony komunikat „Zablokowano instalację. Ze względów bezpieczeństwa Twój telefon został ustawiony w celu blokowania instalacji aplikacji uzyskanych z nieznanych źródeł”. W oknie dialogowym komunikatu o błędzie możesz nacisnąć pozycję **Ustawienia**, aby przejść do opcji **Nieznane źródła**.
+Zanim spróbujesz zainstalować aplikacje firmowe, przejdź do pozycji **Ustawienia** &gt; **Zabezpieczenia** i włącz ustawienie **Nieznane źródła**. Jeśli nie włączysz tej opcji przed próbą zainstalowania aplikacji, zostanie wyświetlony komunikat „Zablokowano instalację. Ze względów bezpieczeństwa Twoje urządzenie zostało ustawione w celu blokowania instalacji aplikacji uzyskanych z nieznanych źródeł”. W oknie dialogowym komunikatu o błędzie możesz nacisnąć pozycję **Ustawienia**, aby przejść do opcji **Nieznane źródła**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 

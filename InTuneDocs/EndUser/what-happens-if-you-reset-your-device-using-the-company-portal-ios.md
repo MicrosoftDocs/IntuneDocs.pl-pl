@@ -42,11 +42,11 @@ W przypadku zresetowania telefonu iPhone lub tabletu iPad za pomocą Portalu fir
 
 -   Konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.
 
-Jeśli masz pytania i nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

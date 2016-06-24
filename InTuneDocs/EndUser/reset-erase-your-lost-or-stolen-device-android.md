@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/20/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -40,13 +40,13 @@ Aby dowiedzieć się więcej o tym, co się stanie w przypadku zresetowania urz�
 
 3.  Kliknij pozycję **Zresetuj** &gt; **Zresetuj**.
 
-Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go administratora IT. Jeśli nie możesz znaleźć informacji kontaktowych administratora IT, sprawdź, czy są one dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go administratora IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 ### Zobacz także
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
