@@ -200,9 +200,9 @@ Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożon
 
 ### Gdzie mogę znaleźć pomoc w rozwiązywaniu problemów dotyczących zasad?
 
-Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
+Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](../Troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

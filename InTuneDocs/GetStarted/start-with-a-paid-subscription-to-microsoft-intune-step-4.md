@@ -26,7 +26,9 @@ ms.suite: ems
 ---
 
 # Zarządzanie licencjami usługi Intune
-Zanim użytkownicy będą mogli się zalogować w celu korzystania z usługi Intune lub rejestrowania urządzeń w systemie zarządzania, należy przypisać im licencję do swojej subskrypcji usługi Intune z poziomu [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Po przypisaniu licencji nazwy użytkowników będą wyświetlane w konsoli administracyjnej usługi Intune. Użytkownicy mogą zarejestrować maksymalnie pięć urządzeń.
+Zanim użytkownicy będą mogli logować się i korzystać z usługi Intune lub rejestrować urządzenia w celu zarządzania nimi, należy najpierw przypisać każdemu użytkownikowi licencję na subskrypcję usługi Intune, używając [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Po przypisaniu licencji nazwy użytkowników będą wyświetlane w konsoli administracyjnej usługi Intune. Użytkownicy mogą zarejestrować maksymalnie pięć urządzeń.
+
+Niektórzy użytkownicy w organizacjach korzystających z pakietu EMS (Enterprise Mobility Suite) firmy Microsoft mogą wymagać tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzbiór usług przy użyciu [poleceń cmdlet programu PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx). Aby uzyskać więcej informacji, zobacz [Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell](start-with-a-paid-subscription-to-microsoft-intune-step-4-posh.md).
 
 ## Przypisywanie licencji usługi Intune
 Gdy konta użytkowników są synchronizowane z lokalnej usługi Active Directory lub ręcznie dodawane do subskrypcji usług w chmurze za pośrednictwem [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), licencja usługi Intune nie jest automatycznie przypisywana do nich. Zamiast tego administrator dzierżawy usługi Intune musi później edytować konto użytkownika w portalu usługi Office 365 w celu przypisania licencji do użytkownika.
@@ -42,7 +44,7 @@ Jeśli subskrypcja współużytkuje usługę Azure AD z innymi usługami w chmu
 
 1.  Zaloguj się do [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu poświadczeń administratora dzierżawy, a następnie wybierz pozycję **Osoby** > **Wszyscy użytkownicy**.
 
-2.  Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, a następnie zaznacz pole wyboru **Microsoft Intune** we właściwościach konta użytkownika.
+2.  Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, a następnie wybierz pozycję **Microsoft Intune** (wersja autonomiczna) lub **Enterprise Mobility Suite**.
 
 3.  Konto użytkownika ma teraz wymagane uprawnienia do korzystania z usługi i rejestrowania urządzeń w systemie zarządzania.
 
@@ -93,6 +95,6 @@ Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 >[&larr; **Synchronizowanie użytkowników z usługą Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Organizowanie użytkowników i urządzeń** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 
