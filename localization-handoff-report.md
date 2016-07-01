@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\Understand\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md](https://github.com/Microsoft/IntuneDocs-pr/blob/fe1587bead9e4cd350f5ffcf925fe04afd824ea0/InTuneDocs/Understand/get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md) | OutofSyncHandedBackSuccess | [Details](#f97b619d2b82556685cf0e247700d1fd8c8d43691167)
+ [InTuneDocs\Troubleshoot\troubleshoot-device-enrollment-in-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d12a31eb0727f7ca0c460049ac6fffb314daf70e/InTuneDocs/Troubleshoot/troubleshoot-device-enrollment-in-intune.md) | OutofSyncHandedBackSuccess | [Details](#62668c607bc3064cf8148fd7929b3c1268b721d71159)
 
 ## Item Details
-##### <a name='f97b619d2b82556685cf0e247700d1fd8c8d43691167'></a> Source: [InTuneDocs\Understand\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md](https://github.com/Microsoft/IntuneDocs-pr/blob/fe1587bead9e4cd350f5ffcf925fe04afd824ea0/InTuneDocs/Understand/get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
+##### <a name='62668c607bc3064cf8148fd7929b3c1268b721d71159'></a> Source: [InTuneDocs\Troubleshoot\troubleshoot-device-enrollment-in-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d12a31eb0727f7ca0c460049ac6fffb314daf70e/InTuneDocs/Troubleshoot/troubleshoot-device-enrollment-in-intune.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [get-started-with-a-30-day-trial-of-microsoft-intune-step-1.0e5d910b6d5ef6b52d123328ed6e806d7a9dd1b5.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/ef4697b742394eab26b77c833e4cba4142ade201/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/get-started-with-a-30-day-trial-of-microsoft-intune-step-1.0e5d910b6d5ef6b52d123328ed6e806d7a9dd1b5.pl-pl.xlf)
-* Handoff Datetime: 2016-07-01 20:29:21
+* Handoff File: [troubleshoot-device-enrollment-in-intune.c0e4168b7349c261afccdc2a1f32f87d98e44395.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/cb304ff7096bc450bbf8c6658a7a293d0844138b/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/troubleshoot-device-enrollment-in-intune.c0e4168b7349c261afccdc2a1f32f87d98e44395.pl-pl.xlf)
+* Handoff Datetime: 2016-07-01 22:20:30
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\Understand\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/33751adca90795140fb124fda3cae640e9fd672b/InTuneDocs/Understand/get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
-* Current Handback File: [get-started-with-a-30-day-trial-of-microsoft-intune-step-1.0e5d910b6d5ef6b52d123328ed6e806d7a9dd1b5.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/089d47a75e8d5acad19ce4a62189e59ee30995c4/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/get-started-with-a-30-day-trial-of-microsoft-intune-step-1.0e5d910b6d5ef6b52d123328ed6e806d7a9dd1b5.pl-pl.xlf)
-* Current Handback Datetime: 2016-06-14 02:45:57
+* Current Target File: [InTuneDocs\Troubleshoot\troubleshoot-device-enrollment-in-intune.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/c9c01a707102f615d2ed4031ba2d22a9c4723f63/InTuneDocs/Troubleshoot/troubleshoot-device-enrollment-in-intune.md)
+* Current Handback File: [troubleshoot-device-enrollment-in-intune.c0e4168b7349c261afccdc2a1f32f87d98e44395.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/ac22285235fbe828973f22b40490e57100095df0/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/troubleshoot-device-enrollment-in-intune.c0e4168b7349c261afccdc2a1f32f87d98e44395.pl-pl.xlf)
+* Current Handback Datetime: 2016-06-24 08:38:50
 * [Back to Top](#report-top)
 
 
