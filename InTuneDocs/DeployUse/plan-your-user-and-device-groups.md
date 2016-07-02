@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Planowanie grup użytkowników i urządzeń | Microsoft Intune
-description:
-keywords:
+title: "Planowanie grup użytkowników i urządzeń | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 82ab2dbfada6c0745195da149d5f0dc1948ceb92
+ms.openlocfilehash: e89d8384532b994d810649fc07c698237e2f3cec
+
 
 ---
 
@@ -158,7 +152,8 @@ Przejrzyj informacje i wybierz pozycję **Zakończ**, aby zakończyć tworzenie 
 
 W naszym przykładzie utworzona również została grupa MEA (Middle East and Asia).
 
-> [!NOTE] Jeśli członkostwo w grupie nie zostanie wypełnione na podstawie przynależności do grupy zabezpieczeń, upewnij się, że do tych członków została przypisana licencja na usługę Intune.
+> [!NOTE]
+> Jeśli członkostwo w grupie nie zostanie wypełnione na podstawie przynależności do grupy zabezpieczeń, upewnij się, że do tych członków została przypisana licencja na usługę Intune.
 
 ### Grupy dla konkretnego sprzętu
 Jeśli w Twojej organizacji są wymagane zasady dotyczące konkretnych typów sprzętu, możesz tworzyć grupy na podstawie tego kryterium. Można je utworzyć na podstawie określonych grup utworzonych już w lokalnej usłudze AD, a następnie zsynchronizować je z usługą Azure AD. Można je również utworzyć bezpośrednio w usłudze Azure AD. W tym przykładzie użyto grupy **US Users Group** jako nadrzędnej względem grupy **Laptop Users**.
@@ -174,7 +169,8 @@ Jeśli w Twojej organizacji są wymagane zasady dotyczące konkretnych systemów
 
 Stosując taką samą metodę jak w poprzednich przykładach, można utworzyć grupy na podstawie użytkowników <!--devices?--> przy użyciu określonych platform systemu operacyjnego.
 
-> [!NOTE] Jeśli istnieją użytkownicy używający różnych platform mobilnych/systemów operacyjnych, a nie istnieje sposób automatycznej klasyfikacji użytkowników jako użytkowników systemu Android, iOS albo Windows, należy rozważyć stosowanie zasad na poziomie urządzeń, co zapewni większą elastyczność stosowania zasad dla konkretnych systemów operacyjnych.
+> [!NOTE]
+> Jeśli istnieją użytkownicy używający różnych platform mobilnych/systemów operacyjnych, a nie istnieje sposób automatycznej klasyfikacji użytkowników jako użytkowników systemu Android, iOS albo Windows, należy rozważyć stosowanie zasad na poziomie urządzeń, co zapewni większą elastyczność stosowania zasad dla konkretnych systemów operacyjnych.
 >
 > Na podstawie systemu operacyjnego urządzenia nie można dynamicznie udostępniać grup. Można to zrobić przy użyciu grup zabezpieczeń usługi AD lub usługi AAD.
 
@@ -218,6 +214,7 @@ Nadawanie zasadom nazw w ten sposób umożliwi szybkie identyfikowanie zasad, ic
 [Tworzenie grup](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
