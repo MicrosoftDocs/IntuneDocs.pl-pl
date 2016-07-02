@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Połączenia VPN | Microsoft Intune
-description:
-keywords:
+title: "Połączenia VPN | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 95abe7b12e68755f3c95f91888efd3e85c057119
+ms.openlocfilehash: b55cf263611d6e90805cad9985eb8a5e7ebeb4a0
+
 
 ---
 
@@ -151,7 +145,7 @@ Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze r
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycję **Dodaj** &gt; **OK**.
 
     -   **Aby zamknąć okno dialogowe bez wdrażania** — wybierz pozycję **Anuluj**.
 
@@ -165,6 +159,7 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 [Sieć VPN dla aplikacji systemu Android korzystających z połączenia Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
