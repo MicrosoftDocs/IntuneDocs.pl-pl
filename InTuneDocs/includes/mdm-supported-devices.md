@@ -8,6 +8,6 @@
   - System Mac OS X 10.9 lub nowszy
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO4-->
 
 

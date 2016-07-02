@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Możliwości zarządzania urządzeniami przenośnymi | Microsoft Intune
-description:
-keywords:
+title: "Możliwości zarządzania urządzeniami przenośnymi | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: 0f460165f251acf95f4af36afa39409d3eb21162
+
 
 ---
 # Możliwości zarządzania urządzeniami przenośnymi w usłudze Microsoft Intune
@@ -66,13 +60,14 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 
 |Możliwość|Szczegóły|Więcej informacji|
 |--------------|-----------|--------------------|
-|Spis i raportowanie|Wyszukuj informacje o zarządzanych urządzeniach i oprogramowaniu, którego używają.|[Uzyskiwanie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune](./deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
+|Spis i raportowanie|Wyszukuj informacje o zarządzanych urządzeniach i oprogramowaniu, którego używają.|[Uzyskiwanie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune](/intune/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
 
 
 ### Zobacz także
-[Możliwości zarządzania komputerami z systemem Windows w usłudze Microsoft Intune](./windows-pc-management-capabilities-in-microsoft-intune.md)
+[Możliwości zarządzania komputerami z systemem Windows w usłudze Microsoft Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
