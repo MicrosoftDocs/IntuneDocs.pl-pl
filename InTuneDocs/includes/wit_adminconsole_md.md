@@ -1,5 +1,5 @@
 Konsola administratora usługi Microsoft Intune
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 
