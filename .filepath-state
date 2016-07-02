@@ -976,9 +976,6 @@
   "5f65887345c1a650c6d80863e42f447035c789f7": [
     "InTuneDocs\\DeployUse\\set-up-android-management-with-microsoft-intune.md"
   ],
-  "af1976c092b3a380c09006227bfc16e1e7933d6d": [
-    "InTuneDocs\\DeployUse\\set-up-android-management-with-microsoft-intune.md"
-  ],
   "5b746cee0806fb44b1fd847efb9791d525673133": [
     "InTuneDocs\\Understand\\set-up-email-access-for-ios-devices-using-microsoft-intune.md"
   ],
@@ -1013,9 +1010,6 @@
     "InTuneDocs\\GetStarted\\project-scope.md"
   ],
   "4c01b7cec6474153fcea465fc050ac419ca2eec5": [
-    "InTuneDocs\\GetStarted\\proof-of-concept.md"
-  ],
-  "3389175fc0cefb59c71686e5739caa4d315694ba": [
     "InTuneDocs\\GetStarted\\proof-of-concept.md"
   ],
   "9f3fcead3c41506734508d588ad180d17cc901ee": [
