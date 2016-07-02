@@ -6,6 +6,6 @@
 >Nowe dynamiczne przypisanie do grup urządzeń można zdefiniować w usłudze Azure Active Directory na podstawie nazwy profilu rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. Wkrótce zostaną opublikowane dalsze szczegóły.
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 
