@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrona urządzeń z systemem Windows za pomocą uwierzytelniania wieloskładnikowego | Microsoft Intune
-description:
-keywords:
+title: "Ochrona urządzeń z systemem Windows za pomocą uwierzytelniania wieloskładnikowego | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: vinaybha
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2023d7bc1d35b423a216ece195cdca9a6a542446
+ms.openlocfilehash: 15e546b93c2a3aff551efa36ac80ff212ada5812
+
 
 ---
 
@@ -38,11 +32,12 @@ Aby skonfigurować uwierzytelnianie wieloskładnikowe, konieczna jest:
 Wszystkie serwery wymienione powyżej muszą spełniać wymagania systemowe podane w temacie [Wymagania systemowe i informacje dotyczące instalacji systemu Windows Server 2012 R2](http://technet.microsoft.com/library/dn303418.aspx).
 
 #### Uwierzytelnianie wieloskładnikowe w usłudze Intune
-Jeśli organizacja ma lokalną infrastrukturę IT, która obejmuje domenę usługi Active Directory z usługami Active Directory Federation Services (AD FS), możesz skonfigurować uwierzytelnianie wieloskładnikowe na serwerze federacyjnym, a następnie włączyć je na potrzeby rejestracji w usłudze Intune. Konfigurując uwierzytelnianie wieloskładnikowe w usłudze Intune, umożliwiasz użytkownikom jednokrotne uwierzytelnianie podczas rejestracji, a następnie uzyskiwanie dostępu do zasobów firmy bez konieczności użycia za każdym razem uwierzytelniania wieloskładnikowego.
+Jeśli organizacja ma lokalną infrastrukturę IT, która obejmuje domenę usługi Active Directory z usługami Active Directory Federation Services (AD FS), możesz skonfigurować uwierzytelnianie wieloskładnikowe na serwerze federacyjnym, a następnie włączyć je na potrzeby rejestracji w usłudze Intune. Konfigurując usługę MFA w usłudze Intune, umożliwiasz użytkownikom jednokrotne uwierzytelnianie podczas rejestracji, a następnie uzyskiwanie dostępu do zasobów firmy bez konieczności użycia za każdym razem usługi MFA.
 
->[!NOTE] Użycie uwierzytelniania wieloskładnikowego na serwerze usług AD FS może być wymagane dla poszczególnych użytkowników lub grup.  
+>[!NOTE]
+>Użycie usługi MFA na serwerze usługi AD FS może być wymagane dla poszczególnych użytkowników lub grup.  
 
-#### Uwierzytelnianie wieloskładnikowe bez usługi Intune
+#### Usługa MFA bez usługi Intune
 Jeśli skonfigurujesz uwierzytelnianie wieloskładnikowe na serwerze federacyjnym, ale nie włączysz go na potrzeby rejestracji w usłudze Intune, użytkownicy będą musieli używać uwierzytelniania wieloskładnikowego za każdym razem, gdy urządzenia będą uzyskiwać dostęp do zasobów firmy (nie tylko podczas rejestracji urządzenia).
 
 Możesz także użyć uwierzytelniania wieloskładnikowego usługi Azure Active Directory (AAD), aby żądać uwierzytelniania wieloskładnikowego za każdym razem, gdy użytkownicy uzyskują dostęp do zasobów firmy (to wymaganie można włączyć dla poszczególnych użytkowników). Usługa Azure Active Directory Multi-Factor Authentication to usługa w chmurze, która nie wymaga żadnej lokalnej infrastruktury IT. Aby dowiedzieć się, jak skonfigurować uwierzytelnianie MFA w usłudze AAD, zobacz [Getting started with Azure Multi-Factor Authentication in the cloud](https://azure.microsoft.com/en-us/documentation/articles/multi-factor-authentication-get-started-cloud/) (Wprowadzenie do korzystania z usługi Azure Multi-Factor Authentication w chmurze).
@@ -60,6 +55,7 @@ Aby dowiedzieć się, jak włączyć uwierzytelnianie wieloskładnikowe w usług
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

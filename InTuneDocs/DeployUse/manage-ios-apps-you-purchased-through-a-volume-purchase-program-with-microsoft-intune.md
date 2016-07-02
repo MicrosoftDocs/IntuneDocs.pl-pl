@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zarządzanie aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
+ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+
 
 ---
 
@@ -76,20 +70,23 @@ Aby odzyskać licencję, należy zmienić akcję wdrażania na **Odinstaluj**. L
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP po raz pierwszy, zostanie poproszony o dołączenie do programu zakupów zbiorczych firmy Apple. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana.
 
-> [!TIP] W kolumnie **Stan warunków VPP** sprawdź stan akceptacji dla poszczególnych użytkowników aplikacji, dla których wdrożono aplikację.
+> [!TIP]
+> W kolumnie **Stan warunków VPP** sprawdź stan akceptacji dla poszczególnych użytkowników aplikacji, dla których wdrożono aplikację.
 
 Jeśli dodatkowe licencje nie są dostępne, wdrożenie zakończy się niepowodzeniem.
 
 ## Aby monitorować aplikacje programu VPP firmy Apple
 Możesz monitorować, które aplikacje usługi VPP zostały wdrożone, oraz liczbę używanych licencji w obszarze roboczym **Aplikacje** w węźle **Zarządzane oprogramowanie** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**.
 
-> [!TIP] Możesz również sprawdzać stan poszczególnych instalacji aplikacji przy użyciu **filtrów** aplikacji.
+> [!TIP]
+> Możesz również sprawdzać stan poszczególnych instalacji aplikacji przy użyciu **filtrów** aplikacji.
 
-### Zobacz też
+### Zobacz także
 [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
