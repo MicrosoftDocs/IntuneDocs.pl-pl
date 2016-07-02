@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z programem Endpoint Protection | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów z programem Endpoint Protection | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c22ddd554928b394e14742b8ba7d583d390d1c44
+ms.openlocfilehash: 0f4d8c49eb87ef94a1ddfdebd7dcd40c41b9a5a0
+
 
 ---
 
@@ -45,15 +39,16 @@ W tej sekcji opisano możliwe przyczyny i potencjalne rozwiązania poniższych b
 |**Monitorowanie zachowania jest wyłączone**|Monitorowanie zachowania zostało wyłączone przez administratora (przy użyciu zasad) lub przez użytkownika na zarządzanym komputerze.|Jeśli monitorowanie zachowania jest wyłączone, możesz je włączyć z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) lub z poziomu zarządzanego komputera. Wykonaj jedną z następujących czynności:<br /><br />Aby włączyć monitorowanie zachowania z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), otwórz obszar roboczy **Zasady**, a następnie zmień ustawienie **Włącz monitorowanie zachowania** na wartość **Tak** w zasadach, które są stosowane względem komputera. Po wykonaniu tej czynności uruchom ponownie zarządzany komputer.<br /><br />Lub:<br /><br />Aby włączyć monitorowanie zachowania z poziomu zarządzanego komputera, uruchom oprogramowanie klienckie programu Endpoint Protection z obszaru powiadomień. Wybierz kartę **Ustawienia**, wybierz pozycję **Ochrona w czasie rzeczywistym**, zaznacz pole wyboru **Włącz monitorowanie zachowania**, a następnie wybierz pozycję **Zapisz zmiany**. Po wykonaniu tej czynności uruchom ponownie komputer.|
 |**Skanowanie skryptu jest wyłączone**|Skanowanie skryptów zostało wyłączone przez administratora (przy użyciu zasad) lub przez użytkownika na zarządzanym komputerze.|Jeśli skanowanie skryptów jest wyłączone, możesz je włączyć z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) lub z poziomu zarządzanego komputera. Wykonaj jedną z następujących czynności:<br /><br />Aby włączyć skanowanie skryptów z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), otwórz obszar roboczy **Zasady**, a następnie zmień ustawienie **Włącz skanowanie skryptów** na wartość **Tak** w zasadach, które są stosowane względem komputera.<br /><br />Lub:<br /><br />Aby włączyć skanowanie skryptów z poziomu zarządzanego komputera, uruchom oprogramowanie klienckie programu Endpoint Protection z obszaru powiadomień. Wybierz kartę **Ustawienia**, wybierz pozycję **Ochrona w czasie rzeczywistym**, zaznacz pole wyboru **Włącz skanowanie skryptów**, a następnie wybierz pozycję **Zapisz zmiany**.|
 |**System inspekcji sieci jest wyłączony**|System inspekcji sieci został wyłączony przez administratora przy użyciu zasad lub przez użytkownika na zarządzanym komputerze.|Jeśli system inspekcji sieci jest wyłączony, możesz go włączyć z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) lub z poziomu zarządzanego komputera. Wykonaj jedną z następujących czynności:<br /><br />Aby włączyć system inspekcji sieci z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), otwórz obszar roboczy **Zasady**, a następnie zmień ustawienie **Włącz system inspekcji sieci** na wartość **Tak** w zasadach, które są stosowane względem komputera. Po wykonaniu tej czynności uruchom ponownie zarządzany komputer.<br /><br />Lub:<br /><br />Aby włączyć system inspekcji sieci z poziomu zarządzanego komputera, uruchom oprogramowanie klienckie programu Endpoint Protection z obszaru powiadomień. Wybierz kartę **Ustawienia**, wybierz pozycję **Ochrona w czasie rzeczywistym**, zaznacz pole wyboru **Włącz system inspekcji sieci**, a następnie wybierz pozycję **Zapisz zmiany**. Uruchom ponownie komputer.|
-|**Definicje złośliwego oprogramowania są nieaktualne**|Komputer mógł być odłączony od Internetu przez dłuższy czas i jego definicje złośliwego oprogramowania mogły jeszcze nie zostać zaktualizowane. Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na komputerze są nieaktualne (pochodzą sprzed co najmniej 14 dni).|Jeśli definicje złośliwego oprogramowania są nieaktualne, możesz je zaktualizować z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) lub z poziomu zarządzanego komputera.<br /><br />Aby uzyskać więcej informacji, zobacz temat [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).|
+|**Definicje złośliwego oprogramowania są nieaktualne**|Komputer mógł być odłączony od Internetu przez dłuższy czas i jego definicje złośliwego oprogramowania mogły jeszcze nie zostać zaktualizowane. Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na komputerze są nieaktualne (pochodzą sprzed co najmniej 14 dni).|Jeśli definicje złośliwego oprogramowania są nieaktualne, możesz je zaktualizować z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) lub z poziomu zarządzanego komputera.<br /><br />Aby uzyskać więcej informacji, zobacz temat [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)|
 |**Zaległe pełne skanowanie**|Nie wykonano pełnego skanowania w ciągu ostatnich 14 dni. Może to być spowodowane ponownym uruchomieniem komputera podczas pełnego skanowania.|Jeśli pełne skanowanie jest zaległe, możesz uruchomić jednorazowe pełne skanowanie lub zaplanować cykliczne pełne skanowanie z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), korzystając z informacji podanych w temacie [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).|
 |**Zaległe szybkie skanowanie**|Nie wykonano szybkiego skanowania w ciągu ostatnich 14 dni. Może to być spowodowane ponownym uruchomieniem komputera podczas szybkiego skanowania.|Jeśli szybkie skanowanie jest zaległe, możesz uruchomić jednorazowe szybkie skanowanie lub zaplanować cykliczne szybkie skanowanie z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), korzystając z informacji podanych w temacie [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).|
 |**Uruchomiona jest inna aplikacja ochrony punktu końcowego**|Uruchomiona jest inna aplikacja ochrony punktu końcowego, a komputer jest w dobrej kondycji.|Domyślnie, jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego i usługa Intune wykryje tę aplikację, program Endpoint Protection samodzielnie się wyłączy. Jeśli usługa Intune nie wykryje innej aplikacji ochrony punktu końcowego, program Endpoint Protection pozostanie włączony. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).|
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Uzyskiwanie informacji o urządzeniach dzięki spisowi | Microsoft Intune
-description:
-keywords:
+title: "Uzyskiwanie informacji o urządzeniach dzięki spisowi | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
+ms.openlocfilehash: 55b99e326e4f22aee62b207eb2e976a8d52e70c3
+
 
 ---
 
@@ -66,9 +60,10 @@ Aby wyświetlić spis zebrany przez urządzenia przenośne, uruchom [raporty dot
 |**Włączone szyfrowanie**|Wszystkie urządzenia|
 
 ## Jakie informacje są zbierane z komputerów z systemem Windows?
-> [!IMPORTANT] Ta sekcja dotyczy tylko komputerów z systemem Windows, na których uruchomiono oprogramowanie klienckie usługi Intune dla komputerów z systemem Windows.
+> [!IMPORTANT]
+> Ta sekcja dotyczy tylko komputerów z systemem Windows, na których uruchomiono oprogramowanie klienckie usługi Intune dla komputerów z systemem Windows.
 
-Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [raporty dotyczące spisu komputerów](understand-microsoft-intune-operations-by-using-reports.md). Usługa Intune zbiera następujący spis z komputerów z systemem Windows:
+Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [Raporty dotyczące spisu komputerów](understand-microsoft-intune-operations-by-using-reports.md). Usługa Intune zbiera następujący spis z komputerów z systemem Windows:
 
 -   **Nazwa**
 
@@ -118,6 +113,7 @@ Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [rapor
 -->
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
