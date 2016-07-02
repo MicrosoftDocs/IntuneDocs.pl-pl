@@ -1,27 +1,19 @@
 ---
-# required metadata
-
-title: Płatna subskrypcja usługi Microsoft Intune lub pakietu Enterprise Mobility może obejmować licencję na korzystanie z konkretnego oprogramowania do pobrania | Microsoft Intune
-description:
-keywords:
+title: "Płatna subskrypcja usługi Microsoft Intune lub pakietu Enterprise Mobility może obejmować licencję na korzystanie z konkretnego oprogramowania do pobrania | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 06/08/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: 9d031fa7-9c07-48c5-b915-6525aea54870
+translationtype: Human Translation
+ms.sourcegitcommit: 4b4371fd7c505db75e18505160de88456fceece2
+ms.openlocfilehash: de8d822c9df7aa0235a998a64b412afd6fc48bd5
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: amyro
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
@@ -47,6 +39,7 @@ Jeśli nie wiesz, jakie oprogramowanie jest dla Ciebie przeznaczone, skontaktuj 
 Jeśli zamiast tego zostało utworzone konto w celu skorzystania z wersji próbnej, możesz pobrać wersje próbne, przechodząc do witryny [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/try).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
