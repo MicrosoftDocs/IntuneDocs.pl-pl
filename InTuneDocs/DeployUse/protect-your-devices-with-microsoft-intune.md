@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrona urządzeń | Microsoft Intune
-description:
-keywords:
+title: "Ochrona urządzeń | Microsoft Intune"
+description: 
+keywords: 
 author: Robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c52448ab454a764be922319fb930a85a86c3996e
+ms.openlocfilehash: c8f833593e6a4606b0dd56373d4dc016c7ea0924
+
 
 ---
 
@@ -47,6 +41,7 @@ Blokada aktywacji to funkcja, która ułatwia ochronę urządzeń użytkowników
 Usługa Intune w dalszym ciągu obsługuje zasady zabezpieczeń na komputerach z systemem Windows, które nie są rejestrowane, ale zarządzane przy użyciu oprogramowania klienckiego komputera z usługą Intune. Aby dowiedzieć się, jak przy użyciu tych zasad można zabezpieczyć komputery z systemem Windows, zobacz [Use policies to help protect Windows PCs that run the Intune client software](policies-to-protect-windows-pcs-in-microsoft-intune.md) (Ochrona komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune przy użyciu zasad).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

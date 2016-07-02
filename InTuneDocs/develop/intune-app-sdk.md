@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Zalety zestawu SDK aplikacji usługi Intune | Microsoft Intune
-description:
-keywords:
+title: "Zalety zestawu SDK aplikacji usługi Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
+ms.openlocfilehash: 3abf566831348de11f718370d6267e3ff4355bfb
+
 
 ---
 
 # Omówienie zestawu SDK aplikacji usługi Intune
-Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi umożliwiające zarządzanie nimi za pomocą usługi Microsoft Intune. Ponadto staramy się zmniejszyć liczbę zmian w kodzie wymaganych od dewelopera. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć naszych interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji. 
-Po aktywowaniu aplikacji administratorzy IT mogą wdrożyć zasady w zarządzanych aplikacjach usługi Intune i skorzystać z tych funkcji do ochrony danych firmowych.
+Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi umożliwiające zarządzanie nimi za pomocą usługi Microsoft Intune. Ponadto staramy się zmniejszyć liczbę zmian w kodzie wymaganych od dewelopera. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć naszych interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji. Po aktywowaniu aplikacji administratorzy IT mogą wdrożyć zasady w zarządzanych aplikacjach usługi Intune i skorzystać z tych funkcji do ochrony danych firmowych.
 
 ## Standardowe funkcje
 
@@ -77,6 +70,7 @@ Zarządzanie aplikacjami bez rejestracji urządzenia umożliwia usłudze Microso
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji | Microsoft Intune
-description:
-keywords:
+title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
-manager: [ALIAS]
+manager:
+- ALIAS
 ms.date: 05/10/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
+translationtype: Human Translation
+ms.sourcegitcommit: e32cbcd54220cf36d6770ee16897d27e1d2d71db
+ms.openlocfilehash: 21bc0bcaf64cf67eea2ca30b933c314c4c3e6dae
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: tycast
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
@@ -38,14 +31,14 @@ Polecenie Get-AppxPackage ma następującą składnię:
 ` Parameter Set: __AllParameterSets`
 ` Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]`
 
-> Uwaga: aby uzyskać nazwę PFN, należy uruchomić program PowerShell jak administrator.
+> Uwaga: w celu uzyskania nazwy PFN może być konieczne uruchomienie programu PowerShell jako administrator.
 
-Aby na przykład uzyskać informacje dotyczące wszystkich uniwersalnych aplikacji zainstalowanych na komputerze, należy użyć polecenia `Get-AppxPackage`.
+Aby na przykład uzyskać informacje dotyczące wszystkich aplikacji uniwersalnych zainstalowanych na komputerze, użyj polecenia `Get-AppxPackage`.
 
-Aby uzyskać informacje dotyczące aplikacji, której nazwa lub jej część jest znana, należy użyć polecenia `Get-AppxPackage *<app_name>`. Należy zwrócić uwagę na użycie symbolu wieloznacznego, który jest przydatny szczególnie w wypadku, gdy nie masz pewności, jaka jest pełna nazwa aplikacji. Aby na przykład uzyskać informacje dotyczące programu OneNote, należy użyć polecenia `Get-AppxPackage *OneNote`.
+Aby uzyskać informacje dotyczące aplikacji, której nazwa lub część nazwy jest znana, użyj polecenia `Get-AppxPackage *<app_name>`. Zwróć uwagę na użycie symbolu wieloznacznego, który jest przydatny zwłaszcza wtedy, gdy nie masz pewności, jaka jest pełna nazwa aplikacji. Aby na przykład uzyskać informacje dotyczące programu OneNote, użyj polecenia `Get-AppxPackage *OneNote`.
 
 
-Oto informacje pobrane dla programu OneNote:
+Oto informacje uzyskane dla programu OneNote:
 
 `Name                   : Microsoft.Office.OneNote`
 
@@ -73,13 +66,13 @@ Oto informacje pobrane dla programu OneNote:
 
 ## Znajdowanie nazwy PFN, jeśli aplikacja nie jest zainstalowana na komputerze
 
-1.  Przejdź do strony https://www.microsoft.com/pl-pl/store/apps
-2.  Wprowadź nazwę aplikacji na pasku wyszukiwania. W naszym przykładzie wyszukaj aplikację OneNote.
-3.  Kliknij link do aplikacji. Należy zauważyć, że docelowy adres URL zawiera serię liter na końcu. W naszym przykładzie adres URL może wyglądać następująco:
+1.  Przejdź do strony https://www.microsoft.com/en-us/store/apps
+2.  Wprowadź nazwę aplikacji na pasku wyszukiwania. W tym przykładzie wyszukaj aplikację OneNote.
+3.  Kliknij link do aplikacji. Zwróć uwagę, że docelowy adres URL zawiera serię liter na końcu. W tym przykładzie adres URL wygląda następująco:
 `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  Na innej karcie wklej adres URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, zastępując składnik `<app id>` identyfikatorem aplikacji uzyskanym z adresu https://www.microsoft.com/pl-pl/store/apps — serią liter na końcu adresu URL w kroku 3. W naszym przykładzie (aplikacja OneNote) należy wkleić: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4.  Na innej karcie wklej adres URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, zastępując wartość `<app id>` identyfikatorem aplikacji uzyskanym ze strony https://www.microsoft.com/en-us/store/apps — serią liter na końcu adresu URL w kroku 3. W tym przykładzie (aplikacja OneNote) należy wkleić: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-W przeglądarce Edge wyświetlane są żądane informacje. W programie Internet Explorer należy kliknąć polecenie **Otwórz**, aby wyświetlić informacje. Wartość PFN jest podana w pierwszym wierszu. Oto jak wyglądają wyniki w naszym przykładzie:
+W programie Edge zostaną wyświetlone odpowiednie informacje. W programie Internet Explorer kliknij pozycję **Otwórz**, aby wyświetlić informacje. Wartość PFN jest podana w pierwszym wierszu. Oto jak wyglądają wyniki w tym przykładzie:
  
 
 `{`
@@ -91,6 +84,7 @@ W przeglądarce Edge wyświetlane są żądane informacje. W programie Internet 
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
