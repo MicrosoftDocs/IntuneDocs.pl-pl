@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Informacje o wersji dla usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Informacje o wersji dla usługi Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: db9479b2-582d-4a1a-9fbc-fbfc6c680e6f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 1906f14568484ebbf23ac7c4350964fb2d5d508f
+
 
 ---
 
@@ -63,9 +57,9 @@ W obu przypadkach opisanych powyżej profil dostępu do zasobów (profil poczty 
 
 **Obejście:** na urządzeniach z systemem Windows 8.1, które muszą rejestrować się w sieci wymagającej korzystania z uwierzytelnionego serwera proxy, skonfiguruj i zapisz poświadczenia serwera proxy przed zarejestrowaniem urządzenia. Aby skonfigurować i zapisać poświadczenia na urządzeniu z systemem Windows 8.1:
 
-1.  Na urządzeniu z systemem Windows 8.1 otwórz program **Internet Explorer**..
+1.  Na urządzeniu z systemem Windows 8.1 otwórz program **Internet Explorer**.
 
-2.  Po wyświetleniu monitu o poświadczenia serwera proxy wprowadź poświadczenia, a następnie wybierz opcję **Zapamiętaj moje poświadczenia**..
+2.  Po wyświetleniu monitu o poświadczenia serwera proxy wprowadź poświadczenia, a następnie wybierz opcję **Zapamiętaj moje poświadczenia**.
 
 3.  Zarejestruj urządzenie.
 
@@ -78,7 +72,7 @@ W obu przypadkach opisanych powyżej profil dostępu do zasobów (profil poczty 
 ## Aplikacja Microsoft Intune App Wrapping Tool dla systemu Android nie ma wbudowanej funkcji odinstalowywania
 **Problem:** **narzędzie firmy Microsoft opakowujące aplikacje dla systemu Android** nie ma wbudowanej funkcji odinstalowywania narzędzia.
 
-**Obejście:** przejdź do lokalizacji, w której zainstalowano narzędzie, a następnie usuń katalog. Domyślna lokalizacja instalacji: **C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool**. Aby uzyskać więcej informacji o narzędziu do opakowywania aplikacji, zobacz [Przygotowanie aplikacji Android do zarządzania za pomocą narzędzia opakowującego aplikacje](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)..
+**Obejście:** przejdź do lokalizacji, w której zainstalowano narzędzie, a następnie usuń katalog. Domyślna lokalizacja instalacji: **C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool**. Aby uzyskać więcej informacji o narzędziu do opakowywania aplikacji, zobacz [Przygotowanie aplikacji systemu Android do zarządzania za pomocą narzędzia opakowującego aplikacje](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool).
 
 ## Pomoc zdalna jest niedostępna na komputerach z systemem Windows 8 i Windows 8.1
 **Problem:** w tej wersji funkcja pomocy zdalnej nie jest dostępna na komputerach z systemem Windows 8 lub Windows 8.1.
@@ -96,6 +90,7 @@ Portal Azure w wersji zapoznawczej jest zbudowany na nowej platformie i obsługu
 Konsola administracyjna usługi Intune oraz mobilne środowiska użytkownika obsługują język duński, grecki, fiński i rumuński, a także wszystkie języki obsługiwane przez portal Azure w wersji zapoznawczej.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
