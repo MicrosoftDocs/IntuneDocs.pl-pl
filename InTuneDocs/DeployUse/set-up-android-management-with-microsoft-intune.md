@@ -26,7 +26,7 @@ Wybierz jedną z następujących opcji platformy urządzenia, aby dowiedzieć si
 
 > [!div class="op_single_selector"]
 - [Konfigurowanie zarządzania systemem Android przy użyciu usługi Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
