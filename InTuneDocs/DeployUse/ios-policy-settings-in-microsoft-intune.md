@@ -1,37 +1,33 @@
 ---
-# required metadata
-
 title: Ustawienia zasad systemu iOS | Microsoft Intune
-description:
-keywords:
+description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9a492a16605130743b943f6aa49d1d633eb97d4
+ms.openlocfilehash: 3292df922eeb53108f2b34d4113b0b6c5a114564
+
 
 ---
 
 # Ustawienia zasad systemu iOS w usłudze Microsoft Intune
 
+Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem iOS. Ponadto przy użyciu narzędzia Apple Configurator można utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
+
 ## Ustawienia ogólnych zasad konfiguracji
 
 **Ogólne zasady konfiguracji systemu iOS** w usłudze Microsoft Intune umożliwiają konfigurację następujących ustawień:
 
--   **Ustawienia zabezpieczeń urządzenia przenośnego** — Możliwość wyboru z listy wstępnie zdefiniowanych ustawień, które pozwalają na kontrolę szeregu funkcji i funkcjonalności urządzenia.
+-   **Ustawienia ogólne urządzenia i zabezpieczeń** — Możliwość wyboru z listy wstępnie zdefiniowanych ustawień, które pozwalają na kontrolę szeregu funkcji i funkcjonalności urządzenia.
 
 -   **Tryb kiosku** — Blokowanie urządzenia w celu zezwolenia na działanie tylko niektórych funkcji. Na przykład można zezwolić na uruchamianie na urządzeniu tylko określonej zarządzanej aplikacji albo można wyłączyć przyciski regulacji głośności na urządzeniu. Można użyć tych ustawień dla modeli pokazowych urządzenia lub dla urządzeń przeznaczonych do wykonywania tylko jednej funkcji — na przykład urządzeń w punkcie sprzedaży.
 
@@ -48,7 +44,7 @@ Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć z
 |----------------|-------|
 |**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do urządzenia.|Tak|
 |**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|Tak|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Istnieją cztery zestawów znaków: małe litery, wielkie litery, cyfry oraz symbole. To ustawienie określa, znaki z ilu zestawów znaków muszą być zawarte w haśle). Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę znaków symbolicznych, które muszą być zawarte w haśle)|Tak|
+|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Ustawienie to określa liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|Tak|
 |**Minimalna długość hasła**|Określa minimalną liczbę znaków w haśle.|Tak|
 |**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak „0000” i „1234”.|Tak|
 |**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Czyści urządzenie po określonej liczbie prób logowania zakończonych niepowodzeniem.|Tak|
@@ -77,7 +73,7 @@ Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć z
 |Nazwa ustawienia|Szczegóły|iOS|
 |----------------|-------|
 |**Zezwalaj na tworzenie kopii zapasowych w ramach usługi iCloud**|Zezwala użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|Tak|
-|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud. Tak|
+|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|Tak|
 |**Zezwalaj na synchronizowanie strumienia zdjęć w ramach usługi iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|Tak|
 |**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|Tak|
 
@@ -97,7 +93,7 @@ Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć z
 |Nazwa ustawienia|Szczegóły|iOS|
 |----------------|-------|
 |**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia dostęp do sklepu z aplikacjami z poziomu urządzenia.|Tak|
-|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Tak|
+|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymaga od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|Tak|
 |**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|Tak|
 |**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|System iOS 7.1 lub nowszy|
 |**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|System iOS 7.1 lub nowszy|
@@ -170,7 +166,8 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 |**Włącz obsługę dotykową z ułatwieniami**|Włącza lub wyłącza funkcję ułatwień dostępu **Assistive Touch** , która umożliwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.|
 |**Włącz korektę obsługi dotykowej z ułatwieniami**|Włącza lub wyłącza ustawienia funkcji Assistive Touch.|
 |**Włącz wybór mowy**|Włącza lub wyłącza funkcję ułatwień dostępu **wyboru mowy** , dzięki której zaznaczony tekst może zostać odczytany na głos przez urządzenie.|
-> [!NOTE] Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
+> [!NOTE]
+> Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
 > 
 > -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub menedżera rejestracji urządzeń w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 > -   Jeśli wskazana aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
@@ -195,7 +192,8 @@ Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgo
 
 **Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Adres URL, którego użyjesz, to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
-> [!NOTE] Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
+> [!NOTE]
+> Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
 
 
 ## Ustawienia zasad niestandardowych
@@ -230,6 +228,7 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Ustawienia zasad konfiguracji systemu Android i Samsung KNOX | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 62beaec31a0cdc3c28fd3eed820a6771e42ef3e7
+ms.openlocfilehash: f4c0eccb0cd30daaba97e8f34eea69e3d0e8e0ad
+
 
 ---
 
@@ -55,6 +49,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 |**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Zapobiega ponownemu użyciu hasła stosowanego wcześniej.|Tak|Tak|
 |**Jakość hasła**|Wybierz wymagany poziom złożoności hasła oraz określ, czy mogą być stosowane urządzenia biometryczne.|Tak|Tak|
 |**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Umożliwia odblokowywanie urządzenia przy użyciu linii papilarnych.|Nie|Tak|
+|**Zezwalaj na użycie blokady inteligentnej i innych agentów zaufania**<br>(system Android 5 i nowsze)|Umożliwia sterowanie funkcją blokady inteligentnej na zgodnych urządzeniach z systemem Android. Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji, np. gdy zostało podłączone do danego urządzenia Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom końcowym konfigurowanie funkcji blokady inteligentnej.|Tak|Nie|
 
 ### Ustawienia szyfrowania
 
@@ -73,7 +68,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 
 ### Ustawienia chmury — dokumenty i dane
 
-|Nazwa ustawienia|Szczegóły|Android i Samsung KNOX|Android 4.0+|
+|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
 |----------------|----------------------------|----------------|
 |**Zezwalaj na kopie zapasowe w usłudze Google**|Zezwala na korzystanie z kopii zapasowej w usłudze Google.|Nie|Tak|
 
@@ -95,7 +90,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 
 ### Ustawienia aplikacji — aplikacje
 
-|Nazwa ustawienia|Android 4.0+|Samsung KNOX|
+|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
 |----------------|----------------|----------------|
 |**Zezwalaj na sklep Google Play**|Umożliwia użytkownikowi uzyskiwanie dostępu do sklepu Google Play na urządzeniu.|Nie|Tak|
 
@@ -179,7 +174,8 @@ Otwórz stronę instalacji aplikacji i skopiuj jej adres URL do schowka. Możesz
 
 Ta funkcja ma umożliwić wdrażanie ustawień systemu Android, których nie można skonfigurować przy użyciu zasad usługi Intune.
 
-> [!NOTE] Obecnie zasady niestandardowe systemu Android obsługują tylko konfigurowanie ustawień Wi-Fi dla urządzeń z systemem Android, które obejmują klucz wstępny.
+> [!NOTE]
+> Obecnie zasady niestandardowe systemu Android obsługują tylko konfigurowanie ustawień Wi-Fi dla urządzeń z systemem Android, które obejmują klucz wstępny.
 
 ### Ustawienia ogólne
 
@@ -257,6 +253,7 @@ Chociaż usługa Intune obsługuje profile Wi-Fi dla urządzeń z systemem Andro
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 
