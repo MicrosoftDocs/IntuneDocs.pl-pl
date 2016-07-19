@@ -5434,9 +5434,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\how-to-set-the-period-before-your-android-device-is-locked.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/0464442dfc6eadde1b44eef72458ad5ee874f711/InTuneDocs/EndUser/how-to-set-the-period-before-your-android-device-is-locked.md)
-* Current Handback File: [how-to-set-the-period-before-your-android-device-is-locked.d343204b629142728acbc9b9c6982a8c812cbbf1.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/6c2e17349d90eb0111028cca9def388c3445ec44/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/how-to-set-the-period-before-your-android-device-is-locked.d343204b629142728acbc9b9c6982a8c812cbbf1.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-14 14:32:22
+* Current Target File: [InTuneDocs\EndUser\how-to-set-the-period-before-your-android-device-is-locked.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/how-to-set-the-period-before-your-android-device-is-locked.md)
+* Current Handback File: [how-to-set-the-period-before-your-android-device-is-locked.d343204b629142728acbc9b9c6982a8c812cbbf1.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/how-to-set-the-period-before-your-android-device-is-locked.d343204b629142728acbc9b9c6982a8c812cbbf1.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='35c81ce05e67c149d1523c272873347a2460bb11305'></a> Source: [InTuneDocs\EndUser\install-and-sign-in-to-the-intune-company-portal-app-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/install-and-sign-in-to-the-intune-company-portal-app-ios.md)
@@ -5479,9 +5479,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\install-the-microsoft-intune-company-portal-app-android.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/a6c7176f053bace58a5597fc7791a91e49a9729a/InTuneDocs/EndUser/install-the-microsoft-intune-company-portal-app-android.md)
-* Current Handback File: [install-the-microsoft-intune-company-portal-app-android.360ca027c46d498401e0d8e485653c678a4e1e8e.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/29ebceba6283cef5d4f4410b22de25db2d1265fe/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/install-the-microsoft-intune-company-portal-app-android.360ca027c46d498401e0d8e485653c678a4e1e8e.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-14 08:38:08
+* Current Target File: [InTuneDocs\EndUser\install-the-microsoft-intune-company-portal-app-android.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/install-the-microsoft-intune-company-portal-app-android.md)
+* Current Handback File: [install-the-microsoft-intune-company-portal-app-android.360ca027c46d498401e0d8e485653c678a4e1e8e.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/install-the-microsoft-intune-company-portal-app-android.360ca027c46d498401e0d8e485653c678a4e1e8e.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='a4bdb11a62ff170d3ffd6132a3b7673dec39d22a307'></a> Source: [InTuneDocs\EndUser\install-your-companys-virtual-private-network-VPN-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d3ec3ed2c7d5e412044196be47c4c030bd39ecbd/InTuneDocs/EndUser/install-your-companys-virtual-private-network-VPN-android.md)
@@ -6913,9 +6913,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\password-does-not-meet-it-administrator-requirements.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/3b93c1a5a041115e1f35ba3f9f3d2b7c0781d80f/InTuneDocs/EndUser/password-does-not-meet-it-administrator-requirements.md)
-* Current Handback File: [password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/49c8fe57f99fc8f4f18dfec2bd318c93dfc4ff78/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-15 10:59:19
+* Current Target File: [InTuneDocs\EndUser\password-does-not-meet-it-administrator-requirements.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/password-does-not-meet-it-administrator-requirements.md)
+* Current Handback File: [password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/password-does-not-meet-it-administrator-requirements.02c9ca97ffe1759953549b28fa49accc84c26580.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='2ff3cde77e4249369b7299af73e75c29ec855a4c419'></a> Source: [InTuneDocs\EndUser\remote-lock-your-device-cpwebsite.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/remote-lock-your-device-cpwebsite.md)
@@ -7138,9 +7138,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\set-the-amount-of-time-before-your-device-is-locked-android.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/548bee7627b8c2e648df1de2492248c478a83eef/InTuneDocs/EndUser/set-the-amount-of-time-before-your-device-is-locked-android.md)
-* Current Handback File: [set-the-amount-of-time-before-your-device-is-locked-android.316b58a38b3c7f4393eb4d03f39dc263da0eda33.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/29234d070bd6321b2e85a632806e8f7f1d3b3e4a/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/set-the-amount-of-time-before-your-device-is-locked-android.316b58a38b3c7f4393eb4d03f39dc263da0eda33.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-15 14:25:53
+* Current Target File: [InTuneDocs\EndUser\set-the-amount-of-time-before-your-device-is-locked-android.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/set-the-amount-of-time-before-your-device-is-locked-android.md)
+* Current Handback File: [set-the-amount-of-time-before-your-device-is-locked-android.316b58a38b3c7f4393eb4d03f39dc263da0eda33.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/set-the-amount-of-time-before-your-device-is-locked-android.316b58a38b3c7f4393eb4d03f39dc263da0eda33.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='e6e157e5c1621b4052b6c6cbbe5aa252162364a8434'></a> Source: [InTuneDocs\EndUser\set-your-pin-or-password-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/set-your-pin-or-password-android.md)
@@ -7198,9 +7198,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\sync-your-device-manually-windows.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/548bee7627b8c2e648df1de2492248c478a83eef/InTuneDocs/EndUser/sync-your-device-manually-windows.md)
-* Current Handback File: [sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/29234d070bd6321b2e85a632806e8f7f1d3b3e4a/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-15 14:25:53
+* Current Target File: [InTuneDocs\EndUser\sync-your-device-manually-windows.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/sync-your-device-manually-windows.md)
+* Current Handback File: [sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='67d220f0e26c9783a0de0e3004eedfb6e5406c65438'></a> Source: [InTuneDocs\EndUser\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5/InTuneDocs/EndUser/TOC.md)
@@ -7255,9 +7255,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\turn-off-microsoft-usage-data-collection-windows.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/7f868d29ff7c0f8141ee0f7c1d1636b27c7328d3/InTuneDocs/EndUser/turn-off-microsoft-usage-data-collection-windows.md)
-* Current Handback File: [turn-off-microsoft-usage-data-collection-windows.288fda4e73047d0cd63754bb6a1b677b267fb6d2.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/f66747a2a2acb4607254eaea092fef906fff65d6/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/turn-off-microsoft-usage-data-collection-windows.288fda4e73047d0cd63754bb6a1b677b267fb6d2.pl-pl.xlf)
-* Current Handback Datetime: 2016-07-14 01:30:23
+* Current Target File: [InTuneDocs\EndUser\turn-off-microsoft-usage-data-collection-windows.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/e82041bf5648cdec4b351158ab55297ddc1cf93e/InTuneDocs/EndUser/turn-off-microsoft-usage-data-collection-windows.md)
+* Current Handback File: [turn-off-microsoft-usage-data-collection-windows.288fda4e73047d0cd63754bb6a1b677b267fb6d2.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/99313d9556ca61911b4a413c3f492c370f62e199/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/turn-off-microsoft-usage-data-collection-windows.288fda4e73047d0cd63754bb6a1b677b267fb6d2.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 17:55:26
 * [Back to Top](#report-top)
 
 ##### <a name='7db7a5bcb1d2448dc41016253ba3d2308d53623c442'></a> Source: [InTuneDocs\EndUser\unenroll-your-device-from-intune-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d3ec3ed2c7d5e412044196be47c4c030bd39ecbd/InTuneDocs/EndUser/unenroll-your-device-from-intune-android.md)
