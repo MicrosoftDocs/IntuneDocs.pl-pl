@@ -1,11 +1,29 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d1206cd49e92618eef79f35885b3e8be08e03925/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md) | OutofSyncHandedBackSuccess | [Details](#2126dc2647e2ec7a09971ef86b00439f2b59c36b494)
 
 ## Item Details
+##### <a name='2126dc2647e2ec7a09971ef86b00439f2b59c36b494'></a> Source: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/d1206cd49e92618eef79f35885b3e8be08e03925/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf](https://github.com/Microsoft/EM.handoff/blob/8c1402926230572924d6c0485fd680578a1265ef/ol-handoff/Microsoft/IntuneDocs-pr.pl-pl/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf)
+* Handoff Datetime: 2016-07-16 02:00:46
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/b558dfea90b8e6065705be856407787c4d850b22/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
+* Current Handback File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/442a218df0d673918397cef4f55591091d9e5c74/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 21:14:15
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

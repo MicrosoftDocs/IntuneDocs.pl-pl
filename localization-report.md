@@ -8053,9 +8053,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/c9c01a707102f615d2ed4031ba2d22a9c4723f63/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
-* Current Handback File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/ac22285235fbe828973f22b40490e57100095df0/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf)
-* Current Handback Datetime: 2016-06-24 08:38:50
+* Current Target File: [InTuneDocs\GetStarted\choose-how-to-enroll-devices.md](https://github.com/Microsoft/IntuneDocs-pr.pl-pl/blob/b558dfea90b8e6065705be856407787c4d850b22/InTuneDocs/GetStarted/choose-how-to-enroll-devices.md)
+* Current Handback File: [choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf](https://github.com/Microsoft/EM.handback/blob/442a218df0d673918397cef4f55591091d9e5c74/ol-handback/Microsoft/IntuneDocs-pr.pl-pl/master/choose-how-to-enroll-devices.9709d9a703247aec224c0d9748801283759de71d.pl-pl.xlf)
+* Current Handback Datetime: 2016-07-19 21:14:15
 * [Back to Top](#report-top)
 
 ##### <a name='502a08c1bf49057220917d929a8ffe0b98d3de2a495'></a> Source: [InTuneDocs\GetStarted\choose-how-to-manage-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/4a7c6d8f4e47f050888e9fcf5edfa586c4a24065/InTuneDocs/GetStarted/choose-how-to-manage-devices.md)
