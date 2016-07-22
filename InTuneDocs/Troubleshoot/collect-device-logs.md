@@ -46,6 +46,6 @@ W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
