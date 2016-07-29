@@ -1,28 +1,26 @@
 ---
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
-title: "Dokumentacja usługi Microsoft Intune"
+title: "Dokumentacja usługi Intune — dokumentacja zarządzania urządzeniami przenośnymi | Dokumentacja firmy Microsoft"
 description: "Dokumentacja techniczna dotycząca zarządzania urządzeniami przenośnymi i aplikacjami w usłudze Microsoft Intune"
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage
-ms.prod: 
 ms.service: microsoft-intune
-ms.technology: 
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: e8f9d974947835d5ec5a356bea6b4261960277ef
-ms.openlocfilehash: b6e3e5189a1567dd5b13017d275ff4bd548e5fa1
+ms.sourcegitcommit: c200c191168a8c5ae9382d62b3a25e9cfd1db3ac
+ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
 
 
 ---
-# Dokumentacja usługi Microsoft Intune
+# Dokumentacja usługi Intune
 <article id="main">
     <section id="hero-content">
-      <h1>Dokumentacja usługi Microsoft Intune</h1>
+      <h1>Dokumentacja usługi Intune</h1>
       <h2>Dowiedz się, jak wdrażać usługę Microsoft Intune umożliwiającą zarządzanie urządzeniami przenośnymi i aplikacjami oraz jak nią zarządzać.</h2>
       <h3>Zarządzasz usługą Intune za pomocą programu Configuration Manager? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Wyświetl dokumentację programu Configuration Manager &rarr;</a></h3>
     </section>
@@ -284,6 +282,6 @@ ms.openlocfilehash: b6e3e5189a1567dd5b13017d275ff4bd548e5fa1
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

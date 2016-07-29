@@ -1,10 +1,10 @@
 ---
 title: Ustawienia zasad konfiguracji systemu Android i Samsung KNOX | Microsoft Intune
-description: 
+description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem Android zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,15 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 62beaec31a0cdc3c28fd3eed820a6771e42ef3e7
-ms.openlocfilehash: f4c0eccb0cd30daaba97e8f34eea69e3d0e8e0ad
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: e983f4ac4e396a30db19e5a0d487ac0f9c25ff14
 
 
 ---
 
 # Ustawienia zasad konfiguracji systemu Android i Samsung KNOX w usłudze Microsoft Intune
+
+Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Android. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
 
 ## Ogólne zasady konfiguracji
 
@@ -254,6 +256,6 @@ Chociaż usługa Intune obsługuje profile Wi-Fi dla urządzeń z systemem Andro
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

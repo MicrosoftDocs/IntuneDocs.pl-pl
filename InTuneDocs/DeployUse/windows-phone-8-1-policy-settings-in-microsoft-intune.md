@@ -1,39 +1,41 @@
 ---
-# required metadata
-
-title: Ustawienia zasad systemu Windows Phone 8.1 w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Ustawienia zasad systemu Windows Phone 8.1 | Microsoft Intune
+description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: e11ca62eb242d7c530e8de2ad1e885315d220233
+
 
 ---
 
 # Ustawienia zasad systemu Windows Phone 8.1 w usłudze Microsoft Intune
 
+Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
+
 ## Ogólne ustawienia konfiguracji
 
-**Ogólne zasady konfiguracji systemu Windows Phone w usłudze Intune** umożliwiają konfigurowanie następujących ustawień urządzeń z systemem Windows Phone 8.1:
+**Ogólne zasady konfiguracji systemu Windows Phone w usłudze Intune (system Windows Phone 8.1 i nowsze)** umożliwiają konfigurowanie następujących ustawień urządzeń z systemem Windows Phone 8.1:
 
 -   **Ustawienia zabezpieczeń urządzenia przenośnego** — Możliwość wyboru z listy wstępnie zdefiniowanych ustawień, które pozwalają na kontrolę szeregu funkcji i funkcjonalności urządzenia.
 
 -   **Zgodne i niezgodne aplikacje** — Określanie listy zgodnych i niezgodnych aplikacji w firmie. Urządzenia z systemem Windows Phone mogą blokować lub umożliwić instalację tych aplikacji.
+
+### Ustawienia zastosowania
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|----------------------------------|
+|**Zastosuj wszystkie konfiguracje dla systemu Windows 10**|Umożliwia zastosowanie ustawień tych zasad na urządzeniach systemu Windows 10 Mobile oprócz urządzeń z systemami Windows 8.1.|
 
 ### Ustawienia hasła
 
@@ -134,7 +136,7 @@ Na stronie [Aplikacje+Gry systemu Windows Phone](http://www.windowsphone.com/en-
 
 Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście zgodnych lub niezgodnych aplikacji.
 
-**Przykład:** Wyszukaj aplikację Skype w sklepie. Adres URL, którego użyjesz, to **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**..
+**Przykład:** Wyszukaj aplikację Skype w sklepie. Adres URL, którego użyjesz, to **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 ## Ustawienia zasad niestandardowych 
 **Niestandardowe zasady konfiguracji systemu Windows Phone** w usłudze Intune umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), za pomocą których można kontrolować funkcje na **urządzeniach z systemem Windows Phone 8.1**. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
@@ -169,6 +171,7 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 
