@@ -3,7 +3,7 @@ title: "Połączenia Wi-Fi | Microsoft Intune"
 description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: 3a59d69be920012b3faa6ea5420b4a96d9c63f46
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 271d2be675ab808365cd6869c69d386058f76ae8
 
 
 ---
@@ -125,8 +125,8 @@ Aby zaimportować zestaw ustawień sieci Wi-Fi, które można następnie wdroży
 
 2.  Skonfiguruj zasady typu **Windows** i **Importowanie profilów sieci Wi-Fi (system Windows 8.1 i nowsze)**.
 
-    Te zasady można zastosować do urządzeń z systemami Windows 8.1 i Windows 10 Desktop lub Mobile. 
-    
+    Te zasady można zastosować do urządzeń z systemami Windows 8.1 i Windows 10 Desktop lub Mobile.
+
     Można tworzyć i wdrażać tylko *niestandardowe* zasady importowania profilów sieci Wi-Fi systemu Windows. Zalecane ustawienia są niedostępne.
 
 3.  Określ następujące wartości ogólne zasady importowania profilów Wi-Fi systemu Windows:
@@ -166,6 +166,6 @@ Dowiedz się, jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego — 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
