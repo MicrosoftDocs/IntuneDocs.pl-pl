@@ -3,7 +3,7 @@ title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft 
 description: "Tworzenie zasad i publikowanie aplikacji w przypadku rejestracji w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 1cc190aa4103bbaa2b2273f08319c3fba9f5507e
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: fb11c48b50e1aa8642a51a542baebe0d068ecda4
 
 
 ---
@@ -99,6 +99,6 @@ Gratulacje! Krok 4 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

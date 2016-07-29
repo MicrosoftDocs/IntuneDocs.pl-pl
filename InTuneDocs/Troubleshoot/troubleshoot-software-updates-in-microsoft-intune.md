@@ -3,7 +3,7 @@ title: "Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft In
 description: "Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune."
 keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
-ms.openlocfilehash: b5e561b17f385d828fbd34658e4c30ac62ab0ea3
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: 1615f564891ddf720dc42b18a599921572fb2157
 
 
 ---
@@ -244,7 +244,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 **Problem**: Może mieć miejsce sytuacja, w której na klientach usługi Microsoft Intune występuje jeden lub więcej z następujących objawów:
 - Raportowanie do konsoli administracyjnej firmy Microsoft zostaje nagle zatrzymane.  
 - Wykorzystanie procesora CPU jest wysokie.
-- Aplikacje instalowane za pośrednictwem portalu Intune są instalowane powoli. 
+- Aplikacje instalowane za pośrednictwem portalu Intune są instalowane powoli.
 - Program Microsoft Intune Center wyzwala następujący błąd: *Wystąpił błąd podczas aktualizowania komputera. Znaleziono błąd: Kod 0x800705b4*.
 - W polu stanu w obszarze konsoli administracyjnej usługi Intune > Grupy > Wszystkie urządzenia jest wyświetlany komunikat: *Co najmniej jeden agent zainstalowany na tym komputerze ma błędy. Informacje na temat tego komputera mogą być niedokładne lub nieaktualne*.
 
@@ -254,7 +254,7 @@ Ten problem może wystąpić, jeśli zastąpione aktualizacje (aktualizacje, kt�
 1. Zaloguj się do [konsoli administracyjnej usługi Intune](https://manage.microsoft.com).
 2. Wybierz pozycje **Aktualizacje** > **Wszystkie aktualizacje**.
 3. Użyj opcji filtrowania na pasku narzędzi u góry, aby filtrować zastąpione aktualizacje.
-4. Odrzuć wszystkie zastąpione aktualizacje, które mogą być zastosowane do systemu Windows 7 lub aplikacji (na przykład pakietu Microsoft Office) zainstalowanych na komputerach, których dotyczy problem. 
+4. Odrzuć wszystkie zastąpione aktualizacje, które mogą być zastosowane do systemu Windows 7 lub aplikacji (na przykład pakietu Microsoft Office) zainstalowanych na komputerach, których dotyczy problem.
 5. Uruchom ponownie klientów, których dotyczy problem.
 
 Ponadto jeśli korzystasz z systemu Windows 7, upewnij się, że następująca aktualizacja jest zainstalowana: [3050265 Klient usługi Windows Update dla systemu Windows 7: czerwiec 2015 r.](https://support.microsoft.com/kb/3050265)
@@ -264,7 +264,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

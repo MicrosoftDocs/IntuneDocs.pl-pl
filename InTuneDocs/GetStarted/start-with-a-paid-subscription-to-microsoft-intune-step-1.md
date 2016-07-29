@@ -3,7 +3,7 @@ title: "Utworzenie konta usługi Intune lub zalogowanie się do niego| Microsoft
 description: "Jak zarejestrować się w celu uzyskania subskrypcji usługi Intune lub jak zalogować się, jeśli już ma się subskrypcję"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: ccd78b30e72e2431aff7d4154796f4250f710b5a
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: a5a1b14db9b029d4fcd1fbd76806d0c527275b2b
 
 
 ---
@@ -51,6 +51,6 @@ Gratulacje! Krok 1 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

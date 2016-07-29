@@ -3,7 +3,7 @@ title: "Zarządzanie przesyłaniem danych między aplikacjami systemu iOS | Micr
 description: "Skorzystaj z tego tematu, aby dowiedzieć się, jak możesz użyć funkcji systemu iOS Otwórz w oraz zasad zarządzania aplikacjami mobilnymi do zarządzania transferami danych pomiędzy aplikacjami."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: arob98
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
-ms.openlocfilehash: 52ddcb22b27443b42a365a84f1769e90f1e9e8a0
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: b95b721ba2d26f3d8f621a7ca5a4968bc86c1daf
 
 
 ---
@@ -75,6 +75,6 @@ Ta konfiguracja jest wymagana w przypadku urządzeń zarządzanych przez rozwią
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

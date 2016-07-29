@@ -3,7 +3,7 @@ title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zare
 description: "W tym temacie opisano, jak można przygotować swoje niestandardowe aplikacje biznesowe, aby mogły stosować zasady zarządzania aplikacjami mobilnymi, co może pomóc w uniknięciu utraty danych."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: arob98
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ce0bc5d1256e96e04e5d59420baed2117cb4854d
-ms.openlocfilehash: 1df9d98f45eaf93163116e4f6a4c9d32125043c8
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 39908e4b08a7a7b0f058646a776a7c37de14b770
 
 
 ---
@@ -75,6 +75,6 @@ Aplikację biznesową można usunąć z listy aplikacji.  Spowoduje to usunięci
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

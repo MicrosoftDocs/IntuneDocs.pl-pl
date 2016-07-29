@@ -3,8 +3,8 @@ title: "Tworzenie i wdrażanie zasad MAM | Microsoft Intune"
 description: "Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3c3fe3f55b625754eac44d245d7c5065514af25c
-ms.openlocfilehash: 4eb126a89249e796944786bfe0274366fc8982c4
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 9e1c8f3c125633f1224005b7f80d3578fd4b729d
 
 
 ---
@@ -50,24 +50,20 @@ Zanim utworzysz zasady MAM, przejrzyj informacje w sekcji [wymagania wstępne i 
     > [!TIP]
     > Jeśli używasz portalu Azure po raz pierwszy, przeczytaj najpierw artykuł [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md), aby zapoznać się z portalem.
 
-2.  W bloku **Ustawienia** wybierz pozycję **Zasady aplikacji**.  Spowoduje to otwarcie bloku **Zasady aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
-
-    ![Zrzut ekranu przedstawiający blok zasad aplikacji z listą istniejących zasad](../media/AppManagement/AzurePortal_MAM_AppPolicy.png)
-
-3.  Wybierz pozycję **Dodaj zasady**.
+2.  W bloku **Ustawienia** wybierz pozycję **Zasady aplikacji**.  Spowoduje to otwarcie bloku **Zasady aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. Wybierz pozycję **Dodaj zasady**.
 
     ![Zrzut ekranu przedstawiający blok zasad aplikacji z podświetloną opcją menu Dodaj zasady ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
-4.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy do utworzenia zasad dla systemu iOS lub Android.  Dla każdej platformy można utworzyć większą liczbę zasad.
+3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy do utworzenia zasad dla systemu iOS lub Android.  Dla każdej platformy można utworzyć większą liczbę zasad.
 
     ![Zrzut ekranu przedstawiający blok Dodawanie zasad](../media/AppManagement/AzurePortal_MAM_AddPolicy_only.png)
 
-5.  Wybierz pozycję **Aplikacje**, aby otworzyć **blok Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy możesz wybrać jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. Po wybraniu aplikacji wybierz przycisk **Wybierz** w dolnej części bloku **Aplikacje**, aby zapisać wybrane opcje.
+4.  Wybierz pozycję **Aplikacje**, aby otworzyć **blok Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy możesz wybrać jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. Po wybraniu aplikacji wybierz przycisk **Wybierz** w dolnej części bloku **Aplikacje**, aby zapisać wybrane opcje.
 
     > [!IMPORTANT]
     > W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
 
-6.  W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć blok ustawień zasad.
+5.  W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć blok ustawień zasad.
 
     Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady przeniesienia danych stosują się do przenoszenia danych do i z aplikacji, podczas gdy zasady dostępu określają metodę dostępu użytkownika końcowego do aplikacji w kontekście pracy.
     Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy.  Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
@@ -77,11 +73,11 @@ Zanim utworzysz zasady MAM, przejrzyj informacje w sekcji [wymagania wstępne i 
 
     ![Zrzut ekranu przedstawiający blok ustawień z blokiem Dodawanie zasad](../media/AppManagement/AzurePortal_MAM_PolicySettings.png)
 
-7.  Wybierz pozycję **OK**, aby zapisać tę konfigurację.  Znajdziesz się ponownie w bloku **Dodawanie zasad** . Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
+6.  Wybierz pozycję **OK**, aby zapisać tę konfigurację.  Znajdziesz się ponownie w bloku **Dodawanie zasad** . Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
     ![Zrzut ekranu przedstawiający blok Dodawanie zasad z informacją o tym, że aplikacje i ustawienia zostały skonfigurowane](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-    ![Zrzut ekranu przedstawiający blok zasad aplikacji z powiadomieniem o dodaniu zasad ](../media/AppManagement/AzurePortal_MAM_AddingPolicyNotification.png)
+
 
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników.  Wykonaj kroki opisane poniżej, aby wdrożyć zasady.
 
@@ -169,6 +165,6 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

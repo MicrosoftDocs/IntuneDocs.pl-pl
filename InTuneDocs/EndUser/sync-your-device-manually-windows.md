@@ -3,7 +3,7 @@ title: "Ręczne synchronizowanie urządzenia z systemem Windows | Microsoft Intu
 description: 
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/18/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 17b0583403c3e23c62a5bd60b9c8217b0621fa80
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 7ec8496317f354b5a2f0c3a214f457612c3105de
 
 
 ---
@@ -35,19 +35,19 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu pr
 1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
 
     ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
-    
+
 2. Wybierz pozycję **Dostęp z miejsca pracy**.
 
     ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
-    
+
 3. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę swojej firmy, jak pokazano poniżej.
 
     ![win10m-sync-3-tap-comp-name](./media/win10m-sync-3-tap-comp-name.png)
-    
+
 4. Wybierz ikonę **Synchronizacja**.
 
     ![win10m-sync-4-tap-sync](./media/win10m-sync-4-tap-sync.png)
-    
+
     W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk synchronizacji będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
 
 ## Windows 10 Desktop
@@ -56,23 +56,23 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Desktop w celu p
 1. Wybierz przycisk **Start**, jak pokazano poniżej, a następnie wybierz pozycję **Ustawienia**.
 
     ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
-    
+
 2. Na stronie **Ustawienia** wybierz pozycję **Konta**.
- 
+
     ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
-    
+
 3. Na stronie **Konta** wybierz pozycję **Dostęp z miejsca pracy**.
-    
+
     ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
-    
+
 4. W sekcji **Rejestrowanie w celu zarządzania urządzeniami** kliknij nazwę swojej firmy (zobacz niebieskie wyróżnienie poniżej).
-    
+
     ![win10pc-sync-4-tap-com-name](./media/win10pc-sync-4-tap-com-name.png)
-   
+
 5. Wybierz przycisk **Synchronizacja**.
-    
+
     ![win10pc-sync-5-tap-sync](./media/win10pc-sync-5-tap-sync.png)
-   
+
    Przycisk będzie szary aż do zakończenia synchronizacji.
 
 ## Windows Phone 8.1
@@ -81,15 +81,15 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu pr
 1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Miejsce pracy**.
 
     ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
-    
+
 2. Wybierz nazwę firmy (zobacz niebieskie wyróżnienie poniżej).
 
     ![wp81-2-sync-tap-compname](./media/wp81-2-sync-tap-compname.png)
-   
+
 3. Wybierz ikonę **Synchronizacja**.
 
     ![wp81-3-sync-tap-sync-button](./media/wp81-3-sync-tap-sync-button.png)
-    
+
    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
@@ -99,6 +99,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

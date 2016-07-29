@@ -3,19 +3,19 @@ title: "Zarządzanie alertami | Microsoft Intune"
 description: "Obszar roboczy Alerty pozwala ocenić ogólną kondycję urządzeń w Twojej organizacji."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-ROBOTS: noindex,nofollow
-ms.reviewer: jeffgilb
+ROBOTS: NOINDEX,NOFOLLOW
+ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: 47667501cf8235ed59e3915ec8f745381a37ab35
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: 54dd8c6bae6c02e7dde3582b439d106261bc490b
 
 
 ---
@@ -33,12 +33,12 @@ Obszar roboczy **Alerty** w konsoli administracyjnej usługi Intune pozwala ocen
 
         > [!NOTE]
         > W niektórych przypadkach określony typ alertu może pojawiać się wielokrotnie na liście **Podsumowanie typów alertów**.
-        > 
+        >
         > N a tej liście mogą się na przykład pojawić poniższe wystąpienia typu alertu Wolne miejsce na dysku logicznym:
-        > 
+        >
         > -   3 — Wolne miejsce na dysku logicznym
         > -   2 — Wolne miejsce na dysku logicznym
-        > 
+        >
         > Dzieje się tak, gdy ten sam typ alertu zostanie wygenerowany dla urządzeń z różnymi systemami operacyjnymi. W tym przykładzie pierwsze wystąpienie typu alertu Wolne miejsce na dysku logicznym, 3 — Wolne miejsce na dysku logicznym, mogło zostać wygenerowane przez komputery z systemem Windows® 7. Drugie wystąpienie typu alertu Wolne miejsce na dysku logicznym mogło zostać wygenerowane przez komputery z systemem Windows Vista®.
 
     -   **Aby wyświetlić wszystkie aktywne alerty**, kliknij kolejno pozycje **Alerty &gt; Wszystkie alerty**. Na stronie **Alerty** zostanie wyświetlona lista wszystkich aktywnych alertów, która zawiera następujące kolumny:
@@ -107,7 +107,6 @@ Alerty oznaczone jako zamknięte są trwale usuwane po 90 dniach.
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

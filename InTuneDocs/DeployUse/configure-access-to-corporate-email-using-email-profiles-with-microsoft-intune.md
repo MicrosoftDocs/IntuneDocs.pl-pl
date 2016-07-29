@@ -3,7 +3,7 @@ title: "Uzyskiwanie dostępu do poczty e-mail przy użyciu profilów poczty e-ma
 description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/021/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: c7a3ca7b0390a001624871342c9aa04802be27ff
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 878172811c7899237b5ebf5db9a443f10fea42dd
 
 
 ---
@@ -82,7 +82,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
     |**Liczba dni do synchronizowania poczty e-mail**|Wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail, lub wybierz pozycję **Nieograniczone**, aby synchronizować wszystkie dostępne wiadomości e-mail.|
     |**Harmonogram synchronizacji** (systemy Samsung KNOX, Windows Phone 8 i nowsze, Windows 10)|Wybierz harmonogram, według którego urządzenia synchronizują dane z programu Exchange Server. Można również wybrać pozycję **W momencie nadejścia nowych wiadomości**, która powoduje synchronizowanie zaraz po odebraniu, lub pozycję **Ręcznie**, jeśli użytkownik urządzenia ma inicjować synchronizację.|
     |**Użyj protokołu SSL**|Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem Exchange.<br /><br />W przypadku urządzeń z systemem Samsung KNOX 4.0 lub nowszym należy wyeksportować certyfikat SSL serwera Exchange i wdrożyć go jako profil zaufanego certyfikatu systemu Android w usłudze Intune. Usługa Intune nie obsługuje uzyskiwania dostępu do tego certyfikatu, jeśli zostanie on zainstalowany na serwerze Exchange w inny sposób.|
-    |**Typ zawartości do synchronizowania**|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.| 
+    |**Typ zawartości do synchronizowania**|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.|
     |**Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm** (tylko system iOS)|Zezwalaj użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.|
 
     > [!IMPORTANT]
@@ -109,8 +109,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

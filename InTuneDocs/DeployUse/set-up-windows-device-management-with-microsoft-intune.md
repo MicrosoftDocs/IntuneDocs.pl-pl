@@ -3,8 +3,8 @@ title: "Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyci
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla komputerów z systemem Windows, w tym urządzeń z systemem Windows 10, w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f336cf52cbecd93cb7b2850560327e6024302e0
-ms.openlocfilehash: 710e34f8f97377bf57a398f74773788df3794654
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 79377078bf5b4c6dad0a3dc4a07a2e84aa2563f8
 
 
 ---
@@ -50,6 +50,6 @@ Utworzenie rekordu CNAME systemu DNS ułatwia użytkownikom łączenie się i re
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji | 
 description: "Znajdź nazwę PFN w celu skonfigurowania sieci VPN dla aplikacji."
 keywords: 
 author: nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a049127d79098bfb8992055a0a8b20fbfafd8c9
-ms.openlocfilehash: 980611a6c1fafdbc990f30d3144766abc97e632b
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: 0bbb8aef7929ac09ef5f6a5a466d66b5df03e921
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 980611a6c1fafdbc990f30d3144766abc97e632b
 
 Istnieją dwa sposoby znajdowania nazwy PFN w celu skonfigurowania sieci VPN dla aplikacji.
 
-## Znajdowanie nazwy PFN dla aplikacji zainstalowanej na komputerze z systemem Windows 10 
+## Znajdowanie nazwy PFN dla aplikacji zainstalowanej na komputerze z systemem Windows 10
 
 Jeśli pracujesz z aplikacją, która jest już zainstalowana na komputerze z systemem Windows 10, możesz uzyskać nazwę PFN przy użyciu polecenia cmdlet programu PowerShell [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx).
 
@@ -74,7 +74,7 @@ Oto informacje uzyskane dla programu OneNote:
 4.  Na innej karcie wklej adres URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, zastępując wartość `<app id>` identyfikatorem aplikacji uzyskanym ze strony https://www.microsoft.com/en-us/store/apps — serią liter na końcu adresu URL w kroku 3. W tym przykładzie (aplikacja OneNote) należy wkleić: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 W programie Edge zostaną wyświetlone odpowiednie informacje. W programie Internet Explorer kliknij pozycję **Otwórz**, aby wyświetlić informacje. Wartość PFN jest podana w pierwszym wierszu. Oto jak wyglądają wyniki w tym przykładzie:
- 
+
 
 `{`
 `  "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",`
@@ -85,7 +85,6 @@ W programie Edge zostaną wyświetlone odpowiednie informacje. W programie Inter
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

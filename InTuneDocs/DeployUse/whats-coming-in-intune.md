@@ -3,7 +3,7 @@ title: "Wkrótce | Microsoft Intune"
 description: 
 keywords: 
 author: Lindavr
-manager: jeffgilb
+manager: angrobe
 ms.date: 07/07/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 35ee5d0c8898c95898c0527a623cf13c454387f2
-ms.openlocfilehash: 831cec6cd0e02a94c1a3f67d4adf5a5dcbb01449
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 9b536372623632b609433c49991a8bdc70e6da49
 
 
 ---
@@ -79,7 +79,7 @@ Jeśli korzystasz z dostępu warunkowego, kroki rejestracji dla systemów Window
 Aby zwiększyć wydajność i skalę, usługa Intune nie pokazuje już wszystkich urządzeń menedżerów rejestracji urządzeń (DEM) w okienku Moje urządzenia aplikacji Portal firmy dla systemu iOS. Wyświetlane będzie tylko urządzenie lokalne, na którym uruchomiono aplikację, o ile zostało zarejestrowane przez aplikację Portal firmy. Użytkownik menedżera rejestracji urządzeń może wykonywać działania na urządzeniu lokalnym, ale zdalne zarządzanie innymi zarejestrowanymi urządzeniami można będzie wykonywać tylko z konsoli administracyjnej usługi Intune.  Dodatkowo w usłudze Intune wycofano używanie kont menedżera rejestracji urządzeń z programem Device Enrollment Program firmy Apple i narzędziem Apple Configurator. Obie te metody rejestracji obsługują już rejestrację bez użytkowników dla współużytkowanych urządzeń z systemem iOS. Kont menedżera rejestracji urządzeń należy używać tylko w przypadku braku dostępności rejestracji bez użytkowników dla współużytkowanych urządzeń.
 <!---TFS 1233681--->
 ### Ograniczenie instalacji aplikacji ładowanych bezpośrednio do zarejestrowanych urządzeń z systemem Android
-Na urządzeniach z systemem Android nie można już instalować aplikacji za pośrednictwem witryny internetowej Portalu firmy, chyba że zostały zarejestrowane w usłudze Intune przy użyciu aplikacji Portal firmy usługi Intune dla systemu Android. 
+Na urządzeniach z systemem Android nie można już instalować aplikacji za pośrednictwem witryny internetowej Portalu firmy, chyba że zostały zarejestrowane w usłudze Intune przy użyciu aplikacji Portal firmy usługi Intune dla systemu Android.
 <!---TFS 1299082--->
 
 ## Wycofywanie usług
@@ -113,6 +113,6 @@ Aby dowiedzieć się więcej o najnowszych zmianach, zobacz [Co nowego w usłudz
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

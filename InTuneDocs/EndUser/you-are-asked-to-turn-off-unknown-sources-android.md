@@ -3,7 +3,7 @@ title: "Prośba o wyłączenie nieznanych źródeł | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
@@ -12,15 +12,15 @@ ms.technology:
 ms.assetid: c7a10998-9aa6-4bc0-8405-27a30c61bca7
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: eeb9888d803a53c2f17d88cdb3f010cf14c9b18d
-ms.openlocfilehash: 0a4bf23b547a4f02db663049b84e77365509aeaf
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 61910d5571e143b12af7b44895d80575cb9e4a70
 
 
 ---
 
 # Prośba o wyłączenie nieznanych źródeł
 
-Jeśli zostanie wyświetlony komunikat „Instalacja z nieznanych źródeł musi zostać wyłączona”, musisz przejść do pozycji **Ustawienia** > **Zabezpieczenia** (na niektórych urządzeniach może być to opcja **Ekran blokady i zabezpieczenia**) i wyłączyć ustawienie **Nieznane źródła**. 
+Jeśli zostanie wyświetlony komunikat „Instalacja z nieznanych źródeł musi zostać wyłączona”, musisz przejść do pozycji **Ustawienia** > **Zabezpieczenia** (na niektórych urządzeniach może być to opcja **Ekran blokady i zabezpieczenia**) i wyłączyć ustawienie **Nieznane źródła**.
 
 Administrator IT wymaga wyłączenia tego ustawienia, aby chronić dane firmowe na urządzeniu z systemem Android. Gdy ustawienie **Nieznane źródła** jest włączone, umożliwia instalowanie aplikacji z nieznanego źródła, co może stanowić zagrożenie bezpieczeństwa.
 
@@ -33,6 +33,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

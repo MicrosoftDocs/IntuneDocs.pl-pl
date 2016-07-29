@@ -3,7 +3,7 @@ title: "Szyfrowanie urządzenia z systemem Windows | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Windows"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 19772cc52501ad00420b341e694557a01cf88b90
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 6f7da9c3df479e8664b4425c1fec1c655fd103b4
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 19772cc52501ad00420b341e694557a01cf88b90
 
 Aby chronić dane firmy lub szkoły, administrator IT może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows Phone i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
 
-Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, aby je zaszyfrować. 
+Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, aby je zaszyfrować.
 
 1.  Wyszukaj aplikację **Zarządzaj funkcją BitLocker**, a następnie ją uruchom.
 
@@ -37,6 +37,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

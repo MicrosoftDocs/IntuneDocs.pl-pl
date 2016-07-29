@@ -3,7 +3,7 @@ title: "Rejestrowanie urządzenia z systemem iOS w usłudze Intune | Microsoft I
 description: "Opis sposobu rejestrowania urządzenia z systemem iOS w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/18/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 3cf778aa14aab093c9f5d58bda932a35f2db5089
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 7bc57a9416023077d22323d4e88d1464304e21ea
 
 
 ---
@@ -35,53 +35,53 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
 2. Na stronie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **Rozpocznij**.
 
-    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png) 
+    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png)
 
 3. Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **Kontynuuj**.
 
-    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png) 
+    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
 
 4. Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim zarejestrowanym urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **Kontynuuj**.
 
-    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png) 
+    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
 
 5.  Na ekranie **Co teraz** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij pozycję **Zarejestruj**.
 
-    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png) 
+    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
 
 6.  Na ekranie **Instalacja profilu** naciśnij pozycję **Zainstaluj** i wprowadź hasło, jeśli zostanie wyświetlony monit.
 
-    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png) 
-  
+    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png)
+
 7.  Naciśnij przycisk **Zainstaluj**.
 
     ![ios-enroll-tap-install](./media/ios-enroll-3-mgt-profile-install-2.png)    
 
 8.  Naciśnij pozycję **Zainstaluj**, aby potwierdzić, że ostrzeżenia zostały przeczytane.
 
-    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png) 
+    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
 
 9.  Naciśnij pozycję **Zaufanie**.
 
-    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png) 
+    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
 
 10.  Gdy ekran zmieni się, aby pokazać, że instalacja profilu została zakończona, naciśnij przycisk **Gotowe**.
 
-    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png) 
+    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
 
     Na ekranie zostanie wyświetlony komunikat „Rejestrowanie urządzenia”.
 
 11.  Gdy zostanie wyświetlony komunikat z pytaniem o otwarcie strony portalu firmy, naciśnij przycisk **Otwórz**.
 
-    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png) 
+    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
 12. Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **Kontynuuj**. Jeśli administrator IT skonfigurował dodatkowe wymagania z zakresu bezpieczeństwa, np. potrzebę ustawienia hasła, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aż spełnisz wymagania zgodności i powrócisz do ekranu Konfiguracja dostępu do zasobów firmy. Następnie naciśnij przycisk **Kontynuuj**.
 
-    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png) 
+    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
 
-13. Naciśnij pozycję **Gotowe**. 
+13. Naciśnij pozycję **Gotowe**.
 
-    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png) 
+    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png)
 
 Urządzenie zostanie zarejestrowane w usłudze Intune. Użytkownik zostanie przeniesiony z powrotem do aplikacji Portal firmy.
 
@@ -91,6 +91,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

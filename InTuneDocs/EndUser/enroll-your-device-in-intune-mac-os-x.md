@@ -3,7 +3,7 @@ title: "Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune | Micros
 description: "Opis sposobu rejestrowania urządzenia z systemem Mac OS X w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
+manager: angrobe
 ms.date: 05/30/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 04380c2adf65f76a786da51509db24d773ac30f1
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 9e3c351591f496fbc7be3fefdc320af9caaae726
 
 
 ---
@@ -34,19 +34,19 @@ Aby zarejestrować urządzenie z systemem Mac OS X:
 
 2.  Naciśnij pozycję **To urządzenie nie zostało zarejestrowane lub nie można go zidentyfikować w Portalu firmy**.
 
-    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png) 
+    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
 
 3.  Naciśnij pozycję **Zainstaluj**, aby rozpocząć rejestrację urządzenia.
 
-    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
+    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
 4.  W oknie dialogowym **Instalowanie profilu zarządzania** naciśnij pozycję **Zainstaluj**. Jeśli zostanie wyświetlone okno dialogowe z monitem o podanie poświadczeń, wprowadź nazwę użytkownika i hasło, a następnie naciśnij kolejno pozycje **Kontynuuj** &gt; **Zainstaluj**.
 
-    ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
+    ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
     Po zakończeniu rejestracji pojawi się strona Profil zarządzania z informacją o zweryfikowaniu profilu.
 
-    ![management-profile-verified](./media/4-macosx-enroll-done.png) 
+    ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
@@ -54,6 +54,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

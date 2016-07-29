@@ -3,7 +3,7 @@ title: "Uwierzytelnianie wieloskładnikowe dla systemu Windows | Microsoft Intun
 description: "Usługę Intune można zintegrować z usługą uwierzytelniania wieloskładnikowego (MFA), aby zabezpieczyć zasoby firmowe."
 keywords: 
 author: Nbigman
-manager: Arob98
+manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
-ms.openlocfilehash: c2c1a35152dc0f9ec9464c056fed3300540bf33c
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: c1f9c60a1c79d23bab62617ed237ad982e82c39d
 
 
 ---
 
 # Protect Windows devices with multi-factor authentication
-Usługę Microsoft Intune można zintegrować z usługą uwierzytelniania wieloskładnikowego, aby zabezpieczyć zasoby firmowe. Uwierzytelnianie wieloskładnikowe wymaga — oprócz nazw użytkowników i haseł— składników uwierzytelniania, takich jak uwierzytelnianie tekstowe. Usługa Intune obsługuje korzystanie z uwierzytelniania wieloskładnikowego w przypadku rejestracji urządzeń z systemem Windows 8.1 lub nowszym, Windows Phone 8.1 lub Windows 10 Desktop i Mobile. 
+Usługę Microsoft Intune można zintegrować z usługą uwierzytelniania wieloskładnikowego, aby zabezpieczyć zasoby firmowe. Uwierzytelnianie wieloskładnikowe wymaga — oprócz nazw użytkowników i haseł— składników uwierzytelniania, takich jak uwierzytelnianie tekstowe. Usługa Intune obsługuje korzystanie z uwierzytelniania wieloskładnikowego w przypadku rejestracji urządzeń z systemem Windows 8.1 lub nowszym, Windows Phone 8.1 lub Windows 10 Desktop i Mobile.
 
 ## Wymagania uwierzytelniania wieloskładnikowego usług AD FS dotyczące infrastruktury lokalnej
 Aby skonfigurować uwierzytelnianie wieloskładnikowe, konieczna jest:
@@ -55,7 +55,6 @@ Aby dowiedzieć się, jak włączyć uwierzytelnianie wieloskładnikowe w usług
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
