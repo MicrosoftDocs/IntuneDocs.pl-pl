@@ -1,38 +1,32 @@
 ---
-# required metadata
-
-title: Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android | Microsoft Intune
-description:
-keywords:
+title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 51f7734e2acced469ec3520d74a8079dac8223f2
+ms.openlocfilehash: bcb62e9c99c1f5a5b53ada688ef39a59674dea04
+
 
 ---
 
 # Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
-> [!NOTE] Warto najpierw przeczytać artykuł [Omówienie zestawu SDK aplikacji usługi Intune](intune-app-sdk.md), w którym opisano bieżące funkcje zestawu SDK oraz sposób przygotowania do integracji na każdej z obsługiwanych platform. 
+> [!NOTE]
+> Warto najpierw przeczytać artykuł [Omówienie zestawu SDK aplikacji usługi Intune](intune-app-sdk.md), w którym opisano bieżące funkcje zestawu SDK oraz sposób przygotowania do integracji na każdej z obsługiwanych platform. 
 
 # Zawartość zestawu SDK 
 
-Zestaw SDK aplikacji usługi Intune dla systemu Android to standardowa biblioteka systemu Android bez zewnętrznych zależności. 
-Zestaw SDK składa się z następujących plików:  
+Zestaw SDK aplikacji usługi Intune dla systemu Android to standardowa biblioteka systemu Android bez zewnętrznych zależności. Zestaw SDK składa się z następujących plików:  
 
 * **`Microsoft.Intune MAM.SDK.jar`**: interfejsy niezbędne do obsługi funkcji MAM w aplikacji (należy też włączyć współdziałanie z aplikacją Portal firmy usługi Microsoft Intune). Aplikacje muszą określić go jako odwołanie do biblioteki systemu Android.
 
@@ -226,7 +220,7 @@ W niektórych przypadkach metoda dostępna w klasie systemu Android została ozn
 
 # Ochrona danych kopii zapasowej 
 
-Począwszy od systemu Android Marshmallow (interfejs API w wersji 23), na potrzeby aplikacji są dostępne dwa sposoby tworzenia kopii zapasowych danych. Te opcje są dostępne do użycia w aplikacji i wymagają wykonania różnych kroków w celu zapewnienia, że ochrona danych funkcji MAM jest odpowiednio stosowana. Możesz przejrzeć tabelę poniżej, aby szybko zapoznać się z odpowiadającymi akcjami wymaganymi do osiągnięcia poprawnego zachowania w zakresie ochrony danych.  Więcej informacji na temat funkcji kopii zapasowej w systemie Android możesz także znaleźć w [przewodniku Kopia zapasowa danych dla deweloperów systemu Android](http://developer.android.com/guide/topics/data/backup.html.). 
+Począwszy od systemu Android Marshmallow (interfejs API w wersji 23), na potrzeby aplikacji są dostępne dwa sposoby tworzenia kopii zapasowych danych. Te opcje są dostępne do użycia w aplikacji i wymagają wykonania różnych kroków w celu zapewnienia, że ochrona danych funkcji MAM jest odpowiednio stosowana. Możesz przejrzeć tabelę poniżej, aby szybko zapoznać się z odpowiadającymi akcjami wymaganymi do osiągnięcia poprawnego zachowania w zakresie ochrony danych.  Więcej informacji na temat funkcji kopii zapasowej w systemie Android możesz także znaleźć w [przewodniku Kopia zapasowa danych dla deweloperów systemu Android](http://developer.android.com/guide/topics/data/backup.html). 
 
 ## Automatyczne wykonywanie pełnej kopii zapasowej
 
@@ -370,6 +364,7 @@ Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API 
 * Unikaj stosowania jakiegokolwiek interfejsu API w sposób niejednoznaczny. Na przykład nie używaj metod `Activity.startActivityForResult/onActivityResult` bez sprawdzenia, czy metoda requestCode spowoduje wystąpienie nietypowego zachowania.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

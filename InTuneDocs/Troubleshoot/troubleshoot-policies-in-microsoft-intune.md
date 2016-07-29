@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów dotyczących zasad | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Intune"
+description: "Rozwiązywanie problemów z konfiguracją zasad."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 64518fc58a97c0d5060d909b60df565c19498389
+
 
 ---
 
@@ -47,18 +41,19 @@ W konsoli administracyjnej usługi Intune każde urządzenie ma kartę zasad w o
 
 Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 
--   Opcja **Zezwalaj na proste hasła** jest ustawiona na **Tak**, jak przedstawiono w kolumnie **Wartość zamierzona**, ale jej **Stan** jest ustawiony na **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
+-   Ustawienie **Zezwalaj na proste hasła** ma wartość **Tak**, jak pokazano w kolumnie **Wartość zamierzona**, ale jego ustawienie **Stan** ma wartość **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
 
 -   Podobnie rozwinięty element zasad **Ustawienia poczty e-mail dla urządzeń z systemem iOS** nie ma zastosowania do tego urządzenia, ponieważ jest to urządzenie z systemem Android.
 
 ![Zasady dotyczące urządzeń w usłudze Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE] Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
+> [!NOTE]
+> Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
 
 ## Odświeżanie zasad i interwały aktualizacji
 Należy pamiętać, że zasady są odświeżane i aktualizowane w regularnych odstępach czasu. Zwykle zasady powinny być rejestrowane na urządzeniach w ciągu 15 minut od dokonania zmiany. Poniżej przedstawiono więcej informacji na temat regularnych odstępów czasu odświeżania zasad:
 
--   **Urządzenie z systemem Windows zarejestrowane w oprogramowaniu MDM**: wyzwalane na urządzeniu przez zaplanowane zadanie codziennie o 3:00 czasu lokalnego.
+-   **Urządzenie z systemem Windows zarejestrowane w oprogramowaniu MDM**: zasady są aktualizowane co 8 godzin dla urządzeń z systemem Windows 8.1 i Windows 10 i co 24 godziny dla urządzeń z systemem Windows RT.
 
 -   **Windows Phone**: zasady są aktualizowane co 8 godzin. Aktualizację można wymusić przez odświeżenie w portalu firmy w obszarze **Ustawienia**.
 
@@ -75,7 +70,8 @@ W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM b�
 
 2.  Zaczekaj 20 minut na usunięcie oprogramowania klienckiego.
 
-    > [!NOTE] Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
+    > [!NOTE]
+    > Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
 
 3.  W menu start wpisz wartość **Kontrola konta użytkownika**, aby otworzyć ustawienia Kontroli konta użytkownika.
 
@@ -113,9 +109,10 @@ W przeciwieństwie do innych platform urządzenia MDM z systemem Android nie poz
 **Rozwiązanie:** W [centrum administracyjnym usługi Office 365](https://portal.office.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

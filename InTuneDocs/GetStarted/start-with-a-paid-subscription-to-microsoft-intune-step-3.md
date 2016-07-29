@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune | Microsoft Intune
-description:
-keywords:
+title: "Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune | Microsoft Intune"
+description: "Opisuje synchronizowanie lokalnych użytkowników z usługą Azure AD i udzielanie uprawnień administratora dla subskrypcji usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 8aeb23b709b50ccb8ad29868b4bc5ab96faf950f
+
 
 ---
 
@@ -35,7 +29,7 @@ Ponadto w przypadku korzystania z wielu usług za pomocą tej samej [dzierżawy 
 Jedynym narzędziem potrzebnym do synchronizowania kont użytkowników z usługą Azure AD jest [Kreator Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). Kreator Azure AD Connect zapewnia uproszczoną obsługę i przewodnik łączenia lokalnej infrastruktury tożsamości z chmurą.  Określ topologię i potrzeby (jeden lub wiele katalogów, synchronizacja haseł lub federacja), a kreator wdroży i skonfiguruje wszystkie elementy wymagane do uruchomienia połączenia. Dotyczy to następujących składników: usług synchronizacji, Usług federacyjne Active Directory (AD FS) i modułu Azure AD PowerShell.
 
 > [!TIP]
-> Kreator Azure AD Connect obejmuje funkcje, które były wcześniej dostępne w narzędziach Dirsync i Azure AD Sync. Dowiedz się więcej na temat [integracji katalogów](http://technet.microsoft.com/library/jj573653.aspx). Aby poznać zalety synchronizowania kont użytkowników z katalogu lokalnego do usługi Azure AD, zobacz [Podobieństwa między usługami Active Directory i Azure AD](http://technet.microsoft.com/library/dn518177.aspx)..
+> Kreator Azure AD Connect obejmuje funkcje, które były wcześniej dostępne w narzędziach Dirsync i Azure AD Sync. Dowiedz się więcej na temat [integracji katalogów](http://technet.microsoft.com/library/jj573653.aspx). Aby poznać zalety synchronizowania kont użytkowników z katalogu lokalnego do usługi Azure AD, zobacz [Podobieństwa między usługami Active Directory i Azure AD](http://technet.microsoft.com/library/dn518177.aspx).
 
 ## Udzielanie uprawnień administratora
 Po dodaniu użytkowników do subskrypcji usługi Intune zalecane jest przyznanie [poświadczeń administracyjnych](administrative-accounts-websites-perms.md) kilku kontom użytkowników. Konsola, której należy użyć do przypisania poświadczeń administracyjnych, zależy od typu administratora, który chcesz przypisać:
@@ -46,13 +40,14 @@ Po dodaniu użytkowników do subskrypcji usługi Intune zalecane jest przyznanie
 
 
 ### Następne kroki
-Gratulacje! Krok 3 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony..
+Gratulacje! Krok 3 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony.
 
 >[!div class="step-by-step"]
 
->[&larr; **Ustawienia domeny**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Zarządzanie licencjami usługi Intune** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-4.md)  
+>[&larr;**Ustawienia domeny**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Zarządzanie licencjami usługi Intune** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-4.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

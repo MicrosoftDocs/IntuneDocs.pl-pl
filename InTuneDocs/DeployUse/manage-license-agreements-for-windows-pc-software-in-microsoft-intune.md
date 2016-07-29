@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie umowami licencyjnymi na oprogramowanie komputerowe | Microsoft Intune"
+description: "Usługa Intune umożliwia zarządzanie umowami licencyjnymi dotyczącymi oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft oraz oprogramowania zakupionego w inny sposób."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/12/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: 6570c0cd42102e45171a39ccbaef609a494a27d6
+
 
 ---
 
@@ -114,7 +108,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
 
 Zostanie wyświetlony widok **Wszystkie umowy**, a usługa Intune połączy się z Centrum usługi licencjonowania zbiorowego firmy Microsoft w celu zweryfikowania podanych par numerów umów.
 
-Aby zaktualizować informacje o licencji zbiorczej po dodaniu umów licencyjnych w usłudze Intune, na stronie **Omówienie licencji** kliknij polecenie **Odśwież teraz**. To działanie powoduje pobranie bieżących informacji o licencjach z [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842)..
+Aby zaktualizować informacje o licencji zbiorczej po dodaniu umów licencyjnych w usłudze Intune, na stronie **Omówienie licencji** kliknij polecenie **Odśwież teraz**. To działanie powoduje pobranie bieżących informacji o licencjach z [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
 
 > [!IMPORTANT]
 > Do czasu odświeżenia informacji o licencjach zbiorczych informacje na liście umów i informacje o uprawnieniach na stronie **Omówienie umów** mogą się różnić.
@@ -126,7 +120,7 @@ Po odświeżeniu informacji o licencjach zbiorczych możesz porównać informacj
 -   **Raporty instalacji licencji** — pozwalają określić, czy okres obowiązywania umowy licencyjnej jest wystarczający.
 
 > [!NOTE]
-> **Tytuł produktu** wyświetlany dla wszystkich umów licencjonowania zbiorowego firmy Microsoft to **Niedostępny**.
+> **Nazwa produktu** wyświetlana dla wszystkich umów licencjonowania zbiorowego firmy Microsoft to **Niedostępna**.
 
 ## Dodawanie i edytowanie umów licencyjnych na inne oprogramowanie
 Oprócz umów licencjonowania zbiorowego firmy Microsoft do usługi Intune możesz także dodawać umowy licencyjne innego typu. Umowy te mogą obejmować oprogramowanie firmy Microsoft lub innych firm, które zostało zakupione w sprzedaży detalicznej.
@@ -151,7 +145,7 @@ Oprócz umów licencjonowania zbiorowego firmy Microsoft do usługi Intune może
         > [!IMPORTANT]
         > Firma, którą chcesz dodać, może nie być wyświetlana na tej liście. Możesz dodać umowy dotyczące oprogramowania tylko dla firm, które już znajdują się w katalogu zasobów oprogramowania. Firma Microsoft stale pracuje nad dodawaniem najpopularniejszych programów. Jeśli chcesz przesłać żądanie dodania firmy do tej listy, możesz to zrobić w [witrynie Intune Uservoice](https://microsoftintune.uservoice.com/).
 
-    -   **Nazwa produktu** (wymagane). Podczas wpisywania nazwy produktu usługa pobiera nazwy wszystkich produktów zawierające wpisane litery. Musisz określić wartość pozycji **Wydawca** , aby można było określić wartość pozycji **Tytuł produktu**.
+    -   **Nazwa produktu** (wymagane). Podczas wpisywania nazwy produktu usługa pobiera nazwy wszystkich produktów zawierające wpisane litery. Musisz określić wartość pozycji **Wydawca** , aby można było określić wartość pozycji **Nazwa produktu**.
 
     -   **Liczba licencji** (wymagane). Podaj liczbę zakupionych licencji.
 
@@ -182,12 +176,13 @@ Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. 
 |Tworzenie grupy licencji|Na stronie **Przegląd** w obszarze roboczym **Licencje** kliknij polecenie **Utwórz grupę licencji** w menu **Zadania** . **Uwaga:** możesz utworzyć maksymalnie 500 grup licencji.|
 |Zmienianie nazwy grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie kliknij polecenie **Edytuj grupę licencji** w menu **Zadania** .|
 |Usuwanie grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie kliknij polecenie **Usuń grupę licencji** w menu **Zadania** . **Porada:** wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji **Nieprzypisane umowy**.|
-|Usuwanie umowy licencyjnej|W obszarze roboczym **Licencje** wybierz umowę, a następnie kliknij opcję **Usuń**. **Porada:** aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, kliknij polecenie **Odśwież teraz** na stronie **Omówienie licencji** lub na karcie **Ogólne** dla konkretnej grupy licencji.|
+|Usuwanie umowy licencyjnej|W obszarze roboczym **Licencje** wybierz umowę, a następnie kliknij polecenie **Usuń**. **Wskazówka:** aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, kliknij polecenie **Odśwież teraz** na stronie **Omówienie licencji** lub na karcie **Ogólne** dla konkretnej grupy licencji.|
 
 
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

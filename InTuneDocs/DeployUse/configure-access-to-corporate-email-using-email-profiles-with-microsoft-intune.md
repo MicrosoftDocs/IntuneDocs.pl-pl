@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail | Microsoft Intune
-description:
-keywords:
+title: "Uzyskiwanie dostępu do poczty e-mail przy użyciu profilów poczty e-mail | Microsoft Intune"
+description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 05/05/2016
+manager: Arob98
+ms.date: 07/021/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: c7a3ca7b0390a001624871342c9aa04802be27ff
+
 
 ---
 
@@ -30,7 +24,7 @@ Wiele platform urządzeń przenośnych zawiera *natywnego* klienta poczty e-mail
 
 Jeśli potrzebujesz dodatkowej ochrony przed utratą danych, wybierz pozycję [Dostęp warunkowy](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), która kontroluje dostęp do skrzynki pocztowej użytkownika dla dowolnego klienta poczty e-mail, w tym klientów natywnych poczty e-mail.
 
-Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych.   Większość platform urządzeń przenośnych zawiera *natywnego* klienta poczty e-mail, który jest dostarczany jako część systemu operacyjnego.  Na obsługiwanych platformach można konfigurować klientów natywnych poczty e-mail za pomocą usługi Microsoft Intune w celu umożliwienia użytkownikom dostępu do firmowej poczty e-mail na urządzeniach osobistych bez żadnej konfiguracji.  
+Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych. Większość platform urządzeń przenośnych zawiera *natywnego* klienta poczty e-mail, który jest dostarczany jako część systemu operacyjnego.  Na obsługiwanych platformach można konfigurować klientów natywnych poczty e-mail za pomocą usługi Microsoft Intune w celu umożliwienia użytkownikom dostępu do firmowej poczty e-mail na urządzeniach osobistych bez żadnej konfiguracji.  
 
 Administratorzy IT lub użytkownicy mają także możliwość instalowania alternatywnych klientów poczty e-mail, na przykład programu Microsoft Outlook dla systemu Android lub iOS.  Ci klienci poczty e-mail mogą nie obsługiwać profilów poczty e-mail i nie można ich konfigurować przy użyciu profilów poczty e-mail usługi Microsoft Intune.  
 
@@ -89,9 +83,10 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
     |**Harmonogram synchronizacji** (systemy Samsung KNOX, Windows Phone 8 i nowsze, Windows 10)|Wybierz harmonogram, według którego urządzenia synchronizują dane z programu Exchange Server. Można również wybrać pozycję **W momencie nadejścia nowych wiadomości**, która powoduje synchronizowanie zaraz po odebraniu, lub pozycję **Ręcznie**, jeśli użytkownik urządzenia ma inicjować synchronizację.|
     |**Użyj protokołu SSL**|Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem Exchange.<br /><br />W przypadku urządzeń z systemem Samsung KNOX 4.0 lub nowszym należy wyeksportować certyfikat SSL serwera Exchange i wdrożyć go jako profil zaufanego certyfikatu systemu Android w usłudze Intune. Usługa Intune nie obsługuje uzyskiwania dostępu do tego certyfikatu, jeśli zostanie on zainstalowany na serwerze Exchange w inny sposób.|
     |**Typ zawartości do synchronizowania**|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.| 
-    |**Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm** (tylko system iOS)|Zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.|
+    |**Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm** (tylko system iOS)|Zezwalaj użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.|
 
-    > [!IMPORTANT] Jeśli wdrożono profil poczty e-mail i chcesz zmienić wartości ustawień **Host** lub **Adres e-mail**, usuń istniejący profil poczty e-mail i utwórz nowy z wymaganymi wartościami.
+    > [!IMPORTANT]
+    > Jeśli wdrożono profil poczty e-mail i chcesz zmienić wartości ustawień **Host** lub **Adres e-mail**, usuń istniejący profil poczty e-mail i utwórz nowy z wymaganymi wartościami.
 
 4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
 
@@ -109,11 +104,13 @@ Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze r
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
 
-> [!NOTE] Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem.
+> [!NOTE]
+> Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem.
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

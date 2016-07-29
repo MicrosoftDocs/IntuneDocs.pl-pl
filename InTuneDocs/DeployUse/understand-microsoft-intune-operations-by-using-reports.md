@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Informacje o operacjach — korzystanie z raportów | Microsoft Intune
-description:
-keywords:
+title: "Informacje o operacjach — korzystanie z raportów | Microsoft Intune"
+description: "Tworzenie raportów dotyczących oprogramowania, sprzętu i licencji na oprogramowanie w organizacji i zarządzanie nimi."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 06/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: pbala
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 10908e3bb8e235659db572667bd10820adf0be52
+
 
 ---
 
@@ -45,6 +39,7 @@ Raporty usługi Intune zawierają informacje dotyczące oprogramowania, sprzętu
 |**Raporty dotyczące niezgodności aplikacji**|Zawierają informacje dotyczące użytkowników, którzy mają zainstalowane aplikacje znajdujące się na liście zgodnych i niezgodnych aplikacji. Ten raport umożliwia znalezienie użytkowników i urządzeń niezgodnych z zasadami firmy dotyczącymi aplikacji.|
 |**Raporty o zgodności certyfikatów**|Zawierają informacje o certyfikatach, które zostały wydane dla użytkowników i urządzeń za pośrednictwem protokołu SCEP lub PKCS #12 (PFX). Ten raport umożliwia znalezienie wydanych, wygasłych i odwołanych certyfikatów.|
 |**Raporty historii urządzeń**|Zawierają dziennik historyczny akcji wycofania, czyszczenia i usuwania. Użyj tego raportu, aby zobaczyć, kto w przeszłości zainicjował akcje na urządzeniach.|
+|**Raporty zaświadczania o kondycji**|Pokazują kondycję urządzeń przenośnych.|
 |**Raport sprzętu z systemem Mac OS X**|Wyświetla szczegóły sprzętu dla wszystkich zarejestrowanych urządzeń z systemem Mac OS X w wybranych grupach. Aby uzyskać informacje o spisie sprzętu opartym na danych zbieranych z tych urządzeń, zobacz [Zrozumienie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Raport oprogramowania dla systemu Mac OS X**|Wyświetla oprogramowanie zainstalowane na wszystkich zarejestrowanych urządzeniach z systemem Mac OS X w wybranych grupach. Raport zawiera informacje o nazwie oprogramowania (w postaci identyfikatora pakietu), skróconej (lub przyjaznej) nazwie, wersji i liczbie urządzeń, na których oprogramowanie jest zainstalowane.|
 
@@ -74,6 +69,7 @@ Ponadto raporty obsługują następujące akcje:
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

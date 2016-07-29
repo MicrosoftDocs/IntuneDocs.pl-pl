@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Instalowanie klienta komputera z systemem Windows | Microsoft Intune
+description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 3cb693eff7545fe4de8e5c082cfa3ab088c005db
+
 
 ---
 
@@ -42,15 +36,13 @@ Następnie zastosuj co najmniej jedną z poniższych metod w celu zainstalowania
 
 -   [Aby automatycznie wdrożyć oprogramowanie klienckie za pomocą zasad grupy](#to-automatically-deploy-the-client-software-by-using-group-policy)
 
--   [Jak użytkownicy mogą samodzielnie rejestrować swoje komputery](#how-users-can-self-enroll-their-computers)
-
 -   [Instalowanie oprogramowania klienckiego usługi Microsoft Intune jako części obrazu](#install-the-microsoft-intune-client-software-as-part-of-an-image)
 
 Jeśli zarządzanie określonym komputerem za pomocą usługi Intune nie jest już konieczne, możesz go wycofać, co spowoduje również usunięcie oprogramowania klienckiego z tego komputera. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 ### Aby pobrać oprogramowanie klienckie
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; **Pobierz oprogramowanie klienckie**
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; ** Pobierz oprogramowanie klienckie**.
 
   ![Pobieranie klienta komputerowego usługi Intune](./media/pc-SA-client-download.png)
 
@@ -87,28 +79,6 @@ Jeśli zarządzanie określonym komputerem za pomocą usługi Intune nie jest ju
 3.  Wdróż oprogramowanie na komputerach w sieci za pomocą zasad grupy.
 
     Aby uzyskać więcej informacji o automatycznym wdrażaniu oprogramowania za pomocą zasad grupy, zapoznaj się z dokumentacją systemu Windows Server.
-
-### Jak użytkownicy mogą samodzielnie rejestrować swoje komputery
-Użytkownicy mogą samodzielnie rejestrować wszystkie swoje komputery za pośrednictwem Portalu firmy usługi Intune. Każdy zarejestrowany komputer jest połączony z kontem użytkownika, które zostało użyte do zainstalowania oprogramowania klienckiego.
-
-> [!NOTE]
-> -   Aby móc zainstalować oprogramowanie klienckie, użytkownik musi być administratorem na danym komputerze.
-> -   Samodzielne rejestrowanie wymaga, aby na komputerze klienckim był zainstalowany program Internet Explorer.
-> -   Za każdym razem, gdy użytkownik samodzielnie rejestruje komputer, używana jest licencja usługi Intune.
-> -   Do samodzielnego rejestrowania komputera należy używać konta służbowego. Nie można samodzielnie zarejestrować komputera za pomocą konta Microsoft.
-> -   Jeśli oprogramowanie klienckie jest już zainstalowane na komputerze, użytkownikowi końcowemu zostanie zwrócony błąd.
-
-### Aby samodzielnie zarejestrować komputer (informacje dla użytkowników końcowych)
-
-1.  Zaloguj się do Portalu firmy z poziomu komputera, który chcesz zarejestrować.
-
-2.  Kliknij pozycję **Dodaj urządzenie**.
-
-3.  Kliknij pozycję **Pobierz oprogramowanie**, a następnie kliknij pozycję **Uruchom**.
-
-4.  Kliknij przycisk **Dalej** , aby uruchomić Kreatora instalacji usługi Microsoft Intune.
-
-5.  Po ukończeniu działania Kreatora instalacji kliknij przycisk **Zakończ**.
 
 ### Instalowanie oprogramowania klienckiego usługi Microsoft Intune jako części obrazu
 Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako część obrazu systemu operacyjnego, bazując na poniższej przykładowej procedurze:
@@ -153,7 +123,7 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 ### Aby utworzyć raport ze spisu komputerów w celu wyświetlenia wszystkich zarejestrowanych komputerów
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Raporty** &gt; **Raporty ze spisu komputerów**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Raporty** &gt; **Raporty ze spisu komputerów**.
 
 2.  Na stronie **Tworzenie nowego raportu** pozostaw wartości domyślne we wszystkich polach (chyba że chcesz zastosować filtry), a następnie kliknij pozycję **Wyświetl raport**.
 
@@ -165,8 +135,10 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 ### Zobacz też
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
+[Rozwiązywanie problemów z instalacją klienta](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

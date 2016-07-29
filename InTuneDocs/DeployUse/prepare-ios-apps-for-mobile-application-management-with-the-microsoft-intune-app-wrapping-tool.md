@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Przygotowanie aplikacji systemu iOS do zarządzania za pomocą narzędzia opakowującego aplikacje | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
+title: "Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego aplikacje | Microsoft Intune"
+description: "Ten temat przedstawia informacje o sposobie opakowywania aplikacji systemu iOS bez konieczności modyfikacji kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi."
+keywords: 
+author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/11/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: matgates
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 754c026832b980d3a1cd406e9ab3146585b87b46
+
 
 ---
 
@@ -30,7 +24,7 @@ Za pomocą **narzędzia opakowującego aplikacje dla systemu iOS w usłudze Micr
 
 Jest to narzędzie wiersza poleceń systemu Mac OS tworzące „otokę” dla aplikacji. Po przetworzeniu wybranej aplikacji można modyfikować jej funkcje, korzystając ze skonfigurowanych przez siebie [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) usługi.
 
-Aby pobrać to narzędzie, zobacz [Narzędzie opakowujące aplikacje dla systemu iOS w usłudze Microsoft Intune](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
+Aby pobrać to narzędzie, zobacz [narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
 
 ## Krok 1 Spełnianie wymagań wstępnych dotyczących używania narzędzia opakowującego aplikacje
 
@@ -59,7 +53,7 @@ Aby pobrać to narzędzie, zobacz [Narzędzie opakowujące aplikacje dla systemu
 
 1.  Na komputerze Mac otwórz okno Terminala i przejdź do folderu, w którym zostały zapisane pliki. Ponieważ plik wykonywalny znajduje się w pakiecie, należy uruchomić polecenie w następujący sposób:
 ```
-    ./IntuneMAMPackager.app/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -a <client ID of input app> -r <reply URI of input app> -v true
+    ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -a <client ID of input app> -r <reply URI of input app> -v true
 ```
     > [!NOTE]
     > Some parameters are optional as shown in the table below.
@@ -126,7 +120,7 @@ Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże s
 
 1.  Uruchom aplikację, aby problem wystąpił ponownie.
 
-2.  Zbierz dane wyjściowe z konsoli zgodnie z instrukcjami [debugowania wdrożonych aplikacji dla systemu iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html) firmy Apple..
+2.  Zbierz dane wyjściowe z konsoli zgodnie z instrukcjami [debugowania wdrożonych aplikacji dla systemu iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html)firmy Apple.
 
 3.  Przefiltruj zapisane dzienniki, aby uzyskać wyniki związane z ograniczeniami aplikacji, wprowadzając w konsoli następujący skrypt:
 
@@ -172,7 +166,7 @@ W przypadku aplikacji korzystających z bibliotek ADAL konieczna jest rejestracj
 
     3.  W sekcji konfiguracji wybierz opcję **Konfigurowanie dostępu do interfejsów API sieci Web w innych aplikacjach**.
 
-    4.  W sekcji **Uprawnienia do innych aplikacji** wybierz pozycję **Zarządzenie aplikacjami mobilnymi w usłudze Intune** z pierwszej listy rozwijanej..
+    4.  W sekcji **Uprawnienia do innych aplikacji** wybierz pozycję **Zarządzenie aplikacjami mobilnymi w usłudze Intune** z pierwszej listy rozwijanej.
 
         Po wykonaniu tych czynności można użyć identyfikatora klienta aplikacji w narzędziu opakowującym aplikacje. Identyfikator klienta aplikacji można znaleźć w portalu zarządzania usługi Azure Active Directory zgodnie z opisem w sekcji [Przegląd identyfikatorów koniecznych do uzyskania](#overview-of-identifiers-you-need-to-get).
 
@@ -199,7 +193,7 @@ W przypadku aplikacji korzystających z bibliotek ADAL konieczna jest rejestracj
 -   Podanie identyfikatora klienta oraz identyfikatora URI przekierowania aplikacji zapobiega dwukrotnemu monitowaniu o zalogowanie. Zarejestrowanie tego identyfikatora klienta jest konieczne w celu uzyskania dostępu do opublikowanego identyfikatora zasobu zarządzania aplikacjami mobilnymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] na pulpicie nawigacyjnym usługi AAD. W przeciwnym razie po uruchomieniu aplikacji wystąpi błąd logowania.
 
 ## Ustawianie uprawnień dla aplikacji
-Przed opakowaniem aplikacji można przyznać **uprawnienia** w celu zapewnienia aplikacji dodatkowych uprawnień i możliwości, którymi zwykle aplikacja nie dysponuje.  Aby określić dla aplikacji specjalne uprawnienia, takie jak dostęp do udostępnionego łańcucha kluczy, na etapie podpisywania kodu używany jest **plik uprawnień**. Usługi specyficzne dla aplikacji (nazywane **możliwościami**), są włączane w środowisku Xcode podczas jej opracowywania. Po włączeniu te możliwości są odzwierciedlane w pliku uprawnień. Aby uzyskać więcej informacji dotyczących uprawnień i możliwości, zobacz [Dodawanie możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) w bibliotece deweloperów systemu iOS. Aby uzyskać pełną listę obsługiwanych możliwości, zobacz [Obsługiwane możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)..
+Przed opakowaniem aplikacji można przyznać **uprawnienia** w celu zapewnienia aplikacji dodatkowych uprawnień i możliwości, którymi zwykle aplikacja nie dysponuje.  Aby określić dla aplikacji specjalne uprawnienia, takie jak dostęp do udostępnionego łańcucha kluczy, na etapie podpisywania kodu używany jest **plik uprawnień**. Usługi specyficzne dla aplikacji (nazywane **możliwościami**), są włączane w środowisku Xcode podczas jej opracowywania. Po włączeniu te możliwości są odzwierciedlane w pliku uprawnień. Aby uzyskać więcej informacji dotyczących uprawnień i możliwości, zobacz [Dodawanie możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) w bibliotece deweloperów systemu iOS. Aby uzyskać pełną listę obsługiwanych możliwości, zobacz [Obsługiwane możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### Obsługiwane możliwości narzędzia opakowującego aplikacje dla systemu iOS
 
@@ -230,7 +224,7 @@ Przed opakowaniem aplikacji można przyznać **uprawnienia** w celu zapewnienia 
 
     1.  Zaloguj się do witryny Member Center przeznaczonej dla deweloperów firmy Apple.
 
-    2.  Utwórz profil inicjowania obsługi administracyjnej dla swojej aplikacji. Aby uzyskać instrukcje, zobacz [Jak uzyskać wymagania wstępne dotyczące narzędzia opakowującego aplikacje dla systemu iOS w usłudze Intune](http://blogs.technet.com/b/microsoftintune/archive/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios.aspx).
+    2.  Utwórz profil inicjowania obsługi administracyjnej dla swojej aplikacji. Aby uzyskać instrukcje, zobacz [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) (Jak uzyskać wymagania wstępne dotyczące narzędzia opakowującego aplikacje dla systemu iOS w usłudze Intune).
 
     3.  W swoim profilu inicjowania obsługi administracyjnej włącz takie same uprawnienia, jakie ma Twoja aplikacja. Będzie konieczne podanie takich samych identyfikatorów, jakie zostały określone podczas opracowywania aplikacji.
 
@@ -271,7 +265,7 @@ Aby przejrzeć istniejące uprawnienia podpisanej aplikacji i profilu inicjowani
 To polecenie usuwa wszystkie włączone możliwości w aplikacji, które nie znajdują się w pliku uprawnień. Usunięcie możliwości używanych przez aplikację może spowodować nieprawidłowe działanie aplikacji. Na przykład można usunąć brakujące możliwości, jeśli w aplikacji opracowanej przez dostawcę są domyślnie włączone wszystkie możliwości.
 
 ```
-./IntuneMAMPackager.app/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
 ```
 
 ## Zabezpieczenia i ochrona prywatności podczas korzystania z narzędzia opakowującego aplikacje
@@ -297,6 +291,7 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

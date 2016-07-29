@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie aplikacjami ze Sklepu Windows dla firm | Microsoft Intune"
+description: "Połącz usługę Intune ze Sklepem Windows dla firm, aby wdrażać aplikacje zakupione zbiorczo z poziomu konsoli usługi Intune i zarządzać nimi"
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: fb553cfd5e22a22b0ab18d3c1a8301a3966e2806
+
 
 ---
 
@@ -39,6 +33,8 @@ Przed rozpoczęciem synchronizowania i wdrażania aplikacji ze Sklepu Windows dl
 * Po powiązaniu konta w Sklepie Windows dla firm z usługą Intune nie będzie można zmienić konta na inne.
 * Aplikacje zakupione w sklepie nie mogą być ręcznie dodawane do usługi Intune ani z niej usuwane. Aplikacje mogą być jedynie synchronizowane ze Sklepem Windows dla firm.
 * Usługa Intune synchronizuje tylko licencjonowane aplikacje nabyte w Sklepie Windows dla firm.
+* Urządzenia muszą być przyłączone do domeny usługi Active Directory lub dołączone do miejsca pracy, aby móc używać tej funkcji.
+* Zarejestrowane urządzenia muszą używać wersji 1511 systemu Windows 10.
 
 ## Skojarz konto w Sklepie Windows dla firm z usługą Intune
 Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurować konto w sklepie, aby używało usługi Intune jako narzędzia do zarządzania:
@@ -55,7 +51,7 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 3. Na stronie **Sklepu Windows dla firm** wykonaj następujące czynności:
 * Jeśli jeszcze tego nie zrobiono, kliknij link do rejestracji w Sklepie Windows dla firm
 * Po zarejestrowaniu się kliknij opcję **Konfiguracja synchronizacji**
-4. W oknie dialogowym **Konfiguracja synchronizacji aplikacji Sklepu Windows dla firm** wybierz opcję **Włącz synchronizację Sklepu Windows dla firm**.
+4. W oknie dialogowym **Konfiguracja synchronizacji aplikacji Sklepu Windows dla firm** wybierz pozycję **Włącz synchronizację Sklepu Windows dla firm**.
 5. Z listy rozwijanej **Język** wybierz język, w którym aplikacje ze Sklepu Windows dla firm będą wyświetlane w konsoli usługi Intune. Niezależnie od języka, w którym są wyświetlane, aplikacje zostaną zainstalowane w języku użytkownika końcowego, o ile będzie dostępny.
 6. Kliknij przycisk **OK**.
 
@@ -80,6 +76,7 @@ Gdy wdrażasz aplikację ze Sklepu Windows dla firm, licencja jest zużywana prz
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

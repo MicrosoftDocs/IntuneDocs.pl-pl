@@ -1,9 +1,9 @@
 ---
-title: "Wyrejestrowywanie urządzenia z usługi Intune | Microsoft Intune"
-description: 
+title: "Wyrejestrowywanie urządzenia z systemem Windows z usługi Intune | Microsoft Intune"
+description: "Opis sposobu wyrejestrowania urządzenia z systemem Windows z usługi Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: c323aed2b4fbac831ae4919c8145b7253eb97ace
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: e510d9800fde2f1f10c583da273dc28739044009
 
 
 ---
 
 
-# Wyrejestrowywanie urządzenia z usługi Intune
+# Wyrejestrowanie urządzenia z systemem Windows z usługi Intune
 
 Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do celów służbowych i nie musisz uzyskiwać dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz je wyrejestrować. Po wyrejestrowaniu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu urządzenia, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -66,6 +66,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

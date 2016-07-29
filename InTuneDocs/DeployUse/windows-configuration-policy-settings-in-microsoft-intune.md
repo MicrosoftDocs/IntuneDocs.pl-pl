@@ -1,32 +1,32 @@
 ---
-# required metadata
-
-title: Ustawienia zasad systemu Windows w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Ustawienia zasad systemu Windows | Microsoft Intune
+description: "Ogólnych zasad konfiguracji systemu Windows (w systemie Windows 8.1 lub nowszym) w usłudze Intune można używać do konfigurowania ustawień zarejestrowanych urządzeń z systemami Windows 8 i Windows 8.1."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: a70b81e490a5c55d9ce11bd8dbdfc42ab364273c
+
 
 ---
 
 # Ustawienia zasad systemu Windows w usłudze Microsoft Intune
-**Ogólnych zasad konfiguracji systemu Windows** w usłudze Microsoft Intune można używać do konfigurowania ustawień zarejestrowanych urządzeń z systemami Windows 8 i Windows 8.1:
+**Ogólnych zasad konfiguracji systemu Windows (w systemie Windows 8.1 lub nowszym)** w usłudze Microsoft Intune można używać do konfigurowania następujących ustawień zarejestrowanych urządzeń z systemami Windows 8 i Windows 8.1:
+
+## Ustawienia zastosowania
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|----------------------------------|
+|**Zastosuj wszystkie konfiguracje dla systemu Windows 10**|Umożliwia zastosowanie ustawień tych zasad na urządzeniach z systemem Windows 10 (dodatkowo do urządzeń z systemami Windows 8 i Windows 8.1).|
 
 ## Ustawienia zabezpieczeń
 
@@ -119,6 +119,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

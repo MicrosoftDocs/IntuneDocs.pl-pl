@@ -1,26 +1,26 @@
 ---
 title: "Przygotowanie do rejestracji urządzeń | Microsoft Intune"
-description: 
+description: "Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych."
 keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 71077d9f86a53cc66536928e4799fa4b1a51cdf0
-ms.openlocfilehash: 86d3b7894eca70454fa82393c4d06eab5a99246f
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: f7fd551ab35408236a58ccd581382a6b11343dda
 
 
 ---
 
 # Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune
-Aby umożliwić pracownikom zarejestrowanie urządzeń przenośnych w usłudze Intune (w tym urządzeń z systemami [Android](set-up-android-management-with-microsoft-intune.md), [iOS, Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) i [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) oraz [komputerów z systemem Windows](set-up-windows-device-management-with-microsoft-intune.md)), należy włączyć rejestrowanie urządzeń. Aby zezwolić na rejestrowanie, należy ustawić urząd zarządzania urządzeniami przenośnymi, skonfigurować portal firmy usługi Intune, przypisać licencje i włączyć rejestrowanie dla platformy urządzeń.
+Aby umożliwić pracownikom zarejestrowanie urządzeń przenośnych w usłudze Intune (w tym urządzeń z systemami [Android](set-up-android-management-with-microsoft-intune.md), [iOS, Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) i [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) oraz [komputerów z systemem Windows](set-up-windows-device-management-with-microsoft-intune.md)), należy włączyć rejestrowanie urządzeń. Aby zezwolić na rejestrowanie, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM, mobile device management), skonfigurować portal firmy usługi Intune, przypisać licencje i włączyć rejestrowanie dla platformy urządzeń.
 
 ## Ustawianie urzędu zarządzania urządzeniami przenośnymi
 Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
@@ -30,13 +30,13 @@ Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zesta
 
 
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Administracja** &gt;**Zarządzanie urządzeniami przenośnymi**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**.
 
 2.  Na liście **Zadania** kliknij pozycję **Ustaw urząd zarządzania urządzeniami przenośnymi**. Zostanie otwarte okno dialogowe **Ustawianie urzędu zarządzania urządzeniami przenośnymi** .
 
     ![Okno dialogowe Ustawianie urzędu MDM](../media/intune-mdm-authority.png)
 
-3.  Usługa Intune zażąda potwierdzenia zamiaru ustawienia usługi Intune jako urzędu zarządzania urządzeniami przenośnymi. Zaznacz pole wyboru, a następnie wybierz przycisk **Tak** , aby zarządzać urządzeniami przenośnymi przy użyciu usługi Microsoft Intune.
+3.  Usługa Intune zażąda potwierdzenia zamiaru ustawienia usługi Intune jako urzędu zarządzania urządzeniami przenośnymi. Zaznacz pole wyboru, a następnie wybierz przycisk **Tak**, aby zarządzać urządzeniami przenośnymi przy użyciu usługi Microsoft Intune.
 
 ## Konfigurowanie portalu firmy usługi Intune
 
@@ -45,13 +45,13 @@ Portal firmy usługi Intune jest miejscem, w którym użytkownicy uzyskują dost
 > [!TIP]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy.
 
-Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. Aby wykonać to zadanie, wystarczy zalogować się do [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) jako administrator dzierżawy lub usługi, wybrać pozycje **Administrator** &gt;**Portal firmy**, a następnie skonfigurować ustawienia portalu firmy.
+Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. Aby wykonać to zadanie, wystarczy zalogować się do [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) jako administrator dzierżawy lub usługi, wybrać pozycje **Administrator** &gt; **Portal firmy**, a następnie skonfigurować ustawienia portalu firmy.
 
 ![Ustawienia portalu firmy w obszarze roboczym Administrator konsoli administracyjnej](../media/cp_sa_cpsetup.PNG)
 
-#### Informacje kontaktowe i zasady zachowania poufności informacji firmy
+### Informacje kontaktowe i zasady zachowania poufności informacji firmy
 
-Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie Kontakt z działem IT w portalu firmy na komputerach użytkowników. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.
+Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie Kontakt z działem IT w portalu firmy na komputerach użytkowników. Zasady zachowania poufności informacji są wyświetlane, gdy użytkownik kliknie odpowiedni link.
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
     |----------|------------------------|----------------|
@@ -59,10 +59,10 @@ Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i
     |Imię i nazwisko osoby kontaktowej w dziale IT|40|Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**.|
     |Numer telefonu działu IT|20|Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**.|
     |Adres e-mail działu IT|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@nazwadomeny.com**.|
-    |Dodatkowe informacje|120|Wyświetlane na stronie **Kontakt z działem IT**.|
+    |Dodatkowe informacje|120|Te informacje są wyświetlane na stronie **Kontakt z działem IT**.|
     |Adres URL zasad zachowania poufności informacji firmy|79|Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Należy wprowadzić prawidłowy adres URL w formacie https://www.contoso.com.|
 
-#### Kontakt z pomocą techniczną
+### Kontakt z pomocą techniczną
 Witryna sieci Web z pomocą techniczną wyświetlana w portalu firmy umożliwia użytkownikom dostęp do pomocy online.
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
@@ -71,7 +71,7 @@ Witryna sieci Web z pomocą techniczną wyświetlana w portalu firmy umożliwia 
     |Nazwa witryny sieci Web|40|Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli zostanie określony tylko adres URL witryny sieci Web pomocy technicznej, ale nie zostanie podana przyjazna nazwa, w portalu firmy na stronie **Kontakt z działem IT** będzie wyświetlany komunikat **Przejdź do witryny sieci Web działu IT**.|
 
 
-#### Dostosowywanie oznaczeń marki
+### Dostosowywanie oznaczeń marki
 
 Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło.
 
@@ -86,7 +86,7 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 
 ## Przypisywanie licencji użytkownika usługi Intune
 
-**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
+**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD).
 
 1.  Zaloguj się do [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) przy użyciu poświadczeń administratora dzierżawy.
 
@@ -99,16 +99,16 @@ Po skonfigurowaniu urzędu zarządzania urządzeniami przenośnymi należy skonf
 
 > [!div class="op_single_selector"]
 - [Konfigurowanie zarządzania systemem Android przy użyciu usługi Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
 Możesz również:
- - Używanie [konta menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) w celu rejestrowania wielu urządzeń
- - [Określanie urządzeń firmowych według numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) w celu sprawniejszego rejestrowania urządzeń i zasad docelowych
+ - Użyć [konta menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) w celu rejestrowania wielu urządzeń.
+ - [Określić urządzenia firmowe według numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) w celu sprawniejszego rejestrowania urządzeń i kierowania zasad.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

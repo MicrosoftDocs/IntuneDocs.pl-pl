@@ -1,34 +1,31 @@
 ---
-# required metadata
-
-title: Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach za pomocą usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach | Microsoft Intune"
+description: "Dowiedz się, w jaki sposób usługa Intune umożliwia integrację z usługą Microsoft Passport for Work, czyli alternatywną metodą logowania korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 402bc5a1-ada3-4c4c-a0de-292d026b4444
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ada366e91806c6f443ac4548af99c587ac218ec9
+ms.openlocfilehash: 934ae78edf4de2003d62179fa38269d97e6d7ef6
+
 
 ---
 
-# Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach za pomocą usługi Microsoft Intune
+# Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach z usługą Microsoft Intune
 Usługa Microsoft Intune umożliwia integrację z usługą **Microsoft Passport for Work**, czyli alternatywną metodą logowania korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej.
 
 Usługa Passport pozwala logować się za pomocą **gestu użytkownika** zamiast hasła. Gestem użytkownika może być prosty numer PIN, uwierzytelnianie biometryczne, takie jak Windows Hello, lub urządzenie zewnętrzne, np. czytnik linii papilarnych.
+
+>[!TIP]
+>Usługa Microsoft Passport for Work ma teraz nazwę Windows Hello for Business. Konsola usługi Intune zostanie zaktualizowana w ramach przyszłej aktualizacji w celu odzwierciedlenia tej zmiany.
 
 Usługa Intune integruje się z usługą Passport for Work na dwa sposoby:
 
@@ -38,7 +35,7 @@ Usługa Intune integruje się z usługą Passport for Work na dwa sposoby:
 
 ## Aby utworzyć zasady usługi Passport for Work
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij kolejno pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Windows** &gt; **Passport for Work**, aby otworzyć stronę usługi Passport for Work przedstawioną poniżej.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Windows** &gt; **Passport for Work**, aby otworzyć stronę usługi Passport for Work przedstawioną poniżej.
 
     ![Strona usługi Passport for Work](../media/passport.png)
 
@@ -80,6 +77,7 @@ Aby uzyskać więcej informacji na temat usługi Microsoft Passport, zobacz [prz
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

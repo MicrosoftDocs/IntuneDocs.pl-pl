@@ -3,30 +3,29 @@ title: "Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezp
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 06/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 09e97df0-d032-48ff-ab8a-8c2c4ec29897
+ROBOTS: noindex,nofollow
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 4b83e426e440928fea5308223764716a4ee77456
+ms.sourcegitcommit: f1fd60348f5e18344a2ce63311cef7a551f355d3
+ms.openlocfilehash: 5aa330d055032fff62309c9ad96d467e0271903a
 
 
 ---
 
 # Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami
-Administrator informatyczny wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że ograniczenia oprogramowania nakładane przez system iOS zostały usunięte, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy. W takim wypadku urządzenie nie będzie mieć już dostępu do zasobów firmy.
-
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Administrator informatyczny wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że ograniczenia oprogramowania nakładane przez system iOS zostały usunięte, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy. W takim przypadku urządzenie nie może uzyskać dostępu do zasobów firmy, a użytkownik musi skontaktować się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,22 @@
 ---
-# required metadata
-
-title: Zarządzanie alertami | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie alertami | Microsoft Intune"
+description: "Obszar roboczy Alerty pozwala ocenić ogólną kondycję urządzeń w Twojej organizacji."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-
-# optional metadata
-
 ROBOTS: noindex,nofollow
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 47667501cf8235ed59e3915ec8f745381a37ab35
+
 
 ---
 
@@ -99,7 +94,7 @@ Alerty oznaczone jako zamknięte są trwale usuwane po 90 dniach.
 
 #### Aby wyświetlić i ponownie uaktywnić zamknięte alerty
 
-1.  W konsoli administracyjnej usługi Intune kliknij kolejno pozycje **Alerty &gt; Wszystkie alerty**..
+1.  W konsoli administracyjnej usługi Intune kliknij kolejno pozycje **Alerty &gt; Wszystkie alerty**.
 
 2.  Na liście **Filtry** kliknij pozycję **Zamknięte**.
 
@@ -108,10 +103,11 @@ Alerty oznaczone jako zamknięte są trwale usuwane po 90 dniach.
 3.  Aby ponownie uaktywnić wybrany alert, kliknij pozycję **Uaktywnij ponownie alert**.
 
 ### Zobacz także
-[Bądź na bieżąco dzięki alertom w usłudze Microsoft Intune](get-notified-by-microsoft-intune-alerts.md)
+[Bądź na bieżąco dzięki alertom w usłudze Microsoft Intune](get-notified-by-alerts.md)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

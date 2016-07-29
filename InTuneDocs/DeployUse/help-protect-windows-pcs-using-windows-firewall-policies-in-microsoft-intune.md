@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Zasady zapory dla komputerów z systemem Windows | Microsoft Intune
-description:
-keywords:
+title: "Zasady zapory dla komputerów z systemem Windows | Microsoft Intune"
+description: "Usługa Intune może pomóc w zabezpieczaniu komputerów zarządzanych za pomocą klienta usługi Intune na wiele sposobów, łącznie z konfigurowaniem ustawień Zapory systemu Windows."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 826bdcd4db11b0eca94a250d6cb95f76e22569bf
+
 
 ---
 
 # Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 Usługa Microsoft Intune może pomóc w zabezpieczaniu komputerów z systemem Windows zarządzanych za pomocą klienta usługi Intune na wiele sposobów, łącznie z użyciem zasad, które pozwalają skonfigurować ustawienia Zapory systemu Windows na komputerach.
 
-Jeśli klient usługi Intune na komputery z systemem Windows nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md)..
+Jeśli klient usługi Intune na komputery z systemem Windows nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 W poniższych sekcjach znajdują się informacje ułatwiające konfigurowanie, wdrażanie i monitorowanie zasad Zapory systemu Windows na komputerach z systemem Windows.
 
@@ -36,7 +30,7 @@ W poniższych sekcjach znajdują się informacje ułatwiające konfigurowanie, w
 Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień sterujących zachowaniem Zapory systemu Windows na zarządzanych komputerach. Te ustawienia nie umożliwiają zarządzania niestandardowymi wyjątkami Zapory systemu Windows i nie mają wpływu na zapory innych firm.
 
 > [!NOTE]
-> Jeśli określone ustawienie na komputerze jest zarządzane zarówno przez zasady grupy, jak i zasady usługi Microsoft Intune, ustawienie skonfigurowane w ramach zasad grupy ma pierwszeństwo przed ustawieniem skonfigurowanym w ramach zasad usługi Microsoft Intune. Aby uzyskać informacje dotyczące zapobiegania konfliktom występującym między zasadami usługi Intune i zasadami grupy, zobacz [Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md)..
+> Jeśli określone ustawienie na komputerze jest zarządzane zarówno przez zasady grupy, jak i zasady usługi Microsoft Intune, ustawienie skonfigurowane w ramach zasad grupy ma pierwszeństwo przed ustawieniem skonfigurowanym w ramach zasad usługi Microsoft Intune. Aby uzyskać informacje dotyczące zapobiegania konfliktom występującym między zasadami usługi Intune i zasadami grupy, zobacz [Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
 > Jeśli chcesz wdrożyć ustawienia Zapory systemu Windows na komputerach z systemem Windows Vista, musisz najpierw zainstalować na nich [poprawkę KB971800](http://support2.microsoft.com/kb/971800) .
 
@@ -48,9 +42,9 @@ Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień ste
 
 ## Konfiguracja zasad Zapory systemu Windows
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Zasady** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
-2.  Skonfiguruj i wdroż zasady **ustawień Zapory systemu Windows** . Możesz skorzystać z zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)..
+2.  Skonfiguruj i wdroż zasady **ustawień Zapory systemu Windows** . Możesz skorzystać z zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     W poniższej sekcji przedstawiono ustawienia możliwe do skonfigurowania w ramach zasad oraz ich wartości domyślne, które zostaną użyte, jeśli zrezygnujesz z dostosowania zasad.
 
@@ -73,7 +67,7 @@ Te ustawienia zasad konfigurują użycie Zapory systemu Windows w celu blokowani
 
 ### Powiadamiaj użytkownika, gdy Zapora systemu Windows zablokuje nowy program
 
-Te ustawienia zasad ustalają, czy użytkownik komputera otrzyma powiadomienie, gdy Zapora systemu Windows zablokuje przychodzący ruch sieciowy na zarządzanych komputerach podłączonych do domeny (np. w miejscu pracy) lub pracujących w (zaufanej) sieci prywatnej (np. sieci domowej) albo w niezaufanej sieci publicznej (np. w kawiarni). Wartością domyślną dla każdego z tych ustawień jest **Tak**..
+Te ustawienia zasad ustalają, czy użytkownik komputera otrzyma powiadomienie, gdy Zapora systemu Windows zablokuje przychodzący ruch sieciowy na zarządzanych komputerach podłączonych do domeny (np. w miejscu pracy) lub pracujących w (zaufanej) sieci prywatnej (np. sieci domowej) albo w niezaufanej sieci publicznej (np. w kawiarni). Wartością domyślną dla każdego z tych ustawień jest **Tak**.
 
 
 ### Wstępnie zdefiniowane wyjątki
@@ -124,6 +118,7 @@ Po skonfigurowaniu powyższych wartości podstawowych możesz skonfigurować wyj
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ustawienia zasad programu Exchange ActiveSync w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Ustawienia zasad programu Exchange ActiveSync | Microsoft Intune
+description: "Zasady programu Exchange ActiveSync w usłudze Intune pozwalają skonfigurować ustawienia umożliwiające sterowanie funkcjami na urządzeniach zarządzanych przez program Exchange ActiveSync."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 7cdb34c469d2932deb10deec592a899b9848226a
+
 
 ---
 
@@ -86,6 +80,7 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Dodawanie użytkowników do 30-dniowej wersji ewaluacyjnej usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Dodawanie użytkowników do 30-dniowej wersji ewaluacyjnej usługi Intune | Microsoft Intune"
+description: "Jak dodawać użytkowników, indywidualnie lub grupowo, w przypadku zarejestrowania w celu korzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9e40999b-46f7-447b-8974-72af82bec7ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 5a5ebe474580b98a3696bbd970c889837283b6f0
+
 
 ---
 
@@ -37,7 +31,7 @@ Możesz wyświetlić informacje o administratorach dzierżawy przy użyciu konso
 ## Dodawanie indywidualnych kont użytkowników
 Następujące kroki umożliwiają utworzenie dodatkowych kont użytkowników w dzierżawie w wersji ewaluacyjnej. Pamiętaj, że każde dodane konto użytkownika używa jednej ze 100 licencji, które otrzymujesz w ramach bezpłatnej wersji ewaluacyjnej usługi Intune.
 
-1.  W [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) wybierz pozycję **Dodaj użytkowników** &gt; **Nowy**&gt; **Użytkownik**, aby uruchomić **Kreatora nowych użytkowników**.
+1.  W [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkID=787455) wybierz pozycję **Dodaj użytkowników** &gt; **Nowy**&gt; **Użytkownik**, aby uruchomić **Kreatora nowych użytkowników**.
 
 2.  Na stronie **Szczegóły** wypełnij wymagane pola.
 
@@ -51,14 +45,14 @@ Następujące kroki umożliwiają utworzenie dodatkowych kont użytkowników w d
 
 7.  Gdy nowy użytkownik zostanie wyświetlony w centrum administracyjnym usługi Office 365, sprawdź, czy został on utworzony pomyślnie:
 
-    1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Administracja** &gt; **Portal firmy**, a następnie przewiń do dołu ekranu. Skopiuj adres URL wyświetlany w obszarze **Portal firmy w usłudze Intune**..
+    1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Administracja** &gt; **Portal firmy**, a następnie przewiń do dołu ekranu. Skopiuj adres URL wyświetlany w obszarze **Portal firmy w usłudze Intune**.
 
     2.  Otwórz nowe okno przeglądarki w trybie prywatności (w programie Internet Explorer wybierz pozycję **Narzędzia** &gt; **Przeglądanie InPrivate**) lub otwórz nowe okno przeglądarki na innym urządzeniu, a następnie przejdź do adresu URL skopiowanego w poprzednim kroku. Podczas pierwszego logowania użytkownik musi podać nowe hasło dla konta.
 
 ## Zbiorcze dodawanie użytkowników
-Aby dodać zbiorczo użytkowników do usługi Intune, użyj **Kreatora zbiorczego dodawania użytkowników** w celu przekazania pliku wartości rozdzielanych przecinkami (CSV) zawierającego dane użytkowników. Linki w kreatorze umożliwiają pobranie pustego szablonu i przykładowego pliku CSV. Pierwszy wiersz pliku CSV musi zawierać, we właściwej kolejności, wszystkie etykiety kolumn danych użytkownika. Następnie dla każdego użytkownika w pliku CSV należy wprowadzić wartości w kolumnach **nazwa użytkownika** (na przykład **bob@contoso.com**) i **nazwa wyświetlana** (na przykład **Bob Kelly**).).
+Aby dodać zbiorczo użytkowników do usługi Intune, użyj **Kreatora zbiorczego dodawania użytkowników** w celu przekazania pliku wartości rozdzielanych przecinkami (CSV) zawierającego dane użytkowników. Linki w kreatorze umożliwiają pobranie pustego szablonu i przykładowego pliku CSV. Pierwszy wiersz pliku CSV musi zawierać, we właściwej kolejności, wszystkie etykiety kolumn danych użytkownika. Następnie dla każdego użytkownika w pliku CSV należy wprowadzić wartości w kolumnach **Nazwa użytkownika** (na przykład **bob@contoso.com**) i **Nazwa wyświetlana** (na przykład **Bob Kelly**).
 
-1.  W [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) wybierz pozycję **Użytkownicy** &gt; **Nowy**..
+1.  W [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkID=787455) wybierz pozycję **Użytkownicy** &gt; **Nowy**.
 
 2.  Wybierz pozycję **Dodaj zbiorczo**, aby uruchomić Kreatora zbiorczego dodawania użytkowników.
 
@@ -84,6 +78,7 @@ Gratulacje! Krok 2 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 >[&larr; **Tworzenie konta na potrzeby wersji ewaluacyjnej**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)     [**Tworzenie grup** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

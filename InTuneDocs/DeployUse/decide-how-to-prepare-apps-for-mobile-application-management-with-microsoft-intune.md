@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
+title: "Przygotowywanie aplikacji do zarządzania aplikacjami mobilnymi | Microsoft Intune"
+description: "Informacje przedstawione w tym temacie ułatwiają określenie, kiedy należy używać narzędzia opakowującego aplikację i zestawu SDK aplikacji w celu umożliwienia niestandardowym aplikacjom biznesowym użycia zasad zarządzania aplikacjami mobilnymi."
+keywords: 
+author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 4a15279bb4460c88412ede6c8678deea72a3629f
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 W aplikacjach można włączyć opcję użycia zasad zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje usługi Intune lub zestawu SDK aplikacji usługi Intune. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
 
 ## Narzędzia opakowujące aplikacje usługi Intune
-Narzędzia opakowujące aplikacje jest używane głównie dla wewnętrznych aplikacji biznesowych. To narzędzie jest aplikacją wiersza polecenia tworzącą otoku aplikacji, która następnie umożliwia zarządzanie aplikacją za pośrednictwem zasad zarządzania aplikacjami mobilnymi usługi Intune. Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania.  Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](http://blogs.technet.com/b/microsoftintune/archive/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios.aspx). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Narzędzie opakowujące aplikacje systemu iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+Narzędzia opakowujące aplikacje jest używane głównie dla wewnętrznych aplikacji biznesowych. To narzędzie jest aplikacją wiersza polecenia tworzącą otoku aplikacji, która następnie umożliwia zarządzanie aplikacją za pośrednictwem zasad zarządzania aplikacjami mobilnymi usługi Intune. Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania.  Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Narzędzie opakowujące aplikacje systemu iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
 Narzędzie opakowujące aplikacje nie obsługuje aplikacji w sklepie App Store i Sklepie Play ani funkcji, które wymagają integracji czasu programowania (zobacz porównanie funkcji w poniższej tabeli).
 
@@ -38,7 +32,7 @@ Jeśli aplikacja została już napisana lub jeśli kod źródłowy jest niedost�
 ## Zestaw SDK aplikacji usługi Intune
 Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikacje znajdują się w sklepie App Store lub Sklepie Play i którzy chcą zarządzać aplikacjami w usłudze Intune. Korzyści wynikające z integracji zestawu SDK są jednak dostępne w przypadku wszystkich aplikacji, nawet aplikacji biznesowych.
 
-Do zintegrowania zestawu SDK niezbędny jest dostęp do kodu źródłowego aplikacji. Aby uzyskać instrukcje dotyczące integrowania zestawu SDK, zobacz [Zestaw SDK aplikacji usługi Microsoft Intune](https://msdn.microsoft.com/library/mt627769.aspx).
+Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](/intune/develop/intune-app-sdk). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](/intune/develop/intune-app-sdk-get-started).
 
 ## Porównanie funkcji
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.
@@ -74,6 +68,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

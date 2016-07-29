@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ustawienia zasad zabezpieczeń urządzeń przenośnych w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Ustawienia zasad zabezpieczeń urządzeń przenośnych | Microsoft Intune"
+description: "Usługa Intune umożliwia skonfigurowanie wielu ustawień, które możesz wdrożyć na urządzeniach zarządzanych w Twojej organizacji."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/12/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 41813b383003311e68f2a7fb50d42638434649f7
+
 
 ---
 
@@ -217,6 +211,7 @@ Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

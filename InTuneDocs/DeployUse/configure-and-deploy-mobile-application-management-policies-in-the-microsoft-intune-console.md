@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Intune | Microsoft Intune"
+description: "Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: df75c3512091dff55ace65ef6106dc2cbc503bd2
+
 
 ---
 
@@ -34,7 +28,8 @@ Zasady zarządzania aplikacjami mobilnymi obsługują następujące urządzenia:
 
 -   Urządzenia z systemem iOS w wersji 7 lub nowszej.
 
-> [!TIP] Zasady zarządzania aplikacjami mobilnymi obsługują urządzenia zarejestrowane w usłudze Intune.
+> [!TIP]
+> Zasady zarządzania aplikacjami mobilnymi obsługują urządzenia zarejestrowane w usłudze Intune.
 >
 > Informacje na temat tworzenia zasad zarządzania aplikacjami dla urządzeń niezarządzanych przez usługę Intune zawiera temat [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
@@ -46,9 +41,9 @@ Aby zastosować ograniczenia dla aplikacji, musi ona zawierać zestaw SDK aplika
 
 -   **Użycie opakowanej aplikacji** — są to aplikacje ponownie umieszczane w pakietach za pomocą **narzędzia opakowującego aplikacje w usłudze Microsoft Intune** w celu dodania do nich zestawu SDK aplikacji. To narzędzie jest zwykle używane do przetwarzania aplikacji firmowych utworzonych wewnętrznie. Nie można go używać do przetwarzania aplikacji, które zostały pobrane ze sklepu z aplikacjami. Zobacz [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
-- **Napisz własną aplikację, która zawiera zestaw SDK aplikacji usługi Intune** — zestaw SDK aplikacji usługi Intune pozwala dołączyć funkcje zarządzania aplikacjami do aplikacji podczas jej pisania. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](/develop/intune-app-sdk)
+- **Napisz własną aplikację, która zawiera zestaw SDK aplikacji usługi Intune** — zestaw SDK aplikacji usługi Intune pozwala dołączyć funkcje zarządzania aplikacjami do aplikacji podczas jej pisania. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](/intune/develop/intune-app-sdk)
 
-Aby łatwiej dokonać wyboru między narzędziem opakowującym aplikacje a zestawem SDK aplikacji usługi Intune, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+Aby łatwiej dokonać wyboru między narzędziem opakowującym aplikacje a zestawem SDK aplikacji usługi Intune, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
 
 Niektóre aplikacje zarządzane, takie jak aplikacja Outlook dla systemów iOS i Android, obsługują **wiele tożsamości**. Oznacza to, że usługa Intune stosuje ustawienia zarządzania tylko do firmowych kont lub danych w aplikacji.
 
@@ -60,7 +55,8 @@ Na przykład, jeśli używana jest aplikacja Outlook:
 
 -   Używane konto firmowe musi być tym samym kontem, które zostało użyte do rejestracji urządzenia w usłudze Intune.
 
-> [!TIP] Jeśli używasz usługi Intune z programem Configuration Manager, zobacz [Sterowanie aplikacjami przy użyciu zasad zarządzania aplikacjami mobilnymi w programie Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
+> [!TIP]
+> Jeśli używasz usługi Intune z programem Configuration Manager, zobacz [Sterowanie aplikacjami przy użyciu zasad zarządzania aplikacjami mobilnymi w programie Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
 
 ## Tworzenie i wdrażanie aplikacji podlegającej zasadom zarządzania aplikacjami mobilnymi
 
@@ -130,7 +126,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Opis**|Opcjonalnie określ opis dla tych zasad.|
     |**Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej**|Jeśli to ustawienie jest włączone, wszystkie linki w aplikacji będą otwierane w programie Managed Browser. Aplikacja musi być wdrożona na urządzeniach, aby ta opcja działała.|
     |**Nie zezwalaj na kopie zapasowe systemu Android** lub **Nie zezwalaj na kopie zapasowe programu iTunes i usługi iCloud**|Wyłącza wykonywanie kopii zapasowych informacji aplikacji.|
-    |**Zezwalaj aplikacji na transfer danych do innych aplikacji**|Określa aplikacje, do których ta aplikacja może przesyłać dane. Możesz nie zezwalać na transfer danych do żadnych aplikacji, zezwalać na transfer danych tylko do aplikacji zarządzanych lub zezwalać na transfer danych do dowolnych aplikacji. To ustawienie nie kontroluje użycia funkcji **Otwórz za pomocą** na urządzeniach przenośnych.<br /><br />Jeśli na przykład nie zezwalasz na transfer danych, możesz ograniczyć transfer danych do usług, takich jak wiadomości SMS, przypisywanie obrazów do kontaktów oraz publikowanie wpisów w serwisie Facebook lub Twitter.<br /><br />Na urządzeniach z systemem iOS, aby uniemożliwić przesyłanie dokumentów między aplikacjami zarządzanymi i niezarządzanymi, musisz również skonfigurować i wdrożyć zasady zabezpieczeń urządzeń przenośnych, które wyłączają ustawienie **Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**. W przypadku zezwolenia na przesyłanie tylko do innych aplikacji zarządzanych do otwierania zawartości odpowiednich typów będą używane przeglądarki plików PDF i obrazów usługi Intune (jeśli je wdrożono).<br /><br />Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji.|
+    |**Zezwalaj aplikacji na transfer danych do innych aplikacji**|Określa aplikacje, do których ta aplikacja może przesyłać dane. Możesz nie zezwalać na transfer danych do żadnych aplikacji, zezwalać na transfer danych tylko do aplikacji zarządzanych lub zezwalać na transfer danych do dowolnych aplikacji. To ustawienie nie kontroluje użycia funkcji **Otwórz za pomocą** na urządzeniach przenośnych.<br /><br />Jeśli na przykład nie zezwalasz na transfer danych, możesz ograniczyć transfer danych do usług, takich jak wiadomości SMS, przypisywanie obrazów do kontaktów oraz publikowanie wpisów w serwisie Facebook lub Twitter.<br /><br />Na urządzeniach z systemem iOS, aby uniemożliwić przesyłanie dokumentów między aplikacjami zarządzanymi i niezarządzanymi, musisz również skonfigurować i wdrożyć zasady zabezpieczeń urządzeń przenośnych, które wyłączają ustawienie **Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**. W przypadku zezwolenia na przesyłanie tylko do innych aplikacji zarządzanych do otwierania zawartości odpowiednich typów będą używane przeglądarki plików PDF i obrazów usługi Intune (jeśli je wdrożono).<br /><br />Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji.<br><br>**To ustawienie nie kontroluje użycia funkcji Otwórz za pomocą na urządzeniach przenośnych. Informacje dotyczące zarządzania funkcją Otwórz za pomocą można znaleźć [tutaj](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)**.|
     |**Zezwalaj aplikacji na odbieranie danych z innych aplikacji**|Określa aplikacje, z których ta aplikacja może odbierać dane. Możesz nie zezwalać na transfer danych z żadnych aplikacji, zezwalać na transfer danych tylko z aplikacji zarządzanych lub zezwalać na przesyłanie danych z dowolnych aplikacji.<br /><br />W przypadku aplikacji dla systemu iOS obsługujących wiele tożsamości (gdzie usługa Intune stosuje ustawienia zarządzania wyłącznie do kont lub danych firmowych w aplikacji) dla zarejestrowanego urządzenia, do którego zastosowano zasady zarządzania aplikacjami, gdy użytkownik uzyskuje dostęp do danych z aplikacji niezarządzanej przy użyciu zasad zarządzania aplikacjami mobilnymi, dane będą traktowane jako dane firmowe i chronione przez zasady.|
     |**Nie zezwalaj na używanie polecenia „Zapisz jako”**|Wyłącza opcję **Zapisz jako** we wszystkich aplikacjach korzystających z tych zasad w celu zapisywania danych w lokacjach chmury osobistej (na przykład w usłudze OneDrive Personal lub Dropbox).|
     |**Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach**|Określa możliwości korzystania z operacji wycinania, kopiowania i wklejania w ramach aplikacji. Wybierz spośród opcji:<br /><br />**Zablokowane** — nie zezwalaj na wycinanie, kopiowanie i wklejanie między tą aplikacją i innymi aplikacjami.<br /><br />**Aplikacje zarządzane przez zasady** — zezwalaj na wycinanie, kopiowanie i wklejanie między tą aplikacją i innymi aplikacjami zarządzanymi.<br /><br />**Aplikacje zarządzane przez zasady z funkcją wklejania** — zezwalaj na wklejanie danych wyciętych lub skopiowanych z tej aplikacji tylko w innych aplikacjach zarządzanych. Zezwalaj na wklejanie w tej aplikacji danych wyciętych lub skopiowanych z dowolnych aplikacji.<br /><br />**Dowolna aplikacja** — brak ograniczeń wycinania, kopiowania i wklejania w tej aplikacji.<br /><br />Aby możliwe było wykonywanie operacji kopiowania i wklejania między aplikacjami zarządzanymi, obie aplikacje muszą mieć skonfigurowane ustawienia **Aplikacje zarządzane przez zasady** lub **Aplikacje zarządzane przez zasady z funkcją wklejania**.|
@@ -152,7 +148,8 @@ Wdróż aplikację, wybierając zasady zarządzania aplikacjami mobilnymi na str
 
 Aby uzyskać szczegółowe informacje, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
-> [!IMPORTANT] Na urządzeniach z systemem operacyjnym wcześniejszym niż iOS 7.1 skojarzone zasady nie zostaną usunięte po odinstalowaniu aplikacji.
+> [!IMPORTANT]
+> Na urządzeniach z systemem operacyjnym wcześniejszym niż iOS 7.1 skojarzone zasady nie zostaną usunięte po odinstalowaniu aplikacji.
 >
 > Jeśli urządzenie zostanie wyrejestrowane z usługi Intune, zasady nie zostaną usunięte z aplikacji. Ustawienia zasad będą nadal stosowane dla wszystkich aplikacji, dla których je skonfigurowano, nawet po odinstalowaniu i ponownym zainstalowaniu aplikacji.
 
@@ -163,7 +160,8 @@ W takim przypadku należy poprosić użytkownika o ręczne odinstalowanie niezar
 
 W przypadku urządzeń z systemem iOS 9 lub nowszym usługa Intune automatycznie poprosi użytkownika o zgodę na przejęcie zarządzania istniejącą aplikacją. Jeśli użytkownik wyrazi zgodę, aplikacja stanie się aplikacją zarządzaną przez usługę Intune , a wszystkie zasady zarządzania aplikacjami mobilnymi skojarzone z aplikacją również będą stosowane.
 
-> [!TIP] Jeśli urządzenie działa w trybie nadzorowanym, usługa Intune przejmie zarządzanie istniejącymi aplikacjami bez pytania użytkowników o zgodę.
+> [!TIP]
+> Jeśli urządzenie działa w trybie nadzorowanym, usługa Intune przejmie zarządzanie istniejącymi aplikacjami bez pytania użytkowników o zgodę.
 
 ## **Krok 5.** Monitorowanie wdrożenia aplikacji
 Po utworzeniu i wdrożeniu aplikacji skojarzonej z zasadami zarządzania aplikacjami mobilnymi używaj następujących procedur do monitorowania aplikacji i rozwiązywania konfliktów zasad.
@@ -198,6 +196,7 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 -   Jeśli dla urządzenia nie wdrożono wcześniej żadnych zasad i zostaną wdrożone dwa ustawienia powodujące konflikt, będzie używane domyślne ustawienie urządzenia.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

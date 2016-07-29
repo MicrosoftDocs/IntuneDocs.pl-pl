@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Przewodnik dotyczący ewaluacji usługi Intune | Microsoft Intune
-description:
-keywords:
+title: "Przewodnik dotyczący ewaluacji usługi Intune | Microsoft Intune"
+description: "Wprowadzenie i wymagania wstępne dotyczące sposobu konfigurowania bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 813b4babc78ae29d213f7c783b6afb3e368c52bd
+
 
 ---
 
@@ -30,16 +24,16 @@ Skonfigurowanie bezpłatnej 30-dniowej wersji ewaluacyjnej usługi Intune przezn
 
 W tym temacie nauczysz się podstaw uruchamiania i konfigurowania usługi Intune w wersji ewaluacyjnej. W ten sposób poznasz ogólnie usługę, dzięki czemu będziesz w stanie ocenić funkcje i możliwości usługi Intune.
 
-Obejrzyj tę 5-minutową demonstrację, aby dowiedzieć się, jak łatwo można rozpocząć pracę z bezpłatną wersją ewaluacyjną usługi Microsoft Intune i zarządzać urządzeniami:
+Obejrzyj następującą 5-minutową prezentację, aby dowiedzieć się, jak łatwo można rozpocząć pracę z bezpłatną wersją ewaluacyjną usługi Microsoft Intune i zarządzać urządzeniami. W pierwszej części klipu wideo jest wspomniany portal, który został „wycofany”, ale pomimo że będziesz używać innego portalu, kroki będą zasadniczo takie same. Więcej informacji na temat portalu można znaleźć [tutaj](https://docs.microsoft.com/intune/deploy-use/account-portal-merged-with-Office-365).
 
 <iframe width="675" height="480" src="https://www.youtube.com/embed/ltcZvm4VOFU" frameborder="0" allowfullscreen></iframe>
 
 ## Przed rozpoczęciem
 Przed rozpoczęciem pracy z usługą Intune potrzebujesz:
 
--   Urządzenia z przeglądarką sieci Web obsługującą program Silverlight, pozwalającą uzyskiwać dostęp do witryn sieci Web, w których zostaną utworzone konta użytkowników usługi Intune (**Centrum administracyjne usługi Office 365**) i które będą służyć do zarządzania urządzeniami, grupami i zasadami (**Konsola administracyjna Intune**).).
+-   Urządzenia z przeglądarką sieci Web obsługującą program Silverlight, pozwalającą uzyskiwać dostęp do witryn sieci Web, w których zostaną utworzone konta użytkowników usługi Intune (**Centrum administracyjne usługi Office 365**) i które będą służyć do zarządzania urządzeniami, grupami i zasadami (**Konsola administracyjna Intune**).
 
--   Drugiego urządzenia z przeglądarką sieci Web, którego będziesz używać do testowania, w jaki sposób użytkownicy usługi Intune będą rejestrować swoje urządzenia i zarządzać nimi za pomocą Portalu firmy. Ponadto przetestujesz, w jaki sposób użytkownicy będą znajdować i instalować aplikacje oraz zwracać się o pomoc do Administratorów. Jeśli nie masz drugiego urządzenia z przeglądarką sieci Web, możesz użyć ustawienia „tryb prywatny” w tej samej przeglądarce, za pomocą której administrujesz usługą Intune (na przykład w przeglądarce Internet Explorer możesz kliknąć opcje **Narzędzia** &gt; **Przeglądanie InPrivate**)).
+-   Drugiego urządzenia z przeglądarką sieci Web, którego będziesz używać do testowania, w jaki sposób użytkownicy usługi Intune będą rejestrować swoje urządzenia i zarządzać nimi za pomocą Portalu firmy. Ponadto przetestujesz, w jaki sposób użytkownicy będą znajdować i instalować aplikacje oraz zwracać się o pomoc do Administratorów. Jeśli nie masz drugiego urządzenia z przeglądarką sieci Web, możesz użyć ustawienia „tryb prywatny” w tej samej przeglądarce, za pomocą której administrujesz usługą Intune (na przykład w przeglądarce Internet Explorer możesz kliknąć opcje **Narzędzia** &gt; **Przeglądanie InPrivate**).
 
 -   Jeśli masz już konto usług Microsoft Online Services, potrzebne będą poświadczenia administratora dla tego konta. Jeśli nie masz takiego konta lub chcesz korzystać z tej dzierżawy usługi Intune wyłącznie do celów ewaluacyjnych, nie potrzebujesz poświadczeń administratora.
 
@@ -47,9 +41,9 @@ Przed rozpoczęciem pracy z usługą Intune potrzebujesz:
 
     |Platforma|Wymagania dotyczące certyfikatów|Więcej informacji|
     |------------|----------------------------|--------------------|
-    |Windows Phone 8.1 i Windows Phone 8 |Żaden certyfikat nie jest wymagany w przypadku użytkowników systemu Windows Phone 8.1, którzy instalują aplikację Portal firmy pobraną ze Sklepu. Certyfikat Symantec jest wymagany w przypadku systemu Windows Phone 8.0 oraz w przypadku wdrażania aplikacji Portal firmy za pośrednictwem usługi Intune na urządzeniach z systemem Windows Phone 8.1.|We wskazówkach tych założono, że użytkownicy pobierają aplikację Portal firmy ze Sklepu na urządzeniach z systemem Windows Phone 8.1 lub nowszym. Aby uzyskać informacje na temat obsługi systemu Windows Phone 8.0, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](/Intune/DeployUse/set-up-windows-phone-management-with-microsoft-intune)..|
-    |Urządzenia z systemem Windows 10, Windows RT 8.1, Windows RT lub Windows 8.1|Żaden certyfikat nie jest wymagany w przypadku rejestracji urządzeń z systemem Windows RT i Windows.|[Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/Intune/DeployUse/install-the-windows-pc-client-with-microsoft-intune).|
-    |System iOS 7.1 lub nowszy|Pobierz certyfikat usługi Apple Push Notification.|Należy uzyskać certyfikat usługi Apple Push Notification Service od firmy Apple w sposób opisany w temacie: [Konfigurowanie zarządzania urządzeniami z systemem iOS i komputerami Mac przy użyciu usługi Microsoft Intune](/Intune/DeployUse/set-up-ios-and-mac-management-with-microsoft-intune)..|
+    |Windows Phone 8.1 i Windows Phone 8 |Żaden certyfikat nie jest wymagany w przypadku użytkowników systemu Windows Phone 8.1, którzy instalują aplikację Portal firmy pobraną ze Sklepu. Certyfikat Symantec jest wymagany w przypadku systemu Windows Phone 8.0 oraz w przypadku wdrażania aplikacji Portal firmy za pośrednictwem usługi Intune na urządzeniach z systemem Windows Phone 8.1.|We wskazówkach tych założono, że użytkownicy pobierają aplikację Portal firmy ze Sklepu na urządzeniach z systemem Windows Phone 8.1 lub nowszym. Aby uzyskać informacje na temat obsługi systemu Windows Phone 8.0, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).|
+    |Urządzenia z systemem Windows 10, Windows RT 8.1, Windows RT lub Windows 8.1|Żaden certyfikat nie jest wymagany w przypadku rejestracji urządzeń z systemem Windows RT i Windows.|[Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
+    |System iOS 7.1 lub nowszy|Pobierz certyfikat usługi Apple Push Notification.|Należy uzyskać certyfikat usługi Apple Push Notification Service od firmy Apple w sposób opisany w temacie: [Konfigurowanie zarządzania urządzeniami z systemem iOS i komputerami Mac przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
 ## Kroki w celu zakończenia 30-dniowej ewaluacji usługi Intune
 - [Krok 1. Zarejestrowanie się lub zalogowanie na potrzeby uzyskania dostępu do 30-dniowej wersji ewaluacyjnej](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md). Przed zarejestrowaniem się w usłudze Intune lub zalogowaniem do niej należy rozważyć logowanie przy użyciu istniejącego konta albo utworzenie tymczasowego konta, które będzie używane tylko na potrzeby 30-dniowej ewaluacji usługi Microsoft Intune.
@@ -71,6 +65,7 @@ Nadszedł czas, aby zacząć korzystać z subskrypcji 30-dniowej wersji ewaluacy
 [Przewodnik Szybki start dotyczący usługi Intune](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

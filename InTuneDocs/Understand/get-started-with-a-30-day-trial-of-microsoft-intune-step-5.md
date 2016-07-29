@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rejestrowanie urządzeń przenośnych w wersji ewaluacyjnej | Microsoft Intune
-description:
-keywords:
+title: "Rejestrowanie urządzeń przenośnych w wersji ewaluacyjnej | Microsoft Intune"
+description: "Sposób rejestrowania urządzeń przenośnych i instalowania aplikacji po zarejestrowaniu się w bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 2424d52f800ae61dbadc0a3ae73c2b3f24d936c3
+
 
 ---
 
@@ -62,9 +56,9 @@ Po wyświetleniu monitu o **adres serwera**wpisz „manage.microsoft.com”.
 
 
 ## Instalowanie wcześniej wdrożonej aplikacji
-Otwórz Portal firmy na urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**..
+Otwórz Portal firmy na urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**.
 
-Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi Intune, zobacz [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)..
+Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi Intune, zobacz [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
 
 ### Następne kroki
 Gratulacje! Krok 5 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* właśnie został ukończony.
@@ -74,6 +68,7 @@ Gratulacje! Krok 5 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 >[&larr; **Tworzenie zasad**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)     [**Opcje i dodatki** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

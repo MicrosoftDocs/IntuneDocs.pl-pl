@@ -1,9 +1,9 @@
 ---
 title: "Konfigurowanie infrastruktury certyfikatów dla profilu SCEP | Microsoft Intune"
-description: 
+description: "Infrastruktura do tworzenia i wdrażania profilów certyfikatów SCEP."
 keywords: 
 author: nbigman
-manager: jeffgilb
+manager: Arob98
 ms.date: 05/16/2016
 ms.topic: article
 ms.prod: 
@@ -13,12 +13,12 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ca06fa26127935e08f35006730dd367fb8f6669
-ms.openlocfilehash: 942bdc4e1629a9d7e16d0994f27dab4424670a4f
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: e7d6bc1e06217237a79c547c9b449c1fc16aeed4
 
 ---
 # Konfigurowanie infrastruktury certyfikatów dla profilu SCEP
-W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów.
+W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów SCEP.
 
 ### Infrastruktura lokalna
 
@@ -347,6 +347,6 @@ Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Kon
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

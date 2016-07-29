@@ -1,36 +1,28 @@
 ---
-# required metadata
-
-title: Konfigurowanie profilów certyfikatów | Microsoft Intune
-description:
-keywords:
+title: "Konfigurowanie profilów certyfikatów | Microsoft Intune"
+description: "Dowiedz się, jak utworzyć profil certyfikatu usługi Intune."
+keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: kmyrup
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 40ae2ce3ea4393d24770c010bf5292ca1829a7f1
+
 
 ---
 
 # Konfigurowanie profilów certyfikatów usługi Intune
-Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatu](configure-certificate-infrastructure.md) można skonfigurować profile certyfikatów:
+Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) lub [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md) można skonfigurować profile certyfikatów:
 
-**Zadanie 1** — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
-**Zadanie 2** — Tworzenie profilów certyfikatów zaufanego urzędu certyfikacji
-**Zadanie 3** — Jedno z dwóch:
+**Zadanie 1** — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji **Zadanie 2** — Tworzenie profilów certyfikatów zaufanego urzędu certyfikacji **Zadanie 3** — Jedno z następujących zadań:
 
 Tworzenie profilów certyfikatów protokołu SCEP
 
@@ -46,7 +38,7 @@ Należy utworzyć **profil certyfikatu zaufanego**, aby móc utworzyć profil ce
 
 ##### Aby utworzyć profil zaufanego certyfikatu
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -74,7 +66,7 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
 
 ##### Aby utworzyć profil certyfikatu protokołu SCEP
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -98,7 +90,7 @@ Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady** i będzie możn
 
 ##### Aby utworzyć profil certyfikatu PFX
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -138,7 +130,7 @@ Sposób wdrażania profilów certyfikatów jest taki sam jak w przypadku innych 
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
 
     -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
 
@@ -152,6 +144,7 @@ Można teraz użyć certyfikatów do zabezpieczenia poczty e-mail, sieci Wi-Fi i
 -  [Połączenia VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

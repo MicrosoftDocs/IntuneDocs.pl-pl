@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Dostosowywanie widoków konsoli dla ról administratora | Microsoft Intune
-description:
-keywords:
+title: "Dostosowywanie widoków konsoli dla ról administratora | Microsoft Intune"
+description: "Skorzystaj z tego tematu, aby filtrować widoki konsoli administracyjnej usługi Intune i umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 132648f4c4d13983b169fa8497deae9787fe6db5
+
 
 ---
 
@@ -73,6 +67,7 @@ Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby 
 Gdy skonfigurowany przez Ciebie administrator otworzy następnie konsolę administracyjną usługi Intune , otrzyma określony przez Ciebie poziom dostępu.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

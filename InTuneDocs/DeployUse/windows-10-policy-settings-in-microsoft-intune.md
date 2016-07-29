@@ -1,37 +1,35 @@
 ---
-# required metadata
-
 title: Ustawienia zasad systemu Windows 10 | Microsoft Intune
-description:
-keywords:
+description: "Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 01356d08257cf381d1a981f749702800c173de33
+ms.openlocfilehash: 08336c56f4e099c8cd0a0152364824455cae0f03
+
 
 ---
 
 # Ustawienia zasad systemu Windows 10 w usłudze Microsoft Intune
 
-Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile.
+Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile.
+
+> [!IMPORTANT]
+> Komputerami z systemem Windows 10 można zarządzać na dwa sposoby: rejestrując je lub przez zainstalowanie oprogramowania klienckiego usługi Intune na komputerze. Każda metoda oferuje różne możliwości (zobacz [Wybieranie metody zarządzania urządzeniami](/intune/get-started/choose-how-to-manage-devices), aby uzyskać więcej informacji.
+> W przypadku zarządzania komputerami z systemem Windows 10 za pomocą oprogramowania klienta Intune nie można użyć zasad i ustawień opisanych w tym temacie. Aby zastosować te ustawienia, urządzenia z systemem Windows 10 muszą być zarejestrowane w usłudze Intune.
 
 ## Ustawienia ogólnych zasad konfiguracji
 
-**Ogólne zasady konfiguracji** usługi Microsoft Intune dla systemu Windows 10 umożliwiają konfigurowanie ogólnych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile. Nie można używać tych zasad, gdy komputery z systemem Windows 10 są zarządzane przy użyciu oprogramowania klienckiego usługi Intune.
+**Ogólne zasady konfiguracji** usługi Microsoft Intune dla systemu Windows 10 umożliwiają konfigurowanie ogólnych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile. 
 
 
 ### Hasło
@@ -168,6 +166,7 @@ Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 |**Interwał aktualizacji sygnatur**|Określa interwał, z jakim usługa Defender będzie sprawdzać dostępność nowych plików sygnatur.|
 |**Zezwalaj na ochronę w chmurze**|Zezwala usłudze Microsoft Active Protection na odbieranie informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń lub blokuje tę możliwość. Te informacje służą ulepszaniu usługi w przyszłości.|
 |**Pytaj użytkowników o przesyłane próbki**|Określa, czy do firmy Microsoft są automatycznie wysyłane pliki, które mogą wymagać dalszej analizy ze strony firmy Microsoft w celu określenia, czy są złośliwe.|
+|**Wykrywanie potencjalnie niechcianych aplikacji**|Przy użyciu tego ustawienia można chronić zarejestrowane urządzenia stacjonarne z systemem Windows przed uruchamianiem oprogramowania sklasyfikowanego przez program Windows Defender jako potencjalnie niechciane. Można chronić komputery przed uruchamianiem tych aplikacji lub używać trybu inspekcji, aby zgłaszać zdarzenia instalowania potencjalnie niechcianych aplikacji.|
 |**Pliki i foldery do wykluczenia w trakcie skanowania lub używania ochrony w czasie rzeczywistym**|Dodaj do listy wykluczeń jeden lub więcej plików i folderów, na przykład **C:\ścieżka** lub **%ProgramFiles%\ścieżka\nazwa_pliku.exe**. Te pliki i foldery nie będą uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.|
 |**Rozszerzenia plików, które mają zostać wykluczone podczas przeprowadzania skanowania lub stosowania ochrony w czasie rzeczywistym**|Dodaj do listy wykluczeń jedno lub więcej rozszerzeń plików, na przykład **jpg** lub **txt**. Żadne pliki z tymi rozszerzeniami nie będą uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.|
 |**Procesy, które mają zostać wykluczone podczas przeprowadzania skanowania lub stosowania ochrony w czasie rzeczywistym**|Dodaj jeden lub więcej procesów typu **exe**, **com** lub **scr** do listy wykluczeń. Te procesy nie będą uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.| 
@@ -332,6 +331,7 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

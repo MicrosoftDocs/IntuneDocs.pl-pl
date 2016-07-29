@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Ustawienia zasad MAM systemu iOS | Microsoft Intune
-description:
-keywords:
+description: "W tym temacie opisano ustawienia zasad zarządzania aplikacjami mobilnymi dla urządzeń z systemem iOS."
+keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 09bf7d1343580f7688671bf94d83f40f0a3405c5
+ms.openlocfilehash: e0db92b6ecf7a552589ea805f6507ca59e6554b1
+
 
 ---
 
@@ -43,6 +37,8 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
   - **Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.
 
   Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji.
+
+  **To ustawienie nie kontroluje użycia funkcji Otwórz za pomocą na urządzeniach przenośnych. Informacje dotyczące zarządzania funkcją Otwórz za pomocą można znaleźć [tutaj](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)**.
 
   **Wartość domyślna = Aplikacje zarządzane przez zasady**
 
@@ -83,7 +79,7 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
   Po włączeniu tego ustawienia użytkownik końcowy musi skonfigurować i stosować numer PIN, aby uzyskać dostęp do urządzenia.  Jeśli nie skonfigurowano numeru PIN, aplikacje nie będą uruchamiane, a użytkownik końcowy otrzyma monit o ustawienie numeru PIN z następującym komunikatem: „Firma wymaga włączenia numeru PIN urządzenia w celu uzyskania dostępu do tej aplikacji”.
 
   **Wartość domyślna — Nie wybrano opcji szyfrowania.**
-- **ContactSyncDisabled:** wybierz opcję **Tak**, aby uniemożliwić synchronizację informacji kontaktowych z aplikacją natywnej książki adresowej na urządzeniu. W przypadku wybrania opcji **Nie** aplikacja zapisuje dane kontaktowe w aplikacji natywnej książki adresowej urządzenia.
+- **Disable contact sync:** wybierz opcję **Tak**, aby uniemożliwić synchronizowanie informacji kontaktowych z aplikacją natywnej książki adresowej na urządzeniu. W przypadku wybrania opcji **Nie** aplikacja zapisuje dane kontaktowe w aplikacji natywnej książki adresowej urządzenia.
 
   Wykonanie selektywnego czyszczenia w celu usunięcia danych firmy powoduje usunięcie kontaktów zsynchronizowanych bezpośrednio z aplikacji do natywnej książki adresowej. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie ta opcja ma zastosowanie tylko do aplikacji **Microsoft Outlook**.
 
@@ -117,6 +113,7 @@ Na urządzeniach z systemem iOS możesz zezwolić użytkownikom na identyfikacj�
   **Wartość domyślna = 90 dni**
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

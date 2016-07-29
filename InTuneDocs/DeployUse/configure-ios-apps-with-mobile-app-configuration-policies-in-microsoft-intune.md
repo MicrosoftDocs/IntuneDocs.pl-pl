@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Użycie zasad konfiguracji aplikacji mobilnych systemu iOS | Microsoft Intune"
+description: "Zasady konfiguracji aplikacji mobilnych w usłudze Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację systemu iOS."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: faf65ddbb4772f8c0ce0a4125bb108b3b1bcfb5c
+
 
 ---
 
@@ -52,7 +46,7 @@ Tych zasad nie można wdrażać bezpośrednio do użytkowników i urządzeń. W 
 
 ## Konfigurowanie zasad konfiguracji aplikacji mobilnych
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
 2.  Na liście zasad rozwiń węzeł **iOS**, kliknij pozycję **Konfiguracja aplikacji mobilnej**, a następnie kliknij pozycję **Utwórz zasady**.
 
@@ -74,22 +68,14 @@ Tych zasad nie można wdrażać bezpośrednio do użytkowników i urządzeń. W 
     > &lt;liczba rzeczywista&gt;
     > &lt;ciąg&gt;
     > &lt;tablica&gt;
-    > &lt;dict&gt;
-    > &lt;prawda /&gt; lub &lt;fałsz /&gt;
+    > &lt;słownik&gt;
+    > &lt;true /&gt; lub &lt;false /&gt;
     > 
     > Aby uzyskać więcej informacji na temat typów danych, zobacz temat [Listy właściwości — informacje](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) w bibliotece deweloperów systemu iOS.
     >
         > Ponadto usługa Intune obsługuje następujące typy tokenów na liście właściwości:
     >    
-    > \{\{userprincipalname\}\} — (Przykład: **John@contoso.com**)
-    > \{\{mail\}\} — (Przykład: **John@contoso.com**)
-    > \{\{partialupn\}\} — (Przykład: **John**)
-    > \{\{accountid\}\} — (Przykład: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-    > \{\{deviceid\}\} — (Przykład: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-    > \{\{userid\}\} — (Przykład: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-    > \{\{username\}\} — (Przykład: **John Doe**)
-    > \{\{serialnumber\}\} — (Przykład: **F4KN99ZUG5V2**) dla urządzeń z systemem iOS
-    > \{\{serialnumberlast4digits\}\} — (Przykład: **G5V2**) dla urządzeń z systemem iOS
+    > \{\{userprincipalname\}\} — (przykład: **John@contoso.com**) \{\{mail\}\} — (przykład: **John@contoso.com**) \{\{partialupn\}\} — (przykład: **John**) \{\{accountid\}\} — (przykład: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**) \{\{deviceid\}\} — (przykład: **b9841cd9-9843-405f-be28-b2265c59ef97**) \{\{userid\}\} — (przykład: **3ec2c00f-b125-4519-acf0-302ac3761822**) \{\{username\}\} — (przykład: **John Doe**) \{\{serialnumber\}\} — (przykład: **F4KN99ZUG5V2**) dla urządzeń z systemem iOS \{\{serialnumberlast4digits\}\} — (przykład: **G5V2**) dla urządzeń z systemem iOS
 >
 > Znaki \{\{ i \}\} są używane tylko przez typy tokenów i nie mogą być używane do innych celów.
 
@@ -101,7 +87,7 @@ Tych zasad nie można wdrażać bezpośrednio do użytkowników i urządzeń. W 
     > [!IMPORTANT]
     > Po kliknięciu pozycji **Sprawdź poprawność**usługa Intune sprawdza, czy wprowadzony kod XML ma prawidłowy format. Nie sprawdza ona, czy lista właściwości XML będzie współdziałać z aplikacją, z którą została skojarzona.
 
-6.  Następnie kliknij pozycję **Zapisz zasady**.
+6.  Następnie kliknij przycisk **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** .
 
@@ -115,7 +101,7 @@ Następnie kontynuuj wdrażanie i monitorowanie wdrożenia aplikacji w zwykły s
 Po uruchomieniu wdrożonej aplikacji na urządzeniu zostaną uruchomione ustawienia skonfigurowane w zasadach konfiguracji aplikacji mobilnej.
 
 > [!TIP]
-> Jeśli co najmniej jedne zasady konfiguracji aplikacji mobilnej wywołują konflikt, żadne zasady nie są narzucane, a konflikt jest zgłaszany na **pulpicie nawigacyjnym** konsoli administracyjnej usługi Intune..
+> Jeśli co najmniej jedne zasady konfiguracji aplikacji mobilnej wywołują konflikt, żadne zasady nie są wymuszane, a konflikt jest zgłaszany na **pulpicie nawigacyjnym** konsoli administracyjnej usługi Intune.
 
 ## Przykładowy format pliku XML konfiguracji aplikacji mobilnej
 
@@ -150,6 +136,7 @@ Podczas tworzenia pliku konfiguracji aplikacji mobilnej można określić co naj
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

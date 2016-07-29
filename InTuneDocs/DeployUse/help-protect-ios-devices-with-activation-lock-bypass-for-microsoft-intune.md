@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrona urządzeń z systemem iOS przez obejście blokady aktywacji w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie blokadą aktywacji systemu iOS na urządzeniach | Microsoft Intune"
+description: "Usługa Microsoft Intune ułatwia zarządzanie blokadą aktywacji systemu iOS — funkcją aplikacji Znajdź mój iPhone dla urządzeń z systemem iOS 7.1 lub nowszym."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: 724186bdff1ae40e956c1f1c49476d80c7e1d657
+
 
 ---
 
@@ -49,7 +43,7 @@ Aby pomóc w rozwiązaniu tych problemów, firma Apple wprowadziła obejście bl
 > Tryb nadzorowany dla urządzeń z systemem iOS umożliwia zablokowanie urządzenia za pomocą narzędzia Apple Configurator w celu ograniczenia funkcji urządzenia do określonych celów biznesowych. Tryb nadzorowany jest przeznaczony praktycznie tylko dla urządzeń należących do firm.
 
 ## Jak usługa Intune pomaga w zarządzaniu blokadą aktywacji
-Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na nadzorowanych i nienadzorowanych urządzeniach z systemem iOS 7.1 lub nowszym. W przypadku urządzeń nadzorowanych usługa Intune może pobrać kod obejścia blokady aktywacji i wystawić go bezpośrednio na urządzeniu. Jeśli zawartość urządzenia została wyczyszczona, możesz bezpośrednio uzyskać dostęp do urządzenia, używając kodu jako nazwy użytkownika i pustego hasła.
+Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na nadzorowanych i nienadzorowanych urządzeniach z systemem iOS 7.1 lub nowszym. Tylko w przypadku urządzeń nadzorowanych usługa Intune może pobrać kod obejścia blokady aktywacji i wystawić go bezpośrednio na urządzeniu. Jeśli zawartość urządzenia została wyczyszczona, możesz bezpośrednio uzyskać dostęp do urządzenia, używając kodu jako nazwy użytkownika i pustego hasła.
 
 **Wiąże się to z następującymi korzyściami dla firmy**:
 
@@ -59,11 +53,11 @@ Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na na
 
 ## Jak użyć obejścia blokady aktywacji z poziomu konsoli administracyjnej usługi Intune
 > [!IMPORTANT]
-> Po obejściu blokady aktywacji na urządzeniu zostanie automatycznie zastosowana nowa blokada aktywacji w przypadku otwarcia aplikacji Znajdź mój iPhone. Dlatego **musisz mieć fizyczny dostęp do urządzenia, aby móc wykonać tę procedurę**..
+> Po obejściu blokady aktywacji na urządzeniu zostanie automatycznie zastosowana nowa blokada aktywacji w przypadku otwarcia aplikacji Znajdź mój iPhone. Dlatego **musisz mieć fizyczny dostęp do urządzenia, aby móc wykonać tę procedurę**.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy**.
 
-2.  Wybierz urządzenie, na którym chcesz obejść blokadę aktywacji. Wybierz pozycję **Obejście blokady aktywacji**..
+2.  Wybierz urządzenie, na którym chcesz obejść blokadę aktywacji. Wybierz pozycję **Obejście blokady aktywacji**.
 
 3.  Przeczytaj komunikat ostrzegawczy. Wybierz przycisk **Tak**, aby kontynuować.
 
@@ -88,11 +82,16 @@ Aby sprawdzić, które urządzenia korzystają z blokady aktywacji, użyj jednej
 
     Wybranie urządzenia w węźle **Wszystkie urządzenia należące do firmy** spowoduje włączenie blokady aktywacji na tym urządzeniu. Zostanie również wyświetlony kod obejścia. Za jego pomocą można ręcznie obejść blokadę aktywacji.
 
+    > [!IMPORTANT]
+    >Usługa Intune pobiera spis urządzeń dla funkcji blokady aktywacji co 7 dni. W związku z tym urządzenia mogą nie być natychmiast wyświetlane ze stanem blokady aktywacji w konsoli usługi Intune.
+
+
 ### Zobacz także
 [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md)
 [Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

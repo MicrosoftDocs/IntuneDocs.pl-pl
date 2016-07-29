@@ -1,47 +1,39 @@
 ---
-# required metadata
-
-title: Rejestrowanie urządzeń przenośnych i instalowanie aplikacji | Usługa Microsoft Intune
-description:
-keywords:
+title: "Rejestrowanie urządzeń przenośnych i instalowanie aplikacji | Usługa Microsoft Intune"
+description: "Wyjaśnia, jak zarejestrować urządzenia przenośne i zainstalować aplikację na urządzeniu zarejestrowanym w usłudze Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: a3a1ef90533296dce7938d12ebe5246f9846685c
+
 
 ---
 
 # Rejestrowanie urządzeń przenośnych i instalowanie aplikacji
-Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi Intune, musisz najpierw ustawić urząd zarządzania urządzeniami przenośnymi, włączyć zarządzanie platformami urządzeń i zarejestrować swoje urządzenia w aplikacji Portal firmy. Następnie możesz wdrożyć aplikację Microsoft Skype opublikowaną w kroku 6.
+Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi Intune, należy najpierw ustawić urząd zarządzania urządzeniami przenośnymi, włączyć zarządzanie dla platform urządzeń oraz zarejestrować urządzenia w aplikacji Portal firmy. Następnie możesz wdrożyć aplikację Microsoft Skype opublikowaną w kroku 6.
 
 ## Włączanie zarządzania urządzeniami i rejestracja urządzeń
 
-1.  **Wybierz usługę Intune jako swój urząd zarządzania urządzeniami przenośnymi**
-    W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Administracja** > **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Ustaw urząd MDM** w obszarze **Zadania**.  Wybierz przycisk **Tak** w oknie dialogowym Urząd MDM.
+1.  **Wybierz usługę Intune jako swój urząd zarządzania urządzeniami przenośnymi** W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Administracja** > **Zarządzanie urządzeniami przenośnymi** i wybierz opcję **Ustaw urząd MDM** w obszarze **Zadania**.  Wybierz przycisk **Tak** w oknie dialogowym Urząd MDM.
     ![Konsola administracyjna. Konfigurowanie usługi Intune jako urzędu MDM](./media/mdmAuthority.png)
 
-2.  **Włącz rozwiązanie MDM dla danej platformy urządzenia**
-    Włącz zarządzanie urządzeniami przenośnymi dla platformy urządzenia, którą chcesz zarządzać. Wymagania różnią się w zależności od używanej platformy:
+2.  **Włącz rozwiązanie MDM dla danej platformy urządzenia** Włącz zarządzanie urządzeniami przenośnymi dla platformy urządzenia, którą chcesz zarządzać. Wymagania różnią się w zależności od używanej platformy:
 
     -   **iOS i Mac OS X**: zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).
 
     -   **Windows Phone**: zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
 
-    -   **System Android**: urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestrację przy użyciu aplikacji portalu firmy dostępnej w sklepie [Google Play](https://play.google.com/store/apps/details?id=com.skype.raider). Nie jest wymagana dodatkowa konfiguracja w usłudze Intune.
+    -   **Android**: urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestrację przy użyciu aplikacji Portal firmy dostępnej w sklepie [Google Play](https://play.google.com/store/apps/details?id=com.skype.raider). Nie jest wymagana dodatkowa konfiguracja w usłudze Intune.
 
 3.  **Rejestrowanie urządzeń**:
 
@@ -51,16 +43,16 @@ Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi In
 
     -   **System Windows Phone 8.1** — użytkownicy instalują aplikację **Portal firmy**, udostępnianą przez firmę Microsoft Corporation w Sklepie Windows Phone, i logują się przy użyciu dodanych wcześniej poświadczeń użytkownika usługi Intune.  Wyświetl **zarejestrowane urządzenia** , aby dodać własne urządzenie.
 
-    -   **System Windows Phone 8.0** — użytkownicy klikają opcje **Ustawienia systemu** &gt; **Aplikacje firmowe** i logują się przy użyciu dodanych wcześniej poświadczeń użytkownika usługi Intune. Aplikacja portalu firmy jest wdrażana na telefonie.
+    -   **System Windows Phone 8.0** — użytkownicy wybierają opcje **Ustawienia systemu** &gt; **Aplikacje firmowe** i logują się przy użyciu dodanych wcześniej poświadczeń użytkownika usługi Intune. Aplikacja Portal firmy jest wdrażana na telefonie.
 
     Po wyświetleniu monitu o **adres serwera**wpisz „manage.microsoft.com”.
 
 ## Instalowanie aplikacji na zarejestrowanym urządzeniu
 W [kroku 6](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) tego przewodnika Szybki start aplikacja Skype została opublikowana w niestandardowej grupie Użytkownicy usługi Intune. Teraz ta aplikacja zostanie zainstalowana na nowo zarejestrowanym urządzeniu.
 
-Otwórz portal firmy na zarejestrowanym urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**..
+Otwórz portal firmy na zarejestrowanym urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**.
 
-Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zobacz [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)..
+Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zobacz [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
 
 
 ### Następne kroki
@@ -71,6 +63,7 @@ Gratulacje! Ostatni krok *przewodnika Szybki start dotyczącego usługi Intune* 
 >[&larr; **Rejestrowanie urządzeń**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Zadania po konfiguracji** &rarr;](.\post-configuration-tasks.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Możliwości zarządzania urządzeniami przenośnymi | Microsoft Intune"
-description: 
+description: "Przeczytaj ten temat, aby dowiedzieć się, jak usługa Intune może pomóc w zarządzaniu urządzeniami przenośnymi, które zostaną zarejestrowane w usłudze."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: 0f460165f251acf95f4af36afa39409d3eb21162
+ms.sourcegitcommit: 23054b2f02d11ca19cd0902ebc1e6fdcf499d1f1
+ms.openlocfilehash: 8f44256fe249c60df8e910858516a25463c8e875
 
 
 ---
@@ -42,7 +42,8 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 |Wdrażanie aplikacji i zarządzanie nimi|Oferuje szeroką gamę narzędzi służących do zarządzania aplikacjami mobilnymi przez cały cykl ich życia, w tym wdrażania aplikacji z plików instalacyjnych i sklepów z aplikacjami, szczegółowego monitorowania stanu aplikacji i usuwania aplikacji.|[Wdrażanie aplikacji w usłudze Microsoft Intune](/intune/deploy-use/deploy-apps)|
 |Zgodne i niezgodne aplikacje|Umożliwia określanie list zgodnych aplikacji (które użytkownicy mogą instalować) i niezgodnych aplikacji (których użytkownicy nie mogą instalować).|[Ustawienia zasad systemu iOS w usłudze Microsoft Intune](/intune/deploy-use/ios-policy-settings-in-microsoft-intune)|
 |Zarządzanie aplikacjami mobilnymi|Skonfiguruj ograniczenia dla aplikacji za pomocą zarządzania aplikacjami mobilnymi dla urządzeń zarządzanych przez usługę Intune i urządzeń niezarządzanych przez usługę Intune. Pomaga to w zwiększeniu bezpieczeństwa danych firmowych przez ograniczenie możliwości wykonywania operacji, takich jak kopiowanie i wklejanie, tworzenia zewnętrznych kopii zapasowych danych i transferu danych między aplikacjami.|[Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)<br><br>[Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)<br /><br />[Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](/intune/deploy-use/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)<br /><br />[Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)|
-|Konfiguracja aplikacji mobilnych|Zasady konfiguracji aplikacji mobilnych umożliwiają określanie wartości ustawień aplikacji systemu iOS, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aplikacja może na przykład wymagać, aby użytkownik określił numer portu w danych logowania. Może to usprawnić konfigurowanie aplikacji i ograniczyć liczbę wezwań pomocy technicznej.|[Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Konfiguracja aplikacji mobilnych systemu iOS|Zasady konfiguracji aplikacji mobilnych umożliwiają określanie wartości ustawień aplikacji systemu iOS, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aplikacja może na przykład wymagać, aby użytkownik określił numer portu w danych logowania. Może to usprawnić konfigurowanie aplikacji i ograniczyć liczbę wezwań pomocy technicznej.|[Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Profile aprowizacji aplikacji mobilnych systemu iOS|Usługa Intune udostępnia narzędzia do aktywnego wdrażania profilów aprowizacji w aplikacjach systemu iOS, które niedługo wygasną.|[Użyj zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapobiec wygaśnięciu aplikacji](/intune/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Managed Browser|Po wdrożeniu programu Managed Browser dla użytkowników, możesz skonfigurować jego zasady w celu kontrolowania witryn sieci Web, które użytkownicy mogą odwiedzać. Ponadto dla programu Managed Browser możesz również stosować zasady zarządzania aplikacjami mobilnymi.|[Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](/intune/deploy-use/manage-internet-access-using-managed-browser-policies)|
 |Usługa Microsoft Passport|Usługa Intune pozwala na integrację z usługą Microsoft Passport for Work, czyli alternatywną metodą logowania dla systemu Windows 10 korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej.|[Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach z usługą Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
 
@@ -68,6 +69,6 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

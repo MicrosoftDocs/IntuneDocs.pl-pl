@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Wymagania dotyczące infrastruktury sieciowej | Microsoft Intune
-description:
-keywords:
+title: "Wymagania dotyczące infrastruktury sieciowej | Microsoft Intune"
+description: "Wymagania dotyczące zapory, portu, domeny i serwera proxy usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 8088765d726a9042b69fb12235994320e732459b
+
 
 ---
 
 # Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej
-Przed skonfigurowaniem usługi Microsoft Intune przejrzyj ten temat i inne wymagania wymienione w artykule [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
+Przed skonfigurowaniem usługi Microsoft Intune przejrzyj ten temat i inne wymagania wymienione w artykule [What to know before you start Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md) (Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune).
 
 W niniejszym temacie omówiono wymagania umożliwiające infrastrukturze sieciowej użytkownika komunikację między urządzeniami, które są zarządzane i które służą do zarządzania subskrypcją usługi Intune, a witrynami sieci Web w Internecie używanymi przez usługę w chmurze.
 
@@ -169,20 +163,11 @@ Można zmodyfikować ustawienia serwerów proxy na poszczególnych komputerach k
 Można też użyć serwera proxy buforującego zawartość w celu [zmniejszenia przepustowości sieci](network-bandwidth-use.md) wykorzystywanej przez klientów usługi Intune.
 
 
-
-## Wymagania dotyczące łącznika Service To Service Connector
-Łącznik Service To Service Connector obsługuje tylko usługę Exchange w chmurze i nie ma wymagań co do infrastruktury lokalnej.
-
-Używanie tego łącznika wymaga spełnienia następujących warunków:
-
--   Należy posiadać subskrypcję usługi Office 365 z dzierżawą programu Exchange Server 2013. Jeśli jest dostępna dzierżawa programu Exchange Server 2013, łącznik obsługuje program Exchange Server 2010 w tym samym środowisku.
-
--   Konto użytkownika używane do instalowania łącznika On-Premises Connector musi być administratorem dzierżawy dla usługi Intune oraz administratorem w dzierżawie programu Exchange z licencją do korzystania z programu Exchange Server 2013.
-
 ### Zobacz także
 [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

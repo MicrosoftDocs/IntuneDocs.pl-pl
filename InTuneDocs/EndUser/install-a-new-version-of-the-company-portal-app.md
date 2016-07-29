@@ -1,50 +1,49 @@
 ---
-# required metadata
-
 title: Instalowanie nowej wersji aplikacji Portal firmy | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/30/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
+ROBOTS: noindex,nofollow
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 529d8020ffda5ffe32542b670a75fd0faa5d6ffe
 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: priyar
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
 # Instalowanie nowej wersji aplikacji Portal firmy
 
-Jeśli używana wersja aplikacji Portal firmy nie jest już obsługiwana lub dostępna jest nowsza wersja aplikacji Portal firmy, użyj poniższych procedur, aby zaktualizować urządzenie.
+Jeśli używana wersja aplikacji Portal firmy nie jest już obsługiwana lub dostępna jest jej nowsza wersja, należy zaktualizować aplikację Portal firmy do nowszej wersji. Skorzystaj z poniższych czynności zgodnych z typem posiadanego urządzenia.
 
-## Aby zaktualizować urządzenie z systemem Android
+## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Android
 
 Sklep Play powiadamia o dostępności nowej wersji aplikacji Portal firmy. W aplikacji Portal firmy nie jest wyświetlany monit. Postępuj zgodnie z instrukcjami w alercie, aby zaktualizować urządzenie.
 
-## Aby zaktualizować urządzenie z systemem iOS
+## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem iOS
 
-Sklep App Store firmy Apple powiadamia o dostępności nowej wersji aplikacji Portal firmy. Postępuj zgodnie z instrukcjami w alercie, aby zaktualizować urządzenie.
+Sklep App Store powiadamia o dostępności nowej wersji aplikacji Portal firmy. 
 
-## Aby zaktualizować urządzenie z systemem Windows
+Aby zaktualizować aplikację Portal firmy:
+
+1. Otwórz stronę sklepu App Store i wyszukaj aplikację **Intune**.
+
+2. Po znalezieniu aplikacji naciśnij przycisk **Aktualizuj** z prawej strony nazwy aplikacji.
+
+## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Windows
 
 1.  Przejdź do Sklepu Windows i wyszukaj ciąg **portal firmy**.
 
 2.  Postępuj zgodnie z instrukcjami instalacji.
 
-    > [!NOTE] Jeśli nie możesz uzyskać dostępu do Sklepu Windows, skontaktuj się z administratorem IT.
+    > [!NOTE]
+    > Jeśli nie możesz uzyskać dostępu do Sklepu Windows, skontaktuj się z administratorem IT.
 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
@@ -57,6 +56,7 @@ Aby uzyskać informacje o innych zadaniach, które możesz wykonać za pomocą s
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

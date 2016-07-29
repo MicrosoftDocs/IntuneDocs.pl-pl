@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Program Endpoint Protection dla komputerów z systemem Windows | Microsoft Intune
-description:
-keywords:
+title: "Program Endpoint Protection dla komputerów z systemem Windows | Microsoft Intune"
+description: "Zabezpiecz zarządzane komputery przy użyciu programu Endpoint Protection, który zapewnia ochronę przed złośliwym oprogramowaniem w czasie rzeczywistym."
+keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 2e0abfb92ef9ecc302e686ea9f30584b9f38d3b0
+
 
 ---
 
 # Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune
 Usługa Microsoft Intune może pomóc w zabezpieczaniu zarządzanych komputerów na wiele sposobów, łącznie z użyciem programu Endpoint Protection, który zapewnia ochronę w czasie rzeczywistym przed złośliwym oprogramowaniem i aktualność definicji złośliwego oprogramowania oraz automatycznie skanuje komputery. Ponadto program Endpoint Protection udostępnia narzędzia, które ułatwiają radzenie sobie z atakami złośliwego oprogramowania i ich monitorowanie.
 
-Jeśli klient usługi Intune nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md)..
+Jeśli klient usługi Intune nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 W poniższych sekcjach przedstawiono informacje pomocne w konfigurowaniu, wdrażaniu i monitorowaniu programu Endpoint Protection.
 
@@ -70,7 +64,7 @@ Wdrożone zasady programu Endpoint Protection można wyświetlić w obszarze rob
 
 |Ustawienie zasad|Szczegóły|
 |------------------|--------------------|
-|**Zainstaluj program Endpoint Protection**|Ustawienie wartości **Tak** spowoduje zainstalowanie programu Endpoint Protection na zarządzanych komputerach. W przypadku wykrycia podczas instalacji aplikacji ochrony punktu końcowego innej firmy program Endpoint Protection nie zostanie zainstalowany, chyba że zasady **Zainstaluj program Endpoint Protection, nawet jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego** mają ustawioną wartość **Tak**. **Uwaga:** Program Endpoint Protection usługi Intune jest domyślnie instalowany na zarządzanych komputerach. Jeśli nie chcesz instalować programu Endpoint Protection na zarządzanych komputerach, musisz jawnie ustawić te zasady na wartość **Nie**. Jeśli program Endpoint Protection został wcześniej zainstalowany i zasady zostaną zmienione na wartość **Nie**, klient programu Endpoint Protection zostanie odinstalowany.<br />Zalecana wartość: **Tak**|
+|**Zainstaluj program Endpoint Protection**|Ustawienie wartości **Tak** spowoduje zainstalowanie programu Endpoint Protection na zarządzanych komputerach. W przypadku wykrycia podczas instalacji aplikacji ochrony punktu końcowego innej firmy program Endpoint Protection nie zostanie zainstalowany, chyba że zasady **Zainstaluj program Endpoint Protection, nawet jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego** mają ustawioną wartość **Tak**. **Uwaga**: program Endpoint Protection usługi Intune jest domyślnie instalowany na zarządzanych komputerach. Jeśli nie chcesz instalować programu Endpoint Protection na zarządzanych komputerach, musisz jawnie ustawić te zasady na wartość **Nie**. Jeśli program Endpoint Protection został wcześniej zainstalowany i zasady zostaną zmienione na wartość **Nie**, klient programu Endpoint Protection zostanie odinstalowany.<br />Zalecana wartość: **Tak**|
 |**Zainstaluj program Endpoint Protection, nawet jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego**|Ustaw wartość **Tak**, aby zainstalować program Endpoint Protection usługi Microsoft Intune nawet wtedy, gdy inna aplikacja ochrony punktu końcowego zostanie wykryta.<br /><br />Zalecana wartość: **Tak**|
 |**Włącz program Endpoint Protection**|Ustaw wartość **Tak**, aby włączyć program Endpoint Protection usługi Microsoft Intune na komputerach, na których jest zainstalowany klient programu Endpoint Protection.<br /><br />Jeśli ustawisz wartość **Nie**, a program Endpoint Protection usługi Microsoft Intune jest zainstalowany, interfejs użytkownika klienta programu Endpoint Protection nie będzie widoczny i wszystkie funkcje ochrony będą nieaktywne.<br /><br />Zalecana wartość: **Tak**|
 |**Wyłącz interfejs użytkownika klienta**|Ustawienie wartości **Tak** spowoduje ukrycie interfejsu użytkownika klienta programu Endpoint Protection usługi Microsoft Intune (wprowadzenie zmian wymaga ponownego uruchomienia komputera klienta).<br /><br />Zalecana wartość: **Nie**|
@@ -128,7 +122,7 @@ Ustawienie **Pliki i foldery do wykluczenia w trakcie skanowania lub używania o
 
 ### Ustawienia wykluczonych procesów
 
-Ustawienie **Procesy, które mają zostać wykluczone podczas przeprowadzania skanowania lub stosowania ochrony w czasie rzeczywistym** umożliwia wykluczenie konkretnych procesów, jeśli zostanie uruchomione skanowanie lub funkcja ochrony w czasie rzeczywistym. Można wykluczać tylko pliki z następującymi rozszerzeniami: **exe**, **com** i **scr**..
+Ustawienie **Procesy, które mają zostać wykluczone podczas przeprowadzania skanowania lub stosowania ochrony w czasie rzeczywistym** umożliwia wykluczenie konkretnych procesów, jeśli zostanie uruchomione skanowanie lub funkcja ochrony w czasie rzeczywistym. Można wykluczać tylko pliki z następującymi rozszerzeniami: **exe**, **com** i **scr**.
 
 ### Ustawienia wykluczonych typów plików
 
@@ -139,16 +133,16 @@ Usługa Microsoft Active Protection to społeczność online ułatwiająca odpow
   - **Podstawowe** — do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego złośliwego oprogramowania. Zawierają one informacje o pochodzeniu oprogramowania, działaniach podjętych przez użytkownika lub automatycznie przez program Endpoint Protection, a także informacje o tym, czy działania były skuteczne.
   - **Zaawansowane** — do firmy Microsoft są wysyłane dodatkowe informacje dotyczące złośliwego i potencjalnie niechcianego oprogramowania oraz programów szpiegujących. Obejmują one informacje o lokalizacji oprogramowania, nazwach plików, sposobie działania oprogramowania oraz jego wpływie na komputer.
 
-Możesz też **odbierać definicje dynamiczne utworzone na podstawie raportów społeczności Microsoft Active Protection Service**..
+Możesz też **odbierać definicje dynamiczne utworzone na podstawie raportów społeczności Microsoft Active Protection Service**.
 
 ## Zadania zarządzania dla programu Endpoint Protection
 Poniższe zadania ułatwiają wykonywanie różnych czynności w zakresie zarządzania komputerami, na których działa program Endpoint Protection.
  - Aktualizacja definicji złośliwego oprogramowania
-  - Konsola usługi Intune — w obszarze roboczym **Grupy** wybierz komputery do zaktualizowania. Kliknij pozycję **Zadania zdalne** &gt; **Aktualizacja definicji złośliwego oprogramowania**..
-  - Zarządzany komputer — uruchom oprogramowanie klienckie programu Endpoint Protection z poziomu obszaru powiadomień systemu Windows. Kliknij kartę **Aktualizacja**, a następnie kliknij pozycję **Aktualizuj**..
+  - Konsola usługi Intune — w obszarze roboczym **Grupy** wybierz komputery do zaktualizowania. Kliknij pozycje **Zadania zdalne** &gt; **Aktualizuj definicje złośliwego oprogramowania**.
+  - Zarządzany komputer — uruchom oprogramowanie klienckie programu Endpoint Protection z poziomu obszaru powiadomień systemu Windows. Kliknij kartę **Aktualizacja** , a następnie kliknij pozycję **Aktualizuj**.
  - Uruchom skanowanie w poszukiwaniu złośliwego oprogramowania:
-  - Konsola usługi Intune — w obszarze roboczym **Grupy** wybierz komputery do przeskanowania. Kliknij pozycję **Uruchom pełne skanowanie w poszukiwaniu złośliwego oprogramowania** lub **Uruchom szybkie skanowanie w poszukiwaniu złośliwego oprogramowania**..
-  - Zarządzany komputer — uruchom oprogramowanie klienckie programu Endpoint Protection z poziomu obszaru powiadomień systemu Windows. Wybierz opcję **Szybkie**, **Pełne** lub **Niestandardowe**, a następnie kliknij pozycję **Skanuj teraz**..
+  - Konsola usługi Intune — w obszarze roboczym **Grupy** wybierz komputery do przeskanowania. Kliknij pozycję **Uruchom pełne skanowanie w poszukiwaniu złośliwego oprogramowania** lub **Uruchom szybkie skanowanie w poszukiwaniu złośliwego oprogramowania**.
+  - Zarządzany komputer — uruchom oprogramowanie klienckie programu Endpoint Protection z poziomu obszaru powiadomień systemu Windows. Wybierz opcję **Szybkie**, **Pełne**lub **Niestandardowe**, a następnie kliknij pozycję **Skanuj teraz**.
 
 Stan zadania zdalnego można wyświetlić, klikając link **Zadania zdalne** w prawym dolnym rogu okna konsoli usługi Intune. W oknie dialogowym **Stan zadania zdalnego** są wyświetlane bieżące zadania zdalne, stan zadania, nazwa urządzenia i wszelkie zgłoszone błędy. Okno zawiera również link do informacji dotyczących rozwiązywania problemów, jeśli są one dostępne.
 
@@ -171,19 +165,30 @@ Do monitorowania stanu złośliwego oprogramowania na komputerach służy obszar
 ### Wyświetlanie ostatnich ścieżek wykrywania dla złośliwego oprogramowania na komputerach
 Usługa Intune można wyświetlać maksymalnie 10 ścieżek do ostatnio wykrytych wystąpień złośliwego oprogramowania na urządzeniu. Widok **Ostatnie ścieżki wykrywania** jest domyślnie wyłączony. Aby włączyć ten widok:
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Grupy** > **Wszystkie urządzenia** . **Złośliwe oprogramowanie**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Grupy**  >  **Wszystkie urządzenia** . **Złośliwe oprogramowanie**.
 
 2.  Kliknij prawym przyciskiem myszy nagłówek kolumny. Zostanie wyświetlona lista dostępnych kolumn.
 
 3.  Zaznacz na liście pole wyboru **Ostatnie ścieżki wykrywania** . Pojawi się kolumna **Ostatnie ścieżki wykrywania** , w której jest wyświetlanych maksymalnie 10 najnowszych wystąpień złośliwego oprogramowania monitorowanego na urządzeniu.
 
+## Uruchamianie skanowania w poszukiwaniu złośliwego oprogramowania lub aktualizowanie definicji złośliwego oprogramowania na komputerze
+Usługa Intune można uruchomić szybkie albo pełne skanowanie w poszukiwaniu złośliwego oprogramowania za pomocą programu Endpoint Protection lub Windows Defender na zdalnym komputerze zarządzanym z zainstalowanym klientem usługi Intune.
+
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Grupy** > **Przegląd** > **Wszystkie urządzenia** > **Wszystkie komputery** i wybierz komputer docelowy.
+
+2. Kliknij listę rozwijaną **Zadania zdalne**, a następnie wybierz zadanie. Zadanie do uruchomienia na komputerze zdalnym.
+
+
+
+
 ## Potrzebujesz dodatkowej pomocy?
-Aby uzyskać dalszą pomoc i wsparcie techniczne, zobacz [Rozwiązywanie problemów z programem Endpoint Protection w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune)..
+Aby uzyskać dalszą pomoc i wsparcie techniczne, zobacz [Rozwiązywanie problemów z programem Endpoint Protection w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune).
 
 ### Zobacz też
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

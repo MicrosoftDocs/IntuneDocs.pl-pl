@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Monitorowanie wdrożeń aplikacji| Microsoft Intune
-description:
-keywords:
+title: "Monitorowanie wdrożeń aplikacji| Microsoft Intune"
+description: "Dowiedz się, jak monitorować aplikacje wdrożone za pomocą usługi Intune."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: d2af901a322a7e4a35b4708cb60c70010314b0bb
+
 
 ---
 
@@ -54,6 +48,7 @@ Tak jak wcześniej można użyć listy rozwijanej **Filtry**, aby skonfigurować
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

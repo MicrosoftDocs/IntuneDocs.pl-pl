@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurowanie łącznika Microsoft Intune Exchange Connector dla hostowanej instalacji programu Exchange | Microsoft Intune
-description:
-keywords:
+title: "Łącznik Exchange Connector dla hostowanego programu Exchange | Microsoft Intune"
+description: "Połączenie usługi Intune z programem Exchange usługi Office 365 umożliwia obsługę funkcji zarządzanie urządzeniami przenośnymi usługi Exchange ActiveSync."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 63697222f024169d9450b9f4fea8c666353e72cc
+
 
 ---
 
@@ -64,11 +58,12 @@ Ponadto musisz utworzyć konto użytkownika usługi Exchange Online, które będ
 
 ## Weryfikacja połączenia z programem Exchange
 
-Po pomyślnym skonfigurowaniu programu Exchange Connector w konsoli administracyjnej usługi Intune wybierz obszar roboczy **ADMINISTRACJA** i przejdź do sekcji **Zarządzanie urządzeniami przenośnymi** > **Microsoft Exchange**, a następnie sprawdź, czy podane szczegółowe informacje są wyświetlane w polu **Informacje o połączeniu z programem Exchange**..
+Po pomyślnym skonfigurowaniu programu Exchange Connector w [konsoli administracyjnej usługi Intune](http://manage.microsoft.com) wybierz obszar roboczy **Administracja** i przejdź do sekcji **Zarządzanie urządzeniami przenośnymi** > **Microsoft Exchange**, a następnie sprawdź, czy podane szczegółowe informacje są wyświetlane w polu **Informacje o połączeniu z programem Exchange**.
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

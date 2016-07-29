@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Sieć Wi-Fi z użyciem klucza wstępnego | Microsoft Intune
-description: 
-keywords:
+title: "Sieć Wi-Fi z użyciem klucza wstępnego | Microsoft Intune"
+description: "Utwórz profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji Konfiguracja niestandardowa."
+keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: 
+ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: afdd0c3569c0c294a9bef47755de2d9e77e7507d
+
 
 
 ---
@@ -186,13 +180,13 @@ Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi:
 3.     Wyszukaj plik z odpowiednią nazwą wśród plików XML.
 4.     Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
 
-## Wdrożenie zasad
+## Wdrażanie zasad
 
 1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
 
     -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
 
@@ -202,6 +196,7 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 [Połączenia Wi-Fi w usłudze Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

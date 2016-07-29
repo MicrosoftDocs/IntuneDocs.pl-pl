@@ -1,26 +1,27 @@
 ---
-title: "Co się stanie w przypadku zresetowania urządzenia przy użyciu Portalu firmy? | Microsoft Intune"
+title: "Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy? | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5d4e31a2-7bda-4d62-a0ba-c31e77ecea03
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 565ada54c6267d38764f3e1049b5569da1f796cd
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: ccadd02107f96c680cadd4e3b7a337292c530bae
 
 
 ---
 
 
-# Co się stanie w przypadku zresetowania urządzenia przy użyciu Portalu firmy?
+# Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy?
 
 Jeśli użyjesz Portalu firmy do zresetowania urządzenia z systemem Android, wszystkie aplikacje, ustawienia i dane osobiste zostaną usunięte z urządzenia, a urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
 
@@ -36,6 +37,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

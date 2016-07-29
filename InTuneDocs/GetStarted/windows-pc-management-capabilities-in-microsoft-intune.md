@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Możliwości zarządzania komputerami z systemem Windows | Microsoft Intune
-description:
-keywords:
+title: "Możliwości zarządzania komputerami z systemem Windows | Microsoft Intune"
+description: "Dowiedz się więcej o możliwościach usługi Intune podczas zarządzania komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: 28eebfc49eeff6b070ac32a7d2c4bbec59a527b9
+
 
 ---
 
@@ -39,6 +33,8 @@ W większości przypadków będziesz rejestrować urządzenia w usłudze Microso
 -   **Zarządzanie licencjami na oprogramowanie** — śledzenie liczby dostępnych licencji na oprogramowanie oraz liczby dostępnych licencji będących w użyciu.
 -   **Wdrażanie aplikacji** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą oprogramowania klienckiego.
 
+
+Usługa Intune obsługuje instalowanie oprogramowania klienckiego na maksymalnie 7000 urządzeń z systemem Windows.
 
 ## Wymagania dotyczące systemu operacyjnego
 Usługa Intune może zarządzać komputerami z następującymi wersjami systemu Windows (x86 i x64):
@@ -77,6 +73,7 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania kom
 [Możliwości zarządzania urządzeniami przenośnymi w usłudze Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

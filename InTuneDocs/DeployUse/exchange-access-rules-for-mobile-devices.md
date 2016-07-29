@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Reguły dostępu do programu Exchange dla urządzeń przenośnych zarządzanych przez usługę Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Reguły dostępu do programu Exchange dla urządzeń przenośnych | Microsoft Intune"
+description: "Reguły dostępu Exchange ActiveSync do zarządzania urządzeniami przenośnymi określają poziom dostępu tych urządzeń do programu Exchange."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: f69c086333e359f7d1bf202a8d13667779bd3c86
+
 
 ---
 
 # Reguły dostępu do programu Exchange dla urządzeń przenośnych
-Reguły dostępu do programu Exchange dla urządzeń przenośnych określają poziom dostępu tych urządzeń do programu Exchange. Te ustawienia dotyczą wszystkich urządzeń przenośnych, włącznie z urządzeniami niezarejestrowanymi w usłudze Microsoft Intune. Możesz rozpocząć od zdefiniowania opcji **Reguła domyślna** która będzie stosowana dla wszystkich urządzeń przenośnych, dla których nie zastosowano reguły niestandardowej. Poniższa tabela zawiera poziomy dostępu zarządzane przez program Exchange ActiveSync:
+Reguły dostępu do programu Exchange dla urządzeń przenośnych określają poziom dostępu tych urządzeń do programu Exchange ActiveSync. Te ustawienia dotyczą wszystkich urządzeń przenośnych, włącznie z urządzeniami niezarejestrowanymi w usłudze Microsoft Intune. Możesz rozpocząć od zdefiniowania opcji **Reguła domyślna** która będzie stosowana dla wszystkich urządzeń przenośnych, dla których nie zastosowano reguły niestandardowej. Poniższa tabela zawiera poziomy dostępu zarządzane przez program Exchange ActiveSync:
 
 |Poziom dostępu|Opis|
 |----------------|---------------|
@@ -45,7 +39,7 @@ Poniższa procedura opisuje sposób tworzenia reguły niestandardowej.
 
 ## Tworzenie domyślnej reguły dostępu
 
-1.  Przejdź do [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) &gt; **Zasady** &gt; **Reguły dostępu do serwera Exchange dla urządzeń przenośnych**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycje &gt; **Zasady** &gt; **Reguły dostępu do serwera Exchange dla urządzeń przenośnych**.
 
 2.  Na liście **Reguła domyślna** wybierz regułę dostępu, która ma być stosowana dla wszystkich urządzeń przenośnych, które nie są objęte wyjątkiem określonym za pomocą reguły ani wyjątkiem osobistym. Wybierz polecenie **Zapisz**.
 
@@ -53,11 +47,12 @@ Poniższa procedura opisuje sposób tworzenia reguły niestandardowej.
 
 ## Tworzenie niestandardowej reguły dostępu
 
-1. Przejdź do [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) &gt; **Zasady** &gt; **Reguły dostępu do serwera Exchange dla urządzeń przenośnych**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycje &gt; **Zasady** &gt; **Reguły dostępu do serwera Exchange dla urządzeń przenośnych**.
 
 2.  Na liście **Reguły niestandardowe** wybierz polecenie **Dodaj regułę** i utwórz regułę niestandardową. Wybierz polecenie **Zapisz**.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

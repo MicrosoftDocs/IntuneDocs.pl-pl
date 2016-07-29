@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Jak użytkownicy systemu Windows uzyskują aplikacje | Microsoft Intune
-description:
-keywords:
+title: "Jak użytkownicy systemu Windows uzyskują aplikacje | Microsoft Intune"
+description: "Metody udostępniania aplikacji dla systemu Windows użytkownikom końcowym"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 79495f03d13e41c5175c857ecbb07ed0221c5fe5
+
 
 ---
 
@@ -32,7 +26,7 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzy
 
 **Aplikacje wymagane** — aplikacje, które są wymagane przez administratora i są instalowane na urządzeniu z minimalnym udziałem użytkownika, w zależności od platformy.
 
-**Aplikacje wymagane** — aplikacje znajdujące się na liście aplikacji w Portalu firmy, który użytkownik może opcjonalnie zainstalować.
+**Aplikacje dostępne** — aplikacje znajdujące się na liście aplikacji w Portalu firmy, które użytkownik może opcjonalnie zainstalować.
 
 **Aplikacje zarządzane** — aplikacje, którymi można zarządzać za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Intune Mobile Application Management (MAM) Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można w ich przypadku stosować zasady aplikacji.
 
@@ -43,6 +37,7 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzy
 [Jak użytkownicy systemu iOS uzyskują aplikacje](how-your-ios-users-get-their-apps.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

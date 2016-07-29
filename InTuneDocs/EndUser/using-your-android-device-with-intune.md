@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Korzystanie z urządzenia z systemem Android i usługi Intune | Microsoft Intune
-description:
-keywords:
+title: "Korzystanie z urządzenia z systemem Android i usługi Intune | Microsoft Intune"
+description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem Android, gdy urządzenie jest zarejestrowane w usłudze Intune"
+keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: e0ff9b0b1c31e0037f34e223ff26c2b111c5a0aa
+
 
 ---
 
@@ -52,6 +46,7 @@ Informacje przedstawione w tej sekcji ułatwiają wykonywanie czynności po zare
 - [Wyrejestrowywanie urządzenia w przypadku odrzucenia warunków użytkowania](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Co się stanie w przypadku zresetowania urządzenia z systemem Android przy użyciu aplikacji Portal firmy?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+<!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
 
 ## Rozwiązywanie problemów z urządzeniem
 
@@ -65,10 +60,16 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 - [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](device-doesnt-comply-with-maximum-operating-system-version-android.md)
 - [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Brak wymaganego certyfikatu urządzenia](your-device-is-missing-a-required-certificate-android.md)
+- [Prośba o wyłączenie nieznanych źródeł](you-are-asked-to-turn-off-unknown-sources-android.md)
+- [Prośba o wyłączenie debugowania USB](you-are-asked-to-turn-off-usb-debugging-android.md)
+- [Prośba o włączenie opcji Skanuj urządzenie pod kątem zagrożeń zabezpieczeń](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń](your-device-does-not-meet-the-minimum-security-patch-android.md)
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+
+<!--HONumber=Jul16_HO3-->
 
 

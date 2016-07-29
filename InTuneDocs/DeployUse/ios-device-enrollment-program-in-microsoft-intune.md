@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Zarządzanie programem DEP firmy Apple dla systemu iOS przy użyciu usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie programem DEP firmy Apple dla urządzeń z systemem iOS | Microsoft Intune"
+description: "Aby zarządzać urządzeniami firmy Apple, wdróż profil rejestracji służący do bezprzewodowego rejestrowania urządzeń z systemem iOS zakupionych w ramach programu Device Enrollment Program (DEP)."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: c63badfcbc736476f17b39e09ef189eb4d2c08ef
+
 
 ---
 
 # Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program
-Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie rejestrować urządzenia z systemem iOS zakupione w ramach programu Device Enrollment Program (DEP) „bez udziału użytkownika”. Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia. Urządzenia zarejestrowane w programie DEP nie mogą zostać wyrejestrowane przez użytkowników.
+Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie bezprzewodowo rejestrować urządzenia z systemem iOS zakupione w ramach programu Device Enrollment Program (DEP). Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia. Urządzenia zarejestrowane w programie DEP nie mogą zostać wyrejestrowane przez użytkowników.
 
 ## Zarządzanie programem DEP firmy Apple dla systemu iOS przy użyciu usługi Microsoft Intune
 W celu zarządzania firmowymi urządzeniami z systemem iOS przy użyciu programu Device Enrollment Program (DEP) firmy Apple organizacja musi dołączyć do programu DEP firmy Apple i zakupić urządzenia w ramach tego programu. Szczegóły tego procesu są dostępne pod adresem:  [https://deploy.apple.com](https://deploy.apple.com). Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu połączenia USB.
@@ -59,6 +53,10 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
       - **Monituj o koligację użytkownika:** podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie opcjonalnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik.  **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji).
       - **Brak koligacji użytkownika:** urządzenie nie zostało powiązane z użytkownikiem. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika, w tym aplikacja Portal firmy użyta do zainstalowania aplikacji biznesowych, nie będą działać.
 
+    Możesz także **przypisać urządzenia do następującej grupy**. Kliknij przycisk **Wybierz...**, aby wybrać grupę.
+
+    [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
+
     Następnie włącz opcję **Skonfiguruj ustawienia programu rejestracji urządzeń dla tych zasad** w celu obsługi programu DEP.
 
       ![Okienko Asystenta ustawień](../media/pol-sa-corp-enroll.png)
@@ -78,8 +76,16 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
         - **Usługi lokalizacji** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący usługi podczas aktywacji
         - **Przywracanie** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji
         - **Apple ID** — identyfikator Apple ID jest wymagany do pobierania aplikacji ze sklepu iOS App Store, w tym aplikacji zainstalowanych przez usługę Intune. Jeśli to ustawienie zostało włączone, system iOS wyświetla monit o podanie identyfikatora Apple ID, gdy usługa Intune będzie podejmowała próbę zainstalowania aplikacji bez tego identyfikatora.
-        - **Warunki i postanowienia** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o zaakceptowanie postanowień firmy Apple podczas aktywacji - **Touch ID** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o tę usługę podczas aktywacji - **Apple Pay** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o tę usługę podczas aktywacji - **Zoom** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o tę usługę podczas aktywacji - **Siri** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o tę usługę podczas aktywacji - **Wyślij dane diagnostyczne do firmy Apple** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o tę usługę podczas aktywacji -  **Zezwalaj na dodatkowe zarządzanie przy użyciu programu Apple Configurator** — ustaw na wartość **Nie zezwalaj**, aby uniemożliwić synchronizowanie plików z programem iTunes lub zarządzanie za pomocą narzędzia Apple Configurator. Firma Microsoft zaleca ustawienie na wartość **Nie zezwalaj**, wyeksportowanie dalszej konfiguracji z programu Apple Configurator, a następnie wdrożenie jako niestandardowego profilu konfiguracji systemu iOS za pomocą usługi Intune, a nie używanie tego ustawienia w celu zezwolenia na ręczne wdrożenie z użyciem lub bez użycia certyfikatu.
-        - **Nie zezwalaj** — uniemożliwia komunikację urządzenia przy użyciu połączenia USB (wyłącza parowanie) - **Zezwalaj** — umożliwia komunikację urządzenia przy użyciu połączenia USB dla dowolnego komputera PC lub Mac - **Wymagaj certyfikatu** — umożliwia parowanie z komputerami Mac za pomocą certyfikatu zaimportowanego do profilu rejestracji
+        - **Warunki i postanowienia** — jeśli to ustawienie zostało włączone, Asystent ustawień monituje użytkowników o zaakceptowanie warunków i postanowień firmy Apple podczas aktywacji
+        - **Touch ID** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji
+        - **Apple Pay** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji
+        - **Zoom** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji
+        - **Siri** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji
+        - **Wyślij dane diagnostyczne do firmy Apple** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji
+     -  **Zezwalaj na dodatkowe zarządzanie przy użyciu programu Apple Configurator** —ustawienie wartości **Nie zezwalaj** zapobiega synchronizowaniu plików za pomocą programu iTunes lub zarządzaniu przy użyciu programu Apple Configurator. Firma Microsoft zaleca ustawienie na wartość **Nie zezwalaj**, wyeksportowanie dalszej konfiguracji z programu Apple Configurator, a następnie wdrożenie jako niestandardowego profilu konfiguracji systemu iOS za pomocą usługi Intune, a nie używanie tego ustawienia w celu zezwolenia na ręczne wdrożenie z użyciem lub bez użycia certyfikatu.
+        - **Nie zezwalaj** — uniemożliwia urządzeniu komunikację za pomocą połączenia USB (wyłącza parowanie)
+        - **Zezwalaj** — umożliwia urządzeniu komunikację za pomocą połączenia USB z dowolnym komputerem PC lub Mac
+        - **Wymagaj certyfikatu** — umożliwia parowanie z komputerem Mac przy użyciu certyfikatu zaimportowanego do profilu rejestracji
 
 6.  **Przypisz urządzenia DEP do zarządzania**. Przejdź do [portalu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) i zaloguj się przy użyciu identyfikatora Apple ID Twojej firmy. Wybierz polecenia **Deployment Program** (Program wdrażania) &gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzanie urządzeniami). Określ sposób **wyboru urządzeń**, podaj informacje o urządzeniach i określ szczegóły według numeru seryjnego ( **Serial Number**) urządzenia, numeru zamówienia ( **Order Number**) lub przekaż plik CSV ( **Upload CSV File**). Następnie wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz nazwę serwera &lt;nazwa_serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**.
 
@@ -91,12 +97,15 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
 
 8.  **Dystrybuuj urządzenia do użytkowników**. Urządzenia firmowe mogą zostać teraz przekazane użytkownikom. Po włączeniu urządzenia z systemem iOS zostanie ono zarejestrowane na potrzeby zarządzania przez usługę Intune.
 
+## Zmiany przypisań grup usługi Intune
 
+Od września zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach **profilu rejestracji w firmie**. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Nowe dynamiczne przypisanie do grup urządzeń można zdefiniować w usłudze Azure Active Directory na podstawie nazwy profilu rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Zobacz także
 [Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

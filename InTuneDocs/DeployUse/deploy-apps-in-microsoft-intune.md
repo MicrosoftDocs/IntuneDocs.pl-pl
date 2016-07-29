@@ -1,10 +1,10 @@
 ---
 title: "Wdrażanie aplikacji | Microsoft Intune"
-description: 
+description: "Informacje przedstawione w tym temacie ułatwiają wdrażanie aplikacji przy użyciu usługi Microsoft Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,17 +13,17 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c95a776e79cf3e1c7009d6e27f8f50482434d298
-ms.openlocfilehash: 46562ed3463c4a23a511eb5c7f28a0b11e84f421
+ms.sourcegitcommit: 5ef1d2d69acfeea9670324f580d33b191001ffa9
+ms.openlocfilehash: 8ab2517a11ecb6ae5395814472dfbb3e83da132b
 
 ---
 # Wdrażanie aplikacji w usłudze Microsoft Intune
 
-Informacje przedstawione w tym temacie ułatwiają wdrażanie aplikacji w usłudze Microsoft Intune.
+Informacje przedstawione w tym temacie ułatwiają wdrażanie aplikacji przy użyciu usługi Microsoft Intune.
 
 
 ## Wdrażanie aplikacji
-Poniżej przedstawiono procedurę wdrażania aplikacji na wybranych urządzeniach lub u wybranych użytkowników.
+Poniżej przedstawiono procedurę wdrażania aplikacji w wybranych grupach urządzeń lub użytkowników.
 
 ### Aby wdrożyć aplikację
 
@@ -52,11 +52,11 @@ Poniżej przedstawiono procedurę wdrażania aplikacji na wybranych urządzeniac
 ## Przykład
 
 W tym przykładzie aplikacja została wdrożona na urządzeniu z systemem iOS przy użyciu ustawienia **Dostępne**.
-Aplikacja będzie wyświetlana w Portalu firmy na urządzeniach użytkowników, na których można ją zainstalować. Na przykład na tym zrzucie ekranu pokazano aplikację Bing dla systemu iOS wdrożoną za pomocą typu instalacji **Link zewnętrzny** z ikoną niestandardową i wybraną opcją **Wyświetlaj jako polecaną aplikację i wyróżnij w Portalu firmy**.
-    ![iOS — aplikacja dostępna](./media/available-install-on-iOS.png)
+Aplikacja będzie wyświetlana w Portalu firmy na urządzeniach użytkowników, na których można ją zainstalować. Na przykład na tym zrzucie ekranu pokazano aplikację Bing dla systemu iOS wdrożoną za pomocą typu instalacji **Link zewnętrzny** z ikoną niestandardową i wybraną opcją **Wyświetlaj jako polecaną aplikację i wyróżnij w Portalu firmy**.  
+![iOS — aplikacja dostępna](./media/available-install-on-iOS.png)
 
-Jeśli aplikacja została wdrożona na urządzeniu z systemem iOS przy użyciu ustawienia **Wymagane**, użytkownik otrzyma powiadomienie o tym, że aplikacja jest gotowa do zainstalowania. Na przykład na tym zrzucie ekranu pokazano aplikację Foldery robocze dla systemu iOS wdrożoną za pomocą typu instalacji **Zarządzana aplikacja systemu iOS ze sklepu App Store**.
-    ![iOS — aplikacja wymagana](./media/iOS-Required-install.PNG)
+Jeśli aplikacja została wdrożona na urządzeniu z systemem iOS przy użyciu ustawienia **Wymagane**, użytkownik otrzyma powiadomienie o tym, że aplikacja jest gotowa do zainstalowania. Na przykład na tym zrzucie ekranu pokazano aplikację Foldery robocze dla systemu iOS wdrożoną za pomocą typu instalacji **Zarządzana aplikacja systemu iOS ze sklepu App Store**.  
+![iOS — aplikacja wymagana](./media/iOS-Required-install.PNG)
 
 ## Następne kroki
 
@@ -64,6 +64,6 @@ Po wdrożeniu aplikacji możesz monitorować jej postęp. Aby uzyskać więcej i
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

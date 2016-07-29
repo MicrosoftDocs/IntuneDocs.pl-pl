@@ -1,9 +1,9 @@
 ---
-title: "Wyrejestrowywanie urządzenia z usługi Intune | Microsoft Intune"
-description: 
+title: "Wyrejestrowywanie urządzenia z systemem Android z usługi Intune | Microsoft Intune"
+description: "Opis sposobu wyrejestrowania urządzenia z systemem Android z usługi Intune"
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,18 +13,20 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: db9755013320f11bd58fa94275274ad6ba2b5e9a
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 18b34de09cc24730cca6eacb0d5d2c5f99c24d1e
 
 
 ---
 
 
-# Wyrejestrowywanie urządzenia z usługi Intune
+# Wyrejestrowanie urządzenia z systemem Android z usługi Intune
 
 Po wyrejestrowaniu z usługi Intune urządzenie z systemem Android nie może uzyskiwać dostępu do zasobów firmy.  Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
-Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Portal firmy, wykonaj poniższe kroki lub obejrzyj ten [klip wideo](http://aka.ms/gyq2du):
+Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Portal firmy, wykonaj poniższe kroki lub obejrzyj ten film wideo:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=K-Vi7lNfaMk&feature=youtu.be" frameborder="0" allowfullscreen></iframe> 
 
 1.  Zaloguj się w aplikacji Portal firmy.
 
@@ -40,12 +42,13 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
     ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
-### Zobacz także
+
+### Zobacz też
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

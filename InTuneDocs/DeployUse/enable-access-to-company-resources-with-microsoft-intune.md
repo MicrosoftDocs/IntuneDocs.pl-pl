@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zapewnianie dostępu do zasobów firmy | Usługa Microsoft Intune
-description:
-keywords:
+title: "Zapewnianie dostępu do zasobów firmy | Usługa Microsoft Intune"
+description: "Profile sieci Wi-Fi, sieci VPN i poczty e-mail działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do pracy."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 9448b5fd9121a3bce33b947c79fee7290d2a43f9
+
 
 ---
 
@@ -51,7 +45,7 @@ Tworzenie, wdrażanie i monitorowanie ustawień natywnego klienta poczty e-mail 
 |---------------------|---------------------------|---|-------|------------|
 |Nie|Tak|Tak|Nie|Tak|
 > [!NOTE]
-> [Ten wpis w blogu zespołu usługi Intune](http://blogs.technet.com/b/microsoftintune/archive/2015/02/23/using-oma-uri-to-create-custom-wi-fi-profiles-for-windows-phone-8-1.aspx) zawiera informacje dotyczące sposobu konfigurowania profilu sieci Wi-Fi systemu Windows Phone 8.1 przy użyciu identyfikatora OMA-URI.
+> [Ten wpis w blogu zespołu usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/19/using-oma-uri-to-create-custom-wi-fi-profiles-for-windows-phone-8-1/) zawiera informacje dotyczące sposobu konfigurowania profilu sieci Wi-Fi systemu Windows Phone 8.1 przy użyciu identyfikatora OMA-URI.
 
 ## [Profile certyfikatów](secure-resource-access-with-certificate-profiles.md) i obsługiwane platformy
 Ułatwienie bezpiecznego dostępu do zasobów firmowych z uwzględnieniem połączeń sieci bezprzewodowych i sieci VPN.
@@ -61,6 +55,7 @@ Ułatwienie bezpiecznego dostępu do zasobów firmowych z uwzględnieniem połą
 |Tak|Tak|Tak|Tak|Tak|
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Wdrażanie i monitorowanie zasad zgodności w usłudze Microsoft Intune | Microsoft Intune"
-description: 
+title: "Wdrażanie i monitorowanie zasad zgodności | Microsoft Intune"
+description: "Instrukcje krok po kroku w tym temacie opisują sposób wdrażania i monitorowania zasad zgodności urządzeń."
 keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 52da5cf6d14a5fc3ff3db6bdb07823d3bf373466
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 42d326dbe937724141213dacc133aefe5020a61d
 
 
 ---
@@ -31,7 +31,8 @@ Wdróż [utworzone](create-a-device-compliance-policy-in-microsoft-intune.md) pr
 
 Podsumowanie stanu oraz alerty na stronie **Przegląd** obszaru roboczego **Zasady** umożliwiają zidentyfikowanie problemów z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym **Pulpit nawigacyjny** jest wyświetlane podsumowanie stanu.
 
-> [!IMPORTANT]Jeśli zasady zgodności nie zostaną wdrożone i włączysz zasady dostępu warunkowego do programu Exchange, wszystkie objęte nimi urządzenia będą miały dostęp.
+> [!IMPORTANT]
+> Jeśli zasady zgodności nie zostaną wdrożone i włączysz zasady dostępu warunkowego do programu Exchange, wszystkie objęte nimi urządzenia będą miały dostęp.
 
 ## Jak są rozwiązywane konflikty zasad usługi Intune
 Konflikty zasad mogą wystąpić z powodu zastosowania wielu zasad usługi Intune na urządzeniu. Jeśli ustawienia zasad nakładają się na siebie, usługa Intune rozwiązuje konflikty, używając następujących reguł:
@@ -71,6 +72,6 @@ Teraz możesz zacząć stosować zasady zgodności wraz z zasadami dostępu waru
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

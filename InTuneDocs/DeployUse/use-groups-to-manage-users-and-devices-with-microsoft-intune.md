@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Używanie grup do zarządzania użytkownikami i urządzeniami | Microsoft Intune
-description:
-keywords:
+title: "Używanie grup do zarządzania użytkownikami i urządzeniami | Microsoft Intune"
+description: "Utwórz grupy i zarządzaj nimi za pomocą obszaru roboczego Grupy."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: Arob98
+ms.date: 06/20/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: lpatha
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 72288296d966b9b9fae4fd721b4460528213f626
+ms.openlocfilehash: 42328ee749517fd5abf923db35e7b13747e9f14b
+
 
 ---
 
@@ -43,7 +37,7 @@ Ponadto wyświetlana jest hierarchia grup z podsumowaniami stanów ułatwiający
 >
 > Prawdopodobnie należy utworzyć zasady domyślne odnoszące się do wszystkich grup i urządzeń w celu ustalenia podstawowych wymagań zgodności w firmie. Następnie można utworzyć bardziej szczegółowe zasady dla najszerszych kategorii użytkowników i urządzeń, na przykład zasady poczty e-mail dla poszczególnych systemów operacyjnych urządzeń.
 >
-> Należy nadawać zasadom odpowiednie nazwy, aby można je było później łatwo rozpoznać. Właściwą opisową nazwą zasad może być na przykład **Zasady poczty e-mail WP dla całej firmy**..
+> Należy nadawać zasadom odpowiednie nazwy, aby można je było później łatwo rozpoznać. Na przykład, właściwą opisową nazwą zasad może być **Zasady poczty e-mail WP dla całej firmy**.
 >
 > Za każdym razem, gdy tworzy się zasady ograniczające, należy o nich poinformować użytkowników, więc po utworzeniu bardziej ogólnych grup i zasad należy zwrócić uwagę na sposób tworzenia mniejszych grup, aby ograniczyć zbędny przepływ informacji.
 
@@ -52,7 +46,7 @@ Ponadto wyświetlana jest hierarchia grup z podsumowaniami stanów ułatwiający
 
 1.  W konsoli administracyjnej usługi Intune wybierz pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
 
-2.  Podaj nazwę i opcjonalny opis grupy oraz wybierz grupę urządzeń jako grupę nadrzędną. Wybierz pozycję **Dalej**..
+2.  Podaj nazwę i opcjonalny opis grupy oraz wybierz grupę urządzeń jako grupę nadrzędną. Wybierz pozycję **Next** (Dalej).
 
 3.  Na stronie **Zdefiniuj kryteria członkostwa** wybierz typ urządzeń, które będą znajdować się w grupie. Dodatkowe opcje umożliwiające skonfigurowanie grupy są dostępne w zależności od typu wybranych urządzeń:
 
@@ -73,7 +67,7 @@ Nowo utworzona grupa będzie umieszczona na liście **Grupy** w obszarze roboczy
 
 1.  W konsoli administracyjnej usługi Intune wybierz pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
 
-2.  Podaj nazwę i opcjonalny opis grupy oraz wybierz grupę użytkowników jako grupę nadrzędną. Wybierz pozycję **Dalej**..
+2.  Podaj nazwę i opcjonalny opis grupy oraz wybierz grupę użytkowników jako grupę nadrzędną. Wybierz pozycję **Next** (Dalej).
 
 3.  Na stronie **Zdefiniuj kryteria członkostwa** określ, czy mają zostać dołączeni wszyscy członkowie grupy nadrzędnej, czy też chcesz rozpocząć od pustej grupy.  Możesz dołączyć lub wykluczyć członków na podstawie **grup zabezpieczeń** użytkowników skonfigurowanych ręcznie w [centrum administracyjnym usługi Office 365](http://go.microsoft.com/fwlink/?LinkId=698854) lub synchronizowanych z lokalnej usługi Active Directory. Jeśli nastąpi zmiana członkostwa grupy zabezpieczeń, członkostwo grup użytkowników opartych na tej grupie zabezpieczeń może także ulec zmianie.
 
@@ -81,7 +75,7 @@ Nowo utworzona grupa będzie umieszczona na liście **Grupy** w obszarze roboczy
     > Obecnie w przypadku grupy zawierającej członków z określonych grup zabezpieczeń lub grup kierowników oraz wykluczenia członków z określonych grup początkowo dołączeni członkowie zostaną usunięci. Przed utworzeniem grupy zawierającej dołączonych i wykluczonych członków zalecamy utworzenie grupy nadrzędnej z dołączonymi członkami, a następnie utworzenie grupy podrzędnej zawierającej wykluczonych członków. Grupy podrzędnej będzie można używać na potrzeby zasad usługi Intune, profili i dystrybucji aplikacji.
 
     > [!NOTE]
-    > W Portalu zarządzania Azure można utworzyć grupę kierownika, któremu podlegają użytkownicy. Jest to grupa dynamiczna, której członkowie zmieniają się wraz z dodawaniem lub usuwaniem pracowników w zespole danego kierownika w usłudze Azure Active Directory. Procedurę tworzenia grupy kierownika na platformie Azure opisano w artykule [Using attributes to create advanced rules](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) (Tworzenie zaawansowanych reguł przy użyciu atrybutów) w sekcji **To configure a group as a “Manager” group** (Aby skonfigurować grupę jako grupę kierownika)..
+    > W Portalu zarządzania Azure można utworzyć grupę kierownika, któremu podlegają użytkownicy. Jest to grupa dynamiczna, której członkowie zmieniają się wraz z dodawaniem lub usuwaniem pracowników w zespole danego kierownika w usłudze Azure Active Directory. Procedurę tworzenia grupy kierownika na platformie Azure opisano w artykule [Using attributes to create advanced rules](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) (Tworzenie zaawansowanych reguł przy użyciu atrybutów) w sekcji **To configure a group as a “Manager” group** (Aby skonfigurować grupę jako grupę kierownika).
 
 
 4.  Na stronie **Zdefiniuj członkostwo bezpośrednie** dołącz lub wyklucz poszczególnych użytkowników, klikając polecenie **Przeglądaj**. Jeśli za pomocą tej opcji wybierzesz użytkowników, którzy nie znajdują się w podanej grupie nadrzędnej, zostaną oni automatycznie dodani do grupy nadrzędnej. W dolnej części okna dialogowego **Wybieranie członków** znajduje się opcja ręcznego dodawania użytkownika. Jest to przydatne, jeśli chcesz dodać użytkownika, który nie ma jeszcze zarejestrowanego urządzenia.
@@ -101,7 +95,7 @@ Korzystając z filtrowanych widoków grup, można dostosowywać widoki dostępne
 
 -   Poszczególni administratorzy IT powinni widzieć tylko istotne dla nich grupy.
 
-Filtrowane widoki grup można skonfigurować dla administratorów usługi za pomocą konsoli administracyjnej usługi Intune. Aby uzyskać szczegółowe informacje, zobacz [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](/intune/get-started/what-to-know-before-you-start-microsoft-intune)..
+Filtrowane widoki grup można skonfigurować dla administratorów usługi za pomocą konsoli administracyjnej usługi Intune. Aby uzyskać szczegółowe informacje, zobacz [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](/intune/get-started/what-to-know-before-you-start-microsoft-intune).
 
 Gdy filtrowane widoki grup zostaną skonfigurowane dla administratora usługi, administrator:
 
@@ -123,11 +117,11 @@ Gdy filtrowane widoki grup zostaną skonfigurowane dla administratora usługi, a
 
 ### Konfigurowanie filtrowanych widoków grup
 
-1.  W konsoli administracyjnej usługi Intune wybierz pozycje **Administracja** &gt; **Zarządzanie administratorami** &gt; **Administratorzy usługi**..
+1.  W konsoli administracyjnej usługi Intune wybierz pozycje **Administracja** &gt; **Zarządzanie administratorami** &gt; **Administratorzy usługi**.
 
-2.  Wybierz administratora usługi, dla którego mają być filtrowane grupy, a następnie kliknij pozycję **Zarządzaj grupami**..
+2.  Wybierz administratora usługi, dla którego grupy mają być filtrowane, a następnie kliknij polecenie **Zarządzaj grupami**.
 
-3.  W oknie dialogowym **Wybierz grupy, które będą widoczne dla administratora usługi** dodaj grupy, do których powinien mieć dostęp wybrany administrator usługi, a następnie kliknij przycisk **OK**..
+3.  W oknie dialogowym **Wybierz grupy, które będą widoczne dla administratora usługi** dodaj grupy, do których ma mieć dostęp wybrany administrator usługi, a następnie kliknij przycisk **OK**.
 
 Po skonfigurowaniu filtrowanych widoków grup administrator IT będzie mógł wyświetlać i wybierać tylko określone grupy.
 
@@ -141,7 +135,7 @@ Grupę, która nie spełnia już wymagań organizacji, można usunąć. Usunięc
 ## Następne kroki
 
 ### Sprawdzanie projektu
-Po skonfigurowaniu grup i zasad sprawdź praktyczne efekty projektu, przeglądając informacje **Wartość zamierzona** i **Stan**..
+Po skonfigurowaniu grup i zasad sprawdź praktyczne efekty projektu, przeglądając informacje **Wartość zamierzona** i **Stan**.
 
 1. Wybierz dowolne urządzenie z grupy urządzeń i przeglądaj kategorie informacji w górnej części ekranu.
 2. Wybierz pozycję **Zasady** . Zobaczysz ekran podobny do tego zrzutu ekranu przedstawiającego ustawienia zasad dotyczących urządzeń z systemem Android.
@@ -158,6 +152,7 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 > Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

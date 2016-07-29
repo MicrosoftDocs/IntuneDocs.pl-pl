@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje |  Microsoft Intune | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
+title: "Opakowywanie aplikacji systemu Android za pomocą narzędzia opakowującego aplikacje | Microsoft Intune"
+description: "Ten temat przedstawia informacje o sposobie opakowywania aplikacji systemu Android bez konieczności modyfikacji kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi."
+keywords: 
+author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/06/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: matgates
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 76ee04237d54b4c171df74e8c134f003bbc32966
+
 
 ---
 
@@ -32,7 +26,7 @@ Narzędzie to jest aplikacją wiersza polecenia systemu Windows działającą w 
 
 Jeśli aplikacja używa biblioteki Azure Active Directory Authentication Library (ADAL), przed opakowaniem aplikacji należy wykonać czynności podane w sekcji [Jak opakowywać aplikacje korzystające z biblioteki usługi Azure Active Directory](#how-to-wrap-apps-that-use-the-azure-active-directory-library). Jeśli nie wiesz, czy Twoja aplikacja korzysta z tej biblioteki, skontaktuj się z deweloperem.
 
-Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje](#security-considerations-for-running-the-app-wrapping-tool). Aby pobrać to narzędzie, zobacz [Narzędzie opakowujące aplikacje dla systemu Android w usłudze Microsoft Intune](https://www.microsoft.com/download/details.aspx?id=47267).
+Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje](#security-considerations-for-running-the-app-wrapping-tool). Aby pobrać to narzędzie, zobacz [Microsoft Intune App Wrapping Tool for Android](https://www.microsoft.com/download/details.aspx?id=47267) (Narzędzie opakowujące aplikacje dla systemu Android w usłudze Microsoft Intune).
 
 ## Krok 1 Spełnianie wymagań wstępnych dotyczących używania narzędzia opakowującego aplikacje
 
@@ -48,7 +42,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 -   aplikacja musi być opracowana przez Twoją firmę lub dla niej. To narzędzie nie może być używane do przetwarzania aplikacji pobranych ze sklepu Google Play.
 
--   Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję programu [Java Runtime Environment](http://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java **C:\ProgramData\Oracle\Java\javapath**. Aby uzyskać więcej informacji, zobacz [dokumentację języka Java](http://java.com/download/help/).
+-   Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję programu [Java Runtime Environment](http://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java **C:\ProgramData\Oracle\Java\javapath**. Aby uzyskać więcej informacji, zobacz [dokumentację programu Java](http://java.com/download/help/).
 
     > [!NOTE]
     > W pewnych sytuacjach 32-bitowa wersja programu Java może spowodować problemy z pamięcią. Zaleca się zainstalowanie wersji 64-bitowej.
@@ -63,7 +57,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 
 ## Krok 3 Uruchamianie narzędzia opakowującego aplikacje
 
-1.  Na komputerze z systemem Windows, na którym zainstalowano narzędzie opakowujące aplikacje, otwórz okno programu PowerShell.
+1.  Na komputerze z systemem Windows, na którym zainstalowano narzędzie opakowujące aplikacje, otwórz okno programu PowerShell w trybie administratora.
 
 2.  Z folderu, w którym zostało zainstalowane narzędzie, importuj moduł programu PowerShell narzędzia opakowującego aplikacje:
 
@@ -78,7 +72,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 |**-InputPath**&lt;ciąg&gt;|Ścieżka źródłowej aplikacji systemu Android (.apk).| |
 |**-OutputPath**&lt;ciąg&gt;|Ścieżka do „wyjściowej” aplikacji systemu Android. Jeśli ta ścieżka katalogu będzie taka sama jak określona w parametrze InputPath, opakowywanie nie powiedzie się.| |
 |**-KeyStorePath**&lt;ciąg&gt;|Ścieżka do pliku magazynu kluczy, który zawiera pary kluczy publicznych/prywatnych do podpisania.| |
-|**-KeyStorePassword**&lt;ciąg bezpieczny&gt;|Hasło używane do odszyfrowywania magazynu kluczy.| |
+|**-KeyStorePassword**&lt;ciąg bezpieczny&gt;|Hasło używane do odszyfrowywania magazynu kluczy. System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Użyj narzędzia Java Key Tool do wygenerowania klucza KeyStorePassword, jak pokazano w przykładzie. Więcej informacji o [magazynie kluczy](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).|keytool.exe -genkey -v -keystore keystorefile -alias ks -keyalg RSA -keysize 2048 -validity 50000 |
 |**-KeyAlias**&lt;ciąg&gt;|Nazwa klucza, który ma być używany do podpisywania.| |
 |**-KeyPassword**&lt;ciąg bezpieczny&gt;|Hasło używane do odszyfrowania klucza prywatnego, który zostanie użyty do podpisywania.| |
 |**-SigAlg**&lt;ciąg bezpieczny&gt;|Nazwa algorytmu sygnatury używanego do podpisywania. Algorytm musi być zgodny z kluczem prywatnym.|Przykłady: SHA256withRSA, SHA1withRSA, MD5withRSA|
@@ -89,9 +83,9 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 
 
 **&lt;CommonParameters&gt;**
-    (opcjonalne — obsługuje typowe parametry programu PowerShell, takie jak verbose, debug itp.)
+ (opcjonalne — obsługuje typowe parametry programu PowerShell, takie jak verbose, debug itp.)
 
-- Listę typowych parametrów można znaleźć w [Centrum skryptów Microsoft](https://technet.microsoft.com/library/hh847884.aspx)..
+- Listę typowych parametrów można znaleźć w [Centrum skryptów Microsoft](https://technet.microsoft.com/library/hh847884.aspx).
 
 - Aby wyświetlić pomoc dla tego narzędzia, wpisz polecenie:
 
@@ -104,9 +98,9 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 
 
     Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
-    Invoke-AppWrappingTool –InputPath <input-app.apk> -OutputPath <output-app.apk> -KeyStorePath <path-to-signing.keystore> -KeyAlias <signing-key-name> -ClientID <xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> -AuthorityURI <http://AzureActiveDirectory.Authority.URL> -SkipBroker<$True|$False> -NonBrokerRedirectURI <urn:xxx:xx:xxxx:xx:xxx>
+    invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app.wrapped\HelloWorld_wrapped2.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\keystorefile" -keyAlias ks -SigAlg SHA1withRSA -Verbose
 
-Następnie zostanie wyświetlony monit o hasła **KeyStorePassword** i **KeyPassword**..
+Następnie zostanie wyświetlony monit o hasła **KeyStorePassword** i **KeyPassword**.
 
 Opakowana aplikacja zostaje wygenerowana i zapisana wraz z plikiem dziennika w określonej ścieżce danych wyjściowych.
 
@@ -115,9 +109,9 @@ Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków oparty
 
 -   Upewnij się, że wejściowa aplikacja LOB, aplikacja wyjściowa i Java KeyStore są na tym samym komputerze, na którym jest uruchomione narzędzie opakowujące aplikacje.
 
--   Importuj aplikację wyjściową do konsoli usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie.
+-   Importuj aplikację wyjściową do konsoli usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji dotyczących narzędzia Java keytool.
 
--   Jeśli aplikacja wyjściowa i narzędzie znajdują się na ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj środowisko do zabezpieczenia przy użyciu [zabezpieczeń protokołu internetowego (IPsec)](http://en.wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/en-us/kb/887429)..
+-   Jeśli aplikacja wyjściowa i narzędzie znajdują się na ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj środowisko do zabezpieczenia przy użyciu [zabezpieczeń protokołu internetowego (IPsec)](http://en.wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/en-us/kb/887429).
 
 -   Upewnij się, czy aplikacja jest pochodzi z zaufanego źródła, zwłaszcza, jeśli używasz usługi Azure Active Directory (AAD), która może umożliwić aplikacji dostęp do tokenu AAD w czasie wykonywania.
 
@@ -131,7 +125,7 @@ W przypadku aplikacji korzystających z bibliotek ADAL muszą być spełnione na
 
 -   Aplikacja musi mieć zintegrowaną wersję bibliotek ADAL 1.0.2 lub nowszą.
 
--   Deweloperzy muszą udzielić dostępu aplikacji do zasobu zarządzania aplikacjami mobilnymi usługi Intune zgodnie z opisem zamieszczonym w sekcji [Krok 3 Konfigurowanie dostępu do zarządzania aplikacjami mobilnymi w usłudze Azure Active Directory (AAD)](#step-3-configure-access-to-mobile-app-management-in-aad)..
+-   Deweloperzy muszą udzielić dostępu aplikacji do zasobu zarządzania aplikacjami mobilnymi usługi Intune zgodnie z opisem zamieszczonym w sekcji [Krok 3 Konfigurowanie dostępu do zarządzania aplikacjami mobilnymi w usłudze Azure Active Directory (AAD)](#step-3-configure-access-to-mobile-app-management-in-aad).
 
 ### Krok 2 Przeglądanie identyfikatorów, które należy uzyskać podczas rejestrowania aplikacji
 W następnym kroku portal zarządzania platformy Azure będzie używany do rejestrowania aplikacji (które korzystają z bibliotek ADAL w usłudze Azure Active Directory, AAD) w celu uzyskania unikatowych identyfikatorów wymienionych w tabeli poniżej. Następnie przekażesz identyfikatory deweloperowi po zintegrowaniu biblioteki ADAL z aplikacją.
@@ -169,12 +163,7 @@ Używając wartości identyfikatora otrzymanych w procesie rejestracji, wprowad�
 |Identyfikator zasobu|ResourceID|
 Podczas opakowywania aplikacji trzeba mieć na uwadze następujące kwestie:
 
--   Narzędzie opakowujące aplikacje nie wyszukuje plików binarnych ADAL w aplikacji (nawet jeśli istnieją). Jeśli aplikacja łączy się z nieaktualną wersją plików binarnych, a zasady uwierzytelniania są włączone, mogą wystąpić błędy w czasie wykonywania.
-
--   Aby sprawdzić, czy uwierzytelnianie zakończyło się powodzeniem, usługa
-  [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] pobiera tokenu usługi AAD, który jest skojarzony z identyfikatorem zasobu zarządzania aplikacjami mobilnymi. Nie jest on jednak używany w żadnym wywołaniu, które umożliwiłoby zweryfikowanie prawidłowości tokenu. [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] odczytuje jedynie nazwę UPN zalogowanego użytkownika w celu określenia dostępu do aplikacji. Token usługi AAD nie jest używany w żadnych późniejszych wywołaniach usług.
-
--   Tokeny uwierzytelniania są wspólne dla aplikacji tego samego wydawcy, ponieważ są zapisywane we wspólnym łańcuchu kluczy. Aby wyizolować konkretną aplikację, konieczne jest użycie dla niej innego certyfikatu podpisywania, profilu inicjowania obsługi i aliasu klucza.
+-   Aby sprawdzić, czy uwierzytelnianie zakończyło się powodzeniem, usługa [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] pobiera token AAD skojarzony z identyfikatorem zasobu zarządzania aplikacjami mobilnymi. Nie jest on jednak używany w żadnym wywołaniu, które umożliwiłoby zweryfikowanie prawidłowości tokenu. [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] odczytuje jedynie nazwę UPN zalogowanego użytkownika w celu określenia dostępu do aplikacji. Token usługi AAD nie jest używany w żadnych późniejszych wywołaniach usług.
 
 -   Podanie identyfikatora klienta oraz identyfikatora URI uwierzytelniania aplikacji zapobiega dwukrotnemu monitowaniu o zalogowanie. Zarejestrowanie tego identyfikatora klienta jest konieczne w celu uzyskania dostępu do opublikowanego identyfikatora zasobu zarządzania aplikacjami mobilnymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] na pulpicie nawigacyjnym usługi AAD. Jeśli nie zarejestrujesz identyfikatora klienta, użytkownicy zobaczą błąd logowania po uruchomieniu aplikacji.
 
@@ -185,6 +174,7 @@ Podczas opakowywania aplikacji trzeba mieć na uwadze następujące kwestie:
 - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

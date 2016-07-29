@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy | Microsoft Intune
-description:
-keywords:
+title: "Lista komunikatów, które mogą zobaczyć użytkownicy aplikacji Portal firmy | Microsoft Intune"
+description: "Lista komunikatów, które mogą zobaczyć użytkownicy końcowi usługi Intune"
+keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 5e0b2943da5572c672f9374e0f878b84f79f0a15
+
 
 ---
 
@@ -45,7 +39,7 @@ Komunikat jest monitem kierowanym do użytkowników, który umożliwia wysłanie
 > [!NOTE]
 > **Aplikacja Portal firmy nigdy nie wykonuje połączeń telefonicznych ani nie zarządza nimi.** Tekst komunikatu jest kontrolowany przez firmę Google i nie można go zmienić.
 
-Aby wyświetlić stronę **Sprzęt**, wybierz pozycję **Grupy** > **Wszystkie urządzenia przenośne** > **Urządzenia**. Wybierz urządzenie użytkownika, a następnie wybierz pozycję **Wyświetl właściwości** > **Sprzęt**.
+Aby wyświetlić stronę **Sprzęt**, wybierz pozycję **Grupy** > **Wszystkie urządzenia przenośne** > **Urządzenia**. Wybierz urządzenie użytkownika, a następnie wybierz pozycje **Wyświetl właściwości** > **Sprzęt**.
 
 ### Co się stanie, gdy użytkownik zezwoli lub nie zezwoli na dostęp
 Jeśli użytkownik zezwoli na dostęp, numer telefonu i kod IMEI urządzenia będą wyświetlane na stronie Sprzęt w konsoli administracyjnej.
@@ -55,7 +49,7 @@ Jeśli użytkownik nie zezwoli na dostęp, może nadal używać aplikacji Portal
 Jeśli użytkownik zezwoli na dostęp, lecz potem anuluje zezwolenie, komunikat zostanie wyświetlony podczas następnego logowania użytkownika do aplikacji Portal firmy po rejestracji.</br></br>Jeśli później użytkownik zdecyduje się zezwolić na dostęp, może wybrać pozycję **Ustawienia** > **Aplikacje** > **Portal firmy** > **Uprawnienia** > **Telefon** i włączyć uprawnienie.
 
 ### Gdzie użytkownicy mogą znaleźć więcej informacji
-[Logowanie się w aplikacji Portal firmy](/Intune/EndUser/sign-in-to-the-company-portal-app-android)
+Krok 5 w procedurze [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/Intune/EndUser/enroll-your-device-in-intune-android)
 
 ## Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?
 
@@ -80,9 +74,10 @@ Podczas drugiego logowania użytkownika do aplikacji Portal firmy po odmowie dos
 
 
 ### Zobacz także
-[Co mówić użytkownikom końcowym na temat korzystania z usługi Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune.md)
+[Co mówić użytkownikom końcowym na temat korzystania z usługi Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rejestracja urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień | Microsoft Intune"
+description: "Rejestruj firmowe urządzenia z systemem iOS przy użyciu narzędzia Apple Configurator, aby fabrycznie zresetować urządzenia i przygotować je do uruchomienia Asystenta ustawień."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/20/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 26ac7d52c0ad3e37e517b60d448a94849c0f4b30
+ms.openlocfilehash: f36217aa5e691ea22c891c08d1d5b886726f0a9a
+
 
 ---
 
@@ -33,6 +27,7 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
 Za pomocą programu Apple Configurator można zresetować urządzenia z systemem iOS do ustawień fabrycznych i przygotować je do skonfigurowania przez nowego użytkownika.  Ta metoda wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Przyjęto założenie, że używany jest program Apple Configurator 2.0. Większość scenariuszy wymaga, aby zasady zastosowane w urządzeniu z systemem iOS uwzględniały *koligację użytkownika*, co umożliwia korzystanie z aplikacji Portal firmy usługi Intune.
 
 **Wymagania wstępne**
+* [Rejestracja urządzeń z systemem iOS jest włączona](set-up-ios-and-mac-management-with-microsoft-intune.md) poprzez zainstalowanie certyfikatu APNs
 * Fizyczny dostęp do urządzeń z systemem iOS — urządzenia muszą być w stanie nieskonfigurowanym (resetowanie do ustawień fabrycznych) bez ochrony hasłem
 * Numery seryjne — [w jaki sposób uzyskać numer seryjny systemu iOS](https://support.apple.com/en-us/HT204308)
 * Kable połączenia USB
@@ -42,8 +37,6 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 1.  **Utwórz grupę urządzeń przenośnych** (opcjonalnie). Jeśli w firmie grupy urządzeń przenośnych są wymagane w celu ułatwienia zarządzania urządzeniami, utwórz te grupy. [Użyj grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
 2.  **Utwórz profil dla urządzeń**. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń. Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator.
-
-    ###### Aby utworzyć profil
 
     1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycje **Zasady** &gt; **Urządzenia należące do firmy**, a następnie wybierz pozycję **Dodaj**.
 
@@ -67,6 +60,8 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
             -   **Bez koligacji użytkownika** — urządzenie nie przynależy do żadnego użytkownika. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające przynależności do użytkownika są wyłączone lub nie będą działać.
 
         -   **Wstępne przypisanie do grupy urządzeń** — wszystkie urządzenia, dla których ten profil zostanie wdrożony, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
+
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
           -  **Device Enrollment Program** — program Device Enrollment Program (DEP) firmy Apple nie może być używany z rejestracją z wykorzystaniem Asystenta ustawień. Upewnij się, że przełącznik jest **wyłączony**.
 
@@ -155,6 +150,7 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 [Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO3-->
 
 

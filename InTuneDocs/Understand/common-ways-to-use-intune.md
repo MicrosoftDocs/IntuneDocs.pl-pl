@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Typowe sposoby korzystania z usługi Intune | Microsoft Intune
-description:
-keywords:
+title: "Typowe sposoby korzystania z usługi Intune | Microsoft Intune"
+description: "Wyświetla sześć najbardziej typowych zadań, które usługa Intune wykonuje za użytkowników"
+keywords: 
 author: jeffgilb
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 3defa4b8f78e854532d32c66a17f0ed18d36cec7
+
 
 ---
 
@@ -29,7 +23,8 @@ ms.suite: ems
 
 Przed zagłębieniem się w zadania implementacji ważne jest, aby zorganizować uczestników projektu rozwiązania typu Enterprise Mobility firmy wokół celów biznesowych firmy.  Jest to istotne zarówno w przypadku wdrażania od zera rozwiązania typu Enterprise Mobility, jak i migracji z innego produktu.  Potrzeby dotyczące rozwiązań typu Enterprise Mobility dynamicznie ewoluują i podejścia firmy Microsoft do zaspakajania tych potrzeb mogą czasami różnić się od innych rozwiązań na rynku.  Najlepszym sposobem, aby zorganizować projekt wokół celów biznesowych jest określenie, co chcesz osiągnąć, w postaci scenariuszy, które mają być obsługiwane dla pracowników, partnerów i informatyków.  Poniżej przedstawiono krótkie wprowadzenia do sześciu najbardziej typowych scenariuszy korzystających z usługi Intune, wraz z linkami do dodatkowych informacji na temat sposobu planowania i wdrażania każdego z nich.
 
->[!NOTE] Czy chcesz wiedzieć, jak dział IT firmy Microsoft używa usługi Intune, aby umożliwić pracownikom Microsoft dostęp do zasobów firmowych na ich urządzeniach przenośnych z zachowaniem ochrony danych firmowych? [Przeczytaj tę techniczną analizę przypadku](https://www.microsoft.com/itshowcase/Article/Content/588), aby zobaczyć szczegółowo, w jaki sposób dział IT firmy Microsoft używa usługi Intune i innych usług do zarządzania tożsamościami, urządzeniami, aplikacjami i danymi.  
+>[!NOTE]
+>Czy chcesz wiedzieć, jak dział IT firmy Microsoft używa usługi Intune, aby umożliwić pracownikom Microsoft dostęp do zasobów firmowych na ich urządzeniach przenośnych z zachowaniem ochrony danych firmowych? [Przeczytaj tę techniczną analizę przypadku](https://www.microsoft.com/itshowcase/Article/Content/588), aby zobaczyć szczegółowo, w jaki sposób dział IT firmy Microsoft używa usługi Intune i innych usług do zarządzania tożsamościami, urządzeniami, aplikacjami i danymi.  
 
 ## Zabezpieczanie lokalnej poczty e-mail i danych na potrzeby bezpiecznego uzyskiwania dostępu przez urządzenia przenośne
 Większość strategii rozwiązań typu Enterprise Mobility zaczyna się od planu umożliwienia pracownikom z urządzeniami przenośnymi bezpiecznego dostępu do poczty e-mail przez Internet. W wielu organizacjach lokalne dane i serwery aplikacji, takie jak Microsoft Exchange, są nadal hostowane w sieci firmowej. Usługa Intune i pakiet Enterprise Mobility Suite (EMS) oferują unikatowe rozwiązanie zintegrowanego dostępu warunkowego dla serwera Exchange, które gwarantuje, że żadne aplikacje mobilne nie będą mogły uzyskać dostępu do poczty e-mail, dopóki urządzenie nie zostanie zarejestrowane w usłudze Intune, a wszystko bez wdrażania innego komputera bramy na granicy sieci firmowej.
@@ -67,11 +62,12 @@ Pracownicy wykonujący zadania w coraz większym stopniu korzystają z technolog
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
 ## Umożliwianie pracownikom bezpiecznego dostępu do usługi Office 365 z niezarządzanego kiosku publicznego
-Czasami pracownicy muszą używać urządzeń, aplikacji lub przeglądarek, którymi nie można zarządzać, takich jak komputery publiczne na targach czy w hotelach.  Czy zezwalać pracownikom na dostęp do firmowej poczty e-mail z takich urządzeń, aplikacji lub przeglądarek?  Przy użyciu usługi Intune i pakietu Enterprise Mobility Suite można wybrać jedną z opcji.  Można po prostu odpowiedzieć „nie”, ograniczając dostęp do poczty e-mail tylko do urządzeń zarządzanych przez organizację.  Alternatywnie można zezwolić na ograniczony dostęp do tych niezaufanych komputerów, wymagając uwierzytelniania wieloskładnikowego i zezwalając na dostęp za pomocą przeglądarki (Outlook Web Access) tylko w trybie, w którym nie można pobierać plików (np. załączników wiadomości e-mail).  Daje to pewność, że silnie uwierzytelniony pracownik nie pozostawi przypadkowo danych firmowych na niezaufanym komputerze.
+Czasami pracownicy muszą używać urządzeń, aplikacji lub przeglądarek, którymi nie można zarządzać, takich jak komputery publiczne na targach czy w hotelach. Czy zezwalać pracownikom na dostęp do firmowej poczty e-mail z takich urządzeń, aplikacji lub przeglądarek? Dzięki usłudze Intune i pakietowi Enterprise Mobility Suite <!--you have choices. The--> Można po prostu odpowiedzieć „nie”, ograniczając dostęp do poczty e-mail tylko do urządzeń zarządzanych przez organizację.  <!-- Alternatively, you can choose to allow limited access to these untrusted computers by requiring multi-factor authentication and only allowing browser access (Outlook Web Access) in a mode where files cannot be downloaded (e.g. email attachments).-->  Daje to pewność, że silnie uwierzytelniony pracownik nie pozostawi przypadkowo danych firmowych na niezaufanym komputerze.
 
 <!-- Learn more about how to plan and deploy Intune to support kiosks. -->
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurowanie zarządzania systemem Windows Phone 8.0 | Microsoft Intune
-description:
-keywords:
+title: "Konfigurowanie zarządzania systemem Windows Phone 8.0 | Microsoft Intune"
+description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Windows Phone 8.0 w usłudze Microsoft Intune."
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 06/09/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5f336cf52cbecd93cb7b2850560327e6024302e0
+ms.openlocfilehash: 9f0c2493c5e852419b037eacd3bf2ce798fecd0a
+
 
 ---
 
@@ -29,7 +23,8 @@ ms.suite: ems
 
 System Windows Phone 8.0 wymaga certyfikatu firmy Symantec do zainstalowania aplikacji Portal firmy usługi Intune i umożliwienia zarządzania urządzeniami. Certyfikat jest również wymagany do podpisywania aplikacji biznesowych. Poniższy temat dotyczy tylko systemu Windows Phone 8.0. Aby zarządzać systemem Windows Phone 8.1 lub nowszym, w tym Windows 10 Mobile, zobacz [Set up Windows Phone enrollment](set-up-windows-phone-management-with-microsoft-intune.md) (Konfigurowanie rejestracji w systemie Windows Phone).
 
-> [!IMPORTANT] Od września 2016 r. aplikacja Portal firmy dla systemu Windows 8.0 i Windows Phone 8.0 nie będzie dostępna do pobrania.
+> [!IMPORTANT]
+> Od września 2016 r. aplikacja Portal firmy dla systemu Windows 8.0 i Windows Phone 8.0 nie będzie dostępna do pobrania.
 
 -   **Windows Phone 8** — wymagany certyfikat
 -   Systemy **Windows Phone 8.1 i Windows 10 Mobile** wymagają certyfikatu tylko, jeśli:
@@ -41,7 +36,8 @@ System Windows Phone 8.0 wymaga certyfikatu firmy Symantec do zainstalowania apl
 
 ![Diagram wymagań dotyczących certyfikatów](../media/wpcertreqs.png)
 
-  > [!IMPORTANT] Certyfikat firmy Symantec służący do zarządzania określonymi urządzeniami przenośnymi z systemem Windows i Windows Phone [należy okresowo odnawiać](renew-a-symantec-code-signing-certificate.md).
+  > [!IMPORTANT]
+  > Certyfikat firmy Symantec służący do zarządzania określonymi urządzeniami przenośnymi z systemem Windows i Windows Phone [należy okresowo odnawiać](renew-a-symantec-code-signing-certificate.md).
 
 Wymagania dotyczące konfiguracji zarządzania urządzeniami przenośnymi z systemem Windows Phone zależą od sposobu zarządzania urządzeniami.  Aby ułatwić użytkownikom rejestrację, można ustawić dwa rekordy CNAME dla funkcji rejestrowania w systemie DNS. Jeśli użytkownicy będą pobierać aplikację Portal firmy ze Sklepu, po skonfigurowaniu ustawień systemu DNS wystarczy skonfigurować tę aplikację i poinformować użytkowników o sposobie rejestrowania.  W przypadku wdrażania aplikacji Portal firmy w systemie Windows Phone 8.0 lub Windows Phone 8.1 do podpisania kodu aplikacji wymagany będzie certyfikat firmy Symantec.
 
@@ -186,6 +182,7 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows Pho
     > -   Jeśli aplikacje ładowane bezpośrednio muszą być zainstalowane, a urządzenia z systemem Windows Phone 8.0 muszą być rejestrowane i korzystać z pliku ssp.xap, utwórz nowe wdrożenie oprogramowania dla pliku ssp.xap i zastosuj je z akcją **odinstaluj** . Urządzenia z systemem Windows Phone 8.0 nie obsługują wymuszonej instalacji lub odinstalowania aplikacji, więc wdrożenie zostanie przez nie zignorowane. Urządzenia z systemem Windows Phone 8.1 obsługują akcję odinstalowania i usuną plik ssp.xap.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

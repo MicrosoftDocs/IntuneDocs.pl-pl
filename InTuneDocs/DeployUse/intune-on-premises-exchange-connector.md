@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Instalowanie łącznika Microsoft Intune Exchange Connector dla lokalnej instalacji programu Exchange | Microsoft Intune
-description:
-keywords:
+title: "Łącznik Exchange Connector dla lokalnego programu EAS | Microsoft Intune"
+description: "Użyj narzędzia Connector, aby umożliwić komunikację między konsolą administracyjną usługi Intune a lokalnym serwerem Exchange dla funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
+ms.openlocfilehash: 233aae987467a574c34aa06168a3c6d59eab663c
+
 
 ---
 
@@ -43,7 +37,6 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 |Dodatkowe oprogramowanie|Na komputerze, który będzie hostem łącznika, musi być zainstalowana pełna instalacja platformy Microsoft .NET Framework 4 i programu Windows PowerShell 2.0.|
 |Sieć|Komputer, na którym ma być instalowany łącznik, musi należeć do domeny, która ma relację zaufania z domeną hostującą program Exchange Server.<br /><br />Komputer wymaga zastosowania konfiguracji umożliwiającej mu dostęp do usługi Intune za pośrednictwem zapór i serwerów proxy przez porty 80 i 443. Domeny używane przez usługę Intune obejmują manage.microsoft.com, &#42;manage.microsoft.com i &#42;.manage.microsoft.com.|
 |Hostowany program Exchange — skonfigurowany i uruchomiony|Aby uzyskać więcej informacji, zobacz temat [Exchange Server 2016](https://technet.microsoft.com/library/mt170645.aspx). |
-|Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi|[Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#BKMK_Set_MDM_Authority)|
 
 ### Wymagania poleceń cmdlet programu Exchange
 
@@ -65,16 +58,14 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 ## Aby pobrać pakiet instalacyjny lokalnego łącznika On-Premises Exchange Connector
 
-1. W obsługiwanym systemie operacyjnym dla lokalnego łącznika Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange z licencją do korzystania z serwera Exchange Server.
+1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego łącznika Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange z licencją do korzystania z serwera Exchange Server.
 ![Otwórz konfigurację połączenia z programem Exchange.](../media/ExchangeConnector.gif)
 
-2.  W okienku skrótów obszaru roboczego wybierz opcję **ADMINISTRACJA**.
+2.  W okienku skrótów obszaru roboczego wybierz pozycję **Administracja**, wybierz pozycję **Zarządzanie urządzeniami przenośnymi** > **Microsoft Exchange**, a następnie wybierz pozycję **Skonfiguruj połączenie programu Exchange**.
 
-3.  W okienku nawigacji w obszarze **Zarządzanie urządzeniami przenośnymi** rozwiń pozycję **Microsoft Exchange**, a następnie wybierz polecenie **Skonfiguruj połączenie z programem Exchange**.
+3.  Na stronie **Konfigurowanie połączenia z programem Exchange** wybierz polecenie **Pobierz program On-Premises Connector**.
 
-4.  Na stronie **Konfigurowanie połączenia z programem Exchange** wybierz polecenie **Pobierz program On-Premises Connector**.
-
-5.  Program On-Premises Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz polecenie **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
+4.  Program On-Premises Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz polecenie **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
 
 > [!IMPORTANT]
 > Nie zmieniaj nazwy ani nie przenoś plików w folderze programu On-Premises Exchange Connector. Przeniesienie lub zmiana nazwy zawartości folderu spowoduje przerwanie instalacji.
@@ -89,7 +80,7 @@ Wykonaj następujące kroki, aby zainstalować łącznik On-Premises Exchange Co
     > [!IMPORTANT]
     > Jeśli folder docelowy nie jest bezpieczną lokalizacją, usuń plik certyfikatu **WindowsIntune.accountcert** po zainstalowaniu łącznika On-Premises Connector.
 
-3.  W polu **Serwer Exchange** wybierz typ środowiska serwera Exchange: **Lokalny serwer Microsoft Exchange** lub **Hostowany serwer Microsoft Exchange**..
+3.  W polu **Serwer Exchange** wybierz typ środowiska serwera Exchange: **Lokalny serwer Microsoft Exchange** lub **Hostowany serwer Microsoft Exchange**.
 
   ![Wybierz typ serwera Exchange Server](../media/IntuneSA1dconfigureExchConnector.png)
 
@@ -108,9 +99,9 @@ Wykonaj następujące kroki, aby zainstalować łącznik On-Premises Exchange Co
 
         2.  W polach **Nazwa serwera proxy** i **Numer portu** podaj wartości, które mają być używane na potrzeby dostępu do serwera.
 
-        3.  Jeśli dostęp do serwera proxy wymaga podania poświadczeń użytkownika, wybierz pozycję Użyj poświadczeń do nawiązania połączenia z serwerem proxy i podaj wartości w polach **Domena\nazwa_użytkownika** oraz **Hasło**..
+        3.  Jeśli dostęp do serwera proxy wymaga podania poświadczeń użytkownika, wybierz pozycję Użyj poświadczeń do nawiązania połączenia z serwerem proxy i podaj wartości w polach **Domena\nazwa_użytkownika** oraz **Hasło**.
 
-        4.  Wybierz przycisk **OK**..
+        4.  Wybierz przycisk **OK**.
 
 5.  Podaj poświadczenia, **Nazwę użytkownika (domena\nazwa_użytkownika)** i **Hasło** wymagane do nawiązania połączenia z serwerem Exchange.
 
@@ -139,6 +130,7 @@ Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić st
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

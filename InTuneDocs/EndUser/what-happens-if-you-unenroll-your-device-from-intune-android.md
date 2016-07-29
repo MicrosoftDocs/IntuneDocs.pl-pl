@@ -1,26 +1,27 @@
 ---
-title: "Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune? | Microsoft Intune"
+title: "Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Android z usługi Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0321062d-1363-4ac3-81d4-5405f3b79481
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: f0465d4302bda3df82c994043df52c27761a8345
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 55bb03075da7fab06196857c1d5e5a95befc248d
 
 
 ---
 
 
-# Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?
+# Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Android z usługi Intune?
 
 Wyrejestrowanie urządzenia z systemem Android z usługi Intune oznacza, że:
 
@@ -38,12 +39,13 @@ Jeśli urządzenie jest skonfigurowane tylko do pobierania firmowych wiadomości
 
 Aby uzyskać instrukcje na temat sposobu wyrejestrowywania, zobacz [Wyrejestrowywanie urządzenia z usługi Intune przy użyciu aplikacji Portal firmy](unenroll-your-device-from-intune-android.md).
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
-### Zobacz także
+
+### Zobacz też
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

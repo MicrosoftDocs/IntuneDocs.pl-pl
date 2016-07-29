@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Tworzenie zasad i publikowanie aplikacji dla użytkowników wersji ewaluacyjnej | Microsoft Intune
-description:
-keywords:
+title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft Intune"
+description: "Tworzenie zasad i publikowanie aplikacji w przypadku rejestracji w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 1cc190aa4103bbaa2b2273f08319c3fba9f5507e
+
 
 ---
 
@@ -37,15 +31,15 @@ Poniższe kroki obejmują określenie zasad konfiguracji urządzeń przenośnych
 
 ## Tworzenie i wdrażanie zasad konfiguracji urządzeń przenośnych
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com/)..
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com/).
 
 2.  W lewym okienku wybierz ikonę **Zasady**.
 
-3.  Na liście **Zadania** na stronie **Przegląd zasad** wybierz pozycję **Dodaj zasady**..
+3.  Na liście **Zadania** na stronie **Przegląd zasad** wybierz pozycję **Dodaj zasady**.
 
-4.  Na liście zasad rozwiń platformę, dla której chcesz utworzyć zasady, wybierz pozycję **Konfiguracja ogólna**, wybierz pozycję **Utwórz zasady i przeprowadź ich wdrożenie z zalecanymi ustawieniami**, a następnie wybierz pozycję **Utwórz zasady**..
+4.  Na liście zasad rozwiń platformę, dla której chcesz utworzyć zasady, wybierz pozycję **Konfiguracja ogólna**, wybierz pozycję **Utwórz zasady i przeprowadź ich wdrożenie z zalecanymi ustawieniami**, a następnie wybierz pozycję **Utwórz zasady**.
 
-5.  Po wyświetleniu monitu o treści **Wybierz grupy, do których te zasady mają zostać wdrożone** wybierz z listy pozycję **Moi użytkownicy próbni**, a następnie wybierz pozycję **Dodaj** &gt; **OK**..
+5.  Po wyświetleniu monitu o treści **Wybierz grupy, do których te zasady mają zostać wdrożone** wybierz z listy pozycję **Moi użytkownicy próbni**, a następnie wybierz pozycje **Dodaj** &gt; **OK**.
 
 Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do grupy **Moi użytkownicy próbni** . Kliknij dwukrotnie zasadę, aby wyświetlić jej ustawienia.
 
@@ -56,11 +50,11 @@ Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do
     > [!NOTE]
     > Po pierwszym uruchomieniu **Wydawcy oprogramowania usługi Intune** wystąpi krótkie opóźnienie podczas instalowania aplikacji.
 
-2.  Przejrzyj ostrzeżenie o zabezpieczeniach, a następnie wybierz pozycję **Uruchom**..
+2.  Przejrzyj ostrzeżenie o zabezpieczeniach, a następnie wybierz pozycję **Uruchom**.
 
-3.  Na stronie **Przed rozpoczęciem** wybierz pozycję **Dalej**..
+3.  Na stronie **Przed rozpoczęciem** wybierz pozycję **Dalej**.
 
-4.  Na stronie **Instalator oprogramowania** w obszarze **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom** wybierz pozycję **Link zewnętrzny**..
+4.  Na stronie **Instalator oprogramowania** w obszarze **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom**wybierz pozycję **Link zewnętrzny**.
 
 5.  W polu **Określ adres URL** wprowadź link zewnętrzny dla oprogramowania, a następnie wybierz pozycję **Dalej**. Upewnij się, że adres URL jest poprzedzony prefiksem **https://**. Wybierz poniższy link aplikacji Skype odpowiadający platformie urządzenia przenośnego, z której korzystasz:
 
@@ -68,7 +62,7 @@ Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do
 
     -   **Android:** [https://play.google.com/store/apps/details?id=com.skype.raider](https://play.google.com/store/apps/details?id=com.skype.raider)
 
-    -   **Windows Phone 8 lub Windows Phone 8.1:** [http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
+    -   **Windows Phone 8 lub Windows Phone 8.1:** [http://www.windowsphone.com/pl-pl/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
 
 6.  Na stronie **Opis oprogramowania** podaj informacje dotyczące oprogramowania, które mają być wyświetlane użytkownikom w Portalu firmy, a następnie wybierz pozycję **Dalej**. Dostępne są następujące ustawienia (ten przykład dotyczy programu Skype):
 
@@ -86,9 +80,9 @@ Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do
 
 7.  Na stronie **Podsumowanie** zweryfikuj informacje o oprogramowaniu, a następnie wybierz pozycję **Przekaż**. Wybierz pozycję **Zamknij**, aby zakończyć działanie kreatora.
 
-8.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Aplikacje** &gt; **Aplikacje** &gt; **Skype** &gt; **Zarządzaj wdrożeniem**..
+8.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) kliknij pozycje **Aplikacje** &gt; **Aplikacje** &gt; **Skype** &gt; **Zarządzaj wdrożeniem**.
 
-9. Na stronie **Wybieranie grup** wybierz pozycję **Moi użytkownicy próbni**, aby wdrożyć oprogramowanie dla tej grupy użytkowników, a następnie wybierz pozycję **Dodaj** &gt; **Dalej**..
+9. Na stronie **Wybieranie grup** wybierz pozycję **Moi użytkownicy próbni**, aby wdrożyć oprogramowanie dla tej grupy użytkowników, a następnie wybierz pozycje **Dodaj** &gt; **Dalej**.
 
 10. Na stronie **Akcja wdrażania** wybierz pozycję **Dostępna instalacja** w kolumnie **Zatwierdzenie** dla tej grupy.
 
@@ -104,6 +98,7 @@ Gratulacje! Krok 4 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 >[&larr; **Tworzenie grup**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)     [**Rejestrowanie urządzeń** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

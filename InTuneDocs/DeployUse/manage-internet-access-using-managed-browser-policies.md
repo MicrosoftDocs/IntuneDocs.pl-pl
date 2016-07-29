@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie dostępem do sieci Web za pomocą programu Managed Browser | Microsoft Intune"
+description: "Wdróż aplikację Managed Browser, aby ograniczyć przeglądanie sieci Web i transfer danych sieci Web do innych aplikacji."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: maxles
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1850e89830de61ccdeb81cb6ee9cc0f0c1d237a
+ms.openlocfilehash: 882042349c19ef0b688954577eb6519d0c0ac860
+
 
 ---
 
@@ -31,8 +25,7 @@ Program Managed Browser to aplikacja służąca do przeglądania sieci Web, któ
 Ze względu na to, że jest to aplikacja zarządzana, można także zastosować dla niej zasady zarządzania aplikacjami mobilnymi, takie jak kontrolowanie użycia funkcji wycinania, kopiowania i wklejania, zapobieganie przechwytywaniu ekranu oraz upewnianie się, że klikane przez użytkowników linki do zawartości są otwierane tylko w innych zarządzanych aplikacjach. Aby uzyskać więcej informacji, zobacz [Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > [!IMPORTANT]
->Jeśli użytkownicy zainstalują program Managed Browser ze sklepu z aplikacjami i nie będzie on zarządzany przez usługę Intune, stosowane są następujące rozwiązania:
-iOS — program Managed Browser może być używany jako podstawowa przeglądarka sieci Web, ale niektóre funkcje nie będą dostępne i nie będzie mógł on uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.
+>Jeśli użytkownicy zainstalują program Managed Browser ze sklepu z aplikacjami i nie będzie on zarządzany przez usługę Intune, stosowane są następujące rozwiązania: iOS — program Managed Browser może być używany jako podstawowa przeglądarka sieci Web, ale niektóre funkcje nie będą dostępne i nie będzie mógł on uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.
 Android — nie można używać programu Managed Browser.
 Jeśli użytkownicy sami zainstalują program Managed Browser na urządzeniu z systemem iOS w wersji wcześniejszej niż 9, nie będzie on zarządzany zgodnie z żadną z wybranych przez Ciebie zasad. Aby upewnić się, że przeglądarka jest zarządzana przez usługę Intune, użytkownicy muszą odinstalować aplikację, zanim wdrożysz ją dla nich jako zarządzaną aplikację. W systemach iOS w wersji 9 lub nowszych jeśli użytkownik sam zainstaluje program Managed Browser, zostanie wyświetlony monit o umożliwienie zarządzania tym programem przez zasady.
 
@@ -46,7 +39,7 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 ## Tworzenie zasad programu Managed Browser
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad z grupy **Oprogramowanie** :
 
@@ -108,7 +101,7 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
     -   Port 443 dla protokołu https
 
-    Symboli wieloznacznych nie można używać w numerze portu, na przykład **http://www.contoso.com:*;** i **http://www.contoso.com: /*;**
+    Symboli wieloznacznych nie można używać w numerze portu, na przykład **http&colon;//www&period;contoso&period;com:*;** i **http&colon;//www&period;contoso&period;com: /*;**
 
 -   W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
 
@@ -157,6 +150,7 @@ Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi k
 -   Jeśli urządzenie już otrzymało zasady programu Managed Browser, a drugie zasady są wdrażane z ustawieniami powodującymi konflikt, na urządzeniu będą używane ustawienia oryginalne. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

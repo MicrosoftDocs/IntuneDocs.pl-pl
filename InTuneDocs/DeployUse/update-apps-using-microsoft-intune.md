@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Aktualizowanie aplikacji | Microsoft Intune
-description:
-keywords:
+description: "W tym temacie opisano sposób aktualizowania aplikacji w sytuacji, gdy jest wymagana nowa wersja."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/12/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: beee6933-876a-4be0-b395-4c24cfbd519b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: bb077902e33d6ab18dea33a6ab2d1ff9a70ce937
+
 
 ---
 
@@ -31,28 +25,41 @@ Usługa Microsoft Intune ułatwia zarządzanie aktualizacjami aplikacji. W tym t
 ## Jak aktualizować aplikacje
 Po wydaniu nowej wersji wdrożonej aplikacji usługa Intune umożliwia aktualizację i wdrożenie nowszej wersji aplikacji. Można jedynie zastąpić wdrożenie na nowszą wersję tej samej aplikacji (przy użyciu tego samego identyfikatora). Nie można użyć aktualizacji aplikacji do zaktualizowania wdrożenia przy użyciu pakietu innej aplikacji.
 
+### Identyfikatory aplikacji
+Identyfikator aplikacji jest właściwością, która unikatowo identyfikuje aplikację. Nie można zainstalować wielu kopii aplikacji o tym samym identyfikatorze. Na przykład:
+
+- **iOS** — Bundle ID (na przykład: com.microsoft.excel)
+- **Android** — Package ID (na przykład: com.microsoft.excel)
+- **Windows Phone** — (xap installer) użyj identyfikatora produktu (GUID)
+- **Windows** — (appx/appxbundle), użyj pełnej nazwy pakietu
+
+
+
 > [!IMPORTANT]
 > W przypadku wdrożenia aplikacji z akcją wdrożenia **Wymagana instalacja** i późniejszej zmiany akcji wdrożenia na **Dostępna instalacja**, aktualizacje aplikacji nie są automatycznie instalowane na urządzeniach, na których zainstalowano aplikację przed dokonaniem zmiany wdrożenia. Aby rozwiązać ten problem, można wykonać następujące czynności:
 > 
-> -   Użytkownik urządzenia powinien przejść do portalu firmy, wybrać zainstalowaną aplikację i kliknąć pozycję **Instaluj**.
+> -   Użytkownik urządzenia powinien przejść do portalu firmy, wybrać zainstalowaną aplikację i wybrać pozycję **Instaluj**.
 > -   Następnie należy zmienić akcję wdrażania na **Odinstaluj**i po odinstalowaniu aplikacji ponownie wdrożyć aplikację z akcją wdrożenia **Dostępna instalacja**.
 
 ### Aby zaktualizować aplikację
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Aplikacje** &gt; **Aplikacje**.
+1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Aplikacje** &gt; **Aplikacje**.
 
-2.  Z listy **Aplikacje** wybierz aplikację, którą chcesz zaktualizować, a następnie kliknij przycisk **Edytuj**.
+2.  Z listy **Aplikacje** wybierz aplikację, którą chcesz zaktualizować, a następnie wybierz pozycję **Edytuj**.
 
 3.  W kreatorze **Edytowanie oprogramowania** podaj nowe szczegóły pakietu aplikacji.
 
-4.  Po zakończeniu kliknij pozycję **Aktualizuj**.
+4.  Gdy skończysz, wybierz pozycję **Dalej**.
 
 Przy następnym sprawdzeniu dostępnych aplikacji przez urządzenia aplikacja zostanie automatycznie zaktualizowana do najnowszej wersji.
+W przypadku aplikacji instalowanych z pakietu aplikacji (aplikacji biznesowych) aplikacja będzie uaktualniana automatycznie zarówno dla wymaganych, jak i dostępnych wdrożeń, jeśli tylko aplikacja ma taki sam identyfikator.
+W przypadku aplikacji wdrożonych jako link do sklepu aktualizacja jest zarządzana przez sklep, z którego pochodzi aplikacja.
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

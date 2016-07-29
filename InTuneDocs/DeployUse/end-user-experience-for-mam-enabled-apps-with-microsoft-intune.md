@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi | Microsoft Intune
-description:
-keywords:
+title: "Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi | Microsoft Intune"
+description: "W tym temacie opisano to, czego można oczekiwać, gdy aplikacja jest zarządzana przy użyciu zasad zarządzania aplikacjami mobilnymi."
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 359f76daa35a14e4107a9e03c6a1b1f4d1215777
+ms.openlocfilehash: e43dea5630975165ea7468836a8b0328f0656030
+
 
 ---
 
@@ -41,6 +35,7 @@ Zasady zarządzania aplikacjami mobilnymi (mobile application management, MAM) s
     ![Zrzut ekranu strony logowania do usługi O365](../media/AppManagement/iOS_O365SignInPage.png)
 
 3.  Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure AD zostaną zastosowane zasady MAM i pojawi się prośba o ponowne uruchomienie aplikacji **OneDrive** .
+  >[UWAGA!] Okno dialogowe Wymagane ponowne uruchomienie jest wyświetlane tylko na urządzeniach, które nie są zarejestrowane w usłudze Intune.
 
     ![Zrzut ekranu okna dialogowego Wymagane ponowne uruchomienie](../media/AppManagement/iOS_AppRestartforMAM.png)
 
@@ -52,7 +47,8 @@ Zasady zarządzania aplikacjami mobilnymi (mobile application management, MAM) s
 
     ![Zrzut ekranu otwartej lokalizacji plików z listą istniejących plików](../media/AppManagement/iOS_OneDriveSuccess.png)
 
-    > [!NOTE] Jeśli zmienisz wdrożone zasady, zmiany te zostaną zastosowane przy następnym otwarciu aplikacji.
+    > [!NOTE]
+    > Jeśli zmienisz wdrożone zasady, zmiany te zostaną zastosowane przy następnym otwarciu aplikacji.
 
 ##  Uzyskiwanie dostępu do usługi OneDrive na urządzeniu z systemem Android
 
@@ -79,7 +75,7 @@ Zasady zarządzania aplikacjami mobilnymi (mobile application management, MAM) s
 
     ![Zrzut ekranu aplikacji Portalu firmy](../media/AppManagement/Android_CompanyPortalInstall.png)
 
-5.  Po zakończeniu instalacji kliknij przycisk **Akceptuj** , aby zaakceptować warunki.
+5.  Po zakończeniu instalacji wybierz pozycję **Akceptuj**, aby zaakceptować warunki.
 
 6.  Aplikacja **OneDrive** zostanie uruchomiona automatycznie.
 
@@ -136,7 +132,7 @@ Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasad
 Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady MAM za pomocą usługi Intune. **Firma X** wdraża zasady zarządzania aplikacjami mobilnymi **przed** **Firmą Y**. Zasady MAM zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane przez zasady MAM, musisz usunąć konto użytkownika skojarzone z Firmą X.
 ### Dodawanie drugiego konta
 #### System iOS
-Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym samym urządzeniu może zostać wyświetlony komunikat o blokadzie.  Zostanie również wyświetlona opcja usunięcia istniejącego konta i dodania nowego. Możesz to zrobić, klikając pozycję **Tak**.
+Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym samym urządzeniu może zostać wyświetlony komunikat o blokadzie.  Zostanie również wyświetlona opcja usunięcia istniejącego konta i dodania nowego. Możesz to zrobić, wybierając pozycję **Tak**.
 
 ![Zrzut ekranu okna dialogowego z komunikatem o blokadzie i opcjami Tak i Nie](../media/AppManagement/iOS_SwitchUser.PNG)
 ####  Android
@@ -149,6 +145,18 @@ Aby wyświetlać pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniac
 
 Pobierz tę aplikację ze sklepu Google Play.  Po zainstalowaniu aplikacji na urządzeniu uruchom ją i uwierzytelnij się przy użyciu poświadczeń firmowych. Wyświetlanie niechronionych i chronionych plików z innych aplikacji zarządzanych przy użyciu zasad powinno być teraz możliwe.
 
+Obsługiwane są następujące typy plików:
+
+* **Audio:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (rozszerzone AAC+), AAC ELD (enhanced low delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
+* **Wideo:** H.263, H.264 AVC, MPEG-4 SP, VP8.
+* **Obraz:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
+* PDF, PPDF
+
+------------
+|**pfile**|**text**|
+|----|----|
+|Pfile jest ogólnym formatem „otoki” dla plików chronionych, który hermetyzuje zaszyfrowaną zawartość i licencje usługi RMS i może służyć do ochrony dowolnego typu pliku.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+---------------
 **Urządzenia z systemem Android, które nie zostały zarejestrowane w usłudze Intune**
 
 Przed skorzystaniem z aplikacji do udostępniania usługi RMS do wyświetlania plików z innych aplikacji zarządzanych przez usługę Intune, uruchom aplikację RMS i uwierzytelnij się za pomocą swojego konta służbowego.  Po zalogowaniu się zostanie wyświetlony następujący komunikat **tylko, jeśli nie masz licencji usługi RMS**:
@@ -162,6 +170,7 @@ Taka sytuacja nie uniemożliwia korzystania z aplikacji do udostępniania usług
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

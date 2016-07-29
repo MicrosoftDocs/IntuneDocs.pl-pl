@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Jak uzyskać pomoc techniczną | Microsoft Intune
-description:
-keywords:
+title: "Jak uzyskać pomoc techniczną | Microsoft Intune"
+description: "Pomoc techniczna jest dostępna online i telefonicznie w przypadku płatnych subskrypcji i wersji próbnych subskrypcji."
+keywords: 
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: c464f0ff5d36e2bc4fb03ae8cfa6ac38580f9213
+
 
 ---
 
@@ -33,30 +27,30 @@ Ten temat zawiera informacje dotyczące otwierania żądania obsługi oraz telef
 Aby samodzielnie rozwiązywać problemy z usługą Intune, zobacz [Ogólne porady dotyczące rozwiązywania problemów w usłudze Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) lub dowolny temat związany z rozwiązywaniem konkretnych problemów znajdujący się w sekcji **Zobacz także** tego tematu.
 ## Tworzenie żądania obsługi online
 
-1.  Zaloguj się w usłudze Intune, a następnie odwiedź [Centrum administracyjne usługi Office 365](https://portal.office.com/Support/SupportEntry.aspx)..
+1.  Zaloguj się do [Centrum administracyjnego usługi Office 365](https://portal.office.com/admin/default.aspx#Overview_SupportPage_AltUSupportPage) przy użyciu poświadczeń usługi Intune.
 
-2.  Pod nagłówkiem **Utwórz żądanie obsługi** wybierz kategorię problemu, dla którego chcesz otworzyć bilet:
+2.  W sekcji **Utwórz żądanie obsługi** wybierz kategorię problemu, dla którego chcesz otworzyć bilet:
 
-    -   W przypadku problemów z rozliczeniami i licencjonowaniem wybierz pozycję **Informacje o rozliczeniach i produktach**..
+    -   W przypadku problemów z rozliczeniami, licencjonowaniem i kontami wybierz pozycję **Informacje o rozliczeniach i produktach**.
 
-    -   W przypadku pozostałych problemów z usługą Intune wybierz pozycję **Zarządzanie urządzeniami przenośnymi**. Ta opcja obejmuje również problemy związane z zarządzaniem urządzeniami przenośnymi w usłudze Office 365 i programem System Center Configuration Manager w usłudze Intune.
+    -   W przypadku pozostałych problemów z usługą Intune wybierz pozycję **Zarządzanie urządzeniami przenośnymi**.
 
     > [!NOTE]
-    > Może być konieczne kliknięcie pozycji **Więcej** u dołu listy w celu wyświetlenia wszystkich kategorii.
+    > Może być konieczne wybranie pozycji **Więcej** u dołu listy w celu wyświetlenia wszystkich kategorii.
 
-3.  Na stronie **Identyfikowanie problemu** wybierz **funkcję** i **objaw**, dla których potrzebujesz pomocy. Zostanie wyświetlony monit o podanie **podsumowania problemu** i **szczegółów problemu**..
+3.  Na stronie **Identyfikowanie problemu** wybierz **funkcję** i **objaw**, dla których potrzebujesz pomocy. Zostanie wyświetlony monit o podanie **podsumowania problemu** i **szczegółów problemu**.
 
-4.  Na stronie **Przeglądanie sugestii** są dostępne linki do zawartości, która może ułatwić samodzielne rozwiązanie problemu.  Jeśli nie jesteś w stanie rozwiązać problemu, możesz kliknąć pozycję **Tak, kontynuuj** u dołu strony, aby przesłać żądanie obsługi.
+4.  Na stronie **Przeglądanie sugestii** są dostępne linki do zawartości, która może ułatwić samodzielne rozwiązanie problemu.  Jeśli nie jesteś w stanie rozwiązać problemu, możesz wybrać pozycję **Tak, kontynuuj** u dołu strony, aby przesłać żądanie obsługi.
 
-5.  Na stronie **Dodawanie szczegółów** podaj żądane informacje. Możesz dołączyć zrzuty ekranu lub inne dokumenty, klikając pozycję **Dołącz plik**..
+5.  Na stronie **Dodawanie szczegółów** podaj żądane informacje. Możesz dołączyć zrzuty ekranu lub inne dokumenty, wybierając pozycję **Dołącz plik**.
 
-6.  Na stronie **Potwierdzanie i przesyłanie** podaj informacje kontaktowe, przejrzyj żądanie i kliknij pozycję **Prześlij żądanie**. Po przesłaniu żądania nastąpi przekierowanie do listy Twoich żądań obsługi.
+6.  Na stronie **Potwierdzanie i przesyłanie** podaj informacje kontaktowe, przejrzyj żądanie i wybierz pozycję **Prześlij żądanie**. Po przesłaniu żądania nastąpi przekierowanie do listy Twoich żądań obsługi.
 
 ## Pomoc techniczna przez telefon
 Listę numerów telefonów pomocy technicznej uporządkowaną według krajów i regionów, godzin pracy działu pomocy technicznej oraz obsługiwanych języków w poszczególnych regionach zawiera temat [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md).
 
 ## Śledzenie żądań obsługi
-Aby śledzić swoje żądania, przejdź do [Centrum administracyjnego usługi Office 365](https://portal.office.com/admin/default.aspx). W dolnej części listy **Utwórz żądanie obsługi** kliknij pozycję **Wyświetl wszystkie bilety obsługi**. Domyślnie są wyświetlane wszystkie otwarte żądania obsługi. Aby zmienić wyświetlane żądania obsługi na przykład w celu wyświetlania zamkniętych żądań, kliknij ikonę filtra w górnym menu nawigacyjnym i wybierz preferowany widok.
+Aby śledzić swoje żądania, przejdź do [Centrum administracyjnego usługi Office 365](https://portal.office.com/admin/default.aspx). W dolnej części listy **Utwórz żądanie obsługi** wybierz pozycję **Wyświetl wszystkie bilety obsługi**. Domyślnie są wyświetlane wszystkie otwarte żądania obsługi. Aby zmienić wyświetlane żądania obsługi na przykład w celu wyświetlania zamkniętych żądań, wybierz ikonę filtra w górnym menu nawigacyjnym i wybierz preferowany widok.
 
 > [!NOTE]
 > **W przypadku korzystania z programu Microsoft System Center Configuration Manager** lub **Microsoft System Center Endpoint Protection:** w celu uzyskania pomocy technicznej dotyczącej programu Configuration Manager lub Endpoint Protection skontaktuj się z partnerem albo odwiedź [Centrum rozwiązań programów Microsoft System Center Configuration Manager i System Center Endpoint Protection](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), w którym można znaleźć szczegółowe materiały samodzielnej pomocy z możliwością otwarcia żądania obsługi w trybie online lub przez telefon.
@@ -145,9 +139,7 @@ Nasze zadania:
 [Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
 
 
-[Często zadawane pytania dotyczące usługi Microsoft Intune](/intune/understand-explore/frequently-asked-questions-for-microsoft-intune)
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ustawienia zasad zarządzania aplikacjami mobilnymi systemu Android | Microsoft Intune
-description:
-keywords:
+title: "Ustawienia zasad zarządzania aplikacjami mobilnymi systemu Android | Microsoft Intune"
+description: "W tym temacie opisano ustawienia zasad zarządzania aplikacjami mobilnymi dla urządzeń z systemem Android."
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 359f76daa35a14e4107a9e03c6a1b1f4d1215777
+ms.openlocfilehash: bbb2d56753d47e68aeba1e5f17188f1f7a740c6e
+
 
 ---
 
@@ -65,11 +59,12 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
 
     **Wartość domyślna = Tak**
 - **Szyfruj dane aplikacji:** Wybierz opcję **Tak**, aby włączyć szyfrowanie. W przypadku włączenia tego ustawienia dla aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach. Zawartość w pamięci urządzenia zawsze jest zaszyfrowana.
-  >[!NOTE] Metoda szyfrowania nie ma certyfikatu FIPS 140-2
+  >[!NOTE]
+  >Metoda szyfrowania nie ma certyfikatu FIPS 140-2
 
   **Wartość domyślna = Tak**
 
-- **ContactSyncDisabled:** Wybierz opcję **Tak**, aby uniemożliwić synchronizowanie informacji kontaktowych z aplikacją natywnej książki adresowej na urządzeniu. W przypadku wybrania opcji **Nie** aplikacja zapisuje dane kontaktowe w aplikacji natywnej książki adresowej urządzenia.<br/>Wykonanie selektywnego czyszczenia w celu usunięcia danych firmy powoduje usunięcie kontaktów zsynchronizowanych bezpośrednio z aplikacji do natywnej książki adresowej. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie ta opcja ma zastosowanie tylko do aplikacji **Microsoft Outlook**.
+- **Wyłącz synchronizację kontaktów:** wybierz opcję **Tak**, aby uniemożliwić synchronizowanie informacji kontaktowych z aplikacją natywnej książki adresowej na urządzeniu. W przypadku wybrania opcji **Nie** aplikacja zapisuje dane kontaktowe w aplikacji natywnej książki adresowej urządzenia.<br/>Wykonanie selektywnego czyszczenia w celu usunięcia danych firmy powoduje usunięcie kontaktów zsynchronizowanych bezpośrednio z aplikacji do natywnej książki adresowej. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie ta opcja ma zastosowanie tylko do aplikacji **Microsoft Outlook**.
 
   **Wartość domyślna = Tak**
 
@@ -100,6 +95,7 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji skonfigurowanych
 - **Zablokuj przechwytywanie ekranu i asystenta systemu Android (system Android 6 Marshmallow lub nowszy):** Wybierz opcję **Tak**, aby blokować przechwytywanie ekranu i funkcje **asystenta systemu Android** podczas korzystania z tej aplikacji.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

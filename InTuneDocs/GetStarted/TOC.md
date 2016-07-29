@@ -9,7 +9,7 @@
 ### [Portal firmy](microsoft-intune-company-portal.md)
 ### [Integracja z produktami i usługami w chmurze firmy Microsoft](integration-with-cloud-services.md)
 ### [Użycie przepustowości sieci](network-bandwidth-use.md)
-### [Nazwy domen](domain-names-for-microsoft-intune.md)
+### [Niestandardowe nazwy domen](domain-names-for-microsoft-intune.md)
 
 ## [Przewodnik Szybki start dotyczący usługi Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logowanie się do usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
@@ -39,6 +39,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

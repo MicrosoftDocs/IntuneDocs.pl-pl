@@ -1,43 +1,47 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Intune"
+description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 4c728b4fbb68d64d4e06845eca08b1b2d8d1a92a
+
 
 ---
 
 # Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
-W tym artykule wymieniono niektóre problemy dotyczące rejestracji urządzenia oraz opisano sposoby ich rozwiązywania.
-
-> [!NOTE]
-> Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
->- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
->- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
->- [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
->- [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios)
+Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia. Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
 
 
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
+## Początkowe kroki rozwiązywania problemów
+
+Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
+
+-   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)
+-   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-   [Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+-   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+
+
+Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
+
+- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
+- [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
+- [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios)
+
+
 
 ## Ogólne problemy dotyczące rejestrowania
 Te problemy mogą wystąpić na wszystkich platformach urządzeń.
@@ -103,7 +107,8 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanej wersji usługi Intune (dla usługi Intune, rozwiązania MDM w usłudze Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
 
-    > [!NOTE] Ustawiony urząd zarządzania urządzeniami przenośnymi można zmienić tylko po skontaktowaniu się z pomocą techniczną. Opis tej procedury zawarto w artykule [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
+    > [!NOTE]
+    > Ustawiony urząd zarządzania urządzeniami przenośnymi można zmienić tylko po skontaktowaniu się z pomocą techniczną. Opis tej procedury zawarto w artykule [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy ich nazwy UPN odpowiadają informacjom o usłudze Active Directory w portalu konta.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
@@ -155,8 +160,29 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM lub czy nie zainstalowano już dla niego profilu zarządzania.
 
-
 4.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
+
+### Problemy z certyfikatami systemu Android
+
+**Problem**: Użytkownik otrzymuje następujący komunikat na urządzeniu: *„Nie możesz się zalogować ze względu na brak wymaganego certyfikatu na urządzeniu”.*
+
+**Rozwiązanie**: 
+
+- Istnieje możliwość, że użytkownik może pobrać brakujący certyfikat, wykonując [następujące instrukcje](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
+- Jeśli użytkownik nie może pobrać certyfikatu, może brakować pośrednich certyfikatów na serwerze usług AD FS. Certyfikaty pośrednie są wymagane przez system Android w celu zapewnienia zaufania serwera. 
+
+Certyfikaty można zaimportować do magazynu pośredniego na serwerze usług AD FS lub serwerze proxy w następujący sposób:
+
+1.  Na serwerze usług AD FS uruchom program **Microsoft Management Console** i dodaj przystawkę Certyfikaty dla **konta komputera**. 
+5.  Znajdź certyfikat, którego używa usługa AD FS i wyświetl jego certyfikat nadrzędny.
+6.  Skopiuj certyfikat nadrzędny i wklej go w obszarze **Computer\Intermediate Certification Authorities\Certificates**.
+7.  Skopiuj certyfikaty usług AD FS, odszyfrowywania usług AD FS i podpisywania usług AD FS i wklej je w magazynie osobistym usługi AD FS.
+8.  Uruchom ponownie serwery usługi AD FS.
+
+Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
+
+
+
 ## Problemy z systemem iOS
 ### Instalacja profilu nie powiodła się
 **Problem: ** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
@@ -255,8 +281,7 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 |Kod błędu|Możliwy problem|Sugerowane rozwiązanie|
 |--------------|--------------------|----------------------------------------|
-|0x80CF0437 |W zegarze na komputerze klienckim nie ustawiono prawidłowego czasu.|Upewnij się, że dla zegara i strefy czasowej na komputerze klienckim ustawiono prawidłową godzinę i strefę czasową.
-|
+|0x80CF0437 |W zegarze na komputerze klienckim nie ustawiono prawidłowego czasu.|Upewnij się, że dla zegara i strefy czasowej na komputerze klienckim ustawiono prawidłową godzinę i strefę czasową.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Nie można nawiązać połączenia z usługą Intune. Sprawdź ustawienia serwera proxy klienta.|Sprawdź, czy konfiguracja serwera proxy na komputerze klienckim jest obsługiwana przez usługę Intune i czy komputer kliencki ma dostęp do Internetu.|
 |0x80240438, 0x80CF0438|Nie skonfigurowano ustawień serwera proxy w programie Internet Explorer i w systemie lokalnym.|Nie można nawiązać połączenia z usługą Intune. Sprawdź ustawienia serwera proxy klienta i upewnij się, że konfiguracja serwera proxy na komputerze klienckim jest obsługiwana przez usługę Intune i że komputer kliencki ma dostęp do Internetu.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Pakiet rejestracyjny jest nieaktualny.|Pobierz i zainstaluj bieżący pakiet oprogramowania klienckiego z poziomu obszaru roboczego Administrator.|
@@ -280,6 +305,7 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Intune"
+description: "Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: b5e561b17f385d828fbd34658e4c30ac62ab0ea3
+
 
 ---
 
@@ -29,6 +23,8 @@ ms.suite: ems
 W tej sekcji przedstawiono informacje, które ułatwią rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
+
+## Kody błędów programu Update Agent
 
 Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usługi Intune. Jeśli nie możesz znaleźć określonego kodu błędu w tej tabeli, zobacz dodatek zawierający [kody wyników programu Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542).
 
@@ -264,10 +260,11 @@ Ten problem może wystąpić, jeśli zastąpione aktualizacje (aktualizacje, kt�
 Ponadto jeśli korzystasz z systemu Windows 7, upewnij się, że następująca aktualizacja jest zainstalowana: [3050265 Klient usługi Windows Update dla systemu Windows 7: czerwiec 2015 r.](https://support.microsoft.com/kb/3050265)
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

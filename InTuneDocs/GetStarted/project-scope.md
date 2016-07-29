@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Zakres projektu | Microsoft Intune
-description:
-keywords:
+description: "Zalecenia dotyczące fazy zakresu projektu wdrożenia usługi Intune."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71488dad-2f78-478c-a505-5cb9410eec07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: 8bd547eb70f1b933a9dee578a9f843b4cbdd7b57
+
 
 ---
 
@@ -63,6 +57,14 @@ Przejrzyj tę sekcję, aby uzyskać wskazówki dotyczące działań w obszarach 
 ### Planowanie
 
 Większość wysiłków w fazie określania zakresu koncentruje się wokół planowania i przygotowywania. Podczas określania zakresu projektu rozważ problemy dotyczące technologii i organizacji, jak również obecny sposób pracy użytkowników i wymagane zmiany zachowania. Rozpocznij od celu końcowego w szerszej perspektywie, a następnie twórz mniejsze cele w kolejnych fazach, aby zachować zgodność z planem.
+
+
+ > [!NOTE]
+ > 
+ > Te szablony mogą być pomocne podczas pracy nad zakresem projektu:
+ > > - [Szablon decyzji „Usługa Intune czy usługa Intune z programem Configuration Manager”](https://gallery.technet.microsoft.com/Intune-or-Intune-with-900e8a78)
+ > - [Szablon planowania dla aplikacji mobilnych](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59)
+>- [Szablon ogólnego planowania zarządzania urządzeniami](https://gallery.technet.microsoft.com/General-device-management-334c3792)
 
 ### Pomoc techniczna
 Aby pracownicy informatyczni mogli korzystać z zalet wydajnego środowiska usługi Intune, pomoc techniczna powinna być dobrze przygotowana. Podczas określania zakresu projektu rozważ rolę odgrywaną przez pomoc techniczną w poszczególnych fazach oraz zasoby niezbędne do zapewnienia gotowości pomocy technicznej do obsługi użytkowników końcowych.
@@ -110,6 +112,7 @@ Poniżej przedstawiono niektóre wyzwania, które możesz napotkać w fazie **ok
 [Weryfikacja koncepcji](proof-of-concept.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

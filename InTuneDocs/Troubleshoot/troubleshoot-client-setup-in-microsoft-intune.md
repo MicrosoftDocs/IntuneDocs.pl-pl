@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z instalacją klientów | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów z instalacją klientów | Microsoft Intune"
+description: "Rozwiązywanie typowych problemów z instalacją klientów."
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c1e215320168c659d5f838355f6350111d6979b0
+ms.openlocfilehash: a1f9432e8789a40ec65c64cb958414b97c548f06
+
 
 ---
 
@@ -32,7 +26,7 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
 -   Jeśli w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) nie są wyświetlane dla komputera żadne alerty dotyczące wdrażania oprogramowania klienckiego, sprawdź łączność komputera z Internetem oraz konfigurację serwera i upewnij się, że komputer może komunikować się z adresem URL usługi: [https://manage.microsoft.com](https://manage.microsoft.com/). Następnie ponów próbę instalacji oprogramowania klienckiego.
 
--   Możesz ustawić wysyłanie wiadomości e-mail do wybranych adresatów, gdy występuje alert o niepowodzeniu wdrażania oprogramowania klienckiego, konfigurując regułę powiadomień w obszarze roboczym **Administrator** . Aby uzyskać więcej informacji, zobacz [Bądź na bieżąco dzięki alertom w usłudze Microsoft Intune](/intune/deploy-use/get-notified-by-microsoft-intune-alerts).
+-   Możesz ustawić wysyłanie wiadomości e-mail do wybranych adresatów, gdy występuje alert o niepowodzeniu wdrażania oprogramowania klienckiego, konfigurując regułę powiadomień w obszarze roboczym **Administrator** . Aby uzyskać więcej informacji, zobacz [Otrzymywanie powiadomień dzięki alertom w usłudze Microsoft Intune](/intune/deploy-use/get-notified-by-alerts).
 
 -   Usługa Intune wyświetla alert krytyczny **Wdrożenie oprogramowania klienckiego nie powiodło się**, gdy nie można wdrożyć oprogramowania klienckiego. Jest on wyświetlany na stronie **Przegląd systemu** oraz na stronach **Alerty** w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/). Oto jak sprawdzić alerty:
 
@@ -56,23 +50,23 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
 ## Pakiet rejestracyjny komputera nie jest pobierany
 **Problem:** Podczas próby zarejestrowania komputera występują następujące problemy:
--  Pobieranie pakietu rejestracyjnego kończy się niepowodzeniem 
+-  Pobieranie pakietu rejestracyjnego kończy się niepowodzeniem
 -  Okno dialogowe pobierania jest wyświetlane, ale limit czasu zostaje przekroczony
 
 **Rozwiązanie:** Upewnij się, że w okresie pobierania w przeglądarce używanej do pobierania włączone jest pobieranie, a zaszyfrowane pliki można zapisywać na dysku lokalnym.
 
 ## Instalacja klienta zawiesza się. Kod błędu: 0x80040154
 **Problem:**
- 
+
 -  Instalacja klienta zawiesza się podczas rejestracji
 
--  Nie można zarejestrować urządzenia 
+-  Nie można zarejestrować urządzenia
 
 -  Błąd 0x80040154 w pliku WindowsUpdate.log
 
 Może to być spowodowane brakiem krytycznych aktualizacji oprogramowania na komputerze.
 
-**Rozwiązanie:** Upewnij się, że Twoje zasady aktualizacji oprogramowania umożliwiają instalację aktualizacji krytycznych, jak opisano w temacie [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune) 
+**Rozwiązanie:** Upewnij się, że Twoje zasady aktualizacji oprogramowania umożliwiają instalację aktualizacji krytycznych, jak opisano w temacie [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)
 
 
 ## Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
@@ -84,7 +78,8 @@ W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM b�
 
 2.  Zaczekaj 20 minut na usunięcie oprogramowania klienckiego.
 
-    > [!NOTE] Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
+    > [!NOTE]
+    > Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
 
 3.  W menu start wpisz wartość **Kontrola konta użytkownika**, aby otworzyć ustawienia Kontroli konta użytkownika.
 
@@ -127,9 +122,10 @@ W poniższej tabeli opisano kody błędów, które są wyświetlane w obszarze r
 Jeśli problemy z instalacją występują nadal, skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md). Przygotuj dziennik rejestracji komputerów klienckich (znajdujący się w pliku %*programfiles*%\Microsoft\OnlineManagement\Logs\Enrollment.log i %*userprofile*%\AppData\Local\Microsoft\OnlineManagement\Logs\Enrollement.log) oraz dziennik usługi Windows Update (znajdujący się w pliku %*windir*%\windowsupdate.log) do przedstawienia inżynierom pomocy technicznej.
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

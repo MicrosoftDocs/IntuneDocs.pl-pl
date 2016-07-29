@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: Informacje o zasadach usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Informacje o zasadach konfiguracji | Microsoft Intune
+description: "Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: cce19141ef25a8cca785d6ae80d1fe03ab352a8e
+
 
 ---
 
 # Informacje o zasadach usługi Microsoft Intune
 
-Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami.
+Użyj informacji w tym temacie, aby określić zasady konfiguracji usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami.
 
 > [!TIP]
 > Aby uzyskać szczegółowe informacje na temat używania zasad, zobacz temat [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
@@ -53,11 +47,14 @@ Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, 
 |**Konfiguracja niestandardowa (system iOS 7.1 lub nowszy)**|Wdrażanie profili konfiguracji, które zostały utworzone za pomocą narzędzia Apple Configurator, na urządzeniach z systemem iOS. Jest to przydatne tylko w przypadku, gdy konieczne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu iOS w usłudze Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
 |**Profil poczty e-mail (system iOS 7.1 lub nowszy)**|Tworzenie, wdrażanie i monitorowanie ustawień poczty e-mail programu Exchange ActiveSync na zarządzanych urządzeniach. Umożliwia to użytkownikom dostęp do firmowej poczty e-mail na urządzeniach osobistych, przy czym nie muszą oni przeprowadzać żadnej konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Konfiguracja ogólna (system iOS 7.1 lub nowszy)**|Skonfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego.<br />- Określenie aplikacji, które są zgodne lub niezgodne, a następnie zgłaszanie, gdy są one używane.<br />Skonfigurowanie trybu kiosku, który umożliwia działanie tylko określonych funkcji, na przykład umożliwia uruchamianie tylko jednej aplikacji na urządzeniu lub wyłącza przyciski głośności.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu iOS w usłudze Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
+|**Zasady konfiguracji aplikacji mobilnych (system iOS 7.1 i nowsze)**|Zasady konfiguracji aplikacji mobilnych umożliwiają automatyczne określanie wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację w systemie iOS.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+|**Zasady profilu aprowizacji aplikacji mobilnych (system iOS 7.1 lub nowszy)**|Biznesowe aplikacje mobilne systemu Apple iOS są tworzone za pomocą dołączonego profilu aprowizacji, a ich kod jest podpisywany przy użyciu certyfikatu. Gdy aplikacja jest uruchamiana na urządzeniu z systemem iOS, system iOS potwierdza integralność aplikacji systemu iOS i wymusza zasady zdefiniowane przez profil aprowizacji.<br><br>Certyfikat podpisywania przedsiębiorstwa używany do podpisywania aplikacji jest zwykle ważny przez 3 lata. Profil aprowizacji wygasa jednak po 1 roku. Ta zasada umożliwia aktywne wdrażanie nowych zasad profilu aprowizacji na urządzeniach, na których znajdują się aplikacje bliskie wygaśnięcia, ale certyfikat jest nadal ważny.<br><br>Aby uzyskać szczegółowe informacje, zobacz [Użyj zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapobiec wygaśnięciu aplikacji](ios-mobile-app-provisioning-profiles.md).|
+|**Profil certyfikatu PKCS #12 (PFX) (system iOS 7.1 lub nowszy)**|Za pomocą tego profilu możesz utworzyć i wdrożyć ustawienia PFX dotyczące żądań certyfikatów urządzeń.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil certyfikatu protokołu SCEP (system iOS 7.1 lub nowszy)**|Konfigurowanie certyfikatu protokołu SCEP (Simple Certificate Enrollment Protocol), którego można użyć w połączeniu z zaufanym certyfikatem urządzenia przenośnego do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil zaufanego certyfikatu (system iOS 7.1 lub nowszy)**|Konfigurowanie zaufanego certyfikatu urządzenia przenośnego, którego można użyć do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
-|**Profil sieci VPN (system iOS 7.1 lub nowszy)**|Konfigurowanie i wdrażanie ustawień, które zapewniają użytkownikom bezpieczny dostęp do sieci firmowej z urządzenia przenośnego. Wdrażając te ustawienia, możesz zminimalizować ilość pracy wymaganej od użytkownika końcowego do nawiązania połączenia z siecią firmową.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia VPN w usłudze Microsoft Intune.md](vpn-connections-in-microsoft-intune.md).|
+|**Profil sieci VPN (system iOS 7.1 i nowsze)**|Konfigurowanie i wdrażanie ustawień, które zapewniają użytkownikom bezpieczny dostęp do sieci firmowej z urządzenia przenośnego. Wdrażając te ustawienia, możesz zminimalizować ilość pracy wymaganej od użytkownika końcowego do nawiązania połączenia z siecią firmową.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia VPN w usłudze Microsoft Intune.md](vpn-connections-in-microsoft-intune.md).|
 |**Profil sieci Wi-Fi (system iOS 7.1 lub nowszy)**|Konfigurowanie i wdrażanie ustawień sieci bezprzewodowej dla użytkowników w organizacji. Wdrażając te ustawienia, można zminimalizować działania użytkowników końcowych wymagane w celu połączenia z siecią bezprzewodową.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia Wi-Fi w usłudze Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
-|**Zasady konfiguracji aplikacji mobilnych (system iOS 7.1 i nowsze)**|Zasady konfiguracji aplikacji mobilnych umożliwiają automatyczne określanie wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację w systemie iOS.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+
 
 ## Zasady konfiguracji systemu Mac OS X
 
@@ -85,9 +82,11 @@ Dotyczy tylko systemu Windows Phone i zarejestrowanych urządzeń systemu Window
 |**Konfiguracja ogólna (system Windows Phone 8.1 lub nowszy)**|Skonfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego.<br />Określenie aplikacji, których użytkownicy mogą lub nie mogą używać, i blokowanie instalacji lub użycia niezgodnych aplikacji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Windows Phone 8.1 w usłudze Microsoft Intune](windows-phone-8-1-policy-settings-in-microsoft-intune.md).|
 |**Profil certyfikatu PKCS #12 (PFX) (system Windows 10 Desktop i Mobile lub nowszy)**|Za pomocą tego profilu możesz utworzyć i wdrożyć ustawienia PFX dotyczące żądań certyfikatów urządzeń.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil certyfikatu protokołu SCEP (system Windows 8.1 i nowsze)**<br /><br />**Profil certyfikatu protokołu SCEP (system Windows Phone 8.1 i nowsze)**|Konfigurowanie certyfikatu protokołu SCEP (Simple Certificate Enrollment Protocol), którego można użyć w połączeniu z zaufanym certyfikatem urządzenia przenośnego do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
-|**Profil certyfikatu protokołu SCEP (system Windows 8.1 i nowsze)**<br /><br />**Profil zaufanego certyfikatu (system Windows Phone 8.1 i nowsze)**|Konfigurowanie zaufanego certyfikatu urządzenia przenośnego, którego można użyć do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md)).|
-|**Profil sieci VPN (system Windows 10 Desktop i Mobile oraz nowsze)**<br /><br />**Profil sieci VPN (system Windows 8.1 i nowsze)**<br /><br />**Profil sieci VPN (system Windows Phone 8.1 i nowsze)**|Konfigurowanie i wdrażanie ustawień, które zapewniają użytkownikom bezpieczny dostęp do sieci firmowej z urządzenia przenośnego. Wdrażając te ustawienia, możesz zminimalizować ilość pracy wymaganej od użytkownika końcowego do nawiązania połączenia z siecią firmową.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia VPN w usłudze Microsoft Intune.md](vpn-connections-in-microsoft-intune.md).|
+|**Profil certyfikatu protokołu SCEP (system Windows 8.1 i nowsze)**<br /><br />**Profil zaufanego certyfikatu (system Windows Phone 8.1 i nowsze)**|Konfigurowanie zaufanego certyfikatu urządzenia przenośnego, którego można użyć do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
+|**Profil sieci VPN (system Windows 10 Desktop i Mobile oraz nowsze)**<br /><br />**Profil sieci VPN (system Windows 8.1 i nowsze)**<br /><br />**Profil sieci VPN (system Windows Phone 8.1 i nowsze)**|Konfigurowanie i wdrażanie ustawień, które zapewniają użytkownikom bezpieczny dostęp do sieci firmowej z urządzenia przenośnego. Wdrażając te ustawienia, możesz zminimalizować ilość pracy wymaganej od użytkownika końcowego do nawiązania połączenia z siecią firmową.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md).|
 |**Importowanie konfiguracji sieci Wi-Fi**|Importowanie i wdrażanie konfiguracji sieci Wi-Fi systemu Windows, które zostały wcześniej wyeksportowane do pliku.<br /><br />Aby uzyskać więcej informacji, zobacz [Połączenia Wi-Fi w usłudze Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
+|**Rozwiązanie Windows Information Protection**<br>(wcześniej znane jako rozwiązanie do ochrony danych przedsiębiorstwa)|Wraz z coraz większą liczbą urządzeń należących do pracowników w przedsiębiorstwie zwiększa się również ryzyko przypadkowych przecieków danych za pośrednictwem aplikacji i usług, które są poza kontrolą przedsiębiorstwa, takich jak poczta e-mail, media społecznościowe i chmura publiczna. Ma to na przykład miejsce, gdy pracownik wysyła najnowsze obrazy inżynieryjne ze swojego osobistego konta e-mail, kopiuje i wkleja informacje o produkcie do tweeta lub zapisuje raport sprzedaży w toku do swojego magazynu w chmurze publicznej.<br><br>Rozwiązanie Windows Information Protection ułatwia ochronę przed takimi potencjalnymi wyciekami danych bez zakłócania w żaden sposób sposobu pracy pracownika. Pomaga również chronić aplikacje i dane przedsiębiorstwa przed przypadkowymi przeciekami danych z urządzeń należących do przedsiębiorstwa oraz urządzeń osobistych, które pracownik zabiera ze sobą do pracy — wszystko to bez konieczności wprowadzania zmian w środowisku lub innych aplikacjach.<br><br>Te zasady usługi Intune służą do zarządzania listą aplikacji chronionych przez rozwiązanie Windows Information Protection, lokalizacjami sieciowymi przedsiębiorstwa, poziomem ochrony i ustawieniami szyfrowania.<br><br>Aby uzyskać więcej informacji, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp) (Chroń dane przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).|
+
 
 ## Zasady dotyczące oprogramowania
 
@@ -135,6 +134,6 @@ Dotyczy tylko systemu Windows Phone i zarejestrowanych urządzeń systemu Window
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

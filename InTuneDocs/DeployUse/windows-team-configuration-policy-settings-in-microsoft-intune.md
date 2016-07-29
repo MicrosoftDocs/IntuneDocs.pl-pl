@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ustawienia zasad konfiguracji systemu Windows Team w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: Ustawienia zasad konfiguracji systemu Windows Team | Microsoft Intune
+description: "**Ogólne zasady konfiguracji systemu Windows 10 Team dla usługi Microsoft Intune** umożliwiają konfigurowanie ustawień zarejestrowanych urządzeń z systemem Windows 10 Team, takich jak Microsoft Surface Hub."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 38194ef3-e26e-4682-958d-14b395fccba1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
+ms.openlocfilehash: b70c935fb5c4525fddf7e36e8421ba14e3c15026
+
 
 ---
 
@@ -44,6 +38,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

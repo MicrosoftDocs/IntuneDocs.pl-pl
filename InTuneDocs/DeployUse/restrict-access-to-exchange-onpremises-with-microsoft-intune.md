@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ograniczanie dostępu poczty e-mail do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej | Microsoft Intune
-description:
-keywords:
+title: "Ograniczanie dostępu do poczty e-mail do lokalnej instalacji programu Exchange | Microsoft Intune"
+description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w lokalnej instalacji programu Exchange przy użyciu dostępu warunkowego."
+keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 07/18/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
+ms.openlocfilehash: 490a1aa091547de1d2bccb0fe8ea72e40753a0a7
+
 
 ---
 
@@ -75,7 +69,8 @@ Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu w
 -   Natywna aplikacja poczty e-mail w systemie iOS
 
 -   Natywna aplikacja poczty e-mail w systemie Android 4 lub nowszym
-> [!NOTE] Aplikacja Microsoft Outlook w systemach Android i iOS nie jest obsługiwana.
+> [!NOTE]
+> Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana.
 
 ## Obsługa komputerów
 
@@ -104,7 +99,8 @@ Aplikacja **do obsługi poczty** w systemie Windows 8 lub nowszym (w przypadku z
 >Jeśli chcesz najpierw blokować dostęp wszystkich urządzeń przed udzieleniem im dostępu do poczty e-mail, wybierz regułę Blokowanie dostępu lub Kwarantanna. Reguła domyślna będzie stosowana dla wszystkich typów urządzeń, dlatego dotyczy także typów urządzeń skonfigurowanych jako wyjątki dla platform i nieobsługiwanych przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
   - **Powiadomienie użytkownika:** oprócz powiadomienia e-mail wysyłanego z programu Exchange usługa Intune wysyła wiadomość e-mail, która zawiera kroki procedury odblokowania urządzenia. Możesz zmienić domyślną wiadomość zgodnie z własnymi potrzebami. Ponieważ powiadomienie e-mail usługi Intune z instrukcjami odblokowywania jest dostarczane do skrzynki pocztowej programu Exchange użytkownika, to w przypadku, gdy urządzenie użytkownika zostanie zablokowane przed odebraniem wiadomości e-mail, możliwe jest użycie niezablokowanego urządzenia lub innej metody, aby uzyskać dostęp do programu Exchange i wyświetlić wiadomość. Jest to szczególnie istotne, kiedy **Reguła domyślna** jest ustawiona na blokowanie lub kwarantannę.  W takim przypadku użytkownik końcowy będzie musiał przejść do swojego sklepu z aplikacjami, pobrać aplikację Portal firmy od firmy Microsoft i zarejestrować swoje urządzenie. Dotyczy to urządzeń z systemami iOS, Windows i Samsung KNOX.  W przypadku urządzeń, które nie korzystają z systemu Samsung KNOX, konieczne jest wysłanie wiadomości e-mail z kwarantanny na alternatywne konto poczty e-mail użytkownika, którą następnie użytkownik końcowy musi skopiować na zablokowane urządzenie, aby ukończyć proces rejestracji i zgodności.
-  > [!NOTE] Aby program Exchange mógł wysłać powiadomienie e-mail, należy określić konto, które będzie używane do wysyłania powiadomień e-mail.
+  > [!NOTE]
+  > Aby program Exchange mógł wysłać powiadomienie e-mail, należy określić konto, które będzie używane do wysyłania powiadomień e-mail.
   >
   > Aby uzyskać szczegółowe informacje, zobacz temat [Konfigurowanie łącznika On-Premises Connector dla lokalnego lub hostowanego programu Exchange](intune-on-premises-exchange-connector.md).
 
@@ -126,6 +122,7 @@ Aplikacja **do obsługi poczty** w systemie Windows 8 lub nowszym (w przypadku z
 [Ograniczanie dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

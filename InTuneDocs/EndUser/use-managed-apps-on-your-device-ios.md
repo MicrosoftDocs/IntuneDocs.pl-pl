@@ -1,27 +1,27 @@
 ---
-title: "Korzystanie z aplikacji zarządzanych na urządzeniu | Microsoft Intune"
+title: "Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: arob98
 ms.date: 05/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3232c5c1-cb9f-45ca-806f-7e74eeb3533e
-ROBOTS: 
+ROBOTS: noindex,nofollow
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39e810466d3a98789f0f1338f68d2be80d757d39
-ms.openlocfilehash: 8feb4b293a021efd1f4cd26c43be76355d947143
+ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
+ms.openlocfilehash: 8a219cd10bbfe1dd01003e732c8e9bf11c29b0f5
 
 
 ---
 
 
-# Korzystanie z aplikacji zarządzanych na urządzeniu
+# Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
 
 Aplikacje zarządzane to aplikacje, które administrator IT może konfigurować w celu ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem iOS, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
 
@@ -66,6 +66,6 @@ Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
