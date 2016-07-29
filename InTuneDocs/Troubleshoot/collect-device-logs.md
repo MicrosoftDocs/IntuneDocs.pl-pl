@@ -3,7 +3,7 @@ title: "Zbieranie dzienników urządzeń | Microsoft Intune"
 description: 
 keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/01/2016
 ms.topic: article
 ms.prod: 
@@ -13,15 +13,15 @@ ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac5c66f57194a84580aa495a58e5281683aa1cca
-ms.openlocfilehash: 4fc08fcea6cea897b9ddc3d0c00f2d83069f639d
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: 46579569c33b50f4b19a62d83c1db5e0e304621b
 
 
 ---
 
 # Dzienniki urządzeń
 
-Podczas rozwiązywania problemów może być konieczne zebranie dzienników z urządzeń użytkowników. W tym temacie podano instrukcje dotyczące zbierania tych dzienników. Zazwyczaj trzeba uzyskać dostęp do urządzenia lub poprosić użytkownika o zebranie dzienników i wysłanie ich do Ciebie. 
+Podczas rozwiązywania problemów może być konieczne zebranie dzienników z urządzeń użytkowników. W tym temacie podano instrukcje dotyczące zbierania tych dzienników. Zazwyczaj trzeba uzyskać dostęp do urządzenia lub poprosić użytkownika o zebranie dzienników i wysłanie ich do Ciebie.
 
 ### Lokalizacja dzienników systemu Android
 Dzienniki systemu Android znajdują się w folderze *<Android Device>\Phone\Android\data\com.microsoft.windowsintune.companyportal\files*. Użytkownik może również wysłać pliki dzienników do Ciebie w wiadomości e-mail zgodnie z opisem w temacie [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android).
@@ -46,6 +46,6 @@ W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

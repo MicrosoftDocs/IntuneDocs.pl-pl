@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ustawienia zasad zgodności dla urządzeń z systemem iOS | Microsoft Intune
-description:
-keywords:
+title: "Ustawienia zasad zgodności dla urządzeń z systemem iOS | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed6aafb0ba8e8bb2b7a9985bb98a149a1af68574
+ms.openlocfilehash: 606146fdc9e3e141293e561a09d8e62d8870403a
+
 
 ---
 
@@ -85,6 +79,7 @@ Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkown
 - **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO4-->
 
 

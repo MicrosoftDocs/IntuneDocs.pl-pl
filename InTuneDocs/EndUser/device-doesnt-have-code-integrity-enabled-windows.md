@@ -3,18 +3,19 @@ title: "Na urządzeniu nie jest włączona integralność kodu | Microsoft Intun
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 84892bbc-f888-417b-bbeb-978cc7e10028
+ROBOTS: noindex,nofollow
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 793a3eb17aaa5e04c27a31302d93bfc46ff71cac
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: eab8d7108e869ae78ab4470aa60584362fe3d3e2
 
 
 ---
@@ -22,11 +23,11 @@ ms.openlocfilehash: 793a3eb17aaa5e04c27a31302d93bfc46ff71cac
 
 # Na urządzeniu nie jest włączona integralność kodu
 
-Twoja organizacja wymaga, aby włączyć funkcję integralności kodu systemu Windows. Jest to funkcja, która sprawdza sterowniki i pliki systemowe na urządzeniu, aby upewnić się, że są bezpieczne. 
+Twoja organizacja wymaga, aby włączyć funkcję integralności kodu systemu Windows. Jest to funkcja, która sprawdza sterowniki i pliki systemowe na urządzeniu, aby upewnić się, że są bezpieczne.
 
-Aby włączyć funkcję integralności kodu systemu Windows, należy włączyć funkcję Bezpieczny rozruch. Następnie funkcja integralności kodu zostanie włączona automatycznie. 
+Aby włączyć funkcję integralności kodu systemu Windows, należy włączyć funkcję Bezpieczny rozruch. Następnie funkcja integralności kodu zostanie włączona automatycznie.
 
-Włączenie funkcji Bezpieczny rozruch jest zaawansowanym zadaniem. Jeśli używasz urządzenia przenośnego, skontaktuj się z administratorem IT, aby uzyskać pomoc. 
+Włączenie funkcji Bezpieczny rozruch jest zaawansowanym zadaniem. Jeśli używasz urządzenia przenośnego, skontaktuj się z administratorem IT, aby uzyskać pomoc.
 
 Jeśli używasz komputera, możesz skontaktować się z administratorem IT lub zajrzeć do sekcji „Aby ponownie włączyć funkcję Bezpieczny rozruch” na stronie [Wyłączanie funkcji Bezpieczny rozruch](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) i spróbować włączyć Bezpieczny rozruch samodzielnie.
 
@@ -36,6 +37,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,38 +1,32 @@
 ---
-# required metadata
-
-title: Przegląd cyklu życia urządzenia | Microsoft Intune
-description:
-keywords:
+title: "Przegląd cyklu życia rozwiązania MDM | Microsoft Intune"
+description: "Dowiedz się, jak usługa Intune ułatwia zarządzanie urządzeniami w całym ich cyklu życia — od rejestracji poprzez konfigurację aż po ewentualne wycofanie."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f6051fa7-133f-4712-86a5-e5f5bc5ab3c7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 11260ad0e7dc45b7dec42fe12456ed18a484ab89
+
 
 ---
 
 # Przegląd cyklu życia zarządzania urządzeniami przenośnymi
 
-Cykl życia urządzenia w usłudze Intune zaczyna się od rejestracji urządzenia, a następnie obejmuje kilka etapów i kończy się, gdy urządzenie nie jest już wymagane.
+Wszystkie urządzenia, którymi można zarządzać, mają tak zwany *cykl życia*. Usługa Intune pomaga zarządzać tym cyklem życia od rejestracji aż po wycofanie urządzenia, gdy nie jest już potrzebne:
 
-![Cykl życia urządzenia](./media/devicelifecycle_nobg.png "the Intune device lifecycle")
+![Cykl życia urządzenia](./media/device-lifecycle.png "the Intune device lifecycle")
 
 ## Zarejestruj
-Współczesne strategie zarządzania urządzeniami przenośnymi muszą uwzględniać różne telefony, tablety i komputery (z systemami iOS, Android, Windows i Mac OS X). Aby móc zarządzać urządzeniem, co często zdarza się w przypadku urządzeń będących własnością firmy, pierwszym krokiem jest [skonfigurowanie rejestracji urządzenia](enroll-devices-in-microsoft-intune.md). Komputerami z systemem Windows można też zarządzać przez zarejestrowanie ich w usłudze Intune (zarządzanie urządzeniami przenośnymi) lub [zainstalowanie oprogramowania klienckiego usługi Intune](manage-windows-pcs-with-microsoft-intune.md)..
+Współczesne strategie zarządzania urządzeniami przenośnymi muszą uwzględniać różne telefony, tablety i komputery (z systemami iOS, Android, Windows i Mac OS X). Aby móc zarządzać urządzeniem, co często zdarza się w przypadku urządzeń będących własnością firmy, pierwszym krokiem jest [skonfigurowanie rejestracji urządzenia](enroll-devices-in-microsoft-intune.md). Komputerami z systemem Windows można też zarządzać przez zarejestrowanie ich w usłudze Intune (zarządzanie urządzeniami przenośnymi, MDM) lub [zainstalowanie oprogramowania klienckiego usługi Intune](manage-windows-pcs-with-microsoft-intune.md).
 
 ## Konfiguracja
 Zarejestrowanie urządzeń jest tylko pierwszym krokiem. Aby móc korzystać z oferty usługi Intune i zapewnić, że urządzenia są bezpieczne i zgodne ze standardami firmy, można wybierać z szerokiej gamy **zasad** pozwalających na skonfigurowanie prawie każdego aspektu działania zarządzanych urządzeń. Dotyczy to na przykład tego, czy użytkownicy powinni mieć hasła na urządzeniach, na których znajdują się dane firmowe? Można tego wymagać. Czy masz firmową sieć Wi-Fi? Możesz ją skonfigurować automatycznie. Poniżej przedstawiono typy dostępnych opcji konfiguracji:
@@ -51,6 +45,7 @@ We współczesnym świecie IT ochrona urządzeń przed nieautoryzowanym dostępe
 Gdy dojdzie do utraty lub kradzieży urządzenia, zajdzie potrzeba jego wymiany lub użytkownik przejdzie na inne stanowisko, zazwyczaj jest to czas na [wycofanie lub wyczyszczenie](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) urządzenia. Istnieją różne sposoby, które umożliwiają realizację takiego zadania — począwszy od zresetowania urządzenia, usunięcia go z zarządzania, aż po wyczyszczenie danych firmowych na nim.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 
