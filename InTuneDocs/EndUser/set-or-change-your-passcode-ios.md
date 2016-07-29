@@ -3,16 +3,17 @@ title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
+ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 94c2282688e73a8ab95599b1f7beb05e98eb103a
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
 
 Jeśli urządzenie z systemem iOS nie jest zgodne z zasadami kodów dostępu określonymi przez administratora IT, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby kod dostępu spełniał wymagania.
 
-Administrator IT może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Na przykład może być wymagana określona liczba znaków lub kombinacja cyfr i liter w kodzie dostępu. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach można tylko objaśnić, jak ustawić lub zmienić kod dostępu. Nie objaśniono w nich każdej możliwej kombinacji wymagań. 
+Administrator IT może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Na przykład może być wymagana określona liczba znaków lub kombinacja cyfr i liter w kodzie dostępu. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach można tylko objaśnić, jak ustawić lub zmienić kod dostępu. Nie objaśniono w nich każdej możliwej kombinacji wymagań.
 
 Jeśli masz problem z ustawieniem kodu dostępu spełniającego wszystkie wymagania dotyczące kodów dostępu, skontaktuj się z administratorem IT w celu uzyskania pomocy.
 
@@ -44,6 +45,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

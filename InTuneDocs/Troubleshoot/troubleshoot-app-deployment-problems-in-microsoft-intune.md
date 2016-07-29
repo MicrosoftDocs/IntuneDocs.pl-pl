@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune
-description:
-keywords:
+title: "Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune"
+description: "W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune."
+keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: 46cb56da1623e0de9103ce3fa60465d5d367c974
+
 
 ---
 
@@ -87,7 +81,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 ### Błąd: Wydawca nie istnieje
 Używasz polecenia **Dodaj inną umowę dotyczącą oprogramowania**, aby dodać umowę licencyjną innej firmy. Próbujesz dodać wydawcę na stronie **Inne umowy licencjonowania oprogramowania**. Ta strona zawiera listę istniejących wydawców w kolejności alfabetycznej.
-Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**. 
+Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**.
 
 To jest celowe. Usługa Intune zapewnia śledzenie licencji tylko dla popularnych tytułów oprogramowania. Usługa Intune wymaga co najmniej 4 osobnych kont raportujących oprogramowanie, zanim staje się dostępna jako opcja obciążenia związanego z licencjonowaniem.
 
@@ -104,11 +98,13 @@ Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podc
 |0x80073CF0|Nie można otworzyć pakietu.|Możliwe przyczyny:<br /><br />— pakiet nie został podpisany.<br />— nazwa wydawcy jest niezgodna z podmiotem certyfikatu podpisywania.<br /><br />Sprawdź dziennik zdarzeń AppxPackagingOM, aby uzyskać więcej informacji.|
 |0x80073CF3|Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu|Możliwe przyczyny:<br /><br />— przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.<br />— określona zależność pakietu nie została odnaleziona.<br />— pakiet nie obsługuje poprawnej architektury procesora.<br /><br />Sprawdź dziennik zdarzeń AppXDeployment-Server, aby uzyskać więcej informacji.|
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
+|0x87D1041C|Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji.|— Użytkownik zainstalował aplikację z portalu firmy, a następnie odinstalował ją bezpośrednio z urządzenia. Zainstaluj ponownie aplikację z portalu firmy.<br /><br />— Może występować niezgodność między numerem wersji aplikacji biznesowej rozpoznawanym przez usługę Intune i wersją zainstalowaną na urządzeniu. Upewnij się, że usługa Intune ma poprawną wersję, a następnie zainstaluj ponownie aplikację.|
 
 ### Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 
