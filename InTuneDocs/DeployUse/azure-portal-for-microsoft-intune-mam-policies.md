@@ -3,8 +3,8 @@ title: "Portal Azure — zasady zarządzania aplikacjami mobilnymi | Microsoft I
 description: "Utwórz zasady zarządzania aplikacjami mobilnymi w portalu Azure. Zasady tworzone w tym miejscu można zastosować do urządzeń z rejestracją lub bez rejestracji w usłudze Intune."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 359f76daa35a14e4107a9e03c6a1b1f4d1215777
-ms.openlocfilehash: c466a854474c1c5ba3270f848caa51edcd5b6856
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 22aea1a9a2ff55ae7a8a115fae31b1358305a4a5
 
 
 ---
@@ -40,13 +40,13 @@ Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla n
 
     ![Zrzut ekranu przedstawiający stronę logowania się do portalu Azure](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
-2.  Po pomyślnym zalogowaniu pojawi się strona **Pulpit nawigacyjny**. Na stronie **Pulpit nawigacyjny** znajduje się zestaw kafelków domyślnych, które można usunąć i dodać nowe w celu dostosowania strony.
+2.  Po pomyślnym zalogowaniu pojawi się strona **Pulpit nawigacyjny**. Stronę **Pulpit nawigacyjny** można dostosować.
 
     ![Zrzut ekranu pulpitu nawigacyjnego portalu Azure](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
 3.  W menu **Przeglądaj** znajdź pozycję **Intune**.![Zrzut ekranu przedstawiający menu Przeglądaj z wyróżnioną pozycją Intune](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
-4.  Kliknij pozycję **Intune > Zarządzanie aplikacjami mobilnymi w usłudze Intune > Ustawienia**.
+4.  Wybierz opcję **Intune > Zarządzanie aplikacjami mobilnymi w usłudze Intune > Ustawienia**.
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
@@ -61,6 +61,6 @@ Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla n
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
