@@ -3,8 +3,8 @@ title: Instalowanie nowej wersji aplikacji Portal firmy | Microsoft Intune
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 05/30/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 529d8020ffda5ffe32542b670a75fd0faa5d6ffe
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: f15f3efc10936a964a72718daf8219f5b9c1e24a
 
 
 ---
@@ -22,13 +22,13 @@ ms.openlocfilehash: 529d8020ffda5ffe32542b670a75fd0faa5d6ffe
 
 Jeśli używana wersja aplikacji Portal firmy nie jest już obsługiwana lub dostępna jest jej nowsza wersja, należy zaktualizować aplikację Portal firmy do nowszej wersji. Skorzystaj z poniższych czynności zgodnych z typem posiadanego urządzenia.
 
-## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Android
+## Aktualizowanie aplikacji Portal firmy usługi Intune na urządzeniu z systemem Android
 
 Sklep Play powiadamia o dostępności nowej wersji aplikacji Portal firmy. W aplikacji Portal firmy nie jest wyświetlany monit. Postępuj zgodnie z instrukcjami w alercie, aby zaktualizować urządzenie.
 
-## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem iOS
+## Aktualizowanie aplikacji Portal firmy usługi Intune na urządzeniu z systemem iOS
 
-Sklep App Store powiadamia o dostępności nowej wersji aplikacji Portal firmy. 
+Po udostępnieniu nowej wersji na liście zainstalowanych aplikacji zobaczysz opcję „Aktualizuj” obok aplikacji.  
 
 Aby zaktualizować aplikację Portal firmy:
 
@@ -36,7 +36,7 @@ Aby zaktualizować aplikację Portal firmy:
 
 2. Po znalezieniu aplikacji naciśnij przycisk **Aktualizuj** z prawej strony nazwy aplikacji.
 
-## Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Windows
+## Aktualizowanie aplikacji Portal firmy usługi Intune na urządzeniu z systemem Windows
 
 1.  Przejdź do Sklepu Windows i wyszukaj ciąg **portal firmy**.
 
@@ -56,7 +56,6 @@ Aby uzyskać informacje o innych zadaniach, które możesz wykonać za pomocą s
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

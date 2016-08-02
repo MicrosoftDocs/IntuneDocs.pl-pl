@@ -3,7 +3,7 @@ title: "Zarządzanie firmowymi urządzeniami | Microsoft Intune"
 description: "Wprowadź urządzenia firmowe (COD) do systemu zarządzania na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu oraz potrzeb organizacji."
 keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: angrobe
 ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26ac7d52c0ad3e37e517b60d448a94849c0f4b30
-ms.openlocfilehash: 6cf620a96b39540c8b7ca618936af1367971bb8f
+ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
+ms.openlocfilehash: 58efadf2f9fc34a31070aff93e86083583630caa
 
 
 ---
 
 # Rejestrowanie firmowych urządzeń w usłudze Microsoft Intune
-Urządzenia należące do organizacji lub firmy (COD) mogą być wprowadzane do systemu zarządzania w usłudze Intune na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu i potrzeb organizacji.
+Urządzenia należące do organizacji lub firmy (COD) mogą być wprowadzane do systemu zarządzania w usłudze Intune na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu i potrzeb organizacji. Firmowe urządzenia można również rejestrować (oraz zarządzać nimi) przez zainstalowanie aplikacji Portal firmy, podobnie jak w przypadku strategii „przynieś własne urządzenie” (BYOD, bring your own device).
 
 ## Firmowe urządzenia z systemem iOS
 Te metody rejestracji są odpowiednie w scenariuszach „Wybierz własne urządzenie” (CYOD), w których organizacja kupuje urządzenia dla użytkowników, ale chce zachować możliwość zarządzania urządzeniem. Jeśli dana organizacja nabyła urządzenia z systemem iOS, można wstępnie zorganizować rejestrację w taki sposób, że urządzenie zostanie dołączone do systemu zarządzania, gdy użytkownik włączy je pierwszy raz. Usługa Intune obsługuje rejestrowanie urządzeń w ramach programu [Device Enrollment Program (DEP) firmy Apple](ios-device-enrollment-program-in-microsoft-intune.md) lub przy użyciu programu Apple Configurator działającego na komputerze Mac, który umożliwia rejestrację [bezpośrednią](ios-direct-enrollment-in-microsoft-intune.md) lub z wykorzystaniem [asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md).
@@ -53,6 +53,6 @@ Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI) s
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

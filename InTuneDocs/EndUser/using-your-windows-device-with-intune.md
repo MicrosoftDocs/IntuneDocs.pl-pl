@@ -3,8 +3,8 @@ title: "Korzystanie z urządzenia z systemem Windows i usługi Intune | Microsof
 description: "Lista linków do zadań, które można wykonać na urządzeniu z systemem Windows, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 07/20/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,15 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 018d8936fe9158ebd85920cac978844e6949fb64
-ms.openlocfilehash: c1fe0db8967ad2c483718bdc908097967be8b459
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 85e6b4c4e507b83ba4a5f104e552e5a4f1fd68f2
 
 
 ---
 
 # Korzystanie z urządzenia z systemem Windows i usługi Intune
 
-Poniższe kroki obejmują zadania, które należy wykonać na urządzeniu lub komputerze z systemem Windows, jeśli firma korzysta z usługi Microsoft Intune.
+Ta strona zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: informacje dotyczące rejestracji, zadania zarządzania i problemy ze zgodnością.
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -57,8 +57,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,8 +3,8 @@ title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za po
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 07/20/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fd60348f5e18344a2ce63311cef7a551f355d3
-ms.openlocfilehash: b1bec5b968c0fa3a86e08801d9802ba443cf01d6
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 6cd0c267dc93d08369ecfb10939af8140b3c57e9
 
 
 ---
@@ -23,9 +23,11 @@ ms.openlocfilehash: b1bec5b968c0fa3a86e08801d9802ba443cf01d6
 
 # Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB
 
-Jeśli chcesz wysłać dziennik danych do administratora IT, aby uzyskać pomoc, możesz wysłać dzienniki przy użyciu komputera i kabla USB zamiast wysyłać dzienniki z urządzenia przenośnego. Oto jak:
+Jeśli chcesz wysłać dzienniki danych do administratora IT, aby uzyskać pomoc, możesz wysłać dzienniki przy użyciu komputera i kabla USB, zamiast wysyłać dzienniki z urządzenia przenośnego. Oto jak:
 
-1.  Przed rozpoczęciem upewnij się, że masz adres e-mail administratora IT. Zazwyczaj znajduje się on w witrynie sieci Web Portalu firmy lub w aplikacji Portal firmy.
+1.  Na ekranie błędu naciśnij pozycję **Wyślij informacje**. Po wyświetleniu komunikatu z pytaniem o metodę wysyłania dzienników wybierz opcję, która zapisze pliki na urządzeniu.
+
+2.  Przed rozpoczęciem upewnij się, że dysponujesz adresem e-mail administratora IT podanym zazwyczaj w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com) lub w aplikacji Portal firmy.
 
 2.  Podłącz urządzenie z systemem Android do komputera za pomocą kabla USB.
 
@@ -39,6 +41,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

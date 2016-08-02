@@ -3,7 +3,7 @@ title: "Wdrażanie aplikacji | Microsoft Intune"
 description: "W tym temacie omówiono pojęcia, które należy zrozumieć przed rozpoczęciem wdrażania aplikacji w usłudze Intune."
 keywords: 
 author: robstackmsft
-manager: arob98
+manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
-ms.openlocfilehash: 84f19cd198a2367abb0267071bd73ce8ac6d7d05
+ms.sourcegitcommit: c4a760b6362356a6bafa8b6acc69299647a5e0f3
+ms.openlocfilehash: 377597aabc03c020060e2851c6fc25e0c780ea51
 
 
 ---
@@ -27,14 +27,14 @@ W tym temacie omówiono pojęcia, które należy zrozumieć przed rozpoczęciem 
 ## Akcje wdrażania aplikacji
 Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdrażania:
 
--   **Wymagana instalacja** — aplikacja jest instalowana na urządzeniu bez potrzeby interwencji użytkownika końcowego.
+-   **Wymagana instalacja** — aplikacja jest instalowana na urządzeniu bez potrzeby interwencji użytkownika.
 
     > [!TIP]
     > W przypadku urządzeń z systemem iOS niebędących w trybie nadzorowanym oraz wszystkich urządzeń z systemem Android użytkownik musi zaakceptować ofertę aplikacji, zanim zostanie ona zainstalowana.
-    > 
-    >  Jeśli użytkownik odinstaluje aplikację, która została wdrożona jako instalacja wymagana, usługa Intune automatycznie ponownie zainstaluje aplikację po następnym cyklu spisu, który ma miejsce zazwyczaj co 7 dni.
+    >
+    >  Jeśli użytkownik odinstaluje aplikację, która została wdrożona jako instalacja wymagana, usługa Intune automatycznie ponownie zainstaluje aplikację po następnym cyklu spisu, który ma miejsce zazwyczaj co siedem dni.
 
--   **Dostępna instalacja** — aplikacja jest wyświetlana w portalu firmy i użytkownicy końcowi mogą zainstalować ją na żądanie.
+-   **Dostępna instalacja** — aplikacja jest wyświetlana w portalu firmy i użytkownicy mogą zainstalować ją na żądanie.
 
 -   **Odinstaluj** — aplikacja zostanie odinstalowana z urządzenia.
 
@@ -64,7 +64,7 @@ W przypadku gdy urządzenie otrzymuje dwa wdrożenia z tą samą akcją wdrażan
 
 -   Akcja instalacji ma pierwszeństwo przed akcją dezinstalacji.
 
--   Jeśli urządzenie odbiera zarówno wymaganą, jak i dostępną instalację, akcje zostają połączone (aplikacja jest wymagana i dostępna — innymi słowy, użytkownicy mogą zainstalować ją z portalu firmy przed rozpoczęciem wymaganej instalacji).
+-   Jeśli urządzenie otrzymuje zarówno wymaganą, jak i dostępną instalację, akcje zostają połączone. Innymi słowy użytkownik może zainstalować dostępną aplikację z portalu firmy przed rozpoczęciem instalacji wymaganej.
 
 
 ## Następne kroki
@@ -73,6 +73,6 @@ Dowiedz się, jak [wdrażać aplikacje w usłudze Microsoft Intune](deploy-apps-
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

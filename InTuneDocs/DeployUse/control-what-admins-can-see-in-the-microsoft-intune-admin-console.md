@@ -3,7 +3,7 @@ title: "Dostosowywanie widoków konsoli dla ról administratora | Microsoft Intu
 description: "Skorzystaj z tego tematu, aby filtrować widoki konsoli administracyjnej usługi Intune i umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli."
 keywords: 
 author: robstackmsft
-manager: arob98
+manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -13,16 +13,16 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
-ms.openlocfilehash: 132648f4c4d13983b169fa8497deae9787fe6db5
+ms.sourcegitcommit: 217655d3c33ac88672f0739302f182cf6a6ae335
+ms.openlocfilehash: dc9bb2992d3e3ed8134cfa2146295e16edf4e459
 
 
 ---
 
 # Dostosowywanie widoków konsoli usługi Intune zgodnie z rolami administratora
-Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli. Na przykład można zezwolić operatorom konsoli administracyjnej tylko na aktualizację definicji złośliwego oprogramowania lub resetowanie kodu dostępu na urządzeniach. Można uzyskać taki efekt za pomocą wstępnie ustawionych **oznaczeń** przypisywanych do konkretnych użytkowników. Gdy ci użytkownicy uzyskują dostęp do konsoli administracyjnej, widzą tylko elementy odpowiednie do swojego oznaczenia.
+Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli. Na przykład można zezwolić operatorom konsoli administracyjnej tylko na aktualizację definicji złośliwego oprogramowania lub resetowanie kodu dostępu na urządzeniach. Można uzyskać taki efekt za pomocą wstępnie ustawionych **oznaczeń** przypisywanych do konkretnych użytkowników. Gdy ci użytkownicy uzyskują dostęp do konsoli administracyjnej, mogą zobaczyć tylko elementy odpowiednie do swojego oznaczenia.
 
-## Jak utworzyć widok niestandardowy
+## Aby utworzyć widok niestandardowy
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Administracja** &gt; **Administratorzy usługi**.
 
@@ -64,10 +64,10 @@ Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby 
 
         -   Resetowanie kodu dostępu
 
-Gdy skonfigurowany przez Ciebie administrator otworzy następnie konsolę administracyjną usługi Intune , otrzyma określony przez Ciebie poziom dostępu.
+Gdy skonfigurowany przez Ciebie administrator otworzy następnie konsolę administracyjną usługi Intune, otrzyma określony przez Ciebie poziom dostępu.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

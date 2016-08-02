@@ -3,8 +3,8 @@ title: "Przygotowanie do konfigurowania zasad zarządzania aplikacjami mobilnymi
 description: "W tym temacie opisano wymagania wstępne i konfigurowanie użytkowników przed przystąpieniem do tworzenia zasad zarządzania aplikacjami mobilnymi."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c72c8e1a764af73ba4d421ca6637ee91ab7bca0a
-ms.openlocfilehash: ca84a9ce4a1a418c1107f11dbb66cf64362a77f5
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 39af738fe83ec6ea2e963d857cc233332063c80b
 
 
 ---
@@ -79,11 +79,13 @@ Pełna lista obsługiwanych aplikacji firmy Microsoft jest dostępna w [galerii 
 
     ![Strona Aktywni użytkownicy w portalu usługi Office](../media/AppManagement/OfficePortal_AddUsers.png)
 
+    ![Strona Edytowanie użytkownika w portalu usługi Office](../media/AppManagement/OfficePortal_AssignLicenses.png)
+
 4.  Aby dać użytkownikowi możliwość dostępu do portalu usługi Office, portalu usługi Azure AD i portalu Azure, przypisz użytkownikowi **rolę administratora globalnego**.
 
     ![Strona do edycji ról użytkowników w portalu usługi Office](../media/AppManagement/OfficePortal_AddRoletoUser.png)
 
-5.  Zasady zarządzania aplikacjami mobilnymi są wdrażane dla grup użytkowników w usłudze Azure Active Directory. Aby utworzyć grupy użytkowników dla zasad zarządzania aplikacjami mobilnymi, przejdź do strony **Grupy** w portalu usługi Office i kliknij ikonę **+**, aby utworzyć nową grupę zabezpieczeń.  Wpisz nazwę i opis, a następnie kliknij pozycję **Utwórz**. Po utworzeniu grupy możesz dodać do niej użytkowników, klikając pozycję **Edytuj członków**. W usłudze Azure Active Directory zostanie utworzona grupa zabezpieczeń.
+5.  Zasady zarządzania aplikacjami mobilnymi są wdrażane dla grup użytkowników w usłudze Azure Active Directory. Aby utworzyć grupy użytkowników dla zasad zarządzania aplikacjami mobilnymi, przejdź do strony **Grupy** w portalu usługi Office i wybierz opcję **Dodaj grupę** w menu górnym, aby utworzyć nową grupę zabezpieczeń.  Wpisz nazwę i opis, a następnie kliknij pozycję **Utwórz**. Po utworzeniu grupy możesz dodać do niej użytkowników, klikając pozycję **Edytuj członków**. W usłudze Azure Active Directory zostanie utworzona grupa zabezpieczeń.
 
     ![Strona dla grup zabezpieczeń w portalu usługi Office](../media/AppManagement/OfficePortal_CreateGroups.png)
 
@@ -123,6 +125,6 @@ Administratorzy globalni mają dostęp do [portalu Azure](https://portal.azure.c
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

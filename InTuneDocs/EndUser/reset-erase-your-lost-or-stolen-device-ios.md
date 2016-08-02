@@ -3,8 +3,8 @@ title: "Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urzą
 description: 
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 05/09/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 9ab65b409bbb2168e3457050202d6e88db0472d2
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: f6e7e40973428762995feceac109a8367813dadd
 
 
 ---
@@ -30,7 +30,7 @@ Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony
 
 ## Aby zresetować urządzenie przy użyciu aplikacji Portal firmy
 
-1.  W przeglądarce otwórz Portal firmy, a następnie zaloguj się na koncie służbowym.
+1.  Otwórz aplikację Portal firmy na innym zarejestrowanym urządzeniu i zaloguj się przy użyciu konta służbowego.
 
 2.  W obszarze **Moje urządzenia** wybierz zgubione lub skradzione urządzenie.
 
@@ -40,7 +40,7 @@ Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony
 
 Wykonaj poniższe kroki lub obejrzyj ten klip wideo:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=6UFtBrBWUUI&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+<iframe width="675" height="379" src="https://www.youtube.com/embed/3rrXe8XmtgU" frameborder="0" allowfullscreen></iframe>
 
 1.  W [witrynie Portalu firmy](http://portal.manage.microsoft.com) wybierz urządzenie, którego dane chcesz wymazać.
 
@@ -52,6 +52,7 @@ Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś 
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

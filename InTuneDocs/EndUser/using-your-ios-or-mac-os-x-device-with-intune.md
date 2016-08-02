@@ -3,8 +3,8 @@ title: "Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune |
 description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub Mac OS X, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: arob98
-ms.date: 06/03/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 6c3d8b3a64d98357b7aac2a9f000ca33125c1858
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: c91355b77850acbb76cd028bffb231e2ba1a5174
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Poniższe kroki obejmują zadania, które należy wykonać w urządzeniu z systemem iOS lub Mac OS X, jeśli firma korzysta z usługi Microsoft Intune.
+Ta strona zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: informacje dotyczące rejestracji, zadania zarządzania i problemy ze zgodnością.
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -61,8 +61,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

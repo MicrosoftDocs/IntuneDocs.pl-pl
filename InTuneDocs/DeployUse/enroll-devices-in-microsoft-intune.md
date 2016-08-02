@@ -1,6 +1,6 @@
 ---
 title: "Rejestrowanie urządzeń | Microsoft Intune"
-description: "Usługa zarządzania urządzeniami przenośnymi Microsoft Intune (MDM) używa rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów."
+description: "Usługa zarządzania urządzeniami przenośnymi (MDM) używa funkcji rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów."
 keywords: 
 author: NathBarn
 manager: arob98
@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
-ms.openlocfilehash: d128b9c9f0c9eda70abed058afeb665377047f66
+ms.sourcegitcommit: 6256b1ed5edb72bf9f623555a4c6e3fddb864b32
+ms.openlocfilehash: 71f0637a1cb6fdafb590ca274fcc0f80707ed6ce
 
 
 ---
@@ -89,7 +89,7 @@ Określa, czy metoda rejestracji obsługuje koligację użytkownika, która łą
   - Warunkowego dostępu do poczty e-mail i danych firmowych
   - Aplikacji Portal firmy
 
-[Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#enrollment-of-company-owned-ios-devices-with-user-affinity) ([Powrót do tabeli](#overview-of-device-enrollment-methods))
+[Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#user-affinity-for-ios-corporate-owned-devices-using-the-company-portal) ([Powrót do tabeli](#overview-of-device-enrollment-methods))
 
 ### Zablokuj
 Określa, czy urządzenie można zablokować, aby uniemożliwić użytkownikowi usunięcie zasad usługi Intune, co powoduje wykluczenie urządzenia z zarządzania. Dla urządzeń z systemem iOS zablokowanie urządzenia wymaga, aby było ono w trybie nadzorcy.
@@ -124,6 +124,6 @@ Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

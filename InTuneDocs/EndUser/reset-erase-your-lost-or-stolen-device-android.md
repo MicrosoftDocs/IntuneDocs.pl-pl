@@ -3,8 +3,8 @@ title: "Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urzą
 description: 
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 05/31/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: 9797eb4b7b18527d13fc1f0a9cbcc900d76dc54f
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: d9f31b48fb1b44a0bdf07a6eee3fe5b19f7bf610
 
 
 ---
@@ -27,12 +27,12 @@ Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony
 
 Aby dowiedzieć się więcej o tym, co się stanie w przypadku zresetowania urządzenia, zobacz [What happens if you reset your device using the Company Portal](what-happens-if-you-reset-your-device-using-the-company-portal-android.md) (Co się stanie w przypadku zresetowania urządzenia przy użyciu portalu firmy).
 
-> [!WARNING] 
+> [!WARNING]
 > Zresetowanie urządzenia do ustawień fabrycznych powoduje usunięcie danych prywatnych i służbowych.
 
 ## Aby zresetować urządzenie przy użyciu aplikacji Portal firmy
 
-1.  W przeglądarce otwórz [witrynę internetową Portal firmy](http://portal.manage.microsoft.com), a następnie zaloguj się na koncie służbowym.
+1.  Otwórz aplikację Portal firmy na innym zarejestrowanym urządzeniu i zaloguj się przy użyciu konta służbowego.
 
 2.  Naciśnij pozycję **Moje urządzenia** i wybierz nazwę zgubionego lub skradzionego urządzenia.
 
@@ -42,7 +42,7 @@ Aby dowiedzieć się więcej o tym, co się stanie w przypadku zresetowania urz�
 
 Wykonaj poniższe kroki lub obejrzyj ten klip wideo:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=K-Vi7lNfaMk&feature=youtu.be" frameborder="0" allowfullscreen></iframe> 
+<iframe width="675" height="379" src="https://www.youtube.com/embed/6e73o7f8gxE" frameborder="0" allowfullscreen></iframe>
 
 1.  W przeglądarce otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), a następnie zaloguj się na konto służbowe.
 
@@ -57,7 +57,6 @@ Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś 
 
 
 
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

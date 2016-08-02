@@ -3,8 +3,8 @@ title: "Korzystanie z urządzenia z systemem Android i usługi Intune | Microsof
 description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem Android, gdy urządzenie jest zarejestrowane w usłudze Intune"
 keywords: 
 author: staciebarker
-manager: arob98
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376e6c1ae229187ab8ec73390f091f1d534365dd
-ms.openlocfilehash: e0ff9b0b1c31e0037f34e223ff26c2b111c5a0aa
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 3dfe3f8a0a8538d14acddb9a7c9541bae928b6e6
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: e0ff9b0b1c31e0037f34e223ff26c2b111c5a0aa
 
 # Korzystanie z urządzenia z systemem Android i usługi Intune
 
-Poniższe kroki obejmują zadania, które należy wykonać na urządzeniu z systemem Android, jeśli firma korzysta z usługi Microsoft Intune.
+Ta strona zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: informacje dotyczące rejestracji, zadania zarządzania i problemy ze zgodnością.
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -67,9 +67,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-
-
-
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
