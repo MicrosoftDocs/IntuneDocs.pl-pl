@@ -3,8 +3,8 @@ title: Ustawienia zasad systemu iOS | Microsoft Intune
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
-manager: arob98
-ms.date: 07/19/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a409d36c1c5fcfd3d81ce0cbdf1f69af4747157a
-ms.openlocfilehash: 7de118a006bb45e19142459d8e62dd6f1dc5a3dc
+ms.sourcegitcommit: 947328a5c28839d8227a9e5ae0dd8b1fc5ad8e81
+ms.openlocfilehash: 63bc2cedf8d81b050a384a947a0b43827de5c352
 
 
 ---
@@ -39,95 +39,108 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz **Ustawienia zasad niestandardowych** w dalszej części tego tematu.
 
 ### Ustawienia zabezpieczeń
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do urządzenia.|Tak|
-|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|Tak|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Ustawienie to określa liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|Tak|
-|**Minimalna długość hasła**|Określa minimalną liczbę znaków w haśle.|Tak|
-|**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak „0000” i „1234”.|Tak|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Czyści urządzenie po określonej liczbie prób logowania zakończonych niepowodzeniem.|Tak|
-|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**<sup>1</sup>|Określ liczbę minut przed wyłączeniem ekranu urządzenia.|Tak|
-|**Wygaśnięcie hasła w dniach**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|
-|**Pamiętaj historię haseł**|Określa, czy użytkownik może użyć poprzednio używanego hasła.|Tak|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.|Tak|
-|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**<sup>1</sup>|Określa, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.|Tak|
-|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|System iOS 7.1 lub nowszy|
+|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do urządzenia.|
+|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|
+|**Wymagana liczba znaków złożonych w haśle**|Ustawienie to określa liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|
+|**Minimalna długość hasła**|Określa minimalną liczbę znaków w haśle.|
+|**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak „0000” i „1234”.|
+|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Czyści urządzenie po określonej liczbie prób logowania zakończonych niepowodzeniem.|
+|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**<sup>1</sup>|Określa, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.|
+|**Wygaśnięcie hasła w dniach**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|
+|**Pamiętaj historię haseł**|Określa, czy użytkownik może użyć poprzednio używanego hasła.|
+|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.|
+|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**<sup>1</sup>|Określ liczbę minut przed wyłączeniem ekranu urządzenia.|
+|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Czas braku aktywności (w minutach) przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 ### Ustawienia systemowe
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na zrzut ekranu**|Zezwala użytkownikowi na przechwytywanie zawartości ekranu w formie obrazu.|Tak|
-|**Zezwalaj na centrum sterowania na ekranie blokady**|Określa, czy aplikacja Centrum sterowania jest dostępna, gdy urządzenie jest zablokowane.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na widok powiadomienia na ekranie blokady**|Zezwalaj użytkownikowi na dostęp do widoku powiadomień bez odblokowywania urządzenia.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na widok dzisiejszy na ekranie blokady**|Określa, czy można wyświetlać powiadomienia, gdy urządzenie jest zablokowane.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na przesłanie danych diagnostycznych**|Zezwala lub blokuje możliwość przesyłania danych diagnostycznych z urządzenia do firmy Apple.|Tak|
-|**Zezwalaj na niezaufane certyfikaty TLS**|Zezwalaj na niezaufane certyfikaty protokołu TLS na urządzeniu.|Tak|
-|**Zezwalaj na aplikację Passbook podczas blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|Tak|
+|**Zezwalaj na zrzut ekranu**|Zezwala użytkownikowi na przechwytywanie zawartości ekranu w formie obrazu.|
+|**Zezwalaj na centrum sterowania na ekranie blokady**|Określa, czy aplikacja Centrum sterowania jest dostępna, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na widok powiadomienia na ekranie blokady**|Zezwalaj użytkownikowi na dostęp do widoku powiadomień bez odblokowywania urządzenia.|
+|**Zezwalaj na widok dzisiejszy na ekranie blokady**|Określa, czy można wyświetlać powiadomienia, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na niezaufane certyfikaty TLS**|Zezwalaj na niezaufane certyfikaty protokołu TLS na urządzeniu.|
+|**Zezwalaj na przesłanie danych diagnostycznych**|Zezwala lub blokuje możliwość przesyłania danych diagnostycznych z urządzenia do firmy Apple.|
+|**Zezwalaj na aplikację Passbook podczas blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|
 
 ### Ustawienia chmury — dokumenty i dane
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na tworzenie kopii zapasowych w ramach usługi iCloud**|Zezwala użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|Tak|
-|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|Tak|
-|**Zezwalaj na synchronizowanie strumienia zdjęć w ramach usługi iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|Tak|
-|**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|Tak|
+|**Zezwalaj na tworzenie kopii zapasowych w ramach usługi iCloud**|Zezwala użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|
+|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|
+|**Zezwalaj na synchronizowanie strumienia zdjęć w ramach usługi iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|
+|**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|
+|**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwala aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
+|**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Program Handoff umożliwia kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
 
 ### Ustawienia aplikacji — przeglądarka
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na Safari**|Określ, czy na urządzeniu można użyć przeglądarki Safari.|Tak|
-|**Zezwalaj na automatyczne uzupełnianie**|Użytkownik może zmienić ustawienia autowypełniania w przeglądarce.|Tak|
-|**Zezwalaj na blokowanie wyskakujących okienek**|Włącz lub wyłącz blokowanie wyskakujących okienek w przeglądarce.|Tak|
-|**Zezwalaj na pliki cookie**|Zezwalaj na używanie plików cookie przez przeglądarkę sieci Web urządzenia.|Tak|
-|**Zezwalaj na wykonywanie skryptów Java**|Zezwalaj na uruchamianie skryptów Java w przeglądarce.|Tak|
-|**Zezwalaj na ostrzeżenia o oszustwie**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce urządzenia.|Tak|
+|**Zezwalaj na Safari**|Określ, czy na urządzeniu można użyć przeglądarki Safari.|
+|**Zezwalaj na automatyczne uzupełnianie**|Użytkownik może zmienić ustawienia autowypełniania w przeglądarce.|
+|**Zezwalaj na blokowanie wyskakujących okienek**|Włącz lub wyłącz blokowanie wyskakujących okienek w przeglądarce.|
+|**Zezwalaj na pliki cookie**|Zezwalaj na używanie plików cookie przez przeglądarkę sieci Web urządzenia.|
+|**Zezwalaj na wykonywanie skryptów Java**|Zezwalaj na uruchamianie skryptów Java w przeglądarce.|
+|**Zezwalaj na ostrzeżenia o oszustwie**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce urządzenia.|
 
 ### Ustawienia aplikacji — aplikacje
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia dostęp do sklepu z aplikacjami z poziomu urządzenia.|Tak|
-|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymaga od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|Tak|
-|**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|Tak|
-|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak Facetime, w urządzeniu.|Tak|
-|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|Tak|
+|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia dostęp do sklepu z aplikacjami z poziomu urządzenia.|
+|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymaga od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|
+|**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|
+|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|
+|**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|
+|**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak Facetime, w urządzeniu.|
+|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|
+|**Zezwalaj użytkownikom na pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**|Zezwala użytkownikowi na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.|
 
 ### Ustawienia aplikacji — gry
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na dodawanie przyjaciół z programu Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|Tak|
-|**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|Tak|
+|**Zezwalaj na dodawanie przyjaciół z programu Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|
+|**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|
 
 ### Ustawienia możliwości urządzenia — sprzęt
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na używanie aparatu**|Określa, czy można używać aparatu w urządzeniu.|Tak|
+|**Zezwalaj na używanie aparatu**|Określa, czy można używać aparatu w urządzeniu.|
+|**Wymagaj hasła parowania dla wychodzących żądań funkcji AirPlay**|Funkcja Airplay umożliwia przesyłanie strumieniowe zawartości do innych urządzeń firmy Apple. To ustawienie umożliwia wymaganie hasła parowania, aby połączyć się z innymi urządzeniami.|
 
 ### Ustawienia możliwości urządzenia — połączenie komórkowe
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na roaming połączeń głosowych**|Zezwalaj na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|Tak|
-|**Zezwalaj na roaming danych**|Zezwalaj na roaming danych, gdy urządzenie korzysta z sieci komórkowej.|Tak|
-|**Zezwalaj na globalne pobieranie w tle podczas roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|Tak|
+|**Zezwalaj na roaming połączeń głosowych**|Zezwalaj na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|
+|**Zezwalaj na roaming danych**|Zezwalaj na roaming danych, gdy urządzenie korzysta z sieci komórkowej.|
+|**Zezwalaj na globalne pobieranie w tle podczas roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|
 
 ### Ustawienia możliwości urządzenia — funkcje
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na Siri**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu.|Tak|
-|**Zezwalaj na Siri, gdy urządzenie jest zablokowane**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu, gdy urządzenie jest zablokowane.|Tak|
-|**Zezwalaj na wybieranie głosowe**|Zezwalaj na korzystanie z funkcji wybierania głosowego w urządzeniu.|Tak|
+|**Zezwalaj na Siri**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu.|
+|**Zezwalaj na Siri, gdy urządzenie jest zablokowane**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na wybieranie głosowe**|Zezwalaj na korzystanie z funkcji wybierania głosowego w urządzeniu.|
 
 
 ### Ustawienia dotyczące aplikacji zgodnych i niezgodnych
@@ -139,7 +152,7 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
 |**Zgłaszaj niezgodność, gdy użytkownicy instalują aplikacje z listy**|Tworzy listę aplikacji niezarządzanych przez usługę Intune, których użytkownicy nie mogą instalować i uruchamiać.|
-|**Nie zgłaszaj niezgodności, gdy użytkownicy instalują aplikacje z listy**|Tworzy listę aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.|
+|**Zgłaszaj brak zgodności, jeśli użytkownicy będą instalować aplikacje spoza listy**|Tworzy listę aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.|
 |**Dodaj**|Dodaje aplikację do wybranej listy. Wprowadź wybraną nazwę, opcjonalnie wydawcę aplikacji, a także adres URL aplikacji w sklepie z aplikacjami. Zobacz sekcję **Jak określać adresy URL sklepów z aplikacjami** w dalszej części tego tematu, aby uzyskać pomoc.|
 |**Importuj aplikacje**|Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.|
 |**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
@@ -195,6 +208,32 @@ Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgo
 > [!NOTE]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
 
+### Ustawienia rejestracji
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na blokadę aktywacji, gdy urządzenie jest w trybie nadzorowanym**|Umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.|
+
+### Nadzór
+Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 7.1 lub nowszym, które są w trybie nadzorowanym.
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na modyfikowanie konta**|Umożliwia użytkownikowi zmianę ustawień konta, takich jak konfiguracja poczty e-mail.|
+|**Zezwalaj na korzystanie z funkcji AirDrop**|Umożliwia używanie funkcji Airdrop do wymiany zawartości z pobliskimi urządzeniami.|
+|**Zezwalaj na zmiany ustawień użycia danych komórkowych przez aplikacje**|Umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.|
+|**Zezwalaj programowi Siri na wykonywanie zapytań o zawartość wygenerowaną przez użytkowników w Internecie**|Zezwala programowi Siri na dostęp do witryn sieci Web w celu udzielania odpowiedzi na pytania.|
+|**Zezwalaj na dostęp do sklepu iBooks**|Umożliwia użytkownikowi przeglądanie i kupowanie książek w sklepie iBooks.|
+|**Zezwalaj na zmienianie ustawień aplikacji Znajdź moich znajomych**|Umożliwia użytkownikowi zmienianie ustawień aplikacji Znajdź moich znajomych.|
+|**Zezwalaj na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień**|Zezwala użytkownikowi na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień na urządzeniu.|
+|**Zezwalaj użytkownikom na włączanie ograniczeń w ustawieniach urządzenia**|Zezwala użytkownikowi na konfigurowanie ograniczeń urządzenia (kontroli rodzicielskiej) na urządzeniu.|
+|**Zezwalaj na zwracanie przez wyszukiwanie Spotlight wyników z Internetu**|Pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.|
+|**Zezwalaj na używanie aplikacji Game Center**|Zezwala na używanie aplikacji Game Center.|
+|**Zezwalaj na parowanie hostów w celu sterowania tym, z którymi urządzeniami może łączyć się urządzenie z systemem iOS**|Parowanie hostów umożliwia administratorowi kontrolowanie tego, z którymi urządzeniami może być sparowane urządzenie iOS 7.|
+|**Zezwalaj użytkownikowi na instalowanie profilów konfiguracji i certyfikatów**|Zezwala użytkownikowi na instalowanie profilów konfiguracji i certyfikatów.|
+|**Zezwalaj na korzystanie z aplikacji Messages na urządzeniu**|Zezwala na korzystanie z aplikacji Messages do wysyłania wiadomości SMS.|
+
 
 ## Ustawienia zasad niestandardowych
 
@@ -229,6 +268,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
