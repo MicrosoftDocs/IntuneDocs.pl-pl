@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie urządzeniami za pomocą programu Exchange ActiveSync | Microsoft Intune"
+description: "Niezarejestrowanymi urządzeniami przenośnymi, których użytkownicy nie zarejestrowali w programie Exchange ActiveSync (EAS), możesz bezpośrednio zarządzać, używając programu Exchange Connector."
+keywords: 
 author: nathbarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: f545c7db4c29690a72c5a84dfcab6f179cbe72a2
+
 
 ---
 
@@ -41,7 +35,7 @@ Program Exchange Connector umożliwia zarządzanie wdrożeniem programu Exchange
 -   [Konfigurowanie łącznika Intune Service to Service dla hostowanego programu Exchange](intune-service-to-service-exchange-connector.md)
 
 ## Zastosowanie zasad dla urządzeń przenośnych zarządzanych przez program Exchange
-Ustawienia zasad można stosować za pomocą konsoli usługi Intune. Aby uzyskać informacje na ten temat, zobacz [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). Listę ustawień zasad programu Exchange ActiveSync i funkcji obsługiwanych przez konkretne urządzenia przenośne zawiera [tabela porównawcza klientów programu Exchange ActiveSync](http://go.microsoft.com/fwlink/?LinkId=247270)..
+Ustawienia zasad można stosować za pomocą konsoli usługi Intune. Aby uzyskać informacje na ten temat, zobacz [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). Listę ustawień zasad programu Exchange ActiveSync i funkcji obsługiwanych przez konkretne urządzenia przenośne zawiera [tabela porównawcza klientów programu Exchange ActiveSync](http://go.microsoft.com/fwlink/?LinkId=247270).
 
 > [!NOTE]
 > Po połączeniu usługi Intune ze środowiskiem programu Microsoft Exchange zasady programu EAS dotyczące wszystkich użytkowników zarządzanych za pomocą usługi Intune zostaną ustawione na bieżące zasady domyślne na serwerze Microsoft Exchange, chyba że w ramach usługi Intune są zdefiniowane bardziej szczegółowe zasady.
@@ -50,6 +44,7 @@ Ustawienia zasad można stosować za pomocą konsoli usługi Intune. Aby uzyska�
 Na koniec można [wyczyścić dane firmowe z urządzeń przenośnych zarządzanych przez program EAS](wipe-for-exchange-managed-mobile-devices.md), jeśli te urządzenia nie są już używane lub w przypadku utraty albo kradzieży urządzenia.
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

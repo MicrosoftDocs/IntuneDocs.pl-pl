@@ -1,20 +1,20 @@
 ---
 title: "Wycofywanie urządzeń | Microsoft Intune"
-description: 
+description: "Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: c06f1fc1168b0dde515eaa82d15095ec4d73d1cf
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 42b723f99c34f03060140e5f280b87287d108ae1
 
 
 ---
@@ -42,6 +42,6 @@ Czasami może dojść do zużycia urządzenia. W takiej sytuacji [zresetowanie u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

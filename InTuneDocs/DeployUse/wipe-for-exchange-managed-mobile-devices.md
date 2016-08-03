@@ -1,20 +1,20 @@
 ---
 title: "Czyszczenie urządzeń przenośnych zarządzanych przez program Exchange | Microsoft Intune"
-description: 
+description: "Usługa Microsoft Intune umożliwia czyszczenie lub resetowanie urządzeń przenośnych zarządzanych przy użyciu programu Exchange ActiveSync (EAS) za pomocą programu Intune Exchange Connector."
 keywords: 
 author: nathbarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e116b620-1e12-4b5c-9905-2f7acf2ae530
-ms.reviewer: jeffgilb
+ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 47e4533b6f97ff711c2efbeb6102f497af615871
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: afd7d0586fee23a699e4e92708b8de9d1f910323
 
 
 ---
@@ -31,6 +31,6 @@ Usługa Microsoft Intune umożliwia czyszczenie lub resetowanie urządzeń przen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

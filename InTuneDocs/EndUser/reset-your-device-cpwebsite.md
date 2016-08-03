@@ -3,18 +3,19 @@ title: "Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy | Micro
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
+ROBOTS: noindex,nofollow
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: dcde651a95a7f1affaf5489c2664d96a7f5e9e8f
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 8f65861373339a50cfc7dd6756baf3e091409044
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: dcde651a95a7f1affaf5489c2664d96a7f5e9e8f
 
 Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
-Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych. 
+Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych.
 
 Aby zresetować urządzenie:
 
@@ -32,7 +33,9 @@ Aby zresetować urządzenie:
 
 2.  Naciśnij pozycję **Resetuj**.
 
-    ![reset-device](./media//iwp-1-tap-reset-passcode.png)
+    ![reset-device-option-on-company-portal-website](./media//iwp-screen-with-all-options.png)
+
+3. Przeczytaj komunikat ostrzegawczy wskazujący, że zamierzasz zresetować urządzenie do domyślnych ustawień fabrycznych, a następnie wybierz pozycję **Resetuj**, aby zresetować urządzenie.
 
 Twoje urządzenie zostało zresetowane.
 
@@ -43,6 +46,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

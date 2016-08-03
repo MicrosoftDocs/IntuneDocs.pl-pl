@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Odnawianie certyfikatu podpisywania kodu przedsiębiorstwa firmy Symantec w celu użycia z usługą Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Odnawianie certyfikatu podpisywania kodu przedsiębiorstwa firmy Symantec w celu użycia z usługą Intune | Microsoft Intune"
+description: "Wskazówki dotyczące odnawiania certyfikatów firmy Symantec służących do zarządzania określonymi urządzeniami przenośnymi z systemem Windows i Windows Phone"
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c4813044-a925-4273-b0ec-e992fd55850a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: afb669f1e867b386bfb5a80bbb4a665be7b71478
+
 
 ---
 
@@ -41,7 +35,7 @@ Okresowo należy odnawiać certyfikat firmy Symantec służący do zarządzania 
 
 ## Jak zainstalować zaktualizowany certyfikat dla systemu Windows Phone 8.0
 
-1.  Z następującej lokalizacji pobierz najnowszą wersję aplikacji Portal firmy dla systemu Windows Phone, a następnie podpisz ją: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060)..
+1.  Z następującej lokalizacji pobierz najnowszą wersję aplikacji Portal firmy dla systemu Windows Phone, a następnie podpisz ją: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060).
 
 2.  Otwórz konsolę administracyjną usługi Intune ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)), przejdź do pozycji **Administracja**, **Zarządzanie urządzeniami przenośnymi** &gt; **Windows Phone**, a następnie kliknij pozycję **Przekaż podpisaną aplikację**.
 
@@ -55,9 +49,9 @@ Dostarczanie podpisanego pliku SSP.xap jest obecnie jedynym sposobem zapewnienia
 
 ## Jak zainstalować zaktualizowany certyfikat dla urządzeń z systemem Windows Phone 8.1 i nowszych
 
-1.  Pobierz najnowszą wersję aplikacji Portal firmy dla systemu Windows Phone z Centrum pobierania w następującej lokalizacji: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060), a następnie podpisz ją..
+1.  Pobierz najnowszą wersję aplikacji Portal firmy dla systemu Windows Phone z Centrum pobierania w następnej lokalizacji: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060), a następnie podpisz ją.
 
-2.  Otwórz [konsolę administracyjną usługi Intune](https://admin.manage.microsoft.com) (https://admin.manage.microsoft.com), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Windows Phone**, a następnie kliknij pozycję **Przekaż podpisaną aplikację**.
+2.  Otwórz konsolę administracyjną usługi Intune ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Windows Phone**, a następnie kliknij pozycję **Przekaż podpisaną aplikację**.
 
 3.  Przekaż nowo podpisaną aplikację Portal firmy. Konieczny jest nowo podpisany plik SSP.xap oraz nowy plik .PFX otrzymany od firmy Symantec lub token rejestracji aplikacji utworzony za pomocą tego nowego pliku .PFX.
 
@@ -71,6 +65,7 @@ Dostarczanie podpisanego pliku SSP.xap jest obecnie jedynym sposobem zapewnienia
 [Konfigurowanie zarządzania systemem Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

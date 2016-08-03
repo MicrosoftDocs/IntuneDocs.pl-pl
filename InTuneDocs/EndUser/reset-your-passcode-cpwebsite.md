@@ -3,18 +3,19 @@ title: "Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
+ROBOTS: noindex,nofollow
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 31023a2d51d4dd4cb854c1fa077f5a9910232bb4
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 4fab2d71b7cf2557b73810e5f05b82fb9ba1c36b
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 31023a2d51d4dd4cb854c1fa077f5a9910232bb4
 
 Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
-> [!NOTE] 
+> [!NOTE]
 > Przycisk resetowania kodu dostępu w witrynie sieci Web Portal firmy jest wyświetlany zależnie od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemami Windows 8.1 i Windows RT.
 
 Aby zresetować kod dostępu:
@@ -33,7 +34,7 @@ Aby zresetować kod dostępu:
 
 2.  Naciśnij pozycję **Zresetuj kod dostępu**.
 
-    ![tap-passcode-to-reset](./media/iwp-1-tap-reset-passcode.png)
+    !resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
 3.  Naciśnij pozycję **Wyloguj**, a następnie zaloguj się ponownie przy użyciu poświadczeń służbowych. Musisz zalogować się ponownie w ciągu pięciu minut.
 
@@ -63,6 +64,7 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 
