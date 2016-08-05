@@ -3,7 +3,7 @@ title: "Ograniczanie dostępu do usługi Skype dla firm Online | Microsoft Intun
 description: "Chroń i kontroluj dostęp do usługi Skype dla firm Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: 6e32de28117f31ccd73418b4f0167e9e5971944a
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 27d993974d71b34b36cbd3216b83a1303689bf15
 
 
 ---
@@ -116,6 +116,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

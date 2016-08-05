@@ -3,7 +3,7 @@ title: "Ograniczanie dostępu do poczty e-mail i usług O365 | Microsoft Intune"
 description: "W tym temacie opisano, jak dostęp warunkowy może służyć do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: bdf82d04f440d46e3d2f64259c7e39da9e5ff5ca
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 536d34e618efdc78b3103a3b1b36f13fb784781c
 
 
 ---
@@ -65,6 +65,6 @@ W odróżnieniu od innych zasad usługi Intune, zasady dostępu warunkowego nie 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 
