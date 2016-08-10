@@ -4,7 +4,7 @@ description: "Dowiedz się więcej o możliwościach usługi Intune podczas zarz
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: b2e5b04df846db1a0076da7db63a5906fbd25558
+ms.sourcegitcommit: 49a236359692a5bbccf9ee0bb263094434049a91
+ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
 
 
 ---
@@ -28,9 +28,9 @@ W większości przypadków będziesz rejestrować urządzenia w usłudze Microso
 
 -   **Ochrona przed złośliwym oprogramowaniem** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
 
--   **Pomoc zdalna** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielać im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune <!--- (requires TeamViewer software)--->.
+-   **Pomoc zdalna** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielić im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune (wymagane jest oprogramowanie TeamViewer).
 
--   **Zarządzanie licencjami na oprogramowanie** — śledzenie liczby dostępnych licencji na oprogramowanie oraz liczby dostępnych licencji będących w użyciu.
+-   **Zarządzanie licencjami na oprogramowanie** — śledź liczbę dostępnych licencji na oprogramowanie oraz liczbę dostępnych licencji będących w użyciu.
 -   **Wdrażanie aplikacji** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą oprogramowania klienckiego.
 
 
@@ -48,7 +48,7 @@ Usługa Intune może zarządzać komputerami z następującymi wersjami systemu 
 
 -   **Windows 8.1** — wersje Pro i Enterprise.
 
-- **Windows 10** — wersje Home, Pro, Education i Enterprise.
+- **Windows 10** — wersje Pro, Education i Enterprise.
 
 
 ## Minimalne wymagania sprzętowe
@@ -74,6 +74,6 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania kom
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

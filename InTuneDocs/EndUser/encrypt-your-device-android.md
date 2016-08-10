@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 777b87328e12b4d6b3de1b338fe802d92c1138a1
+ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
+ms.openlocfilehash: 9c89a70f8d9625504f6c710fe29f308dfd34530a
 
 
 ---
@@ -34,9 +34,11 @@ Jeśli kiedykolwiek wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 
 ### Co zrobić, jeśli masz problemy
-**Problem**: Urządzenie jest już zaszyfrowane i wystąpiła jedna z następujących sytuacji: — Przycisk szyfrowania jest wyłączony.
-— Został wyświetlony komunikat informujący o tym, że szyfrowanie jest w dalszym ciągu wymagane.
-— Wystąpiły błędy podczas próby użycia aplikacji Portal firmy.
+**Problem**: urządzenie jest już zaszyfrowane i wystąpiła jedna z następujących sytuacji:
+
+- Przycisk szyfrowania jest wyłączony.
+- Został wyświetlony komunikat informujący o tym, że szyfrowanie jest w dalszym ciągu wymagane.
+- Wystąpiły błędy podczas próby użycia aplikacji Portal firmy.
 
 **Co należy zrobić**: Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
 
@@ -47,6 +49,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witry
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

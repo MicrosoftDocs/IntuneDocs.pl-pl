@@ -4,7 +4,7 @@ description: "Usługa Intune umożliwia zarządzanie aplikacjami zakupionymi zbi
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 8f7e77f00e6082c5b272a7ec2be835bc1ef97a28
+ms.sourcegitcommit: c64fb33893027d0000cae4cc3d9c3ed28cc38901
+ms.openlocfilehash: 5db23913601973630a4d013aae86cf26af337c4b
 
 
 ---
@@ -64,6 +64,9 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 2.  Wybierz aplikację, którą chcesz wdrożyć, wybierz pozycję **Zarządzaj wdrożeniem**, a następnie postępuj zgodnie z instrukcjami w temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md), aby zakończyć przekazywanie, tworzenie i wdrażanie aplikacji.
 
+> [!TIP]
+> Musisz wybrać akcję wdrożenia **Wymagane**. Instalacje Dostępne nie są obecnie obsługiwane.
+
 Podczas wdrażania aplikacji jako **wymaganej** instalacji licencja jest używana przez każdego użytkownika, który instaluje aplikację.
 
 Aby odzyskać licencję, należy zmienić akcję wdrażania na **Odinstaluj**. Licencja zostanie odzyskana po odinstalowaniu aplikacji.
@@ -87,6 +90,6 @@ Możesz monitorować, które aplikacje usługi VPP zostały wdrożone, oraz licz
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

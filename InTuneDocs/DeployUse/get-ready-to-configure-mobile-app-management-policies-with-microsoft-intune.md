@@ -3,7 +3,7 @@ title: "Przygotowanie do konfigurowania zasad zarządzania aplikacjami mobilnymi
 description: "W tym temacie opisano wymagania wstępne i konfigurowanie użytkowników przed przystąpieniem do tworzenia zasad zarządzania aplikacjami mobilnymi."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: 39af738fe83ec6ea2e963d857cc233332063c80b
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: aeaa64124384a71126eeca7339416b80d395d07d
 
 
 ---
@@ -58,7 +58,7 @@ Pełna lista obsługiwanych aplikacji firmy Microsoft jest dostępna w [galerii 
 -   Subskrypcja usługi Office 365, która jest wymagana do:
   - Stosowania zasad zarządzania aplikacjami mobilnymi do aplikacji z obsługą wielu tożsamości.
   - Tworzenia kont służbowych usług SharePoint Online i Exchange Online. Lokalna instalacja programu Exchange i lokalna instalacja programu SharePoint nie są obsługiwane.
--   Konfiguracja programu Skype dla firm Online dla nowoczesnego uwierzytelniania. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx.md).
+-   Konfiguracja programu Skype dla firm Online dla nowoczesnego uwierzytelniania. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Usługa Azure Active Directory (Azure AD) do tworzenia użytkowników. Usługa Azure AD uwierzytelnia użytkowników, gdy otworzą oni aplikację i wprowadzą poświadczenia robocze.
@@ -125,6 +125,6 @@ Administratorzy globalni mają dostęp do [portalu Azure](https://portal.azure.c
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

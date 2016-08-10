@@ -3,7 +3,7 @@ title: "Rejestrowanie urządzeń firmowych z systemem iOS | Microsoft Intune"
 description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub programu Apple Configurator"
 keywords: 
 author: NathBarn
-manager: arob98
+manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8a124eb41789053451e0c709188430b1e043d435
-ms.openlocfilehash: 872be93241c84a8334e4415f00b1383da7b15a61
+ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
+ms.openlocfilehash: ca05e94e72269c11db24b667f1d113c794cd8b23
 
 
 ---
@@ -22,17 +22,19 @@ ms.openlocfilehash: 872be93241c84a8334e4415f00b1383da7b15a61
 # Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune
 Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu programu [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
 
+**Wymaganie wstępne:** [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
+
 Firmowe urządzenia z systemem iOS można zarejestrować na trzy sposoby:
 
 -   **Apple Configurator** — urządzenia z systemem iOS można zarejestrować, eksportując profil rejestracji w firmie, a następnie łącząc te urządzenia przenośne z programem Apple Configurator działającym na komputerze Mac. Program Apple Configurator obsługuje dwa rodzaje rejestracji:
 
-    - **Rejestracja przy użyciu asystenta ustawień** — resetuje urządzenie do ustawień fabrycznych i przygotowuje je do konfiguracji przez nowego użytkownika urządzenia. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem Apple Configurator urządzenia z systemem iOS za pośrednictwem portu USB w celu wstępnego skonfigurowania rejestracji. Następnie urządzenia są dostarczane do użytkowników, którzy uruchamiają proces Asystenta ustawień, konfigurują urządzenie za pomocą służbowych poświadczeń użytkownika i kończą proces rejestracji. [Rejestracja urządzeń z systemem iOS przy użyciu narzędzia Apple Configurator i Asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+    - **Rejestracja przy użyciu asystenta ustawień** — resetuje urządzenie do ustawień fabrycznych i przygotowuje je do konfiguracji przez nowego użytkownika urządzenia. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) urządzenia z systemem iOS za pośrednictwem portu USB w celu wstępnego skonfigurowania rejestracji. Następnie urządzenia są dostarczane do użytkowników, którzy uruchamiają proces Asystenta ustawień, konfigurują urządzenie za pomocą służbowych poświadczeń użytkownika i kończą proces rejestracji. [Rejestracja urządzeń z systemem iOS przy użyciu narzędzia Apple Configurator i Asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md)
 
-    - **Rejestracja bezpośrednia** — tworzy plik zgodny z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem Apple Configurator urządzenia z systemem iOS za pośrednictwem portu USB w celu zarejestrowania urządzenia. [Rejestrowanie urządzeń z systemem iOS przy użyciu bezpośredniej rejestracji w programie Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md)
+    - **Rejestracja bezpośrednia** — tworzy plik zgodny z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) urządzenia z systemem iOS za pośrednictwem portu USB w celu zarejestrowania urządzenia. [Rejestrowanie urządzeń z systemem iOS przy użyciu bezpośredniej rejestracji w programie Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md)
 
 -   **Device Enrollment Program (DEP)** — wdraża profil rejestracji bez udziału użytkownika w urządzeniach zakupionych w programie Device Enrollment Program firmy Apple. Gdy użytkownik uruchomi Asystenta ustawień na urządzeniu, urządzenie zostanie zarejestrowane w usłudze Intune.  Urządzenia zarejestrowane w programie DEP nie mogą zostać wyrejestrowane przez użytkowników. [Rejestrowanie urządzeń z systemem iOS biorących udział w programie Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md)
 
-## Koligacja użytkownika dla firmowych urządzeń z systemem iOS przy użyciu aplikacji Portal firmy
+## Korzystanie z portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu programu Apple Configurator
 
 Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami. Gdy użytkownicy otrzymają urządzenia, muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
@@ -68,6 +70,6 @@ Urządzenia skonfigurowane bez koligacji użytkownika nie obsługują Portalu fi
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

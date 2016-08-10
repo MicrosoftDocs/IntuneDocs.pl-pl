@@ -13,14 +13,14 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 2dc3f1dca06cdd5f8547ea51ace2c0f1f291a6e0
+ms.sourcegitcommit: e9788bbb368337fab4002cd0f0bcb28c0e23e8d1
+ms.openlocfilehash: 09b52621e53f0d758ded7c3951909fb88cf67e36
 
 
 ---
 
 # Zarządzanie licencjami usługi Intune
-Zanim użytkownicy będą mogli logować się i korzystać z usługi Intune lub rejestrować urządzenia w celu zarządzania nimi, należy najpierw przypisać każdemu użytkownikowi licencję na subskrypcję usługi Intune, używając [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Po przypisaniu licencji nazwy użytkowników będą wyświetlane w konsoli administracyjnej usługi Intune. Użytkownicy mogą zarejestrować maksymalnie pięć urządzeń.
+Zanim użytkownicy będą mogli logować się i korzystać z usługi Intune lub rejestrować urządzenia w celu zarządzania nimi, należy najpierw przypisać każdemu użytkownikowi licencję na subskrypcję usługi Intune, używając [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). Po przypisaniu licencji nazwy użytkowników będą wyświetlane w konsoli administracyjnej usługi Intune. Użytkownicy mogą zarejestrować maksymalnie piętnaście urządzeń.
 
 Niektórzy użytkownicy w organizacjach korzystających z pakietu EMS (Enterprise Mobility Suite) firmy Microsoft mogą wymagać tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzbiór usług przy użyciu [poleceń cmdlet programu PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx). Aby uzyskać więcej informacji, zobacz [Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell](start-with-a-paid-subscription-to-microsoft-intune-step-4-posh.md).
 
@@ -90,6 +90,6 @@ Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

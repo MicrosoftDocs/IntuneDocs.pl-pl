@@ -4,7 +4,7 @@ description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych,
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 07/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 04fca72cd426ee4718e100cb2633ca2c967b4c05
+ms.sourcegitcommit: 1648a070cc2d318df4d434955f6068cd4b42690c
+ms.openlocfilehash: 87021459424c84feed3b676364cf890f43ff32d9
 
 
 ---
@@ -109,11 +109,11 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 |----------------|-----------------------------------------|
 |**Zezwalaj na kopiowanie i wklejanie**|Zezwalaj na kopiowanie i wklejanie na urządzeniach.|Nie|Tak|
 
-### Ustawienia dotyczące aplikacji zgodnych i niezgodnych
-Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnych aplikacji, korzystając z poniższych informacji:
+### Ustawienia dotyczące aplikacji dozwolonych i zablokowanych
+Na liście **Aplikacje dozwolone i zablokowane** określ aplikacje, które mają być dozwolone lub zablokowane, używając następujących informacji:
 
 > [!NOTE]
-> W ramach jednych zasad można określić wyłącznie listę zgodnych lub wyłącznie listę niezgodnych aplikacji. Nie można wprowadzić obu list w ramach jednych zasad.
+> W ramach jednych zasad można określić wyłącznie listę dozwolonych lub listę zablokowanych aplikacji. Nie można wprowadzić obu list w ramach jednych zasad.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
@@ -127,14 +127,14 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 > Podczas określania listy dozwolonych aplikacji dla urządzeń z systemem Windows Phone 8.1 należy dodać do tej listy aplikację Portal firmy — w przeciwnym razie zostanie ona zablokowana.
 
 
-### Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
+### Informacje referencyjne dotyczące dozwolonych i zablokowanych aplikacji
 
 #### Jak określać adresy URL sklepów z aplikacjami
-Aby określić adres URL aplikacji na liście aplikacji zgodnych i niezgodnych, użyj następującego formatu:
+Aby określić adres URL aplikacji na liście aplikacji dozwolonych lub zablokowanych, użyj następującego formatu:
 
 Na stronie [Aplikacje+Gry systemu Windows Phone](http://www.windowsphone.com/en-us/store/overview) wyszukaj aplikację, której chcesz użyć.
 
-Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście zgodnych lub niezgodnych aplikacji.
+Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście dozwolonych lub zablokowanych aplikacji.
 
 **Przykład:** Wyszukaj aplikację Skype w sklepie. Adres URL, którego użyjesz, to **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
@@ -172,6 +172,6 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

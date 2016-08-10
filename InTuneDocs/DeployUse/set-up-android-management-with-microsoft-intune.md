@@ -13,13 +13,15 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 147765f6e8225e8e1d9d8e64473e8b6988256b03
+ms.sourcegitcommit: d8e524b267622f91ed0c2ed854f931299f316312
+ms.openlocfilehash: e42f49558ea9744b59693be873aa5130c7e1a0c3
 
 
 ---
 
 # Konfigurowanie zarządzania urządzeniami z systemem Android
+Pomoc dotyczącą konfigurowania urządzenia z systemem Windows możesz znaleźć [tutaj](../enduser/using-your-android-device-with-intune.md).
+
 W usłudze Microsoft Intune można włączyć model BYOD („bring your own device”) dla urządzeń z systemem Android bez konieczności wykonywania dodatkowych działań dla tej platformy.
 
 Wybierz jedną z następujących opcji platformy urządzenia, aby dowiedzieć się więcej:
@@ -41,11 +43,15 @@ Urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestracj
 3.  **Informowanie użytkowników, jak uzyskać dostęp do zasobów firmy za pomocą Portalu firmy**<br>
     Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi. [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
+4.  Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi.
+        - [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-android-device-with-intune.md)
+
 ### Zobacz także
 [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

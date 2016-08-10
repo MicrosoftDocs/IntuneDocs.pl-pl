@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ef0210d7ca2d44608c5baa8f48ef56a2b9b5ce3a
+ms.sourcegitcommit: b93c6fe16e598c6f4b0d87981de8655f3de9c8d3
+ms.openlocfilehash: 051f2994c59b2886a81a50d7c72f51627064bc6a
 
 
 ---
@@ -24,6 +24,15 @@ Poznaj nowości w tej wersji usługi Microsoft Intune. Dowiedz się o nadchodzą
 
 Wszystkie te funkcje będą również w przyszłości obsługiwane dla hybrydowych wdrożeń klientów (program Configuration Manager z usługą Intune). Aby uzyskać więcej informacji na temat nowych funkcji hybrydowych, odwiedź stronę [Co nowego w funkcjach hybrydowych](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 
+## Sierpień 2016
+## Aktualizacje Portalu firmy
+
+### Android
+- **Aplikacja Portal firmy dla systemu Android**<br/>
+Aplikacja Portal firmy usługi Intune dla systemu Android zapewnia obsługę „od dnia 0” nadchodzącego systemu operacyjnego Android 7.0 dla urządzeń przenośnych.  
+
+- **Usunięcie przez Google możliwości zdalnego resetowania kodu dostępu na urządzeniach z systemem Android 7.0**<br/>
+Na urządzeniach z systemem Android 7.0 administratorzy IT usługi Intune i użytkownicy końcowi nie będą mogli zdalnie zresetować kodu dostępu urządzenia, ponieważ firma Google usunęła tę możliwość dla urządzeń z systemem Android 7.0. W wersjach wcześniejszych niż Android 7.0 administratorzy IT będą nadal mogli zdalnie zresetować kod dostępu użytkownika, a użytkownicy końcowi będą nadal mogli resetować swoje kody dostępu z poziomu witryny sieci Web Portalu firmy.
 
 ## Lipiec 2016
 ## Zarządzanie aplikacjami
@@ -41,7 +50,9 @@ Składnik Xamarin zestawu SDK aplikacji Intune umożliwia włączenie funkcji za
 Usługa Intune zwiększyła maksymalny limit rejestracji konfigurowalnych urządzeń z 5 na 15 urządzeń dla każdego użytkownika.
 <!---TFS 1289896 --->
 
-
+### Integracja programu TeamViewer dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune
+Integracja oprogramowania [TeamViewer](https://www.teamviewer.com) dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune umożliwia ustanawianie sesji pomocy zdalnej dla komputerów z systemem Windows w celu wsparcia działu pomocy technicznej użytkowników końcowych. Dotyczy to systemów Windows 7, 8, 8.1 i Windows 10. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
+<!---TFS 1284856--->
 
 ## Aktualizacje Portalu firmy
 ### Witryna sieci Web Portal firmy
@@ -93,7 +104,7 @@ Oprócz zmian w zarządzaniu grupami zostaną wycofane następujące funkcje:
 Więcej informacji na temat sposobu rozwiązywania problemów z usuniętymi funkcjami zostanie opublikowanych w sierpniu.
 
 ### Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android
-W sierpniu udostępnimy aktualizację Portalu firmy dla systemu Android, która wprowadzi nową ikonę **Powiadomienia** na stronie głównej. Naciśnięcie tej ikony spowoduje przejście na stronę **Powiadomienia**, która przedstawia użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. Jeśli używasz również aplikacji Portal firmy dla systemu iOS, powiadomienia masz już widoczne. Wraz z wprowadzeniem strony **Powiadomienia** nie będzie widoczna strona **Konfigurowanie dostępu do zasobów firmy** po uruchomieniu lub wznowieniu pracy w Portalu firmy dla systemu Android, jeśli urządzenie zostało już zarejestrowane. Wiemy, że wiele osób utworzyło wskazówki dla użytkowników końcowych i doceniają wcześniejsze powiadomienie, gdy wskazówki lub zrzuty ekranu mogą wymagać aktualizacji. Prosimy więc o takie zaktualizowanie dokumentacji, aby odzwierciedlała ona nadchodzące zmiany w środowisku. Zaktualizowane zrzuty ekranu można znaleźć tutaj: https://aka.ms/androidcpupdate.  
+We wrześniu udostępnimy aktualizację Portalu firmy dla systemu Android, która wprowadzi nową ikonę **Powiadomienia** na stronie głównej. Naciśnięcie tej ikony spowoduje przejście na stronę **Powiadomienia**, która przedstawia użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. Jeśli używasz również aplikacji Portal firmy dla systemu iOS, powiadomienia masz już widoczne. Wraz z wprowadzeniem strony **Powiadomienia** nie będzie widoczna strona **Konfigurowanie dostępu do zasobów firmy** po uruchomieniu lub wznowieniu pracy w Portalu firmy dla systemu Android, jeśli urządzenie zostało już zarejestrowane. Wiemy, że wiele osób utworzyło wskazówki dla użytkowników końcowych i doceniają wcześniejsze powiadomienie, gdy wskazówki lub zrzuty ekranu mogą wymagać aktualizacji. Prosimy więc o takie zaktualizowanie dokumentacji, aby odzwierciedlała ona nadchodzące zmiany w środowisku. Zaktualizowane zrzuty ekranu można znaleźć tutaj: https://aka.ms/androidcpupdate.  
 
 
 
@@ -147,6 +158,6 @@ Aby zobaczyć funkcje wprowadzone w usłudze Intune w ostatnich sześciu miesią
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

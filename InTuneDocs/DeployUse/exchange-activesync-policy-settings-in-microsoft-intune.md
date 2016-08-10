@@ -13,14 +13,14 @@ ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 0779fca11a692ce6843ef2ebf1c6a459273fc7cc
+ms.sourcegitcommit: 72e6bcd3fd480c1ed8558fefd3958b4bbf3184c2
+ms.openlocfilehash: 39a844db56edf18f25996c1aaf52223ac80f8071
 
 
 ---
 
 # Ustawienia zasad programu Exchange ActiveSync w usłudze Microsoft Intune
-Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają skonfigurować ustawienia umożliwiające sterowanie różnymi funkcjami na urządzeniach zarządzanych przez program Exchange ActiveSync.
+Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają skonfigurować ustawienia sterujące różnymi funkcjami na urządzeniach zarządzanych przez program Exchange ActiveSync.
 
 
 ## Ustawienia hasła
@@ -30,9 +30,9 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 |**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy urządzenie musi być zablokowane przy użyciu hasła.<br>(Nie dotyczy urządzeń z systemami Windows RT).|
 |**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|
 |**Minimalna długość hasła**|Określa minimalną wymaganą liczbę znaków w haśle urządzenia.|
-|**Zezwalaj na proste hasła**|Proste hasła zawierają ciągi „0000” i „1234”.|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Zezwala na określoną liczbę prób wprowadzenia prawidłowego hasła przed wyczyszczeniem zawartości urządzenia.|
-|**Wygaśnięcie hasła w dniach**|Określa liczbę dni, po której należy zmienić hasło urządzenia.
+|**Zezwalaj na proste hasła**|Określa, czy można używać prostych haseł, w tym „0000” i „1234”.|
+|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określa, ile razy użytkownik może wprowadzić nieprawidłowe hasło, zanim zawartość urządzenia zostanie usunięta.|
+|**Wygaśnięcie hasła (dni)**|Określa liczbę dni, po której należy zmienić hasło urządzenia.
 |**Pamiętaj historię haseł**|Określa, czy można korzystać z uprzednio używanych haseł.|
 |**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę wcześniej używanych haseł, których nie można użyć ponownie.|
 |**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**|Określa czas bezczynności urządzenia, po upływie którego ekran jest blokowany.
@@ -41,24 +41,24 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|
-|**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup>|Wymaga szyfrowania danych na urządzeniach przenośnych z obsługą tej funkcji.<br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie **Wymagaj hasła do odblokowania urządzeń przenośnych**.|
+|**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup>|Wymaga szyfrowania danych na urządzeniu z obsługą tej funkcji.<br><br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie **Wymagaj hasła do odblokowania urządzeń przenośnych**.|
 |**Wymagaj szyfrowania kart pamięci**|Wymaga szyfrowania danych przechowywanych w pamięci zewnętrznej, np. na kartach SD (w obsługiwanych urządzeniach).
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
 
--   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na wszystkich urządzeniach [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](http://support.microsoft.com/kb/3013816) 
+-   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na każdym urządzeniu [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](http://support.microsoft.com/kb/3013816)
 
 -   W przypadku włączenia tego ustawienia dla urządzeń z systemem Windows 8.1 wszyscy użytkownicy urządzeń muszą mieć konto Microsoft.
 
--   Aby szyfrowanie działało, urządzenie musi spełniać wymagania dotyczące certyfikacji sprzętu [InstantGo](http://blogs.windows.com/bloggingwindows/2014/06/19/instantgo-a-better-way-to-sleep/) firmy Microsoft.
+-   Aby szyfrowanie działało dla urządzeń z systemem Windows 8.1, urządzenie musi spełniać wymagania dotyczące certyfikacji sprzętu [InstantGo](http://blogs.windows.com/bloggingwindows/2014/06/19/instantgo-a-better-way-to-sleep/) firmy Microsoft.
 
--   W przypadku wymuszania szyfrowania na urządzeniu klucz odzyskiwania jest dostępny tylko za pośrednictwem konta Microsoft użytkowników, do którego można uzyskać dostęp z konta usługi OneDrive. Nie można odzyskać tego klucza w imieniu użytkownika.
+-   W przypadku wymuszania szyfrowania na urządzeniu z systemem Windows 8.1 klucz odzyskiwania jest dostępny tylko za pośrednictwem konta Microsoft użytkownika, do którego można uzyskać dostęp z konta usługi OneDrive użytkownika. Nie można odzyskać tego klucza w imieniu użytkownika.
 
 ## Ustawienia poczty e-mail
 
 |Nazwa ustawienia|Szczegóły
 |----------------|
 |**Zezwalaj użytkownikom na pobieranie załączników wiadomości e-mail**|Określa, czy na urządzenie można pobierać załączniki wiadomości e-mail.|
-|**Okres synchronizacji wiadomości e-mail**|Wybierz liczbę dni synchronizacji odebranych wiadomości e-mail na urządzeniu.
+|**Okres synchronizacji wiadomości e-mail**|Określa liczbę dni synchronizacji odebranych wiadomości e-mail na urządzeniu.
 |**Zezwalaj urządzeniom przenośnym, które nie obsługują w pełni ustawień programu Exchange ActiveSync, na synchronizowanie z programem Exchange**|Określa, czy zezwalać na dostęp do programu Exchange na urządzeniach, które nie obsługują co najmniej jednego ustawienia programu Exchange ActiveSync.
 
 ## Ustawienia przeglądarki
@@ -80,7 +80,6 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 
 
-
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

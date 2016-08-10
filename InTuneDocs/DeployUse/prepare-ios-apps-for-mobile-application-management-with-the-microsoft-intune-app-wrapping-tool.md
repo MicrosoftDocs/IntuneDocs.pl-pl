@@ -13,8 +13,8 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: matgates
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 19a5b8f8260bace2bbe3626da3df281306f53024
-ms.openlocfilehash: ebd68513da55b8bb1715d2c82636abf791cae1ff
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
 
 
 ---
@@ -27,12 +27,13 @@ Jest to narzędzie wiersza poleceń systemu Mac OS tworzące „otokę” dla ap
 Aby pobrać to narzędzie, zobacz [narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
 
 ## Krok 1 Spełnianie wymagań wstępnych dotyczących używania narzędzia opakowującego aplikacje
+Przeczytaj [ten wpis w blogu](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby dowiedzieć się więcej na temat wymagań wstępnych i sposobu ich ustawiania.
 
 |Wymaganie|Więcej informacji|
 |---------------|--------------------------------|
 |Obsługiwany system operacyjny i zestaw narzędzi|Narzędzie opakowujące aplikacje można uruchomić na komputerze Mac z systemem OS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi XCode w wersji 5 lub nowszej.|
 |Certyfikat podpisywania i profil inicjowania obsługi administracyjnej|Wymagany jest profil inicjowania obsługi administracyjnej oraz certyfikat podpisywania firmy Apple. Przejrzyj [dokumentację dla deweloperów firmy Apple](https://developer.apple.com/).|
-|Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje|Aplikacje muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania. Za pomocą tego narzędzia nie można przetwarzać aplikacji ze sklepu Apple. Aplikacje muszą być napisane dla systemu iOS w wersji 7.0 lub nowszej. Aplikacje muszą również mieć format PIE (Position Independent Executable). Więcej informacji na temat formatu PIE zawiera dokumentacja dla deweloperów firmy Apple. Ponadto aplikacja musi mieć rozszerzenie **.app** lub **.ipa**.|
+|Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje|Aplikacje muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania. Za pomocą tego narzędzia nie można przetwarzać aplikacji ze sklepu Apple. Aplikacje muszą być napisane dla systemu iOS w wersji 7.1 lub nowszej. Aplikacje muszą również mieć format PIE (Position Independent Executable). Więcej informacji na temat formatu PIE zawiera dokumentacja dla deweloperów firmy Apple. Ponadto aplikacja musi mieć rozszerzenie **.app** lub **.ipa**.|
 |Aplikacje, które nie mogą być przetworzone przez narzędzie opakowujące aplikacje|Aplikacje zaszyfrowane, aplikacje niepodpisane i aplikacje z rozszerzonymi atrybutami plików.|
 |Aplikacje korzystające z biblioteki usługi Azure Active Directory (ADAL)|Jeśli aplikacja korzysta z biblioteki ADAL, musi mieć zintegrowaną bibliotekę ADAL w wersji 1.0.2 lub nowszej, a deweloper musi udzielić dostępu aplikacji do zasobu zarządzania aplikacjami mobilnymi usługi Intune.<br /><br />Zobacz [Informacje dotyczące aplikacji korzystających z bibliotek usługi Azure Active Directory (ADAL)](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#information-for-apps-that-use-the-azure-active-directory-library) w tym artykule, aby uzyskać szczegółowe informacje na temat sposobu użycia bibliotek ADAL.|
 |Ustawianie uprawnień dla aplikacji|Przed opakowaniem aplikacji należy ustawić uprawnienia, które zapewnią aplikacji dodatkowe możliwości poza tymi, które są zwykle przyznawane. Instrukcje można znaleźć w artykule [Ustawienie uprawnień dla aplikacji](#setting-app-entitlements).|
@@ -292,6 +293,6 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

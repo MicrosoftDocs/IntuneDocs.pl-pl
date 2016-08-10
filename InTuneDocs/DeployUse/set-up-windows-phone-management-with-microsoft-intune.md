@@ -13,14 +13,16 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: cc928e4facf592ca0f7398b374242a7a07ae193e
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: 344f1cf4367deb12288f9c361e043d345f9846bb
 
 
 ---
 
 
 # Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune
+Pomoc dotyczącą konfigurowania urządzenia z systemem Windows możesz znaleźć [tutaj](../enduser/using-your-windows-device-with-intune.md).
+
 Aby można było zarządzać urządzeniami z systemem Windows 10 Mobile lub Windows Phone w usłudze Microsoft Intune, urządzenia muszą być w stanie nawiązać połączenia z usługą Intune. W celu uproszczenia tego procesu należy utworzyć rekord DNS, aby użytkownicy nie musieli wprowadzać adresu serwera. Poniżej opisano sposób uproszczenia rejestracji dla użytkowników.  
 
 W przypadku większości scenariuszy użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Windows. Jeśli zarządzasz urządzeniami z systemem Windows Phone 8.0 lub potrzebne jest wdrożenie aplikacji Portal firmy na urządzeniach z systemem Windows Phone, musisz pobrać i podpisać aplikację Portal firmy. Zobacz [Konfigurowanie zarządzania systemem Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
@@ -50,12 +52,16 @@ W przypadku większości scenariuszy użytkownicy mogą zainstalować aplikację
 
     3.  W polu **Podaj nazwę zweryfikowanej domeny** wpisz adres URL zweryfikowanej domeny witryny sieci Web firmy, a następnie kliknij przycisk **Przetestuj automatyczne wykrywanie**.
 
+    4.  Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi.
+        - [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-windows-device-with-intune.md)
+
 
 
 Nie są wymagane żadne dodatkowe czynności, chyba że nastąpi wdrożenie aplikacji Portal firmy na urządzeniach.  Kroki 2 i 3 w konsoli administracyjnej można bezpiecznie zignorować.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

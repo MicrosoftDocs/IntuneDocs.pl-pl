@@ -1,10 +1,10 @@
 ---
-title: "Łącznik Exchange Connector dla hostowanego programu Exchange | Microsoft Intune"
+title: "Program Exchange Connector dla usługi Exchange Online | Microsoft Intune"
 description: "Połączenie usługi Intune z programem Exchange usługi Office 365 umożliwia obsługę funkcji zarządzanie urządzeniami przenośnymi usługi Exchange ActiveSync."
 keywords: 
 author: NathBarn
-manager: arob98
-ms.date: 07/19/2016
+manager: angrobe
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,24 +13,24 @@ ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
-ms.openlocfilehash: 63697222f024169d9450b9f4fea8c666353e72cc
+ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
+ms.openlocfilehash: 1aabf820170483eacc83bec5e2b275e84dc07ffd
 
 
 ---
 
 # Konfigurowanie łącznika Intune Service to Service dla programu Exchange Online
 
-Dzięki tym informacjom można połączyć usługę Microsoft Intune i usługę Exchange Online hostowaną przez usługi Office 365.
+Dzięki tym informacjom można połączyć usługę Microsoft Intune i usługę Exchange Online lub nową usługę Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera **nową**, czy **starszą** konfigurację, skontaktuj się z menedżerem ds. klientów. Usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu na subskrypcję.
 
 ## Wymagania dotyczące łącznika Service To Service Connector
-Łącznik **Service To Service Connector** obsługuje tylko hostowany program Exchange i nie ma wymagań dotyczących infrastruktury lokalnej.
+Łącznik **Service To Service Connector** obsługuje tylko usługę Exchange Online lub nową usługę Exchange Online w wersji dedykowanej i nie ma wymagań dotyczących infrastruktury lokalnej.
 
 |Wymaganie|Więcej informacji|
 |---------------|--------------------|
-|Hostowany program Exchange — skonfigurowany i uruchomiony|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
+|Usługa Exchange Online — skonfigurowana i uruchomiona|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
 |Urząd zarządzania urządzeniami przenośnymi| [Ustawianie usługi Microsoft Intune jako urzędu zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)|
-|Wersja programu Microsoft Exchange|Należy mieć subskrypcję usługi Office 365 z dzierżawą programu Exchange Server w wersji 2013 lub nowszej. Jeśli jest dostępna dzierżawa programu Exchange Server w wersji 2013 lub nowszej, łącznik obsługuje program Exchange Server 2010 w tym samym środowisku.|
+|Wersja programu Microsoft Exchange|Usługa Exchange Online lub nowa usługa Exchange Online w wersji dedykowanej|
 |Synchronizacja z usługą Active Directory|Zanim będzie możliwe użycie łącznika Intune Connector, należy [skonfigurować synchronizację z usługą Active Directory](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
 
 ### Wymagania poleceń cmdlet programu Exchange
@@ -54,7 +54,7 @@ Ponadto musisz utworzyć konto użytkownika usługi Exchange Online, które będ
 3.  Na stronie **Konfigurowanie połączenia z programem Exchange** wybierz polecenie **Skonfiguruj łącznik Service To Service Connector**.
 
 
-Łącznik Service To Service Connector będzie automatycznie konfigurował i synchronizował hostowane środowisko programu Exchange.
+Łącznik Service To Service Connector będzie automatycznie konfigurowany i synchronizowany z usługą Exchange Online lub nową usługą Exchange Online w wersji dedykowanej.
 
 ## Weryfikacja połączenia z programem Exchange
 
@@ -64,6 +64,6 @@ Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchr
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

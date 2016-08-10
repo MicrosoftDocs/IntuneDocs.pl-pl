@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 15db6064b9136be5a68bf5e414b0bcb6036fbc1e
+ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
+ms.openlocfilehash: 083dd1a11e291ff0d92b1bfa3ec61033f26f3d4b
 
 
 ---
@@ -34,7 +34,7 @@ Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony
 
 2.  W obszarze **Moje urządzenia** wybierz zgubione lub skradzione urządzenie.
 
-3.  Naciśnij kolejno pozycje **Zresetuj** &gt; **Zresetuj**.
+3.  Naciśnij ikonę **Resetuj**, a następnie naciśnij pozycję **reset**.
 
 Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go pracownika działu IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
@@ -43,6 +43,6 @@ Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

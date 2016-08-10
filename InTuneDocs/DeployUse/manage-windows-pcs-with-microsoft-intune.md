@@ -13,8 +13,8 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: b01354b62507b9843b53cc4b2c8c1e82a6c422e5
+ms.sourcegitcommit: aa1d6105a5be9c329c75681857a9d6e553088b65
+ms.openlocfilehash: be45b2ffb99eb75e71c0d591fc84089b83735905
 
 
 ---
@@ -27,7 +27,7 @@ Usługa Intune zarządza komputerami z systemem Windows za pomocą zasad podobni
 Klient usługi Intune obsługuje [zasady pomagające w ochronie komputerów](policies-to-protect-windows-pcs-in-microsoft-intune.md), zarządzając aktualizacjami oprogramowania, zaporą systemu Windows i programem Endpoint Protection. Niemniej komputery zarządzane przy użyciu klienta usługi Intune nie mogą być celem innych zasad usługi Intune.
 
 > [!NOTE]
-> Urządzenia z systemem Windows 8.1 mogą być zarządzane przy użyciu klienta usługi Intune lub można je zarejestrować jako urządzenia przenośne. Poniższe informacje dotyczą komputerów z klientem usługi Intune. Jednoczesne instalowanie komputerowego klienta usługi Intune oraz rejestrowanie urządzeń z systemem Windows w usłudze zarządzania urządzeniami przenośnymi nie jest obsługiwane.
+> Urządzenia z systemem Windows 8.1 lub nowszym mogą być zarządzane przy użyciu klienta usługi Intune lub można je zarejestrować jako urządzenia przenośne. Poniższe informacje dotyczą komputerów z klientem usługi Intune. Jednoczesne instalowanie komputerowego klienta usługi Intune oraz rejestrowanie urządzeń z systemem Windows w usłudze zarządzania urządzeniami przenośnymi nie jest obsługiwane.
 
 ## Wymagania dotyczące funkcji zarządzania komputerami przy użyciu klienta usługi Intune
 
@@ -86,6 +86,6 @@ Agent klienta usługi Intune zwykle działa w tle bez konieczności interakcji z
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

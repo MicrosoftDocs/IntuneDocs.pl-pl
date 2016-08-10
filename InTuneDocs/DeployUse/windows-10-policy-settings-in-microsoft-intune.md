@@ -4,7 +4,7 @@ description: "Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowan
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 07/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: bb08ea54b24e0395972ce29ae05ff2b7b6ee4220
+ms.sourcegitcommit: 7ef205aece89667ea84b9b73e42e71fc540fa257
+ms.openlocfilehash: cbfd2da544814dc93a818a1ca5bd0496a268634b
 
 
 ---
@@ -45,7 +45,6 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Wygaśnięcie hasła (dni)**|Określa czas, po jakim hasło urządzenia musi zostać zmienione.|
 |**Pamiętaj historię haseł**|Określa, czy chcesz ograniczyć użytkownikowi końcowemu możliwość tworzenia poprzednio używanych haseł.|
 |**Pamiętaj historię haseł** - **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednio używanych haseł zapamiętywanych przez urządzenie.|
-|**Zezwalaj na hasło obrazkowe i numer PIN**|Umożliwia logowanie się przy użyciu prostych gestów na obrazie lub prostego numeru PIN.<br>(Tylko Windows 10 Desktop)|
 |**Wymagaj hasła po przywróceniu urządzenia ze stanu bezczynności**|Jeśli ta opcja jest włączona, użytkownik musi wprowadzić hasło, aby odblokować urządzenie, które przeszło w stan bezczynności.<br>(Tylko Windows 10 Mobile)|
 
 ### Encryption
@@ -71,14 +70,6 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na konto Microsoft**|Zezwala użytkownikowi na skojarzenie konta Microsoft z urządzeniem.|
 |**Zezwalaj na ręczne dodawanie kont innych niż konta Microsoft**|Zezwala użytkownikowi na dodanie na urządzeniu kont e-mail, które nie są skojarzone z kontem Microsoft.|
 |**Zezwalaj na synchronizację ustawień kont Microsoft**|Zezwala na synchronizację ustawień urządzenia i aplikacji, które są skojarzone z kontem Microsoft, między urządzeniami.|
-
-### Ustawienia poczty e-mail
-
-|Nazwa ustawienia|Szczegóły|
-|----------------|----------------------|---------------------|
-|**Ustaw konto Microsoft jako opcjonalne w aplikacji Windows Mail**|Skonfiguruj tę opcję, aby usunąć wymaganie konta Microsoft w programie Windows Mail.<br>Tylko Windows 10 Desktop|
-
-
 
 ### Microsoft Edge
 
@@ -127,7 +118,6 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na połączenia Bluetooth**|Umożliwia korzystanie z funkcji Bluetooth na urządzeniu.|
 |**Zezwalaj na tryb wykrywania urządzeń Bluetooth**|Umożliwia wykrycie urządzenia przez inne urządzenia Bluetooth.|
 |**Zezwalaj na reklamy przez sieć Bluetooth**|Umożliwia urządzeniom odbieranie reklam przez sieć Bluetooth.|
-|**Zezwalaj na tryb łączności Bluetooth**|**Ważne:** to ustawienie nie jest już obsługiwane w systemie Windows 10 i zostanie usunięte w przyszłości.|
 |**Zezwalaj na resetowanie telefonu**|Określa, czy użytkownik może resetować urządzenie do ustawień fabrycznych.|
 |**Zezwalaj na połączenie USB**|Określa, czy urządzenia mają dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.|
 |**Zezwalaj na tryb antykradzieżowy**|Pozwala określić, czy jest włączony tryb antykradzieżowy systemu Windows.|
@@ -177,6 +167,7 @@ Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 |Nazwa ustawienia|Szczegóły|
 |----------------|---------------|
 |**Zezwalaj na aktualizacje automatyczne**|Włącz to ustawienie, aby zezwalać na aktualizacje automatyczne. Następnie skonfiguruj jedno z następujących ustawień kontrolowania zachowania aktualizacji:<br /><br />**Powiadamiaj o pobieraniu**<br /><br />**Instaluj automatycznie podczas konserwacji**<br /><br />**Automatycznie instaluj i uruchamiaj ponownie podczas konserwacji**<br /><br />**Automatycznie zainstaluj i uruchom ponownie w zaplanowanym czasie** **Uwaga:** jeśli ta opcja jest wybrana, możesz również skonfigurować następujące ustawienia: **Pomiń powiadamianie użytkownika końcowego** i **Zdefiniuj dzień instalacji zaplanowanych aktualizacji**.<br>(Tylko Windows 10 Desktop)|
+|**Zezwalaj na funkcje wersji wstępnej**|Umożliwia firmie Microsoft wdrażanie na urządzeniach z systemem Windows 10 ustawień i funkcji wersji wstępnej. Możesz zezwolić na instalowanie tylko ustawień lub wszystkich ustawień i funkcji wersji wstępnej.|
 
 ## Ustawienia zasad niestandardowych
 **Niestandardowe zasady konfiguracji** usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), za pomocą których można sterować funkcjami na urządzeniach z systemami Windows 10 i Windows 10 Mobile. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
@@ -332,6 +323,6 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

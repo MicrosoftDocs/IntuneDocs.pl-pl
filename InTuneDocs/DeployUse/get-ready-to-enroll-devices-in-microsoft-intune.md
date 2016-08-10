@@ -3,7 +3,7 @@ title: "Przygotowanie do rejestracji urządzeń | Microsoft Intune"
 description: "Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych."
 keywords: 
 author: NathBarn
-manager: arob98
+manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
@@ -13,14 +13,14 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f6f98d582ce9a686ca02682a9066d8b2162d6ab
-ms.openlocfilehash: 24b8434993d7661e12172ac0e5fe58d1e6621558
+ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
+ms.openlocfilehash: 7e3e29113dd03ea25f102d7f71c63e5c3faefad8
 
 
 ---
 
 # Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune
-Aby umożliwić pracownikom zarejestrowanie urządzeń przenośnych w usłudze Intune (w tym urządzeń z systemami [Android](set-up-android-management-with-microsoft-intune.md), [iOS, Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) i [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) oraz [komputerów z systemem Windows](set-up-windows-device-management-with-microsoft-intune.md)), należy włączyć rejestrowanie urządzeń. Aby zezwolić na rejestrowanie, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM, mobile device management), skonfigurować portal firmy usługi Intune, przypisać licencje i włączyć rejestrowanie dla platformy urządzeń.
+Aby umożliwić pracownikom zarejestrowanie urządzeń przenośnych w usłudze Intune (w tym urządzeń z systemami [Android](set-up-android-management-with-microsoft-intune.md), [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) [iOS oraz komputerów Mac](set-up-ios-and-mac-management-with-microsoft-intune.md) i [komputerów z systemem Windows](set-up-windows-device-management-with-microsoft-intune.md)) lub zarządzać urządzeniami należącymi do firmy, należy włączyć rejestrowanie urządzeń. Aby zezwolić na rejestrowanie, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM, mobile device management), skonfigurować portal firmy usługi Intune, przypisać licencje i włączyć rejestrowanie dla platformy urządzeń.
 
 ## Ustawianie urzędu zarządzania urządzeniami przenośnymi
 Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
@@ -109,6 +109,6 @@ Możesz również:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

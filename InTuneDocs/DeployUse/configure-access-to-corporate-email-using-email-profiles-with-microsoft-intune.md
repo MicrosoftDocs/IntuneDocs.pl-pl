@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 878172811c7899237b5ebf5db9a443f10fea42dd
+ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
+ms.openlocfilehash: cddc1a68b14520774555416dcd496a06a0f89385
 
 
 ---
@@ -36,6 +36,18 @@ Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty
 
 
 Oprócz konfigurowania konta e-mail na urządzeniu możesz skonfigurować ustawienia synchronizacji, takie jak ilość poczty e-mail do synchronizowania, a także, w zależności od typu urządzenia, typy zawartości do synchronizowania.
+>[!NOTE]
+>
+>Jeśli użytkownik zainstalował profil poczty e-mail przed udostępnieniem profilu przez usługę Intune, wynik wdrożenia profilu poczty e-mail usługi Intune zależy od platformy urządzenia:
+
+>-**iOS**: usługa Intune wykrywa istniejący, zduplikowany profil poczty e-mail na podstawie nazwy hosta i adresu e-mail. Zduplikowany profil poczty e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy poinformuje użytkownika, że nie urządzenie nie jest zgodne z powodu ręcznie skonfigurowanego profilu poczty e-mail i wyświetli monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby umożliwić wdrożenie profilu z usługi Intune. Aby uniknąć problemu, poinstruuj użytkowników, aby dokonali rejestracji bez instalowania profilu poczty e-mail i pozwolili usłudze Intune na wdrożenie profilu.
+
+>-**Windows**: usługa Intune wykrywa istniejący, zduplikowany profil poczty e-mail na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastąpi istniejący profil poczty e-mail utworzony przez użytkownika.
+
+>-**Samsung KNOX**: usługa Intune zidentyfikuje zduplikowane konto e-mail na podstawie adresu e-mail i zastąpi je profilem usługi Intune. Jeśli użytkownik skonfiguruje to konto, zostanie ono ponownie zastąpione przez profil usługi Intune. Może to powodować dezorientację użytkownika, którego konfiguracja konta zostaje zastąpiona.
+
+>Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zaleca się tworzenia wielu profilów poczty e-mail do wdrożenia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępowały siebie nawzajem.
+    
 
 ## Zabezpieczanie profilów poczty e-mail
 Profile poczty e-mail mogą być chronione przy użyciu jednej z dwóch metod:
@@ -109,6 +121,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
