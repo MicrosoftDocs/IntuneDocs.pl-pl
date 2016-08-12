@@ -13,8 +13,8 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9d2ad912de7bc775cde2c40c8de27a09ba2af
-ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
+ms.sourcegitcommit: 87aea89a323fb05087322fb117d0be2e579a06ff
+ms.openlocfilehash: 6eda2828a801700e885d1bed667f9260f325e175
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
 
 Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw zostanie utworzony profil sieci VPN korzystający z typu połączenia Pulse Secure, a następnie niestandardowe zasady konfiguracji kojarzące ten profil z określonymi aplikacjami. Po wdrożeniu tych zasad na urządzeniu z systemem Android lub w grupach użytkowników otwarcie jednej z określonych aplikacji na tych urządzeniach będzie powodować otwarcie połączenia sieci VPN dla danej aplikacji.
 
-> [UWAGA]
+> [!NOTE]
 > 
 > Dla tego profilu obsługiwany jest tylko typ połączenia Pulse Secure.
 
@@ -37,7 +37,8 @@ Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utw
 4. Ukończ tworzenie profilu sieci VPN i zapisz go. Aby uzyskać więcej informacji na temat profilów sieci VPN, zobacz [Połączenia VPN](vpn-connections-in-microsoft-intune.md).
 
 > [!NOTE]
-Zanotuj nazwę profilu sieci VPN w celu użycia jej w następnym kroku. Przykład: **mój_profil_VPN_aplikacji**.
+> 
+> Zanotuj nazwę profilu sieci VPN w celu użycia jej w następnym kroku.   Przykład: **mój_profil_VPN_aplikacji**.
 
 ### Krok 2. Tworzenie niestandardowych zasad konfiguracji
 
@@ -81,6 +82,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 
