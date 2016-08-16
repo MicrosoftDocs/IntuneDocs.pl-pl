@@ -2,7 +2,7 @@
 title: "Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune"
 description: "W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune."
 keywords: 
-author: robstack
+author: robstackmsft
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -13,29 +13,24 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 44af28c18980e549924139badd8f3ca439dc29b3
+ms.sourcegitcommit: bbee6d3fec02a4d96b31a44a31218f684e0267c8
+ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
 
 
 ---
 
 # Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune
-W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune.
-
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
-
+Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
 ## Typowe problemy z wdrażaniem aplikacji
 
-### Jeśli nie można zalogować się w portalu firmy w usłudze Microsoft Intune
+### Użytkownicy nie mogą zalogować się w Portalu firmy w usłudze Intune
 
-1.  Sprawdź, czy Twoje konto istnieje w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i czy nie zostało wyłączone.
+1.  Upewnij się, konto użytkownika istnieje i jest włączone w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
-2.  Upewnij się, że masz udostępnioną obsługę na tym koncie w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
+3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że użytkownik wprowadził prawidłową nazwę użytkownika do zalogowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**. Jeśli użytkownik wydaje się wprowadzać nieprawidłowe hasło, poproś go o zresetowanie hasła.
 
-3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że używasz prawidłowej nazwy użytkownika oraz hasła do logowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**.
-
-### Jeśli w Portalu firmy brakuje informacji kontaktowych działu IT
+### W Portalu firmy brakuje informacji kontaktowych działu IT
 
 1.  W konsoli administracyjnej usługi Intune wybierz pozycję **Administrator** &gt; **Portal firmy**.
 
@@ -105,6 +100,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

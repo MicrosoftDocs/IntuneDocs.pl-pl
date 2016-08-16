@@ -13,25 +13,55 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: c61fd1070f84f359ac6abe9ff48e51d2787c4eb4
+ms.sourcegitcommit: dcfa3af374a7e64e931508e1a8022bf8a50c71a7
+ms.openlocfilehash: a09c9b55d7906ab792bda90b172a36b3656ed6dd
 
 
 ---
 
 # Zapewnianie lepszej ochrony danych dzięki pełnemu lub selektywnemu czyszczeniu przy użyciu usługi Microsoft Intune
-Podobnie jak w przypadku urządzeń, na pewnym etapie jest wymagane lub konieczne [wycofanie aplikacji](retire-apps-using-microsoft-intune.md), które zostały wdrożone na komputerach i urządzeniach przenośnych, ale są już niepotrzebne. Może być również konieczne usunięcie danych firmy z urządzenia. Usługa Intune umożliwia selektywne i pełne czyszczenie danych. Ponieważ urządzenia przenośne mogą zawierać poufne dane firmy i umożliwiają dostęp do wielu zasobów firmy, w przypadku utraty lub kradzieży urządzenia można wydać z usługi Intune polecenie zdalnego wyczyszczenia urządzenia. Ponadto użytkownicy mogą wydać z usługi Intune polecenie zdalnego wyczyszczenia urządzenia dla urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
+Możesz wyczyścić aplikacje i dane z urządzeń zarządzanych przez usługę Intune, jeśli na przykład urządzenie jest już niepotrzebne, zostało zgubione lub zachodzi konieczność zmiany jego przeznaczenia. Usługa Intune umożliwia selektywne i pełne czyszczenie danych. Ponadto użytkownicy mogą wydać z Portalu firmy usługi Intune polecenie zdalnego wyczyszczenia urządzenia dla urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
 
   > [!NOTE]
-  > Ten temat dotyczy tylko czyszczenia danych z urządzeń zarządzanych przez usługę Intune. Można również użyć [portalu Azure w wersji zapoznawczej](https://portal.azure.com) do [czyszczenia danych firmy z aplikacji](wipe-managed-company-app-data-with-microsoft-intune.md).
+  > Ten temat dotyczy tylko czyszczenia danych z urządzeń zarządzanych w ramach zarządzania urządzeniami przenośnymi przez usługę Intune. Można również użyć [portalu Azure w wersji zapoznawczej](https://portal.azure.com) do [czyszczenia danych firmy z aplikacji](wipe-managed-company-app-data-with-microsoft-intune.md). Możesz również [wycofać komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
 
 ## Pełne czyszczenie danych
 
-
 **Pełne czyszczenie danych** przywraca ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień dotyczących firmy oraz użytkownika. Urządzenie jest usuwane z usługi Intune. Pełne czyszczenie danych jest przydatne w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia.  **Należy rozważnie korzystać z funkcji pełnego czyszczenia danych. Nie będzie można odzyskać danych na urządzeniu**.
+
 
 > [!Warning]
 > Urządzenia z systemem Windows 10 RTM (tj. wcześniejszym niż Windows 10 w wersji 1511) z mniej niż 4 GB pamięci RAM mogą stać się niedostępne, jeśli zostaną wyczyszczone. Urządzenie z systemem Windows 10, które przestało odpowiadać, można uruchomić z napędu USB lub użyć podobnego obejścia.
+
+### Zdalne czyszczenie urządzenia z poziomu konsoli administratora usługi Intune
+
+1.  Wybierz urządzenia do wyczyszczenia. Można je znaleźć według użytkownika lub według urządzenia.
+
+    -   **Według użytkownika:**
+
+        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszyscy użytkownicy**.
+
+        2.  Wybierz nazwę użytkownika, którego urządzenie przenośne ma zostać wyczyszczone. Wybierz pozycję **Wyświetl właściwości**.
+
+        3.  Na stronie **Właściwości** użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
+
+    -   **Według urządzenia:**
+
+        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia przenośne**.
+
+      ![Rozpoczynanie operacji wycofania lub czyszczenia](../media/dev-sa-wipe.png)
+
+        2.  Wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
+
+2.  Wybierz pozycję **Wycofaj/wyczyść**.
+
+3.  Zostanie wyświetlony komunikat z prośbą o potwierdzenie wycofania urządzenia.
+
+    -   Aby przeprowadzić **selektywne czyszczenie danych**, które powoduje usunięcie tylko aplikacji i danych firmy, wybierz pozycję **Tak**.
+
+    -   Aby przeprowadzić **pełne czyszczenie danych**, które powoduje usunięcie wszystkich aplikacji i danych, a następnie przywraca domyślne ustawienia fabryczne urządzenia, wybierz pozycję **Wyczyść urządzenie przed jego wycofaniem**. Ta akcja ma zastosowanie do wszystkich platform z wyjątkiem systemu Windows 8.1. **Nie można odzyskać danych usuniętych przez pełne czyszczenie danych**.
+
+Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszczenia do wszystkich typów urządzeń trwa mniej niż 15 minut.
 
 ## Selektywne czyszczenie danych
 
@@ -78,36 +108,6 @@ Podobnie jak w przypadku urządzeń, na pewnym etapie jest wymagane lub konieczn
 |Poczta e-mail|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji poczty dla systemu Windows.|Nieobsługiwane|Profile poczty e-mail obsługiwane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji poczty dla systemu Windows. Usuwa konta poczty zaaprowizowane przez usługę Intune.|
 |Odłączanie usługi Azure Active Directory (AAD)|Nie|Nie|Rekord usługi AAD zostanie usunięty|Nie dotyczy. System Windows 10 nie obsługuje selektywnego czyszczenia danych na urządzeniach przyłączonych do usługi Azure Active Directory|
 
-### Zdalne czyszczenie urządzenia z poziomu konsoli administratora usługi Intune
-
-1.  Wybierz urządzenia do wyczyszczenia. Można je znaleźć według użytkownika lub według urządzenia.
-
-    -   **Według użytkownika:**
-
-        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszyscy użytkownicy**.
-
-        2.  Wybierz nazwę użytkownika, którego urządzenie przenośne ma zostać wyczyszczone. Wybierz pozycję **Wyświetl właściwości**.
-
-        3.  Na stronie **Właściwości** użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
-
-    -   **Według urządzenia:**
-
-        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia przenośne**.
-
-      ![Rozpoczynanie operacji wycofania lub czyszczenia](../media/dev-sa-wipe.png)
-
-        2.  Wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
-
-2.  Wybierz pozycję **Wycofaj/wyczyść**.
-
-3.  Zostanie wyświetlony komunikat z prośbą o potwierdzenie wycofania urządzenia.
-
-    -   Aby przeprowadzić **selektywne czyszczenie danych**, które powoduje usunięcie tylko aplikacji i danych firmy, wybierz pozycję **Tak**.
-
-    -   Aby przeprowadzić **pełne czyszczenie danych**, które powoduje usunięcie wszystkich aplikacji i danych, a następnie przywraca domyślne ustawienia fabryczne urządzenia, wybierz pozycję **Wyczyść urządzenie przed jego wycofaniem**. Ta akcja ma zastosowanie do wszystkich platform z wyjątkiem systemu Windows 8.1. **Nie można odzyskać danych usuniętych przez pełne czyszczenie danych**.
-
-Czyszczenie wszystkich typów urządzeń trwa mniej niż 15 minut.
-
 ## Czyszczenie zawartości z obsługą systemu szyfrowania plików (EFS)
 Selektywne czyszczenie zawartości z obsługą systemu szyfrowania plików jest obsługiwane w systemach Windows 8.1 i Windows RT 8.1. W przypadku selektywnego czyszczenia zawartości z obsługą systemu szyfrowania plików obowiązują następujące reguły:
 
@@ -142,6 +142,6 @@ Aby wyświetlić raport urządzeń, które zostały wycofane, wyczyszczone lub u
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

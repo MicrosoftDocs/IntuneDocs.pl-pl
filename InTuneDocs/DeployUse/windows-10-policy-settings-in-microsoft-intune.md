@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7ef205aece89667ea84b9b73e42e71fc540fa257
-ms.openlocfilehash: cbfd2da544814dc93a818a1ca5bd0496a268634b
+ms.sourcegitcommit: 0178bba517b0fc9e02ba67e6f3aba7a8a0ee445f
+ms.openlocfilehash: 9daab32361cfdf8567d03a8ea6e6438e34b61aad
 
 
 ---
@@ -32,7 +32,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 **Ogólne zasady konfiguracji** usługi Microsoft Intune dla systemu Windows 10 umożliwiają konfigurowanie ogólnych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile. 
 
 
-### Hasło
+## — Hasło
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
@@ -47,13 +47,13 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Pamiętaj historię haseł** - **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednio używanych haseł zapamiętywanych przez urządzenie.|
 |**Wymagaj hasła po przywróceniu urządzenia ze stanu bezczynności**|Jeśli ta opcja jest włączona, użytkownik musi wprowadzić hasło, aby odblokować urządzenie, które przeszło w stan bezczynności.<br>(Tylko Windows 10 Mobile)|
 
-### Encryption
+## — Szyfrowanie
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
 |**Wymagaj szyfrowania na urządzeniu przenośnym**|Włącza szyfrowanie na urządzeniach docelowych.<br>(Tylko Windows 10 Mobile)|
 
-### System
+## — System
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
@@ -63,7 +63,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na wysyłanie danych diagnostycznych i danych dotyczących użycia do firmy Microsoft**|Określa ilość danych diagnostycznych i danych użycia, które są wysyłane do firmy Microsoft przez urządzenia.<br><br>**Brak** — żadne dane nie są wysyłane do firmy Microsoft<br>**Podstawowe** — urządzenie wysyła tylko ograniczone informacje do firmy Microsoft<br>**Rozszerzone** — urządzenie wysyła rozszerzone dane diagnostyczne do firmy Microsoft<br>**Pełne (zalecane)** — urządzenie wysyła te same dane, które są wysyłane w przypadku opcji **Rozszerzone**, oraz dodatkowe dane dotyczące stanu urządzenia|
 
 
-### Konto i synchronizacja
+## — Konto i synchronizacja
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|---------------------|
@@ -71,7 +71,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na ręczne dodawanie kont innych niż konta Microsoft**|Zezwala użytkownikowi na dodanie na urządzeniu kont e-mail, które nie są skojarzone z kontem Microsoft.|
 |**Zezwalaj na synchronizację ustawień kont Microsoft**|Zezwala na synchronizację ustawień urządzenia i aplikacji, które są skojarzone z kontem Microsoft, między urządzeniami.|
 
-### Microsoft Edge
+## — Microsoft Edge
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
@@ -87,7 +87,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na działanie menedżera haseł**|Włącza lub wyłącza funkcję menedżera haseł przeglądarki Edge.|
 |**Lokalizacja listy witryn trybu przedsiębiorstwa**|Określa lokalizację listy witryn, które będą otwierane w trybie przedsiębiorstwa. Użytkownicy nie mogą edytować tej listy.<br>(Tylko Windows 10 Desktop)|
 
-### Aplikacje
+## — Aplikacje
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|---------------------|
@@ -95,7 +95,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 
 
 
-### Komórkowe
+## — Sieć komórkowa
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|---------------------|
@@ -103,7 +103,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na połączenia VPN przez sieć komórkową**|Określa, czy urządzenie może uzyskiwać dostęp do połączeń sieci VPN w przypadku połączenia z siecią komórkową.|
 |**Zezwalaj na roaming połączeń VPN przez sieć komórkową**|Określa, czy urządzenie może uzyskiwać dostęp do połączeń sieci VPN w przypadku roamingu w sieci komórkowej.|
 
-### Sprzęt
+## — Sprzęt
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
@@ -122,7 +122,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na połączenie USB**|Określa, czy urządzenia mają dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.|
 |**Zezwalaj na tryb antykradzieżowy**|Pozwala określić, czy jest włączony tryb antykradzieżowy systemu Windows.|
 
-### Funkcje
+## — Funkcje
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|---------------------|
@@ -131,7 +131,7 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 |**Zezwalaj na funkcję Cortana**|Włącza lub wyłącza asystenta głosowego Cortana.|
 |**Zezwalaj na powiadomienia w Centrum akcji**|Włącza lub wyłącza powiadomienia centrum akcji na ekranie blokady urządzenia.<br>(Tylko Windows 10 Mobile)|
 
-### Usługa Defender
+## — Windows Defender
 
 Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 
@@ -162,7 +162,7 @@ Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 |**Procesy, które mają zostać wykluczone podczas przeprowadzania skanowania lub stosowania ochrony w czasie rzeczywistym**|Dodaj jeden lub więcej procesów typu **exe**, **com** lub **scr** do listy wykluczeń. Te procesy nie będą uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.| 
 
 
-### Ustawienia aktualizacji
+## — Aktualizacje
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|---------------|
@@ -176,14 +176,14 @@ Ta funkcja ma umożliwić wdrażanie ustawień systemu Windows 10, których nie 
 
 
 
-### Ustawienia ogólne zasad niestandardowych
+## - Ogólne
 
 |Nazwa ustawienia|Szczegóły|
     |----------------|--------------------|
     |**Nazwa**|Wprowadź unikatową nazwę zasad, która ułatwi ich identyfikację w konsoli usługi Intune.|
     |**Opis**|Podaj opis zawierający omówienie zasad oraz inne istotne informacje ułatwiające ich wyszukanie.|
 
-### Ustawienia niestandardowych zasad OMA-URI
+## — Ustawienia OMA-URI
 
 |Nazwa ustawienia|Szczegóły|
     |--------|--------------------|
@@ -194,12 +194,12 @@ Ta funkcja ma umożliwić wdrażanie ustawień systemu Windows 10, których nie 
     |**Wartość**|Określ wartość, która będzie kojarzona z określonym wcześniej identyfikatorem OMA-URI.|
 
 
-## Niestandardowe ustawienia identyfikatorów URI dla urządzeń z systemem Windows 10
+## Ustawienia identyfikatorów URI systemu Windows 10
 Ten temat zawiera listę ustawień, które można skonfigurować dla urządzeń z systemami Windows 10 i Windows 10 Mobile w **niestandardowych zasadach systemu Windows 10** usługi Microsoft Intune.
 
 Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, wszystkie urządzenia muszą być zarejestrowane w usłudze Intune.
 
-### Ustawienia identyfikatorów URI zasad
+## — Zasady
 
 |Nazwa zasad|Szczegóły|
 |---------------|------------|-----------|
@@ -272,7 +272,7 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 |**Update/DeferUpgradePeriod**<br>(wersje Desktop i Mobile)|**Opis:** zasady umożliwiające odroczenie uaktualnień funkcji na maksymalnie 8 miesięcy<br /><br />**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Update/DeferUpgradePeriod<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: zastosuj aktualizacje od razu (ustawienie domyślne)<br>**1**-**8**: liczba miesięcy, przez które mają być odroczone uaktualnienia funkcji<br /><br />Aby uzyskać więcej informacji, zobacz:<br>[Wprowadzenie do obsługi systemu Windows 10](https://technet.microsoft.com/library/mt598226.aspx)<br>[Planowanie wdrożenia systemu Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
 |**Update/PauseDeferrals**<br>(wersje Desktop i Mobile)|**Opis:** zezwala na zatrzymanie otrzymywania aktualizacji i uaktualnień przez komputer korzystający z wersji Current Branch dla firm na okres maksymalnie 5 tygodni. Tej opcji należy używać w przypadku, gdy występuje problem z aktualizacją.<br /><br />**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Update/PauseDeferrals<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: zastosuj aktualizacje od razu (ustawienie domyślne)<br>**1**: wstrzymaj aktualizacje i uaktualnienia (wygasa po 5 tygodniach)|
 
-### Ustawienia identyfikatorów URI usługi Windows Defender
+## — Windows Defender
 
 |Nazwa zasad|Szczegóły|
 |---------------|-----------|
@@ -302,7 +302,7 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 |**ExcludedPaths**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedPaths<br /><br />**Typ danych:** ciąg<br /><br />**Dozwolone wartości:**<br /><br />*&lt;lista ścieżek rozdzielonych średnikami&gt;*<br /><br />Przykład: **c:\test;c:\test1.exe**<br /><br />**Wartość domyślna:** brak wykluczonych ścieżek|
 |**ExcludedProcesses**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedProcesses<br /><br />**Typ danych:** ciąg<br /><br />**Dozwolone wartości:**<br>*&lt;lista ścieżek rozdzielonych średnikami&gt;*<br>Przykład: **c:\test.exe;c:\test1.exe**<br>**Wartość domyślna:** brak wykluczonych procesów|
 
-### Ustawienia identyfikatorów URI przeglądarki Edge
+## — Przeglądarka Edge
 
 |Nazwa zasad|Szczegóły|
 |---------------|------------|-----------|
@@ -323,6 +323,6 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

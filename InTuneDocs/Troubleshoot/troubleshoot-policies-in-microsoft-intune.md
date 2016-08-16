@@ -2,7 +2,7 @@
 title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Intune"
 description: "Rozwiązywanie problemów z konfiguracją zasad."
 keywords: 
-author: robstack
+author: robstackmsft
 manager: angrobe
 ms.date: 08/01/2016
 ms.topic: article
@@ -13,18 +13,15 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 98f15f304d5d372d05abfdd296ddff1ef98dd3eb
+ms.sourcegitcommit: 436d0c40ef317e1d258654d2164e7a1f8c35c5e1
+ms.openlocfilehash: 6bfa9bab46248be802679e70de18ff117171a1fb
 
 
 ---
 
 # Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
 
-Przedstawiono tutaj niektóre problemy, które mogą wystąpić podczas konfigurowania zasad usługi Microsoft Intune, oraz zalecenia dotyczące rozwiązywania tych problemów.
-
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
-
+Jeśli masz problemy z wdrażaniem zasad i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
 ## Czy zasady zostały zastosowane do urządzenia?
 **Problem:** nie jest jasne, czy konkretne zasady są stosowane do urządzenia, lub urządzenie zachowuje się sprzecznie z zasadami.
@@ -109,6 +106,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 
