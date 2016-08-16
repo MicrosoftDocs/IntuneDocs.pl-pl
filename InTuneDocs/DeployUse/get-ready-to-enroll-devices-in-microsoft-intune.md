@@ -13,8 +13,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
-ms.openlocfilehash: 7e3e29113dd03ea25f102d7f71c63e5c3faefad8
+ms.sourcegitcommit: 7bea7ba4ef59c6b1400414b59456e19dc1c152fb
+ms.openlocfilehash: 768dd08ad838b621f18a24747618ef1e37c5c804
 
 
 ---
@@ -55,7 +55,7 @@ Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
     |----------|------------------------|----------------|
-    |Nazwa firmy|40|Ta nazwa jest wyświetlana jako tytuł portalu firmy.|
+    |Nazwa firmy|40|Ta nazwa jest wyświetlana jako tytuł portalu firmy. **Uwaga**: tylko znaki alfanumeryczne. To pole nie obsługuje znaków specjalnych.|
     |Imię i nazwisko osoby kontaktowej w dziale IT|40|Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**.|
     |Numer telefonu działu IT|20|Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**.|
     |Adres e-mail działu IT|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@nazwadomeny.com**.|
@@ -109,6 +109,6 @@ Możesz również:
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 8f342183590c1099661a0121c1d99c2aa3aa0ba4
+ms.sourcegitcommit: 46479cfe3d2648eefbaefd0a831af2412b509fce
+ms.openlocfilehash: e920f133aeaf0b0a938e07b4923869318a902d57
 
 
 ---
@@ -91,17 +91,11 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![Wprowadzanie numeru PIN lub hasła](./media/and-enroll-6-PIN-native.png)
 
-13.  Postępuj zgodnie z poniższymi instrukcjami odpowiednimi do typu używanego urządzenia (natywne urządzenie z systemem Android lub urządzenie z systemem Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o urządzeniu**. Jeśli na tej liście nie widzisz pozycji „KNOX version” (Wersja systemu KNOX), oznacza to, że masz urządzenie z natywnym systemem Android.
-
-    -   Urządzenie natywne (bez systemu Samsung Knox): na ekranie **Nazwa certyfikatu** naciśnij przycisk **OK**, aby zaakceptować certyfikat domyślny.
-
-    ![Ekran nazywania certyfikatu](./media/and-enroll-7-cert-native.png)
-
-    -   Urządzenie z systemem Samsung Knox: zaakceptuj zasady ochrony prywatności i naciśnij pozycję **POTWIERDŹ**.
+13.  Jeśli korzystasz z urządzenia z systemem Samsung KNOX, naciśnij pozycję **Potwierdź**. Zostanie wyświetlony komunikat potwierdzający zarejestrowanie urządzenia. Jeśli korzystasz z urządzenia z natywnym systemem Android, zobaczysz ekran poniżej pokazujący, że urządzenie jest rejestrowane.
 
     ![Zasady ochrony prywatności systemu Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
 
-    Podczas rejestracji urządzenia w usłudze Intune zobaczysz następujący komunikat na ekranie.
+    Ten ekran pokazuje, że urządzenie jest rejestrowane.
 
     ![Ekran rejestracji urządzenia](./media/and-enroll-8-device-enrolling.png)
 
@@ -123,6 +117,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witry
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

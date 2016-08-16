@@ -13,8 +13,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 70b980c045d8d37aa4ea5bee5858c0c728d54114
+ms.sourcegitcommit: a083684da6abe9617f8b27604450c2a3b996b7cf
+ms.openlocfilehash: eeacb3f0898f2a1375a4119e01c939dd11d43940
 
 
 ---
@@ -108,7 +108,7 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 ## Często zadawane pytania dotyczące zasad usługi Intune
 
 ### Jak długo trwa pobieranie zasad lub aplikacji przeznaczonych dla urządzeń przenośnych po ich wdrożeniu?
-Po wdrożeniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby powiadomienia urządzenia, które powinno zostać zaewidencjonowane przez usługę Intune. Trwa to zazwyczaj mniej niż 5 minut.
+Po wdrożeniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby powiadomienia urządzenia, które powinno zostać zaewidencjonowane przez usługę Intune. Trwa to zazwyczaj mniej niż pięć minut.
 
 Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad po wysłaniu pierwszego powiadomienia, usługa Intune przeprowadzi trzy kolejne próby.  Jeśli urządzenie działa w trybie offline (na przykład zostało wyłączone lub nie zostało podłączone do sieci), może nie odbierać powiadomień. W takim przypadku urządzenie pobierze zasady podczas następnego zaplanowanego zaewidencjonowania przy użyciu usługi Intune w następujący sposób:
 
@@ -152,7 +152,7 @@ Konflikty występują, jeśli dwa ustawienia zasad są takie same.  Można na pr
 Jeśli jedne zasady zostały wdrożone w aplikacji i obowiązują, a następnie wdrażane są drugie, pierwsze z nich będą mieć pierwszeństwo i będą nadal stosowane, a drugie spowodują wystąpienie konfliktu. Jeśli zostaną one zastosowane w tym samym czasie, tj. żadne zasady nie będą mieć pierwszeństwa, i jedne, i drugie zasady będą w konflikcie. Wszystkie ustawienia powodujące konflikt zostaną ustawione na bardziej restrykcyjne wartości.
 
 ### Co się stanie w przypadku konfliktu zasad niestandardowych systemu iOS?
-Usługa Intune nie może oszacować ładunku plików konfiguracji firmy Apple lub niestandardowych zasad OMA-URI. Służy ona jedynie jako mechanizm dostarczania.
+Usługa Intune nie oszacowuje ładunku plików konfiguracji firmy Apple lub niestandardowych zasad OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Służy ona jedynie jako mechanizm dostarczania.
 
 Podczas wdrażania niestandardowych zasad upewnij się, że skonfigurowane ustawienia nie pozostają w konflikcie z zasadami zgodności, konfiguracji lub innymi zasadami niestandardowymi. Jeśli wystąpią konflikty ustawień zasad niestandardowych, ustawienia będą stosowane w kolejności losowej.
 
@@ -215,6 +215,6 @@ Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

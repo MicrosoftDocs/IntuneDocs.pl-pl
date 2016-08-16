@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
-ms.openlocfilehash: 9c89a70f8d9625504f6c710fe29f308dfd34530a
+ms.sourcegitcommit: 6c6a6fed876e49888d8fda1fd93b39313387ba38
+ms.openlocfilehash: 6cb6c0b8a8f4c1b88565ce4b7a5690406b4ddf40
 
 
 ---
@@ -40,7 +40,23 @@ Jeśli kiedykolwiek wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 - Został wyświetlony komunikat informujący o tym, że szyfrowanie jest w dalszym ciągu wymagane.
 - Wystąpiły błędy podczas próby użycia aplikacji Portal firmy.
 
-**Co należy zrobić**: Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
+**Co należy zrobić**: 
+
+1. Upewnij się, że urządzenie jest naładowane i podłączone do zasilania.
+
+2. Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
+
+3. Jeśli ustawiono już numer PIN lub hasło na urządzeniu, spróbuj wykonać następujące kroki, których administrator IT może wymagać, aby zwiększyć bezpieczeństwo urządzenia. Wyświetlane nazwy menu mogą być nieco inne niż w podane w poniższych krokach, w zależności od typu urządzenia z systemem Android.
+
+    a. Przejdź do pozycji **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu**. Potwierdź swój bieżący numer PIN lub hasło.
+
+    b. Na ekranie **wyboru blokady ekranu** wybierz typ blokady ekranu, której chcesz użyć.
+
+    c. Na ekranie **bezpiecznego uruchamiania** naciśnij pozycję **Wymagaj numeru PIN do uruchomienia urządzenia** i naciśnij przycisk **Kontynuuj**.
+
+    d. Wybierz numer PIN (możesz wprowadzić ten sam, co wprowadzony wcześniej), a następnie naciśnij przycisk **Potwierdź numer PIN**.
+
+    e. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
@@ -49,6 +65,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witry
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

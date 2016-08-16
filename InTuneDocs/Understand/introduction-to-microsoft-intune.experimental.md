@@ -1,5 +1,4 @@
 ---
-experimental: true
 experiment_id: kgremban_images_080416
 title: "Wprowadzenie do usługi Microsoft Intune | Microsoft Intune"
 description: "Dowiedz się, w jaki sposób usługa Intune pełni rolę składnika zarządzania urządzeniami przenośnymi rozwiązania Enterprise Mobility + Security."
@@ -15,8 +14,8 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f88c9f6b856f91db8c9218ab41a87bc95f45a578
-ms.openlocfilehash: efc6fed1d9e0766dd0deb24e8f5f422d1f60f568
+ms.sourcegitcommit: dbb8a8fdcc39aa91f4d2c0a671447e44daf8570d
+ms.openlocfilehash: 1b5549e4e0ad7652ed39659d7ebe7b95049dcbe6
 
 
 ---
@@ -25,8 +24,6 @@ ms.openlocfilehash: efc6fed1d9e0766dd0deb24e8f5f422d1f60f568
 Usługa Microsoft Intune stanowi „ramię zarządzania” pakietu Microsoft Enterprise Mobility + Security (EMS, wcześniej Enterprise Mobility Suite). Podstawowym przeznaczeniem rozwiązań Enterprise Mobility jest zapewnienie pracownikom produktywności na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.  
 
 Pakiet EMS to kompletny, zintegrowany pakiet rozwiązań Enterprise Mobility obejmujący rozwiązania do kontroli dostępu, zarządzania, potwierdzania tożsamości, zapewniania produktywności i ochrony danych. Udostępnia efektywny sposób wdrażania i obsługi rozwiązania zapewniającego mobilność.  
-
-![Wizja mobilności w przedsiębiorstwach](..\media\em-vision.png)
 
 Usługa Intune pomaga zarządzać urządzeniami przenośnymi i aplikacjami mobilnymi. Jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Rights Management (Azure RMS) na potrzeby ochrony danych.  
 
@@ -38,6 +35,8 @@ Typowe problemy biznesowe, które pomaga rozwiązywać usługa Intune:
 * Umożliwianie organizacji zapewniania urządzeń współużytkowanych o ograniczonej funkcjonalności pracownikom zadaniowym.
 * Umożliwianie organizacji implementowania bezpiecznej strategii „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) czyli strategii korzystania z urządzeń osobistych.
 * Umożliwianie organizacji obsługi pracowników uzyskujących dostęp do usługi Office 365 z urządzeń i aplikacji, które nie są przez nią kontrolowane, na przykład kiosków na targach.
+
+![Wizja mobilności w przedsiębiorstwach](..\media\em-vision.png)
 
 Podstawowe narzędzia, które oferuje usługa Intune:
 * **Zarządzanie urządzeniami przenośnymi (MDM, mobile device management)**: możliwość rejestrowania urządzeń w usłudze Intune w sposób umożliwiający aprowizowanie, konfigurowanie i monitorowanie tych urządzeń oraz wykonywanie na nich akcji, takich jak czyszczenie danych.

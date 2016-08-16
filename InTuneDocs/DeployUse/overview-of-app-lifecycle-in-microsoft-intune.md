@@ -13,21 +13,21 @@ ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: ede28a99224b3d0bd94a4300b4b8b85815ae9591
+ms.sourcegitcommit: f3b4b01844c9ab8a5de38e9a33f595cfc87b42a0
+ms.openlocfilehash: 650c06072cdcf19cf3fd1b93454e5373772f0e14
 
 
 ---
 
 # Przegląd cyklu życia aplikacji
 
-Cykl życia aplikacji w usłudze Intune rozpoczyna się po dodaniu aplikacji i jest realizowany przez dodatkowe fazy aż do usunięcia urządzenia.
+Cykl życia aplikacji w usłudze Intune rozpoczyna się po dodaniu aplikacji i jest realizowany przez dodatkowe fazy aż do usunięcia aplikacji.
 
 ![Cykl życia aplikacji](./media/app-lifecycle.png "the Intune app lifecycle")
 
 ## Dodaj
 
-Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i wdrożyć w usłudze Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dotyczące tych typów są takie same. Usługa Intune umożliwia dodawanie aplikacji zarówno dla [zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md), jak i [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
+Pierwszym etapem wdrożenia aplikacji jest dodanie do usługi Intune aplikacji, którą chcesz zarządzać i wdrożyć. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Usługa Intune umożliwia dodawanie aplikacji zarówno dla [zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md), jak i [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
 ## Wdróż
 
@@ -35,8 +35,8 @@ Po dodaniu aplikacji do usługi Intune możesz tę aplikację [wdrożyć na urz�
 
 ## Konfiguracja
 
-W ramach cyklu życia aplikacji regularnie wydawane są nowe wersje aplikacji. Usługa Intune zawiera narzędzia do łatwego [aktualizowania wdrożonych aplikacji](update-apps-using-microsoft-intune.md) do nowszej wersji. Ponadto niektóre aplikacje pozwalają skonfigurować dodatkowe funkcje, na przykład:
-- [Zasady konfiguracji aplikacji systemu iOS](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS, które będą używane po uruchomieniu takich aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym ma nawiązać połączenie.
+W ramach cyklu życia aplikacji regularnie wydawane są nowe wersje aplikacji. Usługa Intune udostępnia narzędzia do łatwego [aktualizowania wdrożonych aplikacji](update-apps-using-microsoft-intune.md) do nowszej wersji. Ponadto dla niektórych aplikacji można skonfigurować dodatkowe funkcje, na przykład:
+- [Zasady konfiguracji aplikacji systemu iOS](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS, które będą używane po uruchomieniu aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym ma nawiązać połączenie.
 - [Zasady przeglądarki zarządzanej](manage-internet-access-using-managed-browser-policies.md) pomagają w konfigurowaniu ustawień dla przeglądarki zarządzanej przez usługę Intune, która zastępuje domyślną przeglądarkę urządzenia i umożliwia ograniczenie witryn sieci Web, które użytkownicy mogą odwiedzać.
 
 ## Ochrona
@@ -51,6 +51,6 @@ W dłuższej perspektywie czasu prawdopodobne jest, że wdrożone aplikacje stan
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

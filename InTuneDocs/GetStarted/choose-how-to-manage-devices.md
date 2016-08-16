@@ -13,8 +13,8 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 76d0d9c620000864a4a554600985ba351c18d359
-ms.openlocfilehash: 067838593f7a222b5949cbfaf20744104030aee6
+ms.sourcegitcommit: 7c244554eb4b6ae5a248b53a7b4b6171807f4bfa
+ms.openlocfilehash: e353391375ce7b54f0be479607349e5618de1c37
 
 
 ---
@@ -42,7 +42,7 @@ W przypadku systemów operacyjnych dla urządzeń przenośnych, takich jak iOS, 
 |**Opis**|Osobiste urządzenie zarejestrowane przy użyciu usługi Microsoft Intune|Urządzenie dla jednego użytkownika należące do firmy|Urządzenie należące do firmy, które jest zarządzane przy użyciu konta menedżera udostępnionego dla wielu użytkowników|Urządzenie bez użytkownika należące do firmy, z którego korzysta wielu użytkowników.|
 |**Użytkownik urządzenia**|Właściciel|Przypisany użytkownik|Bez konta określonego użytkownika|Bez określonego użytkownika|
 |**Użytkownik rejestrujący**|Właściciel|Administrator|Menedżer urządzeń|Dowolny użytkownik|
-|**Użytkownik wyrejestrowujący**|Właściciel lub administrator|Administrator|Administrator|Administrator|
+|**Użytkownik wyrejestrowujący**|Właściciel lub administrator|Platforma |Administrator lub użytkownik|Administrator lub użytkownik|
 |**Użytkownik z uprawnieniami do resetowania**|Właściciel lub administrator|Administrator|Administrator|Administrator|
 
 <div class="alert alert-tip">
@@ -80,6 +80,6 @@ Teraz już znasz niektóre możliwości dostępne po zarejestrowaniu urządzeń 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
