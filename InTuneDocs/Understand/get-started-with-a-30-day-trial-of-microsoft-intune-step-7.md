@@ -2,9 +2,9 @@
 title: "Następne kroki po zakończeniu okresu ewaluacyjnego usługi Intune | Microsoft Intune"
 description: "Co należy wiedzieć o subskrypcjach i licencjonowaniu po skonfigurowaniu bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
-author: Staciebarker
+author: lindavr
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/09/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
-ms.openlocfilehash: 3edd1821f910f9c2ea9e8324a3ac08e373ec7b0a
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 1c99894eeb63ea047887f3e3b9bdec68ff095d94
 
 
 ---
@@ -28,12 +28,12 @@ Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w s
 
 -   **Pakiet Enterprise Mobility Suite** — udostępnia usługi Intune, Azure Active Directory Premium i Azure RMS. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub zobacz [informacje na temat pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx) lub [ceny dla pakietu Enterprise Mobility Suite](http://www.microsoft.com/en-us/server-cloud/products/enterprise-mobility-suite/Purchasing.aspx).
 
--   **Umowa Enterprise Agreement (EA)** (ponad 250 użytkowników) — najlepszy program licencjonowania dla organizacji mających ponad 250 użytkowników. Umowa EA zapewnia elastyczność wyboru spośród oferty oprogramowania lokalnego i usług online, co pozwala na najlepsze dopasowanie rozwiązania do potrzeb użytkowników, oraz ułatwia optymalizację wydatków na technologię. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub odwiedź [witrynę licencjonowania zbiorowego dla przedsiębiorstw](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
+-   **Umowa Enterprise Agreement (EA)** (&gt;ponad 250 użytkowników) — najlepszy program licencjonowania dla organizacji mających ponad 250 użytkowników. Umowa EA zapewnia elastyczność wyboru spośród oferty oprogramowania lokalnego i usług online, co pozwala na najlepsze dopasowanie rozwiązania do potrzeb użytkowników, oraz ułatwia optymalizację wydatków na technologię. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub odwiedź [witrynę licencjonowania zbiorowego dla przedsiębiorstw](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
 
--   **Program subskrypcji online** (poniżej 250 użytkowników) — [program licencjonowania zbiorowego usług online](http://www.microsoft.com/licensing/online-services/default.aspx) zaprojektowany specjalnie z myślą o organizacjach mających mniej niż 250 użytkowników. Ten program umożliwia subskrybowanie i wdrażanie usług Intune oraz zarządzanie nimi.
+-   **Program subskrypcji online** (&lt; 250 użytkowników) — [program licencjonowania zbiorowego usług online](http://www.microsoft.com/licensing/online-services/default.aspx) zaprojektowany specjalnie z myślą o organizacjach mających mniej niż 250 użytkowników. Ten program umożliwia subskrybowanie i wdrażanie usług Intune oraz zarządzanie nimi.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
