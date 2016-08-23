@@ -75,16 +75,16 @@ Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|----------------------|
-|**Zezwalaj na używanie przeglądarki sieci Web**|Zezwala na korzystanie z przeglądarki Edge na urządzeniu.<br>(Tylko Windows 10 Mobile)|
+|**Zezwalaj na używanie przeglądarki sieci Web**|Zezwala na korzystanie z przeglądarki Microsoft Edge na urządzeniu.<br>(Tylko Windows 10 Mobile)|
 |**Zezwalaj na sugestie dotyczące wyszukiwania na pasku adresu**|Umożliwia wyszukiwarce sugerowanie witryn podczas wpisywania fraz do wyszukania.|
 |**Zezwalaj na wysyłanie ruchu intranetowego do programu Internet Explorer**|Zezwala użytkownikom na otwieranie intranetowych witryn sieci Web w programie Internet Explorer.<br>(Tylko Windows 10 Desktop)|
-|**Zezwalaj na żądania Nie śledź**|Konfiguruje przeglądarkę Edge, aby wysyłała nagłówki „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.|
+|**Zezwalaj na żądania Nie śledź**|Konfiguruje przeglądarkę Microsoft Edge, aby wysyłała nagłówki „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.|
 |**Włącz filtr SmartScreen**|Włącza ustawienie przeglądarki SmartScreen na urządzeniach.|
-|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Edge.|
+|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Microsoft Edge.|
 |**Zezwalaj na wyskakujące okienka**|Włącza lub wyłącza blokowanie wyskakujących okienek w przeglądarce.<br>(Tylko Windows 10 Desktop)|
 |**Zezwalaj na pliki cookie**|Zezwala na pliki cookie lub wyłącza je.|
 |**Zezwalaj na autowypełnianie**|Zezwala użytkownikom na zmianę ustawienia autowypełniania w przeglądarce.<br>(Tylko Windows 10 Desktop)|
-|**Zezwalaj na działanie menedżera haseł**|Włącza lub wyłącza funkcję menedżera haseł przeglądarki Edge.|
+|**Zezwalaj na działanie menedżera haseł**|Włącza lub wyłącza funkcję menedżera haseł przeglądarki Microsoft Edge.|
 |**Lokalizacja listy witryn trybu przedsiębiorstwa**|Określa lokalizację listy witryn, które będą otwierane w trybie przedsiębiorstwa. Użytkownicy nie mogą edytować tej listy.<br>(Tylko Windows 10 Desktop)|
 
 ## — Aplikacje
@@ -302,13 +302,13 @@ Aby korzystać z niestandardowych zasad identyfikatorów URI systemu Windows, ws
 |**ExcludedPaths**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedPaths<br /><br />**Typ danych:** ciąg<br /><br />**Dozwolone wartości:**<br /><br />*&lt;lista ścieżek rozdzielonych średnikami&gt;*<br /><br />Przykład: **c:\test;c:\test1.exe**<br /><br />**Wartość domyślna:** brak wykluczonych ścieżek|
 |**ExcludedProcesses**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedProcesses<br /><br />**Typ danych:** ciąg<br /><br />**Dozwolone wartości:**<br>*&lt;lista ścieżek rozdzielonych średnikami&gt;*<br>Przykład: **c:\test.exe;c:\test1.exe**<br>**Wartość domyślna:** brak wykluczonych procesów|
 
-## — Przeglądarka Edge
+## — Przeglądarka Microsoft Edge
 
 |Nazwa zasad|Szczegóły|
 |---------------|------------|-----------|
 |**Zezwalaj na przeglądarkę**<br>(tylko wersja Mobile)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowBrowser<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: przeglądanie wyłączone<br>**1**: przeglądanie włączone (ustawienie domyślne)|
 |**AllowSearchSuggestionsinAddressBar**<br>(wersje Desktop i Mobile)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSearchSuggestionsinAddressBar<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: nie pokazuj sugestii dotyczących wyszukiwania<br>**1**: pokaż sugestie dotyczące wyszukiwania (ustawienie domyślne)|
-|**SendIntranetTraffictoInternetExplorer**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: wyłączone (otwieraj witryny intranetowe w przeglądarce Edge — ustawienie domyślne)<br>**1**: włączone (otwieraj witryny intranetowe w programie Internet Explorer)|
+|**SendIntranetTraffictoInternetExplorer**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0**: wyłączone (otwieraj witryny intranetowe w przeglądarce Microsoft Edge — ustawienie domyślne)<br>**1**: włączone (otwieraj witryny intranetowe w programie Internet Explorer)|
 |**Zezwalaj na żądania Nie śledź**<br>(wersje Desktop i Mobile)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowDoNotTrack<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0** — wyłączone (bez wysyłania żądań „Nie śledź” — ustawienie domyślne)<br>**1** — włączone (wysyłaj żądania „Nie śledź”)|
 |**Skonfiguruj funkcję SmartScreen**<br>(wersje Desktop i Mobile)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowSmartScreen<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0** — nie zezwalaj<br>**1** — zezwalaj (ustawienie domyślne)|
 |**Zezwalaj na wyskakujące okienka**<br>(tylko wersja Desktop)|**Pełna ścieżka identyfikatora URI:** ./Vendor/MSFT/Policy/Config/Browser/AllowPopups<br /><br />**Typ danych:** liczba całkowita<br /><br />**Dozwolone wartości:**<br>**0** — blokuj wyskakujące okienka (ustawienie domyślne)<br>**1** — zezwalaj na wyskakujące okienka|
