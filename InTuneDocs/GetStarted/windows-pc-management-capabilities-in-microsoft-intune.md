@@ -13,8 +13,8 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 49a236359692a5bbccf9ee0bb263094434049a91
-ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
+ms.sourcegitcommit: a6caef9e0f4d6235ecf1a89c1765d6c8e6ce1a7b
+ms.openlocfilehash: e5e3833a38434d4fe55cae554fc49f567b606ad8
 
 
 ---
@@ -24,7 +24,7 @@ W większości przypadków będziesz rejestrować urządzenia w usłudze Microso
 
 -   **Zarządzanie aktualizacjami oprogramowania** — aktualizowanie komputerów i zarządzanie harmonogramem stosowania aktualizacji.
 
--   **Zasady Zapory systemu Windows** — zapewnianie, że żaden komputer używany przez firmę nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
+-   **Zasady Zapory systemu Windows** — zapewnianie, że żaden komputer używany w firmie nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
 
 -   **Ochrona przed złośliwym oprogramowaniem** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
 
@@ -37,18 +37,18 @@ W większości przypadków będziesz rejestrować urządzenia w usłudze Microso
 Usługa Intune obsługuje instalowanie oprogramowania klienckiego na maksymalnie 7000 urządzeń z systemem Windows.
 
 ## Wymagania dotyczące systemu operacyjnego
-Usługa Intune może zarządzać komputerami z następującymi wersjami systemu Windows (x86 i x64):
+Usługa Intune może zarządzać komputerami z następującymi wersjami systemu Windows (32- i 64-bitowymi):
 
 
--   **Windows Vista** — wersje Business, Enterprise i Ultimate.
+-   **Windows Vista** — wersje Business, Enterprise i Ultimate
 
--   **Windows 7** — wersje Pro, Enterprise i Ultimate (bez dodatku Service Pack lub z dodatkiem SP1).
+-   **Windows 7** — wersje Pro, Enterprise i Ultimate (bez dodatku Service Pack lub z dodatkiem SP1)
 
--   **Windows 8** — wersje Pro i Enterprise.
+-   **Windows 8** — wersje Pro i Enterprise
 
--   **Windows 8.1** — wersje Pro i Enterprise.
+-   **Windows 8.1** — wersje Pro i Enterprise
 
-- **Windows 10** — wersje Pro, Education i Enterprise.
+- **Windows 10** — wersje Pro, Education i Enterprise
 
 
 ## Minimalne wymagania sprzętowe
@@ -66,7 +66,7 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania kom
 |Wymaganie|Szczegóły|
 |---------------|--------------------|
 |Uprawnienia administracyjne|Konto używane do instalacji oprogramowania klienckiego musi mieć uprawnienia administratora lokalnego na danym komputerze.|
-|Instalator Windows w wersji 3.1|Na komputerze musi być zainstalowany Instalator Windows w wersji 3.1 lub nowszej.|
+|Instalator Windows w wersji 3.1|Na komputerze musi być dostępny Instalator Windows w wersji 3.1 lub nowszej.|
 |Usunięcie niezgodnego oprogramowania klienckiego|Przed zainstalowaniem komputerowego oprogramowania klienckiego usługi Intune należy odinstalować następujące oprogramowanie klienckie z danego komputera:<br /><br />- Wszelkie wersje programu Configuration Manager<br />- Wszelkie wersje programu Microsoft Systems Management Server (SMS)|
 
 ### Zobacz także
@@ -74,6 +74,6 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania kom
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

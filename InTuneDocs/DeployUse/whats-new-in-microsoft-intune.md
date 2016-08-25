@@ -4,7 +4,7 @@ description: "Sprawdź nowości w tym miesiącu i poprzednich wersjach usługi M
 keywords: 
 author: Lindavr
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 68af4d7f0b082f14e6f9c06f8739805f9590384e
-ms.openlocfilehash: 64bd2e3c8e8da3949634a544eb2c582e889c8209
+ms.sourcegitcommit: d51ab5d486e7e23d2527f9cb95f105e7916cdb27
+ms.openlocfilehash: 138d362618c9859a55988b7a2ada85e44b0e95c5
 
 
 ---
@@ -23,95 +23,91 @@ ms.openlocfilehash: 64bd2e3c8e8da3949634a544eb2c582e889c8209
 Poznaj nowości w tej wersji usługi Microsoft Intune. Dowiedz się o nadchodzących zmianach, na które należy się przygotować, jak również uzyskaj informacje o poprzednich wersjach.
 
 Wszystkie te funkcje będą również w przyszłości obsługiwane dla hybrydowych wdrożeń klientów (program Configuration Manager z usługą Intune). Aby uzyskać więcej informacji na temat nowych funkcji hybrydowych, odwiedź stronę [Co nowego w funkcjach hybrydowych](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
+<!---@Barry, the above blurb stays in each version, but make sure Tyler signs off each time. Also, remember to set the ms.date in the metadata to the sprint release. --->
 
 ## Sierpień 2016
-## Aktualizacje Portalu firmy
-
-### Android
-- **Aplikacja Portal firmy dla systemu Android**<br/>
-Aplikacja Portal firmy usługi Intune dla systemu Android zapewnia obsługę „od dnia 0” nadchodzącego systemu operacyjnego Android 7.0 dla urządzeń przenośnych.  
-
-- **Usunięcie przez Google możliwości zdalnego resetowania kodu dostępu na urządzeniach z systemem Android 7.0**<br/>
-Na urządzeniach z systemem Android 7.0 administratorzy IT usługi Intune i użytkownicy końcowi nie będą mogli zdalnie zresetować kodu dostępu urządzenia, ponieważ firma Google usunęła tę możliwość dla urządzeń z systemem Android 7.0. W wersjach wcześniejszych niż Android 7.0 administratorzy IT będą nadal mogli zdalnie zresetować kod dostępu użytkownika, a użytkownicy końcowi będą nadal mogli resetować swoje kody dostępu z poziomu witryny sieci Web Portalu firmy.
-
-## Lipiec 2016
 ## Zarządzanie aplikacjami
-### Poprawa aktualizowania profilu aprowizacji aplikacji
-Biznesowe aplikacje mobilne systemu Apple iOS są tworzone za pomocą dołączonego profilu aprowizacji, a ich kod jest podpisywany przy użyciu certyfikatu. Gdy aplikacja jest uruchamiana na urządzeniu z systemem iOS, system iOS potwierdza integralność aplikacji systemu iOS i wymusza zasady zdefiniowane przez profil aprowizacji.
+<!---@Barry, I created the buckets of App management, Device management, etc but am not tied to them. Just wanted to break up and organize the feature list. If you're going to take over the Company Portal section, please talk to Stacie about how she's been organizing it. --->
 
-Certyfikat podpisywania przedsiębiorstwa używany do podpisywania aplikacji jest zwykle ważny przez 3 lata. Profil aprowizacji wygasa jednak po 1 roku. Dzięki tej aktualizacji usługa Intune udostępnia narzędzia umożliwiające aktywne wdrażanie nowych zasad profilu aprowizacji na urządzeniach, na których znajdują się aplikacje bliskie wygaśnięcia, ale certyfikat jest nadal ważny. Aby uzyskać więcej informacji, zobacz [Use iOS mobile provisioning profile policies to keep your line of business apps up to date](/intune/deploy-use/ios-mobile-app-provisioning-profiles) (Używanie zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapewnić aktualność aplikacji).
-<!--- TFS 1280247--->
-### Dostępny jest zestaw SDK platformy Xamarin dla aplikacji Intune
-Składnik Xamarin zestawu SDK aplikacji Intune umożliwia włączenie funkcji zarządzania aplikacją mobilną Intune na urządzeniach przenośnych z systemem iOS i Android skompilowanych za pomocą platformy Xamarin. Składnik można znaleźć w [sklepie Xamarin](https://components.xamarin.com/view/Microsoft.Intune.MAM) lub na [stronie Microsoft Intune Github](https://github.com/msintuneappsdk).
-<!--- TFS 1061478 --->
+### Aplikacje ukrywane i wyświetlane dla systemu iOS 9.3
+Dla urządzeń z systemem iOS 9.3 lub nowszym w ogólnych zasadach konfiguracji systemu iOS można używać listy aplikacji ukrywanych i wyświetlanych, aby:
+- Określić listę aplikacji, które będą ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
+- Określić listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
+
+Dla tych list można określić zarówno aplikacje wdrożone, jak i wbudowane aplikacje dla systemu iOS, takie jak Wiadomości i Notatki. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu iOS w usłudze Microsoft Intune]( https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune)
+<!---TFS 1279009 checked--->
+### Zasady aplikacji dozwolonych i zablokowanych dla urządzeń z systemem Samsung KNOX
+Dla urządzeń z systemem Samsung KNOX można teraz skonfigurować zasady niestandardowe umożliwiające utworzenie jednej z następujących list:
+- Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Nawet po zainstalowaniu aplikacji zdefiniowanej na liście zablokowanych nie będzie jej można uaktywnić na urządzeniu.
+- Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu klepu Google Play. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
+
+Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung KNOX.
+Aby uzyskać więcej informacji, zobacz [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX]( custom-policy-to-allow-and-block-samsung-knox-apps.md).
+<!---TFS 1311629 checked --->
+### Nowe aplikacje zgodne z zasadami zarządzania aplikacjami mobilnymi (MAM)
+Aplikacja usługi Yammer dla systemów [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) i [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) jest teraz zgodna z [zasadami zarządzania aplikacjami mobilnymi (MAM, mobile application management) usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) bez względu na to, czy urządzenie jest zarejestrowane.
+
+Pełna lista aplikacji zgodnych z zasadami MAM jest dostępna w witrynie [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).
+<!--- TFS 1252335 & 1252336 checked--->
+
+
+<!--- I started putting TFS numbers in the What's Coming topic and found it helpful when updating the What's New. Up to you if you want to continue. --->
+
+### Aplikacje Intune Viewer
+Wraz z wydaniem nowej aplikacji RMS sharing zostaną usunięte następujące aplikacje Intune Viewer, począwszy od sierpnia 2016 roku:
+- Intune AV Viewer
+- Intune PDF Viewer
+- Intune Image Viewer dla systemu Android ze sklepu Google Play
+
+Zalecamy, aby zamiast korzystania z aplikacji Intune Viewer używać nowej [aplikacji do zarządzania prawami (RMS sharing) dla systemu Android](https://docs.microsoft.com/en-us/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app), co pozwala na wdrożenie jednej aplikacji zamiast trzech osobnych aplikacji w celu bezpiecznego przeglądania plików firmy na urządzeniach z systemem Android. Gdy aplikacja Intune Viewer nie będzie już obsługiwana, zostanie usunięta ze sklepu Google i nie będzie dostępna do użycia w przyszłości.
 
 ## Zarządzanie urządzeniami
-### Zwiększenie limitów rejestracji urządzeń
-Usługa Intune zwiększyła maksymalny limit rejestracji konfigurowalnych urządzeń z 5 na 15 urządzeń dla każdego użytkownika.
-<!---TFS 1289896 --->
+### Obsługa systemu Android 7.0
+Usługa Intune zapewnia obsługę „od dnia 0” nadchodzącego systemu operacyjnego Android 7.0 dla urządzeń przenośnych.
+<!---TFS 1262053--->
+### Usunięcie przez Google możliwości zdalnego resetowania kodu dostępu na urządzeniach z systemem Android 7.0
+Google usuwa możliwość zdalnego resetowania kodu dostępu urządzeń z systemem Android 7.0 przez administratorów IT i użytkowników końcowych. Wcześniej administratorzy IT mogli zdalnie zresetować kod dostępu użytkownika, a użytkownicy końcowi mogli resetować swoje kody dostępu z witryny sieci Web Portalu firmy.
 
-### Integracja programu TeamViewer dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune
-Integracja oprogramowania [TeamViewer](https://www.teamviewer.com) dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune umożliwia ustanawianie sesji pomocy zdalnej dla komputerów z systemem Windows w celu wsparcia działu pomocy technicznej użytkowników końcowych. Dotyczy to systemów Windows 7, 8, 8.1 i Windows 10. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
-<!---TFS 1284856--->
+
 
 ## Aktualizacje Portalu firmy
 ### Witryna sieci Web Portal firmy
-- **Poprawione środowisko użytkownika końcowego podczas rejestrowania urządzeń z systemem Windows**<br/>
-Jeśli korzystasz z dostępu warunkowego, procedury rejestracji systemów Windows 8.1, Windows 10 Desktop i Windows 10 Mobile zostały uproszczone w witrynie internetowej Portalu firmy. Użytkownicy zobaczą teraz osobne kroki „Rejestrowanie urządzeń” i „Workplace Join”, co ułatwi sprawdzenie stanu urządzenia i ukończenie procesu po błędzie narzędzia Workplace Join (WPJ). Oddzielne kroki powinny również uprościć proces rozwiązywania problemów dla administratorów IT. Wcześniej, gdy użytkownik końcowy próbował zarejestrować urządzenie i wszystkie kroki rejestracji kończyły się pomyślnie z wyjątkiem użycia narzędzia WPJ, zarejestrowane urządzenie nie było wyświetlane na liście urządzeń do zidentyfikowania przez użytkowników, co było mylące.
-
-### Android
-- **Aplikacja Portal firmy dla systemu Android**<br/>
-Jeśli użytkownicy końcowi systemu Android widzą komunikat o błędzie stwierdzający brak wymaganego certyfikatu na urządzeniu, mogą nacisnąć przycisk „Jak rozwiązać ten problem”, aby uzyskać [kroki](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator) wymagane do zainstalowania brakującego certyfikatu. Jeśli użytkownicy wykonają podane kroki, ale wciąż widzą komunikat o braku certyfikatu, proszeni są o kontakt z administratorem IT i podanie tego [linku](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), który zawiera kroki umożliwiające administratorom IT usunięcie problemu z certyfikatem.
-
-- **Ograniczenie instalacji aplikacji ładowanych bezpośrednio do zarejestrowanych urządzeń**<br/>
-Na urządzeniach z systemem Android nie można już instalować aplikacji za pośrednictwem witryny internetowej Portalu firmy, chyba że zostały zarejestrowane w usłudze Intune przy użyciu aplikacji Portal firmy usługi Intune dla systemu Android.
-<!---TFS 1299082--->
+- **Link opinii z Portalu firmy do firmy Microsoft** <br/>
+Witryna sieci Web Portalu firmy udostępnia użytkownikom końcowym nowy link „Opinia” u dołu strony, który użytkownicy mogą wybrać, aby wysłać do firmy Microsoft opinię dotyczącą ich wizyty w witrynie. Zebrane, anonimowe opinie pomogą firmie Microsoft w ulepszaniu środowiska witryny sieci Web Portalu firmy dla użytkowników.
+<!--- TFS 1313657 checked--->
 
 ### iOS
-- **Zmiany w kontach menedżerów rejestracji urządzeń w aplikacji Portal firmy dla systemu iOS**<br/>
-Aby zwiększyć wydajność i skalę, usługa Intune nie pokazuje już wszystkich urządzeń menedżerów rejestracji urządzeń (DEM) w okienku **Moje urządzenia** aplikacji Portal firmy dla systemu iOS. Wyświetlane jest tylko urządzenie lokalne, na którym uruchomiono aplikację, o ile zostało zarejestrowane przez aplikację Portal firmy.
-
-    Użytkownik menedżera rejestracji urządzeń może wykonywać działania na urządzeniu lokalnym, ale zdalne zarządzanie innymi zarejestrowanymi urządzeniami można przeprowadzać tylko z konsoli administracyjnej usługi Intune. Dodatkowo w usłudze Intune wycofano używanie kont menedżera rejestracji urządzeń z programem Device Enrollment Program firmy Apple i narzędziem Apple Configurator. Obie te metody rejestracji obsługują już rejestrację bez użytkowników dla współużytkowanych urządzeń z systemem iOS.
-
-    Kont menedżera rejestracji urządzeń należy używać tylko w przypadku braku dostępności rejestracji bez użytkowników dla współużytkowanych urządzeń. Więcej informacji zawiera temat [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
-<!---TFS 1233681--->
-
-## Zmiana nazw funkcji systemu Windows
-- Usługa [Microsoft Passport for Windows](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune) ma teraz nazwę **Windows Hello for Business**.
-- [Ochrona danych przedsiębiorstwa](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune) ma teraz nazwę **Windows Information Protection**.
+- **Minimalna wersja systemu iOS dla przeglądarki Managed Browser została zaktualizowana do 8.0**<br/>
+Aplikacja Microsoft Intune Managed Browser dla systemu iOS została zaktualizowana w celu obsługiwania urządzeń z systemem iOS 8.0 lub nowszym. Podczas gdy urządzenia z systemem iOS 7.1 wciąż mogą używać istniejącej aplikacji Managed Browser, należy zachęcać użytkowników do aktualizacji systemu iOS do wersji 8.0 lub nowszej, aby mogli w pełni skorzystać z najnowszych funkcji przeglądarki Managed Browser.  
+<!---TFS 1313253 checked--->
 
 ## Wkrótce
-### Przejście grup usługi Intune do grup usługi Azure Active Directory rozpocznie się w sierpniu 2016
-Usługa Intune wprowadza nową funkcjonalność zarządzania grupami, która używa grup zabezpieczeń usługi Azure Active Directory (AAD). Te grupy zabezpieczeń usługi Azure AD mogą zawierać zarówno użytkowników, jak i urządzenia, i będą używane do zarządzania wszystkimi grupami, wdrażania zasad i wdrażania profilów po wprowadzeniu nowego portalu administracyjnego usługi Intune bazującej na platformie Azure.
+### Przejście grup usługi Intune do grup usługi Azure Active Directory rozpocznie się we wrześniu 2016 r.
+Usługa Intune wprowadza nową funkcjonalność zarządzania grupami, która używa grup zabezpieczeń usługi Azure Active Directory (AAD) jako grupy użytkowników i urządzeń w usłudze Intune. Te grupy będą używane do zarządzania grupami, wdrażania zasad i wdrażania profilów **po wprowadzeniu nowego portalu administracyjnego usługi Intune używającej platformy Azure**.
 
-Nowe środowisko to:
-- Brak konieczności duplikowania grup między usługami.
-- Możliwość dostępu do nowych funkcji grup Azure Active Directory Premium (AADP).
-- Rozszerzalność przy użyciu programów PowerShell i Graph.
-- Ujednolicenie środowiska administrowania grupami w zarządzaniu mobilnością w przedsiębiorstwie.
+Nowe środowisko zlikwiduje konieczność duplikowania grup między usługami, **pozwoli na dostęp do nowych funkcji grup usługi Azure Active Directory Premium (AADP)** i zapewni możliwość rozszerzenia przy użyciu programów PowerShell i Graph. Ujednolici to również środowisko administrowania grupami w zarządzaniu mobilnością w przedsiębiorstwie.
 
-W celu umożliwienia przejścia do grup zabezpieczeń środowisko bieżącej konsoli administracyjnej zostanie zmodyfikowane. Te zmiany i sposób korzystania z grup zabezpieczeń usługi Azure AD zostaną zarejestrowane w dokumentacji usługi Intune.
+W celu umożliwienia przejścia do grup zabezpieczeń środowisko **bieżącej konsoli administracyjnej** zostanie zmodyfikowane. **Te zmiany i sposób korzystania z grup zabezpieczeń usługi AAD zostaną zarejestrowane w dokumentacji usługi Intune**.
 
-Nowi klienci usługi Intune zobaczą zmiany grup zabezpieczeń przed bieżącymi dzierżawcami.
+Nowi klienci usługi Intune zobaczą **zmiany grup zabezpieczeń przed bieżącymi dzierżawcami**.
 
-Oprócz zmian w zarządzaniu grupami zostaną wycofane następujące funkcje:
+Oprócz zmian w zarządzaniu grupami **zostaną wycofane następujące funkcje**:
 - Wykluczanie członków lub grup podczas tworzenia nowej grupy
 - Grupy **Użytkownicy niezgrupowani** i **Urządzenia niezgrupowane**
 - **Zarządzanie grupami** w roli administratora usługi
 - Niestandardowe alerty bazujące na grupach dla reguł powiadomień
 - Przestawianie z grupami w raportach
-
-Więcej informacji na temat sposobu rozwiązywania problemów z usuniętymi funkcjami zostanie opublikowanych w sierpniu.
+<!--- TFS 1295329--->
 
 ### Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android
 We wrześniu udostępnimy aktualizację Portalu firmy dla systemu Android, która wprowadzi nową ikonę **Powiadomienia** na stronie głównej. Naciśnięcie tej ikony spowoduje przejście na stronę **Powiadomienia**, która przedstawia użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. Jeśli używasz również aplikacji Portal firmy dla systemu iOS, powiadomienia masz już widoczne. Wraz z wprowadzeniem strony **Powiadomienia** nie będzie widoczna strona **Konfigurowanie dostępu do zasobów firmy** po uruchomieniu lub wznowieniu pracy w Portalu firmy dla systemu Android, jeśli urządzenie zostało już zarejestrowane. Wiemy, że wiele osób utworzyło wskazówki dla użytkowników końcowych i doceniają wcześniejsze powiadomienie, gdy wskazówki lub zrzuty ekranu mogą wymagać aktualizacji. Prosimy więc o takie zaktualizowanie dokumentacji, aby odzwierciedlała ona nadchodzące zmiany w środowisku. Zaktualizowane zrzuty ekranu można znaleźć tutaj: https://aka.ms/androidcpupdate.  
-
 
 
 ### Plan chmury
 Śledź na bieżąco rozwój usługi Intune, korzystając z [planu platformy w chmurze](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune).
 
 ### Wycofywanie usług
+<!---@Barry, we started listing service deprecations earlier this summer. --->
 - **Zmiany w obsłudze aplikacji Portal firmy dla systemu iOS**<br/>
 We wrześniu wszyscy użytkownicy aplikacji Portal firmy usługi Microsoft Intune dla systemu iOS będą musieli używać jej najnowszej wersji. Nowi użytkownicy będą mogli pobrać tylko najnowszą wersję, a bieżący użytkownicy będą musieli przeprowadzić aktualizację do najnowszej wersji. Najnowsza wersja aplikacji wymaga systemu iOS 8.0 lub nowszego, dlatego urządzenia ze starszymi wersjami systemu iOS nie będą mogły korzystać z portalu firmy ani rejestrować się do czasu ich zaktualizowania do systemu iOS 8.0 lub nowszego oraz zaktualizowania aplikacji Portal firmy do najnowszej wersji. Zarejestrowane urządzenia z wersjami systemu iOS poniżej 8.0 będą nadal zarządzane i wyświetlane w konsoli administracyjnej usługi Intune.  
 
@@ -119,17 +115,9 @@ We wrześniu wszyscy użytkownicy aplikacji Portal firmy usługi Microsoft Intun
 W sierpniu dział usługi Intune opublikuje zaktualizowaną aplikację Microsoft Intune Managed Browser dla systemu iOS, która będzie obsługiwana tylko na urządzeniach z systemem iOS 8.0 lub nowszym. Podczas gdy urządzenia z systemem iOS 7.1 wciąż będą mogły używać istniejącej aplikacji Managed Browser, należy zachęcać użytkowników do aktualizacji systemu iOS do wersji 8.0 lub nowszej, aby mogli w pełni skorzystać z najnowszych funkcji przeglądarki Managed Browser.  
 <!---TFS 1313253--->
 
-- **Aplikacje Portal firma dla systemu Windows 8 i Windows Phone 8 zostaną wycofane we wrześniu 2016 r.** <br/>
+- **Aplikacje Portal firmy dla systemu Windows 8 i Windows Phone 8 zostaną wycofane we wrześniu 2016 r.** <br/>
 Począwszy od września 2016 roku w usłudze Microsoft Intune zakończy się obsługa aplikacji Portal firmy Microsoft Intune dla platform Windows Phone 8 i Windows 8. Zaktualizuj urządzenia do systemów Windows 8.1 i Windows Phone 8.1 oraz skorzystaj z odpowiedniej aplikacji Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1, aby kontynuować dystrybucję aplikacji na tych urządzeniach.
 <!---TFS 1255391--->
-
-- **Aplikacje Intune Viewer** <br/>
-Wraz z wydaniem nowej aplikacji RMS sharing zostaną usunięte następujące aplikacje Intune Viewer, począwszy od sierpnia 2016 roku:
-    - Intune AV Viewer
-    - Intune PDF Viewer
-    - Intune Image Viewer dla systemu Android ze sklepu Google Play
-
-  Zalecamy, aby zamiast korzystania z aplikacji Intune Viewer używać nowej [aplikacji do zarządzania prawami (RMS sharing) dla systemu Android](https://docs.microsoft.com/en-us/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app), co pozwala na wdrożenie jednej aplikacji zamiast trzech osobnych aplikacji w celu bezpiecznego przeglądania plików firmy na urządzeniach z systemem Android. Gdy aplikacja Intune Viewer nie będzie już obsługiwana, zostanie usunięta ze sklepu Google i nie będzie dostępna do użycia w przyszłości.
 
 <!--- - **Custom Group Targeting of Notification Rules Removal.**<br/>
 Intune notification rules define who an email alert will be sent to from Intune. Currently, you can configure notification rules to send emails to all users of devices in an Intune device group that you created. From around June 1st 2016 moving forward, targeting user-created groups will no longer be supported.
@@ -158,6 +146,6 @@ Aby zobaczyć funkcje wprowadzone w usłudze Intune w ostatnich sześciu miesią
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

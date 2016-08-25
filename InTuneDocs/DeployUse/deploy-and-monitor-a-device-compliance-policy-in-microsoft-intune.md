@@ -13,21 +13,21 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 7e038f489399cce2c73eabbef265c7be4be5c895
+ms.sourcegitcommit: 711e650086d7528f26d9ba7b447ecb0185faff23
+ms.openlocfilehash: 8658df1fb9932fb2cab984a13557aad684569df5
 
 
 ---
 
 # Wdrażanie i monitorowanie zasad zgodności urządzenia w usłudze Microsoft Intune
 ## Wdrażanie zasad zgodności
-Wdróż [utworzone](create-a-device-compliance-policy-in-microsoft-intune.md) przez siebie zasady zgodności w co najmniej jednej grupie użytkowników lub urządzeń w swojej organizacji.
+Wdróż [utworzone](create-a-device-compliance-policy-in-microsoft-intune.md) zasady zgodności w co najmniej jednej grupie użytkowników w Twojej organizacji. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność urządzeń użytkownika.
 
 1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 ![Zrzut ekranu przedstawiający stronę zasad zgodności z opcją menu Zarządzanie wdrażaniem u góry strony](./media/intune-sa-3c-deploy-compliance-policy2.png)
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycje **Dodaj > OK**.
-![Zrzut ekranu okna dialogowego zarządzania wdrażaniem](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png) Zasady zgodności można wdrożyć dla użytkowników i/lub urządzeń. Użyj utworzonych i zsynchronizowanych z usługą Intune grup usługi Active Directory lub utwórz te grupy ręcznie w konsoli usługi Intune. Aby dowiedzieć się więcej na temat wdrażania zasad, zobacz [Wdrażanie zasad konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+![Zrzut ekranu okna dialogowego zarządzania wdrażaniem](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png) Zasady zgodności można wdrożyć dla użytkowników. Użyj utworzonych i zsynchronizowanych z usługą Intune grup usługi Active Directory lub utwórz te grupy ręcznie w konsoli usługi Intune. Aby dowiedzieć się więcej na temat wdrażania zasad, zobacz [Wdrażanie zasad konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 Podsumowanie stanu oraz alerty na stronie **Przegląd** obszaru roboczego **Zasady** umożliwiają zidentyfikowanie problemów z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym **Pulpit nawigacyjny** jest wyświetlane podsumowanie stanu.
 
@@ -72,6 +72,6 @@ Teraz możesz zacząć stosować zasady zgodności wraz z zasadami dostępu waru
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -13,25 +13,26 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: c516cffe416559d1d239010605227eda76c32c1b
+ms.sourcegitcommit: ede9c4db136eb0498cad6d196488d03768741328
+ms.openlocfilehash: 382dd93a5aec7415e5fb738f3068820e36d8ae06
 
 
 ---
 
 # Korzystanie z platformy Cisco ISE razem z usługą Intune
-Integracja usługi Intune z platformą Cisco ISE umożliwia tworzenie zasad sieciowych w środowisku platformy ISE przy użyciu rejestracji urządzeń i stanu ich zgodności w usłudze Intune. Te zasady mogą służyć do zagwarantowania, że dostęp do sieci firmowej jest ograniczony do urządzeń, które są zarządzane przez usługę Intune i zgodne z zasadami usługi Intune.
+Integracja usługi Intune z platformą Cisco ISE (Identity Services Engine) umożliwia tworzenie zasad sieciowych w środowisku platformy ISE przy użyciu rejestracji urządzeń i stanu ich zgodności w usłudze Intune. Te zasady mogą służyć do zagwarantowania, że dostęp do sieci firmowej jest ograniczony do urządzeń, które są zarządzane przez usługę Intune i zgodne z zasadami usługi Intune.
 
-## Konfiguracja
+## Kroki konfiguracji
 
-Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzierżawie usługi Intune. Będzie konieczne udostępnienie uprawnień serwerowi platformy Cisco ISE, aby miał dostęp do dzierżawy usługi Intune, a kiedy zostanie to zrobione, pozostała konfiguracja zostanie wykonana na serwerze Cisco ISE. Ten artykuł zawiera instrukcje dotyczące zapewniania serwerowi platformy ISE uprawnień dostępu do danej dzierżawy usługi Intune.
+Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzierżawie usługi Intune. Będzie konieczne udostępnienie uprawnień serwerowi platformy Cisco ISE, aby miał dostęp do dzierżawy usługi Intune. Gdy zostanie to zrobione, pozostała konfiguracja zostanie wykonana na serwerze Cisco ISE. Ten artykuł zawiera instrukcje dotyczące zapewniania serwerowi platformy ISE uprawnień dostępu do danej dzierżawy usługi Intune.
 
 ### Krok 1. Zarządzanie certyfikatami
-1. W konsoli usługi Azure Active Directory (AAD) wyeksportuj certyfikat.
+1. W konsoli usługi Azure Active Directory (Azure AD) wyeksportuj certyfikat.
 
     #### Internet Explorer 11
 
-    a. Uruchom program Internet Explorer jako administrator i zaloguj się do konsoli usługi AAD.
+
+    a. Uruchom program Internet Explorer jako administrator i zaloguj się do konsoli usługi Azure AD.
 
     b. Wybierz ikonę blokady na pasku adresu i wybierz polecenie **Wyświetl certyfikaty**.
 
@@ -45,7 +46,7 @@ Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzi
 
     #### Safari
 
-    a. Zaloguj się do konsoli usługi AAD.
+    a. Zaloguj się do konsoli usługi Azure AD.
 
     b. Wybierz ikonę blokady &gt; **Więcej informacji o**.
 
@@ -53,37 +54,40 @@ Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzi
 
     d. Wybierz certyfikat, a następnie wybierz pozycję **Eksportuj**.  
 
-
     > [!IMPORTANT]
     > Sprawdź datę wygaśnięcia certyfikatu, ponieważ po jej upłynięciu trzeba będzie wyeksportować i zaimportować nowy certyfikat.
 
 
-
 2. Z poziomu konsoli ISE zaimportuj certyfikat usługi Intune (wyeksportowany plik) do magazynu **zaufanych certyfikatów**.
-3. W konsoli ISE przejdź do pozycji **Administracja** > **Certyfikaty** > **Certyfikaty systemowe**.
-4. Wybierz certyfikat ISE, a następnie wybierz pozycję **Eksportuj**.
-5. W edytorze tekstu przeprowadź edycję wyeksportowanego certyfikatu:
+### Uzyskiwanie certyfikatu z podpisem własnym ze środowiska ISE 
+1.  W konsoli ISE przejdź do pozycji **Administracja** > **Certyfikaty** > **Certyfikaty systemowe** > **Generuj certyfikat z podpisem własnym**.  
+2.       Wyeksportuj certyfikat z podpisem własnym.
+3. W edytorze tekstu edytuj wyeksportowany certyfikat:
  - Usuń ** -----BEGIN CERTIFICATE-----**
  - Usuń ** -----END CERTIFICATE-----**
- - Upewnij się, że cały tekst jest jednym wierszu
+ 
+Upewnij się, że cały tekst jest jednym wierszu
 
-### Krok 2. Tworzenie aplikacji dla środowiska ISE w dzierżawie usługi AAD
-1. W konsoli usługi Azure Active Directory (AAD) wybierz kolejno pozycje **Aplikacje** > **Dodawanie aplikacji** > **Dodaj aplikację wdrażaną przez moją organizację**.
+
+### Krok 2. Tworzenie aplikacji dla środowiska ISE w dzierżawie usługi Azure AD
+1. W konsoli usługi Azure AD wybierz pozycję **Aplikacje** > **Dodawanie aplikacji** > **Dodaj aplikację opracowywaną przez moją organizację**.
 2. Określ nazwę i adres URL aplikacji. Może to być adres URL witryny internetowej firmy.
 3. Pobierz manifest aplikacji (plik JSON).
 4. Edytuj plik JSON manifestu. W ustawieniu o nazwie **keyCredentials** podaj edytowany tekst certyfikatu z kroku 1 jako wartość ustawienia.
 5. Zapisz plik bez zmieniania jego nazwy.
 6. Udostępnij aplikacji uprawnienia do programu Microsoft Graph i interfejsu API usługi Microsoft Intune.
-    1. W przypadku programu Microsoft Graph wybierz następujące uprawnienia:
-        - **Uprawnienia aplikacji**: Odczytuj dane katalogu
-        - **Delegowane uprawnienia**:
-            - Uzyskuj dostęp do danych użytkowników w dowolnym czasie
-          - Loguj użytkowników
-   2. W przypadku interfejsu API usługi Microsoft Intune w obszarze **Uprawnienia aplikacji** wybierz pozycję **Pobieraj stan i zgodność urządzenia z usługi Intune**.
+
+ a. W przypadku programu Microsoft Graph wybierz następujące uprawnienia:
+    - **Uprawnienia aplikacji**: Odczytuj dane katalogu
+    - **Delegowane uprawnienia**:
+        - Uzyskuj dostęp do danych użytkowników w dowolnym czasie
+        - Loguj użytkowników
+
+ b. W przypadku interfejsu API usługi Microsoft Intune w obszarze **Uprawnienia aplikacji** wybierz pozycję **Pobieraj stan i zgodność urządzenia z usługi Intune**.
 
 7. Wybierz pozycję **Wyświetl punkty końcowe** i skopiuj następujące wartości do użycia podczas konfigurowania ustawień platformy ISE:
 
-|Wartość w portalu usługi AAD|Odpowiednie pole w portalu platformy ISE|
+|Wartość w portalu usługi Azure AD|Odpowiednie pole w portalu platformy ISE|
 |-------------------|---------------------------------|
 |Punkt końcowy interfejsu API Microsoft Azure AD Graph|Auto Discovery URL (Adres URL autowykrywania)|
 |Punkt końcowy tokenu OAuth 2.0|Token Issuing URL (Adres URL wystawiania tokenów)|
@@ -91,13 +95,13 @@ Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzi
 
 
 ### Krok 3. Konfigurowanie ustawień platformy ISE
-2. W konsoli administracyjnej platformy ISE podaj wartości tych ustawień:
+W konsoli administracyjnej platformy ISE podaj wartości tych ustawień:
   - **Server Type (Typ serwera)**: Mobile Device Manager
   - **Authentication type (Typ uwierzytelniania)**: OAuth – Client Credentials (OAuth — poświadczenia klienta)
   - **Auto Discovery (Autowykrywanie)**: Yes (Tak)
-  - **Auto Discover URL (Adres URL autowykrywania)**: wprowadź wartość z kroku 1
-  - **Client ID (Identyfikator klienta)**: wprowadź wartość z kroku 1
-  - **Token issuing URL (Adres URL wystawiania tokenów)**: wprowadź wartość z kroku 1
+  - **Auto Discover URL (Adres URL autowykrywania)**: *wprowadź wartość z kroku 1*
+  - **Client ID (Identyfikator klienta)**: *wprowadź wartość z kroku 1*
+  - **Token issuing URL (Adres URL wystawiania tokenów)**: *wprowadź wartość z kroku 1*
 
 
 
@@ -106,17 +110,17 @@ Ta tabela zawiera informacje współużytkowane przez dzierżawę usługi Intune
 
 |Właściwość|  Opis|
 |---------------|------------------------------------------------------------|
-|complianceState|   Wartość true lub false (ciąg) wskazująca, czy urządzenie jest zgodne czy niezgodne.|
-|isManaged| Wartość true lub false (wskazująca, czy klient jest zarządzany przez usługę Intune czy nie).|
+|complianceState|Wartość true lub false (ciąg) wskazująca, czy urządzenie jest zgodne, czy niezgodne.|
+|isManaged|Wartość true lub false wskazująca, czy klient jest zarządzany przez usługę Intune, czy nie.|
 |macAddress|Adres MAC urządzenia.|
 |serialNumber|Numer seryjny urządzenia. Dotyczy tylko urządzeń z systemem iOS.|
-|imei|Numer IMEI (15 cyfr dziesiętnych: 14 cyfr i cyfra kontrolna) lub IMEISV (16 cyfr) zawiera informacje o pochodzeniu, modelu i numerze seryjnym urządzenia. Struktura numeru IMEI/SV jest określona w specyfikacji 3GPP TS 23.003. (Dotyczy tylko urządzeń z kartami SIM).|
-|udid|Unikatowy identyfikator urządzenia, sekwencja 40 liter i cyfr, która jest specyficzna dla urządzeń z systemem iOS.|
-|meid|Identyfikator sprzętu przenośnego, globalnie unikatowy numer identyfikujący fizyczny element sprzętu przenośnego stacji sieci CDMA. Format liczbowy jest zdefiniowany w raporcie 3GPP2 S. R0048, ale w praktyce może być widoczny jako numer IMEI, tylko z cyframi szesnastkowymi. Numer MEID ma długość 56 bitów (14 cyfr szesnastkowych). Składa się z trzech pól, w tym 8-bitowego kodu regionu (RR), 24-bitowego kodu producenta i 24-bitowego numeru seryjnego przypisanego przez producenta.|
-|osVersion| Wersja systemu operacyjnego urządzenia.
+|imei|Numer IMEI (15 cyfr dziesiętnych: 14 cyfr i cyfra kontrolna) lub numer IMEISV (16 cyfr) zawiera informacje o pochodzeniu, modelu i numerze seryjnym urządzenia. Struktura tych numerów jest określona w specyfikacji 3GPP TS 23.003. Dotyczy to tylko urządzeń z kartami SIM.|
+|udid|Unikatowy identyfikator urządzenia będący sekwencją 40 liter i cyfr. Jest on specyficzny dla urządzeń z systemem iOS.|
+|meid|Identyfikator sprzętu przenośnego będący globalnie unikatowym numerem identyfikującym fizyczny element sprzętu przenośnego stacji sieci CDMA. Format liczbowy jest zdefiniowany w raporcie 3GPP2 S. R0048. W praktyce może być uznawany za numer IMEI, ale z cyframi szesnastkowymi. Numer MEID ma długość 56 bitów (14 cyfr szesnastkowych). Składa się z trzech pól, w tym 8-bitowego kodu regionu (RR), 24-bitowego kodu producenta i 24-bitowego numeru seryjnego przypisanego przez producenta.|
+|osVersion|Wersja systemu operacyjnego urządzenia.
 |model|Model urządzenia.
 |manufacturer|Producent urządzenia.
-|azureDeviceId| Identyfikator urządzenia po dołączeniu go w miejscu pracy za pomocą usługi Azure Active Directory. Pusty identyfikator GUID dla urządzeń, które nie są dołączone.|
+|azureDeviceId|Identyfikator urządzenia po dołączeniu go w miejscu pracy za pomocą usługi Azure AD. Pusty identyfikator GUID dla urządzeń, które nie są dołączone.|
 |lastContactTimeUtc|Data i godzina ostatniego zaewidencjonowania urządzenia w usłudze zarządzania usługi Intune.
 
 
@@ -126,7 +130,7 @@ Gdy użytkownik próbuje uzyskać dostęp do zasobów przy użyciu niezarejestro
 
 ![Przykład monitu o rejestrację](../media/cisco-ise-user-iphone.png)
 
-Jeśli użytkownik wybierze przycisk rejestracji, zostanie przekierowany do procesu rejestracji w usłudze Intune. Obsługa rejestracji użytkownika w usłudze Intune zostało opisane w tych tematach:
+Jeśli użytkownik zdecyduje się na rejestrację, zostanie przekierowany do procesu rejestracji w usłudze Intune. Obsługa rejestracji użytkownika w usłudze Intune zostało opisane w tych tematach:
 
 - [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
 - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
@@ -142,6 +146,6 @@ Istnieje również [dostępny do pobrania zestaw instrukcji dotyczących rejestr
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

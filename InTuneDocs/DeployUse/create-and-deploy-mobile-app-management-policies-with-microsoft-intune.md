@@ -13,8 +13,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 1782d200ed26473414fbc40f554c84cb5d017d44
+ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
+ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
 
 
 ---
@@ -28,12 +28,16 @@ W tym temacie opisano proces tworzenia zasad MAM w **portalu Azure**. Portal Azu
 - Urządzenia niezarządzane przez żadne rozwiązanie MDM (BYOD).
 
 >[!IMPORTANT]
+Jeśli aktualnie zarządzasz urządzeniami za pomocą **konsoli administracyjnej usługi Intune**, weź pod uwagę następujące informacje:
 
-> Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnym obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
-Zasady zarządzania aplikacjami mobilnymi utworzone w konsoli administracyjnej usługi Intune nie mogą być importowane do portalu Azure.  Zasady zarządzania aplikacjami mobilnymi muszą zostać ponownie utworzone w portalu Azure.
+> * Zasady zarządzania aplikacjami mobilnymi, które obsługują aplikacje na potrzeby urządzeń przenośnych zarejestrowanych w usłudze Intune, możesz utworzyć przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+> * Zasady zarządzania aplikacjami mobilnymi utworzone w konsoli administracyjnej usługi Intune nie mogą być importowane do portalu Azure.  Zasady zarządzania aplikacjami mobilnymi muszą zostać ponownie utworzone w portalu Azure.
 
+> * W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi.
 
-> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, zasady utworzone w portalu Azure zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
+> * Aby wdrożyć aplikacje zarządzane, musisz utworzyć zasady zarządzania aplikacjami mobilnymi w konsoli administracyjnej usługi Intune. W takim przypadku można utworzyć zasady zarządzania aplikacjami mobilnymi zarówno w konsoli administracyjnej usługi Intune, jak i w portalu Azure. Konsola administracyjna usługi Intune umożliwia wdrażanie aplikacji zarządzanych, a portal Azure to nowa konsola administracyjna, która udostępnia wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi.
+
+> * Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, dla aplikacji zostaną zastosowane zasady utworzone w portalu Azure.
 
 Aby wyświetlić listę zasad obsługiwanych na platformach Android i iOS, wybierz jeden z następujących elementów:
 
@@ -165,6 +169,6 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

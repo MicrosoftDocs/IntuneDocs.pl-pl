@@ -10,32 +10,30 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
-ms.reviewer: jeffgilb
+ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7c244554eb4b6ae5a248b53a7b4b6171807f4bfa
-ms.openlocfilehash: e353391375ce7b54f0be479607349e5618de1c37
+ms.sourcegitcommit: c329bd08aaf72ae2acaa03dcb12c911d84b46b4e
+ms.openlocfilehash: cfd9df3814d0d306a254a5566155a91ce5d0ca16
 
 
 ---
 
 # Wybieranie metody zarządzania urządzeniami
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umożliwia zarządzanie różnymi urządzeniami przez *zarejestrowanie* ich w usłudze. Użytkownicy mogą następnie korzystać z *portalu firmy*, aby wykonywać szereg operacji, takich jak rejestrowanie swoich urządzeń, przeglądanie i instalowanie aplikacji, upewnianie się, że urządzenie jest zgodne z zasadami firmy, oraz kontaktowanie się z pomocą techniczną IT.
+Usługa Intune umożliwia zarządzanie różnymi urządzeniami po *zarejestrowaniu* ich w usłudze. Użytkownicy mogą następnie korzystać z *portalu firmy*, aby wykonywać szereg operacji, takich jak rejestrowanie swoich urządzeń, przeglądanie i instalowanie aplikacji, upewnianie się, że urządzenie jest zgodne z zasadami firmy, oraz kontaktowanie się z pomocą techniczną IT.
 
 ## Metody zarządzania urządzeniami przenośnymi
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umożliwia zarządzanie następującymi platformami urządzeń:
+Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 
 [!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Porada</h5>
-  <p>Jeśli urządzenia z wersją systemu iOS starszą niż podana powyżej obsługiwana wersja zostały już zarejestrowane wcześniej, pozostaną one zarejestrowane. Jednak sprawdź w dokumentacji poszczególnych wersji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], czy dana wersja systemu iOS jest obsługiwana przez daną funkcję.</p>
-</div>
+> [!NOTE]
+> Jeśli urządzenia z wersją systemu iOS starszą niż obsługiwana wersja zostały już zarejestrowane wcześniej, pozostaną one zarejestrowane. Sprawdź dokumentację, aby potwierdzić, że funkcja obsługuje daną wersję systemu iOS.
 
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umożliwia zarządzanie urządzeniami użytkowników, co jest często określane jako „przynieś własne urządzenie” (BYOD, Bring Your Own Device). Pozwala ona również na zarządzanie urządzeniami należącymi do firmy, w tym scenariuszami, w których firmy przedstawiają użytkownikom listę urządzeń do wyboru. Ta strategia jest znana jako „Wybierz własne urządzenie” (CYOD, Choose Your Own Device).
+Usługa Intune umożliwia zarządzanie urządzeniami użytkowników, co jest określane jako model „Przynieś własne urządzenie” (BYOD, Bring Your Own Device). Pozwala ona również na zarządzanie urządzeniami należącymi do firmy, w tym scenariuszami, w których firmy przedstawiają użytkownikom listę urządzeń do wyboru. Ta strategia jest znana jako „Wybierz własne urządzenie” (CYOD, Choose Your Own Device).
 
 ### Rejestrowanie urządzeń do zarządzania
-W przypadku systemów operacyjnych dla urządzeń przenośnych, takich jak iOS, Android i Windows Phone, zawsze musisz zarejestrować urządzenia. Jednak sposób rejestrowania urządzeń zależy od potrzeb organizacji:
+W przypadku systemów operacyjnych dla urządzeń przenośnych, takich jak iOS, Android i Windows Phone, zawsze musisz zarejestrować urządzenia. Sposób rejestrowania urządzeń zależy od potrzeb organizacji:
 
 |Typ rejestracji|„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)|„Wybierz własne urządzenie” (CYOD, Choose Your Own Device)|Urządzenie udostępnione z kontem menedżera|Urządzenie udostępnione bez konta użytkownika|
 |-------------------|--------|--------|--------------------------------------|----------------------------------------|
@@ -45,26 +43,21 @@ W przypadku systemów operacyjnych dla urządzeń przenośnych, takich jak iOS, 
 |**Użytkownik wyrejestrowujący**|Właściciel lub administrator|Platforma |Administrator lub użytkownik|Administrator lub użytkownik|
 |**Użytkownik z uprawnieniami do resetowania**|Właściciel lub administrator|Administrator|Administrator|Administrator|
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Porada</h5>
-  <p>Aby uzyskać pełną listę możliwości dostępnych po zarejestrowaniu urządzeń, zobacz [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md).</p>
-</div>
+Aby uzyskać dodatkowe wskazówki, zobacz informacje dotyczące [rejestrowania urządzeń przenośnych](/intune/get-started/choose-how-to-enroll-devices1).
 
-
+> [!NOTE]
+> Aby uzyskać pełną listę możliwości dostępnych po zarejestrowaniu urządzeń, zobacz [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md).
 
 ## Metody zarządzania komputerami z systemem Windows
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] umożliwia zarządzanie komputerami z systemem Windows Vista i nowszymi wersjami systemu Windows za pomocą klienta komputerowego usługi Intune. Jednak w przypadku komputerów z systemem Windows możesz wybrać między ich zarejestrowaniem a zainstalowaniem oprogramowania klienckiego usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], które zawiera kilka funkcji niedostępnych w przypadku rejestrowania urządzeń. W większości przypadków będziesz rejestrować urządzenie z systemem Windows za pomocą usługi Intune, co zapewnia szerszy zestaw możliwości niż w przypadku klienta komputerowego.
+Usługa Intune umożliwia zarządzanie komputerami z systemem Windows Vista i nowszymi wersjami systemu Windows za pomocą klienta komputerowego usługi Intune. Jednak w przypadku komputerów z systemem Windows możesz wybrać między ich zarejestrowaniem a zainstalowaniem oprogramowania klienckiego usługi Intune, które zawiera kilka funkcji niedostępnych w przypadku rejestrowania urządzeń. W większości przypadków będziesz rejestrować urządzenie z systemem Windows za pomocą usługi Intune, co zapewnia szerszy zestaw możliwości niż w przypadku klienta komputerowego.
 
 Rozważ użycie klienta komputerowego usługi Intune, gdy chcesz:
-<ul>
-<li>Użyć dowolnej z funkcji dostępnych w kliencie komputerowym usługi Microsoft Intune do zarządzania komputerami z systemem Windows.</li>
-<li>Zarządzać komputerem z systemem operacyjnym Windows, który nie jest obsługiwany w przypadku rejestracji.</li>
-</ul>
 
-<div class="alert alert-tip">
-  <h5><span class="icon-tip"></span> Porada</h5>
-  <p>Aby uzyskać pełną listę możliwości dostępnych po zainstalowaniu klienta komputerowego usługi Intune na komputerach z obsługiwanym systemem Windows, zobacz [Możliwości zarządzania komputerami z systemem Windows](windows-pc-management-capabilities-in-microsoft-intune.md).</p>
-</div>
+- użyć dowolnej z funkcji dostępnych w kliencie komputerowym usługi Microsoft Intune do zarządzania komputerami z systemem Windows;
+- zarządzać komputerem z systemem operacyjnym Windows, który nie jest obsługiwany w przypadku rejestracji.
+
+> [!NOTE]
+> Aby uzyskać pełną listę możliwości dostępnych po zainstalowaniu klienta komputerowego usługi Intune na komputerach z obsługiwanym systemem Windows, zobacz [Możliwości zarządzania komputerami z systemem Windows](windows-pc-management-capabilities-in-microsoft-intune.md).
 
 ## Zarządzanie przy użyciu programu Exchange ActiveSync
 Urządzeniami możesz również zarządzać za pomocą programu Exchange ActiveSync. Wymaga to zainstalowania łącznika On-Premises Connector albo użycia wbudowanego łącznika Service to Service Connector w celu nawiązania połączenia z programem Exchange Server.
@@ -80,6 +73,6 @@ Teraz już znasz niektóre możliwości dostępne po zarejestrowaniu urządzeń 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

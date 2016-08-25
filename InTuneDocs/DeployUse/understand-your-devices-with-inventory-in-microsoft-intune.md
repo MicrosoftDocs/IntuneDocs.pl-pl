@@ -1,10 +1,10 @@
 ---
 title: "Uzyskiwanie informacji o urządzeniach dzięki spisowi | Microsoft Intune"
-description: "Użycie usługi Intune do wyświetlenia informacji o sprzęcie zarządzanych urządzeń."
+description: "Użyj usługi Intune do wyświetlenia informacji o sprzęcie zarządzanych urządzeń."
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 7d11642f13dfbe554661ecc4149c3aaf3e7448c2
+ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
+ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
 
 
 ---
@@ -45,7 +45,7 @@ Aby wyświetlić spis zebrany przez urządzenia przenośne, uruchom [raporty dot
 |**Numer seryjny**|Urządzenia z systemami iOS, Mac OS X, Android, Windows 8.1 i Windows 10|
 |**Całkowita ilość miejsca**|Urządzenia z systemami iOS, Mac OS X, Windows 8.1 i Windows 10|
 |**Ilość wolnego miejsca**|Urządzenia z systemami iOS, Mac OS X, Windows 8.1 i Windows 10|
-|**Numer telefonu**<br>Telefony skategoryzowane jako firmowe są identyfikowane przez pełny numer telefonu na przykład przy uruchomieniu raportu dotyczącego spisu urządzeń przenośnych. Numery telefonów BYOD są maskowane symbolami &#42; (wyświetlane są tylko 4 ostatnie cyfry).|Urządzenia z systemami iOS, Android i Windows Phone|
+|**Numer telefonu**<br>Telefony skategoryzowane jako firmowe są identyfikowane przez pełny numer telefonu (na przykład przy uruchomieniu raportu dotyczącego spisu urządzeń przenośnych). Numery telefonów BYOD są maskowane symbolami &#42; i tylko 4 ostatnie cyfry są wyświetlane.|Urządzenia z systemami iOS, Android i Windows Phone|
 |**IMEI**|Urządzenia z programem Exchange ActiveSync albo systemem iOS, Android lub Windows Phone|
 |**MEID**<br>Identyfikator sprzętu przenośnego|Tylko urządzenia z systemem iOS|
 |**Wi-Fi MAC**|Wszystkie urządzenia z wyjątkiem urządzeń z programem Exchange ActiveSync|
@@ -59,11 +59,11 @@ Aby wyświetlić spis zebrany przez urządzenia przenośne, uruchom [raporty dot
 |**Włączona blokada aktywacji**|Tylko urządzenia z systemem iOS|
 |**Włączone szyfrowanie**|Wszystkie urządzenia|
 
-## Jakie informacje są zbierane z komputerów z systemem Windows?
+## Co jest zbierane z komputerów z systemem Windows?
 > [!IMPORTANT]
 > Ta sekcja dotyczy tylko komputerów z systemem Windows, na których uruchomiono oprogramowanie klienckie usługi Intune dla komputerów z systemem Windows.
 
-Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [Raporty dotyczące spisu komputerów](understand-microsoft-intune-operations-by-using-reports.md). Usługa Intune zbiera następujący spis z komputerów z systemem Windows:
+Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [raporty dotyczące spisu komputerów](understand-microsoft-intune-operations-by-using-reports.md). Usługa Intune zbiera następujący spis z komputerów z systemem Windows:
 
 -   **Nazwa**
 
@@ -114,6 +114,6 @@ Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [Rapor
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

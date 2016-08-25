@@ -13,8 +13,8 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
-ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
+ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
+ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
 
 
 ---
@@ -24,13 +24,13 @@ ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
 ## Tworzenie konfiguracji niestandardowej
 Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłudze Intune. Aby utworzyć konfigurację niestandardową:
 
-   1. W konsoli administracyjnej usługi Intune wybierz pozycje **Zasady** -> **Dodaj zasady** -> *<Expand platform>* -> **Konfiguracja niestandardowa** -> **Utwórz zasady**.
+   1. W konsoli administracyjnej usługi Intune wybierz pozycję **Zasady** > **Dodaj zasady** > *<Expand platform>* > **Konfiguracja niestandardowa** > **Utwórz zasady**.
    2. Podaj nazwę zasad.
-   3. Dla każdego ustawienia identyfikatora URI kliknij pozycję **Dodaj** i podaj wymagane informacje. Przykład:
+   3. Dla każdego ustawienia identyfikatora URI wybierz pozycję **Dodaj** i podaj wymagane informacje. Przykład:
 
    ![Okno dialogowe konfiguracji niestandardowej profilu VPN](./media/Intune_Add_VPN_URI.png)
 
-   4.  Po wprowadzeniu wszystkich ustawień identyfikatora URI kliknij pozycję **Zapisz zasady**, a następnie wdróż zasady.
+   4.  Po wprowadzeniu wszystkich ustawień identyfikatora URI wybierz pozycję **Zapisz zasady**, a następnie wdróż zasady.
 
 ## Wdrażanie zasad konfiguracji
 
@@ -38,14 +38,14 @@ Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłud
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady**, wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
 
-    -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
+    -   **Aby zamknąć okno dialogowe bez wdrażania** — wybierz pozycję **Anuluj**.
 
 Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczących wdrożenia w dolnej części listy zasad.
 
 ##Przykład ustawień identyfikatora URI dla konfiguracji niestandardowej profilu sieci VPN
-Poniżej przedstawiono przykładowe wpisy wartości identyfikatora URI umożliwiające utworzenie konfiguracji niestandardowej dla sieci VPN w fikcyjnej firmie o nazwie Contoso. Aby uzyskać więcej informacji, takich jak typ danych dla każdego wpisu, zobacz [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx)
+Poniżej przedstawiono przykładowe wpisy wartości identyfikatora URI umożliwiające utworzenie konfiguracji niestandardowej dla sieci VPN w fikcyjnej firmie o nazwie Contoso. Aby uzyskać więcej informacji, takich jak typ danych dla każdego wpisu, zobacz [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
 
 Native Contoso VPN (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
 
@@ -83,7 +83,7 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 **./Vendor/MSFT/VPNv2/ContosoVPN/TrafficFilterList/1/App/Id** Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 
-Aby uzyskać odpowiedzi na pytania dotyczące używania tych ustawień lub więcej szczegółów na temat ich działania, klienci powinni zapoznać się z dokumentacją CSP: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx
+Aby uzyskać odpowiedzi na pytania dotyczące używania tych ustawień lub więcej szczegółów na temat ich działania, klienci powinni zapoznać się z dokumentacją dostawcy usług konfiguracji: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
 ## Ustawienia identyfikatora URI połączeń sieci VPN dla aplikacji systemu Android w programie PulseSecure
 ### NIESTANDARDOWY IDENTYFIKATOR URI DLA LISTY PAKIETÓW
@@ -112,6 +112,6 @@ Przykłady:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

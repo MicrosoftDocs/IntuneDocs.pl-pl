@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1e0d05a4f229e2a8e72d1d60021b159f12dfa0d1
-ms.openlocfilehash: c63badfcbc736476f17b39e09ef189eb4d2c08ef
+ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
+ms.openlocfilehash: affcca7ea406ea8a9d60f29add4385998b0ae29d
 
 
 ---
@@ -99,13 +99,13 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
 
 ## Zmiany przypisań grup usługi Intune
 
-Od września zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach **profilu rejestracji w firmie**. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Nowe dynamiczne przypisanie do grup urządzeń można zdefiniować w usłudze Azure Active Directory na podstawie nazwy profilu rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Od października zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach **profilu rejestracji w firmie**. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Zobacz także
 [Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

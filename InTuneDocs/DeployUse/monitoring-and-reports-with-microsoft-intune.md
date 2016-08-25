@@ -1,6 +1,6 @@
 ---
 title: Monitorowanie i raporty | Microsoft Intune
-description: "Użyj monitorowania i raportów, aby monitorować stan urządzeń w swojej organizacji."
+description: "Użyj monitorowania i raportów usługi Intune, aby monitorować stan urządzeń w Twojej organizacji."
 keywords: 
 author: Nbigman
 manager: angrobe
@@ -13,24 +13,24 @@ ms.assetid: 0f7dc155-cb8e-477b-ba02-2623194a9575
 ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ebb1139cdd8c2bb57f7275bd79be3a69288b96f6
+ms.sourcegitcommit: 79e7113b2b4d5f0d049f22b05db0a8f24e4de570
+ms.openlocfilehash: c1a810bd8c6df05ccc35efbbfd4d9cfdc8fcd614
 
 
 ---
 
 # Monitorowanie i raporty w usłudze Microsoft Intune
-Będąc administratorem IT, chcesz monitorować stan urządzeń w swojej organizacji. Usługa Microsoft Intune udostępnia dwa sposoby monitorowania tych urządzeń, a także stanu licencji oprogramowania i akcji, które mają wpływ na urządzenia (takich jak czyszczenie danych urządzenia).
+Usługa Intune oferuje administratorowi IT dwa sposoby monitorowania urządzeń firmy. Monitorowanie obejmuje stan licencji na oprogramowanie i akcje wpływające na urządzenia, takie jak czyszczenie urządzenia.
 
--   **[Raporty](understand-microsoft-intune-operations-by-using-reports.md)** ułatwiają monitorowanie stanu urządzeń zarządzanych przez usługę Intune (w tym stanu aktualizacji oprogramowania, zainstalowanego oprogramowania i zgodności certyfikatów).
-     Te raporty pozwalają również sprawdzić spis sprzętu i oprogramowania zebrany przez urządzenia i komputery.
+-   **[Raporty](../deploy-use/understand-microsoft-intune-operations-by-using-reports.md)** ułatwiają monitorowanie stanu urządzeń zarządzanych przez usługę Intune. Obejmują one stan aktualizacji oprogramowania, spis zainstalowanego oprogramowania oraz zgodność certyfikatów.
+     Raporty usługi Intune udostępniają także spis sprzętu dla wszystkich urządzeń i komputerów.
 
--   Obszar roboczy **[Alerty](get-notified-by-alerts.md)** ułatwia monitorowanie kondycji urządzeń zarządzanych przez usługę Intune (w tym stanu programu Endpoint Protection i ostrzeżeń dotyczących złośliwego oprogramowania, łączności sieciowej lub wyczerpywania się miejsca na dysku).
+-   **[Alerty](../deploy-use/get-notified-by-alerts.md)** ułatwiają monitorowanie kondycji urządzeń zarządzanych przez usługę Intune. Obejmuje to stan programu Endpoint Protection, ostrzeżenia o złośliwym oprogramowaniu i ostrzeżenia dotyczące miejsca na dysku i łączności sieciowej.
 
--   Urządzenia i komputery zarządzane przez usługę Intune zwracają szczegółowe informacje dotyczące ich właściwości i zainstalowanego oprogramowania.  Usługa Intune udostępnia narzędzia i raporty do badania oraz przedstawiania tych danych. Aby uzyskać szczegółowe informacje, zobacz [Understand your devices with inventory in Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
+Urządzenia i komputery zarządzane przez usługę Intune zwracają szczegółowe informacje dotyczące ich właściwości i zainstalowanego oprogramowania. Usługa Intune daje Ci narzędzia i raporty umożliwiające analizowanie i prezentowanie informacji. Aby uzyskać szczegółowe informacje, zobacz [Understand your devices with inventory in Microsoft Intune](../deploy-use/understand-your-devices-with-inventory-in-microsoft-intune.md) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

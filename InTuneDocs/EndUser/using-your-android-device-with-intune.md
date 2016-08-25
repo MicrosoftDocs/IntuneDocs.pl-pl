@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 3dfe3f8a0a8538d14acddb9a7c9541bae928b6e6
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 
 ---
@@ -22,7 +22,11 @@ ms.openlocfilehash: 3dfe3f8a0a8538d14acddb9a7c9541bae928b6e6
 
 # Korzystanie z urządzenia z systemem Android i usługi Intune
 
-Ta strona zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: informacje dotyczące rejestracji, zadania zarządzania i problemy ze zgodnością.
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
+
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+- Zadania zarządzania po rejestracji
+- Problemy ze zgodnością
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -67,6 +71,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

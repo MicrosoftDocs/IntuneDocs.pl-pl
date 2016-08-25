@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 4fab2d71b7cf2557b73810e5f05b82fb9ba1c36b
+ms.sourcegitcommit: fd74fcdb26827b94d894b28d9d7f48e62420b14a
+ms.openlocfilehash: 8f7b33a7e3cf73caee62eaa696fed8b7f65f28dc
 
 
 ---
@@ -34,7 +34,7 @@ Aby zresetować kod dostępu:
 
 2.  Naciśnij pozycję **Zresetuj kod dostępu**.
 
-    !resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
+    ![resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
 3.  Naciśnij pozycję **Wyloguj**, a następnie zaloguj się ponownie przy użyciu poświadczeń służbowych. Musisz zalogować się ponownie w ciągu pięciu minut.
 
@@ -51,7 +51,7 @@ Aby zresetować kod dostępu:
     |Android|Utworzenie nowego, tymczasowego, alfanumerycznego kodu dostępu.|
     |iOS|Usunięcie kodu dostępu z urządzenia bez utworzenia nowego, tymczasowego kodu dostępu. Jeśli używasz funkcji Touch ID, musisz skonfigurować ją ponownie dla urządzenia, ponieważ jest ona usuwana podczas resetowania kodu dostępu.|
     |Windows 10 (tylko urządzenia przenośne)|Utworzenie nowego, tymczasowego, alfanumerycznego kodu dostępu. Funkcja Windows Hello jest obsługiwana.|
-    |Windows Phone 8.1|Utworzenie nowego, tymczasowego, numerycznego kodu dostępu.|
+    |Windows Phone 8,1|Utworzenie nowego, tymczasowego, numerycznego kodu dostępu.|
     Po odblokowaniu urządzenia można ustawić nowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
 
 5.  Odblokuj urządzenie, a następnie ustaw nowy kod dostępu lub zmień tymczasowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
@@ -65,6 +65,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

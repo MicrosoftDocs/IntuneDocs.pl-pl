@@ -13,13 +13,68 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 53a7bda5dd5adcac512c413c7069723ae638f279
+ms.sourcegitcommit: 5ab9592c253238fd832f8b48372e5474fcfc5331
+ms.openlocfilehash: 96b0cd997544b2013efaca818d614c9802baaa46
 
 
 ---
+## Informacja o nadchodzących ulepszeniach środowiska pracy administratora dla grup
+
+Na podstawie opinii użytkowników, aby istniało jedno środowisko grupowania i kierowania w pakiecie Enterprise Mobility + Security, konwertujemy grupy usługi Intune na grupy zabezpieczeń oparte na usłudze Azure Active Directory. Spowoduje to ujednolicenie zarządzania grupami w usłudze Intune i usłudze Azure Active Directory (Azure AD). Nowe środowisko zlikwiduje konieczność duplikowania grup między usługami i zapewni możliwość rozszerzenia przy użyciu programów PowerShell i Graph. 
+
+### Jak to wpłynie na moją bieżącą pracę?
+Ta zmiana nie ma teraz wpływu na użytkownika, ale możemy określić, co będzie miało miejsce wkrótce:
+
+-   We wrześniu nowe konta zaprowizowane po comiesięcznym wydaniu usługi będą używać grup zabezpieczeń usługi Azure AD, a nie grup użytkowników usługi Intune.   
+-   W październiku nowe konta zaprowizowane po comiesięcznym wydaniu usługi będą zarządzać grupami opartymi na użytkownikach i zasobach w portalu usługi Azure AD. Brak wpływu na istniejących klientów
+-   W listopadzie zespół produktu Intune rozpocznie migrowanie istniejących klientów do nowego środowiska zarządzania grupami opartego na usłudze Azure AD. Wszystkie grupy użytkowników i urządzeń istniejące teraz w usłudze Intune zostaną zmigrowane do grup zabezpieczeń usługi Azure AD. Migracja zostanie wykonana w partiach, począwszy od listopada. Migracja nie zostanie rozpoczęta, dopóki nie zostanie zminimalizowany wpływ na codzienną pracę użytkowników i nie będzie żadnego wpływu na użytkowników końcowych. Użytkownikom zostanie również wysłane powiadomienie przed migracją konta.
+
+
+### W jaki sposób i kiedy zostanie przeprowadzona migracja do nowego środowiska grup?
+Bieżący klienci będą migrowani przez pewien czas. Teraz ma miejsce finalizowanie harmonogramu dla tej migracji. Ten temat zostanie zaktualizowany w ciągu kilku tygodni i będzie zawierał więcej szczegółów. Przed migracją otrzymasz powiadomienie. Jeśli masz jakiekolwiek pytania dotyczące migracji, skontaktuj się z naszym zespołem migracji, wysyłając wiadomość e-mail na adres [intunegrps@microsoft.com](intunegrps@microsoft.com).
+
+### Co się stanie z moimi istniejącymi grupami użytkowników i urządzeń?
+ Utworzone grupy użytkowników i urządzeń zostaną zmigrowane do grup zabezpieczeń usługi Azure AD. Domyślne grupy usługi Intune, takie jak grupa Wszyscy użytkownicy, zostaną zmigrowane tylko wtedy, jeśli będą używane we wdrożeniach w czasie migracji. Migracje niektórych grup mogą być bardziej skomplikowane i powiadomimy Cię, jeśli na potrzeby migracji będzie wymagane wykonanie dodatkowych czynności.
+
+### Jakie nowe funkcje będą dla mnie dostępne?
+Poniżej znajdują się nowe funkcje, które zostaną wprowadzone:
+
+-    Grupy zabezpieczeń usługi Azure AD będą obsługiwane w usłudze Intune dla wszystkich typów wdrożeń.
+-    Grupy zabezpieczeń usługi Azure AD będą obsługiwać grupowanie urządzeń wraz z użytkownikami.
+-    Grupy zabezpieczeń usługi Azure AD będą obsługiwać grupy dynamiczne z atrybutami urządzeń usługi Intune. Na przykład możliwe będzie dynamiczne grupowanie urządzeń na podstawie platformy, takiej jak iOS. Dzięki temu podczas rejestrowania nowego urządzenia z systemem iOS w organizacji zostanie ono automatycznie dodane do dynamicznej grupy urządzeń z systemem iOS.
+-    Współużytkowane środowiska pracy administratora na potrzeby zarządzania grupami w usłudze Azure AD i usłudze Intune.
+- *Rola administratora usługi Intune* zostanie dodana do usługi Azure AD w celu umożliwienia administratorom w usłudze Intune wykonywania zadań zarządzania grupami w usłudze Azure AD.
+
+
+
+
+### Jakie funkcje usługi Intune nie będą dostępne?
+Chociaż środowisko grupy zostanie ulepszone, po migracji w usłudze Intune nie będą dostępne pewne funkcje.
+
+#### Funkcja zarządzania grupami
+
+-   Nie będzie możliwe wykluczenie członków ani grup podczas tworzenia nowej grupy. Grupy dynamiczne usługi Azure AD będą jednak umożliwiały używanie atrybutów do tworzenia zaawansowanych reguł wykluczania członków na podstawie kryteriów.
+-   Grupy **Użytkownicy niezgrupowani** i **Urządzenia niezgrupowane** nie będą obsługiwane. Te grupy nie będą migrowane.
+
+
+#### Funkcja zależna od grupy
+
+-   Rola administratora usługi nie będzie miała uprawnienia do **zarządzania grupami**.
+-   Nie będzie możliwe grupowanie urządzeń programu Exchange ActiveSync.  Twoja grupa **Wszystkie urządzenia zarządzane przez program EAS** zostanie przekonwertowana z grupy na widok raportu.
+-  Przestawianie z grupami w raportach nie będzie dostępne.
+-  Określanie grup niestandardowych jako obiektów docelowych reguł powiadomień nie będzie dostępne.
+
+### Co należy zrobić, aby przygotować się do tej zmiany?
+ Mamy następujące zalecenia, które ułatwią to przejście:
+
+- Wyczyść wszystkie niepożądane lub niepotrzebne grupy Intune przed migracją.
+- Oceń zastosowanie wykluczeń w grupach i rozważ zmianę projektu grup, dzięki czemu nie będzie konieczne używanie wykluczeń.
+-  Jeśli istnieją administratorzy, którzy nie mają uprawnień do tworzenia grup w usłudze Azure AD, skontaktuj się z administratorem usługi Azure AD, aby dodać ich do roli **administratora usługi Intune** w usłudze Azure AD.
+
 
 # Tworzenie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune
+
+W tej sekcji opisano sposób tworzenia grup w usłudze Intune w konsoli administracyjnej Intune.
 
 Aby utworzyć grupy i zarządzać nimi, użyj obszaru roboczego **Grupy** w konsoli administracyjnej usługi Microsoft Intune. Strona **Przegląd grup** zawiera podsumowania stanów, które ułatwiają zidentyfikowanie i ustalenie priorytetów dla problemów wymagających uwagi, które dotyczą następujących zagadnień:
 
@@ -153,6 +208,6 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

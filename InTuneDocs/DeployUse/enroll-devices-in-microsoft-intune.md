@@ -13,14 +13,16 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7bea7ba4ef59c6b1400414b59456e19dc1c152fb
-ms.openlocfilehash: 41c21da7c95ef15f817aa344aa5b2d6479b65922
+ms.sourcegitcommit: c329bd08aaf72ae2acaa03dcb12c911d84b46b4e
+ms.openlocfilehash: 9d624da7931c56476b476b7a9fd5711f398052c4
 
 
 ---
 
 # Rejestrowanie urządzeń do zarządzania w usłudze Intune
 Usługa zarządzania urządzeniami przenośnymi Microsoft Intune (MDM) używa rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów. Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. W scenariuszach opartych na strategii „przynieś własne urządzenie” (BYOD) i urządzeniach należących do firmy (COD) wymaga się procesu rejestracji urządzeń. Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać lżejszych metod zarządzania, w których nie wymaga się rejestracji urządzeń. Za pomocą oprogramowania klienckiego usługi Intune można również zarządzać komputerami z systemem Windows.
+
+Zobacz [informacje na temat rejestrowania urządzeń](/intune/get-started/choose-how-to-enroll-devices1), aby uzyskać pomoc.
 
 ###  Obsługiwane platformy urządzeń
 
@@ -149,6 +151,6 @@ Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

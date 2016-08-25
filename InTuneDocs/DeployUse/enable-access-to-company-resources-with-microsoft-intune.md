@@ -13,26 +13,26 @@ ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ae9b3be57e4008d25f5222025c057fc4211f1119
+ms.sourcegitcommit: 167db9027e69dd6419d5deec758a8a0a0b119a97
+ms.openlocfilehash: 8605a665a0033fdc9b05ba452f5bf966e76699ca
 
 
 ---
 
 # Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune
-Profile sieci Wi-Fi, sieci VPN i poczty e-mail w usłudze Microsoft Intune działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do skutecznej pracy, niezależnie od miejsca, w którym się znajdują. Profile certyfikatów ułatwiają zabezpieczanie dostępu.
+Profile sieci Wi-Fi, sieci VPN i poczty e-mail w usłudze Microsoft Intune działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do pracy niezależnie od miejsca, w którym się znajdują. Profile certyfikatów ułatwiają zabezpieczanie dostępu.
 
 ## [Profile sieci Wi-Fi](wi-fi-connections-in-microsoft-intune.md) i obsługiwane platformy
 
-Wdrażaj ustawienia sieci bezprzewodowej dla użytkowników. Wdrażając te ustawienia, można zminimalizować działania użytkowników końcowych wymagane w celu połączenia z siecią firmową.
+Wdrażaj ustawienia sieci bezprzewodowej dla użytkowników. Te ustawienia ułatwiają użytkownikom nawiązywanie połączeń z siecią firmową.
 #### Obsługiwane platformy
 
 |Windows 8.1 i nowsze|System Windows Phone 8.1 lub nowszy|iOS|Android|Samsung KNOX|
 |---------------------|---------------------------|---|-------|------------|
-|Tak (można zaimportować profil Wi-Fi systemu Windows)|Tak (można skonfigurować identyfikator OMA-URI) |Tak|Tak|Tak|
+|Tak (można zaimportować profil sieci Wi-Fi systemu Windows).|Tak (można skonfigurować identyfikator OMA-URI). |Tak|Tak|Tak|
 
 ## [Profile sieci VPN](vpn-connections-in-microsoft-intune.md) i obsługiwane platformy
-Wdrażanie ustawień wirtualnej sieci prywatnej (VPN) dla użytkowników. Przez wdrożenie tych ustawień można zminimalizować nakład pracy użytkowników końcowych wymagany do nawiązywania połączeń z zasobami w sieci firmowej.
+Wdrażanie ustawień wirtualnej sieci prywatnej (VPN) dla użytkowników. Te ustawienia ułatwiają użytkownikom nawiązywanie połączeń z zasobami w sieci firmowej.
 
 |Windows 8.1 i nowsze|System Windows Phone 8.1 lub nowszy|iOS|Android|Samsung KNOX|
 |---------------------|---------------------------|---|-------|------------|
@@ -56,6 +56,6 @@ Ułatwienie bezpiecznego dostępu do zasobów firmowych z uwzględnieniem połą
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

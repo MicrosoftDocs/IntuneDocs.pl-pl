@@ -13,15 +13,18 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 85e6b4c4e507b83ba4a5f104e552e5a4f1fd68f2
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
 
 
 ---
 
 # Korzystanie z urządzenia z systemem Windows i usługi Intune
 
-Ta strona zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: informacje dotyczące rejestracji, zadania zarządzania i problemy ze zgodnością.
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+- Zadania zarządzania po rejestracji
+- Problemy ze zgodnością
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -57,6 +60,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
