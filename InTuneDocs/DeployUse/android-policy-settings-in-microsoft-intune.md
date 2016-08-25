@@ -5,7 +5,7 @@ description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6e3e81f37e677a016ac49240cc70602a568afcd5
-ms.openlocfilehash: 9385ca0e5aa9dd8fc2daf79c57b47951bcd5c0cb
+ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
+ms.openlocfilehash: 31c91609b913034ad3aaae0950145d4db5f59a0a
 
 
 ---
@@ -155,7 +155,7 @@ Określ następujące ustawienia dla **urządzeń z systemem Samsung KNOX**:
 ### Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
 
 #### Monitoruj aplikacje zgodne i niezgodne
-Użyj **Raportu o niezgodnych aplikacjach**, aby wyświetlić zgodność dozwolonych i blokowanych aplikacji.
+Użyj **Raportu o niezgodnych aplikacjach** , aby wyświetlić zgodność dozwolonych i blokowanych aplikacji.
 
 ###### Aby uruchomić raport o niezgodnych aplikacjach
 
@@ -197,65 +197,17 @@ Ta funkcja ma umożliwić wdrażanie ustawień systemu Android, których nie mo�
     |**OMA-URI (z uwzględnieniem wielkości liter)**|Określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.|
     |**Wartość**|Określ wartość, która będzie kojarzona z określonym wcześniej identyfikatorem OMA-URI.|
 
-### Przykład: konfigurowanie niestandardowego profilu Wi-Fi z użyciem klucza wstępnego
-Chociaż usługa Intune obsługuje profile Wi-Fi dla urządzeń z systemem Android, funkcja ta nie obsługuje obecnie uwzględniania klucza wstępnego w konfiguracji. W tym przykładzie dowiesz się, jak utworzyć zasady niestandardowe systemu Android umożliwiające tworzenie profilu Wi-Fi z użyciem klucza wstępnego na urządzeniu Android.
+### Przykłady
 
-#### Aby utworzyć profil Wi-Fi z użyciem klucza wstępnego
-
-1.  Upewnij się, że użytkownicy korzystają z najnowszej wersji aplikacji [Portal firmy w usłudze Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) dla systemu Android.
-
-2.  Utwórz niestandardowe zasady systemu Android i dodaj następujące ustawienia:
-
-|Nazwa ustawienia|Szczegóły|
-|----------------|--------------------|
-|**Nazwa ustawienia**|Określ nazwę ustawienia.|
-|**Opis ustawienia**|Określ opis ustawienia.|
-|**Typ danych**|Wybierz pozycję **Ciąg (XML)**.|
-|**OMA-URI**|Wpisz następujący ciąg: ./Vendor/MSFT/WiFi/Profile/*&lt;Twój profil Wi-Fi&gt;*/Settings|
-
-3.  W polu **Wartość** skopiuj i wklej następujący kod XML:
-
-    ```
-    <!--
-    WEP Wifi Profile
-                    <Name of wifi profile> = Name of profile
-                    <SSID of wifi profile> = Plain text version of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
-                    <WEP password> = Password to connect to the network
-    -->
-    <WLANProfile
-    xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-      <name><Name of wifi profile></name>
-      <SSIDConfig>
-        <SSID>
-          <name><SSID of wifi profile></name>
-        </SSID>
-      </SSIDConfig>
-      <connectionType>ESS</connectionType>
-      <MSM>
-        <security>
-          <authEncryption>
-            <authentication>open</authentication>
-            <encryption>WEP</encryption>
-            <useOneX>false</useOneX>
-          </authEncryption>
-          <sharedKey>
-            <keyType>networkKey</keyType>
-            <protected>false</protected>
-            <keyMaterial><WEP password></keyMaterial>
-          </sharedKey>
-          <keyIndex>0</keyIndex>
-        </security>
-      </MSM>
-    </WLANProfile>
-    ```
-
-4.  Po zakończeniu zapisz zasady, a następnie wdróż je na wybranych urządzeniach z systemem Android. Nowy profil Wi-Fi pojawi się na liście połączeń na urządzeniu.
+- [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego](pre-shared-key-wi-fi-profile.md)
+- [Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji na urządzeniach z systemem Android](per-app-vpn-for-android-pulse-secure.md)
+- [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX](custom-policy-to-allow-and-block-samsung-knox-apps.md)
 
 ### Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

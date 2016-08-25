@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc5ff023b5d29ded999c7e49c5e7c2aee8a23bba
-ms.openlocfilehash: e71cc1e8e2cb0f46507ff63d962f3d477acfb72e
+ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
+ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
 
 
 ---
@@ -233,6 +233,77 @@ Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 7
 |**Zezwalaj użytkownikowi na instalowanie profilów konfiguracji i certyfikatów**|Zezwala użytkownikowi na instalowanie profilów konfiguracji i certyfikatów.|
 |**Zezwalaj na korzystanie z aplikacji Messages na urządzeniu**|Zezwala na korzystanie z aplikacji Messages do wysyłania wiadomości SMS.|
 
+### Pokaż lub ukryj aplikacje
+
+Użyj **listy ukrytych i pokazanych aplikacji**, aby wykonać następujące działania na nadzorowanych urządzeniach z systemem iOS 9.3 lub nowszym:
+
+- Określić listę aplikacji, które będą ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
+- Określić listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
+
+
+#### Jak utworzyć listę pokazanych lub ukrytych aplikacji
+
+Określ następujące ustawienia:
+
+|Nazwa ustawienia|Szczegóły|
+|-|-|
+|**Lista aplikacji ukrytych i pokazanych**|Włącz to ustawienie, jeśli chcesz utworzyć listę ukrytych lub pokazanych aplikacji.|
+|**Ukryj aplikacje na liście przed użytkownikami**|Wybierz tę opcję, jeśli chcesz utworzyć listę aplikacji, które będą ukryte przed użytkownikami.|
+|**Pokaż użytkownikom tylko aplikacje na liście**|Wybierz tę opcję, jeśli chcesz utworzyć listę aplikacji, które będą wyświetlane dla użytkowników.<br>Po utworzeniu listy tego typu wszystkie pozostałe aplikacje systemu iOS, z wyjątkiem aplikacji **Ustawienia** i **Telefon** (w przypadku telefonu iPhone), będą ukryte.<br>Ponadto należy dodać do listy aplikację Portal firmy i wszystkie aplikacje wdrożone i zarządzane za pomocą usługi Intune.|
+|**Dodaj**|Dodaje aplikację do wybranej listy.<br>W przypadku listy ukrytych należy określić **nazwę**, **wydawcę** i **adres URL aplikacji lub identyfikator pakietu** każdej aplikacji, która ma być ukryta.<br>W przypadku listy pokazanych możesz użyć polecenia **Wybierz zarządzaną aplikację**, aby wyświetlić listę aplikacji do wyboru zarządzanych przez usługę Intune. Możesz także użyć polecenia Wybierz aplikację ze sklepu i określić **nazwę**, **wydawcę** i **adres URL aplikacji lub identyfikator pakietu** każdej aplikacji, która ma być wyświetlana.|
+|**Importuj aplikacje**|Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.|
+|**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
+|**Usuwanie**|Usuwa wybraną aplikację z listy.|
+
+#### Informacje o aplikacji dla wbudowanych aplikacji systemu iOS
+
+Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator pakietu dla wbudowanych aplikacji systemu iOS, które można pokazać lub ukryć. Jeśli chcesz pokazać lub ukryć wszystkie aplikacje na liście, możesz skopiować dane poniżej do pliku tekstowego z rozszerzeniem **csv**, a następnie użyć opcji **Importuj aplikacje**, aby zaimportować wszystkie aplikacje jednocześnie.
+
+```
+App Store,Apple,com.apple.AppStore
+Calculator,Apple,com.apple.calculator
+Calendar,Apple,com.apple.mobilecal
+Camera,Apple,com.apple.camera
+Clock,Apple,com.apple.mobiletimer
+Compass,Apple,com.apple.compass
+Contacts,Apple,com.apple.MobileAddressBook
+FaceTime,Apple,com.apple.facetime
+Find Friends,Apple,com.apple.mobileme.fmf1
+Find iPhone,Apple,com.apple.mobileme.fmip1
+Game Center,Apple,com.apple.gamecenter
+GarageBand,Apple,com.apple.mobilegarageband
+Health,Apple,com.apple.Health
+iBooks,Apple,com.apple.iBooks
+iTunes Store,Apple,com.apple.MobileStore
+iTunes U,Apple,com.apple.itunesu
+Keynote,Apple,com.apple.Keynote
+Mail,Apple,com.apple.mobilemail
+Maps,Apple,com.apple.Maps
+Messages,Apple,com.apple.MobileSMS
+Music,Apple,com.apple.Music
+News,Apple,com.apple.news
+Notes,Apple,com.apple.mobilenotes
+Numbers,Apple,com.apple.Numbers
+Pages,Apple,com.apple.Pages
+Photo Booth,Apple,com.apple.Photo-Booth
+Photos,Apple,com.apple.mobileslideshow
+Podcasts,Apple,com.apple.podcasts
+Reminders,Apple,com.apple.reminders
+Safari,Apple,com.apple.mobilesafari
+Settings,Apple,com.apple.Preferences
+Stocks,Apple,com.apple.stocks
+Tips,Apple,com.apple.tips
+Videos,Apple,com.apple.videos
+VoiceMemos,Apple,com.apple.VoiceMemos
+Wallet,Apple,com.apple.Passbook
+Watch,Apple,com.apple.Bridge
+Weather,Apple,com.apple.weather
+
+
+```
+
+
+
 
 ## Ustawienia zasad niestandardowych
 
@@ -266,6 +337,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
