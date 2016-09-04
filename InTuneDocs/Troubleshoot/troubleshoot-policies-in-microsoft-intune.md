@@ -4,7 +4,7 @@ description: "Rozwiązywanie problemów z konfiguracją zasad."
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/01/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 436d0c40ef317e1d258654d2164e7a1f8c35c5e1
-ms.openlocfilehash: 6bfa9bab46248be802679e70de18ff117171a1fb
+ms.sourcegitcommit: 1f133d31311706365888cf33ceb4c4412deec333
+ms.openlocfilehash: a8afc681b8b12e1e760dea3f784e4beac4697242
 
 
 ---
@@ -46,17 +46,6 @@ Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 
 > [!NOTE]
 > Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
-
-## Odświeżanie zasad i interwały aktualizacji
-Należy pamiętać, że zasady są odświeżane i aktualizowane w regularnych odstępach czasu. Zwykle zasady powinny być rejestrowane na urządzeniach w ciągu 15 minut od dokonania zmiany. Poniżej przedstawiono więcej informacji na temat regularnych odstępów czasu odświeżania zasad:
-
--   **Urządzenie z systemem Windows zarejestrowane w oprogramowaniu MDM**: zasady są aktualizowane co 8 godzin dla urządzeń z systemem Windows 8.1 i Windows 10 i co 24 godziny dla urządzeń z systemem Windows RT.
-
--   **Windows Phone**: zasady są aktualizowane co 8 godzin. Aktualizację można wymusić przez odświeżenie w portalu firmy w obszarze **Ustawienia**.
-
--   **iOS**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
-
--   **Android**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
 
 ## Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
 W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM błędy zasad w pliku policyplatform.log mogą wynikać z innych niż domyślne ustawień w Kontroli konta użytkownika systemu Windows na urządzeniu. Niektóre inne niż domyślne ustawienia funkcji Kontroli konta użytkownika mogą wpływać na instalacje klienta usługi Microsoft Intune i wykonywanie zasad.
@@ -93,9 +82,6 @@ Na przykład w systemie Windows RT na pulpicie szybko przesuń palcem z prawej s
 W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
 
-## Urządzenia z systemem Android nie wymuszają zmian zasad zabezpieczeń bez akceptacji użytkownika
-W przeciwieństwie do innych platform urządzenia MDM z systemem Android nie pozwalają usłudze na wymuszanie początkowych zmian zasad na urządzeniach. Jest to spowodowane działaniem funkcji systemu Android i nie ma związku z usługą Intune. Urządzenia z systemem Android monitują użytkownika końcowego za pośrednictwem okna powiadomień o zmianie pokrewnych zasad (np. dotyczących hasła, szyfrowania itp.).  Użytkownik końcowy musi odpowiedzieć na ten monit i po zaakceptowaniu zasady powinny zostać zastosowane.
-
 ## Nie można utworzyć zasad lub zarejestrować klientów, jeśli nazwa firmy zawiera znaki specjalne.
 **Problem:** Nie można utworzyć zasad lub zarejestrować klientów.
 
@@ -106,6 +92,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 
