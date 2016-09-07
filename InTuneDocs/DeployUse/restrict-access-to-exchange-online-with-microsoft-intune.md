@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 5e94a6575627d295efa592522a1fa28bfcd358a6
+ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
+ms.openlocfilehash: 38273970b6bb6f576786e6a7a2aeaaa65ee07d37
 
 
 ---
@@ -29,7 +29,7 @@ Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczy
 >[!IMPORTANT]
 >Dostęp warunkowy dla komputerów i urządzeń z systemem Windows 10 Mobile za pomocą aplikacji korzystających z nowoczesnego uwierzytelniania nie jest obecnie dostępny dla wszystkich klientów usługi Intune. Jeśli te funkcje są już używane, nie ma potrzeby podejmowania żadnych działań. Możesz nadal z nich korzystać.
 
->Jeśli zasady dostępu warunkowego dla komputerów lub urządzeń z systemem Windows 10 Mobile dla aplikacji korzystających z nowoczesnego uwierzytelniania nie zostały utworzone, a chcesz je utworzyć, musisz przesłać żądanie.  Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji, można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Jeśli dla komputerów PC i urządzeń z systemem Windows 10 Mobile nie utworzono zasad dostępu warunkowego do aplikacji korzystających z nowoczesnego uwierzytelniania, można to zrobić, rejestrując się w bazie użytkowników wersji zapoznawczej usługi Azure Active Directory, która obejmuje funkcję dostępu warunkowego opartego na urządzeniach dla urządzeń zarządzanych przez usługę Intune lub komputerów z systemem Windows przyłączonych do domeny. Aby dowiedzieć się więcej, przeczytaj [ten wpis w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).  
 
 **Przed** skonfigurowaniem dostępu warunkowego należy:
 
@@ -196,7 +196,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
         * Nieobsługiwane platformy takie jak system Mac OS.  Jednak aplikacje korzystające z nowoczesnego uwierzytelniania pochodzące z tych platform nadal będą zablokowane.
 
         >[!TIP]
-           Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji o znanych problemach, jak również informacje dotyczące sposobu uzyskania dostępu do tej funkcji, można znaleźć w [witrynie Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+           Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji na temat sposobu uzyskania dostępu do tej funkcji można znaleźć [w tym wpisie w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Określone platformy**
 
@@ -260,6 +260,6 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

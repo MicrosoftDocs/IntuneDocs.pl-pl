@@ -23,8 +23,8 @@
 ### [Zadania po konfiguracji](post-configuration-tasks.md)
 
 ## [Wybieranie metody zarządzania urządzeniami](choose-how-to-manage-devices.md)
-### [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Możliwości zarządzania komputerami z systemem Windows](windows-pc-management-capabilities-in-microsoft-intune.md)
+### [Możliwości zarządzania zarejestrowanymi urządzeniami](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 ## [Etapy wdrażania usługi Intune](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Zakres projektu](project-scope.md)
@@ -39,6 +39,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

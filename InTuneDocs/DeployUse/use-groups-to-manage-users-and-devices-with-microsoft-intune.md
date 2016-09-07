@@ -13,11 +13,15 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab9592c253238fd832f8b48372e5474fcfc5331
-ms.openlocfilehash: 96b0cd997544b2013efaca818d614c9802baaa46
+ms.sourcegitcommit: e7c680c43b8c9120755ec3c652cf7ec1cbcc3472
+ms.openlocfilehash: b13e2ff2f4822d71ef8cff9d835e32b99cb3e4ab
 
 
 ---
+# Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune
+
+W tym temacie opisano sposób tworzenia grup w usłudze Intune. Temat zawiera także informacje o tym, w jaki sposób zarządzanie grupami może zmienić się na przestrzeni nadchodzących miesięcy. Aby dowiedzieć się więcej o *bieżącym* podejściu do zarządzania grupami, zapoznaj się z sekcją [Tworzenie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune) w tym temacie.
+
 ## Informacja o nadchodzących ulepszeniach środowiska pracy administratora dla grup
 
 Na podstawie opinii użytkowników, aby istniało jedno środowisko grupowania i kierowania w pakiecie Enterprise Mobility + Security, konwertujemy grupy usługi Intune na grupy zabezpieczeń oparte na usłudze Azure Active Directory. Spowoduje to ujednolicenie zarządzania grupami w usłudze Intune i usłudze Azure Active Directory (Azure AD). Nowe środowisko zlikwiduje konieczność duplikowania grup między usługami i zapewni możliwość rozszerzenia przy użyciu programów PowerShell i Graph. 
@@ -72,7 +76,7 @@ Chociaż środowisko grupy zostanie ulepszone, po migracji w usłudze Intune nie
 -  Jeśli istnieją administratorzy, którzy nie mają uprawnień do tworzenia grup w usłudze Azure AD, skontaktuj się z administratorem usługi Azure AD, aby dodać ich do roli **administratora usługi Intune** w usłudze Azure AD.
 
 
-# Tworzenie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune
+## Tworzenie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune
 
 W tej sekcji opisano sposób tworzenia grup w usłudze Intune w konsoli administracyjnej Intune.
 
@@ -208,6 +212,6 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

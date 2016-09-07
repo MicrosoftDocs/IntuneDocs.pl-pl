@@ -4,7 +4,7 @@ description: "Metody udostępniania aplikacji dla systemu iOS użytkownikom koń
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6dbb6012389d8058c2d9b1c46b4ae8c2418a6130
-ms.openlocfilehash: 30ebdfa1729df81a3b4a4a90b71aadacf373bb2d
+ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
+ms.openlocfilehash: 212dcd31697180dae61569dda13b56704a079bf4
 
 
 ---
@@ -32,12 +32,23 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzy
 
 **Aplikacje niezarządzane** — aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub które nie zawierają zestawu Intune MAM SDK. W przypadku tych aplikacji nie można stosować zasad aplikacji.
 
+Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu z aplikacjami, w związku z czym użytkownicy muszą korzystać z różnych widoków, aby znaleźć wszystkie swoje aplikacje. Aplikacje dla każdego z kafelków widocznych na stronie Aplikacje w aplikacji Portal firmy są dostępne w następujących lokalizacjach:
+
+- Kafelek **Aplikacje firmowe** pozwala przejść do listy wszystkich aplikacji na karcie **WSZYSTKIE** [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com).
+
+- Kafelek **Inne aplikacje** pozwala obecnie przejść do widoku aplikacji Portal firmy zawierającego wszystkie aplikacje, których wyświetlanie w aplikacji Portal firmy jest dozwolone zgodnie z zasadami firmy Apple. Lista obejmuje wszystkie aplikacje z wyjątkiem aplikacji biznesowych i zarządzanych pochodzących ze sklepu z aplikacjami.
+
+- Kafelek **Kategorie** pozwala obecnie przejść do widoku aplikacji Portal firmy, w którym wyświetlana jest lista kategorii aplikacji.
+
+    ![ios-how-to-sync-device-with-intune](./media/ios-sync-comp-portal-apps.png)
+
+
 ###Zobacz także
 [Jak użytkownicy systemu Android uzyskują aplikacje](how-your-android-users-get-their-apps.md)</br>
 [Jak użytkownicy systemu Windows uzyskują aplikacje](how-your-windows-users-get-their-apps.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

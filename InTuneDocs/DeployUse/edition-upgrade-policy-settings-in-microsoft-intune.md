@@ -4,7 +4,7 @@ description: "Dowiedz się, jak automatycznie uaktualniać urządzenia z systeme
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8589866a-3f13-489b-a5cd-cee017d16d54
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a08ace43fb61f57a9d29b119c59698bc50e7af8
-ms.openlocfilehash: 49bc54f36b281d85c9667c51fb6ddbe0d454b4d1
+ms.sourcegitcommit: 4bed62ebe07d5470414183626b34e68dd91f2d01
+ms.openlocfilehash: 17933e41a646f305f9fb765e790c0de36a5036ba
 
 
 ---
@@ -26,9 +26,9 @@ ms.openlocfilehash: 49bc54f36b281d85c9667c51fb6ddbe0d454b4d1
 
 ## Przed rozpoczęciem
 Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz jednego z następujących elementów:
-* Klucza produktu umożliwiającego zainstalowanie nowej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Desktop).
-* Pliku licencji od firmy Microsoft, który zawiera informacje licencyjne umożliwiające zainstalowanie nowej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows Mobile 10 i Windows 10 Holographic).
-* Docelowe urządzenia z systemem Windows 10 muszą być zarejestrowane w usłudze Microsoft Intune.
+* Klucza produktu umożliwiającego zainstalowanie nowej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Desktop). Można użyć kluczy aktywacji wielokrotnej (MAK) lub kluczy usługi serwera zarządzania kluczami (KMS)
+**lub też** pliku licencji od firmy Microsoft, który zawiera informacje licencyjne umożliwiające zainstalowanie nowej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Mobile i Windows 10 Holographic).
+* Docelowe urządzenia z systemem Windows 10 muszą być zarejestrowane w usłudze Microsoft Intune. Z zasad uaktualniania wersji nie można korzystać w przypadku komputerów z oprogramowaniem klienckim Intune.
 
 ## Ustawienia zasad uaktualniania wersji
 
@@ -45,6 +45,6 @@ Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz j
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

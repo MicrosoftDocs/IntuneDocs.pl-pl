@@ -4,7 +4,7 @@ description: "Linki do informacji, które można udostępnić użytkownikom koń
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: e904f7e7e91d86359a0fd818032833caa382edcc
+ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
+ms.openlocfilehash: d29649c204f50aec1d1604b55bebc6018a3c7ef2
 
 
 ---
@@ -33,7 +33,9 @@ Upewnij się, że uwzględniasz informacje kontaktowe administratora IT podczas 
 
 ## Gdzie użytkownicy mogą znaleźć informacje o typowych zadaniach
 
-Przekaż użytkownikom poniższe linki pomocy dla użytkowników końcowych, jeśli szukają informacji na temat korzystania z usługi Intune na swoich urządzeniach. Te linki prowadzą do instrukcji dotyczących instalowania aplikacji Portal firmy, rejestrowania urządzeń, pobierania aplikacji zarządzanych, rozwiązywania problemów i nie tylko.
+Gdy zarejestrowani użytkownicy potrzebują pomocy w zakresie korzystania z usługi Intune, zwykle mogą skorzystać z linku widocznego w witrynie sieci Web Portal firmy lub aplikacji Portal firmy, prowadzącego do określonego artykułu z opisem czynności niezbędnych do rozwiązania problemu lub ukończenia zadania. Jeśli na przykład użytkownik urządzenia z systemem Android otrzyma komunikat informujący o braku wymaganego certyfikatu, może wybrać link „Jak rozwiązać ten problem”, aby przejść do artykułu z opisem kroków pozwalających pobrać certyfikat. 
+
+Poniższe linki są przeznaczone dla administratorów IT. Strony te zawierają linki do wszystkich artykułów, do których są odsyłani użytkownicy z aplikacji lub witryny sieci Web Portal firmy. Linki są podzielone na sekcje: instalacja aplikacji Portal firmy i rejestracja w usłudze Intune; zadania, które użytkownicy mogą wykonać na swoich urządzeniach, takie jak używanie aplikacji zarządzanych i ręczne synchronizowanie urządzeń; rozwiązywanie problemów.
 
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](/Intune/EndUser/using-your-android-device-with-intune)
 - [Using your iOS or Mac OS X device with Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
@@ -59,8 +61,10 @@ Aby zrozumieć, jak użytkownicy końcowi uzyskują aplikacje, wybierz jedną z 
 
 Aby pomóc użytkownikom w rozwiązywaniu problemów, które mogą pojawić się podczas korzystania z Portalu firmy, sprawdź [listę komunikatów, które użytkownicy mogą zobaczyć w Portalu firmy](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages).
 
+Propozycje dotyczące innych informacji, które powinny zostać omówione w tym artykule, można wpisać w polu Komentarz w dolnej części tego tematu. Dziękujemy!
 
 
-<!--HONumber=Jul16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 
