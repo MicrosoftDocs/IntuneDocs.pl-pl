@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 472dc010232c6720873b4c2f697c853a410c72e1
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: b8bc9cca66d35147b5bb235f2e01c3867104d1ee
 
 
 ---
@@ -32,11 +32,9 @@ Jeśli uważasz, że nie wykonano żadnych czynności mających na celu odblokow
 - Producent urządzenia zainstalował na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. Skontaktuj się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

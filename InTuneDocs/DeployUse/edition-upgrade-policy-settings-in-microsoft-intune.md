@@ -4,7 +4,7 @@ description: "Dowiedz się, jak automatycznie uaktualniać urządzenia z systeme
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/22/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8589866a-3f13-489b-a5cd-cee017d16d54
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4bed62ebe07d5470414183626b34e68dd91f2d01
-ms.openlocfilehash: 17933e41a646f305f9fb765e790c0de36a5036ba
+ms.sourcegitcommit: 06a9c78300d7ff384299957102114c69c43a1ad5
+ms.openlocfilehash: 45130e3e12968d9df579a7a9d0cade0343b7c165
 
 
 ---
@@ -23,6 +23,7 @@ ms.openlocfilehash: 17933e41a646f305f9fb765e790c0de36a5036ba
 **Zasady uaktualniania wersji** w usłudze Microsoft Intune umożliwiają automatyczne uaktualnianie urządzeń z uruchomioną jedną z następujących wersji systemu Windows 10 do nowszej wersji:
 * Windows 10 Desktop
 * Windows 10 Holographic
+* Windows 10 Mobile
 
 ## Przed rozpoczęciem
 Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz jednego z następujących elementów:
@@ -45,6 +46,6 @@ Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz j
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

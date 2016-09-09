@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ede9c4db136eb0498cad6d196488d03768741328
-ms.openlocfilehash: 382dd93a5aec7415e5fb738f3068820e36d8ae06
+ms.sourcegitcommit: 281557e7b9c4b2ed1ff6122dbd574df4a2601a8c
+ms.openlocfilehash: 3d62fe870a609af982435bd3f482fcc18beecdb1
 
 
 ---
@@ -29,33 +29,34 @@ Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzi
 ### Krok 1. Zarządzanie certyfikatami
 1. W konsoli usługi Azure Active Directory (Azure AD) wyeksportuj certyfikat.
 
-    #### Internet Explorer 11
+#### Internet Explorer 11
 
 
-    a. Uruchom program Internet Explorer jako administrator i zaloguj się do konsoli usługi Azure AD.
+   a. Uruchom program Internet Explorer jako administrator i zaloguj się do konsoli usługi Azure AD.
 
-    b. Wybierz ikonę blokady na pasku adresu i wybierz polecenie **Wyświetl certyfikaty**.
+   b. Wybierz ikonę blokady na pasku adresu i wybierz polecenie **Wyświetl certyfikaty**.
 
-    c. Na karcie **Szczegóły** właściwości certyfikatu wybierz pozycję **Kopiuj do pliku**.
+   c. Na karcie **Szczegóły** właściwości certyfikatu wybierz pozycję **Kopiuj do pliku**.
 
-    d. Na stronie powitalnej **Kreatora eksportu certyfikatów** wybierz polecenie **Dalej**.
+   d. Na stronie powitalnej **Kreatora eksportu certyfikatów** wybierz polecenie **Dalej**.
 
-    e. Na stronie **Format pliku eksportu** pozostaw domyślną wartość domyślną **Certyfikat X.509 szyfrowany binarnie algorytmem DER (.CER)**, a następnie wybierz polecenie **Dalej**.  
+   e. Na stronie **Format pliku eksportu** pozostaw domyślną wartość domyślną **Certyfikat X.509 szyfrowany binarnie algorytmem DER (.CER)**, a następnie wybierz polecenie **Dalej**.  
 
-    f. Na stronie **Plik do eksportu** wybierz pozycję **Przeglądaj**, wskaż lokalizację, w której ma zostać zapisany plik, a następnie podaj nazwę pliku. Chociaż wydaje się, że wybierasz plik do wyeksportowania, w rzeczywistości nadajesz nazwę plikowi, w którym zostanie zapisany wyeksportowany certyfikat. Wybierz pozycje **Dalej** &gt; **Zakończ**.
+   f. Na stronie **Plik do eksportu** wybierz pozycję **Przeglądaj**, wskaż lokalizację, w której ma zostać zapisany plik, a następnie podaj nazwę pliku. Chociaż wydaje się, że wybierasz plik do wyeksportowania, w rzeczywistości nadajesz nazwę plikowi, w którym zostanie zapisany wyeksportowany certyfikat. Wybierz pozycje **Dalej** &gt; **Zakończ**.
 
-    #### Safari
+#### Safari
 
-    a. Zaloguj się do konsoli usługi Azure AD.
+ a. Zaloguj się do konsoli usługi Azure AD.
 
-    b. Wybierz ikonę blokady &gt; **Więcej informacji o**.
+b. Wybierz ikonę blokady &gt; **Więcej informacji o**.
 
-    c. Wybierz pozycje **Wyświetl certyfikat** &gt; **Szczegóły**.
+   c. Wybierz pozycje **Wyświetl certyfikat** &gt; **Szczegóły**.
 
-    d. Wybierz certyfikat, a następnie wybierz pozycję **Eksportuj**.  
+   d. Wybierz certyfikat, a następnie wybierz pozycję **Eksportuj**.  
 
-    > [!IMPORTANT]
-    > Sprawdź datę wygaśnięcia certyfikatu, ponieważ po jej upłynięciu trzeba będzie wyeksportować i zaimportować nowy certyfikat.
+> [!IMPORTANT]
+>
+> Sprawdź datę wygaśnięcia certyfikatu, ponieważ po jej upłynięciu trzeba będzie wyeksportować i zaimportować nowy certyfikat.
 
 
 2. Z poziomu konsoli ISE zaimportuj certyfikat usługi Intune (wyeksportowany plik) do magazynu **zaufanych certyfikatów**.
@@ -146,6 +147,6 @@ Istnieje również [dostępny do pobrania zestaw instrukcji dotyczących rejestr
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

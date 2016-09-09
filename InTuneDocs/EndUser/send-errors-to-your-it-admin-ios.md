@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 35cb5187260eb7b96e09ee7feb24bad90cbb0cb3
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 5a2a53e1fa012c2b786d5955749d1f8442a32030
 
 
 ---
@@ -31,11 +31,10 @@ Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z a
 
 -   Podczas korzystania z aplikacji Portal firmy: potrząśnij urządzeniem, a następnie wybierz polecenie **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycję **Ustawienia** &gt; **Portal firmy** i upewnij się, że opcja **Gest potrząsania** jest włączona.
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

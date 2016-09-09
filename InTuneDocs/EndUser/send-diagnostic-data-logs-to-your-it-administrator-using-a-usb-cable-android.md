@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 86a7805809bd6cfd363c0363795024677bf55a2e
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: c5b30aa6d4e7a1402db0ca1564326ec96bb5ab16
 
 
 ---
@@ -37,11 +37,10 @@ Jeśli chcesz wysłać dzienniki danych do administratora IT, aby uzyskać pomoc
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 
