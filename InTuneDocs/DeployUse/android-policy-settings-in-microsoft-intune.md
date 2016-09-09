@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 1809f619173ca57868cfd2b8466e6e2bcf05f0c7
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 870d735644f08e3eca8c72bca2b156947d798cb5
 
 
 ---
@@ -57,14 +57,14 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 ### Ustawienia szyfrowania
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Wymagaj szyfrowania na urządzeniu przenośnym**|Wymaga szyfrowania plików na urządzeniu przenośnym.|Tak|Tak|
 |**Wymagaj szyfrowania kart pamięci**|Określa, czy karta pamięci urządzenia musi być szyfrowana.|Nie|Tak|
 
 ### Ustawienia systemowe
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Zezwalaj na przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.|Nie|Tak|
 |**Zezwalaj na przesłanie danych diagnostycznych**|Umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Google.|Nie|Tak|
 |**Zezwalaj na resetowanie do ustawień fabrycznych**|Umożliwia użytkownikowi przeprowadzenie resetowania urządzenia do ustawień fabrycznych.|Nie|Tak|
@@ -72,19 +72,19 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 ### Ustawienia chmury — dokumenty i dane
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------------------|----------------|
+|----------------|----|------------------------|----------------|
 |**Zezwalaj na kopie zapasowe w usłudze Google**|Zezwala na korzystanie z kopii zapasowej Google.|Nie|Tak|
 
 ### Ustawienia chmury — konta i synchronizacja
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Zezwalaj na automatyczną synchronizację konta Google**|Zezwala na automatyczną synchronizację ustawień konta Google.|Nie|Tak|
 
 ### Ustawienia aplikacji — przeglądarka
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Zezwalaj na używanie przeglądarki sieci Web**|Określa, czy można używać domyślnej przeglądarki sieci Web na urządzeniu.|Nie|Tak|
 |**Zezwalaj na automatyczne uzupełnianie**|Umożliwia korzystanie z funkcji automatycznego uzupełniania w przeglądarce sieci Web.|Nie|Tak|
 |**Zezwalaj na blokowanie wyskakujących okienek**|Umożliwia blokowanie wyskakujących okienek w przeglądarce sieci Web.|Nie|Tak|
@@ -94,13 +94,13 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 ### Ustawienia aplikacji — aplikacje
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Zezwalaj na sklep Google Play**|Umożliwia użytkownikowi uzyskiwanie dostępu do sklepu Google Play na urządzeniu.|Nie|Tak|
 
 ### Ustawienia możliwości urządzenia — sprzęt
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Zezwalaj na używanie aparatu**|Zezwala na korzystanie z aparatu fotograficznego urządzenia.|Tak|Tak|
 |**Zezwalaj na używanie magazynu wymiennego**|Umożliwia używanie na urządzeniu magazynu wymiennego, takiego jak karta SD.|Nie|Tak|
 |**Zezwalaj na połączenia Wi-Fi**|Umożliwia korzystanie z funkcji Wi-Fi urządzenia.|Nie|Tak|
@@ -113,7 +113,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 ### Ustawienia możliwości urządzenia — połączenie komórkowe
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Zezwalaj na roaming połączeń głosowych**|Zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|Nie|Tak|
 |**Zezwalaj na roaming danych**|Zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.|Nie|Tak|
 |**Zezwalaj na obsługę wiadomości SMS/MMS**|Umożliwia korzystanie z wiadomości SMS i MMS na urządzeniu.|Nie|Tak|
@@ -121,7 +121,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 ### Ustawienia możliwości urządzenia — funkcje
 
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Zezwalaj na asystenta głosowego**|Umożliwia korzystanie z oprogramowania asystenta głosowego na urządzeniu.|Nie|Tak|
 |**Zezwalaj na wybieranie głosowe**|Włącza lub wyłącza funkcję wybierania głosowego na urządzeniu.|Nie|Tak|
 |**Zezwalaj na kopiowanie i wklejanie**|Umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.|Nie|Tak|
@@ -208,6 +208,6 @@ Ta funkcja ma umożliwić wdrażanie ustawień systemu Android, których nie mo�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
