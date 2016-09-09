@@ -10,6 +10,6 @@
 Za pomocą [klienta oprogramowania Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) można zarządzać komputerem z systemem Windows 7 lub nowszym. Klienci z pakietem Enterprise Management Suite (EMS) mogą także [użyć usługi Azure Active Directory (AAD), aby zarejestrować urządzenia z systemem Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO1-->
 
 
