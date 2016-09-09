@@ -13,8 +13,8 @@ ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: d8f7de4013c1bdf6174cd4e1d7491514b11a14a3
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 9a481e1ce7815a0411651fc724e3fc2f5d374eac
 
 
 ---
@@ -26,7 +26,7 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 ## Ustawienia hasła
 
 |Nazwa ustawienia|Szczegóły
-|----------------|
+|----------------|---|
 |**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy urządzenie musi być zablokowane przy użyciu hasła.<br>(Nie dotyczy urządzeń z systemami Windows RT).|
 |**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|
 |**Minimalna długość hasła**|Określa minimalną wymaganą liczbę znaków w haśle urządzenia.|
@@ -40,7 +40,7 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 ## Ustawienia szyfrowania
 
 |Nazwa ustawienia|Szczegóły|
-|----------------|
+|----------------|---|
 |**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup>|Wymaga szyfrowania danych na urządzeniu z obsługą tej funkcji.<br><br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie **Wymagaj hasła do odblokowania urządzeń przenośnych**.|
 |**Wymagaj szyfrowania kart pamięci**|Wymaga szyfrowania danych przechowywanych w pamięci zewnętrznej, np. na kartach SD (w obsługiwanych urządzeniach).
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
@@ -56,7 +56,7 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 ## Ustawienia poczty e-mail
 
 |Nazwa ustawienia|Szczegóły
-|----------------|
+|----------------|---|
 |**Zezwalaj użytkownikom na pobieranie załączników wiadomości e-mail**|Określa, czy na urządzenie można pobierać załączniki wiadomości e-mail.|
 |**Okres synchronizacji wiadomości e-mail**|Określa liczbę dni synchronizacji odebranych wiadomości e-mail na urządzeniu.
 |**Zezwalaj urządzeniom przenośnym, które nie obsługują w pełni ustawień programu Exchange ActiveSync, na synchronizowanie z programem Exchange**|Określa, czy zezwalać na dostęp do programu Exchange na urządzeniach, które nie obsługują co najmniej jednego ustawienia programu Exchange ActiveSync.
@@ -64,13 +64,13 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 ## Ustawienia przeglądarki
 
 |Nazwa ustawienia|Szczegóły
-|----------------|-
+|----------------|---|
 |**Zezwalaj na używanie przeglądarki sieci Web**|Określa, czy można używać przeglądarki sieci Web na urządzeniu.<br>(Niedostępne dla systemów Windows RT i Windows Phone).
 
 ## Ustawienia sprzętu
 
 |Nazwa ustawienia|Szczegóły
-|----------------|
+|----------------|---|
 |**Zezwalaj na używanie aparatu**|Określa, czy można używać aparatu w urządzeniu.<br>(Niedostępne dla systemów Windows RT i Windows Phone).
 
 
@@ -80,6 +80,6 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

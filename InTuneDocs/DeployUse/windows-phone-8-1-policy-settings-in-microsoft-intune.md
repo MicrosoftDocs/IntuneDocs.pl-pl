@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4279ecd098ddaa6d6eb239ee71f9c3f7d450ab3f
-ms.openlocfilehash: f2ccc52ceae6bbb63ea76ff4391922099c69f4dd
+ms.sourcegitcommit: c6b3f193606f13427a68c561d688b75d38221950
+ms.openlocfilehash: 315e492b301387c2030440e7188dfdb35a99ddd9
 
 
 ---
@@ -40,7 +40,7 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 ### Ustawienia hasła
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do swoich urządzeń.|Tak|Tak|
 |**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub tylko liczbowe.|Tak|Tak|
 |**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę symboli, które muszą być zawarte w haśle.|Tak|Tak|
@@ -55,44 +55,44 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 ### Ustawienia szyfrowania
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|------|------|-----------------------------|
 |**Wymagaj szyfrowania na urządzeniu przenośnym**|Wymaga szyfrowania danych na obsługiwanych urządzeniach przenośnych.<br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.|Tak|Tak|
 
 ### Ustawienia systemowe
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Zezwalaj na przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie pliku obrazu.|Nie|Tak|
 |**Zezwalaj na przesłanie danych diagnostycznych**|Umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Microsoft.|Nie|Tak|
 
 ### Ustawienia chmury — konta i synchronizacja
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Zezwalaj na konto Microsoft**|Umożliwia połączenie konta Microsoft z urządzeniem.|Nie|Tak|
 
 ### Ustawienia poczty e-mail
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Zezwalaj na niestandardowe konta e-mail**|Umożliwia urządzeniu łączenie z kontami poczty e-mail innymi niż konto Microsoft.|Nie|Tak|
 
 ### Ustawienia aplikacji — przeglądarka
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Zezwalaj na używanie przeglądarki sieci Web**|Umożliwia korzystanie z wbudowanej przeglądarki sieci Web na urządzeniach lub blokuje ją.|Nie|Tak|
 
 ### Ustawienia aplikacji — aplikacje
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia użytkownikom łączenie się ze sklepem z aplikacjami z urządzenia.|Nie|Tak|
 
 ### Ustawienia możliwości urządzenia — sprzęt
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|-----|----|--------------------------------|
 |**Zezwalaj na używanie aparatu**|Umożliwia korzystanie z aparatu urządzenia lub blokuje go.|Nie|Tak|
 |**Zezwalaj na używanie magazynu wymiennego**|Umożliwia używanie na urządzeniu magazynu wymiennego, na przykład karty SD.|Tak|Tak|
 |**Zezwalaj na połączenia Wi-Fi**|Włącza lub wyłącza funkcję obsługi sieci Wi-Fi urządzenia.|Nie|Tak|
@@ -106,7 +106,7 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 ### Ustawienia możliwości urządzenia — funkcje
 
 |Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----------------------------------------|
+|----------------|----|------|-------------------------------|
 |**Zezwalaj na kopiowanie i wklejanie**|Umożliwia kopiowanie i wklejanie na urządzeniach.|Nie|Tak|
 
 ### Ustawienia dotyczące aplikacji dozwolonych i zablokowanych
@@ -171,6 +171,6 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

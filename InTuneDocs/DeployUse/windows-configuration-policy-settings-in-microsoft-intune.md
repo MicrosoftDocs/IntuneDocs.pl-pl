@@ -13,8 +13,8 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7fdfe64a18fe359ee4b3b4507ef4108ad65ab573
-ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 6b2d805561067d2dc0de70d93c45622a951e5981
 
 
 ---
@@ -31,7 +31,7 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 ## Ustawienia zabezpieczeń
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**Wymagany typ hasła**|Określa wymagany typ hasła, na przykład alfanumeryczne lub tylko liczbowe.|Tak|Tak|
 |**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS to ustawienie określa liczbę symboli, które muszą być zawarte w haśle.|Tak|Tak|
 |**Minimalna długość hasła**<sup>1</sup>|Konfiguruje minimalną wymaganą długość (w znakach) hasła.|Tak|Tak|
@@ -46,7 +46,7 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 ## Ustawienia szyfrowania
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup>|Wymaga szyfrowania plików na urządzeniu.<br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.|Tak|Nie|
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
 
@@ -61,14 +61,14 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 ## Ustawienia złośliwego oprogramowania
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Wymagaj zapory sieciowej**|Wymaga włączenia Zapory systemu Windows.|Tak|Nie|
 |**Włącz filtr SmartScreen**|Wymaga używania filtru Windows SmartScreen.|Tak|Nie|
 
 ## Ustawienia systemowe
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-------|---------------------------|--------------|
 |**Wymagaj aktualizacji automatycznych**|Włącza ustawienie aktualizacji automatycznych na urządzeniach.|Tak|Nie|
 |**Wymagaj aktualizacji automatycznych — minimalna klasyfikacja aktualizacji do instalacji automatycznej**|Wybiera klasyfikację aktualizacji, które będą instalowane automatycznie:<br /><br />-   **Ważne** — instaluje wszystkie aktualizacje sklasyfikowane jako ważne.<br />-   **Zalecane** — instaluje wszystkie aktualizacje sklasyfikowane jako ważne lub zalecane.|Tak|Nie|
 |**Kontrola konta użytkownika**|Wymaga używania Kontroli konta użytkownika na urządzeniach.|Tak|Nie|
@@ -78,19 +78,19 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 ## Ustawienia chmury — dokumenty i dane
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**Adres URL folderów roboczych**|Ustawia adres URL folderu roboczego, aby umożliwić synchronizację dokumentów między urządzeniami.|Tak|Nie|
 
 ## Ustawienia poczty e-mail
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Ustaw konto Microsoft jako opcjonalne w aplikacji Windows Mail**|Umożliwia dostęp do aplikacji Poczta systemu Windows bez konta Microsoft.|Tak|Nie|
 
 ## Ustawienia aplikacji — przeglądarka
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Zezwalaj na automatyczne uzupełnianie**|Umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce.|Tak|Nie|
 |**Zezwalaj na blokowanie wyskakujących okienek**|Włącza lub wyłącza blokowanie wyskakujących okienek w przeglądarce.|Tak|Nie|
 |**Zezwalaj na używanie dodatków**|Umożliwia użytkownikom dodawanie wtyczek do programu Internet Explorer.|Tak|Nie|
@@ -109,7 +109,7 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 ## Ustawienia możliwości urządzenia — połączenie komórkowe
 
 |Nazwa ustawienia|Szczegóły|Windows 8.1 i Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|----|------------------------------|--------------|
 |**Zezwalaj na roaming danych**|Umożliwia roaming danych, gdy urządzenie jest w sieci komórkowej.|Tak|Nie|
 
 
@@ -119,6 +119,6 @@ ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 
