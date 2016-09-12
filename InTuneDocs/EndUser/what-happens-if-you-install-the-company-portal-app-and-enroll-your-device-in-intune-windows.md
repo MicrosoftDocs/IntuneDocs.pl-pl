@@ -1,123 +1,86 @@
 ---
-title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune? | Microsoft Intune"
+title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/8/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: e2da1f39d0cfe05bb0ea1c149c91e5ff82312c01
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: 840d985fd2c4771831f722cdff214026a383f606
 
 
 ---
 
 
-# Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?
+# Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune?
 
-Aby dowiedzieć się, co się dzieje podczas instalacji aplikacji Portal firmy i rejestracji urządzenia, użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia. Aby uzyskać informacje o urządzeniach z systemem Windows 10, zobacz [tę stronę](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone, pozwalasz administratorowi IT na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych, zgodnie z poniższym opisem dla urządzeń z systemem wcześniejszym niż Windows 10. Aby uzyskać informacje o urządzeniach z systemem Windows 10, zobacz [tę stronę](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
-## Windows 8.1 i Windows RT
-Po zainstalowaniu aplikacji Portal firmy i następnie zarejestrowaniu urządzenia z systemem Windows 8.1 Enterprise lub Professional albo Windows RT w usłudze Intune przy użyciu tej aplikacji można używać aplikacji Portal firmy, aby:
-
--   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych
-
--   Pobierać aplikacje firmowe z Portalu firmy
-
--   Automatycznie konfigurować firmowe konto e-mail
-
--   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
-
-Kroki rejestracji opisano w artykule [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
-W przypadku dodawania komputera:
-
--   Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
-
--   Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie, które wyszukuje wirusy i złośliwe oprogramowanie.
-
--   Administrator IT może pobrać spis wszystkich programów zainstalowanych na komputerze, włącznie z oprogramowaniem zainstalowanym przez użytkownika.
-
--   Konieczne może być zaakceptowanie warunków i postanowień.
-
--   Administrator IT może zbierać lub usuwać dane z dysku twardego komputera. Administrator IT może również usunąć cały dysk twardy.
-
--   Administrator IT może instalować na komputerze aplikacje i aktualizacje.
-
--   Administrator IT może wprowadzać zasady na komputerze. Od użytkownika może być na przykład wymagane, aby ustawił na komputerze hasło lub numer PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do komputera lub usunięcie wszystkich danych z dysku twardego.
-
-## Windows Phone 8.1 i Windows Phone 8
-Po zainstalowaniu aplikacji Portal firmy i następnie zarejestrowaniu urządzenia z systemem Windows Phone 8.1 lub Windows Phone 8 w usłudze Intune przy użyciu tej aplikacji można używać aplikacji Portal firmy, aby:
+## Co się dzieje na wszystkich urządzeniach z systemem Windows po rejestracji
+Po zarejestrowaniu urządzenia systemu Windows lub Windows Phone w usłudze Intune można:
 
 -   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych
 
--   Pobierać aplikacje firmowe z Portalu firmy
+-   Pobierać aplikacje firmowe z witryny internetowej Portal firmy (dla systemów Windows 7 i Vista można pobierać aplikacje firmowe tylko z witryny sieci Web Portal firmy)
 
--   Automatycznie konfigurować firmowe konto e-mail
+-   Automatycznie konfigurować konto e-mail firmy lub szkoły
 
 -   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
 
-Kroki rejestracji opisano w artykule [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
-Dodanie urządzenia z systemem Windows Phone spowoduje nadanie administratorowi IT uprawnień dostępu do tego urządzenia. Administratorzy mogą wykonywać następujące czynności:
+Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, które pozwalają mu:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych. Jest to przydatne w przypadku utracenia lub kradzieży urządzenia.
 
--   Usuń wszystkie dane dotyczące firmy oraz zainstalowane aplikacje biznesowe. Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.
-
--   Wymagać ustawienia na urządzeniu hasła lub numeru PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do urządzenia lub jego zresetowanie do domyślnych ustawień fabrycznych (co może obejmować usunięcie danych).
-
--   Wymusić zaszyfrowanie wszystkich danych na urządzeniu. Pozwala to chronić dane w przypadku utracenia lub kradzieży urządzenia.
-
--   Wymagać od użytkownika zaakceptowania postanowień.
-
--   Wyłączyć kartę SD.
-
--   Instalować na urządzeniu aktualizacje aplikacji. Dotyczy to tylko aktualizacji. Administrator IT nie może wymusić zainstalowania na urządzeniu nowych aplikacji, ale użytkownik może zainstalować aplikacje dostępne w portalu firmy.
-
--   Po dodaniu urządzenia do portalu firmy co około 8 godzin będą wykonywane następujące czynności:
-
-    -   Pobieranie wszystkich aktualizacji aplikacji lub zasad udostępnionych przez administratora IT.
-
-    -   Wysyłanie wszystkich aktualizacji spisu sprzętu.
-
-    -   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych.
-
-## Windows 7 i Vista
-Po zainstalowaniu aplikacji Portal firmy i następnie zarejestrowaniu urządzenia z systemem Windows 7 lub Vista w usłudze Intune przy użyciu tej aplikacji, można używać aplikacji Portal firmy, aby:
-
--   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych
-
--   Pobierać aplikacje firmowe z Portalu firmy
-
--   Automatycznie konfigurować firmowe konto e-mail
-
--   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
-
-Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
-W przypadku dodawania komputera:
-
--   Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
-
--   Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie, które wyszukuje wirusy i złośliwe oprogramowanie.
+-   Usuwać wszystkie dane dotyczące firmy oraz zainstalowane aplikacje biznesowe. Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.
 
 -   Administrator IT może pobrać spis wszystkich programów zainstalowanych na komputerze, włącznie z oprogramowaniem zainstalowanym przez użytkownika.
 
--   Konieczne może być zaakceptowanie warunków i postanowień.
+-   Wymagać ustawienia na urządzeniu hasła lub numeru PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do urządzenia lub jego zresetowanie do domyślnych ustawień fabrycznych (co może obejmować usunięcie danych).
 
--   Administrator IT może zbierać lub usuwać dane z dysku twardego komputera. Administrator IT może również usunąć cały dysk twardy.
+-   Wymusić zaszyfrowanie wszystkich danych na urządzeniu, co pomaga chronić dane w przypadku utracenia lub kradzieży urządzenia.
 
--   Administrator IT może instalować na komputerze aplikacje i aktualizacje.
+-   Wymagać od użytkownika zaakceptowania postanowień.
 
 -   Administrator IT może wprowadzać zasady na komputerze. Od użytkownika może być na przykład wymagane, aby ustawił na komputerze hasło lub numer PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do komputera lub usunięcie wszystkich danych z dysku twardego.
+
+-   Wyłączyć kartę SD.
+
+## Co się dzieje na wszystkich komputerach z systemem Windows po rejestracji
+
+-  Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
+
+-  Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie, które wyszukuje wirusy i złośliwe oprogramowanie.
+
+-  Administrator IT może pobrać spis wszystkich programów zainstalowanych na komputerze, włącznie z oprogramowaniem zainstalowanym przez użytkownika.
+
+-  Konieczne może być zaakceptowanie warunków i postanowień.
+
+-  Administrator IT może zbierać lub usuwać dane z dysku twardego komputera. Administrator IT może również usunąć cały dysk twardy.
+
+-  Administrator IT może instalować na komputerze aplikacje i aktualizacje.
+
+-  Administrator IT może wprowadzać zasady na komputerze. Od użytkownika może być na przykład wymagane, aby ustawił na komputerze hasło lub numer PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do komputera lub usunięcie wszystkich danych z dysku twardego.
+
+
+## Co się dzieje co 8 godzin po rejestracji urządzenia
+Mniej więcej co 8 godzin zarejestrowane urządzenia wykonują następujące czynności:
+
+-   Pobieranie wszystkich aktualizacji aplikacji lub zasad udostępnionych przez administratora IT.
+
+-   Wysyłanie wszystkich aktualizacji spisu sprzętu.
+
+-   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych.
+
+Kroki rejestracji opisano w artykule [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
@@ -126,6 +89,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

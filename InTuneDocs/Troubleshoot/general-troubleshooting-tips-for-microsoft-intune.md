@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ogólne porady dotyczące rozwiązywania problemów | Microsoft Intune
-description:
-keywords:
+title: "Ogólne porady dotyczące rozwiązywania problemów | Microsoft Intune"
+description: "Zasoby ogólne ułatwiające rozwiązywanie problemów z usługą Intune."
+keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ab7ccf4c72f8e8f3c67c65d99563fe6fbfdd42b9
+ms.openlocfilehash: 94c761071f4b578440297859662102b2b3080899
+
 
 ---
 
@@ -29,7 +23,8 @@ ms.suite: ems
 Po wdrożeniu usługi Microsoft Intune mogą wystąpić problemy z konfiguracją lub klientami. Zasoby przedstawione poniżej mogą pomóc w poznaniu przyczyny problemu i w konsekwencji w jego rozwiązaniu.
 
 > [!NOTE]
-> W celu utworzenia żądania obsługi lub wyświetlenia istniejącego żądania kliknij [tutaj](https://portal.office.com/admin/default.aspx), aby przejść do centrum administracyjnego usługi Office 365. Aby uzyskać więcej informacji na temat opcji pomocy technicznej, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+> W celu utworzenia żądania obsługi lub wyświetlenia istniejącego żądania przejdź do [centrum administracyjnego usługi Office 365](https://portal.office.com/admin/default.aspx). Aby uzyskać więcej informacji na temat opcji pomocy technicznej, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
 ## Definiowanie problemu
 
 -   Czym objawia się problem?
@@ -46,15 +41,17 @@ Po wdrożeniu usługi Microsoft Intune mogą wystąpić problemy z konfiguracją
 
 -   Czy użytkownik może mieć problemy dotyczące uwierzytelniania? Jeśli jest taka możliwość, sprawdź, czy użytkownik może zalogować się do innych usług używających usługi Azure Active Directory. Sprawdź też, czy użytkownik może zalogować się z innego urządzenia.
 
+-   Czy sprawdzono stan usługi? Kondycję usługi Intune możesz monitorować w [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx). Wybierz pozycję **Kondycja usługi** w lewym okienku.
+
 ## Zbieranie dostępnych danych
 
 -   Dzienniki urządzenia. Aby dowiedzieć się, jak zbierać dzienniki urządzenia, zobacz:
   - [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
   - [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
   - [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-  - [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios.md)
+  - [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios)
 
--   Dane konsoli administracyjnej. Na przykład w przypadku problemów z implementacją zasad należy sprawdzić określone zasady i ich stan zgodnie z opisem w temacie [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/indune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune)..
+-   Dane konsoli administracyjnej. Na przykład w przypadku problemów z implementacją zasad należy sprawdzić określone zasady i ich stan zgodnie z opisem w temacie [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## Wyszukiwanie rozwiązania
 
@@ -64,7 +61,7 @@ Po wdrożeniu usługi Microsoft Intune mogą wystąpić problemy z konfiguracją
 
 -   Można otworzyć żądanie obsługi. Pomoc techniczna usługi Intune łatwiej będzie mogła rozwiązać problem, jeśli zostanie on zdefiniowany i zostaną zebrane dostępne dane.
 
-    W celu utworzenia żądania obsługi kliknij [tutaj](https://portal.office.com/admin/default.aspx), aby przejść do centrum administracyjnego usługi Office 365. Aby uzyskać więcej informacji na temat opcji pomocy technicznej, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+    W celu utworzenia żądania obsługi przejdź do [centrum administracyjnego usługi Office 365](https://portal.office.com/admin/default.aspx). Aby uzyskać więcej informacji na temat opcji pomocy technicznej, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 ## Zasoby społeczności
 Inne przydatne informacje można znaleźć w tych zasobach społeczności:
@@ -77,8 +74,8 @@ Inne przydatne informacje można znaleźć w tych zasobach społeczności:
 
 -   [Fora dotyczące usługi Intune](https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 
-## Następne kroki
-Tematy wymienione poniżej pomagają rozwiązywać określone problemy. Jeśli te informacje nie będą pomocne, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)..
+### Następne kroki
+Tematy wymienione poniżej pomagają rozwiązywać określone problemy. Jeśli te informacje nie będą pomocne, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 [Troubleshoot Endpoint Protection in Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md)
 
@@ -93,9 +90,9 @@ Tematy wymienione poniżej pomagają rozwiązywać określone problemy. Jeśli t
 [Rozwiązywanie problemów z instalacją klientów w usłudze Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-g
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO3-->
 
 

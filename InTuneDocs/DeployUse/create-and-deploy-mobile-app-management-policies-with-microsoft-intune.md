@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Tworzenie i wdrażanie zasad MAM | Microsoft Intune
-description:
-keywords:
+title: "Tworzenie i wdrażanie zasad MAM | Microsoft Intune"
+description: "Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi."
+keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
+ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
+
 
 ---
 
@@ -33,9 +27,17 @@ W tym temacie opisano proces tworzenia zasad MAM w **portalu Azure**. Portal Azu
 - Urządzenia zarządzane przez rozwiązanie MDM innej firmy
 - Urządzenia niezarządzane przez żadne rozwiązanie MDM (BYOD).
 
-Jeśli obecnie korzystasz z **konsoli administracyjnej usługi Intune** do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnym obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
-> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, zasady utworzone w portalu Azure zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
+Jeśli aktualnie zarządzasz urządzeniami za pomocą **konsoli administracyjnej usługi Intune**, weź pod uwagę następujące informacje:
+
+> * Zasady zarządzania aplikacjami mobilnymi, które obsługują aplikacje na potrzeby urządzeń przenośnych zarejestrowanych w usłudze Intune, możesz utworzyć przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+> * Zasady zarządzania aplikacjami mobilnymi utworzone w konsoli administracyjnej usługi Intune nie mogą być importowane do portalu Azure.  Zasady zarządzania aplikacjami mobilnymi muszą zostać ponownie utworzone w portalu Azure.
+
+> * W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Portal Azure to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi.
+
+> * Aby wdrożyć aplikacje zarządzane, musisz utworzyć zasady zarządzania aplikacjami mobilnymi w konsoli administracyjnej usługi Intune. W takim przypadku można utworzyć zasady zarządzania aplikacjami mobilnymi zarówno w konsoli administracyjnej usługi Intune, jak i w portalu Azure. Konsola administracyjna usługi Intune umożliwia wdrażanie aplikacji zarządzanych, a portal Azure to nowa konsola administracyjna, która udostępnia wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi.
+
+> * Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i portalu Azure, dla aplikacji zostaną zastosowane zasady utworzone w portalu Azure.
 
 Aby wyświetlić listę zasad obsługiwanych na platformach Android i iOS, wybierz jeden z następujących elementów:
 
@@ -49,25 +51,23 @@ Zanim utworzysz zasady MAM, przejrzyj informacje w sekcji [wymagania wstępne i 
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
-    > [!TIP] Jeśli używasz portalu Azure po raz pierwszy, przeczytaj najpierw artykuł [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md), aby zapoznać się z portalem.
+    > [!TIP]
+    > Jeśli używasz portalu Azure po raz pierwszy, przeczytaj najpierw artykuł [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md), aby zapoznać się z portalem.
 
-2.  W bloku **Ustawienia** wybierz pozycję **Zasady aplikacji**.  Spowoduje to otwarcie bloku **Zasady aplikacji** , w którym można tworzyć nowe zasady i edytować istniejące.
-
-    ![Zrzut ekranu przedstawiający blok zasad aplikacji z listą istniejących zasad](../media/AppManagement/AzurePortal_MAM_AppPolicy.png)
-
-3.  Wybierz pozycję **Dodaj zasady**.
+2.  W bloku **Ustawienia** wybierz pozycję **Zasady aplikacji**.  Spowoduje to otwarcie bloku **Zasady aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. Wybierz pozycję **Dodaj zasady**.
 
     ![Zrzut ekranu przedstawiający blok zasad aplikacji z podświetloną opcją menu Dodaj zasady ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
-4.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy do utworzenia zasad dla systemu iOS lub Android.  Dla każdej platformy można utworzyć większą liczbę zasad.
+3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy do utworzenia zasad dla systemu iOS lub Android.  Dla każdej platformy można utworzyć większą liczbę zasad.
 
     ![Zrzut ekranu przedstawiający blok Dodawanie zasad](../media/AppManagement/AzurePortal_MAM_AddPolicy_only.png)
 
-5.  Wybierz pozycję **Aplikacje**, aby otworzyć **blok Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy możesz wybrać jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. Po wybraniu aplikacji wybierz przycisk **Wybierz** w dolnej części bloku **Aplikacje**, aby zapisać wybrane opcje.
+4.  Wybierz pozycję **Aplikacje**, aby otworzyć **blok Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy możesz wybrać jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. Po wybraniu aplikacji wybierz przycisk **Wybierz** w dolnej części bloku **Aplikacje**, aby zapisać wybrane opcje.
 
-    > [!IMPORTANT] W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
+    > [!IMPORTANT]
+    > W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
 
-6.  W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć blok ustawień zasad.
+5.  W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć blok ustawień zasad.
 
     Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady przeniesienia danych stosują się do przenoszenia danych do i z aplikacji, podczas gdy zasady dostępu określają metodę dostępu użytkownika końcowego do aplikacji w kontekście pracy.
     Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy.  Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
@@ -77,11 +77,11 @@ Zanim utworzysz zasady MAM, przejrzyj informacje w sekcji [wymagania wstępne i 
 
     ![Zrzut ekranu przedstawiający blok ustawień z blokiem Dodawanie zasad](../media/AppManagement/AzurePortal_MAM_PolicySettings.png)
 
-7.  Wybierz pozycję **OK**, aby zapisać tę konfigurację.  Znajdziesz się ponownie w bloku **Dodawanie zasad** . Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
+6.  Wybierz pozycję **OK**, aby zapisać tę konfigurację.  Znajdziesz się ponownie w bloku **Dodawanie zasad** . Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
     ![Zrzut ekranu przedstawiający blok Dodawanie zasad z informacją o tym, że aplikacje i ustawienia zostały skonfigurowane](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-    ![Zrzut ekranu przedstawiający blok zasad aplikacji z powiadomieniem o dodaniu zasad ](../media/AppManagement/AzurePortal_MAM_AddingPolicyNotification.png)
+
 
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników.  Wykonaj kroki opisane poniżej, aby wdrożyć zasady.
 
@@ -108,7 +108,8 @@ Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie s�
 
 Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].  Zasady nie wpływają na użytkowników należących do wybranej grupy zabezpieczeń, którym nie przypisano licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
-Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy.  Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
+>[!IMPORTANT]
+> Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy.  Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Szczegółowy przewodnik dotyczący sposobu ochrony danych firmowych na urządzeniach przez zasady zarządzania aplikacjami mobilnymi znajduje się w temacie [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md).
 
@@ -157,8 +158,8 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących elementów:
 
 > [!div class="op_single_selector"]
-  - [Zasady systemu iOS](ios-mam-policy-settings.md)
-  - [Zasady systemu Android](android-mam-policy-settings.md)
+- [Zasady systemu iOS](ios-mam-policy-settings.md)
+- [Zasady systemu Android](android-mam-policy-settings.md)
 
 ## Następne kroki
 [Monitorowanie zgodności i stanu użytkownika](monitor-mobile-app-management-policies-with-microsoft-intune.md)
@@ -167,6 +168,7 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 [Środowisko użytkownika końcowego dla aplikacji objętej zarządzaniem aplikacjami mobilnymi](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune | Microsoft Intune"
-description: 
+description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub Mac OS X, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/03/2016
+manager: angrobe
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: bf298bace896a666d1f2992f2921ebf5a15f05f7
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: 83564abcfcbb6597656e19031e5af1c7d7a3252d
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Poniższe kroki obejmują zadania, które należy wykonać w urządzeniu z systemem iOS lub Mac OS X, jeśli firma korzysta z usługi Microsoft Intune.
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+- Zadania zarządzania po rejestracji
+- Problemy ze zgodnością
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
@@ -50,7 +53,7 @@ Informacje przedstawione w tej sekcji ułatwiają wykonywanie czynności po zare
 
 Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, które mogą występować w przypadku zarejestrowania urządzenia z systemem iOS w usłudze Intune.
 
-- [Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device)
+- [Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 - [Wysyłanie błędów do administratora IT](send-errors-to-your-it-admin-ios.md)
 - [Podczas korzystania z aplikacji Portal firmy występuje błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Podczas próby zarejestrowania urządzenia w usłudze Intune występuje błąd](you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
@@ -61,8 +64,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

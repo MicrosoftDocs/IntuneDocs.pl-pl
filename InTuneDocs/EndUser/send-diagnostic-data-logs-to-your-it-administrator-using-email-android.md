@@ -3,18 +3,19 @@ title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za po
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 05/31/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 57646f103fb0520295729a89a30692c657896e55
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 9446df0381a2b2a1a6322f8f59523ce78406f25a
 
 
 ---
@@ -30,13 +31,13 @@ Aby włączyć pełne rejestrowanie:
 
 2.  Naciśnij kolejno pozycje **Menu** &gt; **Ustawienia**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Przycisk **Menu** może być przyciskiem programowym lub sprzętowym, w zależności od posiadanego urządzenia z systemem Android.
 
 3.  W obszarze **Dane diagnostyczne** naciśnij przycisk **Wyślij dane**.
 
     > [!NOTE]
-    > **Tylko w przypadku korzystania z urządzeń z systemem Android 6.0 lub nowszym:** Po naciśnięciu przycisku **Wyślij dane** zostanie wyświetlony komunikat **Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?**. 
+    > **Tylko w przypadku korzystania z urządzeń z systemem Android 6.0 lub nowszym:** Po naciśnięciu przycisku **Wyślij dane** zostanie wyświetlony komunikat **Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?**.
 
     Ten komunikat jest mylący, ponieważ **firma Microsoft nigdy nie próbuje uzyskać dostępu do zdjęć, multimediów ani plików na Twoim urządzeniu!** Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić.  Zezwalając na dostęp, umożliwiasz urządzeniu tylko zapisywanie dzienników danych na karcie SD urządzenia, co pozwala na przenoszenie tych dzienników przy użyciu kabla USB.
 
@@ -45,10 +46,8 @@ Aby włączyć pełne rejestrowanie:
 4.  Postępuj zgodnie z monitami, aby wybrać aplikację poczty e-mail na potrzeby wysyłania dzienników do administratora IT. Aplikacja utworzy wstępnie zaadresowane wiadomości e-mail z dołączonymi wszystkimi dziennikami.
 
 
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Zarządzanie firmowymi urządzeniami | Microsoft Intune"
-description: 
+description: "Wprowadź urządzenia firmowe (COD) do systemu zarządzania na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu oraz potrzeb organizacji."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 69cf07aa0747448e0ef3384b5b5132e0e76aed45
-ms.openlocfilehash: e07053b9b26afacc03e45f2cb104eda6088a1e05
+ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
+ms.openlocfilehash: 58efadf2f9fc34a31070aff93e86083583630caa
 
 
 ---
 
 # Rejestrowanie firmowych urządzeń w usłudze Microsoft Intune
-Urządzenia należące do organizacji lub firmy (COD) mogą być wprowadzane do systemu zarządzania w usłudze Intune na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu i potrzeb organizacji.
+Urządzenia należące do organizacji lub firmy (COD) mogą być wprowadzane do systemu zarządzania w usłudze Intune na wiele sposobów, w zależności od urządzenia, sposobu jego zakupu i potrzeb organizacji. Firmowe urządzenia można również rejestrować (oraz zarządzać nimi) przez zainstalowanie aplikacji Portal firmy, podobnie jak w przypadku strategii „przynieś własne urządzenie” (BYOD, bring your own device).
 
 ## Firmowe urządzenia z systemem iOS
 Te metody rejestracji są odpowiednie w scenariuszach „Wybierz własne urządzenie” (CYOD), w których organizacja kupuje urządzenia dla użytkowników, ale chce zachować możliwość zarządzania urządzeniem. Jeśli dana organizacja nabyła urządzenia z systemem iOS, można wstępnie zorganizować rejestrację w taki sposób, że urządzenie zostanie dołączone do systemu zarządzania, gdy użytkownik włączy je pierwszy raz. Usługa Intune obsługuje rejestrowanie urządzeń w ramach programu [Device Enrollment Program (DEP) firmy Apple](ios-device-enrollment-program-in-microsoft-intune.md) lub przy użyciu programu Apple Configurator działającego na komputerze Mac, który umożliwia rejestrację [bezpośrednią](ios-direct-enrollment-in-microsoft-intune.md) lub z wykorzystaniem [asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md).
@@ -32,13 +32,27 @@ Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządz
 
 [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
 
-## Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)
-Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI) są często stosowanymi przez producentów oznaczeniami urządzeń przenośnych. Administratorzy usługi Intune mogą importować numery IMEI dla urządzeń, których właścicielem jest firma. Gdy urządzenie jest zarządzane przez usługę Intune, można oznakować je jako urządzenie należące do firmy i zastosować wobec niego odpowiednie zasady.
+## Rejestrowanie firmowych komputerów z systemem Windows 10
+
+Jeśli Twoja organizacja ma usługę Azure Active Directory w wersji Premium (AADP) lub pakiet Enterprise Management Suite (EMS), możesz [zarejestrować system Windows 10 dla przedsiębiorstw](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview), a komputery zostaną automatycznie oznaczone jako „firmowe” po dodaniu przez użytkowników swojego konta służbowego.
+
+## Określanie urządzeń jako firmowe
+
+Urządzenia firmowe są wyświetlane jako **Firmowe** w obszarze **Własność** na listach urządzeń. Urządzenia mogą zostać określone jako firmowe na następujące sposoby:
+
+ - [Rejestracja przy użyciu menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)
+ - Rejestracja przy użyciu programu [Device Enrollment Program (DEP)](ios-device-enrollment-program-in-microsoft-intune.md) firmy Apple lub narzędzia [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+ - [Wstępna deklaracja urządzeń za pomocą numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
+ - [Rejestracja w usłudze Azure Active Directory lub pakiecie Enterprise Management Suite urządzeń z systemem Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview)
+
+### Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)
+
+Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI) są często stosowanymi przez producentów oznaczeniami urządzeń przenośnych. Administratorzy usługi Intune mogą importować numery IMEI dla urządzeń, których właścicielem jest firma. Gdy urządzenie jest zarządzane przez usługę Intune, zostaje ono oznakowane jako urządzenie należące do firmy.
 
 [Określanie urządzeń należących do firmy z międzynarodowymi numerami identyfikującymi urządzenia przenośne (IMEI, International Mobile Equipment Identity)](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,36 +1,28 @@
 ---
-# required metadata
-
-title: Bezpośrednia rejestracja urządzeń z systemem iOS | Microsoft Intune
-description:
-keywords:
+title: "Bezpośrednia rejestracja urządzeń z systemem iOS | Microsoft Intune"
+description: "Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrować firmowe urządzenia z systemem iOS za pomocą wstępnie zdefiniowanych zasad poprzez połączenie USB z komputerem Mac."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: aabe68a3621a02b8f3142ab3f593190cc23053dd
+ms.openlocfilehash: 17836bc826bc89e3f041f7b369be09c1cce9ea4f
+
 
 ---
 
 # Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
-Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **Brak koligacji użytkownika** i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. W tych wskazówkach przyjęto założenie, że używany jest program Apple Configurator 2.0 na komputerze Mac.
+Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **Brak koligacji użytkownika** i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. W tych wskazówkach przyjęto założenie, że używany jest program Apple Configurator 2.0 na komputerze Mac.
 
 1.  **Utwórz profil dla urządzeń**. Profil rejestracji urządzeń określa ustawienia stosowane do urządzeń. Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator.
-
-    #### Aby utworzyć profil
 
     1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
 
@@ -45,6 +37,8 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
         -   **Przynależność do użytkownika** — określa sposób rejestracji urządzeń. W celu bezpośredniej rejestracji wybierz pozycję **Brak koligacji użytkownika**.
 
         -   **Wstępne przypisanie do grupy urządzeń** — wszystkie urządzenia, dla których ten profil zostanie wdrożony, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
+
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
     3.  Wybierz pozycję **Zapisz profil**, aby dodać profil.
 
@@ -65,8 +59,6 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
 
 8.  **Zainstaluj profil**. Wszystko jest gotowe do zainstalowania profilu na urządzeniu z systemem iOS. Na urządzeniu musi zostać zakończona praca Asystenta ustawień i musi być one gotowe do użycia.  Jeśli rejestracja wiąże się z wdrożeniami aplikacji, urządzenie powinno mieć ustawiony identyfikator firmy Apple, ponieważ wdrożenia aplikacji będą wymagać posiadania identyfikatora Apple ID powiązanego ze sklepem App Store.
 
-    ###### Kończenie akceptacji profilu dla nienadzorowanych urządzeń z systemem iOS
-
     1.  Odblokuj urządzenie z systemem iOS.
 
     2.  W oknie dialogowym **Instalacja profilu** dla pola **Profil zarządzania** naciśnij pozycję **Zainstaluj**.
@@ -85,10 +77,7 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
 10. **Dystrybuuj urządzenia**. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
 
 
-### Zobacz też
-[Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

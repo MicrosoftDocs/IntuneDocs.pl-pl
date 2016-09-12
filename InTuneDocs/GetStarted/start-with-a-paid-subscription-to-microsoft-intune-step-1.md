@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Utworzenie konta usługi Intune lub zalogowanie się do niego| Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Utworzenie konta usługi Intune lub zalogowanie się do niego| Microsoft Intune"
+description: "Jak zarejestrować się w celu uzyskania subskrypcji usługi Intune lub jak zalogować się, jeśli już ma się subskrypcję"
+keywords: 
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: fddf33ecc0296d5bfabb710e0d4b178f75659009
+
 
 ---
 
@@ -49,13 +43,14 @@ Po ukończeniu procesu tworzenia konta nastąpi przekierowanie do strony używan
 > Podczas następnego logowania w usłudze Intune nastąpi automatyczne przekierowanie do konsoli administracyjnej usługi Intune.
 
 ### Następne kroki
-Gratulacje! Krok 1 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony..
+Gratulacje! Krok 1 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony.
 
 >[!div class="step-by-step"]
 
 >[&larr; **Wprowadzenie**](.\start-with-a-paid-subscription-to-microsoft-intune.md)     [**Ustawienia domeny** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Konfigurowanie infrastruktury certyfikatów dla profilu SCEP | Microsoft Intune"
-description: 
+description: "Infrastruktura do tworzenia i wdrażania profilów certyfikatów SCEP."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 05/16/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ca06fa26127935e08f35006730dd367fb8f6669
-ms.openlocfilehash: 942bdc4e1629a9d7e16d0994f27dab4424670a4f
+ms.sourcegitcommit: 5b9d201200d2b18553778ba2234831854658c6c2
+ms.openlocfilehash: 1f8e692e1938822342fda399df3832d2749de7c3
 
 ---
 # Konfigurowanie infrastruktury certyfikatów dla profilu SCEP
-W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów.
+W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów SCEP.
 
 ### Infrastruktura lokalna
 
@@ -44,6 +44,8 @@ I
 Z Internetu do sieci obwodowej — zezwól na ruch przez port 443 ze wszystkich hostów/adresów IP w Internecie do serwera usługi NDES.
 
 Z sieci obwodowej do sieci zaufanej — zezwól na ruch dotyczący wszystkich portów i protokołów wymaganych do zapewnienia dostępu do domeny na serwerze usługi NDES przyłączonym do domeny. Serwer usługi NDES musi uzyskiwać dostęp do serwerów certyfikatów, serwerów DNS, serwerów programu Configuration Manager i kontrolerów domeny.
+
+Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, takiego jak [serwer proxy aplikacji usługi Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [serwer proxy dostępu do sieci Web](https://technet.microsoft.com/en-us/library/dn584107.aspx) lub serwer proxy innych firm.
 
 
 ### <a name="BKMK_CertsAndTemplates"></a>Certyfikaty i szablony
@@ -347,6 +349,6 @@ Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Kon
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

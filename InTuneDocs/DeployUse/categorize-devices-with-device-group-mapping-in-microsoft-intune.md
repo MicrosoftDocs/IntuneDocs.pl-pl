@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń | Microsoft Intune"
+description: "Użyj funkcji mapowania grup urządzeń w usłudze Microsoft Intune do grupowania urządzeń w zdefiniowane kategorie, co ułatwi zarządzanie tymi urządzeniami."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: sumitp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
+ms.openlocfilehash: 7b1c6f0e380c03d048686462682fc1cee85b7cfa
+
 
 ---
 
@@ -45,19 +39,20 @@ Przykłady kategorii:
 Możesz jednak skonfigurować dowolne żądane kategorie.
 
 ## Jak skonfigurować mapowanie grup urządzeń
-1. Dla każdej żądanej kategorii urządzeń utwórz grupę urządzeń usługi Intune. Aby uzyskać więcej informacji na temat tworzenia grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)..
-2. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Administracja**.
-3. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie kliknij pozycję **Mapowanie grup urządzeń**..
+1. Dla każdej żądanej kategorii urządzeń utwórz grupę urządzeń usługi Intune. Aby uzyskać więcej informacji na temat tworzenia grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
+2. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja**.
+3. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Mapowanie grup urządzeń**.
 4. Na stronie **Mapowanie grup urządzeń** włącz mapowanie grup urządzeń.
-5. Kliknij pozycję **Dodaj**, aby utworzyć nową regułę mapowania.
-6. W oknie dialogowym **Dodawanie reguły mapowania grup urządzeń** wprowadź nazwę kategorii, którą chcesz utworzyć, a następnie wybierz z listy rozwijanej kolekcję urządzeń, na którą chcesz zamapować tę kategorię. Po zakończeniu kliknij pozycję **Dodaj**.
-7. Po zakończeniu dodawania kategorii i grup kliknij pozycję **Zapisz**..
+5. Wybierz pozycję **Dodaj**, aby utworzyć nową regułę mapowania.
+6. W oknie dialogowym **Dodawanie reguły mapowania grup urządzeń** wprowadź nazwę kategorii, którą chcesz utworzyć, a następnie wybierz z listy rozwijanej kolekcję urządzeń, na którą chcesz zamapować tę kategorię. Po zakończeniu wybierz pozycję **Dodaj**.
+7. Po zakończeniu dodawania kategorii i grup wybierz pozycję **Zapisz**.
 
 Podczas rejestrowania swoich urządzeń użytkownicy zobaczą listę skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń odpowiadającej wybranej kategorii.
 
 ### Zobacz także
 [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO5-->
 
 

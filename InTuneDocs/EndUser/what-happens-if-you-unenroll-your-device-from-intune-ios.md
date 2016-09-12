@@ -1,27 +1,27 @@
 ---
-title: "Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune? | Microsoft Intune"
+title: "Co się dzieje w przypadku wyrejestrowania urządzenia z systemem iOS z usługi Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c6a97c74-c35c-4977-b925-6efe01e31d3c
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 073c94e51f61e091f0055c96e8ad183e57fafabd
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 4fe434dd58645bb0d9bed83aebd78bbdef8c4729
 
 
 ---
 
 
-# Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?
+# Co się dzieje w przypadku wyrejestrowania urządzenia z systemem iOS z usługi Intune?
 
 Po wyrejestrowaniu urządzenia z systemem iOS z usługi Intune:
 
@@ -43,10 +43,10 @@ Aby uzyskać instrukcje na temat sposobu wyrejestrowywania, zobacz [Wyrejestrowy
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 

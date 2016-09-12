@@ -2,8 +2,9 @@
 # [Wprowadzenie](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Wdrażanie i użytkowanie](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Tworzenie i dostosowywanie aplikacji](/intune/develop/intune-app-sdk)
 
-# [Rozwiązywanie problemów](how-to-get-support-for-microsoft-intune.md)
+# [Rozwiązywanie problemów](general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Jak uzyskać pomoc techniczną](how-to-get-support-for-microsoft-intune.md)
 ## [Rozwiązywanie problemów z punktami końcowymi](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
 ## [Rozwiązywanie problemów z dostępem do zasobów firmy](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
@@ -13,8 +14,9 @@
 ## [Rozwiązywanie problemów z konfigurowaniem klientów](Troubleshoot-client-setup-in-microsoft-intune.md)
 ## [Rozwiązywanie problemów z aktualizacjami oprogramowania](Troubleshoot-software-updates-in-microsoft-intune.md)
 ## [Rozwiązywanie problemów z profilami poczty e-mail](Troubleshoot-email-profiles-in-microsoft-intune.md)
+## [Rozwiązywanie problemów z dostępem warunkowym](troubleshoot-conditional-access.md)
+## [Rozwiązywanie problemów z programem Exchange Connector](troubleshoot-exchange-connector.md)
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=Aug16_HO1-->
 
 

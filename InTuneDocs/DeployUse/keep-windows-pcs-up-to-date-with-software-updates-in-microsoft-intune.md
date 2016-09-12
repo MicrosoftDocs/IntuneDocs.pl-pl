@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Aktualizacje oprogramowania dla komputerów z systemem Windows | Microsoft Intune
-description:
-keywords:
+title: "Aktualizacje oprogramowania dla komputerów z systemem Windows | Microsoft Intune"
+description: "Usługa Intune, dzięki szybkiej instalacji aktualizacji oprogramowania i najnowszych poprawek, pomaga upewnić się, że oprogramowanie komputerów pozostaje aktualne."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 5112dca8c30a872b26c73a948a8f14ac63957567
+
 
 ---
 
 # Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune
 Usługa Microsoft Intune pomaga zabezpieczyć komputery zarządzane na wiele sposobów. Jednym z nich jest zarządzanie aktualizacjami oprogramowania, które zapewniają, że oprogramowanie komputerów jest aktualne, szybko instalując najnowsze poprawki i aktualizacje oprogramowania.
 
-Jeśli klient usługi Intune nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md)..
+Jeśli klient usługi Intune nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Jeśli zostanie utworzona aktualizacja innej firmy lub w usłudze Microsoft Update zostaną udostępnione nowe aktualizacje, które dotyczą zarządzanych komputerów, w obszarze roboczym **Aktualizacje** na stronie **Przegląd** zostanie wyświetlone powiadomienie. Po wybraniu linku powiadomienia można wykonywać różne operacje, takie jak wyświetlanie dodatkowych informacji o aktualizacji, zatwierdzanie lub odrzucanie aktualizacji oraz wyświetlanie komputerów, na których zostanie zainstalowana aktualizacja w przypadku jej zatwierdzenia.
 
@@ -44,9 +38,9 @@ Przed rozpoczęciem tworzenia i zatwierdzania aktualizacji oprogramowania skonfi
 
 ### Aby skonfigurować ustawienia zasad aktualizacji
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycje **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
-2.  Skonfiguruj i wdroż zasady **ustawień agenta usługi Microsoft Intune** dla ustawień aktualizacji. Możesz skorzystać z zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)..
+2.  Skonfiguruj i wdroż zasady **ustawień agenta usługi Microsoft Intune** dla ustawień aktualizacji. Możesz skorzystać z zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 W poniższej tabeli przedstawiono ustawienia możliwe do skonfigurowania w ramach zasad oraz ich zalecane wartości, które zostaną użyte, jeśli zrezygnujesz z dostosowania zasad. Te ustawienia można znaleźć w sekcji **Aktualizacje** .
 
@@ -88,7 +82,7 @@ Poniższe dwie procedury ułatwią przygotowanie się do korzystania z aktualiza
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** &gt; **Aktualizacje**.
 
-2.  W sekcji **Reguły automatycznego zatwierdzania** na stronie **Ustawienia serwera: Aktualizacje** wybierz pozycję **Nowy**..
+2.  W sekcji **Reguły automatycznego zatwierdzania** na stronie **Ustawienia serwera: Aktualizacje** wybierz pozycję **Nowy**.
 
 3.  Na stronie **Ogólne** kreatora tworzenia reguły automatycznego zatwierdzania wprowadź nazwę i opcjonalny opis reguły.
 
@@ -98,16 +92,16 @@ Poniższe dwie procedury ułatwią przygotowanie się do korzystania z aktualiza
 
 6.  Na stronie **Wdrożenie** wykonaj następujące czynności:
 
-    -   Wybierz grupy komputerów, w których chcesz wdrożyć nową regułę, a następnie wybierz pozycję **Dodaj**..
+    -   Wybierz grupy komputerów, w których chcesz wdrożyć nową regułę, a następnie wybierz pozycję **Dodaj**.
 
     -   Aby określić ostateczny termin instalacji aktualizacji, zaznacz pole wyboru **Wymuś termin instalacji dla tych aktualizacji** , a następnie wybierz ostateczny termin instalacji na liście **Termin instalacji** .
 
         > [!NOTE]
         > W przypadku określenia ostatecznego terminu instalacji po upływie interwału terminu może być wymagane co najmniej jednokrotne ponowne uruchomienie zarządzanego komputera.
 
-    -   Gdy skończysz, wybierz pozycję **Dalej**..
+    -   Gdy skończysz, wybierz pozycję **Dalej**.
 
-7.  Na stronie **Podsumowanie** sprawdź ustawienia nowej reguły, a następnie wybierz pozycję **Zakończ**..
+7.  Na stronie **Podsumowanie** sprawdź ustawienia nowej reguły, a następnie wybierz pozycję **Zakończ**.
 
 Nowa reguła zostanie wyświetlona w sekcji **Reguły automatycznego zatwierdzania** na stronie **Ustawienia serwera: Aktualizacje** .
 
@@ -121,11 +115,11 @@ Nowa reguła zostanie wyświetlona w sekcji **Reguły automatycznego zatwierdzan
 
 2.  W sekcji **Reguły automatycznego zatwierdzania** wybierz regułę, a następnie wykonaj jedną z następujących czynności:
 
-    -   Aby edytować regułę, wybierz pozycję **Edytuj**, a następnie zmień parametry reguły w **kreatorze reguły automatycznego zatwierdzania aktualizacji**..
+    -   Aby edytować regułę, wybierz pozycję **Edytuj**, a następnie zmień parametry reguły w **kreatorze reguły automatycznego zatwierdzania aktualizacji**.
 
-    -   Aby uruchomić regułę, wybierz pozycję **Uruchom wybrane**..
+    -   Aby uruchomić regułę, wybierz pozycję **Uruchom wybrane**.
 
-    -   Aby usunąć regułę, wybierz pozycję **Usuń**..
+    -   Aby usunąć regułę, wybierz pozycję **Usuń**.
 
         > [!NOTE]
         > Usunięcie reguły nie ma wpływu na poprzednie aktualizacje, które zostały zatwierdzone przez tę regułę.
@@ -158,7 +152,7 @@ Możesz wdrażać aktualizacje oprogramowania, które nie zostało utworzone prz
 
     -   **Klucz rejestru istnieje**
 
-6.  Wprowadź wszelkie dodatkowe informacje wymagane do skonfigurowania reguły wykrywania, takie jak ścieżka do pliku i nazwa pliku, kod produktu Instalatora Windows albo klucz rejestru, a następnie wybierz pozycję **Dalej**..
+6.  Wprowadź wszelkie dodatkowe informacje wymagane do skonfigurowania reguły wykrywania, takie jak ścieżka do pliku i nazwa pliku, kod produktu Instalatora Windows albo klucz rejestru, a następnie wybierz pozycję **Dalej**.
 
 7.  Na stronie **Wymagania wstępne** kreatora określ nazwy programów, które muszą być zainstalowane, aby można było zainstalować tę aktualizację. Możesz wybrać opcję **Brak**, wybrać pakiet oprogramowania, który został już dodany do usługi Intune i jest przez nią zarządzany, albo określić jedną z następujących reguł opisujących oprogramowanie:
 
@@ -168,9 +162,9 @@ Możesz wdrażać aktualizacje oprogramowania, które nie zostało utworzone prz
 
     -   **Klucz rejestru istnieje**
 
-8.  Wprowadź wszelkie dodatkowe informacje wymagane do skonfigurowania reguły wykrywania, takie jak ścieżka do pliku i nazwa pliku, kod produktu Instalatora Windows albo klucz rejestru, a następnie wybierz pozycję **Dalej**..
+8.  Wprowadź wszelkie dodatkowe informacje wymagane do skonfigurowania reguły wykrywania, takie jak ścieżka do pliku i nazwa pliku, kod produktu Instalatora Windows albo klucz rejestru, a następnie wybierz pozycję **Dalej**.
 
-9. Na stronie **Argumenty wiersza polecenia** kreatora możesz dodać wymagane właściwości instalacji do wiersza polecenia instalacji w celu zmodyfikowania zachowania pliku instalacyjnego. Na przykład niektóre programy obsługują właściwość **/q**, która umożliwia przeprowadzenie instalacji dyskretnej. Więcej informacji o obsługiwanych argumentach wiersza polecenia można znaleźć w dokumentacji pakietu oprogramowania. Określ wymagane argumenty wiersza polecenia, a następnie wybierz pozycję **Dalej**..
+9. Na stronie **Argumenty wiersza polecenia** kreatora możesz dodać wymagane właściwości instalacji do wiersza polecenia instalacji w celu zmodyfikowania zachowania pliku instalacyjnego. Na przykład niektóre programy obsługują właściwość **/q**, która umożliwia przeprowadzenie instalacji dyskretnej. Więcej informacji o obsługiwanych argumentach wiersza polecenia można znaleźć w dokumentacji pakietu oprogramowania. Określ wymagane argumenty wiersza polecenia, a następnie wybierz pozycję **Dalej**.
 
     > [!NOTE]
     > Jeśli aktualizacja nie obsługuje instalacji dyskretnej, nie można zainstalować tej aktualizacji przy użyciu usługi Intune.
@@ -185,7 +179,7 @@ Możesz wdrażać aktualizacje oprogramowania, które nie zostało utworzone prz
 11. Wszystkie inne kody powrotu oznaczają niepowodzenie.
 Niektóre aktualizacje korzystają z niestandardowych interpretacji kodów powrotu. W takich przypadkach możesz określić własne interpretacje kodów powrotu.
 
-12. Określ lub zmień wymagane kody powrotu, a następnie wybierz pozycję **Dalej**..
+12. Określ lub zmień wymagane kody powrotu, a następnie wybierz pozycję **Dalej**.
 
 13. Na stronie **Podsumowanie** kreatora przejrzyj listę działań, które zostaną podjęte, a następnie wybierz pozycję **Przekaż**, aby zakończyć pracę kreatora.
 
@@ -204,23 +198,23 @@ Po wybraniu aktualizacji z listy zostaną udostępnione dodatkowe polecenia umo�
 |--------|--------------------|
 |**Wyświetl właściwości**|Wyświetla szczegółowe informacje o aktualizacji, w tym liczbę komputerów, których ona dotyczy.|
 |**Edytowanie**|Dotyczy tylko aktualizacji innych firm. Umożliwia edytowanie właściwości aktualizacji.|
-|**Zatwierdź**|Zatwierdza wybraną aktualizację i umożliwia wybranie grup, w których zostanie ona wdrożona. Więcej informacji można znaleźć w treści procedury [Aby zatwierdzić aktualizacje](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md#BKMK_Approve) w tym temacie.|
+|**Zatwierdź**|Zatwierdza wybraną aktualizację i umożliwia wybranie grup, w których zostanie ona wdrożona. Więcej informacji można znaleźć w treści procedury **Aby zatwierdzić aktualizacje** w tym temacie.|
 |**Odrzuć**|Usuwa wszystkie wcześniejsze zatwierdzenia aktualizacji i ukrywa ją w widokach domyślnych. Ponadto zostaną usunięte wszystkie dane raportów dotyczące aktualizacji.<br /><br />Jeśli zechcesz później odnaleźć odrzuconą aktualizację, na stronie **Wszystkie aktualizacje** ustaw filtr na wartość **Odrzucone**. Umożliwi Ci to zatwierdzenie tej aktualizacji w razie potrzeby.<br /><br />Jeśli aktualizacja wygasła w usłudze Microsoft Update i dlatego została odrzucona, nie może zostać zatwierdzona w konsoli administracyjnej usługi Intune.<br /><br />Usunięcie zasad aktualizacji, które zostały wdrożone na komputerach, spowoduje przywrócenie ustawień zasad aktualizacji do wartości domyślnych dla systemu operacyjnego zainstalowanego na komputerach.|
 |**Usuwanie**|Dotyczy tylko aktualizacji innych firm. Usuwa wybraną aktualizację.|
 |**Przekaż**|Uruchamia kreatora **Przekazywanie aktualizacji**, który umożliwia przekazywanie aktualizacji innych firm w celu ich wdrożenia.|
 
 ### Aby zatwierdzić aktualizacje
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Aktualizacje** &gt; **Przegląd** &gt; **Nowe aktualizacje do zatwierdzenia**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij kolejno pozycje **Aktualizacje** &gt; **Przegląd** &gt; **Nowe aktualizacje do zatwierdzenia**.
 
-    W obszarze roboczym **Aktualizacje** wybierz kolejno pozycje **Przegląd** &gt; **Nowe aktualizacje do zatwierdzenia**..
+    W obszarze roboczym **Aktualizacje** wybierz pozycje **Przegląd**&gt;**Nowe aktualizacje do zatwierdzenia**.
 
     > [!NOTE]
     > Link **Nowe aktualizacje do zatwierdzenia** zostanie wyświetlony w obszarze **Stan aktualizacji** tylko wtedy, gdy będzie istnieć co najmniej jeden zarządzany komputer, który wymaga zatwierdzenia aktualizacji.
 
 2.  Wybierz aktualizację, przejrzyj jej właściwości na dole strony, aby upewnić się, że należy ją zatwierdzić, a następnie wybierz pozycję **Zatwierdź**. Możesz wybrać wiele aktualizacji, przytrzymując klawisz **CTRL** podczas zaznaczania poszczególnych pozycji.
 
-3.  Na stronie **Wybieranie grup** wybierz grupę, w której chcesz wdrożyć aktualizacje, a następnie wybierz pozycję **Dodaj**. Po wybraniu grup wybierz pozycję **Dalej**..
+3.  Na stronie **Wybieranie grup** wybierz grupę, w której chcesz wdrożyć aktualizacje, a następnie wybierz pozycję **Dodaj**. Po wybraniu grup wybierz pozycję **Dalej**.
 
 4.  Na stronie **Akcja wdrażania** wykonaj następujące czynności dla każdej grupy na liście:
 
@@ -259,6 +253,7 @@ Po wybraniu aktualizacji z listy zostaną udostępnione dodatkowe polecenia umo�
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

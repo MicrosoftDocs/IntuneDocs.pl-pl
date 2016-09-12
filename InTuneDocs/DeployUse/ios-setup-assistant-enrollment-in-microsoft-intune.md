@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rejestracja urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień | Microsoft Intune"
+description: "Rejestruj firmowe urządzenia z systemem iOS przy użyciu narzędzia Apple Configurator, aby fabrycznie zresetować urządzenia i przygotować je do uruchomienia Asystenta ustawień."
+keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
+ms.openlocfilehash: 01d87b95d2599f75161c9a95ff4cf94375eedb60
+
 
 ---
 
@@ -33,6 +27,7 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
 Za pomocą programu Apple Configurator można zresetować urządzenia z systemem iOS do ustawień fabrycznych i przygotować je do skonfigurowania przez nowego użytkownika.  Ta metoda wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Przyjęto założenie, że używany jest program Apple Configurator 2.0. Większość scenariuszy wymaga, aby zasady zastosowane w urządzeniu z systemem iOS uwzględniały *koligację użytkownika*, co umożliwia korzystanie z aplikacji Portal firmy usługi Intune.
 
 **Wymagania wstępne**
+* [Rejestracja urządzeń z systemem iOS jest włączona](set-up-ios-and-mac-management-with-microsoft-intune.md) poprzez zainstalowanie certyfikatu APNs
 * Fizyczny dostęp do urządzeń z systemem iOS — urządzenia muszą być w stanie nieskonfigurowanym (resetowanie do ustawień fabrycznych) bez ochrony hasłem
 * Numery seryjne — [w jaki sposób uzyskać numer seryjny systemu iOS](https://support.apple.com/en-us/HT204308)
 * Kable połączenia USB
@@ -43,10 +38,7 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 
 2.  **Utwórz profil dla urządzeń**. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń. Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator.
 
-    ###### Aby utworzyć profil
-
-    1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycje **Zasady** &gt; **Urządzenia należące do firmy**, a następnie wybierz pozycję **Dodaj**.
-
+    1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
     ![Tworzenie profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
 
     2.  Wprowadź szczegóły profilów urządzeń:
@@ -57,16 +49,13 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 
         -   **Szczegóły rejestracji** — określa sposób rejestracji urządzeń.
 
-            -   **Monituj o koligację użytkownika** — podczas początkowej konfiguracji można określić przynależność urządzenia z systemem iOS do użytkownika i zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik. W przypadku większości scenariuszy Asystenta ustawień użyj trybu **Monituj o koligację użytkownika**.
-            W tym trybie jest obsługiwanych kilka scenariuszy:
+            -   **Monituj o koligację użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie opcjonalnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik. **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji).
 
-                -   **Urządzenie osobiste należące do firmy** — model „Wybierz własne urządzenie” (CYOD, Choose Your Own Device). Scenariusz podobny do stosowania prywatnych lub osobistych urządzeń, ale administrator ma określone uprawnienia, w tym uprawnienia do administrowania urządzeniem oraz czyszczenia, resetowania i wyrejestrowywania urządzenia. Użytkownik urządzenia może instalować aplikacje i ma większość pozostałych uprawnień do korzystania z urządzenia, oprócz zablokowanych zgodnie z zasadami zarządzania.
-
-                -   **Konto menedżera rejestracji urządzeń** — urządzenie jest rejestrowane przy użyciu specjalnego konta administratora usługi Intune. Można nim zarządzać jak kontem prywatnym, ale tylko użytkownik, który zna poświadczenia menedżera rejestracji można instalować aplikacje i administrować urządzeniem oraz czyścić, resetować i wyrejestrowywać urządzenie. Informacje dotyczące rejestrowania urządzenia udostępnianego wielu użytkownikom za pomocą wspólnego konta można znaleźć w temacie [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
-
-            -   **Bez koligacji użytkownika** — urządzenie nie przynależy do żadnego użytkownika. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające przynależności do użytkownika są wyłączone lub nie będą działać.
+            -   **Brak koligacji użytkownika** — urządzenie nie zostało powiązane z użytkownikiem. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika, w tym aplikacja Portal firmy użyta do zainstalowania aplikacji biznesowych, nie będą działać.
 
         -   **Wstępne przypisanie do grupy urządzeń** — wszystkie urządzenia, dla których ten profil zostanie wdrożony, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
+
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
           -  **Device Enrollment Program** — program Device Enrollment Program (DEP) firmy Apple nie może być używany z rejestracją z wykorzystaniem Asystenta ustawień. Upewnij się, że przełącznik jest **wyłączony**.
 
@@ -126,26 +115,24 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 
     3. Wprowadź **nazwę** i **adres URL rejestracji** dla serwera MDM z kroku 6 powyżej. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
 
-       Jeśli zostanie wyświetlone ostrzeżenie o wymaganiach dotyczących profilu zaufanego dla Apple TV, możesz bezpiecznie anulować opcję **Trust Profil** (Zaufany profil), klikając szary symbol „X”. Możesz również bezpiecznie pominąć wszelkie ostrzeżenia dotyczące certyfikatu zakotwiczenia. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
+       Jeśli pojawi się ostrzeżenie o treści „adres URL serwera nie został zweryfikowany”, można bezpiecznie zignorować to ostrzeżenie. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
 
-    4.  W okienku **Servers** (Serwery) wybierz pozycję „Edit” (Edytuj) obok profilu nowego serwera. Upewnij się, że adres URL rejestracji dokładnie odpowiada adresowi URL wyeksportowanemu z usługi Intune. Jeśli adresy różnią się, wprowadź ponownie oryginalny adres URL i **zapisz** profil rejestracji wyeksportowany z usługi Intune.
-
-    5.  Podłącz urządzenia przenośne z systemem iOS do komputera Apple przy użyciu adaptera USB.
+    4.  Podłącz urządzenia przenośne z systemem iOS do komputera Apple przy użyciu adaptera USB.
 
         > [!WARNING]
         > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowania urządzenia i włączenie go. Jako najlepsze rozwiązanie zalecane jest również, aby podczas uruchamiania Asystenta ustawień był wyświetlany ekran **powitania**.
 
-    6.  Wybierz pozycję **Prepare**(Przygotuj). W okienku **Prepare iOS Device** (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
+    5.  Wybierz pozycję **Prepare**(Przygotuj). W okienku **Prepare iOS Device** (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
 
-    7. W okienku **Enroll in MDM Server** (Rejestrowanie na serwerze MDM) wybierz nazwę utworzonego serwera, a następnie wybierz pozycję **Next** (Dalej).
+    6. W okienku **Enroll in MDM Server** (Rejestrowanie na serwerze MDM) wybierz nazwę utworzonego serwera, a następnie wybierz pozycję **Next** (Dalej).
 
-    8. W okienku **Supervise Devices** (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
+    7. W okienku **Supervise Devices** (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
 
-    9. W okienku **Create an Organization** (Tworzenie organizacji) wybierz wartość w polu **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
+    8. W okienku **Create an Organization** (Tworzenie organizacji) wybierz wartość w polu **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
 
-    10. W okienku **Configure iOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS) wybierz wyświetlone czynności, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
+    9. W okienku **Configure iOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS) wybierz wyświetlone czynności, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
 
-    11. Po zakończeniu przygotowywania urządzenia z systemem iOS można odłączyć kabel USB.  
+    10. Po zakończeniu przygotowywania urządzenia z systemem iOS można odłączyć kabel USB.  
 
 8.  **Dystrybuuj urządzenia**. Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzenia zostanie uruchomiony Asystent ustawień.
 
@@ -155,6 +142,7 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 [Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO4-->
 
 

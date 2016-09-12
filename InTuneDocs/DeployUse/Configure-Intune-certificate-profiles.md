@@ -1,36 +1,28 @@
 ---
-# required metadata
-
-title: Konfigurowanie profilów certyfikatów | Microsoft Intune
-description:
-keywords:
+title: "Konfigurowanie profilów certyfikatów | Microsoft Intune"
+description: "Dowiedz się, jak utworzyć profil certyfikatu usługi Intune."
+keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: kmyrup
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6a7f2eeb0114f525890d1dcb61344d60a19943d1
+ms.openlocfilehash: 14419092edc77b2229cf980a74e81048941a2c28
+
 
 ---
 
 # Konfigurowanie profilów certyfikatów usługi Intune
-Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatu](configure-certificate-infrastructure.md) można skonfigurować profile certyfikatów:
+Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) lub [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md) można skonfigurować profile certyfikatów:
 
-**Zadanie 1** — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
-**Zadanie 2** — Tworzenie profilów certyfikatów zaufanego urzędu certyfikacji
-**Zadanie 3** — Jedno z dwóch:
+**Zadanie 1** — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji **Zadanie 2** — Tworzenie profilów certyfikatów zaufanego urzędu certyfikacji **Zadanie 3** — Jedno z następujących zadań:
 
 Tworzenie profilów certyfikatów protokołu SCEP
 
@@ -46,7 +38,7 @@ Należy utworzyć **profil certyfikatu zaufanego**, aby móc utworzyć profil ce
 
 ##### Aby utworzyć profil zaufanego certyfikatu
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -62,7 +54,18 @@ Należy utworzyć **profil certyfikatu zaufanego**, aby móc utworzyć profil ce
 
     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Podaj wymagane informacje, aby skonfigurować ustawienia profilu zaufanego certyfikatu dla systemów Android, iOS, Mac OS X, Windows 8.1 lub Windows Phone 8.1. W ustawieniu **Plik certyfikatu** zaimportuj certyfikat zaufanego głównego urzędu certyfikacji (plik **cer**) wyeksportowany z urzędu wystawiającego certyfikaty. Ustawienie **Magazyn docelowy** dotyczy tylko urządzeń z systemem Windows 8.1 oraz nowszymi i tylko wtedy, gdy urządzenie ma więcej niż jeden magazyn certyfikatów.
+3.  Podaj wymagane informacje, aby skonfigurować ustawienia profilu zaufanego certyfikatu dla systemów Android, iOS, Mac OS X, Windows 8.1 lub Windows Phone 8.1. 
+
+    - W ustawieniu **Plik certyfikatu** zaimportuj certyfikat zaufanego głównego urzędu certyfikacji (plik **cer**) wyeksportowany z urzędu wystawiającego certyfikaty. Ustawienie **Magazyn docelowy** dotyczy tylko urządzeń z systemem Windows 8.1 oraz nowszymi i tylko wtedy, gdy urządzenie ma więcej niż jeden magazyn certyfikatów.
+
+    
+    - W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby podać niestandardowy format nazwy podmiotu.  
+
+        Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki, jaki podano w tym przykładzie:  
+
+        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
+
+        W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych CN i E używa ciągów dla jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. Lista obsługiwanych ciągów znajduje się w temacie [Funkcja CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).  
 
 
 4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
@@ -74,7 +77,7 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
 
 ##### Aby utworzyć profil certyfikatu protokołu SCEP
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -91,6 +94,15 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Postępuj zgodnie z instrukcjami na stronie konfiguracji profilu, aby skonfigurować ustawienia profilu certyfikatu SCEP.
+    > [!NOTE]
+    > 
+    > W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby podać niestandardowy format nazwy podmiotu.
+    > 
+    >  Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: Nazwa pospolita (CN) i Adres e-mail (E). Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki, jaki podano w tym przykładzie:
+    
+    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+    
+    >    W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych *CN* i *E* używa ciągów dla jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. Lista obsługiwanych ciągów znajduje się w temacie [Funkcja CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).
 
 4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
 
@@ -98,7 +110,7 @@ Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady** i będzie możn
 
 ##### Aby utworzyć profil certyfikatu PFX
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasadę**.
+1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i kliknij pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
@@ -138,7 +150,7 @@ Sposób wdrażania profilów certyfikatów jest taki sam jak w przypadku innych 
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycje **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
 
     -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
 
@@ -152,6 +164,7 @@ Można teraz użyć certyfikatów do zabezpieczenia poczty e-mail, sieci Wi-Fi i
 -  [Połączenia VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

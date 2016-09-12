@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Wykorzystanie przepustowości sieci przez usługę Intune | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Wykorzystanie przepustowości sieci przez usługę Intune | Microsoft Intune"
+description: "wykorzystanie przepustowości sieci przez usługę Intune"
+keywords: 
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: b40c5ce0d4447b10ec949af6933f28b091136315
+
 
 ---
 
@@ -83,7 +77,7 @@ Więcej informacji na temat korzystania z usługi BITS na komputerach z systemem
 
 -   [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)]
 
-Aby można było korzystać z usługi BranchCache, musi być ona włączona na komputerze klienckim, który musi być skonfigurowany pod kątem **trybu rozproszonej pamięci podręcznej**..
+Aby można było korzystać z usługi BranchCache, musi być ona włączona na komputerze klienckim, który musi być skonfigurowany pod kątem **trybu rozproszonej pamięci podręcznej**.
 
 Po zainstalowaniu na komputerze klienta usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] usługa BranchCache i tryb rozproszonej pamięci podręcznej są domyślnie włączane. Jednak jeśli zasady grupy na komputerze klienckim wyłączają usługę BranchCache, nie zostaną one przesłonione przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i usługa BranchCache pozostanie wyłączona na tym komputerze.
 
@@ -92,6 +86,8 @@ Jeśli chcesz używać usługi BranchCache, musisz skontaktować się z innymi a
 ### Zobacz także
 [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
-<!--HONumber=May16_HO1-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 

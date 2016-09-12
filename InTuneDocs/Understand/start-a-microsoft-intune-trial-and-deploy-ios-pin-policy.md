@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Rozpoczynanie pracy z wersją próbną usługi Microsoft Intune i wdrażanie zasad dotyczących numeru PIN w systemie iOS | Microsoft Intune
-description:
-keywords:
+title: "Rozpoczynanie pracy z wersją próbną usługi Intune i wdrażanie zasad dotyczących numeru PIN w systemie iOS | Microsoft Intune"
+description: "Wdrażanie zasad dotyczących numeru PIN w systemie iOS w usłudze Intune"
+keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 06cb9a73-0f17-44b3-b334-86c98020316e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: a4c38659c87c651678ee30134d50fb74f35fc388
+
 
 ---
 
 # Rozpoczynanie pracy z wersją próbną usługi Microsoft Intune i wdrażanie zasad dotyczących numeru PIN w systemie iOS
-Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi Intune i zasady dotyczące numeru PIN dla urządzeń z systemem iOS. Listę innych typowych zadań dotyczących oceny w usłudze Intune do wypróbowania można znaleźć w temacie [Typowe zadania oceny usługi Microsoft Intune](common-microsoft-intune-evaluation-tasks.md)..
+Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi Intune i zasady dotyczące numeru PIN dla urządzeń z systemem iOS. Listę innych typowych zadań dotyczących oceny w usłudze Intune do wypróbowania można znaleźć w temacie [Typowe zadania dotyczące oceny usługi Microsoft Intune](common-microsoft-intune-evaluation-tasks.md).
 
 
 
@@ -42,11 +36,11 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 > [!NOTE]
 > Jeśli masz już subskrypcję usługi Intune, pomiń tę sekcję i przejdź do następnej.
 
-1.  Na komputerze z systemem Windows kliknij prawym przyciskiem myszy program **Internet Explorer** (IE) i wybierz pozycję **Przeglądanie InPrivate**..
+1.  Na komputerze z systemem Windows kliknij prawym przyciskiem myszy program **Internet Explorer** (IE) i wybierz pozycję **Przeglądanie InPrivate**.
 
     ![Rozpoczynanie przeglądania InPrivate](../media/30-day-trial-walkthrus/30day-start-trial-1-InPrivate.png)
 
-2.  Przejdź do [portalu tworzenia konta usługi Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1), podaj wymagane informacje i kliknij przycisk **Dalej**..
+2.  Przejdź do [portalu tworzenia konta usługi Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1), podaj wymagane informacje i kliknij przycisk **Dalej**.
 
     ![Rejestrowanie się w celu utworzenia konta](../media/30-day-trial-walkthrus/30day-start-trial-2-abt-you.png)
 
@@ -58,7 +52,7 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
     ![Sprawdzanie poprawności informacji](../media/30-day-trial-walkthrus/30day-start-trial-4-textme.png)
 
-5.  Zapisz informacje wyświetlone na ekranie, a następnie kliknij pozycję oznaczającą, że **wszystko jest gotowe**..
+5.  Zapisz informacje wyświetlone na ekranie, a następnie kliknij pozycję oznaczającą, że**wszystko jest gotowe**.
 
     ![Gotowość](../media/30-day-trial-walkthrus/30day-start-trial-5-ReadyToGo.png)
 
@@ -80,11 +74,11 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
     3.  Usuń zaznaczenie pola wyboru **Nakłoń tę osobę do zmiany hasła przy następnym logowaniu**.
 
-    4.  Kliknij przycisk **Utwórz**..
+    4.  Kliknij przycisk **Utwórz**.
 
     ![Tworzenie nowego konta użytkownika](../media/30-day-trial-walkthrus/30day-crt-user-8-add-user-info.png)
 
-4.  Na stronie potwierdzenia utworzenia użytkownika kliknij przycisk **Zamknij**..
+4.  Na stronie potwierdzenia utworzenia użytkownika kliknij przycisk **Zamknij**.
 
     ![Strona potwierdzenia utworzenia użytkownika](../media/30-day-trial-walkthrus/30day-crt-user-9-close-confirm.png)
 
@@ -106,11 +100,11 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
 2.  Włączanie rejestracji urządzeń z systemem iOS. Ten proces powoduje ustawienie zaufanego certyfikatu między usługą Apple Push Notification Service (APNs) i subskrypcją usługi Intune.
 
-    1.  Kliknij pozycję **Włącz platformę systemów iOS i Mac OS X**..
+    1.  Kliknij pozycję **Włącz platformę systemów iOS i Mac OS X**.
 
         ![Włączanie rejestracji systemu iOS i Mac OS X](../media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png)
 
-    2.  Kliknij pozycję **Pobierz żądanie certyfikatu APNs**..
+    2.  Kliknij pozycję **Pobierz żądanie certyfikatu APNs**.
 
         ![Pobieranie certyfikatu APNs](../media/30-day-trial-walkthrus/30day-cfg-pol-14-dwnld-cert-reqst.png)
 
@@ -126,19 +120,19 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
         ![Logowanie się w portalu certyfikatów Apple Push](../media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png)
 
-    6.  Kliknij pozycję **Utwórz certyfikat**..
+    6.  Kliknij pozycję **Utwórz certyfikat**.
 
         ![Tworzenie certyfikatu APNs](../media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png)
 
-    7.  Przeczytaj warunki użytkowania produktów firmy Apple, zaznacz pole wyboru, a następnie kliknij pozycję **Akceptuj**..
+    7.  Przeczytaj warunki użytkowania produktów firmy Apple, zaznacz pole wyboru, a następnie kliknij pozycję **Akceptuj**.
 
         ![Akceptowanie warunków](../media/30-day-trial-walkthrus/30day-cfg-pol-19-TOU.png)
 
-    8.  Kliknij pozycję **Przeglądaj**..
+    8.  Kliknij pozycję **Przeglądaj**.
 
         ![Przechodzenie do lokalizacji, w której zapisano certyfikat](../media/30-day-trial-walkthrus/30day-cfg-pol-20-browse.png)
 
-    9. Wybierz zapisany wcześniej plik CSR, a następnie kliknij pozycję **Otwórz**..
+    9. Wybierz zapisany wcześniej plik CSR, a następnie kliknij pozycję **Otwórz**.
 
         ![Otwieranie certyfikatu](../media/30-day-trial-walkthrus/30day-cfg-pol-21-CSRfile-open.png)
 
@@ -146,43 +140,43 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
         ![Przekazywanie certyfikatu](../media/30-day-trial-walkthrus/30day-cfg-pol-22-upld-reqst.png)
 
-    11. Gdy zostanie wyświetlony monit o pobranie pliku JSON, kliknij pozycję **Zapisz jako**..
+    11. Gdy zostanie wyświetlony monit o pobranie pliku JSON, kliknij pozycję **Zapisz jako**.
 
         ![Zapisywanie pliku JSON](../media/30-day-trial-walkthrus/30day-cfg-pol-23-json-saveas.png)
 
-    12. Określ lokalizację pliku JSON, a następnie kliknij pozycję **Zapisz**..
+    12. Określ lokalizację pliku JSON, a następnie kliknij pozycję **Zapisz**.
 
         ![Określanie lokalizacji zapisu pliku JSON](../media/30-day-trial-walkthrus/30day-cfg-pol-24-json-save-loc.png)
 
-        Jeśli po kilku sekundach nie nastąpi automatyczne przekierowanie ze strony, kliknij pozycję **Anuluj**..
+        Jeśli po kilku sekundach nie nastąpi automatyczne przekierowanie ze strony, kliknij pozycję **Anuluj**.
 
         ![Anulowanie w przypadku braku przekierowania ze strony](../media/30-day-trial-walkthrus/30day-cfg-pol-25-json-pg-cancel.png)
 
-    13. Aby pobrać nowo utworzony plik certyfikatu, kliknij pozycję **Pobierz**..
+    13. Aby pobrać nowo utworzony plik certyfikatu, kliknij pozycję **Pobierz**.
 
         ![Pobieranie certyfikatu](../media/30-day-trial-walkthrus/30day-cfg-pol-26-dwnld-retrv-cert.png)
 
-    14. Gdy zostanie wyświetlony monit o pobranie pliku PEM, kliknij pozycję **Zapisz jako**..
+    14. Gdy zostanie wyświetlony monit o pobranie pliku PEM, kliknij pozycję **Zapisz jako**.
 
         ![Pobieranie pliku PEM](../media/30-day-trial-walkthrus/30day-cfg-pol-27-pem-saveas.png)
 
-    15. Określ lokalizację pliku PEM, a następnie kliknij pozycję **Zapisz**..
+    15. Określ lokalizację pliku PEM, a następnie kliknij pozycję **Zapisz**.
 
         ![Zapisywanie pliku PEM](../media/30-day-trial-walkthrus/30day-cfg-pol-28-pem-save-loc.png)
 
-    16. Wróć do karty konsoli zarządzania usługą Intune, a następnie kliknij pozycję **Prześlij certyfikat APNs**..
+    16. Wróć do karty konsoli zarządzania usługą Intune, a następnie kliknij pozycję **Prześlij certyfikat APNs**.
 
         ![Przekazywanie certyfikatu APNs](../media/30-day-trial-walkthrus/30day-cfg-pol-29-upld-cert.png)
 
-    17. Wprowadź identyfikator Apple ID, a następnie kliknij pozycję **Przeglądaj**..
+    17. Wprowadź identyfikator Apple ID, a następnie kliknij pozycję **Przeglądaj**.
 
         ![Wprowadzanie identyfikatora Apple ID](../media/30-day-trial-walkthrus/30day-cfg-pol-30-app-id-browse.png)
 
-    18. Wybierz zapisany plik PEM, a następnie kliknij pozycję **Otwórz**..
+    18. Wybierz zapisany plik PEM, a następnie kliknij pozycję **Otwórz**.
 
         ![Otwieranie pliku PEM](../media/30-day-trial-walkthrus/30day-cfg-pol-31-sel-pem-open.png)
 
-    19. Kliknij pozycję **Przekaż**..
+    19. Kliknij pozycję **Przekaż**.
 
         ![Przekazywanie pliku PEM](../media/30-day-trial-walkthrus/30day-cfg-pol-32-pem-upload.png)
 
@@ -192,37 +186,37 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
 3.  Tworzenie testowej grupy użytkowników do użycia z zasadami:
 
-    1.  W lewym okienku kliknij pozycję **Grupy**..
+    1.  W lewym okienku kliknij pozycję **Grupy**.
 
         ![Otwieranie obszaru roboczego Grupy](../media/30-day-trial-walkthrus/30day-cfg-pol-34-clk-groups.png)
 
-    2.  Kliknij pozycję **Utwórz grupę** po prawej stronie..
+    2.  Kliknij pozycję **Utwórz grupę** po prawej stronie.
 
         ![Tworzenie grupy](../media/30-day-trial-walkthrus/30day-cfg-pol-35-crt-group.png)
 
-    3.  Podaj nazwę grupy, wybierz grupę **Wszyscy użytkownicy** jako nadrzędną, a następnie kliknij przycisk **Dalej**..
+    3.  Podaj nazwę grupy, wybierz grupę **Wszyscy użytkownicy** jako nadrzędną, a następnie kliknij przycisk **Dalej**.
 
         ![Wybieranie grupy Wszyscy użytkownicy jako grupy nadrzędnej](../media/30-day-trial-walkthrus/30day-cfg-pol-36-name-group.png)
 
-    4.  W polu **Uruchom członkostwo grupy w** wybierz pozycję **Wszyscy użytkownicy w grupie nadrzędnej** i kliknij przycisk **Zakończ**..
+    4.  W polu **Uruchom członkostwo grupy w** wybierz pozycję **Wszyscy użytkownicy w grupie nadrzędnej** i kliknij przycisk **Zakończ**.
 
         ![Uruchamianie członkostwa grupy w grupie nadrzędnej](../media/30-day-trial-walkthrus/30day-cfg-pol-37-all-users-group.png)
 
 4.  Tworzenie zasad numeru PIN w systemie iOS i stosowanie ich w testowej grupie użytkowników:
 
-    1.  W lewym okienku kliknij pozycję **Zasady**..
+    1.  W lewym okienku kliknij pozycję **Zasady**.
 
         ![Otwieranie obszaru roboczego zasad](../media/30-day-trial-walkthrus/30day-cfg-pol-38-clk-policy.png)
 
-    2.  Kliknij pozycję **Dodaj zasady** po prawej stronie..
+    2.  Kliknij pozycję **Dodaj zasady** po prawej stronie.
 
         ![Dodawanie zasad](../media/30-day-trial-walkthrus/30day-cfg-pol-39-add-policy.png)
 
-    3.  Rozwiń węzeł systemu iOS, wybierz wiersz **Konfiguracja ogólna**, a następnie kliknij pozycję **Utwórz zasady**..
+    3.  Rozwiń węzeł systemu iOS, wybierz wiersz **Konfiguracja ogólna**, a następnie kliknij pozycję **Utwórz zasady**.
 
         ![Tworzenie ogólnych zasad konfiguracji systemu iOS](../media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png)
 
-    4.  Wpisz nazwę zasad, włącz opcję **Wymagaj hasła do odblokowania urządzeń przenośnych** i ustaw wartość **Minimalna długość hasła** na **4**..
+    4.  Wpisz nazwę zasad, włącz opcję **Wymagaj hasła do odblokowania urządzeń przenośnych** i ustaw wartość **Minimalna długość hasła** na **4**.
 
         ![Konfigurowanie ustawień haseł](../media/30-day-trial-walkthrus/30day-cfg-pol-41-name-policy.png)
 
@@ -230,7 +224,7 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
         ![Wdrażanie zasad](../media/30-day-trial-walkthrus/30day-cfg-pol-42-yes-deploy-pol.png)
 
-    6.  Kliknij utworzoną wcześniej grupę użytkowników, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **OK**..
+    6.  Kliknij utworzoną wcześniej grupę użytkowników, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **OK**.
 
         ![Wybieranie grupy dla zasad](../media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png)
 
@@ -244,7 +238,7 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
     ![Instalowanie portalu firmy](../media/30-day-trial-walkthrus/30day-cfg-pol-45-cportal-installed.png)
 
-2.  Wprowadź nazwę konta i hasło użytkownika testowego, a następnie naciśnij pozycję **Zaloguj się**..
+2.  Wprowadź nazwę konta i hasło użytkownika testowego, a następnie naciśnij pozycję **Zaloguj się**.
 
     ![Wprowadzanie poświadczeń](../media/30-day-trial-walkthrus/30day-cfg-pol-46-cportal-signin.png)
 
@@ -252,19 +246,19 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
     ![Rozpoczynanie rejestrowania](../media/30-day-trial-walkthrus/30day-cfg-pol-47-tap-enroll.jpg)
 
-4.  Na ekranie **Instalowanie profilu** naciśnij pozycję **Zainstaluj**..
+4.  Na ekranie **Instalowanie profilu** naciśnij pozycję **Zainstaluj**.
 
     ![Instalowanie profilu](../media/30-day-trial-walkthrus/30day-cfg-pol-48-profile-install-1.jpg)
 
-5.  W oknie dialogowym **Instalowanie profilu** naciśnij pozycję **Zainstaluj**..
+5.  W oknie dialogowym **Instalowanie profilu** naciśnij pozycję **Zainstaluj**.
 
     ![Kontynuowanie instalowania profilu](../media/30-day-trial-walkthrus/30day-cfg-pol-49-profile-install-2.jpg)
 
-6.  Na ekranie **Ostrzeżenie** naciśnij pozycję **Zainstaluj**..
+6.  Na ekranie **Ostrzeżenie** naciśnij pozycję **Zainstaluj**.
 
     ![Akceptowanie komunikatu ostrzegawczego](../media/30-day-trial-walkthrus/30day-cfg-pol-50-warning-install-3.png)
 
-7.  W oknie dialogowym **Zdalne zarządzanie** naciśnij pozycję **Ufaj**..
+7.  W oknie dialogowym **Zdalne zarządzanie** wybierz pozycję **Zaufanie**.
 
     ![Pozycja Ufaj w oknie dialogowym Zdalne zarządzanie](../media/30-day-trial-walkthrus/30day-cfg-pol-51-remt-mgmt-trust.jpg)
 
@@ -276,11 +270,11 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 
     ![Naciśnięcie pozycji OK w celu zamknięcia aplikacji Portal firmy](../media/30-day-trial-walkthrus/30day-cfg-pol-53-devc-enrolled-ok.png)
 
-10. Po wyświetleniu monitu o skonfigurowanie kodu dostępu naciśnij pozycję **Kontynuuj**..
+10. Po wyświetleniu monitu o skonfigurowanie kodu dostępu naciśnij pozycję **Kontynuuj**.
 
     ![Akceptowanie monitu o skonfigurowanie kodu dostępu](../media/30-day-trial-walkthrus/30day-cfg-pol-54-passcode-req-cont.png)
 
-11. Wprowadź kod dostępu, naciśnij pozycję **Kontynuuj**, wprowadź ponownie kod dostępu i naciśnij pozycję **Zapisz**..
+11. Wprowadź kod dostępu, naciśnij pozycję **Kontynuuj**, wprowadź ponownie kod dostępu i naciśnij pozycję **Zapisz**.
 
     ![Podawanie kodu dostępu](../media/30-day-trial-walkthrus/30day-cfg-pol-55-passcode-enter.jpg)
 
@@ -290,6 +284,7 @@ Te szczegółowe instrukcje pomogą Ci skonfigurować wersję próbną usługi I
 [Przewodnik dotyczący oceny usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

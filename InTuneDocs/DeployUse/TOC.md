@@ -24,13 +24,14 @@
 #### [Reguły dostępu do programu Exchange](exchange-access-rules-for-mobile-devices.md)
 ### [Zarządzanie komputerami](manage-windows-pcs-with-microsoft-intune.md)
 #### [Instalowanie klienta komputera](install-the-windows-pc-client-with-microsoft-intune.md)
+#### [Typowe zadania związane z zarządzaniem komputerami](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Rozwiązywanie konfliktów zasad komputerów](resolve-gpo-and-microsoft-intune-policy-conflicts.md)
 
 ## [Konfigurowanie urządzeń](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 ### [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Ustawienia systemu iOS](ios-policy-settings-in-microsoft-intune.md)
-#### [Ustawienia systemu Android](android-policy-settings-in-microsoft-intune.md)
+#### [Ustawienia systemów Android i Samsung KNOX](android-policy-settings-in-microsoft-intune.md)
 #### [Ustawienia systemów Windows 8 i Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
 #### [Ustawienia systemu Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
 #### [Ustawienia komputerów i urządzeń przenośnych z systemem Windows 10](windows-10-policy-settings-in-microsoft-intune.md)
@@ -47,8 +48,9 @@
 #### [Połączenia sieci VPN w usłudze Intune](vpn-connections-in-microsoft-intune.md)
 #### [Profile poczty e-mail w usłudze Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Używanie grup do zarządzania użytkownikami i urządzeniami](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+### [Mapowanie urządzeń na grupy](categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Zrozumienie informacji o urządzeniach dzięki spisowi](understand-your-devices-with-inventory-in-microsoft-intune.md)
-### [Typowe zadania związane z zarządzaniem komputerami](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
+
 
 ## [Ochrona urządzeń](protect-your-devices-with-microsoft-intune.md)
 ### [Zdalne blokowanie i resetowanie kodu dostępu](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
@@ -75,6 +77,7 @@
 ## [Konfigurowanie aplikacji](update-apps-using-microsoft-intune.md)
 ### [Aktualizowanie aplikacji ](update-apps-using-microsoft-intune.md)
 ### [Zasady konfiguracji aplikacji sytemu iOS](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md)
+### [Profile aprowizacji aplikacji mobilnych systemu iOS](ios-mobile-app-provisioning-profiles.md)
 ### [Zarządzanie dostępem do Internetu](manage-internet-access-using-managed-browser-policies.md)
 
 
@@ -86,14 +89,19 @@
 #### [Dla systemów Windows i Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Wdrażanie zasad zgodności urządzenia](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Ograniczanie dostępu do poczty e-mail i usługi O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+
+
 #### [Usługa Exchange Online i nowa usługa Exchange Online w wersji dedykowanej](restrict-access-to-exchange-online-with-microsoft-intune.md)
 #### [Lokalna instalacja programu Exchange i starsza usługa Exchange Online w wersji dedykowanej](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 #### [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 #### [Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+#### [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Ograniczanie dostępu do poczty e-mail: przykłady](restrict-email-access-example-scenarios.md)
 
-### [Ochrona danych aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+### [Ograniczanie dostępu do sieci (Cisco ISE)](restrict-access-to-networks.md)
+
+### [Ochrona danych aplikacji za pomocą zarządzania aplikacjami mobilnymi](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md)
 #### [Przygotowanie do konfigurowania zasad MAM](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Tworzenie i wdrażanie zasad MAM](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
@@ -102,10 +110,12 @@
 #### [Monitorowanie zgodności zasad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 #### [Środowisko użytkownika końcowego](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+#### [Konsola administracyjna usługi Intune dla zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Przygotowanie aplikacji biznesowych do użycia funkcji MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 #### [Pakowanie aplikacji dla systemu iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
 #### [Pakowanie aplikacji dla systemu Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+#### [Aplikacje biznesowe na urządzeniach niezarządzanych przez usługę Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Używanie zestawu SDK podczas pisania aplikacji](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
@@ -120,9 +130,11 @@
 
 ## [Co nowego](whats-new-in-microsoft-intune.md)
 
-# [Rozwiązywanie problemów](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Tworzenie i dostosowywanie aplikacji](/intune/develop/intune-app-sdk)
+
+# [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

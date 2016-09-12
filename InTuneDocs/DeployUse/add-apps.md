@@ -1,101 +1,87 @@
 ---
-# required metadata
-
-title: Dodawanie aplikacji | Usługa Microsoft Intune
-description:
-keywords:
+title: "Dodawanie aplikacji | Usługa Microsoft Intune"
+description: "Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
+ms.openlocfilehash: 93c05ecd0154bb637f421dcc5d7ee56ff8d3ab2d
+
 
 ---
 
 # Dodawanie aplikacji za pomocą usługi Microsoft Intune
-Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie. Informacje te ułatwią zrozumienie, które aplikacje można wdrożyć na poszczególnych platformach, a także zrozumienie koniecznych do spełnienia wymagań wstępnych.
+Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie. Te pojęcia ułatwiają zrozumienie aplikacji, które można wdrożyć na poszczególnych platformach. Ułatwiają także zrozumienie wymagań wstępnych, które należy spełnić przed wdrożeniem aplikacji.
 
-## Typy aplikacji, które można wdrożyć za pomocą usługi Intune
-Aplikacje można wdrażać na wszystkich typach urządzeń obsługiwanych przez usługę Intune. W zależności od typu aplikacji do wdrożenia różnić się będzie sam proces wdrożenia i obsługiwane urządzenia. Poniższe informacje zawierają informacje o aplikacjach, które można i których nie można wdrożyć:
+## Typy aplikacji, które można wdrożyć
 
+### Instalator oprogramowania
 
-### **Instalator Windows (&#42;.exe, &#42;.msi)**
-- Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć [tutaj](https://support.microsoft.com/en-us/kb/227091).
-- Wszelkie dodatkowe pliki i foldery, które są wymagane przez program instalacyjny aplikacji, muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.
-- W większości przypadków pliki Instalatora Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają żadnych argumentów wiersza polecenia do zainstalowania przez usługę Intune. Zajrzyj do dokumentacji aplikacji. Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).
+|Typ aplikacji|Szczegóły|
+|----------------|-------|
+|**Instalator Windows (&#42;.exe, &#42;.msi)**|Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć w artykule [Przełączniki wiersza polecenia dla narzędzia Instalatora Microsoft Windows](https://support.microsoft.com/en-us/kb/227091).<br><br>Wszelkie dodatkowe pliki i foldery wymagane przez program instalacyjny aplikacji muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.<br><br>W większości przypadków pliki Instalatora systemu Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają instalacji żadnych argumentów wiersza polecenia przez usługę Intune. Zajrzyj do dokumentacji aplikacji.<br><br>Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).|
+|**Pakiet aplikacji dla systemu Android (&#42;.apk)**|Do wdrożenia aplikacji dla systemu Android potrzebny jest prawidłowy pakiet apk.|
+|**Pakiet aplikacji dla systemu iOS (&#42;.ipa)**|Do wdrożenia aplikacji dla systemu iOS potrzebny jest prawidłowy plik pakietu ipa.<br><br>Pakiet ipa musi być podpisany przez firmę Apple, a data wygaśnięcia w profilu inicjowania obsługi administracyjnej musi być ważna. Usługa Intune może dystrybuować aplikacje dla systemu iOS z certyfikatem przedsiębiorstwa.<br><br>Nie wszystkie aplikacje z certyfikatem deweloperów firmy Apple są obsługiwane.<br><br>Firma musi być zarejestrowana w programie dla deweloperów aplikacji systemu iOS dla przedsiębiorstw (iOS Developer Enterprise Program).<br><br>Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji systemu iOS.<br><br>Nie musisz wdrażać pliku manifestu (plist) z aplikacją.|
+|**Pakiet aplikacji systemu Windows Phone (&#42;.xap, .appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).|
+|**Pakiet aplikacji systemu Windows (.appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
+|**Instalator Windows korzystający z funkcji zarządzania urządzeniami przenośnymi (&#42;.msi)**|Aplikacja umożliwia tworzenie i wdrażanie aplikacji opartych na Instalatorze Windows na zarejestrowanych komputerach z systemem Windows 10. Te komputery są zarządzane przy użyciu funkcji zarządzania urządzeniami przenośnymi (MDM).<br /><br />Możesz przekazać tylko jeden plik z rozszerzeniem msi.<br><br>Kod i wersja produktu pliku są używane do wykrywania aplikacji.<br><br>Zostanie zastosowane domyślne zachowanie dotyczące ponownego uruchamiania Nie jest to kontrolowane przez usługę Intune.<br><br>Pakiety MSI dla użytkownika zostaną zainstalowane dla pojedynczego użytkownika.<br><br>Pakiety MSI dla maszyny zostaną zainstalowane dla wszystkich użytkowników urządzenia.<br><br>Obecnie pakiety MSI w trybie podwójnym są instalowane dla wszystkich użytkowników urządzenia.<br><br>Aktualizacje aplikacji są obsługiwane, jeśli kod produktu MSI jest taki sam dla każdej wersji.<br>
+Wszystkie typy aplikacji instalatora oprogramowania są przekazywane do magazynu w chmurze.
 
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
-### **Pakiet aplikacji dla systemu Android (plik &#42;.apk)**
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
-### **Pakiet aplikacji dla systemu iOS (plik &#42;.ipa)**
-- Do wdrożenia aplikacji dla systemu iOS potrzebny jest prawidłowy plik pakietu ipa.
-- Pakiet ipa musi być podpisany przez firmę Apple, a data wygaśnięcia wskazana w profilu inicjowania obsługi administracyjnej musi być ważna. Usługa Intune może dystrybuować aplikacje dla systemu iOS z certyfikatem przedsiębiorstwa. Nie wszystkie aplikacje z certyfikatem deweloperów firmy Apple są obsługiwane.
-- Firma musi być zarejestrowana w programie dla deweloperów aplikacji systemu iOS dla przedsiębiorstw (iOS Developer Enterprise Program).
-- Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji systemu iOS.
-- Plik manifestu (plist) nie jest wymagany do wdrożenia z aplikacją.
-
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
-
-Obecnie użytkownicy końcowi nie mogą instalować aplikacji firmowych bezpośrednio za pomocą aplikacji Portal firmy usługi Intune dla systemu iOS. Jest to spowodowane ograniczeniami dotyczącymi aplikacji opublikowanych w sklepie App Store dla systemu iOS. Zobacz [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) (Wytyczne dotyczące sklepu App Store). Użytkownicy mają dostęp do aplikacji firmowych (w tym aplikacji zarządzanych ze sklepu App Store oraz pakietów aplikacji biznesowych) przez uruchomienie aplikacji Portal firmy na urządzeniu. W tym celu należy nacisnąć kafelek Company Apps (Aplikacje firmowe), co spowoduje uruchomienie przeglądarki i przekierowanie do portalu sieci Web usługi Intune.
-
-### **Pakiet aplikacji systemu Windows Phone (&#42;.xap, .appx, .appxbundle)**
-- Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).
-
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
-
-Poniżej dostępne są informacje dotyczące instalowania aplikacji biznesowych platformy uniwersalnej systemu Windows za pomocą usługi Intune.
-
-### **Pakiet aplikacji systemu Windows (.appx, .appxbundle)**
-- Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).
-
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
-### **Instalator Windows korzystający z funkcji zarządzania urządzeniami przenośnymi (&#42;.msi)**
-Ten typ instalatora umożliwia tworzenie i wdrażanie aplikacji opartych na Instalatorze Windows na zarejestrowanych komputerach z systemem Windows 10.<br /><br />W przypadku korzystania z instalatora tego typu należy wziąć pod uwagę następujące kwestie:
-- Możesz przekazać tylko jeden plik z rozszerzeniem msi.
-- Kod i wersja produktu pliku są używane do wykrywania aplikacji.
-- Zostanie zastosowane domyślne zachowanie dotyczące ponownego uruchamiania Nie jest to kontrolowane przez usługę Intune.
-- Pakiety MSI dla użytkownika zostaną zainstalowane dla pojedynczego użytkownika.
-- Pakiety MSI dla maszyny zostaną zainstalowane dla wszystkich użytkowników urządzenia.
-- Obecnie pakiety MSI w trybie podwójnym są instalowane dla wszystkich użytkowników urządzenia.
-- Aktualizacje aplikacji są obsługiwane, jeśli kod produktu MSI jest taki sam dla każdej wersji.
-
-Ten typ aplikacji jest przekazywany do magazynu w chmurze.
 ### **Link zewnętrzny**
-Używany w przypadku, gdy posiadasz:
-- **Adres URL**, który umożliwia użytkownikom pobieranie aplikacji ze sklepu App Store.
-- **Link** do aplikacji sieci Web uruchamianej w przeglądarce sieci Web.
+Użyj linku zewnętrznego, jeśli masz:
+- Adres URL, który umożliwia użytkownikom pobieranie aplikacji ze sklepu App Store.
+- Link do aplikacji sieci Web uruchamianej w przeglądarce sieci Web.
 
 Aplikacje oparte na linkach zewnętrznych nie są przechowywane w magazynie w chmurze usługi Intune.
 ### **Zarządzana aplikacja systemu iOS ze sklepu App Store**
-Umożliwia zarządzanie bezpłatnymi aplikacjami ze sklepu App Store dla systemu iOS i zarządzanie nimi. Umożliwia również skojarzenie [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) ze [zgodnymi aplikacjami](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) i sprawdzanie ich stanu w konsoli administratora.<br /><br />Zarządzane aplikacje dla systemu iOS nie są przechowywane w magazynie w chmurze usługi Intune.
-> [!TIP] Opcje dla urządzeń przenośnych nie są dostępne, dopóki usługa Intune [nie zostanie ustawiona jako urząd zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md).
+Zarządzane aplikacje systemu iOS umożliwiają zarządzanie bezpłatnymi aplikacjami ze sklepu App Store dla systemu iOS i ich wdrażanie. Zarządzane aplikacje systemu iOS można również wykorzystać do skojarzenia [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) ze [zgodnymi aplikacjami](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) i sprawdzać ich stan w konsoli administracyjnej.<br /><br />Zarządzane aplikacje dla systemu iOS nie są przechowywane w magazynie w chmurze usługi Intune.
+
+> [!TIP]
+> Opcje dla urządzeń przenośnych nie są dostępne, dopóki usługa Intune [nie zostanie ustawiona jako źródło MDM](get-ready-to-enroll-devices-in-microsoft-intune.md).
+
+## Wydawca oprogramowania usługi Intune
+Wydawca oprogramowania usługi Microsoft Intune jest uruchamiany podczas dodawania lub modyfikowania aplikacji w konsoli administratora usługi Intune. Wydawca umożliwia wybranie i skonfigurowanie typu instalatora oprogramowania, który:
+
+- Przekazuje aplikacje (programy komputerowe lub aplikacje dla urządzeń mobilnych) do zapisania w magazynie w chmurze usługi Intune.
+- Zawiera link do sklepu online lub aplikacji sieci Web.
+
+Przed rozpoczęciem korzystania z wydawcy oprogramowania należy zainstalować pełną wersję programu [Microsoft .NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851). Po zainstalowaniu może być konieczne ponowne uruchomienie komputera, aby wydawca oprogramowania został poprawnie otwarty.
+
+## Miejsce do magazynowania w chmurze
+Wszystkie aplikacje tworzone przy użyciu instalatora oprogramowania (na przykład aplikacje biznesowe) zostają spakowane i przekazane do magazynu w chmurze usługi Microsoft Intune. Subskrypcja próbna usługi Intune obejmuje 2 GB magazynu opartego na chmurze, który jest używany do przechowywania zarządzanych aplikacji i aktualizacji. Pełna subskrypcja obejmuje 20 GB miejsca do magazynowania.
+
+Sprawdzenia ilości wykorzystanego miejsca można dokonać w węźle **Użycie magazynu** w obszarze roboczym **Administrator**.
+
+Wymagania dotyczące miejsca do magazynowania w chmurze są następujące:
+
+-   Wszystkie pliki instalacyjne aplikacji muszą znajdować się w tym samym folderze.
+-   Maksymalny rozmiar dowolnego przekazywanego pliku wynosi 2 GB.
+
 
 ## Obsługa aplikacji platformy uniwersalnej systemu Windows
 Komputery z systemem Windows 10 nie wymagają klucza ładowania bezpośredniego, aby zainstalować aplikacje biznesowe. Jednak klucz rejestru **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** musi mieć wartość **1**, aby umożliwić ładowanie bezpośrednie.
 
 Jeśli ten klucz rejestru nie jest skonfigurowany, usługa Intune automatycznie ustawi tę wartość na **1** podczas pierwszego wdrożenia aplikacji na urządzeniu. Jeśli tę wartość ustawiono na **0**, usługa Intune nie może automatycznie zmienić wartości i wdrożenie aplikacji biznesowych zakończy się niepowodzeniem.
 
-Aplikacje biznesowe platformy uniwersalnej systemu Windows muszą być podpisane przy użyciu certyfikatu podpisywania kodu, który jest zaufany na każdym urządzeniu, na którym aplikacja jest wdrożona. Można użyć certyfikatów z wewnętrznej infrastruktury kluczy publicznych (PKI) lub certyfikatu z głównego certyfikatu publicznego innej firmy zainstalowanego na urządzeniu.
+Aplikacje biznesowe platformy uniwersalnej systemu Windows muszą być podpisane przy użyciu certyfikatu podpisywania kodu, który jest zaufany na każdym urządzeniu, na którym aplikacja jest wdrożona. Można użyć certyfikatu z wewnętrznej infrastruktury kluczy publicznych (PKI) lub certyfikatu z głównego certyfikatu publicznego innej firmy zainstalowanego na urządzeniu.
 
 Na urządzeniach z systemem Windows 10 Mobile do podpisywania uniwersalnych aplikacji **appx** można użyć certyfikatu podpisywania kodu innego niż certyfikat firmy Symantec. Dla aplikacji **xap**, a także pakietów **appx** utworzonych dla systemu Windows Phone 8.1, które chcesz zainstalować na urządzeniach z systemem Windows 10 Mobile, należy korzystać z certyfikatu podpisywania kodu firmy Symantec.
 
-## Następne kroki 
+## Następne kroki
 
-Następnie należy dodać aplikacje w konsoli usługi Intune przed ich wdrożeniem. Aplikacje można dodawać dla [zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md) lub [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
+Należy dodać aplikacje w konsoli usługi Intune przed ich wdrożeniem. Aplikacje można dodawać dla [zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md) lub [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-<!--HONumber=Jun16_HO2-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 

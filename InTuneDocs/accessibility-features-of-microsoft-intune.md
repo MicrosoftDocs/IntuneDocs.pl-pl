@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Funkcje ułatwień dostępu | Microsoft Intune
-description:
-keywords:
+title: "Funkcje ułatwień dostępu | Microsoft Intune"
+description: "Informacje o funkcjach usługi Intune, które ułatwiają dostęp dla osób niepełnosprawnych."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 55bdbaf5e521caa05d44bc45d4ec226dc05bf64b
+ms.openlocfilehash: 819fdb5bf4fd06a2b3b5010057cdd003e46f4758
+
 
 ---
 
@@ -48,11 +42,12 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 |Zwinięcie listy w menu.|Alt + strzałka w górę|
 |Przejście do następnej grupy aplikacji.|Strzałka w górę|
 |Wyświetlenie akcji dla wybranego urządzenia.|Strzałka w prawo|
-> W portalach usługi [!NOTE]
-> [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
+> [!NOTE]
+> [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] — w portalach usługi można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 
