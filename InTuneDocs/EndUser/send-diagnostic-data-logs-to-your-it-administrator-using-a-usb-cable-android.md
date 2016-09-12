@@ -3,18 +3,19 @@ title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za po
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 7ad4f4b726f093a14663fc5c4dbadf5603965075
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: c5b30aa6d4e7a1402db0ca1564326ec96bb5ab16
 
 
 ---
@@ -22,9 +23,11 @@ ms.openlocfilehash: 7ad4f4b726f093a14663fc5c4dbadf5603965075
 
 # Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB
 
-Jeśli używasz komputera, a nie urządzenia przenośnego, i chcesz wysłać dzienniki danych ze swojego urządzenia do administratora IT, aby mógł zapoznać się z problemem i rozwiązać go, wykonaj następujące kroki:
+Jeśli chcesz wysłać dzienniki danych do administratora IT, aby uzyskać pomoc, możesz wysłać dzienniki przy użyciu komputera i kabla USB, zamiast wysyłać dzienniki z urządzenia przenośnego. Oto jak:
 
-1.  Przed rozpoczęciem upewnij się, że masz adres e-mail administratora IT. Zazwyczaj znajduje się on w witrynie sieci Web Portalu firmy lub w aplikacji Portal firmy.
+1.  Na ekranie błędu naciśnij pozycję **Wyślij informacje**. Po wyświetleniu komunikatu z pytaniem o metodę wysyłania dzienników wybierz opcję, która zapisze pliki na urządzeniu.
+
+2.  Przed rozpoczęciem upewnij się, że dysponujesz adresem e-mail administratora IT podanym zazwyczaj w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com) lub w aplikacji Portal firmy.
 
 2.  Podłącz urządzenie z systemem Android do komputera za pomocą kabla USB.
 
@@ -34,10 +37,10 @@ Jeśli używasz komputera, a nie urządzenia przenośnego, i chcesz wysłać dzi
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 

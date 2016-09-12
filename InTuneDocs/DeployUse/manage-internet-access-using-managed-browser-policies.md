@@ -1,40 +1,34 @@
 ---
-# required metadata
-
-title: Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser | Microsoft Intune
-description:
-keywords:
+title: "Zarządzanie dostępem do sieci Web za pomocą programu Managed Browser | Microsoft Intune"
+description: "Wdróż aplikację Managed Browser, aby ograniczyć przeglądanie sieci Web i transfer danych sieci Web do innych aplikacji."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/03/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: maxles
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2fcd53d335aa18701ba0b8c3c75569febbee2cd5
+ms.openlocfilehash: d07a5dde05055c54f5b89c8aa5f49203d0a22b97
+
 
 ---
 
 # Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 Program Managed Browser to aplikacja służąca do przeglądania sieci Web, którą można wdrożyć w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.
 
-Ze względu na to, że jest to aplikacja zarządzana, można także zastosować dla niej zasady zarządzania aplikacjami mobilnymi, takie jak kontrolowanie użycia funkcji wycinania, kopiowania i wklejania, zapobieganie przechwytywaniu ekranu oraz upewnianie się, że klikane przez użytkowników linki do zawartości są otwierane tylko w innych zarządzanych aplikacjach. Aby uzyskać więcej informacji, zobacz [Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+Ze względu na to, że jest to aplikacja zarządzana, możesz także zastosować dla niej zasady zarządzania aplikacjami mobilnymi, takie jak kontrolowanie użycia funkcji wycinania, kopiowania i wklejania, zapobieganie przechwytywaniu ekranu oraz zapewnienie, że klikane przez użytkowników linki do zawartości są otwierane tylko w innych zarządzanych aplikacjach. Aby uzyskać więcej informacji, zobacz [Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > [!IMPORTANT]
->Jeśli użytkownicy zainstalują program Managed Browser ze sklepu z aplikacjami i nie będzie on zarządzany przez usługę Intune, stosowane są następujące rozwiązania:
-iOS — program Managed Browser może być używany jako podstawowa przeglądarka sieci Web, ale niektóre funkcje nie będą dostępne i nie będzie mógł on uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.
-Android — nie można używać programu Managed Browser.
-Jeśli użytkownicy sami zainstalują program Managed Browser na urządzeniu z systemem iOS w wersji wcześniejszej niż 9, nie będzie on zarządzany zgodnie z żadną z wybranych przez Ciebie zasad. Aby upewnić się, że przeglądarka jest zarządzana przez usługę Intune, użytkownicy muszą odinstalować aplikację, zanim wdrożysz ją dla nich jako zarządzaną aplikację. W systemach iOS w wersji 9 lub nowszych jeśli użytkownik sam zainstaluje program Managed Browser, zostanie wyświetlony monit o umożliwienie zarządzania tym programem przez zasady.
+>Jeśli użytkownicy instalują program Managed Browser ze sklepu z aplikacjami i nie jest on zarządzany przez usługę Intune, stosowane są następujące rozwiązania:<br /><br />
+iOS — program Managed Browser może być używany jako podstawowa przeglądarka sieci Web, ale niektóre funkcje nie będą dostępne i nie będzie mógł on uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.<br />
+Android — nie można używać programu Managed Browser.<br /><br />
+Jeśli użytkownicy sami zainstalują program Managed Browser na urządzeniu z systemem iOS w wersji wcześniejszej niż iOS 9, przeglądarka nie będzie zarządzana przez żadną z utworzonych przez Ciebie zasad. Aby zapewnić zarządzanie przeglądarką przez usługę Intune, użytkownicy muszą odinstalować aplikację, zanim wdrożysz ją dla nich jako aplikację zarządzaną. W systemie iOS w wersji 9 i nowszych jeśli użytkownicy sami zainstalują program Managed Browser, otrzymają monit o umożliwienie zarządzania tym programem przez zasady.
 
 Zasady programu Managed Browser można tworzyć dla następujących typów urządzeń:
 
@@ -46,7 +40,7 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 ## Tworzenie zasad programu Managed Browser
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
 2.  Skonfiguruj jeden z następujących typów zasad z grupy **Oprogramowanie** :
 
@@ -58,15 +52,17 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 3.  Poniższa tabela pomoże Ci w skonfigurowaniu ustawień zasad programu Managed Browser:
 
-|Nazwa ustawienia|Szczegóły|
-    |----------------|--------------------|
-    |**Nazwa**|Wprowadzenie unikatowej nazwy zasad programu Managed Browser pomaga zidentyfikować te zasady w konsoli usługi Intune.|
-    |**Opis**|Wprowadzony opis powinien zawierać omówienie zasad programu Managed Browser i inne istotne informacje ułatwiające wyszukanie tych zasad.|
-    |**Włączenie listy witryn dozwolonych lub zablokowanych pozwala na ograniczenie adresów, które można otworzyć w programie Managed Browser.**|Wybierz jedną z następujących opcji:<br /><br />**Zezwalaj programowi Managed Browser na otwieranie tylko adresów URL wymienionych poniżej** — określ listę adresów URL, które można otworzyć w programie Managed Browser.<br /><br />**Blokuj w programie Managed Browser otwieranie adresów URL wymienionych poniżej** — określ listę adresów URL, których otwieranie zostanie zablokowane w programie Managed Browser. **Uwaga:** w jednej zasadzie programu Managed Browser nie można uwzględnić jednocześnie dozwolonych i zablokowanych adresów URL.<br />Aby uzyskać więcej informacji na temat możliwych do określenia formatów adresów URL, zobacz sekcję **Format adresu URL dla dozwolonych i zablokowanych adresów URL** w tym temacie.|
+    - **Nazwa**. Wprowadzenie unikatowej nazwy zasad programu Managed Browser pomaga zidentyfikować te zasady w konsoli usługi Intune.
+    - **Opis**. Wprowadzony opis powinien zawierać omówienie zasad programu Managed Browser i inne istotne informacje ułatwiające wyszukanie tych zasad.
+    - **Włączenie listy witryn dozwolonych lub zablokowanych pozwala na ograniczenie adresów, które można otworzyć w programie Managed Browser**. Wybierz jedną z następujących opcji:
+        - **Zezwalaj programowi Managed Browser na otwieranie tylko adresów URL wymienionych poniżej (lista dozwolonych)**. Określ listę adresów URL, które można otworzyć w programie Managed Browser.
+        - **Blokuj w programie Managed Browser otwieranie adresów URL wymienionych poniżej**. Określ listę adresów URL, których otwieranie zostanie zablokowane w programie Managed Browser.
+**Uwaga:** w jednej zasadzie programu Managed Browser nie można uwzględnić jednocześnie dozwolonych i zablokowanych adresów URL.
+Aby uzyskać więcej informacji na temat możliwych do określenia formatów adresów URL, zobacz sekcję **Format adresu URL dla dozwolonych i zablokowanych adresów URL** w tym temacie.
 
-4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
+4.  Gdy skończysz, wybierz pozycję **Zapisz zasady**.
 
-Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady** .
+Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**.
 
 ## Tworzenie wdrożenia dla aplikacji programu Managed Browser
 Po utworzeniu zasad programu Managed Browser można utworzyć wdrożenie oprogramowania dla aplikacji programu Managed Browser i skojarzyć je z utworzonymi zasadami programu Managed Browser.
@@ -84,21 +80,21 @@ Aby uzyskać więcej informacji na temat sposobu wdrażania aplikacji, zobacz [W
 
 -   Ustawienia przeglądarki wbudowanej na urządzeniach użytkowników nie są używane w programie Managed Browser. Dzieje się tak, ponieważ program Managed Browser nie ma dostępu do tych ustawień.
 
--   Jeśli w zasadach zarządzania aplikacjami mobilnymi skojarzonych z programem Managed Browser są konfigurowane opcje **Wymagaj prostego numeru PIN w celu udzielenia dostępu** lub **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** , a użytkownik kliknie link Pomoc na stronie uwierzytelniania, umożliwi to przeglądanie dowolnych witryn internetowych bez względu na to, czy zostały one dodane do listy witryn zablokowanych w zasadach programu Managed Browser.
+-   Jeśli w zasadach zarządzania aplikacjami mobilnymi skojarzonych z programem Managed Browser są konfigurowane opcje **Wymagaj prostego numeru PIN w celu udzielenia dostępu** lub **Wymagaj poświadczeń firmowych w celu udzielenia dostępu**, a użytkownik wybierze link Pomoc na stronie uwierzytelniania, umożliwi to przeglądanie dowolnych witryn internetowych bez względu na to, czy zostały one dodane do listy witryn zablokowanych w zasadach programu Managed Browser.
 
 -   Program Managed Browser może zablokować dostęp do witryn tylko w przypadku uzyskiwania do nich bezpośredniego dostępu. Dostępu do witryny nie można zablokować, jeśli jest on uzyskiwany za pomocą usług pośrednich (na przykład usługi tłumaczenia).
 
--   W celu umożliwienia uwierzytelniania i zapewnienia, że można uzyskać dostęp do dokumentacji usługi Intune, witryna **&#42;.microsoft.com** jest wyłączona z ustawień listy dozwolonych lub zablokowanych witryn —jest ona zawsze dozwolona.
+-   W celu umożliwienia uwierzytelniania i zapewnienia, że można uzyskać dostęp do dokumentacji usługi Intune, witryna **&#42;.microsoft.com** jest wyłączona z ustawień listy dozwolonych lub zablokowanych witryn. Jest ona zawsze dozwolona.
 
 ### Wyłączanie danych użycia
-Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług, ale użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoim urządzeniu. Użytkownik nie kontroluje zbierania tych danych.
+Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług. Użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoich urządzeniach. Użytkownik nie kontroluje zbierania tych danych.
 
 ## Informacje referencyjne
 
 ### Format adresu URL dla dozwolonych i zablokowanych adresów URL
-Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych, których można używać podczas określania adresów URL na listach witryn dozwolonych i zablokowanych.
+Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych, których można używać podczas określania adresów URL na listach witryn dozwolonych i zablokowanych:
 
--   Symbol wieloznaczny „**&#42;**” może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
+-   Symbol wieloznaczny (**&#42;**) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
 
 -   Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https** .
 
@@ -108,7 +104,7 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
     -   Port 443 dla protokołu https
 
-    Symboli wieloznacznych nie można używać w numerze portu, na przykład **http://www.contoso.com:*;** i **http://www.contoso.com: /*;**
+    Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy **http&colon;//www&period;contoso&period;com:*;** i **http&colon;//www&period;contoso&period;com: /*;** nie są obsługiwane.
 
 -   W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
 
@@ -123,7 +119,7 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
     |https://www.contoso.com|Zgodny z pojedynczą, bezpieczną stroną|https://www.contoso.com|http://www.contoso.com|
     |http://www.contoso.com/images/&#42;|Zgodny z pojedynczym folderem ze wszystkimi podfolderami|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
 
--   Poniżej przedstawiono niektóre niedozwolone wzorce:
+-   Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
 
     -   &#42;.com
 
@@ -157,6 +153,7 @@ Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi k
 -   Jeśli urządzenie już otrzymało zasady programu Managed Browser, a drugie zasady są wdrażane z ustawieniami powodującymi konflikt, na urządzeniu będą używane ustawienia oryginalne. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO1-->
 
 

@@ -1,36 +1,27 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów dotyczących zasad | Microsoft Intune
-description:
-keywords:
-author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Intune"
+description: "Rozwiązywanie problemów z konfiguracją zasad."
+keywords: 
+author: robstackmsft
+manager: angrobe
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1f133d31311706365888cf33ceb4c4412deec333
+ms.openlocfilehash: a8afc681b8b12e1e760dea3f784e4beac4697242
+
 
 ---
 
 # Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
 
-Przedstawiono tutaj niektóre problemy, które mogą wystąpić podczas konfigurowania zasad usługi Microsoft Intune, oraz zalecenia dotyczące rozwiązywania tych problemów.
-
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
-
+Jeśli masz problemy z wdrażaniem zasad i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
 ## Czy zasady zostały zastosowane do urządzenia?
 **Problem:** nie jest jasne, czy konkretne zasady są stosowane do urządzenia, lub urządzenie zachowuje się sprzecznie z zasadami.
@@ -47,24 +38,14 @@ W konsoli administracyjnej usługi Intune każde urządzenie ma kartę zasad w o
 
 Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 
--   Opcja **Zezwalaj na proste hasła** jest ustawiona na **Tak**, jak przedstawiono w kolumnie **Wartość zamierzona**, ale jej **Stan** jest ustawiony na **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
+-   Ustawienie **Zezwalaj na proste hasła** ma wartość **Tak**, jak pokazano w kolumnie **Wartość zamierzona**, ale jego ustawienie **Stan** ma wartość **Nie dotyczy**. Dzieje się tak, gdyż proste hasła nie są obsługiwane w przypadku urządzeń z systemem Android.
 
 -   Podobnie rozwinięty element zasad **Ustawienia poczty e-mail dla urządzeń z systemem iOS** nie ma zastosowania do tego urządzenia, ponieważ jest to urządzenie z systemem Android.
 
 ![Zasady dotyczące urządzeń w usłudze Intune](../media/Intune-Device-Policy-v.2.jpg)
 
-> [!NOTE] Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
-
-## Odświeżanie zasad i interwały aktualizacji
-Należy pamiętać, że zasady są odświeżane i aktualizowane w regularnych odstępach czasu. Zwykle zasady powinny być rejestrowane na urządzeniach w ciągu 15 minut od dokonania zmiany. Poniżej przedstawiono więcej informacji na temat regularnych odstępów czasu odświeżania zasad:
-
--   **Urządzenie z systemem Windows zarejestrowane w oprogramowaniu MDM**: wyzwalane na urządzeniu przez zaplanowane zadanie codziennie o 3:00 czasu lokalnego.
-
--   **Windows Phone**: zasady są aktualizowane co 8 godzin. Aktualizację można wymusić przez odświeżenie w portalu firmy w obszarze **Ustawienia**.
-
--   **iOS**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
-
--   **Android**: zasady są aktualizowane raz dziennie w losowych odstępach czasu. Aktualizację można również wymusić, otwierając portal firmy, wybierając urządzenie i wybierając pozycję **Synchronizuj**.
+> [!NOTE]
+> Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
 
 ## Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
 W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM błędy zasad w pliku policyplatform.log mogą wynikać z innych niż domyślne ustawień w Kontroli konta użytkownika systemu Windows na urządzeniu. Niektóre inne niż domyślne ustawienia funkcji Kontroli konta użytkownika mogą wpływać na instalacje klienta usługi Microsoft Intune i wykonywanie zasad.
@@ -75,16 +56,13 @@ W przypadku urządzeń z systemem Windows niezarządzanych przez usługę MDM b�
 
 2.  Zaczekaj 20 minut na usunięcie oprogramowania klienckiego.
 
-    > [!NOTE] Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
+    > [!NOTE]
+    > Nie należy próbować usuwać klienta z poziomu opcji Programy i funkcje.
 
 3.  W menu start wpisz wartość **Kontrola konta użytkownika**, aby otworzyć ustawienia Kontroli konta użytkownika.
 
 4.  Przesuń suwak powiadomień na ustawienie domyślne.
 
-## Błąd 0x87D1FDE8 dla urządzenia KNOX
-**Problem**: Po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się ** na karcie Zasady &gt; Właściwości w urządzeniu.
-
-Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowych. Opcja synchronizacji notatek urządzenia Samsung nie jest już obsługiwana i ta opcja nie powinna być wybrana w Twoim profilu. Upewnij się, że urządzenia miały wystarczająco dużo czasu na przetwarzanie zasad, nawet do 24 godzin.
 
 ## Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
 **Problem**: w konsoli administracyjnej odebrano alert **Zapisywanie reguł dostępu w programie Exchange nie powiodło się**  .
@@ -104,18 +82,16 @@ Na przykład w systemie Windows RT na pulpicie szybko przesuń palcem z prawej s
 W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
 
-## Urządzenia z systemem Android nie wymuszają zmian zasad zabezpieczeń bez akceptacji użytkownika
-W przeciwieństwie do innych platform urządzenia MDM z systemem Android nie pozwalają usłudze na wymuszanie początkowych zmian zasad na urządzeniach. Jest to spowodowane działaniem funkcji systemu Android i nie ma związku z usługą Intune. Urządzenia z systemem Android monitują użytkownika końcowego za pośrednictwem okna powiadomień o zmianie pokrewnych zasad (np. dotyczących hasła, szyfrowania itp.).  Użytkownik końcowy musi odpowiedzieć na ten monit i po zaakceptowaniu zasady powinny zostać zastosowane.
-
 ## Nie można utworzyć zasad lub zarejestrować klientów, jeśli nazwa firmy zawiera znaki specjalne.
 **Problem:** Nie można utworzyć zasad lub zarejestrować klientów.
 
 **Rozwiązanie:** W [centrum administracyjnym usługi Office 365](https://portal.office.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

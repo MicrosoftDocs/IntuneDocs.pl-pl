@@ -3,8 +3,8 @@ title: "Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Intu
 description: 
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cc64e51499908d08823429871cda91dfb0078b1e
-ms.openlocfilehash: de00d31ab32916f29a111c93b39a578f82524f80
+ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
+ms.openlocfilehash: 573108e176dbac7b9bbaa0f601f6fff6e73563fb
 
 
 ---
@@ -109,7 +109,7 @@ ms.openlocfilehash: de00d31ab32916f29a111c93b39a578f82524f80
 |Turcja|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 EET (UTC +3)|turecki&#42;, angielski|00800 448824556||
 |Zjednoczone Emiraty Arabskie|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 AST (UTC +4)|angielski|8000 4441578||
 |Ukraina|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 EET (UTC +2)|rosyjski&#42;, angielski|0 800 308 800<br /><br />Krok 1: wybierz opcję 5||
-|Wielka Brytania|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 GMT (UTC)|angielski|0800 032 6417|02034506455|
+|Zjednoczone Królestwo|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 GMT (UTC)|angielski|0800 032 6417|02034506455|
 |Stany Zjednoczone|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 PST (UTC -8)|angielski|800-865-9408||
 |Urugwaj|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 UYST (UTC -2)|hiszpański&#42;, angielski|000-411-002-7131||
 |Wenezuela|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 VET (UTC -4:30)|hiszpański&#42;, angielski|0-800-100-8763||
@@ -117,7 +117,6 @@ ms.openlocfilehash: de00d31ab32916f29a111c93b39a578f82524f80
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

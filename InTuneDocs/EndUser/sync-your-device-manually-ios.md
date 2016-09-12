@@ -1,26 +1,27 @@
 ---
-title: "Ręczne synchronizowanie urządzenia | Microsoft Intune"
+title: "Ręczne synchronizowanie urządzenia z systemem iOS| Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/06/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 3cb6b8236afc227df9df34848cb81bcbe82a612e
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 54633d57fc1898c70abf1f37cff08e2dd553e5a1
 
 
 ---
 
 
-# Ręczne synchronizowanie urządzenia
+# Ręczne synchronizowanie urządzenia z systemem iOS
 
 Jeśli instalacja aplikacji trwa zbyt długo, skorzystaj z poniższych instrukcji, aby ręcznie zsynchronizować urządzenie z systemem iOS, co może przyczynić się do przyspieszenia instalacji. Funkcja synchronizacji dotyczy tylko systemu iOS, ale nie systemu Mac OS X.
 
@@ -38,10 +39,9 @@ Na ekranie pojawi się obracające się koło, które zniknie dopiero po zakońc
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

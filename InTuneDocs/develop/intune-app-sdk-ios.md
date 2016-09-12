@@ -1,37 +1,32 @@
 ---
-# required metadata
-
-title: Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS | Microsoft Intune
-description:
-keywords:
+title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 63d94a83a3a5ad9520abab3ef25e8d9690c26ce7
+ms.openlocfilehash: 512ef2416e14f2a44e1c46e996c8519b5776581f
+
 
 ---
 
 # Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
-> [!NOTE] Warto najpierw przeczytać artykuł [Wprowadzenie do przewodnika zestawu SDK aplikacji usługi Intune](intune-app-sdk-get-started.md), w którym omówiono sposoby przygotowania do integracji na poszczególnych obsługiwanych platformach.* 
+> [!NOTE]
+> Warto najpierw przeczytać artykuł [Wprowadzenie do przewodnika zestawu SDK aplikacji usługi Intune](intune-app-sdk-get-started.md), w którym omówiono sposoby przygotowania do integracji na poszczególnych obsługiwanych platformach.* 
 
 Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM) w swojej aplikacji dla systemu iOS. Aplikacja z obsługą funkcji MAM jest zintegrowana z zestawem SDK aplikacji usługi Intune i pozwala administratorom IT wdrażać zasady w aplikacji mobilnej, gdy jest ona aktywnie zarządzana.
 
-# Zawartość zestawu SDK
+## Zawartość zestawu SDK
 
 Zestaw SDK aplikacji usługi Intune dla systemu iOS zawiera bibliotekę statyczną, pliki zasobów, nagłówki interfejsu API, listę właściwości ustawień debugowania i narzędzie Configurator. W większości konfiguracji wymuszania zasad wystarczy dołączyć pliki zasobów do aplikacji mobilnych, które będą statycznie łączyć się z bibliotekami. Zaawansowane funkcje MAM usługi Intune są wymuszane za pośrednictwem interfejsów API.
 W tym przewodniku omówiono użycie następujących składników podczas integrowania zestawu SDK aplikacji usługi Intune dla systemu iOS:
@@ -42,13 +37,13 @@ W tym przewodniku omówiono użycie następujących składników podczas integro
 
 * **Nagłówki**: udostępnia interfejsy API zestawu SDK aplikacji usługi Intune. Jeśli korzystasz z interfejsu API, musisz uwzględnić plik nagłówka zawierający interfejs API. 
 
-# Jak działa zestaw SDK aplikacji usługi Intune
+## Jak działa zestaw SDK aplikacji usługi Intune
 
 Zestaw SDK aplikacji usługi Intune dla systemu iOS opracowano po to, aby umożliwić dodawanie funkcji zarządzania do aplikacji systemu iOS przy minimalnych zmianach w kodzie. Ograniczenie liczby zmian w kodzie pozwala szybciej wprowadzić aplikację mobilną na rynek, a jednocześnie zapewnia jej większą spójność i stabilność. 
 
 Aplikacja musi być połączona z biblioteką statyczną i zawierać pakiet zasobów. Plik MAMDebugSettings.plist jest opcjonalny i może być uwzględniony w pakiecie w celu symulowania zasad MAM, stosowanych w odniesieniu do aplikacji bez konieczności wdrażania aplikacji za pomocą usługi Microsoft Intune. Ponadto w kompilacjach do debugowania zasady w pliku MAMDebugSettings.plist można stosować, przesyłając plik MAMDebugSettings.plist do katalogu dokumentów aplikacji za pomocą funkcji udostępniania plików programu iTunes.
 
-# Kompilowanie aplikacji za pomocą zestawu SDK aplikacji usługi Intune 
+## Kompilowanie aplikacji za pomocą zestawu SDK aplikacji usługi Intune 
 
 Wykonaj poniższe kroki, aby włączyć zestaw SDK aplikacji usługi Intune:
 
@@ -138,7 +133,7 @@ Wykonaj poniższe kroki, aby włączyć zestaw SDK aplikacji usługi Intune:
 
 Jeśli Twoja aplikacja mobilna używa biblioteki ADAL do uwierzytelniania, przejrzyj sekcję „Konfigurowanie ustawień biblioteki uwierzytelniania usługi Azure Directory”.
 
-## Telemetria 
+### Telemetria 
 
 Zestaw SDK aplikacji usługi Intune dla systemu iOS domyślnie rejestruje dane telemetryczne zdarzeń użycia, które są przesyłane do usługi Microsoft Intune.
 
@@ -160,15 +155,15 @@ Poniższe kroki są wymagane, jeśli aplikacja używa biblioteki ADAL do uwierzy
 
 2. W słowniku `Info.plist`z nazwą klucza `IntuneMAMSettings` w pliku `ADALRedirectUri`projektu określ identyfikator URI przekierowania, który ma być używany dla wywołań biblioteki ADAL. Konieczne może być również określenie schematu `ADALRedirectScheme` zależnie od formatu identyfikatora URI przekierowania aplikacji.
 
-## Kompilowanie własnych rozszerzeń (opcjonalne) 
+### Kompilowanie własnych rozszerzeń (opcjonalne) 
 
 Podczas kompilowania rozszerzeń należy postępować zgodnie z takimi samymi instrukcjami, jak w przypadku kompilowania aplikacji mobilnej, które zostały podane w sekcji „Kompilowanie aplikacji przy użyciu zestawu SDK aplikacji usługi Intune”. Ponadto należy zaktualizować plik info.plist każdego rozszerzenia, aby dodać klucz ContainingAppBundleId w obszarze słownika IntuneMAMSettings z wartością identyfikatora nadrzędnego pakietu aplikacji.
 
-## Kompilowanie własnych struktur (opcjonalne)
+### Kompilowanie własnych struktur (opcjonalne)
 
 Dzięki zmianom ostatnio wprowadzonym w zestawie SDK aplikacji usługi Intune kompilowanie aplikacji mobilnej przy użyciu określonych flag konsolidatora, jeśli aplikacja mobilna zawiera osadzone struktury aplikacji, nie jest konieczne. 
 
-## Pliki obrazów podczas uruchamiania (opcjonalne)
+### Pliki obrazów podczas uruchamiania (opcjonalne)
 
 Gdy aplikacja z obsługą funkcji MAM jest aktywnie zarządzana przez usługę Microsoft Intune, zestaw SDK aplikacji usługi Intune wyświetla ekran startowy podczas uruchamiania aplikacji, aby poinformować użytkownika, że aplikacja jest zarządzana. Możesz opcjonalnie dodać pliki obrazów do wyświetlania na stronie startowej „Zarządzane przez firmę”. Uwzględnij następujące zalecenia dotyczące obrazów:
 
@@ -184,7 +179,7 @@ Gdy aplikacja z obsługą funkcji MAM jest aktywnie zarządzana przez usługę M
 
 **Uwaga**: Ten ekran jest wyświetlany podczas uruchamiania, ale może być trwale ukryty przez użytkownika.
 
-# Konfigurowanie ustawień zestawu SDK aplikacji usługi Intune
+## Konfigurowanie ustawień zestawu SDK aplikacji usługi Intune
 
 Słownik `IntuneMAMSettings` umieszczony w pliku `info.plist` aplikacji jest używany do konfigurowania zestawu SDK aplikacji usługi Intune. Na poniższej liście uwzględniono wszystkie obsługiwane ustawienia: 
 
@@ -202,7 +197,7 @@ SplashIconFile <br>SplashIconFile~ipad  | String  | Określa plik ikony powitaln
 SplashDuration | Liczba | Minimalny czas w sekundach, przez który ekran powitalny usługi Intune będzie wyświetlany podczas uruchamiania aplikacji. Wartość domyślna to 1,5. | Opcjonalny.
 ADALLogOverrideDisabled | Boolean  | Określa, czy zestaw SDK będzie przekierowywać wszystkie dzienniki biblioteki ADAL (łącznie z ewentualnymi wywołaniami biblioteki ADAL z aplikacji) do własnego pliku dziennika. Wartość domyślna to NO (Nie). Wybierz wartość YES (Tak), jeśli aplikacja powinna ustawiać własne wywołanie zwrotne dziennika biblioteki ADAL. | Opcjonalny.
 
-# Nagłówki dla zestawu SDK aplikacji usługi Intune 
+## Nagłówki dla zestawu SDK aplikacji usługi Intune 
 
 Następujące nagłówki obejmują wywołania funkcji API wymagane do włączenia funkcji zestawu SDK aplikacji usługi Intune. 
 
@@ -214,7 +209,7 @@ Następujące nagłówki obejmują wywołania funkcji API wymagane do włączeni
     IntuneMAMPolicyDelegate.h
     IntuneMAMLogger.h
 
-# Debugowanie zestawu SDK aplikacji usługi Intune w środowisku Xcode
+## Debugowanie zestawu SDK aplikacji usługi Intune w środowisku Xcode
 
 Przed testowaniem aplikacji z obsługą funkcji MAM w usłudze Microsoft Intune można użyć elementu `Settings.bundle` w środowisku Xcode. Umożliwi to określenie zasad testowania bez konieczności ustanawiania połączenia z usługą Intune. Aby włączyć ten element:
 
@@ -232,9 +227,10 @@ Przed testowaniem aplikacji z obsługą funkcji MAM w usłudze Microsoft Intune 
 
 * Uruchom aplikację (wewnątrz lub na zewnątrz środowiska Xcode). Sprawdź, czy numer PIN działa zgodnie z oczekiwaniami.
 
-> [!NOTE] Po wykonaniu powyższych czynności można włączać i przełączać ustawienia w obszarze „Settings -> Your-App-Name -> Enable Test Policies” (Ustawienia -> Twoja nazwa aplikacji -> Włącz zasady testu).
+> [!NOTE]
+> Po wykonaniu powyższych czynności można włączać i przełączać ustawienia w obszarze „Settings -> Your-App-Name -> Enable Test Policies” (Ustawienia -> Twoja nazwa aplikacji -> Włącz zasady testu).
 
-# Zalecane najlepsze rozwiązania dla systemu iOS
+## Zalecane najlepsze rozwiązania dla systemu iOS
 
 Wdrażając aplikacje dla systemu iOS, należy stosować poniższe najlepsze rozwiązania:
 
@@ -244,6 +240,7 @@ Jeśli środowisko Xcode nie może odnaleźć biblioteki `libIntuneMAM.a`, może
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO5-->
 
 

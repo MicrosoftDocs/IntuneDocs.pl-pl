@@ -1,10 +1,10 @@
 ---
 title: "Uzyskiwanie powiadomień dzięki alertom | Microsoft Intune"
-description: 
+description: "Dowiedz się, jak alerty pozwalają na bieżąco śledzić, co dzieje się w usłudze Microsoft Intune."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 396ea714-0433-4bd5-a934-8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e929a95d95b71e22d46e124f1a423af7046b0539
-ms.openlocfilehash: f1dd166b7b1278003ac8785b8be07c29396dfe8c
+ms.sourcegitcommit: bbe2f13b2c41478181c396c4e16e5f3f9180e551
+ms.openlocfilehash: 518e26671cf31c4b70a69def839ee52dd9ffdaf8
 
 
 ---
@@ -32,7 +32,7 @@ Na przykład alerty mogą wyświetlać powiadomienia o następujących zdarzenia
 
 
 ## Jak działają alerty
-Alerty są generowane na podstawie **typów alertów** — zestawu wstępnie skonfigurowanych reguł wbudowanych w usługę Intune. Na przykład typ alertu **Magazyn w chmurze ma 10% lub mniej wolnego miejsca** powiadamia użytkownika, gdy kończy się miejsce do przechowywania aplikacji w chmurze. Można włączyć lub wyłączyć i skonfigurować właściwości dla każdego typu alertu. Na przykład za pomocą powyższego typu alertów można skonfigurować:
+Alerty są generowane na podstawie **typów alertów** — zestawu wstępnie skonfigurowanych reguł wbudowanych w usługę Intune. Na przykład typ alertu **Magazyn w chmurze ma 10% lub mniej wolnego miejsca** powiadamia użytkownika, gdy kończy się miejsce do przechowywania aplikacji w chmurze. Można włączyć lub wyłączyć typy alertów i skonfigurować właściwości dla każdego typu alertu. Na przykład za pomocą powyższego typu alertów można skonfigurować:
 
 -   **Stan:** Określa, czy typ alertu jest włączony czy wyłączony.
 
@@ -41,18 +41,18 @@ Alerty są generowane na podstawie **typów alertów** — zestawu wstępnie sko
 
 |Ważność|Szczegóły|
 |--------|-------|
-    |![Alert krytyczny](../media/Critical-Alert.jpg)|Wskazuje poważny problem, który powinien być sprawdzony jak najszybciej, na przykład jeśli wykryto złośliwe oprogramowanie na komputerze.|
-    |![Alert ostrzegawczy](../media/Warning-Alert.jpg)|Wskazuje problem, który obecnie nie jest poważny, ale może stać się poważny, jeśli się nim nie zajmiesz, na przykład aktualizacje zabezpieczeń oczekujące na zainstalowanie.|
+    |![Alert krytyczny](../media/Critical-Alert.jpg)|Wskazuje poważny problem, który powinien być sprawdzony jak najszybciej, na przykład wykryto złośliwe oprogramowanie na komputerze.|
+    |![Alert ostrzegawczy](../media/Warning-Alert.jpg)|Wskazuje problem, który obecnie nie jest poważny, ale może stać się poważny, jeśli się nim nie zajmiesz, na przykład aktualizacje zabezpieczeń oczekują na zainstalowanie.|
     |![Alert informacyjny](../media/Informational-Alert.jpg)|Wskazuje informacje, które nie są krytyczne dla działania, na przykład informacje o tym, że dostępna jest nowa wersja programu Exchange Connector.|
 
-Inne typy alertów mogą zawierać różne elementy, które można skonfigurować, takie jak procent urządzeń, których musi dotyczyć problem, zanim alert zostanie wygenerowany.
+Inne typy alertów mogą zawierać różne elementy, które można skonfigurować, takie jak procent urządzeń, których musi dotyczyć problem, aby alert został wygenerowany.
 
-**Gdy kryteria typu alertu zostaną spełnione, alert zostaje wygenerowany i wyświetlony w konsoli administracyjnej usługi Intune.**
+**Gdy kryteria typu alertu zostaną spełnione, alert zostanie wygenerowany i pokazany w konsoli administracyjnej usługi Intune.**
 
 Ponadto można skonfigurować usługę Intune do powiadamiania o wygenerowaniu alertu pocztą e-mail.
 
 ## Konfigurowanie alertów
-W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Alerty i powiadomienia**, a następnie wybierz jedno z następujących zadań konfiguracji:
+W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Administracja** &gt; **Alerty i powiadomienia**, a następnie wybierz jedno z następujących zadań:
 
 |Zadanie|Opis|
 |--------|---------------|
@@ -65,13 +65,13 @@ Użyj poniższych opcji pomagających w pracy z alertami z konsoli administrator
 
 |Opcja|Opis|
 |----------|---------------|
-|**Wyświetlanie aktywnych alertów**|Wybierz jedną z opcji:<br /><br />**Wyświetl podsumowanie alertów** — w obszarze roboczym **Pulpit nawigacyjny** najważniejsze błędy są wyświetlane w okienku alertów. Wybierz okienko, aby zobaczyć więcej szczegółowych informacji.<br /><br />Ponadto możesz wyświetlić podsumowanie alertu na stronie **Przegląd** obszaru roboczego **Alerty** .<br /><br />**Wyświetl wszystkie alerty** — w obszarze roboczym **Alerty** wybierz pozycję **Wszystkie alerty**.|
+|**Wyświetlanie aktywnych alertów**|Wybierz jedną z opcji:<br /><br />**Wyświetl podsumowanie alertów** — w obszarze roboczym **Pulpit nawigacyjny** najważniejsze błędy są pokazane w okienku alertów. Wybierz okienko, aby zobaczyć więcej szczegółowych informacji.<br /><br />Ponadto możesz wyświetlić podsumowanie alertu na stronie **Przegląd** obszaru roboczego **Alerty** .<br /><br />**Wyświetl wszystkie alerty** — w obszarze roboczym **Alerty** wybierz pozycję **Wszystkie alerty**.|
 |**Wyświetlanie uwag**|Wybierz jedną z opcji:<br /><br />W obszarze roboczym **Pulpit nawigacyjny** wybierz pozycję **Powiadomienia**.<br /><br />W obszarze roboczym **Alerty** wybierz pozycję **Wszystkie alerty** &gt; **Powiadomienia**.|
 |**Zamykanie alertu**|Na liście alertów wybierz alert do zamknięcia, a następnie wybierz pozycję **Zamknij alert**.<br /><br />Zamknięte alerty zostaną trwale usunięte po 90 dniach.|
 |**Ponowne uaktywnianie zamkniętego alertu**|Na liście alertów z listy rozwijanej **Filtry** wybierz pozycję **Zamknięte**.<br /><br />Na liście zamkniętych alertów wybierz alert, który chcesz ponownie uaktywnić, a następnie wybierz pozycję **Uaktywnij ponownie alert**.|
 Alerty usługi Intune pozostają aktywne do czasu, aż:
 
--   Problem, który spowodował wygenerowanie alertu, zostanie rozwiązany.
+-   Problem, który spowodował wygenerowanie alertu, zostanie rozwiązany
 
 -   Alert zostanie ręcznie zamknięty.
 
@@ -85,6 +85,6 @@ Alerty usługi Intune pozostają aktywne do czasu, aż:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

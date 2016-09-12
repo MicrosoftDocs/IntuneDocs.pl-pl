@@ -13,8 +13,8 @@ ms.assetid: ef1751bb-3a2f-4662-a922-38c076869eb3
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 8a9dfe8224b4e0e441691043eaffea73c456b3ec
+ms.sourcegitcommit: 206f7c927cce0b66cf554f60342f3f0b1ca43105
+ms.openlocfilehash: d40687127841754f3994b8ad55e839e08bb8dd33
 
 
 ---
@@ -47,7 +47,7 @@ Administratorzy IT mogą wymusić użycie programu Managed Browser przy otwieran
 Administratorzy IT mogą wymusić zasady numeru PIN przy uruchamianiu aplikacji zarządzanej przez usługę Intune. Te zasady ułatwiają zapewnienie, że użytkownicy końcowi z urządzeniami zarejestrowanymi w usłudze Microsoft Intune są tymi samymi osobami, które uruchamiają aplikacje. Gdy użytkownicy końcowi skonfigurują swoje numery PIN, zestaw SDK aplikacji usługi Intune używa usługi Azure Active Directory do zweryfikowania poświadczeń użytkowników końcowych wobec poświadczeń użytych do zarejestrowania urządzenia. 
 
 ## Wymaganie wprowadzenia poświadczeń przed uruchomieniem aplikacji
-Administratorzy IT mogą wymagać od użytkowników wprowadzenia poświadczeń przed uruchomieniem aplikacji zarządzanej przez usługę Intune. Zestaw SDK aplikacji usługi Intune używa usługi Azure Active Directory do udostępnienia funkcji logowania jednokrotnego, która umożliwia ponowne użycie poświadczeń podczas kolejnych logowań po ich jednokrotnym podaniu. Obsługujemy również uwierzytelnianie rozwiązań do zarządzania tożsamościami [sfederowanych z usługą Azure Active Directory](https://msdn.microsoft.com/en-us/library/azure/jj679342.aspx). 
+Administratorzy IT mogą wymagać od użytkowników wprowadzenia poświadczeń przed uruchomieniem aplikacji zarządzanej przez usługę Intune. Zestaw SDK aplikacji usługi Intune używa usługi Azure Active Directory do udostępnienia funkcji logowania jednokrotnego, która umożliwia ponowne użycie poświadczeń podczas kolejnych logowań po ich jednokrotnym podaniu. Obsługiwane jest również uwierzytelnianie przy użyciu rozwiązań do zarządzania tożsamościami [sfederowanych z usługą Azure Active Directory](/active-directory/active-directory-aadconnect-federation-compatibility). 
 
 ## Sprawdzanie kondycji i zgodności urządzenia
 Administratorzy IT mogą sprawdzić kondycję urządzenia i jego zgodność z zasadami firmy przed udostępnieniem użytkownikom końcowym aplikacji zarządzanych przez usługę Intune. Na platformie iOS te zasady sprawdzają, czy nie zostały zdjęte zabezpieczenia systemu. Na platformie Android te zasady sprawdzają, czy na urządzeniu nie został odblokowany dostęp do konta root.  
@@ -56,6 +56,6 @@ Administratorzy IT mogą sprawdzić kondycję urządzenia i jego zgodność z za
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

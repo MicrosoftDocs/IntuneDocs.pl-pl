@@ -3,8 +3,8 @@ title: Ustawienia zasad systemu iOS | Microsoft Intune
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f9a492a16605130743b943f6aa49d1d633eb97d4
-ms.openlocfilehash: 3292df922eeb53108f2b34d4113b0b6c5a114564
+ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
+ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
 
 
 ---
@@ -27,121 +27,134 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 
 **Ogólne zasady konfiguracji systemu iOS** w usłudze Microsoft Intune umożliwiają konfigurację następujących ustawień:
 
--   **Ustawienia ogólne urządzenia i zabezpieczeń** — Możliwość wyboru z listy wstępnie zdefiniowanych ustawień, które pozwalają na kontrolę szeregu funkcji i funkcjonalności urządzenia.
+-   **Ustawienia ogólne urządzenia i ustawienia zabezpieczeń**. Możesz wybrać ustawienia z listy wstępnie zdefiniowanych ustawień, które pozwalają na kontrolowanie szeregu funkcji urządzenia.
 
--   **Tryb kiosku** — Blokowanie urządzenia w celu zezwolenia na działanie tylko niektórych funkcji. Na przykład można zezwolić na uruchamianie na urządzeniu tylko określonej zarządzanej aplikacji albo można wyłączyć przyciski regulacji głośności na urządzeniu. Można użyć tych ustawień dla modeli pokazowych urządzenia lub dla urządzeń przeznaczonych do wykonywania tylko jednej funkcji — na przykład urządzeń w punkcie sprzedaży.
+-   **Tryb kiosku**. Blokowanie urządzenia w celu zezwolenia na działanie tylko niektórych funkcji. Na przykład można zezwolić na uruchamianie na urządzeniu tylko określonej zarządzanej aplikacji albo można wyłączyć przyciski regulacji głośności na urządzeniu. Można użyć tych ustawień dla modeli pokazowych urządzenia lub dla urządzeń przeznaczonych do wykonywania tylko jednej funkcji — na przykład urządzeń w punkcie sprzedaży.
 
--   **Zgodne i niezgodne aplikacje** — Określanie listy zgodnych i niezgodnych aplikacji w firmie. Na urządzeniach z systemami Android i iOS można użyć **Raportu o niezgodnych aplikacjach** , aby porównać aplikacje zainstalowane przez użytkowników z listą zgodnych aplikacji (ale nie można zablokować instalacji aplikacji).
+-   **Zgodne i niezgodne aplikacje**. Określ listę zgodnych i niezgodnych aplikacji w firmie. Na urządzeniach z systemami Android i iOS można użyć **Raportu o niezgodnych aplikacjach** , aby porównać aplikacje zainstalowane przez użytkowników z listą zgodnych aplikacji (ale nie można zablokować instalacji aplikacji).
 
 > [!TIP]
 > Można skonfigurować warunki i postanowienia dla użytkowników, aby wiedzieli oni, że aplikacje na urządzeniu, w tym również aplikacje osobiste, będą podlegały ocenie, a aplikacje niezgodne będą blokowane lub zgłaszane. Przed rejestracją urządzenia i rozpoczęciem korzystania z Portalu firmy w celu pobrania aplikacji użytkownicy muszą zaakceptować przedstawione warunki i postanowienia. Aby uzyskać więcej informacji na temat korzystania z warunków i postanowień, zobacz [Ustawienia zasad dotyczących warunków i postanowień w usłudze Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md).
 
-Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz **Ustawienia zasad niestandardowych** w dalszej części tego tematu.
+Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz „Ustawienia zasad niestandardowych” w dalszej części tego tematu.
 
 ### Ustawienia zabezpieczeń
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do urządzenia.|Tak|
-|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|Tak|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Ustawienie to określa liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|Tak|
-|**Minimalna długość hasła**|Określa minimalną liczbę znaków w haśle.|Tak|
-|**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak „0000” i „1234”.|Tak|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Czyści urządzenie po określonej liczbie prób logowania zakończonych niepowodzeniem.|Tak|
-|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**<sup>1</sup>|Określ liczbę minut przed wyłączeniem ekranu urządzenia.|Tak|
-|**Wygaśnięcie hasła w dniach**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|
-|**Pamiętaj historię haseł**|Określa, czy użytkownik może użyć poprzednio używanego hasła.|Tak|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.|Tak|
-|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**<sup>1</sup>|Określa, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.|Tak|
-|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|System iOS 7.1 lub nowszy|
+|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownik musi wprowadzić hasło, aby uzyskać dostęp do urządzenia.|
+|**Wymagany typ hasła**|Określ typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|
+|**Wymagana liczba znaków złożonych w haśle**|Określ liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|
+|**Minimalna długość hasła**|Określ minimalną liczbę znaków w haśle.|
+|**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak **0000** i **1234**.|
+|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określ liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia.|
+|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**<sup>1</sup>|Określ, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.|
+|**Wygaśnięcie hasła (dni)**|Określ liczbę dni, po której należy zmienić hasło urządzenia.|
+|**Pamiętaj historię haseł**|Określ, czy użytkownik może użyć poprzednio używanego hasła.|
+|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określ liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.|
+|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**<sup>1</sup>|Określ liczbę minut przed wyłączeniem ekranu urządzenia.|
+|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Czas braku aktywności (w minutach) przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 ### Ustawienia systemowe
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na zrzut ekranu**|Zezwala użytkownikowi na przechwytywanie zawartości ekranu w formie obrazu.|Tak|
-|**Zezwalaj na centrum sterowania na ekranie blokady**|Określa, czy aplikacja Centrum sterowania jest dostępna, gdy urządzenie jest zablokowane.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na widok powiadomienia na ekranie blokady**|Zezwalaj użytkownikowi na dostęp do widoku powiadomień bez odblokowywania urządzenia.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na widok dzisiejszy na ekranie blokady**|Określa, czy można wyświetlać powiadomienia, gdy urządzenie jest zablokowane.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na przesłanie danych diagnostycznych**|Zezwala lub blokuje możliwość przesyłania danych diagnostycznych z urządzenia do firmy Apple.|Tak|
-|**Zezwalaj na niezaufane certyfikaty TLS**|Zezwalaj na niezaufane certyfikaty protokołu TLS na urządzeniu.|Tak|
-|**Zezwalaj na aplikację Passbook podczas blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|Tak|
+|**Zezwalaj na zrzut ekranu**|Zezwalaj użytkownikowi na przechwytywanie zawartości ekranu w formie obrazu.|
+|**Zezwalaj na centrum sterowania na ekranie blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji centrum sterowania, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na widok powiadomienia na ekranie blokady**|Zezwalaj użytkownikowi na dostęp do widoku powiadomień bez odblokowywania urządzenia.|
+|**Zezwalaj na widok dzisiejszy na ekranie blokady**|Zezwalaj użytkownikowi na wyświetlanie powiadomień, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na niezaufane certyfikaty TLS**|Zezwalaj na niezaufane certyfikaty protokołu TLS na urządzeniu.|
+|**Zezwalaj na przesłanie danych diagnostycznych**|Zezwala lub blokuje możliwość przesyłania danych diagnostycznych z urządzenia do firmy Apple.|
+|**Zezwalaj na aplikację Passbook podczas blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|
 
-### Ustawienia chmury — dokumenty i dane
+### Ustawienia chmury dotyczące dokumentów i danych
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na tworzenie kopii zapasowych w ramach usługi iCloud**|Zezwala użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|Tak|
-|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|Tak|
-|**Zezwalaj na synchronizowanie strumienia zdjęć w ramach usługi iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|Tak|
-|**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|Tak|
+|**Zezwalaj na tworzenie kopii zapasowych w ramach usługi iCloud**|Zezwalaj użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|
+|**Zezwalaj na synchronizowanie dokumentów w ramach usługi iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|
+|**Zezwalaj na synchronizowanie strumienia zdjęć w ramach usługi iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|
+|**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|
+|**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwalaj aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
+|**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Zezwalaj użytkownikowi na kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
 
-### Ustawienia aplikacji — przeglądarka
+### Ustawienia aplikacji dotyczące przeglądarki
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na Safari**|Określ, czy na urządzeniu można użyć przeglądarki Safari.|Tak|
-|**Zezwalaj na automatyczne uzupełnianie**|Użytkownik może zmienić ustawienia autowypełniania w przeglądarce.|Tak|
-|**Zezwalaj na blokowanie wyskakujących okienek**|Włącz lub wyłącz blokowanie wyskakujących okienek w przeglądarce.|Tak|
-|**Zezwalaj na pliki cookie**|Zezwalaj na używanie plików cookie przez przeglądarkę sieci Web urządzenia.|Tak|
-|**Zezwalaj na wykonywanie skryptów Java**|Zezwalaj na uruchamianie skryptów Java w przeglądarce.|Tak|
-|**Zezwalaj na ostrzeżenia o oszustwie**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce urządzenia.|Tak|
+|**Zezwalaj na Safari**|Określ, czy na urządzeniu można użyć przeglądarki Safari.|
+|**Zezwalaj na automatyczne uzupełnianie**|Zezwalaj użytkownikowi na zmianę ustawienia autowypełniania w przeglądarce.|
+|**Zezwalaj na blokowanie wyskakujących okienek**|Włącz lub wyłącz blokowanie wyskakujących okienek w przeglądarce.|
+|**Zezwalaj na pliki cookie**|Zezwalaj na używanie plików cookie przez przeglądarkę.|
+|**Zezwalaj na wykonywanie skryptów Java**|Zezwalaj na uruchamianie skryptów Java w przeglądarce.|
+|**Zezwalaj na ostrzeżenia o oszustwie**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce.|
 
-### Ustawienia aplikacji — aplikacje
+### Ustawienia aplikacji dotyczące aplikacji
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia dostęp do sklepu z aplikacjami z poziomu urządzenia.|Tak|
-|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymaga od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|Tak|
-|**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|Tak|
-|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|System iOS 7.1 lub nowszy|
-|**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak Facetime, w urządzeniu.|Tak|
-|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|Tak|
+|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Zezwalaj na dostęp do sklepu z aplikacjami z poziomu urządzenia.|
+|**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymagaj od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|
+|**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|
+|**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwalaj na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|
+|**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|
+|**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak FaceTime, w urządzeniu.|
+|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|
+|**Zezwalaj użytkownikom na pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**|Zezwalaj użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.|
 
-### Ustawienia aplikacji — gry
+### Ustawienia aplikacji dotyczące gier
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na dodawanie przyjaciół z programu Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|Tak|
-|**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|Tak|
+|**Zezwalaj na dodawanie przyjaciół z programu Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|
+|**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|
 
-### Ustawienia możliwości urządzenia — sprzęt
+### Ustawienia możliwości urządzenia dotyczące sprzętu
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na używanie aparatu**|Określa, czy można używać aparatu w urządzeniu.|Tak|
+|**Zezwalaj na używanie aparatu**|Określ, czy można używać aparatu w urządzeniu.|
+|**Wymagaj hasła parowania dla wychodzących żądań funkcji AirPlay**|Wymagaj hasła parowania, gdy użytkownik używa funkcji AirPlay do strumieniowego przesyłania zawartości do innych urządzeń firmy Apple.|
 
-### Ustawienia możliwości urządzenia — połączenie komórkowe
+### Ustawienia możliwości urządzenia dotyczące połączeń komórkowych
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na roaming połączeń głosowych**|Zezwalaj na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|Tak|
-|**Zezwalaj na roaming danych**|Zezwalaj na roaming danych, gdy urządzenie korzysta z sieci komórkowej.|Tak|
-|**Zezwalaj na globalne pobieranie w tle podczas roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|Tak|
+|**Zezwalaj na roaming połączeń głosowych**|Zezwalaj na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|
+|**Zezwalaj na roaming danych**|Zezwalaj na roaming danych, gdy urządzenie korzysta z sieci komórkowej.|
+|**Zezwalaj na globalne pobieranie w tle podczas roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|
 
-### Ustawienia możliwości urządzenia — funkcje
+### Ustawienia możliwości urządzenia dotyczące funkcji
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|iOS|
+|Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na Siri**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu.|Tak|
-|**Zezwalaj na Siri, gdy urządzenie jest zablokowane**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu, gdy urządzenie jest zablokowane.|Tak|
-|**Zezwalaj na wybieranie głosowe**|Zezwalaj na korzystanie z funkcji wybierania głosowego w urządzeniu.|Tak|
+|**Zezwalaj na Siri**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu.|
+|**Zezwalaj na Siri, gdy urządzenie jest zablokowane**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu, gdy urządzenie jest zablokowane.|
+|**Zezwalaj na wybieranie głosowe**|Zezwalaj na korzystanie z funkcji wybierania głosowego w urządzeniu.|
 
 
 ### Ustawienia dotyczące aplikacji zgodnych i niezgodnych
-Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnych aplikacji, korzystając z poniższych informacji:
+Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnych aplikacji, korzystając z poniższych informacji.
 
 > [!NOTE]
 > W ramach jednych zasad można określić wyłącznie listę zgodnych lub wyłącznie listę niezgodnych aplikacji. Nie można wprowadzić obu list w ramach jednych zasad.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
-|**Zgłaszaj niezgodność, gdy użytkownicy instalują aplikacje z listy**|Tworzy listę aplikacji niezarządzanych przez usługę Intune, których użytkownicy nie mogą instalować i uruchamiać.|
-|**Nie zgłaszaj niezgodności, gdy użytkownicy instalują aplikacje z listy**|Tworzy listę aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.|
-|**Dodaj**|Dodaje aplikację do wybranej listy. Wprowadź wybraną nazwę, opcjonalnie wydawcę aplikacji, a także adres URL aplikacji w sklepie z aplikacjami. Zobacz sekcję **Jak określać adresy URL sklepów z aplikacjami** w dalszej części tego tematu, aby uzyskać pomoc.|
-|**Importuj aplikacje**|Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.|
+|**Zgłaszaj niezgodność, gdy użytkownicy instalują aplikacje z listy**|Utwórz listę aplikacji (niezarządzanych przez usługę Intune), których użytkownicy nie mogą instalować i uruchamiać.|
+|**Zgłaszaj brak zgodności, jeśli użytkownicy będą instalować aplikacje spoza listy**|Utwórz listę aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.|
+|**Dodaj**|Dodaje aplikację do wybranej listy. Wprowadź wybraną nazwę, opcjonalnie wydawcę aplikacji, a także adres URL aplikacji w sklepie z aplikacjami. Zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu, aby uzyskać pomoc.|
+|**Importuj aplikacje**|Importuje listę aplikacji w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj tego formatu: nazwa aplikacji, wydawca, adres URL aplikacji.|
 |**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
 |**Usuwanie**|Usuwa wybraną aplikację z listy.|
 
@@ -149,7 +162,7 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
-|**Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku**|Wybierz pozycję **Przeglądaj**, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz **Jak określać adresy URL sklepów z aplikacjami** w dalszej części tego tematu.|
+|**Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku**|Wybierz pozycję **Przeglądaj**, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.|
 |**Zezwalaj na obsługę dotykową**|Włącza lub wyłącza ekran dotykowy na urządzeniu.|
 |**Zezwalaj na obracanie ekranu**|Włącza lub wyłącza zmianę orientacji ekranu podczas obracania urządzenia.|
 |**Zezwalaj na używanie przycisków regulacji głośności**|Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.|
@@ -158,23 +171,22 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 |**Zezwalaj na automatyczne blokowanie**|Włącza lub wyłącza automatyczne blokowanie urządzenia.|
 |**Włącz dźwięk mono**|Włącza lub wyłącza ustawienie ułatwień dostępu **Dźwięk mono**.|
 |**Włącz lektora**|Włącza lub wyłącza funkcję ułatwień dostępu **VoiceOver** , która odczytuje na głos tekst wyświetlany na ekranie urządzenia.|
-|**Włącz korektę lektora**|Włącza lub wyłącza ustawienia funkcji VoiceOver (na przykład możliwość ustawienia tempa odczytywania tekstu z ekranu).|
-|**Włącz powiększenie**|Włącza lub wyłącza funkcję ułatwień dostępu **Zoom** umożliwiającą powiększenie fragmentu ekranu urządzenia za pomocą gestu.|
+|**Włącz korektę lektora**|Włącza lub wyłącza możliwość dostosowania ustawień funkcji VoiceOver (na przykład tempa odczytywania tekstu z ekranu).|
+|**Włącz powiększenie**|Włącza lub wyłącza funkcję ułatwień dostępu **Zoom** umożliwiającą użytkownikowi powiększenie fragmentu ekranu urządzenia za pomocą gestu.|
 |**Włącz korektę powiększenia**|Włącza lub wyłącza ustawienia funkcji Zoom.|
 |**Włącz odwrócone kolory**|Włącza lub wyłącza funkcję ułatwień dostępu **Odwróć kolory** dostosowującą wyświetlany obraz do potrzeb użytkowników niedowidzących.|
-|**Włącz korektę odwróconych kolorów**|Włącza lub wyłącza ustawienia funkcji Odwróć kolory.|
-|**Włącz obsługę dotykową z ułatwieniami**|Włącza lub wyłącza funkcję ułatwień dostępu **Assistive Touch** , która umożliwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.|
-|**Włącz korektę obsługi dotykowej z ułatwieniami**|Włącza lub wyłącza ustawienia funkcji Assistive Touch.|
-|**Włącz wybór mowy**|Włącza lub wyłącza funkcję ułatwień dostępu **wyboru mowy** , dzięki której zaznaczony tekst może zostać odczytany na głos przez urządzenie.|
+|**Włącz korektę odwróconych kolorów**|Włącza lub wyłącza ustawienia funkcji Odwróć kolory, która umożliwia użytkownikowi korektę odwróconych kolorów.|
+|**Włącz obsługę dotykową z ułatwieniami**|Włącza lub wyłącza funkcję ułatwień dostępu **Assistive Touch**, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.|
+|**Włącz korektę obsługi dotykowej z ułatwieniami**|Włącza lub wyłącza ustawienia obsługi dotykowej z ułatwieniami, które umożliwiają użytkownikom dostosowanie funkcji obsługi dotykowej z ułatwieniami.|
+|**Włącz wybór mowy**|Włącza lub wyłącza funkcję ułatwień dostępu **wyboru mowy**, dzięki której zaznaczony tekst może zostać odczytany użytkownikowi na głos przez urządzenie.|
 > [!NOTE]
 > Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
-> 
+>
 > -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub menedżera rejestracji urządzeń w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
-> -   Jeśli wskazana aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
+> -   Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
 ### Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
 
-#### Monitoruj aplikacje zgodne i niezgodne
 Użyj **Raportu o niezgodnych aplikacjach** , aby wyświetlić zgodność dozwolonych i blokowanych aplikacji.
 
 ##### Aby uruchomić raport o niezgodnych aplikacjach
@@ -186,24 +198,121 @@ Użyj **Raportu o niezgodnych aplikacjach** , aby wyświetlić zgodność dozwol
 #### Jak określać adresy URL sklepów z aplikacjami
 Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji **Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku** (tylko iOS), użyj następującego formatu:
 
-Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz użyć, i otwórz jej stronę.
+1. Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz użyć, i otwórz jej stronę.
 
-Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgodnych lub niezgodnych aplikacji lub aplikacji, która będzie działać w trybie kiosku.
+2. Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgodnych lub niezgodnych aplikacji lub aplikacji, która będzie działać w trybie kiosku.
 
 **Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Adres URL, którego użyjesz, to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 > [!NOTE]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
 
+### Ustawienia rejestracji
+Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na blokadę aktywacji, gdy urządzenie jest w trybie nadzorowanym**|Umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.|
+
+### Nadzór
+Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 7.1 lub nowszym, które są w trybie nadzorowanym.
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na modyfikowanie konta**|Umożliwia użytkownikowi zmianę ustawień konta, takich jak konfiguracja poczty e-mail.|
+|**Zezwalaj na korzystanie z funkcji AirDrop**|Umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.|
+|**Zezwalaj na zmiany ustawień użycia danych komórkowych przez aplikacje**|Umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.|
+|**Zezwalaj programowi Siri na wykonywanie zapytań o zawartość wygenerowaną przez użytkowników w Internecie**|Zezwala programowi Siri na dostęp do witryn sieci Web w celu udzielania odpowiedzi na pytania.|
+|**Zezwalaj na dostęp do sklepu iBooks**|Umożliwia użytkownikowi przeglądanie i kupowanie książek w sklepie iBooks.|
+|**Zezwalaj na zmienianie ustawień aplikacji Znajdź moich znajomych**|Umożliwia użytkownikowi zmienianie ustawień aplikacji Znajdź moich znajomych.|
+|**Zezwalaj na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień**|Zezwala użytkownikowi na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień na urządzeniu.|
+|**Zezwalaj użytkownikom na włączanie ograniczeń w ustawieniach urządzenia**|Zezwala użytkownikowi na konfigurowanie ograniczeń urządzenia (kontroli rodzicielskiej) na urządzeniu.|
+|**Zezwalaj na zwracanie przez wyszukiwanie Spotlight wyników z Internetu**|Pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.|
+|**Zezwalaj na używanie aplikacji Game Center**|Zezwala na używanie aplikacji Game Center.|
+|**Zezwalaj na parowanie hostów w celu sterowania tym, z którymi urządzeniami może łączyć się urządzenie z systemem iOS**|Zezwala na parowanie hostów w celu umożliwienia administratorowi kontrolowania tego, z którymi urządzeniami może być sparowane urządzenie iOS 7.|
+|**Zezwalaj użytkownikowi na instalowanie profilów konfiguracji i certyfikatów**|Zezwala użytkownikowi na instalowanie profilów konfiguracji i certyfikatów.|
+|**Zezwalaj na korzystanie z aplikacji Messages na urządzeniu**|Zezwala na korzystanie z aplikacji Messages do wysyłania wiadomości SMS.|
+
+### Pokaż lub ukryj aplikacje
+
+Użyj **listy ukrytych i pokazanych aplikacji**, aby wykonać następujące działania na nadzorowanych urządzeniach z systemem iOS 9.3 lub nowszym:
+
+- Określić listę aplikacji, które będą ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
+- Określić listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
+
+
+#### Jak utworzyć listę pokazanych lub ukrytych aplikacji
+
+Określ następujące ustawienia:
+
+|Nazwa ustawienia|Szczegóły|
+|-|-|
+|**Lista aplikacji ukrytych i pokazanych**|Włącz to ustawienie, jeśli chcesz utworzyć listę ukrytych lub pokazanych aplikacji.|
+|**Ukryj aplikacje na liście przed użytkownikami**|Wybierz tę opcję, jeśli chcesz utworzyć listę aplikacji, które będą ukryte przed użytkownikami.|
+|**Pokaż użytkownikom tylko aplikacje na liście**|Wybierz tę opcję, jeśli chcesz utworzyć listę aplikacji, które będą wyświetlane dla użytkowników.<br>Po utworzeniu listy tego typu wszystkie pozostałe aplikacje systemu iOS, z wyjątkiem aplikacji **Ustawienia** i **Telefon** (w przypadku telefonu iPhone), będą ukryte.<br>Ponadto należy dodać do listy aplikację Portal firmy i wszystkie aplikacje wdrożone i zarządzane za pomocą usługi Intune.|
+|**Dodaj**|Dodaje aplikację do wybranej listy.<br>W przypadku listy ukrytych należy określić **nazwę**, **wydawcę** i **adres URL aplikacji lub identyfikator pakietu** każdej aplikacji, która ma być ukryta.<br>W przypadku listy pokazanych możesz użyć polecenia **Wybierz zarządzaną aplikację**, aby wyświetlić listę aplikacji do wyboru zarządzanych przez usługę Intune. Możesz także użyć polecenia Wybierz aplikację ze sklepu i określić **nazwę**, **wydawcę** i **adres URL aplikacji lub identyfikator pakietu** każdej aplikacji, która ma być wyświetlana.|
+|**Importuj aplikacje**|Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.|
+|**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
+|**Usuwanie**|Usuwa wybraną aplikację z listy.|
+
+#### Informacje o aplikacji dla wbudowanych aplikacji systemu iOS
+
+Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator pakietu dla wbudowanych aplikacji systemu iOS, które można pokazać lub ukryć. Jeśli chcesz pokazać lub ukryć wszystkie aplikacje na liście, możesz skopiować dane poniżej do pliku tekstowego z rozszerzeniem **csv**, a następnie użyć opcji **Importuj aplikacje**, aby zaimportować wszystkie aplikacje jednocześnie.
+
+```
+App Store,Apple,com.apple.AppStore
+Calculator,Apple,com.apple.calculator
+Calendar,Apple,com.apple.mobilecal
+Camera,Apple,com.apple.camera
+Clock,Apple,com.apple.mobiletimer
+Compass,Apple,com.apple.compass
+Contacts,Apple,com.apple.MobileAddressBook
+FaceTime,Apple,com.apple.facetime
+Find Friends,Apple,com.apple.mobileme.fmf1
+Find iPhone,Apple,com.apple.mobileme.fmip1
+Game Center,Apple,com.apple.gamecenter
+GarageBand,Apple,com.apple.mobilegarageband
+Health,Apple,com.apple.Health
+iBooks,Apple,com.apple.iBooks
+iTunes Store,Apple,com.apple.MobileStore
+iTunes U,Apple,com.apple.itunesu
+Keynote,Apple,com.apple.Keynote
+Mail,Apple,com.apple.mobilemail
+Maps,Apple,com.apple.Maps
+Messages,Apple,com.apple.MobileSMS
+Music,Apple,com.apple.Music
+News,Apple,com.apple.news
+Notes,Apple,com.apple.mobilenotes
+Numbers,Apple,com.apple.Numbers
+Pages,Apple,com.apple.Pages
+Photo Booth,Apple,com.apple.Photo-Booth
+Photos,Apple,com.apple.mobileslideshow
+Podcasts,Apple,com.apple.podcasts
+Reminders,Apple,com.apple.reminders
+Safari,Apple,com.apple.mobilesafari
+Settings,Apple,com.apple.Preferences
+Stocks,Apple,com.apple.stocks
+Tips,Apple,com.apple.tips
+Videos,Apple,com.apple.videos
+VoiceMemos,Apple,com.apple.VoiceMemos
+Wallet,Apple,com.apple.Passbook
+Watch,Apple,com.apple.Bridge
+Weather,Apple,com.apple.weather
+
+
+```
+
+
+
 
 ## Ustawienia zasad niestandardowych
 
 **Zasady niestandardowe systemu iOS** w usłudze Microsoft Intune umożliwiają wdrażanie ustawień utworzonych przy użyciu [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) na urządzeniach z systemem iOS. To narzędzie umożliwia tworzenie wielu ustawień do kontroli działania tych urządzeń oraz eksportowanie ich do profilu konfiguracji. Następnie można zaimportować ten profil konfiguracji do zasad niestandardowych systemu iOS w usłudze Intune i wdrożyć ustawienia dla użytkowników oraz urządzeń w swojej organizacji.
 
-Ta funkcja ma umożliwić wdrażanie ustawień systemu iOS, których nie można skonfigurować przy użyciu zasad ogólnych konfiguracji usługi Intune.
+Ta funkcja umożliwia wdrażanie ustawień systemu iOS, których nie można skonfigurować przy użyciu ogólnych zasad konfiguracji usługi Intune.
 
 ### Wymagania wstępne
-Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utworzony plik konfiguracji zawierający ustawienia, które mają zostać wdrożone dla użytkowników lub urządzeń. Program Apple Configurator można pobrać ze sklepu [Mac App Store](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12), można tam także znaleźć więcej informacji na jego temat.
+Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utworzony plik konfiguracji zawierający ustawienia, które mają zostać wdrożone dla użytkowników lub urządzeń. Program Apple Configurator można pobrać ze sklepu [Mac App Store](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12); można tam także znaleźć więcej informacji na jego temat.
 
 > [!NOTE]
 > Usługa Intune nie raportuje zgodności poszczególnych ustawień w zasadach niestandardowych systemu iOS. Jednak ogólna zgodność z zasadami jest raportowana.
@@ -220,7 +329,7 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 |Nazwa ustawienia|Szczegóły|
     |----------------|--------------------|
 |**Nazwa niestandardowego profilu konfiguracji (wyświetlana dla użytkowników)**|Podaj nazwę zasad, która będzie wyświetlana w urządzeniu i w raportach zasad usługi Intune.|
-|**Plik profilu konfiguracji**|Wybierz pozycję **Importuj**, a następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web [Apple Developer](https://developer.apple.com/).|
+|**Plik profilu konfiguracji**|Wybierz pozycję **Importuj**, a następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web programu [Apple Developer](https://developer.apple.com/).|
     |**Szczegóły profilu konfiguracji**|Wyświetla kod XML zaimportowanego profilu konfiguracji.|
 
 ### Zobacz także
@@ -228,7 +337,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

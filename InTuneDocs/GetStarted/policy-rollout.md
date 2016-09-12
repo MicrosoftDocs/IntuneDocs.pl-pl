@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Wdrażanie zasad | Microsoft Intune
-description:
-keywords:
+title: "Wdrażanie zasad | Microsoft Intune"
+description: "Zalecenia dotyczące etapowego wdrażania zasad w usłudze Microsoft Intune."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 390d5adf-86d2-4e23-ba93-1e61e6b1028b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: 0c23fdd5f5e6bc1b50dda56fe2135e8cc24b5e26
+
 
 ---
 
 # Wdrażanie zasad
 Ten temat zawiera zalecenia dotyczące etapowego wdrażania zasad w usłudze Microsoft Intune. Takie podejście stosuje się do pierwszych zasad stosowanych w nowym wdrożeniu usługi Intune, a także do zasad dodawanych do istniejącego wdrożenia.
 
-Ogólne informacje o etapach wdrażania zamieszczono w temacie [Etapy wdrażania usługi Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md)..
+Ogólne informacje o etapach wdrażania zamieszczono w temacie [Etapy wdrażania usługi Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md).
 
 ### Etapy wdrażania zasad
 Etapy wdrażania zasad są następujące:
@@ -61,7 +55,7 @@ Zdefiniuj zakres wdrożenia zasad usługi Intune:
 ## Weryfikacja koncepcji
 Na etapie weryfikacji koncepcji należy przetestować wdrażanie zasad w środowisku laboratoryjnym dla skonfigurowanych urządzeń i użytkowników wyłącznie w celach testowych.
 
--   W etapie tym powinien uczestniczyć dział pomocy technicznej, co umożliwi poznanie problemów, które mogą wystąpić podczas pilotażu i wdrożenia produkcyjnego. Informacje o rozwiązywaniu problemów są dostępne w temacie [Rozwiązywanie problemów z zasadami w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)..
+-   W etapie tym powinien uczestniczyć dział pomocy technicznej, co umożliwi poznanie problemów, które mogą wystąpić podczas pilotażu i wdrożenia produkcyjnego. Informacje o rozwiązywaniu problemów są dostępne w temacie [Rozwiązywanie problemów z zasadami w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 -   Na tym etapie procesu należy opracować plany informowania użytkowników wdrożenia pilotażowego i produkcyjnego. Plan powinien obejmować co najmniej zachowania urządzenia, które ulegną zmianom, oraz okoliczności tych zmian, ich cele biznesowe, a także działania, jakie należy podjąć w przypadku napotkania problemów — zarówno informacje o samodzielnej pomocy, jak i sposobie kontaktu z pomocą techniczną.
 
@@ -102,6 +96,7 @@ Podczas etapu pilotażowego następuje wdrożenie zasad dla niewielkiej liczby u
 [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

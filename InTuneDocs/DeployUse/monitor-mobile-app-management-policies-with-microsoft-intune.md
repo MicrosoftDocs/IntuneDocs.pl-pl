@@ -1,10 +1,10 @@
 ---
 title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune | Microsoft Intune"
-description: 
+description: "Zobacz, jak wielu użytkowników korzysta z zasad i poznaj więcej szczegółów."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 99b50bd040bbbdfa3ad7937d7703700526c9c4d5
+ms.sourcegitcommit: 644860abcd351d24f08d7a517a3a4b5f44824689
+ms.openlocfilehash: 1d22d26c1a1c52dda4f9b01658d22f8de8187f0f
 
 
 ---
@@ -49,6 +49,9 @@ Możesz wyszukać pojedynczego użytkownika i sprawdzić jego stan zgodności. B
 
   **Nie zaewidencjonowano:** wskazuje, że zasady zostały wdrożone dla użytkownika, ale od tego momentu aplikacja nie była używana w kontekście pracy.
 
+>[!NOTE]
+> Jeśli poszukiwany użytkownik nie ma wdrożonych zasad zarządzania aplikacjami mobilnymi, pojawi się komunikat z informacją, że użytkownik nie jest objęty przez żadne zasady dotyczące aplikacji.
+
 Aby wyświetlić raportowanie dla użytkownika, wykonaj następujące kroki:
 
 **Krok 1.** Aby wybrać użytkownika, kliknij kafelek Podsumowanie lub wybierz opcję **RAPORTOWANIE APLIKACJI WG UŻYTKOWNIKA** w bloku **Ustawienia**, jak pokazano poniżej:
@@ -72,6 +75,6 @@ W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

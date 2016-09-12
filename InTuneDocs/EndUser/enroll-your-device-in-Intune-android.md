@@ -1,10 +1,10 @@
 ---
 title: "Rejestrowanie urządzenia z systemem Android w usłudze Intune | Microsoft Intune"
-description: 
+description: "Opis sposobu rejestrowania urządzenia z systemem Android w usłudze Intune"
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 76cc1a43e09039285be76858155ef22f7b41cf9b
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 6fa1e13b6b0e29144c3740f00b232807e6e4e984
 
 
 ---
@@ -44,7 +44,27 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
-5.  Wykonaj ten krok, jeśli używasz systemu Android w wersji 6.0 lub nowszej. W przeciwnym razie przejdź do następnego kroku. 
+5.  Zaloguj się w aplikacji Portal firmy, podając służbowe konto i hasło, a następnie naciśnij pozycję **Zaloguj**.
+
+    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
+
+6.  Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **ROZPOCZNIJ**.
+
+    ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-4a-comp-access-setup.png)
+
+7.  Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
+
+    ![Ekran „Dlaczego warto zarejestrować urządzenie?”](./media/and-enroll-4b-why-enroll.png)
+
+8.  Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
+
+    ![Ustawienia prywatności](./media/and-enroll-4c-we-care-privacy.png)
+
+9.  Na ekranie **Co teraz** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij przycisk **ZAREJESTRUJ**.
+
+    ![Ekran Co teraz](./media/and-enroll-4d-what-comes-next.png)
+
+10.  Wykonaj ten krok, jeśli używasz systemu Android w wersji 6.0 lub nowszej. W przeciwnym razie przejdź do następnego kroku.
 
     Jeśli administrator IT skonfigurował zasady, mogą pojawić się następujące komunikaty:
     -   **Zezwolić aplikacji Portal firmy na połączenia telefoniczne i zarządzanie nimi?**
@@ -63,26 +83,6 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym naciśnięciu przycisku **Wyślij dane**, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, zaznaczając pole wyboru **Nigdy nie pytaj ponownie**. Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Magazyn** i włącz uprawnienie.
 
-6.  Zaloguj się w aplikacji Portal firmy, podając służbowe konto i hasło, a następnie naciśnij pozycję **Zaloguj**.
-
-    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
-
-7.  Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **ROZPOCZNIJ**.
-
-    ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-4a-comp-access-setup.png)
-
-8.  Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
-
-    ![Ekran „Dlaczego warto zarejestrować urządzenie?”](./media/and-enroll-4b-why-enroll.png)
-
-9.  Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
-
-    ![Ustawienia prywatności](./media/and-enroll-4c-we-care-privacy.png)
-
-10.  Na ekranie **Co teraz** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij przycisk **ZAREJESTRUJ**.
-
-    ![Ekran Co teraz](./media/and-enroll-4d-what-comes-next.png)
-
 11.  Na ekranie **Aktywowanie administratora urządzenia** naciśnij przycisk **Aktywuj**.
 
     ![Ekran Aktywowanie administratora urządzenia](./media/and-enroll-5-activate.png)
@@ -91,17 +91,11 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![Wprowadzanie numeru PIN lub hasła](./media/and-enroll-6-PIN-native.png)
 
-13.  Postępuj zgodnie z poniższymi instrukcjami odpowiednimi do typu używanego urządzenia (natywne urządzenie z systemem Android lub urządzenie z systemem Samsung Knox). Aby ustalić, czy masz urządzenie Samsung Knox, przejdź do pozycji **Ustawienia** &gt; **Informacje o urządzeniu**. Jeśli na tej liście nie widzisz pozycji „KNOX version” (Wersja systemu KNOX), oznacza to, że masz urządzenie z natywnym systemem Android.
-
-    -   Urządzenie natywne (bez systemu Samsung Knox): na ekranie **Nazwa certyfikatu** naciśnij przycisk **OK**, aby zaakceptować certyfikat domyślny.
-
-    ![Ekran nazywania certyfikatu](./media/and-enroll-7-cert-native.png)
-
-    -   Urządzenie z systemem Samsung Knox: zaakceptuj zasady ochrony prywatności i naciśnij pozycję **POTWIERDŹ**.
+13.  Jeśli korzystasz z urządzenia z systemem Samsung KNOX, naciśnij pozycję **Potwierdź**. Zostanie wyświetlony komunikat potwierdzający zarejestrowanie urządzenia. Jeśli korzystasz z urządzenia z natywnym systemem Android, zobaczysz ekran poniżej pokazujący, że urządzenie jest rejestrowane.
 
     ![Zasady ochrony prywatności systemu Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
 
-    Podczas rejestracji urządzenia w usłudze Intune zobaczysz następujący komunikat na ekranie.
+    Ten ekran pokazuje, że urządzenie jest rejestrowane.
 
     ![Ekran rejestracji urządzenia](./media/and-enroll-8-device-enrolling.png)
 
@@ -115,13 +109,13 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
 Zanim spróbujesz zainstalować aplikacje firmowe, przejdź do pozycji **Ustawienia** &gt; **Zabezpieczenia** i włącz ustawienie **Nieznane źródła**. Jeśli nie włączysz tej opcji przed próbą zainstalowania aplikacji, zostanie wyświetlony komunikat „Zablokowano instalację. Ze względów bezpieczeństwa Twoje urządzenie zostało ustawione w celu blokowania instalacji aplikacji uzyskanych z nieznanych źródeł”. W oknie dialogowym komunikatu o błędzie możesz nacisnąć pozycję **Ustawienia**, aby przejść do opcji **Nieznane źródła**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

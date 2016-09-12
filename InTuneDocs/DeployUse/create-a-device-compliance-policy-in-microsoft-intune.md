@@ -1,10 +1,10 @@
 ---
-title: "Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune | Microsoft Intune"
-description: 
+title: "Tworzenie zasad zgodności urządzeń | Microsoft Intune"
+description: "Utwórz zasady zgodności, aby zabezpieczyć urządzenia przenośne i komputery używane do uzyskiwania dostępu do danych firmowych."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: f4f036fc1b6fe2394e05907e2d14289c9fba3426
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 2ff0b24d0a6991c22b23da5da5c63a9bb26ccdd2
 
 
 ---
@@ -32,12 +32,20 @@ Na stronie **Tworzenie zasad** włącz wymagane ustawienia:
   -   Ustawienia zabezpieczeń systemu, np. hasła i szyfrowania.
   -   Ustawienia kondycji urządzenia, np. określanie, czy urządzenie ma zdjęte zabezpieczenia lub jest zgłoszone jako urządzenie w złej kondycji przez usługę zaświadczania o kondycji urządzenia systemu Windows.
   -   Ustawienia właściwości urządzenia, np. minimalna wymagana wersja systemu operacyjnego lub dozwolona maksymalna wersja systemu operacyjnego.
-![Zrzut ekranu karty Ogólne na stronie Tworzenie zasad ](./media/intune-sa-3b-create-policy.png)
+![Karta Ogólne na stronie Tworzenie zasad ](./media/intune-sa-3b-create-policy.png)
+
 
 ##  Krok 3. Zapisanie zasad
 Gdy skończysz, wybierz pozycję **Zapisz zasady**.
 
 Zasady będzie można wdrożyć od razu po ich zapisaniu lub później. Nowe zasady zostaną wyświetlone w węźle **Zasady zgodności** w obszarze roboczym **Zasady**.
+
+##  Krok 4. Ustawienie okresu ważności stanu zgodności
+Aby określić czas, w którym urządzenie musi być zaewidencjonowane, zanim zostanie uznane za niezgodne, przejdź do ustawień zasad zgodności i zaktualizuj czas.  Domyślnie opcja jest ustawiona na 30 dni.
+
+![Opcja ustawień zasad zgodności na pasku menu zasad](../media/mdm-compliance-policy-settings.png)
+
+![Okno dialogowe zasad zgodności](../media/mdm-ca-compliance-status-validity-period.png)
 
 ## Obsługiwane ustawienia zasad
 W poniższej tabeli wymieniono ustawienia zasad zgodności i platformy, na których są obsługiwane.
@@ -79,6 +87,6 @@ Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustaw
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

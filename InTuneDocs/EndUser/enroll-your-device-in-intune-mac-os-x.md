@@ -1,10 +1,10 @@
 ---
 title: "Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune | Microsoft Intune"
-description: 
+description: "Opis sposobu rejestrowania urządzenia z systemem Mac OS X w usłudze Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 05/30/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: b85d2ac62ca313f0740c68ff6d85918ff7bcd55a
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
 
 
 ---
@@ -34,26 +34,25 @@ Aby zarejestrować urządzenie z systemem Mac OS X:
 
 2.  Naciśnij pozycję **To urządzenie nie zostało zarejestrowane lub nie można go zidentyfikować w Portalu firmy**.
 
-    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png) 
+    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
 
 3.  Naciśnij pozycję **Zainstaluj**, aby rozpocząć rejestrację urządzenia.
 
-    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
+    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
 4.  W oknie dialogowym **Instalowanie profilu zarządzania** naciśnij pozycję **Zainstaluj**. Jeśli zostanie wyświetlone okno dialogowe z monitem o podanie poświadczeń, wprowadź nazwę użytkownika i hasło, a następnie naciśnij kolejno pozycje **Kontynuuj** &gt; **Zainstaluj**.
 
-    ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
+    ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
     Po zakończeniu rejestracji pojawi się strona Profil zarządzania z informacją o zweryfikowaniu profilu.
 
-    ![management-profile-verified](./media/4-macosx-enroll-done.png) 
+    ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

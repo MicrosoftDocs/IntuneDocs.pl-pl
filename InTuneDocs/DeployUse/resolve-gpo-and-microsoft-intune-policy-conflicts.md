@@ -1,10 +1,10 @@
 ---
 title: "Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Intune | Microsoft Intune"
-description: 
+description: "Dowiedz się, jak rozwiązywać konflikty między zasadami grupy i zasadami konfiguracji usługi Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,23 +13,23 @@ ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 211543b75e2bcda85cd74ab34c254d70f036eebd
-ms.openlocfilehash: 7fc97e21fa7e57d8585c421ac12ff0d3c4b366a0
+ms.sourcegitcommit: e64c4e077a3d2b75a8c246f097fcf7472d7edac6
+ms.openlocfilehash: 286f159e57820a8c8723004c167ae7296626894c
 
 
 ---
 
 # Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune
-Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na zarządzanych komputerach z systemem Windows. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Duża liczba ustawień usługi Intune jest podobnych do ustawień zasad grupy systemu Windows. Jednak czasami te metody mogą wchodzić ze sobą w konflikt.
+Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na komputerach z systemem Windows. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Wiele ustawień usługi Intune jest podobnych do ustawień konfigurowanych za pomocą zasad grupy systemu Windows. Jednak czasami te dwie metody mogą wchodzić ze sobą w konflikt.
 
-Gdy wystąpi konflikt, zasady grupy na poziomie domeny mają pierwszeństwo przed zasadami usługi Intune, chyba że komputer nie może zalogować się do domeny. W takim przypadku na komputerze klienckim są stosowane zasady usługi Intune.
+W przypadku wystąpienia konfliktu zasady grupy na poziomie domeny mają pierwszeństwo przed zasadami usługi Intune, chyba że komputer nie może zalogować się do domeny. W takim przypadku na komputerze klienckim są stosowane zasady usługi Intune.
 
 ## Co zrobić, jeśli używasz zasad grupy
-Sprawdź, czy jakiekolwiek zasady, które stosujesz, nie są zarządzane przez zasady grupy. Aby uniknąć konfliktów, możesz wykonać jedno lub wiele z następujących działań:
+Upewnij się, że zasady, które stosujesz, nie są zarządzane przez zasady grupy. Aby uniknąć konfliktów, możesz użyć jednej lub wielu z następujących metod:
 
 -   Przed zainstalowaniem klienta usługi Intune przenieś komputery do jednostki organizacyjnej usługi Active Directory, dla której nie zastosowano ustawień zasad grupy. Możesz również zablokować dziedziczenie zasad grupy dla jednostek organizacyjnych, które zawierają komputery zarejestrowane w usłudze Intune i dla których nie chcesz stosować ustawień zasad grupy.
 
--   Użyj filtru grup zabezpieczeń, aby ograniczyć obiekty zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune. 
+-   Użyj filtru grup zabezpieczeń, aby ograniczyć obiekty zasad grupy tylko do komputerów, które nie są zarządzane przez usługę Intune.
 
 -   Wyłącz lub usuń obiekty zasad grupy, które powodują konflikt z zasadami usługi Intune.
 
@@ -102,9 +102,9 @@ WMI filters selectively apply GPOs to computers that satisfy the conditions of a
 For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](http://go.microsoft.com/fwlink/?LinkId=177883). --->
 
 
-Zasady grupy umożliwiają zastosowanie obiektów zasad grupy tylko dla grup zabezpieczeń, które są określone w obszarze **Filtrowanie zabezpieczeń** w konsoli zarządzania zasadami grupy dla wybranego obiektu zasad grupy. Domyślnie obiekty zasad grupy są stosowane dla grupy **Użytkownicy uwierzytelnieni**.
+Możesz zastosować obiekty zasad grupy tylko do grup zabezpieczeń, które są określone w obszarze **Filtrowanie zabezpieczeń** w konsoli zarządzania zasadami grupy dla wybranego obiektu zasad grupy. Domyślnie obiekty zasad grupy są stosowane dla grupy *Użytkownicy uwierzytelnieni*.
 
--   W przystawce **Użytkownicy i komputery usługi Active Directory** utwórz nową grupę zabezpieczeń zawierającą konta komputerów i użytkowników, które nie mają być zarządzane za pomocą usługi Intune. Możesz ją nazwać na przykład **Nie w usłudze Microsoft Intune**.
+-   W przystawce **Użytkownicy i komputery usługi Active Directory** utwórz nową grupę zabezpieczeń zawierającą konta komputerów i użytkowników, które nie mają być zarządzane przez usługę Intune. Możesz nazwać tę grupę na przykład *Nie w usłudze Microsoft Intune*.
 
 -   W konsoli zarządzania zasadami grupy na karcie **Delegowanie** wybranego obiektu zasad grupy kliknij prawym przyciskiem myszy nową grupę zabezpieczeń, aby delegować odpowiednie uprawnienia **Odczyt** i **Stosowanie zasad grupy** do użytkowników i komputerów w grupie zabezpieczeń. (Uprawnienia**Stosowanie zasad grupy** są dostępne w oknie dialogowym **Zaawansowane** ).
 
@@ -117,6 +117,6 @@ Nową grupę zabezpieczeń należy aktualizować zgodnie ze zmianami rejestracji
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

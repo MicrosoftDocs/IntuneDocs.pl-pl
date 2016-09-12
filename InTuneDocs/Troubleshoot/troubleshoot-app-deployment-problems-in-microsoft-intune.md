@@ -1,47 +1,36 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune
-description:
-keywords:
-author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+title: "Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune"
+description: "W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune."
+keywords: 
+author: robstackmsft
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bbee6d3fec02a4d96b31a44a31218f684e0267c8
+ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
+
 
 ---
 
 # Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune
-W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune.
-
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
-
+Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
 ## Typowe problemy z wdrażaniem aplikacji
 
-### Jeśli nie można zalogować się w portalu firmy w usłudze Microsoft Intune
+### Użytkownicy nie mogą zalogować się w Portalu firmy w usłudze Intune
 
-1.  Sprawdź, czy Twoje konto istnieje w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i czy nie zostało wyłączone.
+1.  Upewnij się, konto użytkownika istnieje i jest włączone w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
-2.  Upewnij się, że masz udostępnioną obsługę na tym koncie w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
+3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że użytkownik wprowadził prawidłową nazwę użytkownika do zalogowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**. Jeśli użytkownik wydaje się wprowadzać nieprawidłowe hasło, poproś go o zresetowanie hasła.
 
-3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że używasz prawidłowej nazwy użytkownika oraz hasła do logowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**.
-
-### Jeśli w Portalu firmy brakuje informacji kontaktowych działu IT
+### W Portalu firmy brakuje informacji kontaktowych działu IT
 
 1.  W konsoli administracyjnej usługi Intune wybierz pozycję **Administrator** &gt; **Portal firmy**.
 
@@ -87,7 +76,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 ### Błąd: Wydawca nie istnieje
 Używasz polecenia **Dodaj inną umowę dotyczącą oprogramowania**, aby dodać umowę licencyjną innej firmy. Próbujesz dodać wydawcę na stronie **Inne umowy licencjonowania oprogramowania**. Ta strona zawiera listę istniejących wydawców w kolejności alfabetycznej.
-Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**. 
+Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**.
 
 To jest celowe. Usługa Intune zapewnia śledzenie licencji tylko dla popularnych tytułów oprogramowania. Usługa Intune wymaga co najmniej 4 osobnych kont raportujących oprogramowanie, zanim staje się dostępna jako opcja obciążenia związanego z licencjonowaniem.
 
@@ -104,11 +93,13 @@ Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podc
 |0x80073CF0|Nie można otworzyć pakietu.|Możliwe przyczyny:<br /><br />— pakiet nie został podpisany.<br />— nazwa wydawcy jest niezgodna z podmiotem certyfikatu podpisywania.<br /><br />Sprawdź dziennik zdarzeń AppxPackagingOM, aby uzyskać więcej informacji.|
 |0x80073CF3|Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu|Możliwe przyczyny:<br /><br />— przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.<br />— określona zależność pakietu nie została odnaleziona.<br />— pakiet nie obsługuje poprawnej architektury procesora.<br /><br />Sprawdź dziennik zdarzeń AppXDeployment-Server, aby uzyskać więcej informacji.|
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
+|0x87D1041C|Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji.|— Użytkownik zainstalował aplikację z portalu firmy, a następnie odinstalował ją bezpośrednio z urządzenia. Zainstaluj ponownie aplikację z portalu firmy.<br /><br />— Może występować niezgodność między numerem wersji aplikacji biznesowej rozpoznawanym przez usługę Intune i wersją zainstalowaną na urządzeniu. Upewnij się, że usługa Intune ma poprawną wersję, a następnie zainstaluj ponownie aplikację.|
 
 ### Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Aug16_HO2-->
 
 

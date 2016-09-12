@@ -1,10 +1,10 @@
 ---
 title: "Korzystanie z witryny Portal firmy w usłudze Intune | Microsoft Intune"
-description: 
+description: "Opis witryny internetowej portalu firmy oraz linki do czynności dla zadań, które można wykonać w witrynie sieci Web"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/03/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 79e8d7da83997dc9c89b95097ca50493af1f9f6b
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 558840491a701347e23697cee22c52c1218bc6af
 
 
 ---
@@ -24,19 +24,19 @@ ms.openlocfilehash: 79e8d7da83997dc9c89b95097ca50493af1f9f6b
 
 Oferuje ona następujące możliwości:
 
--   [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
-
 -   [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)
 
 -   [Usuwanie urządzenia](remove-your-device-cpwebsite.md)
 
 -   [Resetowanie urządzenia](reset-your-device-cpwebsite.md)
 
+-   [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
+
 -   [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
 
 -   [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT) 
+-   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT)
 
 -   Wyświetlanie szczegółowych informacji o urządzeniu, w tym informacji o zgodności z zasadami obowiązującymi w firmie lub szkole
 
@@ -50,6 +50,6 @@ W **witrynie Portalu firmy** można wykonać większość zadań, które można 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

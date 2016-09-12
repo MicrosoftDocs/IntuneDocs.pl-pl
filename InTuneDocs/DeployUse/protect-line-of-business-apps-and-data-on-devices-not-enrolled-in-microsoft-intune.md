@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach | Microsoft Intune
-description:
-keywords:
+title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zarejestrowane | Microsoft Intune"
+description: "W tym temacie opisano, jak można przygotować swoje niestandardowe aplikacje biznesowe, aby mogły stosować zasady zarządzania aplikacjami mobilnymi, co może pomóc w uniknięciu utraty danych."
+keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 3e09af2cd329d556a9a0a1b2fb4750856e336ab1
+
 
 ---
 
@@ -64,7 +58,7 @@ Aplikacje można wdrażać na urządzeniach użytkowników końcowych, stosując
 * W przypadku urządzeń, które nie są zarządzane przez rozwiązanie MDM, wymagane jest rozwiązanie niestandardowe. Użytkownicy końcowi muszą pobrać i zainstalować aplikację na swoich urządzeniach.
 
 ## Zmienianie metadanych
-Aby zmienić szczegóły aplikacji, takie jak nazwa aplikacji lub identyfikator pakietu, należy [usunąć aplikację](#remove-apps) i [dodać ją](#add-the-app) z nowymi metadanymi.
+Aby zmienić szczegóły aplikacji, takie jak nazwa aplikacji lub identyfikator pakietu, należy [usunąć aplikację](#remove-apps) i [dodać ją](#step-2-add-the-app) z nowymi metadanymi.
 
 ##  Usuwanie aplikacji
 Aplikację biznesową można usunąć z listy aplikacji.  Spowoduje to usunięcie aplikacji z listy i usunięcie skojarzenia z zasadami zarządzania aplikacjami mobilnymi, ale aplikacja nie zostanie usunięta ani odinstalowana z urządzenia użytkownika końcowego.  
@@ -80,6 +74,7 @@ Aplikację biznesową można usunąć z listy aplikacji.  Spowoduje to usunięci
   Spowoduje to usunięcie aplikacji z listy aplikacji biznesowych i listy aplikacji docelowych w zasadach zarządzania aplikacjami mobilnymi.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO5-->
 
 

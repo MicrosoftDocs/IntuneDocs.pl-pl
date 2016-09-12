@@ -1,10 +1,10 @@
 ---
-title: "Konfigurowanie zarządzania systemem Android przez usługę Microsoft Intune | Microsoft Intune"
-description: 
+title: "Konfigurowanie zarządzania systemem Android | Microsoft Intune"
+description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Android i KNOX w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,15 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1dc713099c982d6e32c87b814dd3f55b1656eda
-ms.openlocfilehash: 5f65887345c1a650c6d80863e42f447035c789f7
+ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
+ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
 
 
 ---
 
 # Konfigurowanie zarządzania urządzeniami z systemem Android
+Pomoc dotyczącą konfigurowania urządzenia z systemem Android możesz znaleźć [tutaj](../enduser/using-your-android-device-with-intune.md).
+
 W usłudze Microsoft Intune można włączyć model BYOD („bring your own device”) dla urządzeń z systemem Android bez konieczności wykonywania dodatkowych działań dla tej platformy.
 
 Wybierz jedną z następujących opcji platformy urządzenia, aby dowiedzieć się więcej:
@@ -41,11 +43,15 @@ Urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestracj
 3.  **Informowanie użytkowników, jak uzyskać dostęp do zasobów firmy za pomocą Portalu firmy**<br>
     Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi. [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
+4.  Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi.
+  - [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-android-device-with-intune.md)
+
 ### Zobacz także
 [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Wyrejestrowywanie urządzenia z usługi Intune | Microsoft Intune"
-description: 
+title: "Wyrejestrowywanie urządzenia z systemem iOS z usługi Intune | Microsoft Intune"
+description: "Opis sposobu wyrejestrowania urządzenia z systemem iOS z usługi Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 4dbb4d5d7151a6a579e00c2c4034a811f2357774
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: af520ef10b50631bafdfdf4d240a8e2541f5c3d6
 
 
 ---
 
 
-# Wyrejestrowywanie urządzenia z usługi Intune
+# Wyrejestrowanie urządzenia z systemem iOS z usługi Intune
 
 Po wyrejestrowaniu urządzenia z systemem iOS z usługi Intune urządzenie nie będzie już mogło uzyskiwać dostępu do zasobów firmy i nie będzie już zarządzane przez usługę Intune.
 
-Aby wyrejestrować urządzenie z usługi Intune, wykonaj następujące czynności lub obejrzyj ten [klip wideo](http://aka.ms/kfz8j1):
+Aby wyrejestrować urządzenie z usługi Intune, wykonaj następujące czynności lub obejrzyj ten film:
+
+<iframe width="675" height="379" src="https://www.youtube.com/embed/6UFtBrBWUUI" frameborder="0" allowfullscreen></iframe>
+
 
 1.  W aplikacji Portal firmy w obszarze **Moje urządzenia**wybierz urządzenie, którego rejestrację chcesz anulować.
 
@@ -51,10 +54,9 @@ Po wyrejestrowaniu urządzenia z usługi Intune:
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

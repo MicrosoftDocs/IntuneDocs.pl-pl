@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Intune
-description:
-keywords:
-author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Intune"
+description: "Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune."
+keywords: 
+author: robstackmsft
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 906371576609152aaf61e033da5ce60744ddd255
+ms.openlocfilehash: 07e5737b75870319445f5af4d7038916b155d083
+
 
 ---
 
@@ -29,6 +23,8 @@ ms.suite: ems
 W tej sekcji przedstawiono informacje, które ułatwią rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
+
+## Kody błędów programu Update Agent
 
 Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usługi Intune. Jeśli nie możesz znaleźć określonego kodu błędu w tej tabeli, zobacz dodatek zawierający [kody wyników programu Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542).
 
@@ -248,7 +244,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 **Problem**: Może mieć miejsce sytuacja, w której na klientach usługi Microsoft Intune występuje jeden lub więcej z następujących objawów:
 - Raportowanie do konsoli administracyjnej firmy Microsoft zostaje nagle zatrzymane.  
 - Wykorzystanie procesora CPU jest wysokie.
-- Aplikacje instalowane za pośrednictwem portalu Intune są instalowane powoli. 
+- Aplikacje instalowane za pośrednictwem portalu Intune są instalowane powoli.
 - Program Microsoft Intune Center wyzwala następujący błąd: *Wystąpił błąd podczas aktualizowania komputera. Znaleziono błąd: Kod 0x800705b4*.
 - W polu stanu w obszarze konsoli administracyjnej usługi Intune > Grupy > Wszystkie urządzenia jest wyświetlany komunikat: *Co najmniej jeden agent zainstalowany na tym komputerze ma błędy. Informacje na temat tego komputera mogą być niedokładne lub nieaktualne*.
 
@@ -258,16 +254,16 @@ Ten problem może wystąpić, jeśli zastąpione aktualizacje (aktualizacje, kt�
 1. Zaloguj się do [konsoli administracyjnej usługi Intune](https://manage.microsoft.com).
 2. Wybierz pozycje **Aktualizacje** > **Wszystkie aktualizacje**.
 3. Użyj opcji filtrowania na pasku narzędzi u góry, aby filtrować zastąpione aktualizacje.
-4. Odrzuć wszystkie zastąpione aktualizacje, które mogą być zastosowane do systemu Windows 7 lub aplikacji (na przykład pakietu Microsoft Office) zainstalowanych na komputerach, których dotyczy problem. 
+4. Odrzuć wszystkie zastąpione aktualizacje, które mogą być zastosowane do systemu Windows 7 lub aplikacji (na przykład pakietu Microsoft Office) zainstalowanych na komputerach, których dotyczy problem.
 5. Uruchom ponownie klientów, których dotyczy problem.
 
 Ponadto jeśli korzystasz z systemu Windows 7, upewnij się, że następująca aktualizacja jest zainstalowana: [3050265 Klient usługi Windows Update dla systemu Windows 7: czerwiec 2015 r.](https://support.microsoft.com/kb/3050265)
 
 ### Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

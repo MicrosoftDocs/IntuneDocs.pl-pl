@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi | Microsoft Intune
-description:
-keywords:
+title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM) | Microsoft Intune"
+description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomóc w ochronie danych firmowych, zapobiec utracie danych i przechowywać osobno informacje osobiste i służbowe."
+keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 6163f2b2a1c562e5315785b8b4c486fe2347f89d
+
 
 ---
 
@@ -30,20 +24,21 @@ ms.suite: ems
 ## Jak możesz chronić dane aplikacji
 Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych.  Zatem umożliwiając pracownikom wydajną pracę, warto również zapobiegać nieumyślnej lub umyślnej utracie danych.  Ponadto chcesz mieć możliwość ochrony danych firmowych, do których dostęp jest uzyskiwany za pomocą urządzeń, nawet w przypadku, gdy nie są zarządzane przez Ciebie.
 
-Aby lepiej chronić dane firmy, możesz skorzystać z zasad zarządzania aplikacjami mobilnymi (MAM, mobile app management) w usłudze Intune. Ponieważ zasady MAM w usłudze Intune są niezależne od wszelkich rozwiązań do zarządzania urządzeniami przenośnymi (MDM, mobile device management), możesz użyć jej do ochrony danych firmy bez względu na to, czy urządzenia zostały zarejestrowane w rozwiązaniach do zarządzania urządzeniami. Wdrażając **zasady na poziomie aplikacji**, można ograniczyć dostęp do zasobów firmy i objęcia danych kontrolą działu IT.
+Aby lepiej chronić dane firmy, możesz skorzystać z zasad zarządzania aplikacjami mobilnymi (MAM, mobile app management) w usłudze Intune. Ponieważ zasady MAM w usłudze Intune są **niezależne od wszelkich rozwiązań do zarządzania urządzeniami przenośnymi (MDM, mobile device management)**, możesz użyć ich do ochrony danych firmy bez względu na to, czy urządzenia zostały zarejestrowane w rozwiązaniach do zarządzania urządzeniami. Wdrażając **zasady na poziomie aplikacji**, można ograniczyć dostęp do zasobów firmy i objęcia danych kontrolą działu IT.
 
-Zasady MAM obsługują aplikacje działające na:
+Zasady zarządzania aplikacjami mobilnymi można skonfigurować dla aplikacji uruchomionej na urządzeniach, które są:
 
--   **Urządzeniach zarządzanych i zarejestrowanych** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
+- **Zarejestrowane w usłudze Microsoft Intune:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
-  > [!IMPORTANT]
-  > Jeśli używasz usługi Intune do zarządzania urządzeniami z systemem Android i iOS, możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Zasady MAM nie są obsługiwane w przypadku aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
+-   **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
--   **Urządzeniach zarządzanych i zarejestrowanych w rozwiązaniu do zarządzania urządzeniami przenośnymi innej firmy**.   Urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
+  > [!NOTE]
+  > Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami bezpiecznego kontenera ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
 
-  > [!NOTE] Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami do zabezpieczania kontenerów ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
+-   **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi :** urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
 
--   **Urządzenia niezarządzane**.  Urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
+> [!IMPORTANT]
+> Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Zasady MAM nie są obsługiwane w przypadku aplikacji łączących się z lokalnymi usługami Exchange, Skype dla firm lub SharePoint.
 
 **Istotne zalety stosowania zasad MAM to:**
 
@@ -137,6 +132,7 @@ Wszystkie aplikacje mobilne pakietu Office obsługują wiele tożsamości.
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO5-->
 
 

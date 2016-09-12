@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Tworzenie grup w celu organizowania użytkowników i urządzeń subskrypcji ewaluacyjnej | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Tworzenie grup w celu zorganizowania użytkowników i urządzeń | Usługa Microsoft Intune"
+description: "Tworzenie grup urządzeń i użytkowników w przypadku rejestracji w celu korzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+keywords: 
+author: lindavr
+manager: angrobe
+ms.date: 08/09/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 6cab173d7ef4a1d7bcea3193265e0729c93a214e
+
 
 ---
 
@@ -31,36 +25,36 @@ Grupy w usłudze Intune zapewniają dużą elastyczność zarządzania urządzen
 ## Tworzenie grupy urządzeń
 Użyj grup urządzeń do wdrażania aktualizacji i oprogramowania oraz konfigurowania ustawień agenta usługi Microsoft Intune i zasad ustawień zapory systemu Windows. Możesz na przykład skonfigurować grupę „Moje urządzenia próbne”, wykonując następujące kroki:
 
-1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
+1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) kliknij pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
 
-2.  W polu **Nazwa grupy** wpisz ciąg „Moje urządzenia próbne”, z listy grup nadrzędnych wybierz pozycję **Wszystkie urządzenia**, a następnie wybierz pozycję **Dalej**..
+2.  W polu **Nazwa grupy** wpisz ciąg „Moje urządzenia próbne”, z listy grup nadrzędnych wybierz pozycję **Wszystkie urządzenia**, a następnie wybierz pozycję **Dalej**.
 
 3.  Na stronie **Zdefiniuj kryteria członkostwa** wybierz pozycję **Wszystkie urządzenia** , aby wskazać, że grupa zawiera zarówno urządzenia przenośne, jak i komputery.
 
 4.  Na stronie **Definiowanie członkostwa bezpośredniego** wybierz pozycję **Dalej**. Jeśli wcześniej została utworzona grupa, która nie zawiera wszystkich urządzeń, i chcesz dodać określone urządzenia do tej nowej grupy, możesz to zrobić na tej stronie.
 
-5.  Na stronie **Podsumowanie** przejrzyj akcje, które zostaną wykonane, a następnie wybierz pozycję **Zakończ**..
+5.  Na stronie **Podsumowanie** przejrzyj akcje, które zostaną wykonane, a następnie wybierz pozycję **Zakończ**.
 
 Nowo utworzona grupa znajduje się na liście **Grupy** w obszarze roboczym **Grupy** w obszarze grupy nadrzędnej **Wszystkie urządzenia**. W tym miejscu możesz także edytować lub usunąć grupę.
 
 ## Tworzenie grupy użytkowników
 Grupa użytkowników umożliwia wdrażanie zasad dotyczących oprogramowania i urządzeń. Możesz na przykład skonfigurować grupę „Moi użytkownicy próbni”, wykonując następujące kroki:
 
-1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
+1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) kliknij pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
 
-2.  W polu **Nazwa grupy** wpisz ciąg „Moi użytkownicy próbni”, z listy grup nadrzędnych wybierz pozycję **Wszyscy użytkownicy**, a następnie wybierz pozycję **Dalej**..
+2.  W polu **Nazwa grupy** wpisz ciąg „Moi użytkownicy próbni”, z listy grup nadrzędnych wybierz pozycję **Wszyscy użytkownicy**, a następnie wybierz pozycję **Dalej**.
 
-3.  Na stronie **Definiowanie kryteriów członkostwa** ustaw parametr **Uruchom członkostwo grupy w** na wartość **Wszyscy użytkownicy w grupie nadrzędnej**..
+3.  Na stronie **Definiowanie kryteriów członkostwa** ustaw parametr **Uruchom członkostwo grupy w** na wartość **Wszyscy użytkownicy w grupie nadrzędnej**.
 
 4.  Wybierz pozycję **Przeglądaj** obok pozycji **Wyklucz członków z następujących grup zabezpieczeń**, a następnie wybierz pozycję **Administrator firmy**. To wykluczenie umożliwi Ci zarządzanie grupą „Moi użytkownicy próbni” bez wpływu na konto administratora firmy (znanego również jako administrator dzierżawy).
 
 5.  Na stronie **Definiowanie członkostwa bezpośredniego** wybierz pozycję **Dalej**. Nie musisz tutaj wykonywać żadnych czynności, ponieważ chcesz, aby grupa „Moi użytkownicy próbni” zawierała wszystkich użytkowników z wyjątkiem administratora firmy.
 
-6.  Na stronie **Podsumowanie** przejrzyj akcje, które zostaną wykonane, a następnie wybierz pozycję **Zakończ**..
+6.  Na stronie **Podsumowanie** przejrzyj akcje, które zostaną wykonane, a następnie wybierz pozycję **Zakończ**.
 
 Nowo utworzona grupa znajduje się na liście **Grupy** w obszarze roboczym **Grupy** w obszarze grupy nadrzędnej **Wszyscy użytkownicy**. W tym miejscu możesz także edytować lub usunąć grupę.
 
-Aby uzyskać więcej informacji na temat korzystania z grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/Intune/Deploy-Use/use-groups-to-manage-users-and-devices-with-microsoft-intune)..
+Aby uzyskać więcej informacji na temat korzystania z grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/Intune/Deploy-Use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ### Następne kroki
 Gratulacje! Krok 3 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* właśnie został ukończony.
@@ -70,6 +64,7 @@ Gratulacje! Krok 3 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 >[&larr; **Dodawanie użytkowników**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)     [**Tworzenie zasad** &larr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)  
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO2-->
 
 

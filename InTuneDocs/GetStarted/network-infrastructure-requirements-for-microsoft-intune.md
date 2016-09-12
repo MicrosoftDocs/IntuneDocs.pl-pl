@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Wymagania dotyczące infrastruktury sieciowej | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Wymagania dotyczące infrastruktury sieciowej | Microsoft Intune"
+description: "Wymagania dotyczące zapory, portu, domeny i serwera proxy usługi Intune"
+keywords: 
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: aa4d2219a5962d83b80630ed3a09660a76469764
+
 
 ---
 
 # Wymagania usługi Microsoft Intune dotyczące infrastruktury sieciowej
-Przed skonfigurowaniem usługi Microsoft Intune przejrzyj ten temat i inne wymagania wymienione w artykule [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
+Przed skonfigurowaniem usługi Microsoft Intune przejrzyj ten temat i inne wymagania wymienione w artykule [What to know before you start Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md) (Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune).
 
 W niniejszym temacie omówiono wymagania umożliwiające infrastrukturze sieciowej użytkownika komunikację między urządzeniami, które są zarządzane i które służą do zarządzania subskrypcją usługi Intune, a witrynami sieci Web w Internecie używanymi przez usługę w chmurze.
 
@@ -41,7 +35,7 @@ Poniższa tabela zawiera listę portów i usług, do których uzyskuje dostęp k
 
 
 |**Domain**|**Porty**|**Adres IP**|
-|------|----|
+|------|----|---|
 |manage.microsoft.com<br>a.manage.microsoft.com<br>admin.manage.microsoft.com<br>enterpriseenrollment.manage.microsoft.com<br>enterpriseenrollment-s.manage.microsoft.com<br>i.manage.microsoft.com<br>m.manage.microsoft.com<br>p.manage.microsoft.com<br>portal.manage.microsoft.com<br>r.manage.microsoft.com|80 i 443|134.170.168.254<br>134.170.51.126
 |account.manage.microsoft.com|80 i 443|157.56.13.59
 |fef.msua01.manage.microsoft.com|80 i 443|138.91.243.97
@@ -141,6 +135,7 @@ Poniższa tabela zawiera listę portów i usług, do których uzyskuje dostęp k
 |status.manage.microsoft.com|80 i 443|157.55.99.170
 |swda01.manage.microsoft.com<br>swda02.manage.microsoft.com<br>swdb01.manage.microsoft.com<br>swdb02.manage.microsoft.com<br>swdc01.manage.microsoft.com<br>swdc02.manage.microsoft.com|80 i 443|93.184.215.200
 |*.microsoftonline-p.com|80 i 443||
+|has.spserv.microsoft.com<br>Wymagana dla usługi zaświadczania o kondycji urządzeń|443||
 |*.microsoftonline-p.net|80 i 443||
 |*.portal.office.com|80 i 443||
 |*.spynet2.microsoft.com|443||
@@ -153,6 +148,7 @@ Poniższa tabela zawiera listę portów i usług, do których uzyskuje dostęp k
 |Microsoft Update Services|\*.update.microsoft.com<br>download.microsoft.com<br>update.microsoft.com<br>\*.download.windowsupdate.com<br>download.windowsupdate.com<br>\*.windowsupdate.com<br>windowsupdate.microsoft.com<br>ntservicepack.microsoft.com|80 i 443|
 |Żądania wyszukiwania DNS|manage.microsoft.com.nsatc.net|80|
 |Komunikacja przez zaporę z urządzeniem Samsung KNOX|Aby umożliwić urządzeniom Samsung KNOX kontaktowanie się przez zaporę z serwerami KNOX, postępuj zgodnie z instrukcjami dostępnymi w sekcji KNOX Samsung — często zadawane pytania.||
+|Komunikacja z dostępem warunkowym|443|204.79.197.200|
 |Dokumentacja, pomoc i obsługa techniczna:</br></br>*.livemeeting.com<br>\*.microsoftonline.com<br>\*.social.technet.microsoft.com<br>blogs.technet.com<br>go.microsoft.com<br>onlinehelp.microsoft.com<br>www.microsoft.com|80|||
 
 
@@ -169,20 +165,11 @@ Można zmodyfikować ustawienia serwerów proxy na poszczególnych komputerach k
 Można też użyć serwera proxy buforującego zawartość w celu [zmniejszenia przepustowości sieci](network-bandwidth-use.md) wykorzystywanej przez klientów usługi Intune.
 
 
-
-## Wymagania dotyczące łącznika Service To Service Connector
-Łącznik Service To Service Connector obsługuje tylko usługę Exchange w chmurze i nie ma wymagań co do infrastruktury lokalnej.
-
-Używanie tego łącznika wymaga spełnienia następujących warunków:
-
--   Należy posiadać subskrypcję usługi Office 365 z dzierżawą programu Exchange Server 2013. Jeśli jest dostępna dzierżawa programu Exchange Server 2013, łącznik obsługuje program Exchange Server 2010 w tym samym środowisku.
-
--   Konto użytkownika używane do instalowania łącznika On-Premises Connector musi być administratorem dzierżawy dla usługi Intune oraz administratorem w dzierżawie programu Exchange z licencją do korzystania z programu Exchange Server 2013.
-
 ### Zobacz także
 [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Sep16_HO2-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: Ochrona aplikacji i danych | Microsoft Intune
 description: 
-keywords: 
+keywords: "W tym temacie opisano różne funkcje usługi Intune i możliwości, które są dostępne, aby chronić aplikacje i dane firmy."
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 9445b4b171eb2102d73cf0e866e85b535274eee2
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: cf2ef1510aa9dafeddf54855123c826c9ccc2fd0
 
 
 ---
@@ -39,7 +39,9 @@ Zabezpieczanie dostępu do zasobów firmy to tylko pierwszy krok do ochrony dany
 - Zabezpieczanie dostępu do aplikacji przez wymaganie kodu PIN/dostępu lub firmowych poświadczeń.
 - Otwieranie wszystkich linków sieci Web w programie Intune Managed Browser.
 
-Te zestawy reguł są określane jako [zasady zarządzania aplikacjami mobilnymi (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  Zasady MAM można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane lub niezarządzane przez użytkownika.  Dane firmowe można chronić przy użyciu zasad MAM dla urządzeń zarejestrowanych w Intune, urządzeń zarejestrowanych i zarządzanych przez funkcję MDM innej firmy lub urządzeń, które mogą być zarządzane przez użytkownika, takich jak urządzenia należące do pracownika.
+Te zestawy reguł są określane jako [zasady zarządzania aplikacjami mobilnymi (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  Zasady MAM można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane lub niezarządzane przez użytkownika.  
+
+Dane firmowe można chronić przy użyciu zasad MAM dla urządzeń **zarejestrowanych w usłudze Intune**, urządzeń **zarejestrowanych i zarządzanych przez rozwiązanie do zarządzania urządzeniami przenośnymi (MDM) innej firmy** lub urządzeń, które **nie są zarejestrowane w żadnym rozwiązaniu MDM**, takich jak urządzenia należące do pracownika.
 
 Aby skojarzyć aplikację z zasadami MAM, aplikacja musi uwzględniać zestaw SDK aplikacji w usłudze Microsoft Intune lub korzystać z narzędzia opakowującego aplikacje.
 
@@ -51,6 +53,6 @@ Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

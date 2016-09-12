@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Wdrażanie aplikacji | Microsoft Intune
-description:
-keywords:
+title: "Wdrażanie aplikacji | Microsoft Intune"
+description: "Zalecenia dotyczące etapowego wdrażania aplikacji w usłudze Microsoft Intune."
+keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0fc32ed3-bcf4-472a-80e7-eb20986f78fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: 83306c0847eaf98d499e649308669a33306aa97e
+
 
 ---
 
 # Wdrażanie aplikacji
-Ten temat zawiera zalecenia dotyczące etapowego wdrażania aplikacji w usłudze Microsoft Intune. Ogólne informacje o etapach wdrażania zamieszczono w temacie [Etapy wdrażania usługi Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md)..
+Ten temat zawiera zalecenia dotyczące etapowego wdrażania aplikacji w usłudze Microsoft Intune. Ogólne informacje o etapach wdrażania zamieszczono w temacie [Etapy wdrażania usługi Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md).
 
 ### Etapy wdrażania aplikacji
 Etapy wdrażania aplikacji to:
@@ -48,18 +42,21 @@ Rozważ następujące opcje:
 
 -   Dostosowanie aplikacji do użytkowników i ich urządzeń (wszystkie systemy operacyjne, które będą prawdopodobnie używane).
 
--   Sprawdź, czy instalator wybranej aplikacji jest obsługiwany przez funkcję dystrybucji aplikacji w usłudze Intune, zgodnie z opisem w temacie [Dodawanie aplikacji za pomocą usługi Microsoft Intune](/intune/deploy-use/add-apps)..
+-   Sprawdź, czy instalator wybranej aplikacji jest obsługiwany przez funkcję dystrybucji aplikacji w usłudze Intune, zgodnie z opisem w temacie [Dodawanie aplikacji za pomocą usługi Microsoft Intune](/intune/deploy-use/add-apps).
 
--   Upewnij się, że zainstalowano wymagane wstępnie składniki dla dystrybucji aplikacji. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md--->).
+-   Upewnij się, że zainstalowano wymagane wstępnie składniki dla dystrybucji aplikacji. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md).--->
 
 -   Określ, czy typ aplikacji jest obsługiwany przez usługę Intune.
 
--   Sprawdź, czy dysponujesz miejscem do magazynowania w chmurze wystarczającym do przekazania aplikacji. Instrukcje dotyczące kupowania dodatkowego miejsca do magazynowania znajdują się w temacie [Dodawanie aplikacji w usłudze Microsoft Intune](/intune/deploy-use/add-apps)..
+-   Sprawdź, czy dysponujesz miejscem do magazynowania w chmurze wystarczającym do przekazania aplikacji. Instrukcje dotyczące kupowania dodatkowego miejsca do magazynowania znajdują się w temacie [Dodawanie aplikacji za pomocą usługi Microsoft Intune](/intune/deploy-use/add-apps).
+
+> [!NOTE]           
+> Możesz pobrać ten [szablon planowania dla aplikacji mobilnych](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59), który będzie pomocny w procesie wdrażania.
 
 ## Weryfikacja koncepcji
 Na etapie weryfikacji koncepcji należy przetestować wdrażanie aplikacji w środowisku laboratoryjnym dla skonfigurowanych urządzeń i użytkowników wyłącznie w celach testowych.
 
--   W etapie tym powinien uczestniczyć dział pomocy technicznej, co umożliwi poznanie problemów, które mogą wystąpić podczas pilotażu i wdrożenia produkcyjnego. Informacje o rozwiązywaniu problemów są dostępne w temacie [Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)..
+-   W etapie tym powinien uczestniczyć dział pomocy technicznej, co umożliwi poznanie problemów, które mogą wystąpić podczas pilotażu i wdrożenia produkcyjnego. Informacje o rozwiązywaniu problemów są dostępne w temacie [Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune).
 
 -   Na tym etapie procesu należy opracować plany informowania użytkowników wdrożenia pilotażowego i produkcyjnego. Plan powinien obejmować co najmniej nazwę wdrażanej aplikacji, sposób i termin uzyskania jej przez użytkowników, cel biznesowy wdrożenia, a także działania, które należy podjąć w przypadku napotkania problemów — zarówno informacje o samodzielnej pomocy, jak i sposobie kontaktu z pomocą techniczną.
 
@@ -97,6 +94,7 @@ Podczas etapu pilotażowego następuje wdrożenie aplikacji dla niewielkiej licz
 [Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

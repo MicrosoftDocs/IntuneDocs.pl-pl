@@ -1,10 +1,10 @@
 ---
 title: Portal firmy Microsoft Intune | Microsoft Intune
-description: 
+description: "konfiguracja portalu firmy w usłudze Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65769fade08dea34b3e788628e578d58f90389f3
-ms.openlocfilehash: 815e36569e17bde750b49c7d7b10744a9b614635
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: 7c9fceaae077907480d4c207d56f654d168248a1
 
 
 ---
@@ -28,7 +28,7 @@ Portal firmy Intune jest narzędziem, które zapewnia użytkownikom dostęp do f
 -   **Aplikacja Portal firmy** — aplikacja dostępna na urządzeniach zarządzanych za pomocą usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Dowiedz się więcej o aplikacjach Portal firmy dla systemów [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) i [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Witryna sieci Web Portal firmy** — witryna sieci Web zapewniająca dostęp z [obsługiwanej przeglądarki](supported-web-browsers.md). Adres URL to [https://portal.office.com/Admin/Default.aspx](https://portal.office.com/Admin/Default.aspx). Dowiedz się więcej o tej witrynie sieci Web w artykule [Using the Intune Company Portal website](/Intune/EndUser/using-the-intune-company-portal-website) (Korzystanie z witryny sieci Web Portal firmy usługi Intune).
+- **Witryna sieci Web Portal firmy**: witryna sieci Web, do której dostęp jest uzyskiwany z poziomu [obsługiwanej przeglądarki](supported-web-browsers.md). Umożliwia ona użytkownikom wykonywanie większości zadań, jakie mogą wykonać z poziomu ich specyficznej dla platformy aplikacji Portal firmy. Jej adres URL jest następujący: [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Dowiedz się więcej o tej witrynie sieci Web w artykule [Using the Intune Company Portal website](/Intune/EndUser/using-the-intune-company-portal-website) (Korzystanie z witryny sieci Web Portal firmy usługi Intune).
 
 Niektóre z zadań, które użytkownicy mogą wykonać w portalu firmy, to:
 
@@ -53,6 +53,6 @@ Aby użytkownik mógł korzystać z portalu firmy, musi mieć przyznaną licencj
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

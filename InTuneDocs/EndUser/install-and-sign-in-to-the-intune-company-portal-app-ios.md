@@ -3,18 +3,19 @@ title: "Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do n
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 05/04/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8dfe66b4-f585-4862-87fa-7dbb4487549c
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: d59ee373d4b5b90442bdf0a282cf37e76c013e44
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: cdfdc621f7ce18f79c4b090035698337174ddcec
 
 
 ---
@@ -36,10 +37,9 @@ Portal firmy jest aplikacją instalowaną na urządzeniu z systemem iOS w celu u
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

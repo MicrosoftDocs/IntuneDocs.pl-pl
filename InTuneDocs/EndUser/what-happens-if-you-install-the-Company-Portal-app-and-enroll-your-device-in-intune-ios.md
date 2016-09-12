@@ -1,27 +1,27 @@
 ---
-title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune? | Microsoft Intune"
+title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem iOS lub Mac OS X w usłudze Intune? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 7/7/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2467c02-aac5-41c8-b788-cbda830941ef
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: a83edd3ed51bddafd6f057ed9ae2bb0958c88fe4
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: b5ecb5b4c7629b04c679995b5788ee307bac79f0
 
 
 ---
 
 
-# Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?
+# Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem iOS lub Mac OS X w usłudze Intune?
 
 Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem iOS lub Mac OS X w usłudze Intune można używać aplikacji Portal firmy, aby:
 
@@ -29,9 +29,9 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 -   Pobierać aplikacje firmowe z Portalu firmy
 
--   Automatycznie konfigurować firmowe konto e-mail
+-   Przywracać zdalnie ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
 
--   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
+-   Automatycznie konfigurować firmowe konto e-mail
 
 Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
 
@@ -65,8 +65,6 @@ Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawni
 
 -   Nazwa urządzenia
 
--   Producent
-
 Gdy urządzenie jest zarejestrowane, administrator IT może:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych w przypadku utraty lub kradzieży urządzenia.
@@ -97,10 +95,8 @@ Kroki rejestrowania urządzenia zostały opisane w tematach [Rejestrowanie urzą
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
-### Zobacz także
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
