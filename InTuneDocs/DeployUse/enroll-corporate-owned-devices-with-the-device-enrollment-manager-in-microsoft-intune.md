@@ -1,6 +1,6 @@
 ---
 title: "Rejestrowanie przy użyciu menedżera rejestracji urządzeń | Microsoft Intune"
-description: "Za pomocą konta menedżera rejestracji urządzeń można zarządzać dużą liczbą firmowych, współdzielonych urządzeń przenośnych za pomocą jednego konta użytkownika."
+description: "Za pomocą konta menedżera rejestracji urządzeń można zarządzać dużą liczbą współdzielonych firmowych urządzeń przenośnych za pomocą jednego konta użytkownika."
 keywords: 
 author: NathBarn
 manager: angrobe
@@ -13,39 +13,41 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 450a5764005643a2f890780530d1f2880a4e517b
+ms.sourcegitcommit: e332bbf9aa8f6543950eba7e1fd734b3fb4b1edb
+ms.openlocfilehash: ca81a72fe98d454591765296445215a2b574243b
 
 
 ---
 
 
 # Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune
-Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* jest specjalnym kontem usługi Intune z uprawnieniem do rejestracji maksymalnie 1000 urządzeń. Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń powinny być używane jako urządzenia udostępnione, a nie urządzenia osobiste („BYOD”). Użytkownicy nie będą mogli na przykład korzystać z natywnych aplikacji poczty e-mail. Możesz przypisać menedżera lub kierownika magazynu, na przykład konto użytkownika menedżera rejestracji urządzeń, aby umożliwić wykonywanie następujących czynności:
+Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* jest specjalnym kontem usługi Intune umożliwiającym rejestrację do 1000 urządzeń. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”). Użytkownicy nie będą mogli na przykład korzystać z natywnych aplikacji poczty e-mail.
 
--   Rejestrowanie urządzeń w usłudze Intune
+Konto użytkownika menedżera rejestracji urządzeń można na przykład przypisać menedżerowi lub kierownikowi magazynu, aby umożliwić mu wykonywanie następujących czynności:
 
--   Logowanie się do portalu firmy w celu pobrania aplikacji firmowych
+-   Rejestrowanie urządzeń w usłudze Intune.
 
--   Instalowanie i odinstalowywanie oprogramowania
+-   Logowanie się w Portalu firmy w celu pobierania aplikacji firmowych.
 
--   Konfigurowanie dostępu do danych firmowych
+-   Instalowanie i odinstalowywanie oprogramowania.
+
+-   Konfigurowanie dostępu do danych firmowych.
 
 
-**Przykłady scenariusza menedżera rejestracji urządzeń:** restauracja potrzebuje tabletów do punktów sprzedaży dla kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy w ogóle nie potrzebują dostępu do danych firmowych ani nie muszą logować się jako użytkownicy. Administrator usługi Intune tworzy konto menedżera rejestracji urządzeń i rejestruje urządzenia należące do firmy za pomocą tego konta. Administrator może również przyznać poświadczenia menedżera rejestracji urządzeń menedżerowi restauracji, umożliwiając mu tym samym rejestrowanie urządzeń i zarządzanie nimi.
+**Scenariusz menedżera rejestracji urządzeń:** restauracja potrzebuje tabletów dla kelnerów w punktach sprzedaży oraz monitorów zamówień dla personelu kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy konto menedżera rejestracji urządzeń i rejestruje za jego pomocą urządzenia należące do firmy. Administrator może również przyznać menedżerowi restauracji poświadczenia menedżera rejestracji urządzeń, umożliwiając mu tym samym rejestrowanie urządzeń i zarządzanie nimi.
 
 Administrator lub menedżer może wdrożyć aplikacje specyficzne dla ról na urządzeniach w restauracji. Administrator może również wybrać urządzenie w konsoli programu Intune i wycofać je z zarządzania urządzeniami przenośnymi za pomocą konsoli administracyjnej.
 
 Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń mają następujące ograniczenia:
-  - Nie ma określonego użytkownika, a więc wszystkie urządzenia są urządzeniami „bez użytkownika”, w związku z tym nie ma dostępu do poczty e-mail czy danych firmowych, choć na przykład sieć VPN może nadal zapewniać aplikacjom urządzenia dostęp do danych
-  - Nie ma warunkowego dostępu, ponieważ są to scenariusze dla poszczególnych użytkowników
-  - Nie można resetować urządzeń z poziomu Portalu firmy
-  - Tylko urządzenie lokalne pojawia się w aplikacji lub witrynie internetowej Portal firmy
-  - Brak aplikacji z programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami
-  - Brak możliwości zarejestrowania przy użyciu narzędzia Apple Configurator lub w ramach programu rejestracji urządzeń firmy Apple (dotyczy urządzeń z systemem iOS)
+  - Brak konkretnego „użytkownika” skutkuje brakiem dostępu do wiadomości e-mail i danych firmy. Można jednak skorzystać na przykład z sieci VPN, dzięki czemu aplikacje urządzenia otrzymają dostęp do danych.
+  - Brak możliwości dostępu warunkowego, przewidzianego w scenariuszach dla poszczególnych użytkowników.
+  - Nie można resetować urządzeń z poziomu Portalu firmy.
+  - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
+  - Nie można używać aplikacji z programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
+  - Nie można ich zarejestrować przy użyciu narzędzia Apple Configurator ani w ramach programu rejestracji urządzeń firmy Apple (dotyczy urządzeń z systemem iOS).
 
 > [!NOTE]
-> Aby wdrożyć firmowe aplikacje na urządzeniach zarządzanych przy użyciu menedżera rejestracji urządzeń, wdróż aplikację portalu firmy jako **wymaganą instalację** na koncie użytkownika menedżera rejestracji urządzeń.
+> Aby wdrożyć firmowe aplikacje na urządzeniach zarządzanych przy użyciu menedżera rejestracji urządzeń, wdróż aplikację Portal firmy jako **wymaganą instalację** na koncie użytkownika menedżera rejestracji urządzeń.
 > Aby zwiększyć wydajność, podczas wyświetlania aplikacji Portal firmy na urządzeniu menedżera rejestracji urządzeń pokazywane jest tylko urządzenie lokalne. Zdalne zarządzanie innymi urządzeniami menedżera rejestracji urządzeń jest możliwe wyłącznie za pomocą konsoli administracyjnej usługi Intune.
 
 ## Tworzenie kont menedżerów rejestracji urządzeń
@@ -57,42 +59,42 @@ Konta menedżerów rejestracji urządzeń to konta użytkowników z uprawnieniem
 
 2.  Wybierz pozycję **Dodaj użytkownika**.
 
-3.  Upewnij się, że konto użytkownika, który będzie menedżerem rejestracji urządzeń, jest wyświetlane na liście. Jeśli nie, dodaj użytkownika, wybierając pozycję **Nowy** i wykonując procedurę Dodawanie użytkownika. Każdy użytkownik, który uzyskuje dostęp do usługi, musi mieć licencję subskrypcyjną, a *menedżer rejestracji urządzeń* nie może być administratorem usługi Intune. Przed użyciem tej funkcji określ, czy potrzebujesz dodać więcej licencji.
+3.  Upewnij się, że konto użytkownika, który będzie menedżerem rejestracji urządzeń, jest wyświetlane na liście. Jeśli nie widać tego konta, dodaj użytkownika, wybierając pozycję **Nowy** i wykonując procedurę **Dodawanie użytkownika**. Dla każdego użytkownika uzyskującego dostęp do usługi wymagana jest licencja subskrypcji. Menedżer rejestracji urządzeń nie może być administratorem usługi Intune. Przed rozpoczęciem korzystania z tej funkcji dowiedz się, czy nie trzeba dodać kolejnych licencji.
 
-4.  Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przy użyciu swojego konta administratora.
+4.  Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora.
 
-5.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona menedżerów rejestracji urządzeń.
+5.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
 
 6.  Wybierz pozycję **Dodaj**. Zostanie otwarte okno dialogowe **Dodawanie menedżera rejestracji urządzeń** .
 
-7.  Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz pozycję **OK**. Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
+7.  Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz opcję **OK**. Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
 
 8.  Menedżer rejestracji urządzeń może teraz rejestrować urządzenia przenośne za pomocą tej samej procedury, której używa użytkownik końcowy w ramach scenariusza „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) w portalu firmy.
 
 ## Usuwanie menedżera rejestracji urządzeń z usługi Intune
 
-1.  Zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com) przy użyciu swojego konta administratora.
+1.  Zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora.
 
-2.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona menedżerów rejestracji urządzeń.
+2.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
 
-3.  Wybierz **Użytkownika**, którego menedżer rejestracji urządzeń ma zostać usunięty, a następnie wybierz pozycję **Usuń**. Ten użytkownik nie zostanie usunięty z usługi Intune, a zarządzane przez niego urządzenia pozostaną zarejestrowane w usłudze Intune. Usunięcie menedżera rejestracji urządzeń uniemożliwi temu użytkownikowi rejestrację kolejnych urządzeń w usłudze Intune.
+3.  Wybierz **Użytkownika**, którego menedżer rejestracji urządzeń ma zostać usunięty, a następnie wybierz pozycję **Usuń**. Ten użytkownik nie zostanie usunięty z usługi Intune, a zarządzane przez niego urządzenia pozostaną zarejestrowane w usłudze. Usunięcie menedżera rejestracji urządzeń uniemożliwi temu użytkownikowi rejestrację kolejnych urządzeń w usłudze Intune.
 
 4.  Wybierz pozycję **Tak**, aby potwierdzić chęć usunięcia menedżera rejestracji urządzeń.
 
 Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane urządzenia. Gdy menedżer rejestracji urządzeń zostanie usunięty:
 
--   Nie będzie to mieć wpływu na zarejestrowane urządzenia
+-   Nie ma to wpływu na zarejestrowane urządzenia.
 
--   Zarejestrowane urządzenia będą nadal w pełni zarządzane
+-   Zarejestrowane urządzenia będą nadal w pełni zarządzane.
 
--   Poświadczenia konta usuniętego menedżera rejestracji urządzeń zachowają ważność i będzie można ich nadal używać do logowania się do portalu firmy w celu uzyskiwania dostępu do aplikacji
+-   Poświadczenia konta usuniętego menedżera rejestracji urządzeń zachowują ważność i można ich nadal używać do logowania się do portalu firmy w celu uzyskiwania dostępu do aplikacji.
 
--   Używając poświadczeń konta usuniętego menedżera rejestracji urządzeń, nadal nie będzie można czyścić ani wycofywać urządzeń
+-   Używając poświadczeń konta usuniętego menedżera rejestracji urządzeń, nie można jednak czyścić ani wycofywać urządzeń.
 
--   Relacje usuniętego konta menedżera rejestracji urządzeń z zarejestrowanymi urządzeniami zostaną zachowane, ale nie będzie można zarejestrować żadnych dodatkowych urządzeń
+-   Powiązanie usuniętego konta menedżera rejestracji urządzeń z zarejestrowanymi urządzeniami zostaje zachowane, ale nie można zarejestrować dodatkowych urządzeń.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 
