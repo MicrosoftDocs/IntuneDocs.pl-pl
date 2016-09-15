@@ -13,26 +13,14 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
-ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
+ms.sourcegitcommit: 3d737c44e3586a4339a324dcb6701f7c86a29d01
+ms.openlocfilehash: 3bf0e6f8bc010c23712f9908cff7d515c2c62671
 
 
 ---
 
 # Konfigurowanie zarządzania urządzeniami z systemem Android
-Pomoc dotyczącą konfigurowania urządzenia z systemem Android możesz znaleźć [tutaj](../enduser/using-your-android-device-with-intune.md).
-
-W usłudze Microsoft Intune można włączyć model BYOD („bring your own device”) dla urządzeń z systemem Android bez konieczności wykonywania dodatkowych działań dla tej platformy.
-
-Wybierz jedną z następujących opcji platformy urządzenia, aby dowiedzieć się więcej:
-
-> [!div class="op_single_selector"]
-- [Konfigurowanie zarządzania systemem Android przy użyciu usługi Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
-- [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
-- [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
-
-Urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestrację przy użyciu aplikacji portalu firmy dostępnej w sklepie Google Play. Aby umożliwić użytkownikom rejestrowanie urządzeń w usłudze Intune, wykonaj poniższe kroki.
+Będąc administratorem usługi Intune, możesz włączyć zarządzanie urządzeniami z systemem Android z Portalu firmy. Użytkownicy będą mogli wtedy rejestrować swoje urządzenia przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
 
 1.  **Konfigurowanie usługi Intune**<br>
     Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
@@ -52,6 +40,6 @@ Urządzenia przenośne z systemem Android umożliwiają użytkownikom rejestracj
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
-ms.openlocfilehash: ab765d181cb2eb9e3e6a9c79c597241c4fd5985f
+ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
+ms.openlocfilehash: 2d8304964908986943c82ebed1dd7fd23b2c222e
 
 
 ---
@@ -39,7 +39,7 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi SharePoint Online konieczne jest:
 - Posiadanie **subskrypcji usługi SharePoint Online**; ponadto użytkownicy muszą mieć licencję na usługę SharePoint Online.
-- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory w wersji Premium**.
+- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory — wersja Premium**.
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi:
 -   Zostać **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub na komputerze przyłączonym do domeny.
@@ -83,6 +83,9 @@ Usługa AAD DRS zostanie automatycznie uaktywniona dla klientów usług Intune i
   - Jeśli zasady zostały ustawione tak, aby przyłączenie do domeny było wymagane, a komputer nie został przyłączony do domeny, zostanie wyświetlony komunikat o konieczności skontaktowania się z administratorem IT.
 
   - Jeśli zasady zostały ustawione tak, aby wymagane było przyłączenie do domeny lub zgodność, a komputer nie spełnia żadnego z tych wymagań, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy i rejestrowania.
+  >[!NOTE]
+  >Dostęp warunkowy nie jest obsługiwany na komputerach z oprogramowaniem klienckim usługi Intune.
+
 -    [Należy włączyć nowoczesne uwierzytelnianie usługi Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
     Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece Active Directory Authentication Library (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
@@ -189,6 +192,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

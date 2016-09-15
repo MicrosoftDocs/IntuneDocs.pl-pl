@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
+ms.sourcegitcommit: 63f86f135d369d8c96903c0add1e194fd9d5ded2
+ms.openlocfilehash: e98aa19d38af47ba2d19a2a67b7a836796aded2a
 
 
 ---
@@ -22,15 +22,15 @@ ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 # Korzystanie z urządzenia z systemem Android i usługi Intune
 
-Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy muszą wykonać w celu ukończenia różnych zadań pogrupowanych w następujące kategorie:
 
-- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 - Zadania zarządzania po rejestracji
 - Problemy ze zgodnością
 
 ## Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 
-Informacje przedstawione w tej sekcji ułatwiają instalację Portalu firmy usługi Intune i rejestrowanie urządzeń z systemem Android.
+Informacje przedstawione w tej sekcji ułatwiają instalację aplikacji Portal firmy usługi Intune i rejestrowanie urządzeń z systemem Android.
 
 - [Rejestracja urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
@@ -71,6 +71,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

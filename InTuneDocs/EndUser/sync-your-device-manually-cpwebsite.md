@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/28/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: c676c15ad526ff31b98484704190b96006bf4f36
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 275e51d2f32aec340a31b67773dbccc77d48a573
 
 
 ---
@@ -23,7 +23,9 @@ ms.openlocfilehash: c676c15ad526ff31b98484704190b96006bf4f36
 
 # Ręczne synchronizowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli instalacja aplikacji trwa zbyt długo, można spróbować zsynchronizować urządzenie ręcznie, co może pomóc w przyspieszeniu instalacji. Użyj instrukcji poniżej odpowiednich dla typu używanego urządzenia lub używanej wersji systemu Windows. Synchronizowanie urządzenia w celu przyspieszenia instalacji aplikacji działa tylko dla wersji wymienionych poniżej.
+Jeśli instalacja aplikacji lub inne zadanie trwa zbyt długo, można spróbować zsynchronizować urządzenie ręcznie, co może pomóc w przyspieszeniu instalacji lub wykonania zadania. Skorzystaj z poniższych instrukcji odpowiednich dla używanego urządzenia. 
+
+Funkcja synchronizacji działa tylko dla wersji wymienionych poniżej.
 
 * [Windows 10 Mobile](sync-your-device-manually-windows.md#windows-10-mobile)
 * [Windows 10 Desktop](sync-your-device-manually-windows.md#windows-10-desktop)
@@ -32,6 +34,6 @@ Jeśli instalacja aplikacji trwa zbyt długo, można spróbować zsynchronizowa�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

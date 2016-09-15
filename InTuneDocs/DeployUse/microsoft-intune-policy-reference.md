@@ -4,7 +4,7 @@ description: "Użyj informacji w tym temacie, aby określić zasady usługi Micr
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a8d2702037b7b96b454078e991dea429143e733
-ms.openlocfilehash: aa081dd17c0067082e314ac45d2a52792f66b8d6
+ms.sourcegitcommit: 06a9c78300d7ff384299957102114c69c43a1ad5
+ms.openlocfilehash: 06616ba43069cc6e81692a4c638f2bf8b072fdc1
 
 
 ---
 
-# Informacje o zasadach usługi Microsoft Intune
+# Informacje o zasadach konfiguracji usługi Microsoft Intune
 
 Użyj informacji w tym temacie, aby określić zasady konfiguracji usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami.
 
@@ -74,7 +74,7 @@ Dotyczy tylko systemu Windows Phone i zarejestrowanych urządzeń systemu Window
 |---------------|------------------------|
 |**Konfiguracja niestandardowa (system Windows 10 Desktop i Mobile lub nowszy)**|Wdrażanie ustawień OMA-URI, których można użyć do kontrolowania funkcji urządzenia. Jest to przydatne w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br />    Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Windows 10 w usłudze Microsoft Intune](windows-10-policy-settings-in-microsoft-intune.md).|
 |**Konfiguracja niestandardowa (system Windows Phone 8.1 lub nowszy)**|Wdrażanie ustawień OMA-URI, których można użyć do kontrolowania funkcji urządzenia. Jest to przydatne w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Windows Phone 8.1 w usłudze Microsoft Intune](windows-phone-8-1-policy-settings-in-microsoft-intune.md).|
-|**Zasady uaktualniania wersji (system Windows 10 Desktop i nowsze)**<br><br>**Zasady uaktualniania wersji (system Windows 10 Holographic i nowsze)**|Konfigurowanie i wdrażanie zasad zawierających informacje o licencji lub kluczu produktu używane do aktualizowania urządzeń z systemem Windows 10 do nowszej wersji.<br><br>Aby uzyskać więcej informacji, zobacz [Ustawienia zasad uaktualniania wersji w usłudze Microsoft Intune](edition-upgrade-policy-settings-in-microsoft-intune.md).|  
+|**Zasady uaktualniania wersji (system Windows 10 Desktop i nowsze)**<br><br>**Zasady uaktualniania wersji (system Windows 10 Holographic i nowsze)**<br><br>**Zasady uaktualniania wersji (system Windows 10 Mobile i nowsze)**|Konfigurowanie i wdrażanie zasad zawierających informacje o licencji lub kluczu produktu używane do aktualizowania urządzeń z systemem Windows 10 do nowszej wersji.<br><br>Aby uzyskać więcej informacji, zobacz [Ustawienia zasad uaktualniania wersji w usłudze Microsoft Intune](edition-upgrade-policy-settings-in-microsoft-intune.md).|  
 |**Profil poczty e-mail (system Windows Phone 8 i nowsze)**<br /><br />**Profil poczty e-mail (system Windows 10 Desktop oraz Mobile i nowsze)**|Tworzenie, wdrażanie i monitorowanie ustawień poczty e-mail programu Exchange ActiveSync na zarządzanych urządzeniach. Umożliwia to użytkownikom dostęp do firmowej poczty e-mail na urządzeniach osobistych, przy czym nie muszą oni przeprowadzać żadnej konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Konfiguracja ogólna (system Windows 10 Desktop i Mobile lub nowszy)**|Konfigurowanie ustawień zabezpieczeń i funkcjonalnych zarejestrowanych urządzeń przenośnych z systemem Windows 10 Desktop i Mobile.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Windows 10 w usłudze Microsoft Intune](windows-10-policy-settings-in-microsoft-intune.md).|
 |**Konfiguracja ogólna (system Windows 10 Team i nowsze)**|Konfigurowanie ustawień zabezpieczeń i funkcjonalnych zarejestrowanych urządzeń z systemem Windows 10 Team (na przykład urządzenia Surface Hub).<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad konfiguracji systemu Windows Team w usłudze Microsoft Intune](windows-team-configuration-policy-settings-in-microsoft-intune.md).|
@@ -104,25 +104,7 @@ Dotyczy tylko systemu Windows Phone i zarejestrowanych urządzeń systemu Window
 > [!IMPORTANT]
 Usługa Microsoft Intune obejmuje teraz oddzielne **zasady konfiguracji** dotyczące każdej platformy urządzeń, a zasady te zawierają najbardziej aktualne ustawienia, których można użyć. Można nadal używać zasad zabezpieczeń urządzenia przenośnego i wszystkie istniejące wdrożenia będą nadal działać, ale należy zaplanować jak najszybszą migrację do nowych zasad konfiguracji.<br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad zabezpieczeń urządzeń przenośnych w usłudze Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).|
 
-## Zasady warunkowego dostępu i zgodności
-
-### Dostęp warunkowy
-
-|Nazwa zasad|Cel używania|
-|---------------|------------------------|
-|**Zasady usługi Exchange Online**<br /><br />**Zasady lokalnej instalacji programu Exchange**|Zarządzanie dostępem do poczty e-mail programu Microsoft Exchange z urządzeń, które nie są zarządzane przez usługę Intune lub które nie są zgodne z utworzonymi zasadami zgodności.<br /><br />Aby uzyskać więcej informacji, zobacz [Ograniczanie dostępu poczty e-mail do usługi Exchange Online i nowego środowiska usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune](restrict-access-to-exchange-online-with-microsoft-intune.md).|
-|**Zasady usługi SharePoint Online**|Zarządzanie dostępem do usługi SharePoint Online z urządzeń, które nie są zarządzane przez usługę Intune lub które nie są zgodne z utworzonymi zasadami zgodności.<br /><br />Aby uzyskać więcej informacji, zobacz [Ograniczanie dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune](restrict-access-to-sharepoint-online-with-microsoft-intune.md).|
-|**Skype dla firm**|Zarządzanie dostępem do usługi Skype dla firm z urządzeń, które nie są zarządzane przez usługę Intune lub które nie są zgodne z utworzonymi zasadami zgodności.<br /><br />Aby uzyskać więcej informacji, zobacz [Ograniczanie dostępu do usługi Skype dla firm przy użyciu usługi Microsoft Intune](restrict-access-to-skype-for-business-online-with-microsoft-intune.md).|
-> [!NOTE]
-> Zasad dostępu warunkowego nie wdraża się dla użytkowników ani urządzeń. Zamiast tego konfiguruje się wymagane zasady i są one stosowane do wszystkich grup, których dotyczą.
-
-### Zasady zgodności
-
-|Nazwa zasad|Cel używania|
-|---------------|------------------------|
-|**Zasady zgodności**|Definiowanie poziomu zgodności dla urządzeń, a następnie zgłaszanie niezgodnych urządzeń. Te zasady są używane przez funkcję dostępu warunkowego. Służą do oceniania, czy dostęp urządzenia do usługi powinien zostać zablokowany.<br /><br />Aby uzyskać więcej informacji, zobacz [Zasady zgodności urządzeń w usłudze Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md).|
-
-## Zarządzanie komputerami z systemem Windows
+## Zasady dla komputerów z systemem Windows zarządzanych przez klienta oprogramowania usługi Intune
 
 |Nazwa zasad|Cel używania|
 |---------------|------------------------|
@@ -136,6 +118,6 @@ Usługa Microsoft Intune obejmuje teraz oddzielne **zasady konfiguracji** dotycz
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Dla urządzeń z systemem Android zarządzanych przez usługę Int
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 08/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,17 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a2464a9d2276319f75a3da7db70c2613152bed9b
-ms.openlocfilehash: 177ed5f693b8f1ce16d96e1b3e729630d661475f
+ms.sourcegitcommit: eb2260f6bd37647d34871c9776dba3628d0aa8f6
+ms.openlocfilehash: a2af91827f3a5ebc549e7f474943f1b0cc6208dd
 
 
 ---
 
 # Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji na urządzeniach z systemem Android
 
-W przypadku urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw utwórz profil sieci VPN, który używa typu połączenia Pulse Secure. Następnie utwórz niestandardowe zasady konfiguracji, które kojarzą profil sieci VPN z określonymi aplikacjami. Po wdrożeniu zasad na urządzeniu z systemem Android lub w grupach użytkowników otwarcie przez użytkownika jednej z określonych aplikacji na jednym z tych urządzeń będzie powodować otwarcie połączenia sieci VPN dla danej aplikacji.
+W przypadku urządzeń z systemem Android 5.0 i nowszymi zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw utwórz profil sieci VPN, który używa typu połączenia Pulse Secure. Następnie utwórz niestandardowe zasady konfiguracji, które kojarzą profil sieci VPN z określonymi aplikacjami. 
+
+Po wdrożeniu zasad na urządzeniu z systemem Android lub w grupie użytkowników użytkownicy powinni uruchomić połączenie sieci VPN w programie PulseSecure. Program PulseSecure będzie wówczas zezwalać na używanie otwartego połączenia sieci VPN tylko dla ruchu z określonej aplikacji.
 
 > [!NOTE]
 >
@@ -49,8 +51,7 @@ W przypadku urządzeń z systemem Android zarządzanych przez usługę Intune mo
    6. Dla pozycji **OMA-URI** określ następujący ciąg: **./Vendor/MSFT/VPN/Profile/*Nazwa*/PackageList**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/PackageList**.
    7.   W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
 
-
-    ![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](..\media\android_per_app_vpn_oma_uri.png)
+![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](./media/android_per_app_vpn_oma_uri.png)
 
 #### Ustawianie listy aplikacji jako listy zabronionych lub listy dozwolonych (opcjonalne)
   Korzystając z wartości **BLACKLIST**, możesz określić listę aplikacji, które *nie* będą mogły korzystać z połączenia sieci VPN. Wszystkie pozostałe aplikacje będą nawiązywać połączenia za pośrednictwem sieci VPN.
@@ -76,6 +77,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

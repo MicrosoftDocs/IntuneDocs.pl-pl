@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fe47a5843414fbe4add7f77df63c0d6466273cd
-ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
+ms.sourcegitcommit: bf8da72092a2380e73cfbed2a693831706b40d23
+ms.openlocfilehash: c005a1b38289580b1543e0e62cbb4cd00cb22c47
 
 
 
@@ -22,8 +22,8 @@ ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
 # Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego
 Oto jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Konfiguracja niestandardowa** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
 
-Uwaga:
--   Prawdopodobnie łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
+> [!NOTE]
+-   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
 - W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
 -   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
 -  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
@@ -40,18 +40,27 @@ Uwaga:
 
    c.   **Typ danych**: ustaw wartość „Ciąg (XML)”
 
-   d.   **OMA-URI**: 
-        
-- **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-- **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   d.   **OMA-URI**:
 
-Uwaga: Należy pamiętać o kropce na początku.
+    - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+    - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Przykład:
-`./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+    > [!NOTE]
+Należy pamiętać o kropce na początku.
 
-  e.    Pole wartości: w tym miejscu należy wkleić kod XML. Przykład: Każdą wartość należy dostosować do ustawień sieciowych. Wskazówki można znaleźć w sekcji komentarzy kodu.
+    Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Przykład:
+    `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
+  e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Przykład: Każdą wartość należy dostosować do ustawień sieciowych. Wskazówki można znaleźć w sekcji komentarzy kodu.
+4. Wybierz **OK**, zapisz, a następnie wdróż zasady.
+
+    > [!NOTE]
+Te zasady można wdrożyć tylko dla grup użytkowników.
+
+Zasady zostaną zastosowane po następnym zaewidencjonowaniu urządzenia, a profil sieci Wi-Fi zostanie utworzony na urządzeniu. Urządzenie będzie mogło automatycznie łączyć się z siecią.
+## Profil sieci Wi-Fi systemu Android lub Windows
+
+Przykładowy kod XML dla profilu sieci Wi-Fi systemu Android lub Windows:
 
     <!--
     <Name of wifi profile> = Name of profile
@@ -173,25 +182,23 @@ Przykładowy kod XML dla profilu sieci Wi-Fi z użyciem protokołu EAP:
       </MSM>
     </WLANProfile>
 
-4.  Kliknij przycisk OK, a następnie zapisz i wdróż zasady.
-UWAGA. Te zasady można wdrożyć tylko dla grup użytkowników.
-
-Zasady zostaną zastosowane po następnym zaewidencjonowaniu urządzenia, a profil sieci Wi-Fi zostanie utworzony na urządzeniu. Urządzenie będzie mogło automatycznie łączyć się z siecią.
 ## Tworzenie pliku XML z istniejącego połączenia sieci Wi-Fi
 Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi:
-1.     Na komputerze połączonym lub niedawno połączonym z siecią bezprzewodową otwórz następujący folder: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}. Najlepiej użyć komputera, który nie jest połączony z wieloma sieciami, ponieważ w przeciwnym razie trzeba będzie przeszukiwać poszczególne profile, aby znaleźć właściwy.
+1. Na komputerze połączonym lub niedawno połączonym z siecią bezprzewodową otwórz następujący folder: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
+
+    Najlepiej użyć komputera, który nie jest połączony z wieloma sieciami, ponieważ w przeciwnym razie trzeba będzie przeszukiwać poszczególne profile, aby znaleźć właściwy.
 3.     Wyszukaj plik z odpowiednią nazwą wśród plików XML.
 4.     Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
 
-## Wdrażanie zasad
+## Wdrożenie zasad
 
-1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
+1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 
 2.  W oknie dialogowym **Zarządzanie wdrażaniem** :
 
-    -   **Aby wdrożyć zasady** — wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie kliknij pozycję **Dodaj** &gt; **OK**.
+    -   **Aby wdrożyć zasady**, wybierz co najmniej jedną grupę, w której chcesz wdrożyć zasady, a następnie wybierz pozycje **Dodaj** &gt; **OK**.
 
-    -   **Aby zamknąć okno dialogowe bez wdrażania** — kliknij przycisk **Anuluj**.
+    -   **Aby zamknąć okno dialogowe bez wdrażania** — wybierz pozycję **Anuluj**.
 
 Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczących wdrożenia w dolnej części listy zasad.
 
@@ -200,6 +207,6 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

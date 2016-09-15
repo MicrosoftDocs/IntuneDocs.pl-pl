@@ -13,16 +13,16 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
+ms.sourcegitcommit: d0cc50bb5d79f4840afee7984cf3f58f6dd26dac
+ms.openlocfilehash: 8832235ffdc8cd0b5b3eec244315711cfa59e069
 
 
 ---
 
 # Korzystanie z urządzenia z systemem Windows i usługi Intune
 
-Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
-- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy muszą wykonać w celu ukończenia różnych zadań pogrupowanych w następujące kategorie:
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 - Zadania zarządzania po rejestracji
 - Problemy ze zgodnością
 
@@ -32,7 +32,7 @@ Informacje przedstawione w tej sekcji ułatwiają instalację Portalu firmy usł
 
 - [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-- [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+- [Jakie dane może wyświetlać Twój administrator IT, gdy zarejestrujesz swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 ## Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
 
@@ -60,6 +60,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

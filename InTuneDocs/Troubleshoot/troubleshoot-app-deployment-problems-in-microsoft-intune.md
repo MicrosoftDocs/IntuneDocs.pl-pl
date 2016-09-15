@@ -13,8 +13,8 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bbee6d3fec02a4d96b31a44a31218f684e0267c8
-ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
+ms.sourcegitcommit: aa96cf3a1909e3ea2187a3beb0aede3228894504
+ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
 
 
 ---
@@ -23,12 +23,6 @@ ms.openlocfilehash: ed961a945d0b7872553f2be2917ba273709b6d35
 Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
 ## Typowe problemy z wdrażaniem aplikacji
-
-### Użytkownicy nie mogą zalogować się w Portalu firmy w usłudze Intune
-
-1.  Upewnij się, konto użytkownika istnieje i jest włączone w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854).
-
-3.  W [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) upewnij się, że użytkownik wprowadził prawidłową nazwę użytkownika do zalogowania się w usłudze Intune i że nazwa użytkownika ma następujący format: **osoba@domena.com**. Jeśli użytkownik wydaje się wprowadzać nieprawidłowe hasło, poproś go o zresetowanie hasła.
 
 ### W Portalu firmy brakuje informacji kontaktowych działu IT
 
@@ -52,15 +46,6 @@ Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą us�
 
 4.  Jeśli pasek postępu pobierania aplikacji dla systemu iOS pokazuje ukończenie pobierania, ale instalacja aplikacji kończy się niepowodzeniem, przyczyną może być problem z udostępnionymi plikami aplikacji.
 
-### Jeśli link do aplikacji dla systemu iOS umożliwia przejście do poprzedniej lokalizacji w sklepie iTunes
-
-1.  Bieżąca sesja sklepu iTunes App Store otwiera się na poprzedniej stronie aplikacji.
-
-2.  Zamknij sklep iTunes App Store na urządzeniu i ponownie spróbuj użyć linku.
-
-### Jeśli wystąpi błąd podczas uruchamiania aplikacji dla systemu iOS
-
-1.  Data wygaśnięcia aplikacji może być nieprawidłowa.
 
 ### Jeśli podczas przekazywania aplikacja zablokuje się w stanie „w toku”
 
@@ -73,12 +58,6 @@ Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą us�
 1.  Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji firmy Apple.
 
 2.  Więcej informacji zawiera dokumentacja dla deweloperów firmy Apple.
-
-### Błąd: Wydawca nie istnieje
-Używasz polecenia **Dodaj inną umowę dotyczącą oprogramowania**, aby dodać umowę licencyjną innej firmy. Próbujesz dodać wydawcę na stronie **Inne umowy licencjonowania oprogramowania**. Ta strona zawiera listę istniejących wydawców w kolejności alfabetycznej.
-Wprowadzasz brakującego wydawcę, ale występuje błąd **Wydawca nie istnieje**.
-
-To jest celowe. Usługa Intune zapewnia śledzenie licencji tylko dla popularnych tytułów oprogramowania. Usługa Intune wymaga co najmniej 4 osobnych kont raportujących oprogramowanie, zanim staje się dostępna jako opcja obciążenia związanego z licencjonowaniem.
 
 ### Jeśli zarządzane aplikacje nie zgłaszają stanu instalacji
 
@@ -93,13 +72,13 @@ Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podc
 |0x80073CF0|Nie można otworzyć pakietu.|Możliwe przyczyny:<br /><br />— pakiet nie został podpisany.<br />— nazwa wydawcy jest niezgodna z podmiotem certyfikatu podpisywania.<br /><br />Sprawdź dziennik zdarzeń AppxPackagingOM, aby uzyskać więcej informacji.|
 |0x80073CF3|Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu|Możliwe przyczyny:<br /><br />— przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.<br />— określona zależność pakietu nie została odnaleziona.<br />— pakiet nie obsługuje poprawnej architektury procesora.<br /><br />Sprawdź dziennik zdarzeń AppXDeployment-Server, aby uzyskać więcej informacji.|
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
-|0x87D1041C|Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji.|— Użytkownik zainstalował aplikację z portalu firmy, a następnie odinstalował ją bezpośrednio z urządzenia. Zainstaluj ponownie aplikację z portalu firmy.<br /><br />— Może występować niezgodność między numerem wersji aplikacji biznesowej rozpoznawanym przez usługę Intune i wersją zainstalowaną na urządzeniu. Upewnij się, że usługa Intune ma poprawną wersję, a następnie zainstaluj ponownie aplikację.|
+|0x87D1041C|Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji.|— Aplikacja została pomyślnie wdrożona przez usługę Intune, a następnie odinstalowana (na przykład przez użytkownika końcowego). Poinstruuj użytkownika, aby ponownie zainstalował aplikację z portalu firmy. Wymagane aplikacje zostaną automatycznie zainstalowane ponownie po następnym zaewidencjonowaniu urządzenia.|
 
 ### Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 
