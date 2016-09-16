@@ -7,9 +7,9 @@
   - Komputery z systemem Windows 10 (wersje Home, Pro, Education i Enterprise)
   - System Mac OS X 10.9 lub nowszy
 
-Za pomocą [klienta oprogramowania Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) można zarządzać komputerem z systemem Windows 7 lub nowszym. Klienci z pakietem Enterprise Management Suite (EMS) mogą także [użyć usługi Azure Active Directory (AAD), aby zarejestrować urządzenia z systemem Windows 10](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
+[Klient oprogramowania usługi Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) może zarządzać komputerami z systemem Windows Vista i nowszymi, z wyjątkiem edycji Home systemu Windows, które nie są obsługiwane.  Klienci z pakietem Enterprise Management + Security (EMS) mogą także [użyć usługi Azure Active Directory (AAD), aby zarejestrować urządzenia z systemem Windows 10](set-up-windows-device-management-with-microsoft-intune.md#azure-active-directory-enrollment).
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 
