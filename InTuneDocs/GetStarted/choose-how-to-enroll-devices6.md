@@ -13,8 +13,8 @@ ms.assetid: 40262e47-1ab4-437d-8ca5-c89b5022f91f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: a5f80058e004f119acc9a918123c897b72b71314
-ms.openlocfilehash: ecc6834b18d7906633bf1a029f5d63a4432c4989
+ms.sourcegitcommit: 2bfba29b5b2585f276a85a8dee7e62009e41ec3f
+ms.openlocfilehash: b96b970b3326b0b17f1a5f57f6d1407756c78e41
 
 
 ---
@@ -25,7 +25,11 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
 ## **Jak można zarządzać dedykowanymi urządzeniami należącymi do firmy?**
 
   > [!div class="button"]
-[Program DEP dla systemu iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)<br>[Asystent ustawień systemu iOS >](/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)<br>[Oznaczanie numerami IMEI >](/intune/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
+[Program DEP dla systemu iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
+> [!div class="button"]
+[Asystent ustawień systemu iOS >](/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [!div class="button"]
+[Oznaczanie numerami IMEI >](/intune/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
 
   Należące do firmy urządzenia z dedykowanymi użytkownikami można zarejestrować na następujące sposoby:
 
@@ -40,6 +44,6 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

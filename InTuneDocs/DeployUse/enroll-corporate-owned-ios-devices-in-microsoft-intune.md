@@ -4,7 +4,7 @@ description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu pro
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d81ef697518745b258598124d6e73899bdd76a0f
-ms.openlocfilehash: 00d7e73154bb293fec48b74b6f6454d67e5ef378
+ms.sourcegitcommit: bee93334e7b868ef6c827fba9efc3318c8419527
+ms.openlocfilehash: b295ee11d566fbfbe84513c045f3a76dfd51cda4
 
 
 ---
@@ -40,6 +40,11 @@ Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionyc
 ## Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
 
 Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować aplikację Portal firmy i używać jej do pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
+
+Koligacja użytkownika jest wymagana do obsługi:
+  - Aplikacji do zarządzania aplikacjami mobilnymi
+  - Warunkowego dostępu do poczty e-mail i danych firmowych
+  - Aplikacji Portal firmy
 
 **Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika**
 1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowej kombinacji imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
@@ -75,6 +80,6 @@ Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia 
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
