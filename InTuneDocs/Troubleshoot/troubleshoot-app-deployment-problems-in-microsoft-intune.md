@@ -4,7 +4,7 @@ description: "W tym temacie przedstawiono informacje pomagające w rozwiązywani
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aa96cf3a1909e3ea2187a3beb0aede3228894504
-ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
+ms.sourcegitcommit: a5256d4decfcd14de2d50a32a0906b6894639010
+ms.openlocfilehash: 552514971a64b16f88a7d83a0f7d66a0c00b61b0
 
 
 ---
@@ -22,49 +22,7 @@ ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
 # Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune
 Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
-## Typowe problemy z wdrażaniem aplikacji
-
-### W Portalu firmy brakuje informacji kontaktowych działu IT
-
-1.  W konsoli administracyjnej usługi Intune wybierz pozycję **Administrator** &gt; **Portal firmy**.
-
-2.  Ustaw szczegóły dla pozycji **Kontakt z działem IT** .
-
-### Jeśli określonych aplikacji nie widać na liście
-
-1.  Upewnij się, że sprawdzasz listę aplikacji dla użytkownika lub urządzenia, na którym aplikacja została wdrożona.
-
-2.  Upewnij się, że urządzenie spełnia wymagania aplikacji.
-
-### Jeśli wystąpi błąd podczas pobierania aplikacji
-
-1.  Upewnij się, że jednocześnie występuje tylko jedno pobieranie na użytkownika. Każdy użytkownik może pobierać tylko jedną aplikację naraz.
-
-2.  Upewnij się, że nie ma zbyt wielu równoczesnych pobrań dla konta. Poczekaj kilka minut, a następnie spróbuj ponownie.
-
-3.  Jeśli zostanie wyświetlony natywny komunikat systemu iOS, że instalacja nie jest możliwa, że została anulowana lub że trzeba ponowić próbę, może to wynikać z dużego natężenia ruchu sieciowego. Poczekaj kilka minut, a następnie spróbuj ponownie.
-
-4.  Jeśli pasek postępu pobierania aplikacji dla systemu iOS pokazuje ukończenie pobierania, ale instalacja aplikacji kończy się niepowodzeniem, przyczyną może być problem z udostępnionymi plikami aplikacji.
-
-
-### Jeśli podczas przekazywania aplikacja zablokuje się w stanie „w toku”
-
-1.  Podczas przekazywania aplikacji najpierw dodawane są metadane, a po nich pakiet aplikacji. Po przekazaniu metadanych aplikacja pojawi się ze stanem „w toku”. Jeśli aplikacja jest „w toku” przez zbyt długi czas, usuń ją, a następnie przekaż ponownie.
-
-2.  Należy pamiętać, aby nie zarządzać wdrażaniem aplikacji w czasie, gdy jest ona w stanie „w toku”.
-
-### Jeśli wystąpi awaria podczas instalowania aplikacji dla systemu iOS
-
-1.  Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji firmy Apple.
-
-2.  Więcej informacji zawiera dokumentacja dla deweloperów firmy Apple.
-
-### Jeśli zarządzane aplikacje nie zgłaszają stanu instalacji
-
-Przed zaktualizowaniem usługi Microsoft Intune w listopadzie 2014 r. nie zebrano informacji o stanie instalacji zarządzanych aplikacji. W przypadku urządzeń, na których zarządzane aplikacje zostały zainstalowane przed tą aktualizacją usługi, zaktualizuj każde skojarzone wdrożenie aplikacji przy użyciu odpowiedniej akcji wdrażania (na przykład **Dostępna instalacja**). Poszczególne urządzenia zaktualizują aplikacje podczas automatycznego sprawdzania dostępnych aplikacji. Aby uzyskać więcej informacji, zobacz [Aktualizowanie aplikacji przy użyciu usługi Microsoft Intune](/intune/deploy-use/update-apps-using-microsoft-intune).
-
-## <a name="BKMK_SoftDistErrorCodes"></a>Kody błędów wdrażania aplikacji
-Poniższa tabela zawiera listę typowych błędów, które mogą wystąpić podczas wdrażania aplikacji przy użyciu usługi Intune, ich prawdopodobne przyczyny oraz możliwe rozwiązania pomagające w rozwiązywaniu tych problemów.
+## Typowe kody błędów wdrażania aplikacji
 
 |Kod błędu|Możliwy problem|Sugerowane rozwiązanie|
 |--------------|--------------------|------------------------|
@@ -79,6 +37,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

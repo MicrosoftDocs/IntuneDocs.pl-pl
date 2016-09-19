@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
-ms.openlocfilehash: 1f6a4b3988dbebce23a59b4ba14c79cd28cf6882
+ms.sourcegitcommit: c636efee82331d6feac75153b872526f7af7c882
+ms.openlocfilehash: 814312b0ac6055ffff2efad2ddbdaa8664f84fde
 
 
 ---
@@ -29,6 +29,21 @@ Wszystkie te funkcje będą również w przyszłości obsługiwane dla hybrydowy
 >Wpis w blogu — Ensuring mobile devices are up to date using Microsoft Intune (Zapewnianie aktualności urządzeń przenośnych za pomocą usługi Microsoft Intune)<br>
 >W świetle ostatnich ataków złośliwego oprogramowania „Trident” na urządzenia z systemem iOS opublikowaliśmy nowy wpis na blogu, [Ensuring mobile devices are up to date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Zapewnianie aktualności urządzeń przenośnych za pomocą usługi Microsoft Intune), z którego można dowiedzieć się, jakie są sposoby zapewniania bezpieczeństwa i aktualności urządzeń za pomocą usługi Intune.
 
+## Wrzesień 2016
+
+## Aktualizacje Portalu firmy
+### Android
+
+**Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android**
+
+Na stronie głównej Portalu firmy dla systemu Android dodano nową ikonę Powiadomienia. Naciśnięcie tej ikony powoduje przejście na stronę Powiadomienia — przedstawia ona użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. W aplikacji Portal firmy dla systemu iOS obszar powiadomień jest już dostępny. W wyniku wprowadzenia strony Powiadomienia nie będzie widoczna strona Konfigurowanie dostępu do zasobów firmy po uruchomieniu lub wznowieniu pracy w Portalu firmy, jeśli urządzenie zostało już zarejestrowane. W przypadku tworzenia własnych wskazówek dla użytkowników końcowych warto zaktualizować dokumentację, tak aby uwzględniała tę zmianę. Zaktualizowane zrzuty ekranu można znaleźć [tutaj](https://aka.ms/androidcpupdate).  
+<!---TFS 1095560--->
+
+### Windows
+**Dodanie przycisku wysyłania opinii do aplikacji Portal firmy dla systemu Windows Phone 8.1**
+
+Aplikacja Portal firmy dla systemu Windows Phone 8.1 umożliwia użytkownikom końcowym przesyłanie opinii o aplikacji przy użyciu nowego przycisku „wyślij opinię”. Aby znaleźć przycisk, użytkownicy muszą nacisnąć oznaczone wielokropkiem menu w prawej dolnej części ekranu aplikacji Portal firmy, a następnie nacisnąć pozycję **wyślij opinię**. Zebrane anonimowe opinie pomogą firmie Microsoft w ulepszaniu środowiska aplikacji Portal firmy dla użytkowników.
+<!---TFS 1317806--->
 
 ## Sierpień 2016
 ## Zarządzanie aplikacjami
@@ -87,6 +102,10 @@ Aplikacja Microsoft Intune Managed Browser dla systemu iOS została zaktualizowa
 <!---TFS 1313253 checked--->
 
 ## Wkrótce
+
+### Obsługa systemu iOS 10
+Usługa Intune będzie w pełni obsługiwać system iOS 10. Więcej informacji zostanie podanych po publicznym udostępnieniu systemu iOS 10.
+
 ### Przejście grup usługi Intune do grup usługi Azure Active Directory rozpocznie się we wrześniu 2016 r.
 Usługa Intune wprowadza nową funkcjonalność zarządzania grupami, która używa grup zabezpieczeń usługi Azure Active Directory (AAD) jako grupy użytkowników i urządzeń w usłudze Intune. Te grupy będą używane do zarządzania grupami, wdrażania zasad i wdrażania profilów **po wprowadzeniu nowego portalu administracyjnego usługi Intune używającej platformy Azure**.
 
@@ -158,6 +177,6 @@ Aby zobaczyć funkcje wprowadzone w usłudze Intune w ostatnich sześciu miesią
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

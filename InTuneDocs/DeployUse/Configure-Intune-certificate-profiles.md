@@ -4,7 +4,7 @@ description: "Dowiedz się, jak utworzyć profil certyfikatu usługi Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e3f7cac8eb3495aad3835ec4713d67a58383c66
-ms.openlocfilehash: 8b08f8fde6136b8eca61f6ae7a8c21635f7d452e
+ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
+ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
 
 
 ---
@@ -48,15 +48,9 @@ Przed utworzeniem profilu certyfikatu protokołu Simple Certificate Enrollment P
 
     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Podaj wymagane informacje, aby skonfigurować ustawienia profilu zaufanego certyfikatu dla systemów Android, iOS, Mac OS X, Windows 8.1 lub Windows Phone 8.1.
-
-    - W ustawieniu **Plik certyfikatu** zaimportuj certyfikat zaufanego głównego urzędu certyfikacji (plik cer) wyeksportowany z urzędu wystawiającego certyfikaty. Ustawienie **Magazyn docelowy** dotyczy tylko urządzeń z systemem Windows 8.1 oraz nowszymi i tylko wtedy, gdy urządzenie ma więcej niż jeden magazyn certyfikatów.
-    -  W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby wprowadzić niestandardowy format nazwy podmiotu.  
-        Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: `Common Name (CN)` i `Email (E)`. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki:  
-
-        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
-
-        W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych `CN` i `E` używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. [Funkcja CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx) wyświetla listę obsługiwanych ciągów.  
+3.  Podaj wymagane informacje, aby skonfigurować ustawienia profilu zaufanego certyfikatu dla systemów Android, iOS, Mac OS X, Windows 8.1 lub Windows Phone 8.1. 
+4.  W ustawieniu **Plik certyfikatu** zaimportuj certyfikat zaufanego głównego urzędu certyfikacji (plik cer) wyeksportowany z urzędu wystawiającego certyfikaty. Ustawienie **Magazyn docelowy** dotyczy tylko urządzeń z systemem Windows 8.1 oraz nowszymi i tylko wtedy, gdy urządzenie ma więcej niż jeden magazyn certyfikatów.
+    
 4.  Wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady**. Teraz możesz je wdrożyć.
@@ -79,7 +73,7 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
 3.  Postępuj zgodnie z instrukcjami na stronie konfiguracji profilu, aby skonfigurować ustawienia profilu certyfikatu SCEP.
     > [!NOTE]
     >
-    > W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby wprowadzić niestandardowy format nazwy podmiotu.
+    > W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby wprowadzić niestandardowy format nazwy podmiotu (tylko w profilach systemu iOS).
     >
     > Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: `Common Name (CN)` i `Email (E)`. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki:
 
@@ -136,6 +130,6 @@ Dowiedz się, jak używać certyfikatów do zabezpieczenia poczty e-mail, sieci 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
