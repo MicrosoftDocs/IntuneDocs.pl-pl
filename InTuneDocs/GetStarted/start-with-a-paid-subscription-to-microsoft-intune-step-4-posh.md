@@ -67,6 +67,6 @@ Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
