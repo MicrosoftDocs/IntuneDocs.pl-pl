@@ -66,8 +66,9 @@
 ## [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md)
 
 ## [Dodawanie aplikacji](add-apps.md)
-### [Dodawanie aplikacji dla urządzeń przenośnych](add-apps-for-mobile-devices-in-microsoft-intune.md)
-### [Dodawanie aplikacji dla komputerów z systemem Windows](add-apps-for-windows-pcs-in-microsoft-intune.md)
+### [Dodawanie aplikacji dla zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md)
+### [Dodawanie aplikacji dla komputerów klienckich usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)
+#### [Zarządzanie umowami licencyjnymi dla komputerów klienckich usługi Intune](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Wdrażanie aplikacji](deploy-apps.md)
 ### [Wdrażanie aplikacji na urządzeniach i komputerach](deploy-apps-in-microsoft-intune.md)
 ### [Monitorowanie aplikacji](monitor-apps-in-microsoft-intune.md)
@@ -101,6 +102,11 @@
 #### [Ograniczanie dostępu do poczty e-mail: przykłady](restrict-email-access-example-scenarios.md)
 
 ### [Ograniczanie dostępu do sieci (Cisco ISE)](restrict-access-to-networks.md)
+### [Ograniczanie dostępu do zasobów firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji](restrict-access-based-on-device-network-app-risk.md)
+#### [Konfigurowanie aplikacji Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+#### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](enable-lookout-mtp-connection-in-intune.md)
+#### [Wdrażanie aplikacji Lookout for Work](configure-and-deploy-lookout-for-work-apps.md)
+#### [Włączanie ochrony urządzenia przed zagrożeniami w zasadach zgodności](enable-device-threat-protection-rule-in-compliance-policy.md)
 
 ### [Ochrona danych aplikacji za pomocą zarządzania aplikacjami mobilnymi](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Portal Azure — zasady zarządzania aplikacjami mobilnymi](azure-portal-for-microsoft-intune-mam-policies.md)
@@ -137,6 +143,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

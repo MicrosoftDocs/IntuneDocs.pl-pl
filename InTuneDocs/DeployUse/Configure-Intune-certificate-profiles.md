@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
-ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: c51c5ae199ca2950dc0371b400727af534a70f09
 
 
 ---
@@ -41,7 +41,7 @@ Przed utworzeniem profilu certyfikatu protokołu Simple Certificate Enrollment P
 1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 2.  Dodaj jeden z następujących typów zasad:
     - **Android &gt; Profil zaufanego certyfikatu (system Android 4 i nowsze)**
-    - **iOS &gt; Profil zaufanego certyfikatu (system iOS 7.1 i nowsze)**
+    - **iOS &gt; Profil zaufanego certyfikatu (system iOS 8.0 i nowsze)**
     - **Mac OS X &gt; Profil zaufanego certyfikatu (system Mac OS X 10.9 i nowsze)**
     - **Windows &gt; Profil zaufanego certyfikatu (system Windows 8.1 i nowsze)**
     - **Windows &gt; Profil zaufanego certyfikatu (system Windows Phone 8.1 i nowsze)**
@@ -63,7 +63,7 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
 1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 2.  Dodaj jeden z następujących typów zasad:
     - **Android &gt; Profil certyfikatu protokołu SCEP (system Android 4 i nowsze)**
-    - **iOS &gt; Profil certyfikatu protokołu SCEP (system iOS 7.1 i nowsze)**
+    - **iOS &gt; Profil certyfikatu protokołu SCEP (system iOS 8.0 i nowsze)**
     - **Mac OS X &gt; Profil certyfikatu protokołu SCEP (system Mac OS X 10.9 i nowsze)**
     - **Windows &gt; Profil certyfikatu protokołu SCEP (system Windows 8.1 i nowsze)**
     - **Windows &gt; Profil certyfikatu protokołu SCEP (system Windows Phone 8.1 i nowsze)**
@@ -92,7 +92,7 @@ Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady**. Teraz możesz 
   - **Android &gt; Profil certyfikatu PFX (system Android 4 i nowsze)**
   - **Windows &gt; Profil certyfikatu PKCS #12 (PFX) (system Windows 10 i nowsze)**
   - **Windows &gt; Profil certyfikatu PKCS #12 (PFX) (system Windows Phone 10 i nowsze)**
-  - **iOS > Profil certyfikatu PKCS #12 (PFX) (system iOS 7.1 i nowsze)**    
+  - **iOS > Profil certyfikatu PKCS #12 (PFX) (system iOS 8.0 i nowsze)**    
     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Wprowadź informacje wymagane w formularzu zasad.
 4.  Wybierz pozycję **Zapisz zasady**.
@@ -130,6 +130,6 @@ Dowiedz się, jak używać certyfikatów do zabezpieczenia poczty e-mail, sieci 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

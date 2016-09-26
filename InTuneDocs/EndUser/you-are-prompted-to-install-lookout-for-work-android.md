@@ -1,5 +1,5 @@
 ---
-title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work | Microsoft Intune"
+title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
@@ -12,19 +12,18 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: e1f0ee69c16c48932c7ea1fefff03f6f35416865
-ms.openlocfilehash: 82f99577b674050d20362204b1032ad3992c7d9a
+ms.sourcegitcommit: 5c522c12325925c45f47bc7b521e3d8aa87454f4
+ms.openlocfilehash: d4ffed6fa0a2380ebfc5c4cf9999233635a3469f
 
 
 ---
 
 # Pojawia się monit o zainstalowanie aplikacji Lookout for Work
 
-Jeśli zostanie wyświetlony pokazany poniżej komunikat „Aplikacja Lookout for Work nie została zainstalowana i aktywowana”, oznacza to, że administrator IT wymaga zainstalowania aplikacji Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa.
+Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa.
 
-![Należy rozwiązać problem ze zgodnością](./media/lookout-resolve-compliance-issues_expanded-android.png)
 
-**Co należy zrobić, aby rozwiązać ten problem:**
+**Co należy zrobić:**
 
 1.  Przeciągnij palcem z góry na dół ekranu, aby otworzyć pasek powiadomień, a następnie naciśnij pozycję **Required application – Install Lookout for Work from Play Store** (Wymagana aplikacja — zainstaluj aplikację Lookout for Work ze Sklepu Play).
 
@@ -32,7 +31,7 @@ Jeśli zostanie wyświetlony pokazany poniżej komunikat „Aplikacja Lookout fo
 
     Zostanie wyświetlona strona instalacji aplikacji Lookout for Work w Sklepie Play.
 
-2.  Zainstaluj aplikację Lookout for Work i naciśnij pozycję **AKCEPTUJĘ**, aby aplikacja mogła uzyskać dostęp do urządzenia.
+2.  Zainstaluj aplikację Lookout for Work, a następnie naciśnij pozycję **AKCEPTUJĘ**, aby aplikacja mogła uzyskać dostęp do urządzenia.
 
     ![Naciśnij pozycję Akceptuję, aby umożliwić aplikacji Lookout for Work dostęp do urządzenia](./media/lookout-accept-store-permissions-android.png)
 
@@ -40,7 +39,7 @@ Jeśli zostanie wyświetlony pokazany poniżej komunikat „Aplikacja Lookout fo
 
     ![Otwórz aplikację Lookout for Work i naciśnij pozycję Aktywuj](./media/lookout-activate-button-android.png)
 
-4. Naciśnij pozycję **Zaloguj się za pomocą konta służbowego**, a następnie podaj konto, przy użyciu którego uzyskujesz dostęp do służbowej poczty e-mail, plików i innych danych.
+4. Naciśnij pozycję **Zaloguj się za pomocą konta służbowego**, a następnie podaj konto, przy użyciu którego uzyskujesz dostęp do służbowej poczty e-mail i plików.
 
     ![Zaloguj się przy użyciu konta służbowego](./media/lookout-sign-in-android.png)
 
