@@ -13,8 +13,8 @@ ms.assetid: aeeccfa4-0f14-447e-a3df-c8435c8a4bb2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: e14a56fce0aa57b3744946d7dbf6641b8d98773b
+ms.sourcegitcommit: 5f8a145fa2c0355eaffc403084872c1f9524b6e5
+ms.openlocfilehash: 2cb4920663019f8a1ff66a7c52e12b1313f33871
 
 
 ---
@@ -29,7 +29,7 @@ Możesz zarejestrować następujące typy urządzeń, a następnie zarządzać n
 
 Zarejestrowanie urządzeń daje [te możliwości](/Intune/get-started/choose-how-to-manage-devices).
 
-Komputerami z systemem Windows można też zarządzać przy użyciu oprogramowania klienckiego usługi Intune na komputery. Oprogramowanie klienckie usługi Intune na komputery obsługuje system Windows 7 i nowsze z wyjątkiem systemu Windows 10 Home. Zarządzanie komputerami za pomocą oprogramowania klienckiego daje [te możliwości](/Intune/).
+Komputerami z systemem Windows można też zarządzać przy użyciu oprogramowania klienckiego usługi Intune na komputery. Komputerowe oprogramowanie klienckie usługi Intune obsługuje system Windows 7 i nowsze, z wyjątkiem systemu Windows 10 Home. Zarządzanie komputerami przy użyciu oprogramowania klienckiego zapewnia [następujące możliwości](set-up-windows-device-management-with-microsoft-intune.md).
 
 Klienci z pakietem Enterprise Management Suite mogą także użyć usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10.
 
@@ -38,6 +38,6 @@ Klienci z pakietem Enterprise Management Suite mogą także użyć usługi Azure
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

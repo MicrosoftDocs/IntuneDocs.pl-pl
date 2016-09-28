@@ -4,7 +4,7 @@ description: "Usługa Intune jest usługą opartą na chmurze, która ułatwia z
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,15 @@ ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
-ms.openlocfilehash: c13366ea7f42272e6fc3d606cb8dbe0ed1c45fe4
+ms.sourcegitcommit: a7cced90c482498b5f5af424165f8dcf77b79b75
+ms.openlocfilehash: e3694f80d6148abbce004bb0c7143bf394b313d9
 
 
 ---
 
 # Opis usługi Microsoft Intune
 
-Usługa Microsoft Intune jest usługą opartą na chmurze, która ułatwia zarządzanie komputerami z systemem Windows oraz urządzeniami przenośnymi z systemami iOS, Mac OS X, Android i Windows. Usługa Intune pomaga również w ochronie danych i aplikacji firmy. Można korzystać z samej usługi Intune lub zintegrować ją z programem System Center 2012 R2 Configuration Manager, aby rozszerzyć możliwości zarządzania.
+Usługa Microsoft Intune jest usługą opartą na chmurze, która ułatwia zarządzanie komputerami z systemem Windows oraz urządzeniami przenośnymi z systemami iOS, Mac OS X, Android i Windows. Usługa Intune pomaga również w ochronie danych i aplikacji firmy. Można korzystać z samej usługi Intune lub zintegrować ją z programem System Center Configuration Manager, aby rozszerzyć możliwości zarządzania. 
 
 Firma Microsoft oferuje dla usługi Intune asystę przy dołączaniu w przypadku zakupu kwalifikujących się usług z odpowiednimi planami. Asysta umożliwia zdalną współpracę ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Aby uzyskać więcej informacji, zobacz [Opis wprowadzenia do korzystania z usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
 
@@ -32,18 +32,18 @@ Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej
 
 Aby uzyskać listę ustawień, które można skonfigurować na urządzeniach przenośnych, zobacz:
 
--   [Możliwości zarządzania urządzeniami przenośnymi w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
+-   [Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune) 
 
--   [Ogólne ustawienia dla urządzeń przenośnych w programie Configuration Manager](https://technet.microsoft.com/library/dn376523.aspx)
+-   [Hybrydowe zarządzanie urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx) 
 
-Aby uzyskać informacje na temat programu System Center 2012 R2 Configuration Manager, skorzystaj z [biblioteki dokumentacji programu System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).
+Aby uzyskać informacje na temat programu System Center Configuration Manager, skorzystaj z [dokumentacji programu System Center Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx).
 
 ## Omówienie skutków aktualizacji usługi Intune
 Ponieważ usługa Intune jest usługą online, firma Microsoft może ją regularnie aktualizować.
 
 Informacje w tym temacie mają na celu ułatwienie zrozumienia częstotliwości aktualizacji tej usługi oraz powiadomień przekazywanych z wyprzedzeniem w sytuacji, gdy aktualizacja może mieć wpływ na korzystanie z usługi.
 
-Aby dowiedzieć się więcej o zmianach wprowadzonych w usłudze Intune, zobacz [Co nowego w usłudze Microsoft Intune](/intune/deploy-use/Whats-new-in-microsoft-intune.md). [Blog usługi Microsoft Intune](http://blogs.technet.com/b/microsoftintune/) również zawiera omówienie zmian w usłudze, a także przydatne porady umożliwiające najefektywniejsze korzystanie z usługi Intune.
+Aby dowiedzieć się więcej o zmianach wprowadzonych w usłudze Intune, zobacz [Co nowego w usłudze Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune). [Blog usługi Microsoft Intune](http://blogs.technet.com/b/microsoftintune/) również zawiera omówienie zmian w usłudze, a także przydatne porady umożliwiające najefektywniejsze korzystanie z usługi Intune. 
 
 Ponadto informacje o ważnych aktualizacjach usługi będą umieszczane w Centrum wiadomości [portalu usługi Office 365](https://portal.office.com/Admin/Default.aspx). Jeśli zainstalujesz towarzyszącą [aplikację mobilną Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), możesz otrzymywać powiadomienia na urządzeniu przenośnym.
 
@@ -65,7 +65,7 @@ Usługę Intune możesz skonfigurować na kilka sposobów, aby zarządzać urzą
 
 -   **Autonomiczna konfiguracja usługi Intune.** Do zarządzania urządzeniami w organizacji używana jest konsola administracyjna usługi Intune bazująca na sieci Web. Usługi Intune można używać bez żadnej lokalnej infrastruktury IT, ale jeśli używasz usługi Intune z Usługami domenowymi Active Directory, możesz użyć kont użytkowników domeny, którymi zarządzasz za pomocą usług domenowych w usłudze Intune.
 
--   **Usługa Intune z programem System Center Configuration Manager.** Do zarządzania komputerami i urządzeniami przenośnymi w przedsiębiorstwie używana jest konsola zarządzania programu Configuration Manager. Ta konfiguracja może ułatwić zarządzanie wszystkimi urządzeniami w organizacji za pomocą jednej konsoli — konsoli administracyjnej programu Configuration Manager. Program Configuration Manager może obsługiwać bardzo dużą liczbę urządzeń przenośnych, serwerów i komputerów. Aby uzyskać więcej informacji, zobacz artykuł [Zarządzanie urządzeniami przenośnymi przy użyciu programu Configuration Manager i usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=271118) w [bibliotece dokumentacji programu System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  Aby uzyskać dodatkową pomoc przy wyborze odpowiedniego rozwiązania, zobacz [Wybór między autonomicznym a hybrydowym zarządzaniem urządzeniami przenośnymi za pomocą programu Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/en-us/library/mt706478.aspx).
+-   **Usługa Intune z programem System Center Configuration Manager.** Do zarządzania komputerami i urządzeniami przenośnymi w przedsiębiorstwie używana jest konsola zarządzania programu Configuration Manager. Ta konfiguracja może ułatwić zarządzanie wszystkimi urządzeniami w organizacji za pomocą jednej konsoli — konsoli administracyjnej programu Configuration Manager. Program Configuration Manager może obsługiwać bardzo dużą liczbę urządzeń przenośnych, serwerów i komputerów. Aby uzyskać więcej informacji, zobacz [Hybrydowe zarządzanie urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx).  Aby uzyskać dodatkową pomoc przy wyborze odpowiedniego rozwiązania, zobacz [Wybór między autonomicznym a hybrydowym zarządzaniem urządzeniami przenośnymi za pomocą programu Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/en-us/library/mt706478.aspx). 
 
 
 ## Więcej informacji o usłudze Intune
@@ -73,7 +73,7 @@ Dzięki tym zasobom można dowiedzieć się więcej o usłudze Intune:
 
 -   [Centrum zaufania usługi Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) dostarcza informacje na temat praktyk w zakresie zabezpieczeń, ochrony prywatności i zgodności w usłudze Intune oraz opis niektórych z certyfikatów usługi Intune.
 
--   [Możliwości zarządzania urządzeniami przenośnymi w usłudze Microsoft Intune](/intune/understand-explore/mobile-device-management-capabilities-in-microsoft-intune)
+-   [Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune) 
 
 ### Zobacz także
 [Microsoft Intune](https://docs.microsoft.com/intune/)
@@ -83,6 +83,6 @@ Dzięki tym zasobom można dowiedzieć się więcej o usłudze Intune:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
