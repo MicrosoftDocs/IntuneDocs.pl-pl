@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bf8da72092a2380e73cfbed2a693831706b40d23
-ms.openlocfilehash: c005a1b38289580b1543e0e62cbb4cd00cb22c47
+ms.sourcegitcommit: b7f11f752f6c38736a2dfa5875050f50bd86bae4
+ms.openlocfilehash: 14e43dadc0d7bc20238ec87447f311fdc864d891
 
 
 
@@ -55,12 +55,19 @@ Należy pamiętać o kropce na początku.
 4. Wybierz **OK**, zapisz, a następnie wdróż zasady.
 
     > [!NOTE]
-Te zasady można wdrożyć tylko dla grup użytkowników.
+    > Te zasady można wdrożyć tylko dla grup użytkowników.
 
 Zasady zostaną zastosowane po następnym zaewidencjonowaniu urządzenia, a profil sieci Wi-Fi zostanie utworzony na urządzeniu. Urządzenie będzie mogło automatycznie łączyć się z siecią.
 ## Profil sieci Wi-Fi systemu Android lub Windows
 
 Przykładowy kod XML dla profilu sieci Wi-Fi systemu Android lub Windows:
+
+> [!IMPORTANT]
+> 
+> `<protected>false</protected>`musi mieć ustawioną wartość **false**, ponieważ wartość **true** może spowodować, że urządzenie będzie oczekiwać zaszyfrowanego hasła i spróbuje je odszyfrować, co z kolei może skutkować tym, że połączenie nie zostanie nawiązane.
+> 
+>  `<hex>53534944</hex>` musi mieć ustawioną wartość szesnastkową `<name><SSID of wifi profile></name>`.
+>  Urządzenia z systemem Windows 10 mogą zwracać fałszywy błąd *0x87D1FDE8 Korygowanie nie powiodło się*, ale nadal będą aprowizowane z profilem.
 
     <!--
     <Name of wifi profile> = Name of profile
@@ -70,6 +77,7 @@ Przykładowy kod XML dla profilu sieci Wi-Fi systemu Android lub Windows:
     <Type of encryption> = Type of encryption used by the network
     <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
     <password> = Password to connect to the network
+    <hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
     -->
     <WLANProfile
     xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -207,6 +215,6 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -2,9 +2,9 @@
 title: Co nowego | Microsoft Intune
 description: "Sprawdź nowości w tym miesiącu i poprzednich wersjach usługi Microsoft Intune"
 keywords: 
-author: Lindavr
+author: barlanmsft
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 03a5dd14b854fedf7e2cb5b949580960a0eab9de
-ms.openlocfilehash: 1d09e5a0adb3ecfa8f2d64f668ea7ff16bdf31fa
+ms.sourcegitcommit: 5b3256852431efb83fb2cc9fa067dd3f4a68a050
+ms.openlocfilehash: cef0a26204a22c95d2b639500246e435fcf7f9f7
 
 
 ---
@@ -72,6 +72,11 @@ W przypadku użytkowników końcowych korzystających z niezgodnych urządzeń z
 Na stronie głównej Portalu firmy dla systemu Android dodano nową ikonę Powiadomienia. Naciśnięcie tej ikony powoduje przejście na stronę Powiadomienia — przedstawia ona użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. W aplikacji Portal firmy dla systemu iOS obszar powiadomień jest już dostępny. W wyniku wprowadzenia strony Powiadomienia nie będzie widoczna strona Konfigurowanie dostępu do zasobów firmy po uruchomieniu lub wznowieniu pracy w Portalu firmy, jeśli urządzenie zostało już zarejestrowane. W przypadku tworzenia własnych wskazówek dla użytkowników końcowych warto zaktualizować dokumentację, tak aby uwzględniała tę zmianę. Zaktualizowane zrzuty ekranu można znaleźć [tutaj](https://aka.ms/androidcpupdate).  
 <!---TFS 1095560--->
 
+**Przekazywanie opinii w Portalu firmy dla systemu Android**</br>
+Do menu Portalu firmy dla systemu Android został dodany nowy element. Po naciśnięciu pozycji **Pomoc i opinie** dostępne są trzy akcje:
+* Skorzystaj z pozycji **Uzyskaj pomoc**, aby zgłosić problemy z Portalem firmy do działu IT. Spowoduje to utworzenie wiadomości e-mail przy użyciu klienta poczty e-mail i dołączenie do niej dzienników Portalu firmy. Pozycja **Uzyskaj Pomoc** zastępuje funkcję **Wyślij dane** na stronie **Ustawienia**.
+* Skorzystaj z pozycji **Zgłoś opinię**, aby przekazać opinię do zespołu Portalu firmy.
+* Skorzystaj z pozycji **Oceń naszą aplikację**, aby wystawić aplikacji Portal firmy ocenę lub recenzję w usłudze Google Play.
 
 ### iOS
 **Zmiany w obsłudze aplikacji Portal firmy dla systemu iOS**<br/>
@@ -88,7 +93,7 @@ Zaktualizowane zrzuty ekranu można znaleźć [tutaj](https://gallery.technet.mi
 <!---TFS 1317133--->
 
 **Wyświetlaj monit o instalację aplikacji Managed Browser dla systemu iOS, jeśli oprogramowanie IT Pro określiło taki wymóg dla aplikacji**<br/>
-Ustawienie składnika Web Clip w taki sposób, aby otwierał się tylko w zarządzanej przeglądarce w przypadku, gdy zarządzana przeglądarka nie została zainstalowana na urządzeniu, spowoduje, że aplikacja Portal firmy na urządzeniu wyświetli monit o zainstalowanie zarządzanej przeglądarki przed zainstalowaniem składnika Web Clip. 
+Ustawienie składnika Web Clip w taki sposób, aby otwierał się tylko w zarządzanej przeglądarce w przypadku, gdy zarządzana przeglądarka nie została zainstalowana na urządzeniu, spowoduje, że aplikacja Portal firmy na urządzeniu wyświetli monit o zainstalowanie zarządzanej przeglądarki przed zainstalowaniem składnika Web Clip.
 <!---TFS 1228570--->
 
 ### Windows
@@ -141,6 +146,6 @@ Aby zobaczyć funkcje wprowadzone w usłudze Intune w ostatnich sześciu miesią
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
