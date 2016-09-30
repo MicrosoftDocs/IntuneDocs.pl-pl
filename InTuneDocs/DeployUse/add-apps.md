@@ -13,8 +13,8 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 93c05ecd0154bb637f421dcc5d7ee56ff8d3ab2d
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: c4b1e5d3bb8b949096f7d15ddbbf0d1540485d0d
 
 
 ---
@@ -46,7 +46,7 @@ Aplikacje oparte na linkach zewnętrznych nie są przechowywane w magazynie w ch
 Zarządzane aplikacje systemu iOS umożliwiają zarządzanie bezpłatnymi aplikacjami ze sklepu App Store dla systemu iOS i ich wdrażanie. Zarządzane aplikacje systemu iOS można również wykorzystać do skojarzenia [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) ze [zgodnymi aplikacjami](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) i sprawdzać ich stan w konsoli administracyjnej.<br /><br />Zarządzane aplikacje dla systemu iOS nie są przechowywane w magazynie w chmurze usługi Intune.
 
 > [!TIP]
-> Opcje dla urządzeń przenośnych nie są dostępne, dopóki usługa Intune [nie zostanie ustawiona jako źródło MDM](get-ready-to-enroll-devices-in-microsoft-intune.md).
+> Opcje dla urządzeń przenośnych nie są dostępne, dopóki usługa Intune [nie zostanie ustawiona jako źródło MDM](prerequisites-for-enrollment.md).
 
 ## Wydawca oprogramowania usługi Intune
 Wydawca oprogramowania usługi Microsoft Intune jest uruchamiany podczas dodawania lub modyfikowania aplikacji w konsoli administratora usługi Intune. Wydawca umożliwia wybranie i skonfigurowanie typu instalatora oprogramowania, który:
@@ -82,6 +82,6 @@ Należy dodać aplikacje w konsoli usługi Intune przed ich wdrożeniem. Aplikac
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
