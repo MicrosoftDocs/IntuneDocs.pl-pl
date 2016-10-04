@@ -13,8 +13,8 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 182601f7e4a4bd38c70f7961188eb4af593f6107
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 4c72b39296c9c2f0fe435d57f1e829ba3114fc61
 
 
 ---
@@ -52,7 +52,7 @@ W [kroku 6](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) tego p
 
 Otwórz portal firmy na zarejestrowanym urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**.
 
-Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zobacz [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
+Aby dowiedzieć się więcej na temat zarządzania urządzeniami przenośnymi przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zobacz [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md).
 
 
 ### Następne kroki
@@ -64,6 +64,6 @@ Gratulacje! Ostatni krok *przewodnika Szybki start dotyczącego usługi Intune* 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

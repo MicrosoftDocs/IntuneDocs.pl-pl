@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
-ms.openlocfilehash: 2d8304964908986943c82ebed1dd7fd23b2c222e
+ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
+ms.openlocfilehash: ba7e7e19966ce3ad582c8a520b7c9174dba76bf5
 
 
 ---
@@ -32,14 +32,10 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 
 ![Diagram przedstawiający punkty decyzyjne, które określają, czy urządzenie ma mieć dostęp do usługi SharePoint, czy ma być blokowane ](../media/ConditionalAccess8-6.png)
 
->[!IMPORTANT]
->Dostęp warunkowy dla komputerów i urządzeń z systemem Windows 10 Mobile za pomocą aplikacji korzystających z nowoczesnego uwierzytelniania nie jest obecnie dostępny dla wszystkich klientów usługi Intune. Jeśli te funkcje są już używane, nie ma potrzeby podejmowania żadnych działań. Możesz nadal z nich korzystać.
-
->Jeśli dla komputerów PC i urządzeń z systemem Windows 10 Mobile nie utworzono zasad dostępu warunkowego do aplikacji korzystających z nowoczesnego uwierzytelniania, można to zrobić, rejestrując się w bazie użytkowników wersji zapoznawczej usługi Azure Active Directory, która obejmuje funkcję dostępu warunkowego opartego na urządzeniach dla urządzeń zarządzanych przez usługę Intune lub komputerów z systemem Windows przyłączonych do domeny. Aby dowiedzieć się więcej, przeczytaj [ten wpis w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi SharePoint Online konieczne jest:
 - Posiadanie **subskrypcji usługi SharePoint Online**; ponadto użytkownicy muszą mieć licencję na usługę SharePoint Online.
-- Posiadanie subskrypcji pakietu **Enterprise Mobility Suite** lub usługi **Azure Active Directory — wersja Premium**.
+- Posiadanie **subskrypcji usługi Azure Active Directory w wersji Premium**. Aby uzyskać więcej szczegółów, zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Subskrypcja pakietu Enterprise Mobility Suite + Security** obejmuje zarówno usługę Intune, jak i usługę Azure Active Directory w wersji Premium. Aby uzyskać więcej szczegółów, zobacz [cennik pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi:
 -   Zostać **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub na komputerze przyłączonym do domeny.
@@ -61,8 +57,9 @@ Jeśli warunek nie jest spełniony, użytkownik zobaczy podczas logowania jeden 
 
 >[!NOTE]
 >Po włączeniu dostępu warunkowego dla usługi SharePoint Online zaleca się wyłączenie domeny na liście zgodnie z opisem w temacie [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
+
 ## Obsługa urządzeń przenośnych
-- System iOS 7.1 lub nowszy
+- System iOS 8.0 i nowsze
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
 - System Windows Phone 8.1 lub nowszy
 
@@ -75,7 +72,9 @@ Można ograniczyć dostęp do usługi SharePoint Online w przypadku uzyskiwania 
 
 ## Obsługa komputerów
 - System Windows 8.1 lub nowszy (jeśli jest zarejestrowany w usłudze Intune)
-- System Windows 7.0 lub Windows 8.1 (jeśli jest przyłączony do domeny)
+- System Windows 7.0, Windows 8.1 lub Windows 10 (jeśli jest przyłączony do domeny)
+> [!NOTE]
+>Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
 
   - Komputery przyłączone do domeny muszą zostać skonfigurowane do [automatycznego rejestrowania](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory.
 Usługa AAD DRS zostanie automatycznie uaktywniona dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestrowania urządzeń usług AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
@@ -122,6 +121,10 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
 #### <a name="bkmk_spopolicy"></a>
 
+>[!NOTE]
+> Zasady dostępu warunkowego można też utworzyć za pomocą konsoli zarządzania usługi Azure AD. Konsola zarządzania usługi Azure AD umożliwia tworzenie zasad dostępu warunkowego urządzeń w usłudze Intune (nazywanych w usłudze Azure AD **zasadami dostępu warunkowego opartymi na urządzeniach**) oraz innych zasad dostępu warunkowego, takich jak uwierzytelnianie wieloskładnikowe.  Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm, takich jak Salesforce i Box obsługiwanych przez usługę Azure AD. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+
+
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi SharePoint Online**.
 ![Zrzut ekranu przedstawiający stronę zasad usługi SharePoint Online](../media/mdm-ca-spo-policy-configuration.png)
 
@@ -136,8 +139,6 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
         Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy.  W przypadku wszystkich platform będzie wymagana rejestracja w usłudze Intune i zgodność, z następującymi wyjątkami:
         *   Urządzenia z systemem Windows będą musiały zostać zarejestrowane i być zgodne, przyłączone do domeny w lokalnej usłudze Active Directory, lub spełniać oba te wymogi
         * Nieobsługiwane platformy takie jak Mac.  Jednak aplikacje korzystające z nowoczesnego uwierzytelniania pochodzące z tych platform nadal będą zablokowane.
-        >[!TIP]
-        >Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji na temat sposobu uzyskania dostępu do tej funkcji można znaleźć [w tym wpisie w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Określone platformy**
 
@@ -192,6 +193,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

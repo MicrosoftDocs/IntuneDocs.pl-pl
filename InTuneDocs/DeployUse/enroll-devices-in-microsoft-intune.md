@@ -4,7 +4,7 @@ description: "Usługa zarządzania urządzeniami przenośnymi (MDM) używa funkc
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 09/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,79 +13,63 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a7a0f834df939432910e32e6e635a70f021b37a9
-ms.openlocfilehash: 63405b43609eda515656ad397c5c7ff4253a8167
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 145d373edd65d7ba01c696c3b851692a13831dad
 
 
 ---
 
 # Rejestrowanie urządzeń do zarządzania w usłudze Intune
-Usługa zarządzania urządzeniami przenośnymi Microsoft Intune (MDM) używa rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów. Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. W scenariuszach opartych na strategii „przynieś własne urządzenie” (BYOD) i urządzeniach należących do firmy (COD) wymaga się procesu rejestracji urządzeń. Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać lżejszych metod zarządzania, w których nie wymaga się rejestracji urządzeń. Za pomocą oprogramowania klienckiego usługi Intune można również zarządzać komputerami z systemem Windows.
+Rejestrowanie urządzeń, w tym komputerów z systemem Windows, pozwala na zarządzanie urządzeniami przenośnymi (MDM) w usłudze Microsoft Intune. W tym temacie opisano różne sposoby rejestrowania urządzeń przenośnych do zarządzania w usłudze Intune. Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. Metoda rejestracji „Przynieś własne urządzenie” (BYOD) umożliwia użytkownikom rejestrowanie swoich osobistych telefonów, tabletów lub komputerów. Rejestrowanie urządzenia należącego do firmy (COD) umożliwia korzystanie ze scenariuszy zarządzania, takich jak zdalne czyszczenie danych, urządzenia współużytkowane, koligacja użytkownika w ramach urządzenia.
 
-Zobacz [informacje na temat rejestrowania urządzeń](/intune/get-started/choose-how-to-enroll-devices1), aby uzyskać pomoc.
-
-###  Obsługiwane platformy urządzeń
-
-Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
-
-[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
-
-## Ustawianie urzędu zarządzania urządzeniami przenośnymi
-Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
-
->[!IMPORTANT]
-> Starannie rozważ, czy chcesz zarządzać urządzeniami przenośnymi za pomocą samej usługi Intune (usługa online) czy przy użyciu programu System Center Configuration Manager z usługą Intune (rozwiązanie oprogramowania lokalnego w połączeniu z usługą online). Po ustawieniu urzędu zarządzania urządzeniami przenośnymi tego urzędu nie będzie można zmienić.
-
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**.
-
-2.  Na liście **Zadania** kliknij pozycję **Ustaw urząd zarządzania urządzeniami przenośnymi**. Zostanie otwarte okno dialogowe **Ustawianie urzędu zarządzania urządzeniami przenośnymi** .
-
-    ![Okno dialogowe Ustawianie urzędu MDM](../media/intune-mdm-authority.png)
-
-3.  Usługa Intune zażąda potwierdzenia zamiaru ustawienia usługi Intune jako urzędu zarządzania urządzeniami przenośnymi. Zaznacz pole wyboru, a następnie wybierz przycisk **Tak**, aby zarządzać urządzeniami przenośnymi przy użyciu usługi Microsoft Intune.
-
-## Konfigurowanie portalu firmy usługi Intune
-
-Portal firmy usługi Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT.
-
-> [!TIP]
-> Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy.
-
-Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. Aby wykonać to zadanie, wystarczy zalogować się do [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) jako administrator dzierżawy lub usługi, wybrać pozycje **Administrator** &gt; **Portal firmy**, a następnie skonfigurować ustawienia portalu firmy.
-
-![Ustawienia portalu firmy w obszarze roboczym Administrator konsoli administracyjnej](../media/cp_sa_cpsetup.PNG)
+Organizacje korzystające z programu [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune) (lokalnie lub w chmurze) mogą używać prostszych metod zarządzania usługi Intune, w których nie jest wymagana rejestracja urządzeń. Za pomocą [oprogramowania klienckiego usługi Intune](#manage-windows-pcs-with-intune) można również zarządzać komputerami z systemem Windows.
 
 ## Przegląd metod rejestracji urządzeń
 
-W poniższej tabeli przedstawiono metody rejestracji urządzeń firmowych oraz ich zalety.
+W poniższej tabeli przedstawiono metody rejestracji w usłudze Intune wraz z funkcjami przez nie obsługiwanymi. Te funkcje obejmują:
+- **Czyszczenie danych** — powoduje zresetowanie urządzenia do ustawień fabrycznych i usunięcie wszystkich danych. [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md)
+- **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices)
+- **Zablokuj** Uniemożliwia użytkownikom usunięcie urządzenia z zarządzania. Urządzenia z systemem iOS wymagają trybu nadzorcy w celu dokonania blokady. [Zdalne blokowanie](retire-devices-from-microsoft-intune-management.md#block-access-a-device)
 
 **Metody rejestracji urządzeń z systemem iOS**
 
-| **Metoda** |  **[Czyszczenie danych](#Wipe)** | **[Koligacja](#Affinity)**   |   **[Zablokowana](#Lock)** |
-|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#BYOD)** | Nie|    Tak |   Nie |
-|**[Menedżer rejestracji urządzeń](#DEM)**|   Nie |Nie |Nie  |
-|**[Program Device Enrollment Program](#DEP)**|   Tak |   Opt |   Opt|
-|**[USB-SA](#USB-SA)**| Tak |   Opt |   Nie|
-|**[USB-Direct](#USB-Direct)**| Nie |    Nie  | Nie|
+| **Metoda** |  **Czyszczenie danych** |  **Koligacja**    |   **Zablokuj** | **Szczegóły** |
+|:---:|:---:|:---:|:---:|:---:|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [więcej](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  | [więcej](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[Program Device Enrollment Program](#dep)**|   Tak |   Opcjonalne |  Opcjonalne|[więcej](ios-device-enrollment-program-in-microsoft-intune.md)|
+|**[USB-SA](#usb-sa)**| Tak |   Opcjonalne |  Nie| [więcej](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
+|**[USB-Direct](#usb-direct)**| Nie |    Nie  | Nie|[więcej](ios-direct-enrollment-in-microsoft-intune.md)|
 
-**Metody rejestracji urządzeń z systemami Windows i Android**
+**Metody rejestracji systemu Windows**
 
-| **Metoda** |  **[Czyszczenie danych](#Wipe)** | **[Koligacja](#Affinity)**   |   **[Zablokowana](#Lock)** |
-|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#BYOD)** | Nie|    Tak |   Nie |
-|**[Menedżer rejestracji urządzeń](#DEM)**|   Nie |Nie |Nie  |
+| **Metoda** |  **Czyszczenie danych** |  **Koligacja**    |   **Zablokuj** | **Szczegóły**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|   Tak |   Nie | [więcej](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[więcej](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
-**Metody rejestracji dla urządzeń**
+**Metody rejestracji systemu Android**
 
-### „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)
-„Przynieś własne urządzenie”. Użytkownicy instalują aplikację Portal firmy i rejestrują swoje urządzenia. Zarejestrowanie urządzenia w portalu firmy spowoduje dołączenie urządzenia do miejsca pracy. Zarejestrowanie urządzeń z systemem iOS w portalu firmy wymaga identyfikatora firmy Apple. Urządzenia BYOD nie wymagają dodatkowej konfiguracji w przypadku urządzeń firmowych. Zobacz kroki [konfigurowania zarządzania urządzeniami](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
+| **Metoda** |  **Czyszczenie danych** |  **Koligacja**    |   **Zablokuj** | **Szczegóły**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [więcej](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[więcej](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+
+W dobraniu odpowiedniej metody rejestrowania pomogą pytania znajdujące się w temacie [Wybieranie metody rejestrowania urządzeń](/intune/get-started/choose-how-to-enroll-devices1).
+
+## „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)
+Użytkownicy korzystający z metody „Przynieś własne urządzenie” instalują aplikację Portal firmy i rejestrują swoje urządzenie. Może to umożliwić użytkownikom nawiązanie połączenia z siecią firmową, dołączenie do domeny lub usługi Azure Active Directory. Włączenie rejestracji typu „Przynieś własne urządzenie” (BYOD) jest wymagane przez większość platform w wielu scenariuszach dotyczących urządzeń należących do firmy (COD). Zobacz temat [Prerequisites for device enrollment](prerequisites-for-enrollment.md) (Wymagania wstępne dotyczące rejestracji urządzeń). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
+
+## Urządzenia należące do firmy
+Urządzeniami należącymi do firmy (COD) można zarządzać za pomocą konsoli usługi Intune. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi dostarczonych przez firmę Apple. Wszystkie typy urządzeń mogą być rejestrowane przez administratora lub menedżera za pomocą menedżera rejestracji urządzeń. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy, umożliwiając korzystanie ze scenariuszy COD.
+
+[Rejestrowanie urządzeń należących do firmy](manage-corporate-owned-devices.md)
 
 ### Menedżer rejestracji urządzeń
-Menedżer rejestracji urządzeń. Administrator tworzy konta menedżera rejestracji urządzeń w celu zarządzania urządzeniami należącymi do firmy. Menedżerowie mogą wtedy zainstalować portal firmy i zarejestrować wiele urządzeń bez użytkowników. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
+Menedżer rejestracji urządzeń to specjalne konto usługi Intune używane do rejestrowania i zarządzania wieloma urządzeniami należącymi do firmy. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
 
 ### Program Device Enrollment Program
-Program Device Enrollment Program firmy Apple. Administrator tworzy i wdraża zasady bezprzewodowo na należących do firmy urządzeniach z systemem iOS zakupionych i zarządzanych w ramach programu DEP. Gdy użytkownik uruchomi asystenta ustawień systemu iOS, urządzenie zostanie zarejestrowane. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
+Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i wdrażanie zasad „bez udziału użytkownika” w urządzeniach z systemem iOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień systemu iOS. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
   - Rejestrację zablokowaną
   - Dostęp warunkowy
   - Wykrywanie zdjęcia zabezpieczeń systemu
@@ -104,34 +88,6 @@ Dowiedz się więcej o [rejestracji za pomocą asystenta ustawień przy użyciu 
 ### USB-Direct
 Rejestracja bezpośrednia. Administrator tworzy zasady usługi Intune i eksportuje je do programu Apple Configurator. Połączone urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności resetowania do ustawień fabrycznych. Administrator musi ręcznie zarejestrować każde urządzenie. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu i zarządzania aplikacjami mobilnymi. Dowiedz się więcej o [rejestracji bezpośredniej przy użyciu programu Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
 
-**Zachowanie dla firmowych urządzeń przenośnych**
-
-### Czyszczenie danych
-Określa, czy zarejestrowanie urządzenia wymaga zresetowania do ustawień fabrycznych, co oznacza usunięcie wszystkich danych z urządzenia i przywrócenie go do stanu pierwotnego.
-[Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md) ([Powrót do tabeli](#overview-of-device-enrollment-methods))
-
-### Koligacja
-Określa, czy metoda rejestracji obsługuje koligację użytkownika, która łączy urządzenie z określonym użytkownikiem. Urządzenia typu „Opt” można zarejestrować z zastosowaniem koligacji lub bez niej. Koligacja użytkownika jest wymagana do obsługi:
-  - Aplikacji do zarządzania aplikacjami mobilnymi
-  - Warunkowego dostępu do poczty e-mail i danych firmowych
-  - Aplikacji Portal firmy
-
-[Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices) ([Powrót do tabeli](#overview-of-device-enrollment-methods))
-
-### Zablokuj
-Określa, czy urządzenie można zablokować, aby uniemożliwić użytkownikowi usunięcie zasad usługi Intune, co powoduje wykluczenie urządzenia z zarządzania. Dla urządzeń z systemem iOS zablokowanie urządzenia wymaga, aby było ono w trybie nadzorcy.
-([Powrót do tabeli](#overview-of-device-enrollment-methods))
-
-## Włączanie rejestracji urządzeń  
- Rejestracja umożliwia użytkownikom uzyskiwanie dostępu do zasobów firmowych na swoich urządzeniach osobistych. Dzięki niej administrator może upewnić się, że urządzenia są zgodne z zasadami chroniącymi zasoby firmowe. Jest to najlepszy sposób na skorzystanie ze strategii „przynieś własne urządzenie” z usługą Intune. Administrator musi włączyć rejestrację w konsoli usługi Intune. Może to wymagać utworzenia zaufanej relacji z urządzeniem i przypisania licencji do użytkowników. Następnie urządzenie jest rejestrowane, zazwyczaj przez użytkowników, którzy muszą wprowadzić poświadczenia służbowe. Urządzenie otrzymuje zasady z usługi Intune i uzyskuje dostęp do zasobów.
-
-[Przygotowanie do rejestracji urządzeń w usłudze Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
-
-## Rejestrowanie urządzeń należących do firmy
-Urządzeniami należącymi do firmy (COD) można zarządzać za pomocą konsoli usługi Intune. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi dostarczonych przez firmę Apple. Wszystkie typy urządzeń mogą być rejestrowane przez administratora lub menedżera za pomocą menedżera rejestracji urządzeń. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy, umożliwiając korzystanie ze scenariuszy COD.
-
-[Rejestrowanie urządzeń należących do firmy](manage-corporate-owned-devices.md)
-
 ## Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Intune
 Urządzeniami przenośnymi, które nie są zarejestrowane, ale są połączone z programem Exchange ActiveSync (EAS), można zarządzać za pomocą usługi Intune, korzystając z zasad EAS MDM. Usługa Intune używa łącznika Exchange Connector do komunikowania się z programem EAS (lokalnym lub hostowanym w chmurze).
 
@@ -139,18 +95,29 @@ Urządzeniami przenośnymi, które nie są zarejestrowane, ale są połączone z
 
 
 ## Zarządzanie komputerami z systemem Windows przy użyciu usługi Intune  
-Usługa Microsoft Intune umożliwia również zarządzanie komputerami z system Windows za pomocą komputerowego oprogramowania klienckiego usługi Intune dla systemu Windows. Komputery z systemem Windows zarządzane za pomocą klienta usługi Intune mogą:
+Usługa Microsoft Intune umożliwia również zarządzanie komputerami z systemem Windows za pomocą oprogramowania klienckiego usługi Intune. Komputery z systemem Windows zarządzane za pomocą klienta usługi Intune mogą:
 
  - Zgłaszać spisy sprzętu i oprogramowania.
  - Instalować aplikacje komputerowe (np. pliki .exe i .msi).
  - Ustawienia zapory
 
-Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą być wybiórczo wyczyszczone lub wycofane. Ponadto nie mogą korzystać z wielu funkcji zarządzania usługi Intune, np. dostępu warunkowego, ustawień połączenia VPN i Wi-Fi lub wdrażania certyfikatów i konfiguracji poczty e-mail.
+Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą być wyczyszczone i nie mogą korzystać z wielu funkcji zarządzania w usłudze Intune, takich jak dostęp warunkowy, ustawienia sieci VPN i Wi-Fi, wdrażanie certyfikatów i konfiguracja poczty e-mail.
 
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Intune](manage-windows-pcs-with-microsoft-intune.md)
 
+##  Obsługiwane platformy urządzeń
+
+Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
+
+[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
+
+## Następne kroki
+- [Wymagania wstępne dotyczące rejestracji urządzeń](prerequisites-for-enrollment.md)
+- [Zarządzanie urządzeniami należącymi do firmy](manage-corporate-owned-devices.md)
+- [Obsługiwane urządzenia przenośne i komputery](../get-started/supported-mobile-devices-and-computers.md)
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Sep16_HO4-->
 
 

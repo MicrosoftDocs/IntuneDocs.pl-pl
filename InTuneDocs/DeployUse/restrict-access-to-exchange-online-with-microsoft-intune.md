@@ -4,7 +4,7 @@ description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Ex
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 06/16/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
-ms.openlocfilehash: 9e2b16a2ea16417864b82f4b025053d9c87fcb14
+ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
+ms.openlocfilehash: ee57650e1613030b4b22963890cf648b514e0db3
 
 
 ---
@@ -26,14 +26,12 @@ Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sp
 Aby kontrolować dostęp poczty e-mail do usługi Exchange Online lub do nowego środowiska usługi Exchange Online w wersji dedykowanej, skonfiguruj dostęp warunkowy dla usługi Exchange Online w usłudze Intune.
 Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
->[!IMPORTANT]
->Dostęp warunkowy dla komputerów i urządzeń z systemem Windows 10 Mobile za pomocą aplikacji korzystających z nowoczesnego uwierzytelniania nie jest obecnie dostępny dla wszystkich klientów usługi Intune. Jeśli te funkcje są już używane, nie ma potrzeby podejmowania żadnych działań. Możesz nadal z nich korzystać.
-
->Jeśli dla komputerów PC i urządzeń z systemem Windows 10 Mobile nie utworzono zasad dostępu warunkowego do aplikacji korzystających z nowoczesnego uwierzytelniania, można to zrobić, rejestrując się w bazie użytkowników wersji zapoznawczej usługi Azure Active Directory, która obejmuje funkcję dostępu warunkowego opartego na urządzeniach dla urządzeń zarządzanych przez usługę Intune lub komputerów z systemem Windows przyłączonych do domeny. Aby dowiedzieć się więcej, przeczytaj [ten wpis w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).  
 
 **Przed** skonfigurowaniem dostępu warunkowego należy:
 
 -   Mieć **subskrypcję usługi Office 365 obejmującą usługę Exchange Online (na przykład E3)**, a użytkownicy muszą mieć licencję na usługę Exchange Online.
+
+- Posiadanie **subskrypcji usługi Azure Active Directory w wersji Premium**. Aby uzyskać więcej szczegółów, zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Subskrypcja pakietu Enterprise Mobility Suite** obejmuje zarówno usługę Intune, jak i usługę Azure Active Directory w wersji Premium. Aby uzyskać więcej szczegółów, zobacz [cennik pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
 
 -  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Microsoft Intune**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z usługą Microsoft Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
 
@@ -67,7 +65,7 @@ Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu w
 Możliwe jest ograniczenie dostępu do usługi Exchange Online z poziomu programu **Outlook** i innych **aplikacji używających nowoczesnego uwierzytelniania**:
 
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
-- System iOS 7.1 lub nowszy
+- System iOS 8.0 i nowsze
 - System Windows Phone 8.1 lub nowszy
 
 **Nowoczesne uwierzytelnianie** umożliwia klientom pakietu Microsoft Office logowanie się przy użyciu biblioteki uwierzytelniania usługi Active Directory (ADAL).
@@ -84,16 +82,14 @@ Można ograniczyć dostęp do usługi **Outlook Web Access (OWA)** w usłudze Ex
 
 **Nieobsługiwane przeglądarki będą blokowane**.
 
-Aplikacje OWA dla systemów iOS i Android nie są obsługiwane.  Powinny być one zablokowane za pomocą reguł oświadczeń usług ADFS.
-
-
+**Aplikacja OWA dla systemów iOS i Android może zostać zmodyfikowana, aby nie korzystała z nowoczesnego uwierzytelniania, i nie jest obsługiwana.  Dostęp z poziomu aplikacji OWA musi zostać zablokowany za pomocą reguł oświadczeń usług ADFS.**
 
 
 Możesz ograniczyć dostęp do poczty e-mail programu Exchange z poziomu wbudowanego **klienta poczty e-mail programu Exchange ActiveSync** na następujących platformach:
 
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
 
-- System iOS 7.1 lub nowszy
+- System iOS 8.0 i nowsze
 
 - System Windows Phone 8.1 lub nowszy
 
@@ -101,14 +97,18 @@ Możesz ograniczyć dostęp do poczty e-mail programu Exchange z poziomu wbudowa
 
 Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznymi pakietu Office, aby uzyskiwać dostęp do usług **Exchange Online** i **SharePoint Online** na komputerach spełniających następujące wymagania:
 
--   Na komputerze musi działać system Windows 7.0 lub Windows 8.1.
+-   Na komputerze musi działać system Windows 7.0, Windows 8.1 lub Windows 10.
 
--   Komputer musi zostać przyłączony do domeny lub być zgodny z regułami zasad zgodności.
+  >[!NOTE]
+  > Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
 
-    W celu zapewnienia zgodności komputer musi zostać zarejestrowany w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i być zgodny z zasadami.
+  Komputer musi zostać przyłączony do domeny lub być zgodny z regułami zasad zgodności.
 
-    W przypadku komputerów przyłączonych do domeny musisz skonfigurować [automatyczne rejestrowanie urządzenia](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory.
-    >[!NOTE]
+  W celu zapewnienia zgodności komputer musi zostać zarejestrowany w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i być zgodny z zasadami.
+
+  W przypadku komputerów przyłączonych do domeny musisz skonfigurować [automatyczne rejestrowanie urządzenia](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory.
+
+  >[!NOTE]
     >Dostęp warunkowy nie jest obsługiwany na komputerach z oprogramowaniem klienckim usługi Intune.
 
 -   [Należy włączyć nowoczesne uwierzytelnianie usługi Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
@@ -177,6 +177,10 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 ### Krok 4. Konfigurowanie zasad dostępu warunkowego
 
+>[!NOTE]
+> Zasady dostępu warunkowego można też utworzyć za pomocą konsoli zarządzania usługi Azure AD. Konsola zarządzania usługi Azure AD umożliwia tworzenie zasad dostępu warunkowego urządzeń w usłudze Intune (nazywanych w usłudze Azure AD **zasadami dostępu warunkowego opartymi na urządzeniach**) oraz innych zasad dostępu warunkowego, takich jak uwierzytelnianie wieloskładnikowe.  Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm, takich jak Salesforce i Box obsługiwanych przez usługę Azure AD. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+
+
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Exchange Online**.
 ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online](../media/mdm-ca-exo-policy-configuration.png)
 
@@ -196,9 +200,6 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
         Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy.  W przypadku wszystkich platform będzie wymagana rejestracja w usłudze Intune i zgodność, z następującymi wyjątkami:
         *   Urządzenia z systemem Windows będą musiały zostać zarejestrowane i być zgodne, przyłączone do domeny w lokalnej usłudze Active Directory, lub spełniać oba te wymogi
         * Nieobsługiwane platformy takie jak system Mac OS.  Jednak aplikacje korzystające z nowoczesnego uwierzytelniania pochodzące z tych platform nadal będą zablokowane.
-
-        >[!TIP]
-           Ta opcja może nie być wyświetlana, jeśli nie jest jeszcze używany dostęp warunkowy dla komputerów.  Zamiast tego należy wtedy użyć pozycji **Określone platformy**. Dostęp warunkowy dla komputerów nie jest obecnie dostępny dla wszystkich klientów usługi Intune.   Więcej informacji na temat sposobu uzyskania dostępu do tej funkcji można znaleźć [w tym wpisie w blogu](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Określone platformy**
 
@@ -262,6 +263,6 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
