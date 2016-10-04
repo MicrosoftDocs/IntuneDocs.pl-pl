@@ -2,12 +2,13 @@
 # [Wprowadzenie](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 
+# [Co nowego](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Wdrażanie i użytkowanie](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ## [Przegląd cyklów życia urządzeń i aplikacji](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ### [Cykl wsparcia technicznego urządzenia](overview-of-device-lifecycle-in-microsoft-intune.md)
 ### [Cykl wsparcia technicznego aplikacji](overview-of-app-lifecycle-in-microsoft-intune.md)
 ## [Rejestrowanie urządzeń](enroll-devices-in-microsoft-intune.md)
-### [Przygotowanie do rejestracji urządzeń w usłudze Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### [Wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md)
 #### [Zarządzanie systemem iOS i komputerami Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
 #### [Zarządzanie w systemie Android](set-up-android-management-with-microsoft-intune.md)
 #### [Zarządzanie urządzeniami z systemem Windows ](set-up-windows-device-management-with-microsoft-intune.md)
@@ -103,7 +104,7 @@
 
 ### [Ograniczanie dostępu do sieci (Cisco ISE)](restrict-access-to-networks.md)
 ### [Ograniczanie dostępu do zasobów firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji](restrict-access-based-on-device-network-app-risk.md)
-#### [Konfigurowanie aplikacji Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+#### [Konfigurowanie w usłudze Lookout ochrony urządzenia przed zagrożeniami](set-up-your-subscription-with-lookout-mtp.md)
 #### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](enable-lookout-mtp-connection-in-intune.md)
 #### [Wdrażanie aplikacji Lookout for Work](configure-and-deploy-lookout-for-work-apps.md)
 #### [Włączanie ochrony urządzenia przed zagrożeniami w zasadach zgodności](enable-device-threat-protection-rule-in-compliance-policy.md)
@@ -134,15 +135,11 @@
 
 ## [Co mówić użytkownikom końcowym](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
-## [Migracja do usługi Intune](migrate-to-intune.md)
-
-## [Co nowego](whats-new-in-microsoft-intune.md)
-
 # [Tworzenie i dostosowywanie aplikacji](/intune/develop/intune-app-sdk)
 
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 5c522c12325925c45f47bc7b521e3d8aa87454f4
-ms.openlocfilehash: d4ffed6fa0a2380ebfc5c4cf9999233635a3469f
+ms.sourcegitcommit: dd08b2e454b14c82e1dd9704617b32ac86ff7790
+ms.openlocfilehash: 53a239f574c327be461663872545bda63ac4b7a5
 
 
 ---
@@ -39,9 +39,9 @@ Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zai
 
     ![Otwórz aplikację Lookout for Work i naciśnij pozycję Aktywuj](./media/lookout-activate-button-android.png)
 
-4. Naciśnij pozycję **Zaloguj się za pomocą konta służbowego**, a następnie podaj konto, przy użyciu którego uzyskujesz dostęp do służbowej poczty e-mail i plików.
+4. Naciśnij pozycję **Zaloguj się za pomocą usługi Azure Active Directory**, a następnie podaj konto, przy użyciu którego uzyskujesz dostęp do służbowej poczty e-mail i plików.
 
-    ![Zaloguj się przy użyciu konta służbowego](./media/lookout-sign-in-android.png)
+    ![Zaloguj się przy użyciu konta służbowego](./media/lookout-sign-in-azure-android.png)
 
 5. Wybierz konto, za pomocą którego uzyskujesz dostęp do służbowej poczty e-mail i plików, a następnie naciśnij pozycję **DODAJ KONTO**.
 
@@ -78,6 +78,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

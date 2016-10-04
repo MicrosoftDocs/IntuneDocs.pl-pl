@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb1648ab13d31a2ba1ab17615814be8dda8a08c
-ms.openlocfilehash: 9b063c1e6b1ff5dcab16fce958ede49303284b18
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 149508942b89b15308591e17723884add3ac78ae
 
 
 ---
@@ -32,7 +32,7 @@ Administrator usługi Intune może włączyć rejestrację i zarządzanie dla ko
 Można pozwolić, aby użytkownicy rejestrowali swoje urządzenia przez zainstalowanie aplikacji Portal firmy usługi Intune i zarejestrowanie urządzeń przy użyciu tej aplikacji. Utworzenie rekordu CNAME systemu DNS ułatwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera.
 
 1. **Konfigurowanie usługi Intune**<br>
-Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
+Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
 
 2. **Tworzenie rekordów CNAME** (opcjonalnie)<br>Utwórz rekordy zasobów **CNAME** systemu DNS dla domeny swojej firmy w celu uproszczenia rejestracji. Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, utworzenie rekordów CNAME ułatwia użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM, `https://manage.microsoft.com`.  Rekordy zasobów CNAME muszą zawierać następujące informacje:
 
@@ -60,10 +60,10 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
       - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-windows-device-with-intune.md)
 
 ### Zobacz także
-[Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 18614cc272323b8031c94b8e582f80aa5c06d9d3
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 07ed8c922d53169839bba50547f56bbc979d58ac
 
 
 ---
@@ -31,7 +31,7 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 |---------------|--------------------|
 |Systemy operacyjne|Usługa Intune obsługuje lokalny łącznik Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 SP2 (64 bity), Windows Server 2008 R2, Windows Server 2012 lub Windows Server 2012 R2.<br /><br />Łącznik nie jest obsługiwany w żadnej instalacji Server Core.|
 |Wersja programu Microsoft Exchange|Lokalny łącznik On-Premises Connector wymaga programu Microsoft Exchange 2010 z dodatkiem SP1 lub nowszej wersji albo starszej wersji środowiska usługi Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera **nową**, czy **starszą** konfigurację, skontaktuj się z menedżerem ds. klientów.|
-|Urząd zarządzania urządzeniami przenośnymi| [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority).|
+|Urząd zarządzania urządzeniami przenośnymi| [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#set-mobile-device-management-authority).|
 |Sprzęt|Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.|
 |Synchronizacja z usługą Active Directory|Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu dowolnego z łączników, należy [skonfigurować synchronizację usługi Active Directory](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
 |Dodatkowe oprogramowanie|Na komputerze, który będzie hostem łącznika, musi być zainstalowana pełna instalacja platformy Microsoft .NET Framework 4 i programu Windows PowerShell 2.0.|
@@ -131,6 +131,6 @@ Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchr
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

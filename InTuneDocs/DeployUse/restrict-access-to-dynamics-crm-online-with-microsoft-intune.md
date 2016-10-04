@@ -13,8 +13,8 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 875da922b311b06fa8a1eb8ba7207108684825d5
+ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
+ms.openlocfilehash: e82452abd00cf7a06ac501ed4e16bdab423697bd
 
 
 ---
@@ -25,6 +25,8 @@ Dostęp do usługi Microsoft Dynamics CRM Online na urządzeniach z systemem iOS
 * [Zasady dostępu warunkowego](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), w ramach których określane są warunki, które urządzenie musi spełniać w celu uzyskania dostępu do usługi.
 
 Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
+[!IMPORTANT] Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory Premium.  Aby dowiedzieć się więcej o usłudze Azure Active Directory w wersji Premium, zobacz [cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Subskrypcja pakietu Enterprise Mobility Suite** obejmuje zarówno usługę Intune, jak i usługę Azure Active Directory w wersji Premium. Aby uzyskać więcej szczegółów, zobacz [cennik pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
 
 Jeśli wybrany użytkownik próbuje użyć aplikacji Dynamics CRM na swoim urządzeniu, sprawdzane są następujące kwestie:
 
@@ -97,6 +99,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO5-->
 
 
