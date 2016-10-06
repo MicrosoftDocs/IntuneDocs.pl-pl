@@ -1,5 +1,5 @@
 Usług pomocniczych firmy Microsoft dotyczą ceny, warunki i zasady obowiązujące w chwili użycia usługi.
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 
