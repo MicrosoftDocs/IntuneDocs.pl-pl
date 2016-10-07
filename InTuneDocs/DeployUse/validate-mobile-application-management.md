@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9301f6297065f752cea1dd19024efb11f0730
-ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
+ms.sourcegitcommit: 0736b5f24065f55d8fbd312395e4bb7226ebf619
+ms.openlocfilehash: 5b6253d3d4c969b6947d83b5c8695a484f8c1d27
 
 
 ---
@@ -24,10 +24,10 @@ ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
 Ten temat zawiera informacje dotyczące sprawdzania występowania problemów po skonfigurowaniu zarządzania aplikacjami mobilnymi (MAM). Te wskazówki dotyczą zasad zarządzania aplikacjami mobilnymi w witrynie Azure Portal.
 
 ### Sprawdzanie pod kątem objawów
-Zgłaszanie problemów przez użytkowników nie jest prawdopodobne, ponieważ MAM to narzędzie ochrony danych. W przypadku problemu z konfiguracją zarządzania aplikacjami mobilnymi użytkownik będzie miał nieograniczony dostęp, taki jaki miałby bez stosowania funkcji MAM, i nie będzie świadomy, że wystąpił problem. Z tego powodu zaleca się zweryfikowanie konfiguracji zarządzania aplikacjami mobilnymi przez wprowadzenie ich pilotażowo dla małej grupy użytkowników, którzy będą mogli celowo przetestować ograniczenia MAM. 
+Zgłaszanie problemów przez użytkowników nie jest prawdopodobne, ponieważ MAM to narzędzie ochrony danych. W przypadku problemu z konfiguracją zarządzania aplikacjami mobilnymi użytkownik będzie miał nieograniczony dostęp, taki jaki miałby bez stosowania funkcji MAM, i nie będzie świadomy, że wystąpił problem. Z tego powodu zaleca się zweryfikowanie konfiguracji zarządzania aplikacjami mobilnymi przez wprowadzenie ich pilotażowo dla małej grupy użytkowników, którzy będą mogli celowo przetestować ograniczenia MAM.
 
 
-### Co należy sprawdzić 
+### Co należy sprawdzić
 
 Jeśli testowanie pokazuje, że zachowanie zasad zarządzania aplikacjami mobilnymi nie jest zgodne z przewidywanym, zaleca się sprawdzenie następujących kwestii:
 
@@ -40,7 +40,7 @@ Jeśli testowanie pokazuje, że zachowanie zasad zarządzania aplikacjami mobiln
 
 2. Wybierz użytkownika z listy lub wyszukaj i wybierz użytkownika, a następnie wybierz pozycję **Wybierz użytkownika**. W górnej części kolumny **Raportowanie aplikacji** zobaczysz, czy użytkownik ma licencję do zarządzania aplikacjami mobilnymi. Poniżej zobaczysz, czy użytkownik ma licencję usługi O365 i sprawdzisz stan aplikacji dla wszystkich urządzeń użytkownika.
 
-![Stan aplikacji dla zarządzania aplikacjami mobilnymi](..\media\ts-mam-use-apps.png) 
+![Stan aplikacji dla zarządzania aplikacjami mobilnymi](..\media\ts-mam-user-apps.png) 
 
 ### Co należy zrobić
 Poniżej przedstawiono akcje do wykonania na podstawie stanu użytkownika:
@@ -57,6 +57,6 @@ Poniżej przedstawiono akcje do wykonania na podstawie stanu użytkownika:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
