@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: baf87ad746a320784252966398bd665241209935
-ms.openlocfilehash: ba7e7e19966ce3ad582c8a520b7c9174dba76bf5
+ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
+ms.openlocfilehash: 76ac4c92d090ef0057bd7c9687b169cd12b901a1
 
 
 ---
@@ -35,7 +35,8 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi SharePoint Online konieczne jest:
 - Posiadanie **subskrypcji usługi SharePoint Online**; ponadto użytkownicy muszą mieć licencję na usługę SharePoint Online.
-- Posiadanie **subskrypcji usługi Azure Active Directory w wersji Premium**. Aby uzyskać więcej szczegółów, zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). **Subskrypcja pakietu Enterprise Mobility Suite + Security** obejmuje zarówno usługę Intune, jak i usługę Azure Active Directory w wersji Premium. Aby uzyskać więcej szczegółów, zobacz [cennik pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing).
+- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security lub usługi Azure Active Directory — wersja Premium** przy jednoczesnym posiadaniu przez użytkowników licencji na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi:
 -   Zostać **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub na komputerze przyłączonym do domeny.
@@ -193,6 +194,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
