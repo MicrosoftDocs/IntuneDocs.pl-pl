@@ -13,8 +13,8 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fbe37aa081f850224ce4ee76f66e154c6001c9c
-ms.openlocfilehash: 480a7a60b484f28b621c4c135713a65953f46f41
+ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
+ms.openlocfilehash: 27ab4a2e2f3e0273f452ef9d34cf458c9f2544b6
 
 
 ---
@@ -24,7 +24,9 @@ W tym temacie opisano sposób tworzenia grup w usłudze Intune. Temat zawiera ta
 
 >[!IMPORTANT]
 >
->Jeśli otworzysz obszar roboczy Grupy w portalu Intune i będzie widoczny link do portalu usługi Azure Active Directory (Azure AD), oznacza to, że używane jest już *nowe* podejście do grup zabezpieczeń usługi Azure AD służące do zarządzania grupami w usłudze Intune opisane w sekcji [Informacja o nadchodzących ulepszeniach środowiska pracy administratora dla grup](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Kliknij link do portalu usługi Azure AD, aby utworzyć grupy i zarządzać nimi. 
+>Jeśli otworzysz obszar roboczy Grupy w portalu Intune i będzie widoczny link do portalu usługi Azure Active Directory (Azure AD), oznacza to, że używane jest już *nowe* podejście do grup zabezpieczeń usługi Azure AD służące do zarządzania grupami w usłudze Intune opisane w sekcji [Informacja o nadchodzących ulepszeniach środowiska pracy administratora dla grup](#notice-of-upcoming-improvements-to-the-admin-experience-for-groups). Kliknij link do portalu usługi Azure AD, aby utworzyć grupy i zarządzać nimi.
+>
+>![Zrzut ekranu przedstawiający link do grupy zarządzania platformy Azure](../media/groups-link-azure.png) 
 >
 >Jeśli nie jest widoczny link do portalu usługi Azure AD, oznacza to, że nadal używane jest *bieżące* podejście do zarządzania grupami opisane w sekcji [Tworzenie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune) w tym temacie.
 
@@ -202,6 +204,6 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
