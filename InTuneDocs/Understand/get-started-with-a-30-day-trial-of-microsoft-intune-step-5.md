@@ -13,8 +13,8 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dc767abc733457d975b61b96e21781952f79c6f9
-ms.openlocfilehash: fb99e78261b678ef776f992d5abfd2ba0555d4da
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 7bd5f5d8f4931133a8ef1e697b2fec4cccd07b83
 
 
 ---
@@ -49,12 +49,6 @@ Zainstaluj aplikację **Portal firmy usługi Intune** firmy Microsoft Corporatio
 ### Windows Phone 8,1
 Użytkownicy instalują aplikację **Portal firmy** firmy Microsoft Corporation dostępną w Sklepie Windows Phone i logują się przy użyciu dodanych wcześniej poświadczeń użytkownika usługi Intune.  Wyświetl **zarejestrowane urządzenia** , aby dodać własne urządzenie.
 
- ### Windows Phone 8.0
- Użytkownicy klikają pozycję **ustawienia systemu** &gt; **aplikacje firmowe** i logują się przy użyciu dodanych wcześniej poświadczeń użytkownika usługi Intune. Aplikacja Portal firmy jest wdrażana na telefonie.
-
-Po wyświetleniu monitu o **adres serwera**wpisz „manage.microsoft.com”.
-
-
 ## Instalowanie wcześniej wdrożonej aplikacji
 Otwórz Portal firmy na urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację **Microsoft Skype**.
 
@@ -69,6 +63,6 @@ Gratulacje! Krok 5 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

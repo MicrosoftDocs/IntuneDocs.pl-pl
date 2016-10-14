@@ -4,7 +4,7 @@ description: "Utwórz zasady zgodności, aby zabezpieczyć urządzenia przenośn
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 2ff0b24d0a6991c22b23da5da5c63a9bb26ccdd2
+ms.sourcegitcommit: 55fea2e479273af7ff915449c96a72aeebba85a9
+ms.openlocfilehash: 3f434fc4cb9c90e28e516620383def8d91f11138
 
 
 ---
@@ -53,24 +53,24 @@ W poniższej tabeli wymieniono ustawienia zasad zgodności i platformy, na któr
 -------------
 |Ustawienie|iOS|Android|Windows|
 |-----|----|-----|-----|
-|Wymagaj hasła do odblokowania urządzeń przenośnych|iOS 6 i nowsze|Android 4.0 i nowsze <br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy|
-|Zezwalaj na proste hasła|iOS 6 i nowsze|Nieobsługiwane|System Windows Phone 8 lub nowszy|
-|Minimalna długość hasła|iOS 6 i nowsze| Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze| System Windows Phone 8 lub nowszy<br>Windows 8.1|
-|Wymagany typ hasła|iOS 6 i nowsze|Niedostępne|System Windows Phone 8 lub nowszy <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
-|Minimalna liczba zestawów znaków|iOS 6 i nowsze|Niedostępne|System Windows Phone 8 lub nowszy <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
+|Wymagaj hasła do odblokowania urządzeń przenośnych|iOS 6 i nowsze|Android 4.0 i nowsze <br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy|
+|Zezwalaj na proste hasła|iOS 6 i nowsze|Nieobsługiwane|System Windows Phone 8.1 lub nowszy|
+|Minimalna długość hasła|iOS 6 i nowsze| Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze| System Windows Phone 8.1 lub nowszy<br>Windows 8.1|
+|Wymagany typ hasła|iOS 6 i nowsze|Niedostępne|System Windows Phone 8.1 lub nowszy <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
+|Minimalna liczba zestawów znaków|iOS 6 i nowsze|Niedostępne|System Windows Phone 8.1 lub nowszy <br>Windows RT<br> Windows RT 8.1 <br>Windows 8.1|
 |Jakość hasła|Niedostępne|Android 4.0 i nowsze <br>KNOX Samsung  Standard 4.0 i nowsze|Niedostępne|
-|Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
-|Wygaśnięcie hasła w dniach|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
-|Pamiętaj historię haseł|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
-|Zapobiegaj ponownemu używaniu poprzednich haseł|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
+|Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
+|Wygaśnięcie hasła w dniach|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
+|Pamiętaj historię haseł|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
+|Zapobiegaj ponownemu używaniu poprzednich haseł|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br>Windows RT i Windows RT 8.1<br>Windows 8.1|
 |Wymagaj hasła po przywróceniu urządzenia ze stanu bezczynności| Niedostępne| Niedostępne|Windows 10 Mobile|
-|Wymagaj szyfrowania na urządzeniu przenośnym|Nie dotyczy|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br> Windows 8.1|
+|Wymagaj szyfrowania na urządzeniu przenośnym|Nie dotyczy|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br> Windows 8.1|
 |Wymagaj zgłoszenia dobrej kondycji urządzeń| Niedostępne| Niedostępne|Windows <br>Windows 10 Mobile|
 |Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|Niedostępne|
 |Konto e-mail musi być zarządzane przez usługę Intune|iOS 6 i nowsze|Niedostępne| Niedostępne|
 |Wybierz profil poczty e-mail, który ma być zarządzany przez usługę Intune|iOS 6 i nowsze|Niedostępne| Niedostępne|
-|Wymagana minimalna wersja systemu operacyjnego|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze| System Windows Phone 8 lub nowszy<br>Windows 8.1|
-|Dozwolona maksymalna wersja systemu operacyjnego|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8 lub nowszy<br>Windows 8.1|
+|Wymagana minimalna wersja systemu operacyjnego|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze| System Windows Phone 8.1 lub nowszy<br>Windows 8.1|
+|Dozwolona maksymalna wersja systemu operacyjnego|iOS 6 i nowsze|Android 4.0 i nowsze<br>KNOX Samsung  Standard 4.0 i nowsze|System Windows Phone 8.1 lub nowszy<br>Windows 8.1|
 
 Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustawieniach zgodności obsługiwanych na każdej platformie:
 > [!div class="op_single_selector"]
@@ -87,6 +87,6 @@ Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustaw
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
