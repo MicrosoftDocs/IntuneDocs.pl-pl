@@ -4,7 +4,7 @@ description: "Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Int
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b1d92786bd9f4d4893dd19c3116dcd5a047744ea
-ms.openlocfilehash: af9d8dd7830efe28aa5c994a2b5ec2bdcd4cc3cb
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: a4ab7287b2328fccbea5203bbfe5d87cbfc912b8
 
 
 ---
@@ -26,7 +26,7 @@ Zasady zarządzania aplikacjami mobilnymi obsługują następujące urządzenia:
 
 -   Urządzenia z systemem Android w wersji 4 lub nowszej.
 
--   Urządzenia z systemem iOS w wersji 7 lub nowszej.
+-   Urządzenia z systemem iOS w wersji 8.0 lub nowszej.
 
 > [!TIP]
 > Zasady zarządzania aplikacjami mobilnymi obsługują urządzenia zarejestrowane w usłudze Intune.
@@ -112,7 +112,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
 
     -   **Zasady zarządzania aplikacjami mobilnymi (system Android 4 i nowsze)**
 
-    -   **Zasady zarządzania aplikacjami mobilnymi (system iOS 7 i nowsze)**
+    -   **Zasady zarządzania aplikacjami mobilnymi (system iOS 8.0 i nowsze)**
 
     Możesz skorzystać z zalecanych ustawień lub dostosować je. Aby uzyskać szczegółowe informacje, zobacz [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -134,7 +134,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Wymagaj zgodności urządzenia z zasadami firmowymi w celu udzielenia dostępu**|To ustawienie umożliwia korzystanie z aplikacji tylko wtedy, gdy urządzenie nie ma zdjętych zabezpieczeń systemu lub nie jest możliwy dostęp do urządzenia z uprawnieniami administratora.|
     |**Ponownie sprawdź wymagania dostępu po (w minutach)**|W polu **Limit czasu** określ częstotliwość sprawdzania wymagań dostępu aplikacji po jej otwarciu.|
     |**Okres karencji w trybie offline**|Jeśli urządzenie jest w trybie offline, określ czas do ponownego sprawdzenia wymagań dostępu aplikacji.|
-    |**Szyfruj dane aplikacji**|To ustawienie określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane. Obejmuje to również dane przechowywane zewnętrznie, na przykład na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia ustawianych przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS 7 mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Metoda szyfrowania nie ma certyfikatu FIPS 140-2.|
+    |**Szyfruj dane aplikacji**|To ustawienie określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane. Obejmuje to również dane przechowywane zewnętrznie, na przykład na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia ustawianych przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Metoda szyfrowania nie ma certyfikatu FIPS 140-2.|
     |**Zablokuj przechwytywanie ekranu** (tylko urządzenia z systemem Android)|To ustawienie określa, że możliwości przechwytywania ekranu urządzenia są blokowane podczas korzystania z tej aplikacji.|
     
 4. Gdy skończysz, wybierz pozycję **Zapisz zasady**.
@@ -147,8 +147,6 @@ Upewnij się, że wybrano zasady zarządzania aplikacjami mobilnymi na stronie *
 Aby uzyskać szczegółowe informacje, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
 > [!IMPORTANT]
-> Na urządzeniach z systemem operacyjnym wcześniejszym niż iOS 7.1 skojarzone zasady nie zostaną usunięte po odinstalowaniu aplikacji.
->
 > Jeśli rejestracja urządzenia w usłudze Intune zostanie wycofana, zasady nie zostaną usunięte z aplikacji. Aplikacje, do których zastosowano zasady, zachowują ustawienia zasad w przypadku ich odinstalowania i ponownego zainstalowania.
 
 ### Co robić, jeśli aplikacja została już wdrożona na urządzeniach
@@ -195,6 +193,6 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

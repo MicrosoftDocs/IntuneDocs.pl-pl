@@ -13,8 +13,8 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e332bbf9aa8f6543950eba7e1fd734b3fb4b1edb
-ms.openlocfilehash: ca81a72fe98d454591765296445215a2b574243b
+ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
+ms.openlocfilehash: 4ed3222f45cb438dea807b1df268f47fff660d5f
 
 
 ---
@@ -44,7 +44,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
   - Nie można resetować urządzeń z poziomu Portalu firmy.
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
   - Nie można używać aplikacji z programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
-  - Nie można ich zarejestrować przy użyciu narzędzia Apple Configurator ani w ramach programu rejestracji urządzeń firmy Apple (dotyczy urządzeń z systemem iOS).
+  - (iOS) Nie można ich rejestrować za pomocą programu Apple Configurator ani Apple Device Enrollment Program (DEP), ale urządzenia zarządzane w ramach programu DEP lub Apple Configurator mogą być rejestrowane bez koligacji użytkownika.
 
 > [!NOTE]
 > Aby wdrożyć firmowe aplikacje na urządzeniach zarządzanych przy użyciu menedżera rejestracji urządzeń, wdróż aplikację Portal firmy jako **wymaganą instalację** na koncie użytkownika menedżera rejestracji urządzeń.
@@ -95,6 +95,6 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 
