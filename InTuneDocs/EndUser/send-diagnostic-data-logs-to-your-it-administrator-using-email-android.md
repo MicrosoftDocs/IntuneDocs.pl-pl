@@ -1,6 +1,6 @@
 ---
 title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail | Microsoft Intune"
-description: 
+description: "Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,16 +14,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: 87b0e188824368116dce5ea154821084b8db16ce
+ms.sourcegitcommit: 6be7193a5f04768a59b5c73fb9c2f51241156ada
+ms.openlocfilehash: 9dd0f089d220538a5526979a84dc165151b86f4f
 
 
 ---
 
 
-# Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail
+# Wysyłanie dzienników danych diagnostycznych do administratora IT pocztą e-mail
 
-Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami firmowymi lub szkolnymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT rozpoznać i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz ustawienie Pełne rejestrowanie. Przeczytaj więcej na temat [pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami służbowymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT zdiagnozować i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz pełne rejestrowanie. Aby dowiedzieć się więcej na temat pełnego rejestrowania, zobacz [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami (Android)](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
 Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą poczty e-mail:
 
@@ -39,6 +39,7 @@ Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą p
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO2-->
 
 

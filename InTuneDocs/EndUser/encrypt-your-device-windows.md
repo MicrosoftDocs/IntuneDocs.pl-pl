@@ -13,8 +13,8 @@ ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
-ms.openlocfilehash: f42ef4e3f5e4592ed6f3d5ec3a3c75d1599022f9
+ms.sourcegitcommit: 51e58204c86735b40b49119103d8edff998d5b1e
+ms.openlocfilehash: 1f8f26bd7acb6959e9b02ab5699145f9b747041c
 
 
 ---
@@ -22,20 +22,18 @@ ms.openlocfilehash: f42ef4e3f5e4592ed6f3d5ec3a3c75d1599022f9
 
 # Szyfrowanie urządzenia z systemem Windows
 
-Aby chronić dane firmy lub szkoły, administrator IT może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows Phone i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
+Aby chronić dane firmy lub szkoły, administrator IT może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
 
-Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, aby je zaszyfrować.
+Jeśli masz urządzenie stacjonarne, poniższe instrukcje opisują sposób jego szyfrowania.
 
 1.  Wyszukaj aplikację **Zarządzaj funkcją BitLocker**, a następnie ją uruchom.
 
-2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z wyświetlanymi instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
+2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

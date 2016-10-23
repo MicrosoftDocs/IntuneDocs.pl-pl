@@ -13,8 +13,8 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5256d4decfcd14de2d50a32a0906b6894639010
-ms.openlocfilehash: 8b2f725dd71a9d5da5387c543261df8607be6d6f
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: fbc18b12c00a4b61f7419731c6b4306b583638cc
 
 
 ---
@@ -56,10 +56,10 @@ Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 Jeśli zasady utworzono w obszarze roboczym Zasady lokalnej instalacji programu Exchange w konsoli administracyjnej, ale używana jest usługa Office 365, skonfigurowane ustawienia zasad nie są wymuszane przez usługę Intune. Zanotuj źródło zasad wymienione w alercie.  W obszarze roboczym Zasady lokalnej instalacji programu Exchange usuń starsze reguły, ponieważ są to globalne reguły programu Exchange, które nie mają znaczenia dla usługi Office 365. Następnie utwórz nowe zasady dla usługi Office 365.
 
 ### Nie można zmienić zasad zabezpieczeń dla różnych zarejestrowanych urządzeń
-Urządzenia z systemem Windows Phone i Windows RT nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjne zasady zostały już zastosowane do urządzenia.
+Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjne zasady zostały już zastosowane do urządzenia.
 
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
-Na przykład w systemie Windows RT na pulpicie szybko przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji** i wybierz pozycję **Ustawienia** &gt; **Panel sterowania**.  Wybierz aplet **Konta użytkowników** .
+Na przykład w systemie Windows na pulpicie szybko przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji** i wybierz pozycję **Ustawienia** &gt; **Panel sterowania**.  Wybierz aplet **Konta użytkowników** .
 W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
 
@@ -98,6 +98,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

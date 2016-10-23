@@ -4,7 +4,7 @@ description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,22 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 957edcf6910dd15f15ab5020773233c6a6ba0ea7
-ms.openlocfilehash: fb5fbbe50295d3fc26f3cd4def4f40898bb6ffd2
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
 
 
 ---
 
 # Połączenia VPN w usłudze Microsoft Intune
- Aby zapewnić użytkownikom bezpieczny dostęp zdalny do sieci firmowej, możesz użyć wirtualnych sieci prywatnych (VPN). Użytkownicy zdalni mogą dzięki temu pracować tak, jakby ich urządzenia były fizycznie połączone z siecią. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Za pomocą opcji w obszarze *Profile sieci VPN* w usłudze Microsoft Intune możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w swojej organizacji. Przez wdrożenie tych ustawień można maksymalnie ułatwić użytkownikom końcowym nawiązywanie połączeń z zasobami w sieci firmowej.
+
+Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają *profilu połączenia VPN*. Za pomocą opcji w obszarze *Profile sieci VPN* w usłudze Microsoft Intune możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji tak, aby łączenie się z siecią było łatwe i bezpieczne. 
 
 Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS ustawienia wymagane do połączenia z udziałem plików w sieci firmowej. W tym celu tworzysz profil sieci VPN zawierający ustawienia wymagane do połączenia z siecią firmową, a następnie wdrażasz go dla wszystkich użytkowników mających urządzenia z systemem iOS. Użytkownicy będą widzieli połączenie VPN na liście dostępnych sieci i będą mogli łatwo nawiązać połączenie.
 
 Za pomocą profili sieci VPN można konfigurować następujące typy urządzeń:
 
 * Urządzenia z systemem Android 4 i nowszym
+* Urządzenia z programem Android for Work
 * Urządzenia z systemem iOS w wersji 8.0 lub nowszej
 * Urządzenia z systemem Mac OS X 10.9 i nowszymi
 * Zarejestrowane urządzenia z systemem Windows 8.1 lub nowszym
@@ -70,9 +72,7 @@ Profile sieci VPN mogą wykorzystywać różne typy połączeń i protokoły ró
 
 ### Certyfikaty
 
-Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PFX utworzony wcześniej w usłudze Intune.
-
-Jest on znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub certyfikatu głównego), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze przeprowadzającym uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
+Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PFX utworzony wcześniej w usłudze Intune. Jest on znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze przeprowadzającym uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
 
 Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md).
 
@@ -85,6 +85,7 @@ Użytkownik jest uwierzytelniany na serwerze sieci VPN przez podanie swojej nazw
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dodaj zasady**.
 2. Wybierz szablon nowych zasad, rozwijając odpowiedni typ urządzenia, a następnie wybierz profil sieci VPN dla tego urządzenia:
     * **Profil sieci VPN (system Android 4 i nowsze)**
+    * **Profil sieci VPN (program Android for Work)**
     * **Profil sieci VPN (system iOS 8.0 i nowsze)**
     * **Profil sieci VPN (system Mac OS X 10.9 i nowsze)**
     * **Profil sieci VPN (system Windows 8.1 i nowsze)**
@@ -92,6 +93,9 @@ Użytkownik jest uwierzytelniany na serwerze sieci VPN przez podanie swojej nazw
     * **Profil sieci VPN (system Windows 10 Desktop i Mobile oraz nowsze)**
 
  Tworzyć i wdrażać można tylko niestandardowe zasady profilu sieci VPN. Zalecane ustawienia są niedostępne.
+
+> [!Note]
+> Profil sieci VPN dla urządzeń programu Android for Work powoduje włączenie połączenia sieci VPN wyłącznie dla aplikacji zainstalowanych na profilu służbowym urządzenia.
 
 3. Skorzystaj z poniższej tabeli, aby skonfigurować ustawienia profilu sieci VPN:
 
@@ -192,6 +196,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

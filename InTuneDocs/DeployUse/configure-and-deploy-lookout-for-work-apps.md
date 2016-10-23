@@ -3,7 +3,7 @@ title: "Wdrażanie aplikacji Lookout for Work | Microsoft Intune"
 description: "Konfiguruj i wdrażaj aplikacje Lookout for Work dla systemu Android."
 author: karthikaraman
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
@@ -12,39 +12,71 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4d05b9ba7249e4068d21480b1c9db342277757e
-ms.openlocfilehash: 687a102ccb34cb7acfaab1e8a1d4b67cb54b9e92
+ms.sourcegitcommit: 99005e15268a60cd801ef1c717088dff2f82927b
+ms.openlocfilehash: 8dce0689d5c4a0672b227eedf3ae738217eb17cf
 
 
 ---
 
 # Konfigurowanie i wdrażanie aplikacji Lookout for Work
-W tym artykule opisano sposób konfigurowania i wdrażania aplikacji Lookout for Work dla zarejestrowanych urządzeń z systemem Android 4.1 lub nowszym.
+W tym artykule opisano sposób konfigurowania i wdrażania aplikacji Lookout for Work dla urządzeń z systemem Android i iOS.
 
-* **Krok 1.** W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) przejdź do obszaru **Aplikacje** i wybierz pozycję **Dodaj aplikacje**.   
-* **Krok 2.** Na stronie **Instalator oprogramowania** wydawcy wybierz pozycję **Link zewnętrzny** i podaj następujący adres URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
+## System Android (aplikacja ze sklepu Google Play)
+
+* **Krok 1.** Przekazanie aplikacji Lookout for Work systemu Android w [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com), jak to opisano w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune).
 >[!NOTE]
->Nie klikaj pola wymagającego programu Managed Browser.
+> Nie klikaj pola wymagającego programu Managed Browser.
 
-* **Krok 3.** Na stronie **Opis oprogramowania** wprowadź następujące informacje:
-  * **Wydawca:** zabezpieczenia urządzeń przenośnych usługi Lookout
-  * **Nazwa:** Lookout for Work
-  * **Opis:** usługa Lookout zapewnia najlepszą ochronę przed zagrożeniami mobilnymi i pozwala zapewnić bezpieczeństwo urządzenia. Po zainstalowaniu na urządzeniu aplikacja Lookout chroni je przed zagrożeniami i powiadomi Cię oraz administratora firmy, jeśli jakiekolwiek zagrożenia zostaną znalezione.
-  * **Kategoria:** zarządzanie komputerami
-* **Krok 4.** Po pomyślnym zakończeniu zostanie wyświetlony komunikat **Przekazywanie danych do usługi Microsoft Intune zostało zakończone pomyślnie**.
+![Zrzut ekranu przedstawiający stronę aplikacji w konsoli administratora usługi Intune z wyświetlonymi aplikacjami Lookout for Work na liście](../media/mtp/lookout-app-listed-intune-console.png)
 
-Po kliknięciu pozycji **Aplikacje** w konsoli administratora usługi Intune aplikacja Lookout for Work zostanie wyświetlona na liście ![zrzut ekranu przedstawiający stronę aplikacji konsoli administracyjnej usługi Intune z wyświetloną na liście aplikacją Lookout for Work](../media/mtp/lookout-app-listed-intune-console.png)
+* **Krok 2.** Wdrożenie tej aplikacji dla użytkowników. Wybierz aplikację Lookout for Work wyświetloną na ekranie powyżej i wybierz opcję **Zarządzanie wdrożeniem**.
 
-**Aby wdrożyć aplikację użytkownikom**, wybierz aplikację Lookout for Work wyświetloną na ekranie powyżej i wybierz opcję **Zarządzanie wdrożeniem**.
-
-Należy wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout MTP.  Zobacz krok 3 w sekcji [konfigurowania subskrypcji za pomocą usługi MTP](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
 >[!IMPORTANT]
-> Kreator wdrażania aplikacji usługi Intune nie ma informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout MTP w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
+> Kreator wdrażania aplikacji usługi Intune nie ma informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
 
 Wybierz opcję **Wymagana instalacja**, jeśli aplikacja Lookout musi być zainstalowania na urządzeniu użytkownika.
 
 
-Jeśli na potrzeby wdrożenia została wybrana opcja **Wymagana instalacja**, usługa Intune przeprowadzi wypychanie aplikacji Lookout for Work do urządzenia.   
+## System iOS (podpisana przez przedsiębiorstwo wersja aplikacji Lookout)
+
+* **Krok 1.** Upewnienie się, że na urządzeniu skonfigurowano **zarządzanie systemem iOS**. Aby uzyskać instrukcje dotyczące sposobu konfigurowania urządzenia pod kątem zarządzania systemem iOS, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](Set up iOS and Mac device management.md).
+
+* **Krok 2.** **Ponowne podpisanie** aplikacji Lookout for Work systemu iOS. Usługa Lookout dystrybuuje swoją aplikację Lookout for Work systemu iOS poza sklepem App Store systemu iOS. **Przed dystrybucją aplikacji** należy ją ponownie podpisać za pomocą certyfikatu dewelopera przedsiębiorstwa systemu iOS. Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacji Lookout for Work systemu iOS, zobacz [Proces ponownego podpisywania aplikacji Lookout for Work systemu iOS](https://personal.support.lookout.com/hc/en-us/articles/114094038714) w witrynie usługi Lookout.
+
+
+* **Krok 3.** Włączenie uwierzytelniania za pomocą usługi Azure Active Directory dla użytkowników systemu iOS przez wykonanie poniższych czynności:
+  1.  Zaloguj się do [portalu zarządzania usługi Azure Active Directory](https://manage.windowsazure.com) i przejdź do strony aplikacji.
+  2.  Dodaj **aplikację Lookout for Work systemu iOS** jako **natywną aplikację kliencką**.
+  ![Zrzut ekranu przedstawiający okno dialogowe Dodawanie aplikacji z wyświetloną opcją Natywna aplikacja kliencka](../media/mtp/aad-add-app.png)
+  
+  3. Zastąp ciąg **com.lookout.enterprise.nazwa_Twojej_firmy** identyfikatorem pakietu klienta wybranym podczas podpisywania pakietu aplikacji (IPA).
+  4.  Dodaj dodatkowy identyfikator URI przekierowania: **&lt;companyportal://kod/>**, a po nim zakodowaną w adresie URL wersję Twojego oryginalnego identyfikatora URI przekierowania.
+  5.  Dodaj **Uprawnienia delegowane** do Twojej aplikacji.
+
+  Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie natywnej aplikacji klienckiej](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+
+
+* **Krok 4.** Przekazanie ponownie podpisanego pliku ipa, jak to opisano w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Ustaw minimalną wersję systemu operacyjnego na iOS 8.0 lub nowszy.
+
+  ![Zrzut ekranu przedstawiający stronę aplikacji w konsoli administratora usługi Intune z wyświetloną aplikacją Lookout for Work na liście aplikacji](../media/mtp/ios-app-uploaded-intune.png)
+
+* **Krok 5.** Utworzenie zasad konfiguracji aplikacji zarządzanej, jak to opisano w temacie [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+
+  ![Zrzut ekranu przedstawiający Kreatora tworzenia nowych zasad z wyróżnionymi zasadami konfiguracji aplikacji systemu iOS 8.0 lub nowszego](../media/mtp/ios-app-config.png)
+
+* **Krok 6.** **Wdrożenie aplikacji dla użytkowników** przez wybranie aplikacji Lookout for Work, a następnie wybranie pozycji **Zarządzanie wdrożeniem**.
+
+  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+>[!IMPORTANT]
+> Kreator wdrażania aplikacji usługi Intune nie ma informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
+
+Wybierz opcję **Wymagana instalacja**, jeśli aplikacja Lookout musi być zainstalowania na urządzeniu użytkownika.
+
+## Co się stanie po otwarciu wdrożonej aplikacji na urządzeniu
+
+
+
 
 Gdy użytkownik otworzy aplikację Lookout for Work na urządzeniu, zostanie wyświetlony monit o aktywację aplikacji. Następnie należy wybrać opcję Sign in with Azure Active Directory (Zaloguj się przy użyciu usługi Azure Active Directory). Szczegółowy przewodnik z przepływem użytkownika końcowego można znaleźć w następujących tematach:
 
@@ -57,6 +89,6 @@ Gdy użytkownik otworzy aplikację Lookout for Work na urządzeniu, zostanie wy�
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

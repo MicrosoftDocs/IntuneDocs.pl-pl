@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: e840783f3c50155a6f4f8801047ed474074218f6
+ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
+ms.openlocfilehash: 602be42b75c091cb43359f30256d51eabe597008
 
 
 ---
@@ -64,7 +64,7 @@ Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu w
 ## Obsługa urządzeń przenośnych
 Możliwe jest ograniczenie dostępu do usługi Exchange Online z poziomu programu **Outlook** i innych **aplikacji używających nowoczesnego uwierzytelniania**:
 
-- System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
+- System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy i program Android for Work
 - System iOS 8.0 i nowsze
 - System Windows Phone 8.1 lub nowszy
 
@@ -225,6 +225,9 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 5.  W obszarze **Aplikacje programu Exchange ActiveSync** można zablokować niezgodnym urządzeniom dostęp do usługi Exchange Online. Można również wybrać, czy dostęp do poczty e-mail ma być blokowany, czy nie, gdy na urządzeniu nie działa obsługiwana platforma. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
 
+ Aplikacje programu Exchange Active Sync Urządzenia z programem **Android for Work**:
+ -  Na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy działał na urządzeniach z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć go jako **wymaganą** instalację. 
+
 6.  W obszarze **Grupy docelowe**wybierz grupy zabezpieczeń użytkowników usługi Active Directory obejmowane przez te zasady. Można wybrać objęcie wszystkich użytkowników lub wybranej listy grup użytkowników.
 ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online, na której wyświetlone są opcje Grupy docelowe i Wykluczone grupy](../media/IntuneSA5eTargetedExemptedGroups.PNG)
     > [!NOTE]
@@ -263,6 +266,6 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

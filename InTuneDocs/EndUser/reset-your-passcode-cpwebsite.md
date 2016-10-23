@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
 Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
 > [!NOTE]
-> Przycisk resetowania kodu dostępu w witrynie sieci Web Portal firmy jest wyświetlany zależnie od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemami Windows 8.1 i Windows RT.
+> Przycisk resetowania kodu dostępu w witrynie sieci Web Portal firmy jest wyświetlany zależnie od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemem Windows 8.1.
 
 Aby zresetować kod dostępu:
 
@@ -64,6 +64,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

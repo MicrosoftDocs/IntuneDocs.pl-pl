@@ -13,14 +13,14 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 550fbbf94f46eee23e77ebf7f9177148882f28e2
-ms.openlocfilehash: 758e4408fa7119ed4ebb82e98b850be5b1f318b4
+ms.sourcegitcommit: 92422c2937c608d1aa6c9d11517fa08e4a8c7798
+ms.openlocfilehash: a3c7e7cfef6223103fe0588f900f164635b042aa
 
 
 ---
 
 # Ograniczanie dostępu do zasobu firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji
-Kontrolowanie dostępu z urządzeń przenośnych do zasobów firmy jest możliwe dzięki ocenie ryzyka przeprowadzanej przez usługę Lookout — rozwiązanie do ochrony urządzeń przed zagrożeniami zintegrowane z usługą Microsoft Intune. Ryzyko oceniane jest na podstawie danych telemetrycznych zbieranych z urządzeń przez usługę Lookout. Dane te dotyczą luk w zabezpieczeniach systemu operacyjnego, zainstalowanych złośliwych aplikacji i profilów sieci. Opierając się na ocenie ryzyka, można skonfigurować zasady dostępu warunkowego w usłudze Intune i zezwolić lub zablokować urządzenia, które zostały uznane za niezgodne z powodu zagrożeń, jakie na nich wykryto.  Ta funkcja jest obecnie obsługiwana tylko przez urządzenia z systemem **Android** w wersji **4.1 i nowsze**, które są zarejestrowane w usłudze Microsoft Intune.  Aby uzyskać informacje o platformach i językach obsługiwanych przez rozwiązanie Lookout, zobacz ten [artykuł](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
+Kontrolowanie dostępu z urządzeń przenośnych do zasobów firmy jest możliwe dzięki ocenie ryzyka przeprowadzanej przez usługę Lookout — rozwiązanie do ochrony urządzeń przed zagrożeniami zintegrowane z usługą Microsoft Intune. Ryzyko oceniane jest na podstawie danych telemetrycznych zbieranych z urządzeń przez usługę Lookout. Dane te dotyczą luk w zabezpieczeniach systemu operacyjnego, zainstalowanych złośliwych aplikacji i złośliwych profilów sieci. Opierając się na ocenie ryzyka zgłaszanej przez usługę Lookout włączoną za pomocą zasad zgodności usługi Intune, możesz skonfigurować zasady dostępu warunkowego w usłudze Intune i zezwolić lub zablokować urządzenia, które zostały uznane za niezgodne z powodu zagrożeń, jakie na nich wykryto.  Ta funkcja jest obecnie obsługiwana przez urządzenia z systemem **Android** w wersji **4.1 lub nowszej** i urządzenia z systemem **iOS 8 lub nowszym**. Urządzenia muszą być zarejestrowane w usłudze Microsoft Intune.  Aby uzyskać informacje o platformach i językach obsługiwanych przez rozwiązanie Lookout, zobacz ten [artykuł](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
 ## Jaki problem to rozwiązuje?
 Firmy i organizacje muszą chronić dane poufne przed pojawiającymi się zagrożeniami, do których zalicza się zagrożenia fizyczne, związane z aplikacją lub siecią, a także luki w zabezpieczeniach systemu operacyjnego.
 
@@ -29,14 +29,15 @@ W przeszłości firmy i organizacje przyjmowały aktywną postawę w stosunku do
 Usługa Intune daje możliwość kontrolowania dostępu do zasobów i danych firmy w ramach oceny ryzyka, którą zapewnia rozwiązanie do ochrony urządzeń przed zagrożeniami, takie jak Lookout.
 
 ## W jaki sposób usługa Intune i rozwiązanie Lookout do ochrony urządzeń przed zagrożeniami zabezpieczają zasoby firmy?
-Aplikacja mobilna firmy Lookout (Lookout for Work), działająca na urządzeniach przenośnych, przechwytuje system plików, stos sieci i telemetrię urządzenia oraz aplikacji (jeśli jest dostępna) i wysyła te dane do usługi w chmurze oferowanej w ramach usługi Lookout do ochrony urządzeń przed zagrożeniami. Wszystkie te czynności mają na celu oszacowanie pod kątem zagrożeń średniego ryzyka dotyczącego urządzenia przenośnego. Dzięki konsoli usługi Lookout można również zmienić klasyfikację poziomu ryzyka dla zagrożeń zgodnie ze swoimi potrzebami.  
+Aplikacja mobilna firmy Lookout (Lookout for Work), działająca na urządzeniach przenośnych, przechwytuje system plików, stos sieci, telemetrię urządzenia i aplikacji (jeśli jest dostępna) i wysyła te dane do usługi w chmurze oferowanej w ramach usługi Lookout do ochrony urządzeń przed zagrożeniami. Wszystkie te czynności mają na celu oszacowanie pod kątem zagrożeń średniego ryzyka dotyczącego urządzenia przenośnego. Dzięki konsoli usługi Lookout można również zmienić klasyfikację poziomu ryzyka dla zagrożeń zgodnie ze swoimi potrzebami.  
+
 Zasady zgodności w usłudze Intune zawierają teraz nową regułę dla usługi Lookout przeznaczonej do ochrony urządzeń przenośnych przed zagrożeniami, która jest oparta na ocenie ryzyka przeprowadzanej przez usługę Lookout. Gdy ta reguła jest włączona, usługa Microsoft Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
 Jeśli urządzenie jest określone jako niezgodne z zasadami zgodności, dostęp do zasobów takich usług jak Exchange Online i SharePoint Online można zablokować za pomocą zasad dostępu warunkowego. Gdy dostęp jest zablokowany, użytkownicy końcowi otrzymują przewodnik, który ma pomóc rozwiązać ten problem i uzyskać dostęp do zasobów firmy. Przewodnik jest uruchamiany za pośrednictwem aplikacji Lookout for Work.
 
 ## Przykładowe scenariusze
 Poniżej przedstawiono kilka typowych scenariuszy:
-### Zagrożenie ze strony złośliwych aplikacji:
+### Kontrola dostępu oparta na zagrożeniu ze strony złośliwych aplikacji:
 Po wykryciu na urządzeniu złośliwych aplikacji, takich jak złośliwe oprogramowanie, można zablokować takie urządzenie przed:
 * Łączeniem z firmową pocztą e-mail, zanim problem związany z zagrożeniem zostanie rozwiązany.
 * Synchronizowaniem plików firmowych za pomocą aplikacji OneDrive do pracy.
@@ -48,7 +49,7 @@ Po wykryciu na urządzeniu złośliwych aplikacji, takich jak złośliwe oprogra
 **Urządzenie zostało odblokowane i może uzyskać dostęp do zasobów firmy po skorygowaniu zagrożenia:**
 
 ![Diagram przedstawiający zasady dostępu warunkowego udzielające dostępu, gdy urządzenie jest uznane za zgodne po skorygowaniu](../media/mtp/malicious-apps-unblocked.png)
-### Zagrożenie dla sieci:
+### Kontrola dostępu oparta na zagrożeniu dla sieci:
 Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i ograniczanie dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
 
 **Zablokowany dostęp do sieci za pośrednictwem sieci Wi-Fi:**
@@ -57,7 +58,7 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i ogran
 **Dostęp udzielany po skorygowaniu:**
 
 ![Diagram przedstawiający dostęp warunkowy, który zezwala na dostęp po skorygowaniu zagrożenia](../media/mtp/network-wifi-unblocked.png)
-### Zagrożenie dla sieci (blokowanie dostępu do usługi SharePoint Online):
+### Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci:
 
 Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i blokowanie synchronizacji plików firmy w oparciu o ryzyko dotyczące urządzenia.
 
@@ -80,6 +81,6 @@ Oto główne kroki, które należy wykonać, aby zaimplementować to rozwiązani
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

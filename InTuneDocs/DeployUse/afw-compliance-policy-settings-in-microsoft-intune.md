@@ -1,6 +1,6 @@
 ---
-title: "Ustawienia zasad zgodności dla urządzeń z systemem Android | Microsoft Intune"
-description: "W tym temacie opisano ustawienia zasad zgodności urządzeń dla urządzeń z systemem Android."
+title: "Ustawienia zasad zgodności dla programu Android for Work | Microsoft Intune"
+description: "W tym temacie opisano ustawienia zasad zgodności urządzeń dla urządzeń z systemem Android, które są zgodne z programem Android for Work."
 keywords: 
 author: karthikaraman
 manager: angrobe
@@ -10,22 +10,23 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
-ms.reviewer: chrisgre
+ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
-ms.openlocfilehash: ed8f280de4582863f77e5b0e9cb5dfb2f20159c4
+ms.sourcegitcommit: 609d3ab2c96d9a3dff7a6bb6aa085f9cda83ba38
+ms.openlocfilehash: 845604fb97927abcc267884dbea6096a82eb170c
 
 
 ---
 
 
-# Ustawienia zasad zgodności dla urządzeń z systemem Android w usłudze Microsoft Intune
+# Ustawienia zasad zgodności dla urządzeń z systemem Android for Work w usłudze Microsoft Intune
 
-Ustawienia zasad opisane w tym temacie dotyczą urządzeń z systemem Android 4.0 i nowszymi wersjami lub Samsung KNOX 4.0 i nowszymi wersjami.
+Ustawienia zasad opisane w tym temacie dotyczą urządzeń z programem Android for Work.
 
 Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących opcji:
 > [!div class="op_single_selector"]
+- [Ustawienia zasad zgodności dla systemu Android](android-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem Windows](windows-compliance-policy-settings-in-microsoft-intune.md)
 
@@ -54,18 +55,16 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 - **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownicy końcowi otrzymają monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
 
 ### Encryption
-- **Wymagaj szyfrowania na urządzeniu przenośnym:** ustaw tę pozycję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami. Urządzenia są szyfrowane po skonfigurowaniu ustawienia **Wymagaj hasła do odblokowania urządzeń przenośnych**.
+- **Wymagaj szyfrowania na urządzeniu przenośnym:** nie musisz konfigurować tego ustawienia, ponieważ urządzenia z programem Android for Work wymuszają szyfrowanie.
 
 ## Kondycja urządzeń i ustawienia zabezpieczeń
 
 - **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root:** w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
-- **Wymagaj zapobiegania instalacji aplikacji z nieznanych źródeł (Android 4.0 i nowsze)** Aby zablokować urządzenia z włączonym ustawieniem **Bezpieczeństwo > Nieznane źródła**, włącz to ustawienie i wybierz opcję **Tak**.  
->[!IMPORTANT]
->Aplikacje ładowania bezpośredniego wymagają włączenia ustawienia **Nieznane źródła**.  Te zasady zgodności należy włączyć tylko w przypadku braku bezpośredniego ładowania aplikacji Android na urządzeniach.
+- **Wymagaj, aby urządzenia uniemożliwiały instalację aplikacji z nieznanych źródeł:** nie musisz konfigurować tego ustawienia, ponieważ urządzenia z programem Android for Work zawsze ograniczają instalację z nieznanych źródeł. .  
 
-- **Wymagaj wyłączenia debugowania USB (Android 4.2 i nowsze)**: to ustawienie określa, czy należy wykrywać włączenie opcji debugowania USB na urządzeniu.
-- **Wymagaj włączenia na urządzeniach opcji Skanuj urządzenie pod kątem zagrożeń zabezpieczeń (Android 4.2-4.4)**: to ustawienie określa włączenie funkcji **Weryfikuj aplikacje** na urządzeniu.
-- **Minimalny poziom poprawek bezpieczeństwa (Android 6.0 i nowsze)**: to ustawienie określa minimalny poziom poprawek bezpieczeństwa systemu Android.  Urządzenia, które nie mają co najmniej tego poziomu poprawek, będą niezgodne. Data musi mieć określony format: RRRR-MM-DD.
+- **Wymagaj, aby debugowanie USB było wyłączone**: nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB w urządzeniach z programem Android for Work zostało już wyłączone.
+
+- **Minimalny poziom poprawek zabezpieczeń systemu Android**: użyj tego ustawienia, aby określić minimalny poziom poprawek bezpieczeństwa systemu Android.  Urządzenia, które nie mają co najmniej tego poziomu poprawek, będą niezgodne. Data musi mieć określony format: RRRR-MM-DD.
 - **Wymagaj włączonej ochrony urządzenia przed zagrożeniami**: Użyj tego ustawienia, aby uzyskać ocenę ryzyka z rozwiązania Lookout MTP jako warunku zgodności. Wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
 
   - **Brak (zabezpieczone)** — to ustawienie zapewnia najwyższy poziom zabezpieczeń. Oznacza to, że urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające dowolny poziom zagrożenia, zostanie ono ocenione jako niezgodne.

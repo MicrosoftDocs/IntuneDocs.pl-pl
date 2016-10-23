@@ -13,8 +13,8 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: 1a41bfd926b1dac88ca8c8cd33483955f1150e34
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 0fbc8fc23ce65987e4694bce0748362d8ce10153
 
 
 ---
@@ -62,7 +62,7 @@ Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do
 
     -   **Android:** [https://play.google.com/store/apps/details?id=com.skype.raider](https://play.google.com/store/apps/details?id=com.skype.raider)
 
-    -   **Windows Phone 8 lub Windows Phone 8.1:** [http://www.windowsphone.com/pl-pl/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
+    -   **Windows Phone 8.1:** [http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
 
 6.  Na stronie **Opis oprogramowania** podaj informacje dotyczące oprogramowania, które mają być wyświetlane użytkownikom w Portalu firmy, a następnie wybierz pozycję **Dalej**. Dostępne są następujące ustawienia (ten przykład dotyczy programu Skype):
 
@@ -99,6 +99,6 @@ Gratulacje! Krok 4 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* w�
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

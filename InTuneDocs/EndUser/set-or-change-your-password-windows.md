@@ -12,8 +12,8 @@ ms.technology:
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 82a6a97dec78ad6e12fa5f8ccecae90a5bcc1e53
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: 1b9401a01a8621ebc03102757b0c839702e48f06
 
 
 ---
@@ -26,7 +26,7 @@ Administrator IT może ustawić więcej niż jedno wymaganie dotyczące haseł. 
 
 Jeśli masz problem z ustawieniem hasła spełniającego wszystkie wymagania dotyczące haseł, skontaktuj się z administratorem IT w celu uzyskania pomocy.
 
-## Aby zmienić hasło w systemie Windows Phone 8 lub Windows Phone 8.1:
+## Aby zmienić hasło w systemie Windows Phone 8.1:
 
 1. Na **ekranie głównym** naciśnij pozycję **Ustawienia**, a następnie wybierz pozycję **Ekran blokady**.
 2. Przewiń w dół do pozycji **Hasło**, a następnie naciśnij pozycję **Zmień hasło**.
@@ -34,7 +34,7 @@ Jeśli masz problem z ustawieniem hasła spełniającego wszystkie wymagania dot
 4. Wprowadź nowe hasło w polu **Nowe hasło**, a następnie wprowadź ponownie nowe hasło w polu **Potwierdź hasło**.
 4. Naciśnij pozycję **Gotowe**.
 
-## Aby ustawić hasło w systemie Windows Phone 8 lub 8.1:
+## Aby ustawić hasło w systemie Windows Phone 8.1:
 
 1. Na **ekranie głównym** naciśnij pozycję **Ustawienia**, a następnie wybierz pozycję **Ekran blokady**.
 2. Przewiń w dół do pozycji **Hasło**, a następnie przesuń pasek **Hasło** do położenia **Włączone**.
@@ -47,6 +47,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

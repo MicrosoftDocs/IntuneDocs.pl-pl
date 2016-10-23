@@ -21,7 +21,7 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 
 5. Określ adresy URL dla usługi Intune:
 
-  - **Adres URL rejestracji w usłudze MDM** — Użyj `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` dla adresu URL rejestracji w usłudze MDM.
+  - **Adres URL rejestracji w usłudze MDM** — użyj wartości domyślnej.
   - **Adres URL warunków użytkowania usługi MDM** — Użyj wartości domyślnej. Ten adres URL wyświetla warunki użytkowania dla użytkowników podczas rejestrowania urządzeń.
   - **Adres URL zgodności usługi MDM** — Użyj wartości domyślnej. Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat **Odmowa dostępu** z tym adresem URL. Adres URL wskazuje stronę, która pomaga użytkownikom zrozumieć, dlaczego ich urządzenie nie jest zgodne z zasadami i w jaki sposób można przywrócić jego zgodność.
 
@@ -34,6 +34,6 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 7. Wybierz polecenie **Zapisz**.
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

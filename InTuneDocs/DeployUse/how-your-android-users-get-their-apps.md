@@ -13,15 +13,15 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a3db9269bf4f93021d16d8ea23a2a13b87b43677
-ms.openlocfilehash: d3d37b9bcf8cc5833b4e11185b49902e26a625dc
+ms.sourcegitcommit: 627914b2ac877c1b5ff5bc95f7f2098ab8988250
+ms.openlocfilehash: 98e712fb852c89c1d092b87482f30ada33010a33
 
 
 ---
 
 
 # Jak użytkownicy systemu Android uzyskują aplikacje
-Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi systemu Android uzyskują aplikacje, które rozprowadzasz przez usługę Microsoft Intune. Informacje mogą być różne dla urządzeń z natywnym systemem Android i urządzeń z rozwiązaniem Samsung Knox.
+Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi systemu Android uzyskują aplikacje, które rozprowadzasz przez usługę Microsoft Intune. Informacje mogą się różnić w zależności od typu urządzenia (urządzenia z natywnym systemem Android lub urządzenia z rozwiązaniem Samsung Knox).
 
 ## Urządzenia z natywnym systemem Android (inne niż Samsung Knox)
 
@@ -39,9 +39,9 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi sys
 
 Aplikacje mogą być zarządzane lub niezarządzane, zgodnie z poniższym opisem. Proces konfigurowania aplikacji jako aplikacji zarządzanych jest taki sam dla wszystkich typów urządzeń z systemem Android.
 
-**Aplikacje zarządzane** — aplikacje, którymi można zarządzać za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Intune Mobile Application Management (MAM) Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można w ich przypadku stosować zasady aplikacji.
+**Aplikacje zarządzane** — są to aplikacje, którymi można zarządzać za pomocą zasad. Zostały one „opakowane” w usłudze Intune lub skompilowane przy użyciu zestawu Intune Mobile Application Management (MAM) Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można w ich przypadku stosować zasady aplikacji.
 
-**Aplikacje niezarządzane** — aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub które nie zawierają zestawu Intune MAM SDK. W przypadku tych aplikacji nie można stosować zasad aplikacji.
+**Aplikacje niezarządzane** — są to aplikacje, którymi nie można zarządzać za pomocą zasad. Nie zostały one opakowane w usłudze Intune lub nie zawierają zestawu Intune MAM SDK. W przypadku tych aplikacji nie można stosować zasad aplikacji.
 
 ### Zobacz także
 [Dodawanie aplikacji za pomocą usługi Microsoft Intune](/intune/deploy-use/add-apps)
@@ -52,6 +52,6 @@ Aplikacje mogą być zarządzane lub niezarządzane, zgodnie z poniższym opisem
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

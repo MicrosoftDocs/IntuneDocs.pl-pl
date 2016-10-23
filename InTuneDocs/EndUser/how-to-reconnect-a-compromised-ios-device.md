@@ -14,17 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: c47a7097d86ded8e6f38f0270352a7c432110464
+ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
+ms.openlocfilehash: 166c0708645d191abaaa73aa3143ca558d64ffd0
 
 
 ---
 
 # Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami
-Administrator informatyczny wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że ograniczenia oprogramowania nakładane przez system iOS zostały usunięte, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy. W takim przypadku urządzenie nie może uzyskać dostępu do zasobów firmy, a Ty musisz skontaktować się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe administratora IT są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Administrator IT wykrył, że używasz urządzenia ze „złamanymi” zabezpieczeniami. „Złamane” oznacza, że zostały usunięte ograniczenia oprogramowania nałożone przez system iOS. Usunięcie tych ograniczeń może naruszyć bezpieczeństwo i stanowić zagrożenie dla zasobów firmy. 
+
+W takim przypadku urządzenie nie może uzyskać dostępu do zasobów firmy, a Ty musisz skontaktować się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe administratora IT są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -14,19 +14,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: afe5beb508796244b914d6b0bae59eaa571e9c3a
+ms.sourcegitcommit: 8450facfe63d947df6e6a152805ad882ae220c3e
+ms.openlocfilehash: d7c2fb804e01df6689044d6ca2e72ff00ee95fbc
 
 
 ---
 
 
 # Ręczne synchronizowanie urządzenia z systemem Windows
-Jeśli instalacja aplikacji trwa zbyt długo, skorzystaj z poniższych instrukcji, aby ręcznie zsynchronizować urządzenie z systemem Windows, co może przyczynić się do przyspieszenia instalacji. Obsługiwane są tylko wymienione wersje. Użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia:
+Jeśli instalowanie aplikacji trwa zbyt długo, możesz spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Ręczna synchronizacja może przyspieszyć instalację.
+
+Obsługiwane są wyłącznie następujące wersje. Skorzystaj z instrukcji odpowiednich dla typu używanego urządzenia.
 
 * [Windows 10 Mobile](#windows-10-mobile)
 * [Windows 10 Desktop](#windows-10-desktop)
-* [Windows Phone 8,1](#windows-phone-8-1)
+* [Windows Phone 8.1](#windows-phone-8-1)
 
 
 ## Windows 10 Mobile
@@ -34,61 +36,61 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu pr
 
 1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
 
-    ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
+    ![Wybieranie kont na ekranie Ustawienia](./media/win10m-sync-1-settings-accounts.png)
 
 2. Wybierz pozycję **Dostęp z miejsca pracy**.
 
-    ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
+    ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10m-sync-2-work-access.png)
 
-3. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę swojej firmy, jak pokazano poniżej.
+3. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę firmy.
 
-    ![win10m-sync-3-tap-comp-name](./media/win10m-sync-3-tap-comp-name.png)
+    ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10m-sync-3-tap-comp-name.png)
 
-4. Wybierz ikonę **Synchronizacja**.
+4. Wybierz ikonę **Synchronizuj**.
 
-    ![win10m-sync-4-tap-sync](./media/win10m-sync-4-tap-sync.png)
+    ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)
 
-    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk synchronizacji będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
+    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk **Synchronizuj** będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
 
 ## Windows 10 Desktop
 Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Desktop w celu przyspieszenia powolnej instalacji aplikacji:
 
-1. Wybierz przycisk **Start**, jak pokazano poniżej, a następnie wybierz pozycję **Ustawienia**.
+1. Wybierz przycisk **Start**, a następnie wybierz pozycję **Ustawienia**.
 
-    ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
+    ![Przycisk Start](./media/win10pc-sync-1-start-button.png)
 
 2. Na stronie **Ustawienia** wybierz pozycję **Konta**.
 
-    ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
+    ![Wybieranie kont na stronie Ustawienia](./media/win10pc-sync-2-settings-accounts.png)
 
 3. Na stronie **Konta** wybierz pozycję **Dostęp z miejsca pracy**.
 
-    ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
+    ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 
-4. W sekcji **Rejestrowanie w celu zarządzania urządzeniami** kliknij nazwę swojej firmy (zobacz niebieskie wyróżnienie poniżej).
+4. W sekcji **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę swojej firmy.
 
-    ![win10pc-sync-4-tap-com-name](./media/win10pc-sync-4-tap-com-name.png)
+    ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10pc-sync-4-tap-com-name.png)
 
-5. Wybierz przycisk **Synchronizacja**.
+5. Wybierz przycisk **Synchronizuj**.
 
-    ![win10pc-sync-5-tap-sync](./media/win10pc-sync-5-tap-sync.png)
+    ![Wybieranie przycisku Synchronizuj](./media/win10pc-sync-5-tap-sync.png)
 
    Przycisk będzie szary aż do zakończenia synchronizacji.
 
-## Windows Phone 8,1
+## Windows Phone 8.1
 Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu przyspieszenia powolnej instalacji aplikacji:
 
 1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Miejsce pracy**.
 
-    ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
+    ![Lista ustawień](./media/wp81-1-sync-settings-workplace.png)
 
-2. Wybierz nazwę firmy (zobacz niebieskie wyróżnienie poniżej).
+2. Wybierz nazwę firmy.
 
-    ![wp81-2-sync-tap-compname](./media/wp81-2-sync-tap-compname.png)
+    ![Wybieranie nazwy firmy dla konta firmowego](./media/wp81-2-sync-tap-compname.png)
 
-3. Wybierz ikonę **Synchronizacja**.
+3. Wybierz ikonę **Synchronizuj**.
 
-    ![wp81-3-sync-tap-sync-button](./media/wp81-3-sync-tap-sync-button.png)
+    ![Wybieranie ikony Synchronizuj](./media/wp81-3-sync-tap-sync-button.png)
 
    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
@@ -96,8 +98,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

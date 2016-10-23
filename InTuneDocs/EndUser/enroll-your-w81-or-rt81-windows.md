@@ -13,8 +13,8 @@ ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
 
 # Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
 
-Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzenia umożliwia organizacji ochronę danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Aby zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1:
@@ -35,7 +35,7 @@ Aby zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1:
 
     Jeśli identyfikator użytkownika nie jest wymagany, używany jest adres e-mail wprowadzony podczas logowania na tym urządzeniu.
 
-3.  Wpisz hasło dla służbowego adresu e-mail.
+3.  Wprowadź hasło dla służbowego adresu e-mail.
 
     ![type-password](./media/W81-2-workplacesettings_signin.png)
 
@@ -65,7 +65,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

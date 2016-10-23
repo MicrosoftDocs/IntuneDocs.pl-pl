@@ -4,7 +4,7 @@ description: "Twórz grupy i zarządzaj nimi za pomocą obszaru roboczego Grupy.
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/27/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
-ms.openlocfilehash: 27ab4a2e2f3e0273f452ef9d34cf458c9f2544b6
+ms.sourcegitcommit: d92c9ffe42b36770a32c28941de3c402aec9dd68
+ms.openlocfilehash: 896e8cf77c0898fca7838b24386db745b01f4022
 
 
 ---
@@ -36,11 +36,11 @@ W tym temacie opisano sposób tworzenia grup w usłudze Intune. Temat zawiera ta
 Otrzymaliśmy opinie użytkowników z sugestiami, aby istniało jedno środowisko grupowania i kierowania w pakiecie Enterprise Mobility + Security. Wzięliśmy to pod uwagę. Na podstawie tych opinii wkrótce będzie miało miejsce konwertowanie grup usługi Intune do grup zabezpieczeń opartych na usłudze Azure Active Directory. Ta zmiana spowoduje ujednolicenie zarządzania grupami w usłudze Intune i usłudze Azure Active Directory (Azure AD). Nowe środowisko oznacza, że nie będzie już potrzeby duplikowania grup między usługami. Zostanie również rozszerzona funkcjonalność dzięki możliwości użycia programu Windows PowerShell i Microsoft Graph.
 
 ### Jak to wpłynie na moją bieżącą pracę?
-Ta zmiana nie ma teraz na Ciebie wpływu. Możemy natomiast określić, co będzie miało miejsce wkrótce:
+Jeśli korzystasz już z usługi Intune, ta zmiana nie ma teraz na Ciebie wpływu. Możemy natomiast określić, co będzie miało miejsce wkrótce:
 
--   We wrześniu 2016 roku nowe konta zaaprowizowane po comiesięcznym wydaniu usługi będą używać grup zabezpieczeń usługi Azure AD, a nie grup użytkowników usługi Intune.   
--   W październiku 2016 roku nowe konta zaaprowizowane po comiesięcznym wydaniu usługi będą zarządzać grupami opartymi na użytkownikach i zasobach w portalu usługi Azure AD. Nie będzie miało to żadnego wpływu na istniejących klientów.
--   W listopadzie 2016 roku zespół produktu Intune rozpocznie migrowanie istniejących klientów do nowego środowiska zarządzania grupami opartego na usłudze Azure AD. Wszystkie grupy użytkowników i urządzeń istniejące teraz w usłudze Intune zostaną zmigrowane do grup zabezpieczeń usługi Azure AD. Migracja zostanie wykonana w partiach, począwszy od listopada 2016 roku. Migracje zostaną rozpoczęte dopiero wtedy, gdy nie będą miały wpływu na Twoją codzienną pracę i pracę użytkowników. Przed migracją Twojego konta otrzymasz powiadomienie.
+-   Nowe konta będą używać grup zabezpieczeń usługi Azure AD zamiast grup *użytkowników* usługi Intune.   
+-   W listopadzie 2016 r. nowe konta aprowizowane po comiesięcznym wydaniu usługi będą zarządzać grupami opartymi na użytkownikach i zasobach w portalu usługi Azure AD. Nie będzie miało to żadnego wpływu na istniejących klientów.
+-   W grudniu 2016 r. zespół produktu Intune rozpocznie migrowanie istniejących klientów do nowego środowiska zarządzania grupami opartego na usłudze Azure AD. Wszystkie grupy użytkowników i urządzeń istniejące teraz w usłudze Intune zostaną zmigrowane do grup zabezpieczeń usługi Azure AD. Migracje zostaną rozpoczęte dopiero wtedy, gdy nie będą miały wpływu na Twoją codzienną pracę i pracę użytkowników. Przed migracją Twojego konta otrzymasz powiadomienie.
 
 
 ### W jaki sposób i kiedy zostanie przeprowadzona migracja do nowego środowiska grup?
@@ -204,6 +204,6 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

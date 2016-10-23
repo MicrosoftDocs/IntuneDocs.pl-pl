@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 54633d57fc1898c70abf1f37cff08e2dd553e5a1
+ms.sourcegitcommit: 3aadcc1acccb5cf54ce4a452a2c639175fccd81b
+ms.openlocfilehash: f012f980015214769bae3b960b9ae4398463c111
 
 
 ---
@@ -23,17 +23,17 @@ ms.openlocfilehash: 54633d57fc1898c70abf1f37cff08e2dd553e5a1
 
 # Ręczne synchronizowanie urządzenia z systemem iOS
 
-Jeśli instalacja aplikacji trwa zbyt długo, skorzystaj z poniższych instrukcji, aby ręcznie zsynchronizować urządzenie z systemem iOS, co może przyczynić się do przyspieszenia instalacji. Funkcja synchronizacji dotyczy tylko systemu iOS, ale nie systemu Mac OS X.
+Jeśli instalacja aplikacji trwa zbyt długo, skorzystaj z poniższych instrukcji, aby ręcznie zsynchronizować urządzenie z systemem iOS. Ręczna synchronizacja może przyspieszyć instalację. Funkcja synchronizacji dotyczy tylko systemu iOS, ale nie systemu Mac OS X.
 
 1. Otwórz aplikację Portal firmy w systemie iOS.
 
-2. W sekcji **Moje urządzenia** wybierz urządzenie, którego obecnie używasz. Jest to kafelek urządzenia znajdujący się skrajnie po lewej, który zawiera znacznik wyboru.
+2. W sekcji **Moje urządzenia** wybierz urządzenie, którego obecnie używasz. Jest to kafelek urządzenia ze znacznikiem wyboru znajdujący się skrajnie po lewej stronie.
 
-    ![ios-sync-1-comp-portal-apps](./media/ios-sync-1-comp-portal-apps.png)
+    ![Ekran urządzenia z sekcją Moje urządzenia](./media/ios-sync-1-comp-portal-apps.png)
 
-3.  Wybierz przycisk **Synchronizacja** widoczny w prawym dolnym narożniku ekranu.
+3.  Wybierz przycisk **Synchronizuj** w prawym dolnym rogu ekranu.
 
-    ![ios-sync-2-sync-button](./media/ios-sync-2-sync-button.png)
+    ![Szczegóły urządzenia z przyciskiem Synchronizuj](./media/ios-sync-2-sync-button.png)
 
 Na ekranie pojawi się obracające się koło, które zniknie dopiero po zakończeniu synchronizacji.
 
@@ -41,7 +41,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

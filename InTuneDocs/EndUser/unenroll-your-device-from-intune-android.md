@@ -13,8 +13,8 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 8ae9b8b128408d6afe56f99886a70155e858c9e8
+ms.sourcegitcommit: 891cf629725392beae1a6b8fbbb39f2bead8eb90
+ms.openlocfilehash: 17f7841daa79473b3c92cf50962b60b67224e4ee
 
 
 ---
@@ -32,22 +32,20 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
 2.  Naciśnij pozycję **MOJE URZĄDZENIA**, a następnie wybierz urządzenie, które chcesz wyrejestrować.
 
-    ![android-company-portal-unenroll-choose-device](./media/andr-1-my-devices-choose.png)
+    ![Wybierz urządzenie, które chcesz wyrejestrować.](./media/andr-1-my-devices-choose.png)
 
 3.  Naciśnij ikonę kosza na śmieci.
 
-    ![android-company-portal-unenroll-tap-trash](./media/andr-2-tap-trashcan.png)
+    ![Naciśnij ikonę kosza na śmieci.](./media/andr-2-tap-trashcan.png)
 
     Na stronie ostrzeżenia naciśnij pozycję **OK**, aby wyrejestrować urządzenie.
 
-    ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
+    ![Usuń urządzenie.](./media/andr-3-warning-about-remove.png)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
-
-
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub wyślij wiadomość e-mail do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

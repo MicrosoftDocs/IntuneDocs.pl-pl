@@ -13,8 +13,8 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 30d42bc4ee38a45895320eebd665fe8f5a0cb4ee
-ms.openlocfilehash: 0db3e6a39bd0d30231c339cb4501ce25059e4657
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: efc280f0a1143cacc252ee9fc9344064aa211cb2
 
 
 ---
@@ -26,7 +26,7 @@ Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą us�
 
 |Kod błędu|Możliwy problem|Sugerowane rozwiązanie|
 |--------------|--------------------|------------------------|
-|0x80073CFF<br /><br />0x80CF201C (błąd klienta)|Aby zainstalować tę aplikację, wymagany jest system z obsługą ładowania bezpośredniego.|Upewnij się, że pakiet aplikacji jest podpisany przy użyciu zaufanego podpisu i zainstalowany na urządzeniu przyłączonym do domeny, które ma włączone zasady AllowAllTrustedApps, lub na urządzeniu, które ma licencję ładowania bezpośredniego systemu Windows z włączonymi zasadami AllowAllTrustedApps (stosowane podczas rejestrowania urządzenia z systemem Windows RT).|
+|0x80073CFF<br /><br />0x80CF201C (błąd klienta)|Aby zainstalować tę aplikację, wymagany jest system z obsługą ładowania bezpośredniego.|Upewnij się, że pakiet aplikacji został podpisany przy użyciu zaufanego podpisu i zainstalowany na urządzeniu przyłączonym do domeny, które ma włączone zasady AllowAllTrustedApps, lub na urządzeniu, które ma licencję ładowania bezpośredniego systemu Windows z włączonymi zasadami AllowAllTrustedApps.|
 |0x80073CF0|Nie można otworzyć pakietu.|Możliwe przyczyny:<br /><br />— pakiet nie został podpisany.<br />— nazwa wydawcy jest niezgodna z podmiotem certyfikatu podpisywania.<br /><br />Sprawdź dziennik zdarzeń AppxPackagingOM, aby uzyskać więcej informacji.|
 |0x80073CF3|Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu|Możliwe przyczyny:<br /><br />— przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.<br />— określona zależność pakietu nie została odnaleziona.<br />— pakiet nie obsługuje poprawnej architektury procesora.<br /><br />Sprawdź dziennik zdarzeń AppXDeployment-Server, aby uzyskać więcej informacji.|
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
@@ -49,6 +49,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

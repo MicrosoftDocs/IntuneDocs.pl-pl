@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: 2631541ea974769308aea30d2b37a3a79c22db99
+ms.sourcegitcommit: f69d2b222e9409a79dae07fd77f29c46876f11cb
+ms.openlocfilehash: 38a8a92581a990c321c6c57bfaa5a506733eb1b4
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 2631541ea974769308aea30d2b37a3a79c22db99
 
 # Co widzi administrator IT po zarejestrowaniu urządzenia w usłudze Intune?
 
-Rejestrując urządzenie z systemem Windows w usłudze Intune, nadajesz administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
+Rejestrując urządzenie z systemem Windows w usłudze Intune, nadajesz administratorowi IT uprawnienie do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
 
 **Czego nie widzi dział IT**
 
@@ -57,12 +57,10 @@ Rejestrując urządzenie z systemem Windows w usłudze Intune, nadajesz administ
 
 -   Producent
 
-[Więcej informacji](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows).
+Aby uzyskać więcej informacji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows)
 
 
 
-
-
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

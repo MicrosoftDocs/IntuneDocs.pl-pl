@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: ebd1300c490f3d69110a5f1920fd25d1dc5cb850
 
 
 ---
@@ -23,11 +23,7 @@ ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
 
 # Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Windows usługi Intune?
 
-Aby uzyskać dodatkowe informacje na temat zachodzących działań, użyj linku znajdującego się powyżej w sekcji „W tym artykule” odpowiedniego dla typu używanego urządzenia.
-
-- [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
-- [Windows 10, Windows 8.1 lub Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
-- [Windows RT — system Windows 8.1 lub Windows RT](#windows-rt-running-windows-8-1-or-windows-rt)
+Użyj linków po prawej stronie w obszarze „W tym artykule”, aby wyszukać informacje dotyczące rodzaju urządzenia, z którego korzystasz.
 
 
 ## Windows 10, Windows 8.1, Windows 8, Windows 7, Vista
@@ -55,7 +51,7 @@ Ponadto w przypadku systemu Windows 8.1:
 
 -   Użytkownik może utracić dostęp za pośrednictwem urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
 
-## Windows 10 Mobile, Windows Phone 8.1 lub Windows Phone 8
+## Systemy Windows 10 Mobile i Windows Phone 8.1
 
 -   Aplikacja Portal firmy zostanie odinstalowana z urządzenia, co oznacza, że urządzenie nie będzie dłużej wyświetlane w Portalu firmy, a użytkownik nie będzie mógł instalować aplikacji z Portalu firmy lub witryny sieci Web Portal firmy.
 
@@ -66,7 +62,7 @@ Ponadto w przypadku systemu Windows 8.1:
     > [!IMPORTANT]
     > Jedynym wyjątkiem są zasady szyfrowania, które nadal będą stosowane. Jeśli urządzenie z systemem Windows Phone zostało zaszyfrowane zgodnie z wymaganiami nakładanymi przez zasady firmy, jedynym sposobem na jego odszyfrowanie jest jego zresetowanie w menu **Ustawienia** w systemie Windows Phone.
 
-## Windows RT — system Windows 8.1 lub Windows RT
+## Windows RT — system Windows 8.1
 
 -   Aplikacja Portal firmy zostanie odinstalowana z urządzenia, co oznacza, że urządzenie nie będzie dłużej wyświetlane w Portalu firmy i nie będzie można instalować aplikacji z Portalu firmy.
 
@@ -93,6 +89,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

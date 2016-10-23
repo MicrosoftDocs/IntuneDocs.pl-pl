@@ -4,7 +4,7 @@ description: "Usługa Intune umożliwia skonfigurowanie wielu ustawień, które 
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 388426657c5fa96289f5e14a85e8c299e4b50037
-ms.openlocfilehash: ac19128499f078b4fe7d16713f18c78b248d38db
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 279b2fbcbdc7bace99d99eca5bc766972dcea3b8
 
 
 
@@ -40,6 +40,7 @@ Możesz tworzyć i wdrażać zasady zabezpieczeń urządzeń przenośnych dla na
 
 > [!NOTE]
 > Niektóre ustawienia nie mają zastosowania do niektórych urządzeń. Poniższe tabele zawierają pełną listę ustawień, które można skonfigurować.
+> Od października 2016 roku z usługi Microsoft Intune zostanie wycofana pomoc techniczna dla aplikacji Portal firmy systemu Windows 8. Z usługi Microsoft Intune zostanie również wycofana pomoc techniczna dla platform Windows Phone 8 i WinRT. W rezultacie nie będzie można rejestrować ani aktualizować żadnych urządzeń z systemem Windows Phone 8 lub WinRT. Możesz jednak nadal zarządzać urządzeniami z systemami Windows Phone 8, WinRT i Windows 8, które są już zarejestrowane. Zaktualizuj urządzenia z systemami Windows 8 i Windows Phone 8 do systemów Windows 8.1 i Windows Phone 8.1 oraz skorzystaj z odpowiedniej aplikacji Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1, aby kontynuować bez zakłóceń dystrybucję aplikacji na tych urządzeniach.
 
 ## Ustawienia zabezpieczeń
 
@@ -212,6 +213,6 @@ Po wdrożeniu zasad długości hasła na urządzeniach z systemem Windows RT uż
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

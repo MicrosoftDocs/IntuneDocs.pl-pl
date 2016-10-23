@@ -4,7 +4,7 @@ description: "Niestandardowy profil umożliwiający utworzenie listy dozwolonych
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
+ms.sourcegitcommit: c7679d624ba22b2a062ef2534a642e38a5f57fde
+ms.openlocfilehash: 273627573f58e1bde4fd19c548ce87639f25ca4b
 
 
 
@@ -23,7 +23,7 @@ ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
 
 Użyj procedur opisanych w tym temacie, aby utworzyć niestandardowe zasady usługi Microsoft Intune, co powoduje utworzenie następujących elementów:
 
-- Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Nie będzie można uruchamiać żadnych innych aplikacji. Uruchamianie aplikacji na tej liście jest blokowane, nawet jeśli były one już zainstalowane, gdy zasady zostały zastosowane.
+- Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Uruchamianie aplikacji na tej liście jest blokowane, nawet jeśli były one już zainstalowane, gdy zasady zostały zastosowane.
 - Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu klepu Google Play. Można zainstalować tylko aplikacje na liście. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
 
 Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung KNOX.
@@ -51,7 +51,8 @@ Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung K
 
 4. Kliknij pozycję **OK**, a następnie kliknij polecenie **Zapisz zasady**. 
 
->[PORADA] Identyfikator pakietu aplikacji można znaleźć, przechodząc do aplikacji w sklepie Google Play. Identyfikator pakietu znajduje się w adresie URL strony aplikacji. Na przykład identyfikator pakietu aplikacji Microsoft Word to **com.microsoft.office.word**.
+>[!TIP]
+> Identyfikator pakietu aplikacji możesz znaleźć, przechodząc do aplikacji w sklepie Google Play. Identyfikator pakietu znajduje się w adresie URL strony aplikacji. Na przykład identyfikator pakietu aplikacji Microsoft Word to **com.microsoft.office.word**.
 
 Gdy docelowe urządzenie nawiąże połączenie następny raz, zostaną zastosowane ustawienia aplikacji.
 
@@ -70,6 +71,6 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
