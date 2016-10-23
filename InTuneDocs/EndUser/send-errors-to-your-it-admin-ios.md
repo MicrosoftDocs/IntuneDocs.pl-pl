@@ -1,6 +1,6 @@
 ---
 title: "Wysyłanie błędów do administratora IT | Microsoft Intune"
-description: 
+description: "Wysyłanie błędów do administratora"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
+ms.sourcegitcommit: 881a2d90a863f5c7f3809f890bb82850b6145982
+ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 
 
 ---
@@ -25,16 +25,14 @@ ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
 
 Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z aplikacji Portal firmy, możesz wysłać informacje, aby pomóc administratorowi IT rozwiązać problem. Informacje o błędach możesz wysłać na różne sposoby:
 
--   Po wystąpieniu komunikatów alertu o błędzie: wybierz pozycję **Raport**.
+-   Po wystąpieniu komunikatów alertów o błędzie wybierz pozycję **Raport**.
 
--   Na ekranie **Informacje** w aplikacji Portal firmy: wybierz pozycję **Wyślij raport diagnostyczny**.
+-   Na ekranie **Informacje** w aplikacji Portal firmy wybierz pozycję **Wyślij raport diagnostyczny**.
 
--   Podczas korzystania z aplikacji Portal firmy: potrząśnij urządzeniem, a następnie wybierz polecenie **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycję **Ustawienia** &gt; **Portal firmy** i upewnij się, że opcja **Gest potrząsania** jest włączona.
-
-
+-   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie wybierz polecenie **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycję **Ustawienia** &gt; **Portal firmy** i upewnij się, że opcja **Gest potrząsania** jest włączona.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
