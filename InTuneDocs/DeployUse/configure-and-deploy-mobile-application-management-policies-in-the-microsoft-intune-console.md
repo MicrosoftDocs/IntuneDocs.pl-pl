@@ -13,8 +13,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
-ms.openlocfilehash: a4ab7287b2328fccbea5203bbfe5d87cbfc912b8
+ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
+ms.openlocfilehash: d7978e558c68ad3209f1503619a9113dba126028
 
 
 ---
@@ -37,7 +37,7 @@ W odróżnieniu od innych zasad usługi Intune, zasady zarządzania aplikacjami 
 
 Aby zastosować ograniczenia dla aplikacji, musi ona zawierać zestaw SDK aplikacji usługi Microsoft Intune. Istnieją trzy metody uzyskania tego typu aplikacji:
 
--   **Użycie aplikacji zarządzanej przez zasady**. Aplikacja zarządzana przez zasady zawiera wbudowany zestaw SDK aplikacji. Aby dodać ten typ aplikacji, wystarczy podać link do wybranej aplikacji w sklepie z aplikacjami, takim jak iTunes lub Google Play. Żadne dalsze przetwarzanie nie jest wymagane w przypadku tego typu aplikacji. Aby uzyskać więcej informacji, zobacz [listę aplikacji, których można używać z zasadami zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
+-   **Użycie aplikacji zarządzanej przez zasady**. Aplikacja zarządzana przez zasady zawiera wbudowany zestaw SDK aplikacji. Aby dodać ten typ aplikacji, wystarczy podać link do wybranej aplikacji w sklepie z aplikacjami, takim jak iTunes lub Google Play. Żadne dalsze przetwarzanie nie jest wymagane w przypadku tego typu aplikacji. Aby uzyskać więcej informacji, zobacz [listę aplikacji, których można używać z zasadami zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps).
 
 -   **Użycie opakowanej aplikacji**. Opakowana aplikacja to aplikacja ponownie umieszczana w pakietach za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune w celu dodania do niej zestawu SDK aplikacji. To narzędzie jest zwykle używane do przetwarzania aplikacji firmowych utworzonych wewnętrznie. Nie można go używać do przetwarzania aplikacji, które zostały pobrane ze sklepu z aplikacjami. Aby uzyskać więcej informacji, zobacz [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
@@ -136,7 +136,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Okres karencji w trybie offline**|Jeśli urządzenie jest w trybie offline, określ czas do ponownego sprawdzenia wymagań dostępu aplikacji.|
     |**Szyfruj dane aplikacji**|To ustawienie określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane. Obejmuje to również dane przechowywane zewnętrznie, na przykład na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia ustawianych przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Metoda szyfrowania nie ma certyfikatu FIPS 140-2.|
     |**Zablokuj przechwytywanie ekranu** (tylko urządzenia z systemem Android)|To ustawienie określa, że możliwości przechwytywania ekranu urządzenia są blokowane podczas korzystania z tej aplikacji.|
-    
+
 4. Gdy skończysz, wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**.
@@ -193,6 +193,6 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

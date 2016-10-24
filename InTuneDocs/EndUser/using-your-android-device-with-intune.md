@@ -4,7 +4,7 @@ description: "Lista linków do zadań, które można wykonać na urządzeniu prz
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 63f86f135d369d8c96903c0add1e194fd9d5ded2
-ms.openlocfilehash: e98aa19d38af47ba2d19a2a67b7a836796aded2a
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: 21517d4aa198771ce26dedbfc8f00f54d21c7f2a
 
 
 ---
@@ -33,6 +33,7 @@ Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mo
 Informacje przedstawione w tej sekcji ułatwiają instalację aplikacji Portal firmy usługi Intune i rejestrowanie urządzeń z systemem Android.
 
 - [Rejestracja urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md)
+- [Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
 ## Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
@@ -68,9 +69,11 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 - [Prośba o wyłączenie debugowania USB](you-are-asked-to-turn-off-usb-debugging-android.md)
 - [Prośba o włączenie opcji Skanuj urządzenie pod kątem zagrożeń zabezpieczeń](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
 - [Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń](your-device-does-not-meet-the-minimum-security-patch-android.md)
+- [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android](you-are-prompted-to-install-lookout-for-work-android.md)
+- [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem Android](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
