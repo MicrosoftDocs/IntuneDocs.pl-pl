@@ -3,6 +3,7 @@ title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft 
 description: "Tworzenie zasad i publikowanie aplikacji w przypadku rejestracji w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

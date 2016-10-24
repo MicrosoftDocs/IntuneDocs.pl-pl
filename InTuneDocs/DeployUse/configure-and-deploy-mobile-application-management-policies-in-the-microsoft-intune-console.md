@@ -3,6 +3,7 @@ title: "Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usług
 description: "Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

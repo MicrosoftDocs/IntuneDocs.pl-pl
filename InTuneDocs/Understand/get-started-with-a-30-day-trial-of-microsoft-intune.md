@@ -3,6 +3,7 @@ title: "Przewodnik dotyczący ewaluacji usługi Intune | Microsoft Intune"
 description: "Wprowadzenie i wymagania wstępne dotyczące sposobu konfigurowania bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu do usługi Skype dla firm Online | Microsoft Intun
 description: "Chroń i kontroluj dostęp do usługi Skype dla firm Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Korzystanie z urządzenia z systemem Android i usługi Intune | Microsof
 description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem Android, gdy urządzenie jest zarejestrowane w usłudze Intune"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

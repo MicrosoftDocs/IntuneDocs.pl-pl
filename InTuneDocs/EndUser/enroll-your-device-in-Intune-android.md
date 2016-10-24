@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzenia z systemem Android w usłudze Intune | Microso
 description: "Opis sposobu rejestrowania urządzenia z systemem Android w usłudze Intune"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/09/2016
 ms.topic: article

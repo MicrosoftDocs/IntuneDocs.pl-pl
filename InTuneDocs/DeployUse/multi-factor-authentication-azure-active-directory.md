@@ -3,6 +3,7 @@ title: "Uwierzytelnianie wieloskładnikowe przy użyciu usługi Azure AD| Micros
 description: "Ustawianie wymogu uwierzytelniania wieloskładnikowego w usłudze Azure AD do celów rejestracji urządzeń."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angerobe
 ms.date: 09/22/2016
 ms.topic: article

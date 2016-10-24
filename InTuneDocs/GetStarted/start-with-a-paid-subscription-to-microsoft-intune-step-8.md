@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzeń przenośnych i instalowanie aplikacji | Usługa
 description: "Wyjaśnia, jak zarejestrować urządzenia przenośne i zainstalować aplikację na urządzeniu zarejestrowanym w usłudze Intune"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article

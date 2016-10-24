@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu do poczty e-mail do usługi Exchange Online | Micr
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

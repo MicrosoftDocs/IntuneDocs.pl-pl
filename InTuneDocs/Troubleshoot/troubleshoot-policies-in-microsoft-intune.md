@@ -3,6 +3,7 @@ title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Intune"
 description: "Rozwiązywanie problemów z konfiguracją zasad."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

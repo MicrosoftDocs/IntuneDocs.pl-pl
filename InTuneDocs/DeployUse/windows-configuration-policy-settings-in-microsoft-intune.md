@@ -3,6 +3,7 @@ title: Ustawienia zasad systemu Windows | Microsoft Intune
 description: "Ogólnych zasad konfiguracji systemu Windows (w systemie Windows 8.1 lub nowszym) w usłudze Intune można używać do konfigurowania ustawień zarejestrowanych urządzeń z systemami Windows 8 i Windows 8.1."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

@@ -4,6 +4,7 @@ title:
 description: "W tym temacie opisano sposób sprawdzania i weryfikowania, czy zasady zarządzania aplikacjami mobilnymi są poprawnie skonfigurowane i działają zgodnie z oczekiwaniami."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angerobe
 ms.date: 08/16/2016
 ms.topic: article

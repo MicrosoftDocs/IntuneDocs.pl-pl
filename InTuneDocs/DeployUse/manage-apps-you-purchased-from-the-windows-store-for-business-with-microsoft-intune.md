@@ -3,6 +3,7 @@ title: "Zarządzanie aplikacjami ze Sklepu Windows dla firm | Microsoft Intune"
 description: "Połącz usługę Intune ze Sklepem Windows dla firm, aby wdrażać aplikacje zakupione zbiorczo z poziomu konsoli usługi Intune i zarządzać nimi"
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

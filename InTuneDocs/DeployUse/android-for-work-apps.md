@@ -3,6 +3,7 @@ title: "Wdrażanie aplikacji na urządzeniach z programem Android for Work | Mic
 description: "W tym temacie opisano sposób synchronizowania, a następnie wdrażania aplikacji ze sklepu Google Play for Work na urządzeniach z programem Android for Work."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

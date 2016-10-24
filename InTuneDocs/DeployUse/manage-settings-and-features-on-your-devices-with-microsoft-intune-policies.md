@@ -3,6 +3,7 @@ title: "Zarządzanie ustawieniami urządzenia przy użyciu zasad | Microsoft Int
 description: "Użyj usługi Intune, aby utworzyć i wdrożyć zasady określające ustawienia i funkcje na zarejestrowanych, zarządzanych urządzeniach."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

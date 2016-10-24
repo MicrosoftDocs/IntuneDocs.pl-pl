@@ -3,6 +3,7 @@ title: "Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microso
 description: "Linki do informacji, które można udostępnić użytkownikom końcowym"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: get-started-article

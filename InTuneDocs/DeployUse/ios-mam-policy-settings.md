@@ -3,6 +3,7 @@ title: Ustawienia zasad MAM systemu iOS | Microsoft Intune
 description: "W tym temacie opisano ustawienia zasad zarządzania aplikacjami mobilnymi dla urządzeń z systemem iOS."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

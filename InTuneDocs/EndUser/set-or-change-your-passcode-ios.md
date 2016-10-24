@@ -3,6 +3,7 @@ title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Intune"
 description: "Ustawianie lub zmienianie kodu dostępu"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

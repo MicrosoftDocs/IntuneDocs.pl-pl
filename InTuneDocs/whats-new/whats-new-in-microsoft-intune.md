@@ -3,6 +3,7 @@ title: Co nowego | Microsoft Intune
 description: "Sprawdź nowości w tym miesiącu i poprzednich wersjach usługi Microsoft Intune"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/13/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: Informacje o zasadach konfiguracji | Microsoft Intune
 description: "Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

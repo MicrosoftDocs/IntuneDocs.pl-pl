@@ -3,6 +3,7 @@ title: "Rozwiązywanie problemów z dostępem do zasobów firmy | Microsoft Intu
 description: "Kody błędów i stanów w tym temacie pomagają rozwiązać problemy z dostępem do zasobów."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article

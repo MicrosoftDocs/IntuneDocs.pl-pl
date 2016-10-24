@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune
 description: "Opis sposobu rejestrowania urządzenia z systemem Windows 8.1 w usłudze Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

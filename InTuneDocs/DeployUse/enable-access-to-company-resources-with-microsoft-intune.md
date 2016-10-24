@@ -3,6 +3,7 @@ title: "Zapewnianie dostępu do zasobów firmy | Usługa Microsoft Intune"
 description: "Profile sieci Wi-Fi, sieci VPN i poczty e-mail działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do pracy."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article

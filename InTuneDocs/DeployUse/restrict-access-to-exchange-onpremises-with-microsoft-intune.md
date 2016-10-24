@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu do poczty e-mail do lokalnej instalacji programu E
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w lokalnej instalacji programu Exchange przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

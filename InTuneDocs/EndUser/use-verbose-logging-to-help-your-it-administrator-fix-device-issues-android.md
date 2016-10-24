@@ -3,6 +3,7 @@ title: "Używanie pełnego rejestrowania ułatwiającego administratorowi IT roz
 description: "Ułatw administratorowi IT rozwiązywanie problemów z urządzeniami, używając pełnego rejestrowania"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

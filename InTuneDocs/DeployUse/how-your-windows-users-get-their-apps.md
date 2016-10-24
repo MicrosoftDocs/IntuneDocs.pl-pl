@@ -3,6 +3,7 @@ title: "Jak użytkownicy systemu Windows uzyskują aplikacje | Microsoft Intune"
 description: "Metody udostępniania użytkownikom aplikacji dla systemu Windows"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article

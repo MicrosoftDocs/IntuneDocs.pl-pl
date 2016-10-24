@@ -4,6 +4,7 @@ title: Ustawienia zasad programu Android for Work | Microsoft Intune
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z programem Android for Work zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

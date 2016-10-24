@@ -3,6 +3,7 @@ title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mob
 description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomóc w ochronie danych firmowych, zapobiec utracie danych i przechowywać osobno informacje osobiste i służbowe."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

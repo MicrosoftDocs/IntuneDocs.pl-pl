@@ -3,6 +3,7 @@ title: "Jak użytkownicy systemu iOS uzyskują aplikacje | Microsoft Intune"
 description: "Metody udostępniania aplikacji dla systemu iOS użytkownikom końcowym"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article

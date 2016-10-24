@@ -3,6 +3,7 @@ title: "Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do n
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

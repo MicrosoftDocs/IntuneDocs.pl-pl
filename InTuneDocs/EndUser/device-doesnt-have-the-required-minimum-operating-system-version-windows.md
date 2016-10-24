@@ -3,6 +3,7 @@ title: "Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego | Mi
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Konfigurowanie dostępu aplikacji dla usługi Exchange Online | Microsof
 description: "W tym temacie opisano sposób konfigurowania zasad dostępu warunkowego dla aplikacji do zarządzania aplikacjami mobilnymi (MAM)."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

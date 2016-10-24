@@ -7,6 +7,7 @@ title: "Dokumentacja usługi Intune | Dokumentacja firmy Microsoft"
 description: "Dokumentacja techniczna dotycząca zarządzania urządzeniami przenośnymi i aplikacjami w usłudze Microsoft Intune"
 keywords: "dokumentacja usługi Intune, zarządzanie aplikacjami, zarządzanie urządzeniami, dokumentacja MDM, dokumentacja MAM"
 author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 10/07/2016
 ms.topic: hubpage

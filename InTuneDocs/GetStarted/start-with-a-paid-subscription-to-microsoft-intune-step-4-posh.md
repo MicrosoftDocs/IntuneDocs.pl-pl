@@ -3,6 +3,7 @@ title: "Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell 
 description: "Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: get-started-article

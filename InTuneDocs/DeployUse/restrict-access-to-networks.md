@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu do sieci na platformie Cisco ISE | Microsoft Intun
 description: "Użyj platformy Cisco ISE razem z usługą Intune, aby urządzenia musiały być zarejestrowane w usłudze Intune i zgodne z zasadami, zanim będą mogły uzyskać dostęp do sieci Wi-Fi i VPN kontrolowanych przez platformę Cisco ISE."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/05/2016
 ms.topic: article

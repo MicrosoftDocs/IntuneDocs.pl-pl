@@ -3,6 +3,7 @@ title: "Używanie grup do zarządzania użytkownikami i urządzeniami | Microsof
 description: "Twórz grupy i zarządzaj nimi za pomocą obszaru roboczego Grupy."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

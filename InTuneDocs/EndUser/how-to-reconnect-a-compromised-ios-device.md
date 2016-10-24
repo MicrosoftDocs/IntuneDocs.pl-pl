@@ -3,6 +3,7 @@ title: "Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezp
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: Ochrona aplikacji i danych | Microsoft Intune
 description: "W tym temacie opisano różne funkcje usługi Intune i możliwości, które są dostępne, aby chronić aplikacje i dane firmy."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

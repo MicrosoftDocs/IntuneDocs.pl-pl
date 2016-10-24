@@ -3,6 +3,7 @@ title: "Wysyłanie błędów rejestracji do administratora IT | Microsoft Intune
 description: "Wysyłanie błędów rejestracji do administratora"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Konfigurowanie zarządzania systemem Android | Microsoft Intune"
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Android i KNOX w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article

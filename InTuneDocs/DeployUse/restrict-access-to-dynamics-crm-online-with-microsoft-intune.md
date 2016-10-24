@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu poczty e-mail do usługi Dynamics CRM Online | Mic
 description: "Ochrona i kontrola dostępu do usługi  Dynamics CRM Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Użycie zasad konfiguracji aplikacji mobilnych programu Android for Work
 description: "Zasady konfiguracji aplikacji mobilnych w usłudze Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację programu Android for Work."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

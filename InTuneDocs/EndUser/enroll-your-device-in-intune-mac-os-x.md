@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune | Micros
 description: "Opis sposobu rejestrowania urządzenia z systemem Mac OS X w usłudze Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

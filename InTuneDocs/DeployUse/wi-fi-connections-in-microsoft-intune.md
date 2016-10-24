@@ -3,6 +3,7 @@ title: "Połączenia Wi-Fi | Microsoft Intune"
 description: "Aby ułatwić użytkownikom nawiązywanie połączeń z sieciami Wi-Fi, użyj profilów sieci Wi-Fi."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

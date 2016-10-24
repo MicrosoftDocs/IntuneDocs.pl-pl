@@ -3,6 +3,7 @@ title: "Ustawienia zasad zgodności dla programu Android for Work | Microsoft In
 description: "W tym temacie opisano ustawienia zasad zgodności urządzeń dla urządzeń z systemem Android, które są zgodne z programem Android for Work."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

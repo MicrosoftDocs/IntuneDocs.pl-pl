@@ -3,6 +3,7 @@ title: "Usuwanie urządzenia z portalu firmy | Microsoft Intune"
 description: "Usuwanie urządzenia z Portalu firmy"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

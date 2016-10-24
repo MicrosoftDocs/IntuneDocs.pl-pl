@@ -3,6 +3,7 @@ title: "Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych | 
 description: 
 keywords: 
 author: jeffgilb
+ms.author: jeffgilb
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article

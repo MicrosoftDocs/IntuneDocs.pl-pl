@@ -3,6 +3,7 @@ title: "Jak użytkownicy systemu Android uzyskują aplikacje | Microsoft Intune"
 description: "Metody udostępniania aplikacji dla systemu Android użytkownikom końcowym"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article

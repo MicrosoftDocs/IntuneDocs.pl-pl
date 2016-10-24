@@ -3,6 +3,7 @@ title: "Blokowanie aplikacji niekorzystających z nowoczesnego uwierzytelniania 
 description: 
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

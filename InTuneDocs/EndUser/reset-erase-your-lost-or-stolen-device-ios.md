@@ -3,6 +3,7 @@ title: "Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urzą
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

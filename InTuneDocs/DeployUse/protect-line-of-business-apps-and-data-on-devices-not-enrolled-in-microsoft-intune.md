@@ -3,6 +3,7 @@ title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zare
 description: "W tym temacie opisano, jak można przygotować swoje niestandardowe aplikacje biznesowe, aby mogły stosować zasady zarządzania aplikacjami mobilnymi, co może pomóc w uniknięciu utraty danych."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article

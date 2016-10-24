@@ -3,6 +3,7 @@ title: Ustawienia zasad systemu Windows Phone 8.1 | Microsoft Intune
 description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
