@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: e79337cb47a95b2718093b871b6af7f90d2d430d
+ms.sourcegitcommit: 9a9343f7aa1ab4761bcbf36f829fe0e9be293515
+ms.openlocfilehash: da1c2da0970d38b410ba67a03f1c302c2b352f27
 
 
 ---
@@ -23,14 +23,12 @@ ms.openlocfilehash: e79337cb47a95b2718093b871b6af7f90d2d430d
 
 # Urządzenie z systemem iOS nie ma minimalnej wymaganej wersji systemu operacyjnego
 
-Urządzenie z systemem iOS nie ma minimalnej wersji systemu operacyjnego wymaganej przez dział IT.  Przed zaktualizowaniem urządzenia sprawdź bieżącą wersję systemu operacyjnego. W tym celu naciśnij kolejno pozycje **Ustawienia** &gt; **Informacje**. Aby zaktualizować urządzenie do najnowszej wersji, naciśnij pozycję **Ustawienia** &gt; **Ogólne** &gt; **Uaktualnienia**.
+Urządzenie z systemem iOS nie ma minimalnej wersji systemu operacyjnego wymaganej przez dział IT. Przed zaktualizowaniem urządzenia sprawdź bieżącą wersję systemu operacyjnego, wybierając pozycje **Ustawienia** &gt; **Informacje**. Aby zaktualizować urządzenie do najnowszej wersji, wybierz pozycję **Ustawienia** &gt; **Ogólne** &gt; **Aktualizacja oprogramowania**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

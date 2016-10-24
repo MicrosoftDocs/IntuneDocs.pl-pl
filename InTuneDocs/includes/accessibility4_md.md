@@ -1,5 +1,5 @@
 Obsługa klienta dla osób z wadami słuchu
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

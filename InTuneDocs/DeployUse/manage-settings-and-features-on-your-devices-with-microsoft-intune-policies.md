@@ -4,7 +4,7 @@ description: "Użyj usługi Intune, aby utworzyć i wdrożyć zasady określają
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fa665c758460b8bbd95b237da6a22eda741b8b95
-ms.openlocfilehash: 0dc10ea029d078840a584424f7900f340189b960
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 058843a1cdd0ca4c32c7cc4d7a901e7547da633e
 
 
 ---
@@ -61,6 +61,7 @@ Aby uzyskać pełną listę zasad usługi Intune, zobacz [Informacje o zasadach 
 
     - [Ustawienia dotyczące urządzeń z systemem iOS](ios-policy-settings-in-microsoft-intune.md)
     - [Ustawienia dotyczące urządzeń z systemem Android](android-policy-settings-in-microsoft-intune.md)
+    - [Ustawienia dotyczące urządzeń z programem Android for Work](android-for-work-policy-settings-in-microsoft-intune.md)
     - [Ustawienia dotyczące urządzeń z systemami Windows 8 i Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
     - [Ustawienia dotyczące urządzeń z systemem Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
     - [Ustawienia dotyczące urządzeń z systemami Windows 10 Desktop i Windows 10 Mobile](windows-10-policy-settings-in-microsoft-intune.md)
@@ -115,7 +116,6 @@ Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad po wysł
 - iOS i Mac OS X: co 6 godzin.
 - Android: co 8 godzin.
 - Windows Phone: co 8 godzin.
-- Zarejestrowane urządzenia z systemem Windows RT: co 24 godziny.
 - Komputery z systemem Windows 8.1 i Windows 10 zarejestrowane jako urządzenia: co 8 godzin.
 
 Jeśli urządzenie zostało właśnie zarejestrowane, częstotliwość zaewidencjonowania będzie większa:
@@ -212,6 +212,6 @@ Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

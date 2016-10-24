@@ -12,15 +12,15 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: c2b4b6308569e1e67a1c3da18c12d19bdeecf08e
+ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
+ms.openlocfilehash: 0b52bd8360f11e226674aefe80a578c451c2679d
 
 ---
 # Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
 Usługa Microsoft Intune umożliwia zdalne blokowanie i resetowanie kodu dostępu.
 
 ## Zdalne blokowanie urządzenia
-Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych.
+Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych. Zdalne blokowanie nie jest obsługiwane
 
 |Platforma|Zdalne blokowanie|
 |------------|---------------|
@@ -31,6 +31,7 @@ Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższ
 |Windows RT 8.1 i Windows RT|Obsługiwane, jeśli bieżący użytkownik urządzenia jest tym samym użytkownikiem, który zarejestrował urządzenie.|
 |Windows 8.1|Obsługiwane, jeśli bieżący użytkownik urządzenia jest tym samym użytkownikiem, który zarejestrował urządzenie.|
 
+Zdalne blokowanie nie jest obsługiwane w przypadku komputerów z systemem Windows zarejestrowanych przy użyciu oprogramowania klienckiego usługi Intune.
 
 ### Aby zdalnie zablokować urządzenie przenośne za pośrednictwem konsoli usługi Intune
 
@@ -55,6 +56,8 @@ Jeśli użytkownik zapomni swój kod dostępu, możesz mu pomóc przez usunięci
 |Windows RT 8.1 i Windows RT|Nieobsługiwane|
 |Windows 8.1|Nieobsługiwane|
 
+Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z systemem Windows zarejestrowanych przy użyciu oprogramowania klienckiego usługi Intune.
+
 ### Aby zresetować kod dostępu
 
 1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia przenośne**.
@@ -73,6 +76,6 @@ Jeśli użytkownik zapomni swój kod dostępu, możesz mu pomóc przez usunięci
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

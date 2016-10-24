@@ -4,7 +4,7 @@ description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji u
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d8a4fd4673560d6e2ffb4264ba8d8e56b0e5cb8d
-ms.openlocfilehash: 59b8cc2ad33521fd4575e46d78129c168da757b3
+ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
+ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
 
 
 ---
@@ -31,15 +31,18 @@ Administratorzy IT lub użytkownicy mają także możliwość instalowania alter
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
 -   System Windows Phone 8 lub nowszy
 -   Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
--   System iOS 7.1 lub nowszy
+-   System iOS 8.0 i nowsze
 -   KNOX Samsung Standard (4.0 i nowsze)
+-   Program Android for Work
+
+>[!NOTE]
+>Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil. 
 
 Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować ilość poczty e-mail do synchronizowania, a także, w zależności od typu urządzenia, typy zawartości do synchronizowania.
+
 >[!NOTE]
 >
 >Jeśli użytkownik zainstalował profil poczty e-mail przed skonfigurowaniem profilu przez usługę Intune, wynik wdrożenia profilu poczty e-mail usługi Intune zależy od platformy urządzenia:
-
-[komentarz]: <> Strona bierna w następujących trzech akapitach jest konieczna, dopóki proces wykrywania duplikatów nie zostanie wyjaśniony przez menedżera projektu.
 
 >**iOS**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Zduplikowany profil poczty e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy informuje użytkownika, że nie jest on zgodny ze względu na ręcznie skonfigurowany profil poczty e-mail, i wyświetla monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby można było skonfigurować profil usługi Intune. Aby uniknąć problemu, poleć użytkownikom, aby dokonali rejestracji bez instalowania profilu poczty e-mail i pozwolili usłudze Intune na skonfigurowanie profilu.
 
@@ -48,6 +51,8 @@ Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować iloś
 >**Samsung KNOX**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune. Jeśli użytkownik skonfiguruje to konto, zostanie ono ponownie zastąpione przez profil usługi Intune. Należy pamiętać, że może to być niejasne dla użytkownika.
 
 >Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępować siebie nawzajem.
+
+>**Android for Work**: profil z usługi Intune jest stosowany tylko do profilu służbowego urządzenia i nie ma wpływu na profile poczty e-mail w profilu użytkownika urządzenia.
 
 
 ## Zabezpieczanie profilów poczty e-mail
@@ -71,11 +76,15 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
     -   **Profil poczty e-mail dla systemu Samsung KNOX Standard (w wersji 4.0 lub nowszej)**
 
-    -   **Profil poczty e-mail (system iOS 7.1 lub nowszy)**
+    -   **Profil poczty e-mail (system iOS 8.0 i nowsze)**
 
     -   **Profil poczty e-mail (system Windows Phone 8 i nowsze)**
 
     -   **Profil poczty e-mail (system Windows 10 Desktop oraz Mobile i nowsze)**
+    
+    -   **Profil poczty e-mail (program Android for Work — Gmail)**
+
+    -   **Profil poczty e-mail (program Android for Work — Nine Work)**
 
     Tworzyć i wdrażać można tylko niestandardowe zasady profilu poczty e-mail. Zalecane ustawienia są niedostępne.
 
@@ -89,21 +98,21 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
     |**Nazwa konta**|Nazwa wyświetlana konta e-mail, która będzie wyświetlana użytkownikom na ich urządzeniach.|
     |**Nazwa użytkownika**|Wybierz, jak można uzyskać nazwę użytkownika dla konta e-mail. Wybierz pozycję **Nazwa użytkownika** w przypadku lokalnego serwera programu Exchange lub pozycję **Nazwa główna użytkownika** w przypadku usługi Office 365.|
     |**Adres e-mail**|Wybierz, jak jest generowany adres e-mail użytkownika na poszczególnych urządzeniach. Wybierz pozycję **Podstawowy adres SMTP**, aby użyć podstawowego adresu SMTP użytkownika do logowania do programu Exchange, lub wybierz pozycję **Główna nazwa użytkownika**, aby użyć pełnej głównej nazwy jako adresu e-mail.|
-    |**Metoda uwierzytelniania** (systemy Samsung KNOX i iOS)|Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.|
-    |**Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** (systemy Samsung KNOX i iOS)|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z serwerem Exchange. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md). Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.|
+    |**Metoda uwierzytelniania** (program Android for Work, systemy Samsung KNOX i iOS)|Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.|
+    |**Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** (program Android for Work, systemy Samsung KNOX i iOS)|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z serwerem Exchange. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md). Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.|
     |**Użyj szyfrowania S/MIME** (systemy Samsung KNOX i iOS)|Wyślij pocztę wychodzącą przy użyciu szyfrowania S/MIME.|
     |**Certyfikat podpisywania** (systemy Samsung KNOX i iOS)|Wybierz certyfikat podpisywania, który będzie używany do podpisywania wychodzących wiadomości e-mail. Ta opcja jest wyświetlana tylko wtedy, gdy jest wybrana opcja **Użyj szyfrowania S/MIME**.|
     |**Liczba dni do synchronizowania poczty e-mail**|Wybierz liczbę dni okresu, z którego chcesz synchronizować pocztę e-mail, lub wybierz pozycję **Nieograniczone**, aby synchronizować wszystkie dostępne wiadomości e-mail.|
-    |**Harmonogram synchronizacji** (systemy Samsung KNOX, Windows Phone 8 i nowsze, Windows 10)|Wybierz harmonogram, według którego urządzenia synchronizują dane z serwera programu Exchange. Możesz również wybrać pozycję **W momencie nadejścia nowych wiadomości**, która powoduje synchronizowanie zaraz po odebraniu, lub pozycję **Ręcznie**, jeśli użytkownik urządzenia ma inicjować synchronizację.|
+    |**Harmonogram synchronizacji** (program Android for Work, systemy Samsung KNOX, Windows Phone 8 i nowsze, Windows 10)|Wybierz harmonogram, według którego urządzenia synchronizują dane z serwera programu Exchange. Możesz również wybrać pozycję **W momencie nadejścia nowych wiadomości**, która powoduje synchronizowanie zaraz po odebraniu, lub pozycję **Ręcznie**, jeśli użytkownik urządzenia ma inicjować synchronizację.|
     |**Użyj protokołu SSL**|Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem programu Exchange. W przypadku urządzeń z systemem Samsung KNOX 4.0 lub nowszym należy wyeksportować certyfikat SSL serwera programu Exchange i wdrożyć go jako profil zaufanego certyfikatu systemu Android w usłudze Intune. Usługa Intune nie obsługuje uzyskiwania dostępu do tego certyfikatu, jeśli zostanie on zainstalowany na serwerze programu Exchange w inny sposób.|
-    |**Typ zawartości do synchronizowania**|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.|
+    |**Typ zawartości do synchronizowania** (wszystkie platformy z wyjątkiem programu Android for Work — Gmail)|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.|
     |**Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm** (tylko system iOS)|Zezwalaj użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.|
     > [!IMPORTANT]
     > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
 
 4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
 
-Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady** .
+Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**.
 
 ## Wdrożenie zasad
 
@@ -122,6 +131,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
-ms.openlocfilehash: 01d87b95d2599f75161c9a95ff4cf94375eedb60
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: e42c2e5db17943562ccd88ab8fe838056c67553a
 
 
 ---
@@ -24,7 +24,7 @@ Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy
 
 
 ## Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune
-Za pomocą programu Apple Configurator można zresetować urządzenia z systemem iOS do ustawień fabrycznych i przygotować je do skonfigurowania przez nowego użytkownika.  Ta metoda wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Przyjęto założenie, że używany jest program Apple Configurator 2.0. Większość scenariuszy wymaga, aby zasady zastosowane w urządzeniu z systemem iOS uwzględniały *koligację użytkownika*, co umożliwia korzystanie z aplikacji Portal firmy usługi Intune.
+Za pomocą programu Apple Configurator można zresetować urządzenia z systemem iOS do ustawień fabrycznych i przygotować je do skonfigurowania przez nowego użytkownika.  Ta metoda wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Przyjęto założenie, że używany jest program Apple Configurator 2.0. Większość scenariuszy wymaga, aby zasady zastosowane w urządzeniu z systemem iOS uwzględniały **koligację użytkownika**, co umożliwia korzystanie z aplikacji Portal firmy usługi Intune.
 
 **Wymagania wstępne**
 * [Rejestracja urządzeń z systemem iOS jest włączona](set-up-ios-and-mac-management-with-microsoft-intune.md) poprzez zainstalowanie certyfikatu APNs
@@ -139,10 +139,10 @@ Za pomocą programu Apple Configurator można zresetować urządzenia z systemem
 
 
 ### Zobacz także
-[Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Lista linków do zadań, które można wykonać na urządzeniu prz
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 08/10/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: 83564abcfcbb6597656e19031e5af1c7d7a3252d
+ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
+ms.openlocfilehash: 6e84676a8ea1e149f73871ef1468c2da80fa221c
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy wykonują w celu ukończenia różnych zadań pogrupowanych w kategorie: 
-- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune 
+Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy muszą wykonać w celu ukończenia różnych zadań pogrupowanych w następujące kategorie:
+- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
 - Zadania zarządzania po rejestracji
 - Problemy ze zgodnością
 
@@ -64,6 +64,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

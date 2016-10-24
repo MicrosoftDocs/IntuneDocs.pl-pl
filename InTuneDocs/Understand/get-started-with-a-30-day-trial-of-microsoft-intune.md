@@ -13,8 +13,8 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: cbf863619a385d596630ee4ff0b216a4cbbe6cb7
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 3973ac11d4734b17f905e88259863d7ddb59c1f4
 
 
 ---
@@ -37,12 +37,12 @@ Przed rozpoczęciem pracy z usługą Intune potrzebujesz:
 
 -   Jeśli masz już konto usług Microsoft Online Services, potrzebne będą poświadczenia administratora dla tego konta. Jeśli nie masz takiego konta lub chcesz korzystać z tej dzierżawy usługi Intune wyłącznie do celów ewaluacyjnych, nie potrzebujesz poświadczeń administratora.
 
--   Jeśli przy użyciu usługi Intune w wersji ewaluacyjnej będziesz zarządzać urządzeniami z systemem iOS lub Windows Phone, potrzebujesz certyfikatów (lub kluczy) oraz kont umożliwiających pobranie tych certyfikatów (patrz poniższa tabela). Urządzenia z systemem Android nie wymagają żadnych dodatkowych certyfikatów.
+-   Jeśli przy użyciu usługi Intune w wersji ewaluacyjnej będziesz zarządzać urządzeniami z systemem iOS lub Windows Phone 8.1, potrzebujesz certyfikatów (lub kluczy) oraz kont umożliwiających pobranie tych certyfikatów (patrz poniższa tabela). Urządzenia z systemem Android nie wymagają żadnych dodatkowych certyfikatów.
 
     |Platforma|Wymagania dotyczące certyfikatów|Więcej informacji|
     |------------|----------------------------|--------------------|
-    |Windows Phone 8.1 i Windows Phone 8 |Żaden certyfikat nie jest wymagany w przypadku użytkowników systemu Windows Phone 8.1, którzy instalują aplikację Portal firmy pobraną ze Sklepu. Certyfikat Symantec jest wymagany w przypadku systemu Windows Phone 8.0 oraz w przypadku wdrażania aplikacji Portal firmy za pośrednictwem usługi Intune na urządzeniach z systemem Windows Phone 8.1.|We wskazówkach tych założono, że użytkownicy pobierają aplikację Portal firmy ze Sklepu na urządzeniach z systemem Windows Phone 8.1 lub nowszym. Aby uzyskać informacje na temat obsługi systemu Windows Phone 8.0, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).|
-    |Urządzenia z systemem Windows 10, Windows RT 8.1, Windows RT lub Windows 8.1|Żaden certyfikat nie jest wymagany w przypadku rejestracji urządzeń z systemem Windows RT i Windows.|[Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
+    |Windows Phone 8.1 |Żaden certyfikat nie jest wymagany w przypadku użytkowników systemu Windows Phone 8.1, którzy instalują aplikację Portal firmy pobraną ze Sklepu. |We wskazówkach tych założono, że użytkownicy pobierają aplikację Portal firmy ze Sklepu na urządzeniach z systemem Windows Phone 8.1 lub nowszym. |
+    |Urządzenia z systemem Windows 10, Windows RT 8.1 lub Windows 8.1|Żaden certyfikat nie jest wymagany w przypadku rejestracji urządzeń z systemem Windows RT i Windows.|[Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
     |System iOS 7.1 lub nowszy|Pobierz certyfikat usługi Apple Push Notification.|Należy uzyskać certyfikat usługi Apple Push Notification Service od firmy Apple w sposób opisany w temacie: [Konfigurowanie zarządzania urządzeniami z systemem iOS i komputerami Mac przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
 ## Kroki w celu zakończenia 30-dniowej ewaluacji usługi Intune
@@ -66,6 +66,6 @@ Nadszedł czas, aby zacząć korzystać z subskrypcji 30-dniowej wersji ewaluacy
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

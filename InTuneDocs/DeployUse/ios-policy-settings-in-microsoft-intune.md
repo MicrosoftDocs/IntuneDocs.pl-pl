@@ -4,7 +4,7 @@ description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
+ms.sourcegitcommit: cd5930995a6da130fedcb6d89851460e6f0614eb
+ms.openlocfilehash: 24540a74ce98adbf3f908cbea401328f027867ca
 
 
 ---
@@ -39,7 +39,7 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz „Ustawienia zasad niestandardowych” w dalszej części tego tematu.
 
 ### Ustawienia zabezpieczeń
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
@@ -58,7 +58,7 @@ Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Czas braku aktywności (w minutach) przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 ### Ustawienia systemowe
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
@@ -71,7 +71,7 @@ Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 |**Zezwalaj na aplikację Passbook podczas blokady**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|
 
 ### Ustawienia chmury dotyczące dokumentów i danych
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
@@ -81,9 +81,11 @@ Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 |**Wymagaj zaszyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|
 |**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwalaj aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
 |**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Zezwalaj użytkownikowi na kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
+|**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Zezwalaj na używanie funkcji udostępnionego strumienia zdjęć systemu iOS.|
+|**Zezwalaj na Bibliotekę zdjęć iCloud**|Zezwalaj użytkownikowi na przechowywanie zdjęć w usłudze iCloud. Jeśli to ustawienie zostanie wyłączone, zdjęcia już przechowywane w usłudze iCloud zostaną usunięte.|
 
 ### Ustawienia aplikacji dotyczące przeglądarki
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
@@ -95,37 +97,48 @@ Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 |**Zezwalaj na ostrzeżenia o oszustwie**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce.|
 
 ### Ustawienia aplikacji dotyczące aplikacji
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
-|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Zezwalaj na dostęp do sklepu z aplikacjami z poziomu urządzenia.|
+|**Zezwalaj na instalowanie aplikacji**|Zezwalaj urządzeniu na dostęp do sklepu z aplikacjami i instalowanie aplikacji.|
 |**Wymagaj hasła w celu dostępu do sklepu z aplikacjami**|Wymagaj od użytkownika wprowadzenia hasła, zanim będzie on mógł odwiedzić sklep z aplikacjami.|
 |**Zezwalaj na zakupy w aplikacji**|Zezwalaj na zakupy w sklepie dokonywane w uruchomionej aplikacji.|
 |**Zezwalaj na zarządzane dokumenty w innych niezarządzanych aplikacjach**|Zezwalaj na wyświetlanie dokumentów firmowych w dowolnej aplikacji.<br>**Przykład:** chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako „nie”. Gdy urządzenie otrzyma zasady (na przykład po ponownym uruchomieniu), nie będzie już miało możliwości zapisywania.|
 |**Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**|Zezwalaj na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.|
 |**Zezwalaj na wideokonferencje**|Zezwalaj na użycie aplikacji do obsługi wideokonferencji, takiej jak FaceTime, w urządzeniu.|
-|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|
-|**Zezwalaj użytkownikom na pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**|Zezwalaj użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.|
+|**Zezwalaj użytkownikowi na ufanie autorom nowych aplikacji dla przedsiębiorstw**|Umożliwia użytkownikowi wybranie ufania aplikacjom, które nie zostały pobrane ze sklepu z aplikacjami.|
+
 
 ### Ustawienia aplikacji dotyczące gier
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
 |**Zezwalaj na dodawanie przyjaciół z programu Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|
 |**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|
 
+### Ustawienia aplikacji dotyczące zawartości multimedialnej
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|-------|
+|**Region klasyfikacji**|Wybierz region, a następnie wybierz maksymalną klasyfikację zawartości, którą użytkownicy mogą pobierać w przypadku **filmów**, **programów telewizyjnych** i **aplikacji**.|
+|**Zezwala na zawartość dla dorosłych w sklepie z multimediami**|Zezwalaj urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.|
+|**Zezwalaj użytkownikom na pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**|Zezwalaj użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.|
+
+
 ### Ustawienia możliwości urządzenia dotyczące sprzętu
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
 |**Zezwalaj na używanie aparatu**|Określ, czy można używać aparatu w urządzeniu.|
+|**Wymuszaj wykrywanie nadgarstka dla sparowanych zegarków Apple Watch**|Po włączeniu tego ustawienia Apple Watch nie będzie wyświetlać powiadomień, kiedy nie znajduje się na nadgarstku użytkownika.|
 |**Wymagaj hasła parowania dla wychodzących żądań funkcji AirPlay**|Wymagaj hasła parowania, gdy użytkownik używa funkcji AirPlay do strumieniowego przesyłania zawartości do innych urządzeń firmy Apple.|
 
 ### Ustawienia możliwości urządzenia dotyczące połączeń komórkowych
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
@@ -134,13 +147,14 @@ Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
 |**Zezwalaj na globalne pobieranie w tle podczas roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|
 
 ### Ustawienia możliwości urządzenia dotyczące funkcji
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|-------|
 |**Zezwalaj na Siri**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu.|
 |**Zezwalaj na Siri, gdy urządzenie jest zablokowane**|Zezwalaj na korzystanie z asystenta głosowego Siri w urządzeniu, gdy urządzenie jest zablokowane.|
 |**Zezwalaj na wybieranie głosowe**|Zezwalaj na korzystanie z funkcji wybierania głosowego w urządzeniu.|
+|**Nie zezwalaj na użycie funkcji Airdrop z zarządzanych aplikacji**|Uniemożliwia zarządzanym aplikacjom wysyłanie danych za pomocą funkcji Airdrop.|
 
 
 ### Ustawienia dotyczące aplikacji zgodnych i niezgodnych
@@ -182,7 +196,7 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 > [!NOTE]
 > Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
 >
-> -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub menedżera rejestracji urządzeń w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
+> -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub [programu Device Enrollment Program firmy Apple](ios-device-enrollment-program-in-microsoft-intune) w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 > -   Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
 ### Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
@@ -208,30 +222,61 @@ Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
 
 ### Ustawienia rejestracji
-Wszystkie ustawienia dotyczą systemu iOS 7.1 i nowszych.
+Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
 |**Zezwalaj na blokadę aktywacji, gdy urządzenie jest w trybie nadzorowanym**|Umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.|
 
-### Nadzór
-Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 7.1 lub nowszym, które są w trybie nadzorowanym.
+### Ustawienia trybu nadzorowanego
+Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 8.0 lub nowszym, które są w trybie nadzorowanym.
+
+### Ustawienia trybu nadzorowanego dla ograniczeń urządzenia
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
 |**Zezwalaj na modyfikowanie konta**|Umożliwia użytkownikowi zmianę ustawień konta, takich jak konfiguracja poczty e-mail.|
-|**Zezwalaj na korzystanie z funkcji AirDrop**|Umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.|
 |**Zezwalaj na zmiany ustawień użycia danych komórkowych przez aplikacje**|Umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.|
-|**Zezwalaj programowi Siri na wykonywanie zapytań o zawartość wygenerowaną przez użytkowników w Internecie**|Zezwala programowi Siri na dostęp do witryn sieci Web w celu udzielania odpowiedzi na pytania.|
-|**Zezwalaj na dostęp do sklepu iBooks**|Umożliwia użytkownikowi przeglądanie i kupowanie książek w sklepie iBooks.|
-|**Zezwalaj na zmienianie ustawień aplikacji Znajdź moich znajomych**|Umożliwia użytkownikowi zmienianie ustawień aplikacji Znajdź moich znajomych.|
 |**Zezwalaj na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień**|Zezwala użytkownikowi na korzystanie z opcji wymazywania z urządzenia całej zawartości i wszystkich ustawień na urządzeniu.|
 |**Zezwalaj użytkownikom na włączanie ograniczeń w ustawieniach urządzenia**|Zezwala użytkownikowi na konfigurowanie ograniczeń urządzenia (kontroli rodzicielskiej) na urządzeniu.|
-|**Zezwalaj na zwracanie przez wyszukiwanie Spotlight wyników z Internetu**|Pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.|
-|**Zezwalaj na używanie aplikacji Game Center**|Zezwala na używanie aplikacji Game Center.|
-|**Zezwalaj na parowanie hostów w celu sterowania tym, z którymi urządzeniami może łączyć się urządzenie z systemem iOS**|Zezwala na parowanie hostów w celu umożliwienia administratorowi kontrolowania tego, z którymi urządzeniami może być sparowane urządzenie iOS 7.|
+|**Zezwalaj na parowanie hostów w celu sterowania tym, z którymi urządzeniami może łączyć się urządzenie z systemem iOS**|Zezwala na parowanie hostów w celu umożliwienia administratorowi kontrolowania tego, z którymi urządzeniami może być sparowane urządzenie iOS.|
 |**Zezwalaj użytkownikowi na instalowanie profilów konfiguracji i certyfikatów**|Zezwala użytkownikowi na instalowanie profilów konfiguracji i certyfikatów.|
+|**Zezwalaj na modyfikację nazwy urządzenia**|Zezwala użytkownikowi na zmianę nazwy urządzenia.|
+|**Zezwalaj na modyfikację kodu dostępu**|Zezwala na dodawanie, zmianę lub usunięcie hasła urządzenia.|
+|**Zezwalaj na parowanie zegarków Apple Watch**|Zezwala na parowanie urządzenia z zegarkiem Apple Watch.|
+|**Zezwalaj na modyfikowanie ustawień powiadomień**|Zezwala użytkownikowi na zmianę ustawień powiadomień urządzenia.|
+|**Zezwalaj na modyfikowanie tapety**|Zezwala użytkownikowi na zmianę tapety urządzenia.|
+
+### Ustawienia trybu nadzorowanego dla ograniczeń funkcji
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na korzystanie z funkcji AirDrop**|Umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.|
+|**Zezwalaj programowi Siri na wykonywanie zapytań o zawartość wygenerowaną przez użytkowników w Internecie**|Zezwala programowi Siri na dostęp do witryn sieci Web w celu udzielania odpowiedzi na pytania.|
+|**Użyj filtra wulgaryzmów programu Siri**|Uniemożliwia programowi Siri dyktowanie i mówienie wulgaryzmów.|
+|**Zezwalaj na zwracanie przez wyszukiwanie Spotlight wyników z Internetu**|Pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.|
+|**Zezwalaj na wyszukiwanie definicji słowa**|Zezwala na używanie funkcji systemu iOS umożliwiającej wyróżnienie wyrazu i wyszukanie jego definicji.|
+|**Zezwalaj na klawiatury predykcyjne**|Zezwala na używanie klawiatur predykcyjnych, które sugerują wyrazy, które użytkownik może chcieć wpisać.|
+|**Zezwalaj na autokorektę**|Pozwala urządzeniu na automatyczne poprawianie błędnie napisanych wyrazów.|
+|**Zezwalaj na sprawdzanie pisowni dla klawiatury**|Pozwala na korzystanie z modułu sprawdzania pisowni urządzenia.|
+|**Zezwalaj na skróty klawiaturowe**|Zezwala na używanie skrótów klawiaturowych.|
+
+### Ustawienia trybu nadzorowanego dla ograniczeń aplikacji
+
+|Nazwa ustawienia|Szczegóły|
+|----------------|--------------------|
+|**Zezwalaj na modyfikowanie ustawień zaufania aplikacji dla przedsiębiorstw**|Umożliwia użytkownikom zmienianie ustawień zaufania dla aplikacji dla przedsiębiorstw.|
+|**Zezwala na instalowanie aplikacji tylko przy użyciu konfiguracji firmy Apple i sklepu iTunes**|Włącza lub wyłącza sklep App Store na ekranie głównym urządzenia. Użytkownicy nadal mogą instalować i aktualizować aplikacje przy użyciu programu iTunes lub narzędzia Apple Configurator.|
+|**Zezwalaj na automatyczne pobieranie aplikacji**|Zezwalaj na automatyczne pobieranie na to urządzenie aplikacji kupionych na innych urządzeniach. To ustawienie nie wpływa na aktualizacje aplikacji.|
+|**Zezwalaj na zmienianie ustawień aplikacji Znajdź moich znajomych**|Umożliwia użytkownikowi zmienianie ustawień aplikacji Znajdź moich znajomych.|
+|**Zezwalaj na dostęp do sklepu iBooks**|Umożliwia użytkownikowi przeglądanie i kupowanie książek w sklepie iBooks.|
 |**Zezwalaj na korzystanie z aplikacji Messages na urządzeniu**|Zezwala na korzystanie z aplikacji Messages do wysyłania wiadomości SMS.|
+|**Zezwalaj na użycie aplikacji Podcasty**|Zezwala na używanie aplikacji Podcasty.|
+|**Zezwalaj na użycie usługi Music**|Zezwala na używanie aplikacji Apple Music.|
+|**Zezwalaj na usługę iTunes Radio**|Zezwala na używanie aplikacji iTunes Radio.|
+|**Zezwalaj na usługę Apple News**|Zezwala na używanie aplikacji Apple News.|
+|**Zezwalaj na aplikację Game Center**|Zezwala na używanie aplikacji Game Center.|
+
 
 ### Pokaż lub ukryj aplikacje
 
@@ -337,6 +382,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

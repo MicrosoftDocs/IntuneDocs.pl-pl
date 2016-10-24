@@ -1,10 +1,10 @@
 ---
 title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail | Microsoft Intune"
-description: 
+description: "Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android"
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 09/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,40 +14,32 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
-ms.openlocfilehash: 9446df0381a2b2a1a6322f8f59523ce78406f25a
+ms.sourcegitcommit: 6be7193a5f04768a59b5c73fb9c2f51241156ada
+ms.openlocfilehash: 9dd0f089d220538a5526979a84dc165151b86f4f
 
 
 ---
 
 
-# Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail
+# Wysyłanie dzienników danych diagnostycznych do administratora IT pocztą e-mail
 
-Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami firmowymi lub szkolnymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT rozpoznać i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz ustawienie Pełne rejestrowanie. Przeczytaj więcej na temat [pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+Jeśli na urządzeniu z systemem Android wystąpi błąd podczas pracy z aplikacjami służbowymi albo podczas pracy w aplikacji Portal firmy, możesz wysłać dzienniki danych diagnostycznych, aby pomóc administratorowi IT zdiagnozować i usunąć błąd. Aby uwzględnić w dziennikach diagnostycznych wszystkie szczegóły, które ułatwią administratorowi IT ustalenie problemu, włącz pełne rejestrowanie. Aby dowiedzieć się więcej na temat pełnego rejestrowania, zobacz [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami (Android)](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
-Aby włączyć pełne rejestrowanie:
+Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą poczty e-mail:
 
 1.  Otwórz aplikację Portal firmy.
 
-2.  Naciśnij kolejno pozycje **Menu** &gt; **Ustawienia**.
+2.  Naciśnij pozycję **Menu** &gt; **Pomoc i opinie**.
 
     > [!NOTE]
     > Przycisk **Menu** może być przyciskiem programowym lub sprzętowym, w zależności od posiadanego urządzenia z systemem Android.
 
-3.  W obszarze **Dane diagnostyczne** naciśnij przycisk **Wyślij dane**.
+3.  W obszarze **Pomoc** naciśnij pozycję **Uzyskaj pomoc**.
 
-    > [!NOTE]
-    > **Tylko w przypadku korzystania z urządzeń z systemem Android 6.0 lub nowszym:** Po naciśnięciu przycisku **Wyślij dane** zostanie wyświetlony komunikat **Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?**.
-
-    Ten komunikat jest mylący, ponieważ **firma Microsoft nigdy nie próbuje uzyskać dostępu do zdjęć, multimediów ani plików na Twoim urządzeniu!** Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić.  Zezwalając na dostęp, umożliwiasz urządzeniu tylko zapisywanie dzienników danych na karcie SD urządzenia, co pozwala na przenoszenie tych dzienników przy użyciu kabla USB.
-
-    Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym naciśnięciu przycisku **Wyślij dane**, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, zaznaczając pole wyboru **Nigdy nie pytaj ponownie**.  Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Magazyn** i włącz uprawnienie.
-
-4.  Postępuj zgodnie z monitami, aby wybrać aplikację poczty e-mail na potrzeby wysyłania dzienników do administratora IT. Aplikacja utworzy wstępnie zaadresowane wiadomości e-mail z dołączonymi wszystkimi dziennikami.
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

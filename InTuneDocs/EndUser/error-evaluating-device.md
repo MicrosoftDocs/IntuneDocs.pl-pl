@@ -14,22 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: a497a3e9372a89326f31d6eb869e38200ebe6802
+ms.sourcegitcommit: 703878a70227716213f5a25b1b5dfa99fce42ee5
+ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 
 
 ---
 
 
 # Błąd podczas oceny urządzenia
-Twoje urządzenie zostało uznane za niezgodne z zasadami firmy, a podczas oceny urządzenia pod kątem tego warunku wystąpił błąd.
+Stwierdzono, że urządzenie jest niezgodne z przynajmniej jedną zasadą firmy, ale nie można teraz wyświetlić błędu, ponieważ w systemie wystąpił problem podczas próby oceny urządzenia.  
 
-Aby rozwiązać ten problem, poczekaj kilka minut, a następnie naciśnij pozycję **Sprawdź zgodność**.
-
-Jeśli problem będzie nadal występować, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Aby rozwiązać ten problem, poczekaj kilka minut, a następnie naciśnij pozycję **Sprawdź zgodność**. Jeśli problem będzie nadal występować, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "W tym temacie opisano ustawienia zasad zarządzania aplikacjami mo
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 09/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 652f3aac9bd0925bd8e8718df04c0eb4b5629902
+ms.sourcegitcommit: 7313854dc9cee26412ed4759e570f0aecc5f156b
+ms.openlocfilehash: e8b1ccca0c905ccdefd5c4a97b78561c6edb7908
 
 
 ---
@@ -67,6 +67,9 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji konfigurowanych 
 - **Wyłącz synchronizację kontaktów:** wybierz opcję **Tak**, aby uniemożliwić synchronizowanie informacji kontaktowych z aplikacją natywnej książki adresowej na urządzeniu. W przypadku wybrania opcji **Nie** aplikacja zapisuje dane kontaktowe w aplikacji natywnej książki adresowej urządzenia.<br/>Wykonanie selektywnego czyszczenia w celu usunięcia danych firmy powoduje usunięcie kontaktów zsynchronizowanych bezpośrednio z aplikacji do natywnej książki adresowej. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie ta opcja ma zastosowanie tylko do aplikacji **Microsoft Outlook**.
 
   **Wartość domyślna = Tak**
+- **Wyłącz drukowanie:** wybierz opcję **Tak**, aby uniemożliwić drukowanie danych firmowych z poziomu aplikacji skojarzonych z zasadami zarządzania aplikacjami mobilnymi.
+
+  **Wartość domyślna — Tak**
 
 ##  Ustawienia zasad dostępu systemu Android
 Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji skonfigurowanych przy użyciu zasad zarządzania aplikacjami mobilnymi.
@@ -96,6 +99,6 @@ Termin **Aplikacje zarządzane przez zasady** dotyczy aplikacji skonfigurowanych
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

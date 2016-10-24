@@ -13,21 +13,27 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 3e09af2cd329d556a9a0a1b2fb4750856e336ab1
+ms.sourcegitcommit: ffe11b4eb4b0f4c2ffdc831cad9deb30d7180809
+ms.openlocfilehash: 94de65185af64052226985f2c65c7b8a18e2f829
 
 
 ---
 
 # Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach w usłudze Microsoft Intune
 
-Zasady zarządzania aplikacjami mobilnymi (MAM) chronią dane firmy, ograniczając przenoszenie danych (na przykład kopiowanie i wklejanie) lub uniemożliwiając użytkownikom zapisywanie dokumentów firmy w lokalizacji prywatnej.   Aby zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji biznesowych systemu iOS lub Android, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego aplikacje dostępnego w usłudze Microsoft Intune.  Opakowywanie aplikacji jest procesem stosowania warstwy zarządzania do aplikacji mobilnej bez konieczności wprowadzania zmian w aplikacji.  Po opakowaniu aplikacji można stosować do niej zasady zarządzania aplikacjami mobilnymi i rozpowszechniać ją wśród użytkowników końcowych.  
+Zasady zarządzania aplikacjami mobilnymi pomagają chronić dane firmy, ograniczając możliwość wykonywania akcji, które mogą spowodować przeciek tych danych, i narzucając wymagania w zakresie dostępu do danych (np. kod PIN). Aby zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji biznesowych systemu iOS lub Android, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego aplikacje dostępnego w usłudze Microsoft Intune.  Opakowywanie aplikacji jest procesem stosowania warstwy zarządzania do aplikacji mobilnej bez konieczności wprowadzania zmian w aplikacji.  Po opakowaniu aplikacji można stosować do niej zasady zarządzania aplikacjami mobilnymi i rozpowszechniać ją wśród użytkowników końcowych.  
 
-W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania aplikacjami mobilnymi dla aplikacji używanych na **niezarządzanych urządzeniach należących do pracowników** i urządzeniach zarządzanych przez **rozwiązanie do zarządzania urządzeniami przenośnymi (MDM) oferowane przez inną firmę**.  Aby przygotować aplikacje biznesowe uruchamiane na **urządzeniach zarejestrowanych w usłudze Intune**, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania aplikacjami mobilnymi dla aplikacji używanych na **niezarządzanych urządzeniach należących do pracowników** i urządzeniach zarządzanych przez **rozwiązanie do zarządzania urządzeniami przenośnymi (MDM) oferowane przez inną firmę**.  Aby przygotować aplikacje biznesowe uruchamiane na **urządzeniach zarejestrowanych w ramach zarządzania urządzeniami przenośnymi w usłudze Intune**, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+
+
 ##  Krok 1. Przygotowywanie aplikacji
-Aby można było zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego aplikacje dostępnego w usłudze Microsoft Intune.  Plik do pobrania zawiera instrukcje dotyczące instalowania i używania narzędzia opakowującego aplikacje.  
+Aby można było zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego aplikacje dostępnego w usłudze Microsoft Intune.  Instrukcje dotyczące pobierania i używania narzędzia opakowującego aplikacje można znaleźć na następujących stronach:
+
+- [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) 
+- [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)
+
 >[!IMPORTANT]  
->Ta wersja narzędzia opakowującego aplikacje, obsługująca urządzenia niezarejestrowane w usłudze Intune, zostanie udostępniona w prywatnej wersji zapoznawczej w najbliższych tygodniach. Jeśli chcesz uczestniczyć w tym programie, wyślij wiadomość na adres msintuneappsdk@microsoft.com w celu uzyskania dodatkowych informacji.
+>Ta wersja narzędzia opakowującego aplikacje, które obsługuje urządzenia niezarejestrowane w usłudze Intune, jest dostępna dla systemu iOS i w publicznej wersji zapoznawczej dla systemu Android. To narzędzie można pobrać z [tego repozytorium w usłudze Github](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) dla systemu iOS oraz [tego repozytorium w usłudze Github](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview) dla systemu Android.
 
 ## Krok 2. Dodawanie aplikacji
 
@@ -75,6 +81,6 @@ Aplikację biznesową można usunąć z listy aplikacji.  Spowoduje to usunięci
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

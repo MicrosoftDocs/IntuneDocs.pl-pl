@@ -13,8 +13,8 @@ ms.assetid: 24b8ecbf-7336-4543-8094-32688bda0b8f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: e1fe6b167b7d46f03472833bc1c3c19030f47bce
-ms.openlocfilehash: 498e1a68c2c87e57851e229d55e5054060affa81
+ms.sourcegitcommit: a5f80058e004f119acc9a918123c897b72b71314
+ms.openlocfilehash: 43bbb8590738182a26efcbeead1e59eff9e5f20d
 
 
 ---
@@ -25,7 +25,7 @@ Twoje odpowiedzi na następujące pytania pomogą określić najlepszą metodę 
 ## **Czy urządzenia należące do firmy są udostępniane, czy mają dedykowanych użytkowników?**
 
 > [!div class="button"]
-[Udostępnione >](choose-how-to-enroll-devices4.md)   [Dedykowane >](choose-how-to-enroll-devices6.md)
+[Udostępniane >](choose-how-to-enroll-devices4.md)<br>[Dedykowane >](choose-how-to-enroll-devices6.md)
 
 - **Udostępnione urządzenia należące do firmy** — te urządzenia nie mają jednego użytkownika i zazwyczaj nie są konfigurowane do uzyskiwania dostępu do poczty e-mail. Przykładami takich urządzeń są urządzenia z kiosku lub urządzenia przeznaczone do konkretnych zadań, które użytkownicy pobierają z puli, a następnie zwracają. Zalecane metody rejestracji urządzeń zależą od platformy urządzeń.
 
@@ -36,6 +36,6 @@ Twoje odpowiedzi na następujące pytania pomogą określić najlepszą metodę 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -11,6 +11,12 @@
 ### [Użycie przepustowości sieci](network-bandwidth-use.md)
 ### [Niestandardowe nazwy domen](domain-names-for-microsoft-intune.md)
 
+## [Wybieranie metody zarządzania urządzeniami](choose-how-to-manage-devices.md)
+### [Możliwości zarządzania zarejestrowanymi urządzeniami](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
+
+## [Migracja do usługi Intune](migrate-to-intune.md)
+
 ## [Przewodnik Szybki start dotyczący usługi Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logowanie się do usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Konfigurowanie niestandardowej nazwy domeny](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
@@ -22,10 +28,6 @@
 ### [Rejestrowanie urządzeń przenośnych i instalowanie aplikacji](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Zadania po konfiguracji](post-configuration-tasks.md)
 
-## [Wybieranie metody zarządzania urządzeniami](choose-how-to-manage-devices.md)
-### [Możliwości zarządzania zarejestrowanymi urządzeniami](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
-
 ## [Etapy wdrażania usługi Intune](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Zakres projektu](project-scope.md)
 ### [Weryfikacja koncepcji](proof-of-concept.md)
@@ -34,11 +36,12 @@
 ### [Działanie i obsługa](operations-and-maintenance.md)
 
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
+# [Co nowego](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Wdrażanie i użytkowanie](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Tworzenie i dostosowywanie aplikacji](/intune/develop/intune-app-sdk)
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

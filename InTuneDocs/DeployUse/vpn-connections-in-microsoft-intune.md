@@ -4,7 +4,7 @@ description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,21 +13,23 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 475c68f8812627cd58f86bb74d8c48988f53f7ed
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
 
 
 ---
 
 # Połączenia VPN w usłudze Microsoft Intune
- Aby zapewnić użytkownikom bezpieczny dostęp zdalny do sieci firmowej, możesz użyć wirtualnych sieci prywatnych (VPN). Użytkownicy zdalni mogą dzięki temu pracować tak, jakby ich urządzenia były fizycznie połączone z siecią. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Za pomocą opcji w obszarze *Profile sieci VPN* w usłudze Microsoft Intune możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w swojej organizacji. Przez wdrożenie tych ustawień można maksymalnie ułatwić użytkownikom końcowym nawiązywanie połączeń z zasobami w sieci firmowej.
+
+Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają *profilu połączenia VPN*. Za pomocą opcji w obszarze *Profile sieci VPN* w usłudze Microsoft Intune możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji tak, aby łączenie się z siecią było łatwe i bezpieczne. 
 
 Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS ustawienia wymagane do połączenia z udziałem plików w sieci firmowej. W tym celu tworzysz profil sieci VPN zawierający ustawienia wymagane do połączenia z siecią firmową, a następnie wdrażasz go dla wszystkich użytkowników mających urządzenia z systemem iOS. Użytkownicy będą widzieli połączenie VPN na liście dostępnych sieci i będą mogli łatwo nawiązać połączenie.
 
 Za pomocą profili sieci VPN można konfigurować następujące typy urządzeń:
 
-* Urządzenia z systemem Android 4 i nowszymi
-* Urządzenia z systemem iOS 7.1 i nowszymi
+* Urządzenia z systemem Android 4 i nowszym
+* Urządzenia z programem Android for Work
+* Urządzenia z systemem iOS w wersji 8.0 lub nowszej
 * Urządzenia z systemem Mac OS X 10.9 i nowszymi
 * Zarejestrowane urządzenia z systemem Windows 8.1 lub nowszym
 * Urządzenia z systemem Windows Phone 8.1 lub nowszym
@@ -45,6 +47,8 @@ Usługa Intune umożliwia tworzenie profilów sieci VPN korzystających z nastę
 Typ połączenia |iOS i Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Tak |Tak   |Nie    |     Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
+Cisco (IPsec)|Tak |Nie   |Nie  |  Nie|Nie  |Nie | Nie|
+Citrix|Tak |Nie   |Nie  |  Nie|Nie  |Nie | Nie|
 Pulse Secure|Tak  |Tak |Tak   |Nie  |Tak  |Tak| Tak|        
 F5 Edge Client|Tak |Tak |Tak |Nie  |Tak  |   Tak |  Tak|   
 Dell SonicWALL Mobile Connect|Tak |Tak |Tak |Nie  |Tak |Tak |Tak|         
@@ -68,9 +72,7 @@ Profile sieci VPN mogą wykorzystywać różne typy połączeń i protokoły ró
 
 ### Certyfikaty
 
-Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PFX utworzony wcześniej w usłudze Intune.
-
-Jest on znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub certyfikatu głównego), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze przeprowadzającym uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
+Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PFX utworzony wcześniej w usłudze Intune. Jest on znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze przeprowadzającym uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
 
 Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md).
 
@@ -83,13 +85,17 @@ Użytkownik jest uwierzytelniany na serwerze sieci VPN przez podanie swojej nazw
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dodaj zasady**.
 2. Wybierz szablon nowych zasad, rozwijając odpowiedni typ urządzenia, a następnie wybierz profil sieci VPN dla tego urządzenia:
     * **Profil sieci VPN (system Android 4 i nowsze)**
-    * **Profil sieci VPN (system iOS 7.1 i nowsze)**
+    * **Profil sieci VPN (program Android for Work)**
+    * **Profil sieci VPN (system iOS 8.0 i nowsze)**
     * **Profil sieci VPN (system Mac OS X 10.9 i nowsze)**
     * **Profil sieci VPN (system Windows 8.1 i nowsze)**
     * **Profil sieci VPN (system Windows Phone 8.1 i nowsze)**
     * **Profil sieci VPN (system Windows 10 Desktop i Mobile oraz nowsze)**
 
  Tworzyć i wdrażać można tylko niestandardowe zasady profilu sieci VPN. Zalecane ustawienia są niedostępne.
+
+> [!Note]
+> Profil sieci VPN dla urządzeń programu Android for Work powoduje włączenie połączenia sieci VPN wyłącznie dla aplikacji zainstalowanych na profilu służbowym urządzenia.
 
 3. Skorzystaj z poniższej tabeli, aby skonfigurować ustawienia profilu sieci VPN:
 
@@ -111,6 +117,7 @@ Nazwa ustawienia  |Więcej informacji
 **Grupa lub domena logowania**|Określ nazwę grupy lub domeny logowania, z którą chcesz nawiązać połączenie. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Dell SonicWALL Mobile Connect**.
 **Odcisk palca**|Określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, który będzie używany do sprawdzenia, czy dany serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca serwera. (Użytkownik samodzielnie weryfikuje odcisk palca i wybiera opcję **Zaufane** w celu nawiązania połączenia). Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **CheckPoint Mobile VPN**.
 **Sieć VPN dla aplikacji**|Wybierz tę opcję, jeśli chcesz powiązać to połączenie VPN z aplikacją dla systemu iOS lub Mac OS X, tak aby połączenie było otwierane w momencie uruchomienia aplikacji. Podczas wdrażania oprogramowania możesz powiązać ten profil sieci VPN z aplikacją. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+**Sieć VPN na żądanie**|Można skonfigurować sieci VPN na żądanie dla urządzeń z systemem iOS w wersji 8.0 lub nowszych. Instrukcje dotyczące konfigurowania znajdują się w części [Sieci VPN na żądanie dla urządzeń z systemem iOS](#on-demand-vpn-for-ios-devices).
 **Automatycznie wykrywaj ustawienia proxy** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, określ, czy chcesz, aby urządzenia automatycznie wykrywały ustawienia połączenia. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
 **Użyj skryptu automatycznej konfiguracji** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, określ, czy chcesz używać skryptu automatycznej konfiguracji do określenia ustawień, a następnie wprowadź adres URL pliku zawierającego ustawienia. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
 **Użyj serwera proxy** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, zaznacz tę opcję, a następnie wprowadź adres i numer portu serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
@@ -141,7 +148,33 @@ Tworząc niestandardową wartość ustawienia OMA-URI, można ograniczyć użyci
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**.
 
-## Wdrażanie zasad
+### Sieci VPN na żądanie dla urządzeń z systemem iOS
+Sieci VPN na żądanie można skonfigurować dla urządzeń z systemem iOS 8.0 lub nowszych.
+
+> [!NOTE]
+>  
+> Sieci VPN dla aplikacji i sieci VPN na żądanie nie można używać w ramach jednych zasad.
+ 
+1. Na stronie konfiguracji zasad znajdź sekcję **Reguły na żądanie dla tego połączenia VPN**. Kolumny są oznaczone etykietami **Dopasowanie** (oznacza warunek sprawdzany przez reguły) oraz **Akcja** (oznacza akcję wyzwalają przez zasady po spełnieniu warunku dopasowania). 
+2. Wybierz przycisk **Dodaj**, aby utworzyć regułę. W regułach można ustawić dwa typy dopasowań. Tylko jeden z nich można skonfigurować dla każdej reguły.
+  - **Identyfikatory SSID**, które odnoszą się do sieci bezprzewodowych. 
+  - **Domeny wyszukiwania DNS**, czyli...  Można użyć w pełni kwalifikowanych nazw domen, np. *team.corp.contoso.com*, lub domen takich jak *contoso.com*, co odpowiada użyciu * *.contoso.com*.
+3. Opcjonalnie: podaj sondę ciągu adresu URL, czyli adres URL używany testowo przez regułę. Jeśli urządzenie, na którym jest zainstalowany ten profil, może uzyskać dostęp do adresu URL bez przekierowania, połączenie VPN zostanie nawiązane i urządzenie będzie się łączyć z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
+4. Wybierz jedną z następujących czynności:
+  - **Connect**
+  - **Oceń połączenie**, która ma trzy ustawienia a. **Akcja domeny** — wybierz **Połącz w razie potrzeby** lub **Nigdy nie łącz**
+      b. **Rozdzielana przecinkami lista domen** — można skonfigurować tylko wtedy, gdy opcja **Akcja domeny** ma ustawienie **Połącz w razie potrzeby** 
+      c. **Wymagana sonda ciągu adresu URL** — adres URL protokołu HTTP lub HTTPS (preferowany), taki jak *https://vpntestprobe.contoso.com*. Reguła sprawdzi odebranie odpowiedzi z tego adresu. Jeśli nie będzie odpowiedzi, a **akcja domeny** to **Połącz w razie potrzeby**, nastąpi łączenie z siecią VPN.
+     > [!TIP]
+     >
+     >Ta akcja może być stosowana, na przykład gdy niektóre witryny w sieci firmowej wymagają połączenia bezpośredniego lub przez korporacyjną sieć VPN, a inne nie. Jeśli **lista domen wyszukiwania DNS rozdzielonych przecinkami** zawiera domenę *corp.contoso.com*, można wybrać opcję **Połącz w razie potrzeby**, a następnie podać listę określonych witryn w tej sieci, które mogą wymagać sieci VPN, takich jak *sharepoint.corp.contoso.com*. Następnie reguła sprawdzi, czy witryna *vpntestprobe.contoso.com* jest osiągalna. Jeśli jest ona nieosiągalna, nastąpi nawiązanie połączenia VPN dla witryny sharepoint.
+  - **Ignoruj** — ta opcja nie powoduje zmian w łączności sieci VPN. Jeśli istnieje połączenie z siecią VPN, pozostanie ona podłączona. Natomiast jeśli sieć VPN nie jest podłączona, połączenie nie zostanie nawiązane. Na przykład reguła może nawiązywać połączenie sieci VPN dla wszystkich wewnętrznych firmowych witryn internetowych, ale chcesz udostępnić jedną z tych witryn wewnętrznych tylko wtedy, gdy urządzenie jest rzeczywiście połączone z siecią firmową. W takim przypadku należy utworzyć regułę Ignoruj dla tej jednej witryny.
+  - **Odłącz** — powoduje odłączenie urządzenia od sieci VPN w przypadku spełnienia określonych warunków. Na przykład można podać listę firmowych sieci bezprzewodowych w polu **Identyfikatory SSID**, a następnie utworzyć zasadę, by urządzenia były odłączane od sieci VPN w przypadku nawiązania połączenia z jedną z tych sieci bezprzewodowych.
+
+Reguły specyficzne dla domeny są uwzględniane przed regułami dotyczącymi wszystkich domen. 
+
+
+## Wdrożenie zasad
 
 1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 
@@ -163,6 +196,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

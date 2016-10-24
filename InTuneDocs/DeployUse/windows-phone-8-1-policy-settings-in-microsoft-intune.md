@@ -4,7 +4,7 @@ description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych,
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/30/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c6b3f193606f13427a68c561d688b75d38221950
-ms.openlocfilehash: 315e492b301387c2030440e7188dfdb35a99ddd9
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 3c9c75e5e9e19574a5b4525688103dc95e3d6b9b
 
 
 ---
@@ -39,75 +39,75 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 
 ### Ustawienia hasła
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|------|-----|------------------------------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do swoich urządzeń.|Tak|Tak|
-|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub tylko liczbowe.|Tak|Tak|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę symboli, które muszą być zawarte w haśle.|Tak|Tak|
-|**Minimalna długość hasła**|Określa minimalną wymaganą liczbę znaków w haśle.|Tak|Tak|
-|**Zezwalaj na proste hasła**|Określa, czy można używać prostych haseł, takich jak ciągi „0000” i „1234”.|Tak|Tak|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.|Tak|Tak|
-|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**|Określa czas, przez jaki urządzenie musi pozostawać bezczynne, zanim ekran zostanie automatycznie zablokowany.|Tak|Tak|
-|**Wygaśnięcie hasła w dniach**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|Tak|
-|**Pamiętaj historię haseł**|Określa, czy wcześniej używane hasła są zapamiętywane, aby uniemożliwić użytkownikowi ich ponowne użycie.|Tak|Tak|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane.|Tak|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|------|
+|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do swoich urządzeń.|
+|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub tylko liczbowe.|
+|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę symboli, które muszą być zawarte w haśle.|
+|**Minimalna długość hasła**|Określa minimalną wymaganą liczbę znaków w haśle.|
+|**Zezwalaj na proste hasła**|Określa, czy można używać prostych haseł, takich jak ciągi „0000” i „1234”.|
+|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.|
+|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**|Określa czas, przez jaki urządzenie musi pozostawać bezczynne, zanim ekran zostanie automatycznie zablokowany.|
+|**Wygaśnięcie hasła (dni)**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|Tak|
+|**Pamiętaj historię haseł**|Określa, czy wcześniej używane hasła są zapamiętywane, aby uniemożliwić użytkownikowi ich ponowne użycie.|
+|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane.|
 
 ### Ustawienia szyfrowania
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|------|------|-----------------------------|
-|**Wymagaj szyfrowania na urządzeniu przenośnym**|Wymaga szyfrowania danych na obsługiwanych urządzeniach przenośnych.<br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.|Tak|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|------|
+|**Wymagaj szyfrowania na urządzeniu przenośnym**|Wymaga szyfrowania danych na obsługiwanych urządzeniach przenośnych.|
 
 ### Ustawienia systemowe
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----|------|------------------------------|
-|**Zezwalaj na przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie pliku obrazu.|Nie|Tak|
-|**Zezwalaj na przesłanie danych diagnostycznych**|Umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Microsoft.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|-----|
+|**Zezwalaj na przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie pliku obrazu.|
+|**Zezwalaj na przesłanie danych diagnostycznych**|Umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Microsoft.|
 
 ### Ustawienia chmury — konta i synchronizacja
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|------|-----|------------------------------|
-|**Zezwalaj na konto Microsoft**|Umożliwia połączenie konta Microsoft z urządzeniem.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|------|
+|**Zezwalaj na konto Microsoft**|Umożliwia połączenie konta Microsoft z urządzeniem.|
 
 ### Ustawienia poczty e-mail
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----|-----|-------------------------------|
-|**Zezwalaj na niestandardowe konta e-mail**|Umożliwia urządzeniu łączenie z kontami poczty e-mail innymi niż konto Microsoft.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|-----|
+|**Zezwalaj na niestandardowe konta e-mail**|Umożliwia urządzeniu łączenie z kontami poczty e-mail innymi niż konto Microsoft.|
 
 ### Ustawienia aplikacji — przeglądarka
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----|-----|-------------------------------|
-|**Zezwalaj na używanie przeglądarki sieci Web**|Umożliwia korzystanie z wbudowanej przeglądarki sieci Web na urządzeniach lub blokuje ją.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|-----|
+|**Zezwalaj na używanie przeglądarki sieci Web**|Umożliwia korzystanie z wbudowanej przeglądarki sieci Web na urządzeniach lub blokuje ją.|
 
 ### Ustawienia aplikacji — aplikacje
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----|------|------------------------------|
-|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia użytkownikom łączenie się ze sklepem z aplikacjami z urządzenia.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|-----|
+|**Zezwalaj na korzystanie ze sklepu z aplikacjami**|Umożliwia użytkownikom łączenie się ze sklepem z aplikacjami z urządzenia.|
 
 ### Ustawienia możliwości urządzenia — sprzęt
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|-----|----|--------------------------------|
-|**Zezwalaj na używanie aparatu**|Umożliwia korzystanie z aparatu urządzenia lub blokuje go.|Nie|Tak|
-|**Zezwalaj na używanie magazynu wymiennego**|Umożliwia używanie na urządzeniu magazynu wymiennego, na przykład karty SD.|Tak|Tak|
-|**Zezwalaj na połączenia Wi-Fi**|Włącza lub wyłącza funkcję obsługi sieci Wi-Fi urządzenia.|Nie|Tak|
-|**Zezwalaj na tethering Wi-Fi**|Umożliwia korzystanie z funkcji tetheringu Wi-Fi urządzenia.|Nie|Tak
-|**Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi**|Umożliwia urządzeniu automatyczne łączenie z bezpłatnymi hotspotami Wi-Fi i automatyczne akceptowanie wszelkich warunków użytkowania.|Nie|Tak|
-|**Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi**|Wysyła informacje dotyczące połączeń Wi-Fi, aby ułatwić użytkownikowi odnajdywanie pobliskich połączeń.|Nie|Tak|
-|**Zezwalaj na używanie funkcji geolokalizacji**|Umożliwia urządzeniu korzystanie z informacji o lokalizacji.|Nie|Tak|
-|**Zezwalaj na komunikację NFC**|Umożliwia wykonywanie operacji korzystających z komunikacji NFC.|Nie|Tak|
-|**Zezwalaj na połączenia Bluetooth**|Włącza lub wyłącza funkcję Bluetooth urządzenia.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|-----|
+|**Zezwalaj na używanie aparatu**|Umożliwia korzystanie z aparatu urządzenia lub blokuje go.|
+|**Zezwalaj na używanie magazynu wymiennego**|Umożliwia używanie na urządzeniu magazynu wymiennego, na przykład karty SD.|
+|**Zezwalaj na połączenia Wi-Fi**|Włącza lub wyłącza funkcję obsługi sieci Wi-Fi urządzenia.|
+|**Zezwalaj na tethering Wi-Fi**|Umożliwia korzystanie z funkcji tetheringu Wi-Fi urządzenia.|
+|**Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi**|Umożliwia urządzeniu automatyczne łączenie z bezpłatnymi hotspotami Wi-Fi i automatyczne akceptowanie wszelkich warunków użytkowania.|
+|**Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi**|Wysyła informacje dotyczące połączeń Wi-Fi, aby ułatwić użytkownikowi odnajdywanie pobliskich połączeń.|
+|**Zezwalaj na używanie funkcji geolokalizacji**|Umożliwia urządzeniu korzystanie z informacji o lokalizacji.|
+|**Zezwalaj na komunikację NFC**|Umożliwia wykonywanie operacji korzystających z komunikacji NFC.|
+|**Zezwalaj na połączenia Bluetooth**|Włącza lub wyłącza funkcję Bluetooth urządzenia.|
 
 ### Ustawienia możliwości urządzenia — funkcje
 
-|Nazwa ustawienia|Szczegóły|Windows Phone 8|Windows Phone 8,1|
-|----------------|----|------|-------------------------------|
-|**Zezwalaj na kopiowanie i wklejanie**|Umożliwia kopiowanie i wklejanie na urządzeniach.|Nie|Tak|
+|Nazwa ustawienia|Szczegóły|
+|----------------|----|
+|**Zezwalaj na kopiowanie i wklejanie**|Umożliwia kopiowanie i wklejanie na urządzeniach.|
 
 ### Ustawienia dotyczące aplikacji dozwolonych i zablokowanych
 Na liście **Aplikacje dozwolone i zablokowane** określ aplikacje, które mają być dozwolone lub zablokowane, używając następujących informacji:
@@ -171,6 +171,6 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

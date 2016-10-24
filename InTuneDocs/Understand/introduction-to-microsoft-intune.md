@@ -15,14 +15,14 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f88c9f6b856f91db8c9218ab41a87bc95f45a578
-ms.openlocfilehash: efc6fed1d9e0766dd0deb24e8f5f422d1f60f568
+ms.sourcegitcommit: 3318201cd77ec16f72e65275eda0e65c0dd9e05c
+ms.openlocfilehash: 256a1e7873a6603226843d2936e44c09424b8050
 
 
 ---
 
 # Wprowadzenie do usługi Intune
-Usługa Microsoft Intune stanowi „ramię zarządzania” pakietu Microsoft Enterprise Mobility + Security (EMS, wcześniej Enterprise Mobility Suite). Podstawowym przeznaczeniem rozwiązań Enterprise Mobility jest zapewnienie pracownikom produktywności na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.  
+Usługa Microsoft Intune stanowi ramię zarządzania pakietu Microsoft Enterprise Mobility + Security (EMS, wcześniej Enterprise Mobility Suite). Podstawowym przeznaczeniem rozwiązań Enterprise Mobility jest zapewnienie pracownikom produktywności na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.  
 
 Pakiet EMS to kompletny, zintegrowany pakiet rozwiązań Enterprise Mobility obejmujący rozwiązania do kontroli dostępu, zarządzania, potwierdzania tożsamości, zapewniania produktywności i ochrony danych. Udostępnia efektywny sposób wdrażania i obsługi rozwiązania zapewniającego mobilność.  
 
@@ -55,6 +55,6 @@ W niniejszej dokumentacji wyjaśniamy sposób korzystania z narzędzi udostępni
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

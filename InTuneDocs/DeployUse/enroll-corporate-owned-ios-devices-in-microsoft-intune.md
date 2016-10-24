@@ -1,10 +1,10 @@
 ---
 title: "Rejestrowanie urządzeń firmowych z systemem iOS | Microsoft Intune"
-description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub programu Apple Configurator"
+description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator"
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,63 +13,73 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9b7b8f6e5182e228458f5ea75e804a638f1e2a2b
-ms.openlocfilehash: ca05e94e72269c11db24b667f1d113c794cd8b23
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: c28b51146deb6a0a28070f72449972fd60076231
 
 
 ---
 
 # Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune
-Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu programu [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
+Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
 
-**Wymaganie wstępne:** [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
+**Wymaganie wstępne:** wymagany jest [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
-Firmowe urządzenia z systemem iOS można zarejestrować na trzy sposoby:
+Firmowe urządzenia z systemem iOS można zarejestrować na trzy sposoby: za pomocą narzędzia Apple Configurator, programu DEP lub Portalu firmy.
 
--   **Apple Configurator** — urządzenia z systemem iOS można zarejestrować, eksportując profil rejestracji w firmie, a następnie łącząc te urządzenia przenośne z programem Apple Configurator działającym na komputerze Mac. Program Apple Configurator obsługuje dwa rodzaje rejestracji:
+## Użycie narzędzia Apple Configurator
 
-    - **Rejestracja przy użyciu asystenta ustawień** — resetuje urządzenie do ustawień fabrycznych i przygotowuje je do konfiguracji przez nowego użytkownika urządzenia. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) urządzenia z systemem iOS za pośrednictwem portu USB w celu wstępnego skonfigurowania rejestracji. Następnie urządzenia są dostarczane do użytkowników, którzy uruchamiają proces Asystenta ustawień, konfigurują urządzenie za pomocą służbowych poświadczeń użytkownika i kończą proces rejestracji. [Rejestracja urządzeń z systemem iOS przy użyciu narzędzia Apple Configurator i Asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md)
+W celu zarejestrowania urządzeń z systemem iOS można wyeksportować firmowy profil wdrażania, a następnie połączyć te urządzenia przenośne z komputerem Mac, na którym działa program Apple Configurator. Program Apple Configurator obsługuje dwa rodzaje rejestracji:
 
-    - **Rejestracja bezpośrednia** — tworzy plik zgodny z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) urządzenia z systemem iOS za pośrednictwem portu USB w celu zarejestrowania urządzenia. [Rejestrowanie urządzeń z systemem iOS przy użyciu bezpośredniej rejestracji w programie Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md)
+- **Rejestracja przy użyciu Asystenta ustawień**: przywracanie ustawień fabrycznych urządzenia i przygotowanie do konfiguracji przez nowego użytkownika. Ta metoda wymaga od administratora podłączenia urządzenia z systemem iOS przez port USB do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) w celu wstępnego skonfigurowania rejestracji. Urządzenia są następnie dostarczane do ich użytkowników, którzy korzystają z procesu Asystenta ustawień. W ramach tego procesu następuje konfiguracja urządzenia z poświadczeniami firmy lub szkoły i ukończenie procesu rejestracji. Aby uzyskać więcej informacji, zobacz artykuł [Rejestracja urządzeń z systemem iOS w narzędziu Apple Configurator przy użyciu Asystenta ustawień](ios-setup-assistant-enrollment-in-microsoft-intune.md).
 
--   **Device Enrollment Program (DEP)** — wdraża profil rejestracji bez udziału użytkownika w urządzeniach zakupionych w programie Device Enrollment Program firmy Apple. Gdy użytkownik uruchomi Asystenta ustawień na urządzeniu, urządzenie zostanie zarejestrowane w usłudze Intune.  Urządzenia zarejestrowane w programie DEP nie mogą zostać wyrejestrowane przez użytkowników. [Rejestrowanie urządzeń z systemem iOS biorących udział w programie Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md)
+- **Rejestracja bezpośrednia**: tworzenie pliku zgodnego z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia urządzenia iOS przez port USB do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) w celu zarejestrowania urządzenia. Aby uzyskać więcej informacji, zobacz artykuł [Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
-## Korzystanie z portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu programu Apple Configurator
+## Użycie programu Device Enrollment Program (DEP)
+Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionych w ramach tego programu. Gdy użytkownik uruchamia na urządzeniu Asystenta ustawień, jest ono rejestrowane w usłudze Intune.  Użytkownicy nie mogą wyrejestrowywać urządzeń zarejestrowanych w programie DEP. Aby uzyskać więcej informacji, zobacz artykuł [Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
 
-Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami. Gdy użytkownicy otrzymają urządzenia, muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
+## Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
 
-Jak rejestrować urządzenia firmowe z systemem iOS z koligacją użytkownika
-1. Gdy użytkownicy włączają urządzenia, są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowego imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
+Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować aplikację Portal firmy i używać jej do pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
-2. Podczas instalacji użytkownicy są monitowani o podanie identyfikatora Apple ID. Należy podać identyfikator Apple ID, aby umożliwić zainstalowanie aplikacji Portal firmy na urządzeniu. Identyfikator Apple ID można również podać po ukończeniu instalacji, korzystając z menu ustawień systemu iOS.
+Koligacja użytkownika jest wymagana do obsługi:
+  - Aplikacji do zarządzania aplikacjami mobilnymi
+  - Warunkowego dostępu do poczty e-mail i danych firmowych
+  - Aplikacji Portal firmy
 
-3. Po ukończeniu instalacji urządzenie iOS musi zainstalować aplikację Portal firmy ze sklepu App Store, na przykład aplikację Portal firmy.
+**Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika**
+1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowej kombinacji imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
 
-4. Użytkownik może teraz zalogować się do Portalu firmy przy użyciu nazwy UPN używanej podczas konfigurowania urządzenia.
+2. Podczas instalacji użytkownicy są monitowani o podanie identyfikatora Apple ID. Muszą podać identyfikator Apple ID, aby umożliwić zainstalowanie aplikacji Portal firmy na urządzeniu. Mogą także podać identyfikator z menu ustawień systemu iOS po zakończeniu konfiguracji.
 
-5. Po zalogowaniu użytkownik jest monitowany o zarejestrowanie urządzenia. Pierwszym krokiem jest zidentyfikowanie urządzenia. Aplikacja wyświetla listę urządzeń z systemem iOS, które zostały już zarejestrowane przez firmę i przypisane do konta użytkownika końcowego w usłudze Intune. Wybierz odpowiednie urządzenie.
+3. Po ukończeniu konfiguracji na urządzeniu iOS trzeba zainstalować aplikację Portal firmy ze sklepu App Store.
 
-  Jeśli to urządzenie nie zostało jeszcze zarejestrowane przez firmę, wybierz pozycję „nowe urządzenie”, aby kontynuować standardową procedurę rejestracji.
+4. Użytkownik może się teraz zalogować do Portalu firmy przy użyciu nazwy UPN użytej podczas konfigurowania urządzenia.
 
-6. Na następnym ekranie użytkownik musi potwierdzić numer seryjny nowego urządzenia. Użytkownik może nacisnąć link „potwierdź numer seryjny”, aby uruchomić aplikację Ustawienia w celu zweryfikowania numeru seryjnego. Użytkownik musi następnie wprowadzić 4 ostatnie znaki numeru seryjnego w aplikacji Portal firmy.
+5. Po zalogowaniu użytkownik jest monitowany o zarejestrowanie urządzenia. Pierwszym krokiem jest zidentyfikowanie urządzenia. Aplikacja wyświetla listę urządzeń z systemem iOS, które zostały już zarejestrowane przez firmę i przypisane do konta użytkownika w usłudze Intune. Użytkownicy powinni wybrać odpowiednie urządzenie.
 
-  Ten krok umożliwia zweryfikowanie, że urządzenie zostało zarejestrowane przez firmę w usłudze Intune. Jeśli numer seryjny urządzenia nie jest zgodny, oznacza to, że wybrano niewłaściwe urządzenie. Wróć do poprzedniego ekranu i wybierz inne urządzenie.
+  Jeśli to urządzenie nie zostało jeszcze zarejestrowane przez firmę, użytkownicy powinni wybrać pozycję **nowe urządzenie**, aby kontynuować standardową procedurę rejestracji.
 
-7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny Portalu firmy w sieci Web w celu sfinalizowania rejestracji, a następnie monituje użytkownika o powrót do aplikacji.
+6. Na następnym ekranie użytkownik musi potwierdzić numer seryjny nowego urządzenia. Użytkownik może nacisnąć link **potwierdź numer seryjny**, aby uruchomić aplikację Ustawienia w celu zweryfikowania numeru seryjnego. Użytkownik musi następnie wprowadzić cztery ostatnie znaki numeru seryjnego do aplikacji Portal firmy.
 
-8. Rejestracja jest teraz ukończona. Możesz teraz używać tego urządzenia z pełnym zestawem funkcji.
+  Ten krok umożliwia zweryfikowanie, że urządzenie zostało zarejestrowane przez firmę w usłudze Intune. Jeśli numer seryjny urządzenia nie jest zgodny, oznacza to, że wybrano niewłaściwe urządzenie. Użytkownik powinien wrócić do poprzedniego ekranu i wybrać inne urządzenie.
+
+7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny internetowej Portalu firmy w celu sfinalizowania rejestracji. Następnie w witrynie pojawia się monit o powrót użytkownika do aplikacji.
+
+8. Rejestracja jest teraz ukończona. Użytkownik może teraz używać tego urządzenia z pełnym zestawem funkcji.
 
 ### Informacje dotyczące zarządzanych urządzeń należących do firmy bez koligacji użytkownika
 
-Urządzenia skonfigurowane bez koligacji użytkownika nie obsługują Portalu firmy i nie powinny instalować aplikacji. Portal firmy jest przeznaczony dla użytkowników, którzy mają poświadczenia firmowe i wymagają dostępu do spersonalizowanych zasobów firmowych (np. poczta e-mail). Urządzenia zarejestrowane bez koligacji użytkownika nie powinny być dedykowane do logowania określonego użytkownika. Urządzenia zarejestrowane bez koligacji użytkownika są zazwyczaj stosowane w kioskach lub punktach sprzedaży (POS) albo jako narzędzia udostępnione. Jeśli koligacja użytkownika jest wymagana, należy upewnić się, że dla profilu rejestracji urządzenia wybrano opcję Koligacja użytkownika przed zarejestrowaniem urządzenia. Aby zmienić stan koligacji urządzenia, należy wycofać i ponownie zarejestrować urządzenie.
+Urządzenia skonfigurowane bez koligacji użytkownika nie obsługują Portalu firmy i nie powinny mieć zainstalowanej tej aplikacji. Portal firmy jest przeznaczony dla użytkowników, którzy mają poświadczenia firmowe i wymagają dostępu do spersonalizowanych zasobów firmowych (np. poczta e-mail). Urządzenia zarejestrowane bez koligacji użytkownika nie są przeznaczone do logowania określonego użytkownika. Urządzenia rejestrowane bez koligacji użytkownika są zazwyczaj stosowane w kioskach lub punktach sprzedaży (POS) albo jako narzędzia udostępnione.
+
+Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia należy sprawdzić, czy w profilu rejestracji urządzenia wybrano opcję **Koligacja użytkownika**. Aby zmienić stan koligacji urządzenia, należy wycofać urządzenie i zarejestrować je ponownie.
 
 
 
 ### Zobacz także
-[Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](gprerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

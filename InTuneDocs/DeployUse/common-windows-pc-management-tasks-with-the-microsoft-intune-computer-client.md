@@ -1,6 +1,6 @@
 ---
 title: "Typowe zadania związane z zarządzaniem komputerem z systemem Windows | Microsoft Intune"
-description: "Przejrzyj zadania przedstawione w tym temacie, aby dowiedzieć się, jak zarządzać komputerami z uruchomionym oprogramowaniem klienckim usługi Intune."
+description: "Przejrzyj zadania przedstawione w tym temacie, aby dowiedzieć się, jak zarządzać komputerami z systemem Windows z uruchomionym klientem oprogramowania usługi Intune."
 keywords: 
 author: NathBarn
 manager: angrobe
@@ -13,22 +13,24 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dcfa3af374a7e64e931508e1a8022bf8a50c71a7
-ms.openlocfilehash: 93d5718fcd9949945180434b0f89eea96e92bbc6
+ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
+ms.openlocfilehash: 9ef18ee054928fcfb12a36fe8ac3ad3c2909f6c1
 
 
 ---
 
-# Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune
-Przejrzyj zadania przedstawione w tym temacie, aby dowiedzieć się, jak zarządzać komputerami z uruchomionym oprogramowaniem klienckim usługi Intune. Jeśli klient nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+# Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune
+Przejrzyj zadania przedstawione w tym temacie, aby dowiedzieć się, jak zarządzać komputerami z uruchomionym klientem oprogramowania usługi Intune. Jeśli klient nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta oprogramowania usługi Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 ## Upraszczanie zarządzania komputerami przy użyciu zasad
-### Zarządzanie Zaporą systemu Windows
-Zastosowanie zasad upraszcza administrowanie ustawieniami Zapory systemu Windows na zarządzanych komputerach. Aby uzyskać szczegółowe informacje, zobacz [Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
+
+Komputery z systemem Windows z uruchomionym klientem oprogramowania usługi Intune może być zarządzany za pomocą zasad **Zarządzanie komputerem** usługi Intune.
+
+![Szablon zasad dla komputerów z systemem Windows](../media/pc_policy_template.png)
 
 ### Zarządzanie programem Microsoft Intune Center
-Program Microsoft Intune Center umożliwia użytkownikom:
+Użytkownicy widzą klienta oprogramowania usługi Intune jako **Microsoft Intune Center**. Program Microsoft Intune Center umożliwia użytkownikom:
 
 -   Pobieranie aplikacji z Portalu firmy.
 
@@ -49,11 +51,14 @@ Program Microsoft Intune Center jest instalowany na wszystkich zarządzanych kom
 |**Adres URL witryny sieci Web**|Adres URL witryny sieci Web pomocy technicznej.<br /><br />Maksymalna długość: 150 znaków|
 |**Uwagi**|Uwaga widoczna dla użytkowników.<br /><br />Maksymalna długość: 120 znaków|
 
-### Zarządzanie ustawieniami aktualizacji oprogramowania
-Zasady umożliwiają konfigurowanie ustawień używanych na zarządzanych komputerach do wyszukiwania aktualizacji oprogramowania firmy Microsoft i innych firm oraz do ich pobierania. Aby uzyskać więcej informacji, zobacz [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
+## Ustawienia aktualizacji oprogramowania
+Zasady umożliwiają konfigurowanie ustawień używanych na zarządzanych komputerach do wyszukiwania aktualizacji oprogramowania firmy Microsoft i innych firm oraz do ich pobierania. Aktualizacje te nie obejmują uaktualnień systemu operacyjnego (tzn. uaktualniania systemu Windows 7, Windows 10 i uaktualnień z jednej wersji systemu Windows 10 do nowszej wersji). Aby uzyskać więcej informacji, zobacz [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 
-### Zarządzanie ustawieniami programu Endpoint Protection
+### Ustawienia programu Endpoint Protection
 Zasady umożliwiają konfigurowanie ustawień programu Endpoint Protection wdrażanych następnie na zarządzanych komputerach. Są one związane między innymi z harmonogramami skanowania i akcjami wykonywanymi w przypadku wykrycia złośliwego oprogramowania. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
+
+## Ustawienia Zapory systemu Windows
+Zastosowanie zasad upraszcza administrowanie ustawieniami Zapory systemu Windows na zarządzanych komputerach. Aby uzyskać szczegółowe informacje, zobacz [Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
 
 ## Wyświetlanie spisu sprzętu i oprogramowania
 Usługa Intune zbiera szczegółowe informacje o sprzęcie i oprogramowaniu zarządzanych komputerów. Poniżej opisano kroki procedur:
@@ -113,17 +118,17 @@ Usługa Intune zbiera szczegółowe informacje o sprzęcie i oprogramowaniu zarz
 
 2.  Wybierz urządzenia do wycofania, a następnie wybierz pozycję **Wycofaj/wyczyść**.
 
-Aby ponownie zarejestrować komputer w usłudze Intune, należy jeszcze raz zainstalować oprogramowanie klienckie na komputerze, korzystając z informacji przedstawionych w temacie [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Aby ponownie zarejestrować komputer w usłudze Intune, ponownie zainstaluj klienta oprogramowania na komputerze, korzystając z informacji przedstawionych w temacie [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Jeśli komputer nie może nawiązać połączenia z usługą Intune, w obszarze roboczym **Pulpit nawigacyjny** zostanie wyświetlony komunikat.
 
 W przypadku wycofywania komputera:
 
--   Komputer jest usuwany z zarządzania i spisu w usłudze Intune, a skojarzona z nim licencja jest udostępniana do ponownego użycia. Polecenie Wycofaj/wyczyść usuwa oprogramowanie klienckie usługi Intune, ale nie usuwa aplikacji ani danych z komputera.
+-   Komputer jest usuwany z zarządzania i spisu w usłudze Intune, a skojarzona z nim licencja jest udostępniana do ponownego użycia. Polecenie Wycofaj/wyczyść usuwa oprogramowanie klienckie usługi Intune, ale nie usuwa aplikacji ani danych z komputera. Wycofanie nie powoduje wykonania pełnego czyszczenia danych na komputerze.
 
 -   Jego stan nie jest już wyświetlany w konsoli usługi Intune.
 
--   Usługa Intune usuwa oprogramowanie klienckie z komputera. Jeśli komputer jest połączony z usługą Intune, oprogramowanie klienckie zostanie usunięte po kolejnym nawiązaniu połączenia.
+-   Usługa Intune usuwa klienta oprogramowania z komputera. Jeśli komputer jest połączony z usługą Intune, klient oprogramowania zostanie usunięty po kolejnym nawiązaniu połączenia.
 
 -   Program Microsoft Intune Endpoint Protection jest usuwany z komputera. Jeśli na komputerze zainstalowano inną aplikację ochrony punktu końcowego, która jest wyłączona, można ją ponownie włączyć po usunięciu programu Microsoft Intune Endpoint Protection, aby upewnić się, że komputery są chronione.
 
@@ -160,9 +165,9 @@ Przed wdrożeniem oprogramowania dla użytkownika należy połączyć użytkowni
 > [!TIP]
 > Jeśli chcesz ograniczyć użytkownikom końcowym możliwość łączenia z komputerami, włącz opcję **Ogranicz użytkownikowi możliwość łączenia z komputerami** w zasadach **Ustawienia agenta usługi Microsoft Intune**.
 
-## Żądanie i zapewnianie pomocy zdalnej na komputerach z systemem Windows, które używają oprogramowania klienckiego usługi Intune
+## Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
 
-Usługa Microsoft Intune może korzystać z oprogramowania [TeamViewer](https://www.teamviewer.com), aby umożliwić użytkownikom komputerów z uruchomionym oprogramowaniem klienckim usługi Intune uzyskiwanie pomocy zdalnej. Gdy użytkownik zażąda pomocy w programie Microsoft Intune Center, otrzymasz alert informujący o żądaniu, a następnie możesz zaakceptować żądanie i udzielić użytkownikowi pomocy.
+Usługa Microsoft Intune może korzystać z oprogramowania [TeamViewer](https://www.teamviewer.com) (zakupionego osobno), aby umożliwić użytkownikom komputerów z uruchomionym klientem oprogramowania usługi Intune uzyskiwanie pomocy zdalnej. Gdy użytkownik zażąda pomocy w programie Microsoft Intune Center, otrzymasz alert informujący o żądaniu, a następnie możesz zaakceptować żądanie i udzielić użytkownikowi pomocy.
 Ta funkcja zastępuje istniejącą funkcję Pomoc zdalna systemu Windows w usłudze Intune.
 
 
@@ -211,6 +216,6 @@ Z menu **Akcje** okna programu **TeamViewer** wybierz polecenie **Zakończ sesj�
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO1-->
 
 

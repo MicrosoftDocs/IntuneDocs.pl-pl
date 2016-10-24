@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
-ms.openlocfilehash: affcca7ea406ea8a9d60f29add4385998b0ae29d
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: d06d6e7de5c2e30ae8078642184ad8cfadf15be4
 
 
 ---
@@ -50,7 +50,7 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
 5.  **Dodaj zasady rejestracji urządzeń firmowych**. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycje **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie kliknij pozycję **Dodaj**.
 
     Podaj **ogólne** informacje, takie jak **Nazwa** i **Opis**, oraz określ, czy urządzenia przypisane do tego profilu pozostają w koligacji z użytkownikiem, czy też należą do grupy.
-      - **Monituj o koligację użytkownika:** podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie opcjonalnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik.  **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji).
+      - **Monituj o koligację użytkownika:** podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie opcjonalnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik.  **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji). **Uwaga:** urządzenia DEP z koligacją użytkownika nie mogą obsługiwać uwierzytelniania wieloskładnikowego.
       - **Brak koligacji użytkownika:** urządzenie nie zostało powiązane z użytkownikiem. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika, w tym aplikacja Portal firmy użyta do zainstalowania aplikacji biznesowych, nie będą działać.
 
     Możesz także **przypisać urządzenia do następującej grupy**. Kliknij przycisk **Wybierz...**, aby wybrać grupę.
@@ -89,7 +89,7 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
 
 6.  **Przypisz urządzenia DEP do zarządzania**. Przejdź do [portalu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) i zaloguj się przy użyciu identyfikatora Apple ID Twojej firmy. Wybierz polecenia **Deployment Program** (Program wdrażania) &gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzanie urządzeniami). Określ sposób **wyboru urządzeń**, podaj informacje o urządzeniach i określ szczegóły według numeru seryjnego ( **Serial Number**) urządzenia, numeru zamówienia ( **Order Number**) lub przekaż plik CSV ( **Upload CSV File**). Następnie wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz nazwę serwera &lt;nazwa_serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**.
 
-7.  **Synchronizuj urządzenia zarządzane w programie DEP**. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Program rejestracji urządzeń**, a następnie kliknij pozycję **Synchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple. Aby wyświetlić urządzenia zarządzane przez program DEP po synchronizacji, w [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia należące do firmy**. W obszarze roboczym **Urządzenia należące do firmy** dla zarządzanych urządzeń wyświetlany jest **stan** „Nie nawiązano komunikacji”, dopóki urządzenie nie zostanie włączone i Asystent ustawień nie zostanie uruchomiony w celu zarejestrowania urządzenia.
+7.  **Synchronizuj urządzenia zarządzane w programie DEP**. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Program rejestracji urządzeń**, a następnie kliknij pozycję **Synchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple. Aby wyświetlić urządzenia zarządzane przez program DEP po synchronizacji, w [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru seryjnego systemu iOS**. W obszarze roboczym **Według numeru seryjnego systemu iOS** dla zarządzanych urządzeń wyświetlany jest **stan** „Nie nawiązano komunikacji”, dopóki urządzenie nie zostanie włączone i Asystent ustawień nie zostanie uruchomiony w celu zarejestrowania urządzenia.
 
     Aby spełnić warunki ruchu programu DEP firmy Apple, usługa Intune nakłada następujące ograniczenia:
      -  Pełną synchronizację programu DEP można uruchamiać nie częściej niż co 7 dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune, niezależnie od tego, czy numer seryjny był już wcześniej synchronizowany. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem 7 dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
@@ -99,13 +99,13 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
 
 ## Zmiany przypisań grup usługi Intune
 
-Od października zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach **profilu rejestracji w firmie**. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Od listopada zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach **profilu rejestracji w firmie**. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. Ten proces zapewnia, że urządzenia wstępnie przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Zobacz także
-[Przygotowanie do rejestracji urządzeń](get-ready-to-enroll-devices-in-microsoft-intune.md)
+[Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 
