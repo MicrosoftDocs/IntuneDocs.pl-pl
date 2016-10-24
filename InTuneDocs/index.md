@@ -1,19 +1,21 @@
 ---
+experimental: true
+experiment_id: lindavr-hubpage-20160925
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
-title: "Dokumentacja usługi Intune — dokumentacja zarządzania urządzeniami przenośnymi | Dokumentacja firmy Microsoft"
+title: "Dokumentacja usługi Intune | Dokumentacja firmy Microsoft"
 description: "Dokumentacja techniczna dotycząca zarządzania urządzeniami przenośnymi i aplikacjami w usłudze Microsoft Intune"
-keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
-author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+keywords: "dokumentacja usługi Intune, zarządzanie aplikacjami, zarządzanie urządzeniami, dokumentacja MDM, dokumentacja MAM"
+author: arob98
+manager: angrobe
+ms.date: 10/07/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: c200c191168a8c5ae9382d62b3a25e9cfd1db3ac
-ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
+ms.sourcegitcommit: 63317c16082b1fb2764bd698c97fa1d435f58dfe
+ms.openlocfilehash: 1108adb5622c3cdb7720e07a53a35957ce80cca6
 
 
 ---
@@ -22,20 +24,20 @@ ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
     <section id="hero-content">
       <h1>Dokumentacja usługi Intune</h1>
       <h2>Dowiedz się, jak wdrażać usługę Microsoft Intune umożliwiającą zarządzanie urządzeniami przenośnymi i aplikacjami oraz jak nią zarządzać.</h2>
-      <h3>Zarządzasz usługą Intune za pomocą programu Configuration Manager? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Wyświetl dokumentację programu Configuration Manager &rarr;</a></h3>
+      <h3>Chcesz zarządzać usługą Intune za pomocą programu Configuration Manager? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management" target="_blank">Przeczytaj o zarządzaniu hybrydowymi urządzeniami przenośnymi &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Polecana zawartość</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Wprowadzenie do usługi Microsoft Intune</a></li>
-          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Typowe scenariusze oparte na usłudze Intune</a></li>
-          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Przewodnik Szybki start dotyczący usługi Intune</a></li>
+          <li><a href="/intune/whats-new/whats-new-in-microsoft-intune">Co nowego</a></li>
+          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Typowe sposoby korzystania z usługi Intune</a></li>
+          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrona danych aplikacji</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Przegląd cyklów życia urządzeń i aplikacji</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Ochrona danych aplikacji</a></li>
-          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Co mówić użytkownikom końcowym na temat usługi Intune</a></li>
+          <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrona dostępu do zasobów firmy</a></li>
+          <li><a href="/intune/develop/intune-app-sdk-ios">Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS</a></li>
+          <li><a href="/intune/develop/intune-app-sdk-android">Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android</a></li>
         </ul>
       </div>
     </section>
@@ -282,6 +284,6 @@ ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

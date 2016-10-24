@@ -4,7 +4,7 @@ description:
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 05/31/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: df5cf2d5a78ccf58ba5920ad1856675538794874
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: 1d810d903ecf719e40cfb31b62e5e7882f549270
 
 
 ---
@@ -37,15 +37,15 @@ Zarejestrowanie urządzenia z systemem Android spowoduje nadanie administratorow
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych. Jest to przydatne w przypadku utracenia lub kradzieży urządzenia.
 
--   Usuń wszystkie dane dotyczące firmy. Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.
+-   Usuwać wszystkie dane powiązane z firmą. Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.
 
--   Wymagać ustawienia na urządzeniu hasła lub numeru PIN, co w przypadku zbyt wielu prób z podaniem nieprawidłowego hasła może spowodować zablokowanie dostępu do urządzenia lub jego zresetowanie do domyślnych ustawień fabrycznych (co może obejmować usunięcie danych).
+-   Ustawiać na Twoim urządzeniu wymagania, takie jak wymaganie ustawienia hasła lub numeru PIN urządzenia, aby chronić dane firmy. Administrator IT może także ograniczać to, ile razy można wprowadzić niepoprawne hasło, i może zablokować Ci dostęp do urządzenia, jeśli spróbujesz zbyt wiele razy.
 
 -   Wymagać od użytkownika zaakceptowania postanowień.
 
--   Włączać lub wyłączać aparat w urządzeniu.
+-   Wyłączać aparat (tylko na urządzeniach z systemem Samsung Knox, nie dotyczy urządzeń Nexus), aby uniemożliwić robienie zdjęć poufnym materiałom służbowym, które nie powinny być rozpowszechniane.
 
--   Wymusić zaszyfrowanie wszystkich danych na urządzeniu włącznie z danymi osobowymi i firmowymi. Pozwala to chronić dane w przypadku utracenia lub kradzieży urządzenia.
+-   Wymagać zaszyfrowania wszystkich danych na urządzeniu, aby chronić dane na wypadek utraty lub kradzieży urządzenia.
 
 -   Po dodaniu urządzenia do aplikacji Portal firmy co około 8 godzin będą wykonywane następujące czynności:
 
@@ -58,11 +58,8 @@ Zarejestrowanie urządzenia z systemem Android spowoduje nadanie administratorow
 Potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
 
-### Zobacz także
-[Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

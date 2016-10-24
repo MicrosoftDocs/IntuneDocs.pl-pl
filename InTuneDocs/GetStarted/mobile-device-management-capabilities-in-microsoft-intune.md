@@ -4,17 +4,17 @@ description: "Przeczytaj ten temat, aby dowiedzieć się, jak usługa Intune mo�
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/23/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
-ms.reviewer: jeffgilb
+ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a09c5e3349945cfdcb4ae9d3aa51aa3f7024330a
-ms.openlocfilehash: eab582d30408d1a57643e30ba4965bd08f6ce847
+ms.sourcegitcommit: ff6bfdc079e00f8a39cc532d1f6f9049aa6a32c8
+ms.openlocfilehash: 10dfecd41e68440a4c27aa7358dbbc88b6106001
 
 
 ---
@@ -46,7 +46,8 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 |Konfiguracja aplikacji mobilnych systemu iOS|Używa zasad konfiguracji aplikacji mobilnych umożliwiających określanie wartości ustawień aplikacji systemu iOS, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aplikacja może na przykład wymagać, aby użytkownik określił numer portu lub dane logowania. Może to usprawnić konfigurowanie aplikacji i ograniczyć liczbę zgłoszeń do pomocy technicznej.|[Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
 |Profile aprowizacji aplikacji mobilnych systemu iOS|Ułatwia wdrażanie profilów aprowizacji w aplikacjach systemu iOS, które niedługo wygasną. |[Użyj zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapobiec wygaśnięciu aplikacji](/intune/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Managed Browser|Służy do konfigurowania zasad programu Managed Browser w celu kontrolowania witryn sieci Web, które użytkownicy mogą odwiedzać. Ponadto dla programu Managed Browser możesz również stosować zasady zarządzania aplikacjami mobilnymi.|[Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](/intune/deploy-use/manage-internet-access-using-managed-browser-policies)|
-|Usługa Microsoft Passport|Pozwala na integrację z usługą Microsoft Passport for Work, czyli alternatywną metodą logowania dla systemu Windows 10 korzystającą z lokalnej usługi Active Directory lub Azure Active Directory w celu zastąpienia haseł, kart inteligentnych lub wirtualnych kart inteligentnych.|[Sterowanie ustawieniami usługi Microsoft Passport na urządzeniach z usługą Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
+|Windows Hello for Business|Pozwala na integrację z usługą Windows Hello for Business, czyli alternatywną metodą logowania dla systemu Windows 10 korzystającą z lokalnej usługi Active Directory lub Azure Active Directory w celu zastąpienia haseł, kart inteligentnych lub wirtualnych kart inteligentnych.|[Sterowanie ustawieniami usługi Windows Hello for Business na urządzeniach za pomocą usługi Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
+|Aplikacje nabyte zbiorczo|Ułatwia zarządzanie aplikacjami zakupionymi w ramach programu zakupów zbiorczych przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana.|[Zarządzanie aplikacjami zakupionymi zbiorczo za pomocą usługi Microsoft Intune](/intune/deploy-use/manage-volume-purchased-apps-in-microsoft-intune)|
 
 ## Dostęp do zasobów firmy
 
@@ -70,6 +71,6 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

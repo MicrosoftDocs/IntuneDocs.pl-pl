@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 3d8b33e5227ed7d13ffc0e6fb7867618c48cac6f
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 577d14f29880d16046bbb703773d6362c2458c1b
 
 
 ---
@@ -23,10 +23,15 @@ ms.openlocfilehash: 3d8b33e5227ed7d13ffc0e6fb7867618c48cac6f
 
 # Rejestrowanie urządzenia z systemem iOS w usłudze Intune
 
-Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie z systemem iOS, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Dzięki rejestracji urządzeń dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie z systemem iOS, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](enroll-your-device-in-intune-mac-os-x.md).
 
+**Przed rozpoczęciem:**
+
+- Po rozpoczęciu wykonywania czynności upewnij się, że rejestracja została zakończona. Jeśli rejestracja została rozpoczęta, ale nie zakończona, może ona nie działać, jeśli wrócisz później i spróbujesz ponownie.
+- Upewnij się, że działa sieć Wi-Fi. W przeciwnym razie rejestracja zakończy się niepowodzeniem.
+- Jeśli program Safari jest zablokowany na urządzeniu, odblokuj go. Aby się zarejestrować, musisz użyć programu Safari.
 
 
 **Aby zarejestrować urządzenie z systemem iOS:**
@@ -75,7 +80,7 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
-12. Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **Kontynuuj**. Jeśli administrator IT skonfigurował dodatkowe wymagania z zakresu bezpieczeństwa, np. potrzebę ustawienia hasła, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aż spełnisz wymagania zgodności i powrócisz do ekranu Konfiguracja dostępu do zasobów firmy. Następnie naciśnij przycisk **Kontynuuj**.
+12. Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **Kontynuuj**. Jeśli administrator IT skonfigurował dodatkowe wymagania z zakresu bezpieczeństwa, np. potrzebę ustawienia hasła, postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aż spełnisz wszystkie wymagania zgodności i powrócisz do ekranu Konfiguracja dostępu do zasobów firmy. Następnie naciśnij pozycję **Kontynuuj**.
 
     ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
 
@@ -85,12 +90,11 @@ Jeśli próbujesz zarejestrować urządzenie z systemem Mac OS X, zobacz temat [
 
 Urządzenie zostanie zarejestrowane w usłudze Intune. Użytkownik zostanie przeniesiony z powrotem do aplikacji Portal firmy.
 
+
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

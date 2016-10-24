@@ -1,6 +1,6 @@
 ---
 title: "Wysyłanie błędów rejestracji do administratora IT | Microsoft Intune"
-description: 
+description: "Wysyłanie błędów rejestracji do administratora"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 081764e59649cbc486ad3a757ad4bf9c65c91112
+ms.sourcegitcommit: c10f9548c00972a018e742601586f6e03e1a05cc
+ms.openlocfilehash: 93f4d2c93f17146a704031dae0d35cfde077b384
 
 
 ---
@@ -23,9 +23,9 @@ ms.openlocfilehash: 081764e59649cbc486ad3a757ad4bf9c65c91112
 
 # Wysyłanie błędów rejestracji do administratora IT
 
-Jeśli na urządzeniu z systemem Android podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi błąd, możesz spróbować ponownie, naciskając pozycję **Ponów**, lub wysłać informacje o błędzie do administratora IT w wiadomości e-mail, naciskając pozycję **Wyślij informacje**.
+Jeśli podczas próby zarejestrowania urządzenia z systemem Android w usłudze Intune wystąpi błąd, możesz spróbować ponownie, wybierając pozycję **Ponów**. Możesz także wysłać informacje o błędzie do administratora IT w wiadomości e-mail, wybierając pozycję **Wyślij informacje**.
 
-Wiadomość e-mail zaadresowana do administratora IT zostanie utworzona automatycznie i będzie zawierać dzienniki wymagane przez administratora IT do rozwiązywania problemów z urządzeniem.
+Wybranie pozycji **Wyślij informacje** spowoduje automatyczne utworzenie wiadomości e-mail zaadresowanej do administratora IT, która będzie zawierać dzienniki wymagane przez administratora IT do rozwiązywania problemów z urządzeniem.
 
 Istnieją różne sposoby wysyłania dzienników danych urządzenia do administratora IT w celu uzyskania pomocy dotyczącej błędów:
 
@@ -34,7 +34,6 @@ Istnieją różne sposoby wysyłania dzienników danych urządzenia do administr
 
 
 
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

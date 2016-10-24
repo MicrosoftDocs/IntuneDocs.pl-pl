@@ -1,5 +1,5 @@
 ---
-title: "Urządzenie z systemem Windows nie jest zgodne z maksymalną wersją systemu operacyjnego | Microsoft Intune"
+title: "Urządzenie z systemem Windows nie jest zgodne z ustawieniem maksymalnej wersji systemu operacyjnego | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
@@ -14,20 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 0a83e44f95ad1619cd0eff94d70c3dcc81852acb
+ms.sourcegitcommit: 964f39fa7a3971f37777e93f7cddd75367e6c026
+ms.openlocfilehash: edd9aa9b7c2dabbc90bb3777f855478c703c7882
 
 
 ---
 
 
-# Urządzenie z systemem Windows nie jest zgodne z maksymalną wersją systemu operacyjnego
+# Urządzenie z systemem Windows nie jest zgodne z ustawieniem najnowszej wersji systemu operacyjnego
 
-Administrator IT ustawił maksymalną wersję systemu operacyjnego, która może znajdować się na Twoim urządzeniu z systemem Windows, ale urządzenie jest niezgodne z tym ustawieniem. Aby dowiedzieć się, jaka jest maksymalna dozwolona wersja systemu operacyjnego dla Twojego urządzenia, musisz skontaktować się z administratorem. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
+Administrator IT ustawił najnowszą wersję systemu operacyjnego, która może znajdować się na Twoim urządzeniu z systemem Windows, ale urządzenie jest niezgodne z tym ustawieniem. Aby dowiedzieć się, jaka jest najnowsza dozwolona wersja systemu operacyjnego dla Twojego urządzenia, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Oct16_HO2-->
 
 

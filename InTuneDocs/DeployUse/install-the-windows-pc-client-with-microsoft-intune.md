@@ -13,38 +13,27 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c162e2a885887d0aa69da2a4cec55c7737bccd1
-ms.openlocfilehash: 7e16d0057b91eece7a5aa92a0ba495eaf159caae
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 13fa09a2b029818467062a5c589292c5f0bd0a58
 
 
 ---
 
-# Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune
-Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune.
+# Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
+Komputery z systemem Windows można zarejestrować, instalując oprogramowanie klienckie usługi Intune. Oprogramowanie klienckie usługi Intune można zainstalować na następujące sposoby:
 
-## Przed rozpoczęciem
-Przed rozpoczęciem instalacji oprogramowania klienckiego usługi Intune przeczytaj temat [Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md), aby dowiedzieć się, co jest wymagane do prawidłowego zainstalowania klienta, a następnie wróć do niniejszych instrukcji.
+- Instalacja ręczna
+- Instalacja przy użyciu zasad grupy
+- Dołączenie na obrazie dysku
+- Instalacja przez użytkowników
 
-## Instalowanie klienta
-Aby zainstalować klienta, wykonaj następujące kroki:
+## Pobranie oprogramowania klienckiego usługi Intune
 
--   [Aby pobrać oprogramowanie klienckie](#to-download-the-client-software)
-
-Następnie zastosuj co najmniej jedną z poniższych metod w celu zainstalowania klienta:
-
--   [Aby ręcznie wdrożyć oprogramowanie klienckie](#to-manually-deploy-the-client-software)
-
--   [Aby automatycznie wdrożyć oprogramowanie klienckie za pomocą zasad grupy](#to-automatically-deploy-the-client-software-by-using-group-policy)
-
--   [Instalowanie oprogramowania klienckiego usługi Microsoft Intune jako części obrazu](#install-the-microsoft-intune-client-software-as-part-of-an-image)
-
-Jeśli zarządzanie określonym komputerem za pomocą usługi Intune nie jest już konieczne, możesz go wycofać, co spowoduje również usunięcie oprogramowania klienckiego z tego komputera. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
-
-### Aby pobrać oprogramowanie klienckie
+Wszystkie metody, z wyjątkiem sytuacji, gdy użytkownicy instalują oprogramowanie klienckie usługi Intune, wymagają pobrania oprogramowania, aby można je było wdrożyć.
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; ** Pobierz oprogramowanie klienckie**.
 
-  ![Pobieranie klienta komputerowego usługi Intune](./media/pc-SA-client-download.png)
+  ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
 
 2.  Na stronie **Pobieranie oprogramowania klienckiego** kliknij pozycję **Pobierz oprogramowanie klienckie** i zapisz pakiet z oprogramowaniem **Microsoft_Intune_Setup.zip** w bezpiecznej lokalizacji w sieci.
 
@@ -56,14 +45,14 @@ Jeśli zarządzanie określonym komputerem za pomocą usługi Intune nie jest ju
     > [!IMPORTANT]
     > Nie zmieniaj nazwy wyodrębnionego pliku **ACCOUNTCERT** ani nie usuwaj go, ponieważ spowoduje to niepowodzenie instalacji oprogramowania klienckiego.
 
-### Aby ręcznie wdrożyć oprogramowanie klienckie
+## Ręczne wdrażanie
 
 1.  Na komputerze przejdź do folderu zawierającego pliki instalacji oprogramowania klienckiego, a następnie uruchom plik **Microsoft_Intune_Setup.exe**, aby zainstalować oprogramowanie klienckie.
 
     > [!NOTE]
     > Stan instalacji można wyświetlić, zatrzymując wskaźnik myszy na ikonie na pasku zadań komputera klienckiego.
 
-### Aby automatycznie wdrożyć oprogramowanie klienckie za pomocą zasad grupy
+## Wdrażanie przy użyciu zasad grupy
 
 1.  W folderze zawierającym pliki **Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert** uruchom następujące polecenie, aby wyodrębnić programy instalacyjne oparte na Instalatorze Windows dla komputerów 32-bitowych i 64-bitowych:
 
@@ -80,7 +69,7 @@ Jeśli zarządzanie określonym komputerem za pomocą usługi Intune nie jest ju
 
     Aby uzyskać więcej informacji o automatycznym wdrażaniu oprogramowania za pomocą zasad grupy, zapoznaj się z dokumentacją systemu Windows Server.
 
-### Instalowanie oprogramowania klienckiego usługi Microsoft Intune jako części obrazu
+## Instalowanie jako części obrazu
 Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako część obrazu systemu operacyjnego, bazując na poniższej przykładowej procedurze:
 
 1.  Skopiuj pliki instalacyjne klienta (**Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert**) do folderu **%Systemdrive%\Temp\Microsoft_Intune_Setup** na komputerze odniesienia.
@@ -110,6 +99,12 @@ Gdy zadanie automatycznej rejestracji jest uruchamiane w następnym zaplanowanym
 
 Zadanie automatycznej rejestracji w usłudze Intune, wartość rejestru **WindowsIntuneEnrollPending** i certyfikat konta zostaną usunięte z komputera docelowego po pomyślnej rejestracji lub po upływie miesiąca.
 
+## Instruowanie użytkowników odnośnie samodzielnej rejestracji
+
+Użytkownicy mogą instalować oprogramowanie klienckie usługi Intune, przechodząc do witryny [http://portal.manage.microsoft.com](http://portal..manage.microsoft.com). Jeśli portal sieci Web może wykryć, że urządzenie jest komputerem z systemem Windows, użytkownik będzie monitowany o pobranie klienta oprogramowania usługi Intune w celu zarejestrowania urządzenia. Po pobraniu go użytkownicy mogą zainstalować oprogramowanie w celu umożliwienia zarządzania ich komputerami.
+
+![Portal usługi Intune monituje o pobranie klienta oprogramowania usługi Intune](../media/software-client-download.png)
+
 ## Monitorowanie i weryfikowanie pomyślnego wdrożenia klienta
 Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowanie pomyślnego wdrożenia klienta.
 
@@ -135,10 +130,10 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 ### Zobacz też
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
-[Rozwiązywanie problemów z instalacją klienta](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune)
+[Rozwiązywanie problemów z instalacją klienta](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

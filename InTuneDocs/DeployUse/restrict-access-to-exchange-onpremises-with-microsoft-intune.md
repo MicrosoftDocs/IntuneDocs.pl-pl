@@ -4,7 +4,7 @@ description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w lokalnej in
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 9a6455ded35bf77fbd5da1d4f345759836f38c7f
+ms.sourcegitcommit: b6e647c66d6de7d455d290dfa3358499a3f13453
+ms.openlocfilehash: e5c9d2a19f588ddd067a1e194568186f66afb85b
 
 
 ---
@@ -64,17 +64,19 @@ Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu w
 -   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy lub aplikacji Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
 ## Obsługa urządzeń przenośnych
--   System Windows Phone 8 lub nowszy
+-   System Windows Phone 8.1 lub nowszy
 
 -   Natywna aplikacja poczty e-mail w systemie iOS
 
--   Natywna aplikacja poczty e-mail w systemie Android 4 lub nowszym
+-   Klienci poczty korzystający z protokołu EAS (np. Gmail w systemie Android 4 lub nowszym).
+- Klienci poczty korzystający z protokołu EAS **Urządzenia z programem Android for Work:** na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako wymaganą instalację. 
+
 > [!NOTE]
 > Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana.
 
 ## Obsługa komputerów
 
-Aplikacja **do obsługi poczty** w systemie Windows 8 lub nowszym (w przypadku zarejestrowania w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
+Aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w przypadku zarejestrowania w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
 
 ##  Konfigurowanie zasad dostępu warunkowego
 
@@ -123,6 +125,6 @@ Aplikacja **do obsługi poczty** w systemie Windows 8 lub nowszym (w przypadku z
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

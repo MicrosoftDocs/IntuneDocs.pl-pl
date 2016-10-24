@@ -64,7 +64,7 @@ Alerty tablicy powiadomień udostępniają ważne zawiadomienia dotyczące usłu
 
 2.  Ważne zawiadomienia dotyczące usługi są wyświetlane w obszarze **Tablica powiadomień**.
 
-3.  Aby wyeksportować alert tablicy powiadomień do pliku CSV (pliku z wartościami rozdzielanymi przecinkami) lub pliku HTML, w witrynie wybierz pozycję **Alerty** > **Wszystkie alerty** >    **Powiadomienia**. Wybierz powiadomienie, kliknij ikonę **Eksportuj listę**, a następnie postępuj zgodnie z wyświetlonymi instrukcjami.
+3.  Aby wyeksportować alert tablicy powiadomień do pliku CSV (pliku z wartościami rozdzielanymi przecinkami) lub pliku HTML, w konsoli administracyjnej usługi Intune wybierz pozycję **Alerty** > **Wszystkie alerty** >    **Powiadomienia**. Wybierz powiadomienie, kliknij ikonę **Eksportuj listę**, a następnie postępuj zgodnie z wyświetlonymi instrukcjami.
 
 ## Sprawdzanie stanu systemu Intune
 W obszarze roboczym **Przegląd systemu** możesz przejrzeć podsumowanie **Stan systemu** dotyczące programu Endpoint Protection, aktualizacji, kondycji agenta, zasad i oprogramowania, aby zidentyfikować problemy wymagające Twojej natychmiastowej uwagi i ustalić ich priorytety. Komunikaty o błędach generowane, gdy działanie systemu zostanie zakłócone, zawierają link do podsumowania **Stan usługi**. W podsumowaniu **Stan usługi** są wyświetlane szczegóły dotyczące problemów w poszczególnych lokalizacjach, a także czas ostatniej aktualizacji podsumowania.

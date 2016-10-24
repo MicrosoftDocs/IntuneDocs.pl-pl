@@ -13,8 +13,8 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 5b659bb63c34887684f90fd56ea853bade8bf791
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
 
 
 ---
@@ -42,7 +42,7 @@ System Windows Phone 8.0 wymaga certyfikatu firmy Symantec do zainstalowania apl
 Wymagania dotyczące konfiguracji zarządzania urządzeniami przenośnymi z systemem Windows Phone zależą od sposobu zarządzania urządzeniami.  Aby ułatwić użytkownikom rejestrację, można ustawić dwa rekordy CNAME dla funkcji rejestrowania w systemie DNS. Jeśli użytkownicy będą pobierać aplikację Portal firmy ze Sklepu, po skonfigurowaniu ustawień systemu DNS wystarczy skonfigurować tę aplikację i poinformować użytkowników o sposobie rejestrowania.  W przypadku wdrażania aplikacji Portal firmy w systemie Windows Phone 8.0 lub Windows Phone 8.1 do podpisania kodu aplikacji wymagany będzie certyfikat firmy Symantec.
 
 ## Konfigurowanie wymagań dotyczących konfiguracji, aby włączyć zarządzanie w systemie Windows Phone
-1.  **Skonfiguruj usługę** Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
+1.  **Skonfiguruj usługę Intune** Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając jako urząd zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#set-mobile-device-management-authority) usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
 
 2.  **Ustaw alias systemu DNS dla adresu serwera rejestracji** (opcjonalnie)
 
@@ -183,6 +183,6 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows Pho
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

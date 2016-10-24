@@ -13,8 +13,8 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1a8d80ad2b0ee66101ad9e67532e806ebc4b690
-ms.openlocfilehash: 3361c9069a3258621b9349a0cf332a38c206d041
+ms.sourcegitcommit: 26c62a000470030ef0109b397261b3049d3984ed
+ms.openlocfilehash: 710e5b2a59121d6ace53bd23f125dbe398c9ddae
 
 
 ---
@@ -140,37 +140,31 @@ Jeśli korzystasz z urządzenia z systemem Android, może zostać wyświetlony k
 
 ![Zrzut ekranu komunikatu o błędzie i instrukcjami dotyczącymi usunięcia konta](../media/AppManagement/Android_SwitchUser.png)
 
-##  Wyświetlanie plików multimedialnych przy użyciu aplikacji do udostępniania usługi Rights Management
-Aby wyświetlać pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniach z systemem Android, użyj [aplikacji do udostępniania usługi Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
+##  Wyświetlanie plików multimedialnych przy użyciu aplikacji Azure Information Protection (znaną wcześniej jako aplikacja Rights Management sharing)
+Aby wyświetlać firmowe pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniach z systemem Android, użyj [aplikacji Azure Information Protection](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
 
-Pobierz tę aplikację ze sklepu Google Play.  Po zainstalowaniu aplikacji na urządzeniu uruchom ją i uwierzytelnij się przy użyciu poświadczeń firmowych. Wyświetlanie niechronionych i chronionych plików z innych aplikacji zarządzanych przy użyciu zasad powinno być teraz możliwe.
+Pobierz tę aplikację ze sklepu Google Play.  
 
 Obsługiwane są następujące typy plików:
 
 * **Audio:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (rozszerzone AAC+), AAC ELD (enhanced low delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
 * **Wideo:** H.263, H.264 AVC, MPEG-4 SP, VP8.
 * **Obraz:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
-* PDF, PPDF
+* **PDF, PPDF**
 
 ------------
 |**pfile**|**text**|
 |----|----|
-|Pfile jest ogólnym formatem „otoki” dla plików chronionych, który hermetyzuje zaszyfrowaną zawartość i licencje usługi RMS i może służyć do ochrony dowolnego typu pliku.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|Pfile jest ogólnym formatem „otoki” dla plików chronionych, który hermetyzuje zaszyfrowaną zawartość i licencje usługi Azure Information Protection oraz może służyć do ochrony dowolnego typu pliku.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
 ---------------
-**Urządzenia z systemem Android, które nie zostały zarejestrowane w usłudze Intune**
-
-Przed skorzystaniem z aplikacji do udostępniania usługi RMS do wyświetlania plików z innych aplikacji zarządzanych przez usługę Intune, uruchom aplikację RMS i uwierzytelnij się za pomocą swojego konta służbowego.  Po zalogowaniu się zostanie wyświetlony następujący komunikat **tylko, jeśli nie masz licencji usługi RMS**:
-
-**Pomyślnie ukończono uwierzytelnianie — możesz teraz wyświetlać pliki firmowe, ale Twoja organizacja nie została skonfigurowana, aby umożliwić ochronę plików. Aby uzyskać więcej szczegółów, skontaktuj się z administratorem IT.**
-
-Taka sytuacja nie uniemożliwia korzystania z aplikacji do udostępniania usługi RMS do wyświetlania plików firmowych. Nadal możesz otwierać i wyświetlać pliki firmowe z innych aplikacji zarządzanych przez usługę Intune, a zasady zarządzania aplikacjami mobilnymi nadal będą obowiązywać.  Ten komunikat świadczy tylko o tym, że nie będzie możliwe dodawanie dodatkowych funkcji ochrony zapewnianych przez aplikację do udostępniania usługi RMS.  Musisz mieć licencję aplikacji RMS, aby chronić swoje pliki. Aby uzyskać więcej informacji na temat funkcji ochrony plików aplikacji RMS, zobacz [Ochrona pliku na urządzeniu](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-in-place) i [Ochrona pliku udostępnionego pocztą e-mail](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-by-email).
 
 
-### Zobacz też
+
+### Zobacz także
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

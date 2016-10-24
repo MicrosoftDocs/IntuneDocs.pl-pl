@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/20/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: cdfdc621f7ce18f79c4b090035698337174ddcec
+ms.sourcegitcommit: 1d133011004fa9c684f81c7adc085dc43a4a2ee4
+ms.openlocfilehash: 29bc67a9ce4120cbb9f157c8d0eefb78dce020ca
 
 
 ---
@@ -29,7 +29,7 @@ Portal firmy jest aplikacją instalowaną na urządzeniu z systemem iOS w celu u
 
 2.  Pobierz aplikację **Portal firmy w usłudze Microsoft Intune**.
 
-    ![download-ios-comp-portal-app](./media/ios-cpinstall-1-cpinstore.png)
+    ![Pobieranie aplikacji Portal firmy w usłudze Intune](./media/ios-cpinstall-1-cpinstore.png)
 
 3.  Otwórz aplikację Portal firmy, podaj służbowy adres e-mail i hasło, a następnie naciśnij pozycję **Zaloguj**.
 
@@ -39,7 +39,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

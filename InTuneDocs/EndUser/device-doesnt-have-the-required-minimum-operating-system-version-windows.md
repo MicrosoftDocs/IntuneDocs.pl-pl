@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: ab64d5d96c4572e9aade27dfac697cb9adbefc49
+ms.sourcegitcommit: 9a9343f7aa1ab4761bcbf36f829fe0e9be293515
+ms.openlocfilehash: a14f347ae65118852ba914085548cd17c8ec31aa
 
 
 ---
@@ -23,21 +23,19 @@ ms.openlocfilehash: ab64d5d96c4572e9aade27dfac697cb9adbefc49
 
 # Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego
 
-Urządzenie z systemem Windows nie ma minimalnej wersji systemu operacyjnego wymaganej przez dział IT. Przed zaktualizowaniem urządzenia przenośnego sprawdź bieżącą wersję systemu operacyjnego, naciskając pozycje **Ustawienia** &gt; **Informacje**, a następnie naciśnij pozycje **Ustawienia** &gt; **Aktualizacja telefonu** &gt; **Sprawdź aktualizacje**, aby zaktualizować urządzenie.
+Urządzenie z systemem Windows nie ma minimalnej wersji systemu operacyjnego wymaganej przez dział IT. Przed zaktualizowaniem urządzenia przenośnego sprawdź bieżącą wersję systemu operacyjnego, wybierając pozycje **Ustawienia** &gt; **Informacje**. Następnie, aby zaktualizować urządzenie, wybierz pozycje **Ustawienia** &gt; **Aktualizacje telefonu** &gt; **Sprawdź aktualizacje**.
 
-Przed zaktualizowaniem komputera wyszukaj **system operacyjny** i postępuj zgodnie z instrukcjami, aby zidentyfikować bieżącą wersję systemu operacyjnego. Aby zaktualizować komputery z systemami operacyjnymi starszymi niż Windows 10, wyszukaj **aktualizacje systemu Windows**.
+Przed zaktualizowaniem komputera wyszukaj **system operacyjny** i postępuj zgodnie z instrukcjami, aby zidentyfikować bieżącą wersję systemu operacyjnego. Aby zaktualizować komputery z systemami operacyjnymi starszymi niż Windows 10, wyszukaj pozycję **Aktualizacje systemu Windows**.
 
-Aby sprawdzić wersję systemu Windows 10 i Windows 8.1, naciśnij klawisze **Windows** + **R**, w oknie dialogowym wpisz **winver** i naciśnij klawisz **Enter**.
+Aby sprawdzić wersję systemu Windows 10 i Windows 8.1, naciśnij klawisz logo systemu Windows + R, w oknie dialogowym wpisz **winver**, a następnie naciśnij klawisz Enter.
 
-- W przypadku systemu Windows 10 zignoruj numer wersji i sprawdź numer kompilacji systemu operacyjnego (np. OS Build 10586.29). Liczba „10” w numerze „10586.29” oznacza „Windows 10”.
-- W przypadku systemu Windows 8.1 sprawdź numer wersji. Numer będzie miał formę 6.3.xxxx, nie będzie zaczynać się od 8.1.
+- W przypadku systemu Windows 10 zignoruj numer wersji i sprawdź numer kompilacji systemu operacyjnego (np. OS Build 10586.29). Liczba „10” w numerze „10586.29” oznacza system Windows 10.
+- W systemie Windows 8.1 sprawdź numer wersji. Zamiast 8.1 będzie wyświetlane 6.3.*xxxx*.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 
