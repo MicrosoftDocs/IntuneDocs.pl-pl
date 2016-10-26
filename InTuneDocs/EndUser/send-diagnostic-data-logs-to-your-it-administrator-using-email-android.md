@@ -2,8 +2,8 @@
 title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail | Microsoft Intune"
 description: "Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article
