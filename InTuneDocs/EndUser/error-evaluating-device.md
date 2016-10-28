@@ -2,8 +2,8 @@
 title: "Błąd podczas oceny urządzenia | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
@@ -22,7 +22,7 @@ ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 ---
 
 
-# Błąd podczas oceny urządzenia
+# <a name="error-evaluating-device"></a>Błąd podczas oceny urządzenia
 Stwierdzono, że urządzenie jest niezgodne z przynajmniej jedną zasadą firmy, ale nie można teraz wyświetlić błędu, ponieważ w systemie wystąpił problem podczas próby oceny urządzenia.  
 
 Aby rozwiązać ten problem, poczekaj kilka minut, a następnie naciśnij pozycję **Sprawdź zgodność**. Jeśli problem będzie nadal występować, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
