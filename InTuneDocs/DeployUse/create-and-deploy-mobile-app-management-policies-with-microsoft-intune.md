@@ -3,6 +3,7 @@ title: "Tworzenie i wdrażanie zasad MAM | Microsoft Intune"
 description: "Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
-ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: e5befdd4925f88d41c454d9c1c36eaf02fdb598d
 
 
 ---
@@ -111,8 +112,9 @@ Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi [
 >[!IMPORTANT]
 > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy.  Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
-Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Szczegółowy przewodnik dotyczący sposobu ochrony danych firmowych na urządzeniach przez zasady zarządzania aplikacjami mobilnymi znajduje się w temacie [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md).
-
+Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Aby uzyskać więcej informacji, zobacz:
+* [Oczekiwany przebieg zarządzania aplikacją systemu Android przez zasady zarządzania aplikacjami mobilnymi](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Oczekiwany przebieg zarządzania aplikacją systemu iOS przez zasady zarządzania aplikacjami mobilnymi](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 ##  Zmiana istniejących zasad
 Możesz edytować istniejące zasady i zastosować je do użytkowników docelowych. Jednak w przypadku zmiany istniejących zasad użytkownicy zalogowani do aplikacji zobaczą zmiany dopiero po 8 godzinach.
 
@@ -165,10 +167,11 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 [Monitorowanie zgodności i stanu użytkownika](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### Zobacz także
-[Środowisko użytkownika końcowego dla aplikacji objętej zarządzaniem aplikacjami mobilnymi](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+* [Oczekiwany przebieg zarządzania aplikacją systemu Android przez zasady zarządzania aplikacjami mobilnymi](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Oczekiwany przebieg zarządzania aplikacją systemu iOS przez zasady zarządzania aplikacjami mobilnymi](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem Android | Microsoft Intune"
+title: "Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem iOS | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
@@ -10,20 +10,20 @@ ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
+ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: c5b1be5043b5e0ad2774d9214a3e09ccd8d9d991
-ms.openlocfilehash: aae9d4666ab356bb6d3c5e929d311c53ea065485
+ms.openlocfilehash: 88b6a7107efb04accac4e7028e04a5505d8c865b
 
 
 ---
 
 # <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work
 
-Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak:
+Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak: 
 
-![Aplikacja Lookout for Work wykryła zagrożenie na urządzeniu](./media/lookout-threat-found-android.png)
+![Komunikat o braku zgodności z aplikacji Lookout for Work](./media/ios-lfw-noncompliant-in-ssp.png)
 
 Aby rozwiązać ten problem, otwórz aplikację Lookout for Work i wykonaj instrukcje wyświetlane w aplikacji.
 
@@ -39,9 +39,11 @@ Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny in
 
 W przypadku zainstalowania aplikacji, którą aplikacja Lookout for Work uzna za zagrożenie, zostanie wyświetlony ekran podobny do następującego:
 
-![Przykład alertu aplikacji Lookout for Work dotyczącego wykrycia wirusa](./media/lookout-virus-alert-android.png)
+![Przykład alertu aplikacji Lookout for Work dotyczącego wykrycia wirusa](./media/ios-lfw-threat-example.png)
 
-Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do firmowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do poczty e-mail i danych do czasu odinstalowania aplikacji.
+Jeśli widzisz podobny ekran, naciśnij nazwę aplikacji wyświetlaną u góry ekranu, a następnie wykonaj instrukcje, aby usunąć zagrożenie.
+
+Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 

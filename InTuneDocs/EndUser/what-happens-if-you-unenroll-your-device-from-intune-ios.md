@@ -3,6 +3,7 @@ title: "Co się dzieje w przypadku wyrejestrowania urządzenia z systemem iOS z 
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 05c94004bf8a4c26ad8063f3e5dc0ba581022e0a
+ms.sourcegitcommit: 2bc39ae41779e02882a5edf3698cb0e6976caec2
+ms.openlocfilehash: a47d3fc5c3a2063e49e9f250e15eb8d6126bb903
 
 
 ---
@@ -25,13 +26,13 @@ ms.openlocfilehash: 05c94004bf8a4c26ad8063f3e5dc0ba581022e0a
 
 Po wyrejestrowaniu urządzenia z systemem iOS z usługi Intune:
 
--   Urządzenie nie będzie już wyświetlane w Portalu firmy.
+-   Urządzenie nie jest już wyświetlane w Portalu firmy.
 
 -   Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
--   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
+-   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
 
--   Użytkownik może utracić dostęp za pośrednictwem urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
+-   Możesz utracić dostęp z urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
 
 -   Nie będzie można dłużej korzystać z aplikacji oraz danych firmy na urządzeniu.
 
@@ -45,8 +46,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

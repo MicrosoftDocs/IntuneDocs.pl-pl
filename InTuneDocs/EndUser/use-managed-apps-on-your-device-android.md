@@ -3,6 +3,7 @@ title: "Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android 
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/28/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 9bfa154c73252c33535b8a38a6853acaa2c2d4ed
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: 9f98871b6054e0277cb2c041776fc05e8a6aefe3
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 9bfa154c73252c33535b8a38a6853acaa2c2d4ed
 
 # Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 
-Aplikacje zarządzane to aplikacje, które administrator IT może konfigurować w celu ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem Android, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
+Aplikacje zarządzane to aplikacje, które administrator IT może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej na urządzeniu z systemem Android, możesz zauważyć, że aplikacja działa w sposób nieco inny od spodziewanego. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
 
 Różne aplikacje zarządzane mogą również współpracować ze sobą na urządzeniu, aby umożliwić wykonywanie codziennych zadań z zachowaniem ochrony danych firmowych. Na przykład jeśli otwierasz plik firmowy w jednej aplikacji zarządzanej, a do wyświetlenia tego pliku jest wymagana inna aplikacja zarządzana, automatycznie otwiera się aplikacja zarządzana, która umożliwia wyświetlenie pliku. Jeśli wymagana aplikacja jest niedostępna, pewne akcje, takie jak otwieranie dokumentu lub uzyskiwanie dostępu do linku sieci Web z dokumentu zarządzanego, mogą być niedostępne.
 
@@ -69,14 +70,12 @@ Do typowych aplikacji, którymi może zarządzać dział IT, należą między in
 
 -   Intune AV Player
 
--   Microsoft Word, Excel, PowerPoint
+-   Microsoft Word, Excel i PowerPoint
 
 Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

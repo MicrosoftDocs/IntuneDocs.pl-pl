@@ -2,9 +2,10 @@
 title: "Prośba o wyłączenie nieznanych źródeł | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,17 +13,17 @@ ms.technology:
 ms.assetid: c7a10998-9aa6-4bc0-8405-27a30c61bca7
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: d7d43bf3727d58ae8ad821de34d2d328d6b0603a
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: a3264803b8581a5b6ccf627eb0d39d13b12c1cdd
 
 
 ---
 
-# Prośba o wyłączenie nieznanych źródeł
+# <a name="you-are-asked-to-turn-off-unknown-sources"></a>Prośba o wyłączenie nieznanych źródeł
 
 Jeśli zostanie wyświetlony komunikat „Instalacja z nieznanych źródeł musi zostać wyłączona”, musisz przejść do pozycji **Ustawienia** > **Zabezpieczenia** (na niektórych urządzeniach może być to opcja **Ekran blokady i zabezpieczenia**) i wyłączyć ustawienie **Nieznane źródła**.
 
-Administrator IT wymaga wyłączenia tego ustawienia, aby chronić dane firmowe na urządzeniu z systemem Android. Gdy ustawienie **Nieznane źródła** jest włączone, umożliwia instalowanie aplikacji z nieznanego źródła, co może stanowić zagrożenie bezpieczeństwa.
+Administrator IT wymaga wyłączenia tego ustawienia, aby chronić dane firmowe na urządzeniu z systemem Android. Gdy ustawienie **Nieznane źródła** jest włączone, możesz instalować aplikacje z nieznanego źródła, co może stanowić zagrożenie bezpieczeństwa.
 
 Po wyłączeniu ustawienia **Nieznane źródła** może upłynąć kilka minut, zanim będzie można kontynuować używanie urządzenia z systemem Android w celu dostępu do danych służbowych.
 
@@ -30,8 +31,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

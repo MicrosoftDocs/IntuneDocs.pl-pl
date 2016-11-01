@@ -3,6 +3,7 @@ title: "Ustawianie numeru PIN lub hasła | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,15 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e050c7b4947f0a3aae87c545ec8cca282c22fe55
-ms.openlocfilehash: 2c9fd5714f64477e7e07d66429ae68e17e2e1bb7
+ms.sourcegitcommit: 7f08be661936b092cfa100b2454a3f2a3dd24746
+ms.openlocfilehash: c2480f168d5ee06a8419c68d1b90bac62c2879b1
 
 
 ---
 
 # Ustaw swój numer PIN lub hasło
 
-Jeśli korzystasz z usługi Intune w celu uzyskiwania dostępu do danych służbowych, administrator IT może wymagać ustawienia na urządzeniu z systemem Android numeru PIN lub hasła. Jeśli zobaczysz komunikat z prośbą o ustawienie numeru PIN lub hasła, wykonaj następujące kroki.
+Jeśli korzystasz z usługi Intune w celu uzyskiwania dostępu do danych służbowych, administrator IT może wymagać ustawienia na urządzeniu z systemem Android numeru PIN lub hasła. Mogą również pojawić się komunikaty informujące o konieczności utworzenia dłuższego lub bardziej złożonego numeru PIN albo hasła, co zapewni większe bezpieczeństwo.  
+
+Następujące kroki służą do ustawiania numeru PIN i hasła.
 
 1.  Naciśnij kolejno pozycje **Ustawienia** &gt; **Zabezpieczenia** &gt; **Blokada ekranu** &gt; **Hasło**.
 
@@ -33,6 +36,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

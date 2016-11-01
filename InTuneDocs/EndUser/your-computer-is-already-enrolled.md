@@ -3,6 +3,7 @@ title: "Twój komputer jest już zarejestrowany | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: f61840073cdb6a41c98e20bb5e1457e22f02d5bb
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: cf382c1c6633f8483059bc52146a66f26438e817
 
 
 ---
@@ -27,7 +28,7 @@ Jeśli wystąpi błąd z informacją, że Twój komputer jest już zarejestrowan
 
 Aby połączyć komputer:
 
-1.  Na komputerze, który chcesz połączyć ze swoim kontem, kliknij przycisk **Start**, a następnie kliknij pozycję **Microsoft Intune Center**.
+1.  Na komputerze, który chcesz połączyć ze swoim kontem, wybierz pozycję **Start**, a następnie wybierz pozycję **Microsoft Intune Center**.
 
 2.  Otwórz Portal firmy.
 
@@ -39,6 +40,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

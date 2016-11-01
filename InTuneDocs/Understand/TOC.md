@@ -1,5 +1,6 @@
 # [Poznawanie i eksplorowanie](introduction-to-microsoft-intune.md)
 ## [Wprowadzenie do usługi Intune](introduction-to-microsoft-intune.md)
+## [Nowoczesne zarządzanie w systemie Windows](modern-windows-management)
 ## [Przewodnik dotyczący oceny usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 ### [Rejestrowanie się lub logowanie na potrzeby uzyskania dostępu do 30-dniowej wersji ewaluacyjnej](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 ### [Dodawanie użytkowników](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
@@ -19,6 +20,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

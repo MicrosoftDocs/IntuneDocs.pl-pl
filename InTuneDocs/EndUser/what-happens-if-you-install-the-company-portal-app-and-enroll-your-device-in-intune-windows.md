@@ -3,6 +3,7 @@ title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarej
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: ac4fdc73122fb5dc82771f174d9bd783c186bf9d
+ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
+ms.openlocfilehash: 678ef01b215442e3d767a38388a579c6ee329975
 
 
 ---
@@ -23,30 +24,30 @@ ms.openlocfilehash: ac4fdc73122fb5dc82771f174d9bd783c186bf9d
 
 # Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune?
 
-Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone, pozwalasz administratorowi IT na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych, zgodnie z poniższym opisem dla urządzeń z systemem wcześniejszym niż Windows 10. Opis dotyczący urządzeń z systemem Windows 10 znajduje się na [tej stronie](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone pozwalasz administratorowi IT na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych. W tym temacie opisano, co się dzieje w przypadku urządzeń z systemem starszym niż Windows 10. W przypadku urządzeń z systemem Windows 10 zobacz [temat pokrewny](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
 ## Co się dzieje na wszystkich urządzeniach z systemem Windows po rejestracji
 Zarejestrowanie urządzenia z systemem Windows lub Windows Phone w usłudze Intune pozwala:
 
--   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych
+-   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych.
 
--   Pobierać aplikacje firmowe z witryny internetowej Portal firmy (dla systemów Windows 7 i Vista można pobierać aplikacje firmowe tylko z witryny sieci Web Portal firmy)
+-   Pobierać aplikacje firmowe z witryny sieci Web Portal firmy. (W przypadku systemów Windows 7 i Vista można pobierać aplikacje firmowe tylko z witryny sieci Web Portal firmy).
 
--   Automatycznie konfigurować służbowe konto e-mail
+-   Automatycznie konfigurować służbowe konto e-mail.
 
--   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
+-   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży.
 
 Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, które pozwalają mu:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych. Jest to przydatne w przypadku utracenia lub kradzieży urządzenia.
 
--   Usuwać tylko pliki związane z firmą i aplikacje biznesowe. **Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.**
+-   Usuwać tylko pliki związane z firmą i aplikacje biznesowe. *Dane osobowe oraz ustawienia użytkownika nie zostaną usunięte.*
 
--   Administrator IT będzie widzieć oprogramowanie zainstalowane na urządzeniu, włącznie z oprogramowaniem zainstalowanym przez Ciebie.
+-   Administrator IT będzie widzieć oprogramowanie zainstalowane na urządzeniu (z uwzględnieniem oprogramowania zainstalowanego przez użytkownika).
 
--   Ustawiać na Twoim urządzeniu wymagania, takie jak wymaganie ustawienia hasła lub numeru PIN urządzenia, aby chronić dane firmy. Administrator IT może także ograniczać to, ile razy można wprowadzić niepoprawne hasło, i może zablokować Ci dostęp do urządzenia, jeśli spróbujesz zbyt wiele razy.
+-   Ustawiać na Twoim urządzeniu wymagania, takie jak wymaganie ustawienia hasła lub numeru PIN urządzenia, aby pomóc w ochronie danych firmy. Administrator IT może także ograniczać to, ile razy można wprowadzić niepoprawne hasło, i może zablokować dostęp do urządzenia, jeśli spróbujesz zbyt wiele razy.
 
--   Wymagać od Ciebie szyfrowania danych na urządzeniu, aby chronić dane firmy na wypadek utraty lub kradzieży urządzenia. 
+-   Wymagać od Ciebie szyfrowania danych na urządzeniu, aby chronić dane firmy na wypadek utraty lub kradzieży urządzenia.
 
 -   Wymagać od użytkownika zaakceptowania postanowień.
 
@@ -56,7 +57,7 @@ Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, kt
 
 -  Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
 
--  Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie, które wyszukuje wirusy i złośliwe oprogramowanie.
+-  Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie wyszukuje wirusy i złośliwe oprogramowanie.
 
 -  Administrator IT może zbierać lub usuwać dane z dysku twardego komputera.
 
@@ -75,7 +76,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

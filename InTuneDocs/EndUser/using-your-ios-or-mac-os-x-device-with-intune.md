@@ -3,6 +3,7 @@ title: "Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune |
 description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub Mac OS X, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6e84676a8ea1e149f73871ef1468c2da80fa221c
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: e894ad75fd6e86d5d93393886b37e2af87b5eefc
 
 
 ---
@@ -61,9 +62,11 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 - [Jak znaleźć numer seryjny w urządzeniu?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
 - [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](device-doesnt-comply-with-the-maximum-operating-system-version-ios.md)
+- [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS](you-are-prompted-to-install-lookout-for-work-ios.md)
+- [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem iOS](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -3,8 +3,9 @@ title: "Połączenia VPN | Microsoft Intune"
 description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
-ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
+ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
+ms.openlocfilehash: 188cb3890da83332431743445959bba73e7f2484
 
 
 ---
@@ -44,20 +45,20 @@ Usługa Intune umożliwia tworzenie profilów sieci VPN korzystających z nastę
 
 
 
-Typ połączenia |iOS i Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
+Typ połączenia |iOS i Mac OS X  |Android i Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
-Cisco AnyConnect|Tak |Tak   |Nie    |     Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
-Cisco (IPsec)|Tak |Nie   |Nie  |  Nie|Nie  |Nie | Nie|
-Citrix|Tak |Nie   |Nie  |  Nie|Nie  |Nie | Nie|
-Pulse Secure|Tak  |Tak |Tak   |Nie  |Tak  |Tak| Tak|        
-F5 Edge Client|Tak |Tak |Tak |Nie  |Tak  |   Tak |  Tak|   
-Dell SonicWALL Mobile Connect|Tak |Tak |Tak |Nie  |Tak |Tak |Tak|         
-CheckPoint Mobile VPN|Tak |Tak |Tak |Tak |Tak|Tak|Tak|
-Microsoft SSL (SSTP)|Nie |Nie |Nie |Nie |Nie|Nie|VPNv1 OMA-URI*|
-Tryb automatyczny firmy Microsoft|Nie |Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
-IKEv2|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
-PPTP|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Nie|Tak|
-L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
+Cisco AnyConnect|Tak |Tak   |Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
+Cisco (IPsec)|Tak |Nie   |Nie  |Nie  |Nie | Nie|
+Citrix|Tak |Nie   |Nie  |Nie  |Nie | Nie|
+Pulse Secure|Tak  |Tak |Tak   |Tak  |Tak| Tak|        
+F5 Edge Client|Tak |Tak |Tak |Tak  |   Tak |  Tak|   
+Dell SonicWALL Mobile Connect|Tak |Tak |Tak |Tak |Tak |Tak|         
+CheckPoint Mobile VPN|Tak |Tak |Tak |Tak|Tak|Tak|
+Microsoft SSL (SSTP)|Nie |Nie |Nie |Nie|Nie|VPNv1 OMA-URI*|
+Tryb automatyczny firmy Microsoft|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
+IKEv2|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Tak (OMA-URI)|Tak|
+PPTP|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Nie|Tak|
+L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Tak (OMA-URI)|Tak|
 
 \* Bez dodatkowych ustawień, które w przeciwnym razie są dostępne w systemie Windows 10.
 
@@ -96,6 +97,8 @@ Użytkownik jest uwierzytelniany na serwerze sieci VPN przez podanie swojej nazw
 
 > [!Note]
 > Profil sieci VPN dla urządzeń programu Android for Work powoduje włączenie połączenia sieci VPN wyłącznie dla aplikacji zainstalowanych na profilu służbowym urządzenia.
+>
+> Niektóre typy połączeń VPN obsługują sieć VPN dla aplikacji dla urządzeń programu Android for Work oraz na użytek włączania sieci dla aplikacji rozpowszechnianych za pośrednictwem usługi Intune.  
 
 3. Skorzystaj z poniższej tabeli, aby skonfigurować ustawienia profilu sieci VPN:
 

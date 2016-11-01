@@ -3,6 +3,7 @@ title: "Co się dzieje w przypadku zresetowania urządzenia z systemem Android p
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 27d49e53fdd23b82fbbb94d2f285978cb3b52b16
+ms.sourcegitcommit: 3f531adc042677d12c64e2efb4f8e3401e4b5bd4
+ms.openlocfilehash: ff0dca484b7e7a75dcaff69c86985510ee17277e
 
 
 ---
@@ -23,9 +24,9 @@ ms.openlocfilehash: 27d49e53fdd23b82fbbb94d2f285978cb3b52b16
 
 # Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy?
 
-Jeśli użyjesz Portalu firmy do zresetowania urządzenia z systemem Android, wszystkie aplikacje, ustawienia i dane osobiste zostaną usunięte z urządzenia, a urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
+Jeśli użyjesz Portalu firmy do zresetowania urządzenia z systemem Android, wszystkie aplikacje, ustawienia i dane osobiste zostaną usunięte. Urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
 
-Jeśli masz urządzenie z systemem Samsung Knox, możesz przeprowadzić „selektywne czyszczenie”, wybierając opcję **Usuń urządzenie** w Portalu firmy. Selektywne czyszczenie danych usuwa tylko następujące dane:
+Jeśli masz urządzenie z systemem Samsung Knox, możesz przeprowadzić „selektywne czyszczenie”, wybierając opcję **Usuń urządzenie** w Portalu firmy. Selektywne czyszczenie danych usuwa tylko następujące elementy:
 
 - Aplikacje biznesowe, które administrator IT udostępnia użytkownikowi
 - Poczta e-mail, sieci VPN i Wi-Fi
@@ -35,8 +36,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

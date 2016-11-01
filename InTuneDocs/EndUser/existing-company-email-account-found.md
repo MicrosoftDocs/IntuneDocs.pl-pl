@@ -2,7 +2,8 @@
 title: "Znaleziono istniejące konto firmowej poczty e-mail | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,20 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
-ms.openlocfilehash: f33287c51fb769505cd1fb4fcfe2bbc1e4da0ea2
+ms.sourcegitcommit: eebc35277aedabb2575b753afbaf9ea05b1555e8
+ms.openlocfilehash: 6b7123dc4ec0b7a73e6e3151ca9c66a65354f9de
 
 
 ---
 
-# Znaleziono istniejące konto firmowej poczty e-mail
-Masz już konto firmowej poczty e-mail. Jeśli chcesz kontynuować nawiązywanie połączenia z firmową pocztą e-mail, wykonaj następujące czynności, aby umożliwić administratorowi IT prawidłowe skonfigurowanie Twojego konta i zarządzanie nim:
+# <a name="existing-company-email-account-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
+
+Masz już konto firmowej poczty e-mail. Jeśli chcesz kontynuować nawiązywanie połączenia z firmowym kontem poczty e-mail, wykonaj następujące czynności, aby umożliwić administratorowi IT prawidłowe skonfigurowanie Twojego konta i zarządzanie nim:
 
 1.  W oknie **Ustawienia** na Twoim urządzeniu usuń uprzednio skonfigurowane połączenie z firmową pocztą e-mail.
 
     Na przykład na urządzeniu z systemem iOS naciśnij pozycję **Ustawienia** &gt; **Poczta, Kontakty, Kalendarz**. Wybierz służbowe konto e-mail, a następnie kliknij pozycję **Usuń**.
 
-2.  Otwórz aplikację Portal firmy na urządzeniu i naciśnij pozycję **Sprawdź zgodność**.
+2.  Otwórz aplikację Portal firmy na urządzeniu, a następnie naciśnij pozycję **Sprawdź zgodność**.
 
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
@@ -35,6 +37,6 @@ Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj si�
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

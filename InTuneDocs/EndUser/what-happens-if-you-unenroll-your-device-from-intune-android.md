@@ -3,6 +3,7 @@ title: "Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Androi
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: fb6f92dccb823d34b977cd42c004a17acf8fa090
+ms.sourcegitcommit: 2bc39ae41779e02882a5edf3698cb0e6976caec2
+ms.openlocfilehash: 5508b359329465e6f53fa3f5b4a93918932dfd8b
 
 
 ---
@@ -25,15 +26,15 @@ ms.openlocfilehash: fb6f92dccb823d34b977cd42c004a17acf8fa090
 
 Wyrejestrowanie urządzenia z systemem Android z usługi Intune oznacza, że:
 
--   Wyrejestrowujesz urządzenie z usługi Intune, czyli administrator IT już nim nie zarządza.
+-   Administrator IT nie zarządza już urządzeniem.
 
--   Utracisz dostęp do danych i zasobów firmy.
+-   Nie masz już dostępu do danych i zasobów firmy.
 
--   Urządzenie nie będzie już wyświetlane w Portalu firmy.
+-   Urządzenie nie jest już wyświetlane w Portalu firmy.
 
 -   Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
--   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
+-   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
 
 Jeśli urządzenie jest skonfigurowane tylko do pobierania firmowych wiadomości e-mail i zostanie wyrejestrowane, urządzenie nie będzie już wyświetlane w Portalu firmy.
 
@@ -43,7 +44,6 @@ Potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę si
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

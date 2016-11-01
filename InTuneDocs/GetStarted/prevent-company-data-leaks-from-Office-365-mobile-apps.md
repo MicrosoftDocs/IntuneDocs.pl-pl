@@ -1,11 +1,11 @@
 ---
 title: "Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365 | Microsoft Intune"
-description: 
+description: "Korzystanie z usługi Intune umożliwia zabezpieczanie danych organizacji przy użyciu zasad zarządzania aplikacjami mobilnymi, które pomagają zapobiegać przeciekom danych firmowych z aplikacji mobilnych usługi Office 365 lub innych aplikacji biznesowych."
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 19be3de7-539c-49f5-8c46-5363b987fef9
 ms.reviewer: pchacon
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cbb34c02e782248a5895a83fba6808f7fef0db9b
-ms.openlocfilehash: b28beb0219e1669e6cd7eacf03f3875b76cd6e27
+ms.sourcegitcommit: 84faafafb531f0f3599a2b0d81a4123c930852ec
+ms.openlocfilehash: e9ed47a6ced12f800bb5e75bc73d5404a9d5cbc0
 
 
 ---
@@ -31,7 +31,7 @@ Jeśli tak, usługa Microsoft Intune pozwala ustawić zasady zarządzania aplika
 ## Jak to zrobić?
 1.  Uzyskaj podstawową wiedzę na temat [sposobu działania zarządzania aplikacjami mobilnymi w usłudze Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
 2.  Dowiedz się, [co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi (MAM)](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) w portalu Azure.
-3.  [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
+3.  [Tworzenie i wdrażanie zasad MAM](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
 
 ### Informacje dodatkowe:
 - [Środowisko użytkownika końcowego](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune) (korzystanie z aplikacji objętych zarządzaniem aplikacjami mobilnymi).

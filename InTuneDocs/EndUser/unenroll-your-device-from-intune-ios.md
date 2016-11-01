@@ -3,6 +3,7 @@ title: "Wyrejestrowywanie urządzenia z systemem iOS z usługi Intune | Microsof
 description: "Opis sposobu wyrejestrowania urządzenia z systemem iOS z usługi Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: af520ef10b50631bafdfdf4d240a8e2541f5c3d6
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: acd83d6cac946c7cc3c08bc179bf88dcc7475a69
 
 
 ---
@@ -30,13 +31,13 @@ Aby wyrejestrować urządzenie z usługi Intune, wykonaj następujące czynnośc
 <iframe width="675" height="379" src="https://www.youtube.com/embed/6UFtBrBWUUI" frameborder="0" allowfullscreen></iframe>
 
 
-1.  W aplikacji Portal firmy w obszarze **Moje urządzenia**wybierz urządzenie, którego rejestrację chcesz anulować.
+1.  W aplikacji Portal firmy w obszarze **Moje urządzenia** wybierz urządzenie, które chcesz wyrejestrować.
 
 2.  Naciśnij pozycję **Usuń** &gt; **Usuń**.
 
 Po wyrejestrowaniu urządzenia z usługi Intune:
 
--   Urządzenie nie będzie dłużej wyświetlane w Portalu firmy.
+-   Urządzenie nie będzie już wyświetlane w Portalu firmy.
 
 -   Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
@@ -56,7 +57,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

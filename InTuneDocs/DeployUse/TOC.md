@@ -125,7 +125,7 @@
 #### [Weryfikowanie zasad zarządzania aplikacjami mobilnymi](validate-mobile-application-management.md)
 #### [Monitorowanie zgodności zasad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
-#### [Środowisko użytkownika końcowego](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+
 #### [Konsola administracyjna usługi Intune dla zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Przygotowanie aplikacji biznesowych do użycia funkcji MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
@@ -141,12 +141,15 @@
 ### [Czyszczenie danych zarządzanych aplikacji firmowych](Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Zasoby dotyczące środowiska użytkownika końcowego](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+### [Przywracanie zarządzanych urządzeń z systemem iOS](restore-managed-ios-devices-from-backup.md)
+### [Aplikacje dla systemu Android z zasadami MAM](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+### [Aplikacje dla systemu iOS z zasadami MAM](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 # [Tworzenie i dostosowywanie aplikacji](/intune/develop/intune-app-sdk)
 
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

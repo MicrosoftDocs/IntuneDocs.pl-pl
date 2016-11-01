@@ -3,6 +3,7 @@ title: "Prośba o identyfikację urządzenia przy próbie jego zarejestrowania |
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 5db6e8e4b27a00ce159fb700139db45a45e48b02
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: 852c02fabee7ec3551e34f92c5f9e44402d31ecb
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 5db6e8e4b27a00ce159fb700139db45a45e48b02
 
 # Prośba o identyfikację urządzenia przy próbie jego zarejestrowania
 
-Jeśli podczas próby rejestracji urządzenia z systemem iOS lub Mac OS X w usłudze Intune pojawia się ekran z monitem o identyfikację urządzenia, oznacza to, że co najmniej jedno z Twoich urządzeń zostało już zarejestrowane i przypisane do Twojego konta za pomocą innej metody niż aplikacja Portal firmy. Aby aplikacja Portal firmy działała prawidłowo, należy sprawdzić, czy używane urządzenie zostało już zarejestrowane w usłudze Intune.
+Jeśli podczas próby rejestracji urządzenia z systemem iOS lub Mac OS X w usłudze Intune pojawia się ekran z monitem o identyfikację urządzenia, oznacza to, że co najmniej jedno z Twoich urządzeń zostało już zarejestrowane i przypisane do Twojego konta za pomocą innej metody niż aplikacja Portal firmy. Aby aplikacja Portal firmy działała prawidłowo, należy wskazać, czy używane urządzenie zostało już zarejestrowane w usłudze Intune.
 
 1. Jeśli urządzenie jest na liście, naciśnij je. Jeśli nie ma go na liście, naciśnij pozycję **nowe urządzenie**.
 2. Naciśnij pozycję **Kontynuuj**.
@@ -33,8 +34,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
