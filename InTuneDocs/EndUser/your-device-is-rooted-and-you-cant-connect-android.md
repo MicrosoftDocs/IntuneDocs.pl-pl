@@ -3,7 +3,7 @@ title: "Na urządzeniu z systemem Android odblokowano dostęp do konta root i ni
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

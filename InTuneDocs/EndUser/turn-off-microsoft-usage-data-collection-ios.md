@@ -3,7 +3,7 @@ title: "Wyłączanie zbierania danych użycia w systemie iOS przez firmę Micros
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

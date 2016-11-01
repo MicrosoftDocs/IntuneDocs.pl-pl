@@ -3,7 +3,7 @@ title: "Prośba o włączenie opcji Skanuj urządzenie pod kątem zagrożeń zab
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article

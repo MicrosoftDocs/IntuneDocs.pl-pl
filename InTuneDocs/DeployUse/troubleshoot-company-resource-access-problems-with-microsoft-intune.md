@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów z dostępem do zasobów firmy | Microsoft Intune"
 description: "Kody błędów i stanów w tym temacie pomagają rozwiązać problemy z dostępem do zasobów."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -20,12 +20,12 @@ ms.openlocfilehash: 98b93ca894cfc616b023a313e19c5553b2284769
 
 ---
 
-# Rozwiązywanie problemów z dostępem do zasobów firmy przy użyciu usługi Microsoft Intune
+# <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Rozwiązywanie problemów z dostępem do zasobów firmy przy użyciu usługi Microsoft Intune
 Kody błędów i stanów przedstawione w tym temacie ułatwiają rozwiązywanie problemów w przypadku, gdy akcja usługi Microsoft Intune zwraca kod błędu.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
-## Kody stanu dla urządzeń z systemem Windows zarządzanych przez usługę MDM
+## <a name="status-codes-for-mdm-managed-windows-devices"></a>Kody stanu dla urządzeń z systemem Windows zarządzanych przez usługę MDM
 
 |Kod stanu|Komunikat o błędzie|Co należy zrobić|
 |---------------|-----------------|--------------|
@@ -44,7 +44,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |130 (APP_CI_ENFORCEMENT_ERROR)|Niepowodzenie instalacji licencji MSADP||
 |Brak stanu (APP_CI_ENFORCEMENT_UNKNOWN)|n/d|Stan jest aktualnie nieznany.|
 
-## Dostęp do zasobów firmy (typowe błędy)
+## <a name="company-resource-access-common-errors"></a>Dostęp do zasobów firmy (typowe błędy)
 
 |Kod stanu|Szesnastkowy kod błędu|Komunikat o błędzie|
 |---------------|--------------------------|-----------------|
@@ -73,7 +73,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |-2016341111|0x87D11389|Urządzenie z systemem iOS zwróciło nieoczekiwany stan bezczynności|
 |-2016341112|0x87D11388|Urządzenie z systemem iOS jest aktualnie zajęte|
 
-## Błędy zwrócone przez urządzenia z systemem iOS
+## <a name="errors-returned-by-ios-devices"></a>Błędy zwrócone przez urządzenia z systemem iOS
 
 |Kod stanu|Szesnastkowy kod błędu|Komunikat o błędzie|
 |---------------|--------------------------|-----------------|
@@ -283,7 +283,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |-2016335111|0x87D12AF9|1001: Nieobsługiwana wersja profilu|
 |-2016335112|0x87D12AF8|1000: Źle sformułowany profil|
 
-## Kody odpowiedzi OMA
+## <a name="oma-response-codes"></a>Kody odpowiedzi OMA
 
 |Kod stanu|Szesnastkowy kod błędu|Komunikat o błędzie|
 |---------------|--------------------------|-----------------|
@@ -368,7 +368,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |-2016345912|0x87D100C8|Polecenie SyncML zostało wykonane pomyślnie.|
 |-2016346011|0x87D10065|Trwa wykonywanie określonego polecenia SyncML, ale polecenie nie zostało jeszcze zakończone.|
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 

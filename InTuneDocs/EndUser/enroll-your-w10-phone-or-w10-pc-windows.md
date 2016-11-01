@@ -3,7 +3,7 @@ title: "Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Micr
 description: "Opis sposobu rejestrowania urządzenia przenośnego lub stacjonarnego z systemem Windows 10 w usłudze Intune"
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/18/2016
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów z dostępem do zasobów firmy | Microsoft Intune"
 description: "Kody błędów i stanów w tym temacie pomagają rozwiązać problemy z dostępem do zasobów."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -44,7 +44,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |130 (APP_CI_ENFORCEMENT_ERROR)|Niepowodzenie instalacji licencji MSADP||
 |Brak stanu (APP_CI_ENFORCEMENT_UNKNOWN)|n/d|Stan jest aktualnie nieznany.|
 
-## <a name="company-resource-access-(common-errors)"></a>Dostęp do zasobów firmy (typowe błędy)
+## <a name="company-resource-access-common-errors"></a>Dostęp do zasobów firmy (typowe błędy)
 
 |Kod stanu|Szesnastkowy kod błędu|Komunikat o błędzie|
 |---------------|--------------------------|-----------------|
