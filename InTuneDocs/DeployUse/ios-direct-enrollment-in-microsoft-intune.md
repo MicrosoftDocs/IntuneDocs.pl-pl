@@ -2,8 +2,8 @@
 title: "Bezpośrednia rejestracja urządzeń z systemem iOS | Microsoft Intune"
 description: "Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrować firmowe urządzenia z systemem iOS za pomocą wstępnie zdefiniowanych zasad poprzez połączenie USB z komputerem Mac."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -20,7 +20,7 @@ ms.openlocfilehash: 9526ac2eb902198597ba811c5d957d69e1b991c6
 
 ---
 
-# Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
+# <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **Brak koligacji użytkownika** i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej.
 
 W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. W tych wskazówkach przyjęto założenie, że używany jest program Apple Configurator 2.0 na komputerze Mac.
