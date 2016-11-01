@@ -3,8 +3,9 @@ title: "Uzyskiwanie dostępu do poczty e-mail przy użyciu profilów poczty e-ma
 description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
-ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
+ms.sourcegitcommit: 9f8767f191df76e8f166767c51fff357b251bbd4
+ms.openlocfilehash: f736c408f5a4ece65eeef35fb8d1be9a9b29c1b1
 
 
 ---
@@ -29,14 +30,14 @@ Jeśli potrzebujesz dodatkowej ochrony przed utratą danych, wybierz pozycję [D
 Administratorzy IT lub użytkownicy mają także możliwość instalowania alternatywnych klientów poczty e-mail (na przykład programu Microsoft Outlook dla systemu Android lub iOS). Ci klienci poczty e-mail mogą nie obsługiwać profilów poczty e-mail i nie można ich konfigurować przy użyciu profilów poczty e-mail usługi Intune.  
 
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
--   System Windows Phone 8 lub nowszy
+-   System Windows Phone 8.1 lub nowszy
 -   Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
 -   System iOS 8.0 i nowsze
 -   KNOX Samsung Standard (4.0 i nowsze)
 -   Program Android for Work
 
 >[!NOTE]
->Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil. 
+>Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil.
 
 Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować ilość poczty e-mail do synchronizowania, a także, w zależności od typu urządzenia, typy zawartości do synchronizowania.
 
@@ -52,11 +53,11 @@ Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować iloś
 
 >Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępować siebie nawzajem.
 
->**Android for Work**: profil z usługi Intune jest stosowany tylko do profilu służbowego urządzenia i nie ma wpływu na profile poczty e-mail w profilu użytkownika urządzenia.
+>**Android for Work**: profil z usługi Intune jest stosowany tylko do konkretnych aplikacji poczty e-mail w profilu służbowym urządzenia i nie ma wpływu na konfigurację poczty e-mail w profilu użytkownika urządzenia.
 
 
 ## Zabezpieczanie profilów poczty e-mail
-Profile poczty e-mail można zabezpieczyć przy użyciu jednej z dwóch metod: certyfikatu lub hasła.
+Profile poczty e-mail można zabezpieczyć przy użyciu certyfikatu lub hasła.
 
 ### Certyfikaty
 Podczas tworzenia profilu poczty e-mail wybierasz profil certyfikatu utworzony wcześniej w usłudze Intune. Jest on znany jako certyfikat tożsamości i jest używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub certyfikatu głównego) w celu określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze, który uwierzytelnia połączenie poczty e-mail — zwykle jest to natywny serwer poczty.
@@ -78,10 +79,10 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
     -   **Profil poczty e-mail (system iOS 8.0 i nowsze)**
 
-    -   **Profil poczty e-mail (system Windows Phone 8 i nowsze)**
+    -   **Profil poczty e-mail (system Windows Phone 8.1 i nowsze)**
 
     -   **Profil poczty e-mail (system Windows 10 Desktop oraz Mobile i nowsze)**
-    
+
     -   **Profil poczty e-mail (program Android for Work — Gmail)**
 
     -   **Profil poczty e-mail (program Android for Work — Nine Work)**
@@ -107,8 +108,10 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
     |**Użyj protokołu SSL**|Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem programu Exchange. W przypadku urządzeń z systemem Samsung KNOX 4.0 lub nowszym należy wyeksportować certyfikat SSL serwera programu Exchange i wdrożyć go jako profil zaufanego certyfikatu systemu Android w usłudze Intune. Usługa Intune nie obsługuje uzyskiwania dostępu do tego certyfikatu, jeśli zostanie on zainstalowany na serwerze programu Exchange w inny sposób.|
     |**Typ zawartości do synchronizowania** (wszystkie platformy z wyjątkiem programu Android for Work — Gmail)|Wybierz typy zawartości, które chcesz synchronizować z urządzeniami.|
     |**Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm** (tylko system iOS)|Zezwalaj użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.|
-    > [!IMPORTANT]
-    > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
+
+> [!IMPORTANT]
+>
+> Jeśli wdrożono profil poczty e-mail i chcesz zmienić wartości ustawień **Host** lub **Adres e-mail**, usuń istniejący profil poczty e-mail i utwórz nowy z wymaganymi wartościami.
 
 4.  Gdy skończysz, kliknij pozycję **Zapisz zasady**.
 
@@ -127,10 +130,11 @@ Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze r
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
 
 > [!NOTE]
-> Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem.
+> - W przypadku systemu Android for Work upewnij się również, że poza odpowiednim profilem poczty e-mail wdrożono również aplikacje Gmail lub Nine Work.
+> - Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 
