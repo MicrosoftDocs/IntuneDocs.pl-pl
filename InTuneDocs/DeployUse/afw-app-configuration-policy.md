@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 11/3/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,7 +20,10 @@ ms.openlocfilehash: a986e859e38e0936f53c57a75872dc86de3ee181
 
 ---
 
-# Konfigurowanie aplikacji programu Android for Work przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune
+# <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurowanie aplikacji programu Android for Work przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Zasady konfiguracji aplikacji mobilnych w usłudze Microsoft Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację. Aplikacja może na przykład wymagać, aby użytkownicy określili:
 
 -   Niestandardowy numer portu
@@ -37,7 +40,7 @@ Aby korzystać z zasad konfiguracji aplikacji, podczas tworzenia aplikacji dewel
 
 Zasady konfiguracji aplikacji są wdrażane do tych samych użytkowników, do których wdrożono aplikację, którą chcesz skonfigurować. Ustawienia zasad będą używane przy każdym uruchomieniu aplikacji.
 
-## Konfigurowanie zasad konfiguracji aplikacji mobilnych
+## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurowanie zasad konfiguracji aplikacji mobilnych
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
@@ -61,7 +64,7 @@ Zasady konfiguracji aplikacji są wdrażane do tych samych użytkowników, do kt
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** .
 
 
-## Wdrażanie zasad konfiguracji aplikacji
+## <a name="deploy-the-app-configuration-policy"></a>Wdrażanie zasad konfiguracji aplikacji
 Po utworzeniu zasad konfiguracji aplikacji mobilnej należy wdrożyć je do tych samych użytkowników, do których została wdrożona aplikacja, której będą dotyczyć ustawienia.
 
 Aby uzyskać informacje na temat sposobu wdrażania zasad, zobacz [Wdrażanie zasad konfiguracji](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#deploy-a-configuration-policy).
@@ -72,10 +75,6 @@ Po uruchomieniu wdrożonej aplikacji na urządzeniu zostaną uruchomione ustawie
 
 > [!TIP]
 > Dla każdej aplikacji należy wdrożyć tylko jedną zasadę konfiguracji do użytkownika.
-
-
-
-
 
 
 
