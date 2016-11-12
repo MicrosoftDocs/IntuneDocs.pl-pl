@@ -54,6 +54,6 @@ Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
