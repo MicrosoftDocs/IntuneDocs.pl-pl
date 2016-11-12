@@ -3,8 +3,9 @@ title: "Zarządzanie dostępem do sieci Web za pomocą programu Managed Browser 
 description: "Wdróż aplikację Managed Browser, aby ograniczyć przeglądanie sieci Web i transfer danych sieci Web do innych aplikacji."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/03/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fcd53d335aa18701ba0b8c3c75569febbee2cd5
-ms.openlocfilehash: d07a5dde05055c54f5b89c8aa5f49203d0a22b97
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: a85aa3ce78425f2e00479ab0e48338e5eef8aec3
 
 
 ---
@@ -34,7 +35,7 @@ Zasady programu Managed Browser można tworzyć dla następujących typów urzą
 
 -   Urządzenia z systemem Android 4 i nowszym
 
--   Urządzenia z systemem iOS 7.1 i nowszymi
+-   Urządzenia z systemem iOS w wersji 8.0 lub nowszej
 
 Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
@@ -44,9 +45,9 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 2.  Skonfiguruj jeden z następujących typów zasad z grupy **Oprogramowanie** :
 
-    -   **Zasady programu Managed Browser (system Android 4 i nowsze)**
+    -   **Zarządzana przeglądarka (system Android 4 lub nowszy)**
 
-    -   **Zasady programu Managed Browser (system iOS 7.1 i nowsze)**
+    -   **Managed Browser (system iOS 8.0 i nowsze)**
 
     Aby uzyskać więcej informacji na temat tworzenia i wdrażania zasad, zobacz temat [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -154,6 +155,6 @@ Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi k
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

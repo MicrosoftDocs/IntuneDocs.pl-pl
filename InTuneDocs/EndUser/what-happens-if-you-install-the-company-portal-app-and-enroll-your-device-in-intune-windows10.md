@@ -2,10 +2,10 @@
 title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: 0462635a4c995866f8ad504ea724e795424b4405
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 94868431ce100a252ddfc7df5f9c2e287f0eedaf
 
 
 ---
 
 
-# Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune?
 
 Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem Windows 10 Enterprise lub Professional w usłudze Intune przy użyciu tej aplikacji można używać aplikacji Portal firmy, aby:
 
@@ -56,6 +56,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

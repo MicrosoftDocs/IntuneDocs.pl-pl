@@ -2,10 +2,10 @@
 title: "Na urządzeniu nie jest włączony bezpieczny rozruch | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 93a095b77bb1b689c9d33af4d6c78c793f7bd5e2
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a54b599618263f030fe322bed07d114401541948
 
 
 ---
 
 
-# Na urządzeniu nie jest włączony bezpieczny rozruch
+# <a name="device-doesnt-have-secure-boot-enabled"></a>Na urządzeniu nie jest włączony bezpieczny rozruch
 
 Twoja organizacja wymaga, aby włączyć usługę bezpiecznego rozruchu firmy Windows. Jest to funkcja bezpieczeństwa, która pomaga chronić urządzenie.
 
@@ -36,6 +36,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

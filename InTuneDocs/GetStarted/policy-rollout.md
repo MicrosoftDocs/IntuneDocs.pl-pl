@@ -3,8 +3,9 @@ title: "Wdrażanie zasad | Microsoft Intune"
 description: "Zalecenia dotyczące etapowego wdrażania zasad w usłudze Microsoft Intune."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 390d5adf-86d2-4e23-ba93-1e61e6b1028b
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 0c23fdd5f5e6bc1b50dda56fe2135e8cc24b5e26
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: 0a363ed242f5968f3fb84b558cfa134e243a22ff
 
 
 ---
@@ -90,13 +91,13 @@ Podczas etapu pilotażowego następuje wdrożenie zasad dla niewielkiej liczby u
 **Pomoc techniczna:** zadbaj o to, aby powiadomić dział pomocy technicznej o wszelkich zmianach zasad, które wpłyną na środowisko użytkowników, ponieważ mogą one wywołać żądania pomocy technicznej.
 
 
-### Zobacz także
+### Zobacz też
 [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
 
 [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

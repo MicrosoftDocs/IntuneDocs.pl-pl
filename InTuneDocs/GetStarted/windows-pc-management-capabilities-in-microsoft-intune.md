@@ -3,8 +3,9 @@ title: "Możliwości komputerowego klienta oprogramowania usługi Intune | Micro
 description: "Dowiedz się więcej o możliwościach usługi Intune podczas zarządzania komputerami z systemem Windows przy użyciu klienta oprogramowania usługi Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/25/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +14,25 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 12d75bc67fd61a2e807eed2543f21b756a65a900
-ms.openlocfilehash: 3066ef98c0a1df6fc0ae455860635e7c12f82c4f
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: e786cd33b5c963fa373d281e93721d0dd0f5456c
 
 
 ---
 
-# Możliwości z zakresu zarządzania z użyciem komputera z systemem Windows w przypadku użycia klienta oprogramowania usługi Intune
+# Możliwości w zakresie zarządzania komputerem z systemem Windows w przypadku użycia klienta oprogramowania usługi Intune
 W większości przypadków będziesz rejestrować urządzenia w usłudze Microsoft Intune, co zapewnia większe możliwości. Możesz jednak także zarządzać komputerami, korzystając z klienta oprogramowania usługi Intune, który zapewnia następujące funkcje:
 
--   **Zarządzanie aktualizacjami oprogramowania** — aktualizowanie komputerów i zarządzanie harmonogramem stosowania aktualizacji.
+-   **[Zarządzanie aktualizacjami oprogramowania](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** — aktualizowanie komputerów i zarządzanie harmonogramem stosowania aktualizacji.
 
--   **Zasady Zapory systemu Windows** — zapewnianie, że żaden komputer używany w firmie nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
+-   **[Zasady Zapory systemu Windows](/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune)** — zapewnianie, że żaden komputer używany w firmie nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
 
--   **Ochrona przed złośliwym oprogramowaniem** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
+-   **[Ochrona przed złośliwym oprogramowaniem](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
 
--   **Pomoc zdalna** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielić im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune (wymagane jest oprogramowanie TeamViewer).
+-   **[Pomoc zdalna](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-to-windows-pcs-that-use-the-intune-client-software )** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielić im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune (wymagane jest oprogramowanie TeamViewer).
 
--   **Zarządzanie licencjami na oprogramowanie** — śledź liczbę dostępnych licencji na oprogramowanie oraz liczbę dostępnych licencji będących w użyciu.
--   **Wdrażanie aplikacji** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą klienta oprogramowania.
+-   **[Zarządzanie licencjami na oprogramowanie](/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)** — śledzenie liczby dostępnych licencji na oprogramowanie oraz liczby dostępnych licencji będących w użyciu.
+-   **[Wdrażanie aplikacji](/intune/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune)** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą klienta oprogramowania.
 
 
 Usługa Intune obsługuje instalację klienta oprogramowania na maksymalnie 7000 urządzeń z systemem Windows.
@@ -74,6 +75,6 @@ Poniżej podano wymagania programowe w przypadku instalowania klienta oprogramow
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

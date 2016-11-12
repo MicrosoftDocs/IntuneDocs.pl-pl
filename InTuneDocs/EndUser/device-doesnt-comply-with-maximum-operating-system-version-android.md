@@ -2,9 +2,10 @@
 title: "Urządzenie z systemem Android nie jest zgodne z maksymalną wersją systemu operacyjnego | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 934fba06d386a2b3128b9ea4e991b2d48820ffca
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 355d457bb8447f124dafb09db1324d0533e0403f
 
 
 ---
 
-# Urządzenie z systemem Android nie jest zgodne z maksymalną wersją systemu operacyjnego
+# <a name="android-device-doesnt-comply-with-the-maximum-operating-system-version"></a>Urządzenie z systemem Android nie jest zgodne z maksymalną wersją systemu operacyjnego
 
 Urządzenie z systemem Android nie jest zgodne z zasadami administratora IT dotyczącymi maksymalnej wersji systemu operacyjnego.Urządzenie z systemem Android nie jest zgodne z zasadami administratora IT dotyczącymi maksymalnej wersji systemu operacyjnego. Skontaktuj się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
@@ -28,6 +29,6 @@ Urządzenie z systemem Android nie jest zgodne z zasadami administratora IT doty
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

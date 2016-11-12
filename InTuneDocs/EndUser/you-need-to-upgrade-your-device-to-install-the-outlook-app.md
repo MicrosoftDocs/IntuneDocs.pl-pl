@@ -2,8 +2,8 @@
 title: "Należy uaktualnić urządzenie w celu zainstalowania aplikacji Outlook | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,26 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vadona
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 28c0cb63e1d14efb4e80d7d1f3608a354ee1b090
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 9219829cf73cbd141a165f88b30f564f857e2b5d
 
 
 ---
 
-# Należy uaktualnić urządzenie w celu zainstalowania aplikacji Outlook
+# <a name="you-need-to-upgrade-your-device-to-install-the-outlook-app"></a>Należy uaktualnić urządzenie w celu zainstalowania aplikacji Outlook
 
 Jeśli chcesz pobrać aplikację poczty e-mail programu Outlook i zostanie wyświetlony komunikat z informacją, że wersja systemu operacyjnego urządzenia Android lub iOS jest niższa niż minimalna wymagana wersja, należy uaktualnić urządzenie przed kontynuowaniem.
 
 Aby uaktualnić urządzenie, skorzystaj z poniższych instrukcji odpowiednich dla typu używanego urządzenia:
 
-## Aby uaktualnić urządzenie z systemem Android
+## <a name="to-upgrade-your-android-device"></a>Aby uaktualnić urządzenie z systemem Android
 Przejdź do pozycji **Ustawienia**, a następnie użyj opcji **aktualizacji** lub **aktualizacji systemu**.
 
-## Aby uaktualnić urządzenie z systemem iOS
+## <a name="to-upgrade-your-ios-device"></a>Aby uaktualnić urządzenie z systemem iOS
 Wybierz pozycję **Ustawienia** &gt; **Ogólne** &gt; **Aktualizacja oprogramowania**.
 
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO1-->
 
 

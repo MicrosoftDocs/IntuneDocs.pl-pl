@@ -2,10 +2,10 @@
 title: "Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/28/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: 9f98871b6054e0277cb2c041776fc05e8a6aefe3
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b9764ec0b728ebce48c14fed9e3bb052a43b85fb
 
 
 ---
 
 
-# Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
+# <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 
 Aplikacje zarządzane to aplikacje, które administrator IT może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej na urządzeniu z systemem Android, możesz zauważyć, że aplikacja działa w sposób nieco inny od spodziewanego. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
 
@@ -32,14 +32,14 @@ Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświ
 
 ![Komunikat dotyczący otwierania zarządzanej aplikacji](./media/managed-apps-message.png)
 
-## Jak uzyskać aplikacje zarządzane?
+## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
 Aplikacje zarządzane można uzyskać na kilka sposobów:
 
 -   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu administrator IT. Aby uzyskać informacje na temat rejestrowania, zobacz [Rejestrowanie urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md).
 
 -   Zainstaluj aplikację ze Sklepu Play, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
 
-## Czym może zarządzać mój administrator IT w aplikacji?
+## <a name="what-can-my-it-admin-manage-in-an-app"></a>Czym może zarządzać mój administrator IT w aplikacji?
 Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
 
 -   Dostęp do określonych witryn sieci Web
@@ -76,6 +76,6 @@ Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

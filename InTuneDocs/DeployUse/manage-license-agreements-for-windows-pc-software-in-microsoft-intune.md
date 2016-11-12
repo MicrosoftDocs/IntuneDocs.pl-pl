@@ -1,10 +1,11 @@
 ---
-title: "Zarządzanie umowami licencyjnymi na oprogramowanie komputerowe | Microsoft Intune"
+title: "Zarządzanie umowami licencyjnymi oprogramowania na komputerach z oprogramowaniem klienckim usługi Intune | Microsoft Intune"
 description: "Usługa Intune umożliwia zarządzanie umowami licencyjnymi dotyczącymi oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft oraz oprogramowania zakupionego w inny sposób."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cf7e9b9638c82cba7640c2be54166ef5df581673
-ms.openlocfilehash: ae4ae586c020322f792817b25f8b1b6e2ee02cfd
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 6eead7cd7f04641687b334c8f0c09a3af1f9b4ba
 
 
 ---
@@ -180,6 +181,6 @@ Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. 
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 

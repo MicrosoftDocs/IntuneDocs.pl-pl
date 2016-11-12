@@ -2,8 +2,8 @@
 title: "Instalowanie aplikacji Portal firmy w usłudze Microsoft Intune | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 734e58a590b6d6eab97379c10b7999d5560be225
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 1d0116a9ac57078cb5c546619ac8f3df7594d26d
 
 
 ---
 
 
-# Instalowanie aplikacji Portal firmy w usłudze Microsoft Intune
+# <a name="install-the-microsoft-intune-company-portal-app"></a>Instalowanie aplikacji Portal firmy w usłudze Microsoft Intune
 
 Portal firmy jest aplikacją instalowaną na urządzeniu z systemem Android w celu uzyskania dostępu do firmowych aplikacji, poczty e-mail i sieci.  Przed uzyskaniem dostępu należy zainstalować aplikację Portal firmy, a następnie użyć tej aplikacji do zarejestrowania urządzenia w usłudze Microsoft Intune. Aby uzyskać więcej informacji na temat znaczenia rejestracji, zobacz [What happens if you install the Company Portal app and enroll your device in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md) (Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?).
 
@@ -49,6 +49,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

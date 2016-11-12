@@ -2,8 +2,8 @@
 title: "Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2aea845bc00c153f070e04abb67582a5d5a726ca
-ms.openlocfilehash: 47b36616f7a8ee23d4d47b41a1db2c41c185c6f5
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b3a3b7c2a983776f79ffa8562e130bb11e714e29
 
 
 ---
 
 
-# Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy
+# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
 Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy może umożliwiać zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
@@ -63,6 +63,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

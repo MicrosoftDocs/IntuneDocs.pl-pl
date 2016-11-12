@@ -2,10 +2,10 @@
 title: "Prośba o identyfikację urządzenia przy próbie jego zarejestrowania | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 852c02fabee7ec3551e34f92c5f9e44402d31ecb
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 106a39e4c51831a01a88db39270cda07421d2c9a
 
 
 ---
 
 
-# Prośba o identyfikację urządzenia przy próbie jego zarejestrowania
+# <a name="you-are-asked-to-identify-your-device-when-youre-trying-to-enroll"></a>Prośba o identyfikację urządzenia przy próbie jego zarejestrowania
 
 Jeśli podczas próby rejestracji urządzenia z systemem iOS lub Mac OS X w usłudze Intune pojawia się ekran z monitem o identyfikację urządzenia, oznacza to, że co najmniej jedno z Twoich urządzeń zostało już zarejestrowane i przypisane do Twojego konta za pomocą innej metody niż aplikacja Portal firmy. Aby aplikacja Portal firmy działała prawidłowo, należy wskazać, czy używane urządzenie zostało już zarejestrowane w usłudze Intune.
 
@@ -34,6 +34,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

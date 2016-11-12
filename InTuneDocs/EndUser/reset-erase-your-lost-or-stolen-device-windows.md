@@ -2,8 +2,8 @@
 title: "Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia z systemem Windows | Microsoft Intune"
 description: "Resetowanie utraconego lub skradzionego urządzenia z systemem Windows"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f2283b5896541e58d7ae515cab9d4faa1e9df735
-ms.openlocfilehash: 4a206e30c1334681f82b8077da6191ef3e28e4b1
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 2af464dd1eb4fa97c6500131f51d48b6636b0cf2
 
 
 ---
 
 
-# Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia
+# <a name="reset-erase-your-lost-or-stolen-device"></a>Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia
 
 Jeśli urządzenie zarejestrowane w usłudze Intune zostanie utracone lub skradzione, możesz przywrócić jego domyślne ustawienia fabryczne przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
@@ -41,6 +41,6 @@ Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

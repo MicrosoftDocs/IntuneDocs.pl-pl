@@ -14,13 +14,13 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dd7a51b5ba176c8c7b593d2d7a3e5cfabd72a1e6
-ms.openlocfilehash: 77ce4cca5f85f1847e599a6151411bfc12afbc8b
+ms.sourcegitcommit: 30fae0cc2e9b3b08f9195c2622b0daec639e0d62
+ms.openlocfilehash: 3b8a263a45690c9bb213128b592e1ef9788cacd8
 
 
 ---
 
-# Ochrona aplikacji i danych w usłudze Microsoft Intune
+# <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrona aplikacji i danych w usłudze Microsoft Intune
 
 
 Usługa Intune chroni dane firmowe dzięki zastosowaniu wielu warstw technologicznych.  W warstwie tożsamości funkcja dostępu warunkowego chroni dostęp do usług, zezwalając jedynie na dostęp z urządzeń zarządzanych i zgodnych.  W warstwie aplikacji klienta funkcja zarządzania aplikacjami mobilnymi (MAM) chroni przed utratą danych, uniemożliwiając przenoszenie danych do niechronionych aplikacji lub lokalizacji magazynu danych oraz czyszcząc dane w przypadku utraty lub kradzieży urządzenia.  Te dwie warstwy ochrony powinny być używane razem w celu zabezpieczania danych przy jednoczesnym zachowaniu produktywności pracowników mobilnych.
@@ -46,7 +46,7 @@ Dane firmowe można chronić przy użyciu zasad MAM dla urządzeń **zarejestrow
 
 Aby skojarzyć aplikację z zasadami MAM, aplikacja musi uwzględniać zestaw SDK aplikacji w usłudze Microsoft Intune lub korzystać z narzędzia opakowującego aplikacje.
 
-Aplikacje, takich jak aplikacje pakietu Microsoft Office, mają wbudowany odpowiedni zestaw SDK. Pełną listę obsługiwanych aplikacji można znaleźć w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) na stronie partnerów aplikacji usługi Microsoft Intune. Wybierz aplikację, aby wyświetlić obsługiwane scenariusze i platformy, a także sprawdzić, czy aplikacja obsługuje wiele tożsamości.
+Aplikacje, takich jak aplikacje pakietu Microsoft Office, mają wbudowany odpowiedni zestaw SDK. Pełną listę obsługiwanych aplikacji można znaleźć w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) na stronie partnerów aplikacji usługi Microsoft Intune. Wybierz aplikację, aby wyświetlić obsługiwane scenariusze i platformy, a także sprawdzić, czy aplikacja obsługuje wiele tożsamości.
 
 Można również [umożliwić własnym niestandardowym aplikacjom biznesowym](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) korzystanie z zasad MAM.
 
@@ -54,6 +54,6 @@ Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

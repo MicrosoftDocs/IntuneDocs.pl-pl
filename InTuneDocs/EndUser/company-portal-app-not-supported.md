@@ -2,10 +2,10 @@
 title: "Nieobsługiwana aplikacja Portal firmy | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: a6b551ce5c0810ec98ed2303733f0efa43b8ffdb
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a1811f14b4ee6d9fbc58d9998eba78c974235cb2
 
 
 ---
 
-# Nieobsługiwana aplikacja Portal firmy
+# <a name="company-portal-app-not-supported"></a>Nieobsługiwana aplikacja Portal firmy
 Nie można już używać tej wersji Portalu firmy. Aby kontynuować, zainstaluj najnowszą aplikację **Portal firmy** ze Sklepu Windows.
 
 
@@ -29,6 +29,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

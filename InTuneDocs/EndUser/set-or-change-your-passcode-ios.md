@@ -2,10 +2,10 @@
 title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Intune"
 description: "Ustawianie lub zmienianie kodu dostępu"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 596534a5ca50d274472451014db4404b4a5bf2d5
-ms.openlocfilehash: 7273fb674123647e977a25bf9745aa05de7286e7
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 6e941b8ac3d26afce65eb5a7d60f7c56dbbdbe87
 
 
 ---
 
-# Ustawianie lub zmienianie kodu dostępu
+# <a name="set-or-change-your-passcode"></a>Ustawianie lub zmienianie kodu dostępu
 
 Jeśli urządzenie z systemem iOS nie jest zgodne z zasadami kodów dostępu określonymi przez administratora IT, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby kod dostępu spełniał wymagania.
 
@@ -27,13 +27,13 @@ Administrator IT może ustawić więcej niż jedno wymaganie dotyczące kodów d
 
 Jeśli masz problem z ustawieniem kodu dostępu spełniającego wymagania dotyczące kodów dostępu, skontaktuj się z administratorem IT w celu uzyskania pomocy.
 
-## Ustawianie kodu dostępu##
+## <a name="set-your-passcode"></a>Ustawianie kodu dostępu##
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. W menu **Touch ID i kod dostępu** wybierz pozycję **Włącz kod dostępu**.
 3. Wprowadź nowy kod dostępu spełniający wymagania administratora IT, a następnie wprowadź go ponownie w celu zweryfikowania.
 
-## Zmienianie kodu dostępu##
+## <a name="change-your-passcode"></a>Zmienianie kodu dostępu##
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. Wprowadź kod dostępu. Zostanie otwarte menu **Touch ID i kod dostępu**.
@@ -44,6 +44,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

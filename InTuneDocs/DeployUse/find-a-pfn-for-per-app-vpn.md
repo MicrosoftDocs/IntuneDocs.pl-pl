@@ -2,9 +2,10 @@
 title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji | Microsoft Intune"
 description: "Znajdź nazwę PFN w celu skonfigurowania sieci VPN dla aplikacji."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,17 +14,17 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3cc73e43f09709b71c78a81c73b044d92d4ef401
-ms.openlocfilehash: 77977ea32ea37a54e9d67638bb0e4c3bb6841fb3
+ms.sourcegitcommit: 17b957cc2baedddfc53bfdf7b875e4ecb28b8517
+ms.openlocfilehash: 6d3e43c1380114634c44bd364076df404bce95e3
 
 
 ---
 
-# Znajdowanie nazwy rodziny pakietów (PFN) w celu konfiguracji sieci VPN dla aplikacji
+# <a name="find-a-package-family-name-pfn-for-perapp-vpn-configuration"></a>Znajdowanie nazwy rodziny pakietów (PFN) w celu konfiguracji sieci VPN dla aplikacji
 
 Istnieją dwa sposoby znajdowania nazwy PFN w celu skonfigurowania sieci VPN dla aplikacji.
 
-## Znajdowanie nazwy PFN dla aplikacji zainstalowanej na komputerze z systemem Windows 10
+## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Znajdowanie nazwy PFN dla aplikacji zainstalowanej na komputerze z systemem Windows 10
 
 Jeśli pracujesz z aplikacją, która jest już zainstalowana na komputerze z systemem Windows 10, możesz uzyskać nazwę PFN przy użyciu polecenia cmdlet programu PowerShell [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx).
 
@@ -66,7 +67,7 @@ Oto informacje uzyskane dla programu OneNote:
 
 
 
-## Znajdowanie nazwy PFN, jeśli aplikacja nie jest zainstalowana na komputerze
+## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Znajdowanie nazwy PFN, jeśli aplikacja nie jest zainstalowana na komputerze
 
 1.  Przejdź do strony https://www.microsoft.com/en-us/store/apps.
 2.  Wprowadź nazwę aplikacji na pasku wyszukiwania. W tym przykładzie wyszukaj aplikację OneNote.
@@ -85,6 +86,6 @@ W programie Microsoft Edge zostaną wyświetlone odpowiednie informacje. W progr
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

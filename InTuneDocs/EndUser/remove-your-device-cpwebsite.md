@@ -2,8 +2,8 @@
 title: "Usuwanie urządzenia z portalu firmy | Microsoft Intune"
 description: "Usuwanie urządzenia z Portalu firmy"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a0f3e42568634a4c5369919ad4feaf1be4b941e
-ms.openlocfilehash: 4c0186214893e9a056e331e7ec081dbdbee3a71e
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a4cd1655098d2df2b3d095ff0906762d1f0561e5
 
 
 ---
 
 
-# Usuwanie urządzenia z Portalu firmy
+# <a name="remove-your-device-from-the-company-portal"></a>Usuwanie urządzenia z Portalu firmy
 
 Jeśli zdecydujesz, że urządzenie ma już nie być zarządzane przez usługę Intune i administratora IT, możesz je usunąć z Portalu firmy przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. W witrynie sieci Web Portal firmy można wykonać większość zadań dostępnych w aplikacji Portal firmy.
 
@@ -40,10 +40,10 @@ Aby usunąć urządzenie:
 
 Twoje urządzenie zostanie usunięte.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Aby znaleźć informacje kontaktowe administratora, sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,10 +2,10 @@
 title: "Wyrejestrowywanie urządzenia z systemem iOS z usługi Intune | Microsoft Intune"
 description: "Opis sposobu wyrejestrowania urządzenia z systemem iOS z usługi Intune"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: acd83d6cac946c7cc3c08bc179bf88dcc7475a69
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 5db58b87e5c48c40794315e7781d32b02a653b2b
 
 
 ---
 
 
-# Wyrejestrowanie urządzenia z systemem iOS z usługi Intune
+# <a name="unenroll-your-ios-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem iOS z usługi Intune
 
 Po wyrejestrowaniu urządzenia z systemem iOS z usługi Intune urządzenie nie będzie już mogło uzyskiwać dostępu do zasobów firmy i nie będzie już zarządzane przez usługę Intune.
 
@@ -57,6 +57,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
