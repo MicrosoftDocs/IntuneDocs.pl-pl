@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,10 +20,10 @@ ms.openlocfilehash: 6c1a1c90b442eac039f93103264059ea415b43ff
 
 ---
 
-# Ograniczanie dostępu do poczty e-mail przy użyciu usługi Microsoft Intune: przykładowe scenariusze
+# <a name="restrict-access-to-email-with-microsoft-intune-example-scenarios"></a>Ograniczanie dostępu do poczty e-mail przy użyciu usługi Microsoft Intune: przykładowe scenariusze
 
-## Zablokuj użytkownikom możliwość używania niezgodnych urządzeń do uzyskiwania dostępu do usługi Exchange Online.
-### Wymagania dotyczące scenariusza
+## <a name="block-users-from-using-noncompliant-devices-to-access-exchange-online"></a>Zablokuj użytkownikom możliwość używania niezgodnych urządzeń do uzyskiwania dostępu do usługi Exchange Online.
+### <a name="scenario-requirements"></a>Wymagania dotyczące scenariusza
 - Dostęp do usługi Exchange Online musi być zablokowany dla wszystkich użytkowników w grupie zabezpieczeń usługi Active Directory **Księgowość**, jeśli ich urządzenia nie są zgodne z wdrożonymi zasadami zgodności.
 - Jeśli w tej grupie znajduje się jakikolwiek użytkownik, którego urządzenia nie są obsługiwane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], dostęp z tych urządzeń do usługi Exchange Online musi być zablokowany.
 - Wszyscy użytkownicy w grupie zabezpieczeń usługi Active Directory **Finanse** muszą być wykluczeni z zasad, nawet jeśli należą również do grupy zabezpieczeń **Księgowość**.
@@ -43,8 +43,8 @@ Następujący przepływ służy do określania, które urządzenia mogą uzyska�
 
 ![Przepływ dostępu do urządzeń](./media/ConditionalAccess8-5.png)
 
-## Wszystkie urządzenia z systemem iOS, które uzyskują dostęp do lokalnego programu Exchange, muszą być zarządzane przez usługę Intune
-### Wymagania dotyczące scenariusza
+## <a name="all-ios-devices-that-access-exchange-onpremises-must-be-managed-by-intune"></a>Wszystkie urządzenia z systemem iOS, które uzyskują dostęp do lokalnego programu Exchange, muszą być zarządzane przez usługę Intune
+### <a name="scenario-requirements"></a>Wymagania dotyczące scenariusza
 - Dostęp do lokalnego programu Exchange powinny mieć tylko urządzenia z systemem iOS.
 - Urządzenia muszą być również zarejestrowane w usłudze Intune i spełniać reguły zasad zgodności zanim będzie można ich użyć do uzyskania dostępu do programu Exchange.
 
@@ -62,8 +62,8 @@ Następujący przepływ służy do określania, które urządzenia mogą uzyska�
 
 ![Przepływ dostępu do urządzeń](./media/ConditionalAccess8-3.png)
 
-## Żadne urządzenia z systemem Android nie mogą uzyskać dostępu do lokalnego programu Exchange.
-### Wymagania dotyczące scenariusza
+## <a name="no-android-devices-can-access-exchange-onpremises"></a>Żadne urządzenia z systemem Android nie mogą uzyskać dostępu do lokalnego programu Exchange.
+### <a name="scenario-requirements"></a>Wymagania dotyczące scenariusza
 - Wszystkie urządzenia z systemem Android powinny mieć zablokowany dostęp do programu Exchange.
 - Wszystkie inne obsługiwane urządzenia mogą uzyskać dostęp do programu Exchange, o ile są zarządzane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
