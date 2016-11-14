@@ -3,6 +3,7 @@ title: Ustawienia zasad uaktualniania wersji systemu Windows | Microsoft Intune
 description: "Dowiedz się, jak automatycznie uaktualniać urządzenia z systemem Windows 10 do najnowszej wersji za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

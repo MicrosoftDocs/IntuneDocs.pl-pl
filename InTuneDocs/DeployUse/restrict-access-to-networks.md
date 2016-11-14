@@ -2,9 +2,10 @@
 title: "Ograniczanie dostępu do sieci na platformie Cisco ISE | Microsoft Intune"
 description: "Użyj platformy Cisco ISE razem z usługą Intune, aby urządzenia musiały być zarejestrowane w usłudze Intune i zgodne z zasadami, zanim będą mogły uzyskać dostęp do sieci Wi-Fi i VPN kontrolowanych przez platformę Cisco ISE."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 10/05/2016
+ms.date: 11/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,23 +14,23 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
-ms.openlocfilehash: 44dc8ce90537580ef30ba4b8c9f3ee2dd5e20c24
+ms.sourcegitcommit: 1dd3fde8119b54f574265c2ca9cf62cee9e77b01
+ms.openlocfilehash: bd6307cd8ff465bbce3de124ffdb444333d12efe
 
 
 ---
 
-# Korzystanie z platformy Cisco ISE razem z usługą Intune
+# <a name="using-cisco-ise-with-microsoft-intune"></a>Korzystanie z platformy Cisco ISE razem z usługą Intune
 Integracja usługi Intune z platformą Cisco ISE (Identity Services Engine) umożliwia tworzenie zasad sieciowych w środowisku platformy ISE przy użyciu rejestracji urządzeń i stanu ich zgodności w usłudze Intune. Te zasady mogą służyć do zagwarantowania, że dostęp do sieci firmowej jest ograniczony do urządzeń, które są zarządzane przez usługę Intune i zgodne z zasadami usługi Intune.
 
-## Kroki konfiguracji
+## <a name="configuration-steps"></a>Kroki konfiguracji
 
 Aby włączyć tę integrację, nie trzeba wykonywać żadnej konfiguracji w dzierżawie usługi Intune. Będzie konieczne udostępnienie uprawnień serwerowi platformy Cisco ISE, aby miał dostęp do dzierżawy usługi Intune. Gdy zostanie to zrobione, pozostała konfiguracja zostanie wykonana na serwerze Cisco ISE. Ten artykuł zawiera instrukcje dotyczące zapewniania serwerowi platformy ISE uprawnień dostępu do danej dzierżawy usługi Intune.
 
-### Krok 1. Zarządzanie certyfikatami
+### <a name="step-1-manage-the-certificates"></a>Krok 1. Zarządzanie certyfikatami
 Wyeksportuj certyfikat z konsoli usługi Azure Active Directory (Azure AD), a następnie zaimportuj go do magazynu zaufanych certyfikatów konsoli ISE:
 
-#### Internet Explorer 11
+#### <a name="internet-explorer-11"></a>Internet Explorer 11
 
 
    a. Uruchom program Internet Explorer jako administrator i zaloguj się do konsoli usługi Azure AD.
@@ -46,7 +47,7 @@ Wyeksportuj certyfikat z konsoli usługi Azure Active Directory (Azure AD), a na
 
    g. Z poziomu konsoli ISE zaimportuj certyfikat usługi Intune (wyeksportowany plik) do magazynu **zaufanych certyfikatów**.
 
-#### Safari
+#### <a name="safari"></a>Safari
 
  a. Zaloguj się do konsoli usługi Azure AD.
 
@@ -63,18 +64,19 @@ b. Wybierz ikonę blokady &gt; **Więcej informacji o**.
 > Sprawdź datę wygaśnięcia certyfikatu, ponieważ po jej upłynięciu trzeba będzie wyeksportować i zaimportować nowy certyfikat.
 
 
-### Uzyskiwanie certyfikatu z podpisem własnym ze środowiska ISE 
+### <a name="obtain-a-selfsigned-cert-from-ise"></a>Uzyskiwanie certyfikatu z podpisem własnym ze środowiska ISE 
 
 1.  W konsoli ISE przejdź do pozycji **Administracja** > **Certyfikaty** > **Certyfikaty systemowe** > **Generuj certyfikat z podpisem własnym**.  
 2.       Wyeksportuj certyfikat z podpisem własnym.
-3. W edytorze tekstu edytuj wyeksportowany certyfikat:
+3. W edytorze tekstu przeprowadź edycję wyeksportowanego certyfikatu:
+
  - Usuń ** -----BEGIN CERTIFICATE-----**
  - Usuń ** -----END CERTIFICATE-----**
  
 Upewnij się, że cały tekst jest jednym wierszu
 
 
-### Krok 2. Tworzenie aplikacji dla środowiska ISE w dzierżawie usługi Azure AD
+### <a name="step-2-create-an-app-for-ise-in-your-azure-ad-tenant"></a>Krok 2. Tworzenie aplikacji dla środowiska ISE w dzierżawie usługi Azure AD
 1. W konsoli usługi Azure AD wybierz pozycję **Aplikacje** > **Dodawanie aplikacji** > **Dodaj aplikację opracowywaną przez moją organizację**.
 2. Określ nazwę i adres URL aplikacji. Może to być adres URL witryny internetowej firmy.
 3. Pobierz manifest aplikacji (plik JSON).
@@ -98,7 +100,7 @@ Upewnij się, że cały tekst jest jednym wierszu
 |Punkt końcowy tokenu OAuth 2.0|Token Issuing URL (Adres URL wystawiania tokenów)|
 |Aktualizowanie kodu przy użyciu identyfikatora klienta|Identyfikator klienta|
 
-### Krok 4. Przekazywanie certyfikatu z podpisem własnym ze środowiska ISE do aplikacji ISE utworzonej w usłudze Azure AD
+### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4. Przekazywanie certyfikatu z podpisem własnym ze środowiska ISE do aplikacji ISE utworzonej w usłudze Azure AD
 1.     Pobierz wartość certyfikatu i odcisk palca zakodowane w standardzie base64 z pliku cer certyfikatu publicznego X509. W tym przykładzie zastosowano program PowerShell:
    
       
@@ -135,7 +137,7 @@ Na przykład:
 > KeyCredentials to kolekcja, więc można przekazać wiele certyfikatów X.509 w scenariuszach przerzucania lub usunąć certyfikaty w scenariuszach naruszenia zabezpieczeń.
 
 
-### Krok 4. Konfigurowanie ustawień środowiska ISE
+### <a name="step-4-configure-ise-settings"></a>Krok 4. Konfigurowanie ustawień środowiska ISE
 W konsoli administracyjnej platformy ISE podaj wartości tych ustawień:
   - **Server Type (Typ serwera)**: Mobile Device Manager
   - **Authentication type (Typ uwierzytelniania)**: OAuth – Client Credentials (OAuth — poświadczenia klienta)
@@ -146,7 +148,7 @@ W konsoli administracyjnej platformy ISE podaj wartości tych ustawień:
 
 
 
-## Informacje współużytkowane przez dzierżawę usługi Intune i serwer Cisco ISE
+## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Informacje współużytkowane przez dzierżawę usługi Intune i serwer Cisco ISE
 Ta tabela zawiera informacje współużytkowane przez dzierżawę usługi Intune i serwer Cisco ISE dla urządzeń zarządzanych przez usługę Intune.
 
 |Właściwość|  Opis|
@@ -165,7 +167,7 @@ Ta tabela zawiera informacje współużytkowane przez dzierżawę usługi Intune
 |lastContactTimeUtc|Data i godzina ostatniego zaewidencjonowania urządzenia w usłudze zarządzania usługi Intune.
 
 
-## Środowisko użytkownika
+## <a name="user-experience"></a>Środowisko użytkownika
 
 Gdy użytkownik próbuje uzyskać dostęp do zasobów przy użyciu niezarejestrowanego urządzenia, otrzymuje monit o rejestrację podobny do pokazanego poniżej:
 
@@ -181,12 +183,12 @@ Jeśli użytkownik zdecyduje się na rejestrację, zostanie przekierowany do pro
 Istnieje również [dostępny do pobrania zestaw instrukcji dotyczących rejestracji](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a), za pomocą którego można utworzyć dostosowane wskazówki na potrzeby środowiska użytkowników.
 
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 
 [Cisco Identity Services Engine Administrator Guide, wersja 2.1](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html#task_820C9C2A1A6647E995CA5AAB01E1CDEF)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

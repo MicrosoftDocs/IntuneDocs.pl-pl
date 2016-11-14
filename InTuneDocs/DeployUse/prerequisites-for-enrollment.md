@@ -13,8 +13,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77c8df8f1886786a2e772429d93b034798b22a66
-ms.openlocfilehash: 8c500a5bfd59f801d1177a681fa9d55d1aa1ee0e
+ms.sourcegitcommit: 92e40930c0ccbeb3d98bef43b115fd92f24beaef
+ms.openlocfilehash: 93a29266ad9d18f444f0cc0c5aadf9b414eedfa2
 
 
 ---
@@ -24,23 +24,23 @@ Wykonanie poniższych czynności pozwala umożliwić pracownikom rejestrowanie i
 
 |Kroki|Szczegóły|  
 |-----------|-------------|  
-|**Krok 1.** [Zależności dotyczące rejestrowania urządzenia](#step-1-device-enrollment-dependencies)|Upewnienie się, że skonfigurowano niestandardową nazwę domeny i komunikację sieciową|  
-|**Krok 2.** [Ustawienie urzędu zarządzania urządzeniami przenośnymi](#step-2-set-mobile-device-management-authority)|Urząd zarządzania urządzeniami przenośnymi definiuje usługę przypisaną do urządzeń|
-|**Krok 3.** [Skonfigurowanie Portalu firmy usługi Intune](#step-3-configure-the-intune-company-portal)|Skonfigurowanie dla użytkownika ustawień dotyczących aplikacji Portal firmy|  
-|**Krok 4.** [Przypisanie licencji użytkownika usługi Intune](#step-4-assign-intune-user-licenses)|Przypisanie użytkownikom licencji usługi Intune umożliwiających zarejestrowanie urządzeń|
-|**Krok 5.** [Skonfigurowanie zarządzania urządzeniami](#step-5-set-up-device-management)|Włączenie specyficznych dla platformy ustawień dotyczących zarządzania w systemach iOS oraz Windows. Urządzenia z systemem Android nie wymagają dodatkowej konfiguracji.|
+|**Krok 1.** [Włączanie połączeń](#step-1-enable-connections)|Upewnienie się, że skonfigurowano niestandardową nazwę domeny i komunikację sieciową|  
+|**Krok 2.** [Ustawianie urzędu zarządzania urządzeniami przenośnymi](#step-2-set-mdm-authority)|Urząd zarządzania urządzeniami przenośnymi definiuje usługę przypisaną do urządzeń|
+|**Krok 3.** [Konfigurowanie aplikacji Portal firmy](#step-3-configure-company-portal)|Skonfigurowanie dla użytkownika ustawień dotyczących aplikacji Portal firmy|  
+|**Krok 4.** [Przypisywanie licencji użytkownika](#step-4-assign-user-licenses)|Przypisanie użytkownikom licencji usługi Intune umożliwiających zarejestrowanie urządzeń|
+|**Krok 5.** [Włączanie rejestracji](#step-5-enable-enrollment)|Włączenie specyficznych dla platformy ustawień dotyczących zarządzania w systemach iOS oraz Windows. Urządzenia z systemem Android nie wymagają dodatkowej konfiguracji.|
 
 Szukasz usługi Intune z programem Configuration Manager?
 > [!div class="button"]
 [Wyświetlanie dokumentów SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
-## Krok 1. Zależności dotyczące rejestrowania urządzenia
+## Krok 1. Włączanie połączeń
 
 Przed włączeniem rejestrowania urządzeń przenośnych należy wykonać następujące czynności:
 - [Przejrzenie wymaganych sieciowych adresów URL i portów](../get-started/network-infrastructure-requirements-for-microsoft-intune)
 - [Dodanie i zweryfikowanie nazwy domeny](../get-started/domain-names-for-microsoft-intune)
 
-## Krok 2. Ustawienie urzędu zarządzania urządzeniami przenośnymi
+## Krok 2. Ustawianie urzędu zarządzania urządzeniami przenośnymi
 Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
 
 >[!IMPORTANT]
@@ -56,7 +56,7 @@ Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zesta
 
 3.  Usługa Intune zażąda potwierdzenia zamiaru ustawienia usługi Intune jako urzędu zarządzania urządzeniami przenośnymi. Zaznacz pole wyboru, a następnie wybierz przycisk **Tak**, aby zarządzać urządzeniami przenośnymi przy użyciu usługi Microsoft Intune.
 
-## Krok 3. Skonfigurowanie Portalu firmy usługi Intune
+## Krok 3. Konfigurowanie aplikacji Portal firmy
 
 Portal firmy usługi Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT.
 
@@ -102,7 +102,7 @@ Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu
 
 Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal firmy** w konsoli administracyjnej, aby wyświetlić witrynę sieci Web Portal firmy. Tych linków nie można zmienić. Po zalogowaniu użytkownika wyświetlane linki odpowiadają subskrypcjom w portalu firmy.
 
-## Krok 4. Przypisanie licencji użytkownika usługi Intune
+## Krok 4. Przypisywanie licencji użytkownika
 
 **Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD). [Lokalnych użytkowników można zsynchronizować z usługą Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
 
@@ -119,7 +119,7 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 3. Uruchom [synchronizację programu Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) w celu zintegrowania lokalnych użytkowników z usługą Azure AD.
 4. Po pomyślnym zsynchronizowaniu informacji o kontach użytkowników można przypisać licencje usługi Microsoft Intune przy użyciu [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx).
 
-## Krok 5. Skonfigurowanie zarządzania urządzeniami
+## Krok 5. Włączanie rejestracji
 Po skonfigurowaniu urzędu zarządzania urządzeniami przenośnymi należy skonfigurować zarządzanie urządzeniami dla systemów operacyjnych, które chce obsługiwać organizacja. Kroki wymagane do skonfigurowania zarządzania urządzeniami różnią się zależnie od systemu operacyjnego. Na przykład system operacyjny Android nie wymaga wykonywania żadnych czynności w konsoli administracyjnej usługi Intune. Jednak systemy Windows i iOS wymagają relacji zaufania między urządzeniami a usługą Intune, ponieważ tylko wówczas możliwe jest zarządzanie.
 
 Skonfiguruj zarządzanie dla następujących platform:
@@ -134,6 +134,6 @@ Możesz również:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

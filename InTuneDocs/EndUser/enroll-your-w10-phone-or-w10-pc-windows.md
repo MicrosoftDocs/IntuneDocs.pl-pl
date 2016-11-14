@@ -2,9 +2,10 @@
 title: "Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Microsoft Intune"
 description: "Opis sposobu rejestrowania urządzenia przenośnego lub stacjonarnego z systemem Windows 10 w usłudze Intune"
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,7 +21,7 @@ ms.openlocfilehash: 75f19a1c613b2d018e0cb89862f15aa4be2bc138
 ---
 
 
-# Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune
+# <a name="enroll-your-windows-10-mobile-or-windows-10-desktop-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune
 
 Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzenia umożliwia organizacji ochronę danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -41,7 +42,7 @@ Aby zarejestrować urządzenie z systemem Windows 10 Mobile lub Windows 10 Deskt
 
     ![Twoje konto](./media/w10-enroll-2-accounts-your-account.png)
 
-## Czynności w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
+## <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Czynności w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
 
 1.  Naciśnij opcję **Uzyskaj dostęp do miejsca pracy lub nauki**, a następnie naciśnij opcję **Połącz**.
 
@@ -68,7 +69,7 @@ Aby zarejestrować urządzenie z systemem Windows 10 Mobile lub Windows 10 Deskt
 Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowego konta e-mail i plików, wykonaj czynności opisane w części [Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 
-## Czynności w przypadku wyświetlenia ekranu Konto użytkownika
+## <a name="steps-to-follow-if-you-see-your-account"></a>Czynności w przypadku wyświetlenia ekranu Konto użytkownika
 
 1.  Przejdź do pozycji **Ustawienia** systemu Windows, a następnie naciśnij pozycję **Konta**.
 

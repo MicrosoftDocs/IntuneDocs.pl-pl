@@ -3,6 +3,7 @@ title: "Wyrejestrowywanie urządzenia z systemem Android z usługi Intune | Micr
 description: "Opis sposobu wyrejestrowania urządzenia z systemem Android z usługi Intune"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

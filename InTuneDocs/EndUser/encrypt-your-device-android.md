@@ -2,9 +2,10 @@
 title: "Szyfrowanie urządzenia | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Android"
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 690c94c970a97057a65f3f3d5aafa86c235c6df0
-ms.openlocfilehash: 57ede1360c2f85df24dc0245a715d420165b348a
+ms.sourcegitcommit: ff5e76e5d768b9feccb42c91c72aa71b3f724002
+ms.openlocfilehash: 4d12314ffc6126cd740012c301c39b7fb72a5bb4
 
 
 ---
@@ -24,12 +25,12 @@ ms.openlocfilehash: 57ede1360c2f85df24dc0245a715d420165b348a
 
 Jeśli firma lub organizacja prosi o zaszyfrowanie urządzenia z systemem Android przed uzyskaniem dostępu do firmowych plików, poczty e-mail lub danych, wykonaj następujące kroki, aby zaszyfrować urządzenie. Może zostać wyświetlony monit o ustawienie numeru PIN lub hasła przed szyfrowaniem, jeśli administrator IT wymaga takiego zabezpieczenia.
 
-Jeśli kiedykolwiek wyrejestrujesz telefon, pozostanie on zaszyfrowany.
+Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
 1.  Upewnij się, że urządzenie wymaga numeru PIN lub hasła w celu odblokowania ekranu.
 
-2.  W sekcji **Ustawienia** kliknij pozycje **Zabezpieczenia** &gt; **Szyfruj telefon**.
-    (Na niektórych telefonach należy kliknąć pozycje **Magazyn** &gt; **Szyfrowanie magazynu** lub **Magazyn** &gt; **Blokada ekranu i zabezpieczenia** &gt; **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”).
+2.  W sekcji **Ustawienia** wybierz pozycję **Zabezpieczenia** &gt; **Zaszyfruj telefon**.
+    Na niektórych telefonach należy kliknąć pozycję **Magazyn** &gt; **Szyfrowanie pamięci** lub **Magazyn** &gt; **Blokada ekranu i zabezpieczenia** &gt; **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”.
 
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 
@@ -40,30 +41,26 @@ Jeśli kiedykolwiek wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 - Został wyświetlony komunikat informujący o tym, że szyfrowanie jest w dalszym ciągu wymagane.
 - Wystąpiły błędy podczas próby użycia aplikacji Portal firmy.
 
-**Co należy zrobić**: 
+**Co należy zrobić**
 
-1. Upewnij się, że urządzenie jest naładowane i podłączone do zasilania.
+- Upewnij się, że urządzenie jest naładowane i podłączone do zasilania.
+- Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
+- Jeśli ustawiono już numer PIN lub hasło na urządzeniu, spróbuj wykonać następujące kroki, których administrator IT może wymagać, aby zwiększyć bezpieczeństwo urządzenia. Wyświetlane nazwy menu mogą być nieco inne niż podane w poniższych krokach, w zależności od typu urządzenia z systemem Android.
 
-2. Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
+    1. Przejdź do pozycji **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu**. Potwierdź swój bieżący numer PIN lub hasło.
 
-3. Jeśli ustawiono już numer PIN lub hasło na urządzeniu, spróbuj wykonać następujące kroki, których administrator IT może wymagać, aby zwiększyć bezpieczeństwo urządzenia. Wyświetlane nazwy menu mogą być nieco inne niż w podane w poniższych krokach, w zależności od typu urządzenia z systemem Android.
+    2. Na ekranie **wyboru blokady ekranu** wybierz typ blokady ekranu, której chcesz użyć.
 
-    a. Przejdź do pozycji **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu**. Potwierdź swój bieżący numer PIN lub hasło.
+    3. Na ekranie **bezpiecznego uruchamiania** naciśnij pozycję **Wymagaj numeru PIN do uruchomienia urządzenia** i naciśnij przycisk **Kontynuuj**.
 
-    b. Na ekranie **wyboru blokady ekranu** wybierz typ blokady ekranu, której chcesz użyć.
+    4. Wybierz numer PIN (możesz wprowadzić ten sam, co wprowadzony wcześniej), a następnie naciśnij przycisk **Potwierdź numer PIN**.
 
-    c. Na ekranie **bezpiecznego uruchamiania** naciśnij pozycję **Wymagaj numeru PIN do uruchomienia urządzenia** i naciśnij przycisk **Kontynuuj**.
-
-    d. Wybierz numer PIN (możesz wprowadzić ten sam, co wprowadzony wcześniej), a następnie naciśnij przycisk **Potwierdź numer PIN**.
-
-    e. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
+    5. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

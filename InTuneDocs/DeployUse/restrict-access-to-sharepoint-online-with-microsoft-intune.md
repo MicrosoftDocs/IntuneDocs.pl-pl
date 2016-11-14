@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu do usługi SharePoint Online | Microsoft Intune"
 description: "Ochrona i kontrola dostępu do danych firmy w usłudze SharePoint Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

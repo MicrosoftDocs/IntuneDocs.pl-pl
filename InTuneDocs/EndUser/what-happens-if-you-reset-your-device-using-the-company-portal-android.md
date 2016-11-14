@@ -2,9 +2,10 @@
 title: "Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy? | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 27d49e53fdd23b82fbbb94d2f285978cb3b52b16
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 967d403b1fd2c4efd7129842d98ceda4a02c46be
 
 
 ---
 
 
-# Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy?
+# <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy?
 
-Jeśli użyjesz Portalu firmy do zresetowania urządzenia z systemem Android, wszystkie aplikacje, ustawienia i dane osobiste zostaną usunięte z urządzenia, a urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
+Jeśli użyjesz Portalu firmy do zresetowania urządzenia z systemem Android, wszystkie aplikacje, ustawienia i dane osobiste zostaną usunięte. Urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
 
-Jeśli masz urządzenie z systemem Samsung Knox, możesz przeprowadzić „selektywne czyszczenie”, wybierając opcję **Usuń urządzenie** w Portalu firmy. Selektywne czyszczenie danych usuwa tylko następujące dane:
+Jeśli masz urządzenie z systemem Samsung Knox, możesz przeprowadzić „selektywne czyszczenie”, wybierając opcję **Usuń urządzenie** w Portalu firmy. Selektywne czyszczenie danych usuwa tylko następujące elementy:
 
 - Aplikacje biznesowe, które administrator IT udostępnia użytkownikowi
 - Poczta e-mail, sieci VPN i Wi-Fi
@@ -35,8 +36,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

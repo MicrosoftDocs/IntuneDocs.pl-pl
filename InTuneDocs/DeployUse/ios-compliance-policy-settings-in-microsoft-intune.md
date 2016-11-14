@@ -1,8 +1,9 @@
 ---
 title: "Ustawienia zasad zgodności dla urządzeń z systemem iOS | Microsoft Intune"
-description: 
+description: "W tym temacie opisano reguły i ustawienia, które można skonfigurować w zasadach zgodności dla urządzeń z systemem iOS."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b6a5e2435a3cdffeaf27b0045dee9b8263cdc7a
-ms.openlocfilehash: 1e2dc1e94870bb53143bee62ccc9696a28285987
+ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
+ms.openlocfilehash: 4fcfcb5a9a48dd4051c0f2652f3fb589e3ff73a8
 
 
 ---
@@ -22,7 +23,7 @@ ms.openlocfilehash: 1e2dc1e94870bb53143bee62ccc9696a28285987
 
 # Ustawienia zasad zgodności dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
-Ustawienia zasad opisane w tym temacie dotyczą urządzeń z systemem iOS 6 i nowszymi wersjami.
+Ustawienia zasad opisane w tym temacie dotyczą urządzeń z systemem iOS w wersji 8.0 lub nowszej.
 
 Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących opcji:
 > [!div class="op_single_selector"]
@@ -80,6 +81,6 @@ Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkown
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

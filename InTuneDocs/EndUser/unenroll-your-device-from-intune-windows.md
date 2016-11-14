@@ -3,6 +3,7 @@ title: "Wyrejestrowywanie urządzenia z systemem Windows z usługi Intune | Micr
 description: "Opis sposobu wyrejestrowania urządzenia z systemem Windows z usługi Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: b3dda0cda3600721db5f2ea73166652abff7a44d
 
 
 ---
@@ -44,11 +45,11 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 
 1.  Przejdź do pozycji **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.
 
-2.  W obszarze **Dołącz do miejsca pracy** naciśnij przycisk **Opuść**.
+2.  W obszarze **Dołącz do miejsca pracy** wybierz pozycję **Opuść**.
 
-3.  W obszarze **Włączanie zarządzania urządzeniami** naciśnij pozycję **Wyłącz**.
+3.  W obszarze **Włączanie zarządzania urządzeniami** wybierz pozycję **Wyłącz**.
 
-4.  W otwartym oknie podręcznym wybierz polecenie **Wyłącz**.
+4.  W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
 
 ## Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1
 
@@ -64,7 +65,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

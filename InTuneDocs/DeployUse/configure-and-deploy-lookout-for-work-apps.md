@@ -12,8 +12,8 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99005e15268a60cd801ef1c717088dff2f82927b
-ms.openlocfilehash: 8dce0689d5c4a0672b227eedf3ae738217eb17cf
+ms.sourcegitcommit: 4a69be67c3ef9f028c77c738de5f1fcbd59a8d33
+ms.openlocfilehash: 2c626cb0a36c38c7b5deeca0ff1e902018540634
 
 
 ---
@@ -40,7 +40,7 @@ Wybierz opcję **Wymagana instalacja**, jeśli aplikacja Lookout musi być zains
 
 ## System iOS (podpisana przez przedsiębiorstwo wersja aplikacji Lookout)
 
-* **Krok 1.** Upewnienie się, że na urządzeniu skonfigurowano **zarządzanie systemem iOS**. Aby uzyskać instrukcje dotyczące sposobu konfigurowania urządzenia pod kątem zarządzania systemem iOS, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](Set up iOS and Mac device management.md).
+* **Krok 1.** Upewnienie się, że na urządzeniu skonfigurowano **zarządzanie systemem iOS**. Aby uzyskać instrukcje dotyczące sposobu konfigurowania urządzenia pod kątem zarządzania systemem iOS, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
 * **Krok 2.** **Ponowne podpisanie** aplikacji Lookout for Work systemu iOS. Usługa Lookout dystrybuuje swoją aplikację Lookout for Work systemu iOS poza sklepem App Store systemu iOS. **Przed dystrybucją aplikacji** należy ją ponownie podpisać za pomocą certyfikatu dewelopera przedsiębiorstwa systemu iOS. Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacji Lookout for Work systemu iOS, zobacz [Proces ponownego podpisywania aplikacji Lookout for Work systemu iOS](https://personal.support.lookout.com/hc/en-us/articles/114094038714) w witrynie usługi Lookout.
 
@@ -49,7 +49,7 @@ Wybierz opcję **Wymagana instalacja**, jeśli aplikacja Lookout musi być zains
   1.  Zaloguj się do [portalu zarządzania usługi Azure Active Directory](https://manage.windowsazure.com) i przejdź do strony aplikacji.
   2.  Dodaj **aplikację Lookout for Work systemu iOS** jako **natywną aplikację kliencką**.
   ![Zrzut ekranu przedstawiający okno dialogowe Dodawanie aplikacji z wyświetloną opcją Natywna aplikacja kliencka](../media/mtp/aad-add-app.png)
-  
+
   3. Zastąp ciąg **com.lookout.enterprise.nazwa_Twojej_firmy** identyfikatorem pakietu klienta wybranym podczas podpisywania pakietu aplikacji (IPA).
   4.  Dodaj dodatkowy identyfikator URI przekierowania: **&lt;companyportal://kod/>**, a po nim zakodowaną w adresie URL wersję Twojego oryginalnego identyfikatora URI przekierowania.
   5.  Dodaj **Uprawnienia delegowane** do Twojej aplikacji.

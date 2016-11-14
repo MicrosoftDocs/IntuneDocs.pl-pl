@@ -2,9 +2,10 @@
 title: "Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia z systemem iOS| Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 705c70b034378113a29003891f465a0e88186c69
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 586eb09811bf52cecf93dd51d1de76b2287b80ea
 
 
 ---
 
 
-# Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia z systemem iOS
+# <a name="reset-erase-your-lost-or-stolen-ios-device"></a>Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia z systemem iOS
 
 Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony, możesz przywrócić jego domyślne ustawienia fabryczne przy użyciu aplikacji Portal firmy z innego urządzenia lub [witryny Portalu firmy](http://portal.manage.microsoft.com).
 
 > [!WARNING]
 > Zresetowanie urządzenia do ustawień fabrycznych powoduje usunięcie danych prywatnych i służbowych z urządzenia. Więcej informacji o tym, co się stanie w przypadku zresetowania urządzenia, znajdziesz w temacie [What happens if you reset your device using the Company Portal?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md) (Co się stanie w przypadku zresetowania urządzenia przy użyciu Portalu firmy?).
 
-## Aby zresetować urządzenie przy użyciu aplikacji Portal firmy
+## <a name="to-reset-your-device-using-the-company-portal-app"></a>Aby zresetować urządzenie przy użyciu aplikacji Portal firmy
 
 1.  Otwórz aplikację Portal firmy na innym zarejestrowanym urządzeniu i zaloguj się przy użyciu konta służbowego.
 
@@ -36,7 +37,7 @@ Jeśli telefon zarejestrowany w usłudze Intune zostanie utracony lub skradziony
 
 3.  Naciśnij kolejno pozycje **Zresetuj** &gt; **Zresetuj**.
 
-## Aby zresetować urządzenie przy użyciu witryny internetowej Portal firmy
+## <a name="to-reset-your-device-using-the-company-portal-website"></a>Aby zresetować urządzenie przy użyciu witryny internetowej Portal firmy
 
 Wykonaj poniższe kroki lub obejrzyj ten klip wideo:
 
@@ -50,8 +51,6 @@ Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś 
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

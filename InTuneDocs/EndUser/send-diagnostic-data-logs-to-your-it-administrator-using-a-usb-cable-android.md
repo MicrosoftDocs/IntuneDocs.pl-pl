@@ -2,9 +2,10 @@
 title: "Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB | Microsoft Intune"
 description: "Wysyłanie dzienników danych za pomocą kabla USB"
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -21,7 +22,7 @@ ms.openlocfilehash: e26a97d52cc753f83eb49e3f733668eb83ef4932
 ---
 
 
-# Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB
+# <a name="send-diagnostic-data-logs-to-your-it-admin-using-a-usb-cable"></a>Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB
 
 Jeśli chcesz wysłać dzienniki danych do administratora IT, możesz wysłać dzienniki przy użyciu komputera i kabla USB, zamiast wysyłać dzienniki z urządzenia przenośnego.
 

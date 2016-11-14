@@ -3,6 +3,7 @@ title: "Łącznik Exchange Connector dla lokalnego programu EAS | Microsoft Intu
 description: "Użyj narzędzia Connector, aby umożliwić komunikację między konsolą administracyjną usługi Intune a lokalnym serwerem Exchange dla funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article

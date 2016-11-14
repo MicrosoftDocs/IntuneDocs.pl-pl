@@ -2,7 +2,8 @@
 title: "Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,44 +15,44 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b3a3b7c2a983776f79ffa8562e130bb11e714e29
 
 
 ---
 
 
-# Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy
+# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
+Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy może umożliwiać zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
 > [!NOTE]
-> Przycisk resetowania kodu dostępu w witrynie sieci Web Portal firmy jest wyświetlany zależnie od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemem Windows 8.1.
+> Przycisk **Resetuj kod dostępu** w witrynie sieci Web Portal firmy jest wyświetlany w zależności od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemem Windows 8.1.
 
 Aby zresetować kod dostępu:
 
-1.  Otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com) i naciśnij urządzenie, którego kod dostępu chcesz zresetować.
+1.  Otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com) i wybierz urządzenie, którego kod dostępu chcesz zresetować.
 
-2.  Naciśnij pozycję **Zresetuj kod dostępu**.
+2.  Wybierz polecenie **Resetuj kod dostępu**.
 
-    ![resetp-passcode-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
+    ![Szczegóły urządzenia wraz z przyciskiem Resetuj kod dostępu](./media/iwp-screen-with-all-options.png)
 
-3.  Naciśnij pozycję **Wyloguj**, a następnie zaloguj się ponownie przy użyciu poświadczeń służbowych. Musisz zalogować się ponownie w ciągu pięciu minut.
+3.  Wybierz pozycję **Wyloguj**, a następnie zaloguj się ponownie przy użyciu poświadczeń służbowych. Musisz zalogować się ponownie w ciągu pięciu minut.
 
-    ![sign-out-sign-back-in](./media/iwp-2-sign-out.png)
+    ![Wiadomość dotycząca resetowania z przyciskiem Wyloguj](./media/iwp-2-sign-out.png)
 
-4.  Naciśnij pozycję **Zresetuj kod dostępu**.
+4.  Wybierz polecenie **Resetuj kod dostępu**.
 
-    ![tap-reset-passcode](./media/iwp-3-tap-reset-passcode-after-signin.png)
+    ![Komunikat wyjaśniający, co się dzieje, gdy kodu dostępu zostaje zresetowany](./media/iwp-3-tap-reset-passcode-after-signin.png)
 
-    Sprawdź w tabeli, jak funkcja resetowania kodu dostępu działa na Twoim urządzeniu.
+    Sprawdź w tabeli, jak funkcja **resetowania kodu dostępu** działa na Twoim urządzeniu.
 
     |Platforma|Support|
     |------------|-----------|
-    |Android|Utworzenie nowego, tymczasowego, alfanumerycznego kodu dostępu.|
-    |iOS|Usunięcie kodu dostępu z urządzenia bez utworzenia nowego, tymczasowego kodu dostępu. Jeśli używasz funkcji Touch ID, musisz skonfigurować ją ponownie dla urządzenia, ponieważ jest ona usuwana podczas resetowania kodu dostępu.|
-    |Windows 10 (tylko urządzenia przenośne)|Utworzenie nowego, tymczasowego, alfanumerycznego kodu dostępu. Funkcja Windows Hello jest obsługiwana.|
-    |Windows Phone 8,1|Utworzenie nowego, tymczasowego, numerycznego kodu dostępu.|
+    |Android|Utworzenie tymczasowego, alfanumerycznego kodu dostępu.|
+    |iOS|Usunięcie kodu dostępu z urządzenia bez utworzenia tymczasowego kodu dostępu. Jeśli używasz funkcji Touch ID, musisz skonfigurować ją ponownie dla urządzenia, ponieważ jest ona usuwana podczas resetowania kodu dostępu.|
+    |Windows 10 (tylko urządzenia przenośne)|Utworzenie tymczasowego, alfanumerycznego kodu dostępu. Funkcja Windows Hello jest obsługiwana.|
+    |Windows Phone 8.1|Utworzenie tymczasowego, numerycznego kodu dostępu.|
     Po odblokowaniu urządzenia można ustawić nowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
 
 5.  Odblokuj urządzenie, a następnie ustaw nowy kod dostępu lub zmień tymczasowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
@@ -62,8 +63,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

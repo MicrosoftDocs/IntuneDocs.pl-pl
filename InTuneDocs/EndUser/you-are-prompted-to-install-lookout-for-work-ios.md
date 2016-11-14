@@ -2,9 +2,10 @@
 title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,66 +13,48 @@ ms.technology:
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: a8f198633bcaf460f2a94257a052284003230d58
+ms.sourcegitcommit: 2edbb8a70458290e69626d85f734d38243a2002a
+ms.openlocfilehash: 03eee971fe74b73983111549338b13bf4068a85c
 
 
 ---
 
 # Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS
 
-Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa.
-
+Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa. W zależności od sposobu skonfigurowania aplikacji Lookout for Work przez administratora IT na urządzeniu mogą pojawiać się różne monity.
 
 **Co należy zrobić:**
 
-1.  Po otrzymaniu powiadomienia **Required application — Install Lookout for Work from App Store** (Wymagana aplikacja — zainstaluj aplikację Lookout for Work ze sklepu App Store) naciśnij je. Zostanie wyświetlona strona instalacji aplikacji Lookout for Work w sklepie App Store.
+1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
 
-2.  Zainstaluj aplikację Lookout for Work, a następnie naciśnij pozycję **AKCEPTUJĘ**, aby aplikacja mogła uzyskać dostęp do urządzenia.
+    ![Naciśnij pozycję Zainstaluj, aby zainstalować aplikację Lookout for Work](./media/ios-lfw-install-app-request.png)
 
-    ![Naciśnij pozycję Akceptuję, aby umożliwić aplikacji Lookout for Work dostęp do urządzenia](./media/lookout-accept-store-permissions-android.png)
+2. Jeśli zobaczysz następujący komunikat, naciśnij pozycję **Ustawienia**, włącz opcję **Usługi lokalizacji**, a następnie naciśnij przycisk **Kontynuuj**.
 
-3. Otwórz aplikację Lookout for Work i naciśnij pozycję **Aktywuj**.
+    ![Naciśnij pozycję Ustawienia, a następnie opcję Usługi lokalizacji](./media/ios-lfw-allow-location-services.png)
 
-    ![Otwórz aplikację Lookout for Work i naciśnij pozycję Aktywuj](./media/lookout-activate-button-android.png)
+3. Sprawdź uprawnienia, których wymaga aplikacja Lookout for Work, i naciśnij przycisk **Kontynuuj**.
 
-4. Naciśnij pozycję **Zaloguj się za pomocą usługi Azure Active Directory**, a następnie podaj konto, przy użyciu którego uzyskujesz dostęp do służbowej poczty e-mail i plików.
+    ![Masz teraz połączenie z aplikacją Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
-    ![Zaloguj się przy użyciu konta służbowego](./media/lookout-sign-in-azure-android.png)
+4. W monicie proszącym o zezwolenie aplikacji Lookout for Work na wysyłanie powiadomień naciśnij pozycję **Zezwalaj**.
 
-5. Wybierz konto, za pomocą którego uzyskujesz dostęp do służbowej poczty e-mail i plików, a następnie naciśnij pozycję **DODAJ KONTO**. Zobaczysz ekran podobny do poniższego.
+    ![Naciśnij pozycję Ustawienia, a następnie opcję Usługi lokalizacji](./media/ios-lfw-allow-notifications.png)
 
-    ![Wybierz konto służbowe i naciśnij pozycję Dodaj konto](./media/lookout-pick-account-android.png)
+    
+Aplikacja Lookout for Work kończy instalację. Zobaczysz poniższy ekran, jeśli na urządzeniu nie zostaną znalezione zagrożenia bezpieczeństwa.
 
-6. Naciśnij pozycję **Zaakceptuj**, aby przyznać aplikacji Lookout for Work uprawnienia do zalogowania Cię i wczytania Twojego profilu.
+![Aplikacja Lookout for Work nie znalazła żadnych zagrożeń bezpieczeństwa](./media/ios-lfw-no-threats-found.png)
 
-    ![Naciśnij pozycję Zaakceptuj, aby przyznać aplikacji Lookout for Work uprawnienia do wczytania Twojego profilu](./media/lookout-needs-permission-to-view-profile-android.png)
+Jeśli aplikacja Lookout for Work znajdzie zagrożenie bezpieczeństwa urządzenia, zostaną wyświetlone instrukcje rozwiązania problemu.
 
-    Zostanie wyświetlony ekran pokazujący, że aplikacja Lookout for Work nawiązuje połączenie z usługą Lookout Security Cloud.
+**Jeśli instalacja nie działa**
 
-7. Przejrzyj informacje na temat sposobu, w jaki aplikacja Lookout chroni urządzenie, a następnie naciśnij pozycję **OK**.
-
-    ![Przejrzyj informacje na temat sposobu, w jaki aplikacja Lookout for Work chroni urządzenie](./media/lookout-how-it-protects-your-device-android.png)
-
-    Wyświetlenie poniższego ekranu oznacza, że aplikacja Lookout została skonfigurowana i połączona.
-
-    ![Masz teraz połączenie z aplikacją Lookout for Work](./media/lookout-you-are-now-connected-android.png)
-
-    Aplikacja Lookout for Work od razu zacznie wyszukiwać zagrożenia bezpieczeństwa urządzenia. Jeśli żadne zagrożenia nie zostaną znalezione, pojawi się poniższy ekran.
-
-    ![Aplikacja Lookout for Work nie znalazła żadnych zagrożeń bezpieczeństwa](./media/lookout-scan-no-threats-found-android.png)
-
-    Na ekranie Szczegóły urządzenia w Portalu firmy pojawi się informacja o zgodności ze wszystkimi firmowymi wymaganiami dotyczącymi bezpieczeństwa.
-
-    Jeśli aplikacja Lookout for Work znajdzie zagrożenie bezpieczeństwa urządzenia, zostaną wyświetlone instrukcje rozwiązania problemu.
-
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. Jeśli tak się stanie, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

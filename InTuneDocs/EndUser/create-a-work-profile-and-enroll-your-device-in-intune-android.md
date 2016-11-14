@@ -2,7 +2,8 @@
 title: "Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Android"
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,16 +14,16 @@ ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: 528f2e3c2e4acbc45132d12e127dc9b7a4e3f49b
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: f3aa8f3169eebb19301d4bdc5624817f54a29aa0
 
 
 ---
 
 
-# Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
+# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
 
-Profil służbowy służy do tego, aby po jego skonfigurowaniu na urządzeniu mieć dostęp do swojego służbowego konta e-mail, aplikacji i plików. Możesz dowiedzieć się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
+Rejestrowanie urządzenia z systemem Android umożliwia dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. W ramach rejestracji konfigurowany jest profil pracy, który oddziela dane osobiste na urządzeniu od danych służbowych. Administrator IT może zarządzać tylko profilem służbowym, który zawiera dane służbowe. Administrator IT nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
 
 Aby utworzyć profil służbowy:
 
@@ -56,11 +57,11 @@ Aby utworzyć profil służbowy:
 
     Pojawi się kilka wiadomości z informacją „Konfigurowanie profilu służbowego” i „Rejestrowanie urządzenia”.
 
-8. Na ekranie **Jesteś w połowie drogi!** naciśnij ikonę aplikacji Portal firmy, na której znajduje się identyfikator.
+8. Na ekranie **Jesteś w połowie drogi!** odczekaj kilka sekund, aż zostanie otwarta aplikacja Portal firmy.
 
     ![Naciskanie aplikacji Portal firmy z identyfikatorem](./media/andr-afw-tap-work-badged-company-portal-icon2.png)
 
-9. Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego.
+9. Na **ekranie powitalnym** Portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu tego samego konta służbowego, które zostało użyte do zalogowania się wcześniej w ramach tego procesu.
 
 10. Na ekranie **Konfigurowanie dostępu do zasobów firmy** zaczekaj, aż zostanie wyświetlona informacja , że konfiguracja profilu służbowego jest teraz zakończona, i naciśnij pozycję **KONTYNUUJ**.
 
@@ -72,11 +73,11 @@ Aby utworzyć profil służbowy:
 
     ![Ekran Konfigurowanie dostępu do zasobów firmy pokazujący, że profil służbowy i rejestracja są zakończone](./media/andr-afw-company-access-setup-green-checks.png)
 
-12. Na ekranie **Zakończono konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **GOTOWE**.
+12. Na ekranie **Zakończono konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **GOTOWE**. Należy wykonać dodatkowe kroki, jeśli administrator IT dodał inne wymagania.
 
     ![Konfigurowanie dostępu do zasobów firmy jest zakończone](./media/andr-afw-company-access-setup-complete.png)
 
-    Nastąpi przeniesienie do Sklepu Play dla firm, gdzie możesz teraz uzyskać aplikacje firmowe.
+    Możesz teraz uzyskać aplikacje firmowe ze Sklepu Play dla firm.
 
     ![Strona aplikacji Sklepu Play dla firm](./media/andr-afw-tap-work-play-store-icon.png)
 

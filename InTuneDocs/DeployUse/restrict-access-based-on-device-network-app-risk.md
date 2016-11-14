@@ -3,6 +3,7 @@ title: "Ograniczanie dostępu przy użyciu ochrony urządzeń przed zagrożeniam
 description: "Ograniczanie dostępu do zasobów firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

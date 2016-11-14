@@ -1,8 +1,9 @@
 ---
-title: "Dodawanie aplikacji dla komputerów z systemem Windows | Usługa Microsoft Intune"
+title: "Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune| Microsoft Intune"
 description: "W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji na komputerach do usługi Intune przed ich wdrożeniem."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,18 +14,18 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 24767de9ad5a1f0ebe6f713018098a5dd692466e
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: e6537b7b0a42c76ec99d51a6a09fe1f6ab4400a1
 
 
 ---
 
-# Dodawanie aplikacji dla komputerów z systemem Windows w usłudze Microsoft Intune
+# Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
 
 W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji do usługi Intune przed ich wdrożeniem.
 
 > [!IMPORTANT]
-> Informacje zawarte w tym temacie ułatwiają dodawanie aplikacji dla komputerów z systemem Windows zarządzanych za pomocą komputerowego oprogramowania klienckiego usługi Intune. Jeśli chcesz dodać aplikacje dla zarejestrowanych komputerów z systemem Windows i innych urządzeń przenośnych, zobacz [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
+> Informacje zawarte w tym temacie ułatwiają dodawanie aplikacji dla komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune. Jeśli chcesz dodać aplikacje dla zarejestrowanych komputerów z systemem Windows i innych urządzeń przenośnych, zobacz [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
 
 ## Dodawanie aplikacji
@@ -90,6 +91,6 @@ Po utworzeniu aplikacji następnym krokiem jest jej wdrożenie. Aby uzyskać wi�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -3,6 +3,7 @@ title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mob
 description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomóc w ochronie danych firmowych, zapobiec utracie danych i przechowywać osobno informacje osobiste i służbowe."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 6163f2b2a1c562e5315785b8b4c486fe2347f89d
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: e751619f6d65e10099d1f8ff5a2342185181af69
 
 
 ---
@@ -122,8 +123,6 @@ Aplikacje, które obsługują wiele tożsamości, umożliwiają używanie różn
 
 Jeśli na przykład użytkownik końcowy uruchamia aplikację OneDrive przy użyciu konta służbowego, nie może przenieść plików do lokalizacji magazynu osobistego. Jeśli jednak użytkownik korzysta z usługi OneDrive na koncie osobistym, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.  
 
-Szczegółowe informacje na temat korzystania z aplikacji skojarzonych z zasadami MAM oraz tego, jak aplikacje z włączoną obsługą wielu tożsamości umożliwiają stosowanie zasad MAM tylko w kontekście służbowym, można znaleźć w temacie dotyczącym [korzystania z aplikacji z obsługą wielu tożsamości](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md#using-apps-with-multi-identity-support)
-
 Wszystkie aplikacje mobilne pakietu Office obsługują wiele tożsamości.
 
 ##  Następne kroki
@@ -133,6 +132,6 @@ Wszystkie aplikacje mobilne pakietu Office obsługują wiele tożsamości.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -2,7 +2,8 @@
 title: "Podczas korzystania z aplikacji Portal firmy występuje błąd | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,28 +15,27 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6d8b46a20e415f03d23b58b22ecf77fe887d344c
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: fde8d231c9638f5923826942cadf1f9bad731f55
 
 
 ---
 
 
-# Podczas korzystania z aplikacji Portal firmy występuje błąd
+# <a name="you-get-an-error-while-using-the-company-portal-app"></a>Podczas korzystania z aplikacji Portal firmy występuje błąd
 
 Jeśli wystąpi błąd podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iOS, możesz wysłać informacje o błędzie, aby pomóc administratorowi IT rozwiązać problem. Informacje o błędach możesz wysłać na różne sposoby:
 
--   Naciskając pozycję **Raport** w komunikatach alertów o błędzie.
+-   Po wystąpieniu komunikatów alertów o błędzie naciśnij pozycję **Raport**.
 
--   Naciskając pozycję **Wyślij raport diagnostyczny** na ekranie **Informacje** w aplikacji Portal firmy.
+-   Na ekranie **Informacje** w aplikacji Portal firmy naciśnij pozycję **Wyślij raport diagnostyczny**.
 
--   Potrząsając urządzeniem podczas korzystania z aplikacji Portal firmy, a następnie naciskając pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycję **Ustawienia** &gt; **Portal firmy** i upewnij się, że opcja **Gest potrząsania** jest włączona.
+-   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie wybierz polecenie **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycję **Ustawienia** &gt; **Portal firmy** i upewnij się, że opcja **Gest potrząsania** jest włączona.
 
-
-
-
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO2-->
 
 

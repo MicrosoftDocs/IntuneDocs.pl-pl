@@ -2,9 +2,10 @@
 title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem iOS lub Mac OS X w usłudze Intune? | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
+ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
+ms.openlocfilehash: fd5ad37706bc4d7f780c5059bda5305335b4ff68
 
 
 ---
@@ -25,13 +26,13 @@ ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
 
 Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem iOS lub Mac OS X w usłudze Intune można używać aplikacji Portal firmy, aby:
 
--   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych
+-   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych.
 
--   Pobierać aplikacje firmowe z Portalu firmy
+-   Pobierać aplikacje firmowe z Portalu firmy.
 
--   Przywracać zdalnie ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży
+-   Przywracać zdalnie ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży.
 
--   Automatycznie konfigurować firmowe konto e-mail
+-   Automatycznie konfigurować służbowe konto e-mail.
 
 Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
 
@@ -83,7 +84,7 @@ Gdy urządzenie jest zarejestrowane, administrator IT może:
 
 -   Włączać lub wyłączać synchronizację dokumentów z usługą iCloud.
 
--   Włączać lub wyłączać przesyłanie strumieniowe zdjęć do usługi i Cloud.
+-   Włączać lub wyłączać przesyłanie strumieniowe zdjęć do usługi iCloud.
 
 -   Włączać lub wyłączać roaming danych na urządzeniu. Włączenie roamingu danych może wiązać się z naliczeniem opłat.
 
@@ -95,6 +96,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

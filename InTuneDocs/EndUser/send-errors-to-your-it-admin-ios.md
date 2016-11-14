@@ -2,9 +2,10 @@
 title: "Wysyłanie błędów do administratora IT | Microsoft Intune"
 description: "Wysyłanie błędów do administratora"
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -21,7 +22,7 @@ ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 ---
 
 
-# Wysyłanie błędów do administratora IT
+# <a name="send-errors-to-your-it-admin"></a>Wysyłanie błędów do administratora IT
 
 Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z aplikacji Portal firmy, możesz wysłać informacje, aby pomóc administratorowi IT rozwiązać problem. Informacje o błędach możesz wysłać na różne sposoby:
 

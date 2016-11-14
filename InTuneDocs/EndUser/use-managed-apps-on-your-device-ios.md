@@ -2,9 +2,10 @@
 title: "Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 178d46860774d2595f06316f84fd1940c12c025f
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: c051fe1128f2156943eac7eb4d4fa5983ed90771
 
 
 ---
 
 
-# Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
+# <a name="use-managed-apps-on-your-ios-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
 
-Aplikacje zarządzane to aplikacje, które administrator IT może konfigurować w celu ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem iOS, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
+Aplikacje zarządzane to aplikacje, które administrator IT może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem iOS, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
 
 Różne aplikacje zarządzane mogą również współpracować ze sobą na urządzeniu, aby umożliwić wykonywanie codziennych zadań z zachowaniem ochrony danych firmowych. Na przykład jeśli otwierasz plik firmowy w jednej aplikacji zarządzanej, a do wyświetlenia tego pliku jest wymagana inna aplikacja zarządzana, automatycznie otwiera się aplikacja zarządzana, która umożliwia wyświetlenie pliku. Jeśli wymagana aplikacja jest niedostępna, pewne akcje, takie jak otwieranie dokumentu lub uzyskiwanie dostępu do linku sieci Web z dokumentu zarządzanego, mogą być niedostępne.
 
@@ -31,14 +32,14 @@ Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświ
 
 ![Komunikat dotyczący aplikacji zarządzanych systemu iOS](./media/managed-apps-message.png)
 
-### Jak uzyskać aplikacje zarządzane?
+### <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
 Aplikacje zarządzane można uzyskać na kilka sposobów:
 
 -   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu administrator IT. Aby uzyskać informacje dotyczące rejestrowania, zobacz [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](enroll-your-device-in-intune-mac-os-x.md).
 
 -   Zainstaluj aplikację ze sklepu App Store, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
 
-### Czym może zarządzać mój administrator IT w aplikacji?
+### <a name="what-can-my-it-admin-manage-in-an-app"></a>Czym może zarządzać mój administrator IT w aplikacji?
 Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
 
 -   Dostęp do określonych witryn sieci Web
@@ -64,8 +65,6 @@ Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

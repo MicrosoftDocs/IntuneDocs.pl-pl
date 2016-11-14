@@ -17,7 +17,7 @@
 
 ## [Migracja do usługi Intune](migrate-to-intune.md)
 
-## [Przewodnik Szybki start dotyczący usługi Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
+## [Przewodnik Szybki start](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logowanie się do usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Konfigurowanie niestandardowej nazwy domeny](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
 ### [Synchronizacja usługi AD i dodawanie użytkowników](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
@@ -27,6 +27,13 @@
 ### [Dostosuj portal firmy](start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
 ### [Rejestrowanie urządzeń przenośnych i instalowanie aplikacji](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Zadania po konfiguracji](post-configuration-tasks.md)
+
+## [Krótkie przewodniki](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Krótki przewodnik: zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Krótki przewodnik: ochrona danych firmy za pomocą szyfrowania danych](protect-data-encryption.md)
+### [Krótki przewodnik: publikowanie aplikacji mobilnych dla użytkowników](publish-mobile-apps-to-users.md)
+### [Krótki przewodnik: upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych](simplify-email-configuration-on-mobile-devices.md)
+### [Krótki przewodnik: ochrona komputerów z systemem Windows przed złośliwym oprogramowaniem](protect-pcs-against-malware-threats.md)
 
 ## [Etapy wdrażania usługi Intune](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Zakres projektu](project-scope.md)
@@ -42,6 +49,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

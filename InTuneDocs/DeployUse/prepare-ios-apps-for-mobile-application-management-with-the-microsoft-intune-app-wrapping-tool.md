@@ -3,18 +3,19 @@ title: "Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego 
 description: "Ten temat przedstawia informacje o sposobie opakowywania aplikacji systemu iOS bez konieczności modyfikacji kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/28/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-ms.reviewer: matgates
+ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
-ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
+ms.sourcegitcommit: c67a5042fd177a4c5bd897092e84281db0977f5e
+ms.openlocfilehash: 2c187b61b8fe25b2870d0cbc62f8352494583fc2
 
 
 ---
@@ -22,69 +23,98 @@ ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
 # Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune
 Za pomocą **narzędzia opakowującego aplikacje dla systemu iOS w usłudze Microsoft Intune** można modyfikować działanie wewnętrznych aplikacji dla systemu iOS przez ograniczanie ich funkcji bez konieczności zmieniania kodu aplikacji.
 
-Jest to narzędzie wiersza poleceń systemu Mac OS tworzące „otokę” dla aplikacji. Po przetworzeniu wybranej aplikacji można modyfikować jej funkcje, korzystając ze skonfigurowanych przez siebie [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) usługi.
+Narzędzie to jest aplikacją wiersza poleceń systemu Mac OS, tworzącą „otokę” dla aplikacji. Po przetworzeniu wybranej aplikacji można modyfikować jej funkcje, korzystając ze skonfigurowanych przez siebie [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) usługi Intune.
 
-Aby pobrać to narzędzie, zobacz [narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
+Aby pobrać to narzędzie, zobacz [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) (Narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS).
 
-## Krok 1 Spełnianie wymagań wstępnych dotyczących używania narzędzia opakowującego aplikacje
+
+
+## Krok 1. Spełnienie wymagań wstępnych do używania narzędzia opakowującego aplikacje
 Przeczytaj [ten wpis w blogu](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby dowiedzieć się więcej na temat wymagań wstępnych i sposobu ich ustawiania.
 
 |Wymaganie|Więcej informacji|
 |---------------|--------------------------------|
 |Obsługiwany system operacyjny i zestaw narzędzi|Narzędzie opakowujące aplikacje można uruchomić na komputerze Mac z systemem OS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi XCode w wersji 5 lub nowszej.|
 |Certyfikat podpisywania i profil inicjowania obsługi administracyjnej|Wymagany jest profil inicjowania obsługi administracyjnej oraz certyfikat podpisywania firmy Apple. Przejrzyj [dokumentację dla deweloperów firmy Apple](https://developer.apple.com/).|
-|Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje|Aplikacje muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania. Za pomocą tego narzędzia nie można przetwarzać aplikacji ze sklepu Apple. Aplikacje muszą być napisane dla systemu iOS w wersji 7.1 lub nowszej. Aplikacje muszą również mieć format PIE (Position Independent Executable). Więcej informacji na temat formatu PIE zawiera dokumentacja dla deweloperów firmy Apple. Ponadto aplikacja musi mieć rozszerzenie **.app** lub **.ipa**.|
+|Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje|Aplikacje muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania. Za pomocą tego narzędzia nie można przetwarzać aplikacji ze sklepu Apple. Aplikacje muszą być napisane dla systemu iOS w wersji 8.0 lub nowszej. Aplikacje muszą również mieć format PIE (Position Independent Executable). Więcej informacji na temat formatu PIE zawiera dokumentacja dla deweloperów firmy Apple. Ponadto aplikacja musi mieć rozszerzenie **.app** lub **.ipa**.|
 |Aplikacje, które nie mogą być przetworzone przez narzędzie opakowujące aplikacje|Aplikacje zaszyfrowane, aplikacje niepodpisane i aplikacje z rozszerzonymi atrybutami plików.|
-|Aplikacje korzystające z biblioteki usługi Azure Active Directory (ADAL)|Jeśli aplikacja korzysta z biblioteki ADAL, musi mieć zintegrowaną bibliotekę ADAL w wersji 1.0.2 lub nowszej, a deweloper musi udzielić dostępu aplikacji do zasobu zarządzania aplikacjami mobilnymi usługi Intune.<br /><br />Zobacz [Informacje dotyczące aplikacji korzystających z bibliotek usługi Azure Active Directory (ADAL)](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#information-for-apps-that-use-the-azure-active-directory-library) w tym artykule, aby uzyskać szczegółowe informacje na temat sposobu użycia bibliotek ADAL.|
 |Ustawianie uprawnień dla aplikacji|Przed opakowaniem aplikacji należy ustawić uprawnienia, które zapewnią aplikacji dodatkowe możliwości poza tymi, które są zwykle przyznawane. Instrukcje można znaleźć w artykule [Ustawienie uprawnień dla aplikacji](#setting-app-entitlements).|
 
-## Krok 2 Instalowanie narzędzia opakowującego aplikacje
+## Krok 2. Instalacja narzędzia opakowującego aplikacje
 
-1.  Pobierz plik instalacyjny **narzędzia opakowującego aplikacje dla systemu iOS** ze strony narzędzia opakowującego aplikacje dla systemu iOS w usłudze Microsoft Intune w [Centrum pobierania Microsoft](https://www.microsoft.com/download/details.aspx?id=45218).
+1.  Pobierz pliki narzędzia opakowującego aplikacje na lokalny komputer z systemem macOS ze strony **Microsoft Intune App Wrapping Tool for iOS** (Narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS) w [repozytorium w witrynie GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-2.  Na komputerze Mac kliknij dwukrotnie plik instalacyjny **Microsoft Intune App Wrapping Tool for iOS.dmg**.
+2.  Kliknij dwukrotnie plik instalacyjny **Microsoft Intune App Wrapping Tool for iOS.dmg**. Zostanie wyświetlone okno zawierające Umowę licencyjną użytkownika oprogramowania (EULA). Zapoznaj się dokładnie z treścią dokumentu.
 
-3.  Wybierz pozycję **Zgadzam się**, aby zaakceptować Umowę licencyjną użytkownika oprogramowania (EULA). Instalator zostanie zainstalowany i wyświetlony na komputerze Mac.
+3. Wybierz pozycję **Zgadzam się**, aby zaakceptować umowę EULA, co spowoduje zainstalowanie pakietu na komputerze.
 
-4.  Otwórz instalator i skopiuj wyświetlone pliki do nowego folderu na komputerze Mac. Teraz możesz odłączyć zainstalowany dysk instalatora.
+4.  Otwórz pakiet **IntuneMAMPackager** i zapisz pliki w folderze lokalnym na komputerze z systemem macOS. Można teraz uruchomić narzędzie opakowujące aplikacje.
 
-    Można teraz uruchomić narzędzie opakowujące aplikacje.
+## Krok 3. Uruchamianie narzędzia opakowującego aplikacje
+* Na komputerze z systemem macOS otwórz okno Terminal i przejdź do folderu, w którym zostały zapisane pliki narzędzia opakowującego aplikacje. Plik wykonywalny narzędzia nosi nazwę **IntuneMAMPackager** i znajduje się w folderze **IntuneMAMPackager/Contents/MacOS**. Należy uruchomić następujące polecenie:
 
-## Krok 3 Uruchamianie narzędzia opakowującego aplikacje
+    ```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 
-1.  Na komputerze Mac otwórz okno Terminala i przejdź do folderu, w którym zostały zapisane pliki. Ponieważ plik wykonywalny znajduje się w pakiecie, należy uruchomić polecenie w następujący sposób:
-```
-    ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -a <client ID of input app> -r <reply URI of input app> -v true
-```
+    ```
+
     > [!NOTE]
-    > Some parameters are optional as shown in the table below.
+    > Niektóre parametry są opcjonalne, jak pokazano w poniższej tabeli.
 
-    **Example:** The following example command runs the app wrapping tool on an app named **MyApp.ipa**. A provisioning profile and SHA-1 hash are specified. The processed app is created and stored in the **/users/myadmin/Documents** on the Mac computer.
+    **Przykład:** następujące przykładowe polecenie uruchamia narzędzie opakowujące aplikacje do przetworzenia aplikacji o nazwie **MyApp.ipa**. Określono profil inicjowania obsługi administracyjnej oraz skrót SHA-1. Zostanie utworzona przetworzona aplikacja o nazwie **MyApp_Wrapped.ipa**, zapisana w folderze Pulpit użytkownika.
 
     ```
-    /users/myadmin/Downloads/IntuneMAMPackager.app/Contents/MacOS/IntuneMAMPackager -i /users/myadmin/Downloads/MyApp.ipa -o /users/myadmin/Documents/MyApp_Wrapped.ipa -p /users/myadmin/Downloads/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB –a 20e1cd0d-268e-4308-9583-02ae97dd353e –r https://contoso/ -v true
+    ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true
     ```
-    You can use the following command line properties with the app wrapping tool:
+    Z narzędziem opakowującym aplikacje można użyć następujących właściwości wiersza polecenia:
 
-|Właściwość|Więcej informacji|
+    |Właściwość|Sposób użycia|
   |------------|--------------------|
-  |**-h**|Wyświetla dostępne właściwości wiersza poleceń dla narzędzia opakowującego aplikacje.|
-  |**-i**|Określa ścieżkę i nazwę aplikacji wejściowej.|
-  |**-o**|Określa ścieżkę zapisu aplikacji przetworzonej.|
-  |**-p**|Określa ścieżkę profilu inicjowania obsługi administracyjnej dla aplikacji systemu iOS.|
-  |**-c**|Określa skrót SHA1 certyfikatu podpisywania.|
-  |**-a**|Identyfikator klienta aplikacji wejściowej (w formacie GUID), jeśli aplikacja korzysta z bibliotek usługi Azure Active Directory (opcjonalnie).|
-  |**-r**|Identyfikator URI przekierowania aplikacji wejściowej, jeśli aplikacja korzysta z bibliotek usługi Azure Active Directory (opcjonalnie).|
-  |**-v**|Pełne komunikaty wyjściowe do konsoli (opcjonalnie).|
+  |**-i**|`<Path of the input native iOS application file>`. Nazwa pliku musi mieć zakończenie .app lub .ipa. |
+  |**-o**|`<Path of the wrapped output application>` |
+  |**-p**|`<Path of your provisioning profile for iOS apps>`|
+  |**-c**|`<SHA1 hash of the signing certificate>`|
+    |-h|Wyświetla szczegółowe informacje dotyczące zastosowania dostępnych właściwości wiersza poleceń dla narzędzia opakowującego aplikacje.|
+  |-v|(Właściwość opcjonalna, ale przydatna) Zwraca pełne komunikaty wyjściowe do konsoli.|
+  |-e | (Opcjonalnie) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Aby uzyskać więcej szczegółowych informacji, zobacz sekcję „Ustawianie uprawnień dla aplikacji”.|
+  |-xe| (Opcjonalnie) Wyświetla w konsoli informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnienia wymagane do ich używania. Aby uzyskać więcej szczegółowych informacji, zobacz sekcję „Ustawianie uprawnień dla aplikacji”. |
+  |-x| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
+  |-f |(Opcjonalnie) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Aby uzyskać więcej szczegółowych informacji, zobacz sekcję „Wprowadzanie argumentów przy użyciu pliku plist”. |
+  |-b|(Opcjonalnie) Użyj właściwości -b bez argumentu, jeśli chcesz, aby opakowana aplikacja wyjściowa miała taką samą wersję pakietu jak aplikacja wejściowa (niezalecane). <br/><br/> Użyj właściwości `-b <custom bundle version>`, jeśli chcesz, aby opakowana aplikacja miała niestandardową wartość CFBundleVersion. Jeśli chcesz określić niestandardową wartość CFBundleVersion, zaleca się podwyższenie najmniej istotnego składnika wartości CFBundleVersion aplikacji natywnej, na przykład: 1.0.0 -> 1.0.1. |
 
-2. Po zakończeniu przetwarzania zostanie wyświetlony komunikat **Aplikacja została pomyślnie opakowana** .
+
+###Wprowadzanie argumentów przy użyciu pliku plist
+Łatwym sposobem uruchamiania narzędzia opakowującego aplikacje jest wprowadzenie wszystkich argumentów polecenia w pliku [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html). Plist to format pliku podobny do formatu XML umożliwiający wprowadzanie argumentów wiersza polecenia za pomocą interfejsu formularza.
+
+Za pomocą edytora tekstu lub narzędzia Xcode otwórz plik `Parameters.plist`, pusty szablon pliku plist znajdujący się w folderze **IntuneMAMPackager/Contents/MacOS**. Wprowadź argumenty dla następujących kluczy:
+
+| Klucz pliku plist |  Wartość domyślna| Uwagi |
+|------------------|--------------|-----|
+| Input Application Package Path (Ścieżka pakietu aplikacji wejściowej)  |puste| Odpowiada właściwości -i. |
+| Output Application Package Path (Ścieżka pakietu aplikacji wyjściowej) |puste| Odpowiada właściwości -o.|
+| Provisioning Profile Path (Ścieżka profilu aprowizacji) |puste| Odpowiada właściwości -p. |
+| SHA-1 Certificate Hash (Skrót certyfikatu SHA-1) |puste| Odpowiada właściwości -c. |
+| Verbose Enabled (Pełne komunikaty włączone) |fałsz| Odpowiada właściwości -v. |
+| Remove Missing Entitlements (Usuwanie brakujących uprawnień) | fałsz| Odpowiada właściwości -c.|
+| Prevent Default Build (Zapobieganie użyciu domyślnej kompilacji) |fałsz | Odpowiada właściwości -b bez argumentów. |
+|Build String Override (Zastąpienie ciągu kompilacji) | puste| Niestandardowa wartość CFBundleVersion opakowanej aplikacji wyjściowej |
+|Extension Provisioning Profile Paths (Ścieżki profilów aprowizacji rozszerzeń) | puste| Tablica profilów aprowizacji rozszerzeń dla aplikacji.
+  
+
+Na koniec uruchom aplikację IntuneMAMPackager, wprowadzając plik plist jako jedyny argument:
+
+```
+./IntuneMAMPackager –f Parameters.plist
+```
+
+* Po zakończeniu przetwarzania zostanie wyświetlony komunikat **Aplikacja została pomyślnie opakowana**.
 
     W przypadku wystąpienia błędu zobacz [Komunikaty o błędach](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#error-messages), aby uzyskać pomoc.
 
-3.  Przetworzona aplikacja zostanie zapisana we wskazanym wcześniej folderze wyjściowym. Możesz teraz przekazać aplikację do usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i powiązać ją z zasadami zarządzania aplikacjami mobilnymi.
+*   Przetworzona aplikacja zostanie zapisana we wskazanym wcześniej folderze wyjściowym. Możesz teraz przekazać aplikację do usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i powiązać ją z zasadami zarządzania aplikacjami mobilnymi.
 
     > [!IMPORTANT]
-    > Należy przekazać tę aplikację jako nową aplikację. Zaktualizowanie starszej wersji aplikacji bez otoki jest niemożliwe.
+    > Podczas przekazywania opakowanej aplikacji możesz spróbować zaktualizować starszą wersję aplikacji, jeśli starsza wersja (opakowana lub natywna) została już wdrożona w usłudze Intune. Jeśli wystąpi błąd, przekaż opakowaną aplikację jako nową aplikację, a następnie usuń starszą wersję.
 
     Teraz można wdrożyć aplikację w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i aplikacja ta będzie uruchamiana na urządzeniu ze wskazanymi ograniczeniami.
 
@@ -92,7 +122,7 @@ Przeczytaj [ten wpis w blogu](http://social.technet.microsoft.com/wiki/contents/
 Skorzystaj z poniższych informacji przy rozwiązywaniu problemów z narzędziem opakowującym aplikacje.
 
 ### Komunikaty o błędach
-Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powiedzie się, zostanie wyświetlony jeden z następujących komunikatów o błędzie:
+Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powiedzie się, w konsoli zostanie wyświetlony jeden z następujących komunikatów o błędzie:
 
 |Komunikat o błędzie|Więcej informacji|
 |-----------------|--------------------|
@@ -104,17 +134,15 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |Nie odnaleziono wskazanego wejściowego profilu inicjowania obsługi administracyjnej. Określ prawidłowy plik wejściowego profilu inicjowania obsługi administracyjnej.|Upewnij się, że podana ścieżka do pliku wejściowego profilu inicjowania obsługi administracyjnej jest prawidłowa i że podany plik istnieje.|
 |Nie odnaleziono wskazanego folderu aplikacji wyjściowej. Określ prawidłową ścieżkę do aplikacji wyjściowej.|Upewnij się, że podana ścieżka wyjściowa istnieje i że jest prawidłowa.|
 |Aplikacja wyjściowa nie ma rozszerzenia .ipa.|Narzędzie opakowujące aplikacje obsługuje wyłącznie aplikacje z rozszerzeniami **.app** oraz **.ipa** . Upewnij się, że plik wyjściowy ma właściwe rozszerzenie.|
-|Określono nieprawidłowy certyfikat podpisywania. Określ prawidłowy certyfikat podpisywania firmy Apple.|Upewnij się, że pobrano prawidłowy certyfikat podpisywania z portalu dla deweloperów firmy Apple. Twój certyfikat mógł również wygasnąć. Jeśli można użyć certyfikatu firmy Apple i profilu inicjowania obsługi administracyjnej do prawidłowego podpisania aplikacji w programie Xcode, można ich użyć również w narzędziu opakowującym aplikacje.|
+|Określono nieprawidłowy certyfikat podpisywania. Określ prawidłowy certyfikat podpisywania firmy Apple.|Upewnij się, że pobrano prawidłowy certyfikat podpisywania z portalu dla deweloperów firmy Apple. Być może certyfikat wygasł albo brakuje klucza publicznego lub prywatnego. Jeśli można użyć certyfikatu firmy Apple i profilu inicjowania obsługi administracyjnej do prawidłowego podpisania aplikacji w programie Xcode, można ich użyć również w narzędziu opakowującym aplikacje.|
 |Wskazana aplikacja wejściowa jest nieprawidłowa. Określ prawidłową aplikację.|Upewnij się, że masz prawidłową aplikację dla systemu iOS skompilowaną w formacie pliku .app lub .ipa.|
-|Wskazana aplikacja wejściowa jest zaszyfrowana. Określ prawidłową niezaszyfrowaną aplikację.|Narzędzie opakowujące aplikacje nie obsługuje aplikacji zaszyfrowanych. Określ aplikację niezaszyfrowaną.|
+|Wskazana aplikacja wejściowa jest zaszyfrowana. Określ prawidłową niezaszyfrowaną aplikację.|Narzędzie opakowujące aplikacje nie obsługuje aplikacji zaszyfrowanych. Wprowadź aplikację niezaszyfrowaną.|
 |Wskazana aplikacja wejściowa nie jest w formacie PIE (Position Independent Executable). Określ prawidłową aplikację w formacie PIE.|Aplikacje w formacie PIE mogą być uruchamiane w losowym adresie pamięci, co może korzystnie wpływać na bezpieczeństwo. Więcej informacji zawiera dokumentacja dla deweloperów firmy Apple.|
 |Wskazana aplikacja wejściowa jest już opakowana. Określ prawidłową nieopakowaną aplikację.|Nie można przetwarzać aplikacji, które zostały już przetworzone przez narzędzie. Jeśli chcesz ponownie przetworzyć aplikację, należy uruchomić narzędzie z oryginalną wersją aplikacji.|
 |Wskazana aplikacja wejściowa nie jest podpisana. Określ prawidłową podpisaną aplikację.|Narzędzie opakowujące aplikacje wymaga, aby aplikacje były podpisane. Sposób podpisywania opakowanych aplikacji opisuje dokumentacja dla deweloperów.|
 |Wskazana aplikacja wejściowa musi mieć format .ipa lub .app.|Narzędzie opakowujące aplikacje obsługuje wyłącznie pliki z rozszerzeniami .app oraz .ipa. Upewnij się, że plik wejściowy ma prawidłowe rozszerzenie i został skompilowany w formacie .app lub .ipa.|
 |Wskazana aplikacja wejściowa jest już opakowana i korzysta z najnowszej wersji szablonu zasad.|Narzędzie opakowujące aplikacje nie opakuje ponownie istniejącej opakowanej aplikacji korzystającej z najnowszej wersji szablonu zasad.|
-|Podany identyfikator klienta usługi Azure Active Directory nie jest poprawnie sformułowanym identyfikatorem GUID. Określ prawidłowy identyfikator klienta.|Jeśli korzystasz z parametru identyfikatora klienta, upewnij się, że podano prawidłowy identyfikator klienta w formacie GUID.|
-|Podany identyfikator URI odpowiedzi usługi Azure Active Directory nie jest poprawnie sformułowanym identyfikatorem URI. Określ prawidłowy identyfikator URI odpowiedzi.|Jeśli korzystasz z parametru identyfikatora URI odpowiedzi, upewnij się, że podano prawidłowy identyfikator URI odpowiedzi.|
-|OSTRZEŻENIE: nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że podano prawidłowy skrót SHA (za pomocą właściwości wiersza poleceń **–c** ).|
+|OSTRZEŻENIE: nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że podano prawidłowy skrót SHA1 za pomocą właściwości wiersza polecenia **–c**. |
 
 ### Pliki dziennika narzędzia opakowującego aplikacje
 Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże się z generowaniem dzienników zapisywanych w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
@@ -135,63 +163,17 @@ Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże s
 
     Przetworzone aplikacje oferują również użytkownikom możliwość przesyłania dzienników pocztą e-mail bezpośrednio z urządzenia po awarii aplikacji. Dzienniki otrzymane od użytkowników możesz zbadać i w razie potrzeby przesłać do firmy Microsoft.
 
-## Informacje dotyczące aplikacji korzystających z bibliotek usługi Azure Active Directory
-Informacje zawarte w tej sekcji dotyczą tylko aplikacji korzystających z bibliotek usługi Azure Active Directory (ADAL). Jeśli nie wiesz, czy Twoja aplikacja korzysta z tej biblioteki, skontaktuj się z deweloperem.
-
-Aplikacja musi mieć zintegrowaną wersję bibliotek ADAL 1.0.2 lub nowszą.
-
-W przypadku aplikacji korzystających z bibliotek ADAL muszą być spełnione następujące warunki:
-
--   Aplikacja musi mieć zintegrowaną wersję bibliotek ADAL 1.0.2 lub nowszą.
-
--   Deweloperzy muszą udzielić dostępu aplikacji do zasobu zarządzania aplikacjami mobilnymi usługi Intune zgodnie z opisem zamieszczonym w sekcji [Kroki, które należy wykonać w przypadku aplikacji korzystających z biblioteki ADAL](#steps-to-follow-for-apps-that-use-adal).
-
-### Przegląd identyfikatorów koniecznych do uzyskania
-W przypadku aplikacji korzystających z bibliotek ADAL konieczna jest rejestracja w portalu zarządzania platformy Azure w celu uzyskania dwóch unikatowych identyfikatorów dla aplikacji:
-
-|Identyfikator|Więcej informacji|Wartość domyślna|
-|--------------|--------------------|-----------------|
-|**Identyfikator klienta**|Po zarejestrowaniu danej aplikacji w usłudze Azure Active Directory jest dla niej tworzony unikatowy identyfikator GUID.<br /><br />Jeśli znasz identyfikator klienta właściwy dla danej aplikacji, możesz podać tę wartość. W przeciwnym razie należy użyć wartości domyślnej.|6c7e8096-f593-4d72-807f-a5f86dcc9c77|
-|**Identyfikator URI przekierowania**|Wartość identyfikatora URI, którą deweloperzy mogą podać przy rejestracji aplikacji w usłudze Azure Active Directory w celu zapewnienia, że tokeny uwierzytelniania będą kierowane do określonego punktu końcowego.<br /><br />Podanie parametru identyfikatora URI przekierowania w narzędziu opakowującym aplikacje jest opcjonalne. Jeśli nie zostanie określony, będzie używany domyślny identyfikator URI.|urn:ietf:wg:oauth:2.0:oob|
-
-
-### Kroki, które należy wykonać w przypadku aplikacji korzystających z biblioteki ADAL
-
-1.  Przejrzyj sekcję [Przegląd identyfikatorów koniecznych do uzyskania](#overview-of-identifiers-you-need-to-get), aby zidentyfikować potrzebne wartości.
-
-2.  Skonfiguruj dostęp do zarządzania aplikacjami mobilnymi w usłudze Azure Active Directory, wykonując następujące czynności:
-
-    1. Zaloguj się do istniejącego konta usługi Azure Active Directory w portalu zarządzania platformy Azure.
-
-    2.  Kliknij pozycję **Rejestracja istniejącej aplikacji LOB** w usłudze Azure Active Directory.
-
-    3.  W sekcji konfiguracji wybierz opcję **Konfigurowanie dostępu do interfejsów API sieci Web w innych aplikacjach**.
-
-    4.  W sekcji **Uprawnienia do innych aplikacji** wybierz pozycję **Zarządzenie aplikacjami mobilnymi w usłudze Intune** z pierwszej listy rozwijanej.
-
-        Po wykonaniu tych czynności można użyć identyfikatora klienta aplikacji w narzędziu opakowującym aplikacje. Identyfikator klienta aplikacji można znaleźć w portalu zarządzania usługi Azure Active Directory zgodnie z opisem w sekcji [Przegląd identyfikatorów koniecznych do uzyskania](#overview-of-identifiers-you-need-to-get).
-
-3.  Użyj wartości **identyfikatora klienta** (uzyskanych przy użyciu właściwości **–a**) i **identyfikatora URI przekierowania** jako właściwości wiersza polecenia w narzędziu opakowującym aplikacje. Jeśli nie podasz tych wartości, zostaną użyte wartości domyślne. Obie wartości muszą zostać określone — w przeciwnym razie użytkownik końcowy nie będzie mógł pomyślnie wykonać uwierzytelnienia w przetworzonej aplikacji.
 
 ### Wymagania dotyczące certyfikatu, profilu inicjowania obsługi administracyjnej i uwierzytelniania
 
+Pełna funkcjonalność narzędzia opakowującego aplikacje wymaga spełnienia pewnych wymagań.
+
 |Wymaganie|Szczegóły|
 |---------------|-----------|
-|Profil aprowizacji|**Przed wprowadzeniem profilu aprowizacji upewnij się, że jest prawidłowy** — narzędzie opakowujące aplikacje nie sprawdza podczas przetwarzania aplikacji dla systemu iOS, czy profil nie wygasł. Jeśli zostanie wprowadzony wygasły profil aprowizacji, narzędzie opakowujące aplikacje uwzględni go, a problem zostanie zauważony dopiero po niepowodzeniu instalacji aplikacji na urządzeniu z systemem iOS.|
-|Certyfikat|**Przed wprowadzeniem certyfikatu upewnij się, że jest prawidłowy** — narzędzie opakowujące aplikacje nie sprawdza podczas przetwarzania aplikacji dla systemu iOS, czy certyfikat nie wygasł. W przypadku wprowadzenia skrótu wygasłego certyfikatu aplikacja zostanie przetworzona i podpisana przez narzędzie, ale nie będzie można jej instalować na urządzeniach.<br /><br />**Upewnij się, że certyfikat do podpisania opakowanej aplikacji jest zgodny z profilem inicjowania obsługi administracyjnej** — narzędzie nie sprawdza zgodności profilu i certyfikatu wprowadzonego w celu podpisania opakowanej aplikacji.|
-|Uwierzytelnianie|Aby szyfrowanie działało, urządzenie musi mieć ustawiony numer PIN. Na urządzeniach, na których wdrożono opakowaną aplikację, dotknięcie paska stanu spowoduje konieczność ponownego uwierzytelnienia użytkownika w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Domyślne zasady opakowanej aplikacji to *uwierzytelnianie przy ponownym uruchamianiu*. System iOS obsługuje zewnętrzne powiadomienia (na przykład połączenie telefoniczne) podczas kończenia pracy aplikacji, a następnie jej ponownego uruchamiania.<br /><br />W przypadku aplikacji opakowanych pierwszy użytkownik, który zaloguje się do dowolnej opakowanej aplikacji danego wydawcy, zostaje zapisany. Od tego momentu tylko ten użytkownik ma dostęp do tej aplikacji. Aby zresetować użytkownika, należy wyrejestrować, a następnie ponownie zarejestrować urządzenie.|
+|Profil aprowizacji|**Przed wprowadzeniem profilu aprowizacji upewnij się, że jest on prawidłowy**. Narzędzie opakowujące aplikacje podczas przetwarzania aplikacji dla systemu iOS nie sprawdza, czy profil nie wygasł. Jeśli zostanie wprowadzony wygasły profil aprowizacji, narzędzie opakowujące aplikacje uwzględni go, a problem zostanie zauważony dopiero po niepowodzeniu instalacji aplikacji na urządzeniu z systemem iOS.|
+|Certyfikat|**Przed wprowadzeniem certyfikatu upewnij się, że jest on prawidłowy**. Narzędzie opakowujące aplikacje podczas przetwarzania aplikacji dla systemu iOS nie sprawdza, czy certyfikat nie wygasł. W przypadku wprowadzenia skrótu wygasłego certyfikatu aplikacja zostanie przetworzona i podpisana przez narzędzie, ale nie będzie można jej instalować na urządzeniach.<br /><br />**Upewnij się, że certyfikat do podpisania opakowanej aplikacji jest zgodny z profilem aprowizacji**. Narzędzie nie sprawdza zgodności profilu i certyfikatu wprowadzonego w celu podpisania opakowanej aplikacji.|
+|Uwierzytelnianie|Aby szyfrowanie działało, urządzenie musi mieć numer PIN. Na urządzeniach, na których wdrożono opakowaną aplikację, dotknięcie paska stanu spowoduje konieczność ponownego uwierzytelnienia użytkownika w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Domyślne zasady opakowanej aplikacji to *uwierzytelnianie przy ponownym uruchamianiu*. System iOS obsługuje wszelkie powiadomienia zewnętrzne (na przykład połączenia telefoniczne), zamykając aplikację, a następnie uruchamiając ją ponownie.
 
-### Rozwiązywania problemów i uwagi techniczne dotyczące biblioteki ADAL
-
--   Jeśli nie zostaną znalezione zasoby bibliotek ADAL, narzędzie uwzględni bibliotekę dynamiczną ADAL. Narzędzie wyszuka w katalogu głównym bibliotekę ADAL o nazwie **ADALiOS.bundle** .
-
--   Narzędzie nie wyszukuje plików binarnych ADAL w aplikacji (nawet, jeśli istnieją). Jeśli aplikacja łączy się z nieaktualną wersją, a zasady uwierzytelniania są włączone, mogą wystąpić błędy w czasie wykonywania.
-
--   [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] dostarcza token usługi AAD do identyfikatora zasobu zarządzania aplikacjami mobilnymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] w celu uwierzytelnienia. Nie jest on jednak używany w żadnym wywołaniu, które umożliwiłoby zweryfikowanie prawidłowości tokenu. [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] odczytuje jedynie nazwę UPN zalogowanego użytkownika w celu określenia dostępu do aplikacji. Token usługi AAD nie jest używany w żadnych późniejszych wywołaniach usług.
-
--   Tokeny uwierzytelniania są wspólne dla aplikacji tego samego wydawcy, ponieważ są zapisywane we wspólnym łańcuchu kluczy. Jeśli chcesz wyizolować określoną aplikację, konieczne jest użycie dla niej innego certyfikatu podpisywania i profilu inicjowania obsługi administracyjnej.
-
--   Podanie identyfikatora klienta oraz identyfikatora URI przekierowania aplikacji zapobiega dwukrotnemu monitowaniu o zalogowanie. Zarejestrowanie tego identyfikatora klienta jest konieczne w celu uzyskania dostępu do opublikowanego identyfikatora zasobu zarządzania aplikacjami mobilnymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] na pulpicie nawigacyjnym usługi AAD. W przeciwnym razie po uruchomieniu aplikacji wystąpi błąd logowania.
 
 ## Ustawianie uprawnień dla aplikacji
 Przed opakowaniem aplikacji można przyznać **uprawnienia** w celu zapewnienia aplikacji dodatkowych uprawnień i możliwości, którymi zwykle aplikacja nie dysponuje.  Aby określić dla aplikacji specjalne uprawnienia, takie jak dostęp do udostępnionego łańcucha kluczy, na etapie podpisywania kodu używany jest **plik uprawnień**. Usługi specyficzne dla aplikacji (nazywane **możliwościami**), są włączane w środowisku Xcode podczas jej opracowywania. Po włączeniu te możliwości są odzwierciedlane w pliku uprawnień. Aby uzyskać więcej informacji dotyczących uprawnień i możliwości, zobacz [Dodawanie możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) w bibliotece deweloperów systemu iOS. Aby uzyskać pełną listę obsługiwanych możliwości, zobacz [Obsługiwane możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
@@ -272,11 +254,11 @@ To polecenie usuwa wszystkie włączone możliwości w aplikacji, które nie zna
 ## Zabezpieczenia i ochrona prywatności podczas korzystania z narzędzia opakowującego aplikacje
 Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poniższe dobre praktyki dotyczące zabezpieczeń i ochrony prywatności.
 
--   Certyfikat podpisywania, profil inicjowania obsługi administracyjnej oraz aplikacja biznesowa do przetworzenia muszą znajdować się na tym samym komputerze Mac, na którym jest uruchamiane narzędzie opakowujące aplikacje. Jeśli pliki znajdują się w ścieżce UNC, upewnij się, że są one dostępne z tego komputera Mac. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
+-   Certyfikat podpisywania, profil aprowizacji oraz aplikacja biznesowa do przetworzenia muszą znajdować się na tym samym komputerze z systemem macOS, na którym jest uruchamiane narzędzie opakowujące aplikacje. Jeśli pliki znajdują się w ścieżce UNC, upewnij się, że są one dostępne z tego komputera z systemem macOS. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
     Opakowana aplikacja zaimportowana do konsoli [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] powinna znajdować się na tym samym komputerze, na którym jest uruchomione narzędzie. Jeśli plik znajduje się w ścieżce UNC, upewnij się, że jest dostępny z komputera, na którym uruchomiono konsolę usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
--   Środowisko, w którym narzędzie opakowujące aplikacje zostanie pobrane ze strony Centrum pobierania Microsoft, musi być zabezpieczone za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
+-   Środowisko, w którym narzędzie opakowujące aplikacje zostanie pobrane z repozytorium w witrynie GitHub, musi być zabezpieczone za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
 -   W celu zabezpieczenia przed atakami przetwarzane aplikacje muszą pochodzić z zaufanego źródła.
 
@@ -293,6 +275,6 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

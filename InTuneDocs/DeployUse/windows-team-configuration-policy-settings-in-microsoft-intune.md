@@ -3,6 +3,7 @@ title: Ustawienia zasad konfiguracji systemu Windows Team | Microsoft Intune
 description: "**Ogólne zasady konfiguracji systemu Windows 10 Team dla usługi Microsoft Intune** umożliwiają konfigurowanie ustawień zarejestrowanych urządzeń z systemem Windows 10 Team, takich jak Microsoft Surface Hub."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 07/19/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 38194ef3-e26e-4682-958d-14b395fccba1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: d1d84f1811d6768b7600856cabedd50ed7da72b1
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 75866e1854211ad42084f3ededaf1e3c0f6d5119
 
 
 ---
@@ -33,12 +34,12 @@ ms.openlocfilehash: d1d84f1811d6768b7600856cabedd50ed7da72b1
 |**Adres URL obrazu tła blokady ekranu**|Włącz to ustawienie, aby na ekranie **powitalnym** urządzenia z systemem Windows 10 Team wyświetlić niestandardowe tło z wybranego adresu URL.<br /><br />Obraz musi być w formacie PNG, a adres URL musi rozpoczynać się od **https://**.|
 
 
-### Zobacz także
+### Zobacz też
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -3,6 +3,7 @@ title: "Konfigurowanie zarządzania systemem Windows Phone 8.0 | Microsoft Intun
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Windows Phone 8.0 w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/09/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
+ms.sourcegitcommit: 067b46c4e537f6def75142411a6d6b60a63cd642
+ms.openlocfilehash: 32d1272d1e125c8a1a5b9f7c6291fb4acf14ea6e
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 1d3823392b7060b9d04996c29c68213d421ef4bd
 System Windows Phone 8.0 wymaga certyfikatu firmy Symantec do zainstalowania aplikacji Portal firmy usługi Intune i umożliwienia zarządzania urządzeniami. Certyfikat jest również wymagany do podpisywania aplikacji biznesowych. Poniższy temat dotyczy tylko systemu Windows Phone 8.0. Aby zarządzać systemem Windows Phone 8.1 lub nowszym, w tym Windows 10 Mobile, zobacz [Set up Windows Phone enrollment](set-up-windows-phone-management-with-microsoft-intune.md) (Konfigurowanie rejestracji w systemie Windows Phone).
 
 > [!IMPORTANT]
-> Od września 2016 r. aplikacja Portal firmy dla systemu Windows 8.0 i Windows Phone 8.0 nie będzie dostępna do pobrania.
+> Począwszy od września 2016 roku aplikacja Portal firmy dla systemu Windows Phone 8 i Windows 8 nie jest już dostępna do pobrania.
 
 -   **Windows Phone 8** — wymagany certyfikat
 -   Systemy **Windows Phone 8.1 i Windows 10 Mobile** wymagają certyfikatu tylko, jeśli:
@@ -183,6 +184,6 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows Pho
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

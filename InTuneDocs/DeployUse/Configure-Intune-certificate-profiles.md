@@ -3,8 +3,9 @@ title: "Konfigurowanie profilów certyfikatów | Microsoft Intune"
 description: "Dowiedz się, jak utworzyć profil certyfikatu usługi Intune."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
-ms.openlocfilehash: 3f657e6a49fb83faddf9c139985369f27656b4bd
+ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
+ms.openlocfilehash: d4fd80ad7819911b6bf47ccd51e62bebdec24f04
 
 
 ---
@@ -63,6 +64,11 @@ Przed utworzeniem profilu certyfikatu protokołu Simple Certificate Enrollment P
 4.  Wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady**. Teraz możesz je wdrożyć.
+
+> [!NOTE]
+>
+> Na urządzeniach z systemem Android i urządzeniach biorących udział programie Android for Work zostanie wyświetlone powiadomienie, że miało miejsce zainstalowanie zaufanego certyfikatu przez inną firmę.
+    
 
 ## **Zadanie 3** — Tworzenie profilów certyfikatów protokołu SCEP lub PFX
 Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzyć profile certyfikatów protokołu SCEP lub PFX dla wszystkich platform, które będą używane. Podczas tworzenia profilu certyfikatu protokołu SCEP należy wskazać profil certyfikatu zaufanego dla tej samej platformy. W ten sposób oba profile certyfikatów zostaną połączone, niemniej jednak każdy profil należy wdrożyć osobno.

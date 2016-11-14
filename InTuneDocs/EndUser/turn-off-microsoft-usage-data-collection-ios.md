@@ -2,7 +2,8 @@
 title: "Wyłączanie zbierania danych użycia w systemie iOS przez firmę Microsoft | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -21,7 +22,7 @@ ms.openlocfilehash: 1b193a401c05ae649456e27222503ee5bd9e150f
 ---
 
 
-# Wyłączanie zbierania danych użycia przez firmę Microsoft
+# <a name="turn-off-microsoft-usage-data-collection"></a>Wyłączanie zbierania danych użycia przez firmę Microsoft
 
 W celu ulepszania swoich produktów i usług firma Microsoft automatycznie zbiera anonimowe dane dotyczące niezawodności, wydajności i korzystania z aplikacji Portal firmy.
 

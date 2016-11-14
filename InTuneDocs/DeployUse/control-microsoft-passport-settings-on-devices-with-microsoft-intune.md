@@ -3,6 +3,7 @@ title: "Sterowanie ustawieniami usługi Windows Hello dla firm na urządzeniach 
 description: "Dowiedz się, w jaki sposób usługa Intune umożliwia integrację z usługą Windows Hello dla firm, czyli alternatywną metodą logowania korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/20/2016
 ms.topic: article

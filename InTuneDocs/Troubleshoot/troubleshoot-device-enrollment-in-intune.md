@@ -3,6 +3,7 @@ title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Micros
 description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
 keywords: 
 author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article

@@ -2,7 +2,8 @@
 title: "Zmiana nazwy urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 905d29289f621bcfd4c7faccb119adcf5ce9ef63
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a7a5faffc77d1b55bcb0216f0c87aeba2e12bda7
 
 
 ---
 
 
-# Zmiana nazwy urządzenia z poziomu witryny sieci Web Portal firmy
+# <a name="rename-your-device-from-the-company-portal-website"></a>Zmiana nazwy urządzenia z poziomu witryny sieci Web Portal firmy
 
 Jeśli zdecydujesz się zmienić nazwę urządzenia, możesz zrobić to zdalnie z poziomu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
@@ -39,6 +40,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

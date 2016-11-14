@@ -13,8 +13,8 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba9ba203c9ec173dafd1d6f9e4828d4a8a51e1ef
-ms.openlocfilehash: 136dd127c5e0f1784746b973ebc5594573f07925
+ms.sourcegitcommit: ed1008c786285821c608a8404805c6615c60507f
+ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 
 ---
@@ -31,44 +31,60 @@ Ten przewodnik przeprowadzi Cię przez najważniejsze czynności wymagane do wł
 
 **Jeśli Twoja aplikacja jest wewnętrzną aplikacją firmową i nie zostanie udostępniona w publicznym sklepie z aplikacjami**:
 
-**Nie musisz** rejestrować swojej aplikacji. W przypadku wewnętrznych aplikacji biznesowych administrator IT wdroży aplikację wewnętrznie za pomocą usługi Microsoft Intune. Usługa Intune wykryje, że aplikacja została opracowana za pomocą zestawu SDK i zezwoli administratorowi IT na zastosowanie do niej ustawień zasad zarządzania aplikacjami mobilnymi. Możesz przejść do sekcji [Włączanie obsługi zarządzania aplikacjami mobilnymi dla aplikacji mobilnej systemu iOS lub Android przy użyciu zestawu SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
+**Nie musisz** rejestrować swojej aplikacji. W przypadku wewnętrznych aplikacji biznesowych administrator IT wdroży aplikację wewnętrznie. Usługa Intune wykryje, że aplikacja została opracowana za pomocą zestawu SDK, i zezwoli administratorowi IT na zastosowanie do niej ustawień zasad zarządzania aplikacjami mobilnymi. Możesz przejść do sekcji [Włączanie obsługi zarządzania aplikacjami mobilnymi dla aplikacji mobilnej systemu iOS lub Android przy użyciu zestawu SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
 
 **Jeśli Twoja aplikacja zostanie wydana w publicznym sklepie z aplikacjami, takim jak Apple App Store lub Google Play**: 
 
-**Musisz** najpierw zarejestrować aplikację w usłudze Microsoft Intune i zaakceptować warunki rejestracji. Po zarejestrowaniu administratorzy IT mogą stosować ustawienia zasad zarządzania aplikacjami mobilnymi usługi Intune do obsługiwanej aplikacji, która będzie wyświetlana jako aplikacja partnerska usługi Intune. Do czasu ukończenia rejestracji i potwierdzenia jej przez zespół usługi Microsoft Intune administratorzy usługi Intune nie będą mieć linku bezpośredniego do opcji zastosowania zasad zarządzania aplikacjami mobilnymi do Twojej aplikacji. Ponadto firma Microsoft doda Twoją aplikację do [strony partnerów usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners), na której będzie wyświetlana ikona aplikacji informująca o tym, że aplikacja obsługuje zasady zarządzania aplikacjami mobilnymi usługi Microsoft Intune.
+**Musisz** najpierw zarejestrować aplikację w usłudze Microsoft Intune i zaakceptować warunki rejestracji. Po zarejestrowaniu administratorzy IT mogą stosować ustawienia zasad zarządzania aplikacjami mobilnymi usługi Intune do obsługiwanej aplikacji, która będzie wyświetlana jako aplikacja partnerska usługi Intune. Do czasu ukończenia rejestracji i potwierdzenia jej przez zespół usługi Microsoft Intune administratorzy usługi Intune nie będą mieć linku bezpośredniego do opcji zastosowania zasad zarządzania aplikacjami mobilnymi do Twojej aplikacji. Ponadto firma Microsoft doda Twoją aplikację do [strony partnerów usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps), na której będzie wyświetlana ikona aplikacji informująca o tym, że aplikacja obsługuje zasady zarządzania aplikacjami mobilnymi usługi Microsoft Intune.
 
-Aby rozpocząć proces rejestracji, **przejrzyj i podpisz** [umowę partnera usługi Microsoft Intune](https://connect.microsoft.com/ConfigurationManagervnext/Survey/Survey.aspx?SurveyID=17806). Przedstawiono w niej postanowienia, które firma musi zaakceptować, aby stać się partnerem aplikacji usługi Microsoft Intune. Aby móc wyświetlić ten dokument, musisz się zalogować. Umowa jest dostępna w witrynie Microsoft Connect zestawu SDK aplikacji usługi Intune na karcie Ankiety lub tutaj. Zostanie również wyświetlony monit o podanie nazwy aplikacji, nazwy firmy i linku bezpośredniego do aplikacji w sklepie iTunes lub Google.
+Aby rozpocząć proces rejestracji, wypełnij **[kwestionariusz partnera aplikacji usługi Microsoft Intune](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u)**. 
 
-![Microsoft Connect](../media/microsoft-connect.png)
+Firma Microsoft użyje adresów e-mail podanych w odpowiedziach kwestionariusza w celu uzyskania kontaktu i kontynuowania procesu rejestracji. Ponadto będziemy go używać, aby kontaktować się z Tobą w razie jakichkolwiek pytań.
 
-Adres e-mail użyty podczas rejestracji umożliwi nam potwierdzenie i ukończenie procesu rejestracji. Ponadto będziemy go używać, aby kontaktować się z Tobą w razie jakichkolwiek pytań.
+> [!NOTE]
+> Wszystkie informacje zebrane w powyższym formularzu i za pomocą poczty e-mail w ramach korespondencji z zespołem usługi Microsoft Intune podlegają [zasadom zachowania poufności informacji firmy Microsoft](https://www.microsoft.com/en-us/privacystatement/default.aspx).
 
 **Oczekiwany przebieg procesu rejestracji**: 
 
-gdy prześlesz formularz, firma Microsoft skontaktuje się z Tobą za pomocą adresu e-mail użytego podczas rejestracji w celu potwierdzenia pomyślnego odebrania żądania lub poproszenia o podanie dodatkowych informacji niezbędnych do ukończenia rejestracji. Otrzymasz również wiadomość, gdy aplikacja zostanie pomyślnie zarejestrowana w usłudze Microsoft Intune oraz gdy aplikacja zostanie udostępniona w witrynie partnerów usługi Microsoft Intune. Po potwierdzeniu otrzymania informacji link bezpośredni do aplikacji zostanie dołączony do następnej miesięcznej aktualizacji usługi Intune. Jeśli na przykład informacje niezbędne do rejestracji zostaną podane w lipcu, link bezpośredni do aplikacji będzie obsługiwany od połowy sierpnia. Jeśli link bezpośredni do sklepu z aplikacjami zmieni się w przyszłości, będzie konieczne ponowne zarejestrowanie aplikacji. Ponadto musisz nas poinformować o aktualizacji aplikacji za pomocą nowej wersji zestawu SDK aplikacji usługi Intune.
+1. Gdy prześlesz kwestionariusz, firma Microsoft skontaktuje się z Tobą za pomocą adresu e-mail użytego podczas rejestracji w celu potwierdzenia pomyślnego odebrania żądania lub poproszenia o podanie dodatkowych informacji niezbędnych do ukończenia rejestracji. 
+2. Po zebraniu wszystkich niezbędnych informacji otrzymasz od firmy Microsoft umowę partnera aplikacji usługi Microsoft Intune, którą należy podpisać. Przedstawiono w niej postanowienia, które firma musi zaakceptować, aby stać się partnerem aplikacji usługi Microsoft Intune. 
+3. Otrzymasz również powiadomienie, gdy aplikacja zostanie pomyślnie zarejestrowana w usłudze Microsoft Intune oraz gdy aplikacja zostanie udostępniona w witrynie [partnerów usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). 
+4. Link bezpośredni do aplikacji zostanie dodany do następnej comiesięcznej aktualizacji usługi Intune. Jeśli na przykład informacje niezbędne do rejestracji zostaną podane w lipcu, link bezpośredni do aplikacji będzie obsługiwany od połowy sierpnia. 
 
-**Uwaga**: wszystkie informacje zebrane w powyższym formularzu i pocztą e-mail w ramach korespondencji z zespołem usługi Intune podlegają [zasadom zachowania poufności informacji firmy Microsoft](https://www.microsoft.com/en-us/privacystatement/default.aspx).
+Jeśli link bezpośredni do sklepu z aplikacjami zmieni się w przyszłości, będzie konieczne ponowne zarejestrowanie aplikacji. Ponadto poinformuj nas o aktualizacji aplikacji za pomocą nowej wersji zestawu SDK aplikacji usługi Intune.
+
+
 
 ## Pobieranie plików zestawu SDK
 
-Zestawy SDK aplikacji usługi Intune dla systemów iOS i Android są hostowane na koncie usługi GitHub firmy Microsoft. Poniższe repozytoria publiczne zawierają pliki zestawów SDK odpowiednio dla systemów iOS i Android:
+Zestawy SDK aplikacji usługi Intune dla natywnych systemów iOS i Android są hostowane na koncie usługi GitHub firmy Microsoft. Poniższe repozytoria publiczne zawierają pliki zestawów SDK odpowiednio dla systemów iOS i Android:
 
 * [Zestaw SDK aplikacji usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Zestaw SDK aplikacji usługi Intune dla systemu Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
+**Jeśli Twoja aplikacja jest aplikacją Xamarin lub Cordova, użyj poniższych narzędzi deweloperskich**:
+
+* [Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Wtyczka Cordova zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
+
 Zalecamy utworzenie konta usługi GitHub, które pozwoli rozwidlać nasze repozytoria i z nich pobierać. Usługa GitHub umożliwia deweloperom komunikowanie się z naszym zespołem produktu, zgłaszanie problemów i uzyskiwanie szybkich odpowiedzi, wyświetlanie informacji o wersjach oraz przesyłanie opinii do firmy Microsoft. W razie pytań dotyczących konta usługi GitHub i repozytoriów, skontaktuj się z nami za pomocą adresu e-mail msintuneappsdk@microsoft.com.
+
+
+
+
 
 ## Włączanie obsługi zarządzania aplikacjami mobilnymi dla aplikacji mobilnej systemu iOS lub Android przy użyciu zestawu SDK
 
-Do integracji zestawu SDK aplikacji usługi Intune z Twoją aplikacją systemu iOS wymagany będzie następujący dokument: 
+Do integracji zestawu SDK aplikacji usługi Intune z Twoją natywną aplikacją systemu iOS wymagany będzie następujący dokument: 
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji mobilnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune. 
 
 
-Do integracji zestawu SDK aplikacji usługi Intune z Twoją aplikacją systemu Android wymagany będzie następujący dokument:
+Do integracji zestawu SDK aplikacji usługi Intune z Twoją natywną aplikacją systemu Android wymagany będzie następujący dokument:
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](intune-app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji mobilnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune. 
 
+Dokumentacja dotycząca składnika Xamarin zestawu SDK aplikacji usługi Intune oraz wtyczki Cordova zestawu SDK aplikacji usługi Intune znajduje się w odpowiednich repozytoriach usługi GitHub. 
 
 
 ## Konfigurowanie telemetrii dla aplikacji
@@ -96,6 +112,6 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

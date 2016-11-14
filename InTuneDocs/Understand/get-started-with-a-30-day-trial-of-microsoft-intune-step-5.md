@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzeń przenośnych w wersji ewaluacyjnej | Microsoft 
 description: "Sposób rejestrowania urządzeń przenośnych i instalowania aplikacji po zarejestrowaniu się w bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

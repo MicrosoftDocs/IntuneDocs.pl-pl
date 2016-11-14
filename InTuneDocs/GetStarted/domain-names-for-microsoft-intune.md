@@ -3,6 +3,7 @@ title: "Nazwy domen w usłudze Microsoft Intune | Microsoft Intune"
 description: "dodawanie nazwy domeny usługi Intune"
 keywords: 
 author: andredm7
+ms.author: andredm
 manager: swadhwa
 ms.date: 10/11/2016
 ms.topic: article

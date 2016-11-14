@@ -3,8 +3,9 @@ title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urząd
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +13,8 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: dd08b2e454b14c82e1dd9704617b32ac86ff7790
-ms.openlocfilehash: 53a239f574c327be461663872545bda63ac4b7a5
+ms.sourcegitcommit: 2edbb8a70458290e69626d85f734d38243a2002a
+ms.openlocfilehash: f152da14c347cd41edbaf7cc8f4d16abc57bedbb
 
 
 ---
@@ -21,6 +22,8 @@ ms.openlocfilehash: 53a239f574c327be461663872545bda63ac4b7a5
 # Pojawia się monit o zainstalowanie aplikacji Lookout for Work
 
 Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa.
+
+Jeśli masz problemy z instalacją, spróbuj wykonać kroki związane z rozwiązywaniem problemów dostępne na końcu tego tematu.
 
 
 **Co należy zrobić:**
@@ -35,7 +38,7 @@ Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zai
 
     ![Naciśnij pozycję Akceptuję, aby umożliwić aplikacji Lookout for Work dostęp do urządzenia](./media/lookout-accept-store-permissions-android.png)
 
-3. Otwórz aplikację Lookout for Work i naciśnij pozycję **Aktywuj**.
+3. Otwórz aplikację Lookout for Work i naciśnij pozycję **AKTYWUJ**.
 
     ![Otwórz aplikację Lookout for Work i naciśnij pozycję Aktywuj](./media/lookout-activate-button-android.png)
 
@@ -51,7 +54,7 @@ Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zai
 
     ![Naciśnij pozycję Zaakceptuj, aby przyznać aplikacji Lookout for Work uprawnienia do wczytania Twojego profilu](./media/lookout-needs-permission-to-view-profile-android.png)
 
-    Zostanie wyświetlony ekran pokazujący, że aplikacja Lookout for Work nawiązuje połączenie z usługą Lookout Security Cloud.
+    Ekran pokazuje, że aplikacja Lookout for Work nawiązuje połączenie z usługą Lookout Security Cloud.
 
 7. Przejrzyj informacje na temat sposobu, w jaki aplikacja Lookout chroni urządzenie, a następnie naciśnij pozycję **OK**.
 
@@ -71,13 +74,14 @@ Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zai
 
     Jeśli aplikacja Lookout for Work znajdzie zagrożenie bezpieczeństwa urządzenia, zostaną wyświetlone instrukcje rozwiązania problemu.
 
+**Jeśli instalacja nie działa**
+
+Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. W takim przypadku spróbuj zainstalować aplikację Lookout for Work ręcznie ze sklepu Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 
+
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-
-
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -2,7 +2,8 @@
 title: "Co się dzieje w przypadku tworzenia profilu służbowego | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Android"
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,20 +14,20 @@ ms.assetid: b217da11-2cd7-49ab-a91f-2f6d7784c6b6
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: ad24422cd2708eb4fa59bb96d9f39b7a6444219b
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: 77d420bd1a635f8cd64b32c584c2be62f52f1706
 
 
 ---
 
 
-# Co się dzieje w przypadku tworzenia profilu służbowego
+# <a name="what-happens-when-you-create-a-work-profile"></a>Co się dzieje w przypadku tworzenia profilu służbowego
 
-Profil służbowy służy do tego, aby po jego skonfigurowaniu na urządzeniu mieć dostęp do swojego służbowego konta e-mail, aplikacji i plików.
+Profil służbowy służy do tego, aby po jego skonfigurowaniu na urządzeniu mieć dostęp do swojego służbowego konta e-mail, aplikacji i plików (osobno od swoich danych osobistych).
 
 Gdy tworzysz profil służbowy:
 
-- Administrator IT może zarządzać wyłącznie tymi aplikacjami, ustawieniami i konfiguracjami, które mają związek z pracą. Nie ma takiej możliwości w przypadku osobistych aplikacji lub danych.
+- Administrator IT może zarządzać wyłącznie tą pocztą e-mail, aplikacjami, ustawieniami i danymi na urządzeniu, które mają związek z pracą. Nie ma takiej możliwości w przypadku osobistych aplikacji lub danych.
 
 - Aplikacje służbowe możesz pobrać ze Sklepu Play dla firm. Aplikacje osobiste możesz pobierać jak zwykle ze Sklepu Google Play. Administrator IT nie ma wglądu w Twoje osobiste aplikacje ani nie może nimi zarządzać.
 

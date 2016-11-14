@@ -3,18 +3,19 @@ title: Portal firmy Microsoft Intune | Microsoft Intune
 description: "konfiguracja portalu firmy w usłudze Intune"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
-ms.reviewer: jeffgilb
+ms.reviewer: jve
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 7c9fceaae077907480d4c207d56f654d168248a1
+ms.sourcegitcommit: 584cfc22cd885149054c1e5e42cc539a478db637
+ms.openlocfilehash: 0a9d7bdce29532f63c724d406cd13cd619c9034e
 
 
 ---
@@ -48,11 +49,18 @@ Niektóre z zadań, które użytkownicy mogą wykonać w portalu firmy, to:
 
 Aby użytkownik mógł korzystać z portalu firmy, musi mieć przyznaną licencję na korzystanie z usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], a jego konto musi mieć stan logowania **Dozwolone**. Dowiedz się więcej o [dodawaniu użytkowników](start-with-a-paid-subscription-to-microsoft-intune-step-3.md) i [przypisywaniu licencji na korzystanie z subskrypcji](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Możesz również [dostosować witrynę sieci Web Portal firmy](start-with-a-paid-subscription-to-microsoft-intune-step-7.md) za pomocą firmowego logo, warunków użytkowania i innych elementów. Użytkownicy uzyskują dostęp do witryny sieci Web Portal firmy, przechodząc do tej witryny i logując się za pomocą konta służbowego.
 
+> [!NOTE]
+> Aplikacja Portal firmy jest jeszcze niedostępna w niektórych krajach.
+
+> __System iOS__: Aplikacja Portal firmy dla systemu iOS jest opublikowana we [wszystkich dostępnych regionach](https://go.microsoft.com/fwlink/?linkid=831284) dla sklepu Apple iOS App Store.
+
+> __System Android__: Aplikacja Portal firmy dla systemu Android w krajach Antigua i Barbuda, Aruba, Benin, Burkina Faso, Kambodża, Chiny, Kuba, Gabon, Gwinea Bissau, Haiti, Iran, Laos, Mali, Mozambik, Myanmar (Burma), Antyle Holenderskie, Niger, Papua Nowa Gwinea, Sudan, Togo. W przypadku tych krajów alternatywnym rozwiązaniem jest [bezpośrednie ładowanie aplikacji Portal firmy w wersji dla systemu Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
+
 ### Zobacz także
 [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

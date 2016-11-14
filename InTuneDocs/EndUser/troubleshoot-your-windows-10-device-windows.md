@@ -2,9 +2,10 @@
 title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10 | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 8/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: ff70fb247133234f1a90113326c5641b4f73b9df
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: ecd84b62d34e22a72da87995ff0d62dad5e5a9ed
 
 
 ---
 
-# Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
+# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
 Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.
 
 1.  Przyjrzyj się obu ekranom i zastanów się, który z nich przypomina zawartość ekranu urządzenia. Wykonaj kroki odnoszące się do ekranu przypominającego ekran urządzenia.
@@ -33,7 +34,7 @@ Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z sy
 
     ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
-## Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
+## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
 
 1.  Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowej poczty e-mail i plików, wróć do pozycji **Dostęp do zasobów służbowych**.
 
@@ -45,7 +46,7 @@ Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z sy
 
     - Jeśli nie widzisz informacji o połączeniu pokazanych powyżej lub jeśli są one wyświetlane, ale brakuje niektórych opcji, naciśnij przycisk **Połącz**, a następnie zaloguj się przy użyciu swoich poświadczeń służbowych. Na tym etapie powinno zostać nawiązane połączenie.
 
-## Rozwiązywanie problemów w przypadku wyświetlenia ekranu Konto użytkownika
+## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Rozwiązywanie problemów w przypadku wyświetlenia ekranu Konto użytkownika
 
 Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowej poczty e-mail, plików i innych danych, wróć do pozycji **Konta**, a następnie naciśnij pozycję **Dostęp z miejsca pracy**.
 
@@ -57,6 +58,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

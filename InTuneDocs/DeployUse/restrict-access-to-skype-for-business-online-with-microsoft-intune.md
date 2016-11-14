@@ -3,8 +3,9 @@ title: "Ograniczanie dostępu do usługi Skype dla firm Online | Microsoft Intun
 description: "Chroń i kontroluj dostęp do usługi Skype dla firm Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -32,7 +33,7 @@ Jeśli wybrany użytkownik próbuje użyć usługi Skype dla firm Online na swoi
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi Skype fla firm Online, konieczne jest:
 - Posiadanie **subskrypcji usługi Skype dla firm Online** i przypisanie licencji usługi Skype dla firm Online użytkownikom.
-- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security lub usługi Azure Active Directory — wersja Premium** przy jednoczesnym posiadaniu przez użytkowników licencji na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). 
+- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security lub usługi Azure Active Directory — wersja Premium** przy jednoczesnym posiadaniu przez użytkowników licencji na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 -   [Włączenie nowoczesnego uwierzytelniania](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) dla usługi Skype dla firm Online.
 -  Wszyscy użytkownicy końcowi muszą używać usługi **Skype dla firm Online**. Jeśli wdrożenie obejmuje zarówno usługę Skype dla firm Online, jak i lokalną aplikację Skype dla firm, zasady dostępu warunkowego nie będą stosowane do użytkowników końcowych.

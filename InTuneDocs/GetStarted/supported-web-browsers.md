@@ -4,17 +4,17 @@ description: "Przeglądarki internetowe obsługiwane przez usługę Intune"
 keywords: 
 author: barlanmsft
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6f4ff11d-dc81-481a-bcd9-d8cdab32f876
-ms.reviewer: jeffgilb
+ms.reviewer: camoya
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 7d2852c2ae18ff09eddd99bc76a1e1800546d304
+ms.sourcegitcommit: b63b82b6eb87a90013452825a2049c2a2bc4e91d
+ms.openlocfilehash: de5ca1b5fda988f96437696ff705178b9c49814f
 
 
 ---
@@ -25,16 +25,17 @@ Przed skonfigurowaniem usługi Intune przejrzyj ten temat i inne wymagania wymie
 
 |Funkcja usługi Intune |Obsługiwane przeglądarki|
 |---------|---------|
-|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox <br /><br />**Uwaga:** przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane w przypadku konsoli administracyjnej.                      
+|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox <br /><br />**Uwaga:** przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane przez konsolę administracyjną<sup>1</sup>.                      
 |Portal administracyjny usługi Office 365     |Wszystkie przeglądarki, w tym przeglądarki dla urządzeń przenośnych i zarządzane przeglądarki  |
 |Witryna sieci Web Portal firmy     |**Urządzenia przenośne:** należy używać domyślnej przeglądarki sieci Web dla każdej z obsługiwanych platform   <br /><br />**Komputery z systemem Windows:** Internet Explorer 10 lub nowsza wersja albo Microsoft Edge<br /><br />**System Mac OS X 10.9 lub nowszy:** Apple Safari    |
 
+> [!Note] <sup>1</sup>Przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane przez konsolę administracyjną, ponieważ nie obsługują technologii [Microsoft Silverlight](https://msdn.microsoft.com/en-us/library/cc838158(v=vs.95).aspx). Konsola usługi Intune stopniowo odchodzi od technologii Silverlight. Docelowo wszystkie funkcje usługi Intune z zakresu zarządzania urządzeniami przenośnymi i aplikacjami zostaną [udostępnione w nowym portalu Microsoft Azure](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
 
 ### Zobacz także
 [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

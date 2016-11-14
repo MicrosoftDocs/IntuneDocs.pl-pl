@@ -3,8 +3,9 @@ title: "Ograniczanie dostępu poczty e-mail do usługi Dynamics CRM Online | Mic
 description: "Ochrona i kontrola dostępu do usługi  Dynamics CRM Online przy użyciu dostępu warunkowego."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -26,7 +27,7 @@ Dostęp do usługi Microsoft Dynamics CRM Online na urządzeniach z systemem iOS
 
 Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
-[!IMPORTANT] Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory — wersja Premium, a użytkownicy muszą mieć licencje obu produktów. **Subskrypcja pakietu Enterprise Mobility + Security (EMS)** obejmuje zarówno subskrypcję usługi Intune, jak i subskrypcję usługi Azure Active Directory — wersja Premium. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Jeśli nie masz subskrypcji pakietu EMS, możesz uzyskać subskrypcję usługi Azure Active Directory — wersja Premium. Zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). 
+[!IMPORTANT] Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory — wersja Premium, a użytkownicy muszą mieć licencje obu produktów. **Subskrypcja pakietu Enterprise Mobility + Security (EMS)** obejmuje zarówno subskrypcję usługi Intune, jak i subskrypcję usługi Azure Active Directory — wersja Premium. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Jeśli nie masz subskrypcji pakietu EMS, możesz uzyskać subskrypcję usługi Azure Active Directory — wersja Premium. Zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 Jeśli wybrany użytkownik próbuje użyć aplikacji Dynamics CRM na swoim urządzeniu, sprawdzane są następujące kwestie:
 

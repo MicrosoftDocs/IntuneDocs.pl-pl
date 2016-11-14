@@ -3,6 +3,7 @@ title: "Dostęp warunkowy do usług O365 oparty na aplikacji | Microsoft Intune"
 description: "Poznaj sposób, w jaki dostęp warunkowy zarządzania aplikacjami mobilnymi może pomóc w kontrolowaniu tego, które aplikacje mogą mieć dostęp do usług O365."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

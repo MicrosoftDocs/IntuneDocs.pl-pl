@@ -2,7 +2,8 @@
 title: "Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1 | Microsoft Intune"
 description: "Opis sposobu rejestrowania urządzenia z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune"
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
 ---
 
 
-# Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
+# <a name="enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
 
 Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 

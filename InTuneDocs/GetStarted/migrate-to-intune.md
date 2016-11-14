@@ -3,6 +3,7 @@ title: "Migracja do usługi Intune | Microsoft Intune"
 description: 
 keywords: 
 author: jeffgilb
+ms.author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 317b8cc277eb8dffc1cb29739f3f78cfa3241602
-ms.openlocfilehash: c6bd34c910f56e7dfad142034ef6fd7a027cd2c4
+ms.sourcegitcommit: 59041e1c35d2f4b5c4d9b663494f3f02504c12f6
+ms.openlocfilehash: b115912357e298016dee4e0fa87f2ed87f5f2f60
 
 
 ---
@@ -44,7 +45,7 @@ Urządzenia muszą zostać wyrejestrowane z istniejącego rozwiązania do zarzą
 
 ## Rejestrowanie urządzeń w usłudze Intune
 
-Użytkownicy zaplanowani do migracji powinni natychmiast rejestrować się w usłudze Intune, aby odzyskać dostęp lub zapobiec utracie dostępu do firmowych zasobów, poczty e-mail i aplikacji. Jeśli skonfigurowano dostęp warunkowy, a użytkownicy spróbują połączyć się z pocztą e-mail przed zarejestrowaniem w usłudze Intune, ich dostęp zostanie zablokowany, po czym otrzymają wiadomość e-mail dotyczącą rejestracji. Ta wiadomość e-mail przeprowadzi użytkowników przez proces rejestracji urządzenia w usłudze Intune.  Alternatywnie użytkownicy mogą rejestrować się w usłudze Intune za pomocą aplikacji Portal firmy usługi Intune lub natywnie przez system operacyjny Windows 8.1 i Windows 10 Mobile. Zapoznaj się z tematem [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md), aby uzyskać dodatkowe porady dotyczące kroków związanych z rejestracją dla każdej platformy.
+Użytkownicy zaplanowani do migracji powinni natychmiast rejestrować się w usłudze Intune, aby odzyskać dostęp lub zapobiec utracie dostępu do firmowych zasobów, poczty e-mail i aplikacji. Jeśli skonfigurowano dostęp warunkowy, a użytkownicy spróbują połączyć się z pocztą e-mail przed zarejestrowaniem w usłudze Intune, ich dostęp zostanie zablokowany, po czym otrzymają wiadomość e-mail dotyczącą rejestracji. Ta wiadomość e-mail przeprowadzi użytkowników przez proces rejestracji urządzenia w usłudze Intune.  Alternatywnie użytkownicy mogą rejestrować się w usłudze Intune za pomocą aplikacji Portal firmy usługi Intune lub natywnie przez system operacyjny Windows 8.1 i Windows 10 Mobile. Zapoznaj się z tematem [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune), aby uzyskać dodatkowe porady dotyczące kroków związanych z rejestracją dla każdej platformy.
 
 ## Konfigurowanie dostępu warunkowego usługi Intune (opcjonalnie)
 
@@ -73,6 +74,6 @@ W celu uzyskania kopii całego przewodnika do pobrania odwiedź witrynę [Galeri
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

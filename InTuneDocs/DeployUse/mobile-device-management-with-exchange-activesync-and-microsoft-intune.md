@@ -3,6 +3,7 @@ title: "Zarządzanie urządzeniami za pomocą programu Exchange ActiveSync | Mic
 description: "Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync (EAS) przy użyciu programu Exchange Connector"
 keywords: 
 author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: 9518381dfd967b8cbf8d01bf834d8148d2c2501b
+ms.sourcegitcommit: d5d5345dc6ef022e385a33ccc19b19cc022af2d5
+ms.openlocfilehash: c67ad198c1693f84c9e00d15da00a131f7d0af87
 
 
 ---
 
 # Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Microsoft Intune
-Aby usługa Microsoft Intune mogła bezpośrednio zarządzać urządzeniami przenośnymi, urządzenia muszą być [zarejestrowane w usłudze Intune](prerequisites-for-enrollment.md). Administratorzy mogą również włączyć bardziej ograniczone rozwiązanie do zarządzania, umożliwiające zarządzanie urządzeniami za pomocą programu Exchange ActiveSync (EAS) przy użyciu programu Exchange Connector. Urządzenia mogą być zarządzane za pomocą lokalnych serwerów programu Exchange i usługi Exchange Online w ramach usługi Office 365. Usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu na subskrypcję.
+Aby usługa Microsoft Intune mogła bezpośrednio zarządzać urządzeniami przenośnymi, urządzenia muszą być [zarejestrowane w usłudze Intune](prerequisites-for-enrollment.md). Administratorzy mogą również włączyć bardziej ograniczone rozwiązanie do zarządzania, umożliwiające zarządzanie urządzeniami za pomocą programu Exchange ActiveSync (EAS) przy użyciu programu Exchange Connector. Urządzenia mogą być zarządzane za pomocą lokalnych serwerów programu Exchange lub usługi Exchange Online w ramach usługi Office 365. Usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu na subskrypcję.
 
 ## Reguły dostępu do programu Exchange dla urządzeń przenośnych ##
 
@@ -29,7 +30,7 @@ Program Exchange wymaga zestawu reguł, które definiują, co się dzieje, gdy u
 [Reguły dostępu do programu Exchange dla urządzeń przenośnych](exchange-access-rules-for-mobile-devices.md)
 
 ## Instalowanie programu Exchange Connector
-Program Exchange Connector umożliwia zarządzanie wdrożeniem programu Exchange w konsoli usługi Intune. Należy najpierw zainstalować i skonfigurować odpowiedni program Exchange z usługą Intune. Wybierz odpowiednią opcję na podstawie tego, czy serwer Exchange działa lokalnie lub jest hostowany jako usługa w chmurze:
+Program Exchange Connector umożliwia zarządzanie wdrożeniem programu Exchange w konsoli usługi Intune. Należy najpierw zainstalować i skonfigurować odpowiedni program Exchange z usługą Intune. Wybierz odpowiednią opcję na podstawie tego, czy serwer Exchange działa lokalnie, czy jest hostowany jako usługa w chmurze:
 
 -   [Konfigurowanie usługi Intune dla usługi Exchange Online lub nowych wersji środowiska usługi Exchange Online w wersji dedykowanej](intune-service-to-service-exchange-connector.md)
 -   [Instalowanie łącznika usługi Intune dla lokalnych serwerów programu Exchange i starszych wersji środowiska usługi Exchange Online w wersji dedykowanej](intune-on-premises-exchange-connector.md)
@@ -46,6 +47,6 @@ Na koniec można [wyczyścić dane firmowe z urządzeń przenośnych zarządzany
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

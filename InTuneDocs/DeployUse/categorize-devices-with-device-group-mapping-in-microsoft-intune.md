@@ -3,6 +3,7 @@ title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń | Micros
 description: "Użyj funkcji mapowania grup urządzeń w usłudze Microsoft Intune do grupowania urządzeń w zdefiniowane kategorie, co ułatwi zarządzanie tymi urządzeniami."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

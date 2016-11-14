@@ -3,6 +3,7 @@ title: "Konfigurowanie subskrypcji przy użyciu usługi Lookout | Microsoft Intu
 description: "Ten temat zawiera szczegółowe informacje dotyczące sposobu konfigurowania ochrony urządzeń przed zagrożeniami w usłudze Lookout."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

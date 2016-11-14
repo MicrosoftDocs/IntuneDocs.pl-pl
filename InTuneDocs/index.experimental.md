@@ -6,6 +6,7 @@ title: "Dokumentacja usługi Intune — dokumentacja zarządzania urządzeniami 
 description: "Dokumentacja techniczna dotycząca zarządzania urządzeniami przenośnymi i aplikacjami w usłudze Microsoft Intune"
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: jeffgilb
+ms.author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage

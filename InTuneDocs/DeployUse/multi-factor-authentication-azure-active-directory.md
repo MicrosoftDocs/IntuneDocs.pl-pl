@@ -2,7 +2,8 @@
 title: "Uwierzytelnianie wieloskładnikowe przy użyciu usługi Azure AD| Microsoft Intune"
 description: "Ustawianie wymogu uwierzytelniania wieloskładnikowego w usłudze Azure AD do celów rejestracji urządzeń."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angerobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -18,7 +19,7 @@ ms.openlocfilehash: ccd55cc8637ebccfdbddd05c4f6b182c7923a2ab
 
 ---
 
-# Uwierzytelnianie wieloskładnikowe dla usługi Microsoft Intune
+# <a name="multifactor-authentication-for-microsoft-intune"></a>Uwierzytelnianie wieloskładnikowe dla usługi Microsoft Intune
 
 Usługę Intune można zintegrować z usługą uwierzytelniania wieloskładnikowego (MFA) przy użyciu usługi Azure AD pod kątem rejestracji urządzeń, aby zabezpieczyć zasoby firmowe. Usługa MFA wymaga — oprócz nazw użytkowników i haseł— składników uwierzytelniania, takich jak uwierzytelnianie tekstowe. Ta funkcja jest obsługiwana w systemach iOS, Android, Windows 8.1 i nowszych, jak również w urządzeniach z systemem Windows Phone 8.1 i nowszymi systemami.
 
@@ -26,7 +27,7 @@ Usługę Intune można zintegrować z usługą uwierzytelniania wieloskładnikow
 >
 > W starszych wersjach programu Configuration Manager (wcześniejszych niż 1610) w konsoli administracyjnej programu Configuration Manager nadal widoczne jest ustawienie uwierzytelniania wieloskładnikowego. Nie należy próbować skonfigurować uwierzytelniania wieloskładnikowego w konsoli administracyjnej programu Configuration Manager, ponieważ nie będzie ono działać. Należy skonfigurować uwierzytelnianie wieloskładnikowe zgodnie z opisem zawartym w tym temacie.
 
-### Konfigurowanie usługi Intune pod kątem wymogu uwierzytelniania wieloskładnikowego na etapie rejestracji urządzeń
+### <a name="configuring-intune-to-require-multifactor-authentication-at-device-enrollment"></a>Konfigurowanie usługi Intune pod kątem wymogu uwierzytelniania wieloskładnikowego na etapie rejestracji urządzeń
 Aby ustawić wymóg uwierzytelniania wieloskładnikowego na etapie rejestracji urządzeń, wykonaj następujące kroki:
 
 1. Zaloguj się do [portalu usługi Microsoft Azure](https://manage.windowsazure.com) przy użyciu poświadczeń administratora.

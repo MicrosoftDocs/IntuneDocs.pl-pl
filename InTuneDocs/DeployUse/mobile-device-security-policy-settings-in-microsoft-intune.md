@@ -3,6 +3,7 @@ title: "Ustawienia zasad zabezpieczeń urządzeń przenośnych | Microsoft Intun
 description: "Usługa Intune umożliwia skonfigurowanie wielu ustawień, które możesz wdrożyć na urządzeniach zarządzanych w Twojej organizacji."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

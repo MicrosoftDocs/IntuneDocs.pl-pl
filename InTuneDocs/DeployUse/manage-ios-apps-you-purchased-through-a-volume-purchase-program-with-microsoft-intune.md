@@ -3,6 +3,7 @@ title: "Zarządzanie aplikacjami systemu iOS zakupionymi zbiorczo | Microsoft In
 description: "Usługa Intune umożliwia zarządzanie aplikacjami zakupionymi w ramach zakupów zbiorczych od firmy Apple przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/01/2016
 ms.topic: article

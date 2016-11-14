@@ -2,9 +2,10 @@
 title: "Ustawianie czasu, po upływie którego urządzenie ma zostać zablokowane | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 952c99399c7eaaf9a36e7528bb1b5b70852d8e3e
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 471c30b4849c77cd73d0e3189cb640586e35c34a
 
 
 ---
 
 
-# Ustawianie czasu, po upływie którego urządzenie ma zostać zablokowane
+# <a name="set-the-amount-of-time-before-your-device-is-locked"></a>Ustawianie czasu, po upływie którego urządzenie ma zostać zablokowane
 
 W celu zwiększenia bezpieczeństwa danych na urządzeniu z systemem Android administrator IT może skonfigurować zasady, które będą wymagać ustawienia czasu, przez jaki urządzenie może być bezczynne, zanim zostanie automatycznie zablokowane. Wykonaj następujące kroki, aby ustawić czas, po jakim urządzenie zostanie zablokowane.
 
@@ -35,6 +36,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

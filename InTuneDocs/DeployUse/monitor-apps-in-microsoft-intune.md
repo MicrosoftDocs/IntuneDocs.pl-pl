@@ -3,8 +3,9 @@ title: "Monitorowanie wdrożeń aplikacji| Microsoft Intune"
 description: "Dowiedz się, jak monitorować aplikacje wdrożone za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +14,19 @@ ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3412150f96f81937b6ea471d4a27ac42da875f8
-ms.openlocfilehash: a0fd24b430cce49cf7d3ba395341ed07912b9404
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 06a50371715a89961231b5810180ac459f05229e
 
 
 ---
 
 
-# Monitorowanie wdrożeń aplikacji w usłudze Microsoft Intune
+# <a name="monitor-app-deployments-in-microsoft-intune"></a>Monitorowanie wdrożeń aplikacji w usłudze Microsoft Intune
 
-## Monitorowanie wdrożenia aplikacji
-W konsoli administracyjnej usługi Intune widoczne są aplikacje, którymi zarządzasz, a także stan wszystkich wdrożeń.
+## <a name="monitor-an-app-deployment"></a>Monitorowanie wdrożenia aplikacji
+W konsoli administracyjnej usługi Intune widoczne są aplikacje, którymi zarządzasz, a także stan wszystkich wdrożeń. <!---App status is displayed in real-time. You don't have to wait for the device to check-in before you can see this.--->
 
-### Aby wyświetlić zarządzane aplikacje i ich stan
+### <a name="to-view-apps-that-you-manage-and-their-status"></a>Aby wyświetlić zarządzane aplikacje i ich stan
 W obszarze roboczym **Aplikacje** wybierz węzeł **Aplikacje** węzeł, a następnie wybierz pozycję **Aplikacje**.
 
 Zostanie wyświetlona lista aplikacji, którymi zarządzasz. Możesz wybrać dowolną aplikację, aby wyświetlić stan instalacji w dolnym okienku w oknie konsoli. Kliknij ten stan, aby zobaczyć więcej informacji. Jeśli na przykład jest wyświetlany stan **1 użytkownik ma dostępne to oprogramowanie**, możesz kliknąć komunikat, aby zobaczyć nazwę tego użytkownika.
@@ -37,7 +38,7 @@ Zostanie wyświetlona lista aplikacji, którymi zarządzasz. Możesz wybrać dow
 
 Ponadto w obszarze roboczym **Pulpit nawigacyjny** jest wyświetlany przegląd stanu aplikacji. Kliknięcie w dowolnym miejscu przeglądu spowoduje przekierowanie do listy aplikacji.
 
-## Aby wyświetlić bardziej szczegółowe informacje o aplikacji
+## <a name="to-view-more-detailed-information-about-an-app"></a>Aby wyświetlić bardziej szczegółowe informacje o aplikacji
 Na liście aplikacji zaznacz dowolną aplikację, a następnie wybierz pozycję **Wyświetl właściwości**.
 
 Na stronie aplikacji **Właściwości oprogramowania** wybierz jedną z tych kart: **Ogólne** — przedstawia ogólne informacje na temat aplikacji oraz na temat stanu jej instalacji; **Urządzenia** — przedstawia urządzenia, na których pomyślnie zainstalowano docelowe wdrożenie aplikacji; **Użytkownicy** — przedstawia użytkowników, na których urządzeniach pomyślnie zainstalowano docelowe wdrożenie aplikacji.
@@ -46,6 +47,6 @@ Tak jak wcześniej można użyć listy rozwijanej **Filtry**, aby skonfigurować
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 

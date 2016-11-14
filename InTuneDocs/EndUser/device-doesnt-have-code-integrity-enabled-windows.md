@@ -2,9 +2,10 @@
 title: "Na urządzeniu nie jest włączona integralność kodu | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85cdfd1aac6fdf738754539c746aee8e5d045ae9
-ms.openlocfilehash: 60e29209718ca206ae96ccc2df330650e2f93c1d
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: a42bd680167b41fc7a77227e2d1f7c2e6860fc9d
 
 
 ---
 
 
-# Na urządzeniu nie jest włączona integralność kodu
+# <a name="device-doesnt-have-code-integrity-enabled"></a>Na urządzeniu nie jest włączona integralność kodu
 
 Twoja organizacja wymaga włączenia funkcji integralności kodu systemu Windows. Ta funkcja sprawdza pliki sterowników i systemu na urządzeniu, aby upewnić się, że są bezpieczne.
 
@@ -35,6 +36,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

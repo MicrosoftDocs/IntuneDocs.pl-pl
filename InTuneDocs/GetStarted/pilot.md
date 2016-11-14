@@ -3,8 +3,9 @@ title: "Pilotaż | Microsoft Intune"
 description: "Zalecenia dotyczące fazy pilotażowej wdrożenia usługi Intune."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 14e55841-37f1-472c-9678-a1ba847cb331
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: a607737b808f3c53ec8f83e507369d9d58309c9d
+ms.sourcegitcommit: 8921043334630bbd2955c0423ca9cd1b76c27758
+ms.openlocfilehash: 813b03f5d172749076723f60d4cfe0b6c50a261c
 
 
 ---
@@ -108,6 +109,6 @@ Poniżej przedstawiono niektóre problemy, jakie można napotkać w fazie **Pilo
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

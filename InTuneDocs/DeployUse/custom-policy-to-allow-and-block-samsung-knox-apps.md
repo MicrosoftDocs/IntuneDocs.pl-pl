@@ -3,6 +3,7 @@ title: Dozwolone i zablokowane aplikacje dla systemu KNOX | Microsoft Intune
 description: "Niestandardowy profil umożliwiający utworzenie listy dozwolonych i zablokowanych aplikacji dla systemu KNOX."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Rozwiązywanie problemów dotyczących integracji z aplikacją Lookout |
 description: "W tym temacie opisano rozwiązywanie często występujących problemów dotyczących integracji z aplikacją Lookout"
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Konfigurowanie zarządzania programem Android for Work | Microsoft Intun
 description: "Włączanie zarządzania urządzeniami przenośnymi (MDM) dla urządzeń z programem Android for Work w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

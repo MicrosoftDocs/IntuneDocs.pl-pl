@@ -3,6 +3,7 @@ title: "Opis usługi | Microsoft Intune"
 description: "Usługa Intune jest usługą opartą na chmurze, która ułatwia zarządzanie komputerami z systemem Windows oraz urządzeniami przenośnymi z systemami iOS, Mac OS X, Android i Windows."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article

@@ -13,8 +13,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 975708b5204ab83108a9174083bb87dfeb04a063
-ms.openlocfilehash: 52ad28686fa279a7ec251d073283c3554d1c81fc
+ms.sourcegitcommit: 6b998728b3db60d10cadbcd34b5412fa76cb586f
+ms.openlocfilehash: ddc47ef5846bf448cf0de1e57b527e8ec4c562cc
 
 
 ---
@@ -415,6 +415,32 @@ Wartość zwracana przez tę metodę poinformuje zestaw SDK, czy aplikacja będz
  - Jeśli zwracana jest wartość true, aplikacja będzie odpowiedzialna za obsługę ponownego uruchomienia.   
  - Jeśli zwracana jest wartość false, zestaw SDK uruchomi ponownie aplikację po powrocie tej metody.  Zestaw SDK natychmiast wywoła okno dialogowe informujące użytkownika, że aplikacja musi zostać ponownie uruchomiona. 
 
+#Implementowanie kontrolek Zapisz jako
+
+Usługa Intune umożliwia administratorom IT wybieranie lokalizacji przechowywania, w których zarządzana aplikacja może zapisywać dane. Aplikacje mogą wysyłać zapytania do zestawu SDK aplikacji usługi Intune przy użyciu interfejsu API **isSaveToAllowedForLocation**.
+
+Przed zapisaniem zarządzanych danych w magazynie w chmurze lub lokalizacji lokalnej aplikacje muszą sprawdzić interfejs API **isSaveToAllowedForLocation**, aby dowiedzieć się, czy administrator IT zezwolił na zapisywanie danych w tym miejscu.
+
+W przypadku korzystania z interfejsu API **isSaveToAllowedForLocation** aplikacje muszą przekazać nazwę UPN używaną dla lokalizacji przechowywania, jeśli jest ona dostępna.
+
+##Obsługiwane lokalizacje
+
+Interfejs API **isSaveToAllowedForLocation** zapewnia stałe do sprawdzania następujących lokalizacji:
+
+* IntuneMAMSaveLocationOther 
+* IntuneMAMSaveLocationOneDriveForBusiness 
+* IntuneMAMSaveLocationSharePoint 
+* IntuneMAMSaveLocationBox 
+* IntuneMAMSaveLocationDropbox 
+* IntuneMAMSaveLocationGoogleDrive 
+* IntuneMAMSaveLocationLocalDrive 
+
+Aplikacje powinny używać stałych w interfejsie API **isSaveToAllowedForLocation**, aby sprawdzać, czy można zapisywać dane w lokalizacjach uznawanych za „zarządzane”, np. w usłudze OneDrive dla Firm, lub „osobiste”. Ponadto należy używać interfejsu API w sytuacjach, w których aplikacja nie może określić, czy lokalizacja jest „zarządzana”, czy „osobista”. 
+
+Jeśli lokalizacja jest znana jako „osobista”, aplikacje powinny używać wartości **IntuneMAMSaveLocationOther**. 
+
+Stałej **IntuneMAMSaveLocationLocalDrive** należy używać, gdy aplikacja zapisuje dane w dowolnej lokalizacji na urządzeniu lokalnym.
+
 
 
 # Konfigurowanie ustawień zestawu SDK aplikacji usługi Intune
@@ -497,7 +523,7 @@ Należy zauważyć, że tożsamość jest definiowana po prostu jako ciąg. W to
 Tożsamość jest po prostu nazwą użytkownika konta (np. user@contoso.com). Deweloperzy mogą ustawić tożsamość aplikacji na następujących różnych poziomach: 
 
 * **Przetwarzanie tożsamości**: tożsamość procesu ustawia tożsamość dla całego procesu i jest używana głównie dla aplikacji z obsługą jednej tożsamości. Ta tożsamość ma wpływ na wszystkie operacje, pliki i interfejs użytkownika.
-* **Tożsamość interfejsu użytkownika**: określa, jakie zasady są stosowane do operacji interfejsu użytkownika w głównym wątku, takich jak wytnij/kopiuj/wklej, kod PIN, uwierzytelnianie, udostępnianie danych itp. Tożsamość interfejsu użytkownika nie ma wpływu na operacje na plikach (szyfrowanie, kopie zapasowe itp.). 
+* **Tożsamość interfejsu użytkownika**: określa, jakie zasady są stosowane do operacji interfejsu użytkownika w głównym wątku, takich jak wytnij/kopiuj/wklej, kod PIN, uwierzytelnianie, udostępnianie danych itp. Tożsamość interfejsu użytkownika nie ma wpływu na operacje na plikach (szyfrowanie, kopie zapasowe itp.).
 * **Tożsamość wątku**: tożsamość wątku wpływa na to, jakie zasady są stosowane w bieżącym wątku. Ma to wpływ na wszystkie operacje, pliki i interfejs użytkownika.
 
 To aplikacja odpowiada za odpowiednie ustawienie tożsamości bez względu na to, czy użytkownik jest zarządzany.
@@ -523,9 +549,12 @@ Jeśli aplikacja tworzy pliki zawierające dane od użytkowników zarządzanych 
  
 Jeśli aplikacja zawiera rozszerzenie udostępniania, właściciela udostępnianego elementu można pobrać przy użyciu metody `protectionInfoForItemProvider` w `IntuneMAMDataProtectionManager`. Jeśli udostępniony element jest plikiem, zestaw SDK obsłuży ustawianie właściciela pliku. Jeśli udostępnionym elementem są dane, aplikacja odpowiada za ustawienie właściciela pliku, jeśli te dane są zachowywane w pliku, oraz wywołanie interfejsu API `setUIPolicyIdentity` (opisanego poniżej) przed wyświetleniem danych w interfejsie użytkownika.
  
-#Włączanie wielu tożsamości
+##Włączanie wielu tożsamości
  
-Domyślnie aplikacje są traktowane jako aplikacje z obsługą jednej tożsamości, a tożsamość procesu jest ustawiana na zarejestrowanego użytkownika przez zestaw SDK. Aby włączyć obsługę wielu tożsamości, należy dodać ustawienie typu wartość logiczna o nazwie „MultiIdentity” z wartością „YES” (Tak) do słownika IntuneMAMSettings w pliku Info.plist aplikacji. W przypadku włączenia obsługi wielu tożsamości, tożsamość procesu, tożsamość interfejsu użytkownika i tożsamość wątku będą ustawione na „zero”, a za odpowiednie ich ustawienie będzie odpowiadała aplikacja.
+Domyślnie aplikacje są traktowane jako aplikacje z obsługą jednej tożsamości, a zestaw SDK ustawia tożsamość procesu na zarejestrowanego użytkownika. Aby włączyć obsługę wielu tożsamości, należy dodać ustawienie typu wartość logiczna o nazwie `MultiIdentity` z wartością „YES” (Tak) do słownika **IntuneMAMSettings** w pliku Info.plist aplikacji. 
+
+> [!NOTE]
+> W przypadku włączenia obsługi wielu tożsamości tożsamość procesu, tożsamość interfejsu użytkownika i tożsamości wątku będą ustawione na wartość zero. Za ich odpowiednie ustawienie odpowiada aplikacja.
 
  
 ##Przełączanie tożsamości
@@ -628,6 +657,6 @@ Jeśli aplikacja używa **kompilacji struktury** zestawu SDK aplikacji usługi I
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

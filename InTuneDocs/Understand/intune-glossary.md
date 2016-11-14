@@ -3,6 +3,7 @@ title: "Słownik usługi Intune | Microsoft Intune"
 description: "Zapoznaj się z terminologią dotyczącą usługi Microsoft Intune"
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/23/2016
 ms.topic: article

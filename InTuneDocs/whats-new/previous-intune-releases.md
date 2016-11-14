@@ -3,8 +3,9 @@ title: Poprzednie wersje | Microsoft Intune
 description: 
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,77 +14,156 @@ ms.assetid: 45dad14a-d412-488d-bb1e-ad990ea503df
 ROBOTS: noindex,nofollow
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffbb26f30c7801789a47d57ffed00696f5e6d81a
-ms.openlocfilehash: 11e90ce994d17d9dcc62edba775dd0ab8110414e
+ms.sourcegitcommit: 1360a23647d6e66ba682548ad2b158bb9047265d
+ms.openlocfilehash: ec1b118b2c7681f351d83f469b8c32e95f8fa71f
 
 
 ---
 
 # Poprzednie wersje usługi Intune
+
+## Wrzesień 2016
+### Nowe funkcje, anonsy i informacje
+* [Dostęp warunkowy w systemie Windows](#windows-conditional-access)
+* [Obsługa systemu iOS 10](#ios-10-support)
+* [Narzędzie opakowujące aplikacje obsługuje zarządzanie aplikacjami mobilnymi bez rejestrowania urządzeń dla systemów Android i iOS](#app-wrapping-tool-supports-mam-without-device-enrollment-for-android-and-ios)
+* [Rozpoczęte we wrześniu przejście grup usługi Intune do grup usługi Azure Active Directory](#intune-groups-begin-transitioning-to-azure-active-directory-in-september)
+* [Integracja aplikacji Lookout w celu ochrony urządzeń z systemem Android](#lookout-integration-to-protect-android-devices)
+* [Aktualizacje aplikacji Portal firmy dla systemów Android, iOS i Windows](#company-portal-updates)
+* [Słownik dotyczący usługi Intune](#intune-glossary)
+* [Wkrótce](#whats-coming)
+
+### Dostęp warunkowy w systemie Windows
+Przy użyciu konsoli administracyjnej usługi Intune można teraz tworzyć zasady dostępu warunkowego, uniemożliwiając komputerom z systemem Windows dostęp do usług Exchange Online i SharePoint Online. Zasady dostępu warunkowego można też tworzyć w celu blokowania dostępu do aplikacji klasycznych pakietu Office oraz aplikacji uniwersalnych.
+
+### Obsługa systemu iOS 10
+Istniejące scenariusze dotyczące zarządzania urządzeniami przenośnymi i aplikacjami mobilnymi w usłudze Intune mają zastosowanie w systemie iOS 10. Aby uzyskać porady, zobacz [Blog zespołu pomocy technicznej usługi Intune](https://blogs.technet.microsoft.com/intunesupport/2016/09/13/support-tip-intune-support-for-ios-10/).
+
+### Narzędzie opakowujące aplikacje obsługuje zarządzanie aplikacjami mobilnymi bez rejestrowania urządzeń dla systemów Android i iOS
+Narzędzie opakowujące aplikacje dostępne w ramach usługi Intune to narzędzie wiersza polecenia służące do obsługi aplikacji biznesowych do zarządzania aplikacjami mobilnymi w usłudze Intune dla systemów iOS i Android. Jest to najprostszy sposób uwzględnienia w swojej aplikacji zestawu SDK do zarządzania aplikacjami mobilnymi w usłudze Intune. Dzięki temu aplikacja może wymuszać stosowanie zasad zarządzania aplikacjami mobilnymi wdrożonych za pomocą usługi Intune. Za pomocą zasad zarządzania aplikacjami mobilnymi można:
+
+1. Szyfrować dane aplikacji.
+2. Wymagać wprowadzania numeru PIN podczas uruchamiania aplikacji przez pracownika przetwarzającego informacje.
+3. Zezwalać aplikacji na przesyłanie danych tylko do innych aplikacji zarządzanych.
+4. Uniemożliwić aplikacji tworzenie kopii zapasowej danych w systemie Android oraz usługach iTunes i iCloud.
+5. Zezwalać na wycinanie, kopiowanie i wklejanie wyłącznie do oraz z innych aplikacji zarządzanych.
+
+Publiczna wersja zapoznawcza zaktualizowanego narzędzia opakowującego aplikacje w usłudze Intune obsługuje teraz zarządzanie aplikacjami mobilnymi bez rejestrowania urządzeń w wewnętrznych aplikacjach biznesowych w systemach iOS i Android. To znaczy, że użytkownicy końcowi nie muszą rejestrować swoich urządzeń za pomocą usługi Intune w celu używania aplikacji biznesowych obsługujących zarządzanie aplikacjami mobilnymi.
+
+Każdy może wypróbować publiczną wersję zapoznawczą i przeczytać pomocną dokumentację. Wystarczy skorzystać z materiałów udostępnionych na koncie msintuneappsdk w usłudze GitHub:
+
+http://www.github.com/msintuneappsdk/intune-app-wrapper-ios-preview
+
+http://www.github.com/msintuneappsdk/intune-app-wrapper-android-preview
+
+Przed zainstalowaniem i użyciem wersji wstępnej narzędzia opakowującego aplikacje w usłudze Microsoft Intune dla systemów Android i iOS trzeba:
+
+* Zapoznać się z postanowieniami licencyjnymi firmy Microsoft dotyczącymi wersji wstępnej narzędzia opakowującego aplikacje w usłudze Microsoft Intune dla systemów Android i iOS.
+* Wydrukować i zachować kopię postanowień licencyjnych. Pobranie i używanie wersji wstępnej narzędzia opakowującego aplikacje w usłudze Microsoft Intune dla systemu Android jest równoznaczne z akceptacją postanowień licencyjnych. Jeśli użytkownik nie akceptuje niniejszych postanowień, nie może używać tego oprogramowania.
+<!---TFS 1235607--->
+
+### Rozpoczęte we wrześniu przejście grup usługi Intune do grup usługi Azure Active Directory
+W przypadku niektórych nowych kont usługi Intune będą używane grupy zabezpieczeń usługi Azure Active Directory, a nie grupy użytkowników usługi Intune. To, że praca odbywa się z grupami zabezpieczeń, jest sygnalizowane obecnością na stronie grup portalu Intune linku do portalu zarządzania Azure.
+
+### Integracja aplikacji Lookout w celu ochrony urządzeń z systemem Android
+Firma Microsoft przeprowadza integrację z rozwiązaniem firmy Lookout przeznaczonymi do ochrony urządzeń przenośnych w celu zabezpieczenia urządzeń przenośnych z systemem Android przez wykrywanie na urządzeniach złośliwego oprogramowania, ryzykownych aplikacji i innych zagrożeń. Rozwiązanie firmy Lookout pomaga w określeniu poziomu zagrożenia, który można skonfigurować. W usłudze Intune można utworzyć regułę zasad zgodności w celu określania zgodności urządzeń na podstawie oceny ryzyka uzyskanej z rozwiązania firmy Lookout. Za pomocą zasad dostępu warunkowego można umożliwić lub zablokować dostęp do zasobów firmy w zależności od stanu zgodności danego urządzenia.
+
+W przypadku użytkowników końcowych korzystających z niezgodnych urządzeń zostanie wyświetlony monit o zarejestrowanie urządzeń. Aby uzyskać dostęp do zasobów firmy, użytkownicy będą musieli zainstalować aplikację Lookout for Work na urządzeniach z systemem Android, uaktywnić ją i podjąć środki zaradcze dotyczące zagrożeń zgłoszonych w aplikacji Lookout for Work. Aby uzyskać więcej informacji, zobacz [Ograniczanie dostępu do zasobów firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji](restrict-access-based-on-device-network-app-risk.md).
+
+
+### Aktualizacje Portalu firmy
+
+### Android
+**Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android**<br/>
+Na stronie głównej Portalu firmy dla systemu Android dodano nową ikonę Powiadomienia. Naciśnięcie tej ikony powoduje przejście na stronę Powiadomienia — przedstawia ona użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. W aplikacji Portal firmy dla systemu iOS obszar powiadomień jest już dostępny. W wyniku wprowadzenia strony Powiadomienia nie będzie widoczna strona Konfigurowanie dostępu do zasobów firmy po uruchomieniu lub wznowieniu pracy w Portalu firmy, jeśli urządzenie zostało już zarejestrowane. W przypadku tworzenia własnych wskazówek dla użytkowników końcowych warto zaktualizować dokumentację, tak aby uwzględniała tę zmianę. Zaktualizowane zrzuty ekranu można znaleźć [tutaj](https://aka.ms/androidcpupdate).  
+<!---TFS 1095560--->
+
+**Przekazywanie opinii w Portalu firmy dla systemu Android**</br>
+Do menu Portalu firmy dla systemu Android został dodany nowy element. Po naciśnięciu pozycji **Pomoc i opinie** dostępne są trzy akcje:
+* Skorzystaj z pozycji **Uzyskaj pomoc**, aby zgłosić problemy z Portalem firmy do działu IT. Spowoduje to utworzenie wiadomości e-mail przy użyciu klienta poczty e-mail i dołączenie do niej dzienników Portalu firmy. Pozycja **Uzyskaj pomoc** zastępuje funkcję **Wyślij dane** na stronie **Ustawienia**.
+* Skorzystaj z pozycji **Zgłoś opinię**, aby przekazać opinię do zespołu Portalu firmy.
+* Skorzystaj z pozycji **Oceń naszą aplikację**, aby wystawić aplikacji Portal firmy ocenę lub recenzję w usłudze Google Play.
+
+### iOS
+**Zmiany w obsłudze aplikacji Portal firmy dla systemu iOS**<br/>
+Wszyscy użytkownicy aplikacji Portal firmy usługi Microsoft Intune dla systemu iOS muszą obecnie używać jej najnowszej wersji. Nowi użytkownicy mogą pobrać tylko najnowszą wersję, a bieżący użytkownicy muszą przeprowadzić aktualizację do najnowszej wersji. Najnowsza wersja aplikacji wymaga systemu iOS 8.0 lub nowszego, dlatego urządzenia ze starszymi wersjami systemu iOS nie mogą korzystać z portalu firmy ani rejestrować się do czasu ich zaktualizowania do systemu iOS 8.0 lub nowszego oraz zaktualizowania aplikacji Portal firmy do najnowszej wersji. Zarejestrowane urządzenia z wersjami systemu iOS poniżej 8.0 będą nadal zarządzane i wyświetlane w konsoli administracyjnej usługi Intune.
+<!---TFS 1283165--->
+
+**Ulepszenia w sposobie uzyskiwania aplikacji przez użytkowników końcowych systemu iOS**<br/>
+Wprowadzono następujące zmiany w odniesieniu do kafelków aplikacji w aplikacji Portal firmy dla systemu iOS. Zmiany mają na celu umożliwienie przechodzenia do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich swoich aplikacji. Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu z aplikacjami, w związku z czym użytkownicy muszą korzystać z różnych widoków, aby znaleźć wszystkie swoje aplikacje.
+
+- Kafelek **Aplikacje firmowe** pozwalał poprzednio przejść do listy wszystkich aplikacji na karcie WSZYSTKIE w witrynie sieci Web Portal firmy. Jego działanie nie ulegnie zmianie. Nazwa kafelka została zmieniona na **Wszystkie aplikacje**.
+- Kafelek **Inne aplikacje** pozwalał poprzednio przejść do widoku zawierającego wszystkie aplikacje, których wyświetlanie w aplikacji Portal firmy jest możliwe zgodnie z zasadami firmy Apple. Nazwa kafelka została zmieniona na **Polecane aplikacje**, a jego naciśnięcie spowoduje przejście na kartę POLECANE w witrynie sieci Web Portal firmy.
+-  Kafelek **Kategorie** pozwalał poprzednio przejść w ramach aplikacji Portal firmy do widoku zawierającego kategorie aplikacji. Nazwa kafelka nie uległa zmianie, ale jego naciśnięcie będzie teraz powodować przejście na kartę KATEGORIE w witrynie sieci Web Portal firmy.
+Zaktualizowane zrzuty ekranu można znaleźć [tutaj](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
+<!---TFS 1317133--->
+
+**Wyświetlaj monit o instalację aplikacji Managed Browser dla systemu iOS, jeśli oprogramowanie IT Pro określiło taki wymóg dla aplikacji**<br/>
+Ustawienie składnika Web Clip w taki sposób, aby otwierał się tylko w zarządzanej przeglądarce w przypadku, gdy zarządzana przeglądarka nie została zainstalowana na urządzeniu, spowoduje, że aplikacja Portal firmy na urządzeniu wyświetli monit o zainstalowanie zarządzanej przeglądarki przed zainstalowaniem składnika Web Clip.
+<!---TFS 1228570--->
+
+### Windows
+**Dodanie przycisku wysyłania opinii do aplikacji Portal firmy dla systemu Windows Phone 8.1**<br/>
+Aplikacja Portal firmy dla systemu Windows Phone 8.1 umożliwia użytkownikom końcowym przesyłanie opinii o aplikacji przy użyciu nowego przycisku „wyślij opinię”. Aby znaleźć przycisk, użytkownicy muszą nacisnąć oznaczone wielokropkiem menu w prawej dolnej części ekranu aplikacji Portal firmy, a następnie nacisnąć pozycję **wyślij opinię**. Zebrane anonimowe opinie pomogą firmie Microsoft w ulepszaniu środowiska aplikacji Portal firmy dla użytkowników.
+<!---TFS 1317806--->
+
+### Słownik dotyczący usługi Intune</br>
+Dodano nowy [temat w słowniku](https://docs.microsoft.com/intune/understand-explore/intune-glossary) do biblioteki, aby ułatwić zrozumienie niektórych pojęć używanych w produkcie Intune.
+
+
 ## Sierpień 2016
-## Sierpień 2016
-## Zarządzanie aplikacjami
+### Zarządzanie aplikacjami
 <!---@Barry, I created the buckets of App management, Device management, etc but am not tied to them. Just wanted to break up and organize the feature list. If you're going to take over the Company Portal section, please talk to Stacie about how she's been organizing it. --->
 
-### Aplikacje ukrywane i wyświetlane dla systemu iOS 9.3
-Dla urządzeń nadzorowanych z systemem iOS 9.3 lub nowszym w ogólnych zasadach konfiguracji systemu iOS można używać listy aplikacji ukrywanych i wyświetlanych, aby:
+__Aplikacje ukrywane i wyświetlane dla systemu iOS 9.3__ Dla urządzeń nadzorowanych z systemem iOS 9.3 lub nowszym w ogólnych zasadach konfiguracji systemu iOS można używać listy aplikacji ukrywanych i wyświetlanych, aby:
 - Określić listę aplikacji, które będą ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
 - Określić listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
 
 Dla tych list można określić zarówno aplikacje wdrożone, jak i wbudowane aplikacje dla systemu iOS, takie jak Wiadomości i Notatki. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu iOS w usłudze Microsoft Intune]( /intune/deploy-use/ios-policy-settings-in-microsoft-intune)
 <!---TFS 1279009 checked--->
-### Zasady aplikacji dozwolonych i zablokowanych dla urządzeń z systemem Samsung KNOX
-Dla urządzeń z systemem Samsung KNOX można teraz skonfigurować zasady niestandardowe umożliwiające utworzenie jednej z następujących list:
+__Zasady aplikacji dozwolonych i zablokowanych dla urządzeń z systemem Samsung KNOX__ Dla urządzeń z systemem Samsung KNOX można teraz skonfigurować zasady niestandardowe umożliwiające utworzenie jednej z następujących list:
 - Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Nawet po zainstalowaniu aplikacji zdefiniowanej na liście zablokowanych nie będzie jej można uaktywnić na urządzeniu.
 - Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu klepu Google Play. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
 
 Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung KNOX.
 Aby uzyskać więcej informacji, zobacz [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
 <!---TFS 1311629 checked --->
-### Nowe aplikacje zgodne z zasadami zarządzania aplikacjami mobilnymi (MAM)
-Aplikacja usługi Yammer dla systemów [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) i [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) jest teraz zgodna z [zasadami zarządzania aplikacjami mobilnymi (MAM, mobile application management) usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) bez względu na to, czy urządzenie jest zarejestrowane.
+__Nowe aplikacje zgodne z zasadami zarządzania aplikacjami mobilnymi__ Aplikacja usługi Yammer dla systemów [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) i [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) jest teraz zgodna z [zasadami zarządzania aplikacjami mobilnymi usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune), bez względu na to, czy urządzenie jest zarejestrowane.
 
 Pełna lista aplikacji zgodnych z zasadami MAM jest dostępna w witrynie [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).
 <!--- TFS 1252335 & 1252336 checked--->
 
-
 <!--- I started putting TFS numbers in the What's Coming topic and found it helpful when updating the What's New. Up to you if you want to continue. --->
 
-### Aplikacje Intune Viewer
-Wraz z wydaniem nowej aplikacji RMS sharing zostaną usunięte następujące aplikacje Intune Viewer, począwszy od sierpnia 2016 roku:
+__Aplikacje Intune Viewer__ Wraz z wydaniem nowej aplikacji RMS sharing zostaną usunięte następujące aplikacje Intune Viewer, począwszy od sierpnia 2016 roku:
 - Intune AV Viewer
 - Intune PDF Viewer
 - Intune Image Viewer dla systemu Android ze sklepu Google Play
 
 Zalecamy, aby zamiast korzystania z aplikacji Intune Viewer używać nowej [aplikacji do zarządzania prawami (RMS sharing) dla systemu Android](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app), co pozwala na wdrożenie jednej aplikacji zamiast trzech osobnych aplikacji w celu bezpiecznego przeglądania plików firmy na urządzeniach z systemem Android. Gdy aplikacja Intune Viewer nie będzie już obsługiwana, zostanie usunięta ze sklepu Google i nie będzie dostępna do użycia w przyszłości.
 
-## Zarządzanie urządzeniami
-### Obsługa systemu Android 7.0
-Usługa Intune zapewnia obsługę „od dnia 0” nadchodzącego systemu operacyjnego Android 7.0 dla urządzeń przenośnych.
+### Zarządzanie urządzeniami
+__Obsługa systemu Android 7.0__ Usługa Intune zapewnia obsługę „od dnia 0” nadchodzącego systemu operacyjnego Android 7.0 dla urządzeń przenośnych.
 <!---TFS 1262053--->
-### Usunięcie przez Google możliwości zdalnego resetowania kodu dostępu na urządzeniach z systemem Android 7.0
-Google usuwa możliwość zdalnego resetowania kodu dostępu urządzeń z systemem Android 7.0 przez administratorów IT i użytkowników końcowych. Wcześniej administratorzy IT mogli zdalnie zresetować kod dostępu użytkownika, a użytkownicy końcowi mogli resetować swoje kody dostępu z witryny sieci Web Portalu firmy.
 
+__Usunięcie przez firmę Google możliwości zdalnego resetowania kodu dostępu na urządzeniach z systemem Android 7.0__ Firma Google usuwa możliwość zdalnego resetowania kodu dostępu urządzeń z systemem Android 7.0 przez administratorów IT i użytkowników końcowych. Wcześniej administratorzy IT mogli zdalnie zresetować kod dostępu użytkownika, a użytkownicy końcowi mogli resetować swoje kody dostępu z witryny sieci Web Portalu firmy.
 
-
-## Aktualizacje Portalu firmy
-### Witryna sieci Web Portal firmy
+### Aktualizacje Portalu firmy
+__Witryna sieci Web Portal firmy__
 - **Link opinii z Portalu firmy do firmy Microsoft** <br/>
 Witryna sieci Web Portalu firmy udostępnia użytkownikom końcowym nowy link „Opinia” u dołu strony, który użytkownicy mogą wybrać, aby wysłać do firmy Microsoft opinię dotyczącą ich wizyty w witrynie. Zebrane, anonimowe opinie pomogą firmie Microsoft w ulepszaniu środowiska witryny sieci Web Portalu firmy dla użytkowników.
 <!--- TFS 1313657 checked--->
 
-### iOS
+__iOS__
 - **Minimalna wersja systemu iOS dla przeglądarki Managed Browser została zaktualizowana do 8.0**<br/>
 Aplikacja Microsoft Intune Managed Browser dla systemu iOS została zaktualizowana w celu obsługiwania urządzeń z systemem iOS 8.0 lub nowszym. Podczas gdy urządzenia z systemem iOS 7.1 wciąż mogą używać istniejącej aplikacji Managed Browser, należy zachęcać użytkowników do aktualizacji systemu iOS do wersji 8.0 lub nowszej, aby mogli w pełni skorzystać z najnowszych funkcji przeglądarki Managed Browser.  
 <!---TFS 1313253 checked--->
 
-## Wkrótce
+### Wkrótce
 
-### Obsługa systemu iOS 10
-Usługa Intune będzie w pełni obsługiwać system iOS 10. Więcej informacji zostanie podanych po publicznym udostępnieniu systemu iOS 10.
+__Obsługa systemu iOS 10__ Usługa Intune będzie w pełni obsługiwać system iOS 10. Więcej informacji zostanie podanych po publicznym udostępnieniu systemu iOS 10.
 
-### Przejście grup usługi Intune do grup usługi Azure Active Directory rozpocznie się we wrześniu 2016 r.
-Usługa Intune wprowadza nową funkcjonalność zarządzania grupami, która używa grup zabezpieczeń usługi Azure Active Directory (AAD) jako grupy użytkowników i urządzeń w usłudze Intune. Te grupy będą używane do zarządzania grupami, wdrażania zasad i wdrażania profilów **po wprowadzeniu nowego portalu administracyjnego usługi Intune używającej platformy Azure**.
+__Przejście grup usługi Intune do grup usługi Azure Active Directory rozpocznie się we wrześniu 2016 r.__ Usługa Intune wprowadza nową funkcjonalność zarządzania grupami, która używa grup zabezpieczeń usługi Azure Active Directory (AAD) jako grupy użytkowników i urządzeń w usłudze Intune. Te grupy będą używane do zarządzania grupami, wdrażania zasad i wdrażania profilów **po wprowadzeniu nowego portalu administracyjnego usługi Intune używającej platformy Azure**.
 
 Nowe środowisko zlikwiduje konieczność duplikowania grup między usługami, **pozwoli na dostęp do nowych funkcji grup usługi Azure Active Directory — wersja Premium (AADP)** i zapewni możliwość rozszerzenia przy użyciu programów PowerShell i Graph. Ujednolici to również środowisko administrowania grupami w zarządzaniu mobilnością w przedsiębiorstwie.
 
@@ -99,11 +179,9 @@ Oprócz zmian w zarządzaniu grupami **zostaną wycofane następujące funkcje**
 - Przestawianie z grupami w raportach
 <!--- TFS 1295329--->
 
-### Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android
-We wrześniu udostępnimy aktualizację Portalu firmy dla systemu Android, która wprowadzi nową ikonę **Powiadomienia** na stronie głównej. Naciśnięcie tej ikony spowoduje przejście na stronę **Powiadomienia**, która przedstawia użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. Jeśli używasz również aplikacji Portal firmy dla systemu iOS, powiadomienia masz już widoczne. Wraz z wprowadzeniem strony **Powiadomienia** nie będzie widoczna strona **Konfigurowanie dostępu do zasobów firmy** po uruchomieniu lub wznowieniu pracy w Portalu firmy dla systemu Android, jeśli urządzenie zostało już zarejestrowane. Wiemy, że wiele osób utworzyło wskazówki dla użytkowników końcowych i doceniają wcześniejsze powiadomienie, gdy wskazówki lub zrzuty ekranu mogą wymagać aktualizacji. Prosimy więc o takie zaktualizowanie dokumentacji, aby odzwierciedlała ona nadchodzące zmiany w środowisku. Zaktualizowane zrzuty ekranu można znaleźć tutaj: https://aka.ms/androidcpupdate.  
+__Dodanie obszaru „Powiadomienia” do Portalu firmy dla systemu Android__ We wrześniu udostępnimy aktualizację Portalu firmy dla systemu Android, która wprowadzi nową ikonę **Powiadomienia** na stronie głównej. Naciśnięcie tej ikony spowoduje przejście na stronę **Powiadomienia**, która przedstawia użytkownikowi końcowemu wszystkie elementy, które wymagają uwagi w aplikacji Portal firmy, takie jak brak zgodności urządzeń, aktualizacja rejestracji i aktywacja rejestracji. Jeśli używasz również aplikacji Portal firmy dla systemu iOS, powiadomienia masz już widoczne. Wraz z wprowadzeniem strony **Powiadomienia** nie będzie widoczna strona **Konfigurowanie dostępu do zasobów firmy** po uruchomieniu lub wznowieniu pracy w Portalu firmy dla systemu Android, jeśli urządzenie zostało już zarejestrowane. Wiemy, że wiele osób utworzyło wskazówki dla użytkowników końcowych i doceniają wcześniejsze powiadomienie, gdy wskazówki lub zrzuty ekranu mogą wymagać aktualizacji. Prosimy więc o takie zaktualizowanie dokumentacji, aby odzwierciedlała ona nadchodzące zmiany w środowisku. Zaktualizowane zrzuty ekranu można znaleźć tutaj: https://aka.ms/androidcpupdate.  
 
-### Ulepszenia w sposobie uzyskiwania aplikacji przez użytkowników końcowych systemu iOS
-We wrześniu zostaną wprowadzone następujące zmiany w odniesieniu do kafelków aplikacji w aplikacji Portal firmy dla systemu iOS. Zmiany mają na celu umożliwienie przechodzenia do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich swoich aplikacji. Obecnie ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu z aplikacjami, w związku z czym użytkownicy muszą korzystać z różnych widoków, aby znaleźć wszystkie swoje aplikacje.
+__Ulepszenia w sposobie uzyskiwania aplikacji przez użytkowników końcowych systemu iOS__ We wrześniu zostaną wprowadzone następujące zmiany w odniesieniu do kafelków aplikacji w aplikacji Portal firmy dla systemu iOS. Zmiany mają na celu umożliwienie użytkownikom przechodzenia do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich ich aplikacji. Obecnie ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu z aplikacjami, w związku z czym użytkownicy muszą korzystać z różnych widoków, aby znaleźć wszystkie swoje aplikacje.
 
 - Kafelek **Aplikacje firmowe** pozwala obecnie przejść do listy wszystkich aplikacji na karcie WSZYSTKIE w witrynie sieci Web Portal firmy. Jego działanie nie ulegnie zmianie. Nazwa kafelka zostanie zmieniona na **Wszystkie aplikacje**.
 - Kafelek **Inne aplikacje** pozwala obecnie przejść do widoku aplikacji Portal firmy zawierającego wszystkie aplikacje, których wyświetlanie w aplikacji Portal firmy jest możliwe zgodnie z zasadami firmy Apple. Nazwa kafelka zostanie zmieniona na **Polecane aplikacje**, a jego dotknięcie spowoduje przejście na kartę POLECANE w witrynie sieci Web Portal firmy.
@@ -144,30 +222,30 @@ Intune notification rules define who an email alert will be sent to from Intune.
 
 ## Lipiec 2016
 ### Zarządzanie aplikacjami
-#### Poprawa aktualizowania profilu aprowizacji aplikacji
-Biznesowe aplikacje mobilne systemu Apple iOS są tworzone za pomocą dołączonego profilu aprowizacji, a ich kod jest podpisywany przy użyciu certyfikatu. Gdy aplikacja jest uruchamiana na urządzeniu z systemem iOS, system iOS potwierdza integralność aplikacji systemu iOS i wymusza zasady zdefiniowane przez profil aprowizacji.
+
+__Poprawa aktualizowania profilu aprowizacji aplikacji__ Biznesowe aplikacje mobilne systemu Apple iOS są tworzone za pomocą dołączonego profilu aprowizacji, a ich kod jest podpisywany przy użyciu certyfikatu. Gdy aplikacja jest uruchamiana na urządzeniu z systemem iOS, system iOS potwierdza integralność aplikacji systemu iOS i wymusza zasady zdefiniowane przez profil aprowizacji.
 
 Certyfikat podpisywania przedsiębiorstwa używany do podpisywania aplikacji jest zwykle ważny przez 3 lata. Profil aprowizacji wygasa jednak po 1 roku. Dzięki tej aktualizacji usługa Intune udostępnia narzędzia umożliwiające aktywne wdrażanie nowych zasad profilu aprowizacji na urządzeniach, na których znajdują się aplikacje bliskie wygaśnięcia, ale certyfikat jest nadal ważny. Aby uzyskać więcej informacji, zobacz [Use iOS mobile provisioning profile policies to keep your line of business apps up to date](/intune/deploy-use/ios-mobile-app-provisioning-profiles) (Używanie zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapewnić aktualność aplikacji).
 <!--- TFS 1280247--->
-#### Dostępny jest zestaw SDK platformy Xamarin dla aplikacji Intune
-Składnik Xamarin zestawu SDK aplikacji Intune umożliwia włączenie funkcji zarządzania aplikacją mobilną Intune na urządzeniach przenośnych z systemem iOS i Android skompilowanych za pomocą platformy Xamarin. Składnik można znaleźć w [sklepie Xamarin](https://components.xamarin.com/view/Microsoft.Intune.MAM) lub na [stronie Microsoft Intune Github](https://github.com/msintuneappsdk).
+
+__Dostępny jest zestaw SDK platformy Xamarin dla aplikacji Intune__ Składnik Xamarin zestawu SDK aplikacji Intune umożliwia włączenie funkcji zarządzania aplikacjami mobilnymi usługi Intune w aplikacjach mobilnych dla systemów iOS i Android skompilowanych za pomocą platformy Xamarin. Składnik można znaleźć w [sklepie Xamarin](https://components.xamarin.com/view/Microsoft.Intune.MAM) lub na [stronie Microsoft Intune Github](https://github.com/msintuneappsdk).
 <!--- TFS 1061478 --->
 
 ### Zarządzanie urządzeniami
-#### Zwiększenie limitów rejestracji urządzeń
-Usługa Intune zwiększyła maksymalny limit rejestracji konfigurowalnych urządzeń z 5 na 15 urządzeń dla każdego użytkownika.
+__Zwiększenie limitów rejestracji urządzeń__ Usługa Intune zwiększyła maksymalny limit rejestracji konfigurowalnych urządzeń z 5 do 15 urządzeń dla każdego użytkownika.
 <!---TFS 1289896 --->
 
-#### Integracja programu TeamViewer dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune
-Integracja oprogramowania [TeamViewer](https://www.teamviewer.com) dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune umożliwia ustanawianie sesji pomocy zdalnej dla komputerów z systemem Windows w celu wsparcia działu pomocy technicznej użytkowników końcowych. Dotyczy to systemów Windows 7, 8, 8.1 i Windows 10. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
+__Integracja programu TeamViewer dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune__
+ Integracja oprogramowania [TeamViewer](https://www.teamviewer.com) dla komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune umożliwia ustanawianie sesji pomocy zdalnej dla komputerów z systemem Windows w celu wsparcia działu pomocy technicznej użytkowników końcowych. Dotyczy to systemów Windows 7, 8, 8.1 i Windows 10. Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
 <!---TFS 1284856--->
 
 ### Aktualizacje Portalu firmy
-#### Witryna sieci Web Portal firmy
+
+__Witryna sieci Web Portal firmy__
 - **Poprawione środowisko użytkownika końcowego podczas rejestrowania urządzeń z systemem Windows**<br/>
 Jeśli korzystasz z dostępu warunkowego, procedury rejestracji systemów Windows 8.1, Windows 10 Desktop i Windows 10 Mobile zostały uproszczone w witrynie internetowej Portalu firmy. Użytkownicy zobaczą teraz osobne kroki „Rejestrowanie urządzeń” i „Workplace Join”, co ułatwi sprawdzenie stanu urządzenia i ukończenie procesu po błędzie narzędzia Workplace Join (WPJ). Oddzielne kroki powinny również uprościć proces rozwiązywania problemów dla administratorów IT. Wcześniej, gdy użytkownik końcowy próbował zarejestrować urządzenie i wszystkie kroki rejestracji kończyły się pomyślnie z wyjątkiem użycia narzędzia WPJ, zarejestrowane urządzenie nie było wyświetlane na liście urządzeń do zidentyfikowania przez użytkowników, co było mylące.
 
-#### Android
+__Android__
 - **Aplikacja Portal firmy dla systemu Android**<br/>
 Jeśli użytkownicy końcowi systemu Android widzą komunikat o błędzie stwierdzający brak wymaganego certyfikatu na urządzeniu, mogą nacisnąć przycisk „Jak rozwiązać ten problem”, aby uzyskać [kroki](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator) wymagane do zainstalowania brakującego certyfikatu. Jeśli użytkownicy wykonają podane kroki, ale wciąż widzą komunikat o braku certyfikatu, proszeni są o kontakt z administratorem IT i podanie tego [linku](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), który zawiera kroki umożliwiające administratorom IT usunięcie problemu z certyfikatem.
 
@@ -175,7 +253,7 @@ Jeśli użytkownicy końcowi systemu Android widzą komunikat o błędzie stwier
 Na urządzeniach z systemem Android nie można już instalować aplikacji za pośrednictwem witryny internetowej Portalu firmy, chyba że zostały zarejestrowane w usłudze Intune przy użyciu aplikacji Portal firmy usługi Intune dla systemu Android.
 <!---TFS 1299082--->
 
-#### iOS
+__iOS__
 - **Zmiany w kontach menedżerów rejestracji urządzeń w aplikacji Portal firmy dla systemu iOS**<br/>
 Aby zwiększyć wydajność i skalę, usługa Intune nie pokazuje już wszystkich urządzeń menedżerów rejestracji urządzeń (DEM) w okienku **Moje urządzenia** aplikacji Portal firmy dla systemu iOS. Wyświetlane jest tylko urządzenie lokalne, na którym uruchomiono aplikację, o ile zostało zarejestrowane przez aplikację Portal firmy.
 
@@ -215,9 +293,9 @@ Informacje o kondycji usługi Intune zostały przeniesione do centralnej lokaliz
 - **Usługa Dynamics CRM Online obsługuje dostęp warunkowy.** Można ustawić zasady dostępu warunkowego dla usługi [Dynamics CRM Online](/intune/deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune), co umożliwia dostęp do niej tylko przez zarządzane i zgodne urządzenia z systemem iOS lub Android. Użytkownicy końcowi, którzy podejmą próbę zalogowania się do aplikacji mobilnej Dynamics CRM w systemie iOS lub Android, zostaną poproszeni o rejestrację w usłudze Intune oraz rozwiązanie wszelkich problemów z niezgodnością przed ukończeniem logowania.
 <!---TFS1295358--->
 
-##Aktualizacje Portalu firmy
+### Aktualizacje Portalu firmy w usłudze Intune
 
-#### Aplikacja Portal firmy dla systemu Android
+__Aplikacja Portal firmy dla systemu Android__
 
 - Gdy administratorzy IT zastosują nowe zasady „Wymagaj, aby urządzenia nie zezwalały na instalowanie aplikacji z nieznanych źródeł (Android 4.0+)”, użytkownikom końcowym urządzeń z systemem Android 4.0 lub nowszym zostanie wyświetlony komunikat „Instalacja z nieznanych źródeł musi zostać wyłączona”. Użytkownicy będą musieli przejść do pozycji **Ustawienia** > **Zabezpieczenia** i wyłączyć opcję **Nieznane źródła**. Link w komunikacie dotyczącym zgodności pozwala użytkownikom uzyskać więcej [informacji](/Intune/EndUser/you-are-asked-to-turn-off-unknown-sources-android) o komunikacie i o tym, dlaczego wymagane jest wyłączenie tego ustawienia.
 
@@ -227,7 +305,7 @@ Informacje o kondycji usługi Intune zostały przeniesione do centralnej lokaliz
 
 - Gdy administratorzy IT zastosują nową zasadę „Minimalny poziom poprawki zabezpieczeń (Android 6.0+)”, użytkownikom końcowym z urządzeniami z systemem Android 6.0 lub nowszym będzie wyświetlany komunikat „To urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń systemu Android”. Użytkownicy będą musieli zainstalować wymaganą poprawkę zabezpieczeń. Link w komunikacie dotyczącym zgodności pozwala użytkownikom uzyskać [informacje](/Intune/EndUser/you-are-asked-to-turn-on-scan-device-for-security-threats-android) o sposobie instalowania wymaganej poprawki zabezpieczeń i zobaczyć, która poprawka zabezpieczeń jest aktualnie zainstalowana.
 
-#### Aplikacja Portal firmy dla systemu iOS
+__Aplikacja Portal firmy dla systemu iOS__
 
 - Podczas instalacji aplikacji biznesowych przez użytkowników końcowych wyświetlane jest teraz usprawnione środowisko instalacyjne aplikacji. Jeśli instalacja aplikacji trwa długo, użytkownicy mogą synchronizować swoje urządzenia ręcznie, co wymusza wznowienie procesu synchronizacji. Aby przejrzeć instrukcje dla użytkowników końcowych, zobacz [Ręczne synchronizowanie urządzenia z systemem iOS](/Intune/EndUser/sync-your-device-manually-ios).
 
@@ -235,7 +313,6 @@ Informacje o kondycji usługi Intune zostały przeniesione do centralnej lokaliz
 
 
 ## Maj 2016
-
 Wszystkie te funkcje są również obsługiwane dla wdrożeń hybrydowych (program Configuration Manager z usługą Intune). Aby uzyskać więcej informacji na temat nowych funkcji hybrydowych, odwiedź stronę [Co nowego w funkcjach hybrydowych](https://technet.microsoft.com/en-us/library/mt718155.aspx).
 
 ### Dokumentacja
@@ -266,15 +343,6 @@ Aby uzyskać więcej informacji, zobacz [ten wpis w blogu](https://blogs.technet
 #### Witryna sieci Web Portal firmy
 - **Witryna sieci Web Portal firmy: transparent identyfikacji urządzenia będzie zapewniać więcej informacji użytkownikom końcowym.** Użytkownicy końcowi mogą teraz łatwiej identyfikować urządzenie, które wybrali, gdy korzystają z witryny sieci Web Portal firmy. W przypadku wybrania niewłaściwego urządzenia użytkownik będzie mógł wybrać poprawne urządzenie, naciskając link **Naciśnij tutaj** na transparencie na stronie głównej.
 
-## Wkrótce
-- **Dołączanie w interfejsie użytkownika Centrum wiadomości**. W ramach migracji usługi Intune do [portalu zarządzania usługą Office 365](https://portal.office.com/) rozpoczniemy korzystanie z Centrum wiadomości portalu w celu informowania o nowych funkcjach i przesyłania innych powiadomień. Ponadto po zainstalowaniu towarzyszącej administracyjnej aplikacji mobilnej usługi Office 365 możesz otrzymywać powiadomienia na telefonie komórkowym oraz łatwo przekazywać wszelkie komunikaty użytkownikom i aliasom dystrybucyjnym.
-Od majowej wersji zaczniemy używać Centrum wiadomości w celu powiadamiania o ukończeniu aktualizacji oraz dołączymy informacje o nowych i ulepszonych funkcjach usługi Intune. Sprawdź Centrum wiadomości już dzisiaj, logując się do [portalu zarządzania usługi Office 365](https://portal.office.com/) i wybierając opcję CENTRUM WIADOMOŚCI w lewym okienku nawigacji.
-
-- **Zmiany dotyczące kont menedżerów rejestracji urządzeń**. W celu poprawy wydajności i skalowania usługa Intune nie pokazuje już **wszystkich** urządzeń menedżerów rejestracji urządzeń (DEM) w okienku **Moje urządzenia** aplikacji Portal firmy dla systemu iOS. Wyświetlane jest tylko urządzenie lokalne, na którym uruchomiono aplikację, o ile zostało zarejestrowane przez aplikację Portal firmy. Użytkownik menedżera rejestracji urządzeń może wykonywać działania na urządzeniu lokalnym, ale zdalne zarządzanie innymi zarejestrowanymi urządzeniami można przeprowadzać tylko z konsoli administracyjnej usługi Intune. Dodatkowo w usłudze Intune wycofano używanie kont menedżera rejestracji urządzeń z programem Device Enrollment Program firmy Apple i narzędziem Apple Configurator. Obie te metody rejestracji obsługują już rejestrację bez użytkowników dla współużytkowanych urządzeń z systemem iOS. Kont menedżera rejestracji urządzeń należy używać tylko w przypadku braku dostępności rejestracji bez użytkowników dla współużytkowanych urządzeń.
-
-### Plan chmury
-Śledź na bieżąco rozwój usługi Intune, korzystając z [planu platformy w chmurze](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune).
-
 ### Wycofywanie usług
 - **Aplikacje Intune Viewer.** Wraz z wydaniem nowej aplikacji RMS sharing zostaną usunięte następujące aplikacje Intune Viewer, począwszy od sierpnia 2016 roku:
     - Intune AV Viewer
@@ -303,6 +371,7 @@ Reguły powiadomień usługi Intune definiują, do kogo będą wysyłane alerty 
 
 ## Kwiecień 2016
 Wszystkie te funkcje są również obsługiwane dla klientów hybrydowych (program Configuration Manager zintegrowany z usługą Intune).
+
 ### Zarządzanie aplikacjami
 - **Zgodność użytkownika funkcji zarządzania aplikacjami mobilnymi.**
 Teraz można wyświetlić [stan](/intune/deploy-use/monitor-mobile-app-management-policies-with-Microsoft-Intune) zasad zarządzania aplikacjami dla dowolnego użytkownika w dzierżawie usługi Azure Active Directory (AAD). Obejmuje to następujące działania:
@@ -337,148 +406,12 @@ Dostępne jest nowe ustawienie do [zarządzania aplikacjami mobilnymi](/intune/d
 
 Przed dodaniem tych stanów użytkownicy nie mieli wystarczających informacji na temat sytuacji w przypadku długich instalacji, ponieważ wyświetlany był tylko stan „Instalowanie”, który mógł pozostawać na ekranie godzinami. Dodanie nowych stanów oznacza, że zamiast kontaktować się z działem pomocy technicznej, użytkownicy mogą nacisnąć link „Oczekiwanie na synchronizację urządzenia” i wykonać instrukcje, aby wymusić wznowienie procesu synchronizacji.
 
-
-## Marzec 2016
-### Co nowego w wersji z 29 marca 2016 r.
-Z wyjątkiem aktualizacji ogólnych zasad konfiguracji systemu Windows 10, wszystkie funkcje w wersji opublikowanej 29 marca 2016 r. są również obsługiwane dla klientów hybrydowych (program Configuration Manager zintegrowany z usługą Intune). Hybrydowa obsługa dla aktualizacji ogólnych zasad konfiguracji systemu Windows 10 będzie dostępna wkrótce. Należy pamiętać, że niektóre z tych funkcji mogą wymagać najnowszej wersji programu Configuration Manager.
-
-### Zarządzanie aplikacjami
-- **Kontrolki zarządzania aplikacjami mobilnymi zapobiegające synchronizacji kontaktów programu Outlook (iOS).** Dostępne jest nowe ustawienie do zarządzania aplikacjami mobilnymi bez rejestracji urządzeń. To ustawienie umożliwia zapobieganie synchronizacji przez aplikację kontaktów z natywną książką adresową na urządzeniach z systemem iOS. Po włączeniu tego ustawienia aplikacja nie będzie w stanie zapisywać kontaktów w natywnej książce adresowej. Po wyłączeniu tego ustawienia aplikacja będzie w stanie zapisywać kontakty w natywnej książce adresowej. Po selektywnym wyczyszczeniu urządzenia zostaną usunięte wszystkie kontakty zapisane wcześniej w natywnej książce adresowej. To nowe ustawienie jest obsługiwane przez aplikację Outlook na urządzeniach z systemem iOS. Aby uzyskać więcej informacji dotyczących tego i innych ustawień, zobacz [Tworzenie i wdrażanie zasad MAM](https://technet.microsoft.com/en-us/library/dn292747.aspx).
-
-### Kontrola dostępu
-- **Usługa Skype dla firm Online obsługuje dostęp warunkowy.** Możesz określić zasady dostępu warunkowego dla usługi Skype dla firm Online, co umożliwia dostęp do niej tylko przez zarządzane i zgodne urządzenia z systemem iOS lub Android. Użytkownicy końcowi, którzy podejmą próbę zalogowania się do aplikacji mobilnej Skype dla firm w systemie iOS lub Android, zostaną poproszeni o rejestrację w usłudze Intune oraz rozwiązanie wszystkich problemów z niezgodnością przed zakończeniem logowania. Aby uzyskać szczegółowe informacje, zobacz [Zarządzanie dostępem do usługi Skype dla firm Online](https://technet.microsoft.com/en-us/library/mt695297.aspx).
-
-### Zarządzanie urządzeniami
-- **Obsługa usługi Intune dla systemu iOS 9.3.** W poniedziałek 21 marca firma Apple ogłosiła dostępność systemu iOS 9.3. Firma Microsoft intensywnie pracowała nad zapewnieniem zgodności usługi Microsoft Intune z najnowszym systemem operacyjnym firmy Apple dla urządzeń przenośnych. [Z przyjemnością ogłaszamy, że usługa Intune obsługuje już zarządzanie urządzeniami z systemem iOS 9.3](https://blogs.technet.microsoft.com/microsoftintune/2016/03/23/microsoft-intune-provides-support-for-ios-9-3/).
-
-  Wszystkie obecnie dostępne funkcje usługi Intune do zarządzania urządzeniami z systemem iOS będą nadal działać bezproblemowo po uaktualnieniu urządzeń do systemu iOS 9.3 przez użytkowników. Ponadto system iOS 9.3 jest teraz obsługiwany również dla klientów hybrydowych (program Configuration Manager zintegrowany z usługą Intune).
-
-- **Ogólne zasady konfiguracji systemu Windows 10 zawierają teraz ustawienia służące do zarządzania usługą Windows Defender na zarejestrowanych komputerach z systemem Windows 10.** Aby uzyskać więcej informacji, zobacz [Ustawienia zasad konfiguracji systemu Windows 10 w usłudze Microsoft Intune](https://technet.microsoft.com/en-us/library/mt404697.aspx).
-
-
-### Portal firmy
-
-- **Pakiety aplikacji systemu Windows dostępne bezpośrednio z witryny sieci Web portalu firmy.** Użytkownicy komputerów z systemami Windows 8, Windows 8.1 i Windows RT mogą teraz instalować pakiety aplikacji systemu Windows (z rozszerzeniem appx) bezpośrednio z witryny Portalu firmy. Poprzednio konieczne było wdrożenie aplikacji lub użytkownicy musieli instalować aplikację Portal firmy na urządzeniach w celu instalacji aplikacji.
-
-- **Użytkownicy mogą zdalnie blokować swoje urządzenie z poziomu witryny sieci Web portalu firmy.** Do witryny sieci Web Portalu firmy dodano opcję blokady zdalnej, która umożliwia użytkownikom zdalne blokowanie urządzenia z Portalu w przypadku jego utraty lub kradzieży. Zobacz [instrukcje dla użytkowników końcowych](https://technet.microsoft.com/library/mt590895.aspx/?wt.mc_id=ui#BKMK_iwp_remote_lock). Poniższa tabela zawiera platformy obsługiwane przez funkcję blokady zdalnej autonomicznej usługi Intune oraz usługi Intune z programem Configuration Manager.
-
-|Platforma | Szczegóły dotyczące obsługi|
-|---------|----------------|
-|Android |Obsługiwane|
-|iOS |Obsługiwane|
-|Windows 10 Mobile |Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu|
-|Windows 10 Desktop |Nieobsługiwane|
-|Windows Phone 8.1 |Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu|
-|Windows Phone 8.0 |Nieobsługiwane|
-|Komputer (Windows 8.0 i starsze) |Nieobsługiwane|
-|Komputer (Windows 8.1) |Nieobsługiwane|
-
-### Co nowego w wersji z 10 marca 2016 r.
-
-### Zarządzanie aplikacjami
-
-- ** W systemie iOS warto korzystać z funkcji „Otwórz w” dla urządzeń, które są zarejestrowane w rozwiązaniu MDM innej firmy** W celu korzystania w systemie iOS z funkcji „Otwórz w” możesz używać dowolnego dostawcy rozwiązania do zarządzania urządzeniami przenośnymi (MDM, ang. Mobile Device Management) innej firmy. Możesz konfigurować ograniczenia w ustawieniach profilu konfiguracji i wdrażać aplikacje przy użyciu funkcji [zarządzania przesyłaniem danych między aplikacjami systemu iOS](/intune/deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune).
-
-     Takie podejście charakteryzuje się dwoma korzyściami:
-
-     1. Użytkownicy muszą logować się, korzystając z poświadczeń konta służbowego, zanim uzyskają dostęp do dowolnych danych korporacyjnych z usług w chmurze albo do innych aplikacji. Takie rozwiązanie zapewnia przestrzeganie zasad zarządzania aplikacjami mobilnymi (MAM, ang. Mobile App Management) podczas uzyskiwania dostępu do danych.
-
-     2. Zarządzane profile poczty e-mail i inne aplikacje zarządzane wdrożone za pośrednictwem rozwiązania MDM innej firmy mogą udostępniać pliki i dane aplikacjom, które działają zgodnie z zasadami MAM usługi Intune.
-
-- **Zarządzanie aplikacją Microsoft Outlook przy użyciu zasad zarządzania aplikacjami mobilnymi na urządzeniach, które nie są zarejestrowane w usłudze Intune** Możesz teraz zarządzać aplikacją Microsoft Outlook na urządzeniach, które nie są zarejestrowane w usłudze Intune, korzystając z zasad zarządzania aplikacjami mobilnymi z usługi Intune. Zaktualizowana aplikacja Microsoft Outlook obsługująca zasady zarządzania aplikacjami mobilnymi jest dostępna dla urządzeń z systemem [iOS](https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596?mt=8) oraz urządzeń z systemem [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook). W celu tworzenia zasad zarządzania aplikacjami mobilnymi postępuj zgodnie z instrukcjami w temacie [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](https://technet.microsoft.com/library/mt627829.aspx).  
-
-
-- ** Zasady konfiguracji aplikacji mobilnych zapewniają większą elastyczność i możliwość określania szczegółów użytkowników dla aplikacji systemu iOS** Możesz podawać ustawienia użytkowników, których może potrzebować aplikacja systemu iOS, gdy zostanie otwarta. Na przykład można podać port sieci lub nazwę użytkownika. Aby uzyskać więcej informacji, zobacz [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
-
-
-- **Wdrażanie w przedsiębiorstwie programu Adobe Reader dla usługi Microsoft Intune na urządzeniach zarządzanych przez usługę Intune w systemie iOS** Teraz można zarządzać aplikacją Adobe Reader dla systemu iOS na zarejestrowanych urządzeniach, stosując zasady zarządzania aplikacjami mobilnymi usługi Intune.
-
-- **Zapewnienie, że wdrożone klipy internetowe będą otwierane w programie Managed Browser** Możesz wdrażać klipy internetowe przeznaczone dla konkretnych grup odbiorców, które można otwierać tylko przy użyciu programu Managed Browser na urządzeniach z systemem iOS i z systemem Android. Na przykład wdrażasz linki do zasobów firmowych za pośrednictwem Portalu firmy, a gdy użytkownicy przejdą do tych linków, zostaną one otwarte bezpośrednio w programie Managed Browser, gdzie mogą być chronione przez zasady zarządzania aplikacjami mobilnymi. Aby uzyskać szczegółowe informacje, zobacz [Wdrażanie aplikacji](/intune/deploy-use/deploy-apps).
-
-
-- **Wyszukiwanie i dystrybucja aplikacji ze Sklepu Windows dla firm oraz zarządzanie nimi dla urządzeń z systemem Windows 10 z konsoli administratora usługi Intune** Usługa Intune obsługuje Sklep Windows dla firm, aby ułatwiać znajdowanie aplikacji i zarządzanie nimi, a także przeprowadzanie dystrybucji aplikacji na zarządzanych przez Ciebie urządzeniach z systemem Windows 10. Sklep Windows dla firm umożliwia zarządzanie procesem wdrażania i monitorowania tych aplikacji z konsoli administratora usługi Intune — tej samej konsoli, która służy do zarządzania innymi aplikacjami. W szczególności Sklep Windows dla firm zarządza zawartością i licencjonowaniem „aplikacji licencjonowanych online”. Aby uzyskać szczegółowe informacje, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm](/intune/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
-
-
-### Zarządzanie urządzeniami
-- **Dystrybucja certyfikatów PFX dla urządzeń z systemem iOS** Administratorzy usługi Intune mogą tworzyć i wdrażać certyfikaty PFX systemu iOS dla sieci Wi-Fi, poczty e-mail i uwierzytelniania sieci VPN na urządzeniach z systemem iOS. Ta funkcja jest już dostępna dla urządzeń z systemami Android i Windows 10. Szczegółowe informacje zawiera temat [Zapewnianie dostępu do zasobów firmy przy użyciu profilów certyfikatów](/intune/deploy-use/secure-resource-access-with-certificate-profiles).
-
-
-- **Stosowanie aplikacji i zasad do różnych grup urządzeń w oparciu o wybór kategorii użytkownika** Administratorzy usługi Intune mogą definiować niestandardowe kategorie urządzeń dla użytkowników, które można wybierać podczas rejestracji. Na przykład administratorzy mogą wymagać, aby użytkownicy określali, czy rejestrują urządzenie, którego przeznaczenie to „Kasa”, „Samochód dostawczy” czy „Pomieszczenie magazynowe”. Wybór kategorii spowoduje, że urządzenie stanie się elementem grupy urządzeń usługi Intune, z której można korzystać w celu wdrażania różnych aplikacji i zasad do zarejestrowanych urządzeń. Aby uzyskać szczegółowe informacje, zobacz temat [Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune).
-
-### Zmiany i aktualizacje Portalu firmy oferowanego przez firmę Microsoft
-W Portalu firmy w tej wersji wprowadzono następujące zmiany:
-
-**Aplikacja Portal firmy dla systemu Android**
-
-* Gdy użytkownicy uruchomią aplikację, która jest zarządzana przez zarządzanie aplikacjami mobilnymi, zobaczą komunikat z informacją, że aplikacja jest zarządzana przez ich firmę. W tym komunikacie można teraz wybrać link „Dowiedz się więcej”, aby uzyskać [więcej informacji](https://technet.microsoft.com/library/mt502762.aspx#BKMK_andr_use_mgd_apps) o tym, co oznacza określenie „aplikacje zarządzane”. Można również nacisnąć polecenie „Nie pokazuj ponownie”, aby komunikat nie był już wyświetlany w trakcie uruchamiania aplikacji.
-* Zostały dodane nowe ekrany, które prowadzą użytkowników przez proces rejestracji i udostępniają więcej informacji na temat tego, dlaczego użytkownicy powinni się rejestrować i tego, co jest i nie jest wyświetlane na zarejestrowanych urządzeniach administratorów IT. Szczegółowe informacje zawierają [instrukcje dotyczące rejestrowania](https://technet.microsoft.com/library/mt502762.aspx#BKMK_andr_enroll_devc).
-* W aplikacji Portal firmy są teraz wyświetlane komunikaty o błędach rejestracji. Wcześniej te komunikaty pojawiały się w witrynie Portal firmy. Wprowadzenie tej zmiany oznacza, że wszystkie komunikaty o błędach pojawiają się teraz tylko w jednym miejscu zamiast w kilku.
-
-
-**Aplikacja Portal firmy dla systemu iOS**
-* Gdy użytkownicy uruchomią aplikację, która jest zarządzana przez zarządzanie aplikacjami mobilnymi, zobaczą komunikat z informacją, że aplikacja jest zarządzana przez ich firmę. W tym komunikacie można teraz wybrać link „Dowiedz się więcej”, aby uzyskać [więcej informacji](https://technet.microsoft.com/library/mt598622.aspx#BKMK_ios_use_mgd_apps) o tym, co oznacza określenie „aplikacje zarządzane”. Można również nacisnąć polecenie „Nie pokazuj ponownie”, aby komunikat nie był już wyświetlany w trakcie uruchamiania aplikacji.
-* Zostały dodane nowe ekrany, które prowadzą użytkowników przez proces rejestracji i udostępniają więcej informacji na temat tego, dlaczego użytkownicy powinni się rejestrować i tego, co jest i nie jest wyświetlane na zarejestrowanych urządzeniach administratorów IT. Szczegółowe informacje zawierają [instrukcje dotyczące rejestrowania](https://technet.microsoft.com/library/mt598622.aspx#BKMK_enroll_ios_device).
-* W aplikacji Portal firmy są teraz wyświetlane komunikaty o błędach rejestracji. Wcześniej te komunikaty pojawiały się w witrynie Portal firmy. Wprowadzenie tej zmiany oznacza, że wszystkie komunikaty o błędach pojawiają się teraz tylko w jednym miejscu zamiast w kilku.
-
-
-
-
-## Luty 2016
-### Zmiany i aktualizacje Portalu firmy oferowanego przez firmę Microsoft
-
-W Portalu firmy w tej wersji wprowadzono następujące zmiany:
-
-#### Aplikacja Portal firmy dla systemu Android
-- Zostały dodane nowe ekrany, które prowadzą użytkowników przez proces rejestracji i udostępniają więcej informacji na temat tego, dlaczego użytkownicy powinni się rejestrować i tego, co jest i nie jest wyświetlane na zarejestrowanych urządzeniach administratorów IT. Szczegółowe informacje zawierają [instrukcje dotyczące rejestrowania](https://technet.microsoft.com/library/mt502762.aspx#BKMK_andr_enroll_devc).
-- W aplikacji Portal firmy są teraz wyświetlane komunikaty o błędach rejestracji. Wcześniej te komunikaty pojawiały się w witrynie Portal firmy. Wprowadzenie tej zmiany oznacza, że wszystkie komunikaty o błędach pojawiają się teraz tylko w jednym miejscu zamiast w kilku.
-
-#### Aplikacja Portal firmy dla systemu iOS
- - Zostały dodane nowe ekrany, które prowadzą użytkowników przez proces rejestracji i udostępniają więcej informacji na temat tego, dlaczego użytkownicy powinni się rejestrować i tego, co jest i nie jest wyświetlane na zarejestrowanych urządzeniach administratorów IT. Szczegółowe informacje zawierają [instrukcje dotyczące rejestrowania](https://technet.microsoft.com/library/mt598622.aspx#BKMK_enroll_ios_device).
-
- - W aplikacji Portal firmy są teraz wyświetlane komunikaty o błędach rejestracji. Wcześniej te komunikaty pojawiały się w witrynie Portal firmy. Wprowadzenie tej zmiany oznacza, że wszystkie komunikaty o błędach pojawiają się teraz tylko w jednym miejscu zamiast w kilku.
-
-
-## Styczeń 2016
-
-### Korzystanie z zalet funkcji systemu Windows 10
-* **Dostęp warunkowy i usługa zaświadczania o kondycji** Administratorzy usługi Intune mogą teraz wyświetlać stan usługi zaświadczania o kondycji systemu Windows 10 w konsoli administracyjnej usługi Intune. Zaświadczenie o kondycji urządzenia umożliwia administratorowi upewnienie się, że komputery klienckie dysponują godnymi zaufania konfiguracjami systemu BIOS, modułu TPM i oprogramowania rozruchowego. W celu obsługi zaświadczania o kondycji na urządzeniach klienckich musi działać system Windows 10 z włączonym modułem TPM 2. Zaświadczenie o kondycji urządzeń zawiera liczbę urządzeń obsługujących następujące funkcje:
-    * Usługa wczesnej ochrony przed złośliwym kodem
-    * Funkcja BitLocker
-    * Bezpieczny rozruch
-    * Integralność kodu
-
-    Więcej szczegółów na temat ustawień dotyczących kondycji urządzeń, zebranych punktów danych i raportu zaświadczającego o kondycji zawiera temat [Wprowadzenie do zasad zgodności urządzeń w usłudze Microsoft Intune](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune). W temacie [Szczegóły usługi HAS](https://msdn.microsoft.com/en-us/library/dn934876.aspx) ta usługa została opisana szczegółowo.
-
-* **Zarządzanie zasadami i certyfikatem usługi Windows 10 Passport dla miejsca pracy** Usługa Intune umożliwia [integrację z usługą Microsoft Passport dla miejsca pracy](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune), czyli alternatywną metodą logowania dla systemu Windows 10 korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej. Usługa Passport pozwala używać do logowania gestu użytkownika zamiast hasła. Gestem użytkownika może być prosty numer PIN, uwierzytelnianie biometryczne, takie jak Windows Hello, lub urządzenie zewnętrzne, np. czytnik linii papilarnych.
-
-* **Sieć VPN dla określonych aplikacji** Możesz wybierać aplikacje, które będą automatycznie łączyć się z siecią firmową za pośrednictwem połączenia VPN. Utwórz listę aplikacji podczas konfigurowania profilu sieci VPN zgodnie z opisem w temacie „Pomaganie użytkownikom w nawiązywaniu połączenia z siecią firmową za pomocą profilów sieci VPN w usłudze Microsoft Intune”.
-
-* **Obsługa pełnego czyszczenia w systemie Windows 10** Obecnie można przeprowadzić pełne zdalne czyszczenie danych urządzeń komputerowych z systemem Windows 10 zarejestrowanych w usłudze Intune, korzystając z konsoli administracyjnej usługi Intune. Pełne czyszczenie danych systemu Windows 10 powoduje przywrócenie fabrycznych ustawień urządzenia.
-
-
-### Aktualizacja programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple
-Usługa Intune ułatwia [zarządzanie aplikacjami zakupionymi za pośrednictwem programu Apple Volume Purchase Program (VPP) dla firm](/intune/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune). Dotyczy to synchronizowania informacji o licencjach między firmą Apple i usługą Intune, a także śledzenia liczby wdrożonych kopii poszczególnych aplikacji.
-
-### Korzystanie z numerów IMEI w celu identyfikowania urządzeń firmowych
-Możesz teraz [importować międzynarodowe numery identyfikujące urządzenia przenośne (IMEI, International Mobile Equipment Identity)](/intune/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers) dla platform urządzeń przenośnych, które mają numer IMEI, co ułatwia identyfikację firmowych urządzeń przenośnych. Zarejestrowane w usłudze Intune urządzenia z numerami IMEI oznakowane jako firmowe, co jest użyteczne w przypadku stosowania strategii innych niż względem urządzeń prywatnych.
-
-### Więcej aplikacji jest teraz zgodnych z zasadami zarządzania aplikacjami mobilnymi usługi Intune
-Dodatkowe aplikacje od partnerów firmy Microsoft są teraz zgodne z zasadami zarządzania aplikacjami mobilnymi (MAM) usługi Intune (dla urządzeń zarządzanych przez usługę Intune):
-* Box for EMM (od firmy Box Inc) — tylko dla urządzeń z systemem iOS
-* Adobe Reader (firmy Adobe) — tylko dla urządzeń z systemem Android
-* Foxit PDF Reader (firmy Foxit Corporation) — dla urządzeń z systemem iOS lub Android
-
-
-### Obsługa programu IE9 kończy się w styczniu
-Począwszy od lutego 2016 roku program Internet Explorer 9 nie będzie już obsługiwany jako oficjalna przeglądarka do uzyskiwania dostępu do witryny sieci Web portalu firmy w usłudze Microsoft Intune, portalu konta usługi Intune i konsoli administracyjnej usługi Intune. Należy przeprowadzić migrację do programu Internet Explorer 10 lub nowszego.
-
-
 >[!div class="step-by-step"]
 
 >[&larr; **Co nowego w usłudze Intune**](whats-new-in-microsoft-intune.md)    
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

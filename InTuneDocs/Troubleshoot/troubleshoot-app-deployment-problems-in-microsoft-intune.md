@@ -3,6 +3,7 @@ title: "Rozwiązywanie problemów z wdrażaniem aplikacji | Microsoft Intune"
 description: "W tym temacie przedstawiono informacje pomagające w rozwiązywaniu problemów z wdrażaniem aplikacji w usłudze Microsoft Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/27/2016
 ms.topic: article

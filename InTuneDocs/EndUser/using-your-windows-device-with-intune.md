@@ -3,6 +3,7 @@ title: "Korzystanie z urządzenia z systemem Windows i usługi Intune | Microsof
 description: "Lista linków do zadań, które można wykonać na urządzeniu z systemem Windows, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

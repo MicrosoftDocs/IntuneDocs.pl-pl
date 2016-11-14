@@ -2,9 +2,10 @@
 title: "Brak wymaganego certyfikatu urządzenia | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 9a763e13818ec5c1708d121125cadd37e25e3193
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: 27b3e3d4aefade368d900df95454c3d02e37bed4
 
 
 ---
 
 
-# Brak wymaganego certyfikatu urządzenia
+# <a name="your-device-is-missing-a-required-certificate"></a>Brak wymaganego certyfikatu urządzenia
 
 
-## Urządzenie nie ma certyfikatu, który zazwyczaj jest zainstalowany na telefonie
+## <a name="your-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Urządzenie nie ma certyfikatu, który zazwyczaj jest zainstalowany na telefonie
 Jeśli urządzenie z systemem Android nie jest zarejestrowane w usłudze Intune i nie ma certyfikatu, który zazwyczaj jest zainstalowany w telefonie, nie można zalogować się do aplikacji Portal firmy w systemie Android. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
@@ -37,7 +38,7 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat:
 
 3.  Przeciągnij z góry na dół, aby otworzyć powiadomienia, a następnie naciśnij pozycję **BaltimoreCyberTrustRoot.crt** na liście powiadomień.
 
-4.  W oknie dialogowym **Name the Certificate** (Nazwij certyfikat) zaakceptuj domyślną nazwę certyfikatu.
+4.  W oknie dialogowym **Name the Certificate** (Nazywanie certyfikatu) zaakceptuj domyślną nazwę certyfikatu.
 
 5. Upewnij się, że ustawienie **Credential Use** (Użycie poświadczeń) ma wartość **Used for VPN and apps** (Używane dla sieci VPN i aplikacji), a następnie naciśnij przycisk **OK**.
 
@@ -47,7 +48,7 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat:
 
 7. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT.
 
-## Urządzenie nie ma certyfikatu wymaganego przez administratora IT
+## <a name="your-device-is-missing-a-certificate-required-by-your-it-admin"></a>Urządzenie nie ma certyfikatu wymaganego przez administratora IT
 Jeśli urządzenie z systemem Android nie zostało zarejestrowane w usłudze Intune i nie ma certyfikatu wymaganego przez administratora IT, nie można zalogować się do aplikacji Portal firmy w systemie Android. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
@@ -60,23 +61,25 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 - Zidentyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego.
 - Pobranie brakującego certyfikatu z Internetu przy użyciu urządzenia.
 
-### Identyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego
+### <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego
 
-1. Na komputerze otwórz przeglądarkę Internet Explorer. Jeśli nie masz komputera do użycia w tym celu, skontaktuj się z administratorem IT. Informacje kontaktowe administratora IT są dostępne w [witrynie sieci Web aplikacji Portal firmy](http://portal.manage.microsoft.com).
+1. Na komputerze otwórz przeglądarkę Internet Explorer. Jeśli nie masz komputera do użycia w tym celu, skontaktuj się z administratorem IT. Aby znaleźć informacje kontaktowe administratora IT, sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 2. Otwórz [witrynę sieci Web aplikacji Portal firmy](http://portal.manage.microsoft.com), a następnie zaloguj się przy użyciu poświadczeń konta służbowego.
 
-3. Po prawej stronie paska adresu w przeglądarce kliknij symbol, który wygląda jak kłódka, jak pokazano poniżej. Jeśli nie widzisz symbolu kłódki, przerwij korzystanie z programu i skontaktuj się z administratorem IT. Kłódka oznacza bezpieczne zalogowanie, więc użytkownik nie powinien kontynuować, jeśli nie widzi tego symbolu.
+3. Po prawej stronie paska adresu w przeglądarce wybierz symbol, który wygląda jak kłódka, jak pokazano na poniższym zrzucie ekranu.
 
     ![screenshot-internet-explorer-address-bar-padlock-symbol](./media/andr-missing-cert-ie-padlock-symbol.png)
 
-4. Kliknij pozycję **Wyświetl certyfikaty**.
+    Jeśli nie widzisz symbolu kłódki, przerwij korzystanie z programu i skontaktuj się z administratorem IT. Kłódka oznacza bezpieczne zalogowanie, więc użytkownik nie powinien kontynuować, jeśli nie widzi tego symbolu.
+
+4. Wybierz pozycję **Wyświetl certyfikaty**.
 
     ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. W oknie dialogowym **Certyfikat** kliknij kartę **Ścieżka certyfikacji**, a następnie zidentyfikuj certyfikat, który należy pobrać z Internetu. Nazwa potrzebnego certyfikatu będzie znajdować się w tym samym miejscu, które zostało wyróżnione na zrzucie ekranu powyżej.
+5. W oknie dialogowym **Certyfikat** wybierz kartę **Ścieżka certyfikacji**, a następnie zidentyfikuj certyfikat, który należy pobrać z Internetu. Nazwa potrzebnego certyfikatu będzie znajdować się w tym samym miejscu, które zostało wyróżnione na poprzednim zrzucie ekranu.
 
-### Pobieranie i instalowanie brakującego certyfikatu na urządzenia przenośne z systemem Android
+### <a name="download-and-install-the-missing-certificate-on-your-android-mobile-device"></a>Pobieranie i instalowanie brakującego certyfikatu na urządzenia przenośne z systemem Android
 
 1. Korzystając z wyszukiwarki, takiej jak Bing czy Google, wyszukaj nazwę brakującego certyfikatu, który został zidentyfikowany w poprzedniej sekcji. Certyfikat może mieć różne rozszerzenia, takie jak „crt”, „pem” itp.
 
@@ -84,7 +87,7 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 
 3. Po pobraniu certyfikatu przeciągnij w dół od górnej krawędzi urządzenia, aby otworzyć powiadomienia, a następnie wybierz nazwę certyfikatu na liście powiadomień.
 
-4. W przedstawionym poniżej oknie dialogowym **Name the Certificate** (Nazwij certyfikat) zaakceptuj domyślną nazwę certyfikatu.
+4. W przedstawionym na poniższym zrzucie ekranu oknie dialogowym **Name the Certificate** (Nazywanie certyfikatu) zaakceptuj domyślną nazwę certyfikatu.
 
 5. Upewnij się, że ustawienie **Credential Use** (Użycie poświadczeń) ma wartość **Used for VPN and apps** (Używane dla sieci VPN i aplikacji), a następnie naciśnij przycisk **OK**.
 
@@ -94,12 +97,10 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 
 7. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT.
 
-Jeśli widzisz tę samą wiadomość „Brak certyfikatu”, jak pokazano powyżej, i zostały już wykonane powyższe kroki, oznacza to prawdopodobnie, że istnieje inny certyfikat, który trzeba będzie zainstalować, korzystając z pomocy administratora IT. Skontaktuj się z administratorem IT i podaj mu ten [link](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), który zawiera kroki ułatwiające rozwiązanie problemu.
+Jeśli widzisz tę samą wiadomość „Brak certyfikatu”, jak pokazano wcześniej, i została już wykonana procedura, oznacza to prawdopodobnie, że istnieje inny certyfikat, który trzeba będzie zainstalować, korzystając z pomocy administratora IT. Skontaktuj się z administratorem IT i przekaż mu ten link do [problemów związanych z certyfikatem w systemie Android](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues), który zawiera kroki pomocne w rozwiązywaniu problemu.
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "Rejestrowanie urządzeń firmowych z systemem iOS | Microsoft Intune"
 description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/07/2016
 ms.topic: article

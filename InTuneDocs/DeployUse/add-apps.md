@@ -3,6 +3,7 @@ title: "Dodawanie aplikacji | Usługa Microsoft Intune"
 description: "Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

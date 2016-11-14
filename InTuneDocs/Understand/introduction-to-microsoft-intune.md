@@ -5,6 +5,7 @@ title: "Wprowadzenie do usługi Microsoft Intune | Microsoft Intune"
 description: "Dowiedz się, w jaki sposób usługa Intune pełni rolę składnika zarządzania urządzeniami przenośnymi rozwiązania Enterprise Mobility + Security."
 keywords: 
 author: Lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/10/2016
 ms.topic: article

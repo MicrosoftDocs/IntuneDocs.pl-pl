@@ -3,6 +3,7 @@ title: Ustawienia zasad systemu iOS | Microsoft Intune
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

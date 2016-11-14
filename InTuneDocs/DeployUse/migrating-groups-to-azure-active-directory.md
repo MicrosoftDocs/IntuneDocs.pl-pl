@@ -3,6 +3,7 @@ title: "Migracja do grup usługi Azure Active Directory | Microsoft Intune"
 description: "Przebieg procesu migracji grup z usługi Intune do usługi Azure AD"
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angerobe
 ms.date: 10/10/2016
 ms.topic: article

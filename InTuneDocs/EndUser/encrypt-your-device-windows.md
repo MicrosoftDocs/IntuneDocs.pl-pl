@@ -3,6 +3,7 @@ title: "Szyfrowanie urządzenia z systemem Windows | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Windows"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
