@@ -14,13 +14,13 @@ ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
-ms.openlocfilehash: 40c63094f37fbffa62ea0d3e5b52ef1f3988e7e1
+ms.sourcegitcommit: 8cde3ffb3be8656d5f256e16eb71ed4aaa7ceb5b
+ms.openlocfilehash: c330f730b4eced38f9d0ee972063198ccafc0bcf
 
 
 ---
 
-# Ustawienia zasad zgodności dla urządzeń z systemem Windows w usłudze Microsoft Intune
+# <a name="compliance-policy-settings-for-windows-devices-in-microsoft-intune"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows w usłudze Microsoft Intune
 
 Ustawienia zasad opisane w tym temacie mają zastosowanie do urządzeń, na których działa system operacyjny Windows. Konkretna obsługiwana wersja systemu Windows jest podana w odpowiedniej sekcji poniżej.
 
@@ -28,12 +28,13 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 > [!div class="op_single_selector"]
 - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem Android](android-compliance-policy-settings-in-microsoft-intune.md)
+- [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune)
 
-## Ustawienia zasad zgodności dla urządzeń z systemem Windows Phone
+## <a name="compliance-policy-settings-for-windows-phone-devices"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows Phone
 Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1 lub nowszym.
 
-## Ustawienia zabezpieczeń systemu
-### Hasło
+## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
+### <a name="password"></a>Hasło
 - **Wymagaj hasła do odblokowania urządzeń przenośnych:** ustaw tę opcję na wartość **Tak**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do swojego urządzenia.
 
 - **Zezwalaj na proste hasła:** ustaw tę opcję na wartość **Tak**, aby zezwolić użytkownikom na tworzenie prostych haseł, takich jak „**1234**” lub „**1111**”.
@@ -60,27 +61,27 @@ Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1
 - **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownicy końcowi otrzymają monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
 
   **To ustawienie dotyczy tylko urządzeń z systemem Windows 10 Mobile.**
-### Szyfrowanie
+### <a name="encryption"></a>Szyfrowanie
 - **Wymagaj szyfrowania na urządzeniu przenośnym:** ustaw tę opcję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami.
 
-## Ustawienia kondycji urządzenia
+## <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
 - **Wymagaj, aby urządzenia były zgłaszane jako urządzenia o dobrej kondycji:** możesz ustawić regułę wymagającą od urządzeń z systemem **Windows 10 Mobile** zgłoszenia dobrej kondycji w nowych lub istniejących zasadach zgodności.  Jeśli ustawienie jest włączone, urządzenia z systemem Windows 10 są oceniane za pośrednictwem usługi zaświadczania o kondycji (HAS, Health Attestation Service) dla następujących punktów danych:
-  -  **Funkcja BitLocker jest włączona:** po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub zahibernowany. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Funkcja pomaga upewnić się, że komputer nie jest modyfikowany, nawet wtedy, gdy zostanie pozostawiony bez nadzoru, zgubiony lub skradziony. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
+  -  **Funkcja BitLocker jest włączona:** po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub zahibernowany. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika oraz zapewnia, że komputer nie zostanie naruszony nawet wtedy, gdy zostanie pozostawiony bez nadzoru, zgubiony lub skradziony. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
   -  **Integralność kodu jest włączona:** integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy lub czy plik systemowy został zmodyfikowany przez złośliwe oprogramowanie, które zostało uruchomione przez konto użytkownika z uprawnieniami administratora.
-  - **Bezpieczny rozruch jest włączony:** po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI dokonuje weryfikacji tych elementów, zanim umożliwi uruchomienie urządzenia. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
+  - **Bezpieczny rozruch jest włączony:** po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza to, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
 
   Aby uzyskać informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://msdn.microsoft.com/library/dn934876.aspx).
-##  Ustawienia właściwości urządzenia
+##  <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne.
     Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
 - **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
 
-## Ustawienia zasad zgodności dla komputerów z systemem Windows
+## <a name="compliance-policy-settings-for-windows-pcs"></a>Ustawienia zasad zgodności dla komputerów z systemem Windows
 Ustawienia wymienione w tej sekcji są obsługiwane na komputerach z systemem Windows.
-## Ustawienia zabezpieczeń systemu
-### Hasło
+## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
+### <a name="password"></a>Hasło
 - **Minimalna długość hasła:** — opcja obsługiwana w systemie Windows 8.1.
 
   Określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło użytkownika.
@@ -113,17 +114,17 @@ Ustawienia wymienione w tej sekcji są obsługiwane na komputerach z systemem Wi
 
   Jeśli jest zaznaczona opcja **Pamiętaj historię haseł:**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
 
-## Ustawienia kondycji urządzenia
+## <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
 - **Wymagaj, aby urządzenia były zgłaszane jako urządzenia o dobrej kondycji:** — opcja obsługiwana na urządzeniach z systemem Windows 10.
 Można ustawić zasady, które będą wymagać od urządzeń z systemem Windows 10 zgłoszenia dobrej kondycji w nowych lub istniejących zasadach zgodności.  Jeśli ustawienie jest włączone, urządzenia z systemem Windows 10 są oceniane za pośrednictwem usługi zaświadczania o kondycji (HAS, Health Attestation Service) dla następujących punktów danych:
-  -  **Funkcja BitLocker jest włączona:** po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub zahibernowany. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Funkcja pomaga upewnić się, że komputer nie jest modyfikowany, nawet wtedy, gdy zostanie pozostawiony bez nadzoru, zgubiony lub skradziony. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
+  -  **Funkcja BitLocker jest włączona:** po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub zahibernowany. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika oraz zapewnia, że komputer nie zostanie naruszony nawet wtedy, gdy zostanie pozostawiony bez nadzoru, zgubiony lub skradziony. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
   -  **Integralność kodu jest włączona:** integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy lub czy plik systemowy został zmodyfikowany przez złośliwe oprogramowanie, które zostało uruchomione przez konto użytkownika z uprawnieniami administratora.
-  - **Bezpieczny rozruch jest włączony:** po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI dokonuje weryfikacji tych elementów, zanim umożliwi uruchomienie urządzenia. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
+  - **Bezpieczny rozruch jest włączony:** po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza to, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
   - **Usługa wczesnej ochrony przed złośliwym kodem jest włączona:** usługa wczesnej ochrony przed złośliwym kodem zapewnia ochronę komputerów w sieci podczas uruchamiania i przed zainicjowaniem sterowników firm trzecich.
 
   Aby uzyskać informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://msdn.microsoft.com/library/dn934876.aspx).
 
-## Ustawienia właściwości urządzenia
+## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 - **Wymagana minimalna wersja systemu operacyjnego:** — opcja obsługiwana w systemach Windows 8.1 i Windows 10.
 
   W tym miejscu podaj wersję w formacie główna.pomocnicza.kompilacja. Numer wersji musi odpowiadać wersji zwracanej przez polecenie winver.
@@ -141,6 +142,6 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

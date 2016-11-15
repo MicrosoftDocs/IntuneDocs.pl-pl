@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 3ba40ad3a8c5eaba684d589c7526435ba87d0390
+ms.sourcegitcommit: 8cde3ffb3be8656d5f256e16eb71ed4aaa7ceb5b
+ms.openlocfilehash: 4718d61f9d76a903ffc1820c77fc755d1ca1707b
 
 
 ---
 
-# Czyszczenie danych zarządzanych aplikacji firmowych za pomocą usługi Microsoft Intune
+# <a name="wipe-managed-company-app-data-with-microsoft-intune"></a>Czyszczenie danych zarządzanych aplikacji firmowych za pomocą usługi Microsoft Intune
 W przypadku utraty lub kradzieży urządzenia lub jeśli pracownik odchodzi z firmy dane aplikacji firmowych powinny zostać usunięte z urządzenia. Jednak możesz nie chcieć usuwać osobistych danych znajdujących się na urządzeniu, zwłaszcza jeśli jest to urządzenie należące do pracownika.
 
 Aby wybiórczo usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia, korzystając z procedury opisanej w sekcji **Tworzenie żądania czyszczenia** w tym temacie.  Po wysłaniu żądania czyszczenia dane firmowe zostaną usunięte z aplikacji przy następnym uruchomieniu aplikacji na urządzeniu.
@@ -29,7 +29,7 @@ Aby wybiórczo usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia,
 
 
 
-## Tworzenie żądania czyszczenia
+## <a name="create-a-wipe-request"></a>Tworzenie żądania czyszczenia
 
 1.  W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** wybierz kafelek **Żądania czyszczenia** .
 
@@ -48,20 +48,24 @@ Aby wybiórczo usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia,
 
 ![Zrzut ekranu przedstawiający kafelek Żądania czyszczenia ](../media/AppManagement/AzurePortal_MAM_WipeRequestsSummary.png)
 
-## Monitorowanie żądań czyszczenia
+## <a name="monitor-your-wipe-requests"></a>Monitorowanie żądań czyszczenia
 Blok **Zarządzanie aplikacjami mobilnymi w usłudze Intune** zawiera raport z podsumowaniem na kafelku **Żądanie czyszczenia** .  Są w nim wyświetlane ogólny stan oraz liczba oczekujących żądań i błędów. Więcej informacji można uzyskać przez wykonanie kroków opisanych poniżej:
 
 1.  W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** wybierz kafelek **Żądanie czyszczenia**, aby otworzyć blok **Żądanie czyszczenia** .
 
 2.  W bloku **Żądanie czyszczenia** jest wyświetlana lista żądań pogrupowanych według użytkowników.  System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego może być wyświetlanych wiele żądań dla danego użytkownika.  Stan wskazuje, czy żądanie czyszczenia jest nadal **oczekujące**, **zakończone niepowodzeniem**czy **zakończone pomyślnie**.
 
-### Zobacz też
-[Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi ](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+Użytkownicy muszą otworzyć aplikację w celu przeprowadzenia czyszczenia — może ono zająć do 30 minut od czasu utworzenia żądania. 
 
-[Korzystanie z portalu Azure](azure-portal-for-microsoft-intune-mam-policies.md)
+Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usunięcia.  Aby ręcznie usunąć żądanie czyszczenia, kliknij prawym przyciskiem myszy i wybierz pozycję Usuń.
+
+### <a name="see-also"></a>Zobacz także
+[Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+
+[Korzystanie z witryny Azure Portal](azure-portal-for-microsoft-intune-mam-policies.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
