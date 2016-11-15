@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 3422d47a5759e22a512cf6de8578d774ad3bb8cd
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: 0b60e7a7a921762e682185af273bb94f24441a0c
 
 
 ---
@@ -100,7 +100,7 @@ Usługa Microsoft Intune umożliwia również zarządzanie komputerami z systeme
 
  - Zgłaszać spisy sprzętu i oprogramowania.
  - Instalować aplikacje komputerowe (np. pliki .exe i .msi).
- - Ustawienia zapory
+ - Zarządzaj ustawienia zapory
 
 Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą zostać w pełni wyczyszczone, ale czyszczenie selektywne jest dostępne. Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą korzystać z wielu funkcji zarządzania w usłudze Intune, takich jak dostęp warunkowy, ustawienia sieci VPN i Wi-Fi, wdrażanie certyfikatów i konfiguracja poczty e-mail.
 
@@ -119,6 +119,6 @@ Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
