@@ -19,15 +19,15 @@ ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 ---
 
-# Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
+# <a name="getting-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
 Ten przewodnik wprowadzający ułatwia szybkie włączenie w aplikacji mobilnej obsługi zarządzania aplikacjami mobilnymi za pomocą usługi Microsoft Intune. Przydatne może okazać się uprzednie zrozumienie korzyści zapewnianych przez zestaw SDK aplikacji usługi Intune, które wymieniono w temacie [Omówienie zestawu SDK aplikacji usługi Intune](intune-app-sdk.md).
 
 Ten przewodnik przeprowadzi Cię przez najważniejsze czynności wymagane do włączenia zarządzania aplikacjami mobilnymi w Twojej aplikacji za pomocą usługi Microsoft Intune. Zestaw SDK aplikacji usługi Intune obsługuje podobne scenariusze dla różnych platform i pozwala utworzyć spójne środowisko dla administratorów IT na różnych platformach. Istnieją jednak niewielkie różnice w obsłudze niektórych funkcji ze względu na ograniczenia platform.
 
-# Wprowadzenie
+# <a name="getting-started"></a>Wprowadzenie
 
-## Rejestrowanie aplikacji ze sklepu w usłudze Microsoft Intune
+## <a name="register-your-store-app-with-microsoft"></a>Rejestrowanie aplikacji ze sklepu w usłudze Microsoft Intune
 
 **Jeśli Twoja aplikacja jest wewnętrzną aplikacją firmową i nie zostanie udostępniona w publicznym sklepie z aplikacjami**:
 
@@ -55,7 +55,7 @@ Jeśli link bezpośredni do sklepu z aplikacjami zmieni się w przyszłości, b�
 
 
 
-## Pobieranie plików zestawu SDK
+## <a name="download-the-sdk-files"></a>Pobieranie plików zestawu SDK
 
 Zestawy SDK aplikacji usługi Intune dla natywnych systemów iOS i Android są hostowane na koncie usługi GitHub firmy Microsoft. Poniższe repozytoria publiczne zawierają pliki zestawów SDK odpowiednio dla systemów iOS i Android:
 
@@ -73,7 +73,7 @@ Zalecamy utworzenie konta usługi GitHub, które pozwoli rozwidlać nasze repozy
 
 
 
-## Włączanie obsługi zarządzania aplikacjami mobilnymi dla aplikacji mobilnej systemu iOS lub Android przy użyciu zestawu SDK
+## <a name="enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk"></a>Włączanie obsługi zarządzania aplikacjami mobilnymi dla aplikacji mobilnej systemu iOS lub Android przy użyciu zestawu SDK
 
 Do integracji zestawu SDK aplikacji usługi Intune z Twoją natywną aplikacją systemu iOS wymagany będzie następujący dokument: 
 
@@ -87,7 +87,7 @@ Do integracji zestawu SDK aplikacji usługi Intune z Twoją natywną aplikacją 
 Dokumentacja dotycząca składnika Xamarin zestawu SDK aplikacji usługi Intune oraz wtyczki Cordova zestawu SDK aplikacji usługi Intune znajduje się w odpowiednich repozytoriach usługi GitHub. 
 
 
-## Konfigurowanie telemetrii dla aplikacji
+## <a name="configuring-telemetry-for-your-app"></a>Konfigurowanie telemetrii dla aplikacji
 
 Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
@@ -97,7 +97,7 @@ Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
 * **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK nie rejestruje danych telemetrycznych.
 
-## Testowanie aplikacji z obsługą zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
+## <a name="test-your-mam-enabled-app-with-microsoft-intune"></a>Testowanie aplikacji z obsługą zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
 
 Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu iOS lub Android z zestawem SDK aplikacji usługi Intune musisz upewnić się, że wszystkie zasady zarządzania aplikacjami są włączone i działają dla użytkownika końcowego oraz administratora IT. Do przetestowania zintegrowanej aplikacji są potrzebne następujące elementy:
 

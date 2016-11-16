@@ -2,8 +2,8 @@
 title: "Uzyskiwanie dostępu do poczty e-mail przy użyciu profilów poczty e-mail | Microsoft Intune"
 description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f8767f191df76e8f166767c51fff357b251bbd4
-ms.openlocfilehash: f736c408f5a4ece65eeef35fb8d1be9a9b29c1b1
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: dcd8f956d1706f4bdcb2dca79e9f1ff5d5bb57b0
 
 
 ---
 
-# Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune
+# <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Wiele platform mobilnych zawiera natywnego klienta poczty e-mail, który jest dostarczany jako część systemu operacyjnego. Niektórych z tych klientów można skonfigurować przy użyciu profilów poczty e-mail tak jak opisano w tym temacie.
 
 Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych. Na obsługiwanych platformach można konfigurować natywnych klientów poczty e-mail za pomocą usługi Microsoft Intune w celu umożliwienia użytkownikom dostępu do firmowej poczty e-mail na ich urządzeniach osobistych bez żadnej dodatkowej konfiguracji.
@@ -56,20 +59,20 @@ Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować iloś
 >**Android for Work**: profil z usługi Intune jest stosowany tylko do konkretnych aplikacji poczty e-mail w profilu służbowym urządzenia i nie ma wpływu na konfigurację poczty e-mail w profilu użytkownika urządzenia.
 
 
-## Zabezpieczanie profilów poczty e-mail
+## <a name="secure-email-profiles"></a>Zabezpieczanie profilów poczty e-mail
 Profile poczty e-mail można zabezpieczyć przy użyciu certyfikatu lub hasła.
 
-### Certyfikaty
+### <a name="certificates"></a>Certyfikaty
 Podczas tworzenia profilu poczty e-mail wybierasz profil certyfikatu utworzony wcześniej w usłudze Intune. Jest on znany jako certyfikat tożsamości i jest używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub certyfikatu głównego) w celu określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest wdrażany na komputerze, który uwierzytelnia połączenie poczty e-mail — zwykle jest to natywny serwer poczty.
 
 Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md).
 
-### Nazwa użytkownika i hasło
+### <a name="user-name-and-password"></a>Nazwa użytkownika i hasło
 Użytkownik jest uwierzytelniany na natywnym serwerze poczty e-mail przez podanie nazwy użytkownika i hasła.
 
 Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je podać podczas łączenia z kontem e-mail.
 
-### Tworzenie profilu poczty e-mail
+### <a name="create-an-email-profile"></a>Tworzenie profilu poczty e-mail
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
@@ -117,7 +120,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
 Nowe zasady zostaną wyświetlone w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**.
 
-## Wdrożenie zasad
+## <a name="deploy-the-policy"></a>Wdrożenie zasad
 
 1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie wybierz pozycję **Zarządzaj wdrożeniem**.
 
@@ -135,6 +138,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
