@@ -3,8 +3,9 @@ title: "Wybieranie metody zarządzania urządzeniami | Microsoft Intune"
 description: "Poznaj różne sposoby rejestrowania urządzeń i zarządzania nimi."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/31/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3f27837195e5fdf58b9c13f38b0e5c0ad90d971
-ms.openlocfilehash: 86b33ff528a2922e62c4c726bc8ce5f6bdbcfa38
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 7b5cadfbc759b025fdad995e34040762b15e0d30
 
 
 ---
 
-# Wybieranie metody zarządzania urządzeniami
+# <a name="choose-how-to-manage-devices"></a>Wybieranie metody zarządzania urządzeniami
 
 Aby móc korzystać z wielu funkcji oferowanych przez usługę Intune, takich jak wdrażanie aplikacji, i kontrolować ustawienia urządzeń, urządzenia muszą być *zarządzane*. Sposób zarządzania urządzeniami zależy od możliwości usługi Intune, których chcesz używać.
 Ten temat pomoże Ci wybrać metodę, która odpowiada Twoim potrzebom.
@@ -31,7 +32,7 @@ Na potrzeby zarządzania komputerami z systemem Windows masz do wyboru dwie opcj
 1. zarejestrowanie urządzenia **lub**
 2. zainstalowanie *oprogramowania klienckiego usługi Intune*.
 
-## Decydowanie o wyborze metody do użycia
+## <a name="decide-which-method-to-use"></a>Decydowanie o wyborze metody do użycia
 Ten przepływ decyzyjny umożliwia podjęcie decyzji o sposobie zarządzania urządzeniami.
 
 ![Przepływ decyzyjny umożliwiający podjęcie decyzji o sposobie zarządzania urządzeniami.](./media/choose-manage-method.png)
@@ -48,12 +49,12 @@ Aby uzyskać szczegółową listę możliwości zarządzania oferowanych przez k
 Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz [Obsługiwane urządzenia przenośne i komputery](/intune/get-started/supported-mobile-devices-and-computers).
 
 
-## Zarządzanie przy użyciu programu Exchange ActiveSync
+## <a name="exchange-activesync-management"></a>Zarządzanie przy użyciu programu Exchange ActiveSync
 Oprócz rejestrowania urządzenia lub instalowania oprogramowania klienckiego usługi Intune możesz również zarządzać urządzeniami [za pomocą programu Exchange ActiveSync](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune). Ta metoda wymaga zainstalowania łącznika On-Premises Connector albo użycia wbudowanego łącznika Service to Service Connector w celu nawiązania połączenia z programem Exchange Server.
 Mimo że jest to trzecia opcja zarządzania urządzeniami, zapewnia ona ograniczony zestaw możliwości zarządzania w porównaniu do innych metod.
 
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - [Wybieranie metody rejestrowania urządzeń przenośnych](/intune/get-started/choose-how-to-enroll-devices1)
 - [Zarządzanie komputerami z systemem Windows przy użyciu komputerowego oprogramowania klienckiego usługi Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)
@@ -64,7 +65,6 @@ Mimo że jest to trzecia opcja zarządzania urządzeniami, zapewnia ona ogranicz
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

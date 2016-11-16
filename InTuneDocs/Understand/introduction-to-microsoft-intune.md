@@ -16,13 +16,13 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3318201cd77ec16f72e65275eda0e65c0dd9e05c
-ms.openlocfilehash: 256a1e7873a6603226843d2936e44c09424b8050
+ms.sourcegitcommit: b3b46c1025ad0792ed4623656c878c53bd69d6cb
+ms.openlocfilehash: f2f5d901ae3b6ffb298b56eef4ae593842b80cfb
 
 
 ---
 
-# Wprowadzenie do usługi Intune
+# <a name="introduction-to-intune"></a>Wprowadzenie do usługi Intune
 Usługa Microsoft Intune stanowi ramię zarządzania pakietu Microsoft Enterprise Mobility + Security (EMS, wcześniej Enterprise Mobility Suite). Podstawowym przeznaczeniem rozwiązań Enterprise Mobility jest zapewnienie pracownikom produktywności na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.  
 
 Pakiet EMS to kompletny, zintegrowany pakiet rozwiązań Enterprise Mobility obejmujący rozwiązania do kontroli dostępu, zarządzania, potwierdzania tożsamości, zapewniania produktywności i ochrony danych. Udostępnia efektywny sposób wdrażania i obsługi rozwiązania zapewniającego mobilność.  
@@ -49,13 +49,13 @@ Te narzędzia są używane w różnych kombinacjach, dzięki którym możliwe je
 
 W niniejszej dokumentacji wyjaśniamy sposób korzystania z narzędzi udostępnianych przez usługę Intune w celu obsługi różnych scenariuszy biznesowych.  Prezentujemy również zasady używania tych narzędzi z usługami Office 365, Azure AD, Azure RMS i innymi częściami pakietu Mobility Suite firmy Microsoft. W ten sposób przedstawimy szerszy obraz popularnych zastosowań tych rozwiązań, ich potencjalne zastosowania w Twoim środowisku i procedury ich wdrażania. Opisywane rozwiązania są elastyczne i mogą być dostosowywane do szerokiej gamy scenariuszy wykraczających poza przedstawione przykłady.
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 * Przeczytaj o pewnych [typowych sposobach korzystania z usługi Intune](common-ways-to-use-intune.md).
 * Zapoznaj się z produktem, korzystając [z 30-dniowej wersji próbnej usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Poznaj [wymagania techniczne i możliwości](/intune/get-started/what-to-know-before-you-start-microsoft-intune) usługi Intune.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

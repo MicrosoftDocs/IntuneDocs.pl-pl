@@ -3,37 +3,38 @@ title: "Włączanie reguły ochrony urządzenia w zasadach zgodności | Microsof
 description: "Włącz regułę ochrony przed zagrożeniami mobilnymi w zasadach zgodności urządzenia."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fa05027e1785bb27a607aa9e31b685107a84f63f
-ms.openlocfilehash: 3de68238515a2584b6f1a5785e13688097468415
+ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
+ms.openlocfilehash: ec287d49910a72c22122f45a01850bcbd3a7d203
 
 
 ---
 
-# Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności
+# <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności
 Usługa Intune z aplikacją Lookout do ochrony urządzeń przenośnych przed zagrożeniami umożliwia wykrywanie zagrożeń mobilnych i ocenę ryzyka na urządzeniu. Można utworzyć regułę zasad zgodności, aby uwzględnić ocenę ryzyka w celu określenia, czy urządzenie jest zgodne. Następnie można użyć zasad dostępu warunkowego, aby zezwolić na dostęp lub zablokować dostęp do programów Exchange, SharePoint i innych usług w oparciu o zgodność urządzenia.
 
-Aby wykrywanie zagrożeń usługi Lookout MTP miało wpływ na zasady zgodności dla urządzenia:
+Aby wykrywanie zagrożeń dotyczących urządzeń w usłudze Lookout miało wpływ na zasady zgodności dla urządzenia:
 
 * Reguła **Ochrona urządzeń przed zagrożeniami** musi być włączona w zasadach zgodności.
 
 * Na stronie **Stan usługi Lookout** w **konsoli administratora usługi Intune** musi być wyświetlana wartość **Aktywna**. Aby uzyskać bardziej szczegółowe informacje oraz instrukcje dotyczące sposobu aktywacji integracji z usługą Lookout, zobacz [Enable Lookout MTP connection in Intune](enable-lookout-mtp-connection-in-intune.md) (Włączanie połączenia z usługą Lookout MTP w usłudze Intune).
 
 
-Przed utworzeniem reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności zaleca się [skonfigurowanie subskrypcji przy użyciu usługi Lookout MTP](set-up-your-subscription-with-lookout-mtp.md), [włączenie połączenia z usługą Lookout w usłudze Intune](enable-lookout-mtp-connection-in-intune.md) i [skonfigurowanie aplikacji Lookout for Work](configure-and-deploy-lookout-for-work-apps.md). Reguła zgodności jest wymuszana tylko po przeprowadzeniu konfiguracji.
+Przed utworzeniem reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności zaleca się [skonfigurowanie subskrypcji przy użyciu usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](set-up-your-subscription-with-lookout-mtp.md), [włączenie połączenia z usługą Lookout w usłudze Intune](enable-lookout-mtp-connection-in-intune.md) i [skonfigurowanie aplikacji Lookout for Work](configure-and-deploy-lookout-for-work-apps.md). Reguła zgodności jest wymuszana tylko po przeprowadzeniu konfiguracji.
 
 Aby włączyć regułę ochrony urządzenia przed zagrożeniami, można użyć istniejących zasad zgodności lub utworzyć nowe.
 
-Jako część procesu konfiguracji usługi Lookout MTP w [konsoli usługi Lookout MTP](https://aad.lookout.com) utworzone zostały zasady, które klasyfikują zagrożenia na poziomie wysokim, średnim i niskim. W zasadach zgodności usługi Intune poziom zagrożenia będzie używany do ustawiania maksymalnego dozwolonego poziomu zagrożenia.
+W ramach procesu konfiguracji ochrony urządzeń przed zagrożeniami w usłudze Lookout w [konsoli usługi Lookout](https://aad.lookout.com) zostały utworzone zasady, które klasyfikują zagrożenia na poziomie wysokim, średnim i niskim. W zasadach zgodności usługi Intune poziom zagrożenia będzie używany do ustawiania maksymalnego dozwolonego poziomu zagrożenia.
 
 Na stronie **Zasady zgodności** w **konsoli administratora usługi Intune** przejdź do obszaru **Kondycja urządzenia** i włącz regułę **Ochrona urządzeń przed zagrożeniami** za pomocą opcji przełączania. Następnie wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
 * **Brak (zabezpieczone)**: to ustawienie zapewnia najwyższy poziom zabezpieczeń.  Oznacza to, że urządzenie nie może mieć żadnych zagrożeń.  Jeśli zostaną znalezione zagrożenia dowolnego poziomu, urządzenie zostanie ocenione jako niezgodne.  
@@ -51,16 +52,16 @@ Stan zgodności urządzenia można zobaczyć na stronie **Wszystkie urządzenia*
 
 ![zrzut ekranu przedstawiający stronę urządzeń w konsoli administracyjnej usługi Intune z wyświetlonym stanem zgodności urządzenia](../media/mtp/mtp-device-status-intune-console.png)
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 * Tworzenie zasad dostępu warunkowego
-  * [Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
-  * [lokalna instalacja programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+  * [Usługa Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
+  * [Lokalna instalacja programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   * [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   * [Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune,md)
   * [Dynamics CRM](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
