@@ -2,9 +2,10 @@
 title: "Konfigurowanie infrastruktury certyfikatów dla profilu PFX | Microsoft Intune"
 description: "Tworzenie i wdrażanie profilów certyfikatów PFX."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 11/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4ce620e073608f6bcbfc9d698255dd75deae4be
-ms.openlocfilehash: 3d50aa40b6c3e8aa34c5699a0c53befce9549055
+ms.sourcegitcommit: 7d1f37a2ba2e634fb75058d33eaaccf3aa5845b0
+ms.openlocfilehash: 8fc1cc718fd0edae8b8ec4a0a8dc25487eafda2b
 
 
 
 ---
-# Konfigurowanie infrastruktury certyfikatu
+# <a name="configure-certificate-infrastructure"></a>Konfigurowanie infrastruktury certyfikatu
 W tym temacie opisano elementy potrzebne do utworzenia i wdrożenia profilów certyfikatów PFX.
 
 Aby przeprowadzać uwierzytelnianie oparte na certyfikatach w organizacji, należy zastosować urząd certyfikacji przedsiębiorstwa.
@@ -30,7 +31,7 @@ Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
 
 -  Łącznik certyfikatów usługi Intune uruchamiany na komputerze, który może komunikować się z urzędem certyfikacji.
 
-## Opis infrastruktury lokalnej
+## <a name="onpremises-infrastructure-description"></a>Opis infrastruktury lokalnej
 
 
 -    **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji sieci Web) muszą należeć do Twojej domeny usługi Active Directory.
@@ -50,7 +51,7 @@ Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
     Informacje na temat certyfikatów dla serwera proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
-### Certyfikaty i szablony
+### <a name="certificates-and-templates"></a>Certyfikaty i szablony
 
 |Obiekt|Szczegóły|
 |----------|-----------|
@@ -58,16 +59,16 @@ Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
 |**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w pliku w formacie **.cer** z urzędu wystawiającego certyfikaty lub dowolnego urządzenia traktującego urząd wystawiający certyfikaty jako zaufany, a następnie wdrożyć go na urządzeniach, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
 
-## Konfigurowanie infrastruktury
+## <a name="configure-your-infrastructure"></a>Konfigurowanie infrastruktury
 Aby można było skonfigurować profile certyfikatów, należy najpierw wykonać poniższe zadania. Te zadania wymagają znajomości systemu Windows Server 2012 R2 oraz usług certyfikatów Active Directory (ADCS):
 
 - **Zadanie 1** — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji.
 - **Zadanie 2** — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune.
 
-### Zadanie 1 — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
+### <a name="task-1-configure-certificate-templates-on-the-certification-authority"></a>Zadanie 1 — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
 To zadanie obejmuje publikowanie szablonu certyfikatu.
 
-##### Aby skonfigurować urząd certyfikacji
+##### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
 
 1.  Za pomocą przystawki Szablony certyfikatów dla wystawiającego urzędu certyfikacji utwórz nowy szablon niestandardowy lub skopiuj i zmodyfikuj istniejący szablon (na przykład szablon użytkownika), aby używać go z profilem PFX.
 
@@ -75,7 +76,7 @@ To zadanie obejmuje publikowanie szablonu certyfikatu.
 
     -   Określ przyjazną **nazwę wyświetlaną szablonu** .
 
-    -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. (Zabezpieczenia są wymuszane przez moduł zasad usługi Intune dla usługi NDES).
+    -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. 
 
     -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**.
 
@@ -103,12 +104,12 @@ To zadanie obejmuje publikowanie szablonu certyfikatu.
 
 4.  Na komputerze urzędu certyfikacji sprawdź, czy komputer hostujący łącznik certyfikatów usługi Intune ma uprawnienia do rejestracji, dzięki czemu może uzyskiwać dostęp do szablonu używanego podczas tworzenia profilu PFX. Ustaw to uprawnienie na karcie **Zabezpieczenia** właściwości komputera urzędu certyfikacji.
 
-### Zadanie 2 — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune
+### <a name="task-2-enable-install-and-configure-the-intune-certificate-connector"></a>Zadanie 2 — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune
 To zadanie obejmuje:
 
 Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
 
-##### Aby włączyć obsługę łącznika certyfikatów
+##### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
 
 1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com) i wybierz pozycję **Administracja** &gt; **Łącznik certyfikatów**.
 
@@ -116,7 +117,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
 
 3.  Wybierz pozycję **Włącz łącznik certyfikatów**, a następnie kliknij przycisk **OK**.
 
-##### Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
+##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
 
 1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com), a następnie wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Łącznik certyfikatów** &gt; **Pobierz łącznik certyfikatów**.
 
@@ -141,8 +142,6 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
 
     a. Wybierz pozycję **Zaloguj** i wprowadź swoje poświadczenia administratora usługi Intune lub poświadczenia administratora dzierżawy z uprawnieniami administratora globalnego.
 
-  <!--  If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, click **Use proxy server** and then provide the proxy server name, port, and account credentials to connect.-->
-
     b. Wybierz kartę **Zaawansowane** , wprowadź poświadczenia konta, do którego przypisano uprawnienia **Wystawianie certyfikatów i zarządzanie nimi** w urzędzie wystawiającym certyfikaty.
 
     c. Wybierz pozycję **Zastosuj**.
@@ -151,15 +150,12 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
 
 6.  Otwórz wiersz polecenia i wpisz **services.msc**. Naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i wybierz polecenie **Uruchom ponownie**.
 
-Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź następujący adres URL, co powinno spowodować zwrócenie błędu **403** :
 
-**http://&lt;nazwa_FQDN_serwera_usługi_NDES&gt;/certsrv/mscep/mscep.dll**
-
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](Configure-Intune-certificate-profiles.md).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
