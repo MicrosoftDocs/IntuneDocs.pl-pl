@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: 78137299b1c4e18fe68e1f9720a2111d1794e177
+ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
+ms.openlocfilehash: 9929294dd93e7bad47e6674ccafab0c036a1f89c
 
 
 ---
@@ -34,7 +34,11 @@ Można pozwolić, aby użytkownicy instalowali i rejestrowali swoje urządzenia 
 1. **Skonfiguruj usługę**<br>
 Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
 
-2. **Tworzenie rekordów CNAME** (opcjonalnie)<br>Utwórz rekordy zasobów **CNAME** systemu DNS dla domeny swojej firmy w celu uproszczenia rejestracji. Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM, `https://manage.microsoft.com`. Rekordy zasobów CNAME muszą zawierać następujące informacje:
+2. **Tworzenie rekordów CNAME** (opcjonalnie)<br>Utworzyć rekordy zasobów **CNAME** systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
+
+    Jeśli w systemie DNS znajduje się rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny manage.microsoft.com, zaleca się jego zastąpienie w systemie DNS rekordem CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com. Ta zmiana jest zalecana, ponieważ rejestracje za pośrednictwem punktu końcowego domeny manage.microsoft.com zostaną wycofane w przyszłej wersji.
+
+    Rekordy zasobów CNAME muszą zawierać następujące informacje:
 
   |TYPE|Nazwa hosta|Przekierowanie na|TTL|
   |--------|-------------|-------------|-------|
@@ -68,6 +72,6 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
