@@ -1,9 +1,9 @@
 ---
 title: "Konfigurowanie zarządzania systemem Android | Microsoft Intune"
-description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Android i KNOX w usłudze Microsoft Intune."
+description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Android i KNOX Standard w usłudze Microsoft Intune."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -14,33 +14,34 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: 68ae3b90977e73c49b21d3196100f73d11549b63
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: 504b8334485217ab00d42080e1fab8728e7b62c4
 
 
 ---
 
-# Konfigurowanie zarządzania urządzeniami z systemem Android
-Będąc administratorem usługi Intune, możesz włączyć zarządzanie urządzeniami z systemem Android z Portalu firmy. Użytkownicy będą mogli wtedy rejestrować swoje urządzenia przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
+# <a name="set-up-android-device-management"></a>Konfigurowanie zarządzania urządzeniami z systemem Android
+Będąc administratorem usługi Intune, możesz włączyć zarządzanie urządzeniami z systemem Android, w tym urządzeniami Samsung Knox Standard, w Portalu firmy. Użytkownicy będą mogli wtedy rejestrować swoje urządzenia przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
 
-1.  **Konfigurowanie usługi Intune**<br>
+1.  **Skonfiguruj usługę**<br>
     Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#set-mobile-device-management-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
 
 2.  **Włączona rejestracja systemu Android**<br>
     Żadne dodatkowe konfiguracje w konsoli usługi Intune nie są wymagane do włączenia rejestracji urządzeń przenośnych z systemem Android.
 
-3.  **Informowanie użytkowników, jak uzyskać dostęp do zasobów firmy za pomocą Portalu firmy**<br>
-    Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi. [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+3.  **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**
 
-4.  Użytkownicy muszą dowiedzieć się, jak zarejestrować swoje urządzenia i czego oczekiwać po rozpoczęciu zarządzania nimi.
-  - [Co mówić użytkownikom końcowym na temat korzystania z usługi Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-  - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-android-device-with-intune.md)
+    Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Android w usłudze Intune](../enduser/enroll-your-device-in-intune-android.md). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
-### Zobacz także
+    Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
+  - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Android](../enduser/using-your-android-device-with-intune.md)
+
+### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,25 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e24de6814d9e01c64768f425e961a7822f4b27a1
-ms.openlocfilehash: 5f02618da6fb3c538ad131fe8abaf35a6be6e177
+ms.sourcegitcommit: 8cde3ffb3be8656d5f256e16eb71ed4aaa7ceb5b
+ms.openlocfilehash: 2fd4d3c7cb92e27a01090fdec85e02db4010f859
 
 
 ---
 
 
-# Ustawienia zasad zgodności dla urządzeń z systemem Android w usłudze Microsoft Intune
+# <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Ustawienia zasad zgodności dla urządzeń z systemem Android w usłudze Microsoft Intune
 
-Ustawienia zasad opisane w tym temacie dotyczą urządzeń z systemem Android 4.0 i nowszymi wersjami lub Samsung KNOX 4.0 i nowszymi wersjami.
+Ustawienia zasad opisane w tym temacie dotyczą urządzeń z systemem Android 4.0 i nowszymi wersjami lub Samsung KNOX Standard 4.0 i nowszymi wersjami.
 
 Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących opcji:
-> [!div class="op_single_selector"]
+> [!div class = "op_single_selector"]
+- [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem Windows](windows-compliance-policy-settings-in-microsoft-intune.md)
 
-## Ustawienia zabezpieczeń systemu
-### Hasło
+## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
+### <a name="password"></a>Hasło
 - **Wymagaj hasła do odblokowania urządzeń przenośnych:** ustaw tę pozycję na wartość **Tak**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do swojego urządzenia.
 
 -  **Minimalna długość hasła:** Określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło użytkownika.
@@ -55,10 +56,10 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 
 - **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownik otrzyma monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
 
-### Szyfrowanie
+### <a name="encryption"></a>Szyfrowanie
 - **Wymagaj szyfrowania na urządzeniu przenośnym:** ustaw tę pozycję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami. Urządzenia są szyfrowane po wybraniu ustawienia **Wymagaj hasła do odblokowania urządzeń przenośnych**.
 
-## Kondycja urządzeń i ustawienia zabezpieczeń
+## <a name="device-health-and-security-settings"></a>Kondycja urządzeń i ustawienia zabezpieczeń
 
 - **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root:** w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
 - **Wymagaj zapobiegania instalacji aplikacji z nieznanych źródeł (Android 4.0 i nowsze):** aby zablokować urządzenia z włączonym ustawieniem **Bezpieczeństwo** > **Nieznane źródła**, włącz to ustawienie i wybierz opcję **Tak**.  
@@ -77,7 +78,7 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 
   Aby uzyskać więcej informacji, zobacz [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](enable-device-threat-protection-rule-in-compliance-policy.md).
 
-## Ustawienia właściwości urządzenia
+## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne.
   Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
@@ -85,6 +86,6 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

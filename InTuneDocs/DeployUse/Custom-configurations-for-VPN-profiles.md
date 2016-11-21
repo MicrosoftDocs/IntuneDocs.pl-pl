@@ -2,9 +2,10 @@
 title: "Konfiguracje niestandardowe dla profilów sieci VPN | Microsoft Intune"
 description: "Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłudze Intune."
 keywords: 
-author: Nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +14,26 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
-ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
+ms.sourcegitcommit: fb3b6cccaa3e62be3a7271ae6a67e76f8cf8d858
+ms.openlocfilehash: a1c7648a4ee4ab91e00f5305a8124a07570824fc
 
 
 ---
 
-# Konfiguracje niestandardowe dla profilów sieci VPN
+# <a name="custom-configurations-for-vpn-profiles"></a>Konfiguracje niestandardowe dla profilów sieci VPN
 
-## Tworzenie konfiguracji niestandardowej
-Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłudze Intune. Aby utworzyć konfigurację niestandardową:
+## <a name="create-a-custom-configuration"></a>Tworzenie konfiguracji niestandardowej
+Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłudze Intune dla następujących urządzeń:
 
-   1. W konsoli administracyjnej usługi Intune wybierz pozycję **Zasady** > **Dodaj zasady** > *<Expand platform>* > **Konfiguracja niestandardowa** > **Utwórz zasady**.
+* Urządzenia z systemem Android 4 i nowszym
+* Urządzenia z programem Android for Work
+* Zarejestrowane urządzenia z systemem Windows 8.1 lub nowszym
+* Urządzenia z systemem Windows Phone 8.1 lub nowszym
+* Urządzenia z systemem Windows 10 Desktop i Mobile
+
+Aby utworzyć konfigurację niestandardową:
+
+   1. W konsoli administracyjnej usługi Intune wybierz pozycję **Zasady** > **Dodaj zasady** > *Rozwiń platformę* > **Konfiguracja niestandardowa** > **Utwórz zasady**.
    2. Podaj nazwę zasad.
    3. Dla każdego ustawienia identyfikatora URI wybierz pozycję **Dodaj** i podaj wymagane informacje. Przykład:
 
@@ -32,7 +41,7 @@ Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłud
 
    4.  Po wprowadzeniu wszystkich ustawień identyfikatora URI wybierz pozycję **Zapisz zasady**, a następnie wdróż zasady.
 
-## Wdrażanie zasad konfiguracji
+## <a name="deploy-a-configuration-policy"></a>Wdrażanie zasad konfiguracji
 
 1.  W obszarze roboczym **Zasady** wybierz zasady do wdrożenia, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
 
@@ -44,7 +53,7 @@ Konfiguracje niestandardowe umożliwiają tworzenie profilów sieci VPN w usłud
 
 Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczących wdrożenia w dolnej części listy zasad.
 
-##Przykład ustawień identyfikatora URI dla konfiguracji niestandardowej profilu sieci VPN
+##<a name="example-of-uri-settings-for-a-custom-vpn-profile-configuration"></a>Przykład ustawień identyfikatora URI dla konfiguracji niestandardowej profilu sieci VPN
 Poniżej przedstawiono przykładowe wpisy wartości identyfikatora URI umożliwiające utworzenie konfiguracji niestandardowej dla sieci VPN w fikcyjnej firmie o nazwie Contoso. Aby uzyskać więcej informacji, takich jak typ danych dla każdego wpisu, zobacz [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
 
 Native Contoso VPN (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
@@ -85,10 +94,10 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 Aby uzyskać odpowiedzi na pytania dotyczące używania tych ustawień lub więcej szczegółów na temat ich działania, klienci powinni zapoznać się z dokumentacją dostawcy usług konfiguracji: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
-## Ustawienia identyfikatora URI połączeń sieci VPN dla aplikacji systemu Android w programie PulseSecure
-### NIESTANDARDOWY IDENTYFIKATOR URI DLA LISTY PAKIETÓW
+## <a name="uri-settings-for-android-perapp-vpn-on-pulsesecure"></a>Ustawienia identyfikatora URI połączeń sieci VPN dla aplikacji systemu Android w programie PulseSecure
+### <a name="custom-uri-for-package-list"></a>NIESTANDARDOWY IDENTYFIKATOR URI DLA LISTY PAKIETÓW
 -  Typ danych = ciąg
--  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList
+-  OMA-URI = ./Vendor/MSFT/VPN/Profile/Name/PackageList
 -  Wartość = lista pakietów rozdzielonych ogranicznikami.
    - Ograniczniki: średnik (;), dwukropek (:), przecinek (,), pionowa kreska (|)
 
@@ -96,7 +105,7 @@ Przykłady:
 - com.android.chrome
 - com.android.chrome;com.android.browser
 
-### NIESTANDARDOWY IDENTYFIKATOR URI DLA TRYBU (OPCJONALNIE)
+### <a name="custom-uri-for-mode-optional"></a>NIESTANDARDOWY IDENTYFIKATOR URI DLA TRYBU (OPCJONALNIE)
 - Typ danych = ciąg
 - OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode
 
@@ -107,11 +116,11 @@ Przykłady:
 > - Jeśli podano parametr PackageList, wartość domyślna to *WHITELIST*
 
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 (Połączenia sieci VPN w usłudze Microsoft Intune)[vpn-connections-in-microsoft-intune.md]
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
