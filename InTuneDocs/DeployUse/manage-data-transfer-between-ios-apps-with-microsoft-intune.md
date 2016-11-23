@@ -3,8 +3,9 @@ title: "Zarządzanie przesyłaniem danych między aplikacjami systemu iOS | Micr
 description: "Skorzystaj z tego tematu, aby dowiedzieć się, jak możesz użyć funkcji systemu iOS Otwórz w oraz zasad zarządzania aplikacjami mobilnymi do zarządzania transferami danych pomiędzy aplikacjami."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,14 @@ ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 488ecb801eac2b591db87683bbe9f371879483c4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 080d861e8fd2d0140ffe5d9987032213ae0e4d4c
 
 
 ---
 
-# Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune
-## Zarządzanie aplikacjami systemu iOS
+# <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune
+## <a name="manage-ios-apps"></a>Zarządzanie aplikacjami systemu iOS
 W ramach ochrony danych firmowych należy upewnić się, że przesyłanie plików jest ograniczone do aplikacji zarządzanych przez Ciebie.  Aplikacjami systemu iOS można zarządzać następująco:
 
 -   Zapobiegaj utracie danych firmowych poprzez skonfigurowanie zasad zarządzania aplikacjami mobilnymi dla aplikacji, które będziemy nazywać aplikacjami **zarządzanymi przez zasady**.
@@ -28,7 +29,7 @@ W ramach ochrony danych firmowych należy upewnić się, że przesyłanie plikó
 -   Możesz też wdrażać aplikacje i zarządzać nimi za pośrednictwem **kanału zarządzania urządzeniami przenośnymi**.  Wymaga to zarejestrowania urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi. Mogą to być aplikacje **zarządzane przez zasady** lub inne zarządzane aplikacje.
 
 **Zarządzanie funkcją Otwórz w** dla urządzeń z systemem iOS umożliwia ograniczenie przesyłania plików między aplikacjami wdrożonymi za pośrednictwem **kanału zarządzania urządzeniami przenośnymi**. Ograniczenia zarządzania funkcją „Otwórz w” są ustawiane w ustawieniach konfiguracji i wdrażane za pomocą rozwiązania do zarządzania urządzeniami przenośnymi.  Ograniczenia są stosowane w przypadku zainstalowania wdrożonej aplikacji przez użytkownika.
-##  Używanie zasad zarządzania aplikacjami mobilnymi z aplikacjami systemu iOS
+##  <a name="using-mam-with-ios-apps"></a>Używanie zasad zarządzania aplikacjami mobilnymi z aplikacjami systemu iOS
 Zasady zarządzania aplikacjami mobilnymi można zastosować z funkcją **zarządzania funkcją Otwórz w** systemu iOS w celu ochrony danych następująco:
 
 -   **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie do zarządzania urządzeniami przenośnymi:** można skonfigurować dla zasad zarządzania aplikacjami mobilnymi ustawienie **Zezwalaj aplikacji na przesyłanie danych tylko do zarządzanych aplikacji**. Gdy użytkownik końcowy otworzy chroniony plik w aplikacji, która nie jest zarządzana przez zasady, pliku nie będzie można odczytać.
@@ -41,7 +42,7 @@ Aby upewnić się, że aplikacje, które wdrażasz za pomocą rozwiązania do za
 > [!IMPORTANT]
 > Ustawienie nazwy UPN użytkownika jest wymagane tylko w przypadku aplikacji wdrożonych na urządzeniach zarządzanych przez rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy.  To ustawienie nie jest wymagane w przypadku urządzeń zarządzanych przez usługę Intune.
 
-## Konfigurowanie ustawienia nazwy UPN użytkownika
+## <a name="configure-user-upn-setting"></a>Konfigurowanie ustawienia nazwy UPN użytkownika
 Ta konfiguracja jest wymagana w przypadku urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy. Poniżej przedstawiono ogólną procedurę implementowania ustawienia nazwy UPN oraz ogólny opis wynikowego środowiska użytkownika końcowego:
 
 
@@ -49,11 +50,11 @@ Ta konfiguracja jest wymagana w przypadku urządzeń zarządzanych przez rozwią
 
 2.  Przeprowadź wdrażanie aplikacji i profilu poczty e-mail, którymi chcesz zarządzać za pośrednictwem rozwiązania do zarządzania urządzeniami przenośnymi innej firmy, **korzystając z ustawień opisanych w kroku 3 i 4**.
 
-3.  Wdróż aplikację, używając następujących ustawień konfiguracji aplikacji: key=IntuneMAMUPN, Value=<nazwa_użytkownika@firma.com> [przykład: ‘IntuneMAMUPN’, ‘jannowak@microsoft.com’]
+3.  Wdróż aplikację, używając następujących ustawień konfiguracji aplikacji: key=IntuneMAMUPN, Value=<username@company.com> [example: ‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
 4.  Wdróż zasady zarządzania funkcją Otwórz w na zarejestrowanych urządzeniach.
 
-### Przykład środowiska użytkownika końcowego
+### <a name="example-end-user-experience"></a>Przykład środowiska użytkownika końcowego
 
 1.  Użytkownik końcowy instaluje aplikację Microsoft Word na urządzeniu.
 
@@ -70,11 +71,11 @@ Ta konfiguracja jest wymagana w przypadku urządzeń zarządzanych przez rozwią
 
 6.  Teraz transfer danych zakończy się pomyślnie i dokument zostanie oznaczony jako tożsamość firmowa w aplikacji. Gdy dane są używane w kontekście służbowym, są stosowane odpowiednie ustawienia zasad.
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
