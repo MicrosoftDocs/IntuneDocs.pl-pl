@@ -4,6 +4,7 @@ description:
 keywords: 
 author: Msmbaldwin
 manager: jeffgilb
+ms.author: oydang
 ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +14,8 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8bc2f6e8dcf9d0ac3e7fccec792c86ff1fd4131c
-ms.openlocfilehash: 15be877edbdeb827a4318af226ea8cde8c8e46f4
+ms.sourcegitcommit: ca4623db80d711f3543b6d688fb1bb1ef228c62c
+ms.openlocfilehash: 2a65ae79a0bba21d555dbed9f1bc40e01452f08c
 
 
 ---
@@ -82,10 +83,18 @@ Do integracji zestawu SDK aplikacji usługi Intune z Twoją natywną aplikacją 
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](intune-app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji mobilnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
 
-Dokumentacja dotycząca składnika Xamarin zestawu SDK aplikacji usługi Intune oraz wtyczki Cordova zestawu SDK aplikacji usługi Intune znajduje się w odpowiednich repozytoriach usługi GitHub.
+Aby kompilować aplikacje Cordova przy użyciu wtyczki Cordova zestawu SDK aplikacji usługi Intune, skorzystaj z następujących informacji:
+
+* **[Przewodnik dotyczący wtyczki Cordova zestawu SDK aplikacji Intune](intune-app-sdk-cordova)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i OS przy użyciu oprogramowania Cordova dla funkcji zarządzania aplikacjami mobilnymi usługi Intune.
+
+Aby kompilować aplikacje Xamarin przy użyciu składnika Xamarin zestawu SDK aplikacji usługi Intune, skorzystaj z następujących informacji:
+
+* **[Przewodnik dotyczący składnika Xamarin zestawu SDK aplikacji Intune](intune-app-sdk-xamarin)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i OS przy użyciu składnika Xamarin dla funkcji zarządzania aplikacjami mobilnymi usługi Intune.
 
 
-## <a name="set-up-telemetry-for-your-app"></a>Konfigurowanie telemetrii dla aplikacji
+
+
+## <a name="configure-telemetry-for-your-app"></a>Konfigurowanie telemetrii dla aplikacji
 
 Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
@@ -95,7 +104,7 @@ Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
 * **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK nie rejestruje danych telemetrycznych.
 
-## <a name="test-your-mamenabled-app-with-microsoft-intune"></a>Testowanie aplikacji z obsługą zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
+## <a name="test-your-mam-enabled-app-with-microsoft-intune"></a>Testowanie aplikacji z obsługą zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
 
 Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu iOS lub Android z zestawem SDK aplikacji usługi Intune musisz się upewnić, że wszystkie zasady zarządzania aplikacjami są włączone i działają dla użytkownika końcowego oraz administratora IT. Do przetestowania zintegrowanej aplikacji są potrzebne następujące elementy:
 

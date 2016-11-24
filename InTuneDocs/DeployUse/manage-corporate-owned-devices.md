@@ -14,17 +14,17 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
-ms.openlocfilehash: 7577cbab528d88635e8551bf8de1ffd49becaa84
+ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
+ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
 
 
 ---
 
-# <a name="enroll-corporateowned-devices-by-using-intune"></a>Rejestrowanie urządzeń firmowych przy użyciu usługi Intune
+# <a name="enroll-corporate-owned-devices-by-using-intune"></a>Rejestrowanie urządzeń firmowych przy użyciu usługi Intune
 
 Urządzenia należące do organizacji lub firmy mogą być rejestrowane w celu zarządzania przez usługę Intune na wiele sposobów, w zależności od rodzaju urządzenia, sposobu jego zakupu i potrzeb organizacji. Firmowe urządzenia można również rejestrować (oraz zarządzać nimi) przez zainstalowanie aplikacji Portal firmy, podobnie jak w scenariuszu „przynieś własne urządzenie” (BYOD, bring your own device).
 
-## <a name="enroll-corporateowned-ios-devices"></a>Rejestrowanie firmowych urządzeń z systemem iOS
+## <a name="enroll-corporate-owned-ios-devices"></a>Rejestrowanie firmowych urządzeń z systemem iOS
 
 Metody rejestrowania urządzeń firmowych są dobrym wyborem w scenariuszu „wybierz własne urządzenie” (CYOD, choose your own device). W środowisku CYOD organizacja pokrywa koszty urządzenia wybranego przez użytkownika i zarządza tym urządzeniem.
 
@@ -40,7 +40,7 @@ Konto DEM służy do rejestrowania tylko tych urządzeń, które nie są używan
 
 Dowiedz się, jak [zarejestrować firmowe urządzenia przy użyciu konta DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-## <a name="enroll-corporateowned-windows-10-enterprise-devices"></a>Rejestrowanie urządzeń firmowych z systemem Windows 10 Enterprise
+## <a name="enroll-corporate-owned-windows-10-enterprise-devices"></a>Rejestrowanie urządzeń firmowych z systemem Windows 10 Enterprise
 
 Jeśli w Twojej organizacji używasz usługi Azure Active Directory Premium lub Microsoft Enterprise Mobility Suite, możesz [zarejestrować urządzenia z systemem Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview). Jeśli użytkownik na urządzeniu doda konto służbowe, urządzenie zostanie automatycznie oznaczone jako „firmowe”.
 
@@ -50,17 +50,19 @@ Wielu producentów urządzeń przenośnych oznacza swoje urządzenia unikatowym 
 
 Dowiedz się, jak [oznaczać firmowe urządzenia przy użyciu numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
 
-## <a name="identify-a-device-as-corporateowned"></a>Identyfikowanie urządzeń firmowych
+## <a name="identify-a-device-as-corporate-owned"></a>Identyfikowanie urządzeń firmowych
 
-Na liście urządzeń w pozycji **Własność** widnieje wartość **Firmowe**. Urządzenie firmowe ma jedną z następujących cech:
+Usługa Intune rozpoznaje urządzenie jako „firmowe” w przypadku spełnienia dowolnego z poniższych warunków:
 
- - Urządzenie zostało [zarejestrowane przy użyciu konta DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
- - Urządzenie zostało zarejestrowane przy użyciu [programu DEP firmy Apple](ios-device-enrollment-program-in-microsoft-intune.md) lub [programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md).
- - Producent urządzenia [wstępnie zadeklarował urządzenie przy użyciu numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
- - Urządzenie jest zarejestrowane w usłudze [Azure Active Directory lub Enterprise Mobility Suite jako urządzenie z systemem Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
+ - Urządzenie zostało [zarejestrowane przy użyciu konta DEM](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) (wszystkie platformy).
+ - Urządzenie zostało zarejestrowane przy użyciu [programu DEP firmy Apple](ios-device-enrollment-program-in-microsoft-intune.md) lub [programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) (tylko system iOS).
+ - Producent urządzenia [wstępnie zadeklarował urządzenie przy użyciu numerów IMEI](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) (wszystkie platformy z numerami IMEI).
+ - Urządzenie zostało zarejestrowane w usłudze [Azure Active Directory lub Enterprise Mobility Suite jako urządzenie z systemem Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (tylko system Windows 10).
+
+Jeśli urządzenie zostało oznaczone jako firmowe, zobaczysz wartość **Należące do firmy** w kolumnie **Własność** dla tego rekordu urządzenia w konsoli administratora. 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
