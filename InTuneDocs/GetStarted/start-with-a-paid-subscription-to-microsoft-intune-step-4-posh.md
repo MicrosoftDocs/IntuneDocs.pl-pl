@@ -2,10 +2,10 @@
 title: "Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell | Microsoft Intune"
 description: "Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell"
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: d2d31c80-c32c-4315-8271-1b0cf9a1f78a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8f99159079002b9e44dd1ba328b0f2fc079770d8
-ms.openlocfilehash: 9a3e28cad00f99035b18182a33c24bcb714cca19
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 8f0786bc821c4a93e5f1ff4bf3d693dd6d59ca8e
 
 
 ---
 
-# Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell
+# <a name="manage-intune-licenses-using-powershell"></a>Zarządzanie licencjami usługi Intune przy użyciu programu PowerShell
 Zanim użytkownicy będą mogli się zalogować w celu korzystania z usługi Intune i rejestrowania urządzeń w systemie zarządzania, należy przypisać każdemu użytkownikowi licencję do swojej subskrypcji usługi Intune, zgodnie z opisem w artykule [Zarządzanie licencjami usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Niektórzy użytkownicy w organizacjach korzystających z pakietu Microsoft Enterprise Mobility + Security mogą jednak wymagać tylko usługi Azure Active Directory Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzestaw usług przy użyciu [poleceń cmdlet środowiska PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).
 
 Aby selektywnie przypisywać licencje użytkowników dla usług pakietu EMS, należy otworzyć program PowerShell jako administrator na komputerze, na którym zainstalowano [moduł usługi Azure Active Directory dla programu Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). Program PowerShell można zainstalować na komputerze lokalnym lub serwerze usług ADFS.
@@ -60,7 +60,7 @@ Weryfikacja:
 
 ![PoSH-AddLic-Verify](./media/posh-addlic-verify.png)
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony.
 >[!div class="step-by-step"]
 
@@ -68,6 +68,6 @@ Gratulacje! Krok 4 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

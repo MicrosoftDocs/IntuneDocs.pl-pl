@@ -2,9 +2,10 @@
 title: "Profile certyfikatów zapewniające dostęp do zasobów | Microsoft Intune"
 description: "Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika."
 keywords: 
-author: Nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,33 +14,37 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4ff2d245586d4803aab62ffb51ac21bdb8e3669
-ms.openlocfilehash: 361e4d81b3d5dd807312a1c88cd9b5abaa5dc567
+ms.sourcegitcommit: 35d08100b4332cc63667a401143c17972225a908
+ms.openlocfilehash: b64260fd44e5c3fd0fb80e0dab4d75bd5c4eb305
 
 
 ---
 
-# Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune
+# <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune
 Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz zabezpieczyć dostęp przy użyciu certyfikatu zainstalowanego na urządzeniu każdego użytkownika. Oto jak to działa:
 
 1. Upewnij się, że jest dostępna właściwa infrastruktura certyfikatu, zgodna z opisem w tematach [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) i [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md).
 
 2. Zainstaluj certyfikat główny lub certyfikat pośredniego urzędu certyfikacji (CA) na każdym urządzeniu, aby urządzenia rozpoznawały urząd certyfikacji jako wiarygodny. W tym celu należy utworzyć i wdrożyć **profil zaufanego certyfikatu**. Po wdrożeniu tego profilu urządzenia zarządzane przy użyciu usługi Intune zażądają certyfikatu głównego i otrzymają go. Należy utworzyć oddzielny profil dla każdej platformy. **Profil zaufanego certyfikatu** jest dostępny dla następujących platform:
- -  System iOS 7.1 lub nowszy
+ -  System iOS 8.0 i nowsze
  -  System Mac OS X 10.9 lub nowszy
  -  Android 4.0 i nowsze
+ -  Program Android for Work
  -  Windows 8.1 i nowsze
  -  System Windows Phone 8.1 lub nowszy
 
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 3. Utwórz profile certyfikatów, tak aby poszczególne urządzenia żądały certyfikatu do użytku podczas uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi — zgodnie z opisem w temacie [Configure Intune certificate profiles](configure-intune-certificate-profiles.md) (Konfigurowanie profilów certyfikatów usługi Intune). Dla urządzeń korzystających z następujących platform można utworzyć i wdrożyć **profil certyfikatu PKCS #12 (PFX)** *albo* **profil certyfikatu protokołu SCEP**:
 
-  -  System iOS 7.1 lub nowszy
+  -  System iOS 8.0 i nowsze
   -  Android 4.0 i nowsze
+  -  Program Android for Work
   -  System Windows 10 (Desktop i Mobile) i nowsze
 
   Użyj **profilu certyfikatu protokołu SCEP** dla urządzeń z następującymi platformami:
     -   System Mac OS X 10.9 lub nowszy
-    -   System Windows Phone 8.1 lub nowszy
+    -   Windows Phone 8,1 
 
 Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfikatu należy go skojarzyć z utworzonym **profilem zaufanego certyfikatu głównego**.
 
@@ -49,13 +54,13 @@ Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfik
 >-  Niezależnie od tego, czy zamierzasz używać profilów certyfikatów protokołu SCEP czy PFX, musisz pobrać i skonfigurować łącznik certyfikatów usługi Microsoft Intune.
 >-  Konfiguracja wszystkich wymaganych usług została opisana w tematach [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) i [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md).
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 - [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md)
 - [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md)
 - [Konfigurowanie profilów certyfikatów usługi Intune](configure-intune-certificate-profiles.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
