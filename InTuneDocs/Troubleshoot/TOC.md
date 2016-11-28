@@ -1,5 +1,5 @@
 # [Poznawanie i eksplorowanie](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Wprowadzenie](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Wprowadzenie](/intune/get-started/get-started)
 # [Co nowego](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Wdrażanie i użytkowanie](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
@@ -23,6 +23,6 @@
 ## [Rozwiązywanie problemów dotyczących integracji z aplikacją Lookout](troubleshooting-lookout-integration.md)
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

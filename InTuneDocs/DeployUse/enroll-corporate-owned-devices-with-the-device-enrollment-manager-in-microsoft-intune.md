@@ -14,15 +14,15 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: 51e5f248c5e8759d5992918a99e1f114e2614142
+ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
+ms.openlocfilehash: fd289e355aca46eb0abe55edf09ebe5e030bcc63
 
 
 ---
 
 
-# <a name="enroll-corporateowned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune
-Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* jest specjalnym kontem usługi Intune umożliwiającym rejestrację do 1000 urządzeń. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”). Użytkownicy nie będą mogli na przykład korzystać z natywnych aplikacji poczty e-mail.
+# <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune
+Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* jest specjalnym kontem usługi Intune umożliwiającym rejestrację do 1000 urządzeń. Każde zarejestrowane urządzenie używa jednej licencji. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”). Użytkownicy nie będą mogli na przykład korzystać z natywnych aplikacji poczty e-mail.
 
 Konto użytkownika menedżera rejestracji urządzeń można na przykład przypisać menedżerowi lub kierownikowi magazynu, aby umożliwić mu wykonywanie następujących czynności:
 
@@ -96,6 +96,6 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi | Microsoft Intune"
-description: "Ten temat zawiera krótki przegląd korzyści wynikających z używania zestawu SDK usługi Intune."
+description: "Ten temat zawiera krótki przegląd korzyści wynikających z używania zestawu SDK aplikacji usługi Intune."
 keywords: 
 author: karthikaraman
 ms.author: karaman
@@ -14,14 +14,14 @@ ms.assetid: 26b00081-7c05-4969-ace1-0585e44d5cd2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37e12d1d78f40acb616ad5762eeb5f034ecc0081
-ms.openlocfilehash: 57b7cefce3715568b77a8c16a857a16434d72821
+ms.sourcegitcommit: 8c2d3f7fd7478130184b2c66beca8d6106e6dd87
+ms.openlocfilehash: e6d4036565dc0b2a88e282b9bda060971ae0c67e
 
 
 ---
 
-# Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi
-Korzystając z zestawu SDK aplikacji usługi Microsoft Intune, można przystosować usługę Intune do zarządzania określonymi funkcjami aplikacji dla systemu iOS lub Android. Po przygotowaniu aplikacji można wdrożyć dla niej zasady. Te zasady chronią dane firmy przy użyciu tych funkcji. Przykładowe typy ochrony, które można implementować przy użyciu zestawu SDK:
+# <a name="use-the-sdk-to-enable-apps-for-mobile-application-management"></a>Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi
+Korzystając z zestawu SDK aplikacji usługi Microsoft Intune, można umożliwić usłudze Intune zarządzanie określonymi funkcjami aplikacji dla systemu iOS lub Android. Po przygotowaniu aplikacji można wdrożyć dla niej zasady. Zasady te korzystają z tych funkcji, aby chronić dane firmy. Przykładowe typy ochrony, które można implementować przy użyciu zestawu SDK:
 
 -   Zapobieganie kopiowaniu dokumentów firmy do chmury przez użytkowników
 
@@ -35,11 +35,11 @@ Korzystanie z zestawu SDK wymaga dostępu do kodu źródłowego aplikacji, ale w
 
 Aby zapoznać się z omówieniem zestawu SDK, zobacz stronę [Omówienie](/intune/develop/intune-app-sdk). Aby zacząć korzystać z zestawu SDK aplikacji usługi Intune, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](/intune/develop/intune-app-sdk-get-started).
 
-### Zobacz też
+### <a name="see-also"></a>Zobacz także
 [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
