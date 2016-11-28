@@ -5,25 +5,25 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 24b8ecbf-7336-4543-8094-32688bda0b8f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 679a9c5a008bd94796b8aefe71c7da04174fc6e5
+ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
+ms.openlocfilehash: 09007527fe4c2c94c02a674ccef01c0bb8893709
 
 
 ---
-# Wybieranie metody rejestrowania urządzeń przenośnych
+# <a name="choose-how-to-enroll-mobile-devices"></a>Wybieranie metody rejestrowania urządzeń przenośnych
 
-Twoje odpowiedzi na następujące pytania pomogą określić najlepszą metodę rejestracji dla zarządzanych urządzeń.
+Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę rejestracji dla urządzeń, którymi zarządzasz.
 
-## **Czy urządzenia należące do firmy są udostępniane, czy mają dedykowanych użytkowników?**
+## <a name="are-your-company-owned-devices-shared-or-do-they-have-dedicated-users"></a>**Czy urządzenia należące do firmy są współużytkowane, czy mają przypisanych użytkowników?**
 
 > [!div class="button"]
 [Udostępniane >](choose-how-to-enroll-devices4.md)
@@ -39,6 +39,6 @@ Twoje odpowiedzi na następujące pytania pomogą określić najlepszą metodę 
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

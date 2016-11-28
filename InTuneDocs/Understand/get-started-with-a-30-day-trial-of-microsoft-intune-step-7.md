@@ -14,14 +14,14 @@ ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: da42d3dc00ebeb145f668200dcc8b17b808c5e70
+ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
+ms.openlocfilehash: ea0e43d93a3e388d55329142292595a8b3b3dbd2
 
 
 ---
 
-# Następne kroki po zakończeniu okresu ewaluacyjnego usługi Intune
-W przypadku zakupu co najmniej 150 licencji na usługę Microsoft Intune w uprawniającym planie można skorzystać z asysty centrum rozwiązania FastTrack — usługi współpracy ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Zobacz [Asysta centrum rozwiązania FastTrack dla pakietu Enterprise Mobility Suite (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
+# <a name="next-steps-after-your-intune-evaluation-is-completed"></a>Następne kroki po zakończeniu okresu ewaluacyjnego usługi Intune
+W przypadku zakupu co najmniej 150 licencji na usługę Microsoft Intune w uprawniającym planie można skorzystać z asysty centrum rozwiązania FastTrack — usługi współpracy ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Zobacz [Asysta centrum rozwiązania FastTrack dla pakietu Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
 
 Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w subskrypcję płatną na następujące sposoby:
 
@@ -35,6 +35,6 @@ Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w s
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

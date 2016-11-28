@@ -14,34 +14,38 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9eb7e79bee2bc36dffab97ffdb6f665218bc739e
-ms.openlocfilehash: 0acef421f179ebf922ec8af71ba336e3e5f96bd2
+ms.sourcegitcommit: 03410d1e82cfeb8d354ee1d010ada07ca86191bc
+ms.openlocfilehash: e9d917401a8927099bdf8558e9f7e7185351f709
 
 
 ---
 
-# Azure Portal — zasady zarządzania aplikacjami mobilnymi
-## Korzystanie z witryny Azure Portal
+# <a name="azure-portal-for-microsoft-intune-mam-policies"></a>Azure Portal — zasady zarządzania aplikacjami mobilnymi
+
+## <a name="use-the-azure-portal"></a>Korzystanie z witryny Azure Portal
 Witryna Azure Portal pozwala tworzyć zasady zarządzania aplikacjami mobilnymi oraz zarządzać tymi zasadami.
 
 Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla następujących składników:
 - Aplikacje działające na urządzeniach **zarejestrowanych w usłudze Intune i zarządzanych przez tę usługę**.
+
 - Aplikacje działające na urządzeniach, które **nie są zarejestrowane** w żadnym rozwiązaniu do zarządzania aplikacjami mobilnymi
 - Aplikacje działające na urządzeniach, które **są zarejestrowane w rozwiązaniu do zarządzania aplikacjami mobilnymi innej firmy**.
 
 >[!IMPORTANT]
 
+
 > Jeśli używasz konsoli administracyjnej usługi Intune do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnymi obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Witryna Azure Portal to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i witryny Azure Portal, zasady utworzone w witrynie Azure Portal zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
 
-## Zaloguj się do witryny Azure Portal i dostosuj swoją stronę początkową
+
+## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Zaloguj się do witryny Azure Portal i dostosuj swoją stronę początkową
 
 1.  Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
     ![Zrzut ekranu przedstawiający stronę logowania się do witryny Azure Portal](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
-2.  Po zalogowaniu pojawi się strona **Pulpit nawigacyjny**. Stronę **Pulpit nawigacyjny** można dostosować.
+2.  Po pomyślnym zalogowaniu pojawi się strona **Pulpit nawigacyjny**. Stronę **Pulpit nawigacyjny** można dostosować.
 
     ![Zrzut ekranu pulpitu nawigacyjnego portalu Azure](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
@@ -52,16 +56,17 @@ Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla n
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
     > [!TIP]
-    > Kliknij ikonę przypinania w bloku **Zarządzanie aplikacjami mobilnymi usługi Intune**, aby przypiąć go do strony **Start**.
+
+    > Aby przypiąć blok do strony **Start** , możesz użyć opcji **przypinania** w bloku. Kliknij ikonę przypinania w **bloku zarządzania aplikacjami mobilnymi usługi Intune**, aby przypiąć go do strony **Start**.
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune z wyróżnioną ikoną przypinania](../media/AppManagement/AzurePortal_MAM_PinBladeAction.png)
 
     ![Zrzut ekranu pulpitu nawigacyjnego z przypiętym kafelkiem usługi Intune](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
