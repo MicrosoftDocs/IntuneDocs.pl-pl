@@ -14,31 +14,40 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: karthikaraman
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ca4623db80d711f3543b6d688fb1bb1ef228c62c
-ms.openlocfilehash: e2d43fff8772046fe7426b267e39d53b278d4e5c
+ms.sourcegitcommit: af7df3fcf50c3508d495522341bb287c638f40a3
+ms.openlocfilehash: 2ea1763881a7d10ae8bc21c98754d2767b2fc954
 
 
 ---
 
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Składnik Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
+> [!NOTE]
+> Warto najpierw przeczytać artykuł [Wprowadzenie do zestawu SDK aplikacji usługi Intune](intune-app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
+
+
+
 ## <a name="overview"></a>Przegląd
-[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://components.xamarin.com/view/microsoft.intune.mam) umożliwia korzystanie z [funkcji zarządzania aplikacjami mobilnymi usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ograniczeń aplikacji i ochrony danych do aplikacji opartych na środowisku Xamarin.
+[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://components.xamarin.com/view/microsoft.intune.mam) umożliwia korzystanie z [funkcji zarządzania aplikacjami mobilnymi usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ochrony aplikacji Intune do ich aplikacji opartych na środowisku Xamarin.
 
-Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po dołączeniu składnika do aplikacji mobilnej dla systemu iOS lub Android administrator IT może za pośrednictwem usługi Microsoft Intune wdrożyć zasady obsługujące różne funkcje, które zapewniają ochronę danych.
+Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po dołączeniu składnika do aplikacji mobilnej dla systemu iOS lub Android administrator IT może za pośrednictwem zarządzania aplikacjami mobilnymi (MAM) w usłudze Microsoft Intune wdrożyć zasady obsługujące różne funkcje ochrony danych.
 
-## <a name="supported-scenarios"></a>Scenariusze obsługiwane
+## <a name="whats-supported"></a>Co jest obsługiwane?
 
-### <a name="platforms"></a>Platformy
+### <a name="developer-machines"></a>Maszyny deweloperów
+* Windows
+
+
+### <a name="mobile-app-platforms"></a>Platformy aplikacji mobilnych
 * Android
 * iOS
 
 
-### <a name="emm-scenarios"></a>Scenariusze zarządzania mobilnością w przedsiębiorstwie
+### <a name="intune-mobile-application-management-scenarios"></a>Scenariusze zarządzanie aplikacjami mobilnymi w usłudze Intune
 
-* Zarządzanie aplikacjami mobilnymi w usłudze Intune obejmujące urządzenia zarejestrowane przez funkcję zarządzania urządzeniami przenośnymi w usłudze Intune
-* Zarządzanie aplikacjami mobilnymi w usłudze Intune obejmujące urządzenia zarejestrowane przez funkcję zarządzania mobilnością w przedsiębiorstwie innej firmy
-* Zarządzanie aplikacjami mobilnymi w usłudze Intune obejmujące niezarejestrowane i niezarządzane urządzenia
+* Urządzenia zarejestrowane przez funkcję zarządzania urządzeniami przenośnymi w usłudze Intune
+* Urządzenia zarejestrowane przez rozwiązanie EMM innej firmy
+* Niezarządzane urządzenia (nie zarejestrowane za pomocą żadnego rozwiązania do zarządzania urządzeniami przenośnymi)
 
 Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikacji usługi Intune mogą teraz podlegać zasadom zarządzania aplikacjami mobilnymi usługi Intune zarówno w przypadku urządzeń zarejestrowanych na potrzeby zarządzania urządzeniami przenośnymi w usłudze Intune, jak i niezarejestrowanych urządzeń.
 
@@ -112,10 +121,10 @@ W przypadku zestawu Xamarin Forms i innych platform tworzenia interfejsu użytko
 
 ## <a name="test-your-app"></a>Testowanie aplikacji
 
-Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
+Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
