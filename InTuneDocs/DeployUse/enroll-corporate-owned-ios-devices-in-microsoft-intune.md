@@ -2,8 +2,8 @@
 title: "Rejestrowanie urządzeń firmowych z systemem iOS | Microsoft Intune"
 description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/07/2016
 ms.topic: article
@@ -14,20 +14,20 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: c28b51146deb6a0a28070f72449972fd60076231
+ms.sourcegitcommit: 00ca6ea06aa63646d6ede6337f8e70d1ab956c5f
+ms.openlocfilehash: cfc97f4ed931a5c7dc5b38eafd0a2d081bc30975
 
 
 ---
 
-# Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune
+# <a name="enroll-corporate-owned-ios-devices-in-microsoft-intune"></a>Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune
 Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
 
 **Wymaganie wstępne:** wymagany jest [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
 Firmowe urządzenia z systemem iOS można zarejestrować na trzy sposoby: za pomocą narzędzia Apple Configurator, programu DEP lub Portalu firmy.
 
-## Użycie narzędzia Apple Configurator
+## <a name="use-apple-configurator"></a>Użycie narzędzia Apple Configurator
 
 W celu zarejestrowania urządzeń z systemem iOS można wyeksportować firmowy profil wdrażania, a następnie połączyć te urządzenia przenośne z komputerem Mac, na którym działa program Apple Configurator. Program Apple Configurator obsługuje dwa rodzaje rejestracji:
 
@@ -35,10 +35,10 @@ W celu zarejestrowania urządzeń z systemem iOS można wyeksportować firmowy p
 
 - **Rejestracja bezpośrednia**: tworzenie pliku zgodnego z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia urządzenia iOS przez port USB do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) w celu zarejestrowania urządzenia. Aby uzyskać więcej informacji, zobacz artykuł [Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
-## Użycie programu Device Enrollment Program (DEP)
+## <a name="use-the-device-enrollment-program-dep"></a>Użycie programu Device Enrollment Program (DEP)
 Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionych w ramach tego programu. Gdy użytkownik uruchamia na urządzeniu Asystenta ustawień, jest ono rejestrowane w usłudze Intune.  Użytkownicy nie mogą wyrejestrowywać urządzeń zarejestrowanych w programie DEP. Aby uzyskać więcej informacji, zobacz artykuł [Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
 
-## Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
+## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
 
 Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować aplikację Portal firmy i używać jej do pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
@@ -68,7 +68,7 @@ Koligacja użytkownika jest wymagana do obsługi:
 
 8. Rejestracja jest teraz ukończona. Użytkownik może teraz używać tego urządzenia z pełnym zestawem funkcji.
 
-### Informacje dotyczące zarządzanych urządzeń należących do firmy bez koligacji użytkownika
+### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>Informacje dotyczące zarządzanych urządzeń należących do firmy bez koligacji użytkownika
 
 Urządzenia skonfigurowane bez koligacji użytkownika nie obsługują Portalu firmy i nie powinny mieć zainstalowanej tej aplikacji. Portal firmy jest przeznaczony dla użytkowników, którzy mają poświadczenia firmowe i wymagają dostępu do spersonalizowanych zasobów firmowych (np. poczta e-mail). Urządzenia zarejestrowane bez koligacji użytkownika nie są przeznaczone do logowania określonego użytkownika. Urządzenia rejestrowane bez koligacji użytkownika są zazwyczaj stosowane w kioskach lub punktach sprzedaży (POS) albo jako narzędzia udostępnione.
 
@@ -76,11 +76,11 @@ Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia 
 
 
 
-### Zobacz także
-[Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](gprerequisites-for-enrollment.md)
+### <a name="see-also"></a>Zobacz też
+[Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

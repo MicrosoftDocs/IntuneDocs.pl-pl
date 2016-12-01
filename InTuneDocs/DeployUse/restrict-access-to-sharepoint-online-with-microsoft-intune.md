@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: 76ac4c92d090ef0057bd7c9687b169cd12b901a1
+ms.sourcegitcommit: 4f6e7525ae2a125851ad402644d5fbc8767c77dc
+ms.openlocfilehash: 9bfc8886b464452f8fe35d4b740607ef3bc07a71
 
 
 ---
 
-# Ograniczanie dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune
+# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Ograniczanie dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune
 Za pomocą dostępu warunkowego usługi [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] możliwe jest kontrolowanie dostępu do plików znajdujących się w usłudze SharePoint Online.
 Dostęp warunkowy ma dwa składniki:
 - Zasady zgodności urządzenia, które urządzenie musi spełniać, aby można je było uważać za zgodne.
@@ -55,12 +55,12 @@ Jeśli warunek nie jest spełniony, użytkownik zobaczy podczas logowania jeden 
 
 -   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
-**Dostęp warunkowy jest wymuszany dla wszystkich witryn programu SharePoint, a udostępnianie zewnętrzne jest zablokowane**
+**Dostęp warunkowy nie ma zastosowania do udostępniania zewnętrznego**. Aby dowiedzieć się, jak zapobiegać zewnętrznemu udostępnianiu w dzierżawie lub kolekcji witryn, zobacz [Zarządzanie udostępnianiem zewnętrznym w środowisku usługi SharePoint Online](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US)
 
 >[!NOTE]
 >Po włączeniu dostępu warunkowego dla usługi SharePoint Online zaleca się wyłączenie domeny na liście zgodnie z opisem w temacie [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
 
-## Obsługa urządzeń przenośnych
+## <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 - System iOS 8.0 i nowsze
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
 - System Windows Phone 8.1 lub nowszy
@@ -68,11 +68,11 @@ Jeśli warunek nie jest spełniony, użytkownik zobaczy podczas logowania jeden 
 Można ograniczyć dostęp do usługi SharePoint Online w przypadku uzyskiwania dostępu za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**.  Dostęp może być dozwolony tylko za pomocą obsługiwanych przeglądarek na zgodnych urządzeniach:
 * Safari (iOS)
 * Chrome (Android)
-* Managed Browser (iOS i Android)
+* Managed Browser (systemy iOS i Android 5.0 lub nowszy)
 
 **Nieobsługiwane przeglądarki będą blokowane**.
 
-## Obsługa komputerów
+## <a name="support-for-pcs"></a>Obsługa komputerów
 - System Windows 8.1 lub nowszy (jeśli jest zarejestrowany w usłudze Intune)
 - System Windows 7.0, Windows 8.1 lub Windows 10 (jeśli jest przyłączony do domeny)
 > [!NOTE]
@@ -92,9 +92,9 @@ Usługa AAD DRS zostanie automatycznie uaktywniona dla klientów usług Intune i
     Nowoczesne uwierzytelniane umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece Active Directory Authentication Library (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
 
 
-## Konfigurowanie warunkowego dostępu do usługi SharePoint Online
+## <a name="configure-conditional-access-for-sharepoint-online"></a>Konfigurowanie warunkowego dostępu do usługi SharePoint Online
 
-### Krok 1. Konfigurowanie grup zabezpieczeń usługi Active Directory
+### <a name="step-1-configure-active-directory-security-groups"></a>Krok 1. Konfigurowanie grup zabezpieczeń usługi Active Directory
 Przed rozpoczęciem skonfiguruj grupy zabezpieczeń usługi Azure Active Directory dla zasad dostępu warunkowego. Możesz skonfigurować te grupy w **centrum administracyjnym usługi Office 365**lub w **portalu konta usługi Intune**. Grupy te zostaną użyte do objęcia użytkowników zasadami lub wykluczenia użytkowników z zasad. Jeśli zasady obejmują użytkownika, każde używane przez niego urządzenie musi być zgodne, aby mógł uzyskać dostęp do zasobów.
 
 Możesz określić dwa typy grup dla zasad usługi SharePoint Online:
@@ -105,7 +105,7 @@ Możesz określić dwa typy grup dla zasad usługi SharePoint Online:
 
 Jeśli użytkownik należy do obu grup, będzie wykluczony z zasad.
 
-### Krok 2. Konfigurowanie i wdrażanie zasad zgodności
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Krok 2. Konfigurowanie i wdrażanie zasad zgodności
 Jeśli nie zostało zrobione to wcześniej, utwórz i wdróż zasady zgodności dla użytkowników, którzy będą objęci zasadami dostępu usługi SharePoint Online.
 
 > [!NOTE]
@@ -118,7 +118,7 @@ Aby uzyskać szczegółowe informacje o sposobie konfigurowania zasad zgodności
 
 Gdy wszystko będzie gotowe, przejdź do **kroku 3**.
 
-### Krok 3. Konfigurowanie zasad usługi SharePoint Online
+### <a name="step-3-configure-the-sharepoint-online-policy"></a>Krok 3. Konfigurowanie zasad usługi SharePoint Online
 Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miały dostęp do usługi SharePoint Online. Te zasady będą przechowywane w usłudze Azure Active Directory.
 
 #### <a name="bkmk_spopolicy"></a>
@@ -162,11 +162,11 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
   3.    Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**.
   4.  W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
 
-  Na platformach **iOS i Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia.  Urządzenie wyświetla użytkownikowi końcowemu certyfikat wraz z monitem o wybranie certyfikatu, tak jak pokazano na zrzutach ekranu poniżej. Użytkownik końcowy musi wybrać ten certyfikat, aby kontynuować korzystanie z przeglądarki.
+  Na platformach **iOS i Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia.  Urządzenie wyświetla użytkownikowi końcowemu certyfikat wraz z monitem o wybranie certyfikatu, tak jak pokazano na zrzutach ekranu poniżej. Użytkownik końcowy musi wybrać ten certyfikat przed kontynuowaniem pracy z przeglądarką.
 
   **iOS**
 
-  ![Zrzut ekranu przedstawiający monit certyfikatu na iPadzie](../media/mdm-browser-ca-ios-cert-prompt.png)
+  ![zrzut ekranu przedstawiający monit certyfikatu na urządzeniu iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
   **Android**
 
@@ -179,7 +179,7 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
 Nie musisz wdrażać zasad dostępu warunkowego; są one aktywne natychmiast.
 
-### Krok 4. Monitorowanie zgodności i zasad dostępu warunkowego
+### <a name="step-4-monitor-the-compliance-and-conditional-access-policies"></a>Krok 4. Monitorowanie zgodności i zasad dostępu warunkowego
 W obszarze roboczym **Grupy** można przeglądać informacje o stanie urządzeń.
 
 Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urządzenia** wybierz jeden z następujących **filtrów**:
@@ -190,11 +190,11 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 -   **Urządzenia, które zostały zarejestrowane przy użyciu usługi AAD i są zgodne** — te urządzenia mogą uzyskiwać dostęp do usługi SharePoint Online.
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Ograniczanie dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 

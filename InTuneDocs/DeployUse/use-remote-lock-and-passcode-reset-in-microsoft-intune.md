@@ -1,10 +1,11 @@
 ---
-title: "Korzystanie z funkcji zdalnego blokowania i resetowania kodu dostępu | Microsoft Intune"
+title: "Zdalne blokowanie i resetowanie kodu dostępu | Microsoft Intune"
 description: "Usługa Intune umożliwia zdalne blokowanie i resetowanie kodu dostępu."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,15 +13,15 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
-ms.openlocfilehash: 0b52bd8360f11e226674aefe80a578c451c2679d
+ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
+ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
 
 ---
-# Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
+# <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
 Usługa Microsoft Intune umożliwia zdalne blokowanie i resetowanie kodu dostępu.
 
-## Zdalne blokowanie urządzenia
-Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych. Zdalne blokowanie nie jest obsługiwane
+## <a name="lock-a-device-remotely"></a>Zdalne blokowanie urządzenia
+Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych.
 
 |Platforma|Zdalne blokowanie|
 |------------|---------------|
@@ -33,24 +34,24 @@ Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższ
 
 Zdalne blokowanie nie jest obsługiwane w przypadku komputerów z systemem Windows zarejestrowanych przy użyciu oprogramowania klienckiego usługi Intune.
 
-### Aby zdalnie zablokować urządzenie przenośne za pośrednictwem konsoli usługi Intune
+### <a name="lock-a-mobile-device-remotely-through-the-intune-console"></a>Zdalne blokowanie urządzenia przenośnego za pośrednictwem konsoli usługi Intune
 
 1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia przenośne**.
 
 2.  Wybierz pozycję **Wszystkie urządzenia zarządzane bezpośrednio** w przypadku urządzeń zarejestrowanych w usłudze Intune lub wybierz pozycję **Wszystkie urządzenia zarządzane za pośrednictwem programu Exchange ActiveSync**.
 
     > [!TIP]
-    > Można także przechodzić do urządzeń poszczególnych użytkowników. Wybierz pozycję **Wszyscy użytkownicy**. Na stronie właściwości użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić.
+    > Można także przechodzić do urządzeń poszczególnych użytkowników. Wybierz pozycję **Wszyscy użytkownicy**. Na stronie właściwości użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz zablokować.
 
 3.  Na liście wybierz urządzenia, które chcesz zablokować. Na pasku zadań wybierz pozycję **Zadania zdalne** i wybierz pozycję **Zdalne blokowanie**.
 
-## Resetowanie kodu dostępu na urządzeniu
-Jeśli użytkownik zapomni swój kod dostępu, możesz mu pomóc przez usunięcie kodu dostępu z urządzenia lub wymuszenie nowego hasła tymczasowego na urządzeniu. W poniższej tabeli przedstawiono sposób działania resetowania kodu dostępu na różnych platformach mobilnych.
+## <a name="reset-the-passcode-on-a-device"></a>Resetowanie kodu dostępu na urządzeniu
+Jeśli użytkownik zapomni kod dostępu, możesz pomóc przez usunięcie kodu dostępu z urządzenia lub wymuszenie nowego, tymczasowego kodu dostępu na urządzeniu. W poniższej tabeli przedstawiono sposób działania resetowania kodu dostępu na różnych platformach mobilnych.
 
 |Platforma|Resetowanie kodu dostępu|
 |------------|------------------|
 |iOS|Obsługiwane czyszczenie kodu dostępu z urządzenia. Nie powoduje utworzenia nowego hasła tymczasowego.|
-|Android|Jest obsługiwane i powoduje utworzenie tymczasowego kodu dostępu.|
+|Android|Obsługiwane w wersjach wcześniejszych niż Android 7.0. Powoduje utworzenie tymczasowego kodu dostępu.|
 |Windows 10 Mobile|Obsługiwane|
 |Windows Phone 8 i Windows Phone 8.1|Obsługiwane|
 |Windows RT 8.1 i Windows RT|Nieobsługiwane|
@@ -58,7 +59,7 @@ Jeśli użytkownik zapomni swój kod dostępu, możesz mu pomóc przez usunięci
 
 Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z systemem Windows zarejestrowanych przy użyciu oprogramowania klienckiego usługi Intune.
 
-### Aby zresetować kod dostępu
+### <a name="reset-a-passcode"></a>Resetowanie kodu dostępu
 
 1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia przenośne**.
 
@@ -70,12 +71,11 @@ Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z system
 3.  Na liście wybierz urządzenia, które chcesz zablokować. Na pasku zadań wybierz pozycję **Zadania zdalne** i wybierz pozycję **Resetowanie kodu dostępu**.
 
 
-### Zobacz także
-[Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md)
-[Selektywne czyszczenie danych w systemie Windows w celu zarządzania danymi urządzenia](http://technet.microsoft.com/library/dn486874.aspx)
+### <a name="see-also"></a>Zobacz też
+[Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md) oraz [Selektywne czyszczenie danych w systemie Windows w celu zarządzania danymi urządzenia](http://technet.microsoft.com/library/dn486874.aspx)
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

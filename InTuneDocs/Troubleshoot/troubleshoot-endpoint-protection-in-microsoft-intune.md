@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów z programem Endpoint Protection | Microsoft Intune"
 description: "Rozwiąż problem, używając programu Microsoft Intune Endpoint Protection."
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -14,20 +14,20 @@ ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 95c9b857665bdb97ea035fd4cee18ca4508c4cbb
+ms.sourcegitcommit: cba0d6d781d3050f4dd8aabd661d677ae849eff1
+ms.openlocfilehash: bdcbe263529844cab04b1e5b715fe6eafd3feb86
 
 
 ---
 
-# Troubleshoot Endpoint Protection in Microsoft Intune
+# <a name="troubleshoot-endpoint-protection-in-microsoft-intune"></a>Troubleshoot Endpoint Protection in Microsoft Intune
 
 Skorzystaj z informacji w tej sekcji, aby rozwiązać problemy występujące podczas korzystania z programu Endpoint Protection w usłudze Microsoft Intune.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
 
-### Komunikaty o błędach programu Endpoint Protection
+### <a name="endpoint-protection-error-messages"></a>Komunikaty o błędach programu Endpoint Protection
 W tej sekcji opisano możliwe przyczyny i potencjalne rozwiązania poniższych błędów i ostrzeżeń, które są wyświetlane w okienku **Stan programu Endpoint Protection** w [konsoli administracyjnej usługi Intune](https://manage.microsoft.com).
 
 |Pozycja w okienku stanu|Możliwe przyczyny|Potencjalne rozwiązania|
@@ -45,11 +45,11 @@ W tej sekcji opisano możliwe przyczyny i potencjalne rozwiązania poniższych b
 |**Zaległe szybkie skanowanie**|Nie wykonano szybkiego skanowania w ciągu ostatnich 14 dni. Może to być spowodowane ponownym uruchomieniem komputera podczas szybkiego skanowania.|Jeśli szybkie skanowanie jest zaległe, możesz uruchomić jednorazowe szybkie skanowanie lub zaplanować cykliczne szybkie skanowanie z poziomu [konsoli administracyjnej usługi Intune](https://manage.microsoft.com), korzystając z informacji podanych w temacie [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).|
 |**Uruchomiona jest inna aplikacja ochrony punktu końcowego**|Uruchomiona jest inna aplikacja ochrony punktu końcowego, a komputer jest w dobrej kondycji.|Domyślnie, jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego i usługa Intune wykryje tę aplikację, program Endpoint Protection samodzielnie się wyłączy. Jeśli usługa Intune nie wykryje innej aplikacji ochrony punktu końcowego, program Endpoint Protection pozostanie włączony. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).|
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

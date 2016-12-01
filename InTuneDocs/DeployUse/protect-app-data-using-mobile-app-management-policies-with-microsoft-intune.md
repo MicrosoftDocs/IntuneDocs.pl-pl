@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
-ms.openlocfilehash: e751619f6d65e10099d1f8ff5a2342185181af69
+ms.sourcegitcommit: 027e7e56e6f7d3a604336e0465f688af514c69e6
+ms.openlocfilehash: fc484be99d0956e707f96c0c285b2750754f746c
 
 
 ---
 
-# Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
+# <a name="protect-app-data-using-mobile-app-management-policies-with-microsoft-intune"></a>Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
 
-## Jak możesz chronić dane aplikacji
+## <a name="how-you-can-protect-app-data"></a>Jak możesz chronić dane aplikacji
 Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych.  Zatem umożliwiając pracownikom wydajną pracę, warto również zapobiegać nieumyślnej lub umyślnej utracie danych.  Ponadto chcesz mieć możliwość ochrony danych firmowych, do których dostęp jest uzyskiwany za pomocą urządzeń, nawet w przypadku, gdy nie są zarządzane przez Ciebie.
 
 Aby lepiej chronić dane firmy, możesz skorzystać z zasad zarządzania aplikacjami mobilnymi (MAM, mobile app management) w usłudze Intune. Ponieważ zasady MAM w usłudze Intune są **niezależne od wszelkich rozwiązań do zarządzania urządzeniami przenośnymi (MDM, mobile device management)**, możesz użyć ich do ochrony danych firmy bez względu na to, czy urządzenia zostały zarejestrowane w rozwiązaniach do zarządzania urządzeniami. Wdrażając **zasady na poziomie aplikacji**, można ograniczyć dostęp do zasobów firmy i objęcia danych kontrolą działu IT.
@@ -54,21 +54,21 @@ Stosowanie rozwiązań MDM jednocześnie z zasadami MAM jest możliwe i daje dod
 - **Zasady MAM zapewniają ochronę warstwy aplikacji**. Możesz na przykład zastosować wymaganie numeru PIN w celu otwarcia aplikacji w kontekście służbowym lub, jeśli dane mogą być udostępniane innym aplikacjom, uniemożliwić zapisywanie firmowych danych aplikacji w prywatnej lokalizacji magazynu.
 
 
-### Zasady MAM są obecnie obsługiwane na:
+### <a name="mam-polices-are-currently-supported-on"></a>Zasady MAM są obecnie obsługiwane na:
 -   System iOS 8.1 lub nowszy
 
 -   System Android 4 lub nowszy
 
 Urządzenia z systemem Windows nie są obecne obsługiwane.
-##  Jak zasady MAM chronią dane aplikacji
+##  <a name="how-mam-policies-protect-app-data"></a>Jak zasady MAM chronią dane aplikacji
 
-####  Aplikacje bez zasad MAM:
+####  <a name="apps-without-mam-policies"></a>Aplikacje bez zasad MAM:
 
 ![Obraz pokazujący, że dane mogą swobodnie przemieszczać się między aplikacjami, jeśli nie wdrożono zasad MAM](../media/Apps_without_MAM_policies.png)
 
 W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu.  Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na rysunku oznaczają nieograniczone przemieszczanie się danych między aplikacjami (firmowymi i prywatnymi) oraz do lokalizacji magazynu.
 
-### Ochrona danych za pomocą zasad MAM:
+### <a name="data-protection-with-mam-policies"></a>Ochrona danych za pomocą zasad MAM:
 
 ![Obraz pokazujący sposób ochrony danych firmowych po zastosowaniu zasad MAM ](../media/Apps_with_mobile_app_policies.png)
 
@@ -76,7 +76,7 @@ Zasady MAM umożliwiają zapobieganie zapisywaniu danych firmy w lokalnym magazy
 - Zasady przenoszenia danych, takie jak **Nie zezwalaj na używanie polecenia Zapisz jako** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
 - Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu**, **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora**.
 
-### Ochrona danych za pomocą zasad MAM na urządzeniach zarządzanych przez rozwiązanie MDM:
+### <a name="data-protection-with-mam-policies-on-devices-managed-by-a-mdm-solution"></a>Ochrona danych za pomocą zasad MAM na urządzeniach zarządzanych przez rozwiązanie MDM:
 
 ![Obraz pokazujący sposób działania zasad MAM na urządzeniach BYOD](../media/MAM_BYOD_November.png)
 
@@ -101,7 +101,7 @@ Rozwiązanie MDM:
 -   Wymazują dane firmowe z aplikacji, nie usuwając tych aplikacji z urządzenia
 
 
-### Ochrona danych za pomocą zasad MAM dla urządzeń bez rejestracji
+### <a name="data-protection-with-mam-policies-for-devices-without-enrollment"></a>Ochrona danych za pomocą zasad MAM dla urządzeń bez rejestracji
 
 ![Obraz pokazujący sposób działania zasad MAM na urządzeniach zarządzanych](../media/MAM_ManagedDevices_November.png)
 
@@ -117,7 +117,7 @@ Należy jednak wziąć pod uwagę następujące ograniczenia:
 -   Na tych urządzeniach nie można dostarczać ustawień firmowych sieci Wi-Fi i VPN.
 
 
-## Wiele tożsamości
+## <a name="multi-identity"></a>Wiele tożsamości
 
 Aplikacje, które obsługują wiele tożsamości, umożliwiają używanie różnych kont — służbowych i osobistych — do uzyskiwania dostępu do tych samych aplikacji, podczas gdy zasady MAM są stosowane, gdy jeśli aplikacje są używane w kontekście służbowym.  
 
@@ -125,13 +125,13 @@ Jeśli na przykład użytkownik końcowy uruchamia aplikację OneDrive przy uży
 
 Wszystkie aplikacje mobilne pakietu Office obsługują wiele tożsamości.
 
-##  Następne kroki
+##  <a name="next-steps"></a>Następne kroki
 [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

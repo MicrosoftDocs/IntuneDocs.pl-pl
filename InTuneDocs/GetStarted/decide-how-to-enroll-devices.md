@@ -5,21 +5,21 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 178df739-d3b9-43cb-8440-c5c110b1276b
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: f4e6c17624f509b83ca594750c0db8931bc54b35
+ms.sourcegitcommit: 149f3a3310907d131affeaad4bd372aa60be9206
+ms.openlocfilehash: b5cc645ea50e6c4bb521e04371037c3978c9426a
 
 
 ---
 
-# Wybieranie metody rejestrowania urządzeń przenośnych
+# <a name="choose-how-to-enroll-mobile-devices"></a>Wybieranie metody rejestrowania urządzeń przenośnych
 
 Rejestracja urządzenia przenośnego to proces, dzięki któremu smartfony, tablety i komputery mogą być zarządzane przez usługę Microsoft Intune. Jako administrator musisz określić, jak najlepiej zarejestrować urządzenia, w oparciu o następujące informacje:
 
@@ -29,7 +29,7 @@ Rejestracja urządzenia przenośnego to proces, dzięki któremu smartfony, tabl
 
 Odpowiedzi na następujące pytania pomogą określić najlepszą metodę rejestracji dla zarządzanych urządzeń.
 
-## **Czy pracownicy przynoszą własne urządzenia, czy są one udostępniane przez organizację?**
+## <a name="do-employees-bring-their-own-devices-or-are-devices-provided-by-your-organization"></a>**Czy pracownicy przynoszą własne urządzenia, czy są one udostępniane przez organizację?**
 
   - **Urządzenia należące do użytkowników** — rejestracja „BYOD” (przynieś własne urządzenie) — użytkownicy mogą instalować aplikację Portal firmy usługi Intune na urządzeniach, a następnie rejestrować je, aby uzyskać dostęp do zasobów firmy, takich jak poczta e-mail, aplikacje firmowe, dane firmowe i pomoc techniczna.  
 
@@ -38,12 +38,12 @@ Odpowiedzi na następujące pytania pomogą określić najlepszą metodę rejest
 > [!div class="button"]
 [Rejestracja BYOD >](#what-byod-devices-can-your-users-enroll)   [Rejestracja COD >](#are-your-company-owned-devices-shared-or-do-they-have-dedicated-users)
 
-## **Jakie urządzenia BYOD mogą rejestrować Twoi użytkownicy?**
+## <a name="what-byod-devices-can-your-users-enroll"></a>**Jakie urządzenia BYOD mogą rejestrować użytkownicy?**
 
 > [!div class="button"]
 [Android](/intune/deploy-use/set-up-android-management-with-microsoft-intune) [iOS i Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) [Windows 10 Mobile i Windows Phone](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune) [komputery z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 
-## **Czy urządzenia należące do firmy są udostępniane, czy mają dedykowanych użytkowników?**
+## <a name="are-your-company-owned-devices-shared-or-do-they-have-dedicated-users"></a>**Czy urządzenia należące do firmy są współużytkowane, czy mają przypisanych użytkowników?**
 
 - **Udostępnione urządzenia należące do firmy** — te urządzenia nie mają jednego użytkownika i zazwyczaj nie są konfigurowane do uzyskiwania dostępu do poczty e-mail. Przykładami takich urządzeń są urządzenia z kiosku lub urządzenia przeznaczone do konkretnych zadań, które użytkownicy pobierają z puli, a następnie zwracają. Zalecane metody rejestracji urządzeń zależą od platformy urządzeń.
 
@@ -53,12 +53,12 @@ Odpowiedzi na następujące pytania pomogą określić najlepszą metodę rejest
 [Udostępnione >](#what-operating-system-are-your-shared-devices-running)   [Dedykowane >](#how-will-you-manage-dedicated-ios-devices)
 
 
-## **Jakiego systemu operacyjnego używają udostępnione urządzenia?**
+## <a name="what-operating-system-are-your-shared-devices-running"></a>**Jakiego systemu operacyjnego używają udostępnione urządzenia?**
 
-  > [!div class="button"]
-  [Windows >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [Android >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [iOS >](#how-will-you-manage-shared-ios-devices)
+> [!div class="button"]
+[Windows >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [Android >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [iOS >](#how-will-you-manage-shared-ios-devices)
 
-## **Jak można zarządzać udostępnionymi urządzeniami z systemem iOS?**
+## <a name="how-will-you-manage-shared-ios-devices"></a>**Jak można zarządzać udostępnionymi urządzeniami z systemem iOS?**
 
 - **Program Device Enrollment Program firmy Apple (DEP)** — wobec urządzeń z systemem iOS zakupionych lub zarządzanych w programie DEP można zastosować profil rejestracji. Gdy użytkownicy włączają urządzenia po raz pierwszy, urządzenia pobierają profil DEP i są rejestrowane za pomocą profilu DEP.
 
@@ -69,7 +69,7 @@ Odpowiedzi na następujące pytania pomogą określić najlepszą metodę rejest
   > [!div class="button"]
   [Rejestracja programu DEP dla systemu iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune) [Rejestracja bezpośrednia systemu iOS >](/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)  [Rejestracja za pomocą menedżera rejestracji urządzeń >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 
-## **Jak można zarządzać dedykowanymi urządzeniami z systemem iOS?**
+## <a name="how-will-you-manage-dedicated-ios-devices"></a>**Jak można zarządzać dedykowanymi urządzeniami z systemem iOS?**
 
 Należące do firmy urządzenia z dedykowanymi użytkownikami można zarejestrować na następujące sposoby:
 
@@ -84,6 +84,6 @@ Należące do firmy urządzenia z dedykowanymi użytkownikami można zarejestrow
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

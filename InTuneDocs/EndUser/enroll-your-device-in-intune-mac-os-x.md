@@ -1,58 +1,13 @@
 ---
-title: "Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune | Microsoft Intune"
-description: "Opis sposobu rejestrowania urządzenia z systemem Mac OS X w usłudze Intune"
-keywords: 
-author: barlanmsft
-ms.author: barlan
-manager: angrobe
-ms.date: 08/29/2016
-ms.topic: article
-ms.prod: 
-ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 58eb0e7a-1321-4c66-a281-88fb01e72c1c
-ROBOTS: 
-ms.reviewer: esmich
-ms.suite: ems
+redirect_url: https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: ab8292843c540842a93e97377db21109a7e9fa33
-
+ms.sourcegitcommit: 790182817aa07852db2a37609d3329f509cd88df
+ms.openlocfilehash: c085f3f3dc5c2fc522e1732e4e8ecf7bb21be1d0
 
 ---
 
 
-# <a name="enroll-your-mac-os-x-device-in-intune"></a>Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune
 
-Po zarejestrowaniu urządzenia z systemem Mac OS X w usłudze Intune możesz mieć dostęp do sieci firmowej, służbowych wiadomości e-mail i plików roboczych. Możesz również pobrać aplikacje firmowe. Aby uzyskać więcej informacji na temat efektów zarejestrowania urządzenia, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
-
-Jeśli próbujesz zarejestrować urządzenie z systemem iOS, zobacz [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md).
-
-
-Aby zarejestrować urządzenie z systemem Mac OS X:
-
-1.  W przeglądarce Safari otwórz [witrynę Portalu firmy](https://portal.manage.microsoft.com) i naciśnij pasek powiadomień.
-
-2.  Naciśnij pozycję **To urządzenie nie zostało zarejestrowane lub nie można go zidentyfikować w Portalu firmy**.
-
-    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
-
-3.  Naciśnij pozycję **Zainstaluj**, aby rozpocząć rejestrację urządzenia.
-
-    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
-
-4.  W oknie dialogowym **Instalowanie profilu zarządzania** naciśnij pozycję **Zainstaluj**. Jeśli zostanie wyświetlone okno dialogowe z prośbą o podanie poświadczeń, wprowadź nazwę użytkownika i hasło, a następnie naciśnij pozycję **Kontynuuj** &gt; **Zainstaluj**.
-
-    ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
-
-    Po zakończeniu rejestracji zostanie wyświetlona strona **Profil zarządzania** z informacją o zweryfikowaniu profilu.
-
-    ![management-profile-verified](./media/4-macosx-enroll-done.png)
-
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
