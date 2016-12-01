@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 11/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
+ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
+ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
 
 
 ---
@@ -29,7 +29,7 @@ Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją u
 
 Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
 
--   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
+-   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md)
 -   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
@@ -50,13 +50,13 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
 **Problem: **podczas rejestracji urządzenia występuje błąd, na przykład **Portal firmy jest tymczasowo niedostępny** na urządzeniu z systemem iOS, a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
 
-**Rozwiązanie:** liczbę urządzeń, które mogą zostać zarejestrowane przez użytkowników, nie może być większa niż 5. Jest to ograniczenie wprowadzone celowo.
+**Rozwiązanie:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Sprawdzanie liczby zarejestrowanych i dozwolonych urządzeń
 
-1.  W portalu administracyjnym usługi Intune sprawdź, że użytkownikowi nie przypisano więcej niż 5 urządzeń.
+1.  W portalu administracyjnym usługi Intune sprawdź, czy użytkownikowi nie przypisano więcej niż 15 urządzeń (dozwolona maksymalna liczba).
 
-2.  W portalu administracyjnym usługi Intune w obszarze Administracja\Zarządzanie urządzeniami przenośnymi\Reguły rejestracji sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 5.
+2.  W konsoli administracyjnej usługi Intune w obszarze Administracja\Zarządzanie urządzeniami przenośnymi\Reguły rejestracji sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 15.
 
 Użytkownicy urządzeń przenośnych mogą usuwać urządzenia, korzystając z następującego adresu URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
 
@@ -66,7 +66,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator** &gt; **Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
 
-2.  Zaloguj się za pomocą Identyfikatora organizacji, korzystając z linku w lewej części strony.
+2.  Zaloguj się za pomocą identyfikatora organizacji, korzystając z linku w lewej części strony.
 
 3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
 
@@ -89,7 +89,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 ### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
 **Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
-#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Rozwiązywanie problemu dotyczącego błędu Portal firmy jest tymczasowo niedostępny
+**Rozwiązanie:**
 
 1.  Usuń aplikację Portal firmy dla usługi Intune z urządzenia.
 
@@ -104,7 +104,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 ### <a name="mdm-authority-not-defined"></a>Niezdefiniowany urząd MDM
 **Problem: **występuje błąd **Nie zdefiniowano urzędu MDM**.
 
-#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Rozwiązywanie problemów dotyczących błędu Niezdefiniowany urząd MDM
+**Rozwiązanie:**
 
 1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanej wersji usługi Intune (dla usługi Intune, rozwiązania MDM w usłudze Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
 
@@ -152,16 +152,65 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
+### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Nie można zaewidencjonować urządzeń w usłudze Intune — w konsoli administracyjnej usługi Intune stan urządzeń jest wyświetlany jako „W niedobrej kondycji”
+**Problem:** zaewidencjonowywanie niektórych urządzeń firmy Samsung z systemem Android w wersji 4.4.x i 5.x przy użyciu usługi Intune może zostać zatrzymane. Jeśli nie można zaewidencjonować urządzeń:
+
+- Nie otrzymują one zasad, aplikacji ani poleceń zdalnych z usługi Intune.
+- W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
+- Użytkownicy chronieni przez zasady dostępu warunkowego mogą utracić dostęp do zasobów firmowych.
+
+Firma Samsung potwierdziła, że oprogramowanie Samsung Smart Menedżer dostarczane na niektórych urządzeniach Samsung może powodować dezaktywowanie aplikacji Portal firmy w usłudze Intune oraz jej składników. Zdezaktywowanej aplikacji Portal firmy nie można uruchomić w tle, co uniemożliwia nawiązywanie kontaktu z usługą Intune.
+
+**Rozwiązanie 1:**
+
+Poproś użytkowników o ręczne uruchomienie aplikacji Portal firmy. Po ponownym uruchomieniu aplikacji urządzenie jest zaewidencjonowywane przy użyciu usługi Intune.
+
+> [!IMPORTANT]
+> Ręczne otwieranie aplikacji Portal firmy to rozwiązanie tymczasowe, ponieważ oprogramowanie Samsung Smart Menedżer może spowodować ponowne dezaktywowanie aplikacji Portal firmy.
+
+**Rozwiązanie 2:**
+
+Poproś użytkowników, aby spróbowali uaktualnić do systemu Android do wersji 6.0. Problem z dezaktywacją nie występuje na urządzeniach z systemem Android 6.0. Aby sprawdzić, czy aktualizacja jest dostępna, użytkownicy mogą przejść kolejno do pozycji **Ustawienia** > **Informacje o urządzeniu** > **Pobierz aktualizacje ręcznie** i postępować zgodnie z monitami wyświetlanymi w urządzeniu.
+
+**Rozwiązanie 3:**
+
+Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższych kroków w celu wykluczenia aplikacji Portal firmy z oprogramowania Smart Menedżer:
+
+1. Uruchom aplikację Smart Menedżer w urządzeniu.
+
+  ![Wybieranie ikony Smart Menedżer w urządzeniu](./media/smart-manager-app-icon.png)
+
+2. Wybierz kafelek **Bateria**.
+
+  ![Wybieranie kafelka Bateria](./media/smart-manager-battery-tile.png)
+
+3. W obszarze **Oszczędzanie energii dla aplikacji** lub **Optymalizacja aplikacji** wybierz pozycję **Szczegóły**.
+
+  ![Wybieranie pozycji Szczegóły w obszarze Oszczędzanie energii dla aplikacji lub Optymalizacja aplikacji](./media/smart-manager-app-power-saving-detail.png)
+
+4. Z listy aplikacji wybierz pozycję **Portal firmy**.
+
+  ![Wybieranie pozycji Portal firmy z listy aplikacji](./media/smart-manager-company-portal.png)
+
+5. Wybierz pozycję **Wyłączono**.
+
+  ![Wybieranie pozycji Wyłączono w oknie dialogowym Optymalizacja aplikacji](./media/smart-manager-app-optimization-turned-off.png)
+
+6. W obszarze **Oszczędzanie energii dla aplikacji** lub **Optymalizacja aplikacji** sprawdź, czy aplikacja Portal firmy została wyłączona.
+
+  ![Sprawdzanie, czy aplikacja Portal firmy została wyłączona](./media/smart-manager-verify-comp-portal-turned-off.png)
+
+
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
 **Problem: ** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
 
-### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
+**Rozwiązanie:**
 
 1.  Upewnij się, że użytkownikowi przypisano odpowiednią licencję dla używanej wersji usługi Intune.
 
 2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM lub czy nie zainstalowano już dla niego profilu zarządzania.
 
-4.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
+3.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
 
 ### <a name="android-certificate-issues"></a>Problemy z certyfikatami systemu Android
 
@@ -255,7 +304,7 @@ Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dok
 
 ## <a name="pc-issues"></a>Problemy z komputerem PC
 
-### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Maszyna jest już zarejestrowana — błąd hr 0x8007064c
+### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Maszyna jest już zarejestrowana — błąd hr 0x8007064c
 **Problem:** Rejestracja kończy się niepowodzeniem z powodu błędu **Maszyna jest już zarejestrowana**. Dziennik rejestracji zawiera błąd **hr 0x8007064c**.
 
 Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używaniem na komputerze sklonowanego obrazu innego komputera, który został zarejestrowany. Certyfikat poprzedniego konta nadal istnieje na komputerze.
@@ -307,6 +356,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

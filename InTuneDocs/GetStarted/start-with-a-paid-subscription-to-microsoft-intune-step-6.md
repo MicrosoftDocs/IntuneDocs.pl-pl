@@ -1,10 +1,11 @@
 ---
-title: Tworzenie zasad i publikowanie aplikacji | Microsoft Intune
-description: "Wyjaśnia, jak utworzyć zasady i opublikować przykładową aplikację dla subskrypcji usługi Intune"
+title: "Wdrażanie zasad i aplikacji | Microsoft Intune"
+description: "Można włączyć ustawienia zasad i wdrożyć aplikacje, które będą stosowane zaraz po zarejestrowaniu urządzeń do zarządzania."
 keywords: 
-author: barlanmsft
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,94 +14,57 @@ ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 0bf3eb60b60e8ad1c91d3010230a41ce5d863dfe
+ms.sourcegitcommit: 0d2a3e5c05180c1a3f2ee3bf91813df3b5fa7bc6
+ms.openlocfilehash: 679c49d135c9161ecae5db704a3f6c96add003dc
 
 
 ---
 
-# Tworzenie zasad i publikowanie aplikacji
-Zasady usługi Intune udostępniają ustawienia, które ułatwiają sterowanie ustawieniami zabezpieczeń na urządzeniach przenośnych, obsługę ustawień Zapory systemu Windows i programu Endpoint Protection dla komputerów oraz wdrażanie aplikacji. Aby dowiedzieć się więcej, zobacz [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/Intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) i [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/Intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
+# <a name="create-policies-and-publish-apps"></a>Tworzenie zasad i publikowanie aplikacji
+Przed rozpoczęciem rejestrowania aplikacji w usłudze Intune można włączyć ustawienia zasad i aplikacji, które zostaną wdrożone od razu po rozpoczęciu zarządzania urządzeniami. Zasady usługi Intune udostępniają ustawienia, które ułatwiają sterowanie ustawieniami zabezpieczeń na urządzeniach przenośnych, obsługę ustawień Zapory systemu Windows i programu Endpoint Protection dla komputerów oraz wdrażanie aplikacji. Można konfigurować zasady oraz dodawać i wdrażać aplikacje, aby urządzenia otrzymywały ustawienia i aplikacje od razu po zarejestrowaniu w usłudze Intune.
 
-Usługa Intune zapewnia dwa typy instalacji aplikacji. Pierwsza to **instalacja wymagana**, w przypadku której aplikacja jest wdrażana automatycznie na zarządzanych komputerach. Druga to **instalacja dostępna**, w przypadku której aplikacja (lub link do niej) jest wdrażana w Portalu firmy usługi Intune, dzięki czemu użytkownicy mogą wybrać, czy zainstalować aplikację na swoich komputerach lub urządzeniach przenośnych.
+Zasady i aplikacje są powiązane z określoną platformą.
 
-Poniższe kroki ułatwiają określenie zasad konfiguracji urządzeń przenośnych oraz zasad zapory komputerów z systemem Windows, jak również skonfigurowanie aplikacji Skype jako instalacji dostępnej dla urządzeń przenośnych po ich rejestracji.
+## <a name="manage-device-settings"></a>Zarządzanie ustawieniami urządzenia
 
-> [!TIP]
-> Po dodaniu i wdrożeniu nowej zasady wszyscy użytkownicy i urządzenia należący do grupy, dla której określono zasadę, dziedziczą ustawienia jako zasadę podstawową. W każdym momencie możesz sprawdzić i zmienić szczegóły tych zasad w obszarze roboczym Zasady.
+ Ustawienia zasad urządzenia są konfigurowane i zarządzane w odniesieniu do poszczególnych platform. Zasady można konfigurować dla następujących platform:
 
+- [iOS](https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune)
+- [Android i Samsung KNOX Standard](https://docs.microsoft.com/intune/deploy-use/android-policy-settings-in-microsoft-intune)
+- [Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-policy-settings-in-microsoft-intune)
+- [Windows 10 (na komputer i wersja Mobile)](https://docs.microsoft.com/intune/deploy-use/windows-10-policy-settings-in-microsoft-intune)
+- [Windows 8.1](https://docs.microsoft.com/intune/deploy-use/windows-configuration-policy-settings-in-microsoft-intune)
+- [Windows Phone 8.1](https://docs.microsoft.com/intune/deploy-use/windows-phone-8-1-policy-settings-in-microsoft-intune)
+- [Windows Team](https://docs.microsoft.com/intune/deploy-use/windows-team-configuration-policy-settings-in-microsoft-intune)
+- [Komputery z systemem Windows z uruchomionym klientem oprogramowania usługi Intune](https://docs.microsoft.com/intune/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune)
 
-## Tworzenie i wdrażanie zasad konfiguracji urządzeń przenośnych
+Dowiedz się więcej na temat sposobu [zarządzania ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies).
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com/).
+## <a name="add-and-deploy-apps"></a>Dodawanie i wdrażanie aplikacji
 
-2.  W lewym okienku wybierz ikonę **Zasady**.
+Istnieją dwa sposoby dodawania aplikacji do usługi Intune, a następnie wdrażania ich na zarządzanych urządzeniach:
+- **Wymagana instalacja** — aplikacje są automatycznie instalowane na zarządzanych urządzeniach.
+- **Dostępna instalacja** — aplikacje są wyświetlane w aplikacji Portal firmy w usłudze Intune, dzięki czemu użytkownicy mogą wybrać, czy mają być instalowane na ich urządzeniach.
 
-    ![Obszar roboczy Zasady w konsoli administracyjnej](./media/policy.png)
+### <a name="add-apps"></a>Dodawanie aplikacji
 
-3.  Na liście **Zadania** na stronie **Przegląd zasad** wybierz pozycję **Dodaj zasady**.
+Najpierw musisz udostępnić aplikacje w usłudze Intune za pomocą jednej z następujących metod:
+- [Dodawanie aplikacji dla zarejestrowanych urządzeń](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune)
+- [Dodawanie aplikacji dla komputerów klienckich z oprogramowaniem usługi Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune)
 
-4.  Na liście zasad rozwiń platformę, dla której chcesz utworzyć zasady, a następnie wybierz pozycje **Konfiguracja ogólna** > **Utwórz zasadę niestandardową i przeprowadź jej wdrożenie z zalecanymi ustawieniami** > **Utwórz zasady**.
+### <a name="deploy-apps"></a>Wdrażanie aplikacji
 
-> [!NOTE]
-> Nie istnieją zalecane ustawienia dla zasad konfiguracji urządzeń, ponieważ istnieje wiele opcji, spośród których można dokonać wyboru. Należy utworzyć niestandardowe zasady konfiguracji urządzeń.
+Gdy aplikacja jest już dostępna w usłudze Intune, możesz wdrożyć ją na zarządzanych urządzeniach:
+- [Wdrażanie aplikacji na urządzeniach](https://docs.microsoft.com/intune/deploy-use/deploy-use/deploy-apps-in-microsoft-intune)
+- Wdrażanie aplikacji kupionych w ramach zakupów zbiorczych:
+    - [iOS — program zakupów zbiorczych](https://docs.microsoft.com/intune/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune)
+    - [Sklep Windows dla firm](https://docs.microsoft.com/intune/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune)
+    - [Android for Work](https://docs.microsoft.com/en-us/Intune/deploy-use/android-for-work-apps)
 
-
-5.  Po wyświetleniu monitu o treści **Wybierz grupy, do których te zasady mają zostać wdrożone** wybierz grupę z listy dostępnych grup, a następnie wybierz pozycje **Dodaj** > **OK**.
-
-Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do grupy **Użytkownicy usługi Intune**. Kliknij dwukrotnie zasadę, aby wyświetlić jej ustawienia.
-
-## Publikowanie aplikacji Skype dla urządzeń przenośnych
-
-1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz ikonę **Aplikacje**, a następnie wybierz pozycje **Aplikacje** > **Dodaj aplikację**. Jeśli zostanie wyświetlony monit, wprowadź swoje poświadczenia usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
-
-    ![Obszar roboczy Aplikacje konsoli administracyjnej](./media/apps.png)
-
-    > [!NOTE]
-    > Po pierwszym uruchomieniu **Wydawcy oprogramowania usługi Intune** wystąpi krótkie opóźnienie podczas instalowania aplikacji.
-
-2.  Przejrzyj ostrzeżenie o zabezpieczeniach, a następnie wybierz pozycję **Uruchom**.
-
-3.  Na stronie **Przed rozpoczęciem** wybierz pozycję **Dalej**.
-
-4.  Na stronie **Instalator oprogramowania** w obszarze **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom** wybierz pozycję **Link zewnętrzny**.
-
-5.  W polu **Określ adres URL** wprowadź link zewnętrzny dla oprogramowania, a następnie wybierz pozycję **Dalej**. Upewnij się, że adres URL jest poprzedzony prefiksem **http://**. Wybierz poniższy link aplikacji Skype odpowiadający platformie urządzenia przenośnego, z której korzystasz:
-
-    -   **iOS:**   [https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8](https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8)
-
-    -   **Android:**  [https://play.google.com/store/apps/details?id=com.skype.raider](https://play.google.com/store/apps/details?id=com.skype.raider)
-
-    -   **Windows Phone 8 lub Windows Phone 8.1:**  [http://www.windowsphone.com/pl-pl/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
-
-6.  Na stronie **Opis oprogramowania** podaj informacje dotyczące oprogramowania, które mają być wyświetlane użytkownikom w Portalu firmy, a następnie wybierz pozycję **Dalej**. Dostępne są następujące ustawienia (ten przykład dotyczy programu Skype):
-
-    -   **Wydawca:** Wprowadź nazwę wydawcy, „Microsoft”:
-
-    -   **Nazwa:** Wprowadź **Skype**
-
-    -   **Opis:** Wprowadź opis oprogramowania, na przykład **Aplikacja do komunikacji Skype**
-
-    -   **Kategoria:** Wybierz kategorię, która najlepiej pasuje do tego oprogramowania, na przykład **Współpraca**
-
-    -   **Wyświetlaj jako polecaną aplikację i wyróżnij w Portalu firmy**: Wybierz tę opcję, aby wyróżnić aplikację w Portalu firmy na urządzeniach przenośnych.
-
-    -   **Ikona:** określ, czy z oprogramowaniem ma zostać skojarzona ikona. Maksymalny rozmiar opcjonalnej ikony to 250x250 pikseli, ale zalecany rozmiar to 32x32 piksele.
-
-7.  Na stronie **Podsumowanie** zweryfikuj informacje o oprogramowaniu, a następnie wybierz pozycję **Przekaż**. Wybierz pozycję **Zamknij**, aby zakończyć działanie kreatora.
-
-8.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Aplikacje** > **Aplikacje** > **Skype** > **Zarządzaj wdrożeniem**.
-
-9. Na stronie **Wybierz grupę** wybierz pozycję **Użytkownicy usługi Intune**, aby wdrożyć oprogramowanie dla tej grupy użytkowników, a następnie wybierz pozycje **Dodaj** > **Dalej**.
-
-10. Na stronie **Akcja wdrażania** wybierz pozycję **Dostępna instalacja** w kolumnie **Zatwierdzenie** dla tej grupy.
-
-11. Wybierz pozycję **Zakończ**.
-
-Aplikacja Skype jest teraz dostępna do instalacji na urządzeniach przenośnych z Portalu firmy, ale najpierw należy zainstalować oprogramowanie usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] na komputerach i urządzeniach przenośnych.
+    Po skonfigurowaniu aplikacji do wdrożenia możesz [skonfigurować aplikacje](https://docs.microsoft.com/intune/deploy-use/update-apps-using-microsoft-intune) i [monitorować aplikacje](https://docs.microsoft.com/intune/deploy-use/monitor-apps-in-microsoft-intune).
 
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Gratulacje! Krok 6 *przewodnika Szybki start dotyczącego usługi Intune* został ukończony.
 
 >[!div class="step-by-step"]
@@ -109,6 +73,6 @@ Gratulacje! Krok 6 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
+ms.sourcegitcommit: aae739b5ea8640449f180535a6d8f1550c7ae228
+ms.openlocfilehash: 8dc7f1c7eb32828854b4e2309c915f4fd0cba9a2
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
@@ -25,6 +25,7 @@ Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższ
 
 |Platforma|Zdalne blokowanie|
 |------------|---------------|
+|macOS|Nieobsługiwane|
 |iOS|Obsługiwane|
 |Android|Obsługiwane|
 |Windows 10 i Windows 10 Mobile|Obsługiwane|
@@ -50,12 +51,14 @@ Jeśli użytkownik zapomni kod dostępu, możesz pomóc przez usunięcie kodu do
 
 |Platforma|Resetowanie kodu dostępu|
 |------------|------------------|
+|macOS|Nieobsługiwane|
 |iOS|Obsługiwane czyszczenie kodu dostępu z urządzenia. Nie powoduje utworzenia nowego hasła tymczasowego.|
 |Android|Obsługiwane w wersjach wcześniejszych niż Android 7.0. Powoduje utworzenie tymczasowego kodu dostępu.|
 |Windows 10 Mobile|Obsługiwane|
 |Windows Phone 8 i Windows Phone 8.1|Obsługiwane|
-|Windows RT 8.1 i Windows RT|Nieobsługiwane|
+|Windows RT 8.1|Nieobsługiwane|
 |Windows 8.1|Nieobsługiwane|
+|Windows 10 Desktop|Nieobsługiwane|
 
 Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z systemem Windows zarejestrowanych przy użyciu oprogramowania klienckiego usługi Intune.
 
@@ -76,6 +79,6 @@ Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z system
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
