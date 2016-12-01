@@ -2,8 +2,8 @@
 title: "Określanie numerów IMEI | Microsoft Intune"
 description: "Usługa Microsoft Intune umożliwia administratorom importowanie numerów IMEI dla platform urządzeń przenośnych w celu ułatwienia identyfikacji firmowych urządzeń przenośnych"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -14,13 +14,13 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c6b01a5efc0f60622b95623fd91f192c267ff766
-ms.openlocfilehash: 9bd2b4bb676e23712c0a668161b81c4e352bce87
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 040413b59c81c20cf579660a83acebc494c0a1b9
 
 
 ---
 
-# Określanie urządzeń należących do firmy z międzynarodowymi numerami identyfikującymi urządzenia przenośne (IMEI, International Mobile Equipment Identity)
+# <a name="specify-corporateowned-devices-with-international-mobile-equipment-identity-imei-numbers"></a>Określanie urządzeń należących do firmy z międzynarodowymi numerami identyfikującymi urządzenia przenośne (IMEI, International Mobile Equipment Identity)
 Usługa Microsoft Intune umożliwia administratorom importowanie międzynarodowych numerów identyfikujących urządzenia przenośne (IMEI) dla platform urządzeń przenośnych za pomocą numerów IMEI, co ułatwia identyfikację firmowych urządzeń przenośnych. Po zarejestrowaniu urządzeń w usłudze Intune w obszarze **Grupy** > **Przegląd** > **Wszystkie urządzenia** zobaczysz urządzenia z zaimportowanymi numerami IMEI. W obszarze **Grupa urządzeń** widoczne są urządzenia z zaimportowanymi numerami IMEI wyświetlanymi jako **Firmowe** w kolumnie **Własność**.
 
 1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz kolejno pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru IMEI (wszystkie platformy)**, a następnie wybierz polecenie **Dodaj urządzenia**. Urządzenia można dodać na dwa sposoby:
@@ -29,8 +29,8 @@ Usługa Microsoft Intune umożliwia administratorom importowanie międzynarodowy
 
         |||
         |-|-|
-        |&lt;KOD IMEI 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
-        |&lt;KOD IMEI 2&gt;|&lt;Szczegóły urządzenia 2&gt;|
+        |&lt;IMEI 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
+        |&lt;IMEI 2&gt;|&lt;Szczegóły urządzenia 2&gt;|
         Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
         ```
@@ -38,7 +38,7 @@ Usługa Microsoft Intune umożliwia administratorom importowanie międzynarodowy
         AABBBBBBCCCCCCE,PO 1234
         ```
 
-    -   **Ręcznie dodaj szczegóły urządzeń** — wprowadź numery IMEI i szczegóły maksymalnie pięciu urządzeń.
+    -   **Ręcznie dodaj szczegóły urządzeń** — wprowadź numery IMEI i szczegóły maksymalnie 15 urządzeń.
 
    *Szczegóły* są przeznaczone do użytku administracyjnego, dzięki czemu można zidentyfikować numer IMEI skojarzony z urządzeniem. Te informacje nie są wysyłane do urządzenia, ale będą wyświetlane w konsoli usługi Intune.
 
@@ -50,6 +50,6 @@ Podczas rejestrowania urządzenia z numerem IMEI w usłudze Intune — zwykle gd
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

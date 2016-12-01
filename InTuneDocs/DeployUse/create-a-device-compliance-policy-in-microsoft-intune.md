@@ -14,41 +14,41 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fea2e479273af7ff915449c96a72aeebba85a9
-ms.openlocfilehash: 3f434fc4cb9c90e28e516620383def8d91f11138
+ms.sourcegitcommit: 376c9bce811ffd986242678929469f3e28bfad4c
+ms.openlocfilehash: 43c8d5e065e785269b9d0cbf1813dcea83464975
 
 
 ---
 
-# Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune
+# <a name="create-a-device-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune
 W tym temacie opisano czynności służące do tworzenia zasad zgodności, które urządzenie musi spełnić, aby było uznane za zgodne.
 
-##  Krok 1. Dodanie nowej zasady
+##  <a name="step-1-add-a-new-policy"></a>Krok 1. Dodanie nowej zasady
   W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Zasady zgodności** &gt; **Dodaj**.
 
   ![Zrzut ekranu strony zasad zgodności w konsoli administracyjnej usługi Intune przedstawiający opcję Dodaj w menu u góry strony](./media/intune-sa-3a-add-compliance-policy.png)
 
-##  Krok 2. Konfigurowanie ustawień
+##  <a name="step-2-configure-settings"></a>Krok 2. Konfigurowanie ustawień
 Na stronie **Tworzenie zasad** włącz wymagane ustawienia:
-  -   Ustawienia zabezpieczeń systemu, np. hasła i szyfrowania.
-  -   Ustawienia kondycji urządzenia, np. określanie, czy urządzenie ma zdjęte zabezpieczenia lub jest zgłoszone jako urządzenie w złej kondycji przez usługę zaświadczania o kondycji urządzenia systemu Windows.
+  -   Ustawienia zabezpieczeń systemu, np. hasło i szyfrowanie.
+  -   Ustawienia kondycji urządzenia, np. określanie, czy urządzenie ma zdjęte zabezpieczenia lub jest zgłoszone jako urządzenie w dobrej kondycji przez usługę zaświadczania o kondycji urządzenia systemu Windows.
   -   Ustawienia właściwości urządzenia, np. minimalna wymagana wersja systemu operacyjnego lub dozwolona maksymalna wersja systemu operacyjnego.
-![Karta Ogólne na stronie Tworzenie zasad ](./media/intune-sa-3b-create-policy.png)
+![Karta Ogólne na stronie Tworzenie zasad](./media/intune-sa-3b-create-policy.png)
 
 
-##  Krok 3. Zapisanie zasad
+##  <a name="step-3-save-the-policy"></a>Krok 3. Zapisanie zasad
 Gdy skończysz, wybierz pozycję **Zapisz zasady**.
 
 Zasady będzie można wdrożyć od razu po ich zapisaniu lub później. Nowe zasady zostaną wyświetlone w węźle **Zasady zgodności** w obszarze roboczym **Zasady**.
 
-##  Krok 4. Ustawienie okresu ważności stanu zgodności
-Aby określić czas, w którym urządzenie musi być zaewidencjonowane, zanim zostanie uznane za niezgodne, przejdź do ustawień zasad zgodności i zaktualizuj czas.  Domyślnie opcja jest ustawiona na 30 dni.
+##  <a name="step-4-set-the-compliance-status-validity-period"></a>Krok 4. Ustawienie okresu ważności stanu zgodności
+Aby określić czas, w którym urządzenie musi zostać zaewidencjonowane, zanim zostanie uznane za niezgodne, przejdź do ustawień zasad zgodności i zaktualizuj czas. Domyślnie opcja jest ustawiona na 30 dni.
 
 ![Opcja ustawień zasad zgodności na pasku menu zasad](../media/mdm-compliance-policy-settings.png)
 
 ![Okno dialogowe zasad zgodności](../media/mdm-ca-compliance-status-validity-period.png)
 
-## Obsługiwane ustawienia zasad
+## <a name="supported-policy-settings"></a>Obsługiwane ustawienia zasad
 W poniższej tabeli wymieniono ustawienia zasad zgodności i platformy, na których są obsługiwane.
 
 -------------
@@ -77,17 +77,17 @@ Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustaw
 > [!div class="op_single_selector"]
 - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem Android](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Ustawienia zasad zgodności dla urządzeń z systemami Windows i Windows Phone ](windows-compliance-policy-settings-in-microsoft-intune.md)
+- [Ustawienia zasad zgodności dla urządzeń z systemami Windows i Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
 
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 [Wdrażanie i monitorowanie zasad zgodności](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Wprowadzenie do zasad zgodności urządzeń](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

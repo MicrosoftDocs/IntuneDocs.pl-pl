@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
-ms.openlocfilehash: dcd8f956d1706f4bdcb2dca79e9f1ff5d5bb57b0
+ms.sourcegitcommit: f0c5920f7cc46e40bf4d1795a68ba1d67840fcfa
+ms.openlocfilehash: 6ac7034ba0713c7b6bdd28c7b53b99c247d3aeb3
 
 
 ---
@@ -100,7 +100,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
     |**Opis**|Opis, który pomaga zidentyfikować ten profil.|
     |**Host**|Nazwa hosta serwera firmy udostępniającego natywną usługę poczty e-mail.|
     |**Nazwa konta**|Nazwa wyświetlana konta e-mail, która będzie wyświetlana użytkownikom na ich urządzeniach.|
-    |**Nazwa użytkownika**|Wybierz, jak można uzyskać nazwę użytkownika dla konta e-mail. Wybierz pozycję **Nazwa użytkownika** w przypadku lokalnego serwera programu Exchange lub pozycję **Nazwa główna użytkownika** w przypadku usługi Office 365.|
+    |**Nazwa użytkownika**|Jest to atrybut usługi Active Directory (AD) lub Azure AD, który będzie używany do generowania nazwy użytkownika dla tego profilu poczty e-mail. Wybierz podstawowy adres SMTP, taki jak *user1@contoso.com* lub główną nazwę użytkownika, na przykład *użytkownik1* lub *user1@contoso.com*.|
     |**Adres e-mail**|Wybierz, jak jest generowany adres e-mail użytkownika na poszczególnych urządzeniach. Wybierz pozycję **Podstawowy adres SMTP**, aby użyć podstawowego adresu SMTP użytkownika do logowania do programu Exchange, lub wybierz pozycję **Główna nazwa użytkownika**, aby użyć pełnej głównej nazwy jako adresu e-mail.|
     |**Metoda uwierzytelniania** (program Android for Work, systemy Samsung KNOX i iOS)|Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.|
     |**Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** (program Android for Work, systemy Samsung KNOX i iOS)|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z serwerem Exchange. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md). Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.|
@@ -138,6 +138,6 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
