@@ -14,8 +14,8 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4f8db75ed17e70dae5d3507b6af33a835c1658e9
-ms.openlocfilehash: 5195de40f35085c45ae63957da1a9058ed7d6493
+ms.sourcegitcommit: dcca68485db7e2c206077ce457081fdbf5cccea4
+ms.openlocfilehash: 92c59bd8061648cedaf31e50c5c599a96302a50f
 
 
 ---
@@ -31,7 +31,7 @@ Grupy w usłudze Intune zapewniają dużą elastyczność zarządzania urządzen
 
 >[!IMPORTANT]
 >
->Jeśli otworzysz obszar roboczy Grupy w portalu usługi Intune i zobaczysz komunikat **Grupy użytkowników usługi Intune są teraz zarządzane jako grupy w usłudze Azure Active Directory** z linkiem do portalu usługi Azure Active Directory, oznacza to, że w przypadku zarządzania grupami w usłudze Intune jest już używane *nowe* podejście do grup zabezpieczeń usługi Azure AD. Aby dowiedzieć się, jak tworzyć grupy, zobacz [Zarządzanie grupami w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-accessmanagement-manage-groups).
+>Jeśli otworzysz obszar roboczy Grupy w portalu usługi Intune i zobaczysz komunikat **Grupy użytkowników usługi Intune są teraz zarządzane jako grupy w usłudze Azure Active Directory** z linkiem do portalu usługi Azure Active Directory, oznacza to, że w przypadku zarządzania grupami w usłudze Intune jest już używane *nowe* podejście do grup zabezpieczeń usługi Azure AD. Aby dowiedzieć się, jak tworzyć grupy, zobacz [Zarządzanie grupami w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
 >
 >Jeśli nie widzisz linku do portalu usługi Azure AD, nadal zarządzasz grupami w portalu usługi Intune.
 
@@ -89,6 +89,6 @@ Gratulacje! Krok 5 *przewodnika Szybki start dotyczącego usługi Intune* zosta�
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

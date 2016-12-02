@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
-ms.openlocfilehash: d880123a9b4d4afd74e9941ce0590f5dae554667
+ms.sourcegitcommit: 686321a1c19acb9a3a7e262822b11304d07adb40
+ms.openlocfilehash: 77789c04d13e12d7d0ecc5fb8959bc3396bd625f
 
 
 ---
@@ -30,7 +30,7 @@ Organizacje korzystające z programu [Exchange ActiveSync](#mobile-device-manage
 W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagania i obsługiwane możliwości każdej metody. Te wymagania i możliwości zostały opisane poniżej.
 
 - **Czyszczenie** — określa, czy urządzenie musi zostać wyczyszczone, zanim użytkownicy będą mogli je zarejestrować. Termin „czyszczenie” oznacza zresetowanie urządzenia do ustawień fabrycznych, co powoduje usunięcie wszystkich danych. Aby uzyskać więcej informacji, zobacz [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md).
-- **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices).
+- **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
 - **Zablokuj** — uniemożliwia użytkownikom usunięcie urządzenia z zarządzania. Urządzenia z systemem iOS wymagają trybu nadzorcy w celu dokonania blokady. Aby uzyskać więcej informacji, zobacz [Zdalne blokowanie](retire-devices-from-microsoft-intune-management.md#block-access-a-device).
 
 **Metody rejestracji urządzeń z systemem iOS**
@@ -120,6 +120,6 @@ Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 

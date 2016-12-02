@@ -3,8 +3,7 @@
 title: Instalowanie komputerowego oprogramowania klienckiego | Microsoft Intune
 description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune."
 keywords: 
-author: NathBarn
-manager: arob98
+author: staciebarker
 ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
@@ -14,8 +13,8 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
-ms.openlocfilehash: 7d239a80ed68d39b2a7179a45178ba6ae11c5423
+ms.sourcegitcommit: 103e7065d1e2c3281f8f04808ee2546d3c7e2b53
+ms.openlocfilehash: 32af8a615453b8c72e704f40dcdf0de6fbf10907
 
 
 ---
@@ -104,7 +103,7 @@ Gdy zadanie automatycznej rejestracji jest uruchamiane w następnym zaplanowanym
 
 Zadanie automatycznej rejestracji w usłudze Intune, wartość rejestru **WindowsIntuneEnrollPending** i certyfikat konta zostaną usunięte z komputera docelowego po pomyślnej rejestracji lub po upływie miesiąca (w zależności od tego, co nastąpi wcześniej).
 
-## <a name="instruct-users-to-selfenroll"></a>Instruowanie użytkowników odnośnie samodzielnej rejestracji
+## <a name="instruct-users-to-self-enroll"></a>Instruowanie użytkowników odnośnie samodzielnej rejestracji
 
 Użytkownicy mogą zainstalować oprogramowanie klienckie usługi Intune, przechodząc do [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Jeśli portal sieci Web może wykryć, że urządzenie jest komputerem z systemem Windows, użytkownicy będą monitowani o pobranie klienta oprogramowania usługi Intune w celu zarejestrowania komputera. Po pobraniu oprogramowania użytkownicy mogą je zainstalować w celu umożliwienia zarządzania ich komputerami.
 
@@ -139,6 +138,6 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO5-->
 
 
