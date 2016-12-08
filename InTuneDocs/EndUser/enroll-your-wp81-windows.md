@@ -2,7 +2,7 @@
 title: "Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune | Microsoft Intune"
 description: "Opis sposobu rejestrowania urządzenia z systemem Windows 8.1 w usłudze Intune"
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
@@ -14,14 +14,14 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 843011aca535d8416b931f43bb622bc5c01ed546
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b4569ec01a0b8c6a8ec06cb9036d7753e34b38d2
 
 
 ---
 
 
-# Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune
+# <a name="enroll-your-windows-phone-81-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune
 
 Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -32,7 +32,7 @@ Aby zarejestrować urządzenie z systemem Windows Phone 8.1 w usłudze Intune, p
 
 -   [Jeśli nie możesz uzyskać dostępu do Sklepu Windows w systemie Windows Phone lub nie masz konta Microsoft](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
 
-## Jeśli firma pozwala korzystać z aplikacji Portal firmy ze Sklepu Windows
+## <a name="if-your-company-lets-you-use-the-company-portal-from-the-windows-store"></a>Jeśli firma pozwala korzystać z aplikacji Portal firmy ze Sklepu Windows
 Instalowanie aplikacji Portal firmy na urządzeniu:
 
 1.  Naciśnij kolejno pozycje **Start** &gt; **Sklep**.
@@ -71,7 +71,7 @@ Rejestrowanie urządzenia:
 
     ![Ekran po dodaniu konta](./media/WP81-enroll-4-account-added.png)
 
-## Jeśli nie możesz uzyskać dostępu do Sklepu Windows w systemie Windows Phone lub nie masz konta Microsoft
+## <a name="if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Jeśli nie możesz uzyskać dostępu do Sklepu Windows w systemie Windows Phone lub nie masz konta Microsoft
 
 1.  Naciśnij kolejno pozycje **Ustawienia** &gt; **Miejsce pracy**.
 
@@ -87,6 +87,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
