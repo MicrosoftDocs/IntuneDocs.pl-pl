@@ -2,10 +2,10 @@
 title: "Wyrejestrowywanie urządzenia z systemem Windows z usługi Intune | Microsoft Intune"
 description: "Opis sposobu wyrejestrowania urządzenia z systemem Windows z usługi Intune"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: b3dda0cda3600721db5f2ea73166652abff7a44d
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: e71dece9a286ecb086197959739b0f4cb66c856d
 
 
 ---
 
 
-# Wyrejestrowanie urządzenia z systemem Windows z usługi Intune
+# <a name="unenroll-your-windows-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem Windows z usługi Intune
 
 Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do celów służbowych i nie musisz uzyskiwać dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz je wyrejestrować. Po wyrejestrowaniu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu urządzenia, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -31,7 +31,7 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 -   [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-8-1-computer)
 -   [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
 
-## Wyrejestrowywanie urządzenia z systemem Windows 10
+## <a name="unenroll-your-windows-10-device"></a>Wyrejestrowywanie urządzenia z systemem Windows 10
 
 1.  Na liście aplikacji naciśnij aplikację **Portal firmy** .
 
@@ -41,7 +41,7 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 
 4.  Naciśnij pozycję **Usuń** &gt; **Usuń**.
 
-## Wyrejestrowywanie komputera z systemem Windows 8.1
+## <a name="unenroll-your-windows-81-computer"></a>Wyrejestrowywanie komputera z systemem Windows 8.1
 
 1.  Przejdź do pozycji **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.
 
@@ -51,7 +51,7 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 
 4.  W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
 
-## Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1
+## <a name="unenroll-your-windows-phone-81-device"></a>Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1
 
 1.  Przejdź do pozycji **Ustawienia** &gt; **Miejsce pracy**.
 
@@ -65,6 +65,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

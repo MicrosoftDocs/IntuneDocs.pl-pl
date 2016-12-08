@@ -2,10 +2,10 @@
 title: "Wyrejestrowywanie urządzenia z systemem Android z usługi Intune | Microsoft Intune"
 description: "Opis sposobu wyrejestrowania urządzenia z systemem Android z usługi Intune"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 891cf629725392beae1a6b8fbbb39f2bead8eb90
-ms.openlocfilehash: 17f7841daa79473b3c92cf50962b60b67224e4ee
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 350598f5fef3bcfa3b1421a70039f5af90aa56f9
 
 
 ---
 
 
-# Wyrejestrowanie urządzenia z systemem Android z usługi Intune
+# <a name="unenroll-your-android-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem Android z usługi Intune
 
 Po wyrejestrowaniu z usługi Intune urządzenie z systemem Android nie może uzyskiwać dostępu do zasobów firmy.  Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
@@ -31,7 +31,7 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
 1.  Zaloguj się w aplikacji Portal firmy.
 
-2.  Naciśnij pozycję **MOJE URZĄDZENIA**, a następnie wybierz urządzenie, które chcesz wyrejestrować.
+2.  Naciśnij pozycję **Moje urządzenia**, a następnie wybierz urządzenie, które chcesz wyrejestrować.
 
     ![Wybierz urządzenie, które chcesz wyrejestrować.](./media/andr-1-my-devices-choose.png)
 
@@ -39,14 +39,14 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
     ![Naciśnij ikonę kosza na śmieci.](./media/andr-2-tap-trashcan.png)
 
-    Na stronie ostrzeżenia naciśnij pozycję **OK**, aby wyrejestrować urządzenie.
+4.  Na stronie ostrzeżenia naciśnij pozycję **OK**, aby wyrejestrować urządzenie.
 
     ![Usuń urządzenie.](./media/andr-3-warning-about-remove.png)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub wyślij wiadomość e-mail do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
