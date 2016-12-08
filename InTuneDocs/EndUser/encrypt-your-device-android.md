@@ -2,10 +2,10 @@
 title: "Szyfrowanie urządzenia | Microsoft Intune"
 description: "Opis sposobu szyfrowania urządzenia z systemem Android"
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 11/7/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ff5e76e5d768b9feccb42c91c72aa71b3f724002
-ms.openlocfilehash: 4d12314ffc6126cd740012c301c39b7fb72a5bb4
+ms.sourcegitcommit: 81c0c29e1b874a7f5c7faa1c1216dbaa99ec4543
+ms.openlocfilehash: b8214506ae4609cb5316c66b854fbd572fbac94f
 
 
 ---
 
 
-# Szyfrowanie urządzenia
+# <a name="encrypt-your-device"></a>Szyfrowanie urządzenia
 
 Jeśli firma lub organizacja prosi o zaszyfrowanie urządzenia z systemem Android przed uzyskaniem dostępu do firmowych plików, poczty e-mail lub danych, wykonaj następujące kroki, aby zaszyfrować urządzenie. Może zostać wyświetlony monit o ustawienie numeru PIN lub hasła przed szyfrowaniem, jeśli administrator IT wymaga takiego zabezpieczenia.
 
@@ -34,7 +34,7 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 
-### Co zrobić, jeśli masz problemy
+### <a name="what-to-do-if-you-have-issues"></a>Co zrobić, jeśli masz problemy
 **Problem**: urządzenie jest już zaszyfrowane i wystąpiła jedna z następujących sytuacji:
 
 - Przycisk szyfrowania jest wyłączony.
@@ -57,10 +57,10 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
     5. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do zespołu ds. systemu Android firmy Microsoft: wintunedroidfbk@microsoft.com.
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do [zespołu ds. systemu Android firmy Microsoft](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
