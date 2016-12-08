@@ -2,10 +2,10 @@
 title: Informacje o portalu firmy | Microsoft Intune
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1a1975bb10d4a35f6ab52d724405f77300c40feb
-ms.openlocfilehash: f0c50a7a028fdc17acaad4e0498aaabfb58987a8
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: adf7fc0b7ddeb7fa8361d37efd0fdd5c714a72e4
 
 
 ---
 
-# Informacje o portalu firmy
+# <a name="about-the-company-portal"></a>Informacje o portalu firmy
 
-## Co to jest portal firmy i do czego służy?
+## <a name="what-is-the-company-portal-and-what-can-you-do-with-it"></a>Co to jest portal firmy i do czego służy?
 Portal firmy usługi Microsoft Intune umożliwia dostęp do danych i aplikacji firmy lub szkoły. Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, lecz także administrator IT może zainstalować aplikację Portal firmy dla Ciebie.
@@ -44,9 +44,9 @@ Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a
 - [Android](using-your-android-device-with-intune.md)
 - [iOS i Mac OS X](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Windows](using-your-windows-device-with-intune.md)
-- [Witryna internetowa Portal firmy](using-the-intune-company-portal-website.md)
+- [Witryna sieci Web Portal firmy](using-the-intune-company-portal-website.md)
 
-## Co się stanie po dodaniu komputera lub urządzenia do Portalu firmy?
+## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Co się stanie po dodaniu komputera lub urządzenia do Portalu firmy?
 Po dodaniu komputera lub urządzenia do Portalu firmy może zostać zainstalowane określone oprogramowanie lub może zostać pobrana aplikacja (w zależności od urządzenia).  Można również w ten sposób nadać administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje o firmie.
 
 Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, kliknij link odpowiadający typowi używanego urządzenia:
@@ -56,7 +56,7 @@ Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, 
 - [iOS i Mac OS X](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 - [Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
-## Jakiego rodzaju komputery i urządzenia można dodać do Portalu firmy?
+## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jakiego rodzaju komputery i urządzenia można dodać do Portalu firmy?
 
 -   Telefony iPhone, tablety iPad i urządzenia z systemem Mac OS X
 
@@ -67,11 +67,8 @@ Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, 
     -   Windows 10 Desktop
     -   Windows Phone 8.1
     -   Windows 8.1
-    -   Telefony iPhone, urządzenia iPad i komputery z systemem Mac OS X
-    -   Urządzenia przenośne z systemem Android
 
-
-## Czy można usunąć komputer lub urządzenie z Portalu firmy?
+## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Czy można usunąć komputer lub urządzenie z Portalu firmy?
 Tak, można usunąć komputer lub urządzenie z Portalu firmy lub zresetować je. Istnieje różnica między **usunięciem** a **zresetowaniem**.
 
 Gdy *usuniesz* komputer lub urządzenie, urządzenie zostanie wyrejestrowane z usługi Intune. Po wyrejestrowaniu nie będzie można uzyskać dostępu do Portalu firmy za pomocą tego urządzenia, a niektóre dane firmowe mogą zostać z niego usunięte. Aby zobaczyć, jak usunąć urządzenie z portalu firmy, kliknij jeden z następujących linków:
@@ -91,14 +88,14 @@ Aby zobaczyć, jak zresetować urządzenie, kliknij jeden z następujących link
 - [Windows](reset-erase-your-lost-or-stolen-device-windows.md)
 - [Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy](reset-your-device-cpwebsite.md)
 
-## Nie wszystkie moje urządzenia są widoczne w Portalu firmy
+## <a name="you-do-not-see-all-of-your-devices-in-the-company-portal"></a>Nie wszystkie moje urządzenia są widoczne w Portalu firmy
 Aby można było wyświetlić urządzenie, należy najpierw dodać je do Portalu firmy. Przejdź do Portalu firmy w sposób wskazany przez administratora, a następnie postępuj zgodnie z instrukcjami dla urządzenia. Ponadto urządzenia będące własnością firmy i zarządzane przez firmę nie będą widoczne.
 
-## Jeśli masz pytania, skontaktuj się z administratorem IT
+## <a name="if-you-have-questions-contact-your-it-administrator"></a>Jeśli masz pytania, skontaktuj się z administratorem IT
 Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

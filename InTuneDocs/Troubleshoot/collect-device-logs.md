@@ -14,26 +14,26 @@ ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 19b0b502d2c8c261947c461f27a0e8153df5b186
-ms.openlocfilehash: 1e65c1fa25e273ba03218f79ebeff611138e8013
+ms.sourcegitcommit: 0c05b4e16f7b0a87215a0cd20f7d559cd8497296
+ms.openlocfilehash: 0f175b1eb2d80a68c8b7864d21f5a9e585de458b
 
 
 ---
 
 # <a name="device-logs"></a>Dzienniki urządzeń
 
-Podczas rozwiązywania problemów może być konieczne zebranie dzienników z urządzeń użytkowników. W tym temacie podano instrukcje dotyczące zbierania tych dzienników. Zazwyczaj trzeba uzyskać dostęp do urządzenia lub poprosić użytkownika o zebranie dzienników i wysłanie ich do Ciebie.
+Podczas rozwiązywania problemów może być przydatne zebranie dzienników z urządzeń użytkowników. W tym temacie podano instrukcje dotyczące zbierania tych dzienników. W celu uzyskania tych dzienników zazwyczaj konieczny jest dostęp do urządzenia. Można też poprosić użytkownika o ich zebranie i przysłanie.
 
 ### <a name="android-logs"></a>Dzienniki systemu Android
-Dzienniki systemu Android znajdują się w folderze *<Android Device>\Phone\Android\data\com.microsoft.windowsintune.companyportal\files*. 
+Dzienniki systemu Android znajdują się w folderze *<Android Device>\Phone\Android\data\com.microsoft.windowsintune.companyportal\files*.
 
-Czasami pliki nie są wyświetlane, zwłaszcza na nowszych urządzeniach z systemem Android. W takim przypadku użytkownicy końcowi powinni otworzyć aplikację Portal firmy, przejść do obszaru **Ustawienia**, wybrać pozycję **Kopiuj dzienniki**, a następnie ponownie uruchomić urządzenie. 
+Czasami pliki nie są wyświetlane, zwłaszcza na nowszych urządzeniach z systemem Android. W takim przypadku użytkownicy powinni otworzyć aplikację Portal firmy dla systemu Android. Następnie powinni wybrać polecenie **Ustawienia**>**Kopiuj dzienniki** i ponownie uruchomić urządzenie.
 
 Aby uzyskać więcej informacji na temat sposobu, w jaki użytkownicy mogą przesyłać do Ciebie dzienniki danych, zobacz następujące artykuły:
 
-- [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami](/intune/enduser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) — opis sposobu, w jaki użytkownicy mogą włączyć pełne rejestrowanie, które automatycznie prześle do Ciebie wszystkie dzienniki danych użytkowników. Domyślnie pełne rejestrowanie jest włączone.
+- [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami](/intune/enduser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) — opis sposobu, w jaki użytkownicy mogą włączyć pełne rejestrowanie, aby automatycznie przesyłać do Ciebie wszystkie dzienniki danych użytkowników. Domyślnie pełne rejestrowanie jest włączone.
 
-- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT pocztą e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android) 
+- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT pocztą e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
 
 - [Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 
@@ -45,11 +45,11 @@ Użytkownicy mogą wysłać do Ciebie błędy rejestracji w sposób opisany w te
 
 1. Otwórz aplikację **Konsola**.
 2. W obszarze **PLIKI** wybierz pozycję **system.log**.
-3. Na pasku menu u góry wybierz pozycję **Plik** > **Zapisz kopię jako** i zapisz plik.
+3. Na pasku menu u góry wybierz kolejno pozycje **Plik** > **Zapisz kopię jako**. Następnie zapisz plik.
 
-### <a name="windows-phone"></a>System Windows Phone
+### <a name="windows-phone"></a>Windows Phone
 
-W aplikacji Portal firmy dla systemu Windows Phone użytkownicy powinni wybrać pozycję **…**, aby uzyskać dostęp do menu, a następnie wybrać pozycję **Wyślij dzienniki**. Ta opcja jest dostępna zarówno przed, jak i po zalogowaniu się do aplikacji Portal firmy.
+W aplikacji Portal firmy dla systemu Windows Phone do uzyskania dostępu do menu służy wielokropek (**...**). Następnie należy wybrać pozycję **Wyślij dzienniki**. Ta opcja jest dostępna zarówno przed, jak i po zalogowaniu się do aplikacji Portal firmy.
 
 ### <a name="windows"></a>Windows
 
@@ -57,6 +57,6 @@ W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

@@ -3,25 +3,25 @@ title: "Inne opcje i dodatki dla subskrypcji ewaluacyjnych usługi Intune | Micr
 description: "Opisuje alerty, powiadomienia i raporty, a także ogólne możliwości usługi Intune, które użytkownik musi znać podczas rejestrowania się w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
-ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: ae624aed9ea09467c212e0bf16fef72bfef1956d
+ms.sourcegitcommit: 5b0fc5fdf44d8a4821f6da84cf3c706d0dcab3d1
+ms.openlocfilehash: 21b0cba6cf1d0cd7048cd0abee3a21dd9d74eadd
 
 
 ---
 
-# Inne opcje i dodatki dla subskrypcji ewaluacyjnych usługi Intune
+# <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Inne opcje i dodatki dla subskrypcji ewaluacyjnych usługi Intune
 
-## Alerty, powiadomienia i raporty
+## <a name="alerts-notifications-and-reports"></a>Alerty, powiadomienia i raporty
 W konsoli administracyjnej usługi Intune **alerty** są używane do szybkiej oceny ogólnej kondycji zarządzanych urządzeń w Twojej organizacji. Możesz skonfigurować i dostosować alerty w taki sposób, aby zgłaszały i wyświetlały tylko te informacje, które są potrzebne w Twojej organizacji. Możesz włączyć lub wyłączyć poszczególne alerty, skonfigurować ich ważność, określić przy użyciu progu wyświetlania, jak często zdarzenie alertu musi wystąpić, aby dany alert został wyświetlony, a także skonfigurować ustawienia specyficzne dla określonych typów alertów.
 
 **Powiadomienia** i wiadomości e-mail informują administratorów (i innych użytkowników) w przypadku wyzwolenia pewnych typów alertów.
@@ -30,10 +30,10 @@ W konsoli administracyjnej usługi Intune **alerty** są używane do szybkiej oc
 
 Aby dowiedzieć się więcej o alertach, powiadomieniach i raportach, zobacz [Monitorowanie i raporty w usłudze Microsoft Intune](/Intune/Deploy-Use/monitoring-and-reports-with-microsoft-intune).
 
-## Możliwości usługi Intune
+## <a name="intune-capabilities"></a>Możliwości usługi Intune
 Usługa Intune udostępnia wiele różnych możliwości poza tymi, które przedstawiono w ramach opisanych krótkich kroków konfiguracji. Oto kilka przykładów tych funkcji:
 
--   **Kontrola dostępu do programu Exchange i usługi Office 365.** Aby uzyskać szczegółowe informacje, zobacz [Zarządzanie dostępem aplikacji do usługi Exchange Online](https://technet.microsoft.com/library/dn705841.aspx) i [Zarządzanie dostępem aplikacji do usług Office 365](https://technet.microsoft.com/library/dn818907.aspx).
+-   **Kontrola dostępu do programu Exchange i usługi Office 365.** Aby uzyskać szczegółowe informacje, zobacz [Zarządzanie dostępem aplikacji do usługi Exchange Online](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) i [Zarządzanie dostępem aplikacji do usług Office 365](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 
 -   **Zarządzanie firmowymi urządzeniami z systemem iOS.** Aby uzyskać szczegółowe informacje, zobacz [Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune](/Intune/Deploy-Use/enroll-corporate-owned-ios-devices-in-microsoft-intune).
 
@@ -42,22 +42,20 @@ Usługa Intune udostępnia wiele różnych możliwości poza tymi, które przeds
 -   **Kontrola dostępu do zasobów firmy.** Na urządzeniach przenośnych możesz wdrażać certyfikaty, profile poczty e-mail oraz profile sieci VPN i sieci Wi-Fi, ułatwiając szybkie konfigurowanie urządzeń przenośnych. Aby uzyskać więcej informacji, zobacz [Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune](/Intune/Deploy-Use/enable-access-to-company-resources-with-microsoft-intune).
 
 Aby uzyskać informacje na temat pełnego zestawu możliwości usługi Intune, zobacz:
-- [Możliwości zarządzania urządzeniami przenośnymi w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
+- [Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 - [Możliwości zarządzania komputerami z systemem Windows w usłudze Microsoft Intune](/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)
 
 Aby dowiedzieć się więcej o możliwościach, które zostały niedawno wprowadzone do usługi Intune, zobacz [Co nowego w usłudze Microsoft Intune](/Intune/Deploy-Use/whats-new-in-microsoft-intune).
 
 Opcje pomocy technicznej są opisane w temacie [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](/Intune/Troubleshoot/how-to-get-support-for-microsoft-intune). Możesz także dołączyć do dyskusji związanych z usługą Intune na [forach dotyczących usługi Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-### Następne kroki
-Gratulacje! Przewodnik *wersji ewaluacyjnej usługi Microsoft Intune* właśnie został ukończony.
+## <a name="next-steps"></a>Następne kroki
+Przeczytaj o [typowych sposobach korzystania z usługi Intune](common-ways-to-use-intune.md)
 
->[!div class="step-by-step"]
-
->[&larr; **Rejestrowanie urządzeń**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)     [**Następne kroki** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)  
+Dokonaj konwersji na [płatną subskrypcję](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Intune"
+title: "Ustawianie lub zmienianie hasła | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,20 @@ ms.technology:
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 56f2cd4b92a383bc801cfb02ffde3d092f059d44
+ms.sourcegitcommit: 6a5bf59f3ef25df590625033fca4c114c3ace62f
+ms.openlocfilehash: 9a2f435220b9b2d4304f78e30cf152a4bb2af0c6
 
 
 ---
 
-# <a name="set-or-change-your-passcode"></a>Ustawianie lub zmienianie kodu dostępu
+# <a name="make-your-device-safer-with-the-right-password"></a>Zwiększenie bezpieczeństwa urządzenia za pomocą odpowiedniego hasła
 
-Jeśli urządzenie z systemem Windows nie jest zgodne z zasadami haseł administratora IT, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby hasło spełniało wymagania.
+Uzyskiwanie dostępu do zasobów firmowych, takich jak wiadomości e-mail i dokumenty, jest czymś, co ludzie muszą wykonywać codziennie za pomocą swoich urządzeń z systemem Windows. Organizacja chce mieć pewność, że urządzenie wykonuje to w bezpieczny sposób. Jednym ze sposobów zapewnienia, że urządzenie w bezpieczny sposób uzyskuje dostęp do tych zasobów, jest wymóg stosowania hasła.
 
-Administrator IT może ustawić więcej niż jedno wymaganie dotyczące hasła. Na przykład mogą one dotyczyć podania określonej liczby znaków lub kombinacji cyfr i liter w haśle. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach wyjaśniono jedynie, jak ustawić lub zmienić hasło. Nie objaśniono w nich każdej możliwej kombinacji wymagań.
+Jeśli urządzenie z systemem Windows nie jest zgodne z zasadami haseł administratora IT, wyświetlany jest komunikat ze zwięzłym opisem problemu i wyjaśnieniem, co należy zrobić, aby hasło spełniało wymagania.
 
-Jeśli masz problem z ustawieniem hasła spełniającego wszystkie wymagania dotyczące haseł, skontaktuj się z administratorem IT w celu uzyskania pomocy.
+> [!Note]
+> Administrator IT może ustawić więcej niż jedno wymaganie dotyczące hasła. Na przykład mogą one dotyczyć podania określonej liczby znaków lub kombinacji cyfr i liter w haśle. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach wyjaśniono jedynie, jak ustawić lub zmienić hasło. Nie objaśniono w nich każdej możliwej kombinacji wymagań.
 
 ## <a name="to-change-your-password-on-windows-phone-81"></a>Aby zmienić hasło w systemie Windows Phone 8.1
 
@@ -46,6 +47,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

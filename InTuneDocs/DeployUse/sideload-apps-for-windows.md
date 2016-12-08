@@ -1,19 +1,18 @@
----
-title: "Ładowanie bezpośrednie aplikacji dla systemów Windows i Windows Phone | Microsoft Intune"
-description: "Dowiedz się, jak podpisywać aplikacje biznesowe, aby umożliwić ich wdrażanie za pomocą usługi Intune."
-keywords: 
-author: robstackmsft
-manager: angrobe
-ms.date: 11/16/2016
-ms.topic: article
-ms.prod: 
-ms.service: 
-ms.technology: 
-ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
-translationtype: Human Translation
-ms.sourcegitcommit: 6fcdacc4746e780dcd9a988a46a4153929516449
-ms.openlocfilehash: 5debf013e4ff6c9f72eb59e31f256e00fd6f9540
+--
+# <a name="required-metadata"></a>wymagane metadane
 
+title: Ładowanie bezpośrednie aplikacji dla systemu Windows i Windows Phone | Microsoft Intune description: Sposób podpisywania aplikacji biznesowych umożliwiający wdrożenie ich za pomocą usługi Intune.
+keywords: author: robstackmsft manager: angrobe ms.date: 11/28/2016 ms.topic: article ms.prod: ms.service: ms.technology: ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
+
+# <a name="optional-metadata"></a>opcjonalne metadane
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>audience:
+#<a name="msdevlang"></a>ms.devlang:
+#<a name="msreviewer"></a>ms.reviewer: 
+#<a name="mssuite-ems"></a>ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
@@ -39,12 +38,12 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 4.  **Zweryfikuj zaimportowane certyfikaty**<br>
     Aby zweryfikować, że certyfikaty zostały zaimportowane prawidłowo, przejdź do przystawki **Certyfikaty**, kliknij prawym przyciskiem myszy pozycję **Certyfikaty** i wybierz polecenie **Znajdź certyfikaty**. W polu **Zawiera** wprowadź „Symantec” i kliknij przycisk **Znajdź teraz**. Zaimportowane certyfikaty powinny być wyświetlane w wynikach.
 
-    ![Znajdź certyfikat firmy Symantec](../media/wit.gif)
+    ![Znajdź certyfikat firmy Symantec](/media/wit.gif)
 
 5. **Wyeksportuj certyfikat podpisywania**<br>
     Po sprawdzeniu, czy certyfikaty znajdują się na liście, możesz wyeksportować plik PFX w celu podpisania portalu firmy. Wybierz certyfikat firmy Symantec, dla którego w kolumnie **Zamierzony cel** znajduje się wartość „podpisywanie kodu”. Kliknij certyfikat podpisywania kodu prawym przyciskiem myszy i wybierz polecenie **Eksportuj**.
 
-    ![Wyeksportuj certyfikat podpisywania](../media/wit-walk-cert2.gif)
+    ![Wyeksportuj certyfikat podpisywania](/media/wit-walk-cert2.gif)
 
     W **Kreatorze eksportu certyfikatów**wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
 
@@ -72,7 +71,7 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w 
 
     -   WinPhoneCompanyPortal.ps1 — skrypt programu PowerShell służący do podpisywania pliku aplikacji Portal firmy na potrzeby wdrożenia go na urządzeniach z systemem Windows Phone 8.1
 
-    Możesz również pobrać aplikację Portal firmy systemu dla Windows Phone 8.1 (pakiet licencjonowany w trybie offline) ze [Sklepu Windows dla firm](http://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Wybrane elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1.
+    Możesz również pobrać aplikację Portal firmy systemu Windows Phone 8.1 (pakiet licencjonowany w trybie offline) lub Portal firmy systemu Windows 10 ze [Sklepu Windows dla firm](http://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1. Aby uzyskać szczegółowe informacje dotyczące wykonania tej czynności za pomocą usługi Intune, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm](manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md).
 
 2.  **Pobierz zestaw Windows Phone SDK** Pobierz zestaw Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) i zainstaluj go na komputerze. Zestaw SDK jest potrzebny do generowania tokenu rejestracji aplikacji.
 
@@ -136,12 +135,11 @@ Okresowo należy odnawiać certyfikat firmy Symantec służący do wdrażania ap
 
 3.  Przekaż nowo podpisaną aplikację Portal firmy. Konieczny jest nowo podpisany plik SSP.xap oraz nowy plik .PFX otrzymany od firmy Symantec lub token rejestracji aplikacji utworzony za pomocą tego nowego pliku .PFX.
 
-4.  Po zakończeniu przekazywania usuń starą wersję aplikacji Portal firmy w obszarze roboczym **Oprogramowanie**  .
+4.  Po zakończeniu przekazywania usuń starą wersję aplikacji Portal firmy w obszarze roboczym **Oprogramowanie**.
 
 5.  Podpisz wszystkie nowe i zaktualizowane aplikacje biznesowe przedsiębiorstwa przy użyciu nowego certyfikatu. Istniejące aplikacje nie muszą być ponownie podpisane i wdrożone.
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 

@@ -14,8 +14,8 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376c9bce811ffd986242678929469f3e28bfad4c
-ms.openlocfilehash: e145baf0f7366f331e8d1df994a8fa40ec693227
+ms.sourcegitcommit: e455615c7c6489e9bc90b0c0c95b233aceea1739
+ms.openlocfilehash: 977716dd821bf9c487db199b57130c432b008a12
 
 
 ---
@@ -30,9 +30,17 @@ Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będ�
 
 Narzędzie opakowujące aplikacje **nie** obsługuje aplikacji w sklepie Apple App Store ani w sklepie Google Play. Ponadto nie obsługuje niektórych funkcji wymagających integracji deweloperskiej (zobacz poniższą tabelę zawierającą porównanie funkcji).
 
-Jeśli aplikacja została już napisana lub jeśli kod źródłowy jest niedostępny, należy użyć narzędzia opakowującego aplikacje, a nie zestawu SDK.
 
 Aby uzyskać więcej informacji dotyczących narzędzia opakowującego aplikacje do zarządzania aplikacjami mobilnymi na urządzeniach, które nie są zarejestrowane w usłudze Intune, zobacz temat [Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach w usłudze Microsoft Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
+
+### <a name="reasons-to-use-the-app-wrapping-tool"></a>Powody korzystania z narzędzia opakowującego aplikacje:
+* Aplikacja nie ma wbudowanych funkcji ochrony danych.
+* Aplikacja jest prosta.
+* Aplikacja jest wdrażana wewnętrznie.
+* Nie masz dostępu do kodu źródłowego aplikacji.
+* Aplikacja nie została utworzona przez Ciebie.
+* Aplikacja ma minimalne środowisko uwierzytelniania użytkownika.
+
 
 ### <a name="supported-app-development-platforms"></a>Obsługiwane platformy tworzenia aplikacji
 
@@ -46,12 +54,20 @@ Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikac
 
 Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](/intune/develop/intune-app-sdk). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](/intune/develop/intune-app-sdk-get-started).
 
+### <a name="reasons-to-use-the-sdk"></a>Powody korzystania z zestawu SDK
+* Aplikacja nie ma wbudowanych funkcji ochrony danych.
+* Aplikacja jest złożona i zawiera wiele środowisk.
+* Aplikacja jest wdrażana do publicznego magazynu aplikacji, takiego jak Google Play lub App Store firmy Apple.
+* Jesteś twórcą aplikacji i umiesz korzystać z zestawu SDK.
+* Aplikacja jest zintegrowana z innymi zestawami SDK.
+* Aplikacja jest często aktualizowana.
+
 ### <a name="supported-app-development-platforms"></a>Obsługiwane platformy tworzenia aplikacji
 
 |**Zestaw SDK aplikacji usługi Intune** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Tak — użyj składnika Xamarin zestawu SDK aplikacji usługi Intune.|Tak — użyj wtyczki Cordova zestawu SDK aplikacji usługi Intune.|
-|**Android**| Tak — użyj składnika Xamarin zestawu SDK aplikacji usługi Intune.|Tak — użyj wtyczki Cordova zestawu SDK aplikacji usługi Intune.|
+|**iOS**|Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-xamarin).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-cordova).|
+|**Android**| Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-xamarin).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-cordova).|
 
 ## <a name="feature-comparison"></a>Porównanie funkcji
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.
@@ -69,7 +85,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Wymagaj prostego numeru PIN w celu udzielenia dostępu|X|X|
 |Zastąp numer PIN wbudowanej aplikacji numerem PIN usługi Intune|X||
 |Określ liczbę prób przed zresetowaniem numeru PIN|X|X|
-|Wymagaj odcisku palca zamiast numeru PIN (tylko system iOS)<br></br>**Uwaga:** dostępne tylko w środowiskach obsługujących wyłącznie zarządzanie aplikacjami mobilnymi.|X||
+|Zezwalaj na odcisk palca zamiast numeru PIN |X|X|
 |Wymagaj poświadczeń firmowych w celu udzielenia dostępu|X|X|
 |Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root|X|X|
 |Szyfruj dane aplikacji|X|X|
@@ -81,6 +97,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Nie zezwalaj na używanie polecenia „Zapisz jako” |X||
 |Obsługa wielu tożsamości|X||
 |Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
+|Możliwość dostosowywania stylów |X|||
 ### <a name="see-also"></a>Zobacz także
 
 [Narzędzie opakowujące aplikacje systemu Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)</br>
@@ -89,6 +106,6 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 

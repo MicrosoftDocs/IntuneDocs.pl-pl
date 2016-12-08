@@ -1,33 +1,32 @@
 ---
-title: "Następne kroki po zakończeniu okresu ewaluacyjnego usługi Intune | Microsoft Intune"
-description: "Co należy wiedzieć o subskrypcjach i licencjonowaniu po skonfigurowaniu bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+title: "Konwersja na płatną subskrypcję | Microsoft Intune"
+description: "Informacje o subskrypcjach i licencjonowaniu przydatne po skonfigurowaniu bezpłatnej 30-dniowej wersji ewaluacyjnej usługi Intune."
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
-ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
-ms.openlocfilehash: ea0e43d93a3e388d55329142292595a8b3b3dbd2
+ms.sourcegitcommit: b2e666c0a448d2b851f44ffa896db193248bb056
+ms.openlocfilehash: a2b037e0c066422d53d71ffd401deb3e48a2ba7f
 
 
 ---
 
-# <a name="next-steps-after-your-intune-evaluation-is-completed"></a>Następne kroki po zakończeniu okresu ewaluacyjnego usługi Intune
+# <a name="ways-to-subscribe-to-microsoft-intune"></a>Sposoby subskrybowania usługi Microsoft Intune
 W przypadku zakupu co najmniej 150 licencji na usługę Microsoft Intune w uprawniającym planie można skorzystać z asysty centrum rozwiązania FastTrack — usługi współpracy ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Zobacz [Asysta centrum rozwiązania FastTrack dla pakietu Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
 
 Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w subskrypcję płatną na następujące sposoby:
 
 -   **Subskrypcja usługi Intune** — licencjonowana na poszczególnych użytkowników. Aby uzyskać więcej informacji, zobacz [Jak kupić usługę Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx). Po zakończeniu zakupu wykonaj kroki opisane w temacie [Rozpoczynanie pracy z subskrypcją płatną usługi Microsoft Intune](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) i przejrzyj dodatkowe kroki konfiguracji, gdy rozpoczniesz pracę z usługą Intune.
 
--   **Pakiet Enterprise Mobility Suite** — udostępnia usługi Intune, Azure Active Directory Premium i Azure RMS. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub zobacz [informacje na temat pakietu Enterprise Mobility Suite](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx) lub [ceny dla pakietu Enterprise Mobility Suite](http://www.microsoft.com/en-us/server-cloud/products/enterprise-mobility-suite/Purchasing.aspx).
+-   Pakiet **Enterprise Mobility + Security** — udostępnia usługi Intune, Azure Active Directory Premium i Azure RMS. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub przeczytaj o [możliwościach](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx) i [cenach](http://www.microsoft.com/en-us/server-cloud/products/enterprise-mobility-suite/Purchasing.aspx) pakietu EMS.
 
 -   **Umowa Enterprise Agreement (EA)** (&gt;ponad 250 użytkowników) — najlepszy program licencjonowania dla organizacji mających ponad 250 użytkowników. Umowa EA zapewnia elastyczność wyboru spośród oferty oprogramowania lokalnego i usług online, co pozwala na najlepsze dopasowanie rozwiązania do potrzeb użytkowników, oraz ułatwia optymalizację wydatków na technologię. Skontaktuj się z menedżerem ds. klientów firmy Microsoft lub lokalnym sprzedawcą, aby uzyskać więcej szczegółowych informacji, lub odwiedź [witrynę licencjonowania zbiorowego dla przedsiębiorstw](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
 
@@ -35,6 +34,6 @@ Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w s
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 

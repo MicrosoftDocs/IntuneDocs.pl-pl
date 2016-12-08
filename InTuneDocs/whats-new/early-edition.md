@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 11/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f287a0ad082fa20a2e84abbf8f5585117aae6f57
-ms.openlocfilehash: e604b8809bd444d9069d449a6c691a8444296623
+ms.sourcegitcommit: 6dd584397451d38be86fa0780efff435ffb9b2af
+ms.openlocfilehash: d70ebf87bc930f853741ddc0d572d2174c636dac
 
 
 ---
@@ -51,6 +51,13 @@ Teraz można wymusić użycie usługi Multi-Factor Authentication (MFA) przez wy
 ### <a name="conditional-access-for-mam-with-sharepoint-online---vso-679339--"></a>Dostęp warunkowy do zarządzania aplikacjami mobilnymi przy użyciu usługi SharePoint Online <!--VSO 679339-->
 Można zablokować dostęp aplikacji nieobsługiwanych przez zasady zarządzania aplikacjami mobilnymi usługi Intune do usługi SharePoint Online.  Pracę z funkcją zarządzania aplikacjami mobilnymi w usłudze Intune można rozpocząć w witrynie Azure Portal. Wyszukaj sekcję __Dostęp warunkowy__ zawierającą opcję dla usługi SharePoint Online w bloku __Ustawienia__. Ta funkcja zostanie udostępniona oddzielnie od pozostałej części wersji usługi.
 
+### <a name="ability-to-restrict-intune-mobile-device-enrollment"></a>Możliwość ograniczenia rejestracji urządzeń przenośnych Intune
+Usługa Intune dodaje nowe ograniczenia rejestracji, które pozwalają kontrolować, które platformy urządzeń przenośnych mogą być rejestrowane. Usługa Intune dzieli platformy urządzeń przenośnych na iOS, macOS, Android, Windows i Windows Mobile. 
+* Platformy macOS i Windows 8.1 lub nowsze mogą mieć ograniczoną możliwość rejestrowania jako platformy urządzeń przenośnych. 
+* Ograniczanie rejestracji urządzeń przenośnych nie ogranicza rejestracji agenta komputerowego. 
+* Tylko platforma iOS ma dodatkową opcję blokowania rejestracji urządzeń, które są własnością osobistą. Intune oznacza wszystkie nowe urządzenia jako osobiste, chyba że administrator IT oznaczy je jako własność firmową, zgodnie z opisem [w tym artykule](https://docs.microsoft.com/en-us/intune/deploy-use/manage-corporate-owned-devices).
+
+
 ## <a name="notices"></a>Uwagi
 
 ### <a name="multi-factor-authentication-on-enrollment-moving-to-the-azure-portal---vso-750545--"></a>Użycie usługi Multi-Factor Authentication podczas rejestracji przeniesione do witryny Azure Portal <!--VSO 750545-->
@@ -82,6 +89,6 @@ Aby dowiedzieć się więcej o najnowszych zmianach, zobacz [Co nowego w usłudz
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

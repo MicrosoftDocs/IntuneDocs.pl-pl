@@ -14,16 +14,15 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: fccdf689868dbb181a171328fb7a8d186b9cb309
+ms.sourcegitcommit: 250256c9f8523b44924ff42ffda8d9762c6896c1
+ms.openlocfilehash: 6d254385c55043ddb3ae0e729cc42a9f88f46428
 
 
 ---
 
 # <a name="choose-how-to-manage-devices"></a>Wybieranie metody zarządzania urządzeniami
 
-Aby móc korzystać z wielu funkcji oferowanych przez usługę Intune, takich jak wdrażanie aplikacji, i kontrolować ustawienia urządzeń, urządzenia muszą być *zarządzane*. Sposób zarządzania urządzeniami zależy od możliwości usługi Intune, których chcesz używać.
-Ten temat pomoże Ci wybrać metodę, która odpowiada Twoim potrzebom.
+Aby móc korzystać z wielu funkcji oferowanych przez usługę Intune, takich jak wdrażanie aplikacji i kontrolowanie ustawień urządzeń, urządzenia muszą być *zarządzane*. Sposób zarządzania urządzeniami zależy od możliwości usługi Intune, których chcesz używać. Ten temat ułatwia w wybór metody odpowiadającej potrzebom.
 
 Aby zarządzać urządzeniami z systemem iOS, Mac OS X, Android lub Windows Phone, musisz je *zarejestrować*.
 
@@ -39,14 +38,14 @@ Ten przepływ decyzyjny umożliwia podjęcie decyzji o sposobie zarządzania urz
 
 Rejestracja komputerów z systemem Windows pozwala uzyskać większość funkcji. Jednak użycie oprogramowania klienckiego usługi Intune może być bardziej odpowiednie, jeśli:
 
-- Na komputerze jest uruchomiony system Windows 7
-- Chcesz zarządzać aktualizacjami oprogramowania systemu Windows i użyciem licencji
-- Chcesz zarządzać złośliwym oprogramowaniem za pomocą programu Endpoint Protection i Zapory systemu Windows
-- Chcesz zapewniać pomoc zdalną użytkownikom za pomocą oprogramowania TeamViewer
+- Komputer ma system operacyjny Windows 7.
+- Chcesz zarządzać aktualizacjami oprogramowania systemu Windows i użyciem licencji.
+- Chcesz zarządzać ochroną przed złośliwym oprogramowaniem za pomocą programu Endpoint Protection i Zapory systemu Windows.
+- Chcesz zapewniać pomoc zdalną użytkownikom przy użyciu oprogramowania TeamViewer.
 
 
 Aby uzyskać szczegółową listę możliwości zarządzania oferowanych przez każdą metodę, zobacz [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md) i [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md).
-Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz [Obsługiwane urządzenia przenośne i komputery](/intune/get-started/supported-mobile-devices-and-computers).
+Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](/intune/get-started/supported-mobile-devices-and-computers).
 
 
 ## <a name="exchange-activesync-management"></a>Zarządzanie przy użyciu programu Exchange ActiveSync
@@ -58,13 +57,10 @@ Mimo że jest to trzecia opcja zarządzania urządzeniami, zapewnia ona ogranicz
 
 - [Wybieranie metody rejestrowania urządzeń przenośnych](/intune/get-started/choose-how-to-enroll-devices1)
 - [Zarządzanie komputerami z systemem Windows przy użyciu komputerowego oprogramowania klienckiego usługi Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)
-
-
-
 - [Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

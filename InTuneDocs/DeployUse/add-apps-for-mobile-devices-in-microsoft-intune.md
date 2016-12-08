@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 239a4b932eed61fc0b2b870892730330565eac93
+ms.sourcegitcommit: 5165352ea0e9780f70e5aa9b383ac1fe6a2df371
+ms.openlocfilehash: 00facaf07d8cb5ad7f1827eee9b0efb3547cec95
 
 
 ---
 
-# Dodawanie aplikacji dla zarejestrowanych urządzeń do usługi Intune
+# <a name="add-apps-for-enrolled-devices-to-intune"></a>Dodawanie aplikacji dla zarejestrowanych urządzeń do usługi Intune
 
 Aby można było wdrożyć aplikację i zarządzać nią, należy ją najpierw dodać do usługi Microsoft Intune. W tym temacie przedstawiono sposób dodawania aplikacji dla zarejestrowanych urządzeń.
 
@@ -28,7 +28,7 @@ Aby można było wdrożyć aplikację i zarządzać nią, należy ją najpierw d
 > [!IMPORTANT]
 > Informacje zawarte w tym temacie ułatwiają dodawanie aplikacji, które mają zostać wdrożone na zarejestrowanych urządzeniach i zarejestrowanych komputerach z systemem Windows. Aby dodać aplikacje dla komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune, zobacz [Dodawanie aplikacji dla komputerów z systemem Windows w usłudze Microsoft Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-## Dodawanie aplikacji
+## <a name="add-the-app"></a>Dodawanie aplikacji
 Narzędzie Wydawca oprogramowania usługi Intune służy do konfigurowania właściwości aplikacji i (jeśli to możliwe) przekazywania aplikacji do magazynu w chmurze. Użyj następującej procedury:
 
 1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune.
@@ -37,7 +37,7 @@ Narzędzie Wydawca oprogramowania usługi Intune służy do konfigurowania wła�
     > Przed uruchomieniem narzędzia może być konieczne wprowadzenie nazwy użytkownika i hasła usługi Intune.
 
 2.  Na stronie **Instalator oprogramowania** Wydawcy wybierz jedną z następujących opcji dla pozycji **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom**:
-    - **Instalator oprogramowania** — dla aplikacji z rozszerzeniem **msi** lub **exe**:
+    - **Instalator oprogramowania** — dla aplikacji z rozszerzeniem **msi**:
         - **Wybierz typ pliku instalatora oprogramowania**. To ustawienie określa typ oprogramowania, które chcesz wdrożyć. Jeśli na przykład chcesz zainstalować aplikację systemu iOS, wybierz pozycję **Pakiet aplikacji dla systemu iOS (plik &#42;.ipa)**.
         - **Określ lokalizację plików instalacyjnych oprogramowania**. Wprowadź lokalizację plików instalacyjnych lub wybierz pozycję **Przeglądaj**, aby wybrać lokalizację z listy.
         - **Dołącz dodatkowe pliki i podfoldery z tego samego folderu**. Ta opcja dotyczy tylko typu pliku **Instalator Windows**.<br>Niektóre programy korzystające z Instalatora Windows wymagają plików pomocniczych, które zwykle znajdują się w folderze plików instalacyjnych. Wybierz tę opcję, jeśli chcesz również wdrożyć te pliki.<br>W przypadku tego typu instalacji jest używana część miejsca do magazynowania w chmurze.
@@ -89,17 +89,17 @@ Narzędzie Wydawca oprogramowania usługi Intune służy do konfigurowania wła�
 
 Aplikacja zostanie wyświetlona w węźle **Aplikacje** w obszarze roboczym **Aplikacje**.
 
-## Przykład — wdrażanie aplikacji MSI na urządzeniach z systemem Windows 10
+## <a name="example---deploying-msi-applications-to-windows-10-devices"></a>Przykład — wdrażanie aplikacji MSI na urządzeniach z systemem Windows 10
 W tym czterominutowym filmie wideo objaśniono sposób wdrażania aplikacji instalatora systemu Windows (aplikacji MSI) na zarejestrowanych urządzeniach z systemem Windows 10.<br><br>
 
 <iframe src="https://channel9.msdn.com/Series/How-to-Control-the-Uncontrolled/6--How-to-Deploy-MSI-Applications-to-Windows-10-Using-Intune-and-Mobile-Device-Management-MDM/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Po utworzeniu aplikacji następnym krokiem jest jej wdrożenie. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

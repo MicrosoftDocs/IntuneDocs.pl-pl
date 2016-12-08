@@ -14,13 +14,13 @@ ms.assetid: aeeccfa4-0f14-447e-a3df-c8435c8a4bb2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 149f3a3310907d131affeaad4bd372aa60be9206
-ms.openlocfilehash: 80541567c535cfeb7fca3eda3c9143f4b11d7abb
+ms.sourcegitcommit: a9402c6197294c152e10ebc866c1ac4068256745
+ms.openlocfilehash: 32e19e4d6b859ea777724dd563dc163072a327b6
 
 
 ---
 
-# <a name="supported-mobile-devices-and-computers"></a>Obsługiwane urządzenia przenośne i komputery
+# <a name="supported-devices-and-browsers-for-intune"></a>Obsługiwane urządzenia i przeglądarki dla usługi Intune
 
 Możesz zarejestrować następujące typy urządzeń, a następnie zarządzać nimi:
 
@@ -44,7 +44,7 @@ Różne zadania administracyjne wymagają użycia jednej z następujących witry
 
 |Funkcja usługi Intune |Obsługiwane przeglądarki|
 |---------|---------|
-|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox z włączonym dodatkiem Silverlight<br /><br />**Uwaga:** przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane w przypadku konsoli administracyjnej.                      
+|Konsola administracyjna usługi Intune     |  Internet Explorer 10 lub nowsza wersja<br /><br />Google Chrome (wersje poprzedzające wersję 42)<br /><br />Mozilla Firefox z włączonym dodatkiem Silverlight<br />**Uwaga:** w marcu 2017 roku Mozilla zakończy obsługę dodatku Silverlight. [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=836872).<br /><br />Przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane w przypadku konsoli administracyjnej.                      
 |Portal administracyjny usługi Office 365     |Wszystkie przeglądarki, w tym przeglądarki dla urządzeń przenośnych i zarządzane przeglądarki  |
 |Witryna sieci Web Portal firmy     |**Urządzenia przenośne:** należy używać domyślnej przeglądarki sieci Web dla każdej z obsługiwanych platform   <br /><br />**Komputery z systemem Windows:** Internet Explorer 10 lub nowsza wersja albo Microsoft Edge<br /><br />**System Mac OS X 10.9 lub nowszy:** Apple Safari    |
 
@@ -81,6 +81,6 @@ Do tego portalu mogą logować się tylko użytkownicy z uprawnieniami administr
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

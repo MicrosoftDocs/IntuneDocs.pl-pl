@@ -1,13 +1,11 @@
 # Poznawanie i eksplorowanie
 ## [Wprowadzenie do usługi Intune](introduction-to-microsoft-intune.md)
-## [Przewodnik dotyczący oceny usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
-### [Rejestrowanie się lub logowanie na potrzeby uzyskania dostępu do 30-dniowej wersji ewaluacyjnej](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
-### [Dodawanie użytkowników](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
+## [Utwórz konto, aby skorzystać z bezpłatnej wersji próbnej](sign-up-for-30-day-trial-microsoft-intune.md)
+## [Wypróbuj zarządzanie urządzeniami przenośnymi w usłudze Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 ### [Tworzenie grup w celu zorganizowania użytkowników i urządzeń](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
 ### [Tworzenie zasad i publikowanie aplikacji](get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
-### [Rejestrowanie urządzeń przenośnych i instalowanie aplikacji](get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)
 ### [Inne opcje i dodatki](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
-### [Następne kroki](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
+### [Dokonaj konwersji na płatną subskrypcję](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 ## [Typowe scenariusze](common-ways-to-use-intune.md)
 ## [Słownik](intune-glossary.md)
 
@@ -19,6 +17,6 @@
 # [Rozwiązywanie problemów](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

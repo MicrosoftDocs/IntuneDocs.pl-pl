@@ -14,23 +14,23 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
-ms.openlocfilehash: 0fbc8fc23ce65987e4694bce0748362d8ce10153
+ms.sourcegitcommit: adcb3a4824580ab5f60ae3343d2e82fb6ab0a44c
+ms.openlocfilehash: 64f857307046ea061e702d0b383968b322b89c33
 
 
 ---
 
 
-# Tworzenie zasad i publikowanie aplikacji dla użytkowników wersji ewaluacyjnej
+# <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Tworzenie zasad i publikowanie aplikacji dla użytkowników wersji ewaluacyjnej
 Zasady usługi Intune udostępniają ustawienia, które ułatwiają sterowanie ustawieniami zabezpieczeń na urządzeniach przenośnych, obsługę ustawień Zapory systemu Windows i programu Endpoint Protection dla komputerów oraz wdrażanie aplikacji. Jeśli planujesz używać usługi Intune z urządzeniami skonfigurowanymi do użycia w środowisku produkcyjnym po okresie ewaluacyjnym, absolutnie niezbędne jest postępowanie zgodnie z instrukcjami podanymi w tematach [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) i [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
-Usługa Intune zapewnia dwa typy instalacji aplikacji. Pierwsza to **instalacja wymagana**, w przypadku której aplikacja jest wdrażana automatycznie na zarządzanych komputerach. Druga to **instalacja dostępna**, w przypadku której aplikacja (lub link do niej) jest wdrażana w Portalu firmy usługi Intune, dzięki czemu użytkownicy mogą wybrać, czy zainstalować aplikację na swoich komputerach lub urządzeniach przenośnych.
+Usługa Intune zapewnia dwa typy instalacji aplikacji. Pierwsza to **instalacja wymagana**, w przypadku której aplikacja jest wdrażana automatycznie na zarządzanych urządzeniach. Druga to **instalacja dostępna**, w przypadku której aplikacja (lub link do niej) jest wdrażana w Portalu firmy usługi Intune, dzięki czemu użytkownicy mogą wybrać, czy zainstalować aplikację na swoich komputerach lub urządzeniach przenośnych.
 
 Przed użyciem usługi Intune do wdrożenia aplikacji upewnij się, że masz odpowiednie licencje do publikowania, rozpowszechniania i korzystania z aplikacji. Obszar roboczy **Licencje** umożliwia dodawanie informacji o umowach licencyjnych i zarządzanie umowami licencyjnymi dotyczącymi aplikacji oraz oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft, a także aplikacji lub oprogramowania firmy Microsoft i innych firm zakupionego w inny sposób. Następnie możesz utworzyć raporty licencji, które zawierają informacje na temat wykorzystania licencji w firmie i pozwalają określić działania związane z licencjami.
 
 Poniższe kroki obejmują określenie zasad konfiguracji urządzeń przenośnych oraz zasad zapory komputerów z systemem Windows, jak również skonfigurowanie aplikacji Skype jako instalacji dostępnej dla urządzeń przenośnych po ich rejestracji. Po dodaniu i wdrożeniu nowej zasady wszyscy użytkownicy i urządzenia należący do grupy, dla której określono zasadę, dziedziczą ustawienia jako zasadę podstawową. W każdym momencie możesz sprawdzić i zmienić szczegóły tych zasad w obszarze roboczym **Zasady** w konsoli administracyjnej.
 
-## Tworzenie i wdrażanie zasad konfiguracji urządzeń przenośnych
+## <a name="create-and-deploy-a-mobile-device-configuration-policy"></a>Tworzenie i wdrażanie zasad konfiguracji urządzeń przenośnych
 
 1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com/).
 
@@ -38,13 +38,13 @@ Poniższe kroki obejmują określenie zasad konfiguracji urządzeń przenośnych
 
 3.  Na liście **Zadania** na stronie **Przegląd zasad** wybierz pozycję **Dodaj zasady**.
 
-4.  Na liście zasad rozwiń platformę, dla której chcesz utworzyć zasady, wybierz pozycję **Konfiguracja ogólna**, wybierz pozycję **Utwórz zasady i przeprowadź ich wdrożenie z zalecanymi ustawieniami**, a następnie wybierz pozycję **Utwórz zasady**.
+4.  Na liście zasad rozwiń platformę, dla której chcesz utworzyć zasady, wybierz pozycję **Konfiguracja ogólna**, wybierz pozycję **Utwórz zasady niestandardowe i przeprowadź ich wdrożenie**, a następnie wybierz pozycję **Utwórz zasady**.
 
 5.  Po wyświetleniu monitu o treści **Wybierz grupy, do których te zasady mają zostać wdrożone** wybierz z listy pozycję **Moi użytkownicy próbni**, a następnie wybierz pozycje **Dodaj** &gt; **OK**.
 
 Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do grupy **Moi użytkownicy próbni** . Kliknij dwukrotnie zasadę, aby wyświetlić jej ustawienia.
 
-## Publikowanie aplikacji Skype dla urządzeń przenośnych
+## <a name="publish-the-skype-app-for-mobile-devices"></a>Publikowanie aplikacji Skype dla urządzeń przenośnych
 
 1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz ikonę **Aplikacje**, a następnie wybierz pozycje **Aplikacje** &gt; **Dodaj aplikację**. Jeśli zostanie wyświetlony monit, wprowadź swoje poświadczenia usługi Intune.
 
@@ -89,17 +89,19 @@ Twoje zasady pojawią się na liście zasad konfiguracji i zostaną wdrożone do
 
 11. Wybierz pozycję **Zakończ**.
 
-Aplikacja Skype jest teraz dostępna do instalacji na urządzeniach przenośnych z poziomu Portalu firmy, ale najpierw należy zainstalować oprogramowanie usługi Intune na komputerach i urządzeniach przenośnych.
+## <a name="install-the-skype-app"></a>Instalacja aplikacji Skype
+Otwórz Portal firmy na urządzeniu przenośnym, wybierz pozycję **Aplikacje**, a następnie zainstaluj aplikację Microsoft Skype.
 
-### Następne kroki
-Gratulacje! Krok 4 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* właśnie został ukończony.
+Ta czynność kończy przewodnik dotyczący zarządzania urządzeniami przenośnymi usługi Intune, ale możesz dowiedzieć się więcej o tej usłudze, korzystając z linków w sekcji Następne kroki.
+## <a name="next-steps"></a>Następne kroki
+Dowiedz się więcej o innych [możliwościach usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 
->[!div class="step-by-step"]
+Przeczytaj o [typowych sposobach korzystania z usługi Intune](common-ways-to-use-intune.md)
 
->[&larr; **Tworzenie grup**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)     [**Rejestrowanie urządzeń** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)  
+Dokonaj konwersji na [płatną subskrypcję](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

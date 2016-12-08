@@ -14,15 +14,15 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: 7fceadbfcca319dfd928ec6226de27f2189beee7
+ms.sourcegitcommit: dcca68485db7e2c206077ce457081fdbf5cccea4
+ms.openlocfilehash: 6963f14de4bf54ba37166e7e37cd8395a941db51
 
 
 ---
 
 
 # <a name="intune-quick-start-guide"></a>Przewodnik Szybki start dotyczący usługi Intune
-Ten przewodnik stanowi wprowadzenie do zarządzania urządzeniami przenośnymi oraz komputerami z systemem Windows w ramach płatnej subskrypcji usługi Microsoft Intune. Można wykonać kolejno poszczególne kroki lub pominąć kroki, które nie mają zastosowania do określonego środowiska lub potrzeb biznesowych. Jeśli chcesz wypróbować usługę Intune, zobacz [Przewodnik dotyczący oceny usługi Intune](/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).  
+Przewodnik ułatwia rozpoczęcie pracy z subskrypcją płatną usługi Microsoft Intune. Wykonaj te kroki, aby zarządzać urządzeniami przenośnymi i komputerami z systemem Windows oraz aplikacjami w swojej organizacji. Możesz wykonać kolejno poszczególne kroki lub pominąć kroki, które nie mają zastosowania do Twojego środowiska lub potrzeb biznesowych. Jeśli chcesz wypróbować usługę Intune, zobacz [Przewodnik dotyczący oceny usługi Intune](/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).  
 
 Jeśli obecnie używasz programu Microsoft System Center Configuration Manager do zarządzania komputerami i serwerami, możesz [rozszerzyć program Configuration Manager, aby zarządzał urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
@@ -33,16 +33,16 @@ Jeśli obecnie używasz programu Microsoft System Center Configuration Manager d
 
 | Kroki | Stan  |
 | ------------- |-------------|
-| 1  | [Wymagania wstępne](what-to-know-before-you-start-microsoft-intune.md) |
-| 2 |  [Logowanie się do usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)     |  
-| 3 | [Konfigurowanie niestandardowej nazwy domeny](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)  |
-| 4 | [Synchronizowanie usługi AD i dodawanie użytkowników](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)  |
-| 5 | [Zarządzanie licencjami usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-4.md) |
-| 6 | [Organizowanie użytkowników i urządzeń](start-with-a-paid-subscription-to-microsoft-intune-step-5.md) |
-| 7 | [Tworzenie zasad i publikowanie aplikacji](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) |
-| 8 | [Dostosowywanie aplikacji Portal firmy](start-with-a-paid-subscription-to-microsoft-intune-step-7.md) |
-| 9 | [Rejestrowanie urządzeń przenośnych i instalowanie aplikacji](start-with-a-paid-subscription-to-microsoft-intune-step-8.md) |
-|10 | [Następne kroki](post-configuration-tasks.md) |
+| 1  | [Wymagania wstępne](what-to-know-before-you-start-microsoft-intune.md) — czego potrzebujesz i co należy wiedzieć przed rozpoczęciem|
+| 2 |  [Zaloguj się do usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md) — zaloguj się do subskrypcji wersji próbnej lub utwórz nową subskrypcję, aby rozpocząć zarządzanie w swojej organizacji   |  
+| 3 | [Skonfiguruj niestandardową nazwę domeny](start-with-a-paid-subscription-to-microsoft-intune-step-2.md) — użyj nazwy domeny swojej firmy do zarządzania usługą Intune przez aktualizację swojej rejestracji DNS   |
+| 4 | [Zsynchronizuj usługę AD i dodaj użytkowników](start-with-a-paid-subscription-to-microsoft-intune-step-3.md) — połącz się z usługą Active Directory, aby zsynchronizować użytkowników lub dodać użytkowników do usługi Intune  |
+| 5 | [Zarządzaj licencjami usługi Intune](start-with-a-paid-subscription-to-microsoft-intune-step-4.md) —nadaj użytkownikom uprawnienia do korzystania z usługi Intune|
+| 6 | [Zorganizuj użytkowników i urządzenia](start-with-a-paid-subscription-to-microsoft-intune-step-5.md) — wykorzystaj grupy do organizowania wdrożenia zasad, aplikacji i zasobów |
+| 7 | [Utwórz zasady i opublikuj aplikację](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) —włącz ustawienia i aplikacje, które można wdrożyć dla użytkowników |
+| 8 | [Dostosuj Portal firmy](start-with-a-paid-subscription-to-microsoft-intune-step-7.md) — dostosuj aplikację Portal firmy wyświetlaną podczas pracy z usługą Intune  |
+| 9 | [Zarejestruj urządzenia przenośne i zainstaluj aplikację](start-with-a-paid-subscription-to-microsoft-intune-step-8.md) — włącz zarządzanie za pomocą usługi Intune urządzeniami z systemem iOS, Windows, Android i Mac |
+|10 | [Następne kroki](post-configuration-tasks.md) — dodatkowe konfiguracje i czynności, umożliwiające maksymalne wykorzystanie subskrypcji usługi Intune|
 
 
 >[!div class="step-by-step"]
@@ -50,6 +50,6 @@ Jeśli obecnie używasz programu Microsoft System Center Configuration Manager d
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

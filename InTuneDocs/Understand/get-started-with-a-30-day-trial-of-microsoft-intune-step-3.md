@@ -1,29 +1,28 @@
 ---
 title: "Tworzenie grup w celu zorganizowania użytkowników i urządzeń | Usługa Microsoft Intune"
-description: "Tworzenie grup urządzeń i użytkowników w przypadku rejestracji w celu korzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
+description: "Tworzenie grup urządzeń i grup użytkowników w przypadku rejestracji w celu korzystania z bezpłatnej 30-dniowej wersji ewaluacyjnej usługi Microsoft Intune."
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
-ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: cbf552fbcb7f740f3aa35d135882f81e137692c2
+ms.sourcegitcommit: 9dd9595a8e454b810f688c248175688c4ad17920
+ms.openlocfilehash: ab451a1213923ecd27dfc0b8ca353041e70435ed
 
 
 ---
 
-# Tworzenie grup w celu organizowania użytkowników i urządzeń subskrypcji ewaluacyjnej
+# <a name="create-groups-to-organize-evaluation-subscription-users-and-devices"></a>Tworzenie grup w celu organizowania użytkowników i urządzeń subskrypcji ewaluacyjnej
 Grupy w usłudze Intune zapewniają dużą elastyczność zarządzania urządzeniami i użytkownikami. Grupy można skonfigurować zgodnie z potrzebami organizacyjnymi (na przykład według lokalizacji geograficznej, działu lub charakterystyki sprzętu) i używać ich do różnych zadań administracyjnych w dowolnej skali, od ustawiania zasad dla zestawu użytkowników po wdrażanie aplikacji w grupach urządzeń.
 
-## Tworzenie grupy urządzeń
+## <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
 Użyj grup urządzeń do wdrażania aktualizacji i oprogramowania oraz konfigurowania ustawień agenta usługi Microsoft Intune i zasad ustawień zapory systemu Windows. Możesz na przykład skonfigurować grupę „Moje urządzenia próbne”, wykonując następujące kroki:
 
 1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) kliknij pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
@@ -38,7 +37,7 @@ Użyj grup urządzeń do wdrażania aktualizacji i oprogramowania oraz konfiguro
 
 Nowo utworzona grupa znajduje się na liście **Grupy** w obszarze roboczym **Grupy** w obszarze grupy nadrzędnej **Wszystkie urządzenia**. W tym miejscu możesz także edytować lub usunąć grupę.
 
-## Tworzenie grupy użytkowników
+## <a name="create-a-user-group"></a>Tworzenie grupy użytkowników
 Grupa użytkowników umożliwia wdrażanie zasad dotyczących oprogramowania i urządzeń. Możesz na przykład skonfigurować grupę „Moi użytkownicy próbni”, wykonując następujące kroki:
 
 1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) kliknij pozycje **Grupy** &gt; **Przegląd** &gt; **Utwórz grupę**.
@@ -57,15 +56,11 @@ Nowo utworzona grupa znajduje się na liście **Grupy** w obszarze roboczym **Gr
 
 Aby uzyskać więcej informacji na temat korzystania z grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/Intune/Deploy-Use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
-### Następne kroki
-Gratulacje! Krok 3 przewodnika *wersji ewaluacyjnej usługi Microsoft Intune* właśnie został ukończony.
-
->[!div class="step-by-step"]
-
->[&larr; **Dodawanie użytkowników**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)     [**Tworzenie zasad** &larr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)  
+## <a name="next-steps"></a>Następne kroki
+[Tworzenie zasad](get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)  
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
