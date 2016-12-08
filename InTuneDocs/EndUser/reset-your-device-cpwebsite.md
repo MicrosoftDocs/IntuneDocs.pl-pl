@@ -2,8 +2,8 @@
 title: "Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 05f54088f3b18d90368e1b408b7012d28021abfc
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: c5791e70c35446fb11971321b6b7a4178ebdfdb5
 
 
 ---
 
 
-# Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
+# <a name="reset-your-device-from-the-company-portal-website"></a>Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
+Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
 
 Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych.
 
@@ -46,6 +46,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

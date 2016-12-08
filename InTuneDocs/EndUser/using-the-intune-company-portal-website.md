@@ -1,11 +1,11 @@
 ---
 title: "Korzystanie z witryny Portal firmy w usłudze Intune | Microsoft Intune"
-description: "Opis witryny internetowej portalu firmy oraz linki do czynności dla zadań, które można wykonać w witrynie sieci Web"
+description: "Opis witryny sieci Web portalu firmy oraz linki do czynności dla zadań, które można wykonać w witrynie sieci Web"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d69ae68d704a7a4178c43cb1239b27d132221f5a
-ms.openlocfilehash: 1078832ee0296674ea96ee2827795e86148031d4
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: aaecaf82bc4635beefa84fed5702476c9e66a90e
 
 
 ---
 
-# Korzystanie z witryny Portal firmy usługi Intune
-[Witryna sieci Web Portal firmy](http://portal.manage.microsoft.com) to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune.
+# <a name="using-the-intune-company-portal-website"></a>Korzystanie z witryny Portal firmy usługi Intune
+[Witryna sieci Web Portal firmy](http://portal.manage.microsoft.com) to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune.
 
-Oferuje ona następujące możliwości:
+Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 
 -   [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)
 
@@ -37,20 +37,20 @@ Oferuje ona następujące możliwości:
 
 -   [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane przez administratora IT)
+-   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane)
 
 -   Wyświetlanie szczegółowych informacji o urządzeniu, w tym informacji o zgodności z zasadami obowiązującymi w firmie lub szkole
 
 -   Zdalne zarządzanie komputerem (dotyczy tylko komputerów)
 
-W **witrynie Portalu firmy** można wykonać większość zadań, które można wykonać za pomocą **aplikacji Portal firmy** instalowanej na urządzeniu. Aby dowiedzieć się więcej na temat aplikacji Portal firmy, sposobu rejestrowania urządzenia w usłudze Intune i innych zagadnień, naciśnij link dotyczący odpowiedniego typu urządzenia:
+W **witrynie sieci Web Portalu firmy** można wykonać większość zadań, które można wykonać za pomocą **aplikacji Portal firmy** instalowanej na urządzeniu. Zobacz poniższe strony, aby uzyskać linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach:
 
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
-- [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
