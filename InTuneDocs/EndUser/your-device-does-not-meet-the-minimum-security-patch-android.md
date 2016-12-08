@@ -2,7 +2,7 @@
 title: "Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 09/25/2016
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 8569d99d7f79b0a27f31aec33f364d30499c6520
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 257eff56731f991b80443d996485286c1ce63b3b
 
 
 ---
 
-# Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń
+# <a name="your-device-does-not-meet-the-minimum-security-patch"></a>Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń
 
 W przypadku wyświetlenia komunikatu „Minimalny poziom poprawki zabezpieczeń systemu Android nie jest skonfigurowany” należy zainstalować minimalną poprawkę zabezpieczeń lub nowszą. Administrator IT wymaga tej instalacji, aby chronić dane firmowe na urządzeniu z systemem Android.
 
@@ -41,6 +41,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
