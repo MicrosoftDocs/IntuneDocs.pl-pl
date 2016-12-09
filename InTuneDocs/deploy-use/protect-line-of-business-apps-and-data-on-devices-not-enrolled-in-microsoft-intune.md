@@ -2,8 +2,8 @@
 title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zarejestrowane | Microsoft Intune"
 description: "W tym temacie opisano, jak można przygotować swoje niestandardowe aplikacje biznesowe, aby mogły stosować zasady zarządzania aplikacjami mobilnymi, co może pomóc w uniknięciu utraty danych."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee03e5716bd5abc5f018c5a9006c4ae848f873b3
-ms.openlocfilehash: 3bce8989944985c36a3d233fbb05d2f3f135b7e7
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: bc1efb1e0c62e6bd52658690db95901c70403d4d
 
 
 ---
@@ -29,9 +29,9 @@ W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania a
 
 ##  <a name="step-1-prepare-the-app"></a>Krok 1. Przygotowywanie aplikacji
 
-Przed zastosowaniem zasady zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool) i [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool) lub użyć [zestawu SDK aplikacji Intune](/../develop/intune-app-sdk) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
+Przed zastosowaniem zasady zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) lub użyć [zestawu SDK aplikacji Intune](../develop/intune-app-sdk.md) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
 
-Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego aplikacje lub zestawu SDK aplikacji usługi Intune, zobacz temat [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
+Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego aplikacje lub zestawu SDK aplikacji usługi Intune, zobacz temat [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
 
 ## <a name="step-2-add-the-app"></a>Krok 2. Dodawanie aplikacji
 
@@ -81,6 +81,6 @@ Aplikację biznesową można usunąć z listy aplikacji. Spowoduje to usunięcie
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

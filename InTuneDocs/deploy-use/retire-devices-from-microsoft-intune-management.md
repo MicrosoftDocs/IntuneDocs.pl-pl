@@ -14,8 +14,8 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: be3a30535fc9cebad5d4a167b75c484ddafd7f85
+ms.sourcegitcommit: 8f3a8e42688bf830e3050cf387ccb15a1af811fa
+ms.openlocfilehash: e7f861adc757b4037c5d0ef97c361a57948386bf
 
 
 ---
@@ -55,7 +55,7 @@ W przypadku urządzeń wymagających zmiany przeznaczenia można także wykonać
 8.  Wybierz odpowiednie urządzenia, a następnie wybierz polecenie **Usuń urządzenie**. Urządzenia zostaną usunięte przy następnym synchronizowaniu ich z usługą Active Directory. Zwykle nastąpi to w ciągu 4 godzin. Po wykonaniu synchronizacji urządzenie zostanie usunięte z zarządzania. Spowoduje to usunięcie urządzenia z limitu urządzeń dla tego użytkownika.
 
 ## <a name="retire-managed-computers"></a>Wycofywanie zarządzanych komputerów
-Komputery zarządzane przez oprogramowanie klienckie usługi Intune można usunąć z zarządzania w konsoli administracyjnej usługi Intune. Spowoduje to również odinstalowanie oprogramowania klienckiego i usunięcie zasad usługi Intune z komputera. Zobacz informacje na temat [wycofywania komputerów zarządzanych przy użyciu oprogramowania klienckiego usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+Komputery zarządzane przez oprogramowanie klienckie usługi Intune można usunąć z zarządzania w konsoli administracyjnej usługi Intune. Spowoduje to również odinstalowanie oprogramowania klienckiego i usunięcie zasad usługi Intune z komputera. Zobacz informacje na temat [wycofywania komputerów zarządzanych przy użyciu oprogramowania klienckiego usługi Intune](retire-a-windows-pc-with-microsoft-intune.md).
 
 ## <a name="block-access-a-device"></a>Blokowanie dostępu do urządzenia
 W przypadku zagubienia urządzenia lub konieczności wycofania urządzenia z powodu odejścia pracownika z firmy i nie zwrócenia przez niego sprzętu należącego do firmy można także [zresetować kod dostępu i zdalnie zablokować](use-remote-lock-and-passcode-reset-in-microsoft-intune.md) urządzenie. Pozwala to zapobiec niewłaściwemu użyciu informacji firmowych, chociaż może to oznaczać utratę urządzenia.
@@ -70,6 +70,6 @@ Czasami może dojść do zużycia urządzenia. W takiej sytuacji [zresetowanie u
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

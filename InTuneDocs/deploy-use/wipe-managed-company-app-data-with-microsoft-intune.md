@@ -2,8 +2,8 @@
 title: "Czyszczenie danych zarządzanych aplikacji firmowych | Microsoft Intune"
 description: "Dowiedz się, jak można selektywnie zdalnie usunąć dane firmy z urządzeń."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 11/08/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1877fc4a76932d550cc8c4be3cb4ebd089cd6ad3
-ms.openlocfilehash: 3939d732057c7fd9365d7fab93ed37ec62f6993d
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: d32a66ee283906586e25173e736c02ee8bf23042
 
 
 ---
@@ -55,7 +55,7 @@ Blok **Zarządzanie aplikacjami mobilnymi w usłudze Intune** zawiera raport z p
 
 2.  W bloku **Żądanie czyszczenia** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
 
-Użytkownicy muszą otworzyć aplikację w celu przeprowadzenia czyszczenia — może ono zająć do 30 minut od czasu utworzenia żądania. 
+Użytkownicy muszą otworzyć aplikację w celu przeprowadzenia czyszczenia — może ono zająć do 30 minut od czasu utworzenia żądania.
 
 Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usunięcia.  Aby ręcznie usunąć żądanie czyszczenia, kliknij prawym przyciskiem myszy i wybierz pozycję Usuń.
 
@@ -66,6 +66,6 @@ Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usuni
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

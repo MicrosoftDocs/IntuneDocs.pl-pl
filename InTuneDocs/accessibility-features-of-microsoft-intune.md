@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 1c4f44619f025b5a35a089c0970188b989b710e6
+ms.sourcegitcommit: b99c90bfafd65e87e258e1e0ac01691e83581659
+ms.openlocfilehash: 9915f85e6bc2dc20b061618fc8ccc6da8f3cec36
 
 
 ---
 
-# Funkcje ułatwień dostępu usługi Microsoft Intune
+# <a name="accessibility-features-of-microsoft-intune"></a>Funkcje ułatwień dostępu usługi Microsoft Intune
 W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje w samej usłudze:
 
 -   Używanie skrótów klawiaturowych
@@ -28,7 +28,7 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 > [!NOTE]
 > [!INCLUDE[accessibility6](./includes/accessibility6_md.md)]
 
-## Używanie skrótów klawiaturowych
+## <a name="using-keyboard-shortcuts"></a>Używanie skrótów klawiaturowych
 
 |Wymagana czynność|Użyj tego skrótu klawiaturowego|
 |--------------|------------------------------|
@@ -44,11 +44,10 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 |Przejście do następnej grupy aplikacji.|Strzałka w górę|
 |Wyświetlenie akcji dla wybranego urządzenia.|Strzałka w prawo|
 > [!NOTE]
-> [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] — w portalach usługi można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
+> W portalach usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
 
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

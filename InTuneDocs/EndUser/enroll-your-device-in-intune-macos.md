@@ -15,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 162d176c5f272f5f19ba18cdd07fe815ac1bcce7
-ms.openlocfilehash: fc0efceb8a0c3e1323f7d94625bc5f618d35bfd6
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 650e9b0700971e626e4062c312111ef60e74badc
 
 
 ---
@@ -46,7 +46,7 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci w
  ![Okno rejestrowania urządzenia w systemie macOS](./media/macOS_enroll_003_enroll_popup.png)
 
   > [!NOTE]
-  > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Sprawdź, [co stanie się po zarejestrowaniu urządzenia w usłudze Intune](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios).
+  > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Sprawdź, [co stanie się po zarejestrowaniu urządzenia w usłudze Intune](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md).
 
 6. Zostanie otwarte okno __Preferencje systemowe__ z pytaniem, czy chcesz __zainstalować „profil zarządzania”.__ Kliknij pozycję __Zainstaluj__, aby kontynuować, lub kliknij pozycję __Pokaż profil__, aby uzyskać dalsze informacje.
 
@@ -64,6 +64,6 @@ Nadal potrzebujesz pomocy? Skonsultuj się z administratorem IT. Odpowiednie inf
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

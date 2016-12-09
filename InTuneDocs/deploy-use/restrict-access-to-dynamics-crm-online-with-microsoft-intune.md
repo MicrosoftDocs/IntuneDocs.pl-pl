@@ -2,8 +2,8 @@
 title: "Ograniczanie dostępu do usługi Dynamics CRM Online | Microsoft Intune"
 description: "Ochrona i kontrola dostępu do usługi Dynamics CRM Online przy użyciu dostępu warunkowego."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4191b64ef2e322c123031c9a3b21197035b73d02
-ms.openlocfilehash: 8dba2883b3261017bc66a409c5261f4422890015
+ms.sourcegitcommit: dae04661289c79798c2f37272a0f941d30335ea5
+ms.openlocfilehash: 2f4ba24ca6c56cee684931519937525fcde1c211
 
 
 ---
@@ -27,7 +27,8 @@ Dostęp do usługi Microsoft Dynamics CRM Online na urządzeniach z systemem iOS
 
 Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
-> [!IMPORTANT] Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory w wersji Premium, a użytkownicy muszą mieć licencje obu produktów. **Subskrypcja pakietu Enterprise Mobility + Security (EMS)** obejmuje zarówno subskrypcję usługi Intune, jak i subskrypcję usługi Azure Active Directory — wersja Premium. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Jeśli nie masz subskrypcji pakietu EMS, możesz uzyskać subskrypcję usługi Azure Active Directory — wersja Premium. Zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+> [!IMPORTANT]
+> Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory w wersji Premium, a użytkownicy muszą mieć licencje obu produktów. **Subskrypcja pakietu Enterprise Mobility + Security (EMS)** obejmuje zarówno subskrypcję usługi Intune, jak i subskrypcję usługi Azure Active Directory — wersja Premium. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Jeśli nie masz subskrypcji pakietu EMS, możesz uzyskać subskrypcję usługi Azure Active Directory — wersja Premium. Zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 Jeśli wybrany użytkownik próbuje użyć aplikacji Dynamics CRM na swoim urządzeniu, sprawdzane są następujące kwestie:
 
@@ -100,6 +101,6 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

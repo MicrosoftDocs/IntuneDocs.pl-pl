@@ -2,8 +2,8 @@
 title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM) | Microsoft Intune"
 description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomagać w ochronie danych firmowych, zapobieganiu utracie danych i przechowywaniu osobno informacji osobistych i służbowych."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16f5955f71cde95697956c69761b4801cf44608e
-ms.openlocfilehash: 87c1f90f41ec72ff74c23bfa270efade31890fc0
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: 66a5814ba34f9fd15460512b0a6d40566ec33401
 
 
 ---
@@ -130,6 +130,6 @@ Wszystkie aplikacje mobilne pakietu Office obsługują dostęp dla wielu tożsam
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

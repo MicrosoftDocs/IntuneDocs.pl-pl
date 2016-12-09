@@ -14,8 +14,8 @@ ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5fa0e9db799c7b3a9619d63ebc1ba5ffe010b1fd
-ms.openlocfilehash: ff780fa8ead4b1e54fb6b8dd2da6246c77c76b38
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 3e6a4ca1e415eb56dd5792c8d9f6a9fe83f6d362
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ff780fa8ead4b1e54fb6b8dd2da6246c77c76b38
 
 Zarejestrowanie urządzeń z systemem Windows 10 w usłudze Microsoft Intune umożliwia pracownikom organizacji uzyskiwanie dostępu do zabezpieczonych danych, w tym plików, wiadomości e-mail i innych zasobów. Dotyczy to urządzeń z systemami Windows 10 Desktop i Windows 10 Mobile. Zarejestrowanie urządzeń ułatwia zabezpieczenie dostępu zarówno z perspektywy administratora, jak i całej organizacji, a także pomaga w rozdzieleniu danych służbowych od prywatnych.
 
-Chcesz wiedzieć więcej? Dowiedz się, co się dzieje po [zarejestrowaniu urządzenia w usłudze Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) i jak ten proces wpływa na [informacje przechowywane na urządzeniu](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+Chcesz wiedzieć więcej? Dowiedz się, co się dzieje po [zarejestrowaniu urządzenia w usłudze Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i jak ten proces wpływa na [informacje przechowywane na urządzeniu](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 ## <a name="windows-10-desktop-devices"></a>Urządzenia z systemem Windows 10 Desktop
 1.  Przejdź do pozycji __Start__.
@@ -40,19 +40,19 @@ Chcesz wiedzieć więcej? Dowiedz się, co się dzieje po [zarejestrowaniu urzą
 
  ![Opcja Informacje o komputerze w systemie Windows 10 Desktop](../media/settings_about_pc.png)
 
-3.  Jeśli używana wersja to __1607__, wykonaj [te kroki](enroll-your-w10-device-access-work-or-school). Jeśli używana wersja to __1511__, wykonaj [te kroki](enroll-your-w10-device-your-account).
+3.  Jeśli używana wersja to __1607__, wykonaj [te kroki](enroll-your-w10-device-access-work-or-school.md). Jeśli używana wersja to __1511__, wykonaj [te kroki](enroll-your-w10-device-your-account.md).
 
 ## <a name="windows-10-mobile-devices"></a>Urządzenia z systemem Windows 10 Mobile
 
 1.  W menu __Start__ przejdź do listy __Wszystkie aplikacje__, a następnie wybierz aplikację __Ustawienia__.
 2.  Naciśnij pozycję __System__, a następnie __Informacje__.
 3.  W obszarze __Informacje o urządzeniu__ naciśnij pozycję __Więcej informacji__. Zobaczysz listę informacji o urządzeniu. Znajdź pozycję __Wersja__ na tej liście.
-4.  Jeśli używana wersja to __1607__, wykonaj [te kroki](enroll-your-w10-device-access-work-or-school). Jeśli używana wersja to __1511__, wykonaj [te kroki](enroll-your-w10-device-your-account).
+4.  Jeśli używana wersja to __1607__, wykonaj [te kroki](enroll-your-w10-device-access-work-or-school.md). Jeśli używana wersja to __1511__, wykonaj [te kroki](enroll-your-w10-device-your-account.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 2fad0ea18485290a513d175fecf0a4947786e5eb
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 9561cf77e1569a6ab0da5d9b8e90e03ce5c9e998
 
 
 ---
@@ -29,7 +29,7 @@ Obsługiwane są wyłącznie następujące wersje. Jeśli urządzenia nie ma na 
 
 * [Windows 10 Mobile](#windows-10-mobile)
 * [Windows 10 Desktop](#windows-10-desktop)
-* [Windows Phone 8.1](#windows-phone-8-1)
+* [Windows Phone 8.1](#windows-phone-81)
 
 
 ## <a name="windows-10-mobile"></a>Windows 10 Mobile
@@ -54,7 +54,7 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu pr
     W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk **Synchronizuj** będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
 
 ## <a name="windows-10-desktop"></a>Windows 10 Desktop
-Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie procedury. Aby wybrać odpowiednią procedurę, spójrz na zrzuty ekranu, a następnie wykonaj kroki, które odpowiadają temu, co widzisz na swoim urządzeniu. 
+Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie procedury. Aby wybrać odpowiednią procedurę, spójrz na zrzuty ekranu, a następnie wykonaj kroki, które odpowiadają temu, co widzisz na swoim urządzeniu.
 
 1. Wybierz przycisk **Start**, a następnie wybierz pozycję **Ustawienia**.
 
@@ -72,7 +72,7 @@ Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie p
 
     Jeśli widzisz ten ekran („Dostęp z miejsca pracy”), postępuj zgodnie z instrukcjami opisanymi w sekcji [Procedura w przypadku wyświetlenia ekranu Dostęp z miejsca pracy](#steps-to-follow-if-you-see-your-account).
 
-    ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png) 
+    ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 
 ### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Czynności w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
 
@@ -80,9 +80,9 @@ Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie p
 
     ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)
 
-2. Wybierz swoje konto służbowe. W zależności od tego, jak administrator IT skonfigurował środowisko, mogą zostać wyświetlone dwa konta wyglądające podobnie jak na poniższym przykładzie. Obok jednego konta jest wyświetlona ikona aktówki, a obok drugiego — logo firmy Microsoft. 
+2. Wybierz swoje konto służbowe. W zależności od tego, jak administrator IT skonfigurował środowisko, mogą zostać wyświetlone dwa konta wyglądające podobnie jak na poniższym przykładzie. Obok jednego konta jest wyświetlona ikona aktówki, a obok drugiego — logo firmy Microsoft.
 
-    - Jeśli widzisz konto z aktówką, wybierz je i poszukaj pod nim przycisku **Informacje**. 
+    - Jeśli widzisz konto z aktówką, wybierz je i poszukaj pod nim przycisku **Informacje**.
     - Jeśli widzisz tylko konto z logo firmy Microsoft, wybierz je i poszukaj pod nim przycisku **Informacje**.
 
     ![Wybieranie nazwy konta obok logo aktówki lub logo firmy Microsoft](./media/win10pc-rs1-sync-info-button.png)
@@ -94,7 +94,7 @@ Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie p
 4. Wybierz przycisk **Synchronizuj**. Urządzenie zostanie zsynchronizowane z usługą Intune.
 
 ### <a name="steps-to-follow-if-you-see-work-access"></a>Procedura w przypadku wyświetlenia ekranu Dostęp z miejsca pracy
-    
+
 1. Na stronie **Konta** wybierz pozycję **Dostęp z miejsca pracy**.
 
     ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
@@ -130,6 +130,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

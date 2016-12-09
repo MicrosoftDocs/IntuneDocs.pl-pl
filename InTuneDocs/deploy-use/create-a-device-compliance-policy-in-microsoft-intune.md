@@ -2,8 +2,8 @@
 title: "Tworzenie zasad zgodności urządzeń | Microsoft Intune"
 description: "Utwórz zasady zgodności, aby zabezpieczyć urządzenia przenośne i komputery używane do uzyskiwania dostępu do danych firmowych."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 376c9bce811ffd986242678929469f3e28bfad4c
-ms.openlocfilehash: 43c8d5e065e785269b9d0cbf1813dcea83464975
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: b21fcbf10659e072d8eb73703dfdd6695ac9a9b0
 
 
 ---
@@ -88,6 +88,6 @@ Wybierz jeden z następujących elementów, aby dowiedzieć się więcej o ustaw
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

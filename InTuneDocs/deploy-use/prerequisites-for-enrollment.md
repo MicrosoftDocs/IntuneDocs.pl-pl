@@ -14,8 +14,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 391612c35a7665073ca8a5c629169e5be967ab59
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 270e6015e629c048b01b218793640888706d118e
 
 
 ---
@@ -40,8 +40,8 @@ Szukasz usługi Intune z programem Configuration Manager?
 ## <a name="step-1-enable-connections"></a>Krok 1. Włączanie połączeń
 
 Przed włączeniem rejestrowania urządzeń przenośnych należy wykonać następujące czynności:
-- [Przegląd wymaganych sieciowych adresów URL i portów](../get-started/network-infrastructure-requirements-for-microsoft-intune)
-- [Dodanie i zweryfikowanie nazwy domeny](../get-started/domain-names-for-microsoft-intune)
+- [Przegląd wymaganych sieciowych adresów URL i portów](../get-started/network-infrastructure-requirements-for-microsoft-intune.md)
+- [Dodanie i zweryfikowanie nazwy domeny](../get-started/domain-names-for-microsoft-intune.md)
 
 ## <a name="step-2-set-mdm-authority"></a>Krok 2. Ustawianie urzędu zarządzania urządzeniami przenośnymi
 Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
@@ -111,7 +111,7 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 
 ## <a name="step-5-assign-user-licenses"></a>Krok 5. Przypisywanie licencji użytkownika
 
-**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD). [Lokalnych użytkowników można zsynchronizować z usługą Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
+**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD). [Lokalnych użytkowników można zsynchronizować z usługą Azure AD](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md#how-to-sync-on-premises-users-with-azure-ad).
 
 1.  Zaloguj się do [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) przy użyciu poświadczeń administratora dzierżawy.
 
@@ -136,7 +136,7 @@ Skonfiguruj zarządzanie dla następujących platform:
 - [Komputery i laptopy z systemem Windows](set-up-windows-device-management-with-microsoft-intune.md)
 - [Windows 10 Mobile i Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
-Można również włączyć [rejestrację firmowych urządzeń](manage-corporate-owned-devices).
+Można również włączyć [rejestrację firmowych urządzeń](manage-corporate-owned-devices.md).
 
 ## <a name="step-7-next-steps"></a>Krok 7. Następne kroki
 
@@ -149,6 +149,6 @@ Po włączeniu rejestracji należy skonfigurować zarządzanie pod kątem potrze
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

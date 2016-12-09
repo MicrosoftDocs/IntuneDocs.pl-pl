@@ -1,8 +1,8 @@
 ---
 title: "Wdrażanie aplikacji Lookout for Work | Microsoft Intune"
 description: "Konfiguruj i wdrażaj aplikacje Lookout for Work dla systemu Android."
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: 646bd62dcf95b37ce9154e4852612b17ab71f954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 720fe241e7f1205dbad4b64af5cf7f16a80db23e
 
 
 ---
@@ -40,14 +40,15 @@ W konsoli usługi Intune po kliknięciu pozycji **Aplikacje** aplikacja Lookout 
 
 * **Krok 5.** Wdróż aplikację dla użytkowników przez wybranie aplikacji Lookout for Work, a następnie wybranie pozycji **Zarządzanie wdrożeniem**.
 
-  Należy wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie wdrożeniem w konsoli usługi Lookout MTP.  Zobacz krok 3 w sekcji [konfigurowania subskrypcji za pomocą usługi MTP](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+  Należy wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie wdrożeniem w konsoli usługi Lookout MTP.  Zobacz krok 3 w sekcji [konfigurowania subskrypcji za pomocą usługi MTP](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+
   >[!IMPORTANT]
   > Kreator wdrażania aplikacji usługi Intune nie posiada informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout MTP w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
 
 * **Krok 6.** Wybierz opcję **Wymagana instalacja**, jeśli aplikacja Lookout musi być zainstalowania na urządzeniu użytkownika.
 
 
-## <a name="ios-enterprisesigned-version-of-lookout-app"></a>System iOS (podpisana przez przedsiębiorstwo wersja aplikacji Lookout)
+## <a name="ios-enterprise-signed-version-of-lookout-app"></a>System iOS (podpisana przez przedsiębiorstwo wersja aplikacji Lookout)
 
 * **Krok 1.** Upewnienie się, że na urządzeniu skonfigurowano **zarządzanie systemem iOS**. Aby uzyskać instrukcje dotyczące sposobu konfigurowania urządzenia pod kątem zarządzania systemem iOS, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
@@ -76,7 +77,8 @@ W konsoli usługi Intune po kliknięciu pozycji **Aplikacje** aplikacja Lookout 
 
 * **Krok 6.** **Wdrożenie aplikacji dla użytkowników** przez wybranie aplikacji Lookout for Work, a następnie wybranie pozycji **Zarządzanie wdrożeniem**.
 
-  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+
 >[!IMPORTANT]
 > Kreator wdrażania aplikacji usługi Intune nie ma informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
 
@@ -98,6 +100,6 @@ Gdy użytkownik otworzy aplikację Lookout for Work na urządzeniu, zostanie wy�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

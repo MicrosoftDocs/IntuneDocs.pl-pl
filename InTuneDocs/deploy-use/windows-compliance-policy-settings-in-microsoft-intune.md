@@ -2,8 +2,8 @@
 title: "Ustawienia zasad zgodności dla urządzeń z systemem Windows | Microsoft Intune"
 description: "W tym temacie opisano reguły i ustawienia, które można skonfigurować w zakresie zasad zgodności dla urządzeń z systemem Windows."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1877fc4a76932d550cc8c4be3cb4ebd089cd6ad3
-ms.openlocfilehash: 8712d822eea2a619abeaf86f7fec9d0eb67c826f
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: e079fea47a10296067fe82fc05d82f0a863ae7bd
 
 
 ---
@@ -28,7 +28,7 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 > [!div class="op_single_selector"]
 - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Ustawienia zasad zgodności dla urządzeń z systemem Android](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune)
+- [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 
 ## <a name="compliance-policy-settings-for-windows-phone-devices"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows Phone
 Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1 lub nowszym.
@@ -151,6 +151,6 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

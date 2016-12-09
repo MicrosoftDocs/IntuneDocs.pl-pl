@@ -14,8 +14,8 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
-ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: cbfdb0e5db6862fcf046f42b85b8c9aabbba8721
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
 Z urządzeń zarządzanych przez usługę Intune, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione, można wyczyścić aplikacje i dane. Usługa Intune umożliwia selektywne i pełne czyszczenie danych. Użytkownicy mogą także wydać z aplikacji Portal firmy usługi Intune polecenie zdalnego wyczyszczenia urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
 
   > [!NOTE]
-  > Ten temat dotyczy tylko czyszczenia danych z urządzeń zarządzanych w ramach zarządzania urządzeniami przenośnymi przez usługę Intune. Można również użyć [witryny Azure Portal](https://portal.azure.com) do [wyczyszczenia danych firmowych z aplikacji](wipe-managed-company-app-data-with-microsoft-intune.md). Możesz również [wycofać komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+  > Ten temat dotyczy tylko czyszczenia danych z urządzeń zarządzanych w ramach zarządzania urządzeniami przenośnymi przez usługę Intune. Można również użyć [witryny Azure Portal](https://portal.azure.com) do [wyczyszczenia danych firmowych z aplikacji](wipe-managed-company-app-data-with-microsoft-intune.md). Możesz również [wycofać komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune](retire-a-windows-pc-with-microsoft-intune.md).
 
 ## <a name="full-wipe"></a>Pełne czyszczenie danych
 
@@ -165,6 +165,6 @@ Ten raport przedstawia również, kto wykonał daną akcję.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

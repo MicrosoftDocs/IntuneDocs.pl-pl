@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 686321a1c19acb9a3a7e262822b11304d07adb40
-ms.openlocfilehash: 77789c04d13e12d7d0ecc5fb8959bc3396bd625f
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: a6e5148996b1010f0248f5b122246e38c3aa0464
 
 
 ---
@@ -37,7 +37,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 | **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  | [Więcej informacji](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 |**[Device Enrollment Program](#dep)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](ios-device-enrollment-program-in-microsoft-intune.md)|
 |**[USB-SA](#usb-sa)**| Tak |   Opcjonalne |  Nie| [Więcej informacji](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
@@ -47,14 +47,14 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 | **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|   Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|   Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metody rejestracji urządzeń z systemem Android**
 
 | **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md#set-up-device-management)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 W dobraniu odpowiedniej metody rejestrowania pomogą pytania znajdujące się w temacie [Wybieranie metody rejestrowania urządzeń](/intune/get-started/choose-how-to-enroll-devices1).
@@ -120,6 +120,6 @@ Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

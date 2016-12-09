@@ -4,7 +4,7 @@ description:
 keywords: 
 author: 
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.assetid: b23d4007-1866-42e9-b6cb-d45408562da4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 966677b7d9488d37d44f42ff8ef8bbac7a5d3914
+ms.sourcegitcommit: b99c90bfafd65e87e258e1e0ac01691e83581659
+ms.openlocfilehash: d5f2f9a641089bb67cee525e05abffec5c92c577
 
 
 ---
 
-# Produkty i usługi firmy Microsoft związane z ułatwieniami dostępu
+# <a name="accessibility-products-and-services-from-microsoft"></a>Produkty i usługi firmy Microsoft związane z ułatwieniami dostępu
 [!INCLUDE[accessibility1](./includes/accessibility1_md.md)]
 
 -   [!INCLUDE[accessibility2](./includes/accessibility2_md.md)]
@@ -33,16 +33,16 @@ ms.openlocfilehash: 966677b7d9488d37d44f42ff8ef8bbac7a5d3914
 > [!NOTE]
 > [!INCLUDE[accessibility6](./includes/accessibility6_md.md)]
 
-## Funkcje ułatwień dostępu systemu Windows
+## <a name="accessibility-features-of-windows"></a>Funkcje ułatwień dostępu systemu Windows
 [!INCLUDE[accessibility7](./includes/accessibility7_md.md)]
 
-### Bezpłatne samouczki krok po kroku
+### <a name="free-step-by-step-tutorials"></a>Bezpłatne samouczki krok po kroku
 [!INCLUDE[accessibility8](./includes/accessibility8_md.md)]
 
-### Produkty technologii pomocniczej dla systemu Windows
+### <a name="assistive-technology-products-for-windows"></a>Produkty technologii pomocniczej dla systemu Windows
 [!INCLUDE[accessibility9](./includes/accessibility9_md.md)]
 
-## Dokumentacja w formatach alternatywnych
+## <a name="documentation-in-alternative-formats"></a>Dokumentacja w formatach alternatywnych
 [!INCLUDE[accessibility10](./includes/accessibility10_md.md)]
 
 [!INCLUDE[accessibility11](./includes/accessibility11_md.md)]
@@ -55,7 +55,7 @@ ms.openlocfilehash: 966677b7d9488d37d44f42ff8ef8bbac7a5d3914
 
 [!INCLUDE[accessibility12](./includes/accessibility12_md.md)]
 
-## Obsługa klienta dla osób z wadami słuchu
+## <a name="customer-service-for-people-with-hearing-impairments"></a>Obsługa klienta dla osób z wadami słuchu
 [!INCLUDE[accessibility13](./includes/accessibility13_md.md)]
 
 -   [!INCLUDE[accessibility14](./includes/accessibility14_md.md)]
@@ -64,12 +64,11 @@ ms.openlocfilehash: 966677b7d9488d37d44f42ff8ef8bbac7a5d3914
 
 [!INCLUDE[accessibility16](./includes/accessibility16_md.md)]
 
-## Aby uzyskać więcej informacji
+## <a name="for-more-information"></a>Aby uzyskać więcej informacji
 [!INCLUDE[accessibility17](./includes/accessibility17_md.md)]
 
 
 
-
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
