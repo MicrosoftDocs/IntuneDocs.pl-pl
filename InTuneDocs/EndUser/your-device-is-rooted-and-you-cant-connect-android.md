@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 5b7586c57f3f2825edfa9ae45a3fdec9af0fe956
+ms.sourcegitcommit: 06da6823465521b5784188123aab3544fef9fc2e
+ms.openlocfilehash: 4c58060bad8b269394e577df5bb3ccd50b8fa97b
 
 
 ---
 
+# <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Nie można nawiązać połączenia, ponieważ na urządzeniu z systemem Android uzyskano dostęp do konta administratora
 
-# <a name="your-android-device-is-rooted-and-you-cant-connect"></a>Na urządzeniu z systemem Android odblokowano dostęp do konta root i nie można nawiązać połączenia
+Nastąpiło przekierowanie do tego miejsca, ponieważ został wyświetlony komunikat z informacją, że na urządzeniu _uzyskano dostęp do konta administratora_.
 
-Odblokowanie dostępu do konta root na urządzeniu z systemem Android oznacza, że urządzenie zostało zmienione w celu włączenia pewnych funkcji, które mogą negatywnie wpłynąć na zasoby i zabezpieczenia firmy. Jeśli ten komunikat jest wyświetlany, nie można uzyskać dostępu do zasobów firmy do momentu rozwiązania problemu.
+Jeśli na urządzeniu z systemem Android uzyskano dostęp do konta administratora, oznacza to, że część oprogramowania urządzenia została zmieniona tak, aby włączyć funkcje, które w przeciwnym razie byłyby niedostępne. Takie zmiany często mogą naruszyć bezpieczeństwo dostępu do zasobów organizacji, takich jak poczta e-mail i dokumenty. Dlatego urządzenia, na których uzyskano dostęp do konta administratora, nie mogą być używane do uzyskiwania dostępu do tych zasobów do czasu rozwiązania tego problemu.  
 
-Jeśli uważasz, że nie wykonano żadnych czynności mających na celu odblokowanie dostępu do urządzenia, zapoznaj się z innymi przyczynami, dlaczego dostęp do urządzenia mógł zostać odblokowany:
+Istnieje kilka typowych metod, przy użyciu których na urządzeniu można odblokować dostęp do konta administratora:
 
-- Użytkownik mógł zainstalować na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. Jeśli ten komunikat jest wyświetlany po zainstalowaniu aplikacji, można spróbować odinstalować aplikację, aby zobaczyć, czy to pomoże.
+- Użytkownik mógł zainstalować na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. Jeśli ten komunikat został wyświetlony bezpośrednio po zainstalowaniu aplikacji, spróbuj ją odinstalować.
 
-- Producent urządzenia zainstalował na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. Skontaktuj się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+- Producent urządzenia zainstalował na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. W takim przypadku skontaktuj się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie Portal firmy](http://portal.manage.microsoft.com).
+
+Jeśli dostęp do konta administratora na urządzeniu uzyskano samodzielnie, należy cofnąć ten proces i przywrócić urządzenie do stanu sprzed odblokowania dostępu do konta administratora.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

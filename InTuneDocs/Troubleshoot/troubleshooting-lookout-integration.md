@@ -1,9 +1,9 @@
 ---
-title: "Rozwiązywanie problemów dotyczących integracji z aplikacją Lookout | Microsoft Intune"
+title: "Rozwiązywanie problemów dotyczących integracji z aplikacją Lookout | Dokumentacja firmy Microsoft"
 description: "W tym temacie opisano rozwiązywanie często występujących problemów dotyczących integracji z aplikacją Lookout"
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: aa29f702803d657f783ff0dfc6ea66981484c569
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: 416f200bdb72bae98897cb8d279dbdb767757da9
 
 
 ---
@@ -39,7 +39,7 @@ Poniższy błąd może się pojawić w sytuacji, gdy użytkownik będący admini
 
 ![zrzut ekranu przedstawiający ekran logowania do aplikacji Lookout z wyświetlonym błędem logowania](../media/mtp/lookout-mtp-consent-not-accepted-error.png)
 
-Aby rozwiązać ten problem, użytkownik będący administratorem globalnym musi się zalogować na stronie https://aad.lookout.com/les?action=consent i zaakceptować monit o zainicjowanie konfiguracji. Bardziej szczegółowe informacje podano w temacie [Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+Aby rozwiązać ten problem, użytkownik będący administratorem globalnym musi się zalogować na stronie https://aad.lookout.com/les?action=consent i zaakceptować monit o zainicjowanie konfiguracji. Bardziej szczegółowe informacje podano w temacie [Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](../deploy-use/set-up-your-subscription-with-lookout-mtp.md)
 
 ## <a name="troubleshoot-device-status-issues"></a>Rozwiązywanie problemów ze stanem urządzenia
 
@@ -90,6 +90,6 @@ O ile nowy użytkownik należy do jednej z grup rejestracji określonych w konso
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

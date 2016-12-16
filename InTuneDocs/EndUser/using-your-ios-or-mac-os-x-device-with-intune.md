@@ -1,6 +1,6 @@
 ---
-title: "Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune | Microsoft Intune"
-description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub Mac OS X, gdy urządzenie zostało zarejestrowane w usłudze Intune"
+title: "Korzystanie z urządzenia z systemem iOS lub macOS w usłudze Intune | Microsoft Intune"
+description: "Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub macOS po zarejestrowaniu urządzenia w usłudze Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -15,13 +15,13 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: bc031fe080cd17b3436388f59ecc83df53a16a32
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: e10c0eb3000bcf3a98a0cab891c40d32fe06d335
 
 
 ---
 
-# <a name="using-your-ios-or-mac-os-x-device-with-intune"></a>Korzystanie z urządzenia z systemem iOS lub Mac OS X i usługi Intune
+# <a name="using-your-ios-or-macos-device-with-intune"></a>Korzystanie z urządzenia z systemem iOS lub macOS w usłudze Intune
 
 Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy muszą wykonać w celu ukończenia różnych zadań pogrupowanych w następujące kategorie:
 - Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
@@ -34,7 +34,7 @@ Informacje przedstawione w tej sekcji ułatwiają instalację aplikacji Portal f
 
 - [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md)
-- [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](enroll-your-device-in-intune-mac-os-x.md)
+- [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
 
 ## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
@@ -67,6 +67,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

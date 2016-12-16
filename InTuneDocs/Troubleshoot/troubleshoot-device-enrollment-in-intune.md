@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
-ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
+ms.sourcegitcommit: 998c24744776e0b04c9201ab44dfcdf66537d523
+ms.openlocfilehash: 9c5963f1413e1cd9f119186f47f46c7f7f16720d
 
 
 ---
@@ -86,7 +86,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 >
 > Konto użytkownika, które jest dodawane do grupy Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady Dostęp warunkowy.
 
-### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
+### <a name="company-portal-emporarily-unavailable"></a>Aplikacja Portal firmy jest tymczasowo niedostępna
 **Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
 **Rozwiązanie:**
@@ -214,23 +214,40 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 ### <a name="android-certificate-issues"></a>Problemy z certyfikatami systemu Android
 
-**Problem**: Użytkownik otrzymuje następujący komunikat na urządzeniu: *„Nie możesz się zalogować ze względu na brak wymaganego certyfikatu na urządzeniu”.*
+**Problem**: użytkownicy otrzymują następujący komunikat na urządzeniu: *Nie możesz się zalogować, ponieważ urządzenie nie ma wymaganego certyfikatu.*
 
-**Rozwiązanie**:
+**Rozwiązanie 1**:
 
-- Istnieje możliwość, że użytkownik może pobrać brakujący certyfikat, wykonując [następujące instrukcje](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Jeśli użytkownik nie może pobrać certyfikatu, może brakować pośrednich certyfikatów na serwerze usług AD FS. Certyfikaty pośrednie są wymagane przez system Android w celu zapewnienia zaufania serwera.
+poproś użytkowników o wykonanie instrukcji zawartych w artykule [Brak wymaganego certyfikatu urządzenia](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Jeśli po wykonaniu instrukcji błąd nadal występuje, spróbuj rozwiązania 2.
 
-Certyfikaty można zaimportować do magazynu pośredniego na serwerze usług AD FS lub serwerze proxy w następujący sposób:
+**Rozwiązanie 2**:
 
-1.  Na serwerze usług AD FS uruchom program **Microsoft Management Console** i dodaj przystawkę Certyfikaty dla **konta komputera**.
-5.  Znajdź certyfikat, którego używa usługa AD FS i wyświetl jego certyfikat nadrzędny.
-6.  Skopiuj certyfikat nadrzędny i wklej go w obszarze **Computer\Intermediate Certification Authorities\Certificates**.
-7.  Skopiuj certyfikaty usług AD FS, odszyfrowywania usług AD FS i podpisywania usług AD FS i wklej je w magazynie osobistym usługi AD FS.
-8.  Uruchom ponownie serwery usługi AD FS.
+jeśli użytkownicy nadal widzą błąd braku certyfikatu po wprowadzeniu poświadczeń firmowych i przekierowaniu w celu obsługi logowania federacyjnego, być może brakuje pośredniego certyfikatu z serwera usług Active Directory Federation Services (AD FS).
 
+Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagają certyfikatów pośrednich zawartych w [powitaniu serwera SSL](https://technet.microsoft.com/library/cc783349.aspx), ale obecnie instalacja serwera domyślnego usług AD FS lub serwera proxy usług AD FS w odpowiedzi serwera SSL na powitanie klienta SSL wysyła jedynie certyfikat SSL usług AD FS.
+
+Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
+
+1.  Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
+2.  Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
+3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
+4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
+5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
+6.  Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
+7.  Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
+8.  Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
+9.  Uruchom ponownie serwery usług AD FS.
+10. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
 
+**Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
+
+Następujące kroki opisują jedną z wielu metod i narzędzi umożliwiających sprawdzenie poprawności instalacji certyfikatu.
+
+1. Przejdź do [bezpłatnego narzędzia Digicert](ttps://www.digicert.com/help/).
+2. Wprowadź w pełni kwalifikowaną nazwę domeny serwera usług AD FS (np. sts.contoso.com), a następnie wybierz pozycję **SPRAWDŹ SERWER**.
+
+Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyświetlone wszystkie znaczniki wyboru. Jeśli powyższy problem występuje nadal, zobaczysz czerwony symbol X w sekcjach raportu „Certificate Name Matches” (Zgodne nazwy certyfikatu) i „SSL Certificate is correctly Installed” (Certyfikat SSL jest zainstalowany poprawnie).
 
 
 ## <a name="ios-issues"></a>Problemy z systemem iOS
@@ -356,6 +373,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

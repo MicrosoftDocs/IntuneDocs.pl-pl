@@ -1,11 +1,11 @@
 ---
-title: Informacje o portalu firmy | Microsoft Intune
+title: Co to jest Portal firmy? | Microsoft Intune
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: adf7fc0b7ddeb7fa8361d37efd0fdd5c714a72e4
+ms.sourcegitcommit: 3891d0389df3526ea328fc2952e3d181b1e766c0
+ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
 
 
 ---
@@ -42,7 +42,7 @@ Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a
 
 > [!div class="op_single_selector"]
 - [Android](using-your-android-device-with-intune.md)
-- [iOS i Mac OS X](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [iOS i Mac OS](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Windows](using-your-windows-device-with-intune.md)
 - [Witryna sieci Web Portal firmy](using-the-intune-company-portal-website.md)
 
@@ -53,12 +53,12 @@ Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, 
 
 > [!div class="op_single_selector"]
 - [Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [iOS i Mac OS X](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [iOS i Mac OS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 - [Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jakiego rodzaju komputery i urządzenia można dodać do Portalu firmy?
 
--   Telefony iPhone, tablety iPad i urządzenia z systemem Mac OS X
+-   Urządzenia iPhone, iPad oraz urządzenia z systemem macOS
 
 -   Urządzenia przenośne z systemem Android
 
@@ -75,7 +75,7 @@ Gdy *usuniesz* komputer lub urządzenie, urządzenie zostanie wyrejestrowane z u
 
 > [!div class="op_single_selector"]
 - [Android](unenroll-your-device-from-intune-android.md)
-- [iOS i Mac OS X](unenroll-your-device-from-intune-ios.md)
+- [iOS i Mac OS](unenroll-your-device-from-intune-ios.md)
 - [Windows](unenroll-your-device-from-intune-windows.md)
 
 Po *zresetowaniu* komputera lub urządzenia portal firmy podejmuje próbę przywrócenia domyślnych ustawień fabrycznych komputera lub urządzenia. Zresetowanie urządzenia spowoduje usunięcie wszystkich danych osobistych i firmowych z urządzenia! Jeśli zgubisz urządzenie, możesz zresetować je zdalnie z poziomu witryny sieci Web Portal firmy.
@@ -84,7 +84,7 @@ Aby zobaczyć, jak zresetować urządzenie, kliknij jeden z następujących link
 
 > [!div class="op_single_selector"]
 - [Android](reset-erase-your-lost-or-stolen-device-android.md)
-- [iOS i Mac OS X](reset-erase-your-lost-or-stolen-device-ios.md)
+- [iOS i Mac OS](reset-erase-your-lost-or-stolen-device-ios.md)
 - [Windows](reset-erase-your-lost-or-stolen-device-windows.md)
 - [Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy](reset-your-device-cpwebsite.md)
 
@@ -96,6 +96,6 @@ Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT. Informacje kon
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

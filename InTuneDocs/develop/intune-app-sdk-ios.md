@@ -1,21 +1,21 @@
 ---
-title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS | Microsoft Intune"
+title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS | Dokumentacja firmy Microsoft"
 description: 
 keywords: 
-author: Msmbaldwin
+author: mtillman
 manager: angrobe
-ms.author: oydang
-ms.date: 09/08/2016
+ms.author: mtillman
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-ms.reviewer: jeffgilb
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01b927178ad5fb1019781863e243133861887148
-ms.openlocfilehash: eb14be40a94513a21dbd24a62e42afb7a3e57381
+ms.sourcegitcommit: b55147e2be338bd46661695134fd0f0de105bb72
+ms.openlocfilehash: b8a723fce088c1d61bddb5f2479da59a4b5c3771
 
 
 ---
@@ -32,6 +32,8 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz
 * Wymagany jest komputer z systemem Mac OS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi Xcode w wersji 5 lub nowszej.
 
 * Należy zapoznać się z [postanowieniami licencyjnymi zestawu SDK aplikacji usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Wydrukować i zachować kopię postanowień licencyjnych. Pobranie i rozpoczęcie używania zestawu SDK aplikacji usługi Intune dla systemu iOS oznacza akceptację tych postanowień licencyjnych.  Jeśli użytkownik nie akceptuje niniejszych postanowień, nie może używać tego oprogramowania.
+
+* Pobierz pliki dla zestawu SDK aplikacji usługi Intune dla systemu iOS z serwisu [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## <a name="whats-in-the-sdk"></a>Zawartość zestawu SDK
 
@@ -322,9 +324,9 @@ W razie niepowodzenia rejestracji aplikacja powinna rozważyć wywołanie tego i
 
 Po wywołaniu tego interfejsu API aplikacja może kontynuować normalne działanie. Jeśli rejestracja powiedzie się, zestaw SDK powiadomi użytkownika, że wymagane jest ponowne uruchomienie aplikacji.
 
-## <a name="debug-information"></a>Informacje o debugowaniu
+## <a name="status-result-and-debug-notifications"></a>Stan, wynik i powiadomienia debugowania
 
-Aplikacja może odbierać powiadomienia debugowania dotyczące następujących żądań do usługi zarządzania aplikacjami mobilnymi usługi Intune:
+Aplikacja może odbierać stan, wynik i powiadomienia debugowania dotyczące następujących żądań odnoszących się do usługi zarządzania aplikacjami mobilnymi usługi Intune:
 
  - Żądania rejestracji
  - Żądania aktualizacji zasad
@@ -365,7 +367,7 @@ Te metody delegatów zwracają obiekt `IntuneMAMEnrollmentStatus`, który zawier
 
 Ten obiekt jest zdefiniowany w elemencie Headers/IntuneMAMEnrollmentStatus.h wraz z konkretnymi kodami stanu, które mogą być zwracane.
 
-Pamiętaj, że żadna logika biznesowa aplikacji nie powinna być oparta na tych powiadomieniach. Chodzi o to, że aplikacja może wysyłać te informacje do usługi telemetrii na potrzeby debugowania lub monitorowania.
+
 
 
 ## <a name="sample-code"></a>Przykładowy kod
@@ -637,7 +639,7 @@ Tak, administrator IT może wysłać polecenie selektywnego czyszczenia danych d
 
 ## <a name="submit-your-app-to-the-app-store"></a>Przesyłanie aplikacji do sklepu App Store
 
-Zarówno kompilacje biblioteki statycznej, jak i struktury zestawu SDK aplikacji usługi Intune są uniwersalnymi plikami binarnymi. Oznacza to, że zawierają kod dla wszystkich architektur urządzeń i symulatorów. Firma Apple odrzuci aplikacje przesłane do sklepu App Store, jeśli zawierają one kod symulatora. Podczas kompilowania biblioteki statycznej na potrzeby kompilacji tylko dla urządzenia konsolidator automatycznie usunie kod symulatora.
+Zarówno kompilacje biblioteki statycznej, jak i struktury zestawu SDK aplikacji usługi Intune są uniwersalnymi plikami binarnymi. Oznacza to, że zawierają kod dla wszystkich architektur urządzeń i symulatorów. Firma Apple odrzuci aplikacje przesłane do sklepu App Store, jeśli zawierają one kod symulatora. Podczas kompilowania biblioteki statycznej na potrzeby kompilacji tylko dla urządzenia konsolidator automatycznie usunie kod symulatora. Wykonaj poniższe kroki, aby upewnić się, że cały kod symulatora został usunięty przed przekazaniem aplikacji do sklepu App Store.
 
 1. Upewnij się, że struktura `IntuneMAM.framework` znajduje się na pulpicie.
 
@@ -654,6 +656,6 @@ Zarówno kompilacje biblioteki statycznej, jak i struktury zestawu SDK aplikacji
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

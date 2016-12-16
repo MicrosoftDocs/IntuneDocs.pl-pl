@@ -1,11 +1,11 @@
 ---
-title: "Nieobsługiwana aplikacja Portal firmy | Microsoft Intune"
+title: Aktualizowanie aplikacji Portal firmy | Microsoft Intune
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: a1811f14b4ee6d9fbc58d9998eba78c974235cb2
+ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
+ms.openlocfilehash: b3e98f32901512b9164c2e28c38e3bad751f7e8a
 
 
 ---
 
-# <a name="company-portal-app-not-supported"></a>Nieobsługiwana aplikacja Portal firmy
-Nie można już używać tej wersji Portalu firmy. Aby kontynuować, zainstaluj najnowszą aplikację **Portal firmy** ze Sklepu Windows.
-
+# <a name="your-company-portal-app-is-out-of-date"></a>Aplikacja Portal firmy jest nieaktualna
+Musisz zaktualizować aplikację Portal firmy, aby nadal korzystać z dostępu do firmowej poczty e-mail, kontaktów i dokumentów. Aby rozwiązać ten problem, otwórz **Sklep Windows** i zainstaluj nową wersję aplikacji **Portal firmy**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

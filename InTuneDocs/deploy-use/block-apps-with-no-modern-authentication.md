@@ -2,8 +2,8 @@
 title: "Blokowanie aplikacji niekorzystających z nowoczesnego uwierzytelniania | Microsoft Intune"
 description: 
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article
@@ -14,13 +14,13 @@ ms.assetid: 098b652c-01e0-45d1-a731-620b0d3dc7c1
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5083cb49e7a98f19ff21c1972149b00aee4ec93e
-ms.openlocfilehash: 8c2718da6f90f18ffbaa6a977dfca7fbc9a1bb09
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: 5c95cd8510faa437a33ac25d6602a2bcc57c05d5
 
 
 ---
 
-# Blokowanie aplikacji, które nie korzystają z nowoczesnego uwierzytelniania (ADAL)
+# <a name="block-apps-that-do-not-use-modern-authentication-adal"></a>Blokowanie aplikacji, które nie korzystają z nowoczesnego uwierzytelniania (ADAL)
 Dostęp warunkowy do aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM CA) bazuje na aplikacjach korzystających z [nowoczesnego uwierzytelniania](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a), które jest implementacją protokołu OAuth2. Większość obecnych mobilnych i klasycznych aplikacji pakietu Office korzysta z nowoczesnego uwierzytelniania. Istnieją jednak aplikacje innych firm oraz starsze aplikacje pakietu Office, które korzystają z innych metod uwierzytelniania, takich jak uwierzytelnianie podstawowe i uwierzytelnianie za pomocą formularzy.
 
 Aby zablokować dostęp do tych aplikacji zalecamy wykonanie poniższych czynności:
@@ -32,11 +32,11 @@ Aby zablokować dostęp do tych aplikacji zalecamy wykonanie poniższych czynno�
 
 
 
-### Zobacz też
+### <a name="see-also"></a>Zobacz także
 [Zezwalanie na dostęp do usług Office 365 tylko aplikacjom obsługiwanym przez usługę Intune](allow-policy-managed-apps-access-to-o365.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 
