@@ -13,7 +13,7 @@ ms.technology:
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c6b027be273fc074c4ca2836511e65a0dd89654f
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
 
 
@@ -117,6 +117,6 @@ Open the Company Portal on the mobile device, choose **Apps**, and then install 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

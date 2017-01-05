@@ -1,5 +1,5 @@
-Program Endpoint Protection
+Ochrona punktu końcowego
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
