@@ -1,4 +1,4 @@
-## Rejestracja w usłudze Azure Active Directory
+## <a name="azure-active-directory-enrollment"></a>Rejestracja w usłudze Azure Active Directory
 
 Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy lub osobiste urządzenia i komputery z systemami Windows 10 i Windows 10 Mobile w usłudze Intune przez dodanie konta służbowego i wyrażenie zgody na to, aby były zarządzane. Proste. W tle urządzenie użytkownika zostaje zarejestrowane i przyłączone do usługi Azure Active Directory. Po zarejestrowaniu urządzenie jest zarządzane za pomocą usługi Intune.
 
@@ -7,7 +7,7 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 - Subskrypcja usługi Microsoft Intune
 
 
-### Konfigurowanie automatycznej rejestracji w usłudze MDM
+### <a name="configure-automatic-mdm-enrollment"></a>Konfigurowanie automatycznej rejestracji w usłudze MDM
 
 1. W [portalu zarządzania Azure](https://manage.windowsazure.com) (https://manage.windowsazure.com) przejdź do węzła **Active Directory** i wybierz swój katalog.
 
@@ -28,12 +28,12 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 6.  Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Urządzenia z systemem Windows 10 tych użytkowników zostaną automatycznie zarejestrowane w usłudze Microsoft Intune.
 
   - **Wszystkie**
-  - **Grupy**
+  - **GRUPY**
   - **Brak**
 
 7. Wybierz polecenie **Zapisz**.
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
