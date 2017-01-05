@@ -1,6 +1,6 @@
 ---
-title: Unenroll your device from Intune if you declined "Terms of Use" | Microsoft Intune
-description: "Zawiera opis sposobu wyrejestrowania urządzenia z systemem Android z usługi Intune, jeśli odrzucono warunki użytkowania i nie można zalogować się do aplikacji Portal firmy"
+title: Unenroll your device from Intune if you declined "Terms of Use" | Microsoft Docs
+description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -14,8 +14,8 @@ ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 6303400645bf26ede733413fe2dabdb360e3bafb
+ms.sourcegitcommit: 1d91847166f0e2da22a322ac1a1483266b46d8ed
+ms.openlocfilehash: e8dbf10fcc649bd71ac33bd07d1d79f825a91f73
 
 
 ---
@@ -43,6 +43,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witry
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
