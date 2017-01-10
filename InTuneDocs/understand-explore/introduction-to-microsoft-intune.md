@@ -21,6 +21,9 @@ ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
 ---
 
 # <a name="what-is-intune"></a>Co to jest usługa Intune?
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Intune to oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmowych. Usługa Intune umożliwia:
 * zarządzanie urządzeniami przenośnymi używanymi przez pracowników do uzyskiwania dostępu do danych firmowych,
 * zarządzanie aplikacjami mobilnymi używanymi przez pracowników,

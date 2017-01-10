@@ -21,6 +21,8 @@ ms.openlocfilehash: 080d8f4fd4b6e1b53df860f4319b1c199d504c06
 
 # <a name="validating-your-mobile-application-management-setup"></a>Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Ten temat zawiera informacje dotyczące sprawdzania występowania problemów po skonfigurowaniu zarządzania aplikacjami mobilnymi (MAM). Te wskazówki dotyczą zasad zarządzania aplikacjami mobilnymi w witrynie Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Sprawdzanie pod kątem objawów

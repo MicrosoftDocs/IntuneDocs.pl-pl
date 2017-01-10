@@ -20,6 +20,9 @@ ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
 ---
 
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Ten przewodnik oceny pokazuje, jak zarządzanie urządzeniami przenośnymi działa w usłudze Intune. Obejmuje on:
 - Rejestrowanie urządzenia przeznaczonego do zarządzania przez usługę Intune.
 - Tworzenie grup w celu zorganizowania użytkowników i urządzeń.
