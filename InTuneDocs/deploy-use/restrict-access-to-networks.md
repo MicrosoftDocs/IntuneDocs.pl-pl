@@ -1,5 +1,5 @@
 ---
-title: "Ograniczanie dostępu do sieci na platformie Cisco ISE | Microsoft Intune"
+title: "Ograniczanie dostępu do sieci na platformie Cisco ISE | Microsoft Docs"
 description: "Użyj platformy Cisco ISE razem z usługą Intune, aby urządzenia musiały być zarejestrowane w usłudze Intune i zgodne z zasadami, zanim będą mogły uzyskać dostęp do sieci Wi-Fi i VPN kontrolowanych przez platformę Cisco ISE."
 keywords: 
 author: robstackmsft
@@ -14,8 +14,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1dd3fde8119b54f574265c2ca9cf62cee9e77b01
-ms.openlocfilehash: bd6307cd8ff465bbce3de124ffdb444333d12efe
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9eb0ea307702f3ae07db4d5c5a82d03f13b727fb
 
 
 ---
@@ -64,7 +64,7 @@ b. Wybierz ikonę blokady &gt; **Więcej informacji o**.
 > Sprawdź datę wygaśnięcia certyfikatu, ponieważ po jej upłynięciu trzeba będzie wyeksportować i zaimportować nowy certyfikat.
 
 
-### <a name="obtain-a-selfsigned-cert-from-ise"></a>Uzyskiwanie certyfikatu z podpisem własnym ze środowiska ISE 
+### <a name="obtain-a-self-signed-cert-from-ise"></a>Uzyskiwanie certyfikatu z podpisem własnym ze środowiska ISE 
 
 1.  W konsoli ISE przejdź do pozycji **Administracja** > **Certyfikaty** > **Certyfikaty systemowe** > **Generuj certyfikat z podpisem własnym**.  
 2.       Wyeksportuj certyfikat z podpisem własnym.
@@ -100,7 +100,7 @@ Upewnij się, że cały tekst jest jednym wierszu
 |Punkt końcowy tokenu OAuth 2.0|Token Issuing URL (Adres URL wystawiania tokenów)|
 |Aktualizowanie kodu przy użyciu identyfikatora klienta|Identyfikator klienta|
 
-### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4. Przekazywanie certyfikatu z podpisem własnym ze środowiska ISE do aplikacji ISE utworzonej w usłudze Azure AD
+### <a name="step-4-upload-the-self-signed-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Krok 4. Przekazywanie certyfikatu z podpisem własnym ze środowiska ISE do aplikacji ISE utworzonej w usłudze Azure AD
 1.     Pobierz wartość certyfikatu i odcisk palca zakodowane w standardzie base64 z pliku cer certyfikatu publicznego X509. W tym przykładzie zastosowano program PowerShell:
    
       
@@ -189,6 +189,6 @@ Istnieje również [dostępny do pobrania zestaw instrukcji dotyczących rejestr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

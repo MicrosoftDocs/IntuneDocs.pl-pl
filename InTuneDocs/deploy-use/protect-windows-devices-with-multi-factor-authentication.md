@@ -1,11 +1,11 @@
 ---
-title: "Uwierzytelnianie wieloskładnikowe dla systemu Windows | Microsoft Intune"
+title: "Uwierzytelnianie wieloskładnikowe dla systemu Windows | Microsoft Docs"
 description: "Usługę Intune można zintegrować z usługą uwierzytelniania wieloskładnikowego (MFA), aby zabezpieczyć zasoby firmowe."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/15/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 1bfd17f9fcc73049254bc77351eae48da874fb4c
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: cc60ffb2cd7a1d0cad141712ba7e2341954b1f02
 
 
 ---
 
 # <a name="protect-windows-devices-with-multi-factor-authentication"></a>Protect Windows devices with multi-factor authentication
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługę Microsoft Intune można zintegrować z usługą MFA, aby zabezpieczyć zasoby firmowe. Usługa MFA wymaga — oprócz nazw użytkowników i haseł— składników uwierzytelniania, takich jak uwierzytelnianie tekstowe. Usługa Intune obsługuje korzystanie z usługi MFA w przypadku rejestracji urządzeń z systemem Windows 8.1 lub nowszym, Windows Phone 8.1 lub Windows 10 Desktop i Mobile.
+
+>[!NOTE]
+>
+>Użycie usługi MFA na serwerze usługi AD FS może być wymagane dla poszczególnych użytkowników lub grup.  
+
 
 ## <a name="on-premises-infrastructure-requirements-for-adfs-mfa"></a>Wymagania usługi MFA w usłudze AD FS dotyczące infrastruktury lokalnej
 Aby skonfigurować uwierzytelnianie wieloskładnikowe, konieczna jest:
@@ -40,6 +48,7 @@ Wszystkie wymienione powyżej serwery muszą spełniać wymagania systemowe poda
 Jeśli organizacja ma lokalną infrastrukturę IT, która obejmuje domenę usługi Active Directory z usługami Active Directory Federation Services (AD FS), możesz skonfigurować usługę MFA na serwerze federacyjnym, a następnie włączyć je na potrzeby rejestracji w usłudze Intune. Konfigurując usługę MFA w usłudze Intune, umożliwiasz użytkownikom jednokrotne uwierzytelnianie podczas rejestracji, a następnie używanie zasobów firmy bez konieczności użycia usługi MFA za każdym razem.
 
 >[!NOTE]
+>
 >Użycie usługi MFA na serwerze usługi AD FS może być wymagane dla poszczególnych użytkowników lub grup.  
 
 #### <a name="mfa-without-intune"></a>Usługa MFA bez usługi Intune
@@ -60,6 +69,6 @@ Aby dowiedzieć się, jak włączyć usługę MFA w usługach AD FS, zobacz [Zar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO5-->
 
 

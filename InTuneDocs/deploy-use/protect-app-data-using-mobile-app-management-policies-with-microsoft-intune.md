@@ -1,9 +1,9 @@
 ---
-title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM) | Microsoft Intune"
+title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM) | Microsoft Docs"
 description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomagać w ochronie danych firmowych, zapobieganiu utracie danych i przechowywaniu osobno informacji osobistych i służbowych."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,13 +14,15 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 66a5814ba34f9fd15460512b0a6d40566ec33401
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: c2293306e847148ff7413be3e9eeafb8349e33fe
 
 
 ---
 
 # <a name="protect-app-data-using-mobile-application-management-policies-with-microsoft-intune"></a>Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="how-you-can-protect-app-data"></a>Jak możesz chronić dane aplikacji
 Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych. Umożliwiając pracownikom wydajną pracę, warto jednocześnie zapobiegać nieumyślnej lub umyślnej utracie danych.  Dobrze też mieć możliwość ochrony danych firmowych, do których pracownicy uzyskują dostęp za pomocą urządzeń, którymi nie zarządzamy.
@@ -130,6 +132,6 @@ Wszystkie aplikacje mobilne pakietu Office obsługują dostęp dla wielu tożsam
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

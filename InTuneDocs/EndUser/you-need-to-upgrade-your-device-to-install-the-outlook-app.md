@@ -1,11 +1,11 @@
 ---
-title: "Należy uaktualnić urządzenie w celu zainstalowania aplikacji Outlook | Microsoft Intune"
+title: "Należy uaktualnić urządzenie | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,28 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vadona
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 9219829cf73cbd141a165f88b30f564f857e2b5d
+ms.sourcegitcommit: 1bf478eae73bb7385369e4d5cde26b937831e665
+ms.openlocfilehash: 8ef336e58c7b1d995d314202b5530d2f6b2ff138
 
 
 ---
 
 # <a name="you-need-to-upgrade-your-device-to-install-the-outlook-app"></a>Należy uaktualnić urządzenie w celu zainstalowania aplikacji Outlook
 
-Jeśli chcesz pobrać aplikację poczty e-mail programu Outlook i zostanie wyświetlony komunikat z informacją, że wersja systemu operacyjnego urządzenia Android lub iOS jest niższa niż minimalna wymagana wersja, należy uaktualnić urządzenie przed kontynuowaniem.
+Aplikacja Outlook ułatwia milionom użytkowników łączenie wszystkich kont e-mail, kalendarzy i plików w jednym wygodnym miejscu dla urządzeń z systemami [iOS](https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596?mt=8) i [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook).
 
-Aby uaktualnić urządzenie, skorzystaj z poniższych instrukcji odpowiednich dla typu używanego urządzenia:
+Gdy próbujesz pobrać program Outlook, zamiast instalacji może pojawić się komunikat na urządzeniu z informacją o tym, że system operacyjny urządzenia jest nieaktualny. Oznacza to, że musisz uaktualnić urządzenie w celu zainstalowania programu Outlook.
 
-## <a name="to-upgrade-your-android-device"></a>Aby uaktualnić urządzenie z systemem Android
+## <a name="if-you-have-an-android-device"></a>Jeśli masz urządzenie z systemem Android
 Przejdź do pozycji **Ustawienia**, a następnie użyj opcji **aktualizacji** lub **aktualizacji systemu**.
 
-## <a name="to-upgrade-your-ios-device"></a>Aby uaktualnić urządzenie z systemem iOS
-Wybierz pozycję **Ustawienia** &gt; **Ogólne** &gt; **Aktualizacja oprogramowania**.
+## <a name="if-you-have-an-ios-device"></a>Jeśli masz urządzenie z systemem iOS
+Naciśnij pozycje **Ustawienia**  >  **Ogólne**  >  **Uaktualnienia**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO5-->
 
 

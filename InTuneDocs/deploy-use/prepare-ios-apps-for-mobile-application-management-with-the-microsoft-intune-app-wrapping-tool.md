@@ -1,5 +1,5 @@
 ---
-title: "Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego aplikacje dostępnego w usłudze Intune | Microsoft Intune"
+title: "Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego aplikacje dostępnego w usłudze Intune | Microsoft Docs"
 description: "Ten temat zawiera informacje o sposobie opakowywania aplikacji systemu iOS bez konieczności modyfikacji kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi."
 keywords: 
 author: mtillman
@@ -14,34 +14,154 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 0eee40c3c3c6bdfc3da2e715ef7b46e8408ba319
+ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
+ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
 
 
 ---
 
 # <a name="prepare-ios-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune
 
-Za pomocą dostępnego w usłudze Microsoft Intune narzędzia opakowującego aplikacje dla systemu iOS można modyfikować działanie wewnętrznych aplikacji dla systemu iOS przez włączanie funkcji ochrony aplikacji w usłudze Intune bez konieczności zmieniania kodu aplikacji.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Narzędzie to jest aplikacją wiersza polecenia systemu Mac OS, tworzącą „otokę” dla aplikacji. Po przetworzeniu wybranej aplikacji można modyfikować jej funkcje, korzystając z [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) usługi Intune wdrożonych przez administratora IT.
+Za pomocą dostępnego w usłudze Microsoft Intune narzędzia opakowującego aplikacje dla systemu iOS można włączyć zasady ochrony aplikacji w usłudze Intune dla wewnętrznych aplikacji systemu iOS bez konieczności zmieniania kodu aplikacji.
+
+Narzędzie to jest aplikacją wiersza polecenia systemu Mac OS, tworzącą „otokę” dla aplikacji. Po przetworzeniu aplikacji można zmienić funkcje aplikacji przez wdrożenie w niej [zasad ochrony aplikacji](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 Aby pobrać narzędzie, zobacz temat [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) (Narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS) w serwisie GitHub.
 
 
 
-## <a name="fulfill-the-prerequisites-for-the-app-wrapping-tool"></a>Spełnianie wymagań wstępnych dotyczących narzędzia opakowującego aplikacje
-Aby dowiedzieć się więcej na temat uzyskiwania wymagań wstępnych, zobacz wpis [How to obtain prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) (Jak uzyskiwać wymagania wstępne dla narzędzia opakowującego aplikacje dla systemu iOS) na blogu.
+## <a name="general-prerequisites-for-the-app-wrapping-tool"></a>Ogólne wymagania wstępne dotyczące narzędzia opakowującego aplikacje
 
-|Wymaganie|Więcej informacji|
-|---------------|--------------------------------|
-|Obsługiwany system operacyjny i zestaw narzędzi | Narzędzie opakowujące aplikacje można uruchomić na komputerze Mac z systemem OS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi XCode w wersji 5 lub nowszej.|
-|Certyfikat podpisywania i profil inicjowania obsługi administracyjnej | Wymagany jest profil inicjowania obsługi administracyjnej oraz certyfikat podpisywania firmy Apple. Przejrzyj [dokumentację dla deweloperów firmy Apple](https://developer.apple.com/).|
-|Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje  |Aplikacje muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania. Za pomocą tego narzędzia nie można przetwarzać aplikacji ze sklepu Apple. Aplikacje muszą być napisane dla systemu iOS w wersji 8.0 lub nowszej. Aplikacje muszą również mieć format PIE (Position Independent Executable). Więcej informacji na temat formatu PIE zawiera dokumentacja dla deweloperów firmy Apple. Ponadto aplikacja musi mieć rozszerzenie **app** lub **ipa**.|
-|Aplikacje, które nie mogą być przetwarzane przez narzędzie | Aplikacje zaszyfrowane, aplikacje niepodpisane i aplikacje z rozszerzonymi atrybutami plików.|
-|Ustawianie uprawnień dla aplikacji|Przed opakowaniem aplikacji należy ustawić uprawnienia, które zapewnią aplikacji dodatkowe możliwości poza tymi, które są zwykle przyznawane. Instrukcje można znaleźć w artykule [Ustawienie uprawnień dla aplikacji](#setting-app-entitlements).|
+Przed uruchomieniem narzędzia opakowującego aplikacje należy spełnić pewne ogólne wymagania wstępne:
 
-## <a name="install-the-app-wrapping-tool"></a>Instalacja narzędzia opakowującego aplikacje
+* Pobierz [narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) z witryny GitHub.
+
+* Komputer z systemem macOS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi Xcode w wersji 5 lub nowszej.
+
+* Aplikacje wejściowe systemu iOS muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania.
+
+  * Plik aplikacji wejściowej musi mieć rozszerzenie **ipa** lub **app**.
+
+  * Aplikacja wejściowa musi być skompilowana dla systemu iOS 8.0. lub nowsza wersja.
+
+  * Aplikacja wejściowa nie może być zaszyfrowana.
+
+  * Aplikacja wejściowa nie może mieć rozszerzonych atrybutów pliku.
+
+  * Aplikacja wejściowa musi mieć ustawione uprawnienia, aby mogła zostać przetworzona przez narzędzie opakowujące aplikacje usługi Intune. [Uprawnienia](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) zapewniają aplikacji dodatkowe możliwości poza tymi, które są zwykle przyznawane. Instrukcje można znaleźć w artykule [Ustawienie uprawnień dla aplikacji](#setting-app-entitlements).
+
+## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Wymagania wstępne dotyczące narzędzia opakowującego aplikacje dla deweloperów firmy Apple
+
+
+Aby można było rozpowszechniać opakowane aplikacje wyłącznie wśród użytkowników w organizacji, musisz mieć konto w ramach programu [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) i jednostki podpisywania aplikacji połączone z kontem dewelopera firmy Apple.
+
+Aby dowiedzieć się więcej na temat wewnętrznego rozpowszechniania aplikacji systemu iOS wśród użytkowników organizacji, przeczytaj oficjalny przewodnik [rozpowszechniania aplikacji w ramach programu Apple Developer Enterprise Program](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingEnterpriseProgramApps/DistributingEnterpriseProgramApps.html#//apple_ref/doc/uid/TP40012582-CH33-SW1).
+
+Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne następujące elementy:
+
+* Konto dewelopera w ramach programu Apple Developer Enterprise Program.
+
+* Certyfikat podpisywania dystrybucji wewnętrznej i tymczasowej z prawidłowym identyfikatorem zespołu.
+
+  * Jako parametru narzędzia opakowującego aplikacje usługi Intune należy użyć skrótu SHA1 certyfikatu podpisywania.
+
+
+* Profil aprowizacji dystrybucji wewnętrznej.
+
+### <a name="steps-to-create-an-apple-developer-enterprise-account"></a>Procedura tworzenia konta programu Apple Developer Enterprise
+1. Przejdź do [witryny programu Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
+
+2. W prawym górnym rogu strony kliknij przycisk **Enroll** (Zarejestruj).
+
+3. Przeczytaj listę kontrolną z wymaganiami dotyczącymi rejestracji. Kliknij przycisk **Start Your Enrollment** (Rozpocznij rejestrację) u dołu strony.
+
+4. **Zaloguj się** przy użyciu konta Apple ID organizacji. Jeśli nie masz konta, kliknij przycisk **Create Apple ID** (Utwórz konto Apple ID).
+
+5. Wybierz wartość w polu **Entity Type** (Typ jednostki) i kliknij przycisk **Continue** (Kontynuuj).
+
+6. Wypełnij formularz z informacjami o organizacji. Kliknij przycisk **Kontynuuj**. Firma Apple skontaktuje się z Tobą w celu potwierdzenia, że masz uprawnienia do rejestracji organizacji.
+
+8. Po zakończeniu weryfikacji kliknij przycisk **Agree to License** (Akceptuj postanowienia licencyjne).
+
+9. Po zaakceptowaniu postanowień licencji **kup i aktywuj program**, aby zakończyć.
+
+10. Jeśli jesteś agentem zespołu (osobą, która dołącza do programu Apple Developer Enterprise Program w imieniu organizacji), najpierw zaproś członków zespołu i przypisz role, aby utworzyć zespół. Aby dowiedzieć się, jak zarządzać zespołem, zapoznaj się z dokumentacją firmy Apple dotyczącą [zarządzania zespołem konta dewelopera](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1).
+
+### <a name="steps-to-create-an-apple-signing-certificate"></a>Procedura tworzenia certyfikatu podpisywania firmy Apple
+
+1. Przejdź do [portalu dla deweloperów firmy Apple](https://developer.apple.com/).
+
+2. W prawym górnym rogu strony kliknij pozycję **Account** (Konto).
+
+3. **Zaloguj się** za pomocą konta Apple ID organizacji.
+
+4. Kliknij pozycję **Certificates, IDs & Profiles** (Certyfikaty, identyfikatory i profile).
+
+  ![Portal dla deweloperów firmy Apple](../media/app-wrapper/iOS-signing-cert-1.png)
+
+5. Kliknij kartę ![znak plus w portalu dla deweloperów firmy Apple](../media/app-wrapper/iOS-signing-cert-2.png) w prawym górnym rogu, aby dodać certyfikat systemu iOS.
+
+6. Utwórz certyfikat **wewnętrzny i tymczasowy** w obszarze **Production** (Produkcja).
+
+  ![Wybieranie certyfikatu wewnętrznego i tymczasowego](../media/app-wrapper/iOS-signing-cert-3.png)
+
+7. Kliknij pozycję **Next** (Dalej) w dolnej części strony.
+
+8. Przeczytaj instrukcje dotyczące tworzenia **żądania podpisania certyfikatu (CSR)** za pomocą aplikacji Dostęp do pęku kluczy na komputerze z systemem MacOS.
+
+  ![Przeczytaj instrukcje dotyczące tworzenia żądania CSR](../media/app-wrapper/iOS-signing-cert-4.png)
+
+9. Postępuj zgodnie z powyższymi instrukcjami, aby utworzyć żądanie podpisania certyfikatu. Na komputerze z systemem MacOS uruchom aplikację **dostępu łańcucha kluczy**.
+
+10. W menu systemu macOS u góry ekranu przejdź do pozycji **Dostęp do pęku kluczy > Asystent certyfikatów > Wniosek o wydanie certyfikatu z urzędu certyfikacji**.  
+
+  ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](../media/app-wrapper/iOS-signing-cert-5.png)
+
+11. Postępuj zgodnie z powyższymi instrukcjami w witrynie dla deweloperów firmy Apple dotyczącymi tworzenia pliku CSR. Zapisz plik CSR na komputerze z systemem macOS.
+
+  ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](../media/app-wrapper/iOS-signing-cert-6.png)
+
+12. Wróć do witryny dla deweloperów firmy Apple. Kliknij przycisk **Kontynuuj**. Następnie przekaż plik CSR.
+
+13. Firma Apple wygeneruje certyfikat podpisywania. Pobierz i zapisz go w łatwej do zapamiętania lokalizacji na komputerze z systemem macOS.
+
+  ![Pobieranie certyfikatu podpisywania](../media/app-wrapper/iOS-signing-cert-7.png)
+
+14. Kliknij dwukrotnie pobrany właśnie plik certyfikatu, aby dodać certyfikat do łańcucha kluczy.
+
+15. Ponownie otwórz aplikację **Dostęp do pęku kluczy**. Znajdź certyfikat. W tym celu wyszukaj wyraz **iPhone** na prawym górnym pasku wyszukiwania w oknie aplikacji Dostęp do pęku kluczy. Kliknij element prawym przyciskiem myszy, aby wyświetlić menu, i kliknij pozycję **Informacje**.
+
+  ![Dodawanie certyfikatu do łańcucha kluczy](../media/app-wrapper/iOS-signing-cert-8.png)
+
+16. Zostanie wyświetlone okno z informacjami. Przewiń do dołu i przejdź do etykiety **Skróty kluczy**. Skopiuj ciąg **SHA1**, aby użyć go jako parametru -c narzędzia opakowującego aplikacje.
+
+  ![Dodawanie certyfikatu do łańcucha kluczy](../media/app-wrapper/iOS-signing-cert-9.png)
+
+
+
+### <a name="steps-to-create-an-in-house-distribution-provisioning-profile"></a>Procedura tworzenia profilu aprowizacji dystrybucji wewnętrznej
+
+1. Wróć do [portalu konta dewelopera firmy Apple](https://developer.apple.com/account/) i **zaloguj się** przy użyciu konta Apple ID organizacji.
+
+2. Kliknij pozycję **Certificates, IDs & Profiles** (Certyfikaty, identyfikatory i profile).
+
+3. Kliknij kartę ![znak plus w portalu dla deweloperów firmy Apple](../media/app-wrapper/iOS-signing-cert-2.png) w prawym górnym rogu, aby dodać profil aprowizacji systemu iOS.
+
+4. Utwórz profil aprowizacji **In House** (Wewnętrzny) w obszarze **Distribution** (Dystrybucja).
+
+  ![Wybieranie wewnętrznego profilu aprowizacji](../media/app-wrapper/iOS-provisioning-profile-1.png)
+
+5. Kliknij przycisk **Kontynuuj**. Upewnij się, że wcześniej wygenerowany certyfikat podpisywania zostanie połączony z profilem aprowizacji.
+
+6. Wykonaj procedurę pobierania profilu (z rozszerzeniem mobileprovision) na komputer z systemem macOS.
+
+7. Zapisz plik w łatwej do zapamiętania lokalizacji. Ten plik zostanie użyty jako parametr -p podczas korzystania z narzędzia opakowującego aplikacje.
+
+
+
+## <a name="download-the-app-wrapping-tool"></a>Pobieranie narzędzia opakowującego aplikacje
 
 1.  Pobierz pliki narzędzia opakowującego aplikacje z serwisu [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) na komputer z systemem macOS.
 

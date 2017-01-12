@@ -1,11 +1,11 @@
 ---
-title: "Migracja do usługi Intune | Microsoft Intune"
-description: 
+title: "Migracja do usługi Intune | Microsoft Docs"
+description: "Migracja do usługi Intune z istniejącego rozwiązania do zarządzania Enterprise Mobility może zostać wykonana zgodnie z poniższą ogólną sekwencją kroków."
 keywords: 
-author: jeffgilb
-ms.author: jeffgilb
-manager: jeffgilb
-ms.date: 11/22/2016
+author: andredm7
+ms.author: andredm
+manager: angrobe
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,15 @@ ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: c5adeb2164a55d029c9d7f86490092a72f04f126
+ms.sourcegitcommit: d92b8b03c1c71898a15b1d1f0a1ee5e1f288dc2e
+ms.openlocfilehash: 759e5b7d04ccbbfb338d182bad03e0b0218cdeca
 
 
 ---
 
 # <a name="migrate-to-intune"></a>Migracja do usługi Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Migracja do usługi Intune z istniejącego rozwiązania do zarządzania Enterprise Mobility może być wykonana zgodnie z poniższą ogólną sekwencją kroków:
 
@@ -74,6 +75,6 @@ W celu uzyskania kopii całego przewodnika do pobrania odwiedź witrynę [Galeri
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 
