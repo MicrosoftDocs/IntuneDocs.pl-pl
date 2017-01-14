@@ -1,5 +1,5 @@
 ---
-title: "Korzystanie z witryny Portal firmy w usłudze Intune | Microsoft Intune"
+title: "Korzystanie z witryny sieci Web Portal firmy w usłudze Intune | Microsoft Docs"
 description: "Opis witryny sieci Web portalu firmy oraz linki do czynności dla zadań, które można wykonać w witrynie sieci Web"
 keywords: 
 author: barlanmsft
@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
+searchScope:
+- Company Portal
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
-ms.openlocfilehash: 695a419ea05b6d3ff93cfe45eae3d80012f44568
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: d10cc421dc6fe422b7a2c26b4902997c8c6b2e61
 
 
 ---
@@ -46,11 +48,11 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 W **witrynie sieci Web Portalu firmy** można wykonać większość zadań, które można wykonać za pomocą **aplikacji Portal firmy** instalowanej na urządzeniu. Zobacz poniższe strony, aby uzyskać linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach:
 
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](using-your-ios-or-macOS-device-with-intune.md)
 - [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

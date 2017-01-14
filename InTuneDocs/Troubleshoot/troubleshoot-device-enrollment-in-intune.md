@@ -1,11 +1,11 @@
 ---
-title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Intune"
+title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Docs"
 description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/20/2016
+ms.date: 12/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 998c24744776e0b04c9201ab44dfcdf66537d523
-ms.openlocfilehash: 9c5963f1413e1cd9f119186f47f46c7f7f16720d
+ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
+ms.openlocfilehash: fa03c8c41fe60b469b66e640beb2143679d5ad41
 
 
 ---
@@ -29,7 +29,7 @@ Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją u
 
 Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
 
--   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md)
+-   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
 -   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
@@ -58,7 +58,7 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 2.  W konsoli administracyjnej usługi Intune w obszarze Administracja\Zarządzanie urządzeniami przenośnymi\Reguły rejestracji sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 15.
 
-Użytkownicy urządzeń przenośnych mogą usuwać urządzenia, korzystając z następującego adresu URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
+<!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
 Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directory.
 
@@ -86,7 +86,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 >
 > Konto użytkownika, które jest dodawane do grupy Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady Dostęp warunkowy.
 
-### <a name="company-portal-emporarily-unavailable"></a>Aplikacja Portal firmy jest tymczasowo niedostępna
+### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
 **Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
 **Rozwiązanie:**
@@ -317,9 +317,9 @@ Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyś
 
 
 ### <a name="other-ios-enrollment-errors"></a>Inne błędy rejestracji urządzeń z systemem iOS
-Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
+Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune/enduser/using-your-iOS-or-macOS-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
 
-## <a name="pc-issues"></a>Problemy z komputerem PC
+## <a name="pc--issues"></a>Problemy z komputerem PC
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Maszyna jest już zarejestrowana — błąd hr 0x8007064c
 **Problem:** Rejestracja kończy się niepowodzeniem z powodu błędu **Maszyna jest już zarejestrowana**. Dziennik rejestracji zawiera błąd **hr 0x8007064c**.
@@ -373,6 +373,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

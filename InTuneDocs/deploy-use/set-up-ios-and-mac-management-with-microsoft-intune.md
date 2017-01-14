@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie zarządzania systemem iOS i komputerami Mac | Microsoft Intune"
+title: "Konfigurowanie zarządzania systemem iOS i komputerami Mac | Microsoft Docs"
 description: "Włącz w usłudze Microsoft Intune zarządzanie urządzeniami mobilnymi (MDM) dla urządzeń z systemem iOS, w tym urządzeń iPad i iPhone, a także urządzeń z systemem Mac OS X."
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 641d2db2bfb49ce6c4f88d823188a714e61f683c
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: 594b6b66a4c756155e958815b926674e63f07bb5
 
 
 ---
 
 # <a name="set-up-ios-and-mac-device-management"></a>Konfigurowanie zarządzania systemem iOS i komputerami Mac
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi typu iPad, iPhone oraz urządzeniami z systemem Mac OS X i zapewnia użytkownikom dostęp do poczty e-mail oraz aplikacji firmy. Aby zarządzać urządzeniami z systemem iOS i komputerami Mac, wymagany jest certyfikat usługi Apple Push Notification service (APNs). Po dodaniu certyfikatu do usługi Intune użytkownicy mogą zainstalować aplikację Portal firmy, aby zarejestrować swoje urządzenia, lub administrator może skonfigurować [zarządzanie urządzeniami z systemem iOS należącymi do firmy](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Skonfiguruj usługę**<br>
@@ -48,7 +51,7 @@ Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi typu iPad, iPh
 
     Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
     - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-    - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemami iOS i Mac](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md)
+    - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemami iOS i Mac](../enduser/using-your-ios-or-macOS-device-with-intune.md)
 
 Jeśli Twoja firma lub organizacja zakupi dla użytkowników urządzenia z systemem iOS, te urządzenia również będzie można zarejestrować do zarządzania jako [urządzenia z systemem iOS należące do firmy](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
@@ -57,6 +60,6 @@ Jeśli Twoja firma lub organizacja zakupi dla użytkowników urządzenia z syste
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

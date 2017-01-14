@@ -1,11 +1,11 @@
 ---
-title: Dostosowywanie Portalu firmy | Microsoft Intune
+title: Dostosowywanie aplikacji Portal firmy | Microsoft Docs
 description: "Portal firmy w usłudze Intune umożliwia użytkownikom wykonywanie typowych zadań, takich jak rejestrowanie urządzeń, instalowanie aplikacji i wyszukiwanie informacji działu IT."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 12/13/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: eb4a9f01-f857-4563-ab6f-5d0d7dfa659d
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 04cccd410417dca4477c0d6cd61b0940dda8c389
+ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
+ms.openlocfilehash: f103a919d0708c2925cb6af4cf7231ed05029e46
 
 
 ---
 
 # <a name="customize-the-company-portal"></a>Dostosuj portal firmy
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Portal firmy usługi Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT.
 
 Portal firmy usługi Intune zapewnia użytkownikom dostęp do firmowych danych i aplikacji. Portal firmy jest dostępny w dwóch formach:
 
--   **Aplikacja Portal firmy:** aplikacja dostępna na urządzeniach zarządzanych za pomocą usługi Intune. Dowiedz się więcej o aplikacjach Portal firmy dla systemów [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) i [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
+-   **Aplikacja Portal firmy:** aplikacja dostępna na urządzeniach zarządzanych za pomocą usługi Intune. Dowiedz się więcej o aplikacjach Portal firmy dla systemów [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune) i [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
 - **Witryna sieci Web Portal firmy:** witryna sieci Web, która umożliwia użytkownikom końcowym wykonywanie większości zadań, które można wykonywać w aplikacji Portal firmy. Adres URL witryny Portal firmy w usłudze Intune to [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Dowiedz się więcej o tej witrynie sieci Web w artykule [Using the Intune Company Portal website](/Intune/EndUser/using-the-intune-company-portal-website) (Korzystanie z witryny sieci Web Portal firmy usługi Intune).
@@ -42,11 +45,6 @@ Niektóre z zadań, które użytkownicy mogą wykonać w portalu firmy, to:
 -   Zdalne blokowanie swojego urządzenia
 -   Pobieranie oprogramowania wdrażanego w organizacji
 -   Kontaktowanie się z działem IT w celu uzyskania pomocy technicznej
-
-> [!NOTE]
-> Aplikacja Portal firmy jest jeszcze niedostępna w niektórych krajach.
-> __System iOS__: Aplikacja Portal firmy dla systemu iOS jest opublikowana we [wszystkich dostępnych regionach](https://go.microsoft.com/fwlink/?linkid=831284) dla sklepu Apple iOS App Store.
-> __System Android__: Aplikacja Portal firmy dla systemu Android nie jest obecnie dostępna w Chinach. W przypadku tych krajów alternatywnym rozwiązaniem jest [bezpośrednie ładowanie aplikacji Portal firmy w wersji dla systemu Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140).  
 
 ## <a name="customize-company-portal-settings"></a>Dostosowywanie ustawień aplikacji Portal firmy
 Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) jako administrator dzierżawy lub usługi, wybierz kolejno pozycje **Administracja** &gt; **Portal firmy**, a następnie skonfiguruj ustawienia aplikacji Portal firmy.
@@ -91,6 +89,6 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
