@@ -1,34 +1,38 @@
 ---
-title: "Wyłączanie zbierania danych użycia w systemie Android przez firmę Microsoft | Microsoft Intune"
+title: "Jak wyłączyć zbieranie danych przez firmę Microsoft | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: ca96e8d4aed005db46bdb468268e2f86e6e9e1d4
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: b2554e66150f8b6d61f184bf739750c482b3058e
 
 
 ---
 
-
 # <a name="turn-off-microsoft-usage-data-collection"></a>Wyłączanie zbierania danych użycia przez firmę Microsoft
-W celu ulepszania swoich produktów i usług firma Microsoft automatycznie zbiera anonimowe dane dotyczące niezawodności, wydajności i sposobu korzystania z aplikacji Portal firmy. Zbieranie tych danych na urządzeniu z systemem Android można wyłączyć za pomocą ustawienia **Dane użycia** w aplikacji Portal firmy. Administratorzy IT nie kontrolują zbierania tych danych i nie mogą zmienić wybranej wartości tego ustawienia.
+
+Firma Microsoft automatycznie zbiera określone dane dotyczące swoich produktów i usług. Robimy to w celu zwiększania niezawodności i wydajności naszych produktów, w tym aplikacji Portal firmy. Mimo że te dane są anonimizowane, niektórzy użytkownicy mogą nie czuć się komfortowo w związku z tym zbieraniem danych. Administrator IT nie kontroluje zbierania tych danych i nie może zmienić wybranej wartości tego ustawienia.
+
+Aby wyłączyć zbieranie tych danych na urządzeniu z systemem Android, otwórz ustawienie **Dane użycia** w aplikacji Portal firmy.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

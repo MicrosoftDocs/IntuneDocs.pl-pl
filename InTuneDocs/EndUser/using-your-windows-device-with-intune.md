@@ -1,5 +1,5 @@
 ---
-title: "Korzystanie z urządzenia z systemem Windows i usługi Intune | Microsoft Intune"
+title: "Korzystanie z urządzenia z systemem Windows i usługi Intune | Microsoft Docs"
 description: "Lista linków do zadań, które można wykonać na urządzeniu z systemem Windows, gdy urządzenie zostało zarejestrowane w usłudze Intune"
 keywords: 
 author: barlanmsft
@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
+searchScope:
+- Company Portal
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 05eb711e65e6db13e480a966849e7f39d3ec8c71
+ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
+ms.openlocfilehash: a3433e1976063513ee836189738ff02d85d40044
 
 
 ---
@@ -52,15 +54,15 @@ Informacje przedstawione w tej sekcji ułatwiają wykonywanie akcji po zarejestr
 
 Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, które mogą występować w przypadku zarejestrowania urządzenia z systemem Windows w usłudze Intune.
 
-- [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](device-doesnt-have-the-required-minimum-operating-system-version-windows.md)
-- [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](device-doesnt-comply-with-maximum-operating-system-version-windows.md)
-- [Na urządzeniu nie jest włączona funkcja BitLocker](device-doesnt-have-bitlocker-enabled-windows.md)
-- [Na urządzeniu nie jest włączone oprogramowanie chroniące przed złośliwym kodem](device-doesnt-have-antimalware-software-enabled-windows.md)
-- [Na urządzeniu nie jest włączony bezpieczny rozruch](device-doesnt-have-secure-boot-enabled-windows.md)
-- [Na urządzeniu nie jest włączona integralność kodu](device-doesnt-have-code-integrity-enabled-windows.md)
+- [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](you-need-to-update-your-windows-device.md)
+- [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](your-windows-version-isnt-yet-supported.md)
+- [Na urządzeniu nie jest włączona funkcja BitLocker](you-need-to-enable-windows-encryption.md)
+- [Na urządzeniu nie jest włączone oprogramowanie chroniące przed złośliwym kodem](your-device-needs-antimalware-software.md)
+- [Na urządzeniu nie jest włączony bezpieczny rozruch](you-need-to-enable-secure-boot-windows.md)
+- [Na urządzeniu nie jest włączona integralność kodu](you-need-to-enable-code-integrity.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

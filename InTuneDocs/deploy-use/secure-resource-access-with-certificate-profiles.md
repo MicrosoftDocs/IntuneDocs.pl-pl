@@ -1,5 +1,5 @@
 ---
-title: "Profile certyfikatów zapewniające dostęp do zasobów | Microsoft Intune"
+title: "Profile certyfikatów zapewniające dostęp do zasobów | Microsoft Docs"
 description: "Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 35d08100b4332cc63667a401143c17972225a908
-ms.openlocfilehash: b64260fd44e5c3fd0fb80e0dab4d75bd5c4eb305
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9cf53cb240ba14317fbb680ad4f4c40c8320506d
 
 
 ---
 
 # <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz zabezpieczyć dostęp przy użyciu certyfikatu zainstalowanego na urządzeniu każdego użytkownika. Oto jak to działa:
 
 1. Upewnij się, że jest dostępna właściwa infrastruktura certyfikatu, zgodna z opisem w tematach [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) i [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md).
@@ -44,7 +47,7 @@ Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem si
 
   Użyj **profilu certyfikatu protokołu SCEP** dla urządzeń z następującymi platformami:
     -   System Mac OS X 10.9 lub nowszy
-    -   Windows Phone 8,1 
+    -   Windows Phone 8,1
 
 Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfikatu należy go skojarzyć z utworzonym **profilem zaufanego certyfikatu głównego**.
 
@@ -61,6 +64,6 @@ Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfik
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

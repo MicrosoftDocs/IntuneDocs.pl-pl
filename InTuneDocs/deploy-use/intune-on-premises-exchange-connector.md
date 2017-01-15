@@ -1,5 +1,5 @@
 ---
-title: Program Exchange Connector dla lokalnego programu EAS | Microsoft Intune
+title: Program Exchange Connector dla lokalnego programu EAS | Microsoft Docs
 description: "Użyj narzędzia Connector, aby umożliwić komunikację między konsolą administracyjną usługi Intune a lokalnym serwerem Exchange na potrzeby funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync."
 keywords: 
 author: andredm7
@@ -14,13 +14,15 @@ ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d50a5751a5afd987196336e9443dc5a429a283fd
-ms.openlocfilehash: 58c5ab6b506695fb5b0f7556dc1deac39580f59b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1b74d19762a81313325eac27cab50a144a569620
 
 
 ---
 
 # <a name="install-the-intune-on-premises-exchange-connector"></a>Instalowanie programu Intune On-premises Exchange Connector
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 
 Aby skonfigurować połączenie, które umożliwia usłudze Microsoft Intune komunikację z serwerem Exchange hostującym skrzynki pocztowe używane na urządzeniach przenośnych, musisz pobrać i skonfigurować narzędzie On-Premises Exchange Connector za pomocą konsoli administracyjnej usługi Intune. W ramach jednej subskrypcji usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu.

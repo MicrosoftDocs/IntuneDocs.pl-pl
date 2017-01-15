@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie infrastruktury certyfikatów dla profilu PFX | Microsoft Intune"
+title: "Konfigurowanie infrastruktury certyfikatów dla profilu PFX | Microsoft Docs"
 description: "Tworzenie i wdrażanie profilów certyfikatów PFX."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1f37a2ba2e634fb75058d33eaaccf3aa5845b0
-ms.openlocfilehash: 8fc1cc718fd0edae8b8ec4a0a8dc25487eafda2b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 12773352970deeacf30b1336a4e560e08b400ee3
 
 
 
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurowanie infrastruktury certyfikatu
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tym temacie opisano elementy potrzebne do utworzenia i wdrożenia profilów certyfikatów PFX.
 
 Aby przeprowadzać uwierzytelnianie oparte na certyfikatach w organizacji, należy zastosować urząd certyfikacji przedsiębiorstwa.
@@ -31,7 +34,7 @@ Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
 
 -  Łącznik certyfikatów usługi Intune uruchamiany na komputerze, który może komunikować się z urzędem certyfikacji.
 
-## <a name="onpremises-infrastructure-description"></a>Opis infrastruktury lokalnej
+## <a name="on-premises-infrastructure-description"></a>Opis infrastruktury lokalnej
 
 
 -    **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji sieci Web) muszą należeć do Twojej domeny usługi Active Directory.
@@ -65,7 +68,7 @@ Aby można było skonfigurować profile certyfikatów, należy najpierw wykonać
 - **Zadanie 1** — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji.
 - **Zadanie 2** — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune.
 
-### <a name="task-1-configure-certificate-templates-on-the-certification-authority"></a>Zadanie 1 — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
+### <a name="task-1---configure-certificate-templates-on-the-certification-authority"></a>Zadanie 1 — Konfigurowanie szablonów certyfikatu w urzędzie certyfikacji
 To zadanie obejmuje publikowanie szablonu certyfikatu.
 
 ##### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
@@ -104,7 +107,7 @@ To zadanie obejmuje publikowanie szablonu certyfikatu.
 
 4.  Na komputerze urzędu certyfikacji sprawdź, czy komputer hostujący łącznik certyfikatów usługi Intune ma uprawnienia do rejestracji, dzięki czemu może uzyskiwać dostęp do szablonu używanego podczas tworzenia profilu PFX. Ustaw to uprawnienie na karcie **Zabezpieczenia** właściwości komputera urzędu certyfikacji.
 
-### <a name="task-2-enable-install-and-configure-the-intune-certificate-connector"></a>Zadanie 2 — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune
+### <a name="task-2---enable-install-and-configure-the-intune-certificate-connector"></a>Zadanie 2 — Włączanie, instalacja i konfiguracja łącznika certyfikatów dla usługi Intune
 To zadanie obejmuje:
 
 Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
@@ -156,6 +159,6 @@ Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Kon
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

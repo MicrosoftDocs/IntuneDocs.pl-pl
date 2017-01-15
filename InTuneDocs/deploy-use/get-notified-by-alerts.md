@@ -1,5 +1,5 @@
 ---
-title: "Uzyskiwanie powiadomień dzięki alertom | Microsoft Intune"
+title: "Uzyskiwanie powiadomień dzięki alertom | Microsoft Docs"
 description: "Dowiedz się, jak alerty pozwalają na bieżąco śledzić, co dzieje się w usłudze Microsoft Intune."
 keywords: 
 author: arob98
@@ -14,13 +14,16 @@ ms.assetid: 396ea714-0433-4bd5-a934-8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 27aed0126b8aac032f334c712108b23482ef70d7
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: efad781dca4a759335b67126026bf4fed127380e
 
 
 ---
 
 # <a name="get-notified-by-microsoft-intune-alerts"></a>Uzyskiwanie powiadomień dzięki alertom w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Alerty pozwalają na bieżąco śledzić, co dzieje się w usłudze Microsoft Intune.
 
 Na przykład alerty mogą wyświetlać powiadomienia o następujących zdarzeniach:

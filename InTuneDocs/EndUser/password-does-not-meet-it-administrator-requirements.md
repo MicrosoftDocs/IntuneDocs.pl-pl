@@ -1,25 +1,27 @@
 ---
-title: "Hasło nie spełnia wymagań administratora IT | Microsoft Intune"
+title: "Hasło nie spełnia wymagań administratora IT | Microsoft Docs"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: b13d2a37cc6a1e4d2b6287fc8d43675441386f03
-ms.openlocfilehash: fa9a3a89e50e8d03beb2efc067925ca0a4fcd68c
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 14ac49d73648244f71eff90b71272b60a07cd37e
 
 
 ---
 
-# Hasło nie spełnia wymagań administratora IT
+# <a name="password-does-not-meet-it-administrator-requirements"></a>Hasło nie spełnia wymagań administratora IT
 
 Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły nie spełnia co najmniej jednego wymagania skonfigurowanego przez administratora IT. Aby rozwiązać ten problem, postępuj zgodnie z instrukcjami wyświetlanymi na urządzeniu. Poniżej przedstawiono opisy problemów.
 
@@ -31,7 +33,7 @@ Aby przejść do instrukcji dotyczącej sposobu ustawiania numeru PIN lub hasła
 
 Opisy problemów związanych z numerem PIN lub hasłem:
 
-- **Hasło nie zawiera znaków złożonych**. Administrator IT wymaga użycia znaków złożonych w haśle. Znaki złożone to na przykład liczby, wielkie litery i symbole, takie jak $, % oraz #. 
+- **Hasło nie zawiera znaków złożonych**. Administrator IT wymaga użycia znaków złożonych w haśle. Znaki złożone to na przykład liczby, wielkie litery i symbole, takie jak $, % oraz #.
 
 - **Hasło jest zbyt proste i nie jest dostatecznie bezpieczne**. Proste hasła to na przykład 1234 lub 1111. Jeśli nie masz pewności, jakiego rodzaju hasła są dozwolone, upewnij się, że hasło, którego chcesz użyć, nie zawiera kolejnych lub powtarzających się liczb, jak w powyższym przykładzie.
 
@@ -41,14 +43,14 @@ Opisy problemów związanych z numerem PIN lub hasłem:
 
 - **Hasło jest za krótkie**. Administrator IT wymaga zastosowania dłuższego hasła składającego się z większej liczby znaków.
 
-- **Hasło było używane niedawno**. Administrator IT uniemożliwia ustawianie haseł, które były już używane w przeszłości. Wybierz hasło, które nie było dotąd używane. 
+- **Hasło było używane niedawno**. Administrator IT uniemożliwia ustawianie haseł, które były już używane w przeszłości. Wybierz hasło, które nie było dotąd używane.
 
-- **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Administrator IT wymaga użycia większej liczby znaków złożonych w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #. 
+- **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Administrator IT wymaga użycia większej liczby znaków złożonych w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #.
 
 Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

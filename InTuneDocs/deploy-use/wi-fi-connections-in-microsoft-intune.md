@@ -1,5 +1,5 @@
 ---
-title: "Połączenia Wi-Fi | Microsoft Intune"
+title: "Połączenia Wi-Fi | Microsoft Docs"
 description: "Aby ułatwić użytkownikom nawiązywanie połączeń z sieciami Wi-Fi, użyj profilów sieci Wi-Fi."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,15 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: df3f5bd6f44b9de8c4f24a82c7f4e000f08aac5a
-ms.openlocfilehash: c90ede1f10ca8f01e01cf2ac4aed7afb8641f02f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 985b3d14091f1adff15ae08dd95800640363d2f2
 
 
 ---
 
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurowanie urządzeń do łączenia się z firmową siecią Wi-Fi
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Aby wdrożyć ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profilu sieci Wi-Fi usługi Microsoft Intune. W przypadku wdrożenia profilu sieci Wi-Fi użytkownicy mają dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego jej konfigurowania.
 
@@ -181,6 +183,6 @@ Dowiedz się, jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego — 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Zarządzanie aplikacjami ze Sklepu Windows dla firm | Microsoft Intune"
+title: "Zarządzanie aplikacjami ze Sklepu Windows dla firm | Microsoft Docs"
 description: "Połącz usługę Intune ze Sklepem Windows dla firm, aby wdrażać aplikacje zakupione zbiorczo z poziomu konsoli usługi Intune i zarządzać nimi"
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3120a504eb1449259920a7e30391a8c1b35932f1
-ms.openlocfilehash: 37044da4c7a58749c7b3423b1872b07d1673603d
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1e0cb157182415e25cd5829e244e47b2bd5b539b
 
 
 ---
 
 # <a name="manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune"></a>Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm za pomocą usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 [Sklep Windows dla firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc Sklep Windows z usługą Microsoft Intune, można zarządzać aplikacjami zakupionymi zbiorczo z poziomu konsoli usługi Intune. Na przykład:
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
 * Aplikacje, które są synchronizowane, zostają wyświetlone w konsoli administracyjnej usługi Intune. Można je wdrażać w taki sam sposób, jak wszystkie inne aplikacje.
@@ -80,6 +83,6 @@ Gdy wdrażasz aplikację ze Sklepu Windows dla firm, licencja jest zużywana prz
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

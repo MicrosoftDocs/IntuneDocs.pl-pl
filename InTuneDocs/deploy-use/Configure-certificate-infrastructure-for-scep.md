@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie infrastruktury certyfikatów dla profilu SCEP | Microsoft Intune"
+title: "Konfigurowanie infrastruktury certyfikatów dla profilu SCEP | Microsoft Docs"
 description: "Infrastruktura do tworzenia i wdrażania profilów certyfikatów SCEP."
 keywords: 
 author: robstackmsft
@@ -14,11 +14,14 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c68e89755d753b3913004a2c1cb1c41158ce5703
-ms.openlocfilehash: 787533f4b1c24cc4af125cbf6b2a4a18e48c4d3e
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 4140c310bb14faf1731e3c316e1dafae5dc0f97a
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurowanie infrastruktury certyfikatów dla profilu SCEP
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów SCEP.
 
 ### <a name="on-premises-infrastructure"></a>Infrastruktura lokalna
@@ -93,7 +96,7 @@ To zadanie obejmuje:
 
 ##### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
 
-1.  Zaloguj się jako administrator przedsiębiorstwa. 
+1.  Zaloguj się jako administrator przedsiębiorstwa.
 
 2.  Za pomocą przystawki Szablony certyfikatów dla wystawiającego urzędu certyfikacji utwórz nowy szablon niestandardowy lub skopiuj istniejący szablon, a następnie edytuj go (na przykład szablon użytkownika), aby używać go w usłudze NDES.
 
@@ -109,7 +112,7 @@ To zadanie obejmuje:
         > W przypadku szablonów certyfikatów dla systemu iOS i Mac OS X na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
     -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, którzy będą tworzyć profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
-    
+
     > [!NOTE]
     > Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
 
@@ -120,19 +123,19 @@ To zadanie obejmuje:
 
 Oto zrzuty ekranu przykładowej konfiguracji szablonów.
 
-![Szablon, karta obsługi żądań](..\media\scep_ndes_request_handling.png) 
+![Szablon, karta obsługi żądań](..\media\scep_ndes_request_handling.png)
 
-![Szablon, karta nazwy podmiotu](..\media\scep_ndes_subject_name.jpg) 
+![Szablon, karta nazwy podmiotu](..\media\scep_ndes_subject_name.jpg)
 
-![Szablon, karta zabezpieczeń](..\media\scep_ndes_security.jpg) 
+![Szablon, karta zabezpieczeń](..\media\scep_ndes_security.jpg)
 
-![Szablon, karta rozszerzeń](..\media\scep_ndes_extensions.jpg) 
+![Szablon, karta rozszerzeń](..\media\scep_ndes_extensions.jpg)
 
-![Szablon, karta wymagań wystawiania](..\media\scep_ndes_issuance_reqs.jpg) 
+![Szablon, karta wymagań wystawiania](..\media\scep_ndes_issuance_reqs.jpg)
 
 >   [!IMPORTANT]
     > W przypadku zasad aplikacji (czwarty zrzut ekranu) należy dodać tylko wymagane zasady aplikacji. Należy uzgodnić wybrane opcje z administratorami zabezpieczeń.
-   
+
 
 
 W celu skonfigurowania urzędu certyfikacji tak, aby umożliwiał żądającemu określenie okresu ważności, uruchom następujące polecenia w urzędzie certyfikacji:
@@ -239,12 +242,12 @@ To zadanie obejmuje:
 
 4. W Menedżerze usług IIS wybierz pozycję **Domyślna witryna sieci Web** -> **Filtrowanie żądań** -> **Edytuj ustawienia funkcji** i zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534*, tak jak pokazano.
 
-    ![Maksymalna długość adresu URL i zapytania w programie IIS](..\media\SCEP_IIS_max_URL.png) 
+    ![Maksymalna długość adresu URL i zapytania w programie IIS](..\media\SCEP_IIS_max_URL.png)
 
 5.  Uruchom ponownie serwer. Aby sfinalizować te zmiany, nie wystarczy uruchomić polecenie **iisreset** na serwerze.
 6. Przejdź do lokalizacji http://*nazwa_FQDN*/certsrv/mscep/mscep.dll. Powinna zostać wyświetlona strona usługi NDES podobna do następującej:
 
-    ![Testowanie usługi NDES](..\media\SCEP_NDES_URL.png) 
+    ![Testowanie usługi NDES](..\media\SCEP_NDES_URL.png)
 
     Jeśli zostanie zwrócony komunikat **503 Usługa niedostępna**, sprawdź informacje w Podglądzie zdarzeń. Istnieje prawdopodobieństwo, że pula aplikacji jest zatrzymana z powodu braku prawa dla użytkownika usługi NDES. Te prawa opisano w zadaniu 1.
 
@@ -350,6 +353,6 @@ Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Kon
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

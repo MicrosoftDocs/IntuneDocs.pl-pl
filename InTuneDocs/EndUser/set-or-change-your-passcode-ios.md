@@ -1,5 +1,5 @@
 ---
-title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Intune"
+title: "Ustawianie lub zmienianie kodu dostępu | Microsoft Docs"
 description: "Ustawianie lub zmienianie kodu dostępu"
 keywords: 
 author: barlanmsft
@@ -11,10 +11,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 6e941b8ac3d26afce65eb5a7d60f7c56dbbdbe87
+ms.sourcegitcommit: fc22acb9f0c08491852592f41dc60bef0fcf0928
+ms.openlocfilehash: 9e616d6368a40e3ae06303cf3556b5e0760fb477
 
 
 ---
@@ -27,13 +29,13 @@ Administrator IT może ustawić więcej niż jedno wymaganie dotyczące kodów d
 
 Jeśli masz problem z ustawieniem kodu dostępu spełniającego wymagania dotyczące kodów dostępu, skontaktuj się z administratorem IT w celu uzyskania pomocy.
 
-## <a name="set-your-passcode"></a>Ustawianie kodu dostępu##
+## <a name="set-your-passcode"></a>Ustawianie kodu dostępu
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. W menu **Touch ID i kod dostępu** wybierz pozycję **Włącz kod dostępu**.
 3. Wprowadź nowy kod dostępu spełniający wymagania administratora IT, a następnie wprowadź go ponownie w celu zweryfikowania.
 
-## <a name="change-your-passcode"></a>Zmienianie kodu dostępu##
+## <a name="change-your-passcode"></a>Zmienianie kodu dostępu
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. Wprowadź kod dostępu. Zostanie otwarte menu **Touch ID i kod dostępu**.
@@ -44,6 +46,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

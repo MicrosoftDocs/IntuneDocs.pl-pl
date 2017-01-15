@@ -1,5 +1,5 @@
 ---
-title: Aplikacje dla systemu Android z zasadami MAM | Microsoft Intune
+title: Aplikacje dla systemu Android z zasadami MAM | Microsoft Docs
 description: "W tym temacie opisano to, czego można oczekiwać, gdy aplikacja jest zarządzana przy użyciu zasad zarządzania aplikacjami mobilnymi."
 keywords: 
 author: NathBarn
@@ -14,13 +14,16 @@ ms.assetid: 53c8e2ad-f627-425b-9adc-39ca69dbb460
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 945c9f48846fc37358c44b83990feed1f3694966
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: aeacfddb3ed42938dd9443e2734222c977436430
 
 
 ---
 
 # <a name="what-to-expect-when-your-android-app-is-managed-by-mam-policies"></a>Oczekiwany przebieg zarządzania aplikacją systemu Android przez zasady zarządzania aplikacjami mobilnymi
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tym temacie opisano środowisko użytkownika aplikacji z zasadami zarządzania aplikacjami mobilnymi (MAM). Zasady MAM są stosowane tylko wtedy, gdy aplikacje są używane do celów służbowych, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji firmowej w usłudze OneDrive.
 ##  <a name="access-apps"></a>Dostęp do aplikacji
 

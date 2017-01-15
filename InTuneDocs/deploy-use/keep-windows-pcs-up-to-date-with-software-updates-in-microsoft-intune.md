@@ -1,11 +1,11 @@
 ---
-title: "Aktualizacje oprogramowania dla komputerów z systemem Windows | Microsoft Intune"
+title: "Aktualizacje oprogramowania dla komputerów z systemem Windows | Microsoft Docs"
 description: "Usługa Intune, dzięki szybkiej instalacji aktualizacji oprogramowania i najnowszych poprawek, pomaga upewnić się, że oprogramowanie komputerów pozostaje aktualne."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 6878d8a4e95280cfd8a919efa4c2f1651ca14024
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 14ef9f901969449ca8b3c60a187da6b6e654bd67
 
 
 ---
 
-# Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune
+# <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune
 Usługa Microsoft Intune pomaga zabezpieczyć komputery zarządzane na wiele sposobów. Jednym z nich jest zarządzanie aktualizacjami oprogramowania, które zapewniają, że oprogramowanie komputerów jest aktualne, szybko instalując najnowsze poprawki i aktualizacje oprogramowania.
 
 Jeśli klient usługi Intune nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -34,10 +34,10 @@ Po zatwierdzeniu aktualizacji do zainstalowania w obszarze roboczym **Aktualizac
 
 Informacje zawarte w poniższych sekcjach ułatwią zapewnienie aktualności oprogramowania na zarządzanych komputerach.
 
-## Przed rozpoczęciem
+## <a name="before-you-start"></a>Przed rozpoczęciem
 Przed rozpoczęciem tworzenia i zatwierdzania aktualizacji oprogramowania skonfiguruj i wdroż na komputerach zasady umożliwiające sterowanie warunkami i sposobami instalowania aktualizacji.
 
-### Aby skonfigurować ustawienia zasad aktualizacji
+### <a name="to-configure-update-policy-settings"></a>Aby skonfigurować ustawienia zasad aktualizacji
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycje **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
@@ -49,7 +49,7 @@ W poniższej tabeli przedstawiono ustawienia możliwe do skonfigurowania w ramac
     |------------------|--------------------|
     |**Częstotliwość wykrywania aktualizacji i aplikacji (w godzinach)** |Określa częstotliwość sprawdzania obecności nowych aktualizacji i aplikacji przez usługę Intune (od 8 do 22 godzin).<br /><br />Zalecana wartość: **8** godzin.|
     |**Instalacja aktualizacji oraz aplikacji automatyczna lub z monitem** |Określa, czy aktualizacje są instalowane automatycznie, czy przed ich instalacją jest wyświetlany monit dla użytkownika. Ponadto to ustawienie umożliwia zaplanowanie instalacji aktualizacji oraz aplikacji.<br /><br />Opcja **Zainstaluj aktualizacje i aplikacje automatycznie zgodnie z harmonogramem** pozwala na zainstalowanie aktualizacji i aplikacji zgodnie z określonym harmonogramem.<br /><br />Zasada zależna **Użyj automatycznej obsługi dla komputerów z systemem Windows**  określa, że aktualizacje i aplikacje będą instalowane w ramach działania funkcji automatycznej konserwacji systemu Windows.<br /><br />Wybranie opcji **Monituj użytkownika o instalację** powoduje, że użytkownik będzie monitowany o instalację przygotowanej aktualizacji.<br /><br />Zalecane wartości:<br /><br />Wybrana opcja **Zainstaluj aktualizacje i aplikacje automatycznie zgodnie z harmonogramem**<br /><br />**Zaplanowany dzień: codziennie**<br /><br />**Zaplanowana godzina: 3:00**<br /><br />Wybrana opcja **Użyj automatycznej obsługi dla komputerów z systemem Windows**|
-    |**Pozwól na natychmiastową instalację aktualizacji, które nie przerywają pracy systemu Windows** |Wybranie opcji **Zezwalaj** oznacza, że aktualizacje będą instalowane natychmiast po ich pobraniu, jeśli nie spowoduje to przerwania pracy lub ponownego uruchomienia systemu Windows. Aktualizacje mogące spowodować przerwanie pracy lub ponowne uruchomienie systemu Windows zostaną zainstalowane zgodnie z ustawieniem **Instalacja aktualizacji automatyczna lub z monitem** .<br /><br />Wybranie opcji **Nie zezwalaj** powoduje zainstalowanie aktualizacji zgodnie z ustawieniem **Instalacja aktualizacji automatyczna lub z monitem**.<br /><br />Zalecana wartość: **Zezwalaj** |
+    |**Zezwalaj na natychmiastową instalację aktualizacji, które nie przerywają pracy systemu Windows** |Wybranie opcji **Zezwalaj** oznacza, że aktualizacje będą instalowane natychmiast po ich pobraniu, jeśli nie spowoduje to przerwania pracy lub ponownego uruchomienia systemu Windows. Aktualizacje mogące spowodować przerwanie pracy lub ponowne uruchomienie systemu Windows zostaną zainstalowane zgodnie z ustawieniem **Instalacja aktualizacji automatyczna lub z monitem** .<br /><br />Wybranie opcji **Nie zezwalaj** powoduje zainstalowanie aktualizacji zgodnie z ustawieniem **Instalacja aktualizacji automatyczna lub z monitem**.<br /><br />Zalecana wartość: **Zezwalaj** |
     |**Opóźnienie ponownego uruchomienia systemu Windows po zainstalowaniu zaplanowanych aktualizacji oraz aplikacji (w minutach)** |Określa czas oczekiwania (od 1 do 30 minut) na ponowne uruchomienie systemu Windows po zainstalowaniu zaplanowanych aktualizacji oraz aplikacji.<br /><br />Zalecana wartość: **15 minut** |
     |**Opóźnienie po ponownym uruchomieniu systemu Windows poprzedzające rozpoczęcie instalacji pominiętych zaplanowanych aktualizacji oraz aplikacji (w minutach)** |Określa czas oczekiwania (od 1 do 60 minut) na rozpoczęcie instalacji aktualizacji oraz aplikacji po ponownym uruchomieniu systemu Windows, gdy zaplanowana instalacja aktualizacji została pominięta.<br /><br />Zalecana wartość: **5 minut**|
     |**Zezwalaj zalogowanemu użytkownikowi na kontrolowanie ponownego uruchomienia systemu Windows po zainstalowaniu zaplanowanych aktualizacji oraz aplikacji** |Określa, czy zalogowany użytkownik może opóźniać ponowne uruchomienie systemu Windows (jeśli wybrano opcję **Tak**) lub czy ma być powiadamiany o automatycznym ponownym uruchomieniu systemu Windows (jeśli wybrano opcję **Nie**). Jeśli po zakończeniu instalacji zaplanowanych aktualizacji i aplikacji żaden użytkownik nie będzie zalogowany, system Windows zostanie ponownie uruchomiony, gdy będzie to wymagane. Jeśli wybrano domyślną opcję **Nie**, czas, który ma upłynąć przed ponownym uruchomieniem systemu Windows, jest ustawiony na 5 minut.<br /><br />Zalecana wartość: **Tak**|
@@ -57,7 +57,7 @@ W poniższej tabeli przedstawiono ustawienia możliwe do skonfigurowania w ramac
     |**Harmonogram instalacji obowiązkowych aktualizacji agenta klienta Microsoft Intune** |Określa, kiedy mają być instalowane aktualizacje klienta.<br /><br />Zalecana wartość: nie skonfigurowano|
     |**Opóźnienie między monitami o ponowne uruchomienie systemu Windows po instalacji zaplanowanych aktualizacji oraz aplikacji (w minutach)** |Określa, jak często użytkownik ma otrzymywać monit o ponowne uruchomienie systemu Windows po zainstalowaniu zaplanowanych aktualizacji lub aplikacji wymagających ponownego uruchomienia systemu Windows, gdy wybrano opcję opóźnienia ponownego uruchomienia (od 1 do 1440 minut).<br /><br />Zalecana wartość: **30 minut** |
 
-## Aktualizowanie oprogramowania firmy Microsoft
+## <a name="update-software-made-by-microsoft"></a>Aktualizowanie oprogramowania firmy Microsoft
 Aktualizowanie oprogramowania firmy Microsoft wymaga bardzo małego wysiłku z Twojej strony. Jednak przed rozpoczęciem pracy należy skonfigurować ustawienia w dwóch obszarach:
 
 -   **Kategorie produktów i klasyfikacje aktualizacji** — definiują kategorie i klasyfikacje aktualizacji, które mają być dostępne dla komputerów. Możesz na przykład określić, że mają być instalowane tylko aktualizacje krytyczne pakietu Microsoft Office.
@@ -66,7 +66,7 @@ Aktualizowanie oprogramowania firmy Microsoft wymaga bardzo małego wysiłku z T
 
 Poniższe dwie procedury ułatwią przygotowanie się do korzystania z aktualizacji oprogramowania:
 
-### Konfigurowanie kategorii produktów i klasyfikacji aktualizacji, które mają być dostępne dla zarządzanych komputerów
+### <a name="configure-the-product-categories-and-update-classifications-you-want-to-make-available-to-managed-computers"></a>Konfigurowanie kategorii produktów i klasyfikacji aktualizacji, które mają być dostępne dla zarządzanych komputerów
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** &gt; **Aktualizacje**.
 
@@ -79,7 +79,7 @@ Poniższe dwie procedury ułatwią przygotowanie się do korzystania z aktualiza
 
 4.  Wybierz pozycję **Zapisz**, aby zapisać ustawienia.
 
-### Aby skonfigurować reguły automatycznego zatwierdzania aktualizacji oprogramowania
+### <a name="to-configure-automatic-approval-rules-for-software-updates"></a>Aby skonfigurować reguły automatycznego zatwierdzania aktualizacji oprogramowania
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** &gt; **Aktualizacje**.
 
@@ -110,7 +110,7 @@ Nowa reguła zostanie wyświetlona w sekcji **Reguły automatycznego zatwierdzan
 > Nowo utworzona reguła automatycznego zatwierdzania dotyczy tylko przyszłych aktualizacji i nie powoduje automatycznego zatwierdzenia istniejących aktualizacji w usłudze Intune. Aby zatwierdzić istniejące aktualizacje, musisz uruchomić regułę automatycznego zatwierdzania.
 
 
-### Aby edytować, uruchomić lub usunąć automatycznie zatwierdzoną regułę aktualizacji
+### <a name="to-edit-run-or-delete-an-automatically-approved-update-rule"></a>Aby edytować, uruchomić lub usunąć automatycznie zatwierdzoną regułę aktualizacji
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** &gt; **Aktualizacje**.
 
@@ -125,10 +125,10 @@ Nowa reguła zostanie wyświetlona w sekcji **Reguły automatycznego zatwierdzan
         > [!NOTE]
         > Usunięcie reguły nie ma wpływu na poprzednie aktualizacje, które zostały zatwierdzone przez tę regułę.
 
-## Aktualizowanie oprogramowania innych firm
+## <a name="update-software-not-made-by-microsoft"></a>Aktualizowanie oprogramowania innych firm
 Możesz wdrażać aktualizacje oprogramowania, które nie zostało utworzone przez firmę Microsoft. Aby to zrobić, użyj kreatora **Przekazywanie aktualizacji** , który umożliwia pobranie aktualizacji do magazynu w chmurze. Następnie możesz zatwierdzić lub odrzucić daną aktualizację tak jak w przypadku aktualizacji oprogramowania firmy Microsoft.
 
-### Aby przekazać i skonfigurować aktualizację innej firmy
+### <a name="to-upload-and-configure-a-third-party-update"></a>Aby przekazać i skonfigurować aktualizację innej firmy
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Aktualizacje** &gt; **Przegląd** &gt; **Przekaż**.
 
@@ -188,7 +188,7 @@ Przekazana aktualizacja zostanie zapisana w magazynie usługi Intune w chmurze. 
 
 Po przekazaniu aktualizacji innej firmy do usługi Intune zostanie ona wyświetlona w obszarze roboczym **Aktualizacje** w okienku **Wszystkie aktualizacje**. Możesz ją wtedy zatwierdzić i wdrożyć. Aby uzyskać więcej informacji, zobacz poniższą sekcję „Zatwierdzanie i odrzucanie aktualizacji”.
 
-## Zatwierdzanie i odrzucanie aktualizacji
+## <a name="approve-and-decline-updates"></a>Zatwierdzanie i odrzucanie aktualizacji
 Gdy aktualizacje będą gotowe do zainstalowania, w obszarze roboczym **Aktualizacje** na stronie **Przegląd aktualizacji** w sekcji **Stan aktualizacji**zostanie wyświetlony komunikat. Wybierz go, aby otworzyć stronę **Wszystkie aktualizacje** i sprawdzić, które aktualizacje są gotowe do zatwierdzenia.
 
 Lista **Filtry** ułatwi znajdowanie aktualizacji. Na przykład możesz wyświetlić tylko aktualizacje, które zostały zastąpione, lub takie, których instalacja nie powiodła się.
@@ -204,7 +204,7 @@ Po wybraniu aktualizacji z listy zostaną udostępnione dodatkowe polecenia umo�
 |**Usuwanie**|Dotyczy tylko aktualizacji innych firm. Usuwa wybraną aktualizację.|
 |**Przekaż**|Uruchamia kreatora **Przekazywanie aktualizacji**, który umożliwia przekazywanie aktualizacji innych firm w celu ich wdrożenia.|
 
-### Aby zatwierdzić aktualizacje
+### <a name="to-approve-updates"></a>Aby zatwierdzić aktualizacje
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij kolejno pozycje **Aktualizacje** &gt; **Przegląd** &gt; **Nowe aktualizacje do zatwierdzenia**.
 
@@ -250,11 +250,11 @@ Po wybraniu aktualizacji z listy zostaną udostępnione dodatkowe polecenia umo�
 6.  Przypomnienia dotyczące aktualizacji są dostępne w okienku szczegółów na dole strony **Wszystkie aktualizacje** .
 
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

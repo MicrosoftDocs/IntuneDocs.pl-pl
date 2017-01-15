@@ -1,5 +1,5 @@
 ---
-title: "Tworzenie zasad zgodności urządzeń | Microsoft Intune"
+title: "Tworzenie zasad zgodności urządzeń | Microsoft Docs"
 description: "Utwórz zasady zgodności, aby zabezpieczyć urządzenia przenośne i komputery używane do uzyskiwania dostępu do danych firmowych."
 keywords: 
 author: andredm7
@@ -14,13 +14,16 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: b21fcbf10659e072d8eb73703dfdd6695ac9a9b0
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 21875001129da8f5ca01869fa69960f18ae28c56
 
 
 ---
 
 # <a name="create-a-device-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tym temacie opisano czynności służące do tworzenia zasad zgodności, które urządzenie musi spełnić, aby było uznane za zgodne.
 
 ##  <a name="step-1-add-a-new-policy"></a>Krok 1. Dodanie nowej zasady
@@ -28,7 +31,7 @@ W tym temacie opisano czynności służące do tworzenia zasad zgodności, któr
 
   ![Zrzut ekranu strony zasad zgodności w konsoli administracyjnej usługi Intune przedstawiający opcję Dodaj w menu u góry strony](./media/intune-sa-3a-add-compliance-policy.png)
 
-##  <a name="step-2-configure-settings"></a>Krok 2. Konfigurowanie ustawień
+##  <a name="step-2--configure-settings"></a>Krok 2. Konfigurowanie ustawień
 Na stronie **Tworzenie zasad** włącz wymagane ustawienia:
   -   Ustawienia zabezpieczeń systemu, np. hasło i szyfrowanie.
   -   Ustawienia kondycji urządzenia, np. określanie, czy urządzenie ma zdjęte zabezpieczenia lub jest zgłoszone jako urządzenie w dobrej kondycji przez usługę zaświadczania o kondycji urządzenia systemu Windows.

@@ -1,5 +1,5 @@
 ---
-title: "Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android | Microsoft Intune"
+title: "Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -11,12 +11,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 98034875-cd3a-4367-a8d7-c5d4a438d496
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7407be9c7ae96652270692eeb70e35743dff2602
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: 5df88351d84da28c93d010b8484601b7dbcdaf7e
 
 
 ---
@@ -24,7 +26,7 @@ ms.openlocfilehash: 7407be9c7ae96652270692eeb70e35743dff2602
 # <a name="how-to-set-the-period-before-your-android-device-is-locked"></a>Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android
 Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limit czasu hasła na urządzeniu, wykonując następujące kroki dla posiadanego urządzenia.
 
-## <a name="native-nonsamsung-knox-device"></a>Urządzenia natywne (inne niż Samsung KNOX)
+## <a name="native-non-samsung-knox-device"></a>Urządzenia natywne (inne niż Samsung KNOX)
 
 1.  W obszarze **Settings** (Ustawienia) na urządzeniu naciśnij pozycję **Security** (Zabezpieczenia) &gt; **Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
 
@@ -44,6 +46,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

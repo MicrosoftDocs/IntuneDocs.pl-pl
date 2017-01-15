@@ -1,5 +1,5 @@
 ---
-title: "Tworzenie grup w celu zorganizowania użytkowników i urządzeń | Usługa Microsoft Intune"
+title: "Tworzenie grup w celu zorganizowania użytkowników i urządzeń | Microsoft Docs"
 description: "Tworzenie grup urządzeń i grup użytkowników w przypadku rejestracji w celu korzystania z bezpłatnej 30-dniowej wersji ewaluacyjnej usługi Microsoft Intune."
 keywords: 
 author: lindavr
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9dd9595a8e454b810f688c248175688c4ad17920
-ms.openlocfilehash: ab451a1213923ecd27dfc0b8ca353041e70435ed
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: e4072108d5d06857acb10f243df68ef2c33066a2
 
 
 ---
@@ -61,6 +61,6 @@ Aby uzyskać więcej informacji na temat korzystania z grup, zobacz [Używanie g
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

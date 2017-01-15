@@ -1,12 +1,12 @@
 ---
-title: "Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365 | Microsoft Intune"
+title: "Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365 | Microsoft Docs"
 description: "Korzystanie z usługi Intune umożliwia zabezpieczanie danych organizacji przy użyciu zasad zarządzania aplikacjami mobilnymi, które pomagają zapobiegać przeciekom danych firmowych z aplikacji mobilnych usługi Office 365 lub innych aplikacji biznesowych."
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
 ms.date: 11/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,16 @@ ms.assetid: 19be3de7-539c-49f5-8c46-5363b987fef9
 ms.reviewer: pchacon
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ee5f39ac31c2a35770b88c937f138f9c0b525b6
-ms.openlocfilehash: bf3976b0ffbcc74f860c904f0e5829a5a02b6a3e
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: 0288ecd940d650304d83b7dd5803a56f69b936f7
 
 
 ---
 
 # <a name="quick-start-guide-prevent-company-data-leaks-from-office-365-mobile-apps"></a>Przewodnik Szybki Start: zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Korzystając z usługi Microsoft Intune, można zabezpieczyć dane organizacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM), które pomagają zapobiec przeciekom danych firmowych z aplikacji mobilnych usługi Office 365 lub innych aplikacji biznesowych. Używanie zasad zarządzania aplikacjami mobilnymi usługi Intune nie wymaga od użytkowników końcowych zarejestrowania swoich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi (rozwiązaniu MDM) w usłudze Intune. Jeśli zatem masz użytkowników, którzy nie chcą rejestrować swoich własnych urządzeń przenośnych BYOD z systemem iOS lub Android w rozwiązaniu MDM firmy Microsoft (usługi Intune, programu Configuration Manager lub EAS), chcesz chronić dane firmowe bez zarządzania urządzeniami użytkowników końcowych lub korzystasz już z rozwiązania MDM firmy innej niż Microsoft, usługa Intune może pomóc Ci zwiększyć bezpieczeństwo danych firmy.   
 
 ## <a name="is-this-quick-start-guide-right-for-me"></a>Czy ten przewodnik Szybki start jest dla mnie odpowiedni?
@@ -45,6 +48,6 @@ Jeśli tak, usługa Microsoft Intune pozwala ustawić zasady zarządzania aplika
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

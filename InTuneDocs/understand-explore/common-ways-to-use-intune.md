@@ -1,12 +1,12 @@
 ---
-title: "Typowe sposoby korzystania z usługi Intune | Microsoft Intune"
+title: "Typowe sposoby korzystania z usługi Intune | Microsoft Docs"
 description: "Wyświetla sześć najbardziej typowych zadań, których wykonywanie ułatwia usługa Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.date: 11/09/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,15 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39e68e467c3295f4751bf3466957a8a377a8e7d6
-ms.openlocfilehash: 095be86be3658a294d3f0aab525f5e0dd29b4cfe
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: 6a38eb2a071dc2134c9b255b22b5b21a2ef783d0
 
 
 ---
 
 # <a name="common-ways-to-use-intune"></a>Typowe sposoby korzystania z usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Przed zagłębieniem się w zadania implementacji ważne jest, aby zorganizować uczestników projektu rozwiązania typu Enterprise Mobility firmy wokół celów biznesowych firmy.  Jest to istotne zarówno w przypadku wdrażania od zera rozwiązania typu Enterprise Mobility, jak i migracji z innego produktu.  
 
@@ -99,6 +101,6 @@ Czy zezwalać pracownikom na dostęp do firmowej poczty e-mail z takich urządze
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

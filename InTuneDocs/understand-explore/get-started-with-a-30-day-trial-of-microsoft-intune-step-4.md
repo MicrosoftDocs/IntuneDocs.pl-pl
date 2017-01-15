@@ -1,11 +1,11 @@
 ---
-title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft Intune"
+title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft Docs"
 description: "Tworzenie zasad i publikowanie aplikacji w przypadku rejestracji w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 12/12/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,17 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adcb3a4824580ab5f60ae3343d2e82fb6ab0a44c
-ms.openlocfilehash: 64f857307046ea061e702d0b383968b322b89c33
+ms.sourcegitcommit: 53b05e0ad1be63315dcb5e5b9938a7d9459cb6c3
+ms.openlocfilehash: edcef68c4dd6715c0e3b7c8a164d6266d1c154ae
 
 
 ---
 
 
 # <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Tworzenie zasad i publikowanie aplikacji dla użytkowników wersji ewaluacyjnej
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Zasady usługi Intune udostępniają ustawienia, które ułatwiają sterowanie ustawieniami zabezpieczeń na urządzeniach przenośnych, obsługę ustawień Zapory systemu Windows i programu Endpoint Protection dla komputerów oraz wdrażanie aplikacji. Jeśli planujesz używać usługi Intune z urządzeniami skonfigurowanymi do użycia w środowisku produkcyjnym po okresie ewaluacyjnym, absolutnie niezbędne jest postępowanie zgodnie z instrukcjami podanymi w tematach [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) i [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Usługa Intune zapewnia dwa typy instalacji aplikacji. Pierwsza to **instalacja wymagana**, w przypadku której aplikacja jest wdrażana automatycznie na zarządzanych urządzeniach. Druga to **instalacja dostępna**, w przypadku której aplikacja (lub link do niej) jest wdrażana w Portalu firmy usługi Intune, dzięki czemu użytkownicy mogą wybrać, czy zainstalować aplikację na swoich komputerach lub urządzeniach przenośnych.
@@ -102,6 +105,6 @@ Dokonaj konwersji na [płatną subskrypcję](get-started-with-a-30-day-trial-of-
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

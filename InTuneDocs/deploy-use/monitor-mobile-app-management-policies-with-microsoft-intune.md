@@ -1,9 +1,9 @@
 ---
-title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune | Microsoft Intune"
+title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune | Microsoft Docs"
 description: "Zobacz, jak wielu użytkowników korzysta z zasad, i poznaj więcej szczegółów."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 487fe778bae73c2ac5564f90c21328932060f576
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: 2a18ad7226c6fc6de0277f1f20443ea64dc8b918
 
 
 ---
 
 # <a name="monitor-mobile-app-management-policies-with-microsoft-intune"></a>Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Po skonfigurowaniu zasad zarządzania aplikacjami mobilnymi i zastosowaniu ich względem użytkowników można monitorować stan zgodności w [witrynie Azure Portal](https://portal.azure.com). Witryna Azure Portal zawiera informacje o użytkownikach, których dotyczą zasady, o stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
 ## <a name="summary-view"></a>Widok podsumowania
 W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** widoczne jest podsumowanie stanu zgodności:
@@ -80,6 +83,6 @@ W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używ
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

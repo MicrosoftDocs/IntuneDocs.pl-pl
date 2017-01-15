@@ -1,11 +1,11 @@
 ---
-title: "Zarządzanie aplikacjami zakupionymi zbiorczo | Microsoft Intune"
+title: "Zarządzanie aplikacjami zakupionymi zbiorczo | Microsoft Docs"
 description: "Więcej informacji na temat sposobu korzystania z usługi Intune do zarządzania aplikacjami zakupionymi zbiorczo w sklepie z aplikacjami."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,21 @@ ms.assetid: 674c8f4c-00be-4c69-85b7-cf7bdaa71c94
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 6c673b2bb36044cb401b7543193ad3dca279c3a1
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 35c0d56a91d8bd13ed35d54dc6964403832c5ab8
 
 
 ---
 
-# Zarządzanie aplikacjami zakupionymi zbiorczo za pomocą usługi Microsoft Intune
+# <a name="manage-volume-purchased-apps-using-microsoft-intune"></a>Zarządzanie aplikacjami zakupionymi zbiorczo za pomocą usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Niektóre sklepy z aplikacjami umożliwiają zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Dzięki temu można zmniejszyć koszty administracyjne śledzenia wielu zakupionych kopii aplikacji.
 
 Usługa Microsoft Intune ułatwia zarządzanie aplikacjami zakupionymi za pośrednictwem takiego programu przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana.
 
-## Jakimi typami aplikacji można zarządzać?
+## <a name="which-types-of-apps-can-you-manage"></a>Jakimi typami aplikacji można zarządzać?
 
 Za pomocą usługi Intune można zarządzać aplikacjami zakupionymi zbiorczo w sklepie iOS App Store oraz Sklepie Windows dla firm.
 Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepów, wybierz jeden z poniższych tematów:
@@ -36,6 +38,6 @@ Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepó
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

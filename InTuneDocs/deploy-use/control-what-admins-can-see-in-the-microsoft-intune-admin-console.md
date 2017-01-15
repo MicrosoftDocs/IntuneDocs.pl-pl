@@ -1,11 +1,11 @@
 ---
-title: "Dostosowywanie widoków konsoli dla ról administratora | Microsoft Intune"
+title: "Dostosowywanie widoków konsoli dla ról administratora | Microsoft Docs"
 description: "Skorzystaj z tego tematu, aby filtrować widoki konsoli administracyjnej usługi Intune i umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,19 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 02448f2f960d98b28780798b469aea23cdab0e2d
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: ee35fb2c8e39af099fb061211ea1fdf767230217
 
 
 ---
 
-# Dostosowywanie widoków konsoli usługi Intune zgodnie z rolami administratora
+# <a name="customize-intune-console-views-according-to-admin-roles"></a>Dostosowywanie widoków konsoli usługi Intune zgodnie z rolami administratora
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli. Na przykład można zezwolić operatorom konsoli administracyjnej tylko na aktualizację definicji złośliwego oprogramowania lub resetowanie kodu dostępu na urządzeniach. Można uzyskać taki efekt za pomocą wstępnie ustawionych **oznaczeń** przypisywanych do konkretnych użytkowników. Gdy ci użytkownicy uzyskują dostęp do konsoli administracyjnej, mogą zobaczyć tylko elementy odpowiednie do swojego oznaczenia.
 
-## Aby utworzyć widok niestandardowy
+## <a name="to-create-a-custom-view"></a>Aby utworzyć widok niestandardowy
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Administracja** &gt; **Administratorzy usługi**.
 
@@ -69,6 +72,6 @@ Gdy skonfigurowany przez Ciebie administrator otworzy następnie konsolę admini
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

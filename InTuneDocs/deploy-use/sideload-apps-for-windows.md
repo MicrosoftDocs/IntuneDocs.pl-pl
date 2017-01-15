@@ -1,5 +1,5 @@
 ---
-title: "Ładowanie bezpośrednie aplikacji dla systemów Windows i Windows Phone | Microsoft Intune"
+title: "Ładowanie bezpośrednie aplikacji dla systemów Windows i Windows Phone | Microsoft Docs"
 description: "Dowiedz się, jak podpisywać aplikacje biznesowe, aby umożliwić ich wdrażanie za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
@@ -11,12 +11,14 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 938e3a1914f379d115bf24ebd7d990f6e1d319a9
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 2e8220f850e3b38a24aa4c48bcc3a59088251c24
 
 
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Jako administrator usługi Intune możesz wdrażać aplikacje biznesowe, w tym aplikację Portal firmy, na urządzeniach z systemami Windows i Windows 10 Mobile. Aby wdrażać aplikacje w formacie APPX lub XAP na urządzeniach z systemami Windows 10 i Windows 10 Mobile lub aby wdrażać dowolne aplikacje biznesowe na urządzeniach z systemami Windows 8.1 i Windows Phone 8.1, musisz uzyskać **certyfikat podpisywania kodu Symantec Enterprise Mobile**. Tylko certyfikat firmy Symantec jest zaufany dla tych aplikacji na urządzeniach z tymi wersjami systemu Windows. W przypadku aplikacji dla systemu Windows 10 i aplikacji „uniwersalnych” możesz używać własnego urzędu certyfikacji. Ten certyfikat jest wymagany do:
 

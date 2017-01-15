@@ -1,11 +1,11 @@
 ---
-title: Ochrona aplikacji i danych | Microsoft Intune
+title: Ochrona aplikacji i danych | Microsoft Docs
 description: "W tym temacie opisano różne funkcje usługi Intune i możliwości, które są dostępne, aby chronić aplikacje i dane firmy."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,15 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 4f8cb86126a982b21ad3288108295d1784f08df3
+ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
+ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
 
 
 ---
 
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrona aplikacji i danych w usłudze Microsoft Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune chroni dane firmowe dzięki zastosowaniu wielu warstw technologicznych. W warstwie tożsamości funkcja dostępu warunkowego chroni dostęp do usług, zezwalając jedynie na dostęp z urządzeń zarządzanych i zgodnych. W warstwie aplikacji klienta funkcja zarządzania aplikacjami mobilnymi (MAM) chroni przed utratą danych, uniemożliwiając przenoszenie danych do niechronionych aplikacji lub lokalizacji magazynu oraz czyszcząc dane w przypadku utraty lub kradzieży urządzenia. Zaleca się używanie tych dwóch warstw ochrony jednocześnie, aby ułatwić zabezpieczanie danych przy jednoczesnym zachowaniu produktywności pracowników mobilnych.
 
@@ -54,6 +55,6 @@ Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

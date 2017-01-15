@@ -1,11 +1,11 @@
 ---
-title: Ustawienia zasad systemu iOS | Microsoft Intune
+title: Ustawienia zasad systemu iOS | Microsoft Docs
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: dfde68e4ef889ba881ff2fa93b226f879d01cbc8
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 05d47e6cf5c7b380ac981d06a3938f38b27a430b
 
 
 ---
 
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu iOS w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem iOS. Ponadto przy użyciu narzędzia Apple Configurator można utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
 
@@ -78,12 +80,12 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |----------------|-------|
 |**Zezwalaj na wykonywanie kopii zapasowych w usłudze iCloud**|Zezwalaj użytkownikowi na tworzenie kopii zapasowych urządzenia w usłudze iCloud.|
 |**Zezwalaj na synchronizację dokumentów w usłudze iCloud**|Zezwalaj na synchronizowanie dokumentów i wartości kluczy do obszaru magazynu usługi iCloud.|
-|**Zezwalaj na synchronizację strumienia zdjęć w usłudze iCloud**|Zezwalaj na synchronizowanie zdjęć na urządzeniu do usługi iCloud.|
+|**Zezwalaj na synchronizację strumienia zdjęć w usłudze iCloud**|Umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na ich urządzeniach, co pozwala synchronizować zdjęcia z usługą iCloud i udostępniać je na wszystkich urządzeniach użytkownika.|
 |**Wymagaj szyfrowanej kopii zapasowej**|Wymagaj szyfrowania wszelkich kopii zapasowych urządzenia.|
 |**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwalaj aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
 |**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Zezwalaj użytkownikowi na kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
-|**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Zezwalaj na używanie funkcji udostępnionego strumienia zdjęć systemu iOS.|
-|**Zezwalaj na Bibliotekę zdjęć iCloud**|Zezwalaj użytkownikowi na przechowywanie zdjęć w usłudze iCloud. Jeśli to ustawienie zostanie wyłączone, zdjęcia już przechowywane w usłudze iCloud zostaną usunięte.|
+|**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Ustaw opcję **Nie**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.|
+|**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.   W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
 
 ### <a name="application-settings-for-the-browser"></a>Ustawienia aplikacji dotyczące przeglądarki
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
@@ -172,6 +174,8 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 |**Importuj aplikacje**|Importuje listę aplikacji w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj tego formatu: nazwa aplikacji, wydawca, adres URL aplikacji.|
 |**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
 |**Usuwanie**|Usuwa wybraną aplikację z listy.|
+
+Zasady zawierające ustawienia zgodnych i niezgodnych aplikacji należy wdrażać dla grup użytkowników.
 
 ### <a name="kiosk-mode-settings"></a>Ustawienia trybu kiosku
 
@@ -383,6 +387,6 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

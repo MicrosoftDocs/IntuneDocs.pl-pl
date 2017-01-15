@@ -1,11 +1,11 @@
 ---
-title: "Połączenia VPN | Microsoft Intune"
+title: "Połączenia VPN | Microsoft Docs"
 description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cab83c3d1a63a0e4f16ee838443ec032bcf1532
-ms.openlocfilehash: 6d5d97a8e91ba3a99db5714a5634904c62320e76
+ms.sourcegitcommit: 0ba06e1d698e051ba72e9f88a654d37041c57cf1
+ms.openlocfilehash: cd9785889ca8b2a78a49ea2b04284d32b3fa8a65
 
 
 ---
 
 # <a name="vpn-connections-in-microsoft-intune"></a>Połączenia VPN w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają *profilu połączenia VPN*. Za pomocą opcji w obszarze *Profile sieci VPN* w usłudze Microsoft Intune możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji tak, aby łączenie się z siecią było łatwe i bezpieczne.
 
@@ -67,7 +69,7 @@ L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Tak (OMA-URI)|Tak|
 > [!IMPORTANT]
 > Aby używanie profili sieci VPN wdrożonych na urządzeniu było możliwe, należy zainstalować odpowiednią do profilu aplikację VPN. W temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md) znajdziesz informacje, które pomogą Ci we wdrażaniu odpowiedniej aplikacji w usłudze Intune.  
 
- Dowiedz się, jak utworzyć niestandardowe profile sieci VPN za pomocą ustawienia identyfikatora URI w temacie [Konfiguracje niestandardowe dla profilów sieci VPN](custom-configurations-for-vpn-profiles.md).     
+ Dowiedz się, jak utworzyć niestandardowe profile sieci VPN za pomocą ustawienia identyfikatora URI w temacie [Konfiguracje niestandardowe dla profilów sieci VPN](create-custom-vpn-profiles.md).     
 
 ## <a name="methods-of-securing-vpn-profiles"></a>Metody zabezpieczania profilów sieci VPN
 
@@ -194,13 +196,10 @@ Po pomyślnym wdrożeniu użytkownicy będą widzieli wprowadzoną przez Ciebie 
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
 
-### <a name="see-also"></a>Zobacz też
-[Konfiguracje niestandardowe dla profilów sieci VPN](Custom-configurations-for-VPN-profiles.md)
-
-[Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Dec16_HO3-->
 
 

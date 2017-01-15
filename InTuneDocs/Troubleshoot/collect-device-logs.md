@@ -1,11 +1,11 @@
 ---
-title: "Zbieranie dzienników urządzeń | Microsoft Intune"
+title: "Zbieranie dzienników urządzeń | Microsoft Docs"
 description: "Dowiedz się, jak zbierać dzienniki z urządzeń zarządzanych."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/07/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c05b4e16f7b0a87215a0cd20f7d559cd8497296
-ms.openlocfilehash: 0f175b1eb2d80a68c8b7864d21f5a9e585de458b
+ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
+ms.openlocfilehash: 7009cf7626008124e4c8a71198e21ae6def93581
 
 
 ---
 
 # <a name="device-logs"></a>Dzienniki urządzeń
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Podczas rozwiązywania problemów może być przydatne zebranie dzienników z urządzeń użytkowników. W tym temacie podano instrukcje dotyczące zbierania tych dzienników. W celu uzyskania tych dzienników zazwyczaj konieczny jest dostęp do urządzenia. Można też poprosić użytkownika o ich zebranie i przysłanie.
 
@@ -57,6 +59,6 @@ W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO3-->
 
 

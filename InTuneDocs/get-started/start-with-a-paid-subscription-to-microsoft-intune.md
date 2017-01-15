@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie | Microsoft Intune
+title: Wprowadzenie | Microsoft Docs
 description: "Wymogi i wymagania wstępne dotyczące korzystania z subskrypcji usługi Intune"
 keywords: 
 author: nathbarn
@@ -14,8 +14,8 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dcca68485db7e2c206077ce457081fdbf5cccea4
-ms.openlocfilehash: 6963f14de4bf54ba37166e7e37cd8395a941db51
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 7777b7fb4a0977ed663a3ef01547f22e9e61bb8a
 
 
 ---
@@ -50,6 +50,6 @@ Jeśli obecnie używasz programu Microsoft System Center Configuration Manager d
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Rozwiązywanie problemów z programem Endpoint Protection | Microsoft Intune"
+title: "Rozwiązywanie problemów z programem Endpoint Protection | Microsoft Docs"
 description: "Rozwiąż problem, używając programu Microsoft Intune Endpoint Protection."
 keywords: 
 author: staciebarker
@@ -14,13 +14,15 @@ ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cba0d6d781d3050f4dd8aabd661d677ae849eff1
-ms.openlocfilehash: bdcbe263529844cab04b1e5b715fe6eafd3feb86
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: c0942dc6911a67dc7c3fa0c19e5a38ac60ec18b8
 
 
 ---
 
 # <a name="troubleshoot-endpoint-protection-in-microsoft-intune"></a>Troubleshoot Endpoint Protection in Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Skorzystaj z informacji w tej sekcji, aby rozwiązać problemy występujące podczas korzystania z programu Endpoint Protection w usłudze Microsoft Intune.
 
@@ -50,6 +52,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

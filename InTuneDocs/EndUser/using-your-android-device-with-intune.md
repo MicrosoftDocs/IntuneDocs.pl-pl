@@ -1,5 +1,5 @@
 ---
-title: "Korzystanie z urządzenia z systemem Android i usługi Intune | Microsoft Intune"
+title: "Korzystanie z urządzenia z systemem Android i usługi Intune | Microsoft Docs"
 description: "Lista linków do zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach przenośnych z systemem Android, gdy urządzenie jest zarejestrowane w usłudze Intune"
 keywords: 
 author: barlanmsft
@@ -14,8 +14,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7751d5661f3fb9235820c716fdbded3dab385ec4
+ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
+ms.openlocfilehash: 1c4e77d3089df2ff184a414ba668b01b2d040854
 
 
 ---
@@ -62,8 +62,8 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 - [Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
 - [Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
 - [Wysyłanie błędów rejestracji do administratora IT](send-enrollment-errors-to-your-it-administrator-android.md)
-- [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](device-doesnt-have-the-required-minimum-operating-system-version-android.md)
-- [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](device-doesnt-comply-with-maximum-operating-system-version-android.md)
+- [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](you-need-to-update-your-android-device.md)
+- [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](your-android-version-isnt-yet-supported.md)
 - [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Brak wymaganego certyfikatu urządzenia](your-device-is-missing-a-required-certificate-android.md)
 - [Prośba o wyłączenie nieznanych źródeł](you-are-asked-to-turn-off-unknown-sources-android.md)
@@ -75,6 +75,6 @@ Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, kt�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

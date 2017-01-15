@@ -1,5 +1,5 @@
 ---
-title: "Konwersja na płatną subskrypcję | Microsoft Intune"
+title: "Konwersja na płatną subskrypcję | Microsoft Docs"
 description: "Informacje o subskrypcjach i licencjonowaniu przydatne po skonfigurowaniu bezpłatnej 30-dniowej wersji ewaluacyjnej usługi Intune."
 keywords: 
 author: lindavr
@@ -13,13 +13,16 @@ ms.technology:
 ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b2e666c0a448d2b851f44ffa896db193248bb056
-ms.openlocfilehash: a2b037e0c066422d53d71ffd401deb3e48a2ba7f
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: f121ff01a3eee20473637626128239c4d883e826
 
 
 ---
 
 # <a name="ways-to-subscribe-to-microsoft-intune"></a>Sposoby subskrybowania usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W przypadku zakupu co najmniej 150 licencji na usługę Microsoft Intune w uprawniającym planie można skorzystać z asysty centrum rozwiązania FastTrack — usługi współpracy ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Zobacz [Asysta centrum rozwiązania FastTrack dla pakietu Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
 
 Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w subskrypcję płatną na następujące sposoby:
@@ -34,6 +37,6 @@ Możesz przekształcić bezpłatną subskrypcję ewaluacyjną usługi Intune w s
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

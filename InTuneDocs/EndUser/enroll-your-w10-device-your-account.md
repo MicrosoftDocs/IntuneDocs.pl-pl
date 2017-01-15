@@ -1,5 +1,5 @@
 ---
-title: "Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Microsoft Intune"
+title: "Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Microsoft Docs"
 description: "Rejestrowanie urządzenia z systemem Windows 10 (w wersji 1511) w usłudze Intune"
 keywords: 
 author: barlanmsft
@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 43b738b7-6a56-498a-a433-112da5104876
+searchScope:
+- Company Portal
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5fa0e9db799c7b3a9619d63ebc1ba5ffe010b1fd
-ms.openlocfilehash: 83c69c69f006128a755053f22c7b6848441c522c
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 32bde9552e79d91dd967050b96cec62146367f9b
 
 
 ---
@@ -54,6 +56,6 @@ Jeśli lista nie zawiera aplikacji Portal firmy, wykonaj następujące kroki, ab
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune | Microsoft Intune"
+title: "Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune | Microsoft Docs"
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla komputerów z systemem Windows, w tym urządzeń z systemem Windows 10, w usłudze Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,18 +13,21 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 7c518c176e315cbf005b2fceb8d74de09bdcfa98
+ms.sourcegitcommit: 31d58d9973cca4023186731a5411c9c9e830e32a
+ms.openlocfilehash: e24251a066349e23beb94b75a66c5710ba7e41f1
 
 
 ---
 
 # <a name="set-up-windows-device-management"></a>Konfigurowanie zarządzania urządzeniami z systemem Windows
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Administrator usługi Intune może włączyć rejestrację i zarządzanie dla komputerów z systemem Windows na dwa sposoby:
 
-- **[Automatyczna rejestracja w usłudze Azure Active Directory](#azure-active-directory-enrollment)** — użytkownicy systemów Windows 10 i Windows 10 Mobile rejestrują swoje urządzenia przez dodanie konta służbowego do urządzenia
-- **[Rejestracja za pomocą Portalu firmy](#company-portal-app-enrollment)** — użytkownicy rejestrują urządzenia z systemem Windows Phone 8.1 i nowszym przez pobranie i zainstalowanie aplikacji Portal firmy, a następnie wprowadzają w aplikacji poświadczenia konta służbowego.
+- **[Automatyczna rejestracja w usłudze Azure Active Directory](#azure-active-directory-enrollment)** — użytkownicy systemów Windows 10 i Windows 10 Mobile rejestrują swoje urządzenia przez dodanie konta służbowego do urządzenia.
+
+- **[Rejestracja za pomocą Portalu firmy](#set-up-company-portal-app-enrollment)** — użytkownicy rejestrują urządzenia z systemem Windows Phone 8.1 i nowszym przez pobranie i zainstalowanie aplikacji Portal firmy, a następnie wprowadzają w aplikacji poświadczenia konta służbowego.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -55,23 +58,20 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
 
 3.  **Weryfikowanie rekordu CNAME**<br>W [konsoli administracyjnej usługi Intune](http://manage.microsoft.com) wybierz kolejno pozycje **Administrator** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Windows**. W polu **Podaj nazwę zweryfikowanej domeny** wpisz adres URL zweryfikowanej domeny witryny sieci Web firmy, a następnie wybierz pozycję **Przetestuj automatyczne wykrywanie**.
 
-  ![Okno dialogowe Zarządzanie urządzeniami z systemem Windows](../media/enroll-intune-winenr.png)
-
 4.  **Kroki opcjonalne**<br>Krok **Dodaj klucze pobierania lokalnego** jest zbędny w przypadku systemu Windows 10. Krok **Prześlij certyfikat podpisywania kodu** jest niezbędny tylko w przypadku, jeśli będziesz dystrybuować do urządzeń aplikacje biznesowe, które nie są dostępne w Sklepie Windows.
 
 6.  **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia i czego mogą oczekiwać po włączeniu ich do zarządzania.**
 
-    Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](../enduser/enroll-your-device-in-intune-windows.md).
+    Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
 
-    Aby uzyskać więcej informacji o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
-      - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-      - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Windows](../enduser/using-your-windows-device-with-intune.md)
+    Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
-### <a name="see-also"></a>Zobacz też
+
+### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

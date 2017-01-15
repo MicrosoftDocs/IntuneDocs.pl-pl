@@ -1,11 +1,11 @@
 ---
-title: Wycofanie komputera z systemem Windows | Microsoft Intune
+title: Wycofywanie komputera z systemem Windows | Microsoft Docs
 description: "Jak wycofać komputer z systemem Windows zarządzany przez usługę Intune."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f34810d4f2f556522d993bf6e8e120c30a03e24c
-ms.openlocfilehash: 19e8e2b6a7eaa3cf02e4296a6fd147baa1472b61
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: fbf188be16ca4a47ee369e3fdde8c0a7f799beab
 
 
 ---
 
 # <a name="retire-a-windows-pc"></a>Wycofanie komputera z systemem Windows
-W celu wycofania komputerów zarządzanych przez usługę Intune wykonaj następujące kroki.
+Wykonaj następujące kroki, aby wycofać komputery z systemem Windows, które są zarządzane jako komputery przy użyciu oprogramowania klienckiego usługi Intune. Wycofanie komputera spowoduje usunięcie go z zarządzania przy użyciu usługi Intune. Nie można zresetować komputera do ustawień fabrycznych przy użyciu usługi Intune, aby przywrócić jego ustawienia fabryczne.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer, który chcesz wycofać).
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer, który chcesz wycofać).
 
 2.  Wybierz urządzenia do wycofania, a następnie wybierz pozycję **Wycofaj/wyczyść**.
 
@@ -39,7 +39,7 @@ W przypadku wycofywania komputera:
 
 -   Usługa Intune usuwa klienta oprogramowania z komputera. Jeśli komputer jest połączony z usługą Intune, klient oprogramowania zostanie usunięty po kolejnym nawiązaniu połączenia.
 
--   Program Microsoft Intune Endpoint Protection jest usuwany z komputera. Jeśli na komputerze zainstalowano inną aplikację ochrony punktu końcowego, która jest wyłączona, można ją ponownie włączyć po usunięciu programu Microsoft Intune Endpoint Protection, aby upewnić się, że komputery są chronione.
+-   Program Microsoft Intune Endpoint Protection jest usuwany z komputera. Jeśli na komputerze zainstalowano inną aplikację ochrony punktu końcowego, która jest wyłączona, można ją ponownie włączyć po usunięciu programu Microsoft Intune Endpoint Protection, aby upewnić się, że komputer jest chroniony.
 
 -   Wszystkie zasady są usuwane z komputera, a wartości ustawione przez zasady są zmieniane.
 
@@ -57,6 +57,6 @@ W przypadku wycofywania komputera:
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

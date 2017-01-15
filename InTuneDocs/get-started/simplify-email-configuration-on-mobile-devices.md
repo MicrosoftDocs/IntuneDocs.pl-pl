@@ -1,12 +1,12 @@
 ---
-title: "Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych | Microsoft Intune"
+title: "Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych | Microsoft Docs"
 description: 
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
 ms.date: 12/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,16 @@ ms.assetid: 1696c715-1e9a-401e-a530-77904fd189ad
 ms.reviewer: pchacon
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: a2ddf2b972f90aea6ac0e47372bd4f0b4de5cf19
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: bf25dd15aa9074692017d94bb94285b4c8e77ca8
 
 
 ---
 
 # <a name="quick-start-guide-simplify-email-configuration-on-mobile-devices"></a>Przewodnik Szybki start: upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Microsoft Intune oszczędza czas i zasoby firmy, umożliwiając wdrażanie profilów poczty e-mail (a także sieci VPN i Wi-Fi) na urządzeniach przenośnych z systemami Windows, iOS i Android zarządzanych przez usługę Intune. Automatyczne konfigurowanie profilów poczty e-mail może znacznie ulepszyć środowisko użytkownika końcowego i zwiększyć poziom zadowolenia użytkowników, a jednocześnie obniżyć koszty pomocy technicznej.
 
 ## <a name="is-this-quick-start-guide-right-for-me"></a>Czy ten przewodnik Szybki start jest dla mnie odpowiedni?
@@ -47,6 +50,6 @@ Po skonfigurowaniu profilu poczty e-mail można łatwo ograniczyć dostęp do fi
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

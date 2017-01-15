@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie profilów certyfikatów | Microsoft Intune"
+title: "Konfigurowanie profilów certyfikatów | Microsoft Docs"
 description: "Dowiedz się, jak utworzyć profil certyfikatu usługi Intune."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: bafb86b1e388163c07110559e2a51bbe0dadc5ed
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: f5b5bc13a834cb5071ebf875f3c5512c564efe93
 
 
 ---
 
 # <a name="configure-intune-certificate-profiles"></a>Konfigurowanie profilów certyfikatów usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) lub [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md) można utworzyć profile certyfikatów. Oto proces:
 
 - **Zadanie 1** — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
@@ -157,6 +160,6 @@ Dowiedz się, jak używać certyfikatów do zabezpieczenia poczty e-mail, sieci 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

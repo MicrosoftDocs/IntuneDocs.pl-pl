@@ -1,5 +1,5 @@
 ---
-title: "Ograniczanie dostępu do poczty e-mail i usług Office 365 | Microsoft Intune"
+title: "Ograniczanie dostępu do poczty e-mail i usług Office 365 | Microsoft Docs"
 description: "W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
 keywords: 
 author: andredm7
@@ -14,16 +14,16 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 5665ca431eb186d4378953b7047228e07ae9dc60
+ms.sourcegitcommit: 2e342bef07ff28bf2df027240471f74dfe373f83
+ms.openlocfilehash: a55087b96855645ef3f6e161fe85f6244c30120d
 
 
 ---
 
 # <a name="restrict-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ograniczanie dostępu do poczty e-mail, usług Office 365 i innych usług za pomocą usługi Microsoft Intune
-Możesz ograniczyć dostęp do poczty e-mail, usług Office 365 i innych usług w swojej firmie za pomocą dostępu warunkowego usługi Intune. Funkcja dostępu warunkowego usługi Intune pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z ustawionymi zasadami.
+Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) można ograniczyć dostęp do firmowej poczty e-mail, usług Office 365, takich jak **lokalna instalacja programu Exchange**, **usługa Exchange Online**, **usługa Exchange Online w wersji dedykowanej**, **usługa SharePoint Online**, **usługa Skype dla firm Online** i innych. Ta funkcja pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z zasadami ustawionymi w konsoli administracyjnej usługi Intune lub w klasycznym portalu Azure.
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
-Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
+Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności urządzeń, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
 
 Należy pamiętać, że użytkownik korzystający z urządzenia musi mieć na nim wdrożone zasady zgodności, aby urządzenie mogło zostać ocenione pod kątem zgodności.
 Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
@@ -34,12 +34,25 @@ Typowy przepływ dostępu warunkowego:
 
 ![Diagram przedstawiający punkty decyzyjne używane do określenia, czy urządzenie ma mieć dostęp do usługi, czy ma być blokowane](../media/ConditionalAccess4.png)
 
-## <a name="how-to-configure-conditional-access"></a>Jak skonfigurować dostęp warunkowy
-Użyj dostępu warunkowego do zarządzania dostępem do następujących programów i usług firmy Microsoft: **lokalnego programu Exchange**, **Exchange Online**, **Exchange Online Dedicated**, **SharePoint Online** i **Skype dla firm Online**.
+## <a name="setup-considerations"></a>Zagadnienia dotyczące instalacji
 
-Aby skonfigurować dostęp warunkowy, skonfiguruj zasady zgodności urządzeń i zasady dostępu warunkowego.
+### <a name="licensing"></a>Licencjonowanie
 
-Zasady zgodności zawierają ustawienia, takie jak kod dostępu i szyfrowanie, oraz określają, czy urządzenie nie ma zdjętych zabezpieczeń. Urządzenie musi spełniać te reguły, aby można je było uważać za zgodne.
+Usługa Microsoft Intune i Azure Active Directory (Azure AD) Premium działają bezproblemowo razem w celu zapewnienia wielu warstw kontroli za pośrednictwem dostępu warunkowego pakietu EMS. Jeśli chcesz wdrożyć zasady dostępu warunkowego za pomocą usługi Intune, musisz mieć licencję dla obu tych produktów.
+
+**Licencje usługi Azure AD Premium** można kupić jako autonomiczną usługę lub wraz z usługą Intune w ramach organizacji. Jeśli zasady dostępu warunkowego wdrożono za pomocą usługi Intune, upewnij się, że masz odpowiednie licencje usługi Azure AD Premium lub pakietu **EMS**.
+
+- Dowiedz się więcej na temat [Cennika pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennika usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+
+Ponadto upewnij się, że użytkownicy, dla których planowane jest zastosowanie zasad dostępu warunkowego, są [przypisani za pomocą licencji usługi Azure AD Premium lub pakietu EMS](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+
+### <a name="device-compliance-settings"></a>Ustawienia zgodności urządzeń
+
+Aby skonfigurować dostęp warunkowy, skonfiguruj zasady zgodności urządzeń i zasady dostępu warunkowego. Zasady zgodności zawierają ustawienia, takie jak kod dostępu i szyfrowanie, oraz określają, czy urządzenie nie ma zdjętych zabezpieczeń. Urządzenie musi spełniać te reguły, aby można je było uważać za zgodne.
+
+- Dowiedz się więcej o [zasadach zgodności urządzeń i ich działaniu](introduction-to-device-compliance-policies-in-microsoft-intune.md).
+
+### <a name="conditional-access-policy"></a>Zasady dostępu warunkowego
 
 Możliwe jest ustawienie zasad dostępu warunkowego w celu ograniczenia dostępu w oparciu o:
 - Stan zgodności urządzenia.
@@ -50,11 +63,11 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 
 ## <a name="next-steps"></a>Następne kroki
-1. [Dowiedz się więcej o zasadach zgodności urządzenia i ich działaniu](introduction-to-device-compliance-policies-in-microsoft-intune.md).
 
-2. [Utwórz zasady zgodności](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-2.  Utwórz zasady dostępu warunkowego dla jednego z następujących przypadków:
+2. [Tworzenie zasad zgodności urządzenia](create-a-device-compliance-policy-in-microsoft-intune.md).
+
+2.  Utwórz zasady dostępu warunkowego dla jednej z wybranych usług lub jednego z wybranych produktów firmy Microsoft w chmurze:
 > [!div class="op_single_selector"]
   - [Tworzenie zasad dostępu warunkowego dla usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
@@ -66,6 +79,6 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

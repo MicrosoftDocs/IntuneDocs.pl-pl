@@ -1,12 +1,12 @@
 ---
-title: "Wybieranie metody rejestrowania urządzeń przenośnych | Microsoft Intune"
+title: "Wybieranie metody rejestrowania urządzeń przenośnych | Microsoft Docs"
 description: "Odpowiedz na kilka pytań, aby zdecydować, w jaki sposób ma się odbywać rejestrowanie urządzeń przenośnych w usłudze Intune"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 11/14/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,12 +14,14 @@ ms.assetid: 40262e47-1ab4-437d-8ca5-c89b5022f91f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
-ms.openlocfilehash: 7859266f639e148a032b6dd44d9313733aaa0269
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: bad5e7c342e481401db1d19388a8c87972fe69b8
 
 
 ---
 # <a name="choose-how-to-enroll-mobile-devices"></a>Wybieranie metody rejestrowania urządzeń przenośnych
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę rejestracji dla urządzeń, którymi zarządzasz.
 
@@ -45,6 +47,6 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

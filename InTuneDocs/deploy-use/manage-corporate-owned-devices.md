@@ -1,5 +1,5 @@
 ---
-title: "Zarządzanie firmowymi urządzeniami | Microsoft Intune"
+title: "Zarządzanie urządzeniami firmowymi | Microsoft Docs"
 description: "Rejestruj urządzenia należące do firmy na różne sposoby, w zależności od rodzaju urządzenia, sposobu jego zakupu i potrzeb organizacji."
 keywords: 
 author: staciebarker
@@ -14,13 +14,15 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
-ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 58270feb34185441406abc15e1f889c2924722e8
 
 
 ---
 
 # <a name="enroll-corporate-owned-devices-by-using-intune"></a>Rejestrowanie urządzeń firmowych przy użyciu usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Urządzenia należące do organizacji lub firmy mogą być rejestrowane w celu zarządzania przez usługę Intune na wiele sposobów, w zależności od rodzaju urządzenia, sposobu jego zakupu i potrzeb organizacji. Firmowe urządzenia można również rejestrować (oraz zarządzać nimi) przez zainstalowanie aplikacji Portal firmy, podobnie jak w scenariuszu „przynieś własne urządzenie” (BYOD, bring your own device).
 
@@ -63,6 +65,6 @@ Jeśli urządzenie zostało oznaczone jako firmowe, zobaczysz wartość **Należ
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

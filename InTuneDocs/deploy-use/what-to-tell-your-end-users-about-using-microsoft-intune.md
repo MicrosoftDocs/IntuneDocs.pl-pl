@@ -1,5 +1,5 @@
 ---
-title: "Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune | Microsoft Intune"
+title: "Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune | Microsoft Docs"
 description: "Udostępnij informacje użytkownikom końcowym, aby wdrożenie usługi Intune było pomyślne."
 keywords: "użytkownicy końcowi, użytkownicy, komunikacja"
 author: barlanmsft
@@ -14,8 +14,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ef3b7e4eec5a520c93fb3f70c8e5b6ee7d2c3aa
-ms.openlocfilehash: 83436b7d8e554eef0cf48d0f07999f06bf811bbc
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: ed1b1ba4cb5ee48139e4f4dbf4dab8d04b53368f
 
 
 ---
@@ -50,6 +50,6 @@ Aby zrozumieć, jak użytkownicy końcowi uzyskują aplikacje, wybierz jedną z 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

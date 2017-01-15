@@ -1,11 +1,11 @@
 ---
-title: "Wdrażanie aplikacji | Microsoft Intune"
+title: "Wdrażanie aplikacji | Microsoft Docs"
 description: "W tym temacie omówiono pojęcia, które należy zrozumieć przed rozpoczęciem wdrażania aplikacji w usłudze Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,20 @@ ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: eedf7db0a974f9a0aa0a21b27b64ed8b4a91b378
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: efa8245020b961797405a6f8b90df7e7b172b4c3
 
 
 ---
 
-# Wdrażanie aplikacji w usłudze Microsoft Intune
+# <a name="deploy-apps-with-microsoft-intune"></a>Wdrażanie aplikacji w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 W tym temacie omówiono pojęcia, które należy zrozumieć przed rozpoczęciem wdrażania aplikacji w usłudze Microsoft Intune.
 
 
-## Akcje wdrażania aplikacji
+## <a name="app-deployment-actions"></a>Akcje wdrażania aplikacji
 Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdrażania:
 
 -   **Wymagana instalacja** — aplikacja jest instalowana na urządzeniu bez potrzeby interwencji użytkownika.
@@ -41,7 +43,7 @@ Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdra�
 
 -   **Nie dotyczy** — aplikacja nie jest wyświetlana w portalu firmy i nie jest instalowana na żadnych urządzeniach.
 
-#### Opis akcji wdrażania dostępnych dla poszczególnych typów instalatora
+#### <a name="understand-which-deployment-actions-are-available-for-each-installer-type"></a>Opis akcji wdrażania dostępnych dla poszczególnych typów instalatora
 
 |Typ instalatora|Wymagana instalacja|Dostępna instalacja|Odinstaluj|Nie dotyczy|
 |------------------|--------------------|---------------------|-------------|------------------|
@@ -58,7 +60,7 @@ Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdra�
 > [!TIP]
 > Jeśli podczas wdrażania aplikacji wybierzesz zarówno grupę użytkowników, jak i grupę urządzeń, możesz wdrożyć aplikację jedynie przy użyciu ustawienia **Dostępna instalacja**.
 
-## Konflikty wdrażania
+## <a name="deployment-conflicts"></a>Konflikty wdrażania
 W przypadku gdy urządzenie otrzymuje dwa wdrożenia z tą samą akcją wdrażania, stosowane są następujące reguły:
 
 -   Wdrożenia w grupie urządzeń mają pierwszeństwo przed wdrożeniami w grupie użytkowników. Jednak jeśli ta sama aplikacja jest wdrożona dla grupy użytkowników przy użyciu akcji wdrażania **Dostępne** i wdrożona dla grupy urządzeń przy użyciu akcji wdrażania **Nie dotyczy**, aplikacja zostanie udostępniona w portalu firmy, aby użytkownicy mogli ją zainstalować.
@@ -68,12 +70,12 @@ W przypadku gdy urządzenie otrzymuje dwa wdrożenia z tą samą akcją wdrażan
 -   Jeśli urządzenie otrzymuje zarówno wymaganą, jak i dostępną instalację, akcje zostają połączone. Innymi słowy użytkownik może zainstalować dostępną aplikację z portalu firmy przed rozpoczęciem instalacji wymaganej.
 
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Dowiedz się, jak [wdrażać aplikacje w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

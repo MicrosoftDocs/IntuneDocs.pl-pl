@@ -1,5 +1,5 @@
 ---
-title: "Program Android for Work — informacje | Microsoft Intune"
+title: "Program Android for Work — informacje | Microsoft Docs"
 description: "Zarządzany przez usługę Intune program Android for Work udostępnia dodatkowe funkcje zarządzania i ochrony prywatności, które ułatwiają użytkownikom korzystanie z urządzeń z systemem Android w celach służbowych."
 keywords: 
 author: nathbarn
@@ -11,13 +11,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 translationtype: Human Translation
-ms.sourcegitcommit: 83914246bde673b188ca3f7d9cf50b4d0de2edd4
-ms.openlocfilehash: 127db326fc96625c719b8136964bae014a904b3d
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: e9a99868e7bd4c3aa45de4d221f28c1d2f3efb74
 
 
 ---
 
 # <a name="manage-android-for-work-devices-with-intune"></a>Zarządzanie urządzeniami z programem Android for Work za pomocą usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Program Android for Work zawiera zestaw funkcji i usług dostępnych na urządzeniach z systemem Android. Umożliwiają one korzystanie z dodatkowych funkcji zarządzania i ochrony prywatności osobom, które używają urządzeń z systemem Android w celach służbowych. Usługa Intune ułatwia wdrażanie aplikacji i zasobów firmowych na urządzeniach z programem Android for Work, co zapewnia oddzielenie informacji osobistych od danych służbowych. Po pomyślnym wdrożeniu aplikacje oraz dane, z których korzystają te aplikacje, są używane wyłącznie w środowisku programu Android for Work zaimplementowanym na danym urządzeniu.
 
@@ -87,6 +89,6 @@ W przypadku zarządzania profilami sieci Wi-Fi przez program Android for Work gw
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

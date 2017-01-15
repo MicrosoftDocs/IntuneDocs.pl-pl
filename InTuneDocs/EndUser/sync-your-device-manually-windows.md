@@ -1,57 +1,40 @@
 ---
-title: "Ręczne synchronizowanie urządzenia z systemem Windows | Microsoft Intune"
+title: "Ręczne synchronizowanie urządzenia z systemem Windows | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 9561cf77e1569a6ab0da5d9b8e90e03ce5c9e998
+ms.sourcegitcommit: 9dd9a601f2e13a16157a43c28e77db6a6efd1619
+ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
 
 
 ---
 
-
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
-Jeśli instalowanie aplikacji trwa zbyt długo, możesz spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Ręczna synchronizacja może przyspieszyć instalację.
 
-Obsługiwane są wyłącznie następujące wersje. Jeśli urządzenia nie ma na liście, synchronizacja nie jest obsługiwana. Skorzystaj z instrukcji odpowiednich dla typu używanego urządzenia.
+Czasami próba zainstalowania aplikacji na urządzeniu z systemem Windows może trwać dłużej niż się wydaje. W takim przypadku można spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Synchronizacja może przyspieszyć instalację.
 
-* [Windows 10 Mobile](#windows-10-mobile)
-* [Windows 10 Desktop](#windows-10-desktop)
-* [Windows Phone 8.1](#windows-phone-81)
+> [!Note] 
+> Instalowanie aplikacje może potrwać trochę czasu w przypadku pracy w wolniejszej sieci lub w sieci z większą ilością urządzeń pobierających zawartość w tym samym czasie.
 
+Poniższe wersje systemu Windows można synchronizować ręcznie. Niestety, jeśli Twoje urządzenie używa innej wersji systemu Windows, nie jest możliwe uruchomienie synchronizacji ręcznej.
 
-## <a name="windows-10-mobile"></a>Windows 10 Mobile
-Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu przyspieszenia powolnej instalacji aplikacji:
-
-1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
-
-    ![Wybieranie kont na ekranie Ustawienia](./media/win10m-sync-1-settings-accounts.png)
-
-2. Wybierz pozycję **Dostęp z miejsca pracy**.
-
-    ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10m-sync-2-work-access.png)
-
-3. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę firmy.
-
-    ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10m-sync-3-tap-comp-name.png)
-
-4. Wybierz ikonę **Synchronizuj**.
-
-    ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)
-
-    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk **Synchronizuj** będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
+* [Synchronizuj system Windows 10 Desktop](#windows-10-desktop)
+* [Synchronizuj system Windows 10 Mobile](#windows-10-mobile)
+* [Synchronizuj system Windows Phone 8.1](#windows-phone-81)
 
 ## <a name="windows-10-desktop"></a>Windows 10 Desktop
 Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie procedury. Aby wybrać odpowiednią procedurę, spójrz na zrzuty ekranu, a następnie wykonaj kroki, które odpowiadają temu, co widzisz na swoim urządzeniu.
@@ -109,6 +92,27 @@ Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie p
 
    Przycisk będzie szary aż do zakończenia synchronizacji.
 
+   ## <a name="windows-10-mobile"></a>Windows 10 Mobile
+   Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu przyspieszenia powolnej instalacji aplikacji:
+
+   1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
+
+       ![Wybieranie kont na ekranie Ustawienia](./media/win10m-sync-1-settings-accounts.png)
+
+   2. Wybierz pozycję **Dostęp z miejsca pracy**.
+
+       ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10m-sync-2-work-access.png)
+
+   3. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę firmy.
+
+       ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10m-sync-3-tap-comp-name.png)
+
+   4. Wybierz ikonę **Synchronizuj**.
+
+       ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)
+
+       W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk **Synchronizuj** będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
+
 ## <a name="windows-phone-81"></a>Windows Phone 8.1
 Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu przyspieszenia powolnej instalacji aplikacji:
 
@@ -130,6 +134,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

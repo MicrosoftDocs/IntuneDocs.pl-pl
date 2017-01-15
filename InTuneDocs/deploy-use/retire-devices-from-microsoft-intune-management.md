@@ -1,11 +1,11 @@
 ---
-title: "Wycofywanie urządzeń | Microsoft Intune"
+title: "Wycofywanie urządzeń | Microsoft Docs"
 description: "Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 12/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,21 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8f3a8e42688bf830e3050cf387ccb15a1af811fa
-ms.openlocfilehash: e7f861adc757b4037c5d0ef97c361a57948386bf
+ms.sourcegitcommit: 464e6d73765a75aaefb3eca95281bf54b4cc7a2d
+ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
 
 
 ---
 
 # <a name="retire-devices-from-intune-management"></a>Wycofywanie urządzeń z zarządzania przy użyciu usługi Microsoft Intune
 
-Bez względu na to, czy urządzenia są osobiste, czy firmowe, w którymś momencie konieczne jest wycofanie zarządzanego urządzenia z zarządzania w usłudze Intune. Wycofanie urządzenia może być konieczne z różnych powodów:
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Bez względu na to, czy urządzenia są osobiste, czy firmowe, w którymś momencie konieczne jest wycofanie zarządzanego urządzenia z zarządzania w usłudze Intune. 
+
+Urządzenia nie są nigdy usuwane z usługi Intune bez ingerencji użytkownika, nawet jeśli urządzenia nie nawiązały połączenia z usługą Intune przez określony czas. 
+
+Wycofanie urządzenia może być konieczne z różnych powodów:
 
 -   Użytkownik opuszcza firmę w sposób planowany („zarządzane” opuszczenie firmy)
 -   Użytkownik opuszcza firmę w sposób nagły (zwolnienie, odejście itp.).
@@ -70,6 +76,6 @@ Czasami może dojść do zużycia urządzenia. W takiej sytuacji [zresetowanie u
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

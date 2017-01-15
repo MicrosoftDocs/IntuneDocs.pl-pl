@@ -1,11 +1,11 @@
 ---
-title: Wycofywanie aplikacji | Microsoft Intune
+title: Wycofywanie aplikacji | Microsoft Docs
 description: "Dowiedz się, jak wycofać lub odinstalować aplikacje przy użyciu usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,19 @@ ms.assetid: 6fbf0805-1144-4e08-bafd-4f181d932bf2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: b28cc7e99a47ce433273fa68389cc9727c8f9dd9
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: d0c24549c4805da87c74247253905a96d6290969
 
 
 ---
 
-# Wycofywanie aplikacji przy użyciu usługi Microsoft Intune
+# <a name="retire-apps-using-microsoft-intune"></a>Wycofywanie aplikacji przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Aby wycofać aplikację, należy ją po prostu odinstalować. W przypadku wdrażania aplikacji i zarządzania nimi przy użyciu usługi Intune proces odinstalowywania aplikacji jest taki sam zarówno dla urządzeń przenośnych, jak i komputerów z systemem Windows. Aby można było wykonać tę procedurę, aplikacja musi obsługiwać odinstalowywanie.
 
-## Aby odinstalować aplikację
+## <a name="uninstall-an-app"></a>Aby odinstalować aplikację
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Aplikacje** &gt; **Aplikacje**.
 
@@ -34,11 +36,11 @@ Aby wycofać aplikację, należy ją po prostu odinstalować. W przypadku wdraż
 
 Aplikacja zostanie odinstalowana następnym razem, gdy urządzenie lub komputer będzie wyszukiwać aplikacje.
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Dodawanie aplikacji w usłudze Microsoft Intune](add-apps.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

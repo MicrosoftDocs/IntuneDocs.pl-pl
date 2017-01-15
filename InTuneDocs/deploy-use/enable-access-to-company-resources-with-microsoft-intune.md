@@ -1,5 +1,5 @@
 ---
-title: "Zapewnianie dostępu do zasobów firmy | Usługa Microsoft Intune"
+title: "Zapewnianie dostępu do zasobów firmy | Microsoft Docs"
 description: "Profile sieci Wi-Fi, sieci VPN i poczty e-mail działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do pracy."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: f91c3530599b75093f536fd85eaf21d0b4e86e50
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: bda32f27216c7b65bd02334bae2882e840e7a99d
 
 
 ---
 
 # <a name="enable-access-to-company-resources-with-microsoft-intune"></a>Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Profile sieci Wi-Fi, sieci VPN i poczty e-mail w usłudze Microsoft Intune działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do pracy niezależnie od miejsca, w którym się znajdują. Profile certyfikatów ułatwiają zabezpieczanie dostępu.
 
 ## <a name="wi-fi-profileswi-fi-connections-in-microsoft-intunemd-and-supported-platforms"></a>[Profile sieci Wi-Fi](wi-fi-connections-in-microsoft-intune.md) i obsługiwane platformy
@@ -57,6 +60,6 @@ Ułatwienie bezpiecznego dostępu do zasobów firmowych z uwzględnieniem połą
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

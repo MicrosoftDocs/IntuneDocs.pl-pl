@@ -1,5 +1,5 @@
 ---
-title: "Usuwanie urządzenia z portalu firmy | Microsoft Intune"
+title: "Usuwanie urządzenia z Portalu firmy | Microsoft Docs"
 description: "Usuwanie urządzenia z Portalu firmy"
 keywords: 
 author: barlanmsft
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: a4cd1655098d2df2b3d095ff0906762d1f0561e5
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 28c6f72336447f85628e4913edbe5c0f003e2717
 
 
 ---
@@ -44,6 +44,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

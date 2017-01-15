@@ -1,11 +1,11 @@
 ---
-title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Intune"
+title: "Rozwiązywanie problemów dotyczących zasad | Microsoft Docs"
 description: "Rozwiązywanie problemów z konfiguracją zasad."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
-ms.openlocfilehash: fbc18b12c00a4b61f7419731c6b4306b583638cc
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 2a620d1e499e286365e5913be0ceb3d1efe3b846
 
 
 ---
 
-# Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
+# <a name="troubleshoot-policies-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune
 
 Jeśli masz problemy z wdrażaniem zasad i zarządzaniem nimi za pomocą usługi Intune, zacznij tutaj. Ten temat zawiera omówienie i rozwiązania niektórych typowych problemów, które mogą wystąpić.
 
-## Ogólne problemy
+## <a name="general-issues"></a>Ogólne problemy
 
-### Czy wdrożone zasady zostały zastosowane do urządzenia?
+### <a name="was-a-deployed-policy-applied-to-the-device"></a>Czy wdrożone zasady zostały zastosowane do urządzenia?
 **Problem:** nie wiesz, czy poprawnie zastosowano zasady.
 
 W konsoli administracyjnej usługi Intune każde urządzenie ma kartę zasad w obszarze **Właściwości urządzenia**. Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość zamierzona to wartość, która miała być osiągnięta w momencie przypisywania zasad. Stan oznacza to, co zostało faktycznie zastosowane, biorąc pod uwagę wszystkie zasady dotyczące urządzenia, a także ograniczenia i wymagania sprzętowe oraz system operacyjny. Dostępne są następujące stany:
@@ -49,14 +49,14 @@ Na poniższym zrzucie ekranu przedstawiono dwa proste przykłady:
 > Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
 
 
-## Problemy z zarejestrowanymi urządzeniami
+## <a name="issues-with-enrolled-devices"></a>Problemy z zarejestrowanymi urządzeniami
 
-### Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
+### <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
 **Problem**: w konsoli administracyjnej odebrano alert **Zapisywanie reguł dostępu w programie Exchange nie powiodło się**  .
 
 Jeśli zasady utworzono w obszarze roboczym Zasady lokalnej instalacji programu Exchange w konsoli administracyjnej, ale używana jest usługa Office 365, skonfigurowane ustawienia zasad nie są wymuszane przez usługę Intune. Zanotuj źródło zasad wymienione w alercie.  W obszarze roboczym Zasady lokalnej instalacji programu Exchange usuń starsze reguły, ponieważ są to globalne reguły programu Exchange, które nie mają znaczenia dla usługi Office 365. Następnie utwórz nowe zasady dla usługi Office 365.
 
-### Nie można zmienić zasad zabezpieczeń dla różnych zarejestrowanych urządzeń
+### <a name="cannot-change-security-policy-for-various-enrolled-devices"></a>Nie można zmienić zasad zabezpieczeń dla różnych zarejestrowanych urządzeń
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjne zasady zostały już zastosowane do urządzenia.
 
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
@@ -64,12 +64,12 @@ Na przykład w systemie Windows na pulpicie szybko przesuń palcem z prawej stro
 W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
 
-## Problemy związane z komputerami z oprogramowaniem klienckim usługi Intune
+## <a name="issues-with-pcs-that-run-the-intune-software-client"></a>Problemy związane z komputerami z oprogramowaniem klienckim usługi Intune
 
-### Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
+### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Błędy związane z zasadami usługi Microsoft Intune w pliku policyplatform.log
 W przypadku komputerów z systemem Windows zarządzanych przy użyciu oprogramowania klienckiego usługi Intune błędy zasad w pliku policyplatform.log mogą wynikać z innych niż domyślne ustawień w Kontroli konta użytkownika (UAC) systemu Windows na urządzeniu. Niektóre inne niż domyślne ustawienia funkcji Kontroli konta użytkownika mogą wpływać na instalacje klienta usługi Microsoft Intune i wykonywanie zasad.
 
-#### Aby rozwiązać problemy z Kontrolą konta użytkownika
+#### <a name="to-resolve-uac-issues"></a>Aby rozwiązać problemy z Kontrolą konta użytkownika
 
 1.  Wycofaj komputer w sposób opisany w temacie [Wycofywanie urządzeń z zarządzania usługi Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
@@ -82,7 +82,7 @@ W przypadku komputerów z systemem Windows zarządzanych przy użyciu oprogramow
 
 4.  Przesuń suwak powiadomień na ustawienie domyślne.
 
-### BŁĄD: Nie można uzyskać wartości z komputera, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>BŁĄD: Nie można uzyskać wartości z komputera, 0x80041013
 Ten błąd może występować, jeśli godzina w systemie lokalnym różni się o pięć minut lub więcej. Jeśli godzina na komputerze lokalnym nie jest zsynchronizowana, zabezpieczone transakcje zakończą się niepowodzeniem ze względu na nieprawidłowe sygnatury czasowe.
 
 Aby rozwiązać ten problem, ustaw czas w systemie lokalnym jak najbardziej zbliżony do czasu z Internetu lub czasu ustawionego na kontrolerach domeny w sieci.
@@ -94,11 +94,11 @@ Aby rozwiązać ten problem, ustaw czas w systemie lokalnym jak najbardziej zbli
 
 
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -1,24 +1,26 @@
 ---
-title: "Słownik usługi Intune | Microsoft Intune"
+title: "Słownik usługi Intune | Microsoft Docs"
 description: "Zapoznaj się z terminologią dotyczącą usługi Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.date: 11/17/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 translationtype: Human Translation
-ms.sourcegitcommit: 0c6c9d44e6a328b4bfb3827f54ac35b83e3c7aac
-ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 
 
 ---
 
 # <a name="microsoft-intune-glossary"></a>Słownik usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -32,7 +34,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 ## <a name="b"></a>B
 |||
 |-|-|
-|„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)|[„Przynieś własne urządzenie”](/intune/get-started/choose-how-to-enroll-devices1). Użytkownicy mogą instalować aplikację Portal firmy usługi Intune na urządzeniach, a następnie rejestrować je, aby uzyskać dostęp do zasobów firmy, takich jak poczta e-mail, aplikacje firmowe, dane firmowe i pomoc techniczna.| 
+|„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)|[„Przynieś własne urządzenie”](/intune/get-started/choose-how-to-enroll-devices1). Użytkownicy mogą instalować aplikację Portal firmy usługi Intune na urządzeniach, a następnie rejestrować je, aby uzyskać dostęp do zasobów firmy, takich jak poczta e-mail, aplikacje firmowe, dane firmowe i pomoc techniczna.|
 
 ## <a name="c"></a>C
 |||
@@ -95,7 +97,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 |-|-|
 |Managed Browser|[Aplikacja służąca do przeglądania sieci Web](/intune/deploy-use/manage-internet-access-using-managed-browser-policies), którą można wdrożyć w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.|
 |Zarządzanie aplikacjami mobilnymi|[Zarządzanie aplikacjami mobilnymi (MAM, mobile application management)](/intune/deploy-use/overview-of-app-lifecycle-in-microsoft-intune) pozwala publikować, wypychać, konfigurować, zabezpieczać, monitorować i aktualizować aplikacje mobilne dla użytkowników.
-|Zarządzanie urządzeniami przenośnymi|[Zarządzanie urządzeniami przenośnymi (MDM, mobile device management)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) pozwala rejestrować urządzenia w usłudze Intune w sposób umożliwiający inicjowanie ich obsługi administracyjnej, konfigurowanie i monitorowanie tych urządzeń oraz wykonywanie na nich akcji. 
+|Zarządzanie urządzeniami przenośnymi|[Zarządzanie urządzeniami przenośnymi (MDM, mobile device management)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) pozwala rejestrować urządzenia w usłudze Intune w sposób umożliwiający inicjowanie ich obsługi administracyjnej, konfigurowanie i monitorowanie tych urządzeń oraz wykonywanie na nich akcji.
 |Urząd zarządzania urządzeniami przenośnymi|[Urząd MDM](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune) definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune.|
 |Zasady inicjowania obsługi administracyjnej aplikacji mobilnych|Zasady systemu iOS ułatwiające zagwarantowanie, że [profile inicjowania obsługi administracyjnej](/intune/deploy-use/ios-mobile-app-provisioning-profiles) wdrażanych aplikacji systemu iOS nie wygasają.|
 |Zasady konfiguracji aplikacji mobilnych|Zasady systemu iOS służące do [określania ustawień dla zgodnych aplikacji systemu iOS](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) podczas ich uruchamiania, na przykład do podawania im nazwy firmy lub adresu serwera.|
@@ -146,9 +148,6 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 
 
 
-
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

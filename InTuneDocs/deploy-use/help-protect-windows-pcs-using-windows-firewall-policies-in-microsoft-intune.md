@@ -1,11 +1,11 @@
 ---
-title: "Zasady zapory dla komputerów z systemem Windows | Microsoft Intune"
+title: "Zasady zapory dla komputerów z systemem Windows | Microsoft Docs"
 description: "Usługa Intune może pomóc w zabezpieczaniu komputerów zarządzanych za pomocą klienta usługi Intune na wiele sposobów, łącznie z konfigurowaniem ustawień Zapory systemu Windows."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,20 @@ ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 3faede4b60ac989e688b87ddb8112aebcf4c56ef
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: bad0d8867602baf69dc398cc06b91ca30b24c487
 
 
 ---
 
-# Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
+# <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 Usługa Microsoft Intune może pomóc w zabezpieczaniu komputerów zarządzanych za pomocą klienta usługi Intune na wiele sposobów. Jednym z nich jest udostępnienie zasad, które umożliwiają skonfigurowanie ustawień Zapory systemu Windows na komputerach.
 
 Jeśli klient usługi Intune na komputery z systemem Windows nie został jeszcze zainstalowany na komputerach, zobacz [Instalowanie klienta komputera z systemem Windows przy użyciu usługi Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 W poniższych sekcjach znajdują się informacje ułatwiające konfigurowanie, wdrażanie i monitorowanie zasad Zapory systemu Windows na komputerach z systemem Windows.
 
-## Zarządzanie Zaporą systemu Windows przy użyciu zasad usługi Intune
+## <a name="use-intune-policies-to-manage-windows-firewall"></a>Zarządzanie Zaporą systemu Windows przy użyciu zasad usługi Intune
 Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień sterujących zachowaniem Zapory systemu Windows na zarządzanych komputerach. Te ustawienia nie umożliwiają zarządzania niestandardowymi wyjątkami Zapory systemu Windows i nie mają wpływu na zapory innych firm.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień ste
 > -   Zapora systemu Windows
 > -   Agent zasad IPsec
 
-## Konfiguracja zasad Zapory systemu Windows
+## <a name="configure-a-windows-firewall-policy"></a>Konfiguracja zasad Zapory systemu Windows
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
@@ -51,9 +51,9 @@ Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień ste
 
 Po wdrożeniu zasad Zapory systemu Windows można wyświetlić ich stan w obszarze roboczym **Zasady** na stronie **Wszystkie zasady**.
 
-## Określanie ustawień zasad Zapory systemu Windows
+## <a name="specify-policy-settings-for-windows-firewall"></a>Określanie ustawień zasad Zapory systemu Windows
 
-### Włącz Zaporę systemu Windows
+### <a name="turn-on-windows-firewall"></a>Włącz Zaporę systemu Windows
 
 Te ustawienia zasad umożliwiają użycie Zapory systemu Windows na zarządzanych komputerach, które są:
 - Połączone z domeną (np. w miejscu pracy)
@@ -64,7 +64,7 @@ Wartością domyślną dla każdego z tych ustawień jest **Tak**. Jest to najbe
 
 
 
-### Blokuj wszystkie połączenia przychodzące łącznie z programami znajdującymi się na liście dozwolonych programów
+### <a name="block-all-incoming-connections-including-those-in-the-list-of-allowed-programs"></a>Blokuj wszystkie połączenia przychodzące łącznie z programami znajdującymi się na liście dozwolonych programów
 
 Te ustawienia zasad konfigurują użycie Zapory systemu Windows w celu blokowania przychodzącego ruchu sieciowego na zarządzanych komputerach, które są:
 - Połączone z domeną (np. w miejscu pracy)
@@ -76,7 +76,7 @@ Wartością domyślną dla każdego z tych ustawień jest **Tak**. Jest to najbe
 > [!IMPORTANT]
 > Jeśli środowisko obejmuje zarządzane komputery z systemem Windows Vista bez zainstalowanych dodatków Service Pack, należy zainstalować aktualizację skojarzoną z [artykułem 971800](http://go.microsoft.com/fwlink/?LinkId=188405) w bazie wiedzy Microsoft Knowledge Base albo wyłączyć ustawienia zasad **Blokuj wszystkie połączenia przychodzące** w ramach zasad wdrożonych na tych komputerach.
 
-### Powiadamiaj użytkownika, gdy Zapora systemu Windows zablokuje nowy program
+### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Powiadamiaj użytkownika, gdy Zapora systemu Windows zablokuje nowy program
 
 Te ustawienia zasad ustalają, czy użytkownik komputera otrzyma powiadomienie, gdy Zapora systemu Windows zablokuje przychodzący ruch sieciowy na zarządzanych komputerach:
 - Połączone z domeną (np. w miejscu pracy)
@@ -86,7 +86,7 @@ Te ustawienia zasad ustalają, czy użytkownik komputera otrzyma powiadomienie, 
 Wartością domyślną dla każdego z tych ustawień jest **Tak**.
 
 
-### Konfigurowanie wstępnie zdefiniowanych wyjątków
+### <a name="configure-predefined-exceptions"></a>Konfigurowanie wstępnie zdefiniowanych wyjątków
 
 Możesz skonfigurować wyjątki, które zezwalają na przesyłanie konkretnych rodzajów ruchu sieciowego przez zaporę, niezależnie od wartości skonfigurowanych wcześniej. Żadne z tych ustawień nie są domyślnie skonfigurowane.
 
@@ -130,11 +130,11 @@ Możesz skonfigurować wyjątki, które zezwalają na przesyłanie konkretnych r
 |**Windows Virtual PC**<br>(system Windows 7 lub nowszy)|Umożliwia maszynom wirtualnym komunikowanie się z innymi komputerami.|
 |**Bezprzewodowe urządzenia przenośne**|Umożliwia transferowanie multimediów z kamery sieciowej lub urządzenia multimedialnego do zarządzanych komputerów przy użyciu protokołu transferu multimediów (MTP). To ustawienie powoduje użycie usługi SSDP i protokołów sieciowych UPnP.|
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

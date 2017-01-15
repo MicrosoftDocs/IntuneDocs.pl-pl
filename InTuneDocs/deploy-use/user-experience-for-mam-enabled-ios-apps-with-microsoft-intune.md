@@ -1,11 +1,11 @@
 ---
-title: Aplikacje dla systemu iOS z zasadami MAM | Microsoft Intune
+title: Aplikacje dla systemu iOS z zasadami MAM | Microsoft Docs
 description: "W tym temacie opisano to, czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad zarządzania aplikacjami mobilnymi."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 10/18/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +14,26 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 3aa6728036ff66ea489176063af2d136bef4c7cc
+ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
+ms.openlocfilehash: f5a26d3d5ed060571892d91637dc12cae08f1a69
 
 
 ---
 
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-mam-policies"></a>Oczekiwany przebieg zarządzania aplikacją systemu iOS przez zasady zarządzania aplikacjami mobilnymi
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
  W tym temacie opisano środowisko użytkownika aplikacji z zasadami zarządzania aplikacjami mobilnymi (MAM). Zasady MAM są stosowane tylko wtedy, gdy aplikacje są używane do celów służbowych, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji firmowej w usłudze OneDrive.
 
 ##  <a name="access-apps"></a>Dostęp do aplikacji
 
-Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zostanie poproszony o ponowne uruchomienie aplikacji przy jej pierwszym użyciu.  Ponowne uruchomienie jest wymagane, aby do aplikacji można było zastosować zasady MAM. Poniższy zrzut ekranu z aplikacji Skype przedstawia monit o ponowne uruchomienie:
+Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zostanie poproszony o ponowne uruchomienie aplikacji przy jej pierwszym użyciu.  Ponowne uruchomienie jest wymagane, aby do aplikacji można było zastosować zasady MAM. 
+
+<!--- The following screenshot from the Skype app illustrates this restart request: --->
 
 
-![Zrzut ekranu przedstawiający monit o podanie numeru PIN na urządzeniu z systemem iOS](../media/appmanagement/iOS_AppPINPrompt.png)
+<!---  ![Screenshot of the iOS device showing PIN prompt](../media/appmanagement/iOS_AppPINPrompt.png) --->
 
 Na urządzeniach, które są **zarejestrowane do celów zarządzania w usłudze Intune**, użytkownik zobaczy komunikat, że jego aplikacja jest teraz zarządzana:
 
@@ -68,6 +73,6 @@ Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

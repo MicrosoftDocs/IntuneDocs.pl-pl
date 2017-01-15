@@ -1,5 +1,5 @@
 ---
-title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń | Microsoft Intune"
+title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń | Microsoft Docs"
 description: "Użyj funkcji mapowania grup urządzeń w usłudze Microsoft Intune do grupowania urządzeń w zdefiniowane kategorie, co ułatwi zarządzanie tymi urządzeniami."
 keywords: 
 author: robstackmsft
@@ -14,12 +14,15 @@ ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: bdfa96a4268733bf6fa3a7999d85a881a7c4e513
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 28af253b0a0fe174478961810a26b45d8ac3d959
 
 ---
 
-# Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune
+# <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Użyj funkcji **mapowania grup urządzeń** w usłudze Microsoft Intune, aby automatycznie dodać urządzenia do grup na podstawie zdefiniowanych kategorii, co ułatwi zarządzanie tymi urządzeniami. 
 
 Podczas mapowania grup urządzeń jest używany następujący przepływ pracy:
@@ -36,18 +39,18 @@ Możesz utworzyć dowolne kategorie urządzeń, na przykład:
 * Księgowość
 * Menedżer
 
-## Istotne informacje dotyczące zmiany wprowadzonej w zarządzaniu grupami w usłudze Intune
+## <a name="important-information-about-a-change-in-group-management-for-intune"></a>Istotne informacje dotyczące zmiany wprowadzonej w zarządzaniu grupami w usłudze Intune
 
 Na podstawie Waszych opinii zdecydowaliśmy rozpocząć proces unifikacji środowiska grupowania i określania elementów docelowych w pakiecie Enterprise Mobility + Security. Z tej przyczyny wkrótce przeprowadzimy konwertowanie grup usługi Intune na grupy zabezpieczeń oparte na usłudze Azure Active Directory. Po tej zmianie nie będzie można tworzyć grup za pomocą usługi Intune. Zamiast tego będzie można je tworzyć w Portalu Azure. Ta zmiana zostanie przeprowadzona stopniowo. Szczegółowe informacje dotyczące tej zmiany oraz jej harmonogramu podano w [tym temacie](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
-### Której procedury z tego tematu należy użyć w celu skonfigurowania mapowania grup urządzeń?
+### <a name="which-procedure-in-this-topic-should-you-use-to-configure-device-group-mapping"></a>Której procedury z tego tematu należy użyć w celu skonfigurowania mapowania grup urządzeń?
 
 W związku z etapową implementacją grup zabezpieczeń opartych na usłudze Azure Active Directory musisz otworzyć obszar roboczy **Grupy** w [konsoli administratora usługi Intune](https://manage.microsoft.com), aby ustalić, której procedury należy użyć:
 
 -  Jeśli widzisz link do Portalu Azure, już nie korzystasz z grup usługi Intune. Postępuj zgodnie z poniższą procedurą [Jak skonfigurować mapowanie grup urządzeń dla grup usługi Azure Active Directory](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune#how-to-configure-device-group-mapping-for-azure-active-directory-groups).
 -  Jeśli nie widzisz linku do Portalu Azure, nadal korzystasz z grup usługi Intune. Postępuj zgodnie z poniższą procedurą [Jak skonfigurować mapowanie grup urządzeń dla grup usługi Intune](/intune/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune#how-to-configure-device-group-mapping-for-intune-groups).
 
-## Jak skonfigurować mapowanie grup urządzeń dla grup usługi Intune
+## <a name="how-to-configure-device-group-mapping-for-intune-groups"></a>Jak skonfigurować mapowanie grup urządzeń dla grup usługi Intune
 1. Dla każdej kategorii urządzeń, której chcesz używać, utwórz grupę urządzeń usługi Intune lub zidentyfikuj istniejącą grupę. Aby uzyskać więcej informacji na temat tworzenia grup, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 2. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja**.
 3. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Mapowanie grup urządzeń**.
@@ -58,9 +61,9 @@ W związku z etapową implementacją grup zabezpieczeń opartych na usłudze Azu
 
 
 
-## Jak skonfigurować mapowanie grup urządzeń dla grup usługi Azure Active Directory
+## <a name="how-to-configure-device-group-mapping-for-azure-active-directory-groups"></a>Jak skonfigurować mapowanie grup urządzeń dla grup usługi Azure Active Directory
 
-### Krok 1. Utworzenie kategorii urządzeń w konsoli administratora usługi Intune
+### <a name="step-1---create-device-categories-in-the-intune-administration-console"></a>Krok 1. Utworzenie kategorii urządzeń w konsoli administratora usługi Intune
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja**.
 3. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Kategorie urządzeń**.
 4. Na stronie **Kategorie urządzeń** zostanie wyświetlona lista, na której możesz skonfigurować kategorie urządzeń: 
@@ -69,7 +72,7 @@ W związku z etapową implementacją grup zabezpieczeń opartych na usłudze Azu
 
 Nazwa kategorii urządzeń będzie używana podczas tworzenia grup zabezpieczeń usługi Azure Active Directory w kroku 2.
 
-### Krok 2. Utworzenie grup zabezpieczeń usługi Azure Active Directory
+### <a name="step-2---create-azure-active-directory-security-groups"></a>Krok 2. Utworzenie grup zabezpieczeń usługi Azure Active Directory
 
 W tym kroku utworzysz grupy dynamiczne w Portalu Azure na podstawie kategorii urządzeń i ich nazw.
 
@@ -78,15 +81,15 @@ Skorzystaj z informacji podanych w tym temacie, aby utworzyć grupę urządzeń 
 Na przykład (**device.deviceCategory -eq** "<*nazwa kategorii urządzeń uzyskana z konsoli administratora usługi Intune*>")
 
 
-## Po skonfigurowaniu grup urządzeń
+## <a name="after-you-configure-device-groups"></a>Po skonfigurowaniu grup urządzeń
 
 Podczas rejestrowania swoich urządzeń użytkownicy zobaczą listę skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
 
-### Zobacz także
+### <a name="see-also"></a>Zobacz także
 [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

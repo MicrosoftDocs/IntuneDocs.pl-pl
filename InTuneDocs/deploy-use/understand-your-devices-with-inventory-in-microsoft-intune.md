@@ -1,5 +1,5 @@
 ---
-title: "Uzyskiwanie informacji o urządzeniach dzięki spisowi | Microsoft Intune"
+title: "Uzyskiwanie informacji o urządzeniach dzięki spisowi | Microsoft Docs"
 description: "Użyj usługi Intune do wyświetlenia informacji o sprzęcie zarządzanych urządzeń."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dbf3ac5c7ab326fd82acb979ea7a4933ac68ff1c
-ms.openlocfilehash: 1bfb47cccc6438bae54a57271e585bdc9f9f6611
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 3ae5809f8506e2255d9443d3587f2564bc863066
 
 
 ---
 
 # <a name="understand-your-devices-with-inventory-in-microsoft-intune"></a>Uzyskiwanie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Microsoft Intune umożliwia przeglądanie spisu zarejestrowanych urządzeń i komputerów z systemem Windows, na których zostało uruchomione oprogramowanie klienckie usługi Intune.
 Usługa Intune zwykle zbiera spis z zarządzanych urządzeń co 7 dni. W związku z tym może występować opóźnienie, zanim w raportach zostaną wyświetlone wyniki ostatnich zmian dotyczących urządzeń, na przykład zmiany nazwy urządzenia lub ilości wolnego miejsca.
 
@@ -116,6 +119,6 @@ Aby wyświetlić spis zebrany przez komputery z systemem Windows, uruchom [rapor
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

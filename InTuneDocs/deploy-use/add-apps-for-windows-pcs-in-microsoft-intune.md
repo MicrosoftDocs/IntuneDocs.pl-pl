@@ -1,11 +1,11 @@
 ---
-title: "Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune| Microsoft Intune"
+title: "Dodawanie aplikacji dla komputerów osobistych z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune | Microsoft Docs"
 description: "W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji na komputerach do usługi Intune przed ich wdrożeniem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: e6537b7b0a42c76ec99d51a6a09fe1f6ab4400a1
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: da23e1df3dcda7f90fd592b5a6f5a587c63815f1
 
 
 ---
 
-# Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
+# <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
 
 W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji do usługi Intune przed ich wdrożeniem.
 
@@ -28,7 +28,7 @@ W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji do u
 > Informacje zawarte w tym temacie ułatwiają dodawanie aplikacji dla komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune. Jeśli chcesz dodać aplikacje dla zarejestrowanych komputerów z systemem Windows i innych urządzeń przenośnych, zobacz [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
 
-## Dodawanie aplikacji
+## <a name="add-the-app"></a>Dodawanie aplikacji
 Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości aplikacji i przekazania jej do magazynu w chmurze za pomocą następującej procedury:
 
 1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune.
@@ -85,12 +85,12 @@ Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości 
 
 Aplikacja zostanie wyświetlona w węźle **Aplikacje** w obszarze roboczym **Aplikacje**.
 
-## Następne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Po utworzeniu aplikacji następnym krokiem jest jej wdrożenie. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Intune"
+title: "Rozwiązywanie problemów z aktualizacjami oprogramowania | Microsoft Docs"
 description: "Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 9c08ebe1a4cf1a7768b5dbecf7ffccdd7c8d8006
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 66ec65e856c0ab70264b797bb3ef7fe4f5673b54
 
 
 ---
 
-# Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune
+# <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tej sekcji przedstawiono informacje, które ułatwią rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune.
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
-## Kody błędów programu Update Agent
+## <a name="update-agent-error-codes"></a>Kody błędów programu Update Agent
 
 Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usługi Intune. Jeśli nie możesz znaleźć określonego kodu błędu w tej tabeli, zobacz dodatek zawierający [kody wyników programu Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542).
 
@@ -241,7 +244,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80af0005**|OMC_E_INSTALL_NOT_ALLOWED_REBOOT_REQUIRED|Instalacja nie powiodła się z powodu oczekującego obowiązkowego ponownego rozruchu.|
 |**0x80af0006**|OMC_E_DOWNLOAD_CANCELLED|Pobieranie zostało anulowane.|
 
-## Komputery z systemem Windows 7 z dużą liczbą zastąpionych aktualizacji przestają raportować do konsoli usługi Microsoft Intune
+## <a name="windows-7-based-computers-with-lots-of-superseded-updates-stop-reporting-to-the-microsoft-intune-console"></a>Komputery z systemem Windows 7 z dużą liczbą zastąpionych aktualizacji przestają raportować do konsoli usługi Microsoft Intune
 **Problem**: Może mieć miejsce sytuacja, w której na klientach usługi Microsoft Intune występuje jeden lub więcej z następujących objawów:
 - Raportowanie do konsoli administracyjnej firmy Microsoft zostaje nagle zatrzymane.  
 - Wykorzystanie procesora CPU jest wysokie.
@@ -260,11 +263,11 @@ Ten problem może wystąpić, jeśli zastąpione aktualizacje (aktualizacje, kt�
 
 Ponadto jeśli korzystasz z systemu Windows 7, upewnij się, że następująca aktualizacja jest zainstalowana: [3050265 Klient usługi Windows Update dla systemu Windows 7: czerwiec 2015 r.](https://support.microsoft.com/kb/3050265)
 
-### Następne kroki
+### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 

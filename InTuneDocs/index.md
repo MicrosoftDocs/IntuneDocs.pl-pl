@@ -3,20 +3,20 @@ experimental: true
 experiment_id: lindavr-hubpage-20160925
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
-title: "Dokumentacja usługi Intune | Dokumentacja firmy Microsoft"
+title: "Dokumentacja usługi Intune | Microsoft Docs"
 description: "Dokumentacja techniczna dotycząca zarządzania urządzeniami przenośnymi i aplikacjami w usłudze Microsoft Intune"
 keywords: "dokumentacja usługi Intune, zarządzanie aplikacjami, zarządzanie urządzeniami, dokumentacja MDM, dokumentacja MAM"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 12/7/2016
+ms.date: 12/20/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: b921a15ca5fd24d9ddbf54789c42a0740b72d7f6
-ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
+ms.sourcegitcommit: d63d670f12f27511671b9015ad53a93f1a784c40
+ms.openlocfilehash: eda6352368a3593d56ce8879501e2ebf4fda41f9
 
 
 ---
@@ -37,8 +37,8 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Ochrona dostępu do zasobów firmy</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-ios">Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-android">Przewodnik deweloperów po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android</a></li>
+          <li><a href="https://graph.microsoft.io/en-us/docs/api-reference/beta/intune_graph_overview">Praca z usługą Intune w programie Microsoft Graph</a></li>
+          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune</a></li>
         </ul>
       </div>
     </section>
@@ -61,13 +61,13 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
-                    <h3>Wprowadzenie do usługi Intune</h3>
+                    <h3>Co to jest usługa Intune?</h3>
                     <p>Dowiedz się więcej na temat o oferowanych przez usługę Intune funkcjach zarządzania urządzeniami, aplikacjami i danymi dla urządzeń przenośnych (urządzenia z systemem iOS, Android i Windows Phone) oraz komputerów z systemem Windows.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune">
-                    <h3>Przewodnik dotyczący oceny usługi Intune</h3>
+                    <h3>Czy usługa Intune jest dla Ciebie odpowiednim rozwiązaniem?</h3>
                     <p>Dzięki temu przewodnikowi dotyczącemu wersji próbnej możesz wykonać kroki, które umożliwiają ustawienie wersji próbnej z maksymalnie 100 użytkownikami i urządzeniami.</p>
                   </a>
                 </li>
@@ -94,21 +94,21 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
-                    <h3>Co należy wiedzieć przed rozpoczęciem pracy</h3>
-                    <p>Zapoznaj się szybko z wymaganiami bazowymi dotyczącymi każdego wdrożenia usługi Intune.</p>
-                  </a>
-                </li>
-                <li class="column-third">
                   <a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">
-                    <h3>Przewodnik Szybki start dotyczący usługi Intune</h3>
-                    <p>W tym temacie opartym na 30-dniowej wersji próbnej znajdują się informacje dotyczące synchronizacji z usługą Azure Active Directory, zagadnienia związane z domenami i usługą DNS oraz inne informacje dotyczące dostosowywania usługi Intune.</p>
+                    <h3>Przewodnik z wprowadzeniem</h3>
+            <p>W tym temacie opartym na 30-dniowej wersji próbnej znajdują się informacje dotyczące synchronizacji z usługą Azure Active Directory, zagadnienia związane z domenami i usługą DNS oraz inne informacje dotyczące dostosowywania usługi Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/intune/get-started/rollout-phases-for-microsoft-intune-deployment">
-                    <h3>Etapy wdrażania</h3>
-                    <p>Zdefiniuj cele, architekturę, pilotaż i plany dotyczące wdrożenia produkcyjnego usługi Intune.</p>
+                  <a href="/intune/get-started/prevent-company-data-leaks-from-office-365-mobile-apps">
+                    <h3>Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365</h3>
+                    <p>Zabezpiecz dane organizacji za pomocą zasad ochrony aplikacji, które zapobiegają wyciekom danych firmy.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/get-started/simplify-email-configuration-on-mobile-devices">
+                    <h3>Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych</h3>
+                    <p>Oszczędzaj czas i zasoby firmy przez wdrożenie profilów poczty e-mail (a także sieci VPN i Wi-Fi) na urządzeniach przenośnych z systemami Windows, iOS i Android zarządzanych przez usługę Intune.</p>
                   </a>
                 </li>
               </ul>
@@ -155,8 +155,8 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune">
-                    <h3>Ograniczanie dostępu do usługi poczty e-mail i usługi O365</h3>
-                    <p>Używaj funkcji dostępu warunkowego w usłudze Intune do ograniczania dostępu do firmowej poczty e-mail i usług Office 365.</p>
+                    <h3>Ochrona dostępu do poczty e-mail i usług O365</h3>
+                    <p>Funkcja dostępu warunkowego w usłudze Intune pozwala chronić dostęp do firmowej poczty e-mail i usług Office 365.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -285,6 +285,6 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

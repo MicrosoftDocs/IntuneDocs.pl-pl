@@ -1,11 +1,11 @@
 ---
-title: "Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows | Microsoft Intune"
+title: "Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows | Microsoft Docs"
 description: "W artykule opisano zasady zarządzania komputerami z systemem Windows i ustawienia dla programu Microsoft Intune Center."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 10/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f34810d4f2f556522d993bf6e8e120c30a03e24c
-ms.openlocfilehash: 1c6800ea3fde39603478437de6da7200ecae5afb
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: da0dad4cd40a21aec9485f46ff918a48611b869d
 
 
 ---
 
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows
 
-Komputery z systemem Windows z uruchomionym klientem oprogramowania usługi Intune może być zarządzany za pomocą zasad **Zarządzanie komputerem** usługi Intune. Użyj zasad **Zarządzanie komputerem** usługi Intune, aby skonfigurować ustawienia w programie Microsoft Intune Center umożliwiające kontrolowanie aktualizacji dla komputerów i konfigurowanie Zapory systemu Windows dla komputerów.
+Do zarządzania komputerami z systemem Windows jako komputerami osobistymi, uruchamiając na nich oprogramowanie klienckie usługi Intune, możesz używać tylko zasad **Zarządzanie komputerem** w konsoli administracyjnej usługi Intune. Wszystkie inne zasady wymienione w konsoli administracyjnej są przeznaczone tylko dla urządzeń przenośnych. Za pomocą zasad **Zarządzanie komputerem** możesz konfigurować ustawienia w programie Microsoft Intune Center, kontrolować aktualizacje dla komputerów osobistych i konfigurować Zaporę systemu Windows dla komputerów osobistych.
 
 ![Szablon zasad dla komputerów z systemem Windows](../media/pc_policy_template.png)
 
@@ -63,6 +63,6 @@ Zobacz następujące zasoby, aby uzyskać informacje o zasadach i ustawieniach, 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

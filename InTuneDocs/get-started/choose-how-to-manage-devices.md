@@ -1,12 +1,12 @@
 ---
-title: "Wybieranie metody zarządzania urządzeniami | Microsoft Intune"
+title: "Wybieranie metody zarządzania urządzeniami | Microsoft Docs"
 description: "Poznaj różne sposoby rejestrowania urządzeń i zarządzania nimi."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 11/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,15 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: b97ee1e99778c2a39e92061dd5aa051ecdf35caa
+ms.sourcegitcommit: e13a9c426e07ebb2443bd403d1a5c7274afd387e
+ms.openlocfilehash: dea0700e2901bfed566a87d7c599569219de85a2
 
 
 ---
 
 # <a name="choose-how-to-manage-devices"></a>Wybieranie metody zarządzania urządzeniami
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Aby móc korzystać z wielu funkcji oferowanych przez usługę Intune, takich jak wdrażanie aplikacji i kontrolowanie ustawień urządzeń, urządzenia muszą być *zarządzane*. Sposób zarządzania urządzeniami zależy od możliwości usługi Intune, których chcesz używać. Ten temat ułatwia w wybór metody odpowiadającej potrzebom.
 
@@ -44,7 +46,7 @@ Rejestracja komputerów z systemem Windows pozwala uzyskać większość funkcji
 - Pomoc zdalna dla użytkowników korzystających z oprogramowania TeamViewer
 
 Aby uzyskać szczegółową listę możliwości zarządzania oferowanych przez każdą metodę, zobacz [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md) i [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md).
-Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](/intune/get-started/supported-mobile-devices-and-computers).
+Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](https://docs.microsoft.com/intune/get-started/what-to-know-before-you-start-microsoft-intune#intune-supported-devices).
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -54,6 +56,6 @@ Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usłu
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

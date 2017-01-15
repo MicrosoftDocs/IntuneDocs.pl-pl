@@ -1,5 +1,5 @@
 ---
-title: Ustawienia zasad systemu Windows 10 | Microsoft Intune
+title: Ustawienia zasad systemu Windows 10 | Microsoft Docs
 description: "Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,15 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 8c970a4d1362def67e17da656b5e12e5bab2667b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 5a1a861096bdfae461b6ad05e424f770796279a2
 
 
 ---
 
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Ten temat zawiera informacje ułatwiające zrozumienie ustawień zasad usługi Intune, których można użyć do zarządzania urządzeniami z systemem Windows 10. Zapoznaj się z tym tematem obok procedury w sekcji [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md), aby skonfigurować niestandardowe i wbudowane ustawienia dla zarejestrowanych urządzeń z systemem Windows 10 Desktop i Windows 10 Mobile. Tych zasad nie można używać w przypadku komputerów z [oprogramowaniem klienckim usługi Intune](/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 

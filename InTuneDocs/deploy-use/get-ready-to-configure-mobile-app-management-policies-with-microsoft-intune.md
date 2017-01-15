@@ -1,9 +1,9 @@
 ---
-title: "Wymagania wstępne dotyczące zasad zarządzania aplikacjami mobilnymi | Microsoft Intune"
+title: "Wymagania wstępne dotyczące zasad zarządzania aplikacjami mobilnymi | Microsoft Docs"
 description: "W tym temacie opisano wymagania wstępne dotyczące konfigurowania użytkowników przed utworzeniem zasad zarządzania aplikacjami mobilnymi."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/29/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: ac820146d81fb121a60f7029f6a52a0056d6ab0a
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: cb525deb240668c0f0f14b19f39eb1226e338629
 
 
 ---
 
 # <a name="get-ready-to-configure-mobile-app-management-policies-on-the-azure-portal"></a>Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi w portalu Azure
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 W tym temacie opisano wymagania wstępne oraz czynności, które należy wykonać **przed** rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi w portalu Azure.
 
 Aby dowiedzieć się, w jaki sposób zasady zarządzania aplikacjami mobilnymi usługi Intune mogą chronić dane firmy, zobacz [Protect apps and data using mobile app management policies](protect-apps-and-data-with-microsoft-intune.md) (Chronienie aplikacji i danych przy użyciu zasad zarządzania aplikacjami mobilnymi).
@@ -121,6 +124,6 @@ W poniższej tabeli zamieszczono role i uprawnienia, które można przypisać ad
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 
