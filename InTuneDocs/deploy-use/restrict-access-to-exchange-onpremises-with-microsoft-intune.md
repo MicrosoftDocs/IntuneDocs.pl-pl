@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do poczty e-mail do lokalnej instalacji programu Exchange | Microsoft Docs"
+title: "Ochrona dostępu do poczty e-mail z lokalnej instalacji programu Exchange | Microsoft Docs"
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w lokalnej instalacji programu Exchange przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,22 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51e06bafef761eaf06d35343b459262524ad9168
-ms.openlocfilehash: c090d4bbc539d4174deee139e51242bae94feeb3
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
 
 
 ---
 
-# <a name="restrict-email-access-to-exchange-on-premises-and-legacy-exchange-online-dedicated-with-intune"></a>Ograniczanie dostępu poczty e-mail do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
+# <a name="protect-email-access-to-exchange-on-premises-and-legacy-exchange-online-dedicated-with-intune"></a>Ochrona dostępu do poczty e-mail w lokalnej instalacji programu Exchange i w starszej wersji usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sprawdzić, czy zawiera ono nową, czy starą konfigurację, skontaktuj się z menedżerem konta.
+> Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sprawdzić, czy zawiera ono nową, czy starszą konfigurację, skontaktuj się z menedżerem ds. klientów.
 
 
 Aby kontrolować dostęp poczty e-mail do lokalnego programu Exchange lub do starszej wersji środowiska usługi Exchange Online w wersji dedykowanej, możesz skonfigurować dostęp warunkowy do lokalnego programu Exchange przy użyciu usługi Microsoft Intune.
-Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail i usług O365]( restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail i usług O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 **Przed** skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
 
@@ -125,15 +127,15 @@ Są obsługiwane następujące elementy:
 
 -   Jeśli użytkownik wyrejestruje urządzenie z usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zablokowanie urządzenia może potrwać od jednej do trzech godzin.
 
-**Aby wyświetlić niektóre przykładowe scenariusze dotyczące sposobu konfigurowania zasad dostępu warunkowego w celu ograniczenia dostępu urządzeń, zobacz [Przykładowe scenariusze ograniczania dostępu do poczty e-mail](restrict-email-access-example-scenarios.md).**
+**Aby wyświetlić niektóre przykładowe scenariusze dotyczące sposobu konfigurowania zasad dostępu warunkowego w celu ochrony dostępu urządzeń, zobacz [Przykładowe scenariusze ochrony dostępu do poczty e-mail](restrict-email-access-example-scenarios.md).**
 
 ## <a name="next-steps"></a>Następne kroki
--   [Ograniczanie dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+-   [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
--   [Ograniczanie dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+-   [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
