@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu przy użyciu ochrony urządzeń przed zagrożeniami | Microsoft Docs"
-description: "Ograniczanie dostępu do zasobów firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji."
+title: "Ochrona dostępu przy użyciu ochrony urządzeń przed zagrożeniami | Microsoft Docs"
+description: "Ochrona dostępu do zasobów firmy na podstawie ryzyka dotyczącego urządzeń, sieci i aplikacji."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b83d06ecbe6e202bf022444c288e0866b3507c6
-ms.openlocfilehash: 1dd2c4a46857aef1ba273904d58d5eacae99c7bc
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 184002a3a9f4af671a467ce9fe79fe0050bd00df
 
 
 ---
 
-# <a name="restrict-access-to-company-resource-based-on-device-network-and-application-risk"></a>Ograniczanie dostępu do zasobu firmy oparte na ryzyku dotyczącym urządzeń, sieci i aplikacji
+# <a name="protect-access-to-company-resource-based-on-device-network-and-application-risk"></a>Ochrona dostępu do zasobów firmy na podstawie ryzyka dotyczącego urządzeń, sieci i aplikacji
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Dostęp urządzeń przenośnych do zasobów firmy można kontrolować dzięki ocenie ryzyka przeprowadzanej przez usługę Lookout — rozwiązaniu do ochrony urządzeń przed zagrożeniami zintegrowanemu z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń przez usługę Lookout. Są to na przykład:
 - Luki w zabezpieczeniach systemu operacyjnego
 - Zainstalowane złośliwe aplikacje
@@ -71,7 +74,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania można zablokować na t
 ![Diagram przedstawiający zasady dostępu warunkowego udzielające dostępu, gdy urządzenie jest uznane za zgodne po skorygowaniu](../media/mtp/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
-Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i ograniczanie dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
+Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 ![diagram przedstawiający dostęp warunkowy blokujący dostęp do sieci Wi-Fi na podstawie zagrożeń sieciowych](../media/mtp/network-wifi-blocked.png)
@@ -102,6 +105,6 @@ Oto główne kroki, które należy wykonać, aby zaimplementować to rozwiązani
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

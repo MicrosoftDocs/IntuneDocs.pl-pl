@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do poczty e-mail i usług Office 365 | Microsoft Docs"
+title: "Ochrona dostępu do poczty e-mail i usług Office 365 | Microsoft Docs"
 description: "W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2e342bef07ff28bf2df027240471f74dfe373f83
-ms.openlocfilehash: a55087b96855645ef3f6e161fe85f6244c30120d
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: e80949d6207c54b9ff576bb63819c8833965a39a
 
 
 ---
 
-# <a name="restrict-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ograniczanie dostępu do poczty e-mail, usług Office 365 i innych usług za pomocą usługi Microsoft Intune
-Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) można ograniczyć dostęp do firmowej poczty e-mail, usług Office 365, takich jak **lokalna instalacja programu Exchange**, **usługa Exchange Online**, **usługa Exchange Online w wersji dedykowanej**, **usługa SharePoint Online**, **usługa Skype dla firm Online** i innych. Ta funkcja pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z zasadami ustawionymi w konsoli administracyjnej usługi Intune lub w klasycznym portalu Azure.
+# <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrona dostępu do poczty e-mail, usług Office 365 i innych usług przy użyciu usługi Microsoft Intune
+Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) można zabezpieczyć dostęp do firmowej poczty e-mail, usług Office 365, takich jak **lokalna instalacja programu Exchange**, **usługa Exchange Online**, **usługa Exchange Online w wersji dedykowanej**, **usługa SharePoint Online**, **usługa Skype dla firm Online** i innych. Ta funkcja pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z zasadami ustawionymi w konsoli administracyjnej usługi Intune lub w klasycznym portalu Azure.
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
 Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności urządzeń, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
 
@@ -54,7 +54,7 @@ Aby skonfigurować dostęp warunkowy, skonfiguruj zasady zgodności urządzeń i
 
 ### <a name="conditional-access-policy"></a>Zasady dostępu warunkowego
 
-Możliwe jest ustawienie zasad dostępu warunkowego w celu ograniczenia dostępu w oparciu o:
+Możliwe jest ustawienie zasad dostępu warunkowego w celu ochrony dostępu w oparciu o:
 - Stan zgodności urządzenia.
 - Platformę, na której działa urządzenie.
 - Typ aplikacji używanych do uzyskiwania dostępu do usług.
@@ -79,6 +79,6 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

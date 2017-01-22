@@ -5,38 +5,40 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: df92e0945c0ed9387eda14c145b28c604453cb86
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: 27bb2c0834d07225756ea9133e557a930290dcf5
 
 
 ---
 
-# <a name="existing-company-email-account-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
+# <a name="an-existing-company-email-account-was-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
 
-Masz już konto firmowej poczty e-mail. Jeśli chcesz kontynuować nawiązywanie połączenia z firmowym kontem poczty e-mail, wykonaj następujące czynności, aby umożliwić administratorowi IT prawidłowe skonfigurowanie Twojego konta i zarządzanie nim:
+Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uzyskać dostęp do tego konta, korzystając z urządzenia przenośnego. Administrator IT potrzebuje Twojej pomocy, aby móc chronić dostęp do poczty e-mail podczas drogi, jaką poczta pokonuje od nadawcy do Twojego urządzenia. Aktualnie używany przez Ciebie program poczty e-mail może dobrze spełniać swoją rolę, wykonanie tych czynności pozwoli jednak zwiększyć bezpieczeństwo informacji.
 
-1.  W oknie **Ustawienia** na Twoim urządzeniu usuń uprzednio skonfigurowane połączenie z firmową pocztą e-mail.
+1.  W menu **Ustawienia** na Twoim urządzeniu usuń uprzednio skonfigurowane połączenie z firmową pocztą e-mail.
 
-    Na przykład na urządzeniu z systemem iOS naciśnij pozycję **Ustawienia** &gt; **Poczta, Kontakty, Kalendarz**. Wybierz służbowe konto e-mail, a następnie kliknij pozycję **Usuń**.
+    Na przykład na urządzeniu z systemem iOS naciśnij kolejno pozycje **Ustawienia** > **Poczta** > **Konta**. Wybierz służbowe konto e-mail, a następnie naciśnij pozycję **Usuń**.
 
-2.  Otwórz aplikację Portal firmy na urządzeniu, a następnie naciśnij pozycję **Sprawdź zgodność**.
+2.  Wyjdź z menu **Ustawienia** i otwórz na urządzeniu aplikację Portal firmy, a następnie naciśnij opcję **Sprawdź zgodność**.
 
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
-Jeśli nowe ustawienia poczty e-mail nie pojawią się po chwili, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

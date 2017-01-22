@@ -5,39 +5,39 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 04c7ae7df65a0873e794420c1880aa901aa230b6
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: fad219ca06ceb62e8bad0b3dbd30b330d90ac977
 
 
 ---
 
+# <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Zdalne blokowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-# <a name="remotely-lock-a-device-from-the-company-portal-website"></a>Zdalne blokowanie urządzenia z poziomu witryny sieci Web Portal firmy
+Wypadki się zdarzają, a urządzenia czasem giną lub się gubią. Jeśli urządzenie zostanie skradzione lub zagubione, podstawowe obawy będą wiązać się z możliwością uzyskania przez dowolne osoby dostępu do zapisanych na nim informacji — bez względu na lokalizację urządzenia.
 
-W przypadku utraty lub kradzieży urządzenia możesz je zablokować przy użyciu opcji zdalnego blokowania w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com). Zdalne blokowanie działa dla następujących typów urządzeń:
+[!INCLUDE[wit_nextref](../includes/end-user-password-guidance.md)]
 
-Platforma  |Szczegóły dotyczące obsługi  
----------|---------
-Android | Obsługiwane       
-iOS | Obsługiwane
-Windows 10 Mobile | Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu     
-Windows 10 Desktop | Nieobsługiwane  
-Windows Phone 8.1 | Obsługiwane tylko wtedy, gdy na telefonie ustawiono kod dostępu
-Komputer (Windows 8.0 i starsze) | Nieobsługiwane       
-Komputer (Windows 8.1) | Nieobsługiwane
+Aby zapewnić sobie bezpieczeństwo danych, można zablokować urządzenie przy użyciu opcji zdalnego blokowania dostępnej z poziomu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Zdalne blokowanie działa w urządzeniach z systemem operacyjnym:
 
-</br>
-Aby zablokować urządzenie przy użyciu funkcji zdalnego blokowania:
+* Android
+* iOS
+* macOS
+* Windows 10 Mobile (jeśli w urządzeniu był już ustawiony kod dostępu)
+* Windows Phone 8.1 (jeśli w urządzeniu był już ustawiony kod dostępu)
+
+## <a name="to-use-remote-lock-to-lock-your-device"></a>Aby zablokować urządzenie przy użyciu funkcji zdalnego blokowania:
 
 1.  W [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) naciśnij nazwę urządzenia, które chcesz zablokować.
 
@@ -45,25 +45,25 @@ Aby zablokować urządzenie przy użyciu funkcji zdalnego blokowania:
 
     ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
-3.  Przeczytaj komunikat ostrzegawczy wskazujący, że masz zamiar zablokować urządzenie, a następnie wybierz pozycję **Zdalne blokowanie**, aby witryna sieci Web Portal firmy spróbowała zablokować urządzenie.
+3.  Zostanie wyświetlone powiadomienie z informacją, że masz zamiar zablokować urządzenie. Wybierz opcję **Zdalne blokowanie**. Witryna sieci Web Portal firmy podejmie próbę zablokowania urządzenia.
 
-    Po naciśnięciu pozycji **Zdalne blokowanie** zostanie wyświetlony stan „Oczekiwanie na zdalne blokowanie”.  Gdy zdalne blokowanie zakończy się powodzeniem, stan zmieni się na „Zdalne blokowanie pomyślne”.
+    Po naciśnięciu opcji **Zdalne blokowanie** zostanie wyświetlony komunikat „Zdalne blokowanie oczekuje”.  Gdy zdalne blokowanie zakończy się powodzeniem, stan zmieni się na „Zdalne blokowanie pomyślne”.
 
     Stan zdalnego blokowania jest wyświetlany w trzech miejscach:
 
     * Obszar powiadomień witryny sieci Web.
-    * Strona szczegółów urządzenia.
-    * Kafelek, na którym jest wyświetlana nazwa urządzenia, w sekcji Moje urządzenia strony.
+    * Strona **Szczegóły** urządzenia.
+    * Kafelek, na którym jest wyświetlana nazwa urządzenia, w sekcji **Moje urządzenia**.
 
-    Jeśli zostanie wyświetlone powiadomienie „Zdalne blokowanie nie powiodło się”, zaczekaj kilka minut, a następnie spróbuj ponownie zablokować urządzenie. Po naciśnięciu opcji w celu ponowienia próby stan zmieni się ponownie na „Oczekiwanie na zdalne blokowanie”.
+> [!Note]
+> Jeśli zostanie wyświetlone powiadomienie „Zdalne blokowanie nie powiodło się”, zaczekaj kilka minut, a następnie spróbuj ponownie zablokować urządzenie. Po podjęciu kolejnej próby stan zmieni się ponownie na „Zdalne blokowanie oczekuje”. Jeśli ponowienie próby nie rozwiąże problemu, konieczny będzie kontakt z administratorem IT organizacji.
 
-    Jeśli ponowna próba nie powiedzie się, skontaktuj się z administratorem IT, aby uzyskać pomoc. Jeśli po użyciu opcji zdalnego blokowania odnajdziesz swoje urządzenie i zechcesz je odblokować, po prostu wprowadź kod dostępu.
+Jeśli po użyciu opcji zdalnego blokowania odnajdziesz swoje urządzenie i zechcesz je odblokować, po prostu wprowadź kod dostępu.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

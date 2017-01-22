@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do usługi Skype dla firm Online | Microsoft Docs"
+title: "Ochrona dostępu do usługi Skype dla firm Online | Microsoft Docs"
 description: "Ochrona i kontrola dostępu do usługi Skype dla firm Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 23199b84ca1acf202442e096c637f0dbad53f3e0
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 37915fcfc0f10e65aa65d400422d72adc63513fa
 
 
 ---
 
-# <a name="restrict-access-to-skype-for-business-online-with-microsoft-intune"></a>Ograniczanie dostępu do usługi Skype dla firm Online przy użyciu usługi Microsoft Intune
+# <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Ochrona dostępu do usługi Skype dla firm Online przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Możesz użyć zasad dostępu warunkowego dla usługi **Skype dla firm Online** w celu kontroli dostępu do usługi Skype dla firm Online.
 Dostęp warunkowy ma dwa składniki:
 - Zasady zgodności urządzenia, które urządzenie musi spełniać, aby zostało uznane za zgodne.
 - Zasady dostępu warunkowego, w ramach których określane są warunki, które urządzenie musi spełniać w celu uzyskania dostępu do usługi.
-Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail i usług O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail i usług O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Jeśli wybrany użytkownik próbuje użyć usługi Skype dla firm Online na swoim urządzeniu, sprawdzane są następujące kwestie:
 
@@ -117,6 +120,6 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

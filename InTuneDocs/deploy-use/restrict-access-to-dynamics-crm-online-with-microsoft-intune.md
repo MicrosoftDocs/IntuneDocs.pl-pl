@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do usługi Dynamics CRM Online | Microsoft Docs"
+title: "Ochrona dostępu do usługi Dynamics CRM Online | Microsoft Docs"
 description: "Ochrona i kontrola dostępu do usługi Dynamics CRM Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: abbfeb493d9e85eaa601b127d618996f2e01a01d
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 0049da7a47070e42cf0f377da5a99d3222d9ed82
 
 
 ---
 
-# <a name="restrict-access-to-dynamics-crm-online-with-intune"></a>Ograniczanie dostępu do usługi Dynamics CRM Online przy użyciu usługi Intune
+# <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Ochrona dostępu do usługi Dynamics CRM Online przy użyciu usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Dostęp do usługi Microsoft Dynamics CRM Online na urządzeniach z systemem iOS i Android można kontrolować przy użyciu dostępu warunkowego usługi Microsoft Intune.  Dostęp warunkowy usługi Intune ma dwa składniki:
 * [Zasady zgodności urządzenia](introduction-to-device-compliance-policies-in-microsoft-intune.md), które urządzenie musi spełniać, aby można je było uważać za zgodne.
 * [Zasady dostępu warunkowego](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), w ramach których określane są warunki, które urządzenie musi spełniać w celu uzyskania dostępu do usługi.
 
-Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail, usług O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 > [!IMPORTANT]
 > Aby wdrożyć dostęp warunkowy, musisz mieć subskrypcje usług Intune i Azure Active Directory w wersji Premium, a użytkownicy muszą mieć licencje obu produktów. **Subskrypcja pakietu Enterprise Mobility + Security (EMS)** obejmuje zarówno subskrypcję usługi Intune, jak i subskrypcję usługi Azure Active Directory — wersja Premium. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Jeśli nie masz subskrypcji pakietu EMS, możesz uzyskać subskrypcję usługi Azure Active Directory — wersja Premium. Zobacz [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
@@ -92,15 +95,15 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 * **Urządzenia, które są zarejestrowane w usłudze AAD i są zgodne**. Te urządzenia mogą uzyskać dostęp do usługi Dynamics CRM.
 
 ##  <a name="next-steps"></a>Następne kroki
-* [Ograniczanie dostępu do usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
+* [Ochrona dostępu do usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
 
-* [Ograniczanie dostępu do lokalnego programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
-* [Ograniczanie dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+* [Ochrona dostępu do lokalnej instalacji programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+* [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-* [Ograniczanie dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+* [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

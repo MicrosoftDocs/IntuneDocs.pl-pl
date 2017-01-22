@@ -1,33 +1,34 @@
 ---
-title: "Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Docs"
+title: "Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 975759db98854c8276999592d6ecdba195438681
+ms.sourcegitcommit: beba9603ffb43d025132d2d86f0996ff505a9019
+ms.openlocfilehash: f9d66fe07173245ff831f204dd120598ad7564db
 
 
 ---
 
-
-# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Resetowanie kodu dostępu urządzenia z poziomu witryny sieci Web Portal firmy
+# <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
 Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy może umożliwiać zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
 
 > [!NOTE]
-> Przycisk **Resetuj kod dostępu** w witrynie sieci Web Portal firmy jest wyświetlany w zależności od tego, jak administrator IT skonfigurował usługę Intune. Resetowanie kodu dostępu nie jest obsługiwane na urządzeniach z systemem Windows 8.1.
+> Istnieje możliwość, że przycisk **Resetuj kod dostępu** nie będzie widoczny w witrynie sieci Web Portal firmy. W takim przypadku należy skontaktować się za pośrednictwem witryny sieci Web Portal firmy z administratorem IT w celu uzyskania pomocy.
 
 Aby zresetować kod dostępu:
 
@@ -47,15 +48,14 @@ Aby zresetować kod dostępu:
 
     Sprawdź w tabeli, jak funkcja **resetowania kodu dostępu** działa na Twoim urządzeniu.
 
-    |Platforma|Support|
+    |Typ urządzenia|Co dzieje się po zresetowaniu|
     |------------|-----------|
-    |Android|Utworzenie tymczasowego, alfanumerycznego kodu dostępu.|
-    |iOS|Usunięcie kodu dostępu z urządzenia bez utworzenia tymczasowego kodu dostępu. Jeśli używasz funkcji Touch ID, musisz skonfigurować ją ponownie dla urządzenia, ponieważ jest ona usuwana podczas resetowania kodu dostępu.|
-    |Windows 10 (tylko urządzenia przenośne)|Utworzenie tymczasowego, alfanumerycznego kodu dostępu. Funkcja Windows Hello jest obsługiwana.|
-    |Windows Phone 8.1|Utworzenie tymczasowego, numerycznego kodu dostępu.|
-    Po odblokowaniu urządzenia można ustawić nowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
+    |Android|Usunięcie istniejącego kodu dostępu i utworzenie tymczasowego kodu dostępu składającego się z liter i cyfr.|
+    |iOS|Usunięcie istniejącego kodu dostępu bez utworzenia tymczasowego kodu dostępu. Jeśli do otwierania urządzenia lub dokonywania zakupów używasz czytnika linii papilarnych Touch ID, musisz ponownie go skonfigurować.|
+    |Windows 10 Mobile|Usunięcie istniejącego kodu dostępu i utworzenie tymczasowego kodu dostępu składającego się z liter i cyfr. Jeśli podczas logowania się używasz rozpoznawania twarzy przez funkcję Windows Hello, to funkcja ta w dalszym ciągu będzie obsługiwana.|
+    |Windows Phone 8.1|Usunięcie istniejącego kodu dostępu i utworzenie tymczasowego kodu dostępu składającego się z cyfr.|
 
-5.  Odblokuj urządzenie, a następnie ustaw nowy kod dostępu lub zmień tymczasowy kod dostępu, przechodząc do pozycji **Ustawienia** na urządzeniu.
+    5.  Odblokuj urządzenie, a następnie ustaw nowy kod dostępu lub zmień tymczasowy kod dostępu, przechodząc w urządzeniu do menu **Ustawienia**.
 
     Aby wyświetlić powiadomienie potwierdzające pomyślne zresetowanie hasła, kliknij flagę powiadomienia u góry po prawej stronie w witrynie sieci Web Portal firmy.
 
@@ -63,6 +63,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

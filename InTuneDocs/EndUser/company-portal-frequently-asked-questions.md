@@ -5,18 +5,20 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01d2fcd0202f1ef347693c973edb82acfae6c818
-ms.openlocfilehash: 13198d264d7d49454e2aba76604b4c2e9445a502
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: fa9c3fd2c995615e9aa9a16f3bd834b0c145b6d0
 
 
 ---
@@ -24,7 +26,7 @@ ms.openlocfilehash: 13198d264d7d49454e2aba76604b4c2e9445a502
 # <a name="about-the-company-portal"></a>Informacje o portalu firmy
 
 ## <a name="what-is-the-company-portal-and-what-can-you-do-with-it"></a>Co to jest portal firmy i do czego służy?
-Portal firmy usługi Microsoft Intune umożliwia dostęp do danych i aplikacji firmy lub szkoły. Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
+Portal firmy umożliwia dostęp do danych i aplikacji firmy lub szkoły. Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, lecz także administrator IT może zainstalować aplikację Portal firmy dla Ciebie.
 - Przechodząc do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com) skonfigurowanej przez administratora IT.
@@ -42,7 +44,7 @@ Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a
 
 > [!div class="op_single_selector"]
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem iOS i macOS w usłudze Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem iOS i macOS w usłudze Intune](using-your-ios-or-macOS-device-with-intune.md)
 - [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
 - [Korzystanie z witryny sieci Web Portal firmy](using-the-intune-company-portal-website.md)
 
@@ -96,6 +98,6 @@ Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT. Informacje kon
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

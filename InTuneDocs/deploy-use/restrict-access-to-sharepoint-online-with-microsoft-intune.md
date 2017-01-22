@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do usługi SharePoint Online | Microsoft Docs"
+title: "Ochrona dostępu do usługi SharePoint Online | Microsoft Docs"
 description: "Ochrona i kontrola dostępu do danych firmy w usłudze SharePoint Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6b900f2bf41ea84088f8453f59b71136e013a884
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 2efac12d3564932ebcb3cbe4165fbc7ad4595172
 
 
 ---
 
-# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Ograniczanie dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune
+# <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Ochrona dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Za pomocą dostępu warunkowego usługi [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] możesz kontrolować dostęp do plików znajdujących się w usłudze SharePoint Online.
 Dostęp warunkowy ma dwa składniki:
 - Zasady zgodności urządzenia, które urządzenie musi spełniać, aby zostało uznane za zgodne.
 - Zasady dostępu warunkowego, w ramach których określane są warunki, które urządzenie musi spełniać w celu uzyskania dostępu do usługi.
-Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj temat [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj temat [Ochrona dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Zasady zgodności i dostępu warunkowego są wdrażane dla użytkowników. Wszystkie urządzenia, za pomocą których użytkownik uzyskuje dostęp do usług, są sprawdzane pod kątem zgodności z zasadami.
 
@@ -66,7 +69,7 @@ Obsługiwane są następujące funkcje:
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
 - System Windows Phone 8.1 lub nowszy
 
-Można ograniczyć dostęp do usługi SharePoint Online w przypadku uzyskiwania dostępu za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**. Dostęp może być dozwolony tylko za pośrednictwem obsługiwanych przeglądarek na zgodnych urządzeniach:
+Istnieje możliwość ochrony dostępu do usługi SharePoint Online w przypadku uzyskiwania do niej dostępu za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**. Dostęp może być dozwolony tylko za pośrednictwem obsługiwanych przeglądarek na zgodnych urządzeniach:
 * Safari (iOS)
 * Chrome (Android)
 * Intune Managed Browser (systemy iOS i Android 5.0 lub nowszy)
@@ -192,10 +195,10 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 -   **Urządzenia, które są zarejestrowane w usłudze AAD i są zgodne**. Te urządzenia mogą uzyskiwać dostęp do usługi SharePoint Online.
 
 ### <a name="see-also"></a>Zobacz także
-[Ograniczanie dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+[Ochrona dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Ograniczanie dostępu do poczty e-mail do usługi Exchange Online | Microsoft Docs"
+title: "Ochrona dostępu do poczty e-mail w usłudze Exchange Online | Microsoft Docs"
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,21 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51e06bafef761eaf06d35343b459262524ad9168
-ms.openlocfilehash: 1b5ee2f53f19643cb50e803f538fdac4ec5d2ad9
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
 
 
 ---
 
 
-# <a name="restrict-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ograniczanie dostępu poczty e-mail do usługi Exchange Online i nowej usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
+# <a name="protect-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchange Online i nowej usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 >Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sprawdzić, czy zawiera ono nową, czy starszą konfigurację, skontaktuj się z menedżerem ds. klientów.
 
-Aby kontrolować dostęp do poczty e-mail do usługi Exchange Online lub do nowego środowiska usługi Exchange Online w wersji dedykowanej, możesz skonfigurować dostęp warunkowy dla usługi Exchange Online za pomocą usługi Microsoft Intune. Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ograniczanie dostępu do poczty e-mail, usługi O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Aby kontrolować dostęp do poczty e-mail do usługi Exchange Online lub do nowego środowiska usługi Exchange Online w wersji dedykowanej, możesz skonfigurować dostęp warunkowy dla usługi Exchange Online za pomocą usługi Microsoft Intune. Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail, usług O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 
 **Przed** skonfigurowaniem dostępu warunkowego należy:
@@ -64,7 +66,7 @@ Na następującym diagramie przedstawiono przepływ używany przez zasady dostę
 ![Diagram ilustrujący punkty decyzyjne określające, czy urządzenie uzyska zezwolenie na dostęp, czy zostanie zablokowane](../media/ConditionalAccess8-1.png)
 
 ## <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
-Możliwe jest ograniczenie dostępu do usługi Exchange Online z poziomu programu **Outlook** i innych **aplikacji używających nowoczesnego uwierzytelniania**. Obsługiwane są następujące funkcje:
+Możliwa jest ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchange Online z poziomu programu **Outlook** i innych **aplikacji używających nowoczesnego uwierzytelniania**. Obsługiwane są następujące funkcje:
 
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy i program Android for Work
 - System iOS 8.0 i nowsze
@@ -77,7 +79,7 @@ Możliwe jest ograniczenie dostępu do usługi Exchange Online z poziomu program
 -   Uwierzytelnianie oparte na bibliotece ADAL umożliwia klientom pakietu Office korzystanie z uwierzytelniania za pomocą przeglądarki (nazywanego też uwierzytelnianiem pasywnym). W celu uwierzytelnienia użytkownik jest kierowany do strony sieci Web logowania.
 -   Ta nowa metoda logowania zapewnia większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**. Aby uzyskać bardziej szczegółowe informacje, zobacz [Jak działa nowoczesne uwierzytelnianie](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Możesz skonfigurować reguły oświadczeń ADFS, aby zablokować starsze protokoły uwierzytelniania. Szczegółowe instrukcje zostały przedstawione w punkcie [Scenariusz 3: Całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
 
-Można ograniczyć dostęp do usługi **Outlook Web Access (OWA)** w usłudze Exchange Online, gdy użytkownik uzyskuje do niej dostęp za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**. Dostęp może być dozwolony tylko za pośrednictwem obsługiwanych przeglądarek na zgodnych urządzeniach:
+Można chronić dostęp do usługi **Outlook Web Access (OWA)** w usłudze Exchange Online, gdy użytkownik uzyskuje do niej dostęp za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**. Dostęp może być dozwolony tylko za pośrednictwem obsługiwanych przeglądarek na zgodnych urządzeniach:
 
 * Safari (iOS)
 * Chrome (Android)
@@ -88,7 +90,7 @@ Można ograniczyć dostęp do usługi **Outlook Web Access (OWA)** w usłudze Ex
 **Aplikacja OWA dla systemów iOS i Android może zostać zmodyfikowana, aby nie korzystała z nowoczesnego uwierzytelniania, i nie jest obsługiwana. Dostęp z poziomu aplikacji OWA musi zostać zablokowany za pomocą reguł oświadczeń usług ADFS.**
 
 
-Możesz ograniczyć dostęp do poczty e-mail programu Exchange z poziomu wbudowanego **klienta poczty e-mail programu Exchange ActiveSync** na następujących platformach:
+Dostęp do poczty e-mail programu Exchange z poziomu wbudowanego **klienta poczty e-mail programu Exchange ActiveSync** można chronić na następujących platformach:
 
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy
 
@@ -254,7 +256,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 -   Jeśli użytkownik wyrejestruje swoje urządzenie, poczta e-mail zostanie zablokowana po około sześciu godzinach.
 
-Aby wyświetlić niektóre **przykładowe scenariusze dotyczące sposobu konfigurowania zasad dostępu warunkowego w celu ograniczenia dostępu urządzeń**, zobacz [Przykładowe scenariusze ograniczania dostępu do poczty e-mail](restrict-email-access-example-scenarios.md).
+Aby wyświetlić niektóre **przykładowe scenariusze dotyczące sposobu konfigurowania zasad dostępu warunkowego w celu ochrony dostępu urządzeń**, zobacz [Przykładowe scenariusze ochrony dostępu do poczty e-mail](restrict-email-access-example-scenarios.md).
 
 ## <a name="monitor-the-compliance-and-conditional-access-policies"></a>Monitorowanie zgodności i zasad dostępu warunkowego
 
@@ -264,12 +266,12 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 ![Zrzut ekranu przedstawiający pulpit nawigacyjny usługi Intune, na którym wyświetlana jest liczba urządzeń z zablokowanym dostępem do programu Exchange](../media/IntuneSA6BlockedDevices.PNG)
 
 ## <a name="next-steps"></a>Następne kroki
-- [Ograniczanie dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+- [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-- [Ograniczanie dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+- [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
