@@ -14,13 +14,16 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
-ms.openlocfilehash: e80949d6207c54b9ff576bb63819c8833965a39a
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 911c97a724c28b97bb2bc6e236532e4e0d89c7b1
 
 
 ---
 
 # <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrona dostępu do poczty e-mail, usług Office 365 i innych usług przy użyciu usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) można zabezpieczyć dostęp do firmowej poczty e-mail, usług Office 365, takich jak **lokalna instalacja programu Exchange**, **usługa Exchange Online**, **usługa Exchange Online w wersji dedykowanej**, **usługa SharePoint Online**, **usługa Skype dla firm Online** i innych. Ta funkcja pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z zasadami ustawionymi w konsoli administracyjnej usługi Intune lub w klasycznym portalu Azure.
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
 Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności urządzeń, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
@@ -40,7 +43,7 @@ Typowy przepływ dostępu warunkowego:
 
 Usługa Microsoft Intune i Azure Active Directory (Azure AD) Premium działają bezproblemowo razem w celu zapewnienia wielu warstw kontroli za pośrednictwem dostępu warunkowego pakietu EMS. Jeśli chcesz wdrożyć zasady dostępu warunkowego za pomocą usługi Intune, musisz mieć licencję dla obu tych produktów.
 
-**Licencje usługi Azure AD Premium** można kupić jako autonomiczną usługę lub wraz z usługą Intune w ramach organizacji. Jeśli zasady dostępu warunkowego wdrożono za pomocą usługi Intune, upewnij się, że masz odpowiednie licencje usługi Azure AD Premium lub pakietu **EMS**.
+**Licencje usługi Azure AD Premium** można kupić jako autonomiczną usługę lub wraz z usługą Intune w ramach umowy Enterprise Agreement. Jeśli zasady dostępu warunkowego wdrożono za pomocą usługi Intune, upewnij się, że masz odpowiednie licencje usługi Azure AD Premium lub pakietu **EMS**.
 
 - Dowiedz się więcej na temat [Cennika pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennika usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
@@ -79,6 +82,6 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
