@@ -1,11 +1,11 @@
 ---
-title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android | Microsoft Docs"
+title: "Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/17/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 05d2c3868175d405c49076ea93582eb151c9c791
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 356de226dce12a1e079b0f58214d9bc590f3a71d
 
 
 ---
 
-# <a name="you-are-prompted-to-install-lookout-for-work"></a>Pojawia się monit o zainstalowanie aplikacji Lookout for Work
+# <a name="you-need-to-install-lookout-for-work"></a>Konieczne jest zainstalowanie aplikacji Lookout for Work
 
 Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa.
 
@@ -78,12 +78,12 @@ Jeśli masz problemy z instalacją, spróbuj wykonać kroki związane z rozwiąz
 
 **Jeśli instalacja nie działa**
 
-Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. W takim przypadku spróbuj zainstalować aplikację Lookout for Work ręcznie ze sklepu Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 
+Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. W takim przypadku spróbuj zainstalować aplikację Lookout for Work ręcznie ze sklepu Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
