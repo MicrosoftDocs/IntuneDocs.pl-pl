@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 12/30/2016
+ms.date: 01/24/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
-ms.openlocfilehash: fa03c8c41fe60b469b66e640beb2143679d5ad41
+ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
+ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
 
 
 ---
 
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia. Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
 
@@ -37,11 +39,8 @@ Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune zosta
 
 Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
 
-- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
-- [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-- [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios)
-
+- [Wysyłanie błędów rejestracji systemu Android do administratora IT](https://docs.microsoft.com/intune/enduser/send-enrollment-errors-to-your-it-admin-android)
+- [Wysyłanie błędów systemu iOS do administratora IT](https://docs.microsoft.com/intune/enduser/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Ogólne problemy dotyczące rejestrowania
@@ -56,7 +55,7 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 1.  W portalu administracyjnym usługi Intune sprawdź, czy użytkownikowi nie przypisano więcej niż 15 urządzeń (dozwolona maksymalna liczba).
 
-2.  W konsoli administracyjnej usługi Intune w obszarze Administracja\Zarządzanie urządzeniami przenośnymi\Reguły rejestracji sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 15.
+2.  W obszarze **Administracja**  >  **Zarządzanie urządzeniami przenośnymi**  >  **Reguły rejestracji** w konsoli administracyjnej usługi Intune sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 15.
 
 <!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
@@ -68,7 +67,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 2.  Zaloguj się za pomocą identyfikatora organizacji, korzystając z linku w lewej części strony.
 
-3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
+3.  Jeśli nie masz jeszcze tego identyfikatora, utwórz subskrypcję Azure, korzystając z linku do subskrypcji **Zarejestruj bezpłatnie konto w usłudze Azure Active Directory**. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej.
 
 4.  Wybierz pozycję **Active Directory** , a następnie wybierz organizację.
 
@@ -82,9 +81,9 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 > [!NOTE]
 
-> Można uniknąć limitu rejestracji urządzeń, używając menedżerów rejestracji urządzeń zgodnie z opisem w temacie [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) (Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune).
+> Stosowania limitu rejestracji urządzeń można uniknąć, używając konta menedżera rejestracji urządzeń zgodnie z opisem w temacie [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 >
-> Konto użytkownika, które jest dodawane do grupy Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady Dostęp warunkowy.
+> Konto użytkownika, które jest dodawane do konta Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady dostępu warunkowego.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
 **Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
@@ -106,12 +105,12 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 **Rozwiązanie:**
 
-1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanej wersji usługi Intune (dla usługi Intune, rozwiązania MDM w usłudze Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
+1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanego typu usługi Intune (dla usługi Intune, Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
 
     > [!NOTE]
     > Ustawiony urząd zarządzania urządzeniami przenośnymi można zmienić tylko po skontaktowaniu się z pomocą techniczną. Opis tej procedury zawarto w artykule [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
-2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy ich nazwy UPN odpowiadają informacjom o usłudze Active Directory w portalu konta.
+2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy nazwa UPN użytkownika odpowiada informacjom z usługi Active Directory w portalu Office 365.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
 
     1.  Wyłącz narzędzie DirSync na serwerze lokalnym.
@@ -148,7 +147,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 **Problem:** Po dodaniu drugiej zweryfikowanej domeny do usług ADFS możliwe, że użytkownicy z sufiksem nazwy głównej użytkownika (UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
 
 
-**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO, single sign-on) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com)) jest wymagane wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks.  Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników (UPN) w organizacji (na przykład @contoso.com lub @fabrikam.com)) jest wymagane wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks. Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
@@ -251,6 +250,34 @@ Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyś
 
 
 ## <a name="ios-issues"></a>Problemy z systemem iOS
+
+### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Urządzenia są nieaktywne lub nie jest możliwe nawiązanie łączności między nimi a konsolą administracyjną
+**Problem:** urządzenia z systemem iOS nie są ewidencjonowane przy użyciu usługi Intune. Urządzenia muszą być okresowo zaewidencjonowane w celu umożliwienia im dalszego dostępu do chronionych zasobów firmy. Jeśli nie można zaewidencjonować urządzeń:
+
+- Nie otrzymują one zasad, aplikacji ani poleceń zdalnych z usługi Intune.
+- W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
+- Użytkownicy chronieni przez zasady dostępu warunkowego mogą utracić dostęp do zasobów firmowych.
+
+**Rozwiązanie:** podaj użytkownikom końcowym następujące rozwiązania, aby pomóc im odzyskać dostęp do zasobów firmy.
+
+Po uruchomieniu w systemie iOS aplikacja Portal firmy sprawdza, czy urządzenie użytkownika nie utraciło łączności z usługą Intune. Jeśli aplikacja wykryje brak połączenia, automatycznie podejmie próbę synchronizacji z usługą Intune w celu ponownego nawiązania połączenia, czemu będzie towarzyszyć powiadomienie **Trwa próba wykonania synchronizacji...** widoczne dla użytkowników. 
+
+  ![Powiadomienie o trwającej próbie wykonania synchronizacji](./media/ios_cp_app_trying_to_sync_notification.png)
+
+Jeśli synchronizacja zakończy się pomyślnie, zobaczysz w aplikacji Portal firmy w systemie iOS powiadomienie **Synchronizacja powiodła się** wskazujące, że urządzenie jest w prawidłowym stanie.
+
+  ![Powiadomienie informujące, że synchronizacja powiodła się](./media/ios_cp_app_sync_successful_notification.png)
+
+Jeśli synchronizacja nie powiedzie się, użytkownicy zobaczą w aplikacji Portal firmy w systemie iOS powiadomienie o treści **Nie można zsynchronizować**. 
+
+  ![Powiadomienie o nieudanej próbie synchronizacji](./media/ios_cp_app_unable_to_sync_notification.png)
+
+Aby rozwiązać ten problem, użytkownicy muszą użyć przycisku **Konfiguruj** znajdującego się na prawo od powiadomienia **Nie można zsynchronizować**. Przycisk Konfiguruj umożliwia przejście do ekranu przepływu Konfiguracja dostępu do zasobów firmy. Postępując zgodnie z monitami wyświetlanymi na tej stronie, można zarejestrować swoje urządzenie. 
+
+  ![Ekran Konfiguracja dostępu do zasobów firmy](./media/ios_cp_app_company_access_setup.png)
+
+Po zarejestrowaniu urządzenie powraca do stanu prawidłowego i odzyskuje dostęp do zasobów firmy.
+
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
 **Problem: ** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
 
@@ -267,32 +294,20 @@ Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyś
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu System Center Configuration Manager z usługą Intune
 **Problem:** Użytkownik rejestruje urządzenie z systemem iOS, ale nie jest ono wyświetlane w konsoli administracyjnej programu Configuration Manager. Urządzenie nie wskazuje, że zostało zarejestrowane. Możliwe przyczyny:
 
-- Łącznik usługi Intune mógł zostać zarejestrowany na jednym koncie, a następnie zarejestrowany na innym koncie.
+- Łącznik usługi Microsoft Intune w lokacji programu Configuration Manager nie łączy się z usługą Intune.
+- Składnik Menedżera danych odnajdywania (ddm) lub składnik Menedżera stanu (statmgr) nie przetwarza komunikatów z usługi Intune.
 - Możliwe, że pobrano certyfikat zarządzania urządzeniami przenośnymi z jednego konta i użyto go na innym koncie.
 
 
-**Rozwiązanie:** Wykonaj następujące kroki:
+**Rozwiązanie:** Przejrzyj następujące pliki dziennika pod kątem możliwych błędów:
 
-1. Wyłącz system iOS w łączniku usługi Windows Intune.
-    1. Kliknij prawym przyciskiem myszy subskrypcję usługi Intune i wybierz pozycję **Właściwości**.
-    1. Na karcie „iOS” usuń zaznaczenie pola wyboru „Włącz rejestrację systemu iOS”.
+- dmpdownloader.log
+- ddm.log
+- statmgr.log
 
-
-
-1. W programie SQL uruchom następujące kroki w bazie danych CAS:
-
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 7
-    1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 11
-    1. delete from MDMPolicyAssignment where PolicyType = 11
-    1. DELETE Drs_Signals
-1. Uruchom ponownie usługę główną programu SMS lub serwer CM
+Przykłady zawartości, pod kątem obecności której należy sprawdzić pliki dziennika, zostaną dodane wkrótce.
 
 
-
-1. Uzyskaj nowy certyfikat APN i przekaż go: kliknij prawym przyciskiem myszy subskrypcję usługi Intune w lewym okienku programu Configuration Manager. Wybierz polecenie **Utwórz żądanie certyfikatu usług APN** i postępuj zgodnie z instrukcjami.
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu System Center Configuration Manager z usługą Intune
 ### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają
 **Problem:** po pomyślnym zarejestrowaniu urządzenia przenośnego w programie Configuration Manager znika ono z kolekcji urządzeń przenośnych, ale jego profil zarządzania nadal istnieje i znajduje się ono na liście w obszarze Brama CSS.
@@ -330,15 +345,15 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 **Rozwiązanie:**
 
-1. W menu **Start** wybierz polecenie **Uruchom** -> **MMC**.
-1. **Plik** -> **Dodawanie lub usuwanie przystawek**.
-1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera**, kliknij przycisk **Dalej** i wybierz pozycję **Komputer lokalny**.
+1. W menu **Start** wpisz polecenie **Uruchom** -> **MMC**.
+1. Wybierz kolejno opcje **Plik** > **Dodawanie lub usuwanie przystawek**.
+1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera** > **Dalej**, a następnie wybierz pozycję **Komputer lokalny**.
 1. Kliknij dwukrotnie pozycję **Certyfikaty (komputer lokalny)** i wybierz pozycję **Osobiste/certyfikaty**.
 1. Wyszukaj certyfikat usługi Intune wydany przez wydawcę Sc_Online_Issuing i usuń go, jeśli istnieje.
-1. Usuń następujący klucz rejestru, jeśli istnieje, oraz wszystkie klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
-1. Spróbuj ponownie wykonać rejestrację.
-1. Jeśli nadal nie można zarejestrować maszyny, /wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
-1. Spróbuj ponownie wykonać rejestrację.
+1. Jeśli istnieje następujący klucz rejestru, usuń go oraz wszystkie jego klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
+1. Spróbuj ponownie zarejestrować komputer.
+1. Jeśli nadal nie można zarejestrować komputera, wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Spróbuj ponownie zarejestrować komputer.
 
     > [!IMPORTANT]
     > Ta sekcja, metoda lub zadanie zawiera kroki dotyczące sposobu modyfikowania rejestru. Jednak nieprawidłowa modyfikacja rejestru może powodować poważne problemy. Dlatego należy ostrożnie wykonywać te czynności. W celu zapewnienia dodatkowej ochrony utwórz kopię zapasową rejestru przed rozpoczęciem wprowadzania zmian. Dzięki temu w razie problemów będzie można przywrócić rejestr.
@@ -373,6 +388,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

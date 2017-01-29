@@ -5,7 +5,7 @@ description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Win
 keywords: 
 author: staciebarker
 ms.author: stabar
-ms.date: 07/19/2016
+ms.date: 01/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 928e4e8097b9cd326e0863a45b183226a7eae056
-ms.openlocfilehash: c9a29b6bf9af97f05730251a37b313a662c27a35
+ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
+ms.openlocfilehash: 7cef6b6eac01c0056f7c75a7010ee280932a5dfb
 
 
 ---
@@ -23,18 +23,20 @@ ms.openlocfilehash: c9a29b6bf9af97f05730251a37b313a662c27a35
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 Komputery z systemem Windows można zarejestrować, instalując oprogramowanie klienckie usługi Intune. Oprogramowanie klienckie usługi Intune można zainstalować na następujące sposoby:
 
-- Instalacja ręczna
-- Instalacja za pomocą zasad grupy
-- Dołączenie na obrazie dysku
-- Instalacja przez użytkowników
+- Instalacja przez administratora IT:
+  - Instalacja ręczna
+  - Instalacja za pomocą zasad grupy
+  - Instalacja jest dołączona do obrazu dysku
 
-Pobrane po raz pierwszy oprogramowanie klienckie usługi Intune zawiera minimalne składniki oprogramowania niezbędne do zarejestrowania komputera w zarządzaniu przy użyciu usługi Intune. Po zarejestrowaniu komputera oprogramowanie klienckie usługi Intune pobiera pełne oprogramowanie klienckie, które jest niezbędne do zarządzania komputerami.
+- Ręczna instalacja oprogramowania klienckiego przez użytkowników końcowych
 
-Ta seria pobrań minimalizuje czas wymagany do początkowego zarejestrowania komputera w usłudze Intune. Gwarantuje to również, że po ukończeniu drugiego pobierania klient ma najnowsze dostępne oprogramowanie.
+Oprogramowanie klienckie usługi Intune wdrażane przez administratora IT dla użytkownika lub pobierane przez użytkownika końcowego zawiera oprogramowanie spełniające minimalne wymogi i niezbędne do rejestracji komputera z użyciem funkcji zarządzania usługi Intune. Po zarejestrowaniu komputera oprogramowanie klienckie usługi Intune pobiera pełne oprogramowanie klienckie, niezbędne do zarządzania komputerami.
+
+Powyższa seria pobrań zmniejsza wpływ na przepustowość sieci i skraca do minimum czas wymagany do rejestrowania początkowego komputera w usłudze Intune. Gwarantuje to również, że po ukończeniu drugiego pobierania klient ma najnowsze dostępne oprogramowanie.
 
 ## <a name="download-the-intune-client-software"></a>Pobieranie oprogramowania klienckiego usługi Intune
 
-Wszystkie metody, z wyjątkiem sytuacji, w których użytkownicy samodzielnie instalują oprogramowanie klienckie usługi Intune, wymagają pobrania oprogramowania, aby można je było wdrożyć.
+Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie instalują oprogramowanie klienckie usługi Intune, wymagają, aby administratorzy IT pobrali oprogramowanie, które następnie zostanie wdrożone u użytkowników końcowych.
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; ** Pobieranie oprogramowania klienckiego**.
 
@@ -43,7 +45,7 @@ Wszystkie metody, z wyjątkiem sytuacji, w których użytkownicy samodzielnie in
 2.  Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
 
     > [!NOTE]
-    > Pakiet instalacji oprogramowania klienckiego usługi Intune zawiera informacje o Twoim koncie. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
+    > Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
 
 3.  Wyodrębnij zawartość pakietu instalacyjnego w bezpiecznej lokalizacji w sieci.
 
@@ -52,7 +54,7 @@ Wszystkie metody, z wyjątkiem sytuacji, w których użytkownicy samodzielnie in
 
 ## <a name="deploy-the-client-software-manually"></a>Ręczne wdrażanie oprogramowania klienckiego
 
-Na komputerze przejdź do folderu, w którym znajdują się pliki instalacji oprogramowania klienckiego. Następnie uruchom plik **Microsoft_Intune_Setup.exe**, aby zainstalować oprogramowanie klienckie.
+Na komputerach, na których ma zostać zainstalowane oprogramowanie klienckie, przejdź do folderu, w którym znajdują się jego pliki instalacyjne. Następnie uruchom plik **Microsoft_Intune_Setup.exe**, aby zainstalować oprogramowanie klienckie.
 
     > [!NOTE]
     > The status of the installation is displayed when you hover over the icon in the taskbar on the client computer.
@@ -108,6 +110,8 @@ Zadanie automatycznej rejestracji w usłudze Intune, wartość rejestru **Window
 
 Użytkownicy mogą zainstalować oprogramowanie klienckie usługi Intune, przechodząc do [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Jeśli portal sieci Web może wykryć, że urządzenie jest komputerem z systemem Windows, użytkownicy będą monitowani o pobranie klienta oprogramowania usługi Intune w celu zarejestrowania komputera. Po pobraniu oprogramowania użytkownicy mogą je zainstalować w celu umożliwienia zarządzania ich komputerami.
 
+Konkretne informacje, które widzą użytkownicy w portalu sieci Web, mogą się różnić w zależności od urzędu certyfikacji MDM oraz platformy i wersji komputera użytkownika.
+
 ![Portal usługi Intune monituje o pobranie klienta oprogramowania usługi Intune](../media/software-client-download.png)
 
 ## <a name="monitor-and-validate-successful-client-deployment"></a>Monitorowanie i weryfikowanie pomyślnego wdrożenia klienta
@@ -139,6 +143,6 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

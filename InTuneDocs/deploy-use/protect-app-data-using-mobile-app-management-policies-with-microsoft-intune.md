@@ -14,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
-ms.openlocfilehash: c2293306e847148ff7413be3e9eeafb8349e33fe
+ms.sourcegitcommit: af067236e27a65c52c78107fefdb956ad0fd5aa5
+ms.openlocfilehash: b4672b19517f1871a276000c6e8f5d01c0280e35
 
 
 ---
@@ -60,7 +60,10 @@ Zasady MAM są obecnie obsługiwane w następujących systemach operacyjnych:
 -   System iOS 8.1 lub nowszy
 -   System Android 4 lub nowszy
 
-Urządzenia z systemem Windows nie są obecne obsługiwane.
+>[!NOTE]
+>Urządzenia z systemem Windows nie są obsługiwane w rozwiązaniu do zarządzania aplikacjami mobilnymi bez scenariusza rejestracji. Jednak podczas rejestrowania urządzeń z systemem Windows 10 w usłudze Intune możesz użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
+
+
 ##  <a name="how-mam-policies-protect-app-data"></a>Jak zasady MAM chronią dane aplikacji
 
 ###  <a name="apps-without-mam-policies"></a>Aplikacje bez zasad MAM
@@ -132,6 +135,6 @@ Wszystkie aplikacje mobilne pakietu Office obsługują dostęp dla wielu tożsam
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
