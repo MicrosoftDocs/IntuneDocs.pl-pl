@@ -14,8 +14,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af067236e27a65c52c78107fefdb956ad0fd5aa5
-ms.openlocfilehash: b4672b19517f1871a276000c6e8f5d01c0280e35
+ms.sourcegitcommit: 40298ae2de5f3bc8090e19882e039c5ec6471820
+ms.openlocfilehash: 3d3c3e0b5fa68f838b8cf1d72346d7abb140073a
 
 
 ---

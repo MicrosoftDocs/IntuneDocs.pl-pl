@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 09/15/2016
+ms.date: 01/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: bfb1cee100b9c7bfcdc862489254e6ccefe9ecf0
+ms.sourcegitcommit: b75d034b4540f93eb235729b1cdad52b4c463eb0
+ms.openlocfilehash: cf5089053178120e633fdbae5868bec5aa0466f5
 
 
 ---
@@ -34,7 +34,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 - **Czyszczenie** — określa, czy urządzenie musi zostać wyczyszczone, zanim użytkownicy będą mogli je zarejestrować. Termin „czyszczenie” oznacza zresetowanie urządzenia do ustawień fabrycznych, co powoduje usunięcie wszystkich danych. Aby uzyskać więcej informacji, zobacz [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md).
 - **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Zablokuj** — uniemożliwia użytkownikom usunięcie urządzenia z zarządzania. Urządzenia z systemem iOS wymagają trybu nadzorcy w celu dokonania blokady. Aby uzyskać więcej informacji, zobacz [Zdalne blokowanie](retire-devices-from-microsoft-intune-management.md#block-access-a-device).
+- **Blokada** — wskazuje, czy użytkownicy mają zablokowaną możliwość wyrejestrowywania swoich urządzeń z zarządzania. Użytkownicy mogą wyrejestrowywać swoje urządzenia na wszystkich platformach przy użyciu aplikacji Portal firmy. Do wyrejestrowania nie można używać natywnych menu systemu operacyjnego. 
 
 **Metody rejestracji urządzeń z systemem iOS**
 
@@ -123,6 +123,6 @@ Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

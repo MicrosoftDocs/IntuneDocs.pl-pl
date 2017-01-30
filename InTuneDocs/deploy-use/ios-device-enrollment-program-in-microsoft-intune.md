@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: arob98
-ms.date: 12/31/2016
+ms.date: 1/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8063b933a767740a7951fa69a918a8677b664d02
-ms.openlocfilehash: e8a21ace32b5668f8158b9a383b882b7c2f524df
+ms.sourcegitcommit: b75d034b4540f93eb235729b1cdad52b4c463eb0
+ms.openlocfilehash: 05b714e1aef180a65b7b203d5a04c0eeaf288257
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: e8a21ace32b5668f8158b9a383b882b7c2f524df
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie bezprzewodowo rejestrować urządzenia z systemem iOS zakupione w ramach programu Device Enrollment Program (DEP). Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia. Użytkownicy nie mogą wyrejestrowywać urządzeń zarejestrowanych w programie DEP.
+Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie bezprzewodowo rejestrować urządzenia z systemem iOS zakupione w ramach programu Device Enrollment Program (DEP). Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia.
 
 ## <a name="apple-dep-management-for-ios-devices-with-microsoft-intune"></a>Zarządzanie programem DEP firmy Apple dla systemu iOS przy użyciu usługi Microsoft Intune
 W celu zarządzania firmowymi urządzeniami z systemem iOS przy użyciu programu Device Enrollment Program (DEP) firmy Apple organizacja musi dołączyć do programu DEP firmy Apple i zakupić urządzenia w ramach tego programu. Szczegóły tego procesu są dostępne pod adresem:  [https://deploy.apple.com](https://deploy.apple.com). Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu kabla USB.
@@ -83,9 +83,9 @@ Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy u
         - **Nadzorowane** — włącza więcej opcji zarządzania i domyślnie wyłącza blokadę aktywacji
      - **Zablokuj profil rejestracji dla urządzenia** — stan ustawiany podczas aktywacji bez możliwości jego zmiany bez zresetowania urządzenia do ustawień fabrycznych
         - **Wyłącz** — umożliwia usunięcie profilu zarządzania z poziomu menu **Ustawienia**
-        - **Włącz** — (wymaga, aby ustawienie **Tryb przygotowania** = **Nadzorowane**) — wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania
+        - **Włącz** — (wymaga ustawienia **Tryb przygotowania** = **Nadzorowane**) — wyłącza opcję menu Ustawienia systemu iOS w celu usunięcia profilu zarządzania
      - **Opcje Asystenta ustawień** — te opcjonalne ustawienia mogą być później konfigurowane z poziomu menu **Ustawienia** systemu iOS.
-        - **Kod dostępu** — wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji).
+        - **Kod dostępu** — wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji)
         - **Usługi lokalizacji** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący usługi podczas aktywacji
         - **Przywracanie** — jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji
         - **Apple ID** — jeśli to ustawienie zostało włączone, system iOS wyświetla monit o podanie identyfikatora Apple ID, gdy usługa Intune będzie podejmowała próbę zainstalowania aplikacji bez tego identyfikatora. Identyfikator Apple ID jest wymagany do pobierania aplikacji ze sklepu iOS App Store, w tym aplikacji zainstalowanych przez usługę Intune.
@@ -119,6 +119,6 @@ Od grudnia 2016 roku zarządzanie grupami urządzeń zostanie przeniesione do us
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
