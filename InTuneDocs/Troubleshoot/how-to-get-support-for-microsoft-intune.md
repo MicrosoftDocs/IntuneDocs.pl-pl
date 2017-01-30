@@ -14,19 +14,35 @@ ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1a83bd41e4dc3aaa2e98b78b918b0cfe4c74dfe3
+ms.sourcegitcommit: 9d891933178d4bdf1079287efc151fe8859c7e83
+ms.openlocfilehash: e91c9da9614791e128a64add822d7f101818b9c0
 
 
 ---
 
-# <a name="how-to-get-admin-support-for-microsoft-intune"></a>Jak uzyskać administracyjną pomoc techniczną dotyczącą usługi Microsoft Intune
+# <a name="how-admins-get-support-for-microsoft-intune"></a>Jak administratorzy uzyskują pomoc techniczną dotyczącą usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Firma Microsoft zapewnia globalne wsparcie dotyczące kwestii technicznych, przedsprzedaży, rozliczeń i subskrypcji dla usługi Microsoft Intune. Pomoc techniczna jest dostępna online i telefonicznie w przypadku subskrypcji wersji próbnych i płatnych. Pomoc techniczna online jest dostępna w języku angielskim i japońskim. Telefoniczna pomoc techniczna i pomoc online związana z rozliczeniami są dostępne w dodatkowych językach.
 
 Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Klienci korzystający z pomocy technicznej Premier zostaną obciążeni opłatą za pytania dotyczące procedur (na przykład sposobu konfigurowania funkcji usługi Intune).
+
+## <a name="find-help-without-opening-a-support-ticket"></a>Uzyskiwanie pomocy bez konieczności otwierania biletu pomocy technicznej
+
+Zapoznaj się z poniższymi zasobami, aby uzyskać odpowiedzi przed utworzeniem biletu pomocy technicznej.
+
+### <a name="microsoft-intune-technet-forums"></a>Fora TechNet dotyczące usługi Microsoft Intune
+
+Zadaj pytanie lub rozpocznij dyskusję z ekspertami technicznymi firmy Microsoft. Oferujemy odpowiedzi i szczegółowe informacje na możliwym do przeszukiwania [forum TechNet dotyczącym usługi Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
+
+    ![Microsoft Intune TechNet Forum](../media/technet-forum-for-support.png)
+
+### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Witryna opinii o produktach UserVoice w usłudze Microsoft Intune
+
+Czy masz opinię na temat tego, jak firma Microsoft może jeszcze bardziej ulepszyć usługę Intune? Poinformuj nas o tym, dodając swoje pomysły w witrynie opinii [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas) dotyczącej usługi Microsoft Intune. Możesz również głosować na pomysły dodane do witryny UserVoice przez innych użytkowników. 
+
+    ![Microsoft Intune UserVoice feedback page](../media/intune-uservoice-feedback-page.png)
 
 ## <a name="create-an-online-service-ticket"></a>Tworzenie biletu usługi online
 
@@ -116,6 +132,6 @@ Jeśli już zakupiono licencje od firmy Microsoft w ramach programu licencjonowa
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

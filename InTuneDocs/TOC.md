@@ -43,8 +43,8 @@
 ## [Dodatkowe zasoby](plan-design/additional-resources.md)
 
 # [Co nowego](whats-new/whats-new-in-microsoft-intune.md)
-## [Co nowego](whats-new/whats-new-in-microsoft-intune.md)
-## [Co nowego w wersji zapoznawczej na platformie Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
+## [Co nowego w interfejsie użytkownika aplikacji usługi Intune](whats-new/whats-new-in-intune-app-ui.md)
+## [Co nowego w wersji zapoznawczej platformy Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
 ## [Archiwum nowości](whats-new/whats-new-archive.md)
 
 # Wdrażanie i użytkowanie
@@ -73,6 +73,7 @@
 #### [Instalowanie klienta komputera](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 #### [Typowe zadania związane z zarządzaniem komputerami](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Rozwiązywanie konfliktów zasad dotyczących komputerów](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+### Zarządzanie programem [Android for Work](deploy-use/android-for-work.md)
 
 ## Konfigurowanie urządzeń
 ### [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
@@ -98,6 +99,7 @@
 #### [Połączenia sieci VPN w usłudze Intune](deploy-use/vpn-connections-in-microsoft-intune.md)
 #### [Profile poczty e-mail w usłudze Intune](deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Używanie grup do zarządzania użytkownikami i urządzeniami](deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+#### [Migrowanie grup na platformę Azure](deploy-use/migrating-groups-to-azure-active-directory.md)
 ### [Mapowanie urządzeń na grupy](deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Poznawanie informacji o urządzeniach dzięki spisowi](deploy-use/understand-your-devices-with-inventory-in-microsoft-intune.md)
 
@@ -156,11 +158,11 @@
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blokowanie aplikacji bez biblioteki ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrona dostępu do sieci (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
-### [Ochrona dostępu oparta na ryzyku dotyczącym urządzeń, sieci i aplikacji](deploy-use/restrict-access-based-on-device-network-app-risk.md)
-#### [Konfigurowanie w usłudze Lookout ochrony urządzenia przed zagrożeniami](deploy-use/set-up-your-subscription-with-lookout-mtp.md)
-#### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](deploy-use/enable-lookout-mtp-connection-in-intune.md)
-#### [Wdrażanie aplikacji Lookout for Work](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-#### [Włączanie ochrony urządzenia przed zagrożeniami za pomocą zasad zgodności](deploy-use/enable-device-threat-protection-rule-in-compliance-policy.md)
+### [Ochrona dostępu oparta na ryzyku dotyczącym urządzeń, sieci i aplikacji](deploy-use/device-threat-protection.md)
+#### [Konfigurowanie w usłudze Lookout ochrony urządzenia przed zagrożeniami](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](deploy-use/device-threat-protection-enable.md)
+#### [Wdrażanie aplikacji Lookout for Work](deploy-use/device-threat-protection-apps.md)
+#### [Włączanie ochrony urządzenia przed zagrożeniami za pomocą zasad zgodności](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrona danych aplikacji za pomocą zarządzania aplikacjami mobilnymi](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Witryna Azure Portal — zasady zarządzania aplikacjami mobilnymi](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
@@ -220,6 +222,6 @@
 # [Słownik](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
