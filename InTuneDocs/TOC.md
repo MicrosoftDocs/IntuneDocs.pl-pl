@@ -43,8 +43,8 @@
 ## [Dodatkowe zasoby](plan-design/additional-resources.md)
 
 # [Co nowego](whats-new/whats-new-in-microsoft-intune.md)
-## [Co nowego w interfejsie użytkownika aplikacji usługi Intune](whats-new/whats-new-in-intune-app-ui.md)
-## [Co nowego w wersji zapoznawczej platformy Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
+## [Co nowego w aplikacji interfejsu użytkownika](whats-new/whats-new-in-intune-app-ui.md)
+## [Co nowego w wersji zapoznawczej na platformie Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
 ## [Archiwum nowości](whats-new/whats-new-archive.md)
 
 # Wdrażanie i użytkowanie
@@ -159,9 +159,9 @@
 #### [Blokowanie aplikacji bez biblioteki ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrona dostępu do sieci (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
 ### [Ochrona dostępu oparta na ryzyku dotyczącym urządzeń, sieci i aplikacji](deploy-use/device-threat-protection.md)
-#### [Konfigurowanie w usłudze Lookout ochrony urządzenia przed zagrożeniami](deploy-use/device-threat-protection-subscription-setup.md)
-#### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](deploy-use/device-threat-protection-enable.md)
-#### [Wdrażanie aplikacji Lookout for Work](deploy-use/device-threat-protection-apps.md)
+#### [Konfigurowanie ochrony urządzenia przed zagrożeniami](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Włączanie ochrony urządzenia przed zagrożeniami](deploy-use/device-threat-protection-enable.md)
+#### [Wdrażanie aplikacji ochrony urządzenia przed zagrożeniami](deploy-use/device-threat-protection-apps.md)
 #### [Włączanie ochrony urządzenia przed zagrożeniami za pomocą zasad zgodności](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrona danych aplikacji za pomocą zarządzania aplikacjami mobilnymi](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
@@ -217,11 +217,11 @@
 
 ## [Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi](troubleshoot/troubleshoot-mam.md)
 
-## [Rozwiązywanie problemów dotyczących integracji z aplikacją Lookout](troubleshoot/troubleshooting-lookout-integration.md)
+## [Rozwiązywanie problemów z ochroną urządzenia przed zagrożeniami](troubleshoot/device-threat-protection-troubleshooting.md)
 
 # [Słownik](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 
