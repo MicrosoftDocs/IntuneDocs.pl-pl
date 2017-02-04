@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -50,8 +50,6 @@ Profile sieci Wi-Fi można wdrażać na poniższych platformach:
 -   System Mac OS X 10.9 lub nowszy
 
 W przypadku urządzeń z systemami operacyjnymi Windows 8.1 oraz Windows 10 (na komputery i urządzenia mobilne) można zaimportować profil konfiguracji sieci Wi-Fi, który został wcześniej wyeksportowany do pliku. Aby uzyskać szczegółowe informacje, zobacz [Eksportowanie lub importowanie profilu konfiguracji sieci Wi-Fi dla urządzeń z systemem Windows](#export-or-import-a-wi-fi-configuration-profile-for-windows-devices).
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
