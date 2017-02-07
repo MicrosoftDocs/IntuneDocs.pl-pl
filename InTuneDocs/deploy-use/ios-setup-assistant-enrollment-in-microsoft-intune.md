@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 07/20/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 01de894167a65f6b3a46808610232feb8dd7e536
+ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
+ms.openlocfilehash: 7db1a8ec10d0c214264bba7608ae8bdc09a27420
 
 
 ---
@@ -26,80 +26,108 @@ ms.openlocfilehash: 01de894167a65f6b3a46808610232feb8dd7e536
 
 Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces przywraca ustawienia fabryczne urządzenia i przygotowuje je do uruchomienia Asystenta ustawień, instalując zasady firmy dla nowego użytkownika urządzenia.
 
-## <a name="setup-assistant-enrollment-for-ios-devices-with-microsoft-intune"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune
+>[!NOTE]
+>Tej metody rejestracji nie można używać z metodą korzystającą z [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
+
 Za pomocą narzędzia Apple Configurator można przywrócić ustawienia fabryczne na urządzeniu z systemem iOS i przygotować je do konfiguracji dla nowego użytkownika urządzenia. Ta metoda wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej. Przyjęto założenie, że używany jest program Apple Configurator 2.0. Większość scenariuszy wymaga, aby zasady zastosowane w urządzeniu z systemem iOS uwzględniały **koligację użytkownika**, co umożliwia korzystanie z aplikacji Portal firmy usługi Intune.
 
-**Wymagania wstępne**
-* [Rejestracja urządzeń z systemem iOS jest włączona](set-up-ios-and-mac-management-with-microsoft-intune.md) poprzez zainstalowanie certyfikatu APNs
-* Fizyczny dostęp do urządzeń z systemem iOS &mdash; urządzenia muszą zostać zresetowane do ustawień fabrycznych bez ochrony hasłem
-* Numery seryjne &mdash; zobacz [W jaki sposób uzyskać numer seryjny systemu iOS](https://support.apple.com/en-us/HT204308)
-* Kable połączenia USB
-* Komputer Mac z programem [Apple Configurator 2.0](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
+## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-configurator-with-setup-assistant"></a>Wymagania wstępne dotyczące rejestracji urządzeń z systemem iOS za pomocą narzędzia Apple Configurator i Asystenta ustawień
+
+- [Zainstalowany certyfikat APNs](set-up-ios-and-mac-management-with-microsoft-intune.md)
+
+- Fizyczny dostęp do urządzeń z systemem iOS &mdash; urządzenia muszą zostać zresetowane do ustawień fabrycznych bez ochrony hasłem
+
+- Numery seryjne urządzenia &mdash; zobacz [W jaki sposób uzyskać numer seryjny systemu iOS](https://support.apple.com/en-us/HT204308)
+
+- Kable połączenia USB
+
+- Komputer Mac z programem [Apple Configurator 2.0](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
 
 
-1.  **Utwórz grupy urządzeń przenośnych** (opcjonalnie).
-    Jeśli w firmie grupy urządzeń przenośnych są wymagane w celu ułatwienia zarządzania urządzeniami, utwórz te grupy. Aby dowiedzieć się więcej, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
+## <a name="steps-to-enroll-ios-devices-by-using-apple-configurator-with-setup-assistant"></a>Procedura rejestracji urządzeń z systemem iOS za pomocą narzędzia Apple Configurator i Asystenta ustawień
 
-2.  **Utwórz profil dla urządzeń**.
-    Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń. Poniższe kroki pokazują, jak utworzyć profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator.
+Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dniu 0” za pomocą narzędzia Apple Configurator i Asystenta ustawień. W miarę dodawania i usuwania urządzeń z organizacji prawdopodobnie będziesz powtarzać niektóre z tych kroków, takie jak dodawanie lub usuwanie numerów seryjnych, zgodnie z poniższym opisem.
 
-    1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
-    ![Tworzenie profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
+### <a name="create-mobile-device-groups-optional"></a>Tworzenie grup urządzeń przenośnych (opcjonalnie)
 
-    2.  Wprowadź szczegóły profilów urządzeń:
+Jeśli w firmie są wymagane grupy urządzeń przenośnych w celu ułatwienia zarządzania urządzeniami, można opcjonalnie utworzyć te grupy. Aby dowiedzieć się więcej, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
-        -   **Nazwa** &mdash; nazwa profilu rejestracji urządzeń (niewidoczna dla użytkowników).
+### <a name="create-a-profile-for-devices"></a>Tworzenie profilów dla urządzeń
 
-        -   **Opis** &mdash; opis profilu rejestracji urządzeń (niewidoczny dla użytkowników).
+Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
-        -   **Szczegóły rejestracji** &mdash; określa sposób rejestracji urządzeń.
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
 
-            -   **Monituj o koligację użytkownika** &mdash; podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail. **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy na potrzeby usług takich jak instalowania aplikacji.
+  ![Tworzenie profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
 
-            -   **Brak koligacji użytkownika** &mdash; urządzenie nie zostało powiązane z użytkownikiem. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie będą działać.
+2. Wprowadź szczegóły profilów urządzeń:
 
-        -   **Wstępne przypisanie do grupy urządzeń** &mdash; wszystkie urządzenia, dla których ten profil zostanie wdrożony, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
+   -   **Nazwa** &mdash; nazwa profilu rejestracji urządzeń (niewidoczna dla użytkowników).
 
-            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
+   -   **Opis** &mdash; opis profilu rejestracji urządzeń (niewidoczny dla użytkowników).
 
-        -  **Device Enrollment Program** &mdash; program Device Enrollment Program (DEP) firmy Apple nie może być używany z rejestracją z wykorzystaniem Asystenta ustawień. Upewnij się, że przełącznik jest **wyłączony**.
+   -   **Szczegóły rejestracji** &mdash; określa sposób rejestracji urządzeń.
 
-    3.  Wybierz pozycję **Zapisz profil**, aby dodać profil.
+       -   **Monituj o koligację użytkownika** &mdash; podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie zezwolić na dostęp tego urządzenia do danych firmowych i poczty e-mail. **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy na potrzeby usług takich jak instalowania aplikacji.
 
-3.  **Dodaj urządzenia z systemem iOS do rejestracji przy użyciu Asystenta ustawień**.
-    W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**. Urządzenia można dodać na dwa sposoby:
+       -   **Brak koligacji użytkownika** &mdash; urządzenie nie zostało powiązane z użytkownikiem. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie będą działać.
 
-    ![Okno dialogowe dodawania urządzeń](../media/pol-SA-enroll-iOS-SetupAssistant.png)
+   -   **Wstępne przypisanie do grupy urządzeń** &mdash; wszystkie urządzenia, dla których ten profil zostanie wdrożony, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
 
-    -   **Przekaż plik CSV zawierający numery seryjne** &mdash; utwórz listę wartości oddzielanych przecinkami (plik CSV) w dwóch kolumnach bez nagłówka ograniczoną do 5000 urządzeń lub 5 MB na plik csv.
+   > [!Important]
+   > Przypisania grupy są przenoszone z usługi Intune do usługi Azure Active Directory. Kiedy dane konto usługi Intune otrzyma odpowiednią aktualizację, opcja **Przypisz urządzenia do następującej grupy** nie będzie widoczna. [Dowiedz się więcej](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune#changes-to-intune-group-assignments).
 
-        |||
-        |-|-|
-        |&lt;Numer seryjny 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
-        |&lt;Numer seryjny 2&gt;|&lt;Szczegóły urządzenia 2&gt;|
-        Ten plik csv wyświetlony w edytorze tekstu wygląda następująco:
+   -  **Device Enrollment Program** &mdash; program Device Enrollment Program (DEP) firmy Apple nie może być używany z rejestracją z wykorzystaniem Asystenta ustawień. Upewnij się, że przełącznik jest **wyłączony**.
 
-        ```
-        0000000,PO 1234
-        111111111,PO 1234
-        ```
+3.  Wybierz pozycję **Zapisz profil**, aby dodać profil.
 
-    -   **Ręcznie dodaj szczegóły urządzeń**&mdash; wprowadź numery seryjne i szczegóły maksymalnie 15 urządzeń.
+### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Dodawanie urządzenia z systemem iOS do rejestracji przy użyciu Asystenta ustawień
 
-    > [!NOTE]
-    > Jeśli w przyszłości konieczne okaże się usunięcie urządzeń należących do firmy z zakresu zarządzania usługi Intune, być może trzeba będzie usunąć numer seryjny urządzenia z usługi Intune w grupie urządzeń **Według numeru seryjnego systemu iOS** w obszarze **Urządzenia zarejestrowane wstępnie należące do firmy**, aby wyłączyć rejestrację urządzenia. Jeśli usługa Intune przeprowadza procedurę odzyskiwania po awarii w przedziale czasowym zbliżonym do momentu usuwania numerów seryjnych, należy sprawdzić, czy w tej grupie znajdują się wyłącznie numery seryjne aktywnych urządzeń.
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**. 
 
-    Wybierz pozycję **Next** (Dalej).
+   Urządzenia można dodać na dwa sposoby:
 
-4.  **Wybierz urządzenia do zarejestrowania**.
-    Potwierdź urządzenia przeznaczone do zarejestrowania. Nie można zaimportować numerów seryjnych, które są już zarejestrowane lub zostały zarejestrowane w inny sposób. Wybierz pozycję **Dalej**, aby kontynuować.
+   ![Okno dialogowe dodawania urządzeń](../media/pol-SA-enroll-iOS-SetupAssistant.png)
 
-5.  **Przypisz profil**.
-    Z listy dostępnych profilów wybierz profil, który ma zostać przypisany do dodanych urządzeń, sprawdź informacje w obszarze **Szczegóły profilu rejestracji**, a następnie wybierz polecenie **Zakończ**. Ręcznie dodane urządzenia można przypisać do dowolnego profilu rejestracji.
+   -  **Przekaż plik CSV zawierający numery seryjne** &mdash; utwórz listę wartości oddzielanych przecinkami (plik CSV) w dwóch kolumnach bez nagłówka ograniczoną do 5000 urządzeń lub 5 MB na plik csv.
 
-6.  **Wyeksportuj profil do wdrożenia na urządzeniach z systemem iOS**.
-    W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych. Na pasku zadań kliknij przycisk **Eksportuj**. Skopiuj i zapisz adres w polu **Adres URL profilu**. Możesz przekazać go później przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
-    Aby umożliwić obsługę programu Apple Configurator 2, należy edytować adres URL profilu 2.0. Aby to zrobić, zastąp poniższy kod:
+    |||
+    |-|-|
+    |&lt;Numer seryjny 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
+    |&lt;Numer seryjny&2;&gt;|&lt;Szczegóły urządzenia 2&gt;|
+
+  Ten plik csv wyświetlony w edytorze tekstu wygląda następująco:
+
+    ```
+    0000000,PO 1234
+    111111111,PO 1234
+    ```
+
+  -  **Ręcznie dodaj szczegóły urządzeń** &mdash; wprowadź numery seryjne i wszelkie uwagi dotyczące maksymalnie 15 urządzeń.
+
+  Aby później wprowadzić zmiany w tej liście numerów seryjnych, zobacz [Dodawanie lub aktualizowanie numerów seryjnych systemów iOS](#add-or-update-ios-serial-numbers).
+
+  > [!NOTE]
+  > Jeśli w przyszłości konieczne okaże się usunięcie urządzeń należących do firmy z zakresu zarządzania usługi Intune, być może trzeba będzie usunąć numer seryjny urządzenia z usługi Intune w grupie urządzeń **Według numeru seryjnego systemu iOS** w obszarze **Urządzenia zarejestrowane wstępnie należące do firmy**, aby wyłączyć rejestrację urządzenia. Jeśli usługa Intune przeprowadza procedurę odzyskiwania po awarii w przedziale czasowym zbliżonym do momentu usuwania numerów seryjnych, należy sprawdzić, czy w tej grupie znajdują się wyłącznie numery seryjne aktywnych urządzeń.
+
+2. Wybierz pozycję **Next** (Dalej).
+
+3. Wybierz urządzenia przeznaczone do zarejestrowania. Nie można zaimportować numerów seryjnych, które są już zarejestrowane lub zostały zarejestrowane w inny sposób. Wybierz pozycję **Dalej**, aby kontynuować.
+
+### <a name="assign-a-profile"></a>Przypisywanie profilu
+
+Z listy dostępnych profilów wybierz profil, który ma zostać przypisany do dodanych urządzeń, sprawdź informacje w obszarze **Szczegóły profilu rejestracji**, a następnie wybierz polecenie **Zakończ**. Ręcznie dodane urządzenia można przypisać do dowolnego profilu rejestracji.
+
+> [!Important]
+> Obecnie usługa Intune umożliwia wyznaczenie „domyślnego profilu rejestracji urządzeń”, co oznacza, że nowe numery seryjne są automatycznie przypisywane do tego profilu domyślnego podczas synchronizowania nowych numerów seryjnych z usługą Apple DEP. Jeśli dzierżawa zostanie wkrótce poddana migracji do nowej witryny Azure Portal, nie będzie już można ustawić profilu domyślnego i zapewnić automatycznego przypisywania numerów seryjnych do tego profilu. Zamiast tego należy samodzielnie przypisać numery seryjne do profilu. [Dowiedz się więcej](https://docs.microsoft.com/intune-azure/enroll-devices/enroll-ios-devices-using-device-enrollment-program)
+
+### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Eksportowanie profilu do wdrożenia na urządzeniach z systemem iOS
+
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych. 
+
+2. Na pasku zadań kliknij przycisk **Eksportuj**. Skopiuj i zapisz adres w polu **Adres URL profilu**. Możesz przekazać go później przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
+
+  Aby umożliwić obsługę programu Apple Configurator 2, należy edytować adres URL profilu 2.0. Aby to zrobić, zastąp poniższy kod:
     ```
     https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
     ```
@@ -113,47 +141,67 @@ Za pomocą narzędzia Apple Configurator można przywrócić ustawienia fabryczn
 
 
 
-7.  **Przygotuj urządzenie przy użyciu programu Apple Configurator**.
-    Urządzenia z systemem iOS są podłączane do komputera Mac i rejestrowane w usłudze zarządzania urządzeniami przenośnymi.
+### <a name="prepare-the-device-with-apple-configurator"></a>Przygotowywanie urządzenia przy użyciu programu Apple Configurator
 
-    1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2**. Na pasku menu wybierz pozycję **Apple Configurator 2**, a następnie wybierz pozycję **Preferences** (Preferencje).
+Urządzenia z systemem iOS są podłączane do komputera Mac i rejestrowane w usłudze zarządzania urządzeniami przenośnymi.
 
-         > [!WARNING]
-         > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Zalecane jest również, aby podczas podłączania na urządzeniach był wyświetlany ekran **powitalny**.
+1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2**. Na pasku menu wybierz pozycję **Apple Configurator 2**, a następnie wybierz pozycję **Preferences** (Preferencje).
 
-    2. W okienku preferencji wybierz pozycję **Servers** (Serwery), a następnie wybierz symbol „+”, aby uruchomić kreatora serwera MDM. Wybierz pozycję **Next** (Dalej).
+   > [!WARNING]
+   > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Zalecane jest również, aby podczas podłączania na urządzeniach był wyświetlany ekran **powitalny**.
 
-    3. Wprowadź **nazwę** i **adres URL rejestracji** dla serwera MDM z kroku 6 procesu rejestrowania urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
+2. W okienku preferencji wybierz pozycję **Servers** (Serwery), a następnie wybierz symbol „+”, aby uruchomić kreatora serwera MDM. Wybierz pozycję **Next** (Dalej).
 
-       Możesz bezpiecznie zignorować ostrzeżenie informujące, że adres URL serwera nie został zweryfikowany. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
+3. Wprowadź **nazwę** i **adres URL rejestracji** dla serwera MDM z kroku 6 procesu rejestrowania urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
 
-    4.  Podłącz urządzenia przenośne z systemem iOS do komputera Mac przy użyciu adaptera USB.
+   Możesz bezpiecznie zignorować ostrzeżenie informujące, że adres URL serwera nie został zweryfikowany. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
 
-        > [!WARNING]
-        > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Podczas uruchamiania Asystenta ustawień na urządzeniach powinien być wyświetlany ekran **powitalny**.
+4.  Podłącz urządzenia przenośne z systemem iOS do komputera Mac przy użyciu adaptera USB.
 
-    5.  Wybierz pozycję **Prepare**(Przygotuj). W okienku Prepare iOS Device (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
+    > [!WARNING]
+    > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Podczas uruchamiania Asystenta ustawień na urządzeniach powinien być wyświetlany ekran **powitalny**.
 
-    6. W okienku Enroll in MDM Server (Rejestrowanie na serwerze MDM) wybierz nazwę utworzonego serwera, a następnie wybierz pozycję **Next** (Dalej).
+5.  Wybierz pozycję **Prepare**(Przygotuj). W okienku Prepare iOS Device (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
 
-    7. W okienku Supervise Devices (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
+6. W okienku Enroll in MDM Server (Rejestrowanie na serwerze MDM) wybierz nazwę utworzonego serwera, a następnie wybierz pozycję **Next** (Dalej).
 
-    8. W okienku Create an Organization (Tworzenie organizacji) wybierz pozycję **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
+7. W okienku Supervise Devices (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
 
-    9. W okienku Configure iOS Setup Assistant (Konfigurowanie Asystenta ustawień systemu iOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
+8. W okienku Create an Organization (Tworzenie organizacji) wybierz pozycję **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
 
-    10. Po zakończeniu przygotowywania urządzenia z systemem iOS odłącz kabel USB.  
+9. W okienku Configure iOS Setup Assistant (Konfigurowanie Asystenta ustawień systemu iOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
 
-8.  **Rozdystrybuuj urządzenia**.
-    Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników uruchomi się Asystent ustawień.
+10. Po zakończeniu przygotowywania urządzenia z systemem iOS odłącz kabel USB.  
 
+### <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 
+Urządzenia są teraz gotowe do rejestracji w firmie. 
 
-### <a name="see-also"></a>Zobacz też
+Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
+
+## <a name="add-or-update-ios-serial-numbers"></a>Dodawanie lub aktualizowanie numerów seryjnych systemów iOS
+
+Powyżej opisano wszystkie kroki, które należy wykonać, aby zarejestrować urządzenia od „dnia 0”, w tym przekazywanie numerów seryjnych systemów iOS, ale prawdopodobnie okresowo zaistnieje konieczność dodania lub zaktualizowania szczegółów dotyczących numerów seryjnych. Aby dodać lub zaktualizować listę numerów seryjnych urządzeń z systemem iOS, skorzystaj z tej procedury. 
+
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz kolejno pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru seryjnego systemu iOS**, a następnie wybierz polecenie **Dodaj urządzenia**. Jeśli chcesz usunąć numer seryjny (zamiast do aktualizować), wybierz numer seryjny, a następnie wybierz pozycję **Usuń** (zamiast pozycji **Dodaj urządzenia**).
+
+2. Aby kontynuować dodawanie lub aktualizowanie numerów seryjnych, wybierz jedną z poniższych opcji, zgodnie z wcześniejszym opisem kroków w tym temacie, a następnie wybierz pozycję **Dalej**:
+
+   -  **Przekaż plik csv zawierający numery seryjne** 
+   -  **Ręcznie dodaj szczegóły urządzeń** 
+
+3.  W okienku **Przegląd urządzeń** możesz potwierdzić numery seryjne. Możesz również zdecydować, czy zastąpić wartość pola **Szczegóły** dla ponownie importowanych numerów seryjnych. Aby zachować bieżące szczegóły, odznacz pole **Zastąp**. 
+
+4.  Wybierz przycisk **Zakończ**, aby zaimportować numery seryjne.  Zaimportowane numery seryjne i szczegóły są dodawane do listy **Według numeru seryjnego systemu iOS**.
+
+> [!NOTE] 
+> Jeśli w najbliższej przyszłości dana organizacja zostanie poddana migracji do nowej witryny Azure Portal, ta funkcja ulegnie zmianie. W istniejącej konsoli administratora usługi Intune administratorzy mogą akceptować szczegóły z przekazanego pliku CSV i zastępować istniejące dane poszczególnych numerów seryjnych. W nowej wersji witryny Azure Portal będzie tylko można zastąpić szczegóły wszystkich numerów seryjnych lub zignorować nowe szczegóły wszystkich numerów seryjnych.
+
+### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
