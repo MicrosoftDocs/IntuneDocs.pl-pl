@@ -2,8 +2,8 @@
 title: "Zarządzanie urządzeniami za pomocą programu Exchange ActiveSync | Microsoft Docs"
 description: "Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync (EAS) przy użyciu programu Exchange Connector"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
