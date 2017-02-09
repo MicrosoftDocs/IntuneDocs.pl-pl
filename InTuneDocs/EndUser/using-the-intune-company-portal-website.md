@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
@@ -37,7 +38,7 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 
 -   [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
 
--   [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
+-    [Ręczne synchronizowanie urządzenia w celu przyspieszenia wolnego instalowania aplikacji](sync-your-device-manually-cpwebsite.md)
 
 -   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane)
 

@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
@@ -29,9 +30,9 @@ Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze I
 
 Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykule”, który odpowiada typowi używanego urządzenia:
 
--   [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
--   [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-8-1-computer)
--   [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
+-    [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
+-    [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-8-1-computer)
+-    [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-8-1-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Wyrejestrowywanie urządzenia z systemem Windows 10
 

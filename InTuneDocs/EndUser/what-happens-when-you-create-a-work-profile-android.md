@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: b217da11-2cd7-49ab-a91f-2f6d7784c6b6
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
@@ -45,8 +46,6 @@ Gdy tworzysz profil służbowy:
 Instrukcje dotyczące tworzenia profilu służbowego znajdziesz w temacie [Tworzenie profilu służbowego i rejestrowanie urządzenia](create-a-work-profile-and-enroll-your-device-in-intune-android.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
 
 
 

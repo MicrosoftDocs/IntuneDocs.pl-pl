@@ -2,10 +2,10 @@
 title: "Program Endpoint Protection dla komputerów z systemem Windows | Microsoft Docs"
 description: "Zabezpiecz zarządzane komputery przy użyciu programu Endpoint Protection, który zapewnia ochronę w czasie rzeczywistym przed złośliwym oprogramowaniem."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: arob98
-ms.date: 07/25/2016
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
