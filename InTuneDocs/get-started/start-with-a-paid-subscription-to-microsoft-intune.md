@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -22,6 +22,9 @@ ms.openlocfilehash: 7777b7fb4a0977ed663a3ef01547f22e9e61bb8a
 
 
 # <a name="intune-quick-start-guide"></a>Przewodnik Szybki start dotyczący usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Przewodnik ułatwia rozpoczęcie pracy z subskrypcją płatną usługi Microsoft Intune. Wykonaj te kroki, aby zarządzać urządzeniami przenośnymi i komputerami z systemem Windows oraz aplikacjami w swojej organizacji. Możesz wykonać kolejno poszczególne kroki lub pominąć kroki, które nie mają zastosowania do Twojego środowiska lub potrzeb biznesowych. Jeśli chcesz wypróbować usługę Intune, zobacz [Przewodnik dotyczący oceny usługi Intune](/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).  
 
 Jeśli obecnie używasz programu Microsoft System Center Configuration Manager do zarządzania komputerami i serwerami, możesz [rozszerzyć program Configuration Manager, aby zarządzał urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
