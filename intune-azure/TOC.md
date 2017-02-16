@@ -38,11 +38,12 @@
 #### [Dodawanie numerów seryjnych programu Apple Configurator](enroll-devices/add-apple-configurator-serial-numbers.md)
 #### [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
 ### [Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
+### [Rejestrowanie urządzeń z systemem macOS](enroll-devices/enroll-macos-devices.md)
 ### [Rejestrowanie urządzeń z systemem Windows](enroll-devices/enroll-window-devices.md)
 ### Zarządzanie rejestracją urządzeń
 #### [Tworzenia warunków i postanowień](enroll-devices/create-terms-and-conditions.md)
 #### [Ustawianie ograniczeń rejestracji](enroll-devices/set-enrollment-restrictions.md)
-#### [Mapowanie grup urządzeń](enroll-devices/how-to-use-device-group-mapping.md)
+#### [Mapowanie urządzeń na grupy](enroll-devices/how-to-use-device-group-mapping.md)
 #### [Dodawanie identyfikatorów firmy](enroll-devices/add-corporate-identifiers.md)
 #### [Używanie usługi Windows Hello dla firm](enroll-devices/how-to-use-windows-hello.md)
 <!--- ## [Troubleshoot](enroll-devices/troubleshooting.md) --->
@@ -80,7 +81,7 @@
 ### [Przypisywanie aplikacji](manage-apps/deploy-apps.md)
 ### [Monitorowanie aplikacji](manage-apps/monitor-apps.md)
 ### [Korzystanie z zasad konfigurowania aplikacji](manage-apps/app-configuration-policies.md)
-<!--- ### [Selectively wipe apps](manage-apps/app-selective-wipe.md)--->
+### [Czyszczenie selektywne aplikacje](manage-apps/app-selective-wipe.md)
 <!---Is this specific to app protection policy or more general app management?--->
 ### [Praca z aplikacjami nabytymi w ramach zakupów zbiorczych](manage-apps/volume-purchased-apps.md)
 #### [Aplikacje VPP dla systemu iOS](manage-apps/ios-vpp-apps.md)
@@ -186,6 +187,6 @@
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

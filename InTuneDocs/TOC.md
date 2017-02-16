@@ -11,7 +11,8 @@
 
 # [Wprowadzenie](get-started/get-started.md)
 ## [Setup Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md) (Konfigurowanie usługi Intune)
-### [Wymagania wstępne](get-started/what-to-know-before-you-start-microsoft-intune.md)
+### [Wymagania wstępne]
+#### [Obsługiwane urządzenia](get-started/what-to-know-before-you-start-microsoft-intune.md)
 #### [Network usage](get-started/network-bandwidth-use.md) (Użycie sieci)
 ### [Logowanie się do usługi Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Configure domains](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md) (Konfigurowanie domen)
@@ -57,7 +58,6 @@
 #### [Zarządzanie w systemie Android](deploy-use/set-up-android-management-with-microsoft-intune.md)
 #### [Zarządzanie w programie Android for Work](deploy-use/set-up-android-for-work.md)
 #### [Zarządzanie urządzeniami z systemem Windows](deploy-use/set-up-windows-device-management-with-microsoft-intune.md)
-#### [Windows 10 Mobile i Windows Phone](deploy-use/set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Zarządzanie urządzeniami należącymi do firmy](deploy-use/manage-corporate-owned-devices.md)
 #### [Rejestrowanie firmowych urządzeń z systemem iOS](deploy-use/enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Rejestracja asystenta ustawień](deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune.md)
@@ -165,13 +165,13 @@
 #### [Włączanie ochrony urządzenia przed zagrożeniami za pomocą zasad zgodności](deploy-use/device-threat-protection-policy.md)
 
 ### [Ochrona danych aplikacji za pomocą zarządzania aplikacjami mobilnymi](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Witryna Azure Portal — zasady zarządzania aplikacjami mobilnymi](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
-#### [Przygotowanie do konfigurowania zasad zarządzania aplikacjami mobilnymi](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Zasady zarządzania aplikacjami mobilnymi dla systemu Android](deploy-use/android-mam-policy-settings.md)
-#### [Zasady zarządzania aplikacjami mobilnymi dla systemu iOS](deploy-use/ios-mam-policy-settings.md)
-#### [Weryfikowanie zasad zarządzania aplikacjami mobilnymi](deploy-use/validate-mobile-application-management.md)
-#### [Monitorowanie zgodności zasad](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Witryna Azure Portal dla zasad ochrony aplikacji](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
+#### [Przygotowywanie do konfigurowania zasad ochrony aplikacji](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Tworzenie i wdrażanie zasad ochrony aplikacji](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Zasady ochrony aplikacji dla systemu Android](deploy-use/android-mam-policy-settings.md)
+#### [Zasady ochrony aplikacji dla systemu iOS](deploy-use/ios-mam-policy-settings.md)
+#### [Weryfikowanie zasad ochrony aplikacji](deploy-use/validate-mobile-application-management.md)
+#### [Monitorowanie zgodności z zasadami ochrony aplikacji](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 #### [Konsola administracyjna usługi Intune dla zasad zarządzania aplikacjami mobilnymi](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
@@ -222,6 +222,6 @@
 # [Słownik](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 
