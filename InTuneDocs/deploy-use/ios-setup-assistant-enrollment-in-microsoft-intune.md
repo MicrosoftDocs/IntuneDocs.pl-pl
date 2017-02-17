@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: 7db1a8ec10d0c214264bba7608ae8bdc09a27420
+ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
+ms.openlocfilehash: facae5f49b52760dcea0653bd261e16e13e11bbf
 
 
 ---
@@ -105,7 +105,10 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
   -  **Ręcznie dodaj szczegóły urządzeń** &mdash; wprowadź numery seryjne i wszelkie uwagi dotyczące maksymalnie 15 urządzeń.
 
-  Aby później wprowadzić zmiany w tej liście numerów seryjnych, zobacz [Dodawanie lub aktualizowanie numerów seryjnych systemów iOS](#add-or-update-ios-serial-numbers).
+  W okienku **Przegląd urządzeń** możesz potwierdzić numery seryjne. Możesz również zdecydować, czy zastąpić wartość pola **Szczegóły** dla ponownie importowanych numerów seryjnych. Aby zachować bieżące szczegóły, odznacz pole **Zastąp**. 
+
+> [!NOTE] 
+> W istniejącej konsoli administratora usługi Intune administratorzy mogą akceptować szczegóły z przekazanego pliku CSV i zastępować istniejące dane poszczególnych numerów seryjnych. W nowej wersji witryny Azure Portal będzie tylko można zastąpić szczegóły wszystkich numerów seryjnych lub zignorować nowe szczegóły wszystkich numerów seryjnych.
 
   > [!NOTE]
   > Jeśli w przyszłości konieczne okaże się usunięcie urządzeń należących do firmy z zakresu zarządzania usługi Intune, być może trzeba będzie usunąć numer seryjny urządzenia z usługi Intune w grupie urządzeń **Według numeru seryjnego systemu iOS** w obszarze **Urządzenia zarejestrowane wstępnie należące do firmy**, aby wyłączyć rejestrację urządzenia. Jeśli usługa Intune przeprowadza procedurę odzyskiwania po awarii w przedziale czasowym zbliżonym do momentu usuwania numerów seryjnych, należy sprawdzić, czy w tej grupie znajdują się wyłącznie numery seryjne aktywnych urządzeń.
@@ -179,29 +182,12 @@ Urządzenia są teraz gotowe do rejestracji w firmie.
 
 Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
 
-## <a name="add-or-update-ios-serial-numbers"></a>Dodawanie lub aktualizowanie numerów seryjnych systemów iOS
-
-Powyżej opisano wszystkie kroki, które należy wykonać, aby zarejestrować urządzenia od „dnia 0”, w tym przekazywanie numerów seryjnych systemów iOS, ale prawdopodobnie okresowo zaistnieje konieczność dodania lub zaktualizowania szczegółów dotyczących numerów seryjnych. Aby dodać lub zaktualizować listę numerów seryjnych urządzeń z systemem iOS, skorzystaj z tej procedury. 
-
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz kolejno pozycje **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru seryjnego systemu iOS**, a następnie wybierz polecenie **Dodaj urządzenia**. Jeśli chcesz usunąć numer seryjny (zamiast do aktualizować), wybierz numer seryjny, a następnie wybierz pozycję **Usuń** (zamiast pozycji **Dodaj urządzenia**).
-
-2. Aby kontynuować dodawanie lub aktualizowanie numerów seryjnych, wybierz jedną z poniższych opcji, zgodnie z wcześniejszym opisem kroków w tym temacie, a następnie wybierz pozycję **Dalej**:
-
-   -  **Przekaż plik csv zawierający numery seryjne** 
-   -  **Ręcznie dodaj szczegóły urządzeń** 
-
-3.  W okienku **Przegląd urządzeń** możesz potwierdzić numery seryjne. Możesz również zdecydować, czy zastąpić wartość pola **Szczegóły** dla ponownie importowanych numerów seryjnych. Aby zachować bieżące szczegóły, odznacz pole **Zastąp**. 
-
-4.  Wybierz przycisk **Zakończ**, aby zaimportować numery seryjne.  Zaimportowane numery seryjne i szczegóły są dodawane do listy **Według numeru seryjnego systemu iOS**.
-
-> [!NOTE] 
-> Jeśli w najbliższej przyszłości dana organizacja zostanie poddana migracji do nowej witryny Azure Portal, ta funkcja ulegnie zmianie. W istniejącej konsoli administratora usługi Intune administratorzy mogą akceptować szczegóły z przekazanego pliku CSV i zastępować istniejące dane poszczególnych numerów seryjnych. W nowej wersji witryny Azure Portal będzie tylko można zastąpić szczegóły wszystkich numerów seryjnych lub zignorować nowe szczegóły wszystkich numerów seryjnych.
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
