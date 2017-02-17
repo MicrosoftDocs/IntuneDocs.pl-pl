@@ -6,6 +6,7 @@
 ### [Tworzenie zasad i publikowanie aplikacji](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
 ### [Inne opcje i dodatki](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Dokonaj konwersji na płatną subskrypcję](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
+## [Najczęściej zadawane pytania dotyczące zarządzania aplikacjami mobilnymi i ochrony aplikacji](understand-explore/mam-faq.md)
 ## [Typowe scenariusze](understand-explore/common-ways-to-use-intune.md)
 
 
@@ -182,7 +183,6 @@
 #### [Aplikacje biznesowe na urządzeniach niezarządzanych przez usługę Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Używanie zestawu SDK podczas pisania aplikacji](deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
-### [Najczęściej zadawane pytania dotyczące zarządzania aplikacjami mobilnymi i ochrony aplikacji](deploy-use/mam-faq.md)
 
 ## Wycofywanie aplikacji i danych
 ### [Korzystanie z czyszczenia pełnego lub selektywnego](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
@@ -222,6 +222,6 @@
 # [Słownik](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
