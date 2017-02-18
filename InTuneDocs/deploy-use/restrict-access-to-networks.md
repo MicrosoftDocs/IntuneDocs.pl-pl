@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
 ms.openlocfilehash: 8ef24e4d413662012f091c1be318d1d274e16439
@@ -154,7 +155,7 @@ W konsoli administracyjnej platformy ISE podaj wartości tych ustawień:
 ## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Informacje współużytkowane przez dzierżawę usługi Intune i serwer Cisco ISE
 Ta tabela zawiera informacje współużytkowane przez dzierżawę usługi Intune i serwer Cisco ISE dla urządzeń zarządzanych przez usługę Intune.
 
-|Właściwość|  Opis|
+|Właściwość|    Opis|
 |---------------|------------------------------------------------------------|
 |complianceState|Wartość true lub false (ciąg) wskazująca, czy urządzenie jest zgodne, czy niezgodne.|
 |isManaged|Wartość true lub false wskazująca, czy klient jest zarządzany przez usługę Intune, czy nie.|

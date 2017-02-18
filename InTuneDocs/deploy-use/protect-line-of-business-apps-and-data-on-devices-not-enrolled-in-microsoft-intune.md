@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
@@ -46,7 +47,7 @@ Aby skojarzyć aplikację biznesową z zasadami zarządzania aplikacjami mobilny
 2. W bloku **Aplikacje biznesowe** wybierz pozycję **Dodaj aplikację niestandardową**.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z umieszczonym u góry przyciskiem Dodaj aplikację niestandardową](../media/mam-azure-portal-add-lob-app-action.png)
-3.  Określ nazwę aplikacji, identyfikator pakietu w polu identyfikatora aplikacji oraz platformę (iOS lub Android).
+3.    Określ nazwę aplikacji, identyfikator pakietu w polu identyfikatora aplikacji oraz platformę (iOS lub Android).
 
   ![Zrzut ekranu przedstawiający blok dodawania aplikacji niestandardowej](../media/mam-azure-portal-add-app-details.png)
 
@@ -71,11 +72,11 @@ Jeśli istnieje konieczność zmiany szczegółów aplikacji, takich jak nazwa a
 ##  <a name="remove-apps"></a>Usuwanie aplikacji
 Aplikację biznesową można usunąć z listy aplikacji. Spowoduje to usunięcie aplikacji z listy i usunięcie skojarzenia z zasadami zarządzania aplikacjami mobilnymi, ale aplikacja nie zostanie usunięta ani odinstalowana z urządzenia użytkownika.  
 
-1.  W [Portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia**. W bloku **Ustawienia** wybierz pozycję **Biznesowe**, aby otworzyć listę istniejących aplikacji.  
-2.  Wybierz aplikację, którą chcesz usunąć, i wybierz menu **kontekstowe (…)**.
+1.    W [Portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia**. W bloku **Ustawienia** wybierz pozycję **Biznesowe**, aby otworzyć listę istniejących aplikacji.  
+2.    Wybierz aplikację, którą chcesz usunąć, i wybierz menu **kontekstowe (…)**.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z ikoną wielokropka](../media/mam-azure-portal-lob-context-menu.png)
-3.  Wybierz pozycję **Usuń aplikację**, aby usunąć aplikację.
+3.    Wybierz pozycję **Usuń aplikację**, aby usunąć aplikację.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z opcją usunięcia aplikacji](../media/mam-azure-portal-delete-app.png)
 

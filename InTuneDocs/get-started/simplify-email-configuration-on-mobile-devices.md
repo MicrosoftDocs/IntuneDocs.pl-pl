@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 1696c715-1e9a-401e-a530-77904fd189ad
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: bf25dd15aa9074692017d94bb94285b4c8e77ca8
@@ -34,8 +35,8 @@ Jeśli tak, usługa Microsoft Intune może automatycznie konfigurować pocztę e
 Po skonfigurowaniu profilu poczty e-mail można łatwo ograniczyć dostęp do firmowej poczty e-mail i usługi Office 365 za pomocą zasad dostępu warunkowego usługi Intune. Te zasady pozwalają zapewnić, że dostęp do firmowej poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń, które są zgodne z zasadami ustawionymi w usłudze Intune.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.  Automatyczne [konfigurowanie profilów poczty e-mail użytkowników końcowych](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na urządzeniach z systemami Windows, iOS i Android.
-2.  [Kontrola dostępu do firmowej poczty e-mail](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) za pomocą zasad dostępu warunkowego.
+1.    Automatyczne [konfigurowanie profilów poczty e-mail użytkowników końcowych](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na urządzeniach z systemami Windows, iOS i Android.
+2.    [Kontrola dostępu do firmowej poczty e-mail](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) za pomocą zasad dostępu warunkowego.
 
 
 ### <a name="additional-information"></a>Informacje dodatkowe:

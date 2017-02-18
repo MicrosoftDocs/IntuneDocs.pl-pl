@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: bb706f122753219d8034bcd25fbe2e25b7142b30
 ms.openlocfilehash: 7fce50c88419a920aa7c4814517523e7a4ced919
@@ -27,24 +28,24 @@ ms.openlocfilehash: 7fce50c88419a920aa7c4814517523e7a4ced919
 Oto jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Konfiguracja niestandardowa** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
 
 > [!NOTE]
--   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
+-    Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
 - W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
--   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
+-    Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
 -  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
 
 
-1.  Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
+1.    Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
 
-2.  Podaj nazwę i opis.
-3.  Dodaj nowe ustawienie OMA-URI:
+2.    Podaj nazwę i opis.
+3.    Dodaj nowe ustawienie OMA-URI:
 
-   a.   Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
+   a.    Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
 
-   b.   Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
+   b.    Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
 
-   c.   **Typ danych**: ustaw wartość „Ciąg (XML)”
+   c.    **Typ danych**: ustaw wartość „Ciąg (XML)”
 
-   d.   **OMA-URI**:
+   d.    **OMA-URI**:
 
     - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml

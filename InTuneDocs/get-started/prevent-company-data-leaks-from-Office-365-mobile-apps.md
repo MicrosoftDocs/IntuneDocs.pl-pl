@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 19be3de7-539c-49f5-8c46-5363b987fef9
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: 0288ecd940d650304d83b7dd5803a56f69b936f7
@@ -32,9 +33,9 @@ Czy chcesz umożliwić użytkownikom końcowym dostęp do usługi Office 365 i d
 Jeśli tak, usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych usługi Office 365 na urządzeniach z systemami iOS i Android, w tym ograniczenia wycinania/kopiowania/wklejania, uniemożliwianie korzystania z funkcji „Zapisz jako”, ustawienie wymagania numeru PIN oraz możliwość zdalnego czyszczenia danych chronionych przez zasady zarządzania aplikacjami mobilnymi.  W ten sposób można zapewnić ochronę danych firmowych, nie wymagając rejestracji urządzeń użytkowników końcowych w rozwiązaniu MDM i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.  Uzyskaj podstawową wiedzę na temat [sposobu działania zarządzania aplikacjami mobilnymi w usłudze Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
-2.  Dowiedz się, [co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi (MAM)](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) w portalu Azure.
-3.  [Tworzenie i wdrażanie zasad MAM](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
+1.    Uzyskaj podstawową wiedzę na temat [sposobu działania zarządzania aplikacjami mobilnymi w usłudze Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
+2.    Dowiedz się, [co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi (MAM)](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) w portalu Azure.
+3.    [Tworzenie i wdrażanie zasad MAM](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
 
 ### <a name="additional-information"></a>Informacje dodatkowe:
 - [Środowisko użytkownika końcowego](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune) (korzystanie z aplikacji objętych zarządzaniem aplikacjami mobilnymi).

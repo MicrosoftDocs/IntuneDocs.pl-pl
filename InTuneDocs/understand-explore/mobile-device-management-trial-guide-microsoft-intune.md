@@ -12,6 +12,7 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
@@ -78,13 +79,13 @@ Aby użytkownicy mogli rejestrować urządzenia z systemem iOS, należy skonfigu
 
 1. **Pobierz żądanie podpisania certyfikatu**<br/>
 Zaloguj się do usługi Intune za pomocą konta administracyjnego i przejdź do opcji **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Przekaż certyfikat usługi APNs**, a następnie wybierz opcję **Pobierz żądanie certyfikatu APNs**. Zapisz lokalnie plik żądania podpisania certyfikatu (CSR). Plik CSR jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates. <!--- screen shot--->
-2.  **Pobierz certyfikat usługi Apple Push Notification**<BR/>
+2.    **Pobierz certyfikat usługi Apple Push Notification**<BR/>
 Przejdź do obszaru [Portal Apple Push Certificates](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) i zaloguj się przy użyciu firmowego identyfikatora Apple ID, aby utworzyć certyfikat usługi APNs za pomocą pliku CSR. Po kliknięciu przycisku **Upload (Przekaż) w portalu wypychania certyfikatu firmy Apple** otrzymasz plik JSON, którego nie można użyć dla usługi APNs. Ukończ pobieranie, wróć do portalu wypychania certyfikatu firmy Apple, przejdź do obszaru Certificates for Third-Party Servers (Certyfikaty dla serwerów innych firm) i wybierz polecenie **Download** (Pobierz).
 
  Pobierz certyfikat usługi APNs (PEM) i zapisz plik lokalnie. Ten identyfikator Apple ID musi zostać użyty później w celu odnowienia certyfikatu usługi APNs.
-3.  **Dodaj certyfikat usługi APNs do usługi Intune**<BR/>
+3.    **Dodaj certyfikat usługi APNs do usługi Intune**<BR/>
 W konsoli administracyjnej usługi Microsoft Intune przejdź do obszaru **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Prześlij certyfikat usługi APNs**, a następnie wybierz polecenie **Prześlij certyfikat usługi APNs**. Przejdź do pliku certyfikatu (PEM) i wybierz pozycję **Otwórz**, a następnie wprowadź identyfikator Apple ID. Z certyfikatem APNs. Usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych.
-4.  **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**<br/>
+4.    **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**<br/>
 Aby uzyskać instrukcje dla użytkowników końcowych dotyczące rejestrowania, zobacz tematy [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) i [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
 

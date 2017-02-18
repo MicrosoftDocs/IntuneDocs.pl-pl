@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: 11ed6b14bc940940e6fa22f6760420e690ac364f
@@ -42,9 +43,9 @@ Ten przewodnik Szybki start będzie użyteczny, jeśli spełniasz następujące 
 Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając kod dostępu i szyfrowanie danych za pomocą zasad obejmujących aplikacje mobilne, z których korzystają pracownicy w celu uzyskania dostępu do poufnych danych, bez konieczności pełnego rejestrowania w jakimkolwiek rozwiązaniu do zarządzania urządzeniami. Usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi w aplikacjach mobilnych pakietu Office zarówno dla systemu [iOS](https://products.office.com/en-us/mobile/office-mobile-apps-for-ios), jak i systemu [Android](https://products.office.com/en-us/mobile/office-mobile-apps-for-android). W ten sposób można zapewnić ochronę danych usługi O365, nie wymagając od użytkowników rejestracji ich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.  [Sposoby ochrony danych aplikacji](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-2.  [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
-3.  [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+1.    [Sposoby ochrony danych aplikacji](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+2.    [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
+3.    [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
 
 ## <a name="additional-information"></a>Informacje dodatkowe:
 - [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)

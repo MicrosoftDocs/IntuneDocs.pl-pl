@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
 ms.openlocfilehash: 05d47e6cf5c7b380ac981d06a3938f38b27a430b
@@ -85,7 +86,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwalaj aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
 |**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Zezwalaj użytkownikowi na kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
 |**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Ustaw opcję **Nie**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.|
-|**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.   W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
+|**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.    W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
 
 ### <a name="application-settings-for-the-browser"></a>Ustawienia aplikacji dotyczące przeglądarki
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
