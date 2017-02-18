@@ -1,11 +1,11 @@
 ---
-title: "Ustawienia zasad zgodności dla programu Android for Work | Microsoft Docs"
+title: "Ustawienia zgodności programu Android for Work | Microsoft Docs"
 description: "W tym temacie opisano ustawienia zasad zgodności urządzeń dla urządzeń z systemem Android, które są zgodne z programem Android for Work."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/13/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2b53e7a410d0ce268ce395c08161095af42857b7
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 1b84b7137bd01b695d20bea67d77c694f2533b4e
 
 
 ---
@@ -24,8 +25,6 @@ ms.openlocfilehash: 2b53e7a410d0ce268ce395c08161095af42857b7
 # <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Ustawienia zasad zgodności dla urządzeń z systemem Android for Work w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Ustawienia zasad opisane w tym temacie dotyczą urządzeń z programem Android for Work.
 
@@ -70,7 +69,7 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 - **Wymagaj, aby debugowanie USB było wyłączone**: nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB w urządzeniach z programem Android for Work zostało już wyłączone.
 
 - **Minimalny poziom poprawek zabezpieczeń systemu Android**: użyj tego ustawienia, aby określić minimalny poziom poprawek bezpieczeństwa systemu Android.  Urządzenia, które nie mają co najmniej tego poziomu poprawek, będą niezgodne. Data musi mieć określony format: RRRR-MM-DD.
-- **Wymagaj włączonej ochrony urządzenia przed zagrożeniami**: Użyj tego ustawienia, aby uzyskać ocenę ryzyka z rozwiązania Lookout MTP jako warunku zgodności. Wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
+- **Wymagaj włączonej ochrony urządzenia przed zagrożeniami**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z rozwiązania do ochrony urządzenia przed zagrożeniami jako warunku zgodności. Wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
 
   - **Brak (zabezpieczone)** — to ustawienie zapewnia najwyższy poziom zabezpieczeń. Oznacza to, że urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające dowolny poziom zagrożenia, zostanie ono ocenione jako niezgodne.
   - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
@@ -83,10 +82,10 @@ Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne.
   Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
+- **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

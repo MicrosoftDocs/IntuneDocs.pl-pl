@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
-ms.openlocfilehash: cb80d531a28eaccbd26bc53df3e13ad233522dcf
+ms.sourcegitcommit: 3fdbf7f561f526b68972c6f66d1b72b56f7fa8ad
+ms.openlocfilehash: 5aa384197036adf0c373a08c3750f453812c9fba
 
 
 ---
@@ -119,7 +120,8 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 6. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
 
     > [!NOTE]
-    > Twój profil aprowizacji musi obsługiwać nowe wartości udostępniania łańcucha kluczy. Grupy dostępu łańcucha kluczy powinny obsługiwać symbol wieloznaczny. Możesz to sprawdzić, otwierając plik mobileprovision w edytorze tekstów, wyszukując frazę **keychain-access-groups** i sprawdzając, czy używany jest symbol wieloznaczny. Na przykład:     ```xml
+    > Twój profil aprowizacji musi obsługiwać nowe wartości udostępniania łańcucha kluczy. Grupy dostępu łańcucha kluczy powinny obsługiwać symbol wieloznaczny. Możesz to sprawdzić, otwierając plik mobileprovision w edytorze tekstów, wyszukując frazę **keychain-access-groups** i sprawdzając, czy używany jest symbol wieloznaczny. Na przykład:
+    ```xml
     <key>keychain-access-groups</key>
     <array>
     <string>YOURBUNDLESEEDID.*</string>
@@ -150,7 +152,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
 9. W przypadku aplikacji mobilnych opracowywanych dla systemu iOS 9 i nowszych uwzględnij każdy protokół, przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Ponadto dla każdego protokołu uwzględnionego na liście dodaj nowy protokół i dołącz do jego nazwy sufiks `-intunemam`. W tabeli należy również uwzględnić pozycje `http-intunemam`, `https-intunemam`i `ms-outlook-intunemam` .
 
-10. Jeśli w uprawnieniach aplikacji zdefiniowano grupy aplikacji, dodaj te grupy do słownika IntuneMAMSettings w kluczu `AppGroupIdentitifiers` jako tabelę ciągów.
+10. Jeśli w uprawnieniach aplikacji zdefiniowano grupy aplikacji, dodaj te grupy do słownika IntuneMAMSettings w kluczu `AppGroupIdentifiers` jako tabelę ciągów.
 
 11. Połącz swoją aplikację mobilną z biblioteką uwierzytelniania usługi Azure Directory (ADAL). Biblioteka ADAL dla języka Objective C jest [dostępna w usłudze GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
 
@@ -509,7 +511,7 @@ Należy zauważyć, że tożsamość jest definiowana po prostu jako ciąg. W to
 
 ### <a name="identity-overview"></a>Przegląd tożsamości
 
-Tożsamość jest po prostu nazwą użytkownika konta (na przykład user@contoso.com). Deweloperzy mogą ustawić tożsamość aplikacji na następujących poziomach:
+Tożsamość jest po prostu nazwą użytkownika konta (np. user@contoso.com). Deweloperzy mogą ustawić tożsamość aplikacji na następujących poziomach:
 
 * **Tożsamość procesu**: ustawia tożsamość dla całego procesu i jest używana głównie dla aplikacji z jedną tożsamością. Ta tożsamość ma wpływ na wszystkie zadania i pliki oraz interfejs użytkownika.
 * **Tożsamość interfejsu użytkownika**: określa, jakie zasady są stosowane do zadań interfejsu użytkownika w głównym wątku, takich jak wytnij/kopiuj/wklej, kod PIN, uwierzytelnianie i udostępnianie danych. Tożsamość interfejsu użytkownika nie ma wpływu na zadania na plikach (np. szyfrowanie i kopie zapasowe).
@@ -604,6 +606,12 @@ Opracowując aplikacje dla systemu iOS, należy stosować poniższe najlepsze ro
 
 ## <a name="faq"></a>Najczęściej zadawane pytania
 
+
+**Czy do wszystkich interfejsów API można odwoływać się za pomocą natywnego języka Swift lub współdziałania języków Objective-C i Swift?**
+
+Interfejsy API zestawu SDK aplikacji usługi Intune są wyłącznie w języku objective-C i nie obsługują natywnego języka Swift.  
+
+
 **Czy wszyscy użytkownicy mojej aplikacji muszą być zarejestrowani w usłudze zarządzania aplikacjami mobilnymi (MAM)?**
 
 Nie. W rzeczywistości tylko konta służbowe powinny być rejestrowane przy użyciu zestawu SDK aplikacji usługi Intune. Aplikacje są odpowiedzialne za określenie, czy konto jest używane w kontekście miejsca pracy lub nauki.   
@@ -637,6 +645,8 @@ Ta metoda powinna być wywoływana przed wylogowaniem użytkownika z aplikacji. 
 
 Tak, administrator IT może wysłać polecenie selektywnego czyszczenia danych do aplikacji. Spowoduje to wyrejestrowanie użytkownika i wyczyszczenie jego danych. Zestaw SDK automatycznie obsługuje ten scenariusz i wysyła powiadomienie za pośrednictwem metody delegata wyrejestrowania.
 
+
+
 ## <a name="submit-your-app-to-the-app-store"></a>Przesyłanie aplikacji do sklepu App Store
 
 Zarówno kompilacje biblioteki statycznej, jak i struktury zestawu SDK aplikacji usługi Intune są uniwersalnymi plikami binarnymi. Oznacza to, że zawierają kod dla wszystkich architektur urządzeń i symulatorów. Firma Apple odrzuci aplikacje przesłane do sklepu App Store, jeśli zawierają one kod symulatora. Podczas kompilowania biblioteki statycznej na potrzeby kompilacji tylko dla urządzenia konsolidator automatycznie usunie kod symulatora. Wykonaj poniższe kroki, aby upewnić się, że cały kod symulatora został usunięty przed przekazaniem aplikacji do sklepu App Store.
@@ -656,6 +666,6 @@ Zarówno kompilacje biblioteki statycznej, jak i struktury zestawu SDK aplikacji
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

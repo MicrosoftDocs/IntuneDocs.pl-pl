@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 09/07/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fdaeddae669a5b519973117b9adf676b43ce1aa1
+ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
+ms.openlocfilehash: 03f5da3a819768ff8221257f091a000f18f00fb4
 
 
 ---
@@ -26,9 +27,18 @@ ms.openlocfilehash: fdaeddae669a5b519973117b9adf676b43ce1aa1
 
 Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
 
-**Wymaganie wstępne:** wymagany jest [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md).
+**Wymaganie wstępne:** [certyfikat usługi Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
-Firmowe urządzenia z systemem iOS można zarejestrować na trzy sposoby: za pomocą narzędzia Apple Configurator, programu DEP lub Portalu firmy.
+Firmowe urządzenia z systemem iOS można zarejestrować na jeden z trzech sposobów:
+
+- Rejestracja bezpośrednia lub za pośrednictwem asystenta ustawień programu Apple Configurator
+- Program Device Enrollment Program
+- Aplikacji Portal firmy
+
+>[!NOTE]
+>Metod rejestracji za pośrednictwem programu Apple Configurator i w ramach programu Device Enrollment Program nie można używać w połączeniu z metodą rejestracji przy użyciu [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
+
+Domyślnie w usłudze Intune mogą być rejestrowane wszystkie urządzenia z systemem iOS. Aby zablokować możliwość rejestrowania urządzeń osobistych lub firmowych, zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora. Wybierz pozycję **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **Reguły rejestracji**, a następnie wyczyść odpowiednie opcje.
 
 ## <a name="use-apple-configurator"></a>Użycie narzędzia Apple Configurator
 
@@ -47,8 +57,8 @@ Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować
 
 Koligacja użytkownika jest wymagana do obsługi:
   - Aplikacji do zarządzania aplikacjami mobilnymi
-  - Warunkowego dostępu do poczty e-mail i danych firmowych
-  - Aplikacji Portal firmy
+  -    Warunkowego dostępu do poczty e-mail i danych firmowych
+  -    Aplikacji Portal firmy
 
 **Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika**
 1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowej kombinacji imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
@@ -84,6 +94,6 @@ Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

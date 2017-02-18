@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/3/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 008c0d20312e90f3897c3da8ae2226e3e2595225
-ms.openlocfilehash: 6cb6b4b989d88289c5dffb693f98198ba6439aae
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
 
 
 ---
@@ -29,18 +30,16 @@ ms.openlocfilehash: 6cb6b4b989d88289c5dffb693f98198ba6439aae
 Zasady konfiguracji aplikacji mobilnych w usłudze Microsoft Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację. Aplikacja może na przykład wymagać, aby użytkownicy określili:
 
 -   Niestandardowy numer portu
-
 -   Ustawienia języka
-
 -   Ustawienia oznaczeń marki, takich jak logo firmy
 
-Nieprawidłowe określenie tych ustawień przez użytkowników może zwiększyć obciążenie działu pomocy technicznej i spowolnić wdrażanie technologii nowych aplikacji.
+Nieprawidłowe określenie ustawień przez użytkowników może zwiększyć obciążenie działu pomocy technicznej i spowolnić wdrażanie technologii nowych aplikacji.
 
-Zasady konfiguracji aplikacji mobilnych mogą pomóc wyeliminować te problemy, umożliwiając wdrażanie tych ustawień do użytkowników, zanim uruchomią oni aplikację. Ustawienia są następnie określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji.
+Zasady konfiguracji aplikacji mobilnych umożliwiają wdrożenie tych ustawień na urządzeniach, zanim użytkownicy uruchomią aplikację. Ustawienia są określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji.
 
 Aby korzystać z zasad konfiguracji aplikacji, podczas tworzenia aplikacji deweloper musi udostępnić konfiguracje aplikacji dla przedsiębiorstw. Na przykład przeglądarka Google Chrome udostępnia ustawienia, które umożliwiają ustawienie domyślnych zakładek, dozwolonych i niedozwolonych witryn i innych opcji. Skontaktuj się z deweloperem aplikacji, aby sprawdzić, czy te ustawienia są obsługiwane i jak określić je w zasadach.
 
-Zasady konfiguracji aplikacji są wdrażane do tych samych użytkowników, do których wdrożono aplikację, którą chcesz skonfigurować. Ustawienia zasad będą używane przy każdym uruchomieniu aplikacji.
+Zasady konfiguracji aplikacji są wdrażane do tych samych użytkowników, do których wdrożono aplikację, którą chcesz skonfigurować. Ustawienia aplikacji są stosowane po uruchomieniu aplikacji.
 
 ## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurowanie zasad konfiguracji aplikacji mobilnych
 
@@ -80,6 +79,6 @@ Po uruchomieniu wdrożonej aplikacji na urządzeniu zostaną uruchomione ustawie
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

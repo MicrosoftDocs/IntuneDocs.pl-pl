@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/09/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,10 @@ ms.technology:
 ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6c5ea937e5f6e0c8d20c72e086de1faa17d0ad34
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: b95f7dbf37a159a62894ae27d1fdb731ede5570c
 
 
 ---
@@ -25,9 +26,7 @@ ms.openlocfilehash: 6c5ea937e5f6e0c8d20c72e086de1faa17d0ad34
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
-Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z programem Android for Work.
+Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na [urządzeniach z programem Android for Work](android-for-work.md).
 
 ## <a name="general-configuration-policy"></a>Ogólne zasady konfiguracji
 
@@ -60,8 +59,6 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 |**Zezwalaj na współużytkowanie danych między profilem służbowym i osobistym**|Pozwala aplikacjom w profilu służbowym udostępniać dane aplikacjom w profilu osobistym użytkownika. Wybierz spośród opcji:<br><br>- **Uniemożliwiaj wszelkie udostępnianie poza granice**<br>- **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępniania z profilu osobistego**<br>- **Brak ograniczeń dotyczących udostępniania**|
 |**Ukryj powiadomienia profilu służbowego, gdy urządzenie jest zablokowane**<br>(system Android 6 i nowsze)|Pozwala określić, czy mają być wyświetlane jakiekolwiek powiadomienia z profilu służbowego, gdy urządzenie jest zablokowane.|
 |**Ustaw domyślne zasady uprawnień aplikacji**<br>(system Android 6 i nowsze)|Powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym.|
-
-
 
 
 ## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych
@@ -97,6 +94,6 @@ Obecnie usługa Intune obsługuje tylko ograniczoną liczbę zasad niestandardow
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

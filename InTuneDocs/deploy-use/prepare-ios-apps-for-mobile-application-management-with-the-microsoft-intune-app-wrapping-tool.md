@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
-ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
+ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
+ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
 
 
 ---
@@ -107,6 +108,9 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
   ![Wybieranie certyfikatu wewnętrznego i tymczasowego](../media/app-wrapper/iOS-signing-cert-3.png)
 
+>[!NOTE]
+>Jeśli nie planujesz dystrybuować aplikacji i chcesz ją tylko przetestować wewnętrznie, możesz skorzystać z certyfikatu iOS App Development zamiast certyfikatu Production. Jeśli używasz certyfikatu deweloperskiego, upewnij się, że profil aprowizowania dla urządzeń przenośnych odwołuje się do urządzeń, na których aplikacja ma być instalowana.
+
 7. Kliknij pozycję **Next** (Dalej) w dolnej części strony.
 
 8. Przeczytaj instrukcje dotyczące tworzenia **żądania podpisania certyfikatu (CSR)** za pomocą aplikacji Dostęp do pęku kluczy na komputerze z systemem MacOS.
@@ -131,11 +135,12 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 14. Kliknij dwukrotnie pobrany właśnie plik certyfikatu, aby dodać certyfikat do łańcucha kluczy.
 
-15. Ponownie otwórz aplikację **Dostęp do pęku kluczy**. Znajdź certyfikat. W tym celu wyszukaj wyraz **iPhone** na prawym górnym pasku wyszukiwania w oknie aplikacji Dostęp do pęku kluczy. Kliknij element prawym przyciskiem myszy, aby wyświetlić menu, i kliknij pozycję **Informacje**.
+15. Ponownie otwórz aplikację **Dostęp do pęku kluczy**. Zlokalizuj swój certyfikat, wyszukując jego nazwę na pasku wyszukiwania u góry z prawej strony. Kliknij element prawym przyciskiem myszy, aby wyświetlić menu, i kliknij pozycję **Informacje**. Na ekranach przykładowych używamy certyfikatu deweloperskiego zamiast certyfikatu produkcyjnego.
+
 
   ![Dodawanie certyfikatu do łańcucha kluczy](../media/app-wrapper/iOS-signing-cert-8.png)
 
-16. Zostanie wyświetlone okno z informacjami. Przewiń do dołu i przejdź do etykiety **Skróty kluczy**. Skopiuj ciąg **SHA1**, aby użyć go jako parametru -c narzędzia opakowującego aplikacje.
+16. Zostanie wyświetlone okno z informacjami. Przewiń do dołu i przejdź do etykiety **Skróty kluczy**. Skopiuj ciąg **SHA1** (rozmyty) do użytku jako argument „-c” dla narzędzia opakowującego aplikacje.
 
   ![Dodawanie certyfikatu do łańcucha kluczy](../media/app-wrapper/iOS-signing-cert-9.png)
 
@@ -397,6 +402,6 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 6a38eb2a071dc2134c9b255b22b5b21a2ef783d0
+ms.sourcegitcommit: f8a47bef930e5e194f4543b0532b4585c0ebd5e9
+ms.openlocfilehash: 514c1cee1137f6f658b0e887dd4f4a02f1cd0f21
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 6a38eb2a071dc2134c9b255b22b5b21a2ef783d0
 
 Przed zagłębieniem się w zadania implementacji ważne jest, aby zorganizować uczestników projektu rozwiązania typu Enterprise Mobility firmy wokół celów biznesowych firmy.  Jest to istotne zarówno w przypadku wdrażania od zera rozwiązania typu Enterprise Mobility, jak i migracji z innego produktu.  
 
-Potrzeby dotyczące rozwiązań typu Enterprise Mobility dynamicznie ewoluują i podejście firmy Microsoft do zaspakajania tych potrzeb może czasami różnić się od innych rozwiązań na rynku.  Najlepszym sposobem, aby zorganizować projekt wokół celów biznesowych jest określenie swoich celów w postaci scenariuszy, które mają być obsługiwane dla pracowników, partnerów i działu IT.  
+Potrzeby dotyczące rozwiązań typu Enterprise Mobility dynamicznie ewoluują i podejście firmy Microsoft do zaspakajania tych potrzeb może czasami różnić się od innych rozwiązań na rynku. Najlepszym sposobem, aby zorganizować projekt wokół celów biznesowych jest określenie swoich celów w postaci scenariuszy, które mają być obsługiwane dla pracowników, partnerów i działu IT.  
 
 Poniżej przedstawiono krótkie wprowadzenia do sześciu najbardziej typowych scenariuszy korzystających z usługi Intune, wraz z linkami do dodatkowych informacji na temat sposobu planowania i wdrażania każdego z nich.
 
@@ -51,14 +52,13 @@ W takich przypadkach jedynym sposobem na uzyskanie dostępu do danych firmowych 
 ## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Zabezpieczanie poczty e-mail i danych usługi Office 365 na potrzeby bezpiecznego uzyskiwania dostępu przez urządzenia przenośne
 Ochrona danych firmowych w usłudze Office 365 (wiadomości e-mail, dokumentów, wiadomości błyskawicznych, kontaktów) jest łatwa dla Ciebie i bezproblemowa dla Twoich użytkowników.
 
-Usługa Intune i pakiet Microsoft Enterprise Mobility + Security oferują unikalne rozwiązanie zintegrowanego dostępu warunkowego, które zapewnia, że żadni użytkownicy, aplikacje ani urządzenia nie będą mogły uzyskać dostępu do danych usługi Office 365, chyba że spełniają wymagania zgodności w firmie (wykonano [uwierzytelnianie wieloskładnikowe](/intune/deploy-use/protect-windows-devices-with-multi-factor-authentication), zarejestrowano w usłudze Intune, używane są aplikacje zarządzane, obsługiwana wersja systemu operacyjnego, numer PIN urządzenia, profil użytkownika niskiego ryzyka itp.). Aplikacje mobilne dla pakietu Office w odpowiednich sklepach z aplikacjami są gotowe do współpracy z zasadami zawierania danych, które można skonfigurować za pomocą usługi Intune. Pozwala to zapobiec udostępnianiu danych aplikacjom (np. natywnym aplikacjom poczty e-mail) i lokalizacjom przechowywania (np. Dropbox), które nie są zarządzane przez dział IT.  Ta funkcja jest wbudowana w usługę Office 365 i pakiet EMS.  Nie musisz wdrażać dodatkowej infrastruktury, aby zyskać tę wartość.
+Usługa Intune i pakiet Microsoft Enterprise Mobility + Security oferują unikalne rozwiązanie zintegrowanego dostępu warunkowego, które zapewnia, że żadni użytkownicy, aplikacje ani urządzenia nie będą mogły uzyskać dostępu do danych usługi Office 365, chyba że spełniają wymagania zgodności w firmie (wykonano [uwierzytelnianie wieloskładnikowe](/intune/deploy-use/protect-windows-devices-with-multi-factor-authentication), zarejestrowano w usłudze Intune, używane są aplikacje zarządzane, obsługiwana wersja systemu operacyjnego, numer PIN urządzenia, profil użytkownika niskiego ryzyka itp.).
 
-Aplikacje mobilne pakietu Office w odpowiednich sklepach z aplikacjami są gotowe do korzystania z zasad zawierania danych, które można skonfigurować za pośrednictwem usługi Intune. Pozwala to zapobiegać udostępnianiu danych aplikacjom (np. natywnym aplikacjom poczty e-mail) i lokalizacjom magazynu (np. programowi Dropbox), które nie są zarządzane przez dział IT.  Ta funkcja jest wbudowana w usługę Office 365 i pakiet EMS.  Nie musisz wdrażać dodatkowej infrastruktury, aby zyskać tę wartość.
+Aplikacje mobilne pakietu Office w odpowiednich sklepach z aplikacjami są gotowe do korzystania z zasad zawierania danych, które można skonfigurować za pośrednictwem usługi Intune. Pozwala to zapobiegać udostępnianiu danych aplikacjom (np. natywnym aplikacjom poczty e-mail) i lokalizacjom magazynu (np. programowi Dropbox), które nie są zarządzane przez dział IT. Ta funkcja jest wbudowana w usługę Office 365 i pakiet EMS. Nie musisz wdrażać dodatkowej infrastruktury, aby zyskać tę wartość.
 
+Powszechną praktyką wdrażania usługi Office 365 jest wymaganie zarejestrowania urządzeń w systemie zarządzania, jeśli wymagają one pełnego skonfigurowania przy użyciu konfiguracji firmowych aplikacji, certyfikatów, sieci Wi-Fi i VPN, co jest typowym scenariuszem w przypadku urządzeń firmowych.  
 
-Powszechną praktyką wdrażania usługi Office 365 jest wymaganie zarejestrowania urządzeń w systemie zarządzania, jeśli wymagają one pełnego skonfigurowania przy użyciu konfiguracji firmowych aplikacji, certyfikatów, sieci Wi-Fi, VPN, co ma często miejsce w przypadku firmowych urządzeń.  
-
-Jeśli jednak użytkownik po prostu musi uzyskiwać dostęp do firmowej poczty e-mail i dokumentów, jak to często bywa w przypadku urządzeń należących do użytkownika, wówczas musi on korzystać z aplikacji mobilnych dla pakietu Office (do których [zastosowano zasady zawierania danych](/intune/deploy-use/protect-apps-and-data-with-microsoft-intune)) i może pominąć rejestrowanie samego urządzenia.  
+Jeśli jednak użytkownik po prostu musi uzyskiwać dostęp do firmowej poczty e-mail i dokumentów, jak to często bywa w przypadku urządzeń należących do użytkownika, wówczas można wymagać od użytkownika korzystania z aplikacji mobilnych dla pakietu Office (do których [zastosowano zasady zawierania danych](/intune/deploy-use/protect-apps-and-data-with-microsoft-intune)) i pominąć rejestrowanie samego urządzenia.  
 
 W obu przypadkach dane usługi Office 365 będą chronione przez zasady, które zostały zdefiniowane.
 
@@ -70,14 +70,14 @@ Popularność strategii BYOD (bring your own device) wśród organizacji stale r
 
 Jeśli rejestracja urządzenia nie jest wygodną opcją, usługa Intune oferuje alternatywne podejście BYOD, umożliwiające po prostu [zarządzanie aplikacjami, które zawierają dane firmowe](/intune/deploy-use/protect-apps-and-data-with-microsoft-intune).  Usługa Intune chroni dane firmowe, nawet jeśli dana aplikacja uzyskuje dostęp zarówno do danych firmowych, jak i osobistych, ponieważ tak się dzieje w przypadku aplikacji mobilnych dla pakietu Office.  
 
-Jako administrator możesz wymagać od użytkowników uzyskiwania dostępu do usługi Office 365 z aplikacji mobilnych dla pakietu Office oraz skonfigurowania aplikacji z zasadami zapewniającymi ochronę danych (np. szyfrowanie, ochrona przy użyciu numeru PIN itp.).  Te zasady zapobiegają utracie danych z niezarządzanych aplikacji i lokalizacji magazynu — wewnątrz lub na zewnątrz tych aplikacji.  Na przykład zasady uniemożliwiają użytkownikowi kopiowanie tekstu z profilu firmowej poczty e-mail do profilu poczty e-mail klienta indywidualnego, nawet jeśli oba profile są skonfigurowane w programie Outlook Mobile.  Podobne konfiguracje można wdrożyć dla innych usług i aplikacji wymaganych przez użytkowników infrastruktury BYOD („Przynieś własne urządzenie”).
+Jako administrator możesz wymagać od użytkowników uzyskiwania dostępu do usługi Office 365 z aplikacji mobilnych dla pakietu Office oraz skonfigurowania aplikacji z zasadami zapewniającymi ochronę danych (np. szyfrowanie, ochrona przy użyciu numeru PIN itp.). Te zasady zapobiegają utracie danych z niezarządzanych aplikacji i lokalizacji magazynu — wewnątrz lub na zewnątrz tych aplikacji. Na przykład zasady uniemożliwiają użytkownikowi kopiowanie tekstu z profilu firmowej poczty e-mail do profilu poczty e-mail klienta indywidualnego, nawet jeśli oba profile są skonfigurowane w programie Outlook Mobile. Podobne konfiguracje można wdrożyć dla innych usług i aplikacji wymaganych przez użytkowników infrastruktury BYOD („Przynieś własne urządzenie”).
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 
 ## <a name="issue-corporate-owned-phones-to-your-information-workers"></a>Wydawanie firmowych telefonów pracownikom przetwarzającym informacje
-Obecnie większość pracowników przetwarzających informacje korzysta z technologii mobilnych, przez co wydajność pracy na urządzeniach przenośnych staje się niezbędna dla utrzymania konkurencyjności.  Pracownicy ci potrzebują bezproblemowego dostępu do wszystkich aplikacji i danych firmowych, w dowolnym miejscu i czasie.  Należy się upewnić, że dane firmowe są bezpieczne, a koszty administracyjne niskie.  
+Obecnie większość pracowników przetwarzających informacje korzysta z technologii mobilnych, przez co wydajność pracy na urządzeniach przenośnych staje się niezbędna dla utrzymania konkurencyjności. Pracownicy ci potrzebują bezproblemowego dostępu do wszystkich aplikacji i danych firmowych, w dowolnym miejscu i czasie. Należy się upewnić, że dane firmowe są bezpieczne, a koszty administracyjne niskie.  
 
-Usługa Intune oferuje [rozwiązania udostępniania i zarządzania zbiorczego](/intune/deploy-use/manage-corporate-owned-devices) zintegrowane z głównymi platformami zarządzania urządzeniami firmowymi na rynku, w tym programem Device Enrollment Program firmy Apple i platformą zabezpieczeń urządzeń przenośnych Samsung KNOX.  Scentralizowane tworzenie konfiguracji urządzeń za pomocą usługi Intune sprawia, że inicjowanie obsługi firmowych urządzeń może być wysoce zautomatyzowane.  
+Usługa Intune oferuje [rozwiązania udostępniania i zarządzania zbiorczego](/intune/deploy-use/manage-corporate-owned-devices) zintegrowane z głównymi platformami zarządzania urządzeniami firmowymi na rynku, w tym programem Device Enrollment Program firmy Apple i platformą zabezpieczeń urządzeń przenośnych Samsung KNOX. Scentralizowane tworzenie konfiguracji urządzeń za pomocą usługi Intune sprawia, że inicjowanie obsługi firmowych urządzeń może być wysoce zautomatyzowane.  
 
 Wyobraź sobie: wręczasz pracownikowi nieotwarte pudełko z telefonem iPhone. Pracownik go włącza i zostaje przeprowadzony przez firmowy przepływ konfiguracji, podczas którego musi się uwierzytelnić. Telefon iPhone zostaje bezproblemowo skonfigurowany z [zasadami zabezpieczeń](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) (np. szyfrowany dysk twardy i numer PIN urządzenia), [profilami poczty e-mail, sieci Wi-Fi, sieci VPN, certyfikatów](/intune/deploy-use/enable-access-to-company-resources-with-microsoft-intune) i podstawowym zestawem [aplikacji](/intune/deploy-use/add-apps).
 
@@ -86,9 +86,9 @@ Następnie pracownik uruchamia aplikację Portal firmy w usłudze Intune, aby uz
 <!-- Learn more about how to plan and deploy Intune to support corporate owned devices. -->
 
 ## <a name="issue-limited-use-shared-tablets-to-your-task-workers"></a>Wydawanie wspólnych tabletów do ograniczonego użytku pracownikom wykonującym zadania
-Pracownicy wykonujący zadania w coraz większym stopniu korzystają z technologii mobilnych.  Na przykład wspólne tablety są teraz powszechnie używane przez pracowników sklepów sieci detalicznych.  Czy to używane do obsługi transakcji sprzedaży, czy do natychmiastowego sprawdzenia zapasów, tablety pomagają stworzyć doskonałe interakcje z klientami.
+Pracownicy wykonujący zadania w coraz większym stopniu korzystają z technologii mobilnych. Na przykład wspólne tablety są teraz powszechnie używane przez pracowników sklepów sieci detalicznych.  Czy to używane do obsługi transakcji sprzedaży, czy do natychmiastowego sprawdzenia zapasów, tablety pomagają stworzyć doskonałe interakcje z klientami.
 
-W tym przypadku krytyczne znaczenie ma uproszczenie środowiska użytkownika.  Z tego powodu tablety są zazwyczaj przekazywane pracownikom w trybie ograniczonym, w którym pracownik może korzystać wyłącznie z jednej aplikacji biznesowej.  Usługa Intune umożliwia zbiorczą obsługę administracyjną, zabezpieczanie i centralne zarządzanie tymi wspólnymi tabletami z systemem [iOS](/intune/deploy-use/ios-policy-settings-in-microsoft-intune#general-configuration-policy-settings) oraz [Android](/intune/deploy-use/android-policy-settings-in-microsoft-intune#general-configuration-policy), które można skonfigurować do pracy w trybie ograniczonym.
+W tym przypadku krytyczne znaczenie ma uproszczenie środowiska użytkownika. Z tego powodu tablety są zazwyczaj przekazywane pracownikom w trybie ograniczonym, w którym pracownik może korzystać wyłącznie z jednej aplikacji biznesowej. Usługa Intune umożliwia zbiorczą obsługę administracyjną, zabezpieczanie i centralne zarządzanie tymi wspólnymi tabletami z systemem [iOS](/intune/deploy-use/ios-policy-settings-in-microsoft-intune#general-configuration-policy-settings) oraz [Android](/intune/deploy-use/android-policy-settings-in-microsoft-intune#general-configuration-policy), które można skonfigurować do pracy w trybie ograniczonym.
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
@@ -101,6 +101,6 @@ Czy zezwalać pracownikom na dostęp do firmowej poczty e-mail z takich urządze
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

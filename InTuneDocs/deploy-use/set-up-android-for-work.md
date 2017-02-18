@@ -5,15 +5,16 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/23/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 00994a92eb555827d17ad633ffcf765804365621
-ms.openlocfilehash: b419a07ef13d386fc08aa7fd5605fbb0bea79348
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 24ab39a92d69e92e1c202005fcd783018c4d4621
 
 
 ---
@@ -21,8 +22,6 @@ ms.openlocfilehash: b419a07ef13d386fc08aa7fd5605fbb0bea79348
 # <a name="enable-enrollment-of-android-for-work-devices"></a>Włączanie rejestracji urządzeń z programem Android for Work
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Aby włączyć zarządzanie urządzeniami z programem Android for Work, należy dodać powiązanie programu Android for Work do usługi Intune. Aby zarejestrować urządzenia, które obsługują program Android for Work, ale zostały wcześniej zarejestrowane jako zwykłe urządzenia z systemem Android, urządzenia muszą zostać wyrejestrowane i ponownie zarejestrowane.
 
@@ -54,7 +53,7 @@ Po skonfigurowaniu wiązania programu Android for Work i ustawień można wykona
 
 ## <a name="unbinding-your-android-for-work-administrative-account"></a>Usuwanie powiązania konta administracyjnego programu Android for Work
 
-Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. Kliknięcie pozycji **Usuń powiązanie** usuwa wszystkie zarejestrowane urządzenia z programem Android for Work z rejestracji i spowoduje usunięcie relacji między kontem programu Android for Work a usługą Intune.
+Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. Kliknięcie pozycji **Usuń powiązanie** w konsoli administracyjnej usługi Intune usuwa wszystkie zarejestrowane urządzenia z programem Android for Work z rejestracji i spowoduje usunięcie relacji między kontem programu Android for Work a usługą Intune.
 
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Jak usunąć powiązanie konta programu Android for Work
 
@@ -66,6 +65,6 @@ Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. K
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 
