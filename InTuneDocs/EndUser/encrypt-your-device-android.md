@@ -1,11 +1,11 @@
 ---
-title: "Szyfrowanie urządzenia | Microsoft Docs"
-description: "Opis sposobu szyfrowania urządzenia z systemem Android"
+title: "Jak zapewnić ochronę urządzenia z systemem Android za pomocą szyfrowania | Microsoft Docs"
+description: "Ochrona urządzenia z systemem Android"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/7/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,24 @@ ms.technology:
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 54439c96b75efd60e2068207eb1602e669504831
+ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
+ms.openlocfilehash: 727b99f9ca2f0322eb1fee5fec29cd71dc901e01
 
 
 ---
 
 
-# <a name="encrypt-your-device"></a>Szyfrowanie urządzenia
+# <a name="how-to-protect-your-android-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Android za pomocą szyfrowania
 
-Jeśli firma lub organizacja prosi o zaszyfrowanie urządzenia z systemem Android przed uzyskaniem dostępu do firmowych plików, poczty e-mail lub danych, wykonaj następujące kroki, aby zaszyfrować urządzenie. Może zostać wyświetlony monit o ustawienie numeru PIN lub hasła przed szyfrowaniem, jeśli administrator IT wymaga takiego zabezpieczenia.
+Zaszyfrowanie urządzenia polega na opakowaniu zawartych na nim informacji w warstwie kodu ochronnego, który uniemożliwia dostęp do niego przez osoby bez autoryzacji. W ramach zabezpieczania informacji użytkowników organizacja wymaga szyfrowania urządzenia z systemem Android w celu uzyskania dostępu do firmowych plików, poczty e-mail lub danych.
+
+> [!Note]
+> Może zostać wyświetlony monit o ustawienie numeru PIN lub hasła przed szyfrowaniem, jeśli administrator IT wymaga takiego zabezpieczenia.
 
 Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
@@ -63,6 +68,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witry
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO5-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Szyfrowanie urządzenia z systemem Windows | Microsoft Docs"
+title: "Jak zapewnić ochronę urządzenia z systemem Windows za pomocą szyfrowania | Microsoft Docs"
 description: "Opis sposobu szyfrowania urządzenia z systemem Windows"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,24 @@ ms.technology:
 ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 01d2fcd0202f1ef347693c973edb82acfae6c818
-ms.openlocfilehash: ce4e912259321d72e6bb4278e5b3e8da5cf39332
+ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
+ms.openlocfilehash: c6414623087ed1a61ca26ca83d6ddccb2b1c1f70
 
 
 ---
 
 
-# <a name="encrypt-your-windows-device"></a>Szyfrowanie urządzenia z systemem Windows
+# <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Windows za pomocą szyfrowania
 
-Aby chronić dane firmy lub szkoły, administrator IT może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
+Zaszyfrowanie urządzenia polega na opakowaniu zawartych na nim informacji w warstwie kodu ochronnego, który uniemożliwia dostęp do niego przez osoby bez autoryzacji. W ramach zabezpieczania informacji użytkowników organizacja wymaga szyfrowania urządzenia z systemem Windows w celu zapewnienia ochrony danych firmy, szkoły lub uczelni.
+
+> [!Note]
+> Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
 
 Jeśli masz urządzenie stacjonarne, poniższe instrukcje opisują sposób jego szyfrowania.
 
@@ -37,6 +42,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

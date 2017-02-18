@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: arob98
-ms.date: 07/19/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1daefaabe8877ced9b090f7316e525829e8c673d
+ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
+ms.openlocfilehash: f75c4a6412d34923ec45524d765d3eb270f15e13
 
 
 ---
@@ -27,6 +28,9 @@ ms.openlocfilehash: 1daefaabe8877ced9b090f7316e525829e8c673d
 Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **Brak koligacji użytkownika** i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej.
 
 W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. W tych wskazówkach przyjęto założenie, że używany jest program Apple Configurator 2.0 na komputerze Mac.
+
+>[!NOTE]
+>Tej metody rejestracji nie można używać z metodą korzystającą z [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
 1.  Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator. Profil rejestracji urządzeń określa ustawienia stosowane do urządzeń.
 
@@ -90,6 +94,6 @@ W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zare
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO5-->
 
 

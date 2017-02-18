@@ -5,17 +5,18 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/28/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
-ms.reviewer: jeffgilb
+ms.reviewer: coryfe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1e0cb157182415e25cd5829e244e47b2bd5b539b
+ms.sourcegitcommit: a57ac0e6cb29dbfc87bb09c04bb372228a1d72be
+ms.openlocfilehash: 34e9ce6a5c0b7cb912a54644e6323574c2e041a7
 
 
 ---
@@ -45,6 +46,9 @@ Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurowa�
 1. Upewnij się, że logujesz się w Sklepie Windows dla firm za pomocą tego samego konta dzierżawy, którego używasz do logowania się do usługi Intune.
 2. W Sklepie dla firm wybierz opcję **Ustawienia** > **Narzędzia do zarządzania**.
 3. Na stronie Narzędzia do zarządzania wybierz opcję **Dodaj narzędzie do zarządzania**, a następnie wybierz pozycję **Microsoft Intune**.
+
+> [!NOTE]
+> Wcześniej w przypadku wdrażania aplikacji ze Sklepu Windows dla firm za pomocą więcej niż jednego narzędzia do zarządzania można było skojarzyć ze Sklepem Windows dla firm tylko jedno z tych narzędzi. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
 
 Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
@@ -83,6 +87,6 @@ Gdy wdrażasz aplikację ze Sklepu Windows dla firm, licencja jest zużywana prz
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

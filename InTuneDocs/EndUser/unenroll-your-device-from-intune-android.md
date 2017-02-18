@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,13 @@ ms.technology:
 ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
-ms.openlocfilehash: 6233e939dce9e79f85ec5cb87d28f135a300db6e
+ms.sourcegitcommit: d10e764b5444f21f6151286e85d6f47dd02d5206
+ms.openlocfilehash: febc9a65ac004a05d6fdbf86a033a5a993ee7ec9
 
 
 ---
@@ -31,17 +33,19 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
 <iframe width="675" height="379" src="https://www.youtube.com/embed/K-Vi7lNfaMk" frameborder="0" allowfullscreen></iframe>
 
-1.  Zaloguj się w aplikacji Portal firmy.
+1. Otwórz swoją aplikację **Ustawienia**, otwórz pozycję **Administratorzy urządzenia** i wyłączyć pozycję **Portal firmy**. W zależności od urządzenia ustawienie **Administratorzy urządzenia** może mieć nieco inną nazwę lub lokalizację na liście preferencji.
 
-2.  Naciśnij pozycję **Moje urządzenia**, a następnie wybierz urządzenie, które chcesz wyrejestrować.
+2.  Zaloguj się w aplikacji Portal firmy.
+
+3.  Naciśnij pozycję **Moje urządzenia**, a następnie wybierz urządzenie, które chcesz wyrejestrować.
 
     ![Wybierz urządzenie, które chcesz wyrejestrować.](./media/andr-1-my-devices-choose.png)
 
-3.  Naciśnij ikonę kosza na śmieci.
+4.  Naciśnij ikonę kosza na śmieci.
 
     ![Naciśnij ikonę kosza na śmieci.](./media/andr-2-tap-trashcan.png)
 
-4.  Na stronie ostrzeżenia naciśnij pozycję **OK**, aby wyrejestrować urządzenie.
+5.  Na stronie ostrzeżenia naciśnij pozycję **OK**, aby wyrejestrować urządzenie.
 
     ![Usuń urządzenie.](./media/andr-3-warning-about-remove.png)
 
@@ -49,6 +53,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 

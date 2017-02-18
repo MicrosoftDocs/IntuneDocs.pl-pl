@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 588674c38a5e54f6b762ac044457110a361e6969
+ms.sourcegitcommit: fbc9e94d3fc5dc7e69f5d59ca1d52493b2beefc3
+ms.openlocfilehash: 5fa3c62553403dfafd182a691f611ba12a2d729c
 
 
 ---
@@ -51,8 +52,11 @@ Usługa Microsoft Intune umożliwia administratorom importowanie międzynarodowy
 
 Podczas rejestrowania urządzenia z numerem IMEI w usłudze Intune — zwykle gdy użytkownik instaluje aplikację Portal firmy i kończy proces rejestracji — urządzenie zostanie oznaczone jako należące do firmy i będzie wyświetlane jako zarejestrowane w grupie **Urządzenia IMEI**.
 
+>[!NOTE] 
+> Jeśli w najbliższej przyszłości dana organizacja zostanie poddana migracji do nowej witryny Azure Portal, ta funkcja ulegnie zmianie. W istniejącej konsoli administratora usługi Intune administratorzy mogą akceptować szczegóły z przekazanego pliku CSV i zastępować istniejące dane poszczególnych identyfikatorów sprzętu. W nowej wersji witryny Azure Portal będzie można automatycznie zastąpić szczegóły wszystkich identyfikatorów sprzętu lub zignorować wszystkie nowe szczegóły istniejących identyfikatorów.
 
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Feb17_HO1-->
 
 
