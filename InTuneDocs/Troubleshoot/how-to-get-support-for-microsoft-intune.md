@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/16/2016
+ms.date: 01/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9d891933178d4bdf1079287efc151fe8859c7e83
-ms.openlocfilehash: e91c9da9614791e128a64add822d7f101818b9c0
+ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
+ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
 
 
 ---
@@ -30,21 +31,33 @@ Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z
 
 ## <a name="find-help-without-opening-a-support-ticket"></a>Uzyskiwanie pomocy bez konieczności otwierania biletu pomocy technicznej
 
-Zapoznaj się z poniższymi zasobami, aby uzyskać odpowiedzi przed utworzeniem biletu pomocy technicznej.
+Przed utworzeniem biletu pomocy technicznej zapoznaj się z poniższymi zasobami, aby uzyskać odpowiedzi i informacje. Możesz również zapoznać się z [ogólnymi poradami dotyczącymi rozwiązywania problemów w usłudze Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
 
 ### <a name="microsoft-intune-technet-forums"></a>Fora TechNet dotyczące usługi Microsoft Intune
 
 Zadaj pytanie lub rozpocznij dyskusję z ekspertami technicznymi firmy Microsoft. Oferujemy odpowiedzi i szczegółowe informacje na możliwym do przeszukiwania [forum TechNet dotyczącym usługi Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
 
-    ![Microsoft Intune TechNet Forum](../media/technet-forum-for-support.png)
+![Forum TechNet dotyczące usługi Microsoft Intune](./media/technet-forum-for-support.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Witryna opinii o produktach UserVoice w usłudze Microsoft Intune
 
 Czy masz opinię na temat tego, jak firma Microsoft może jeszcze bardziej ulepszyć usługę Intune? Poinformuj nas o tym, dodając swoje pomysły w witrynie opinii [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas) dotyczącej usługi Microsoft Intune. Możesz również głosować na pomysły dodane do witryny UserVoice przez innych użytkowników. 
 
-    ![Microsoft Intune UserVoice feedback page](../media/intune-uservoice-feedback-page.png)
+![Strona opinii o produktach UserVoice w usłudze Microsoft Intune](./media/intune-uservoice-feedback-page.png)
 
-## <a name="create-an-online-service-ticket"></a>Tworzenie biletu usługi online
+## <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online
+
+Jeśli nie możesz znaleźć odpowiedzi przy użyciu zasobów samodzielnej pomocy, możesz utworzyć bilet pomocy technicznej online.
+
+**Ogranicz każdy bilet pomocy technicznej do pojedynczego problemu**, aby pomóc nam w udzieleniu skuteczniejszej pomocy. Poniżej przedstawiono przyczyny:
+
+- Inżynierowie z działu pomocy technicznej, którzy oferują pomoc, prawdopodobnie specjalizują się w określonych zagadnieniach i łatwiej jest zidentyfikować odpowiednich ekspertów, którzy pomogą Ci w rozwiązaniu problemu.
+- Zespoły inżynierów mogą przypisywać priorytety do swoich zadań w obszarach produktu, w których generowana jest największa liczba zdarzeń.
+- Problemy trudne do rozwiązania można łatwiej eskalować do odpowiedniego zasobu.
+
+Przed utworzeniem biletu pomocy technicznej zapoznaj się z [definicją zdarzenia pomocy technicznej](#definition-of-a-support-incident).
+
+**Aby utworzyć bilet pomocy technicznej online**:
 
 1.  Zaloguj się do [Centrum administracyjnego usługi Office 365](https://portal.office.com) przy użyciu poświadczeń usługi Intune.
     >[!NOTE]
@@ -87,12 +100,12 @@ Wykonaj poniższą procedurę, jeśli w Twoim przypadku strona pomocy techniczne
 ## <a name="get-phone-support"></a>Uzyskiwanie pomocy telefonicznej
 Listę numerów telefonów pomocy technicznej uporządkowaną według krajów i regionów, godzin pracy działu pomocy technicznej oraz obsługiwanych języków w poszczególnych regionach zawiera temat [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md).
 
-## <a name="track-your-service-requests"></a>Śledzenie żądań obsługi
+## <a name="track-your-support-requests"></a>Śledzenie własnych żądań pomocy technicznej
 1.  Zaloguj się do [Centrum administracyjnego usługi Office 365](https://portal.office.com) przy użyciu poświadczeń usługi Intune.
 2.  Wybierz kafelek **Administrator**.
 3.  Po lewej stronie w obszarze **Pomoc techniczna** wybierz pozycję **Żądania usługi**. Teraz możesz przejrzeć swoje żądania.
 
-Początkowa odpowiedź z naszej strony na żądania usługi zależy od wagi problemu. W przypadku najpoważniejszych problemów zgłaszanych przez klientów profesjonalnych pierwsza odpowiedź z naszej strony nadejdzie w ciągu dwóch godzin. W przypadku klientów korzystających z pomocy technicznej Premier odpowiedź zależy od umowy dotyczącej pomocy technicznej. Przypadki mogą być następujące:
+Początkowa odpowiedź z naszej strony na żądania dotyczące pomocy technicznej zależy od wagi problemu. W przypadku najpoważniejszych problemów zgłaszanych przez klientów profesjonalnych pierwsza odpowiedź z naszej strony nadejdzie w ciągu dwóch godzin. W przypadku klientów korzystających z pomocy technicznej Premier odpowiedź zależy od umowy dotyczącej pomocy technicznej. Przypadki mogą być następujące:
 
 - Co najmniej jedna usługa jest niedostępna lub niezdatna do użycia.
 - Poważny wpływ na terminy produkcyjne, operacyjne lub wdrożeniowe bądź poważny wpływ na środowisko produkcyjne lub rentowność.
@@ -115,12 +128,6 @@ W przypadku pozostałych problemów zgłaszanych przez klientów profesjonalnych
 >
 > Pomoc techniczna dla programu System Center Configuration Manager lub programu System Center Endpoint Protection wymaga płatności lub opłata jest odejmowana od kwoty wynikającej z istniejącej licencji lub umów pomocy technicznej Premium.
 
-## <a name="resolve-issues-without-opening-a-support-ticket"></a>Rozwiązywanie problemów bez konieczności otwierania biletu pomocy technicznej
-
-Czasami można rozwiązać problem bez otwierania biletu pomocy technicznej.
-
-Aby samodzielnie rozwiązywać problemy z usługą Intune, zobacz temat [Ogólne porady dotyczące rozwiązywania problemów w usłudze Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) lub dowolny temat związany z rozwiązywaniem konkretnych problemów. Rozwiązanie można również wyszukać na [forum usługi Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod). Można tam też zgłosić pytanie.
-
 ## <a name="find-support-for-volume-licensing"></a>Znajdowanie pomocy technicznej dla programu licencjonowania zbiorowego
 Jeśli już zakupiono licencje od firmy Microsoft w ramach programu licencjonowania zbiorowego, w celu uzyskania pomocy technicznej należy skorzystać z następujących zasobów:
 
@@ -129,6 +136,16 @@ Jeśli już zakupiono licencje od firmy Microsoft w ramach programu licencjonowa
 -   W przypadku pytań związanych z rozliczeniami zobacz temat [Pomoc techniczna w zakresie zarządzania rozliczeniami i subskrypcjami](http://support.microsoft.com/oas/default.aspx?prid=15371).
 
 -   Aby uzyskać ogólne informacje na temat licencjonowania zbiorowego, zobacz temat [Licencjonowanie zbiorowe](http://go.microsoft.com/fwlink/p/?LinkID=282015).
+
+## <a name="definition-of-a-support-incident"></a>Definicja zdarzenia pomocy technicznej
+
+Zdarzenie pomocy technicznej jest definiowane jako pojedynczy problem wymagający pomocy technicznej oraz czynności niezbędne do jego rozwiązania. Pojedynczego problemu wymagającego pomocy technicznej nie można podzielić na problemy podrzędne. Jeśli możesz zidentyfikować problemy podrzędne, każdy z nich jest traktowany jako oddzielne zdarzenie. Do rozwiązania danego problemu może być potrzebnych wiele kontaktów i badania przeprowadzane w trybie offline. Czas potrzebny do dostarczenia tych rozwiązań jest niezależny od naliczanej kwoty opłat.
+
+Pomoc techniczna typu „Naprawa w razie awarii” jest uwzględniana w subskrypcjach usługi Microsoft Intune i zarządzania urządzeniami przenośnymi dla pakietu Office 365, dlatego otwieranie dodatkowych zdarzeń pomocy technicznej nigdy nie powoduje wygenerowania dodatkowych opłat.
+
+Jeśli inżynier pomocy technicznej prosi o otwarcie dodatkowego zdarzenia pomocy technicznej dla dodatkowego problemu, dzieje się tak w najlepszym interesie wszystkich zainteresowanych stron. Dziękujemy za zrozumienie i współpracę w celu świadczenia pomocy technicznej światowej klasy.
+
+Ceny poszczególnych zdarzeń i poziomy ważności można znaleźć w temacie [Opcje profesjonalnej pomocy technicznej](https://support.microsoft.com/gp/offerprophone).
 
 
 
