@@ -1,5 +1,5 @@
 ---
-title: "Ochrona dostępu do poczty e-mail i usług Office 365 | Microsoft Docs"
+title: "Ochrona poczty e-mail i usługi Office 365 | Microsoft Docs"
 description: "W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 911c97a724c28b97bb2bc6e236532e4e0d89c7b1
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
 
 
 ---
@@ -82,6 +83,6 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

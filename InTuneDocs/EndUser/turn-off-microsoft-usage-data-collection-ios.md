@@ -1,11 +1,11 @@
 ---
-title: "Jak wyłączyć zbieranie danych przez firmę Microsoft | Microsoft Docs"
+title: "Jak wyłączyć zbieranie danych przez firmę Microsoft dla systemu iOS | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,14 +16,15 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 29fb52fd86aa84a2c5bab6be14d71d198d6b8deb
+ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
+ms.openlocfilehash: cea226a32c5c2c6d49f1444e55a986d0c68d5448
 
 
 ---
 
-# <a name="turn-off-microsoft-usage-data-collection"></a>Wyłączanie zbierania danych użycia przez firmę Microsoft
+# <a name="how-to-turn-off-microsoft-data-collection"></a>Jak wyłączyć zbieranie danych przez firmę Microsoft
 
 Firma Microsoft automatycznie zbiera określone dane dotyczące swoich produktów i usług. Robimy to w celu zwiększania niezawodności i wydajności naszych produktów, w tym aplikacji Portal firmy. Mimo że te dane są anonimizowane, niektórzy użytkownicy mogą nie czuć się komfortowo w związku z tym zbieraniem danych. Administrator IT nie kontroluje zbierania tych danych i nie może zmienić wybranej wartości tego ustawienia.
 
@@ -33,6 +34,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

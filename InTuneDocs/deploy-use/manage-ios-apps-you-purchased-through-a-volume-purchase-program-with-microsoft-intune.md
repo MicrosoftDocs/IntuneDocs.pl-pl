@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/15/2016
+ms.date: 01/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 1f4bffd4aad8915034b3e6f4f962aed4d5ccd731
-ms.openlocfilehash: 29ed9bea92b23998899fcf57502a9982377c3eb6
+ms.sourcegitcommit: 56ef80138d0790933ae216bb02101c3f408311c7
+ms.openlocfilehash: 5bea5a9f1a69193543fa3c5e8997a6527721d3ef
 
 
 ---
@@ -45,7 +46,7 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
 * Po zaimportowaniu tokenu VPP do usługi Intune nie należy importować tego samego tokenu do żadnego innego rozwiązania do zarządzania urządzeniami. Może to spowodować utratę przypisania licencji i rekordów użytkowników.
 * Przed rozpoczęciem korzystania z programu VPP dla systemu iOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta usługi VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami przenośnymi. Usługa Intune nie będzie synchronizować tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune będzie tylko synchronizować dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
-* Nie można wdrażać aplikacji usługi VPP systemu iOS na urządzeniach użytkownika, które zostały zarejestrowane przy użyciu protokołu Device Enrollment Protocol (DEP).
+* Aplikacje usługi VPP systemu iOS można wdrażać tylko na urządzeniach użytkowników, które zostały zarejestrowane za pomocą protokołu Device Enrollment Protocol (DEP), jeśli została skonfigurowana koligacja użytkownika dla urządzenia.
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Aby uzyskać i przekazać token usługi VPP firmy Apple
 
@@ -94,6 +95,6 @@ Możesz monitorować, które aplikacje programu VPP zostały wdrożone, oraz lic
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

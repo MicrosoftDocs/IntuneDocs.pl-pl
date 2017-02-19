@@ -1,11 +1,11 @@
 ---
-title: "Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android | Microsoft Docs"
+title: "Ustawianie czasu do włączenia blokady ekranu | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,14 +16,16 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 5df88351d84da28c93d010b8484601b7dbcdaf7e
+ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
+ms.openlocfilehash: be3307165b420ef0fe9c143a3a55f88285a344da
 
 
 ---
 
-# <a name="how-to-set-the-period-before-your-android-device-is-locked"></a>Jak ustawić okres, jaki ma upłynąć przed zablokowaniem urządzenia z systemem Android
+# <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Jak ustawić czas, po jakim urządzenie z systemem Android zablokuje ekran
+
 Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limit czasu hasła na urządzeniu, wykonując następujące kroki dla posiadanego urządzenia.
 
 ## <a name="native-non-samsung-knox-device"></a>Urządzenia natywne (inne niż Samsung KNOX)
@@ -46,6 +48,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Co się dzieje po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem iOS lub macOS w usłudze Intune? | Dokumentacja firmy Microsoft"
+title: "Instalowanie aplikacji Portal firmy dla systemów iOS i macOS | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,10 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: cef8045c071396419805274ba94cbcfff864a495
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 8e10aa7c1db7490a462032e1bf86c7509b7b0e18
 
 
 ---
@@ -42,13 +43,13 @@ Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawni
 
 -   Historia połączeń i witryn sieci Web
 
--   Lokalizacja
+-    Lokalizacja
 
 -   Wiadomości e-mail i SMS
 
 -   Kontakty
 
--   Hasła
+-    Hasła
 
 -   Kalendarz
 
@@ -98,6 +99,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS | Microsoft Docs"
+title: "Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/17/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,21 @@ ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 64e094c8648c0737cdbc0dcdc4ec6b3a8bc96831
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 15c820d4b25b8deb3ab17601a4835c57e5ede780
 
 
 ---
 
-# <a name="you-are-prompted-to-install-lookout-for-work-on-your-ios-device"></a>Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS
+# <a name="you-need-to-install-lookout-for-work-on-your-ios-device"></a>Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS
 
 Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa. W zależności od sposobu skonfigurowania aplikacji Lookout for Work przez administratora IT na urządzeniu mogą pojawiać się różne monity.
 
 **Co należy zrobić:**
 
-1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
+1.    Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
 
     ![Naciśnij pozycję Zainstaluj, aby zainstalować aplikację Lookout for Work](./media/ios-lfw-install-app-request.png)
 
@@ -43,7 +44,7 @@ Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zai
 
     ![Naciśnij pozycję Ustawienia, a następnie opcję Usługi lokalizacji](./media/ios-lfw-allow-notifications.png)
 
-    
+
 Aplikacja Lookout for Work kończy instalację. Zobaczysz poniższy ekran, jeśli na urządzeniu nie zostaną znalezione zagrożenia bezpieczeństwa.
 
 ![Aplikacja Lookout for Work nie znalazła żadnych zagrożeń bezpieczeństwa](./media/ios-lfw-no-threats-found.png)
@@ -56,7 +57,6 @@ Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami
 
 
 
-
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
