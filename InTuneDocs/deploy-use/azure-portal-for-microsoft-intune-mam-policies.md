@@ -13,32 +13,29 @@ ms.technology:
 ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
-ms.openlocfilehash: 423f525be6ff9fb72542af46ff18a57d00d04d79
+ms.sourcegitcommit: e2503c44f434e67f45064f28d1e921eb5accb0b6
+ms.openlocfilehash: 2707e3fae32e73aa17696886f493932e903ffc10
 
 
 ---
 
-# <a name="azure-portal-for-microsoft-intune-mam-policies"></a>Azure Portal — zasady zarządzania aplikacjami mobilnymi
+# <a name="azure-portal-for-intune-app-protection-policies"></a>Witryna Azure Portal dla zasad ochrony aplikacji usługi Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-## <a name="use-the-azure-portal"></a>Korzystanie z witryny Azure Portal
-Witryna Azure Portal pozwala tworzyć zasady zarządzania aplikacjami mobilnymi oraz zarządzać tymi zasadami.
+Witryna Azure Portal służy do tworzenia zasad ochrony aplikacji oraz zarządzania tymi zasadami w odniesieniu do następujących aplikacji:
 
-Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla następujących składników:
 - Aplikacje działające na urządzeniach **zarejestrowanych w usłudze Intune i zarządzanych przez tę usługę**.
 
 - Aplikacje działające na urządzeniach, które **nie są zarejestrowane** w żadnym rozwiązaniu do zarządzania aplikacjami mobilnymi
 - Aplikacje działające na urządzeniach, które **są zarejestrowane w rozwiązaniu do zarządzania aplikacjami mobilnymi innej firmy**.
 
 >[!IMPORTANT]
+> Witryna Azure Portal to nowa konsola administracyjna służąca do tworzenia zasad ochrony aplikacji. Jednak dla scenariuszy zarządzania urządzeniami przenośnymi istnieje także możliwość utworzenia zasad ochrony aplikacji, które będą obsługiwać aplikacje dla urządzeń zarejestrowanych w usłudze Intune, za pomocą [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
-
-> Jeśli używasz konsoli administracyjnej usługi Intune do zarządzania urządzeniami, możesz utworzyć zasady zarządzania aplikacjami mobilnymi obsługujące aplikacje dla urządzeń zarejestrowanych w usłudze Intune przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
-
-> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad zarządzania aplikacjami mobilnymi. Witryna Azure Portal to nowa konsola administracyjna do tworzenia zasad zarządzania aplikacjami mobilnymi. Jeśli utworzysz zasady zarządzania aplikacjami mobilnymi zarówno za pomocą konsoli administracyjnej usługi Intune, jak i witryny Azure Portal, zasady utworzone w witrynie Azure Portal zostaną zastosowane dla aplikacji i wdrożone dla użytkowników.
+> W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie dostępne ustawienia zasad ochrony aplikacji. Ponadto w przypadku utworzenia zasad ochrony aplikacji zarówno w konsoli administracyjnej usługi Intune, jak i w witrynie Azure Portal, zasady utworzone w konsoli administracyjnej usługi Intune zostaną przesłonięte przez zasady utworzone w witrynie Azure Portal. W tym scenariuszu zasady ochrony aplikacji z witryny Azure Portal będą stosowane do aplikacji i wdrażane dla użytkowników.
 
 
 ## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Zaloguj się do witryny Azure Portal i dostosuj swoją stronę początkową
@@ -51,24 +48,25 @@ Portal Azure obsługuje tworzenie zasad zarządzania aplikacjami mobilnymi dla n
 
     ![Zrzut ekranu pulpitu nawigacyjnego portalu Azure](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  W menu **Przeglądaj** znajdź pozycję **Intune**.![Zrzut ekranu przedstawiający menu Przeglądaj z wyróżnioną pozycją Intune](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
+3.  W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-4.  Wybierz pozycję **Intune** > **Zarządzanie aplikacjami mobilnymi w usłudze Intune** > **Ustawienia**.
+    ![Zrzut ekranu przedstawiający menu Przeglądaj z wyróżnioną pozycją Intune](../media/AppManagement/MAM-Azure-Portal-1.png)
 
-    ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
+4.  Wybierz pozycję **Ochrona aplikacji usługi Intune** > **Zarządzanie aplikacjami mobilnymi w usłudze Intune** > **Wszystkie ustawienia**.
 
-    > [!TIP]
+    ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune](../media/AppManagement/MAM-Azure-Portal-2.png)
 
-    > Aby przypiąć blok do strony **Start** , możesz użyć opcji **przypinania** w bloku. Kliknij ikonę przypinania w **bloku zarządzania aplikacjami mobilnymi usługi Intune**, aby przypiąć go do strony **Start**.
+5. (Opcjonalnie): Aby przypiąć blok do strony **Start**, możesz użyć opcji **przypinania** w bloku. Kliknij ikonę przypinania w **bloku zarządzania aplikacjami mobilnymi usługi Intune**, aby przypiąć go do strony **Start**.
 
     ![Zrzut ekranu przedstawiający blok zarządzania aplikacjami mobilnymi usługi Intune z wyróżnioną ikoną przypinania](../media/AppManagement/AzurePortal_MAM_PinBladeAction.png)
 
     ![Zrzut ekranu pulpitu nawigacyjnego z przypiętym kafelkiem usługi Intune](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
+
 ## <a name="next-steps"></a>Następne kroki
-[Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+[Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

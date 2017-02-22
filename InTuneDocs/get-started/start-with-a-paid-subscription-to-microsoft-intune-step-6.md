@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 9f75020a6d8a3e2aeb278fb99f54516253abf3dd
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: 4093497553ccb7cc5f5c949f2ff0004697beb42a
 
 
 ---
@@ -24,13 +25,15 @@ ms.openlocfilehash: 9f75020a6d8a3e2aeb278fb99f54516253abf3dd
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Ten temat zawiera informacje dla administratorów usługi Intune dotyczące tworzenia zasad i publikowania aplikacji, które można następnie wdrażać na zarządzanych urządzeniach.
+
 Przed rozpoczęciem rejestrowania aplikacji w usłudze Intune można włączyć ustawienia zasad i aplikacji, które zostaną wdrożone od razu po rozpoczęciu zarządzania urządzeniami. Zasady usługi Intune udostępniają ustawienia, które ułatwiają sterowanie ustawieniami zabezpieczeń na urządzeniach przenośnych, obsługę ustawień Zapory systemu Windows i programu Endpoint Protection dla komputerów oraz wdrażanie aplikacji. Można konfigurować zasady oraz dodawać i wdrażać aplikacje, aby urządzenia otrzymywały ustawienia i aplikacje od razu po zarejestrowaniu w usłudze Intune.
 
 Zasady i aplikacje są powiązane z określoną platformą.
 
 ## <a name="manage-device-settings"></a>Zarządzanie ustawieniami urządzenia
 
- Ustawienia zasad urządzenia są konfigurowane i zarządzane w odniesieniu do poszczególnych platform. Zasady można konfigurować dla następujących platform:
+ Ustawienia zasad urządzenia są konfigurowane i zarządzane w odniesieniu do poszczególnych platform. Poniższe linki zawierają listy dostępnych ustawień dla odpowiednich platform:
 
 - [iOS](https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune)
 - [Android i Samsung KNOX Standard](https://docs.microsoft.com/intune/deploy-use/android-policy-settings-in-microsoft-intune)
@@ -72,6 +75,6 @@ Gdy aplikacja jest już dostępna w usłudze Intune, możesz wdrożyć ją na za
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
