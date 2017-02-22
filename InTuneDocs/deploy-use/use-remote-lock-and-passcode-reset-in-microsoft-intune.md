@@ -2,33 +2,40 @@
 title: "Zdalne blokowanie i resetowanie kodu dostępu | Microsoft Docs"
 description: "Usługa Intune umożliwia zdalne blokowanie i resetowanie kodu dostępu."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: NathBarn
+ms.author: NathBarn
 manager: angrobe
-ms.date: 11/08/2016
+ms.date: 02/16/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 641ca955c2790dc3029e8408d32a66b7b0418a12
+ms.sourcegitcommit: 87589903acd3c2e7c45d62c619571a1273e7fb76
+ms.openlocfilehash: 8de91a0e0640b9c0fb281686d4ecd4983134d4af
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Microsoft Intune umożliwia zdalne blokowanie i resetowanie kodu dostępu.
 
 ## <a name="lock-a-device-remotely"></a>Zdalne blokowanie urządzenia
-Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych.
+Jeśli użytkownik utraci urządzenie, można zablokować je zdalnie. Aby możliwe było użycie funkcji zdalnego blokowania, w urządzeniu musi już być ustawiony kod PIN lub kod dostępu.
+
+W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platformach mobilnych.
 
 |Platforma|Zdalne blokowanie|
 |------------|---------------|
 |macOS|Nieobsługiwane|
 |iOS|Obsługiwane|
 |Android|Obsługiwane|
-|Windows 10 i Windows 10 Mobile|Obsługiwane|
+|Windows 10 (urządzenia przenośne)|Obsługiwane|
+|Windows 10 (komputery)|Nieobsługiwane|
 |Windows Phone 8 i Windows Phone 8.1|Obsługiwane|
 |Windows RT 8.1 i Windows RT|Obsługiwane, jeśli bieżący użytkownik urządzenia jest tym samym użytkownikiem, który zarejestrował urządzenie.|
 |Windows 8.1|Obsługiwane, jeśli bieżący użytkownik urządzenia jest tym samym użytkownikiem, który zarejestrował urządzenie.|
@@ -79,6 +86,6 @@ Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z system
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

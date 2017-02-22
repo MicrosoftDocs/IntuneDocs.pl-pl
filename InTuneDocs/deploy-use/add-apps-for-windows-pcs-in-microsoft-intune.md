@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: da23e1df3dcda7f90fd592b5a6f5a587c63815f1
+ms.sourcegitcommit: 547330c05b7fbdd2981e49320c913d8109563384
+ms.openlocfilehash: f8f1359ff08b67261b23a694a4f6bbbeca24fa2a
 
 
 ---
@@ -26,6 +27,8 @@ W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji do u
 
 > [!IMPORTANT]
 > Informacje zawarte w tym temacie ułatwiają dodawanie aplikacji dla komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune. Jeśli chcesz dodać aplikacje dla zarejestrowanych komputerów z systemem Windows i innych urządzeń przenośnych, zobacz [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
+
+Aby zainstalować aplikacje na komputerach, muszą one mieć możliwość dyskretnej instalacji bez interakcji ze strony użytkownika. Jeśli tak nie jest, instalacja nie powiedzie się.
 
 
 ## <a name="add-the-app"></a>Dodawanie aplikacji
@@ -40,7 +43,7 @@ Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości 
 
     - **Wybierz typ pliku instalatora oprogramowania**. To ustawienie określa typ oprogramowania, które chcesz wdrożyć. W przypadku komputera z systemem Windows wybierz pozycję **Instalator Windows**.
     - **Określ lokalizację plików instalacyjnych oprogramowania**. Wprowadź lokalizację plików instalacyjnych lub wybierz pozycję **Przeglądaj**, aby wybrać lokalizację z listy.
-    - **Dołącz dodatkowe pliki i podfoldery z tego samego folderu**. Niektóre programy używające Instalatora Windows wymagają plików pomocniczych. Są one dostępne zazwyczaj w tym samym folderze co pliki instalacyjne. Wybierz tę opcję, jeśli chcesz również wdrożyć te pliki pomocnicze.
+    - **Dołącz dodatkowe pliki i podfoldery z tego samego folderu**. Niektóre programy używające Instalatora Windows wymagają plików pomocniczych. Muszą one znajdować się w tym samym folderze co plik instalacyjny. Wybierz tę opcję, jeśli chcesz również wdrożyć te pliki pomocnicze.
 
     Jeśli na przykład chcesz opublikować aplikację o nazwie Application.msi w usłudze Intune, strona będzie wyglądała następująco: ![Strona konfiguracji oprogramowania wydawcy](./media/publisher-for-pc.png)
 
@@ -73,7 +76,11 @@ Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości 
 
     Jeśli aplikacja spełnia dowolną ze skonfigurowanych reguł, nie zostanie zainstalowana.
 
-6.  Dotyczy tylko typu pliku **Instalator Windows** (z rozszerzeniami msi i exe): na stronie **Argumenty wiersza polecenia** określ, czy chcesz udostępnić opcjonalne argumenty wiersza polecenia instalatora. Na przykład niektóre instalatory mogą obsługiwać argument **/q**, który umożliwia przeprowadzenie instalacji w trybie dyskretnym bez udziału użytkownika.
+6.  Dotyczy tylko typu pliku **Instalator Windows** (z rozszerzeniami msi i exe): na stronie **Argumenty wiersza polecenia** określ, czy chcesz udostępnić opcjonalne argumenty wiersza polecenia instalatora.
+    Usługa Intune automatycznie dodaje następujące parametry:
+    - Dla plików exe dodawany jest parametr **/install**.
+    - Dla plików msi dodawany jest parametr **/quiet**.
+    Należy pamiętać, że te opcje będą działać, tylko jeśli twórca pakietu aplikacji włączył odpowiednie funkcje.
 
 7.  Dotyczy tylko typu pliku **Instalator Windows** (tylko z rozszerzeniem exe): na stronie **Kody powrotne** można dodać nowe kody błędów, które będą interpretowane przez usługę Intune w przypadku instalowania aplikacji na zarządzanym komputerze z systemem Windows.
 
@@ -89,8 +96,10 @@ Aplikacja zostanie wyświetlona w węźle **Aplikacje** w obszarze roboczym **Ap
 
 Po utworzeniu aplikacji następnym krokiem jest jej wdrożenie. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
 
+Jeśli chcesz uzyskać więcej informacji na temat wskazówek dotyczących wdrażania oprogramowania na komputerach, zapoznaj się z wpisem w blogu [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://blogs.technet.microsoft.com/intunesupport/2016/06/13/support-tip-best-practices-for-intune-software-distribution-to-pcs/) (Porada: Najlepsze rozwiązania dotyczące dystrybucji oprogramowania usługi Intune na komputerach).
 
 
-<!--HONumber=Dec16_HO5-->
+
+<!--HONumber=Feb17_HO3-->
 
 
