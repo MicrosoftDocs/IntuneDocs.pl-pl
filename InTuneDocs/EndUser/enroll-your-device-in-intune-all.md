@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,18 @@ ms.technology:
 ms.assetid: b51dbdd6-aaa3-48dd-a47f-9d01a4ca37f6
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 50ec5fa3b7286d2da53af849bfaa4bcb27e388a5
+ms.sourcegitcommit: 9530eb45bf027c66c4a36e4cea1ec05c5f15a6e5
+ms.openlocfilehash: d51bef2220ebf199df6f54e307e2f021faa83d33
 
 
 ---
 
 # <a name="enroll-your-device-in-intune"></a>Rejestracja urządzenia w usłudze Intune
 
-Jeśli Twoja firma lub szkoła korzysta z usługi Microsoft Intune, możesz zarejestrować urządzenie z systemem Windows, aby uzyskiwać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzeń umożliwia organizacji ochronę danych firmy. Aby dowiedzieć się więcej na temat rejestracji oraz zawartości Twojego urządzenia widocznej dla administratora IT, skorzystaj z linków na końcu tego tematu.
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzeń umożliwia organizacji ochronę danych firmy. Aby dowiedzieć się więcej na temat rejestracji oraz zawartości Twojego urządzenia widocznej dla administratora IT, skorzystaj z linków na końcu tego tematu.
 
 Aby wyświetlić instrukcje dotyczące rejestracji, użyj linku dla typu urządzenia, z którego korzystasz:
 
@@ -33,6 +35,6 @@ Aby wyświetlić instrukcje dotyczące rejestracji, użyj linku dla typu urządz
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

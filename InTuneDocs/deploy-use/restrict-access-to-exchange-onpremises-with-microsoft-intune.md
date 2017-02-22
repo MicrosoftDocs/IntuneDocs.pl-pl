@@ -1,5 +1,5 @@
 ---
-title: "Ochrona dostępu do poczty e-mail z lokalnej instalacji programu Exchange | Microsoft Docs"
+title: Ochrona poczty e-mail w lokalnym programie Exchange | Microsoft Docs
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w lokalnej instalacji programu Exchange przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
 
 
 ---
@@ -24,18 +25,19 @@ ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Przy użyciu usługi Microsoft Intune można skonfigurować dostęp warunkowy do lokalnego programu Exchange lub do starszej wersji usługi Exchange Online w wersji dedykowanej.
+Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail i usług O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 > Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sprawdzić, czy zawiera ono nową, czy starszą konfigurację, skontaktuj się z menedżerem ds. klientów.
 
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Aby kontrolować dostęp poczty e-mail do lokalnego programu Exchange lub do starszej wersji środowiska usługi Exchange Online w wersji dedykowanej, możesz skonfigurować dostęp warunkowy do lokalnego programu Exchange przy użyciu usługi Microsoft Intune.
-Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail i usług O365](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
-
-**Przed** skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
+Koniecznie sprawdź, czy są spełnione następujące warunki:
 
 -   Program Exchange musi być w wersji **Exchange 2010 lub nowszej**. Macierze serwerów dostępu klienta (CAS) serwera programu Exchange są obsługiwane.
 
--   Należy użyć **łącznika lokalnego programu Exchange**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z lokalnym programem Exchange. Dzięki temu możliwe jest zarządzanie urządzeniami za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Aby uzyskać dodatkowe informacje dotyczące łącznika, zobacz artykuł dotyczący [łącznika lokalnego programu Exchange w usłudze Intune](intune-on-premises-exchange-connector.md).
+-   Należy użyć [łącznika lokalnego programu Exchange usługi Intune](intune-on-premises-exchange-connector.md), który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z lokalnym programem Exchange. Dzięki temu możliwe jest zarządzanie urządzeniami za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
     -   Łącznik lokalnego programu Exchange dostępny w konsoli usługi Intune jest przeznaczony dla Twojej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami. Ponadto zalecamy sprawdzenie, czy łącznik programu Exchange dla Twojej dzierżawy został zainstalowany **tylko na jednym komputerze**.
 
@@ -47,6 +49,8 @@ Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczy
 
 -   Musisz skonfigurować program **Exchange ActiveSync** przy użyciu uwierzytelniania opartego na certyfikatach lub wpisu poświadczeń użytkownika.
 
+### <a name="device-compliance-requirements"></a>Wymagania dotyczące zgodności urządzeń
+
 Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkownika mógł on połączyć się ze swoją pocztą e-mail, jego **urządzenie** musi:
 
 -  Zostać **zarejestrowane** na komputerze przyłączonym do domeny lub w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
@@ -57,11 +61,13 @@ Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkown
 
 -   Być **zgodne** ze wszystkimi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] wdrożonymi na tym urządzeniu.
 
+### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Jak działa dostęp warunkowy w przypadku lokalnego programu Exchange
+
 Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu warunkowego dla lokalnego programu Exchange na potrzeby oceniania, czy urządzenia mają mieć do niego dostęp, czy dostęp ma być blokowany.
 
 ![Diagram przedstawiający punkty decyzyjne, które określają, czy urządzenie ma dostęp do lokalnego programu Exchange, czy też jest blokowane](../media/ConditionalAccess8-2.png)
 
-Jeśli zasady dostępu warunkowego nie zostaną spełnione, podczas logowania użytkownik zobaczy jeden z następujących komunikatów:
+Jeśli warunek dostępu nie zostanie spełniony, upłynie 10 minut do momentu zablokowania urządzenia i otrzymania przez użytkownika przy próbie zalogowania się jednego z następujących komunikatów dotyczących kwarantanny:
 
 - Jeśli urządzenie nie zostało zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem urządzenia w usłudze Azure Active Directory.
 
@@ -136,6 +142,6 @@ Są obsługiwane następujące elementy:
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

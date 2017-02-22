@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 519d3f475e158391b08ab4e51f9410b7bdefcd4c
+ms.sourcegitcommit: 3ee87c8f6104b06c8a9492566ff160540624f17e
+ms.openlocfilehash: 8f35cf70d0c97afc88eba38b1eaff5e2e38425d0
 
 
 ---
@@ -33,11 +34,11 @@ Jeśli potrzebujesz dodatkowej ochrony przed utratą danych, wybierz pozycję [D
 Administratorzy IT lub użytkownicy mają także możliwość instalowania alternatywnych klientów poczty e-mail (na przykład programu Microsoft Outlook dla systemu Android lub iOS). Ci klienci poczty e-mail mogą nie obsługiwać profilów poczty e-mail i nie można ich konfigurować przy użyciu profilów poczty e-mail usługi Intune.  
 
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
--   System Windows Phone 8.1 lub nowszy
--   Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
--   System iOS 8.0 i nowsze
--   KNOX Samsung Standard (4.0 i nowsze)
--   Program Android for Work
+-    System Windows Phone 8.1 lub nowszy
+-    Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
+-    System iOS 8.0 i nowsze
+-    KNOX Samsung Standard (4.0 i nowsze)
+-    Program Android for Work
 
 >[!NOTE]
 >Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil.
@@ -78,7 +79,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
-    -   **Profil poczty e-mail dla systemu Samsung KNOX Standard (w wersji 4.0 lub nowszej)**
+    -   **Profil poczty e-mail dla systemu Samsung KNOX Standard (w wersji&4;.0 lub nowszej)**
 
     -   **Profil poczty e-mail (system iOS 8.0 i nowsze)**
 
@@ -88,7 +89,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
     -   **Profil poczty e-mail (program Android for Work — Gmail)**
 
-    -   **Profil poczty e-mail (program Android for Work — Nine Work)**
+    -    **Profil poczty e-mail (program Android for Work — Nine Work)**
 
     Tworzyć i wdrażać można tylko niestandardowe zasady profilu poczty e-mail. Zalecane ustawienia są niedostępne.
 
@@ -134,10 +135,10 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 
 > [!NOTE]
 > - W przypadku systemu Android for Work upewnij się również, że poza odpowiednim profilem poczty e-mail wdrożono również aplikacje Gmail lub Nine Work.
-> - Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem.
+> - Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem. Pamiętaj, że nie można usunąć profilu poczty e-mail w ten sposób w przypadku, gdy jest to jedyny profil poczty e-mail na urządzeniu.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

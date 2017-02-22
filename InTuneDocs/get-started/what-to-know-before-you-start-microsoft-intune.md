@@ -1,11 +1,11 @@
 ---
-title: "Wymagania wstępne | Microsoft Docs"
-description: "Linki do wymagań wstępnych i wymagań usługi Intune"
+title: "Obsługiwane urządzenia — Microsoft Intune | Dokumentacja firmy Microsoft"
+description: "Podaje listę obsługiwanych platform urządzeń i przeglądarki do zarządzania urządzeniami w usłudze Intune"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/19/2016
+ms.date: 02/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,19 @@ ms.technology:
 ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e13a9c426e07ebb2443bd403d1a5c7274afd387e
-ms.openlocfilehash: d07c7e667dbb5c01a9dcd8b2f69e7d930c27f25a
+ms.sourcegitcommit: b3732d0c6461f9fb8462ae5584055204d597aae0
+ms.openlocfilehash: 0af4f49713a65900079d69a09f20d210797c935c
 
 
 ---
 
-# <a name="prerequisites-to-getting-started-with-intune"></a>Wymagania wstępne dotyczące rozpoczynania pracy z usługą Intune
+# <a name="supported-devices-and-browsers"></a>Obsługiwane urządzenia i przeglądarki
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Ten artykuł jest przeznaczony dla administratorów systemów odpowiedzialnych za zarządzanie urządzeniami w przedsiębiorstwie. Aby uzyskać pomoc dotyczącą instalowania usługi Intune na telefonie, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Przed rozpoczęciem konfigurowania usługi Microsoft Intune przejrzyj poniższe wymagania:
 
@@ -74,6 +77,6 @@ Do tego portalu mogą logować się tylko użytkownicy z uprawnieniami administr
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

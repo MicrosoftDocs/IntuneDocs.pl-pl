@@ -1,11 +1,11 @@
 ---
-title: "Ochrona dostępu do poczty e-mail w usłudze Exchange Online | Microsoft Docs"
+title: "Ochrona poczty e-mail w usłudze Exchange Online | Microsoft Docs"
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
-ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: ab4b244e733f973581216f3358fce0653609aaaa
 
 
 ---
@@ -25,24 +26,26 @@ ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Za pomocą usługi Microsoft Intune można skonfigurować dostęp warunkowy dla usługi Exchange Online lub usługi Exchange Online w wersji dedykowanej. Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail, usług O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 >Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sprawdzić, czy zawiera ono nową, czy starszą konfigurację, skontaktuj się z menedżerem ds. klientów.
 
-Aby kontrolować dostęp do poczty e-mail do usługi Exchange Online lub do nowego środowiska usługi Exchange Online w wersji dedykowanej, możesz skonfigurować dostęp warunkowy dla usługi Exchange Online za pomocą usługi Microsoft Intune. Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail, usług O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-
-**Przed** skonfigurowaniem dostępu warunkowego należy:
+Aby skonfigurować dostęp warunkowy, trzeba:
 
 -   Mieć **subskrypcję usługi Office 365 obejmującą usługę Exchange Online (na przykład E3)**, a użytkownicy muszą mieć licencję na usługę Exchange Online.
 
 - Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 -  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Intune**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z usługą Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
+    -  Dowiedz się więcej o [łączniku Service to Service Connector usługi Intune](intune-service-to-service-exchange-connector.md).
 
    > [!NOTE]
-   > Nie należy konfigurować łącznika Service To Service Connector, jeśli zamierza się używać dostępu warunkowego zarówno dla usługi Exchange Online, jak i dla lokalnego programu Exchange.
+   > Nie należy konfigurować łącznika Service To Service Connector usługi Intune, jeśli zamierzasz używać dostępu warunkowego zarówno dla usługi Exchange Online, jak i dla lokalnego programu Exchange.
 
-   Aby uzyskać instrukcje dotyczące sposobu konfigurowania łącznika, zobacz [Łącznik Service To Service Connector usługi Intune](intune-service-to-service-exchange-connector.md).
+### <a name="device-compliance-requirements"></a>Wymagania dotyczące zgodności urządzeń
 
 Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkownika mógł on połączyć się ze swoją pocztą e-mail, jego **urządzenie** musi:
 
@@ -54,12 +57,15 @@ Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkown
 
 -   **Być zgodne** ze wszystkimi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], które są wdrożone na tym urządzeniu lub podłączone do domeny lokalnej.
 
-Jeśli zasady dostępu warunkowego nie zostaną spełnione, podczas logowania użytkownik zobaczy jeden z następujących komunikatów:
+### <a name="when-the-device-is-not-compliant"></a>Niezgodne urządzenie
+
+Jeśli warunek dostępu nie zostanie spełniony, urządzenie zostanie natychmiast poddane kwarantannie, a użytkownik otrzyma wiadomość e-mail i zobaczy przy próbie zalogowania się jedno z następujących powiadomień:
 
 - Jeśli urządzenie nie zostało zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem w usłudze Azure Active Directory.
 
 -   Jeśli urządzenie nie zostało ocenione jako zgodne z regułami zasad zgodności, użytkownik zostanie skierowany do witryny sieci Web Portal firmy lub do aplikacji Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
+### <a name="how-conditional-access-works-with-exchange-online"></a>Jak działa dostęp warunkowy w przypadku usługi Exchange Online
 
 Na następującym diagramie przedstawiono przepływ używany przez zasady dostępu warunkowego dla usługi Exchange Online.
 
@@ -70,7 +76,6 @@ Możliwa jest ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchan
 
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy i program Android for Work
 - System iOS 8.0 i nowsze
-- System Windows Phone 8.1 lub nowszy
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
@@ -85,7 +90,8 @@ Można chronić dostęp do usługi **Outlook Web Access (OWA)** w usłudze Excha
 * Chrome (Android)
 * Intune Managed Browser (iOS, Android 5.0 i nowsze)
 
-**Nieobsługiwane przeglądarki są blokowane**.
+   > [!IMPORTANT]
+   > **Nieobsługiwane przeglądarki są blokowane**.
 
 **Aplikacja OWA dla systemów iOS i Android może zostać zmodyfikowana, aby nie korzystała z nowoczesnego uwierzytelniania, i nie jest obsługiwana. Dostęp z poziomu aplikacji OWA musi zostać zablokowany za pomocą reguł oświadczeń usług ADFS.**
 
@@ -204,7 +210,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
         W przypadku wybrania tego ustawienia wszystkie urządzenia, za pomocą których jest uzyskiwany dostęp do usługi **Exchange Online**, muszą być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **Exchange Online** jest blokowany.
 
         Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform jest wymagana rejestracja w usłudze Intune oraz zgodność, istnieją jednak wyjątki:
-        *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
+        *    Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
         * Nieobsługiwane platformy takie jak system Mac OS. Jednak aplikacje korzystające z nowoczesnego uwierzytelniania i pochodzące z tych platform nadal są zablokowane.
 
     -   **Określone platformy**
@@ -272,6 +278,6 @@ Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

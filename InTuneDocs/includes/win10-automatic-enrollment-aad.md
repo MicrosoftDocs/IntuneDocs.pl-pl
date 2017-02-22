@@ -1,4 +1,4 @@
-## <a name="azure-active-directory-enrollment"></a>Rejestracja w usłudze Azure Active Directory
+## <a name="set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium"></a>Konfiguracja automatycznej rejestracji w systemach Windows 10 i Windows 10 Mobile przy użyciu usługi Azure Active Directory Premium
 
 Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy lub osobiste urządzenia i komputery z systemami Windows 10 i Windows 10 Mobile w usłudze Intune przez dodanie konta służbowego i wyrażenie zgody na to, aby były zarządzane. Proste. W tle urządzenie użytkownika zostaje zarejestrowane i przyłączone do usługi Azure Active Directory. Po zarejestrowaniu urządzenie jest zarządzane za pomocą usługi Intune.
 
@@ -11,13 +11,13 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 
 1. W [portalu zarządzania Azure](https://manage.windowsazure.com) (https://manage.windowsazure.com) przejdź do węzła **Active Directory** i wybierz swój katalog.
 
-2. Kliknij kartę **Aplikacje**. Na liście aplikacji powinna być widoczna pozycja **Microsoft Intune**.
+2. Wybierz kartę **Aplikacje**. Na liście aplikacji zostanie wyświetlona pozycja **Microsoft Intune**.
 
     ![Aplikacje usługi Azure AD z usługą Microsoft Intune](../media/aad-intune-app.png)
 
-3. Kliknij strzałkę obok pozycji **Microsoft Intune** — powinna zostać wyświetlona strona, która umożliwia skonfigurowanie usługi Microsoft Intune.
+3. Wybierz strzałkę dla pozycji **Microsoft Intune**. Zostanie otwarta strona, która umożliwia skonfigurowanie usługi Microsoft Intune.
 
-4. Kliknij pozycję **Konfiguruj**, aby rozpocząć konfigurowanie automatycznej rejestracji w usłudze MDM za pomocą usługi Microsoft Intune.
+4. Wybierz pozycję **Konfiguruj**, aby rozpocząć konfigurowanie automatycznej rejestracji w usłudze MDM za pomocą usługi Microsoft Intune.
 
 5. Określ adresy URL dla usługi Intune:
 
@@ -34,6 +34,6 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 7. Wybierz polecenie **Zapisz**.
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
