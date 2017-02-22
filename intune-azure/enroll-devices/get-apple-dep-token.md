@@ -14,8 +14,8 @@ ms.assetid: 7e5c79c5-2883-4841-9be6-74cba16ee447
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: c740dedebdc4afd909a8c38447f698c2724de5a1
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: b2c79e92f6378825bdaac03d2d9be699bdaca95b
 
 ---
 
@@ -31,7 +31,7 @@ W celu zarządzania firmowymi urządzeniami z systemem iOS przy użyciu programu
 > Przeczytaj tę uwagę tylko, jeśli jesteś klientem, którego poddano migracji z konsoli administracyjnej usługi Intune do witryny Azure Portal. Jeśli token DEP firmy Apple został usunięty z konsoli administracyjnej usługi Intune w czasie migracji, może się okazać, że token ten został przywrócony do konta usługi Intune. W takim przypadku wystarczy usunąć token DEP z witryny Azure Portal. 
 
 **Pobieranie certyfikatu programu DEP firmy Apple**</br>
-W witrynie Azure Portal wybierz pozycję **Więcej usług**, w polu tekstowym wprowadź nazwę **Intune**, a następnie wybierz kolejno pozycje **Inne** > **Intune**. W bloku Intune wybierz kolejno pozycje **Zarejestruj urządzenia** > **Token DEP firmy Apple**, a następnie wykonaj w witrynie Azure Portal kroki wymienione poniżej.
+W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune wybierz kolejno pozycje **Zarejestruj urządzenia** > **Token DEP firmy Apple**, a następnie wykonaj w witrynie Azure Portal kroki wymienione poniżej.
 
 **Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu DEP firmy Apple.**<br>
 Wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (.pem). Plik PEM jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu programu Device Enrollment Program firmy Apple.
@@ -56,6 +56,6 @@ Przejdź do pliku certyfikatu (.pem) i wybierz pozycję **Otwórz**, a następni
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

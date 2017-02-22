@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b15f56f6e771faeb924668aa68140ab89a174b8d
-ms.openlocfilehash: c9bba34d2252e6b9dff295724f9c935c558aa179
+ms.sourcegitcommit: 06e0a74dd2c0b861497062f2d659c5eb08126fca
+ms.openlocfilehash: 6ec9f6136cf23b9015da125817bfeb86ecfbfca6
 
 
 ---
@@ -55,7 +56,7 @@ Aby uzyskać więcej informacji dotyczących narzędzia opakowującego aplikacje
 ## <a name="intune-app-sdk"></a>Zestaw SDK aplikacji usługi Intune
 Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikacje znajdują się w sklepie Apple App Store lub sklepie Google Play i którzy chcą zarządzać aplikacjami za pomocą usługi Intune. Korzyści wynikające z integracji zestawu SDK są jednak dostępne dla wszystkich aplikacji, nawet aplikacji biznesowych.
 
-Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](/intune/develop/intune-app-sdk). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](/intune/develop/intune-app-sdk-get-started).
+Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](../develop/intune-app-sdk.md). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](../develop/intune-app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Powody korzystania z zestawu SDK
 * Aplikacja nie ma wbudowanych funkcji ochrony danych.
@@ -69,8 +70,8 @@ Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](/intune/develop/
 
 |**Zestaw SDK aplikacji usługi Intune** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-xamarin).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-cordova).|
-|**Android**| Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-xamarin).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](/../develop/intune-app-sdk-cordova).|
+|**iOS**|Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](../develop/intune-app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](../develop/intune-app-sdk-cordova.md).|
+|**Android**| Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](../develop/intune-app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](../develop/intune-app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Porównanie funkcji
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.

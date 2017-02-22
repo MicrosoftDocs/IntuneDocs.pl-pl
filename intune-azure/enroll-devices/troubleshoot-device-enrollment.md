@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/010/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: c324c74e-e225-40ad-88b7-72a6d9ea09b5
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 151e71f719b459a4f2c9612035201908d2610980
-ms.openlocfilehash: 78f0ff9a1b7bdaf30721d8702c36ff0e613b109e
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 8d56b6600ca86faabbb50d29405969385eb29940
 
 
 ---
@@ -46,7 +46,7 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Sprawdzanie liczby zarejestrowanych i dozwolonych urządzeń
 
-W bloku Intune portalu Azure Portal wybierz pozycje **Zarejestruj urządzenia** > **Ograniczenia rejestracji** i sprawdź, czy liczba urządzeń przypisanych do użytkownika nie przekroczyła dozwolonego limitu 15 urządzeń.
+W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune portalu Azure Portal wybierz pozycje **Zarejestruj urządzenia** > **Ograniczenia rejestracji** i sprawdź, czy liczba urządzeń przypisanych do użytkownika nie przekroczyła dozwolonego limitu 15 urządzeń.
 
 <!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
@@ -218,16 +218,16 @@ Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagaj�
 
 Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
 
-1.  Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
-2.  Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
-3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
-4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
-5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
-6.  Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
-7.  Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
-8.  Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
-9.  Uruchom ponownie serwery usług AD FS.
-10. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
+1.    Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
+2.    Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
+3.    Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
+4.    Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
+5.    Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
+6.    Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
+7.    Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
+8.    Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
+9.    Uruchom ponownie serwery usług AD FS.
+10.    Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
 
 **Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
@@ -389,6 +389,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

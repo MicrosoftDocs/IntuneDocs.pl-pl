@@ -4,7 +4,7 @@ description: "Włączanie zarządzania urządzeniami przenośnymi (MDM) z system
 keywords: 
 author: staciebarker
 manager: stabar
-ms.date: 02/09/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 45c32cf08e4d6fd570af287ed64411edc9d9b394
-ms.openlocfilehash: e020ac2a4f600a94e7409e04c4c48f0c405c56cf
+ms.sourcegitcommit: 115eae8e2d733397eb4b0f025789ca7d0522a845
+ms.openlocfilehash: 5dc90c1e1ddba91fe8bbb4530eb09bca0c9e3ac9
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: e020ac2a4f600a94e7409e04c4c48f0c405c56cf
 
 Skorzystaj z jednej z następujących metod konfigurowania usługi rejestracji urządzeń z systemem Windows:
 
-- **[Automatyczna rejestracja w systemie Windows 10 i Windows 10 Mobile przy użyciu usługi Azure Active Directory Premium](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)** 
+- [**Automatyczna rejestracja w systemie Windows 10 i Windows 10 Mobile przy użyciu usługi Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium) 
  -  Metoda ta ma zastosowanie tylko w przypadku urządzeń z systemem Windows 10 lub Windows 10 Mobile.
  -  Użycie tej metody wymaga usługi Azure Active Directory Premium. Jeśli nie masz tej usługi, skorzystaj z metody rejestracji dla systemów Windows 8.1 i Windows Phone 8.1.
  -  Jeśli nie wybrano włączenia automatycznego rejestrowania, należy użyć metody rejestracji dla systemów Windows 8.1 i Windows Phone 8.1.
 
 
-- **[Rejestrowanie w systemie Windows 8.1 lub Windows Phone 8.1 poprzez konfigurowanie rekordu CNAME](#set-up-windows-8--1-and-windows-phone-8--1-enrollment-by-configuring-cname)** 
+- [**Rejestrowanie w systemie Windows 8.1 lub Windows Phone 8.1 poprzez konfigurowanie rekordu CNAME**](#set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname) 
  - Ta metoda służy do rejestrowania urządzeń z systemem Windows 8.1 lub Windows Phone 8.1.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
@@ -46,8 +46,6 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
 Utworzyć rekordy zasobów **CNAME** systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
 
     Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM: enrollment.manage.microsoft.com.    
-
-    Jeśli w systemie DNS znajduje się rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny manage.microsoft.com, zaleca się jego zastąpienie w systemie DNS rekordem CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com. Ta zmiana jest zalecana, ponieważ rejestracje za pośrednictwem punktu końcowego domeny manage.microsoft.com zostaną wycofane w przyszłej wersji.
 
     Rekordy zasobów CNAME muszą zawierać następujące informacje:
 
@@ -78,6 +76,6 @@ Utworzyć rekordy zasobów **CNAME** systemu DNS dla domeny Twojej firmy. Jeśli
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

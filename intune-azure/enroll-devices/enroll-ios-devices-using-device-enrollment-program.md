@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 2986e659d384eaa67b64af1ce3ae48a1ac81a600
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
 
 
 ---
@@ -50,7 +50,7 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem iOS należy
 
 Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń. Poniższe kroki pokazują, jak utworzyć profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu DEP.
 
-1. W witrynie Azure Portal wybierz pozycję **Więcej usług**, w polu tekstowym wprowadź nazwę **Intune**, a następnie wybierz kolejno pozycje **Inne** > **Intune**.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
 2. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie pozycję **Rejestracja Apple**.
 
@@ -110,17 +110,19 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
 ## <a name="synchronize-dep-managed-devices"></a>Synchronizowanie urządzeń zarządzanych w programie DEP
 
-1. W bloku Intune portalu Azure Portal wybierz pozycję **Zarejestruj urządzenia**, a następnie wybierz pozycję **Rejestracja Apple**.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
-2. W obszarze **Zarządzaj ustawieniami rejestracji programu DEP (Device Enrollment Program) firmy Apple** wybierz pozycję **Numery seryjne DEP**.
+2. W bloku Intune portalu Azure Portal wybierz pozycję **Zarejestruj urządzenia**, a następnie wybierz pozycję **Rejestracja Apple**.
+
+3. W obszarze **Zarządzaj ustawieniami rejestracji programu DEP (Device Enrollment Program) firmy Apple** wybierz pozycję **Numery seryjne DEP**.
 
 4. W bloku **Numery seryjne Apple DEP** wybierz przycisk **Synchronizuj**.
 
 5. W bloku **Synchronizuj** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
     Aby spełnić warunki ruchu programu DEP firmy Apple, usługa Intune nakłada następujące ograniczenia:
-     -  Pełną synchronizację programu DEP można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune, niezależnie od tego, czy numer seryjny był już wcześniej synchronizowany. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
-     -  Każde żądanie synchronizacji ma przydzielone 10 minut na zakończenie. W tym czasie lub do momentu zakończenia żądania powodzeniem przycisk **synchronizacji** jest wyłączony.
+     -    Pełną synchronizację programu DEP można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune, niezależnie od tego, czy numer seryjny był już wcześniej synchronizowany. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
+     -    Każde żądanie synchronizacji ma przydzielone 10 minut na zakończenie. W tym czasie lub do momentu zakończenia żądania powodzeniem przycisk **synchronizacji** jest wyłączony.
 
 >[!NOTE]
 >Możesz także przypisać numery seryjne DEP do profilów z bloku **Numery seryjne Apple DEP**.
@@ -156,6 +158,6 @@ Stanowi to zakończenie procesu rejestracji. Użytkownicy mogą od tego momentu 
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

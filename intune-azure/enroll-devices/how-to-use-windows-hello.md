@@ -14,8 +14,8 @@ ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: a7249e96e737cc844e742a78d8a34899a428f52b
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 56e78f2c80c860c4cdf1c79bf94d7575d5cd9674
 
 
 ---
@@ -49,7 +49,7 @@ Aby zapewnić rozwiązywanie konfliktów i prawidłowe stosowanie zasad dotyczą
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Tworzenie zasad usługi Windows Hello dla firm
 
-1.  W witrynie Azure Portal wybierz pozycję **Więcej usług**, w polu tekstowym wprowadź nazwę **Intune**, a następnie wybierz kolejno pozycje **Inne** > **Intune**.
+1.  W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
 2.  W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie wybierz kolejno pozycje **Zarządzaj** > **Windows Hello dla firm**.
 
@@ -99,6 +99,6 @@ Aby uzyskać więcej informacji na temat usługi Microsoft Passport, zobacz [prz
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

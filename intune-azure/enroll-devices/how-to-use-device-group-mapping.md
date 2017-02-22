@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1609ed2f127fe9d7d1f1c3b3e923bd12f1088200
-ms.openlocfilehash: 41b3cfb8006a7390094d01b4f0fdc38417e858be
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 57dce5b23b9c8cd878a9ce746e6459a69f1270ff
 
 
 ---
@@ -41,7 +41,7 @@ Możesz utworzyć dowolne kategorie urządzeń, na przykład:
 ## <a name="how-to-configure-device-categories"></a>Sposoby konfigurowania kategorii urządzeń
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Krok 1. Utworzenie kategorii urządzeń w bloku Intune witryny Azure Portal
-1. Zaloguj się do portalu Azure Portal.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Zarejestruj urządzenia**.
 3. W bloku **Rejestracja** wybierz pozycję **Kategorie urządzeń**.
@@ -61,17 +61,20 @@ Skorzystaj z informacji podanych w tej sekcji, aby utworzyć grupę urządzeń z
 Gdy skonfigurujesz grupy urządzeń, a użytkownicy zarejestrują urządzenia, zostanie wyświetlona lista skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy zabezpieczeń usługi Active Directory odpowiadającej wybranej kategorii.
 
 ### <a name="how-to-view-the-categories-of-devices-you-manage"></a>Wyświetlanie kategorii zarządzanych urządzeń
-1.    W bloku Intune witryny Azure Portal wybierz pozycję **Urządzenia i grupy**.
 
-2.    W obszarze **Zarządzaj** kliknij przycisk **Wszystkie urządzenia**.
+1.    W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
-3.    Na liście urządzeń sprawdź kolumnę **Kategoria**.
+2. W bloku Intune witryny Azure Portal wybierz pozycję **Urządzenia i grupy**.
+
+3.    W obszarze **Zarządzaj** kliknij przycisk **Wszystkie urządzenia**.
+
+4.    Na liście urządzeń sprawdź kolumnę **Kategoria**.
 
 Jeśli kolumna **Kategoria** nie jest wyświetlana, kliknij przycisk **Kolumny**, wybierz z listy pozycję **Kategoria**, a następnie kliknij przycisk **Zastosuj**.
 
 ### <a name="to-change-the-category-of-a-device"></a>Zmiana kategorii urządzenia
 
-1. Zaloguj się do portalu Azure Portal.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Urządzenia i grupy**.
 4. W bloku **Urządzenia i grupy** wybierz kolejno pozycje **Zarządzaj** > **Wszystkie urządzenia**.
@@ -89,6 +92,6 @@ Jeśli kolumna **Kategoria** nie jest wyświetlana, kliknij przycisk **Kolumny**
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
