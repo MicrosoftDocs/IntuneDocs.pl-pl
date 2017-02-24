@@ -18,8 +18,8 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 8e10aa7c1db7490a462032e1bf86c7509b7b0e18
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: d593b00ee3fd30adec6c36c3939c895647e8dada
 
 
 ---
@@ -38,36 +38,6 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 -   Automatycznie konfigurować służbowe konto e-mail.
 
 Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
-
-**Czego nie widzi dział IT**
-
--   Historia połączeń i witryn sieci Web
-
--    Lokalizacja
-
--   Wiadomości e-mail i SMS
-
--   Kontakty
-
--    Hasła
-
--   Kalendarz
-
--   Album Z aparatu
-
-**Co widzi dział IT**
-
--   Model
-
--   Numer seryjny
-
--   System operacyjny
-
--   Nazwy aplikacji
-
--   Właściciel
-
--   Nazwa urządzenia
 
 Gdy urządzenie jest zarejestrowane, administrator IT może:
 
@@ -99,6 +69,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

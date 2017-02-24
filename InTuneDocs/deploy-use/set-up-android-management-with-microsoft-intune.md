@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/04/2017
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 26ddc03985ab8a4959a1d2c9a47e77f042ab9310
-ms.openlocfilehash: 6b74c09c37970429d3eaa571db655854d592a2fe
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: 8e2588e2bb0537877f0164bc996fa973f25ea4dd
 
 
 ---
@@ -25,6 +26,8 @@ ms.openlocfilehash: 6b74c09c37970429d3eaa571db655854d592a2fe
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Będąc administratorem usługi Intune, możesz włączyć zarządzanie urządzeniami z systemem Android, w tym urządzeniami Samsung Knox Standard, w Portalu firmy. Użytkownicy będą mogli wtedy rejestrować swoje urządzenia przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
+
+Domyślnie urządzenia z systemem Android mogą być rejestrowane w usłudze Intune. Aby zablokować możliwość rejestrowania urządzeń z systemem Android, zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora. Wybierz pozycję **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **Reguły rejestracji**, a następnie wyczyść pole wyboru **Zezwalaj na urządzenia z systemem Android**.
 
 1.  **Skonfiguruj usługę**<br>
     Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#step-2-set-mdm-authority) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
@@ -37,7 +40,7 @@ Będąc administratorem usługi Intune, możesz włączyć zarządzanie urządze
     Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Android w usłudze Intune](../enduser/enroll-your-device-in-intune-android.md). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
     Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
-  - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
   - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Android](../enduser/using-your-android-device-with-intune.md)
 
 Z powodu braku dostępności sklepu Google Play w Chinach aplikację Portal firmy dla urządzeń z systemem Android należy uzyskać z chińskich platform handlowych oferujących aplikacje. Aplikacja Portal firmy dla systemu Android będzie dostępna do pobrania w następujących sklepach:
@@ -62,6 +65,6 @@ Aplikacja Portal firmy dla systemu Android używa usług Google Play do komuniko
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

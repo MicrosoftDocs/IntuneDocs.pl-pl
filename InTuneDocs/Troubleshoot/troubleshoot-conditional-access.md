@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: d4b935ba28edc1b41afb46b0aa7d0ee586de2a1c
+ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
+ms.openlocfilehash: 66a8f72e2560352c2e4f422b41c7e54b4ae124e6
 
 
 ---
@@ -33,11 +34,11 @@ W tym temacie opisano, co należy zrobić, gdy użytkownicy nie mogą uzyskać d
 
 Aby dostęp warunkowy działał, niezbędne są następujące warunki:
 
--   Urządzenie musi być zarządzane przez usługę Intune
--   Urządzenie musi zostać zarejestrowane w usłudze Azure Active Directory (AAD). W normalnych okolicznościach rejestracja odbywa się automatycznie podczas rejestracji w usłudze Intune
--   Urządzenie musi być zgodne z zasadami zgodności usługi Intune dla urządzenia i jego użytkownika.  Jeśli nie obowiązują zasady zgodności, wystarczy rejestracja w usłudze Intune.
--   Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik pobiera pocztę za pomocą natywnego klienta poczty, a nie za pomocą programu Outlook.     Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android/KNOX Standard.
--   Program Intune Exchange Connector musi być prawidłowo skonfigurowany. Więcej informacji można znaleźć w artykule [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
+-    Urządzenie musi być zarządzane przez usługę Intune
+-    Urządzenie musi zostać zarejestrowane w usłudze Azure Active Directory (AAD). W normalnych okolicznościach rejestracja odbywa się automatycznie podczas rejestracji w usłudze Intune
+-    Urządzenie musi być zgodne z zasadami zgodności usługi Intune dla urządzenia i jego użytkownika.  Jeśli nie obowiązują zasady zgodności, wystarczy rejestracja w usłudze Intune.
+-    Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik pobiera pocztę za pomocą natywnego klienta poczty, a nie za pomocą programu Outlook.     Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android/KNOX Standard.
+-    Program Intune Exchange Connector musi być prawidłowo skonfigurowany. Więcej informacji można znaleźć w artykule [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Te warunki można wyświetlić dla każdego urządzenia w portalu zarządzania Azure i w raporcie ze spisu urządzeń.
 
@@ -52,7 +53,7 @@ Te warunki można wyświetlić dla każdego urządzenia w portalu zarządzania A
  -  Może upłynąć trochę czasu, zanim informacje o zgodności zostaną zarejestrowane dla urządzenia. Odczekaj kilka minut i spróbuj ponownie.
  -  Urządzenia z systemem iOS:
      -   Istniejący profil e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy poinformuje użytkownika, że nie urządzenie nie jest zgodne z powodu ręcznie skonfigurowanego profilu poczty e-mail i wyświetli monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby umożliwić wdrożenie profilu z usługi Intune. Aby uniknąć problemu, poinstruuj użytkowników, aby dokonali rejestracji bez instalowana profilu poczty e-mail i pozwolili usłudze Intune na wdrożenie profilu.
-     -   Urządzenie z systemem iOS może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia zainicjowanie innego ewidencjonowania użytkownika. Ponowne uruchomienie portalu firmy może naprawić ten problem, a stan zgodności będzie odpowiadał stanowi urządzenia w usłudze Intune. Po pobraniu wszystkich danych z synchronizacji urządzenia sprawdzanie zgodności trwa bardzo krótko — średnio pół sekundy.
+     -     Urządzenie z systemem iOS może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia zainicjowanie innego ewidencjonowania użytkownika. Ponowne uruchomienie portalu firmy może naprawić ten problem, a stan zgodności będzie odpowiadał stanowi urządzenia w usłudze Intune. Po pobraniu wszystkich danych z synchronizacji urządzenia sprawdzanie zgodności trwa bardzo krótko — średnio pół sekundy.
 
         Zazwyczaj przyczyną pozostawania urządzeń w tym stanie są problemy z połączeniem z usługą lub długi czas trwania synchronizacji.  Jeśli problem będzie nadal występował w różnych konfiguracjach sieci (komórkowych, Wi-Fi, VPN), pomimo ponownego uruchomienia urządzeń i po sprawdzeniu aktualności dostawcy SSP na urządzeniu, należy skontaktować się z pomocą techniczną firmy Microsoft zgodnie z opisem w artykule [Jak uzyskać pomoc techniczną dla usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
@@ -125,7 +126,7 @@ Aby wyświetlić dzienniki programu Exchange Connector, użyj [Server Trace View
 
     Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected','
 
--   Szybką synchronizację (delta) można odnaleźć w dziennikach, wyszukując termin **quick sync**.
+-    Szybką synchronizację (delta) można odnaleźć w dziennikach, wyszukując termin **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Wyjątki w poleceniu Get next
 Sprawdź dzienniki programu Exchange Connector pod katem wyjątków w **poleceniu Get next** i przekaż je pomocy technicznej firmy Microsoft.
@@ -134,9 +135,9 @@ Sprawdź dzienniki programu Exchange Connector pod katem wyjątków w **poleceni
 
 Aby włączyć pełne rejestrowanie:
 
-1.  Otwórz plik konfiguracji śledzenia programu Exchange Connector. Ścieżka pliku jest następująca: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
-2.  Odszukaj wiersz TraceSourceLine z następującym kluczem: OnPremisesExchangeConnectorService
-3.  Zmień wartość węzła **SourceLevel** z **Warning ActivityTracing** (wartość domyślna) na **Verbose ActivityTracing**, jak pokazano poniżej.
+1.    Otwórz plik konfiguracji śledzenia programu Exchange Connector. Ścieżka pliku jest następująca: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
+2.    Odszukaj wiersz TraceSourceLine z następującym kluczem: OnPremisesExchangeConnectorService
+3.    Zmień wartość węzła **SourceLevel** z **Warning ActivityTracing** (wartość domyślna) na **Verbose ActivityTracing**, jak pokazano poniżej.
 
     <TraceSourceLine>
           <Key xsi:type="xsd:string">OnPremisesExchangeConnectorService</Key>
@@ -161,6 +162,6 @@ Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontakt
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

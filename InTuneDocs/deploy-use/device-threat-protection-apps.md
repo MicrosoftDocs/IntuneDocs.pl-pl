@@ -14,8 +14,8 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53862e49c922b75b414fd5aceec3bba2b10299a6
-ms.openlocfilehash: a7c1a2b7ec1719a47c36e1fe09d1deccd0eed1b1
+ms.sourcegitcommit: 6f687a1db84b49bc173d2067ab95598b4485daa8
+ms.openlocfilehash: ab94439d9fd5300d61c5991434d41f7fdca693d2
 
 
 ---
@@ -78,7 +78,7 @@ W tym artykule opisano sposób konfigurowania i wdrażania aplikacji Lookout for
 
 6. **Aby wdrożyć aplikację dla użytkowników**, wybierz aplikację Lookout for Work, a następnie wybierz pozycję **Zarządzanie wdrożeniem**.
 
-  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](configure-and-deploy-lookout-for-work-apps.md), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
+  Musisz wybrać tych samych użytkowników, którzy zostali dodani za pomocą opcji Zarządzanie rejestracją w konsoli usługi Lookout.  Zobacz krok 3 w sekcji dotyczącej [konfigurowania subskrypcji za pomocą usługi ochrony urządzeń przed zagrożeniami w usłudze Lookout](https://docs.microsoft.com/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps), aby uzyskać informacje na temat dodawania grup użytkowników do usługi Lookout MTP.
 
   >[!IMPORTANT]
   > Kreator wdrażania aplikacji usługi Intune nie ma informacji o grupach użytkowników usługi Azure AD i zamiast nich używa grup użytkowników usługi Intune. W związku z tym należy utworzyć grupę użytkowników usługi Intune na podstawie grupy użytkowników usługi Azure AD zarejestrowanej w konsoli usługi Lookout w sposób opisany w [tym](plan-your-user-and-device-groups.md) temacie.
@@ -94,10 +94,10 @@ Gdy użytkownik otworzy aplikację Lookout for Work na urządzeniu, zostanie wy�
 * [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem Android](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## <a name="next-steps"></a>Następne kroki
-* [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](enable-device-threat-protection-rule-in-compliance-policy.md)
+* [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

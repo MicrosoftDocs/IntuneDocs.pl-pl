@@ -15,8 +15,8 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: fad731fe01ba4782b64e8a5af97bd536ae9478d3
+ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
+ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
 
 
 ---
@@ -155,8 +155,6 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
      -   **Urządzenia muszą zostać przyłączone do domeny lub być zgodne.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny lub zgodne z zasadami skonfigurowanymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Jeśli komputer nie spełnia żadnego z tych wymagań, użytkownik otrzyma monit o zarejestrowanie urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
-     -   **Urządzenia muszą zostać przyłączone do domeny.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny, aby mogły uzyskiwać dostęp do usługi Exchange Online. Jeśli komputer nie został przyłączony do domeny, dostęp do poczty e-mail będzie zablokowany, a użytkownik zostanie poproszony o skontaktowanie się z administratorem IT.
-
      -   **Urządzenia muszą być zgodne.** Wybierz tę opcję, jeśli komputery mają być zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i zgodne. Jeśli komputer nie został zarejestrowany, zostanie wyświetlony komunikat z instrukcjami dotyczącymi rejestracji.
 
 4.   W obszarze **dostępu za pomocą przeglądarki** do usług SharePoint Online i OneDrive dla Firm można zezwolić na dostęp do usługi Exchange Online tylko za pośrednictwem obsługiwanych przeglądarek: Safari (iOS) i Chrome (Android). Dostęp z innych przeglądarek będzie zablokowany. Ograniczenia platformy wybrane dla dostępu aplikacji do usługi OneDrive mają zastosowanie również w tym miejscu.
@@ -200,6 +198,6 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

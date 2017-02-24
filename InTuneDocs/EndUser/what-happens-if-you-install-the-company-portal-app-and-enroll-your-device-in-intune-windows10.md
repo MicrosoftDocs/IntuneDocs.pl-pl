@@ -1,11 +1,11 @@
 ---
-title: "Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune? | Dokumentacja firmy Microsoft"
+title: Instalowanie aplikacji Portal firmy dla systemu Windows 10 | Microsoft Docs
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,13 +16,13 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1f872d245144727406d926b0c9401827939470f1
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: 329d34e7a6ad83512e98dce85e1effe9c54a1bce
 
 
 ---
-
 
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune?
 
@@ -36,7 +36,7 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 -   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży.
 
-Kroki rejestracji opisano w temacie [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Kroki rejestracji opisano w temacie [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 W przypadku dodawania komputera:
 
@@ -58,6 +58,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

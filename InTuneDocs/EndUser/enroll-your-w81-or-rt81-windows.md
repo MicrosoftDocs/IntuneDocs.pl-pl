@@ -1,11 +1,11 @@
 ---
 title: "Jak zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1 | Microsoft Docs"
-description: "Dowiedz się, jak zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune"
+description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +13,20 @@ ms.technology:
 ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
-ms.openlocfilehash: 70a7f590ba19cc672086671edfdaa5faf5f3e568
+ms.sourcegitcommit: aca401cab49230d2bcb9171cf532b52ce5219798
+ms.openlocfilehash: 8e030c7b4b4aad7793b55e274a4d022bcf098611
 
 
 ---
 
-# <a name="enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
+# <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Jak zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
 
-Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenia, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie administrator IT może zobaczyć na Twoim urządzeniu i jakich nie może](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 
 Aby zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1:
@@ -67,6 +69,6 @@ Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kont
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

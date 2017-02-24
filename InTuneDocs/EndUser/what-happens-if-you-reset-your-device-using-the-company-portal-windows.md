@@ -18,8 +18,8 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: b48d3559f776de529c95666d4d4f762c8fbc82d2
+ms.sourcegitcommit: 42e6b4d44dffa457f009e8402d5c429aa55932d6
+ms.openlocfilehash: 74983ab11e1c1763bd5394af483b93b74b715f89
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: b48d3559f776de529c95666d4d4f762c8fbc82d2
 
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Windows przy użyciu Portalu firmy?
 
-Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy lub [witryny Portal firmy](reset-your-device-cpwebsite.md) powoduje przywrócenie na urządzeniu ustawień fabrycznych oraz usunięcie wszystkich aplikacji, ustawień i danych, łącznie z danymi osobistymi. Wpływ na poszczególne urządzenia zależy od typu urządzenia i sposobu korzystania z niego (zgodnie z opisem w poniższej tabeli). Aby uzyskać instrukcje dotyczące resetowania utraconego lub skradzionego urządzenia, zobacz [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-lost-or-stolen-device-windows.md).
+Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy lub [witryny Portal firmy](reset-erase-your-device-cpwebsite.md) powoduje przywrócenie na urządzeniu ustawień fabrycznych oraz usunięcie wszystkich aplikacji, ustawień i danych, łącznie z danymi osobistymi. Wpływ na poszczególne urządzenia zależy od typu urządzenia i sposobu korzystania z niego (zgodnie z opisem w poniższej tabeli). Aby uzyskać instrukcje dotyczące resetowania utraconego lub skradzionego urządzenia, zobacz [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md).
 
 |Konfiguracja urządzenia i zarządzanie nim|Typ urządzenia|
 |---------------------------------------|---------------|
@@ -39,6 +39,6 @@ Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO4-->
 
 
