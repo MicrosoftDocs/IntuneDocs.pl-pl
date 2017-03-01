@@ -5,7 +5,7 @@ description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Win
 keywords: 
 author: staciebarker
 ms.author: stabar
-ms.date: 01/24/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
-ms.openlocfilehash: 4b1b466c62ac1c8e03bc6cebd5e214649160185f
+ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
+ms.openlocfilehash: 9606d8f79166e6b38f02aefd4afc52f2a47c1362
+ms.lasthandoff: 02/16/2017
 
 
 ---
@@ -23,14 +25,11 @@ ms.openlocfilehash: 4b1b466c62ac1c8e03bc6cebd5e214649160185f
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 Komputery z systemem Windows można zarejestrować, instalując oprogramowanie klienckie usługi Intune. Oprogramowanie klienckie usługi Intune można zainstalować na następujące sposoby:
 
-- Instalacja przez administratora IT:
-  - Instalacja ręczna
-  - Instalacja za pomocą zasad grupy
-  - Instalacja jest dołączona do obrazu dysku
+- Przez administratora IT przy użyciu jednej z następujących metod: instalacja ręczna, zasady grupy lub instalacja dołączona na obrazie dysku
 
-- Ręczna instalacja oprogramowania klienckiego przez użytkowników końcowych
+- Instalacja ręczna oprogramowania klienckiego przez użytkowników końcowych
 
-Oprogramowanie klienckie usługi Intune wdrażane przez administratora IT dla użytkownika lub pobierane przez użytkownika końcowego zawiera oprogramowanie spełniające minimalne wymogi i niezbędne do rejestracji komputera z użyciem funkcji zarządzania usługi Intune. Po zarejestrowaniu komputera oprogramowanie klienckie usługi Intune pobiera pełne oprogramowanie klienckie, niezbędne do zarządzania komputerami.
+Oprogramowanie klienckie usługi Intune zawiera minimalne składniki oprogramowania niezbędne do zarejestrowania komputera w zarządzaniu przy użyciu usługi Intune. Po zarejestrowaniu komputera oprogramowanie klienckie usługi Intune pobiera pełne oprogramowanie klienckie wymagane do zarządzania komputerami.
 
 Powyższa seria pobrań zmniejsza wpływ na przepustowość sieci i skraca do minimum czas wymagany do rejestrowania początkowego komputera w usłudze Intune. Gwarantuje to również, że po ukończeniu drugiego pobierania klient ma najnowsze dostępne oprogramowanie.
 
@@ -44,8 +43,7 @@ Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie ins
 
 2.  Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
 
-    > [!NOTE]
-    > Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
+Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
 
 3.  Wyodrębnij zawartość pakietu instalacyjnego w bezpiecznej lokalizacji w sieci.
 
@@ -108,11 +106,56 @@ Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako cz�
 
 ## <a name="instruct-users-to-self-enroll"></a>Instruowanie użytkowników odnośnie samodzielnej rejestracji
 
-Użytkownicy mogą zainstalować oprogramowanie klienckie usługi Intune, przechodząc do [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Jeśli portal sieci Web może wykryć, że urządzenie jest komputerem z systemem Windows, użytkownicy będą monitowani o pobranie klienta oprogramowania usługi Intune w celu zarejestrowania komputera. Po pobraniu oprogramowania użytkownicy mogą je zainstalować w celu umożliwienia zarządzania ich komputerami.
+Użytkownicy instalują oprogramowanie klienckie usługi Intune, przechodząc do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com). Konkretne informacje, które widzą użytkownicy w portalu sieci Web, różnią się w zależności od urzędu certyfikacji MDM oraz platformy lub wersji systemu operacyjnego komputera użytkownika. 
 
-Konkretne informacje, które widzą użytkownicy w portalu sieci Web, mogą się różnić w zależności od urzędu certyfikacji MDM oraz platformy i wersji komputera użytkownika.
+Jeśli użytkownikom nie przypisano licencji usługi Intune lub nie ustawiono usługi Intune jako urzędu certyfikacji zarządzania urządzeniami przenośnymi organizacji, opcje rejestracji nie są widoczne dla użytkowników.
 
-![Portal usługi Intune monituje o pobranie klienta oprogramowania usługi Intune](../media/software-client-download.png)
+Jeśli użytkownikom przypisano licencję usługi Intune i ustawiono usługę Intune jako urząd certyfikacji zarządzania urządzeniami przenośnymi organizacji:
+
+- Dla użytkowników komputerów z systemem Windows 7 lub Windows 8 jest wyświetlana TYLKO opcja rejestracji w usłudze Intune przez pobranie i zainstalowanie komputerowego oprogramowania klienckiego, które jest unikatowe dla organizacji.
+
+- Dla użytkowników komputerów z systemem Windows 10 lub Windows 8.1 są wyświetlane dwie opcje rejestracji:
+
+  -  **Zarejestruj komputer jako urządzenie przenośne**: użytkownicy wybierają przycisk **Dowiedz się, jak zarejestrować** i przechodzą do instrukcji dotyczących sposobu rejestracji komputera jako urządzenia przenośnego. Ten przycisk jest zawsze wyświetlany, ponieważ rejestracja w zarządzaniu urządzeniami przenośnymi jest uznawana za domyślną i preferowaną opcję rejestracji. Jednak opcja zarządzania urządzeniami przenośnymi nie została uwzględniona w tym temacie, który obejmuje tylko instalację oprogramowania klienckiego.
+  - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który poprowadzi ich przez proces instalacji oprogramowania klienckiego.
+
+Poniższa tabela zawiera podsumowanie opcji.
+
+  ![Domyślne opcje rejestracji dla danej platformy](../media/default-enrollment-options-table.png)
+
+Na poniższych zrzutach ekranu przedstawiono zawartość wyświetlaną dla użytkowników podczas rejestrowania urządzeń przy użyciu oprogramowania klienckiego.
+
+Najpierw wyświetlany jest monit o zidentyfikowanie lub zarejestrowanie urządzeń przez użytkowników.
+
+  ![identyfikowanie lub rejestrowanie urządzenia](../media/identify-device-or-enroll.png)
+
+W celu zainstalowania komputerowego oprogramowania klienckiego przez użytkowników musisz poinformować ich, aby wybrali link **Kliknij tutaj , aby je pobrać**, który umożliwia użytkownikom pobranie komputerowego oprogramowania klienckiego i prowadzi ich przez proces instalacji. Przycisk **Dowiedz się, jak zarejestrować** powoduje przejście do dokumentacji dotyczącej sposobu rejestrowania za pomocą opcji rejestracji w zarządzaniu urządzeniami przenośnymi, która nie została uwzględniona w tej instrukcji oprogramowania klienckiego.
+
+  ![wybieranie linku Kliknij tutaj, aby ją pobrać](../media/enroll-your-windows-device.png)
+
+Po kliknięciu linku przez użytkowników jest wyświetlany przycisk **Pobierz oprogramowanie**, który należy wybrać, aby rozpocząć instalację komputerowego oprogramowania klienckiego.
+
+  ![wybieranie przycisku Pobierz oprogramowanie](../media/download-pc-client-software.png)
+
+Użytkownicy są proszeni o zalogowanie się za pomocą firmowych poświadczeń.
+
+  ![Logowanie się przy użyciu poświadczeń](../media/sign-in-to-intune.png)
+
+Użytkownicy przechodzą do strony powitalnej instalacji.
+
+  ![Strona powitalna instalacji klienta komputerowego](../media/welcome-to-pc-agent-install-wizard.png)
+
+Użytkownicy wybierają przycisk **Dalej**, po czym rozpoczyna się instalacja.
+
+  ![Strona powitalna instalacji klienta komputerowego](../media/welcome-to-pc-agent-install-wizard.png)
+
+Po zakończeniu instalacji użytkownicy wybierają przycisk **Zakończ**.
+
+  ![Zakończenie instalacji klienta komputerowego](../media/completed-the-setup-wizard.png)
+
+Jeśli użytkownicy podejmą próbę zarejestrowania komputera jako urządzenia przenośnego po zarejestrowaniu za pomocą komputerowego oprogramowania klienckiego usługi Intune, zostanie wyświetlony następujący ekran błędu.
+
+  ![Ekran wyświetlany, jeśli komputer jest już zarejestrowany](../media/page-shown-if-pc-already-enrolled.png)
 
 ## <a name="monitor-and-validate-successful-client-deployment"></a>Monitorowanie i weryfikowanie pomyślnego wdrożenia klienta
 Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowanie pomyślnego wdrożenia klienta.
@@ -140,9 +183,4 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Rozwiązywanie problemów z instalacją klienta](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
