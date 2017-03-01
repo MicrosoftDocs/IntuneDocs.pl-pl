@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3ee87c8f6104b06c8a9492566ff160540624f17e
-ms.openlocfilehash: 79faa771a9af0761703ca3e72b937fab1a83a81f
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 66c189ed45b8b5226e36ef4769c0872c428646bb
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="how-to-configure-email-settings"></a>Konfigurowanie ustawień poczty e-mail 
+# <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -85,9 +86,4 @@ Jeśli użytkownik skonfigurował już konto e-mail, wynik przypisania profilu p
 - **Windows**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika.
 - **Android**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune.
 Ponieważ system Android nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one się nawzajem zastępować.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

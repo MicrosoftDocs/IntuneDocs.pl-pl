@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 02/03/17
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,18 @@ ms.assetid: d408aa38-7d1e-40df-9067-246e53f6e26f
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: 71d29a245f8f900a7427528167bae0b52565d42b
+ms.sourcegitcommit: 37c56d0c219c61c345874b24e8ba9ac640f1ef76
+ms.openlocfilehash: 4c2ebe535935518127a799ae0518c43a2e53de72
+ms.lasthandoff: 02/17/2017
 
 
 ---
 
-# <a name="add-apple-configurator-serial-numbers"></a>Dodawanie numerów seryjnych programu Apple Configurator 
+# <a name="add-apple-configurator-serial-numbers"></a>Dodawanie numerów seryjnych programu Apple Configurator
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-W krokach tych opisano dodawanie numerów seryjnych do usługi Intune w przypadku [rejestracji urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień]((enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). Można dodawać numery seryjne pojedynczo lub załadować plik wartości rozdzielany przecinkami (CSV) numerów seryjnych. Po dodaniu numerów seryjnych można do nich przypisać profil. Profil zawiera określone ustawienia zarządzania, które mają być zastosowane do urządzeń. 
+W krokach tych opisano dodawanie numerów seryjnych do usługi Intune w przypadku [rejestracji urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). Można dodawać numery seryjne pojedynczo lub załadować plik wartości rozdzielonych przecinkami (CSV) z numerami seryjnymi. Po dodaniu numerów seryjnych można do nich przypisać profil. Profil zawiera określone ustawienia zarządzania, które mają być zastosowane do urządzeń.
 
 Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Choose how to enroll iOS devices in Intune](choose-ios-enrollment-method.md) (Wybieranie sposobu rejestrowania urządzeń z systemem iOS w usłudze Intune).
 
@@ -35,7 +36,7 @@ Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Ch
     F7TLWCLBX196, szczegóły urządzenia</br>
     DLXQPCWVGHMJ, szczegóły urządzenia
 
-2. W witrynie Azure Portal wybierz pozycję **Więcej usług**, w polu tekstowym wprowadź nazwę **Intune**, a następnie wybierz kolejno pozycje **Inne** > **Intune**.
+2. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
 3.  W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie pozycję **Rejestracja Apple**.
 
@@ -51,11 +52,13 @@ Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Ch
 
 Usługa Intune umożliwia przypisywanie profilów z dwóch różnych miejsc w portalu Azure. Można wykonać kroki poniżej lub przypisać profile z bloku Profile rejestracji programu Apple Configurator, w którym tworzy się profil (zobacz artykuł [Enroll iOS devices with Apple Configurator by using Setup Assistant](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md) (Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień). Możesz użyć kroków poniżej do przypisania profilu tylko, jeśli profil został już utworzony.
 
-1. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie pozycję **Rejestracja Apple**.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
-2. W bloku **Numery seryjne programu Apple Configurator** wybierz numery seryjne, do których chcesz przypisać profil, a następnie wybierz pozycję **Przypisz profil**.
+2. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie pozycję **Rejestracja Apple**.
 
-3. W bloku **Przypisz profil** wybierz profil, który chcesz przypisać, a następnie wybierz przycisk **Przypisz**.
+3. W bloku **Numery seryjne programu Apple Configurator** wybierz numery seryjne, do których chcesz przypisać profil, a następnie wybierz pozycję **Przypisz profil**.
+
+4. W bloku **Przypisz profil** wybierz profil, który chcesz przypisać, a następnie wybierz przycisk **Przypisz**.
 
 ## <a name="delete-serial-numbers"></a>Usuwanie numerów seryjnych
 Zaimportowane wcześniej numery seryjne można usunąć. Numery seryjne można usunąć tylko wtedy, gdy urządzenie zostanie najpierw wyrejestrowane. Po usunięciu numeru seryjnego nie można użyć programu Apple Configurator za pomocą Asystenta ustawień, chyba że numer seryjny zostanie ponownie dodany.
@@ -70,9 +73,4 @@ Numery seryjne urządzenia mogą mieć jeden z trzech stanów:
 **Aby wyświetlić stan numeru seryjnego**
 
 W bloku **Numery seryjne programu Apple Configurator** wybierz numer seryjny, którego stan chcesz zobaczyć, i poszukaj w obszarze elementu **Stan**.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

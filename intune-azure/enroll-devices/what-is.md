@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 10cf9980468eff912557747c31994747c17a3ab4
-ms.openlocfilehash: 01bf32ef874385019ea4b0fb0ce278554459287d
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: a92daf02c6fb2405c1255ff4ff8988f669dd76ce
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -43,33 +44,33 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 **Metody rejestracji urządzeń z systemem iOS**
 
-| **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły** |
+| **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  | [Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
-|**[Device Enrollment Program](#dep)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
-|**[USB-SA](#usb-sa)**| Tak |   Opcjonalne |  Nie| [Więcej informacji](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
-|**[USB-Direct](#usb-direct)**| Nie |    Nie  | Nie|[Więcej informacji](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
+|**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    | [Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[Device Enrollment Program](#dep)**|    Tak |    Opcjonalne |    Opcjonalne|[Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[USB-SA](#usb-sa)**|    Tak |    Opcjonalne |    Nie| [Więcej informacji](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
+|**[USB-Direct](#usb-direct)**|    Nie |    Nie    | Nie|[Więcej informacji](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
 
 
 
 **Metody rejestracji urządzeń z systemem Windows**
 
-| **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły**|
+| **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|   Tak |   Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](enroll-devices-using-device-enrollment-manager.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|    Tak |    Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
+|**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    |[Więcej informacji](enroll-devices-using-device-enrollment-manager.md)|
 
 **Metody rejestracji urządzeń z systemem Android**
 
-| **Metoda** |  **Wymagane wyczyszczenie?** |    **Koligacja**    |   **Blokada** | **Szczegóły**|
+| **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
+|**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    |[Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
 
 
 ## <a name="byod"></a>„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)
-Użytkownicy korzystający z metody „Przynieś własne urządzenie” instalują aplikację Portal firmy i rejestrują swoje urządzenie. Umożliwia to użytkownikom nawiązanie połączenia z siecią firmową i dołączenie do domeny lub usługi Azure Active Directory. W przypadku większości platform należy włączyć rejestrowanie w trybie „Przynieś własne urządzenie” (BYOD, bring your own device) w wielu scenariuszach dotyczących urządzeń należących do firmy (COD, company-owned device).
+Użytkownicy korzystający z metody „Przynieś własne urządzenie” instalują aplikację Portal firmy i rejestrują swoje urządzenie. Umożliwia to użytkownikom nawiązanie połączenia z siecią firmową i dołączenie do domeny lub usługi Azure Active Directory. W przypadku większości platform należy włączyć rejestrowanie w trybie „Przynieś własne urządzenie” (BYOD, bring your own device) w wielu scenariuszach dotyczących urządzeń należących do firmy (COD, company-owned device). Możesz zablokować możliwość rejestrowania urządzeń z systemem iOS i Android będących własnością użytkowników. Instrukcje zawiera temat [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 ## <a name="corporate-owned-devices"></a>Urządzenia należące do firmy
 Urządzeniami należącymi do firmy można zarządzać za pomocą portalu Azure. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi dostarczonych przez firmę Apple. Wszystkie typy urządzeń mogą być rejestrowane przez administratora lub menedżera za pomocą menedżera rejestracji urządzeń. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy, umożliwiając korzystanie ze scenariuszy COD.
@@ -80,8 +81,8 @@ Menedżer rejestracji urządzeń to specjalne konto użytkownika używane do rej
 ### <a name="dep"></a>Program Device Enrollment Program
 Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień systemu iOS. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
 
-  - Rejestrację zablokowaną
-  - Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
+  -    Rejestrację zablokowaną
+  -    Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
 
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 
@@ -91,8 +92,8 @@ Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 
 ### <a name="usb-sa"></a>USB-SA
 Korzystając z programu Apple Configurator za pośrednictwem połączenia USB, administratorzy IT mogą ręcznie przygotować każde urządzenie firmowe do rejestracji przy użyciu Asystenta ustawień. Administrator IT tworzy profil rejestracji i eksportuje go do programu Apple Configurator. Gdy użytkownicy otrzymują swoje urządzenia, są następnie proszeni o uruchomienie Asystenta ustawień w zarejestrowania swojego urządzenia. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
-  - Rejestrację zablokowaną
-  - Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
+  -    Rejestrację zablokowaną
+  -    Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
 
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 
@@ -127,9 +128,4 @@ Zobacz artykuł [Supported devices and browsers for Intune](https://docs.microso
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM
 
 Certyfikat MDM jest odnawiany automatycznie, gdy urządzenia przenośne komunikują się z usługą Intune. W przypadku wyczyszczenia urządzeń przenośnych (nie komputerów) lub niekomunikowania się przez nie z usługą Intune przez pewien czas certyfikat MDM nie zostanie odnowiony. Urządzenie zostanie usunięte z portalu Azure 180 dni po wygaśnięciu certyfikatu MDM.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

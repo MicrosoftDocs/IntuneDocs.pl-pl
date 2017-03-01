@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 12/13/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: c228601451b33238d0f6929987dcdec3a5e56e8d
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: a08274fd4b2d3105b28f46a6d35257b3664f7510
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -32,7 +33,7 @@ Poniższe informacje pomogą zdecydować, której metody rejestracji urządzeń 
 
 ## <a name="user-owned-ios-devices-byod"></a>Urządzenia z systemem iOS należące do użytkownika (BYOD)
 
-Jeśli użytkownik chce zarejestrować własne urządzenie BYOD (Bring Your Own Device, przynieś własne urządzenie), jedyna dostępna metoda rejestracji dla użytkowników polega na pobraniu aplikacji dla systemu iOS z portalu Portal firmy ze sklepu z aplikacjami i postępowaniu zgodnie z instrukcjami rejestracji w aplikacji. Po zarejestrowaniu użytkownicy mogą nawiązać połączenie z siecią firmową, przyłączyć się do domeny lub usługi Azure Active Directory i uzyskać dostęp do zasobów firmy.
+Jeśli użytkownik chce zarejestrować własne urządzenie BYOD (Bring Your Own Device, przynieś własne urządzenie), jedyna dostępna metoda rejestracji dla użytkowników polega na pobraniu aplikacji dla systemu iOS z portalu Portal firmy ze sklepu z aplikacjami i postępowaniu zgodnie z instrukcjami rejestracji w aplikacji. Po zarejestrowaniu użytkownicy mogą nawiązać połączenie z siecią firmową, przyłączyć się do domeny lub usługi Azure Active Directory i uzyskać dostęp do zasobów firmy. Możesz zablokować możliwość rejestrowania urządzeń z systemem iOS będących własnością użytkowników. Instrukcje zawiera temat [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 ## <a name="apple-configurator"></a>Program Apple Configurator
 
@@ -48,9 +49,4 @@ Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionyc
 
 ## <a name="use-the-device-enrollment-manager-dem"></a>Korzystanie z menedżera rejestracji urządzeń (DEM)
 Menedżer rejestracji urządzeń jest typem konta użytkownika, które umożliwia rejestrację maksymalnie 1000 urządzeń oraz zarządzanie nimi. Istniejących użytkowników dodaje się do konta menedżera rejestracji urządzeń w celu nadania im tych funkcji. Każde urządzenie, które rejestruje użytkownik DEM, korzysta z pojedynczej licencji usługi Intune. Aby uzyskać więcej informacji, zobacz artykuł [Enroll devices using device enrollment manager](enroll-devices-using-device-enrollment-manager.md) (Rejestracja urządzeń przy użyciu menedżera rejestracji urządzeń).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

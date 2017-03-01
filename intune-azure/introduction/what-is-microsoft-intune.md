@@ -1,21 +1,23 @@
 ---
-title: "Wprowadzenie do usługi Intune w wersji zapoznawczej portalu Azure | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Wprowadzenie do usługi Intune w wersji zapoznawczej witryny Azure Portal"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: uzyskaj podstawowe informacje o usłudze Intune w wersji zapoznawczej portalu Azure i o sposobach, w jakie może ona ułatwić zarządzanie urządzeniami."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 01/08/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
-ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 1024d2a33d843c628ffbb68f7b01a5d511191e7e
-ms.openlocfilehash: f7f6dd79531d8d69eda3ed80bbb1cddf2692ab81
+ms.sourcegitcommit: 851ed5e9967939a930d6d9c22a23d7c72a7b52a7
+ms.openlocfilehash: f6f8babaca68fdb75ab6ff36d931f8dbd734acf0
+ms.lasthandoff: 02/16/2017
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: f7f6dd79531d8d69eda3ed80bbb1cddf2692ab81
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Usługa Microsoft Intune jest przenoszona do portalu Azure, co oznacza, że używane przez Ciebie przepływy pracy i funkcje ulegną zmianie.
-Nowy portal oferuje wersję zapoznawczą nowych i zaktualizowanych funkcji w portalu Azure Portal, w którym możesz zarządzać urządzeniami przenośnymi, komputerami i aplikacjami w swojej organizacji.
+Nowy portal oferuje wersję zapoznawczą nowych i zaktualizowanych funkcji w witrynie Azure Portal, w której możesz zarządzać urządzeniami przenośnymi, komputerami i aplikacjami w swojej organizacji.
 Ostatecznie wszystkie funkcje usługi Intune zostaną przeniesione na platformę Azure, ale już dziś można wykonać niektóre zadania usługi Intune w portalu Azure. Ponieważ nowe środowisko jest dostępne w wersji zapoznawczej, niektóre funkcje mogą jeszcze nie znajdować się w portalu. Szczegółowe informacje można znaleźć w sekcji [Co nowego w wersji zapoznawczej](#what's-new-in-the-preview).
 
 > [!IMPORTANT]
@@ -44,14 +46,14 @@ Do najważniejszych elementów nowego środowiska należą:
 - Zintegrowana konsola dla wszystkich składników Enterprise Mobility + Security (EMS)
 - Konsola oparta na języku HTML, skonstruowana zgodnie ze standardami sieci Web
 - Obsługa interfejsu API programu Microsoft Graph w celu zautomatyzowania wielu działań
-- Grupy usługi Azure AD w celu zapewnienia zgodności wszystkich aplikacji Azure
+- Grupy usługi Azure Active Directory (AD) w celu zapewnienia zgodności wszystkich aplikacji Azure
 - Obsługa większości nowoczesnych przeglądarek sieci Web
 
 Jeśli szukasz dokumentacji klasycznej konsoli usługi Intune, zobacz [bibliotekę dokumentacji usługi Intune](https://docs.microsoft.com/en-us/intune/).
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Aby skorzystać z usługi Intune w portalu Azure Portal, musisz mieć konto administratora i konto dzierżawy usługi Intune. W celu utworzenia konta można zarejestrować się [tutaj](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
+Aby skorzystać z usługi Intune w portalu Azure Portal, musisz mieć konto administratora i konto dzierżawy usługi Intune. [Utwórz konto](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20), jeśli jeszcze go nie masz.
 
 ## <a name="supported-web-browsers-for-the-azure-portal"></a>Obsługiwane przeglądarki internetowe w portalu Azure
 
@@ -64,7 +66,7 @@ Obecnie obsługiwane są następujące przeglądarki:
 - Chrome (najnowsza wersja)
 - Firefox (najnowsza wersja)
 
-Najnowsze informacje o obsługiwanych przeglądarkach można uzyskać [tutaj](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices).
+Sprawdź najnowsze informacje o obsługiwanych przeglądarkach w witrynie [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices).
 
 ## <a name="whats-in-this-library"></a>Co znajduje się w tej bibliotece?
 
@@ -76,35 +78,25 @@ Dokumentacja odzwierciedla układ portalu usługi Intune, co ułatwia znalezieni
 Information to help you plan and design your Intune environment.
 [Read more](/intune-azure/plan-and-design/get-started) --->
 ### <a name="enroll-devices"></a>Rejestrowanie urządzeń
-Jak zarządzać urządzeniami za pomocą usługi Intune.
-[Przeczytaj więcej](/intune-azure/enroll-devices/what-is)
+[Jak zarządzać urządzeniami za pomocą usługi Intune](/intune-azure/enroll-devices/what-is).
 ### <a name="devices--groups"></a>Urządzenia i grupy
-Ustal, jakimi urządzeniami zarządzasz, za pomocą spisu i raportów.
-[Przeczytaj więcej](/intune-azure/manage-devices/what-is)
+[Za pomocą spisu i raportów ustal, jakimi urządzeniami zarządzasz](/intune-azure/manage-devices/what-is).
 ### <a name="manage-users"></a>Zarządzanie użytkownikami
-Uzyskaj informacje na temat użytkowników urządzeń, którymi zarządzasz.
-[Przeczytaj więcej](/intune-azure/manage-users/what-is)
+[Uzyskaj informacje na temat użytkowników urządzeń, którymi zarządzasz](/intune-azure/manage-users/what-is).
 ### <a name="manage-apps"></a>Zarządzanie aplikacjami
-Zawiera informacje o sposobie publikowania, konfigurowania i ochrony aplikacji oraz zarządzania nimi.
-[Przeczytaj więcej](/intune-azure/manage-apps/what-is-app-management)
+[Jak publikować, konfigurować i ochronić aplikacje oraz zarządzać nimi](/intune-azure/manage-apps/what-is-app-management).
 ### <a name="configure-devices"></a>Konfigurowanie urządzeń
-Zawiera informacje o profilach, których można użyć do skonfigurowania ustawień i funkcji na urządzeniach, którymi zarządzasz.
-[Przeczytaj więcej](/intune-azure/configure-devices/what-are-device-profiles)
+[Poznaj profile, których można użyć do skonfigurowania ustawień i funkcji na urządzeniach, którymi zarządzasz](/intune-azure/configure-devices/what-are-device-profiles).
 ### <a name="set-device-compliance"></a>Ustaw zgodność urządzenia
-Zdefiniuj poziom zgodności urządzeń, a następnie zgłoś wszystkie niezgodne urządzenia [Przeczytaj więcej](/intune-azure/set-device-compliance/what-is-device-compliance)
+[Zdefiniuj poziom zgodności urządzeń, a następnie zgłoś wszystkie niezgodne urządzenia](/intune-azure/set-device-compliance/what-is-device-compliance).
 ### <a name="conditional-access"></a>Dostęp warunkowy
-Ogranicz dostęp do usług programu Exchange w zależności od określonych warunków.
-[Przeczytaj więcej](/intune-azure/conditional-access/what-is-conditional-access)
+[Ogranicz dostęp do usług programu Exchange w zależności od określonych warunków](/intune-azure/conditional-access/what-is-conditional-access).
 ### <a name="access-control"></a>Kontrola dostępu
-Decyduj, kto może wykonywać różne akcje usługi Intune, i kogą mogą one dotyczyć. Możesz użyć wbudowanych ról, które obejmują kilka typowych scenariuszy usługi Intune, lub utworzyć własne.
-[Przeczytaj więcej](/intune-azure/access-control/role-based-access-control)
+[Decyduj, kto może wykonywać różne akcje usługi Intune i kogo mogą one dotyczyć](/intune-azure/access-control/role-based-access-control). Możesz użyć wbudowanych ról, które obejmują kilka typowych scenariuszy usługi Intune, lub utworzyć własne.
 
 
-## <a name="whats-new"></a>Co nowego?
+
+## <a name="whats-new"></a>Co nowego
 
 [Dowiedz się, co nowego w wersji zapoznawczej](/intune-azure/introduction/whats-new).
-
-
-<!--HONumber=Feb17_HO1-->
-
 

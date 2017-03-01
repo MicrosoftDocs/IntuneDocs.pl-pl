@@ -1,11 +1,12 @@
 ---
-title: "Jak skonfigurować certyfikaty z użyciem usługi Intune | Usługa Intune Azure w wersji zapoznawczej | Dokumentacja firmy Microsoft"
+title: "Jak skonfigurować certyfikaty z użyciem usługi Intune"
+titleSuffix: Intune Azure preview
 description: "Usługa Intune Azure w wersji zapoznawczej: Dowiedz się, jak tworzyć i przypisywać certyfikaty, które pozwolą zabezpieczyć sieci Wi-Fi i VPN oraz inne połączenia, korzystając z usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,16 @@ ms.technology:
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 3f05e0018fb202ab5774e935c3f59855e4aa2e75
-ms.openlocfilehash: a0183f2a170ed458b19c7688b20ee5ba5c2c696e
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 364534ad788466f8b268b4091decee5326b94163
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="how-to-configure-certificates-with-intune-azure-preview"></a>Jak skonfigurować certyfikaty z użyciem usługi Intune Azure w wersji zapoznawczej
+# <a name="how-to-configure-certificates-in-microsoft-intune"></a>Jak skonfigurować certyfikaty z użyciem usługi Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -42,8 +45,8 @@ Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem si
 
     Na urządzeniach korzystających z następujących platform można używać wyłącznie profilów certyfikatów protokołu SCEP:
 
--   System macOS 10.9 i nowsze
--   System Windows Phone 8.1 lub nowszy
+-     System macOS 10.9 i nowsze
+-     System Windows Phone 8.1 lub nowszy
 
 Dla każdej platformy urządzenia należy utworzyć oddzielny profil. Po utworzeniu certyfikatu należy go skojarzyć z utworzonym profilem zaufanego certyfikatu głównego.
 
@@ -166,8 +169,8 @@ W witrynie Azure Portal wybierz obciążenie **Konfiguruj urządzenia**.
 7. W bloku **Certyfikat PKCS** skonfiguruj następujące ustawienia:
     - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
     - **Okres ważności certyfikatu** — jeśli dla urzędu wystawiającego certyfikaty uruchomiono polecenie **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**, które dopuszcza niestandardowy okres ważności, możesz określić czas pozostały do wygaśnięcia certyfikatu.<br>Możesz podać wartość niższą niż okres ważności danego szablonu certyfikatu, ale nie wyższą. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić wartość jednego roku, ale nie pięciu lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty.
-    - **Dostawca magazynu kluczy (KSP)** (Windows 10) — 
-    - **urząd certyfikacji** -
+    - **Dostawca magazynu kluczy (KSP)** (Windows 10) -
+    - **Urząd certyfikacji** -
     - **Nazwa urzędu certyfikacji** -
     - **Nazwa szablonu certyfikatu** — wprowadź nazwę szablonu certyfikatu, do którego użycia skonfigurowano usługę rejestracji urządzeń sieciowych i który dodano do urzędu wystawiającego certyfikaty.
     Upewnij się, że nazwa ta dokładnie pokrywa się z nazwą jednego z szablonów certyfikatów wymienionych w rejestrze serwera z uruchomioną usługą rejestracji urządzeń sieciowych. Zwróć uwagę, aby podać nazwę szablonu certyfikatu, a nie nazwę wyświetlaną szablonu certyfikatu. 
@@ -196,9 +199,4 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 
 ## <a name="next-steps"></a>Następne kroki
 Ogólne informacje dotyczące sposobu przypisywania profilów urządzeń znajdują się w temacie [How to assign device profiles](how-to-assign-device-profiles.md) (Jak przypisywać profile urządzeń).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -19,11 +19,11 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 
 4. Wybierz pozycję **Konfiguruj**, aby rozpocząć konfigurowanie automatycznej rejestracji w usłudze MDM za pomocą usługi Microsoft Intune.
 
-5. Określ adresy URL dla usługi Intune:
+5. Użyj wartości domyślnych dla następujących adresów URL:
 
-  - **Adres URL rejestracji w usłudze MDM** — użyj wartości domyślnej.
-  - **Adres URL warunków użytkowania usługi MDM** — Użyj wartości domyślnej. Ten adres URL wyświetla warunki użytkowania dla użytkowników podczas rejestrowania urządzeń.
-  - **Adres URL zgodności usługi MDM** — Użyj wartości domyślnej. Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat **Odmowa dostępu** z tym adresem URL. Adres URL wskazuje stronę, która pomaga użytkownikom zrozumieć, dlaczego ich urządzenie nie jest zgodne z zasadami i w jaki sposób można przywrócić jego zgodność.
+  - **Rejestracja w usłudze zarządzania urządzeniami przenośnymi**
+  - **Warunki użytkowania usługi zarządzania urządzeniami przenośnymi** 
+  - **Zgodność z usługą zarządzania urządzeniami przenośnymi**
 
 6.  Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Urządzenia z systemem Windows 10 tych użytkowników zostaną automatycznie zarejestrowane w usłudze Microsoft Intune.
 
@@ -32,8 +32,3 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
   - **Brak**
 
 7. Wybierz polecenie **Zapisz**.
-
-
-<!--HONumber=Feb17_HO2-->
-
-

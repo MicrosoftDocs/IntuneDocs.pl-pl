@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/22/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: c1a9053f-02a7-4735-bc0d-fe4573b31ed4
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aff935508551b45ee0a69f907506b0703290fddf
-ms.openlocfilehash: abe6fb1a5684cbeb0b893793a1932652b7ec1c16
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 674a806b16d1f88413c1d1bbda1fb1d4f3363771
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="vpn-settings-for-windows-phone-81-devices-in-intune-azure-preview"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows Phone 8.1 w wersji zapoznawczej usługi Intune Azure
+# <a name="vpn-settings-for-windows-phone-81-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -98,9 +99,4 @@ Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera doku
     - **Adres** — wprowadź adres serwera proxy (jako adres IP).
     - **Numer portu** — wprowadź numer portu skojarzony z serwerem proxy.
 - **Pomijaj serwer proxy dla adresów lokalnych** — zaznacz tę opcję, aby serwer proxy nie był używany dla określonych adresów lokalnych w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

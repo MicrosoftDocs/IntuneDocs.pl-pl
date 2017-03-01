@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 89229a5e-3421-4221-a62f-fa800620cc0d
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac907e4cb63e4175dafc4c50239d3e0cbe581ad9
-ms.openlocfilehash: 1790878c1d1b4ad8381e6c3a3689542877ec6d26
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 85224b2758eeb1f9c7745b9f18f250a7d1292e0f
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="intune-wi-fi-settings-for-ios-devices-in-intune-azure-preview"></a>Ustawienia sieci Wi-Fi w usłudze Intune dla urządzeń z systemem iOS w wersji zapoznawczej usługi Intune Azure
+# <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -42,7 +43,7 @@ ms.openlocfilehash: 1790878c1d1b4ad8381e6c3a3689542877ec6d26
 - **Typ zabezpieczeń** — wybierz protokół zabezpieczeń do uwierzytelniania sieci Wi-Fi:
     - **Otwórz (bez uwierzytelniania)** — tej opcji można używać tylko, jeśli sieć jest niezabezpieczona.
     - **WPA/WPA2-Personal**
-    - **WEP**
+    - **Szyfrowanie danych**
 
 ## <a name="wi-fi-settings-for-enterprise-profiles-only"></a>Ustawienia sieci Wi-Fi tylko dla profilów firmowych
 
@@ -78,9 +79,4 @@ ms.openlocfilehash: 1790878c1d1b4ad8381e6c3a3689542877ec6d26
 |--------------|-------------|----------|
 |**Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.|Jako typ protokołu EAP wybrano wartość **EAP-TLS**|
 |**Metoda uwierzytelniania**|Wybierz metodę uwierzytelniania dla połączenia:<br>- **Certyfikaty**, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- **Nazwa użytkownika i hasło**, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji **Nazwa użytkownika i hasło** należy skonfigurować ustawienia:<br><br>-  **Metoda inna niż EAP (tożsamość wewnętrzna)**, a następnie wybrać sposób uwierzytelniania połączenia:<br>- **Brak**<br>- **Hasło nieszyfrowane (PAP)**<br>- **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP wersja 2 (MS-CHAP v2)**<br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br>**i**<br><br>- **Prywatność tożsamości (tożsamość zewnętrzna)** — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.|Jako typ protokołu EAP wybrano wartość **EAP-TTLS** lub *
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

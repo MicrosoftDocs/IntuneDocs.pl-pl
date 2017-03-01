@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,18 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 424fae862592c1ab5b4221fb5ad40a52c39f6760
-ms.openlocfilehash: d8615611eb715da66b1cf0972b885fbccb12fe6a
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 6d41adabfab178daa7f6fce3d86bc8216bf4ab29
+ms.lasthandoff: 02/16/2017
 
 ---
 
-# <a name="how-to-add-ios-line-of-business-lob-apps-to-intune"></a>Dodawanie aplikacji biznesowych (LOB) systemu iOS do usługi Intune
+# <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe dla systemu iOS do usługi Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 
-## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 — Określanie lokalizacji pliku konfiguracji oprogramowania
+## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
@@ -37,7 +38,7 @@ ms.openlocfilehash: d8615611eb715da66b1cf0972b885fbccb12fe6a
 ## <a name="step-2---configure-app-information"></a>Krok 2 — Konfigurowanie informacji o aplikacji
 
 1. W bloku **Edytuj aplikację** skonfiguruj następujące informacje. Gdy wszystko będzie gotowe, kliknij pozycję **Dodaj**. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
-    - **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
+    - **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana w Portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis aplikacji** — wprowadź opis aplikacji. Ta informacja będzie widoczna dla użytkowników w Portalu firmy.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
     - **Odpowiedni typ urządzenia** — określ, czy ta aplikacja może zostać zainstalowana w urządzeniu iPad, zgodnym urządzeniu iPod lub telefonie iPhone.
@@ -53,8 +54,3 @@ ms.openlocfilehash: d8615611eb715da66b1cf0972b885fbccb12fe6a
 2. Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Zapisz**.
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](/intune-azure/manage-apps/deploy-apps) (Jak przypisać aplikacje do grupy).
-
-
-<!--HONumber=Feb17_HO1-->
-
-

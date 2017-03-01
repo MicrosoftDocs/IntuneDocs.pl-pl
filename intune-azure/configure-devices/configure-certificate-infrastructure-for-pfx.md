@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f05e0018fb202ab5774e935c3f59855e4aa2e75
-ms.openlocfilehash: 74f2cc7221e737371d7db97ec25d872578df273d
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 6f08dc63a9afaa5e92b188883d160d0b76f3631f
+ms.lasthandoff: 02/16/2017
 
 
 
 ---
-# <a name="configure-your-intune-certificate-infrastructure-for-pkcs"></a>Konfigurowanie infrastruktury certyfikatów Intune dla standardu PKCS
+# <a name="configure-your-microsoft-intune-certificate-infrastructure-for-pkcs"></a>Konfigurowanie infrastruktury certyfikatów usługi Microsoft Intune dla standardu PKCS
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 W tym temacie opisano elementy potrzebne do utworzenia i wdrożenia profilów certyfikatów PKCS w usłudze Intune.
@@ -157,9 +158,4 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
 
 ### <a name="next-steps"></a>Następne kroki
 Teraz można skonfigurować profile certyfikatów zgodnie z opisem w artykule [How to configure certificates with Microsoft Intune](how-to-configure-certificates.md) (Jak konfigurować certyfikaty w usłudze Microsoft Intune).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 1/3/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba2affcdbcdfcd690d671c7b20f9d1e14a74f764
-ms.openlocfilehash: 171175689adca027181f3da4d05222117de97e13
+ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
+ms.openlocfilehash: f217988313debd33bcba3f8168aa03b6dbf8586e
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 171175689adca027181f3da4d05222117de97e13
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Jako administrator usługi Intune możesz zarządzać urządzeniami z systemem macOS. Portal usługi Azure domyślnie umożliwia użytkownikom rejestrowanie ich urządzeń z systemem macOS. Wystarczy poinformować użytkowników o możliwości przejścia do [witryny sieci Web portalu firmy](http://portal.manage.microsoft.com) i zarejestrowania urządzeń z systemem macOS. 
+Usługa Intune umożliwia zarządzanie urządzeniami z systemem macOS. Aby włączyć zarządzanie urządzeniami, użytkownicy muszą zarejestrować swoje urządzenia, przechodząc do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com) i postępując zgodnie z wyświetlanymi instrukcjami. Po dodaniu urządzeń z systemem macOS do zarządzania można [utworzyć ustawienia niestandardowe dla tych urządzeń](https://docs.microsoft.com/intune-azure/configure-devices/custom-for-macos). Wkrótce będzie dostępnych więcej możliwości.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -39,20 +40,17 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 
 ## <a name="set-up-macos-enrollment"></a>Konfigurowanie rejestracji urządzeń z systemem macOS
 
-Usługa Intune jest domyślnie skonfigurowana w taki sposób, aby zezwalać na rejestrację urządzeń z systemem macOS. 
+Domyślnie usługa Intune zezwala na rejestrację urządzeń z systemem macOS. 
 
-Aby wyświetlić ustawienia zezwalające na rejestrację urządzeń z systemem macOS lub blokujące możliwość ich rejestracji, przejdź do bloku Intune w portalu usługi Azure, a następnie wybierz kolejno pozycje **Rejestracja** > **Ograniczenia rejestracji**. 
+Aby zablokować rejestrowanie urządzeń z systemem macOS, zobacz [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions). 
+
+Aby ustawić maksymalną liczbę urządzeń, które użytkownik może zarejestrować, zobacz [Ustawianie ograniczeń limitu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions).
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy
 
-Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w artykule [Enroll your macOS device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos) (Rejestrowanie urządzenia z systemem macOS w usłudze Intune). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
+Musisz poinformować użytkowników końcowych, aby przeszli do [witryny internetowej Portalu firmy](http://portal.manage.microsoft.com) i postępowali zgodnie z instrukcjami, aby zarejestrować swoje urządzenia. Możesz także wysłać im link do kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos). 
 
 Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
 
 - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
 - [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](https://docs.microsoft.com/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

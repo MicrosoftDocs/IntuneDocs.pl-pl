@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,12 +14,13 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01e5bfeb98aee9314fa04679cc27c8aba0e18fb0
-ms.openlocfilehash: b29374c3abcca90de6cba7ed83866c04350f69c5
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 6026c942aea906e7e730152e6e92797ec5775bc3
+ms.lasthandoff: 02/16/2017
 
 ---
 
-# <a name="how-to-add-ios-store-apps-to-intune"></a>Jak dodać aplikacje ze sklepu z aplikacjami dla systemu iOS do usługi Intune
+# <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu iOS do usługi Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -39,7 +40,7 @@ ms.openlocfilehash: b29374c3abcca90de6cba7ed83866c04350f69c5
 
 1. W bloku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2. W bloku **Edytuj aplikację** skonfiguruj następujące informacje. Gdy wszystko będzie gotowe, kliknij pozycję **Dodaj**. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
-- **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
+- **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana w Portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis aplikacji** — wprowadź opis aplikacji. Ta informacja będzie widoczna dla użytkowników w Portalu firmy.
 - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
 - **Adres URL sklepu z aplikacjami** — wprowadź adres URL sklepu z aplikacjami dla aplikacji, którą chcesz utworzyć.
@@ -55,8 +56,3 @@ ms.openlocfilehash: b29374c3abcca90de6cba7ed83866c04350f69c5
 3. Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Zapisz**.
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](/intune-azure/manage-apps/deploy-apps) (Jak przypisać aplikacje do grupy).
-
-
-<!--HONumber=Feb17_HO1-->
-
-
