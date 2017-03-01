@@ -5,7 +5,9 @@
 ### [Utwórz konto, aby skorzystać z bezpłatnej wersji próbnej](introduction/sign-up-free-trial-microsoft-intune.md)
 ## [Co nowego](introduction/whats-new.md)
 ## [Znane problemy](introduction/known-issues-in-the-intune-preview.md)
-<!--- ## [Get support](introduction/get-support.md)
+## [Uzyskiwanie pomocy technicznej](introduction/how-to-get-support-for-microsoft-intune.md)
+<!--- 
+
 ## [Related resources](introduction/related-resources.md)
 
 ## [Get started](plan-and-design/get-started.md) --->
@@ -185,8 +187,3 @@
 ### [Narzędzie opakowujące aplikacje dla systemu Android](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool?toc=%2fintune-azure%2ftoc.json)
 ## [Zestaw SDK aplikacji usługi Intune](/intune/develop/intune-app-sdk?toc=%2fintune-azure%2ftoc.json)
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

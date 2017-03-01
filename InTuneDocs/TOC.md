@@ -206,6 +206,7 @@
 
 # [Rozwiązywanie problemów](troubleshoot/general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Jak uzyskać pomoc techniczną](troubleshoot/how-to-get-support-for-microsoft-intune.md)
+## [Monitorowanie usługi Intune przy użyciu raportów](deploy-use/understand-microsoft-intune-operations-by-using-reports.md)
 ## [Rozwiązywanie problemów z punktami końcowymi](troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune.md)
 ## [Rozwiązywanie problemów z dostępem do zasobów firmy](troubleshoot/troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
 ## [Rozwiązywanie problemów z wdrażaniem aplikacji](troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune.md)
