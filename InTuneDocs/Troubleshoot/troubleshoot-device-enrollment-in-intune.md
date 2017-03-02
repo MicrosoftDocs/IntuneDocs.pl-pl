@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 01/24/17
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
 ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
+ms.lasthandoff: 01/25/2017
 
 
 ---
@@ -261,7 +262,7 @@ Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyś
 
 **Rozwiązanie:** podaj użytkownikom końcowym następujące rozwiązania, aby pomóc im odzyskać dostęp do zasobów firmy.
 
-Po uruchomieniu w systemie iOS aplikacja Portal firmy sprawdza, czy urządzenie użytkownika nie utraciło łączności z usługą Intune. Jeśli aplikacja wykryje brak połączenia, automatycznie podejmie próbę synchronizacji z usługą Intune w celu ponownego nawiązania połączenia, czemu będzie towarzyszyć powiadomienie **Trwa próba wykonania synchronizacji...** widoczne dla użytkowników. 
+Po uruchomieniu w systemie iOS aplikacja Portal firmy sprawdza, czy urządzenie użytkownika nie utraciło łączności z usługą Intune. Jeśli aplikacja wykryje brak połączenia, automatycznie podejmie próbę synchronizacji z usługą Intune w celu ponownego nawiązania połączenia, czemu będzie towarzyszyć powiadomienie **Trwa próba wykonania synchronizacji...** widoczne dla użytkowników.
 
   ![Powiadomienie o trwającej próbie wykonania synchronizacji](./media/ios_cp_app_trying_to_sync_notification.png)
 
@@ -269,11 +270,11 @@ Jeśli synchronizacja zakończy się pomyślnie, zobaczysz w aplikacji Portal fi
 
   ![Powiadomienie informujące, że synchronizacja powiodła się](./media/ios_cp_app_sync_successful_notification.png)
 
-Jeśli synchronizacja nie powiedzie się, użytkownicy zobaczą w aplikacji Portal firmy w systemie iOS powiadomienie o treści **Nie można zsynchronizować**. 
+Jeśli synchronizacja nie powiedzie się, użytkownicy zobaczą w aplikacji Portal firmy w systemie iOS powiadomienie o treści **Nie można zsynchronizować**.
 
   ![Powiadomienie o nieudanej próbie synchronizacji](./media/ios_cp_app_unable_to_sync_notification.png)
 
-Aby rozwiązać ten problem, użytkownicy muszą użyć przycisku **Konfiguruj** znajdującego się na prawo od powiadomienia **Nie można zsynchronizować**. Przycisk Konfiguruj umożliwia przejście do ekranu przepływu Konfiguracja dostępu do zasobów firmy. Postępując zgodnie z monitami wyświetlanymi na tej stronie, można zarejestrować swoje urządzenie. 
+Aby rozwiązać ten problem, użytkownicy muszą użyć przycisku **Konfiguruj** znajdującego się na prawo od powiadomienia **Nie można zsynchronizować**. Przycisk Konfiguruj umożliwia przejście do ekranu przepływu Konfiguracja dostępu do zasobów firmy. Postępując zgodnie z monitami wyświetlanymi na tej stronie, można zarejestrować swoje urządzenie.
 
   ![Ekran Konfiguracja dostępu do zasobów firmy](./media/ios_cp_app_company_access_setup.png)
 
@@ -386,9 +387,4 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
