@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: ab035d069fa1dbf5f5f38a959dc2f896a0109b6f
+ms.sourcegitcommit: 185b7dd1e486155f90956ea1f6f83246636d421c
+ms.openlocfilehash: bcbf2c877aae34baa42e7a51e347489ec8669a34
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -76,7 +77,7 @@ Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dni
 
 2. Podaj **ogólne** informacje, takie jak **Nazwa** i **Opis**, oraz określ, czy urządzenia przypisane do tego profilu pozostają w koligacji z użytkownikiem, czy też należą do grupy:
 
-   - **Monituj o koligację użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika przed udzieleniem zezwolenia na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik. **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji). Uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń za pomocą programu DEP, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami.
+   - **Monituj o koligację użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika przed udzieleniem zezwolenia na dostęp tego urządzenia do danych firmowych i poczty e-mail jako ten użytkownik. **Koligację użytkownika** należy skonfigurować dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy (tj. w celu instalowania aplikacji). Uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń za pomocą programu DEP, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami. W przypadku nowych użytkowników, dla których wymagana jest zmiana hasła podczas pierwszego logowania, nie można wyświetlić monitu podczas rejestracji na urządzeniach objętych programem DEP. Ponadto w przypadku użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji w programie DEP i muszą oni zresetować hasło za pomocą innego urządzenia. 
 
    > [!NOTE]
    > Program DEP z koligacją użytkownika wymaga nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego, aby móc żądać tokenu użytkownika.
@@ -161,9 +162,4 @@ Od grudnia 2016 roku zarządzanie grupami urządzeń zostanie przeniesione do us
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

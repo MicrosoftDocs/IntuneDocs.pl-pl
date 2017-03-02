@@ -1,5 +1,6 @@
 ---
-title: "Ustawianie warunków i postanowień usługi Microsoft Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Ustawianie warunków i postanowień w usłudze Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: ustawianie warunków i postanowień widocznych dla użytkowników w Portalu firmy dla usługi Intune. "
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: f7d6ebc9d71a077492ab615a3bc5397e092b1deb
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 07a42cf8fa10d3223129fbb2932217ff90ac365b
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -50,9 +53,4 @@ Możesz utworzyć i wdrożyć wiele zasad obejmujących różne warunki i postan
    - **Warunki i postanowienia**: etykieta prawna, którą użytkownicy muszą zaakceptować lub odrzucić, na przykład „Zgadzam się z warunkami i postanowieniami”.
 
 6. Wybierz przycisk **Ok**.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

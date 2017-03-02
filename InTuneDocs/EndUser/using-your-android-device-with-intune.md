@@ -5,17 +5,22 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 8611566f5f5d33b7f0937fabd15892353953df77
-ms.openlocfilehash: 1c4e77d3089df2ff184a414ba668b01b2d040854
+ms.sourcegitcommit: 76001bd12e5f665eb1a5a0f0fe5442f0a6fedb8c
+ms.openlocfilehash: d653d3eb1d71d30e2bf1104b1d55bfbcf2725c13
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -23,23 +28,15 @@ ms.openlocfilehash: 1c4e77d3089df2ff184a414ba668b01b2d040854
 
 # <a name="using-your-android-device-with-intune"></a>Korzystanie z urządzenia z systemem Android i usługi Intune
 
-Ten artykuł zawiera linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach zarządzanych przez usługę Intune. Administratorzy IT mogą odwoływać się do tych informacji, aby wyświetlić czynności, które użytkownicy muszą wykonać w celu ukończenia różnych zadań pogrupowanych w następujące kategorie:
+Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
 
-- Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
-- Zadania zarządzania po rejestracji
-- Problemy ze zgodnością
-
-## <a name="company-portal-app-installation-and-intune-enrollment"></a>Instalacja aplikacji Portal firmy i rejestracja w usłudze Intune
-
-Informacje przedstawione w tej sekcji ułatwiają użytkownikom instalowanie aplikacji Portal firmy usługi Intune i rejestrowanie urządzeń z systemem Android.
+## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
 - [Rejestracja urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md)
 - [Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
-## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
-
-Informacje przedstawione w tej sekcji ułatwiają wykonywanie akcji po zarejestrowaniu urządzenia z systemem Android w usłudze Intune.
+## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
 
 - [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-android.md)
 - [Szyfrowanie urządzenia](encrypt-your-device-android.md)
@@ -53,28 +50,4 @@ Informacje przedstawione w tej sekcji ułatwiają wykonywanie akcji po zarejestr
 - [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Co się stanie w przypadku zresetowania urządzenia z systemem Android przy użyciu aplikacji Portal firmy?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
 <!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
-
-## <a name="steps-to-fix-device-and-compliance-issues"></a>Kroki umożliwiające rozwiązanie problemów dotyczących urządzeń i zgodności
-
-Informacje przedstawione w tej sekcji ułatwiają rozwiązywanie problemów, które mogą występować w przypadku zarejestrowania urządzenia z systemem Android w usłudze Intune.
-
-- [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą poczty e-mail](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
-- [Wysyłanie dzienników danych diagnostycznych do administratora IT za pomocą kabla USB](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
-- [Wysyłanie błędów rejestracji do administratora IT](send-enrollment-errors-to-your-it-administrator-android.md)
-- [Urządzenie nie ma minimalnej wymaganej wersji systemu operacyjnego](you-need-to-update-your-android-device.md)
-- [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](your-android-version-isnt-yet-supported.md)
-- [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Brak wymaganego certyfikatu urządzenia](your-device-is-missing-a-required-certificate-android.md)
-- [Prośba o wyłączenie nieznanych źródeł](you-are-asked-to-turn-off-unknown-sources-android.md)
-- [Prośba o wyłączenie debugowania USB](you-are-asked-to-turn-off-usb-debugging-android.md)
-- [Prośba o włączenie opcji Skanuj urządzenie pod kątem zagrożeń bezpieczeństwa](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
-- [Urządzenie nie spełnia wymagań dotyczących minimalnego poziomu poprawki zabezpieczeń](your-device-does-not-meet-the-minimum-security-patch-android.md)
-- [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android](you-are-prompted-to-install-lookout-for-work-android.md)
-- [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem Android](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

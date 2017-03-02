@@ -1,5 +1,5 @@
 ---
-title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android | Dokumentacja firmy Microsoft"
+title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android | Microsoft Docs"
 description: "Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android można wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM, Mobile App Management) usługi Intune w swojej aplikacji systemu Android."
 keywords: Zestaw SDK
 author: mtillman
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: oydang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
-ms.openlocfilehash: ddfd4e8a23f1a7e20230c188ac8203a11e48c4a6
+ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
+ms.openlocfilehash: 178fbaeb1d3235a81cb4da49b7a955f6999c49a2
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -34,9 +36,9 @@ Zestaw SDK aplikacji usługi Intune dla systemu Android to standardowa bibliotek
 
 * **Microsoft.Intune.MAM.SDK.jar**: Interfejsy niezbędne do obsługi funkcji MAM i współdziałania z aplikacją Portal firmy usługi Intune. Aplikacje muszą określić go jako odwołanie do biblioteki systemu Android.
 
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 4. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
+* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji&4;. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
 
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 7. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
+* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji&7;. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
 
 * **Katalog zasobów**: zasoby (na przykład ciągi), z których korzysta zestaw SDK.
 
@@ -677,7 +679,7 @@ public final class MAMDataProtectionManager {
      * @param input
      *            Input stream to get information on. Either this input
  *            stream must have been returned by a previous call to
-     *            protect OR input.markSupported() must return true.
+      *            protect OR input.markSupported() must return true.
  *            Otherwise it will be impossible to get protection info
  *            without advancing the stream position. The stream must be
  *            positioned at the beginning of the protected data.
@@ -752,9 +754,4 @@ Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API 
 * Wszystkie funkcje pochodne muszą wykonywać wywołania za pośrednictwem swoich wersji superklas.
 
 * Unikaj stosowania jakiegokolwiek interfejsu API w sposób niejednoznaczny. Na przykład użycie metody `Activity.startActivityForResult/onActivityResult` bez sprawdzenia elementu `requestCode` spowoduje wystąpienie nietypowego zachowania.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

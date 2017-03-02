@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,8 +18,9 @@ ms.reviewer: mamoriss
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: a8ce59755a74199eda6865feda68c0613d10c2a7
+ms.sourcegitcommit: f293901d3865f0b10ed876e83b151cf59a046cba
+ms.openlocfilehash: 68725bb63ae2750e89a03c16027f8b4fd9111255
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -33,21 +34,26 @@ Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłud
 
 Aby zresetować kod dostępu:
 
-1.  Otwórz [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com) i wybierz urządzenie, którego kod dostępu chcesz zresetować.
+1.    W [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/Intune/whats-new/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
 
-2.  Wybierz polecenie **Resetuj kod dostępu**.
+2. Na stronie __Moje urządzenia__ wybierz nazwę urządzenia, którego kod dostępu chcesz zresetować.
 
-    ![Szczegóły urządzenia wraz z przyciskiem Resetuj kod dostępu](./media/iwp-screen-with-all-options.png)
+  ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.  Wybierz pozycję **Wyloguj**, a następnie zaloguj się ponownie przy użyciu poświadczeń służbowych. Musisz zalogować się ponownie w ciągu pięciu minut.
+3.    Urządzenie wyświetli się w oknie podręcznym. Naciśnij przycisk **Resetuj kod dostępu**.
 
-    ![Wiadomość dotycząca resetowania z przyciskiem Wyloguj](./media/iwp-2-sign-out.png)
+    ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)
 
-4.  Wybierz polecenie **Resetuj kod dostępu**.
+4.  Zostanie wyświetlony transparent z prośbą o potwierdzenie zresetowania kodu dostępu i informacją o wylogowaniu urządzenia po wykonaniu tej czynności. Aby zalogować się ponownie, konieczne będzie odczekanie 5 minut.
 
-    ![Komunikat wyjaśniający, co się dzieje, gdy kodu dostępu zostaje zresetowany](./media/iwp-3-tap-reset-passcode-after-signin.png)
+  ![Transparent z ostrzeżeniem dotyczącym resetowania kodu dostępu urządzenia i wylogowania użytkownika. Przyciskami aktywności użytkownika są Wyloguj i Anuluj.](./media/iwp-reset-passcode-popup.png)
 
-    Sprawdź w tabeli, jak funkcja **resetowania kodu dostępu** działa na Twoim urządzeniu.
+4.  Po wybraniu polecenia **Wyloguj** wyświetli się komunikat informujący o usunięciu kodu dostępu z urządzenia. Jeśli nie masz urządzenia przy sobie, nie usuwaj kodu dostępu, ponieważ osoba mająca fizyczny dostęp do urządzenia będzie mogła uzyskać wgląd w większość zawartych na nim informacji — osobistych lub firmowych.
+
+  ![Drugi transparent z ostrzeżeniem dotyczącym resetowania kodu dostępu urządzenia i jego usunięcia z urządzenia. Informuje również, że aby ustawić nowy kod dostępu, należy przejść do ustawień urządzenia.](./media/iwp-reset-passcode-2nd-popup.png)
+
+
+W zależności od urządzenia kody dostępu mogą się różnić, dlatego w poniższej tabeli przedstawiono, jaki wpływ na dane urządzenie może mieć resetowanie kodu dostępu. 
 
     |Typ urządzenia|Co dzieje się po zresetowaniu|
     |------------|-----------|
@@ -61,9 +67,4 @@ Aby zresetować kod dostępu:
     Aby wyświetlić powiadomienie potwierdzające pomyślne zresetowanie hasła, kliknij flagę powiadomienia u góry po prawej stronie w witrynie sieci Web Portal firmy.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

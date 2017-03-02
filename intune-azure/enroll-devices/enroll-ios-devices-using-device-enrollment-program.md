@@ -1,5 +1,6 @@
 ---
-title: "Rejestrowanie urządzeń z systemem iOS — Device Enrollment Program | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Rejestrowanie urządzeń z systemem iOS — program Device Enrollment Program"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Device Enrollment Program."
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
+ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
+ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -62,7 +65,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
 6. Dla pozycji **Koligacja użytkownika** wskaż, czy urządzenia z tym profilem będą rejestrowane z koligacją użytkownika, czy bez niej.
 
- - **Zarejestruj z koligacją użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie zezwolić na dostęp tego urządzenia do firmowych danych i poczty e-mail. Określ koligację użytkownika dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Uwaga: uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń za pomocą programu DEP, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami.
+ - **Zarejestruj z koligacją użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie zezwolić na dostęp tego urządzenia do firmowych danych i poczty e-mail. Określ koligację użytkownika dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Uwaga: uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń za pomocą programu DEP, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami. W przypadku nowych użytkowników, dla których wymagana jest zmiana hasła podczas pierwszego logowania, nie można wyświetlić monitu podczas rejestracji na urządzeniach objętych programem DEP. Ponadto w przypadku użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji w programie DEP i muszą oni zresetować hasło za pomocą innego urządzenia.
 
     >[!NOTE]
     >Program DEP z koligacją użytkownika wymaga nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego, aby móc żądać tokenu użytkownika.
@@ -100,11 +103,11 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
 ## <a name="assign-apple-dep-serial-numbers-to-your-mdm-server"></a>Przypisywanie numerów seryjnych programu DEP firmy Apple do serwera MDM
 
-1. Przejdź do [portalu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) i zaloguj się przy użyciu identyfikatora Apple ID swojej firmy. 
+1. Przejdź do [portalu Device Enrollment Program](https://deploy.apple.com) (https://deploy.apple.com) i zaloguj się przy użyciu identyfikatora Apple ID swojej firmy.
 
-2. Wybierz kolejno pozycje **Deployment Program** (Program wdrażania) &gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzanie urządzeniami). 
+2. Wybierz kolejno pozycje **Deployment Program** (Program wdrażania) &gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzanie urządzeniami).
 
-3. Określ sposób **wybierania urządzeń**, a następnie podaj informacje o urządzeniach i określ szczegóły według numeru seryjnego (**Serial Number**) urządzenia, numeru zamówienia (**Order Number**) lub przekaż plik CSV (**Upload CSV File**). 
+3. Określ sposób **wybierania urządzeń**, a następnie podaj informacje o urządzeniach i określ szczegóły według numeru seryjnego (**Serial Number**) urządzenia, numeru zamówienia (**Order Number**) lub przekaż plik CSV (**Upload CSV File**).
 
 4. Wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz nazwę serwera &lt;nazwa_serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**.
 
@@ -136,7 +139,7 @@ Urządzenia firmowe mogą zostać teraz przekazane użytkownikom. Po włączeniu
 
 Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować aplikację Portal firmy i używać jej do pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać dodatkowe czynności, które zostały opisane poniżej, w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika 
+### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika
 
 1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowej kombinacji imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
 
@@ -155,9 +158,4 @@ Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować
 7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny internetowej Portalu firmy w celu sfinalizowania rejestracji. Następnie w witrynie pojawia się monit o powrót użytkownika do aplikacji.
 
 Stanowi to zakończenie procesu rejestracji. Użytkownicy mogą od tego momentu używać tego urządzenia z pełnym zestawem funkcji.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

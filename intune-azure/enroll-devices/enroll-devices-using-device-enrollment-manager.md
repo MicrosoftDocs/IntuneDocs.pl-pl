@@ -1,5 +1,6 @@
 ---
-title: "Rejestrowanie urządzeń — menedżer rejestracji urządzeń | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: korzystanie z konta menedżera rejestracji urządzeń w celu rejestrowania urządzeń w usłudze Intune. "
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: 78eca605a277c1e0fc750900ece028d8f2c7c5b2
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: b4629d98f935ab2fac95144940e2a58a1b1e7c5c
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -101,9 +104,4 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 2. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie wybierz pozycję **Menedżerowie rejestracji urządzeń**.
 
 3. W bloku **Menedżerowie rejestracji urządzeń** kliknij prawym przyciskiem myszy użytkownika DEM, a następnie wybierz pozycję **Właściwości**.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

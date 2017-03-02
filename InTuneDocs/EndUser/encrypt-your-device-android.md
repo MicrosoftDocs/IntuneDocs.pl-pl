@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,8 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
-ms.openlocfilehash: 727b99f9ca2f0322eb1fee5fec29cd71dc901e01
+ms.sourcegitcommit: 879f8faa37309edae9d1cbb0456d372ff27b8b98
+ms.openlocfilehash: a36c7dca0274b465315493261f03ab362c09383a
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -40,6 +41,9 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
     Na niektórych telefonach należy kliknąć pozycję **Magazyn** &gt; **Szyfrowanie pamięci** lub **Magazyn** &gt; **Blokada ekranu i zabezpieczenia** &gt; **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”.
 
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
+
+> [!Note]
+> Niektórych urządzeń z systemem Android nie można zaszyfrować. Dowiedz się więcej [tutaj](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 ### <a name="what-to-do-if-you-have-issues"></a>Co zrobić, jeśli masz problemy
 **Problem**: urządzenie jest już zaszyfrowane i wystąpiła jedna z następujących sytuacji:
@@ -64,10 +68,6 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
     5. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
 
+
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do [zespołu ds. systemu Android firmy Microsoft](mailto:wintunedroidfbk@microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

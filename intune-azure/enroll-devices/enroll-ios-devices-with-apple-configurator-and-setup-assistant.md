@@ -1,5 +1,6 @@
 ---
-title: "Rejestrowanie urządzeń z systemem iOS — program Apple Configurator — Asystent ustawień | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące korzystania z programu Apple Configurator w celu rejestrowania firmowych urządzeń z systemem iOS przy użyciu Asystenta ustawień."
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: 888e7b7af7dcca4154f67a1de781eb7908d9a187
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: b2d2e4e0210526ff70b86526bd0b2e17bab0286b
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -169,9 +172,4 @@ Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować
 7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny internetowej Portalu firmy w celu sfinalizowania rejestracji. Następnie w witrynie pojawia się monit o powrót użytkownika do aplikacji.
 
 Stanowi to zakończenie procesu rejestracji. Użytkownicy mogą od tego momentu używać tego urządzenia z pełnym zestawem funkcji.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

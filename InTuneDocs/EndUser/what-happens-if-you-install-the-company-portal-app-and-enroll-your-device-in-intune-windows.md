@@ -18,8 +18,9 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 7a4b5acea4a4bdce32c42ca33f81778965ee1abb
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: bde2ccc0c170a85e926357d54fcf4ffe6ee50fd9
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -34,7 +35,7 @@ Zarejestrowanie urządzenia z systemem Windows lub Windows Phone w usłudze Intu
 
 -   Uzyskiwać dostęp do firmowej sieci, poczty e-mail i plików służbowych.
 
--   Pobierać aplikacje firmowe z witryny sieci Web Portal firmy. (W przypadku systemów Windows 7 i Vista można pobierać aplikacje firmowe tylko z witryny sieci Web Portal firmy).
+-   Pobierać aplikacje firmowe z witryny sieci Web Portal firmy. (__Uwaga__: w przypadku systemów Windows 7 i Vista aplikacje firmowe można pobierać tylko z witryny sieci Web Portal firmy).
 
 -   Automatycznie konfigurować służbowe konto e-mail.
 
@@ -66,8 +67,9 @@ Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, kt
 
 -  Administrator IT może instalować na komputerze aplikacje i aktualizacje.
 
-## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co się dzieje co 8 godzin po rejestracji urządzenia
-Mniej więcej co 8 godzin zarejestrowane urządzenia wykonują następujące czynności:
+## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co się dzieje co&8; godzin po rejestracji urządzenia
+
+Mniej więcej co&8; godzin zarejestrowane urządzenia wykonują następujące czynności:
 
 -   Pobieranie wszystkich aktualizacji aplikacji lub zasad udostępnionych przez administratora IT.
 
@@ -76,9 +78,4 @@ Mniej więcej co 8 godzin zarejestrowane urządzenia wykonują następujące czy
 -   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych.
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

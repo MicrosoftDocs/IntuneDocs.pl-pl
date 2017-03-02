@@ -16,9 +16,11 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 9dd9a601f2e13a16157a43c28e77db6a6efd1619
-ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
+ms.sourcegitcommit: 4b5f0129d6824a51c36662a1cc7ef4e8a2de9e20
+ms.openlocfilehash: ff5a4313337c89da00cb87e0f4dd6c8dcc233361
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: 5584ec2d387830dcdcf6b06631996a0bade76014
 
 Czasami próba zainstalowania aplikacji na urządzeniu z systemem Windows może trwać dłużej niż się wydaje. W takim przypadku można spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Synchronizacja może przyspieszyć instalację.
 
-> [!Note] 
+> [!Note]
 > Instalowanie aplikacje może potrwać trochę czasu w przypadku pracy w wolniejszej sieci lub w sieci z większą ilością urządzeń pobierających zawartość w tym samym czasie.
 
 Poniższe wersje systemu Windows można synchronizować ręcznie. Niestety, jeśli Twoje urządzenie używa innej wersji systemu Windows, nie jest możliwe uruchomienie synchronizacji ręcznej.
@@ -131,9 +133,4 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu pr
    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

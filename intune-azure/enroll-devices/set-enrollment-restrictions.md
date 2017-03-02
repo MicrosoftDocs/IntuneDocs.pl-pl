@@ -1,5 +1,6 @@
 ---
-title: "Ustawianie ograniczeń rejestracji w usłudze Intune | Wersja zapoznawcza usługi Intune Azure | Microsoft Docs"
+title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: ograniczanie rejestrowania według platform i ustawianie limitu rejestracji urządzeń w usłudze Intune. "
 keywords: 
 author: staciebarker
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: c4fa22fad4df9c0e4699cf258eb9518a1534bb94
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 56996592febf0be5ab74b158a70404728fe17a4d
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -39,7 +42,7 @@ Możesz ustawić typy oraz maksymalną liczbę urządzeń, które będzie można
 
 4. W bloku **Wszyscy użytkownicy** wybierz pozycję **Platformy**.
 
-5. Dla platform, w przypadku których jest możliwe rejestrowanie w usłudze Intune, wybierz pozycję **Zezwalaj**. Dla platform, w przypadku których chcesz zablokować możliwość rejestrowania, wybierz pozycję **Zablokuj**. Wartość domyślna tego ustawienia to **Zezwalaj**. 
+5. Dla platform, które mogą dokonywać rejestracji w usłudze Intune, wybierz pozycję **Zezwalaj**. Dla platform, w przypadku których chcesz zablokować możliwość rejestrowania, wybierz pozycję **Zablokuj**. Wartość domyślna tego ustawienia to **Zezwalaj**. 
 
     >[!NOTE]
     >Te ustawienia nie zezwalają ani nie blokują rejestracji systemu Windows używających oprogramowania klienckiego usługi Intune. Te ustawienia mają wpływ tylko na rejestrację przy użyciu funkcji zarządzania urządzeniami przenośnymi. 
@@ -60,12 +63,7 @@ Możesz ustawić typy oraz maksymalną liczbę urządzeń, które będzie można
 
 3. W obszarze **Ograniczenia limitu urządzeń** wybierz pozycję **Domyślne**.
 
-4. W bloku **Wszyscy użytkownicy** wybierz pozycję **Limit urządzenia**.
+4. W bloku **Wszyscy użytkownicy** wybierz pozycję **Limit urządzeń**.
 
 5. Wybierz maksymalną liczbę urządzeń, które użytkownik może zarejestrować, a następnie wybierz pozycję **Zapisz**.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

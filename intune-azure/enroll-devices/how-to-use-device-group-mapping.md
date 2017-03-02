@@ -1,5 +1,6 @@
 ---
-title: "Korzystanie z kategorii urządzeń w usłudze Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Korzystanie z kategorii urządzeń w usłudze Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: korzystanie z kategorii urządzeń, spośród których mogą wybierać użytkownicy rejestrujący swoje urządzenia w usłudze Intune."
 keywords: 
 author: robstackmsft
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: 57dce5b23b9c8cd878a9ce746e6459a69f1270ff
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: c635ced382074f7f45254fb219b58f54b56abb8e
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -88,10 +91,5 @@ Jeśli kolumna **Kategoria** nie jest wyświetlana, kliknij przycisk **Kolumny**
 
 - Jeśli usuniesz kategorię, dla wszelkich urządzeń, które zostały do niej przypisane, zostanie wyświetlona nazwa kategorii **Nieprzypisane**.
 
-
-
-
-
-<!--HONumber=Feb17_HO3-->
 
 

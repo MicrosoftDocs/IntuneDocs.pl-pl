@@ -1,5 +1,6 @@
 ---
-title: "Podstawowe ustawienia zarządzania danymi w aplikacjach usługi Office 365 — usługa Intune Azure w wersji zapoznawczej | Dokumentacja firmy Microsoft"
+title: "Ustawianie podstawowych opcji zarządzania danymi w aplikacjach usługi Office 365 — Wersja zapoznawcza usługi Intune Azure"
+titleSuffix: Intune Azure preview
 description: "Usługa Intune Azure w wersji zapoznawczej: dokumentacja uzupełniająca kreatora Zarządzaj aplikacjami usługi Office 365."
 keywords: 
 author: lindavr
@@ -14,9 +15,11 @@ ms.assetid: 852612ac-f146-4372-a900-3f6fdebd05ad
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4c45b7fc8a520d869f21717fea36e27b242cf39
-ms.openlocfilehash: 7cff88f0365cff1de133fdafdce2bd45b36d551e
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: e3924cb3409ab03f8070376c2248a2791a1e713d
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -130,9 +133,4 @@ Aby wyświetlić lub zaktualizować powyższe zasady lub dowolne inne zasady utw
 
 ## <a name="next-steps"></a>Następne kroki
 Dowiedz się więcej o [zasadach ochrony aplikacji](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-protection-policy).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

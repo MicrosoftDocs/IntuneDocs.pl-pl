@@ -1,5 +1,6 @@
 ---
-title: "Tworzenie i wdrażanie zasad ochrony aplikacji | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Tworzenie i wdrażanie zasad ochrony aplikacji"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak zasady ochrony aplikacji usługi Intune mogą chronić dane firmy używane przez aplikacje, którymi zarządzasz."
 keywords: 
 author: NathBarn
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 424fae862592c1ab5b4221fb5ad40a52c39f6760
-ms.openlocfilehash: 5112c6641577f3faefb85650dd06bd1634542019
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 607598812a414843f1f33a00670a6a85b6687878
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -73,8 +76,8 @@ Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi M
 > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Aby uzyskać więcej informacji, zobacz:
-* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-android-apps.md)
-* [Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-ios-apps.md)
+* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-android-apps.md)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-ios-apps.md)
 
 ##  <a name="change-existing-policies"></a>Zmiana istniejących zasad
 Możesz edytować istniejące zasady i zastosować je do użytkowników docelowych. Jednak w przypadku zmiany istniejących zasad użytkownicy zalogowani do aplikacji zobaczą zmiany dopiero po 8 godzinach.
@@ -120,11 +123,6 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 [Monitorowanie zgodności i stanu użytkownika](monitor-app-protection-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Zobacz także
-* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-android-apps.md)
-* [Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-ios-apps.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
+* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-android-apps.md)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-ios-apps.md)
 

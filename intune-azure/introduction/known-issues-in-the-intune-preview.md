@@ -1,5 +1,6 @@
 ---
-title: "Znane problemy w usłudze Microsoft Intune w wersji zapoznawczej | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Znane problemy w wersji zapoznawczej usługi Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się więcej o znanych problemach w wersji zapoznawczej"
 keywords: 
 author: robstackmsft
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f479b4236243fd05630229520633a09c451e6e1e
-ms.openlocfilehash: c1f79db598651b6a8a1c2a34627a901eff6a0beb
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -35,9 +38,4 @@ Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport 
 ## <a name="administration-and-accounts"></a>Administracja i konta
 
 - Administratorzy globalni (określani także mianem administratorów dzierżawy) mogą w dalszym ciągu wykonywać codzienne zadania administracyjne, nie korzystając z oddzielnej licencji usługi Intune ani pakietu Enterprise Mobility Suite (EMS). Jeśli jednak administratorzy globalni zechcą korzystać z tej usługi na przykład w celu zarejestrowania swoich własnych urządzeń lub urządzeń firmowych albo zechcą korzystać z Portalu firmy w usłudze Intune, wówczas będą potrzebować licencji na usługę Intune lub pakiet EMS, podobnie jak każdy inny użytkownik.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

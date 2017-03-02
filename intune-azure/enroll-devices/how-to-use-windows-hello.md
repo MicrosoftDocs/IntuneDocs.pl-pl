@@ -1,5 +1,6 @@
 ---
-title: "Korzystanie z usługi Windows Hello dla firm | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Korzystanie z usługi Windows Hello dla firm"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: tworzenie zasad umożliwiających kontrolę sposobu korzystania z funkcji Windows Hello dla firm na urządzeniach zarządzanych."
 keywords: 
 author: robstackmsft
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: 56e78f2c80c860c4cdf1c79bf94d7575d5cd9674
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 1844cf87ae51c7d0832e3ba6315efde734ff56cc
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -96,9 +99,4 @@ Aby zapewnić rozwiązywanie konfliktów i prawidłowe stosowanie zasad dotyczą
 
 ## <a name="further-information"></a>Dodatkowe informacje
 Aby uzyskać więcej informacji na temat usługi Microsoft Passport, zobacz [przewodnik](https://technet.microsoft.com/library/mt589441.aspx) w dokumentacji systemu Windows 10.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -2,10 +2,10 @@
 title: "Rejestrowanie urządzeń firmowych z systemem iOS | Microsoft Docs"
 description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 03f5da3a819768ff8221257f091a000f18f00fb4
+ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
+ms.openlocfilehash: 7fcb910dfc566cdf7112a48558cda375ea1c39a8
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -49,7 +50,7 @@ W celu zarejestrowania urządzeń z systemem iOS można wyeksportować firmowy p
 - **Rejestracja bezpośrednia**: tworzenie pliku zgodnego z programem Apple Configurator do użytku podczas przygotowywania urządzenia. Zarejestrowane urządzenie nie jest resetowane do ustawień fabrycznych, ale nie ma określonej przynależności do użytkownika. Ta metoda wymaga od administratora podłączenia urządzenia iOS przez port USB do komputera Mac z programem [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) w celu zarejestrowania urządzenia. Aby uzyskać więcej informacji, zobacz artykuł [Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
 ## <a name="use-the-device-enrollment-program-dep"></a>Użycie programu Device Enrollment Program (DEP)
-Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionych w ramach tego programu. Gdy użytkownik uruchamia na urządzeniu Asystenta ustawień, jest ono rejestrowane w usłudze Intune.  Użytkownicy nie mogą wyrejestrowywać urządzeń zarejestrowanych w programie DEP. Aby uzyskać więcej informacji, zobacz artykuł [Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
+Program DEP wdraża bezprzewodowo profil rejestracji na urządzeniach zakupionych w ramach tego programu. Gdy użytkownik uruchamia na urządzeniu Asystenta ustawień, jest ono rejestrowane w usłudze Intune. Aby uzyskać więcej informacji, zobacz artykuł [Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
 
 ## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
 
@@ -91,9 +92,4 @@ Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia 
 
 ### <a name="see-also"></a>Zobacz też
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

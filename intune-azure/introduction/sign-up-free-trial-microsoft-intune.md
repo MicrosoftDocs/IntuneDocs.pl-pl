@@ -1,5 +1,6 @@
 ---
-title: "Tworzenie konta w celu korzystania z 30-dniowej bezpłatnej wersji próbnej | Wersja zapoznawcza usługi Microsoft Intune | Dokumentacja firmy Microsoft"
+title: "Tworzenie konta w celu korzystania z 30-dniowej bezpłatnej wersji próbnej"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: sposób tworzenia konta w celu korzystania z usługi Intune na platformie Azure."
 keywords: 
 author: lindavr
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: cd98141b4b377f0013607f2a2ebb93a93cd7f0ce
-ms.openlocfilehash: ce69e7efbee286839a1bf3440db692bd237b0e06
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 29b33341b136c8e8d76b666f94a9f620212944c5
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -144,9 +147,4 @@ Dowiedz się więcej o korzystaniu z kont użytkowników usługi Azure Active Di
 - [Wymagania uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
 Dowiedz się więcej na temat używania [usługi Intune z programem System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

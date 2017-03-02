@@ -1,5 +1,6 @@
 ---
-title: "Zasady dostępu warunkowego do lokalnego programu Exchange | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Zasady dostępu warunkowego do lokalnego programu Exchange"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: jak konfigurować dostęp warunkowy do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune"
 keywords: 
 author: andredm7
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 581f9be824ea883fd0208abc3b2ecc09174cb911
-ms.openlocfilehash: a80d6a19948291cc80e42ad5a9a2f016effb2f37
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: a9edd882e2cf0fb7abf50002e9f1e8dfd5634fe1
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -96,9 +99,4 @@ Aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w przypadku
   - Po ustawieniu zablokowania dostępu początkowy dostęp wszystkich urządzeń do lokalnego programu Exchange zostanie natychmiast zablokowany.  Urządzenia, które należą do użytkowników w pozycji **Objęte grupy**, uzyskają dostęp po zarejestrowaniu urządzenia w usłudze Intune i ocenieniu go jako zgodne. Na urządzeniach z systemem Android nieobsługujących systemu Samsung KNOX Standard dostęp będzie zawsze zablokowany, gdyż nie obsługują one tego ustawienia.
 10. W obszarze **Wyjątki dla platform urządzeń** wybierz przycisk **Dodaj**, aby określić platformy. Jeśli ustawienie **dostęp do urządzeń niezarządzanych** zostało ustawione na wartość **zablokowany**, urządzenia, które są zarejestrowane i zgodne będą odblokowane, nawet jeśli występuje wyjątek dla platformy określający ich zablokowanie. Wybierz przycisk **Ok**, aby zapisać ustawienia.
 11. W bloku **Lokalne** kliknij przycisk **Zapisz**, aby zapisać zasady dostępu warunkowego.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -12,9 +12,11 @@ ms.technology:
 ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 115eae8e2d733397eb4b0f025789ca7d0522a845
-ms.openlocfilehash: 5dc90c1e1ddba91fe8bbb4530eb09bca0c9e3ac9
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: 6277f82483eb8fb7f5a4e4a832a909490ba0050c
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -45,7 +47,9 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
 2. **Tworzenie rekordów CNAME** (opcjonalnie)<br>
 Utworzyć rekordy zasobów **CNAME** systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
 
-    Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM: enrollment.manage.microsoft.com.    
+
+    Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM, https://enrollment.manage.microsoft.com.
+
 
     Rekordy zasobów CNAME muszą zawierać następujące informacje:
 
@@ -70,12 +74,9 @@ Utworzyć rekordy zasobów **CNAME** systemu DNS dla domeny Twojej firmy. Jeśli
 
     Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
 
+Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz następujące artykuły:       - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
+      - [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-windows-device-with-intune.md)
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

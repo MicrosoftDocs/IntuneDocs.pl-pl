@@ -1,11 +1,11 @@
 ---
-title: "Wykonywanie pracy przy użyciu urządzeń zarządzanych | Dokumentacja firmy Microsoft"
-description: "Dowiedz się więcej o aplikacji Portal firmy."
+title: "Wykonywanie pracy przy użyciu urządzeń zarządzanych | Microsoft Docs"
+description: "Dowiedz się, na czym polega rejestrowanie urządzeń w usłudze Intune w celu zarządzania nimi."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,26 @@ ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
 searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: jeffgilb
+ms.reviewer: robstack
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 68c7a23dc8769330c14f74e6aebb07eeb188a991
-ms.openlocfilehash: 1ca19828902585bf6011713ab214619b7f8c12c5
+ms.sourcegitcommit: d05b3200d145aa535216dc81c62cc73b022528f2
+ms.openlocfilehash: ae364b9e77876612be4eb6d68b8b57a5d3be9db2
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="using-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
+# <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
 
 Po zarejestrowaniu urządzeń do zarządzania za pomocą usługi Intune dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Podstawowym sposobem osiągnięcia tego stanu jest zarejestrowanie urządzenia do zarządzania za pośrednictwem Portalu firmy.
 
+## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie w usłudze Intune?
+Dział IT firmy ma dostęp do informacji mających związek z wykonywaną pracą, ale nie do informacji osobistych. Ma to szczególne znaczenie dla osób, które chcą zarejestrować swoje urządzenie osobiste w celu używania go w pracy. [Lista rzeczy, które dział IT może zobaczyć bądź też nie](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) znajduje się w kolejnym artykule dotyczącym wsparcia użytkowników.
+
+## <a name="how-do-i-get-the-company-portal"></a>Jak uzyskać aplikację Portal firmy?
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także administrator IT może zainstalować aplikację Portal firmy dla Ciebie.
@@ -57,7 +63,7 @@ Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, 
 
 - [Instalowanie aplikacji Portal firmy dla systemu Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Instalowanie aplikacji Portal firmy dla systemów iOS i macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Instalowanie aplikacji Portal firmy dla systemu Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+- [Instalowanie aplikacji Portal firmy dla systemu Windows](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jakiego rodzaju komputery i urządzenia można dodać do Portalu firmy?
 -   Urządzenia firmy Apple z systemem iOS (np. iPhone oraz iPad) i macOS (np. MacBook oraz iMac)
@@ -71,7 +77,7 @@ Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, 
 ## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Czy można usunąć komputer lub urządzenie z Portalu firmy?
 Tak, można usunąć komputer lub urządzenie z Portalu firmy lub zresetować je. Istnieje różnica między **usunięciem** a **zresetowaniem**.
 
-Gdy *usuniesz* komputer lub urządzenie, urządzenie zostanie wyrejestrowane z usługi Intune. Po wyrejestrowaniu nie będzie można uzyskać dostępu do Portalu firmy za pomocą tego urządzenia, a niektóre dane firmowe mogą zostać z niego usunięte. Aby zobaczyć, jak usunąć urządzenie z portalu firmy, kliknij jeden z następujących linków:
+Gdy *usuniesz* komputer lub urządzenie z Portalu firmy, urządzenie zostanie wyrejestrowane z usługi Intune. Po wyrejestrowaniu nie będzie można uzyskać dostępu do Portalu firmy za pomocą tego urządzenia, a niektóre dane firmowe mogą zostać z niego usunięte. Aby zobaczyć, jak usunąć urządzenie z portalu firmy, kliknij jeden z następujących linków:
 
 - [Wyrejestrowywanie urządzenia z systemem Android](unenroll-your-device-from-intune-android.md)
 - [Wyrejestrowywanie urządzenia z systemem iOS lub macOS](unenroll-your-device-from-intune-ios.md)
@@ -79,21 +85,19 @@ Gdy *usuniesz* komputer lub urządzenie, urządzenie zostanie wyrejestrowane z u
 
 Po *zresetowaniu* komputera lub urządzenia portal firmy podejmuje próbę przywrócenia domyślnych ustawień fabrycznych komputera lub urządzenia. Zresetowanie urządzenia spowoduje usunięcie wszystkich danych osobistych i firmowych z urządzenia! Jeśli zgubisz urządzenie, możesz zresetować je zdalnie z poziomu witryny sieci Web Portal firmy.
 
-Aby zobaczyć, jak zresetować urządzenie, kliknij jeden z następujących linków:
+Informacje o tym, jak zresetować urządzenie, znajdziesz tutaj:
 
-- [Resetowanie (wymazywanie) urządzenia z systemem Android](reset-erase-your-lost-or-stolen-device-android.md)
-- [Resetowanie (wymazywanie) urządzenia z systemem iOS lub macOS](reset-erase-your-lost-or-stolen-device-ios.md)
-- [Resetowanie urządzenia z systemem Windows](reset-erase-your-lost-or-stolen-device-windows.md)
-- [Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy](reset-your-device-cpwebsite.md)
+- [Resetowanie (wymazywanie) danych z urządzenia z poziomu witryny sieci Web Portal firmy](reset-erase-your-device-cpwebsite.md)
 
 ## <a name="what-if-i-cant-see-my-device-in-the-company-portal"></a>Co zrobić, jeśli nie widać danego urządzenia w Portalu firmy?
 Aby można było wyświetlić urządzenie, należy najpierw dodać je do Portalu firmy. Przejdź do któregokolwiek Portalu firmy wskazanego przez administratora, a następnie postępuj zgodnie z instrukcjami dotyczącymi urządzenia. Ponadto urządzenia będące własnością firmy i zarządzane przez firmę nie będą widoczne.
 
-## <a name="if-you-have-questions-contact-your-it-admin"></a>Jeśli masz pytania, skontaktuj się z administratorem IT
-Jeśli potrzebujesz pomocy, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+## <a name="where-else-can-i-go-for-help"></a>Gdzie indziej szukać pomocy?
+Firma Microsoft zaleca, aby w pierwszej kolejności spróbować rozwiązać problem samodzielnie. Udostępniamy listę metod umożliwiających rozwiązanie problemów pojawiających się na poszczególnych platformach obsługiwanych przez usługę Intune.
 
+- [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android](troubleshoot-your-device-android.md)
+- [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS](troubleshoot-your-device-ios.md)
+- [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Windows](troubleshoot-your-device-windows.md)
 
-
-<!--HONumber=Feb17_HO2-->
-
+Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z administratorem IT. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 

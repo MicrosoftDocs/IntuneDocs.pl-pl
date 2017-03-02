@@ -1,6 +1,7 @@
 ---
-title: "Konfigurowanie usługi zarządzania wydatkami telekomunikacyjnymi | Wersja zapoznawcza usługi Intune Azure | Microsoft Docs"
-description: "Wersja zapoznawcza usługi Intune Azure: skonfiguruj usługę zarządzania wydatkami telekomunikacyjnymi Saaswedo do integracji z usługą Intune."
+title: "Konfigurowanie usługi Telecom Expense Management"
+titleSuffix: Intune Azure preview
+description: "Wersja zapoznawcza usługi Intune Azure: konfigurowanie usługi zarządzania wydatkami telekomunikacyjnymi Saaswedo do integracji z usługą Intune."
 keywords: Saaswedo
 author: staciebarker
 ms.author: stabar
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: d243aaf8de5bb235f1c60141ff62f156b81f312b
-ms.openlocfilehash: faf662d2d5c9cb05fe507da8a1ec5c2eb89f3352
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: aa2e668641da1a87e6145fe826d88c2ca5b184a2
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -44,7 +47,7 @@ Przed rozpoczęciem korzystania z usługi Datalert w usłudze Intune należy sko
 
 ## <a name="list-of-telecom-expense-management-providers"></a>Lista dostawców usług zarządzania wydatkami telekomunikacyjnymi
 
-Usługę Intune można obecnie zintegrować z następującymi dostawcami usług zarządzania wydatkami telekomunikacyjnymi:
+Usługa Intune obecnie obsługuje integrację z następującymi dostawcami usługi zarządzania wydatkami telekomunikacyjnymi:
 
 [Usługa zarządzania wydatkami telekomunikacyjnymi Saaswedo Datalert](http://www.datalert.biz/)
 
@@ -66,7 +69,7 @@ Przed rozpoczęciem upewnij się, że masz już subskrypcję usług Intune i Dat
 
     Wybranie przycisku **Connection** spowoduje, że usługa Datalert zostanie zewidencjonowana w usłudze Intune, aby uzyskać pewność, że nie istnieją wcześniejsze połączenia usługi Datalert z usługą Intune. Po kilku sekundach zostanie wyświetlona strona logowania firmy Microsoft, po czym nastąpi uwierzytelnienie usługi Datalert na platformie Azure.
 
-6. Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony usługi Datalert z podziękowaniem, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli weryfikacja nie powiedzie się, zostanie wyświetlony komunikat w kolorze czerwonym. W takim przypadku skontaktuj się z pomocą techniczną usługi Datalert w celu uzyskania pomocy.
+6. Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony podziękowania usługi Datalert, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli sprawdzanie poprawności zakończy się niepowodzeniem, zostanie wyświetlony komunikat w kolorze czerwonym. W takim przypadku skontaktuj się z pomocą techniczną usługi Datalert w celu uzyskania pomocy.
 
     Na poniższym zrzucie ekranu przedstawiono zielone znaczniki wyświetlane po pomyślnym nawiązaniu połączenia.
 
@@ -147,26 +150,21 @@ Usługa Datalert jest teraz aktywna i rozpoczyna monitorowanie użycia danych or
 
 ## <a name="turning-off-the-datalert-service"></a>Wyłączanie usługi Datalert
 
-Jeśli wyłączysz usługę Datalert w witrynie Azure Portal:
+Po wyłączeniu usługi Datalert w portalu Azure Portal:
 
-- Wszystkie akcje zastosowane do urządzeń z powodu naruszenia limitów użycia zostaną cofnięte.
-- Użytkownicy nie będą już mieli zablokowanego dostępu do danych i roamingu.
-- Usługa Intune nadal będzie otrzymywać sygnały z usługi Datalert, ale będą one ignorowane.
+- Wszystkie akcje, które zostały zastosowane do urządzeń z powodu naruszenia limitów użycia, zostaną cofnięte.
+- Dostęp użytkowników do danych i roamingu nie będzie zablokowany.
+- Usługa Intune nadal będzie odbierać sygnały pochodzące z usługi, ale będzie je ignorować.
 
 **Aby wyłączyć usługę**
 
-1. W bloku **Telecom Expense Management** w witrynie Azure Portal wybierz pozycję **Wyłącz**.
+1. W bloku **Telecom Expense Management** w portalu Azure Portal wybierz pozycję **Wyłącz**.
 
 2. Wybierz pozycję **Zapisz**.
 
-## <a name="viewing-data-usage-and-roaming-reports"></a>Wyświetlanie raportów dotyczących danych użycia i roamingu
+## <a name="viewing-data-usage-and-roaming-reports"></a>Wyświetlanie raportów dotyczących użycia danych i roamingu
 
 W tej chwili funkcja raportowania użycia danych jest dostępna tylko w konsoli zarządzania usługi Datalert firmy Saaswedo.
 
 Instrukcje dla użytkowników końcowych dotyczące instalowania aplikacji Datalert zostaną dodane wkrótce.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

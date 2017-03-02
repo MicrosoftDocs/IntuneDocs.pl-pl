@@ -2,10 +2,10 @@
 title: "Rejestrowanie urządzeń | Microsoft Docs"
 description: "Usługa zarządzania urządzeniami przenośnymi (MDM) używa funkcji rejestracji urządzeń, która umożliwia zarządzanie urządzeniami i zapewnia dostęp do zasobów."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
-ms.openlocfilehash: 483fd327be25a1cb08e5295d72a27987ab018062
+ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
+ms.openlocfilehash: d1b24b745fe1e860e42fa23647976aadea1953cd
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -37,7 +38,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 - **Czyszczenie** — określa, czy urządzenie musi zostać wyczyszczone, zanim użytkownicy będą mogli je zarejestrować. Termin „czyszczenie” oznacza zresetowanie urządzenia do ustawień fabrycznych, co powoduje usunięcie wszystkich danych. Aby uzyskać więcej informacji, zobacz [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md).
 - **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Blokada** — wskazuje, czy użytkownicy mają zablokowaną możliwość wyrejestrowywania swoich urządzeń z zarządzania. Użytkownicy mogą wyrejestrowywać swoje urządzenia na wszystkich platformach przy użyciu aplikacji Portal firmy. Do wyrejestrowania nie można używać natywnych menu systemu operacyjnego. 
+- **Blokada** — wskazuje, czy użytkownicy mają zablokowaną możliwość wyrejestrowywania swoich urządzeń przy użyciu natywnych menu systemu operacyjnego. Użytkownicy mogą wyrejestrowywać swoje urządzenia na wszystkich platformach przy użyciu aplikacji Portal firmy. 
 
 **Metody rejestracji urządzeń z systemem iOS**
 
@@ -130,9 +131,4 @@ Usługa Intune umożliwia zarządzanie następującymi platformami urządzeń:
 - [Wymagania wstępne dotyczące rejestracji urządzeń](prerequisites-for-enrollment.md)
 - [Zarządzanie urządzeniami należącymi do firmy](manage-corporate-owned-devices.md)
 - [Obsługiwane urządzenia przenośne i komputery](../get-started/supported-mobile-devices-and-computers.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

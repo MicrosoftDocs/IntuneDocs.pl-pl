@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
-ms.openlocfilehash: a7edd3d23a28f3496b22efdc3b17fb25b40399b6
+ms.sourcegitcommit: 1fa570c3bca5d24ad234e8437a8553bf358520b8
+ms.openlocfilehash: c0baa59aacc6475544d70d2ead5f6fbf45429dfd
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -75,6 +76,9 @@ Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1
   -  **Funkcja BitLocker jest włączona:** po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub zahibernowany. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Funkcja BitLocker także zapewnia, że komputer nie zostanie naruszony nawet wtedy, gdy zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
   -  **Integralność kodu jest włączona:** integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Wykrywa także, czy plik systemowy został zmodyfikowany przez złośliwe oprogramowanie, które zostało uruchomione przez konto użytkownika z uprawnieniami administratora.
   - **Bezpieczny rozruch jest włączony:** po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza to, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
+
+  > [!IMPORTANT]
+  > Urządzenia z systemem Windows nie obsługują oprogramowania **wczesnej ochrony przed złośliwym kodem** (ELAM) należącego do innych firm i zainstalowanego w ramach zaświadczania o kondycji urządzenia.
 
   Aby uzyskać informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://msdn.microsoft.com/library/dn934876.aspx).
 ###  <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
@@ -151,9 +155,4 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 
 - W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję „**10.0**” z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie **winver**. Na przykład może to wyglądać mniej więcej tak: 10.0.10586.
 > ![Zaznaczona wersja kompilacji systemu operacyjnego w oknie dialogowym „Informacje o systemie Windows”](./media/ca_win10-os-version.png)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

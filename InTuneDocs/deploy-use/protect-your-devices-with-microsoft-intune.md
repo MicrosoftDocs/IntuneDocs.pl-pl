@@ -1,11 +1,11 @@
 ---
-title: "Ochrona urządzeń | Microsoft Docs"
+title: "Ochrona urządzeń za pomocą usługi Microsoft Intune | Microsoft Docs"
 description: "Poznaj sposoby, za pomocą których usługa Intune chroni urządzenia przed nieautoryzowanym dostępem i innymi zagrożeniami."
 keywords: 
 author: Robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 47263a7b0e4255cfa3fe830c969ce6116447ae9f
+ms.sourcegitcommit: 10191f27ae7efd097ea6e74b557776f8be8fe6e6
+ms.openlocfilehash: 042c5673c48bb19aacd624028260267670f9846e
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -45,10 +47,10 @@ Usługa Intune obsługuje [zasady zgodności urządzeń](introduction-to-device-
 ### <a name="protect-apps-and-the-data-they-use"></a>Ochrona aplikacji i danych, których używają
 Usługa Intune zapewnia szereg funkcji pomagających chronić aplikacje i ich dane. Na przykład za pomocą zasad zarządzania aplikacjami mobilnymi (MAM) można uniemożliwić wykonywanie kopii zapasowych danych z chronionej aplikacji, ograniczyć kopiowanie i wklejanie do innych aplikacji, wymagać kodu PIN w celu uzyskania dostępu do aplikacji itp. Aby uzyskać więcej informacji o ochronie aplikacji, zobacz temat [Ochrona aplikacji i danych w usłudze Microsoft Intune](protect-apps-and-data-with-microsoft-intune.md).
 
-## <a name="further-capabilities-for-windows-devices"></a>Dodatkowe możliwości dla urządzeń z systemem Windows
+### <a name="add-an-additional-layer-of-protection-to-devices"></a>Dodawanie kolejnej warstwy ochrony do urządzeń
+[Uwierzytelnianie wieloskładnikowe (MFA)](multi-factor-authentication-azure-active-directory.md) to bezpieczniejsza metoda uwierzytelniania użytkowników urządzeń w sieci.  Usługa MFA wymaga potwierdzenia tożsamości użytkownika nie tylko przy użyciu nazwy użytkownika i hasła, ale też za pośrednictwem połączenia telefonicznego lub wiadomości SMS.
 
-### <a name="add-an-additional-layer-of-protection-to-windows-devices"></a>Dodawanie kolejnej warstwy ochrony dla urządzeń z systemem Windows
-[Uwierzytelnianie wieloskładnikowe (MFA)](protect-windows-devices-with-multi-factor-authentication.md) to bezpieczniejsza metoda uwierzytelniania użytkowników urządzeń z systemem Windows lub Windows Phone w sieci.  Usługa MFA wymaga potwierdzenia tożsamości użytkownika nie tylko przy użyciu nazwy użytkownika i hasła, ale też za pośrednictwem połączenia telefonicznego lub wiadomości SMS.
+## <a name="further-capabilities-for-windows-devices"></a>Dodatkowe możliwości dla urządzeń z systemem Windows
 
 ### <a name="control-windows-hello-for-business-settings-on-windows-devices"></a>Sterowanie ustawieniami usługi Windows Hello for Business na urządzeniach z systemem Windows
 Usługa Intune umożliwia integrację z usługą [Windows Hello for Business](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md) (dawniej Microsoft Passport), czyli alternatywną metodę logowania dla systemu Windows 10 i nowszych korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej.
@@ -62,9 +64,4 @@ Blokada aktywacji to funkcja, która ułatwia ochronę urządzeń użytkowników
 
 ## <a name="protect-windows-pcs-managed-with-the-intune-client"></a>Ochrona komputerów z systemem Windows zarządzanych za pomocą klienta usługi Intune
 Usługa Intune w dalszym ciągu obsługuje zasady zabezpieczeń na komputerach z systemem Windows, które nie są rejestrowane, ale zarządzane przy użyciu oprogramowania klienckiego komputera z usługą Intune. Aby dowiedzieć się, jak przy użyciu tych zasad można zabezpieczyć komputery z systemem Windows, zobacz [Use policies to help protect Windows PCs that run the Intune client software](policies-to-protect-windows-pcs-in-microsoft-intune.md) (Ochrona komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune przy użyciu zasad).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

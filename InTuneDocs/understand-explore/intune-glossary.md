@@ -11,9 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: ea5407c284f5408774ee5934ad6151bccfd7e6d1
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -61,7 +63,7 @@ ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 |-|-|
 |Profil e-mail|Za pomocą tych zasad można skonfigurować [ustawienia dostępu do poczty e-mail](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) dla określonych klientów poczty e-mail na urządzeniach przenośnych, co pozwala zminimalizować liczbę czynności konfiguracyjnych, które musi wykonać użytkownik końcowy.|
 |EMS|Rozwiązanie Microsoft Enterprise Mobility + Security (dawniej pakiet Enterprise Mobility Suite) zapewnia ochronę danych firmowych, zezwalając jednocześnie użytkownikom na [dostęp do potrzebnych aplikacji i zawartości](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility).|
-|Użytkownik końcowy|[Użytkownicy końcowi urządzeń, takich jak telefony i komputery](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune), którymi zarządzasz za pomocą usługi Intune.|
+|Użytkownik końcowy|[Użytkownicy końcowi urządzeń, takich jak telefony i komputery](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) zarządzani za pomocą usługi Intune.|
 |Zarejestruj|Usługa Microsoft Intune używa [rejestracji](/intune/deploy-use/enroll-devices-in-microsoft-intune), która umożliwia zarządzanie urządzeniami i zezwala na nich na dostęp do zasobów.|
 
 ## <a name="f"></a>F
@@ -145,9 +147,4 @@ ms.openlocfilehash: b9a51cb2123bc9b6e73c0bf72ef5393252e8d37d
 |||
 |-|-|
 |Profil sieci Wi-Fi|Zasady wdrażające [ustawienia sieci bezprzewodowej](/intune/deploy-use/wi-fi-connections-in-microsoft-intune) na urządzenia, aby pozwolić użytkownikom na łączenie się z siecią firmową bez znajomości czy konfigurowania jakichkolwiek ustawień.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

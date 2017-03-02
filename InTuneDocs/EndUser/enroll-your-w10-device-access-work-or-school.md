@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,43 +16,42 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 865c0e607b053c4d5aff648332b1dcfc68dc0e6c
+ms.sourcegitcommit: cfd6d509b6683f563d56ef149ff3739de4772394
+ms.openlocfilehash: c87be1a3cdea23d5d40dcd8abe902b4ee5c06bc4
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
 # <a name="enroll-your-windows-10-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune
 
-<iframe src="https://channel9.msdn.com/Series/IntuneEnrollment/Windows-Enrollment/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/IntuneEnrollment/Windows-Enrollment-with-AAD/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
-1.  Naciśnij opcję **Uzyskaj dostęp do miejsca pracy lub nauki**, a następnie naciśnij opcję **Połącz**.
+1.  Otwórz aplikację **Ustawienia** systemu Windows, przechodząc do **menu Start** i wybierając przycisk **Ustawienia**. Możesz również wyszukać „ustawienia” na pasku wyszukiwania.
 
-    ![Wybierz pozycję Konto służbowe](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+2. Wybierz kolejno pozycje **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** > **Połącz**.
 
-2.  Wprowadź służbowy adres e-mail, a następnie naciśnij przycisk **Dalej**.
+    ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+
+3.  Wprowadź służbowy adres e-mail, a następnie wybierz przycisk **Dalej**.
 
     ![Wprowadź dane konta służbowego](./media/w10-enroll-rs1-set-up-work-or-school-account.png)
 
-3. Zaloguj się do usługi Intune przy użyciu konta służbowego.
+4. Zaloguj się do usługi Intune przy użyciu konta służbowego.
 
     ![Dodaj konto służbowe](./media/w10-enroll-rs1-enter-your-credentials.png)
 
     Pojawi się komunikat informujący o tym, że firma lub szkoła rejestruje urządzenie.
 
-4. Po wyświetleniu strony **Wszystko jest gotowe!** wybierz opcję **Zamknij**. To wszystko.
+5. Po wyświetleniu strony **Wszystko jest gotowe!** wybierz opcję **Zamknij**. To wszystko.
 
   ![Po wyświetleniu ekranu „Wszystko jest gotowe!” wybierz opcję Zamknij](./media/w10-enroll-rs1-youre-all-set.png)
 
-5. Jeśli chcesz się upewnić, że połączenie jest prawidłowo skonfigurowane, wróć do obszaru **Ustawienia** i sprawdź, czy konto służbowe znajduje się na liście.
+6. Jeśli chcesz się upewnić, że połączenie jest prawidłowo skonfigurowane, wróć do obszaru **Ustawienia** i sprawdź, czy konto służbowe znajduje się na liście.
 
     ![Sprawdź, czy połączenie zostało poprawnie skonfigurowane](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
 Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowego konta e-mail i plików, wykonaj czynności opisane w części [Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
