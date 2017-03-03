@@ -1,22 +1,23 @@
 ---
 title: Co nowego | Microsoft Docs
-description: "Sprawdź nowości w tym miesiącu i poprzednich wersjach usługi Microsoft Intune"
+description: "Sprawdź, co nowego w tym miesiącu i poprzednich wersjach usługi Microsoft Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
-ms.reviewer: cacampbell
+ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 846084a3810e43d9fd6a6c254f1b0167a36f37ff
-ms.openlocfilehash: b99731c7becd90f4092ec758234a96e202d95130
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: cb1679deda0ba325ee3bd7288713f12317489006
+ms.openlocfilehash: 37d44dc2752815ef7abf47e5d4a658a126892a86
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -37,7 +38,7 @@ Od marca Portal firmy dla systemu Windows 10 będzie zawierać wskazówki przewo
 ## <a name="notices"></a>Uwagi
 
 ### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Migracja grup nie wymaga żadnych aktualizacji grup ani zasad dotyczących urządzeń z systemem iOS <!--898837-->
-W przypadku każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, w usłudze AAD zostanie utworzona odpowiednia dynamiczna grupa urządzeń przy użyciu nazwy profilu Rejestracja urządzeń firmowych podczas migracji do grup urządzeń w usłudze Azure Active Directory. Dzięki temu rejestrowane urządzenia będą automatycznie grupowane i będą uzyskiwać te same zasady oraz aplikacje co grupa oryginalna w usłudze Intune. 
+W przypadku każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, w usłudze AAD zostanie utworzona odpowiednia dynamiczna grupa urządzeń przy użyciu nazwy profilu Rejestracja urządzeń firmowych podczas migracji do grup urządzeń w usłudze Azure Active Directory. Dzięki temu rejestrowane urządzenia będą automatycznie grupowane i będą uzyskiwać te same zasady oraz aplikacje co grupa oryginalna w usłudze Intune.
 
 Kiedy rozpocznie się proces migracji dzierżawy w zakresie grupowania i określania wartości docelowej, usługa Intune automatycznie utworzy dynamiczną grupę usługi AAD, która będzie odpowiadała grupie usługi Intune określonej jako docelowa przez profil Rejestracja urządzeń firmowych. Jeśli administrator usługi Intune usunie docelową grupę usługi Intune, odpowiadająca jej dynamiczna grupa usługi AAD nie zostanie usunięta. Członkowie tej grupy i zapytanie dynamiczne zostaną wyczyszczone, ale sama grupa jako całość zostanie pozostawiona do czasu, aż administrator IT usunie ją za pomocą portalu usługi AAD.
 
@@ -53,7 +54,7 @@ Użytkownicy końcowi otrzymają dodatkowe wskazówki dotyczące odzyskiwania do
 Linki w aplikacji Portal firmy dla systemu iOS, w tym linki do dokumentacji i aplikacji, będą otwierane bezpośrednio w aplikacji Portal firmy przy użyciu widoku przeglądarki Safari w aplikacji. Ta aktualizacja zostanie udostępniona oddzielnie od aktualizacji usługi w styczniu.
 
 ### <a name="new-mdm-server-address-for-windows-devices---893007--"></a>Nowy adres serwera MDM dla urządzeń z systemem Windows <!--893007-->
-Jeśli użytkownik wpisze ciąg __manage.microsoft.com__ jako adres serwera MDM (po wyświetleniu odpowiedniego monitu), próba zarejestrowania urządzenia z systemem Windows lub Windows Phone nie powiedzie się. Adres serwera MDM uległ zmianie z adresu __manage.microsoft.com__ na adres __enrollment.manage.microsoft.com__. Powiadom użytkownika, aby użył ciągu __enrollment.manage.microsoft.com__ jako adresu serwera MDM w przypadku wyświetlenia monitu podczas rejestrowania urządzenia z systemem Windows lub Windows Phone. Aby uzyskać dodatkowe informacje o tej zmianie, odwiedź stronę [aka.ms/intuneenrollsvrchange](https://aka.ms/intuneenrollsvrchange).
+Jeśli użytkownik wpisze ciąg __manage.microsoft.com__ jako adres serwera MDM (po wyświetleniu odpowiedniego monitu), próba zarejestrowania urządzenia z systemem Windows lub Windows Phone nie powiedzie się. Adres serwera MDM uległ zmianie z adresu __manage.microsoft.com__ na adres __enrollment.manage.microsoft.com__. Powiadom użytkownika, aby użył ciągu __enrollment.manage.microsoft.com__ jako adresu serwera MDM w przypadku wyświetlenia monitu podczas rejestrowania urządzenia z systemem Windows lub Windows Phone. Nie są wymagane żadne zmiany w konfiguracji CNAME. Aby uzyskać dodatkowe informacje o tej zmianie, odwiedź stronę [aka.ms/intuneenrollsvrchange](https://aka.ms/intuneenrollsvrchange).
 
 ### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nowe środowisko użytkownika aplikacji Portal firmy dla systemu Android <!--621622-->
 Od marca aplikacja Portal firmy dla systemu Android będzie zgodna z [zaleceniami dotyczącymi projektowania materiałów](https://material.io/guidelines/material-design/introduction.html) w celu zapewnienia bardziej nowoczesnego wyglądu i działania. Udoskonalone środowisko użytkownika końcowego obejmuje między innymi następujące elementy:

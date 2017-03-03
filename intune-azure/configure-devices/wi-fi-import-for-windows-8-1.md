@@ -1,5 +1,6 @@
 ---
-title: "Importowanie ustawień sieci Wi-Fi dla systemu Windows 8.1 lub nowszego | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Importowanie ustawień sieci Wi-Fi dla systemu Windows 8.1 lub nowszego"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: jak importować ustawienia sieci Wi-Fi z systemu Windows do profilu sieci Wi-Fi usługi Intune."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 2c4e9b19-b268-4f6d-9663-7cdbe4e4a8dd
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: 2600c8363c677465e29af382fa5ef4a921048fef
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: b0157f1021ae7c98392dc3c96481a4514758b059
+ms.lasthandoff: 02/18/2017
 
 
 ---

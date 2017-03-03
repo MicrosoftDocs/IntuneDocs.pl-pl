@@ -1,5 +1,6 @@
 ---
-title: "Co to jest rejestrowanie urządzeń w usłudze Microsoft Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Co to jest rejestrowanie urządzenia w usłudze Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się więcej o rejestrowaniu urządzeń z systemem iOS, Android i Windows."
 keywords: 
 author: staciebarker
@@ -11,12 +12,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
-ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: a92daf02c6fb2405c1255ff4ff8988f669dd76ce
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 900883ea9e38342cced195f97693447fafd0e73f
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/15/2017
 
 W tym temacie opisano rejestrację oraz różne sposoby rejestrowania urządzeń przenośnych w celu zarządzania nimi w usłudze Intune.
 
-Zarejestrowanie urządzeń, takich jak komputery z systemem Windows, w usłudze Intune umożliwia zarządzanie nimi. W dokumentacji usługi Intune funkcja ta jest określana mianem zarządzania urządzeniami przenośnymi (MDM, mobile device management). Gdy urządzenia są rejestrowane jako urządzenia przenośne (nie jako komputery), wystawiane są dla nich certyfikaty MDM, używane następnie przez urządzenia do komunikowania się z usługą Intune. 
+Zarejestrowanie urządzeń, takich jak komputery z systemem Windows, w usłudze Intune umożliwia zarządzanie nimi. W dokumentacji usługi Intune funkcja ta jest określana mianem zarządzania urządzeniami przenośnymi (MDM, mobile device management). Gdy urządzenia są rejestrowane jako urządzenia przenośne (nie jako komputery), wystawiane są dla nich certyfikaty MDM, używane następnie przez urządzenia do komunikowania się z usługą Intune.
 
 Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. Metoda rejestracji „Przynieś własne urządzenie” (BYOD) umożliwia użytkownikom rejestrowanie swoich osobistych telefonów, tabletów lub komputerów. Rejestracja urządzeń należących do firmy umożliwia korzystanie ze scenariuszy zarządzania, takich jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji.
 
@@ -76,7 +77,7 @@ Użytkownicy korzystający z metody „Przynieś własne urządzenie” instaluj
 Urządzeniami należącymi do firmy można zarządzać za pomocą portalu Azure. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi dostarczonych przez firmę Apple. Wszystkie typy urządzeń mogą być rejestrowane przez administratora lub menedżera za pomocą menedżera rejestracji urządzeń. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy, umożliwiając korzystanie ze scenariuszy COD.
 
 ### <a name="dem"></a>Menedżer rejestracji urządzeń
-Menedżer rejestracji urządzeń to specjalne konto użytkownika używane do rejestrowania wielu urządzeń należących do firmy i zarządzania nimi. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](enroll-devices-using-device-enrollment-manager.md). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
+Menedżer rejestracji urządzeń (DEM) to specjalne konto użytkownika używane do rejestrowania wielu urządzeń należących do firmy i zarządzania nimi. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](enroll-devices-using-device-enrollment-manager.md). ([Powrót do tabeli](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>Program Device Enrollment Program
 Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień systemu iOS. Ta metoda obsługuje tryb **nadzorcy systemu iOS**, który z kolei umożliwia:
@@ -87,7 +88,7 @@ Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na 
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 
 - [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](choose-ios-enrollment-method.md)
-- [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](enroll-ios-devices-using-device-enrollment-program.md). 
+- [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](enroll-ios-devices-using-device-enrollment-program.md)
 - [Powrót do tabeli powyżej](#overview-of-device-enrollment-methods)
 
 ### <a name="usb-sa"></a>USB-SA
@@ -98,10 +99,10 @@ Korzystając z programu Apple Configurator za pośrednictwem połączenia USB, a
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 
 - [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](choose-ios-enrollment-method.md)
-- [Rejestrowanie urządzeń z systemem iOS przy użyciu narzędzia Configurator i Asystent ustawień](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). 
+- [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Configurator i Asystenta ustawień](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
 
 ### <a name="usb-direct"></a>USB-Direct
-W celu przeprowadzenia rejestracji bezpośredniej administrator musi ręcznie zarejestrować każde urządzenie, tworząc zasady rejestracji i eksportując je do programu Apple Configurator. Urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności resetowania do ustawień fabrycznych. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu ani zarządzania aplikacjami mobilnymi. 
+W celu przeprowadzenia rejestracji bezpośredniej administrator musi ręcznie zarejestrować każde urządzenie, tworząc zasady rejestracji i eksportując je do programu Apple Configurator. Urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności resetowania do ustawień fabrycznych. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu ani zarządzania aplikacjami mobilnymi.
 
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 

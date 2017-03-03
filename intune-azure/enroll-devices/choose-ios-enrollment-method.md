@@ -1,5 +1,6 @@
 ---
-title: "Wybieranie sposobu rejestracji urządzeń z systemem iOS w usłudze Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Wybieranie sposobu rejestrowania urządzeń z systemem iOS w usłudze Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania rejestracji urządzeń z systemem iOS w usłudze Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: a08274fd4b2d3105b28f46a6d35257b3664f7510
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 748f5b6e18b7bc6d9e9d3e6635ac2c3e7eb11a67
+ms.lasthandoff: 02/18/2017
 
 
 ---
