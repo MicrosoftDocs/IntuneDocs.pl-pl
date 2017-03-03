@@ -5,7 +5,7 @@ description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Win
 keywords: 
 author: staciebarker
 ms.author: stabar
-ms.date: 02/14/2017
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
-ms.openlocfilehash: 9606d8f79166e6b38f02aefd4afc52f2a47c1362
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
+ms.openlocfilehash: e7e199bd1820299e7c0ea4f9adc3f5e62bffab97
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -179,6 +179,83 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
     > [!TIP]
     > Kliknij nagłówek dowolnej kolumny w raporcie, aby posortować listę według zawartości tej kolumny.
 
+## <a name="uninstall-the-windows-client-software"></a>Odinstalowywanie oprogramowania klienckiego systemu Windows
+
+Istnieją dwie metody wyrejestrowania oprogramowania klienckiego systemu Windows:
+
+- Z konsoli administracyjnej usługi Intune (zalecana metoda)
+- Z wiersza polecenia na komputerze klienckim
+
+### <a name="unenroll-by-using-the-intune-admin-console"></a>Wyrejestrowanie przy użyciu konsoli administracyjnej usługi Intune
+
+Aby wyrejestrować oprogramowanie klienckie za pomocą konsoli administracyjnej usługi Intune, przejdź kolejno do pozycji **Grupy** > **Wszystkie komputery** > **Urządzenia**. Kliknij klienta prawym przyciskiem myszy, a następnie wybierz pozycję **Wycofaj/Wyczyść**.
+
+### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>Wyrejestrowanie przy użyciu wiersza polecenia na komputerze klienckim
+
+W wierszu polecenia z podwyższonym poziomem uprawnień uruchom jedno z następujących poleceń.
+
+**Metoda 1**:
+
+    ```
+    "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+    ```
+
+**Metoda 2** należy pamiętać, że nie wszyscy ci agenci są zainstalowani w każdej jednostce magazynowej systemu Windows):
+
+    ```
+    wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall<br>
+    wmic product where name="Microsoft Intune Notification Service" call uninstall<br>
+    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall<br>
+    wmic product where name="Microsoft Online Management Policy Agent" call uninstall<br>
+    wmic product where name="Microsoft Policy Platform" call uninstall<br>
+    wmic product where name="Microsoft Security Client" call uninstall<br>
+    wmic product where name="Microsoft Online Management Client" call uninstall<br>
+    wmic product where name="Microsoft Online Management Client Service" call uninstall<br>
+    wmic product where name="Microsoft Easy Assist v2" call uninstall<br>
+    wmic product where name="Microsoft Intune Monitoring Agent" call uninstall<br>
+    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall<br>
+    wmic product where name="Windows Firewall Configuration Provider" call uninstall<br>
+    wmic product where name="Microsoft Intune Center" call uninstall<br>
+    wmic product where name="Microsoft Online Management Update Manager" call uninstall<br>
+    wmic product where name="Microsoft Online Management Agent Installer" call uninstall<br>
+    wmic product where name="Microsoft Intune" call uninstall<br>
+    wmic product where name="Windows Endpoint Protection Management Components" call uninstall<br>
+    wmic product where name="Windows Intune Notification Service" call uninstall<br>
+    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall<br>
+    wmic product where name="Windows Online Management Policy Agent" call uninstall<br>
+    wmic product where name="Windows Policy Platform" call uninstall<br>
+    wmic product where name="Windows Security Client" call uninstall<br>
+    wmic product where name="Windows Online Management Client" call uninstall<br>
+    wmic product where name="Windows Online Management Client Service" call uninstall<br>
+    wmic product where name="Windows Easy Assist v2" call uninstall<br>
+    wmic product where name="Windows Intune Monitoring Agent" call uninstall<br>
+    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall<br>
+    wmic product where name="Windows Firewall Configuration Provider" call uninstall<br>
+    wmic product where name="Windows Intune Center" call uninstall<br>
+    wmic product where name="Windows Online Management Update Manager" call uninstall<br>
+    wmic product where name="Windows Online Management Agent Installer" call uninstall<br>
+    wmic product where name="Windows Intune" call uninstall
+    ```
+
+> [!TIP]
+> Wyrejestrowanie klienta pozostawi stary rekord po stronie serwera dla klienta, którego to dotyczy. Proces wyrejestrowania jest asynchroniczny i istnieje dziewięciu agentów do odinstalowania, więc operacja może potrwać do 30 minut.
+
+### <a name="check-the-unenrollment-status"></a>Sprawdź stan wyrejestrowania
+
+Sprawdź folder „%ProgramFiles%\Microsoft\OnlineManagement” i upewnij się, że po lewej stronie są wyświetlane tylko następujące katalogi:
+
+- AgentInstaller
+- Dzienniki
+- Updates
+- Wspólne 
+
+### <a name="remove-the-onlinemanagement-folder"></a>Usuń folder OnlineManagement
+
+Operacja wyrejestrowania nie usuwa folderu OnlineManagement. Odczekaj 30 minut po odinstalowaniu, a następnie uruchom to polecenie. Jeśli zostanie ono uruchomione zbyt szybko, odinstalowanie może pozostać w nieznanym stanie. Aby usunąć folder, uruchom wiersz polecenia z podwyższonym poziomem uprawnień:
+
+    ```
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    ```
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)

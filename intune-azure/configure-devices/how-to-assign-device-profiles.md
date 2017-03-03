@@ -1,5 +1,6 @@
 ---
-title: "Przypisywanie profilów urządzeń przy użyciu usługi Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Jak przypisywać profile urządzeń usługi Intune"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: po utworzeniu profilu urządzenia przy użyciu usługi Intune zapoznaj się z tym tematem, aby dowiedzieć się, jak przypisać profil do urządzeń."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: 0bc43e59c63fb07b07187bd9b8ae78fbc3aa0557
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 861e14227b847422d584d69364315a2418a986de
+ms.lasthandoff: 02/18/2017
 
 
 ---

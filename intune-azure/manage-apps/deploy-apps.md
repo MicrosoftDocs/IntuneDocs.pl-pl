@@ -1,5 +1,6 @@
 ---
-title: "Przypisywanie aplikacji do grup | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
+title: "Jak przypisać aplikacje do grup"
+titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: 638ad0d87c19c9e40e96b42d18e5c4342f40a156
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: b372d4ee505ca39a4739069e5798918ecde134ea
+ms.openlocfilehash: abf45b835d13ef5fe4acb769194542611448504e
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -42,6 +44,33 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 
 > [!NOTE]
 > Obecnie można przypisać aplikacje iOS i Android (zarówno biznesowe, jak i zakupione w sklepie) do urządzeń, które nie są zarejestrowane w usłudze Intune.
+
+## <a name="changes-to-how-you-assign-apps-to-groups-in-the-intune-preview"></a>Zmiany metody przypisywania aplikacji do grup w wersji zapoznawczej usługi Intune
+
+W wersji zapoznawczej usługi Intune Azure nie używa się już grup w usłudze Intune do przypisywania aplikacji; teraz używa się grup zabezpieczeń usługi Azure Active Directory (Azure AD). W związku z tym należy poznać pewne zmiany w sposobie, w jaki odbywają się przypisania aplikacji, szczególnie w przypadku przypisywania aplikacji do grup podrzędnych usługi Intune.
+Najważniejszą rzeczą, na którą trzeba zwrócić uwagę jest to, że pojęcie grup podrzędnych nie istnieje w usłudze Azure AD. Jednak niektóre grupy mogą zawierać te same elementy członkowskie. W takim przypadku zachowanie klasycznej usługi Intune różni się od wersji zapoznawczej usługi Intune Azure. Zostało to przedstawione w poniższej tabeli:
+
+||||||
+|-|-|-|-|-|
+|**Intune Classic (przed migracją dzierżawy)**|-|**Intune Azure (po zakończeniu migracji dzierżawy)**|-|**Więcej informacji**|
+|**Opcja wdrażania grupy nadrzędnej**|**Opcja wdrażania grupy podrzędnej**|**Wynikowa opcja przypisania dla wspólnych elementów członkowskich poprzedniej grupy nadrzędnej i podrzędnej**|**Akcja wynikowej opcji przypisania dla elementów członkowskich grupy nadrzędnej**|-|    
+|Dostępne|Wymagane|Wymagane i dostępne|Dostępne|Wymagane i dostępne oznacza, że aplikacje przypisane w razie potrzeby można także znaleźć w aplikacji Portal firmy.
+|Nie dotyczy|Dostępne|Nie dotyczy|Nie dotyczy|Obejście problemu: usuń opcję wdrażania „Nie dotyczy” z grupy nadrzędnej usługi Intune.
+|Wymagane|Dostępne|Wymagane i dostępne|Wymagane|-|
+|Wymagane i dostępne<sup>1</sup>|Dostępne|Wymagane i dostępne|Wymagane i dostępne|-|    
+|Wymagane|Nie dotyczy|Wymagane|Wymagane|-|    
+|Wymagane i dostępne|Nie dotyczy|Wymagane i dostępne|Wymagane i dostępne|-|    
+|Wymagane|Odinstaluj|Wymagane|Wymagane|-|    
+|Wymagane i dostępne|Odinstaluj|Wymagane i dostępne|Wymagane i dostępne|-|
+<sup>1</sup> Tylko dla zarządzanych aplikacji ze sklepu iOS w przypadku ich dodania do usługi Intune i wdrożenia jako Wymagane są automatycznie tworzone z opcjami Wymagane i Dostępne.
+
+W celu uniknięcia konfliktów wdrożenia można wykonać następujące czynności:
+
+1.    Jeśli aplikacje zostały wcześniej wdrożone do powiązanych grup nadrzędnych i podrzędnych usługi Intune, rozważ usunięcie tych wdrożeń przed rozpoczęciem migracji dzierżawy.
+2.    Usuń grupy podrzędne z grup nadrzędnych i utwórz nową grupę zawierającą elementy członkowskie starej grupy podrzędnej. Następnie można utworzyć nowe wdrożenie aplikacji do tej grupy.
+Uwagi: Jeśli poprzednią grupą nadrzędną była „Wszyscy użytkownicy”, należy utworzyć nową grupę dynamiczną, która nie obejmuje elementów członkowskich grupy podrzędnej.
+Należy wprowadzić zmiany w grupach w portalu [Azure Portal](https://portal.azure.com/) dla grup użytkowników i urządzeń. [Klasyczny portal Azure](https://manage.windowsazure.com/) pozwala wprowadzać zmiany tylko w grupach użytkowników.
+
 
 ## <a name="how-to-assign-an-app"></a>Jak przypisać aplikację
 
