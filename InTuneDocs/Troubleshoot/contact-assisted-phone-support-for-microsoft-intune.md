@@ -1,11 +1,11 @@
 ---
-title: "Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Intune"
-description: "Numery telefonów do pomocy technicznej usługi Intune"
-keywords: 
+title: "Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Docs"
+description: "Numery telefonu działu pomocy Microsoft Intune."
+keywords: godziny pracy
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 3a081109cd499d3bdda75cb6c8a4dab9d9d28fab
-ms.openlocfilehash: 67eec76113deca2e3dabe74bff9cabfeb41fcbce
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: d5460d5e68fcc5346c2e0b745ea694c6875b5480
+ms.lasthandoff: 01/10/2017
 
 
 ---
 
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="phone-numbers-and-business-hours"></a>Numery telefonów i godziny pracy
 
@@ -115,9 +119,4 @@ ms.openlocfilehash: 67eec76113deca2e3dabe74bff9cabfeb41fcbce
 |Urugwaj|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 UYST (UTC -2)|hiszpański&#42;, angielski|000-411-002-7131||
 |Wenezuela|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 VET (UTC -4:30)|hiszpański&#42;, angielski|0-800-100-8763||
 &#42; Obsługiwane w połączeniu z usługą tłumaczenia przez telefon.
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: afbb103f1deecff323d07c510f42a2083a4ea0d5
+ms.sourcegitcommit: b268bb16b7fc7e38021441bb16517e754b5e395f
+ms.openlocfilehash: 4a52d714d47a0b3af56be6eb5096fffae160e435
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -30,7 +32,7 @@ Po wdrożeniu zasad w grupach użytkowników lub na urządzeniu z systemem Andro
 
 > [!NOTE]
 >
-> Dla tego profilu obsługiwany jest tylko typ połączenia Pulse Secure.
+> Dla tego profilu obsługiwane są tylko typy połączenia Pulse Secure i Citrix.
 
 
 ### <a name="step-1-create-a-vpn-profile"></a>Krok 1. Tworzenie profilu sieci VPN
@@ -52,7 +54,7 @@ Po wdrożeniu zasad w grupach użytkowników lub na urządzeniu z systemem Andro
    4. Podaj nazwę ustawienia.
    5. Dla pozycji **Typ danych** określ wartość **Ciąg**.
    6. Dla pozycji **OMA-URI** określ następujący ciąg: **./Vendor/MSFT/VPN/Profile/*Nazwa*/PackageList**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/PackageList**.
-   7.   W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
+   7.    W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
 
 ![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](./media/android_per_app_vpn_oma_uri.png)
 
@@ -77,9 +79,4 @@ Należy wdrożyć *obie* zasady w *tych samych* grupach usługi Intune.
     -   **Aby zamknąć okno dialogowe bez wdrażania zasad**, wybierz pozycję **Anuluj**.
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Podsumowanie stanu jest wyświetlane także w obszarze roboczym **Pulpit nawigacyjny**.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

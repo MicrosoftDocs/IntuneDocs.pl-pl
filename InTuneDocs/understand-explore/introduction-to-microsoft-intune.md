@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
+ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
+ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
+ms.lasthandoff: 01/11/2017
 
 
 ---
@@ -71,7 +73,7 @@ To — w połączeniu z funkcjami ochrony danych systemu operacyjnego (na przyk�
 Korzystając z usługi Intune w połączeniu z innymi usługami pakietu EMS, możesz zapewnić swojej organizacji lepsze bezpieczeństwo aplikacji mobilnych niż to dostarczane przez system operacyjny urządzeń przenośnych i same aplikacje mobilne za pośrednictwem konfiguracji aplikacji. Aplikacja zarządzana za pomocą pakietu EMS ma dostęp do szerszego zakresu zabezpieczeń aplikacji mobilnych i danych, który obejmuje:
 
 * [Logowanie jednokrotne](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/en-us/multi-factor-authentication/multi-factor-authentication)
+*    [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/en-us/multi-factor-authentication/multi-factor-authentication)
 * [Warunkowy dostęp do aplikacji (dostęp jest umożliwiony, jeśli aplikacja mobilna zawiera dane firmy)](https://docs.microsoft.com/en-us/intune/deploy-use/allow-policy-managed-apps-access-to-o365)
 * [Izolowanie danych firmowych od danych osobistych w ramach tej samej aplikacji](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
 * [Zasady ochrony aplikacji (numer PIN, szyfrowanie, funkcja „Zapisz jako”, schowek itp.)](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
@@ -95,7 +97,7 @@ Większość rozwiązań do zarządzania mobilnością w przedsiębiorstwie obs�
 
 Organizacje różnią się pod względem zakresu, w jakim przyjmują scenariusze „bez rejestracji”. Niektóre organizacje standaryzują ten scenariusz. Niektóre dopuszczają go na urządzeniach towarzyszących, takich jak tablety osobiste. Inne w ogóle go nie obsługują. Nawet w ostatnim przypadku, w którym organizacja wymaga, aby wszystkie urządzenia pracownicze były zarejestrowane w rozwiązaniu MDM, organizacje te zwykle obsługują scenariusze „bez rejestracji” w przypadku wykonawców, dostawców i innych urządzeń, które mają specjalne zwolnienie.
 
-Technologia „bez rejestracji” usługi Intune może być nawet używana na zarejestrowanych urządzeniach. Urządzenie zarejestrowane w rozwiązaniu MDM może mieć na przykład zabezpieczenia typu „Otwórz w” dostarczone przez system operacyjny urządzenia przenośnego. Ponadto dział IT może stosować zasady ochrony aplikacji względem aplikacji mobilnych zarządzanych przez pakiet EMS w celu kontrolowania funkcji „Zapisz jako” oraz zapewnienia uwierzytelniania wieloskładnikowego.
+Technologia „bez rejestracji” usługi Intune może być nawet używana na zarejestrowanych urządzeniach. Urządzenie zarejestrowane w rozwiązaniu MDM może mieć na przykład zabezpieczenia typu „Otwórz w” dostarczone przez system operacyjny urządzenia przenośnego. (W systemie iOS stosowana jest ochrona z użyciem funkcji „Otwórz w”, która uniemożliwia otwarcie dokumentu z jednej aplikacji, takiej jak program Outlook, w innej aplikacji, takiej jak Word; wyjątek stanowi sytuacja, w które obie aplikacje są zarządzane przez dostawcę rozwiązania MDM). Ponadto dział IT może stosować zasady ochrony aplikacji względem aplikacji mobilnych zarządzanych przez pakiet EMS w celu kontrolowania funkcji „Zapisz jako” oraz zapewnienia uwierzytelniania wieloskładnikowego.
 
 Niezależnie od stanowiska organizacji względem zarejestrowanych i niezarejestrowanych urządzeń przenośnych oraz aplikacji mobilnych usługa Intune, jako część pakietu EMS, dysponuje narzędziami, które pomagają zwiększyć produktywność pracowników przy jednoczesnej ochronie danych firmowych.
 
@@ -113,9 +115,4 @@ Poniższa lista problemów biznesowych zawiera linki do bardziej szczegółowych
 * Przeczytaj o pewnych [typowych sposobach korzystania z usługi Intune](common-ways-to-use-intune.md).
 * Zapoznaj się z produktem, korzystając [z 30-dniowej wersji próbnej usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Poznaj [wymagania techniczne i możliwości](/intune/get-started/what-to-know-before-you-start-microsoft-intune) usługi Intune.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

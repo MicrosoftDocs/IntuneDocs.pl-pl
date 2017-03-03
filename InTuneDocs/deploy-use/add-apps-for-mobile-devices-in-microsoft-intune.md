@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/28/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: ccd9dacdb2c59febdd741b1a95617cadc1347639
+ms.sourcegitcommit: 18f200ca30cfcd4c9fb00519c149f48e9b9fa8cb
+ms.openlocfilehash: b566b13f8c93c8a6bddccdbc0da5eb508907dac2
+ms.lasthandoff: 01/11/2017
 
 
 ---
@@ -60,6 +62,9 @@ Narzędzie Wydawca oprogramowania usługi Intune służy do konfigurowania wła�
 
         ![Wydawcy oprogramowania usługi Intune](./media/publisher-for-mobile.png)
 
+> [!NOTE]
+> Kiedy dodajesz i wdrażasz aplikację ze sklepu, użytkownicy końcowi muszą mieć konto w danym sklepie, aby móc zainstalować daną aplikację.
+
 3.  Na stronie **Opis oprogramowania** skonfiguruj następujące ustawienia:
 
     > [!TIP]
@@ -99,9 +104,4 @@ W tym czterominutowym filmie wideo objaśniono sposób wdrażania aplikacji inst
 ## <a name="next-steps"></a>Następne kroki
 
 Po utworzeniu aplikacji następnym krokiem jest jej wdrożenie. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
