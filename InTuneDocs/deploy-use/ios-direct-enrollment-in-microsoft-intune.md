@@ -4,7 +4,7 @@ description: "Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrow
 keywords: 
 author: staciebarker
 ms.author: stabar
-manager: arob98
+manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: f75c4a6412d34923ec45524d765d3eb270f15e13
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -91,9 +92,4 @@ W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zare
 9.  Na urządzeniu z systemem iOS otwórz pozycję **Ustawienia** i przejdź do pozycji **Ogólne** &gt; **Zarządzanie urządzeniem** &gt; **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
 
 10.  Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 
