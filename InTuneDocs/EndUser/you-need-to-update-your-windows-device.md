@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2df6fca5-9731-4ea0-a8ee-45b648caa5b4
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
 ms.openlocfilehash: dc3444f6da563ac3489790d6d2bc112c497376d4
+ms.lasthandoff: 12/21/2016
 
 
 ---
@@ -38,9 +39,4 @@ Komputer z systemem Windows: wyszukaj frazę **system operacyjny** i postępuj z
 W przypadku systemów Windows 10 i Windows 8.1 wpisz __Wersja systemu Windows__ na __pasku wyszukiwania__. W obszarze __Czy mogę pomóc?__ wybierz pozycję __Wersja systemu Windows__. Zostanie wyświetlony numer wersji. Będzie on wyglądać podobnie do następującego numeru: __10.0.14393.447__.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

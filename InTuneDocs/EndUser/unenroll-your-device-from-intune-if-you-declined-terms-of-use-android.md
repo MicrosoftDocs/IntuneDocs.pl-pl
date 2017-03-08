@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 9530eb45bf027c66c4a36e4cea1ec05c5f15a6e5
 ms.openlocfilehash: 73dfec1fe1a0a027aa560de62b6bd7ed7732faa0
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -44,9 +45,4 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
     Teraz możesz odinstalować aplikację Portal firmy.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do [zespołu ds. systemu Android firmy Microsoft](mailto:wintunedroidfbk@microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

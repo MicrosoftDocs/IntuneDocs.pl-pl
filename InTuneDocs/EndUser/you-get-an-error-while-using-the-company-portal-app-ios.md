@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 09cd4ed6-1ce4-4530-9753-59808f01c6d7
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
 ms.openlocfilehash: 34ad0d3c65230d4d296027e8431f1087c59f289a
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -36,9 +37,4 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iO
 -   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie naciśnij pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 42e6b4d44dffa457f009e8402d5c429aa55932d6
 ms.openlocfilehash: 74983ab11e1c1763bd5394af483b93b74b715f89
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,9 +37,4 @@ Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy 
 |Komputery osobiste i laptopy|**Windows 8.1 i Windows 8**<br />Komputer z systemem Windows 8 lub Windows 8.1 można zresetować tylko wtedy, gdy jest on używany tylko do obsługi poczty e-mail.<br /><br />**Windows 7 lub Windows Vista**<br />Nie można zresetować komputera z systemem Windows 7 lub starszym.|
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
 ms.openlocfilehash: b2554e66150f8b6d61f184bf739750c482b3058e
+ms.lasthandoff: 12/21/2016
 
 
 ---
@@ -31,9 +32,4 @@ Firma Microsoft automatycznie zbiera określone dane dotyczące swoich produktó
 Aby wyłączyć zbieranie tych danych na urządzeniu z systemem Android, otwórz ustawienie **Dane użycia** w aplikacji Portal firmy.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: fbc9c2b9-b454-4b33-86cc-650742bbf1e1
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 4e1b2094a89940355e02c062614620a4abf70e53
 ms.openlocfilehash: 5de975c1c4b06d1cce0dcdb2564826d09a53260e
+ms.lasthandoff: 12/21/2016
 
 
 ---
@@ -35,9 +36,4 @@ Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z a
 -   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie wybierz pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

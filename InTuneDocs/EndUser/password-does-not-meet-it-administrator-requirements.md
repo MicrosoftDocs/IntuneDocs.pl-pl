@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: c5c857b46c13aee790ab5f780a59d9cd51029cd2
 ms.openlocfilehash: a2af33a5b274b01f6651c76bd0b0038dc74b785f
+ms.lasthandoff: 02/10/2017
 
 
 ---
@@ -49,9 +50,4 @@ Opisy problemów związanych z numerem PIN lub hasłem:
 - **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Administrator IT wymaga użycia większej liczby znaków złożonych w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #. Może to także dotyczyć innych kont na urządzeniu, więc pamiętaj o sprawdzeniu wszystkich pozostałych kont służbowych, aby upewnić się, że hasło spełnia wymagania określone przez dział IT dla urządzenia.
 
 Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

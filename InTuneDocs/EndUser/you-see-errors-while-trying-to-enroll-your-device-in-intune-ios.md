@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 92a8d06d-0ecb-4912-898b-993e8eaf4e58
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: 06866b9db458851dbb23d5ccf741cad3e1d4c5d0
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -37,9 +38,4 @@ Poniższa tabela zawiera listę błędów, które mogą występować podczas rej
 |DeviceTypeNotSupported|Prawdopodobnie podjęto próbę zarejestrowania urządzenia z systemem innym niż iOS. Typ urządzenia przenośnego, które próbujesz zarejestrować, nie jest obsługiwany.<br /><br />Upewnij się, że na urządzeniu działa system iOS w wersji 8.0 lub nowszej.<br /><br />Skontaktuj się z administratorami IT i poinformuj ich o pojawieniu się komunikatu **DeviceTypeNotSupported** podczas próby zarejestrowania urządzenia przenośnego oraz poproś o zapoznanie się z rozwiązaniem w tej tabeli.|Upewnij się, że na urządzeniu użytkownika działa system iOS w wersji 8.0 lub nowszej.|
 |UserLicenseTypeInvalid|Nie można zarejestrować urządzenia przenośnego, ponieważ konto użytkownika nie należy jeszcze do wymaganej grupy użytkowników.<br /><br />Skontaktuj się z administratorami IT i poinformuj ich o pojawieniu się komunikatu **UserLicenseTypeInvalid** podczas próby zarejestrowania urządzenia przenośnego oraz poproś o zapoznanie się z rozwiązaniem w tej tabeli.|Aby użytkownicy mogli rejestrować urządzenia, muszą należeć do odpowiedniej grupy użytkowników. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br /><br />Więcej informacji zawierają następujące sekcje:<br /><br />Zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune), a także informacje o sposobie konfigurowania użytkowników w temacie [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) oraz [Organizowanie użytkowników i urządzeń](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |MdmAuthorityNotDefined|Administrator IT musi skonfigurować sposób zarządzania urządzeniami przenośnymi w firmie.<br /><br />Skontaktuj się z administratorami IT i poinformuj ich o pojawieniu się komunikatu **MdmAuthorityNotDefined** podczas próby zarejestrowania urządzenia przenośnego oraz poproś o zapoznanie się z rozwiązaniem w tej tabeli.|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune.<br /><br />Zapoznaj się z pozycją 1 w sekcji „Krok 6. Rejestrowanie urządzeń przenośnych i instalowanie aplikacji” w temacie [Rozpoczynanie pracy z 30-dniową wersją próbną usługi Microsoft Intune](/Intune/Understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
