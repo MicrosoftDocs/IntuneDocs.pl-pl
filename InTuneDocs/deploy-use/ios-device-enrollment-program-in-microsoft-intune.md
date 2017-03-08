@@ -2,8 +2,8 @@
 title: "Zarządzanie programem DEP firmy Apple dla urządzeń z systemem iOS | Microsoft Docs"
 description: "Aby zarządzać urządzeniami firmy Apple, wdróż profil rejestracji służący do bezprzewodowego rejestrowania urządzeń z systemem iOS zakupionych w ramach programu Device Enrollment Program (DEP)."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

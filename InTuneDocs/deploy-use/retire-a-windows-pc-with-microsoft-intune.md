@@ -2,8 +2,8 @@
 title: Wycofywanie komputera z systemem Windows | Microsoft Docs
 description: "Jak wycofać komputer z systemem Windows zarządzany przez usługę Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
 ms.openlocfilehash: fbf188be16ca4a47ee369e3fdde8c0a7f799beab
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -56,8 +57,3 @@ W przypadku wycofywania komputera:
 ### <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -2,8 +2,8 @@
 title: "Konfigurowanie zarządzania systemem iOS i komputerami Mac | Microsoft Docs"
 description: "Włącz w usłudze Microsoft Intune zarządzanie urządzeniami mobilnymi (MDM) dla urządzeń z systemem iOS, w tym urządzeń iPad i iPhone, a także urządzeń z systemem Mac OS X."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 11/17/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: afca2af0b07b939adc66c8804f04a1125e12001b
 ms.openlocfilehash: 9c71a83f9514187753360fa9c2085584d1b76711
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -58,9 +59,4 @@ Jeśli Twoja firma lub organizacja zakupi dla użytkowników urządzenia z syste
 
 ### <a name="see-also"></a>Zobacz też
 [Wymagania wstępne dotyczące rejestracji w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

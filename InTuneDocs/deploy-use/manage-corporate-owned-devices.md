@@ -2,8 +2,8 @@
 title: "Zarządzanie urządzeniami firmowymi | Microsoft Docs"
 description: "Rejestruj urządzenia należące do firmy na różne sposoby, w zależności od rodzaju urządzenia, sposobu jego zakupu i potrzeb organizacji."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -65,9 +66,4 @@ Usługa Intune rozpoznaje urządzenie jako „firmowe” w przypadku spełnienia
  - Urządzenie zostało zarejestrowane w usłudze [Azure Active Directory lub Enterprise Mobility Suite jako urządzenie z systemem Windows 10 Enterprise](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (tylko system Windows 10).
 
 Jeśli urządzenie zostało oznaczone jako firmowe, zobaczysz wartość **Należące do firmy** w kolumnie **Własność** dla tego rekordu urządzenia w konsoli administratora. 
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

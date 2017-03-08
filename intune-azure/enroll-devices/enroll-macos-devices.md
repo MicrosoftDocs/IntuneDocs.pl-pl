@@ -3,8 +3,8 @@ title: "Rejestrowanie urządzeń z systemem macOS w usłudze Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje o sposobie rejestrowania urządzeń z systemem macOS w wersji zapoznawczej usługi Intune Azure."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/14/2017
 ms.topic: article

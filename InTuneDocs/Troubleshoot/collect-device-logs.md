@@ -2,8 +2,8 @@
 title: "Zbieranie dzienników urządzeń | Microsoft Docs"
 description: "Dowiedz się, jak zbierać dzienniki z urządzeń zarządzanych."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 02/07/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 211b996263aae7a42f8370eb343c7e759ef87790
 ms.openlocfilehash: 5aae8edd2b851eb94156e82bc9b6e604644cb900
+ms.lasthandoff: 02/08/2017
 
 
 ---
@@ -57,9 +58,4 @@ W aplikacji Portal firmy dla systemu Windows Phone do uzyskania dostępu do menu
 ### <a name="windows"></a>Windows
 
 W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się w folderze *%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState*.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

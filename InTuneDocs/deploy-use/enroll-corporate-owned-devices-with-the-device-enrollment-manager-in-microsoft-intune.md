@@ -2,8 +2,8 @@
 title: "Rejestrowanie przy użyciu menedżera rejestracji urządzeń | Microsoft Docs"
 description: "Za pomocą konta menedżera rejestracji urządzeń można zarządzać dużą liczbą współdzielonych firmowych urządzeń przenośnych za pomocą jednego konta użytkownika."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/17
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
 ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -106,9 +107,4 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 -   Używając poświadczeń konta usuniętego menedżera rejestracji urządzeń, nie można jednak czyścić ani wycofywać urządzeń.
 
 -   Powiązanie usuniętego konta menedżera rejestracji urządzeń z zarejestrowanymi urządzeniami zostaje zachowane, ale nie można zarejestrować dodatkowych urządzeń.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

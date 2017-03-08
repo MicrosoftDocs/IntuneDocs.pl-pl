@@ -2,8 +2,8 @@
 title: "Żądanie i zapewnianie pomocy zdalnej dla komputerów osobistych z systemem Windows | Microsoft Docs"
 description: "W tym artykule opisano kroki wykonywane przez użytkownika i administratora IT zapewniające uzyskanie pomocy zdalnej dla komputerów z systemem Windows zarządzanych jako komputery osobiste i zdalne uruchamianie komputera osobistego."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
 ms.openlocfilehash: 628875c2f874c824761befd9886d7f7987c045df
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -85,8 +86,3 @@ W trakcie udzielania pomocy użytkownikom w rozwiązywaniu problemów od czasu d
 ### <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -3,8 +3,8 @@ title: "Ustawianie warunków i postanowień w usłudze Microsoft Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: ustawianie warunków i postanowień widocznych dla użytkowników w Portalu firmy dla usługi Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

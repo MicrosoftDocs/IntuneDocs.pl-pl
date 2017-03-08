@@ -3,8 +3,8 @@ title: "Konfigurowanie usługi Telecom Expense Management"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: konfigurowanie usługi zarządzania wydatkami telekomunikacyjnymi Saaswedo do integracji z usługą Intune."
 keywords: Saaswedo
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/16/2017
 ms.topic: article

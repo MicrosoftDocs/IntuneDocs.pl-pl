@@ -3,8 +3,8 @@ title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: ograniczanie rejestrowania według platform i ustawianie limitu rejestracji urządzeń w usłudze Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

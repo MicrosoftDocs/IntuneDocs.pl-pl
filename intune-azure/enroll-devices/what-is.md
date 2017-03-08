@@ -3,8 +3,8 @@ title: "Co to jest rejestrowanie urządzenia w usłudze Microsoft Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się więcej o rejestrowaniu urządzeń z systemem iOS, Android i Windows."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: get-started-article

@@ -2,8 +2,8 @@
 title: "Ustawienia zasad dotyczących warunków i postanowień | Microsoft Docs"
 description: "Wdrożenie warunków i postanowień usługi Intune w grupach użytkowników pozwala wyjaśnić wpływ rejestracji, dostępu do zasobów roboczych i korzystania z aplikacji Portal firmy na urządzenia i użytkowników."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: a6d5f19b1d5f5bac3cd5e6d8bc445d765d703de0
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -82,9 +83,4 @@ Podczas edytowania istniejących zasad dotyczących warunków i postanowień mo�
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

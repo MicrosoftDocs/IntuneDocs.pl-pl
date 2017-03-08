@@ -3,8 +3,8 @@ title: "Pobieranie certyfikatu programu DEP firmy Apple dla usługi Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: instrukcje dotyczące skonfigurowania i przekazania certyfikatu wypychania MDM stanowiącego wymaganie wstępne dla zarządzania urządzeniami firmy Apple w usłudze Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/03/17
 ms.topic: article

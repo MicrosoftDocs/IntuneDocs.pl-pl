@@ -3,8 +3,8 @@ title: "Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Config
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące korzystania z programu Apple Configurator w celu rejestrowania firmowych urządzeń z systemem iOS przy użyciu Asystenta ustawień."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Zarządzanie komputerami przy użyciu oprogramowania klienckiego | Microsoft Docs"
 description: "Zarządzaj komputerami z systemem Windows, instalując oprogramowanie klienckie usługi Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/09/2017
 ms.topic: article

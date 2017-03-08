@@ -3,8 +3,8 @@ title: "Dodawanie numerów seryjnych programu Apple Configurator"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące dodawania numerów seryjnych do urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

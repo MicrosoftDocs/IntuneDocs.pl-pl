@@ -3,8 +3,8 @@ title: "Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: korzystanie z konta menedżera rejestracji urządzeń w celu rejestrowania urządzeń w usłudze Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

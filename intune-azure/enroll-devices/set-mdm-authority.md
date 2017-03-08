@@ -3,8 +3,8 @@ title: "Ustawianie źródła zarządzania urządzeniem przenośnym"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat ustawiania urzędu zarządzania urządzeniami przenośnymi w usłudze Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/06/2016
 ms.topic: article
@@ -18,6 +18,7 @@ ms.custom: intune-azure
 translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 9d7a1a934188f0a40553d3c6b8b567ba8f6af034
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -43,9 +44,4 @@ Ustawienie urzędu zarządzania urządzeniami przenośnymi określa sposób zarz
 2. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie wybierz pozycję **Przegląd**.
 
 3. W bloku **Rozpocznij zarządzanie urządzeniami** wybierz pozycję **Ustaw urząd certyfikacji MDM na usługę Intune**. Zostanie wyświetlony komunikat z potwierdzeniem pomyślnego ustawienia urzędu certyfikacji MDM na usługę Intune.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

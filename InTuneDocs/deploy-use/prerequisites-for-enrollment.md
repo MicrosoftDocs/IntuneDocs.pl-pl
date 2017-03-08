@@ -2,8 +2,8 @@
 title: "Wymagania wstępne dotyczące rejestracji urządzeń przenośnych | Microsoft Docs"
 description: "Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/21/2017
 ms.topic: article

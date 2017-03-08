@@ -3,8 +3,8 @@
 title: Instalowanie komputerowego oprogramowania klienckiego | Microsoft Docs
 description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 

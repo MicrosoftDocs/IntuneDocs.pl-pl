@@ -3,8 +3,8 @@ title: "Rozwiązywanie problemów z rejestrowaniem urządzeń"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat rozwiązywania problemów z rejestracją urządzeń."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
@@ -18,6 +18,7 @@ ms.custom: intune-azure
 translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 9fff350240e4313994056bc5aebf82e204ab3c62
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -388,9 +389,4 @@ Ten błąd może wystąpić, ponieważ komputer został już wcześniej zarejest
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/how-to-get-support-for-microsoft-intune) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

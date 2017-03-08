@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Docs"
 description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 03/01/2017
 ms.topic: article

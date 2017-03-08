@@ -3,8 +3,8 @@ title: "Rejestrowanie urządzeń z systemem iOS — program Device Enrollment Pr
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Device Enrollment Program."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

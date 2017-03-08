@@ -2,8 +2,8 @@
 title: "Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Docs"
 description: "Numery telefonu działu pomocy Microsoft Intune."
 keywords: godziny pracy
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

@@ -3,8 +3,8 @@ title: "Rejestrowanie urządzeń z systemem Android w usłudze Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące rejestrowania urządzeń z systemem Android w wersji zapoznawczej usługi Intune Azure."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

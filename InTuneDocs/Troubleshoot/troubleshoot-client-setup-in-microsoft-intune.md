@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów z instalacją klientów | Microsoft Docs"
 description: "Rozwiązywanie typowych problemów z instalacją klientów."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/22/2017
 ms.topic: article

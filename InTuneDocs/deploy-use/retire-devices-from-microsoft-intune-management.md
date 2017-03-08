@@ -2,8 +2,8 @@
 title: "Wycofywanie urządzeń | Microsoft Docs"
 description: "Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/13/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 00e9dfd165a449182c5b937372db7085c981c68f
 ms.openlocfilehash: cca12024ba12cff5cdb8c515f7719a7592ba97ea
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -77,9 +78,4 @@ Czasami może dojść do zużycia urządzenia. W takiej sytuacji [zresetowanie u
 
 ### <a name="see-also"></a>Zobacz także
 [Zapewnianie lepszej ochrony danych dzięki funkcji pełnego lub selektywnego czyszczenia](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

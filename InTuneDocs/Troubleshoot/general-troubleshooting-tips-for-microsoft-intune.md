@@ -2,7 +2,8 @@
 title: "Ogólne porady dotyczące rozwiązywania problemów | Microsoft Docs"
 description: "Zasoby ogólne ułatwiające rozwiązywanie problemów z usługą Intune."
 keywords: 
-author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 12/08/2016
 ms.topic: article

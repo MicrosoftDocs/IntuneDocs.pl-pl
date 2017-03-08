@@ -3,8 +3,8 @@ title: Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: opis czynności niezbędnych w celu uzyskania certyfikatu wypychania Apple MDM przeznaczonego do zarządzania urządzeniami z systemem iOS za pomocą usługi Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

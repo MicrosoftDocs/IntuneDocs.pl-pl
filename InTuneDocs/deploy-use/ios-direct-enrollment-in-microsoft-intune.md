@@ -2,8 +2,8 @@
 title: "Bezpośrednia rejestracja urządzeń z systemem iOS | Microsoft Docs"
 description: "Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrować firmowe urządzenia z systemem iOS za pomocą wstępnie zdefiniowanych zasad poprzez połączenie USB z komputerem Mac."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article

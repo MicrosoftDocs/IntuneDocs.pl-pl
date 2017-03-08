@@ -2,8 +2,8 @@
 title: "Jak uzyskać pomoc techniczną | Microsoft Docs"
 description: "Pomoc techniczna jest dostępna online i telefonicznie w przypadku płatnych subskrypcji i wersji próbnych subskrypcji."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 01/27/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
 ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
+ms.lasthandoff: 01/28/2017
 
 
 ---
@@ -146,9 +147,4 @@ Pomoc techniczna typu „Naprawa w razie awarii” jest uwzględniana w subskryp
 Jeśli inżynier pomocy technicznej prosi o otwarcie dodatkowego zdarzenia pomocy technicznej dla dodatkowego problemu, dzieje się tak w najlepszym interesie wszystkich zainteresowanych stron. Dziękujemy za zrozumienie i współpracę w celu świadczenia pomocy technicznej światowej klasy.
 
 Ceny poszczególnych zdarzeń i poziomy ważności można znaleźć w temacie [Opcje profesjonalnej pomocy technicznej](https://support.microsoft.com/gp/offerprophone).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

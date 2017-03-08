@@ -2,8 +2,8 @@
 title: "Typowe zadania związane z zarządzaniem komputerem z systemem Windows | Microsoft Docs"
 description: "Dowiedz się, jak można zarządzać komputerami z systemem Windows, na których działa klient oprogramowania usługi Intune."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
 ms.openlocfilehash: 2fc2d7e57267f82897dac8a0cc222c2b7009d14d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -35,10 +36,5 @@ Ten temat zawiera zadania, które można wykonywać w celu zarządzania komputer
 
 - [Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md) — objaśnienie sposobu udzielania pomocy zdalnej użytkownikom komputerów Intune oraz opis warunków wstępnych i konfiguracji programu TeamViewer.
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

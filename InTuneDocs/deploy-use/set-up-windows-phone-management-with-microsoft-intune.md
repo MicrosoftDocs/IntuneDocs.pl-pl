@@ -2,7 +2,8 @@
 title: "Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone | Microsoft Docs"
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Windows 10 Mobile lub Windows Phone w usłudze Microsoft Intune."
 keywords: 
-author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/08/2017
 ms.topic: article

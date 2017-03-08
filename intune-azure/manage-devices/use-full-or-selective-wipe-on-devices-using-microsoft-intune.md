@@ -3,8 +3,8 @@ title: "Pełne lub selektywne czyszczenie na urządzeniach za pomocą usługi In
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat przeprowadzania selektywnego czyszczenia danych firmy na urządzeniu lub pełnego czyszczenia z przywróceniem ustawień fabrycznych urządzenia."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/07/2016
 ms.topic: article
