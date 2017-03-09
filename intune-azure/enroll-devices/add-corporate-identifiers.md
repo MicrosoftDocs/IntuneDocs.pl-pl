@@ -3,10 +3,10 @@ title: "Dodawanie identyfikatorów IMEI do usługi Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące dodawania identyfikatorów firmy (numerów IMEI) do usługi Microsoft Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 0d7c8eedbdad917a43d43d2e79ead5663e8e2871
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
+ms.openlocfilehash: 47d326c4422a2908dd29dd963fd8835b36b9f9f3
+ms.lasthandoff: 02/25/2017
 
 ---
 
@@ -44,6 +44,9 @@ W edytorze tekstu lista .csv wygląda następująco:
 3. Jeśli importujesz plik z nowymi szczegółami, które zastąpią istniejące, wybierz opcję **Zastąp szczegóły istniejących identyfikatorów**, aby nowe szczegóły zastąpiły istniejące.
 
 4. Przejdź do pliku CSV IMEI i wybierz przycisk **Dodaj**.
+
+> [!IMPORTANT]
+> W przypadku importowania numerów IMEI dla urządzeń z systemem Android należy pamiętać, że niektóre urządzenia z systemem Android mogą mieć wiele numerów IMEI. Jeśli zostanie zaimportowany numer IMEI inny niż numer zgłoszony przez urządzenie w usłudze IMEI, urządzenie zostanie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy.
 
 **Aby usunąć listę .csv identyfikatorów firmy**
 

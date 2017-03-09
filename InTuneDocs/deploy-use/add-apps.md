@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/13/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f7998da5566f9b963807b613a47d35b629620f96
-ms.openlocfilehash: 9e8b9e1c935dd771c3e37bea5a552fba2374bf68
+ms.sourcegitcommit: 0945fb2f67c6cc49ca8d10bb5c24f3c4a5f9b2c5
+ms.openlocfilehash: c65dc8ec22f717c5dcce51bb3c45d65bad8d8bde
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -33,7 +34,7 @@ Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune po�
 
 |Typ aplikacji|Szczegóły|
 |----------------|-------|
-|**Instalator Windows (&#42;.exe, &#42;.msi)**|Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć w artykule [Przełączniki wiersza polecenia dla narzędzia Instalatora Microsoft Windows](https://support.microsoft.com/en-us/kb/227091).<br><br>Wszelkie dodatkowe pliki i foldery wymagane przez program instalacyjny aplikacji muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.<br><br>W większości przypadków pliki Instalatora systemu Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają instalacji żadnych argumentów wiersza polecenia przez usługę Intune. Zajrzyj do dokumentacji aplikacji.<br><br>Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).|
+|**Instalator Windows (&#42;.exe, &#42;.msi)**|Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć w artykule [Przełączniki wiersza polecenia dla narzędzia Instalatora Microsoft Windows](https://support.microsoft.com/en-us/kb/227091).<br><br>Wszelkie dodatkowe pliki i foldery wymagane przez program instalacyjny aplikacji muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.<br><br>W większości przypadków pliki Instalatora systemu Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają instalacji żadnych argumentów wiersza polecenia przez usługę Intune. Zajrzyj do dokumentacji aplikacji.<br><br>Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).<br><br>Ten typ aplikacji dotyczy tylko komputerów, na których uruchomiono oprogramowanie klienckie usługi Intune.|
 |**Pakiet aplikacji dla systemu Android (&#42;.apk)**|Do wdrożenia aplikacji dla systemu Android potrzebny jest prawidłowy pakiet apk.|
 |**Pakiet aplikacji dla systemu iOS (&#42;.ipa)**|Do wdrożenia aplikacji dla systemu iOS potrzebny jest prawidłowy plik pakietu ipa.<br><br>Pakiet ipa musi być podpisany przez firmę Apple, a data wygaśnięcia w profilu inicjowania obsługi administracyjnej musi być ważna. Usługa Intune może dystrybuować aplikacje dla systemu iOS z certyfikatem przedsiębiorstwa.<br><br>Nie wszystkie aplikacje z certyfikatem deweloperów firmy Apple są obsługiwane.<br><br>Firma musi być zarejestrowana w programie dla deweloperów aplikacji systemu iOS dla przedsiębiorstw (iOS Developer Enterprise Program).<br><br>Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji systemu iOS.<br><br>Nie musisz wdrażać pliku manifestu (plist) z aplikacją.|
 |**Pakiet aplikacji systemu Windows Phone (&#42;.xap, .appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).|
@@ -94,9 +95,4 @@ W ten sposób podczas przekazywania aplikacji do usługi Intune zostaną równie
 ## <a name="next-steps"></a>Następne kroki
 
 Należy dodać aplikacje w konsoli usługi Intune przed ich wdrożeniem. Aplikacje można dodawać dla [zarejestrowanych urządzeń](add-apps-for-mobile-devices-in-microsoft-intune.md) lub [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

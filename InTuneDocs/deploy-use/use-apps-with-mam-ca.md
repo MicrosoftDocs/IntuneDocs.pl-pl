@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 2ab3769ff878cf8b6223e4f46244f16eab8743a0
+ms.sourcegitcommit: e55cf608c2e5157feeb40ba20d3988b5b35064db
+ms.openlocfilehash: 22ea926719efc788c53861bc91f78d24631d54c1
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -44,9 +45,7 @@ Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli admin
 * **Urządzenie z systemem iOS**: otwórz aplikację Azure Authenticator, przesuń w lewo na koncie i wybierz opcję wyrejestrowania.  
 * **Urządzenie z systemem Android**: odinstaluj aplikację portalu firmy lub usuń konto w obszarze **Ustawienia systemu**.
 
-
-
-## <a name="app-based-ca-with-conditional-access-based-on-device-compliance"></a>Dostęp warunkowy oparty na aplikacji z dostępem warunkowym opartym na zgodności urządzeń  
+## <a name="app-based-ca-with-device-based-ca"></a>Dostęp warunkowy oparty na aplikacji z dostępem warunkowym opartym na urządzeniu  
 
 [Dostęp warunkowy oparty na zgodności urządzeń](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**dostęp warunkowy do urządzenia**) można skonfigurować przy użyciu [konsoli administratora usługi Intune](https://manage.microsoft.com) lub [konsoli zarządzania usługi Azure AD Premium] (https://manage.windowsazure.com). Dostęp warunkowy do urządzenia wymaga od użytkowników nawiązania połączenia z usługą Exchange Online tylko za pośrednictwem urządzeń zarządzanych przez usługę Intune, które są zgodne z zasadami zgodności urządzeń usługi Intune, lub komputerów połączonych z domeną.  Jeśli użytkownik należy do co najmniej jednej grupy zabezpieczeń, w której stosowane są zarówno zasady dostępu warunkowego opartego na aplikacji, jak i zasady dostępu warunkowego do urządzeń, musi spełnić jedno z poniższych wymagań:
 * Aplikacja, za pomocą której uzyskuje się dostęp do usługi, jest aplikacją mobilną obsługiwaną przez 
@@ -63,9 +62,4 @@ Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli admin
 ### <a name="see-also"></a>Zobacz także
 
 [Ochrona danych aplikacji za pomocą zasad ochrony aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
