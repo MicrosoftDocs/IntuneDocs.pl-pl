@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -29,8 +30,9 @@ Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) mo�
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
 Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności urządzeń, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
 
-Należy pamiętać, że użytkownik korzystający z urządzenia musi mieć na nim wdrożone zasady zgodności, aby urządzenie mogło zostać ocenione pod kątem zgodności.
-Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
+> [!IMPORTANT] 
+> Należy pamiętać, że użytkownik korzystający z urządzenia musi mieć na nim wdrożone zasady zgodności, aby urządzenie mogło zostać ocenione pod kątem zgodności.
+> Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
 
 Gdy urządzenia nie spełniają warunków ustawionych w zasadach, użytkownik końcowy jest przeprowadzany przez procedurę rejestracji urządzenia i rozwiązywania problemu, w związku z którym urządzenie nie może być zgodne.
 
@@ -80,9 +82,4 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
   - [Tworzenie zasad dostępu warunkowego dla usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla usługi Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

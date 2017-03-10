@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -40,7 +40,6 @@ Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę
 
 - [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 - [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md)
 - [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
 - [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-ios.md)

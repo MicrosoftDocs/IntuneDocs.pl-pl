@@ -43,7 +43,6 @@ Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę
 - [Ustawianie numeru PIN lub hasła](set-your-pin-or-password-android.md)
 - [Instalowanie wirtualnej sieci prywatnej (VPN) firmy](install-your-companys-virtual-private-network-VPN-android.md)
 - [Ustawianie czasu, po upływie którego urządzenie ma zostać zablokowane](set-the-amount-of-time-before-your-device-is-locked-android.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md)
 - [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-android.md)
 - [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-android.md)
