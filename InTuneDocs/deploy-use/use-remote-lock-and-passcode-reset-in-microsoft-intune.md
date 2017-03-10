@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 02/16/17
+ms.date: 03/06/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 87589903acd3c2e7c45d62c619571a1273e7fb76
-ms.openlocfilehash: 8de91a0e0640b9c0fb281686d4ecd4983134d4af
+ms.sourcegitcommit: 665d3347636d5ec0c698ffb93b768028c9d59ce3
+ms.openlocfilehash: b918c9843bdc6cfbbfd9c2da9d698b255487152c
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu
@@ -34,6 +35,7 @@ W poniższej tabeli przedstawiono sposób zdalnego blokowania na różnych platf
 |macOS|Nieobsługiwane|
 |iOS|Obsługiwane|
 |Android|Obsługiwane|
+|Program Android for Work|Obsługiwane|
 |Windows 10 (urządzenia przenośne)|Obsługiwane|
 |Windows 10 (komputery)|Nieobsługiwane|
 |Windows Phone 8 i Windows Phone 8.1|Obsługiwane|
@@ -61,6 +63,7 @@ Jeśli użytkownik zapomni kod dostępu, możesz pomóc przez usunięcie kodu do
 |macOS|Nieobsługiwane|
 |iOS|Obsługiwane czyszczenie kodu dostępu z urządzenia. Nie powoduje utworzenia nowego hasła tymczasowego.|
 |Android|Obsługiwane w wersjach wcześniejszych niż Android 7.0. Powoduje utworzenie tymczasowego kodu dostępu.|
+|Program Android for Work|Nieobsługiwane|
 |Windows 10 Mobile|Obsługiwane|
 |Windows Phone 8 i Windows Phone 8.1|Obsługiwane|
 |Windows RT 8.1|Nieobsługiwane|
@@ -83,9 +86,4 @@ Resetowanie kodu dostępu nie jest obsługiwane w przypadku komputerów z system
 
 ### <a name="see-also"></a>Zobacz też
 [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md) oraz [Selektywne czyszczenie danych w systemie Windows w celu zarządzania danymi urządzenia](http://technet.microsoft.com/library/dn486874.aspx)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
