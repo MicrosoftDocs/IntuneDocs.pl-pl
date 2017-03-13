@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -35,8 +35,8 @@ Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS 
 
 Możesz utworzyć profile sieci VPN, korzystając z następujących typów połączeń:
 
-|||
-|-|-|
+||||||||
+|-|-|-|-|-|-|-|
 |Typ połączenia|Android|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |Pulse Secure|Tak|Tak|Tak|Tak|Tak|Tak|
 |Cisco (IPSec)|Nie|Tak|Nie|Nie|Nie|Nie|
