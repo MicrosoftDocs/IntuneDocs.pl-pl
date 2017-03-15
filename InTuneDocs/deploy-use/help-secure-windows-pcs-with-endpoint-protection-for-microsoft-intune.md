@@ -4,8 +4,8 @@ description: "Zabezpiecz zarządzane komputery przy użyciu programu Endpoint Pr
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
-ms.date: 01/31/2017
+manager: arob98
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6e2658cdfcd0b78a254c375fe39b67f7ef9afad6
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -172,11 +172,12 @@ Do monitorowania stanu złośliwego oprogramowania na komputerach służy obszar
 ### <a name="how-to-view-recent-detection-paths-for-malware-on-computers"></a>Wyświetlanie ostatnich ścieżek wykrywania dla złośliwego oprogramowania na komputerach
 Usługa Intune może wyświetlać ścieżki do maksymalnie 10 ostatnio wykrytych wystąpień złośliwego oprogramowania na urządzeniu. Widok **Ostatnie ścieżki wykrywania** jest domyślnie wyłączony. Aby włączyć ten widok:
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Grupy** > **Wszystkie urządzenia** > **Złośliwe oprogramowanie**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Grupy** > **Wszystkie urządzenia** > **Wszystkie komputery**.
+2. Kliknij prawym przyciskiem myszy komputer, którego ostatnie ścieżki wykrywania chcesz zobaczyć, i wybierz polecenie **Właściwości**.
+3. Z kart u góry wybierz pozycję **Złośliwe oprogramowanie**.
 
-2.  Kliknij prawym przyciskiem myszy nagłówek kolumny. Zostanie wyświetlona lista dostępnych kolumn.
-
-3.  Zaznacz na liście pole wyboru **Ostatnie ścieżki wykrywania**. Pojawi się kolumna **Ostatnie ścieżki wykrywania**, w której jest wyświetlanych maksymalnie 10 ostatnio monitorowanych wystąpień złośliwego oprogramowania na urządzeniu.
+   ![Wybierz kartę Złośliwe oprogramowanie, a następnie kliknij pole wyboru Ostatnie ścieżki wykrywania.](../media/malware-path-column.png)
+4. Kliknij prawym przyciskiem myszy nagłówek kolumny. Zostanie wyświetlona lista dostępnych kolumn. Zaznacz na liście pole wyboru **Ostatnie ścieżki wykrywania**. Pojawi się kolumna **Ostatnie ścieżki wykrywania**, w której jest wyświetlanych maksymalnie 10 ostatnio monitorowanych wystąpień złośliwego oprogramowania na urządzeniu.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Uruchamianie skanowania w poszukiwaniu złośliwego oprogramowania lub aktualizowanie definicji złośliwego oprogramowania na komputerze
 Usługa Intune może uruchomić pełne albo szybkie skanowanie w poszukiwaniu złośliwego oprogramowania za pomocą programu Endpoint Protection lub Windows Defender na zdalnie zarządzanym komputerze z zainstalowanym klientem usługi Intune.
@@ -184,9 +185,6 @@ Usługa Intune może uruchomić pełne albo szybkie skanowanie w poszukiwaniu z�
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** > **Przegląd** > **Wszystkie urządzenia** > **Wszystkie komputery** i wybierz komputer docelowy.
 
 2. Wybierz listę rozwijaną **Zadania zdalne**, a następnie wybierz zadanie, które ma zostać uruchomione na komputerze zdalnym.
-
-
-
 
 ## <a name="need-more-help"></a>Potrzebujesz dodatkowej pomocy?
 Aby uzyskać dalszą pomoc i wsparcie techniczne, zobacz [Rozwiązywanie problemów z programem Endpoint Protection w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune).

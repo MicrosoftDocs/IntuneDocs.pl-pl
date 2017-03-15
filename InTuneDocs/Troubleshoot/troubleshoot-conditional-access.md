@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7ac6041fb33f95e5b0c53b81c2af9aef42767a38
-ms.openlocfilehash: 115a27512930fa995a2781afc8a94c1d7f97958e
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9894fdb696f4e010e176efc47068827bddaf7d4e
+ms.openlocfilehash: 8c84703828db3c5da2aa88fa3dc16329f3a4a1e1
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -57,6 +57,13 @@ Te warunki można wyświetlić dla każdego urządzenia w portalu zarządzania A
      -     Urządzenie z systemem iOS może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia zainicjowanie innego ewidencjonowania użytkownika. Ponowne uruchomienie portalu firmy może naprawić ten problem, a stan zgodności będzie odpowiadał stanowi urządzenia w usłudze Intune. Po pobraniu wszystkich danych z synchronizacji urządzenia sprawdzanie zgodności trwa bardzo krótko — średnio pół sekundy.
 
         Zazwyczaj przyczyną pozostawania urządzeń w tym stanie są problemy z połączeniem z usługą lub długi czas trwania synchronizacji.  Jeśli problem będzie nadal występował w różnych konfiguracjach sieci (komórkowych, Wi-Fi, VPN) pomimo ponownego uruchomienia urządzeń i po sprawdzeniu aktualności dostawcy SSP na urządzeniu, należy skontaktować się z pomocą techniczną firmy Microsoft zgodnie z opisem w artykule [Jak uzyskać pomoc techniczną dla usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
+ - Urządzenia z systemem Android:
+     - Niektóre urządzenia z systemem Android mogą być zaszyfrowane, ale aplikacja Portal firmy rozpoznaje je jako niezaszyfrowane. 
+    
+        -    W przypadku urządzeń w tym stanie wymagane jest, aby użytkownik ustawił bezpieczny startowy kod dostępu. W aplikacji Portal firmy zostanie wyświetlone powiadomienie dotyczące urządzenia z prośbą o ustawienie startowego kodu dostępu. Po naciśnięciu powiadomienia i potwierdzeniu istniejącego numeru PIN lub hasła wybierz opcję **Wymagaj numeru PIN do uruchomienia urządzenia** na ekranie **Bezpieczny start**. Następnie naciśnij przycisk **Sprawdź zgodność** dla urządzenia z aplikacji Portal firmy. Urządzenie powinno teraz zostać wykryte jako zaszyfrowane.
+    
+        -     Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie tajnego numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN w formie niezabezpieczonej, ponieważ ta metoda szyfrowania może spowodować, że dane na urządzeniu będą narażone na zagrożenie ze strony złośliwych użytkowników mających fizyczny dostęp do urządzenia. Jeśli wystąpi taki problem, rozważ użycie [zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>Problemy dotyczące zasad
 

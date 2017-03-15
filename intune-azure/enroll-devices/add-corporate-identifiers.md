@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/24/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
-ms.openlocfilehash: 47d326c4422a2908dd29dd963fd8835b36b9f9f3
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d8cb15d1b8c1c100f15084e43d2c3c4633fd64b5
+ms.openlocfilehash: f12d538b1f4cd327b893d234f2b558185cdd9d85
+ms.lasthandoff: 03/09/2017
 
 ---
 
@@ -46,7 +46,7 @@ W edytorze tekstu lista .csv wygląda następująco:
 4. Przejdź do pliku CSV IMEI i wybierz przycisk **Dodaj**.
 
 > [!IMPORTANT]
-> W przypadku importowania numerów IMEI dla urządzeń z systemem Android należy pamiętać, że niektóre urządzenia z systemem Android mogą mieć wiele numerów IMEI. Jeśli zostanie zaimportowany numer IMEI inny niż numer zgłoszony przez urządzenie w usłudze IMEI, urządzenie zostanie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy.
+> Niektóre urządzenia z systemem Android mają wiele numerów IMEI. Usługa Intune rejestruje w spisie po jednym numerze IMEI na urządzenie. Jeśli zostanie zaimportowany numer IMEI inny niż numer zarejestrowany w spisie usługi Intune, urządzenie zostanie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy. Zaimportowanie wielu numerów IMEI urządzenia spowoduje, że dla numerów niezarejestrowanych w spisie będzie wyświetlany stan rejestracji **Nieznany**.
 
 **Aby usunąć listę .csv identyfikatorów firmy**
 

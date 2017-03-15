@@ -5,7 +5,7 @@ keywords: "co to jest usługa Intune"
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 03/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pmay
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
-ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
-ms.lasthandoff: 01/11/2017
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: ee1f41384df083d6479804ba05c0252d9ba12e1b
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -32,7 +32,7 @@ Usługa Intune to oparta na chmurze usługa zarządzania mobilnością w przedsi
 * chronienie danych firmowych poprzez kontrolowanie sposobu, w jaki pracownicy uzyskują do nich dostęp i udostępniają je,
 * zapewnienie zgodności urządzeń i aplikacji z wymaganiami firmy dotyczącymi bezpieczeństwa.
 
-Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Rights Management (Azure RMS) na potrzeby ochrony danych. Stanowi ona *ramię zarządzania* pakietu Microsoft Enterprise Mobility + Security (EMS), podczas gdy usługa Office 365 stanowi *ramię produktywności* rozwiązania zapewniającego mobilność firmy Microsoft.  
+Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Information Protection na potrzeby ochrony danych. Stanowi ona *ramię zarządzania* pakietu Microsoft Enterprise Mobility + Security (EMS), podczas gdy usługa Office 365 stanowi *ramię produktywności* rozwiązania zapewniającego mobilność firmy Microsoft.  
 
 Współdziałając, usługa Office 365 i pakiet EMS zapewniają pracownikom produktywność na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji. Usługa Office 365 wraz z pakietem EMS stanowi kompletny, zintegrowany pakiet rozwiązań zapewniających mobilność w przedsiębiorstwie obejmujący rozwiązania do kontroli dostępu, zarządzania, potwierdzania tożsamości, zapewniania produktywności i ochrony danych. Udostępnia efektywny sposób wdrażania i obsługi rozwiązania zapewniającego mobilność.
 

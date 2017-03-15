@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: e67ec317b22e18d0be8bca449b9382f74935d6e8
+ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
+ms.openlocfilehash: 3b608d42f04b9fce457b6b61587d05ab5d59bb0a
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -59,18 +60,28 @@ Aby uzyskać więcej informacji o tym, jak przekazywać i publikować aplikacje 
 
 ## <a name="deploy-an-android-for-work-app"></a>Wdrażanie aplikacji programu Android for Work
 
-Zwykle usługa Intune będzie przeprowadzać synchronizację ze sklepem Google Play for Work dwa razy dziennie. Jeśli zatwierdzono aplikację ze sklepu, ale jeszcze nie widać tej aplikacji w węźle **Aplikacje kupione w ramach zakupów zbiorczych** w obszarze roboczym **Aplikacje**, możesz wymusić natychmiastową synchronizację w poniższy sposób:
+Jeśli zatwierdzono aplikację ze sklepu, ale jeszcze nie widać tej aplikacji w węźle **Aplikacje kupione w ramach zakupów zbiorczych** w obszarze roboczym **Aplikacje**, możesz wymusić natychmiastową synchronizację w poniższy sposób:
 
 1. W [konsoli administratora usługi Intune](https://manage.microsoft.com) wybierz pozycję **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **Android for Work**.
 2. Na stronie **Konfiguracja zarządzania urządzeniami przenośnymi obsługującymi program Android for Work** wybierz pozycję **Synchronizuj teraz**.
 3. Na tej stronie jest również wyświetlana godzina i stan ostatniej synchronizacji.
 
-Gdy aplikacja zostanie wyświetlona w węźle **Aplikacje kupione w ramach zakupów zbiorczych** w obszarze roboczym **Aplikacje**, możesz [wdrożyć ją dokładnie tak samo, jak dowolną inną aplikację](deploy-apps-in-microsoft-intune.md). Aplikację można wdrażać tylko do grup użytkowników. Obecnie możesz wybrać tylko akcje **Wymagana** i **Odinstaluj**. Od października 2016 zaczniemy dodawać akcję wdrażania **Dostępna** w nowych dzierżawach.
+Gdy aplikacja zostanie wyświetlona w węźle **Aplikacje kupione w ramach zakupów zbiorczych** w obszarze roboczym **Aplikacje**, możesz [wdrożyć ją dokładnie tak samo, jak dowolną inną aplikację](deploy-apps-in-microsoft-intune.md). Aplikację można wdrażać tylko do grup użytkowników. Obecnie możesz wybrać tylko akcje **Wymagana** i **Odinstaluj**.
+
+Wdrożenie aplikacji ze stanem **Dostępna** pozwala korzystać z nowych funkcji grupowania i kierowania. Użytkownicy nowo aprowizowanych kont usługi Intune będą w stanie korzystać z tej funkcji po jej udostępnieniu. Istniejący klienci usługi Intune mogą używać tej funkcji po zmigrowaniu ich dzierżawy do portalu usługi Intune Azure. Zapraszamy istniejących klientów do utworzenia konta wersji próbnej usługi Intune w celu zaplanowania działań związanych z tą funkcją i testowania jej do czasu migracji ich dzierżawy.
 
 Po wdrożeniu aplikacja zostanie zainstalowana na urządzeniach docelowych. Użytkownik urządzenia nie będzie monitowany o zatwierdzenie.
 
+## <a name="manage-app-permissions"></a>Zarządzanie uprawnieniami aplikacji
+Usługa Android for Work wymaga zatwierdzenia aplikacji w zarządzanej konsoli internetowej Google Play przed ich zsynchronizowaniem z usługą Intune i wdrożeniem na urządzeniach użytkowników.  Jako że usługa Android for Work umożliwia automatyczne i dyskretne wypychanie tych aplikacji na urządzenia użytkowników, należy zaakceptować uprawnienia aplikacji dla wszystkich użytkowników.  Podczas instalacji użytkownicy końcowi nie będą widzieć żadnych uprawnień aplikacji, dlatego należy przeczytać i sprawdzić te uprawnienia.
 
+Jeśli deweloper aplikacji publikuje nową wersję aplikacji ze zaktualizowanymi uprawnieniami, uprawnienia te nie są automatycznie akceptowane, nawet jeśli poprzednie uprawnienia zostały zatwierdzone. Jeśli na urządzeniu istnieje stara wersja aplikacji, można nadal z niej korzystać, ale aplikacja nie zostanie uaktualniona do czasu zatwierdzenia nowych uprawnień. Na urządzeniach, na których aplikacja nie jest jeszcze zainstalowana, nie można jej zainstalować do czasu zatwierdzenia nowych uprawnień.
 
-<!--HONumber=Feb17_HO1-->
+### <a name="how-to-update-app-permissions"></a>Aktualizowanie uprawnień aplikacji
 
+Należy okresowo odwiedzać zarządzaną konsolę Google Play w celu upewnienia się, czy aplikacja nie wymaga nowych uprawnień. Jeśli po wdrożeniu aplikacji okaże się, że nie jest ona zainstalowana na urządzeniach, sprawdź, czy aplikacja nie wymaga nowych uprawnień. W tym celu wykonaj następujące czynności:
+
+1. Odwiedź witrynę http://play.google.com/work
+2. Zaloguj się przy użyciu konta Google używanego do publikowania i zatwierdzania aplikacji.
+3. Przejdź do karty **Aktualizacje**, aby zobaczyć, czy którakolwiek aplikacja wymaga aktualizacji.  Wszystkie wyświetlane aplikacje wymagają nowych uprawnień i nie zostaną wdrożone do czasu ich zatwierdzenia.  
 
