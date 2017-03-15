@@ -193,12 +193,10 @@
 ### [Czyszczenie danych zarządzanych aplikacji firmowych](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Jak edukować użytkowników końcowych na temat usługi Intune](deploy-use/how-to-educate-your-end-users-about-microsoft-intune.md)
-### [Korzystanie z urządzenia z systemem Android i usługi Intune](EndUser/using-your-android-device-with-intune.md)
-#### [Jak użytkownicy systemu Android uzyskują aplikacje](deploy-use/how-your-android-users-get-their-apps.md)
-### [Korzystanie z urządzenia z systemem iOS i usługi Intune](EndUser/using-your-iOS-or-macos-device-with-intune.md)
-#### [Jak użytkownicy systemu iOS uzyskują aplikacje](deploy-use/how-your-ios-users-get-their-apps.md)
-### [Korzystanie z urządzenia z systemem Windows i usługi Intune](EndUser/using-your-windows-device-with-intune.md)
-#### [Jak użytkownicy systemu Windows uzyskują aplikacje](deploy-use/how-your-windows-users-get-their-apps.md)
+### [Komunikaty z aplikacji Portal firmy widoczne dla użytkowników końcowych](deploy-use/help-end-users-understand-company-portal-app-messages.md)
+### [Jak użytkownicy systemu Android uzyskują aplikacje](deploy-use/how-your-android-users-get-their-apps.md)
+### [Jak użytkownicy systemu iOS uzyskują aplikacje](deploy-use/how-your-ios-users-get-their-apps.md)
+### [Jak użytkownicy systemu Windows uzyskują aplikacje](deploy-use/how-your-windows-users-get-their-apps.md)
 
 # Tworzenie i dostosowywanie aplikacji
 ## [Omówienie zestawu SDK aplikacji usługi Microsoft Intune](develop/intune-app-sdk.md)
