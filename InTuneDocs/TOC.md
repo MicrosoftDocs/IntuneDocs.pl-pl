@@ -74,7 +74,7 @@
 #### [Instalowanie klienta komputera](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 #### [Typowe zadania związane z zarządzaniem komputerami](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Rozwiązywanie konfliktów zasad dotyczących komputerów](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
-### Zarządzanie programem [Android for Work](deploy-use/android-for-work.md)
+### [Zarządzanie programem Android for Work](deploy-use/android-for-work.md)
 
 ## Konfigurowanie urządzeń
 ### [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
