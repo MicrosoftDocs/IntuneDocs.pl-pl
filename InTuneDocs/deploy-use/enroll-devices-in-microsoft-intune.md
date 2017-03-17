@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/21/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
-ms.openlocfilehash: d1b24b745fe1e860e42fa23647976aadea1953cd
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
+ms.openlocfilehash: 8f18f9ff2c32bb24b68fa987a8aad990b911a549
+ms.lasthandoff: 03/11/2017
 
 
 ---
@@ -38,7 +38,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 - **Czyszczenie** — określa, czy urządzenie musi zostać wyczyszczone, zanim użytkownicy będą mogli je zarejestrować. Termin „czyszczenie” oznacza zresetowanie urządzenia do ustawień fabrycznych, co powoduje usunięcie wszystkich danych. Aby uzyskać więcej informacji, zobacz [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md).
 - **Koligacja** — kojarzy urządzenia z użytkownikami. Wymagane w celu zarządzania aplikacjami mobilnymi (MAM) i uzyskiwania warunkowego dostępu do danych firmowych. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Blokada** — wskazuje, czy użytkownicy mają zablokowaną możliwość wyrejestrowywania swoich urządzeń przy użyciu natywnych menu systemu operacyjnego. Użytkownicy mogą wyrejestrowywać swoje urządzenia na wszystkich platformach przy użyciu aplikacji Portal firmy. 
+- **Blokada** — wskazuje, czy użytkownicy mają zablokowaną możliwość wyrejestrowywania swoich urządzeń przy użyciu natywnych menu systemu operacyjnego. Użytkownicy mogą wyrejestrowywać swoje urządzenia na wszystkich platformach przy użyciu aplikacji Portal firmy.
 
 **Metody rejestracji urządzeń z systemem iOS**
 
@@ -54,7 +54,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 | **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|    Tak |    Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    |[Więcej informacji](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metody rejestracji urządzeń z systemem Android**
@@ -75,7 +75,7 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 
 | **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Tak|    Tak |    Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | [Więcej informacji](prerequisites-for-enrollment.md)|
 
 
 W dobraniu odpowiedniej metody rejestrowania pomogą pytania znajdujące się w temacie [Wybieranie metody rejestrowania urządzeń](/intune/get-started/choose-how-to-enroll-devices1).

@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 22e188e81f2bc278045bb0988642b1b68372d6af
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 6b723069108ff2cbe85951f7d65ef803323eceb9
+ms.lasthandoff: 03/13/2017
 
 
 ---
 
-# <a name="use-full-or-selective-wipe"></a>Korzystanie z czyszczenia pełnego lub selektywnego 
+# <a name="use-full-or-selective-wipe"></a>Korzystanie z czyszczenia pełnego lub selektywnego
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -104,6 +104,10 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszcz
 |Outlook|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS zostaną usunięte.</br>Wyjątek: Jeśli aplikacja Exchange jest zainstalowana lokalnie, wiadomości e-mail nie zostaną usunięte.|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS zostaną usunięte.</br>Wyjątek: Jeśli aplikacja Exchange jest zainstalowana lokalnie, wiadomości e-mail nie zostaną usunięte.|
 |Odłączanie usługi Azure Active Directory (AAD)|Rekord usługi AAD zostanie usunięty.|Rekord usługi AAD zostanie usunięty.|
 |Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
+
+**Android for Work**
+
+Wykonywanie czyszczenia selektywnego na urządzeniu z programem Android for Work powoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Powoduje to wycofanie urządzenia z zarządzania za pomocą usługi Intune. Pełne czyszczenie danych nie jest obsługiwane w przypadku programu Android for Work.
 
 **Windows**
 

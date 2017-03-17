@@ -13,8 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: dd4c8f1d810338912b4926be8419ccf9a52ae722
-ms.openlocfilehash: 8d3900da91c89700b97d8774f893d82d3a74ea83
+ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
+ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
+ms.lasthandoff: 03/11/2017
 
 
 ---
@@ -89,16 +90,5 @@ Atrybuty to właściwości urządzeń, za pomocą których można definiować gr
 ## <a name="what-happens-to-policies-and-apps-youve-already-deployed"></a>Co się dzieje z już wdrożonymi już zasadami i aplikacjami?
 
 Zasady i aplikacje można nadal wdrażać do grup, tak jak wcześniej. Tymi grupami można będzie jednak teraz zarządzać w witrynie Azure Portal (zamiast przy użyciu klasycznej konsoli usługi Intune).
-
-
-## <a name="how-to-get-more-information"></a>Jak uzyskać więcej informacji
-
-Skontaktuj się z naszym zespołem ds. migracji pod adresem [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).    
-     
-
-
-
-
-<!--HONumber=Dec16_HO4-->
-
+ 
 
