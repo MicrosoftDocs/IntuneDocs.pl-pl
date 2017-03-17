@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 0154e3bfeac0457de57257045e3e7ce833325bce
 ms.openlocfilehash: a462bcfa107bf1a37ea4e84bc3d88d0dd81f9fc8
+ms.lasthandoff: 02/03/2017
 
 
 ---
@@ -169,6 +170,7 @@ Sieci VPN na żądanie można skonfigurować dla urządzeń z systemem iOS 8.0 l
   - **Oceń połączenie**, która ma trzy ustawienia a. **Akcja domeny** — wybierz **Połącz w razie potrzeby** lub **Nigdy nie łącz**
       b. **Rozdzielana przecinkami lista domen** — można skonfigurować tylko wtedy, gdy opcja **Akcja domeny** ma ustawienie **Połącz w razie potrzeby**
       c. **Wymagana sonda ciągu adresu URL** — adres URL protokołu HTTP lub HTTPS (preferowany), taki jak *https://vpntestprobe.contoso.com*. Reguła sprawdzi odebranie odpowiedzi z tego adresu. Jeśli nie będzie odpowiedzi, a **akcja domeny** to **Połącz w razie potrzeby**, nastąpi łączenie z siecią VPN.
+      
      > [!TIP]
      >
      >Ta akcja może być stosowana, na przykład gdy niektóre witryny w sieci firmowej wymagają połączenia bezpośredniego lub przez korporacyjną sieć VPN, a inne nie. Jeśli **lista domen wyszukiwania DNS rozdzielonych przecinkami** zawiera domenę *corp.contoso.com*, można wybrać opcję **Połącz w razie potrzeby**, a następnie podać listę określonych witryn w tej sieci, które mogą wymagać sieci VPN, takich jak *sharepoint.corp.contoso.com*. Następnie reguła sprawdzi, czy witryna *vpntestprobe.contoso.com* jest osiągalna. Jeśli jest ona nieosiągalna, nastąpi nawiązanie połączenia VPN dla witryny sharepoint.
@@ -192,9 +194,4 @@ Reguły specyficzne dla domeny są uwzględniane przed regułami dotyczącymi ws
 Po pomyślnym wdrożeniu użytkownicy będą widzieli wprowadzoną przez Ciebie nazwę połączenia sieci VPN na liście połączeń sieci VPN na swoich urządzeniach.
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
