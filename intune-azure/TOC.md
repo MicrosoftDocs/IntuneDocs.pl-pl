@@ -108,6 +108,11 @@
 ## [Plan and design](configure-devices/plan-and-design.md) --->
 ## Instrukcje
 ### [Konfigurowanie profilów urządzeń](configure-devices/how-to-create-device-profiles.md)
+
+### [Konfigurowanie funkcji urządzeń](configure-devices/how-to-configure-device-features.md)
+#### [iOS](configure-devices/device-features-for-ios.md)
+#### [macOS](configure-devices/device-features-for-macos.md)
+
 ### [Konfigurowanie ograniczeń dotyczących urządzeń](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
 #### [iOS](configure-devices/device-restrictions-for-ios.md)
