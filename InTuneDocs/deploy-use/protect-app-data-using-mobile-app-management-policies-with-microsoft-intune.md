@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
 ms.openlocfilehash: 651899219458f799e26ed7957ccef97d7ae2af09
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -36,8 +37,8 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchomionej na urz
 
 -   **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami przenośnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
-  > [!NOTE]
-  > Nie zaleca się stosowania zasad ochrony aplikacji w połączeniu z rozwiązaniami do zarządzania aplikacjami mobilnymi lub rozwiązań z bezpiecznym kontenerem innych firm.
+      > [!NOTE]
+      > Nie zaleca się stosowania zasad ochrony aplikacji w połączeniu z rozwiązaniami do zarządzania aplikacjami mobilnymi lub rozwiązań z bezpiecznym kontenerem innych firm.
 
 -   **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami przenośnymi:** urządzenia w tej kategorii są zazwyczaj urządzeniami należącymi do pracowników, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązaniach MDM.
 
@@ -133,9 +134,4 @@ Wszystkie aplikacje mobilne pakietu Office obsługują dostęp dla wielu tożsam
 - [Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 - [Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
