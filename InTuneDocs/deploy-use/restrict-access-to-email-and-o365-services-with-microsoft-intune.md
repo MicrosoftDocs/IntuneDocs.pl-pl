@@ -74,7 +74,7 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 2. [Tworzenie zasad zgodności urządzenia](create-a-device-compliance-policy-in-microsoft-intune.md).
 
 2.  Utwórz zasady dostępu warunkowego dla jednej z wybranych usług lub jednego z wybranych produktów firmy Microsoft w chmurze:
-> [!div class="op_single_selector"]
+
   - [Tworzenie zasad dostępu warunkowego dla usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla nowej usługi Exchange Online w wersji dedykowanej](restrict-access-to-exchange-online-with-microsoft-intune.md)
