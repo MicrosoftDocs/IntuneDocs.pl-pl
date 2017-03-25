@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 63ac5ecf6fbe9ae66c879466c7785b051dfb7a61
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 3ef80446889e40464aed39fc83d9777dbfcc4d11
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -42,17 +42,18 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 
 ## <a name="set-up-macos-enrollment"></a>Konfigurowanie rejestracji urządzeń z systemem macOS
 
-Domyślnie usługa Intune zezwala na rejestrację urządzeń z systemem macOS. 
+Domyślnie usługa Intune zezwala na rejestrację urządzeń z systemem macOS.
 
-Aby zablokować rejestrowanie urządzeń z systemem macOS, zobacz [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions). 
+Aby zablokować rejestrowanie urządzeń z systemem macOS, zobacz [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 Aby ustawić maksymalną liczbę urządzeń, które użytkownik może zarejestrować, zobacz [Ustawianie ograniczeń limitu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions).
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy
 
-Musisz poinformować użytkowników końcowych, aby przeszli do [witryny internetowej Portalu firmy](http://portal.manage.microsoft.com) i postępowali zgodnie z instrukcjami, aby zarejestrować swoje urządzenia. Możesz także wysłać im link do kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos). 
+Musisz poinformować użytkowników końcowych, aby przeszli do [witryny internetowej Portalu firmy](http://portal.manage.microsoft.com) i postępowali zgodnie z instrukcjami, aby zarejestrować swoje urządzenia. Możesz także wysłać im link do kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos).
 
 Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
 
-- [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
+- [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
 - [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](https://docs.microsoft.com/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune)
+

@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: 8e2588e2bb0537877f0164bc996fa973f25ea4dd
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
+ms.openlocfilehash: a5a4f11ae341480b2e674ca55a514b62831bdd60
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -38,11 +38,11 @@ Domyślnie urządzenia z systemem Android mogą być rejestrowane w usłudze Int
 
 3.  **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**
 
-    Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Android w usłudze Intune](../enduser/enroll-your-device-in-intune-android.md). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
+    Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Android w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
     Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
   - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
-  - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Android](../enduser/using-your-android-device-with-intune.md)
+  - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Android](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 Z powodu braku dostępności sklepu Google Play w Chinach aplikację Portal firmy dla urządzeń z systemem Android należy uzyskać z chińskich platform handlowych oferujących aplikacje. Aplikacja Portal firmy dla systemu Android będzie dostępna do pobrania w następujących sklepach:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)

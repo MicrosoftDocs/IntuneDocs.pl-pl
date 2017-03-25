@@ -4,7 +4,7 @@ description: "Włączanie zarządzania urządzeniami przenośnymi (MDM) z system
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 02/26/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 255c3e47464ac7670a971881cf399e8e2bb17044
-ms.openlocfilehash: 4acbae2aba4cff21286d45cb7cb1691864c281dc
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: f66bc5a26f137f62defef4a83a36b22247be4ec1
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -73,9 +73,9 @@ W [konsoli administracyjnej usługi Intune](http://manage.microsoft.com) wybierz
 
 ### <a name="step-4-tell-your-users-how-to-enroll-their-devices-and-what-to-expect-after-theyre-brought-into-management"></a>Krok 4. Poinformowanie użytkowników, jak mogą zarejestrować swoje urządzenia i czego mogą oczekiwać po włączeniu ich do zarządzania.
 
-   Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
+   Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows).
 
-   Aby uzyskać więcej informacji o zadaniach użytkownika końcowego, zobacz sekcje [Jak edukować użytkowników końcowych na temat usługi Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) i [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](../enduser/using-your-windows-device-with-intune.md).
+   Aby uzyskać więcej informacji o zadaniach użytkownika końcowego, zobacz sekcje [Jak edukować użytkowników końcowych na temat usługi Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) i [Wskazówki dla użytkowników końcowych urządzeń z systemem Windows](https://docs.microsoft.com/intune-user-help/using-your-windows-device-with-intune).
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)
