@@ -16,45 +16,24 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 5c8e0d2bec63c3eab5c1af08471d54f66feb5231
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: a0950e3b816128ccd042620eb1344f908c915a21
+ms.lasthandoff: 03/10/2017
 
 
 ---
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune-azure-preview"></a>Tworzenie zasad zgodności dla urządzeń z systemem Android w wersji zapoznawczej usługi Intune Azure
+# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune-azure-preview-portal"></a>Tworzenie zasad zgodności dla urządzeń z systemem Android w wersji zapoznawczej portalu Intune Azure
 
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Zasady zgodności są tworzone dla każdej platformy.  Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](what-is-device-compliance.md) (Czym jest zgodność z urządzeniem). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](get-started-with-device-compliance.md) (Wprowadzenie do zgodności z urządzeniem).
+Zasady zgodności urządzeń są tworzone dla każdego formularza platformy wersji zapoznawczej portalu Intune Azure. 
 
-W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+- Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](what-is-device-compliance.md) (Czym jest zgodność z urządzeniem).
+- Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](get-started-with-device-compliance.md) (Wprowadzenie do zgodności z urządzeniem).
 
---------------------
-
-|**ustawienie zasad**| **System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy** |
-| --- | ----|
-| **Konfiguracja kodu PIN lub hasła** |  Poddane kwarantannie |
-| **Szyfrowanie urządzenia** | Poddane kwarantannie |
-| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Poddane kwarantannie (to nie jest ustawienie) |
-| **profil e-mail** | Nie dotyczy |
-| **Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** |   Poddane kwarantannie |
-| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |
-
---------------------------
-
-
-**Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).+
-
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenia nie są zgodne, zostaną wykonane następujące akcje:+
-
-- Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
-- Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
-
-## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Tworzenie zasad zgodności w witrynie Azure Portal
+## <a name="to-create-a-device-compliance-policy"></a>Aby utworzyć zasadę zgodności urządzenia
 
 1. W bloku **Intune** wybierz pozycję **Ustaw zgodność urządzenia**. W obszarze **Zarządzaj** wybierz pozycję **Wszystkie zasady zgodności urządzeń** i wybierz przycisk **Utwórz**.
 2. Wpisz nazwę, opis i wybierz platformę, której te zasady mają dotyczyć.
@@ -67,7 +46,7 @@ W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w prz
 8. Choose **Add** to finish creating the action.
 9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.-->
 
-## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
+## <a name="to-assign-user-groups"></a>Aby przypisać grupy użytkowników
 
 Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zgodność — zasady**.
 
@@ -77,6 +56,26 @@ Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez sie
 Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
 
 <!---##  Compliance policy settings--->
+
+## <a name="device-health-and-security-settings"></a>Kondycja urządzeń i ustawienia zabezpieczeń
+
+- **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root**: w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
+- **Wymagaj zapobiegania instalacji aplikacji z nieznanych źródeł (Android 4.0 i nowsze)**: aby zablokować urządzenia z włączonym ustawieniem **Bezpieczeństwo** >; **Nieznane źródła**, włącz to ustawienie i wybierz opcję **Tak**.
+
+### <a name="important"></a>Ważne
+
+Aplikacje ładowania bezpośredniego wymagają włączenia ustawienia **Nieznane źródła**. Te zasady zgodności należy włączyć tylko w przypadku braku bezpośredniego ładowania aplikacji Android na urządzeniach.
+
+- **Wymagaj wyłączenia debugowania USB (Android 4.2 i nowsze):** to ustawienie określa, czy należy wykrywać włączenie opcji debugowania USB na urządzeniu.
+- **Wymagaj włączenia na urządzeniach opcji Skanuj urządzenie pod kątem zagrożeń zabezpieczeń (Android 4.2-4.4)**: to ustawienie określa włączenie funkcji **Weryfikuj aplikacje** na urządzeniu.
+- **Minimalny poziom poprawek bezpieczeństwa (Android 6.0 i nowsze)**: to ustawienie określa minimalny poziom poprawek bezpieczeństwa systemu Android. Urządzenia, które nie mają co najmniej tego poziomu poprawek, będą niezgodne. Data musi mieć określony format: RRRR-MM-DD.
+- **Wymagaj włączonej ochrony urządzenia przed zagrożeniami**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z rozwiązania Lookout MTP jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
+  - **Brak (zabezpieczone)**: to ustawienie zapewnia najwyższy poziom zabezpieczeń. Oznacza to, że urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające dowolny poziom zagrożenia, zostanie ono ocenione jako niezgodne.
+  - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
+  - **Średni**: urządzenie jest oceniane jako zgodne, jeśli dotyczące go zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
+  - **Wysoki**: to ustawienie zapewnia najniższy poziom zabezpieczeń. Zasadniczo to ustawienie dopuszcza wszystkie poziomy zagrożeń. Ustawienie to może być przydatne na przykład w przypadku użycia rozwiązania tylko na potrzeby raportowania.
+
+Aby uzyskać więcej informacji, zobacz [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](https://docs.microsoft.com/en-us/intune/deploy-use/enable-device-threat-protection-rule-in-compliance-policy).
 
 ## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
@@ -101,30 +100,35 @@ Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługuj�
 
 - **Wymagaj szyfrowania na urządzeniu przenośnym**: ustaw tę pozycję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami. Urządzenia są szyfrowane po wybraniu ustawienia **Wymagaj hasła do odblokowania urządzeń przenośnych**.
 
-## <a name="device-health-and-security-settings"></a>Kondycja urządzeń i ustawienia zabezpieczeń
-
-- **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root**: w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu zostaną ocenione jako niezgodne.
-- **Wymagaj zapobiegania instalacji aplikacji z nieznanych źródeł (Android 4.0 i nowsze)**: aby zablokować urządzenia z włączonym ustawieniem **Bezpieczeństwo** >; **Nieznane źródła**, włącz to ustawienie i wybierz opcję **Tak**.
-
-### <a name="important"></a>Ważne
-
-Aplikacje ładowania bezpośredniego wymagają włączenia ustawienia **Nieznane źródła**. Te zasady zgodności należy włączyć tylko w przypadku braku bezpośredniego ładowania aplikacji Android na urządzeniach.
-
-- **Wymagaj wyłączenia debugowania USB (Android 4.2 i nowsze):** to ustawienie określa, czy należy wykrywać włączenie opcji debugowania USB na urządzeniu.
-- **Wymagaj włączenia na urządzeniach opcji Skanuj urządzenie pod kątem zagrożeń zabezpieczeń (Android 4.2-4.4)**: to ustawienie określa włączenie funkcji **Weryfikuj aplikacje** na urządzeniu.
-- **Minimalny poziom poprawek bezpieczeństwa (Android 6.0 i nowsze)**: to ustawienie określa minimalny poziom poprawek bezpieczeństwa systemu Android. Urządzenia, które nie mają co najmniej tego poziomu poprawek, będą niezgodne. Data musi mieć określony format: RRRR-MM-DD.
-- **Wymagaj włączonej ochrony urządzenia przed zagrożeniami**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z rozwiązania Lookout MTP jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia, który będzie miał jedną z następujących wartości:
-  - **Brak (zabezpieczone)**: to ustawienie zapewnia najwyższy poziom zabezpieczeń. Oznacza to, że urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające dowolny poziom zagrożenia, zostanie ono ocenione jako niezgodne.
-  - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
-  - **Średni**: urządzenie jest oceniane jako zgodne, jeśli dotyczące go zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
-  - **Wysoki**: to ustawienie zapewnia najniższy poziom zabezpieczeń. Zasadniczo to ustawienie dopuszcza wszystkie poziomy zagrożeń. Ustawienie to może być przydatne na przykład w przypadku użycia rozwiązania tylko na potrzeby raportowania.
-
-Aby uzyskać więcej informacji, zobacz [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](https://docs.microsoft.com/en-us/intune/deploy-use/enable-device-threat-protection-rule-in-compliance-policy).
-
 ## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 
 - **Wymagana minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 - **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguł dopuszczających daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
+
+## <a name="how-non-compliant-settings-work-with-conditional-access-policies"></a>Jak ustawienia niezgodne współdziałają z zasadami dostępu warunkowego?
+
+W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+
+--------------------
+
+|**Ustawienie zasad**| **System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy** |
+| --- | ----|
+| **Konfiguracja kodu PIN lub hasła** |  Poddane kwarantannie |
+| **Szyfrowanie urządzenia** | Poddane kwarantannie |
+| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Poddane kwarantannie (to nie jest ustawienie) |
+| **profil e-mail** | Nie dotyczy |
+| **Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
+| **Maksymalna wersja systemu operacyjnego** |   Poddane kwarantannie |
+| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |
+
+--------------------------
+
+**Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).+
+
+**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenia nie są zgodne, zostaną wykonane następujące akcje:+
+
+- Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
+- Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
 
 <!--- ## Next steps
 

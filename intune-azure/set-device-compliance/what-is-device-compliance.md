@@ -16,34 +16,35 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b245dac28f88e7eab70dfa9d759b15e155f8a7df
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
+ms.lasthandoff: 03/10/2017
 
 
 ---
 
 # <a name="what-is-device-compliance-in-intune-azure-preview"></a>Co to jest zgodność urządzeń w wersji zapoznawczej usługi Intune Azure?
 
-
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Aby pomóc chronić dane firmy, należy się upewnić, że urządzenia używane do uzyskiwania dostępu do aplikacji oraz danych firmowych spełniają pewne reguły. Te reguły mogą obejmować wymaganie użycia numeru PIN w celu uzyskania dostępu do urządzeń oraz szyfrowanie danych przechowywanych na urządzeniach. Zestaw takich reguł jest nazywany **zasadami zgodności**.
+Zasady zgodności urządzeń definiują reguły i ustawienia, z którymi urządzenie musi być zgodne, aby można je było uważać za spełniające zasady dostępu warunkowego do usług Intune i EMS. Zasady zgodności urządzeń mogą być również wykorzystane do monitorowania i rozwiązywania problemów ze zgodnością urządzeń. 
 
-##  <a name="how-should-i-use-a-device-compliance-policy"></a>Jak używać zasad zgodności urządzeń?
-Zasad zgodności można używać łącznie z zasadami dostępu warunkowego, aby zezwolić na dostęp do poczty e-mail i innych usług tylko tym urządzeniom, które spełniają reguły zasad zgodności.
+Do reguł tych należą następujące elementy:
 
-Zasady zgodności można również stosować niezależnie od dostępu warunkowego.
-Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, na których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Ale jeśli zasady zgodności są stosowane niezależnie, to nie istnieją żadne domyślne ograniczenia dostępu do zasobów firmowych.
+- Używanie hasła dostępu do urządzenia
+- Encryption
+- Określanie, czy urządzenie ma złamane zabezpieczenia lub odblokowany dostęp do konta root
+- Minimalna wymagana wersja systemu operacyjnego
+- Dozwolona maksymalna wersja systemu operacyjnego
+- Urządzenie musi być co najmniej na poziomie obrony przed zagrożeniami mobilnymi
 
-Zasady zgodności wdraża się dla użytkowników. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność urządzeń użytkownika. Aby uzyskać informacje o tym, ile czasu potrzeba na otrzymanie zasad przez urządzenia przenośne po wdrożeniu tych zasad, zobacz artykuł Zarządzanie ustawieniami i funkcjami urządzeń.
+<!---##  Concepts
+Following are some terms and concepts that are useful to understanding how to use compliance policies.
 
-##  <a name="concepts"></a>Pojęcia
-Poniżej przedstawiono niektóre terminy i pojęcia, które są przydatne do zrozumienia sposobu używania zasad zgodności.
+### Device compliance requirements
+Compliance requirements are essentially rules like requiring a device PIN or encryption that you can specify as required or not required for a compliance policy.
 
-### <a name="compliance-requirements"></a>Wymagania dotyczące zgodności
-Wymagania dotyczące zgodności są zasadniczo regułami, takimi jak wymaganie podania numeru PIN urządzenia lub szyfrowanie, które można określić jako wymagane lub niewymagane w ramach zasad zgodności.
-
-<!---### Actions for noncompliance
+### Actions for noncompliance
 
 You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
 When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
@@ -66,14 +67,22 @@ compliance issues on the device. You can also use this time to create your actio
 
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
-##  <a name="differences-between-the-classic-intune-admin-console-and-intune-in-the-azure-portal"></a>Różnice między klasyczną konsolą administracyjną usługi Intune i usługą Intune w portalu Azure
+##  <a name="how-should-i-use-a-device-compliance-policy"></a>Jak używać zasad zgodności urządzeń?
 
+### <a name="using-ems-conditional-access"></a>Przy użyciu dostępu warunkowego usługi EMS
+Zasad zgodności można używać z zasadami dostępu warunkowego usługi EMS, aby zezwolić na dostęp do poczty e-mail i innych zasobów firmowych tylko tym urządzeniom, które spełniają co najmniej jedną regułę zasad zgodności.
 
-Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwróć uwagę na następujące różnice, by ułatwić przejście na nowy przepływ pracy zgodności urządzeń w portalu Azure:
+### <a name="not-using-ems-conditional-access"></a>Bez użycia dostępu warunkowego usługi EMS
+Zasady zgodności można również stosować niezależnie od dostępu warunkowego usługi EMS.
+Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, w których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Ale jeśli zasady zgodności są stosowane niezależnie, to nie istnieją żadne domyślne ograniczenia dostępu do zasobów firmowych.
 
+Zasady zgodności wdraża się dla użytkowników. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność urządzeń użytkownika. Aby uzyskać informacje o tym, ile czasu potrzeba na otrzymanie zasad przez urządzenia przenośne po wdrożeniu tych zasad, zobacz artykuł Zarządzanie ustawieniami i funkcjami urządzeń.
+
+##  <a name="intune-classic-admin-console-vs-intune-azure-preview-portal"></a>Klasyczna konsola administracyjna usługi Intune a portal usługi Intune Azure w wersji zapoznawczej
+
+Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwróć uwagę na następujące różnice, by ułatwić sobie przejście na nowy przepływ pracy zgodności urządzeń w portalu Azure:
 
 -   W portalu Azure zasady zgodności są tworzone oddzielnie dla każdej z obsługiwanych platform. W konsoli administracyjnej usługi Intune te same zasady zgodności były wspólne dla wszystkich obsługiwanych platform.
-
 
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
@@ -81,15 +90,10 @@ Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwró�
 
 ##  <a name="next-steps"></a>Następne kroki
 
-[Rozpoczęcie pracy z zasadami zgodności](get-started-with-device-compliance.md)
+[Wprowadzenie do zasad zgodności urządzeń](get-started-with-device-compliance.md)
 
 
 <!---### See also
 
 Conditional access--->
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

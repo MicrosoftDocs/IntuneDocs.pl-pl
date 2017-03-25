@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,9 +17,9 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 9862ef9fd1d4827ae99480cd2cf2eac8dfca54d8
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: b80ced5cbaee26dfe8cb4b2f5e46d93af9733788
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,6 +28,7 @@ ms.lasthandoff: 02/21/2017
 
 Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z administratorem IT przy użyciu jego danych kontaktowych zamieszczonych w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com).
 
+- [Sprawdzanie zgodności na urządzeniu z systemem Android](check-compliance-on-your-device-android.md)
 - [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Wysyłanie dzienników do administratora IT pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 - [Wysyłanie dzienników do administratora IT za pomocą kabla USB](send-logs-to-your-it-admin-using-cable-android.md)

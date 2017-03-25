@@ -1,12 +1,12 @@
 ---
-title: "Kontrola dostępu oparta na rolach (ang. Role-based access control, RBAC) na potrzeby usługi Microsoft Intune"
+title: "Role Intune (RBAC) usługi Microsoft Intune"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak kontrola dostępu oparta na rolach pozwala określić, kto może wykonywać akcje i wprowadzać zmiany."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 02/22/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f4a80949dafbd3acc0413c75bbb0b8b5f5ae5664
-ms.openlocfilehash: 2507626d23beece9723134191e8747f731478ddb
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
+ms.openlocfilehash: e60edd86289e0fca2aa03660d8ce782e373c0236
+ms.lasthandoff: 03/15/2017
 
 
 ---
 
-# <a name="role-based-access-control-rbac-for-microsoft-intune"></a>Kontrola dostępu oparta na rolach (ang. Role-based access control, RBAC) na potrzeby usługi Microsoft Intune
+# <a name="intune-roles-rbac-for-microsoft-intune"></a>Role Intune (RBAC) usługi Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -68,7 +68,7 @@ Zatrudniasz nowego administratora IT, który będzie zapewniał użytkownikom z 
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku usługi **Intune** wybierz pozycję **Kontrola dostępu**.
+3. W bloku **Intune** wybierz opcję **Role Intune**.
 ![Obciążenie Kontrola dostępu](./media/axxess-control.png)
 1. W bloku **Role** obciążenia **Kontrola dostępu** wybierz pozycję **Dodaj niestandardowe**.
 2. W bloku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.

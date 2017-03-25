@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/29/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 635cd7c9cd6edec82fec76400b410cabce2d8c4c
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
+ms.lasthandoff: 03/13/2017
 
 
 ---
 
 # <a name="make-your-device-safer-with-the-right-password"></a>Zwiększenie bezpieczeństwa urządzenia za pomocą odpowiedniego hasła
 
-Uzyskiwanie dostępu do zasobów firmowych, takich jak wiadomości e-mail i dokumenty, jest czymś, co ludzie muszą wykonywać codziennie za pomocą swoich urządzeń z systemem Windows. Organizacja chce mieć pewność, że urządzenie wykonuje to w bezpieczny sposób. Jednym ze sposobów zapewnienia, że urządzenie w bezpieczny sposób uzyskuje dostęp do tych zasobów, jest wymóg stosowania hasła.
+Uzyskiwanie dostępu do zasobów firmowych, takich jak wiadomości e-mail i dokumenty, jest czymś, co ludzie muszą wykonywać codziennie za pomocą swoich urządzeń z systemem Windows. Organizacja chce mieć pewność, że urządzenie wykonuje to w bezpieczny sposób. Jednym ze sposobów zapewnienia, że urządzenie w bezpieczny sposób uzyskuje dostęp do tych zasobów, jest wymóg stosowania hasła. Te hasła są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
 
 Jeśli urządzenie z systemem Windows nie jest zgodne z zasadami haseł administratora IT, wyświetlany jest komunikat ze zwięzłym opisem problemu i wyjaśnieniem, co należy zrobić, aby hasło spełniało wymagania.
 

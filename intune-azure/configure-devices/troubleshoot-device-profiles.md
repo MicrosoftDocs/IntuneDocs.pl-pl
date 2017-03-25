@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,8 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 962eb30ada84355c1aceacbf8f487b0f5b3cf1f2
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -34,14 +35,14 @@ Po wdrożeniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby p
 
 Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad po wysłaniu pierwszego powiadomienia, usługa Intune przeprowadzi trzy kolejne próby.  Jeśli urządzenie działa w trybie offline (na przykład zostało wyłączone lub nie zostało podłączone do sieci), może nie odbierać powiadomień. W takim przypadku urządzenie pobierze zasady podczas następnego zaplanowanego zaewidencjonowania przy użyciu usługi Intune w następujący sposób:
 
-- iOS i Mac OS X: co 6 godzin.
+- iOS i macOS: co 6 godzin.
 - Android: co 8 godzin.
 - Windows Phone: co 8 godzin.
 - Komputery z systemem Windows 8.1 i Windows 10 zarejestrowane jako urządzenia: co 8 godzin.
 
 Jeśli urządzenie zostało właśnie zarejestrowane, częstotliwość zaewidencjonowania będzie większa:
 
-- iOS i Mac OS X: co 15 minut przez 6 godzin, a następnie co 6 godzin.
+- iOS i macOS: co 15 minut przez 6 godzin, a następnie co 6 godzin.
 - Android: co 3 minuty przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co 8 godzin.
 - Windows Phone: co 5 minut przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co 8 godzin.
 - Komputery z systemem Windows zarejestrowane jako urządzenia: co 3 minuty przez 30 minut, a następnie co 8 godzin.
@@ -499,8 +500,3 @@ W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, W
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-<!--HONumber=Feb17_HO3-->
-
-

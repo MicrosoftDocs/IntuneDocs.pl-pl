@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: a3e3d4968623f29e320f1fcca8243c861c7caab4
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 0c0d2f73e48864caabdec6e83c2fdf58db5a0630
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -28,19 +28,20 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Ten temat zawiera szczegółowe informacje o wymaganiach, jakie należy spełnić przed rozpoczęciem tworzenia zasad zgodności urządzeń, a także przegląd możliwych działań oraz treści dostępnych w witrynie Azure Portal. Jeśli zagadnienia zgodności urządzeń są dla Ciebie czymś nowym, możesz przeczytać ten temat, aby dowiedzieć się, czym jest zgodność urządzeń i jak można ją wykorzystać w firmie.
+W tym temacie uzyskasz następujące informacje: 
+
+- Co jest potrzebne przez rozpoczęciem tworzenia zasad zgodności urządzeń.
+- Rzut oka na zawartość i funkcje wersji zapoznawczej portalu Intune Azure. 
+
+Jeśli zagadnienia zgodności urządzeń są dla Ciebie czymś nowym, możesz przeczytać [ten temat](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance), aby dowiedzieć się, czym jest zgodność urządzeń i jak można ją wykorzystać w firmie.
 
 ##  <a name="pre-requisites"></a>Wymagania wstępne
-
 
 -   Subskrypcja usługi Intune
 
 -   Subskrypcja usługi Azure Active Directory
 
-
-
 ##  <a name="supported-platforms"></a>Obsługiwane platformy:
-
 
 -   Android
 
@@ -54,8 +55,7 @@ Ten temat zawiera szczegółowe informacje o wymaganiach, jakie należy spełni�
 
 ##  <a name="azure-portal-workflow"></a>Przepływ pracy w witrynie Azure Portal
 
-
-Poniżej przedstawiono omówienie procedury tworzenia zasad zgodności urządzeń w portalu Azure oraz zarządzania nimi.
+Poniżej przedstawiono omówienie procedury tworzenia zasad zgodności urządzeń w wersji zapoznawczej witryny Azure Portal oraz zarządzania nimi.
 
 <!---### Overview
 

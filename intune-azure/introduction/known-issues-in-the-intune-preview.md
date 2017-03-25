@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
+ms.openlocfilehash: ec3f87994b19591bda4ec201eac3c839798d634c
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -38,4 +38,7 @@ Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport 
 ## <a name="administration-and-accounts"></a>Administracja i konta
 
 - Administratorzy globalni (określani także mianem administratorów dzierżawy) mogą w dalszym ciągu wykonywać codzienne zadania administracyjne, nie korzystając z oddzielnej licencji usługi Intune ani pakietu Enterprise Mobility Suite (EMS). Jeśli jednak administratorzy globalni zechcą korzystać z tej usługi na przykład w celu zarejestrowania swoich własnych urządzeń lub urządzeń firmowych albo zechcą korzystać z Portalu firmy w usłudze Intune, wówczas będą potrzebować licencji na usługę Intune lub pakiet EMS, podobnie jak każdy inny użytkownik.
+
+## <a name="apple-enrollment-profile-migration"></a>Migracja profilu rejestracji firmy Apple
+- W ciągu następnych kilku miesięcy usługa Intune umożliwi zarządzanie programem Device Enrollment Program firmy Apple i rejestracją Apple Configurator za pomocą nowej witryny Azure Portal. Jeśli token programu Device Enrollment Program firmy Apple zostanie usunięty i nie nastąpi pobranie uaktualnionego tokenu, oryginalny token zostanie przywrócony w nowej witrynie Azure Portal w ramach migracji konta usługi Intune. Aby usunąć ten token i zapobiec rejestracji DEP, wystarczy usunąć token w witrynie Azure Portal. 
 

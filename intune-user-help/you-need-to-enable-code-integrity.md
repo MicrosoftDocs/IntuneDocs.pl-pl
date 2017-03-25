@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: d73777a0fb6cb981d57c92740a70e9d3058c03cb
-ms.lasthandoff: 12/21/2016
+ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
+ms.openlocfilehash: 4a1639c289e335d4f50c549da7b7d895dd2a10bb
+ms.lasthandoff: 03/16/2017
 
 
 ---
@@ -32,9 +32,9 @@ Przechowywanie informacji organizacji wymaga różnego typu zabezpieczeń zapobi
 Integralność kodu jest automatycznie włączona, gdy system aktywnie korzysta z bezpiecznego rozruchu.
 
 > [!Tip]
-> Włączenie funkcji Bezpieczny rozruch jest zaawansowanym zadaniem. Jeśli używasz urządzenia przenośnego z systemem Windows, skontaktuj się z administratorem IT, aby uzyskać pomoc. Jeśli używasz komputera, skontaktuj się z administratorem IT.
+> Włączenie funkcji Bezpieczny rozruch jest zaawansowanym zadaniem. Zalecamy skontaktowanie się z administratorem IT w celu uzyskania pomocy dotyczącej tego zadania.
 
-<!--Or, see the section “To re-enable Secure Boot” on the [Disabling Secure Boot](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) page to try enabling Secure Boot yourself.-->
+Jeśli czujesz się na tyle pewnie, aby kontynuować, przeczytaj sekcję „Aby ponownie włączyć funkcję Bezpieczny rozruch” na stronie [Wyłączanie funkcji Bezpieczny rozruch](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) i spróbuj samodzielnie włączyć funkcję Bezpieczny rozruch.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
 

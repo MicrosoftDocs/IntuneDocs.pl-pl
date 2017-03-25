@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 8f713769e0b8a13e91e6d9991e4e7415e1da22a2
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: ea910594195313978d6defae529a526bc0310022
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurowanie infrastruktury certyfikatów dla protokołu SCEP w usłudze Microsoft Intune
@@ -54,7 +54,7 @@ Z sieci obwodowej do sieci zaufanej — zezwól na ruch dotyczący wszystkich po
 Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, takiego jak [serwer proxy aplikacji usługi Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [serwer proxy dostępu do sieci Web](https://technet.microsoft.com/en-us/library/dn584107.aspx) lub serwer proxy innych firm.
 
 
-### <a name="a-namebkmkcertsandtemplatesacertificates-and-templates"></a><a name="BKMK_CertsAndTemplates"></a>Certyfikaty i szablony
+### <a name="BKMK_CertsAndTemplates"></a>Certyfikaty i szablony
 
 |Obiekt|Szczegóły|
 |----------|-----------|
@@ -63,13 +63,13 @@ Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, t
 |**Certyfikat uwierzytelniania serwera**|Żądany od wystawiającego lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES.|
 |**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik **cer** z głównego urzędu certyfikacji lub dowolnego urządzenia uznającego główny urząd certyfikacji za zaufany, a następnie wdrożyć go na urządzeniach, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
-### <a name="a-namebkmkaccountsaaccounts"></a><a name="BKMK_Accounts"></a>Konta
+### <a name="BKMK_Accounts"></a>Konta
 
 |Nazwa|Szczegóły|
 |--------|-----------|
 |**Konto usługi NDES**|Należy wskazać konto użytkownika domeny, które będzie używane jako konto usługi NDES.|
 
-## <a name="a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure"></a><a name="BKMK_ConfigureInfrastructure"></a>Konfigurowanie infrastruktury
+## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurowanie infrastruktury
 Skonfigurowanie profilów certyfikatów będzie możliwe po wykonaniu poniższych zadań wymagających znajomości systemu Windows Serwer 2012 R2 oraz usług certyfikatów Active Directory (ADCS):
 
 **Zadanie 1**: Tworzenie konta usługi NDES
@@ -108,7 +108,7 @@ To zadanie obejmuje:
     -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**.
 
         > [!IMPORTANT]
-        > W przypadku szablonów certyfikatów dla systemu iOS i Mac OS X na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
+        > W przypadku szablonów certyfikatów dla systemu iOS i macOS na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
     -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, którzy będą tworzyć profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
 
@@ -118,7 +118,7 @@ To zadanie obejmuje:
 3.  Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune używa wartości skonfigurowanej w szablonie. Można jednak skonfigurować urząd certyfikacji tak, aby umożliwiał żądającemu określenie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora w usłudze Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
 
     > [!IMPORTANT]
-    > W przypadku platform iOS i Mac OS X wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
+    > W przypadku platform iOS i macOS wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
 
 Oto zrzuty ekranu przykładowej konfiguracji szablonów.
 

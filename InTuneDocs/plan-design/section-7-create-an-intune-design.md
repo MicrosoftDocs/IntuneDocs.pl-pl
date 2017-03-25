@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/28/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 70be873367edccdefd724b6aa6959eb67b377bdd
-ms.openlocfilehash: 92dedcd165ffec47f6c5b818533fce08ed04b1a0
+ms.sourcegitcommit: 6df87e20011f20b99b91d88e669c67bb97ad2277
+ms.openlocfilehash: 1768b98cdcb18b5489d9a30b8c1f455f5de58418
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -25,11 +26,11 @@ ms.openlocfilehash: 92dedcd165ffec47f6c5b818533fce08ed04b1a0
 
 [!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
 
-Sekcji w tym przewodniku należy używać równolegle z innymi tematami w sekcji 2. Projekt będzie opierać się na zbieranych informacjach oraz decyzjach podejmowanych podczas kończenia poprzednich sekcji tego przewodnika. W tej sekcji dotyczącej projektu skupimy się na autonomicznej usłudze Intune, czyli opartej na chmurze usłudze firmy Microsoft znajdującej się w chmurze.
+Sekcji w tym przewodniku należy używać równolegle z innymi tematami w sekcji 2. Projekt będzie opierać się na zbieranych informacjach oraz decyzjach podejmowanych podczas kończenia poprzednich sekcji tego przewodnika. W tej sekcji dotyczącej projektu skupimy się na autonomicznej usłudze Intune, czyli opartej na chmurze usłudze firmy Microsoft.
 
-Mimo że wymagania dotyczące infrastruktury lokalnej są minimalne, nadal zalecane jest wykonanie pracy nad planem projektu, aby zapewnić, że istnieje prawidłowe rozwiązanie do zarządzania urządzeniami przenośnymi spełniające cele i wymagania.
+Mimo że wymagania dotyczące infrastruktury lokalnej są minimalne, zaplanuj projekt, aby zapewnić, że istnieje prawidłowe rozwiązanie do zarządzania urządzeniami przenośnymi spełniające cele i wymagania.
 
-Ponadto powszechne jest wprowadzanie zmian projektu podczas etapów wdrażania i testowania, w związku z czym należy upewnić się, że te zmiany zostaną udokumentowane wraz z uzasadnieniem ich wprowadzenia. Omawiane będą następujące zagadnienia:
+Ponadto powszechne jest wprowadzanie zmian projektu podczas etapów wdrażania i testowania, należy zatem upewnić się, że te zmiany zostaną udokumentowane wraz z uzasadnieniem ich wprowadzenia. Omawiane będą następujące zagadnienia:
 
 -   Bieżące środowisko
 
@@ -96,7 +97,7 @@ Należy upewnić się, czy uwzględniono wszystkie istniejące projekty i inne p
 | **Obszar rozwiązania** | **Bieżące środowisko** | **Komentarze** |
 |:---:|:---:|:---:|
 | **Tożsamość** | Usługa Azure AD, usługa Azure AD Connect, niefederacyjny, brak uwierzytelniania wieloskładnikowego | Istniejący projekt służący do włączenia uwierzytelniania wieloskładnikowego wraz z końcem roku |                 
-| **Środowisko poczty e-mail** | Lokalna instalacja programu Exchange, usługa Exchange Online | Obecnie trwa migracja z lokalnej instalacji programu Exchange do usługi Exchange Online. Przeprowadzono migrację 75% skrzynek pocztowych. Pozostałe 25% zostanie zmigrowanych przed rozpoczęciem pilotażowego wdrożenia usługi Intune. |                
+| **Środowisko poczty e-mail** | Lokalna instalacja programu Exchange, usługa Exchange Online | Obecnie trwa migracja z lokalnej instalacji programu Exchange do usługi Exchange Online. Przeprowadzono migrację&75;% skrzynek pocztowych. Pozostałe 25% zostanie zmigrowanych przed rozpoczęciem pilotażowego wdrożenia usługi Intune. |                
 | **SharePoint** | Lokalna instalacja programu SharePoint | Nie jest planowane przejście do usługi SharePoint Online |  
 | **Bieżące rozwiązanie do zarządzania urządzeniami przenośnymi** | Exchange ActiveSync |  |
 | **Rozwiązanie związane z certyfikatem** | Microsoft Server 2012 R2, usługi certyfikatów AD | Infrastruktury PKI należy używać tylko na potrzeby serwerów witryn sieci Web |
@@ -409,9 +410,4 @@ Oto przykład sposobu dokumentowania zasad dostępu warunkowego:
 ## <a name="next-section"></a>Następna sekcja
 
 W następnej sekcji znajdują się wskazówki dotyczące [procesu implementowania usługi Intune](section-8-onboarding-process.md).
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

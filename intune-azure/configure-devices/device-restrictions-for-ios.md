@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: a062b92cba0042153ffe22b949ce8a3b7b740b3f
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
+ms.openlocfilehash: 01e8a6968797bc2b2b0f3bb5710ee396d9094584
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -222,7 +222,7 @@ Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator
 -     **Biblioteka zdjęć usługi iCloud** — wybór ustawienia **Nie** powoduje wyłączenie możliwości korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.    W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.
 -     **Zarządzane aplikacje są synchronizowane z chmurą** — zezwala aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.
 -     **Udostępniony strumień zdjęć** — wybór ustawienia **Nie** powoduje wyłączenie funkcji **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.
--     **Kontynuacja aktywności** — umożliwia użytkownikowi kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X (program Handoff).
+-     **Kontynuacja aktywności** — umożliwia użytkownikowi kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS (program Handoff).
 
 ## <a name="kiosk"></a>Kiosk
 -     **Blokada aktywacji** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
