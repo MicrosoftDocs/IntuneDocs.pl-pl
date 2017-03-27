@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/16/2017
+ms.date: 03/27/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,6 +17,7 @@ ms.custom: intune-classic EXPIERIMENT
 translationtype: Human Translation
 ms.sourcegitcommit: b4295fbc9df88fa537f18b1280dfcc32702ccc51
 ms.openlocfilehash: ef14eba575df3c4498a5a70384c3cf59c34b86b0
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -25,7 +26,6 @@ ms.openlocfilehash: ef14eba575df3c4498a5a70384c3cf59c34b86b0
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę rejestracji dla urządzeń, którymi zarządzasz.
-
 
 ## <a name="how-will-you-manage-shared-ios-devices"></a>**Jak można zarządzać udostępnionymi urządzeniami z systemem iOS?**
 
@@ -42,11 +42,6 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
 
   - **Menedżer rejestracji urządzeń** — menedżer rejestracji urządzeń usługi Intune umożliwia menedżerowi lub administratorowi zarejestrowanie wielu urządzeń przenośnych za pomocą jednego konta użytkownika. Urządzenia te nie mają koligacji użytkownika (tzn. dedykowanych użytkowników) i muszą być rejestrowane przez zainstalowanie aplikacji Portal firmy i zalogowanie się do niej.
 
-  > [!div class="button"]
-  [< Wstecz](choose-how-to-enroll-devices3.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+> [!div class="button"]
+[< Wstecz](choose-how-to-enroll-devices3.md)
 

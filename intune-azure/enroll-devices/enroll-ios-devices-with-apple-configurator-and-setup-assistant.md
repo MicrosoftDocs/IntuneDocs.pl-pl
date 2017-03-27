@@ -23,7 +23,7 @@ ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="enroll-ios-devices-with-apple-configurator-and-setup-assistant"></a>Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień 
+# <a name="enroll-ios-devices-with-apple-configurator-and-setup-assistant"></a>Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -102,50 +102,39 @@ Po utworzeniu profilu i przypisaniu numerów seryjnych należy wyeksportować pr
 3. W bloku odpowiedniego profilu zaznacz pozycję **Eksportuj profil**.
 
 4. Skopiuj adres URL profilu do programu [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) po podłączeniu urządzenia z systemem iOS. Możesz przekazać go później przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
-
   Aby umożliwić obsługę programu Apple Configurator 2, należy edytować adres URL profilu 2.0. Aby to zrobić, zastąp poniższy kod:
     ```
     https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
     ```
     tym kodem:
-
     ```
     https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
     ```
-
-   Możesz przekazać ten adres URL profilu do programu Apple DEP za pomocą narzędzia Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS, używając poniższej procedury.
+Możesz przekazać ten adres URL profilu do programu Apple DEP za pomocą narzędzia Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS, używając poniższej procedury.
 
 5. Przekaż ten adres URL profilu do programu Apple DEP za pomocą programu Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS.
+ 1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2**. Na pasku menu wybierz pozycję **Apple Configurator 2**, a następnie wybierz pozycję **Preferences** (Preferencje).
 
+  > [!WARNING]
+  > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Zalecane jest również, aby podczas podłączania na urządzeniach był wyświetlany ekran **powitalny**.
 
-    1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2**. Na pasku menu wybierz pozycję **Apple Configurator 2**, a następnie wybierz pozycję **Preferences** (Preferencje).
+  2. W okienku **preferencji** wybierz pozycję **Servers** (Serwery), a następnie wybierz symbol „+”, aby uruchomić kreatora serwera MDM. Wybierz pozycję **Next** (Dalej).
 
-         > [!WARNING]
-         > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Zalecane jest również, aby podczas podłączania na urządzeniach był wyświetlany ekran **powitalny**.
+  3. Wprowadź **nazwę** i **adres URL rejestracji** dla serwera MDM z kroku 6 procesu rejestrowania urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
 
-    2. W okienku **preferencji** wybierz pozycję **Servers** (Serwery), a następnie wybierz symbol „+”, aby uruchomić kreatora serwera MDM. Wybierz pozycję **Next** (Dalej).
+  Możesz bezpiecznie zignorować ostrzeżenie informujące, że adres URL serwera nie został zweryfikowany. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
 
-    3. Wprowadź **nazwę** i **adres URL rejestracji** dla serwera MDM z kroku 6 procesu rejestrowania urządzeń z systemem iOS przy użyciu Asystenta ustawień w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
+  4.  Podłącz urządzenia przenośne z systemem iOS do komputera Mac przy użyciu adaptera USB.
 
-       Możesz bezpiecznie zignorować ostrzeżenie informujące, że adres URL serwera nie został zweryfikowany. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
+  > [!WARNING]
+  > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Podczas uruchamiania Asystenta ustawień na urządzeniach powinien być wyświetlany ekran **powitalny**.
 
-    4.  Podłącz urządzenia przenośne z systemem iOS do komputera Mac przy użyciu adaptera USB.
-
-        > [!WARNING]
-        > Podczas procesu rejestracji urządzenia zostaną zresetowane do konfiguracji fabrycznych. Jako najlepsze rozwiązanie zalecane jest zresetowanie urządzenia i włączenie go. Podczas uruchamiania Asystenta ustawień na urządzeniach powinien być wyświetlany ekran **powitalny**.
-
-    5.  Wybierz pozycję **Prepare**(Przygotuj). W okienku **Prepare iOS Device** (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
-
-    6. W okienku **Enroll in MDM Server** (Rejestrowanie na serwerze MDM) wybierz utworzoną nazwę serwera, a następnie wybierz pozycję **Next** (Dalej).
-
-    7. W okienku **Supervise Devices** (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
-
-    8. W okienku **Create an Organization** (Tworzenie organizacji) wybierz pozycję **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
-
-    9. W okienku **Configure iOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
-
-    10. Po zakończeniu przygotowywania urządzenia z systemem iOS odłącz kabel USB.  
-
+  5.  Wybierz pozycję **Prepare**(Przygotuj). W okienku **Prepare iOS Device** (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
+  6. W okienku **Enroll in MDM Server** (Rejestrowanie na serwerze MDM) wybierz utworzoną nazwę serwera, a następnie wybierz pozycję **Next** (Dalej).
+  7. W okienku **Supervise Devices** (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
+  8. W okienku **Create an Organization** (Tworzenie organizacji) wybierz pozycję **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
+  9. W okienku **Configure iOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
+  10. Po zakończeniu przygotowywania urządzenia z systemem iOS odłącz kabel USB.  
 6.  **Rozdystrybuuj urządzenia**.
     Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
 
