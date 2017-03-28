@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 01e8a6968797bc2b2b0f3bb5710ee396d9094584
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 881ce40cb093b1817c9c4b84c9f8ca78b19de727
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -51,7 +51,8 @@ ms.lasthandoff: 03/15/2017
 -     **Skróty klawiaturowe (tylko nadzorowane)** — umożliwia używanie skrótów klawiaturowych.
 -     **Wykrywanie nadgarstka przez sparowane urządzenie Apple Watch** — po włączeniu tego ustawienia urządzenie Apple Watch nie będzie wyświetlać powiadomień, jeśli nie znajduje się na nadgarstku użytkownika.
 - **Wymagaj hasła parowania dla wychodzących żądań AirPlay** — umożliwia wymaganie hasła parowania, gdy użytkownik używa funkcji AirPlay do strumieniowego przesyłania zawartości do innych urządzeń firmy Apple.
-- **Modyfikacja konta (tylko nadzorowany)** — umożliwia użytkownikowi zmianę ustawień konta, takich jak konfiguracja poczty e-mail.
+- **Modyfikacja konta (tylko nadzorowany)** — w przypadku zablokowania uniemożliwia modyfikowanie przez użytkownika ustawień specyficznych dla urządzenia z poziomu ustawień aplikacji dla systemu iOS, takich jak tworzenie nowych kont urządzenia i zmiana nazwy użytkownika lub hasła.
+Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji dla systemu iOS, jak Poczta, Kontakty, Kalendarz, Facebook i Twitter. Nie dotyczy to aplikacji z ustawieniami konta, których nie można skonfigurować z poziomu ustawień aplikacji dla systemu iOS, na przykład aplikacji Microsoft Outlook.
 - **Parowanie z urządzeniem Apple Watch (tylko nadzorowany)** — umożliwia parowanie urządzenia z urządzeniem Apple Watch.
 - **Modyfikacja protokołu Bluetooth (tylko nadzorowany)** — blokuje zmianę ustawień protokołu Bluetooth na urządzeniu przez użytkownika końcowego.
 - **Zdalny podgląd ekranu za pomocą aplikacji Classroom (tylko nadzorowany)** — blokuje lub zezwala na podgląd ekranu na urządzeniach zdalnych za pomocą aplikacji Classroom.

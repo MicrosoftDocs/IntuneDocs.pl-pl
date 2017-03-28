@@ -15,9 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6f78150b6c3821f6e9822ccfa905ac367bd359ad
-ms.openlocfilehash: 9e00e60472c8ba9f10a6071c42a53f58dcc00a08
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: dfed1ece238210e8b98934d8add7dbb9b0f1c1fb
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -26,19 +26,19 @@ ms.lasthandoff: 03/02/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Dostęp urządzeń przenośnych do zasobów firmy można kontrolować dzięki ocenie ryzyka przeprowadzanej przez usługę Lookout — rozwiązaniu do ochrony urządzeń przed zagrożeniami zintegrowanemu z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń przez usługę Lookout. Są to na przykład:
+Dostęp urządzeń przenośnych do zasobów firmy można kontrolować dzięki ocenie ryzyka przeprowadzanej przez usługę Lookout — rozwiązaniu usługi Mobile Threat Defense zintegrowanemu z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń przez usługę Lookout. Są to na przykład:
 - Luki w zabezpieczeniach systemu operacyjnego
 - Zainstalowane złośliwe aplikacje
 - Złośliwe profile sieci
 
 W oparciu o ocenę ryzyka przeprowadzaną za pomocą usługi Lookout (włączaną przy użyciu zasad zgodności usługi Intune) można skonfigurować zasady dostępu warunkowego. Za pomocą ustawień można dopuszczać lub blokować niezgodne urządzenia na podstawie wykrytych zagrożeń.
 
-## <a name="how-do-intune-and-lookout-device-threat-protection-help-protect-company-resources"></a>W jaki sposób usługa Intune i rozwiązanie Lookout do ochrony urządzeń przed zagrożeniami zabezpieczają zasoby firmy?
+## <a name="how-do-intune-and-lookout-mobile-threat-defense-help-protect-company-resources"></a>W jaki sposób usługa Intune i usługa Lookout Mobile Threat Defense chronią zasoby firmy?
 Aplikacja mobilna usługi Lookout, **Lookout for work**, jest instalowana i działa na urządzeniach przenośnych. Ta aplikacja przechwytuje dane systemu plików, stosu sieci oraz dane telemetryczne urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Lookout w chmurze w celu ocenienia ryzyka dotyczącego urządzenia pod kątem zagrożeń urządzeń przenośnych. Klasyfikację poziomu ryzyka dla zagrożeń można zmienić w konsoli usługi Lookout, aby była zgodna z wymaganiami.  
 
-Zasady zgodności w usłudze Intune zawierają regułę dla usługi Lookout przeznaczonej do ochrony urządzeń przenośnych przed zagrożeniami, która jest oparta na ocenie ryzyka przeprowadzanej przez usługę Lookout. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
+Zasady zgodności w usłudze Intune zawierają regułę dla usługi Lookout Mobile Threat Defense, która jest oparta na ocenie ryzyka przeprowadzanej przez usługę Lookout. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
-Jeśli się okaże, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online czy SharePoint Online. Użytkownicy korzystający z zablokowanych urządzeń zostaną poinformowani o czynnościach, które należy wykonać w celu rozwiązania problemu i ponownego uzyskania dostępu. Te wskazówki są wyświetlane w aplikacji Lookout for work.
+Jeśli okaże się, że urządzenie nie jest zgodne, dostęp do takich zasobów jak usługa Exchange Online czy SharePoint Online, może zostać zablokowany. Użytkownicy korzystający z zablokowanych urządzeń zostaną poinformowani o czynnościach, które należy wykonać w celu rozwiązania problemu i ponownego uzyskania dostępu. Te wskazówki są wyświetlane w aplikacji Lookout for work.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy:
 Po zarejestrowaniu w usłudze Intune narzędzie Lookout jest obsługiwane na następujących platformach:
@@ -92,9 +92,9 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i bloko
 
 ## <a name="next-steps"></a>Następne kroki
 Oto główne kroki, które należy wykonać, aby zaimplementować to rozwiązanie:
-1.    [Konfigurowanie subskrypcji pod kątem ochrony urządzenia przed zagrożeniami](device-threat-protection-subscription-setup.md)
-2.    [Włączanie połączenia z ochroną urządzenia przed zagrożeniami w usłudze Intune](device-threat-protection-enable.md)
-3.  [Konfigurowanie i wdrażanie aplikacji ochrony urządzenia przed zagrożeniami](device-threat-protection-apps.md)
-4.    [Konfigurowanie zasad zgodności ochrony urządzenia przed zagrożeniami](device-threat-protection-policy.md)
-5.    [Rozwiązywanie problemów z integracją ochrony urządzenia przed zagrożeniami](http://docs.microsoft.com/intune/troubleshoot/device-threat-protection-troubleshooting)
+1.    [Konfigurowanie subskrypcji usługi Lookout](device-threat-protection-subscription-setup.md)
+2.    [Włączanie usługi Lookout Mobile Threat Defense w usłudze Intune](device-threat-protection-enable.md)
+3.  [Konfigurowanie i wdrażanie aplikacji Lookout Mobile Threat Defense](device-threat-protection-apps.md)
+4.    [Konfigurowanie zasad zgodności urządzeń usługi Lookout](device-threat-protection-policy.md)
+5.    [Rozwiązywanie problemów z integracją usługi Lookout Mobile Threat Defense](http://docs.microsoft.com/intune/troubleshoot/device-threat-protection-troubleshooting)
 

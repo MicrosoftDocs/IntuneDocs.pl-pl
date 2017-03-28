@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: f7504657f5fb2d73242f25f2f059c8c4e7ab1547
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 4a921334b0cd402dba91eab665ff1a23290c82eb
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -139,7 +140,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Wymagaj zgodności urządzenia z zasadami firmowymi w celu udzielenia dostępu**|To ustawienie umożliwia korzystanie z aplikacji tylko wtedy, gdy urządzenie nie ma zdjętych zabezpieczeń systemu lub nie jest możliwy dostęp do urządzenia z uprawnieniami administratora.|
     |**Ponownie sprawdź wymagania dostępu po (w minutach)**|W polu **Limit czasu** określ częstotliwość sprawdzania wymagań dostępu aplikacji po jej otwarciu.|
     |**Okres prolongaty w trybie offline**|Jeśli urządzenie jest w trybie offline, określ czas do ponownego sprawdzenia wymagań dostępu aplikacji.|
-    |**Szyfruj dane aplikacji**|To ustawienie określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane. Obejmuje to również dane przechowywane zewnętrznie, na przykład na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia ustawianych przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Metoda szyfrowania nie ma certyfikatu FIPS 140-2.|
+    |**Szyfruj dane aplikacji**|To ustawienie określa, że wszystkie dane skojarzone z tą aplikacją będą szyfrowane. Obejmuje to również dane przechowywane zewnętrznie, na przykład na kartach SD.<br /><br />**Szyfrowanie dla systemu iOS**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system operacyjny. Ta funkcja jest włączana za pomocą zasad numeru PIN urządzenia ustawianych przez administratora IT. Jeśli numer PIN jest wymagany, dane będą szyfrowane zgodnie z ustawieniami zasad zarządzania aplikacjami mobilnymi. Zgodnie z dokumentacją firmy Apple [moduły używane przez system iOS mają certyfikaty FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br />**Szyfrowanie dla systemu Android**<br /><br />W przypadku aplikacji, które są skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, szyfrowanie jest obsługiwane przez firmę Microsoft. Dane są szyfrowane synchronicznie podczas operacji wejścia/wyjścia na plikach.  Zawartość w magazynie urządzenia będzie zawsze zaszyfrowana. Zastosowana metoda szyfrowania to FIPS 140-2, zgodna tylko z urządzeniami z systemem Samsung KNOX.|
     |**Zablokuj przechwytywanie ekranu** (tylko urządzenia z systemem Android)|To ustawienie określa, że możliwości przechwytywania ekranu urządzenia są blokowane podczas korzystania z tej aplikacji.|
 
 4. Gdy skończysz, wybierz pozycję **Zapisz zasady**.
@@ -195,9 +196,4 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 -   Jeśli dla urządzenia już wdrożono zasady, istniejące ustawienia zasad nie zostaną zastąpione.
 
 -   Jeśli dla urządzenia nie wdrożono wcześniej żadnych zasad i zostaną wdrożone dwa ustawienia powodujące konflikt, będzie używane domyślne ustawienie urządzenia.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

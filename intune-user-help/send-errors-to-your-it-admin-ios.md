@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
-ms.openlocfilehash: c6a9c0aa97a06f7b54768ee6927ea8866c40eb13
-ms.lasthandoff: 03/16/2017
+ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
+ms.openlocfilehash: 1e501c1a94a44c677569b8b85be7704844587694
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -33,7 +33,7 @@ Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z a
 
 -   Na ekranie **Informacje** w aplikacji Portal firmy wybierz pozycję **Wyślij raport diagnostyczny**.
 
--   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie wybierz pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
+-   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie po wyświetleniu alertu diagnostyki dotknij pozycję **Wyślij raport diagnostyczny**. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
 Jeśli masz problemy z tym sposobem przesyłania dzienników, możesz też spróbować [wysłać dzienniki administratora IT przy użyciu poczty e-mail](send-logs-to-your-it-admin-by-email-iOS.md).
 

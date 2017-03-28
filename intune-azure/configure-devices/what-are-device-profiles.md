@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: eb48265e4655117976c9847b1f5bee712f0c2e3c
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Użyj obciążenia **Konfigurowanie urządzeń** w usłudze Microsoft Intune do zarządzania ustawieniami i funkcjami na wszystkich urządzeniach zarządzanych. To obciążenie służy głównie do tworzenia profilów urządzeń, które umożliwiają zarządzanie całym szeregiem różnych funkcji na zarządzanych urządzeniach.
+W celu zarządzania ustawieniami i funkcjami na wszystkich zarządzanych urządzeniach użyj obciążenia **Konfiguracja urządzeń** w usłudze Microsoft Intune. To obciążenie służy głównie do tworzenia profilów urządzeń, które umożliwiają zarządzanie całym szeregiem różnych funkcji na zarządzanych urządzeniach.
 
 Po otwarciu tego obciążenia zostaną wyświetlone następujące opcje:
 
@@ -41,8 +41,13 @@ Przepływ pracy związany z tworzeniem profilów urządzeń jest podobny dla wsz
 
 Na urządzeniach można zarządzać następującymi możliwościami:
 
+## <a name="device-features"></a>Funkcje urządzenia
+
+Funkcje urządzenia pozwalają sterować funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i udostępniane konfiguracje urządzeń.
+Aby uzyskać więcej informacji, zobacz artykuł [How to configure device feature settings](how-to-configure-device-features.md) (Sposób konfigurowania ustawień funkcji urządzenia) Obsługuje systemy iOS i macOS.
+
 ## <a name="device-restrictions"></a>Ograniczenia dotyczące urządzeń
-Ograniczenia dotyczące urządzeń pozwalają na kontrolę szerokiego zakresu ustawień i funkcji, którymi można zarządzać w ramach wielu kategorii, w tym dotyczących zabezpieczeń, przeglądarki, sprzętu i ustawień związanych z udostępnianiem danych. Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, który uniemożliwia użytkownikom urządzeń z systemem iOS dostęp do aparatu urządzenia.
+Ograniczenia dotyczące urządzeń pozwalają na kontrolę szerokiego zakresu ustawień na urządzeniach, którymi można zarządzać, w ramach wielu kategorii, w tym dotyczących zabezpieczeń, przeglądarki, sprzętu i ustawień związanych z udostępnianiem danych. Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, który uniemożliwia użytkownikom urządzeń z systemem iOS dostęp do aparatu urządzenia.
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure device restriction settings (Sposoby konfigurowania ustawień ograniczeń urządzenia)](how-to-configure-device-restrictions.md) Dotyczy systemów: Android, iOS, macOS, Windows 10 i Windows 10 Team.
 
 ## <a name="email"></a>Poczta e-mail
@@ -57,6 +62,10 @@ Aby uzyskać więcej informacji, zobacz artykuł [How to configure Wi-Fi setting
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Aby wdrożyć ustawienia sieci VPN dla użytkowników i urządzeń w organizacji w taki sposób, aby łączenie się z siecią było łatwe i bezpieczne, użyj profilów sieci VPN.
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure VPN settings (Sposoby konfigurowania ustawień sieci VPN)](how-to-configure-vpn-settings.md).
 Dotyczy systemów: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 i Windows 10.
+
+## <a name="education"></a>Edukacja
+Umożliwia konfigurowanie opcji aplikacji systemu Windows Take a Test. Po skonfigurowaniu tych opcji do czasu ukończenia testu nie można uruchomić na urządzeniu żadnych innych aplikacji.
+Aby uzyskać więcej informacji, zobacz artykuł [Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune](how-to-configure-education-settings.md)
 
 ## <a name="certificates"></a>Certyfikaty
 Ten typ profilu umożliwia skonfigurowanie zaufanych certyfikatów oraz certyfikatów SCEP i PKCS, które mogą zostać przypisane do urządzeń i być używane do uwierzytelniania sieci Wi-Fi, sieci VPN oraz profilów poczty e-mail.

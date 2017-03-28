@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/08/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: d8cb15d1b8c1c100f15084e43d2c3c4633fd64b5
-ms.openlocfilehash: f12d538b1f4cd327b893d234f2b558185cdd9d85
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -26,14 +26,24 @@ ms.lasthandoff: 03/09/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Do identyfikowania urządzeń firmy można utworzyć listę numerów IMEI (International Mobile Equipment Identity). Urządzenia te mogą być zarejestrowane lub nie, a ich stan ma wartość „Zarejestrowane” lub „Nie kontaktowano się”. „Nie kontaktowano się” oznacza, że urządzenie nie zostało nigdy zaewidencjonowane w usłudze Intune.
+Jako administrator IT możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI (International Mobile Equipment Identity) służących do identyfikowania urządzeń firmowych. Każdy numer IMEI może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
 
-Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikator IMEI w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Obecnie maksymalna liczba wierszy na liście wynosi 500.
+## <a name="create-a-csv-file"></a>Tworzenie pliku CSV
+Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikator IMEI w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Informacje szczegółowe mogą zawierać maksymalnie 128 znaków. Aktualne ograniczenie wynosi 500 wierszy w pliku CSV.
 
-W edytorze tekstu lista .csv wygląda następująco:
+**Przekaż plik csv zawierający numery seryjne** — utwórz listę wartości rozdzielanych przecinkami (csv) w dwóch kolumnach bez nagłówka i ogranicz listę do 5000 urządzeń lub 5 MB na plik csv.
 
-01 234567 890123, szczegóły urządzenia</br>
-02 234567 890123, szczegóły urządzenia
+|||
+|-|-|
+|&lt;IMEI 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
+|&lt;IMEI 2&gt;|&lt;Szczegóły urządzenia 2&gt;|
+
+    This .csv file when viewed in a text editor appears as:
+
+    ```
+    01 234567 890123,device details
+    02 234567 890123,device details
+    ```
 
 **Aby dodać listę .csv identyfikatorów firmy**
 
@@ -48,11 +58,15 @@ W edytorze tekstu lista .csv wygląda następująco:
 > [!IMPORTANT]
 > Niektóre urządzenia z systemem Android mają wiele numerów IMEI. Usługa Intune rejestruje w spisie po jednym numerze IMEI na urządzenie. Jeśli zostanie zaimportowany numer IMEI inny niż numer zarejestrowany w spisie usługi Intune, urządzenie zostanie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy. Zaimportowanie wielu numerów IMEI urządzenia spowoduje, że dla numerów niezarejestrowanych w spisie będzie wyświetlany stan rejestracji **Nieznany**.
 
-**Aby usunąć listę .csv identyfikatorów firmy**
+Po zaimportowaniu te urządzenia mogą być zarejestrowane lub nie, a ich stan ma wartość **Zarejestrowane** lub **Nie kontaktowano się**. Wartość **Nie kontaktowano się** oznacza, że z urządzeniem nigdy nie nawiązano połączenia w usłudze Intune.
+
+## <a name="delete-a-csv-list"></a>Usuwanie listy CSV
 
 1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
 2. W bloku Intune wybierz kolejno pozycje **Zarejestruj urządzenia** i **Identyfikatory urządzenia firmy**.
 
 3. Wybierz przycisk **Usuń**.
+
+Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobile Equipment Identifier) można znaleźć w portalu [3GPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 

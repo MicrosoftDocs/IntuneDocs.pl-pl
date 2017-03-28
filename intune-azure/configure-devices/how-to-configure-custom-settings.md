@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: c8c8fc2c56f30557482cc1e4fa5d2d9b5da20050
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 029b5c4c011ddf3ff7dbb06c55b48ef0c18c725e
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -38,7 +38,7 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
+3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
 2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
 3. W bloku profilów wybierz pozycję **Utwórz profil**.
 4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu niestandardowego.

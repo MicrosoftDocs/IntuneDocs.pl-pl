@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
-ms.openlocfilehash: d60b9afdf7fe9f78dd5cc4693259b8667fb17299
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 832c7dd8016bb30a24cc1748f84e5692130cb658
+ms.openlocfilehash: a37f217d3ce3c87b9aa673a8a7fc93ad390c6a68
+ms.lasthandoff: 03/23/2017
 
 
 ---
@@ -39,27 +39,21 @@ Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty
 -    Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
 -    System iOS 8.0 i nowsze
 -    KNOX Samsung Standard (4.0 i nowsze)
--    Program Android for Work
-
->[!NOTE]
->Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
+-    Android for Work (aplikacje poczty e-mail innych firm, aplikacja macierzysta poczty e-mail jest powiązana tylko z profilem osobistym)
 
 Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować ilość poczty e-mail do synchronizowania, a także, w zależności od typu urządzenia, typy zawartości do synchronizowania.
 
->[!NOTE]
->
->Jeśli użytkownik zainstalował profil poczty e-mail przed skonfigurowaniem profilu przez usługę Intune, wynik wdrożenia profilu poczty e-mail usługi Intune zależy od platformy urządzenia:
+Jeśli użytkownik zainstalował profil poczty e-mail przed skonfigurowaniem profilu przez usługę Intune, wynik wdrożenia profilu poczty e-mail usługi Intune zależy od platformy urządzenia:
 
->**iOS**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Zduplikowany profil poczty e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy informuje użytkownika, że nie jest on zgodny ze względu na ręcznie skonfigurowany profil poczty e-mail, i wyświetla monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby można było skonfigurować profil usługi Intune. Aby uniknąć problemu, poleć użytkownikom, aby dokonali rejestracji bez instalowania profilu poczty e-mail i pozwolili usłudze Intune na skonfigurowanie profilu.
+**iOS**<br>Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Zduplikowany profil poczty e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy informuje użytkownika, że nie jest on zgodny ze względu na ręcznie skonfigurowany profil poczty e-mail, i wyświetla monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby można było skonfigurować profil usługi Intune. Aby uniknąć problemu, poleć użytkownikom, aby dokonali rejestracji bez instalowania profilu poczty e-mail i pozwolili usłudze Intune na skonfigurowanie profilu.
 
->**Windows**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika.
+**Windows**<br>Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika.
 
->**Samsung KNOX**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune. Jeśli użytkownik skonfiguruje to konto, zostanie ono ponownie zastąpione przez profil usługi Intune. Należy pamiętać, że może to być niejasne dla użytkownika.
+**Samsung KNOX**<br>Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i nadpisują je profilami usługi Intune. Jeśli użytkownik skonfiguruje to konto, zostanie ono ponownie zastąpione przez profil usługi Intune. Należy pamiętać, że może to być niejasne dla użytkownika.
 
->Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępować siebie nawzajem.
+Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępować siebie nawzajem.
 
->**Android for Work**: profil z usługi Intune jest stosowany tylko do konkretnych aplikacji poczty e-mail w profilu służbowym urządzenia i nie ma wpływu na konfigurację poczty e-mail w profilu użytkownika urządzenia.
-
+**Android for Work**<br>Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play, instalują się na profilu służbowym urządzenia i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
 
 ## <a name="secure-email-profiles"></a>Zabezpieczanie profilów poczty e-mail
 Profile poczty e-mail można zabezpieczyć przy użyciu certyfikatu lub hasła.
@@ -80,7 +74,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
 2.  Skonfiguruj jeden z następujących typów zasad:
 
-    -   **Profil poczty e-mail dla systemu Samsung KNOX Standard (w wersji&4;.0 lub nowszej)**
+    -   **Profil poczty e-mail dla systemu Samsung KNOX Standard (w wersji 4.0 lub nowszej)**
 
     -   **Profil poczty e-mail (system iOS 8.0 i nowsze)**
 

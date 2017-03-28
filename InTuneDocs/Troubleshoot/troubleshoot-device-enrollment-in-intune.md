@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/01/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
-ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
-ms.lasthandoff: 01/25/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 3d4a89cd8e6e57f5a1e268dcda98cfb3c68c5587
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -35,9 +35,9 @@ Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune zosta
 
 -    [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
 -    [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--    [Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -    [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
-
+-    [Konfigurowanie zarządzania urządzeniami z systemem Android](/intune/deploy-use/set-up-android-management-with-microsoft-intune) — nie są wymagane dodatkowe kroki
+-    [Konfigurowanie zarządzania urządzeniami z systemem Android for Work](/intune/deploy-use/set-up-android-for-work)
 
 Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
 
@@ -49,7 +49,7 @@ Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dz
 Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
-**Problem: **podczas rejestracji urządzenia występuje błąd, na przykład **Portal firmy jest tymczasowo niedostępny** na urządzeniu z systemem iOS, a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
+**Problem:**podczas rejestracji urządzenia występuje błąd, na przykład **Portal firmy jest tymczasowo niedostępny** na urządzeniu z systemem iOS, a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
 
 **Rozwiązanie:**
 
@@ -88,7 +88,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 > Konto użytkownika, które jest dodawane do konta Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady dostępu warunkowego.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
-**Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
+**Problem:**na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
 **Rozwiązanie:**
 
@@ -103,7 +103,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 5.  Jeśli logowanie użytkownika przebiegnie pomyślnie, na urządzeniu z systemem iOS zostanie wyświetlony monit o zainstalowanie aplikacji Portal firmy dla usługi Intune i zarejestrowanie. Na urządzeniu z systemem Android należy ręcznie zainstalować aplikację Portal firmy dla usługi Intune, po czym będzie można ponowić próbę rejestracji.
 
 ### <a name="mdm-authority-not-defined"></a>Niezdefiniowany urząd MDM
-**Problem: **występuje błąd **Nie zdefiniowano urzędu MDM**.
+**Problem:**występuje błąd **Nie zdefiniowano urzędu MDM**.
 
 **Rozwiązanie:**
 
@@ -149,7 +149,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 **Problem:** Po dodaniu drugiej zweryfikowanej domeny do usług ADFS możliwe, że użytkownicy z sufiksem nazwy głównej użytkownika (UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
 
 
-**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników (UPN) w organizacji (na przykład @contoso.com lub @fabrikam.com)) jest wymagane wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks. Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników (UPN) w organizacji (na przykład @contoso.com lub @fabrikam.com) wymagane jest wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks. Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
@@ -203,7 +203,7 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem: ** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
+**Problem:** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
 
 **Rozwiązanie:**
 
@@ -280,8 +280,20 @@ Aby rozwiązać ten problem, użytkownicy muszą użyć przycisku **Konfiguruj**
 
 Po zarejestrowaniu urządzenie powraca do stanu prawidłowego i odzyskuje dostęp do zasobów firmy.
 
+### <a name="verify-ws-trust-13-is-enabled"></a>Sprawdzanie, czy usługa WS-Trust 1.3 jest włączona
+**Problem** Nie można zarejestrować urządzeń z systemem iOS objętych programem Device Enrollment Program (DEP)
+
+Rejestrowanie urządzeń objętych programem Device Enrollment Program z koligacją użytkownika wymaga nazwy użytkownika/mieszanego punktu końcowego protokołu WS-Trust 1.3/, aby było możliwe żądanie tokenu użytkownika. Usługa Active Directory domyślnie włącza ten punkt końcowy. Punktu końcowego trust/13/UsernameMixed należy szukać na liście dopuszczonych punktów końcowych dostępnej za pośrednictwem polecenia cmdlet programu PowerShell Get-AdfsEndpoint. Na przykład:
+
+      Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
+
+Więcej informacji można znaleźć w [dokumentacji polecenia Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotyczące zabezpieczania Usług federacyjnych Active Directory](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Jeśli potrzebujesz dodatkowej pomocy w określeniu, czy punkt końcowy WS-Trust 1.3 Username/Mixed jest włączony u Twojego dostawcy federacyjnego tożsamości, skontaktuj się z Pomocą techniczną firmy Microsoft, jeśli korzystasz z usługi AD FS, lub z dostawcą tożsamości innej firmy.
+
+
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem: ** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
+**Problem:** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
 
@@ -314,7 +326,7 @@ Przykłady zawartości, pod kątem obecności której należy sprawdzić pliki d
 ### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają
 **Problem:** po pomyślnym zarejestrowaniu urządzenia przenośnego w programie Configuration Manager znika ono z kolekcji urządzeń przenośnych, ale jego profil zarządzania nadal istnieje i znajduje się ono na liście w obszarze Brama CSS.
 
-**Rozwiązanie: **taka sytuacja może wystąpić, ponieważ istnieje niestandardowy proces usuwający urządzenia, które nie są przyłączone do domeny, lub użytkownik wycofał urządzenie z subskrypcji. Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika usunęło urządzenie z konsoli programu Configuration Manager, wykonaj następujące kroki.
+**Rozwiązanie:**taka sytuacja może wystąpić, ponieważ istnieje niestandardowy proces usuwający urządzenia, które nie są przyłączone do domeny, lub użytkownik wycofał urządzenie z subskrypcji. Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika usunęło urządzenie z konsoli programu Configuration Manager, wykonaj następujące kroki.
 
 #### <a name="check-how-device-was-removed"></a>Sprawdzanie sposobu usunięcia urządzenia
 

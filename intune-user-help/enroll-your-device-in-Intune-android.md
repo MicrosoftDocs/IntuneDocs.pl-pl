@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
-ms.openlocfilehash: 464b9b60e9e8a5cb3e195bbec88d496eb4dc9ecf
-ms.lasthandoff: 03/16/2017
+ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
+ms.openlocfilehash: a4886c9fb780f2748aa767e426f404e03671f42e
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -60,10 +60,10 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-4a-comp-access-setup.png)
 
-> [!NOTE]
-> Żółte trójkąty nie oznaczają wystąpienia błędu. Te ikony wskazują, że do zakończenia procesu rejestracji pozostało do wykonania kilka czynności.
+    > [!NOTE]
+    > Żółte trójkąty nie oznaczają wystąpienia błędu. Te ikony wskazują, że do zakończenia procesu rejestracji pozostało do wykonania kilka czynności.
 
-7.  Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
+7. Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
 
     ![Ekran „Dlaczego warto zarejestrować urządzenie?”](./media/and-enroll-4b-why-enroll.png)
 
@@ -90,13 +90,19 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
         ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie pozycji ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie uzyskuje dostępu do Twoich kontaktów!** Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Jeśli zezwolisz na dostęp, aplikacja Portal firmy będzie mogła tylko utworzyć konto służbowe, korzystać z niego i zarządzać nim.
+        Jeśli ten komunikat zostanie wyświetlony, naciśnij opcję **ZEZWALAJ**. Naciśnięcie pozycji ZEZWALAJ jest bezpieczne, ponieważ **firma Microsoft nigdy nie uzyskuje dostępu do Twoich kontaktów!** Tekst komunikatu pochodzi od firmy Google, a firma Microsoft nie może go zmienić. Jeśli zezwolisz na dostęp, aplikacja Portal firmy będzie mogła tylko utworzyć konto służbowe, korzystać z niego i zarządzać nim.
 
-    Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym logowaniu do Portalu firmy, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, naciskając pole **Nigdy nie pytaj ponownie**. Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Telefon** i włącz uprawnienie.
+        Jeśli odmówisz dostępu, komunikat pojawi się ponownie przy kolejnym logowaniu do Portalu firmy, ale możesz wyłączyć wyświetlanie komunikatów w przyszłości, naciskając pole **Nigdy nie pytaj ponownie**. Jeśli później zdecydujesz zezwolić na dostęp, przejdź do pozycji **Ustawienia** &gt; **Aplikacje** &gt; **Portal firmy** &gt; **Uprawnienia** &gt; **Telefon** i włącz uprawnienie.
 
 11.  Na ekranie **Aktywowanie administratora urządzenia** naciśnij przycisk **Aktywuj**.
 
     ![Ekran Aktywowanie administratora urządzenia](./media/and-enroll-5-activate.png)
+
+    Do zarządzania urządzeniem Portal firmy wymaga roli administratora. Umożliwia ona administratorowi wyświetlenie niektórych informacji – na przykład o liczbie prób odblokowania ekranu — oraz podjęcie określonych działań.
+
+    Należy pamiętać, że te działania są podejmowane w trosce o bezpieczeństwo. Administrator IT nie dokonuje próby naruszenia prywatności lub usunięcia informacji bez powodu, ale aby się upewnić, że dane firmowe są bezpieczne.
+
+    Firma Microsoft nie kontroluje tego komunikatu i zdaje sobie sprawę, że jego brzmienie może się wydawać nieco drastyczne. Nie istnieje metoda wyświetlania w Portalu firmy wyłącznie ograniczeń i dostępu odpowiedniego dla Twojej organizacji. Wszystkie te elementy pojawiają się na tym ekranie jednocześnie. Jeśli masz pytania dotyczące sposobu używania aplikacji w Twojej organizacji, skontaktuj się ze swoim administratorem IT, korzystając z informacji kontaktowych zawartych w [witrynie sieci Web aplikacji Portal firmy](http://portal.manage.microsoft.com) w celu uzyskania dodatkowych informacji.
 
 12.  Postępuj zgodnie z monitami o wprowadzenie numeru PIN lub hasła. Jeśli skonfigurowano już numer PIN lub hasło na tym urządzeniu, ten ekran nie będzie widoczny lub wymagane będzie wprowadzenie nowego numeru PIN lub hasła.
 
@@ -108,21 +114,21 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     Ten ekran pokazuje, że urządzenie jest rejestrowane.
 
-      ![Ekran rejestracji urządzenia](./media/and-enroll-8-device-enrolling.png)
+    ![Ekran rejestracji urządzenia](./media/and-enroll-8-device-enrolling.png)
 
 14. Po wyświetleniu ekranu **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **KONTYNUUJ**. Jeśli komunikat informuje o niezgodności urządzenia, wykonaj instrukcje rozwiązania problemu, a następnie naciśnij pozycję **KONTYNUUJ**.
 
-  ![Urządzenie nie jest zgodne, ale jest zarejestrowane](./media/and-enroll-9a-noncompliant-enrolled-device.png)
+    ![Urządzenie nie jest zgodne, ale jest zarejestrowane](./media/and-enroll-9a-noncompliant-enrolled-device.png)
 
-  ![Wyświetlane są problemy ze zgodnością urządzenia wymagające rozwiązania](./media/and-enroll-9b-resolve-compliance-issues.png)
+    ![Wyświetlane są problemy ze zgodnością urządzenia wymagające rozwiązania](./media/and-enroll-9b-resolve-compliance-issues.png)
 
-Można dowiedzieć się więcej o problemach, naciskając je. 
+    Można dowiedzieć się więcej o problemach, naciskając je.
 
-  ![Rozwinięte informacje o problemach ze zgodnością urządzeń](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
+    ![Rozwinięte informacje o problemach ze zgodnością urządzeń](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
 
-    ![Company access setup screen](./media/and-enroll-9d-comp-access-setup.png)  
+    ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-9d-comp-access-setup.png)  
 
-11. Na ekranie **Zakończono konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **GOTOWE**. Urządzenie jest teraz zarejestrowane.
+15. Na ekranie **Zakończono konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **GOTOWE**. Urządzenie jest teraz zarejestrowane.
 
     ![Ekran Konfigurowanie dostępu do zasobów firmy zostało zakończone](./media/and-enroll-10-comp-access-setup-complete.png)
 

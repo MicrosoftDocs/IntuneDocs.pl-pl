@@ -5,7 +5,7 @@ description: "Wersja zapoznawcza usługi Intune Azure: włączanie zarządzania 
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 03/15/17
+ms.date: 03/21/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: a95aca706a4996d40e268a80c7c334ebb9854df5
-ms.openlocfilehash: 6cbaf8414452f11f0aa97616bbed2cf164b49ac0
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 609656c2831c09c67e911c8150d31f38faad020b
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -33,23 +33,13 @@ Skorzystaj z jednej z następujących metod konfigurowania usługi rejestracji u
  -  Użycie tej metody wymaga usługi Azure Active Directory Premium. Jeśli nie masz tej usługi, skorzystaj z metody rejestracji dla systemów Windows 8.1 i Windows Phone 8.1.
  -  Jeśli nie wybrano włączenia automatycznego rejestrowania, należy użyć metody rejestracji dla systemów Windows 8.1 i Windows Phone 8.1.
 
-- [**Rejestrowanie w systemie Windows 8.1 lub Windows Phone 8.1 poprzez konfigurowanie rekordu CNAME**](#simplify-enrollment-by-configuring-cname)
+- [**Rejestracja bez automatycznego rejestrowania w usłudze Azure AD Premium**](#enable-windows-enrollment-without-azure-ad-premium)
  - Ta metoda służy do rejestrowania urządzeń z systemem Windows 8.1 lub Windows Phone 8.1.
- - Można również użyć tej metody, jeśli nie masz dostępu do usługi Premium Azure Active Directory (AD).
-
-
-## <a name="prerequisites"></a>Wymagania wstępne
-
-Jeśli któreś spośród następujących wymagań wstępnych nie są jeszcze dostępne w wersji zapoznawczej usługi Intune Azure, konieczne jest ich spełnienie z poziomu klasycznej konsoli administracyjnej usługi Intune.
-
-- [Konfigurowanie niestandardowej nazwy domeny](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- Ustawianie usługi **Microsoft Intune** jako [urzędu zarządzania urządzeniami przenośnymi](set-mdm-authority.md)
-- [Konfigurowanie aplikacji Portal firmy](/intune-azure/manage-apps/company-portal-app.md)
-- Przypisywanie użytkownikom licencji
+ - Jeśli nie chcesz używać usługi Azure Active Directory (AD) Premium, możesz użyć tej metody dla urządzeń z systemem Windows 8.1 i nowszym.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="enable-windows-workplace-enrollment"></a>Włączanie rejestrowania pracy systemu Windows
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Włączanie rejestrowania dla systemu Windows bez usługi Azure AD Premium
 
 Można umożliwić użytkownikom instalowanie i rejestrowanie urządzeń bez automatycznego rejestrowania w usłudze Azure AD Premium. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera.
 
@@ -79,7 +69,7 @@ Można umożliwić użytkownikom instalowanie i rejestrowanie urządzeń bez aut
 
     Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows). Możesz również odesłać użytkowników do artykułu [What can my IT admin see on my device](https://docs.microsoft.com/intune/enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows) (Co widzi administrator IT na moim urządzeniu).
 
-    Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+    Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
 
 Nie są wymagane żadne dodatkowe czynności, chyba że nastąpi wdrożenie aplikacji Portal firmy na urządzeniach.  Kroki 2 i 3 w konsoli administracyjnej można bezpiecznie zignorować.
 

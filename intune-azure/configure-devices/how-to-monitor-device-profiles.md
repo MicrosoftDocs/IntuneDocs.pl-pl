@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 5c6bf134ad49edb64e994b95bf7378602042052e
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: ae5cf453d578dd7df4ce0590b14e97468c893093
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -32,7 +32,7 @@ Możesz monitorować postęp przypisań profilów urządzeń usługi Intune na d
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
+3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
 2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
 2. W bloku listy profilów wybierz profil, którym chcesz zarządzać, a następnie wykonaj jedną z poniższych czynności:
     - W bloku <*nazwa profilu*> **Raporty** wybierz pozycję **Przegląd**, aby wyświetlić podstawowe informacje o profilu i jego przypisaniach.
