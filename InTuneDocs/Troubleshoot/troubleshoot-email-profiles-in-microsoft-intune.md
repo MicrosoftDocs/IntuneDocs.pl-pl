@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
 ms.openlocfilehash: 017a7912cb991f00916373acc18f4ab2b97ce8ed
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -66,15 +67,10 @@ Jeśli użytkownik zainstalował profil poczty e-mail przed udostępnieniem prof
 Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zaleca się tworzenia wielu profilów poczty e-mail do wdrożenia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępowały siebie nawzajem.
 
 ## <a name="error--0x87d1fde8-for-knox-standard-device"></a>Błąd 0x87D1FDE8 dla urządzenia KNOX Standard
-**Problem**: po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX Standard w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się ** na karcie Zasady &gt; właściwości na urządzeniu.
+**Problem**: po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX Standard w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się** na karcie Zasady &gt; właściwości na urządzeniu.
 
 Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowych. Opcja synchronizacji notatek urządzenia Samsung nie jest już obsługiwana i ta opcja nie powinna być wybrana w Twoim profilu. Upewnij się, że urządzenia miały wystarczająco dużo czasu na przetwarzanie zasad, nawet do 24 godzin.
 
 ## <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

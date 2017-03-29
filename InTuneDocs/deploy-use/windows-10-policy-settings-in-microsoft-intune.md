@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 5a1a861096bdfae461b6ad05e424f770796279a2
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -29,7 +30,7 @@ Ten temat zawiera informacje ułatwiające zrozumienie ustawień zasad usługi I
 
 Można wybrać spośród dwóch typów zasad:
 
-- **Zasady niestandardowe**: **zasady niestandardowe ** usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), których można użyć do sterowania funkcjami na urządzeniach. System Windows 10 udostępnia wiele ustawień za pomocą [dostawcy usługi konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+- **Zasady niestandardowe**: **zasady niestandardowe** usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), których można użyć do sterowania funkcjami na urządzeniach. System Windows 10 udostępnia wiele ustawień za pomocą [dostawcy usługi konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 - **Ogólne zasady konfiguracji**: użyj tego typu zasad, aby wybrać ustawienia z wbudowanej listy dostarczonej z usługą Microsoft Intune.
 
 ## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych
@@ -325,9 +326,4 @@ Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

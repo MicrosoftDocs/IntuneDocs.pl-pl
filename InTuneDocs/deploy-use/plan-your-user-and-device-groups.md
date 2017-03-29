@@ -16,6 +16,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 0ed5340d271301c756e8c72ddd91ac26088fd19f
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -120,7 +121,7 @@ Usługa Intune udostępnia dziewięć wbudowanych grup, których nie można edyt
 
 
 ### <a name="all-users-and-devices-in-your-organization"></a>Wszyscy użytkownicy i wszystkie urządzenia w Twojej organizacji
-Zdefiniuj grupę nadrzędną dla wszystkich użytkowników i urządzeń w Twojej organizacji. Prawdopodobnie będziesz używać zasad dotyczących wszystkich elementów. Do tego celu możesz użyć grup domyślnych usługi Intune **Wszyscy użytkownicy** i **Wszystkie urządzenia**. Podgrupy pozwalające organizować urządzenia według określonych kryteriów, takie jak grupa „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) i grupa urządzeń należących do firmy, mogą być grupami podrzędnymi grup nadrzędnych **Wszyscy użytkownicy ** i **Wszystkie urządzenia**.
+Zdefiniuj grupę nadrzędną dla wszystkich użytkowników i urządzeń w Twojej organizacji. Prawdopodobnie będziesz używać zasad dotyczących wszystkich elementów. Do tego celu możesz użyć grup domyślnych usługi Intune **Wszyscy użytkownicy** i **Wszystkie urządzenia**. Podgrupy pozwalające organizować urządzenia według określonych kryteriów, takie jak grupa „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) i grupa urządzeń należących do firmy, mogą być grupami podrzędnymi grup nadrzędnych **Wszyscy użytkownicy** i **Wszystkie urządzenia**.
 
 ## <a name="customize-groups-for-your-organization"></a>Dostosowywanie grup na potrzeby organizacji
 
@@ -216,9 +217,4 @@ Nadawanie zasadom nazw w ten sposób umożliwi szybkie identyfikowanie zasad, ic
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie grup](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

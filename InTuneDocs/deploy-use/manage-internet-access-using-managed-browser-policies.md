@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
 ms.openlocfilehash: 3982f05e4c81c26d2eb8bdab3a266597d6aab4df
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -109,7 +110,7 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
     -   Port 443 dla protokołu https
 
-    Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy **http&colon;//www&period;contoso&period;com:*;** i **http&colon;//www&period;contoso&period;com: /*;** nie są obsługiwane.
+    Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy **http&colon;//www&period;contoso&period;com:*;**i**http&colon;//www&period;contoso&period;com: /*;** nie są obsługiwane.
 
 -   W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
 
@@ -156,9 +157,4 @@ Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi k
 -   Jeśli urządzenie otrzymuje zasady programu Managed Browser po raz pierwszy i wystąpi konflikt dwóch zasad, adresy URL nie są wymuszane na urządzeniu. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
 
 -   Jeśli urządzenie już otrzymało zasady programu Managed Browser, a drugie zasady są wdrażane z ustawieniami powodującymi konflikt, na urządzeniu będą używane ustawienia oryginalne. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

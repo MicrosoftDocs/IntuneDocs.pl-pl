@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -40,7 +41,7 @@ Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego
 
 Aby skojarzyć aplikację biznesową z zasadami zarządzania aplikacjami mobilnymi, należy dodać szczegóły aplikacji do subskrypcji/dzierżawy usługi Intune, wykonując poniższe czynności:
 
-1. W [portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune ** > **Ustawienia** i wybierz pozycję **Aplikacje biznesowe**.
+1. W [portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia** i wybierz pozycję **Aplikacje biznesowe**.
 
   ![Zrzut ekranu przedstawiający blok ustawień z opcją dotyczącą aplikacji biznesowych](../media/mam-azure-portal-lob-on-settings.png)
 
@@ -81,9 +82,4 @@ Aplikację biznesową można usunąć z listy aplikacji. Spowoduje to usunięcie
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z opcją usunięcia aplikacji](../media/mam-azure-portal-delete-app.png)
 
   Spowoduje to usunięcie aplikacji z listy aplikacji biznesowych i listy aplikacji docelowych w zasadach zarządzania aplikacjami mobilnymi.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
