@@ -37,7 +37,7 @@ Powyższa seria pobrań zmniejsza wpływ na przepustowość sieci i skraca do mi
 
 Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie instalują oprogramowanie klienckie usługi Intune, wymagają, aby administratorzy IT pobrali oprogramowanie, które następnie zostanie wdrożone u użytkowników końcowych.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; ** Pobieranie oprogramowania klienckiego**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; **Pobieranie oprogramowania klienckiego**.
 
   ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
 
