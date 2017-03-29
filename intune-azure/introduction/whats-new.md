@@ -3,8 +3,8 @@ title: "Co nowego w wersji zapoznawczej usługi Microsoft Intune"
 titleSuffix: Intune Azure preview
 description: "Dowiedz się, co nowego w wersji zapoznawczej usługi Intune platformy Azure"
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 03/17/2017
 ms.topic: get-started-article
