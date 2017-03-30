@@ -33,6 +33,7 @@
 ### [Pobieranie tokenu DEP firmy Apple](enroll-devices/get-apple-dep-token.md)
 ### [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](enroll-devices/choose-ios-enrollment-method.md)
 ## Instrukcje
+### [Przypisywanie użytkownikom licencji](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Rejestrowanie urządzeń z systemem Android](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Rejestrowanie urządzeń z systemem iOS
 #### [Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
