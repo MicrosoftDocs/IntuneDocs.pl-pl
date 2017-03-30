@@ -163,7 +163,7 @@ Sieci VPN na żądanie można skonfigurować dla urządzeń z systemem iOS 8.0 l
 1. Na stronie konfiguracji zasad znajdź sekcję **Reguły na żądanie dla tego połączenia VPN**. Kolumny są oznaczone etykietami **Dopasowanie** (oznacza warunek sprawdzany przez reguły) oraz **Akcja** (oznacza akcję wyzwalają przez zasady po spełnieniu warunku dopasowania).
 2. Wybierz przycisk **Dodaj**, aby utworzyć regułę. W regułach można ustawić dwa typy dopasowań. Tylko jeden z nich można skonfigurować dla każdej reguły.
   - **Identyfikatory SSID**, które odnoszą się do sieci bezprzewodowych.
-  - **Domeny wyszukiwania DNS**, czyli...  Można użyć w pełni kwalifikowanych nazw domen, np. *team.corp.contoso.com*, lub domen takich jak *contoso.com*, co odpowiada użyciu * *.contoso.com*.
+  - **Domeny wyszukiwania DNS**, czyli...  Można użyć w pełni kwalifikowanych nazw domen, np. *team.corp.contoso.com*, lub domen takich jak *contoso.com*, co odpowiada użyciu **.contoso.com*.
 3. Opcjonalnie: podaj sondę ciągu adresu URL, czyli adres URL używany testowo przez regułę. Jeśli urządzenie, na którym jest zainstalowany ten profil, może uzyskać dostęp do adresu URL bez przekierowania, połączenie VPN zostanie nawiązane i urządzenie będzie się łączyć z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
 4. Wybierz jedną z następujących czynności:
   - **Połącz**
