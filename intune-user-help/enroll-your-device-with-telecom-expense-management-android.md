@@ -18,9 +18,9 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 982588ddc808123efd107759ed15c31ced6f110e
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
+ms.openlocfilehash: f2f93bccd17d16f258e90268f0ddef3e3cb7a598
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/08/2017
 
 Organizacja może używać oprogramowania do zarządzania wydatkami telekomunikacyjnymi, aby mieć pewność, że jej dane i plany taryfowe obejmujące usługi połączeń głosowych są wykorzystywane we właściwy sposób. Po zakończeniu rejestracji urządzenia otrzymasz monit o wybranie najlepszej kategorii dla danego urządzenia.
 
-  ![Zrzut ekranu „wybór najlepszej kategorii dla urządzenia” na urządzeniu z systemem iOS. Na zrzucie widoczna jest opcja wyboru rejestracji firmowej lub osobistej.](./media/and-enroll-11-tem-select-best-category.png)
+![Zrzut ekranu „wybór najlepszej kategorii dla urządzenia” na urządzeniu z systemem iOS. Na zrzucie widoczna jest opcja wyboru rejestracji firmowej lub osobistej.](./media/and-enroll-11-tem-select-best-category.png)
 
 1. Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczności instalacji aplikacji [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) ze Sklepu Google Play. Aplikacja Datalert pozwala organizacji dokonywać pomiaru stopnia wykorzystania danych. Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować.
 
