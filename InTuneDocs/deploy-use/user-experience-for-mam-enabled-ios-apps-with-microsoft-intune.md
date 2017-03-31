@@ -2,8 +2,8 @@
 title: Aplikacje dla systemu iOS z zasadami ochrony aplikacji | Dokumentacja firmy Microsoft
 description: "W tym temacie opisano, czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 03/06/2017
 ms.topic: article
