@@ -154,7 +154,8 @@ Aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpoś
 2. Po nabyciu aplikacji wybierz ją ze strony **Spis**.  
 3. Wybierz pozycję **Wszystkie urządzenia systemu Windows 10** w polu **Platforma**, a następnie odpowiednią wartość pola **Architektura** i pobierz aplikację. Plik licencji aplikacji nie jest wymagany dla tej aplikacji.
 ![Obraz systemu Windows 10 wszystkich urządzeń i szczegóły pakietu Architektura X86 do pobrania](../media/Win10CP-all-devices.png)
-4. Pobierz wszystkie pakiety w obszarze „Wymagane struktury”. Jest to niezbędne dla architektury x86, x64 i ARM — co składa się na całkowitą liczbę 9 pakietów, jak pokazano poniżej.  
+4. Pobierz wszystkie pakiety w obszarze „Wymagane struktury”. Jest to niezbędne dla architektury x86, x64 i ARM — co składa się na całkowitą liczbę 9 pakietów, jak pokazano poniżej.
+
 ![Obraz plików zależności do pobrania ](../media/Win10CP-dependent-files.png)
 5. Przed przekazaniem aplikacji Portal firmy usługi Intune utwórz folder (np. C:&#92;Portal firmy) z pakietami umieszczonymi w następujący sposób:
   1. Umieść pakiet Portal firmy w folderze C:\Portal firmy. W tej lokalizacji utwórz również podfolder Zależności.  
