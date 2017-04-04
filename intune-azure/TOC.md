@@ -1,5 +1,6 @@
 # Wprowadzenie
 ## [Co to jest witryna Azure Portal (wersja zapoznawcza)?](introduction/what-is-microsoft-intune.md)
+## [Funkcje usługi Intune na platformie Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Wprowadzenie
 <!---(introduction/get-started.md) --->
 ### [Utwórz konto, aby skorzystać z bezpłatnej wersji próbnej](introduction/sign-up-free-trial-microsoft-intune.md)
