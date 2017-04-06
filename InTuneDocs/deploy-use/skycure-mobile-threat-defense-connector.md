@@ -66,7 +66,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 -   Uzyskiwanie dostępu do aplikacji firmowych
 
-**Blokuj po wykryciu złośliwych aplikacji:**
+**Blokowanie po wykryciu złośliwych aplikacji:**
 
 ![Wykryto złośliwe aplikacje](../media/mtp/skycure-arch-1.png)
 
@@ -80,7 +80,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i oc
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
-![Zablokuj dostęp do sieci za pośrednictwem sieci Wi-Fi](../media/mtp/skycure-arch-3.png)
+![Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi](../media/mtp/skycure-arch-3.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
