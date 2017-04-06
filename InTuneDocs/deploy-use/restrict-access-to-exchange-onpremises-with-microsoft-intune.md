@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
-ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: f1d8ecdf64b680940e46afc90dec79d237d80030
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -80,11 +81,12 @@ Obsługiwane są następujące funkcje:
 -   Natywna aplikacja poczty e-mail w systemie iOS.
 
 -   Klienci poczty korzystający z protokołu Exchange ActiveSync, np. Gmail w systemie Android 4 lub nowszym.
-- Klienci poczty korzystający z protokołu Exchange ActiveSync na **urządzeniach z programem Android for Work:** na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako wymaganą instalację. 
+-   Klienci poczty korzystający z protokołu Exchange ActiveSync na **urządzeniach z programem Android for Work:** na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako wymaganą instalację. 
 
+<!---
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
-> [!NOTE]
+--->
+> [!NOTE] 
 > Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana.
 
 ## <a name="support-for-pcs"></a>Obsługa komputerów
@@ -110,14 +112,12 @@ Są obsługiwane następujące elementy:
   - **Wyjątki dla platform:** wybierz polecenie **Dodaj regułę**, aby skonfigurować regułę definiującą poziomy dostępu dla określonych rodzin i modeli urządzeń przenośnych. Ponieważ te urządzenia mogą być dowolnego typu, możesz także skonfigurować typy urządzeń, które nie są obsługiwane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
   - **Reguła domyślna:** dla urządzeń nieobjętych żadnymi innymi regułami możesz wybrać, czy mają mieć dostęp do programu Exchange, czy mają być zablokowane lub czy mają zostać umieszczone w kwarantannie. W przypadku ustawienia reguły zezwalającej na dostęp urządzeń, które są zarejestrowane i zgodne, dostęp do poczty e-mail będzie udzielany automatycznie dla urządzeń z systemem iOS, Windows i Samsung KNOX. Użytkownik nie musi przechodzić przez żaden proces, aby uzyskać dostęp do swojej poczty e-mail.
-
-        Na urządzeniach, które nie korzystają z systemu KNOX, użytkownicy otrzymują wiadomość e-mail z kwarantanny zawierającą przewodnik krok po kroku w celu sprawdzenia rejestracji i zgodności, zanim uzyskają dostęp do poczty e-mail. Jeśli ustawisz regułę blokującą dostęp do urządzenia lub poddającą je kwarantannie, wszystkie urządzenia będą miały blokowany dostęp do programu Exchange, niezależnie od tego, czy zostały już zarejestrowane w usłudze Intune, czy nie. Aby zapobiec wpływowi tej reguły na urządzenia zarejestrowane i zgodne, zaznacz pole **Przesłonięcie reguły domyślnej**.
+      - Na urządzeniach, które nie korzystają z systemu KNOX, użytkownicy otrzymują wiadomość e-mail z kwarantanny zawierającą przewodnik krok po kroku w celu sprawdzenia rejestracji i zgodności, zanim uzyskają dostęp do poczty e-mail. Jeśli ustawisz regułę blokującą dostęp do urządzenia lub poddającą je kwarantannie, wszystkie urządzenia będą miały blokowany dostęp do programu Exchange, niezależnie od tego, czy zostały już zarejestrowane w usłudze Intune, czy nie. Aby zapobiec wpływowi tej reguły na urządzenia zarejestrowane i zgodne, zaznacz pole **Przesłonięcie reguły domyślnej**.
 >[!TIP]
 >Jeśli chcesz najpierw blokować dostęp wszystkich urządzeń przed udzieleniem im dostępu do poczty e-mail, wybierz regułę Blokowanie dostępu lub regułę Kwarantanna. Reguła domyślna jest stosowana dla wszystkich typów urządzeń — również typów urządzeń skonfigurowanych jako wyjątki dla platform i nieobsługiwanych przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
   - **Powiadomienie użytkownika:** oprócz powiadomienia e-mail wysyłanego przez program Exchange usługa Intune wysyła wiadomość e-mail, która zawiera kroki procedury odblokowania urządzenia. Możesz zmienić domyślną wiadomość zgodnie z własnymi potrzebami. W przypadku zablokowania urządzenia użytkownika przed otrzymaniem z usługi Intune powiadomienia e-mail z instrukcjami odblokowywania (dostarczanego do skrzynki pocztowej programu Exchange użytkownika) możliwe jest użycie niezablokowanego urządzenia lub innej metody uzyskania dostępu do programu Exchange i wyświetlenia wiadomości.
-
-        This is especially true when the **Default Rule** is set to block or quarantine. In this case, the user has to go to their app store, download the Microsoft Company Portal app, and enroll their device. This is applicable to iOS, Windows, and Samsung KNOX devices. For devices that don't run Samsung KNOX, you need to send the quarantine email to an alternate email account. The user has to copy the email to their blocked device to complete the enrollment and compliance process.
+      - Jest to szczególnie istotne, kiedy **Reguła domyślna** jest ustawiona na blokowanie lub kwarantannę. W takim przypadku użytkownik musi przejść do swojego sklepu z aplikacjami, pobrać aplikację firmy Microsoft Portal firmy i zarejestrować swoje urządzenie. Dotyczy to urządzeń z systemami iOS, Windows i Samsung KNOX. W przypadku urządzeń, które nie są wyposażone w platformę Samsung KNOX, należy wysłać wiadomość e-mail poddaną kwarantannie na inne konto poczty e-mail. Użytkownik musi skopiować wiadomość e-mail na zablokowane urządzenie w celu ukończenia procesu rejestracji i zapewnienia zgodności.
   > [!NOTE]
   > Aby program Exchange mógł wysłać powiadomienie e-mail, należy określić konto, które będzie używane do wysyłania powiadomień e-mail.
   >
@@ -139,9 +139,4 @@ Są obsługiwane następujące elementy:
 -   [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 -   [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

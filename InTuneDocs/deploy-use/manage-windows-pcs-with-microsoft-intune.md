@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/09/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
-ms.openlocfilehash: 10ba007095182c9cb07710656ba5f275e254d92e
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 74f2848dcd2863022dac44cf302b330a99cf1a55
+ms.lasthandoff: 03/29/2017
 
 
 ---
 
 # <a name="manage-windows-pcs-with-intune-pc-client-software"></a>Zarządzanie komputerami z systemem Windows przy użyciu komputerowego oprogramowania klienckiego usługi Intune
-[Rejestrowanie komputerów z systemem Windows jako urządzeń przenośnych](set-up-windows-device-management-with-microsoft-intune.md) jest preferowaną metodą rejestrowania komputerów z systemem Windows w usłudze Intune, ale można też wybrać rejestrowanie komputerów z systemem Windows i zarządzanie nimi poprzez zainstalowanie oprogramowania klienckiego usługi Intune zgodnie z opisem w niniejszym temacie.
+[Rejestrowanie komputerów z systemem Windows jako urządzeń przenośnych](set-up-windows-device-management-with-microsoft-intune.md) jest preferowaną metodą rejestrowania komputerów z systemem Windows w usłudze Intune, ale administrator IT może też wybrać rejestrowanie komputerów z systemem Windows i zarządzanie nimi poprzez zainstalowanie oprogramowania klienckiego usługi Intune zgodnie z opisem w niniejszym temacie. Oprogramowanie klienckie usługi Intune nie jest obsługiwane w przypadku rejestracji jako urządzenie przenośne.
 
 Usługa Intune zarządza komputerami z systemem Windows za pomocą zasad, podobnie jak robią to obiekty zasad grupy Usług domenowych Active Directory (AD DS) systemu Windows Server. Jeśli planujesz zarządzać komputerami przyłączonymi do domeny usługi Active Directory przy użyciu usługi Intune, [upewnij się, że zasady usługi Intune nie powodują konfliktów z obiektami zasad grupy](resolve-gpo-and-microsoft-intune-policy-conflicts.md) stosowanymi w organizacji. Więcej informacji na temat [obiektów zasad grupy](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="policies-and-app-deployments-for-the-intune-software-client"></a>Zasady i wdrożenia aplikacji dla oprogramowania klienckiego usługi Intune
 
-Oprogramowanie klienckie usługi Intune obsługuje [możliwości z zakresu zarządzania sprzyjające ochronie komputerów](policies-to-protect-windows-pcs-in-microsoft-intune.md), umożliwiając zarządzanie aktualizacjami oprogramowania, zaporą systemu Windows i programem Endpoint Protection. Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą być jednak celem innych zasad usługi Intune, w tym ustawień zasad systemu **Windows** specyficznych dla zarządzania urządzeniami przenośnymi. 
+Oprogramowanie klienckie usługi Intune obsługuje [możliwości z zakresu zarządzania sprzyjające ochronie komputerów](policies-to-protect-windows-pcs-in-microsoft-intune.md), umożliwiając zarządzanie aktualizacjami oprogramowania, zaporą systemu Windows i programem Endpoint Protection. Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą być jednak celem innych zasad usługi Intune, w tym ustawień zasad systemu **Windows** specyficznych dla zarządzania urządzeniami przenośnymi.
 
 Korzystając z oprogramowania klienckiego usługi Intune do zarządzania komputerami z systemem Windows, można użyć tylko zasad wyświetlanych w obszarze **Zarządzanie komputerem**.
 
@@ -70,7 +70,7 @@ Ponadto podczas wdrażania aplikacji można użyć tylko Instalatora Windows (.e
 
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Funkcje zarządzania komputerami przy użyciu oprogramowania klienckiego usługi Intune
 
-Po zainstalowaniu oprogramowania klienckiego usługi Intune dostępne są możliwości zarządzania takie jak: 
+Po zainstalowaniu oprogramowania klienckiego usługi Intune dostępne są możliwości zarządzania takie jak:
 
 - [Zarządzanie aplikacjami](deploy-apps-in-microsoft-intune.md)
 

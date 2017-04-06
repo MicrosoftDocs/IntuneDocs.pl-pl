@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 786028412ca46d07e5180f469d07f9103f956033
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 70d013768c07f1782255a309b5941f05c2222912
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -33,7 +33,8 @@ Wbudowany klient poczty e-mail jest obsługiwany w przypadku większości platfo
 
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
 
-- Android 4.0 i nowsze
+- System Android Samsung KNOX Standard 4.0 i nowsze wersje
+- Program Android for Work
 - System iOS 8.0 i nowsze
 - System Windows Phone 8.1 lub nowszy
 - System Windows 10 Mobile Desktop i Windows 10 Mobile

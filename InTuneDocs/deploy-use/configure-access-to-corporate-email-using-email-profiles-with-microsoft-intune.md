@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/24/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 832c7dd8016bb30a24cc1748f84e5692130cb658
-ms.openlocfilehash: a37f217d3ce3c87b9aa673a8a7fc93ad390c6a68
-ms.lasthandoff: 03/23/2017
+ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
+ms.openlocfilehash: f76b65ad97771d6b40c4e3bff75a19fd1f922eea
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -53,7 +53,7 @@ Jeśli użytkownik zainstalował profil poczty e-mail przed skonfigurowaniem pro
 
 Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępować siebie nawzajem.
 
-**Android for Work**<br>Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Te aplikacje są dostępne w sklepie Google Play, instalują się na profilu służbowym urządzenia i obsługują połączenia z serwerem Exchange. Aby włączyć łączność poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail na urządzeniach Twoich użytkowników, a następnie utwórz i wdróż odpowiedni profil. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
+**Android for Work**<br>Usługa Intune udostępnia dwa profile poczty e-mail programu Android for Work, jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji poczty e-mail Nine Work. Aplikacje te, dostępne w sklepie Google Play, są instalowane w profilu służbowym urządzenia, dlatego powstanie zduplikowanych profilów jest wykluczone. Obie aplikacje obsługują połączenia z programem Exchange. Aby włączyć łączność za pośrednictwem poczty e-mail, wdróż jedną z tych aplikacji na urządzeniach użytkowników, a następnie utwórz i wdróż odpowiedni profil poczty e-mail. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
 
 ## <a name="secure-email-profiles"></a>Zabezpieczanie profilów poczty e-mail
 Profile poczty e-mail można zabezpieczyć przy użyciu certyfikatu lub hasła.

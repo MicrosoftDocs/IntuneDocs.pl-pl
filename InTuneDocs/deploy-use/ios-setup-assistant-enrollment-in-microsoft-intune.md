@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/13/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
-ms.openlocfilehash: facae5f49b52760dcea0653bd261e16e13e11bbf
-ms.lasthandoff: 02/14/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 5bb9c68db8edb68531fc40bc93c28881a95b6940
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -85,7 +85,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Dodawanie urządzenia z systemem iOS do rejestracji przy użyciu Asystenta ustawień
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**. 
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**.
 
    Urządzenia można dodać na dwa sposoby:
 
@@ -96,7 +96,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
     |||
     |-|-|
     |&lt;Numer seryjny 1&gt;|&lt;Szczegóły urządzenia 1&gt;|
-    |&lt;Numer seryjny&2;&gt;|&lt;Szczegóły urządzenia 2&gt;|
+    |&lt;Numer seryjny 2&gt;|&lt;Szczegóły urządzenia 2&gt;|
 
   Ten plik csv wyświetlony w edytorze tekstu wygląda następująco:
 
@@ -107,13 +107,13 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
   -  **Ręcznie dodaj szczegóły urządzeń** &mdash; wprowadź numery seryjne i wszelkie uwagi dotyczące maksymalnie 15 urządzeń.
 
-  W okienku **Przegląd urządzeń** możesz potwierdzić numery seryjne. Możesz również zdecydować, czy zastąpić wartość pola **Szczegóły** dla ponownie importowanych numerów seryjnych. Aby zachować bieżące szczegóły, odznacz pole **Zastąp**. 
+  W okienku **Przegląd urządzeń** możesz potwierdzić numery seryjne. Możesz również zdecydować, czy zastąpić wartość pola **Szczegóły** dla ponownie importowanych numerów seryjnych. Aby zachować bieżące szczegóły, odznacz pole **Zastąp**.
 
-> [!NOTE] 
+> [!NOTE]
 > W istniejącej konsoli administratora usługi Intune administratorzy mogą akceptować szczegóły z przekazanego pliku CSV i zastępować istniejące dane poszczególnych numerów seryjnych. W nowej wersji witryny Azure Portal będzie tylko można zastąpić szczegóły wszystkich numerów seryjnych lub zignorować nowe szczegóły wszystkich numerów seryjnych.
 
-  > [!NOTE]
-  > Jeśli w przyszłości konieczne okaże się usunięcie urządzeń należących do firmy z zakresu zarządzania usługi Intune, być może trzeba będzie usunąć numer seryjny urządzenia z usługi Intune w grupie urządzeń **Według numeru seryjnego systemu iOS** w obszarze **Urządzenia zarejestrowane wstępnie należące do firmy**, aby wyłączyć rejestrację urządzenia. Jeśli usługa Intune przeprowadza procedurę odzyskiwania po awarii w przedziale czasowym zbliżonym do momentu usuwania numerów seryjnych, należy sprawdzić, czy w tej grupie znajdują się wyłącznie numery seryjne aktywnych urządzeń.
+> [!NOTE]
+> Jeśli w przyszłości konieczne okaże się usunięcie urządzeń należących do firmy z zakresu zarządzania usługi Intune, być może trzeba będzie usunąć numer seryjny urządzenia z usługi Intune w grupie urządzeń **Według numeru seryjnego systemu iOS** w obszarze **Urządzenia zarejestrowane wstępnie należące do firmy**, aby wyłączyć rejestrację urządzenia. Jeśli usługa Intune przeprowadza procedurę odzyskiwania po awarii w przedziale czasowym zbliżonym do momentu usuwania numerów seryjnych, należy sprawdzić, czy w tej grupie znajdują się wyłącznie numery seryjne aktywnych urządzeń.
 
 2. Wybierz pozycję **Next** (Dalej).
 
@@ -128,23 +128,22 @@ Z listy dostępnych profilów wybierz profil, który ma zostać przypisany do do
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Eksportowanie profilu do wdrożenia na urządzeniach z systemem iOS
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych. 
+1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych.
 
 2. Na pasku zadań kliknij przycisk **Eksportuj**. Skopiuj i zapisz adres w polu **Adres URL profilu**. Możesz przekazać go później przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
 
   Aby umożliwić obsługę programu Apple Configurator 2, należy edytować adres URL profilu 2.0. Aby to zrobić, zastąp poniższy kod:
-    ```
-    https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
-    ```
-    tym kodem:
 
-    ```
-    https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
-    ```
+  ```
+  https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
+  ```
+  tym kodem:
+
+  ```
+  https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
+  ```
 
    Możesz przekazać ten adres URL profilu do programu Apple DEP za pomocą narzędzia Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS, używając poniższej procedury.
-
-
 
 ### <a name="prepare-the-device-with-apple-configurator"></a>Przygotowywanie urządzenia przy użyciu programu Apple Configurator
 
@@ -180,9 +179,10 @@ Urządzenia z systemem iOS są podłączane do komputera Mac i rejestrowane w us
 
 ### <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 
-Urządzenia są teraz gotowe do rejestracji w firmie. 
+Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
 
-Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
+>[!NOTE]
+>Jeśli użytkownik, który przekroczył swój limit liczby urządzeń, spróbuje zarejestrować urządzenie objęte programem DEP, rejestracja zakończy się niepowodzeniem w trybie dyskretnym bez wyświetlania ostrzeżenia.
 
 
 ### <a name="see-also"></a>Zobacz także

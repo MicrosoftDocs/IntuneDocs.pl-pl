@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
-ms.lasthandoff: 02/04/2017
+ms.sourcegitcommit: a4b6d8b0a63d707631e3f0e231b2e9b40f2609cf
+ms.openlocfilehash: 1d8109fca8170ad127f6377918d7c0313ba26d78
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządz
 Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządzeń, muszą oni istnieć w witrynie Azure Portal. Aby możliwe było zapewnienie optymalnego poziomu bezpieczeństwa, użytkownik DEM nie powinien być jednocześnie administratorem usługi Intune.
 
 >[!NOTE]
->Metoda rejestracji za pomocą menedżera rejestracji urządzeń nie może być używana razem z [metodą rejestracji za pośrednictwem asystenta ustawień programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) bądź [metodą rejestracji bezpośredniej](ios-direct-enrollment-in-microsoft-intune.md) ani z [metodą rejestracji za pomocą programu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md). 
+>Metoda rejestracji za pomocą menedżera rejestracji urządzeń nie może być używana razem z [metodą rejestracji za pośrednictwem asystenta ustawień programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) bądź [metodą rejestracji bezpośredniej](ios-direct-enrollment-in-microsoft-intune.md) ani z [metodą rejestracji za pomocą programu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Przykład scenariusza menedżera rejestracji urządzeń
 
@@ -42,9 +42,9 @@ Menedżerami rejestracji urządzeń mogą być tylko użytkownicy w konsoli usł
 
 Użytkownik DEM ma następujące uprawnienia:
 
--   Rejestrowanie do 1000 urządzeń w usłudze Intune.
--   Logowanie się w Portalu firmy w celu pobierania aplikacji firmowych.
--   Konfigurowanie dostępu do danych firmy poprzez wdrażanie na tabletach aplikacji powiązanych z funkcjami pełnionymi przez ich użytkowników.
+-   Rejestrowanie do 1000 urządzeń w usłudze Intune
+-   Uzyskiwanie aplikacji firmowych przy użyciu aplikacji Portal firmy
+-   Konfigurowanie dostępu do danych firmy przez wdrożenie na tabletach aplikacji powiązanych z funkcjami pełnionymi przez ich użytkowników
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Ograniczenia urządzeń zarejestrowanych przy użyciu konta DEM
 
@@ -57,9 +57,9 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
   - Użytkownik DEM nie może wyrejestrować zarejestrowanych z użyciem konta DEM urządzeń z poziomu samych urządzeń, korzystając z Portalu firmy. Tę możliwość ma administrator usługi Intune, nie ma jej jednak użytkownik DEM.
 
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
- 
+
   - Użytkownicy nie mogą używać aplikacji z programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
- 
+
   - (Dotyczy tylko systemu iOS) Jeśli do celów rejestrowania urządzeń z systemem iOS zostanie użyty menedżer rejestracji urządzeń, nie będzie można użyć do rejestrowania urządzeń programu Apple Configurator ani programu Device Enrollment Program (DEP) firmy Apple.
 
 > [!NOTE]
@@ -77,7 +77,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
 
 4.  Wybierz pozycję **Dodaj**. Zostanie otwarte okno dialogowe **Dodawanie menedżera rejestracji urządzeń** .
 
-5.  Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz opcję **OK**. 
+5.  Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz opcję **OK**.
 
     Użytkownik DEM może teraz rejestrować urządzenia przenośne za pomocą tej samej procedury, której używa użytkownik końcowy w ramach scenariusza „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) w Portalu firmy. Użytkownik końcowy menedżera może zainstalować aplikację Portal firmy i zarejestrować urządzenie, używając jego poświadczeń menedżera rejestrowania urządzeń dla maksymalnie 1000 urządzeń. Instrukcje dotyczące rejestrowania przez użytkownika końcowego odnoszące się do poszczególnych platform znajdują się w tematach:
 

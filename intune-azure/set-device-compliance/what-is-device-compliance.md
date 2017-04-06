@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 8cc5e12308871a3b023bed49e9647b888971f849
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -87,6 +87,12 @@ Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwró�
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
+
+##  <a name="migration-from-intune-classic-console-to-intune-azure-preview-portal"></a>Migracja z klasycznej konsoli usługi Intune do portalu usługi Intune Azure w wersji zapoznawczej
+
+Zasady zgodności urządzeń utworzone w [klasycznej konsoli usługi Intune](https://manage.microsoft.com) nie są wyświetlane w nowym [portalu usługi Intune Azure](https://portal.azure.com). Nadal będą one jednak mieć zastosowanie do użytkowników i będzie można nimi zarządzać za pośrednictwem klasycznej konsoli usługi Intune.
+
+Aby móc korzystać z nowych funkcji związanych ze zgodnością urządzeń dostępnych w portalu usługi Intune Azure, musisz utworzyć nowe zasady zgodności urządzeń w witrynie Intune Azure Portal. Jeśli przypiszesz w witrynie Intune Azure Portal nowe zasady zgodności urządzenia do użytkownika, do którego zostały również przypisane zasady zgodności urządzenia z portalu klasycznego Intune, to zasady zgodności urządzenia z witryny Intune Azure Portal będą mieć pierwszeństwo przed zasadami utworzonymi w klasycznej konsoli usługi Intune.
 
 ##  <a name="next-steps"></a>Następne kroki
 
