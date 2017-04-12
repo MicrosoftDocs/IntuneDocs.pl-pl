@@ -1,21 +1,22 @@
 ---
-title: "Składnik Xamarin zestawu SDK aplikacji usługi Microsoft Intune | Microsoft Intune"
+title: "Składnik Xamarin zestawu SDK aplikacji usługi Microsoft Intune | Dokumentacja firmy Microsoft"
 description: 
 keywords: sdk, Xamarin, intune
-author: oydang
-manager: karthikaraman
-ms.author: oydang
+author: mtillman
+manager: angrobe
+ms.author: mtillman
 ms.date: 11/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
-ms.reviewer: karthikaraman
+ms.reviewer: oydang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: af7df3fcf50c3508d495522341bb287c638f40a3
-ms.openlocfilehash: 2ea1763881a7d10ae8bc21c98754d2767b2fc954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
 
 
 ---
@@ -57,22 +58,22 @@ Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikac
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1.  Pobierz plik **Xamarin-component.exe** z [tej](https://components.xamarin.com/submit/xpkg) lokalizacji i wyodrębnij jego zawartość.
+1.    Pobierz plik **Xamarin-component.exe** z [tej](https://components.xamarin.com/submit/xpkg) lokalizacji i wyodrębnij jego zawartość.
 
 2. Zapoznaj się z [postanowieniami licencyjnymi](https://components.xamarin.com/license/microsoft.intune.mam) dla składnika Xamarin zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune.
 
-3.  Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 2 powinny znajdować się w katalogach tego samego poziomu.
+3.    Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 2 powinny znajdować się w katalogach tego samego poziomu.
 
-4.  W wierszu polecenia uruchom polecenie `Xamain.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
+4.    W wierszu polecenia uruchom polecenie `Xamain.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
 
-5.  W programie Visual Studio kliknij prawym przyciskiem myszy **składniki** utworzonego wcześniej projektu Xamarin.
+5.    W programie Visual Studio kliknij prawym przyciskiem myszy **składniki** utworzonego wcześniej projektu Xamarin.
 
-6.  Wybierz pozycję **Edytuj składniki** i dodaj składnik zestawu SDK aplikacji usługi Intune, który został pobrany na komputer.
+6.    Wybierz pozycję **Edytuj składniki** i dodaj składnik zestawu SDK aplikacji usługi Intune, który został pobrany na komputer.
 
 
 
 ## <a name="enabling-intune-mam-in-your-ios-mobile-app"></a>Włączanie obsługi zarządzania aplikacjami mobilnymi w usłudze Intune w aplikacji mobilnej systemu iOS
-1.  Aby zainicjować zestaw SDK aplikacji usługi Intune, należy wywołać dowolny interfejs API klasy `AppDelegate.cs`. Na przykład:
+1.    Aby zainicjować zestaw SDK aplikacji usługi Intune, należy wywołać dowolny interfejs API klasy `AppDelegate.cs`. Na przykład:
 
       ```csharp
       public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -83,7 +84,7 @@ Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikac
 
       ```
 
-2.  Gdy składnik został dodany i zainicjowany, można wykonać ogólną procedurę wymaganą do dołączenia zestawu SDK aplikacji do aplikacji mobilnej systemu iOS. Pełną dokumentację dotyczącą włączania natywnych aplikacji systemu iOS można znaleźć w [Przewodniku dewelopera po zestawie SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios).
+2.    Gdy składnik został dodany i zainicjowany, można wykonać ogólną procedurę wymaganą do dołączenia zestawu SDK aplikacji do aplikacji mobilnej systemu iOS. Pełną dokumentację dotyczącą włączania natywnych aplikacji systemu iOS można znaleźć w [Przewodniku dewelopera po zestawie SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios.md).
 3. **Ważne**: istnieje kilka specyficznych modyfikacji dotyczących aplikacji systemu iOS opartych na środowisku Xamarin. Na przykład podczas włączania grup pęku kluczy należy dodać następujący kod, aby dołączyć przykładową aplikację Xamarin, która jest częścią składnika. Poniżej podano przykładowe grupy, które muszą znaleźć się w grupach dostępu pęku kluczy:
 
       ```xml
@@ -102,29 +103,29 @@ Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikac
       </plist>
       ```
 
-Na tym kończy się procedura dołączania składnika do aplikacji systemu iOS opartej na platformie Xamarin. Jeśli do tworzenia projektu jest używany edytor Xcode, można użyć pakietu `Intune App SDK Settings.bundle`. Pozwoli to włączać i wyłączać ustawienia zasad usługi Intune na potrzeby testowania i debugowania podczas tworzenia projektu. Aby skorzystać z tego pakietu, wykonaj czynności opisane w [Przewodniku dewelopera po zestawie SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios) i zapoznaj się z sekcją dotyczącą [debugowania w programie Xcode](intune-app-sdk-ios#debug-information).
+Na tym kończy się procedura dołączania składnika do aplikacji systemu iOS opartej na platformie Xamarin. Jeśli do tworzenia projektu jest używany edytor Xcode, można użyć pakietu `Intune App SDK Settings.bundle`. Pozwoli to włączać i wyłączać ustawienia zasad usługi Intune na potrzeby testowania i debugowania podczas tworzenia projektu. Aby skorzystać z tego pakietu, wykonaj czynności opisane w [Przewodniku dewelopera po zestawie SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios.md) i zapoznaj się z sekcją dotyczącą [debugowania w programie Xcode](intune-app-sdk-ios.md#status-result-and-debug-notifications).
 
 ## <a name="enabling-mam-in-your-android-mobile-app"></a>Włączanie obsługi zarządzania aplikacjami mobilnymi w aplikacji mobilnej systemu Android
-W przypadku aplikacji systemu Android opartych na środowisku Xamarin, które nie korzystają z platformy tworzenia interfejsu użytkownika, należy zapoznać się z treścią dokumentu [Przewodnik dewelopera po zestawie SDK aplikacji usługi Intune dla systemu Android] i postępować zgodnie z zawartymi w nim wytycznymi. W przypadku aplikacji systemu Android opartej na środowisku Xamarin musisz zastąpić klasę, metody i działania odpowiednimi ekwiwalentami z obsługą zarządzania aplikacjami mobilnymi, korzystając z [tabeli](intune-app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent-required) zawartej w tym przewodniku. Jeśli w danej aplikacji nie zdefiniowano klasy `android.app.Application`, musisz ją utworzyć i zapewnić jej dziedziczenie po `MAMApplication`.
+W przypadku aplikacji systemu Android opartych na środowisku Xamarin, które nie korzystają z platformy tworzenia interfejsu użytkownika, należy zapoznać się z treścią dokumentu [Przewodnik dewelopera po zestawie SDK aplikacji usługi Intune dla systemu Android] i postępować zgodnie z zawartymi w nim wytycznymi. W przypadku aplikacji systemu Android opartej na środowisku Xamarin musisz zastąpić klasę, metody i działania odpowiednimi ekwiwalentami z obsługą zarządzania aplikacjami mobilnymi, korzystając z [tabeli](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent-required) zawartej w tym przewodniku. Jeśli w danej aplikacji nie zdefiniowano klasy `android.app.Application`, musisz ją utworzyć i zapewnić jej dziedziczenie po `MAMApplication`.
 
 W przypadku zestawu Xamarin Forms i innych platform tworzenia interfejsu użytkownika można skorzystać z narzędzia o nazwie `MAM.Remapper`. Narzędzie to umożliwia automatyczne zastąpienie klasy. Musisz jednak wykonać następujące czynności:
 
-1.  Dodaj odwołanie do pakietu Nuget ` Microsoft.Intune.MAM.Remapper.Tasks` w wersji 0.1.0.0 lub nowszej.
+1.    Dodaj odwołanie do pakietu Nuget ` Microsoft.Intune.MAM.Remapper.Tasks` w wersji 0.1.0.0 lub nowszej.
 
-2.  Dodaj następujący wiersz do pliku csproj aplikacji systemu Android:
+2.    Dodaj następujący wiersz do pliku csproj aplikacji systemu Android:
   ```xml
   <Import
   Project="$(NugetPack)\\Microsoft.Intune.MAM.Remapper.Tasks.0.1.X.X\\build\\MonoAndroid10\\Microsoft.Intune.MAM.Remapper.targets" />
   ```
 
-3.  Ustaw akcję kompilacji dodanego pliku `remapping-config.json` na wartość **RemappingConfigFile**. Dołączony plik `remapping-config.json` współdziała tylko z zestawem Xamarin.Forms. Informacje dotyczące innych platform tworzenia interfejsu użytkownika można znaleźć w pliku Readme dołączonym do pakietu Nuget Remapper.
+3.    Ustaw akcję kompilacji dodanego pliku `remapping-config.json` na wartość **RemappingConfigFile**. Dołączony plik `remapping-config.json` współdziała tylko z zestawem Xamarin.Forms. Informacje dotyczące innych platform tworzenia interfejsu użytkownika można znaleźć w pliku Readme dołączonym do pakietu Nuget Remapper.
 
 ## <a name="test-your-app"></a>Testowanie aplikacji
 
-Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
+Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

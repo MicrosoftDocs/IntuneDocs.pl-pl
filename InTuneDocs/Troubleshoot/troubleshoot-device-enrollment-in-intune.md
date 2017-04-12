@@ -1,11 +1,11 @@
 ---
-title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Intune"
+title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Docs"
 description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 3d4a89cd8e6e57f5a1e268dcda98cfb3c68c5587
+ms.lasthandoff: 03/21/2017
 
 
 ---
 
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia. Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
 
@@ -29,36 +33,33 @@ Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją u
 
 Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
 
--   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
--   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--   [Konfigurowanie zarządzania systemem Windows 10 Mobile i Windows Phone przy użyciu usługi Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
--   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
-
+-    [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
+-    [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-    [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-    [Konfigurowanie zarządzania urządzeniami z systemem Android](/intune/deploy-use/set-up-android-management-with-microsoft-intune) — nie są wymagane dodatkowe kroki
+-    [Konfigurowanie zarządzania urządzeniami z systemem Android for Work](/intune/deploy-use/set-up-android-for-work)
 
 Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
 
-- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą kabla USB](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-- [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
-- [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-- [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune/enduser/send-errors-to-your-it-admin-ios)
-
+- [Wysyłanie błędów rejestracji systemu Android do administratora IT](https://docs.microsoft.com/intune/enduser/send-enrollment-errors-to-your-it-admin-android)
+- [Wysyłanie błędów systemu iOS do administratora IT](https://docs.microsoft.com/intune/enduser/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Ogólne problemy dotyczące rejestrowania
 Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
-**Problem: **podczas rejestracji urządzenia występuje błąd, na przykład **Portal firmy jest tymczasowo niedostępny** na urządzeniu z systemem iOS, a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
+**Problem:**podczas rejestracji urządzenia występuje błąd, na przykład **Portal firmy jest tymczasowo niedostępny** na urządzeniu z systemem iOS, a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
 
-**Rozwiązanie:** liczbę urządzeń, które mogą zostać zarejestrowane przez użytkowników, nie może być większa niż 5. Jest to ograniczenie wprowadzone celowo.
+**Rozwiązanie:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Sprawdzanie liczby zarejestrowanych i dozwolonych urządzeń
 
-1.  W portalu administracyjnym usługi Intune sprawdź, że użytkownikowi nie przypisano więcej niż 5 urządzeń.
+1.  W portalu administracyjnym usługi Intune sprawdź, czy użytkownikowi nie przypisano więcej niż 15 urządzeń (dozwolona maksymalna liczba).
 
-2.  W portalu administracyjnym usługi Intune w obszarze Administracja\Zarządzanie urządzeniami przenośnymi\Reguły rejestracji sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 5.
+2.  W obszarze **Administracja**  >  **Zarządzanie urządzeniami przenośnymi**  >  **Reguły rejestracji** w konsoli administracyjnej usługi Intune sprawdź, czy opcja Limit rejestracji urządzeń została ustawiona na wartość 15.
 
-Użytkownicy urządzeń przenośnych mogą usuwać urządzenia, korzystając z następującego adresu URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
+<!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
 Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directory.
 
@@ -66,9 +67,9 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator** &gt; **Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
 
-2.  Zaloguj się za pomocą Identyfikatora organizacji, korzystając z linku w lewej części strony.
+2.  Zaloguj się za pomocą identyfikatora organizacji, korzystając z linku w lewej części strony.
 
-3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
+3.  Jeśli nie masz jeszcze tego identyfikatora, utwórz subskrypcję Azure, korzystając z linku do subskrypcji **Zarejestruj bezpłatnie konto w usłudze Azure Active Directory**. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej.
 
 4.  Wybierz pozycję **Active Directory** , a następnie wybierz organizację.
 
@@ -82,14 +83,14 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 > [!NOTE]
 
-> Można uniknąć limitu rejestracji urządzeń, używając menedżerów rejestracji urządzeń zgodnie z opisem w temacie [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) (Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune).
+> Stosowania limitu rejestracji urządzeń można uniknąć, używając konta menedżera rejestracji urządzeń zgodnie z opisem w temacie [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 >
-> Konto użytkownika, które jest dodawane do grupy Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady Dostęp warunkowy.
+> Konto użytkownika, które jest dodawane do konta Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady dostępu warunkowego.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
-**Problem: **na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
+**Problem:**na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
-#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Rozwiązywanie problemu dotyczącego błędu Portal firmy jest tymczasowo niedostępny
+**Rozwiązanie:**
 
 1.  Usuń aplikację Portal firmy dla usługi Intune z urządzenia.
 
@@ -102,16 +103,16 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 5.  Jeśli logowanie użytkownika przebiegnie pomyślnie, na urządzeniu z systemem iOS zostanie wyświetlony monit o zainstalowanie aplikacji Portal firmy dla usługi Intune i zarejestrowanie. Na urządzeniu z systemem Android należy ręcznie zainstalować aplikację Portal firmy dla usługi Intune, po czym będzie można ponowić próbę rejestracji.
 
 ### <a name="mdm-authority-not-defined"></a>Niezdefiniowany urząd MDM
-**Problem: **występuje błąd **Nie zdefiniowano urzędu MDM**.
+**Problem:**występuje błąd **Nie zdefiniowano urzędu MDM**.
 
-#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Rozwiązywanie problemów dotyczących błędu Niezdefiniowany urząd MDM
+**Rozwiązanie:**
 
-1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanej wersji usługi Intune (dla usługi Intune, rozwiązania MDM w usłudze Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
+1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanego typu usługi Intune (dla usługi Intune, Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
 
     > [!NOTE]
     > Ustawiony urząd zarządzania urządzeniami przenośnymi można zmienić tylko po skontaktowaniu się z pomocą techniczną. Opis tej procedury zawarto w artykule [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
-2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy ich nazwy UPN odpowiadają informacjom o usłudze Active Directory w portalu konta.
+2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy nazwa UPN użytkownika odpowiada informacjom z usługi Active Directory w portalu Office 365.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
 
     1.  Wyłącz narzędzie DirSync na serwerze lokalnym.
@@ -148,45 +149,151 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 **Problem:** Po dodaniu drugiej zweryfikowanej domeny do usług ADFS możliwe, że użytkownicy z sufiksem nazwy głównej użytkownika (UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
 
 
-**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO, single sign-on) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com)) jest wymagane wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks.  Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Rozwiązanie:** W przypadku klientów usługi Microsoft Office 365 korzystających z funkcji logowania jednokrotnego (SSO) przy użyciu usług AD FS 2.0 i mających wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników (UPN) w organizacji (na przykład @contoso.com lub @fabrikam.com) wymagane jest wdrożenie oddzielnego wystąpienia usługi federacyjnej AD FS 2.0 na każdy sufiks. Obecnie dostępny jest [zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działający w połączeniu z przełącznikiem **SupportMultipleDomain** w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności dodawania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
-### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem: ** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
+### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Nie można zaewidencjonować urządzeń w usłudze Intune — w konsoli administracyjnej usługi Intune stan urządzeń jest wyświetlany jako „W niedobrej kondycji”
+**Problem:** zaewidencjonowywanie niektórych urządzeń firmy Samsung z systemem Android w wersji 4.4.x i 5.x przy użyciu usługi Intune może zostać zatrzymane. Jeśli nie można zaewidencjonować urządzeń:
 
-### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
+- Nie otrzymują one zasad, aplikacji ani poleceń zdalnych z usługi Intune.
+- W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
+- Użytkownicy chronieni przez zasady dostępu warunkowego mogą utracić dostęp do zasobów firmowych.
+
+Firma Samsung potwierdziła, że oprogramowanie Samsung Smart Menedżer dostarczane na niektórych urządzeniach Samsung może powodować dezaktywowanie aplikacji Portal firmy w usłudze Intune oraz jej składników. Zdezaktywowanej aplikacji Portal firmy nie można uruchomić w tle, co uniemożliwia nawiązywanie kontaktu z usługą Intune.
+
+**Rozwiązanie 1:**
+
+Poproś użytkowników o ręczne uruchomienie aplikacji Portal firmy. Po ponownym uruchomieniu aplikacji urządzenie jest zaewidencjonowywane przy użyciu usługi Intune.
+
+> [!IMPORTANT]
+> Ręczne otwieranie aplikacji Portal firmy to rozwiązanie tymczasowe, ponieważ oprogramowanie Samsung Smart Menedżer może spowodować ponowne dezaktywowanie aplikacji Portal firmy.
+
+**Rozwiązanie 2:**
+
+Poproś użytkowników, aby spróbowali uaktualnić do systemu Android do wersji 6.0. Problem z dezaktywacją nie występuje na urządzeniach z systemem Android 6.0. Aby sprawdzić, czy aktualizacja jest dostępna, użytkownicy mogą przejść kolejno do pozycji **Ustawienia** > **Informacje o urządzeniu** > **Pobierz aktualizacje ręcznie** i postępować zgodnie z monitami wyświetlanymi w urządzeniu.
+
+**Rozwiązanie 3:**
+
+Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższych kroków w celu wykluczenia aplikacji Portal firmy z oprogramowania Smart Menedżer:
+
+1. Uruchom aplikację Smart Menedżer w urządzeniu.
+
+  ![Wybieranie ikony Smart Menedżer w urządzeniu](./media/smart-manager-app-icon.png)
+
+2. Wybierz kafelek **Bateria**.
+
+  ![Wybieranie kafelka Bateria](./media/smart-manager-battery-tile.png)
+
+3. W obszarze **Oszczędzanie energii dla aplikacji** lub **Optymalizacja aplikacji** wybierz pozycję **Szczegóły**.
+
+  ![Wybieranie pozycji Szczegóły w obszarze Oszczędzanie energii dla aplikacji lub Optymalizacja aplikacji](./media/smart-manager-app-power-saving-detail.png)
+
+4. Z listy aplikacji wybierz pozycję **Portal firmy**.
+
+  ![Wybieranie pozycji Portal firmy z listy aplikacji](./media/smart-manager-company-portal.png)
+
+5. Wybierz pozycję **Wyłączono**.
+
+  ![Wybieranie pozycji Wyłączono w oknie dialogowym Optymalizacja aplikacji](./media/smart-manager-app-optimization-turned-off.png)
+
+6. W obszarze **Oszczędzanie energii dla aplikacji** lub **Optymalizacja aplikacji** sprawdź, czy aplikacja Portal firmy została wyłączona.
+
+  ![Sprawdzanie, czy aplikacja Portal firmy została wyłączona](./media/smart-manager-verify-comp-portal-turned-off.png)
+
+
+### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
+**Problem:** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
+
+**Rozwiązanie:**
 
 1.  Upewnij się, że użytkownikowi przypisano odpowiednią licencję dla używanej wersji usługi Intune.
 
 2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM lub czy nie zainstalowano już dla niego profilu zarządzania.
 
-4.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
+3.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
 
 ### <a name="android-certificate-issues"></a>Problemy z certyfikatami systemu Android
 
-**Problem**: Użytkownik otrzymuje następujący komunikat na urządzeniu: *„Nie możesz się zalogować ze względu na brak wymaganego certyfikatu na urządzeniu”.*
+**Problem**: użytkownicy otrzymują następujący komunikat na urządzeniu: *Nie możesz się zalogować, ponieważ urządzenie nie ma wymaganego certyfikatu.*
 
-**Rozwiązanie**:
+**Rozwiązanie 1**:
 
-- Istnieje możliwość, że użytkownik może pobrać brakujący certyfikat, wykonując [następujące instrukcje](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Jeśli użytkownik nie może pobrać certyfikatu, może brakować pośrednich certyfikatów na serwerze usług AD FS. Certyfikaty pośrednie są wymagane przez system Android w celu zapewnienia zaufania serwera.
+poproś użytkowników o wykonanie instrukcji zawartych w artykule [Brak wymaganego certyfikatu urządzenia](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Jeśli po wykonaniu instrukcji błąd nadal występuje, spróbuj rozwiązania 2.
 
-Certyfikaty można zaimportować do magazynu pośredniego na serwerze usług AD FS lub serwerze proxy w następujący sposób:
+**Rozwiązanie 2**:
 
-1.  Na serwerze usług AD FS uruchom program **Microsoft Management Console** i dodaj przystawkę Certyfikaty dla **konta komputera**.
-5.  Znajdź certyfikat, którego używa usługa AD FS i wyświetl jego certyfikat nadrzędny.
-6.  Skopiuj certyfikat nadrzędny i wklej go w obszarze **Computer\Intermediate Certification Authorities\Certificates**.
-7.  Skopiuj certyfikaty usług AD FS, odszyfrowywania usług AD FS i podpisywania usług AD FS i wklej je w magazynie osobistym usługi AD FS.
-8.  Uruchom ponownie serwery usługi AD FS.
+jeśli użytkownicy nadal widzą błąd braku certyfikatu po wprowadzeniu poświadczeń firmowych i przekierowaniu w celu obsługi logowania federacyjnego, być może brakuje pośredniego certyfikatu z serwera usług Active Directory Federation Services (AD FS).
 
+Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagają certyfikatów pośrednich zawartych w [powitaniu serwera SSL](https://technet.microsoft.com/library/cc783349.aspx), ale obecnie instalacja serwera domyślnego usług AD FS lub serwera proxy usług AD FS w odpowiedzi serwera SSL na powitanie klienta SSL wysyła jedynie certyfikat SSL usług AD FS.
+
+Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
+
+1.    Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
+2.    Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
+3.    Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
+4.    Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
+5.    Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
+6.    Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
+7.    Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
+8.    Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
+9.    Uruchom ponownie serwery usług AD FS.
+10.    Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
 
+**Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
+
+Następujące kroki opisują jedną z wielu metod i narzędzi umożliwiających sprawdzenie poprawności instalacji certyfikatu.
+
+1. Przejdź do [bezpłatnego narzędzia Digicert](ttps://www.digicert.com/help/).
+2. Wprowadź w pełni kwalifikowaną nazwę domeny serwera usług AD FS (np. sts.contoso.com), a następnie wybierz pozycję **SPRAWDŹ SERWER**.
+
+Jeśli certyfikat serwera jest zainstalowany poprawnie, w wynikach zostaną wyświetlone wszystkie znaczniki wyboru. Jeśli powyższy problem występuje nadal, zobaczysz czerwony symbol X w sekcjach raportu „Certificate Name Matches” (Zgodne nazwy certyfikatu) i „SSL Certificate is correctly Installed” (Certyfikat SSL jest zainstalowany poprawnie).
 
 
 ## <a name="ios-issues"></a>Problemy z systemem iOS
+
+### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Urządzenia są nieaktywne lub nie jest możliwe nawiązanie łączności między nimi a konsolą administracyjną
+**Problem:** urządzenia z systemem iOS nie są ewidencjonowane przy użyciu usługi Intune. Urządzenia muszą być okresowo zaewidencjonowane w celu umożliwienia im dalszego dostępu do chronionych zasobów firmy. Jeśli nie można zaewidencjonować urządzeń:
+
+- Nie otrzymują one zasad, aplikacji ani poleceń zdalnych z usługi Intune.
+- W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
+- Użytkownicy chronieni przez zasady dostępu warunkowego mogą utracić dostęp do zasobów firmowych.
+
+**Rozwiązanie:** podaj użytkownikom końcowym następujące rozwiązania, aby pomóc im odzyskać dostęp do zasobów firmy.
+
+Po uruchomieniu w systemie iOS aplikacja Portal firmy sprawdza, czy urządzenie użytkownika nie utraciło łączności z usługą Intune. Jeśli aplikacja wykryje brak połączenia, automatycznie podejmie próbę synchronizacji z usługą Intune w celu ponownego nawiązania połączenia, czemu będzie towarzyszyć powiadomienie **Trwa próba wykonania synchronizacji...** widoczne dla użytkowników.
+
+  ![Powiadomienie o trwającej próbie wykonania synchronizacji](./media/ios_cp_app_trying_to_sync_notification.png)
+
+Jeśli synchronizacja zakończy się pomyślnie, zobaczysz w aplikacji Portal firmy w systemie iOS powiadomienie **Synchronizacja powiodła się** wskazujące, że urządzenie jest w prawidłowym stanie.
+
+  ![Powiadomienie informujące, że synchronizacja powiodła się](./media/ios_cp_app_sync_successful_notification.png)
+
+Jeśli synchronizacja nie powiedzie się, użytkownicy zobaczą w aplikacji Portal firmy w systemie iOS powiadomienie o treści **Nie można zsynchronizować**.
+
+  ![Powiadomienie o nieudanej próbie synchronizacji](./media/ios_cp_app_unable_to_sync_notification.png)
+
+Aby rozwiązać ten problem, użytkownicy muszą użyć przycisku **Konfiguruj** znajdującego się na prawo od powiadomienia **Nie można zsynchronizować**. Przycisk Konfiguruj umożliwia przejście do ekranu przepływu Konfiguracja dostępu do zasobów firmy. Postępując zgodnie z monitami wyświetlanymi na tej stronie, można zarejestrować swoje urządzenie.
+
+  ![Ekran Konfiguracja dostępu do zasobów firmy](./media/ios_cp_app_company_access_setup.png)
+
+Po zarejestrowaniu urządzenie powraca do stanu prawidłowego i odzyskuje dostęp do zasobów firmy.
+
+### <a name="verify-ws-trust-13-is-enabled"></a>Sprawdzanie, czy usługa WS-Trust 1.3 jest włączona
+**Problem** Nie można zarejestrować urządzeń z systemem iOS objętych programem Device Enrollment Program (DEP)
+
+Rejestrowanie urządzeń objętych programem Device Enrollment Program z koligacją użytkownika wymaga nazwy użytkownika/mieszanego punktu końcowego protokołu WS-Trust 1.3/, aby było możliwe żądanie tokenu użytkownika. Usługa Active Directory domyślnie włącza ten punkt końcowy. Punktu końcowego trust/13/UsernameMixed należy szukać na liście dopuszczonych punktów końcowych dostępnej za pośrednictwem polecenia cmdlet programu PowerShell Get-AdfsEndpoint. Na przykład:
+
+      Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
+
+Więcej informacji można znaleźć w [dokumentacji polecenia Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotyczące zabezpieczania Usług federacyjnych Active Directory](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Jeśli potrzebujesz dodatkowej pomocy w określeniu, czy punkt końcowy WS-Trust 1.3 Username/Mixed jest włączony u Twojego dostawcy federacyjnego tożsamości, skontaktuj się z Pomocą techniczną firmy Microsoft, jeśli korzystasz z usługi AD FS, lub z dostawcą tożsamości innej firmy.
+
+
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem: ** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
+**Problem:** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
 
@@ -201,37 +308,25 @@ Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android pow
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu System Center Configuration Manager z usługą Intune
 **Problem:** Użytkownik rejestruje urządzenie z systemem iOS, ale nie jest ono wyświetlane w konsoli administracyjnej programu Configuration Manager. Urządzenie nie wskazuje, że zostało zarejestrowane. Możliwe przyczyny:
 
-- Łącznik usługi Intune mógł zostać zarejestrowany na jednym koncie, a następnie zarejestrowany na innym koncie.
+- Łącznik usługi Microsoft Intune w lokacji programu Configuration Manager nie łączy się z usługą Intune.
+- Składnik Menedżera danych odnajdywania (ddm) lub składnik Menedżera stanu (statmgr) nie przetwarza komunikatów z usługi Intune.
 - Możliwe, że pobrano certyfikat zarządzania urządzeniami przenośnymi z jednego konta i użyto go na innym koncie.
 
 
-**Rozwiązanie:** Wykonaj następujące kroki:
+**Rozwiązanie:** Przejrzyj następujące pliki dziennika pod kątem możliwych błędów:
 
-1. Wyłącz system iOS w łączniku usługi Windows Intune.
-    1. Kliknij prawym przyciskiem myszy subskrypcję usługi Intune i wybierz pozycję **Właściwości**.
-    1. Na karcie „iOS” usuń zaznaczenie pola wyboru „Włącz rejestrację systemu iOS”.
+- dmpdownloader.log
+- ddm.log
+- statmgr.log
 
-
-
-1. W programie SQL uruchom następujące kroki w bazie danych CAS:
-
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 7
-    1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 11
-    1. delete from MDMPolicyAssignment where PolicyType = 11
-    1. DELETE Drs_Signals
-1. Uruchom ponownie usługę główną programu SMS lub serwer CM
+Przykłady zawartości, pod kątem obecności której należy sprawdzić pliki dziennika, zostaną dodane wkrótce.
 
 
-
-1. Uzyskaj nowy certyfikat APN i przekaż go: kliknij prawym przyciskiem myszy subskrypcję usługi Intune w lewym okienku programu Configuration Manager. Wybierz polecenie **Utwórz żądanie certyfikatu usług APN** i postępuj zgodnie z instrukcjami.
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu System Center Configuration Manager z usługą Intune
 ### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają
 **Problem:** po pomyślnym zarejestrowaniu urządzenia przenośnego w programie Configuration Manager znika ono z kolekcji urządzeń przenośnych, ale jego profil zarządzania nadal istnieje i znajduje się ono na liście w obszarze Brama CSS.
 
-**Rozwiązanie: **taka sytuacja może wystąpić, ponieważ istnieje niestandardowy proces usuwający urządzenia, które nie są przyłączone do domeny, lub użytkownik wycofał urządzenie z subskrypcji. Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika usunęło urządzenie z konsoli programu Configuration Manager, wykonaj następujące kroki.
+**Rozwiązanie:**taka sytuacja może wystąpić, ponieważ istnieje niestandardowy proces usuwający urządzenia, które nie są przyłączone do domeny, lub użytkownik wycofał urządzenie z subskrypcji. Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika usunęło urządzenie z konsoli programu Configuration Manager, wykonaj następujące kroki.
 
 #### <a name="check-how-device-was-removed"></a>Sprawdzanie sposobu usunięcia urządzenia
 
@@ -251,11 +346,11 @@ Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android pow
 
 
 ### <a name="other-ios-enrollment-errors"></a>Inne błędy rejestracji urządzeń z systemem iOS
-Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
+Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune/enduser/using-your-iOS-or-macOS-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
 
-## <a name="pc-issues"></a>Problemy z komputerem PC
+## <a name="pc--issues"></a>Problemy z komputerem PC
 
-### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Maszyna jest już zarejestrowana — błąd hr 0x8007064c
+### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Maszyna jest już zarejestrowana — błąd hr 0x8007064c
 **Problem:** Rejestracja kończy się niepowodzeniem z powodu błędu **Maszyna jest już zarejestrowana**. Dziennik rejestracji zawiera błąd **hr 0x8007064c**.
 
 Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używaniem na komputerze sklonowanego obrazu innego komputera, który został zarejestrowany. Certyfikat poprzedniego konta nadal istnieje na komputerze.
@@ -264,15 +359,15 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 **Rozwiązanie:**
 
-1. W menu **Start** wybierz polecenie **Uruchom** -> **MMC**.
-1. **Plik** -> **Dodawanie lub usuwanie przystawek**.
-1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera**, kliknij przycisk **Dalej** i wybierz pozycję **Komputer lokalny**.
+1. W menu **Start** wpisz polecenie **Uruchom** -> **MMC**.
+1. Wybierz kolejno opcje **Plik** > **Dodawanie lub usuwanie przystawek**.
+1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera** > **Dalej**, a następnie wybierz pozycję **Komputer lokalny**.
 1. Kliknij dwukrotnie pozycję **Certyfikaty (komputer lokalny)** i wybierz pozycję **Osobiste/certyfikaty**.
 1. Wyszukaj certyfikat usługi Intune wydany przez wydawcę Sc_Online_Issuing i usuń go, jeśli istnieje.
-1. Usuń następujący klucz rejestru, jeśli istnieje, oraz wszystkie klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
-1. Spróbuj ponownie wykonać rejestrację.
-1. Jeśli nadal nie można zarejestrować maszyny, /wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
-1. Spróbuj ponownie wykonać rejestrację.
+1. Jeśli istnieje następujący klucz rejestru, usuń go oraz wszystkie jego klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
+1. Spróbuj ponownie zarejestrować komputer.
+1. Jeśli nadal nie można zarejestrować komputera, wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Spróbuj ponownie zarejestrować komputer.
 
     > [!IMPORTANT]
     > Ta sekcja, metoda lub zadanie zawiera kroki dotyczące sposobu modyfikowania rejestru. Jednak nieprawidłowa modyfikacja rejestru może powodować poważne problemy. Dlatego należy ostrożnie wykonywać te czynności. W celu zapewnienia dodatkowej ochrony utwórz kopię zapasową rejestru przed rozpoczęciem wprowadzania zmian. Dzięki temu w razie problemów będzie można przywrócić rejestr.
@@ -304,9 +399,4 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
