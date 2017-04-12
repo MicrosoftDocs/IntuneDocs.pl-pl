@@ -1,26 +1,27 @@
 ---
-title: "Funkcje ułatwień dostępu | Microsoft Intune"
+title: "Funkcje ułatwień dostępu | Microsoft Docs"
 description: "Informacje o funkcjach usługi Intune, które ułatwiają dostęp dla osób niepełnosprawnych."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
-ms.topic: article
+ms.date: 12/30/2016
+ms.topic: reference
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 1c4f44619f025b5a35a089c0970188b989b710e6
+ms.sourcegitcommit: 9e3d509cf404c89b27f92ad54c900e927ce3878b
+ms.openlocfilehash: c1b585da0b2875f393a0cbe929f11d3a04875905
 
 
 ---
 
-# Funkcje ułatwień dostępu usługi Microsoft Intune
+# <a name="accessibility-features-of-microsoft-intune"></a>Funkcje ułatwień dostępu usługi Microsoft Intune
 W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje w samej usłudze:
 
 -   Używanie skrótów klawiaturowych
@@ -28,7 +29,7 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 > [!NOTE]
 > [!INCLUDE[accessibility6](./includes/accessibility6_md.md)]
 
-## Używanie skrótów klawiaturowych
+## <a name="using-keyboard-shortcuts"></a>Używanie skrótów klawiaturowych
 
 |Wymagana czynność|Użyj tego skrótu klawiaturowego|
 |--------------|------------------------------|
@@ -44,11 +45,10 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 |Przejście do następnej grupy aplikacji.|Strzałka w górę|
 |Wyświetlenie akcji dla wybranego urządzenia.|Strzałka w prawo|
 > [!NOTE]
-> [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] — w portalach usługi można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
+> W portalach usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
 
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Dec16_HO5-->
 
 
