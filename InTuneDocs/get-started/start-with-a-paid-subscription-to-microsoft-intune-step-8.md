@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: a2f8067bc169147a60db582d796631bea1ea5a8d
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-W tym temacie opisano sposób, w jaki administrator może włączyć rejestrację urządzeń przenośnych. Aby uzyskać pomoc dotyczącą używania usługi Intune na telefonie, zobacz artykuł [Wykonywanie pracy przy użyciu urządzeń zarządzanych](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions). 
+W tym temacie opisano sposób, w jaki administrator może włączyć rejestrację urządzeń przenośnych. Aby uzyskać pomoc dotyczącą używania usługi Intune na telefonie, zobacz artykuł [Wykonywanie pracy przy użyciu urządzeń zarządzanych](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi Intune, należy najpierw ustawić *urząd zarządzania urządzeniami przenośnymi*, który identyfikuje usługę umożliwiającą zarządzanie urządzeniami skojarzonymi z kontem. W tych wskazówkach przyjęto założenie, że zamiast programu System Center Configuration Manager będzie używana usługa Intune. Po ustawieniu urzędu zarządzania urządzeniami przenośnymi można włączyć zarządzanie dla platform urządzeń i zarejestrować urządzenia w aplikacji Portal firmy.
 
@@ -49,9 +50,9 @@ W celu ustanowienia relacji między dostawcą platformy a dzierżawą usługi In
 
 Włącz zarządzanie urządzeniami dla platformy urządzenia, którą chcesz zarządzać. Wymagania różnią się w zależności od używanej platformy:
 
--  [iOS i Mac OS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--  [Windows (komputer)](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
--  [Windows 10 Mobile i Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+- [iOS i Mac OS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+- [Windows 10 i Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+- [Komputer PC z systemem Windows](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) (klient oprogramowania usługi Intune)
 - [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
 
 Po włączeniu rejestracji użytkownicy mogą pobrać aplikację Portal firmy na urządzenie i ukończyć proces rejestracji urządzenia.
@@ -60,18 +61,12 @@ Po włączeniu rejestracji użytkownicy mogą pobrać aplikację Portal firmy na
 Możesz również włączyć różne scenariusze [rejestracji urządzeń należących do firmy](https://docs.microsoft.com/intune/deploy-use/manage-corporate-owned-devices), takie jak:
 - [Program Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
 - [Rejestracja za pośrednictwem asystenta ustawień programu Apple Configurator](https://docs.microsoft.com/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
-- [Rejestracja za pośrednictwem asystenta ustawień programu Apple Configurator](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+- [Rejestracja bezpośrednia w narzędziu Apple Configurator](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
 - [Menedżer rejestracji urządzeń](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
 ### <a name="next-steps"></a>Następne kroki
 Gratulacje! Ostatni krok *przewodnika Szybki start dotyczącego usługi Intune* został ukończony. Wstępna konfiguracja została ukończona, dlatego możesz rozważyć możliwość włączenia dodatkowych funkcji zarządzania urządzeniami przenośnymi (MDM).
 
 >[!div class="step-by-step"]
-
 >[&larr; **Rejestrowanie urządzeń**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Zadania po konfiguracji** &rarr;](.\post-configuration-tasks.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
