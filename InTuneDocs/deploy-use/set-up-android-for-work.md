@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,9 @@ ms.technology:
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: 24ab39a92d69e92e1c202005fcd783018c4d4621
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: df1a9b21cd7114c2eebfeb114edf161c4a0e9ef3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -34,7 +35,7 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
    Jako administrator usługi Intune otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com) i wybierz kolejno pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Android for Work**, a następnie kliknij pozycję **Konfiguruj**, aby otworzyć witrynę programu Android for Work w usłudze Google Play. Spowoduje to otwarcie nowej karty w przeglądarce.
 
 3. **Logowanie do usługi Google**<br>
-   Na stronie logowania do usługi Google zaloguj się do konta Google, które zostanie skojarzone z wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Może to być konto Google współużytkowane przez administratorów, którzy zarządzają usługą Intune. Jest to konto Google, które jest używane przez organizację do zarządzania aplikacjami i ich publikowania w konsoli Play for Work.
+   Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Jest to konto Google udostępnione administratorom IT Twojej organizacji, które jest używane do zarządzania aplikacjami i ich publikowania w konsoli Play for Work.
 
 4. **Podawanie szczegółów dotyczących organizacji**<br>
    Podaj nazwę firmy w polu **Organization name** (Nazwa organizacji). W polu **Enterprise mobility management (EMM) provider** (Dostawca usługi zarządzania mobilnością w przedsiębiorstwie (EMM)) powinna być wyświetlona wartość *Microsoft Intune*. Wyraź zgodę na umowę programu Android for Work, a następnie kliknij pozycję **Confirm** (Potwierdź). Twoje żądanie zostanie przetworzone.
@@ -42,9 +43,9 @@ Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarząd
 ## <a name="specify-android-for-work-enrollment-settings"></a>Określanie ustawień rejestracji programu Android for Work
    Program Android for Work jest obsługiwany tylko na niektórych urządzeniach z systemem Android. Zobacz temat [Wymagania Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window") (program Google).  Każde urządzenie, które obsługuje program Android for Work, będzie także obsługiwać konwencjonalne zarządzanie systemem Android.  Usługa Intune pozwala określić, jak powinny być zarządzane urządzenia, które obsługują program Android for Work:
 
-   - **Zarządzaj wszystkimi urządzeniami jak urządzeniami z systemem Android** — (wyłączone) wszystkie urządzenia z systemem Android, w tym urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako konwencjonalne urządzenia z systemem Android.
-   - **Zarządzaj obsługiwanymi urządzeniami jak urządzeniami z programem Android for Work** — (włączone) wszystkie urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako urządzenia z programem Android for Work. Każde urządzenie z systemem Android, które nie obsługuje programu Android for Work, zostanie zarejestrowane jako konwencjonalne urządzenie z systemem Android.
-   - **Zarządzaj obsługiwanymi urządzeniami jak urządzeniami z programem Android for Work tylko w tych grupach użytkowników** — (testowanie) umożliwia zastosowanie zarządzania programem Android for Work do ograniczonego zestawu użytkowników. Tylko urządzenia z programem Android for Work rejestrowane przez członków wybranych grup zostaną zarejestrowane jako urządzenia z programem Android for Work. Wszystkie inne zostaną zarejestrowane jako urządzenia z systemem Android.
+   - **Zarządzaj wszystkimi urządzeniami jako urządzeniami z systemem Android** — wszystkie urządzenia z systemem Android, w tym urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako konwencjonalne urządzenia z systemem Android.
+   - **Zarządzaj obsługiwanymi urządzeniami jako urządzeniami z programem Android for Work** — wszystkie urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako urządzenia z programem Android for Work. Każde urządzenie z systemem Android, które nie obsługuje programu Android for Work, zostanie zarejestrowane jako konwencjonalne urządzenie z systemem Android.
+   - **Zarządzaj obsługiwanymi urządzeniami jako urządzeniami z programem Android for Work tylko w tych grupach użytkowników** — umożliwia zastosowanie zarządzania programem Android for Work do ograniczonego zestawu użytkowników. Tylko urządzenia z programem Android for Work rejestrowane przez członków wybranych grup zostaną zarejestrowane jako urządzenia z programem Android for Work. Wszystkie inne zostaną zarejestrowane jako urządzenia z systemem Android. Jest to przydatne podczas etapów pilotażowych programu Android for Work.
 
 ## <a name="next-steps-for-android-for-work"></a>Kolejne kroki dla programu Android for Work
 Po skonfigurowaniu wiązania programu Android for Work i ustawień można wykonać następujące czynności:
@@ -62,9 +63,4 @@ Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. K
 
 2. **Wyrażanie zgody na usunięcie powiązania programu Android for Work**<br>
   Kliknij przycisk **Tak**, aby usunąć powiązanie i wyrejestrować wszystkie urządzenia z programem Android for Work z usługi Intune.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

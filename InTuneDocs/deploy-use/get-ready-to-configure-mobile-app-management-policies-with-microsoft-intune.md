@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 64b59ccb29e05af0472d463f426a06509d242034
-ms.openlocfilehash: 7a13afcbfd6b37a209c2cb879a47370f9a00b937
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 9759c1331a3fb5308e1dbc53564059618a8ef45c
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -57,9 +58,10 @@ Aby uzyskać informacje o tworzeniu zasad aplikacji w konsoli administracyjnej u
 ##  <a name="supported-platforms"></a>Obsługiwane platformy
 - System iOS 8.1 lub nowszy
 - System Android 4 lub nowszy
+- Windows 10
 
 >[!NOTE]
->Urządzenia z systemem Windows nie obsługują tych zasad ochrony aplikacji. Jednak podczas rejestrowania urządzeń z systemem Windows 10 w usłudze Intune możesz użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
+>Począwszy od wersji 1703, zasady ochrony aplikacji można definiować dla urządzeń z systemem Windows 10 w scenariuszu zarządzania aplikacjami mobilnymi bez rejestracji. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
 
 ##  <a name="supported-apps"></a>Obsługiwane aplikacje
 * **Aplikacje firmy Microsoft:** te aplikacje mają wbudowany zestaw SDK aplikacji usługi Intune i nie wymagają dalszego przetwarzania przed zastosowaniem zasad ochrony aplikacji.
@@ -106,9 +108,4 @@ Administratorzy globalni mają dostęp do [portalu Azure](https://portal.azure.c
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

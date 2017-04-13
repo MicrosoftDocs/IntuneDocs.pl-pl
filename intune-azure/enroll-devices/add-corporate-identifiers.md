@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4ebd74c77145464574a1fed878ec4dbc2eb3c271
+ms.openlocfilehash: 7bb8168c442a3340e8c185f1908acd9be15cab05
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -27,6 +27,8 @@ ms.lasthandoff: 03/22/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Jako administrator IT możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI (International Mobile Equipment Identity) służących do identyfikowania urządzeń firmowych. Każdy numer IMEI może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
+
+Gdy przekazujesz numery seryjne firmowych urządzeń z systemem iOS, muszą one być sparowane z profilem rejestracji w firmie. Urządzenia należy wówczas zarejestrować przy użyciu programu Device Enrollment Program (DEP) firmy Apple lub narzędzia Apple Configurator, aby były wyświetlane jako należące do firmy. 
 
 ## <a name="create-a-csv-file"></a>Tworzenie pliku CSV
 Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikator IMEI w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Informacje szczegółowe mogą zawierać maksymalnie 128 znaków. Aktualne ograniczenie wynosi 500 wierszy w pliku CSV.
