@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
-ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 61fbc2af9a7c43d01c20f86ff26012f63ee0a3c2
+ms.openlocfilehash: c56bea46c8b505e0d357cfe90678ab149559b896
+ms.lasthandoff: 04/07/2017
 
 
 ---
@@ -27,48 +27,64 @@ ms.lasthandoff: 02/23/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie bezprzewodowo rejestrować urządzenia z systemem iOS zakupione w ramach programu Device Enrollment Program (DEP). Profil zawiera ustawienia zarządzania, które mają być zastosowane do urządzeń. Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia. Użytkownicy nie mogą wyrejestrowywać urządzeń zarejestrowanych w programie DEP.
+Ten temat ułatwia administratorom IT rejestrowanie firmowych urządzeń z systemem iOS zakupionych za pośrednictwem [programu Device Enrollment Program (DEP) firmy Apple](https://deploy.apple.com). Usługa Microsoft Intune umożliwia wdrożenie profilu rejestracji, który rejestruje program DEP bezprzewodowo, dzięki czemu administrator nie musi mieć fizycznego dostępu do każdego zarządzanego urządzenia. Profil DEP zawiera ustawienia zarządzania, które chcesz zastosować do urządzeń podczas rejestrowania. Pakiet rejestracyjny może obejmować opcje Asystenta ustawień dla urządzenia.
 
 >[!NOTE]
->Tej metody rejestracji nie można używać z metodą korzystającą z [menedżera rejestracji urządzeń](enroll-devices-using-device-enrollment-manager.md).
+>Rejestracji DEP nie można używać razem z [menedżerem rejestracji urządzeń](enroll-devices-using-device-enrollment-manager.md).
+>Ponadto jeśli użytkownicy zarejestrują swoje urządzenia z systemem iOS za pomocą aplikacji Portal firmy, a następnie numery seryjne tych urządzeń zostaną zaimportowane i przypisane do profilu DEP, urządzenia te zostaną wyrejestrowane z usługi Intune.
 
-W celu zarządzania firmowymi urządzeniami z systemem iOS przy użyciu programu Device Enrollment Program (DEP) firmy Apple organizacja musi dołączyć do programu DEP firmy Apple i zakupić urządzenia w ramach tego programu. Szczegóły tego procesu są dostępne pod adresem: [https://deploy.apple.com](https://deploy.apple.com). Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu kabla USB.
+**Kroki rejestracji DEP**
+1. [Pobieranie tokenu DEP firmy Apple](#get-the-apple-dep-certificate)
+2. [Tworzenie profilu DEP](#create-anapple-dep-profile)
+3. [Przypisywanie numerów seryjnych programu DEP firmy Apple do serwera usługi Intune](#assign-apple-dep-serial-numbers-to-your-mdm-server)
+4. [Synchronizowanie urządzeń zarządzanych w programie DEP](#synchronize-dep-managed-devices)
+5. Przekazywanie urządzeń użytkownikom
 
-Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy [uzyskać token programu DEP](get-apple-dep-token.md) od firmy Apple. Token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń uczestniczących w programie DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 
-Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Choose how to enroll iOS devices in Intune](choose-ios-enrollment-method.md) (Wybieranie sposobu rejestrowania urządzeń z systemem iOS w usłudze Intune).
 
-## <a name="prerequisites"></a>Wymagania wstępne
+## <a name="get-the-apple-dep-certificate"></a>Pobieranie certyfikatu programu DEP firmy Apple
+Aby zarejestrować firmowe urządzenia z systemem iOS w programie Device Enrollment Program (DEP) firmy Apple, musisz uzyskać plik certyfikatu (p7m) programu DEP od firmy Apple. Token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń uczestniczących w programie DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 
-Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem iOS należy spełnić następujące wymagania wstępne:
+W celu zarządzania firmowymi urządzeniami z systemem iOS przy użyciu programu DEP organizacja musi dołączyć do programu DEP firmy Apple i zakupić urządzenia w ramach tego programu. Szczegóły tego procesu są dostępne pod adresem https://deploy.apple.com. Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu kabla USB.
 
-- [Skonfigurowanie domen](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Ustawienie urzędu zarządzania urządzeniami przenośnymi](set-mdm-authority.md)
-- [Tworzenie grup](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- Przypisanie licencji użytkowników w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](get-an-apple-mdm-push-certificate.md)
-- [Pobieranie tokenu DEP firmy Apple](get-apple-dep-token.md)
+> [!NOTE]
+> Jeśli dzierżawca usługi Intune został przeniesiony z konsoli klasycznej usługi Intune do witryny Azure Portal, a token programu DEP firmy Apple podczas migracji został usunięty z konsoli administracyjnej usługi Intune, ten token programu DEP mógł zostać przywrócony na koncie usługi Intune. Możesz ponownie usunąć token programu DEP z poziomu witryny Azure Portal.
 
-## <a name="create-an-apple-dep-profile-for-devices"></a>Utworzenie profilu programu Apple DEP dla urządzeń
+
+
+
+**Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu DEP firmy Apple.**<br>
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune wybierz pozycję **Rejestrowanie urządzeń** > **Token programu DEP firmy Apple**.
+2. Wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (.pem). Plik PEM jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu programu Device Enrollment Program firmy Apple.
+
+**Krok 2. Pobierz token DEP firmy Apple z odpowiedniej witryny internetowej firmy Apple.**<br>
+Wybierz pozycję [Utwórz token DEP za pomocą programów wdrażania firmy Apple](https://deploy.apple.com) (https://deploy.apple.com) i zaloguj się przy użyciu identyfikatora Apple swojej firmy. Tego identyfikatora firmy Apple możesz użyć do odnowienia tokenu DEP.
+
+   1.  W [portalu Device Enrollment Program](https://deploy.apple.com) firmy Apple wybierz pozycję **Device Enrollment Program** &gt; **Zarządzanie serwerami**, a następnie wybierz pozycję **Dodaj serwer MDM**.
+   2.  Wprowadź nazwę serwera w polu **MDM Server Name** (Nazwa serwera MDM), a następnie wybierz przycisk **Next**(Dalej). Nazwa serwera służy użytkownikowi do identyfikowania serwera MDM. Nie jest to nazwa ani adres URL serwera usługi Microsoft Intune.
+   3.  Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>). Kliknij pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
+   4.  W oknie dialogowym **Add&lt; <nazwa_serwera>&gt;** (Dodawanie serwera <nazwa_serwera>) zostanie wyświetlony link **Your Server Token** (Token serwera). Pobierz plik tokenu serwera (p7m) na komputer, a następnie wybierz pozycję **Done**(Gotowe).
+
+**Krok 3. Wprowadź identyfikator firmy Apple użyty do utworzenia tokenu DEP firmy Apple. Tego identyfikatora można użyć do odnowienia tokenu DEP firmy Apple.**
+
+**Krok 4. Przejdź do lokalizacji tokenu DEP firmy Apple do przekazania. Usługa Intune przeprowadzi automatyczną synchronizację z kontem DEP.**<br>
+Przejdź do pliku certyfikatu (.pem) i wybierz pozycję **Otwórz**, a następnie wybierz pozycję **Przekaż**. Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych.
+
+## <a name="create-an-apple-dep-profile"></a>Tworzenie profilu programu DEP firmy Apple
 
 Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń. Poniższe kroki pokazują, jak utworzyć profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu DEP.
 
 1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-
 2. W bloku Intune wybierz pozycję **Zarejestruj urządzenia**, a następnie pozycję **Rejestracja Apple**.
-
 3. W obszarze **Zarządzaj ustawieniami rejestracji programu DEP (Device Enrollment Program) firmy Apple** wybierz pozycję **Profile usługi DEP**.
-
 4. W bloku **Profile usługi DEP firmy Apple** wybierz pozycję **Utwórz**.
-
 5. W bloku **Utwórz profil rejestracji** wprowadź nazwę i opis profilu.
-
 6. Dla pozycji **Koligacja użytkownika** wskaż, czy urządzenia z tym profilem będą rejestrowane z koligacją użytkownika, czy bez niej.
 
  - **Zarejestruj z koligacją użytkownika** — podczas początkowej konfiguracji należy określić przynależność urządzenia do użytkownika, a następnie zezwolić na dostęp tego urządzenia do firmowych danych i poczty e-mail. Określ koligację użytkownika dla urządzeń zarządzanych w programie DEP, które należą do użytkowników i muszą korzystać z portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Uwaga: uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń za pomocą programu DEP, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami. W przypadku nowych użytkowników, dla których wymagana jest zmiana hasła podczas pierwszego logowania, nie można wyświetlić monitu podczas rejestracji na urządzeniach objętych programem DEP. Ponadto w przypadku użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji w programie DEP i muszą oni zresetować hasło za pomocą innego urządzenia.
 
     >[!NOTE]
-    >Program DEP z koligacją użytkownika wymaga nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego, aby móc żądać tokenu użytkownika.
+    >Program DEP z koligacją użytkownika wymaga nazwy użytkownika protokołu [WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/en-us/library/adfs2-help-endpoints), aby móc żądać tokenu użytkownika. [Dowiedz się więcej na temat protokołu WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
  - **Zarejestruj bez koligacji użytkownika** — przynależność urządzenia do użytkownika nie jest określana. Tego typu przynależności należy użyć w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie będą działać.
 

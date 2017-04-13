@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: f4bc5a2092585c91e224c390eaae717985055b10
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -93,8 +94,6 @@ Wykonaj poniższe kroki, aby utworzyć zasady ochrony aplikacji:
 
     ![Zrzut ekranu przedstawiający blok Dodawanie zasad z informacją o tym, że aplikacje i ustawienia zostały skonfigurowane](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-
-
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz następującą sekcję: „Wdrażanie zasad dla użytkowników”.
 
 > [!IMPORTANT]
@@ -105,6 +104,46 @@ Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie s�
 > -   Obie zasady zostały skojarzone z jedną aplikacją.
 > -   Priorytet ma zasada utworzona w konsoli platformy Azure, która umożliwia kopiowanie.
 > -   Jednak stan i raporty w konsoli usługi Intune będą niepoprawnie wskazywać blokowanie kopiowania.
+
+## <a name="line-of-business-lob-apps-optional"></a>Aplikacje biznesowe (LOB) (opcjonalnie)
+
+Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikacji możesz dodawać do usługi Intune aplikacje biznesowe. Umożliwia to definiowanie zasad ochrony aplikacji biznesowych przy użyciu zestawu SDK MAM bez konieczności żądania pełnych uprawnień do wdrażania aplikacji.
+
+> [!TIP] 
+> Aplikacje biznesowe możesz również dodawać do usługi Intune podczas realizacji przepływu pracy [zestawu SDK aplikacji usługi Intune](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
+
+> [!IMPORTANT]
+> Jeśli użytkownicy mają tylko określone uprawnienia do wdrażania aplikacji MAM, a nie pełne uprawnienia, które umożliwiałyby im wdrożenie dowolnej aplikacji w usłudze Intune, nie mogą realizować przepływu pracy zestawu SDK usługi Intune, ale wciąż mogą dodawać swoje aplikacje biznesowe za pomocą przepływu pracy tworzenia zasad ochrony aplikacji MAM.
+
+### <a name="to-add-lob-apps-ios-and-android"></a>Aby dodać aplikacje biznesowe (iOS i Android)
+
+1.  W bloku Dodawanie zasad wybierz pozycję **Aplikacje**, aby otworzyć blok Aplikacje.
+
+    ![Blok Dodawanie zasad MAM](../media/AppManagement/mam-lob-apps-1.png)
+
+2.  Kliknij pozycję **Więcej aplikacji**, wprowadź **identyfikator pakietu******, a następnie kliknij pozycję Wybierz, aby dodać aplikacje biznesowe.
+
+    ![Blok Więcej aplikacji MAM](../media/AppManagement/mam-lob-apps-2.png)
+
+### <a name="to-add-lob-apps-windows"></a>Aby dodać aplikacje biznesowe (Windows)
+
+> [!IMPORTANT] 
+> Podczas tworzenia nowych zasad ochrony aplikacji musisz z listy rozwijanej platform wybrać system Windows 10.
+
+1.  W bloku Dodawanie zasad wybierz pozycję **Aplikacje dozwolone** lub **Aplikacje wykluczone**, aby otworzyć blok Aplikacje dozwolone lub Aplikacje wykluczone.
+
+    > [!NOTE]
+    > 
+    - **Aplikacje dozwolone**: są to aplikacje, które muszą stosować się do tych zasad.
+    - **Aplikacje wykluczone**: te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
+<br></br>
+2. W bloku Aplikacje dozwolone lub Aplikacje wykluczone kliknij pozycję **Dodaj aplikacje**. Możesz dodać zalecane aplikacje firmy Microsoft, aplikacje ze sklepu lub aplikacje klasyczne.
+
+    a.  **Aplikacje zalecane:** wstępnie wypełniona lista aplikacji (przede wszystkim pakietu Office), które pozwalamy administratorom łatwo importować do zasad.
+
+    b.  **Aplikacje ze sklepu:** administrator może dodać do zasad dowolną aplikację ze sklepu Windows.
+
+    c.  **Aplikacje klasyczne systemu Windows:** administrator może dodać do zasad dowolne aplikacje klasyczne systemu Windows (np. plik exe, dll itd.).
 
 ## <a name="deploy-a-policy-to-users"></a>Wdrażanie zasad dla użytkowników
 
@@ -181,9 +220,4 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 ### <a name="see-also"></a>Zobacz także
 * [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
