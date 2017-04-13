@@ -15,8 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: be3cfc0120caf6e702139b829fc6ee1fa9bf9a1e
+ms.sourcegitcommit: adf7e2d0f76e63f67b7cf3d26d26df0da0e50bd0
+ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
+ms.lasthandoff: 03/31/2017
 
 
 
@@ -28,7 +29,7 @@ ms.openlocfilehash: be3cfc0120caf6e702139b829fc6ee1fa9bf9a1e
 Użyj procedur opisanych w tym temacie, aby utworzyć niestandardowe zasady usługi Microsoft Intune, co powoduje utworzenie następujących elementów:
 
 - Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Uruchamianie aplikacji na tej liście jest blokowane, nawet jeśli były one już zainstalowane, gdy zasady zostały zastosowane.
-- Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu klepu Google Play. Można zainstalować tylko aplikacje na liście. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
+- Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu Google Play. Można zainstalować tylko aplikacje na liście. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
 
 Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung KNOX Standard.
 
@@ -43,7 +44,7 @@ Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung K
     - **Opis ustawienia.** Podaj opcjonalny opis, taki jak „Lista aplikacji, których uruchamianie jest zablokowane”.
     -     **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
     -     **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Wartość.** Podaj listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
+    -     **Wartość.** Podaj listę nazw pakietów aplikacji, których uruchamianie chcesz blokować. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
 
     Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play, przy czym wszystkie inne aplikacje są wykluczone:
 
@@ -72,9 +73,4 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 ### <a name="see-also"></a>Zobacz też
 [Ustawienia zasad konfiguracji systemu Android i Samsung KNOX w usłudze Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
