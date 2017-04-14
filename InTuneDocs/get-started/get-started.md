@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: 5b56f8b4-269b-4e7f-b7e9-b0401bdd42f4
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 9dc65b442a165609963cb5625009a723cbcb55dd
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: e4a6aaa1a8e23dc2c58345f73ff8db86018843e1
+ms.openlocfilehash: 1c36ab91a3657cccc51d7db58068a02c73c48cb8
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -27,6 +27,6 @@ Ten temat ma pomóc administratorom gotowym do rozpoczęcia zarządzania urządz
 
 Zawartość tego przewodnika:
 - [Szybki start — podręcznik usługi Intune](start-with-a-paid-subscription-to-microsoft-intune.md) — instrukcje krok po kroku przeprowadzania transferu subskrypcji wersji próbnej od testów do zarządzania przedsiębiorstwem lub konfigurowania nowej subskrypcji dla organizacji
-- [Migracja do usługi Intune](migrate-to-intune.md) — wskazówki dotyczące migracji z istniejącego rozwiązania do zarządzania mobilnością w przedsiębiorstwie do usługi Intune
+- [Migracja do usługi Intune](https://docs.microsoft.com/intune/plan-design/intune-mdm-migration-guide) — wskazówki dotyczące migracji z istniejącego rozwiązania do zarządzania mobilnością w przedsiębiorstwie do usługi Intune
 - [Następne kroki z usługą Intune](prevent-company-data-leaks-from-Office-365-mobile-apps.md) — omówienie typowych zadań i ich kolejnych kroków w usłudze Intune
 
