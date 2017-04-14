@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: 2e46c5612c120a24d3f8fe32decd3eb7a0d4e709
+ms.sourcegitcommit: d10906ee3fb69458738b31bb1d4252d632a9a0cf
+ms.openlocfilehash: 6014527422ea3dae4d1333965ccd9e48e8216afb
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -91,12 +92,7 @@ Wyzwania związane z wdrożeniem to najważniejsze dla organizacji problemy, kt�
 <br>
     -   **Środki zaradcze:** choć możesz chcieć od razu rozpocząć realizowanie projektu, upewnij się, że masz jasno zdefiniowane cele i zamierzenia. Uwzględnij te informacje we wszystkich działaniach związanych ze zwiększaniem świadomości i szkoleniach, aby ułatwić użytkownikom zrozumienie, dlaczego organizacja wybrała usługę Intune.
 
-## <a name="next-section"></a>Następna sekcja
+## <a name="next-steps"></a>Następne kroki
 
 Teraz, gdy zidentyfikowano cele, zamierzenia i potencjalne wyzwania związane z wdrożeniem, przejdźmy do kolejnej sekcji: [Identyfikowanie scenariuszy przypadków użycia](section-2-identify-use-case-scenarios.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
