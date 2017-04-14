@@ -31,17 +31,16 @@
 ### [Ustawianie urzędu zarządzania urządzeniami przenośnymi](enroll-devices/set-mdm-authority.md)
 ## Planowanie i projektowanie
 ### [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](enroll-devices/get-an-apple-mdm-push-certificate.md)
-### [Pobieranie tokenu DEP firmy Apple](enroll-devices/get-apple-dep-token.md)
 ### [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](enroll-devices/choose-ios-enrollment-method.md)
 ## Instrukcje
 ### [Przypisywanie użytkownikom licencji](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Rejestrowanie urządzeń z systemem Android](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Rejestrowanie urządzeń z systemem iOS
-#### [Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
-#### [Rejestrowanie urządzeń z systemem iOS przy użyciu bezpośredniej rejestracji](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
+#### [Program Apple Configurator — Asystent ustawień](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
+#### [Program Apple Configurator — rejestracja bezpośrednia](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
 #### [Dodawanie numerów seryjnych programu Apple Configurator](enroll-devices/add-apple-configurator-serial-numbers.md)
-#### [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
-### [Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
+#### [Program Device Enrollment Program](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
+### [Menedżer rejestracji urządzeń](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Rejestrowanie urządzeń z systemem macOS](enroll-devices/enroll-macos-devices.md)
 ### [Rejestrowanie urządzeń z systemem Windows](enroll-devices/enroll-windows-devices.md)
 ### Zarządzanie rejestracją urządzeń
@@ -75,9 +74,7 @@
 ## [Plan and design](manage-apps/plan-and-design.md) --->
 ## Jak zarządzać aplikacjami
 ### [Dodawanie aplikacji](manage-apps/add-apps.md)
-#### [Aplikacje biznesowe dla systemu Android](manage-apps/android-lob-app.md)
 #### [Aplikacje ze sklepu dla systemu Android](manage-apps/android-store-app.md)
-#### [Aplikacje biznesowe dla systemu iOS](manage-apps/ios-lob-app.md)
 #### [Aplikacje ze sklepu dla systemu iOS](manage-apps/ios-store-app.md)
 #### [Aplikacje sieci Web](manage-apps/web-app.md)
 #### [Aplikacje ze sklepu dla systemu Windows Phone 8.1](manage-apps/windows-phone-8-1-store-app.md)
