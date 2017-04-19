@@ -36,9 +36,9 @@ Zestaw SDK aplikacji usługi Intune dla systemu Android to standardowa bibliotek
 
 * **Microsoft.Intune.MAM.SDK.jar**: Interfejsy niezbędne do obsługi funkcji MAM i współdziałania z aplikacją Portal firmy usługi Intune. Aplikacje muszą określić go jako odwołanie do biblioteki systemu Android.
 
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji&4;. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
+* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 4. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
 
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji&7;. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
+* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: interfejsy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 7. Aplikacje wymagające tej obsługi muszą odwoływać się bezpośrednio do pliku JAR.
 
 * **Katalog zasobów**: zasoby (na przykład ciągi), z których korzysta zestaw SDK.
 
