@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 6bc3afe58d5e0f1f12c8b6c6fc62e37d01cd5132
 ms.openlocfilehash: cab9833a1e1b92c156a2eb77411436289c70ad71
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -216,9 +217,4 @@ Przed dodaniem tych stanów użytkownicy nie mieli wystarczających informacji n
 >[!div class="step-by-step"]
 
 >[&larr; **Co nowego w usłudze Intune**](whats-new-in-microsoft-intune.md)    
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
