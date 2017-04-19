@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: a43fc6fcd33f65725d325060a513d5380baae10f
 ms.openlocfilehash: b47469c8c5d35098e2e932e5ae9c9de4f5cdafb8
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -49,9 +50,4 @@ W tej sekcji opisano możliwe przyczyny i potencjalne rozwiązania poniższych b
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
