@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/27/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 4c790438911b06915c49bd76a4ae413b7a9471d1
-ms.openlocfilehash: 70f9638941b61309fc2d97987ab20b3d54e529ee
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
+ms.openlocfilehash: 679ac408349a82b17ec63109770126e0ad072c6d
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -31,6 +31,10 @@ Firma Microsoft zapewnia globalne wsparcie dotyczące kwestii technicznych, prze
 
 Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Klienci korzystający z pomocy technicznej Premier zostaną obciążeni opłatą za pytania dotyczące procedur (na przykład sposobu konfigurowania funkcji usługi Intune).
 
+>[!IMPORTANT]
+> Aby uzyskać pomoc techniczną dotyczącą produktów, które działają z usługą Intune, ale nie zostały przygotowane przez firmę Microsoft, na przykład SaaSwedo, Cisco lub Lookout, najpierw skontaktuj się z dostawcą danego produktu i upewnij się, że produkt został poprawnie skonfigurowany, zanim otworzysz sprawę w pomocy technicznej usługi Intune.
+
+
 ## <a name="find-help-without-opening-a-support-ticket"></a>Uzyskiwanie pomocy bez konieczności otwierania biletu pomocy technicznej
 
 Przed utworzeniem biletu pomocy technicznej zapoznaj się z poniższymi zasobami, aby uzyskać odpowiedzi i informacje. Możesz również zapoznać się z [ogólnymi poradami dotyczącymi rozwiązywania problemów w usłudze Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
@@ -40,6 +44,13 @@ Przed utworzeniem biletu pomocy technicznej zapoznaj się z poniższymi zasobami
 Zadaj pytanie lub rozpocznij dyskusję z ekspertami technicznymi firmy Microsoft. Oferujemy odpowiedzi i szczegółowe informacje na możliwym do przeszukiwania [forum TechNet dotyczącym usługi Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
 
 ![Forum TechNet dotyczące usługi Microsoft Intune](./media/technet-forum-for-support.png)
+
+### <a name="get-started-with-the-forum"></a>Rozpoczęcie pracy z forum
+
+1. Na stronie forów w polu Fora wprowadź Microsoft Intune, a następnie wybierz pozycję z listy.<br>
+![Kontrolka wyboru forum usługi Intune](./media/forum-select-intune.png)
+2. Na liście wybranych forów zostanie wyświetlona pozycja Microsoft Intune.<br>
+![Usługa Intune wybrana w kontrolce forów](./media/forum-selected-intune.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>Witryna opinii o produktach UserVoice w usłudze Microsoft Intune
 
