@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: adf7e2d0f76e63f67b7cf3d26d26df0da0e50bd0
-ms.openlocfilehash: 791486a8d4cc490cd452ea9075fe323395635b5f
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: 6a6b64465c95a3edd6fc2e2d4ae3da80ba3367ee
+ms.openlocfilehash: 92bd41aa4acc02e67e983c68f818bd656b0b9608
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -26,14 +26,14 @@ ms.lasthandoff: 03/31/2017
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w konsoli klasycznej i zastanawiają się, jak zrobić coś w usłudze Intune na platformie Azure. Jeśli w tym artykule nie została uwzględniona funkcja, którą próbujesz znaleźć, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
 ## <a name="quick-reference-guide"></a>Krótki przewodnik
 |Funkcja |Ścieżka w konsoli klasycznej|Ścieżka w usłudze Intune na platformie Azure| |------------||---------------|---------------|
-|Device Enrollment Program (DEP) |Admininistracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program|[Rejestrowanie urządzeń > Rejestrowanie Apple > Token programu rejestrowania](#where-did-apple-dep-go) |
+|Device Enrollment Program (DEP) |Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program|[Rejestrowanie urządzeń > Rejestrowanie Apple > Token programu rejestrowania](#where-did-apple-dep-go) |
 |Device Enrollment Program (DEP)| Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program |[Rejestrowanie urządzeń > Rejestrowanie Apple > Numery seryjne programu rejestrowania](#where-did-apple-dep-go) |
 |Reguły rejestracji |Administracja > Zarządzanie urządzeniami przenośnymi > Reguły rejestracji|[Rejestrowanie urządzeń > Ograniczenia rejestracji](#where-did-enrollment-rules-go) |
 |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Urządzenia zarejestrowane wstępnie należące do firmy > Według numeru seryjnego systemu iOS|[Rejestrowanie urządzeń > Rejestrowanie Apple > Numery seryjne programu rejestrowania](#where-did-corporate-pre-enrolled-devices-go) |
 |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Urządzenia zarejestrowane wstępnie należące do firmy > Według numeru seryjnego systemu iOS| [Rejestrowanie urządzeń > Rejestrowanie Apple > Numery seryjne AC](#where-did-corporate-pre-enrolled-devices-go)|
 |Grupy według numeru IMEI (wszystkie platformy)| Grupy > Wszystkie urządzenia > Urządzenia zarejestrowane wstępnie należące do firmy > Według numeru IMEI (wszystkie platformy) | [Rejestrowanie urządzeń > Identyfikatory urządzeń firmowych](#by-imei-all-platforms)|
 | Profil rejestracji urządzeń firmowych| Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzeń > Rejestrowanie Apple > Profile programu rejestracji](#where-did-corporate-pre-enrolled-devices-go) |
-| Profil rejestracji urządzeń firmowych| Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzeń > Rejestrowanie Apple > Profile AC](#where-did-corporate-pre-enrolled-devices-go) |
+| Profil rejestracji urządzeń firmowych | Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzeń > Rejestrowanie Apple > Profile AC](#where-did-corporate-pre-enrolled-devices-go) |
 
 
 ## <a name="where-do-i-manage-groups"></a>Gdzie mogę zarządzać grupami?

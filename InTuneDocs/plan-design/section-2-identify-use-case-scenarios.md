@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: c834b0282b8f9b47566ab1da2125d993ba8febdf
+ms.sourcegitcommit: 3c5744e7c1290bf9016bc03dcb2db9a1bd9f43dd
+ms.openlocfilehash: 031820d505e0e9cb007e47a5397934d0e505aed4
+ms.lasthandoff: 04/10/2017
 
 
 ---
@@ -25,13 +26,13 @@ ms.openlocfilehash: c834b0282b8f9b47566ab1da2125d993ba8febdf
 
 [!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
 
-Scenariusze przypadków użycia zarządzania urządzeniami przenośnymi opisują typ użytkownika lub rolę oraz prawo własności urządzenia (np. firmowego lub osobistego). Scenariusze przypadków użytkownika są przydatne, ponieważ pozwalają podzielić użytkowników na możliwe do zarządzania grupy. Identyfikowanie scenariuszy przypadków użycia jest ważnym elementem procesu planowania pomyślnego wdrożenia usługi Intune.
+Scenariusze przypadków użycia zarządzania urządzeniami przenośnymi opisują typ użytkownika lub rolę oraz prawo własności urządzenia (np. firmowego lub osobistego). Scenariusze przypadków użycia są przydatne, ponieważ pozwalają podzielić użytkowników na możliwe do zarządzania grupy. Identyfikowanie scenariuszy przypadków użycia jest ważnym elementem procesu planowania pomyślnego wdrożenia usługi Intune.
 
 Omówmy kilka przykładów, aby ułatwić organizacji identyfikowanie scenariuszy przypadków użycia usługi Intune, a także grup organizacyjnych i platform urządzeń przenośnych skojarzonych z poszczególnymi przypadkami użycia.
 
 ## <a name="use-case-scenarios"></a>Scenariusze przypadków użycia
 
-Możesz rozpocząć od przekazania do swojej organizacji celów wdrażania usługi Intune, które mają pomóc w określeniu głównych scenariuszy przypadków użycia dla danego wdrożenia. W zakresie planu wdrożenia usługi Intune należy odpowiedzieć na następujące pytania:
+Możesz rozpocząć od przekazania do swojej organizacji celów wdrażania usługi Intune, aby pomóc w określeniu głównych scenariuszy przypadków użycia dla danego wdrożenia. W zakresie planu wdrożenia usługi Intune należy odpowiedzieć na następujące pytania:
 
 -   Czy planowana jest obsługa urządzeń należących do firmy?
 
@@ -81,12 +82,7 @@ W tym miejscu zostaną zidentyfikowane platformy urządzeń przenośnych skojarz
 | „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Pracownik przetwarzający informacje | Marketing, sprzedaż | iOS |                                                           
 | „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Kierownictwo | Marketing, sprzedaż | iOS |
 
-## <a name="next-section"></a>Następna sekcja
+## <a name="next-steps"></a>Następne kroki
 
 Następna sekcja zawiera wskazówki dotyczące [identyfikowania wymagań usługi Intune dla każdego scenariusza przypadków użycia](section-3-determine-use-case-requirements.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
