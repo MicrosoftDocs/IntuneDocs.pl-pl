@@ -15,9 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
-ms.openlocfilehash: ae9af31263de8b0b95f98e423f8a9a59c0c66c4c
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 15229d2dff3b5e9a13bf1f9321ba09df81717052
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -70,11 +70,11 @@ Przed utworzeniem biletu pomocy technicznej zapoznaj się z [definicją zdarzeni
 
 1.  Zaloguj się do [Centrum administracyjnego usługi Office 365](https://portal.office.com) przy użyciu poświadczeń usługi Intune.
 
-    Klienci korzystający z pomocy technicznej Premium powinni zamiast tego otworzyć bilet pomocy technicznej usługi Intune na [stronie pomocy technicznej dla umów Premium](https://support.microsoft.com/en-us/premier/contacts).
+    Klienci korzystający z pomocy technicznej Premium powinni zamiast tego otworzyć bilet pomocy technicznej usługi Intune na [stronie pomocy technicznej dla umów Premium](https://support.microsoft.com/premier/contacts).
 
     >[!NOTE]
     >
-    >Klienci korzystający z pomocy technicznej Premium powinni otworzyć bilet pomocy technicznej usługi Intune na [stronie pomocy technicznej dla umów Premium](https://support.microsoft.com/en-us/premier/contacts).
+    >Klienci korzystający z pomocy technicznej Premium powinni otworzyć bilet pomocy technicznej usługi Intune na [stronie pomocy technicznej dla umów Premium](https://support.microsoft.com/premier/contacts).
 
 2.  Wybierz kafelek **Administrator**.
 3.  Po lewej stronie w obszarze **Pomoc techniczna** wybierz pozycję **Pomoc techniczna**, aby otworzyć bilet.
@@ -136,7 +136,7 @@ W przypadku pozostałych problemów zgłaszanych przez klientów profesjonalnych
 - Występuje częściowe zakłócenie pracy pojedynczego użytkownika, ale istnieje dopuszczalne obejście.
 
 > [!NOTE]
-> **W przypadku korzystania z programu Microsoft System Center Configuration Manager** lub **Microsoft System Center Endpoint Protection:** w celu uzyskania pomocy technicznej dotyczącej programu Configuration Manager lub Endpoint Protection skontaktuj się z partnerem albo zapoznaj się z dokumentacją programu [Microsoft System Center Configuration](https://docs.microsoft.com/sccm/) i [Endpoint Protection](https://technet.microsoft.com/en-us/library/hh508836.aspx), w której można znaleźć szczegółowe materiały dotyczące samodzielnej pomocy. Oferuje ono również możliwość otwarcia żądania pomocy technicznej online lub przez telefon.
+> **W przypadku korzystania z programu Microsoft System Center Configuration Manager** lub **Microsoft System Center Endpoint Protection:** w celu uzyskania pomocy technicznej dotyczącej programu Configuration Manager lub Endpoint Protection skontaktuj się z partnerem albo zapoznaj się z dokumentacją programu [Microsoft System Center Configuration](https://docs.microsoft.com/sccm/) i [Endpoint Protection](https://technet.microsoft.com/library/hh508836.aspx), w której można znaleźć szczegółowe materiały dotyczące samodzielnej pomocy. Oferuje ono również możliwość otwarcia żądania pomocy technicznej online lub przez telefon.
 >
 > Pomoc techniczna dla programu System Center Configuration Manager lub programu System Center Endpoint Protection wymaga płatności lub opłata jest odejmowana od kwoty wynikającej z istniejącej licencji lub umów pomocy technicznej Premium.
 

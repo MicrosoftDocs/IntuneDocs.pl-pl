@@ -14,18 +14,18 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bed28fc91271c12377f45662aa00fc9616d16fe8
-ms.openlocfilehash: 3d3f35f38a4d6f09f8fdc3e1bbc1c6ca5af6bbe7
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: a0ae4d74ad99adcfab596eb0c441c845fbca3a9e
+ms.lasthandoff: 04/20/2017
 
 
 ---
 
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Jak edukować użytkowników końcowych na temat usługi Microsoft Intune
 
-Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Istnieje wiele kroków niezbędnych do zapewnienia pomyślnego wdrożenia, w tym ocena usługi Intune przy użyciu [bezpłatnej wersji próbnej](/Intune/Understand/mobile-device-management-trial-guide-microsoft-intune.md), [ochrona poczty e-mail](https://docs.microsoft.com/intune/understand-explore/common-ways-to-use-intune#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices) i [osadzanie aplikacji za pomocą zestawu SDK usługi Intune](/intune/develop/intune-app-sdk.md).
+Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Istnieje wiele kroków niezbędnych do zapewnienia pomyślnego wdrożenia, w tym ocena usługi Intune przy użyciu [bezpłatnej wersji próbnej](/Intune/Understand/mobile-device-management-trial-guide-microsoft-intune), [ochrona poczty e-mail](https://docs.microsoft.com/intune/understand-explore/common-ways-to-use-intune#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices) i [osadzanie aplikacji za pomocą zestawu SDK usługi Intune](/intune/develop/intune-app-sdk).
 
-Żadna z tych technologii nie gwarantuje, że użytkownicy będą rozumieć, dlaczego zarządzanie ich urządzeniami jest istotne. W rzeczywistości wielu użytkowników może mieć wrażenie, że naruszasz ich prywatność — zwłaszcza jeśli usługa Intune jest wdrażana jako [rozwiązanie typu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](/enterprise-mobility-security/solutions/byod-design-considerations-guide.md).
+Żadna z tych technologii nie gwarantuje, że użytkownicy będą rozumieć, dlaczego zarządzanie ich urządzeniami jest istotne. W rzeczywistości wielu użytkowników może mieć wrażenie, że naruszasz ich prywatność — zwłaszcza jeśli usługa Intune jest wdrażana jako [rozwiązanie typu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](/enterprise-mobility-security/solutions/byod-design-considerations-guide).
 
 > [!Important]
 > Zrozumienie i aktywne rozwiewanie wątpliwości użytkowników dotyczących powodów, dla których konieczne jest zarządzanie urządzeniami w firmie, ma krytyczne znaczenie dla pomyślnego wdrożenia.
@@ -59,7 +59,7 @@ Rozwianie obaw sprawi, że wdrożenie będzie płynniejsze. Mamy listę spraw, k
   * [Jak użytkownicy systemu Android uzyskują aplikacje](how-your-android-users-get-their-apps.md)
 
 * **iOS**
-  * [Korzystanie z urządzenia z systemem iOS i usługi Intune](https://docs.microsoft.com/Intune/EndUser/using-your-ios-device-with-intune)
+  * [Korzystanie z urządzenia z systemem iOS i usługi Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-or-macos-device-with-intune)
   * [Jak użytkownicy systemu iOS uzyskują aplikacje](how-your-ios-users-get-their-apps.md)
 
 * **Windows**

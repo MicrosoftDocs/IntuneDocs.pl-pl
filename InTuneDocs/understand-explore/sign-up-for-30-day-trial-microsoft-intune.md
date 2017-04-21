@@ -14,8 +14,9 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ca4af205f8f391089e86e0ee7787e32813d54cca
-ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 55556d781149b97af3556f3a6774b4bc5b3b76ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
 W tym artykule opisano proces rejestracji w wersji próbnej usługi Intune i przygotowania wersji próbnej do użycia przez niektórych użytkowników tak, aby można było później za pomocą skojarzonego przewodnika oceny dowiedzieć się, w jaki sposób usługa Intune zarządza urządzeniami przenośnymi. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Począwszy od grudnia 2016 usługa Microsoft Intune jest przenoszona do witryny Azure Portal. W związku z tym niektóre rejestracje bezpłatnych wersji próbnych będą miały miejsce w usłudze Intune w witrynie Azure Portal, a niektóre w klasycznym portalu usługi Intune. Jeśli Twoja wersja próbna znajduje się w witrynie Azure Portal, [zawartość dotycząca wersji zapoznawczej usługi Intune Azure](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune) może być bardziej przydatna po wykonaniu czynności opisanych w tym artykule.
+> Począwszy od grudnia 2016 usługa Microsoft Intune jest przenoszona do witryny Azure Portal. W związku z tym niektóre rejestracje bezpłatnych wersji próbnych będą miały miejsce w usłudze Intune w witrynie Azure Portal, a niektóre w klasycznym portalu usługi Intune. Jeśli Twoja wersja próbna znajduje się w witrynie Azure Portal, [zawartość dotycząca wersji zapoznawczej usługi Intune Azure](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune) może być bardziej przydatna po wykonaniu czynności opisanych w tym artykule.
 
 ## <a name="assumptions"></a>Założenia
 W artykule dotyczącym rejestracji i przewodniku oceny założono, że korzystasz z wersji próbnej wyłącznie do celów oceny i po dokonaniu subskrypcji planujesz rozpocząć od czystego środowiska.
@@ -39,7 +40,7 @@ W wersji próbnej można wykonać wszystkie czynności, które można wykonać z
 ## <a name="sign-up-for-your-trial"></a>Zapisywanie się do wersji próbnej
 Odwiedź stronę [Rejestracja w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) i wypełnij formularz rejestracji, aby zamówić subskrypcję wersji próbnej.
 
-Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). Jednak w tym artykule i przewodnikach oceny założono, że nie używasz takiego konta.
+Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). Jednak w tym artykule i przewodnikach oceny założono, że nie używasz takiego konta.
 
 > [!TIP]
 > Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych niż Twoje, warto ustawić ustawienia regionalne dla wersji próbnej w celu sprawdzenia wydajności.
@@ -54,7 +55,7 @@ Jeśli Twoja wersja próbna znajduje się w witrynie **Azure Portal**, przejdź 
 ## <a name="add-users"></a>Dodawanie użytkowników
 Przed opuszczeniem Centrum administracyjnego usługi Office 365 i powrotem do usługi Intune należy dodać niektórych użytkowników do konta wersji próbnej.
 
-W Centrum administracyjnym usługi Office 365 można dodać użytkowników indywidualnie lub grupowo, przekazując plik w formacie CSV. Firma Microsoft korzysta z obu metod w procesie konfigurowania wersji próbnej. Jednak w środowisku produkcyjnym prawdopodobnie chcesz korzystać z kont użytkowników usługi Azure Active Directory. Więcej informacji o nich można znaleźć w dokumencie [Wprowadzenie — przewodnik](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) i sekcji [Następne kroki](#Next-steps) w dalszej części tego artykułu.
+W Centrum administracyjnym usługi Office 365 można dodać użytkowników indywidualnie lub grupowo, przekazując plik w formacie CSV. Firma Microsoft korzysta z obu metod w procesie konfigurowania wersji próbnej. Jednak w środowisku produkcyjnym prawdopodobnie chcesz korzystać z kont użytkowników usługi Azure Active Directory. Więcej informacji o nich można znaleźć w dokumencie [Wprowadzenie — przewodnik](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) i sekcji [Następne kroki](#Next-steps) w dalszej części tego artykułu.
 
 ### <a name="add-an-individual-user"></a>Dodawanie pojedynczego użytkownika
 1. Wybierz jedną z opcji dodawania użytkownika, aby otworzyć formularz służący do tworzenia użytkownika. Wymagane są tylko elementy oznaczone gwiazdką (\*).
@@ -137,18 +138,13 @@ Aby wrócić z usługi Intune do Centrum administracyjnego usługi Office 365, w
 Scenariusz oceny: [Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
 ### <a name="intune-azure-preview"></a>Wersja zapoznawcza usługi Intune Azure
-Dowiedz się więcej na temat [usługi Intune w wersji zapoznawczej witryny Azure Portal](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune)
+Dowiedz się więcej na temat [usługi Intune w wersji zapoznawczej witryny Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune)
 
 ### <a name="integration-with-other-products"></a>Integracja z innymi produktami
 Dowiedz się więcej o korzystaniu z kont użytkowników usługi Azure Active Directory za pomocą usługi Intune:
-- [Wymagania dotyczące tożsamości](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
-- [Wymagania dotyczące synchronizacji katalogu](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
-- [Wymagania uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
+- [Wymagania dotyczące tożsamości](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Wymagania dotyczące synchronizacji katalogu](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Wymagania uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
-Dowiedz się więcej na temat używania [usługi Intune z programem System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+Dowiedz się więcej na temat używania [usługi Intune z programem System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
 

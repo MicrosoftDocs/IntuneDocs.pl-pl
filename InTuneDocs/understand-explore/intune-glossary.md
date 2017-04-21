@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: ea5407c284f5408774ee5934ad6151bccfd7e6d1
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9e084cce8e34b0de2dce7c6b8503d5b5089c930e
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/18/2017
 |||
 |-|-|
 |Profil e-mail|Za pomocą tych zasad można skonfigurować [ustawienia dostępu do poczty e-mail](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) dla określonych klientów poczty e-mail na urządzeniach przenośnych, co pozwala zminimalizować liczbę czynności konfiguracyjnych, które musi wykonać użytkownik końcowy.|
-|EMS|Rozwiązanie Microsoft Enterprise Mobility + Security (dawniej pakiet Enterprise Mobility Suite) zapewnia ochronę danych firmowych, zezwalając jednocześnie użytkownikom na [dostęp do potrzebnych aplikacji i zawartości](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility).|
+|EMS|Rozwiązanie Microsoft Enterprise Mobility + Security (dawniej pakiet Enterprise Mobility Suite) zapewnia ochronę danych firmowych, zezwalając jednocześnie użytkownikom na [dostęp do potrzebnych aplikacji i zawartości](https://www.microsoft.com/cloud-platform/enterprise-mobility).|
 |Użytkownik końcowy|[Użytkownicy końcowi urządzeń, takich jak telefony i komputery](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) zarządzani za pomocą usługi Intune.|
 |Zarejestruj|Usługa Microsoft Intune używa [rejestracji](/intune/deploy-use/enroll-devices-in-microsoft-intune), która umożliwia zarządzanie urządzeniami i zezwala na nich na dostęp do zasobów.|
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 02/18/2017
 |Zdalne blokowanie|Funkcja usługi Intune pozwalająca [blokować obsługiwane urządzenia](/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune), nawet jeśli nie masz fizycznego dostępu do urządzenia.|
 |Reports|Usługa Intune oferuje wiele różnych [wbudowanych raportów](/intune/deploy-use/understand-microsoft-intune-operations-by-using-reports), które podają informacje o zarządzanych urządzeniach.|
 |Wymagana instalacja|Gdy wdrożysz aplikację za pomocą tej akcji, zostanie ona zainstalowana na urządzeniu [bez interwencji użytkownika](/intune/deploy-use/deploy-apps) (w przypadku niektórych platform może być jednak konieczne zaakceptowanie instalacji przez użytkownika końcowego).|
-|Wymagania|[Operacja wdrażania aplikacji](/en-us/intune/deploy-use/add-apps) pozwalająca wybrać wymagania, które muszą zostać spełnione na urządzeniu, zanim aplikacja zostanie zainstalowana. Możesz na przykład określić wersję systemu operacyjnego iOS, która musi być zainstalowana, zanim aplikacja zostanie zainstalowana.|
+|Wymagania|[Operacja wdrażania aplikacji](/intune/deploy-use/add-apps) pozwalająca wybrać wymagania, które muszą zostać spełnione na urządzeniu, zanim aplikacja zostanie zainstalowana. Możesz na przykład określić wersję systemu operacyjnego iOS, która musi być zainstalowana, zanim aplikacja zostanie zainstalowana.|
 
 ## <a name="s"></a>S
 |||

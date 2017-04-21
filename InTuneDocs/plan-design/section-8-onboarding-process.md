@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fa33bd3833f7f7198eed3f4f486c27bae3ba47d7
-ms.openlocfilehash: 87832ec7f295c08678052d19164af9a8db051f9f
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23d40a31c43a061e0f3b1fbb05827697ca7380ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -61,7 +62,7 @@ Poniżej przedstawiono omówienie poszczególnych zadań podczas implementowania
 
 Zgodnie z tym, co określono w poprzedniej sekcji, subskrypcja pakietu EMS lub usługi Intune jest wymagana. Jeśli Twoja organizacja nie ma subskrypcji pakietu EMS lub usługi Intune, skontaktuj się z firmą Microsoft lub zespołem konta Microsoft w celu wyrażenia zainteresowania zakupem pakietu Enterprise Mobility + Security (EMS) lub usługi Intune.
 
--   Dowiedz się więcej na temat [zakupu usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing).
+-   Dowiedz się więcej na temat [zakupu usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
 #### <a name="task-2-add-office-365-subscription"></a>Zadanie 2. Dodawanie subskrypcji usługi Office 365
 
@@ -115,7 +116,7 @@ Usługa Microsoft Intune obsługuje profile poczty E-mail, sieci Wi-Fi i sieci V
 
 Usługa Microsoft Intune obsługuje wdrażanie aplikacji sieci Web, aplikacji biznesowych i publicznych aplikacji ze Sklepu. Dodatkowo obsługiwane jest zarządzanie aplikacjami, w których zintegrowano zestaw SDK usługi Intune przez skojarzenie ich z zasadami zarządzania aplikacjami mobilnymi. Dodawanie i wdrażanie aplikacji odbywa się w portalu administracyjnym usługi Intune w obszarze Zasady. Dodawanie zasad zarządzania aplikacjami mobilnymi odbywa się w portalu administracyjnym usługi Intune w obszarze Zasady. Dodaj odpowiednie aplikacje i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 
--   Dowiedz się więcej na temat [dodawania i wdrażania aplikacji](https://docs.microsoft.com/en-us/intune/deploy-use/deploy-apps).
+-   Dowiedz się więcej na temat [dodawania i wdrażania aplikacji](https://docs.microsoft.com/intune/deploy-use/deploy-apps).
 
 #### <a name="task-11-add-and-deploy-compliance-policies"></a>Zadanie 11. Dodawanie i wdrażanie zasad zgodności
 
@@ -141,9 +142,4 @@ Usługa Intune obsługuje platformy urządzeń przenośnych z systemem iOS, Mac 
 ## <a name="next-section"></a>Następna sekcja
 
 Następna sekcja zawiera wskazówki dotyczące [testowania i sprawdzania poprawności wdrożenia usługi Intune](section-9-test-and-validation.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

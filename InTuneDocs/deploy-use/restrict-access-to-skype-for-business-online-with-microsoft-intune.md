@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 182ca17c53b672d70ff1b30a63c0662050db95c3
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 312a3ae8a74b0a8460f969f96bee14077c6c7161
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -37,9 +38,9 @@ Jeśli wybrany użytkownik próbuje użyć usługi Skype dla firm Online na swoi
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi Skype fla firm Online, konieczne jest:
 - Posiadanie **subskrypcji usługi Skype dla firm Online** i przypisanie licencji usługi Skype dla firm Online użytkownikom.
-- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
--   [Włączenie nowoczesnego uwierzytelniania](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) dla usługi Skype dla firm Online.
+-   [Włączenie nowoczesnego uwierzytelniania](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) dla usługi Skype dla firm Online.
 -  Wszyscy użytkownicy powinni używać usługi **Skype dla firm Online**. Jeśli wdrożenie obejmuje zarówno usługę Skype dla firm Online, jak i lokalną aplikację Skype dla firm, zasady dostępu warunkowego nie będą stosowane do użytkowników.
 
 Urządzenie, dla którego wymagany jest dostęp do usługi Skype dla firm Online, powinno:
@@ -118,9 +119,4 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 * **Urządzenia, które nie są zgodne**: dostęp tych urządzeń do usługi Skype dla firm Online jest zablokowany.
 
 * **Urządzenia, które są zarejestrowane w usłudze AAD i są zgodne**: te urządzenia mogą uzyskiwać dostęp do usługi Skype dla firm Online.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

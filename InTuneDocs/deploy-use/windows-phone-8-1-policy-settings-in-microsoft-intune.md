@@ -15,8 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2fd7ebc53c3b033982297dbce4a091cd9336fbb1
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 65d3b454531084008bdbb01dd17f5ce34ef5890f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -136,7 +137,7 @@ Na liście **Aplikacje dozwolone i zablokowane** określ aplikacje, które mają
 #### <a name="how-to-specify-urls-to-app-stores"></a>Jak określać adresy URL sklepów z aplikacjami
 Aby określić adres URL aplikacji na liście aplikacji dozwolonych lub zablokowanych, użyj następującego formatu:
 
-Na stronie [Aplikacje+Gry systemu Windows Phone](http://www.windowsphone.com/en-us/store/overview) wyszukaj aplikację, której chcesz użyć.
+Na stronie [Aplikacje+Gry systemu Windows Phone](http://www.windowsphone.com/store/overview) wyszukaj aplikację, której chcesz użyć.
 
 Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście dozwolonych lub zablokowanych aplikacji.
 
@@ -172,9 +173,4 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

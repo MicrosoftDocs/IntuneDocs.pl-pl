@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 9a814f6df407802b8e48626ed0e3f828c52c661b
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: cfb3a7cc4e70a062bc511cd4fe80a50b6262864f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -38,7 +38,7 @@ Aby skonfigurować dostęp warunkowy, trzeba:
 
 -   Mieć **subskrypcję usługi Office 365 obejmującą usługę Exchange Online (na przykład E3)**, a użytkownicy muszą mieć licencję na usługę Exchange Online.
 
-- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 -  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Intune**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z usługą Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
     -  Dowiedz się więcej o [łączniku Service to Service Connector usługi Intune](intune-service-to-service-exchange-connector.md).
@@ -83,7 +83,7 @@ Możliwa jest ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchan
 **Nowoczesne uwierzytelnianie** umożliwia logowanie do klientów pakietu Microsoft Office oparte na bibliotece Active Directory Authentication Library (ADAL).
 
 -   Uwierzytelnianie oparte na bibliotece ADAL umożliwia klientom pakietu Office korzystanie z uwierzytelniania za pomocą przeglądarki (nazywanego też uwierzytelnianiem pasywnym). W celu uwierzytelnienia użytkownik jest kierowany do strony sieci Web logowania.
--   Ta nowa metoda logowania zapewnia większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**. Aby uzyskać bardziej szczegółowe informacje, zobacz [Jak działa nowoczesne uwierzytelnianie](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Możesz skonfigurować reguły oświadczeń ADFS, aby zablokować starsze protokoły uwierzytelniania. Szczegółowe instrukcje zostały przedstawione w punkcie [Scenariusz 3: Całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
+-   Ta nowa metoda logowania zapewnia większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**. Aby uzyskać bardziej szczegółowe informacje, zobacz [Jak działa nowoczesne uwierzytelnianie](https://support.office.com/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Możesz skonfigurować reguły oświadczeń ADFS, aby zablokować starsze protokoły uwierzytelniania. Szczegółowe instrukcje zostały przedstawione w punkcie [Scenariusz 3: Całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
 
 Można chronić dostęp do usługi **Outlook Web Access (OWA)** w usłudze Exchange Online, gdy użytkownik uzyskuje do niej dostęp za pomocą przeglądarki na urządzeniach z systemem **iOS** i **Android**. Dostęp może być dozwolony tylko za pośrednictwem obsługiwanych przeglądarek na zgodnych urządzeniach:
 
@@ -123,7 +123,7 @@ Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznym
   >[!NOTE]
     >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
 
--   [Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
+-   [Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
     Nowoczesne uwierzytelnianie umożliwia logowanie do klientów pakietu Office 2013/systemu Windows oparte na bibliotece Active Directory Authentication Library (ADAL). Zapewnia to większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**.
 
@@ -192,7 +192,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 >[!NOTE]
 > Zasady dostępu warunkowego można też utworzyć za pomocą konsoli zarządzania usługi Azure AD. Konsola zarządzania usługi Azure AD umożliwia tworzenie zasad dostępu warunkowego urządzeń w usłudze Intune (nazywanych w usłudze Azure AD **zasadami dostępu warunkowego opartymi na urządzeniach**) oraz innych zasad dostępu warunkowego, takich jak uwierzytelnianie wieloskładnikowe.
 
->Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+>Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Exchange Online**.

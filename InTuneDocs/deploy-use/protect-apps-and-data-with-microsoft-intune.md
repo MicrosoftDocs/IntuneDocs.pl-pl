@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
-ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -48,14 +49,9 @@ Dane firmowe można chronić przy użyciu zasad MAM dla urządzeń **zarejestrow
 
 Aby skojarzyć aplikację z zasadami MAM, aplikacja musi uwzględniać zestaw SDK (Software Development Kit) aplikacji w usłudze Microsoft Intune. Można też skorzystać z narzędzia opakowującego aplikacje.
 
-Aplikacje takie jak należące do pakietu Microsoft Office mają wbudowany zestaw SDK w usłudze Intune. Pełna lista obsługiwanych aplikacji jest dostępna w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) na stronie partnerów aplikacji usługi Microsoft Intune. Wybierz aplikację, aby wyświetlić obsługiwane scenariusze i platformy oraz aby sprawdzić, czy obsługuje ona wiele tożsamości.
+Aplikacje takie jak należące do pakietu Microsoft Office mają wbudowany zestaw SDK w usłudze Intune. Pełna lista obsługiwanych aplikacji jest dostępna w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) na stronie partnerów aplikacji usługi Microsoft Intune. Wybierz aplikację, aby wyświetlić obsługiwane scenariusze i platformy oraz aby sprawdzić, czy obsługuje ona wiele tożsamości.
 
 Możesz również [umożliwić własnym niestandardowym aplikacjom biznesowym](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) korzystanie z zasad MAM.
 
 Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub skradzione albo jeśli użytkownik nie jest już pracownikiem firmy, można [selektywnie wyczyścić dane firmowe](wipe-managed-company-app-data-with-microsoft-intune.md), pozostawiając tylko dane osobiste.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

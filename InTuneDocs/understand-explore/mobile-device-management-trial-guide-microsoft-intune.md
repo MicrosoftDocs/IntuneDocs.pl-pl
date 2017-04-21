@@ -14,9 +14,9 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
-ms.lasthandoff: 01/05/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9a988945c499c3145208b86d6832d02c28136ece
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -43,8 +43,8 @@ W wersji próbnej można wykonać wszystkie czynności, które można wykonać z
 ## <a name="whats-not-covered"></a>Czego nie zawiera przewodnik
 |Jeśli interesują Cię |Przeczytaj to |
 |------------------------|----------|
-|Program MDM w środowisku nietestowym | [Wprowadzenie](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
-|Program MDM z usługą Intune i programem System Center Configuration Manager | [Hybrydowe zarządzanie urządzeniami przenośnymi](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management) |
+|Program MDM w środowisku nietestowym | [Wprowadzenie](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|Program MDM z usługą Intune i programem System Center Configuration Manager | [Hybrydowe zarządzanie urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Ponieważ powyższe przewodniki ułatwiają konfigurowanie usługi Intune w środowiskach produkcyjnych, w porównaniu z przewodnikiem oceny są one dłuższe i zawierają o wiele więcej punktów decyzyjnych wymagających rozważenia.
 
@@ -61,7 +61,7 @@ Pierwszym krokiem, jaki trzeba wykonać, aby zarządzać urządzeniami przenośn
 
 Jeśli używasz autonomicznej usługi Intune, zgodnie z założeniem wersji próbnej, lub jeśli korzystasz z usługi Intune jako części subskrypcji Enterprise Mobility + Security (EMS), musisz ustawić usługę Intune jako urząd zarządzania urządzeniami przenośnymi. Oznacza to wyznaczenie Intune jako usługi używanej do zarządzania urządzeniami przenośnymi w Twojej organizacji.
 
-Klienci, którzy chcą korzystać z usługi Intune z programem System Center Configuration Manager do zarządzania urządzeniami przenośnymi, muszą podjąć decyzję, czy rolę urzędu zarządzania urządzeniami przenośnymi ma pełnić usługa Intune czy program Configuration Manager. W środowisku produkcyjnym jest to decyzja ważna, ponieważ aktualnie zmiana tego ustawienia po wprowadzeniu go jest bardzo trudna i wykracza poza zakres tego podręcznika oceny. Aby uzyskać więcej informacji na temat wpływu ustawienia usługi Intune lub programu Configuration Manager w roli urzędu zarządzania urządzeniami przenośnymi, zobacz temat [Wybierz między autonomiczną usługą Intune i hybrydowym zarządzaniem urządzeniami przenośnymi](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Klienci, którzy chcą korzystać z usługi Intune z programem System Center Configuration Manager do zarządzania urządzeniami przenośnymi, muszą podjąć decyzję, czy rolę urzędu zarządzania urządzeniami przenośnymi ma pełnić usługa Intune czy program Configuration Manager. W środowisku produkcyjnym jest to decyzja ważna, ponieważ aktualnie zmiana tego ustawienia po wprowadzeniu go jest bardzo trudna i wykracza poza zakres tego podręcznika oceny. Aby uzyskać więcej informacji na temat wpływu ustawienia usługi Intune lub programu Configuration Manager w roli urzędu zarządzania urządzeniami przenośnymi, zobacz temat [Wybierz między autonomiczną usługą Intune i hybrydowym zarządzaniem urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 W wersji próbnej firma Microsoft ustawi w roli urzędu zarządzania urządzeniami przenośnymi usługę Intune; nie dotyczy to środowiska produkcyjnego, chyba że zdecydujesz o użyciu wersji próbnej w środowisku produkcyjnym.
 
@@ -86,7 +86,7 @@ Pobierz certyfikat usługi APNs (PEM) i zapisz plik lokalnie. Ten identyfikator 
 3.    **Dodaj certyfikat usługi APNs do usługi Intune**<BR/>
 W konsoli administracyjnej usługi Microsoft Intune przejdź do obszaru **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Prześlij certyfikat usługi APNs**, a następnie wybierz polecenie **Prześlij certyfikat usługi APNs**. Przejdź do pliku certyfikatu (PEM) i wybierz pozycję **Otwórz**, a następnie wprowadź identyfikator Apple ID. Z certyfikatem APNs. Usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych.
 4.    **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**<br/>
-Aby uzyskać instrukcje dla użytkowników końcowych dotyczące rejestrowania, zobacz tematy [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) i [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
+Aby uzyskać instrukcje dla użytkowników końcowych dotyczące rejestrowania, zobacz tematy [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-ios) i [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-mac-os-x). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Dowiedz się więcej o rejestracji urządzeń

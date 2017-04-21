@@ -15,8 +15,9 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 11ed6b14bc940940e6fa22f6760420e690ac364f
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: c47106ddfebcd1df8c1bc5090bf3f047015b6c45
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -40,7 +41,7 @@ Ten przewodnik Szybki start będzie użyteczny, jeśli spełniasz następujące 
 > [!NOTE]
 > System Windows nie jest jeszcze obsługiwaną platformą w przypadku aplikacji mobilnych pakietu Office. Zarządzanie aplikacjami mobilnymi bez rejestrowania nie jest jeszcze zgodne z lokalną instalacją programu Exchange lub SharePoint. Można jedynie chronić dane hostowane w wersjach online.
 
-Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając kod dostępu i szyfrowanie danych za pomocą zasad obejmujących aplikacje mobilne, z których korzystają pracownicy w celu uzyskania dostępu do poufnych danych, bez konieczności pełnego rejestrowania w jakimkolwiek rozwiązaniu do zarządzania urządzeniami. Usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi w aplikacjach mobilnych pakietu Office zarówno dla systemu [iOS](https://products.office.com/en-us/mobile/office-mobile-apps-for-ios), jak i systemu [Android](https://products.office.com/en-us/mobile/office-mobile-apps-for-android). W ten sposób można zapewnić ochronę danych usługi O365, nie wymagając od użytkowników rejestracji ich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
+Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając kod dostępu i szyfrowanie danych za pomocą zasad obejmujących aplikacje mobilne, z których korzystają pracownicy w celu uzyskania dostępu do poufnych danych, bez konieczności pełnego rejestrowania w jakimkolwiek rozwiązaniu do zarządzania urządzeniami. Usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi w aplikacjach mobilnych pakietu Office zarówno dla systemu [iOS](https://products.office.com/mobile/office-mobile-apps-for-ios), jak i systemu [Android](https://products.office.com/mobile/office-mobile-apps-for-android). W ten sposób można zapewnić ochronę danych usługi O365, nie wymagając od użytkowników rejestracji ich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
 1.    [Sposoby ochrony danych aplikacji](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
@@ -50,10 +51,5 @@ Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając kod dost
 ## <a name="additional-information"></a>Informacje dodatkowe:
 - [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
-- [Lista partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+- [Lista partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)
 

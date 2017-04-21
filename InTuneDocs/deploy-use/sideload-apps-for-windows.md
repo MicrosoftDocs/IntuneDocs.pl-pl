@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 1781600f82b37ba76fe072d3a0e6557504de3b46
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: bb0fe422999246fd40dae16299cf3154b7d7f97b
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -35,7 +35,7 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
    Dołącz do [Centrum deweloperów systemu Windows Phone](http://go.microsoft.com/fwlink/?LinkId=268442) , podając dane konta firmowego podczas logowania się w celu zakupienia konta firmy. Ta prośba musi zostać autoryzowana przez specjalistę firmy, zanim otrzymasz certyfikat podpisywania kodu.
 
 2. **Uzyskaj firmowy certyfikat firmy Symantec**<br>
-  Posługując się swoim identyfikatorem firmy Symantec, kup certyfikat w [witrynie firmy Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakupie certyfikatu osoba zatwierdzająca w firmie wyznaczona w danych konta Centrum deweloperów systemu Windows Phone otrzyma wiadomość e-mail z prośbą o zatwierdzenie żądania certyfikatu. Więcej informacji o wymaganiu certyfikatu firmy Symantec znajduje się w sekcji [Dlaczego w systemie Windows Phone jest wymagany certyfikat firmy Symantec?](https://technet.microsoft.com/en-us/library/dn764959.aspx#BKMK_Symantec) często zadawanych pytań dotyczących rejestrowania urządzeń z systemem Windows.
+  Posługując się swoim identyfikatorem firmy Symantec, kup certyfikat w [witrynie firmy Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakupie certyfikatu osoba zatwierdzająca w firmie wyznaczona w danych konta Centrum deweloperów systemu Windows Phone otrzyma wiadomość e-mail z prośbą o zatwierdzenie żądania certyfikatu. Więcej informacji o wymaganiu certyfikatu firmy Symantec znajduje się w sekcji [Dlaczego w systemie Windows Phone jest wymagany certyfikat firmy Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) często zadawanych pytań dotyczących rejestrowania urządzeń z systemem Windows.
 
 3.  **Zaimportuj certyfikaty**<br>
     Po zatwierdzeniu żądania otrzymasz wiadomość e-mail z instrukcjami dotyczącymi importowania certyfikatów. Postępuj zgodnie z instrukcjami w wiadomości e-mail, aby zaimportować certyfikaty.

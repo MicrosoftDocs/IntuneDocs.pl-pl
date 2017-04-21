@@ -13,8 +13,9 @@ ms.technology:
 ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a2e43444bff3b189c1516c6ca7131771035313ea
-ms.openlocfilehash: 6258917de60bdbf8efde4720c17ec6fc643154bd
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: c795b0b5b12d900155e55e0874009177b32a2546
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -35,7 +36,7 @@ Są to typowe problemy, które administrator IT może napotkać podczas korzysta
 | Problem | Opis | Rozwiązanie |
 | -- | -- | -- |
 | Zasady nie są stosowane w przypadku programu Skype dla firm | Zasady ochrony aplikacji bez rejestracji urządzenia wprowadzone w witrynie Azure Portal nie są stosowane do aplikacji Skype dla firm na urządzeniach z systemem iOS i Android. | Skonfiguruj aplikację Skype dla firm do korzystania z nowoczesnego uwierzytelniania.  Postępuj zgodnie z instrukcjami podanymi w temacie [Zapewnianie dzierżawcy możliwości nowoczesnego uwierzytelniania](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby skonfigurować nowoczesne uwierzytelnianie dla aplikacji Skype. |
-| Zasady aplikacji pakietu Office nie są stosowane | Zasady ochrony aplikacji nie są stosowane do żadnej [obsługiwanej aplikacji pakietu Office](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners) dla jakiegokolwiek użytkownika. | Potwierdź, że użytkownik ma licencję na usługę Intune oraz że aplikacje pakietu Office są objęte wdrożonymi zasadami ochrony aplikacji. Zastosowanie nowo wdrożonych zasad ochrony aplikacji może potrwać do 8 godzin. |
+| Zasady aplikacji pakietu Office nie są stosowane | Zasady ochrony aplikacji nie są stosowane do żadnej [obsługiwanej aplikacji pakietu Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) dla jakiegokolwiek użytkownika. | Potwierdź, że użytkownik ma licencję na usługę Intune oraz że aplikacje pakietu Office są objęte wdrożonymi zasadami ochrony aplikacji. Zastosowanie nowo wdrożonych zasad ochrony aplikacji może potrwać do 8 godzin. |
 | Administrator nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal | Użytkownik będący administratorem IT nie może skonfigurować zasad ochrony aplikacji w portalu Azure Portal. | Następujące role użytkownika mają dostęp do portalu Azure Portal: <ul><li>Administrator globalny, którego można skonfigurować w [portalu usługi Office](http://portal.office.com/)</li><li>Właściciel, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li><li>Współautor, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li></ul>  Zobacz [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md), aby uzyskać pomoc dotyczącą konfigurowania tych ról.|
 |W raportach zasad ochrony aplikacji brakuje kont użytkowników | W raportach konsoli administratora nie są widoczne konta użytkowników, dla których niedawno wdrożono zasady ochrony aplikacji. | W przypadku użytkownika niedawno objętego zasadami ochrony aplikacji wyświetlenie informacji na jego temat w raportach może nastąpić po upływie nawet 24 godzin. |
 | Zmiany zasad nie działają | Zastosowanie zmian i aktualizacji zasad ochrony aplikacji może potrwać nawet 8 godzin. | Jeśli to konieczne, użytkownik końcowy może wylogować się z aplikacji i zalogować się do niej ponownie, aby wymusić synchronizację z usługą. |
@@ -87,7 +88,7 @@ Okno dialogowe błędu lub komunikat o błędzie | Przyczyna | Korekty |
 **Intune Managed Browser — Zapraszamy**: Ta aplikacja działa najlepiej, gdy jest zarządzana przez usługę Microsoft Intune. Możesz przeglądać sieć Web za pomocą tej aplikacji, a jeśli jest ona zarządzana przez usługę Microsoft Intune, uzyskasz dostęp do dodatkowych funkcji ochrony danych. | Nie można wykryć zasad ochrony wymaganych dla aplikacji Intune Managed Browser. <br><br>Użytkownik nadal może korzystać z tej aplikacji do przeglądania sieci Web, ale nie jest ona zarządzana przez usługę Intune. | Upewnij się, zasady ochrony aplikacji systemu iOS są wdrożone w grupie zabezpieczeń użytkownika i obejmują aplikację Intune Managed Browser.
 **Logowanie nie powiodło się**: Nie możemy Cię zalogować w tej chwili. Spróbuj ponownie później. | Nie można zarejestrować użytkownika przy użyciu usługi MAM po dokonaniu próby logowania z użyciem konta służbowego. | Upewnij się, zasady ochrony aplikacji systemu iOS są wdrożone w grupie zabezpieczeń użytkownika i obejmują tę aplikację.
 **Nie skonfigurowano konta**: Twoja organizacja nie skonfigurowała na Twoim koncie dostępu do danych służbowych. Skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Konto użytkownika nie ma licencji Intune A Direct. | Upewnij się, że konto użytkownika ma przypisaną licencję usługi Intune w [portalu pakietu Office](http://portal.office.com).
-**Niezgodne urządzenie**: nie można użyć tej aplikacji, ponieważ używasz urządzenia z usuniętymi ograniczeniami. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia ze zdjętymi zabezpieczeniami systemu. | Przywróć ustawienia fabryczne urządzenia. Postępuj zgodnie z [tymi instrukcjami](https://support.apple.com/en-us/HT201274) z witryny pomocy technicznej firmy Apple.
+**Niezgodne urządzenie**: nie można użyć tej aplikacji, ponieważ używasz urządzenia z usuniętymi ograniczeniami. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia ze zdjętymi zabezpieczeniami systemu. | Przywróć ustawienia fabryczne urządzenia. Postępuj zgodnie z [tymi instrukcjami](https://support.apple.com/HT201274) z witryny pomocy technicznej firmy Apple.
 **Wymagane jest połączenie z Internetem**: Aby zweryfikować, czy możesz używać tej aplikacji, musisz mieć połączenie z Internetem. | Urządzenie nie jest połączone z Internetem. | Połącz urządzenie z siecią Wi-Fi lub siecią transmisji danych.
 **Nieznany błąd**: Spróbuj ponownie uruchomić tę aplikację. Jeśli ten problem będzie nadal występować, skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Wystąpił nieznany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz bilet pomocy technicznej z użyciem usługi Intune [w tym miejscu](how-to-get-support-for-microsoft-intune.md).
 **Uzyskiwanie dostępu do danych organizacji**: Podane konto służbowe nie ma dostępu do tej aplikacji. Może być konieczne zalogowanie się przy użyciu innego konta. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik próbował zalogować się przy użyciu drugiego konta służbowego, które różni się od konta zarejestrowanego w oprogramowaniu do zarządzania aplikacjami mobilnymi (MAM) dla tego urządzenia. Oprogramowanie MAM może zarządzać jednocześnie tylko jednym kontem służbowym na danym urządzeniu. | Zaloguj się przy użyciu konta, którego nazwa użytkownika jest wstępnie wypełniona na ekranie logowania. <br> <br> Ewentualnie zaloguj się przy użyciu nowego konta służbowego i usuń istniejące konto zarejestrowane w oprogramowaniu MAM.
@@ -116,9 +117,4 @@ Okno dialogowe/komunikat o błędzie | Przyczyna | Korekty |
 - [Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi](../deploy-use/validate-mobile-application-management.md)
 - [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 - [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

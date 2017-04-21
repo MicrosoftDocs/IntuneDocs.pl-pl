@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
-ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9e4fca9e29c8f0c2ec3ef088c3f91ad15ac11804
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -40,7 +41,7 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 
 **Przed** skonfigurowaniem zasad dostępu warunkowego dla usługi SharePoint Online konieczne jest:
 - Posiadanie **subskrypcji usługi SharePoint Online** oraz posiadanie licencji użytkowników na usługę SharePoint Online.
-- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi być:
@@ -59,10 +60,10 @@ Jeśli warunek nie jest spełniony, użytkownik widzi podczas logowania jeden z 
 
 -   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje na temat problemu i sposobu jego rozwiązania.
 
-**Dostęp warunkowy nie ma zastosowania do udostępniania zewnętrznego**. Aby dowiedzieć się, jak zapobiegać zewnętrznemu udostępnianiu w dzierżawie lub zbiorze witryn, zobacz temat [Zarządzanie udostępnianiem zewnętrznym w środowisku usługi SharePoint Online](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US).
+**Dostęp warunkowy nie ma zastosowania do udostępniania zewnętrznego**. Aby dowiedzieć się, jak zapobiegać zewnętrznemu udostępnianiu w dzierżawie lub zbiorze witryn, zobacz temat [Zarządzanie udostępnianiem zewnętrznym w środowisku usługi SharePoint Online](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
 >[!NOTE]
->Po włączeniu dostępu warunkowego dla usługi SharePoint Online zaleca się wyłączenie domeny na liście zgodnie z opisem w temacie [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
+>Po włączeniu dostępu warunkowego dla usługi SharePoint Online zaleca się wyłączenie domeny na liście zgodnie z opisem w temacie [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/library/dn917451.aspx).  
 
 ## <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 Obsługiwane są następujące funkcje:
@@ -84,7 +85,7 @@ Obsługiwane są następujące funkcje:
 > [!NOTE]
 >Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
 
-  - Komputery przyłączone do domeny muszą zostać skonfigurowane do [automatycznego rejestrowania](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory. Usługa rejestracji urządzeń w usłudze Azure AD zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
+  - Komputery przyłączone do domeny muszą zostać skonfigurowane do [automatycznego rejestrowania](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory. Usługa rejestracji urządzeń w usłudze Azure AD zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
 
   - Jeśli zasady zostały skonfigurowane w taki sposób, aby przyłączenie do domeny było wymagane, a komputer nie został przyłączony do domeny, zostanie wyświetlony komunikat o konieczności skontaktowania się z administratorem IT.
 
@@ -92,7 +93,7 @@ Obsługiwane są następujące funkcje:
   >[!NOTE]
   >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
 
-[Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
+[Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
 Nowoczesne uwierzytelnianie umożliwia logowanie do klientów systemu Windows z pakietem Office 2013 oparte na bibliotece Active Directory Authentication Library (ADAL), a także udostępnia lepsze zabezpieczenia, takie jak **uwierzytelnianie wieloskładnikowe** i **uwierzytelnianie oparte na certyfikatach**.
 
@@ -129,7 +130,7 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 #### <a name="bkmk_spopolicy"></a>
 
 >[!NOTE]
-> Można też utworzyć zasady dostępu warunkowego dla urządzeń z usługą Intune w konsoli zarządzania usługi Azure AD (w usłudze Azure AD zasady są określane jako **zasady dostępu warunkowego oparte na urządzeniu**). Ponadto można tworzyć inne zasady dostępu warunkowego, np. dotyczące uwierzytelniania wieloskładnikowego. Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+> Można też utworzyć zasady dostępu warunkowego dla urządzeń z usługą Intune w konsoli zarządzania usługi Azure AD (w usłudze Azure AD zasady są określane jako **zasady dostępu warunkowego oparte na urządzeniu**). Ponadto można tworzyć inne zasady dostępu warunkowego, np. dotyczące uwierzytelniania wieloskładnikowego. Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi SharePoint Online**.
@@ -195,9 +196,4 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 
 ### <a name="see-also"></a>Zobacz także
 [Ochrona dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

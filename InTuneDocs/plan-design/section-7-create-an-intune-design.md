@@ -15,9 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6df87e20011f20b99b91d88e669c67bb97ad2277
-ms.openlocfilehash: 1768b98cdcb18b5489d9a30b8c1f455f5de58418
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: ce51e92f9643ddc77e84e6b4c65825d397a37ddc
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -97,7 +97,7 @@ Należy upewnić się, czy uwzględniono wszystkie istniejące projekty i inne p
 | **Obszar rozwiązania** | **Bieżące środowisko** | **Komentarze** |
 |:---:|:---:|:---:|
 | **Tożsamość** | Usługa Azure AD, usługa Azure AD Connect, niefederacyjny, brak uwierzytelniania wieloskładnikowego | Istniejący projekt służący do włączenia uwierzytelniania wieloskładnikowego wraz z końcem roku |                 
-| **Środowisko poczty e-mail** | Lokalna instalacja programu Exchange, usługa Exchange Online | Obecnie trwa migracja z lokalnej instalacji programu Exchange do usługi Exchange Online. Przeprowadzono migrację&75;% skrzynek pocztowych. Pozostałe 25% zostanie zmigrowanych przed rozpoczęciem pilotażowego wdrożenia usługi Intune. |                
+| **Środowisko poczty e-mail** | Lokalna instalacja programu Exchange, usługa Exchange Online | Obecnie trwa migracja z lokalnej instalacji programu Exchange do usługi Exchange Online. Przeprowadzono migrację 75% skrzynek pocztowych. Pozostałe 25% zostanie zmigrowanych przed rozpoczęciem pilotażowego wdrożenia usługi Intune. |                
 | **SharePoint** | Lokalna instalacja programu SharePoint | Nie jest planowane przejście do usługi SharePoint Online |  
 | **Bieżące rozwiązanie do zarządzania urządzeniami przenośnymi** | Exchange ActiveSync |  |
 | **Rozwiązanie związane z certyfikatem** | Microsoft Server 2012 R2, usługi certyfikatów AD | Infrastruktury PKI należy używać tylko na potrzeby serwerów witryn sieci Web |
@@ -153,7 +153,7 @@ Grupy użytkowników i urządzeń służą do określenia celu wdrożenia. Może
 
 -   Dowiedz się więcej na temat [planowania grup użytkowników i urządzeń](https://docs.microsoft.com/intune/deploy-use/plan-your-user-and-device-groups).
 
--   Dowiedz się, [jak tworzyć grupy użytkowników i urządzeń](https://docs.microsoft.com/en-us/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Dowiedz się, [jak tworzyć grupy użytkowników i urządzeń](https://docs.microsoft.com/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ### <a name="public-key-infrastructure-pki"></a>Infrastruktura kluczy publicznych (PKI, Public Key Infrastructure)
 
@@ -326,7 +326,7 @@ Poniżej przedstawiono przykład dokumentowania projektu profilu sieci VPN.
 
 Profile poczty e-mail pozwalają na automatyczne konfigurowanie klientów poczty e-mail za pomocą informacji dotyczących połączenia oraz na konfigurowanie poczty e-mail. Usługa Intune obsługuje profile poczty e-mail na niektórych urządzeniach.
 
--   Dowiedz się więcej o [profilach poczty e-mail](https://docs.microsoft.com/en-us/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) i obsługiwanych platformach.
+-   Dowiedz się więcej o [profilach poczty e-mail](https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) i obsługiwanych platformach.
 
 Poniżej przedstawiono przykład dokumentowania projektu profilów poczty e-mail:
 

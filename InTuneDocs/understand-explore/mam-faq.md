@@ -15,8 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7447a85e03e38aa0f536ce008bae9f3c82528cec
-ms.openlocfilehash: 1ab1645a8c25bf51fc42788364e498d18c2f15d9
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: aea41c86e1fe784d6234f4ff90e299632b2a6d5f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -25,30 +26,30 @@ ms.openlocfilehash: 1ab1645a8c25bf51fc42788364e498d18c2f15d9
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) usługi Intune i ochrony jej aplikacji.
+Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) usługi Intune i ochrony aplikacji usługi Intune.
 
-## <a name="mam-basics"></a>MAM — podstawowe informacje
+## <a name="mam-basics"></a>Zarządzanie aplikacjami mobilnymi — podstawowe informacje
 
 
-**Co to jest MAM?** [Zarządzanie aplikacjami mobilnymi usługi Intune](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) obejmuje pakiet funkcji zarządzania tej usługi, który umożliwia publikowanie, wypychanie, konfigurowanie, zabezpieczanie, monitorowanie i aktualizowanie aplikacji mobilnych dla użytkowników.
+**Co to jest MAM?** [Zarządzanie aplikacjami mobilnymi (MAM) usługi Intune](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) obejmuje zestaw funkcji zarządzania usługi Intune, które umożliwiają publikowanie, wypychanie, konfigurowanie, zabezpieczanie, monitorowanie i aktualizowanie aplikacji mobilnych dla użytkowników.
 
-**Jakie są zalety ochrony aplikacji MAM?** MAM chroni dane organizacji w obrębie aplikacji. Dzięki MAM-WE aplikacją powiązaną z pracą lub szkołą zawierającą dane poufne można zarządzać z prawie każdego urządzenia, w tym z urządzenia osobistego w scenariuszach BYOD (przynieś własne urządzenie). Przy użyciu Intune MAM można zarządzać wieloma aplikacjami użytkowymi, np. aplikacjami pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
+**Jakie są zalety ochrony aplikacji MAM?** Zarządzanie aplikacjami mobilnymi pozwala chronić dane organizacji w obrębie aplikacji. Konfiguracja MAM-WE umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego urządzenia, w tym z urządzenia osobistego w scenariuszach BYOD (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
 
-**Jakie konfiguracje urządzeń obsługuje MAM?** Intune MAM obsługuje dwie konfiguracje:
-  1. **Intune MDM + MAM**: jest to pierwsza konfiguracja obsługiwana przy użyciu MAM po pierwszym wdrożeniu funkcji. Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad dotyczących MAM i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Do zarządzania aplikacjami przy użyciu usług MDM + MAM klienci powinni używać autonomicznej konsoli usługi Intune, korzystając z adresu http://manage.microsoft.com.
+**Jakie konfiguracje urządzeń obsługuje zarządzanie aplikacjami mobilnymi?** Zarządzanie aplikacjami mobilnymi usługi Intune obsługuje dwie konfiguracje:
+  1. **Intune MDM + MAM**: jest to pierwsza konfiguracja obsługiwana przy użyciu zarządzania aplikacjami mobilnymi po jego pierwszym wdrożeniu. Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Do zarządzania aplikacjami przy użyciu konfiguracji MDM + MAM klienci powinni używać autonomicznej konsoli usługi Intune, korzystając z adresu http://manage.microsoft.com.
 
-  2. **MAM bez rejestracji urządzeń**: MAM bez rejestracji urządzeń, czyli MAM-WE, umożliwia administratorom IT zarządzanie aplikacjami za pomocą zasad ochrony aplikacji i MAM na urządzeniach, które nie zostały zarejestrowane w usłudze Intune MDM. Oznacza to, że aplikacjami można zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców EMM innych firm. Aby zarządzać aplikacjami przy użyciu usługi MAM-WE, klienci powinni używać konsoli usługi Intune w portalu Azure, korzystając z adresu http://portal.azure.com.
+  2. **MAM bez rejestracji urządzeń**: Zarządzanie aplikacjami mobilnymi bez rejestracji urządzeń (MAM-WE) umożliwia administratorom IT zarządzanie aplikacjami za pomocą zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune MDM. Oznacza to, że aplikacjami można zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców EMM innych firm. Aby zarządzać aplikacjami przy użyciu konfiguracji MAM-WE, klienci powinni używać konsoli usługi Intune w portalu Azure, korzystając z adresu http://portal.azure.com.
 
 
 ## <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-**Co to są zasady ochrony aplikacji**? Zasady ochrony aplikacji to reguły, które mogą zagwarantować, że dane organizacji pozostaną bezpieczne lub nie zostaną pobrane z zarządzanej aplikacji. Zasady mogą być regułą, wymuszaną, gdy użytkownik próbuje uzyskać dostęp do danych firmowych albo zestawu akcji, które są zabronione lub monitorowane, gdy użytkownik korzysta z aplikacji, bądź je przenieść.
+**Co to są zasady ochrony aplikacji**? Zasady ochrony aplikacji to reguły, które mogą zagwarantować, że dane organizacji pozostaną bezpieczne lub nie zostaną pobrane z zarządzanej aplikacji. Zasady mogą być regułą, która jest wymuszana w przypadku próby uzyskania dostępu do danych firmowych lub ich przeniesienia przez użytkownika albo zestawem akcji, które są zabronione lub monitorowane, gdy użytkownik korzysta z aplikacji.
 
 **Jakie są przykłady zasad ochrony aplikacji?** Zobacz tematy [Android app protection policy settings](../deploy-use/android-mam-policy-settings.md) (Ustawienia zasad ochrony aplikacji systemu Android) i [iOS app protection policy settings](../deploy-use/ios-mam-policy-settings.md) (Ustawienia zasad ochrony aplikacji systemu iOS), aby uzyskać szczegółowe informacje dotyczące poszczególnych ustawień zasad ochrony aplikacji.
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikacje, którymi można zarządzać za pomocą zasad ochrony aplikacji
 
-**Którymi aplikacjami można zarządzać przy użyciu zasad ochrony aplikacji?** Każdą aplikacją obsługiwaną przez [Intune App SDK](../develop/intune-app-sdk.md) lub opakowaną za pomocą [Narzędzia opakowującego aplikacje dostępnego w usłudze Intune](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) można zarządzać przy użyciu zasad ochrony aplikacji usługi Intune. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
+**Którymi aplikacjami można zarządzać przy użyciu zasad ochrony aplikacji?** Każdą aplikacją obsługiwaną przez [zestaw SDK aplikacji usługi Intune](../develop/intune-app-sdk.md) lub opakowaną za pomocą [Narzędzia opakowującego aplikacje usługi Intune](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) można zarządzać przy użyciu zasad ochrony aplikacji usługi Intune. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
 
 **Jakie są podstawowe wymagania dotyczące użycia zasad ochrony aplikacji w aplikacji obsługującej usługę Intune?**
   1. Użytkownik końcowy musi mieć konto usługi Azure Active Directory (AAD). Zobacz temat [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md), aby dowiedzieć się, jak utworzyć użytkowników usługi Intune w usłudze Azure Active Directory.
@@ -59,18 +60,18 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
   4. Użytkownik końcowy musi zalogować się do aplikacji przy użyciu konta usługi AAD.
 
-**Jakie są dodatkowe wymagania dotyczące korzystania z [aplikacji mobilnej Outlook](https://www.microsoft.com/en-us/outlook-com/mobile/)?**
+**Jakie są dodatkowe wymagania dotyczące korzystania z [aplikacji mobilnej Outlook](https://www.microsoft.com/outlook-com/mobile/)?**
 
   1. Użytkownik końcowy musi mieć zainstalowaną na urządzeniu aplikację mobilną Outlook.
 
-  2. Użytkownik końcowy musi mieć skrzynkę pocztową usługi [Office 365 Exchange Online](https://products.office.com/en-us/exchange/exchange-online) oraz licencję powiązaną z kontem usługi Azure Active Directory.
+  2. Użytkownik końcowy musi mieć skrzynkę pocztową usługi [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) oraz licencję powiązaną z kontem usługi Azure Active Directory.
 
   >[!NOTE]
   > Aplikacja mobilna Outlook obsługuje obecnie tylko usługę Microsoft Exchange Online i nie obsługuje lokalnej instalacji programu Exchange ani usługi Exchange dedykowanej dla usługi Office 365.
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint](https://products.office.com/business/office)?**
 
-  1. Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](http://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc?ui=en-US&rs=en-US&ad=US).
+  1. Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](http://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
   2. Użytkownik końcowy musi mieć zainstalowaną na urządzeniu aplikację [OneDrive](https://onedrive.live.com/about/) i zalogować się przy użyciu konta AAD.
 
@@ -87,19 +88,19 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 ## <a name="app-protection-features"></a>Funkcje ochrony aplikacji
 
-**Co to jest obsługa wielu tożsamości?** Obsługa wielu tożsamości polega na tym, że zestaw SDK aplikacji usługi Intune może przypisywać zasady ochrony aplikacji tylko do konta służbowego lub szkolnego zarejestrowanego w aplikacji. Jeśli w aplikacji zostanie zarejestrowane konto osobiste , dane pozostaną bez zmian.
+**Co to jest obsługa wielu tożsamości?** Obsługa wielu tożsamości polega na tym, że zestaw SDK aplikacji usługi Intune może przypisywać zasady ochrony aplikacji tylko do konta służbowego zarejestrowanego w aplikacji. Jeśli w aplikacji zostanie zarejestrowane konto osobiste , dane pozostaną bez zmian.
 
-**Jaki jest cel obsługi wielu tożsamości?** Obsługa wielu tożsamości sprawia, że aplikacje dla odbiorców „firmowych” i konsumentów (tj. aplikacje pakietu Office) mogą być wprowadzane na rynek z funkcjami ochrony aplikacji usługi Intune dla kont „firmowych”.
+**Jaki jest cel obsługi wielu tożsamości?** Dzięki obsłudze wielu tożsamości zarówno aplikacje dla odbiorców „firmowych”, jak i konsumentów (tj. aplikacje pakietu Office) mogą być wprowadzane na rynek z funkcjami ochrony aplikacji usługi Intune dla kont „firmowych”.
 
-**Kiedy jest wyświetlany ekran numeru PIN?** Ekran numeru PIN usługi Intune jest wyświetlany tylko, gdy użytkownik próbuje uzyskać dostęp do danych „firmowych” w aplikacji. Na przykład w aplikacjach Word, Excel i PowerPoint zostanie on wyświetlony, gdy użytkownik końcowy będzie próbował otworzyć dokument w ramach usługi OneDrive dla Firm (przy założeniu, że pomyślnie wdrożono zasady ochrony aplikacji wymuszające użycie numeru PIN).
+**Kiedy jest wyświetlany ekran numeru PIN?** Ekran numeru PIN usługi Intune jest wyświetlany tylko wtedy, gdy użytkownik próbuje uzyskać dostęp do danych „firmowych” w aplikacji. Na przykład w aplikacjach Word, Excel i PowerPoint zostanie on wyświetlony, gdy użytkownik końcowy będzie próbował otworzyć dokument z usługi OneDrive dla Firm (przy założeniu, że pomyślnie wdrożono zasady ochrony aplikacji wymuszające użycie numeru PIN).
 
-**Jak wygląda obsługa wielu tożsamości w programie Outlook?** Ze względu na to, że w programie Outlook połączono widok poczty e-mail osobistych i „firmowych” wiadomości e-mail, aplikacja Outlook monituje o numer PIN usługi Intune podczas uruchamiania.
+**Jak wygląda obsługa wielu tożsamości w programie Outlook?** Ze względu na to, że w programie Outlook widok osobistych i „firmowych” wiadomości e-mail jest połączony, aplikacja Outlook monituje o numer PIN usługi Intune podczas uruchamiania.
 
 **Co to jest numer PIN aplikacji usługi Intune?** Osobisty numer identyfikacyjny (PIN) jest kodem dostępu służącym do weryfikacji, czy właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji.
 
-  1. **Kiedy jest wyświetlany monit o wprowadzenie numeru PIN?** Monit o wprowadzenie numeru PIN aplikacji użytkownika jest wyświetlany w usłudze Intune tylko, gdy użytkownik chce uzyskać dostęp do danych „firmowych”. W aplikacjach z obsługą wielu tożsamości, np. Word, Excel lub PowerPoint, monit o wprowadzenie numeru PIN jest wyświetlany, gdy użytkownik próbuje otworzyć dokument lub plik „firmowy”. W aplikacjach z obsługą jednej tożsamości, np. aplikacjach biznesowych usprawnionych przy użyciu Narzędzia opakowującego aplikacje dostępnego w usłudze Intune, monit o wprowadzenie numeru PIN jest wyświetlany podczas uruchamiania, ponieważ zestaw SDK aplikacji usługi Intune wie, że środowisko użytkownika w aplikacji jest zawsze „firmowe”.
+  1. **Kiedy jest wyświetlany monit o wprowadzenie numeru PIN?** Monit o wprowadzenie numeru PIN aplikacji użytkownika jest wyświetlany w usłudze Intune tylko wtedy, gdy użytkownik chce uzyskać dostęp do danych „firmowych”. W aplikacjach z obsługą wielu tożsamości, np. Word, Excel lub PowerPoint, monit o wprowadzenie numeru PIN jest wyświetlany, gdy użytkownik próbuje otworzyć dokument lub plik „firmowy”. W aplikacjach z obsługą jednej tożsamości, np. aplikacjach biznesowych usprawnionych przy użyciu Narzędzia opakowującego aplikacje dostępnego w usłudze Intune, monit o wprowadzenie numeru PIN jest wyświetlany podczas uruchamiania, ponieważ zestaw SDK aplikacji usługi Intune wie, że środowisko użytkownika w aplikacji jest zawsze „firmowe”.
 
-  2. **Czy numer PIN jest bezpieczny?** Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest niewidoczne dla zestawu SDK aplikacji usługi Intune. Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych i szkolnych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
+  2. **Czy numer PIN jest bezpieczny?** Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest niewidoczne dla zestawu SDK aplikacji usługi Intune. Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
 
   3. **Jak usługa Intune chroni numer PIN przed atakami siłowymi?** W ramach zasad numeru PIN aplikacji administrator IT może ustawić maksymalną liczbę prób uwierzytelniania numeru PIN przez użytkownika przed zablokowaniem aplikacji. Po wykonaniu pewnej liczby prób zestaw SDK aplikacji usługi Intune może wyczyścić dane „firmowe” z aplikacji.
 
@@ -128,7 +129,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 ## <a name="app-experience-on-android"></a>Środowisko aplikacji w systemie Android
 
-**Dlaczego aplikacja Portal firmy jest wymagana, by ochrona aplikacji usługi Intune była obsługiwana na urządzeniach z systemem Android?** Większość funkcji ochrony aplikacji jest wbudowanych w aplikacji Portal firmy. Rejestracja urządzeń _nie jest konieczna_, mimo że aplikacja Portal firmy jest zawsze wymagana. W przypadku usługi MAM-WE użytkownik końcowy po prostu musi mieć zainstalowaną na urządzeniu aplikację Portal firmy.
+**Dlaczego do obsługi ochrony aplikacji usługi Intune na urządzeniach z systemem Android jest wymagana aplikacja Portal firmy?** Większość funkcji ochrony aplikacji jest wbudowanych w aplikacji Portal firmy. Rejestracja urządzeń _nie jest konieczna_, mimo że aplikacja Portal firmy jest zawsze wymagana. W przypadku konfiguracji MAM-WE użytkownik końcowy po prostu musi mieć zainstalowaną na urządzeniu aplikację Portal firmy.
 
 ## <a name="app-experience-on-ios"></a>Środowisko aplikacji w systemie iOS
 
@@ -140,9 +141,4 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 - [Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi](../deploy-use/validate-mobile-application-management.md)
 - [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 - [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
