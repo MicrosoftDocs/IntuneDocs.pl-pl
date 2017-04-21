@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 32653a46d8758eac5b884f4f6f7a2e07447c1e36
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 7451b1872a848ac322db4ec485564f2ebf983f0d
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="deploy-apps-in-microsoft-intune"></a>Wdrażanie aplikacji w usłudze Microsoft Intune
@@ -48,7 +49,7 @@ Poniżej przedstawiono procedurę wdrażania aplikacji w wybranych grupach urzą
 
 5. Jeśli wdrażaną aplikację można skonfigurować przy użyciu zasad zarządzania aplikacjami mobilnymi, zostanie wyświetlona strona **Zarządzanie aplikacjami mobilnymi**. Na tej stronie możesz wybrać zasady zarządzania aplikacjami mobilnymi, które chcesz skojarzyć z tą aplikacją.
 
-    [Sprawdź, które aplikacje firmy Microsoft są zgodne z zasadami zarządzania aplikacjami mobilnymi.](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
+    [Sprawdź, które aplikacje firmy Microsoft są zgodne z zasadami zarządzania aplikacjami mobilnymi.](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx)
 
 6. Jeśli wdrażana aplikacja jest zgodna z profilami sieci VPN w usłudze Intune, zostanie wyświetlona strona **Profil sieci VPN**. Na tej stronie możesz skojarzyć aplikacje systemu iOS z wdrożonym profilem sieci VPN. Połączenie sieci VPN jest automatycznie otwierane po uruchomieniu aplikacji. Aby udostępnić profil sieci VPN, musi on mieć włączone ustawienie profilu **Na aplikację sieci VPN**.
  Aby uzyskać informacje dotyczące sposobu konfigurowania profilów sieci VPN, w tym informacje na temat sposobu kojarzenia profilów z aplikacjami, zobacz [Połączenia VPN w usłudze Microsoft Intune](vpn-connections-in-microsoft-intune.md).
@@ -72,9 +73,4 @@ Jeśli aplikacja została wdrożona na urządzeniu z systemem iOS przy użyciu u
 ## <a name="next-steps"></a>Następne kroki
 
 Po wdrożeniu aplikacji możesz monitorować jej postęp. Aby uzyskać więcej informacji, zobacz [Monitorowanie aplikacji w usłudze Microsoft Intune](monitor-apps-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

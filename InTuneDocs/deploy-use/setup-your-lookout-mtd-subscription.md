@@ -15,9 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 074af85385a843bd5fac9747abf0209a3ba92b9c
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 60dbfa644a53fec3823e1182f5dec7eb97d8b5df
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -55,12 +55,12 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 
 1. Zaloguj się do [portalu zarządzania usługi Azure AD](https://manage.windowsazure.com) i wybierz swoją subskrypcję. 
   ![Zrzut ekranu strony usługi Azure AD przedstawiający nazwę dzierżawy](../media/mtp/aad_tenant_name.png)
-2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji. 
+2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji. 
 3. Wyszukaj identyfikator grupy usługi Azure AD. Konsola usługi Lookout obsługuje 2 poziomy dostępu:  
   * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy będą mieć pełny dostęp i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
   * **Ograniczony dostęp:** użytkownicy w tej grupie nie będą mieć dostępu do kilku modułów konsoli usługi Lookout związanych z konfiguracją oraz rejestracją i będą mieć dostęp tylko do odczytu do modułu **Security Policy** (Zasady zabezpieczeń) konsoli usługi Lookout.  
 
-  Więcej informacji dotyczących uprawnień znajduje się w witrynie sieci Web [w tym artykule](https://personal.support.lookout.com/hc/en-us/articles/114094105653).
+  Więcej informacji dotyczących uprawnień znajduje się w witrynie sieci Web [w tym artykule](https://personal.support.lookout.com/hc/articles/114094105653).
 
   **Identyfikator obiektu grupy** można znaleźć na stronie **Właściwości** grupy w **konsoli zarządzania usługi Azure AD**.
 
@@ -127,7 +127,7 @@ Jeśli chcesz otrzymywać alerty e-mail dotyczące zagrożeń, zaloguj się do [
 ![Zrzut ekranu strony preferencji z wyświetlonym kontem użytkownika](../media/mtp/lookout-mtp-email-notifications.png) Jeśli nie chcesz już otrzymywać powiadomień pocztą e-mail, ustaw dla powiadomień wartość **OFF** (Wyłącz) i zapisz zmiany.
 
 ### <a name="configure-threat-classification"></a>Konfigurowanie klasyfikacji zagrożeń
-Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla urządzeń przenośnych. [Klasyfikacje zagrożeń w usłudze Lookout](http://personal.support.lookout.com/hc/en-us/articles/114094130693) mają domyślne poziomy ryzyka, które są z nimi skojarzone. Można je zmienić w dowolnym momencie zależnie od potrzeb firmy.
+Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla urządzeń przenośnych. [Klasyfikacje zagrożeń w usłudze Lookout](http://personal.support.lookout.com/hc/articles/114094130693) mają domyślne poziomy ryzyka, które są z nimi skojarzone. Można je zmienić w dowolnym momencie zależnie od potrzeb firmy.
 
 ![Zrzut ekranu przedstawiający stronę zasad wraz z zagrożeniem i klasyfikacjami](../media/mtp/lookout-mtp-threat-classification.png)
 
@@ -137,5 +137,5 @@ Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla ur
 ## <a name="watching-enrollment"></a>Obserwowanie rejestracji
 Po zakończeniu konfiguracji usługa Lookout Mobile Threat Defense rozpoczyna sondowanie usługi Azure AD pod kątem urządzeń, które odpowiadają określonym grupom rejestracji.  Informacje o zarejestrowanych urządzeniach znajdują się w module Devices (Urządzenia).  Początkowy stan urządzeń jest wyświetlany jako oczekujący.  Stan urządzenia ulega zmianie po zainstalowaniu, otwarciu i aktywowaniu aplikacji Lookout for Work na danym urządzeniu.  Aby uzyskać szczegółowe informacje na temat sposobu wypychania aplikacji Lookout for Work do urządzenia, zobacz temat [Configure and deploy Lookout for work apps](configure-and-deploy-lookout-for-work-apps.md) (Konfigurowanie i wdrażanie aplikacji Lookout for Work).
 ## <a name="next-steps"></a>Następne kroki
-[Włączanie połączenia Lookout MTP dla usługi Intune](enable-lookout-mtp-connection-in-intune.md)
+[Włączanie połączenia Lookout MTP dla usługi Intune](https://docs.microsoft.com/intune/deploy-use/enable-lookout-mtd-connection)
 

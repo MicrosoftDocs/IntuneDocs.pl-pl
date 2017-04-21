@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f66772dd318e97b9fef124776e80d9d9a4c7de7f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -30,7 +30,7 @@ Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) mo�
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
 Do oceny zgodności urządzenia można wykorzystać ustawienia zasad zgodności. Zasady dostępu warunkowego używają tej oceny do ograniczenia dostępu do określonej usługi lub zezwolenia na taki dostęp. Jeśli zasady dostępu warunkowego są stosowane w połączeniu z zasadami zgodności urządzeń, tylko zgodne urządzenia będą miały dostęp do usługi. Zasady zgodności i zasady dostępu warunkowego są wdrażane dla użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do usług, są sprawdzane pod kątem zgodności z zasadami.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Należy pamiętać, że użytkownik korzystający z urządzenia musi mieć na nim wdrożone zasady zgodności, aby urządzenie mogło zostać ocenione pod kątem zgodności.
 > Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
 
@@ -48,7 +48,7 @@ Usługa Microsoft Intune i Azure Active Directory (Azure AD) Premium działają 
 
 **Licencje usługi Azure AD Premium** można kupić jako autonomiczną usługę lub wraz z usługą Intune w ramach umowy Enterprise Agreement. Jeśli zasady dostępu warunkowego wdrożono za pomocą usługi Intune, upewnij się, że masz odpowiednie licencje usługi Azure AD Premium lub pakietu **EMS**.
 
-- Dowiedz się więcej na temat [Cennika pakietu Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) lub [Cennika usługi Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Dowiedz się więcej na temat [Cennika pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennika usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 Ponadto upewnij się, że użytkownicy, dla których planowane jest zastosowanie zasad dostępu warunkowego, są [przypisani za pomocą licencji usługi Azure AD Premium lub pakietu EMS](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
 

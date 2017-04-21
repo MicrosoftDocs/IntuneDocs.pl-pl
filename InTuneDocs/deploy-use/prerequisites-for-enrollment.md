@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: e3c3f834a80eaf5e8b992ba41b19a1d53b89fdc3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f57323fe0b093f2478d71d3f01b9c0e5ee2727eb
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -125,9 +125,9 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 
 ### <a name="to-synchronize-on-premises-users-with-azure-ad"></a>Aby zsynchronizować lokalnych użytkowników z usługą Azure AD
 
-1. [Dodaj sufiks nazwy UPN](https://technet.microsoft.com/en-us/library/cc772007.aspx) dla domeny niestandardowej w lokalnej usłudze Active Directory.
+1. [Dodaj sufiks nazwy UPN](https://technet.microsoft.com/library/cc772007.aspx) dla domeny niestandardowej w lokalnej usłudze Active Directory.
 2. Ustaw nowy sufiks nazwy UPN dla użytkowników lokalnych, których chcesz zaimportować.
-3. Uruchom [synchronizację programu Azure AD Connect](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) w celu zintegrowania lokalnych użytkowników z usługą Azure AD.
+3. Uruchom [synchronizację programu Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) w celu zintegrowania lokalnych użytkowników z usługą Azure AD.
 4. Po pomyślnym zsynchronizowaniu informacji o kontach użytkowników można przypisać licencje usługi Microsoft Intune przy użyciu [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx).
 
 ## <a name="step-6-enable-enrollment"></a>Krok 6. Włączanie rejestracji

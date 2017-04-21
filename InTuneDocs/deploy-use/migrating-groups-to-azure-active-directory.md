@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
-ms.lasthandoff: 03/11/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 2296490a8c3984e79eeeb553d90591048ed46711
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -51,9 +51,9 @@ Niektóre istniejące możliwości grup w usłudze Intune nie są dostępne w us
 ## <a name="how-to-get-ready"></a>Jak się przygotować
 
 - Zapoznaj się z poniższymi tematami dotyczącymi usługi Azure AD, aby dowiedzieć się więcej o grupach zabezpieczeń usługi Azure AD i sposobie ich działania:
-    -  [Zarządzanie dostępem do zasobów przy użyciu grup usługi Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/).
-    -  [Zarządzanie grupami w usłudze Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-manage-groups/).
-    -  [Tworzenie zaawansowanych reguł przy użyciu atrybutów](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+    -  [Zarządzanie dostępem do zasobów przy użyciu grup usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
+    -  [Zarządzanie grupami w usłudze Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
+    -  [Tworzenie zaawansowanych reguł przy użyciu atrybutów](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
 - Rozważ usunięcie przed migracją wszystkich grup usługi Intune, których już nie używasz.
 -  Upewnij się, że wszyscy administratorzy, którzy muszą tworzyć grupy, zostali dodani do roli usługi Azure AD **Administrator usługi Intune**. Zauważ, że rola administratora usługi Azure AD nie ma uprawnienia **Zarządzanie grupą**.
 -  Jeśli używasz grup z opcją **Wyklucz określonych członków**, zastanów się, czy możesz ponownie zaprojektować te grupy, tak aby wykluczenia nie były konieczne, lub czy możesz użyć reguł zaawansowanych w zapytaniu usługi Azure AD, aby osiągnąć ten sam efekt.

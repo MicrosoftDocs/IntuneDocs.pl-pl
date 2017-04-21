@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: af147a50f533e4be948261898b60c4d522a9e4eb
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: abeef923eb5c964ef1e306bbb2c25d0570959674
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -44,7 +45,7 @@ Jeśli masz już konto służbowe, możesz po prostu **zalogować się** przy u�
 ## <a name="post-sign-up-considerations"></a>Kwestie do rozważenia po utworzeniu konta
 Jeśli utworzysz konto w celu uzyskania nowej subskrypcji, wiadomość e-mail zawierająca informacje o koncie zostanie wysłana na adres e-mail podany w procesie rejestracji. Stanowi ona potwierdzenie, że Twoja subskrypcja jest aktywna.
 
-Po ukończeniu procesu tworzenia konta nastąpi przekierowanie do strony używanej do dodawania użytkowników i przypisywania im licencji przy użyciu centrum administracyjnego usługi Office 365. Jeśli będziesz korzystać tylko z kont w chmurze korzystających z Twojej domyślnej nazwy domeny onmicrosoft.com, możesz rozpocząć dodawanie użytkowników i przypisywanie licencji na tym etapie. Jednak jeśli będziesz używać niestandardowej nazwy domeny organizacji lub chcesz synchronizować informacje dotyczące kont użytkowników z lokalnej usługi Active Directory, możesz zamknąć to okno przeglądarki i przejść do kroku 2 tego przewodnika Szybki start. Dowiedz się więcej na temat [początkowej domeny onmicrosoft.com w usłudze Office 365](https://support.office.com/en-us/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A?ui=en-US&rs=en-US&ad=US)
+Po ukończeniu procesu tworzenia konta nastąpi przekierowanie do strony używanej do dodawania użytkowników i przypisywania im licencji przy użyciu centrum administracyjnego usługi Office 365. Jeśli będziesz korzystać tylko z kont w chmurze korzystających z Twojej domyślnej nazwy domeny onmicrosoft.com, możesz rozpocząć dodawanie użytkowników i przypisywanie licencji na tym etapie. Jednak jeśli będziesz używać niestandardowej nazwy domeny organizacji lub chcesz synchronizować informacje dotyczące kont użytkowników z lokalnej usługi Active Directory, możesz zamknąć to okno przeglądarki i przejść do kroku 2 tego przewodnika Szybki start. Dowiedz się więcej na temat [początkowej domeny onmicrosoft.com w usłudze Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
 
 >[!TIP]
 > Podczas następnego logowania w usłudze Intune nastąpi automatyczne przekierowanie do konsoli administracyjnej usługi Intune.
@@ -53,9 +54,4 @@ Po ukończeniu procesu tworzenia konta nastąpi przekierowanie do strony używan
 >[!div class="step-by-step"]
 
 >[&larr; **Wymagania wstępne**](.\what-to-know-before-you-start-microsoft-intune.md)     [**Ustawienia domeny** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

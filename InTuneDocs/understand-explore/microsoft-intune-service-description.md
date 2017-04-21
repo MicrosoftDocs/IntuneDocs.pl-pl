@@ -15,8 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 8e8257a426bd6b9a99e21e928b08c84f162d5da3
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 5975ba0219f464c8f5aa1735657ff3d1c186b991
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -29,7 +30,7 @@ Microsoft Intune jest usługą opartą na chmurze, która ułatwia zarządzanie 
 
 Firma Microsoft oferuje dla usługi Intune asystę przy dołączaniu w przypadku zakupu kwalifikujących się usług z odpowiednimi planami. Asysta umożliwia zdalną współpracę ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Aby uzyskać więcej informacji na temat asysty przy dołączaniu, zobacz [Opis asysty przy dołączaniu do usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
 
-Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
+Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
 
 > [!NOTE]
 > Jeśli Twoja organizacja ma konto służbowe usług Microsoft Online Services i zamierzasz kontynuować tę subskrypcję usługi Intune w środowisku produkcyjnym po zakończeniu okresu próbnego, wybierz opcję **Zaloguj** na tej stronie i uwierzytelnij się przy użyciu konta administratora globalnego Twojej organizacji. Ta akcja zagwarantuje, że Twoja wersja próbna usługi Intune zostanie połączona z Twoim istniejącym kontem służbowym.
@@ -69,13 +70,13 @@ Usługę Intune możesz skonfigurować na kilka sposobów, aby zarządzać firmo
 
 -**Autonomiczna konfiguracja usługi Intune.** Do zarządzania urządzeniami w organizacji używana jest konsola administracyjna usługi Intune oparta na sieci Web. Usługi Intune można używać poza lokalną infrastrukturą IT. Jeśli korzystasz z usługi Intune z usługami Active Directory Domain Services, możesz użyć kont użytkowników domeny, którymi zarządzasz za pomocą usług domenowych w usłudze Intune.
 
--**Usługa Intune z programem System Center Configuration Manager.** Do zarządzania komputerami i urządzeniami przenośnymi w przedsiębiorstwie używana jest konsola zarządzania programu Configuration Manager. Ta konfiguracja może ułatwić zarządzanie wszystkimi urządzeniami w organizacji za pomocą jednej konsoli — konsoli administracyjnej programu Configuration Manager. Program Configuration Manager może obsługiwać bardzo dużą liczbę urządzeń przenośnych, serwerów i komputerów. Aby uzyskać więcej informacji o programie Configuration Manager, zobacz [Hybrydowe zarządzanie urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Aby uzyskać dodatkową pomoc przy wyborze odpowiedniego rozwiązania, zobacz [Wybór między autonomicznym a hybrydowym zarządzaniem urządzeniami przenośnymi za pomocą programu Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/en-us/library/mt706478.aspx).
+-**Usługa Intune z programem System Center Configuration Manager.** Do zarządzania komputerami i urządzeniami przenośnymi w przedsiębiorstwie używana jest konsola zarządzania programu Configuration Manager. Ta konfiguracja może ułatwić zarządzanie wszystkimi urządzeniami w organizacji za pomocą jednej konsoli — konsoli administracyjnej programu Configuration Manager. Program Configuration Manager może obsługiwać bardzo dużą liczbę urządzeń przenośnych, serwerów i komputerów. Aby uzyskać więcej informacji o programie Configuration Manager, zobacz [Hybrydowe zarządzanie urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Aby uzyskać dodatkową pomoc przy wyborze odpowiedniego rozwiązania, zobacz [Wybór między autonomicznym a hybrydowym zarządzaniem urządzeniami przenośnymi za pomocą programu Configuration Manager i usługi Microsoft Intune](https://technet.microsoft.com/library/mt706478.aspx).
 
 
 ## <a name="learn-more-about-intune"></a>Więcej informacji o usłudze Intune
 Dzięki tym zasobom można dowiedzieć się więcej o usłudze Intune:
 
-- [Centrum zaufania usługi Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) zawiera informacje na temat praktyk w zakresie zabezpieczeń, ochrony prywatności i zgodności stosowanych w usłudze Intune oraz opis niektórych certyfikatów usługi Intune.
+- [Centrum zaufania usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/intune-trust-center/) zawiera informacje na temat praktyk w zakresie zabezpieczeń, ochrony prywatności i zgodności stosowanych w usłudze Intune oraz opis niektórych certyfikatów usługi Intune.
 
 - [Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
@@ -84,9 +85,4 @@ Dzięki tym zasobom można dowiedzieć się więcej o usłudze Intune:
 [Biblioteka dokumentacji programu System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx)
 
 [Co nowego w usłudze Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

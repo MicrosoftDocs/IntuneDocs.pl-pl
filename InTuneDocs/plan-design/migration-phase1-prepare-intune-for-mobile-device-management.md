@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
-ms.openlocfilehash: 2e7bcedebdf777db64a9ec90aa758822634ed435
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 4bf9bd15f3f22e0609c4f56f5651454a62dbb7a8
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -58,7 +58,7 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 -   Czy użytkownicy są ogólnie obeznani z technologiami i rozwiązaniami informatycznymi?
 
-### <a name="what-is-your-device-security-policy"></a>Jakie zasady zabezpieczeń urządzeń są używane? 
+### <a name="what-is-your-device-security-policy"></a>Jakie zasady zabezpieczeń urządzeń są używane?
 
 -   Czy jest potrzebne szyfrowanie na poziomie urządzenia?
 
@@ -84,7 +84,7 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
--   Aby bardziej szczegółowo zapoznać się z procesem oceny wymagań w zakresie zarządzania urządzeniami przenośnymi w organizacjach z różnych branż, przejrzyj te [analizy przypadków](https://customers.microsoft.com/en-US/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune).
+-   Aby bardziej szczegółowo zapoznać się z procesem oceny wymagań w zakresie zarządzania urządzeniami przenośnymi w organizacjach z różnych branż, przejrzyj te [analizy przypadków](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune).
 
 ## <a name="next-steps"></a>Następne kroki
 

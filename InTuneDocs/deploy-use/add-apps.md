@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: c294a0abaf69017b6c098a95870fc035f28d0787
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23037cdb5a474b2c62c231ac1966989902a983e1
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -34,7 +34,7 @@ Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune po�
 
 |Typ aplikacji|Szczegóły|
 |----------------|-------|
-|**Instalator Windows (&#42;.exe, &#42;.msi)**|Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć w artykule [Przełączniki wiersza polecenia dla narzędzia Instalatora Microsoft Windows](https://support.microsoft.com/en-us/kb/227091).<br><br>Wszelkie dodatkowe pliki i foldery wymagane przez program instalacyjny aplikacji muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.<br><br>W większości przypadków pliki Instalatora systemu Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają instalacji żadnych argumentów wiersza polecenia przez usługę Intune. Zajrzyj do dokumentacji aplikacji.<br><br>Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).<br><br>Ten typ aplikacji dotyczy tylko komputerów, na których uruchomiono oprogramowanie klienckie usługi Intune.|
+|**Instalator Windows (&#42;.exe, &#42;.msi)**|Ten typ aplikacji musi obsługiwać instalację dyskretną bez udziału użytkownika. Dokumentacja aplikacji powinna zawierać odpowiednie opcje wiersza polecenia do przeprowadzenia instalacji dyskretnej aplikacji (na przykład **/q**). Listę typowych opcji wiersza polecenia można znaleźć w artykule [Przełączniki wiersza polecenia dla narzędzia Instalatora Microsoft Windows](https://support.microsoft.com/kb/227091).<br><br>Wszelkie dodatkowe pliki i foldery wymagane przez program instalacyjny aplikacji muszą być dostępne w lokalizacji określonej dla plików instalacyjnych aplikacji.<br><br>W większości przypadków pliki Instalatora systemu Windows (msi) i pliki poprawek Instalatora Windows (msp) nie wymagają instalacji żadnych argumentów wiersza polecenia przez usługę Intune. Zajrzyj do dokumentacji aplikacji.<br><br>Jeśli argumenty wiersza polecenia są wymagane, muszą zostać wprowadzone jako pary nazwa=wartość (na przykład TRANSFORMS=custom_transform.mst).<br><br>Ten typ aplikacji dotyczy tylko komputerów, na których uruchomiono oprogramowanie klienckie usługi Intune.|
 |**Pakiet aplikacji dla systemu Android (&#42;.apk)**|Do wdrożenia aplikacji dla systemu Android potrzebny jest prawidłowy pakiet apk.|
 |**Pakiet aplikacji dla systemu iOS (&#42;.ipa)**|Do wdrożenia aplikacji dla systemu iOS potrzebny jest prawidłowy plik pakietu ipa.<br><br>Pakiet ipa musi być podpisany przez firmę Apple, a data wygaśnięcia w profilu inicjowania obsługi administracyjnej musi być ważna. Usługa Intune może dystrybuować aplikacje dla systemu iOS z certyfikatem przedsiębiorstwa.<br><br>Nie wszystkie aplikacje z certyfikatem deweloperów firmy Apple są obsługiwane.<br><br>Firma musi być zarejestrowana w programie dla deweloperów aplikacji systemu iOS dla przedsiębiorstw (iOS Developer Enterprise Program).<br><br>Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji systemu iOS.<br><br>Nie musisz wdrażać pliku manifestu (plist) z aplikacją.|
 |**Pakiet aplikacji systemu Windows Phone (&#42;.xap, .appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
@@ -49,7 +49,7 @@ Użyj linku zewnętrznego, jeśli masz:
 
 Aplikacje oparte na linkach zewnętrznych nie są przechowywane w magazynie w chmurze usługi Intune.
 ### <a name="managed-ios-app-from-the-app-store"></a>**Zarządzana aplikacja systemu iOS ze sklepu App Store**
-Zarządzane aplikacje systemu iOS umożliwiają zarządzanie bezpłatnymi aplikacjami ze sklepu App Store dla systemu iOS i ich wdrażanie. Zarządzane aplikacje systemu iOS można również wykorzystać do skojarzenia [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) ze [zgodnymi aplikacjami](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) i sprawdzać ich stan w konsoli administracyjnej.<br /><br />Zarządzane aplikacje dla systemu iOS nie są przechowywane w magazynie w chmurze usługi Intune.
+Zarządzane aplikacje systemu iOS umożliwiają zarządzanie bezpłatnymi aplikacjami ze sklepu App Store dla systemu iOS i ich wdrażanie. Zarządzane aplikacje systemu iOS można również wykorzystać do skojarzenia [zasad zarządzania aplikacjami mobilnymi](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) ze [zgodnymi aplikacjami](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx) i sprawdzać ich stan w konsoli administracyjnej.<br /><br />Zarządzane aplikacje dla systemu iOS nie są przechowywane w magazynie w chmurze usługi Intune.
 
 > [!TIP]
 > Opcje dla urządzeń przenośnych nie są dostępne, dopóki usługa Intune [nie zostanie ustawiona jako źródło MDM](prerequisites-for-enrollment.md).

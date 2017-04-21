@@ -14,9 +14,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: ad1133d17f8d64c79c08437b914ae28e00cae638
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: eaf30c8a59013af6359743227edc8aa6709577c5
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -57,7 +57,7 @@ W tym artykule opisano sposób konfigurowania i wdrażania aplikacji Lookout for
 
 1. Upewnij się, że na urządzeniu skonfigurowano **zarządzanie systemem iOS**. Aby uzyskać instrukcje dotyczące sposobu konfigurowania urządzenia pod kątem zarządzania systemem iOS, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
-2. **Ponownie podpisz** aplikację Lookout for Work systemu iOS. Usługa Lookout dystrybuuje swoją aplikację Lookout for Work systemu iOS poza sklepem App Store systemu iOS. **Przed dystrybucją aplikacji** należy ją ponownie podpisać za pomocą certyfikatu dewelopera przedsiębiorstwa systemu iOS. Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacji Lookout for Work systemu iOS, zobacz [Proces ponownego podpisywania aplikacji Lookout for Work systemu iOS](https://personal.support.lookout.com/hc/en-us/articles/114094038714) w witrynie usługi Lookout.
+2. **Ponownie podpisz** aplikację Lookout for Work systemu iOS. Usługa Lookout dystrybuuje swoją aplikację Lookout for Work systemu iOS poza sklepem App Store systemu iOS. **Przed dystrybucją aplikacji** należy ją ponownie podpisać za pomocą certyfikatu dewelopera przedsiębiorstwa systemu iOS. Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacji Lookout for Work systemu iOS, zobacz [Proces ponownego podpisywania aplikacji Lookout for Work systemu iOS](https://personal.support.lookout.com/hc/articles/114094038714) w witrynie usługi Lookout.
 
 3. Włącz uwierzytelnianie za pomocą usługi Azure Active Directory dla użytkowników systemu iOS, wykonując poniższe czynności:
   1.  Zaloguj się do [portalu zarządzania usługi Azure Active Directory](https://manage.windowsazure.com) i przejdź do strony aplikacji.
@@ -67,13 +67,13 @@ W tym artykule opisano sposób konfigurowania i wdrażania aplikacji Lookout for
   4.  Dodaj dodatkowy identyfikator URI przekierowania: **&lt;companyportal://kod/>**, a po nim zakodowaną w adresie URL wersję Twojego oryginalnego identyfikatora URI przekierowania.
   5.  Dodaj **Uprawnienia delegowane** do Twojej aplikacji.
 
-  Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie natywnej aplikacji klienckiej](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+  Aby uzyskać szczegółowe informacje, zobacz [Konfigurowanie natywnej aplikacji klienckiej](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
 
-4. Przekaż ponownie podpisany plik ipa, jak opisano w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Ustaw minimalną wersję systemu operacyjnego na iOS 8.0 lub nowszy.
+4. Przekaż ponownie podpisany plik ipa, jak opisano w temacie [Dodawanie aplikacji dla urządzeń przenośnych w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Ustaw minimalną wersję systemu operacyjnego na iOS 8.0 lub nowszy.
 
   ![Zrzut ekranu przedstawiający stronę aplikacji w konsoli administratora usługi Intune z wyświetloną aplikacją Lookout for Work na liście aplikacji](../media/mtp/ios-app-uploaded-intune.png)
 
-5. Utwórz zasady konfiguracji zarządzanej aplikacji, jak opisano w temacie [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+5. Utwórz zasady konfiguracji zarządzanej aplikacji, jak opisano w temacie [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
 
   ![Zrzut ekranu przedstawiający Kreatora tworzenia nowych zasad z wyróżnionymi zasadami konfiguracji aplikacji systemu iOS 8.0 lub nowszego](../media/mtp/ios-app-config.png)
 

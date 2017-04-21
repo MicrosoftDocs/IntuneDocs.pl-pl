@@ -15,8 +15,9 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d87cbc82b55c4c7615decf8d37d59e2194de9922
-ms.openlocfilehash: 59e376202ee268a9b99c017f813a7ef870e79548
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0325f60e83b6e339c96b38b36465f53d6ee5421b
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -89,7 +90,7 @@ Nowo utworzona grupa zostanie wyświetlona na liście **Grupy** w obszarze roboc
     > Obecnie w przypadku grupy zawierającej członków z określonych grup zabezpieczeń lub grup kierowników oraz wykluczenia członków z określonych grup początkowo dołączeni członkowie zostaną usunięci. Aby utworzyć grupę, w której będą znajdować się dołączeni i wykluczeni członkowie, zaleca się utworzenie najpierw grupy nadrzędnej, do której będą należeć dołączeni członkowie. Następnie należy utworzyć grupę podrzędną dla tej grupy nadrzędnej. W nowej grupie podrzędnej należy utworzyć listę wykluczonych członków. Następnie należy użyć tej grupy podrzędnej do zarządzania zasadami usługi Intune, profilami i dystrybucją aplikacji.
 
     > [!NOTE]
-    > W usłudze Azure Portal możesz utworzyć grupy oparte na kierownikach będących przełożonymi użytkowników. Jest to grupa typu dynamicznego, której członkowie zmieniają się wraz z dodawaniem lub usuwaniem pracowników w zespole danego kierownika w usłudze Azure Active Directory. Sposób tworzenia grupy kierownika na platformie Azure opisano w artykule [Using attributes to create advanced rules](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) (Tworzenie zaawansowanych reguł przy użyciu atrybutów) w sekcji **To configure a group as a “Manager” group** (Aby skonfigurować grupę jako grupę kierownika).
+    > W usłudze Azure Portal możesz utworzyć grupy oparte na kierownikach będących przełożonymi użytkowników. Jest to grupa typu dynamicznego, której członkowie zmieniają się wraz z dodawaniem lub usuwaniem pracowników w zespole danego kierownika w usłudze Azure Active Directory. Sposób tworzenia grupy kierownika na platformie Azure opisano w artykule [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) (Tworzenie zaawansowanych reguł przy użyciu atrybutów) w sekcji **To configure a group as a “Manager” group** (Aby skonfigurować grupę jako grupę kierownika).
 
 4.  Na stronie **Zdefiniuj członkostwo bezpośrednie** dołącz lub wyklucz poszczególnych użytkowników, klikając pozycję **Przeglądaj**. Jeśli wybierzesz użytkowników, którzy nie znajdują się w podanej grupie nadrzędnej, zostaną oni automatycznie dodani do grupy nadrzędnej. W dolnej części okna dialogowego **Wybieranie członków** znajduje się opcja ręcznego dodawania użytkownika. Jest to przydatne, jeśli chcesz dodać użytkownika, który nie ma jeszcze zarejestrowanego urządzenia.
 
@@ -151,9 +152,4 @@ Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość 
 
 > [!NOTE]
 > Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
