@@ -9,9 +9,9 @@ ms.topic: hub-page
 title: "Dokumentacja usługi Microsoft Intune | Microsoft Docs"
 description: "Dowiedz się, jak korzystać z usługi Microsoft Intune."
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 1f8b03315c6026a60ef25b1ee6946d4186c82b08
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
+ms.openlocfilehash: af6af39a041582bd93bac6aad551881be4cf0291
+ms.lasthandoff: 04/24/2017
 
 ---
 <div id="main" class="v2">
@@ -451,7 +451,7 @@ ms.lasthandoff: 04/14/2017
                     <a href="#manage-plan">Planowanie wdrożenia</a>
                     <ul id="manage-plan" class="cardsC">
                         <li>
-                            <a href="/intune/plan-design/section-1-determine-deployment-goals-objectives-challenges">
+                            <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -461,8 +461,8 @@ ms.lasthandoff: 04/14/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Określenie celów i wyzwań</h3>
-                                            <p>Określ zakres celów i wyzwań, którym będzie trzeba sprostać w toku wdrażania.</p>
+                                            <h3>Obsługiwane urządzenia i przeglądarki</h3>
+                                            <p>Przeczytaj szczegółowe informacje o urządzeniach i przeglądarkach obsługiwanych przez usługę.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -476,12 +476,12 @@ ms.lasthandoff: 04/14/2017
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-deployments-identify.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-deployments-plan.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Identyfikowanie scenariuszy przypadków użycia</h3>
-                                            <p>Identyfikując własne scenariusze przypadków użycia odnoszące się do wdrażania, przejrzyj przykładowe przypadki użycia. </p>
+                                            <h3>Przewodnik planowania wdrożenia, projektowania i implementacji</h3>
+                                            <p>Utwórz plan wdrożenia, projekt, zainicjuj obsługę usługi Intune i przeprowadź wdrożenie w środowisku produkcyjnym.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -489,18 +489,18 @@ ms.lasthandoff: 04/14/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/plan-design/section-4-develop-a-rollout-plan">
+                            <a href="/intune/plan-design/intune-mdm-migration-guide">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-deployments-plan.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-deployments-identify.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Opracowywanie planu wdrażania</h3>
-                                            <p>Określ grupy docelowe wdrażania usługi Intune w organizacji, a także przedział czasu na wdrożenie dla każdej grupy.</p>
+                                            <h3>Przewodnik migracji</h3>
+                                            <p>Szczegółowe instrukcje umożliwiające przejście przez różne etapy migracji od innego dostawcy usług MDM do usługi Intune.</p>
                                         </div>
                                     </div>
                                 </div>
