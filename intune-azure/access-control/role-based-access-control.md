@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -81,9 +81,7 @@ Nowa rola zostanie wyświetlona na liście w bloku **Role**.
 ## <a name="how-to-assign-a-role"></a>Jak przypisać rolę
 
 1. W bloku **Role** obciążenia **Kontrola dostępu** wybierz rolę wbudowaną lub niestandardową, którą chcesz przypisać.
-2. W bloku <*nazwa roli*> — **właściwości** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
-    >[!TIP]
-    >W tym bloku możesz również edytować i usuwać istniejące role.
+2. W bloku <*nazwa roli*> — **właściwości** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**. W tym bloku możesz również edytować i usuwać istniejące role.
 3. W następnym bloku wybierz pozycję **Przypisz**.
 4. W bloku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
     - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
