@@ -118,7 +118,6 @@
 #### [Układ ekranu głównego dla systemu iOS](configure-devices/home-screen-settings-for-ios.md)
 #### [Powiadomienia aplikacji dla systemu iOS](configure-devices/app-notification-settings-for-ios.md)
 #### [Urządzenia udostępnione dla systemu iOS](configure-devices/shared-device-settings-for-ios.md)
-#### [Filtr zawartości sieci Web dla systemu iOS](configure-devices/web-content-filter-settings-for-ios.md)
 
 ### [Konfigurowanie ograniczeń dotyczących urządzeń](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
@@ -194,7 +193,8 @@
 ## [Co to jest dostęp warunkowy?](conditional-access/what-is-conditional-access.md)
 ## Instrukcje
 ### [Instalowanie lokalnego łącznika programu Exchange](conditional-access/install-intune-on-premises-exchange-connector.md)
-### [Tworzenie zasad dostępu warunkowego](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Tworzenie i przypisz zasady dostępu warunkowego](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Monitorowanie zgodność z dostępem warunkowym](conditional-access/monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online.md)
 
 # Kontrola dostępu
 ## [Co to jest kontrola dostępu oparta na rolach?](access-control/role-based-access-control.md)
