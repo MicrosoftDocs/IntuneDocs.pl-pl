@@ -78,8 +78,6 @@ Możliwa jest ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchan
 - System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy i program Android for Work
 - System iOS 8.0 i nowsze
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 **Nowoczesne uwierzytelnianie** umożliwia logowanie do klientów pakietu Microsoft Office oparte na bibliotece Active Directory Authentication Library (ADAL).
 
 -   Uwierzytelnianie oparte na bibliotece ADAL umożliwia klientom pakietu Office korzystanie z uwierzytelniania za pomocą przeglądarki (nazywanego też uwierzytelnianiem pasywnym). W celu uwierzytelnienia użytkownik jest kierowany do strony sieci Web logowania.

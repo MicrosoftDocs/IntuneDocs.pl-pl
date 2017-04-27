@@ -83,10 +83,7 @@ Obsługiwane są następujące funkcje:
 -   Klienci poczty korzystający z protokołu Exchange ActiveSync, np. Gmail w systemie Android 4 lub nowszym.
 -   Klienci poczty korzystający z protokołu Exchange ActiveSync na **urządzeniach z programem Android for Work:** na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako wymaganą instalację. 
 
-<!---
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
---->
-> [!NOTE] 
+> [!NOTE]
 > Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana.
 
 ## <a name="support-for-pcs"></a>Obsługa komputerów
