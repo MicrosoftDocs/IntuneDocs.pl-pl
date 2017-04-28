@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: f153e3a58f9655bd1e36094f292098c9f55742b6
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -41,7 +42,6 @@ Aby uzyskać szczegółowe informacje, zobacz [Ograniczanie dostępu do poczty e
 - **Zasady dostępu do zasobów:** te zasady działają razem, ułatwiając użytkownikom uzyskiwanie dostępu do plików i zasobów potrzebnych im do skutecznej pracy, niezależnie od miejsca, w którym się znajdują.
 Aby uzyskać więcej informacji, zobacz [Zapewnianie dostępu do zasobów firmy przy użyciu usługi Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Aby uzyskać pełną listę zasad usługi Intune, zobacz [Informacje o zasadach usługi Microsoft Intune](microsoft-intune-policy-reference.md).
 
@@ -212,9 +212,4 @@ Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożon
 ### <a name="where-can-i-find-help-troubleshooting-policies"></a>Gdzie mogę znaleźć pomoc w rozwiązywaniu problemów dotyczących zasad?
 
 Zobacz [Rozwiązywanie problemów dotyczących zasad w usłudze Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: dbc5f1b106df17aa8875997330dbfbb04a81f82f
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 02e54d4ae2ffa860fb95725c74fdff913e88365b
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -40,13 +41,13 @@ Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy
 
 Zarejestrowani użytkownicy uzyskują aplikacje, naciskając następujące kafelki na ekranie Aplikacje w aplikacji Portal firmy:
 
-- Kafelek **Wszystkie aplikacje** pozwala przejść do listy wszystkich aplikacji na karcie WSZYSTKIE [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com).
+- Kafelek **Wszystkie aplikacje** pozwala przejść do listy wszystkich aplikacji na karcie WSZYSTKIE [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com).
 
 - Kafelek **Polecane aplikacje** pozwala przejść na kartę POLECANE w witrynie sieci Web Portal firmy.
 
 - Kafelek **Kategorie** pozwala przejść na kartę KATEGORIE w witrynie sieci Web Portal firmy.
 
- 
+
 ![Ekran aplikacji Portal firmy iOS](./media/ios-cp-app-main-apps-screen.png)
 
 Aby uzyskać informacje dotyczące sposobu dodawania aplikacji i umieszczania ich w tych kafelkach, zobacz [Dodawanie aplikacji dla zarejestrowanych urządzeń do usługi Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md).
@@ -55,9 +56,4 @@ Aby uzyskać informacje dotyczące sposobu dodawania aplikacji i umieszczania ic
 [Jak użytkownicy systemu Android uzyskują aplikacje](how-your-android-users-get-their-apps.md)
 
 [Jak użytkownicy systemu Windows uzyskują aplikacje](how-your-windows-users-get-their-apps.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

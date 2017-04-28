@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4b6d8b0a63d707631e3f0e231b2e9b40f2609cf
-ms.openlocfilehash: 1d8109fca8170ad127f6377918d7c0313ba26d78
-ms.lasthandoff: 03/24/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: ea57a51f2855dea416ad4a76e657e1846ffe41f1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -69,9 +69,9 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
 
 ## <a name="add-a-device-enrollment-manager"></a>Dodawanie menedżera rejestracji urządzeń
 
-1.  Upewnij się, że użytkownik, którego chcesz dodać do konta DEM, już istnieje. Aby dodać użytkownika, zaloguj się do [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i wykonaj instrukcje zawarte w temacie [Pojedyncze lub zbiorcze dodawanie użytkowników do usługi Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1.  Upewnij się, że użytkownik, którego chcesz dodać do konta DEM, już istnieje. Aby dodać użytkownika, zaloguj się do [portalu usługi Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) i wykonaj instrukcje zawarte w temacie [Pojedyncze lub zbiorcze dodawanie użytkowników do usługi Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora.
+2.  Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com), korzystając z poświadczeń administratora.
 
 3.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
 
@@ -88,7 +88,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Usuwanie menedżera rejestracji urządzeń z usługi Intune
 
-1.  Zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora.
+1.  Zaloguj się do [portalu administracyjnego usługi Microsoft Intune](https://manage.microsoft.com), korzystając z poświadczeń administratora.
 
 2.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
 

@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: bb0fe422999246fd40dae16299cf3154b7d7f97b
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 44af7e7805843eeb6a2112afc89057c10c26f835
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -55,7 +55,7 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 6.  **Przekaż aplikację do usługi Intune**<br>
     Aby udostępnić aplikację użytkownikom końcowym, przekaż podpisany plik aplikacji oraz certyfikat podpisywania kodu.
 
-    1.  W [konsoli administracyjnej usługi Intune](http://manage.microsoft.com) kliknij pozycję **Administracja** &gt; **Windows Phone**.
+    1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) kliknij pozycję **Administracja** &gt; **Windows Phone**.
 
     2.  Kliknij pozycję **Przekaż podpisany plik aplikacji** i zaloguj się przy użyciu swojego identyfikatora administratora usługi Intune.
 

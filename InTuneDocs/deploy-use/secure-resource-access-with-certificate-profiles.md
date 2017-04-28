@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 9cf53cb240ba14317fbb680ad4f4c40c8320506d
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -36,8 +37,6 @@ Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem si
  -  Program Android for Work
  -  Windows 8.1 i nowsze
  -  System Windows Phone 8.1 lub nowszy
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 3. Utwórz profile certyfikatów, tak aby poszczególne urządzenia żądały certyfikatu do użytku podczas uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi — zgodnie z opisem w temacie [Configure Intune certificate profiles](configure-intune-certificate-profiles.md) (Konfigurowanie profilów certyfikatów usługi Intune). Dla urządzeń korzystających z następujących platform można utworzyć i wdrożyć **profil certyfikatu PKCS #12 (PFX)** *albo* **profil certyfikatu protokołu SCEP**:
 
@@ -62,9 +61,4 @@ Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfik
 - [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md)
 - [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md)
 - [Konfigurowanie profilów certyfikatów usługi Intune](configure-intune-certificate-profiles.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

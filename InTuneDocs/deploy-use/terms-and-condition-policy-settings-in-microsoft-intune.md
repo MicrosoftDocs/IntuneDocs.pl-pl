@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: a6d5f19b1d5f5bac3cd5e6d8bc445d765d703de0
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 177485a0b09a2b0213a293914799a34a3bfa1136
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Możesz utworzyć i wdrożyć wiele zasad obejmujących różne warunki i postan
 
 ## <a name="create-a-terms-and-conditions-policy"></a>Tworzenie zasad dotyczących warunków i postanowień
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
 
     ![Zrzut ekranu zasad dotyczących warunków i postanowień](./media/pol-sa-terms-conditions.png)
 
@@ -54,7 +54,7 @@ Możesz utworzyć i wdrożyć wiele zasad obejmujących różne warunki i postan
 
 ## <a name="deploy-a-terms-and-conditions-policy"></a>Wdrażanie zasad dotyczących warunków i postanowień
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
 
 2.  Z listy **Zasady dotyczące warunków i postanowień** wybierz zasady, które chcesz wdrożyć, a następnie kliknij pozycję **Zarządzaj wdrożeniem**.
 
@@ -64,7 +64,7 @@ Możesz utworzyć i wdrożyć wiele zasad obejmujących różne warunki i postan
 
 ## <a name="monitor-a-terms-and-conditions-policy"></a>Monitorowanie zasad dotyczących warunków i postanowień
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
 
 2.  W oknie **Tworzenie nowego raportu** kliknij pozycję **Wyświetl raport**. Zostanie otwarty raport ze szczegółowymi informacjami o tym, którzy użytkownicy zaakceptowali wdrożone warunki i postanowienia.
 
@@ -73,7 +73,7 @@ Podczas edytowania istniejących zasad dotyczących warunków i postanowień mo�
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Praca z wieloma wersjami warunków i postanowień
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycje **Zasady** &gt; **Warunki i postanowienia**.
 
 2.  Wybierz zasady dotyczące warunków i postanowień, które chcesz edytować, a następnie kliknij pozycję **Edytuj**.
 
