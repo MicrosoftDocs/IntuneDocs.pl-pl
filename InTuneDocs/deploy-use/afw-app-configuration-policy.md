@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
 ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -24,8 +25,6 @@ ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurowanie aplikacji programu Android for Work przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Zasady konfiguracji aplikacji mobilnych w usłudze Microsoft Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację. Aplikacja może na przykład wymagać, aby użytkownicy określili:
 
@@ -76,9 +75,4 @@ Po uruchomieniu wdrożonej aplikacji na urządzeniu zostaną uruchomione ustawie
 
 > [!TIP]
 > Dla każdej aplikacji należy wdrożyć tylko jedną zasadę konfiguracji do użytkownika.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

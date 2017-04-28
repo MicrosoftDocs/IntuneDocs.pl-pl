@@ -58,8 +58,6 @@ Przed utworzeniem profilu certyfikatu protokołu Simple Certificate Enrollment P
 
 -  System Windows Phone 8.1 lub nowszy
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 2.  Dodaj zasady **profilu zaufanego certyfikatu**.
 
     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).

@@ -15,8 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: f35a6da93e48141489b89e62b37b473d885479cf
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: c4023007f993436e0d7628cce52f78a1127c88f8
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -50,7 +51,7 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 |**Wymagaj szyfrowania na kartach pamięci**|Wymaga szyfrowania danych przechowywanych w pamięci zewnętrznej, np. na kartach SD (w obsługiwanych urządzeniach).
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
 
--   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na każdym urządzeniu [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](http://support.microsoft.com/kb/3013816)
+-   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na każdym urządzeniu [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](https://support.microsoft.com/kb/3013816)
 
 -   W przypadku włączenia tego ustawienia dla urządzeń z systemem Windows 8.1 wszyscy użytkownicy urządzeń muszą mieć konto Microsoft.
 
@@ -82,9 +83,4 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 31b7ff2b9644f47107199f0f1d237847169c3143
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -57,7 +57,7 @@ Zasady ochrony aplikacji tworzy się w witrynie Azure Portal. Jeśli używasz wi
 
 Wykonaj poniższe kroki, aby utworzyć zasady ochrony aplikacji:
 
-1. Przejdź do witryny [Azure Portal](http://portal.azure.com) i podaj swoje poświadczenia.
+1. Przejdź do witryny [Azure Portal](https://portal.azure.com) i podaj swoje poświadczenia.
 
 2. Wybierz opcję **Więcej usług**, a następnie wpisz „Intune”.
 
@@ -109,7 +109,7 @@ Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie s�
 
 Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikacji możesz dodawać do usługi Intune aplikacje biznesowe. Umożliwia to definiowanie zasad ochrony aplikacji biznesowych przy użyciu zestawu SDK MAM bez konieczności żądania pełnych uprawnień do wdrażania aplikacji.
 
-> [!TIP] 
+> [!TIP]
 > Aplikacje biznesowe możesz również dodawać do usługi Intune podczas realizacji przepływu pracy [zestawu SDK aplikacji usługi Intune](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
 
 > [!IMPORTANT]
@@ -127,13 +127,13 @@ Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikac
 
 ### <a name="to-add-lob-apps-windows"></a>Aby dodać aplikacje biznesowe (Windows)
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Podczas tworzenia nowych zasad ochrony aplikacji musisz z listy rozwijanej platform wybrać system Windows 10.
 
 1.  W bloku Dodawanie zasad wybierz pozycję **Aplikacje dozwolone** lub **Aplikacje wykluczone**, aby otworzyć blok Aplikacje dozwolone lub Aplikacje wykluczone.
 
     > [!NOTE]
-    > 
+    >
     - **Aplikacje dozwolone**: są to aplikacje, które muszą stosować się do tych zasad.
     - **Aplikacje wykluczone**: te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
 <br></br>

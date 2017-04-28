@@ -14,9 +14,9 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: a0ae4d74ad99adcfab596eb0c441c845fbca3a9e
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: abba595672fa88efc022128ec8751cb27d14b089
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -50,7 +50,7 @@ Rozwianie obaw sprawi, że wdrożenie będzie płynniejsze. Mamy listę spraw, k
 
 * __Miej indywidualne podejście.__ W przypadku zapewnienia instrukcji, które nie są specyficzne dla danego wdrożenia, użytkownicy końcowi mogą mieć wrażenie, że ich doświadczenia nie zostały przemyślane. Korzystając z tego [możliwego do dostosowania szablonu rejestracji użytkowników końcowych w usłudze Intune przeznaczonego dla administratorów IT](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c), można utworzyć własne instrukcje dotyczące rejestrowania przeznaczone dla użytkowników końcowych.
 
-* __Znajdź różne sposoby komunikacji.__ Podobnie jak w przypadku [różnych stylów uczenia](http://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) użytkownicy mają preferowane sposoby korzystania z informacji. W przypadku użytkowników, który wolą wideo od dokumentacji, oferujemy m.in. [wersje wideo procedur rejestracji różnych typów urządzeń](https://channel9.msdn.com/Series/IntuneEnrollment) w witrynie Channel 9. Te filmy wideo są dostępne do osadzenia bezpośrednio we własnej [witrynie programu SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581) lub do pobrania jako kopia lokalna — w postaci filmu wideo lub tylko ścieżki dźwiękowej.
+* __Znajdź różne sposoby komunikacji.__ Podobnie jak w przypadku [różnych stylów uczenia](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) użytkownicy mają preferowane sposoby korzystania z informacji. W przypadku użytkowników, który wolą wideo od dokumentacji, oferujemy m.in. [wersje wideo procedur rejestracji różnych typów urządzeń](https://channel9.msdn.com/Series/IntuneEnrollment) w witrynie Channel 9. Te filmy wideo są dostępne do osadzenia bezpośrednio we własnej [witrynie programu SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581) lub do pobrania jako kopia lokalna — w postaci filmu wideo lub tylko ścieżki dźwiękowej.
 
 * __Bądź świadomy.__ Wrażenia użytkowników końcowych będą mieć wpływ na Twoją produktywność, a zrozumienie ich doświadczeń ułatwi rozwiązywanie problemów użytkowników, którzy się do Ciebie zwrócą. Zrozumienie skąd użytkownicy końcowi uzyskują swoje aplikacje może znacznie ułatwić diagnozowanie występujących problemów oraz przyspieszyć ich rozwiązywanie.
 

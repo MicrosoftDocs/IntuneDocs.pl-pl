@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 2a1a9bb4e49e997a6f152cadcf0c7a75b553cb42
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 5c57a069fc9d2ca561954f50cbefa21b13a563d1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -58,7 +58,7 @@ Jeśli w firmie są wymagane grupy urządzeń przenośnych w celu ułatwienia za
 
 Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
 
   ![Tworzenie profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
 
@@ -85,7 +85,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Dodawanie urządzenia z systemem iOS do rejestracji przy użyciu Asystenta ustawień
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) przejdź do pozycji **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie urządzenia należące do firmy** &gt; **Wszystkie urządzenia**, a następnie wybierz polecenie **Dodaj urządzenia**.
 
    Urządzenia można dodać na dwa sposoby:
 
@@ -128,7 +128,7 @@ Z listy dostępnych profilów wybierz profil, który ma zostać przypisany do do
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Eksportowanie profilu do wdrożenia na urządzeniach z systemem iOS
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych** i wybierz profil urządzeń, który ma być wdrażany na urządzeniach przenośnych.
 
 2. Na pasku zadań kliknij przycisk **Eksportuj**. Skopiuj i zapisz adres w polu **Adres URL profilu**. Możesz przekazać go później przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
 
