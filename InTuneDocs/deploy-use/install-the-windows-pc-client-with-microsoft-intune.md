@@ -15,9 +15,9 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2b3041019a7fe5a1ed7421401b36a72321af6cea
-ms.openlocfilehash: 0498aebe8e06314cb6f63f3f4def7011a3badf64
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 19cfb242fbd1be613b38c8aa06c12b741bc6cd74
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -37,7 +37,7 @@ Powyższa seria pobrań zmniejsza wpływ na przepustowość sieci i skraca do mi
 
 Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie instalują oprogramowanie klienckie usługi Intune, wymagają, aby administratorzy IT pobrali oprogramowanie, które następnie zostanie wdrożone u użytkowników końcowych.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt; **Pobieranie oprogramowania klienckiego**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt;  **Pobieranie oprogramowania klienckiego**.
 
   ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
 
@@ -106,7 +106,7 @@ Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako cz�
 
 ## <a name="instruct-users-to-self-enroll"></a>Instruowanie użytkowników odnośnie samodzielnej rejestracji
 
-Użytkownicy instalują oprogramowanie klienckie usługi Intune, przechodząc do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com). Konkretne informacje, które widzą użytkownicy w portalu sieci Web, różnią się w zależności od urzędu certyfikacji MDM oraz platformy lub wersji systemu operacyjnego komputera użytkownika.
+Użytkownicy instalują oprogramowanie klienckie usługi Intune, przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com). Konkretne informacje, które widzą użytkownicy w portalu sieci Web, różnią się w zależności od urzędu certyfikacji MDM oraz platformy lub wersji systemu operacyjnego komputera użytkownika.
 
 Jeśli użytkownikom nie przypisano licencji usługi Intune lub nie ustawiono usługi Intune jako urzędu certyfikacji zarządzania urządzeniami przenośnymi organizacji, opcje rejestracji nie są widoczne dla użytkowników.
 

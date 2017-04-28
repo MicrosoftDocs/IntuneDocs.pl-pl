@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: df1a9b21cd7114c2eebfeb114edf161c4a0e9ef3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 660d0c69fc09c6ec8b82185b3808269ef4bb6852
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Aby włączyć zarządzanie urządzeniami z programem Android for Work, należy 
 Jeśli usługa ta nie została jeszcze skonfigurowana, przygotuj się do zarządzania urządzeniami przenośnymi, [ustawiając urząd zarządzania urządzeniami przenośnymi](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8#enable-device-enrollment) na usługę **Microsoft Intune** i konfigurując zarządzanie urządzeniami przenośnymi.
 
 2. **Konfigurowanie powiązania programu Android for Work**<br>
-   Jako administrator usługi Intune otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com) i wybierz kolejno pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Android for Work**, a następnie kliknij pozycję **Konfiguruj**, aby otworzyć witrynę programu Android for Work w usłudze Google Play. Spowoduje to otwarcie nowej karty w przeglądarce.
+   Jako administrator usługi Intune otwórz [konsolę administracyjną usługi Microsoft Intune](https://manage.microsoft.com) i wybierz kolejno pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Android for Work**, a następnie kliknij pozycję **Konfiguruj**, aby otworzyć witrynę programu Android for Work w usłudze Google Play. Spowoduje to otwarcie nowej karty w przeglądarce.
 
 3. **Logowanie do usługi Google**<br>
    Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Jest to konto Google udostępnione administratorom IT Twojej organizacji, które jest używane do zarządzania aplikacjami i ich publikowania w konsoli Play for Work.
@@ -59,7 +59,7 @@ Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. K
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Jak usunąć powiązanie konta programu Android for Work
 
 1. **Usuwanie powiązania programu Android for Work**<br>
-    Jako administrator otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com), wybierz pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Android for Work** i kliknij pozycję **Usuń powiązanie**.
+    Jako administrator otwórz [konsolę administracyjną usługi Microsoft Intune](https://manage.microsoft.com), wybierz pozycje **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Android for Work** i kliknij pozycję **Usuń powiązanie**.
 
 2. **Wyrażanie zgody na usunięcie powiązania programu Android for Work**<br>
   Kliknij przycisk **Tak**, aby usunąć powiązanie i wyrejestrować wszystkie urządzenia z programem Android for Work z usługi Intune.

@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 39dab717810aa5f900cbb4f4371491b05de1ecd1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -89,7 +89,7 @@ Jeśli ustawiono zasady dla ustawień **Zainstaluj program Endpoint Protection**
 |**Monitoruj działanie plików i programów na komputerach**|Umożliwia monitorowanie plików przychodzących i wychodzących oraz działania programów na komputerach. To ustawienie pozwala na monitorowanie przez program Endpoint Protection uruchamianych plików i programów oraz informowanie o ich działaniach lub działaniach wykonywanych na nich.<br /><br />Zalecana wartość: **Tak**|
 |**Pliki monitorowane**|Umożliwia określenie, czy mają być monitorowane tylko pliki przychodzące, tylko pliki wychodzące, czy wszystkie pliki.<br /><br />Zalecana wartość: **Monitoruj wszystkie pliki**|
 |**Włącz monitorowanie zachowania**|Umożliwia programowi Endpoint Protection usługi Microsoft Intune sprawdzanie określonych wzorców podejrzanej aktywności na komputerach klienckich.<br /><br />Zalecana wartość: **Tak**|
-|**Włącz system inspekcji sieci**|Włącza system inspekcji sieci (NIS) na komputerach klienckich. System NIS korzysta z sygnatur znanych zagrożeń dostępnych w [Centrum firmy Microsoft ds. ochrony przed złośliwym oprogramowaniem](http://go.microsoft.com/fwlink/?LinkId=234249) , aby ułatwić wykrycie i zablokowanie ruchu sieciowego złośliwego oprogramowania.<br /><br />Zalecana wartość: **Tak**|
+|**Włącz system inspekcji sieci**|Włącza system inspekcji sieci (NIS) na komputerach klienckich. System NIS korzysta z sygnatur znanych zagrożeń dostępnych w [Centrum firmy Microsoft ds. ochrony przed złośliwym oprogramowaniem](https://go.microsoft.com/fwlink/?LinkId=234249) , aby ułatwić wykrycie i zablokowanie ruchu sieciowego złośliwego oprogramowania.<br /><br />Zalecana wartość: **Tak**|
 
   ![Ustawienia ochrony w czasie rzeczywistym programu Endpoint Protection](./media/pol-sa-pc-policy-realtime.png)
 

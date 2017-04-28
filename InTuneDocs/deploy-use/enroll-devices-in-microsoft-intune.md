@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: 8f18f9ff2c32bb24b68fa987a8aad990b911a549
-ms.lasthandoff: 03/11/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 2a35387cdc2ebeb3c83fa043a8b2c6583fccdbc9
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -30,7 +30,7 @@ Rejestrowanie urządzeń, w tym komputerów z systemem Windows, pozwala na zarz�
 
 Organizacje korzystające z programu [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune) (lokalnie lub w chmurze) mogą używać prostszych metod zarządzania usługi Intune, w których nie jest wymagana rejestracja urządzeń. Za pomocą [oprogramowania klienckiego usługi Intune](#manage-windows-pcs-with-intune) można również zarządzać komputerami z systemem Windows.
 
-Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej platformy. Aby zablokować możliwość rejestrowania urządzeń, zaloguj się do [portalu administracyjnego usługi Microsoft Intune](http://manage.microsoft.com), korzystając z poświadczeń administratora. Wybierz pozycję **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **Reguły rejestracji**, a następnie wyczyść pola wyboru odpowiadające platformom, które chcesz zablokować.
+Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej platformy. Aby zablokować możliwość rejestrowania urządzeń, zaloguj się do [portalu administracyjnego usługi Microsoft Intune](https://manage.microsoft.com), korzystając z poświadczeń administratora. Wybierz pozycję **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **Reguły rejestracji**, a następnie wyczyść pola wyboru odpowiadające platformom, które chcesz zablokować.
 
 ## <a name="overview-of-device-enrollment-methods"></a>Przegląd metod rejestracji urządzeń
 
