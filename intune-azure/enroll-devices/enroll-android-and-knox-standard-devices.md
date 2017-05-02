@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: b664620f424f9ef612d17beb810564dbdd68ff79
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: b2cbabea781840df0a2a283f803dc76520590aba
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,6 +28,8 @@ ms.lasthandoff: 03/22/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Usługa Intune umożliwia zarządzanie urządzeniami z systemem Android, w tym urządzeniami z systemem Samsung Knox Standard. Aby włączyć zarządzanie urządzeniami, użytkownicy muszą zarejestrować urządzenia, pobierając aplikację Portal firmy usługi Intune, która jest dostępna w usłudze Google Play, a następnie otwierając aplikację i postępując zgodnie z instrukcjami w celu zarejestrowania. Po dodaniu urządzeń z systemem Android do zarządzania można [tworzyć zasady zgodności](https://docs.microsoft.com/intune-azure/set-device-compliance/create-a-compliance-policy-for-android), [zarządzać aplikacjami](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-management) itd.
+
+Urządzenia z systemem Samsung KNOX Standard są teraz obsługiwane w przypadku zarządzania wieloma użytkownikami przez usługę Intune. Oznacza to, że użytkownicy końcowi mogą zalogować się na urządzeniu lub wylogować się z niego przy użyciu poświadczeń usługi Azure AD, a urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane. Użytkownicy końcowi po zalogowaniu otrzymują dostęp do aplikacji, a także są stosowane wobec nich zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.
 
 ## <a name="prerequisite"></a>Wymaganie wstępne
 

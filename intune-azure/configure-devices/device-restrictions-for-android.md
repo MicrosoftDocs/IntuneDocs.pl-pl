@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/29/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
-ms.openlocfilehash: 009c6491b8ce457a371f5db31de3f122fa41fb95
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 3ba986b624e602f05eb6ab25ec30e9d58173dbd8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -42,6 +42,7 @@ ms.lasthandoff: 03/30/2017
 |**Przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.|Nie|Tak|
 |**Asystent głosowy**|Umożliwia korzystanie z oprogramowania asystenta głosowego na urządzeniu.|Nie|Tak|
 |**YouTube**|Umożliwia korzystanie z aplikacji YouTube na urządzeniu.|Nie|Tak|
+|**Urządzenia udostępnione**|Konfigurowanie zarządzanego urządzenia z rozwiązaniem Samsung KNOX Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu lub wylogować się z niego przy użyciu poświadczeń usługi Azure AD, a urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane.<br>Użytkownicy końcowi po zalogowaniu otrzymują dostęp do aplikacji, a także są stosowane wobec nich zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.|Nie|Tak|
 
 ## <a name="password"></a>Hasło
 
@@ -53,11 +54,18 @@ ms.lasthandoff: 03/30/2017
 |**Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**|Określa liczbę minut braku aktywności przed automatycznym zablokowaniem urządzenia.|Tak|Tak|
 |**Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**|Określa liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia.|Tak|Tak|
 |**Dni do wygaśnięcia hasła**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|Tak|
-|**Wymagany typ hasła**|Określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych.|Tak|Tak|
+|**Wymagany typ hasła**|Określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych. Wybierz spośród opcji:<br><br>    -     **Ustawienie domyślne urządzenia**<br>-     **Zabezpieczenia biometryczne na niskim poziomie**<br>    -     **Co najmniej numeryczne**<br>    -     **Złożona wartość liczbowa** (powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone)<sup>1</sup><br>    -     **Co najmniej alfabetyczne**<br>    -     **Co najmniej alfanumeryczne**<br>    -     **Co najmniej alfanumeryczne z symbolami**|Tak|Tak|
 |**Zapobiegaj ponownemu używaniu poprzednich haseł**|Uniemożliwia użytkownikowi końcowemu utworzenie hasła, które było wcześniej używane.|Tak|Tak|
 |**Odblokowywanie za pomocą odcisku palca**|Umożliwia korzystanie z odcisku palca do odblokowania obsługiwanych urządzeń.|Nie|Tak|
 |**Blokada Smart Lock i inni agenci zaufania**|Umożliwia sterowanie funkcją Smart Lock na zgodnych urządzeniach z systemem Android (tylko Samsung KNOX Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji (np. gdy zostało podłączone do danego urządzenia Bluetooth lub znajduje się w pobliżu tagu NFC). Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.|Tak (wersja 5.0 i nowsze)|Nie|
 |**Szyfrowanie**|Wymaga szyfrowania plików na urządzeniu.|Tak|Tak|
+
+<sup>1</sup>Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na urządzeniach docelowych do najnowszej wersji.
+
+W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego przypisania do urządzenia z systemem Android w wersji starszej niż 5.0 wystąpią opisane poniżej konsekwencje.
+- Jeśli w urządzeniu uruchomiona jest aplikacja Portal firmy w wersji wcześniejszej niż 1704, do urządzenia nie będą mieć zastosowania żadne zasady dotyczące numeru PIN, a w portalu usługi Intune będzie wyświetlany błąd.
+- Jeśli aplikacja Portal firmy została zaktualizowana do wersji 1704, w urządzeniu zostanie zastosowany tylko prosty numer PIN. To ustawienie nie jest obsługiwane w wersjach systemu Android wcześniejszych niż 5.0. W portalu usługi Intune nie jest wyświetlany błąd.
+
 
 ## <a name="google-play-store"></a>Sklep Google Play
 

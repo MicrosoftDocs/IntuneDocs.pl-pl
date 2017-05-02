@@ -14,9 +14,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 771aed4e1c57171183b9a9ea7d9e0f702dc1859c
-ms.openlocfilehash: f6014c5500b05762d123b2285ef859d67382e402
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 1d9bd55a8abee4175d2e71727d7ff18274defd3d
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -25,21 +25,21 @@ ms.lasthandoff: 04/06/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Skorzystaj z jednej z następujących metod konfigurowania usługi rejestracji urządzeń z systemem Windows:
+Ten temat ułatwia administratorom IT uproszczenie rejestracji urządzeń z systemem Windows dla użytkowników.  Urządzenia z systemem Windows można rejestrować bez żadnych dodatkowych czynności, ale możesz ułatwić użytkownikom tę rejestrację.
 
-- [**Automatyczna rejestracja w systemie Windows 10 przy użyciu usługi Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)
- -  Ta metoda jest dostępna tylko dla urządzeń z systemem Windows 10.
- -  Użycie tej metody wymaga usługi Azure Active Directory Premium.
- -  Jeśli nie wybrano włączenia automatycznego rejestrowania, należy użyć metody rejestracji dla systemów Windows 8.1 i Windows Phone 8.1.
+O tym, jak można uprościć proces rejestrowania urządzenia z systemem Windows, decydują dwie kwestie:
+- **Czy korzystasz z usługi Azure Active Directory w wersji Premium?** <br>Usługa [Azure AD w wersji Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) jest częścią planu Enterprise Mobility + Security i innych planów licencjonowania.
+- **Jakie wersje klientów systemu Windows będą rejestrowane?** <br>Urządzenia z systemem Windows 10 można rejestrować automatycznie, dodając konto służbowe. Starsze wersje należy rejestrować przy użyciu aplikacji Portal firmy.
 
-- [**Rejestracja bez automatycznego rejestrowania w usłudze Azure AD Premium**](#enable-windows-enrollment-without-azure-ad-premium)
- - Ta metoda służy do rejestrowania urządzeń z systemem Windows 8.1 lub Windows Phone 8.1.
- - Jeśli nie chcesz używać usługi Azure Active Directory (AD) Premium, możesz użyć tej metody dla urządzeń z systemem Windows 8.1 i nowszym.
+||**Usługa Azure AD w wersji Premium**|**Inna usługa AD**|
+|----------|---------------|---------------|  
+|**Windows 10**|[Rejestrowanie automatyczne](#enable-windows-10-automatic-enrollment) |[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-azure-ad-premium)|
+|**Starsze wersje systemu Windows**|[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-azure-ad-premium)|[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-azure-ad-premium)|
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-automatic-enrollment"></a>Włączanie rejestrowania urządzeń z systemem Windows bez rejestrowania automatycznego
-Można umożliwić użytkownikom instalowanie i rejestrowanie urządzeń bez automatycznego rejestrowania w usłudze Azure AD Premium. Gdy przypiszesz licencję do konta użytkownika, użytkownik może dodać takie konto do urządzenia z systemem Windows i wyrazić zgodę na zarejestrowanie urządzenia w środowisku zarządzania. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera.
+Możesz pozwolić użytkownikom na rejestrowanie ich urządzeń bez automatycznego rejestrowania w usłudze Azure AD w wersji Premium. Gdy licencje zostaną już przypisane, użytkownicy będą mogli rejestrować się po dodaniu konta służbowego na swoich urządzeniach osobistych lub połączeniu używanych przez nich urządzeń firmowych z usługą Azure AD. Utworzenie aliasu systemu DNS (typ rekordu CNAME) ułatwia użytkownikom rejestrowanie swoich urządzeń. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera Intune.
 
 **Krok 1. Tworzenie rekordów CNAME** (opcjonalnie)<br>
 Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
