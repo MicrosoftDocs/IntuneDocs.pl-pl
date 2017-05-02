@@ -16,16 +16,16 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 7edbba3a86213db71e41bd0d0de6c5d285025b8b
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: b0d0ad102942c65ac3988ea4659b34b397289126
+ms.lasthandoff: 04/19/2017
 
 ---
 
 # <a name="set-up-a-telecom-expense-management-service-in-intune-azure-preview"></a>Konfigurowanie usługi zarządzania wydatkami telekomunikacyjnymi w wersji zapoznawczej usługi Intune Azure
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Usługa Intune umożliwia zarządzanie wydatkami telekomunikacyjnymi poniesionymi w związku z użyciem danych na urządzeniach przenośnych należących do firmy. W tym celu usługa Intune została zintegrowana z rozwiązaniem Datalert do zarządzania wydatkami telekomunikacyjnymi firmy Saaswedo. Datalert to oprogramowanie służące do zarządzania wydatkami telekomunikacyjnymi w czasie rzeczywistym, które umożliwia zarządzanie użyciem danych telekomunikacyjnych oraz uniknięcie kosztownego i nieoczekiwanego nadwyżkowego użycia transmisji danych i roamingu dla urządzeń zarządzanych przez usługę Intune. 
+Usługa Intune umożliwia zarządzanie wydatkami telekomunikacyjnymi poniesionymi w związku z użyciem danych na urządzeniach przenośnych należących do firmy. W tym celu usługa Intune została zintegrowana z rozwiązaniem Datalert do zarządzania wydatkami telekomunikacyjnymi firmy Saaswedo. Datalert to oprogramowanie służące do zarządzania wydatkami telekomunikacyjnymi w czasie rzeczywistym, które umożliwia zarządzanie użyciem danych telekomunikacyjnych oraz uniknięcie kosztownego i nieoczekiwanego nadwyżkowego użycia transmisji danych i roamingu dla urządzeń zarządzanych przez usługę Intune.
 
 Integracja usługi Intune z rozwiązaniem Datalert umożliwia centralne ustawianie, monitorowanie i wymuszanie limitów użycia danych w roamingu i połączeniach krajowych za pomocą zautomatyzowanych alertów generowanych po przekroczeniu zdefiniowanych progów. Możesz skonfigurować usługę tak, aby stosować różne akcje do konkretnych osób lub grup użytkowników końcowych, w tym wyłączać funkcję roamingu, gdy użytkownicy przekraczają wartość progową. Raporty, które zawierają informacje dotyczące użycia danych i informacje monitorowania, są dostępne w konsoli zarządzania usługi Datalert.
 
@@ -85,7 +85,7 @@ Po wykonaniu kroku 1 połączenie powinno zostać automatycznie włączone, a w 
 
 3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
 
-4. W bloku **Konfiguracja urządzeń** wybierz pozycję **Instalacja** > **Telecom Expense Management**. 
+4. W bloku **Konfiguracja urządzeń** wybierz pozycję **Instalacja** > **Telecom Expense Management**.
 
    Odszukaj stan połączenia **Aktywne** w górnej części strony.
 
@@ -97,7 +97,7 @@ Aby mieć pewność, że zbierane są dane o użyciu tylko z linii należących 
 
 #### <a name="define-device-categories-and-device-groups-mapped-to-the-categories"></a>Definiowanie kategorii urządzeń i grup urządzeń mapowanych na kategorie
 
-W zależności od potrzeb organizacji należy utworzyć co najmniej dwie kategorie urządzeń (na przykład Firmowe i Osobiste) i utworzyć dynamiczne grupy urządzeń dla każdej z kategorii. W razie potrzeby możesz utworzyć więcej kategorii. 
+W zależności od potrzeb organizacji należy utworzyć co najmniej dwie kategorie urządzeń (na przykład Firmowe i Osobiste) i utworzyć dynamiczne grupy urządzeń dla każdej z kategorii. W razie potrzeby możesz utworzyć więcej kategorii.
 
 Te kategorie będą wyświetlane użytkownikom podczas rejestrowania. W zależności od wybranej kategorii zarejestrowane urządzenie zostanie przeniesione do odpowiedniej grupy urządzeń. Aby dowiedzieć się, jak utworzyć kategorie urządzeń, zobacz [Mapowanie urządzeń na grupy](https://docs.microsoft.com/intune-azure/enroll-devices/how-to-use-device-group-mapping).
 
@@ -109,7 +109,7 @@ Wykonaj następujące czynności, aby utworzyć aplikację Datalert w usłudze I
 
 1. W bloku **Intune** witryny Azure Portal wybierz pozycję **Zarządzaj aplikacjami**.
 
-2. W bloku **Zarządzanie aplikacjami** wybierz pozycję **Zarządzaj** > **Aplikacje**. 
+2. W bloku **Zarządzanie aplikacjami** wybierz pozycję **Zarządzaj** > **Aplikacje**.
 
 3. Wybierz pozycję **Dodaj**, aby dodać aplikację.
 
@@ -129,7 +129,7 @@ Wykonaj następujące czynności, aby utworzyć aplikację Datalert w usłudze I
 
 1. Wybierz aplikację Datalert dla systemu iOS utworzoną w poprzednim kroku.
 
-2. W bloku **Aplikacje** przejdź do pozycji **Zarządzaj** > **Przypisania**. 
+2. W bloku **Aplikacje** przejdź do pozycji **Zarządzaj** > **Przypisania**.
 
 3. Wybierz pozycję **Wybierz grupy** i postępuj zgodnie z instrukcjami, aby wybrać grupę urządzeń firmowych.
 
@@ -137,9 +137,9 @@ Wykonaj następujące czynności, aby utworzyć aplikację Datalert w usłudze I
 
   ![Zrzut ekranu przedstawiający blok Dodawanie zasad](../media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Dodanie firmowych płatnych linii telefonicznych do konsoli usługi Datalert 
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Dodanie firmowych płatnych linii telefonicznych do konsoli usługi Datalert
 
-Usługi Intune i Datalert zostały skonfigurowane i mogą się ze sobą komunikować. Teraz należy dodać firmowe płatne linie telefoniczne do konsoli usługi Datalert oraz zdefiniować progi i akcje dla każdego naruszenia użycia połączeń komórkowych lub roamingu. 
+Usługi Intune i Datalert zostały skonfigurowane i mogą się ze sobą komunikować. Teraz należy dodać firmowe płatne linie telefoniczne do konsoli usługi Datalert oraz zdefiniować progi i akcje dla każdego naruszenia użycia połączeń komórkowych lub roamingu. Można firmowe płatne linie telefoniczne dodać do konsoli Datalert ręcznie lub zezwolić na ich dodanie automatyczne po zarejestrowaniu urządzenia w usłudze Intune.
 
 Aby ustawić te elementy, przejdź do strony [Konfigurowanie usługi Datalert na potrzeby usługi Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup) i postępuj zgodnie z instrukcjami kreatora konfiguracji na karcie **Ustawienia**.
 
@@ -147,6 +147,11 @@ Aby ustawić te elementy, przejdź do strony [Konfigurowanie usługi Datalert na
 
 
 Usługa Datalert jest teraz aktywna i rozpoczyna monitorowanie użycia danych oraz wyłączanie danych sieci komórkowej i roamingu na urządzeniach, które przekraczają skonfigurowane limity użycia.
+
+## <a name="client-enrollment-experience"></a>Środowisko rejestracji klienta
+Informacje na temat środowiska rejestracji klienta zawierają następujące tematy:
+-    [Rejestrowanie urządzenia z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+-    [Rejestrowanie urządzenia z systemem Android w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turning-off-the-datalert-service"></a>Wyłączanie usługi Datalert
 

@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 03/28/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
-ms.openlocfilehash: bddd8c0dc74835f74a71af1d900d43d84aab894c
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: b3cf8d8f60482be2d4d903d1b2c00c1a3a392b73
+ms.lasthandoff: 04/20/2017
 
 
 ---
-# <a name="whats-new-in-microsoft-intune---march-2017"></a>Co nowego w usłudze Microsoft Intune — marzec 2017
+# <a name="whats-new-in-microsoft-intune---april-2017"></a>Co nowego w usłudze Microsoft Intune — kwiecień 2017
 Poznaj nowości w tej wersji usługi Microsoft Intune. Dowiedz się o nadchodzących zmianach, na które należy się przygotować, jak również uzyskaj informacje o poprzednich wersjach.
 
 > [!Note]
@@ -29,68 +29,55 @@ Poznaj nowości w tej wersji usługi Microsoft Intune. Dowiedz się o nadchodzą
 
 ## <a name="new-capabilities"></a>Nowe możliwości
 
-### <a name="support-for-skycure"></a>Obsługa aplikacji Skycure
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
 
-Dostęp urządzeń przenośnych do zasobów firmy można obecnie kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez aplikację Skycure. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
+Firma Microsoft ulepsza środowisko logowania aplikacji Portalu firmy w usłudze Intune dla systemu Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.
 
-- Ochrona fizyczna
-- Ochrona sieciowa
-- Ochrona aplikacji
-- Ochrona przed lukami w zabezpieczeniach
+Zrzuty ekranu przedstawiające poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia można znaleźć na stronie [Co nowego w interfejsie aplikacji](whats-new-in-intune-app-ui.md).
 
-Zasady dostępu warunkowego usług EMS można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez aplikację Skycure włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Przy użyciu tych zasad można zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia. Aby uzyskać więcej informacji, zobacz [Łącznik Skycure Mobile Threat Defense](/intune/deploy-use/skycure-mobile-threat-defense-connector).
+### <a name="myapps-available-for-managed-browser---822308-822303--"></a>Usługa MyApps dostępna dla przeglądarki Managed Browser <!--822308, 822303-->
 
-### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nowe środowisko użytkownika aplikacji Portal firmy dla systemu Android <!--621622-->
+Usługa Microsoft MyApps ma teraz lepsze wsparcie w ramach przeglądarki Managed Browser. Użytkownicy przeglądarki Managed Browser, którzy nie są przeznaczeni do zarządzania, zostaną przeniesieni bezpośrednio do usługi MyApps, w której będą mogli uzyskać dostęp do aprowizowanych przez administratora aplikacji SaaS. Użytkownicy, którzy są przeznaczeni do zarządzania w usłudze Intune, nadal będą mogli uzyskiwać dostęp do usługi MyApps z wbudowanej zakładki przeglądarki Managed Browser.
 
-Interfejs użytkownika aplikacji Portal firmy dla systemu Android zostanie zaktualizowany w celu zapewnienia bardziej nowoczesnego wyglądu i działania oraz udoskonalenia środowiska pracy. Znaczące zmiany:
+### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431-971473--"></a>Nowe ikony przeglądarki Managed Browser i aplikacji Portal firmy <!--918433, 918431, 971473-->
 
-- Kolory: nagłówki kart w aplikacji Portal firmy mają kolor wybrany przez zespół IT.
-- Aplikacje: na karcie **Aplikacje** zaktualizowano przyciski **Polecane aplikacje** i **Wszystkie aplikacje**.
-- Wyszukiwanie: przycisk **Wyszukaj** na karcie **Aplikacje** jest teraz przestawnym przyciskiem akcji.
-- Poruszanie się w obrębie aplikacji: w widoku **Wszystkie aplikacje** jest dostępny widok z kartami **Polecane**, **Wszystkie** i **Kategorie**, które ułatwiają nawigację.
-- Pomoc techniczna: zaktualizowano karty **Moje urządzenia** i **Kontakt z działem IT** w celu poprawy czytelności.
+Przeglądarka Managed Browser otrzymuje zaktualizowane ikony aplikacji dla systemów Android i iOS. Nowa ikona będzie zawierać zaktualizowany identyfikator Intune, dzięki czemu będzie bardziej spójna z innymi aplikacjami w rozwiązaniu Enterprise Mobility + Security (EM+S). Nowa ikona programu Managed Browser jest widoczna na [stronie dotyczącej nowości w interfejsie użytkownika aplikacji usługi Intune](whats-new-in-intune-app-ui.md).
 
-Aby uzyskać więcej informacji o tych zmianach, zobacz artykuł [Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune](whats-new-in-intune-app-ui.md).
+Portal firmy również otrzymuje zaktualizowane ikony aplikacji dla systemów Android, iOS i Windows, aby poprawić spójność z innymi aplikacjami w rozwiązaniu EM+S. Ikony te będą stopniowo wydawane na różnych platformach od kwietnia do końca maja.
 
-### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Urządzenia niezarządzane mają dostęp do przypisanych aplikacji <!--664691-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Wskaźnik postępu logowania w aplikacji Portal firmy dla systemu Android <!--953374-->
 
-W ramach zmian wyglądu witryny internetowej Portal firmy użytkownicy systemów iOS i Android będą mogli instalować na swoich urządzeniach niezarządzanych aplikacje przypisane im jako „dostępne bez rejestracji”. Przy użyciu poświadczeń usługi Intune użytkownicy mogą zalogować się do witryny internetowej Portal firmy i wyświetlić listę przypisanych im aplikacji. Pakiety aplikacji oznaczonych jako „dostępne bez rejestracji” są udostępniane do pobrania za pośrednictwem witryny internetowej Portal firmy. Ta zmiana nie ma wpływu na aplikacje, które wymagają rejestracji na potrzeby instalacji, ponieważ użytkownicy, którzy zechcą zainstalować te aplikacje, zobaczą monit o zarejestrowanie ich urządzenia.
+Aktualizacja aplikacji Portal firmy dla systemu Android pokazuje wskaźnik postępu logowania, gdy użytkownik uruchomi lub wznowi działanie aplikacji. Wskaźnik przechodzi przez nowe stany, od „Trwa łączenie...” przez „Trwa logowanie...” do „Trwa sprawdzanie wymagań dotyczących bezpieczeństwa...”, zanim zezwoli użytkownikowi na dostęp do aplikacji. Nowe ekrany aplikacji Portal firmy dla systemu Android są widoczne na [stronie dotyczącej nowości w interfejsie użytkownika aplikacji usługi Intune](whats-new-in-intune-app-ui.md).
 
-### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podpisywanie skryptu dla aplikacji Portal firmy systemu Windows 10<!--941642-->
+### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blokowanie dostępu aplikacji do usługi SharePoint Online <!-- 679339 -->
 
-Jeśli musisz pobrać i ładować bezpośrednio aplikację Portal firmy dla systemu Windows 10, możesz teraz korzystać ze skryptu upraszczającego i usprawniającego proces podpisywania aplikacji w organizacji.   Aby pobrać skrypt i instrukcje dotyczące korzystania z niego, zobacz temat [Microsoft Intune Signing Script](https://aka.ms/win10cpscript) (Microsoft Intune – skrypt podpisywania) dla aplikacji Portal firmy systemu Windows 10 w galerii TechNet. Więcej szczegółów dotyczących tego powiadomienia można znaleźć w artykule [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Aktualizowanie aplikacji Portal firmy dla systemu Windows 10) na blogu zespołu pomocy technicznej usługi Intune.
+Teraz możesz tworzyć zasady dostępu warunkowego na podstawie aplikacji, aby blokować dostęp do usługi [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online) aplikacjom, do których nie zastosowano zasad ochrony aplikacji. W tym scenariuszu dostępu warunkowego na podstawie aplikacji można określić aplikacje, które mają mieć dostęp do usługi SharePoint Online, za pomocą portalu Azure.
 
+### <a name="bulk-enroll-windows-10-devices----747607---"></a>Rejestracja zbiorcza urządzeń z systemem Windows 10 <!-- 747607 -->
+
+Teraz możesz łączyć dużą liczbę urządzeń z aktualizacją systemu Windows 10 dla twórców z usługami Azure Active Directory oraz Intune, korzystając z aplikacji Windows Configuration Designer (WCD). Aby włączyć [zbiorcze rejestrowanie w usłudze MDM](/intune/deploy-use/bulk-enroll-windows) dla dzierżawy usługi Azure AD, utwórz pakiet aprowizacyjny, który dołącza urządzenia do dzierżawy usługi Azure AD, przy użyciu aplikacji Windows Configuration Designer, i zastosuj pakiet do firmowych urządzeń, które chcesz zarejestrować i którymi chcesz zarządzać w sposób zbiorczy. Po zastosowaniu pakietu urządzenia dołączają do usługi Azure AD, rejestrują się w usłudze Intune i umożliwiają logowanie użytkownikom usługi Azure AD.  Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady oraz wymagane aplikacje. Scenariusze samoobsługowe i scenariusze użycia witryny internetowej Portal firmy nie są w tej chwili obsługiwane.
 
 ## <a name="notices"></a>Uwagi
 
-### <a name="support-for-ios-103"></a>Obsługa systemu iOS 10.3
+### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Bezpośredni dostęp do scenariuszy rejestracji firmy Apple <!--951869-->
 
-Wersja systemu iOS 10.3 została udostępniona użytkownikom 27 marca 2017 r. Wszystkie istniejące scenariusze dotyczące zarządzania urządzeniami przenośnymi i aplikacjami mobilnymi w usłudze Intune mają zastosowanie do najnowszej wersji systemu operacyjnego firmy Apple. Przewidujemy, że wszystkie obecnie dostępne funkcje usługi Intune do zarządzania urządzeniami z systemem iOS będą nadal działać po uaktualnieniu urządzeń i aplikacji do systemu iOS 10.3 przez użytkowników.
+Na kontach usługi Intune utworzonych po styczniu 2017 roku włączono bezpośredni dostęp do scenariuszy rejestracji firmy Apple przy użyciu obciążenia Rejestruj urządzenia w portalu Azure w wersji zapoznawczej. Wcześniej podgląd rejestracji firmy Apple był dostępny tylko z poziomu linków w klasycznym portalu Intune. Konta usługi Intune utworzone przed styczniem 2017 będą wymagać przeprowadzenia jednorazowej migracji, zanim funkcje te będą dostępne w systemie Azure. Harmonogram migracji nie został jeszcze ogłoszony, ale szczegółowe informacje zostaną udostępnione najszybciej, jak będzie to możliwe. Zdecydowanie zalecamy utworzenie konta w wersji próbnej w celu przetestowania nowego środowiska pracy w przypadku, gdy istniejące konto nie ma dostępu do podglądu.
 
-Obecnie nie występują żadne znane problemy. W przypadku wystąpienia jakichkolwiek problemów związanych z systemem operacyjnym iOS w wersji 10.3 zachęcamy do kontaktu z [zespołem pomocy technicznej usługi Intune](/intune/troubleshoot/contact-assisted-phone-support-for-microsoft-intune).
+### <a name="whats-coming-for-appx-in-intune-on-azure----1000270---"></a>Elementy dostępne wkrótce dla pakietu AppX w usłudze Intune na platformie Azure <!-- 1000270 -->
 
-### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Ulepszona obsługa systemu Android dla użytkowników w Chinach <!--720444-->
+W ramach migracji do usługi Intune na platformie Azure wprowadzamy następujące zmiany w pakiecie AppX:
 
-Ponieważ Sklep Google Play jest niedostępny w Chinach, aplikacje na urządzenia z systemem Android należy uzyskiwać z chińskich platform oferujących aplikacje. Aplikacja Portal firmy będzie obsługiwać ten przepływ pracy, przekierowując użytkowników systemu Android w Chinach na strony umożliwiające pobranie aplikacji Portal firmy i Outlook z lokalnych sklepów z aplikacjami. Pozwoli to udoskonalić środowisko pracy w przypadku włączenia zasad dostępu warunkowego — zarówno dla zarządzania urządzeniami przenośnymi, jak i zarządzania aplikacjami mobilnymi. Aplikacje Portal firmy i Outlook dla systemu Android są dostępne w następujących chińskich sklepach z aplikacjami:
+1. Dodanie nowego typu aplikacji pakietu AppX w klasycznej konsoli usługi Intune, który można wdrożyć tylko do urządzeń zarejestrowanych w usłudze MDM.
+2. Zmiana przeznaczenia istniejącego typu aplikacji pakietu AppX celem nakierowania wyłącznie na komputery zarządzanie za pośrednictwem komputerowego agenta usługi Intune.
+3. Skonwertowanie wszystkich istniejących pakietów AppX do pakietów AppX usługi MDM w ramach migracji.
 
-- [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-- [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
-- [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-- [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-- [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 
-### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Najlepsze rozwiązanie: upewnij się, że aplikacje portalu firmy są aktualne<!--879465-->
+Zmiany nie wpływają na żadne istniejące wdrożenia w urządzeniach zarządzanych za pośrednictwem komputerowego agenta usługi Intune. Niemniej po migracji nie będzie można wdrażać tych migrowanych pakietów AppX na żadnych nowych urządzeniach zarządzanych za pośrednictwem komputerowego agenta usługi Intune, które nie zostały wcześniej ustawione jako urządzenia docelowe.
 
-W grudniu 2016 roku opublikowaliśmy aktualizację włączającą wymuszanie uwierzytelniania wieloskładnikowego (MFA, multi-factor authentication) dla grupy użytkowników rejestrujących urządzenie z systemem iOS, Android, Windows 8.1 i nowszym lub Windows Phone 8.1 i nowszym. Ta funkcja nie może działać bez niektórych podstawowych wersji aplikacji Portal firmy dla systemów Android (w wersji 5.0.3419.0 lub nowszej) i iOS (w wersji 2.1.17 lub nowszej).
+#### <a name="what-action-do-i-need-to-take"></a>Jakie działania muszę podjąć?
 
-Firma Microsoft nieustannie ulepsza usługę Intune poprzez dodawanie nowych funkcji do konsoli i aplikacji Portal firmy na wszystkich obsługiwanych platformach. W rezultacie firma Microsoft wydaje tylko poprawki dotyczące problemów znalezionych w bieżącej wersji aplikacji Portal firmy. Dlatego zaleca się używanie najnowszych wersji aplikacji Portal firmy w celu uzyskania możliwie najwygodniejszego sposobu pracy użytkownika.
-
->[!Tip]
-> Użytkownicy powinni skonfigurować swoje urządzenia do automatycznego aktualizowania aplikacji z właściwego sklepu z aplikacjami. Jeśli aplikacja Portal firmy systemu Android została udostępniona w udziale sieciowym, jej najnowszą wersję możesz pobrać z [Centrum pobierania firmy Microsoft](https://www.microsoft.com/download/details.aspx?id=49140).
-
-### <a name="microsoft-teams-is-now-enabled-for-mam-on-ios-and-android"></a>Obszar roboczy Microsoft Teams jest teraz włączony dla usługi MAM w systemach iOS i Android
-
-Firma Microsoft poinformowała o ogólnej dostępności obszaru roboczego Microsoft Teams. Zaktualizowane aplikacje Microsoft Teams dla systemów iOS i Android są teraz włączone wraz z funkcjami zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune, możesz więc zaoferować swoim zespołom możliwość swobodnej pracy na różnych urządzeniach przy jednoczesnym stałym zapewnieniu ochrony konwersacji i danych firmowych. Aby uzyskać więcej informacji, zobacz [Anons Microsoft Teams](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) na blogu rozwiązania Enterprise Mobility and Security.
+Po migracji należy ponownie przekazać pakiet AppX jako komputerowy pakiet AppX, jeśli chcesz przeprowadzać nowe wdrożenia na komputerach. Aby dowiedzieć się więcej, zobacz [Appx changes in Intune on Azure](https://aka.ms/appxchange) (Zmiany w pakietach AppX w usłudze Intune na platformie Azure) na blogu zespołu pomocy technicznej usługi Intune.  
 
 
 ## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nowości w publicznej wersji zapoznawczej środowiska administracyjnego usługi Intune na platformie Azure <!--736542-->
@@ -117,7 +104,7 @@ Firma Apple ogłosiła, że począwszy od wiosny 2017 roku będzie egzekwować p
 
 ### <a name="see-also"></a>Zobacz także
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plan platformy w chmurze](http://www.microsoft.com/en-us/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Plan platformy w chmurze](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 * [Co nowego w wersji zapoznawczej na platformie Azure](https://docs.microsoft.com/intune-azure/introduction/whats-new)
 * [Co nowego w interfejsie użytkownika aplikacji Portal firmy](https://docs.microsoft.com/intune/whats-new/whats-new-in-company-portal-ui)
 * [Archiwum nowości](whats-new-archive.md)

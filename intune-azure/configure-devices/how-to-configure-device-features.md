@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: dd53e547a8f834eff528e79cf2506be1e6c2dc2a
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: e1bc6388ec1927693bac676a20a18935cdbf894e
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -44,8 +44,12 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
     - **macOS**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Funkcje urządzenia**. 
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Ustawienia systemu iOS](device-features-for-ios.md)
-    - [macOS settings](device-features-for-macos.md) (Ustawienia systemu macOS)
+    - [Ustawienia funkcji AirPrint dla urządzeń z systemami iOS i MacOS](air-print-settings-for-ios-and-macos.md)
+     - [Ustawienia funkcji AirPlay dla urządzeń z systemem iOS](airplay-settings-for-ios-devices.md)
+    - [Ustawienia układu ekranu głównego dla urządzeń z systemem iOS](home-screen-settings-for-ios.md)
+    - [Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS](app-notification-settings-for-ios.md)
+    - [Ustawienia konfiguracji urządzenia udostępnianego dla urządzeń z systemem iOS](shared-device-settings-for-ios.md)
+    - [Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS](web-content-filter-settings-for-ios.md)
 
 8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
 

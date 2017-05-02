@@ -1,11 +1,11 @@
 ---
 title: "Rejestrowanie urządzenia z systemem Android w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi za pomocą usługi Intune"
-description: 
+description: "Dowiedz się, jak zarejestrować urządzenie z systemem Android w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/03/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.technology:
 ms.assetid: 26aa3698-7e4d-453a-8852-ab75e72b6485
 searchScope:
 - User help
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: 
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
-ms.openlocfilehash: f2f93bccd17d16f258e90268f0ddef3e3cb7a598
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: fa36b1449cb1ce5d9e0d3b1ca2f3e0db78729f1d
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -31,19 +31,35 @@ Organizacja może używać oprogramowania do zarządzania wydatkami telekomunika
 
 ![Zrzut ekranu „wybór najlepszej kategorii dla urządzenia” na urządzeniu z systemem iOS. Na zrzucie widoczna jest opcja wyboru rejestracji firmowej lub osobistej.](./media/and-enroll-11-tem-select-best-category.png)
 
-1. Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczności instalacji aplikacji [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) ze Sklepu Google Play. Aplikacja Datalert pozwala organizacji dokonywać pomiaru stopnia wykorzystania danych. Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować.
+Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczności instalacji aplikacji [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) ze Sklepu Google Play. Aplikacja Datalert pozwala organizacji dokonywać pomiaru stopnia wykorzystania danych. Jeśli dla organizacji została skonfigurowana opcja rejestracji przy użyciu konta służbowego, konieczne będzie zalogowanie się przy użyciu danych konta służbowego. Jeśli opcja ta nie została włączona, w celu zarejestrowania w usłudze Datalert konieczne będzie podanie informacji takich jak numer telefonu oraz zweryfikowanie urządzenia przy użyciu kodu uzyskanego z aplikacji.
+
+Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować. Administrator IT powinien poinformować Cię, czy logowanie będzie przebiegać z użyciem __konta służbowego Microsoft__ czy z użyciem __numeru telefonu__.
 
   ![Zrzut ekranu przedstawiający ekran powitalny aplikacji Datalert, z którego można przejść do następnego ekranu po wpisaniu krótkiego sposobu, w jaki aplikacja Datalert może pomóc organizacji optymalnie wykorzystać plan taryfowy obejmujący usługi transmisji danych.](./media/and-enroll-12-tem-datalert-setup.png)
 
-2. Podaj numer telefonu urządzenia.
+## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Rejestrowanie w usłudze Datalert przy użyciu służbowego konta Microsoft
+
+1. Wybierz pozycję __Enroll with Microsoft account__ (Rejestracja za pomocą konta Microsoft).
+
+  ![Zrzut ekranu ustawień aplikacji Datalert dla użytkowników posiadających konto w usłudze Microsoft Office 365 i subskrypcję usługi Intune: u góry pole numeru telefonu pozwalające zarejestrować urządzenie, u dołu opcja rejestracji przy użyciu konta Microsoft.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
+
+2. Wybierz z listy dostępnych kont swoje konto służbowe. Jeśli Twojego konta nie ma na liście, możesz się zalogować, korzystając z przycisku **Add account** (Dodaj konto).
+
+  ![Zrzut ekranu przedstawiający ekran wyboru konta z przykładowym kontem i przyciskiem Dodaj konto.](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
+
+3. Poczekaj chwilę na zakończenie konfigurowania usługi Datalert. Gdy proces się zakończy się, wybierz opcję __Finish__ (Zakończ).
+
+## <a name="enroll-into-datalert-using-your-phone-number"></a>Rejestrowanie w usłudze Datalert przy użyciu numeru telefonu
+
+1. Podaj numer telefonu urządzenia.
 
   ![Zrzut ekranu aplikacji Datalert z żądaniem podania numeru telefonu.](./media/and-enroll-13-tem-datalert-phone-number.png)
 
-3. Następnie otrzymasz kod weryfikacyjny za pośrednictwem wiadomości SMS. Wpisz kod i naciśnij przycisk __OK__.
+2. Następnie otrzymasz kod weryfikacyjny za pośrednictwem wiadomości SMS. Wpisz kod i naciśnij przycisk __OK__.
 
   ![Zrzut ekranu aplikacji Datalert z żądaniem wpisania kodu weryfikacyjnego z wiadomości SMS.](./media/and-enroll-14-tem-datalert-sms.png)
 
-4. Wpisanie kodu weryfikacyjnego stanowi zakończenie procesu instalacji aplikacji Datalert. Po wybraniu opcji __Zakończ__ możesz monitorować użycie danych w aplikacji Datalert.
+3. Wpisanie kodu weryfikacyjnego stanowi zakończenie procesu instalacji aplikacji Datalert. Po wybraniu opcji __Zakończ__ możesz monitorować użycie danych w aplikacji Datalert.
 
   ![Zrzut ekranu przedstawiający proces monitorowania dziennego użycia danych w aplikacji Datalert.](./media/and-enroll-15-tem-datalert-monitoring-active.png)
 

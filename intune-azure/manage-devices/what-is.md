@@ -15,14 +15,14 @@ ms.assetid:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 24498abc504f05bd22dc7309bc22948292f9b1e6
-ms.openlocfilehash: 731d57859474276b51c0cb0b17a3354eaec17348
-ms.lasthandoff: 04/13/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 25a46754f6c7e44b3f4fef7e8eef015cf559e31f
+ms.lasthandoff: 04/19/2017
 
 
 ---
 
-# <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune? 
+# <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
@@ -38,8 +38,8 @@ Wybierz jedną z następujących opcji:
 - **Przegląd** Pobranie informacji o zarejestrowanych urządzeniach i systemach operacyjnych działających na każdym z nich.
 - **Zarządzanie** — opcja **Wszystkie urządzenia** umożliwia wyświetlenie listy wszystkich zarządzanych urządzeń.
     Wybierz jedno z urządzeń na liście, aby otworzyć blok <*nazwa urządzenia*> **Przegląd**, w którym można wybrać jedną z opcji:
-    - **Przegląd** — zobacz ogólne informacje dotyczące urządzenia, w tym informacje o jego nazwie, właścicielu, czy jest to urządzenie BYOD, kiedy ostatnio zostało zewidencjonowane itd. 
-                
+    - **Przegląd** — zobacz ogólne informacje dotyczące urządzenia, w tym informacje o jego nazwie, właścicielu, czy jest to urządzenie BYOD, kiedy ostatnio zostało zewidencjonowane itd.
+
     - **Sprzęt** — wyświetlenie szczegółowych informacji dotyczących urządzenia, w tym ilości wolnego miejsca, modelu i producenta oraz innych danych.
     ![Spis sprzętu zarządzanego urządzenia](./media/hardware-inventory.png)
     - **Wykryte aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione na urządzeniu przez usługę Intune.
@@ -62,10 +62,16 @@ Przywraca na urządzeniu ustawienia domyślne. Urządzenie nie będzie już zarz
 Blokuje urządzenie. W celu odblokowania urządzenia jego właściciel musi użyć swojego kodu dostępu. Można zdalnie zablokować tylko urządzenie, które ma ustawiony numer PIN lub hasło.
 
 ### <a name="reset-passcode"></a>**Zresetuj kod dostępu**
-Generuje dla urządzenia nowy kod dostępu, który zostanie wyświetlony w bloku <*nazwa urządzenia*> **— Przegląd**.
+Generuje dla urządzenia nowy kod dostępu, który zostanie wyświetlony w bloku <*nazwa urządzenia*>  **— Przegląd**.
 
 ### <a name="bypass-activation-lock"></a>**Zastosowanie obejścia blokady aktywacji**
 Powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
+
+### <a name="fresh-start"></a>**Rozpoczęcie od nowa**
+
+Usuwa wszystkie aplikacje, które zostały zainstalowane na komputerze z systemem Windows 10 z aktualizacją dla twórców, a następnie automatycznie aktualizuje komputer do najnowszej wersji systemu Windows.
+Funkcja może być przydatna do usuwania wstępnie zainstalowanych aplikacji OEM, które są często dostarczane z nowymi komputerami. Możesz zdecydować, czy dane użytkownika zostaną zachowane w przypadku wykonania tej akcji dla urządzenia. W takim przypadku aplikacje i ustawienia są usuwane, ale zawartość folderów macierzystych zostaje zachowana.
+
 
 ### <a name="lost-mode"></a>**Tryb utraty**
 W przypadku zgubienia lub kradzieży urządzenia z systemem iOS można włączyć tryb utraty. Dzięki niemu można określić komunikat i numer telefonu do wyświetlenia na ekranie blokady urządzenia. Wykonaj następujące czynności:
@@ -78,7 +84,7 @@ Aby skorzystać z trybu utraty, urządzenie musi być urządzeniem z systemem iO
 ### <a name="locate-device"></a>**Zlokalizuj urządzenie**
 Ta zdalna akcja umożliwia wyświetlenie na mapie lokalizacji zgubionego lub skradzionego urządzenia z systemem iOS. Urządzenie musi być urządzeniem z systemem iOS, należącym do firmy, zarejestrowanym w usłudze DEP i objętym trybem nadzorowanym. Przed użyciem tej akcji urządzenie musi znajdować się w trybie utraty.
 1.    W bloku właściwości urządzenia z systemem iOS wybierz kolejno opcje **Więcej** > **Zlokalizuj urządzenie**.
-2.    Po zlokalizowaniu urządzenia jego lokalizacja jest wyświetlana w bloku **Zlokalizuj urządzenie**. 
+2.    Po zlokalizowaniu urządzenia jego lokalizacja jest wyświetlana w bloku **Zlokalizuj urządzenie**.
     Blok ![Zlokalizuj urządzenie](./media/locate-device.png)
 
 >[!NOTE]

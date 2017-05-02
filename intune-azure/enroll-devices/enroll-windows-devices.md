@@ -5,7 +5,7 @@ description: "Wersja zapoznawcza usługi Intune Azure: włączanie zarządzania 
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 03/21/17
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 771aed4e1c57171183b9a9ea7d9e0f702dc1859c
-ms.openlocfilehash: b62a5704605f5cf89efb4052180f09f88eb788e1
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 3c764b269916ae1a9b076617842eb26d7fd13bab
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,7 +28,10 @@ ms.lasthandoff: 04/06/2017
 
 Ten temat ułatwia administratorom IT uproszczenie rejestracji urządzeń z systemem Windows dla użytkowników.  Urządzenia z systemem Windows można rejestrować bez żadnych dodatkowych czynności, ale możesz ułatwić użytkownikom tę rejestrację.
 
-Sposób rejestrowania urządzeń z systemem Windows określają dwa czynniki:
+Obecnie obsługiwane jest zarządzanie wieloma użytkownikami w usłudze Intune na urządzeniach z aktualizacją systemu Windows 10 dla twórców, które zostały dołączone do domeny usługi Azure Active Directory. Oznacza to, że różni użytkownicy standardowi po zalogowaniu się do urządzenia przy użyciu poświadczeń usługi Azure AD otrzymują wszelkie aplikacje i zasady, które zostały przypisane do ich nazw użytkowników. Obecnie użytkownicy nie mogą używać witryny internetowej Portal firmy na potrzeby samoobsługowych scenariuszy, takich jak instalowanie aplikacji.
+
+O tym, jak można uprościć proces rejestrowania urządzenia z systemem Windows, decydują dwie kwestie:
+
 - **Czy korzystasz z usługi Azure Active Directory w wersji Premium?** <br>Usługa [Azure AD w wersji Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) jest częścią planu Enterprise Mobility + Security i innych planów licencjonowania.
 - **Jakie wersje klientów systemu Windows będą rejestrowane?** <br>Urządzenia z systemem Windows 10 można rejestrować automatycznie, dodając konto służbowe. Starsze wersje należy rejestrować przy użyciu aplikacji Portal firmy.
 
@@ -40,7 +43,7 @@ Sposób rejestrowania urządzeń z systemem Windows określają dwa czynniki:
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Włączanie rejestrowania dla systemu Windows bez usługi Azure AD Premium
-Możesz pozwolić użytkownikom na rejestrowanie ich urządzeń bez automatycznego rejestrowania w usłudze Azure AD w wersji Premium. Gdy przypiszesz licencje do kont użytkowników, użytkownik może dodać takie konto do urządzenia z systemem Windows i wyrazić zgodę na zarejestrowanie urządzenia w środowisku zarządzania. Utworzenie aliasu systemu DNS (typ rekordu CNAME) ułatwia użytkownikom rejestrowanie swoich urządzeń. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera Intune.
+Możesz pozwolić użytkownikom na rejestrowanie ich urządzeń bez automatycznego rejestrowania w usłudze Azure AD w wersji Premium. Gdy licencje zostaną już przypisane, użytkownicy będą mogli rejestrować się po dodaniu konta służbowego na swoich urządzeniach osobistych lub połączeniu używanych przez nich urządzeń firmowych z usługą Azure AD. Utworzenie aliasu systemu DNS (typ rekordu CNAME) ułatwia użytkownikom rejestrowanie swoich urządzeń. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera Intune.
 
 **Krok 1. Tworzenie rekordu CNAME** (opcjonalnie)<br>
 Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.

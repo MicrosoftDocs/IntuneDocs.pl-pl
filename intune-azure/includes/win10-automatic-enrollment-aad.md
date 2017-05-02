@@ -1,6 +1,6 @@
 ## <a name="enable-windows-10-automatic-enrollment"></a>Włączanie automatycznej rejestracji urządzeń z systemem Windows 10
 
-Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy lub osobiste urządzenia i komputery z systemami Windows 10 i Windows 10 Mobile w usłudze Intune przez dodanie konta służbowego i wyrażenie zgody na to, aby były zarządzane. Proste. W tle urządzenie użytkownika zostaje zarejestrowane i przyłączone do usługi Azure Active Directory. Po zarejestrowaniu urządzenie jest zarządzane za pomocą usługi Intune.
+Automatyczna rejestracja umożliwia użytkownikom rejestrowanie ich urządzeń z systemem Windows 10 w usłudze Intune podczas dodawania kont służbowych na urządzeniach prywatnych lub dołączania urządzeń stanowiących własność firmy do usługi Azure Active Directory. W tle urządzenie użytkownika zostaje zarejestrowane i przyłączone do usługi Azure Active Directory. Po zarejestrowaniu urządzenie jest zarządzane za pomocą usługi Intune.
 
 **Wymagania wstępne**
 - Subskrypcja usługi Azure Active Directory — wersja Premium ([subskrypcja wersji próbnej](http://go.microsoft.com/fwlink/?LinkID=816845))
@@ -21,19 +21,19 @@ Automatyczna rejestracja pozwala użytkownikom rejestrować należące do firmy 
 
   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
 
-4. Skonfiguruj użytkowników, którzy będą rejestrowani automatycznie.
+4. Skonfiguruj **zakres użytkownika oprogramowania MDM**. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Urządzenia z systemem Windows 10 tych użytkowników zostaną automatycznie zarejestrowane w usłudze Microsoft Intune.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
-
-  Użyj wartości domyślnych dla następujących adresów URL:
-  - **Rejestracja w usłudze zarządzania urządzeniami przenośnymi**
-  - **Warunki użytkowania usługi zarządzania urządzeniami przenośnymi**
-  - **Zgodność z usługą zarządzania urządzeniami przenośnymi**
-
-5. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Urządzenia z systemem Windows 10 tych użytkowników zostaną automatycznie zarejestrowane w usłudze Microsoft Intune.
-
-  - **Wszystkie**
-  - **GRUPY**
   - **Brak**
+  - **Niektóre**
+  - **Wszystkie**
+
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
+
+5. Użyj wartości domyślnych dla następujących adresów URL:
+    - **Adres URL Warunków użytkowania zarządzania urządzeniami mobilnymi**
+    - **Adres URL odnajdywania zarządzania urządzeniami przenośnymi**
+    - **Adres URL zgodności oprogramowania MDM**
 
 6. Wybierz pozycję **Zapisz**.
+
+Uwierzytelnianie dwuskładnikowe nie jest domyślnie włączone dla usługi. Zaleca się jednak korzystanie z uwierzytelniania dwuskładnikowego podczas rejestrowania urządzenia. Przed ustawieniem wymagania zastosowania uwierzytelniania dwuskładnikowego dla tej usługi należy skonfigurować dostawcę usługi uwierzytelniania dwuskładnikowego w usłudze Active Directory Azure i skonfigurować konta użytkowników do uwierzytelniania wieloskładnikowego. Zobacz temat [Wprowadzenie do usługi Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

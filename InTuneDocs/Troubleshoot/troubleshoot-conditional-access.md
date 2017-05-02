@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9894fdb696f4e010e176efc47068827bddaf7d4e
-ms.openlocfilehash: 8c84703828db3c5da2aa88fa3dc16329f3a4a1e1
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: cc14d6a44b3dcb6234cc77cb463098a9d2f4c5b8
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -63,7 +63,7 @@ Te warunki można wyświetlić dla każdego urządzenia w portalu zarządzania A
     
         -    W przypadku urządzeń w tym stanie wymagane jest, aby użytkownik ustawił bezpieczny startowy kod dostępu. W aplikacji Portal firmy zostanie wyświetlone powiadomienie dotyczące urządzenia z prośbą o ustawienie startowego kodu dostępu. Po naciśnięciu powiadomienia i potwierdzeniu istniejącego numeru PIN lub hasła wybierz opcję **Wymagaj numeru PIN do uruchomienia urządzenia** na ekranie **Bezpieczny start**. Następnie naciśnij przycisk **Sprawdź zgodność** dla urządzenia z aplikacji Portal firmy. Urządzenie powinno teraz zostać wykryte jako zaszyfrowane.
     
-        -     Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie tajnego numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN w formie niezabezpieczonej, ponieważ ta metoda szyfrowania może spowodować, że dane na urządzeniu będą narażone na zagrożenie ze strony złośliwych użytkowników mających fizyczny dostęp do urządzenia. Jeśli wystąpi taki problem, rozważ użycie [zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+        -     Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie tajnego numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN w formie niezabezpieczonej, ponieważ ta metoda szyfrowania może spowodować, że dane na urządzeniu będą narażone na zagrożenie ze strony złośliwych użytkowników mających fizyczny dostęp do urządzenia. Jeśli wystąpi taki problem, rozważ użycie [zasad ochrony aplikacji](https://docs.microsoft.com/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>Problemy dotyczące zasad
 
@@ -119,7 +119,7 @@ Jeśli powyższe procedury nie rozwiążą problemu, pomoc techniczna firmy Micr
 ### <a name="exchange-connector-logs"></a>Dzienniki programu Exchange Connector
 
 #### <a name="general-log-information"></a>Ogólne informacje o dziennikach
-Aby wyświetlić dzienniki programu Exchange Connector, użyj [Server Trace Viewer Tool] narzędzia podglądu śledzenia serwera (https://msdn.microsoft.com/en-us/library/ms732023(v=vs.110).aspx). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
+Aby wyświetlić dzienniki programu Exchange Connector, użyj narzędzia do przeglądania danych śledzenia serwera [Server Trace Viewer Tool] (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
 
 >[!NOTE]
 >Dzienniki znajdują się w folderze C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Dzienniki są grupowane w serie 30 plików dzienników, od *Connector0.log* do *Connector29.log*. Dzienniki są zmieniane po zebraniu w jednym dzienniku 10 MB danych. Po zapełnieniu pliku Connector29 następuje powrót do pliku Connector0 i zastąpienie starszych plików dzienników.

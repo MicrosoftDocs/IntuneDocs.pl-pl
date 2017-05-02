@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
-ms.openlocfilehash: 89a573abb8853ffdab713ce838de323abac03c37
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: ab91737586103ecc6f279daf6a55eb8988ad991a
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -162,7 +162,9 @@ Urządzenia firmowe mogą zostać teraz przekazane użytkownikom. Po włączeniu
 
 ## <a name="changes-to-intune-group-assignments"></a>Zmiany przypisań grup usługi Intune
 
-Od kwietnia 2017 roku zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach profilu rejestracji w firmie. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. W przypadku każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, w usłudze AAD zostanie utworzona odpowiednia dynamiczna grupa urządzeń przy użyciu nazwy profilu Rejestracja urządzeń firmowych podczas migracji do grup urządzeń w usłudze Azure Active Directory. Ten proces zapewnia, że urządzenia przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. [Dowiedz się więcej o grupach usługi Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Od kwietnia 2017 roku zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach profilu rejestracji w firmie. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. W przypadku każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, w usłudze AAD zostanie utworzona odpowiednia dynamiczna grupa urządzeń przy użyciu nazwy profilu Rejestracja urządzeń firmowych podczas migracji do grup urządzeń w usłudze Azure Active Directory. Ten proces zapewnia, że urządzenia przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. Szczegółowe informacje na temat wpływu tych działań na proces rejestrowania należących do firmy urządzeń z systemem iOS zawiera artykuł [Changes to Automatic Grouping for Corporate Pre-enrolled iOS Devices](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/) (Zmiana na automatyczne grupowanie dla wstępnie zarejestrowanych firmowych urządzeń z systemem iOS).
+
+Zobacz także artykuł [Zarządzanie grupami w usłudze Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)

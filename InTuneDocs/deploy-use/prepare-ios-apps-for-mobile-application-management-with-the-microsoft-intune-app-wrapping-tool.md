@@ -15,8 +15,9 @@ ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
-ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: 991393e0caf64c44cc10c7775fba45083212659e
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -108,8 +109,8 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
   ![Wybieranie certyfikatu wewnętrznego i tymczasowego](../media/app-wrapper/iOS-signing-cert-3.png)
 
->[!NOTE]
->Jeśli nie planujesz dystrybuować aplikacji i chcesz ją tylko przetestować wewnętrznie, możesz skorzystać z certyfikatu iOS App Development zamiast certyfikatu Production. Jeśli używasz certyfikatu deweloperskiego, upewnij się, że profil aprowizowania dla urządzeń przenośnych odwołuje się do urządzeń, na których aplikacja ma być instalowana.
+  >[!NOTE]
+  >Jeśli nie planujesz dystrybuować aplikacji i chcesz ją tylko przetestować wewnętrznie, możesz skorzystać z certyfikatu iOS App Development zamiast certyfikatu Production. Jeśli używasz certyfikatu deweloperskiego, upewnij się, że profil aprowizowania dla urządzeń przenośnych odwołuje się do urządzeń, na których aplikacja ma być instalowana.
 
 7. Kliknij pozycję **Next** (Dalej) w dolnej części strony.
 
@@ -136,7 +137,6 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 14. Kliknij dwukrotnie pobrany właśnie plik certyfikatu, aby dodać certyfikat do łańcucha kluczy.
 
 15. Ponownie otwórz aplikację **Dostęp do pęku kluczy**. Zlokalizuj swój certyfikat, wyszukując jego nazwę na pasku wyszukiwania u góry z prawej strony. Kliknij element prawym przyciskiem myszy, aby wyświetlić menu, i kliknij pozycję **Informacje**. Na ekranach przykładowych używamy certyfikatu deweloperskiego zamiast certyfikatu produkcyjnego.
-
 
   ![Dodawanie certyfikatu do łańcucha kluczy](../media/app-wrapper/iOS-signing-cert-8.png)
 
@@ -205,7 +205,7 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**|Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje.|
-|**-v**|(Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli.|
+|**-v**|(Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów.|
 |**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Więcej szczegółowych informacji można znaleźć w artykule Ustawianie uprawnień dla aplikacji.|
 |**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Więcej szczegółowych informacji można znaleźć w artykule Ustawianie uprawnień dla aplikacji. |
 |**-x**| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
@@ -399,9 +399,4 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)</br>
 - [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
 - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

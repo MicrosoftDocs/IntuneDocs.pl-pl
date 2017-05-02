@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 881ce40cb093b1817c9c4b84c9f8ca78b19de727
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 9e348278f62b2b9ba10f0f77c9fda214b43812a7
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -225,6 +225,67 @@ Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator
 -     **Udostępniony strumień zdjęć** — wybór ustawienia **Nie** powoduje wyłączenie funkcji **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.
 -     **Kontynuacja aktywności** — umożliwia użytkownikowi kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS (program Handoff).
 
+## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomiczny tryb jednej aplikacji (tylko tryb nadzorowany)
+
+Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruchamiać określone aplikacje w autonomicznym trybie pojedynczej aplikacji. Jeśli skonfigurowano ten tryb, a aplikacja zostanie uruchomiona, urządzenie zostanie zablokowane, aby mogło uruchamiać wyłącznie tę aplikację. Opcję tę można przykładowo wykorzystać w przypadku konfigurowania aplikacji, która umożliwia użytkownikom wykonywanie testów na urządzeniu. Po zakończeniu działań aplikacji lub usunięciu tych zasad urządzenie powraca do normalnego stanu.
+
+### <a name="settings"></a>Ustawienia
+
+- **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana na liście aplikacji w tym bloku.
+- **Identyfikator pakietu aplikacji** — wprowadź identyfikator pakietu aplikacji. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w tym temacie.
+
+Po określeniu nazwy i identyfikatora pakietu każdej aplikacji wybierz pozycję **Dodaj**, aby dołączyć aplikację do listy.
+
+- **Importuj** — umożliwia zaimportowanie pliku wartości rozdzielanych przecinkami (csv) zawierającego listę nazw aplikacji i powiązanych z nimi identyfikatorów pakietu.
+- **Eksportuj** — umożliwia wyeksportowanie skonfigurowanych nazw aplikacji i powiązanych z nimi identyfikatorów pakietu do pliku wartości rozdzielanych przecinkami (csv).
+
+### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
+
+Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
+
+|||
+|-|-|
+|Nazwa aplikacji|Identyfikator pakietu|
+|App Store|com.apple.AppStore|
+|Kalkulator|com.apple.calculator|
+|Kalendarz|com.apple.mobilecal|
+|Aparat fotograficzny|com.apple.camera|
+|Zegar|com.apple.mobiletimer|
+|Kompas|com.apple.compass|
+|Kontakty|com.apple.MobileAddressBook|
+|FaceTime|com.apple.facetime|
+|Moi znajomi|com.apple.mobileme.fmf1|
+|Znajdź mój iPhone|com.apple.mobileme.fmip1|
+|Centrum gier|com.apple.gamecenter|
+|GarageBand|com.apple.mobilegarageband|
+|Kondycja|com.apple.Health|
+|iBooks|com.apple.iBooks|
+|iTunes Store|com.apple.MobileStore|
+|iTunes U|com.apple.itunesu|
+|Keynote|com.apple.Keynote|
+|Mail|com.apple.mobilemail|
+|Mapy|com.apple.Maps|
+|Komunikaty|com.apple.MobileSMS|
+|Muzyka|com.apple.Music|
+|News|com.apple.news|
+|Uwagi|com.apple.mobilenotes|
+|Liczby|com.apple.Numbers|
+|Pages|com.apple.Pages|
+|Photo Booth|com.apple.Photo-Booth|
+|Zdjęcia|com.apple.mobileslideshow|
+|Podcasty|com.apple.podcasts|
+|Przypomnienia|com.apple.reminders|
+|Safari|com.apple.mobilesafari|
+|Ustawienia|com.apple.Preferences|
+|Giełda|com.apple.stocks|
+|Porady|com.apple.tips|
+|Filmy|com.apple.videos|
+|Dyktafon|com.apple.VoiceMemos|
+|Wallet|com.apple.Passbook|
+|Zegarek|com.apple.Bridge|
+|Pogoda|com.apple.weather|
+
+
 ## <a name="kiosk"></a>Kiosk
 -     **Blokada aktywacji** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
 -     **Aplikacja pracująca w trybie kiosku** — wybierz opcję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, lub wybierz opcję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
@@ -256,4 +317,21 @@ Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator
 -     **JavaScript** — umożliwia uruchamianie skryptów Java w przeglądarce.
 -     **Ostrzeżenia przed oszustwem** — umożliwia wyświetlanie ostrzeżeń przed oszustwem w przeglądarce.
 -     **Wyskakujące okienka** — włącza lub wyłącza blokowanie wyskakujących okienek w przeglądarce.
+
+
+## <a name="domains"></a>Domains
+
+### <a name="unmarked-email-domains"></a>Nieoznaczone domeny poczty e-mail
+
+W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż skonfigurowane, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
+
+
+### <a name="managed-web-domains"></a>Zarządzane domeny sieci Web
+
+W polu **Adres URL domeny sieci Web** dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane ze wskazanych domen będą uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
+
+
+### <a name="safari-password-auto-fill-domains"></a>Domeny automatycznego wypełniania haseł w programie Safari
+
+W polu **Adres URL domeny** dodaj do listy co najmniej jeden adres URL. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń z systemem iOS w wersji 9.3 lub nowszym działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn sieci Web.
 

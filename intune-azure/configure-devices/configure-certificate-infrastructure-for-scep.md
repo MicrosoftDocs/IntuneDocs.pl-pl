@@ -1,12 +1,12 @@
 ---
-title: "Konfigurowanie infrastruktury certyfikatów dla profilu SCEP"
+title: "Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune"
 titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania infrastruktury przed utworzeniem i wdrożeniem profilów certyfikatów SCEP usługi Intune."
+description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów SCEP usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,27 +16,28 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: ea910594195313978d6defae529a526bc0310022
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: 6838993b5b19bc1e23c9efe0911a01a2c66c6886
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurowanie infrastruktury certyfikatów dla protokołu SCEP w usłudze Microsoft Intune
+# <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-W tym temacie opisano infrastrukturę potrzebną do utworzenia i wdrożenia profilów certyfikatów SCEP.
+Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów prostego protokołu rejestrowania certyfikatów (SCEP, ang. Simple Certificate Enrollment Protocol) za pomocą usługi Intune.
 
-### <a name="on-premises-infrastructure"></a>Infrastruktura lokalna
+## <a name="configure-on-premises-infrastructure"></a>Konfigurowanie infrastruktury lokalnej
 
 -    **Domena usługi Active Directory**: wszystkie serwery wymienione w tej sekcji (z wyjątkiem serwera proxy aplikacji sieci Web) muszą być przyłączone do Twojej domeny usługi Active Directory.
 
--  **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
+-  **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
 
--  **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi rejestracji urządzeń sieciowych. Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie może znajdować się na tym samym serwerze co ten urząd. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/en-us/library/dn473016.aspx).
+-  **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi rejestracji urządzeń sieciowych.
+Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie może znajdować się na tym samym serwerze co ten urząd. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów.
--  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) można użyć serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+-  **Łącznik certyfikatów usługi Microsoft Intune**: używając portalu usługi Intune, pobierz instalator **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów.
+-  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
     -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
     -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
@@ -51,49 +52,49 @@ Z Internetu do sieci obwodowej — zezwól na ruch przez port 443 ze wszystkich 
 
 Z sieci obwodowej do sieci zaufanej — zezwól na ruch dotyczący wszystkich portów i protokołów wymaganych do zapewnienia dostępu do domeny na serwerze usługi NDES przyłączonym do domeny. Serwer usługi NDES musi uzyskiwać dostęp do serwerów certyfikatów, serwerów DNS, serwerów programu Configuration Manager i kontrolerów domeny.
 
-Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, takiego jak [serwer proxy aplikacji usługi Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [serwer proxy dostępu do sieci Web](https://technet.microsoft.com/en-us/library/dn584107.aspx) lub serwer proxy innych firm.
+Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, takiego jak [serwer proxy aplikacji usługi Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/), [serwer proxy dostępu do sieci Web](https://technet.microsoft.com/library/dn584107.aspx) lub serwer proxy innych firm.
 
 
-### <a name="BKMK_CertsAndTemplates"></a>Certyfikaty i szablony
+### <a name="certificates-and-templates"></a>Certyfikaty i szablony
 
 |Obiekt|Szczegóły|
 |----------|-----------|
-|**Szablon certyfikatu**|Ten szablon należy skonfigurować na serwerze wystawiającego urzędu certyfikacji.|
-|**Certyfikat uwierzytelniania klienta**|Żądany od wystawiającego lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
-|**Certyfikat uwierzytelniania serwera**|Żądany od wystawiającego lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik **cer** z głównego urzędu certyfikacji lub dowolnego urządzenia uznającego główny urząd certyfikacji za zaufany, a następnie wdrożyć go na urządzeniach, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+|**Szablon certyfikatu**|Skonfiguruj ten szablon na serwerze urzędu wystawiającego certyfikaty.|
+|**Certyfikat uwierzytelniania klienta**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
+|**Certyfikat uwierzytelniania serwera**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES.|
+|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik **.cer** z głównego urzędu certyfikacji lub dowolnego urządzenia uznającego główny urząd certyfikacji za zaufany, a następnie przypisać go do urządzeń, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
-### <a name="BKMK_Accounts"></a>Konta
+### <a name="accounts"></a>Konta
 
 |Nazwa|Szczegóły|
 |--------|-----------|
-|**Konto usługi NDES**|Należy wskazać konto użytkownika domeny, które będzie używane jako konto usługi NDES.|
+|**Konto usługi NDES**|Wskaż konto użytkownika domeny, które będzie używane jako konto usługi NDES.|
 
-## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurowanie infrastruktury
+## <a name="configure-your-infrastructure"></a>Konfigurowanie infrastruktury
 Skonfigurowanie profilów certyfikatów będzie możliwe po wykonaniu poniższych zadań wymagających znajomości systemu Windows Serwer 2012 R2 oraz usług certyfikatów Active Directory (ADCS):
 
-**Zadanie 1**: Tworzenie konta usługi NDES
+**Krok 1**: Tworzenie konta usługi NDES
 
-**Zadanie 2**: Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
+**Krok 2**: Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 
-**Zadanie 3**: Konfigurowanie wymagań wstępnych na serwerze usługi NDES
+**Krok 3**: Konfigurowanie wymagań wstępnych na serwerze usługi NDES
 
-**Zadanie 4**: Konfigurowanie usługi NDES do użycia z usługą Intune
+**Krok 4**: Konfigurowanie usługi NDES do użycia z usługą Intune
 
-**Zadanie 5**: Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
+**Krok 5**: Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 
-### <a name="task-1---create-an-ndes-service-account"></a>Zadanie 1 — Tworzenie konta usługi NDES
+#### <a name="step-1---create-an-ndes-service-account"></a>Krok 1 — Tworzenie konta usługi NDES
 
 Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
 
-### <a name="task-2---configure-certificate-templates-on-the-certification-authority"></a>Zadanie 2 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
+#### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Krok 2 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 To zadanie obejmuje:
 
 -   Konfigurowanie szablonu certyfikatu dla usługi NDES
 
 -   Publikowanie szablonu certyfikatu dla usługi NDES
 
-#### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
+##### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
 
 1.  Zaloguj się jako administrator przedsiębiorstwa.
 
@@ -133,24 +134,22 @@ Oto zrzuty ekranu przykładowej konfiguracji szablonów.
 ![Szablon, karta wymagań wystawiania](.\media\scep_ndes_issuance_reqs.jpg)
 
 >   [!IMPORTANT]
-    > W przypadku zasad aplikacji (czwarty zrzut ekranu) należy dodać tylko wymagane zasady aplikacji. Należy uzgodnić wybrane opcje z administratorami zabezpieczeń.
+    > W przypadku zasad aplikacji należy dodać tylko wymagane zasady aplikacji. Należy uzgodnić wybrane opcje z administratorami zabezpieczeń.
 
 
 
-W celu skonfigurowania urzędu certyfikacji tak, aby umożliwiał żądającemu określenie okresu ważności, uruchom następujące polecenia w urzędzie certyfikacji:
+W celu skonfigurowania urzędu certyfikacji tak, aby umożliwiał żądającemu określenie okresu ważności:
 
-   1.  **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   2.  **net stop certsvc**
-   3.  **net start certsvc**
-
-4.  Użyj przystawki Urząd certyfikacji dla wystawiającego urzędu certyfikacji, aby opublikować szablon certyfikatu.
-
-    1.  Zaznacz węzeł **Szablony certyfikatów**, kliknij pozycję **Akcja**-&gt; **Nowy** &gt; **Szablon certyfikatu do wystawienia**, a następnie wybierz szablon utworzony w kroku 2.
-
-    2.  Sprawdź, czy certyfikat został opublikowany, wyświetlając go w folderze **Szablony certyfikatów** .
+1. Uruchom w urzędzie certyfikacji następujące polecenia:
+    - **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
+    - **net stop certsvc**
+    - **net start certsvc**
+2. Użyj przystawki Urząd certyfikacji dla wystawiającego urzędu certyfikacji, aby opublikować szablon certyfikatu.
+    Zaznacz węzeł **Szablony certyfikatów**, kliknij pozycję **Akcja**-&gt; **Nowy** &gt; **Szablon certyfikatu do wystawienia**, a następnie wybierz szablon utworzony w kroku 2.
+3. Sprawdź, czy certyfikat został opublikowany, wyświetlając go w folderze **Szablony certyfikatów** .
 
 
-### <a name="task-3---configure-prerequisites-on-the-ndes-server"></a>Zadanie 3 — Konfigurowanie wymagań wstępnych na serwerze usługi NDES
+#### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Krok 3 — Konfigurowanie wymagań wstępnych na serwerze usługi NDES
 To zadanie obejmuje:
 
 -   Dodawanie usługi NDES do systemu Windows Serwer oraz konfigurowanie usługi IIS do obsługi usługi NDES
@@ -191,7 +190,7 @@ To zadanie obejmuje:
 
 `**setspn –s http/Server01.contoso.com contoso\NDESService**`
 
-### <a name="task-4---configure-ndes-for-use-with-intune"></a>Zadanie 4 — Konfigurowanie usługi NDES do użycia z usługą Intune
+#### <a name="step-4---configure-ndes-for-use-with-intune"></a>Krok 4 — Konfigurowanie usługi NDES do użycia z usługą Intune
 To zadanie obejmuje:
 
 -   Konfigurowanie usługi NDES do użycia z urzędem wystawiającym certyfikaty
@@ -200,7 +199,6 @@ To zadanie obejmuje:
 
 -   Konfigurowanie filtrowania żądań w usługach IIS
 
-##### <a name="to-configure-ndes-for-use-with-intune"></a>Aby skonfigurować usługę NDES do użycia z usługą Intune
 
 1.  Na serwerze NDES otwórz kreatora Konfiguracja usług AD CS, a następnie wprowadź następujące ustawienia.
 
@@ -295,7 +293,7 @@ To zadanie obejmuje:
 
 4.  Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
 
-### <a name="task-5---enable-install-and-configure-the-intune-certificate-connector"></a>Zadanie 5 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
+#### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Krok 5 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 To zadanie obejmuje:
 
 Włączanie obsługi usługi NDES w usłudze Intune.
@@ -349,6 +347,61 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
 
 **http://&lt;nazwa_FQDN_serwera_usługi_NDES&gt;/certsrv/mscep/mscep.dll**
 
-## <a name="next-steps"></a>Następne kroki
-Teraz można skonfigurować profile certyfikatów zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](how-to-configure-certificates.md).
+## <a name="how-to-create-a-scep-certificate-profile"></a>Tworzenie profilu certyfikatu protokołu SCEP
+
+1. W witrynie Azure Portal wybierz obciążenie **Konfiguruj urządzenia**.
+2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
+3. W bloku profilów wybierz pozycję **Utwórz profil**.
+4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu protokołu SCEP.
+5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego certyfikatu protokołu SCEP. Obecnie dla ustawień ograniczeń dotyczących urządzeń można wybrać jedną z następujących platform:
+    - **Android**
+    - **iOS**
+    - **macOS**
+    - **Windows Phone 8.1**
+    - **Windows 8.1 lub nowszy**
+    - **Windows 10 lub nowszy**
+6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.
+7. W bloku **Certyfikat SCEP** skonfiguruj następujące ustawienia:
+    - **Okres ważności certyfikatu** — jeśli dla urzędu wystawiającego certyfikaty uruchomiono polecenie **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**, które dopuszcza niestandardowy okres ważności, możesz określić czas pozostały do wygaśnięcia certyfikatu.<br>Możesz podać wartość niższą niż okres ważności danego szablonu certyfikatu, ale nie wyższą. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić wartość jednego roku, ale nie pięciu lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
+    - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) — określ miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:
+        - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie u dostawcy magazynu kluczy oprogramowania**
+        - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie niepowodzenie**
+        - **Zarejestruj w usłudze Passport, w przeciwnym razie niepowodzenie (system Windows 10 i nowsze)**
+        - **Zarejestruj u dostawcy magazynu kluczy oprogramowania**
+    - **Format nazwy podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune nazwy podmiotu w żądaniu certyfikatu. Jeśli certyfikat przeznaczony jest dla użytkownika, możesz również uwzględnić w nazwie podmiotu adres e-mail tego użytkownika. Wybierz spośród opcji:
+        - **Nieskonfigurowany**
+        - **Nazwa pospolita**
+        - **Nazwa pospolita obejmująca adres e-mail**
+        - **Nazwa pospolita jako adres e-mail**
+    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN. 
+    - **Użycie klucza** — określ opcje użycia klucza certyfikatu. Można wybrać następujące opcje: 
+        - **Szyfrowanie klucza** — zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany. 
+        - **Podpis cyfrowy** — zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego. 
+    - **Rozmiar klucza (bity)** —wybierz liczbę bitów zawartych w kluczu. 
+    - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) — wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia. 
+    - **Certyfikat główny** — wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. 
+    - **Rozszerzone użycie klucza** — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków będzie wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
+    - **Ustawienia rejestracji**
+        - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
+        - **Adresy URL serwerów SCEP** — określ co najmniej jeden adres URL dla serwerów usługi NDES, które będą wystawiać certyfikaty za pośrednictwem protokołu SCEP. 
+8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
+
+Profil zostanie utworzony i wyświetlony w bloku listy profilów.
+
+>[!Note]
+> Dotyczy wyłącznie urządzeń z systemem iOS: w obszarze Format nazwy podmiotu wybierz opcję Niestandardowy, aby wprowadzić niestandardowy format nazwy podmiotu.
+> Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki: **CN={{NazwaUżytkownika}},E={{AdresEmail}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. W tym przykładzie utworzono format nazwy podmiotu, w którym oprócz zmiennych CN i E użyto ciągów zmiennych Organizational Unit, Organization, Location, State, i Country. [W tym temacie](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) omówiono funkcję **CertStrToName** i obsługiwane przez nią ciągi.
+
+## <a name="how-to-assign-the-certificate-profile"></a>Przypisywanie profilu certyfikatu
+
+Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę następujące kwestie:
+
+- Podczas przypisywania profilów certyfikatów do grup na urządzeniu jest instalowany plik certyfikatu z profilu certyfikatu zaufanego urzędu certyfikacji. Profil certyfikatu protokołu SCEP jest wykorzystywany przez to urządzenie do tworzenia żądania certyfikatu.
+- Profile certyfikatów mogą być instalowane wyłącznie na urządzeniach z platformą użytą podczas tworzenia profilu.
+- Profile certyfikatów można również przypisywać do kolekcji użytkowników lub kolekcji urządzeń.
+- Aby opublikować certyfikat dla urządzenia jak najszybciej po jego rejestracji, należy przypisać profil certyfikatu do grupy użytkowników, a nie do grupy urządzeń. W przypadku przypisania do grupy urządzeń wymagana jest pełna rejestracja urządzenia przed otrzymaniem przez nie zasad.
+- Mimo że każdy profil należy przypisać osobno, konieczne jest również przypisanie profilu zaufanego certyfikatu głównego urzędu certyfikacji oraz profilu protokołu SCEP lub PKCS. W przeciwnym razie zasady certyfikatu protokołu SCEP lub PKCS nie będą działać.
+
+Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](how-to-assign-device-profiles.md).
+
 

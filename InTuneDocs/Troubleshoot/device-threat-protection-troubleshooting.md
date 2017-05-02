@@ -15,8 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: b02a5247cec36b45679a76bf3d637cf8b5c031f4
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: de2f224f203257fe539196557180f0b5da5d8373
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -29,14 +30,14 @@ W tym temacie opisano niektóre typowe problemy, które mogą występować w kon
 
 **Błędy logowania**
 
-## <a name="403-errors"></a>Błędy&403;
+## <a name="403-errors"></a>Błędy 403
 Podczas logowania się do [konsoli Lookout MTP](https://aad.lookout.com) jest wyświetlany błąd 403: **nie masz autoryzacji dostępu do usługi**. Może się to zdarzyć, gdy podana nazwa użytkownika nie jest członkiem grupy usługi Azure Active Directory (AD) skonfigurowanej do uzyskiwania dostępu do aplikacji Lookout MTP.
 
 Aplikacja Lookout MTP umożliwia dostęp do usługi tylko użytkownikom w skonfigurowanej grupie Azure AD. Aby sprawdzić, która grupa ma skonfigurowany dostęp do aplikacji Lookout MTP, skontaktuj się z pomocą techniczną aplikacji Lookout:
 
 * Poczta e-mail: enterprisesupport@lookout.com
 * Zaloguj się do [konsoli MTP](http://aad.lookout.com) i przejdź do modułu **Pomoc techniczna**.
-* Przejdź do strony:  https://enterprise.support.lookout.com/hc/en-us/requests i utwórz żądanie pomocy technicznej.
+* Przejdź do strony: https://enterprise.support.lookout.com/hc/requests i utwórz żądanie pomocy technicznej.
 
 ## <a name="unable-to-sign-in"></a>Nie można się zalogować
 Poniższy błąd występuje w sytuacji, gdy użytkownik będący administratorem globalnym usługi Azure AD nie zaakceptował początkowej konfiguracji aplikacji Lookout.
@@ -55,7 +56,7 @@ Taki problem może wystąpić w jednej z następujących sytuacji:
 
 ### <a name="device-reported-as-pending"></a>Urządzenie jest zgłaszane jako **Oczekujące**
 
-Urządzenie jest wyświetlane ze stanem **Oczekujące**, jeśli użytkownik końcowy nie otworzył aplikacji Lookout for Work i nie nacisnął przycisku **Aktywuj**. Dodatkowe szczegóły dotyczące aktywacji urządzenia przy użyciu aplikacji Lookout for Work zawierają tematy [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) oraz [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS](https://docs.microsoft.com/en-us/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios)
+Urządzenie jest wyświetlane ze stanem **Oczekujące**, jeśli użytkownik końcowy nie otworzył aplikacji Lookout for Work i nie nacisnął przycisku **Aktywuj**. Dodatkowe szczegóły dotyczące aktywacji urządzenia przy użyciu aplikacji Lookout for Work zawierają tematy [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) oraz [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios)
 
 ## <a name="device-whos-active-but-has-no-device-id"></a>Urządzenie jest aktywne, ale nie ma identyfikatora urządzenia
 Jeśli aktywne urządzenie nie ma identyfikatora urządzenia w konsoli Lookout MTP, użytkownik urządzenia nie znajduje się w grupie rejestracji. Urządzenie może przejść do tego stanu w sytuacji, gdy użytkownik urządzenia został usunięty z grupy rejestracji lub gdy grupa rejestracji została usunięta.
@@ -83,14 +84,9 @@ Jeśli nowy użytkownik należy do grupy rejestracji Lookout MTP, urządzenie b�
 ## <a name="compliance-remediation-workflows"></a>Przepływy pracy korygowania i zgodności
 - [Pojawia się monit o zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem Android]( http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 - [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem Android](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
-- [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem iOS](https://docs.microsoft.com/en-us/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
+- [Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work na urządzeniu z systemem iOS](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 
 
 ### <a name="see-also"></a>Zobacz także
-[Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](https://docs.microsoft.com/en-us/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+[Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](https://docs.microsoft.com/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
 

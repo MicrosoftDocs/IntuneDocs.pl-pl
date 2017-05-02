@@ -1,5 +1,5 @@
 ---
-title: "Korzystanie z aplikacji z dostępem warunkowym zarządzania aplikacjami mobilnymi | Microsoft Docs"
+title: "Używanie aplikacji korzystających z dostępu warunkowego przy użyciu zasad zarządzania aplikacjami mobilnymi"
 description: "Poznaj sposób, w jaki dostęp warunkowy zarządzania aplikacjami mobilnymi może pomóc w kontrolowaniu tego, które aplikacje mogą mieć dostęp do usług O365."
 keywords: 
 author: andredm7
@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e55cf608c2e5157feeb40ba20d3988b5b35064db
-ms.openlocfilehash: 22ea926719efc788c53861bc91f78d24631d54c1
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: ee407827c1c4eb7b113d29c301da0b9fa08fa86d
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -37,6 +37,11 @@ Poniżej przedstawiono listę właściwości, które pochodzą bezpośrednio z u
 * deviceOSType
 * deviceOSVersion
 * displayName
+
+> [!NOTE]
+> Urządzenia z systemem Android:
+  * Na urządzeniu musi być zainstalowana aplikacja Portal firmy, ale użytkownik końcowy nie musi logować się do tej aplikacji.
+  * Rejestracja urządzenia musi zostać przeprowadzona przez aplikację OneDrive lub Outlook.
 
 ## <a name="to-remove-a-device-from-azure-ad-registration"></a>Aby usunąć urządzenie zarejestrowane w usłudze Azure AD
 Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli administracyjnej usługi Azure AD, co zazwyczaj jest wykonywane przez administratora IT.  Usunąć urządzenie może także użytkownik końcowy za pomocą swojego urządzenia.
