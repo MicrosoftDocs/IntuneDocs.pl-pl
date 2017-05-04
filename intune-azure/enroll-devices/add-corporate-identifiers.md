@@ -33,7 +33,7 @@ Jako administrator IT możesz utworzyć i zaimportować plik z wartościami rozd
 ## <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
 Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikator IMEI w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Długość szczegółowych informacji nie może przekraczać 128 znaków. Są one przeznaczone tylko do użytku administracyjnego. Szczegóły nie są wyświetlane na urządzeniu. Aktualne ograniczenie wynosi 500 wierszy w pliku CSV.
 
-**Przekaż plik csv zawierający numery seryjne** — utwórz listę wartości rozdzielanych przecinkami (csv) w dwóch kolumnach bez nagłówka i ogranicz listę do 5000 urządzeń lub 5 MB na plik csv.
+**Przekaż plik csv zawierający numery seryjne** — utwórz listę wartości rozdzielanych przecinkami (csv) w dwóch kolumnach bez nagłówka i ogranicz listę do 5000 urządzeń lub 5 MB na plik csv. 
 
 |||
 |-|-|
@@ -43,8 +43,8 @@ Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) 
 Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 ```
-01 234567 890123,device details
-02 234567 890123,device details
+01234567890123,device details
+02234567890123,device details
 ```
 
 
