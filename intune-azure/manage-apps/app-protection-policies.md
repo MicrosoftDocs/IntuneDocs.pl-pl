@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 607598812a414843f1f33a00670a6a85b6687878
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 0aabb7af82bc7c9ed55eca91e615bace5e299d11
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/18/2017
 Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w artykule [What is Microsoft Intune app protection policies](what-is-app-protection-policy.md) (Co to są zasady ochrony aplikacji usługi Microsoft Intune).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
-1.  W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Zarządzaj** > **Zasady ochrony aplikacji**.
+1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Zasady ochrony aplikacji**.
 
 2.  Spowoduje to otwarcie bloku **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. Wybierz pozycję **Dodaj zasady**.
 

@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: 26d11bc64802005bcce8cc1962d531af6ffe5cd5
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 12584743534a76d0b2ce92e5de6cb5f916453938
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -50,7 +50,7 @@ Poniżej przedstawiono typowe podejście do zwiększenia liczby rejestrowanych u
 
 -   Użytkownicy korzystający z poprzedniego rozwiązania mogą potencjalnie uzyskać dostęp do zasobów za pomocą niezarządzanych urządzeń do czasu włączenia dla nich dostępu warunkowego.
 
-> [!TIP] 
+> [!TIP]
 > Jest to jedno z wielu możliwych podejść. Można wybrać prostszy proces, który odracza wszelki dostęp warunkowy do czasu przekazania instrukcji dotyczących rejestracji uczestnikom wszystkich faz, lub bardziej rygorystyczny proces, który będzie od samego początku wymuszał dostęp warunkowy i wymagał zachowania pełnej zgodności w celu uzyskania dostępu.
 
 -   Dowiedz się więcej na temat [dostępu warunkowego](https://docs.microsoft.com/intune-azure/conditional-access/what-is-conditional-access).
@@ -61,7 +61,7 @@ Poniżej przedstawiono typowe podejście do zwiększenia liczby rejestrowanych u
 
 -   Dowiedz się, [jak skonfigurować dostęp warunkowy](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 
-### <a name="task-2-setup-intune-conditional-access"></a>Zadanie 2. Konfiguracja dostępu warunkowego w usłudze Intune
+### <a name="task-2-set-up-intune-conditional-access"></a>Zadanie 2. Konfiguracja dostępu warunkowego w usłudze Intune
 
 Wybierz jeden z poniższych typów zasad dostępu warunkowego, aby dowiedzieć się więcej:
 

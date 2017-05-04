@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b372d4ee505ca39a4739069e5798918ecde134ea
-ms.openlocfilehash: abf45b835d13ef5fe4acb769194542611448504e
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -76,8 +76,8 @@ Należy wprowadzić zmiany w grupach w portalu [Azure Portal](https://portal.azu
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
-1. W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno opcje **Zarządzaj** > **Aplikacje**.
+3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
+1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
 2. W bloku listy aplikacji kliknij aplikację, którą chcesz przypisać.
 3. W bloku <*nazwa aplikacji*> — **Przegląd** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
 4. Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy Azure AD, do których chcesz przypisać aplikację.

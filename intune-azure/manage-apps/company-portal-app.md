@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 9ebfadd945916b6be8225b9e07d67100e3f91222
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: eae3a7d0771724076680ec7152b09e7364603880
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -31,7 +31,7 @@ Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzys
 > [!Tip]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy.
 
-Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Instalacja** > **Znakowanie Portalu firmy**, po czym skonfiguruj wymagane ustawienia.
+Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Znakowanie Portalu firmy**, po czym skonfiguruj wymagane ustawienia.
 
 ## <a name="company-contact-information-and-privacy-statement"></a>Informacje kontaktowe i zasady zachowania poufności informacji firmy
 Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie **Kontakt z działem IT** w portalu firmy na komputerach użytkowników. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.

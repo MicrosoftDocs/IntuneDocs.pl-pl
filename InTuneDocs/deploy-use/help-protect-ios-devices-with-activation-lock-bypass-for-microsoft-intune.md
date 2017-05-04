@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: a6fa910c0a8ec1a9542e03a276dbb8d0757d75b4
-ms.lasthandoff: 01/10/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 742fac9c401c24bfc0f2500a238c41fa00c47fd3
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -48,6 +48,8 @@ Aby pomóc w rozwiązaniu tych problemów, firma Apple wprowadziła obejście bl
 > [!TIP]
 > Tryb nadzorowany dla urządzeń z systemem iOS umożliwia zablokowanie urządzenia za pomocą programu Apple Configurator w celu ograniczenia funkcji urządzenia do określonych celów biznesowych. Tryb nadzorowany jest przeznaczony praktycznie tylko dla urządzeń należących do firm.
 
+Więcej informacji o blokadzie aktywacji można znaleźć [tutaj](https://support.apple.com/en-us/HT201365).
+
 ## <a name="how-intune-helps-you-manage-activation-lock"></a>Jak usługa Intune pomaga w zarządzaniu blokadą aktywacji
 Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na nadzorowanych urządzeniach z systemem iOS 8.0 lub nowszym. Tylko w przypadku urządzeń nadzorowanych usługa Intune może pobrać kod obejścia blokady aktywacji i wystawić go bezpośrednio na urządzeniu. Jeśli zawartość urządzenia została wyczyszczona, możesz bezpośrednio uzyskać dostęp do urządzenia, używając pustej nazwy użytkownika i kodu jako hasła.
 
@@ -56,6 +58,14 @@ Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na na
 -   Użytkownik może korzystać z zabezpieczeń oferowanych przez aplikację Znajdź mój iPhone.
 
 -   Możesz umożliwić użytkownikom normalną pracę, wiedząc, że w razie konieczności zmiany przeznaczenia urządzenia można je wycofać lub odblokować.
+
+## <a name="before-you-start"></a>Przed rozpoczęciem
+
+Aby obejść blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć. Wykonaj następujące czynności:
+
+1. Zapoznaj się z informacjami w temacie [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies), aby utworzyć [zasady konfiguracji urządzenia](/intune/deploy-use/ios-policy-settings-in-microsoft-intune) z systemem iOS.
+2. W sekcji **Rejestracja** na stronie ustawień skonfiguruj ustawienie **Zezwalaj na blokadę aktywacji, gdy urządzenie jest w trybie nadzorowanym** na wartość **Tak**.
+3. Zapisz zasady, a następnie wdróż je na urządzeniach, na których chcesz zarządzać obejściem blokady aktywacji.
 
 ## <a name="how-to-use-activation-lock-bypass-from-the-intune-admin-console"></a>Jak użyć obejścia blokady aktywacji z poziomu konsoli administracyjnej usługi Intune
 > [!IMPORTANT]

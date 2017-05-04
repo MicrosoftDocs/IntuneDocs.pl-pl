@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: 2191295407e0c1bb2c3861b8a8d168dd3697da45
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 3794981387e73176152c212854a97b4333023f5d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -34,7 +35,7 @@ Portal firmy usługi Intune zapewnia użytkownikom dostęp do firmowych danych i
 -   **Aplikacja Portal firmy:** aplikacja dostępna na urządzeniach zarządzanych za pomocą usługi Intune. Dowiedz się więcej o aplikacjach Portal firmy dla systemów [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune) i [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Witryna sieci Web Portal firmy:** witryna sieci Web, która umożliwia użytkownikom końcowym wykonywanie większości zadań, które można wykonywać w aplikacji Portal firmy. Adres URL witryny Portal firmy w usłudze Intune to [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Dowiedz się więcej o tej witrynie sieci Web w artykule [Using the Intune Company Portal website](/Intune/EndUser/using-the-intune-company-portal-website) (Korzystanie z witryny sieci Web Portal firmy usługi Intune).
+- **Witryna sieci Web Portal firmy:** witryna sieci Web, która umożliwia użytkownikom końcowym wykonywanie większości zadań, które można wykonywać w aplikacji Portal firmy. Adres URL witryny Portal firmy w usłudze Intune to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com). Dowiedz się więcej o tej witrynie sieci Web w artykule [Using the Intune Company Portal website](/Intune/EndUser/using-the-intune-company-portal-website) (Korzystanie z witryny sieci Web Portal firmy usługi Intune).
 
 > [!TIP]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy.
@@ -89,9 +90,4 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 >[!div class="step-by-step"]
 
 >[&larr;**Tworzenie zasad i aplikacji**](.\start-with-a-paid-subscription-to-microsoft-intune-step-6.md)        [**Rejestrowanie urządzeń** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

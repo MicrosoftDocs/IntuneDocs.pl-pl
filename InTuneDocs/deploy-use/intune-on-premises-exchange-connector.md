@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: 68dbebbd7d29514bde438b7dff3142dc45e8471d
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: f760d567ac339bbb60240ee9f8d28cb550656a59
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -63,7 +63,7 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Pobieranie pakietu instalacyjnego programu On-premises Exchange Connector
 
-1. W obsługiwanym systemie operacyjnym Windows Server dla programu On-premises Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](http://manage.microsoft.com) (http://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange i ma licencję na korzystanie z serwera Exchange Server.
+1. W obsługiwanym systemie operacyjnym Windows Server dla programu On-Premises Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](https://manage.microsoft.com) (https://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange i ma licencję na korzystanie z programu Exchange Server.
 ![Otwórz konfigurację połączenia z programem Exchange.](../media/ExchangeConnector.gif)
 
 2.  W okienku skrótów obszaru roboczego wybierz pozycje **Administracja**>**Zarządzanie urządzeniami przenośnymi** > **Microsoft Exchange**>**Skonfiguruj połączenie programu Exchange**.
@@ -129,7 +129,7 @@ Po skonfigurowaniu połączenia w programie Exchange Connector urządzenia przen
 
 ## <a name="validate-the-exchange-connection"></a>Weryfikacja połączenia z programem Exchange
 
-Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączenia oraz ostatniej pomyślnej próby synchronizacji. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz obszar roboczy **ADMINISTRACJA**. W sekcji **Zarządzanie urządzeniami przenośnymi** wybierz pozycję **Microsoft Exchange**, a następnie sprawdź, czy podane szczegółowe informacje są wyświetlane w polu **Informacje o połączeniu z programem Exchange**.
+Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączenia oraz ostatniej pomyślnej próby synchronizacji. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz obszar roboczy **ADMINISTRACJA**. W sekcji **Zarządzanie urządzeniami przenośnymi** wybierz pozycję **Microsoft Exchange**, a następnie sprawdź, czy podane szczegółowe informacje są wyświetlane w polu **Informacje o połączeniu z programem Exchange**.
 
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.

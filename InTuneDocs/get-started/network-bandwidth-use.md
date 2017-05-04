@@ -15,9 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5972171349325eeb750e552481cbcf903fdf95
-ms.openlocfilehash: 9f1cd7ea3e92ac2e3a1b828e8185961060a7c619
-ms.lasthandoff: 02/10/2017
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 5211d2222e5e8ef9328f60ed13f0146925194c5f
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -26,11 +26,7 @@ ms.lasthandoff: 02/10/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Ten przewodnik jest przeznaczony dla administratorów systemów odpowiedzialnych za zarządzanie urządzeniami w przedsiębiorstwie. Aby uzyskać pomoc dotyczącą korzystania z usługi Intune na urządzeniu przenośnym, zapoznaj się z [często zadawanymi pytaniami dotyczącymi portalu firmy w usłudze Microsoft Intune](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
-
-Przed skonfigurowaniem usługi Microsoft Intune przejrzyj ten temat i inne wymagania wymienione w artykule [What to know before you start Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md) (Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune).
-
-Informacje zawarte w poniższych sekcjach ułatwią zaplanowanie ruchu sieciowego dla klientów usługi Microsoft Intune.
+Niniejsze wskazówki pomagają administratorom usługi Intune poznać wymagania sieciowe dla usługi Intune. Informacje te zawierają wymagania dotyczące przepustowości oraz adres IP i ustawienia portu potrzebne do ustawień serwera proxy.
 
 ## <a name="average-network-traffic"></a>Średni ruch sieciowy
 W tej tabeli przedstawiono częstotliwość przesyłania przez sieć typowych danych dla poszczególnych klientów oraz przybliżone ilości tych danych.

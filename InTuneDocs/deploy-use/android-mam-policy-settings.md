@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 09/30/2016
+ms.date: 04/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 9f1d00d5773aa604ec039d6f64bb901a795468ba
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: f6e3783e2d30d26424f3876d8bd22e3d2c8ef630
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -35,13 +36,12 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | **Blokuj kopie zapasowe systemu Android** | Wybierz opcję **Tak**, aby uniemożliwić tej aplikacji tworzenie kopii zapasowych danych służbowych w [usłudze kopii zapasowych systemu Android](https://developer.android.com/google/backup/index.html). Wybierz opcję **Nie**, aby umożliwić tej aplikacji tworzenie kopii zapasowych danych służbowych.| Tak |
 | **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych do wszystkich aplikacji. </li> <li>**Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych do tych aplikacji i usług. Sekcja [Wyjątki w transferze danych](#Data-transfer-exemptions) zawiera pełną listę aplikacji i usług.| Wszystkie aplikacje |
 | **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** | Określ, jakie aplikacje mogą przesyłać dane do tej aplikacji: <ul><li>**Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko z innych aplikacji zarządzanych przez zasady.</li><li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych z wszystkich aplikacji.</li><li>**Brak**: nie zezwalaj na przesyłanie danych z żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady. </li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych z tych aplikacji i usług. Sekcja [Wyjątki w transferze danych](#Data-transfer-exemptions) zawiera pełną listę aplikacji i usług. | Wszystkie aplikacje |
-| **Nie zezwalaj na używanie polecenia „Zapisz jako”** | Wybierz opcję **Tak**, aby wyłączyć używanie opcji Zapisz jako w tej aplikacji. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako. | Nie |
+| **Nie zezwalaj na używanie polecenia „Zapisz jako”** | Wybierz opcję **Tak**, aby wyłączyć używanie opcji Zapisz jako w tej aplikacji. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako. <p>**Wybierz, w których usługach magazynu można zapisywać dane firmowe** <br>Użytkownicy będą mogli zapisywać dane w wybranych usługach (OneDrive dla Firm, SharePoint i Magazyn lokalny). Wszystkie pozostałe usługi będą zablokowane.</p> | Nie |
 | **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach** | Określ, kiedy można używać akcji wycinania, kopiowania i wklejania w tej aplikacji. Wybierz spośród opcji: <ul><li>**Zablokowane**: nie zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i dowolną inną aplikacją.</li><li>**Aplikacje zarządzane przez zasady**: zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady.</li><li>**Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych z dowolnych aplikacji.</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji. | Dowolna aplikacja |
 |**Ogranicz zawartość sieci Web do wyświetlenia w programie Managed Browser** | Wybierz opcję **Tak**, aby wymusić otwieranie linków sieci Web w danej aplikacji za pomocą aplikacji Managed Browser. <br><br> W przypadku urządzeń, które nie zostały zarejestrowane w usłudze Intune, linki sieci Web w aplikacjach zarządzanych przez zasady będą otwierane tylko w aplikacji Managed Browser. <br><br> Jeśli używasz usługi Intune do zarządzania swoimi urządzeniami, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md). | Nie |
 | **Szyfruj dane aplikacji** | Wybierz opcję **Tak**, aby włączyć szyfrowanie danych służbowych w tej aplikacji. Usługa Intune bezpiecznie szyfruje dane aplikacji przy użyciu schematu 128-bitowego szyfrowania AES i OpenSSL z systemem Android Keystore. Dane są szyfrowane synchronicznie podczas zadań wejścia/wyjścia na plikach. Zawartość w pamięci urządzenia jest zawsze zaszyfrowana. <br><br> Metoda szyfrowania **nie** ma certyfikatu FIPS 140-2.  | Tak |
 | **Wyłącz synchronizację kontaktów** | Wybierz opcję **Tak**, aby uniemożliwić aplikacji zapisywanie danych w natywnej aplikacji Kontakty na urządzeniu. Jeśli wybierzesz opcję **Nie**, aplikacja będzie mogła zapisywać dane w natywnej aplikacji Kontakty na urządzeniu. <br><br>Gdy jest wykonywane selektywne czyszczenie danych w celu usunięcia danych służbowych z aplikacji, kontakty zsynchronizowane bezpośrednio z aplikacji do natywnej aplikacji Kontakty są usuwane. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie dotyczy to tylko aplikacji Microsoft Outlook. | Nie |
 | **Wyłącz drukowanie** | Wybierz opcję **Tak**, aby uniemożliwić aplikacji drukowanie danych służbowych. | Nie |
-
 
   >[!NOTE]
   >Metoda szyfrowania dla ustawienia **Szyfruj dane aplikacji** **nie** ma certyfikatu FIPS 140-2.
@@ -89,9 +89,5 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | **Ponownie sprawdź wymagania dostępu po (w minutach)** | Skonfiguruj następujące ustawienia: <ul><li>**Limit czasu**: jest to liczba minut przed ponownym sprawdzeniem wymagań dostępu (zdefiniowanych wcześniej w tych zasadach). Na przykład administrator włącza numer PIN w zasadach, a użytkownik otwiera aplikację MAM i musi wprowadzić numer PIN. Gdyby to ustawienie było używane, użytkownik nie musiałby wprowadzać numeru PIN w żadnej aplikacji MAM przez następne **30 minut** (wartość domyślna).</li><li>**Okres karencji w trybie offline:** jest to liczba minut, przez jaką aplikacja MAM może działać w trybie offline. Określ czas (w minutach) do ponownego sprawdzenia wymagań dostępu dla aplikacji. Wartość domyślna: **720** minut (12 godzin). Po tym czasie aplikacja będzie wymagać uwierzytelnienia użytkownika w usłudze AAD, co pozwoli na kontynuowanie jej działania.</li></ul>| Limit czasu: 30 <br><br> W trybie offline: 720 |
 | **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach)** | Po tej liczbie dni pracy w trybie offline (zdefiniowanej przez administratora) aplikacja sama przeprowadzi selektywne czyszczenie. To selektywne czyszczenie jest takie samo jak to, które może zostać zainicjowanie przez administratora w przepływie pracy czyszczenia zarządzania aplikacjami mobilnymi. <br><br> | 90 dni |
 | **Zablokuj przechwytywanie ekranu i asystenta systemu Android (Android 6.0 i nowsze)** | Wybierz opcję **Tak**, aby zablokować funkcję przechwytywania ekranu i możliwości **asystenta systemu Android** na urządzeniu podczas korzystania z tej aplikacji. Wybranie opcji **Tak** spowoduje również rozmycie obrazu podglądu przełącznika aplikacji podczas korzystania z tej aplikacji przy użyciu konta służbowego. | Nie |
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+| **Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia** | Wybierz opcję **Tak**, aby wyłączyć numer PIN aplikacji, gdy na zarejestrowanym urządzeniu zostanie wykryta blokada urządzenia. | Nie |
 

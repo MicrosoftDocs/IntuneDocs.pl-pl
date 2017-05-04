@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
-ms.openlocfilehash: 219369dfdf9d7a82159563d3fe16bb287bc414d7
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: f034114736e7de0ee6d0dd7fbdb121a2a092d1c5
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -126,7 +126,7 @@ Poniżej przedstawiono kroki, które należy wykonać w celu zintegrowania usłu
 
 4.  [Wdrożenie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS](https://docs.microsoft.com/intune/deploy-use/deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy)
 
-5.  [Skonfigurowanie integracji programu Skycure z usługą Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune)
+5.  [Konfiguracja integracji z programem Skycure w usłudze Intune](https://docs.microsoft.com/intune/deploy-use/setup-the-skycure-integration-with-Intune)
 
 6.  [Włączenie usługi Skycure Mobile Threat Defense w usłudze Intune](https://docs.microsoft.com/intune/deploy-use/enable-skycure-mobile-threat-defense-in-intune)
 

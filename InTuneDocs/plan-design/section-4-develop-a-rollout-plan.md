@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: 36530602813467c184b4f262719a56cedbaa2ba9
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 2a970badf5ac18a05115a72dc267ee455ba4628d
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -69,7 +70,7 @@ Jest to określane jako podejście „dokładne”, zgodnie z którym członek z
 
 ### <a name="it-tech-fair"></a>Podejście techniczne
 
-Inną opcja rejestracji użytkowników w usłudze Intune jest wykorzystanie podejścia technicznego. W takim przypadku grupa IT przeprowadzi konfigurację punktu asysty rejestrowania w usłudze Intune, gdzie użytkownicy będą mogli uzyskiwać informację dotyczące rejestracji w usłudze Intune, zadawać pytania i uzyskiwać pomoc dotyczącą procesu rejestracji. Użycie tej opcji może być korzystne zarówno dla grupy pracowników IT, jak i użytkowników, szczególnie podczas wczesnych faz wdrażania usługi Intune.
+Inną opcja rejestracji użytkowników w usłudze Intune jest wykorzystanie podejścia technicznego. W takim przypadku grupa IT utworzy punkt asysty rejestrowania w usłudze Intune, gdzie użytkownicy będą mogli uzyskiwać informacje dotyczące rejestracji w usłudze Intune, zadawać pytania i uzyskiwać pomoc dotyczącą procesu rejestracji. Użycie tej opcji może być korzystne zarówno dla grupy pracowników IT, jak i użytkowników, szczególnie podczas wczesnych faz wdrażania usługi Intune.
 
 Oto przykład planu wdrożenia usługi Intune przy użyciu grup docelowych, osi czasu i metod rejestracji:
 
@@ -91,9 +92,4 @@ Oto przykład planu wdrożenia usługi Intune przy użyciu grup docelowych, osi 
 ## <a name="next-section"></a>Następna sekcja
 
 W następnej sekcji zawarto wskazówki dotyczące [opracowywania planu komunikacji związanego z wdrożeniem usługi Intune](section-5-develop-a-rollout-communication-plan.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: d02d7c3367e18c96cc1d72de3a3a0ef581ef63ff
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 6e410a37f91e0828d5f6b205acb4d340dae86c6d
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -58,7 +58,7 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
+3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1. W bloku **Aplikacje mobilne** wybierz kolejno pozycje **Instalacja** > **Sklep Windows dla firm**.
 2. Kliknij przycisk **Włącz**.
 3. Jeśli jeszcze tego nie zrobiono, kliknij link do rejestracji w Sklepie Windows dla firm i skojarz swoje konto zgodnie ze wcześniejszym opisem.
@@ -67,7 +67,7 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
 ## <a name="synchronize-apps"></a>Synchronizacja aplikacji
 
-1. W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Instalacja** > **Sklep Windows dla firm**.
+1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Sklep Windows dla firm**.
 2. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Windows do usługi Intune.
 
 ## <a name="assign-apps"></a>Przypisywanie aplikacji
