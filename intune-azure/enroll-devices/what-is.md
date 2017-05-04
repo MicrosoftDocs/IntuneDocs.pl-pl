@@ -15,9 +15,9 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
-ms.openlocfilehash: 6127604afb01a9482eadc3d03b566304e2acdd21
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: a816ee8fd2738cf244fd46a91af46d2b137a5dfb
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -27,11 +27,11 @@ ms.lasthandoff: 03/17/2017
 
 W tym temacie opisano rejestrację oraz różne sposoby rejestrowania urządzeń przenośnych w celu zarządzania nimi w usłudze Intune.
 
-Zarejestrowanie urządzeń, takich jak komputery z systemem Windows, w usłudze Intune umożliwia zarządzanie nimi. W dokumentacji usługi Intune funkcja ta jest określana mianem zarządzania urządzeniami przenośnymi (MDM, mobile device management). Gdy urządzenia są rejestrowane jako urządzenia przenośne (nie jako komputery), wystawiane są dla nich certyfikaty MDM, używane następnie przez urządzenia do komunikowania się z usługą Intune.
+Zarejestrowanie urządzeń w usłudze Intune umożliwia zarządzanie nimi. W dokumentacji usługi Intune funkcja ta jest określana mianem zarządzania urządzeniami przenośnymi (MDM, mobile device management). Gdy urządzenia są rejestrowane w usłudze Intune, wystawiane są dla nich certyfikaty MDM, używane następnie przez urządzenia do komunikowania się z usługą Intune.
 
 Sposób rejestrowania urządzeń zależy od rodzaju urządzenia, własności i wymaganego poziomu zarządzania. Metoda rejestracji „Przynieś własne urządzenie” (BYOD) umożliwia użytkownikom rejestrowanie swoich osobistych telefonów, tabletów lub komputerów. Rejestracja urządzeń należących do firmy umożliwia korzystanie ze scenariuszy zarządzania, takich jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji.
 
-Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać prostszych metod zarządzania w usłudze Intune, w których nie jest wymagana rejestracja urządzeń (wkrótce zostanie udostępnionych więcej informacji na ten temat). Komputerami z systemem Windows można zarządzać jak urządzeniami przenośnymi. Tę zalecaną metodę opisano poniżej. Można również zarządzać nimi jak komputerami osobistymi za pomocą [oprogramowania klienckiego usługi Intune](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
+Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać prostszych metod zarządzania w usłudze Intune, w których nie jest wymagana rejestracja urządzeń (wkrótce zostanie udostępnionych więcej informacji na ten temat). Komputerami z systemem Windows można zarządzać jak urządzeniami przenośnymi. Tę zalecaną metodę opisano poniżej.
 
 
 ## <a name="overview-of-device-enrollment-methods"></a>Przegląd metod rejestracji urządzeń
@@ -53,21 +53,20 @@ W poniższej tabeli przedstawiono metody rejestracji usługi Intune oraz wymagan
 |**[USB-SA](#usb-sa)**|    Tak |    Opcjonalne |    Nie| [Więcej informacji](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
 |**[USB-Direct](#usb-direct)**|    Nie |    Nie    | Nie|[Więcej informacji](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
 
-
-
 **Metody rejestracji urządzeń z systemem Windows**
 
 | **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie |    Tak |    Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie |    Tak |    Nie | [Więcej informacji](#enroll-windows-devices.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    |[Więcej informacji](enroll-devices-using-device-enrollment-manager.md)|
 
 **Metody rejestracji urządzeń z systemem Android**
 
 | **Metoda** |    **Wymagane wyczyszczenie?** |    **Koligacja**    |    **Blokada** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | Wkrótce zostanie udostępnionych więcej informacji na ten temat|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |    Nie | [Więcej informacji](#enroll-android-and-knox-standard-devices.md)|
 |**[Menedżer rejestracji urządzeń](#dem)**|    Nie |Nie |Nie    |[Więcej informacji](enroll-ios-devices-using-device-enrollment-program.md)|
+|[**Android for Work**](#android-for-work)| Nie | Tak | Nie| [Więcej informacji](#enroll-android-and-knox-standard-devices.md) |
 
 
 ## <a name="byod"></a>„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)
@@ -112,21 +111,11 @@ Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 ## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Intune
 Urządzeniami przenośnymi, które nie są zarejestrowane, ale są połączone z programem Exchange ActiveSync (EAS), można zarządzać za pomocą usługi Intune, korzystając z zasad EAS MDM. Usługa Intune używa łącznika Exchange Connector do komunikowania się z programem EAS (lokalnym lub hostowanym w chmurze). Wkrótce zostanie udostępnionych więcej informacji na ten temat.
 
-
-## <a name="windows-pc-management-with-intune"></a>Zarządzanie komputerami z systemem Windows przy użyciu usługi Intune  
-Usługa Microsoft Intune umożliwia również zarządzanie komputerami z systemem Windows za pomocą oprogramowania klienckiego usługi Intune. Komputery z systemem Windows zarządzane za pomocą klienta usługi Intune mogą:
-
- - Zgłaszać spisy sprzętu i oprogramowania.
- - Instalować aplikacje komputerowe (np. pliki .exe i .msi).
- - Zarządzaj ustawienia zapory
-
-Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą zostać w pełni wyczyszczone, ale czyszczenie selektywne jest dostępne. Komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune nie mogą korzystać z wielu funkcji zarządzania w usłudze Intune, takich jak dostęp warunkowy, ustawienia sieci VPN i Wi-Fi, wdrażanie certyfikatów i konfiguracja poczty e-mail. Wkrótce zostanie udostępnionych więcej informacji na ten temat.
-
 ## <a name="supported-device-platforms-and-browsers"></a>Obsługiwane platformy urządzeń i przeglądarki
 
 Zobacz artykuł [Supported devices and browsers for Intune](https://docs.microsoft.com/intune/get-started/supported-mobile-devices-and-computers) (Obsługiwane urządzenia i przeglądarki dla usługi Intune)
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM
 
-Certyfikat MDM jest odnawiany automatycznie, gdy urządzenia przenośne komunikują się z usługą Intune. W przypadku wyczyszczenia urządzeń przenośnych (nie komputerów) lub niekomunikowania się przez nie z usługą Intune przez pewien czas certyfikat MDM nie zostanie odnowiony. Urządzenie zostanie usunięte z portalu Azure 180 dni po wygaśnięciu certyfikatu MDM.
+Certyfikat MDM jest odnawiany automatycznie, gdy urządzenia przenośne komunikują się z usługą Intune. W przypadku wyczyszczenia urządzeń przenośnych lub jeśli przez pewien czas nie komunikują się one z usługą Intune, certyfikat MDM nie zostanie odnowiony. Urządzenie zostanie usunięte z portalu Azure 180 dni po wygaśnięciu certyfikatu MDM.
 

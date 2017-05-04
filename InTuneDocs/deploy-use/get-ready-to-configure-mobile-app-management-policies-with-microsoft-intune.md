@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 53b86bf579af6af29fd36ce58f9cdf1e92b98abc
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 71ebb310699cf80310b33be1b665a968ac102bde
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -86,7 +86,7 @@ Jeśli aktualnie używasz usługi [!INCLUDE[wit_nextref](../includes/wit_nextref
 
   - Tworzenia kont służbowych usług SharePoint Online i Exchange Online. Lokalna instalacja programu Exchange i lokalna instalacja programu SharePoint nie są obsługiwane.
 
--   **Konfiguracja programu Skype dla firm Online do korzystania z nowoczesnego uwierzytelniania**. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+-   **Konfiguracja programu Skype dla firm Online do korzystania z nowoczesnego uwierzytelniania**. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Usługa Azure Active Directory (Azure AD) do tworzenia użytkowników. Usługa Azure AD uwierzytelnia użytkowników, gdy otworzą oni aplikację i wprowadzą poświadczenia robocze.
@@ -96,7 +96,7 @@ Jeśli aktualnie używasz usługi [!INCLUDE[wit_nextref](../includes/wit_nextref
 
 ### <a name="create-users-and-assign-microsoft-intune-licenses"></a>Tworzenie użytkowników i przypisywanie licencji usługi Microsoft Intune
 
-1.  Zaloguj się do [portalu usługi Office](http://portal.office.com) przy użyciu poświadczeń administratora.
+1.  Zaloguj się do [portalu usługi Office](https://portal.office.com) przy użyciu poświadczeń administratora.
 
 2.  Dodaj użytkowników, zgodnie z opisem w sekcji **Korzystanie z 30-dniowej wersji ewaluacyjnej usługi Intune** w [Przewodniku ewaluacji usługi Intune](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune), a następnie przypisz licencje usługi Intune. Aby dać użytkownikowi możliwość dostępu do portalu usługi Office, portalu usługi Azure AD i portalu Azure, przypisz użytkownikowi **rolę administratora globalnego**.
 

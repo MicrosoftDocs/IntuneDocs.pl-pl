@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/20/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 56ef80138d0790933ae216bb02101c3f408311c7
-ms.openlocfilehash: 5bea5a9f1a69193543fa3c5e8997a6527721d3ef
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: b81228ccd1c515bfd82486475996eecf20655993
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -66,7 +67,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-deploy-a-volume-purchased-app"></a>Aby wdrożyć aplikację nabytą w ramach zakupów zbiorczych
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Zarządzane oprogramowanie** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**. Ta lista zawiera wszystkie aplikacje, które zostały zsynchronizowane z poziomu usługi VPP firmy Apple.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Aplikacje** &gt; **Aplikacje** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**. Ta lista zawiera wszystkie aplikacje, które zostały zsynchronizowane z poziomu usługi VPP firmy Apple.
 
 2.  Wybierz aplikację, którą chcesz wdrożyć, wybierz pozycję **Zarządzaj wdrożeniem**, a następnie postępuj zgodnie z instrukcjami w temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md), aby zakończyć przekazywanie, tworzenie i wdrażanie aplikacji.
 
@@ -79,22 +80,14 @@ Aby odzyskać licencję, należy zmienić akcję wdrażania na **Odinstaluj**. L
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP po raz pierwszy, zostanie poproszony o dołączenie do programu zakupów zbiorczych firmy Apple. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana.
 
-> [!TIP]
-> W kolumnie **Stan warunków VPP** sprawdź stan akceptacji dla poszczególnych użytkowników aplikacji, dla których wdrożono aplikację.
-
 Jeśli dodatkowe licencje nie są dostępne, wdrożenie zakończy się niepowodzeniem.
 
 ## <a name="to-monitor-apple-vpp-apps"></a>Aby monitorować aplikacje programu VPP firmy Apple
-Możesz monitorować, które aplikacje programu VPP zostały wdrożone, oraz liczbę używanych licencji w obszarze roboczym **Aplikacje** w węźle **Zarządzane oprogramowanie** &gt; **Aplikacje kupione w ramach zakupów zbiorczych**.
+W obszarze roboczym **Aplikacje** w węźle **Aplikacje kupione w ramach zakupów zbiorczych** możesz monitorować, które aplikacje programu VPP zostały wdrożone oraz ile licencji jest używanych.
 
 > [!TIP]
 > Możesz również sprawdzać stan poszczególnych instalacji aplikacji przy użyciu **filtrów** aplikacji.
 
 ### <a name="see-also"></a>Zobacz także
 [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

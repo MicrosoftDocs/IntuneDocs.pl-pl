@@ -16,8 +16,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 1809422e7f5a3d5aa5e2ef32e1aa7cadf00ecabb
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 330dba6b9402ef354d0925da27ee1b37ef50db00
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -42,8 +43,8 @@ Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
-4. W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Monitoruj** > **Stan użytkownika ochrony aplikacji**, aby wyświetlić widok podsumowania:
+3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
+4. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Monitor** > **Stan użytkownika ochrony aplikacji**, aby wyświetlić widok podsumowania:
 
 ![Kafelek podsumowania w bloku zarządzania aplikacjami mobilnymi usługi Intune](../media/app-protection-user-status-summary.png)
 
@@ -93,7 +94,7 @@ W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używ
 
 Możesz uzyskać dostęp do tych samych raportów, które są wyświetlane w widoku szczegółowym, a także do dodatkowych raportów ułatwiających sprawdzenie stanu zgodności zasad zarządzania aplikacjami mobilnymi:
 
-![Zrzut ekranu nr&4;](../media/MAM-reporting-7.png)
+![Zrzut ekranu nr 4](../media/MAM-reporting-7.png)
 
 -   **Raport użytkownika dotyczący ochrony aplikacji:** zawiera te same informacje, które znajdują się w raporcie **Stan użytkownika** w sekcji widoku szczegółowego opisanej powyżej.
 
@@ -109,7 +110,7 @@ Możesz uzyskać dostęp do tych samych raportów, które są wyświetlane w wid
 
         -   Wszystkie aplikacje są zaewidencjonowane, nie są jednak objęte żadnymi zasadami zarządzania aplikacjami mobilnymi.
 
-![Zrzut ekranu nr&2;](../media/MAM-reporting-4.png)
+![Zrzut ekranu nr 2](../media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Grupowanie tabel
 
@@ -126,20 +127,15 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
 1. W bloku zarządzania aplikacjami mobilnymi usługi Intune wybierz raport dotyczący ochrony aplikacji.
 
-    ![Zrzut ekranu nr&6;](../media/app-protection-report-csv-2.png)
+    ![Zrzut ekranu nr 6](../media/app-protection-report-csv-2.png)
 
 2. Wybierz opcję Tak, aby zapisać raport, a następnie wybierz polecenie Zapisz jako i wybierz folder, w którym chcesz zapisać raport.
 
-    ![Zrzut ekranu nr&7;](../media/app-protection-report-csv-1.png)
+    ![Zrzut ekranu nr 7](../media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Zobacz także
 [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 * [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-android-apps.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-ios-apps.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

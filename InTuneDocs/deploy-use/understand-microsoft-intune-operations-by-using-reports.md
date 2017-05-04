@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/27/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: cc1a3c8c3e2f25ee154db964de2601510e32f1ea
-ms.openlocfilehash: 41354f0eee051bd9c691a27830264f6c95502fa5
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
+ms.lasthandoff: 04/24/2017
 
 
 
@@ -32,7 +32,7 @@ Informacje w tym temacie mają na celu ułatwienie tworzenia raportów usługi M
 ## <a name="using-reports"></a>Używanie raportów
 Raporty usługi Intune zawierają informacje dotyczące oprogramowania, sprzętu i licencji na oprogramowanie w organizacji. Raporty ułatwiają potwierdzanie bieżącego zapotrzebowania i prognozowanie wydatków w przyszłości. Obszar roboczy **Raporty** zawiera narzędzia służące do tworzenia raportów i zarządzania nimi. 
 
-### <a name="report-types"></a>Typy raportów
+## <a name="report-types"></a>Typy raportów
 
 |Typ raportu|Opis|
 |---------------|---------------|
@@ -49,8 +49,10 @@ Raporty usługi Intune zawierają informacje dotyczące oprogramowania, sprzętu
 |**Raporty zaświadczania o kondycji**|Pokazują kondycję urządzeń przenośnych.|
 |**Raport dotyczący sprzętu z systemem Mac OS X**|Wyświetla szczegóły sprzętu dla wszystkich zarejestrowanych urządzeń z systemem Mac OS X w wybranych grupach. Aby uzyskać informacje o spisie sprzętu opartym na danych zbieranych z tych urządzeń, zobacz [Zrozumienie informacji o urządzeniach dzięki spisowi w usłudze Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Raport dotyczący oprogramowania dla systemu Mac OS X**|Wyświetla oprogramowanie zainstalowane na wszystkich zarejestrowanych urządzeniach z systemem Mac OS X w wybranych grupach. Raport zawiera informacje o nazwie oprogramowania (w postaci identyfikatora pakietu), skróconej (lub przyjaznej) nazwie, wersji i liczbie urządzeń, na których oprogramowanie jest zainstalowane.|
+|**Raporty usługi Windows Information Protection**|Zawierają informacje o operacjach usługi Windows Information Protection (WIP) na zarządzanych urządzeniach.|
+|**Raporty zaświadczania o kondycji**|Zawierają informacje zgłoszone przez usługę Zaświadczanie o kondycji systemu Windows dotyczące zarządzanych urządzeń.|
 
-#### <a name="to-create-a-report"></a>Aby utworzyć raport
+## <a name="to-create-a-report"></a>Aby utworzyć raport
 
 1.  W konsoli administracyjnej usługi Intune wybierz pozycję **Raporty**. Następnie wybierz typ raportu, który chcesz wygenerować, na podstawie opisu w poprzedniej tabeli.
 

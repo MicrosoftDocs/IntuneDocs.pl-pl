@@ -15,9 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: aea41c86e1fe784d6234f4ff90e299632b2a6d5f
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 32446d9a6f9383b5449dbabf288b0eac0b483ebb
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -36,7 +36,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 **Jakie są zalety ochrony aplikacji MAM?** Zarządzanie aplikacjami mobilnymi pozwala chronić dane organizacji w obrębie aplikacji. Konfiguracja MAM-WE umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego urządzenia, w tym z urządzenia osobistego w scenariuszach BYOD (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
 
 **Jakie konfiguracje urządzeń obsługuje zarządzanie aplikacjami mobilnymi?** Zarządzanie aplikacjami mobilnymi usługi Intune obsługuje dwie konfiguracje:
-  1. **Intune MDM + MAM**: jest to pierwsza konfiguracja obsługiwana przy użyciu zarządzania aplikacjami mobilnymi po jego pierwszym wdrożeniu. Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Do zarządzania aplikacjami przy użyciu konfiguracji MDM + MAM klienci powinni używać autonomicznej konsoli usługi Intune, korzystając z adresu http://manage.microsoft.com.
+  1. **Intune MDM + MAM**: jest to pierwsza konfiguracja obsługiwana przy użyciu zarządzania aplikacjami mobilnymi po jego pierwszym wdrożeniu. Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Do zarządzania aplikacjami przy użyciu konfiguracji MDM + MAM klienci powinni używać autonomicznej konsoli usługi Intune, korzystając z adresu https://manage.microsoft.com.
 
   2. **MAM bez rejestracji urządzeń**: Zarządzanie aplikacjami mobilnymi bez rejestracji urządzeń (MAM-WE) umożliwia administratorom IT zarządzanie aplikacjami za pomocą zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune MDM. Oznacza to, że aplikacjami można zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców EMM innych firm. Aby zarządzać aplikacjami przy użyciu konfiguracji MAM-WE, klienci powinni używać konsoli usługi Intune w portalu Azure, korzystając z adresu http://portal.azure.com.
 

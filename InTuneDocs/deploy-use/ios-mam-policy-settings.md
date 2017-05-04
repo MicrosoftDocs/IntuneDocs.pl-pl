@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/19/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 03f53e6ec9f934eb40415434a60213bc839f6afe
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
+ms.openlocfilehash: 29fe0acf6c3724455d56b4657c79bc93fb258441
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -43,7 +43,7 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | **Szyfruj dane aplikacji** | W przypadku aplikacji zarządzanych przez zasady dane są szyfrowane, gdy nie są używane, za pomocą szyfrowania na poziomie urządzenia obsługiwanego przez system iOS. Jeśli jest wymagany numer PIN, dane są szyfrowane zgodnie z ustawieniami zasad ochrony aplikacji. <br><br> Przejdź do oficjalnej dokumentacji firmy Apple dostępnej [tutaj](https://support.apple.com/HT202739), aby sprawdzić, które moduły szyfrowania systemu iOS mają certyfikat FIPS 140-2 lub oczekują na uzyskanie certyfikatu FIPS 140-2. <br><br> Określ, kiedy dane służbowe w tej aplikacji są szyfrowane. Wybierz spośród opcji: <ul><li>**Gdy urządzenie jest zablokowane**: wszystkie dane aplikacji skojarzonych z tymi zasadami są szyfrowane, gdy urządzenie jest zablokowane.</li><li>**Gdy urządzenie jest zablokowane i istnieją otwarte pliki**: wszystkie dane aplikacji skojarzonych z tymi zasadami są szyfrowane, gdy urządzenie jest zablokowane, z wyjątkiem danych w plikach obecnie otwartych w aplikacji.</li><li>**Po ponownym uruchomieniu urządzenia**: wszystkie dane aplikacji skojarzonych z tymi zasadami są szyfrowane po ponownym uruchomieniu urządzenia, do momentu odblokowania urządzenia po raz pierwszy.</li><li>**Użyj ustawień urządzenia:** dane aplikacji są szyfrowane na podstawie ustawień domyślnych urządzenia. Po włączeniu tego ustawienia użytkownik musi skonfigurować i stosować numer PIN, aby uzyskać dostęp do urządzenia.  Jeśli nie skonfigurowano numeru PIN, aplikacje nie będą otwierane, a użytkownik otrzyma monit o ustawienie numeru PIN z następującym komunikatem: „Twoja organizacja wymaga włączenia numeru PIN urządzenia w celu uzyskania dostępu do tej aplikacji”. </li></ul> | Gdy urządzenie jest zablokowane |
 | **Wyłącz synchronizację kontaktów** | Wybierz opcję **Tak**, aby uniemożliwić aplikacji zapisywanie danych w natywnej aplikacji Kontakty na urządzeniu. Jeśli wybierzesz opcję **Nie**, aplikacja będzie mogła zapisywać dane w natywnej aplikacji Kontakty na urządzeniu. <br><br>Gdy jest wykonywane selektywne czyszczenie danych w celu usunięcia danych służbowych z aplikacji, kontakty zsynchronizowane bezpośrednio z aplikacji do natywnej aplikacji Kontakty są usuwane. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie dotyczy to tylko aplikacji Microsoft Outlook. | Nie |
 | **Wyłącz drukowanie** | Wybierz opcję **Tak**, aby uniemożliwić aplikacji drukowanie danych służbowych. | Nie |
-
+| **Wybierz, w których usługach magazynu można zapisywać dane firmowe** | Użytkownicy będą mogli zapisywać dane w wybranych usługach (OneDrive dla Firm, SharePoint i Magazyn lokalny). Wszystkie pozostałe usługi będą zablokowane. | Usługa OneDrive dla Firm i program SharePoint |
 
 > [!NOTE]
 > Żadne z ustawień relokacji danych nie steruje funkcją „Otwórz za pomocą” zarządzaną przez firmę Apple na urządzeniach z systemem iOS. Aby korzystać z funkcji „Otwórz za pomocą” zarządzanej przez firmę Apple, zobacz [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).
@@ -72,6 +72,7 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root** |  Wybierz opcję **Tak**, aby uniemożliwić tej aplikacji działanie na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root. Użytkownik nadal będzie mógł wykonywać zadania osobiste za pomocą tej aplikacji, ale będzie musiał korzystać z innego urządzenia w celu uzyskania dostępu do danych służbowych w tej aplikacji. | Tak |
 | **Ponownie sprawdź wymagania dostępu po (w minutach)** | Skonfiguruj następujące ustawienia: <ul><li>**Limit czasu**: jest to liczba minut przed ponownym sprawdzeniem wymagań dostępu (zdefiniowanych wcześniej w tych zasadach). Na przykład administrator włącza numer PIN w zasadach, a użytkownik otwiera aplikację MAM i musi wprowadzić numer PIN. Gdyby to ustawienie było używane, użytkownik nie musiałby wprowadzać numeru PIN w żadnej aplikacji MAM przez następne **30 minut** (wartość domyślna).</li><li>**Okres karencji w trybie offline:** jest to liczba minut, przez jaką aplikacja MAM może działać w trybie offline. Określ czas (w minutach) do ponownego sprawdzenia wymagań dostępu dla aplikacji. Wartość domyślna: **720** minut (12 godzin). Po tym czasie aplikacja będzie wymagać uwierzytelnienia użytkownika w usłudze AAD, co pozwoli na kontynuowanie jej działania.</li></ul>| Limit czasu: 30 <br><br> W trybie offline: 720 |
 | **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach)** | Po tej liczbie dni pracy w trybie offline (zdefiniowanej przez administratora) aplikacja sama przeprowadzi selektywne czyszczenie. To selektywne czyszczenie jest takie samo jak to, które może zostać zainicjowanie przez administratora w przepływie pracy czyszczenia zarządzania aplikacjami mobilnymi. <br><br> | 90 dni |
+| **Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia** | Wybierz opcję **Tak**, aby wyłączyć numer PIN aplikacji, gdy na zarejestrowanym urządzeniu zostanie wykryta blokada urządzenia. | Nie |
 
 ##  <a name="add-ins-for-outlook-app"></a>Dodatki dla aplikacji Outlook
 
