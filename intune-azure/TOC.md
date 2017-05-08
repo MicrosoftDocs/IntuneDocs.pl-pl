@@ -1,5 +1,6 @@
 # Wprowadzenie
 ## [Co to jest witryna Azure Portal (wersja zapoznawcza)?](introduction/what-is-microsoft-intune.md)
+## [Co to jest usługa Intune for Education?](/intune/understand-explore/introduction-to-intune-education?toc=/intune/toc.json)
 ## [Funkcje usługi Intune na platformie Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Wprowadzenie
 <!---(introduction/get-started.md) --->
@@ -82,10 +83,13 @@
 #### [Aplikacje LOB dla systemu iOS](manage-apps/ios-lob-app.md)
 #### [Aplikacje sieci Web](manage-apps/web-app.md)
 #### [Aplikacje ze sklepu dla systemu Windows Phone 8.1](manage-apps/windows-phone-8-1-store-app.md)
+#### [Aplikacje LOB dla systemu Windows Phone](manage-apps/windows-phone-line-of-business-app.md)
 #### [Aplikacje ze sklepu dla systemu Windows](manage-apps/windows-store-app.md)
+#### [Aplikacje LOB dla systemu Windows](manage-apps/windows-line-of-business-app.md)
 ### [Przypisywanie aplikacji](manage-apps/deploy-apps.md)
 ### [Monitorowanie aplikacji](manage-apps/monitor-apps.md)
-### [Korzystanie z zasad konfigurowania aplikacji](manage-apps/app-configuration-policies.md)
+### [Korzystanie z profilów konfigurowania aplikacji](manage-apps/app-configuration-policies.md)
+### [Korzystanie z profilów aprowizacji aplikacji systemu iOS](manage-apps/ios-app-provisioning-profile.md)
 ### [Czyszczenie selektywne aplikacje](manage-apps/app-selective-wipe.md)
 <!---Is this specific to app protection policy or more general app management?--->
 ### [Praca z aplikacjami nabytymi w ramach zakupów zbiorczych](manage-apps/volume-purchased-apps.md)
