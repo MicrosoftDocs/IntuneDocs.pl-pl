@@ -8,10 +8,11 @@ ms.assetid: 99e91b60-d6a5-44a8-908f-442161fbb077
 ms.topic: hub-page
 title: "Dokumentacja usługi Microsoft Intune | Microsoft Docs"
 description: "Dowiedz się, jak korzystać z usługi Microsoft Intune."
-translationtype: Human Translation
-ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
-ms.openlocfilehash: af6af39a041582bd93bac6aad551881be4cf0291
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7db42e591df8ec6c21f73b7ce49be624e1e29690
+ms.openlocfilehash: 3d44038d316977ad0dedef2aee844a64ca24b744
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/02/2017
 
 ---
 <div id="main" class="v2">
@@ -40,6 +41,7 @@ ms.lasthandoff: 04/24/2017
                             </div>
                         </li>
                         <li>
+                        <a href="/intune-azure/introduction/what-is-microsoft-intune">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -49,14 +51,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune-azure/introduction/what-is-microsoft-intune">Wersja zapoznawcza usługi Intune w witrynie Azure Portal</a></h3>
+                                            <h3>Wersja zapoznawcza usługi Intune w witrynie Azure Portal</h3>
                                             <p>Usługa Microsoft Intune jest przenoszona do portalu Azure. Dowiedz się więcej na temat zmian dostępnych w nowym portalu. </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                        <a href="/intune/plan-design/introduction">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -66,14 +70,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/plan-design/introduction">Wdrażanie, planowanie i projektowanie</a></h3>
+                                            <h3>Planowanie wdrożenia i projektowanie</h3>
                                             <p>Poznaj proces tworzenia planu wdrożenia, tworzenia projektu, przechodzenia do usługi Intune i przeprowadzania wdrożenia w środowisku produkcyjnym.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="/intune-education/what-is-intune-for-education">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -83,14 +89,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune">Jak edukować użytkowników końcowych na temat usługi Microsoft Intune</a></h3>
-                                            <p>Dowiedz się, jak przybliżyć użytkownikom końcowym kwestię bezpiecznego dostępu, jaki zapewnia usługa Intune.</p>
+                                            <h3>Co to jest usługa Intune for Education?</h3>
+                                            <p>Dowiedz się, jak wykonywać codzienne czynności za pomocą urządzeń w klasach.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -100,14 +108,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview">Praca z usługą Intune w programie Microsoft Graph</a></h3>
+                                            <h3>Praca z usługą Intune w programie Microsoft Graph</h3>
                                             <p>Korzystaj z interfejsów API programu Microsoft Graph w celu konfigurowania kontrolek i zasad usługi Intune.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -117,14 +127,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">Masz ponad 150 licencji? Wykorzystaj możliwości rozwiązania FastTrack</a></h3>
+                                            <h3>Ponad 150 licencji? Wykorzystaj możliwości rozwiązania FastTrack</h3>
                                             <p>Współpracuj ze specjalistami firmy Microsoft w zakresie oceny, korekty, włączania i zwiększania użycia tych usług.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="/intune/understand-explore/mam-faq">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -134,12 +146,13 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/understand-explore/mam-faq">Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi i ochrony aplikacji</a></h3>
+                                            <h3>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi i ochrony aplikacji</h3>
                                             <p>Znajdź odpowiedzi na niektóre często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi i ochrony aplikacji usługi Intune.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
 <!--                        <li>
                             <div class="cardSize">
@@ -241,18 +254,18 @@ ms.lasthandoff: 04/24/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/understand-explore/mobile-device-management-trial-guide-microsoft-intune">
-                            <div class="cardSize">
+                            <a href="/intune-education/what-is-intune-for-education">
+                           <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-intro-devicemgmt.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-featured-educateusers.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Zarządzanie urządzeniami przenośnymi za pomocą usługi Microsoft Intune</h3>
-                                            <p>Oceń przebieg zarządzania urządzeniami przenośnymi w usłudze Intune.</p>
+                                            <h3>Co to jest usługa Intune for Education?</h3>
+                                            <p>Dowiedz się, jak wykonywać codzienne czynności za pomocą urządzeń w klasach.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -470,7 +483,7 @@ ms.lasthandoff: 04/24/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/plan-design/section-2-identify-use-case-scenarios">
+                            <a href="/intune/plan-design/introduction">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
