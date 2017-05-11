@@ -14,10 +14,11 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: ab91737586103ecc6f279daf6a55eb8988ad991a
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 81f5b33bc344cd6ed305d72178c7eb4cac315a13
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -46,7 +47,7 @@ Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dni
 
 ### <a name="get-an-encryption-key"></a>Pobieranie klucza szyfrowania
 
-1. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com), kliknij pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**, a następnie wybierz pozycję **Pobierz klucz szyfrowania**.
+1. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](https://manage.microsoft.com), kliknij pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**, a następnie wybierz pozycję **Pobierz klucz szyfrowania**.
 
 2. Zapisz lokalnie plik klucza szyfrowania (PEM) Plik PEM jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu programu Device Enrollment Program firmy Apple.
 
@@ -68,13 +69,13 @@ Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dni
 
 ### <a name="add-the-dep-token-to-intune"></a>Dodawanie tokenu programu DEP do usługi Intune
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**.
 
 2. Wybierz pozycję **Przekaż token DEP**. **Przejdź** do pliku certyfikatu (p7m), wprowadź swój identyfikator **Apple ID** i wybierz pozycję **Przekaż**.
 
 ### <a name="add-the-corporate-device-enrollment-policy"></a>Dodawanie zasad rejestracji urządzeń firmowych
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
 
 2. Podaj **ogólne** informacje, takie jak **Nazwa** i **Opis**, oraz określ, czy urządzenia przypisane do tego profilu pozostają w koligacji z użytkownikiem, czy też należą do grupy:
 
@@ -122,7 +123,7 @@ Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dni
 
 ### <a name="assign-the-profile-to-devices"></a>Przypisywanie profilu do urządzeń
 
-1. W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Przypisz**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) przejdź do pozycji **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Przypisz**.
 
 2. Wybierz urządzenia, do których chcesz przypisać utworzony profil. Można wybrać pozycję **Wszystkie urządzenia** lub wybrać określone urządzenia, a następnie wybrać pozycję **Dodaj**.
 
@@ -143,9 +144,9 @@ Poniżej przedstawiono procedurę rejestracji urządzeń z systemem iOS w „dni
 
 Ten krok umożliwia synchronizację urządzeń z usługą Apple DEP i wyświetlenie tych urządzeń w konsoli usługi Intune.
 
-1. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](http://manage.microsoft.com), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**, a następnie wybierz pozycję **Synchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple.
+1. Jako użytkownik administracyjny otwórz [konsolę administracyjną usługi Microsoft Intune](https://manage.microsoft.com), przejdź do pozycji **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **iOS** &gt; **Device Enrollment Program**, a następnie wybierz pozycję **Synchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple.
 
-2. Aby wyświetlić urządzenia zarządzane przez program DEP po synchronizacji, w [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru seryjnego systemu iOS**. W obszarze roboczym **Według numeru seryjnego systemu iOS** dla zarządzanych urządzeń wyświetlany jest **stan** „Nie nawiązano komunikacji”, dopóki urządzenie nie zostanie włączone i Asystent ustawień nie zostanie uruchomiony w celu zarejestrowania urządzenia.
+2. Aby wyświetlić urządzenia zarządzane przez program DEP po synchronizacji, w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wstępnie zarejestrowane urządzenia należące do firmy** &gt; **Według numeru seryjnego systemu iOS**. W obszarze roboczym **Według numeru seryjnego systemu iOS** dla zarządzanych urządzeń wyświetlany jest **stan** „Nie nawiązano komunikacji”, dopóki urządzenie nie zostanie włączone i Asystent ustawień nie zostanie uruchomiony w celu zarejestrowania urządzenia.
 
    Aby spełnić warunki ruchu programu DEP firmy Apple, usługa Intune nakłada następujące ograniczenia:
 
@@ -162,7 +163,11 @@ Urządzenia firmowe mogą zostać teraz przekazane użytkownikom. Po włączeniu
 
 ## <a name="changes-to-intune-group-assignments"></a>Zmiany przypisań grup usługi Intune
 
-Od kwietnia 2017 roku zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach profilu rejestracji w firmie. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie. W przypadku każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, w usłudze AAD zostanie utworzona odpowiednia dynamiczna grupa urządzeń przy użyciu nazwy profilu Rejestracja urządzeń firmowych podczas migracji do grup urządzeń w usłudze Azure Active Directory. Ten proces zapewnia, że urządzenia przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami. Szczegółowe informacje na temat wpływu tych działań na proces rejestrowania należących do firmy urządzeń z systemem iOS zawiera artykuł [Changes to Automatic Grouping for Corporate Pre-enrolled iOS Devices](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/) (Zmiana na automatyczne grupowanie dla wstępnie zarejestrowanych firmowych urządzeń z systemem iOS).
+Od kwietnia 2017 roku zarządzanie grupami urządzeń zostanie przeniesione do usługi Azure Active Directory. Po przejściu do grup usługi Azure Active Directory przypisanie do grupy nie będzie wyświetlane w opcjach profilu rejestracji w firmie. Ponieważ ta zmiana będzie wprowadzana przez szereg miesięcy, może nie być widoczna od razu. Po przejściu do nowego portalu dynamiczne przypisania grup urządzeń będzie można definiować na podstawie nazw profili rejestracji w firmie.
+
+Po migracji dla każdej grupy urządzeń w usłudze Intune, które są wstępnie przypisane przy użyciu profilu Rejestracja urządzeń firmowych, na podstawie nazwy tego profilu zostanie utworzona odpowiednia dynamiczna grupa urządzeń w usłudze Azure AD. Nowe nazwy profilów mają format *EnrollmentProfile:&lt;nazwa skojarzonego profilu&gt;*. Ten proces zapewnia, że urządzenia przypisane do grupy urządzeń zostaną automatycznie zarejestrowane w grupie z wdrożonymi zasadami i aplikacjami.
+
+Takie automatyczne tworzenie grupy odbywa się tylko raz podczas migracji grup. Po migracji administratorzy usługi Intune muszą tworzyć grupy w witrynie Azure Portal. Szczegółowe informacje na temat wpływu tych działań na proces rejestrowania należących do firmy urządzeń z systemem iOS zawiera artykuł [Changes to Automatic Grouping for Corporate Pre-enrolled iOS Devices](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/) (Zmiana na automatyczne grupowanie dla wstępnie zarejestrowanych firmowych urządzeń z systemem iOS).
 
 Zobacz także artykuł [Zarządzanie grupami w usłudze Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
 

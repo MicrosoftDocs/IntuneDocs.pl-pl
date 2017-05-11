@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 03/18/17
+ms.date: 03/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: 723830f686991fe13de13f75c6a5d1bc84e6920b
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 4916b66e1f2eeabb42401645dbece28dad28eb19
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/26/2017
 
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc użytkownikom w Portalu rozwiązywania problemów w usłudze Microsoft Intune
@@ -40,8 +41,9 @@ Aby uzyskać więcej informacji o rolach usługi Intune, zobacz temat [Role usł
 ## <a name="access-the-troubleshooting-portal"></a>Dostęp do portalu rozwiązywania problemów
 
 Personel działu pomocy i administratorzy usługi Intune mogą uzyskać dostęp do portalu rozwiązywania problemów na dwa sposoby:
-- W [portalu Azure](https:portal.azure.com) należy wybrać kolejno pozycje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**, a następnie wybrać w lewym bloku nawigacyjnym pozycję **Rozwiąż problem**. Inne obciążenia są widoczne w lewym bloku nawigacyjnym, ale są niedostępne.
-![Zrzut ekranu przedstawiający obciążenie Rozwiązywanie problemów usługi Intune z linkiem Wybierz użytkownika](media/help-desk-user.png)
+- W [portalu Azure](https://portal.azure.com) należy wybrać kolejno pozycje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**, a następnie wybrać w lewym bloku nawigacyjnym pozycję **Rozwiąż problem**. Inne obciążenia są widoczne w lewym bloku nawigacyjnym, ale są niedostępne.
+
+![Zrzut ekranu przedstawiający obciążenie Rozwiązywanie problemów z usługą Intune z linkiem Wybierz użytkownika](media/help-desk-user.png)
 - Otwórz w przeglądarce sieci Web stronę [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting). Widoczny jest wyłącznie portal rozwiązywania problemów.
 
 ## <a name="use-the-troubleshooting-portal"></a>Korzystanie z portalu rozwiązywania problemów

@@ -14,10 +14,11 @@ ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: de2f224f203257fe539196557180f0b5da5d8373
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 0b5586a06af7658c0c7a328ae1a824f88129039f
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -44,7 +45,7 @@ Poniższy błąd występuje w sytuacji, gdy użytkownik będący administratorem
 
 ![zrzut ekranu przedstawiający ekran logowania do aplikacji Lookout z wyświetlonym błędem logowania](../media/mtp/lookout-mtp-consent-not-accepted-error.png)
 
-Aby rozwiązać ten problem, użytkownik będący administratorem globalnym musi się zalogować na stronie https://aad.lookout.com/les?action=consent i zaakceptować monit o zainicjowanie konfiguracji. Bardziej szczegółowe informacje podano w temacie [Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](../deploy-use/set-up-your-subscription-with-lookout-mtp.md)
+Aby rozwiązać ten problem, użytkownik będący administratorem globalnym musi zalogować się na stronie https://aad.lookout.com/les?action=consent i zaakceptować monit o zainicjowanie konfiguracji. Bardziej szczegółowe informacje podano w temacie [Konfigurowanie subskrypcji przy użyciu aplikacji Lookout MTP](../deploy-use/set-up-your-subscription-with-lookout-mtp.md)
 
 **Problemy ze stanem urządzenia**
 
