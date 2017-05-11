@@ -100,8 +100,8 @@
 ### [Tworzenie i przypisywanie zasad ochrony aplikacji](manage-apps/app-protection-policies.md)
 ### [Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP](manage-apps/get-ready-to-configure-app-protection-policies-for-windows-10.md)
 ### [Tworzenie i przypisywanie zasad ochrony aplikacji WIP](manage-apps/create-windows-information-protection-policy-with-intune.md)
-#### [Ustawienia systemu Android](manage-apps/android-app-protection-policy-settings.md)
-#### [Ustawienia systemu iOS](manage-apps/ios-app-protection-policy-settings.md)
+### [Ustawienia systemu Android](manage-apps/android-app-protection-policy-settings.md)
+### [Ustawienia systemu iOS](manage-apps/ios-app-protection-policy-settings.md)
 ### [Weryfikowanie zasad ochrony aplikacji](manage-apps/validate-app-protection-policies.md)
 ### [Monitorowanie stanu użytkownika ochrony aplikacji](manage-apps/monitor-app-protection-policies-with-microsoft-intune.md)
 ### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-apps/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
@@ -190,7 +190,7 @@
 ### [Tworzenie zasad zgodności programu Android for Work](set-device-compliance/create-a-compliance-policy-for-android-for-work.md)
 ### [Tworzenie zasad zgodności systemu iOS](set-device-compliance/create-a-compliance-policy-for-ios.md)
 ### [Tworzenie zasad zgodności systemu Windows](set-device-compliance/create-a-compliance-policy-for-windows.md)
-### [Tworzenie akcji w przypadku niezgodności](set-device-compliance/actions-for-noncompliance.md)
+<!---### [Create Actions for noncompliance](set-device-compliance/actions-for-noncompliance.md)--->
 ### [Monitorowanie zgodności urządzenia](set-device-compliance/monitor-intune-device-compliance-policies.md)
 <!--- ### [Monitor device compliance](set-device-compliance/monitor-device-compliance.md)--->
 
