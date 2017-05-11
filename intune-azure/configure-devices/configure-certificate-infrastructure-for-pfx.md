@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 04/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,16 @@ ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 0c378fe6ed26bafb5a78daf36b9326771fdd287b
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 11bb2cbcf14abe5966e0b203ba3466adc12bd4dd
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/24/2017
 
 
 
 ---
-# <a name="configure-your-microsoft-intune-certificate-infrastructure-for-pkcs"></a>Konfigurowanie infrastruktury certyfikatów usługi Microsoft Intune dla standardu PKCS
+# <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów PKCS za pomocą usługi Intune.

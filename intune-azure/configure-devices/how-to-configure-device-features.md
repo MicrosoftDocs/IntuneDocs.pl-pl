@@ -15,10 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: e1bc6388ec1927693bac676a20a18935cdbf894e
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: fddd4963ceea09b37ad4d8c739f437dbcf3b053e
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -49,7 +50,6 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
     - [Ustawienia układu ekranu głównego dla urządzeń z systemem iOS](home-screen-settings-for-ios.md)
     - [Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS](app-notification-settings-for-ios.md)
     - [Ustawienia konfiguracji urządzenia udostępnianego dla urządzeń z systemem iOS](shared-device-settings-for-ios.md)
-    - [Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS](web-content-filter-settings-for-ios.md)
 
 8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
 
