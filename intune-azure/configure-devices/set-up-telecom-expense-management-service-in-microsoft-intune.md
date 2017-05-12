@@ -15,10 +15,11 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: b0d0ad102942c65ac3988ea4659b34b397289126
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e0f40d21412e261d31a0a492c260a6097d4dd007
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -99,7 +100,7 @@ Aby mieć pewność, że zbierane są dane o użyciu tylko z linii należących 
 
 W zależności od potrzeb organizacji należy utworzyć co najmniej dwie kategorie urządzeń (na przykład Firmowe i Osobiste) i utworzyć dynamiczne grupy urządzeń dla każdej z kategorii. W razie potrzeby możesz utworzyć więcej kategorii.
 
-Te kategorie będą wyświetlane użytkownikom podczas rejestrowania. W zależności od wybranej kategorii zarejestrowane urządzenie zostanie przeniesione do odpowiedniej grupy urządzeń. Aby dowiedzieć się, jak utworzyć kategorie urządzeń, zobacz [Mapowanie urządzeń na grupy](https://docs.microsoft.com/intune-azure/enroll-devices/how-to-use-device-group-mapping).
+Te kategorie będą wyświetlane użytkownikom podczas rejestrowania. W zależności od wybranej kategorii zarejestrowane urządzenie zostanie przeniesione do odpowiedniej grupy urządzeń. Aby dowiedzieć się, jak utworzyć kategorie urządzeń, zobacz [Mapowanie urządzeń na grupy](../enroll-devices/how-to-use-device-group-mapping.md).
 
   ![Zrzut ekranu przedstawiający blok Dodawanie zasad](../media/tem-dynamic-membership-rules.png)
 

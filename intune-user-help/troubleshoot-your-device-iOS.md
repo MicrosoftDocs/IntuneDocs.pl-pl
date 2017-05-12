@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 1d0284ca2b5fd935a8657e3dd73d23d45071fd50
-ms.openlocfilehash: 200c992caa36ca74bf3e4ad82a21099a4b7ada4c
-ms.lasthandoff: 03/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: c06d03943863f6ab46a0943b08e1d986b210e58a
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -32,7 +33,6 @@ Niektóre problemy dotyczące urządzeń z systemem iOS można usunąć, korzyst
 - [Chcę ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 - [Chcę wysłać błędy do administratora IT](send-errors-to-your-it-admin-ios.md)
 - [Podczas korzystania z aplikacji Portal firmy wystąpił błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)
-- [Podczas próby zarejestrowania urządzenia w usłudze Intune pojawiły się błędy](you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
 - [Chcę zidentyfikować urządzenie, które ma zostać zarejestrowane](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 - [Jak znaleźć numer seryjny w urządzeniu?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Chcę zaktualizować urządzenie z systemem iOS](you-need-to-update-your-ios-device.md)
