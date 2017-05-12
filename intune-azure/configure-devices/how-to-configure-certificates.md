@@ -1,12 +1,12 @@
 ---
-title: "Jak skonfigurować certyfikaty z użyciem usługi Intune"
+title: "Jak skonfigurować certyfikaty z użyciem usługi Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Usługa Intune Azure w wersji zapoznawczej: Dowiedz się, jak tworzyć i przypisywać certyfikaty, które pozwolą zabezpieczyć sieci Wi-Fi i VPN oraz inne połączenia, korzystając z usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 7d1d3c101aaa3832e36a0b9e9369fd1eeb0a6250
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: ecb6a806e7870fd2b1986c4247607c9374431151
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -47,7 +48,7 @@ Każdy z tych typów certyfikatów ma własne wymagania wstępne i wymagania dot
     - Windows 8.1 i nowsze
     - System Windows Phone 8.1 lub nowszy
     - System Windows 10 lub nowszy
-3. Utwórz profile certyfikatów, aby mieć pewność, że poszczególne urządzenia żądają certyfikatu w celu jego użycia do uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi. Dla urządzeń korzystających z następujących platform można tworzyć i wdrażać profile certyfikatów protokołów **PKCS** i **SCEP**:
+3. Utwórz profile certyfikatów, aby mieć pewność, że poszczególne urządzenia żądają certyfikatu w celu jego użycia do uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi. Do urządzeń korzystających z następujących platform można tworzyć i przypisywać profile certyfikatów protokołów **PKCS** i **SCEP**:
     - System iOS 8.0 i nowsze
     - Android 4.0 i nowsze
     - Program Android for Work
@@ -71,8 +72,8 @@ Dla każdej platformy urządzenia należy utworzyć oddzielny profil. Po utworze
 
 Aby uzyskać pomoc dotyczącą konfigurowania infrastruktury dla każdego z typów profilów certyfikatu, zobacz następujące tematy:
 
-- [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](configure-certificate-infrastructure-for-pfx.md)
 
 
 ## <a name="step-2---export-your-trusted-root-ca-certificate"></a>Krok 2 — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
@@ -119,8 +120,8 @@ Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w art
 
 Aby uzyskać pomoc dotyczącą konfigurowania i przypisywania każdego z typów profilów certyfikatu, zobacz odpowiednio tematy:
 
-- [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](configure-certificate-infrastructure-for-pfx.md)
 
 Po utworzeniu profilu zaufanego certyfikatu należy utworzyć profile certyfikatów protokołu SCEP lub PKCS dla wszystkich platform, które będą używane. Podczas tworzenia profilu certyfikatu protokołu SCEP należy wskazać profil zaufanego certyfikatu dla danej platformy. W ten sposób oba profile certyfikatów zostaną połączone, niemniej jednak każdy profil należy przypisać osobno.
 

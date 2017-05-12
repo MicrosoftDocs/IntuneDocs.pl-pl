@@ -1,12 +1,12 @@
 ---
-title: "Jak przypisać aplikacje do grup"
+title: "Jak przypisywać aplikacje do grup | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 21ccb23023e9cb4f4b827887f8191ea73474c5de
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -38,7 +39,7 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 |Przypisz opakowane aplikacje lub aplikacje zawierające zestaw Intune SDK (dla zasad ochrony aplikacji)|Tak|Tak|
 |Przypisz aplikacje jako dostępne|Tak|Tak|
 |Przypisz aplikacje jako wymagane|Tak|Nie|
-|Odinstaluj aplikacje|Tak|Tak|
+|Odinstaluj aplikacje|Tak|Nie|
 |Użytkownicy końcowi instalują dostępne aplikacje z aplikacji Portal firmy|Tak|Nie|
 |Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy|Tak|Tak|
 
@@ -53,21 +54,21 @@ Najważniejszą rzeczą, na którą trzeba zwrócić uwagę jest to, że pojęci
 ||||||
 |-|-|-|-|-|
 |**Intune Classic (przed migracją dzierżawy)**|-|**Intune Azure (po zakończeniu migracji dzierżawy)**|-|**Więcej informacji**|
-|**Opcja wdrażania grupy nadrzędnej**|**Opcja wdrażania grupy podrzędnej**|**Wynikowa opcja przypisania dla wspólnych elementów członkowskich poprzedniej grupy nadrzędnej i podrzędnej**|**Akcja wynikowej opcji przypisania dla elementów członkowskich grupy nadrzędnej**|-|    
+|**Opcja przypisywania grupy nadrzędnej**|**Opcja przypisywania grupy podrzędnej**|**Wynikowa opcja przypisania dla wspólnych elementów członkowskich poprzedniej grupy nadrzędnej i podrzędnej**|**Akcja wynikowej opcji przypisania dla elementów członkowskich grupy nadrzędnej**|-|    
 |Dostępne|Wymagane|Wymagane i dostępne|Dostępne|Wymagane i dostępne oznacza, że aplikacje przypisane w razie potrzeby można także znaleźć w aplikacji Portal firmy.
-|Nie dotyczy|Dostępne|Nie dotyczy|Nie dotyczy|Obejście problemu: usuń opcję wdrażania „Nie dotyczy” z grupy nadrzędnej usługi Intune.
+|Nie dotyczy|Dostępne|Nie dotyczy|Nie dotyczy|Obejście problemu: usuń opcję przypisywania „Nie dotyczy” z grupy nadrzędnej usługi Intune.
 |Wymagane|Dostępne|Wymagane i dostępne|Wymagane|-|
 |Wymagane i dostępne<sup>1</sup>|Dostępne|Wymagane i dostępne|Wymagane i dostępne|-|    
 |Wymagane|Nie dotyczy|Wymagane|Wymagane|-|    
 |Wymagane i dostępne|Nie dotyczy|Wymagane i dostępne|Wymagane i dostępne|-|    
 |Wymagane|Odinstaluj|Wymagane|Wymagane|-|    
 |Wymagane i dostępne|Odinstaluj|Wymagane i dostępne|Wymagane i dostępne|-|
-<sup>1</sup> Tylko dla zarządzanych aplikacji ze sklepu iOS w przypadku ich dodania do usługi Intune i wdrożenia jako Wymagane są automatycznie tworzone z opcjami Wymagane i Dostępne.
+<sup>1</sup> Tylko dla zarządzanych aplikacji ze sklepu iOS w przypadku ich dodania do usługi Intune i przypisania jako Wymagane są automatycznie tworzone z opcjami Wymagane i Dostępne.
 
-W celu uniknięcia konfliktów wdrożenia można wykonać następujące czynności:
+W celu uniknięcia konfliktów przypisania można wykonać następujące czynności:
 
-1.    Jeśli aplikacje zostały wcześniej wdrożone do powiązanych grup nadrzędnych i podrzędnych usługi Intune, rozważ usunięcie tych wdrożeń przed rozpoczęciem migracji dzierżawy.
-2.    Usuń grupy podrzędne z grup nadrzędnych i utwórz nową grupę zawierającą elementy członkowskie starej grupy podrzędnej. Następnie można utworzyć nowe wdrożenie aplikacji do tej grupy.
+1.    Jeśli aplikacje zostały wcześniej przypisane do powiązanych grup nadrzędnych i podrzędnych usługi Intune, rozważ usunięcie tych przypisań przed rozpoczęciem migracji dzierżawy.
+2.    Usuń grupy podrzędne z grup nadrzędnych i utwórz nową grupę zawierającą elementy członkowskie starej grupy podrzędnej. Następnie można utworzyć nowe przypisanie aplikacji do tej grupy.
 Uwagi: Jeśli poprzednią grupą nadrzędną była „Wszyscy użytkownicy”, należy utworzyć nową grupę dynamiczną, która nie obejmuje elementów członkowskich grupy podrzędnej.
 Należy wprowadzić zmiany w grupach w portalu [Azure Portal](https://portal.azure.com/) dla grup użytkowników i urządzeń. [Klasyczny portal Azure](https://manage.windowsazure.com/) pozwala wprowadzać zmiany tylko w grupach użytkowników.
 

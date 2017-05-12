@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 195a7333e09f3a269b5ff10c51e0cfb3e7d10bdc
-ms.openlocfilehash: 3e363183f3ac33e4cde1060fb141f5e4eb7d566c
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 45b00ac17232aad7c404c7455fd10ca5cf8cb3f9
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -49,13 +50,13 @@ ms.lasthandoff: 04/04/2017
     - **Przekaż ikonę** — przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 8. Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Zapisz**.
 
-Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](/intune-azure/manage-apps/deploy-apps) (Jak przypisać aplikacje do grupy).
+Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](deploy-apps.md) (Jak przypisać aplikacje do grupy).
 
-## <a name="manually-deploy-windows-10-company-portal-app"></a>Ręczne wdrażanie aplikacji Portal firmy dla systemu Windows 10
-Użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Windows, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak Twoja działalność biznesowa wymaga wdrożenia aplikacji Portal firmy, aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Windows dla firm.
+## <a name="manually-assign-windows-10-company-portal-app"></a>Ręczne przypisywanie aplikacji Portal firmy dla systemu Windows 10
+Użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Windows, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal firmy, aplikację Portal firmy dla systemu Windows 10 można przypisać ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Windows dla firm.
 
  > [!NOTE]
- > Ta opcja wymaga ręcznego wdrażania aktualizacji po każdym wydaniu nowej aktualizacji aplikacji.
+ > Ta opcja wymaga ręcznego przypisywania aktualizacji po każdym wydaniu nowej aktualizacji aplikacji.
 
 1. Zaloguj się do swojego konta w [Sklepie Windows dla firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
 2. Po nabyciu aplikacji wybierz ją ze strony **Spis**.  
@@ -69,8 +70,8 @@ Użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Windows, aby 
   ![Obraz folderu Zależności zapisany w pliku APPXBUN](../media/Win10CP-Dependencies-save.png)
   2. Umieść dziewięć pakietów zależności w folderze Zależności.  
   Jeśli zależności nie będą wprowadzone w tym formacie, usługa Intune nie będzie mogła ich rozpoznać i przekazać podczas przekazywania pakietu, co spowoduje niepowodzenie przekazania z powodu następującego błędu.  
-  ![W folderze aplikacji nie znaleziono zależności aplikacji systemu Windows dla tego instalatora oprogramowania. Możesz kontynuować tworzenie i wdrażanie tej aplikacji, ale nie będzie ona działać, dopóki nie zostaną dostarczone brakujące zależności aplikacji systemu Windows.](../media/Win10CP-error-message.png)
-6. Wróć do usługi Intune, a następnie przekaż aplikację Portal firmy jako nową aplikację. Wdróż ją jako wymaganą aplikację dla żądanej grupy użytkowników docelowych.  
+  ![W folderze aplikacji nie znaleziono zależności aplikacji systemu Windows dla tego instalatora oprogramowania. Możesz kontynuować tworzenie i przypisywanie tej aplikacji, ale nie będzie ona działać, dopóki nie zostaną dostarczone brakujące zależności aplikacji systemu Windows.](../media/Win10CP-error-message.png)
+6. Wróć do usługi Intune, a następnie przekaż aplikację Portal firmy jako nową aplikację. Przypisz ją jako wymaganą aplikację dla żądanej grupy użytkowników docelowych.  
 
 Aby uzyskać więcej informacji na temat sposobu obsługi zależności dla aplikacji uniwersalnych w usłudze Intune, zobacz temat [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Wdrażanie pliku appxbundle z zależnościami poprzez rozwiązanie MDM programu Microsoft Intune).  
 
@@ -78,20 +79,20 @@ Aby uzyskać więcej informacji na temat sposobu obsługi zależności dla aplik
 Jeśli użytkownicy mają już zainstalowane aplikacje Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1 ze sklepu, powinny one zostać automatycznie zaktualizowane do nowej wersji bez konieczności wykonania jakichkolwiek czynności przez Ciebie lub użytkowników. Jeśli aktualizacja nie miała miejsca, poproś użytkowników, aby sprawdzili, czy na swoich urządzeniach mają włączoną opcję automatycznych aktualizacji.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak uaktualnić moją załadowaną bezpośrednio aplikację Portal firmy dla systemu Windows 8.1 do aplikacji Portal firmy dla systemu Windows 10?
-Zalecana przez nas ścieżka migracji polega na usunięciu wdrożenia aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji wdrożenia na „Odinstaluj”. Po tej operacji aplikację Portal firmy systemu Windows 10 można wdrożyć przy użyciu dowolnej z powyższych opcji.  
+Zalecana przez nas ścieżka migracji polega na usunięciu przypisania aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji przypisania na „Odinstaluj”. Po tej operacji aplikację Portal firmy dla systemu Windows 10 można przypisać przy użyciu dowolnej z powyższych opcji.  
 
-Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została wdrożona bez rejestrowania jej za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w sekcji Wdróż bezpośrednio za pomocą sekcji usługi Intune powyżej, aby ukończyć uaktualnianie.
+Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została przypisana bez rejestrowania jej za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w poprzedniej sekcji dotyczącej bezpośredniego przypisywania za pomocą usługi Intune, aby ukończyć uaktualnianie.
 
-Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy systemu Windows 8.1 została podpisana i wdrożona za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w sekcji poniżej.  
+Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została podpisana i przypisana za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w sekcji poniżej.  
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak uaktualnić podpisaną i ładowaną bezpośrednio aplikację Portal firmy dla systemu Windows Phone 8.1 lub aplikację Portal firmy dla systemu Windows 8.1 do aplikacji Portal firmy dla systemu Windows 10?
-Zalecana przez nas ścieżka migracji polega na usunięciu istniejącego wdrożenia aplikacji Portal firmy dla systemu Windows Phone 8.1 lub aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji wdrożenia na „Odinstaluj”. Po tej operacji aplikację Portal firmy dla systemu Windows 10 można wdrożyć w zwykły sposób.  
+Zalecana przez nas ścieżka migracji polega na usunięciu istniejącego przypisania aplikacji Portal firmy dla systemu Windows Phone 8.1 lub aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji przypisania na „Odinstaluj”. Po tej operacji aplikację Portal firmy dla systemu Windows 10 można przypisać w zwykły sposób.  
 
 W przeciwnym razie aplikacja Portal firmy dla systemu Windows 10 musi zostać odpowiednio aktualizowana i podpisana w celu zapewnienia, że ścieżka uaktualnienia jest zachowana.  
 
-Jeśli aplikacja Portal firmy dla systemu Windows 10 została podpisana i wdrożona w ten sposób, konieczne będzie powtórzenie tego procesu dla każdej nowej aktualizacji aplikacji, gdy będzie ona dostępna w sklepie. Aplikacja nie będzie automatycznie aktualizowana podczas aktualizacji sklepu.  
+Jeśli aplikacja Portal firmy dla systemu Windows 10 została podpisana i przypisana w ten sposób, konieczne będzie powtórzenie tego procesu dla każdej nowej aktualizacji aplikacji, gdy będzie ona dostępna w sklepie. Aplikacja nie będzie automatycznie aktualizowana podczas aktualizacji sklepu.  
 
-Poniżej przedstawiono procedurę rejestrowania i wdrażania aplikacji w ten sposób:
+Poniżej przedstawiono procedurę podpisywania i przypisywania aplikacji w ten sposób:
 
 1. Pobierz skrypt podpisywania aplikacji Portal firmy dla systemu Windows 10 usługi Microsoft Intune ze strony [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Ten skrypt wymaga wcześniejszego zainstalowania pakietu Windows SDK dla systemu Windows 10 na komputerze-hoście. Aby pobrać pakiet Windows SDK dla systemu Windows 10, odwiedź stronę [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
 2. Pobierz aplikację Portal firmy dla systemu Windows 10 ze Sklepu Windows dla firm zgodnie z powyższym opisem.  
@@ -105,5 +106,5 @@ Poniżej przedstawiono procedurę rejestrowania i wdrażania aplikacji w ten spo
 |PfxPassword| Hasło certyfikatu podpisywania kodu firmy Symantec dla firmowych urządzeń przenośnych. |
 |PublisherId |Identyfikator wydawcy przedsiębiorstwa. Jeśli go nie ma, używane jest pole Podmiot certyfikatu podpisywania kodu firmy Symantec dla firmowych urządzeń przenośnych.|
 |SdkPath | Ścieżka do głównego folderu pakietu Windows SDK dla systemu Windows 10. Ten argument jest opcjonalny i domyślnie ustawiony na wartość ${env:ProgramFiles(x86)}\Windows Kits\10|
-Po zakończeniu działania skryptu zostanie wygenerowana podpisana wersja aplikacji Portal firmy dla systemu Windows 10. Następnie można wdrożyć podpisaną wersję aplikacji jako aplikację biznesową za pomocą usługi Intune, która spowoduje uaktualnienie aktualnie wdrożonych wersji do tej nowej aplikacji.  
+Po zakończeniu działania skryptu zostanie wygenerowana podpisana wersja aplikacji Portal firmy dla systemu Windows 10. Następnie można przypisać podpisaną wersję aplikacji jako aplikację biznesową za pomocą usługi Intune, która spowoduje uaktualnienie aktualnie przypisanych wersji do tej nowej aplikacji.  
 

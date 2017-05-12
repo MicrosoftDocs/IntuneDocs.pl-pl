@@ -1,5 +1,5 @@
 ---
-title: "Co to są profile urządzeń w usłudze Microsoft Intune?"
+title: "Co to są profile urządzeń w usłudze Microsoft Intune? | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: więcej informacji na temat profilów urządzeń w usłudze Intune i sposobu, w jaki mogą one być pomocne w zarządzaniu urządzeniami w Twojej firmie i ich ochronie."
 keywords: 
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
-ms.lasthandoff: 03/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: b33d8ec48c057ce1e67487d5772ca203793d8a79
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -37,7 +38,7 @@ Po otwarciu tego obciążenia zostaną wyświetlone następujące opcje:
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Przepływ pracy związany z tworzeniem profilów urządzeń jest podobny dla wszystkich profilów. Informacje o sposobie tworzenia profilów można znaleźć w temacie [How to create Microsoft Intune device configuration profiles (Sposoby tworzenia profilów konfiguracji urządzeń w usłudze Microsoft Intune)](/intune-azure/configure-devices/how-to-create-device-profiles). W dalszej kolejności należy zapoznać się z konkretnymi informacjami na temat tworzenia ustawień dla każdego typu profilu.
+Przepływ pracy związany z tworzeniem profilów urządzeń jest podobny dla wszystkich profilów. Informacje o sposobie tworzenia profilów można znaleźć w temacie [How to create Microsoft Intune device configuration profiles (Sposoby tworzenia profilów konfiguracji urządzeń w usłudze Microsoft Intune)](how-to-create-device-profiles.md). W dalszej kolejności należy zapoznać się z konkretnymi informacjami na temat tworzenia ustawień dla każdego typu profilu.
 
 Na urządzeniach można zarządzać następującymi możliwościami:
 
@@ -51,15 +52,15 @@ Ograniczenia dotyczące urządzeń pozwalają na kontrolę szerokiego zakresu us
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure device restriction settings (Sposoby konfigurowania ustawień ograniczeń urządzenia)](how-to-configure-device-restrictions.md) Dotyczy systemów: Android, iOS, macOS, Windows 10 i Windows 10 Team.
 
 ## <a name="email"></a>Poczta e-mail
-Profile poczty e-mail pozwalają na tworzenie, wdrażanie i monitorowanie ustawień poczty e-mail protokołu Exchange ActiveSync na urządzeniach zarządzanych. Wdrożenie tych ustawień zapewnia spójność, zmniejszenie liczby interwencji obsługi i umożliwia użytkownikom końcowym dostęp do firmowej poczty e-mail na ich osobistych urządzeniach bez konieczności przeprowadzania konfiguracji po ich stronie.
+Profile poczty e-mail pozwalają na tworzenie, przypisywanie i monitorowanie ustawień poczty e-mail protokołu Exchange ActiveSync na urządzeniach zarządzanych. Przypisanie tych ustawień zapewnia spójność, zmniejszenie liczby interwencji obsługi i umożliwia użytkownikom końcowym dostęp do firmowej poczty e-mail na ich osobistych urządzeniach bez konieczności przeprowadzania konfiguracji po ich stronie.
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure email settings (Konfigurowanie ustawień poczty e-mail)](how-to-configure-email-settings.md) Dotyczy systemów: Android, iOS, Windows Phone 8.1 i Windows 10.
 
 ## <a name="wi-fi"></a>Wi-Fi
-Aby wdrożyć ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w organizacji, użyj profilów sieci Wi-Fi. W przypadku wdrożenia profilu sieci Wi-Fi użytkownicy będą mieli dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego konfigurowania połączenia.
+Aby przypisać ustawienia sieci bezprzewodowej do użytkowników i urządzeń w organizacji, użyj profilów sieci Wi-Fi. W przypadku przypisania profilu sieci Wi-Fi użytkownicy będą mieli dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego konfigurowania połączenia.
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure Wi-Fi settings (Konfigurowanie ustawień sieci Wi-Fi)](how-to-configure-wi-fi-settings.md) Dotyczy systemów: Android, iOS, macOS i Windows 8.1 (tylko import).
 
 ## <a name="vpn"></a>VPN
-Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Aby wdrożyć ustawienia sieci VPN dla użytkowników i urządzeń w organizacji w taki sposób, aby łączenie się z siecią było łatwe i bezpieczne, użyj profilów sieci VPN.
+Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Aby przypisać ustawienia sieci VPN do użytkowników i urządzeń w organizacji w taki sposób, aby łączenie się z siecią było łatwe i bezpieczne, użyj profilów sieci VPN.
 Aby uzyskać więcej informacji, zobacz artykuł [How to configure VPN settings (Sposoby konfigurowania ustawień sieci VPN)](how-to-configure-vpn-settings.md).
 Dotyczy systemów: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 i Windows 10.
 
