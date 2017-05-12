@@ -14,9 +14,11 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e2503c44f434e67f45064f28d1e921eb5accb0b6
-ms.openlocfilehash: 2707e3fae32e73aa17696886f493932e903ffc10
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.openlocfilehash: e7fd0a83e21d499da39bd65502d8981bc3b1f61c
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/06/2017
 
 
 ---
@@ -40,7 +42,7 @@ Witryna Azure Portal służy do tworzenia zasad ochrony aplikacji oraz zarządza
 
 ## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Zaloguj się do witryny Azure Portal i dostosuj swoją stronę początkową
 
-1.  Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+1.  Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
     ![Zrzut ekranu przedstawiający stronę logowania się do witryny Azure Portal](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
@@ -64,9 +66,4 @@ Witryna Azure Portal służy do tworzenia zasad ochrony aplikacji oraz zarządza
 
 ## <a name="next-steps"></a>Następne kroki
 [Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

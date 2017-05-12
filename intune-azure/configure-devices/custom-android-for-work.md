@@ -15,23 +15,24 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: ac27b1915483568b9b9857405f7acaf704fd53d9
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 05afa9140e34b372cc49ace03a3ada965b907c17
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 
 ---
 
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Tworzenie niestandardowych ustawień profilu dla urządzeń z programem Android for Work z użyciem usługi Intune
 
-Niestandardowe zasady konfiguracji programu Android for Work w usłudze Intune umożliwiają wdrożenie ustawień OMA-URI, których można użyć do sterowania funkcjami na urządzeniach z programem Android for Work. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
+Niestandardowe zasady konfiguracji programu Android for Work w usłudze Intune umożliwiają przypisanie ustawień OMA-URI, których można użyć do sterowania funkcjami na urządzeniach z programem Android for Work. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
 
-Ta funkcja ma umożliwić wdrażanie ustawień systemu Android, których nie można skonfigurować przy użyciu zasad usługi Intune. Obecnie usługa Intune obsługuje tylko ograniczoną liczbę zasad niestandardowych systemu Android. Zobacz przykłady w tym temacie, aby dowiedzieć się, które zasady możesz skonfigurować.
+Ta funkcja ma umożliwić przypisanie ustawień systemu Android, których nie można skonfigurować przy użyciu zasad usługi Intune. Obecnie usługa Intune obsługuje tylko ograniczoną liczbę zasad niestandardowych systemu Android. Zobacz przykłady w tym temacie, aby dowiedzieć się, które zasady możesz skonfigurować.
 
 ## <a name="create-a-custom-profile"></a>Tworzenie profilu niestandardowego
 
-1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [Jak skonfigurować niestandardowe ustawienia urządzenia](/intune-azure/configure-devices/how-to-configure-custom-settings).
+1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [Jak skonfigurować niestandardowe ustawienia urządzenia](how-to-configure-custom-settings.md).
 2. W bloku **Niestandardowe ustawienia OMA-URI** kliknij przycisk **Dodaj**, aby dodać nowe ustawienie.
 3. W bloku **Dodaj wiersz** skonfiguruj następujące opcje:
     - **Nazwa** — wprowadź unikatową nazwę niestandardowych ustawień programu Android for Work, która pomoże je zidentyfikować w portalu usługi Intune.
