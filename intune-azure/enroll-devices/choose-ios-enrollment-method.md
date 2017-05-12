@@ -15,10 +15,11 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 748f5b6e18b7bc6d9e9d3e6635ac2c3e7eb11a67
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 3015c5493e8b38b425309584430c372e6a4d90cf
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -35,7 +36,7 @@ Poniższe informacje pomogą zdecydować, której metody rejestracji urządzeń 
 
 ## <a name="user-owned-ios-devices-byod"></a>Urządzenia z systemem iOS należące do użytkownika (BYOD)
 
-Jeśli użytkownik chce zarejestrować własne urządzenie BYOD (Bring Your Own Device, przynieś własne urządzenie), jedyna dostępna metoda rejestracji dla użytkowników polega na pobraniu aplikacji dla systemu iOS z portalu Portal firmy ze sklepu z aplikacjami i postępowaniu zgodnie z instrukcjami rejestracji w aplikacji. Po zarejestrowaniu użytkownicy mogą nawiązać połączenie z siecią firmową, przyłączyć się do domeny lub usługi Azure Active Directory i uzyskać dostęp do zasobów firmy. Możesz zablokować możliwość rejestrowania urządzeń z systemem iOS będących własnością użytkowników. Instrukcje zawiera temat [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
+Jeśli użytkownik chce zarejestrować własne urządzenie BYOD (Bring Your Own Device, przynieś własne urządzenie), jedyna dostępna metoda rejestracji dla użytkowników polega na pobraniu aplikacji dla systemu iOS z portalu Portal firmy ze sklepu z aplikacjami i postępowaniu zgodnie z instrukcjami rejestracji w aplikacji. Po zarejestrowaniu użytkownicy mogą nawiązać połączenie z siecią firmową, przyłączyć się do domeny lub usługi Azure Active Directory i uzyskać dostęp do zasobów firmy. Możesz zablokować możliwość rejestrowania urządzeń z systemem iOS będących własnością użytkowników. Instrukcje zawiera temat [Ustawianie ograniczeń typu urządzeń](set-enrollment-restrictions.md#set-device-type-restrictions).
 
 ## <a name="apple-configurator"></a>Program Apple Configurator
 

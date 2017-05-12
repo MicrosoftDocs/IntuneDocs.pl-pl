@@ -15,10 +15,11 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: c2ace3061e175a6eefd864bdda176651cc09a5b1
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 6fb4b81e11ae8c66341922898d9ecc4cce3a002d
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -94,7 +95,7 @@ Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługuj�
 
 Ustawienie większej liczby spowoduje wymaganie wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
-W przypadku urządzeń z systemem iOS to ustawienie oznacza liczbę znaków specjalnych (na przykład **!** , ** # **, ** &amp; **), które muszą znajdować się w haśle.
+W przypadku urządzeń z systemem iOS to ustawienie oznacza liczbę znaków specjalnych (na przykład **!** , **#**, **&amp;**), które muszą znajdować się w haśle.
 
 - **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: określ czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
 - **Wygaśnięcie hasła (w dniach)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
@@ -109,7 +110,7 @@ W przypadku urządzeń z systemem iOS to ustawienie oznacza liczbę znaków spec
   - Użytkownik skonfigurował już na urządzeniu konto e-mail zgodne z profilem poczty e-mail usługi Intune wdrożonym na urządzeniu. Usługa Intune nie może zastąpić profilu określonego przez użytkownika i dlatego nie może nim zarządzać. W celu zapewnienia zgodności użytkownik musi usunąć istniejące ustawienia poczty e-mail. Umożliwi to usłudze Intune zainstalowanie zarządzanego profilu poczty e-mail.
 - **Wybierz profil poczty e-mail, który ma być zarządzany przez usługę Intune**: jeśli zaznaczona jest opcja **Konto e-mail musi być zarządzane przez usługę Intune**, kliknij pozycję **Wybierz**, aby określić profil poczty e-mail usługi Intune. Ten profil poczty e-mail musi znajdować się na urządzeniu.
 
-Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz artykuł [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune).
+Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz artykuł [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune).
 
 ## <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
 

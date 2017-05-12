@@ -15,10 +15,10 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
-ms.openlocfilehash: 4916b66e1f2eeabb42401645dbece28dad28eb19
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 8cf12e434518c9f06c105a22f3b7aef2613fcdb0
 ms.contentlocale: pl-pl
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc użytkownikom w Portalu rozwiązywania problemów w usłudze Microsoft Intune
@@ -36,7 +36,7 @@ Administrator usługi Intune może przypisywać użytkownikom uprawnienia operat
 4. Uzupełnij pola **Nazwa przypisania** (wymagane) i **Opis przypisania** (opcjonalne), a następnie przypisz elementy zbiorów **Członkowie (grupy)** i **Zakres (grupy)**.
 5. Członkowie roli operatorów pomocy technicznej mogą od tego momentu używać portalu rozwiązywania problemów.
 
-Aby uzyskać więcej informacji o rolach usługi Intune, zobacz temat [Role usługi Intune (RBAC)](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control).
+Aby uzyskać więcej informacji o rolach usługi Intune, zobacz temat [Role usługi Intune (RBAC)](../access-control/role-based-access-control.md).
 
 ## <a name="access-the-troubleshooting-portal"></a>Dostęp do portalu rozwiązywania problemów
 
