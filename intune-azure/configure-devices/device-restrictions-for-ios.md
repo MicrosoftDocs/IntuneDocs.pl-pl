@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: 9e348278f62b2b9ba10f0f77c9fda214b43812a7
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 68738f25393eec006a8bc7a78412669859f91c27
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -123,7 +124,7 @@ Aby określić adres URL aplikacji na liście aplikacji, użyj następującego f
 
 Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz użyć, i otwórz jej stronę.
 Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy aplikacji zatwierdzonych lub zabronionych bądź aplikacji działających w trybie kiosku.
-Profile urządzeń zawierające ustawienia aplikacji z ograniczeniami należy wdrożyć dla grup użytkowników.
+Profile urządzeń zawierające ustawienia aplikacji z ograniczeniami należy przypisać do grup użytkowników.
 
 Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, którego należy użyć, to https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
@@ -160,52 +161,6 @@ Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, któr
 ### <a name="additional-options"></a>Opcje dodatkowe
 
 Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę ukrytych lub widocznych aplikacji w tym samym formacie.
-
-### <a name="app-information-for-built-in-ios-apps"></a>Informacje o aplikacji dla wbudowanych aplikacji systemu iOS
-Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator pakietu dla wbudowanych aplikacji systemu iOS, które można pokazać lub ukryć. Jeśli chcesz pokazać lub ukryć wszystkie aplikacje na liście, możesz skopiować dane poniżej do pliku tekstowego z rozszerzeniem **CSV**, a następnie użyć opcji **Importuj**, aby zaimportować wszystkie aplikacje jednocześnie.
-
-
-    App Store,Apple,com.apple.AppStore
-    Calculator,Apple,com.apple.calculator
-    Calendar,Apple,com.apple.mobilecal
-    Camera,Apple,com.apple.camera
-    Clock,Apple,com.apple.mobiletimer
-    Compass,Apple,com.apple.compass
-    Contacts,Apple,com.apple.MobileAddressBook
-    FaceTime,Apple,com.apple.facetime
-    Find Friends,Apple,com.apple.mobileme.fmf1
-    Find iPhone,Apple,com.apple.mobileme.fmip1
-    Game Center,Apple,com.apple.gamecenter
-    GarageBand,Apple,com.apple.mobilegarageband
-    Health,Apple,com.apple.Health
-    iBooks,Apple,com.apple.iBooks
-    iTunes Store,Apple,com.apple.MobileStore
-    iTunes U,Apple,com.apple.itunesu
-    Keynote,Apple,com.apple.Keynote
-    Mail,Apple,com.apple.mobilemail
-    Maps,Apple,com.apple.Maps
-    Messages,Apple,com.apple.MobileSMS
-    Music,Apple,com.apple.Music
-    News,Apple,com.apple.news
-    Notes,Apple,com.apple.mobilenotes
-    Numbers,Apple,com.apple.Numbers
-    Pages,Apple,com.apple.Pages
-    Photo Booth,Apple,com.apple.Photo-Booth
-    Photos,Apple,com.apple.mobileslideshow
-    Podcasts,Apple,com.apple.podcasts
-    Reminders,Apple,com.apple.reminders
-    Safari,Apple,com.apple.mobilesafari
-    Settings,Apple,com.apple.Preferences
-    Stocks,Apple,com.apple.stocks
-    Tips,Apple,com.apple.tips
-    Videos,Apple,com.apple.videos
-    VoiceMemos,Apple,com.apple.VoiceMemos
-    Wallet,Apple,com.apple.Passbook
-    Watch,Apple,com.apple.Bridge
-    Weather,Apple,com.apple.weather
-
-
-
 
 
 ## <a name="cellular"></a>Komórkowe
@@ -308,7 +263,7 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 
 >[!NOTE]
 > Aby można było skonfigurować urządzenie z systemem iOS do obsługi trybu kiosku, należy najpierw użyć narzędzia Apple Configurator lub programu Apple Device Enrollment Program w przełączenia go do trybu nadzorowanego. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
->Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
+>Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po przypisaniu profilu, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
 ## <a name="safari"></a>Safari
 -     **Safari (tylko w trybie nadzorowanym)** — określa, czy na urządzeniu można używać przeglądarki Safari.

@@ -14,10 +14,11 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 651899219458f799e26ed7957ccef97d7ae2af09
-ms.lasthandoff: 02/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 9959e9f757e83c7aa4274b7e7b9df949fff022cc
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -128,7 +129,7 @@ Aplikacje, które obsługują wiele tożsamości, umożliwiają uzyskiwanie dost
 
 Jeśli na przykład użytkownik uruchamia aplikację OneDrive przy użyciu konta służbowego, nie może przenieść plików do lokalizacji magazynu osobistego. Jeśli jednak użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.  
 
-Wszystkie aplikacje mobilne pakietu Office obsługują dostęp dla wielu tożsamości.
+- Dowiedz się więcej o aplikacjach, które obsługują [zarządzanie aplikacjami mobilnymi (MAM) i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
 
 ##  <a name="next-steps"></a>Następne kroki
 - [Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)

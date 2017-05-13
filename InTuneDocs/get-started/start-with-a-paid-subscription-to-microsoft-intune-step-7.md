@@ -14,10 +14,11 @@ ms.assetid: eb4a9f01-f857-4563-ab6f-5d0d7dfa659d
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 3794981387e73176152c212854a97b4333023f5d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 9466a2ca94ea556037c2fdd7fee88b87eed88685
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -82,7 +83,7 @@ Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu
     |----------|----------------|
     |Kolor motywu|Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy.|
     |Uwzględnij logo firmowe|Po włączeniu tej opcji możesz przekazać logo firmy, aby było wyświetlane w portalu firmy. Można przekazać dwa logo: jedno wyświetlane, gdy tło portalu firmy jest białe, i drugie — wyświetlane, gdy tło Portalu firmy ma wybrany przez użytkownika kolor motywu. Każdy plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 100 pikseli i mieć rozmiar nie większy niż 750 KB.|
-    |Wybierz tło dla aplikacji Portal firmy dla systemu [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]|To ustawienie ma wpływ wyłącznie na tło w aplikacji Portal firmy systemu [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)].|
+    |Wybierz tło aplikacji Portal firmy dla systemu Windows 8|To ustawienie ma wpływ wyłącznie na tło w aplikacji Portal firmy systemu Windows 8.|
 
 
 Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal firmy** w konsoli administracyjnej, aby wyświetlić witrynę sieci Web Portal firmy. Tych linków nie można zmienić. Po zalogowaniu użytkownika wyświetlane linki odpowiadają subskrypcjom w Portalu firmy.

@@ -14,10 +14,11 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 71ebb310699cf80310b33be1b665a968ac102bde
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 7901508dc482af55f0ef2296cf35576f09340fb0
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -75,10 +76,10 @@ Pełna lista obsługiwanych aplikacji firmy Microsoft jest dostępna w [galerii 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
--   **Subskrypcja usługi Microsoft Intune**. Użytkownicy potrzebują licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] w celu pobierania aplikacji z zasadami ochrony aplikacji.
-Jeśli aktualnie używasz usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] do zarządzania urządzeniami, masz już subskrypcję usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Masz również subskrypcję usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], jeśli masz kupioną licencję pakietu Enterprise Mobility Suite (EMS). Jeśli wypróbowujesz usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] w celu zapoznania się z możliwościami w zakresie zarządzania aplikacjami mobilnymi, konto próbne możesz uzyskać na [stronie usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
+-   **Subskrypcja usługi Microsoft Intune**. Użytkownicy potrzebują licencji usługi Intune w celu pobierania aplikacji z zasadami ochrony aplikacji.
+Jeśli aktualnie używasz usługi Intune do zarządzania urządzeniami, masz już subskrypcję usługi Intune. Masz również subskrypcję usługi Intune, jeśli masz kupioną licencję pakietu Enterprise Mobility Suite (EMS). Jeśli wypróbowujesz usługę Intune w celu zapoznania się z możliwościami w zakresie zarządzania aplikacjami mobilnymi, konto próbne możesz uzyskać na [stronie usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
 
-    Aby sprawdzić, czy masz subskrypcję usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], przejdź do strony **Rozliczenia** w portalu usługi Office.  Jeśli masz subskrypcję, usługa [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] powinna być widoczna jako **Aktywna** w obszarze subskrypcji.
+    Aby sprawdzić, czy masz subskrypcję usługi Intune, przejdź do strony **Rozliczenia** w portalu usługi Office.  Jeśli masz subskrypcję, usługa Intune powinna być widoczna jako **Aktywna** w obszarze subskrypcji.
 
 -   **Subskrypcja usługi Office 365**, która jest wymagana do:
 

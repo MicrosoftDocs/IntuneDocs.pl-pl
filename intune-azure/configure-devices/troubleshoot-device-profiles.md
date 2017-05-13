@@ -1,12 +1,12 @@
 ---
-title: "Rozwiązywanie problemów z profilami urządzeń w usłudze Microsoft Intune"
+title: "Rozwiązywanie problemów z profilami urządzeń w usłudze Microsoft Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje zawarte w tym temacie ułatwiają rozwiązywanie problemów z profilami urządzeń usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: c984c908afe97c988b9a1b9f46262c5a14a7d4d8
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -30,8 +31,8 @@ ms.lasthandoff: 03/13/2017
 
 Informacje przedstawione w tym temacie ułatwiają rozwiązywanie typowych problemów związanych z profilami urządzeń w usłudze Intune.
 
-## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-deployed"></a>Jak długo trwa pobieranie zasad lub aplikacji przeznaczonych dla urządzeń przenośnych po ich wdrożeniu?
-Po wdrożeniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby powiadomienia urządzenia, które powinno zostać zaewidencjonowane przez usługę Intune. Trwa to zazwyczaj mniej niż pięć minut.
+## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned"></a>Jak długo trwa pobieranie zasad lub aplikacji na urządzenia przenośne po ich przypisaniu?
+Po przypisaniu zasad lub aplikacji usługa Intune natychmiast rozpoczyna próby powiadomienia urządzenia, że powinno zostać zaewidencjonowane przez usługę Intune. Trwa to zazwyczaj mniej niż pięć minut.
 
 Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad po wysłaniu pierwszego powiadomienia, usługa Intune przeprowadzi trzy kolejne próby.  Jeśli urządzenie działa w trybie offline (na przykład zostało wyłączone lub nie zostało podłączone do sieci), może nie odbierać powiadomień. W takim przypadku urządzenie pobierze zasady podczas następnego zaplanowanego zaewidencjonowania przy użyciu usługi Intune w następujący sposób:
 
@@ -50,12 +51,12 @@ Jeśli urządzenie zostało właśnie zarejestrowane, częstotliwość zaewidenc
 Użytkownicy mogą także otwierać aplikację Portal firmy i synchronizować urządzenie, aby natychmiast w dowolnym momencie wyszukać zasady.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Jakie akcje mogą spowodować natychmiastowe wysłanie powiadomienia do urządzenia z usługi Intune?
-Urządzenia są zaewidencjonowywane przy użyciu usługi Intune po otrzymaniu powiadomienia z poleceniem zaewidencjonowania lub podczas zaplanowanego zaewidencjonowania.  Jeśli akcja, taka jak czyszczenie, blokowanie, resetowanie kodu dostępu, wdrażanie aplikacji, wdrażanie profilu (Wi-Fi, VPN, poczta e-mail itd.) lub wdrażanie zasad, zostanie rozpoczęta dla określonego urządzenia lub użytkownika, usługa Intune natychmiast podejmie próbę powiadomienia urządzenia o konieczności zaewidencjonowania w usłudze Intune w celu odbierania aktualizacji.
+Urządzenia są zaewidencjonowywane przy użyciu usługi Intune po otrzymaniu powiadomienia z poleceniem zaewidencjonowania lub podczas zaplanowanego zaewidencjonowania.  Jeśli akcja, taka jak czyszczenie, blokowanie, resetowanie kodu dostępu, przypisywanie aplikacji, przypisywanie profilu (Wi-Fi, VPN, poczta e-mail itd.) lub przypisywanie zasad, zostanie rozpoczęta dla określonego urządzenia lub użytkownika, usługa Intune natychmiast podejmie próbę powiadomienia urządzenia o konieczności zaewidencjonowania w usłudze Intune w celu odbierania aktualizacji.
 
 Inne zmiany, takie jak zmiana informacji kontaktowych w Portalu firmy, nie powodują natychmiastowego wysłania powiadomienia do urządzeń.
 
-## <a name="if-multiple-policies-are-deployed-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Jeśli dla tego samego użytkownika lub urządzenia wdrożono wiele zasad, jak mogę zidentyfikować ustawienia, które zostaną zastosowane?
-Jeśli co najmniej dwie zasady są wdrażane dla tego samego użytkownika lub urządzenia, ocena ustawień do zastosowania odbywa się na poziomie indywidualnego ustawienia:
+## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Jeśli do tego samego użytkownika lub urządzenia przypisano wiele zasad, jak mogę zidentyfikować ustawienia, które zostaną zastosowane?
+Jeśli co najmniej dwie zasady są przypisywane do tego samego użytkownika lub urządzenia, ocena ustawień do zastosowania odbywa się na poziomie indywidualnego ustawienia:
 
 -   Ustawienia zasad zgodności mają zawsze pierwszeństwo przed ustawieniami zasad konfiguracji.
 
@@ -63,25 +64,25 @@ Jeśli co najmniej dwie zasady są wdrażane dla tego samego użytkownika lub ur
 
 -   Jeśli ustawienie zasad konfiguracji powoduje konflikt z ustawieniem w innych zasadach konfiguracji, ten konflikt zostanie wyświetlony w konsoli usługi Intune. Takie konflikty należy rozwiązać ręcznie.
 
-## <a name="what-happens-when-mobile-application-management-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co się stanie w przypadku wystąpienia konfliktu zasad zarządzania aplikacjami mobilnymi? Które z nich zostaną zastosowane w aplikacji?
-Wartości powodujące konflikt to najbardziej restrykcyjne ustawienia dostępne w zasadach zarządzania aplikacjami mobilnymi, z wyjątkiem pól wprowadzania liczb (służących na przykład do podejmowania prób wpisania kodu PIN przed zresetowaniem).  Pola wprowadzania liczb zostaną ustawione na wartości, który zostałyby użyte w przypadku utworzenia zasad zarządzania aplikacjami mobilnymi w konsoli przy użyciu opcji zalecanych ustawień.
+## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Co się dzieje, gdy zasady ochrony aplikacji powodują konflikt? Które z nich zostaną zastosowane w aplikacji?
+Wartości powodujące konflikt to najbardziej restrykcyjne ustawienia dostępne w zasadach ochrony aplikacji, z wyjątkiem pól wprowadzania liczb (jak na przykład liczba prób wpisania kodu PIN przed zresetowaniem).  Pola wprowadzania liczb zostaną ustawione na wartości, który zostałyby użyte w przypadku utworzenia zasad zarządzania aplikacjami mobilnymi w konsoli przy użyciu opcji zalecanych ustawień.
 
-Konflikty występują, jeśli dwa ustawienia zasad są takie same.  Można na przykład skonfigurować dwie identyczne zasady zarządzania aplikacjami różniące się jedynie ustawieniem kopiowania/wklejania.  W tym scenariuszu operacja kopiowania/wklejania zostanie ustawiona na najbardziej restrykcyjną wartość, ale pozostałe ustawienia będą stosowane zgodnie z konfiguracją.
+Konflikty występują, jeśli dwa ustawienia profilów są takie same.  Można na przykład skonfigurować dwie identyczne zasady zarządzania aplikacjami różniące się jedynie ustawieniem kopiowania/wklejania.  W tym scenariuszu operacja kopiowania/wklejania zostanie ustawiona na najbardziej restrykcyjną wartość, ale pozostałe ustawienia będą stosowane zgodnie z konfiguracją.
 
-Jeśli jedne zasady zostały wdrożone w aplikacji i obowiązują, a następnie wdrażane są drugie, pierwsze z nich będą mieć pierwszeństwo i będą nadal stosowane, a drugie spowodują wystąpienie konfliktu. Jeśli zostaną one zastosowane w tym samym czasie, tj. żadne zasady nie będą mieć pierwszeństwa, i jedne, i drugie zasady będą w konflikcie. Wszystkie ustawienia powodujące konflikt zostaną ustawione na bardziej restrykcyjne wartości.
+Jeśli jeden profil zostaje przypisany do aplikacji i obowiązuje, a następnie zostanie przypisany drugi, pierwszy z nich będzie mieć pierwszeństwo i będzie nadal stosowany, a drugi spowoduje wystąpienie konfliktu. Jeśli zostaną one zastosowane w tym samym czasie, tj. żaden profil nie będzie mieć pierwszeństwa, oba profile będą w konflikcie. Wszystkie ustawienia powodujące konflikt zostaną ustawione na bardziej restrykcyjne wartości.
 
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co się stanie w przypadku konfliktu zasad niestandardowych systemu iOS?
-Usługa Intune nie oszacowuje ładunku plików konfiguracji firmy Apple lub niestandardowych zasad OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Służy ona jedynie jako mechanizm dostarczania.
+Usługa Intune nie oszacowuje ładunku plików konfiguracji firmy Apple lub niestandardowego profilu OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Służy ona jedynie jako mechanizm dostarczania.
 
-Podczas wdrażania niestandardowych zasad upewnij się, że skonfigurowane ustawienia nie pozostają w konflikcie z zasadami zgodności, konfiguracji lub innymi zasadami niestandardowymi. Jeśli wystąpią konflikty ustawień zasad niestandardowych, ustawienia będą stosowane w kolejności losowej.
+Podczas przypisywania profilu niestandardowego upewnij się, że skonfigurowane ustawienia nie pozostają w konflikcie z zasadami zgodności, konfiguracji lub innymi zasadami niestandardowymi. Jeśli wystąpią konflikty ustawień profilu niestandardowego, ustawienia będą stosowane w kolejności losowej.
 
-## <a name="what-happens-when-a-policy-is-deleted-or-no-longer-applicable"></a>Co się stanie, gdy zasady zostaną usunięte lub nie będą już miały zastosowania?
-Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożone zasady, powoduje usunięcie zasad i ustawień z urządzenia zgodnie z następującymi listami.
+## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Co się stanie, gdy profil zostanie usunięty lub nie będzie już miał zastosowania?
+Usunięcie profilu lub usunięcie urządzenia z grupy, do której przypisano profil, powoduje usunięcie profilu i ustawień z urządzenia zgodnie z następującymi listami.
 
 ### <a name="enrolled-devices"></a>zarejestrowane urządzenia
 
 - Profile sieci Wi-Fi, sieci VPN, certyfikatu i poczty e-mail: te profile są usuwane ze wszystkich obsługiwanych zarejestrowanych urządzeń.
-- Wszystkie inne typy zasad:
+- Wszystkie pozostałe typy profilów:
     - **Urządzenia z systemami Windows i Android**: ustawienia nie są usuwane z urządzenia.
     - **Urządzenia z systemem Windows Phone 8.1**: następujące ustawienia są usuwane:
         - Wymagaj hasła do odblokowania urządzeń przenośnych
@@ -115,44 +116,13 @@ Usunięcie zasad lub usunięcie urządzenia z grupy, w której zostały wdrożon
         - Zezwalaj na roaming danych
         - Zezwalaj na automatyczną synchronizację podczas roamingu
 
-### <a name="windows-pcs-running-the-intune-client-software"></a>Komputery z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune
+## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Profil ograniczeń urządzenia został zmieniony, ale zmiany nie zostały zastosowane
+Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjny profil został już zastosowany do urządzenia.
 
-- **Ustawienia programu Endpoint Protection**: zostaną przywrócone zalecane wartości ustawień. Jedynym wyjątkiem jest ustawienie **Dołącz do społeczności Microsoft Active Protection Service**, którego wartość domyślna to **Nie**. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-- **Ustawienia aktualizacji oprogramowania**: zostanie przywrócony stan domyślny ustawień odpowiedni dla systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune).
-- **Ustawienia programu Microsoft Intune Center**: wszystkie informacje kontaktowe pomocy technicznej, które zostały skonfigurowane przez zasady, zostaną usunięte z komputerów.
-- **Ustawienia Zapory systemu Windows**: zostaną przywrócone ustawienia domyślne odpowiednie dla systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-
-
-## <a name="how-can-i-refresh-the-policies-on-a-device-to-ensure-that-they-are-current-applies-to-windows-pcs-running-the-intune-client-software-only"></a>Jak odświeżyć zasady na urządzeniu w celu zapewnienia ich aktualności (dotyczy wyłącznie komputerów z systemem Windows z uruchomionym oprogramowaniem klienckim usługi Intune)?
-
-1.  W dowolnej grupie urządzeń wybierz urządzenia, na których chcesz odświeżyć zasady, a następnie wybierz pozycję **Zadania zdalne** &gt; **Odśwież zasady**.
-2.  Kliknij pozycję **Zadania zdalne** w prawym dolnym rogu konsoli administracyjnej usługi Intune w celu sprawdzenia stanu zadania.
-
-
-
-### <a name="how-do-i-know-that-my-profile-was-assigned-to-a-device"></a>Jak sprawdzić, czy mój profil został przypisany do urządzenia?
-
-W konsoli administracyjnej usługi Intune każde urządzenie ma kartę zasad w obszarze **Właściwości urządzenia**. Wszystkie zasady mają parametry **Wartość zamierzona** i **Stan**. Wartość zamierzona to wartość, która miała być osiągnięta w momencie przypisywania zasad. Stan oznacza to, co zostało faktycznie zastosowane, biorąc pod uwagę wszystkie zasady dotyczące urządzenia, a także ograniczenia i wymagania sprzętowe oraz system operacyjny. Dostępne są następujące stany:
-
--   **Zgodne**: urządzenie odebrało zasady i zgłasza usłudze, że działa zgodnie z ich ustawieniem.
-
--   **Nie dotyczy**: ustawienie zasad nie ma zastosowania. Na przykład ustawienia poczty e-mail dla urządzeń z systemem iOS nie będą miały zastosowania do urządzenia z systemem Android.
-
--   **Oczekujące**: zasady zostały wysłane do urządzenia, ale nie zgłosiło ono stanu usłudze. Na przykład szyfrowanie w systemie Android wymaga od użytkownika końcowego włączenia szyfrowania, w związku z czym może być oczekujące.
-
-
-> [!NOTE]
-> Należy pamiętać, że jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, w praktyce zostaną zastosowane zasady bardziej restrykcyjne.
-
-
-## <a name="i-changed-a-device-restriction-policy-but-the-changes-havent-taken-effect"></a>Zasady ograniczeń urządzenia zostały zmienione, ale zmiany nie zostały zastosowane
-Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej za pośrednictwem usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjne zasady zostały już zastosowane do urządzenia.
-
-W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
+W zależności od platformy urządzenia jeśli chcesz zmienić profil na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
 Na przykład w systemie Windows na pulpicie szybko przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji** i wybierz pozycję **Ustawienia** &gt; **Panel sterowania**.  Wybierz aplet **Konta użytkowników** .
 W menu nawigacji po lewej stronie u dołu ekranu znajduje się link **Resetuj zasady zabezpieczeń** . Wybierz go, a następnie wybierz przycisk **Resetuj zasady** .
-W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjne zasady.
-
+W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, Windows Phone 8.1 lub nowszym i iOS, może być konieczne wycofanie i ponownie zarejestrowanie w usłudze, aby można było zastosować mniej restrykcyjny profil.
 
 <!--- ## Status codes for MDM managed Windows devices
 
@@ -499,4 +469,4 @@ W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, W
 --->
 
 ### <a name="next-steps"></a>Następne kroki
-Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
+Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](/intune-azure/introduction/how-to-get-support-for-microsoft-intune) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).

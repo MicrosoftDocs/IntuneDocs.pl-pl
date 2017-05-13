@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/20/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,26 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
-ms.openlocfilehash: f4a48b889702147abe20fd513fdb0f774020a54a
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 68dbaa2209ad1432279683a291734641e39ff736
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/05/2017
 
 
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
 
-> [!Note]
-> Należy pamiętać, że poniższe obrazy są podglądy i zapowiadany produkt może się różnić od prezentowanych wersji.
+## <a name="coming-soon-in-the-ui"></a>Wkrótce w interfejsie użytkownika
+Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualizację interfejsu użytkownika.
 
-## <a name="april-2017"></a>Kwiecień 2017
+> [!Note]
+> Należy pamiętać, że poniższe obrazy mogą być wersjami wstępnymi i zapowiadany produkt może różnić się od prezentowanych wersji.
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
 
-Firma Microsoft ulepsza środowisko logowania aplikacji Portalu firmy w usłudze Intune dla systemu Android, iOS i Windows.  Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
+Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
 
 Poniżej przedstawiono poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia.
 
@@ -51,17 +53,17 @@ __Nowe środowisko logowania__
 
 ![Monit o podanie hasła wyświetla się po zaakceptowaniu podanego adresu e-mail.](./media/cp_ios_aad_signin_after_1704_003.png)
 
+![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
 __Nowe środowisko logowania dostępne podczas logowania za pomocą innego urządzenia__
 
 ![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
 Wybierz link __Zaloguj się za pomocą innego urządzenia__.
 
-![Na jednym ekranie użytkownik otrzymuje zwykle monit o podanie samego adresu e-mail, a nie adresu e-mail i hasła. Link poniżej pola adresu e-mail ma treść „Zaloguj się za pomocą innego urządzenia”.](./media/cp_ios_aad_signin_from_another_device_after_1704_002.png)
-
 ![Zgodnie z instrukcjami po uzyskaniu unikatowego kodu dostępu należy na komputerze służbowym przejść na stronę aka.ms/devicelogin, a następnie zalogować się, korzystając z kodu.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Uruchom przeglądarkę i przejdź na stronę [http://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Uruchom przeglądarkę i przejdź na stronę [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
 
 ![Zrzut ekranu przedstawiający przeglądarkę użytkownika na komputerze służbowym zamiast aplikacji Portal firmy. Na stronie „Logowanie do urządzenia” zostanie wyświetlony monit o podanie kodu odebranego w aplikacji Portal firmy.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -74,6 +76,8 @@ Wprowadź kod z aplikacji Portal firmy. Po wybraniu pozycji __Kontynuuj__ będzi
 W aplikacji Portal firmy rozpocznie się logowanie.
 
 ![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+## <a name="april-2017"></a>Kwiecień 2017
 
 ### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nowe ikony przeglądarki Managed Browser i aplikacji Portal firmy <!--918433, 918431-->
 
@@ -105,18 +109,27 @@ Aktualizacja aplikacji Portal firmy dla systemu Android pokazuje wskaźnik post�
    <table id="wrapper">
       <tr>
          <td>
-            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
+            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
           </td>
           <td>
-             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
+             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
            </td>
            <td>
-              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
+              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
            </td>
       </tr>
    </table>
 </body>
 </html>
+
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Ulepszono stan instalacji aplikacji Portal firmy dla systemu Windows 10 <!--676495-->
+Aplikacja Portal firmy dla systemu Windows 10 oferuje teraz pasek postępu instalacji na stronie szczegółów aplikacji. Ta funkcja jest obsługiwana w przypadku nowoczesnych aplikacji na urządzeniach z Rocznicową aktualizacją systemu Windows 10 oraz jego nowszymi wersjami.
+
+__Przed__
+  ![Obraz poprzedniej wersji ekranu ładowania, na którym był wyświetlany stan „Trwa instalowanie”.](./media/cp_win10_install_status_before_1704.png)
+
+__Po__
+  ![Obraz zaktualizowanej wersji ekranu ładowania, na którym jest teraz wyświetlany pasek postępu instalacji.](./media/cp_win10_install_status_after_1704.png)
 
 ## <a name="february-2017"></a>Luty 2017
 

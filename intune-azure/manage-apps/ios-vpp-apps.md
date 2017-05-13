@@ -1,12 +1,12 @@
 ---
-title: "Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych"
+title: "Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje o synchronizowaniu aplikacji zakupionych w ramach zakupów zbiorczych w sklepie z aplikacjami dla systemu iOS w usłudze Intune oraz o zarządzaniu ich użyciem i jego śledzeniu."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 1c13d39b8b193c56439602a6e9d9a34e547aef81
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: 1909549b321f51069bb6ad83f2f245afbf60b7dd
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -53,8 +54,8 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
-1.  W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Konfiguracja** > **Tokeny programu VPP dla systemu iOS**.
+3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
+1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Tokeny programu VPP dla systemu iOS**.
 2.  W bloku listy tokenów programu VPP kliknij pozycję **Dodaj**.
 3.  W bloku Nowy token programu VPP określ następujące informacje:
     - **Plik tokenu programu VPP** — jeśli nie jesteś jeszcze zarejestrowanym członkiem programu zakupów zbiorczych dla firm lub dla instytucji oświatowych, zarejestruj się. Po zarejestrowaniu się pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
@@ -69,7 +70,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1. W obciążeniu **Zarządzaj aplikacjami** wybierz kolejno pozycje **Zarządzaj** > **Licencjonowane aplikacje**.
+1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Licencjonowane aplikacje**.
 2. W bloku listy aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
 3. W bloku <*nazwa aplikacji*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
 4. Wybierz pozycję **Przypisz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
@@ -86,5 +87,5 @@ Aby odzyskać licencję, należy zmienić akcję przypisywania na **Odinstaluj**
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP po raz pierwszy, zostanie poproszony o dołączenie do programu zakupów zbiorczych firmy Apple. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana.
 
-W przypadku wdrażania aplikacji VPP jako elementu o właściwości Dostępne zawartość aplikacji oraz licencja są wdrażane bezpośrednio ze sklepu z aplikacjami.
+W przypadku przypisywania aplikacji VPP jako elementu o właściwości Dostępne zawartość aplikacji oraz licencja są przypisywane bezpośrednio ze sklepu z aplikacjami.
 

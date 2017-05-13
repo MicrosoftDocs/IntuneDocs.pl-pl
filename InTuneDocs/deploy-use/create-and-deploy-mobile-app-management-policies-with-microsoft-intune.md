@@ -14,10 +14,11 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 31b7ff2b9644f47107199f0f1d237847169c3143
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: a7d38caac1cfd035c66d02579766d60d4394dd5e
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -157,7 +158,7 @@ Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikac
 
     Zasady zostały utworzone i wdrożone dla użytkowników.
 
-Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Zasady nie wpływają na użytkowników należących do wybranej grupy zabezpieczeń, którym nie przypisano licencji usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi Intune. Zasady nie wpływają na użytkowników należących do wybranej grupy zabezpieczeń, którym nie przypisano licencji usługi Intune.
 
 >[!IMPORTANT]
 > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.

@@ -14,9 +14,11 @@ ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: c02961aa984f8041394639a872bf4cfcdfc0be91
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 7d0b9cee72e8810b4f39bd81bd8f49d0818618c4
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: c02961aa984f8041394639a872bf4cfcdfc0be91
 ## <a name="scenario-1-block-users-from-using-noncompliant-devices-to-access-exchange-online"></a>Scenariusz 1. Blokowanie użytkownikom możliwości używania niezgodnych urządzeń do uzyskiwania dostępu do usługi Exchange Online
 ### <a name="scenario-requirements"></a>Wymagania dotyczące scenariusza
 - Dostęp do usługi Exchange Online musi być zablokowany dla wszystkich użytkowników w grupie zabezpieczeń **Księgowość** usługi Azure Active Directory, jeśli ich urządzenia są niezgodne z wdrożonymi zasadami zgodności.
-- Jeśli w tej grupie znajduje się jakikolwiek użytkownik, którego urządzenia nie są obsługiwane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], dostęp z tych urządzeń do usługi Exchange Online musi być zablokowany.
+- Jeśli w tej grupie znajduje się jakikolwiek użytkownik, którego urządzenia nie są obsługiwane przez usługę Intune, dostęp z tych urządzeń do usługi Exchange Online musi być zablokowany.
 - Wszyscy użytkownicy w grupie zabezpieczeń **Finanse** usługi Azure Active Directory muszą być wykluczeni z zasad, nawet jeśli należą również do grupy zabezpieczeń **Księgowość**.
 
 W tym celu należy skonfigurować zasady dostępu warunkowego dla usługi Exchange Online z następującymi ustawieniami:
@@ -68,7 +70,7 @@ Następujący przepływ służy do określania, które urządzenia mogą uzyskiw
 ## <a name="scenario-3-no-android-devices-can-access-exchange-on-premises"></a>Scenariusz 3. Żadne urządzenia z systemem Android nie mogą uzyskiwać dostępu do lokalnego programu Exchange
 ### <a name="scenario-requirements"></a>Wymagania dotyczące scenariusza
 - Wszystkie urządzenia z systemem Android powinny mieć zablokowany dostęp do programu Exchange.
-- Wszystkie inne obsługiwane urządzenia mogą uzyskiwać dostęp do programu Exchange, o ile są zarządzane przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+- Wszystkie inne obsługiwane urządzenia mogą uzyskiwać dostęp do programu Exchange, o ile są zarządzane przy użyciu usługi Intune.
 
 W tym celu należy skonfigurować zasady dostępu warunkowego dla lokalnego programu Exchange z następującymi ustawieniami:
 
@@ -82,9 +84,4 @@ W tym celu należy skonfigurować zasady dostępu warunkowego dla lokalnego prog
 Następujący przepływ służy do określania, które urządzenia mogą uzyskiwać dostęp do programu Exchange:
 
 ![Przepływ dostępu do urządzeń](./media/ConditionalAccess8-4.png)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

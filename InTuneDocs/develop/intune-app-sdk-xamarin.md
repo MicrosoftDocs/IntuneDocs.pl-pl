@@ -14,9 +14,11 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
+ms.translationtype: Human Translation
+ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
+ms.openlocfilehash: a9780dd3a951cc074a38061bf67aa5485c1eab68
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -62,9 +64,9 @@ Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikac
 
 2. Zapoznaj się z [postanowieniami licencyjnymi](https://components.xamarin.com/license/microsoft.intune.mam) dla składnika Xamarin zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune.
 
-3.    Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 2 powinny znajdować się w katalogach tego samego poziomu.
+3.    Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 3 powinny znajdować się w katalogach tego samego poziomu.
 
-4.    W wierszu polecenia uruchom polecenie `Xamain.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
+4.    W wierszu polecenia uruchom polecenie `Xamarin.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
 
 5.    W programie Visual Studio kliknij prawym przyciskiem myszy **składniki** utworzonego wcześniej projektu Xamarin.
 
@@ -123,9 +125,4 @@ W przypadku zestawu Xamarin Forms i innych platform tworzenia interfejsu użytko
 ## <a name="test-your-app"></a>Testowanie aplikacji
 
 Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

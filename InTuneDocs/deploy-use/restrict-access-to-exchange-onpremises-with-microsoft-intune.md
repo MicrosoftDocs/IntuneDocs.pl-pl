@@ -14,10 +14,11 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
-ms.openlocfilehash: f1d8ecdf64b680940e46afc90dec79d237d80030
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 3098a301550413a982d3ce9664646f7dfc0b1d1f
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -38,7 +39,7 @@ Koniecznie sprawdź, czy są spełnione następujące warunki:
 
 -   Program Exchange musi być w wersji **Exchange 2010 lub nowszej**. Macierze serwerów dostępu klienta (CAS) serwera programu Exchange są obsługiwane.
 
--   Należy użyć [łącznika lokalnego programu Exchange usługi Intune](intune-on-premises-exchange-connector.md), który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z lokalnym programem Exchange. Dzięki temu możliwe jest zarządzanie urządzeniami za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Należy użyć [łącznika lokalnego programu Exchange usługi Intune](intune-on-premises-exchange-connector.md), który łączy usługę Intune z lokalnym programem Exchange. Dzięki temu możliwe jest zarządzanie urządzeniami za pośrednictwem konsoli usługi Intune.
 
     -   Łącznik lokalnego programu Exchange dostępny w konsoli usługi Intune jest przeznaczony dla Twojej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami. Ponadto zalecamy sprawdzenie, czy łącznik programu Exchange dla Twojej dzierżawy został zainstalowany **tylko na jednym komputerze**.
 
@@ -54,13 +55,13 @@ Koniecznie sprawdź, czy są spełnione następujące warunki:
 
 Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkownika mógł on połączyć się ze swoją pocztą e-mail, jego **urządzenie** musi:
 
--  Zostać **zarejestrowane** na komputerze przyłączonym do domeny lub w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-  Być komputerem przyłączonym do domeny lub zostać **zarejestrowane** w usłudze Intune.
 
 -  **Zostać zarejestrowane w usłudze Azure Active Directory**. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
 
   Usługa rejestracji urządzeń w usłudze Azure Active Directory zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory. **Nie dotyczy to komputerów z systemem Windows i urządzeń z systemem Windows Phone**.
 
--   Być **zgodne** ze wszystkimi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] wdrożonymi na tym urządzeniu.
+-   Być **zgodne** ze wszystkimi zasadami zgodności usługi Intune wdrożonymi na tym urządzeniu.
 
 ### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Jak działa dostęp warunkowy w przypadku lokalnego programu Exchange
 
@@ -70,9 +71,9 @@ Na poniższym diagramie przedstawiono przepływ używany przez zasady dostępu w
 
 Jeśli warunek dostępu nie zostanie spełniony, upłynie 10 minut do momentu zablokowania urządzenia i otrzymania przez użytkownika przy próbie zalogowania się jednego z następujących komunikatów dotyczących kwarantanny:
 
-- Jeśli urządzenie nie zostało zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem urządzenia w usłudze Azure Active Directory.
+- Jeśli urządzenie nie zostało zarejestrowane w usłudze Intune lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem urządzenia w usłudze Azure Active Directory.
 
--   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy lub aplikacji Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
+-   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny sieci Web Portal firmy usługi Intune lub aplikacji Portal firmy, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
 ## <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 Obsługiwane są następujące funkcje:
@@ -88,7 +89,7 @@ Obsługiwane są następujące funkcje:
 
 ## <a name="support-for-pcs"></a>Obsługa komputerów
 Są obsługiwane następujące elementy:
--   Aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w przypadku zarejestrowania komputera w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   Aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w przypadku zarejestrowania komputera w usłudze Intune).
 
 ##  <a name="configure-a-conditional-access-policy"></a>Konfigurowanie zasad dostępu warunkowego
 
@@ -97,21 +98,21 @@ Są obsługiwane następujące elementy:
 
 2.  Skonfiguruj zasady za pomocą wymaganych ustawień: ![Zrzut ekranu przedstawiający stronę z zasadami lokalnego programu Exchange](../media/IntuneSA5bExchangeOnPremPolicy.png)
 
-  - **Zablokuj dostęp aplikacjom poczty e-mail do lokalnego programu Exchange, jeśli urządzenie jest niezgodne lub nie jest zarejestrowane w usłudze Microsoft Intune:** po wybraniu tej opcji urządzenia, które nie są zarządzane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub nie są zgodne z zasadami zgodności, nie będą miały dostępu do usług programu Exchange.
+  - **Zablokuj dostęp aplikacjom poczty e-mail do lokalnego programu Exchange, jeśli urządzenie jest niezgodne lub nie jest zarejestrowane w usłudze Microsoft Intune:** po wybraniu tej opcji urządzenia, które nie są zarządzane przez usługę Intune lub nie są zgodne z zasadami zgodności, nie będą miały dostępu do usług programu Exchange.
 
   - **Przesłanianie reguły domyślnej — zawsze zezwalaj zarejestrowanym i zgodnym urządzeniom na dostęp do programu Exchange:** po wybraniu tej opcji urządzenia zarejestrowane w usłudze Intune i zgodne z zasadami zgodności będą mogły uzyskać dostęp do programu Exchange.
   Ta reguła przesłania **regułę domyślną**, co oznacza, że nawet jeśli wartość **reguły domyślnej** zostanie ustawiona na kwarantannę lub blokowanie dostępu, urządzenia zarejestrowane i zgodne nadal będą mogły uzyskać dostęp do programu Exchange.
 
-  - **Grupy docelowe:** wybierz grupy użytkowników usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], którzy muszą zarejestrować urządzenie w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], aby uzyskać dostęp do programu Exchange.
+  - **Grupy docelowe:** wybierz grupy użytkowników usługi Intune, którzy muszą zarejestrować urządzenie w usłudze Intune, aby uzyskać dostęp do programu Exchange.
 
-  - **Wykluczone grupy:** wybierz grupy użytkowników usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], którzy są wykluczeni z zasad dostępu warunkowego. Użytkownicy znajdujący się na liście są wykluczani nawet wtedy, gdy znajdują się również na liście **Grupy docelowe**.
+  - **Wykluczone grupy:** wybierz grupy użytkowników usługi Intune, którzy są wykluczeni z zasad dostępu warunkowego. Użytkownicy znajdujący się na liście są wykluczani nawet wtedy, gdy znajdują się również na liście **Grupy docelowe**.
 
-  - **Wyjątki dla platform:** wybierz polecenie **Dodaj regułę**, aby skonfigurować regułę definiującą poziomy dostępu dla określonych rodzin i modeli urządzeń przenośnych. Ponieważ te urządzenia mogą być dowolnego typu, możesz także skonfigurować typy urządzeń, które nie są obsługiwane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+  - **Wyjątki dla platform:** wybierz polecenie **Dodaj regułę**, aby skonfigurować regułę definiującą poziomy dostępu dla określonych rodzin i modeli urządzeń przenośnych. Ponieważ te urządzenia mogą być dowolnego typu, możesz także skonfigurować typy urządzeń, które nie są obsługiwane przez usługę Intune.
 
   - **Reguła domyślna:** dla urządzeń nieobjętych żadnymi innymi regułami możesz wybrać, czy mają mieć dostęp do programu Exchange, czy mają być zablokowane lub czy mają zostać umieszczone w kwarantannie. W przypadku ustawienia reguły zezwalającej na dostęp urządzeń, które są zarejestrowane i zgodne, dostęp do poczty e-mail będzie udzielany automatycznie dla urządzeń z systemem iOS, Windows i Samsung KNOX. Użytkownik nie musi przechodzić przez żaden proces, aby uzyskać dostęp do swojej poczty e-mail.
       - Na urządzeniach, które nie korzystają z systemu KNOX, użytkownicy otrzymują wiadomość e-mail z kwarantanny zawierającą przewodnik krok po kroku w celu sprawdzenia rejestracji i zgodności, zanim uzyskają dostęp do poczty e-mail. Jeśli ustawisz regułę blokującą dostęp do urządzenia lub poddającą je kwarantannie, wszystkie urządzenia będą miały blokowany dostęp do programu Exchange, niezależnie od tego, czy zostały już zarejestrowane w usłudze Intune, czy nie. Aby zapobiec wpływowi tej reguły na urządzenia zarejestrowane i zgodne, zaznacz pole **Przesłonięcie reguły domyślnej**.
 >[!TIP]
->Jeśli chcesz najpierw blokować dostęp wszystkich urządzeń przed udzieleniem im dostępu do poczty e-mail, wybierz regułę Blokowanie dostępu lub regułę Kwarantanna. Reguła domyślna jest stosowana dla wszystkich typów urządzeń — również typów urządzeń skonfigurowanych jako wyjątki dla platform i nieobsługiwanych przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+>Jeśli chcesz najpierw blokować dostęp wszystkich urządzeń przed udzieleniem im dostępu do poczty e-mail, wybierz regułę Blokowanie dostępu lub regułę Kwarantanna. Reguła domyślna jest stosowana dla wszystkich typów urządzeń — również typów urządzeń skonfigurowanych jako wyjątki dla platform i nieobsługiwanych przez usługę Intune.
 
   - **Powiadomienie użytkownika:** oprócz powiadomienia e-mail wysyłanego przez program Exchange usługa Intune wysyła wiadomość e-mail, która zawiera kroki procedury odblokowania urządzenia. Możesz zmienić domyślną wiadomość zgodnie z własnymi potrzebami. W przypadku zablokowania urządzenia użytkownika przed otrzymaniem z usługi Intune powiadomienia e-mail z instrukcjami odblokowywania (dostarczanego do skrzynki pocztowej programu Exchange użytkownika) możliwe jest użycie niezablokowanego urządzenia lub innej metody uzyskania dostępu do programu Exchange i wyświetlenia wiadomości.
       - Jest to szczególnie istotne, kiedy **Reguła domyślna** jest ustawiona na blokowanie lub kwarantannę. W takim przypadku użytkownik musi przejść do swojego sklepu z aplikacjami, pobrać aplikację firmy Microsoft Portal firmy i zarejestrować swoje urządzenie. Dotyczy to urządzeń z systemami iOS, Windows i Samsung KNOX. W przypadku urządzeń, które nie są wyposażone w platformę Samsung KNOX, należy wysłać wiadomość e-mail poddaną kwarantannie na inne konto poczty e-mail. Użytkownik musi skopiować wiadomość e-mail na zablokowane urządzenie w celu ukończenia procesu rejestracji i zapewnienia zgodności.
@@ -124,11 +125,11 @@ Są obsługiwane następujące elementy:
 
 -   Nie musisz wdrażać zasad dostępu warunkowego, ponieważ zostają one natychmiast zastosowane.
 
--   Po skonfigurowaniu przez użytkownika profilu programu Exchange ActiveSync zablokowanie urządzenia może potrwać od jednej do trzech godzin (jeśli nie jest zarządzane przez usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   Po skonfigurowaniu przez użytkownika profilu programu Exchange ActiveSync zablokowanie urządzenia może potrwać od jednej do trzech godzin (jeśli nie jest zarządzane przez usługę Intune).
 
--   Jeśli następnie zablokowany użytkownik zarejestruje urządzenie w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] (lub rozwiąże problemy z niezgodnością), dostęp do poczty e-mail zostanie odblokowany w ciągu dwóch minut.
+-   Jeśli następnie zablokowany użytkownik zarejestruje urządzenie w usłudze Intune (i rozwiąże problemy z niezgodnością), dostęp do poczty e-mail zostanie odblokowany w ciągu dwóch minut.
 
--   Jeśli użytkownik wyrejestruje urządzenie z usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zablokowanie urządzenia może potrwać od jednej do trzech godzin.
+-   Jeśli użytkownik wyrejestruje urządzenie z usługi Intune, zablokowanie urządzenia może potrwać od jednej do trzech godzin.
 
 **Aby wyświetlić niektóre przykładowe scenariusze dotyczące sposobu konfigurowania zasad dostępu warunkowego w celu ochrony dostępu urządzeń, zobacz [Przykładowe scenariusze ochrony dostępu do poczty e-mail](restrict-email-access-example-scenarios.md).**
 

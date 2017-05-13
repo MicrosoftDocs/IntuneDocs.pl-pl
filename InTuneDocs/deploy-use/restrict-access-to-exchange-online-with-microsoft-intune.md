@@ -14,10 +14,11 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: cfb3a7cc4e70a062bc511cd4fe80a50b6262864f
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 742a989744a11dbc1c9e17a25b70388e06dd5ae7
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -40,7 +41,7 @@ Aby skonfigurować dostęp warunkowy, trzeba:
 
 - Posiadanie **subskrypcji pakietu Enterprise Mobility + Security (EMS)** lub **subskrypcji usługi Azure Active Directory (Azure AD) Premium** oraz posiadanie licencji użytkowników na usługi EMS lub Azure AD. Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
--  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Intune**, który łączy usługę [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] z usługą Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
+-  Rozważyć skonfigurowanie opcjonalnego **łącznika Service To Service Connector usługi Intune**, który łączy usługę Intune z usługą Exchange Online i ułatwia zarządzanie informacjami o urządzeniu za pośrednictwem konsoli usługi Intune. Łącznik nie musi być używany do stosowania zasad zgodności lub dostępu warunkowego, ale jest wymagany do uruchamiania raportów umożliwiających ocenę wpływu dostępu warunkowego.
     -  Dowiedz się więcej o [łączniku Service to Service Connector usługi Intune](intune-service-to-service-exchange-connector.md).
 
    > [!NOTE]
@@ -50,21 +51,21 @@ Aby skonfigurować dostęp warunkowy, trzeba:
 
 Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkownika mógł on połączyć się ze swoją pocztą e-mail, jego **urządzenie** musi:
 
--   Zostać **zarejestrowane** na komputerze przyłączonym do domeny lub w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Być komputerem przyłączonym do domeny lub zostać **zarejestrowane** w usłudze Intune.
 
--  **Zostać zarejestrowane w usłudze Azure Active Directory**. Dzieje się to automatycznie podczas rejestrowania urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
+-  **Zostać zarejestrowane w usłudze Azure Active Directory**. Dzieje się to automatycznie podczas rejestrowania urządzenia w usłudze Intune. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
 
   Usługa rejestracji urządzeń w usłudze Azure Active Directory zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
 
--   **Być zgodne** ze wszystkimi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], które są wdrożone na tym urządzeniu lub podłączone do domeny lokalnej.
+-   **Być zgodne** ze wszystkimi zasadami zgodności usługi Intune wdrożonymi na tym urządzeniu lub podłączone do domeny lokalnej.
 
 ### <a name="when-the-device-is-not-compliant"></a>Niezgodne urządzenie
 
 Jeśli warunek dostępu nie zostanie spełniony, urządzenie zostanie natychmiast poddane kwarantannie, a użytkownik otrzyma wiadomość e-mail i zobaczy przy próbie zalogowania się jedno z następujących powiadomień:
 
-- Jeśli urządzenie nie zostało zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem w usłudze Azure Active Directory.
+- Jeśli urządzenie nie zostało zarejestrowane w usłudze Intune lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem w usłudze Azure Active Directory.
 
--   Jeśli urządzenie nie zostało ocenione jako zgodne z regułami zasad zgodności, użytkownik zostanie skierowany do witryny sieci Web Portal firmy lub do aplikacji Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
+-   Jeśli urządzenie zostało ocenione jako niezgodne z regułami zasad zgodności, użytkownik zostanie skierowany do witryny sieci Web Portal firmy lub do aplikacji Portal firmy usługi Intune, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
 ### <a name="how-conditional-access-works-with-exchange-online"></a>Jak działa dostęp warunkowy w przypadku usługi Exchange Online
 
@@ -114,7 +115,7 @@ Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznym
 
   Komputer musi zostać przyłączony do domeny lub być zgodny z regułami zasad zgodności.
 
-  W celu zapewnienia zgodności komputer musi zostać zarejestrowany w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i być zgodny z zasadami.
+  W celu zapewnienia zgodności komputer musi zostać zarejestrowany w usłudze Intune i być zgodny z zasadami.
 
   W przypadku komputerów przyłączonych do domeny należy skonfigurować dostęp warunkowy do [automatycznego rejestrowania urządzenia](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory.
 
@@ -138,11 +139,11 @@ Upewnij się, że zasada zgodności zostanie [utworzona](create-a-device-complia
 ### <a name="step-2-evaluate-the-effect-of-the-conditional-access-policy"></a>Krok 2. Ocena wpływu zasad dostępu warunkowego
 Możliwe jest użycie **raportów ze spisu urządzeń przenośnych** w celu zidentyfikowania urządzeń, które mogą mieć zablokowany dostęp do programu Exchange po skonfigurowaniu zasad dostępu warunkowego.
 
-W tym celu należy skonfigurować połączenie między usługą [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i programem Exchange za pomocą [łącznika Service To Service Connector usługi Microsoft Intune](intune-service-to-service-exchange-connector.md).
+W tym celu należy skonfigurować połączenie między usługą Intune i programem Exchange za pomocą [łącznika Service To Service Connector usługi Microsoft Intune](intune-service-to-service-exchange-connector.md).
 1.  Przejdź do pozycji **Raporty** > **Raporty ze spisu urządzeń przenośnych**.
 ![Zrzut ekranu przedstawiający stronę z raportem ze spisu urządzeń przenośnych](../media/IntuneSA2bMobileDeviceInventoryReport.png)
 
-2.  W parametrach raportu wybierz grupę usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], która ma zostać oceniona, a następnie, w razie potrzeby, platformy urządzeń, których mają dotyczyć zasady.
+2.  W parametrach raportu wybierz grupę usługi Intune, która ma zostać oceniona, a następnie, w razie potrzeby, platformy urządzeń, których mają dotyczyć zasady.
 3.  Po wybraniu kryteriów spełniających potrzeby organizacji wybierz pozycję **Wyświetl raport**.
 Podgląd raportów zostanie otwarty w nowym oknie.
 ![Zrzut ekranu przedstawiający przykładowy raport ze spisu urządzeń przenośnych](../media/IntuneSA2cViewReport.PNG)
@@ -200,7 +201,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
     > [!NOTE]
     > Jeśli zasady zgodności nie zostały wdrożone, urządzenia są traktowane jako zgodne.
     >
-    > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, muszą zarejestrować swoje urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+    > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, muszą zarejestrować swoje urządzenia w usłudze Intune.
 
 3.  W obszarze **Dostęp do aplikacji** w przypadku aplikacji używających nowoczesnego uwierzytelniania użytkownik ma dwa sposoby wyboru platform, których mają dotyczyć zasady. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
 
@@ -257,7 +258,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 -   Gdy użytkownik utworzy konto e-mail, urządzenie zostanie od razu zablokowane.
 
--   Jeśli zablokowany użytkownik zarejestruje urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i rozwiąże wszystkie problemy z niezgodnością, dostęp do poczty e-mail zostanie odblokowany w ciągu dwóch minut.
+-   Jeśli zablokowany użytkownik zarejestruje urządzenia w usłudze Intune i rozwiąże wszystkie problemy z niezgodnością, dostęp do poczty e-mail zostanie odblokowany w ciągu dwóch minut.
 
 -   Jeśli użytkownik wyrejestruje swoje urządzenie, poczta e-mail zostanie zablokowana po około sześciu godzinach.
 
@@ -267,7 +268,7 @@ Aby wyświetlić niektóre **przykładowe scenariusze dotyczące sposobu konfigu
 
 #### <a name="to-view-devices-that-are-blocked-from-exchange"></a>Wyświetlanie urządzeń z zablokowanym dostępem do programu Exchange
 
-Na pulpicie nawigacyjnym usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] wybierz kafelek **Urządzenia z zablokowanym dostępem do programu Exchange**, aby wyświetlić liczbę zablokowanych urządzeń i linki do szczegółowych informacji.
+Na pulpicie nawigacyjnym usługi Intune wybierz kafelek **Urządzenia z zablokowanym dostępem do programu Exchange**, aby wyświetlić liczbę zablokowanych urządzeń i linki do szczegółowych informacji.
 ![Zrzut ekranu przedstawiający pulpit nawigacyjny usługi Intune, na którym wyświetlana jest liczba urządzeń z zablokowanym dostępem do programu Exchange](../media/IntuneSA6BlockedDevices.PNG)
 
 ## <a name="next-steps"></a>Następne kroki
