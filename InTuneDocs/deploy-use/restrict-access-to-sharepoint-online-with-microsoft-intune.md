@@ -14,10 +14,11 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 9e4fca9e29c8f0c2ec3ef088c3f91ad15ac11804
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 4a8b3f5a3ab5df9f31741e3331d2b6bbfd2c0c9f
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 04/14/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Za pomocą dostępu warunkowego usługi [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] możesz kontrolować dostęp do plików znajdujących się w usłudze SharePoint Online.
+Za pomocą dostępu warunkowego usługi Microsoft Intune możesz kontrolować dostęp do plików znajdujących się w usłudze SharePoint Online.
 Dostęp warunkowy ma dwa składniki:
 - Zasady zgodności urządzenia, które urządzenie musi spełniać, aby zostało uznane za zgodne.
 - Zasady dostępu warunkowego, w ramach których określane są warunki, które urządzenie musi spełniać w celu uzyskania dostępu do usługi.
@@ -45,20 +46,20 @@ Gdy użytkownik próbuje połączyć się z plikiem za pomocą obsługiwanej apl
 
 
   Aby nawiązać połączenie z wymaganymi plikami, urządzenie musi być:
--   **zarejestrowane** przy użyciu usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub komputera przyłączonego do domeny;
+-   **Zarejestrowane** w usłudze Intune lub być komputerem przyłączonym do domeny.
 
--   **zarejestrowane** w usłudze Azure Active Directory (jest to wykonywane automatycznie podczas rejestrowania urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]);
+-   **Zarejestrowane** w usłudze Azure Active Directory (jest to wykonywane automatycznie podczas rejestrowania urządzenia w usłudze Intune).
 
 
--   **zgodne** z wdrożonymi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Być **zgodne** z wdrożonymi zasadami zgodności usługi Intune.
 
 Stan urządzenia jest przechowywany w usłudze Azure Active Directory, która na podstawie określonych warunków blokuje dostęp do plików lub go przydziela.
 
 Jeśli warunek nie jest spełniony, użytkownik widzi podczas logowania jeden z następujących komunikatów:
 
--   Jeśli urządzenie nie zostało zarejestrowane w usługach [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalacji aplikacji Portal firmy oraz dokonywania rejestracji.
+-   Jeśli urządzenie nie zostało zarejestrowane w usługach Intune lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalacji aplikacji Portal firmy oraz dokonywania rejestracji.
 
--   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], gdzie można znaleźć informacje na temat problemu i sposobu jego rozwiązania.
+-   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy usługi Intune, gdzie można znaleźć informacje na temat problemu i sposobu jego rozwiązania.
 
 **Dostęp warunkowy nie ma zastosowania do udostępniania zewnętrznego**. Aby dowiedzieć się, jak zapobiegać zewnętrznemu udostępnianiu w dzierżawie lub zbiorze witryn, zobacz temat [Zarządzanie udostępnianiem zewnętrznym w środowisku usługi SharePoint Online](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
@@ -115,7 +116,7 @@ Jeśli użytkownik należy do obu grup, będzie wykluczony z zasad.
 Jeśli nie zostało zrobione to wcześniej, utwórz zasady zgodności i dokonaj ich wdrożenia dla użytkowników, którzy będą objęci zasadami usługi SharePoint Online.
 
 > [!NOTE]
-> Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
+> Podczas gdy zasady zgodności są wdrażane w grupach usługi Intune, zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
 
 Aby uzyskać szczegółowe informacje o sposobie konfigurowania zasad zgodności, zobacz temat [Tworzenie zasad zgodności](create-a-device-compliance-policy-in-microsoft-intune.md).
 
@@ -152,11 +153,11 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
          Zasady dostępu warunkowego są stosowane do wszystkich aplikacji klienckich korzystających z nowoczesnego uwierzytelniania na określonych platformach.
 
-     Komputery z systemem Windows muszą zostać przyłączone do domeny lub zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i być zgodne. Można ustawić następujące wymagania:
+     Komputery z systemem Windows muszą zostać przyłączone do domeny lub zarejestrowane w usłudze Intune i być zgodne. Można ustawić następujące wymagania:
 
-     -   **Urządzenia muszą zostać przyłączone do domeny lub być zgodne.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny lub zgodne z zasadami skonfigurowanymi w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Jeśli komputer nie spełnia żadnego z tych wymagań, użytkownik otrzyma monit o zarejestrowanie urządzenia w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+     -   **Urządzenia muszą zostać przyłączone do domeny lub być zgodne.** Wybierz tę opcję, jeśli komputery mają być przyłączone do domeny lub zgodne z zasadami skonfigurowanymi w usłudze Intune. Jeśli komputer nie spełnia żadnego z tych wymagań, użytkownik otrzyma monit o zarejestrowanie urządzenia w usłudze Intune.
 
-     -   **Urządzenia muszą być zgodne.** Wybierz tę opcję, jeśli komputery mają być zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i zgodne. Jeśli komputer nie został zarejestrowany, zostanie wyświetlony komunikat z instrukcjami dotyczącymi rejestracji.
+     -   **Urządzenia muszą być zgodne.** Wybierz tę opcję, jeśli komputery mają być zarejestrowane w usłudze Intune i zgodne. Jeśli komputer nie został zarejestrowany, zostanie wyświetlony komunikat z instrukcjami dotyczącymi rejestracji.
 
 4.   W obszarze **dostępu za pomocą przeglądarki** do usług SharePoint Online i OneDrive dla Firm można zezwolić na dostęp do usługi Exchange Online tylko za pośrednictwem obsługiwanych przeglądarek: Safari (iOS) i Chrome (Android). Dostęp z innych przeglądarek będzie zablokowany. Ograniczenia platformy wybrane dla dostępu aplikacji do usługi OneDrive mają zastosowanie również w tym miejscu.
 

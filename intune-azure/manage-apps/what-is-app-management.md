@@ -1,12 +1,12 @@
 ---
-title: "Co to jest zarządzanie aplikacjami"
+title: "Co to jest zarządzanie aplikacjami | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: z tego tematu nauczysz się podstaw zarządzania aplikacjami w usłudze Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 33def827fc7417930338e56c650d01df4dad85fb
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 34970d6adcfe41a6de9636a5605a17f9f5ef2d82
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -46,6 +47,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 |Dodawanie aplikacji i przypisywanie ich do urządzeń i użytkowników|Tak|Tak|Tak|Tak|
 |Przypisywanie aplikacji do urządzeń, które nie zostały zarejestrowane za pomocą usługi Intune|Tak|Tak|Nie|Nie|
 |Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania|Nie|Tak|Nie|Nie|
+|Użycie zasad aprowizowania aplikacji mobilnych do odnowienia wygasłych aplikacji|Nie|Tak|Nie|Nie|
 |Ochrona danych firmy w aplikacjach z zasadami ochrony aplikacji|Tak|Tak|Nie|Nie<sup>1</sup>|
 |Usuwanie jedynie danych firmowych z zainstalowanej aplikacji (Selektywne czyszczenie aplikacji)|Tak|Tak|Tak|Tak|
 |Monitorowanie przypisań aplikacji|Tak|Tak|Tak|Tak|
@@ -68,7 +70,7 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
+3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
 
@@ -77,19 +79,21 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
     - [Dodawanie aplikacji](add-apps.md)
     - [Przypisywanie aplikacji](deploy-apps.md)
     - [Monitorowanie aplikacji](monitor-apps.md)
-- **Licencjonowane aplikacje** — przeglądanie, wdrażanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
-    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](wsfb-apps.md)
-- **Zasady konfigurowania aplikacji** — zasady konfiguracji aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aby uzyskać szczegółowe informacje, zobacz:
+- **Zasady konfigurowania aplikacji** — zasady konfigurowania aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aby uzyskać szczegółowe informacje, zobacz:
     - [Zasady konfigurowania aplikacji](app-configuration-policies.md)
 - **Zasady ochrony aplikacji** — umożliwia skojarzenie ustawień z aplikacją w taki sposób, aby umożliwić ochronę używanych przez nią danych firmy. Na przykład można ograniczyć możliwości komunikowania się aplikacji z innymi aplikacjami lub wymagać od użytkownika wprowadzania numeru PIN umożliwiającego dostęp do aplikacji firmowej.
     - [Zasady ochrony aplikacji](app-protection-policies.md)
 - **Selektywne czyszczenie aplikacji** — usunięcie tylko danych firmowych z wybranego urządzenia.
     - [Selektywne czyszczenie danych](app-selective-wipe.md)
+- **Profile aprowizacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
+    - [Profile aprowizowania aplikacji dla systemu iOS](ios-app-provisioning-profile.md)
 
 ### <a name="monitor"></a>Monitor
+- **Licencjonowane aplikacje** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
+    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](wsfb-apps.md)
 - **Wykryte aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
 - **Stan instalacji aplikacji** — pokazuje stan utworzonego przez Ciebie przypisania aplikacji.
-- **Stan użytkownika ochrony aplikacji** — pokazuje stan zasad ochrony aplikacji dla wybranego przez Ciebie użytkownika.
+- **Stan ochrony aplikacji** — pokazuje stan zasad ochrony aplikacji dla wybranego użytkownika.
 
 Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](monitor-apps.md)
 

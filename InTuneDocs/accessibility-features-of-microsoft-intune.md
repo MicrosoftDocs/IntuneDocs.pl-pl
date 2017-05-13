@@ -2,10 +2,10 @@
 title: "Funkcje ułatwień dostępu | Microsoft Docs"
 description: "Informacje o funkcjach usługi Intune, które ułatwiają dostęp dla osób niepełnosprawnych."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 12/30/2016
+ms.date: 05/04/2017
 ms.topic: reference
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,17 @@ ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 9e3d509cf404c89b27f92ad54c900e927ce3878b
-ms.openlocfilehash: c1b585da0b2875f393a0cbe929f11d3a04875905
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: b54dffd23db966d9ed15ec23fe25a7e58a187d0b
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
 
 # <a name="accessibility-features-of-microsoft-intune"></a>Funkcje ułatwień dostępu usługi Microsoft Intune
-W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje w samej usłudze:
+W ułatwianiu osobom niepełnosprawnym dostępu do usługi Microsoft Intune oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje w samej usłudze:
 
 -   Używanie skrótów klawiaturowych
 
@@ -45,10 +47,5 @@ W ułatwianiu osobom niepełnosprawnym dostępu do usługi [!INCLUDE[wit_firstre
 |Przejście do następnej grupy aplikacji.|Strzałka w górę|
 |Wyświetlenie akcji dla wybranego urządzenia.|Strzałka w prawo|
 > [!NOTE]
-> W portalach usługi [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+> W portalach usługi Microsoft Intune można nawigować przy użyciu standardowych skrótów klawiaturowych programu Internet Explorer.
 

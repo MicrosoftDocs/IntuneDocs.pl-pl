@@ -14,10 +14,11 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e13a9c426e07ebb2443bd403d1a5c7274afd387e
-ms.openlocfilehash: dea0700e2901bfed566a87d7c599569219de85a2
-ms.lasthandoff: 12/20/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 271459e3faf886a45bcd673d2450f36a4a33a5db
+ms.openlocfilehash: 0ec828e881182dc0e0fb3bae671f0aec58f52aad
+ms.contentlocale: pl-pl
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -47,7 +48,7 @@ Rejestracja komputerów z systemem Windows pozwala uzyskać większość funkcji
 - Program Endpoint Protection i Zapora systemu Windows
 - Pomoc zdalna dla użytkowników korzystających z oprogramowania TeamViewer
 
-Aby uzyskać szczegółową listę możliwości zarządzania oferowanych przez każdą metodę, zobacz [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md) i [Możliwości komputerowego klienta oprogramowania usługi Intune](windows-pc-management-capabilities-in-microsoft-intune.md).
+Aby uzyskać szczegółowe zestawienie możliwości zarządzania oferowanych przez każdą metodę, zobacz artykuły [Możliwości zarządzania urządzeniami przenośnymi](mobile-device-management-capabilities-in-microsoft-intune.md) i [Zarządzanie komputerami z systemem Windows przy użyciu komputerowego oprogramowania klienckiego usługi Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
 Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](https://docs.microsoft.com/intune/get-started/what-to-know-before-you-start-microsoft-intune#intune-supported-devices).
 
 ## <a name="next-steps"></a>Następne kroki

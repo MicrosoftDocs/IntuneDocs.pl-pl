@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/02/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 0154e3bfeac0457de57257045e3e7ce833325bce
-ms.openlocfilehash: a462bcfa107bf1a37ea4e84bc3d88d0dd81f9fc8
-ms.lasthandoff: 02/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 2801d6a3cc672fbf91f89d2586c36b6bd3f18490
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -47,7 +48,7 @@ Opcje konfiguracji profilu sieci VPN różnią się w zależności od wybranego 
 Usługa Intune umożliwia tworzenie profilów sieci VPN korzystających z następujących typów połączeń:
 
 
-Typ połączenia |iOS i Mac OS X  |Android i Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
+Typ połączenia |iOS i Mac OS X  |Android i Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop i Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Tak |Tak   |Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
 Cisco (IPsec)|Tak |Tak   |Nie  |Nie  |Nie | Nie|
@@ -71,7 +72,7 @@ L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Tak (OMA-URI)|Tak|
 
 ## <a name="methods-of-securing-vpn-profiles"></a>Metody zabezpieczania profilów sieci VPN
 
-Profile sieci VPN mogą wykorzystywać różne typy połączeń i protokoły różnych producentów. Połączenia te są zwykle chronione przy użyciu jednej z dwóch metod.
+Profile sieci VPN mogą używać różnych typów połączeń i protokołów różnych producentów. Połączenia te są zwykle chronione przy użyciu jednej z dwóch metod.
 
 ### <a name="certificates"></a>Certyfikaty
 
@@ -163,7 +164,7 @@ Sieci VPN na żądanie można skonfigurować dla urządzeń z systemem iOS 8.0 l
 1. Na stronie konfiguracji zasad znajdź sekcję **Reguły na żądanie dla tego połączenia VPN**. Kolumny są oznaczone etykietami **Dopasowanie** (oznacza warunek sprawdzany przez reguły) oraz **Akcja** (oznacza akcję wyzwalają przez zasady po spełnieniu warunku dopasowania).
 2. Wybierz przycisk **Dodaj**, aby utworzyć regułę. W regułach można ustawić dwa typy dopasowań. Tylko jeden z nich można skonfigurować dla każdej reguły.
   - **Identyfikatory SSID**, które odnoszą się do sieci bezprzewodowych.
-  - **Domeny wyszukiwania DNS**, czyli...  Można użyć w pełni kwalifikowanych nazw domen, np. *team.corp.contoso.com*, lub domen takich jak *contoso.com*, co odpowiada użyciu **.contoso.com*.
+  - **Domeny wyszukiwania DNS**: można użyć w pełni kwalifikowanych nazw domen, np. *team. corp.contoso.com*, lub domen takich jak *contoso.com*, co odpowiada użyciu * *.contoso.com*.
 3. Opcjonalnie: podaj sondę ciągu adresu URL, czyli adres URL używany testowo przez regułę. Jeśli urządzenie, na którym jest zainstalowany ten profil, może uzyskać dostęp do adresu URL bez przekierowania, połączenie VPN zostanie nawiązane i urządzenie będzie się łączyć z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
 4. Wybierz jedną z następujących czynności:
   - **Połącz**

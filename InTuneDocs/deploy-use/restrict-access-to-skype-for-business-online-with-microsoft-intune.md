@@ -14,10 +14,11 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 312a3ae8a74b0a8460f969f96bee14077c6c7161
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 5888ffa6f16e9a9807ce1f9a9eb0594ed31b5b18
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -47,18 +48,18 @@ Urządzenie, dla którego wymagany jest dostęp do usługi Skype dla firm Online
 
 -   Być urządzeniem z system **Android** lub **iOS**.
 
--   Być **zarejestrowane** w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Być **zarejestrowane** w usłudze Intune.
 
--   Być **zgodne** ze wszystkimi wdrożonymi zasadami zgodności usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Być **zgodne** z wdrożonymi zasadami zgodności usługi Intune.
 
 
 Stan urządzenia jest przechowywany w usłudze Azure Active Directory, która na podstawie wybranych warunków przydziela prawo dostępu lub je blokuje.
 
 Jeśli warunek nie jest spełniony, użytkownik zobaczy podczas logowania jeden z następujących komunikatów:
 
--   Jeśli urządzenie nie zostało zarejestrowane w usłudze [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy i rejestrowania.
+-   Jeśli urządzenie nie zostało zarejestrowane w usłudze Intune lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji portalu firmy i rejestrowania.
 
--   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny Portal firmy usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] lub aplikacji Portal firmy, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
+-   Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny Portal firmy usługi Intune lub aplikacji Portal firmy, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Konfigurowanie dostępu warunkowego dla usługi Skype dla firm Online
 
@@ -77,7 +78,7 @@ Jeśli użytkownik należy do obu grup, będzie wykluczony z zasad.
 [Utwórz](create-a-device-compliance-policy-in-microsoft-intune.md) i [wdróż](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) zasady zgodności na wszystkich urządzeniach, które będą objęte zasadami. Będą to wszystkie urządzenia, które są używane przez użytkowników z **grup docelowych**.
 
 > [!NOTE]
-> Jeśli zasady zgodności są wdrażane w grupach usługi [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
+> Podczas gdy zasady zgodności są wdrażane w grupach usługi Intune, zasady dostępu warunkowego są stosowane dla grup zabezpieczeń usługi Azure Active Directory.
 
 
 > [!IMPORTANT]

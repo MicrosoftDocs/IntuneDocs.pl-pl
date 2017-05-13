@@ -14,10 +14,11 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
-ms.openlocfilehash: b2fc3a3dc47466313a54d2f6aef6b67dff8d7343
-ms.lasthandoff: 03/29/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7db42e591df8ec6c21f73b7ce49be624e1e29690
+ms.openlocfilehash: 793df9f3734b84c74ecac9b8192d0b06306607e8
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -42,6 +43,17 @@ Bez względu na to, czy zamierzasz ręcznie dodać użytkowników, czy też prze
 
 > [!NOTE]
 > Użytkownicy będą wyświetlani w konsoli administratora dopiero po zarejestrowaniu przez nich urządzenia. Ponadto możesz wybrać grupę użytkowników do jednoczesnej edycji, a następnie wybrać opcję dodania lub zastąpienia licencji dla wszystkich wybranych użytkowników.
+
+## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Używanie narzędzia School Data Sync w celu przypisywania licencji do użytkowników w usłudze Intune for Education
+Jeśli reprezentujesz instytucję edukacyjną, możesz użyć narzędzia School Data Sync (SDS), aby przypisać licencje usługi Intune for Education do synchronizowanych użytkowników. Wystarczy zaznaczyć pole wyboru Intune for Education podczas konfigurowania profilu SDS.  
+
+![Obraz ustawienia profilu SDS](./media/i4e-sds-profile-setup-setting.png)
+
+Po przypisaniu licencji Intune for Education upewnij się, że przypisano również licencję Intune A Direct.
+
+![Obraz przedstawiający konfigurację licencji produktu](./media/i4e-set-licenses.png)
+
+Aby dowiedzieć się więcej na temat narzędzia SDS, zobacz [omówienie narzędzia School Data Sync](https://support.office.com/en-us/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91?ui=en-US&rs=en-US&ad=US).
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Selektywne zarządzanie licencjami użytkowników pakietu EMS przy użyciu programu PowerShell
 Niektórzy użytkownicy w organizacjach korzystających z pakietu Microsoft Enterprise Mobility + Security (EMS) mogą potrzebować tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzestaw usług przy użyciu [poleceń cmdlet środowiska PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).

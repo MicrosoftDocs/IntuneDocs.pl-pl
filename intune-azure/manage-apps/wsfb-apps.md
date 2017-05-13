@@ -1,12 +1,12 @@
 ---
-title: "Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm"
+title: "Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące synchronizacji aplikacji ze Sklepu Windows dla firm w usłudze Intune, a następnie przypisywania ich i śledzenia."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/24/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 6e410a37f91e0828d5f6b205acb4d340dae86c6d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: 40b07a011d0d4126945f6cce6304a4cbf5e8b6aa
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/24/2017
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
 * Aplikacje, które są synchronizowane, zostają wyświetlone w konsoli administracyjnej usługi Intune. Można je przypisać w taki sam sposób, jak wszystkie inne aplikacje.
 * Można śledzić liczbę dostępnych i używanych licencji w konsoli administracyjnej usługi Intune.
-* Usługa Intune blokuje wdrażanie i instalację aplikacji, jeśli nie ma wystarczającej liczby dostępnych licencji.
+* Usługa Intune blokuje przypisywanie i instalację aplikacji, jeśli nie ma wystarczającej liczby dostępnych licencji.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
-Przed rozpoczęciem synchronizowania i wdrażania aplikacji ze Sklepu Windows dla firm przejrzyj następujące informacje:
+Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Windows dla firm przejrzyj następujące informacje:
 * Musisz skonfigurować usługę Intune jako urząd zarządzania urządzeniami przenośnymi w Twojej organizacji.
 * Musisz mieć zarejestrowane konto w Sklepie Windows dla firm.
 * Po powiązaniu konta w Sklepie Windows dla firm z usługą Intune nie będzie można zmienić konta na inne.
@@ -50,7 +51,7 @@ Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurowa�
 3. Na stronie Narzędzia do zarządzania wybierz opcję **Dodaj narzędzie do zarządzania**, a następnie wybierz pozycję **Microsoft Intune**.
 
 > [!NOTE]
-> Wcześniej w przypadku wdrażania aplikacji ze Sklepu Windows dla firm za pomocą więcej niż jednego narzędzia do zarządzania można było skojarzyć ze Sklepem Windows dla firm tylko jedno z tych narzędzi. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
+> Wcześniej w przypadku przypisywania aplikacji ze Sklepu Windows dla firm za pomocą więcej niż jednego narzędzia do zarządzania można było skojarzyć ze Sklepem Windows dla firm tylko jedno z tych narzędzi. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
 
 Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
@@ -74,11 +75,11 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
 Aplikacje ze sklepu przypisuje się w taki sam sposób, jak każdą inną aplikację usługi Intune. Aby uzyskać więcej informacji, zobacz artykuł [How to assign apps to groups with Microsoft Intune](deploy-apps.md) (Jak przypisać aplikacje do grup w usłudze Microsoft Intune). Jednak zamiast przypisywać aplikacje ze strony **Wszystkie aplikacje**, można przypisać je ze strony **Aplikacje z licencją**.
 
-W przypadku przypisania aplikacji ze Sklepu Windows dla firm licencja będzie używana przez każdego użytkownika, który zainstaluje aplikację. Jeśli zużyjesz wszystkie dostępne licencje dla wdrażanej aplikacji, nie będziesz w stanie wdrożyć większej liczby kopii aplikacji. W takim przypadku należy wykonać jedną z następujących czynności:
+W przypadku przypisania aplikacji ze Sklepu Windows dla firm licencja będzie używana przez każdego użytkownika, który zainstaluje aplikację. Jeśli zużyjesz wszystkie dostępne licencje dla przypisanej aplikacji, nie będziesz w stanie przypisać większej liczby kopii aplikacji. W takim przypadku należy wykonać jedną z następujących czynności:
 * Odinstaluj aplikację z niektórych urządzeń.
-* Zmniejsz zakres bieżącego wdrożenia i skieruj je tylko do użytkowników, dla których masz wystarczającą liczbę licencji.
+* Zmniejsz zakres bieżącego przypisania i skieruj je tylko do użytkowników, dla których masz wystarczającą liczbę licencji.
 * Kup więcej kopii aplikacji w Sklepie Windows dla firm.
 
 > [!Important]
-> Wdrożone aplikacje są dostępne tylko dla użytkownika, który pierwotnie zarejestrował urządzenie. Inni użytkownicy nie mogą uzyskiwać dostępu do aplikacji.
+> Przypisane aplikacje są dostępne tylko dla użytkownika, który pierwotnie zarejestrował urządzenie. Inni użytkownicy nie mogą uzyskiwać dostępu do aplikacji.
 
