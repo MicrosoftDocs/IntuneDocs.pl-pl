@@ -15,10 +15,10 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
-ms.openlocfilehash: a9780dd3a951cc074a38061bf67aa5485c1eab68
+ms.sourcegitcommit: 1445c29c9b2b1754bad733096dbc08a76481f85b
+ms.openlocfilehash: e8922fa67381f410194b9db333758a533cecb3c4
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2017
 
 
 ## <a name="overview"></a>Przegląd
-[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://components.xamarin.com/view/microsoft.intune.mam) umożliwia korzystanie z [funkcji zarządzania aplikacjami mobilnymi usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ochrony aplikacji Intune do ich aplikacji opartych na środowisku Xamarin.
+[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://components.xamarin.com/view/microsoft.intune.mam) umożliwia korzystanie z [zasad ochrony aplikacji usługi Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ochrony aplikacji Intune do ich aplikacji opartych na środowisku Xamarin.
 
 Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po dołączeniu składnika do aplikacji mobilnej dla systemu iOS lub Android administrator IT może za pośrednictwem zarządzania aplikacjami mobilnymi (MAM) w usłudze Microsoft Intune wdrożyć zasady obsługujące różne funkcje ochrony danych.
 
@@ -108,7 +108,7 @@ Aplikacje Xamarin skompilowane za pomocą składnika Xamarin zestawu SDK aplikac
 Na tym kończy się procedura dołączania składnika do aplikacji systemu iOS opartej na platformie Xamarin. Jeśli do tworzenia projektu jest używany edytor Xcode, można użyć pakietu `Intune App SDK Settings.bundle`. Pozwoli to włączać i wyłączać ustawienia zasad usługi Intune na potrzeby testowania i debugowania podczas tworzenia projektu. Aby skorzystać z tego pakietu, wykonaj czynności opisane w [Przewodniku dewelopera po zestawie SDK aplikacji usługi Intune dla systemu iOS](intune-app-sdk-ios.md) i zapoznaj się z sekcją dotyczącą [debugowania w programie Xcode](intune-app-sdk-ios.md#status-result-and-debug-notifications).
 
 ## <a name="enabling-mam-in-your-android-mobile-app"></a>Włączanie obsługi zarządzania aplikacjami mobilnymi w aplikacji mobilnej systemu Android
-W przypadku aplikacji systemu Android opartych na środowisku Xamarin, które nie korzystają z platformy tworzenia interfejsu użytkownika, należy zapoznać się z treścią dokumentu [Przewodnik dewelopera po zestawie SDK aplikacji usługi Intune dla systemu Android] i postępować zgodnie z zawartymi w nim wytycznymi. W przypadku aplikacji systemu Android opartej na środowisku Xamarin musisz zastąpić klasę, metody i działania odpowiednimi ekwiwalentami z obsługą zarządzania aplikacjami mobilnymi, korzystając z [tabeli](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent-required) zawartej w tym przewodniku. Jeśli w danej aplikacji nie zdefiniowano klasy `android.app.Application`, musisz ją utworzyć i zapewnić jej dziedziczenie po `MAMApplication`.
+W przypadku aplikacji systemu Android opartych na środowisku Xamarin, które nie korzystają z platformy tworzenia interfejsu użytkownika, należy zapoznać się z treścią dokumentu [Przewodnik dewelopera po zestawie SDK aplikacji usługi Intune dla systemu Android] i postępować zgodnie z zawartymi w nim wytycznymi. W przypadku aplikacji systemu Android opartej na środowisku Xamarin musisz zastąpić klasę, metody i działania odpowiednimi ekwiwalentami z obsługą zarządzania aplikacjami mobilnymi, korzystając z [tabeli](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent) zawartej w tym przewodniku. Jeśli w danej aplikacji nie zdefiniowano klasy `android.app.Application`, musisz ją utworzyć i zapewnić jej dziedziczenie po `MAMApplication`.
 
 W przypadku zestawu Xamarin Forms i innych platform tworzenia interfejsu użytkownika można skorzystać z narzędzia o nazwie `MAM.Remapper`. Narzędzie to umożliwia automatyczne zastąpienie klasy. Musisz jednak wykonać następujące czynności:
 
