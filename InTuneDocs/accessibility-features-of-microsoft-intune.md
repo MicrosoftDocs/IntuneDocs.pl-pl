@@ -15,18 +15,16 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
-ms.openlocfilehash: b54dffd23db966d9ed15ec23fe25a7e58a187d0b
+ms.sourcegitcommit: ca5baca6bb9814d7ab4075c65eb2274c8b6e9e08
+ms.openlocfilehash: d5dafeecdddd0c780673b01543c077dde9e881b2
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/09/2017
 
 
 ---
 
 # <a name="accessibility-features-of-microsoft-intune"></a>Funkcje ułatwień dostępu usługi Microsoft Intune
-W ułatwianiu osobom niepełnosprawnym dostępu do usługi Microsoft Intune oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje w samej usłudze:
-
--   Używanie skrótów klawiaturowych
+Oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje dla osób niepełnosprawnych dostępne w samej usłudze Microsoft Intune: Używanie skrótów klawiaturowych
 
 > [!NOTE]
 > [!INCLUDE[accessibility6](./includes/accessibility6_md.md)]

@@ -16,10 +16,10 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
-ms.openlocfilehash: 3c7ab3e33f7a1a97cd8048be059cf2f74deb00c1
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 066fdacab7530122ed325238c0db3a9d3df580c9
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -45,7 +45,7 @@ Użyj profilu urządzenia **Edukacja** dla systemu iOS w usłudze Intune oraz in
 Przed rozpoczęciem konfiguracji tych ustawień należy uwzględnić następujące kwestie:
 
 - Tablety iPad zarówno dla nauczycieli, jak i dla uczniów muszą być zarejestrowane w usłudze Intune
-- Upewnij się, że na urządzeniu nauczyciela została zainstalowana aplikacja [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Możesz to zrobić ręcznie lub użyć [zarządzania aplikacjami usługi Intune](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-management).
+- Upewnij się, że na urządzeniu nauczyciela została zainstalowana aplikacja [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Możesz to zrobić ręcznie lub użyć [zarządzania aplikacjami usługi Intune](../manage-apps/what-is-app-management.md).
 - Należy skonfigurować certyfikaty, aby uwierzytelnić połączenia między urządzeniami dla nauczycieli i uczniów (zobacz Krok 2).
 - Tablety iPad dla nauczycieli i uczniów muszą znajdować się w tej samej sieci Wi-Fi, jak również mieć włączoną funkcję Bluetooth.
 - Aplikacja Classroom jest uruchamiania na nadzorowanych tabletach iPad z systemem iOS 9.3 lub nowszym.
@@ -70,7 +70,7 @@ Informacje do narzędzia SDS możesz zaimportować przy użyciu jednego z nastę
 
 - [Więcej informacji o tym, jak w pełni korzystać z synchronizacji lokalnych danych szkoły z usługą Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 - [Więcej informacji o narzędziu School Data Sync firmy Microsoft](https://sds.microsoft.com/)
-- [Więcej informacji na temat licencjonowania w usłudze Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Więcej informacji na temat licencjonowania w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Krok 2. Tworzenie i przypisywanie profilu Edukacja dla systemu iOS w usłudze Intune
 
@@ -148,7 +148,7 @@ Po zakończeniu konfigurowania certyfikatów wybierz przycisk **OK**.
     
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
-Przypisz profil do urządzeń dla uczniów w grupach klas, które zostały utworzone podczas synchronizowania danych szkoły z usługą Azure AD (zobacz temat [Jak przypisywać profile urządzeń](/intune-azure/configure-devices/how-to-assign-device-profiles)).
+Przypisz profil do urządzeń dla uczniów w grupach, które zostały utworzone podczas synchronizowania danych szkoły z usługą Azure AD (zobacz temat [Przypisywanie profilów urządzeń](how-to-assign-device-profiles.md)).
 
 ## <a name="next-steps"></a>Następne kroki
 
