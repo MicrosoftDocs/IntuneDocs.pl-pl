@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 2cb089cc9b6e76e13b2f5da65efb3452aa5274af
-ms.openlocfilehash: e3993c97475b699da90a0634bdb3ac1ba4f5a28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: 64cfbf02e54244457aeaefb84e3049350764c410
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -28,6 +29,17 @@ ms.lasthandoff: 02/24/2017
 # <a name="using-your-windows-device-with-intune"></a>Korzystanie z urządzenia z systemem Windows i usługi Intune
 
 Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
+
+## <a name="supported-versions"></a>Obsługiwane wersje
+
+Usługa Intune obsługuje obecnie następujące wersje systemu Windows.
+
+* Windows 10 (wersje Home, Pro, Education i Enterprise)
+* System Windows Phone 8.1 lub nowszy
+* System Windows 8.1 RT
+* Windows 8.1
+
+Istnieją także inne wersje systemu Windows, takie jak [Windows 10 Holographic](https://www.microsoft.com/hololens), które również są obsługiwane przez usługę Intune. Nie zostały one wymienione w tym miejscu, ponieważ służą do bardzo konkretnych zastosowań.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
