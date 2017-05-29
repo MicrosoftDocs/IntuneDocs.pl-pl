@@ -14,10 +14,11 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 00e9dfd165a449182c5b937372db7085c981c68f
-ms.openlocfilehash: cca12024ba12cff5cdb8c515f7719a7592ba97ea
-ms.lasthandoff: 02/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 88a18975049158ca632d51796e8b4022c42dff94
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -63,7 +64,7 @@ Po usunięciu licencji użytkownika jego zarejestrowane urządzenia nie będą j
 
 7.  Wybierz pozycję **Urządzenia**.
 
-8.  Wybierz odpowiednie urządzenia, a następnie wybierz polecenie **Usuń urządzenie**. Urządzenia zostaną usunięte przy następnym synchronizowaniu ich z usługą Active Directory. Zwykle nastąpi to w ciągu&4; godzin. Po wykonaniu synchronizacji urządzenie zostanie usunięte z zarządzania. Spowoduje to usunięcie urządzenia z limitu urządzeń dla tego użytkownika.
+8.  Wybierz odpowiednie urządzenia, a następnie wybierz polecenie **Usuń urządzenie**. Urządzenia zostaną usunięte przy następnym synchronizowaniu ich z usługą Active Directory. Zwykle nastąpi to w ciągu 4 godzin. Po wykonaniu synchronizacji urządzenie zostanie usunięte z zarządzania. Spowoduje to usunięcie urządzenia z limitu urządzeń dla tego użytkownika.
 
 ## <a name="retire-managed-computers"></a>Wycofywanie zarządzanych komputerów
 Komputery zarządzane przez oprogramowanie klienckie usługi Intune można usunąć z zarządzania w konsoli administracyjnej usługi Intune. Spowoduje to również odinstalowanie oprogramowania klienckiego i usunięcie zasad usługi Intune z komputera. Zobacz informacje na temat [wycofywania komputerów zarządzanych przy użyciu oprogramowania klienckiego usługi Intune](retire-a-windows-pc-with-microsoft-intune.md).

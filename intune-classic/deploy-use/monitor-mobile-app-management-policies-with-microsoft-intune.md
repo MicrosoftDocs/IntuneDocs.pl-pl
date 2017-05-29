@@ -14,10 +14,11 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 96c25307c4060a8872ba4f6de47992c4d9f9dd85
-ms.lasthandoff: 02/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: d80632aceaa675f08eb4b23ce59e3bcabb72b4d0
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -91,7 +92,7 @@ W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używ
 
 Możesz uzyskać dostęp do tych samych raportów, które są wyświetlane w widoku szczegółowym, a także do dodatkowych raportów ułatwiających sprawdzenie stanu zgodności zasad ochrony aplikacji:
 
-![Zrzut ekranu nr&4;](../media/MAM-reporting-7.png)
+![Zrzut ekranu nr 4](../media/MAM-reporting-7.png)
 
 -   **Raport użytkownika dotyczący ochrony aplikacji:** zawiera te same informacje, które znajdują się w raporcie **Stan użytkownika** w sekcji widoku szczegółowego opisanej powyżej.
 
@@ -107,7 +108,7 @@ Możesz uzyskać dostęp do tych samych raportów, które są wyświetlane w wid
 
         -   Wszystkie aplikacje są zaewidencjonowane, nie są jednak objęte żadnymi zasadami ochrony aplikacji.
 
-![Zrzut ekranu nr&2;](../media/MAM-reporting-4.png)
+![Zrzut ekranu nr 2](../media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Grupowanie tabel
 
@@ -124,11 +125,11 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
 1. W bloku zarządzania aplikacjami mobilnymi usługi Intune wybierz raport dotyczący ochrony aplikacji.
 
-    ![Zrzut ekranu nr&6;](../media/app-protection-report-csv-2.png)
+    ![Zrzut ekranu nr 6](../media/app-protection-report-csv-2.png)
 
 2. Wybierz opcję Tak, aby zapisać raport, a następnie wybierz polecenie Zapisz jako i wybierz folder, w którym chcesz zapisać raport.
 
-    ![Zrzut ekranu nr&7;](../media/app-protection-report-csv-1.png)
+    ![Zrzut ekranu nr 7](../media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Zobacz także
 [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
