@@ -14,10 +14,11 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
-ms.lasthandoff: 12/10/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: f30837d90954b9b30b27e77240bb241db6e2b037
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -41,7 +42,7 @@ Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego
 
 Aby skojarzyć aplikację biznesową z zasadami zarządzania aplikacjami mobilnymi, należy dodać szczegóły aplikacji do subskrypcji/dzierżawy usługi Intune, wykonując poniższe czynności:
 
-1. W [portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia** i wybierz pozycję **Aplikacje biznesowe**.
+1. W [portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune**  > **Ustawienia** i wybierz pozycję **Aplikacje biznesowe**.
 
   ![Zrzut ekranu przedstawiający blok ustawień z opcją dotyczącą aplikacji biznesowych](../media/mam-azure-portal-lob-on-settings.png)
 

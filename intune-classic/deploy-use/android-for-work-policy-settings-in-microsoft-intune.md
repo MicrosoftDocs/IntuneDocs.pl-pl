@@ -15,10 +15,11 @@ ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 02c844a5b38023a6dfc6c4ef1de81e1416601fba
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: b0c3520c7c1fd29a631587fe1a69d4c411099cb4
-ms.lasthandoff: 03/07/2017
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -59,7 +60,7 @@ Jeśli w tym temacie nie opisano ustawienia, którego szukasz, możesz mieć mo�
 |----------------|-|
 |**Zezwalaj na współużytkowanie danych między profilem służbowym i osobistym**|Pozwala aplikacjom w profilu służbowym udostępniać dane aplikacjom w profilu osobistym użytkownika. Wybierz spośród opcji:<br><br>- **Uniemożliwiaj wszelkie udostępnianie poza granice**<br>- **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępniania z profilu osobistego**<br>- **Brak ograniczeń dotyczących udostępniania**|
 |**Ukryj powiadomienia profilu służbowego, gdy urządzenie jest zablokowane**<br>(system Android 6 i nowsze)|Pozwala określić, czy mają być wyświetlane jakiekolwiek powiadomienia z profilu służbowego, gdy urządzenie jest zablokowane.|
-|**Ustaw domyślne zasady uprawnień aplikacji**<br>(system Android 6 i nowsze)|Powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym. Począwszy od systemu Android 6, podczas uruchamiania aplikacji użytkownikom końcowym są wyświetlane monity o zaakceptowanie wymaganych uprawnień.  To ustawienie zasad umożliwia zespołowi IT określenie, czy i w jaki sposób użytkownicy otrzymują monit o przyznanie uprawnień aplikacji w profilu służbowym. <br/><br/>Przykładowo — zespół IT może wypchnąć do profilu służbowego aplikację, która wymaga dostępu do lokalizacji.  W przypadku zastosowania standardowej konfiguracji w aplikacji zostałoby wyświetlone wyskakujące okno dialogowe z pytaniem, czy użytkownik chce udzielić aplikacji dostępu do lokalizacji. Użytkownik mógłby zezwolić na dostęp lub wybrać opcję odmowy dostępu.  Ta zasada pozwala zespołowi IT zdecydować, czy wszystkie uprawnienia powinny być przyznawane automatycznie bez wyświetlania monitu, czy ma być automatycznie wybierana opcja odmowy dostępu bez wyświetlania monitu, czy też decyzja ma zostać pozostawiona użytkownikowi końcowemu.|
+|**Ustaw domyślne zasady uprawnień aplikacji**<br>(system Android 6 i nowsze)|Powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym. Począwszy od systemu Android w wersji 6 użytkownik końcowy otrzymuje monity dotyczące określonych uprawnień wymaganych przez aplikacje podczas ich działania.  To ustawienie zasad pozwala działowi IT określić, czy i jak użytkownicy są monitowani o nadanie uprawnień aplikacjom w profilu służbowym. <br/><br/>Przykładowo — zespół IT może wypchnąć do profilu służbowego aplikację, która wymaga dostępu do lokalizacji.  W przypadku zastosowania standardowej konfiguracji w aplikacji zostałoby wyświetlone wyskakujące okno dialogowe z pytaniem, czy użytkownik chce udzielić aplikacji dostępu do lokalizacji. Użytkownik mógłby zezwolić na dostęp lub wybrać opcję odmowy dostępu.  Ta zasada pozwala zespołowi IT zdecydować, czy wszystkie uprawnienia powinny być przyznawane automatycznie bez wyświetlania monitu, czy ma być automatycznie wybierana opcja odmowy dostępu bez wyświetlania monitu, czy też decyzja ma zostać pozostawiona użytkownikowi końcowemu.|
 
 
 ## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych
