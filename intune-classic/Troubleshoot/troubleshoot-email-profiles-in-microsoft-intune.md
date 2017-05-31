@@ -2,8 +2,8 @@
 title: "Rozwiązywanie problemów z profilami poczty e-mail | Microsoft Docs"
 description: "Problemy dotyczące profilów poczty e-mail oraz opisano sposoby ich rozwiązywania."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 12/27/2016
 ms.topic: article
@@ -14,10 +14,11 @@ ms.assetid: f5c944ea-32a6-48af-bb57-16d5f1f3c588
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 017a7912cb991f00916373acc18f4ab2b97ce8ed
-ms.lasthandoff: 12/30/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 0387fa91628c5f786d9289df309b82bd17cf6447
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -67,7 +68,7 @@ Jeśli użytkownik zainstalował profil poczty e-mail przed udostępnieniem prof
 Ponieważ system Samsung KNOX nie używa nazwy hosta do identyfikowania profilu, nie zaleca się tworzenia wielu profilów poczty e-mail do wdrożenia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one zastępowały siebie nawzajem.
 
 ## <a name="error--0x87d1fde8-for-knox-standard-device"></a>Błąd 0x87D1FDE8 dla urządzenia KNOX Standard
-**Problem**: po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX Standard w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się** na karcie Zasady &gt; właściwości na urządzeniu.
+**Problem**: po utworzeniu i wdrożeniu profilu poczty e-mail programu Exchange Active Sync dla urządzenia Samsung KNOX Standard w przypadku różnych urządzeń z systemem Android zgłaszany jest błąd **0x87D1FDE8** lub **korygowanie nie powiodło się**  na karcie Zasady &gt; właściwości na urządzeniu.
 
 Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowych. Opcja synchronizacji notatek urządzenia Samsung nie jest już obsługiwana i ta opcja nie powinna być wybrana w Twoim profilu. Upewnij się, że urządzenia miały wystarczająco dużo czasu na przetwarzanie zasad, nawet do 24 godzin.
 

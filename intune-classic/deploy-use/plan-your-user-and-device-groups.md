@@ -13,10 +13,11 @@ ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
 ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 0ed5340d271301c756e8c72ddd91ac26088fd19f
-ms.lasthandoff: 12/10/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 1e6727f633d2f74e1f1b018fad5f6765dfa4936b
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -121,7 +122,7 @@ Usługa Intune udostępnia dziewięć wbudowanych grup, których nie można edyt
 
 
 ### <a name="all-users-and-devices-in-your-organization"></a>Wszyscy użytkownicy i wszystkie urządzenia w Twojej organizacji
-Zdefiniuj grupę nadrzędną dla wszystkich użytkowników i urządzeń w Twojej organizacji. Prawdopodobnie będziesz używać zasad dotyczących wszystkich elementów. Do tego celu możesz użyć grup domyślnych usługi Intune **Wszyscy użytkownicy** i **Wszystkie urządzenia**. Podgrupy pozwalające organizować urządzenia według określonych kryteriów, takie jak grupa „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) i grupa urządzeń należących do firmy, mogą być grupami podrzędnymi grup nadrzędnych **Wszyscy użytkownicy** i **Wszystkie urządzenia**.
+Zdefiniuj grupę nadrzędną dla wszystkich użytkowników i urządzeń w Twojej organizacji. Prawdopodobnie będziesz używać zasad dotyczących wszystkich elementów. Do tego celu możesz użyć grup domyślnych usługi Intune **Wszyscy użytkownicy** i **Wszystkie urządzenia**. Podgrupy pozwalające organizować urządzenia według określonych kryteriów, takie jak grupa „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) i grupa urządzeń należących do firmy, mogą być grupami podrzędnymi grup nadrzędnych **Wszyscy użytkownicy**  i **Wszystkie urządzenia**.
 
 ## <a name="customize-groups-for-your-organization"></a>Dostosowywanie grup na potrzeby organizacji
 

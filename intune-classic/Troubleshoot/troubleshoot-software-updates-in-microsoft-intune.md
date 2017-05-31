@@ -14,9 +14,11 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 66ec65e856c0ab70264b797bb3ef7fe4f5673b54
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: bb46e329230483009c6ac5327493a2a32d4f46d8
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -266,9 +268,4 @@ Ponadto jeśli korzystasz z systemu Windows 7, upewnij się, że następująca a
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

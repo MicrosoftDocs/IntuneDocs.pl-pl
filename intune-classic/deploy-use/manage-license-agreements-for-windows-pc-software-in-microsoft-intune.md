@@ -14,9 +14,11 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 47c923cf145a7783a1bc2222442831fcbc0f6a47
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 18fbeb0e5bbf46795a02590a8dce205342a3a357
+ms.contentlocale: pl-pl
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -179,9 +181,4 @@ Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. 
 |Zmienianie nazwy grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Edytuj grupę licencji** w menu **Zadania** .|
 |Usuwanie grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Usuń grupę licencji** w menu **Zadania** . **Porada:** wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji **Nieprzypisane umowy**.|
 |Usuwanie umowy licencyjnej|W obszarze roboczym **Licencje** wybierz umowę, a następnie wybierz polecenie **Usuń**. **Wskazówka:** aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie **Odśwież teraz** na stronie **Omówienie licencji** lub na karcie **Ogólne** dla konkretnej grupy licencji.|
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
