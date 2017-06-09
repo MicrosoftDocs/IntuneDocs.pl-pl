@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 ---
 
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] W tym temacie opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane służbowo, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji służbowej w usłudze OneDrive.
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]W tym temacie opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane służbowo, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji służbowej w usłudze OneDrive.
 ##  <a name="accessing-apps"></a>Uzyskiwanie dostępu do aplikacji
 
 Aplikacja Portal firmy jest wymagana dla wszystkich aplikacji skojarzonych z zasadami ochrony aplikacji na urządzeniach z systemem Android.
