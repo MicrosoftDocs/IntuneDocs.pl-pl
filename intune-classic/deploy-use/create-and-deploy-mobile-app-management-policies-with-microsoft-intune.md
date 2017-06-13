@@ -122,7 +122,7 @@ Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikac
 
     ![Blok Dodawanie zasad MAM](../media/AppManagement/mam-lob-apps-1.png)
 
-2.  Kliknij pozycję **Więcej aplikacji**, wprowadź **identyfikator pakietu******, a następnie kliknij pozycję Wybierz, aby dodać aplikacje biznesowe.
+2.  Kliknij pozycję **Więcej aplikacji**, wprowadź **identyfikator pakietu** (dla systemu iOS), **identyfikator pakietu** (dla systemu Android), a następnie kliknij pozycję Wybierz, aby dodać aplikacje biznesowe.
 
     ![Blok Więcej aplikacji MAM](../media/AppManagement/mam-lob-apps-2.png)
 
