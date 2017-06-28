@@ -1,12 +1,12 @@
 ---
-title: "Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune | Dokumentacja firmy Microsoft"
-titleSuffix: Intune Azure preview
+title: "Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune"
+titleSuffix: Intune on Azure
 description: "Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji WIP za pomocą usługi Intune"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,17 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ca8e309653aa43292c7bd1ae1cb72cbb282d37dc
+ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
+ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Począwszy od usługi Intune w wersji 1704, można używać zasad ochrony aplikacji z systemem Windows 10 w ramach scenariusza zarządzania aplikacjami mobilnymi (MAM) bez rejestracji.
 
@@ -52,7 +52,7 @@ Omówmy kilka założeń dotyczących dodawania zasad funkcji WIP.
 
 Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, trzeba skonfigurować dostawcę usług MAM.
 
--   Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.comapp-protection-policies-configure-windows-10.md).
+-   Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Ponadto wymagane są następujące elementy:
 

@@ -1,5 +1,5 @@
 ---
-title: Pobieranie zasad konfiguracji aplikacji Skycure dla systemu iOS| Dokumentacja firmy Microsoft
+title: Pobieranie zasad konfiguracji aplikacji Skycure dla systemu iOS
 description: "Pobierz zasady konfiguracji aplikacji Skycure dla systemu iOS do wykorzystania z wdrożoną u użytkowników końcowych aplikacją Skycure dla systemu iOS."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a8e46960a5d469093052148eb457140b3c235d3a
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 3159985bfbaec40899dd58766e214daa672ee6d4
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---

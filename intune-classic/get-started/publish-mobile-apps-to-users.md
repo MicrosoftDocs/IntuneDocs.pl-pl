@@ -1,5 +1,5 @@
 ---
-title: "Publikowanie aplikacji mobilnych dla użytkowników | Microsoft Docs"
+title: "Publikowanie aplikacji mobilnych dla użytkowników"
 description: 
 keywords: 
 author: jeffgilb
@@ -15,10 +15,10 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fea0f98051d1a13a2ace178fe440520f495aaa68
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 71d57965164f0822e1a6d95715c4f9c92f7bf4bd
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -35,9 +35,9 @@ Czy chcesz, aby użytkownicy mogli szybko uzyskiwać dostęp do wszystkich aplik
 Jeśli tak, usługa Microsoft Intune umożliwia publikowanie aplikacji (aplikacji mobilnych pakietu Office, wewnętrznych aplikacji biznesowych lub innych aplikacji mobilnych i klasycznych) w jednym wspólnym portalu: [aplikacji lub witrynie sieci Web Portal firmy usługi Microsoft Intune](/intune-user-help/company-portal-frequently-asked-questions).
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.    [Zarejestruj urządzenia](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) w rozwiązaniu do zarządzania urządzeniami przenośnymi w usłudze Intune.
-2.    [Dodaj do usługi Intune aplikacje](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune), które chcesz wdrożyć na zarejestrowanych urządzeniach.
-3.    [Wdróż aplikacje za pomocą usługi Intune](/intune-classic/deploy-use/deploy-apps) na zarejestrowanych urządzeniach.
+1.  [Zarejestruj urządzenia](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) w rozwiązaniu do zarządzania urządzeniami przenośnymi w usłudze Intune.
+2.  [Dodaj do usługi Intune aplikacje](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune), które chcesz wdrożyć na zarejestrowanych urządzeniach.
+3.  [Wdróż aplikacje za pomocą usługi Intune](/intune-classic/deploy-use/deploy-apps) na zarejestrowanych urządzeniach.
 
 ### <a name="additional-information"></a>Informacje dodatkowe:
 Jeśli publikowanie aplikacji mobilnych pakietu Office jest wykonywane z zamiarem korzystania z możliwości zarządzania aplikacjami mobilnymi w usłudze Intune w celu zarządzania ochroną przed utratą danych dla tych aplikacji, wówczas każde zasady zarządzania aplikacjami mobilnymi przypisane do użytkowników końcowych będą musiały mieć [przypisaną licencję użytkownika dla usługi Office 365](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).

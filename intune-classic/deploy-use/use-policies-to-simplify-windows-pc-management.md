@@ -1,5 +1,5 @@
 ---
-title: "Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows | Microsoft Docs"
+title: "Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows"
 description: "W artykule opisano zasady zarządzania komputerami z systemem Windows i ustawienia dla programu Microsoft Intune Center."
 keywords: 
 author: nathbarn
@@ -15,15 +15,17 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a2b956f8c999ec5489152a63a9af6e24da8ec536
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: e14b5c56356812fdc3ea775cddde0f668b344177
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Do zarządzania komputerami z systemem Windows jako komputerami osobistymi, uruchamiając na nich oprogramowanie klienckie usługi Intune, możesz używać tylko zasad **Zarządzanie komputerem** w konsoli administracyjnej usługi Intune. Wszystkie inne zasady wymienione w konsoli administracyjnej są przeznaczone tylko dla urządzeń przenośnych. Za pomocą zasad **Zarządzanie komputerem** możesz konfigurować ustawienia w programie Microsoft Intune Center, kontrolować aktualizacje dla komputerów osobistych i konfigurować Zaporę systemu Windows dla komputerów osobistych.
 

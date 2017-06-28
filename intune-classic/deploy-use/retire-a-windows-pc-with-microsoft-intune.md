@@ -1,5 +1,5 @@
 ---
-title: Wycofywanie komputera z systemem Windows | Microsoft Docs
+title: Wycofanie komputera z systemem Windows
 description: "Jak wycofać komputer z systemem Windows zarządzany przez usługę Intune."
 keywords: 
 author: nathbarn
@@ -15,15 +15,18 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 30781be121782196b760f5aa163e922122480d33
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 09bba1ea199b51fdd1503cb1f0a3beeb97b6aa47
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="retire-a-windows-pc"></a>Wycofanie komputera z systemem Windows
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Wykonaj następujące kroki, aby wycofać komputery z systemem Windows, które są zarządzane jako komputery przy użyciu oprogramowania klienckiego usługi Intune. Wycofanie komputera spowoduje usunięcie go z zarządzania przy użyciu usługi Intune. Nie można zresetować komputera do ustawień fabrycznych przy użyciu usługi Intune, aby przywrócić jego ustawienia fabryczne.
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer, który chcesz wycofać).

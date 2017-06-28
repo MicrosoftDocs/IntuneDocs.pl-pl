@@ -1,5 +1,5 @@
 ---
-title: "Możliwości zarządzania zarejestrowanymi urządzeniami | Microsoft Docs"
+title: "Możliwości zarządzania zarejestrowanymi urządzeniami"
 description: "Przeczytaj ten temat, aby dowiedzieć się, jak usługa Intune może pomóc w zarządzaniu zarejestrowanymi urządzeniami."
 keywords: 
 author: robstackmsft
@@ -15,10 +15,10 @@ ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 364c7e1fe2bf17b0c804960c3ebaadb1cf4652a8
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 5fc5e6108e7e7841ed142f24f463d85273ae8a12
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -38,7 +38,7 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 
 |Możliwość|Szczegóły|Więcej informacji|
 |--------------|-----------|--------------------|
-|Zasady konfiguracji<br><br>Zasady niestandardowe| Umożliwiają zarządzanie wieloma ustawieniami i funkcjami urządzeń przenośnych w organizacji. Na przykład istnieje możliwość wymagania hasła, ograniczenia liczby nieudanych prób, ograniczenia czasu przed włączeniem blokady ekranu, ustawienia wygasania haseł i uniemożliwienia podania wcześniej używanych haseł. Można także kontrolować sposób korzystania z funkcji sprzętu i oprogramowania, na przykład aparatu urządzenia lub przeglądarki sieci Web.<br><br>Użyj zasad niestandardowych, gdy zasady konfiguracji nie zawierają wymaganego ustawienia. W przypadku urządzeń z systemem iOS można importować ustawienia wyeksportowane za pomocą narzędzia Apple Configurator. W przypadku innych urządzeń można użyć identyfikatora Uniform Resource Identifier Open Mobile Alliance /intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)<br />|
+|Zasady konfiguracji<br><br>Zasady niestandardowe| Umożliwiają zarządzanie wieloma ustawieniami i funkcjami urządzeń przenośnych w organizacji. Na przykład istnieje możliwość wymagania hasła, ograniczenia liczby nieudanych prób, ograniczenia czasu przed włączeniem blokady ekranu, ustawienia wygasania haseł i uniemożliwienia podania wcześniej używanych haseł. Można także kontrolować sposób korzystania z funkcji sprzętu i oprogramowania, na przykład aparatu urządzenia lub przeglądarki sieci Web.<br><br>Użyj zasad niestandardowych, gdy zasady konfiguracji nie zawierają wymaganego ustawienia. W przypadku urządzeń z systemem iOS można importować ustawienia wyeksportowane za pomocą narzędzia Apple Configurator. W przypadku innych urządzeń można użyć ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania ustawień i funkcji na urządzeniu.|[Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)|
 |Zdalne czyszczenie, zdalne blokowanie i resetowanie kodu dostępu|Służy do usuwania poufnych danych w przypadku utracenia lub kradzieży urządzenia. Na przykład można zdalnie zablokować urządzenie, przywrócić go do ustawień fabrycznych lub wyczyścić z niego dane firmowe.<br><br>Możesz resetować kody dostępu, jeśli użytkownicy utracą dostęp do swoich urządzeń, blokować utracone lub skradzione urządzenia, a nawet czyścić znajdujące się na nich dane.|[Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu](/intune-classic/deploy-use/retire-devices-from-microsoft-intune-management)|
 |Tryb kiosku|Umożliwia zablokowanie niektórych funkcji urządzeń przenośnych, takich jak przechwytywanie ekranu i przycisk zasilania. Umożliwia także ograniczenie urządzeń do uruchamiania tylko jednej, określonej aplikacji.|[Ustawienia zasad konfiguracji systemu iOS w usłudze Microsoft Intune](/intune-classic/deploy-use/ios-policy-settings-in-microsoft-intune)|
 
@@ -47,8 +47,8 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 |Możliwość|Szczegóły|Więcej informacji|
 |--------------|-----------|--------------------|
 |Wdrażanie aplikacji i zarządzanie nimi|Oferuje szeroką gamę narzędzi służących do zarządzania aplikacjami mobilnymi przez cały cykl ich życia, w tym wdrażania aplikacji z plików instalacyjnych i sklepów z aplikacjami, szczegółowego monitorowania stanu aplikacji i usuwania aplikacji.|[Wdrażanie aplikacji w usłudze Microsoft Intune](/intune-classic/deploy-use/deploy-apps)|
-|Zgodne i niezgodne aplikacje|Umożliwia określanie list zgodnych aplikacji /intune-classic/deploy-use/ios-policy-settings-in-microsoft-intune)|
-|Zarządzanie aplikacjami mobilnymi|Służy do konfigurowania ograniczeń aplikacji za pomocą zarządzania aplikacjami mobilnymi dla wszystkich urządzeń zarządzanych i niezarządzanych przez usługę Intune. Pomaga to w zwiększeniu bezpieczeństwa danych firmowych przez ograniczenie możliwości wykonywania operacji, takich jak kopiowanie i wklejanie, tworzenia zewnętrznych kopii zapasowych danych i transferu danych między aplikacjami.|[Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune](/intune-classic/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)|
+|Zgodne i niezgodne aplikacje|Umożliwia określanie list zgodnych aplikacji (które użytkownicy mogą instalować) i niezgodnych aplikacji (których użytkownicy nie mogą instalować).|[Ustawienia zasad systemu iOS w usłudze Microsoft Intune](/intune-classic/deploy-use/ios-policy-settings-in-microsoft-intune)|
+|Zarządzanie aplikacjami mobilnymi|Służy do konfigurowania ograniczeń aplikacji za pomocą zarządzania aplikacjami mobilnymi dla wszystkich urządzeń zarządzanych i niezarządzanych przez usługę Intune. Pomaga to w zwiększeniu bezpieczeństwa danych firmowych przez ograniczenie możliwości wykonywania operacji, takich jak kopiowanie i wklejanie, tworzenia zewnętrznych kopii zapasowych danych i transferu danych między aplikacjami.|[Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune](/intune/app-wrapper-prepare-android)|
 |Konfiguracja aplikacji mobilnych systemu iOS|Używa zasad konfiguracji aplikacji mobilnych umożliwiających określanie wartości ustawień aplikacji systemu iOS, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aplikacja może na przykład wymagać, aby użytkownik określił numer portu lub dane logowania. Może to usprawnić konfigurowanie aplikacji i ograniczyć liczbę zgłoszeń do pomocy technicznej.|[Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
 |Profile aprowizacji aplikacji mobilnych systemu iOS|Ułatwia wdrażanie profilów aprowizacji w aplikacjach systemu iOS, które niedługo wygasną. |[Użyj zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapobiec wygaśnięciu aplikacji](/intune-classic/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Managed Browser|Służy do konfigurowania zasad programu Managed Browser w celu kontrolowania witryn sieci Web, które użytkownicy mogą odwiedzać. Ponadto dla programu Managed Browser możesz również stosować zasady zarządzania aplikacjami mobilnymi.|[Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies)|
@@ -59,7 +59,7 @@ Wszystkie procesy, takie jak zarządzanie, tworzenie spisów oraz wdrażanie, in
 
 |Możliwość|Szczegóły|Więcej informacji|
 |--------------|-----------|--------------------|
-|Profile certyfikatów|Tworzy i wdraża profile zaufanych certyfikatów i prosty protokół rejestrowania certyfikatów /intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)|
+|Profile certyfikatów|Służą do tworzenia i wdrażania profilów zaufanych certyfikatów i certyfikatów SCEP (Simple Certificate Enrollment Protocol), które mogą być używane do zabezpieczania i uwierzytelniania profili sieci Wi-Fi i VPN oraz profili poczty e-mail.|[Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)|
 |Profile sieci Wi-Fi|Służą do wdrażania ustawień sieci bezprzewodowej dla użytkowników. Wdrażając te ustawienia, można zminimalizować działania użytkowników wymagane w celu połączenia z siecią firmową.|[Połączenia Wi-Fi w usłudze Microsoft Intune](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune)|
 |Profile poczty e-mail|Służą do tworzenia i wdrażania ustawień poczty e-mail na urządzeniach. Oznacza to, że użytkownicy mogą uzyskiwać dostęp do firmowej poczty e-mail na urządzeniach osobistych bez przeprowadzania żadnej konfiguracji.|[Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune)|
 |profile sieci VPN,|Umożliwiają wdrażanie ustawień sieci VPN dla użytkowników i urządzeń w Twojej organizacji. Przez wdrożenie tych ustawień można maksymalnie ułatwić użytkownikom nawiązywanie połączeń z zasobami w sieci firmowej.|[Połączenia VPN w usłudze Microsoft Intune](/intune-classic/deploy-use/vpn-connections-in-microsoft-intune)|
