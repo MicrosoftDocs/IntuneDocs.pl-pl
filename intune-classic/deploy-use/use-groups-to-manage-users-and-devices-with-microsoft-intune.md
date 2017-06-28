@@ -1,5 +1,5 @@
 ---
-title: "Używanie grup do zarządzania użytkownikami i urządzeniami | Microsoft Docs"
+title: "Używanie grup do zarządzania użytkownikami i urządzeniami"
 description: "Twórz grupy i zarządzaj nimi za pomocą obszaru roboczego Grupy."
 keywords: 
 author: Mtillman
@@ -15,10 +15,10 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 095b8db0cb5097edca98d138edccafbe8e55b9ba
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 13c8946dd75d6bdede0e2a8941030250c6b12ef6
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -108,7 +108,7 @@ Filtrowane widoki grup umożliwiają dostosowanie elementów, które będą wido
 -   Administratorzy IT mają mieć możliwość wdrażania elementów tylko dla konkretnych użytkowników i urządzeń
 -   Dla administratorów IT mają być wyświetlane tylko grupy z nimi związane
 
-Filtrowane widoki grup można skonfigurować dla administratorów usługi w konsoli administracyjnej usługi Intune. Aby uzyskać szczegółowe informacje, zobacz [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune).
+Filtrowane widoki grup można skonfigurować dla administratorów usługi w konsoli administracyjnej usługi Intune. Aby uzyskać szczegółowe informacje, zobacz [Co należy wiedzieć przed rozpoczęciem korzystania z usługi Microsoft Intune](/intune/supported-devices-browsers).
 
 Po skonfigurowaniu filtrowanych widoków grup dla administratorów usługi podczas wdrażania przez nich oprogramowania lub zasad bądź uruchamiania raportów mogą oni wyświetlać i wybierać tylko określone grupy. Dla administratorów nie są również widoczne informacje o stanie na tych stronach konsoli administracyjnej:
 

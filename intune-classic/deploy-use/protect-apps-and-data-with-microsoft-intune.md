@@ -1,5 +1,5 @@
 ---
-title: Ochrona aplikacji i danych | Microsoft Docs
+title: Ochrona aplikacji i danych
 description: "W tym temacie opisano różne funkcje usługi Intune i możliwości, które są dostępne, aby chronić aplikacje i dane firmy."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 09b7a1d4901a52845719e8d7094f665b12b91ab4
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -52,7 +52,7 @@ Aby skojarzyć aplikację z zasadami MAM, aplikacja musi uwzględniać zestaw SD
 
 Aplikacje takie jak należące do pakietu Microsoft Office mają wbudowany zestaw SDK w usłudze Intune. Pełna lista obsługiwanych aplikacji jest dostępna w [galerii aplikacji mobilnych usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) na stronie partnerów aplikacji usługi Microsoft Intune. Wybierz aplikację, aby wyświetlić obsługiwane scenariusze i platformy oraz aby sprawdzić, czy obsługuje ona wiele tożsamości.
 
-Możesz również [umożliwić własnym niestandardowym aplikacjom biznesowym](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) korzystanie z zasad MAM.
+Możesz również [umożliwić własnym niestandardowym aplikacjom biznesowym](/intune/apps-prepare-mobile-application-management) korzystanie z zasad MAM.
 
 Oprócz ograniczania przepływu danych, jeśli urządzanie zostanie utracone lub skradzione albo jeśli użytkownik nie jest już pracownikiem firmy, można [selektywnie wyczyścić dane firmowe](wipe-managed-company-app-data-with-microsoft-intune.md), pozostawiając tylko dane osobiste.
 

@@ -1,5 +1,5 @@
 ---
-title: "Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365 | Microsoft Docs"
+title: "Zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365"
 description: "Korzystanie z usługi Intune umożliwia zabezpieczanie danych organizacji przy użyciu zasad zarządzania aplikacjami mobilnymi, które pomagają zapobiegać przeciekom danych firmowych z aplikacji mobilnych usługi Office 365 lub innych aplikacji biznesowych."
 keywords: 
 author: jeffgilb
@@ -15,10 +15,10 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: db350fbefe5ed9b1aa796ee8430000d33ebd1b4e
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 3f35dcb7168e9c76a8286a1425a26306914cfdb3
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -35,13 +35,13 @@ Czy chcesz umożliwić użytkownikom końcowym dostęp do usługi Office 365 i d
 Jeśli tak, usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych usługi Office 365 na urządzeniach z systemami iOS i Android, w tym ograniczenia wycinania/kopiowania/wklejania, uniemożliwianie korzystania z funkcji „Zapisz jako”, ustawienie wymagania numeru PIN oraz możliwość zdalnego czyszczenia danych chronionych przez zasady zarządzania aplikacjami mobilnymi.  W ten sposób można zapewnić ochronę danych firmowych, nie wymagając rejestracji urządzeń użytkowników końcowych w rozwiązaniu MDM i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.    Uzyskaj podstawową wiedzę na temat działania [zarządzania aplikacjami mobilnymi usługi Intune /intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
-2.    Dowiedz się, [co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi (MAM)](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) w portalu Azure.
-3.    [Tworzenie i wdrażanie zasad MAM](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
+1.  Uzyskaj podstawową wiedzę na temat [sposobu działania zarządzania aplikacjami mobilnymi w usłudze Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
+2.  Dowiedz się, [co należy zrobić przed rozpoczęciem tworzenia zasad zarządzania aplikacjami mobilnymi (MAM)](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) w portalu Azure.
+3.  [Tworzenie i wdrażanie zasad MAM](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) przy użyciu usługi Intune.
 
 ### <a name="additional-information"></a>Informacje dodatkowe:
 - [Środowisko użytkownika końcowego](/intune-classic/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune) (korzystanie z aplikacji objętych zarządzaniem aplikacjami mobilnymi).
-- [Przygotowanie aplikacji biznesowych do zarządzania aplikacjami mobilnymi za pomocą usługi Intune](/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+- [Przygotowanie aplikacji biznesowych do zarządzania aplikacjami mobilnymi za pomocą usługi Intune](/intune/apps-prepare-mobile-application-management)
 - <a href="https://www.microsoft.com/cloud-platform/microsoft-intune-partners" target="_blank"> Lista partnerów aplikacji usługi Microsoft Intune &rarr;</a> (dostarczanie aplikacji z włączoną obsługą zarządzania aplikacjami mobilnymi).
 
 ## <a name="what-should-i-do-next"></a>Co teraz zrobić?

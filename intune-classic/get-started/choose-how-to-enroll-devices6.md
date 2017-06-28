@@ -1,5 +1,5 @@
 ---
-title: "Wybieranie metody rejestrowania urządzeń przenośnych | Microsoft Docs"
+title: "Wybieranie metody rejestrowania urządzeń przenośnych"
 description: "Odpowiedz na kilka pytań, aby zdecydować, w jaki sposób ma się odbywać rejestrowanie urządzeń przenośnych w usłudze Intune"
 keywords: 
 author: NathBarn
@@ -15,10 +15,10 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.custom: intune-classic EXPIERIMENT
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 364064f3507c00f87b367c0aa4ff7b0f31cea4b7
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 8fe7b2bb58655374d3e92391cd0a37aeda3062d4
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -31,10 +31,11 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
 ## <a name="how-will-you-manage-dedicated-corporate-owned-devices"></a>**Jak można zarządzać dedykowanymi urządzeniami należącymi do firmy?**
 
   > [!div class="button"]
-[Program DEP dla systemu iOS >]/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
+[Program DEP dla systemu iOS >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
 > [!div class="button"]
-[Asystent ustawień systemu iOS >]/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune) [!div class="button"]
-> [Oznaczanie numerami IMEI >]/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
+[Asystent ustawień systemu iOS >](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [!div class="button"]
+[Oznaczanie numerami IMEI >](/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
 
   Należące do firmy urządzenia z dedykowanymi użytkownikami można zarejestrować na następujące sposoby:
 

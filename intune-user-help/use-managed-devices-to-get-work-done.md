@@ -18,10 +18,10 @@ ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 748fce44b696675d4b7fe4b1d3048633fba1b490
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -38,7 +38,7 @@ Dział IT firmy ma dostęp do informacji mających związek z wykonywaną pracą
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także administrator IT może zainstalować aplikację Portal firmy dla Ciebie.
-- Przechodząc do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com) skonfigurowanej przez administratora IT.
+- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) skonfigurowanej przez administratora IT.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?
 Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną internetową Portal firmy, jednak większość zadań można wykonać w obu. Oto niektóre dostępne zadania:
@@ -100,5 +100,5 @@ Firma Microsoft zaleca, aby w pierwszej kolejności spróbować rozwiązać prob
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS](troubleshoot-your-device-ios.md)
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Windows](troubleshoot-your-device-windows.md)
 
-Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z administratorem IT. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z administratorem IT. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
 

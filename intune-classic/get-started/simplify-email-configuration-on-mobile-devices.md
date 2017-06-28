@@ -1,5 +1,5 @@
 ---
-title: "Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych | Microsoft Docs"
+title: "Upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych"
 description: 
 keywords: 
 author: jeffgilb
@@ -15,10 +15,10 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 78bce5b82cfbb65473ad0b8cadb0db349ed3df3c
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 2fe65f3021596390af8262f83704d6e4ceaa1716
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -37,8 +37,8 @@ Jeśli tak, usługa Microsoft Intune może automatycznie konfigurować pocztę e
 Po skonfigurowaniu profilu poczty e-mail można łatwo ograniczyć dostęp do firmowej poczty e-mail i usługi Office 365 za pomocą zasad dostępu warunkowego usługi Intune. Te zasady pozwalają zapewnić, że dostęp do firmowej poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń, które są zgodne z zasadami ustawionymi w usłudze Intune.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.    Automatyczne [konfigurowanie profilów poczty e-mail użytkowników końcowych](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na urządzeniach z systemami Windows, iOS i Android.
-2.    [Kontrola dostępu do firmowej poczty e-mail](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) za pomocą zasad dostępu warunkowego.
+1.  Automatyczne [konfigurowanie profilów poczty e-mail użytkowników końcowych](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) na urządzeniach z systemami Windows, iOS i Android.
+2.  [Kontrola dostępu do firmowej poczty e-mail](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) za pomocą zasad dostępu warunkowego.
 
 
 ### <a name="additional-information"></a>Informacje dodatkowe:

@@ -1,5 +1,5 @@
 ---
-title: "Włączanie rejestracji urządzeń | Microsoft Docs"
+title: "Włączanie rejestracji urządzeń"
 description: "Ustawianie urzędu zarządzania urządzeniami przenośnymi i włączanie rejestracji urządzeń z systemami iOS, Windows, Android i Mac."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 76d6000c87843d1a785cd1027eb927f565784ca2
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 64c6eb58246ac3ad232c1b8ee89d12a83e7e1784
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -38,7 +38,7 @@ Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi In
 
 2. Wybierz przycisk **Tak** w oknie dialogowym Urząd MDM.
 
-    ![Konsola administracyjna. Konfigurowanie usługi Intune jako urzędu MDM](./media/mdmAuthority.png)
+    ![Konsola administracyjna. Konfigurowanie usługi Intune jako urzędu MDM](../media/intune-mdm-authority.png)
 
 ## <a name="choose-how-to-enroll-devices"></a>Wybieranie sposobu rejestrowania urządzeń
 

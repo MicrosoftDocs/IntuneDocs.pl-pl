@@ -1,5 +1,5 @@
 ---
-title: "Wycofywanie urządzeń | Microsoft Docs"
+title: "Wycofywanie urządzeń"
 description: "Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 88a18975049158ca632d51796e8b4022c42dff94
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 493b5bfce7ab9b78f5f7c48d0d18524d1b191f1f
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -33,10 +33,10 @@ Urządzenia nie są nigdy usuwane z usługi Intune bez ingerencji użytkownika, 
 
 Wycofanie urządzenia może być konieczne z różnych powodów:
 
--    Użytkownik opuszcza firmę w sposób planowany („zarządzane” opuszczenie firmy)
--    Użytkownik opuszcza firmę w sposób nagły (zwolnienie, odejście itp.).
--    Utrata urządzenia
--    Zmiana zastosowania urządzenia (przeniesienie na innego użytkownika, ponowne użycie do innego celu itp.)
+-   Użytkownik opuszcza firmę w sposób planowany („zarządzane” opuszczenie firmy)
+-   Użytkownik opuszcza firmę w sposób nagły (zwolnienie, odejście itp.).
+-   Utrata urządzenia
+-   Zmiana zastosowania urządzenia (przeniesienie na innego użytkownika, ponowne użycie do innego celu itp.)
 
 Można przeprowadzić selektywne lub pełne czyszczenie urządzenia zarządzanego jako urządzenie przenośne lub zablokować urządzenie i zresetować jego hasło. Przez wyczyszczenie urządzenia zwalnia się subskrypcję użytkownika, co pozwala dodać inne urządzenie. Można również wycofać komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune.
 

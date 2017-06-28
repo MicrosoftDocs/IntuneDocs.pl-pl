@@ -1,5 +1,5 @@
 ---
-title: "Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Intune | Microsoft Docs"
+title: "Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Intune"
 description: "Dowiedz się, jak rozwiązywać konflikty między zasadami grupy i zasadami konfiguracji usługi Intune."
 keywords: 
 author: robstackmsft
@@ -15,15 +15,18 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 250ddb35aa33523141ae0f5af19b48b75ce0bef0
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 42debb9e26a226da6b2485a2ab1be2855d309747
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na komputerach z systemem Windows. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Wiele ustawień usługi Intune jest podobnych do ustawień konfigurowanych za pomocą zasad grupy systemu Windows. Jednak czasami te dwie metody mogą wchodzić ze sobą w konflikt.
 
 W przypadku wystąpienia konfliktu zasady grupy na poziomie domeny mają pierwszeństwo przed zasadami usługi Intune, chyba że komputer nie może zalogować się do domeny. W takim przypadku na komputerze klienckim są stosowane zasady usługi Intune.

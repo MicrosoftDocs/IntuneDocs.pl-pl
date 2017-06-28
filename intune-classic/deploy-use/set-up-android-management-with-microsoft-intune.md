@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie zarządzania systemem Android | Microsoft Docs"
+title: "Konfigurowanie zarządzania systemem Android"
 description: "Włącz zarządzanie urządzeniami przenośnymi (MDM) dla urządzeń z systemem Android i KNOX Standard w usłudze Microsoft Intune."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4042a22ecfbab7970ea4b3dab8ee6a82b0da5f78
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 927259d2f3b3078c9fdb0f1ba3bb22a69b555ab6
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -42,7 +42,7 @@ Domyślnie urządzenia z systemem Android mogą być rejestrowane w usłudze Int
     Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Android w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
     Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
-  - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
+  - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](/intune/end-user-educate)
   - [Wskazówki dla użytkowników końcowych korzystających z urządzeń z systemem Android](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 Z powodu braku dostępności sklepu Google Play w Chinach aplikację Portal firmy dla urządzeń z systemem Android należy uzyskać z chińskich platform handlowych oferujących aplikacje. Aplikacja Portal firmy dla systemu Android będzie dostępna do pobrania w następujących sklepach:

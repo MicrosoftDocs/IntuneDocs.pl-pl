@@ -18,10 +18,10 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1727e8b8fcb248a66842f34e7084c5d461f3eb10
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
 ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -67,5 +67,5 @@ Gdy urządzenie jest zarejestrowane, administrator IT może:
 
 -   Włączać lub wyłączać automatyczną synchronizację plików w trybie roamingu na urządzeniu. Włączenie automatycznej synchronizacji plików może wiązać się z naliczeniem opłat za roaming.
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
 
