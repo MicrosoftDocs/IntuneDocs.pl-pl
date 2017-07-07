@@ -1,12 +1,12 @@
 ---
-title: Program Exchange Connector dla lokalnego programu EAS
+title: "Konfigurowanie łącznika Exchange dla lokalnego programu EAS w usłudze Intune"
 titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: użycie narzędzia Connector w celu umożliwienia komunikacji między konsolą administracyjną usługi Intune a lokalnym serwerem programu Exchange na potrzeby funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync"
+description: "Wersja zapoznawcza usługi Intune Azure: Exchange ActiveSync MDM — użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,24 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 317b88e289fce216916dfa4ec3890ba7c9559c16
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9f4a310078a30f7dfefe66a9aba60cc74ad4e29b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Konfigurowanie lokalnego programu Exchange Connector w wersji zapoznawczej usługi Microsoft Intune Azure
 
-# <a name="install-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Instalowanie programu Intune On-premises Exchange Connector w wersji zapoznawczej usługi Microsoft Intune Azure
+Lokalne środowiska serwera Exchange mogą używać programu On-premises Exchange Connector w celu zarządzania dostępem urządzeń do skrzynek pocztowych Exchange w oparciu o to, czy urządzenia są zarejestrowane w usłudze Intune i spełniają zasady zgodności w usłudze Intune. Program On-premises Exchange Connector odpowiada także za odnajdywanie urządzeń mobilnych łączących się z lokalnymi serwerami programu Exchange poprzez synchronizowanie istniejącego rekordu programu Exchange Active Sync (EAS) z usługą Intune.
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+> [!IMPORTANT]
+> Usługa Intune obsługuje tylko jedno połączenie programu On-premises Exchange Connector dowolnego typu w ramach jednej subskrypcji.
 
+Aby skonfigurować połączenie, które umożliwi usłudze Microsoft Intune komunikowanie się z lokalnym serwerem Exchange, konieczne jest wykonanie następujących czynności:
 
-Aby skonfigurować połączenie, które umożliwia usłudze Microsoft Intune komunikację z serwerem Exchange hostującym skrzynki pocztowe używane na urządzeniach przenośnych, musisz pobrać i skonfigurować narzędzie On-Premises Exchange Connector za pomocą konsoli administracyjnej usługi Intune. W ramach jednej subskrypcji usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu.
+1.  Pobranie programu On-premises Exchange Connector dla usługi Intune z portalu usługi Intune.
+2.  Zainstalowanie i skonfigurowanie programu On-premises Exchange Connector dla usługi Intune.
+3.  Sprawdzenie działania połączenia z serwerem Exchange.
 
 ## <a name="on-premises-exchange-connector-requirements"></a>Wymagania dotyczące programu On-premises Exchange Connector
 Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma być instalowany program On-premises Exchange Connector.
@@ -39,8 +42,8 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 |Systemy operacyjne|Usługa Intune obsługuje program On-premises Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 SP2 (64-bitową), Windows Server 2008 R2, Windows Server 2012 i Windows Server 2012 R2.<br /><br />Program Connector nie jest obsługiwany w żadnej instalacji Server Core.|
 |Microsoft Exchange|Lokalne łączniki wymagają programu Microsoft Exchange 2010 z dodatkiem SP1 lub jego nowszej wersji albo starszej wersji środowiska usługi Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera **nową** czy **starszą** konfigurację, skontaktuj się z menedżerem ds. klientów.|
 |Urząd zarządzania urządzeniami przenośnymi| [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Sprzęt|Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.|
-|Synchronizacja z usługą Active Directory|Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu programu Connector, należy [skonfigurować synchronizację usługi Active Directory](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
+|Sprzęt|Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.|users-permissions-add.md
+|Synchronizacja z usługą Active Directory|Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu programu Connector, należy [skonfigurować synchronizację usługi Active Directory](users-permissions-add.md), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
 |Dodatkowe oprogramowanie|Na komputerze, który będzie hostem łącznika, musi być wdrożona pełna instalacja platformy Microsoft .NET Framework 4.5 i programu Windows PowerShell 2.0.|
 |Sieć|Komputer, na którym ma być instalowany łącznik, musi należeć do domeny, która ma relację zaufania z domeną hostującą program Exchange Server.<br /><br />Komputer wymaga zastosowania konfiguracji umożliwiającej mu dostęp do usługi Intune za pośrednictwem zapór i serwerów proxy przez porty 80 i 443. Domeny używane przez usługę Intune obejmują manage.microsoft.com, &#42;manage.microsoft.com i &#42;.manage.microsoft.com.|
 
@@ -65,17 +68,18 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Pobieranie pakietu instalacyjnego programu On-premises Exchange Connector
 
-1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego programu Exchange Connector otwórz [witrynę Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange i ma licencję na korzystanie z serwera programu Exchange.
+1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego programu On-premises Exchange Connector otwórz [witrynę Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika, który jest administratorem lokalnego serwera Exchange i ma licencję na korzystanie z programu Exchange Server.
 
-2.  Wybierz obciążenie **Dostęp warunkowy**.
-3.  Wybierz obciążenie **Dostęp warunkowy** w portalu Azure Portal, aby otworzyć blok **lokalny**.
+2. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-4. W sekcji **Instalacja** wybierz pozycję **Lokalny łącznik Exchange ActiveSync** i wybierz polecenie **Pobierz łącznik lokalny**.
+3. Wybierz pozycję **Intune**, a po otwarciu pulpitu nawigacyjnego usługi Intune wybierz opcję **Dostęp lokalny**.
 
-4.  Program On-Premises Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz polecenie **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
+4. W bloku **Dostęp lokalny — łącznik Exchange ActiveSync** w sekcji **Konfiguracja** wybierz polecenie **Pobierz łącznik lokalny**.
 
-> [!IMPORTANT]
-> Nie zmieniaj nazwy ani nie przenoś plików znajdujących się w folderze programu On-Premises Exchange Connector. Przeniesienie lub zmiana nazwy zawartości folderu spowoduje niepowodzenie instalacji.
+5.  Program On-Premises Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz polecenie **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
+
+    > [!IMPORTANT]
+    > Nie zmieniaj nazwy ani nie przenoś plików znajdujących się w folderze programu On-premises Exchange Connector. Przeniesienie lub zmiana nazwy zawartości folderu spowoduje niepowodzenie instalacji łącznika programu Exchange.
 
 ## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Instalowanie i konfigurowanie programu Intune On-premises Exchange Connector
 Wykonaj następujące kroki, aby zainstalować program Intune On-Premises Exchange Connector. Program On-Premises Exchange Connector można zainstalować tylko raz dla danej subskrypcji usługi Intune i tylko na jednym komputerze. Skonfigurowanie dodatkowego łącznika On-Premises Exchange Connector spowoduje zastąpienie oryginalnego połączenia nowym.
@@ -120,7 +124,8 @@ Wykonaj następujące kroki, aby zainstalować program Intune On-Premises Exchan
 
     8. Wybierz polecenie **Połącz**.
 
-Konfigurowanie połączenia może potrwać kilka minut.
+    > [!NOTE]
+    > Konfigurowanie połączenia może potrwać kilka minut.
 
 Podczas konfigurowania program Exchange Connector zapisuje ustawienia serwera proxy, aby umożliwić dostęp do Internetu. Jeśli ustawienia serwera proxy zostaną zmienione, będzie trzeba skonfigurować ponownie program Exchange Connector w celu zastosowania zaktualizowanych ustawień serwera proxy dla programu Exchange Connector.
 
@@ -131,10 +136,11 @@ Po skonfigurowaniu połączenia w programie Exchange Connector urządzenia przen
 
 ## <a name="validate-the-exchange-connection"></a>Weryfikacja połączenia z programem Exchange
 
-Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączenia oraz ostatniej pomyślnej próby synchronizacji. W witrynie [Azure Portal](http://portal.azure.com) wybierz obciążenie **Intune** > **Dostęp warunkowy**. W obszarze **Instalacja** wybierz lokalny łącznik **Exchange on-premises connector** i sprawdź, czy jest on wyświetlany jako aktywny.
+Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączenia oraz ostatniej pomyślnej próby synchronizacji. Aby dokonać weryfikacji łącznika programu Exchange:
+
+- Na pulpicie nawigacyjnym usługi Intune wybierz pozycję **Dostęp warunkowy**. W obszarze **Zarządzaj** wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**, aby sprawdzić stan połączenia.
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](conditional-access-exchange-create.md)
-

@@ -1,7 +1,7 @@
 ---
 title: "Ustawienia poczty e-mail dla urządzeń z systemem iOS w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń poczty e-mail na urządzeniach z systemem iOS."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń poczty e-mail na urządzeniach z systemem iOS."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 9f0fa6af-3669-439a-bd0d-75d8b1a0b135
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6f941247295761815804b2e91234ce664c90e06f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: dcac410ae5c20b5942bf37f5eaa9a46205a4cc07
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="email-profile-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 
@@ -43,4 +40,3 @@ ms.lasthandoff: 05/23/2017
 - **Zezwalaj na przenoszenie wiadomości na inne konta poczty e-mail** — umożliwia użytkownikom przenoszenie wiadomości e-mail między różnymi kontami skonfigurowanymi na ich urządzeniu.
 - **Zezwalaj na wysyłanie wiadomości e-mail przy użyciu aplikacji innych firm** — zezwalaj użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.
 - **Synchronizuj ostatnio używane adresy e-mail** — ta funkcja pozwala użytkownikom zsynchronizować listę adresów e-mail, które były ostatnio używane na urządzeniu, z serwerem.
-

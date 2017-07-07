@@ -1,7 +1,7 @@
 ---
-title: "Aplikacje dla systemu iOS z zasadami ochrony aplikacji | Wersja zapoznawcza usługi Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: w tym temacie opisano, czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji."
+title: Aplikacje dla systemu iOS z zasadami ochrony aplikacji
+titleSuffix: Intune on Azure
+description: "W tym temacie opisano, czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,17 +15,14 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5e172b940dfae32213c870b29f05f56573192704
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 912bc5230904f5798b2e0026dcf0dd1cecdb811c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]W tym temacie opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane służbowo, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji służbowej w usłudze OneDrive.
+[!INCLUDE[azure_portal](./includes/azure_portal.md)] W tym temacie opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane służbowo, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji służbowej w usłudze OneDrive.
 ##  <a name="accessing-apps"></a>Uzyskiwanie dostępu do aplikacji
 
 Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik końcowy będzie musiał uruchomić ponownie aplikację po jej pierwszym uruchomieniu.  Aby do aplikacji można było zastosować zasady ochrony aplikacji, należy ponownie uruchomić urządzenie. Poniższy zrzut ekranu przedstawia tę sytuację w aplikacji Skype:
@@ -67,4 +64,3 @@ Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego 
 [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
 ### <a name="see-also"></a>Zobacz także
 [Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune](app-protection-policies.md)
-

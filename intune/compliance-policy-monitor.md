@@ -1,7 +1,7 @@
 ---
 title: "Monitorowanie zasad zgodności urządzeń Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat monitorowania zasad zgodności urządzeń."
+titleSuffix: Intune on Azure
+description: "Informacje na temat monitorowania zasad zgodności urządzeń."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,13 +15,11 @@ ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9c57a45ed93b12c3b9fd9635bfa1aec465f63bbc
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6d0105e49bac2af0c241fe9203c411ef7f9e7d76
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -123,8 +121,6 @@ Po kliknięciu przycisku **Filtr** staną się dostępne następujące opcje:
 
 Po kliknięciu przycisku **Aktualizuj** powinny zostać zamknięte wyświetlane elementy, zaś wyniki powinny zostać zaktualizowane zgodnie z wybranymi kryteriami filtrowania.
 
-![Przycisk aktualizacji filtru](./media/idc-5.png)
-
 ##### <a name="device-details"></a>Szczegóły urządzenia
 
 Kliknięcie urządzenie powoduje otwarcie **bloku Urządzenia** z zaznaczonym urządzeniem. Dzięki temu jest dostępnych więcej szczegółów dotyczących ustawienia zasad zgodności urządzenia zastosowanego do danego urządzenia.
@@ -154,4 +150,3 @@ Ten raport umożliwia zapoznanie się z łączną liczbą urządzeń znajdujący
 Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność ustawień umożliwi przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
 
 ![Kafelek Zgodność ustawień](./media/idc-11.png)
-

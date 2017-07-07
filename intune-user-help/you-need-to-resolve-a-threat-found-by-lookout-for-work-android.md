@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: b7cd5e4d019030a432845557de4cd27ee652785a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work
 
 Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak:
@@ -49,4 +45,3 @@ W przypadku zainstalowania aplikacji, którą aplikacja Lookout for Work uzna za
 Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do firmowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do poczty e-mail i danych do czasu odinstalowania aplikacji.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: użycie niestandardowego profilu usługi Intune do utworzenia profilu sieci Wi-Fi przy użyciu klucza wstępnego."
+titleSuffix: Intune on Azure
+description: "Użycie niestandardowego profilu usługi Intune do utworzenia profilu sieci Wi-Fi przy użyciu klucza wstępnego."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,39 +15,36 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fe7d9e9998156825bfd9637c3f9d80df80b916cf
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: b56a6da04ae53a812a7d153de2618b72fa14ec44
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą niestandardowego profilu urządzenia usługi Microsoft Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Niestandardowe profile urządzenia** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
 
 > [!NOTE]
--    Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
+-   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
 - W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
--    Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
+-   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
 -  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
 
 
-1.    Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia profilu urządzenia wybierz opcję **Niestandardowe** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
+1.  Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia profilu urządzenia wybierz opcję **Niestandardowe** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
 
-2.    Podaj nazwę i opis.
-3.    Dodaj nowe ustawienie OMA-URI:
+2.  Podaj nazwę i opis.
+3.  Dodaj nowe ustawienie OMA-URI:
 
-   a.    Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
+   a.   Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
 
-   b.    Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
+   b.   Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
 
-   c.    **Typ danych**: ustaw wartość **Ciąg**.
+   c.   **Typ danych**: ustaw wartość **Ciąg**.
 
-   d.    **OMA-URI**:
+   d.   **OMA-URI**:
 
     - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -208,4 +205,3 @@ Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi:
     Najlepiej użyć komputera, który nie jest połączony z wieloma sieciami, ponieważ w przeciwnym razie trzeba będzie przeszukiwać poszczególne profile, aby znaleźć właściwy.
 3.     Wyszukaj plik z odpowiednią nazwą wśród plików XML.
 4.     Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
-

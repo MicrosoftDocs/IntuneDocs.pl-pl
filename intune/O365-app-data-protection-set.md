@@ -1,7 +1,7 @@
 ---
-title: "Ustawianie podstawowych opcji zarządzania danymi w aplikacjach usługi Office 365 — Wersja zapoznawcza usługi Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Usługa Intune Azure w wersji zapoznawczej: dokumentacja uzupełniająca kreatora Zarządzaj aplikacjami usługi Office 365."
+title: "Ustawianie podstawowych opcji zarządzania danymi w aplikacjach usługi Office 365 w usłudze Intune"
+titleSuffix: Intune on Azure
+description: "Dokumentacja uzupełniająca kreatora Zarządzaj aplikacjami usługi Office 365."
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -16,16 +16,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 639d045e036ecdc6ff40d6ae335d2c5109d9e420
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 302f646bfb9ff0ac024687fa0b3926d83158995c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365
 
 Kreator **Zarządzaj aplikacjami usługi Office 365** tworzy zasady ochrony aplikacji dla każdej platformy urządzeń.
@@ -129,9 +125,8 @@ W systemie Android w przypadku aplikacji, które zostały skojarzone z zasadami 
 Ustawienia zasady można w dowolnym momencie edytować w celu jej dostosowania do wymagań organizacji.
 
 ### <a name="how-can-i-view-and-edit-the-policies-created-by-the-wizard"></a>Jak wyświetlić i edytować zasady utworzone przez kreatora?
-Aby wyświetlić lub zaktualizować powyższe zasady lub dowolne inne zasady utworzone w wersji zapoznawczej usługi Intune Azure, z poziomu pulpitu nawigacyjnego wybierz kolejno pozycje **Zarządzaj aplikacjami** > **Zasady ochrony aplikacji**. Po prawej stronie zostanie otwarta lista zasad. Wybierz zasadę, którą chcesz wyświetlić, aby sprawdzić i edytować ustawienia. <br/>
+Aby wyświetlić lub zaktualizować powyższe zasady lub dowolne inne zasady utworzone w portalu Intune Azure, z poziomu pulpitu nawigacyjnego wybierz kolejno pozycje **Zarządzaj aplikacjami** > **Zasady ochrony aplikacji**. Po prawej stronie zostanie otwarta lista zasad. Wybierz zasadę, którą chcesz wyświetlić, aby sprawdzić i edytować ustawienia. <br/>
 ![Ilustracja przedstawiająca ścieżkę interfejsu użytkownika umożliwiającą wyświetlenie zasad](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Następne kroki
 Dowiedz się więcej o [zasadach ochrony aplikacji](https://docs.microsoft.comapp-protection-policy.md).
-

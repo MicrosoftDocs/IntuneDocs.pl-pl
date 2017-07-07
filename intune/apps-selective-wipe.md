@@ -1,7 +1,7 @@
 ---
 title: "Czyszczenie wyłącznie danych firmowych z aplikacji"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące selektywnego czyszczenia aplikacji w usłudze Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące selektywnego czyszczenia aplikacji w usłudze Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,17 +15,15 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: affe7323b8572aa17122011b293cb6a3a2fd7747
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bfebc391997ac4e63466eb3a09044318cf807dbc
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W przypadku utraty lub kradzieży urządzenia lub jeśli pracownik odchodzi z firmy dane aplikacji firmowych powinny zostać usunięte z urządzenia. Jednak możesz nie chcieć usuwać osobistych danych znajdujących się na urządzeniu, zwłaszcza jeśli jest to urządzenie należące do pracownika.
 
@@ -38,7 +36,7 @@ Aby selektywnie usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia
 
 1.  Zaloguj się do [portalu Azure](https://portal.azure.com).
 
-2.  Wybierz pozycję **Więcej usług**, wpisz **Intune** w polu tekstowym filtru i wybierz pozycję **Usługa Intune**. Zostanie otwarty blok wersji zapoznawczej usługi Intune. Wybierz blok **Zarządzaj aplikacjami**.
+2.  Wybierz pozycję **Więcej usług**, wpisz **Intune** w polu tekstowym filtru i wybierz pozycję **Usługa Intune**. Zostanie otwarty blok usługi Intune. Wybierz blok **Zarządzaj aplikacjami**.
 
     ![Zrzut ekranu przedstawiający blok Nowe żądanie czyszczenia](./media/intune-azure-preview-blade.png)
 

@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie zasad zgodności dla systemu Android"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące tworzenia zasad zgodności dla urządzeń z systemem Android."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące tworzenia zasad zgodności dla urządzeń z systemem Android."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,21 +15,18 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 08d503fad2304b25e6feb7f41cf0b93546dd26fd
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: cc68bf4a52e5fcf9a8fbb3550a5bee814f4f46f0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem Android w usłudze Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune-azure-preview-portal"></a>Tworzenie zasad zgodności dla urządzeń z systemem Android w wersji zapoznawczej portalu Intune Azure
 
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Zasady zgodności urządzeń są tworzone dla każdego formularza platformy wersji zapoznawczej portalu Intune Azure. 
+Zasady zgodności urządzeń są tworzone dla każdego formularza platformy portalu Intune Azure. 
 
 - Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](device-compliance.md) (Czym jest zgodność z urządzeniem).
 - Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
@@ -134,4 +131,3 @@ W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w prz
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

@@ -1,7 +1,7 @@
 ---
 title: "Ustawienia sieci VPN w usłudze Intune dla urządzeń z systemem Windows 10"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące ustawień usługi Intune służących do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 10."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące ustawień usługi Intune służących do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 10."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 495e4ed6-b2ef-47cc-a110-13fa9b5f85a6
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6dd98b176c76e19d6ff261a4dafbabfb9698f787
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6f112983a33c1af24d288f19140114084575f36d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W zależności od wybranych ustawień niektórych wartości z poniższej listy nie będzie można skonfigurować.
 
@@ -120,4 +117,3 @@ Dla każdego serwera określ następujące parametry:
     - **Adres** — wprowadź adres serwera proxy (jako adres IP).
     - **Numer portu** — wprowadź numer portu skojarzony z serwerem proxy.
 - **Pomijaj serwer proxy dla adresów lokalnych** — zaznacz tę opcję, aby serwer proxy nie był używany dla określonych adresów lokalnych w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
-

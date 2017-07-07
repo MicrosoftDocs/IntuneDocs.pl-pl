@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e40f228-cf04-4077-845f-300fbc3baee6
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 847b08efc2424da7ae9483db355f2804ac1e00c1
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Konieczne jest zidentyfikowanie urządzenia przy próbie jego zarejestrowania
 
 Jeśli podczas próby rejestracji urządzenia z systemem iOS lub macOS w usłudze Intune pojawia się ekran z monitem dotyczącym identyfikacji urządzenia, oznacza to, że co najmniej jedno z Twoich urządzeń zostało już zarejestrowane i przypisane do Twojego konta z użyciem metody innej niż aplikacja Portal firmy. Aby aplikacja Portal firmy działała prawidłowo, należy wskazać, czy używane urządzenie zostało już zarejestrowane w usłudze Intune.
@@ -36,4 +31,3 @@ Jeśli podczas próby rejestracji urządzenia z systemem iOS lub macOS w usłudz
 3. Wprowadź cztery ostatnie znaki numeru seryjnego urządzenia, aby potwierdzić, że urządzenie jest zarejestrowane w usłudze Intune. Aby dowiedzieć się, jak znaleźć numer seryjny, zobacz [Jak znaleźć numer seryjny w urządzeniu?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

@@ -1,12 +1,12 @@
 ---
 title: "Jak konfigurować ustawienia sieci VPN w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania ustawień sieci VPN na zarządzanych urządzeniach przy użyciu usługi Intune."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące konfigurowania ustawień sieci VPN na zarządzanych urządzeniach przy użyciu usługi Intune."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8a8742d0b579fec734dd8335e2a610d126db21fa
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e6a59c1f5fcb94d427b6d12eef19d4d49ff930ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Za pomocą opcji w obszarze **Profile sieci VPN** w usłudze Microsoft Intune możesz przypisywać ustawienia sieci VPN do użytkowników i urządzeń w organizacji tak, aby łączenie z siecią było łatwe i bezpieczne.
 
@@ -36,12 +33,11 @@ Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS 
 
 Możesz utworzyć profile sieci VPN, korzystając z następujących typów połączeń:
 
-||||||||
+|Typ połączenia|Android<br>Program Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
-|Typ połączenia|Android|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |Pulse Secure|Tak|Tak|Tak|Tak|Tak|Tak|
 |Cisco (IPSec)|Nie|Tak|Nie|Nie|Nie|Nie|
-|Citrix|Tak|Tak|Nie|Nie|Nie|Nie|
+|Citrix|Tak (tylko Android)|Tak|Nie|Nie|Nie|Nie|
 |F5 Edge Client|Tak|Tak|Tak|Tak|Tak|Tak|
 |Dell SonicWALL Mobile Connect|Tak|Tak|Tak|Tak|Tak|Tak|
 |Check Point Capsule VPN|Tak|Tak|Tak|Tak|Tak|Tak|
@@ -61,13 +57,14 @@ Zapoznaj się z artykułem [Create custom VPN profiles](custom-vpn-profiles-crea
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia sieci VPN
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
 2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
 3. W bloku profilów wybierz pozycję **Utwórz profil**.
 4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu sieci VPN.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia sieci VPN. Obecnie dla ustawień sieci VPN urządzenia można wybrać jedną z następujących platform:
     - **Android**
+    - **Android for Work**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -75,7 +72,7 @@ Zapoznaj się z artykułem [Create custom VPN profiles](custom-vpn-profiles-crea
     - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Sieć VPN**.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Ustawienia systemu Android](vpn-settings-android.md)
+    - [Ustawienia systemu Android i programu Android for Work](vpn-settings-android.md)
     - [Ustawienia systemu iOS](vpn-settings-ios.md)
     - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
     - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
@@ -100,4 +97,3 @@ Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certy
 ### <a name="user-name-and-password"></a>Nazwa użytkownika i hasło
 
 Użytkownik jest uwierzytelniany na serwerze sieci VPN przez podanie swojej nazwy użytkownika i hasła.
-

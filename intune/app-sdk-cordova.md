@@ -14,13 +14,11 @@ ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 0329720b6f02c718ef27a59e6efc5f3a76eed1c5
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -159,4 +157,3 @@ Przy pierwszym uruchomieniu aplikacji powinno pojawić się okno dialogowe z inf
 * Każdorazowo podczas modyfikacji listy identyfikatorów UTI w węźle **CFBundleDocumentTypes** pliku **Info.plist** przed ponowną kompilacją należy usunąć identyfikatory UTI usługi Intune w sekcji zaimportowanych identyfikatorów UTI w tym samym pliku plist (w węźle **UTImportedTypeDeclarations**). Wszystkie identyfikatory UTI usługi Intune rozpoczynają się prefiksem `com.microsoft.intune.mam`.
 
 * Jeśli chcesz usunąć zestaw SDK aplikacji usługi Intune dla wtyczki Cordova, musisz również usunąć platformę iOS i dodać ją ponownie w celu wycofania niektórych elementów konfiguracji usługi Intune w plikach xcodeproj i plist.
-

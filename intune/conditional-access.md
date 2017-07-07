@@ -1,12 +1,12 @@
 ---
-title: "Co to jest dostęp warunkowy?"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: poznaj sposoby definiowania warunków, które muszą spełniać użytkownicy i urządzenia, aby uzyskać dostęp do zasobów firmy w wersji zapoznawczej programu Microsoft Intune Azure."
+title: "Dostęp warunkowy przy użyciu usługi Intune"
+titleSuffix: Intune on Azure
+description: "Poznaj sposoby definiowania warunków, które muszą spełniać użytkownicy i urządzenia, aby uzyskać dostęp do zasobów firmy w usłudze Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 05/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,44 +14,51 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8ab6d782460a857a0901abd9bd567365ee2e3f70
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d3e6b720eeed65c81e5f3a4dbf06890ea8fd09ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="whats-conditional-access"></a>Co to jest dostęp warunkowy?
 
-# <a name="what-is-conditional-access"></a>Co to jest dostęp warunkowy?
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+W tym temacie opisano funkcję dostępu warunkowego stosowaną w pakiecie Enterprise Mobility + Security (EMS), a w dalszej kolejności wspólne scenariusze w zakresie dostępu warunkowego w usłudze Intune.
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+Dostęp warunkowy w pakiecie Enterprise Mobility + Security (EMS) nie jest produktem autonomicznym. Jest rozwiązaniem, które obejmuje wszystkie usługi i produkty będące częścią pakietu EMS. Zapewnia pełną kontrolę dostępu, co pozwala zabezpieczyć dane firmowe, udostępniając użytkownikom środowisko, które umożliwia wykonywanie pracy w najbardziej wydajny sposób na dowolnym urządzeniu i w dowolnym miejscu.
 
+Można określić warunki, które blokują dostęp do danych firmowych na podstawie lokalizacji, urządzeń, stanu użytkownika i ważności aplikacji.
 
-W tym temacie opisano funkcję dostępu warunkowego stosowaną w dodatku Enterprise Mobility + Security, a w dalszej kolejności możliwości dostępu warunkowego w usłudze Intune.
+> [!NOTE] 
+> Z możliwości dostępu warunkowego można również korzystać w [usługach Office 365](https://blogs.technet.microsoft.com/wbaer/2017/02/17/conditional-access-policies-with-sharepoint-online-and-onedrive-for-business/).
 
-Dostęp warunkowy dodatku Enterprise Mobility + Security (EMS) używa możliwości usług Azure Active Directory Premium i Microsoft Intune, aby zapewnić kontrolę wymaganą w celu zabezpieczenia danych firmowych przy jednoczesnym zapewnieniu pracownikom środowiska umożliwiającego pracę z dowolnego urządzenia.
+![Diagram architektury dostępu warunkowego](./media/ca-diagram-1.png)
 
-Przy użyciu dostępu warunkowego można określić warunki, które ograniczają dostęp do danych firmowych na podstawie lokalizacji, stanu urządzeń, stanu użytkownika i ważności aplikacji.
+## <a name="conditional-access-with-intune"></a>Dostęp warunkowy przy użyciu usługi Intune
 
-Z perspektywy urządzenia usługi Intune i Azure Active Directory działają razem w celu zapewnienia, że tylko zarządzane i zgodne urządzenia mają możliwość uzyskania dostępu do poczty e-mail i usług Office 365. Można na przykład w usłudze Azure Active Directory ustawić zasady zezwalające na dostęp do usług Office 365 tylko komputerom dołączonym do domeny lub urządzeniom przenośnym zarejestrowanym w aplikacji do zarządzania urządzeniami przenośnymi, takiej jak usługa Intune. Do ustawienia profilu zgodności urządzenia, który ocenia stan jego zgodności, można skorzystać z usługi Intune. Stan zgodności jest zgłaszany do usługi Azure Active Directory w celu zastosowania do wymuszania zasad w usłudze Azure Active Directory, gdy użytkownik próbuje uzyskać dostęp do zasobów firmy. Aby uzyskać informacje dotyczące zgodności urządzeń w usłudze Intune, zobacz artykuł [Co to jest zgodność urządzeń?](device-compliance.md).
+Usługa Intune oferuje możliwości zgodności z urządzeniami mobilnymi oraz zarządzania aplikacjami mobilnymi pozwalające obsługiwać rozwiązanie dostępu warunkowego w pakiecie EMS.
 
-Funkcję dostępu warunkowego dla aplikacji w chmurze, takich jak Exchange Online, można skonfigurować za pomocą usługi Azure Active Directory. Więcej informacji znajduje się w tym [artykule](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+![Usługa Intune i dostęp warunkowy podczas korzystania z pakietu EMS](./media/intune-with-ca-1.png)
 
-## <a name="on-premises-conditional-access-in-intune"></a>Lokalny dostęp warunkowy w usłudze Intune
+Sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune:
 
-Funkcji dostępu warunkowego w usłudze Intune można użyć do zezwalania lub blokowania dostępu do **lokalnej instalacji programu Exchange** na podstawie zarządzania urządzeniami i ich rejestracji.
+-   **Dostęp warunkowy oparty na urządzeniach**
 
-Ustawienia profilu zgodności urządzenia są używane do oceny jego zgodności. Funkcja dostępu warunkowego używa oceny do zezwalania na dostęp do lokalnego programu Exchange lub jego blokowania. Jeśli funkcja dostępu warunkowego jest stosowana w połączeniu z profilem zgodności urządzenia, tylko zgodne urządzenia będą miały dostęp do lokalnego programu Exchange. Dla celów bardziej szczegółowej kontroli można skonfigurować ustawienia zaawansowane funkcji dostępu warunkowego, takie jak umożliwianie lub blokowanie niektórych platform lub natychmiastowe blokowanie urządzeń, które nie są zarządzane przez usługę Intune.
+    -   Dostęp warunkowy do lokalnego programu Exchange
 
-Profil zgodności urządzenia i dostęp warunkowy są przypisane do użytkownika. Wszystkie urządzenia, których użytkownik używa do uzyskiwania dostępu do lokalnego programu, są sprawdzane pod kątem zgodności. Należy pamiętać, że użytkownik używający urządzenia musi mieć przypisany do niego profil, aby urządzenie mogło zostać ocenione pod kątem zgodności. Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
+    -   Dostęp warunkowy w oparciu o kontrolę dostępu do sieci
 
-Jeśli urządzenia nie spełniają warunków, użytkownik jest przeprowadzany przez procedurę rejestracji urządzenia i rozwiązywania problemu powodującego jego niezgodność.
+    -   Dostęp warunkowy w oparciu o ryzyko dotyczące urządzenia
+
+    -   Dostęp warunkowy dla komputerów z systemem Windows
+
+        -   Urządzenia należące do firmy
+
+        -   „Przynieś własne urządzenie” (BYOD)
+
+-   **Dostęp warunkowy na podstawie aplikacji**
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange](conditional-access-exchange-create.md)
-
-[Konfigurowanie dostępu warunkowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-
+[Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md)
