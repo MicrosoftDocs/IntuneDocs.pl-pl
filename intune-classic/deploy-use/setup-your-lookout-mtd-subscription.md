@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie subskrypcji przy użyciu usługi Lookout | Dokumentacja firmy Microsoft"
+title: "Konfigurowanie subskrypcji przy użyciu aplikacji Lookout"
 description: "Ten temat zawiera szczegółowe informacje dotyczące sposobu konfigurowania ochrony urządzeń przed zagrożeniami w usłudze Lookout."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3c777d8857fd177e5a27840ab8a97c8a137aa189
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5acbf2aacc747113ff8b3889dba306e30567f24a
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="set-up-your-lookout-mobile-threat-defense-subscription"></a>Konfigurowanie subskrypcji usługi Lookout Mobile Threat Defense
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -76,7 +73,7 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 
   ![Zrzut ekranu strony pierwszego logowania do konsoli aplikacji Lookout](../media/mtp/lookout_mtp_initial_login.png) Po zaakceptowaniu i wyrażeniu zgody nastąpi przekierowanie do konsoli usługi Lookout.
 
-  Aby uzyskać pomoc dotyczącą problemów z logowaniem, zobacz [Rozwiązywanie problemów dotyczących integracji aplikacji Lookout z usługą Intune](/intune-classic/troubleshoot/troubleshooting-lookout-integration).
+  Aby uzyskać pomoc dotyczącą problemów z logowaniem, zobacz [Rozwiązywanie problemów dotyczących integracji aplikacji Lookout z usługą Intune](/intune-classic/Troubleshoot/device-threat-protection-troubleshooting.md).
 
 3.  W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Intune**.
 
@@ -139,4 +136,3 @@ Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla ur
 Po zakończeniu konfiguracji usługa Lookout Mobile Threat Defense rozpoczyna sondowanie usługi Azure AD pod kątem urządzeń, które odpowiadają określonym grupom rejestracji.  Informacje o zarejestrowanych urządzeniach znajdują się w module Devices (Urządzenia).  Początkowy stan urządzeń jest wyświetlany jako oczekujący.  Stan urządzenia ulega zmianie po zainstalowaniu, otwarciu i aktywowaniu aplikacji Lookout for Work na danym urządzeniu.  Aby uzyskać szczegółowe informacje na temat sposobu wypychania aplikacji Lookout for Work do urządzenia, zobacz temat [Configure and deploy Lookout for work apps](configure-deploy-lookout-for-work-app.md) (Konfigurowanie i wdrażanie aplikacji Lookout for Work).
 ## <a name="next-steps"></a>Następne kroki
 [Włączanie połączenia Lookout MTP dla usługi Intune](/intune-classic/deploy-use/enable-lookout-mtd-connection)
-

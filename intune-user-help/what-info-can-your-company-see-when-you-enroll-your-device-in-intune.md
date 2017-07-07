@@ -11,20 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 12655728-a1af-4d89-97bc-925fe36c0dc4
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 88f1d4b3e54a27be86a542e1265ea9606498ab4f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie w usłudze Intune?
 
 Rejestrując urządzenie w systemie zarządzania, zezwalasz działowi IT Twojej firmy na dostęp do niektórych rodzajów informacji znajdujących się na Twoim urządzeniu w celu umożliwienia ochrony znajdujących się na nim danych firmowych.
@@ -32,11 +28,11 @@ Rejestrując urządzenie w systemie zarządzania, zezwalasz działowi IT Twojej 
 **Czego nie widzi dział IT**
 
 - Historia połączeń i przeglądania sieci Web
--    Lokalizacja
+-   Lokalizacja
 - Osobisty adres e-mail
 - Wiadomości SMS
 - Kontakty
--    Hasła do kont osobistych
+-   Hasła do kont osobistych
 - Zdarzenia kalendarza
 - Obrazy, w tym dane z aparatu i aplikacji Zdjęcia
 
@@ -50,4 +46,3 @@ Rejestrując urządzenie w systemie zarządzania, zezwalasz działowi IT Twojej 
 -   Nazwa urządzenia
 -   Producent (dla urządzeń, które nie zostały wyprodukowane przez firmę Apple)
 -   Numer telefonu (dla urządzeń służbowych: cały numer; dla urządzeń osobistych: cztery ostatnie cyfry)
-

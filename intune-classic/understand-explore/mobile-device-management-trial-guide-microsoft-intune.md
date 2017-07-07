@@ -1,5 +1,5 @@
 ---
-title: "Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune | Microsoft Docs"
+title: "Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune"
 description: "Ocena oprogramowania MDM w bezpłatnej wersji próbnej usługi Intune."
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e0eb48c5bb2e0158d7b780af1c16139f10602c4e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: adef9335d8f199e8dec56e92eb1fda8c180ac6ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -44,7 +41,7 @@ W wersji próbnej można wykonać wszystkie czynności, które można wykonać z
 ## <a name="whats-not-covered"></a>Czego nie zawiera przewodnik
 |Jeśli interesują Cię |Przeczytaj to |
 |------------------------|----------|
-|Program MDM w środowisku nietestowym | [Wprowadzenie](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|Program MDM w środowisku nietestowym | [Wprowadzenie](/intune/setup-steps) |
 |Program MDM z usługą Intune i programem System Center Configuration Manager | [Hybrydowe zarządzanie urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Ponieważ powyższe przewodniki ułatwiają konfigurowanie usługi Intune w środowiskach produkcyjnych, w porównaniu z przewodnikiem oceny są one dłuższe i zawierają o wiele więcej punktów decyzyjnych wymagających rozważenia.
@@ -67,7 +64,7 @@ Klienci, którzy chcą korzystać z usługi Intune z programem System Center Con
 W wersji próbnej firma Microsoft ustawi w roli urzędu zarządzania urządzeniami przenośnymi usługę Intune; nie dotyczy to środowiska produkcyjnego, chyba że zdecydujesz o użyciu wersji próbnej w środowisku produkcyjnym.
 
 1. W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**.
-2. Na liście **Zadania** wybierz pozycję **Ustaw urząd MDM**. Zostanie otwarte okno dialogowe **Ustawianie urzędu zarządzania urządzeniami przenośnymi** . <!---screen shot--->
+2. Na liście **Zadania** wybierz pozycję **Ustaw urząd MDM**. Zostanie otwarte okno dialogowe **Ustawianie urzędu zarządzania urządzeniami przenośnymi** .
 3. Usługa Intune zażąda potwierdzenia zamiaru ustawienia usługi Intune jako urzędu zarządzania urządzeniami przenośnymi. Zaznacz pole wyboru, a następnie wybierz przycisk **Tak**, aby zarządzać urządzeniami przenośnymi przy użyciu usługi Intune.
 
 ## <a name="enroll-your-test-devices-into-intune"></a>Rejestrowanie urządzeń testowych w usłudze Intune
@@ -80,14 +77,14 @@ Zainstaluj aplikację **Portal firmy usługi Intune** firmy Microsoft Corporatio
 Aby użytkownicy mogli rejestrować urządzenia z systemem iOS, należy skonfigurować usługę Intune do zarządzania tymi urządzeniami.
 
 1. **Pobierz żądanie podpisania certyfikatu**<br/>
-Zaloguj się do usługi Intune za pomocą konta administracyjnego i przejdź do opcji **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Przekaż certyfikat usługi APNs**, a następnie wybierz opcję **Pobierz żądanie certyfikatu APNs**. Zapisz lokalnie plik żądania podpisania certyfikatu (CSR). Plik CSR jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates. <!--- screen shot--->
-2.    **Pobierz certyfikat usługi Apple Push Notification**<BR/>
+Zaloguj się do usługi Intune za pomocą konta administracyjnego i przejdź do opcji **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Przekaż certyfikat usługi APNs**, a następnie wybierz opcję **Pobierz żądanie certyfikatu APNs**. Zapisz lokalnie plik żądania podpisania certyfikatu (CSR). Plik CSR jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates.
+2.  **Pobierz certyfikat usługi Apple Push Notification**<BR/>
 Przejdź do obszaru [Portal Apple Push Certificates](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) i zaloguj się przy użyciu firmowego identyfikatora Apple ID, aby utworzyć certyfikat usługi APNs za pomocą pliku CSR. Po kliknięciu przycisku **Upload (Przekaż) w portalu wypychania certyfikatu firmy Apple** otrzymasz plik JSON, którego nie można użyć dla usługi APNs. Ukończ pobieranie, wróć do portalu wypychania certyfikatu firmy Apple, przejdź do obszaru Certificates for Third-Party Servers (Certyfikaty dla serwerów innych firm) i wybierz polecenie **Download** (Pobierz).<br/>
 Pobierz certyfikat usługi APNs (PEM) i zapisz plik lokalnie. Ten identyfikator Apple ID musi zostać użyty później w celu odnowienia certyfikatu usługi APNs.
-3.    **Dodaj certyfikat usługi APNs do usługi Intune**<BR/>
+3.  **Dodaj certyfikat usługi APNs do usługi Intune**<BR/>
 W konsoli administracyjnej usługi Microsoft Intune przejdź do obszaru **Administracja** > **Zarządzanie urządzeniami przenośnymi** > **iOS i Mac OS X** > **Prześlij certyfikat usługi APNs**, a następnie wybierz polecenie **Prześlij certyfikat usługi APNs**. Przejdź do pliku certyfikatu (PEM) i wybierz pozycję **Otwórz**, a następnie wprowadź identyfikator Apple ID. Z certyfikatem APNs. Usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych.
-4.    **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**<br/>
-Aby uzyskać instrukcje dla użytkowników końcowych dotyczące rejestrowania, zobacz tematy [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) i [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-mac-os-x). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
+4.  **Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy.**<br/>
+Aby uzyskać instrukcje dla użytkowników końcowych dotyczące rejestrowania, zobacz tematy [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) i [Rejestrowanie urządzenia z systemem Mac OS X w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos). W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Dowiedz się więcej o rejestracji urządzeń
@@ -98,25 +95,14 @@ Usługa Intune obsługuje następujące platformy urządzeń:
 
 Wymagania umożliwiające zarządzanie urządzeniami zależą od platformy, którą chcesz zarządzać.
 - Urządzenia przenośne z systemem **Android** umożliwiają użytkownikom [rejestrację przy użyciu aplikacji portalu firmy](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) dostępnej w sklepie Google Play. Nie jest wymagana dodatkowa konfiguracja w usłudze Intune.
-- [Wymagania konfiguracji dla systemów **iOS i Mac OS X**]/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
-- [Wymagania konfiguracji dla systemu **Windows Phone**]/intune-classic/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+- [Wymagania konfiguracji dla systemów **iOS i Mac OS X**](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 
-<!--- ## Verify enrollment--->
-<!--- START HERE
-
-### iOS and Mac OS X
-Install the **Microsoft Intune Company Portal** app from Microsoft Corporation available in the App Store and sign in with Intune user credentials added above. View **Enrolled devices** to add your device.
+- [Wymagania konfiguracji dla **systemu Windows Phone**](/intune-classic/deploy-use/set-up-windows-phone-8.0-management-with-microsoft-intune).
 
 
 
-### Windows Phone 8.1
-Users install the **Company Portal** app from Microsoft Corporation, available in the Windows Phone store, and sign in with the Intune user credentials added above.  View **Enrolled devices** to add your device.
-
-## Install the previously deployed app
-Open the Company Portal on the mobile device, choose **Apps**, and then install **Microsoft Skype**.--->
 
 
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie grup w celu zorganizowania użytkowników i urządzeń](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-

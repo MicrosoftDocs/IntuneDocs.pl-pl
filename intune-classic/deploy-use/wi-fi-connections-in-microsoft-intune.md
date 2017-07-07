@@ -1,5 +1,5 @@
 ---
-title: "Połączenia Wi-Fi | Microsoft Docs"
+title: "Połączenia Wi-Fi"
 description: "Aby ułatwić użytkownikom nawiązywanie połączeń z sieciami Wi-Fi, użyj profilów sieci Wi-Fi."
 keywords: 
 author: lleonard-msft
@@ -14,15 +14,12 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 65fe17c42921d2c53153dca386ea40b9dea47d04
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9b99762dfc8e527fc845755365a09fab8a0d3a0c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurowanie urządzeń do łączenia się z firmową siecią Wi-Fi
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,7 +43,7 @@ Profile sieci Wi-Fi można wdrażać na poniższych platformach:
 
 -   Android 4.0 i nowsze
 
--    Program Android for Work   
+-   Program Android for Work   
 
 -   System iOS 8.0 i nowsze
 
@@ -181,4 +178,3 @@ Te tabele zawierają szczegółowe informacje dotyczące ustawień zabezpieczeń
 
 ### <a name="see-also"></a>Zobacz także
 Dowiedz się, jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego — zobacz temat [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego](pre-shared-key-wi-fi-profile.md).
-

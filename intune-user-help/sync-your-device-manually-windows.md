@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 05b290345c761372850fb501a3707dbd53a3ef07
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
 
 Czasami próba zainstalowania aplikacji na urządzeniu z systemem Windows może trwać dłużej niż się wydaje. W takim przypadku można spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Synchronizacja może przyspieszyć instalację.
@@ -134,4 +130,3 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu pr
    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

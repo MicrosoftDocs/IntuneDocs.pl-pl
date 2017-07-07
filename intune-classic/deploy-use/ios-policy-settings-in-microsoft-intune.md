@@ -1,5 +1,5 @@
 ---
-title: Ustawienia zasad systemu iOS | Microsoft Docs
+title: Ustawienia zasad systemu iOS
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3a59391aaf241e52f59bb3ff5de3eae84c496c51
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ba270c2bb8780db6bc230022446f982b81f8a2ee
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu iOS w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -88,7 +85,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj zarządzanym aplikacjom na synchronizowanie danych z usługą iCloud**|Zezwalaj aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.|
 |**Zezwalaj programowi Handoff na kontynuowanie działań na innym urządzeniu**|Zezwalaj użytkownikowi na kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub Mac OS X.|
 |**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Ustaw opcję **Nie**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.|
-|**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.    W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
+|**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.   W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
 
 ### <a name="application-settings-for-the-browser"></a>Ustawienia aplikacji dotyczące przeglądarki
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
@@ -387,4 +384,3 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

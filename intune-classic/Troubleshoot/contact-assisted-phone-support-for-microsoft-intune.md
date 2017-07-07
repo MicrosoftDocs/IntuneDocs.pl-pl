@@ -1,5 +1,5 @@
 ---
-title: "Kontakt z telefoniczną asystowaną pomocą techniczną | Microsoft Docs"
+title: "Kontakt z telefoniczną asystowaną pomocą techniczną "
 description: "Numery telefonu działu pomocy Microsoft Intune."
 keywords: godziny pracy
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e514aaf67881a754eb2e75b2920445536978a68c
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 99d837e589ed981f2d14f5f89312a195f45d26e2
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -120,4 +117,3 @@ ms.lasthandoff: 05/23/2017
 |Urugwaj|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 UYST (UTC -2)|hiszpański&#42;, angielski|000-411-002-7131||
 |Wenezuela|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 VET (UTC -4:30)|hiszpański&#42;, angielski|0-800-100-8763||
 &#42; Obsługiwane w połączeniu z usługą tłumaczenia przez telefon.
-

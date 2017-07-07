@@ -1,5 +1,5 @@
 ---
-title: "Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune | Microsoft Docs"
+title: "Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune"
 description: "Zarejestruj się i zainstaluj bezpłatną, 30-dniową wersję próbną usługi Microsoft Intune."
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 560765fa9d9afa4a1050515e1b2304c998f8c158
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ffa07d5e36abc8686cedd600123494180c286011
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Rejestrowanie w celu skorzystania z bezpłatnej wersji próbnej usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/23/2017
 W tym artykule opisano proces rejestracji w wersji próbnej usługi Intune i przygotowania wersji próbnej do użycia przez niektórych użytkowników tak, aby można było później za pomocą skojarzonego przewodnika oceny dowiedzieć się, w jaki sposób usługa Intune zarządza urządzeniami przenośnymi. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Począwszy od grudnia 2016 usługa Microsoft Intune jest przenoszona do witryny Azure Portal. W związku z tym niektóre rejestracje bezpłatnych wersji próbnych będą miały miejsce w usłudze Intune w witrynie Azure Portal, a niektóre w klasycznym portalu usługi Intune. Jeśli Twoja wersja próbna znajduje się w witrynie Azure Portal, [zawartość dotycząca wersji zapoznawczej usługi Intune Azure](/intune/what-is--intune) może być bardziej przydatna po wykonaniu czynności opisanych w tym artykule.
+> Począwszy od grudnia 2016 usługa Microsoft Intune jest przenoszona do witryny Azure Portal. W związku z tym niektóre rejestracje bezpłatnych wersji próbnych będą miały miejsce w usłudze Intune w witrynie Azure Portal, a niektóre w klasycznym portalu usługi Intune. Jeśli Twoja wersja próbna znajduje się w witrynie Azure Portal, [zawartość dotycząca wersji zapoznawczej usługi Intune Azure](/intune/what-is-intune) może być bardziej przydatna po wykonaniu czynności opisanych w tym artykule.
 
 ## <a name="assumptions"></a>Założenia
 W artykule dotyczącym rejestracji i przewodniku oceny założono, że korzystasz z wersji próbnej wyłącznie do celów oceny i po dokonaniu subskrypcji planujesz rozpocząć od czystego środowiska.
@@ -41,7 +38,7 @@ W wersji próbnej można wykonać wszystkie czynności, które można wykonać z
 ## <a name="sign-up-for-your-trial"></a>Zapisywanie się do wersji próbnej
 Odwiedź stronę [Rejestracja w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) i wypełnij formularz rejestracji, aby zamówić subskrypcję wersji próbnej.
 
-Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1). Jednak w tym artykule i przewodnikach oceny założono, że nie używasz takiego konta.
+Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](/intune/account-sign-up). Jednak w tym artykule i przewodnikach oceny założono, że nie używasz takiego konta.
 
 > [!TIP]
 > Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych niż Twoje, warto ustawić ustawienia regionalne dla wersji próbnej w celu sprawdzenia wydajności.
@@ -56,7 +53,7 @@ Jeśli Twoja wersja próbna znajduje się w witrynie **Azure Portal**, przejdź 
 ## <a name="add-users"></a>Dodawanie użytkowników
 Przed opuszczeniem Centrum administracyjnego usługi Office 365 i powrotem do usługi Intune należy dodać niektórych użytkowników do konta wersji próbnej.
 
-W Centrum administracyjnym usługi Office 365 można dodać użytkowników indywidualnie lub grupowo, przekazując plik w formacie CSV. Firma Microsoft korzysta z obu metod w procesie konfigurowania wersji próbnej. Jednak w środowisku produkcyjnym prawdopodobnie chcesz korzystać z kont użytkowników usługi Azure Active Directory. Więcej informacji o nich można znaleźć w dokumencie [Wprowadzenie — przewodnik](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) i sekcji [Następne kroki](#Next-steps) w dalszej części tego artykułu.
+W Centrum administracyjnym usługi Office 365 można dodać użytkowników indywidualnie lub grupowo, przekazując plik w formacie CSV. Firma Microsoft korzysta z obu metod w procesie konfigurowania wersji próbnej. Jednak w środowisku produkcyjnym prawdopodobnie chcesz korzystać z kont użytkowników usługi Azure Active Directory. Więcej informacji o nich można znaleźć w dokumencie [Wprowadzenie — przewodnik](/intune/users-permissions-add) i sekcji [Następne kroki](#next-steps) w dalszej części tego artykułu.
 
 ### <a name="add-an-individual-user"></a>Dodawanie pojedynczego użytkownika
 1. Wybierz jedną z opcji dodawania użytkownika, aby otworzyć formularz służący do tworzenia użytkownika. Wymagane są tylko elementy oznaczone gwiazdką (\*).
@@ -110,8 +107,8 @@ Aby wrócić z usługi Intune do Centrum administracyjnego usługi Office 365 ad
 
 ![Ilustracja przedstawiająca link do Centrum administracyjnego usługi Office 365](./media/sign-up/task-add-users.png)
 
-### <a name="intune-azure-preview"></a>Wersja zapoznawcza usługi Intune Azure
-Na potrzeby wersji zapoznawczej usługi Intune Azure będą używane trzy portale:
+### <a name="intune-on-azure"></a>Usługa Intune na platformie Azure
+Na potrzeby usługi Intune na platformie Azure będą używane trzy portale:
 - Centrum administracyjne usługi Office 365 ([portal.office.com](https://portal.office.com))
 - Pulpit nawigacyjny usługi Intune na platformie Azure ([portal.azure.com](https://portal.azure.com))
 - Konsola administracyjna klasycznego portalu usługi Intune ([manage.microsoft.com](https://manage.microsoft.com))
@@ -138,8 +135,8 @@ Aby wrócić z usługi Intune do Centrum administracyjnego usługi Office 365, w
 ### <a name="classic-intune"></a>Klasyczny portal usługi Intune
 Scenariusz oceny: [Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
-### <a name="intune-azure-preview"></a>Wersja zapoznawcza usługi Intune Azure
-Dowiedz się więcej na temat [usługi Intune w wersji zapoznawczej witryny Azure Portal](/intune/what-is-intune)
+### <a name="intune-on-azure"></a>Usługa Intune na platformie Azure
+Dowiedz się więcej o [usłudze Intune na platformie Azure](/intune/what-is-intune)
 
 ### <a name="integration-with-other-products"></a>Integracja z innymi produktami
 Dowiedz się więcej o korzystaniu z kont użytkowników usługi Azure Active Directory za pomocą usługi Intune:
@@ -148,4 +145,3 @@ Dowiedz się więcej o korzystaniu z kont użytkowników usługi Azure Active Di
 - [Wymagania uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
 Dowiedz się więcej na temat używania [usługi Intune z programem System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
-

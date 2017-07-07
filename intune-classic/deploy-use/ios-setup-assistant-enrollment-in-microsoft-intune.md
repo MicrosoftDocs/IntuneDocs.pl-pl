@@ -1,5 +1,5 @@
 ---
-title: "Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień | Microsoft Docs"
+title: "Rejestrowanie urządzeń z systemem iOS przy użyciu Asystenta ustawień"
 description: "Rejestruj firmowe urządzenia z systemem iOS przy użyciu narzędzia Apple Configurator, aby przywrócić im ustawienia fabryczne i przygotować je do uruchomienia Asystenta ustawień."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 12466562ea8431156e9644e63fda16231ac70f32
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 402b5b469b1536e9f2ea13948e45c9232baca458
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Rejestracja urządzeń z systemem iOS za pomocą narzędzia Apple Configurator przy użyciu Asystenta ustawień
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -175,4 +172,3 @@ Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i prz
 
 ### <a name="see-also"></a>Zobacz także
 [Wymagania wstępne dotyczące rejestrowania urządzeń](prerequisites-for-enrollment.md)
-

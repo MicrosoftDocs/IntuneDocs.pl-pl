@@ -1,5 +1,5 @@
 ---
-title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników | Microsoft Docs"
+title: "Tworzenie zasad i publikowanie aplikacji dla użytkowników"
 description: "Tworzenie zasad i publikowanie aplikacji w przypadku rejestracji w celu skorzystania z bezpłatnej, 30-dniowej wersji ewaluacyjnej usługi Intune"
 keywords: 
 author: lindavr
@@ -14,16 +14,12 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0e836571b869e7a32b19968da1d78035a6bae7f2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 335d91cd6583052bfcc72fc018b387eed8823b7e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Tworzenie zasad i publikowanie aplikacji dla użytkowników wersji ewaluacyjnej
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -102,7 +98,6 @@ Ta czynność kończy przewodnik dotyczący zarządzania urządzeniami przenośn
 ## <a name="next-steps"></a>Następne kroki
 Dowiedz się więcej o innych [możliwościach usługi Intune](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 
-Przeczytaj o [typowych sposobach korzystania z usługi Intune](common-ways-to-use-intune.md)
+Przeczytaj o [typowych sposobach korzystania z usługi Intune](/intune/common-scenarios)
 
 Dokonaj konwersji na [płatną subskrypcję](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-

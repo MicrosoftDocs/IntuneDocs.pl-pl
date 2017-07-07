@@ -5,27 +5,23 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
-ms.openlocfilehash: f01d8b31f493b7103fe788aa62d37f9c73981984
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/26/2017
-
-
+ms.openlocfilehash: 90168dae6b73185ae8cdf6c55093c79ab3d729c0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="using-the-intune-company-portal-website"></a>Korzystanie z witryny Portal firmy usługi Intune
 [Witryna sieci Web Portal firmy](https://portal.manage.microsoft.com) to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune.
 
@@ -41,7 +37,7 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 
 -   [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
 
--    [Ręczne synchronizowanie urządzenia w celu pobrania aplikacji do szybszego zainstalowania](sync-your-device-manually-cpwebsite.md)
+-   [Ręczne synchronizowanie urządzenia w celu pobrania aplikacji do szybszego zainstalowania](sync-your-device-manually-cpwebsite.md)
 
 -   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane)
 
@@ -49,9 +45,4 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 
 -   Zdalne zarządzanie komputerem (dotyczy tylko komputerów)
 
-W **witrynie sieci Web Portalu firmy** można wykonać większość zadań, które można wykonać za pomocą **aplikacji Portal firmy** instalowanej na urządzeniu. Zobacz poniższe strony, aby uzyskać linki do wszystkich zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach:
-
-- [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](using-your-ios-or-macOS-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem Windows i usługi Intune](using-your-windows-device-with-intune.md)
-
+Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
