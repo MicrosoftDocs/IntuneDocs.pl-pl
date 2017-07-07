@@ -14,15 +14,12 @@ ms.assetid: 34a412cd-8240-4e06-a60e-df270a711e7b
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: a3a928e1b3ed6cd0bdfdaeee1da383c8e2183885
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="post-configuration-tasks"></a>Zadania po konfiguracji
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -34,4 +31,3 @@ Po zakończeniu początkowych etapów konfiguracji płatnej subskrypcji usługi 
 -   **Raporty usługi Intune:** usługa Microsoft Intune udostępnia alerty i raporty ułatwiające monitorowanie urządzeń oraz stanu licencji oprogramowania i akcji, które mają wpływ na urządzenia (takich jak czyszczenie danych urządzenia).  Aby uzyskać więcej informacji o raportowaniu, zobacz temat [Informacje o operacjach usługi Microsoft Intune — korzystanie z raportów](/intune-classic/deploy-use/understand-microsoft-intune-operations-by-using-reports).
 
 -   **Ochrona zasobów firmy:** po skonfigurowaniu usługi Intune i zarejestrowaniu urządzeń warto upewnić się, że są one chronione przed utratą danych i innymi zagrożeniami. Aby dowiedzieć się więcej o ochronie zasobów, zobacz temat [Ochrona aplikacji i danych w usłudze Microsoft Intune](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune).
-

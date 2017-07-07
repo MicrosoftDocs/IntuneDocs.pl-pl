@@ -1,5 +1,5 @@
 ---
-title: "Profile certyfikatów zapewniające dostęp do zasobów | Microsoft Docs"
+title: "Profile certyfikatów zapewniające dostęp do zasobów"
 description: "Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika."
 keywords: 
 author: lleonard-msft
@@ -14,15 +14,12 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3dd6e5971d084773640c577cace43c2f011dbb69
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5570c13b9ca1782b12ad7ca718d18c98bda7bbfa
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -62,4 +59,3 @@ Dla każdej platformy należy utworzyć oddzielny profil. Po utworzeniu certyfik
 - [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md)
 - [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md)
 - [Konfigurowanie profilów certyfikatów usługi Intune](configure-intune-certificate-profiles.md)
-
