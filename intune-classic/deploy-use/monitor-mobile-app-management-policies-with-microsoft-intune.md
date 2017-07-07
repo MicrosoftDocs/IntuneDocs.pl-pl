@@ -1,5 +1,5 @@
 ---
-title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune | Microsoft Docs"
+title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune"
 description: "Zobacz, jak wielu użytkowników korzysta z zasad, i poznaj więcej szczegółów."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d80632aceaa675f08eb4b23ce59e3bcabb72b4d0
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Monitorowanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 Możesz monitorować stan zgodności zasad ochrony aplikacji, które zostały zastosowane do użytkowników. Możesz uzyskać dostęp do informacji o użytkownikach, których dotyczą zasady ochrony aplikacji, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
 
@@ -134,6 +131,5 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 ## <a name="see-also"></a>Zobacz także
 [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-android)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-ios)

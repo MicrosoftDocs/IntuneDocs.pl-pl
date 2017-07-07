@@ -1,5 +1,5 @@
 ---
-title: "Ochrona danych firmy za pomocą szyfrowania danych | Microsoft Docs"
+title: "Ochrona danych firmy za pomocą szyfrowania danych"
 description: "Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając użycie kodu dostępu i szyfrowania danych za pomocą zasad w aplikacjach mobilnych."
 keywords: szyfrowanie, PIN, dane
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d1cffa0066ffcbb9f0aadcb387cefee1ffe1f47a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 42ae7cdedbcbd9bf6420ca9fd2cfa39a75174736
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="quick-start-guide-protect-company-data-with-data-encryption"></a>Przewodnik Szybki start: ochrona danych firmy za pomocą szyfrowania danych
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -45,12 +42,11 @@ Ten przewodnik Szybki start będzie użyteczny, jeśli spełniasz następujące 
 Ten przewodnik pomaga chronić firmę przed utratą danych, wymuszając kod dostępu i szyfrowanie danych za pomocą zasad obejmujących aplikacje mobilne, z których korzystają pracownicy w celu uzyskania dostępu do poufnych danych, bez konieczności pełnego rejestrowania w jakimkolwiek rozwiązaniu do zarządzania urządzeniami. Usługa Microsoft Intune pozwala ustawić zasady zarządzania aplikacjami mobilnymi w aplikacjach mobilnych pakietu Office zarówno dla systemu [iOS](https://products.office.com/mobile/office-mobile-apps-for-ios), jak i systemu [Android](https://products.office.com/mobile/office-mobile-apps-for-android). W ten sposób można zapewnić ochronę danych usługi O365, nie wymagając od użytkowników rejestracji ich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi i zachowując doskonałe środowisko użytkownika końcowego do pracy z aplikacjami mobilnymi pakietu Office.
 
 ## <a name="how-do-i-do-it"></a>Jak to zrobić?
-1.    [Sposoby ochrony danych aplikacji](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
-2.    [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
-3.    [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+1.  [Sposoby ochrony danych aplikacji](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
+2.  [Przygotowywanie się do skonfigurowania zasad zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
+3.  [Tworzenie i wdrażanie zasad zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
 
 ## <a name="additional-information"></a>Informacje dodatkowe:
-- [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi]/intune-classic/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune).
-- [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune]/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
+- [Środowisko użytkownika końcowego dla aplikacji objętych zarządzaniem aplikacjami mobilnymi](/intune-classic/eploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
+- [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/apps-prepare-mobile-application-management)
 - [Lista partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)
-

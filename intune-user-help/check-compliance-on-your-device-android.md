@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d98d9bbe-98fa-48a9-8808-110435eac9e4
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 088012a1dd9ee1997e7d2b578e54774c4bd586fb
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="check-compliance-on-your-android-device"></a>Sprawdzanie zgodności na urządzeniu z systemem Android
 
 Jeśli urządzenie przez jakiś czas nie meldowało się w usłudze Intune, prawdopodobnie nie będziesz w stanie uzyskać dostępu do zasobów firmy lub szkoły. Aby odzyskać dostęp, spróbuj wykonać następujące czynności:
@@ -35,4 +31,3 @@ Jeśli urządzenie przez jakiś czas nie meldowało się w usłudze Intune, praw
 2. Naciśnij pozycję **Sprawdź zgodność**.
 
 Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go administratora IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

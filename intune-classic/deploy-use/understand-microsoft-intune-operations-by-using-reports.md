@@ -1,5 +1,5 @@
 ---
-title: "Informacje o operacjach — korzystanie z raportów | Microsoft Docs"
+title: "Informacje o operacjach — korzystanie z raportów"
 description: "Tworzenie raportów dotyczących oprogramowania, sprzętu i licencji na oprogramowanie w organizacji i zarządzanie nimi."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,12 @@ ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
 ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: c433acc553b1f89789cdb72a33e8dbbc7929bae0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="understand-microsoft-intune-operations-by-using-reports"></a>Informacje o operacjach usługi Microsoft Intune — korzystanie z raportów
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -73,6 +69,5 @@ Ponadto raporty obsługują następujące akcje:
 |**Zapisywanie**|Na stronie **Tworzenie nowego raportu** każdy użytkownik może zapisać do 100 raportów. Skonfiguruj parametry raportu według własnych potrzeb, a następnie wybierz pozycję **Zapisz**lub **Zapisz jako**, jeśli chcesz użyć innej nazwy.|
 |**Ładowanie**|Na stronie **Tworzenie nowego raportu** wybierz pozycję **Ładuj**, aby pobrać wszystkie zapisane wcześniej zestawy parametrów raportu.|
 |**Usuwanie**|W obszarze roboczym **Raporty** wybierz żądany typ raportu i wybierz pozycję **Ładuj**. Następnie na liście raportów wybierz ikonę usuwania (x) obok raportu.|
-
 
 

@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 586a5355e2ee4b0dda6e0238628fa71bdce6f1a2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-update-the-company-portal-app"></a>Jak zaktualizować aplikację Portal firmy
 
 Jeśli używana przez Ciebie wersja aplikacji Portal firmy nie jest już obsługiwana lub dostępna jest jej nowsza wersja, musisz ją zaktualizować do nowszej wersji. Skorzystaj z procedury odpowiedniej dla typu posiadanego urządzenia.
@@ -53,4 +49,3 @@ Aby zaktualizować aplikację Portal firmy:
 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

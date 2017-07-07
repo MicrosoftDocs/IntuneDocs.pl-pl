@@ -1,5 +1,5 @@
 ---
-title: "Tworzenie i wdrażanie zasad MAM | Microsoft Docs"
+title: "Tworzenie i wdrażanie zasad MAM"
 description: "Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d91ce526650166197520d37c82084c0ff141ec80
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ebb4b03307f8af7e1390c6db994d3120942fae89
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -109,9 +106,9 @@ Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie s�
 ## <a name="line-of-business-lob-apps-optional"></a>Aplikacje biznesowe (LOB) (opcjonalnie)
 
 Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikacji możesz dodawać do usługi Intune aplikacje biznesowe. Umożliwia to definiowanie zasad ochrony aplikacji biznesowych przy użyciu zestawu SDK MAM bez konieczności żądania pełnych uprawnień do wdrażania aplikacji.
-
+/intune/app-sdk-get-started
 > [!TIP]
-> Aplikacje biznesowe możesz również dodawać do usługi Intune podczas realizacji przepływu pracy [zestawu SDK aplikacji usługi Intune](/intune-classic/develop/intune-app-sdk-get-started).
+> Aplikacje biznesowe możesz również dodawać do usługi Intune podczas realizacji przepływu pracy [zestawu SDK aplikacji usługi Intune](/intune/app-sdk-get-started).
 
 > [!IMPORTANT]
 > Jeśli użytkownicy mają tylko określone uprawnienia do wdrażania aplikacji MAM, a nie pełne uprawnienia, które umożliwiałyby im wdrożenie dowolnej aplikacji w usłudze Intune, nie mogą realizować przepływu pracy zestawu SDK usługi Intune, ale wciąż mogą dodawać swoje aplikacje biznesowe za pomocą przepływu pracy tworzenia zasad ochrony aplikacji MAM.
@@ -164,8 +161,8 @@ Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi I
 > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Aby uzyskać więcej informacji, zobacz:
-* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-android)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-ios)
 
 ##  <a name="change-existing-policies"></a>Zmiana istniejących zasad
 Możesz edytować istniejące zasady i zastosować je do użytkowników docelowych. Jednak w przypadku zmiany istniejących zasad użytkownicy zalogowani do aplikacji zobaczą zmiany dopiero po 8 godzinach.
@@ -219,6 +216,5 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 [Monitorowanie zgodności i stanu użytkownika](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Zobacz także
-* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-android)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-ios)

@@ -1,5 +1,5 @@
 ---
-title: "Sieć Wi-Fi z użyciem klucza wstępnego | Microsoft Docs"
+title: "Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego"
 description: "Utwórz profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji Konfiguracja niestandardowa."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6845097b768e67c7fbc6ff16bf41f27982c4b33e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 7f3432f914c2f4a76d7a9303924d106b270220a1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą zasad niestandardowych
 
@@ -30,24 +27,24 @@ ms.lasthandoff: 05/23/2017
 Oto jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Konfiguracja niestandardowa** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
 
 > [!NOTE]
--    Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
+-   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
 - W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
--    Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
+-   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
 -  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
 
 
-1.    Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
+1.  Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
 
-2.    Podaj nazwę i opis.
-3.    Dodaj nowe ustawienie OMA-URI:
+2.  Podaj nazwę i opis.
+3.  Dodaj nowe ustawienie OMA-URI:
 
-   a.    Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
+   a.   Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
 
-   b.    Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
+   b.   Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
 
-   c.    **Typ danych**: ustaw wartość „Ciąg (XML)”
+   c.   **Typ danych**: ustaw wartość „Ciąg (XML)”
 
-   d.    **OMA-URI**:
+   d.   **OMA-URI**:
 
     - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -221,4 +218,3 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 ### <a name="see-also"></a>Zobacz też
 [Połączenia Wi-Fi w usłudze Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
-

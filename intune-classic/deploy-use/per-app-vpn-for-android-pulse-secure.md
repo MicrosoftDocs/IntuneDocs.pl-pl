@@ -1,11 +1,11 @@
 ---
-title: "Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure | Microsoft Docs"
+title: "Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure"
 description: "Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/12/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6786ac87c34e913ba71cd203f431f746df816459
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 262cc461d5c1790fdfb162d5453a9cebd48271c4
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji na urządzeniach z systemem Android
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -45,7 +42,7 @@ Po wdrożeniu zasad w grupach użytkowników lub na urządzeniu z systemem Andro
 
 > [!NOTE]
 >
-> Zanotuj nazwę profilu sieci VPN w celu użycia jej w następnym kroku. Przykład: mój_profil_VPN_aplikacji.
+> Zapisz **nazwę połączenia sieci VPN (wyświetlaną użytkownikom)** — wartość określaną podczas tworzenia profilu sieci VPN. Będzie ona potrzebna w następnym kroku. Przykład: **mój_profil_VPN_aplikacji**.
 
 ### <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2. Tworzenie niestandardowych zasad konfiguracji
 
@@ -55,7 +52,7 @@ Po wdrożeniu zasad w grupach użytkowników lub na urządzeniu z systemem Andro
    4. Podaj nazwę ustawienia.
    5. Dla pozycji **Typ danych** określ wartość **Ciąg**.
    6. Dla pozycji **OMA-URI** określ następujący ciąg: **./Vendor/MSFT/VPN/Profile/*Nazwa*/PackageList**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/PackageList**.
-   7.    W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
+   7.   W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
 
 ![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](./media/android_per_app_vpn_oma_uri.png)
 
@@ -80,4 +77,3 @@ Należy wdrożyć *obie* zasady w *tych samych* grupach usługi Intune.
     -   **Aby zamknąć okno dialogowe bez wdrażania zasad**, wybierz pozycję **Anuluj**.
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Podsumowanie stanu jest wyświetlane także w obszarze roboczym **Pulpit nawigacyjny**.
-
