@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
 ms.openlocfilehash: 052de47e19f4e171428ee22b4701ed516461231f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/26/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune?
 
 Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone pozwalasz administratorowi IT na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych. W tym temacie opisano, co się dzieje w przypadku urządzeń z systemem starszym niż Windows 10. W przypadku urządzeń z systemem Windows 10 zobacz [temat pokrewny](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
@@ -79,4 +74,3 @@ Mniej więcej co 8 godzin zarejestrowane urządzenia wykonują następujące czy
 -   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych.
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
-

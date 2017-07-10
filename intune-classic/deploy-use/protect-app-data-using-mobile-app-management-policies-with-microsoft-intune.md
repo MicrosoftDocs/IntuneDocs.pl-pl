@@ -1,5 +1,5 @@
 ---
-title: "Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM) | Microsoft Docs"
+title: "Ochrona danych aplikacji za pomocą zasad zarządzania aplikacjami mobilnymi"
 description: "W tym temacie opisano, jak zasady zarządzania aplikacjami mobilnymi mogą pomagać w ochronie danych firmowych, zapobieganiu utracie danych i przechowywaniu osobno informacji osobistych i służbowych."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9959e9f757e83c7aa4274b7e7b9df949fff022cc
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/31/2017
-
-
+ms.openlocfilehash: 40a6badf072c254f635a2656189d626e4f13a320
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Ochrona danych aplikacji przy użyciu zasad ochrony aplikacji w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -38,8 +35,8 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchomionej na urz
 
 -   **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami przenośnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
-      > [!NOTE]
-      > Nie zaleca się stosowania zasad ochrony aplikacji w połączeniu z rozwiązaniami do zarządzania aplikacjami mobilnymi lub rozwiązań z bezpiecznym kontenerem innych firm.
+    > [!NOTE]
+    > Nie zaleca się stosowania zasad ochrony aplikacji w połączeniu z rozwiązaniami do zarządzania aplikacjami mobilnymi lub rozwiązań z bezpiecznym kontenerem innych firm.
 
 -   **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami przenośnymi:** urządzenia w tej kategorii są zazwyczaj urządzeniami należącymi do pracowników, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązaniach MDM.
 
@@ -135,4 +132,3 @@ Jeśli na przykład użytkownik uruchamia aplikację OneDrive przy użyciu konta
 - [Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 - [Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-

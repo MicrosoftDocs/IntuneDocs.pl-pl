@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 43b738b7-6a56-498a-a433-112da5104876
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5ad9cc6c03712090398cacb3d4bb653deb1d2a4
 ms.openlocfilehash: 39d2dad94b949a39451dca79431be22782cddcb8
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/12/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-your-windows-10-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune
 
   > [!NOTE]
@@ -67,4 +63,3 @@ Jeśli lista nie zawiera aplikacji Portal firmy, wykonaj następujące kroki, ab
 3. Na liście wyników wybierz kolejno pozycje **Portal firmy** > **Zainstaluj**.
 
 4. Wybierz pozycję **Zainstaluj** lub **Bezpłatne**. Z Twojego punktu widzenia nie ma różnicy między tymi dwiema opcjami, a wyświetlany wariant zależy od konfiguracji aplikacji Portal firmy.
-

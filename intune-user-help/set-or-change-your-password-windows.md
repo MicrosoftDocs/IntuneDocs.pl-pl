@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="make-your-device-safer-with-the-right-password"></a>Zwiększenie bezpieczeństwa urządzenia za pomocą odpowiedniego hasła
 
 Uzyskiwanie dostępu do zasobów firmowych, takich jak wiadomości e-mail i dokumenty, jest czymś, co ludzie muszą wykonywać codziennie za pomocą swoich urządzeń z systemem Windows. Organizacja chce mieć pewność, że urządzenie wykonuje to w bezpieczny sposób. Jednym ze sposobów zapewnienia, że urządzenie w bezpieczny sposób uzyskuje dostęp do tych zasobów, jest wymóg stosowania hasła. Te hasła są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
@@ -49,4 +45,3 @@ Jeśli urządzenie z systemem Windows nie jest zgodne z zasadami haseł administ
 4. Wybierz pozycję **gotowe**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

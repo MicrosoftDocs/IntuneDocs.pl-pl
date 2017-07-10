@@ -1,6 +1,5 @@
 ---
-
-title: "Ustawienia zasad systemów Android i Samsung KNOX | Microsoft Docs"
+title: "Ustawienia zasad dla systemów Android i Samsung KNOX"
 description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem Android zarządzanych za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
@@ -15,15 +14,12 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c2652e405879d4506c40b500c489a5e92ad15282
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 07d49d9f9628dd296c3708a063de34d485c77acb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Ustawienia zasad konfiguracji systemu Android i Samsung KNOX Standard w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -211,4 +207,3 @@ Obecnie usługa Intune obsługuje tylko ograniczoną liczbę zasad niestandardow
 
 ### <a name="see-also"></a>Zobacz też
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

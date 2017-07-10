@@ -1,11 +1,11 @@
 ---
-title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń | Microsoft Docs"
+title: "Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń"
 description: "Użyj funkcji mapowania grup urządzeń w usłudze Microsoft Intune do grupowania urządzeń w zdefiniowane kategorie, co ułatwi zarządzanie tymi urządzeniami."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/26/2016
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,12 @@ ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 618827ed6baf7a9dec6aef804f19bcbca08ed39f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: ff136d430496392b6ca8e5b944820fe9e14553d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -32,7 +30,7 @@ Podczas mapowania grup urządzeń jest używany następujący przepływ pracy:
 1. Utworzenie kategorii do wyboru dla użytkowników podczas rejestrowania urządzeń
 2. Tworzysz grupy lub korzystasz z istniejących grup dla każdej kategorii, której chcesz używać. W zależności od używanej wersji usługi Intune będą to grupy usługi Intune lub grupy zabezpieczeń usługi Azure Active Directory.
 2. Konfigurujesz reguły mapujące wybraną kategorię na utworzoną grupę urządzeń.
-3. Gdy użytkownik końcowy rejestruje urządzenie, musi wybrać kategorię na liście skonfigurowanych kategorii. Po dokonaniu wyboru urządzenie zostaje automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie jest już zarejestrowane, użytkownik końcowy zostanie poproszony o wybranie kategorii podczas następnego uzyskiwania dostępu do aplikacji Portal firmy.
+3. Gdy użytkownik końcowy urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy końcowi muszą skorzystać z witryny internetowej Portal firmy (aby uzyskać więcej informacji, zobacz sekcję **Po skonfigurowaniu grup urządzeń** w tym temacie).
 4. Następnie możesz wdrażać do tych grup zasady i aplikacje.
 
 Możesz utworzyć dowolne kategorie urządzeń, na przykład:
@@ -86,8 +84,13 @@ Na przykład (**device.deviceCategory -eq** "<*nazwa kategorii urządzeń uzyska
 
 ## <a name="after-you-configure-device-groups"></a>Po skonfigurowaniu grup urządzeń
 
-Podczas rejestrowania swoich urządzeń użytkownicy zobaczą listę skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
+Gdy użytkownik końcowy urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
+
+Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy końcowi muszą po zarejestrowaniu urządzenia skorzystać z witryny internetowej Portal firmy (portal.manage.microsoft.com). Na urządzeniu z systemem Windows uzyskaj dostęp do tej witryny internetowej i wybierz kolejno pozycje **Menu** > **Moje urządzenia**. Wybierz zarejestrowane urządzenie wymienione na stronie, a następnie wybierz kategorię. 
+
+Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie zostało zarejestrowane przed skonfigurowaniem kategorii, użytkownik końcowy zobaczy powiadomienie dotyczące urządzenia w witrynie internetowej Portal firmy i zostanie poproszony o wybranie kategorii przy następnej próbie uzyskania dostępu do aplikacji Portal firmy dla systemu iOS lub Android.
+
+
 
 ### <a name="see-also"></a>Zobacz także
 [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
-

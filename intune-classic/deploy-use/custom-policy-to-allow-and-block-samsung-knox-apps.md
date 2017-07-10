@@ -1,5 +1,5 @@
 ---
-title: Dozwolone i zablokowane aplikacje dla systemu KNOX | Microsoft Docs
+title: Dozwolone i blokowane aplikacje dla systemu KNOX
 description: "Niestandardowy profil umożliwiający utworzenie listy dozwolonych i zablokowanych aplikacji dla systemu KNOX."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: b215425534e833db7e92e3f60fc507a168ef576f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX Standard
 
@@ -43,9 +40,9 @@ Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung K
     
     - **Nazwa ustawienia.** Podaj ciąg **PreventStartPackages**.
     - **Opis ustawienia.** Podaj opcjonalny opis, taki jak „Lista aplikacji, których uruchamianie jest zablokowane”.
-    -     **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
-    -     **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Wartość.** Podaj listę nazw pakietów aplikacji, których uruchamianie chcesz blokować. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
+    -   **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
+    -   **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+    -   **Wartość.** Podaj listę nazw pakietów aplikacji, których uruchamianie chcesz blokować. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
 
     Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play, przy czym wszystkie inne aplikacje są wykluczone:
 
@@ -74,4 +71,3 @@ Po wybraniu wdrożonych zasad można wyświetlić więcej informacji dotyczącyc
 
 ### <a name="see-also"></a>Zobacz też
 [Ustawienia zasad konfiguracji systemu Android i Samsung KNOX w usłudze Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-

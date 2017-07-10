@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 3794f6c908dabb1946a262a7238a38537b7b06ec
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="send-logs-to-your-it-admin-using-email"></a>Wysyłanie dzienników do administratora IT pocztą e-mail
 
 Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
@@ -46,4 +41,3 @@ Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą p
 3.  W obszarze **Pomoc** naciśnij pozycję **Uzyskaj pomoc**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

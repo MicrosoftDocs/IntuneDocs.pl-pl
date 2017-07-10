@@ -1,7 +1,7 @@
 ---
 title: "Ustawienia sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące ustawień w usłudze Intune, których można użyć do konfigurowania połączeń sieci Wi-Fi na urządzeniach z systemem iOS."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń Wi-Fi na urządzeniach z systemem iOS."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 89229a5e-3421-4221-a62f-fa800620cc0d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: edd7cfc8ed6e444105f58002b3ba7c0086fde518
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 001a65733d3565df8f4aea485c5a7488f2756a88
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 
@@ -82,4 +79,3 @@ ms.lasthandoff: 05/23/2017
 |--------------|-------------|----------|
 |**Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.|Jako typ protokołu EAP wybrano wartość **EAP-TLS**|
 |**Metoda uwierzytelniania**|Wybierz metodę uwierzytelniania dla połączenia:<br>- **Certyfikaty**, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- **Nazwa użytkownika i hasło**, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji **Nazwa użytkownika i hasło** należy skonfigurować ustawienia:<br><br>-  **Metoda inna niż EAP (tożsamość wewnętrzna)**, a następnie wybrać sposób uwierzytelniania połączenia:<br>- **Brak**<br>- **Hasło nieszyfrowane (PAP)**<br>- **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP wersja 2 (MS-CHAP v2)**<br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br>**i**<br><br>- **Prywatność tożsamości (tożsamość zewnętrzna)** — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.|Jako typ protokołu EAP wybrano wartość **EAP-TTLS** lub *
-

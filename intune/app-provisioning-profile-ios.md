@@ -1,7 +1,7 @@
 ---
-title: Profile aprowizowania aplikacji | Microsoft Docs
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowego profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia."
+title: Profile aprowizowania aplikacji
+titleSuffix: Intune on Azure
+description: "Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowego profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 966c097280ebebac68749e71c20381ee816360da
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bf2da880f0f092b9948a400f6a10bd9ad032f959
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-ios-mobile-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Użycie profilów aprowizowania aplikacji mobilnych systemu iOS w celu zapobiegania wygaśnięciu aplikacji
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Wprowadzenie
 
@@ -42,7 +40,7 @@ Po wygaśnięciu certyfikatu należy ponownie podpisać aplikację przy użyciu 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak utworzyć profil aprowizowania aplikacji mobilnych systemu iOS
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Profile aprowizacji systemu iOS**.
 2.  W bloku listy profilów wybierz pozycję **Utwórz profil**.
@@ -55,4 +53,3 @@ Po wygaśnięciu certyfikatu należy ponownie podpisać aplikację przy użyciu 
 ## <a name="next-steps"></a>Następne kroki
 
 Przypisz profil do wymaganych urządzeń z systemem iOS. Aby uzyskać więcej informacji, wykonaj czynności opisane w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
-

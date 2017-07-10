@@ -1,12 +1,12 @@
 ---
-title: "Co to jest zarządzanie aplikacjami | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: z tego tematu nauczysz się podstaw zarządzania aplikacjami w usłudze Microsoft Intune"
+title: "Co to jest zarządzanie aplikacjami"
+titleSuffix: Intune on Azure
+description: "Z tego tematu nauczysz się podstaw zarządzania aplikacjami w usłudze Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,22 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 56eefde5969f5426886c07bd6e9a548c8526e82e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Do Twoich obowiązków jako administratora IT prawdopodobnie będzie należało zapewnienie użytkownikom końcowym dostępu do aplikacji, które są im niezbędne do pracy. Może to być trudne, ponieważ:
+Do Twoich obowiązków jako administratora IT należy zapewnienie użytkownikom końcowym dostępu do aplikacji, które są im niezbędne do pracy. Może to być trudne, ponieważ:
 - Istnieje szeroka gama platform urządzeń i typów aplikacji.
-- Może okazać się konieczne zarządzanie aplikacjami nie tylko na urządzeniach firmy, ale także na własnych urządzeniach użytkowników.
-- Oprócz tego musisz zapewnić bezpieczeństwo sieci i danych. 
+- Może okazać się konieczne zarządzanie aplikacjami na urządzeniach firmy i na własnych urządzeniach użytkowników.
+- Musisz mieć pewność, że sieć i dane pozostaną bezpieczne.
 
 Na dodatek możesz też przypisywać aplikacje na urządzeniach niezarejestrowanych w usłudze Intune i zarządzać nimi.
 
@@ -63,7 +60,6 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 <sup>2</sup>Dotyczy urządzeń zarządzanych tylko przez usługę Intune.
 
-
 ## <a name="how-to-get-started"></a>Wprowadzenie
 
 Większość elementów powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
@@ -75,12 +71,13 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
 
 ### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
-- **Aplikacje** — to miejsce, w którym będziesz dodawać, przypisywać i monitorować większość swoich aplikacji. 
+- **Aplikacje** — ten węzeł to miejsce, w którym będziesz dodawać, przypisywać i monitorować większość swoich aplikacji.
     - [Dodawanie aplikacji](apps-add.md)
     - [Przypisywanie aplikacji](apps-deploy.md)
     - [Monitorowanie aplikacji](apps-monitor.md)
-- **Zasady konfigurowania aplikacji** — zasady konfigurowania aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Aby uzyskać szczegółowe informacje, zobacz:
-    - [Zasady konfigurowania aplikacji](app-configuration-policies.md)
+- **Zasady konfigurowania aplikacji** — zasady konfigurowania aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację.
+    - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md)
+    - [Zasady konfiguracji aplikacji systemu Android](app-configuration-policies-use-android.md)
 - **Zasady ochrony aplikacji** — umożliwia skojarzenie ustawień z aplikacją w taki sposób, aby umożliwić ochronę używanych przez nią danych firmy. Na przykład można ograniczyć możliwości komunikowania się aplikacji z innymi aplikacjami lub wymagać od użytkownika wprowadzania numeru PIN umożliwiającego dostęp do aplikacji firmowej.
     - [Zasady ochrony aplikacji](app-protection-policies.md)
 - **Selektywne czyszczenie aplikacji** — usunięcie tylko danych firmowych z wybranego urządzenia.
@@ -100,8 +97,7 @@ Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](
 ### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Sklep Windows dla firm** — skonfiguruj integrację ze Sklepem Windows dla firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji. 
+- **Sklep Windows dla firm** — umożliwia skonfigurowanie integracji ze Sklepem Windows dla firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
-- **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy. 
+- **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy.
     - [Konfiguracja portalu firmy](company-portal-app.md)
-

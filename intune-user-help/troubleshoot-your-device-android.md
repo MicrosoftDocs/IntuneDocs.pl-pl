@@ -11,20 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f720befe-a6f9-4422-aa9b-4d85c9fc94e2
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: f46a93d42427ea41adf71403c91fa95052c0bba2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="fix-common-issues-with-your-android-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android
 
 Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z administratorem IT przy użyciu jego danych kontaktowych zamieszczonych w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com).
@@ -45,4 +41,3 @@ Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, kor
 - [Urządzenie wydaje się szyfrowane, ale aplikacja Portal Firmy informuje, że jest inaczej](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 - [Został wyświetlony monit o przeprowadzenie instalacji aplikacji Device Threat Protection na urządzeniu z systemem Android](you-are-prompted-to-install-mtd-android.md)
 - [Należy rozwiązać problem zagrożenia wykrytego przez aplikację Device Threat Protection na urządzeniu z systemem Android](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-

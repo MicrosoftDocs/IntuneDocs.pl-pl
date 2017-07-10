@@ -1,7 +1,7 @@
 ---
 title: Monitorowanie zasad ochrony aplikacji
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: sprawdzanie liczby użytkowników korzystających z zasad i uzyskiwanie szczegółowych informacji."
+titleSuffix: Intune on Azure
+description: "Zobacz, jak wielu użytkowników korzysta z zasad, i poznaj więcej szczegółów."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1e7294e5c7bb1136718ca6d651d9375a22796fa7
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: de40d149818b2655a8fc3b647a7e850973814165
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-**Jeśli nie korzystasz z wersji zapoznawczej usługi Intune Azure**, w tym temacie znajdziesz zasady [tworzenia zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) w klasycznej konsoli usługi Intune.
+**Jeśli nie korzystasz z portalu Azure Portal**, w tym temacie znajdziesz opis sposobu [tworzenia zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) w klasycznej konsoli usługi Intune.
 
 
 Możesz monitorować stan zgodności zasad zarządzania aplikacjami mobilnymi (MAM, ang. Mobile Application Management), które zostały zastosowane do użytkowników w bloku ochrony aplikacji usługi Intune w [witrynie Azure Portal](https://portal.azure.com). Dostępne są informacje o użytkownikach, których dotyczą zasady zarządzania aplikacjami mobilnymi, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
@@ -43,7 +40,7 @@ Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
 ## <a name="summary-view"></a>Widok podsumowania
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Monitor** > **Stan użytkownika ochrony aplikacji**, aby wyświetlić widok podsumowania:
 
@@ -139,4 +136,3 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
 * [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)
-

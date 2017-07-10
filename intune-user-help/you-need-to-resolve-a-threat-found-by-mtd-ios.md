@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3c95d821-7862-486a-b9dc-0ed37bc5befb
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 9f3d03fe3c9da641f3c33d5d1e32032ac540adc9
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Należy rozwiązać problem zagrożenia wykrytego przez aplikację Mobile Threat Defense
 
 Aplikacja Mobile Threat Defense wykryła na urządzeniu z systemem iOS potencjalne zagrożenie. Należy rozwiązać ten problem, aby odzyskać dostęp do służbowej poczty e-mail oraz służbowych aplikacji i plików. W zależności od tego, jak administrator IT skonfigurował aplikację Mobile Threat Defense, tego rodzaju problemy będą rozwiązywane z użyciem jednej z następujących aplikacji.
@@ -40,4 +36,3 @@ Jeśli zainstalowano aplikację, która według aplikacji Mobile Threat Defense 
 Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

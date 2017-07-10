@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Wysyłanie dzienników do administratora IT za pomocą kabla USB
 
 Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
@@ -43,4 +38,3 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem An
 4.  Wybierz pliki, a następnie dołącz je do wiadomości e-mail. Wyślij utworzoną wiadomość e-mail do administratora IT.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

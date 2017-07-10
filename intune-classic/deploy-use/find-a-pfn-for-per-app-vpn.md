@@ -1,5 +1,5 @@
 ---
-title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji | Microsoft Docs"
+title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji"
 description: "Znajdź nazwę PFN w celu skonfigurowania sieci VPN dla aplikacji."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0fd7d7e1e09f193479c6ad221c8ace7470942c5a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: eea3b9e2888f07399c8cda1e81ae8a5318d02d42
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn-configuration"></a>Znajdowanie nazwy rodziny pakietów (PFN) w celu konfiguracji sieci VPN dla aplikacji
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -74,10 +71,10 @@ Oto informacje uzyskane dla programu OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Znajdowanie nazwy PFN, jeśli aplikacja nie jest zainstalowana na komputerze
 
-1.    Przejdź do strony https://www.microsoft.com/store/apps.
-2.    Wprowadź nazwę aplikacji na pasku wyszukiwania. W tym przykładzie wyszukaj aplikację OneNote.
-3.    Wybierz link do aplikacji. Zwróć uwagę, że adres URL zawiera serię liter na końcu. W tym przykładzie adres URL wygląda następująco: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
-4.    Wklej następujący adres URL w innej karcie `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Zastąp ciąg `<app id>` identyfikatorem aplikacji uzyskanym ze strony https://www.microsoft.com/store/apps — serią liter na końcu adresu URL w kroku 3. W tym przykładzie (aplikacja OneNote) należy wkleić ciąg: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+1.  Przejdź do strony https://www.microsoft.com/store/apps.
+2.  Wprowadź nazwę aplikacji na pasku wyszukiwania. W tym przykładzie wyszukaj aplikację OneNote.
+3.  Wybierz link do aplikacji. Zwróć uwagę, że adres URL zawiera serię liter na końcu. W tym przykładzie adres URL wygląda następująco: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
+4.  Wklej następujący adres URL w innej karcie `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Zastąp ciąg `<app id>` identyfikatorem aplikacji uzyskanym ze strony https://www.microsoft.com/store/apps — serią liter na końcu adresu URL w kroku 3. W tym przykładzie (aplikacja OneNote) należy wkleić ciąg: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 W programie Microsoft Edge zostaną wyświetlone odpowiednie informacje. W programie Internet Explorer kliknij pozycję **Otwórz**, aby wyświetlić informacje. Wartość PFN jest podana w pierwszym wierszu. Poniżej przedstawiono wyniki dla przykładu:
 
@@ -88,4 +85,3 @@ W programie Microsoft Edge zostaną wyświetlone odpowiednie informacje. W progr
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
-

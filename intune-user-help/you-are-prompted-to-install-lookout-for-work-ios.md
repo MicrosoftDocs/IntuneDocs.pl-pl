@@ -11,26 +11,22 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 62e37d42aef9a828551db1fbbcf5e3cb1b3eeec9
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-install-lookout-for-work-on-your-ios-device"></a>Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS
 
 Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Lookout for Work, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa. W zależności od sposobu skonfigurowania aplikacji Lookout for Work przez administratora IT na urządzeniu mogą pojawiać się różne monity.
 
 **Co należy zrobić:**
 
-1.    Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
+1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
 
   ![Naciśnij pozycję Zainstaluj, aby zainstalować aplikację Lookout for Work](./media/ios-mtd-install-app-request.png)
 
@@ -55,4 +51,3 @@ Jeśli aplikacja Lookout for Work znajdzie zagrożenie bezpieczeństwa urządzen
 **Jeśli instalacja nie działa**
 
 Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. Jeśli tak się stanie, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

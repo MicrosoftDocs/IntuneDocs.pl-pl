@@ -11,20 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: df973b18-9166-417d-8aa3-49edd2bda256
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 63595e9905a220c326c315f5932379a9b743d3de
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Urządzenie z systemem Android nie ma certyfikatu, który zazwyczaj jest zainstalowany na telefonie
 
 Jeśli urządzenie nie jest zarejestrowane w usłudze Intune i nie ma certyfikatu, który zazwyczaj jest zainstalowany w telefonie, nie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
@@ -51,4 +48,3 @@ Można rozwiązać ten problem, uzyskując wymagane certyfikaty ze [strony certy
 > Jeśli zainstalowanie certyfikatu nie rozwiąże problemu i jeśli zostanie wyświetlony inny komunikat informujący o „braku certyfikatu”, niezbędne będzie wykonanie dodatkowych czynności w celu [zainstalowania brakującego certyfikatu](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

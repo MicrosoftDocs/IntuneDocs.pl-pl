@@ -1,5 +1,5 @@
 ---
-title: "Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi | Dokumentacja firmy Microsoft"
+title: "Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi"
 description: "W tym temacie opisano sposób sprawdzania i weryfikowania, czy zasady zarządzania aplikacjami mobilnymi są poprawnie skonfigurowane i działają zgodnie z oczekiwaniami."
 keywords: 
 author: andredm7
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ab04c85d6704d7011cc5d4ea2a9f83d78b5b73e3
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1e22be7b238cce195ee88c938b1cca009c0b21d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="validating-your-mobile-application-management-setup"></a>Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -50,7 +47,7 @@ Jeśli testowanie pokazuje, że zachowanie zasad zarządzania aplikacjami mobiln
 ### <a name="what-to-do"></a>Co należy zrobić
 Poniżej przedstawiono akcje do wykonania na podstawie stanu użytkownika:
 
-- Jeśli użytkownik nie ma licencji do zarządzania aplikacjami mobilnymi, przypisz licencję usługi Intune do użytkownika zgodnie z opisem w temacie [Zarządzanie licencjami usługi Intune](..\get-started\start-with-a-paid-subscription-to-microsoft-intune.md).
+- Jeśli użytkownik nie ma licencji do zarządzania aplikacjami mobilnymi, przypisz licencję usługi Intune do użytkownika zgodnie z opisem w temacie [Zarządzanie licencjami usługi Intune](/intune/setup-steps).
 - Jeśli użytkownik nie ma licencji usługi O365, uzyskaj licencję dla użytkownika.
 - Jeśli aplikacja użytkownika jest wyświetlana jako **Nie zaewidencjonowano**, sprawdź, czy poprawnie skonfigurowano zasady zarządzania aplikacjami mobilnymi dla tej aplikacji.
 - Upewnij się, że te warunki są stosowane dla wszystkich użytkowników, do których mają być stosowane zasady zarządzania aplikacjami mobilnymi.
@@ -59,4 +56,3 @@ Poniżej przedstawiono akcje do wykonania na podstawie stanu użytkownika:
 [Przygotowywanie się do konfigurowania zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune](..\deploy-use\get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](..\deploy-use\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-

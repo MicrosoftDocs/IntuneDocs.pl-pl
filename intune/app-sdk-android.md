@@ -14,16 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5ad9cc6c03712090398cacb3d4bb653deb1d2a4
-ms.openlocfilehash: 7dfcc0bf8f3da1e600df59927db6e78ec2021e0f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/12/2017
-
-
+ms.openlocfilehash: 403917adb1fb1156f0ed0027a316677d1e4f2f84
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/03/2017
 ---
-
-
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
 > [!NOTE]
@@ -80,7 +76,8 @@ Jeśli narzędzie [ProGuard](http://proguard.sourceforge.net/) (lub jakikolwiek 
 Biblioteki uwierzytelniania usługi Azure Active Directory (ADAL, Active Directory Authentication Library) mogą mieć własne ograniczenia dotyczące narzędzia ProGuard. Jeśli aplikacja jest zintegrowana z biblioteką ADAL, postępowanie względem tych ograniczeń powinno być zgodne z dokumentacją ADAL.
 
 ### <a name="entry-points"></a>Punkty wejścia
-======= Te uprawnienia są wymagane przez bibliotekę Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) w celu wykonania uwierzytelniania obsługiwanego przez brokera. Jeśli te uprawnienia nie zostaną przyznane dla aplikacji lub zostaną odwołane przez użytkownika, przepływy uwierzytelniania, które wymagają brokera (aplikacja Portal firmy), zostaną wyłączone.
+
+Te uprawnienia są wymagane przez bibliotekę Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) w celu wykonania uwierzytelniania obsługiwanego przez brokera. Jeśli te uprawnienia nie zostaną przyznane dla aplikacji lub zostaną odwołane przez użytkownika, przepływy uwierzytelniania, które wymagają brokera (aplikacja Portal firmy), zostaną wyłączone.
 
 Zestaw SDK aplikacji usługi Intune wymaga wprowadzenia zmian w kodzie źródłowym aplikacji w celu włączenia zasad ochrony aplikacji usługi Intune. Te zmiany wprowadza się przez zastąpienie klas podstawowych systemu Android równoważnymi klasami podstawowymi usługi Intune, których nazwy zawierają prefiks **MAM**. Klasy zestawu SDK są ulokowanie między klasami podstawowymi systemu Android a pochodnymi wersjami klas należącymi do aplikacji. Przykładowo w przypadku działania końcowa hierarchia dziedziczenia wygląda następująco: `Activity` > `MAMActivity` > `AppSpecificActivity`.
 
@@ -161,7 +158,7 @@ Zestaw SDK aplikacji usługi Intune wymaga trzech [uprawnień systemu Android](h
 
 * `android.permission.USE_CREDENTIALS`
 
-Te uprawnienia są wymagane przez bibliotekę Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/)) w celu wykonania uwierzytelniania obsługiwanego przez brokera. Jeśli te uprawnienia nie zostaną przyznane dla aplikacji lub zostaną odwołane przez użytkownika, przepływy uwierzytelniania, które wymagają brokera (aplikacja Portal firmy), zostaną wyłączone.
+Te uprawnienia są wymagane przez bibliotekę Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) w celu wykonania uwierzytelniania obsługiwanego przez brokera. Jeśli te uprawnienia nie zostaną przyznane dla aplikacji lub zostaną odwołane przez użytkownika, przepływy uwierzytelniania, które wymagają brokera (aplikacja Portal firmy), zostaną wyłączone.
 
 ## <a name="logging"></a>Rejestrowanie
 
@@ -410,7 +407,7 @@ Następujące powiadomienia są wysyłane do aplikacji i niektóre z nich mogą 
 
 Najpierw należy przeczytać wskazówki dotyczące integracji usługi ADAL w [repozytorium ADAL w usłudze GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
-Zestaw SDK zależy od usługi [ADAL](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/) w zakresie [uwierzytelniania](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-scenarios/) i warunkowego uruchamiania, co wymaga konfiguracji aplikacji uwzględniającej usługę [Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/). Wartości konfiguracji są przekazywane do zestawu SDK przez metadane w pliku AndroidManifest.
+Zestaw SDK zależy od usługi [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) w zakresie [uwierzytelniania](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) i warunkowego uruchamiania, co wymaga konfiguracji aplikacji uwzględniającej usługę [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Wartości konfiguracji są przekazywane do zestawu SDK przez metadane w pliku AndroidManifest.
 
 Aby skonfigurować aplikację i włączyć odpowiednie uwierzytelnianie, dodaj następujący element do węzła aplikacji w pliku AndroidManifest.xml. Niektóre z tych konfiguracji są wymagane tylko wtedy, gdy aplikacja ogólnie używa biblioteki ADAL do uwierzytelniania. W takim przypadku potrzebne są konkretne wartości, których aplikacja użyła do zarejestrowania się w usłudze AAD. Ma to na celu zapewnienie, że użytkownik końcowy nie będzie monitowany dwukrotnie w ramach uwierzytelnienia z powodu rozpoznania przez usługę AAD dwóch odrębnych wartości rejestracji: jednej z aplikacji i jednej z zestawu SDK.
 
@@ -1181,4 +1178,3 @@ Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API 
 * Korzystaj z najnowszych narzędzi do kompilacji dostępnych w zestawie SDK dla systemu Android.
 
 * Usuń wszystkie nieużywane i niepotrzebne biblioteki (np. android.support.v4).
-

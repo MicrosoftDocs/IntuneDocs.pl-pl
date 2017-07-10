@@ -1,5 +1,5 @@
 ---
-title: "Ochrona poczty e-mail w usłudze Exchange Online | Microsoft Docs"
+title: "Ochrona dostępu do poczty e-mail w usłudze Exchange Online"
 description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
@@ -14,16 +14,12 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 742a989744a11dbc1c9e17a25b70388e06dd5ae7
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/31/2017
-
-
+ms.openlocfilehash: c428d7f01872c9f0968bb69dc4dc1886a7c1828b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="protect-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchange Online i nowej usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -210,7 +206,7 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
         W przypadku wybrania tego ustawienia wszystkie urządzenia, za pomocą których jest uzyskiwany dostęp do usługi **Exchange Online**, muszą być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **Exchange Online** jest blokowany.
 
         Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform jest wymagana rejestracja w usłudze Intune oraz zgodność, istnieją jednak wyjątki:
-        *    Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
+        *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
         * Nieobsługiwane platformy takie jak system Mac OS. Jednak aplikacje korzystające z nowoczesnego uwierzytelniania i pochodzące z tych platform nadal są zablokowane.
 
     -   **Określone platformy**
@@ -275,4 +271,3 @@ Na pulpicie nawigacyjnym usługi Intune wybierz kafelek **Urządzenia z zablokow
 - [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 - [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-

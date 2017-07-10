@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 2b2c86a46c671d35551a8485b5b1a70674168ac5
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Hasło nie spełnia wymagań administratora IT
 
 Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły nie spełnia co najmniej jednego wymagania skonfigurowanego przez administratora IT. Aby rozwiązać ten problem, postępuj zgodnie z instrukcjami wyświetlanymi na urządzeniu. Poniżej przedstawiono opisy problemów.
@@ -51,4 +47,3 @@ Opisy problemów związanych z numerem PIN lub hasłem:
 - **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Administrator IT wymaga użycia większej liczby znaków złożonych w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #. Może to także dotyczyć innych kont na urządzeniu, więc pamiętaj o sprawdzeniu wszystkich pozostałych kont służbowych, aby upewnić się, że hasło spełnia wymagania określone przez dział IT dla urządzenia.
 
 Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

@@ -11,26 +11,22 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7394ff8f-3a21-414d-be4a-4626ec370720
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: ca6072ce66482f5986d37b2f61a123587ad8313f
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-install-skycure-on-your-ios-device"></a>Konieczne jest zainstalowanie aplikacji Skycure na urządzeniu z systemem iOS
 
 Administrator IT wymaga, aby przed uzyskaniem dostępu do swoich dokumentów zainstalować aplikację Skycure, która pomaga chronić urządzenie, wyszukując potencjalne zagrożenia bezpieczeństwa. W zależności od sposobu skonfigurowania aplikacji Skycure przez administratora IT na urządzeniu mogą pojawiać się różne monity.
 
 **Co należy zrobić:**
 
-1.    Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Skycure na urządzeniu.
+1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Skycure na urządzeniu.
 
   ![Wybór opcji Zainstaluj, aby zainstalować aplikację Skycure](./media/ios-mtd-install-app-request.png)
 
@@ -57,4 +53,3 @@ Jeśli aplikacja Skycure wykryje w urządzeniu zagrożenie bezpieczeństwa, zost
 **Jeśli instalacja nie działa**
 
 Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. Jeśli tak się stanie, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 465d84490f5000b13a2c7371677cee77baadc4d2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
 Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.
 
@@ -60,4 +56,3 @@ Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu
 - Jeśli nie widzisz konta służbowego, naciśnij pozycję **Połącz**, a następnie zaloguj się przy użyciu poświadczeń konta służbowego.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

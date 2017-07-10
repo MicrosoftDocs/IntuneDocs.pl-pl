@@ -1,12 +1,12 @@
 ---
 title: "Ustawienia ograniczeń urządzenia z systemem Android w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Android."
+titleSuffix: Intune on Azure
+description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Android."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/12/2017
+ms.date: 06/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3627b28b60908c225ce1797968123ce854a70a8b
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 44d80e1c72b58eccd4e69b1d561c7d651f39b3c3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemami Android i Samsung KNOX Standard w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Te ustawienia wraz z zasadami ograniczeń urządzenia z systemem Android są pomocne w konfigurowaniu urządzeń w Twojej organizacji.
 
 ## <a name="general"></a>Ogólne
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 05/23/2017
 |**Przesłanie danych diagnostycznych**|Uniemożliwia użytkownikowi użycie funkcji przesyłania danych diagnostycznych z urządzenia.|Nie|Tak|
 |**Resetuj do ustawień fabrycznych**|Umożliwia użytkownikowi przeprowadzenie resetowania urządzenia do ustawień fabrycznych.|Nie|Tak|
 |**Geolokalizacja**|Umożliwia urządzeniu korzystanie z informacji o lokalizacji (tylko Samsung KNOX Standard).|Nie|Tak|
-|**Wyłączanie**|Umożliwia użytkownikowi wyłączanie urządzenia.<br>Jeśli to ustawienie jest wyłączone, ustawienie **Liczba nieudanych logowań przed wyczyszczeniem danych z urządzenia** na urządzeniach z systemem Samsung KNOX Standard nie działa.|Nie|Tak|
+|**Wyłączanie**|Umożliwia użytkownikowi wyłączanie urządzenia.<br>Po wyłączeniu nie można ustawić opcji **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**.|Nie|Tak|
 |**Przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.|Nie|Tak|
 |**Asystent głosowy**|Umożliwia korzystanie z oprogramowania asystenta głosowego na urządzeniu.|Nie|Tak|
 |**YouTube**|Umożliwia korzystanie z aplikacji YouTube na urządzeniu.|Nie|Tak|
-|**Urządzenia udostępnione**|Konfigurowanie zarządzanego urządzenia z rozwiązaniem Samsung KNOX Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu lub wylogować się z niego przy użyciu poświadczeń usługi Azure AD, a urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane.<br>Użytkownicy końcowi po zalogowaniu otrzymują dostęp do aplikacji, a także są stosowane wobec nich zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.|Nie|Tak|
+|**Urządzenia udostępnione**|Konfigurowanie zarządzanego urządzenia z rozwiązaniem Samsung KNOX Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie nadal będzie zarządzane, niezależnie od tego, czy jest używane.<br>Po zalogowaniu się użytkownicy końcowi otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.|Nie|Tak|
 
 ## <a name="password"></a>Hasło
 
@@ -58,14 +57,14 @@ ms.lasthandoff: 05/23/2017
 |**Wymagany typ hasła**|Określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych. Wybierz spośród opcji:<br><br>    -     **Ustawienie domyślne urządzenia**<br>-     **Zabezpieczenia biometryczne na niskim poziomie**<br>    -     **Co najmniej numeryczne**<br>    -     **Złożona wartość liczbowa** (powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone)<sup>1</sup><br>    -     **Co najmniej alfabetyczne**<br>    -     **Co najmniej alfanumeryczne**<br>    -     **Co najmniej alfanumeryczne z symbolami**|Tak|Tak|
 |**Zapobiegaj ponownemu używaniu poprzednich haseł**|Uniemożliwia użytkownikowi końcowemu utworzenie hasła, które było wcześniej używane.|Tak|Tak|
 |**Odblokowywanie za pomocą odcisku palca**|Umożliwia korzystanie z odcisku palca do odblokowania obsługiwanych urządzeń.|Nie|Tak|
-|**Blokada Smart Lock i inni agenci zaufania**|Umożliwia sterowanie funkcją Smart Lock na zgodnych urządzeniach z systemem Android (tylko Samsung KNOX Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji (np. gdy zostało podłączone do danego urządzenia Bluetooth lub znajduje się w pobliżu tagu NFC). Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.|Tak (wersja 5.0 i nowsze)|Tak|
+|**Blokada Smart Lock i inni agenci zaufania**|Umożliwia sterowanie funkcją Smart Lock na zgodnych urządzeniach z systemem Android (tylko Samsung KNOX Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji. Na przykład można z tego skorzystać, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.|Tak (wersja 5.0 i nowsze)|Tak|
 |**Szyfrowanie**|Wymaga szyfrowania plików na urządzeniu.|Tak|Tak|
 
-<sup>1</sup>Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na urządzeniach docelowych do najnowszej wersji.
+<sup>1</sup> Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na tych urządzeniach do najnowszej wersji.
 
 W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego przypisania do urządzenia z systemem Android w wersji starszej niż 5.0 wystąpią opisane poniżej konsekwencje.
-- Jeśli w urządzeniu uruchomiona jest aplikacja Portal firmy w wersji wcześniejszej niż 1704, do urządzenia nie będą mieć zastosowania żadne zasady dotyczące numeru PIN, a w portalu usługi Intune będzie wyświetlany błąd.
-- Jeśli aplikacja Portal firmy została zaktualizowana do wersji 1704, w urządzeniu zostanie zastosowany tylko prosty numer PIN. To ustawienie nie jest obsługiwane w wersjach systemu Android wcześniejszych niż 5.0. W portalu usługi Intune nie jest wyświetlany błąd.
+- Jeśli na urządzeniu jest uruchomiona aplikacja Portal firmy w wersji wcześniejszej niż 1704, do urządzenia nie będą mieć zastosowania żadne zasady dotyczące numeru PIN, a w portalu usługi Intune będzie wyświetlany błąd.
+- Jeśli uruchomiona jest aplikacja Portal firmy w wersji 1704 lub nowszej, można stosować tylko prosty numer PIN. To ustawienie nie jest obsługiwane w wersjach systemu Android wcześniejszych niż 5.0. W portalu usługi Intune nie jest wyświetlany błąd.
 
 
 ## <a name="google-play-store"></a>Sklep Google Play
@@ -77,7 +76,7 @@ W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego p
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
-Na liście aplikacji z ograniczeniami można skonfigurować jedną z następujących list:
+Na liście aplikacji z ograniczeniami można skonfigurować jedną z poniższych list dla urządzeń z systemem Android i funkcją Samsung KNOX Standard:
 
 Lista **Aplikacje zabronione** — lista aplikacji (niezarządzanych przez usługę Intune), których użytkownicy nie mogą instalować ani uruchamiać.
 Lista **Zatwierdzone aplikacje** — lista aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.
@@ -91,13 +90,13 @@ Aby określić adres URL aplikacji na liście aplikacji zgodnych i niezgodnych, 
 
 W sekcji [Aplikacje w sklepie Google Play](https://play.google.com/store/apps) wyszukaj aplikację, której chcesz użyć.
 
-Otwórz stronę instalacji aplikacji i skopiuj jej adres URL do schowka. Możesz teraz użyć tego adresu URL na liście zgodnych lub niezgodnych aplikacji.
+Otwórz stronę instalacji aplikacji i skopiuj jej adres URL do schowka. Możesz teraz użyć tego adresu URL na listach zgodnych lub niezgodnych aplikacji.
 
-Przykład: wyszukaj w sklepie Google Play aplikację Microsoft Office Mobile. Adres URL, którego użyjesz, to **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
+Przykład: wyszukaj w sklepie Google Play aplikację Microsoft Office Mobile. Użyj następującego adresu URL: **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
 
 ### <a name="additional-options"></a>Opcje dodatkowe
 
-Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.        
+Możesz również kliknąć opcję **Importuj**, aby pobrać listę z pliku CSV. Użyj formatu <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*> lub kliknij przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.      
 
 ## <a name="browser"></a>Przeglądarka
 |||||
@@ -127,7 +126,7 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 |**Wybieranie głosowe**|Włącza lub wyłącza funkcję wybierania głosowego na urządzeniu.|Nie|Tak|
 |**Roaming połączeń głosowych**|Zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|Nie|Tak|
 |**Bluetooth**|Umożliwia używanie połączeń Bluetooth na urządzeniu.|Nie|Tak|
-|**NFC**|Umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej (NFC), jeśli urządzenie ją obsługuje.|Nie|Tak|
+|**NFC**|Umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej na obsługiwanych urządzeniach.|Nie|Tak|
 |**Wi-Fi**|Umożliwia korzystanie z funkcji Wi-Fi urządzenia.|Nie|Tak|
 |**Tethering Wi-Fi**|Umożliwia korzystanie z funkcji tetheringu Wi-Fi urządzenia.|Nie|Tak|
 
@@ -135,7 +134,6 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 |||||
 |-|-|-|-|
 |Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Wybierz zarządzaną aplikację**|Przejdź do odpowiedniej lokalizacji i wybierz zarządzaną aplikację, która może działać na urządzeniu pozostającym w trybie kiosku (aplikacje wskazane za pomocą linku do sklepu nie są aktualnie obsługiwane). Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji.|Nie|Tak|
+|**Wybierz zarządzaną aplikację**|Aby dodać jedną lub więcej aplikacji, które można uruchomić, gdy urządzenie jest w trybie kiosku, wybierz jedną z poniższych opcji. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.<br><br>- **Dodaj aplikacje według nazwy pakietu**<br>- **Dodaj aplikacje przez adres URL**<br>- **Dodaj aplikacje zarządzane**|Nie|Tak|
 |**Przycisk usypiania ekranu**|Włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.|Nie|Tak|
 |**Przyciski regulacji głośności**|Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.|Nie|Tak|
-

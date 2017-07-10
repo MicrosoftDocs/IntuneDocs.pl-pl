@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: c7cdb0106da1d81843f7dd07d0986d597b94a77c
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-skycure"></a>Należy rozwiązać problem zagrożenia wykrytego przez aplikację Skycure
 
 Aplikacja Skycure wykryła potencjalne zagrożenie na urządzeniu. Należy rozwiązać ten problem, aby odzyskać dostęp do służbowej poczty e-mail oraz służbowych aplikacji i plików. Wyświetlony komunikat może wyglądać tak:
@@ -49,4 +45,3 @@ Naciśnij nazwę aplikacji wyświetlaną u góry ekranu, a następnie wykonaj in
 Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

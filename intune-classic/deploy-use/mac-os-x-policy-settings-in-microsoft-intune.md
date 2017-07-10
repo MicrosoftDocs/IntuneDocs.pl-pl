@@ -1,5 +1,5 @@
 ---
-title: Ustawienia zasad systemu Mac OS X | Microsoft Docs
+title: Ustawienia zasad systemu Mac OS X
 description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Mac OS X. Ponadto przy użyciu narzędzia Apple Configurator można utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 176f4343030c242d928aaeb486dfad78e1058644
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: f4f1660f93724ee57f2d6567c2ac0f04660f49f8
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="mac-os-x-configuration-policy-settings-in-microsoft-intune"></a>Ustawienia zasad konfiguracji systemu Mac OS X w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -123,4 +120,3 @@ Dostępne są dwa sposoby tworzenia pliku profilu konfiguracji używanego przez 
 
 ### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

@@ -1,12 +1,12 @@
 ---
 title: "Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania certyfikatów PKCS za pomocą usługi Intune."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania certyfikatów PKCS za pomocą usługi Intune."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 04/22/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,14 @@ ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16fa26ae8ed06c4959807b30e430fd69fc503936
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 305a4d79aa81bd599369e72bc0cb307fdf452643
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów PKCS za pomocą usługi Intune.
 
@@ -118,7 +115,7 @@ W tym kroku:
 ### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
 
 1.  Zaloguj się do portalu Azure Portal.
-2.  Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2.  Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3.  W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
 2.  W bloku **Konfiguracja urządzenia** wybierz kolejno pozycje **Instalacja** > **Urząd certyfikacji**.
 2.  W obszarze **Krok 1** wybierz przycisk **Włącz**.
@@ -190,10 +187,11 @@ W witrynie Azure Portal wybierz obciążenie **Konfiguruj urządzenia**.
         - **Nazwa pospolita**
         - **Nazwa pospolita obejmująca adres e-mail**
         - **Nazwa pospolita jako adres e-mail**
-    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN.
+    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu należy ustawić nazwę UPN. 
+    Możesz też wybrać pozycję **Niestandardowy atrybut usługi Azure AD**. Po wybraniu tej opcji wyświetlane jest inne pole listy rozwijanej. Pole listy rozwijanej **Niestandardowy atrybut usługi Azure AD** zawiera jedną opcję: **Dział**. Po wybraniu tej opcji w przypadku, gdy w usłudze Azure AD nie został określony dział, certyfikat nie zostanie wystawiony. Aby rozwiązać ten problem, należy określić dział i zapisać zmiany. Przy kolejnym ewidencjonowaniu urządzenia problem zostanie rozwiązany, a certyfikat zostanie wystawiony. ASN.1 to oznaczenie użyte w tym polu. 
     - **Rozszerzone użycie klucza** (Android) — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków będzie wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
     - **Certyfikat główny** (Android) — wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Jest to profil zaufanego certyfikatu, który został utworzony wcześniej.
-8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
+8. Gdy skończysz, wróć do bloku **Utwórz profil** i kliknij pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
@@ -208,4 +206,3 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 - Mimo że każdy profil należy przypisać osobno, konieczne jest również przypisanie profilu zaufanego certyfikatu głównego urzędu certyfikacji oraz profilu PKCS. W przeciwnym razie zasady certyfikatu PKCS nie będą działać.
 
 Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
-

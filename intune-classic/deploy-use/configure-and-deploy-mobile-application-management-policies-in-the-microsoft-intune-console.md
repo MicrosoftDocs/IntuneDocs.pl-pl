@@ -1,5 +1,5 @@
 ---
-title: "Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Intune | Microsoft Docs"
+title: "Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Intune"
 description: "Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 65b2eb20aea4bbadba9d470590b6c344ac37b9f5
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ce97f18a799725a86ef3ab7f4f7c0cc8cdf8f062
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,11 +43,10 @@ Aby zastosować ograniczenia dla aplikacji, musi ona zawierać zestaw SDK aplika
 
 -   **Użycie aplikacji zarządzanej przez zasady**. Aplikacja zarządzana przez zasady zawiera wbudowany zestaw SDK aplikacji. Aby dodać ten typ aplikacji, wystarczy podać link do wybranej aplikacji w sklepie z aplikacjami, takim jak iTunes lub Google Play. Żadne dalsze przetwarzanie nie jest wymagane w przypadku tego typu aplikacji. Aby uzyskać więcej informacji, zobacz [listę aplikacji, których można używać z zasadami zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
--   **Użycie opakowanej aplikacji**. Opakowana aplikacja to aplikacja ponownie umieszczana w pakietach za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune w celu dodania do niej zestawu SDK aplikacji. To narzędzie jest zwykle używane do przetwarzania aplikacji firmowych utworzonych wewnętrznie. Nie można go używać do przetwarzania aplikacji, które zostały pobrane ze sklepu z aplikacjami. Aby uzyskać więcej informacji, zobacz [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+-   **Użycie opakowanej aplikacji**. Opakowana aplikacja to aplikacja ponownie umieszczana w pakietach za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune w celu dodania do niej zestawu SDK aplikacji. To narzędzie jest zwykle używane do przetwarzania aplikacji firmowych utworzonych wewnętrznie. Nie można go używać do przetwarzania aplikacji, które zostały pobrane ze sklepu z aplikacjami. Aby uzyskać więcej informacji, zobacz [Przygotowanie aplikacji systemu iOS do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](/intune/app-wrapper-prepare-ios) i [Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Microsoft Intune](/intune/app-wrapper-prepare-android).
 
-- **Napisanie własnej aplikacji, która będzie zawierała zestaw SDK aplikacji usługi Intune**. Zestaw SDK aplikacji usługi Intune pozwala dołączyć funkcje zarządzania aplikacjami do aplikacji podczas jej pisania. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](/intune-classic/develop/intune-app-sdk).
-
-Aby łatwiej dokonać wyboru między narzędziem opakowującym aplikacje a zestawem SDK aplikacji usługi Intune, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+- **Napisanie własnej aplikacji, która będzie zawierała zestaw SDK aplikacji usługi Intune**. Zestaw SDK aplikacji usługi Intune pozwala dołączyć funkcje zarządzania aplikacjami do aplikacji podczas jej pisania. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](/intune/app-sdk).
+/intune/apps-prepare-mobile-application-management Aby łatwiej dokonać wyboru między narzędziem opakowującym aplikacje a zestawem SDK aplikacji usługi Intune, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 
 Niektóre aplikacje zarządzane, takie jak aplikacja Outlook dla systemów iOS i Android, obsługują *wiele tożsamości*. Oznacza to, że usługa Intune stosuje ustawienia zarządzania tylko do firmowych kont lub danych w aplikacji.
 
@@ -197,4 +193,3 @@ W przypadkach, gdy urządzenie lub użytkownik otrzyma dwie zasady powodujące k
 -   Jeśli dla urządzenia już wdrożono zasady, istniejące ustawienia zasad nie zostaną zastąpione.
 
 -   Jeśli dla urządzenia nie wdrożono wcześniej żadnych zasad i zostaną wdrożone dwa ustawienia powodujące konflikt, będzie używane domyślne ustawienie urządzenia.
-

@@ -1,5 +1,5 @@
 ---
-title: Profile aprowizowania aplikacji | Microsoft Docs
+title: Profile aprowizowania aplikacji
 description: "Usługa Intune udostępnia narzędzia umożliwiające aktywne wdrażanie nowych zasad profilu aprowizowania na urządzeniach, na których znajdują się aplikacje bliskie wygaśnięcia."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 86fbe736-7bdb-4f5e-ae21-13c91eb2462c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: adebcc5a8d8f43bed383b51bb094fa122ebabc0a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6e975aa7ee22f826c7a0a60d637d651fd347bc54
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-ios-mobile-provisioning-profile-policies-to-prevent-your-apps-from-expiring"></a>Użyj zasad profilów aprowizacji aplikacji mobilnych systemu iOS, aby zapobiec wygaśnięciu aplikacji
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -54,4 +51,3 @@ Po wygaśnięciu certyfikatu należy ponownie podpisać aplikację przy użyciu 
     - **Plik profilu konfiguracji** — kliknij przycisk **Importuj**, a następnie wybierz plik profilu konfiguracji Apple Mobile (z rozszerzeniem **mobileprovision**) pobrany z witryny dla deweloperów firmy Apple.
 4. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz zasady**.
 5. Następnie przeprowadź wdrożenie zasad na wybranych urządzeniach z systemem iOS. Aby uzyskać dodatkowe informacje, zobacz [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-

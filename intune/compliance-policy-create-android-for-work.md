@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie zasad zgodności dla programu Android for Work"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące tworzenia zasad zgodności dla urządzeń z programem Android for Work."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące tworzenia zasad zgodności dla urządzeń z programem Android for Work."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: af5aa4f336df0f47695484b7dce1d7df29bea03d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 518b74703de88a1cded2ad38d33c52b54699dc44
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z programem Android for Work w usłudze Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune-azure-preview"></a>Tworzenie zasad zgodności dla urządzeń z programem Android for Work w wersji zapoznawczej usługi Intune Azure
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zasady zgodności są tworzone dla każdej platformy.  Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej o tym, czym są zasady zgodności, zobacz temat [What is device compliance](device-compliance.md) (Czym jest zgodność z urządzeniem). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
 
@@ -123,4 +120,3 @@ Aby uzyskać więcej informacji, zobacz [Włączanie reguły ochrony urządzenia
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

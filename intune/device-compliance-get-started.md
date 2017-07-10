@@ -1,7 +1,7 @@
 ---
 title: "Wprowadzenie do zgodności urządzeń"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: zapoznaj się z tym tematem, aby poznać wymagania wstępne, jakie należy spełnić, aby móc tworzyć zasady zgodności w usłudze Microsoft Intune"
+titleSuffix: Intune on Azure
+description: "Zapoznaj się z tym tematem, aby poznać wymagania wstępne, jakie należy spełnić, aby móc tworzyć zasady zgodności w usłudze Microsoft Intune."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,24 +15,21 @@ ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f59801abf29d15581fcdc577c5320942208595b1
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: aa9a5c8c44b82dcbc1ae7a4609b12e22c6599e9e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="get-started-with-device-compliance-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
-# <a name="get-started-with-device-compliance-in-intune-azure-preview"></a>Wprowadzenie do zasad zgodności urządzeń w wersji zapoznawczej usługi Intune Azure
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W tym temacie uzyskasz następujące informacje: 
 
 - Co jest potrzebne przez rozpoczęciem tworzenia zasad zgodności urządzeń.
-- Rzut oka na zawartość i funkcje wersji zapoznawczej portalu Intune Azure. 
+- Krótki opis zawartości i funkcji portalu Intune Azure. 
 
 Jeśli zagadnienia zgodności urządzeń są dla Ciebie czymś nowym, możesz przeczytać [ten temat](device-compliance.md), aby dowiedzieć się, czym jest zgodność urządzeń i jak można ją wykorzystać w firmie.
 
@@ -56,7 +53,7 @@ Jeśli zagadnienia zgodności urządzeń są dla Ciebie czymś nowym, możesz pr
 
 ##  <a name="azure-portal-workflow"></a>Przepływ pracy w witrynie Azure Portal
 
-Poniżej przedstawiono omówienie procedury tworzenia zasad zgodności urządzeń w wersji zapoznawczej witryny Azure Portal oraz zarządzania nimi.
+Poniżej przedstawiono omówienie procedury tworzenia zasad zgodności urządzeń w portalu Intune Azure oraz zarządzania nimi.
 
 <!---### Overview
 
@@ -83,4 +80,3 @@ Okres ważności stanu zgodności
 [Tworzenie zasad zgodności dla systemu iOS](compliance-policy-create-ios.md)
 
 [Tworzenie zasad zgodności dla systemu Windows](compliance-policy-create-windows.md)
-

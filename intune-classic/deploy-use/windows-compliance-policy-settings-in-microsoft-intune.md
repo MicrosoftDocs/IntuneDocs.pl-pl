@@ -14,15 +14,12 @@ ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 67810c51c7a7b2ec1e1ff33c11a27a8757b2bcbd
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="compliance-policy-settings-for-windows-devices-in-microsoft-intune"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -156,4 +153,3 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 
 - W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję „**10.0**” z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie **winver**. Na przykład może to wyglądać mniej więcej tak: 10.0.10586.
 > ![Zaznaczona wersja kompilacji systemu operacyjnego w oknie dialogowym „Informacje o systemie Windows”](./media/ca_win10-os-version.png)
-

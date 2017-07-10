@@ -1,7 +1,7 @@
 ---
 title: "Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i rejestracji bezpośredniej"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Apple Configurator i rejestracji bezpośredniej."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Apple Configurator i rejestracji bezpośredniej."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5347e2023a9ce19f8e8ab960e2eebf8107530220
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: dd856cc3c9d11d1079c6092025200059f0ace437
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-and-direct-enrollment"></a>Rejestracja urządzeń z systemem iOS przy użyciu programu Apple Configurator i rejestracji bezpośredniej 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **brak koligacji użytkownika**, i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej.
 
@@ -42,7 +39,7 @@ Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Ch
 
 Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem iOS należy spełnić następujące wymagania wstępne:
 
-- [Skonfigurowanie domen](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
+- [Skonfigurowanie domen](custom-domain-name-configure.md)
 - [Ustawienie urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
 - [Tworzenie grup](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
 - [Skonfigurowanie aplikacji Portal firmy](company-portal-app.md)
@@ -102,4 +99,3 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń.
 4. Na urządzeniu z systemem iOS otwórz pozycję **Ustawienia** i przejdź do pozycji **Ogólne** > **Zarządzanie urządzeniem** > **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
 
 5. Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
-

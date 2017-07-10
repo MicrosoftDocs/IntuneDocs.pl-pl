@@ -1,5 +1,5 @@
 ---
-title: "Monitorowanie wdrożeń aplikacji | Microsoft Docs"
+title: "Monitorowanie wdrożeń aplikacji"
 description: "Dowiedz się, jak monitorować aplikacje wdrożone za pomocą usługi Intune."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,12 @@ ms.assetid: 5daad56d-71c8-455b-8a55-f8b33e279a8a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 808268faa797d8576f5fb693d9940d97d17abf21
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9255a9cb966ef02aba11e0a6aaf7caf7e808a41c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="monitor-app-deployments-in-microsoft-intune"></a>Monitorowanie wdrożeń aplikacji w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -49,4 +45,3 @@ Na liście aplikacji zaznacz dowolną aplikację, a następnie wybierz pozycję 
 Na stronie aplikacji **Właściwości oprogramowania** wybierz jedną z tych kart: **Ogólne** — przedstawia ogólne informacje na temat aplikacji oraz na temat stanu jej instalacji; **Urządzenia** — przedstawia urządzenia, na których pomyślnie zainstalowano docelowe wdrożenie aplikacji; **Użytkownicy** — przedstawia użytkowników, na których urządzeniach pomyślnie zainstalowano docelowe wdrożenie aplikacji.
 
 Tak jak wcześniej można użyć listy rozwijanej **Filtry**, aby skonfigurować wartości wyświetlane na poszczególnych kartach.
-

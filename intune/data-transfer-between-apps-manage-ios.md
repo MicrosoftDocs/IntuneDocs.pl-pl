@@ -1,12 +1,12 @@
 ---
-title: "Zarządzanie przesyłaniem danych między aplikacjami systemu iOS |Wersja zapoznawcza usługi Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: zapoznaj się z tym tematem, aby dowiedzieć się, jak możesz użyć funkcji systemu iOS Otwórz w oraz zasad zarządzania aplikacjami mobilnymi do zarządzania przesyłaniem danych między aplikacjami."
+title: "Zarządzanie przesyłaniem danych między aplikacjami systemu iOS"
+titleSuffix: Intune on Azure
+description: "Skorzystaj z tego tematu, aby dowiedzieć się, jak możesz użyć funkcji systemu iOS „Otwórz w” oraz zasad zarządzania aplikacjami mobilnymi do zarządzania transferami danych między aplikacjami."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,12 @@ ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 44747236ba1bda84ccb01f613e1702c536720a2c
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e3c588d2237f48501d78af364760acf1ef290639
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-manage-data-transfer-between-ios-apps"></a>Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
 ## <a name="manage-ios-apps"></a>Zarządzanie aplikacjami systemu iOS
 W ramach ochrony danych firmowych należy upewnić się, że przesyłanie plików jest ograniczone do aplikacji zarządzanych przez Ciebie.  Aplikacjami systemu iOS można zarządzać następująco:
@@ -36,7 +33,7 @@ W ramach ochrony danych firmowych należy upewnić się, że przesyłanie plikó
 ##  <a name="using-app-protection-with-ios-apps"></a>Korzystanie z ochrony aplikacji w odniesieniu do aplikacji systemu iOS
 Zasady ochrony aplikacji można zastosować z funkcją **zarządzania funkcją Otwórz w** systemu iOS w celu ochrony danych na następujące sposoby:
 
--   **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie do zarządzania urządzeniami przenośnymi:** można skonfigurować dla zasad ochrony aplikacji ustawienie **Zezwalaj aplikacji na przesyłanie danych tylko do zarządzanych aplikacji**. Użytkownik końcowy nie będzie mógł otworzyć chronionego pliku w aplikacji, która nie jest zarządzana przez zasady.
+-   **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie MDM:** można skonfigurować zasady ochrony aplikacji z ustawieniem **Allow app to transfer data to only Policy Managed apps** (Zezwalaj aplikacji na przesyłanie danych tylko do aplikacji zarządzanych przez zasady). Zachowanie funkcji „Otwórz w” w aplikacji zarządzanej przez zasady będzie przedstawiać tylko inne aplikacje zarządzane przez zasady jako opcję udostępniania. Jeśli użytkownik próbuje wysłać plik chroniony przez zasady w formie załącznika z poziomu usługi OneDrive przy użyciu natywnego programu pocztowego, nie będzie można tego pliku odczytać.
 
 -   **Urządzenia zarządzane przez usługę Intune:** w przypadku urządzeń przenośnych zarejestrowanych w usłudze Intune przesyłanie danych między aplikacjami z zasadami ochrony aplikacji a innymi aplikacjami zarządzanymi systemu iOS wdrożonymi za pośrednictwem usługi Intune jest automatycznie dozwolone. Aby zezwolić na przesyłanie danych między aplikacjami z zasadami ochrony aplikacji, włącz ustawienie **Zezwalaj aplikacji na przesyłanie danych tylko do zarządzanych aplikacji**. Funkcja **zarządzania funkcją Otwórz w** umożliwia sterowanie przesyłaniem danych między aplikacjami, które zostały wdrożone za pomocą usługi Intune.   
 
@@ -108,4 +105,3 @@ Najpierw [utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.m
 
 ### <a name="see-also"></a>Zobacz także
 [Co to są zasady ochrony aplikacji w usłudze Intune](app-protection-policy.md)
-

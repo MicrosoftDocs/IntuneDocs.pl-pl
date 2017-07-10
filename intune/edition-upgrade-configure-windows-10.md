@@ -1,12 +1,12 @@
 ---
 title: "Konfigurowanie uaktualnień wersji systemu Windows 10 w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące sposobu korzystania z usługi Intune do uaktualniania zarządzanych urządzeń z systemem Windows 10 do innych wersji."
+titleSuffix: Intune on Azure
+description: "Informacje o korzystaniu z usługi Intune do uaktualniania zarządzanych urządzeń z systemem Windows 10 do innych wersji."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/14/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 59a29cee51f228c647a2491a2e452555ac5aba05
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 30cea0ecfa62e9bbc0200d15eff94782d48a81fa
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-windows-10-edition-upgrades-in-microsoft-intune"></a>Jak skonfigurować uaktualnienia wersji systemu Windows 10 w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zapoznaj się z informacjami zawartymi w tym temacie, aby dowiedzieć się, jak skonfigurować profil uaktualnienia systemu Windows 10. Profil ten umożliwia automatyczne uaktualnianie urządzeń z uruchomioną jedną z następujących wersji systemu Windows 10 do innej wersji:
 
@@ -52,7 +49,7 @@ Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz j
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia ograniczeń dotyczących urządzeń
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
 2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
 3. W bloku profilów wybierz pozycję **Utwórz profil**.
@@ -68,5 +65,4 @@ Przed rozpoczęciem uaktualniania urządzeń do najnowszej wersji potrzebujesz j
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
-
 

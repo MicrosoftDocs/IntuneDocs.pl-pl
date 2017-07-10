@@ -1,11 +1,11 @@
 ---
-title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń | Microsoft Docs"
+title: "Rozwiązywanie problemów z rejestrowaniem urządzeń"
 description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/10/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e72051f9318d24ed36fc39ea6645041f0a150a40
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: f0c55caa70c1a23da549f2fe8804c2ae69ef6045
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -34,11 +31,11 @@ Ten temat zawiera sugestie dotyczące rozwiązywania problemów z rejestracją u
 
 Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
 
--    [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune-classic/deploy-use/prerequisites-for-enrollment)
--    [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--    [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
--    [Konfigurowanie zarządzania urządzeniami z systemem Android](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) — nie są wymagane dodatkowe kroki
--    [Konfigurowanie zarządzania urządzeniami z systemem Android for Work](/intune-classic/deploy-use/set-up-android-for-work)
+-   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](/intune-classic/deploy-use/prerequisites-for-enrollment)
+-   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-   [Konfigurowanie zarządzania urządzeniami z systemem Android](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) — nie są wymagane dodatkowe kroki
+-   [Konfigurowanie zarządzania urządzeniami z systemem Android for Work](/intune-classic/deploy-use/set-up-android-for-work)
 
 Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
 
@@ -110,8 +107,8 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 1.  Sprawdź, czy urząd MDM został odpowiednio ustawiony dla używanego typu usługi Intune (dla usługi Intune, Office 365 lub usługi Intune z programem System Center Configuration Manager). W przypadku usługi Intune urząd zarządzania urządzeniami przenośnymi jest ustawiany w obszarze **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**. W przypadku programu Configuration Manager z usługą Intune jest on ustawiany podczas konfigurowania łącznika usługi Intune, a w usłudze Office 365 służy do tego ustawienie **Urządzenia przenośne**.
 
-    > [!NOTE]
-    > Ustawiony urząd zarządzania urządzeniami przenośnymi można zmienić tylko po skontaktowaniu się z pomocą techniczną. Opis tej procedury zawarto w artykule [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    > [!NOTE]    
+    > W programie Configuration Manager w wersji 1610 lub nowszej i w usłudze Microsoft Intune w wersji 1705 można zmienić urząd certyfikacji MDM bez konieczności kontaktowania się Pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Szczegółowe informacje można znaleźć w sekcji [Co należy zrobić, jeśli wybrano błędne ustawienie urzędu MDM](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 2.  Upewnij się, że poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W tym celu sprawdź, czy nazwa UPN użytkownika odpowiada informacjom z usługi Active Directory w portalu Office 365.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
@@ -230,16 +227,16 @@ Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagaj�
 
 Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
 
-1.    Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
-2.    Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
-3.    Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
-4.    Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
-5.    Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
-6.    Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
-7.    Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
-8.    Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
-9.    Uruchom ponownie serwery usług AD FS.
-10.    Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
+1.  Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
+2.  Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
+3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
+4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
+5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
+6.  Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
+7.  Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
+8.  Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
+9.  Uruchom ponownie serwery usług AD FS.
+10. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
 
 **Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
@@ -261,10 +258,10 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 |-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |NoEnrollmentPolicy|Nie znaleziono zasad rejestracji|Sprawdź, czy skonfigurowane zostały wszystkie wymagania wstępne rejestracji, takie jak certyfikat usługi Apple Push Notification Service (APNs), i czy opcja „iOS jako platforma” jest włączona. Aby uzyskać instrukcje, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
 |DeviceCapReached|Zarejestrowano już zbyt wiele urządzeń przenośnych.|Aby można było zarejestrować kolejne urządzenie przenośne, użytkownik musi usunąć jedno z obecnie zarejestrowanych urządzeń przenośnych z Portalu firmy. Zapoznaj się z instrukcjami dotyczącymi odpowiedniego typu urządzenia: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios) lub [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
-|APNSCertificateNotValid|Występuje problem z certyfikatem umożliwiającym komunikację urządzenia przenośnego z siecią firmową.<br /><br />|Usługa Apple Push Notification Service (APNs) udostępnia kanał dostępu do zarejestrowanych urządzeń z systemem iOS. Jeśli nie wykonano procedury uzyskiwania certyfikatu usługi APNs lub certyfikat usługi APNs wygasł, próby rejestracji zakończą się niepowodzeniem oraz zostanie wyświetlony ten komunikat.<br /><br />Przejrzyj informacje na temat sposobu konfigurowania użytkowników w sekcjach [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) oraz [Organizowanie użytkowników i urządzeń](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|APNSCertificateNotValid|Występuje problem z certyfikatem umożliwiającym komunikację urządzenia przenośnego z siecią firmową.<br /><br />|Usługa Apple Push Notification Service (APNs) udostępnia kanał dostępu do zarejestrowanych urządzeń z systemem iOS. Jeśli nie wykonano procedury uzyskiwania certyfikatu usługi APNs lub certyfikat usługi APNs wygasł, próby rejestracji zakończą się niepowodzeniem oraz zostanie wyświetlony ten komunikat.<br /><br />Przejrzyj informacje na temat sposobu konfigurowania użytkowników w sekcjach [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](/intune/users-permissions-add) oraz [Organizowanie użytkowników i urządzeń](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |AccountNotOnboarded|Występuje problem z certyfikatem umożliwiającym komunikację urządzenia przenośnego z siecią firmową.<br /><br />|Usługa Apple Push Notification Service (APNs) udostępnia kanał dostępu do zarejestrowanych urządzeń z systemem iOS. Jeśli nie wykonano procedury uzyskiwania certyfikatu usługi APNs lub certyfikat usługi APNs wygasł, próby rejestracji zakończą się niepowodzeniem oraz zostanie wyświetlony ten komunikat.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
 |DeviceTypeNotSupported|Prawdopodobnie użytkownik wykonał próbę zarejestrowania urządzenia z systemem innymi niż iOS. Typ urządzenia przenośnego, które próbujesz zarejestrować, nie jest obsługiwany.<br /><br />Upewnij się, że na urządzeniu działa system iOS w wersji 8.0 lub nowszej.<br /><br />|Upewnij się, że na urządzeniu użytkownika działa system iOS w wersji 8.0 lub nowszej.|
-|UserLicenseTypeInvalid|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie należy jeszcze do wymaganej grupy użytkowników.<br /><br />|Aby użytkownicy mogli rejestrować urządzenia, muszą należeć do odpowiedniej grupy użytkowników. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br /><br />Więcej informacji zawierają następujące sekcje:<br /><br />Zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune), a także informacje o sposobie konfigurowania użytkowników w temacie [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) oraz [Organizowanie użytkowników i urządzeń](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|UserLicenseTypeInvalid|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie należy jeszcze do wymaganej grupy użytkowników.<br /><br />|Aby użytkownicy mogli rejestrować urządzenia, muszą należeć do odpowiedniej grupy użytkowników. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br /><br />Więcej informacji zawierają następujące sekcje:<br /><br />Zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune), a także informacje o sposobie konfigurowania użytkowników w temacie [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](/intune/users-permissions-add) oraz [Organizowanie użytkowników i urządzeń](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |MdmAuthorityNotDefined|Nie określono urzędu zarządzania urządzeniami przenośnymi.<br /><br />|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune.<br /><br />Zapoznaj się z pozycją 1 w sekcji „Krok 6. Rejestrowanie urządzeń przenośnych i instalowanie aplikacji” w temacie [Rozpoczynanie pracy z 30-dniową wersją próbną usługi Microsoft Intune](/Intune/Understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Urządzenia są nieaktywne lub nie jest możliwe nawiązanie łączności między nimi a konsolą administracyjną
@@ -413,4 +410,3 @@ Może to być spowodowane wcześniejszym zarejestrowaniem komputera lub używani
 
 ### <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](how-to-get-support-for-microsoft-intune.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).
-
