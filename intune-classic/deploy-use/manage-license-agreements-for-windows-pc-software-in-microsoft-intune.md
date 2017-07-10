@@ -1,5 +1,5 @@
 ---
-title: "Zarządzanie umowami licencyjnymi oprogramowania na komputerach z oprogramowaniem klienckim usługi Intune | Microsoft Docs"
+title: "Zarządzanie umowami licencyjnymi oprogramowania na komputerach z oprogramowaniem klienckim usługi Intune"
 description: "Usługa Intune umożliwia zarządzanie umowami licencyjnymi dotyczącymi oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft oraz oprogramowania zakupionego w inny sposób."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 18fbeb0e5bbf46795a02590a8dce205342a3a357
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: afaeb5b1af35008e6aa778e4391cafeda979bdc0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Usługa Microsoft Intune umożliwia dodawanie informacji o umowach licencyjnych i zarządzanie umowami licencyjnymi dotyczącymi oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft. Można to również robić dla oprogramowania firmy Microsoft i innych firm, które zostało zakupione w inny sposób. Możesz również organizować te informacje w logiczne grupy.
 
 > [!IMPORTANT]
@@ -181,4 +181,3 @@ Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. 
 |Zmienianie nazwy grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Edytuj grupę licencji** w menu **Zadania** .|
 |Usuwanie grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Usuń grupę licencji** w menu **Zadania** . **Porada:** wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji **Nieprzypisane umowy**.|
 |Usuwanie umowy licencyjnej|W obszarze roboczym **Licencje** wybierz umowę, a następnie wybierz polecenie **Usuń**. **Wskazówka:** aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie **Odśwież teraz** na stronie **Omówienie licencji** lub na karcie **Ogólne** dla konkretnej grupy licencji.|
-

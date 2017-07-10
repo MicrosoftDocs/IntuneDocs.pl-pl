@@ -1,5 +1,5 @@
 ---
-title: "Ochrona usługi Dynamics CRM Online | Microsoft Docs"
+title: "Ochrona dostępu do usługi Dynamics CRM Online"
 description: "Ochrona i kontrola dostępu do usługi Dynamics CRM Online przy użyciu dostępu warunkowego."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6740e6f5894f6dfd7788d90cc8f445e0a63821a9
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: da92d75cfafa2a605ed8606ba7c8f3ec18dc6063
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Ochrona dostępu do usługi Dynamics CRM Online przy użyciu usługi Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -84,8 +81,8 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
   * **iOS**
   * **Android**
 4.  W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, do których zostaną zastosowane zasady. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
-5.    W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
-6.    Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
+5.  W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
+6.  Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 
 Dostęp warunkowy dla usługi Dynamics CRM został skonfigurowany. Nie musisz wdrażać zasad dostępu warunkowego; są one aktywne natychmiast.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Monitorowanie zgodności i zasad dostępu warunkowego
@@ -104,4 +101,3 @@ Wybierz dowolną grupę urządzeń przenośnych, a następnie na karcie **Urząd
 * [Ochrona dostępu do usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 * [Ochrona dostępu do usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-

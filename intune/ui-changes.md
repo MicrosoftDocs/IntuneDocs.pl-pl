@@ -1,7 +1,7 @@
 ---
 title: "Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: ułatwia znajdowanie funkcji usługi Intune w konsoli platformy Azure."
+titleSuffix: Intune on Azure
+description: "Ułatwia znajdowanie funkcji usługi Intune w konsoli platformy Azure."
 keywords: 
 author: dagerrit
 ms.author: dagerrit
@@ -15,27 +15,16 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9dd6e93108ffc46e9e52b6928cf513161d29f7a4
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1b9d1ac3930e29bc024ece7e6b9b11c91a4e14c1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w konsoli klasycznej i zastanawiają się, jak zrobić coś w usłudze Intune na platformie Azure. Jeśli w tym artykule nie została uwzględniona funkcja, którą próbujesz znaleźć, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
 ## <a name="quick-reference-guide"></a>Krótki przewodnik
-|Funkcja |Ścieżka w konsoli klasycznej|Ścieżka w usłudze Intune na platformie Azure| |------------||---------------|---------------|
-|Device Enrollment Program (DEP) |Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program|[Rejestrowanie urządzenia > Rejestracja Apple > Token programu rejestrowania](#where-did-apple-dep-go) |
-|Device Enrollment Program (DEP)| Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program |[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu rejestrowania](#where-did-apple-dep-go) |
-|Reguły rejestracji |Administracja > Zarządzanie urządzeniami przenośnymi > Reguły rejestracji|[Rejestrowanie urządzenia > Ograniczenia rejestracji](#where-did-enrollment-rules-go) |
-|Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS|[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu rejestrowania](#where-did-corporate-pre-enrolled-devices-go) |
-|Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS| [Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Apple Configurator](#where-did-corporate-pre-enrolled-devices-go)|
-|Grupy według numeru IMEI (wszystkie platformy)| Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru IMEI (wszystkie platformy) | [Rejestrowanie urządzenia > Identyfikatory urządzeń firmowych](#by-imei-all-platforms)|
-| Profil rejestracji urządzeń firmowych| Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile programu rejestracji](#where-did-corporate-pre-enrolled-devices-go) |
-| Profil rejestracji urządzeń firmowych | Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile programu Apple Configurator](#where-did-corporate-pre-enrolled-devices-go) |
-| Android for Work | Administrator > Zarządzanie urządzeniami przenośnymi > Android for Work | Rejestrowanie urządzenia > Rejestracja w programie Android for Work | | Warunki i postanowienia | Zasady > Warunki i postanowienia | Rejestrowanie urządzenia > Warunki i postanowienia |
+|Funkcja |Ścieżka w konsoli klasycznej|Ścieżka w usłudze Intune na platformie Azure| |------------||---------------|---------------| |Device Enrollment Program (DEP) |Administracja > Zarządzanie urządzeniami mobilnymi > iOS i Mac OS X > Device Enrollment Program|[Rejestrowanie urządzenia > Rejestracja Apple > Token programu Enrollment Program](#where-did-apple-dep-go) | |Device Enrollment Program (DEP)| Administracja > Zarządzanie urządzeniami mobilnymi > iOS i Mac OS X > Device Enrollment Program |[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Enrollment Program](#where-did-apple-dep-go) | |Reguły rejestracji |Administracja > Zarządzanie urządzeniami mobilnymi > Reguły rejestracji|[Rejestrowanie urządzenia > Ograniczenia rejestracji](#where-did-enrollment-rules-go) | |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS|[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Enrollment Program](#where-did-corporate-pre-enrolled-devices-go) | |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS| [Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu AC](#where-did-corporate-pre-enrolled-devices-go)| |Grupy według numeru IMEI (wszystkie platformy)| Grupy > Wszystkie urządzenia > Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru IMEI (wszystkie platformy) | [Rejestrowanie urządzenia > Identyfikatory urządzeń firmowych](#by-imei-all-platforms)| | Profil rejestracji urządzeń firmowych| Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile programu Enrollment Program](#where-did-corporate-pre-enrolled-devices-go) | | Profil rejestracji urządzeń firmowych | Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile programu AC](#where-did-corporate-pre-enrolled-devices-go) | | Android for Work | Administrator > Zarządzanie urządzeniami mobilnymi > Android for Work | Rejestrowanie urządzenia > Rejestracja w programie Android for Work | | Warunki i postanowienia | Zasady > Warunki i postanowienia | Rejestrowanie urządzenia > Warunki i postanowienia |
 
 
 ## <a name="where-do-i-manage-groups"></a>Gdzie mogę zarządzać grupami?
@@ -117,4 +106,3 @@ Aby ułatwić rozróżnienie tych dwóch typów profilów i ograniczyć liczbę 
 
 **Profile narzędzia Apple Configurator**
 ![Ilustracja przedstawiająca profile narzędzia Apple Configurator na platformie Azure](./media/16-azure-ac-profiles.png)
-

@@ -1,12 +1,12 @@
 ---
 title: "Korzystanie z kategorii urządzeń w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: korzystanie z kategorii urządzeń, spośród których mogą wybierać użytkownicy rejestrujący swoje urządzenia w usłudze Intune."
+titleSuffix: Intune on Azure
+description: "Korzystanie z kategorii urządzeń, spośród których mogą wybierać użytkownicy rejestrujący swoje urządzenia w usłudze Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,26 +14,23 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0ac86a48c00c278b4d65dd7aabb096673fb2c00d
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 4e7c46a0bab45223293b73f8eaa2f8b40850cd43
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="map-device-groups"></a>Mapowanie grup urządzeń
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Użyj w usłudze Microsoft Intune kategorii urządzenia, aby automatycznie dodawać urządzenia do grup na podstawie zdefiniowanych kategorii, co ułatwi zarządzanie tymi urządzeniami.
 
 Kategorie urządzeń korzystają z następującego przepływu pracy:
-1.    Utworzenie kategorii do wyboru dla użytkowników podczas rejestrowania urządzeń
-4.    Gdy użytkownik końcowy rejestruje urządzenie, musi wybrać kategorię na liście skonfigurowanych kategorii. Jeśli urządzenie jest już zarejestrowane, użytkownik końcowy zostanie poproszony o wybranie kategorii podczas następnego uzyskiwania dostępu do aplikacji Portal firmy.
-
+1. Utworzenie kategorii do wyboru dla użytkowników podczas rejestrowania urządzeń
+3. Gdy użytkownik końcowy urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy końcowi muszą skorzystać z witryny internetowej Portal firmy (aby uzyskać więcej informacji, zobacz sekcję **Po skonfigurowaniu grup urządzeń** w tym temacie).
+4. Następnie możesz wdrażać do tych grup zasady i aplikacje.
 
 Możesz utworzyć dowolne kategorie urządzeń, na przykład:
 - Urządzenie w punkcie sprzedaży
@@ -46,7 +43,6 @@ Możesz utworzyć dowolne kategorie urządzeń, na przykład:
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Krok 1. Utworzenie kategorii urządzeń w bloku Intune witryny Azure Portal
 1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Zarejestruj urządzenia**.
 3. W bloku **Rejestracja** wybierz pozycję **Kategorie urządzeń**.
 4. Na stronie **Kategorie urządzeń** wybierz pozycję **Utwórz**, aby dodać nową kategorię.
@@ -66,31 +62,35 @@ Gdy skonfigurujesz grupy urządzeń, a użytkownicy zarejestrują urządzenia, z
 
 ### <a name="how-to-view-the-categories-of-devices-you-manage"></a>Wyświetlanie kategorii zarządzanych urządzeń
 
-1.    W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1.  W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
 2. W bloku Intune witryny Azure Portal wybierz pozycję **Urządzenia i grupy**.
 
-3.    W obszarze **Zarządzaj** kliknij przycisk **Wszystkie urządzenia**.
+3.  W obszarze **Zarządzaj** kliknij przycisk **Wszystkie urządzenia**.
 
-4.    Na liście urządzeń sprawdź kolumnę **Kategoria**.
+4.  Na liście urządzeń sprawdź kolumnę **Kategoria**.
 
 Jeśli kolumna **Kategoria** nie jest wyświetlana, kliknij przycisk **Kolumny**, wybierz z listy pozycję **Kategoria**, a następnie kliknij przycisk **Zastosuj**.
 
 ### <a name="to-change-the-category-of-a-device"></a>Zmiana kategorii urządzenia
 
 1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Urządzenia i grupy**.
 4. W bloku **Urządzenia i grupy** wybierz kolejno pozycje **Zarządzaj** > **Wszystkie urządzenia**.
 5. Wybierz odpowiednie urządzenie z listy, a następnie w bloku właściwości wybierz opcje **Zarządzaj** > **Właściwości**.
 6. W następnym bloku można zmienić **kategorię urządzenia** na inną skonfigurowaną wcześniej kategorię o dowolnej nazwie.
 
+## <a name="after-you-configure-device-groups"></a>Po skonfigurowaniu grup urządzeń
 
+Gdy użytkownik końcowy urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
+
+Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy końcowi muszą po zarejestrowaniu urządzenia skorzystać z witryny internetowej Portal firmy (portal.manage.microsoft.com). Na urządzeniu z systemem Windows uzyskaj dostęp do tej witryny internetowej i wybierz kolejno pozycje **Menu** > **Moje urządzenia**. Wybierz zarejestrowane urządzenie wymienione na stronie, a następnie wybierz kategorię. 
+
+Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie zostało zarejestrowane przed skonfigurowaniem kategorii, użytkownik końcowy zobaczy powiadomienie dotyczące urządzenia w witrynie internetowej Portal firmy i zostanie poproszony o wybranie kategorii przy następnej próbie uzyskania dostępu do aplikacji Portal firmy dla systemu iOS lub Android.
 
 ## <a name="further-information"></a>Dodatkowe informacje
 - Możesz edytować kategorię urządzenia w witrynie Azure Portal, jeśli jednak to zrobisz, musisz ręcznie zaktualizować wszystkie grupy zabezpieczeń usługi Azure Active Directory odwołujące się do tej kategorii.
 
 - Jeśli usuniesz kategorię, dla wszelkich urządzeń, które zostały do niej przypisane, zostanie wyświetlona nazwa kategorii **Nieprzypisane**.
-
 
 

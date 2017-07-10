@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 6b25c4551cd66e2e58b12c90ca9055c14b4e33cd
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Należy zaktualizować system operacyjny urządzenia z systemem Android
 
 Wyświetlenie komunikatu informującego, że „minimalny poziom poprawki zabezpieczeń systemu Android nie został skonfigurowany”, oznacza, że konieczne jest zainstalowanie aktualizacji w celu zagwarantowania, że urządzenie pozostanie bezpieczne. _Poprawka_ stanowi element procesu konserwacji i jest udostępniana w celu umożliwienia bezproblemowego działania oprogramowania oraz zapewnienia jego aktualności. Administrator IT wymaga zainstalowania tej poprawki, ponieważ stanowi ona gwarancję, że dane firmowe na urządzeniu są chroniony w najlepszy możliwy sposób. Lokalizacja wymaganej poprawki zabezpieczeń może się różnić w zależności od tego, czy masz określony typ urządzenia firmy Samsung.
@@ -43,4 +39,3 @@ Przejdź do menu **Ustawienia** > **Aktualizacje systemu** > **Sprawdź dostępn
 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

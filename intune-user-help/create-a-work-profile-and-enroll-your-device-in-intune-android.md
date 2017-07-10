@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 734856b1598a225f6f3a2aaf640d34d393c744e7
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
 
 Rejestrowanie urządzenia z systemem Android umożliwia dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. W ramach rejestracji konfigurowany jest profil pracy, który oddziela dane osobiste na urządzeniu od danych służbowych. Administrator IT może zarządzać tylko profilem służbowym, który zawiera dane służbowe. Administrator IT nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
@@ -88,4 +83,3 @@ Aby utworzyć profil służbowy:
     ![Strona aplikacji Sklepu Play dla firm](./media/andr-afw-tap-work-play-store-icon.png)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 4c4d46a8d90c3435b640a6135d69df1f3949b6a3
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Windows przy użyciu Portalu firmy?
 
 Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy lub [witryny Portal firmy](reset-erase-your-device-cpwebsite.md) powoduje przywrócenie na urządzeniu ustawień fabrycznych oraz usunięcie wszystkich aplikacji, ustawień i danych, łącznie z danymi osobistymi. Wpływ na poszczególne urządzenia zależy od typu urządzenia i sposobu korzystania z niego (zgodnie z opisem w poniższej tabeli). Aby uzyskać instrukcje dotyczące resetowania utraconego lub skradzionego urządzenia, zobacz [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md).
@@ -38,4 +33,3 @@ Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy 
 |Komputery osobiste i laptopy|**Windows 8.1 i Windows 8**<br />Komputer z systemem Windows 8 lub Windows 8.1 można zresetować tylko wtedy, gdy jest on używany tylko do obsługi poczty e-mail.<br /><br />**Windows 7 lub Windows Vista**<br />Nie można zresetować komputera z systemem Windows 7 lub starszym.|
 
 Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

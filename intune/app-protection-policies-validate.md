@@ -1,7 +1,7 @@
 ---
 title: Weryfikowanie zasad ochrony aplikacji
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: w tym temacie opisano sposób testowania i sprawdzania, czy zasady ochrony aplikacji są poprawnie skonfigurowane i działają zgodnie z oczekiwaniami."
+titleSuffix: Intune on Azure
+description: "W tym temacie opisano sposób testowania i sprawdzania, czy zasady ochrony aplikacji są poprawnie skonfigurowane i działają zgodnie z oczekiwaniami."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,21 +15,18 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 26e191965eff482cf97b920e028cdf60d1881d32
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ddfecbcd8709569ff177e6c7021d3e8fdab39290
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Sposób sprawdzania poprawności ustawień zasad ochrony aplikacji
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Ten temat zawiera informacje dotyczące sprawdzania występowania problemów po skonfigurowaniu zasad ochrony aplikacji. Te wskazówki dotyczą zasad ochrony aplikacji w **wersji zapoznawczej** portalu Azure Portal.
+Ten temat zawiera informacje dotyczące sprawdzania występowania problemów po skonfigurowaniu zasad ochrony aplikacji. Te wskazówki dotyczą zasad ochrony aplikacji w portalu Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Sprawdzanie pod kątem objawów
 Zgłaszanie problemów przez użytkowników jest mało prawdopodobne, ponieważ ochrona aplikacji to narzędzie ochrony danych. W przypadku problemu z konfiguracją ochrony aplikacji użytkownik będzie mieć nieograniczony dostęp, taki jaki miałby bez stosowania ochrony aplikacji, i nie będzie świadomy wystąpienia problemu. Z tego powodu zaleca się sprawdzenie poprawności konfiguracji ochrony aplikacji przez pilotażowe wdrożenie zasad ochrony aplikacji dla małej grupy użytkowników, którzy celowo przetestują ograniczenia związane z ochroną aplikacji.
@@ -61,4 +58,3 @@ Poniżej przedstawiono akcje do wykonania na podstawie stanu użytkownika:
 ### <a name="see-also"></a>Zobacz także
 
 [Co to są zasady ochrony aplikacji w usłudze Intune?](app-protection-policies.md)
-

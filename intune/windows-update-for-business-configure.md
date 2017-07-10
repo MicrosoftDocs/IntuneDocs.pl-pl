@@ -1,6 +1,7 @@
 ---
-title: "Konfigurowanie ustawień funkcji Windows Update dla firm — usługa Intune | Wersja zapoznawcza usługi Intune Azure | Dokumentacja firmy Microsoft"
-description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak skonfigurować ustawienia usługi Windows Update dla firm w usłudze Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10."
+title: "Konfigurowanie ustawień usługi Windows Update dla firm — usługa Intune"
+titleSuffix: Intune on Azure
+description: "Informacje o konfigurowaniu ustawień usługi Windows Update dla firm w usłudze Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10."
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -13,18 +14,15 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b0bc3e557f303cd80c780634ba47b24405c327e1
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c05a6c007b147d81c4d98b708c0e0ae92392f0e0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-windows-update-for-business-settings-with-microsoft-intune"></a>Jak konfigurować ustawienia usługi Windows Update dla firm za pomocą usługi Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Wprowadzenie
 Windows jako usługa to nowy sposób udostępniania aktualizacji dla systemu Windows 10. Począwszy od systemu Windows 10, wszystkie nowe funkcjonalne i jakościowe aktualizacje będą obejmować zawartość wszystkich poprzednich aktualizacji. Oznacza to, że po zainstalowaniu najnowszej aktualizacji masz pewność, iż urządzenia systemu Windows 10 są całkowicie aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
@@ -87,7 +85,7 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
     - **Zachowanie podczas automatycznej aktualizacji**: wybierz sposób zarządzania automatyczną aktualizacją podczas skanowania, pobierania i instalowania aktualizacji. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
     - **Okres opóźnienia aktualizacji dotyczących jakości (dni)** — określ, o ile dni będą opóźniane aktualizacje dotyczące jakości. Okres opóźnienia aktualizacji dotyczących jakości może wynosić do 30 dni od daty wydania aktualizacji.  
 
-      Aktualizacje dotyczące jakości są zazwyczaj poprawkami i ulepszeniami istniejących funkcji systemu Windows i najczęściej są publikowane w pierwszy wtorek każdego miesiąca, choć firma Microsoft może je udostępnić w dowolnym momencie. Możesz zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących jakości po dniu ich udostępnienia.
+    Aktualizacje dotyczące jakości są zazwyczaj poprawkami i ulepszeniami istniejących funkcji systemu Windows i najczęściej są publikowane w pierwszy wtorek każdego miesiąca, choć firma Microsoft może je udostępnić w dowolnym momencie. Możesz zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących jakości po dniu ich udostępnienia.
     - **Okres opóźnienia aktualizacji dotyczących funkcji (dni)** — określ, o ile dni będą opóźniane aktualizacje dotyczące funkcji. Okres opóźnienia aktualizacji dotyczących funkcji może wynosić do 180 dni od daty wydania aktualizacji.
 
     Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Gałąź obsługi** (**CB** lub **CBB**) można zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących funkcji po ich udostępnieniu przez firmę Microsoft w usłudze Windows Update.
@@ -148,4 +146,3 @@ Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkc
 > [!IMPORTANT]
 > Wydane polecenie wstrzymania urządzenia otrzymują przy następnym zarejestrowaniu się w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem.
 > Ponadto jeśli urządzenie docelowe jest wyłączone w momencie wydania polecenia wstrzymania, może ono po włączeniu pobrać i zainstalować zaplanowane aktualizacje przed zarejestrowaniem się w usłudze Intune.
-

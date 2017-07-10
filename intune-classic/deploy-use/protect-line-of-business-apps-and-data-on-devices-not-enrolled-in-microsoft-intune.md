@@ -1,5 +1,5 @@
 ---
-title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zarejestrowane | Microsoft Docs"
+title: "Ochrona aplikacji biznesowych na urządzeniach, które nie zostały zarejestrowane"
 description: "W tym temacie opisano, jak można przygotować swoje niestandardowe aplikacje biznesowe, aby mogły stosować zasady zarządzania aplikacjami mobilnymi, co może pomóc w uniknięciu utraty danych."
 keywords: 
 author: mtillman
@@ -14,29 +14,26 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f30837d90954b9b30b27e77240bb241db6e2b037
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0b09daa05db673817bea67cd8b88c2ac63be7f1e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Ochrona aplikacji biznesowych i danych na urządzeniach niezarejestrowanych w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Zasady zarządzania aplikacjami mobilnymi (MAM, mobile application management) pomagają chronić dane firmy przez ograniczanie możliwości wykonywania akcji, które mogą spowodować wyciek danych firmy i narzucenie wymagań w zakresie dostępu do danych (np. kod PIN w aplikacji). Aby zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji biznesowych systemu iOS lub Android, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego dostępnego w usłudze Microsoft Intune. Opakowywanie aplikacji jest procesem stosowania warstwy zarządzania do aplikacji mobilnej bez konieczności wprowadzania zmian w aplikacji. Po opakowaniu aplikacji można stosować do niej zasady zarządzania aplikacjami mobilnymi i rozpowszechniać ją wśród użytkowników.  
+Zasady zarządzania aplikacjami mobilnymi (MAM, mobile application management) pomagają chronić dane firmy przez ograniczanie możliwości wykonywania akcji, które mogą spowodować wyciek danych firmy i narzucenie wymagań w zakresie dostępu do danych (np. kod PIN w aplikacji). Aby zastosować zasady zarządzania aplikacjami mobilnymi do aplikacji biznesowych systemu iOS lub Android, należy najpierw opakować aplikację przy użyciu narzędzia opakowującego dostępnego w usłudze Microsoft Intune. Opakowywanie aplikacji jest procesem polegającym na zastosowaniu warstwy zarządzania do aplikacji mobilnej bez konieczności zastosowania chan/intune/apps-prepare-mobile-application-managementes oraz rozpowszechniania go użytkownikom.  
 
-W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania aplikacjami mobilnymi do aplikacji używanych przez użytkowników na **niezarządzanych urządzeniach należących do pracowników** i urządzeniach zarządzanych przez **rozwiązanie do zarządzania urządzeniami przenośnymi (MDM, mobile device management) oferowane przez inną firmę**.  Aby przygotować aplikacje biznesowe uruchamiane na **urządzeniach zarejestrowanych w ramach zarządzania urządzeniami przenośnymi w usłudze Intune**, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania aplikacjami mobilnymi do aplikacji używanych przez użytkowników na **niezarządzanych urządzeniach należących do pracowników** i urządzeniach zarządzanych przez **rozwiązanie do zarządzania urządzeniami przenośnymi (MDM, mobile device management) oferowane przez inną firmę**.  Aby przygotować aplikacje biznesowe uruchamiane na **urządzeniach zarejestrowanych w ramach zarządzania urządzeniami przenośnymi w usłudze Intune**, zobacz [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 
 
 ##  <a name="step-1-prepare-the-app"></a>Krok 1. Przygotowywanie aplikacji
 
-Przed zastosowaniem zasady zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) i [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) lub użyć [zestawu SDK aplikacji Intune](../develop/intune-app-sdk.md) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
+Przed zastosowaniem zasady zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](prepare-ios-apps-for-mo/intune/apps-prepare-mobile-application-managementoid](/intune/app-wrapper-prepare-android) lub użyć [zestawu SDK aplikacji Intune](/intune/app-sdk) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
 
-Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego aplikacje lub zestawu SDK aplikacji usługi Intune, zobacz temat [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego aplikacje lub zestawu SDK aplikacji usługi Intune, zobacz temat [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 
 ## <a name="step-2-add-the-app"></a>Krok 2. Dodawanie aplikacji
 
@@ -49,7 +46,7 @@ Aby skojarzyć aplikację biznesową z zasadami zarządzania aplikacjami mobilny
 2. W bloku **Aplikacje biznesowe** wybierz pozycję **Dodaj aplikację niestandardową**.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z umieszczonym u góry przyciskiem Dodaj aplikację niestandardową](../media/mam-azure-portal-add-lob-app-action.png)
-3.    Określ nazwę aplikacji, identyfikator pakietu w polu identyfikatora aplikacji oraz platformę (iOS lub Android).
+3.  Określ nazwę aplikacji, identyfikator pakietu w polu identyfikatora aplikacji oraz platformę (iOS lub Android).
 
   ![Zrzut ekranu przedstawiający blok dodawania aplikacji niestandardowej](../media/mam-azure-portal-add-app-details.png)
 
@@ -74,13 +71,12 @@ Jeśli istnieje konieczność zmiany szczegółów aplikacji, takich jak nazwa a
 ##  <a name="remove-apps"></a>Usuwanie aplikacji
 Aplikację biznesową można usunąć z listy aplikacji. Spowoduje to usunięcie aplikacji z listy i usunięcie skojarzenia z zasadami zarządzania aplikacjami mobilnymi, ale aplikacja nie zostanie usunięta ani odinstalowana z urządzenia użytkownika.  
 
-1.    W [Portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia**. W bloku **Ustawienia** wybierz pozycję **Biznesowe**, aby otworzyć listę istniejących aplikacji.  
-2.    Wybierz aplikację, którą chcesz usunąć, i wybierz menu **kontekstowe (…)**.
+1.  W [Portalu Azure](https://portal.azure.com/) przejdź do pozycji **Zarządzanie aplikacjami mobilnymi usługi Intune** > **Ustawienia**. W bloku **Ustawienia** wybierz pozycję **Biznesowe**, aby otworzyć listę istniejących aplikacji.  
+2.  Wybierz aplikację, którą chcesz usunąć, i wybierz menu **kontekstowe (…)**.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z ikoną wielokropka](../media/mam-azure-portal-lob-context-menu.png)
-3.    Wybierz pozycję **Usuń aplikację**, aby usunąć aplikację.
+3.  Wybierz pozycję **Usuń aplikację**, aby usunąć aplikację.
 
   ![Zrzut ekranu przedstawiający blok aplikacji biznesowych z opcją usunięcia aplikacji](../media/mam-azure-portal-delete-app.png)
 
   Spowoduje to usunięcie aplikacji z listy aplikacji biznesowych i listy aplikacji docelowych w zasadach zarządzania aplikacjami mobilnymi.
-

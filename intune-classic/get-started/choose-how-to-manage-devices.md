@@ -1,5 +1,5 @@
 ---
-title: "Wybieranie metody zarządzania urządzeniami | Microsoft Docs"
+title: "Wybieranie metody zarządzania urządzeniami"
 description: "Poznaj różne sposoby rejestrowania urządzeń i zarządzania nimi."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: dfd79323c7db53cb3291f729878bcd1d36f93fe7
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0dbe387ee6b8130e3dc64323f89b38e868087dfe
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="choose-how-to-manage-devices"></a>Wybieranie metody zarządzania urządzeniami
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -48,12 +45,11 @@ Rejestracja komputerów z systemem Windows pozwala uzyskać większość funkcji
 - Program Endpoint Protection i Zapora systemu Windows
 - Pomoc zdalna dla użytkowników korzystających z oprogramowania TeamViewer
 
-Aby uzyskać szczegółową listę możliwości zarządzania oferowanych przez każdą metodę, zobacz [Możliwości zarządzania urządzeniami przenośnymi](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
-Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune#intune-supported-devices).
+Aby uzyskać szczegółową listę możliwości zarządzania w przypadku poszczególnych metod, zobacz [Mobile device managem/intune/supported-devices-browserssoft-intune).
+Aby uzyskać informacje o urządzeniach i komputerach obsługiwanych przez usługę Intune, zobacz artykuł [Obsługiwane urządzenia przenośne i komputery](/intune/supported-devices-browsers#intune-supported-devices).
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Wybieranie metody rejestrowania urządzeń przenośnych](/intune-classic/get-started/choose-how-to-enroll-devices1)
 - [Zarządzanie komputerami z systemem Windows przy użyciu komputerowego oprogramowania klienckiego usługi Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune)
 - [Zarządzanie urządzeniami przenośnymi za pomocą programu Exchange ActiveSync i usługi Microsoft Intune](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
-

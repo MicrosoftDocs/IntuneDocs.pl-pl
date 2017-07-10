@@ -14,15 +14,12 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 00328885d7fb5e75ffe894326591c0225f4b07ab
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="azure-portal-for-intune-app-protection-policies"></a>Witryna Azure Portal dla zasad ochrony aplikacji usługi Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -66,4 +63,3 @@ Witryna Azure Portal służy do tworzenia zasad ochrony aplikacji oraz zarządza
 
 ## <a name="next-steps"></a>Następne kroki
 [Przygotowywanie do konfigurowania zasad ochrony aplikacji](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-

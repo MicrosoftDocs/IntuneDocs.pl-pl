@@ -11,31 +11,26 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 10e6bda2001b5dfeb380e9a553aa0fe5a060746b
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="unenroll-your-windows-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem Windows z usługi Intune
 
 Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do celów służbowych i nie musisz uzyskiwać dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz je wyrejestrować. Po wyrejestrowaniu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu urządzenia, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
 Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykule”, który odpowiada typowi używanego urządzenia:
 
--    [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
--    [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-81-computer)
--    [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
+-   [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
+-   [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-81-computer)
+-   [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Wyrejestrowywanie urządzenia z systemem Windows 10
 
@@ -68,4 +63,3 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 4.  W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

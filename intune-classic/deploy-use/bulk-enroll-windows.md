@@ -1,5 +1,5 @@
 ---
-title: Rejestracja zbiorcza dla systemu Windows 10 | Microsoft Docs
+title: "Rejestracja zbiorcza urządzeń z systemem Windows 10"
 description: "Tworzenie pakietu rejestracji zbiorczej dla usługi Microsoft Intune"
 keywords: 
 author: NathBarn
@@ -13,12 +13,11 @@ ms.technology:
 ms.assetid: 0053e37a-f26e-452f-9524-5039a635b52e
 ms.reviewer: damionw
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 027f2ff4e822f7800405bd0f318afe28a47c5a00
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: ab52ba70403da5192cd3539dfd6d1e64bd79268c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -48,19 +47,19 @@ Rejestrowanie zbiorcze dla urządzeń z systemem Windows wymaga następujących 
   - **Project folder** (Folder projektu) — lokalizacja, w której zostanie zapisany nowy projekt
   - **Description** (Opis) — opcjonalny opis projektu ![Zrzut ekranu przedstawiający proces wpisywania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](../media/bulk-enroll-name.png)
 
-4.    Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%% SERIAL%%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.<BR>
+4.  Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%% SERIAL%%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.<BR>
 ![Zrzut ekranu przedstawiający proces określania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](../media/bulk-enroll-device.png)
 
-5.    Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli to ustawienie nie zostanie skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.
+5.  Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli to ustawienie nie zostanie skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.
 ![Zrzut ekranu przedstawiający włączanie w aplikacji Windows Configuration Designer obsługi sieci Wi-Fi, w tym ustawienia SSID sieci i typu sieci](../media/bulk-enroll-network.png)
 
-6.    Wybierz opcję **Enroll in Azure AD** (Zarejestruj w usłudze Azure AD), wypełnij pole **Bulk Token Expiry** (Data wygaśnięcia tokenu zbiorczego), a następnie wybierz przycisk **Get Bulk Token** (Uzyskaj token zbiorczy).
+6.  Wybierz opcję **Enroll in Azure AD** (Zarejestruj w usłudze Azure AD), wypełnij pole **Bulk Token Expiry** (Data wygaśnięcia tokenu zbiorczego), a następnie wybierz przycisk **Get Bulk Token** (Uzyskaj token zbiorczy).
 ![Zrzut ekranu przedstawiający proces określania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](../media/bulk-enroll-account.png)
 
 7. Wprowadź swoje poświadczenia usługi Azure AD, aby uzyskać token zbiorczy.
 ![Zrzut ekranu przedstawiający proces określania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](../media/bulk-enroll-cred.png)
 
-8.    Po pomyślnym pobraniu **tokenu zbiorczego** kliknij przycisk **Dalej**.
+8.  Po pomyślnym pobraniu **tokenu zbiorczego** kliknij przycisk **Dalej**.
 
 9. Opcjonalnie możesz wybrać pozycję **Add applications** (Dodaj aplikacje) i **Add certificates** (Dodaj certyfikaty). Te aplikacje i certyfikaty są aprowizowane na urządzeniu.
 
@@ -88,4 +87,3 @@ Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systeme
 
 - Pakiet aprowizacyjny, który próbuje przyłączyć urządzenie do domeny usługi Active Directory lub dzierżawy usługi Azure Active Directory, która nie tworzy konta lokalnego, może spowodować, że urządzenie będzie nieosiągalne w przypadku niepowodzenia procesu przyłączania do domeny w wyniku braku łączności sieciowej.
 - Skrypty uruchamiane przez pakiet aprowizacyjny zostają uruchomione w kontekście systemowym i mogą wprowadzać dowolne zmiany w systemie plików urządzenia i jego konfiguracji. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub przywrócenia ustawień fabrycznych.
-

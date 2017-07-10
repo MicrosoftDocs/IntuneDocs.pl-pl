@@ -14,15 +14,12 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 1d61432eafef67ca997d4e03d305e1c068ac5fd6
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
 Ten przewodnik pomoże szybko włączyć w aplikacji mobilnej obsługę zasad ochrony aplikacji za pomocą usługi Microsoft Intune. Przydatne może okazać się uprzednie zrozumienie korzyści zapewnianych przez zestaw SDK aplikacji usługi Intune, które wyjaśniono w temacie [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md).
@@ -139,4 +136,3 @@ Oznaczenie jest ikoną aktówki. Przykłady przedstawiono poniżej:
 * Aplikacja do obróbki obrazów, która umożliwia odczytywanie plików **eps**, lub aplikacja firmy Adobe, która umożliwia odczytywanie plików **ai**.
 
 * [Zasoby i wskazówki dotyczące znakowania aplikacji usługi Intune](https://github.com/msintuneappsdk/intune-app-partner-badge) można znaleźć na stronie usługi Microsoft Intune w usłudze GitHub.
-

@@ -11,15 +11,12 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5b56f8b4-269b-4e7f-b7e9-b0401bdd42f4
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: a9655730e15c7c7cd49cfbfbe197e7953f9c7b01
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-started-with-microsoft-intune"></a>Wprowadzenie do usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -30,4 +27,3 @@ Zawartość tego przewodnika:
 - [Szybki start — podręcznik usługi Intune](/intune/setup-steps) — instrukcje krok po kroku przeprowadzania transferu subskrypcji wersji próbnej od testów do zarządzania przedsiębiorstwem lub konfigurowania nowej subskrypcji dla organizacji
 - [Migracja do usługi Intune](/intune/migration-guide) — wskazówki dotyczące migracji z istniejącego rozwiązania do zarządzania mobilnością w przedsiębiorstwie do usługi Intune
 - [Następne kroki z usługą Intune](prevent-company-data-leaks-from-Office-365-mobile-apps.md) — omówienie typowych zadań i ich kolejnych kroków w usłudze Intune
-

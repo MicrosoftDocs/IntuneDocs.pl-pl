@@ -14,15 +14,12 @@ ms.assetid: beee6933-876a-4be0-b395-4c24cfbd519b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: d974a3c8fd69ee970991af96afe2011c6d07db2a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="update-apps-using-microsoft-intune"></a>Aktualizowanie aplikacji przy użyciu usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -62,4 +59,3 @@ Przy następnym sprawdzeniu dostępnych aplikacji przez urządzenia aplikacja zo
 W przypadku aplikacji instalowanych z pakietu aplikacji (aplikacji biznesowych) aplikacja będzie uaktualniana automatycznie zarówno w przypadku wymaganych, jak i dostępnych wdrożeń, jeśli tylko aplikacja ma taki sam identyfikator.
 
 W przypadku aplikacji wdrożonych jako link do sklepu aktualizacja jest zarządzana przez sklep, z którego pochodzi aplikacja.
-

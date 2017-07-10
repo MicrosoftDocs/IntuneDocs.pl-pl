@@ -13,16 +13,15 @@ ms.technology:
 ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
-ms.openlocfilehash: 623ed8dda2b35a895e5a00c0639a647624f74e59
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.openlocfilehash: 3f60ee6334ac8fa00dcaaa524485c5339b040381
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Jak edukować użytkowników końcowych na temat usługi Microsoft Intune
+
+[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
 Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Istnieje wiele kroków niezbędnych do zapewnienia pomyślnego wdrożenia, w tym ocena usługi Intune przy użyciu [bezpłatnej wersji próbnej](app-sdk.md).
 
@@ -57,15 +56,15 @@ Rozwianie obaw sprawi, że wdrożenie będzie płynniejsze. Mamy listę spraw, k
 
 * **Android**
   * [Korzystanie z urządzenia z systemem Android i usługi Intune](/intune-user-help/using-your-android-device-with-intune)
-  * [Jak użytkownicy systemu Android uzyskują aplikacje](/intune-classic/deploy-use/how-your-android-users-get-their-apps)
+  * [Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)
 
 * **iOS**
   * [Korzystanie z urządzenia z systemem iOS i usługi Intune](/intune-user-help/using-your-ios-or-macos-device-with-intune)
-  * [Jak użytkownicy systemu iOS uzyskują aplikacje](/intune-classic/deploy-use/how-your-ios-users-get-their-apps)
+  * [Jak użytkownicy systemu iOS uzyskują aplikacje](end-user-apps-ios.md)
 
 * **Windows**
   * [Korzystanie z urządzenia z systemem Windows i usługi Intune](/intune-user-help/using-your-windows-device-with-intune)
-  * [Jak użytkownicy systemu Windows uzyskują aplikacje](/intune-classic/deploy-use/how-your-windows-users-get-their-apps)
+  * [Jak użytkownicy systemu Windows uzyskują aplikacje](end-user-apps-windows.md)
 
 * __Zrób pierwszy krok.__ Wyraźnie poinformuj użytkowników, że będziesz zarządzać ich urządzeniami. Poinformuj ich, jakiego rodzaju dane gromadzisz i dlaczego to robisz. Poinformuj ich, w jaki sposób zamierzasz używać wszystkich zasobów. [Firma Microsoft uważa, że masz prawo do jak największej ilości informacji dotyczących sposobu obsługi danych klientów w chmurze](https://www.microsoft.com/trustcenter/about/transparency), i wierzymy, że to podejście może znacząco zwiększyć zadowolenie użytkowników końcowych z usługi Intune.
 
@@ -73,4 +72,3 @@ Rozwianie obaw sprawi, że wdrożenie będzie płynniejsze. Mamy listę spraw, k
 > Przejrzystość, tam gdzie to możliwe, to podstawa sukcesu wdrożenia.
 
 Próbujesz połączyć zaufanie i dobrze przygotowane zasady zgodności, aby mieć pewność, że użytkownicy końcowi wiedzą, że nawet jeśli *byłoby możliwe* przeglądanie określonych typów danych osobowych, nie *chcesz* tego robić ani ponosić odpowiedzialności za naruszenie ich prywatności. Opracowanie oświadczenia we współpracy z działem prawnym i kadr może ułatwić przekonanie pracowników sprawiających największe trudności.
-

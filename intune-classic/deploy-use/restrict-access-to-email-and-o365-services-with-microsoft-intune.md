@@ -1,5 +1,5 @@
 ---
-title: "Ochrona poczty e-mail i usługi Office 365 | Microsoft Docs"
+title: "Ochrona poczty e-mail i usługi Office 365"
 description: "W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fc89c1b5b502f00bab5ed02f6e7df6422241aeb1
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3405671130a58aa944d6c689264379a254face1d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrona dostępu do poczty e-mail, usług Office 365 i innych usług przy użyciu usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -51,7 +48,7 @@ Usługa Microsoft Intune i Azure Active Directory (Azure AD) Premium działają 
 
 - Dowiedz się więcej na temat [Cennika pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennika usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
-Ponadto upewnij się, że użytkownicy, dla których planowane jest zastosowanie zasad dostępu warunkowego, są [przypisani za pomocą licencji usługi Azure AD Premium lub pakietu EMS](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+Ponadto upewnij się, że użytkownicy, dla których planowane jest zastosowanie zasad dostępu warunkowego, są [przypisani za pomocą licencji usługi Azure AD Premium lub pakietu EMS](/intune/licenses-assign).
 
 ### <a name="device-compliance-settings"></a>Ustawienia zgodności urządzeń
 
@@ -83,4 +80,3 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
   - [Tworzenie zasad dostępu warunkowego dla usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   - [Tworzenie zasad dostępu warunkowego dla usługi Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-

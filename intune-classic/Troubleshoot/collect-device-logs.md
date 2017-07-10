@@ -1,5 +1,5 @@
 ---
-title: "Zbieranie dzienników urządzeń | Microsoft Docs"
+title: "Zbieranie dzienników urządzeń"
 description: "Dowiedz się, jak zbierać dzienniki z urządzeń zarządzanych."
 keywords: 
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f75719a02e37f6285fb1d7c5de32bb7eb4b3a1ed
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b15e4b7fa0c650a85a080c42d00cd75cb8783c62
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="device-logs"></a>Dzienniki urządzeń
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,7 +43,7 @@ Aby uzyskać więcej informacji na temat sposobu, w jaki użytkownicy mogą prze
 
 Użytkownicy mogą wysłać do Ciebie błędy rejestracji w sposób opisany w temacie [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune-user-help/send-errors-to-your-it-admin-ios).
 
-Użytkownicy mogą wysyłać dzienniki urządzeń zgodnie z opisem w artykule [Send iOS Device Logs](/intune-user-help/send-logs-to-your-it-admin-by-email-ios) (Wysyłanie dzienników urządzeń z systemem iOS).
+Użytkownicy mogą wysyłać dzienniki urządzeń zgodnie z opisem w artykule [Send iOS Device Logs](/intune-user-help/send-logs-to-microsoft-ios) (Wysyłanie dzienników urządzeń z systemem iOS).
 
 ### <a name="mac-os-x-logs"></a>Dzienniki systemu Mac OS X
 
@@ -61,4 +58,3 @@ W aplikacji Portal firmy dla systemu Windows Phone do uzyskania dostępu do menu
 ### <a name="windows"></a>Windows
 
 W przypadku aplikacji Portal firmy dla systemu Windows dzienniki znajdują się w folderze *%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState*.
-

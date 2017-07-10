@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 510e35a7c60709a6f002907e0f7963ba5b78f35c
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="an-existing-company-email-account-was-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
 
 Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uzyskać dostęp do tego konta, korzystając z urządzenia przenośnego. Administrator IT potrzebuje Twojej pomocy, aby móc chronić dostęp do poczty e-mail podczas drogi, jaką poczta pokonuje od nadawcy do Twojego urządzenia. Aktualnie używany przez Ciebie program poczty e-mail może dobrze spełniać swoją rolę, wykonanie tych czynności pozwoli jednak zwiększyć bezpieczeństwo informacji.
@@ -39,4 +35,3 @@ Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uz
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-

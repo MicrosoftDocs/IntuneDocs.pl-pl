@@ -1,5 +1,5 @@
 ---
-title: "Zarządzanie komputerami przy użyciu oprogramowania klienckiego | Microsoft Docs"
+title: "Zarządzanie komputerami przy użyciu oprogramowania klienckiego"
 description: "Zarządzaj komputerami z systemem Windows, instalując oprogramowanie klienckie usługi Intune."
 keywords: 
 author: nathbarn
@@ -14,16 +14,15 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6bd4e3315fd27201e8005b1053fa6e15bf2c21b5
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e217648c744d76d4cde6b8927137cd569b8d0a2e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune zapewnia organizacjom kompleksowe rozwiązanie do zarządzania urządzeniami przenośnymi. Usługa Intune może zarządzać komputerami z systemem Windows jako urządzeniami przenośnymi przy użyciu nowoczesnych funkcji zarządzania urządzeniami wbudowanych w systemie operacyjnym Windows 10. Aby spełnić wymagania organizacji związane z zarządzaniem, usługa Intune może również zarządzać komputerami z systemem Windows jako komputerami przy użyciu oprogramowania klienckiego usługi Intune. W tej metodzie zarządzania używa się funkcji tradycyjnego zarządzania komputerami ze starszej wersji systemu operacyjnego Windows.
 
@@ -79,7 +78,7 @@ Oprogramowanie klienckie usługi Intune obsługuje [możliwości z zakresu zarz�
 
 Korzystając z oprogramowania klienckiego usługi Intune do zarządzania komputerami z systemem Windows, można użyć tylko zasad wyświetlanych w obszarze **Zarządzanie komputerem**.
 
-Usługa Intune zarządza komputerami z systemem Windows za pomocą zasad, podobnie jak usługi Active Directory Domain Services systemu Windows Server /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) używane w Twojej organizacji. Aby dowiedzieć się więcej, zobacz temat [Group Policy for beginners](https://technet.microsoft.com/library/hh147307.aspx) (Zasady grupy dla początkujących).
+Usługa Intune zarządza komputerami z systemem Windows za pomocą zasad. Jest to podobne do działania obiektów zasad grupy w usługach Active Directory Domain Services (AD DS) systemu Windows Server. Jeśli zarządzasz komputerami przyłączonymi do domeny usługi Active Directory przy użyciu usługi Intune, [upewnij się, że zasady usługi Intune nie powodują konfliktów z innymi obiektami zasad grupy](/intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) stosowanymi w organizacji. Aby dowiedzieć się więcej, zobacz temat [Group Policy for beginners](https://technet.microsoft.com/library/hh147307.aspx) (Zasady grupy dla początkujących).
 
   ![Wybierz szablon dla nowej zasady dotyczącej komputera z systemem Windows](../media/select-template-for-pc-policy.png)
 
@@ -115,4 +114,3 @@ Należy również pamiętać, że w konsoli administracyjnej usługi Intune niek
 Agent oprogramowania klienckiego usługi Intune zwykle działa w tle bez konieczności interakcji z użytkownikami ani rozwiązywania problemów. W razie potrzeby rozwiązania problemów z zarządzaniem komputerami można sprawdzić dzienniki. Oprogramowanie klienckie usługi Intune wraz z odpowiednimi dziennikami znajduje się w katalogu %Program Files%\Microsoft\OnlineManagement.
 
 Można również przejrzeć artykuł [Rozwiązywanie problemów z instalacją klientów w usłudze Microsoft Intune](/intune-classic/troubleshoot/troubleshoot-client-setup-in-microsoft-intune) w celu zapoznania się z informacjami na temat potencjalnych problemów oraz ich rozwiązań i obejść.
-

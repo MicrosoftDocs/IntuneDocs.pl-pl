@@ -1,6 +1,6 @@
 ---
 title: "Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online"
-titleSuffix: Intune Azure preview
+titleSuffix: Intune on Azure
 description: "Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online za pośrednictwem portalu Intune Azure"
 keywords: 
 author: andredm7
@@ -14,16 +14,13 @@ ms.technology:
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d170958bbdc00423081aa606c9c7f4e7a8ec4b06
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ec9bcc605486258203f49f9f7631bd2a04cdf22
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune-azure-preview"></a>Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online w wersji zapoznawczej usługi Intune Azure
+# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online w usłudze Intune
 
 Począwszy od usługi Intune w wersji 1704 administratorzy mogą zobaczyć informacje dotyczące raportowania powiązane z rekordami urządzeń w programie Exchange ActiveSync, które są synchronizowane z usługą Intune za pośrednictwem lokalnego programu Exchange Connector lub łącznika Service To Service Connector usługi Intune (łącznika usługi Exchange Online). Raportowanie zgodności z dostępem warunkowym zawiera podsumowanie informacji o urządzeniach o różnych stanach synchronizacji:
 
@@ -70,4 +67,3 @@ W bloku szczegółów urządzenia można zobaczyć więcej informacji:
 -   **Konfiguracja urządzenia:** zawiera wszystkie szczegóły konfiguracji urządzenia.
 
 -   **Dostęp do programu Exchange:** tutaj można dowiedzieć się więcej o stanie urządzenia po zastosowaniu zasad dostępu warunkowego.
-

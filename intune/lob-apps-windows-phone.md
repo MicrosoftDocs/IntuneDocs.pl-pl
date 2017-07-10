@@ -1,7 +1,7 @@
 ---
-title: "Jak dodawać aplikacje biznesowe dla systemu Windows Phone do usługi Intune | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje o dodawaniu aplikacji biznesowych dla systemu Windows Phone do usługi Intune."
+title: "Jak dodawać aplikacje biznesowe dla systemu Windows Phone do usługi Intune"
+titleSuffix: Intune on Azure
+description: "Informacje o dodawaniu aplikacji biznesowych dla systemu Windows Phone do usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4d9adb9a5120c83023bb25199f666f1352752562
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 5c27b1a7d0c24bacc206cabe65bd3529a50fc2b4
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-add-windows-phone-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows Phone do usługi Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
@@ -67,4 +65,3 @@ ms.lasthandoff: 05/23/2017
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
-

@@ -1,5 +1,5 @@
 ---
-title: "Ogólne porady dotyczące rozwiązywania problemów | Microsoft Docs"
+title: "Ogólne wskazówki dotyczące rozwiązywania problemów"
 description: "Zasoby ogólne ułatwiające rozwiązywanie problemów z usługą Intune."
 keywords: 
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 63bb7ca097390582d85f3ea7daced42d2a97fbb4
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d348cc2850864206552bf53ab1beec9b9cb55bab
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Ogólne porady dotyczące rozwiązywania problemów w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -58,7 +55,7 @@ Po wdrożeniu usługi Microsoft Intune mogą wystąpić problemy z konfiguracją
   - [Wysyłanie błędów rejestracji systemu Android do administratora IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
   - [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune-user-help/send-errors-to-your-it-admin-ios)
 
--   Korzystając z danych konsoli administracyjnej /intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Korzystając z danych konsoli administracyjnej (na przykład w przypadku problemów z implementacją zasad), należy sprawdzić odpowiednie zasady i ich stan zgodnie z opisem w artykule [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## <a name="research-the-solution"></a>Wyszukiwanie rozwiązania
 
@@ -97,4 +94,3 @@ Tematy wymienione poniżej zawierają informacje na temat rozwiązywania określ
 [Rozwiązywanie problemów z instalacją klientów w usłudze Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-

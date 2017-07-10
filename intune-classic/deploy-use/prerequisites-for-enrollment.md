@@ -1,11 +1,11 @@
 ---
-title: "Wymagania wstępne dotyczące rejestracji urządzeń przenośnych | Microsoft Docs"
+title: "Wymagania wstępne dotyczące rejestrowania urządzeń mobilnych"
 description: "Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/21/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6877c5263f3c97b9cff295d62d39a365027151eb
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ea6d7b9ffe698addc7ee317517abc7c760c232c0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi w usłudze Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,15 +43,14 @@ Szukasz usługi Intune z programem Configuration Manager?
 ## <a name="step-1-enable-connections"></a>Krok 1. Włączanie połączeń
 
 Przed włączeniem rejestrowania urządzeń przenośnych należy wykonać następujące czynności:
-- [Przegląd wymaganych sieciowych adresów URL i portów](../get-started/network-bandwidth-use.md)
-- [Dodanie i zweryfikowanie nazwy domeny](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
+- [Przegląd wymaganych sieciowych adresów URL i portów](/intune/network-bandwidth-use)
+- [Dodanie i zweryfikowanie nazwy domeny](/intune/custom-domain-name-configure)
 
 ## <a name="step-2-set-mdm-authority"></a>Krok 2. Ustawianie urzędu zarządzania urządzeniami przenośnymi
 Urząd MDM definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune. Jeśli program Configuration Manager zostanie ustawiony jako urząd zarządzania, do zarządzania urządzeniami przenośnymi nie można używać żadnej innej usługi.
 
 >[!IMPORTANT]
-> Starannie rozważ, czy chcesz zarządzać urządzeniami przenośnymi za pomocą samej usługi Intune (usługa online) czy przy użyciu programu System Center Configuration Manager z usługą Intune (rozwiązanie oprogramowania lokalnego w połączeniu z usługą online). Po ustawieniu urzędu zarządzania urządzeniami przenośnymi nie możesz go zmienić bez kontaktu z pomocą techniczną firmy Microsoft. Instrukcje znajdziesz w sekcji [Co należy zrobić, jeśli wybrano błędne ustawienie urzędu certyfikacji MDM](#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
-
+> W programie Configuration Manager w wersji 1610 lub nowszej i w usłudze Microsoft Intune w wersji 1705 można zmienić urząd certyfikacji MDM bez konieczności kontaktowania się Pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Szczegółowe informacje można znaleźć w sekcji [Co należy zrobić, jeśli wybrano błędne ustawienie urzędu MDM](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi**.
 
@@ -116,7 +112,7 @@ Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal fir
 
 ## <a name="step-5-assign-user-licenses"></a>Krok 5. Przypisywanie licencji użytkownika
 
-**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD). [Lokalnych użytkowników można zsynchronizować z usługą Azure AD](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md#how-to-sync-on-premises-users-with-azure-ad).
+**Portal zarządzania usługi Office 365** umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji do kont użytkowników w chmurze i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure Active Directory (Azure AD). [Lokalnych użytkowników można zsynchronizować z usługą Azure AD](/intune/users-permissions-add#how-to-sync-on-premises-users-with-azure-ad).
 
 1.  Zaloguj się do [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) przy użyciu poświadczeń administratora dzierżawy.
 
@@ -154,7 +150,13 @@ Po włączeniu rejestracji należy skonfigurować zarządzanie pod kątem potrze
 
 ## <a name="what-to-do-if-you-choose-the-wrong-mdm-authority-setting"></a>Co należy zrobić, jeśli wybrano błędne ustawienie urzędu certyfikacji MDM
 
-Jeśli zdecydujesz, że wybrane ustawienie urzędu certyfikacji MDM jest nieprawidłowe i trzeba go zmienić, musisz skontaktować się z pomocą techniczną firmy Microsoft. Ustawień nie można zmienić samodzielnie. Przed skontaktowaniem się z pomocą techniczną firmy Microsoft przejrzyj następujące informacje, aby dowiedzieć się, jakich danych będą potrzebować w celu dokonania zmiany.
+Jeśli zdecydujesz, że wybrane ustawienie urzędu certyfikacji MDM jest nieprawidłowe i trzeba je zmienić, istnieją następujące rozwiązania.
+
+### <a name="change-the-mdm-authority-yourself"></a>Zmień urząd certyfikacji MDM samodzielnie
+Począwszy od programu Configuration Manager w wersji 1610 i od usługi Microsoft Intune w wersji 1705 można zmienić urząd certyfikacji MDM z usługi Microsoft Intune na program Configuration Manager (wersja hybrydowa) lub na odwrót bez konieczności kontaktowania się z pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Szczegółowe informacje można znaleźć w temacie [Zmienianie urzędu MDM]( /sccm/mdm/deploy-use/change-mdm-authority).
+
+### <a name="contact-microsoft-support"></a>Skontaktuj się z pomocą techniczną firmy Microsoft
+Jeśli masz program Configuration Manager w wersji wcześniejszej niż 1610, musisz skontaktować się z pomocą techniczną firmy Microsoft. Ustawień nie można zmienić samodzielnie. Przed skontaktowaniem się z pomocą techniczną firmy Microsoft przejrzyj następujące informacje, aby dowiedzieć się, jakich danych będą potrzebować w celu dokonania zmiany.
 
 Urząd certyfikacji MDM można zresetować na trzy możliwe sposoby. W żądaniu pomocy technicznej wybierz metodę najlepiej pasującą do swojej sytuacji. Jeśli wybrany prze Ciebie scenariusz nie znajduje się na liście, zwróć się do pomocy technicznej firmy Microsoft.
 
@@ -166,7 +168,7 @@ Pomoc techniczna firmy Microsoft poprosi Cię o potwierdzenie następujących in
 
 Jeśli korzystasz z rozwiązania umożliwiającego współistnienie, sprawdź listy kontrolne zarówno usługi Intune, jak i Office 365.
 
-### <a name="reset-mdm-authority-from-intune-to-configuration-manager"></a>Resetowanie urzędu certyfikacji MDM z poziomu usługi Intune do programu Configuration Manager
+#### <a name="reset-mdm-authority-from-intune-to-configuration-manager"></a>Resetowanie urzędu certyfikacji MDM z poziomu usługi Intune do programu Configuration Manager
 
 Przed skontaktowaniem się z pomocą techniczną firmy Microsoft w celu zresetowania urzędu certyfikacji MDM wykonaj przedstawione kroki.
 
@@ -180,7 +182,7 @@ Przed skontaktowaniem się z pomocą techniczną firmy Microsoft w celu zresetow
 - Usuń wszystkie zasady dla urządzeń MDM w obszarze **Zasady** > **Zasady konfiguracji**.
 - Usuń wszystkie opublikowane aplikacje dla urządzeń MDM w obszarze **Aplikacje** > **Zarządzane oprogramowanie**.
 
-### <a name="reset-mdm-authority-from-configuration-manager-to-intune"></a>Resetowanie urzędu certyfikacji MDM z poziomu programu Configuration Manager do usługi Intune
+#### <a name="reset-mdm-authority-from-configuration-manager-to-intune"></a>Resetowanie urzędu certyfikacji MDM z poziomu programu Configuration Manager do usługi Intune
 
 Przed skontaktowaniem się z pomocą techniczną firmy Microsoft w celu zresetowania urzędu certyfikacji MDM wykonaj przedstawione kroki.
 
@@ -194,7 +196,7 @@ Usuń subskrypcję usługi Intune, klikając prawym przyciskiem myszy subskrypcj
 - Uruchom ponownie usługę programu SMS Executive.
 - Prześlij nam dane kilku przykładowych użytkowników, abyśmy mogli zweryfikować czy licencje programu Configuration Manager zostały usunięte po zakończeniu procesu.
 
-### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetowanie urzędu certyfikacji MDM z poziomu usługi Office 365 do programu Configuration Manager
+#### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetowanie urzędu certyfikacji MDM z poziomu usługi Office 365 do programu Configuration Manager
 
 1. Przejdź do witryny [https://protection.office.com](https://protection.office.com).
 2. Wybierz kartę **Zasady zabezpieczeń**, a następnie wybierz pozycję **Zarządzanie urządzeniami**.
@@ -205,10 +207,9 @@ Usuń subskrypcję usługi Intune, klikając prawym przyciskiem myszy subskrypcj
 >[!NOTE]
 >Certyfikat usługi APNs dla systemu iOS nie może zostać usunięty i nadal jest dołączony do konta.
 
-### <a name="next-steps-for-mdm-authority-resets"></a>Kolejne kroki związane z resetowaniem urzędu certyfikacji MDM
+#### <a name="next-steps-for-mdm-authority-resets"></a>Kolejne kroki związane z resetowaniem urzędu certyfikacji MDM
 
 Po zweryfikowaniu przez pomoc techniczną firmy Microsoft elementów znajdujących się na odpowiedniej liście kontrolnej resetowanie urzędu certyfikacji MDM może potrwać do trzech dni roboczych, ale zazwyczaj jest przeprowadzane w ciągu jednego dnia.
 
 >[!IMPORTANT]
 >Nie należy konfigurować subskrypcji, dopóki pomoc techniczna firmy Microsoft nie potwierdzi, że resetowanie zostało zakończone pomyślnie! Przedwczesna konfiguracja może spowodować uszkodzenie i/lub mieć wpływ na możliwości korzystania z usługi Intune.
-

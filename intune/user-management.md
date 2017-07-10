@@ -1,7 +1,7 @@
 ---
 title: "Co to jest obciążenie Zarządzanie użytkownikami?"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak wyświetlać użytkowników i zarządzać nimi przy użyciu programu Microsoft Intune i platformy Azure."
+titleSuffix: Intune on Azure
+description: "Informacje o wyświetlaniu użytkowników i zarządzaniu nimi przy użyciu programu Microsoft Intune i platformy Azure."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -14,19 +14,16 @@ ms.technology:
 ms.assetid: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 29c8f436d611e590ef1304d221e27da0ceef2450
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1cbdb92928411ff56e6740e83e081ee966fb7af8
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-user-management"></a>Co to jest zarządzanie użytkownikami?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Jeśli dopiero zaczynasz korzystać z usługi Intune w witrynie Azure Portal, pamiętaj, że już nie tworzy się grup dla usługi Intune. Usługa Intune używa grup usługi Azure AD w podobny sposób jak inne aplikacje, których używasz.
 
@@ -45,4 +42,3 @@ Aby zarządzać grupami w witrynie [Azure Portal](https://portal.azure.com), wys
 ## <a name="next-step"></a>Następny krok
 
 [Wprowadzenie do grup](groups-get-started.md)
-

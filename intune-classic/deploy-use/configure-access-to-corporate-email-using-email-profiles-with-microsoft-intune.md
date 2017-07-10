@@ -1,5 +1,5 @@
 ---
-title: "Uzyskiwanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail | Microsoft Docs"
+title: "Uzyskiwanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail"
 description: "Ustawienia profilu poczty e-mail mogą służyć do konfiguracji ustawień dostępu do poczty e-mail dla określonych klientów poczty e-mail na urządzeniach przenośnych."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 21eee53a4e3674dc28b01311a61dda0d71f9f7fa
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 87bf5c96ee29f8a39b875543c4f6a3731f3e604e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -36,11 +33,11 @@ Jeśli potrzebujesz dodatkowej ochrony przed utratą danych, wybierz pozycję [D
 Administratorzy IT lub użytkownicy mają także możliwość instalowania alternatywnych klientów poczty e-mail (na przykład programu Microsoft Outlook dla systemu Android lub iOS). Ci klienci poczty e-mail mogą nie obsługiwać profilów poczty e-mail i nie można ich konfigurować przy użyciu profilów poczty e-mail usługi Intune.  
 
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
--    System Windows Phone 8.1 lub nowszy
--    Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
--    System iOS 8.0 i nowsze
--    KNOX Samsung Standard (4.0 i nowsze)
--    Android for Work (aplikacje poczty e-mail innych firm, aplikacja macierzysta poczty e-mail jest powiązana tylko z profilem osobistym)
+-   System Windows Phone 8.1 lub nowszy
+-   Systemy Windows 10 (dla komputerów), Windows 10 Mobile i nowsze
+-   System iOS 8.0 i nowsze
+-   KNOX Samsung Standard (4.0 i nowsze)
+-   Android for Work (aplikacje poczty e-mail innych firm, aplikacja macierzysta poczty e-mail jest powiązana tylko z profilem osobistym)
 
 Oprócz skonfigurowania konta e-mail na urządzeniu możesz skonfigurować ilość poczty e-mail do synchronizowania, a także, w zależności od typu urządzenia, typy zawartości do synchronizowania.
 
@@ -85,7 +82,7 @@ Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je poda
 
     -   **Profil poczty e-mail (program Android for Work — Gmail)**
 
-    -    **Profil poczty e-mail (program Android for Work — Nine Work)**
+    -   **Profil poczty e-mail (program Android for Work — Nine Work)**
 
     Tworzyć i wdrażać można tylko niestandardowe zasady profilu poczty e-mail. Zalecane ustawienia są niedostępne.
 
@@ -133,4 +130,3 @@ W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zas
 > - W przypadku systemu Android for Work upewnij się również, że poza odpowiednim profilem poczty e-mail wdrożono również aplikacje Gmail lub Nine Work.
 > - Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj wdrożenie i usuń wszystkie grupy, których urządzenie jest członkiem. Pamiętaj, że nie można usunąć profilu poczty e-mail w ten sposób w przypadku, gdy jest to jedyny profil poczty e-mail na urządzeniu.
 > - W przypadku wprowadzenia zmian w zakresie wdrożonego wcześniej profilu poczty e-mail użytkownicy końcowi mogą zobaczyć monit o zatwierdzenie nowej konfiguracji ich ustawień poczty e-mail.
-

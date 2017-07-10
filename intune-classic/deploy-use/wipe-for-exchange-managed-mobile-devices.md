@@ -1,5 +1,5 @@
 ---
-title: "Czyszczenie urządzeń przenośnych zarządzanych przez program Exchange | Microsoft Docs"
+title: "Czyszczenie urządzeń mobilnych zarządzanych przez program Exchange"
 description: "Usługa Microsoft Intune umożliwia czyszczenie lub resetowanie urządzeń przenośnych zarządzanych przy użyciu programu Exchange ActiveSync (EAS) za pomocą programu Intune Exchange Connector."
 keywords: 
 author: andredm7
@@ -14,16 +14,12 @@ ms.assetid: e116b620-1e12-4b5c-9905-2f7acf2ae530
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4b0914ab12456fd3ad5f957d68a59df9de539176
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 665f57a4cdb25c1e9f2bef7f1c25f284589df16f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="wipe-for-exchange-managed-mobile-devices"></a>Wipe for Program Exchange-managed mobile devices
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -35,4 +31,3 @@ Usługa Microsoft Intune umożliwia czyszczenie lub resetowanie urządzeń przen
 |Pełne czyszczenie danych|Usuwa konto e-mail i buforowaną pocztę e-mail.|XResetowanie do ustawień fabrycznych.|Resetowanie do ustawień fabrycznych.|
 |Czyszczenie selektywne/poczta e-mail|Usuwa konto e-mail.|Nieobsługiwane.|Nieobsługiwane.|
 |Czyszczenie selektywne/zasady|Wymuszanie zasad zostaje wyłączone, lecz ustawienia nie są zmieniane|XWymuszanie zasad zostaje wyłączone, lecz ustawienia nie są zmieniane.|Wymuszanie zasad zostaje wyłączone, ale ustawienia nie są zmieniane.|
-

@@ -1,7 +1,7 @@
 ---
 title: "Zgodność urządzeń"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: w tym temacie można znaleźć informacje na temat zgodności urządzeń w usłudze Microsoft Intune"
+titleSuffix: Intune on Azure
+description: "W tym temacie można znaleźć informacje na temat zgodności urządzeń w usłudze Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,18 +15,15 @@ ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2aec7463b9a2b3bdaa78281fca0bbb39dcd3f884
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: a747d577a28433635883ad6c4fe4c858e75902d0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="what-is-device-compliance-in-intune"></a>Co to jest zgodność urządzeń w usłudze Intune?
 
-# <a name="what-is-device-compliance-in-intune-azure-preview"></a>Co to jest zgodność urządzeń w wersji zapoznawczej usługi Intune Azure?
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Zasady zgodności urządzeń definiują reguły i ustawienia, z którymi urządzenie musi być zgodne, aby można je było uważać za spełniające zasady dostępu warunkowego do usług Intune i EMS. Zasady zgodności urządzeń mogą być również wykorzystane do monitorowania i rozwiązywania problemów ze zgodnością urządzeń. 
 
@@ -79,7 +76,7 @@ Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oc
 
 Zasady zgodności wdraża się dla użytkowników. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność urządzeń użytkownika. Aby uzyskać informacje o tym, ile czasu potrzeba na otrzymanie zasad przez urządzenia przenośne po wdrożeniu tych zasad, zobacz artykuł Zarządzanie ustawieniami i funkcjami urządzeń.
 
-##  <a name="intune-classic-admin-console-vs-intune-azure-preview-portal"></a>Klasyczna konsola administracyjna usługi Intune a portal usługi Intune Azure w wersji zapoznawczej
+##  <a name="intune-classic-admin-console-vs-intune-on-the-azure-portal"></a>Klasyczna konsola administracyjna usługi Intune a usługa Intune w witrynie Azure Portal
 
 Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwróć uwagę na następujące różnice, by ułatwić sobie przejście na nowy przepływ pracy zgodności urządzeń w portalu Azure:
 
@@ -89,7 +86,7 @@ Jeśli masz doświadczenie z klasyczną konsolą administracyjną Intune, zwró�
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
 
-##  <a name="migration-from-intune-classic-console-to-intune-azure-preview-portal"></a>Migracja z klasycznej konsoli usługi Intune do portalu usługi Intune Azure w wersji zapoznawczej
+##  <a name="migration-from-intune-classic-console-to-intune-on-the-azure-portal"></a>Migracja z klasycznej konsoli usługi Intune do usługi Intune w witrynie Azure Portal
 
 Zasady zgodności urządzeń utworzone w [klasycznej konsoli usługi Intune](https://manage.microsoft.com) nie są wyświetlane w nowym [portalu usługi Intune Azure](https://portal.azure.com). Nadal będą one jednak mieć zastosowanie do użytkowników i będzie można nimi zarządzać za pośrednictwem klasycznej konsoli usługi Intune.
 
@@ -103,4 +100,3 @@ Aby móc korzystać z nowych funkcji związanych ze zgodnością urządzeń dost
 <!---### See also
 
 Conditional access--->
-

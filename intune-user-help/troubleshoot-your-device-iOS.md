@@ -5,33 +5,30 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 05/10/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 66436fd8-1582-41f5-9c3b-abd914365f2d
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c06d03943863f6ab46a0943b08e1d986b210e58a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3869659ea95f561365f40bcfcd164b82a7795ac0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="fix-common-issues-with-your-ios-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS
 
 Niektóre problemy dotyczące urządzeń z systemem iOS można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z administratorem IT przy użyciu jego danych kontaktowych zamieszczonych w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com).
 
 - [Chcę ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 - [Chcę wysłać błędy do administratora IT](send-errors-to-your-it-admin-ios.md)
+- [Chcę wysłać błędy do firmy Microsoft](send-logs-to-microsoft-ios.md)
 - [Podczas korzystania z aplikacji Portal firmy wystąpił błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Chcę zidentyfikować urządzenie, które ma zostać zarejestrowane](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 - [Jak znaleźć numer seryjny w urządzeniu?](how-do-i-find-the-serial-number-on-my-device-ios.md)
@@ -39,4 +36,3 @@ Niektóre problemy dotyczące urządzeń z systemem iOS można usunąć, korzyst
 - [Moja wersja systemu iOS nie jest jeszcze obsługiwana](your-ios-version-isnt-yet-supported.md)
 - [Chcę zainstalować aplikację Mobile Threat Defense na urządzeniu z systemem iOS](you-are-prompted-to-install-mtd-ios.md)
 - [Chcę rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Mobile Threat Defense na urządzeniu z systemem iOS](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
-

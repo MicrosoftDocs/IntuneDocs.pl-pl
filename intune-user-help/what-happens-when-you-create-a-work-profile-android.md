@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b217da11-2cd7-49ab-a91f-2f6d7784c6b6
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: ca763562c96c4c5f4f4e6bcf317bb6ccba68d8d2
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="what-happens-when-you-create-a-work-profile"></a>Co się dzieje w przypadku tworzenia profilu służbowego
 
 Profil służbowy służy do tego, aby po jego skonfigurowaniu na urządzeniu mieć dostęp do swojego służbowego konta e-mail, aplikacji i plików (osobno od swoich danych osobistych).
@@ -49,4 +44,3 @@ Gdy tworzysz profil służbowy:
 Instrukcje dotyczące tworzenia profilu służbowego znajdziesz w temacie [Tworzenie profilu służbowego i rejestrowanie urządzenia](create-a-work-profile-and-enroll-your-device-in-intune-android.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
-
