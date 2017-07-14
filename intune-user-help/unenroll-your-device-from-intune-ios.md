@@ -16,19 +16,20 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8885b82cf452bcc6bb99efb1d7e7394706edac57
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b2af07817b15c2afd2d2674aa0c6d8a403147421
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="unenroll-your-ios-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem iOS z usługi Intune
+# Wyrejestrowanie urządzenia z systemem iOS z usługi Intune
+<a id="unenroll-your-ios-device-from-intune" class="xliff"></a>
 
 Po wyrejestrowaniu urządzenia z systemem iOS z usługi Intune urządzenie nie będzie już mogło uzyskiwać dostępu do zasobów firmy i nie będzie już zarządzane przez usługę Intune.
 
 Aby wyrejestrować urządzenie z usługi Intune, wykonaj następujące czynności lub obejrzyj ten film:
 
-<iframe width="675" height="379" src="https://www.youtube.com/embed/6UFtBrBWUUI" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/6UFtBrBWUUI]
 
 
 1.  W aplikacji Portal firmy w obszarze **Moje urządzenia** wybierz urządzenie, które chcesz wyrejestrować.
