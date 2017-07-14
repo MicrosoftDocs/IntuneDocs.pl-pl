@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/16/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,14 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
+# Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
+<a id="what-is-microsoft-intune-app-management" class="xliff"></a>
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,7 +37,8 @@ Na dodatek możesz też przypisywać aplikacje na urządzeniach niezarejestrowan
 
 Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach.
 
-## <a name="app-management-capabilities-by-platform"></a>Możliwości zarządzania aplikacjami według platformy
+## Możliwości zarządzania aplikacjami według platformy
+<a id="app-management-capabilities-by-platform" class="xliff"></a>
 
 ||||||
 |-|-|-|-|-|
@@ -56,11 +58,12 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 |Aplikacje ze sklepu|Tak|Tak|Tak|Tak|
 |Aktualizowanie aplikacji|Tak|Tak|Tak|Tak|
 
-<sup>1</sup> Rozważ skorzystanie z funkcji [Windows Information Protection]windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.
+<sup>1</sup> Rozważ zastosowanie funkcji [Windows Information Protection](windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.
 
 <sup>2</sup>Dotyczy urządzeń zarządzanych tylko przez usługę Intune.
 
-## <a name="how-to-get-started"></a>Wprowadzenie
+## Wprowadzenie
+<a id="how-to-get-started" class="xliff"></a>
 
 Większość elementów powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
 
@@ -70,7 +73,8 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
 
-### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
+### Zarządzanie programem Endpoint Protection usługi
+<a id="manage" class="xliff"></a>
 - **Aplikacje** — ten węzeł to miejsce, w którym będziesz dodawać, przypisywać i monitorować większość swoich aplikacji.
     - [Dodawanie aplikacji](apps-add.md)
     - [Przypisywanie aplikacji](apps-deploy.md)
@@ -85,7 +89,8 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 - **Profile aprowizacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
     - [Profile aprowizowania aplikacji dla systemu iOS](app-provisioning-profile-ios.md)
 
-### <a name="monitor"></a>Monitor
+### Monitor
+<a id="monitor" class="xliff"></a>
 - **Licencjonowane aplikacje** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
 - **Wykryte aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
@@ -94,7 +99,8 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
 Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](apps-monitor.md)
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
 - **Sklep Windows dla firm** — umożliwia skonfigurowanie integracji ze Sklepem Windows dla firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.

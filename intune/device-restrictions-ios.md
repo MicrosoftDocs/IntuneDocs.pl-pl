@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,19 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 365b56082207c2110965681663432cce10f27c99
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7ec66c3864aae3d680c006ada95859df0e7f0e84
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
+# Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
+<a id="ios-device-restriction-settings-in-microsoft-intune" class="xliff"></a>
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="general"></a>Ogólne
+## Ogólne
+<a id="general" class="xliff"></a>
 -   **Aparat fotograficzny** — określa, czy można używać aparatu fotograficznego urządzenia.   
 -   **Przesyłanie danych diagnostycznych** — umożliwia lub blokuje przesyłanie danych diagnostycznych z urządzenia do firmy Apple.
 -   **FaceTime** — umożliwia korzystanie z aplikacji FaceTime na urządzeniu.
@@ -73,7 +75,8 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 - **Apple News (tylko nadzorowany)** — umożliwia korzystanie z aplikacji Apple News.
 - **Zmiany profilu konfiguracji** — umożliwia użytkownikowi instalowanie profilów konfiguracji.
 
-## <a name="password"></a>Hasło
+## Hasło
+<a id="password" class="xliff"></a>
 -   **Wymagane jest hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
 -   **Proste hasła** — zezwala na proste hasła, takie jak „0000” i „1234”.
 -   **Wymagany typ hasła** — określa wymagany typ hasła, na przykład alfanumeryczne lub wyłącznie numeryczne.
@@ -88,7 +91,8 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 
 <sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
-## <a name="app-store-doc-viewing-gaming"></a>Sklep App Store, wyświetlanie dokumentów, granie
+## Sklep App Store, wyświetlanie dokumentów, granie
+<a id="app-store-doc-viewing-gaming" class="xliff"></a>
 
 
 -   **App Store (tylko w trybie nadzorowanym)** — blokuje dostęp do sklepu z aplikacjami na urządzeniach nadzorowanych.
@@ -106,7 +110,8 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 -   **Region klasyfikacji** — wybierz region klasyfikacji, dla którego chcesz skonfigurować dozwolone pliki do pobrania, a następnie wybierz dozwoloną klasyfikację dla opcji **Filmy** i **Programy telewizyjne**.
 -   **Aplikacje** — wybierz dozwoloną klasyfikację wiekową dla aplikacji, które użytkownicy będą mogli pobierać, lub wybierz opcję **Zezwalaj na wszystkie aplikacje**.
 
-## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
+## Aplikacje z ograniczeniami
+<a id="restricted-apps" class="xliff"></a>
 
 Na liście aplikacji z ograniczeniami można skonfigurować jedną z następujących list:
 
@@ -115,7 +120,8 @@ Lista **Zatwierdzone aplikacje** — lista aplikacji, które użytkownicy mogą 
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i adres URL aplikacji w sklepie z aplikacjami.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Jak określić adres URL aplikacji w sklepie
+### Jak określić adres URL aplikacji w sklepie
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Aby określić adres URL aplikacji na liście aplikacji, użyj następującego formatu:
 
@@ -130,11 +136,13 @@ Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, któr
 
 
 
-### <a name="additional-options"></a>Opcje dodatkowe
+### Opcje dodatkowe
+<a id="additional-options" class="xliff"></a>
 
 Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.
 
-## <a name="show-or-hide-apps"></a>Pokaż lub ukryj aplikacje
+## Pokaż lub ukryj aplikacje
+<a id="show-or-hide-apps" class="xliff"></a>
 
 Na liście Pokaż lub ukryj aplikacje możesz skonfigurować jedną z następujących list (wymagane są urządzenia nadzorowane z systemem iOS 9.3 lub nowszym).
 
@@ -143,7 +151,8 @@ Lista **Widoczne aplikacje** — określ listę aplikacji, które użytkownicy b
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i adres URL aplikacji w sklepie z aplikacjami.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Jak określić adres URL aplikacji w sklepie
+### Jak określić adres URL aplikacji w sklepie
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Aby określić adres URL aplikacji na liście aplikacji, użyj następującego formatu:
 
@@ -155,19 +164,22 @@ Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, któr
 > [!Note]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
 
-### <a name="additional-options"></a>Opcje dodatkowe
+### Opcje dodatkowe
+<a id="additional-options" class="xliff"></a>
 
 Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę ukrytych lub widocznych aplikacji w tym samym formacie.
 
 
-## <a name="cellular"></a>Komórkowe
+## Komórkowe
+<a id="cellular" class="xliff"></a>
 -   **Roaming danych** — zezwala na roaming danych, gdy urządzenie korzysta z sieci komórkowej.
 -   **Globalne pobieranie w tle podczas roamingu** — umożliwia pobieranie danych, np. wiadomości e-mail, przez urządzenie korzystające z roamingu w sieci komórkowej.
 -   **Wybieranie głosowe** — umożliwia korzystanie z funkcji wybierania głosowego na urządzeniu.
 -   **Roaming połączeń głosowych** — zezwala na roaming połączeń głosowych, gdy urządzenie znajduje się w sieci komórkowej.
 -   **Zmiany ustawień użycia danych komórkowych aplikacji (tylko nadzorowany)** — umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.
 
-## <a name="cloud-and-storage"></a>Chmura i magazyn
+## Chmura i magazyn
+<a id="cloud-and-storage" class="xliff"></a>
 -   **Tworzenie kopii zapasowych w usłudze iCloud** — umożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud.
 -   **Synchronizowanie dokumentów z usługą iCloud (tylko w trybie nadzorowanym)** — umożliwia synchronizowanie dokumentów i wartości kluczy w obszarze magazynu usługi iCloud.
 -   **Synchronizowanie strumienia zdjęć z usługą iCloud** — umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniach, co pozwala synchronizować zdjęcia z usługą iCloud i udostępniać je na wszystkich urządzeniach użytkownika.
@@ -177,11 +189,13 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 -   **Udostępniony strumień zdjęć** — wybór ustawienia **Nie** powoduje wyłączenie funkcji **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.
 -   **Kontynuacja aktywności** — umożliwia użytkownikowi kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS (program Handoff).
 
-## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomiczny tryb jednej aplikacji (tylko tryb nadzorowany)
+## Autonomiczny tryb jednej aplikacji (tylko tryb nadzorowany)
+<a id="autonomous-single-app-mode-supervised-only" class="xliff"></a>
 
 Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruchamiać określone aplikacje w autonomicznym trybie pojedynczej aplikacji. Jeśli skonfigurowano ten tryb, a aplikacja zostanie uruchomiona, urządzenie zostanie zablokowane, aby mogło uruchamiać wyłącznie tę aplikację. Opcję tę można przykładowo wykorzystać w przypadku konfigurowania aplikacji, która umożliwia użytkownikom wykonywanie testów na urządzeniu. Po zakończeniu działań aplikacji lub usunięciu tych zasad urządzenie powraca do normalnego stanu.
 
-### <a name="settings"></a>Ustawienia
+### Ustawienia
+<a id="settings" class="xliff"></a>
 
 - **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana na liście aplikacji w tym bloku.
 - **Identyfikator pakietu aplikacji** — wprowadź identyfikator pakietu aplikacji. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w tym temacie.
@@ -191,54 +205,57 @@ Po określeniu nazwy i identyfikatora pakietu każdej aplikacji wybierz pozycję
 - **Importuj** — umożliwia zaimportowanie pliku wartości rozdzielanych przecinkami (csv) zawierającego listę nazw aplikacji i powiązanych z nimi identyfikatorów pakietu.
 - **Eksportuj** — umożliwia wyeksportowanie skonfigurowanych nazw aplikacji i powiązanych z nimi identyfikatorów pakietu do pliku wartości rozdzielanych przecinkami (csv).
 
-### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
+### Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
+<a id="bundle-id-reference-for-built-in-ios-apps" class="xliff"></a>
 
 Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
 
-|||
-|-|-|
-|Nazwa aplikacji|Identyfikator pakietu|
-|App Store|com.apple.AppStore|
-|Kalkulator|com.apple.calculator|
-|Kalendarz|com.apple.mobilecal|
-|Aparat fotograficzny|com.apple.camera|
-|Zegar|com.apple.mobiletimer|
-|Kompas|com.apple.compass|
-|Kontakty|com.apple.MobileAddressBook|
-|FaceTime|com.apple.facetime|
-|Moi znajomi|com.apple.mobileme.fmf1|
-|Znajdź mój iPhone|com.apple.mobileme.fmip1|
-|Centrum gier|com.apple.gamecenter|
-|GarageBand|com.apple.mobilegarageband|
-|Kondycja|com.apple.Health|
-|iBooks|com.apple.iBooks|
-|iTunes Store|com.apple.MobileStore|
-|iTunes U|com.apple.itunesu|
-|Keynote|com.apple.Keynote|
-|Mail|com.apple.mobilemail|
-|Mapy|com.apple.Maps|
-|Komunikaty|com.apple.MobileSMS|
-|Muzyka|com.apple.Music|
-|News|com.apple.news|
-|Uwagi|com.apple.mobilenotes|
-|Liczby|com.apple.Numbers|
-|Pages|com.apple.Pages|
-|Photo Booth|com.apple.Photo-Booth|
-|Zdjęcia|com.apple.mobileslideshow|
-|Podcasty|com.apple.podcasts|
-|Przypomnienia|com.apple.reminders|
-|Safari|com.apple.mobilesafari|
-|Ustawienia|com.apple.Preferences|
-|Giełda|com.apple.stocks|
-|Porady|com.apple.tips|
-|Filmy|com.apple.videos|
-|Dyktafon|com.apple.VoiceMemos|
-|Wallet|com.apple.Passbook|
-|Zegarek|com.apple.Bridge|
-|Pogoda|com.apple.weather|
+```
+,com.apple.AppStore,App Store,Apple
+,com.apple.calculator,Calculator,Apple
+,com.apple.mobilecal,Calendar,Apple
+,com.apple.camera,Camera,Apple
+,com.apple.mobiletimer,Clock,Apple
+,com.apple.compass,Compass,Apple
+,com.apple.MobileAddressBook,Contacts,Apple
+,com.apple.facetime,FaceTime,Apple
+,com.apple.mobileme.fmf1,Find Friends,Apple
+,com.apple.mobileme.fmip1,Find iPhone,Apple
+,com.apple.gamecenter,Game Center,Apple
+,com.apple.mobilegarageband,GarageBand,Apple
+,com.apple.Health,Health,Apple
+,com.apple.iBooks,iBooks,Apple
+,com.apple.MobileStore,iTunes Store,Apple
+,com.apple.itunesu,iTunes U,Apple
+,com.apple.Keynote,Keynote,Apple
+,com.apple.mobilemail,Mail,Apple
+,com.apple.MapsMaps,Apple
+,com.apple.MobileSMS,Messages,Apple
+,com.apple.Music,Music,Apple
+,com.apple.news,News,Apple
+,com.apple.mobilenotes,Notes,Apple
+,com.apple.Numbers,Numbers,Apple
+,com.apple.Pages,Pages,Apple
+,com.apple.Photo-Booth,Photo Booth,Apple
+,com.apple.mobileslideshow,Photos,Apple
+,com.apple.podcasts,Podcasts,Apple
+,com.apple.reminders,Reminders,Apple
+,com.apple.mobilesafariSafari,Apple
+,com.apple.Preferences,Settings,Apple
+,com.apple.stocks,Stocks,Apple
+,com.apple.tips,Tips,Apple
+,com.apple.videos,Videos,Apple
+,com.apple.VoiceMemos,VoiceMemos,Apple
+,com.apple.Passbook,Wallet,Apple
+,com.apple.Bridge,Watch,Apple
+,com.apple.weather,Weather,Apple
 
 
-## <a name="kiosk"></a>Kiosk
+```
+
+
+## Kiosk
+<a id="kiosk" class="xliff"></a>
 -   **Blokada aktywacji** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
 -   **Aplikacja pracująca w trybie kiosku** — wybierz opcję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, lub wybierz opcję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
 -   **Dotyk wspomagający** — włącza lub wyłącza funkcję ułatwień dostępu **Dotyk wspomagający**, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.
@@ -262,7 +279,8 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 > Aby można było skonfigurować urządzenie z systemem iOS do obsługi trybu kiosku, należy najpierw użyć narzędzia Apple Configurator lub programu Apple Device Enrollment Program w przełączenia go do trybu nadzorowanego. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 >Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po przypisaniu profilu, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
-## <a name="safari"></a>Safari
+## Safari
+<a id="safari" class="xliff"></a>
 -   **Safari (tylko w trybie nadzorowanym)** — określa, czy na urządzeniu można używać przeglądarki Safari.
 -   **Autowypełnianie** — umożliwia użytkownikowi zmianę ustawień autouzupełniania w przeglądarce.
 -   **Pliki cookie** — umożliwia używanie plików cookie przez przeglądarkę.
@@ -271,18 +289,22 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 -   **Wyskakujące okienka** — włącza lub wyłącza blokowanie wyskakujących okienek w przeglądarce.
 
 
-## <a name="domains"></a>Domains
+## Domains
+<a id="domains" class="xliff"></a>
 
-### <a name="unmarked-email-domains"></a>Nieoznaczone domeny poczty e-mail
+### Nieoznaczone domeny poczty e-mail
+<a id="unmarked-email-domains" class="xliff"></a>
 
 W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż skonfigurowane, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
 
 
-### <a name="managed-web-domains"></a>Zarządzane domeny sieci Web
+### Zarządzane domeny sieci Web
+<a id="managed-web-domains" class="xliff"></a>
 
 W polu **Adres URL domeny sieci Web** dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane ze wskazanych domen będą uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Domeny automatycznego wypełniania haseł w programie Safari
+### Domeny automatycznego wypełniania haseł w programie Safari
+<a id="safari-password-auto-fill-domains" class="xliff"></a>
 
 W polu **Adres URL domeny** dodaj do listy co najmniej jeden adres URL. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń z systemem iOS w wersji 9.3 lub nowszym działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn sieci Web.
