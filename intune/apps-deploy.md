@@ -1,12 +1,12 @@
 ---
-title: "Jak przypisywać aplikacje do grup | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
+title: "Jak przypisać aplikacje do grup"
+titleSuffix: Intune on Azure
+description: "Po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/09/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,17 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1246ef539c044b894b4e4a93f449e60e6462600a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 059c6d2c65c78b6a94f93c26d606abe0451edbbb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Po dodaniu aplikacji do usługi Intune należy ją udostępnić użytkownikom i urządzeniom. W tym celu należy ją przypisać.
+Po dodaniu aplikacji do usługi Intune należy ją przypisać użytkownikom i urządzeniom.
 
 Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządzane przez usługę Intune. Poniższa tabela pomoże zapoznać się z różnymi opcjami przypisywania aplikacji użytkownikom i urządzeniom:
 
@@ -46,33 +44,6 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 > [!NOTE]
 > Obecnie można przypisać aplikacje iOS i Android (zarówno biznesowe, jak i zakupione w sklepie) do urządzeń, które nie są zarejestrowane w usłudze Intune.
 
-## <a name="changes-to-how-you-assign-apps-to-groups-in-the-intune-preview"></a>Zmiany metody przypisywania aplikacji do grup w wersji zapoznawczej usługi Intune
-
-W wersji zapoznawczej usługi Intune Azure nie używa się już grup w usłudze Intune do przypisywania aplikacji; teraz używa się grup zabezpieczeń usługi Azure Active Directory (Azure AD). W związku z tym należy poznać pewne zmiany w sposobie, w jaki odbywają się przypisania aplikacji, szczególnie w przypadku przypisywania aplikacji do grup podrzędnych usługi Intune.
-Najważniejszą rzeczą, na którą trzeba zwrócić uwagę jest to, że pojęcie grup podrzędnych nie istnieje w usłudze Azure AD. Jednak niektóre grupy mogą zawierać te same elementy członkowskie. W takim przypadku zachowanie klasycznej usługi Intune różni się od wersji zapoznawczej usługi Intune Azure. Zostało to przedstawione w poniższej tabeli:
-
-||||||
-|-|-|-|-|-|
-|**Intune Classic (przed migracją dzierżawy)**|-|**Intune Azure (po zakończeniu migracji dzierżawy)**|-|**Więcej informacji**|
-|**Opcja przypisywania grupy nadrzędnej**|**Opcja przypisywania grupy podrzędnej**|**Wynikowa opcja przypisania dla wspólnych elementów członkowskich poprzedniej grupy nadrzędnej i podrzędnej**|**Akcja wynikowej opcji przypisania dla elementów członkowskich grupy nadrzędnej**|-|
-|Dostępne|Wymagane|Wymagane i dostępne|Dostępne|Wymagane i dostępne oznacza, że aplikacje przypisane w razie potrzeby można także znaleźć w aplikacji Portal firmy.
-|Nie dotyczy|Dostępne|Nie dotyczy|Nie dotyczy|Obejście problemu: usuń opcję przypisywania „Nie dotyczy” z grupy nadrzędnej usługi Intune.
-|Wymagane|Dostępne|Wymagane i dostępne|Wymagane|-|
-|Wymagane i dostępne<sup>1</sup>|Dostępne|Wymagane i dostępne|Wymagane i dostępne|-|
-|Wymagane|Nie dotyczy|Wymagane|Wymagane|-|
-|Wymagane i dostępne|Nie dotyczy|Wymagane i dostępne|Wymagane i dostępne|-|
-|Wymagane|Odinstaluj|Wymagane|Wymagane|-|
-|Wymagane i dostępne|Odinstaluj|Wymagane i dostępne|Wymagane i dostępne|-|
-<sup>1</sup> Tylko dla zarządzanych aplikacji ze sklepu iOS w przypadku ich dodania do usługi Intune i przypisania jako Wymagane są automatycznie tworzone z opcjami Wymagane i Dostępne.
-
-W celu uniknięcia konfliktów przypisania można wykonać następujące czynności:
-
-1.    Jeśli aplikacje zostały wcześniej przypisane do powiązanych grup nadrzędnych i podrzędnych usługi Intune, rozważ usunięcie tych przypisań przed rozpoczęciem migracji dzierżawy.
-2.    Usuń grupy podrzędne z grup nadrzędnych i utwórz nową grupę zawierającą elementy członkowskie starej grupy podrzędnej. Następnie można utworzyć nowe przypisanie aplikacji do tej grupy.
-Uwagi: Jeśli poprzednią grupą nadrzędną była „Wszyscy użytkownicy”, należy utworzyć nową grupę dynamiczną, która nie obejmuje elementów członkowskich grupy podrzędnej.
-Należy wprowadzić zmiany w grupach w portalu [Azure Portal](https://portal.azure.com/) dla grup użytkowników i urządzeń. [Klasyczny portal Azure](https://manage.windowsazure.com/) pozwala wprowadzać zmiany tylko w grupach użytkowników.
-
-
 ## <a name="how-to-assign-an-app"></a>Jak przypisać aplikację
 
 1. Zaloguj się do portalu Azure Portal.
@@ -87,10 +58,53 @@ Należy wprowadzić zmiany w grupach w portalu [Azure Portal](https://portal.azu
     - **Nie dotyczy** — aplikacja nie jest instalowana ani wyświetlana w Portalu firmy.
     - **Wymagane** — aplikacja jest instalowana na urządzeniach w wybranych grupach.
     - **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
-    - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Pomocna będzie tabela powyżej.
+    - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune.
 6. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 
 Aplikacja jest teraz przypisana do wybranej grupy.
 
-Informacje przydatne do monitorowania przypisań aplikacji znajdują się w artykule [How to monitor apps](apps-monitor.md) (Jak monitorować aplikacje).
+## <a name="how-conflicts-between-app-intents-are-resolved"></a>Jak są rozwiązywane konflikty intencji aplikacji
 
+Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi intencjami. W poniższej tabeli przedstawiono wynikowe intencje w takich przypadkach.
+
+||||
+|-|-|-|
+|Intencja grupy 1|Intencja grupy 2|Intencja wynikowa|
+|Użytkownik, wymagane|Użytkownik, dostępne|Wymagane i dostępne|
+|Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
+|Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
+|Użytkownik, dostępne|Użytkownik, niedostępne|Niedostępny|
+|Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstaluj|
+|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstaluj
+|Użytkownik, wymagane|Urządzenie, wymagane|Oba elementy istnieją, brama traktuje jako wymagane 
+|Użytkownik, wymagane|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane 
+|Użytkownik, dostępne|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane (wymagane i dostępne)
+|Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako dostępne.<br>Aplikacja jest wyświetlana w Portalu firmy.<br>Jeśli aplikacja jest już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), wówczas ta aplikacja zostaje odinstalowana.<br>Jeśli jednak użytkownik kliknie w Portalu firmy polecenie instalacji, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
+|Użytkownik, niedostępne|Urządzenie, wymagane|Wymagane|
+|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstaluj|
+|Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane|
+|Użytkownik, odinstalowywanie|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako odinstalowywanie|
+|Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagane|
+|Użytkownik, wymagane i dostępne|Użytkownik, dostępne|Wymagane i dostępne|
+|Użytkownik, wymagane i dostępne|Użytkownik, odinstalowywanie|Wymagane i dostępne|
+|Użytkownik, wymagane i dostępne|Użytkownik, niedostępne|Wymagane i dostępne|
+|Użytkownik, wymagane i dostępne|Urządzenie, wymagane|Oba elementy istnieją, wymagane i dostępne
+|Użytkownik, wymagane i dostępne|Urządzenie, niedostępne|Wymagane i dostępne|
+|Użytkownik, wymagane i dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane. Wymagane i dostępne
+|Użytkownik, niedostępne|Urządzenie, niedostępne|Niedostępny|
+|Użytkownik, dostępne|Urządzenie, niedostępne|Dostępne|
+|Użytkownik, wymagane|Urządzenie, niedostępne|Wymagane|
+|Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane i dostępne|Wymagane i dostępne
+|Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane|Wymagane
+|Użytkownik, dostępne bez rejestracji|Użytkownik, niedostępne|Niedostępny
+|Użytkownik, dostępne bez rejestracji|Użytkownik, dostępne|Dostępne|
+|Użytkownik, dostępne bez rejestracji|Urządzenie, wymagane|Wymagane i dostępne bez rejestracji|
+|Użytkownik, dostępne bez rejestracji|Urządzenie, niedostępne|Dostępne bez rejestracji|
+|Użytkownik, dostępne bez rejestracji|Urządzenie, odinstalowywanie|Odinstalowywanie i dostępne bez rejestracji.<br>Jeśli użytkownik nie zainstalował aplikacji z Portalu firmy, odinstalowywanie zostanie uznane.<br>Jeśli użytkownik instaluje aplikację z Portalu firmy, instalowanie ma priorytet nad odinstalowywaniem.|
+
+>[!NOTE]
+>W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Intune i przypisania ich jako Wymagane są one automatycznie tworzone z intencjami Wymagane i Dostępne.
+
+## <a name="next-steps"></a>Następne kroki
+
+Informacje przydatne do monitorowania przypisań aplikacji znajdują się w artykule [How to monitor apps](apps-monitor.md) (Jak monitorować aplikacje).

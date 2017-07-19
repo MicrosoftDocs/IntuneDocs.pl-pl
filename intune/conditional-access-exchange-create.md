@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie i przypisywanie zasad dostępu warunkowego do lokalnego programu Exchange"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: jak konfigurować dostęp warunkowy do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune"
+titleSuffix: Intune on Azure
+description: "Jak konfigurować dostęp warunkowy do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,18 +14,15 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2f1775eb98d6518ce35dcc38852e167c5eada616
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b72dbe27b52be187a907392aea5a1803fb36e4d3
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/03/2017
 ---
+# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Tworzenie i przypisywanie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Microsoft Intune
 
-# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune-azure-preview"></a>Tworzenie i przypisywanie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w wersji zapoznawczej usługi Microsoft Azure Intune
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W tym temacie opisano proces konfigurowania dostępu warunkowego do lokalnego programu Exchange w oparciu o zgodność urządzeń.
 
@@ -85,7 +82,7 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 4. Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
 
-5.  Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz
+5. Wybierz pozycję **Dostęp lokalny**, a następnie wybierz
 
 6. W bloku **Lokalny** wyświetlany jest stan zasad dostępu warunkowego oraz urządzenia, których to dotyczy.
 
@@ -93,8 +90,8 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 8. W bloku **Dostęp do lokalnego programu Exchange** wybierz przycisk **Tak**, aby włączyć kontrolę dostępu do lokalnego programu Exchange.
 
-      > [!NOTE]
-      > Jeśli łącznik lokalnego programu Exchange Active Sync nie został skonfigurowany, opcja ta będzie wyłączona.  Należy najpierw zainstalować i skonfigurować ten łącznik, a potem włączyć dostęp warunkowy do lokalnego programu Exchange. Więcej szczegółowych informacji znajduje się w temacie [Install the Intune On-premises Exchange Connector](exchange-connector-install.md) (Instalowanie łącznika lokalnego programu Exchange w usłudze Intune)
+    > [!NOTE]
+    > Jeśli łącznik lokalnego programu Exchange Active Sync nie został skonfigurowany, opcja ta będzie wyłączona.  Należy najpierw zainstalować i skonfigurować ten łącznik, a potem włączyć dostęp warunkowy do lokalnego programu Exchange. Więcej szczegółowych informacji znajduje się w temacie [Install the Intune On-premises Exchange Connector](exchange-connector-install.md) (Instalowanie łącznika lokalnego programu Exchange w usłudze Intune)
 
 9. W obszarze **Przypisanie** wybierz pozycję **Objęte grupy**.  Użyj grupy zabezpieczeń użytkowników, która powinna mieć przypisany dostęp warunkowy. Użytkownicy będą musieli zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności.
 
@@ -114,12 +111,12 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 15. W bloku **Lokalne** kliknij przycisk **Zapisz**, aby zapisać zasady dostępu warunkowego.
 
-## <a name="create-azure-ad-conditional-access-policies-in-intune-azure-preview"></a>Tworzenie zasady dostęp warunkowego Azure AD w wersji zapoznawczej Intune Azure
+## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Tworzenie zasad dostępu warunkowego usługi Azure AD w usłudze Intune
 
-Począwszy od usługi Intune w wersji 1704, administratorzy mogą tworzyć zasady dostępu warunkowego usługi Azure AD z wersji zapoznawczej Intune Azure. Zapewnia to wygodę, gdyż nie ma konieczności przełączania między obciążeniami usług Azure i Intune.
+Począwszy od usługi Intune w wersji 1704, administratorzy mogą tworzyć zasady dostępu warunkowego usługi Azure AD w portalu Intune Azure. Zapewnia to wygodę, gdyż nie ma konieczności przełączania między obciążeniami usług Azure i Intune.
 
 > [!IMPORTANT]
-> Aby utworzyć zasady dostępu warunkowego usługi Azure AD w portalu wersji zapoznawczej Intune Azure, musisz mieć licencję usługi Azure AD w wersji Premium.
+> Aby utworzyć zasady dostępu warunkowego usługi Azure AD w portalu Intune Azure, potrzebna jest licencja usługi Azure AD w wersji Premium.
 
 ### <a name="to-create-azure-ad-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego usługi Azure AD
 

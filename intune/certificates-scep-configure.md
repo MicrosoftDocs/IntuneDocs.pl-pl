@@ -1,12 +1,12 @@
 ---
 title: "Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów SCEP usługi Intune."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów SCEP usługi Intune."
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,14 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ad0dc380eca386438e9568bf212ac9c5ad66ceb6
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: e29e79b8598eddba951b3f8ee7a7bcd5c6271f83
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów prostego protokołu rejestrowania certyfikatów (SCEP, ang. Simple Certificate Enrollment Protocol) za pomocą usługi Intune.
 
@@ -84,9 +83,13 @@ Skonfigurowanie profilów certyfikatów będzie możliwe po wykonaniu poniższyc
 
 **Krok 5**: Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 
+> [!NOTE]
+> Ze względu na znany problem w celu pobrania, zainstalowania i skonfigurowania łącznika certyfikatów należy wykonać następującą procedurę: [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP -> Konfigurowanie infrastruktury -> Zadanie 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
+
+
 #### <a name="step-1---create-an-ndes-service-account"></a>Krok 1 — Tworzenie konta usługi NDES
 
-Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
+Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne, **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
 
 #### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Krok 2 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 To zadanie obejmuje:
@@ -100,6 +103,9 @@ To zadanie obejmuje:
 1.  Zaloguj się jako administrator przedsiębiorstwa.
 
 2.  Za pomocą przystawki Szablony certyfikatów dla wystawiającego urzędu certyfikacji utwórz nowy szablon niestandardowy lub skopiuj istniejący szablon, a następnie edytuj go (na przykład szablon użytkownika), aby używać go w usłudze NDES.
+
+    >[!NOTE]
+    > Szablon certyfikatu usługi NDES musi być oparty na szablonie certyfikatu w wersji 2 (z obsługą systemu Windows 2003).
 
     Szablon wymaga następującej konfiguracji:
 
@@ -304,7 +310,7 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 ##### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
 4. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
 5.  Kliknij pozycję **Włącz łącznik certyfikatów**.
@@ -312,10 +318,10 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
 
 > [!NOTE]
-> Ze względu na znany problem w celu pobrania, zainstalowania i skonfigurowania łącznika certyfikatów należy wykonać następującą procedurę: [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP -> Konfigurowanie infrastruktury -> Zadanie 5](https://docs.microsoft.com/intune-classic/deploy-use/certificates-scep-configure#a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure)
+> Ze względu na znany problem w celu pobrania, zainstalowania i skonfigurowania łącznika certyfikatów należy wykonać następującą procedurę: [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP -> Konfigurowanie infrastruktury -> Zadanie 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
 
 1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno pozycje **Więcej usług** > **Inne** > **Intune**.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
 4. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
 5. Wybierz pozycję **Pobierz łącznik certyfikatów**.
@@ -377,6 +383,8 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
         - **Nazwa pospolita**
         - **Nazwa pospolita obejmująca adres e-mail**
         - **Nazwa pospolita jako adres e-mail**
+        - **Niestandardowy** — po wybraniu tej opcji wyświetlane jest inne pole listy rozwijanej. To pole służy do wprowadzania niestandardowego formatu nazwy podmiotu. Obsługiwane są dwie zmienne dla formatu niestandardowego: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Przy użyciu kombinacji co najmniej jednej z tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki: **CN={{NazwaUżytkownika}},E={{AdresEmail}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. W tym przykładzie utworzono format nazwy podmiotu, w którym oprócz zmiennych CN i E użyto ciągów zmiennych Organizational Unit (Jednostka organizacyjna), Organization (Organizacja), Location (Lokalizacja), State (Stan) i Country (Kraj). [W tym temacie](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) omówiono funkcję **CertStrToName** i obsługiwane przez nią ciągi.
+        
     - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN. 
     - **Użycie klucza** — określ opcje użycia klucza certyfikatu. Można wybrać następujące opcje: 
         - **Szyfrowanie klucza** — zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany. 
@@ -392,10 +400,6 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
->[!Note]
-> Dotyczy wyłącznie urządzeń z systemem iOS: w obszarze Format nazwy podmiotu wybierz opcję Niestandardowy, aby wprowadzić niestandardowy format nazwy podmiotu.
-> Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki: **CN={{NazwaUżytkownika}},E={{AdresEmail}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. W tym przykładzie utworzono format nazwy podmiotu, w którym oprócz zmiennych CN i E użyto ciągów zmiennych Organizational Unit, Organization, Location, State, i Country. [W tym temacie](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) omówiono funkcję **CertStrToName** i obsługiwane przez nią ciągi.
-
 ## <a name="how-to-assign-the-certificate-profile"></a>Przypisywanie profilu certyfikatu
 
 Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę następujące kwestie:
@@ -407,5 +411,4 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 - Mimo że każdy profil należy przypisać osobno, konieczne jest również przypisanie profilu zaufanego certyfikatu głównego urzędu certyfikacji oraz profilu protokołu SCEP lub PKCS. W przeciwnym razie zasady certyfikatu protokołu SCEP lub PKCS nie będą działać.
 
 Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
-
 

@@ -1,32 +1,29 @@
 ---
 title: "Zarządzanie urządzeniami w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak wyświetlać urządzenia zarządzane za pomocą usługi Intune i wykonywać na nich różne operacje."
+titleSuffix: Intune on Azure
+description: "Dowiedz się, jak wyświetlać urządzenia zarządzane w usłudze Intune i wykonywać na nich różne operacje."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/13/2017
+ms.date: 07/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 
+ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1fdb86184875d7082659d608b445b41b2ad9aa9e
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 8f066e62e323fffb7c6954d83b2b55ee63f4be46
+ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/06/2017
 ---
-
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożliwia wykonywanie zadań zdalnych na tych urządzeniach. Aby uzyskać dostęp do obciążenia:
 
@@ -34,71 +31,46 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
 
-Wybierz jedną z następujących opcji:
+Teraz można wykonywać poniższe akcje:
 
-- **Przegląd** Pobranie informacji o zarejestrowanych urządzeniach i systemach operacyjnych działających na każdym z nich.
-- **Zarządzanie** — opcja **Wszystkie urządzenia** umożliwia wyświetlenie listy wszystkich zarządzanych urządzeń.
-    Wybierz jedno z urządzeń na liście, aby otworzyć blok <*nazwa urządzenia*> **Przegląd**, w którym można wybrać jedną z opcji:
-    - **Przegląd** — zobacz ogólne informacje dotyczące urządzenia, w tym informacje o jego nazwie, właścicielu, czy jest to urządzenie BYOD, kiedy ostatnio zostało zewidencjonowane itd.
+- [Wyświetl spis urządzeń](device-inventory.md)
+- Wykonaj akcje zdalne urządzenia:
+    - [Usuń dane firmy](device-company-data-remove.md) 
+    - [Resetuj do ustawień fabrycznych](device-factory-reset.md)
+    - [Zdalne blokowanie](device-remote-lock.md)
+    - [Zresetuj kod dostępu](device-passcode-reset.md)
+    - [Zastosowanie obejścia blokady aktywacji](device-activation-lock-bypass.md)
+    - [Rozpoczęcie od nowa](device-fresh-start.md)
+    - [Tryb utraty](device-lost-mode.md)
+    - [Zlokalizuj urządzenie](device-locate.md)
+    - [Uruchom ponownie](device-restart.md)
+    - [Resetowanie numeru PIN w systemie Windows 10](device-windows-pin-reset.md)
+    - [Zdalne sterowanie dla systemu Android](device-profile-android-teamviewer.md)
 
-    - **Sprzęt** — wyświetlenie szczegółowych informacji dotyczących urządzenia, w tym ilości wolnego miejsca, modelu i producenta oraz innych danych.
-    ![Spis sprzętu zarządzanego urządzenia](./media/hardware-inventory.png)
-    - **Wykryte aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione na urządzeniu przez usługę Intune.
-    ![Węzeł Wykryte aplikacje](./media/detected-applications.png)
-- **Monitoruj** Wybranie opcji **Akcje urządzenia** umożliwia wyświetlenie listy akcji urządzenia, które mogły zostać wykonane na urządzeniach zarządzanych, oraz bieżącego stanu tych akcji.
+
+## <a name="support-for-each-device-action"></a>Obsługa poszczególnych akcji urządzeń
+
+Poniższa tabela pozwala zapoznać się z platformami urządzeń obsługiwanymi przez poszczególne akcje.
+
+|||||||
+|-|-|-|-|-|-|
+|Akcja urządzenia|Windows|Windows Phone|iOS|macOS|Android|
+|**Usuń dane firmy**|Tak|Tak|Tak|Tak|Tak|
+|**Resetuj do ustawień fabrycznych**|Windows 8.1 i nowsze (urządzenia niezarządzane przez program EAS)|Tak|Tak|Nie|Program Android for Work nie jest obsługiwany|
+|**Usuwanie**|Tak|Tak|Tak|Tak|Tak|
+|**Zdalne blokowanie**|Nie|System Windows Phone 8.1 lub nowszy|Tak|Nie|Tak|
+|**Zresetuj kod dostępu**|Nie|Systemy od Windows Phone 8.1 do Windows 10 z aktualizacją systemu Windows 10 dla twórców nieprzyłączone do usługi Azure AD, aktualizacja systemu Windows 10 dla twórców i nowsze wersje — wszystkie|Tak|Nie|Wcześniejsze niż Android 7, program Android for Work nie jest obsługiwany|
+|**Nowy kod dostępu** (w przypadku urządzeń z systemem Windows 10)|Nie|Aktualizacja systemu Windows 10 dla twórców i nowsze wersje (z przyłączeniem do usługi Azure AD)|Nie|Nie|Program Android for Work nie jest obsługiwany|
+|**Zastosowanie obejścia blokady aktywacji**|Nie|Nie|Tylko urządzenia należące do firmy|Nie|Nie|
+|**Tryb utraty**|Nie|Nie|Z systemem iOS 9.3 lub nowszą wersją, nadzorowane i należące do firmy|Nie|Nie|
+|**Zlokalizuj urządzenie**|Nie|Nie|Tryb utraty Z systemem iOS 9.3 lub nowszą wersją, nadzorowane i należące do firmy|Nie|Nie|
+|**Wyloguj bieżącego użytkownika**|Nie|Nie|Z systemem iOS 9.3 lub nowszą wersją (tylko współdzielone urządzenia iPad)|Nie|Nie|
+|**Uruchom ponownie**|Windows 8.1 i nowsze|System Windows Phone 8.1 lub nowszy|Nie|Nie|Nie|
+|**Rozpoczęcie od nowa**|Aktualizacja systemu Windows 10 dla twórców i nowsze wersje|Nie|Nie|Nie|Nie|
+|**Nowa sesja pomocy zdalnej**|Nie|Nie|Nie|Nie|Tak|
+|**Usuń użytkownika**|Nie|Nie|Z systemem iOS 9.3 lub nowszą wersją (tylko współdzielone urządzenia iPad)|Nie|Nie|
+
+## <a name="next-steps"></a>Następne kroki
+
+- Wybierz pozycję **Akcje urządzenia**, aby zobaczyć stan akcji podjętych na zarządzanych urządzeniach. 
 ![Monitoruj akcje urządzenia](./media/monitor-device-actions.png)
-- **Pomoc i obsługa techniczna** — wyświetla linki do dokumentacji rozwiązywania problemów i pomocy technicznej.
-
-## <a name="available-device-actions"></a>Dostępne akcje urządzenia
-
-Ponadto można wykonać następujące akcje zdalne na urządzeniu (nie wszystkie akcje są obsługiwane przez wszystkie platformy urządzeń):
-
-### <a name="remove-company-data"></a>**Usuń dane firmy**
-Usuwa tylko dane firmy zarządzane przez usługę Intune. Nie usuwa z urządzenia danych osobistych. Urządzenie nie będzie już zarządzane przez usługę Intune i nie będzie mogło uzyskać dostępu do zasobów firmy (nieobsługiwane w przypadku urządzeń z systemem Windows, które są połączone z usługą Azure Active Directory).
-
-### <a name="factory-reset"></a>**Resetuj do ustawień fabrycznych**
-Przywraca na urządzeniu ustawienia domyślne. Urządzenie nie będzie już zarządzane przez usługę Intune i zarówno dane firmy, jak i dane osobiste są usuwane. Nie można cofnąć tej akcji.
-
-### <a name="remote-lock"></a>**Zdalne blokowanie**
-Blokuje urządzenie. W celu odblokowania urządzenia jego właściciel musi użyć swojego kodu dostępu. Można zdalnie zablokować tylko urządzenie, które ma ustawiony numer PIN lub hasło.
-
-### <a name="reset-passcode"></a>**Zresetuj kod dostępu**
-Generuje dla urządzenia nowy kod dostępu, który zostanie wyświetlony w bloku <*nazwa urządzenia*>  **— Przegląd**.
-
-### <a name="bypass-activation-lock"></a>**Zastosowanie obejścia blokady aktywacji**
-Powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
-
-### <a name="fresh-start"></a>**Rozpoczęcie od nowa**
-
-Usuwa wszystkie aplikacje, które zostały zainstalowane na komputerze z systemem Windows 10 z aktualizacją dla twórców, a następnie automatycznie aktualizuje komputer do najnowszej wersji systemu Windows.
-Funkcja może być przydatna do usuwania wstępnie zainstalowanych aplikacji OEM, które są często dostarczane z nowymi komputerami. Możesz zdecydować, czy dane użytkownika zostaną zachowane w przypadku wykonania tej akcji dla urządzenia. W takim przypadku aplikacje i ustawienia są usuwane, ale zawartość folderów macierzystych zostaje zachowana.
-
-
-### <a name="lost-mode"></a>**Tryb utraty**
-W przypadku zgubienia lub kradzieży urządzenia z systemem iOS można włączyć tryb utraty. Dzięki niemu można określić komunikat i numer telefonu do wyświetlenia na ekranie blokady urządzenia. Wykonaj następujące czynności:
-1.    W bloku właściwości urządzenia z systemem iOS wybierz kolejno opcje **Więcej** > **Tryb utraty**.
-2.    W bloku **Tryb utraty** włącz tryb utraty, wprowadź komunikat, który będzie wyświetlany, i opcjonalnie podaj numer telefonu kontaktowego.
-3.    Kliknij przycisk **OK**.
-Po włączeniu trybu utraty wszystkie sposoby korzystania z urządzenia zostaną zablokowane. Użytkownik końcowy nie może uzyskać dostępu do urządzenia aż do momentu wyłączenia przez Ciebie trybu utraty. Przy włączonym trybie utraty można skorzystać z akcji **Zlokalizuj urządzenie**, aby dowiedzieć się, gdzie znajduje się urządzenie.
-Aby skorzystać z trybu utraty, urządzenie musi być urządzeniem z systemem iOS,należącym do firmy, zarejestrowanym w usłudze DEP i objętym trybem nadzorowanym.
-
-### <a name="locate-device"></a>**Zlokalizuj urządzenie**
-Ta zdalna akcja umożliwia wyświetlenie na mapie lokalizacji zgubionego lub skradzionego urządzenia z systemem iOS. Urządzenie musi być urządzeniem z systemem iOS, należącym do firmy, zarejestrowanym w usłudze DEP i objętym trybem nadzorowanym. Przed użyciem tej akcji urządzenie musi znajdować się w trybie utraty.
-1.    W bloku właściwości urządzenia z systemem iOS wybierz kolejno opcje **Więcej** > **Zlokalizuj urządzenie**.
-2.    Po zlokalizowaniu urządzenia jego lokalizacja jest wyświetlana w bloku **Zlokalizuj urządzenie**.
-    Blok ![Zlokalizuj urządzenie](./media/locate-device.png)
-
->[!NOTE]
->W celu zachowania prywatności stopień powiększenia mapy jest ograniczony.
-
-### <a name="restart"></a>**Uruchom ponownie**
-Powoduje ponowne uruchomienie urządzenia. Właściciel urządzenia nie jest automatycznie powiadamiany o ponownym uruchomieniu, dlatego ta akcja może doprowadzić do utraty wykonanej pracy.
-
-
-## <a name="security-and-privacy-information-for-the-lost-mode-and-locate-device-actions"></a>Informacje o zabezpieczeniach i prywatności w trybie utraty oraz akcjach lokalizowania urządzenia
-- Do momentu włączenia tej akcji informacje o lokalizacji urządzenia nie są wysyłane do usługi Intune.
-- Po włączeniu akcji lokalizacji urządzenia współrzędne geograficzne urządzenia są wysyłane do usługi Intune i wyświetlane w portalu Azure.
-- Dane są przechowywane przez 24 godziny, a następnie usuwane. Nie można ręcznie usunąć danych lokalizacji.
-- Dane lokalizacji są szyfrowane zarówno podczas przechowywania, jak i podczas przesyłania.
-- Zalecamy, aby wprowadzony podczas konfigurowania trybu utraty komunikat, który będzie wyświetlany na ekranie blokady, zawierał informacje o możliwości określenia lokalizacji urządzenia.
-

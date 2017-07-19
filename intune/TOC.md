@@ -2,6 +2,7 @@
 ## [Co to jest Azure Portal?](what-is-intune.md)
 ## [Co to jest usługa Intune for Education?](introduction-intune-education.md)
 ## [Funkcje usługi Intune na platformie Azure](ui-changes.md)
+### [Zmiany w grupach](groups-get-started.md)
 ## [Utwórz konto, aby skorzystać z bezpłatnej wersji próbnej](free-trial-sign-up.md)
 ## [Co nowego](whats-new.md)
 ### [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md)
@@ -16,12 +17,13 @@
 ## [Typowe scenariusze](common-scenarios.md)
 ## [Znane problemy](known-issues.md)
 ## [Uzyskiwanie pomocy technicznej](get-support.md)
-## [Opis usługi Intune](microsoft-intune-service-description.md)
 
-<!--# Get started
-## [Manage devices](/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune?toc=/intune/toc.json)
-## [Create policies](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3?toc=/intune/toc.json)
-## [Manage apps](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4?toc=/intune/toc.json) -->
+# [Wprowadzenie](get-started-evaluation.md)
+## [Tworzenie grupy](get-started-groups.md)
+## [Tworzenie użytkownika](get-started-users.md)
+## [Rejestrowanie urządzeń](get-started-enroll.md)
+## [Przypisywanie zasad](get-started-policies.md)
+## [Przypisywanie aplikacji](get-started-apps.md)
 
 
 # Planowanie wdrożenia
@@ -63,20 +65,21 @@
 ### [Logowanie do usługi Intune](account-sign-up.md)
 ### [Skonfigurowanie domen](custom-domain-name-configure.md)
 ### [Dodawanie użytkowników](users-permissions-add.md)
+### [Dodawanie grup](groups-add.md)
 ### [Przypisywanie licencji](licenses-assign.md)       
 ### [Dostosowywanie aplikacji Portal firmy](company-portal-customize.md)     
 ### [Ustawianie urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
 
 ## [Rejestrowanie urządzeń](device-enrollment.md)
-### Wymagania wstępne
-#### [Konfigurowanie warunków i postanowień](terms-and-conditions-create.md)
-#### [Konfigurowanie ograniczeń](enrollment-restrictions-set.md)
-#### [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
-#### [Dodawanie identyfikatorów firmy](corporate-identifiers-add.md)
-#### [Konfigurowanie menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md)
+### Opcje konfiguracji
+#### [Warunki i postanowienia](terms-and-conditions-create.md)
+#### [Ograniczenia](enrollment-restrictions-set.md)
+#### [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
+#### [Identyfikatory firmy](corporate-identifiers-add.md)
+#### [Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)
 #### [Mapowanie urządzeń na grupy](device-group-mapping.md)
-### [Konfigurowanie rejestrowania urządzeń z systemem Windows](windows-enroll.md)
-#### [Automatyczne rejestrowanie](windows-enroll.md)
+### Konfigurowanie rejestracji systemu Windows
+#### [Rejestracja systemu Windows](windows-enroll.md)
 #### [Rejestrowanie zbiorcze](windows-bulk-enroll.md)
 ### [Konfigurowanie rejestrowania urządzeń z systemem Android](android-enroll.md)
 ### Konfigurowanie rejestrowania urządzeń z systemem iOS
@@ -84,7 +87,6 @@
 #### [Przy użyciu usługi Apple School Manager](apple-school-manager-set-up-ios.md)
 #### [Przy użyciu programu Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
 ### [Konfigurowanie rejestrowania urządzeń z systemem macOS](macos-enroll.md)
-### [Informowanie użytkowników](end-user-educate.md)
 
 ## [Zarządzanie urządzeniami](device-management.md)
 ### [Czyszczenie urządzenia](devices-wipe.md)
@@ -97,11 +99,13 @@
 ### [Usuń dane firmy](device-company-data-remove.md)
 ### [Zresetuj kod dostępu](device-passcode-reset.md)
 ### [Ponowne uruchamianie urządzenia](device-restart.md)
-### [Zdalne sterowanie w systemie Android](device-profile-android-teamviewer.md)
+### [Wylogowywanie bieżącego użytkownika](device-logout-user.md)
+### [Usuwanie użytkownika](device-remove-user.md)
+### [Zdalne sterowanie dla systemu Android](device-profile-android-teamviewer.md)
+### [Resetowanie numeru PIN w systemie Windows 10](device-windows-pin-reset.md)
 ### [Przeglądanie spisu urządzeń](device-inventory.md)
 
 ## [Zarządzanie użytkownikami](user-management.md)
-### [Wprowadzenie do grup](groups-get-started.md)
 <!--### Add and delete users -->
 
 ## [Zarządzanie aplikacjami](app-management.md)
@@ -113,7 +117,7 @@
 #### [Aplikacje sieci Web](web-app.md)
 #### [Aplikacje ze sklepu dla systemu Windows Phone 8.1](store-apps-windows-phone-8-1.md)
 #### [Aplikacje LOB dla systemu Windows Phone](lob-apps-windows-phone.md)
-#### [Aplikacje ze sklepu dla systemu Windows](store-apps-windows.md)
+#### [Aplikacje ze Sklepu Windows](store-apps-windows.md)
 #### [Aplikacje LOB dla systemu Windows](lob-apps-windows.md)
 #### [Aplikacje programu Android for Work](apps-add-android-for-work.md)
 ### [Przypisywanie aplikacji](apps-deploy.md)
@@ -128,16 +132,6 @@
 #### [Książki elektroniczne dla systemu iOS](vpp-ebooks-ios.md)
 ### [Konfigurowanie aplikacji Portal firmy](company-portal-app.md)
 ### [Konfigurowanie programu Managed Browser](app-configuration-managed-browser.md)
-## [Korzystanie z zasad ochrony aplikacji](app-protection-policies.md)
-### [Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP](app-protection-policies-configure-windows-10.md)
-### [Tworzenie i przypisywanie zasad ochrony aplikacji WIP](windows-information-protection-policy-create.md)
-### [Ustawienia systemu Android](app-protection-policy-settings-android.md)
-### [Ustawienia systemu iOS](app-protection-policy-settings-ios.md)
-### [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md)
-### [Monitorowanie stanu użytkownika ochrony aplikacji](app-protection-policies-monitor.md)
-### [Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP](app-protection-policies-configure-windows-10.md)
-### [Tworzenie i przypisywanie zasad ochrony aplikacji WIP](windows-information-protection-policy-create.md)
-### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
 
 ## [Konfigurowanie urządzeń](device-profiles.md)
 ### [Konfigurowanie profilów urządzeń](device-profile-create.md)
@@ -175,13 +169,16 @@
 #### [macOS](wi-fi-settings-macos.md)
 #### [Windows 8.1 i Windows 10](wi-fi-settings-import-windows-8-1.md)
 ### [Konfigurowanie ustawień uaktualniania systemu Windows 10](edition-upgrade-configure-windows-10.md)
+### [Ochrona punktu końcowego w systemie Windows 10](endpoint-protection-windows-10.md)
 ### [Konfigurowanie ustawień edukacyjnych systemu Windows 10](education-settings-configure.md)
 ### [Konfigurowanie ustawień usług edukacyjnych dla urządzeń z systemem iOS](education-settings-configure-ios.md)
+### [Konfigurowanie urządzeń udostępnionych w usługach edukacyjnych dla urządzeń z systemem iOS](education-settings-configure-ios-shared.md)
 ### [Konfigurowanie ustawień usługi Windows Update dla firm](windows-update-for-business-configure.md)
 ### [Konfigurowanie certyfikatów](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
 ### [Konfigurowanie ustawień usługi Windows Information Protection](windows-information-protection-configure.md)
+### [Monitorowanie wydatków telekomunikacyjnych](telecom-expenses-monitor.md)
 ### [Przypisywanie profilów](device-profile-assign.md)
 ### [Monitorowanie profilów](device-profile-monitor.md)
 ### [Rozwiązywanie problemów z profilami](device-profile-troubleshoot.md)
@@ -192,48 +189,65 @@
 ### [Tworzenie zasad dla programu Android for Work](compliance-policy-create-android-for-work.md)
 ### [Tworzenie zasad dla systemu iOS](compliance-policy-create-ios.md)
 ### [Tworzenie zasad dla systemu Windows](compliance-policy-create-windows.md)
-<!--### Create Actions for noncompliance-->
+### Tworzenie akcji w przypadku niezgodności
 ### [Monitorowanie zgodności urządzenia](compliance-policy-monitor.md)
 
 ## [Zarządzanie dostępem warunkowym](conditional-access.md)
 ### [Typowe sposoby korzystania z dostępu warunkowego](conditional-access-intune-common-ways-use.md)
-### [Dostęp warunkowy oparty na aplikacji](app-based-conditional-access-intune.md)
 ### [Instalowanie lokalnego łącznika programu Exchange](exchange-connector-install.md)
 ### [Tworzenie i przypisz zasady dostępu warunkowego](conditional-access-exchange-create.md)
-### [Konfigurowanie dostępu warunkowego opartego na aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-exchange-online-create.md)
-### [Konfigurowanie dostępu warunkowego opartego na aplikacji dla usługi SharePoint Online](app-based-conditional-access-intune-sharepoint-online-create.md)
+### [Ponowne przypisywanie zasad dostępu warunkowego z portalu klasycznego usługi Intune](conditional-access-intune-reassign.md)
+### [Dostęp warunkowy oparty na aplikacji](app-based-conditional-access-intune.md)
+### [Konfigurowanie dostępu warunkowego opartego na aplikacji](app-based-conditional-access-intune-create.md)
 ### [Biblioteki ADAL i usługa Intune](app-modern-authentication-block.md)
 ### [Monitorowanie zgodność z dostępem warunkowym](conditional-access-exchange-monitor.md)
 
-## Ochrona danych i urządzeń
+## Ochrona danych aplikacji i urządzeń
+
+### [Korzystanie z zasad ochrony aplikacji](app-protection-policy.md)
+#### [Tworzenie zasad ochrony aplikacji](app-protection-policies.md)
+##### [Ustawienia systemu Android](app-protection-policy-settings-android.md)
+##### [Ustawienia systemu iOS](app-protection-policy-settings-ios.md)
+#### [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md)
+#### [Monitorowanie stanu użytkownika ochrony aplikacji](app-protection-policies-monitor.md)
+#### [Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP](app-protection-policies-configure-windows-10.md)
+#### [Tworzenie i przypisywanie zasad ochrony aplikacji WIP](windows-information-protection-policy-create.md)
+#### [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
+
 
 ### [Usługa Mobile Threat Defense](mobile-threat-defense.md)
 
 #### [Konfigurowanie usługi Lookout](lookout-mobile-threat-defense-connector.md)
-##### [Konfigurowanie integracji usług Lookout i Intune](lookout-mtd-subscription-setup.md)
-##### [Włączanie obsługi rozwiązania Lookout w usłudze Intune](lookout-mtd-connector-enable.md)
-##### [Wdrażanie aplikacji do użycia z rozwiązaniem Lookout](lookout-for-work-app-configure-deploy.md)
-##### [Zasady zgodności urządzeń w usłudze Lookout](lookout-device-compliance-policy-create.md)
-
+##### [Konfigurowanie integracji usług Lookout i Intune](lookout-mtd-connector-integration.md)
 #### [Konfigurowanie programu Skycure](skycure-mobile-threat-defense-connector.md)
 ##### [Konfigurowanie rejestracji jednokrotnej w usłudze Azure AD](skycure-azure-sso-configure.md)
 ##### [Pobieranie zasad konfiguracji aplikacji systemu iOS](skycure-ios-app-configuration-policy-download.md)
-##### [Dodawanie i konfigurowanie aplikacji](skycure-microsoft-authenticator-app-ios-app-configuration-policy-add.md)
-##### [Wdrażanie aplikacji do użycia z rozwiązaniem Skycure](skycure-microsoft-authenticator-app-ios-app-configuration-policy-deploy.md)
 ##### [Integrowanie programu Skycure i usługi Intune](skycure-mtd-connector-integration.md)
-##### [Włączanie programu Skycure w usłudze Intune](skycure-mtd-connector-enable.md)
-##### [Zasady zgodności urządzeń w programie Skycure](skycure-device-compliance-policy-create.md)
+#### [Dodawanie aplikacji MTD](mtd-apps-ios-app-configuration-policy-add-assign.md)
+#### [Włączanie usługi MTD w usłudze Intune](mtd-connector-enable.md)
+#### [Tworzenie zasad zgodności urządzenia usługi MTD](mtd-device-compliance-policy-create.md)
+
+### [Kontrola dostępu do sieci](network-access-control-integrate.md)
+
+
+<!-- ### Set up mobile threat protection        
+#### Prerequisites
+#### Set up Lookout
+#### Set up Skycure
+#### Enable mobile threat protection in Intune
+#### Create a mobile threat protection compliance policy -->
 
 ### [Konfigurowanie funkcji Windows Hello](windows-hello.md)        
-<!-- ### Protect devices with remote actions        -->
+<!-- ### Protect devices with remote actions -->
 
 ## [Zarządzanie rolami](role-based-access-control.md)
 <!-- ### Create a custom role
 ### Assign a role -->
-### [Korzystanie z roli pracownika pomocy technicznej](help-desk-operators.md)
+
 <!-- ### Custom role settings -->
 
 ## [Zarządzanie komputerami przy użyciu oprogramowania agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
+### [Porównanie zarządzania komputerami](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)
 ### [Instalowanie klienta komputera](/intune-classic/deploy-use/install-the-windows-pc-client-with-microsoft-intune?toc=/intune/toc.json)
 ### [Typowe zadania związane z zarządzaniem komputerami](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client?toc=/intune/toc.json)
 #### [Zasady dotyczące komputerów](/intune-classic/deploy-use/use-policies-to-simplify-windows-pc-management?toc=/intune/toc.json)
@@ -249,10 +263,16 @@
 ### [Zarządzanie umowami licencyjnymi](/intune-classic/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune?toc=/intune/toc.json)
 ### [Rozwiązywanie konfliktów zasad](/intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts?toc=/intune/toc.json)
 
+## [Informowanie użytkowników](end-user-educate.md)
+### [Komunikaty z aplikacji Portal firmy](end-user-company-portal-messages.md)
+### [Aplikacje z obsługą zarządzania aplikacjami mobilnymi w systemie Android](end-user-mam-apps-android.md)
+### [Aplikacje z obsługą zarządzania aplikacjami mobilnymi w systemie iOS](end-user-mam-apps-ios.md)
+### [Jak uzyskiwać aplikacje dla systemu Android](end-user-apps-android.md)
+### [Jak uzyskiwać aplikacje dla systemu iOS](end-user-apps-ios.md)
+### [Jak uzyskiwać aplikacje dla systemu Windows](end-user-apps-windows.md)
 
 # Monitorowanie i rozwiązywanie problemów
-## [Monitorowanie wydatków telekomunikacyjnych](telecom-expenses-monitor.md)
-
+## [Korzystanie z roli pracownika pomocy technicznej](help-desk-operators.md)
 
 # Programowanie i dostosowywanie
 ## [Konfigurowanie niestandardowych ustawień urządzenia](custom-settings-configure.md)
@@ -277,6 +297,5 @@
 ### [Składnik Xamarin zestawu SDK aplikacji usługi Intune](app-sdk-xamarin.md)
 ## [Korzystanie z interfejsów API programu Intune Graph](intune-graph-apis.md)
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-
 
 # [Słownik](intune-glossary.md)

@@ -14,15 +14,12 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 64c6eb58246ac3ad232c1b8ee89d12a83e7e1784
-ms.contentlocale: pl-pl
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enable-enrollment-for-mobile-devices"></a>Włączenie rejestracji dla urządzeń przenośnych
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -33,8 +30,7 @@ Aby skonfigurować zarządzanie urządzeniami przenośnymi za pomocą usługi In
 
 ## <a name="enable-device-enrollment"></a>Włączanie rejestracji urządzeń
 
-1. **Wybierz usługę Intune jako swój urząd zarządzania urządzeniami przenośnymi**
-   . W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** > **Zarządzanie urządzeniami przenośnymi** i wybierz opcję **Set MDM Authority** (Ustaw urząd MDM) w obszarze **Zadania**.  
+1. **Wybierz usługę Intune jako swój urząd zarządzania urządzeniami przenośnymi**. W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Administracja** > **Zarządzanie urządzeniami przenośnymi** i wybierz opcję **Ustaw urząd MDM** w obszarze **Zadania**.  
 
 2. Wybierz przycisk **Tak** w oknie dialogowym Urząd MDM.
 
@@ -70,4 +66,3 @@ Gratulacje! Ostatni krok *przewodnika Szybki start dotyczącego usługi Intune* 
 
 >[!div class="step-by-step"]
 >[&larr; **Rejestrowanie urządzeń**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)     [**Zadania po konfiguracji** &rarr;](.\post-configuration-tasks.md)  
-

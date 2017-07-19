@@ -1,12 +1,12 @@
 ---
-title: "Wprowadzenie do usługi Intune w wersji zapoznawczej witryny Azure Portal"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: uzyskaj podstawowe informacje o usłudze Intune w wersji zapoznawczej portalu Azure i o sposobach, w jakie może ona ułatwić zarządzanie urządzeniami."
+title: "Wprowadzenie do usługi Intune w witrynie Azure Portal"
+titleSuffix: Intune on Azure
+description: "Uzyskaj podstawowe informacje o usłudze Intune w witrynie Azure Portal oraz o sposobach, w jakie może ona ułatwić zarządzanie urządzeniami."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 04/24/2017
+ms.date: 06/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,35 +14,30 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16d7ff50eb821e0927c3c6ea21f3cdb1257762a0
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
 
-# <a name="introduction-to-microsoft-intune-in-the-azure-portal-preview"></a>Wprowadzenie do usługi Microsoft Intune w wersji zapoznawczej portalu Azure
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Usługa Microsoft Intune jest przenoszona do portalu Azure, co oznacza, że używane przez Ciebie przepływy pracy i funkcje ulegną zmianie.
-Nowy portal oferuje wersję zapoznawczą nowych i zaktualizowanych funkcji w witrynie Azure Portal, w której możesz zarządzać urządzeniami przenośnymi, komputerami i aplikacjami w swojej organizacji.
-Ostatecznie na platformę Azure zostaną przeniesione wszystkie funkcje usługi Intune, ale już dziś w portalu Azure można wykonać wiele zadań usługi Intune. Ponieważ nowe środowisko jest dostępne w wersji zapoznawczej, niektóre funkcje mogą jeszcze nie znajdować się w portalu. Szczegółowe informacje można znaleźć w sekcji [Co nowego](#whats-new).
+Usługa Microsoft Intune jest obecnie dostępna w witrynie Azure Portal, co oznacza, że przepływy pracy i funkcje, które były dotychczas używane, zmieniły się.
+Azure Portal oferuje nowe i zaktualizowane funkcje. W witrynie tej można zarządzać urządzeniami mobilnymi, komputerami i aplikacjami w organizacji.
 
 > [!IMPORTANT]
 > **Nie widzisz jeszcze nowego portalu?**<br>
-> Firma Microsoft rozpoczęła już opracowywanie wersji zapoznawczej, aby wybrać dzierżawy. Migracja istniejących dzierżaw do nowego środowiska pracy rozpocznie się na początku roku kalendarzowego 2017. Przed migracją swojej dzierżawy otrzymasz powiadomienie w Centrum wiadomości biurowych.
+> Istniejący dzierżawcy są aktualnie migrowani do nowego środowiska. Przed migracją dzierżawcy zostaje wyświetlone powiadomienie w Office Message Center.
 >
-> Konta usługi Intune utworzone przed styczniem 2017 będą wymagać przeprowadzenia jednorazowej migracji, zanim przepływy pracy procesu Rejestracja Apple będą dostępne w systemie Azure. Harmonogram migracji nie został jeszcze ogłoszony, ale szczegółowe informacje zostaną udostępnione najszybciej, jak będzie to możliwe. Zdecydowanie zalecamy utworzenie konta w wersji próbnej w celu przetestowania nowego środowiska pracy w przypadku, gdy istniejące konto nie ma dostępu do podglądu.
+> Konta usługi Intune utworzone przed styczniem 2017 r. będą wymagać przeprowadzenia jednorazowej migracji, zanim przepływy pracy procesu Rejestracja Apple będą dostępne na platformie Azure. Harmonogram migracji nie został jeszcze ogłoszony. Jeśli istniejące konto nie ma dostępu do witryny Azure Portal, zaleca się utworzenie konta w wersji próbnej.
+>
+> Sprawdź listę potencjalnych elementów blokujących https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
 
 
-W tej bibliotece znajdziesz nową dokumentację produktu, która będzie stale aktualizowana podczas udostępniania wersji zapoznawczej. Jeśli masz sugestie dotyczące tego, co powinno się tu znaleźć, wystaw opinię w komentarzach do tematu. Chętnie poznamy Twoje zdanie.
-
-<!--- You can view the new Intune technical preview console in Azure at [portal.azure.com]. --->
+Informacje dotyczące nowego portalu można znaleźć w tej bibliotece i są one na bieżąco aktualizowane. Jeśli masz sugestie dotyczące tego, co powinno się tu znaleźć, dodaj swoją opinię w komentarzach do tematu. Chętnie poznamy Twoje zdanie.
 
 Do najważniejszych elementów nowego środowiska należą:
 
@@ -78,9 +73,9 @@ Dokumentacja odzwierciedla układ portalu usługi Intune, co ułatwia znalezieni
 ![Obciążenia portalu Azure](./media/azure-portal-workloads.png)
 
 ### <a name="introduction-and-get-started"></a>Wprowadzenie i rozpoczynanie pracy
-Ta sekcja zawiera informacje o [nowościach](whats-new.md), [znanych problemach](known-issues.md), [sposobach uzyskiwania pomocy technicznej](get-support.md) oraz [rozpoczynaniu pracy z bezpłatną wersją próbną](free-trial-sign-up.md) usługi Intune.
+Ta sekcja zawiera [informacje wprowadzające](introduction-intune.md), które ułatwiają rozpoczęcie korzystania z usługi Intune.
 ### <a name="plan-and-design"></a>Planowanie i projektowanie
-Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-and-design/introduction) środowiska usługi Intune.
+Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-design/introduction) środowiska usługi Intune.
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 [Jak zarządzać urządzeniami za pomocą usługi Intune](device-enrollment.md).
 ### <a name="device-compliance"></a>Zgodność urządzeń
@@ -108,5 +103,4 @@ Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-and-d
 
 ## <a name="whats-new"></a>Co nowego
 
-[Dowiedz się, co nowego w wersji zapoznawczej](whats-new.md).
-
+[Dowiedz się, co nowego w usłudze Intune](whats-new.md).

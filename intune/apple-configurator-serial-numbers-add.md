@@ -1,7 +1,7 @@
 ---
 title: "Dodawanie numerów seryjnych programu Apple Configurator"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje dotyczące dodawania numerów seryjnych do urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator."
+titleSuffix: Intune on Azure
+description: "Informacje dotyczące dodawania numerów seryjnych do urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: d408aa38-7d1e-40df-9067-246e53f6e26f
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e3d56d93e2e229faad8effa63eeb91e627468a3a
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 689008f278e676ce0bab075c6ad6b54748e56313
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="add-apple-configurator-serial-numbers"></a>Dodawanie numerów seryjnych programu Apple Configurator
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W krokach tych opisano dodawanie numerów seryjnych do usługi Intune w przypadku [rejestracji urządzeń firmowych z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień](apple-configurator-setup-assistant-enroll-ios.md). Można dodawać numery seryjne pojedynczo lub załadować plik wartości rozdzielonych przecinkami (CSV) z numerami seryjnymi. Po dodaniu numerów seryjnych można do nich przypisać profil. Profil zawiera określone ustawienia zarządzania, które mają być zastosowane do urządzeń.
 
@@ -37,7 +34,7 @@ Inne metody rejestracji urządzeń z systemem iOS zostały opisane w temacie [Ch
 1. Utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikator IMEI w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Obecnie maksymalna liczba wierszy na liście wynosi 500. W edytorze tekstu lista .csv wygląda następująco:
 
     F7TLWCLBX196, szczegóły urządzenia</br>
-    DLXQPCWVGHMJ, szczegóły urządzenia
+    DLXQPCWVGHMJ,szczegóły urządzenia
 
 2. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
@@ -76,4 +73,3 @@ Numery seryjne urządzenia mogą mieć jeden z trzech stanów:
 **Aby wyświetlić stan numeru seryjnego**
 
 W bloku **Numery seryjne programu Apple Configurator** wybierz numer seryjny, którego stan chcesz zobaczyć, i poszukaj w obszarze elementu **Stan**.
-

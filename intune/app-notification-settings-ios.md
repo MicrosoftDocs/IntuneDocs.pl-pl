@@ -1,12 +1,12 @@
 ---
 title: "Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat ustawień służących do kontrolowania powiadomień z aplikacji na urządzeniach z systemem iOS."
+titleSuffix: Intune on Azure
+description: "Informacje na temat ustawień służących do kontrolowania powiadomień z aplikacji na urządzeniach z systemem iOS."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,28 +15,25 @@ ms.assetid: bda26d1d-2a3b-4669-adf8-a5aa7f994916
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c64167275a2628c6a3a4e899e00c25df4c10b06b
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 36a9e9a5be9b2dc45ded1a99c7a5871780f7d9b2
+ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/05/2017
 ---
-
 # <a name="intune-app-notifications-settings-for-ios-devices"></a>Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS w usłudze Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Umożliwia skonfigurowanie sposobu, w jaki aplikacje zainstalowane na urządzeniu wysyłają powiadomienia. Te ustawienia obsługują nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
 
 ## <a name="configure-settings"></a>Konfigurowanie ustawień
 
-1. W bloku **Funkcje urządzenia** wybierz pozycję **Powiadomienia w aplikacji (tylko nadzorowane)**.
+1. W bloku Funkcje urządzenia wybierz pozycję **Powiadomienia w aplikacji (tylko nadzorowane)**.
 2. W bloku **Powiadomienia aplikacji** wybierz pozycję **Dodaj**, a następnie skonfiguruj następujące wartości:
     - **Identyfikator pakietu aplikacji** — wprowadź **identyfikator pakietu aplikacji**, którą chcesz skonfigurować. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w dalszej części tego tematu.
     - **Nazwa aplikacji** — wprowadź nazwę aplikacji, którą chcesz skonfigurować. Ta nazwa nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
-    - **Wydawca** — wprowadź wydawcę aplikacji, którą chcesz skonfigurować. Ta nazwa nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
+    - **Wydawca** — wprowadź wydawcę aplikacji, którą chcesz skonfigurować. Ta nazwa wydawcy nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
     - **Powiadomienia** — włącz lub wyłącz powiadomienia wysyłane z aplikacji do urządzenia. Jeśli to ustawienie zostanie wyłączone, zostaną wyłączone także następujące ustawienia.
         - **Pokaż w centrum powiadomień** — włączenie tego ustawienia powoduje zezwolenie aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu.
         - **Pokaż na ekranie blokady** — włączenie tego ustawienia powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia.
@@ -95,3 +92,7 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 |Wallet|com.apple.Passbook|
 |Zegarek|com.apple.Bridge|
 |Pogoda|com.apple.weather|
+
+## <a name="next-steps"></a>Następne kroki
+
+Teraz można przypisać profil urządzenia do wybranych grup. Aby uzyskać szczegółowe informacje, zobacz [Przypisywanie profilów urządzeń](device-profile-assign.md).
