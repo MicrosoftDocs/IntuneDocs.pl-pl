@@ -1,12 +1,12 @@
 ---
-title: "Zarządzanie aplikacjami zakupionymi zbiorczo w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: informacje na temat monitorowania aplikacji kupionych w ramach zakupów zbiorczych w sklepach oraz zarządzania nimi przy użyciu usługi Intune."
+title: "Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Intune"
+titleSuffix: Intune on Azure
+description: "Informacje na temat monitorowania użycia aplikacji i książek kupionych w ramach zakupów zbiorczych w sklepach oraz zarządzania nimi przy użyciu usługi Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,26 +15,26 @@ ms.assetid: 85b07f57-661a-4bc8-87d2-7b446d5cf4d6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9646b0f861ea55d2d44975341de37e6a2548993b
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: e8f938e81740d1bb08e0e9995cab94329c2fe5e7
+ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/05/2017
 ---
+# <a name="manage-volume-purchased-apps-and-books-with-microsoft-intune"></a>Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune
 
-# <a name="manage-volume-purchased-apps-with-micrsoft-intune"></a>Zarządzanie aplikacjami zakupionymi zbiorczo w usłudze Microsoft Intune
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+## <a name="introduction"></a>Wprowadzenie
 
-Niektóre sklepy z aplikacjami umożliwiają zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Dzięki temu można zmniejszyć koszty administracyjne śledzenia wielu zakupionych kopii aplikacji.
+Niektóre sklepy z aplikacjami umożliwiają zakup wielu licencji aplikacji lub książek, które mają być wykorzystywane w firmie. Zbiorcze kupowanie licencji może spowodować zmniejszenie kosztów administracyjnych śledzenia wielu zakupionych kopii aplikacji i książek.
 
-Usługa Microsoft Intune ułatwia zarządzanie aplikacjami zakupionymi za pośrednictwem takiego programu przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana.
+Usługa Microsoft Intune ułatwia zarządzanie aplikacjami i książkami zakupionymi za pośrednictwem takiego programu. Można zaimportować informacje o licencjach ze sklepu i śledzić, ile licencji jest używanych. Ten proces pomaga zapewnić, że nie zainstalujesz większej niż posiadana liczby kopii aplikacji lub książki.
 
-## <a name="which-types-of-apps-can-you-manage"></a>Jakimi typami aplikacji można zarządzać?
+## <a name="which-types-of-apps-and-books-can-you-manage"></a>Jakimi typami aplikacji i książek można zarządzać?
 
-Za pomocą usługi Intune można zarządzać aplikacjami zakupionymi zbiorczo w sklepie iOS App Store oraz Sklepie Windows dla firm. Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepów, wybierz jeden z poniższych tematów:
+Za pomocą usługi Intune można zarządzać aplikacjami kupionymi w ramach zakupów zbiorczych w sklepie dla systemu iOS oraz aplikacjami kupionymi w Sklepie Windows dla firm. Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepów, wybierz jeden z poniższych tematów:
 
-[Zarządzanie aplikacjami dla systemu iOS kupionymi w ramach zakupów zbiorczych](vpp-apps-ios.md)
-[Zarządzanie aplikacjami kupionymi w ramach zakupów zbiorczych w Sklepie Windows dla Firm](windows-store-for-business.md)
-
+- [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md)
+- [Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
+- [Jak zarządzać książkami elektronicznymi systemu iOS](vpp-ebooks-ios.md)

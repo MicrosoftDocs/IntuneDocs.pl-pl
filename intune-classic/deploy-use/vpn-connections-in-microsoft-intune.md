@@ -1,5 +1,5 @@
 ---
-title: "Połączenia VPN | Microsoft Docs"
+title: "Połączenia VPN"
 description: "Za pomocą profilów sieci VPN możesz wdrażać ustawienia sieci VPN dla użytkowników i urządzeń w organizacji."
 keywords: 
 author: lleonard-msft
@@ -14,15 +14,12 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 51096dedbc29726b2622e0a156b0d2516522e497
-ms.contentlocale: pl-pl
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e1498cb88fe99129a5ee7f24b618f78fefcf42a6
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="vpn-connections-in-microsoft-intune"></a>Połączenia VPN w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -168,9 +165,7 @@ Sieci VPN na żądanie można skonfigurować dla urządzeń z systemem iOS 8.0 l
 3. Opcjonalnie: podaj sondę ciągu adresu URL, czyli adres URL używany testowo przez regułę. Jeśli urządzenie, na którym jest zainstalowany ten profil, może uzyskać dostęp do adresu URL bez przekierowania, połączenie VPN zostanie nawiązane i urządzenie będzie się łączyć z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
 4. Wybierz jedną z następujących czynności:
   - **Połącz**
-  - **Oceń połączenie**, która ma trzy ustawienia a. **Akcja domeny** — wybierz **Połącz w razie potrzeby** lub **Nigdy nie łącz**
-      b. **Rozdzielana przecinkami lista domen** — można skonfigurować tylko wtedy, gdy opcja **Akcja domeny** ma ustawienie **Połącz w razie potrzeby**
-      c. **Wymagana sonda ciągu adresu URL** — adres URL protokołu HTTP lub HTTPS (preferowany), taki jak *https://vpntestprobe.contoso.com*. Reguła sprawdzi odebranie odpowiedzi z tego adresu. Jeśli nie będzie odpowiedzi, a **akcja domeny** to **Połącz w razie potrzeby**, nastąpi łączenie z siecią VPN.
+  - **Oceń połączenie**, która ma trzy ustawienia a. **Akcja domeny** — wybierz **Połącz w razie potrzeby** lub **Nigdy nie łącz** b. **Rozdzielana przecinkami lista domen** — można skonfigurować tylko wtedy, gdy opcja **Akcja domeny** ma ustawienie **Połącz w razie potrzeby** c. **Wymagana sonda ciągu adresu URL** — adres URL protokołu HTTP lub HTTPS (preferowany), taki jak *https://vpntestprobe.contoso.com*. Reguła sprawdzi odebranie odpowiedzi z tego adresu. Jeśli nie będzie odpowiedzi, a **akcja domeny** to **Połącz w razie potrzeby**, nastąpi łączenie z siecią VPN.
       
      > [!TIP]
      >
@@ -195,4 +190,3 @@ Reguły specyficzne dla domeny są uwzględniane przed regułami dotyczącymi ws
 Po pomyślnym wdrożeniu użytkownicy będą widzieli wprowadzoną przez Ciebie nazwę połączenia sieci VPN na liście połączeń sieci VPN na swoich urządzeniach.
 
 W podsumowaniu stanu i alertach na stronie **Przegląd** obszaru roboczego **Zasady** są pokazane problemy z zasadami, które wymagają Twojej uwagi. Ponadto w obszarze roboczym Pulpit nawigacyjny jest wyświetlane podsumowanie stanu.
-

@@ -2,6 +2,7 @@
 ## [Wykonywanie pracy przy użyciu urządzeń zarządzanych](use-managed-devices-to-get-work-done.md)
 ## [Do jakich informacji ma dostęp moja firma dzięki usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 ## [Co się stanie w przypadku zresetowania urządzenia?](what-happens-if-you-reset-your-device-cpwebsite.md)
+## [Jak zalogować się do Portalu firmy](sign-in-to-the-company-portal.md)
 ## [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem Android?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 ### [Rozwiązywanie typowych problemów z systemem Android](troubleshoot-your-device-android.md)

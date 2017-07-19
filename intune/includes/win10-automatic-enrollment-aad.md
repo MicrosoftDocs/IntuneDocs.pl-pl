@@ -34,6 +34,9 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie ich urządzeń z
     - **Adres URL odnajdywania zarządzania urządzeniami przenośnymi**
     - **Adres URL zgodności oprogramowania MDM**
 
+    > [!IMPORTANT]
+    > Jeśli użytkownik należy do grupy, dla której włączono zarówno rejestrowanie automatyczne za pomocą rozwiązania MDM, jak i rozwiązanie MAM, i próbuje dołączyć w miejscu pracy swoje urządzenie osobiste, wówczas włączone jest tylko rozwiązanie MAM. 
+
 6. Wybierz pozycję **Zapisz**.
 
 Uwierzytelnianie dwuskładnikowe nie jest domyślnie włączone dla usługi. Zaleca się jednak korzystanie z uwierzytelniania dwuskładnikowego podczas rejestrowania urządzenia. Przed ustawieniem wymagania zastosowania uwierzytelniania dwuskładnikowego dla tej usługi należy skonfigurować dostawcę usługi uwierzytelniania dwuskładnikowego w usłudze Active Directory Azure i skonfigurować konta użytkowników do uwierzytelniania wieloskładnikowego. Zobacz temat [Wprowadzenie do usługi Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
