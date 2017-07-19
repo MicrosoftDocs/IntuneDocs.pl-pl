@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ae42ab64945982fedc2d6858e2f3eca8fbed334c
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
@@ -91,7 +91,7 @@ Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-desig
 ### <a name="on-premises-access"></a>Dostęp lokalny
 [Konfigurowanie dostępu do programu Exchange ActiveSync i lokalnego programu Exchange](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
 ### <a name="users"></a>Users
-[Więcej informacji na temat użytkowników z zarządzanymi urządzeniami i sortowaniu zasobów według grup](user-management.md).
+[Więcej informacji na temat użytkowników z zarządzanymi urządzeniami i sortowaniu zasobów według grup](users-add.md).
 ### <a name="groups"></a>Grupy
 [Dowiedz się, jak używać grup usługi Azure Active Directory w usłudze Intune](groups-get-started.md)
 ### <a name="intune-roles"></a>Role usługi Intune
