@@ -1,11 +1,11 @@
 ---
 title: "Rozpoczęcie kampanii migracji do usługi Intune"
-description: "Celem tego artykułu jest przedstawienie wskazówek dotyczących sposobu rozpoczęcia kampanii migracji."
+description: "Ten artykuł zawiera wskazówki dotyczące sposobu rozpoczęcia kampanii migracji."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,28 +13,25 @@ ms.technology:
 ms.assetid: f781b029-50f2-46ee-8ff7-03b4a6719e80
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 9690572fd5f17fece0de7b533c98bfc52d77615b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a272d9c822a2c17592d7800c20278ce222d615bd
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="phase-2-migration-campaign"></a>Faza 2: Kampania migracji
+# <a name="phase-2-migration-campaign"></a>Faza 2: Kampania migracji
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Organizacje powinny wybierać podejścia do migracji najodpowiedniejsze z punktu widzenia ich potrzeb i dostosowywać taktykę wdrażania w oparciu o konkretne wymagania. W pozostałej części tego przewodnika mowa jest o narzędziach niezbędnych do osiągnięcia celu, jakim jest rejestracja urządzeń użytkowników w usłudze Intune.
+Należy wybrać podejście do migracji najodpowiedniejsze z punktu widzenia potrzeb organizacji i dostosowywać taktykę wdrażania w oparciu o konkretne wymagania. W pozostałej części tego przewodnika przedstawiono narzędzia niezbędne do osiągnięcia celu, jakim jest rejestracja urządzeń użytkowników w usłudze Intune.
 
 ## <a name="keys-to-a-successful-migration"></a>Czynniki o kluczowym znaczeniu dla pomyślnego przeprowadzenia migracji
 
-Poniższe kwestie mają zasadnicze znaczenie podczas migracji z usługi MDM innej firmy do usługi Intune:
+Oto czynniki kluczowe do pomyślnego przeprowadzenia migracji z rozwiązania MDM innej firmy do usługi Intune:
 
--   Komunikacja ma decydujące znaczenie dla skrócenia przestojów i zwiększenia zadowolenia użytkownika końcowego.
+-   Zrozumiałe i pomocne komunikaty mogą zminimalizować niezadowolenie i przestoje użytkowników końcowych.
 
 -   Należy pamiętać o przygotowaniu konkretnych, szczegółowych instrukcji dotyczących migracji.
 
--   Wszystkie zarządzane urządzenia muszą zostać wyrejestrowane z istniejącej usługi MDM przed ich rejestracją w usłudze Intune.
+-   Wszystkie zarządzane urządzenia muszą zostać wyrejestrowane z istniejącej usługi MDM, zanim możliwa będzie ich rejestracja w usłudze Intune.
 
 -   Użytkownikom końcowym należy przekazać wskazówki od istniejącego dostawcy usług MDM dotyczące sposobu wyrejestrowania urządzeń.
 
@@ -48,15 +45,15 @@ Poniższe kwestie mają zasadnicze znaczenie podczas migracji z usługi MDM inne
 
         -   Zasoby firmowe, takie jak sieć VPN, sieć Wi-Fi, poczta e-mail i certyfikaty, działają prawidłowo.
 
-        -   Udostępnione aplikacje są dostępne.
+        -   Aprowizowane aplikacje są dostępne.
 
     -   Bezpieczeństwo danych:
 
-        -   Raportowanie zgodności
+        -   Raportowanie zgodności jest realizowane.
 
-        -   Zabezpieczenia aplikacji mobilnych są wymuszane
+        -   Zabezpieczenia aplikacji mobilnych są wymuszane.
 
--   Po pomyślnym przeprowadzeniu pierwszej fazy migracji możesz powtórzyć cykl migracji (opisany poniżej w sekcji poświęconej typowemu cyklowi migracji) w celu przeprowadzenia kolejnej fazy.
+Jeśli pierwsza faza migracji przebiegła pomyślnie, można powtórzyć [cykl migracji](migration-guide-cycle.md) w celu przeprowadzenia kolejnej fazy.
 
 -   Powtarzaj realizowane etapowo cykle, aż wszyscy użytkownicy zostaną zmigrowani do usługi Intune.
 
@@ -64,9 +61,9 @@ Poniższe kwestie mają zasadnicze znaczenie podczas migracji z usługi MDM inne
 
 -   Nie wyznaczaj ostatecznego terminu rejestracji urządzeń do czasu, gdy zespół pomocy technicznej będzie w stanie zapewnić obsługę pozostałym użytkownikom.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Nie konfiguruj równocześnie usługi Intune i istniejącego rozwiązania MDM innej firmy pod kątem kontroli dostępu do zasobów takich, jak usługi Exchange i SharePoint Online. Co więcej, urządzenia nie mogą być jednocześnie zarejestrowane w dwóch rozwiązaniach.
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Plan komunikacji](migration-guide-communication-plan.md)
+Przygotuj własny [plan komunikacji](migration-guide-communication-plan.md).

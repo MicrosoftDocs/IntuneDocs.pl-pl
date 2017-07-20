@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/28/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,17 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 18272f21799253128cfe0ad6aa66e108b24a0b50
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aae944c86029be6eaa111ce7c274a466095651d1
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="add-apps-with-microsoft-intune"></a>Dodawanie aplikacji za pomocą usługi Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie. Te pojęcia ułatwiają zrozumienie aplikacji, które można wdrożyć na poszczególnych platformach. Ułatwiają także zrozumienie wymagań wstępnych, które należy spełnić przed wdrożeniem aplikacji.
+Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune poświęć trochę czasu na zapoznanie się z pojęciami opisanymi w tym temacie. Te pojęcia ułatwiają zrozumienie, które aplikacje można wdrożyć na poszczególnych platformach. Ułatwiają także zrozumienie wymagań wstępnych, które należy spełnić przed wdrożeniem aplikacji.
 
 ## <a name="app-types-that-you-can-deploy"></a>Typy aplikacji, które można wdrożyć
 
@@ -37,7 +37,7 @@ Przed rozpoczęciem wdrażania aplikacji za pomocą usługi Microsoft Intune po�
 |**Pakiet aplikacji dla systemu iOS (&#42;.ipa)**|Do wdrożenia aplikacji dla systemu iOS potrzebny jest prawidłowy plik pakietu ipa.<br><br>Pakiet ipa musi być podpisany przez firmę Apple, a data wygaśnięcia w profilu inicjowania obsługi administracyjnej musi być ważna. Usługa Intune może dystrybuować aplikacje dla systemu iOS z certyfikatem przedsiębiorstwa.<br><br>Nie wszystkie aplikacje z certyfikatem deweloperów firmy Apple są obsługiwane.<br><br>Firma musi być zarejestrowana w programie dla deweloperów aplikacji systemu iOS dla przedsiębiorstw (iOS Developer Enterprise Program).<br><br>Upewnij się, że zapora organizacji zezwala na dostęp do witryn sieci Web obsługi administracyjnej i certyfikacji systemu iOS.<br><br>Nie musisz wdrażać pliku manifestu (plist) z aplikacją.|
 |**Pakiet aplikacji systemu Windows Phone (&#42;.xap, .appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania systemem Windows Phone przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Pakiet aplikacji systemu Windows (.appx, .appxbundle)**|Aby wdrożyć aplikacje, wymagany jest firmowy mobilny certyfikat podpisywania kodu. Aby uzyskać więcej szczegółów, zobacz [Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
-|**Instalator Windows przy użyciu systemu MDM (&#42;.msi)**|Aplikacja umożliwia tworzenie i wdrażanie aplikacji opartych na Instalatorze Windows na zarejestrowanych komputerach z systemem Windows 10. Te komputery są zarządzane przy użyciu funkcji zarządzania urządzeniami przenośnymi (MDM).<br /><br />Możesz przekazać tylko jeden plik z rozszerzeniem msi.<br><br>Kod i wersja produktu pliku są używane do wykrywania aplikacji.<br><br>Zostanie zastosowane domyślne zachowanie dotyczące ponownego uruchamiania Nie jest to kontrolowane przez usługę Intune.<br><br>Pakiety MSI dla użytkownika zostaną zainstalowane dla pojedynczego użytkownika.<br><br>Pakiety MSI dla maszyny zostaną zainstalowane dla wszystkich użytkowników urządzenia.<br><br>Obecnie pakiety MSI w trybie podwójnym są instalowane dla wszystkich użytkowników urządzenia.<br><br>Aktualizacje aplikacji są obsługiwane, jeśli kod produktu MSI jest taki sam dla każdej wersji.<br>
+|**Instalator Windows przy użyciu systemu MDM (&#42;.msi)**|Aplikacja umożliwia tworzenie i wdrażanie aplikacji opartych na Instalatorze Windows na zarejestrowanych komputerach z systemem Windows 10. Te komputery są zarządzane przy użyciu funkcji zarządzania urządzeniami przenośnymi (MDM).<br /><br />Możesz przekazać tylko jeden plik z rozszerzeniem msi.<br><br>Kod i wersja produktu pliku są używane do wykrywania aplikacji.<br><br>Zostanie zastosowane domyślne zachowanie dotyczące ponownego uruchamiania. To zachowanie nie jest kontrolowane przez usługę Intune.<br><br>Pakiety MSI dla użytkownika zostaną zainstalowane dla pojedynczego użytkownika.<br><br>Pakiety MSI dla maszyny zostaną zainstalowane dla wszystkich użytkowników urządzenia.<br><br>Obecnie pakiety MSI w trybie podwójnym są instalowane dla wszystkich użytkowników urządzenia.<br><br>Aktualizacje aplikacji są obsługiwane, jeśli kod produktu MSI jest taki sam dla każdej wersji.<br>
 Wszystkie typy aplikacji instalatora oprogramowania są przekazywane do magazynu w chmurze.
 
 ### <a name="external-link"></a>**Link zewnętrzny**
@@ -61,7 +61,7 @@ Wydawca oprogramowania usługi Microsoft Intune jest uruchamiany podczas dodawan
 Przed rozpoczęciem korzystania z wydawcy oprogramowania należy zainstalować pełną wersję programu [Microsoft .NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851). Po zainstalowaniu może być konieczne ponowne uruchomienie komputera, aby wydawca oprogramowania został poprawnie otwarty.
 
 ## <a name="cloud-storage-space"></a>Miejsce do magazynowania w chmurze
-Wszystkie aplikacje tworzone przy użyciu instalatora oprogramowania (na przykład aplikacje biznesowe) zostają spakowane i przekazane do magazynu w chmurze usługi Microsoft Intune. Subskrypcja próbna usługi Intune obejmuje 2 GB magazynu opartego na chmurze, który jest używany do przechowywania zarządzanych aplikacji i aktualizacji. Pełna subskrypcja obejmuje 20 GB miejsca do magazynowania.
+Wszystkie aplikacje tworzone przy użyciu instalatora oprogramowania są przekazywane do magazynu w chmurze usługi Microsoft Intune. Subskrypcja próbna usługi Intune obejmuje 2 GB magazynu opartego na chmurze, który jest używany do przechowywania zarządzanych aplikacji i aktualizacji. Pełna subskrypcja obejmuje 20 GB miejsca do magazynowania.
 
 Sprawdzenia ilości wykorzystanego miejsca można dokonać w węźle **Użycie magazynu** w obszarze roboczym **Administrator**. Możesz kupić dodatkowy magazyn dla usługi Intune przy użyciu pierwotnej metody zakupu.  Jeśli zakupu dokonano przy użyciu faktury lub karty kredytowej, odwiedź [portal zarządzania subskrypcją](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  W przeciwnym razie skontaktuj się ze swoim partnerem lub współpracownikiem ds. sprzedaży.
 
@@ -83,8 +83,8 @@ Na urządzeniach z systemem Windows 10 Mobile do podpisywania uniwersalnych apli
 ### <a name="dependencies-for-uwp-apps"></a>Zależności dotyczące aplikacji platformy UWP
 
 Po dodaniu uniwersalnego pakietu appxbundle systemu Windows 10 do usługi Intune upewnij się, że przekazane zostały wszystkie zależności aplikacji.
-W tym celu zapewnij, aby folder **Zależności** utworzony podczas kompilowania aplikacji znajdował się w tym samym folderze, co plik .appxbundle.
-W ten sposób podczas przekazywania aplikacji do usługi Intune zostaną również przekazane wszystkie pliki folderu **Zależności**. Tę sytuację ilustruje poniższy zrzut ekranu:
+Aby przekazać zależności, upewnij się, że folder **Zależności** utworzony podczas kompilowania aplikacji znajdował się w tym samym folderze co plik .appxbundle.
+W ten sposób podczas przekazywania aplikacji do usługi Intune zostaną również przekazane wszystkie pliki folderu **Zależności**. Ten proces ilustruje poniższy zrzut ekranu:
 
 
 ![Jak wybrać zależności appxbundle platformy UWP systemu Windows 10](./media/w10-dependencies.png)

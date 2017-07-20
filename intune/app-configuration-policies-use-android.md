@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/05/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f9ea697cafa0f277c176e55443250d32ca378dbb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b86d2d7f4d295ed41168c9dfdbaf8d4c253a0f75
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-android-for-work"></a>Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune w odniesieniu do programu Android for Work
 
@@ -65,7 +65,7 @@ Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń.
 
 Zasady zostaną utworzone i wyświetlone w bloku listy zasad.
 
-Następnie kontynuuj [przypisywanie](apps-deploy.md) i [monitorowanie](apps-monitor.md) aplikacji jak do tej pory.
+
 
 Po uruchomieniu przypisanej aplikacji na urządzeniu zostaną uruchomione ustawienia skonfigurowane w zasadach konfiguracji aplikacji.
 
@@ -89,3 +89,8 @@ Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem 
 8. Aby przypisać zasady konfiguracji aplikacji, wybierz zasady konfiguracji aplikacji, wybierz pozycję **Przypisania**, a następnie wybierz pozycję **Wybierz grupy**.
 9. Wybierz grupy użytkowników do przypisania, a następnie wybierz pozycję **Wybierz**.
 10. Wybierz pozycję **Zapisz**, aby przypisać zasady.
+
+## <a name="next-steps"></a>Następne kroki
+
+Kontynuuj [przypisywanie](apps-deploy.md) i [monitorowanie](apps-monitor.md) aplikacji tak jak dotychczas.
+

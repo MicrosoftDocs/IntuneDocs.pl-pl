@@ -14,11 +14,11 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 389196cd5c36859589e68ccadd576ceeac1bc279
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ead4f7308679359398383a2821b9c7e015ce59de
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="sign-up-or-sign-in-to-intune"></a>Utworzenie konta usługi Intune lub zalogowanie się do niego
 
@@ -26,23 +26,22 @@ ms.lasthandoff: 07/01/2017
 
 Ten temat zawiera informacje dla administratorów dotyczące tworzenia konta w usłudze Intune.
 
-Aby utworzyć konto usługi Intune lub zalogować się do niego, musisz ustalić, czy organizacja ma już konto służbowe usług online firmy Microsoft albo zawarła umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego z firmą Microsoft. Konto służbowe jest udostępniane po podpisaniu umowy licencjonowania zbiorowego z firmą Microsoft lub zasubskrybowaniu innych usług firmy Microsoft w chmurze, takich jak usługa Office 365.
+Przed zarejestrowaniem się w usłudze Intune określ, czy masz już konto usług Microsoft Online Services, umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego. Umowy licencjonowania zbiorowego firmy Microsoft lub subskrypcje innych usług firmy Microsoft w chmurze, takich jak Office 365, obejmują zazwyczaj konta firmowe.
 
-Jeśli masz już konto służbowe, możesz po prostu **zalogować się** przy użyciu tego konta, aby dodać usługę Intune do swojego istniejącego środowiska subskrypcji. W przeciwnym razie musisz **zarejestrować się**, aby utworzyć nowe konto, którego będziesz używać do zarządzania usługą Intune dla organizacji.
+Jeśli masz już konto firmowe, **zaloguj się** przy użyciu tego konta i dodaj usługę Intune do swojej subskrypcji. W przeciwnym razie **zarejestruj** nowe konto, aby korzystać z usługi Intune w swojej organizacji.
 
 >[!WARNING]
->Jeśli utworzysz nowe konto, nie możesz później zarządzać swoją subskrypcją przy użyciu istniejącego konta służbowego ani nie możesz łączyć tej subskrypcji z istniejącymi umowami licencjonowania zbiorowego.
+>Nie można połączyć istniejącego konta służbowego lub edukacyjnego po zarejestrowaniu nowego konta.
 
 ## <a name="how-to-sign-up-or-sign-in-to-intune"></a>Tworzenie konta usługi Intune lub logowanie się do niego
 
 1.  Odwiedź stronę [Tworzenie konta w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
-2.  Na stronie **Tworzenie konta** utwórz konto lub zaloguj się do niego, aby zarządzać nową subskrypcją usługi Intune.
+  ![Zrzut ekranu strony tworzenia konta próbnego usługi Microsoft Intune](./media/account-sign-up-site.png)
+
+2.  Na stronie tworzenia konta utwórz konto lub zaloguj się na nie, aby zarządzać nową subskrypcją usługi Intune.
 
 ## <a name="post-sign-up-considerations"></a>Kwestie do rozważenia po utworzeniu konta
-Jeśli utworzysz konto w celu uzyskania nowej subskrypcji, wiadomość e-mail zawierająca informacje o koncie zostanie wysłana na adres e-mail podany w procesie rejestracji. Stanowi ona potwierdzenie, że Twoja subskrypcja jest aktywna.
+Po utworzeniu konta w celu uzyskania nowej subskrypcji wiadomość e-mail zawierająca informacje o koncie zostanie wysłana na adres e-mail podany w procesie rejestracji. Stanowi ona potwierdzenie, że Twoja subskrypcja jest aktywna.
 
-Po ukończeniu procesu tworzenia konta nastąpi przekierowanie do strony używanej do dodawania użytkowników i przypisywania im licencji przy użyciu centrum administracyjnego usługi Office 365. Jeśli będziesz korzystać tylko z kont w chmurze korzystających z Twojej domyślnej nazwy domeny onmicrosoft.com, możesz rozpocząć dodawanie użytkowników i przypisywanie licencji na tym etapie. Jednak jeśli będziesz używać niestandardowej nazwy domeny organizacji lub chcesz synchronizować informacje dotyczące kont użytkowników z lokalnej usługi Active Directory, możesz zamknąć to okno przeglądarki i przejść do kroku 2 tego przewodnika Szybki start. Dowiedz się więcej na temat [początkowej domeny onmicrosoft.com w usłudze Office 365](https://support.office.com/article/Domains-FAQ-1272bad0-4bd4-4796-8005-67d6fb3afc5a?ui=en-US&rs=en-US&ad=US&fromAR=1#bkmk_whydoihaveanonmicrosoft.comdomain)
-
->[!TIP]
-> Podczas następnego logowania w usłudze Intune nastąpi automatyczne przekierowanie do konsoli administracyjnej usługi Intune.
+Po ukończeniu procesu rejestracji nastąpi przekierowanie do Centrum administracyjnego usługi Office 365 używanego do dodawania użytkowników i przypisywania im licencji. Jeśli będziesz korzystać tylko z kont w chmurze korzystających z Twojej domyślnej nazwy domeny onmicrosoft.com, możesz rozpocząć dodawanie użytkowników i przypisywanie licencji na tym etapie. Jednak jeśli chcesz używać [niestandardowej nazwy domeny](custom-domain-name-configure.md) organizacji lub [synchronizować informacje dotyczące kont użytkowników](users-add.md#sync-active-directory-and-add-users-to-intune) z lokalnej usługi Active Directory, możesz zamknąć to okno przeglądarki.

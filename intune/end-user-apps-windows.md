@@ -14,11 +14,11 @@ ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c503539679ec0b3e0326048743b9fd64eaa4a99b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 68b02a52dce49db470b11cbdf32308a74688ca45
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Jak użytkownicy systemu Windows uzyskują aplikacje
 
@@ -34,6 +34,6 @@ Dzięki tym informacjom możesz zrozumieć, jak i gdzie użytkownicy uzyskują a
 
 **Aplikacje niezarządzane** to aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub nie zawierają zestawu SDK funkcji MAM usługi Intune. W przypadku tych aplikacji nie można stosować zasad aplikacji.
 
-### <a name="see-also"></a>Zobacz też
-[Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)</br>
+### <a name="see-also"></a>Zobacz także
+[Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)
 [Jak użytkownicy systemu iOS uzyskują aplikacje](end-user-apps-android.md)

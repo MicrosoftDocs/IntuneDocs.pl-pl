@@ -1,11 +1,11 @@
 ---
 title: Planowanie komunikacji
-description: "Celem tego artykułu jest dostarczenie planu i strategii komunikacji związanej z migracją."
+description: "W tym artykule zawarto plan i strategię dotyczące komunikacji w zakresie migracji."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,49 +13,46 @@ ms.technology:
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: ba85331629f88a4fc6df9f7c2ee5fcf1eda2d8ee
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 59b978fa9c9084c5a70c912ca6a9b1e6c364722c
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="plan-communications"></a>Planowanie komunikacji 
+# <a name="plan-communications"></a>Planowanie komunikacji
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
+W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny element. Możesz wykorzystać ten sam plan komunikacji w każdej fazie migracji.
 
-W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny element. Dla każdej fazy można zastosować taki sam plan komunikacji, jak zostało to poprzednio omówione w sekcji Czynniki o kluczowym znaczeniu dla pomyślnego przeprowadzenia migracji.
+## <a name="email-templates"></a>Szablony wiadomości e-mail
 
-## <a name="e-mail-templates"></a>Szablony wiadomości e-mail
+Zaleca się użycie następującego planu komunikacji za pośrednictwem poczty e-mail. Przygotowane szablony można dostosować do planu komunikacji:
 
-Poniżej opisano przykładowy sposób przekazywania informacji na temat migracji członkom organizacji:
+-   **Wiadomość e-mail \# 1:** należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanych przez usługę Intune.<br/><br/>
 
--   **Wiadomość e-mail \# 1:** należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanymi przez usługę Intune.
 
-    -   [Pobierz szablon wiadomości e-mail \# 1 do użycia w organizacji](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35).
+    -   [Pobierz \#szablon 1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35) wiadomości e-mail
 <br></br>
 
--   **Wiadomość e-mail \# 2:** należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.
+-   **Wiadomość e-mail \# 2:** należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.<br/><br/>
 
-    -   [Pobierz szablon wiadomości e-mail \# 2 do użycia w organizacji.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
+
+    -   [Pobierz \#szablon 2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5) wiadomości e-mail
 <br></br>
 
--   **Wiadomość e-mail \# 3:** w jej treści należy przedstawić użytkownikom oś czasu przed wprowadzeniem zmian w zakresie dostępu. Ponownie przypomnij użytkownikom korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji. Wysyłkę wiadomości e-mail należy zaplanować z zachowaniem odpowiedniej elastyczności ram czasowych i z uwzględnieniem terminów realizacji faz. Na przykład: w czerwcu wyślij wiadomość e-mail \# 1 do użytkowników z fazy 1, wiadomość \# 2 do użytkowników z fazy 2 i wiadomość \# 1 do użytkowników z fazy 3.
+-   **Wiadomość e-mail \#3:** przekaż użytkownikom oś czasu, zanim będzie to mieć wpływ na ich dostęp. Ponownie przypomnij użytkownikom korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji. Wysyłkę wiadomości e-mail należy zaplanować z uwzględnieniem terminów realizacji faz. Przykładowo w czerwcu wyślij wiadomość e-mail \#1 do użytkowników z fazy 1, wiadomość \#2 do użytkowników z fazy 2 i wiadomość \#3 do użytkowników z fazy 3.<br/><br/>
 
-    -   [Pobierz szablon wiadomości e-mail \# 3 do użycia w organizacji.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
+    -   [Pobierz \#szablon 3 wiadomości e-mail](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 
-Po pewnym czasie można zacząć wymuszać zgodność za pomocą zasad dostępu warunkowego i wykorzystywać ją jako kryterium dostępu do danych firmowych.
-
--   Aby uzyskać więcej informacji, zobacz [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego.](migration-guide-drive-adoption.md)
+Po pewnym czasie można zacząć wymuszać zgodność za pomocą zasad dostępu warunkowego i wykorzystywać ją jako kryterium dostępu do danych firmowych, jak wytłumaczono w artykule [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md).
 
 ## <a name="additional-communication-templates"></a>Dodatkowe szablony do komunikacji
 
-W usłudze Intune dostępne są dodatkowe szablony zachęcające użytkowników końcowych do rejestracji urządzeń:
+W usłudze Intune dostępne są dodatkowe szablony zachęcające użytkowników do rejestracji urządzeń:
 
--   Zapoznaj się z tematem [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](/intune/end-user-educate), aby uzyskać dla poszczególnych platform dodatkowe porady związane z krokami niezbędnymi w celu przeprowadzenia rejestracji
+-   [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
 
--   Pobierz dostosowywany [szablon dla administratorów IT dotyczący rejestracji w usłudze Intune przez użytkowników końcowych](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a).
+-   [Szablon rejestracji użytkowników końcowych usługi Intune dla administratorów IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) to modyfikowalny dokument programu Word, który objaśnia, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md)
+[Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md).

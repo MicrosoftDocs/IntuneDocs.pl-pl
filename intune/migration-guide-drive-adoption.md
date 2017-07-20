@@ -1,6 +1,6 @@
 ---
 title: "Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego"
-description: "Celem tego artykułu jest przybliżenie szczegółowych informacji na temat sposobu wykorzystania dostępu warunkowego w celu przyspieszenia rejestracji w usłudze Intune."
+description: "Ten artykuł przybliża szczegółowe informacje na temat sposobu wykorzystania dostępu warunkowego w celu przyspieszenia rejestracji w usłudze Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,16 +13,13 @@ ms.technology:
 ms.assetid: c2d7ce3f-fe97-4044-ad9e-25ac8fa301c9
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 0b2fbcc1d63f229e1b63873841bc300bdde92fa3
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 7a9c3bef955239ad653a9ca45c55c533be36c5ce
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="drive-end-user-adoption-with-conditional-access"></a>Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego
-
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
 
 Włączenie w usłudze Intune funkcji dostępu warunkowego, w tym np. blokowania wiadomości e-mail dla urządzeń, które nie są zarejestrowane, może zachęcić użytkowników do rejestracji urządzeń i sprzyjać zgodności, nie jest jednak niezbędne dla pomyślnego przeprowadzenia migracji. O sukcesie powinny decydować cele wdrażania technologii w ramach migracji oraz wymagania dotyczące zabezpieczeń.
 
@@ -48,16 +45,16 @@ Poniżej przedstawiono typowe podejście do zwiększenia liczby rejestrowanych u
 
 -   Użytkownicy korzystający z poprzedniego rozwiązania mogą potencjalnie uzyskać dostęp do zasobów za pomocą niezarządzanych urządzeń do czasu włączenia dla nich dostępu warunkowego.
 
-> [!TIP]
-> Jest to jedno z wielu możliwych podejść. Można wybrać prostszy proces, który odracza wszelki dostęp warunkowy do czasu przekazania instrukcji dotyczących rejestracji uczestnikom wszystkich faz, lub bardziej rygorystyczny proces, który będzie od samego początku wymuszał dostęp warunkowy i wymagał zachowania pełnej zgodności w celu uzyskania dostępu.
 
--   Dowiedz się więcej na temat [dostępu warunkowego](/intune/conditional-access).
+Jest to jedno z wielu możliwych podejść. Można wybrać prostszy proces, który odracza wszelki dostęp warunkowy do czasu przekazania instrukcji dotyczących rejestracji uczestnikom wszystkich faz, lub bardziej rygorystyczny proces, który będzie od samego początku wymuszał dostęp warunkowy i wymagał zachowania pełnej zgodności w celu uzyskania dostępu.
+
+-   Dowiedz się więcej na temat [dostępu warunkowego](conditional-access.md).
 
 ## <a name="task-list-for-conditional-access"></a>Lista zadań związanych z konfiguracją dostępu warunkowego
 
 ### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Zadanie 1: Podjęcie decyzji o sposobie wdrożenia dostępu warunkowego
 
-[Typowe sposoby korzystania z dostępu warunkowego](/intune/conditional-access-intune-common-ways-use).
+[Typowe sposoby korzystania z dostępu warunkowego](conditional-access-intune-common-ways-use.md).
 
 ### <a name="task-2-set-up-intune-conditional-access"></a>Zadanie 2. Konfiguracja dostępu warunkowego w usłudze Intune
 
@@ -65,14 +62,14 @@ Wybierz jedną z następujących opcji:
 
 -   [Konfigurowanie dostępu warunkowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
--   [Instalowanie łącznika lokalnego programu Exchange w usłudze Intune](/intune/exchange-connector-install)
+-   [Instalowanie łącznika lokalnego programu Exchange w usłudze Intune](exchange-connector-install.md)
 
--   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi Exchange Online](/intune/app-based-conditional-access-intune-exchange-online-create)
+-   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-create.md)
 
--   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi SharePoint Online](/intune/app-based-conditional-access-intune-sharepoint-online-create)
+-   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi SharePoint Online](app-based-conditional-access-intune-create.md)
 
--   [Blokowanie aplikacji, które nie korzystają z nowoczesnego uwierzytelniania (ADAL)](/intune/app-modern-authentication-block)
+-   [Blokowanie aplikacji, które nie korzystają z nowoczesnego uwierzytelniania (ADAL)](app-modern-authentication-block.md)
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Typowy cykl migracji](migration-guide-cycle.md)
+Dowiedz się więcej o [typowym cyklu migracji](migration-guide-cycle.md).
