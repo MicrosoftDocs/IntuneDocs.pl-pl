@@ -1,6 +1,6 @@
 ---
 title: "Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi"
-description: "Celem tego artykułu jest ułatwienie czytelnikom oceny wymagań biznesowych i technicznych przed rozpoczęciem migracji do usługi Intune."
+description: "Przed migracją do usługi Intune należy ocenić wymagania techniczne i biznesowe."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,26 +13,23 @@ ms.technology:
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 65e3bb4b6a4e6e8dcfa1dd16738ae47758f4fb9b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9e935531c785a1c907454d563550f237ebffdb13
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="phase-1-prepare-intune-for-mobile-device-management-mdm"></a>Faza 1: Przygotowanie usługi Intune do zarządzania urządzeniami przenośnymi (MDM)
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowania usługi Intune przyjrzyjmy się wymaganiom organizacji w zakresie zarządzania urządzeniami przenośnymi (MDM, Mobile Device Management). Raporty na temat aktywnych użytkowników pochodzące od bieżącego dostawcy usług MDM mogą ułatwić określenie krytycznych grup użytkowników. Kolejnym krokiem będzie znajdowanie odpowiedzi na pytania zawarte w [sekcji dotyczącej określania wymagań w zakresie MDM](migration-guide-prepare.md#assess-mdm-requirements).
+Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowania usługi Intune przyjrzyjmy się wymaganiom organizacji w zakresie zarządzania urządzeniami przenośnymi (MDM, Mobile Device Management). Przydatne może być uruchomienie raportów aktywnych użytkowników w bieżącym dostawcy rozwiązania do zarządzania urządzeniami przenośnymi w celu zidentyfikowania krytycznych grup użytkowników. Następnie można rozpocząć odpowiadanie na pytania z sekcji [Określanie wymagań w zakresie MDM](migration-guide-prepare.md#assess-mdm-requirements).
 
 ## <a name="assess-mdm-requirements"></a>Określanie wymagań w zakresie MDM
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Jakimi urządzeniami trzeba zarządzać?
 
--   Które [platformy](/intune-classic/get-started/supported-mobile-devices-and-computers) muszą mieć zapewnioną obsługę?
+-   Które [platformy](supported-devices-browsers.md) muszą mieć zapewnioną obsługę?
 
--   Czy obsługiwane urządzenia należą do firmy czy są objęte modelem BYOD?
+-   Czy obsługiwane urządzenia należą do firmy czy są osobiste?
 
 -   Jakie połączenia są używane? Wi-Fi, VPN czy sieć komórkowa?
 
@@ -48,10 +45,9 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 -   Ilu użytkowników będzie korzystać z jednego urządzenia?
 
--   Jakie Warunki użytkowania są potrzebne?
+-   Jakie warunki użytkowania są potrzebne?
 
     -   Na tym etapie należy odpowiednio wcześnie konsultować się z działem prawnym.
-
     -   Jaka lokalizacja jest wymagana?
 
 -   Czy użytkownicy są ogólnie obeznani z technologiami i rozwiązaniami informatycznymi?
@@ -60,30 +56,23 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 -   Czy jest potrzebne szyfrowanie na poziomie urządzenia?
 
--   Jaka jest długość kodów dostępu/kodów PIN do urządzeń?
+-   Jaka jest bieżąca długość kodów dostępu/kodów PIN do urządzeń?
 
--   Czy konieczne jest wyłączenie funkcji urządzeń lub nałożenie ograniczeń na wybrane elementy ich działania?
+-   Czy konieczne jest wyłączenie funkcji urządzeń lub nałożenie ograniczeń na wybrane elementy ich działania? Przy użyciu profilów konfiguracji urządzeń można kontrolować różne ustawienia specyficzne dla danej platformy — można na przykład:
+      - Wyłączyć aparat fotograficzny
+      - Wymusić tryb korzystania tylko z jednej aplikacji<br/>
 
-    -   Przy użyciu profilów konfiguracji urządzeń można kontrolować różne ustawienia specyficzne dla danej platformy, na przykład wyłączyć aparat fotograficzny lub wymusić tryb korzystania tylko z jednej aplikacji.
-<br></br>
--   Jakie rodzaje uwierzytelniania muszą być obsługiwane?
-
-    -   Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
-
-        -   Usługa Intune może aprowizować certyfikaty z profilami dostępu do zasobów dla zarejestrowanych urządzeń.
-<br></br>
+-   Jakie rodzaje uwierzytelniania muszą być obsługiwane? Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
+  - Usługa Intune może aprowizować certyfikaty z profilami dostępu do zasobów dla zarejestrowanych urządzeń.
     -   Jaka infrastruktura kluczy publicznych (PKI) musi być obsługiwana?
 <br></br>
 -   Czy obsługa wirtualnych sieci prywatnych (VPN) odbywa się na poziomie aplikacji czy urządzenia?
 
     -   Intune może udostępniać konfiguracje sieci VPN dla innych dostawców sieci VPN.
-<br></br>
+<br/><br/>
 -   Czy jest dopuszczalne stosowanie tymczasowych wyjątków dla niektórych wymagań w celu uniknięcia przestoju? Czy urządzenia z dostępem muszą zawsze spełniać wszystkie wymagania dotyczące zabezpieczeń?
 
-## <a name="additional-information"></a>Dodatkowe informacje
-
--   Aby bardziej szczegółowo zapoznać się z procesem oceny wymagań w zakresie zarządzania urządzeniami przenośnymi w organizacjach z różnych branż, przejrzyj te [analizy przypadków](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune).
-
 ## <a name="next-steps"></a>Następne kroki
+Przejrzyj te [analizy przypadków](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune), aby zapoznać się z procesem oceny wymagań w zakresie zarządzania urządzeniami przenośnymi w organizacjach z różnych branż.
 
-[Konfiguracja podstawowa](migration-guide-setup.md)
+Zapoznaj się z [podstawową konfiguracją usługi Intune](migration-guide-setup.md).

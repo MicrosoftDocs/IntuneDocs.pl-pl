@@ -1,6 +1,6 @@
 ---
 title: "Konfiguracja podstawowa usługi Intune"
-description: "Celem tego artykułu jest przedstawienie niezbędnych instrukcji dotyczących konfigurowania usługi Microsoft Intune."
+description: "Ten artykuł zawiera niezbędne instrukcje dotyczące konfigurowania usługi Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,16 +13,13 @@ ms.technology:
 ms.assetid: 60cfa440-0723-4ea0-bacf-3c5d26f9a1d3
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c3129b2a8d93e91493455da5f3e5fd1a59dd77bb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9ea12f3707b830f0e3426526a7ae91d176d6e809
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="basic-setup"></a>Konfiguracja podstawowa
-
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
 
 Po dokonaniu oceny środowiska należy rozpocząć konfigurowanie usługi Intune.
 
@@ -30,27 +27,25 @@ Po dokonaniu oceny środowiska należy rozpocząć konfigurowanie usługi Intune
 
 ### <a name="identity"></a>Tożsamość
 
-Usługa Intune wymaga usługi Azure Active Directory (AAD) jako dostawcy tożsamości i grup użytkowników.
+Usługa Intune wymaga usługi Azure Active Directory (AAD) jako dostawcy tożsamości i grup użytkowników. Dowiedz się więcej na następujące tematy:
 
--   Dowiedz się więcej o [wymaganiach dotyczących tożsamości](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview).
+-  [Wymagania dotyczące tożsamości](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   Dowiedz się więcej o [wymaganiach dotyczących synchronizacji katalogów](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements).
+-   [Wymagania dotyczące synchronizacji katalogu](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   Dowiedz się więcej o [wymaganiach dotyczących uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements).
+-   [Wymagania dotyczące uwierzytelniania wieloskładnikowego](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
--   Dowiedz się więcej na temat [planowania grup użytkowników i urządzeń](/intune/users-permissions-add).
+-   [Planowanie grup użytkowników i urządzeń](users-add.md)
 
--   Dowiedz się, [jak tworzyć grupy użytkowników i urządzeń](/intune/groups-get-started).
+-   [Sposoby tworzenia grup użytkowników i urządzeń](groups-get-started.md)
 
-Jeśli Twoja organizacja używa już usługi Office 365, istotne jest, czy usługa Intune używa tego samego środowiska usługi Azure Active Directory.
+Jeśli Twoja organizacja używa już usługi Office 365, usługa Intune musi używać tego samego środowiska usługi Azure Active Directory.
 
 ### <a name="pki-optional"></a>Infrastruktura PKI (opcjonalnie)
 
-Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na certyfikatach wraz z profilami sieci VPN, sieci Wi-Fi lub poczty e-mail, należy upewnić się, że istnieje obsługiwana [infrastruktura PKI](/intune/certificates-configure), za pomocą której można tworzyć i wdrażać profile certyfikatów.
+Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na certyfikatach wraz z profilami sieci VPN, sieci Wi-Fi lub poczty e-mail, należy upewnić się, że istnieje obsługiwana [infrastruktura PKI](certificates-configure.md), za pomocą której można tworzyć i wdrażać profile certyfikatów. Dowiedz się więcej o konfigurowaniu certyfikatów w usłudze Intune:
 
-Więcej informacji o konfigurowaniu certyfikatów w usłudze Intune można znaleźć poniżej.
-
--   [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](/intune/certificates-scep-configure).
+-   [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](/intune/certificates-scep-configure)
 
 -   [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](/intune/certficates-pfx-configure).
 
@@ -75,15 +70,15 @@ Aby można było przeprowadzić migrację do usługi Intune, należy dysponować
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Zadanie 3. Ustawianie urzędu MDM na usługę Intune
 
-Usługą Intune można zarządzać za pomocą witryny Azure Portal lub konsoli programu Configuration Manager w wersji Current Branch. Jeśli nie jest konieczna integracja usługi Intune z wdrożeniem programu Configuration Manager w wersji Current Branch, zaleca się zarządzanie tą usługą przy użyciu witryny [Azure Portal](https://portal.azure.com).
+Usługą Intune można zarządzać za pomocą witryny Azure Portal lub konsoli programu Configuration Manager w wersji Current Branch. Jeśli nie jest konieczna integracja usługi Intune z wdrożeniem programu Configuration Manager w wersji Current Branch, zalecamy zarządzanie tą usługą przy użyciu witryny [Azure Portal](https://portal.azure.com).
 
 Aby umożliwić korzystanie z usługi Intune za pomocą witryny Azure Portal, ustaw urząd MDM na usługę **Intune**. Użycie innego urzędu MDM pozwala usłudze Intune przenieść funkcje zarządzania MDM do alternatywnych konsoli zarządzania firmy Microsoft. Takie przypadki występują rzadko.
 
 > [!IMPORTANT]
 > Jeśli pierwszy raz przenosisz funkcje zarządzania urządzeniami przenośnymi do usługi Intune, należy ustawić urząd MDM na usługę Intune.
 
--   Dowiedz się, [jak ustawić urząd zarządzania urządzeniami przenośnymi](/intune/mdm-authority-set).
+Dowiedz się, [jak ustawić urząd zarządzania urządzeniami przenośnymi](mdm-authority-set.md).
 
 ## <a name="next-step"></a>Następny krok
 
-[Konfiguracja zasad zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md)
+Skonfiguruj [zasady zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md).

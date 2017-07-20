@@ -4,7 +4,7 @@ description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Win
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-ms.date: 03/27/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 356ada64224f8982baf93ddaccb44df123c4568c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
@@ -32,6 +32,8 @@ Komputery z systemem Windows można zarejestrować, instalując oprogramowanie k
 Oprogramowanie klienckie usługi Intune zawiera minimalne składniki oprogramowania niezbędne do zarejestrowania komputera w zarządzaniu przy użyciu usługi Intune. Po zarejestrowaniu komputera oprogramowanie klienckie usługi Intune pobiera pełne oprogramowanie klienckie wymagane do zarządzania komputerami.
 
 Powyższa seria pobrań zmniejsza wpływ na przepustowość sieci i skraca do minimum czas wymagany do rejestrowania początkowego komputera w usłudze Intune. Gwarantuje to również, że po ukończeniu drugiego pobierania klient ma najnowsze dostępne oprogramowanie.
+
+Jedna licencja usługi Intune umożliwia zainstalowanie oprogramowania klienckiego usługi Intune na pięciu komputerach.
 
 ## <a name="download-the-intune-client-software"></a>Pobieranie oprogramowania klienckiego usługi Intune
 

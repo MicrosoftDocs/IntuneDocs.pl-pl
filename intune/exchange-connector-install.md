@@ -1,12 +1,12 @@
 ---
 title: "Konfigurowanie łącznika Exchange dla lokalnego programu EAS w usłudze Intune"
-titleSuffix: Intune Azure preview
-description: "Wersja zapoznawcza usługi Intune Azure: Exchange ActiveSync MDM — użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
+titleSuffix: Intune Azure
+description: "Usługa Intune Azure: Exchange ActiveSync MDM — użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/08/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f4a310078a30f7dfefe66a9aba60cc74ad4e29b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1dd5143ce6c604f416af1c6b6b1df684346e2f6d
+ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/14/2017
 ---
-# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Konfigurowanie lokalnego programu Exchange Connector w wersji zapoznawczej usługi Microsoft Intune Azure
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
 Lokalne środowiska serwera Exchange mogą używać programu On-premises Exchange Connector w celu zarządzania dostępem urządzeń do skrzynek pocztowych Exchange w oparciu o to, czy urządzenia są zarejestrowane w usłudze Intune i spełniają zasady zgodności w usłudze Intune. Program On-premises Exchange Connector odpowiada także za odnajdywanie urządzeń mobilnych łączących się z lokalnymi serwerami programu Exchange poprzez synchronizowanie istniejącego rekordu programu Exchange Active Sync (EAS) z usługą Intune.
 
@@ -42,8 +42,8 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 |Systemy operacyjne|Usługa Intune obsługuje program On-premises Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 SP2 (64-bitową), Windows Server 2008 R2, Windows Server 2012 i Windows Server 2012 R2.<br /><br />Program Connector nie jest obsługiwany w żadnej instalacji Server Core.|
 |Microsoft Exchange|Lokalne łączniki wymagają programu Microsoft Exchange 2010 z dodatkiem SP1 lub jego nowszej wersji albo starszej wersji środowiska usługi Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera **nową** czy **starszą** konfigurację, skontaktuj się z menedżerem ds. klientów.|
 |Urząd zarządzania urządzeniami przenośnymi| [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Sprzęt|Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.|users-permissions-add.md
-|Synchronizacja z usługą Active Directory|Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu programu Connector, należy [skonfigurować synchronizację usługi Active Directory](users-permissions-add.md), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
+|Sprzęt|Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.|users-add.md
+|Synchronizacja z usługą Active Directory|Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu programu Connector, należy [skonfigurować synchronizację usługi Active Directory](users-add.md), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
 |Dodatkowe oprogramowanie|Na komputerze, który będzie hostem łącznika, musi być wdrożona pełna instalacja platformy Microsoft .NET Framework 4.5 i programu Windows PowerShell 2.0.|
 |Sieć|Komputer, na którym ma być instalowany łącznik, musi należeć do domeny, która ma relację zaufania z domeną hostującą program Exchange Server.<br /><br />Komputer wymaga zastosowania konfiguracji umożliwiającej mu dostęp do usługi Intune za pośrednictwem zapór i serwerów proxy przez porty 80 i 443. Domeny używane przez usługę Intune obejmują manage.microsoft.com, &#42;manage.microsoft.com i &#42;.manage.microsoft.com.|
 

@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c27b1a7d0c24bacc206cabe65bd3529a50fc2b4
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f27ad720556a866b5f2a9326df0a574cc37f2a5d
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="how-to-add-windows-phone-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows Phone do usługi Microsoft Intune
 
@@ -45,14 +45,14 @@ ms.lasthandoff: 07/01/2017
 ## <a name="step-3---configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
 
 1. W bloku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W bloku **Informacje o aplikacji** skonfiguruj następujące informacje. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
+2. W bloku **Informacje o aplikacji** skonfiguruj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
     - **Nazwa** — wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
-    - **Opis** — wprowadź opis aplikacji. Ta informacja będzie widoczna dla użytkowników w Portalu firmy.
+    - **Opis** — wprowadź opis aplikacji. Opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
-    - **Kategoria** — wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
+    - **Kategoria** — wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Używanie kategorii ułatwia użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
     - **Wyświetl jako polecaną aplikację w portalu firmy** — wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników w Portalu firmy.
-    - **Adres URL zasad ochrony prywatności** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres będzie widoczny dla użytkowników w Portalu firmy.
+    - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Adres URL zasad ochrony prywatności** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper** — opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel** — opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład **Dział kadr**.
     - **Uwagi** — wprowadź wszelkie uwagi, które chcesz skojarzyć z aplikacją.
@@ -63,5 +63,7 @@ ms.lasthandoff: 07/01/2017
 
 1. W bloku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
+
+## <a name="next-steps"></a>Następne kroki
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
