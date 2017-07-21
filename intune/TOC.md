@@ -15,6 +15,7 @@
 ### [Cykl wsparcia technicznego urządzenia](device-lifecycle.md)
 ### [Cykl wsparcia technicznego aplikacji](app-lifecycle.md)
 ## [Typowe scenariusze](common-scenarios.md)
+## [Opis usługi](microsoft-intune-service-description.md)
 ## [Znane problemy](known-issues.md)
 ## [Uzyskiwanie pomocy technicznej](get-support.md)
 
@@ -38,9 +39,9 @@
 ### [Implementacja](planning-guide-onboarding.md)
 ### [Testowanie i walidacja](planning-guide-test-validation.md)
 ### [Dodatkowe zasoby](planning-guide-resources.md)
-<!-- ## Scenario implementation guides
-### [BYOD](/enterprise-mobility-security/solutions/enable-byod?toc=/intune/toc.json)
-### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
+## Przewodniki po wdrażaniu scenariuszy
+### [Rozwiązanie „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](byod-enable.md)
+<!--### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
 ### [Protect on-premises data](/enterprise-mobility-security/solutions/protect-on-premises-data-with-intune?toc=/intune/toc.json)
 ### [Protect data without enrollment](/enterprise-mobility-security/solutions/protect-company-data-without-managing-devices?toc=/intune/toc.json)
 ### [Manage company-owned devices](/enterprise-mobility-security/solutions/issue-corp-devices?toc=/intune/toc.json)
@@ -62,16 +63,15 @@
 ## [Skonfiguruj usługę](setup-steps.md)
 ### [Wymagania wstępne](supported-devices-browsers.md)
 #### [Użycie przepustowości sieci](network-bandwidth-use.md)
-### [Logowanie do usługi Intune](account-sign-up.md)
-### [Skonfigurowanie domen](custom-domain-name-configure.md)
-### [Dodawanie użytkowników](users-permissions-add.md)
+### [Logowanie się do usługi Intune](account-sign-up.md)
+### [Konfigurowanie domen](custom-domain-name-configure.md)
+### [Dodawanie użytkowników](users-add.md)
 ### [Dodawanie grup](groups-add.md)
-### [Przypisywanie licencji](licenses-assign.md)       
-### [Dostosowywanie aplikacji Portal firmy](company-portal-customize.md)     
+### [Przypisywanie licencji](licenses-assign.md)
 ### [Ustawianie urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
 
 ## [Rejestrowanie urządzeń](device-enrollment.md)
-### Opcje konfiguracji
+### [Opcje rejestracji](enrollment-options.md)
 #### [Warunki i postanowienia](terms-and-conditions-create.md)
 #### [Ograniczenia](enrollment-restrictions-set.md)
 #### [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
@@ -82,10 +82,10 @@
 #### [Rejestracja systemu Windows](windows-enroll.md)
 #### [Rejestrowanie zbiorcze](windows-bulk-enroll.md)
 ### [Konfigurowanie rejestrowania urządzeń z systemem Android](android-enroll.md)
-### Konfigurowanie rejestrowania urządzeń z systemem iOS
-#### [Przy użyciu programu Device Enrollment Program](device-enrollment-program-enroll-ios.md)
-#### [Przy użyciu usługi Apple School Manager](apple-school-manager-set-up-ios.md)
-#### [Przy użyciu programu Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
+### [Konfigurowanie rejestrowania urządzeń z systemem iOS](ios-enroll.md)
+#### [Program Device Enrollment Program](device-enrollment-program-enroll-ios.md)
+#### [Usługa Apple School Manager](apple-school-manager-set-up-ios.md)
+#### [Program Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
 ### [Konfigurowanie rejestrowania urządzeń z systemem macOS](macos-enroll.md)
 
 ## [Zarządzanie urządzeniami](device-management.md)
@@ -105,7 +105,6 @@
 ### [Resetowanie numeru PIN w systemie Windows 10](device-windows-pin-reset.md)
 ### [Przeglądanie spisu urządzeń](device-inventory.md)
 
-## [Zarządzanie użytkownikami](user-management.md)
 <!--### Add and delete users -->
 
 ## [Zarządzanie aplikacjami](app-management.md)
@@ -120,6 +119,7 @@
 #### [Aplikacje ze Sklepu Windows](store-apps-windows.md)
 #### [Aplikacje LOB dla systemu Windows](lob-apps-windows.md)
 #### [Aplikacje programu Android for Work](apps-add-android-for-work.md)
+#### [Aplikacje pakietu Office 365 dla systemu Windows 10](apps-add-office365.md)
 ### [Przypisywanie aplikacji](apps-deploy.md)
 ### [Monitorowanie aplikacji](apps-monitor.md)
 ### [Profile konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md)
@@ -219,32 +219,24 @@
 
 #### [Konfigurowanie usługi Lookout](lookout-mobile-threat-defense-connector.md)
 ##### [Konfigurowanie integracji usług Lookout i Intune](lookout-mtd-connector-integration.md)
+
 #### [Konfigurowanie programu Skycure](skycure-mobile-threat-defense-connector.md)
-##### [Konfigurowanie rejestracji jednokrotnej w usłudze Azure AD](skycure-azure-sso-configure.md)
-##### [Pobieranie zasad konfiguracji aplikacji systemu iOS](skycure-ios-app-configuration-policy-download.md)
 ##### [Integrowanie programu Skycure i usługi Intune](skycure-mtd-connector-integration.md)
+
+#### [Konfigurowanie aplikacji Check Point](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+##### [Integracja aplikacji Check Point i usługi Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+
 #### [Dodawanie aplikacji MTD](mtd-apps-ios-app-configuration-policy-add-assign.md)
 #### [Włączanie usługi MTD w usłudze Intune](mtd-connector-enable.md)
 #### [Tworzenie zasad zgodności urządzenia usługi MTD](mtd-device-compliance-policy-create.md)
 
 ### [Kontrola dostępu do sieci](network-access-control-integrate.md)
 
-
-<!-- ### Set up mobile threat protection        
-#### Prerequisites
-#### Set up Lookout
-#### Set up Skycure
-#### Enable mobile threat protection in Intune
-#### Create a mobile threat protection compliance policy -->
-
 ### [Konfigurowanie funkcji Windows Hello](windows-hello.md)        
 <!-- ### Protect devices with remote actions -->
 
 ## [Zarządzanie rolami](role-based-access-control.md)
-<!-- ### Create a custom role
-### Assign a role -->
 
-<!-- ### Custom role settings -->
 
 ## [Zarządzanie komputerami przy użyciu oprogramowania agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Porównanie zarządzania komputerami](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)
