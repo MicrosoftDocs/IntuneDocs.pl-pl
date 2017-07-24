@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 07/03/2017
+ms.date: 07/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fdda99bfd72c71d36a19449d43bc6cbf6a00babe
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: dec4fb1d373f49c1f6c15b1f2a9acb2f8d20138d
+ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -55,25 +55,25 @@ Usługa Intune obsługuje teraz przekazywanie numerów seryjnych systemów iOS, 
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami
 #### <a name="new-remote-actions-for-ios-devices----854689---"></a>Nowe akcje zdalne dla urządzeń z systemem iOS <!-- 854689 -->
-W tej wersji dodaliśmy dwie nowe akcje zdalne dotyczące urządzeń z systemem iOS:
+W tej wersji dodano dwie nowe akcje zdalnego urządzenia dla udostępnionych urządzeń iPad, które zarządzają aplikacją Apple Classroom:
 
 -   [Wyloguj bieżącego użytkownika](device-logout-user.md) — powoduje wylogowanie bieżącego użytkownika z wybranego urządzenia z systemem iOS.
 -   [Usuń użytkownika](device-remove-user.md) — powoduje usunięcie wybranego użytkownika z lokalnej pamięci podręcznej na urządzeniu z systemem iOS.
 
-
-Przy użyciu tych akcji zdalnych administratorzy mogą zarządzać kontami użytkowników buforowanymi na współużytkowanym tablecie iPad, a także wylogować aktualnie zalogowanego na urządzeniu użytkownika.
-
-Podczas rejestracji administrator określa maksymalną liczbę kont użytkowników, które mogą być buforowane na urządzeniu. Akcja „Usuń użytkownika” pozwala administratorom na usuwanie konkretnych buforowanych użytkowników.
-
-Akcja „Wyloguj bieżącego użytkownika” powoduje wylogowanie użytkownika zalogowanego obecnie na urządzeniu. Ta akcja znajduje się w górnej części bloku przeglądu urządzenia, gdzie normalnie znajdują się akcje urządzeń.
-
-Akcja „Usuń użytkownika” powoduje usunięcie określonego użytkownika z lokalnej pamięci podręcznej urządzenia. Aby uzyskać dostęp do tej akcji, przejdź do pozycji Monitor -> Użytkownicy i kliknij prawym przyciskiem myszy określonego użytkownika na liście. Wszelkie niezsynchronizowane dane skojarzone z kontem użytkownika zostaną utracone. Ponadto mogą upłynąć nawet 24 godziny do czasu odzwierciedlenia na liście użytkowników usunięcia użytkownika.
 
 #### <a name="support-for-shared-ipads-with-the-ios-classroom-app----1044681---"></a>Obsługa udostępnionych urządzeń iPad przy użyciu aplikacji iOS Classroom <!-- 1044681 -->
 W tej wersji rozszerzono obsługę funkcji zarządzania aplikacją Classroom dla systemu iOS w celu uwzględnienia uczniów logujących się na współużytkowanych tabletach iPad za pomocą zarządzanych identyfikatorów Apple ID.
 
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami  
+
+#### <a name="changes-to-intune-built-in-apps----1332306---"></a>Zmiany do wbudowanych aplikacji usługi Intune <!-- 1332306 -->
+
+Wcześniej usługa Intune zawierała kilka wbudowanych aplikacji, które można było szybko przypisać. Na podstawie Twojej opinii usunęliśmy tę listę, a wbudowane aplikacje nie będą już dla Ciebie widoczne.
+Jeśli jednak przypisano już jakiekolwiek wbudowane aplikacje, będą one nadal widoczne na liście aplikacji. W razie potrzeby te aplikacje mogą pozostać przypisane.
+W nowszej wersji planujemy dodać łatwiejszy sposób wybierania i przypisywania wbudowanych aplikacji z portalu usługi Intune.
+
+
 #### <a name="support-for-offline-apps-from-the-windows-store-for-business-----777044----"></a>Obsługa aplikacji offline ze Sklepu Windows dla firm <!--- 777044 --->
 Aplikacje offline zakupione ze Sklepu Windows dla firm będą teraz synchronizowane z portalem usługi Intune. Następnie można wdrożyć te aplikacje w grupach urządzeń lub w grupach użytkowników. Aplikacje offline są instalowane przez usługę Intune, a nie przez sklep.
 
@@ -266,12 +266,16 @@ Istniejące role administracyjne zarządzania aplikacjami mobilnymi (MAM) (wspó
 
 ## <a name="whats-coming"></a>Wkrótce
 
+### <a name="end-of-support-for-android-43-and-lower----1171127-1326920----"></a>Zakończenie obsługi dla systemu Android 4.3 i starszych <!---1171127, 1326920 --->
+Aplikacje zarządzane i aplikacja Portal firmy dla systemu Android będą wymagać systemu Android 4.4 lub nowszego, aby można było uzyskiwać dostęp do zasobów firmy. Urządzenia, które nie zostaną zaktualizowane przed początkiem października, nie będą już mogły uzyskiwać dostępu do aplikacji Portal firmy i tych aplikacji. Od grudnia zostanie wymuszone wycofanie wszystkich zarejestrowanych urządzeń, co spowoduje utratę dostępu do zasobów firmy. Jeśli używasz zasad ochrony aplikacji bez zarządzania urządzeniami przenośnymi, aplikacje nie będą otrzymywać aktualizacji, a jakość obsługi będzie się pogarszać wraz z upływem czasu.
+
+
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-will-end-july-11-2017"></a>Przypomnienie dotyczące obsługi platformy: wsparcie podstawowe dla systemu Windows Phone 8.1 zakończy się 11 lipca 2017 r.
 <!-- 1327781 -->
 
 11 lipca 2017 r. zakończy się wsparcie podstawowe dla platformy Windows Phone 8.1. Nie ma to wpływu na pomoc techniczną dla komputerów z systemem Windows 8.1.
 
-Nie ma to bezpośredniego wpływu na urządzenia z systemem Windows Phone 8.1 zarządzane przez usługę Intune. Zarejestrowane urządzenia będą nadal działać, a wszystkie zasady, konfiguracje i aplikacje będą nadal działać zgodnie z oczekiwaniami. Nie ma żadnych ulepszeń przeznaczonych dla platformy Windows Phone 8.1 w usłudze Intune ani dla aplikacji Portal firmy systemu Windows Phone 8.1. 
+Nie ma to bezpośredniego wpływu na urządzenia z systemem Windows Phone 8.1 zarządzane przez usługę Intune. Zarejestrowane urządzenia będą nadal działać, a wszystkie zasady, konfiguracje i aplikacje będą nadal działać zgodnie z oczekiwaniami. Nie ma żadnych ulepszeń przeznaczonych dla platformy Windows Phone 8.1 w usłudze Intune ani dla aplikacji Portal firmy systemu Windows Phone 8.1.
 
 Zalecamy możliwie najwcześniejsze uaktualnienie kwalifikujących się urządzeń z systemem Windows Phone 8.1 do systemu Windows 10 Mobile. 
 

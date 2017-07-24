@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/23/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,16 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b3fb86648a86b161eadfc071bdacbfd4ea0222f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7edd80c7bae429c1f4032cf59aaaf8d91786f92c
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Dodawanie i przypisywanie aplikacji usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
+
+> [!NOTE] 
+> Niniejszy temat dotyczy wszystkich partnerów usługi Mobile Threat Defense.
 
 Do dodawania i wdrażania aplikacji usługi MTD możesz używać usługi Intune, aby użytkownicy końcowi mogli otrzymywać powiadomienia w chwili zidentyfikowania zagrożenia na ich urządzeniach przenośnych oraz wskazówki dotyczące usuwania zagrożeń.
 
@@ -46,33 +49,38 @@ W przypadku urządzeń z systemem iOS konieczna jest aplikacja [Microsoft Authen
 
 ## <a name="to-add-apps"></a>Aby dodać aplikacje
 
-### <a name="skycure-app-for-android"></a>Aplikacja Skycure dla systemu Android
+### <a name="all-mtd-partners"></a>Wszyscy partnerzy usługi MTD
 
-- Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu Android do usługi Microsoft Intune](store-apps-android.md). Użyj tego [adresu URL sklepu aplikacji Skycure](https://play.google.com/store/apps/details?id=com.skycure.skycure) w **kroku 7**.
-
-### <a name="skycure-app-for-ios"></a>Aplikacja Skycure dla systemu iOS
-
-- Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji Skycure](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) w **kroku 5** w sekcji **Konfigurowanie informacji o aplikacji**.
-
-### <a name="microsoft-authenticator-app-for-ios"></a>Aplikacja Microsoft Authenticator dla systemu iOS
+#### <a name="microsoft-authenticator-app-for-ios"></a>Aplikacja Microsoft Authenticator dla systemu iOS
 
 - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) w **kroku 5**w sekcji **Konfigurowanie informacji o aplikacji**.
 
-### <a name="lookout-for-work-android-app"></a>Aplikacja Lookout for Work dla systemu Android
+### <a name="skycure"></a>Skycure
 
+#### <a name="android"></a>Android
+
+- Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu Android do usługi Microsoft Intune](store-apps-android.md). Użyj tego [adresu URL sklepu aplikacji Skycure](https://play.google.com/store/apps/details?id=com.skycure.skycure) w **kroku 7**.
+
+#### <a name="ios"></a>iOS
+
+- Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji Skycure](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) w **kroku 5** w sekcji **Konfigurowanie informacji o aplikacji**.
+
+### <a name="lookout"></a>Lookout
+
+#### <a name="android"></a>Android
 - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu Android do usługi Microsoft Intune](store-apps-android.md). Użyj tego [adresu URL sklepu Google aplikacji Lookout for Work](https://play.google.com/store/apps/details?id=com.lookout.enterprise) w **kroku 7**.
 
-### <a name="lookout-for-work-ios-app"></a>Aplikacja Lookout for Work dla systemu iOS
+#### <a name="ios"></a>iOS
 
 - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji Lookout for Work dla systemu iOS](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) w **kroku 5** w sekcji **Konfigurowanie informacji o aplikacji**.
 
-### <a name="lookout-for-work-app-outside-the-apple-store"></a>Aplikacja Lookout for Work poza sklepem firmy Apple
+#### <a name="lookout-for-work-app-outside-the-apple-store"></a>Aplikacja Lookout for Work poza sklepem firmy Apple
 
 Musisz ponownie podpisać aplikację Lookout for Work dla systemu iOS. Usługa Lookout dystrybuuje swoją aplikację Lookout for Work systemu iOS poza sklepem App Store systemu iOS. Przed dystrybucją aplikacji musisz ją ponownie podpisać za pomocą certyfikatu dewelopera przedsiębiorstwa systemu iOS.
 
 Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacji Lookout for Work dla systemu iOS, zobacz [Lookout for Work iOS app re-signing process (Proces ponownego podpisywania aplikacji Lookout for Work dla systemu iOS)](https://personal.support.lookout.com/hc/articles/114094038714) w witrynie internetowej firmy Lookout.
 
-#### <a name="enable-azure-ad-authentication-for-lookout-for-work-ios-app"></a>Włączanie uwierzytelniania usługi Azure AD dla aplikacji Lookout for Work dla systemu iOS
+##### <a name="enable-azure-ad-authentication-for-lookout-for-work-ios-app"></a>Włączanie uwierzytelniania usługi Azure AD dla aplikacji Lookout for Work dla systemu iOS
 
 Włącz uwierzytelnianie za pomocą usługi Azure Active Directory dla użytkowników systemu iOS, wykonując poniższe czynności:
 
@@ -89,20 +97,36 @@ Włącz uwierzytelnianie za pomocą usługi Azure Active Directory dla użytkown
     > [!NOTE] 
     > Aby uzyskać szczegółowe informacje, zobacz [Configure a native client application with Azure AD (Konfigurowanie natywnej aplikacji klienckiej za pomocą usługi Azure AD)](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
 
-#### <a name="add-the-lookout-for-work-ipa-file"></a>Dodawanie pliku ipa aplikacji Lookout for Work
+##### <a name="add-the-lookout-for-work-ipa-file"></a>Dodawanie pliku ipa aplikacji Lookout for Work
 
 - Przekaż ponownie podpisany plik ipa, jak opisano w temacie [Add iOS LOB apps with Intune (Dodawanie aplikacji biznesowych dla systemu iOS za pomocą usługi Intune)](lob-apps-ios.md). Musisz też ustawić minimalną wersję systemu operacyjnego iOS na 8.0 lub nowszą.
+
+### <a name="check-point-sandblast-mobile"></a>Check Point SandBlast Mobile
+
+#### <a name="android"></a>Android
+
+- Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu Android do usługi Microsoft Intune](store-apps-android.md). Użyj tego [adresu URL aplikacji Check Point SandBlast Mobile](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) w **kroku 7**.
+
+#### <a name="ios"></a>iOS
+
+- Skontaktuj się z zespołem aplikacji [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/), aby uzyskać aplikację dla systemu iOS. Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji ze sklepu dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md), a następnie użyj adresu URL sklepu Apple Store w **kroku 5** w sekcji dotyczącej **konfigurowania informacji o aplikacji**.
 
 ## <a name="to-associate-the-mtd-app-with-an-ios-app-configuration-policy"></a>Aby skojarzyć aplikację usługi MTD z zasadami konfiguracji aplikacji systemu iOS
 
 ### <a name="for-skycure"></a>W przypadku aplikacji Skycure
 
--   Użyj tego samego konta usługi Azure AD, które zostało wcześniej skonfigurowane w konsoli zarządzania Skycure. Powinno to być konto używane podczas logowania się do klasycznej konsoli usługi Intune.
+-   Użyj tego samego konta usługi Azure AD, które zostało wcześniej skonfigurowane w [konsoli zarządzania aplikacji Skycure](https://aad.skycure.com). Powinno to być konto używane podczas logowania się do klasycznej konsoli usługi Intune.
 
--   Plik integracji Skycure musi być gotowy do użycia. Jest to pobrany wcześniej z konsoli zarządzania Skycure plik ZIP, który zawiera plik **skycure\_configuration.plist** z parametrami zasad konfiguracji aplikacji systemu iOS.
-
-- Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md), aby dodać zasady konfiguracji aplikacji Skycure dla systemu iOS.
-    - W kroku 8 użyj opcji **Wprowadź dane XML**, skopiuj zawartość z pliku **skycure_configuration.plist** i wklej jego zawartość do treści zasad konfiguracji.
+-   Musisz **pobrać** plik zasad konfiguracji aplikacji systemu iOS: 
+    -   Przejdź do [konsoli zarządzania aplikacji Skycure](https://aad.skycure.com) i zaloguj się przy użyciu poświadczeń administratora.
+    
+    -   Przejdź do opcji **Ustawienia** &gt; **Integracje zarządzania urządzeniami** &gt; **Wybór integracji EMM**, wybierz opcję **Microsoft Intune**, a następnie zapisz wybór.
+    
+    -   Kliknij link **Pliki instalacyjne integracji** i zapisz wygenerowany \*plik ZIP. Plik ZIP zawiera plik **skycure\_configuration.plist**, który będzie używany do tworzenia zasad konfiguracji aplikacji systemu iOS w usłudze Intune.
+    
+    -   Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md), aby dodać zasady konfiguracji aplikacji Skycure dla systemu iOS.
+    
+    - W **kroku 8** użyj opcji **Wprowadź dane XML**, skopiuj zawartość z pliku **skycure_configuration.plist** i wklej jego zawartość do treści zasad konfiguracji.
 
 Zawartość pliku **skycure_configuration.plist** możesz również skopiować z tego miejsca:
 
@@ -119,11 +143,21 @@ Zawartość pliku **skycure_configuration.plist** możesz również skopiować z
 
 - Utwórz zasady konfiguracji aplikacji systemu iOS zgodnie z opisem w temacie [Using iOS app configuration policy (Używanie zasad konfiguracji aplikacji systemu iOS)](app-configuration-policies-use-ios.md).
 
-## <a name="to-assign-mtd-apps"></a>Aby przypisać aplikacje usługi MTD
+### <a name="for-check-point-sandblast-mobile"></a>W przypadku aplikacji Check Point SandBlast Mobile
+
+- Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md), aby dodać zasady konfiguracji aplikacji Check Point SandBlast Mobile dla systemu iOS.
+    - W **kroku 8** użyj opcji **Wprowadź dane XML**, skopiuj treść poniżej i wklej ją do treści zasad konfiguracji.
+
+```
+<dict><key>MDM</key><string>INTUNE</string></dict>
+
+```
+## <a name="to-assign-apps-all-mtd-partners"></a>Aby przypisać aplikacje (wszyscy partnerzy usługi MTD)
 
 - Zapoznaj się z instrukcjami dotyczącymi [przypisywania aplikacji do grup przy użyciu usługi Intune](apps-deploy.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Konfiguracja integracji z programem Skycure w usłudze Intune](skycure-mtd-connector-integration.md)
-[Set up the Lookout integration with Intune (Konfiguracja integracji aplikacji Lookout przy użyciu usługi Intune)](lookout-mtd-connector-integration.md)
+- [Konfiguracja integracji usługi Lookout za pomocą usługi Intune](lookout-mtd-connector-integration.md)
+- [Konfiguracja integracji z programem Skycure w usłudze Intune](skycure-mtd-connector-integration.md)
+- [Konfiguracja integracji rozwiązania Check Point SandBlast z usługą Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)

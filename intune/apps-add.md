@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a4dfa9e0066a2ac6f410aa9f8e4d77a40484ea5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 69b1540d325f7cfa49e11f91fcb72a464f8a2e0e
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Jak dodawać aplikacje do usługi Microsoft Intune
 
@@ -79,34 +79,9 @@ Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej k
 
 ## <a name="apps-added-automatically-by-intune"></a>Aplikacje dodawane automatycznie przez usługę Intune
 
-Poniższe aplikacje wydane przez firmę Microsoft stanowią wbudowane elementy usługi Intune gotowe do przypisywania:
-
-|||
-|-|-|
-|Nazwa|Platforma|Typ aplikacji|
-|Azure Information Protection|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Dynamics CRM na telefony|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Dynamics CRM na tablety|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Excel|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Excel|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Managed Browser|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Managed Browser|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Microsoft Dynamics CRM na telefony|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Microsoft Dynamics CRM na tablety|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Microsoft Power BI|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Microsoft Power BI|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Microsoft SharePoint|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Microsoft SharePoint|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Microsoft Teams|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Microsoft Teams|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|OneDrive|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|OneDrive|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|OneNote|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Outlook|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Outlook|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|Outlook Groups|Android|Zarządzana aplikacja w sklepie dla systemu Android|
-|Outlook Groups|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
-|PowerPoint|iOS|Zarządzana aplikacja w sklepie dla systemu iOS|
+Wcześniej usługa Intune zawierała kilka wbudowanych aplikacji, które można było szybko przypisać. Na podstawie Twojej opinii usunęliśmy tę listę, a wbudowane aplikacje nie będą już więcej dla Ciebie widoczne.
+Jednak jeśli przypisano już jakiekolwiek wbudowane aplikacje, będą one nadal widoczne na liście aplikacji. W razie potrzeby te aplikacje mogą pozostać przypisane.
+W nowszej wersji planujemy dodać łatwiejszy sposób wybierania i przypisywania wbudowanych aplikacji z portalu usługi Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 
