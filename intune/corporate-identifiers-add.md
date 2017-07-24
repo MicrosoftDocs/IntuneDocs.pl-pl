@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 57ab3b79ad53a4b195fac426d211a114f054602f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a9852759983a4bc68c596146e2f5691893376cfd
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako administrator IT możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI (International Mobile Equipment Identity) lub numerów seryjnych służących do identyfikowania urządzeń firmowych. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
+Jako administrator usługi Intune możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI (International Mobile Equipment Identity) lub numerów seryjnych. Usługa Intune używa tych identyfikatorów, aby określić własność urządzeń jako firmowe. Numery IMEI możesz deklarować tylko dla wszystkich obsługiwanych platform. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
-[Dowiedz się, jak znaleźć numer seryjny urządzenia marki Apple](https://support.apple.com/HT204308).
+[Dowiedz się, jak znaleźć numer seryjny urządzenia marki Apple](https://support.apple.com/HT204308).<br>
 [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem Android](https://support.google.com/store/answer/3333000).
 
 ## <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
@@ -50,7 +50,10 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 ```
 
 > [!IMPORTANT]
-> Niektóre urządzenia z systemem Android mają wiele numerów IMEI. Usługa Intune odczytuje tylko jeden numer IMEI dla każdego zarejestrowanego urządzenia. Jeśli zostanie zaimportowany numer IMEI inny niż numer zarejestrowany w spisie usługi Intune, urządzenie zostanie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy. Zaimportowanie wielu numerów IMEI urządzenia spowoduje, że dla numerów niezarejestrowanych w spisie będzie wyświetlany stan rejestracji **Nieznany**.
+> Niektóre urządzenia z systemem Android mają wiele numerów IMEI. Usługa Intune odczytuje tylko jeden numer IMEI dla każdego zarejestrowanego urządzenia. Jeśli zaimportujesz numer IMEI inny niż numer zarejestrowany w spisie usługi Intune, urządzenie będzie zaklasyfikowane jako urządzenie osobiste, a nie należące do firmy. Zaimportowanie wielu numerów IMEI urządzenia spowoduje, że dla numerów niezarejestrowanych w spisie wyświetlany będzie stan rejestracji **Nieznany**.<br>
+>Należy również zauważyć, że nie ma gwarancji, iż numery seryjne systemu Android są unikatowe albo że istnieją. Aby ustalić, czy numer seryjny jest niezawodnym identyfikatorem urządzenia, skontaktuj się z dostawcą urządzenia.
+>Numery seryjne zgłaszane przez urządzenie do usługi Intune mogą być niezgodne z identyfikatorami wyświetlanymi w menu Ustawienia/Informacje o systemie Android na urządzeniu. Sprawdź typ numeru seryjnego podanego przez producenta urządzenia.
+
 
 **Aby dodać listę .csv identyfikatorów firmy**
 
@@ -62,9 +65,9 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 3. Kliknij ikonę folderu i określ ścieżkę do listy, którą chcesz zaimportować. Przejdź do pliku csv i wybierz przycisk **Dodaj**. Aby zobaczyć nowe identyfikatory urządzeń, możesz kliknąć pozycję **Odśwież**.
 
-Po zaimportowaniu te urządzenia mogą być zarejestrowane lub nie, a ich stan ma wartość **Zarejestrowane** lub **Nie kontaktowano się**. Wartość **Nie kontaktowano się** oznacza, że z urządzeniem nigdy nie nawiązano połączenia w usłudze Intune.
+Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć stan **Zarejestrowane** lub **Nie kontaktowano się**. Wartość **Nie kontaktowano się** oznacza, że z urządzeniem nigdy nie nawiązano połączenia w usłudze Intune.
 
-## <a name="delete--corporate-identifiers"></a>Usuwanie identyfikatorów firmy
+## <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
 
 1. W portalu Intune wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**, następnie opcję **Identyfikatory urządzeń firmowych** i przycisk **Usuń**.
 
