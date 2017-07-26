@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/27/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fda224613d8b69be82ef7f9681ba9165be33e52
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b08a097e785f85d8b9260cdaa60e720ed88cb4a1
+ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -107,7 +107,11 @@ Więcej informacji znajduje się w artykule [Co to jest zgodność urządzeń](d
 <!-- ## Enrollment -->
 
 
-<!-- ## Data protection -->
+## <a name="data-protection"></a>Ochrona danych
+
+### <a name="ios-app-protection-policies"></a>Zasady ochrony aplikacji systemu iOS
+
+Możesz zdefiniować [zasady ochrony aplikacji systemu iOS](app-protection-policy-settings-ios.md) dostępne dla użytkowników na urządzeniach zarządzanych za pomocą funkcji zarządzania aplikacjami mobilnymi bez rejestracji. Ze względu na tymczasowy błąd można te zasady definiować dla wersji systemu iOS z jednym miejscem dziesiętnym, a nie wieloma miejscami dziesiętnymi. Zamiast ustawiać minimalną wersję systemu iOS na 10.3.1, ustaw ją na system iOS 10.3. Ten problem zostanie rozwiązany w przyszłej aktualizacji zestawu iOS SDK.
 
 
 ## <a name="administration-and-accounts"></a>Administracja i konta

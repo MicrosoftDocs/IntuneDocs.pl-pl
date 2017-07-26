@@ -6,19 +6,19 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: ae42ab64945982fedc2d6858e2f3eca8fbed334c
-ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
+ms.custom: 
+ms.openlocfilehash: a51b3c59d922b0c150073017222dca0c90c5b7a0
+ms.sourcegitcommit: 36ae73f59ff5e9fdfe4f930ad0aa4b7795fe11f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
@@ -28,13 +28,10 @@ ms.lasthandoff: 07/10/2017
 Usługa Microsoft Intune jest obecnie dostępna w witrynie Azure Portal, co oznacza, że przepływy pracy i funkcje, które były dotychczas używane, zmieniły się.
 Azure Portal oferuje nowe i zaktualizowane funkcje. W witrynie tej można zarządzać urządzeniami mobilnymi, komputerami i aplikacjami w organizacji.
 
-> [!IMPORTANT]
-> **Nie widzisz jeszcze nowego portalu?**<br>
-> Istniejący dzierżawcy są aktualnie migrowani do nowego środowiska. Przed migracją dzierżawcy zostaje wyświetlone powiadomienie w Office Message Center.
->
-> Konta usługi Intune utworzone przed styczniem 2017 r. będą wymagać przeprowadzenia jednorazowej migracji, zanim przepływy pracy procesu Rejestracja Apple będą dostępne na platformie Azure. Harmonogram migracji nie został jeszcze ogłoszony. Jeśli istniejące konto nie ma dostępu do witryny Azure Portal, zaleca się utworzenie konta w wersji próbnej.
->
-> Sprawdź listę potencjalnych elementów blokujących https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+* [Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?](ui-changes.md) to artykuł, w którym można znaleźć opis określonych przepływów pracy i interfejsów użytkownika, które zmieniły się wraz z przejściem na platformę Azure.
+* [Klasyczne grupy usługi Intune w witrynie Azure Portal](groups-get-started.md) to artykuł, w którym opisano wpływ przejścia do grup zabezpieczeń usługi Azure Active Directory na potrzeby zarządzania grupami.
+
+
 
 
 Informacje dotyczące nowego portalu można znaleźć w tej bibliotece i są one na bieżąco aktualizowane. Jeśli masz sugestie dotyczące tego, co powinno się tu znaleźć, dodaj swoją opinię w komentarzach do tematu. Chętnie poznamy Twoje zdanie.
@@ -47,7 +44,14 @@ Do najważniejszych elementów nowego środowiska należą:
 - Grupy usługi Azure Active Directory (AD) w celu zapewnienia zgodności wszystkich aplikacji Azure
 - Obsługa większości nowoczesnych przeglądarek sieci Web
 
-Jeśli szukasz dokumentacji klasycznej konsoli usługi Intune, zobacz [bibliotekę dokumentacji usługi Intune](https://docs.microsoft.com/intune-classic/).
+> [!IMPORTANT]
+> **Nie widzisz jeszcze nowego portalu?**<br>
+> Istniejący dzierżawcy są aktualnie migrowani do nowego środowiska. Przed migracją dzierżawcy zostaje wyświetlone powiadomienie w Office Message Center.
+>
+> Konta usługi Intune utworzone przed styczniem 2017 r. będą wymagać przeprowadzenia jednorazowej migracji, zanim przepływy pracy procesu Rejestracja Apple będą dostępne na platformie Azure. Harmonogram migracji nie został jeszcze ogłoszony. Jeśli istniejące konto nie ma dostępu do witryny Azure Portal, zaleca się utworzenie konta w wersji próbnej.
+>
+> Sprawdź listę potencjalnych elementów blokujących https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 

@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 2720cf6f1c5d6b71966c4b4987734cc40dca8aa9
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
@@ -43,11 +43,11 @@ Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie ins
 
   ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
 
-2.  Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
+2. Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
 
-Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
+  Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
 
-3.  Wyodrębnij zawartość pakietu instalacyjnego w bezpiecznej lokalizacji w sieci.
+3. Wyodrębnij zawartość pakietu instalacyjnego w bezpiecznej lokalizacji w sieci.
 
     > [!IMPORTANT]
     > Nie zmieniaj nazwy wyodrębnionego pliku **ACCOUNTCERT** ani nie usuwaj go, ponieważ spowoduje to niepowodzenie instalacji oprogramowania klienckiego.
@@ -198,13 +198,10 @@ W wierszu polecenia z podwyższonym poziomem uprawnień uruchom jedno z następu
 
 **Metoda 1**:
 
-    ```
     "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
-    ```
 
 **Metoda 2**<br>Należy pamiętać, że wszyscy ci agenci są zainstalowani w każdej jednostce magazynowej systemu Windows:
 
-    ```
     wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall<br>
     wmic product where name="Microsoft Intune Notification Service" call uninstall<br>
     wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall<br>
@@ -237,7 +234,6 @@ W wierszu polecenia z podwyższonym poziomem uprawnień uruchom jedno z następu
     wmic product where name="Windows Online Management Update Manager" call uninstall<br>
     wmic product where name="Windows Online Management Agent Installer" call uninstall<br>
     wmic product where name="Windows Intune" call uninstall
-    ```
 
 > [!TIP]
 > Wyrejestrowanie klienta pozostawi stary rekord po stronie serwera dla klienta, którego to dotyczy. Proces wyrejestrowania jest asynchroniczny i istnieje dziewięciu agentów do odinstalowania, więc operacja może potrwać do 30 minut.
@@ -255,10 +251,8 @@ Sprawdź folder „%ProgramFiles%\Microsoft\OnlineManagement” i upewnij się, 
 
 Operacja wyrejestrowania nie usuwa folderu OnlineManagement. Odczekaj 30 minut po odinstalowaniu, a następnie uruchom to polecenie. Jeśli zostanie ono uruchomione zbyt szybko, odinstalowanie może pozostać w nieznanym stanie. Aby usunąć folder, uruchom wiersz polecenia z podwyższonym poziomem uprawnień:
 
-    ```
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
-    ```
 
-### <a name="see-also"></a>Zobacz także
+### <a name="next-steps"></a>Następne kroki
 [Zarządzanie komputerami z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Rozwiązywanie problemów z instalacją klienta](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
