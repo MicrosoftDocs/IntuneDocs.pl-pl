@@ -14,11 +14,11 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f5af3aefe814a52ae3b43a894242ac972e0cc8fc
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 531112301d0c3827ec7eb3ab4087218caa331b90
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="intune-network-bandwidth-use"></a>Wykorzystanie przepustowości sieci przez usługę Intune
 
@@ -30,7 +30,7 @@ Niniejsze wskazówki pomagają administratorom usługi Intune poznać wymagania 
 W tej tabeli przedstawiono częstotliwość przesyłania przez sieć typowych danych dla poszczególnych klientów oraz przybliżone ilości tych danych.
 
 > [!NOTE]
-> Komputery i urządzenia przenośne muszą co jakiś czas nawiązywać połączenie z Internetem, aby otrzymywać niezbędne aktualizacje i zawartość z usługi Intune. Czas potrzebny na pobranie aktualizacji lub zawartości jest różny, ale należy przyjąć, że urządzenia powinny być połączone z Internetem przez co najmniej godzinę każdego dnia.
+> Aby zapewnić, że urządzenia będą otrzymywać aktualizacje i zawartość z usługi Intune, należy okresowo łączyć je z Internetem. Czas wymagany do pobrania aktualizacji lub zawartości jest różny, ale urządzenia powinny być połączone z Internetem przez co najmniej godzinę każdego dnia.
 
 |Typ zawartości|Przybliżony rozmiar|Częstotliwość i szczegóły|
 |----------------|--------------------|-------------------------|
@@ -51,9 +51,9 @@ W tej tabeli przedstawiono częstotliwość przesyłania przez sieć typowych da
 Przy użyciu jednej lub kilku poniższych metod można zmniejszyć użycie przepustowości sieci dla klientów usługi Intune.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Używanie serwera proxy w celu buforowania żądań zawartości
-Za pomocą serwera proxy umożliwiającego buforowanie zawartości można ograniczyć zduplikowane operacje pobierania plików. Pozwoli to na zmniejszenie obciążenia przepustowości sieci generowanego przez klientów, którzy wysyłają żądania pobrania zawartości z Internetu.
+Serwer proxy umożliwia buforowanie zawartości w celu ograniczenia zduplikowanych operacji pobierania plików i zmniejszenia obciążenia przepustowości sieci związanego z zawartością z Internetu.
 
-Serwer proxy pamięci podręcznej odbiera żądania zawartości od komputerów klienckich w sieci, pobiera tę zawartość z Internetu, a następnie buforuje zarówno odpowiedzi HTTP, jak i pobierane pliki binarne. Buforowane informacje są używane do obsługi kolejnych żądań wysyłanych z komputerów klienckich usługi Intune.
+Serwer proxy pamięci podręcznej, który odbiera żądania zawartości od klientów, może pobierać tę zawartość i buforować odpowiedzi i pliki do pobrania z Internetu. Serwer używa buforowanych danych do obsługi kolejnych żądań od klientów.
 
 Poniżej przedstawiono typowe ustawienia serwera proxy, który buforuje zawartość dla klientów usługi Intune.
 
@@ -70,7 +70,7 @@ Usługa Intune obsługuje korzystanie z Usługi inteligentnego transferu w tle (
 Więcej informacji na temat korzystania z usługi BITS na komputerach z systemem Windows można znaleźć w artykule [Usługa inteligentnego transferu w tle (BITS)](http://technet.microsoft.com/library/bb968799.aspx) dostępnym w bibliotece TechNet.
 
 ### <a name="use-branchcache-on-computers"></a>Korzystanie z usługi BranchCache na komputerach
-Klienci usługi Intune mogą używać usługi BranchCache w celu zmniejszenia ruchu w sieci rozległej (WAN). Usługa BranchCache jest obsługiwana w następujących systemach operacyjnych komputerów klienckich:
+Klienci usługi Intune mogą używać usługi BranchCache w celu zmniejszenia ruchu w sieci rozległej (WAN). Usługa BranchCache jest obsługiwana w następujących systemach operacyjnych:
 
 - Windows 7
 - Windows 8.0
@@ -79,22 +79,26 @@ Klienci usługi Intune mogą używać usługi BranchCache w celu zmniejszenia ru
 
 Aby można było korzystać z usługi BranchCache, musi być ona włączona na komputerze klienckim, który musi być skonfigurowany pod kątem **trybu rozproszonej pamięci podręcznej**.
 
-Po zainstalowaniu na komputerze klienta usługi Intune usługa BranchCache i tryb rozproszonej pamięci podręcznej są domyślnie włączone. Jednak jeśli zasady grupy na komputerze klienckim wyłączają usługę BranchCache, nie zostaną one przesłonięte przez usługę Intune i usługa BranchCache pozostanie wyłączona na tym komputerze.
+Po zainstalowaniu na komputerach klienta usługi Intune usługa BranchCache i tryb rozproszonej pamięci podręcznej są domyślnie włączone. Jednak jeśli zasady grupy spowodowały wyłączenie usługi BranchCache, usługa Intune nie zastępuje tej zasady i usługa BranchCache pozostaje wyłączona.
 
-Jeśli chcesz używać usługi BranchCache, musisz skontaktować się z innymi administratorami w organizacji, którzy zarządzają zasadami grupy i zasadami zapory usługi Intune, aby zapobiec wdrażaniu przez nich zasad, które powodują wyłączenie usługi BranchCache lub wyjątków zapory. Aby uzyskać więcej informacji dotyczących usługi BranchCache, zobacz [Omówienie usługi BranchCache](http://technet.microsoft.com/library/hh831696.aspx).
+Jeśli chcesz używać usługi BranchCache, musisz skontaktować się z innymi administratorami w organizacji, aby zarządzać zasadami grupy i zasadami zapory usługi Intune. Upewnij się, że nie wdrażają oni zasad, które powodują wyłączenie wyjątków usługi BranchCache lub zapory. Aby uzyskać więcej informacji dotyczących usługi BranchCache, zobacz [Omówienie usługi BranchCache](http://technet.microsoft.com/library/hh831696.aspx).
 
 ## <a name="network-communication-requirements"></a>Wymagania dotyczące komunikacji sieciowej
 
-Należy włączyć komunikację sieciową między urządzeniami zarządzanymi i używanymi do zarządzania subskrypcją usługi Intune oraz witrynami sieci Web wymaganymi dla usług w chmurze.
+Włącz komunikację sieciową między urządzeniami zarządzanymi i witrynami internetowymi wymaganymi dla usług w chmurze.
 
 Usługa Intune nie korzysta z infrastruktury lokalnej, takiej jak serwery z oprogramowaniem usługi Intune, ale można używać takiej infrastruktury, w tym narzędzi do synchronizowania programu Exchange i usługi Active Directory.
 
-Aby zarządzać komputerami, które znajdują się za zaporami i serwerami proxy, należy skonfigurować zapory i serwery proxy w celu zezwalania na komunikację z usługą Intune. Aby zarządzać komputerami, które znajdują się za serwerem proxy:
+Aby zarządzać komputerami za zaporami i serwerami proxy, należy włączyć komunikację na potrzeby usługi Intune.
 
 -   Serwer proxy musi obsługiwać zarówno protokół **HTTP (80)**, jak i **HTTPS (443)**, ponieważ klienci usługi Intune używają obu tych protokołów.
--   Usługa Intune wymaga nieautoryzowanego dostępu serwera proxy do witryny manage.microsoft.com w celu wykonywania pewnych operacji, takich jak pobieranie oprogramowania i aktualizacji
+-   Usługa Intune wymaga nieautoryzowanego dostępu serwera proxy do witryny manage.microsoft.com w celu wykonywania pewnych zadań, takich jak pobieranie oprogramowania i aktualizacji
 
 Można zmodyfikować ustawienia serwerów proxy na poszczególnych komputerach klienckich albo użyć zasad grupy w celu zmiany ustawień dla wszystkich komputerów klienckich znajdujących się za określonym serwerem proxy.
+
+
+<!--
+> [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Zarządzane urządzenia wymagają zastosowania takiej konfiguracji, aby grupa **Wszyscy użytkownicy** miała dostęp do usług za pośrednictwem zapór.
 

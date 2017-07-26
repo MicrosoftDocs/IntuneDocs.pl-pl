@@ -1,7 +1,7 @@
 ---
-title: "Tworzenie konta w celu korzystania z 30-dniowej bezpłatnej wersji próbnej"
-titleSuffix: Intune on Azure
-description: "Jak utworzyć konto w celu korzystania z usługi Intune na platformie Azure."
+title: "Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune"
+titleSuffix: 
+description: "Jak zarejestrować się w 30-dniowej bezpłatnej wersji próbnej usługi Intune”."
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -13,22 +13,22 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: 7dafdb974dd975eaa7f3268119de6c047c50f858
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/18/2017
 ---
-# <a name="sign-up-for-a-microsoft-intune-free-trial-for-the-azure-portal"></a>Tworzenie konta w celu korzystania z bezpłatnej wersji próbnej usługi Microsoft Intune w witrynie Azure Portal
+# <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Rejestrowanie w celu skorzystania z bezpłatnej wersji próbnej usługi Microsoft Intune
 
 
 W tym artykule opisano kolejne kroki tworzenia konta w celu korzystania z wersji próbnej autonomicznej usługi Intune w witrynie Azure Portal.
 
 1. Odwiedź stronę [Rejestracja w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) i wypełnij formularz rejestracji, aby zamówić subskrypcję wersji próbnej.
-account-sign-up.md
+* Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](/intune/account-sign-up).
 
-  Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych, możesz wybrać odpowiednie ustawienia regionalne w obszarze **Where's your company located?** (Gdzie znajduje się Twoja firma?).
+* Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych, możesz wybrać odpowiednie ustawienia regionalne w obszarze **Where's your company located?** (Gdzie znajduje się Twoja firma?).
 
 2. Pod koniec procesu rejestracji zostanie wyświetlony komunikat z informacjami o nowym koncie. <br/> ![Obraz przedstawiający informacje o koncie](./media/2-end-of-sign-up-process.png) <br/>Jeśli na tym etapie klikniesz pozycję **You're ready to go** (Możemy zaczynać), nastąpi przekierowanie do Centrum administracyjnego usługi Office 365, gdzie można dodać użytkowników do środowiska testowego. <br/><br/>Jeśli jednak chcesz przejść bezpośrednio do witryny Intune Azure Portal, otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com**. Nastąpi przekierowanie do strony logowania platformy Azure, gdzie możesz się zalogować przy użyciu otrzymanych poświadczeń. Używaj tego adresu za każdym razem, gdy chcesz zalogować się do wersji próbnej usługi Intune. <br/> ![Obraz przedstawiający stronę logowania portalu Azure Portal](./media/azure-portal-signin.png)
 
@@ -70,8 +70,6 @@ Aby wrócić z usługi Intune do Centrum administracyjnego usługi Office 365, w
 
 ### <a name="intune-on-azure"></a>Usługa Intune na platformie Azure
 Dowiedz się więcej na temat [usługi Intune w witrynie Azure Portal](what-is-intune.md)
-### <a name="classic-intune"></a>Klasyczny portal usługi Intune
-Scenariusz oceny: [Ocena zarządzania urządzeniami przenośnymi za pomocą usługi Microsoft Intune](https://docs.microsoft.com/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune)
 
 ### <a name="integration-with-other-products"></a>Integracja z innymi produktami
 Dowiedz się więcej o korzystaniu z kont użytkowników usługi Azure Active Directory za pomocą usługi Intune:

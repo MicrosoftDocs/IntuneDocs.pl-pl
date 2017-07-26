@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 07/06/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 299e2ed0a84c7158a582ee874f0711eb3c379532
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune
 
@@ -121,6 +121,17 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 Zostanie wyświetlony monit o hasła **KeyStorePassword** i **KeyPassword**. Wprowadź poświadczenia użyte do utworzenia pliku magazynu kluczy.
 
 Opakowana aplikacja zostanie wygenerowana i zapisana wraz z plikiem dziennika w określonej ścieżce danych wyjściowych.
+
+## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji
+System Android wymaga podpisania wszystkich aplikacji za pomocą ważnego certyfikatu przed zainstalowaniem ich na urządzeniach z systemem Android.
+
+Opakowane aplikacje mogą zostać podpisane podczas procesu opakowywania lub *po* tym procesie przy użyciu istniejących narzędzi do podpisywania. Wszystkie informacje dotyczące podpisywania znajdujące się w aplikacji przed jej opakowaniem zostaną odrzucone.
+ 
+Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyczących podpisywania, które zostały wcześniej użyte podczas procesu kompilacji. W niektórych organizacjach może to wymagać współpracy z właścicielami informacji o magazynie kluczy (tj. zespołem zajmującym się kompilacją aplikacji). 
+
+Jeśli poprzedni certyfikat podpisywania nie może zostać użyty lub aplikacja nie została wcześniej wdrożona, możliwe jest utworzenie nowego certyfikatu podpisywania, zgodnie z instrukcjami znajdującymi się w [przewodniku dewelopera systemu Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
+
+Jeśli aplikacja została wcześniej wdrożona za pomocą innego certyfikatu podpisywania, nie można przekazać jej do konsoli usługi Intune po uaktualnieniu. Scenariusze uaktualniania aplikacji nie będą miały zastosowania, jeśli aplikacja została podpisana za pomocą innego certyfikatu niż ten, który został użyty podczas jej kompilacji. W związku z tym wszelkie nowe certyfikaty podpisywania powinny zostać zachowane na potrzeby uaktualnień aplikacji. 
 
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje
 Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków opartych na podniesieniu uprawnień:
