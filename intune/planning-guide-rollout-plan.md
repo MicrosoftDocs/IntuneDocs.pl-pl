@@ -20,13 +20,11 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/11/2017
 ---
-# Opracowywanie planu wdrażania
-<a id="develop-a-rollout-plan" class="xliff"></a>
+# <a name="develop-a-rollout-plan"></a>Opracowywanie planu wdrażania
 
 Plan wdrożenia identyfikuje grupy organizacyjne, które mają zostać przeznaczone do wdrożenia w usłudze Intune, harmonogramy wdrożenia dla każdej grupy oraz metody rejestracji, które zostaną użyte.
 
-## Docelowe grupy i harmonogramy
-<a id="targeted-groups-and-timeframes" class="xliff"></a>
+## <a name="targeted-groups-and-timeframes"></a>Docelowe grupy i harmonogramy
 
 Najpierw przejrzyj grupy, które zostały przeznaczone do wdrożenia w usłudze Intune i zidentyfikowane w [scenariuszach przypadków użycia](planning-guide-scenarios.md).
 
@@ -38,20 +36,17 @@ Następnie określ harmonogramy dla wszystkich grup docelowych. Zadanie to zwykl
 * Położenie geograficzne
 * Ryzyko biznesowe
 
-## Etapy wdrażania
-<a id="rollout-phases" class="xliff"></a>
+## <a name="rollout-phases"></a>Etapy wdrażania
 Organizacje często decydują się rozpocząć wdrożenie usługi Intune od projektu pilotażowego skierowanego do małej grupy użytkowników w dziale IT. Projekt pilotażowy można następnie tak rozszerzyć, aby objął większą grupę użytkowników z działu IT oraz członków innych grup organizacyjnych.
 
-### Pilotaż
-<a id="pilot" class="xliff"></a>
+### <a name="pilot"></a>Pilotaż
 Pierwsza faza wdrożenia powinna dotyczyć użytkowników pilotażowych. Użytkownicy pilotażowi powinni mieć świadomość tego, że są pierwszymi użytkownikami korzystającymi z nowego rozwiązania. Powinni wyrazić chęć przekazywania opinii w celu poprawienia konfiguracji, dokumentacji i powiadomień, co ułatwi pracę wszystkim innym użytkownikom w późniejszych fazach wdrożenia. Tymi użytkownikami nie powinno być kierownictwo ani osoby VIP.
 
 Projekt pilotażowy to doskonała okazja do przetestowania [wyzwań](planning-guide-deployment-goals.md) oraz dostosowania zebranych wcześniej [wymagań](planning-guide-requirements.md).
 
 Uwzględnij plan [komunikacji](planning-guide-communication-plan.md), plan [pomocy technicznej](planning-guide-support-plan.md) oraz [testowanie i weryfikację](planning-guide-test-validation.md) w celu rozwiązania wszelkich problemów, póki wpływ na użytkowników jest wciąż niewielki.
 
-### Wdrożenie produkcyjne
-<a id="production-rollout" class="xliff"></a>
+### <a name="production-rollout"></a>Wdrożenie produkcyjne
 Po ukończeniu projektu pilotażowego można rozpocząć pełne wdrożenie produkcyjne przeznaczone dla pozostałych grup w organizacji. Niektóre przykłady różnych grup i faz wdrożenia:
 
 -   **Działy** <br/>Dla każdego działu może zostać przeprowadzona osobna faza wdrożenia. Proces obejmuje cały dział. W tym typie wdrożenia użytkownicy z każdego działu zwykle używają urządzenia mobilnego w taki sam sposób i będą uzyskiwać dostęp do tych samych aplikacji. Użytkownicy będą mieli prawdopodobnie te same typy zasad.
@@ -71,26 +66,22 @@ Oto przykład planu wdrożenia usługi Intune, który obejmuje grupy docelowe i 
 | Faza 3 wdrożenia produkcyjnego |  |  |  | Kadry (50 użytkowników), księgowość (40 użytkowników), kierownictwo (30 użytkowników) |
 
 Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), aby wprowadzić fazy wdrożenia swojej organizacji.
-## Dopasowanie grup wdrożenia do metod rejestracji
-<a id="match-rollout-groups-to-enrollment-approaches" class="xliff"></a>
+## <a name="match-rollout-groups-to-enrollment-approaches"></a>Dopasowanie grup wdrożenia do metod rejestracji
 
 Po określeniu grup docelowych i harmonogramów wdrożenia usługi Intune następnym krokiem jest wybranie najbardziej odpowiedniej metody wdrożenia usługi Intune dla każdej grupy. Można użyć różnych metod rejestracji:
 * Samoobsługa użytkowników
 * Asystowana rejestracja użytkowników
 * Podejście techniczne
 
-### Samoobsługa użytkowników
-<a id="user-self-service" class="xliff"></a>
+### <a name="user-self-service"></a>Samoobsługa użytkowników
 
 W tym przypadku użytkownik jest odpowiedzialny za zarejestrowanie własnego urządzenia — zazwyczaj postępując zgodnie z instrukcjami rejestracji dostarczonymi przez jego organizację IT. Ta metoda jest najczęściej stosowana w organizacjach i jest bardziej skalowalna niż asystowana rejestracja użytkowników.
 
-### Rejestracja przy pomocy użytkownika
-<a id="user-assisted-enrollment" class="xliff"></a>
+### <a name="user-assisted-enrollment"></a>Rejestracja przy pomocy użytkownika
 
 Nazywamy ją metodą dokładną. Członek zespołu IT pomaga użytkownikowi w procesie rejestracji, osobiście lub za pośrednictwem programu Skype. Ta metoda jest często stosowana w przypadku kadry kierowniczej i innych grup, które mogą wymagać większej pomocy podczas procesu rejestracji.
 
-### Podejście techniczne
-<a id="it-tech-fair" class="xliff"></a>
+### <a name="it-tech-fair"></a>Podejście techniczne
 
 Inną opcja rejestracji użytkowników w usłudze Intune jest wykorzystanie podejścia technicznego. W takim przypadku grupa IT utworzy punkt asysty rejestrowania w usłudze Intune, gdzie użytkownicy będą mogli uzyskiwać informacje dotyczące rejestracji w usłudze Intune, zadawać pytania i uzyskiwać pomoc dotyczącą procesu rejestracji. Użycie tej opcji może być korzystne zarówno dla grupy pracowników IT, jak i użytkowników — szczególnie podczas wczesnych faz wdrażania usługi Intune.
 
@@ -111,7 +102,6 @@ Oto zaktualizowany przykład powyższego planu wdrożenia usługi Intune obejmuj
 | Samoobsługa |  |  |  | Kadry, księgowość |
 | Dokładny |  |  |  | Kierownictwo |
 
-## Następne kroki
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Następne kroki
 
 W następnej sekcji zawarto wskazówki dotyczące [opracowywania planu komunikacji związanego z wdrożeniem usługi Intune](planning-guide-communication-plan.md).

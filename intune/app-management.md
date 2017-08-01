@@ -21,8 +21,7 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/12/2017
 ---
-# Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
-<a id="what-is-microsoft-intune-app-management" class="xliff"></a>
+# <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,8 +36,7 @@ Na dodatek możesz też przypisywać aplikacje na urządzeniach niezarejestrowan
 
 Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach.
 
-## Możliwości zarządzania aplikacjami według platformy
-<a id="app-management-capabilities-by-platform" class="xliff"></a>
+## <a name="app-management-capabilities-by-platform"></a>Możliwości zarządzania aplikacjami według platformy
 
 ||||||
 |-|-|-|-|-|
@@ -62,8 +60,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 <sup>2</sup>Dotyczy urządzeń zarządzanych tylko przez usługę Intune.
 
-## Wprowadzenie
-<a id="how-to-get-started" class="xliff"></a>
+## <a name="how-to-get-started"></a>Wprowadzenie
 
 Większość elementów powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
 
@@ -73,8 +70,7 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
 
-### Zarządzanie programem Endpoint Protection usługi
-<a id="manage" class="xliff"></a>
+### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
 - **Aplikacje** — ten węzeł to miejsce, w którym będziesz dodawać, przypisywać i monitorować większość swoich aplikacji.
     - [Dodawanie aplikacji](apps-add.md)
     - [Przypisywanie aplikacji](apps-deploy.md)
@@ -89,8 +85,7 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 - **Profile aprowizacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
     - [Profile aprowizowania aplikacji dla systemu iOS](app-provisioning-profile-ios.md)
 
-### Monitor
-<a id="monitor" class="xliff"></a>
+### <a name="monitor"></a>Monitor
 - **Licencjonowane aplikacje** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
 - **Wykryte aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
@@ -99,8 +94,7 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
 Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](apps-monitor.md)
 
-### Setup
-<a id="setup" class="xliff"></a>
+### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
 - **Sklep Windows dla firm** — umożliwia skonfigurowanie integracji ze Sklepem Windows dla firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
