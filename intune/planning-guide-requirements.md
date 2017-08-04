@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/11/2017
 ---
-# Określanie wymagań scenariusza przypadku użycia
-<a id="determine-use-case-scenario-requirements" class="xliff"></a>
+# <a name="determine-use-case-scenario-requirements"></a>Określanie wymagań scenariusza przypadku użycia
 
 W tej sekcji określisz wymagania dla każdej grupy organizacyjnej w ramach poszczególnych scenariuszy przypadków użycia. Ten proces ułatwi Ci lepsze przygotowanie innych obszarów planowania wdrożenia usługi Intune, takich jak architektura i projektowanie, dołączanie oraz wdrażanie. Może się on również okazać pomocny w zidentyfikowaniu potencjalnych luk i wyzwań powiązanych z projektem wdrożenia usługi Intune.
 
@@ -42,8 +41,7 @@ Oto kilka przykładów wymagań dotyczących przypadków użycia w organizacji z
 Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), aby wprowadzić wymagania przypadków użycia i podrzędnych przypadków użycia w Twojej organizacji.
 
 
-## Przykładowe wymagania
-<a id="examples-of-requirements" class="xliff"></a>
+## <a name="examples-of-requirements"></a>Przykładowe wymagania
 
 Oto kilka dodatkowych przykładowych elementów, których można użyć w kolumnie „Wymagania”:
 
@@ -64,7 +62,6 @@ Oto kilka dodatkowych przykładowych elementów, których można użyć w kolumn
     - Usługa Office 365 z zasadami ochrony aplikacji
     - Aplikacje biznesowe z zasadami ochrony aplikacji
 
-## Następne kroki
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Następne kroki
 
 W następnej sekcji zawarto wskazówki dotyczące [opracowywania planu wdrożenia usługi Intune](planning-guide-rollout-plan.md).

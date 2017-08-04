@@ -14,11 +14,11 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fdd75bd2b96eb20e0e73b7f8f76cf1a5cc035011
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3f08f110163159c1219492539107cc6b33c8012d
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -189,7 +189,7 @@ Omówmy teraz te zagadnienia w bardziej szczegółowy sposób.
 
 W momencie tworzenia projektu należy wiedzieć, jakie urządzenia będą znajdować się w środowisku, a następnie zweryfikować, czy są one obsługiwane przez usługę Intune. Usługa Intune obsługuje platformy iOS, Android i Windows.
 
--   Dowiedz się więcej na temat [urządzeń obsługiwanych przez usługę Intune](/intune-classic/get-started/supported-mobile-devices-and-computers).
+-   Dowiedz się więcej na temat [urządzeń obsługiwanych przez usługę Intune](/intune/supported-devices-browsers).
 
 ### <a name="devices"></a>Urządzenia
 
