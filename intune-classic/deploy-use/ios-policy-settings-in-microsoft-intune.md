@@ -20,15 +20,13 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/12/2017
 ---
-# Ustawienia zasad systemu iOS w usłudze Microsoft Intune
-<a id="ios-policy-settings-in-microsoft-intune" class="xliff"></a>
+# <a name="ios-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu iOS w usłudze Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem iOS. Ponadto przy użyciu narzędzia Apple Configurator można utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
 
-## Ustawienia ogólnych zasad konfiguracji
-<a id="general-configuration-policy-settings" class="xliff"></a>
+## <a name="general-configuration-policy-settings"></a>Ustawienia ogólnych zasad konfiguracji
 
 **Ogólne zasady konfiguracji systemu iOS** w usłudze Microsoft Intune umożliwiają konfigurację następujących ustawień:
 
@@ -43,8 +41,7 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 
 Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć za pomocą niestandardowych zasad systemu iOS, które umożliwiają importowanie ustawień utworzonych za pomocą narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Aby uzyskać więcej informacji, zobacz „Ustawienia zasad niestandardowych” w dalszej części tego tematu.
 
-### Ustawienia zabezpieczeń
-<a id="security-settings" class="xliff"></a>
+### <a name="security-settings"></a>Ustawienia zabezpieczeń
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -63,8 +60,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Liczba minut braku aktywności przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła** są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
-### Ustawienia systemowe
-<a id="system-settings" class="xliff"></a>
+### <a name="system-settings"></a>Ustawienia systemowe
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -77,8 +73,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na przesyłanie danych diagnostycznych**|Zezwala lub blokuje możliwość przesyłania danych diagnostycznych z urządzenia do firmy Apple.|
 |**Zezwalaj na używanie aplikacji Passbook po zablokowaniu**|Zezwalaj użytkownikowi na dostęp do aplikacji Passbook, gdy urządzenie jest zablokowane.|
 
-### Ustawienia chmury dotyczące dokumentów i danych
-<a id="cloud-settings-for-documents-and-data" class="xliff"></a>
+### <a name="cloud-settings-for-documents-and-data"></a>Ustawienia chmury dotyczące dokumentów i danych
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -92,8 +87,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na udostępnianie zdjęć w usłudze iCloud**|Ustaw opcję **Nie**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.|
 |**Zezwalaj na Bibliotekę zdjęć iCloud**|Ustawienie opcji **Nie** powoduje wyłączenie korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.   W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.|
 
-### Ustawienia aplikacji dotyczące przeglądarki
-<a id="application-settings-for-the-browser" class="xliff"></a>
+### <a name="application-settings-for-the-browser"></a>Ustawienia aplikacji dotyczące przeglądarki
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -105,8 +99,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na używanie skryptów języka Java**|Zezwalaj na uruchamianie skryptów Java w przeglądarce.|
 |**Zezwalaj na ostrzeganie o oszustwach**|Zezwalaj na ostrzeżenia o oszustwie w przeglądarce.|
 
-### Ustawienia aplikacji dotyczące aplikacji
-<a id="application-settings-for-apps" class="xliff"></a>
+### <a name="application-settings-for-apps"></a>Ustawienia aplikacji dotyczące aplikacji
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -120,8 +113,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj użytkownikowi na ufanie autorom nowych aplikacji dla przedsiębiorstw**|Umożliwia użytkownikowi wybranie ufania aplikacjom, które nie zostały pobrane ze sklepu z aplikacjami.|
 
 
-### Ustawienia aplikacji dotyczące gier
-<a id="application-settings-for-games" class="xliff"></a>
+### <a name="application-settings-for-games"></a>Ustawienia aplikacji dotyczące gier
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -129,8 +121,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na dodawanie znajomych do usługi Game Center**|Zezwalaj użytkownikowi na dodawanie przyjaciół w Centrum gier.|
 |**Zezwalaj na gry dla wielu graczy**|Zezwalaj użytkownikowi na gry dla wielu graczy w urządzeniu.|
 
-### Ustawienia aplikacji dotyczące zawartości multimedialnej
-<a id="application-settings-for-media-content" class="xliff"></a>
+### <a name="application-settings-for-media-content"></a>Ustawienia aplikacji dotyczące zawartości multimedialnej
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -140,8 +131,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj użytkownikom na pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**|Zezwalaj użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.|
 
 
-### Ustawienia możliwości urządzenia dotyczące sprzętu
-<a id="device-capabilities-settings-for-hardware" class="xliff"></a>
+### <a name="device-capabilities-settings-for-hardware"></a>Ustawienia możliwości urządzenia dotyczące sprzętu
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -150,8 +140,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Wymuszaj wykrywanie nadgarstka dla sparowanych zegarków Apple Watch**|Po włączeniu tego ustawienia Apple Watch nie będzie wyświetlać powiadomień, kiedy nie znajduje się na nadgarstku użytkownika.|
 |**Wymagaj hasła parowania dla wychodzących żądań funkcji AirPlay**|Wymagaj hasła parowania, gdy użytkownik używa funkcji AirPlay do strumieniowego przesyłania zawartości do innych urządzeń firmy Apple.|
 
-### Ustawienia możliwości urządzenia dotyczące połączeń komórkowych
-<a id="device-capabilities-settings-for-cellular" class="xliff"></a>
+### <a name="device-capabilities-settings-for-cellular"></a>Ustawienia możliwości urządzenia dotyczące połączeń komórkowych
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -160,8 +149,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Zezwalaj na roaming danych**|Zezwalaj na roaming danych, gdy urządzenie korzysta z sieci komórkowej.|
 |**Zezwalaj na pobieranie danych globalnych w tle po włączeniu roamingu**|Zezwalaj urządzeniu na pobieranie danych, np. wiadomości e-mail, w roamingu w sieci komórkowej.|
 
-### Ustawienia możliwości urządzenia dotyczące funkcji
-<a id="device-capabilities-settings-for-features" class="xliff"></a>
+### <a name="device-capabilities-settings-for-features"></a>Ustawienia możliwości urządzenia dotyczące funkcji
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
@@ -172,8 +160,7 @@ Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 |**Nie zezwalaj na użycie funkcji Airdrop z zarządzanych aplikacji**|Uniemożliwia zarządzanym aplikacjom wysyłanie danych za pomocą funkcji Airdrop.|
 
 
-### Ustawienia dotyczące aplikacji zgodnych i niezgodnych
-<a id="settings-for-compliant-and-noncompliant-apps" class="xliff"></a>
+### <a name="settings-for-compliant-and-noncompliant-apps"></a>Ustawienia dotyczące aplikacji zgodnych i niezgodnych
 Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnych aplikacji, korzystając z poniższych informacji.
 
 > [!NOTE]
@@ -190,8 +177,7 @@ Na liście **Zgodne i niezgodne aplikacje** określ listę zgodnych i niezgodnyc
 
 Zasady zawierające ustawienia zgodnych i niezgodnych aplikacji należy wdrażać dla grup użytkowników.
 
-### Ustawienia trybu kiosku
-<a id="kiosk-mode-settings" class="xliff"></a>
+### <a name="kiosk-mode-settings"></a>Ustawienia trybu kiosku
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
@@ -218,20 +204,17 @@ Zasady zawierające ustawienia zgodnych i niezgodnych aplikacji należy wdraża�
 > -   Aby można było skonfigurować tryb kiosku dla urządzenia z systemem iOS, należy najpierw użyć [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) lub [programu Device Enrollment Program firmy Apple](ios-device-enrollment-program-in-microsoft-intune.md) w celu uruchomienia trybu nadzorowanego na tym urządzeniu. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 > -   Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po wdrożeniu zasad konfiguracji, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
-### Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
-<a id="reference-information-for-compliant-and-noncompliant-apps" class="xliff"></a>
+### <a name="reference-information-for-compliant-and-noncompliant-apps"></a>Informacje o odwołaniu dotyczące aplikacji zgodnych i niezgodnych
 
 Użyj **Raportu o niezgodnych aplikacjach** , aby wyświetlić zgodność dozwolonych i blokowanych aplikacji.
 
-##### Aby uruchomić raport o niezgodnych aplikacjach
-<a id="to-run-the-noncompliant-apps-report" class="xliff"></a>
+##### <a name="to-run-the-noncompliant-apps-report"></a>Aby uruchomić raport o niezgodnych aplikacjach
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) kliknij pozycję **Raporty** &gt; **Raport o niezgodnych aplikacjach**.
 
 2.  Wybierz grupy urządzeń, które chcesz sprawdzić, określ, czy sprawdzić aplikacje zgodne, niezgodne czy oba rodzaje, a następnie wybierz pozycję **Wyświetl raport**.
 
-#### Jak określać adresy URL sklepów z aplikacjami
-<a id="how-to-specify-urls-to-app-stores" class="xliff"></a>
+#### <a name="how-to-specify-urls-to-app-stores"></a>Jak określać adresy URL sklepów z aplikacjami
 Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji **Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku** (tylko iOS), użyj następującego formatu:
 
 1. Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz użyć, i otwórz jej stronę.
@@ -243,20 +226,17 @@ Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji
 > [!NOTE]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
 
-### Ustawienia rejestracji
-<a id="enrollment-settings" class="xliff"></a>
+### <a name="enrollment-settings"></a>Ustawienia rejestracji
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
 |**Zezwalaj na blokadę aktywacji, gdy urządzenie jest w trybie nadzorowanym**|Umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.|
 
-### Ustawienia trybu nadzorowanego
-<a id="supervised-mode-settings" class="xliff"></a>
+### <a name="supervised-mode-settings"></a>Ustawienia trybu nadzorowanego
 Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 8.0 lub nowszym, które są w trybie nadzorowanym.
 
-### Ustawienia trybu nadzorowanego dla ograniczeń urządzenia
-<a id="supervised-mode-settings-for-device-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-device-restrictions"></a>Ustawienia trybu nadzorowanego dla ograniczeń urządzenia
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
@@ -272,8 +252,7 @@ Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 8
 |**Zezwalaj na modyfikowanie ustawień powiadomień**|Zezwala użytkownikowi na zmianę ustawień powiadomień urządzenia.|
 |**Zezwalaj na modyfikowanie tapety**|Zezwala użytkownikowi na zmianę tapety urządzenia.|
 
-### Ustawienia trybu nadzorowanego dla ograniczeń funkcji
-<a id="supervised-mode-settings-for-feature-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-feature-restrictions"></a>Ustawienia trybu nadzorowanego dla ograniczeń funkcji
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
@@ -287,8 +266,7 @@ Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 8
 |**Zezwalaj na sprawdzanie pisowni dla klawiatury**|Pozwala na korzystanie z modułu sprawdzania pisowni urządzenia.|
 |**Zezwalaj na skróty klawiaturowe**|Zezwala na używanie skrótów klawiaturowych.|
 
-### Ustawienia trybu nadzorowanego dla ograniczeń aplikacji
-<a id="supervised-mode-settings-for-app-restrictions" class="xliff"></a>
+### <a name="supervised-mode-settings-for-app-restrictions"></a>Ustawienia trybu nadzorowanego dla ograniczeń aplikacji
 
 |Nazwa ustawienia|Szczegóły|
 |----------------|--------------------|
@@ -305,8 +283,7 @@ Następujące ustawienia można skonfigurować na urządzeniach z systemem iOS 8
 |**Zezwalaj na aplikację Game Center**|Zezwala na używanie aplikacji Game Center.|
 
 
-### Pokaż lub ukryj aplikacje
-<a id="show-or-hide-apps" class="xliff"></a>
+### <a name="show-or-hide-apps"></a>Pokaż lub ukryj aplikacje
 
 Użyj **listy ukrytych i pokazanych aplikacji**, aby wykonać następujące działania na nadzorowanych urządzeniach z systemem iOS 9.3 lub nowszym:
 
@@ -314,8 +291,7 @@ Użyj **listy ukrytych i pokazanych aplikacji**, aby wykonać następujące dzia
 - Określić listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
 
 
-#### Jak utworzyć listę pokazanych lub ukrytych aplikacji
-<a id="how-to-create-a-hidden-or-shown-app-list" class="xliff"></a>
+#### <a name="how-to-create-a-hidden-or-shown-app-list"></a>Jak utworzyć listę pokazanych lub ukrytych aplikacji
 
 Określ następujące ustawienia:
 
@@ -329,8 +305,7 @@ Określ następujące ustawienia:
 |**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
 |**Usuwanie**|Usuwa wybraną aplikację z listy.|
 
-#### Informacje o aplikacji dla wbudowanych aplikacji systemu iOS
-<a id="app-information-for-built-in-ios-apps" class="xliff"></a>
+#### <a name="app-information-for-built-in-ios-apps"></a>Informacje o aplikacji dla wbudowanych aplikacji systemu iOS
 
 Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator pakietu dla wbudowanych aplikacji systemu iOS, które można pokazać lub ukryć. Jeśli chcesz pokazać lub ukryć wszystkie aplikacje na liście, możesz skopiować dane poniżej do pliku tekstowego z rozszerzeniem **csv**, a następnie użyć opcji **Importuj aplikacje**, aby zaimportować wszystkie aplikacje jednocześnie.
 
@@ -380,30 +355,26 @@ Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator
 
 
 
-## Ustawienia zasad niestandardowych
-<a id="custom-policy-settings" class="xliff"></a>
+## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych
 
 **Zasady niestandardowe systemu iOS** w usłudze Microsoft Intune umożliwiają wdrażanie ustawień utworzonych przy użyciu [narzędzia Apple Configurator](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) na urządzeniach z systemem iOS. To narzędzie umożliwia tworzenie wielu ustawień do kontroli działania tych urządzeń oraz eksportowanie ich do profilu konfiguracji. Następnie można zaimportować ten profil konfiguracji do zasad niestandardowych systemu iOS w usłudze Intune i wdrożyć ustawienia dla użytkowników oraz urządzeń w swojej organizacji.
 
 Ta funkcja umożliwia wdrażanie ustawień systemu iOS, których nie można skonfigurować przy użyciu ogólnych zasad konfiguracji usługi Intune.
 
-### Wymagania wstępne
-<a id="prerequisites" class="xliff"></a>
+### <a name="prerequisites"></a>Wymagania wstępne
 Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utworzony plik konfiguracji zawierający ustawienia, które mają zostać wdrożone dla użytkowników lub urządzeń. Program Apple Configurator można pobrać ze sklepu [Mac App Store](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12); można tam także znaleźć więcej informacji na jego temat.
 
 > [!NOTE]
 > Usługa Intune nie raportuje zgodności poszczególnych ustawień w zasadach niestandardowych systemu iOS. Jednak ogólna zgodność z zasadami jest raportowana.
 
-### Ustawienia ogólne
-<a id="general-settings" class="xliff"></a>
+### <a name="general-settings"></a>Ustawienia ogólne
 
 |Nazwa ustawienia|Szczegóły|
     |----------------|--------------------|
     |**Nazwa**|Wprowadź unikatową nazwę zasad niestandardowych systemu iOS, co pomoże zidentyfikować je w konsoli usługi Intune.|
     |**Opis**|Podaj opis zawierający omówienie zasad niestandardowych systemu iOS oraz inne istotne informacje ułatwiające ich wyszukanie.|
 
-### Ustawienia niestandardowe
-<a id="custom-settings" class="xliff"></a>
+### <a name="custom-settings"></a>Ustawienia niestandardowe
 
 |Nazwa ustawienia|Szczegóły|
     |----------------|--------------------|
@@ -411,6 +382,5 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 |**Plik profilu konfiguracji**|Wybierz pozycję **Importuj**, a następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web programu [Apple Developer](https://developer.apple.com/).|
     |**Szczegóły profilu konfiguracji**|Wyświetla kod XML zaimportowanego profilu konfiguracji.|
 
-### Zobacz także
-<a id="see-also" class="xliff"></a>
+### <a name="see-also"></a>Zobacz także
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

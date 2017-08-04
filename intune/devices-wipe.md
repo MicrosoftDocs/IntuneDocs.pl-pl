@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 06/06/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2063612ee11d2bc7915ebe4bb28c67854a2599c3
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 44d1695b3f0297276376fb9cb4367c1411aa31b2
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="use-full-or-selective-wipe"></a>Korzystanie z czyszczenia pełnego lub selektywnego
 
@@ -80,8 +80,8 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszcz
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|
 |Agent zarządzania|Profil zarządzania jest usuwany.|
-|Poczta e-mail|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte. Jeśli aplikacja Microsoft Exchange jest zainstalowana lokalnie, profile poczty e-mail i buforowane wiadomości e-mail nie są usuwane.|
-|Outlook|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS zostaną usunięte.</br>Wyjątek: Jeśli aplikacja Exchange jest zainstalowana lokalnie, wiadomości e-mail nie zostaną usunięte.|
+|Poczta e-mail|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|
+|Outlook|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS zostaną usunięte.|
 |Odłączanie usługi Azure Active Directory (AAD)|Rekord usługi AAD zostanie usunięty.|
 |Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
@@ -99,7 +99,7 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszcz
 |Ustawienia profili certyfikatów|Certyfikaty zostaną odwołane, ale nie zostaną usunięte.|Certyfikaty zostaną usunięte i odwołane.|
 |Agent zarządzania|Uprawnienie administratora urządzenia jest odwoływane.|Uprawnienie administratora urządzenia jest odwoływane.|
 |Poczta e-mail|Nie dotyczy (profile poczty e-mail nie są obsługiwane przez urządzenia z systemem Android)|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|
-|Outlook|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.</br>Wyjątek: Jeśli aplikacja Exchange jest zainstalowana lokalnie, wiadomości e-mail nie zostaną usunięte.|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.</br>Wyjątek: Jeśli aplikacja Exchange jest zainstalowana lokalnie, wiadomości e-mail nie zostaną usunięte.|
+|Outlook|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|
 |Odłączanie usługi Azure Active Directory (AAD)|Rekord usługi AAD zostanie usunięty.|Rekord usługi AAD zostanie usunięty.|
 |Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
@@ -115,7 +115,7 @@ Wykonywanie czyszczenia selektywnego na urządzeniu z programem Android for Work
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|Usuwane.|Nieobsługiwane.|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|Certyfikaty zostaną usunięte i odwołane.|Nieobsługiwane.|Certyfikaty zostaną usunięte i odwołane.|
-|Poczta e-mail|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows.|Nieobsługiwane.|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows. Usuwa konta poczty zaaprowizowane przez usługę Intune.</br>**Wyjątek**: Jeśli aplikacja Microsoft Exchange jest zainstalowana lokalnie, konta e-mail nie zostaną usunięte.|
+|Poczta e-mail|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows.|Nieobsługiwane.|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows. Usuwa konta poczty zaaprowizowane przez usługę Intune.|
 |Odłączanie usługi Azure Active Directory (AAD)|Nie.|Nie.|Rekord usługi AAD zostanie usunięty.|Nie dotyczy. System Windows 10 nie obsługuje selektywnego czyszczenia danych na urządzeniach przyłączonych do usługi Azure Active Directory.|
 
 **Aby przeprowadzić selektywne czyszczenie danych**:

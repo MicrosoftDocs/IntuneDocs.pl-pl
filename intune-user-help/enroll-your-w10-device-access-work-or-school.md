@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/13/2017
 ---
-# Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune
-<a id="enroll-your-windows-10-device-in-intune" class="xliff"></a>
+# <a name="enroll-your-windows-10-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune
 
 > [!NOTE]
 > System Windows 10 działa na wszystkich typach urządzeń. Niezależnie od tego, czy używasz komputera, telefonu, czy tabletu kroki, które wykonujesz, są takie same, nawet jeśli ekran wygląda nieco inaczej niż obrazy na tej stronie.

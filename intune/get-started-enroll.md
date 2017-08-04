@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/27/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,15 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36e658cebdfd23547e3c376124289046f81acc1f
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 7f52c9d44a91ed6547aadd712db42ea68cfd01dc
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="getting-started-enrolling-devices"></a>Wprowadzenie do rejestrowania urządzeń
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
-![Urządzenie z systemem iOS, na którym wyświetlona jest aplikacja Portal firmy. Wyświetlony jest pierwszy ekran widoczny dla użytkownika podczas procesu rejestracji.](/intune-user-help/media/ios-enroll-1a-comp-access-setup.png)
 
 Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Ponieważ użytkownicy końcowi będą wchodzić w interakcję z usługą Intune na swoich urządzeniach, a nie w konsoli administracyjnej, istotna jest dobra znajomość środowiska rejestracji. W ten sposób można połączyć dobrze przygotowane zasady zgodności i doświadczenie, aby okazać zrozumienie dla użytkowników. Jest to szczególnie ważne, ponieważ użytkownicy będą w pełni świadomi, jakie informacje są widoczne dla administratora:
 
