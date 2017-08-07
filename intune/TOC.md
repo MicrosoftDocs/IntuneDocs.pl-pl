@@ -8,9 +8,7 @@
 ### [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md)
 ### [Archiwum nowości (Azure Portal)](whats-new-archive.md)
 ### [Archiwum nowości (klasyczny portal)](whats-new-archive-classic.md)
-
-<!--## High-level architecture-->
-
+## [High-level architecture (Architektura wysokiego poziomu)](high-level-architecture.md)
 ## [Cykle życia urządzeń i aplikacji](introduction-device-app-lifecycles.md)
 ### [Cykl wsparcia technicznego urządzenia](device-lifecycle.md)
 ### [Cykl wsparcia technicznego aplikacji](app-lifecycle.md)
@@ -264,6 +262,8 @@
 
 # Monitorowanie i rozwiązywanie problemów
 ## [Korzystanie z roli pracownika pomocy technicznej](help-desk-operators.md)
+## [Use the Intune Data Warehouse (Korzystanie z magazynu danych usługi Intune)](reports-nav-create-intune-reports.md)
+### [Connect to the Data Warehouse with Power BI (Łączenie się z magazynem danych przy użyciu usługi Power BI)](reports-proc-get-a-link-powerbi.md)
 
 # Programowanie i dostosowywanie
 ## [Konfigurowanie niestandardowych ustawień urządzenia](custom-settings-configure.md)
@@ -288,5 +288,16 @@
 ### [Składnik Xamarin zestawu SDK aplikacji usługi Intune](app-sdk-xamarin.md)
 ## [Korzystanie z interfejsów API programu Intune Graph](intune-graph-apis.md)
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
+## [Intune Date Warehouse API (Interfejs API magazynu danych usługi Intune)](reports-nav-intune-date-warehouse.md)
+<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [Data Warehouse API endpoint (Punkt końcowy interfejsu API magazynu danych)](reports-api-url.md)
+### [Data Warehouse data model (Model danych magazynu danych)](reports-ref-data-model.md)
+#### [Odwołanie do jednostki daty](reports-ref-date.md)
+#### [Reference for user entity (Dokumentacja jednostki użytkownika)](reports-ref-user.md)
+#### [Odwołanie do jednostek zarządzania aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
+#### [Odwołanie do jednostki urządzeń](reports-ref-devices.md)
+#### [Reference for application entities (Dokumentacja jednostek aplikacji)](reports-ref-application.md)
+#### [Dokumentacja jednostek zasad](reports-ref-policy.md)
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
 
 # [Słownik](intune-glossary.md)
