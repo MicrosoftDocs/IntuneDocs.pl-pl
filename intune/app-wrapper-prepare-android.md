@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: fed97412df96d0bdffaf3b10ad5306a6f56d0066
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Przygotowanie aplikacji systemu Android do zarządzania aplikacjami mobilnymi za pomocą narzędzia opakowującego aplikacje w usłudze Intune
 
@@ -50,16 +50,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
     > [!NOTE]
     > W pewnych sytuacjach 32-bitowa wersja programu Java może spowodować problemy z pamięcią. Warto zainstalować wersję 64-bitową.
 
-- System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Użyj narzędzia Java keytool do wygenerowania poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Na przykład następujące polecenie umożliwia użycie pliku wykonywalnego Java keytool.exe do wygenerowania kluczy, za pomocą których narzędzie opakowujące aplikacje może podpisać opakowaną aplikację wyjściową.
-
-    ```
-    keytool.exe -genkeypair -v -keystore mykeystorefile -alias mykeyalias -keyalg RSA -keysize 2048 -validity 50000
-    ```
-    W tym przykładzie za pomocą algorytmu RSA generowana jest para kluczy (klucz publiczny oraz powiązany z nim klucz prywatny o rozmiarze 2048 bitów). Klucz publiczny jest następnie opakowywany w certyfikat z podpisem własnym X.509 w wersji 3 przechowywany jako jednoelementowy łańcuch certyfikatów. Ten łańcuch certyfikatów oraz klucz prywatny są przechowywane w nowym wpisie magazynu kluczy o nazwie „mykeystorefile”, określonym za pomocą aliasu „mykeyalias”. Okres ważności wpisu magazynu kluczy wynosi 50 000 dni.
-
-    Polecenie wyświetli monit o wprowadzenie haseł magazynu kluczy oraz klucza. Użyj bezpiecznych haseł, ale zapamiętaj je, ponieważ będą one potrzebne do uruchomienia narzędzia opakowującego aplikacje.
-
-    Aby uzyskać więcej informacji, zapoznaj się ze szczegółową dokumentacją narzędzia Java [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html) oraz [magazynu kluczy](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) środowiska Java w witrynie dokumentacji firmy Oracle.
+- System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Aby uzyskać informacje dotyczące **ponownego używania** istniejących certyfikatów i ogólne wskazówki dotyczące certyfikatów podpisywania, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Plik wykonywalny Java keytool.exe służy do generowania **nowych** poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Wszelkie ustawiane hasła muszą być bezpieczne, ale zanotuj je, ponieważ będą potrzebne do uruchomienia narzędzia opakowującego aplikacje.
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalacja narzędzia opakowującego aplikacje
 
@@ -95,7 +86,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 |**-KeyStorePassword**&lt;ciąg_bezpieczny&gt;|Hasło używane do odszyfrowywania magazynu kluczy. System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Użyj narzędzia Java keytool do wygenerowania wartości KeyStorePassword. Uzyskaj więcej informacji o [magazynie kluczy](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) środowiska Java.| |
 |**-KeyAlias**&lt;ciąg&gt;|Nazwa klucza, który ma być używany do podpisywania.| |
 |**-KeyPassword**&lt;ciąg_bezpieczny&gt;|Hasło używane do odszyfrowania klucza prywatnego, który zostanie użyty do podpisywania.| |
-|**-SigAlg**&lt;ciąg_bezpieczny&gt;| (Opcjonalnie) Nazwa algorytmu sygnatury używanego do podpisywania. Algorytm musi być zgodny z kluczem prywatnym.|Przykłady: SHA256withRSA, SHA1withRSA, MD5withRSA|
+|**-SigAlg**&lt;ciąg_bezpieczny&gt;| (Opcjonalnie) Nazwa algorytmu sygnatury używanego do podpisywania. Algorytm musi być zgodny z kluczem prywatnym.|Przykłady: SHA256withRSA, SHA1withRSA|
 | **&lt;typowe_parametry&gt;** | (Opcjonalnie) To polecenie obsługuje typowe parametry programu PowerShell, takie jak verbose i debug. |
 
 

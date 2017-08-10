@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 8/3/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b8d281e3af2458bd5ab343dfa5123b31075d28ed
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 5861c999752bfef05b8a33161d0bf75a6d4daf59
+ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/03/2017
 ---
-# <a name="the-early-edition-for-microsoft-intune---july-2017"></a>Wczesna wersja usługi Microsoft Intune — lipiec 2017
+# <a name="the-early-edition-for-microsoft-intune---august-2017"></a>Wersja wczesna usługi Microsoft Intune — sierpień 2017
 
-**Wczesna wersja** zawiera listę funkcji, które zostaną wprowadzone w przyszłych wersjach usługi Microsoft Intune. Te informacje są przekazywane w bardzo ograniczonym zakresie i mogą ulec zmianie. Nie należy udostępniać tych informacji poza firmą. Niektóre funkcje wymienione w tym miejscu mogą nie być wdrożone na czas i zostać opóźnione do przyszłych wersji. Inne funkcje są testowane w wersji pilotażowej, aby zapewnić przygotowanie ich do użytku przez klientów. W przypadku pytań lub wątpliwości skontaktuj się z osobą kontaktową ds. tej grupy produktów firmy Microsoft.
+**Wczesna wersja** zawiera listę funkcji, które zostaną wprowadzone w przyszłych wersjach usługi Microsoft Intune. Te informacje są przekazywane w ograniczonym zakresie i mogą ulec zmianie. Nie należy udostępniać tych informacji poza firmą. Niektóre funkcje wymienione w tym miejscu mogą nie być wdrożone na czas i zostać opóźnione do przyszłych wersji. Inne funkcje są testowane w wersji pilotażowej, aby zapewnić przygotowanie ich do użytku przez klientów. W przypadku pytań lub wątpliwości skontaktuj się z osobą kontaktową ds. tej grupy produktów firmy Microsoft.
 
 Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dodatkowe aktualizacje.
 
@@ -42,8 +42,7 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 
 ## <a name="intune-on-the-azure-portal"></a>usługa Intune w witrynie Azure Portal
 
-### <a name="easier-installation-of-office-365-apps-----1121362----"></a>Łatwiejsza instalacja aplikacji usługi Office 365 <!--- 1121362 --->
-Nowy typ aplikacji usługi **Office 365 ProPlus** ułatwia przypisywanie aplikacji usługi Office 365 ProPlus do zarządzanych urządzeń z najnowszą wersją systemu Windows 10. Ponadto użytkownicy posiadający licencje na programy Microsoft Project i Microsoft Visio będą mogli je zainstalować. Aplikacje są ze sobą powiązane i będą wyświetlane jako jedna aplikacja na liście aplikacji w konsoli usługi Intune.
+
 
 
 ### <a name="new-device-action-to-force-devices-to-sync-with-intune----711369---"></a>Nowa akcja urządzenia wymuszająca synchronizację urządzeń z usługą Intune <!-- 711369 -->    
@@ -52,8 +51,6 @@ Dodajemy nową akcję urządzenia, która wymusza natychmiastowe zaewidencjonowa
 ### <a name="actions-for-non-compliance----730266--"></a>Akcje w przypadku niezgodności <!--730266-->     
 *Akcje w przypadku niezgodności* to nowa funkcja zasad zgodności, która umożliwia podejmowanie akcji na urządzeniach, które są niezgodne. Możesz określić jedną lub wiele akcji oraz przedział czasu, w którym te akcje muszą zostać wykonane. Na przykład możesz za pomocą poczty e-mail powiadomić użytkowników niezgodnych urządzeń, gdy tylko ich urządzenia staną się niezgodne, lub za pośrednictwem dostępu warunkowego zablokować niezgodnym urządzeniom dostęp do zasobów firmowych po 3-dniowym okresie karencji.
 
-### <a name="new-app-configuration-settings-for-the-intune-managed-browser-----682951----"></a>Nowe ustawienia konfiguracji aplikacji dla Intune Managed Browser<!--- 682951 --->
-Dodamy kolejne konfiguracje dla aplikacji Intune Managed Browser. Będzie można skonfigurować domyślną stronę główną i zakładki do przeglądarki przy użyciu zasad konfiguracji aplikacji.
 
 ### <a name="restrict-android-and-ios-device-enrollment-restriction-by-os-version------1333256--1245463----"></a>Wprowadzanie ograniczeń rejestracji urządzeń z systemem Android lub iOS na podstawie wersji systemu operacyjnego <!--- 1333256,  1245463 --->  
 Usługa Intune obsługuje teraz ograniczanie rejestracji urządzeń z systemem Android lub iOS na podstawie numeru wersji systemu operacyjnego. W obszarze **Intune**  >  **Ograniczenia rejestracji**  >  **Ograniczenie typu urządzenia**  >  **Domyślne**  >  **Ograniczenia platformy** administrator IT może teraz ustawić konfigurację platformy tak, aby ograniczyć rejestrację, podając minimalną i maksymalną dopuszczalną wartość systemu operacyjnego. Wersje systemu operacyjnego Android muszą być określone w formacie wersja_główna.wersja_pomocnicza.kompilacja.poprawka, gdzie wersja główna i poprawka są opcjonalne. Wersje systemu iOS muszą być określone w formacie wersja_główna.wersja_pomocnicza.kompilacja, gdzie kompilacja jest opcjonalna.
@@ -64,10 +61,13 @@ Usługa Intune obsługuje teraz ograniczanie rejestracji urządzeń z systemem A
 ### <a name="restrict-android-ios-and-macos-device-personally-owned-device-enrollment------1333272--1333275-1245709----"></a>Ograniczanie rejestracji urządzeń osobistych z systemem Android, iOS lub macOS <!--- 1333272,  1333275, 1245709 --->
 Usługa Intune obsługuje teraz ograniczanie rejestracji urządzeń osobistych z systemem iOS, Android lub macOS przy użyciu numerów seryjnych urządzeń. Niektóre urządzenia nie zgłaszają numerów seryjnych. Aby uzyskać szczegółowe informacje, skontaktuj się z producentami urządzeń. Przekazanie numerów seryjnych do usługi Intune pozwala wstępnie zadeklarować urządzenia jako firmowe. Ograniczenia rejestracji umożliwiają blokowanie urządzeń osobistych („Przynieś własne urządzenie” — BYOD), aby umożliwić rejestrację tylko dla urządzeń należących do firmy.
 
-Aby zaimportować numery seryjne w portalu usługi Intune, przejdź do lokalizacji **Rejestracja urządzeń**  >  **Identyfikatory urządzeń firmowych** i kliknij pozycję **Dodaj**, a następnie przekaż plik CSV (bez nagłówka, dwóch kolumn numeru seryjnego i takich szczegółów jak numery IMEI).  Aby ograniczyć urządzenia osobiste, przejdź do lokalizacji **Rejestracja urządzeń**  >  **Ograniczenia rejestracji**. W obszarze **Ograniczenia typu urządzeń** wybierz pozycję **Domyślne**, a następnie wybierz pozycję **Konfiguracje platform**. Możesz wybrać pozycję **Zezwalaj** lub **Blokuj** dla urządzeń osobistych z systemem iOS, Android lub macOS. 
+Aby zaimportować numery seryjne w portalu usługi Intune, przejdź do lokalizacji **Rejestracja urządzeń** > **Identyfikatory urządzeń firmowych** i kliknij pozycję **Dodaj**, a następnie przekaż plik CSV. Plik nie powinien mieć nagłówka i powinien zawierać dwie kolumny: numeru seryjnego i szczegółów, takich jak numery IMEI.  Aby ograniczyć urządzenia osobiste, przejdź do lokalizacji **Rejestracja urządzeń**  >  **Ograniczenia rejestracji**. W obszarze **Ograniczenia typu urządzeń** wybierz pozycję **Domyślne**, a następnie wybierz pozycję **Konfiguracje platform**. Możesz wybrać pozycję **Zezwalaj** lub **Blokuj** dla urządzeń osobistych z systemem iOS, Android lub macOS. 
 
 ### <a name="force-supervised-ios-devices-to-automatically-install-the-latest-available-software-update----777100---"></a>Wymuszanie automatycznej instalacji najnowszej dostępnej aktualizacji oprogramowania na urządzeniach nadzorowanych z systemem iOS <!-- 777100 -->   
 W obszarze roboczym aktualizacji oprogramowania będą dostępne nowe zasady, które będą umożliwiać wymuszanie automatycznej instalacji najnowszej dostępnej aktualizacji oprogramowania na urządzeniach nadzorowanych z systemem iOS. Ponadto będzie można wyświetlić nowy raport dotyczący urządzeń ze starszymi wersjami systemu iOS oraz podsumowanie z przyczynami ich nieaktualności.
+
+### <a name="new-report-that-lists-ios-devices-with-older-ios-versions------1352223---"></a>Nowy raport, który zawiera listę urządzeń dla systemu iOS ze starszymi wersjami systemu iOS   <!-- 1352223 -->
+Raport **Nieaktualne urządzenia z systemem iOS** będzie dostępny z poziomu obszaru roboczego **Aktualizacje oprogramowania**. W raporcie można przejrzeć listę nadzorowanych urządzeń z systemem iOS, których dotyczyły zasady aktualizacji systemu iOS i które mają dostępne aktualizacje. Dla każdego urządzenia można wyświetlić stan z informacją, dlaczego urządzenie nie zostało zaktualizowane automatycznie. 
 
 ### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices-----822899--1305423--"></a>Nowe ustawienia umożliwiające zezwalanie na działanie aplikacji i ich blokowanie na urządzeniach z systemem Samsung KNOX Standard <!-- 822899,  1305423-->   
 Dodajemy nowe [ustawienia ograniczeń urządzeń](device-restrictions-android.md) pozwalające określić następujące listy aplikacji:
@@ -77,27 +77,43 @@ Dodajemy nowe [ustawienia ograniczeń urządzeń](device-restrictions-android.md
 
 Możesz określić aplikacji przy użyciu adresu URL, nazwy pakietu lub zarządzanej przez Ciebie listy aplikacji.
 
+### <a name="new-settings-for-windows-10-device-restriction-profile"></a>Nowe ustawienia dla profilu ograniczeń urządzenia z systemem Windows 10
+<!--- 978575, 1308849, 1308850 -->
+Dodajemy nowe ustawienia do profilu ograniczeń urządzenia z systemem Windows 10 w kategorii Windows Defender SmartScreen.
+
+Aby uzyskać szczegółowe informacje o profilu ograniczeń urządzenia z systemem Windows 10, zobacz [Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym]( device-restrictions-windows-10.md).
+
+### <a name="new-device-restriction-settings-for-windows-10------1063965---"></a>Nowe ustawienia ograniczeń urządzenia z systemem Windows 10 <!-- 1063965 -->
+Dodaliśmy nowe ustawienia [profilu ograniczeń urządzenia z systemem Windows 10](/intune/device-restrictions-windows-10) w następujących kategoriach:
+- Windows Defender SmartScreen
+- App Store
+
+
 ### <a name="android-for-work-support-for-lookout----1087312---"></a>Obsługa programu Android for Work dla usługi Lookout <!-- 1087312 -->   
-Łącznik usługi Intune z usługą Lookout będzie obsługiwać urządzenia z programem Android for Work w przypadku korzystania z aplikacji Lookout for Work. Będzie można wdrożyć aplikację Lookout wewnątrz lub na zewnątrz kontenera.
+Łącznik usługi Intune z usługą Lookout będzie obsługiwać urządzenia z programem Android for Work w przypadku korzystania z aplikacji Lookout for Work. Można wdrożyć aplikację Lookout wewnątrz lub na zewnątrz kontenera.
 
 
-### <a name="check-point-sandblast-mobile---new-mobile-threat-defense-partner-----954651--and--1172027----"></a>Check Point SandBlast Mobile — nowy partner usługi Mobile Threat Defense <!-- 954651  and  1172027 ? -->  
-Dostęp urządzeń przenośnych do zasobów firmy będzie można kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez produkt Check Point SandBlast Mobile. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune.
+### <a name="intune-app-protection-and-citrix-mdx-development-tools----709185---"></a>Narzędzia deweloperskie usług Intune App Protection i Citrix MDX <!-- 709185 -->
+Urządzeniami i aplikacjami można zarządzać przy użyciu kombinacji usług Citrix XenMobile MDX i Microsoft Intune. Umożliwia ona zarządzanie aplikacjami za pomocą zasad usługi Intune App Protection przy równoczesnym wykorzystaniu technologii mVPN firmy Citrix.
 
-#### <a name="how-integration-with-intune-works"></a>Jak działa integracja z usługą Intune?
-Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomionym rozwiązaniem Check Point SandBlast Mobile. Zasady dostępu warunkowego usług EMS można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez rozwiązanie Check Point SandBlast Mobile włączane przy użyciu zasad zgodności urządzeń usługi Intune. Możesz zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia.
+Możesz odnaleźć repozytorium kodu, które zawiera narzędzie opakowujące aplikacje usługi Intune i zestawu Intune App SDK dla systemu iOS i Android zintegrowane z technologią mVPN Citrix MDX.
+
 
 ### <a name="zimperium---new-mobile-threat-defense-partner------954681---"></a>Zimperium — nowy partner usługi Mobile Threat Defense <!-- 954681 -->
-Dostęp urządzeń przenośnych do zasobów firmy będzie można kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez produkt Zimperium. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune.
+Dostęp urządzeń przenośnych do zasobów firmy można kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez produkt Zimperium. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune.
 
 #### <a name="how-integration-with-intune-works"></a>Jak działa integracja z usługą Intune?
 Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomionym rozwiązaniem Zimperium. Zasady dostępu warunkowego usług EMS można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez rozwiązanie Zimperium włączane przy użyciu zasad zgodności urządzeń usługi Intune, których w przypadku niezgodnego urządzenia można użyć do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
 
+### <a name="new-azure-ad-conditional-access-policy-ui-link-from-intune-----1016201---"></a>Link do nowego interfejsu użytkownika zasad dostępu warunkowego usługi Azure AD z usługi Intune <!-- 1016201 -->
+Administratorzy IT mogą ustawiać zasady dostępu warunkowego na podstawie aplikacji za pomocą nowego interfejsu użytkownika zasad dostępu warunkowego w obciążeniu usługi Azure AD. Zasady dostępu warunkowego opartego na aplikacji, które znajdują się w sekcji usługi Intune App Protection na platformie Azure, obecnie pozostają w tym miejscu i są wymuszane równolegle. Wygodny link do nowego interfejsu użytkownika zasad dostępu warunkowego będzie wkrótce dostępny w usłudze Azure AD z poziomu obciążenia usługi Intune.
+
+
 ### <a name="on-premises-exchange-connector-high-availability-support-----676614---"></a>Obsługa wysokiej dostępności łącznika lokalnego programu Exchange <!-- 676614 -->   
-Będzie można mieć wiele ról serwera dostępu klienta (CAS) dla łącznika lokalnego programu Exchange. Jeśli na przykład główny serwer dostępu klienta ulegnie awarii, łącznik programu Exchange odbierze zapytanie w celu powrotu do innych serwerów dostępu klienta. Ta funkcja pozwala zagwarantować nieprzerwane działanie usługi.
+Można mieć wiele ról serwera dostępu klienta (CAS) dla łącznika lokalnego programu Exchange. Jeśli na przykład główny serwer dostępu klienta ulegnie awarii, łącznik programu Exchange odbierze zapytanie w celu powrotu do innych serwerów dostępu klienta. Ta funkcja pozwala zagwarantować nieprzerwane działanie usługi.
 
 ### <a name="system-center-operations-manager-management-pack-for-exchange-connector----885457---"></a>Pakiet administracyjny programu System Center Operations Manager dla łącznika programu Exchange <!-- 885457 -->   
-Pakiet administracyjny programu System Center Operations Manager dla łącznika programu Exchange będzie dostępny, aby ułatwić analizowanie dzienników łącznika programu Exchange. Zapewni to różne sposoby monitorowania usługi Intune w przypadku konieczności rozwiązywania problemów.
+Pakiet administracyjny programu System Center Operations Manager dla łącznika programu Exchange będzie dostępny, aby ułatwić analizowanie dzienników łącznika programu Exchange. Ten pakiet administracyjny zapewnia różne sposoby monitorowania usługi Intune w przypadku konieczności rozwiązywania problemów.
 
 ### <a name="conditional-access-support-for-mac-devices-----720172---"></a>Obsługa dostępu warunkowego w przypadku urządzeń Mac <!-- 720172 -->   
 Wkrótce będzie można ustawić zasady dostępu warunkowego, które wymagają zarejestrowania urządzeń Mac w usłudze Intune i ich zgodności z zasadami zgodności urządzeń usługi Intune. Na przykład użytkownicy mogą pobrać aplikację Portal firmy w usłudze Intune dla systemu macOS i zarejestrować swoje urządzenia Mac w usłudze Intune. Usługa Intune ocenia, czy urządzenie Mac jest zgodne z wymaganiami, między innymi przez sprawdzenie numeru PIN, szyfrowania, wersji systemu operacyjnego i integralności systemu.
@@ -107,9 +123,6 @@ Aplikacje zarządzane i aplikacja Portal firmy dla systemu iOS będą wymagać s
 
 ### <a name="end-of-support-for-android-43-and-lower----1171127-1326920----"></a>Zakończenie obsługi dla systemu Android 4.3 i starszych <!---1171127, 1326920 --->
 Aplikacje zarządzane i aplikacja Portal firmy dla systemu Android będą wymagać systemu Android 4.4 lub nowszego, aby można było uzyskiwać dostęp do zasobów firmy. Urządzenia, które nie zostaną zaktualizowane przed początkiem października, nie będą już mogły uzyskiwać dostępu do aplikacji Portal firmy i tych aplikacji. Od grudnia zostanie wymuszone wycofanie wszystkich zarejestrowanych urządzeń, co spowoduje utratę dostępu do zasobów firmy. Jeśli używasz zasad ochrony aplikacji bez zarządzania urządzeniami przenośnymi, aplikacje nie będą otrzymywać aktualizacji, a jakość obsługi będzie się pogarszać wraz z upływem czasu.
-
-
-
 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-will-end-july-11-2017----1327781---"></a>Przypomnienie dotyczące obsługi platformy: podstawowa obsługa systemu Windows Phone 8.1 zakończy się 11 lipca 2017 r. <!-- 1327781 -->  
@@ -124,22 +137,33 @@ Zalecamy możliwie najwcześniejsze uaktualnienie kwalifikujących się urządze
 
 ## <a name="intune-apps"></a>Aplikacje usługi Intune
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->    
-Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.
-
-Zrzuty ekranu przedstawiające poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia można znaleźć na stronie [Co nowego w interfejsie aplikacji](whats-new-app-ui.md).
-
 ### <a name="light-and-dark-modes-available-for-the-company-portal-app-for-windows-10----676547---"></a>Tryb jasny i ciemny dostępne dla aplikacji Portal firmy dla systemu Windows 10 <!---676547--->
 Użytkownicy końcowi będą mogli dostosować tryb kolorów aplikacji Portal firmy dla systemu Windows 10. Użytkownik będzie mógł wprowadzić zmiany w sekcji Ustawienia w aplikacji Portal firmy. Zmiana zostanie zastosowana po ponownym uruchomieniu aplikacji przez użytkownika. W przypadku systemu Windows 10 w wersji 1607 lub nowszej domyślnie jest używany tryb aplikacji określony w ustawieniach systemowych. W przypadku komputerów z systemem Windows 10 w wersji 1511 lub wcześniejszej domyślnie jest używany jasny tryb aplikacji.
-
-### <a name="enable-end-users-to-tag-their-device-group-in-the-company-portal-app-for-windows-10----807046--"></a>Umożliwianie użytkownikom tagowania grupy urządzeń w aplikacji Portal firmy dla systemu Windows 10 <!---807046-->    
-Użytkownicy końcowi będą mogli wybrać grupę, do której ma należeć ich urządzenie, przez otagowanie jej bezpośrednio z poziomu aplikacji Portal firmy dla systemu Windows 10.
 
 ### <a name="allow-end-users-to-access-the-company-portal-app-for-android-without-enrollment----1169910---"></a>Zezwalanie użytkownikom na dostęp do aplikacji Portal firmy dla systemu Android bez rejestracji <!---1169910--->  
 Wkrótce użytkownicy końcowi nie będą musieli rejestrować urządzeń, aby uzyskać dostęp do aplikacji Portal firmy dla systemu Android. Użytkownicy końcowi w organizacjach używających zasad ochrony aplikacji nie będą już otrzymywać monitów o zarejestrowanie swoich urządzeń po otwarciu aplikacji Portal firmy. Ponadto użytkownicy końcowi będą mogli instalować aplikacje z poziomu aplikacji Portal firmy bez konieczności rejestrowania urządzeń. 
 
-### <a name="users-who-are-signed-in-to-exchange-can-automatically-access-the-company-portal-website-on-windows-10-devices---1323204--"></a>Użytkownicy zalogowani do programu Exchange mogą automatycznie uzyskiwać dostęp do witryny internetowej Portal firmy na urządzeniach z systemem Windows 10 <!--1323204-->  
-Użytkownicy systemu Windows 10, którzy zostali już uwierzytelnieni w programie Exchange, otrzymali wiadomość e-mail dotyczącą kwarantanny w ramach dostępu warunkowego i kliknęli link w wiadomości e-mail, nie będą już musieli ponownie uwierzytelniać się w przeglądarce przed rozpoczęciem konfiguracji dostępu do zasobów firmy.
+### <a name="improved-error-message-for-when-a-user-reaches-the-maximum-number-of-devices-allowed-to-enroll----1270370---"></a>Ulepszony komunikat o błędzie, gdy użytkownik osiągnie maksymalną liczbę urządzeń, które można zarejestrować <!-- 1270370 -->
+Zamiast ogólnego komunikatu o błędzie, użytkownicy końcowi widzą przyjazny komunikat o błędzie z akcjami: „Zarejestrowano maksymalną liczbę urządzeń dozwoloną przez administratora IT. Usuń zarejestrowane urządzenie lub skontaktuj się z administratorem IT w celu uzyskania pomocy”.
+
+### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Nowe środowisko logowania dla użytkowników aplikacji Portal firmy w systemie Android i użytkowników zasady ochrony aplikacji <!-- 621669 -->
+Użytkownicy końcowi będą mogli przeglądać aplikacje, zarządzać urządzeniami i wyświetlać informacje kontaktowe dla działu IT przy użyciu aplikacji Portal firmy dla systemu Android bez rejestrowania urządzeń z systemem Android. Ponadto jeśli użytkownik końcowy używa aplikacji chronionej przez zasady usługi Intune App Protection i uruchamia Portal firmy dla systemu Android, nie będzie już otrzymywać monitu o zarejestrowanie urządzenia. 
+
+### <a name="inform-end-users-what-device-information-can-be-seen-for-ios---739894--"></a>Powiadamianie użytkowników końcowych, o widocznych w systemie iOS informacjach o urządzeniu <!--739894-->
+Dodajemy element **Typ własności** do ekranu Szczegóły urządzenia w aplikacji Portal firmy dla systemu iOS. Dzięki temu użytkownicy mogą dowiedzieć się więcej o ochronie prywatności bezpośrednio z tej strony w dokumentach użytkownika końcowego usługi Intune. Mogą oni również zlokalizować te informacje na ekranie Informacje.
+
+### <a name="apps-details-pages-display-new-information-for-android-devices---1287476--"></a>Strony szczegółów aplikacji zawierają nowe informacje dotyczące urządzeń z systemem Android <!--1287476-->
+Na stronie szczegółów aplikacji w aplikacji Portal firmy dla systemu Android będą wyświetlane kategorie aplikacji, które administrator IT zdefiniował dla danej aplikacji.
+
+### <a name="intune-mobile-application-management-mam-dialog-boxes-now-have-a-modern-interface----1199015---"></a>Okna dialogowe zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune mają teraz nowoczesny interfejs <!-- 1199015 -->
+Okna dialogowe zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune zostały zaktualizowane i oferują teraz nowoczesny wygląd i działanie. Okna dialogowe funkcjonują tak jak okna w poprzednim stylu.
+
+W nowoczesnych urządzeniach z systemem Android okna dialogowe błędów lub powiadomień wyświetlane przez usługę Intune mają teraz zaktualizowany wygląd i działanie.
+
+### <a name="new-setting-in-the-android-company-portal-app-to-toggle-battery-optimization---1405990--"></a>Nowe ustawienie w aplikacji Portal firmy dla systemu Android umożliwiające przełączanie optymalizacji baterii <!--1405990-->
+Strona **Ustawienia** w aplikacji Portal firmy dla systemu Android będzie zawierać nowe ustawienie, które umożliwi użytkownikom proste wyłączanie optymalizacji baterii dla aplikacji Portal firmy i Microsoft Authenticator. Nazwa aplikacji wyświetlana w ustawieniu różni się w zależności od aplikacji, która zarządza kontem służbowym. Zalecamy, aby użytkownicy wyłączali optymalizację baterii w celu poprawy wydajności aplikacji służbowych, które synchronizują pocztę e-mail i dane. 
+
+
 
 
 ## <a name="notices"></a>Uwagi

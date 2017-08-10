@@ -6,7 +6,7 @@ keywords:
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 01/09/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 302f646bfb9ff0ac024687fa0b3926d83158995c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d21b6a03cdc8094bc8da3cecd5331b3f11400302
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365
 
@@ -48,15 +48,14 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 
 1. Uruchom aplikację OneDrive dla Firm, aby otworzyć stronę logowania.  <br/> ![Ilustracja przedstawiająca ekran logowania programu OneDrive dla urządzeń z systemem iOS](./media/onedrive-ios-sign-in.png)
 2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. <br/> ![Ilustracja przedstawiająca stronę logowania usługi Office 365](./media/o365-sign-in-ios.png)
-3. Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostaną zastosowane zasady zarządzania aplikacjami mobilnymi (MAM) i pojawi się prośba o ponowne uruchomienie aplikacji OneDrive dla Firm.  <br/>![Ilustracja przedstawiająca monit o ponowne uruchomienie w systemie iOS](./media/ios-restart-prompt.png)
->[!NOTE]
->Komunikat informujący o konieczności ponownego uruchomienia aplikacji jest wyświetlany tylko na urządzeniach, które nie zostały zarejestrowane w usłudze Intune.
+3. Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostaną zastosowane zasady ochrony aplikacji i pojawi się prośba o ponowne uruchomienie aplikacji OneDrive dla Firm.  <br/>![Ilustracja przedstawiająca monit o ponowne uruchomienie w systemie iOS](./media/ios-restart-prompt.png)    
+  > [!NOTE]
+  > Komunikat informujący o konieczności ponownego uruchomienia aplikacji jest wyświetlany tylko na urządzeniach, które nie zostały zarejestrowane w usłudze Intune.
 
 
-4. Uruchom ponownie aplikację OneDrive dla Firm. Aplikacja zostanie uruchomiona z włączonymi zasadami MAM, po czym zostanie wyświetlony monit o ustawienie kodu PIN dla urządzenia (o ile nie skonfigurowano w nim jeszcze kodu PIN). <br/> ![Ilustracja przedstawiająca monit o utworzenie kodu PIN](./media/pin-prompt-ios.png)
-
->[!NOTE]
->Większość użytkowników nie otrzyma tego monitu. Zobaczą go tylko ci użytkownicy, którzy nie włączyli kodu PIN na swoim urządzeniu z systemem iOS.
+4. Uruchom ponownie aplikację OneDrive dla Firm. Aplikacja zostanie uruchomiona z włączonymi zasadami ochrony aplikacji, po czym zostanie wyświetlony monit o ustawienie kodu PIN dla urządzenia (o ile jeszcze nie został skonfigurowany na tym urządzeniu). <br/> ![Ilustracja przedstawiająca monit o utworzenie kodu PIN](./media/pin-prompt-ios.png)    
+  > [!NOTE]
+  > Większość użytkowników nie otrzyma tego monitu. Zobaczą go tylko ci użytkownicy, którzy nie włączyli kodu PIN na swoim urządzeniu z systemem iOS.
 
 
 5. Po ustawieniu kodu PIN i jego zatwierdzeniu powróć do aplikacji OneDrive dla Firm. Zostanie wyświetlona jednorazowa informacja, że dane służbowe w usłudze OneDrive są teraz objęte ochroną administratora IT. <br/> ![Ilustracja przedstawiająca jednorazowe powiadomienie od administratora IT](./media/one-time-notice.png)
@@ -70,9 +69,9 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 
 1. Uruchom aplikację OneDrive dla Firm, aby otworzyć stronę logowania.  <br/> ![Ilustracja przedstawiająca ekran powitalny aplikacji OneDrive](./media/onedrive-android-welcome.png)
 2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. <br/> ![Ilustracja przedstawiająca logowanie do usługi O365 w systemie Android](./media/o365-sign-in-android.png)
-3. Jeśli na urządzeniu nie została wcześniej zainstalowana aplikacja Portal firmy, po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostanie wyświetlony komunikat z instrukcją dotyczącą instalacji tej aplikacji. Aby kontynuować, wybierz pozycję **Przejdź do sklepu**. <br/> ![Ilustracja przedstawiająca komunikat z informacją o konieczności pobrania aplikacji Portal firmy](./media/get-company-portal-android.png) <br/>Jeśli na telefonie została wcześniej zainstalowana aplikacja Portal firmy, nastąpi automatyczne uruchomienie usługi OneDrive dla Firm. Możesz przejść do uwagi końcowej.
->[!IMPORTANT]
->Choć użytkownik końcowy nie musi w praktyce otwierać aplikacji Portal firmy ani logować się do niej, aby odczytać wiadomości e-mail i dokumenty, to w systemie Android po skonfigurowaniu aplikacji pakietu Office pod kątem zarządzania przy użyciu zasady zarządzania aplikacjami mobilnymi (MAM) użytkownik urządzenia **musi** zainstalować aplikację Portal firmy w celu uzyskania dostępu do służbowych wiadomości e-mail i dokumentów.
+3. Jeśli na urządzeniu nie została wcześniej zainstalowana aplikacja Portal firmy, po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostanie wyświetlony komunikat z instrukcją dotyczącą instalacji tej aplikacji. Aby kontynuować, wybierz pozycję **Przejdź do sklepu**. <br/> ![Ilustracja przedstawiająca komunikat z informacją o konieczności pobrania aplikacji Portal firmy](./media/get-company-portal-android.png) <br/>Jeśli na telefonie została wcześniej zainstalowana aplikacja Portal firmy, nastąpi automatyczne uruchomienie usługi OneDrive dla Firm. Możesz przejść do uwagi końcowej.    
+  > [!IMPORTANT]
+  > Choć użytkownik końcowy nie musi w praktyce otwierać aplikacji Portal firmy ani logować się do niej, aby odczytać wiadomości e-mail i dokumenty, to w systemie Android po skonfigurowaniu aplikacji pakietu Office pod kątem zarządzania przy użyciu zasad ochrony aplikacji użytkownik urządzenia **musi** zainstalować aplikację Portal firmy w celu uzyskania dostępu do służbowych wiadomości e-mail i dokumentów.
 
 4. Nastąpi przekierowanie do sklepu Google Play, z którego można pobrać aplikację Portal firmy, którą następnie należy zainstalować. Aplikacja pomaga w zabezpieczeniu i ochronie danych. <br/> ![Ilustracja przedstawiająca aplikację w sklepie Google Play](./media/google-play-get-app-android.png)
 5. Po zakończeniu instalacji aplikacji wybierz pozycję **Akceptuj**, aby zaakceptować warunki. Nastąpi automatyczne uruchomienie aplikacji OneDrive dla Firm.
@@ -118,9 +117,9 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Dlaczego zasada aplikacji dotycząca numeru PIN jest skonfigurowana tylko dla urządzeń z systemem Android?
 Szyfrowanie przebiega inaczej w systemach iOS i Android.
 
-W systemie iOS w przypadku aplikacji, które zostały skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, nieużywane dane są szyfrowane za pomocą funkcji szyfrowania na poziomie urządzenia udostępnianej przez system operacyjny. Po włączeniu zasady szyfrowania aplikacji zostaje więc automatycznie ustawiony także wymóg posiadania i wprowadzenia przez użytkownika numeru PIN w celu uzyskiwania dostępu do danych służbowych. Użytkownicy, którzy nie skonfigurowali jeszcze numeru PIN na urządzeniu, otrzymają monit o utworzenie numeru PIN urządzenia.
+W systemie iOS w przypadku aplikacji, które zostały skojarzone z zasadami ochrony aplikacji usługi Intune, nieużywane dane są szyfrowane za pomocą funkcji szyfrowania na poziomie urządzenia udostępnianej przez system operacyjny. Po włączeniu zasady szyfrowania aplikacji zostaje więc automatycznie ustawiony także wymóg posiadania i wprowadzenia przez użytkownika numeru PIN w celu uzyskiwania dostępu do danych służbowych. Użytkownicy, którzy nie skonfigurowali jeszcze numeru PIN na urządzeniu, otrzymają monit o utworzenie numeru PIN urządzenia.
 
-W systemie Android w przypadku aplikacji, które zostały skojarzone z zasadami zarządzania aplikacjami mobilnymi usługi Intune, dane są szyfrowane synchronicznie podczas zadań wejścia/wyjścia na plikach. Zawartość w pamięci urządzenia jest zawsze zaszyfrowana. Na urządzeniach, które nie są zarządzane przez system MDM, zasada zarządzania aplikacjami mobilnymi nie może narzucić wymogu użycia numeru PIN urządzenia. Aby zagwarantować, że użytkownicy muszą użyć jakiegoś kodu PIN w celu uzyskania dostępu do danych służbowych, kreator umożliwia zastosowanie zasady numeru PIN aplikacji.
+W systemie Android w przypadku aplikacji, które zostały skojarzone z zasadami ochrony aplikacji usługi Intune, dane są szyfrowane synchronicznie podczas zadań wejścia/wyjścia na plikach. Zawartość w pamięci urządzenia jest zawsze zaszyfrowana. Na urządzeniach, które nie są zarządzane przez system MDM, zasady ochrony aplikacji nie mogą narzucić wymogu użycia kodu PIN urządzenia. Aby zagwarantować, że użytkownicy muszą użyć jakiegoś kodu PIN w celu uzyskania dostępu do danych służbowych, kreator umożliwia zastosowanie zasady numeru PIN aplikacji.
 
 Ustawienia zasady można w dowolnym momencie edytować w celu jej dostosowania do wymagań organizacji.
 

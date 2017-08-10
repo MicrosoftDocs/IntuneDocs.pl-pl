@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f6a3cdc2b5d95f57f1ffc1f68b6748b357f2ef4
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: 1a97e58f1d108932e44b0b4e36bda5a30b7a90da
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus 2016 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
-Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 2016 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Ponadto można także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jedna aplikacja na liście aplikacji w konsoli usługi Intune.
+Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 2016 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jedna aplikacja na liście aplikacji w konsoli usługi Intune.
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -34,11 +34,8 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 20
 - Na urządzeniach, na których wdrażasz te aplikacje, musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
 - Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365 ProPlus 2016.
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, użytkownicy końcowi mogą utracić dane z niezapisanych plików.
-- Jeśli instalujesz pakiet Office na urządzeniu z już zainstalowanym pakietem Office, zapoznaj się z poniższymi zagadnieniami:
-    - Niezależnie od używanej wersji pakietu Office nie możesz zainstalować 32-bitowych i 64-bitowych produktów pakietu Office na jednym urządzeniu.
-    - Nie możesz zainstalować tej samej wersji modułu Szybka instalacja ani wersji instalatora MSI dla pakietu Office na tym samym urządzeniu, ale możesz zainstalować różne wersje główne.
-    - Jeśli masz już starszą wersję pakietu Office, którą zainstalowano przy użyciu modułu Szybka instalacja, musisz usunąć wszystkie aplikacje, które chcesz zastąpić nowszą wersją. Jeśli na przykład masz starszą wersję programu Word na urządzeniu i chcesz przypisać najnowszą wersję, najpierw musisz usunąć starą wersję.
-    - Jeśli urządzenie ma już zainstalowaną usługę Office 365, przypisanie pakietu Office 365 ProPlus 2016 na urządzeniu może oznaczać, że trzeba zmienić poziom subskrypcji pakietu Office.
+- Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S.
+- W przypadku przypisania tego typu aplikacji jako dostępnego i ustawienia dla wielu użytkowników różnych przypisań użytkownicy będą widzieć tylko ostatnio ustawione przypisanie.
 
 
 ## <a name="get-started"></a>Wprowadzenie

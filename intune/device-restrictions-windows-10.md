@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3819042d3b6e7236506c288156f98a0e55c15ea
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b49c227e3cae6c5dca8655362cfbfa6fd3f94807
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
 
@@ -43,14 +43,9 @@ ms.lasthandoff: 07/01/2017
 -   **Resetowanie telefonu** — określa, czy użytkownik może zresetować urządzenie do ustawień fabrycznych.
 -   **Połączenie USB (tylko dla urządzeń przenośnych)** — określa, czy urządzenia mogą uzyskiwać dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.
 -   **Tryb przeciwkradzieżowy (tylko na urządzeniach przenośnych)** — pozwala określić, czy jest włączony tryb przeciwkradzieżowy systemu Windows.
--   **Powiadomienia centrum akcji (tylko dla urządzeń mobilnych)** — włącza lub wyłącza powiadomienia centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
 -   **Cortana** — włącza lub wyłącza asystenta głosowego Cortana.
 -   **Nagrywanie głosu (tylko dla urządzeń przenośnych)** — umożliwia lub blokuje użycie rejestratora głosu w urządzeniu.
--   **Modyfikowanie ustawień zasilania i uśpienia (tylko dla komputerów stacjonarnych)** — uniemożliwia zmianę ustawień zasilania i uśpienia na urządzeniu przez użytkownika końcowego.
--   **Modyfikowanie ustawień regionu (tylko komputer)** — uniemożliwia zmianę ustawień regionu na urządzeniu przez użytkownika końcowego.
--   **Modyfikowanie ustawień języka (tylko komputer)** — uniemożliwia zmianę ustawień języka na urządzeniu przez użytkownika.
--   **Modyfikowanie czasu systemowego** — uniemożliwia użytkownikowi końcowemu zmianę daty i godziny na urządzeniu.
--   **Modyfikowanie nazwy urządzenia** — uniemożliwia użytkownikowi końcowemu zmianę nazwy urządzenia.
+-   **Modyfikacja nazwy urządzenia** — uniemożliwia użytkownikowi końcowemu zmianę nazwy urządzenia (tylko system Windows 10 Mobile)
 -   **Dodaj pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który instaluje pakiety aprowizacji.
 -   **Usuń pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który usuwa pakiety aprowizacji.
 -   **Odnajdywanie urządzeń** — blokuje wykrywanie urządzenia przez inne urządzenia.
@@ -105,6 +100,7 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Instaluj dane aplikacji na woluminie systemowym** — uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia.
 -   **Instaluj aplikacje na dysku systemowym** — uniemożliwia aplikacjom przechowywanie danych na dysku systemowym urządzenia.
 -   **DVR z gry (tylko dla komputerów stacjonarnych)** — pozwala określić, czy nagrania i emisje z gier są dozwolone.
+-   **Tylko aplikacje ze sklepu** — określa, czy użytkownicy mogą instalować aplikacje z miejsc innych niż sklep z aplikacjami.
 
 
 
@@ -112,7 +108,6 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
 -   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Edge a usługami firmy Microsoft.
 -   **Synchronizuj ulubione między przeglądarkami firmy Microsoft (tylko wersja klasyczna)** — umożliwia synchronizowanie ulubionych między przeglądarkami Internet Explorer i Edge.
--   **Filtr SmartScreen** — włącza lub wyłącza filtr SmartScreen, który blokuje fałszywe witryny internetowe.
 -   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
 -   **Pliki cookie** — umożliwia przeglądarce na urządzeniu zapisywanie plików cookie z Internetu.
 -   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Edge.
@@ -130,13 +125,16 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Strony główne** — umożliwia dodanie listy witryn, które mają być używane jako strony główne w przeglądarce Edge (tylko wersja Desktop).
 -   **Zmiany strony startowej** — umożliwia użytkownikom zmienianie stron startowych wyświetlanych po otwarciu przeglądarki Edge. Użyj ustawienia Strony główne, aby wskazać stronę (lub listę stron) otwieraną podczas uruchamiania przeglądarki Edge.
 -   **Blokuj dostęp do flag informacji** — uniemożliwia użytkownikowi końcowemu uzyskanie dostępu do strony about:flags przeglądarki Edge zawierającej ustawienia programistyczne i eksperymentalne.
--   **Przesłonięcie monitu filtru SmartScreen** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen o potencjalnie złośliwych witrynach sieci Web.
--   **Przesłonięcie monitu filtru SmartScreen dla plików** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen dotyczących pobierania potencjalnie złośliwych plików.
 -   **Adres IP lokalnego hosta dla protokołu WebRTC** — blokuje wyświetlanie adresu IP lokalnego hosta użytkownika podczas nawiązywania połączeń telefonicznych przy użyciu protokołu WebRTC.
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
 -   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Edge do menu Start.
 
+## <a name="edge-browser-smartscreen"></a>Filtr SmartScreen przeglądarki Edge
+
+-   **Filtr SmartScreen** — włącza lub wyłącza filtr SmartScreen, który blokuje fałszywe witryny internetowe.
+-   **Przesłonięcie monitu filtru SmartScreen** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen o potencjalnie złośliwych witrynach sieci Web.
+-   **Przesłonięcie monitu filtru SmartScreen dla plików** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen dotyczących pobierania potencjalnie złośliwych plików.
 
 ## <a name="search"></a>Wyszukaj
 - **Bezpieczne wyszukiwanie (tylko urządzenia przenośne)** — pozwala określić sposób, w jaki Cortana filtruje treści dla dorosłych w wynikach wyszukiwania. Można wybrać opcję **Ścisłe** lub **Umiarkowane** albo zezwolić użytkownikom końcowym na wybór własnych ustawień.
@@ -156,7 +154,6 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Odnajdowanie Bluetooth** — umożliwia wykrycie urządzenia przez inne urządzenia obsługujące technologię Bluetooth.
 -   **Wstępne parowanie przy użyciu połączenia Bluetooth** — umożliwia skonfigurowanie automatycznego łączenia się określonych urządzeń Bluetooth z urządzeniem hosta.
 -   **Rozgłaszanie Bluetooth** — umożliwia odbieranie reklam przez urządzenie za pośrednictwem połączenia Bluetooth.
--   **Nazwa urządzenia Bluetooth** — pozwala określić nazwę urządzenia Bluetooth. Jeśli nie określisz nazwy, będzie używana domyślna nazwa opcji.
 -   **Usługa podłączonych urządzeń** — określa, czy zezwalać na używanie usługi podłączonych urządzeń, która umożliwia odnajdowanie i nawiązywanie połączenia z innymi urządzeniami Bluetooth.
 -   **NFC** — umożliwia użytkownikowi włączanie i konfigurowanie funkcji komunikacji zbliżeniowej na urządzeniu.
 -   **Wi-Fi** — umożliwia użytkownikowi włączanie i konfigurowanie sieci Wi-Fi na urządzeniu (tylko system Windows 10 Mobile).
@@ -170,11 +167,16 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
 -   **Aplikacja Ustawienia** — blokuje dostęp do aplikacji Ustawienia systemu Windows.
     -   **System** — blokuje dostęp do obszaru systemu w aplikacji Ustawienia.
+        -   **Modyfikowanie ustawień zasilania i uśpienia (tylko dla komputerów stacjonarnych)** — uniemożliwia zmianę ustawień zasilania i uśpienia na urządzeniu przez użytkownika końcowego.
     -   **Urządzenia** — blokuje dostęp do obszaru urządzeń w aplikacji Ustawienia.
     -   **Sieć i Internet** — blokuje dostęp do obszaru sieci i Internetu w aplikacji Ustawienia.
     -   **Personalizacja** — blokuje dostęp do obszaru personalizacji w aplikacji Ustawienia.
     -   **Konta** — blokuje dostęp do obszaru kont w aplikacji Ustawienia.
     -   **Czas i język** — blokuje dostęp do obszaru czasu i języka w aplikacji Ustawienia.
+        -   **Modyfikowanie czasu systemowego** — uniemożliwia użytkownikowi końcowemu zmianę daty i godziny na urządzeniu.
+        -   **Modyfikowanie ustawień regionu (tylko komputer)** — uniemożliwia zmianę ustawień regionu na urządzeniu przez użytkownika końcowego.
+        -   **Modyfikowanie ustawień języka (tylko komputer)** — uniemożliwia zmianę ustawień języka na urządzeniu przez użytkownika.
+    -   **Gry** — blokuje dostęp do aplikacji Gry w obszarze Ustawienia.
     -   **Ułatwienia dostępu** — blokuje dostęp do obszaru ułatwień dostępu w aplikacji Ustawienia.
     -   **Prywatność** — blokuje dostęp do obszaru prywatności w aplikacji Ustawienia.
     -   **Aktualizacja i zabezpieczenia** — blokuje dostęp do obszaru aktualizacji i zabezpieczeń w aplikacji Ustawienia.
@@ -237,17 +239,17 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 ## <a name="windows-spotlight"></a>W centrum uwagi Windows
 
 
-- W centrum uwagi Windows — to ustawienie umożliwia zablokowanie wszystkich funkcji W centrum uwagi Windows na urządzeniach z systemem Windows 10. Jeśli to ustawienie zostanie wyłączone, następujące ustawienia nie będą dostępne.
+- **W centrum uwagi Windows** — to ustawienie umożliwia zablokowanie wszystkich funkcji W centrum uwagi Windows na urządzeniach z systemem Windows 10. Jeśli to ustawienie zostanie wyłączone, następujące ustawienia nie będą dostępne.
     - **Funkcja W centrum uwagi Windows na ekranie blokady** — wyłącza wyświetlanie informacji funkcji W centrum uwagi Windows na ekranie blokady urządzenia.
     - **Sugestie innych firm w funkcji W centrum uwagi Windows** — wyłącza sugerowanie zawartości niepochodzącej z firmy Microsoft przez funkcję W centrum uwagi Windows.
-    - **Porady dotyczące systemu Windows** — umożliwia zablokowanie wyskakujących okienek z poradami w systemie Windows.
     - **Funkcje dla konsumentów** — umożliwia blokowanie funkcji dla konsumentów, takich jak sugestie w menu Start, powiadomienia dotyczące członkostwa itp.
+    - **Porady dotyczące systemu Windows** — umożliwia zablokowanie wyskakujących okienek z poradami w systemie Windows.
     - **Funkcja W centrum uwagi Windows w Centrum akcji** — uniemożliwia wyświetlanie sugestii funkcji W centrum uwagi Windows, na przykład zawartości dotyczących nowych aplikacji lub zabezpieczeń, w Centrum akcji systemu Windows.
     - **Personalizacja funkcji W centrum uwagi Windows** — wyłącza personalizowanie opartych na użyciu urządzenia wyników przez funkcję W centrum uwagi Windows.
     - **Środowisko powitalne systemu Windows** — wyłącza wyświetlanie środowiska powitalnego systemu Windows, w którym są widoczne informacje o nowych lub zaktualizowanych funkcjach.
 
 
-## <a name="display"></a>Wyświetlanie
+## <a name="projection"></a>Projekcja
 
 - **Dane wejściowe użytkownika z odbiorników ekranów bezprzewodowych** — blokuje dane wejściowe użytkownika z odbiorników wyświetlaczy bezprzewodowych.
 - **Projekcja na tym komputerze** — uniemożliwia innym urządzeniom odnajdywanie tego komputera dla celów projekcji.

@@ -1,11 +1,11 @@
 ---
 title: "Włączanie modelu BYOD w usłudze Microsoft Intune"
-description: 
+description: "Ogólny przepływ pracy służący do konfigurowania usługi Intune w taki sposób, aby organizacja mogła korzystać z rozwiązania typu „przynieś własne urządzenie” (BYOD, bring your own device)."
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 880b83a63eefe13a96ab8838c7092c185aa32cd0
-ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
+ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="enable-byod-with-intune"></a>Włączanie modelu BYOD w usłudze Intune
 
@@ -27,7 +27,7 @@ Przepływ pracy został podzielony na trzy poniższe procesy. Aspekty poszczegó
 
 -   **[Rejestrowanie urządzeń i sprawdzanie zgodności](#enroll-devices-and-check-for-compliance)** — ta sekcja opisuje, jak można umożliwić użytkownikom rejestrowanie urządzeń osobistych do zarządzania przez usługę Intune. Usługa Intune zarządza urządzeniami z systemami iOS, macOS, Android i Windows. Ta sekcja opisuje również sposób wdrażania zasad na urządzeniach oraz sprawdzania, czy spełniają one podstawowe wymagania dotyczące zabezpieczeń.
 
-- **[Udostępnianie zasobów firmy](#provide-access-to-company-resources)** — w tej sekcji przedstawiono, jak z pomocą działu IT użytkownicy mogą łatwo i bezpiecznie uzyskiwać dostęp do zasobów firmy. W tym celu należy wdrożyć profile dostępu na zarządzanych urządzeniach. W tej sekcji wyjaśniono również, jak zarządzać wdrożeniami aplikacji kupionych w ramach zakupów zbiorczych przy użyciu usługi Intune.
+- W sekcji **[Udostępnianie zasobów firmy](#provide-access-to-company-resources)** pokazano, jak umożliwić użytkownikom łatwe i bezpieczne uzyskiwanie dostępu do zasobów firmy. W tym celu należy wdrożyć profile dostępu na zarządzanych urządzeniach. W tej sekcji wyjaśniono również, jak zarządzać wdrożeniami aplikacji kupionych w ramach zakupów zbiorczych przy użyciu usługi Intune.
 
 -   **[Ochrona danych firmowych](#protect-company-data)** — w tej sekcji wyjaśniono, jak zapewnić warunkowy dostęp do zasobów firmowych, chronić się przed utratą danych oraz usuwać firmowe aplikacje i dane z urządzeń, które nie są już potrzebne do pracy albo zostały zagubione albo skradzione.
 
@@ -38,19 +38,17 @@ Przepływ pracy został podzielony na trzy poniższe procesy. Aspekty poszczegó
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 Aby umożliwić użytkownikom rejestrowanie urządzeń, musisz najpierw przygotować samą usługę Intune. W tym celu [przypisz licencje do użytkowników](licenses-assign.md) i [ustaw urząd zarządzania urządzeniami przenośnymi](mdm-authority-set.md).
 
-W tym czasie pamiętaj również o [dostosowaniu portalu firmy](company-portal-customize.md). Dodaj znaki firmowe i udostępnij użytkownikom informacje dotyczące pomocy technicznej. Spowoduje to utworzenie zaufanego środowiska rejestracji i pomocy technicznej dla użytkowników.
+W tym czasie pamiętaj również o [dostosowaniu portalu firmy](company-portal-customize.md). Dodaj znaki firmowe i udostępnij użytkownikom informacje dotyczące pomocy technicznej. Spowoduje to utworzenie zaufanego środowiska rejestracji i pomocy technicznej dla użytkowników. Można również utworzyć [warunki użytkowania](terms-and-conditions-create.md), które użytkownicy muszą zaakceptować przed rejestracją, lub [ograniczenia dotyczące urządzeń](enrollment-restrictions-set.md) w celu określenia obsługiwanych platform.
 
 ## <a name="enroll-devices-and-check-for-compliance"></a>Rejestrowanie urządzeń i sprawdzanie zgodności
 
 Po przygotowaniu usługi Intune musisz spełnić różne wymagania dotyczące rejestracji dla różnych typów urządzeń, którymi chcesz zarządzać. Proces rejestrowania urządzeń do zarządzania jest prosty, ale różni się nieco w zależności od typu urządzenia.
 
--   **Urządzenia z systemem iOS i Mac** — aby rejestrować urządzenia iPad i iPhone oraz urządzenia z systemem MacOS, należy uzyskać [certyfikat usługi Apple Push Notification service (APNs)](apple-mdm-push-certificate-get.md). Po przekazaniu certyfikatu usługi APNs do usługi Intune użytkownicy mogą [rejestrować urządzenia z systemem iOS](/intune-user-help/enroll-your-device-in-intune-ios) za pomocą aplikacji Portal firmy, a także korzystać z witryny Portal firmy w celu [rejestrowania urządzeń z systemem MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **Urządzenia z systemem iOS i MacOS** — aby rejestrować urządzenia iPad i iPhone oraz urządzenia z systemem MacOS, należy uzyskać [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md). Po przekazaniu certyfikatu wypychania MDM do usługi Intune użytkownicy mogą [rejestrować urządzenia z systemem iOS](/intune-user-help/enroll-your-device-in-intune-ios) za pomocą aplikacji Portal firmy, a także korzystać z witryny internetowej Portal firmy w celu [rejestrowania urządzeń z systemem MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
 
--   **Urządzenia z systemem Android** — żadne działania nie są konieczne, aby przygotować usługę Intune do rejestrowania urządzeń z systemem Android. Użytkownicy mogą po prostu [rejestrować swoje urządzenia z systemem Android](/intune-user-help/enroll-your-device-in-intune-android.md) na potrzeby zarządzania przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
+-   **Urządzenia z systemem Android** — żadne działania nie są konieczne, aby przygotować usługę Intune do rejestrowania urządzeń z systemem Android. Użytkownicy mogą po prostu [rejestrować swoje urządzenia z systemem Android](/intune-user-help/enroll-your-device-in-intune-android) na potrzeby zarządzania przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
 
--   **Telefony i komputery z systemem Windows** — należy [ustawić alias DNS dla serwera rejestracji](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium), aby ułatwić rejestrowanie urządzeń z systemem Windows. Użytkownicy mogą również [rejestrować urządzenia z systemem Windows](/intune-user-help/enroll-your-w10-phone-or-w10-pc-windows) przez dodanie konta służbowego.
-
-  - Jeśli korzystasz z usługi Azure AD Premium, możesz ułatwić użytkownikom rejestrowanie urządzeń z systemem Windows, [włączając funkcję automatycznego rejestrowania](windows-enroll.md). Ta funkcja automatycznie rejestruje urządzenie w usłudze Intune, gdy użytkownik dodaje konto służbowe w celu zarejestrowania urządzenia osobistego. Działa ona również w przypadku urządzenia należącego do firmy, które jest przyłączane do usługi Azure AD w organizacji.
+-   **Telefony i komputery z systemem Windows** — urządzenia z systemem Windows można rejestrować po przeprowadzeniu dodatkowych czynności konfiguracyjnych. Aby uprościć środowisko użytkownika, można włączyć automatyczne rejestrowanie komputerów i urządzeń przenośnych z systemem Windows 10 w usłudze Azure Active Directory (AD) Premium. Jeśli nie masz usługi Azure AD Premium lub jeśli konieczna jest obsługa systemu Windows 8.1, możesz utworzyć [alias DNS dla serwera rejestracji](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) w celu ułatwienia rejestracji.
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Sprawdzanie, czy zarządzane urządzenia spełniają podstawowe wymogi bezpieczeństwa
@@ -61,13 +59,13 @@ Podczas [tworzenia zasad zgodności](device-compliance-get-started.md) dla użyt
 
 ## <a name="provide-access-to-company-resources"></a>Zapewnianie dostępu do zasobów firmowych
 
-Pierwszą rzeczą, której większość pracowników chce od swoich urządzeń przenośnych, jest dostęp do firmowej poczty e-mail i dokumentów. Oczekują, że będzie to możliwe bez konieczności wykonywania złożonych procedur ani kontaktowania się z pomocą techniczną. Usługa Intune ułatwia [tworzenie i wdrażanie ustawień poczty e-mail](conditional-access-intune-common-ways-use.md) do natywnych aplikacji poczty e-mail wstępnie zainstalowanych na urządzeniach przenośnych.
-<!--- this was old link: (https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune). check with Andre--->
+Pierwszą rzeczą, której większość pracowników chce od swoich urządzeń przenośnych, jest dostęp do firmowej poczty e-mail i dokumentów. Oczekują, że będzie to możliwe bez konieczności wykonywania złożonych procedur ani kontaktowania się z pomocą techniczną. Usługa Intune ułatwia [tworzenie i wdrażanie ustawień poczty e-mail](email-settings-configure.md) do natywnych aplikacji poczty e-mail wstępnie zainstalowanych na urządzeniach przenośnych.
+
 
 > [!NOTE]
 > Usługa Intune obsługuje konfigurację profilu poczty e-mail programu Android for Work dla aplikacji poczty e-mail Gmail i Nine Work ze sklepu Google Play.
 
-Usługa Intune pomaga również kontrolować i chronić dostęp do lokalnych danych firmowych, gdy użytkownicy pracują poza siedzibą firmy. Profile sieci [Wi-Fi](https://docs.microsoft.com/intune/deploy-use/wi-fi-connections-in-microsoft-intune), sieci [VPN](https://docs.microsoft.com/intune/deploy-use/vpn-connections-in-microsoft-intune#create-a-vpn-profile) i poczty e-mail w usłudze Intune działają razem w celu udzielania użytkownikom dostępu do plików i zasobów potrzebnych im do pracy niezależnie od miejsca, w którym się znajdują. Za pomocą serwera proxy aplikacji usługi Azure Active Directory oraz dostępu warunkowego można uzyskiwać bezpieczny dostęp do lokalnie hostowanych usług i aplikacji sieci Web firmy oraz chronić je.
+Usługa Intune pomaga również kontrolować i chronić dostęp do lokalnych danych firmowych, gdy użytkownicy pracują poza siedzibą firmy. Profile sieci [Wi-Fi](wi-fi-settings-configure.md), sieci [VPN](vpn-settings-configure.md) i poczty e-mail w usłudze Intune działają razem w celu udzielania użytkownikom dostępu do plików i zasobów potrzebnych im do pracy niezależnie od miejsca, w którym się znajdują. Za pomocą serwera proxy aplikacji usługi Azure Active Directory oraz dostępu warunkowego można uzyskiwać bezpieczny dostęp do lokalnie hostowanych usług i aplikacji sieci Web firmy oraz chronić je.
 
 ### <a name="manage-volume-purchased-apps"></a>Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych
 Usługa Intune ułatwia wykonywanie następujących czynności:
@@ -109,8 +107,8 @@ W przypadku zarządzanych urządzeń z systemem Windows 10 to samo można osiąg
 
 ### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Usuwanie danych firmowych bez ingerowania w dane osobiste
 
-Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie zmieni się lub po prostu zostanie zgubione, musisz mieć możliwość usunięcia z niego aplikacji i danych firmy. Do tego celu można użyć możliwości selektywnego i pełnego czyszczenia danych usługi Intune. Użytkownicy mogą również zdalnie wyczyścić własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
+Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie ulegnie zmianie lub po prostu zostanie zgubione, istnieje możliwość usunięcia z niego aplikacji i danych firmy. Do tego celu można użyć możliwości selektywnego i pełnego czyszczenia danych usługi Intune. Użytkownicy mogą również zdalnie wyczyścić własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
 
 [Pełne czyszczenie danych](devices-wipe.md) przywraca domyślne ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień użytkownika. [Selektywne czyszczenie danych ](devices-wipe.md#selective-wipe) powoduje usunięcie tylko danych firmy z urządzenia i pozostawienie osobistych danych użytkowników bez zmian.
 
-Po zainicjowaniu urządzenie natychmiast rozpoczyna proces czyszczenia selektywnego w celu wyłączenia go z zarządzania. Po zakończeniu procesu wszystkie dane firmy będą usunięte, a nazwa urządzenia zostanie usunięta z konsoli administratora usługi Intune. Kończy to cykl zarządzania urządzeniem.
+Po zainicjowaniu urządzenie natychmiast rozpoczyna proces czyszczenia selektywnego w celu wyłączenia go z zarządzania. Po zakończeniu procesu wszystkie dane firmy zostaną usunięte, a nazwa urządzenia zostanie usunięta z portalu usługi Intune. Kończy to cykl zarządzania urządzeniem.

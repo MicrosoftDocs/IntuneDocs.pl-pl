@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 44d80e1c72b58eccd4e69b1d561c7d651f39b3c3
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b9e009e94fb4d9bdb99960e0d238d5471d1f4b50
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemami Android i Samsung KNOX Standard w usłudze Microsoft Intune
 
@@ -29,36 +29,37 @@ Te ustawienia wraz z zasadami ograniczeń urządzenia z systemem Android są pom
 
 ## <a name="general"></a>Ogólne
 
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Aparat fotograficzny**|Zezwala na korzystanie z aparatu fotograficznego urządzenia.|Tak|Tak|
-|**Kopiowanie i wklejanie**|Umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.|Nie|Tak|
-|**Udostępnianie Schowka między aplikacjami**|Umożliwia wykorzystanie schowka do kopiowania i wklejania danych między aplikacjami.|Nie|Tak|
-|**Przesłanie danych diagnostycznych**|Uniemożliwia użytkownikowi użycie funkcji przesyłania danych diagnostycznych z urządzenia.|Nie|Tak|
-|**Resetuj do ustawień fabrycznych**|Umożliwia użytkownikowi przeprowadzenie resetowania urządzenia do ustawień fabrycznych.|Nie|Tak|
-|**Geolokalizacja**|Umożliwia urządzeniu korzystanie z informacji o lokalizacji (tylko Samsung KNOX Standard).|Nie|Tak|
-|**Wyłączanie**|Umożliwia użytkownikowi wyłączanie urządzenia.<br>Po wyłączeniu nie można ustawić opcji **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**.|Nie|Tak|
-|**Przechwytywanie ekranu**|Umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.|Nie|Tak|
-|**Asystent głosowy**|Umożliwia korzystanie z oprogramowania asystenta głosowego na urządzeniu.|Nie|Tak|
-|**YouTube**|Umożliwia korzystanie z aplikacji YouTube na urządzeniu.|Nie|Tak|
-|**Urządzenia udostępnione**|Konfigurowanie zarządzanego urządzenia z rozwiązaniem Samsung KNOX Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie nadal będzie zarządzane, niezależnie od tego, czy jest używane.<br>Po zalogowaniu się użytkownicy końcowi otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.|Nie|Tak|
+- **Aparat fotograficzny** — umożliwia korzystanie z aparatu fotograficznego urządzenia.
+- **Kopiuj i wklej (tylko system Samsung KNOX)** — umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.
+- **Udostępnianie schowka między aplikacjami (tylko system Samsung KNOX)** — umożliwia korzystanie ze schowka w celu kopiowania i wklejania między aplikacjami.
+- **Przesyłanie danych diagnostycznych (tylko system Samsung KNOX)** — uniemożliwia użytkownikowi przesyłanie danych diagnostycznych z urządzenia.
+- **Resetowanie do ustawień fabrycznych (tylko system Samsung KNOX)** — umożliwia użytkownikowi zresetowanie urządzenia do ustawień fabrycznych.
+- **Geolokalizacja (tylko system Samsung KNOX)** — umożliwia korzystanie z informacji o lokalizacji na urządzeniu.
+- **Wyłączanie (tylko system Samsung KNOX)** — umożliwia użytkownikowi wyłączanie urządzenia.<br>Po wyłączeniu nie można ustawić opcji **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**.
+- **Przechwytywanie ekranu (tylko system Samsung KNOX)** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
+- **Asystent głosowy (tylko system Samsung KNOX)** — umożliwia korzystanie z oprogramowania Asystenta głosowego na urządzeniu.
+- **YouTube (tylko system Samsung KNOX)** — umożliwia korzystanie z aplikacji YouTube na urządzeniu.
+- **Urządzenia udostępnione** — umożliwia skonfigurowanie zarządzanego urządzenia z systemem Samsung KNOX Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie nadal będzie zarządzane, niezależnie od tego, czy jest używane.<br>Po zalogowaniu się użytkownicy końcowi otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.
 
 ## <a name="password"></a>Hasło
 
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Hasło**|Wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.|Tak|Tak|
-|**Minimalna długość hasła**|Określa minimalną długość hasła, które musi skonfigurować użytkownik (od 4 do 16 znaków).|Tak|Tak|
-|**Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**|Określa liczbę minut braku aktywności przed automatycznym zablokowaniem urządzenia.|Tak|Tak|
-|**Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**|Określa liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia.|Tak|Tak|
-|**Dni do wygaśnięcia hasła**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|Tak|
-|**Wymagany typ hasła**|Określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych. Wybierz spośród opcji:<br><br>    -     **Ustawienie domyślne urządzenia**<br>-     **Zabezpieczenia biometryczne na niskim poziomie**<br>    -     **Co najmniej numeryczne**<br>    -     **Złożona wartość liczbowa** (powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone)<sup>1</sup><br>    -     **Co najmniej alfabetyczne**<br>    -     **Co najmniej alfanumeryczne**<br>    -     **Co najmniej alfanumeryczne z symbolami**|Tak|Tak|
-|**Zapobiegaj ponownemu używaniu poprzednich haseł**|Uniemożliwia użytkownikowi końcowemu utworzenie hasła, które było wcześniej używane.|Tak|Tak|
-|**Odblokowywanie za pomocą odcisku palca**|Umożliwia korzystanie z odcisku palca do odblokowania obsługiwanych urządzeń.|Nie|Tak|
-|**Blokada Smart Lock i inni agenci zaufania**|Umożliwia sterowanie funkcją Smart Lock na zgodnych urządzeniach z systemem Android (tylko Samsung KNOX Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji. Na przykład można z tego skorzystać, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.|Tak (wersja 5.0 i nowsze)|Tak|
-|**Szyfrowanie**|Wymaga szyfrowania plików na urządzeniu.|Tak|Tak|
+- **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.|Tak|Tak|
+- **Minimalna długość hasła** — określa minimalną długość hasła, które musi skonfigurować użytkownik (od 4 do 16 znaków).
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określa liczbę minut braku aktywności przed automatycznym zablokowaniem urządzenia.
+- **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem zawartości urządzenia.
+- **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.
+-  **Wymagany typ hasła** — określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych. Wybierz spośród opcji:
+    - **Ustawienie domyślne urządzenia**
+    - **Zabezpieczenia biometryczne na niskim poziomie**
+    - **Co najmniej numeryczne**
+    - **Złożona wartość liczbowa** — powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone<sup>1</sup>
+    - **Co najmniej alfabetyczne**
+    - **Co najmniej alfanumeryczne**
+    - **Co najmniej alfanumeryczne z symbolami**
+- **Zapobiegaj ponownemu używaniu poprzednich haseł** —nie dopuszcza do tego, by użytkownik końcowy utworzył hasło, które było wcześniej używane.
+- **Odblokowywanie za pomocą odcisku palca (tylko system Samsung KNOX)** — umożliwia korzystanie z odcisku palca do odblokowania obsługiwanych urządzeń.
+- **Blokada Smart Lock i inni agenci zaufania** — umożliwia sterowanie funkcją Smart Lock na niezgodnych urządzeniach z systemem Android (tylko Samsung KNOX Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji. Na przykład można z tego skorzystać, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.
+- **Szyfrowanie** — wymaga szyfrowania plików na urządzeniu.
 
 <sup>1</sup> Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na tych urządzeniach do najnowszej wersji.
 
@@ -69,10 +70,7 @@ W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego p
 
 ## <a name="google-play-store"></a>Sklep Google Play
 
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Sklep Google Play**|Umożliwia użytkownikowi uzyskiwanie dostępu do sklepu Google Play na urządzeniu.|Nie|Tak|
+- **Sklep Google Play (tylko system Samsung KNOX)** — umożliwia użytkownikowi dostęp do sklepu Google Play na urządzeniu.
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
@@ -99,41 +97,38 @@ Przykład: wyszukaj w sklepie Google Play aplikację Microsoft Office Mobile. U�
 Możesz również kliknąć opcję **Importuj**, aby pobrać listę z pliku CSV. Użyj formatu <*adres url aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*> lub kliknij przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.      
 
 ## <a name="browser"></a>Przeglądarka
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Przeglądarka internetowa**|Określa, czy można używać domyślnej przeglądarki sieci Web na urządzeniu.|Nie|Tak|
-|**Autowypełnianie**|Umożliwia korzystanie z funkcji automatycznego uzupełniania w przeglądarce sieci Web.|Nie|Tak|
-|**Plik cookie**|Zezwala na używanie plików cookie przez przeglądarkę sieci Web urządzenia.|Nie|Tak|
-|**JavaScript**|Umożliwia uruchamianie skryptów Java w przeglądarce sieci Web na urządzeniu.|Nie|Tak|
-|**Okna podręczne**|Umożliwia blokowanie wyskakujących okienek w przeglądarce sieci Web.|Nie|Tak|
+
+- **Przeglądarka internetowa (tylko system Samsung KNOX)** — określa, czy na urządzeniu można używać domyślnej przeglądarki internetowej.
+- **Autowypełnianie (tylko system Samsung KNOX)** — umożliwia korzystanie z funkcji autowypełniania w przeglądarce internetowej.
+- **Pliki cookie (tylko system Samsung KNOX)** — umożliwia używanie plików cookie przez przeglądarkę internetową na urządzeniu.
+- **JavaScript (tylko system Samsung KNOX)** — umożliwia uruchamianie skryptów Java w przeglądarce internetowej na urządzeniu.
+- **Wyskakujące okienka (tylko system Samsung KNOX)** — umożliwia blokowanie wyskakujących okienek w przeglądarce internetowej.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Kopia zapasowa w usłudze Google**|Zezwala na korzystanie z kopii zapasowej Google.|Nie|Tak|
-|**Automatyczna synchronizacja konta Google**|Zezwala na automatyczną synchronizację ustawień konta Google.|Nie|Tak|
-|**Magazyn wymienny**|Umożliwia używanie na urządzeniu magazynu wymiennego, takiego jak karta SD.|Nie|Tak|
-|**Szyfrowanie kart pamięci**|Określa, czy karta pamięci urządzenia musi być szyfrowana.|Nie|Tak|
+
+- **Kopie zapasowe w usłudze Google (tylko system Samsung KNOX)** — umożliwia korzystanie z kopii zapasowych w usłudze Google.
+- **Automatyczna synchronizacja konta Google (tylko system Samsung KNOX)** — umożliwia automatyczną synchronizację ustawień konta Google.
+- **Magazyn wymienny (tylko system Samsung KNOX)** — umożliwia korzystanie na urządzeniu z magazynu wymiennego, np. karty SD.
+- **Szyfrowanie na kartach pamięci (tylko system Samsung KNOX)** — określa, czy karta pamięci urządzenia musi być szyfrowana.
 
 ## <a name="cellular-and-connectivity"></a>Sieć komórkowa i łączność
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Roaming danych**|Zezwala na roaming danych, gdy urządzenie znajduje się w sieci komórkowej.|Nie|Tak|
-|**Wiadomości SMS/MMS**|Umożliwia korzystanie z wiadomości SMS i MMS na urządzeniu.|Nie|Tak|
-|**Wybieranie głosowe**|Włącza lub wyłącza funkcję wybierania głosowego na urządzeniu.|Nie|Tak|
-|**Roaming połączeń głosowych**|Zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.|Nie|Tak|
-|**Bluetooth**|Umożliwia używanie połączeń Bluetooth na urządzeniu.|Nie|Tak|
-|**NFC**|Umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej na obsługiwanych urządzeniach.|Nie|Tak|
-|**Wi-Fi**|Umożliwia korzystanie z funkcji Wi-Fi urządzenia.|Nie|Tak|
-|**Tethering Wi-Fi**|Umożliwia korzystanie z funkcji tetheringu Wi-Fi urządzenia.|Nie|Tak|
+
+- **Roaming danych (tylko system Samsung KNOX)** — umożliwia roaming danych, gdy urządzenie korzysta z sieci komórkowej.
+- **Wiadomości SMS i MMS (tylko system Samsung KNOX)** — umożliwia korzystanie z wiadomości SMS i MMS na urządzeniu.
+- **Wybieranie głosowe (tylko system Samsung KNOX)** — włącza lub wyłącza funkcję wybierania głosowego na urządzeniu.
+- **Roaming połączeń głosowych (tylko system Samsung KNOX)** — umożliwia roaming połączeń głosowych, gdy urządzenie korzysta z sieci komórkowej.
+- **Bluetooth (tylko system Samsung KNOX)** — umożliwia korzystanie z funkcji Bluetooth na urządzeniu.
+- **NFC (tylko system Samsung KNOX)** — umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej na obsługiwanych urządzeniach.
+- **Wi-Fi (tylko system Samsung KNOX)** — umożliwia korzystanie z funkcji Wi-Fi na urządzeniu.
+- **Tethering Wi-Fi (tylko system Samsung KNOX)** — umożliwia korzystanie z funkcji tetheringu Wi-Fi na urządzeniu.
 
 ## <a name="kiosk"></a>Kiosk
-|||||
-|-|-|-|-|
-|Nazwa ustawienia|Szczegóły|Android 4.0+|Samsung KNOX Standard|
-|**Wybierz zarządzaną aplikację**|Aby dodać jedną lub więcej aplikacji, które można uruchomić, gdy urządzenie jest w trybie kiosku, wybierz jedną z poniższych opcji. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.<br><br>- **Dodaj aplikacje według nazwy pakietu**<br>- **Dodaj aplikacje przez adres URL**<br>- **Dodaj aplikacje zarządzane**|Nie|Tak|
-|**Przycisk usypiania ekranu**|Włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.|Nie|Tak|
-|**Przyciski regulacji głośności**|Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.|Nie|Tak|
+
+Ustawienia kiosku dotyczą tylko urządzeń z systemem Samsung KNOX Standard.
+
+- **Wybierz zarządzaną aplikację** — wybierz jedną z poniższych opcji, aby dodać co najmniej jedną aplikację, którą można uruchomić, gdy urządzenie jest w trybie kiosku. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.
+    - **Dodaj aplikacje według nazwy pakietu**
+    - **Dodaj aplikacje przez adres URL**
+    - **Dodaj aplikacje zarządzane**.
+- **Przycisk usypiania ekranu** — włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.
+- **Przyciski regulacji głośności** — włącza lub wyłącza przyciski regulacji głośności na urządzeniu.

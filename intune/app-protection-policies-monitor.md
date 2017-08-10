@@ -15,11 +15,11 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de40d149818b2655a8fc3b647a7e850973814165
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 978e32476069183865f7e729de9791e13bc81ebc
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -46,11 +46,13 @@ Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
 
 ![Kafelek podsumowania w bloku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-user-status-summary.png)
 
--   **Użytkownicy:** całkowita liczba użytkowników w firmie, którzy korzystają z aplikacji skojarzonych z zasadami.
+-   **Użytkownicy**: całkowita liczba użytkowników w firmie, którzy korzystają z aplikacji skojarzonej z zasadami w kontekście służbowym.
 
--   **ZARZĄDZANE PRZEZ ZASADY:** liczba użytkowników, którzy użyli co najmniej jednej z tych aplikacji w kontekście służbowym.
+-   **ZARZĄDZANE PRZEZ ZASADY**: liczba użytkowników, którzy korzystali z aplikacji i mają zasady przypisane do nich w kontekście służbowym.
 
--   **BRAK ZASAD:** liczba użytkowników, którzy używają aplikacji powiązanych z zasadami, ale którzy nie są objęci zasadami. Można rozważyć dodanie tych użytkowników do zasad.
+-   **BRAK ZASAD**: liczba użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
+    > [!NOTE]
+    > Jeśli istnieje wiele zasad dla platformy, użytkownik będzie traktowany jako zarządzany przez zasady, jeśli ma przypisaną co najmniej jedną zasadę.
 
 - **Oflagowani użytkownicy:** liczba użytkowników, którzy napotykają problemy. Obecnie tylko użytkownicy z urządzeniami ze zdjętymi zabezpieczeniami systemu są zgłaszani w sekcji **Oflagowani użytkownicy**.
 
