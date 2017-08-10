@@ -15,17 +15,17 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1c4f6d18fd78f455be8e333bb765080184c908
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: e711f32ebd77a83b17e6db468f8cb23a409c8d31
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="get-started-with-users"></a>Rozpoczynanie pracy z użytkownikami
 
-![Ogólny użytkownik na platformie Azure](/intune/media/generic-intune-user.png)
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Usługa Azure AD służy do zarządzania grupami obiektów należących do organizacji, takimi jak urządzenia i aplikacje, a także grupami użytkowników. Możliwe jest grupowanie użytkowników lub urządzeń, dzięki czemu nie będzie konieczne indywidualne zarządzanie każdym urządzeniem. Pozwoli to w łatwy sposób przypisać aplikacje i ustawienia do dużej liczby użytkowników i urządzeń.
+Usługa Azure Active Directory służy do zarządzania grupami obiektów należących do organizacji, takimi jak urządzenia i aplikacje, a także grupami użytkowników. Możliwe jest grupowanie użytkowników lub urządzeń, dzięki czemu nie będzie konieczne indywidualne zarządzanie każdym urządzeniem. Pozwoli to w łatwy sposób przypisać aplikacje i ustawienia do dużej liczby użytkowników i urządzeń.
 
 ## <a name="how-do-i-create-a-user"></a>Jak utworzyć użytkownika?
 

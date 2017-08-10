@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b08a097e785f85d8b9260cdaa60e720ed88cb4a1
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport 
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupy utworzone przez usługę Intune podczas migracji mogą mieć wpływ na funkcjonalność innych produktów firmy Microsoft
 
-W przypadku migracji z klasycznej usługi Intune do platformy Azure może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
+W przypadku migracji z klasycznej usługi Intune do witryny Azure Portal może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Niektóre funkcje wymagają dodatkowej migracji
 
@@ -51,12 +51,12 @@ Należy przeprowadzić migrację kont usługi Intune utworzonych przed styczniem
 
 Ponieważ tymi funkcjami nie można zarządzać z klasycznej konsoli Silverlight ani z konsoli Azure, migracja:
 - wyłącza je w konsoli klasycznej,
-- włącza je w konsoli Azure.  
+- włącza je w konsoli platformy Azure.  
 
 Jeśli obecnie zarządzasz tymi funkcjami usługi Intune w witrynie Azure Portal, pamiętaj o następujących kwestiach:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Usuwa domyślne profile rejestracji urządzeń firmowych usługi Apple DEP
-Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń objętych programem DEP (Device Enrollment Program) firmy Apple. Ta dostępna w klasycznej konsoli Silverlight usługi Intune funkcja przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
+Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta dostępna w klasycznej konsoli Silverlight usługi Intune funkcja przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Token DEP firmy Apple przywrócony razem z migracją
 
@@ -64,8 +64,7 @@ Jeśli token programu Device Enrollment Program firmy Apple zostanie usunięty w
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Bloki stanu zmigrowanych zasad nie działają
 
-Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznego portalu do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym.
-Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
+Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznego portalu do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
 
 ## <a name="apps"></a>Aplikacje
 

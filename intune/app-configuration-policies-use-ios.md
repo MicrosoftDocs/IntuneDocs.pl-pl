@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/12/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0cbcf70af17ba7690f54196790da04becd8ba1eb
-ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
+ms.openlocfilehash: b261834c85a9dd3cbc6f8fae40933dd7a79acf93
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -37,7 +37,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 
 Nieprawidłowe określenie tych ustawień przez użytkowników może zwiększyć obciążenie działu pomocy technicznej i spowolnić wdrażanie technologii nowych aplikacji.
 
-Zasady konfiguracji aplikacji mogą pomóc wyeliminować te problemy, umożliwiając przypisanie tych ustawień do użytkowników w zasadach, zanim uruchomią oni aplikację. Ustawienia są następnie określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji.
+Zasady konfiguracji aplikacji mogą pomóc wyeliminować te problemy, umożliwiając przypisanie tych ustawień do użytkowników w zasadach, zanim uruchomią oni aplikację. Ustawienia są następnie określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji. Aplikacje muszą być napisane tak, aby obsługiwały korzystanie z konfiguracji aplikacji. Aby uzyskać więcej informacji, skonsultuj się z dostawcą aplikacji.
 
 Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń. W zamian należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad są stosowane zawsze, gdy aplikacja ich szuka (zazwyczaj podczas pierwszego uruchomienia).
 
@@ -57,8 +57,8 @@ Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń.
 5.  W bloku listy zasad wybierz przycisk **Dodaj**.
 6.  W bloku **Dodawanie zasad konfiguracji** podaj nazwę (**Nazwa**) oraz opcjonalny opis (**Opis**) zasad konfiguracji aplikacji.
 7.  Jako wartość pozycji **Typ rejestracji urządzenia** wybierz jedną z następujących:
-    - **Zarejestrowane w usłudze Intune** — dla aplikacji, które mają zintegrowany zestaw SDK aplikacji usługi Intune i są zarządzane przez usługę Intune.
-    - **Nie zarejestrowano w usłudze Intune** — dla aplikacji, które mają zintegrowany zestaw SDK aplikacji usługi Intune i nie są zarządzane przez usługę Intune lub są zarządzane przez inne rozwiązanie.
+    - **Zarejestrowane w usłudze Intune** — dla aplikacji zarządzanych przez usługę Intune.
+    - **Niezarejestrowane w usłudze Intune** — dla aplikacji, które nie są zarządzane przez usługę Intune lub są zarządzane przez inne rozwiązanie.
 8.  W pozycji **Platforma** wybierz **iOS** (tylko w przypadku urządzeń zarejestrowanych w usłudze Intune)
 9.  Wybierz pozycję **Skojarzona aplikacja**, po czym w bloku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację.
 10. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.

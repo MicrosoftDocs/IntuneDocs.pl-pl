@@ -14,11 +14,11 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1627627ab1744f963d738dcedde6a772bb3ae663
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 205c9c52759d5fee2429fe46d19c8882aacafa7a
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Ochrona aplikacji biznesowych i danych na urządzeniach niezarejestrowanych w usłudze Microsoft Intune
 
@@ -31,7 +31,7 @@ W tym temacie objaśniono czynności wymagane do stosowania zasad zarządzania a
 
 ##  <a name="step-1-prepare-the-app"></a>Krok 1. Przygotowywanie aplikacji
 
-Przed zastosowaniem zasady zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](prepare-ios-apps-for-mo/intune/apps-prepare-mobile-application-managementoid](/intune/app-wrapper-prepare-android) lub użyć [zestawu SDK aplikacji Intune](/intune/app-sdk) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
+Przed zastosowaniem zasad zarządzania aplikacjami mobilnymi do aplikacji należy najpierw opakować aplikację za pomocą narzędzia opakowującego w usłudze Microsoft Intune dla systemów [iOS](/intune/app-wrapper-prepare-ios) i [Android](/intune/app-wrapper-prepare-android) lub użyć [zestawu Intune App SDK](/intune/app-sdk) w celu ręcznego zintegrowania funkcji ochrony aplikacji usługi Intune.
 
 Aby uzyskać więcej informacji na temat korzystania z narzędzia opakowującego aplikacje lub zestawu SDK aplikacji usługi Intune, zobacz temat [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 

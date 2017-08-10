@@ -15,11 +15,11 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 272628c501d15dc9661a1110e7dcab2d0e9f1d02
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: f9274daf30a89f75c5c664a17a5f890540e9f562
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -69,7 +69,7 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** | Wybierz opcję **Tak**, aby wymagać od użytkownika logowania się za pomocą konta służbowego zamiast numeru PIN w celu uzyskania dostępu do aplikacji. Wybranie opcji **Tak** przesłania wymagania dotyczące numeru PIN lub funkcji Touch ID.  | Nie |
 | **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root** |  Wybierz opcję **Tak**, aby uniemożliwić tej aplikacji działanie na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root. Użytkownik nadal będzie mógł wykonywać zadania osobiste za pomocą tej aplikacji, ale będzie musiał korzystać z innego urządzenia w celu uzyskania dostępu do danych służbowych w tej aplikacji. | Tak |
 | **Ponownie sprawdź wymagania dostępu po (w minutach)** | Skonfiguruj następujące ustawienia: <ul><li>**Limit czasu**: jest to liczba minut przed ponownym sprawdzeniem wymagań dostępu (zdefiniowanych wcześniej w tych zasadach). Na przykład administrator włącza numer PIN w zasadach, a użytkownik otwiera aplikację MAM i musi wprowadzić numer PIN. Gdyby to ustawienie było używane, użytkownik nie musiałby wprowadzać numeru PIN w żadnej aplikacji MAM przez następne **30 minut** (wartość domyślna).</li><li>**Okres karencji w trybie offline:** jest to liczba minut, przez jaką aplikacja MAM może działać w trybie offline. Określ czas (w minutach) do ponownego sprawdzenia wymagań dostępu dla aplikacji. Wartość domyślna: **720** minut (12 godzin). Po tym czasie aplikacja będzie wymagać uwierzytelnienia użytkownika w usłudze AAD, co pozwoli na kontynuowanie jej działania.</li></ul>| Limit czasu: 30 <br><br> W trybie offline: 720 |
-| **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach)** | Po tej liczbie dni pracy w trybie offline (zdefiniowanej przez administratora) aplikacja sama przeprowadzi selektywne czyszczenie. To selektywne czyszczenie jest takie samo jak to, które może zostać zainicjowanie przez administratora w przepływie pracy czyszczenia zarządzania aplikacjami mobilnymi. <br><br> | 90 dni |
+| **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach)** | Po tej liczbie dni (zdefiniowanej przez administratora) pracy w trybie offline aplikacja będzie wymagała od użytkownika nawiązania połączenia z siecią i przeprowadzenia ponownego uwierzytelnienia. Jeśli użytkownik zostanie pomyślnie uwierzytelniony, może nadal uzyskiwać dostęp do danych, a interwał przebywania w trybie offline zostanie zresetowany.  Jeśli uwierzytelnienie użytkownika zakończy się niepowodzeniem, aplikacja przeprowadzi selektywne czyszczenie konta i danych użytkownika.  Zobacz [Jak czyścić z aplikacji usługi Intune tylko dane firmowe](https://docs.microsoft.com/en-us/intune/apps-selective-wipe), aby uzyskać więcej informacji o rodzaju danych usuwanych podczas selektywnego czyszczenia danych. <br><br> | 90 dni |
 | **Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia** | Wybierz opcję **Tak**, aby wyłączyć numer PIN aplikacji, gdy na zarejestrowanym urządzeniu zostanie wykryta blokada urządzenia. | Nie |
 | **Wymagaj minimalnej wersji systemu operacyjnego iOS** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego iOS do korzystania z tej aplikacji. Jeśli wersja systemu iOS na urządzeniu nie spełnia wymagań, dostęp zostanie dla użytkownika zablokowany. Te zasady obsługują jedną cyfrę po punkcie dziesiętnym, np. iOS 10.3. | Nie |
 | **Wymagaj minimalnej wersji systemu operacyjnego iOS (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego iOS do korzystania z tej aplikacji. Jeśli wersja systemu iOS na urządzeniu nie spełnia wymagań, będzie wyświetlane powiadomienie. Powiadomienie to można odrzucić. Te zasady obsługują jedną cyfrę po punkcie dziesiętnym, np. iOS 10.3. | Nie |

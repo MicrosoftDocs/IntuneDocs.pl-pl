@@ -15,11 +15,11 @@ ms.assetid: 0444183e-f924-4605-96a8-48fdfbc58fd1
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e442a0ee7953fe5474d39e1a29a88dfcca58800d
-ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
+ms.openlocfilehash: 55fa980c79ed178649562189dfe8fb704e26fcd9
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-preview-with-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem macOS (wersja zapoznawcza) za pomocą usługi Intune
 
@@ -104,6 +104,9 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 - **Liczba poprzednich haseł, których nie można użyć ponownie** — określ liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 
+    > [!IMPORTANT]
+    > W przypadku zmiany wymagania dotyczącego hasła na urządzeniu z systemem macOS zmiana będzie obowiązywać dopiero od następnej zmiany hasła przez użytkownika. Na przykład jeśli ustawiono ograniczenie długości hasła do ośmiu cyfr, a na urządzeniu z systemem macOS jest obecnie stosowane hasło o długości 6 cyfr, urządzenie pozostanie zgodne, dopóki użytkownik nie zechce zaktualizować swojego hasła na tym urządzeniu.
+
 ## <a name="to-create-a-device-compliance-policy"></a>Aby utworzyć zasadę zgodności urządzenia
 
 1. Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
@@ -128,7 +131,7 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 
-Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zgodność — zasady**.
+Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zasady zgodności**.
 
 1. Wybierz zasady zgodności urządzeń, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
 

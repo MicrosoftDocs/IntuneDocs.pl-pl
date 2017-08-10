@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 07/10/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 71558786cc7f058cee31e9bbe3960ed75a76891b
-ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
+ms.openlocfilehash: b535c137d16ed8e17f4aee22d1fe2e922247f088
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="implement-your-intune-plan"></a>Implementowanie własnego planu dotyczącego usługi Intune
 
@@ -32,7 +32,7 @@ Główne wymagania autonomicznej usługi Intune to:
 
 -   Subskrypcja pakietu Enterprise Mobility + Security (EMS)/usługi Intune
 
--   Subskrypcja usługi Office 365 (w przypadku aplikacji pakietu Office i aplikacji zarządzanych przez zasady zarządzania aplikacjami mobilnymi)
+-   Subskrypcja usługi Office 365 (w przypadku aplikacji pakietu Office i aplikacji zarządzanych za pomocą zasad ochrony aplikacji)
 
 -   Certyfikat Apple APNs (w celu włączenia zarządzanie platformą urządzeń z systemem iOS)
 
@@ -109,7 +109,7 @@ Usługa Intune obsługuje profile poczty e-mail, sieci Wi-Fi i sieci VPN. Dodaj 
 
 ### <a name="task-10-add-and-deploy-apps"></a>Zadanie 10. Dodawanie i wdrażanie aplikacji
 
-Usługa Intune obsługuje wdrażanie aplikacji internetowych, aplikacji biznesowych i publicznych aplikacji ze Sklepu. Dodatkowo możliwe jest zarządzanie aplikacjami, w których zintegrowano zestaw SDK usługi Intune przez skojarzenie ich z zasadami zarządzania aplikacjami mobilnymi. Dodaj odpowiednie aplikacje i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
+Usługa Intune obsługuje wdrażanie aplikacji internetowych, aplikacji biznesowych i publicznych aplikacji ze Sklepu. Dodatkowo możliwe jest zarządzanie aplikacjami, w których zintegrowano zestaw Intune SDK przez skojarzenie ich z zasadami ochrony aplikacji. Dodaj odpowiednie aplikacje i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 
 -   Dowiedz się więcej o [dodawaniu i wdrażaniu aplikacji](app-management.md).
 

@@ -14,21 +14,19 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e66042e5198b76ec484fe0218127acb653394cce
-ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
+ms.openlocfilehash: 9e1b11f9bf644b2e92dad0d0281bf11febae622b
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/03/2017
 ---
-# Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
-<a id="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies" class="xliff"></a>
+# <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
  W tym temacie opisano środowisko użytkownika aplikacji objętych zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane do celów służbowych, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
 
-##  Dostęp do aplikacji
-<a id="access-apps" class="xliff"></a>
+##  <a name="access-apps"></a>Dostęp do aplikacji
 
 Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zostanie poproszony o ponowne uruchomienie aplikacji przy jej pierwszym użyciu. Aby do aplikacji można było zastosować zasady ochrony aplikacji, należy ponownie uruchomić urządzenie.
 
@@ -39,19 +37,17 @@ Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zo
 
 Na urządzeniach, które są **zarejestrowane do celów zarządzania w usłudze Intune**, użytkownik zobaczy komunikat, że jego aplikacja jest teraz zarządzana.
 
-##  Korzystanie z aplikacji z obsługą wielu tożsamości
-<a id="use-apps-with-multi-identity-support" class="xliff"></a>
+##  <a name="use-apps-with-multi-identity-support"></a>Korzystanie z aplikacji z obsługą wielu tożsamości
 
 Aplikacje, które obsługują wiele tożsamości, umożliwiają uzyskiwanie dostępu do tych samych aplikacji przy użyciu różnych kont (służbowych i osobistych), podczas gdy zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane w kontekście służbowym.  
 
 Na przykład podczas uzyskiwania dostępu do danych służbowych użytkownik zobaczy monit o podanie numeru PIN. W przypadku **aplikacji Outlook** użytkownik musi podać numer PIN podczas uruchamiania aplikacji. Korzystając z **aplikacji OneDrive**, użytkownik jest monitowany o numer PIN przy podawaniu konta służbowego.  W przypadku aplikacji Microsoft **Word**, **PowerPoint** i **Excel** numer PIN trzeba podać w celu uzyskania dostępu do dokumentów przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
 
-- Dowiedz się więcej o aplikacjach, które obsługują [zarządzanie aplikacjami mobilnymi (MAM) i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
+- Dowiedz się więcej o aplikacjach, które obsługują [ochronę aplikacji i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
 
 Zasady ochrony aplikacji są stosowane tylko w kontekście służbowym. W związku z tym aplikacja może zachowywać się inaczej w zależności od tego, czy jest używana w kontekście służbowym czy osobistym.
 
-##  Zarządzanie kontami użytkowników na urządzeniu
-<a id="manage-user-accounts-on-the-device" class="xliff"></a>
+##  <a name="manage-user-accounts-on-the-device"></a>Zarządzanie kontami użytkowników na urządzeniu
 
 Usługa Intune obsługuje wdrażanie zasad ochrony aplikacji tylko na jednym koncie użytkownika na każdym urządzeniu.
 
@@ -67,11 +63,9 @@ Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasad
 
 Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady ochrony aplikacji za pomocą usługi Intune. **Firma X** wdraża zasady ochrony aplikacji **przed** **Firmą Y**. Zasady ochrony aplikacji zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane zgodnie z zasadami ochrony aplikacji, musisz usunąć konto użytkownika skojarzone z Firmą X.
 
-### Dodawanie drugiego konta
-<a id="add-a-second-account" class="xliff"></a>
+### <a name="add-a-second-account"></a>Dodawanie drugiego konta
 
 Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym urządzeniu może zostać wyświetlony komunikat o blokadzie. Konta zostaną wyświetlone, umożliwiając wybranie konta do usunięcia.
 
-## Następne kroki
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Następne kroki
 [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](end-user-mam-apps-android.md)

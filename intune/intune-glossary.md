@@ -1,37 +1,35 @@
 ---
 title: "Słownik dotyczący usługi Intune"
-titleSuffix: Intune on Azure
+titleSuffix: 
 description: "Zapoznaj się z terminologią dotyczącą usługi Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: a9b43fc1a1877a3fc8bf4c5ee00e02dfee3cdea8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Słownik usługi Microsoft Intune
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="a"></a>A
 
 |||
 |-|-|
 |Przypisanie aplikacji|Umożliwia użytkownikom [znajdowanie, pobieranie i instalowanie](/intune/app-management) potrzebnych im aplikacji. Ta funkcja była wcześniej znana jako *wdrażanie aplikacji*.|
-|Profil konfiguracji aplikacji|Konfiguruje aplikację dla systemu [iOS](/intune/app-configuration-policies-use-ios) lub [Android](/intune/app-configuration-policies-use-android) przy użyciu konkretnych ustawień, zanim zostanie ona uruchomiona.|
+|Profil konfiguracji aplikacji <br/><br/>Zasady konfiguracji aplikacji|Dostępne dla aplikacji mobilnych z konfiguracjami specyficznymi dla dostawcy. Konfiguruje aplikację dla systemu [iOS](/intune/app-configuration-policies-use-ios) lub [Android](/intune/app-configuration-policies-use-android) przy użyciu konkretnych ustawień, zanim zostanie ona uruchomiona.|
 |Monitorowanie aplikacji|Umożliwia [sprawdzenie ostatniego stanu i przejrzenie działań](/intune/apps-monitor) związanych z przypisaniem aplikacji.|
 |Zadanie usuwania danych w ramach ochrony aplikacji|[Usuwa dane aplikacji](/intune/app-protection-policies) z urządzenia użytkownika.|
-|Zasady ochrony aplikacji|Zapewnia, że aplikacje użytkownika są zgodne z [zasadami ochrony danych firmy](/intune/app-protection-policies).|
+|Zasady ochrony aplikacji|Dostępne dla aplikacji mobilnych integrujących się z technologią pakietu Enterprise Mobility + Security (EMS). Zapewnia, że aplikacje użytkownika są zgodne z [zasadami ochrony danych firmy](/intune/app-protection-policies).|
 |Zestaw SDK aplikacji|[Zestaw SDK aplikacji usługi Microsoft Intune](/intune/app-sdk) umożliwia dodawanie funkcji do aplikacji utworzonych we własnym zakresie, co pozwala na zarządzanie tymi aplikacjami za pośrednictwem zasad ochrony aplikacji usługi Intune.|
 |Akcja odinstalowania aplikacji|Umożliwia [odinstalowanie aplikacji](/intune/apps-deploy) z urządzeń użytkownika.|
 |Narzędzie opakowujące aplikacje|[Aplikacja wiersza polecenia](/intune/apps-prepare-mobile-application-management) tworząca warstwę opakowującą aplikację biznesową, która z kolei umożliwia zarządzanie aplikacją za pośrednictwem zasad ochrony aplikacji.|
@@ -103,7 +101,7 @@ ms.lasthandoff: 07/01/2017
 |-|-|
 |Managed Browser|[Aplikacja służąca do przeglądania sieci Web](/intune/app-configuration-managed-browser), którą można przypisać w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.|
 |Urząd zarządzania urządzeniami przenośnymi|[Urząd MDM](/intune/mdm-authority-set) definiuje usługę zarządzania z uprawnieniami do zarządzania zestawem urządzeń. Opcje przeznaczone dla urzędu zarządzania urządzeniami przenośnymi obejmują samą usługę Intune oraz program Configuration Manager z usługą Intune.|
-|Zasady konfiguracji aplikacji mobilnych|Zasady dotyczące systemu [iOS](/intune/app-configuration-policies-use-ios) lub [Android](/intune/app-configuration-policies-use-android), które służą do określania ustawień dla zgodnych aplikacji podczas ich uruchamiania (np. nazwy firmy lub adresu serwera).|
+|Zasady konfiguracji aplikacji mobilnych|Dostępne dla aplikacji mobilnych z konfiguracjami specyficznymi dla dostawcy. Na przykład zasady dotyczące systemu [iOS](/intune/app-configuration-policies-use-ios) lub [Android](/intune/app-configuration-policies-use-android), które służą do określania ustawień dla zgodnych aplikacji podczas ich uruchamiania (np. nazwa firmy lub adres serwera).|
 |Zasady inicjowania obsługi administracyjnej aplikacji mobilnych|Zasady dotyczące systemu iOS, które ułatwiają zapewnienie, że [profile aprowizacji](/intune/app-provisioning-profile-ios) wdrażanych aplikacji dla systemu iOS nie wygasną.|
 |Zarządzanie aplikacjami mobilnymi|[Zarządzanie aplikacjami mobilnymi (MAM, mobile application management)](/intune/app-lifecycle) pozwala publikować, wypychać, konfigurować, zabezpieczać, monitorować i aktualizować aplikacje mobilne dla użytkowników.
 |Zarządzanie urządzeniami przenośnymi|[Zarządzanie urządzeniami mobilnymi (MDM)](/intune/device-lifecycle) pozwala rejestrować urządzenia w usłudze Intune w sposób umożliwiający ich aprowizowanie, konfigurowanie, monitorowanie i zarządzanie nimi.
@@ -131,7 +129,7 @@ ms.lasthandoff: 07/01/2017
 ## <a name="s"></a>S
 |||
 |-|-|
-|Selektywne czyszczenie danych|[Selektywne czyszczenie danych](/intune/device-company-data-remove) powoduje usunięcie z urządzenia tylko danych firmowych, w tym danych zarządzania aplikacjami mobilnymi (jeśli ma to zastosowanie), ustawień i profilów poczty e-mail. Selektywne czyszczenie danych nie powoduje usunięcia osobistych danych użytkownika z urządzenia.|
+|Selektywne czyszczenie danych|[Selektywne czyszczenie danych](/intune/device-company-data-remove) powoduje usunięcie z urządzenia tylko danych firmowych, dla których mają zastosowanie zasady ochrony aplikacji, w tym ustawień i profilów poczty e-mail. Selektywne czyszczenie danych nie powoduje usunięcia osobistych danych użytkownika z urządzenia.|
 |Pobieranie lokalne|Akcja instalowania aplikacji biznesowych bez uzyskiwania dostępu do nich ze sklepu z aplikacjami.|
 |Subskrypcja|Zawarta umowa, która umożliwia dostęp do dzierżawy usługi Intune.|
 

@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2302b0e53254b945215aadbb13107c85f345412
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
+ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -57,9 +57,9 @@ Tylko użytkownicy usługi Intune **Administratorzy usługi** z pełnymi uprawni
 
 Poniższe role są wbudowane w usługę Intune i można je przypisać do grup bez dalszej konfiguracji:
 
-- **Pracownik punktu pomocy**: wykonuje zadania zdalne na użytkownikach i urządzeniach i może przypisywać aplikacje lub zasady do użytkowników lub urządzeń. 
-- **Menedżer zasad i profili**: zarządza zasadami zgodności, profilami konfiguracji i rejestracją Apple oraz identyfikatorami urządzeń firmowych.
-- **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji i nie może wprowadzać zmian w usłudze Intune.
+- **Pracownik punktu pomocy**: wykonuje zadania zdalne na użytkownikach i urządzeniach i może przypisywać aplikacje lub zasady do użytkowników lub urządzeń.
+- **Menedżer zasad i profilów**: zarządza zasadami zgodności, profilami konfiguracji i rejestracją Apple oraz identyfikatorami urządzeń firmowych.
+- **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji. Nie może wprowadzać zmian w usłudze Intune.
 - **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi i może odczytywać informacje o urządzeniu.
 
 ### <a name="to-assign-a-built-in-role"></a>Aby przypisać rolę wbudowaną
@@ -68,9 +68,9 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 
 2. W bloku <*nazwa roli*> - **Właściwości** wybierz pozycję **Zarządzaj**, a następnie **Przypisania**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Nie można usunąć ani edytować ról wbudowanych
-    
+
 3. W bloku roli niestandardowej wybierz pozycję **Przypisz**.
 
 4. W bloku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:

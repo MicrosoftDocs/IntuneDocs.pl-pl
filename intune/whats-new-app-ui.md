@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,62 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e2e1eb6da9114c689aae5eb06f7d7c780f35817
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 948a7d2e4e0ad80088d864708db5733f08db77c5
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+
+## <a name="week-of-july-31-2017"></a>Tydzień od 31 lipca 2017 r.
+
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
+
+Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
+
+Poniżej przedstawiono poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia.
+
+__Poprzednie środowisko logowania__
+
+![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
+
+![Po wybraniu przycisku Zaloguj użytkownik wprowadza swoje poświadczenia na stronie z monitem o podanie adresu e-mail i hasła, na której znajdują się także informacje dotyczące rozwiązywania problemów z hasłem.](./media/cp_ios_aad_signin_before_1704_002.png)
+
+![Po wpisaniu hasła przez użytkownika w aplikacji Portal firmy następuje logowanie, którego postęp jest widoczny na pasku ładowania.](./media/cp_ios_aad_signin_before_1704_003.png)
+
+__Nowe środowisko logowania__
+
+![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_after_1704_001.png)
+
+![Na jednym ekranie użytkownik otrzymuje zwykle monit o podanie samego adresu e-mail, a nie adresu e-mail i hasła.](./media/cp_ios_aad_signin_after_1704_002.png)
+
+![Monit o podanie hasła wyświetla się po zaakceptowaniu podanego adresu e-mail.](./media/cp_ios_aad_signin_after_1704_003.png)
+
+![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+__Nowe środowisko logowania dostępne podczas logowania za pomocą innego urządzenia__
+
+![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+
+Wybierz link __Zaloguj się za pomocą innego urządzenia__.
+
+![Zgodnie z instrukcjami po uzyskaniu unikatowego kodu dostępu należy na komputerze służbowym przejść na stronę aka.ms/devicelogin, a następnie zalogować się, korzystając z kodu.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
+
+Uruchom przeglądarkę i przejdź na stronę [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+
+![Zrzut ekranu przedstawiający przeglądarkę użytkownika na komputerze służbowym zamiast aplikacji Portal firmy. Na stronie „Logowanie do urządzenia” zostanie wyświetlony monit o podanie kodu odebranego w aplikacji Portal firmy.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+
+Wprowadź kod z aplikacji Portal firmy. Po wybraniu pozycji __Kontynuuj__ będzie możliwe uwierzytelnienie przy użyciu dowolnej metody obsługiwanej przez firmę, np. z użyciem karty inteligentnej.
+
+![Użytkownik wprowadził w odpowiednim polu swój unikatowy kod, a w witrynie „Logowanie do urządzenia” został wyświetlony monit o potwierdzenie, że aplikacja Portal firmy usługi Intune jest właściwą aplikacją, która ma otrzymać autoryzację do logowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
+
+![Strona potwierdzenia stwierdzająca, że użytkownik zalogował się do aplikacji Portal firmy na urządzeniu i że można już zamknąć tę stronę.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+
+W aplikacji Portal firmy rozpocznie się logowanie.
+
+![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
 ## <a name="week-of-june-12-2017"></a>Tydzień od 12 czerwca 2017 r.
 
@@ -180,51 +228,12 @@ Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualiz
 > [!Note]
 > Należy pamiętać, że poniższe obrazy mogą być wersjami wstępnymi i zapowiadany produkt może różnić się od prezentowanych wersji.
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
+### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizacje interfejsu użytkownika witryny internetowej Portal firmy <!--1313244 part 2-->
 
-Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
+__Aktualizacje sekcji Polecane aplikacje__ — do witryny dodaliśmy dedykowaną stronę, na której użytkownicy mogą przeglądać aplikacje wybrane do polecania. Dostosowaliśmy również interfejs użytkownika w sekcji Polecane na stronie głównej.
 
-Poniżej przedstawiono poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia.
+![Kolorowe kafelki przedstawiające aplikacje. Są to duże kolorowe kwadraty znajdujące się poniżej każdej aplikacji, których kolor jest określany na podstawie podstawowego koloru logo aplikacji. Sekcja „Polecane aplikacje” jest wyświetlana w górnej części aplikacji Portal firmy.](./media/cp_win10_colorful_tiles_after_1708.png)
 
-__Poprzednie środowisko logowania__
-
-![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
-
-![Po wybraniu przycisku Zaloguj użytkownik wprowadza swoje poświadczenia na stronie z monitem o podanie adresu e-mail i hasła, na której znajdują się także informacje dotyczące rozwiązywania problemów z hasłem.](./media/cp_ios_aad_signin_before_1704_002.png)
-
-![Po wpisaniu hasła przez użytkownika w aplikacji Portal firmy następuje logowanie, którego postęp jest widoczny na pasku ładowania.](./media/cp_ios_aad_signin_before_1704_003.png)
-
-__Nowe środowisko logowania__
-
-![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_after_1704_001.png)
-
-![Na jednym ekranie użytkownik otrzymuje zwykle monit o podanie samego adresu e-mail, a nie adresu e-mail i hasła.](./media/cp_ios_aad_signin_after_1704_002.png)
-
-![Monit o podanie hasła wyświetla się po zaakceptowaniu podanego adresu e-mail.](./media/cp_ios_aad_signin_after_1704_003.png)
-
-![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
-
-__Nowe środowisko logowania dostępne podczas logowania za pomocą innego urządzenia__
-
-![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
-
-Wybierz link __Zaloguj się za pomocą innego urządzenia__.
-
-![Zgodnie z instrukcjami po uzyskaniu unikatowego kodu dostępu należy na komputerze służbowym przejść na stronę aka.ms/devicelogin, a następnie zalogować się, korzystając z kodu.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
-
-Uruchom przeglądarkę i przejdź na stronę [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
-
-![Zrzut ekranu przedstawiający przeglądarkę użytkownika na komputerze służbowym zamiast aplikacji Portal firmy. Na stronie „Logowanie do urządzenia” zostanie wyświetlony monit o podanie kodu odebranego w aplikacji Portal firmy.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
-
-Wprowadź kod z aplikacji Portal firmy. Po wybraniu pozycji __Kontynuuj__ będzie możliwe uwierzytelnienie przy użyciu dowolnej metody obsługiwanej przez firmę, np. z użyciem karty inteligentnej.
-
-![Użytkownik wprowadził w odpowiednim polu swój unikatowy kod, a w witrynie „Logowanie do urządzenia” został wyświetlony monit o potwierdzenie, że aplikacja Portal firmy usługi Intune jest właściwą aplikacją, która ma otrzymać autoryzację do logowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
-
-![Strona potwierdzenia stwierdzająca, że użytkownik zalogował się do aplikacji Portal firmy na urządzeniu i że można już zamknąć tę stronę.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
-
-W aplikacji Portal firmy rozpocznie się logowanie.
-
-![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 ### <a name="see-also"></a>Zobacz także
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plan platformy w chmurze](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)

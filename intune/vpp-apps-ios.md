@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/03/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b7ce81eb63a81534af2911b34904d870ac41ad
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 433cec8e0bc2012090e680e0a28a9a77d7b13a38
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -33,6 +33,19 @@ Usługa Microsoft Intune ułatwia zarządzanie aplikacjami kupionymi za pośredn
 - Importowanie informacji o licencji ze sklepu z aplikacjami
 - Śledzenie liczby używanych licencji
 - Zapobieganie instalacji większej liczby kopii aplikacji niż posiadana
+
+Istnieją dwie metody przypisywania aplikacji nabytych w ramach zakupów zbiorczych:
+
+### <a name="device-licensing"></a>Licencjonowanie na urządzenie
+
+W przypadku przypisania aplikacji do urządzeń używana jest jedna licencja aplikacji, która pozostaje skojarzona z urządzeniem, do którego została przypisana.
+W przypadku przypisania aplikacji nabytych w ramach zakupów zbiorczych do urządzeń użytkownik końcowy urządzenia nie musi podawać identyfikatora Apple ID, aby uzyskać dostęp do sklepu. 
+
+### <a name="user-licensing"></a>Licencjonowanie na użytkownika
+
+W przypadku przypisania aplikacji do użytkowników używana jest jedna licencja aplikacji, która jest skojarzona z użytkownikiem. Aplikacja może być uruchamiana na wielu urządzeniach, które należą do użytkownika.
+W przypadku przypisania aplikacji nabytych w ramach zakupów zbiorczych do użytkowników każdy użytkownik końcowy musi mieć prawidłowy identyfikator Apple ID, aby uzyskać dostęp do sklepu z aplikacjami.
+
 
 Oprócz tego możesz także synchronizować książki kupione w sklepie programu Apple Volume Purchase Program oraz zarządzać nimi i przypisywać je przy użyciu usługi Intune. Do zarządzania książkami służy obciążenie **Książki** w portalu usługi Intune. Procedury zarządzania książkami są takie same, jak używane do zarządzania aplikacjami.
 Przed rozpoczęciem działania trzeba przekazać token programu Apple Volume Purchase Program. Obecnie można przypisywać książki wyłącznie w ramach opcji instalacji **Wymagane**.
@@ -81,24 +94,28 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Licencjonowane aplikacje**.
-2. W bloku listy aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
-3. W bloku <*nazwa aplikacji*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
-4. Wybierz pozycję **Przypisz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
-Musisz wybrać akcję przypisania **Wymagane**. Ponadto przypisania do grup urządzeń są dostępne dla nowych dzierżaw utworzonych po styczniu 2017 r. Jeśli Twoja dzierżawa została utworzona wcześniej i nie masz możliwości przypisania aplikacji VPP do grup urządzeń, skontaktuj się z pomocą techniczną usługi Intune.
-5. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
+1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Licencje aplikacji**.
+2.  W bloku listy aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
+3.  W bloku *<app name>* - **Przypisania** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
+4.  Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybieranie grup** wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
+5.  Dla każdej wybranej grupy wybierz następujące ustawienia:
+    - **Typ** — wybierz, czy aplikacja będzie **dostępna** (użytkownicy końcowi mogą instalować aplikację z Portalu firmy), czy **wymagana** (urządzenia użytkowników końcowych automatycznie pobiorą i zainstalują aplikację).
+W przypadku przypisywania aplikacji VPP jako elementu o właściwości **Dostępna** zawartość i licencja aplikacji są przypisywane bezpośrednio ze sklepu z aplikacjami.
+    - **Typ licencji** — wybierz **Licencjonowanie na użytkownika** lub **Licencjonowanie na urządzenie**.
+6.  Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
+
 
 >[!NOTE]
 >Wyświetlona lista aplikacji jest skojarzona z tokenem. Jeśli dana aplikacja jest skojarzona z wieloma tokenami VPP, zostanie ona wyświetlona wiele razy (po jednym razie dla każdego tokenu).
 
-Informacje przydatne do monitorowania przypisań aplikacji znajdują się w artykule [How to monitor apps](apps-monitor.md) (Jak monitorować aplikacje).
-
 ## <a name="further-information"></a>Dodatkowe informacje
 
-Podczas przypisywania aplikacji jako instalacji **wymaganej** licencja jest używana przez każdego użytkownika, który instaluje aplikację.
-
-Aby odzyskać licencję, należy zmienić akcję przypisywania na **Odinstaluj**. Licencja zostanie odzyskana po odinstalowaniu aplikacji.
+Aby odzyskać licencję, należy zmienić akcję przypisywania na Odinstaluj. Licencja zostanie odzyskana po odinstalowaniu aplikacji.
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP po raz pierwszy, zostanie poproszony o dołączenie do programu Apple Volume Purchase Program. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana. Zaproszenie do dołączenia do programu Apple Volume Purchase program wymaga, aby użytkownik był w stanie używać aplikacji iTunes na urządzeniu z systemem iOS. Jeśli ustawiono zasady wyłączające aplikację sklepu iTunes, oparte na użytkowniku licencje na aplikacje VPP nie działają. Rozwiązanie polega na zezwoleniu na działanie aplikacji iTunes poprzez usunięcie zasad lub na zastosowaniu licencji opartych na urządzeniach.
 
-W przypadku przypisywania aplikacji VPP jako elementu o właściwości Dostępne zawartość aplikacji oraz licencja są przypisywane bezpośrednio ze sklepu z aplikacjami.
+
+
+## <a name="next-steps"></a>Następne kroki
+
+Informacje przydatne do monitorowania przypisań aplikacji znajdują się w artykule [How to monitor apps](apps-monitor.md) (Jak monitorować aplikacje).

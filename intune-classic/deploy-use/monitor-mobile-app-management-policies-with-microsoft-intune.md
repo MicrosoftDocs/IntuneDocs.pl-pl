@@ -14,11 +14,11 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5be08d2535acefe099429ab732d6d5d99205b2e7
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Monitorowanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 Możesz monitorować stan zgodności zasad ochrony aplikacji, które zostały zastosowane do użytkowników. Możesz uzyskać dostęp do informacji o użytkownikach, których dotyczą zasady ochrony aplikacji, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
@@ -43,11 +43,13 @@ W bloku **Zarządzanie aplikacjami mobilnymi w usłudze Intune** widoczne jest p
 
 ![Kafelek podsumowania w bloku zarządzania aplikacjami mobilnymi usługi Intune](../media/mam-azure-portal-user-status-summary.png)
 
--   **Użytkownicy:** całkowita liczba użytkowników w firmie, którzy korzystają z aplikacji skojarzonych z zasadami.
+-   **Użytkownicy**: całkowita liczba użytkowników w firmie, którzy korzystają z aplikacji skojarzonej z zasadami w kontekście służbowym.
 
--   **ZARZĄDZANE PRZEZ ZASADY:** liczba użytkowników, którzy użyli co najmniej jednej z tych aplikacji w kontekście służbowym.
+-   **ZARZĄDZANE PRZEZ ZASADY**: liczba użytkowników, którzy korzystali z aplikacji i mają zasady przypisane do nich w kontekście służbowym.
 
--   **BRAK ZASAD:** liczba użytkowników, którzy używają aplikacji powiązanych z zasadami, ale którzy nie są objęci zasadami. Można rozważyć dodanie tych użytkowników do zasad.
+-   **BRAK ZASAD**: liczba użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
+    > [!NOTE]
+    > Jeśli istnieje wiele zasad dla platformy, użytkownik będzie traktowany jako zarządzany przez zasady, jeśli ma przypisaną co najmniej jedną zasadę.
 
 - **Oflagowani użytkownicy:** liczba użytkowników, którzy napotykają problemy. Obecnie tylko użytkownicy z urządzeniami ze zdjętymi zabezpieczeniami systemu są zgłaszani w sekcji **Oflagowani użytkownicy**.
 
