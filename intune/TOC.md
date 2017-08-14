@@ -74,6 +74,7 @@
 #### [Ograniczenia](enrollment-restrictions-set.md)
 #### [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 #### [Identyfikatory firmy](corporate-identifiers-add.md)
+#### [Uwierzytelnianie wieloskładnikowe](multi-factor-authentication.md)
 #### [Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)
 #### [Mapowanie urządzeń na grupy](device-group-mapping.md)
 ### Konfigurowanie rejestracji systemu Windows
@@ -291,7 +292,7 @@
 ## [Korzystanie z interfejsów API programu Intune Graph](intune-graph-apis.md)
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
 ## [Intune Date Warehouse API (Interfejs API magazynu danych usługi Intune)](reports-nav-intune-date-warehouse.md)
-<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST](reports-proc-data-rest.md)
 ### [Data Warehouse API endpoint (Punkt końcowy interfejsu API magazynu danych)](reports-api-url.md)
 ### [Data Warehouse data model (Model danych magazynu danych)](reports-ref-data-model.md)
 #### [Odwołanie do jednostki daty](reports-ref-date.md)
@@ -300,6 +301,6 @@
 #### [Odwołanie do jednostki urządzeń](reports-ref-devices.md)
 #### [Reference for application entities (Dokumentacja jednostek aplikacji)](reports-ref-application.md)
 #### [Dokumentacja jednostek zasad](reports-ref-policy.md)
-<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) -->
 
 # [Słownik](intune-glossary.md)
