@@ -291,7 +291,7 @@
 ### [Składnik Xamarin zestawu SDK aplikacji usługi Intune](app-sdk-xamarin.md)
 ## [Korzystanie z interfejsów API programu Intune Graph](intune-graph-apis.md)
 ## [Interfejs API programu Intune Graph](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-## [Intune Date Warehouse API (Interfejs API magazynu danych usługi Intune)](reports-nav-intune-date-warehouse.md)
+## [Interfejs API magazynu danych usługi Intune](reports-nav-intune-data-warehouse.md)
 ### [Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST](reports-proc-data-rest.md)
 ### [Data Warehouse API endpoint (Punkt końcowy interfejsu API magazynu danych)](reports-api-url.md)
 ### [Data Warehouse data model (Model danych magazynu danych)](reports-ref-data-model.md)
