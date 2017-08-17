@@ -14,11 +14,11 @@ ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 586a5355e2ee4b0dda6e0238628fa71bdce6f1a2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1cccc69ab772499183a7f434303d78ecf4308a5f
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Jak zaktualizować aplikację Portal firmy
 
@@ -40,12 +40,12 @@ Aby zaktualizować aplikację Portal firmy:
 
 ## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Aktualizowanie aplikacji Portal firmy usługi Intune na urządzeniu z systemem Windows
 
-1.  Przejdź do Sklepu Windows i wyszukaj ciąg **portal firmy Intune**.
+1.  Przejdź do Sklepu Microsoft i wyszukaj ciąg **portal firmy Intune**.
 
 2.  Postępuj zgodnie z instrukcjami instalacji.
 
     > [!NOTE]
-    > Jeśli nie możesz uzyskać dostępu do Sklepu Windows, skontaktuj się z administratorem IT.
+    > Jeśli nie możesz uzyskać dostępu do Sklepu Microsoft, skontaktuj się z administratorem IT.
 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).

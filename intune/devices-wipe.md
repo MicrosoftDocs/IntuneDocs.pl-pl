@@ -1,12 +1,12 @@
 ---
-title: "Pełne lub selektywne czyszczenie na urządzeniach za pomocą usługi Intune"
+title: "Korzystanie z resetowania do ustawień fabrycznych lub usuwania danych firmy na urządzeniach przy użyciu usługi Intune"
 titleSuffix: Intune on Azure
-description: "Informacje na temat przeprowadzania selektywnego czyszczenia danych firmy na urządzeniu lub pełnego czyszczenia z przywróceniem ustawień fabrycznych urządzenia."
+description: "Dowiedz się, jak usunąć dane firmy z urządzenia lub zresetować urządzenie do ustawień fabrycznych."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/21/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,64 +14,40 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 44d1695b3f0297276376fb9cb4367c1411aa31b2
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 331ced93f0697f7c76d1356aae32b955602d17a3
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/10/2017
 ---
-# <a name="use-full-or-selective-wipe"></a>Korzystanie z czyszczenia pełnego lub selektywnego
+# <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Z urządzeń zarządzanych przez usługę Intune, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione, można wyczyścić aplikacje i dane. Usługa Intune umożliwia selektywne i pełne czyszczenie danych. Użytkownicy mogą także wydać z aplikacji Portal firmy usługi Intune polecenie zdalnego wyczyszczenia urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
+Z usługi Intune możesz usunąć urządzenia, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione. Możesz to zrobić przy użyciu polecenia **usunięcia danych firmy** lub **zresetowania do ustawień fabrycznych**. Użytkownicy mogą też wydać z aplikacji Portal firmy usługi Intune polecenie do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
 
-  > [!NOTE]
-  > Ten temat dotyczy tylko czyszczenia danych z urządzeń zarządzanych w ramach zarządzania urządzeniami przenośnymi przez usługę Intune. Można również użyć [witryny Azure Portal](https://portal.azure.com) do [wyczyszczenia danych firmowych z aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/wipe-managed-company-app-data-with-microsoft-intune). Możesz również [wycofać komputery zarządzane przy użyciu oprogramowania klienckiego usługi Intune](https://docs.microsoft.com/intune-classic/deploy-use/retire-a-windows-pc-with-microsoft-intune).
+> [!NOTE]
+> Zanim usuniesz użytkownika z usługi Azure Active Directory, wydaj polecenie **zresetowania do ustawień fabrycznych** lub **usunięcia danych firmy** wszystkim urządzeniom skojarzonym z tym użytkownikiem. Jeśli usuniesz użytkowników z zarządzanymi urządzeniami z usługi Azure Active Directory, usługa Intune nie może już wydawać poleceń resetowania do ustawień fabrycznych lub usuwania danych firmy do tych urządzeń.
 
-## <a name="full-wipe"></a>Pełne czyszczenie danych
+## <a name="factory-reset"></a>Resetowanie do ustawień fabrycznych
 
-**Pełne czyszczenie danych** przywraca ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień dotyczących firmy oraz użytkownika. Urządzenie jest usuwane z usługi Intune. Pełne czyszczenie danych jest przydatne w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia.  **Należy rozważnie korzystać z funkcji pełnego czyszczenia danych. Nie będzie można odzyskać danych na urządzeniu**.
+**Resetowanie do ustawień fabrycznych** przywraca ustawienia fabryczne urządzenia, usuwając wszystkie dane i ustawienia dotyczące firmy oraz użytkownika. Urządzenie jest usuwane z zarządzania przez usługę Intune. Resetowanie do ustawień fabrycznych jest przydatne w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia. Należy rozważnie korzystać z funkcji resetowania do ustawień fabrycznych. Nie będzie można odzyskać danych na urządzeniu.
 
+### <a name="to-factory-reset-a-device"></a>Aby zresetować urządzenie do ustawień fabrycznych
 
-> [!Warning]
-> Urządzenia z systemem Windows 10 RTM (wcześniejszym niż Windows 10 w wersji 1511) mające mniej niż 4 GB pamięci RAM mogą stać się niedostępne, jeśli zostaną wyczyszczone. Urządzenie z systemem Windows 10, które przestało odpowiadać, można uruchomić z napędu USB.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+3. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+4. Wybierz nazwę urządzenia, które chcesz zresetować do ustawień fabrycznych.
+5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Resetowanie do ustawień fabrycznych**, a następnie wybierz pozycję **Tak**, aby potwierdzić.
 
+Jeśli urządzenie zostało włączone i połączone, propagowanie polecenia resetowania do ustawień fabrycznych do wszystkich typów urządzeń trwa mniej niż 15 minut.
 
-**Aby przeprowadzić pełne czyszczenie (przywrócenie stanu fabrycznego) urządzenia**:
+## <a name="remove-company-data"></a>Usuwanie danych firmy
 
-1.  W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+Polecenie **usunięcia danych firmy** powoduje usunięcie danych zarządzanych aplikacji (jeśli ma to zastosowanie), ustawień i profilów poczty e-mail, które zostały przypisane przy użyciu usługi Intune. Usunięcie danych firmy nie powoduje usunięcia osobistych danych użytkownika z urządzenia. Urządzenie jest usuwane z zarządzania przez usługę Intune. W poniższych tabelach opisano usuwane dane oraz wpływ usunięcia danych firmy na dane pozostające na urządzeniu.
 
-2.  Wybierz nazwę urządzenia, które chcesz wyczyścić.
-
-3.  W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Przywracanie stanu fabrycznego**, a następnie wybierz pozycję **Tak**, aby potwierdzić czyszczenie.
-
-Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszczenia do wszystkich typów urządzeń trwa mniej niż 15 minut.
-
-### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Aby usunąć urządzenia w portalu usługi Azure Active Directory
-
-1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator** &gt; **Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
-
-2.  Zaloguj się za pomocą identyfikatora organizacji, korzystając z linku w lewej części strony.
-
-3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
-
-4.  Wybierz pozycję **Active Directory**, a następnie wybierz organizację.
-
-5.  Wybierz kartę **Użytkownicy** .
-
-6.  Wybierz użytkownika, którego urządzenia chcesz usunąć.
-
-7.  Wybierz pozycję **Urządzenia**.
-
-8.  Usuń urządzenia zgodnie z potrzebami, na przykład takie, które nie są już w użyciu lub zawierają niedokładne definicje.
-
-
-## <a name="selective-wipe"></a>Selektywne czyszczenie danych
-
-**Selektywne czyszczenie danych** powoduje usunięcie z urządzenia danych firmowych, włącznie z danymi zarządzania aplikacjami mobilnymi (MAM, Mobile App Management; jeśli ma to zastosowanie), ustawieniami i profilami poczty e-mail. Selektywne czyszczenie danych nie powoduje usunięcia osobistych danych użytkownika z urządzenia. Urządzenie jest usuwane z usługi Intune. W poniższych tabelach opisano usuwane dane oraz wpływ selektywnego czyszczenia na dane pozostające na urządzeniu. (Tabele są uporządkowane według platform).
-
-**iOS**
+### <a name="ios"></a>iOS
 
 |Typ danych|iOS|
 |-------------|-------|
@@ -82,10 +58,10 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszcz
 |Agent zarządzania|Profil zarządzania jest usuwany.|
 |Poczta e-mail|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|
 |Outlook|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS zostaną usunięte.|
-|Odłączanie usługi Azure Active Directory (AAD)|Rekord usługi AAD zostanie usunięty.|
-|Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
+|Odłączanie usługi Azure Active Directory (AD)|Rekord usługi Azure AD zostanie usunięty.|
+|Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
-**Android**
+### <a name="android"></a>Android
 
 |Typ danych|Android|Android Samsung KNOX Standard|
 |-------------|-----------|------------------------|
@@ -100,30 +76,42 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszcz
 |Agent zarządzania|Uprawnienie administratora urządzenia jest odwoływane.|Uprawnienie administratora urządzenia jest odwoływane.|
 |Poczta e-mail|Nie dotyczy (profile poczty e-mail nie są obsługiwane przez urządzenia z systemem Android)|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|
 |Outlook|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|
-|Odłączanie usługi Azure Active Directory (AAD)|Rekord usługi AAD zostanie usunięty.|Rekord usługi AAD zostanie usunięty.|
-|Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
+|Odłączanie usługi Azure Active Directory (AD)|Rekord usługi Azure AD zostanie usunięty.|Rekord usługi Azure AD zostanie usunięty.|
+|Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
-**Android for Work**
+### <a name="android-for-work"></a>Program Android for Work
 
-Wykonywanie czyszczenia selektywnego na urządzeniu z programem Android for Work powoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Powoduje to wycofanie urządzenia z zarządzania za pomocą usługi Intune. Pełne czyszczenie danych nie jest obsługiwane w przypadku programu Android for Work.
+Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Powoduje to wycofanie urządzenia z zarządzania za pomocą usługi Intune. Resetowanie do ustawień fabrycznych nie jest obsługiwane w przypadku programu Android for Work.
 
-**Windows**
+### <a name="windows"></a>Windows
 
 |Typ danych|Windows 8.1 (MDM) i Windows RT 8.1|Windows RT|Windows Phone 8 i Windows Phone 8.1|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Klucz plików chronionych przez system szyfrowania plików zostanie odwołany i użytkownik nie będzie mógł otwierać plików.|Nie spowoduje usunięcia aplikacji firmowych.|Aplikacje zainstalowane pierwotnie za pośrednictwem portalu firmy zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.|Aplikacje są dezinstalowane, a klucze ładowania bezpośredniego są usuwane.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Klucz plików chronionych przez system szyfrowania plików zostanie odwołany i użytkownik nie będzie mógł otwierać plików.|Nie spowoduje usunięcia aplikacji firmowych.|Aplikacje zainstalowane pierwotnie za pośrednictwem portalu firmy zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.|Aplikacje są dezinstalowane, a klucze ładowania bezpośredniego są usuwane.<br>W przypadku systemu Windows 10 w wersji 1703 (aktualizacja dla twórców) i nowszych aplikacje usługi Office 365 ProPlus nie są usuwane.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|Usuwane.|Nieobsługiwane.|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|Certyfikaty zostaną usunięte i odwołane.|Nieobsługiwane.|Certyfikaty zostaną usunięte i odwołane.|
 |Poczta e-mail|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows.|Nieobsługiwane.|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|Usuwa wiadomości e-mail z obsługą systemu szyfrowania plików, w tym wiadomości e-mail i załączniki z aplikacji Poczta dla systemu Windows. Usuwa konta poczty zaaprowizowane przez usługę Intune.|
-|Odłączanie usługi Azure Active Directory (AAD)|Nie.|Nie.|Rekord usługi AAD zostanie usunięty.|Nie dotyczy. System Windows 10 nie obsługuje selektywnego czyszczenia danych na urządzeniach przyłączonych do usługi Azure Active Directory.|
+|Odłączanie usługi Azure Active Directory (AD)|Nie.|Nie.|Rekord usługi Azure AD zostanie usunięty.|Nie dotyczy. System Windows 10 nie obsługuje usuwania danych firmy na urządzeniach przyłączonych do usługi Azure Active Directory.|
 
-**Aby przeprowadzić selektywne czyszczenie danych**:
+### <a name="to-remove-company-data"></a>Aby usunąć dane firmy
 
-1.  W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+3. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+4. Wybierz nazwę urządzenia, z którego chcesz usunąć dane firmy.
+5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Usuń dane firmowe**, a następnie wybierz pozycję **Tak**, aby potwierdzić.
 
-2.  Wybierz nazwę urządzenia, które chcesz wyczyścić.
+Jeśli urządzenie jest włączone i połączone, propagowanie polecenia usuwania danych do wszystkich typów urządzeń trwa mniej niż 15 minut.
 
-3.  W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Usuń dane firmowe**, a następnie wybierz pozycję **Tak**, aby potwierdzić czyszczenie.
+## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Usuwanie urządzeń z portalu usługi Azure Active Directory
 
-Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszczenia do wszystkich typów urządzeń trwa mniej niż 15 minut.
+Z powodu problemów z komunikacją lub braku urządzeń może być konieczne usunięcie urządzeń z usługi Azure Active Directory (AD). Polecenie usunięcia nie powoduje usunięcia urządzenia z zarządzania, ale polecenia **Usuń** możesz użyć do usuwania rekordów urządzeń z konsoli platformy Azure, gdy wiesz, że są one niedostępne i najprawdopodobniej nie będą się ponownie komunikować z platformą Azure.
+
+1.  Zaloguj się do [usługi Azure Active Directory w portalu platformy Azure](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz też zarejestrować się w [portalu usługi Office 365](https://portal.office.com), a następnie wybrać kolejno pozycje **Administrator** &gt; **Azure AD** przy użyciu linku w lewej części strony.
+3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
+4.  Wybierz pozycję **Active Directory**, a następnie wybierz organizację.
+5.  Wybierz kartę **Użytkownicy** .
+6.  Wybierz użytkownika, którego urządzenia chcesz usunąć.
+7.  Wybierz pozycję **Urządzenia**.
+8.  Usuń urządzenia zgodnie z potrzebami, na przykład takie, które nie są już w użyciu lub zawierają niedokładne definicje.

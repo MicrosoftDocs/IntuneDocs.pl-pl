@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7aad054f0861522174faa01b979083a818c106af
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 066f8668ea37e928455792f512e4e337a1f19c20
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/10/2017
 ---
-# <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Pomoc użytkownikom w Portalu rozwiązywania problemów w usłudze Microsoft Intune
+# <a name="use-the-troubleshooting-portal-to-help-users"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -35,22 +35,21 @@ Jeśli na przykład użytkownik zgłasza do działu pomocy technicznej problem t
 -   Urządzenie nie pobiera ustawień sieci VPN lub Wi-Fi
 -   Nie można zainstalować aplikacji
 
-
 ## <a name="add-help-desk-operators"></a>Dodawanie operatorów pomocy technicznej
 Jako administrator usługi Intune możesz przypisać rolę operatora pomocy technicznej do grupy użytkowników. Członkowie tej grupy mogą korzystać z portalu administratora w celu rozwiązywania problemów użytkowników. Aby mieć dostęp do portalu usługi Intune, każdy operator pomocy technicznej musi mieć licencję na usługę Intune. Dowiedz się, jak [przypisywać licencje na usługę Intune](licenses-assign.md).
 
 Aby dodać użytkowników pomocy technicznej:
-1. [Dodaj użytkownika do usługi Intune](users-add.md) (w razie potrzeby)
-2. [Utwórz grupę pomocy technicznej](groups-add.md) i dodaj do niej użytkowników
-3. [Przypisz rolę operatora pomocy technicznej kontroli dostępu opartej na rolach](role-based-access-control.md#built-in-roles) lub [utwórz rolę niestandardową](role-based-access-control.md#custom-roles) z następującymi uprawnieniami:
-  - MobileApps: Odczyt
-  - ManagedApps: Odczyt
-  - ManagedDevices: Odczyt
-  - Organization: Odczyt
-  - DeviceCompliancePolices: Odczyt
-  - DeviceConfigurations: Odczyt
+1. W razie potrzeby [dodaj użytkowników do usługi Intune](users-add.md).
+2. [Utwórz grupę pomocy technicznej](groups-add.md) i dodaj do niej użytkowników.
+3. [Przypisz rolę RBAC operatora pomocy technicznej](role-based-access-control.md#built-in-roles)
 
-  ![Zrzut ekranu portalu usługi Intune przedstawiający wyróżnione role usługi Intune oraz listę wbudowanych ról, takich jak Operator pomocy technicznej](./media/help-desk-user-add.png)
+  ![Zrzut ekranu portalu usługi Intune pokazujący wyróżnione role usługi Intune i listę wbudowanych ról łącznie z rolą operatora pomocy technicznej](./media/help-desk-user-add.png) Możesz też [utworzyć niestandardową rolę](role-based-access-control.md#custom-roles), którą można dalej modyfikować, aby przyznać dostęp operatorom pomocy technicznej.  Operatorzy pomocy technicznej wymagają następujących uprawnień, aby pomóc w rozwiązywaniu problemów użytkownika:
+    - MobileApps: Odczyt
+    - ManagedApps: Odczyt
+    - ManagedDevices: Odczyt
+    - Organization: Odczyt
+    - DeviceCompliancePolices: Odczyt
+    - DeviceConfigurations: Odczyt
 
 4. Aby udzielić operatorom pomocy technicznej uprawnienia do wyświetlania kondycji usługi i otwierania biletów pomocy technicznej dla usługi Intune, [udziel użytkownikom uprawnień administratora](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal) jako **Administrator usługi**. Nie nadawaj uprawnienia **Administrator usługi Intune**, ponieważ ta rola katalogu ma więcej uprawnień niż te, które są potrzebne dla operatów pomocy technicznej.
 

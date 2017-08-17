@@ -14,11 +14,11 @@ ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cf86d82fe636d2641f82ca951e508bea93abf683
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0d1e88db4a0da250f449c8e87f674f7694904d7b
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="create-policies-and-publish-apps"></a>Tworzenie zasad i publikowanie aplikacji
 
@@ -63,7 +63,7 @@ Gdy aplikacja jest już dostępna w usłudze Intune, możesz wdrożyć ją na za
 - [Wdrażanie aplikacji na urządzeniach](/intune-classic/deploy-use/deploy-use/deploy-apps-in-microsoft-intune)
 - Wdrażanie aplikacji kupionych w ramach zakupów zbiorczych:
     - [iOS — program zakupów zbiorczych](/intune-classic/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune)
-    - [Sklep Windows dla firm](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune)
+    - [Sklep Microsoft dla Firm](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune)
     - [Android for Work](/intune-classic/deploy-use/android-for-work-apps)
 
     Po skonfigurowaniu aplikacji do wdrożenia możesz [skonfigurować aplikacje](/intune-classic/deploy-use/monitor-apps-in-microsoft-intune).

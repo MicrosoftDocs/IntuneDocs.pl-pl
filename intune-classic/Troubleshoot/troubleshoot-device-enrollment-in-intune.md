@@ -14,11 +14,11 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 14407e26a0715f3d5aa8cf570a2109dac7140079
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: d7a51094851af8c3b6d872300cd9b23e845c6494
+ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
@@ -159,7 +159,7 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 |Komunikat o błędzie|Problem|Rozwiązanie|
 |---|---|---|
 |**Administrator IT musi przypisać licencję w celu udzielenia praw dostępu**<br>Administrator IT nie nadał Ci praw dostępu do korzystania z tej aplikacji. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie ma potrzebnej licencji.|Aby umożliwić użytkownikom rejestrowanie urządzeń, należy przypisać im wymaganą licencję. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br><br>Zobacz informacje na temat [przypisywania licencji usługi Intune do kont użytkowników](/intune/licenses-assign.md).
-|** Administrator IT musi ustawić urząd MDM<br>Wygląda na to, że administrator IT nie ustawił urzędu MDM. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie określono urzędu zarządzania urządzeniami przenośnymi.|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune. Zobacz informacje na temat [ustawiania urzędu zarządzania urządzeniami mobilnymi](/intune/mdm-authority-set.md).|
+|**Administrator IT musi ustawić urząd MDM**<br>Wygląda na to, że administrator IT nie ustawił urzędu MDM. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie określono urzędu zarządzania urządzeniami przenośnymi.|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune. Zobacz informacje na temat [ustawiania urzędu zarządzania urządzeniami mobilnymi](/intune/mdm-authority-set.md).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Nie można zaewidencjonować urządzeń w usłudze Intune — w konsoli administracyjnej usługi Intune stan urządzeń jest wyświetlany jako „W niedobrej kondycji”

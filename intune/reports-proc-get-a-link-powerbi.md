@@ -14,17 +14,17 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a9d99b71b9f84eea45ae597ed0f69010f6e95805
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
+ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Możesz pobrać plik do użycia z usługą Microsoft Power BI, który umożliwia ładowanie interaktywnych, dynamicznie generowanych raportów dla dzierżawy usługi Intune. Plik usługi Power BI magazynu danych (pbix) zawiera ustawienia połączenia do dzierżawy oraz następujące przykładowe raporty i wykresy: 
+Możesz pobrać plik do użycia z usługą Microsoft Power BI, który umożliwia ładowanie interaktywnych, dynamicznie generowanych raportów dla dzierżawy usługi Intune. Plik usługi Power BI magazynu danych (pbix) zawiera ustawienia połączenia do dzierżawy oraz następujące przykładowe raporty i wykresy:  
 
   -  Urządzenia
   -  Rejestrowanie
@@ -45,6 +45,9 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Ładowanie danych i raportów przy użyciu pliku usługi Power BI (pbix)
 
 Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzierżawy i zestaw wstępnie utworzonych raportów na podstawie modelu danych magazynu danych. Otwórz plik w aplikacji Power BI Desktop i zaloguj się do usługi Azure AD. Raport załaduje dane z dzierżawy usługi Intune.
+
+> [!Important]  
+> Każdy plik usługi Power BI (pbix) może różnić się w zależności od lokalizacji dzierżawy. Jeśli zarządzasz wieloma dzierżawami usługi Intune, upewnij się, że używasz pliku pobranego z witryny Azure Portal po zalogowaniu się do tej dzierżawy.  
 
 1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę **Intune**.  
 2.  Otwórz blok **Interfejs API magazynu danych usługi Microsoft Intune (wersja zapoznawcza)**.

@@ -14,11 +14,11 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4d214ea9e85d6f08ecff42555cc7fbc36512a825
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f935a454f077caf096c43c892980a948dcd4c3a3
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="troubleshoot-app-deployment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów z wdrażaniem aplikacji w usłudze Microsoft Intune
 
@@ -36,9 +36,9 @@ Jeśli masz problemy z wdrażaniem aplikacji i zarządzaniem nimi za pomocą us�
 |0x80073CFB|Dany pakiet jest już zainstalowany i jego ponowna instalacja jest zablokowana|Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<br /><br />— zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.<br />— usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.|
 |0x87D1041C|Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji.|— Aplikacja została pomyślnie wdrożona przez usługę Intune, a następnie odinstalowana (na przykład przez użytkownika końcowego). Poinstruuj użytkownika, aby ponownie zainstalował aplikację z portalu firmy. Wymagane aplikacje zostaną automatycznie zainstalowane ponownie po następnym zaewidencjonowaniu urządzenia.|
 
-## <a name="troubleshooting-apps-from-the-windows-store"></a>Rozwiązywanie problemów z aplikacjami ze Sklepu Windows
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Rozwiązywanie problemów z aplikacjami ze Sklepu Microsoft
 
-Informacje zawarte w temacie [Tworzenie pakietów, wdrażanie i zapytania aplikacji ze Sklepu Windows](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) pomagają w rozwiązywaniu typowych problemów, które mogą wystąpić podczas instalowania aplikacji ze Sklepu Windows za pomocą usługi Intune lub w inny sposób.
+Informacje zawarte w temacie [Troubleshooting packaging, deployment, and query of Microsoft Store apps (Tworzenie pakietów, wdrażanie i zapytania aplikacji ze Sklepu Microsoft)](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) pomagają w rozwiązywaniu typowych problemów, które mogą wystąpić podczas instalowania aplikacji ze Sklepu Microsoft za pomocą usługi Intune lub w inny sposób.
 
 ## <a name="troubleshooting-app-deployment-to-pcs-managed-by-the-intune-software-client"></a>Rozwiązywanie problemów z wdrażaniem aplikacji na komputerach zarządzanych przez klienta oprogramowania usługi Intune
 Aby ułatwić rozwiązywanie problemów z wdrażaniem aplikacji na komputerach zarządzanych przez klienta oprogramowania usługi Intune, warto zajrzeć do następujących dwóch plików dziennika:

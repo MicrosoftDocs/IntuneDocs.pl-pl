@@ -14,11 +14,11 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0893d511c73e4154c61063d96e26937ea2825467
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9899f08cac650b1fea05370eb52327bc3c204a48
+ms.sourcegitcommit: 3bafbec5822bb5baa2d313f2bd19f35a67438beb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune
 
@@ -36,8 +36,10 @@ Aplikacje poczty wbudowane w systemach iOS i Android można zablokować, zezwala
 ## <a name="prerequisites"></a>Wymagania wstępne
 Przed utworzeniem zasad dostępu warunkowego opartego na aplikacji muszą zostać spełnione następujące warunki:
 
-- **posiadanie subskrypcji pakietu Enterprise Mobility + Security lub usługi Azure Active Directory w wersji Premium** przy jednoczesnym posiadaniu przez użytkowników licencji na usługi EMS lub Azure AD.
-    - Aby uzyskać więcej szczegółowych informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+- **Enterprise Mobility + Security (EMS)** lub **subskrypcja usługi Azure Active Directory (AD) w wersji Premium**
+- Użytkownicy muszą mieć licencję usługi EMS lub Azure AD
+
+Aby uzyskać więcej informacji, zobacz [Cennik pakietu Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) lub [Cennik usługi Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## <a name="supported-apps"></a>Obsługiwane aplikacje
 
@@ -53,24 +55,22 @@ Przed utworzeniem zasad dostępu warunkowego opartego na aplikacji muszą zosta�
 <br></br>
 - **Microsoft Teams**
 
-    > [!NOTE] 
-    > Dostęp warunkowy oparty na aplikacji [obsługuje również aplikacje biznesowe](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication), jednak aplikacje te muszą używać [nowoczesnego uwierzytelniania usługi Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
+Dostęp warunkowy oparty na aplikacji [obsługuje również aplikacje biznesowe](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication), jednak aplikacje te muszą używać [nowoczesnego uwierzytelniania usługi Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
 
 ## <a name="how-app-based-conditional-access-works"></a>Sposób działania dostępu warunkowego opartego na aplikacji
 
 W tym przykładzie administrator zastosował zasady ochrony aplikacji w odniesieniu do aplikacji Outlook, a następuje zastosował regułę dostępu warunkowego, która powoduje dodanie aplikacji Outlook do listy zatwierdzonych aplikacji, które mogą być używane podczas uzyskiwania dostępu do firmowej poczty e-mail.
 
-> [!NOTE] 
+> [!NOTE]
 > Struktura poniższego schematu blokowego ma zastosowanie także do innych aplikacji zarządzanych.
 
-![Schemat blokowy: dostęp warunkowy oparty na aplikacji z użyciem usługi Intune](./media/ca-intune-common-ways-3.png)
+![Schemat blokowy dostępu warunkowego opartego na aplikacji z użyciem usługi Intune](./media/ca-intune-common-ways-3.png)
 
 1.  Użytkownik próbuje przeprowadzić uwierzytelnienie w usłudze Azure Active Directory z aplikacji Outlook.
 
 2.  W ramach pierwszej próby uwierzytelnienia użytkownik zostaje przekierowany do sklepu z aplikacjami w celu przeprowadzenia instalacji aplikacji brokera. Aplikacją brokera jest aplikacja Microsoft Authenticator w przypadku systemu iOS lub aplikacja Portal firmy Microsoft w przypadku urządzeń z systemem Android.
 
-    > [!NOTE]
-    > W tym scenariuszu próba użycia natywnej aplikacji poczty e-mail przez użytkownika spowoduje jego przekierowanie do sklepu z aplikacjami, z którego możliwe będzie pobranie aplikacji Outlook i jej zainstalowanie.
+ Próba użycia natywnej aplikacji poczty e-mail przez użytkownika spowoduje jego przekierowanie do sklepu z aplikacjami, z którego możliwe będzie pobranie aplikacji Outlook i jej zainstalowanie.
 
 3.  Na urządzeniu zostaje zainstalowana aplikacja brokera.
 
@@ -80,7 +80,7 @@ W tym przykładzie administrator zastosował zasady ochrony aplikacji w odniesie
 
 6.  Aplikacja brokera wysyła identyfikator klienta aplikacji do usługi Azure AD w ramach procesu uwierzytelniania użytkownika w celu sprawdzania, czy został on ujęty na liście pozycji zatwierdzonych z użyciem zasad.
 
-7.  Usługa Azure AD umożliwia użytkownikowi uwierzytelnienie oraz korzystanie z aplikacji na podstawie listy pozycji zatwierdzonych z użyciem zasad. Jeśli aplikacja nie znajduje się na liście aplikacji zatwierdzonych z użyciem zasad, usługa Azure AD nie zezwala na dostęp do aplikacji.
+7.  Usługa Azure AD umożliwia użytkownikowi uwierzytelnienie oraz korzystanie z aplikacji na podstawie listy pozycji zatwierdzonych z użyciem zasad. Jeśli aplikacja nie znajduje się na liście, usługa Azure AD nie zezwala na dostęp do aplikacji.
 
 8.  Aplikacja Outlook komunikuje się z usługą Outlook w chmurze w celu zainicjowania komunikacji z usługą Exchange Online.
 

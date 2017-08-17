@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/01/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,20 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b9e009e94fb4d9bdb99960e0d238d5471d1f4b50
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 09641b5e34ab8200e7dd9d4c27f0dabf59fa62d2
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemami Android i Samsung KNOX Standard w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Te ustawienia wraz z zasadami ograniczeń urządzenia z systemem Android są pomocne w konfigurowaniu urządzeń w Twojej organizacji.
+
+>[!TIP]
+>Jeśli żądane ustawienia nie są dostępne, możesz skonfigurować urządzenia przy użyciu [profilu niestandardowego](custom-settings-android.md). 
 
 ## <a name="general"></a>Ogólne
 
@@ -132,3 +135,8 @@ Ustawienia kiosku dotyczą tylko urządzeń z systemem Samsung KNOX Standard.
     - **Dodaj aplikacje zarządzane**.
 - **Przycisk usypiania ekranu** — włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.
 - **Przyciski regulacji głośności** — włącza lub wyłącza przyciski regulacji głośności na urządzeniu.
+
+
+## <a name="next-steps"></a>Następne kroki
+
+Nadal korzystając z instrukcji opisanych w temacie [Jak skonfigurować ustawienia ograniczeń urządzeń](device-restrictions-configure.md) utwórz, a następnie przypisz profil ograniczeń urządzenia.

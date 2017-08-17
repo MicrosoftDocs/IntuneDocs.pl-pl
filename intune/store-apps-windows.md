@@ -15,11 +15,11 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ad1156076f0ec34d5ac110e32a19a8332c8f863
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 812bdf5bde724798289668937ed2502438c524e0
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu Windows do usługi Microsoft Intune
 
@@ -51,12 +51,12 @@ ms.lasthandoff: 07/01/2017
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
 ## <a name="manually-assign-windows-10-company-portal-app"></a>Ręczne przypisywanie aplikacji Portal firmy dla systemu Windows 10
-Użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Windows, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal firmy, aplikację Portal firmy dla systemu Windows 10 można przypisać ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Windows dla firm.
+Użytkownicy mogą zainstalować aplikację Portal firmy ze Sklepu Microsoft, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal firmy, aplikację Portal firmy dla systemu Windows 10 można przypisać ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Microsoft dla Firm.
 
  > [!NOTE]
  > Ta opcja wymaga ręcznego przypisywania aktualizacji po każdym wydaniu nowej aktualizacji aplikacji.
 
-1. Zaloguj się do swojego konta w [Sklepie Windows dla firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
+1. Zaloguj się do swojego konta w [Sklepie Microsoft dla Firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
 2. Po nabyciu aplikacji wybierz ją ze strony **Spis**.  
 3. Wybierz pozycję **Wszystkie urządzenia systemu Windows 10** w polu **Platforma**, a następnie odpowiednią wartość pola **Architektura** i pobierz aplikację. Plik licencji aplikacji nie jest wymagany dla tej aplikacji.
 ![Obraz systemu Windows 10 wszystkich urządzeń i szczegóły pakietu Architektura X86 do pobrania](./media/Win10CP-all-devices.png)
@@ -93,7 +93,7 @@ Jeśli aplikacja Portal firmy dla systemu Windows 10 została podpisana i przypi
 Poniżej przedstawiono procedurę podpisywania i przypisywania aplikacji w ten sposób:
 
 1. Pobierz skrypt podpisywania aplikacji Portal firmy dla systemu Windows 10 usługi Microsoft Intune ze strony [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Ten skrypt wymaga wcześniejszego zainstalowania pakietu Windows SDK dla systemu Windows 10 na komputerze-hoście. Aby pobrać pakiet Windows SDK dla systemu Windows 10, odwiedź stronę [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Pobierz aplikację Portal firmy dla systemu Windows 10 ze Sklepu Windows dla firm zgodnie z powyższym opisem.  
+2. Pobierz aplikację Portal firmy dla systemu Windows 10 ze Sklepu Microsoft dla Firm zgodnie z powyższym opisem.  
 3. Uruchom skrypt z parametrami wejściowymi wyszczególnionymi w nagłówku skryptu, aby podpisać aplikację Portal firmy dla systemu Windows 10 (wyodrębnioną poniżej). Zależności nie trzeba przekazać do skryptu. Są one wymagane tylko w przypadku, gdy aplikacja jest przekazywana do konsoli administracyjnej usługi Intune.
 
 |Parametr | Opis|

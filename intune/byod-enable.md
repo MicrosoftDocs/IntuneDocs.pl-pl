@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="enable-byod-with-intune"></a>Włączanie modelu BYOD w usłudze Intune
 
@@ -75,14 +75,14 @@ Usługa Intune ułatwia wykonywanie następujących czynności:
 * [Dostarczanie aplikacji ze sklepu na urządzenia zarządzane](apps-deploy.md)
 * Kierowanie aplikacji na urządzenia niezarządzane przy użyciu witryny internetowej portalu firmy
 
-Za pomocą usługi Intune można również zarządzać aplikacjami zakupionymi zbiorczo w sklepie iOS App Store i Sklepie Windows dla firm oraz wdrażać te aplikacje. Dzięki temu można zmniejszyć koszty administracyjne związane ze monitorowaniem aplikacji nabytych w ramach zakupów zbiorczych.
+Za pomocą usługi Intune można również zarządzać aplikacjami zakupionymi zbiorczo w sklepie iOS App Store i Sklepie Microsoft dla firm oraz wdrażać te aplikacje. Dzięki temu można zmniejszyć koszty administracyjne związane ze monitorowaniem aplikacji nabytych w ramach zakupów zbiorczych.
 
 > [!TIP]
 > Możesz [skonfigurować logowanie jednokrotne (SSO) przy użyciu programu Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect). Logowanie jednokrotne umożliwia użytkownikom logowanie do aplikacji przy użyciu nazwy i hasła użytkownika domeny, których używają lokalnie. Ponadto można [zapewnić dostęp internetowy do hostowanych lokalnie aplikacji sieci Web](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) za pomocą serwera proxy aplikacji usługi Azure Active Directory.
 
 -   [Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych na urządzeniach z systemem iOS](vpp-apps-ios.md). Wiele licencji dla aplikacji z systemem iOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business (VPP)](http://www.apple.com/business/vpp/). Należy skonfigurować konto VPP w witrynie internetowej firmy Apple i przekazać token VPP firmy Apple do usługi Intune. Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego.
 
--   [Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm](windows-store-for-business.md). [Sklep Windows dla firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w portalu usługi Intune.
+-   [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md). [Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w portalu usługi Intune.
 
 ## <a name="protect-company-data"></a>Ochrona zasobów firmy
 
@@ -105,10 +105,10 @@ Do ochrony danych firmowych, do których użytkownicy uzyskują dostęp ze swoic
 
 W przypadku zarządzanych urządzeń z systemem Windows 10 to samo można osiągnąć, korzystając z [zasad funkcji Windows Information Protection (WIP)](app-protection-policies-configure-windows-10.md). Te zasady działają bez zakłócania działania środowiska pracowników. Nie wymagają one zmian w środowisku sieci lub innych aplikacjach.
 
-### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Usuwanie danych firmowych bez ingerowania w dane osobiste
+### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Usuwanie danych firmowych bez ingerowania w dane osobiste
 
-Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie ulegnie zmianie lub po prostu zostanie zgubione, istnieje możliwość usunięcia z niego aplikacji i danych firmy. Do tego celu można użyć możliwości selektywnego i pełnego czyszczenia danych usługi Intune. Użytkownicy mogą również zdalnie wyczyścić własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
+Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie ulegnie zmianie lub po prostu zostanie zgubione, istnieje możliwość usunięcia z niego aplikacji i danych firmy. Aby to zrobić, możesz użyć funkcji usługi Intune umożliwiających usunięcie danych firmowych i zresetowanie do ustawień fabrycznych. Użytkownicy mogą również zdalnie zresetować własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
 
-[Pełne czyszczenie danych](devices-wipe.md) przywraca domyślne ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień użytkownika. [Selektywne czyszczenie danych ](devices-wipe.md#selective-wipe) powoduje usunięcie tylko danych firmy z urządzenia i pozostawienie osobistych danych użytkowników bez zmian.
+[Resetowanie do ustawień fabrycznych](devices-wipe.md) przywraca domyślne ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień użytkownika oraz usuwa urządzenie z zarządzania w usłudze Intune. [Usunięcie danych firmowych](devices-wipe.md#remove-company-data) powoduje usunięcie tylko danych firmy z urządzenia i pozostawienie osobistych danych użytkowników bez zmian.
 
-Po zainicjowaniu urządzenie natychmiast rozpoczyna proces czyszczenia selektywnego w celu wyłączenia go z zarządzania. Po zakończeniu procesu wszystkie dane firmy zostaną usunięte, a nazwa urządzenia zostanie usunięta z portalu usługi Intune. Kończy to cykl zarządzania urządzeniem.
+Po zainicjowaniu urządzenie natychmiast rozpocznie proces resetowania. Po zakończeniu procesu wszystkie dane firmy zostaną usunięte, a nazwa urządzenia zostanie usunięta z usługi Intune. Kończy to cykl zarządzania urządzeniem.
