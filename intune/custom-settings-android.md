@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 014e59c017eac0d54a632e545692e1a1a8053164
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 45a3a8fe4960cc1bb8c5f2150f57d34d59c08e0a
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Ustawienia niestandardowe dla urządzeń z systemem Android w usłudze Microsoft Intune
 
@@ -40,3 +40,13 @@ Ta funkcja ma umożliwić przypisanie ustawień systemu Android, których nie mo
     - **OMA-URI** — określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.
     - **Wartość** — wprowadź wartość, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI.
 4. Gdy wszystko będzie gotowe, kliknij przycisk **OK**, a następnie, jeśli to konieczne, dodaj więcej ustawień.
+
+## <a name="next-steps"></a>Następne kroki
+
+Po zakończeniu konfiguracji ustawień profil zostanie utworzony i wyświetlony w bloku listy profilów. Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
+
+Aby zobaczyć kilka przykładów niestandardowych ustawień do użycia, sprawdź:
+
+- [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą niestandardowego profilu urządzenia usługi Microsoft Intune](/intune/wi-fi-profile-shared-key)
+- [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](/intune/android-pulse-secure-per-app-vpn)
+- [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX Standard w usłudze Microsoft Intune](/intune/samsung-knox-apps-allow-block)

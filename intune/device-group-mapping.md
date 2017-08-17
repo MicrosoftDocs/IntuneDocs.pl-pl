@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/06/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e7c46a0bab45223293b73f8eaa2f8b40850cd43
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6c5d97499545d0ad3899f28ed4e88eb4dc1fe734
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="map-device-groups"></a>Mapowanie grup urządzeń
 
@@ -43,8 +43,8 @@ Możesz utworzyć dowolne kategorie urządzeń, na przykład:
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Krok 1. Utworzenie kategorii urządzeń w bloku Intune witryny Azure Portal
 1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarejestruj urządzenia**.
-3. W bloku **Rejestracja** wybierz pozycję **Kategorie urządzeń**.
+3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+3. W bloku **Rejestrowanie urządzenia** wybierz pozycję **Kategorie urządzeń**.
 4. Na stronie **Kategorie urządzeń** wybierz pozycję **Utwórz**, aby dodać nową kategorię.
 5. W następnym bloku uzupełnij pola **Nazwa** i (opcjonalnie) **Opis** odnoszące się do nowej kategorii.
 6. Po zakończeniu kliknij przycisk **Utwórz**. Utworzona kategoria zostanie wyświetlona na liście kategorii.

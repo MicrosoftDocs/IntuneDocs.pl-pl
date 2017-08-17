@@ -11,11 +11,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: d668e50b3880bdaf569380fa5a5fd25f5ed4564e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 790b9b0a5feb40cd22d366438fca566b93d2138b
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
@@ -64,7 +64,7 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 
 ## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Przykład: pobieranie, rejestrowanie i wdrażanie aplikacji Portal firmy dla urządzeń z systemem Windows
 
-Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w tym z systemem Windows Phone i Windows 10 Mobile, przy użyciu usługi Intune, zamiast instalować ją ze Sklepu Windows. Musisz pobrać aplikację Portal firmy i podpisać ją przy użyciu swojego certyfikatu.  Jest to konieczne tylko wtedy, gdy użytkownicy nie będą korzystać ze sklepu firmowego, a aplikacja Portal firmy ma zostać wdrożona na urządzeniach z systemem Windows Phone 8.1.
+Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w tym z systemem Windows Phone i Windows 10 Mobile, przy użyciu usługi Intune, zamiast instalować ją ze Sklepu Microsoft. Musisz pobrać aplikację Portal firmy i podpisać ją przy użyciu swojego certyfikatu.  Jest to konieczne tylko wtedy, gdy użytkownicy nie będą korzystać ze sklepu firmowego, a aplikacja Portal firmy ma zostać wdrożona na urządzeniach z systemem Windows Phone 8.1.
 
 
 1.  **Pobierz aplikację Portal firmy**
@@ -75,7 +75,7 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w 
 
     -   WinPhoneCompanyPortal.ps1 — skrypt programu PowerShell służący do podpisywania pliku aplikacji Portal firmy na potrzeby wdrożenia go na urządzeniach z systemem Windows Phone 8.1
 
-    Możesz również pobrać aplikację Portal firmy systemu Windows Phone 8.1 (pakiet licencjonowany w trybie offline) lub Portal firmy systemu Windows 10 ze [Sklepu Windows dla firm](http://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1. Aby uzyskać szczegółowe informacje dotyczące wykonania tej czynności za pomocą usługi Intune, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Możesz również pobrać aplikację Portal firmy systemu Windows Phone 8.1 (pakiet licencjonowany w trybie offline) lub Portal firmy systemu Windows 10 ze [Sklepu Microsoft dla Firm](http://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1. Aby uzyskać szczegółowe informacje dotyczące wykonania tej czynności za pomocą usługi Intune, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
 
 2.  **Pobierz zestaw Windows Phone SDK** Pobierz zestaw Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) i zainstaluj go na komputerze. Zestaw SDK jest potrzebny do generowania tokenu rejestracji aplikacji.
 
@@ -144,12 +144,12 @@ Okresowo należy odnawiać certyfikat firmy Symantec służący do wdrażania ap
 5.  Podpisz wszystkie nowe i zaktualizowane aplikacje biznesowe przedsiębiorstwa przy użyciu nowego certyfikatu. Istniejące aplikacje nie muszą być ponownie podpisane i wdrożone.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Ręczne wdrażanie aplikacji Portal firmy dla systemu Windows 10
-Aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Windows dla firm.
+Aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze Sklepem Microsoft dla Firm.
 
  > [!NOTE]
  > Ta opcja wymaga ręcznego wdrażania aktualizacji po każdym wydaniu nowej aktualizacji aplikacji.
 
-1. Zaloguj się do swojego konta w [Sklepie Windows dla firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
+1. Zaloguj się do swojego konta w [Sklepie Microsoft dla Firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
 2. Po nabyciu aplikacji wybierz ją ze strony **Spis**.  
 3. Wybierz pozycję **Wszystkie urządzenia systemu Windows 10** w polu **Platforma**, a następnie odpowiednią wartość pola **Architektura** i pobierz aplikację. Plik licencji aplikacji nie jest wymagany dla tej aplikacji.
 ![Obraz systemu Windows 10 wszystkich urządzeń i szczegóły pakietu Architektura X86 do pobrania](./media/Win10CP-all-devices.png)
@@ -186,7 +186,7 @@ Jeśli aplikacja Portal firmy dla systemu Windows 10 została podpisana i wdroż
 Poniżej przedstawiono procedurę rejestrowania i wdrażania aplikacji w ten sposób:
 
 1. Pobierz skrypt podpisywania aplikacji Portal firmy dla systemu Windows 10 usługi Microsoft Intune ze strony [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Ten skrypt wymaga wcześniejszego zainstalowania pakietu Windows SDK dla systemu Windows 10 na komputerze-hoście. Aby pobrać pakiet Windows SDK dla systemu Windows 10, odwiedź stronę [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Pobierz aplikację Portal firmy dla systemu Windows 10 ze Sklepu Windows dla firm zgodnie z powyższym opisem.  
+2. Pobierz aplikację Portal firmy dla systemu Windows 10 ze Sklepu Microsoft dla Firm zgodnie z powyższym opisem.  
 3. Uruchom skrypt z parametrami wejściowymi wyszczególnionymi w nagłówku skryptu, aby podpisać aplikację Portal firmy dla systemu Windows 10 (wyodrębnioną poniżej). Zależności nie trzeba przekazać do skryptu. Są one wymagane tylko w przypadku, gdy aplikacja jest przekazywana do konsoli administracyjnej usługi Intune.
 
 |Parametr | Opis|

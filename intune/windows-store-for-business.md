@@ -1,7 +1,7 @@
 ---
-title: "Zarządzanie aplikacjami zakupionymi w Sklepie Windows dla firm"
+title: "Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm"
 titleSuffix: Intune on Azure
-description: "Informacje dotyczące synchronizacji aplikacji ze Sklepu Windows dla firm w usłudze Intune, a następnie ich przypisywania i śledzenia."
+description: "Informacje dotyczące synchronizacji aplikacji ze Sklepu Microsoft dla Firm w usłudze Intune, a następnie ich przypisywania i śledzenia."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,18 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de6ed7623e33a50bdf8452cbf1bad9c648b13d04
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8f5f1b49d0785682f72d208287098466934ff0e1
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Windows dla firm za pomocą usługi Microsoft Intune
+# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-[Sklep Windows dla firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w portalu usługi Intune. Na przykład:
+[Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w portalu usługi Intune. Na przykład:
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
 * Zsynchronizowane aplikacje są wyświetlane w konsoli administracyjnej usługi Intune. Można je przypisać w taki sam sposób, jak wszystkie inne aplikacje.
 * Można śledzić liczbę dostępnych i używanych licencji w konsoli administracyjnej usługi Intune.
@@ -34,25 +34,25 @@ ms.lasthandoff: 07/01/2017
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Windows dla firm przejrzyj następujące informacje:
+Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Microsoft dla Firm przejrzyj następujące informacje:
 
 - Skonfiguruj usługę Intune jako urząd zarządzania urządzeniami przenośnymi w Twojej organizacji.
-- Musisz mieć zarejestrowane konto w Sklepie Windows dla firm.
+- Musisz mieć zarejestrowane konto w Sklepie Microsoft dla Firm.
 - Po powiązaniu konta w Sklepie Windows dla firm z usługą Intune nie będzie można zmienić konta na inne.
-- Aplikacje zakupione w sklepie nie mogą być ręcznie dodawane do usługi Intune ani z niej usuwane. Aplikacje mogą być jedynie synchronizowane ze Sklepem Windows dla firm.
-- Usługa Intune synchronizuje licencjonowane aplikacje zarówno w trybie online, jak i offline, które zostały nabyte w Sklepie Windows dla firm.
+- Aplikacje zakupione w sklepie nie mogą być ręcznie dodawane do usługi Intune ani z niej usuwane. Aplikacje mogą być jedynie synchronizowane ze Sklepem Microsoft dla Firm.
+- Usługa Intune synchronizuje licencjonowane aplikacje zarówno w trybie online, jak i offline, które zostały nabyte w Sklepie Microsoft dla Firm.
 - Tylko aplikacje w trybie offline, które są bezpłatne, mogą być synchronizowane z usługą Intune.
 - Aby móc używać tej funkcji, urządzenia muszą być przyłączone do usługi Active Directory Domain Services lub dołączone w miejscu pracy.
 - Zarejestrowane urządzenia muszą używać systemu Windows 10 w wersji 1511 lub nowszej.
 
-## <a name="associate-your-windows-store-for-business-account-with-intune"></a>Skojarz konto w Sklepie Windows dla firm z usługą Intune
+## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Kojarzenie konta w Sklepie Microsoft dla Firm z usługą Intune
 Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurować konto w sklepie, aby używało usługi Intune jako narzędzia do zarządzania:
 1. Upewnij się, że logujesz się w Sklepie Windows dla firm za pomocą tego samego konta dzierżawy, którego używasz do logowania się do usługi Intune.
 2. W Sklepie dla firm wybierz opcję **Ustawienia** > **Narzędzia do zarządzania**.
 3. Na stronie Narzędzia do zarządzania wybierz opcję **Dodaj narzędzie do zarządzania**, a następnie wybierz pozycję **Microsoft Intune**.
 
 > [!NOTE]
-> Wcześniej można było skojarzyć tylko jedno narzędzie do zarządzania, aby przypisać aplikację za pomocą Sklepu Windows dla firm. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
+> Wcześniej można było skojarzyć tylko jedno narzędzie do zarządzania, aby przypisać aplikację za pomocą Sklepu Microsoft dla Firm. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
 
 Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
@@ -61,16 +61,16 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-1. W bloku **Aplikacje mobilne** wybierz kolejno pozycje **Instalacja** > **Sklep Windows dla firm**.
+1. W bloku **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Sklep Microsoft dla Firm**.
 2. Kliknij przycisk **Włącz**.
-3. Jeśli jeszcze tego nie zrobiono, kliknij link, aby zarejestrować się w Sklepie Windows dla firm i skojarzyć swoje konto zgodnie z wcześniejszym opisem.
-5. Z listy rozwijanej **Język** wybierz język, w którym aplikacje ze Sklepu Windows dla firm są wyświetlane w portalu usługi Intune. Niezależnie od języka, w którym są wyświetlane, aplikacje są instalowane w języku użytkownika końcowego, o ile będzie dostępny.
-6. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Windows do usługi Intune.
+3. Jeśli jeszcze tego nie zrobiono, kliknij link, aby zarejestrować się w Sklepie Microsoft dla Firm i skojarzyć swoje konto zgodnie z wcześniejszym opisem.
+5. Z listy rozwijanej **Język** wybierz język, w którym aplikacje ze Sklepu Microsoft dla Firm są wyświetlane w portalu usługi Intune. Niezależnie od języka, w którym są wyświetlane, aplikacje są instalowane w języku użytkownika końcowego, o ile będzie dostępny.
+6. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Microsoft do usługi Intune.
 
 ## <a name="synchronize-apps"></a>Synchronizacja aplikacji
 
-1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Sklep Windows dla firm**.
-2. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Windows do usługi Intune.
+1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Sklep Microsoft dla Firm**.
+2. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Microsoft do usługi Intune.
 
 ## <a name="assign-apps"></a>Przypisywanie aplikacji
 
@@ -80,9 +80,9 @@ Aplikacje w trybie offline można zastosować do grup użytkowników, grup urzą
 Aplikacje w trybie offline można zainstalować dla określonego użytkownika na urządzeniu lub dla wszystkich użytkowników na urządzeniu. 
 
 
-W przypadku przypisania aplikacji ze Sklepu Windows dla firm licencja będzie używana przez każdego użytkownika, który zainstaluje aplikację. Jeśli zużyjesz wszystkie dostępne licencje dla przypisanej aplikacji, nie można będzie przypisać większej liczby kopii aplikacji. Wykonaj jedno z następujących działań:
+W przypadku przypisania aplikacji ze Sklepu Microsoft dla Firm licencja będzie używana przez każdego użytkownika, który zainstaluje aplikację. Jeśli zużyjesz wszystkie dostępne licencje dla przypisanej aplikacji, nie można będzie przypisać większej liczby kopii aplikacji. Wykonaj jedno z następujących działań:
 * Odinstaluj aplikację z niektórych urządzeń.
 * Zmniejsz zakres bieżącego przypisania i skieruj je tylko do użytkowników, dla których masz wystarczającą liczbę licencji.
-* Kup więcej kopii aplikacji w Sklepie Windows dla firm.
+* Kup więcej kopii aplikacji w Sklepie Microsoft dla Firm.
 
 

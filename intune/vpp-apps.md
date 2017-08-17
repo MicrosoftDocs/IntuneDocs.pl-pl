@@ -15,11 +15,11 @@ ms.assetid: 85b07f57-661a-4bc8-87d2-7b446d5cf4d6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8f938e81740d1bb08e0e9995cab94329c2fe5e7
-ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.openlocfilehash: fced0a52db719fe2228d6cd91786b7de8f539f57
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="manage-volume-purchased-apps-and-books-with-microsoft-intune"></a>Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune
 
@@ -33,8 +33,8 @@ Usługa Microsoft Intune ułatwia zarządzanie aplikacjami i książkami zakupio
 
 ## <a name="which-types-of-apps-and-books-can-you-manage"></a>Jakimi typami aplikacji i książek można zarządzać?
 
-Za pomocą usługi Intune można zarządzać aplikacjami kupionymi w ramach zakupów zbiorczych w sklepie dla systemu iOS oraz aplikacjami kupionymi w Sklepie Windows dla firm. Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepów, wybierz jeden z poniższych tematów:
+Za pomocą usługi Intune można zarządzać aplikacjami kupionymi w ramach zakupów zbiorczych w sklepie dla systemu iOS oraz aplikacjami kupionymi w Sklepie Microsoft dla Firm. Aby dowiedzieć się, jak zarządzać licencjonowanymi aplikacjami z obu sklepów, wybierz jeden z poniższych tematów:
 
 - [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md)
-- [Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
+- [Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
 - [Jak zarządzać książkami elektronicznymi systemu iOS](vpp-ebooks-ios.md)

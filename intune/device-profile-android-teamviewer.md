@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/24/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15a005ae2b84c7bd4f913f892089965c10f3b23e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: bf25ec3fbdec76fb1defb5e4cb12be6dcdf03b0d
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-android-devices"></a>Zapewnienie pomocy zdalnej dla urządzeń z systemem Android zarządzanych przy użyciu usługi Intune
 
-Usługa Intune może korzystać z zakupionego osobno oprogramowania [TeamViewer](https://www.teamviewer.com), aby umożliwić oferowanie pomocy zdalnej użytkownikom urządzeń z systemem Android. Informacje w tym temacie pomogą skonfigurować ustawienia i rozpocząć pracę.
+Usługa Intune może korzystać z zakupionego osobno oprogramowania [TeamViewer](https://www.teamviewer.com), aby umożliwić oferowanie pomocy zdalnej użytkownikom urządzeń z systemem Android. Informacje w tym temacie pomogą rozpocząć pracę.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
@@ -31,14 +31,14 @@ Usługa Intune może korzystać z zakupionego osobno oprogramowania [TeamViewer]
 
 Upewnij się, że użytkownik portalu Azure Portal ma przypisane następujące uprawnienia w postaci [roli usługi Intune](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control):
 - Aby umożliwić administratorowi zmianę ustawień łącznika programu TeamViewer, przyznaj uprawnienie **Aktualizuj pomoc zdalną**.
-- Aby umożliwić administratorowi zainicjowanie nowych ustawień pomocy zdalnej, przyznaj uprawnienie **Żądaj pomocy zdalnej**. Użytkownicy mający to uprawnienie mogą żądać zainicjowania sesji dla dowolnego użytkownika. Nie jest to ograniczone przez żaden zakres przypisania roli usługi Intune. Zakresy przypisania roli usługi Intune nie ograniczają urządzeń ani użytkowników, dla których mogą być inicjowane żądania pomocy zdalnej.
+- Aby umożliwić administratorowi zainicjowanie nowego żądania pomocy zdalnej, przyznaj uprawnienie **Żądaj pomocy zdalnej**. Użytkownicy z uprawnieniem **Żądaj pomocy zdalnej** mogą żądać zainicjowania sesji dla dowolnego użytkownika. Nie są oni ograniczeni przez jakikolwiek zakres przypisania roli usługi Intune. Zakresy przypisania roli usługi Intune nie ograniczają urządzeń ani użytkowników, dla których mogą być inicjowane żądania pomocy zdalnej.
 
 >[!NOTE]
 >Włączenie programu TeamViewer umożliwi programowi TeamViewer dla łącznika usługi Intune utworzenie sesji programu TeamViewer, odczytanie danych usługi Active Directory oraz zapisanie tokenu dostępu do konta programu TeamViewer.
 
 ### <a name="configure-the-intune-teamviewer-connector"></a>Konfigurowanie łącznika usługi Intune programu TeamViewer
 
-Przed zapewnieniem pomocy zdalnej dla urządzeń z systemem Android należy skonfigurować łącznik programu TeamViewer w usłudze Intune, wykonując następujące czynności:
+Przed zapewnieniem pomocy zdalnej dla urządzeń z systemem Android musisz skonfigurować łącznik programu TeamViewer w usłudze Intune, wykonując następujące czynności:
 
 
 1. Zaloguj się do portalu Azure Portal.
@@ -65,7 +65,7 @@ W oknie programu TeamViewer można wykonać szereg akcji zdalnych na urządzeniu
 
 Po zakończeniu zamknij okno programu TeamViewer.
 
-## <a name="end-user-notifications"></a>Powiadomienia użytkowników końcowych
+## <a name="end-user-notifications"></a>Powiadomienia użytkownika końcowego
 
 Użytkownik końcowy zobaczy flagę powiadomienia na ikonie aplikacji Portal firmy na swoim urządzeniu oraz powiadomienie po otwarciu aplikacji. Wtedy może zaakceptować żądanie pomocy zdalnej.
 

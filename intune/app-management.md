@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
-ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
+ms.openlocfilehash: c05b2257fe03cd23ad5ba71a3fee217cd4802650
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -87,7 +87,7 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 
 ### <a name="monitor"></a>Monitor
 - **Licencjonowane aplikacje** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
-    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
+    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
 - **Wykryte aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
 - **Stan instalacji aplikacji** — pokazuje stan utworzonego przez Ciebie przypisania aplikacji.
 - **Stan ochrony aplikacji** — pokazuje stan zasad ochrony aplikacji dla wybranego użytkownika.
@@ -97,7 +97,7 @@ Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](
 ### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Sklep Windows dla firm** — umożliwia skonfigurowanie integracji ze Sklepem Windows dla firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
-    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Windows dla firm](windows-store-for-business.md)
+- **Sklep Microsoft dla Firm** — umożliwia skonfigurowanie integracji ze Sklepem Microsoft dla Firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
+    - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
 - **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy.
     - [Konfiguracja portalu firmy](company-portal-app.md)

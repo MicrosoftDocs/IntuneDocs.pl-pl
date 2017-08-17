@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,23 @@ ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3688eef68fc9dcfced976db02c8d50126fa30da8
-ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.openlocfilehash: 9cf2549852c5949ff1c95af12b40f59136d56e34
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="reset-the-passcode-on-windows-devices-integrated-with-the-microsoft-pin-reset-service-using-intune"></a>Resetowanie kodu dostępu na urządzeniach z systemem Windows zintegrowanych z usługą resetowania numerów PIN firmy Microsoft przy użyciu usługi Intune
 
 Integracja funkcji resetowania kodu dostępu w urządzeniach z systemem Windows z usługą resetowania numerów PIN firmy Microsoft pozwala wygenerować nowy kod dostępu dla urządzeń z systemem Windows 10 Mobile. Na urządzeniach musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
+
+## <a name="supported-platforms"></a>Obsługiwane platformy
+
+- Windows — obsługiwana dla aktualizacji systemu Windows 10 dla twórców i nowszej wersji (przyłączonej do usługi Azure AD)
+- Windows Phone — nieobsługiwana
+- iOS — nieobsługiwana
+- macOS — nieobsługiwana
+- Android — nieobsługiwana
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -40,13 +48,14 @@ Aby można było zdalnie zresetować kod dostępu na zarządzanych urządzeniach
 
 ### <a name="configure-windows-devices-to-use-pin-reset"></a>Konfigurowanie urządzeń z systemem Windows do użycia usługi resetowania numeru PIN
 
-Aby skonfigurować resetowanie numeru PIN na zarządzanych urządzeniach z systemem Windows, włącz poszczególne funkcje przy użyciu [niestandardowych zasad usługi Intune dotyczących urządzeń z systemem Windows 10](custom-settings-windows-10.md). Skonfiguruj zasady za pomocą następujących dostawców usługi konfiguracji zasad systemu Windows:
+Aby skonfigurować resetowanie numeru PIN na zarządzanych urządzeniach z systemem Windows, włącz poszczególne funkcje przy użyciu [niestandardowych zasad usługi Intune dotyczących urządzeń z systemem Windows 10](custom-settings-windows-10.md). Skonfiguruj zasady za pomocą następującego dostawcy usługi konfiguracji zasad systemu Windows:
 
 
-- **Użytkownicy** - **./User/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
-- **Urządzenia** - **./Device/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
+- **W przypadku urządzeń** - **./Device/Vendor/MSFT/PassportForWork/*identyfikator dzierżawy*/Policies/EnablePinRecovery **
 
-Obaj dostawcy usługi konfiguracji muszą mieć wartość **True**.
+*Identyfikator dzierżawy* odwołuje się do identyfikatora katalogi usługi Azure Active Directory, który możesz uzyskać na stronie **Właściwości** usługi Azure Active Directory.
+
+Ustaw wartość dla tego dostawcy usług kryptograficznych na **Prawda**.
 
 ## <a name="steps-to-reset-the-passcode"></a>Instrukcje resetowania kodu dostępu
 

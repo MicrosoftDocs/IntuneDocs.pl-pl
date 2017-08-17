@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/30/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a97e58f1d108932e44b0b4e36bda5a30b7a90da
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: e41eceed55a323a7f3c07c7b5d8ab2da7764ff53
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus 2016 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -36,6 +36,7 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 20
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, użytkownicy końcowi mogą utracić dane z niezapisanych plików.
 - Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S.
 - W przypadku przypisania tego typu aplikacji jako dostępnego i ustawienia dla wielu użytkowników różnych przypisań użytkownicy będą widzieć tylko ostatnio ustawione przypisanie.
+- Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze Sklepu Windows (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, w których już wdrożono aplikacje usługi Office 365 z usługą Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
 
 
 ## <a name="get-started"></a>Wprowadzenie

@@ -15,17 +15,17 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b5758d5af0a478335d4a7503c13af785c9c512fb
+ms.sourcegitcommit: 3bafbec5822bb5baa2d313f2bd19f35a67438beb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Począwszy od usługi Intune w wersji 1704, można używać zasad ochrony aplikacji z systemem Windows 10 w ramach scenariusza zarządzania aplikacjami mobilnymi (MAM) bez rejestracji.
+Począwszy od usługi Intune w wersji 1704, można używać zasad ochrony aplikacji z systemem Windows 10, aby zabezpieczać aplikacje bez rejestracji urządzeń.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -39,17 +39,15 @@ Omówmy kilka założeń dotyczących dodawania zasad funkcji WIP.
 
 ### <a name="types-of-apps"></a>Typy aplikacji
 
--   **Zalecane aplikacje:** wstępnie wypełniona lista aplikacji (przede wszystkim pakietu Microsoft Office), którą administratorzy mogą łatwo zaimportować do zasad.
+-   **Zalecane aplikacje:** wstępnie wypełniona lista aplikacji (przede wszystkim pakietu Microsoft Office), którą możesz łatwo zaimportować do zasad. <!---I really don't know what you mean by "easily import into policy"--->
 
--   **Aplikacje ze sklepu:** administrator może dodać do zasad dowolną aplikację ze sklepu Windows.
+-   **Aplikacje ze sklepu:** możesz dodać do zasad dowolną aplikację ze sklepu Windows.
 
--   **Aplikacje klasyczne systemu Windows:** administrator może dodać do zasad dowolne aplikacje klasyczne systemu Windows (np. plik exe, dll itd.).
+-   **Aplikacje klasyczne systemu Windows:** możesz dodać do zasad dowolne aplikacje klasyczne systemu Windows (np. plik exe, dll)
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, trzeba skonfigurować dostawcę usług MAM.
-
--   Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, trzeba skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Ponadto wymagane są następujące elementy:
 
@@ -58,12 +56,13 @@ Ponadto wymagane są następujące elementy:
 
 > [!IMPORTANT]
 > Funkcja WIP nie obsługuje wielu tożsamości, jednorazowo może istnieć tylko jedna zarządzana tożsamość.
+<!---Should you be linking to a topic that explains what multi-identity is?--->
 
 ## <a name="to-add-a-wip-policy"></a>Aby dodać zasady funkcji WIP
 
-Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczące funkcji WIP za pośrednictwem witryny [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczące funkcji WIP za pośrednictwem witryny [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure docset?--->
 
-1.  Przejdź do **pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune**, wybierz pozycję **Wszystkie ustawienia**, a następnie pozycję **Zasady aplikacji**.
+1.  Przejdź do **pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune**, wybierz pozycję **Wszystkie ustawienia** > **Zasady aplikacji**.
 
 2.  W bloku **Zasady aplikacji** wybierz pozycję **Dodaj zasady**, następnie wprowadź następujące wartości:
 
@@ -120,65 +119,64 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 > [!NOTE]
 > Aby równocześnie dodać wiele **aplikacji klasycznych**, można kliknąć menu **(...)** na końcu wiersza aplikacji, a następnie kontynuować dodawanie dalszych aplikacji. Po zakończeniu tych czynności wybierz przycisk **OK**.
 
-## <a name="windows-information-protection-wip-learning"></a>Uczenie funkcji Windows Information Protection (WIP)
-
+## <a name="wip-learning"></a>Uczenie funkcji WIP
+<!---You've already defined WIP earlier in the topic. You don't need to keep doing so. --->
 Po dodaniu aplikacji, które chcesz chronić za pomocą funkcji WIP, konieczne jest zastosowanie trybu ochrony z wykorzystaniem opcji **Uczenie funkcji WIP**.
 
 ### <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Uczenie funkcji Windows Information Protection (WIP) to raport, który umożliwia administratorom monitorowanie aplikacji nieznanych funkcji WIP. Nieznane aplikacje to te, które nie zostały wdrożone przez dział informatyczny organizacji użytkownika. Administrator może wyeksportować te aplikacje z raportu i dodać je do swoich zasad funkcji WIP, aby uniknąć zakłóceń produktywności przed wymuszeniem działania funkcji WIP w trybie „Ukryj przesłonięcia”.
+Uczenie funkcji WIP to raport, który umożliwia monitorowanie nieznanych aplikacji funkcji WIP. Nieznane aplikacje to te, które nie zostały wdrożone przez dział informatyczny organizacji użytkownika. Możesz wyeksportować te aplikacje z raportu i dodać je do swoich zasad funkcji WIP, aby uniknąć zakłóceń produktywności przed wymuszeniem działania funkcji WIP w trybie „Ukryj przesłonięcia”.
 
 Firma Microsoft zaleca rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowania w małej grupie, czy na liście aplikacji dozwolonych znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania **Ukryj przesłonięcia**.
 
-#### <a name="what-the-protection-modes-are"></a>Jakie są tryby ochrony?
+### <a name="what-are-the-protection-modes"></a>Jakie są tryby ochrony?
 
-- **Ukryj przesłonięcia:**
-    - Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji.
-    - Może to obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
-<br></br>
+#### <a name="hide-overrides"></a>Ukryj przesłonięcia
+Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji. Może to obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
 
-- **Zezwalaj na przesłonięcia:**
-    - Funkcja WIP szuka niewłaściwych przypadków udostępniania danych, ostrzegając użytkowników, jeśli robią coś, co zostanie uznane za potencjalnie niebezpieczne.
-    - Ten tryb pozwala jednak użytkownikowi przesłonić zasady i udostępnić dane, przy czym dana akcja jest rejestrowana w dzienniku inspekcji.
-<br></br>
-- **Cichy:**
-    - Funkcja WIP jest uruchamiana w trybie cichym: niewłaściwe udostępnianie danych jest rejestrowane i nie są blokowane żadne akcje, które w trybie zezwolenia na przesłonięcia pojawiłyby się w monicie wymagającym interakcji z pracownikiem.
-    - Niedozwolone akcje, np. gdy aplikacje podejmują próby uzyskania nieuprawnionego dostępu do zasobów sieciowych lub danych chronionych przy użyciu funkcji WIP, są nadal zatrzymywane.
-<br></br>
-- **Wyłączona (niezalecane):**
-    - Funkcja WIP zostanie wyłączona i nie będzie używana do ochrony ani inspekcji danych.
-    - Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich plików oznakowanych przy użyciu funkcji WIP na dyskach podłączonych lokalnie. Należy mieć świadomość, że informacje dotyczące poprzedniego odszyfrowania i poprzednich zasad nie są automatycznie stosowane ponownie po ponownym włączeniu ochrony WIP.
+#### <a name="allow-overrides"></a>Zezwalaj na przesłonięcia
+Funkcja WIP szuka niewłaściwych przypadków udostępniania danych, ostrzegając użytkowników, jeśli robią coś, co zostanie uznane za potencjalnie niebezpieczne. Ten tryb pozwala jednak użytkownikowi przesłonić zasady i udostępnić dane, przy czym dana akcja jest rejestrowana w dzienniku inspekcji.
 
-### <a name="to-add-a-protection-mode"></a>Aby dodać tryb ochrony
+#### <a name="silent"></a>Dyskretnej
+Funkcja WIP jest uruchamiana w trybie cichym: niewłaściwe udostępnianie danych jest rejestrowane i nie są blokowane żadne akcje, które w trybie zezwolenia na przesłonięcia pojawiłyby się w monicie wymagającym interakcji z pracownikiem. Niedozwolone akcje, np. gdy aplikacje podejmują próby uzyskania nieuprawnionego dostępu do zasobów sieciowych lub danych chronionych przy użyciu funkcji WIP, są nadal zatrzymywane.
 
-1.  W bloku **Zasady aplikacji** wybierz nazwę zasad, a następnie kliknij pozycję **Wymagane ustawienia** w bloku **Dodaj zasady**.
+#### <a name="off-not-recommended"></a>Wyłączona (niezalecane)
+Funkcja WIP zostanie wyłączona i nie będzie używana do ochrony ani inspekcji danych.
+
+Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich plików oznakowanych przy użyciu funkcji WIP na dyskach podłączonych lokalnie. Należy mieć świadomość, że informacje dotyczące poprzedniego odszyfrowania i poprzednich zasad nie są automatycznie stosowane ponownie po ponownym włączeniu ochrony WIP.
+
+### <a name="add-a-protection-mode"></a>Dodawanie trybu ochrony
+
+1.  W bloku **Zasady aplikacji** wybierz nazwę swoich zasad, a następnie wybierz pozycję **Wymagane ustawienia**.
 
     ![Zrzut ekranu trybu uczenia](./media/learning-mode-sc1.png)
 
 1.  Wybierz polecenie **Zapisz**.
 
-### <a name="to-use-wip-learning"></a>Aby korzystać z opcji Uczenie funkcji WIP
+### <a name="use-wip-learning"></a>Korzystanie z opcji Uczenie funkcji WIP
 
-1. Przejdź do pulpitu nawigacyjnego platformy Azure.
+1. Przejdź do pulpitu nawigacyjnego platformy Azure. <!---since they're changing from Intune MAM to Intune proper, a screenshot might be helpful.--->
 
 2. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
 3. Wybierz pozycję **Intune**, a kiedy zostanie otwarty **pulpit nawigacyjny Intune**, wybierz pozycję **Aplikacje mobilne**.
 
-4. Wybierz pozycję **Uczenie funkcji WIP** w obszarze sekcji **Monitor**. Zostaną wyświetlone nieznane aplikacje zarejestrowane przy użyciu funkcji Uczenie funkcji WIP.
+4. Wybierz pozycję **Uczenie funkcji WIP** w obszarze **Monitor**. Zostaną wyświetlone nieznane aplikacje zarejestrowane przy użyciu funkcji Uczenie funkcji WIP.
 
 > [!IMPORTANT]
 > Gdy aplikacje pojawią się w raporcie rejestracji funkcji Uczenie funkcji WIP, można dodać je do zasad ochrony aplikacji.
 
-## <a name="to-deploy-your-wip-app-protection-policy"></a>Aby wdrożyć zasady ochrony aplikacji w funkcji WIP
+## <a name="deploy-your-wip-app-protection-policy"></a>Wdrażanie zasad ochrony aplikacji w funkcji WIP
 
 > [!IMPORTANT]
-> Dotyczy to funkcji WIP w scenariuszu zarządzania aplikacjami mobilnymi (MAM) bez rejestracji.
+> Ma to zastosowanie do funkcji WIP bez rejestracji urządzeń.
+
+<!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
 Po utworzeniu zasad ochrony aplikacji w funkcji WIP trzeba je wdrożyć do organizacji przy użyciu funkcji MAM.
 
-1.  W bloku **Zasady aplikacji** wybierz nowo utworzone zasady ochrony aplikacji, wybierz pozycję **Grupy użytkowników**, następnie wybierz pozycję **Dodaj grupę użytkowników**.
+1.  W bloku **Zasady aplikacji** wybierz nowo utworzone zasady ochrony aplikacji, wybierz pozycję **Grupy użytkowników** > **Dodaj grupę użytkowników**.
 
     Lista grup użytkowników zawierająca wszystkie grupy zabezpieczeń w usłudze Azure Active Directory zostanie otwarta w bloku **Dodaj grupę użytkowników**.
 
-1.  Wybierz grupę, do której mają się odnosić zasady, a następnie kliknij pozycję **Wybierz**, aby wdrożyć zasady.
+1.  Wybierz grupę, do której mają się odnosić zasady, a następnie wybierz pozycję **Wybierz**, aby wdrożyć zasady.
