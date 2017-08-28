@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
-ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
+ms.openlocfilehash: 6b3ce7e895920d2bb9ff3537fd0ef87ecb4efcc0
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
@@ -60,18 +60,20 @@ Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzie
 
 Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąże połączenie z punktem końcowym RESTful w interfejsie API magazynu danych, który uwidoczni model danych klienta raportowania. Postępuj zgodnie z tymi instrukcjami, aby przy użyciu aplikacji Power BI Desktop nawiązać połączenie i utworzyć własne raporty. Możesz skorzystać z rozwiązania innego niż aplikacja Power BI Desktop. Wraz z adresem URL usługi OData możesz użyć swojego ulubionego narzędzia analitycznego, o ile klient obsługuje uwierzytelnianie OAUTH2.0 i standard OData v4.0.
 
-1.  Pobierz **adres URL usługi OData** z bloku raportowania, na przykład `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
-2.  Otwórz aplikację **Power BI Desktop**.
-3.  Wybierz pozycję **Narzędzia główne** > **Pobierz dane**. Zaznacz pozycję **Źródło danych OData**.
-4.  Wybierz pozycję **Podstawowe**.
-5.  Wpisz lub wklej **adres URL usługi OData** w polu adresu URL.
-6.  Kliknij przycisk **OK**.
-7.  Jeśli nie dokonano uwierzytelnienia w usłudze Azure AD dla dzierżawy z poziomu klienta aplikacji Power BI Desktop, wpisz swoje poświadczenia.  
-    a.  Wybierz pozycję **Konto organizacyjne**.  
-    b.  Wpisz nazwę użytkownika i hasło.  
-    c.  Kliknij przycisk **Zaloguj**.  
-    d.  Kliknij przycisk **Połącz**.  
-8.  Kliknij przycisk **Załaduj**.
+1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę **Intune**.  
+2.  Otwórz blok **Interfejs API magazynu danych usługi Microsoft Intune (wersja zapoznawcza)**.
+3. Pobierz adres URL niestandardowego kanału informacyjnego z bloku raportowania, na przykład `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+4. Otwórz aplikację **Power BI Desktop**.
+5. Wybierz pozycję **Narzędzia główne** > **Pobierz dane**. Zaznacz pozycję **Źródło danych OData**.
+6. Wybierz pozycję **Podstawowe**.
+7. Wpisz lub wklej **adres URL usługi OData** w polu adresu URL.
+8. Kliknij przycisk **OK**.
+9. Jeśli nie dokonano uwierzytelnienia w usłudze Azure AD dla dzierżawy z poziomu klienta aplikacji Power BI Desktop, wpisz swoje poświadczenia.  
+    1.  Wybierz pozycję **Konto organizacyjne**.  
+    2.  Wpisz nazwę użytkownika i hasło.  
+    3.  Kliknij przycisk **Zaloguj**.  
+    4.  Kliknij przycisk **Połącz**.  
+10. Kliknij przycisk **Załaduj**.
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -79,4 +81,4 @@ Możesz znaleźć odpowiedzi na pytania dotyczące środowiska, takie jak liczba
 
 <!-- -  You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
  -  Dane dzierżawy są organizowane, aby ułatwić ściąganie analizy danych. Aby uzyskać więcej informacji na temat sposobu organizowania danych, zobacz [Model danych magazynu danych](reports-ref-data-model.md). 
-<!-- -  You can also access the data from a RESTful interface and incorporate the data into your own app. For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md). -->
+ -  Możesz również uzyskać dostęp do danych za pomocą interfejsu RESTful i dołączyć dane do własnej aplikacji. Aby uzyskać więcej informacji, zobacz [Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST](reports-proc-data-rest.md).

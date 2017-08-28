@@ -1,12 +1,12 @@
 ---
 title: "Wprowadzenie do rejestrowania urządzeń"
 titleSuffix: Intune on Azure
-description: 
+description: "Poznaj środowisko rejestracji, przeprowadzając pełną rejestrację urządzenia z systemem iOS."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,37 +15,26 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f52c9d44a91ed6547aadd712db42ea68cfd01dc
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b072ca0ee5a1e4d0a4feb6972ee80fe717fe9f83
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="getting-started-enrolling-devices"></a>Wprowadzenie do rejestrowania urządzeń
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+# <a name="get-started-enrolling-devices"></a>Wprowadzenie do rejestrowania urządzeń
 
 Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Ponieważ użytkownicy końcowi będą wchodzić w interakcję z usługą Intune na swoich urządzeniach, a nie w konsoli administracyjnej, istotna jest dobra znajomość środowiska rejestracji. W ten sposób można połączyć dobrze przygotowane zasady zgodności i doświadczenie, aby okazać zrozumienie dla użytkowników. Jest to szczególnie ważne, ponieważ użytkownicy będą w pełni świadomi, jakie informacje są widoczne dla administratora:
 
-## <a name="what-it-cannot-see"></a>Czego nie widzi dział IT
-* Historia połączeń i przeglądania sieci Web
-* Lokalizacja
-* Osobisty adres e-mail
-* Wiadomości SMS
-* Kontakty
-* Hasła do kont osobistych
-* Zdarzenia kalendarza
-* Obrazy, w tym dane z aparatu i aplikacji Zdjęcia
-
-## <a name="what-it-can-see"></a>Co widzi dział IT
-* Model
-* Numer seryjny
-* Wersja systemu operacyjnego
-* Nazwy aplikacji
-* Właściciel
-* Nazwa urządzenia
-* Producent (dla urządzeń, które nie zostały wyprodukowane przez firmę Apple)
-* Numer telefonu (dla urządzeń służbowych: cały numer; dla urządzeń osobistych: cztery ostatnie cyfry)
+| Czego nie widzi dział IT | Co widzi dział IT |
+|---|---|
+| Historia połączeń i przeglądania sieci Web | Model |
+| Lokalizacja | Numer seryjny |
+| Osobisty adres e-mail | Wersja systemu operacyjnego |
+| Wiadomości SMS | Nazwy aplikacji |
+| Kontakty | Właściciel |
+| Hasła do kont osobistych | Nazwa urządzenia |
+| Zdarzenia kalendarza | Producent (dla urządzeń, które nie zostały wyprodukowane przez firmę Apple) |
+| Obrazy, w tym dane z aparatu i aplikacji Zdjęcia | Numer telefonu (dla urządzeń służbowych: cały numer; dla urządzeń osobistych: cztery ostatnie cyfry) |
 
 ## <a name="how-do-i-enroll-a-device"></a>Jak zarejestrować urządzenie?
 
@@ -67,3 +56,13 @@ Rejestrowanie urządzenia stanowi pierwsze doświadczenie użytkowników końcow
 14. Gdy ekran zmieni się, aby pokazać, że instalacja profilu została zakończona, naciśnij pozycję **Gotowe**.
 15. Na ekranie zostanie wyświetlony komunikat „Rejestrowanie urządzenia” z informacją, że urządzenie zostało pomyślnie zarejestrowane. Zostanie wyświetlone okno podręczne z prośbą do użytkownika o otwarcie strony w Portalu firmy. Naciśnij pozycję **Otwórz**.
 16. Nastąpi powrót na ekran **Konfiguracja dostępu do zasobów firmy**. Jeśli nie zostały skonfigurowane żadne zasady testowe, to urządzenie powinno być widoczne jako zgodne. Jeśli istnieją jakiekolwiek zasady testowe, naciśnięcie pozycji **Zgodność urządzenia** spowoduje wyświetlenie informacji, że istnieją działania, które należy wykonać, aby zabezpieczyć urządzenie.
+
+## <a name="next-steps"></a>Następne kroki
+
+[Wprowadzenie do dodawania aplikacji](get-started-apps.md) — znajduj i dodawaj aplikacje do urządzeń, aby umożliwić pracownikom wykonywanie zadań.
+
+## <a name="learn-more"></a>Dowiedz się więcej
+
+* [Opcje rejestracji dla usługi Intune](enrollment-options.md)
+* [Enable bring your own device with Intune (Włączanie funkcji Przynieś własne urządzenie w usłudze Intune)](byod-enable.md)
+* [Educating your end users about enrollment and device management (Szkolenie użytkowników końcowych w zakresie rejestracji i zarządzania urządzeniami)](end-user-educate.md)

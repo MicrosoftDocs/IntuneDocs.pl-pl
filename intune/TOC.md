@@ -175,7 +175,6 @@
 ### [Konfigurowanie ustawień usług edukacyjnych dla urządzeń z systemem iOS](education-settings-configure-ios.md)
 ### [Konfigurowanie urządzeń udostępnionych w usługach edukacyjnych dla urządzeń z systemem iOS](education-settings-configure-ios-shared.md)
 ### [Konfigurowanie zasad aktualizacji systemu iOS](software-updates-ios.md)
-### [Konfigurowanie ustawień usługi Windows Update dla firm](windows-update-for-business-configure.md)
 ### [Konfigurowanie certyfikatów](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
@@ -237,7 +236,7 @@
 <!-- ### Protect devices with remote actions -->
 
 ## [Zarządzanie rolami](role-based-access-control.md)
-
+## [Zarządzanie aktualizacjami oprogramowania](windows-update-for-business-configure.md)
 
 ## [Zarządzanie komputerami przy użyciu oprogramowania agenta](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Porównanie zarządzania komputerami](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)

@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2e12792445b36ba6657cbe6b2f6c924f6d97fe3c
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 6107059888c8d2fb6227277202a5906491ac9092
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="reference-for-application-entities"></a>Dokumentacja jednostek aplikacji
 
@@ -52,9 +52,9 @@ Jednostka **AppRevision** przedstawia wszystkie wersje aplikacji.
 | IsCurrent |Wskazuje, czy ta wersja aplikacji jest aktualna w magazynie danych, czy nie |True/False |
 | RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej wersji aplikacji w magazynie danych |2016-11-23 12:00:00 |
 
-## <a name="appinstallertypes"></a>AppInstallerTypes
+## <a name="apptypes"></a>AppTypes
 
-Jednostka **AppInstallerTypes** przedstawia źródło instalacji aplikacji.
+Jednostka **AppTypes** przedstawia źródło instalacji aplikacji.
 
 | Właściwość  | Opis |
 |---------|------------|
@@ -80,44 +80,6 @@ Jednostka **AppInstallerTypes** przedstawia źródło instalacji aplikacji.
 | 11 |Aplikacja MSI dla systemu Windows Mobile |Aplikacja biznesowa MSI dla systemu Windows Mobile |
 | 12 |Aplikacja LOB dla systemu Windows Phone |Aplikacja biznesowa dla systemu Windows Phone |
 
-## <a name="applicationtypes"></a>ApplicationTypes
-
-Jednostka **ApplicationTypes** zawiera listę możliwych typów aplikacji.
-
-| Właściwość  | Opis |
-|---------|------------|
-| ApplicationTypeID |Identyfikator typu |
-| ApplicationTypeKey |Klucz zastępczy klucza |
-| ApplicationTypeName |Typ aplikacji |
-
-## <a name="example"></a>Przykład
-
-| ApplicationTypeID  | Nazwa | Opis |
-|---------|------------|--------|
-| 0 |InHouse |Aplikacja utworzona w firmie |
-| 1 |DeepLink |Link do aplikacji w sklepie z aplikacjami |
-| 2 |WebLink |Link do aplikacji internetowej |
-
-## <a name="managedsoftwaretypes"></a>ManagedSoftwareTypes
-
-Jednostka **ManagedSoftwareTypes** zawiera listę możliwych typów oprogramowania zarządzanego dla aplikacji.
-
-| Właściwość  | Opis |
-|---------|------------|
-| SoftwareTypeID |Identyfikator typu |
-| SoftwareTypeKey |Klucz zastępczy klucza |
-| SoftwareTypeName |Typ oprogramowania |
-
-## <a name="example"></a>Przykład
-
-| SoftwareTypeID  | Nazwa | Opis |
-|---------|------------|--------|
-| 0 |Komputery |Aplikacja klasyczna |
-| 2 |Update |Aktualizacja systemu Windows |
-| 5 |SideCarAgent | |
-| 1 |Urządzenia przenośne |Aplikacja mobilna |
-| 3 |WebLink |Link internetowy |
-| 4 |VppDeepLink |Link do aplikacji w sklepie z aplikacjami, która jest częścią programu VPP (Volume Purchase Program) |
 
 ## <a name="vppprogramtypes"></a>VppProgramTypes
 

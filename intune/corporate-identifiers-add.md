@@ -1,12 +1,12 @@
 ---
-title: "Dodawanie identyfikatorów IMEI do usługi Intune"
+title: "Dodawanie identyfikatorów firmy do usługi Intune"
 titleSuffix: Intune on Azure
-description: "Informacje dotyczące dodawania identyfikatorów urządzeń firmowych (numerów IMEI) do usługi Microsoft Intune. \""
+description: "Informacje dotyczące dodawania identyfikatorów urządzeń firmowych (metody rejestracji, numerów IMEI i numerów seryjnych) do usługi Microsoft Intune. \""
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,31 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b38bf2da70537d07a050fa21be9a2a3062ca84b
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 03a278762401ee9697909cf45b3fe86212393e66
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako administrator usługi Intune możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI (International Mobile Equipment Identity) lub numerów seryjnych. Usługa Intune używa tych identyfikatorów, aby określić własność urządzeń jako firmowe. Numery IMEI możesz deklarować dla wszystkich obsługiwanych platform. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
+Jako administrator usługi Intune możesz zidentyfikować urządzenie jako należące do firmy na różne sposoby. Usługa Intune może zbierać dodatkowe informacje z urządzeń należących do firmy. Można również ustawić ograniczenia urządzenia, aby zapobiec rejestracji przez urządzenia, które nie należą do firmy.
+
+Urządzenie jest identyfikowane jako należące do firmy w przypadku spełnienia dowolnego z poniższych warunków:
+
+- Zarejestrowano je przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) (wszystkie platformy)
+- Zarejestrowano je przy użyciu programu [Device Enrollment Program](device-enrollment-program-enroll-ios.md) firmy Apple lub przy użyciu narzędzi [Apple School Manager](apple-school-manager-set-up-ios.md) albo [Apple Configurator](apple-configurator-enroll-ios.md) (tylko system iOS)
+- Wcześniej zadeklarowano je przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
+- Zarejestrowano je w usłudze Azure Active Directory lub pakiecie Enterprise Mobility Suite jako urządzenie z systemem Windows 10 Enterprise (tylko system Windows 10)
+- Wybrano wartość **Firmowe** w obszarze **Właściwości** urządzenia
+
+Rekordy urządzeń należących do firmy w usłudze Intune zawierają wartość **Firmowe** w kolumnie **Własność**. Aby je wyświetlić, przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.
+
+## <a name="predeclare-a-device-with-imei-or-serial-number"></a>Wstępne deklarowanie urządzenia przy użyciu numeru IMEI lub numeru seryjnego
+
+Jako administrator usługi Intune możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI lub numerów seryjnych. Usługa Intune używa tych identyfikatorów, aby określić własność urządzeń jako firmowe. Numery IMEI możesz deklarować dla wszystkich obsługiwanych platform. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
@@ -54,10 +68,9 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 >Należy również zauważyć, że nie ma gwarancji, iż numery seryjne systemu Android są unikatowe albo że istnieją. Aby ustalić, czy numer seryjny jest niezawodnym identyfikatorem urządzenia, skontaktuj się z dostawcą urządzenia.
 >Numery seryjne zgłaszane przez urządzenie do usługi Intune mogą być niezgodne z identyfikatorami wyświetlanymi w menu Ustawienia/Informacje o systemie Android na urządzeniu. Sprawdź typ numeru seryjnego podanego przez producenta urządzenia.
 
+### <a name="add-a-csv-list-of-corporate-identifiers"></a>Dodawanie listy CSV identyfikatorów firmy
 
-**Aby dodać listę .csv identyfikatorów firmy**
-
-1. W portalu Intune wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**, wybierz opcję **Identyfikatory urządzeń firmowych**, a następnie kliknij przycisk **Dodaj**.
+1. W obszarze usługi Intune w witrynie Azure Portal wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**, a następnie kliknij przycisk **Dodaj**.
 
  ![Zrzut ekranu obszaru roboczego identyfikatorów urządzeń firmowych z wyróżnionym przyciskiem Dodaj.](./media/add-corp-id.png)
 
@@ -69,9 +82,11 @@ Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć s
 
 ## <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
 
-1. W portalu Intune wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**, następnie opcję **Identyfikatory urządzeń firmowych** i przycisk **Usuń**.
+1. W obszarze usługi Intune w witrynie Azure Portal wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**.
+2. Wybierz identyfikatory urządzeń do usunięcia, a następnie wybierz pozycję **Usuń**.
+3. Potwierdzenie usunięcia.
 
-3. W bloku **Usuń identyfikatory** przewiń do pliku .csv identyfikatorów urządzeń, aby je usunąć, a następnie kliknij przycisk **Usuń**.
+Usunięcie identyfikatora firmy zarejestrowanego urządzenia nie zmienia własności tego urządzenia. Aby zmienić własność urządzenia, przejdź kolejno do pozycji **Urządzenia** > **Wszystkie urządzenia**, wybierz urządzenie, wybierz pozycję **Właściwości** i zmień ustawienie **Własność urządzenia**.
 
 ## <a name="imei-specifications"></a>Specyfikacje IMEI
 Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobile Equipment Identifier) można znaleźć w portalu [3GPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).

@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
-ms.openlocfilehash: dcc97e5bcffb35752b65e8ce275d38b9578da6fa
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: 3514b580a4e35cc9e0813d6dd7fd0e1eee550d7c
+ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/12/2017
 ---
 # <a name="enrollment-options-for-intune"></a>Opcje rejestracji dla usługi Intune
 
@@ -41,6 +41,9 @@ Aby zarządzać rejestracją urządzeń z systemem iOS i macOS, wymagany jest ce
 ## <a name="corporate-identifiers"></a>Identyfikatory firmy
 
 Możesz wyświetlić listę numerów międzynarodowych identyfikatorów urządzeń przenośnych (IMEI) oraz numerów seryjnych, aby zidentyfikować urządzenia stanowiące własność firmy. Dowiedz się więcej o [identyfikatorach firmy](corporate-identifiers-add.md).
+## <a name="multi-factor-authentication"></a>Uwierzytelnianie wieloskładnikowe
+
+Można wymagać od użytkowników, aby podczas rejestracji urządzenia korzystali z dodatkowej metody weryfikacji, takiej jak telefon, kod PIN lub dane biometryczne. Dowiedz się więcej o [uwierzytelnianiu wieloskładnikowym](multi-factor-authentication.md).
 
 ## <a name="device-enrollment-manager"></a>Menedżer rejestracji urządzeń
 Możesz uczynić użytkowników menedżerami rejestracji urządzeń.  Użytkownicy DEM mogą rejestrować duże liczby urządzeń przenośnych za pomocą jednego konta użytkownika. Konto menedżera rejestracji urządzeń (DEM) umożliwia rejestrację do 1000 urządzeń. Dowiedz się więcej o [menedżerach rejestracji urządzeń](device-enrollment-manager-enroll.md).
