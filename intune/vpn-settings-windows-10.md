@@ -15,11 +15,11 @@ ms.assetid: 495e4ed6-b2ef-47cc-a110-13fa9b5f85a6
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f112983a33c1af24d288f19140114084575f36d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8e7fb7697f50706566210063605e9b5d750e0c90
+ms.sourcegitcommit: 5a4529aae710ca2abac5b4d2cfd92cb2df7e67cb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
@@ -96,10 +96,13 @@ Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera doku
 
 ## <a name="conditional-access"></a>Dostęp warunkowy
 
-**Dostęp warunkowy dla tego połączenia VPN** -
-**Logowanie jednokrotne (SSO) z certyfikatem alternatywnym** -
-**Rozszerzone użycie klucza** -
-**Skrót wydawcy** -
+**Dostęp warunkowy dla tego połączenia VPN** — umożliwia przepływ zgodności urządzenia od klienta. Po włączeniu klient VPN będzie podejmować próby komunikacji z usługą Azure Active Directory, aby uzyskać certyfikat do użycia na potrzeby uwierzytelniania. Sieć VPN należy skonfigurować do używania uwierzytelniania certyfikatów, a serwer sieci VPN musi mieć relację zaufania z serwerem zwracanym przez usługę Azure Active Directory.
+
+**Logowanie jednokrotne z certyfikatem alternatywnym** — na potrzeby zgodności urządzeń użyj certyfikatu innego niż certyfikat uwierzytelniania sieci VPN podczas uwierzytelniania Kerberos. Wybierz certyfikat z następującymi ustawieniami: 
+
+- **Rozszerzone użycie klucza** — nazwa rozszerzonego użycia klucza (EKU).
+- **Identyfikator obiektu** — identyfikator obiektu dla EKU.
+- **Skrót wystawcy** — odcisk palca certyfikatu logowania jednokrotnego.
 
 ## <a name="dns-settings"></a>Ustawienia DNS
 

@@ -1,12 +1,12 @@
 ---
 title: Wprowadzenie do zasad
 titleSuffix: Intune on Azure
-description: 
+description: "Utwórz zasady, aby uniemożliwić użytkownikom wykonywanie nieautoryzowanych działań na swoich urządzeniach."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,13 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dd3279288fe5ea1fec16224c70b4562fcf53555d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b12b80ac13868b6706d2d4e7532ec13cba9a5b7e
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="getting-started-with-policies"></a>Wprowadzenie do zasad
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+# <a name="get-started-with-policies"></a>Wprowadzenie do zasad
 
 Jednym z głównych celów rozpoczynania pracy z usługą Intune jest rejestrowanie urządzeń w celu zapewnienia, że są one zgodne z zasadami firmy. Zasady zgodności nie tylko ułatwiają zarządzanie specjalnymi typami urządzeń, takimi jak kioski należące do firmy, ale także urządzeniami osobistymi (BYOD), takimi jak tablety, oraz urządzeniami nienależącymi do żadnego użytkownika.
 
@@ -56,3 +54,12 @@ __Jak utworzyć zasady?__
 7. Wróć do obszaru **Tworzenie zasad**, a następnie wybierz pozycję **Utwórz**.
 8. Po utworzeniu zasad wybierz pozycję **Przypisania**, aby przypisać je do grupy testowej. Wybierz grupę testową (powinien do niej należeć użytkownik testowy), a następnie przypisz zasady do tej grupy, klikając pozycję **Zapisz**.
 9. Poczekaj kilka minut, po których na zarejestrowanym urządzeniu powinien zostać wyświetlony monit z informacją, że wymagane jest zaktualizowanie hasła, aby utrzymać zgodność z zasadami firmowymi. Można to również sprawdzić ręcznie w **aplikacji Portal firmy dla systemu iOS**, naciskając nazwę urządzenia, a następnie przycisk **Synchronizuj**.
+
+## <a name="next-steps"></a>Następne kroki
+
+[Wprowadzenie do rejestrowania urządzeń](get-started-enroll.md) — poznaj środowisko rejestracji, przeprowadzając pełną rejestrację urządzenia z systemem iOS.
+
+## <a name="learn-more"></a>Dowiedz się więcej
+
+* [Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md)
+* [Typowe sposoby korzystania z zasad dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md)

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8ba85e15fb55a4de1b2f1db53bc5b9962de84394
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fe406fe2deb89fca1f3ab9d949ea78b779ee13af
+ms.sourcegitcommit: eb726c7e3a6e7defb74e69861447c96de0d1bb65
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Android za pomocą szyfrowania
 
@@ -33,8 +33,8 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
 1.  Upewnij się, że urządzenie wymaga numeru PIN lub hasła w celu odblokowania ekranu.
 
-2.  W sekcji **Ustawienia** wybierz kolejno pozycje **Zabezpieczenia** &gt; **Zaszyfruj urządzenie**.
-    Na niektórych telefonach należy kliknąć pozycję **Magazyn** &gt; **Szyfrowanie pamięci** lub **Magazyn** &gt; **Blokada ekranu i zabezpieczenia** &gt; **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”.
+2.  W sekcji **Ustawienia** wybierz kolejno pozycje **Zabezpieczenia** > **Zaszyfruj urządzenie**.
+    (W niektórych telefonach należy kliknąć pozycję **Pamięć** > **Szyfrowanie pamięci** lub **Pamięć** > **Blokada ekranu i zabezpieczenia** > **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”).
 
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 
@@ -54,14 +54,16 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 - Upewnij się, że ustawiono numer PIN lub hasło na urządzeniu.
 - Jeśli ustawiono już numer PIN lub hasło na urządzeniu, spróbuj wykonać następujące kroki, których administrator IT może wymagać, aby zwiększyć bezpieczeństwo urządzenia. Wyświetlane nazwy menu mogą być nieco inne niż podane w poniższych krokach, w zależności od typu urządzenia z systemem Android.
 
-    1. Przejdź do pozycji **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu**. Potwierdź swój bieżący numer PIN lub hasło.
+    1. Przejdź kolejno do pozycji **Ustawienia** > **Ekran blokady i zabezpieczenia** > **Blokada ekranu**. Potwierdź swój bieżący numer PIN lub hasło.
 
-    2. Na ekranie **wyboru blokady ekranu** wybierz typ blokady ekranu, której chcesz użyć.
+    2. Na ekranie **wyboru blokady ekranu** wybierz typ blokady ekranu, której chcesz użyć. 
 
-    3. Na ekranie **bezpiecznego uruchamiania** naciśnij pozycję **Wymagaj numeru PIN do uruchomienia urządzenia** i naciśnij przycisk **Kontynuuj**.
+    3. Po wybraniu blokady ekranu wróć do ekranu **Ekran blokady i zabezpieczenia** i wybierz pozycję opcję **bezpiecznego uruchamiania**. 
+    
+    4. Na ekranie **bezpiecznego uruchamiania** naciśnij pozycję **Wymagaj numeru PIN do uruchomienia urządzenia** i naciśnij przycisk **Kontynuuj**.
 
-    4. Wybierz numer PIN (możesz wprowadzić ten sam, co wprowadzony wcześniej), a następnie naciśnij przycisk **Potwierdź numer PIN**.
+    5. Wybierz numer PIN (możesz wprowadzić ten sam, co wprowadzony wcześniej), a następnie naciśnij przycisk **Potwierdź numer PIN**.
 
-    5. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
+    6. Otwórz aplikację Portal firmy, wybierz swoje urządzenie i naciśnij pozycję **Sprawdź zgodność**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android firmy Microsoft</a>.

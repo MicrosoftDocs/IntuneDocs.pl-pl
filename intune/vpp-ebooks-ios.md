@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e23c40eb4c13fd0d2593742c72086fc943fe2b54
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 43ab9e906f05a069b1399ab53a4861d7289b7024
+ms.sourcegitcommit: 6a089eb45ea3fb18ae0b2dac96683466f52f95bf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -44,7 +44,6 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
 * Po zaimportowaniu tokenu VPP do usługi Intune nie należy importować tego samego tokenu do żadnego innego rozwiązania do zarządzania urządzeniami. Może to spowodować utratę przypisania licencji i rekordów użytkowników.
 * Przed rozpoczęciem korzystania z książek dla systemu iOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta użytkowników programu VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami mobilnymi. Usługa Intune nie synchronizuje tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune synchronizuje tylko dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
-* Obecnie można przypisywać książki wyłącznie w ramach opcji instalacji **Wymagane**. W przypadku przypisania książki w ramach opcji instalacji **Wymagane** licencja jest używana przez każdego użytkownika, który instaluje książkę.
 * Aby możliwe było przypisanie książki do urządzenia, musi na nim być zainstalowana wbudowana aplikacja iBooks. Jeśli tak nie jest, użytkownik końcowy musi ponownie zainstalować aplikację w celu czytania książki. Obecnie nie jest możliwe przywracanie usuniętych wbudowanych aplikacji przy użyciu usługi Intune.
 * Można przypisywać tylko książki z witryny programu Apple Volume Purchase Program. Nie można przekazać, a następnie przypisać książek utworzonych w swojej firmie.
 * Obecnie nie można przypisywać książek do kategorii użytkownika końcowego w taki sam sposób, jak przypisuje się aplikacje.
@@ -75,7 +74,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 2. W bloku listy książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
 3. W bloku <*nazwa książki*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
 4. Wybierz pozycję **Przypisz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy użytkowników usługi Azure AD, do których chcesz przypisać książkę. Grupy urządzeń nie są obecnie obsługiwane.
-Wybierz akcję przypisania **Wymagane**. 
+Wybierz akcję przypisania **Dostępne** lub **Wymagane**. 
 5. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 
 ## <a name="next-steps"></a>Następne kroki

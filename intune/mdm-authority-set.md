@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97dede1ac393a434342f62d1f8488389dcb28d44
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: dfcd7b97848ed68edb4572429abc53a1cc8f8558
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -40,11 +40,27 @@ W programie Configuration Manager w wersji 1610 lub nowszej i w usłudze Microso
 
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
-1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-  ![Zrzut ekranu przedstawiający obciążenie Rozwiązywanie problemów z usługą Intune z linkiem Wybierz użytkownika](media/set-mdm-auth.png)
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 2. W bloku Intune wybierz pozycję **Rejestracja urządzenia**, a następnie wybierz pozycję **Przegląd**.
+![Zrzut ekranu usługi Microsoft Intune przeznaczonego do ustawiania urzędu zarządzania urządzeniami przenośnymi](media/set-mdm-auth.png)
 
-3. W bloku **Rozpocznij zarządzanie urządzeniami** wybierz pozycję **Ustaw urząd certyfikacji MDM na usługę Intune**. Zostanie wyświetlony komunikat z potwierdzeniem pomyślnego ustawienia urzędu certyfikacji MDM na usługę Intune.
+3. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
+  - **Urząd MDM w usłudze Intune**
+  - **Urząd MDM w programie Configuration Manager**
+  - **Brak**
+
+  Zostanie wyświetlony komunikat z potwierdzeniem pomyślnego ustawienia urzędu certyfikacji MDM na usługę Intune.
+
+## <a name="enable-device-enrollment"></a>Włączanie rejestracji urządzeń
+
+W przypadku ustawienia usługi Intune jako urzędu MDM użytkownicy mogą rejestrować urządzeń osobiste i uzyskiwać dostęp do zasobów, takich jak poczta e-mail, w opisany poniżej sposób, instalując aplikację Portal firmy (iOS i Android), dodając poświadczenia służbowe (Windows) lub uzyskując dostęp do witryny internetowej Portal firmy (iOS, Android, macOS).
+
+Różne platformy mają następujące wymagania dotyczące włączania lub upraszczania rejestracji:
+- **iOS** — (wymagane) [Uzyskaj certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md), a następnie [włącz rejestrowanie urządzeń z systemem iOS należących do firmy](ios-enroll.md) (opcjonalnie).
+- **Android** — (opcjonalne) [Włącz profile służbowe w systemie Android](android-enroll.md)
+- **Windows** — (opcjonalnie) Włącz [rejestrowanie automatyczne](windows-enroll.md) lub [rejestrowanie zbiorcze](windows-bulk-enroll.md)
+- **macOS** — brak wymagań
+
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM
 

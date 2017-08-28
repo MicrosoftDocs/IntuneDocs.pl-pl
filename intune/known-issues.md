@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 08/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5a9b7f69cded9258efb6c8a897e0c026f3228a6b
+ms.sourcegitcommit: c248b5a15894f0ade23bad4644c3b7035a9fcce8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -45,18 +45,20 @@ Należy przeprowadzić migrację kont usługi Intune utworzonych przed styczniem
 
 - Profile rejestracji urządzeń firmowych
 - Program Device Enrollment Program firmy Apple
-- Wstępnie zarejestrowane urządzenia firmowe według grupy numerów seryjnych systemu iOS
-- Menedżerowie rejestracji urządzeń
+- Wstępna deklaracja urządzeń firmowych według numeru seryjnego systemu iOS
+- Konta menedżerów rejestracji urządzeń
 - Program Apple Volume Purchase Program
 
-Ponieważ tymi funkcjami nie można zarządzać z klasycznej konsoli Silverlight ani z konsoli Azure, migracja:
+Ponieważ tymi funkcjami nie można zarządzać z klasycznej konsoli usługi Intune (Silverlight) ani z witryny Azure Portal, migracja:
 - wyłącza je w konsoli klasycznej,
-- włącza je w konsoli platformy Azure.  
+- włącza je w witrynie Azure Portal.  
+
+Po 11 września 2017 r. migracja tych funkcji zostanie scalona w ramach migracji głównej na platformie Azure. Jeśli Twoje konto zostało już migrowane w celu korzystania z witryny Azure Portal, ta migracja dodatkowa zostanie przeprowadzona w okresie od 11 do 22 września 2017 r. Po rozpoczęciu migracji konta zostanie ona zakończona tego samego dnia. Migracja może potrwać do 6 godzin od momentu wyłączenia tych funkcji w konsoli klasycznej usługi Intune.
 
 Jeśli obecnie zarządzasz tymi funkcjami usługi Intune w witrynie Azure Portal, pamiętaj o następujących kwestiach:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Usuwa domyślne profile rejestracji urządzeń firmowych usługi Apple DEP
-Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta dostępna w klasycznej konsoli Silverlight usługi Intune funkcja przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
+Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta dostępna w konsoli klasycznej usługi Intune (Silverlight) funkcja przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Token DEP firmy Apple przywrócony razem z migracją
 
@@ -72,7 +74,7 @@ Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z 
 Aplikacje dla systemu iOS nabyte w ramach zakupów zbiorczych są wyświetlane i mogą zostać przypisane tylko w przypadku kodu kraju określonego dla konta usługi Intune. Usługa Intune synchronizuje tylko aplikacje z ustawieniami regionalnymi usługi iTunes zgodnymi z kodem kraju konta dzierżawy usługi Intune. Jeśli na przykład zakupisz aplikację dostępną tylko w sklepie dla Stanów Zjednoczonych, a Twoje konto usługi Intune ma niemieckie ustawienia regionalne, usługa Intune nie wyświetli tej aplikacji.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Przekazywanych jest wiele kopii tego samego programu dla systemu iOS nabytego w ramach zakupów zbiorczych
-Nie klikaj wielokrotnie przycisku **Przekaż** dla tego samego tokenu VPP. Spowoduje to, że przekazywane będą zduplikowane tokeny VPP, a aplikacje będą synchronizowane wiele razy dla tego samego tokenu VPP. 
+Nie klikaj wielokrotnie przycisku **Przekaż** dla tego samego tokenu VPP. Spowoduje to, że przekazywane będą zduplikowane tokeny VPP, a aplikacje będą synchronizowane wiele razy dla tego samego tokenu VPP.
 
 <!-- ## Groups -->
 
@@ -84,8 +86,9 @@ W przypadku urządzeń, które nie zostały zarejestrowane w usłudze Intune, mo
 Jeśli dodasz dodatkowe domeny (przy użyciu opcji **Zaawansowane ustawienia** > **Sieć obwodowa** > **Dodaj domenę chronioną**), nie można będzie zapisać zasad. Komunikat o błędzie, który zostanie wyświetlony w tej sytuacji, zostanie wkrótce zmieniony na bardziej precyzyjny.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Obsługa klientów VPN Cisco AnyConnect
- 
-Najnowsza wersja klienta VPN Cisco AnyConnect (4.0.07072) nie jest aktualnie zgodna z usługą Intune. Przyszła aktualizacja usługi Intune będzie obejmować zapewnienie zgodności z tą wersją klienta VPN. Na razie zalecamy kontynuowanie używania bieżącej wersji klienta VPN Cisco AnyConnect i powstrzymanie się od jego aktualizacji.
+
+Najnowsza wersja klienta VPN Cisco AnyConnect (4.0.07072) nie jest aktualnie zgodna z usługą Intune.
+Przyszła aktualizacja usługi Intune będzie obejmować zapewnienie zgodności z tą wersją klienta VPN. Na razie zalecamy kontynuowanie używania bieżącej wersji klienta VPN Cisco AnyConnect i powstrzymanie się od jego aktualizacji.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Użycie hasła liczbowego na urządzeniach z systemem macOS Sierra
 
@@ -118,16 +121,3 @@ Możesz zdefiniować [zasady ochrony aplikacji systemu iOS](app-protection-polic
 Administratorzy globalni (określani także jako administratorzy dzierżawy) mogą w dalszym ciągu wykonywać codzienne zadania administracyjne, nie korzystając z oddzielnej licencji usługi Intune ani pakietu Enterprise Mobility Suite (EMS). Jednak do korzystania z tej usługi, na przykład w celu zarejestrowania swoich własnych urządzeń lub urządzeń firmowych albo korzystania z Portalu firmy w usłudze Intune, będą potrzebować licencji na usługę Intune lub pakiet EMS.
 
 <!-- ## Additional items -->
-
-
-
-
-
-
-
-
-
-
-
-
- 

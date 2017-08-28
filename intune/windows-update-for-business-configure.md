@@ -1,12 +1,12 @@
 ---
-title: "Konfigurowanie ustawień usługi Windows Update dla firm — usługa Intune"
-titleSuffix: Intune on Azure
+title: "Zarządzanie aktualizacjami oprogramowania"
+titleSuffix: Configure Windows Update for Business settings - Intune
 description: "Informacje o konfigurowaniu ustawień usługi Windows Update dla firm w usłudze Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10."
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/10/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,19 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: c05a6c007b147d81c4d98b708c0e0ae92392f0e0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d88fd62b84c0cc7c3678692cef5ab547bfb8c5d
+ms.sourcegitcommit: f9b01976c0fc479ac8bc3998eb55bbc517ed2d84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/22/2017
 ---
-# <a name="how-to-configure-windows-update-for-business-settings-with-microsoft-intune"></a>Jak konfigurować ustawienia usługi Windows Update dla firm za pomocą usługi Microsoft Intune
+# <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="introduction"></a>Wprowadzenie
-Windows jako usługa to nowy sposób udostępniania aktualizacji dla systemu Windows 10. Począwszy od systemu Windows 10, wszystkie nowe funkcjonalne i jakościowe aktualizacje będą obejmować zawartość wszystkich poprzednich aktualizacji. Oznacza to, że po zainstalowaniu najnowszej aktualizacji masz pewność, iż urządzenia systemu Windows 10 są całkowicie aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
+System Windows jako usługa to sposób aktualizowania urządzeń z systemem Windows 10. W systemie Windows 10 nowe funkcjonalne i jakościowe aktualizacje obejmują zawartość wszystkich poprzednich aktualizacji. Oznacza to, że po zainstalowaniu najnowszej aktualizacji masz pewność, iż urządzenia systemu Windows 10 są całkowicie aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
 
-Za pomocą usługi Windows Update dla firm można uprościć zarządzanie aktualizacjami, dzięki czemu nie trzeba zatwierdzać poszczególnych aktualizacji dla grup urządzeń. Nadal możesz zarządzać ryzykiem w swoich środowiskach, konfigurując strategię wdrażania aktualizacji, dzięki czemu usługa Windows Update zagwarantuje zainstalowanie aktualizacji w odpowiednim czasie. Usługa Microsoft Intune zapewnia możliwość konfigurowania ustawień aktualizacji na urządzeniach oraz odroczenia instalacji aktualizacji. Usługa Intune nie przechowuje aktualizacji, a jedynie przypisanie zasad aktualizacji. W celu aktualizacji urządzenia uzyskują dostęp bezpośrednio do witryny Windows Update. Użyj usługi Intune do konfigurowania **pierścieni aktualizacji systemu Windows 10** i zarządzania nimi. Pierścień aktualizacji zawiera grupę ustawień, które konfigurują, kiedy i w jaki sposób aktualizacje systemu Windows 10 mają zostać zainstalowane. Na przykład można skonfigurować następujące ustawienia:
+Za pomocą usługi Windows Update dla firm można uprościć zarządzanie aktualizacjami, dzięki czemu nie trzeba zatwierdzać poszczególnych aktualizacji dla grup urządzeń. Nadal możesz zarządzać ryzykiem w swoich środowiskach, konfigurując strategię wdrażania aktualizacji, dzięki czemu usługa Windows Update gwarantuje zainstalowanie aktualizacji w odpowiednim czasie. Usługa Microsoft Intune zapewnia możliwość konfigurowania ustawień aktualizacji na urządzeniach oraz odroczenia instalacji aktualizacji. Usługa Intune nie przechowuje aktualizacji, a jedynie przypisanie zasad aktualizacji. W celu aktualizacji urządzenia uzyskują dostęp bezpośrednio do witryny Windows Update. Użyj usługi Intune do konfigurowania **pierścieni aktualizacji systemu Windows 10** i zarządzania nimi. Pierścień aktualizacji zawiera grupę ustawień, które konfigurują, kiedy i w jaki sposób aktualizacje systemu Windows 10 mają zostać zainstalowane. Na przykład można skonfigurować następujące ustawienia:
 
 - **Windows 10 Servicing Branch**: wybierz, czy grupy urządzeń mają otrzymywać aktualizacje od usługi Current Branch, czy też od usługi Current Branch for Business.  
 - **Ustawienia opóźnień**: skonfiguruj ustawienia opóźnień aktualizacji w celu opóźnienia instalacji aktualizacji grup urządzeń. Wdrażanie aktualizacji nastąpi w etapach, których postęp będzie można śledzić.

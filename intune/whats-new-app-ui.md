@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/01/2017
+ms.date: 08/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 948a7d2e4e0ad80088d864708db5733f08db77c5
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 33d1f28cd5522ed47c3fdf83b289116728ded12b
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+
+## <a name="week-of-august-14-2017"></a>Tydzień od 14 sierpnia 2017 r.
+
+### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10"></a>Aktualizacje na stronie „Szczegóły urządzeń” w aplikacji Portal firmy dla systemu Windows 10
+
+W aplikacji Portal firmy dla systemu Windows 10 przeniesiono tag __Kategoria__ spod tytułu do właściwości na stronie __Szczegóły urządzenia__.
+
+![Ekran „Szczegóły urządzenia” aplikacji Portal firmy dla systemu Windows 10, na którym pole „Kategorie” jest teraz wyświetlane jako właściwość, a nie bezpośrednio pod tytułem ekranu.](./media/cp_win10_category_tag_move_after_1708.png)
 
 ## <a name="week-of-july-31-2017"></a>Tydzień od 31 lipca 2017 r.
 

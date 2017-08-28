@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8197e03e8a3eb42c6a5be3b6357d959ed9428454
-ms.sourcegitcommit: 0e012f25fb22124f66193f20f244362493c6b8bb
+ms.openlocfilehash: 91fd4719a4305f5e422163f9049684ebd9e9e656
+ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/19/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
@@ -103,18 +103,16 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń 
 
     - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
 
-    - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia.
+     - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia.
+   - **Udostępnione urządzenie iPad** — wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu **Nadzorowane**. Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md).
+   >[!NOTE]
+   >Jeśli opcja **Koligacja użytkownika** jest ustawiona na wartość **Z koligacją użytkownika** lub tryb **Nadzorowane** jest ustawiony na wartość **Wyłączone**, tryb Udostępnione urządzenie iPad zostanie wyłączony dla profilu rejestracji.
 
-  - **Udostępnione urządzenie iPad** — wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu **Nadzorowane**. Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager.
-
-  >[!NOTE]
-  >Jeśli opcja **Koligacja użytkownika** jest ustawiona na wartość **Z koligacją użytkownika** lub tryb **Nadzorowane** jest ustawiony na wartość **Wyłączone**, tryb Udostępnione urządzenie iPad zostanie wyłączony dla profilu rejestracji.
-
-  - **Maksymalna liczba zbuforowanych użytkowników** — (wymaga wyboru ustawienia **Udostępnione urządzenie iPad** = **Tak**) tworzy na urządzeniu partycję dla każdego użytkownika. Zalecaną wartością jest liczba uczniów mogących korzystać z urządzenia w wyznaczonym okresie. Np. jeśli w ciągu tygodnia z urządzenia regularnie korzysta sześciu uczniów, należy wybrać wartość 6.  
+        - **Maximum Cached Users** - (Requires **Shared iPad** = **Yes**) Creates a partition on the device for each user. The recommended value is the number of students likely to use the device over a period of time. For example, if six students use the device regularly during the week, set this number to six.  
 
     - **Zezwalaj na parowanie** — określa, czy urządzenia z systemem iOS można synchronizować z komputerami. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
-    - **Certyfikaty programu Apple Configurator** — w przypadku wyboru pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** w obszarze **Zezwalaj na parowanie** należy wybrać certyfikat programu Apple Configurator do zaimportowania.
+      - **Certyfikaty programu Apple Configurator** — w przypadku wyboru pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** w obszarze **Zezwalaj na parowanie** należy wybrać certyfikat programu Apple Configurator do zaimportowania.
 
 7. Wybierz pozycję **Ustawienia Asystenta ustawień**, skonfiguruj następujące ustawienia profilu, a następnie wybierz pozycję **Zapisz**:
 

@@ -15,11 +15,11 @@ ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6cc079b05037cc18b7d27dd0d2674e87e1d54d0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d6adeca6189f9452c7e07bd0dea26564c62e1804
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -30,10 +30,10 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 ## <a name="base-vpn-settings"></a>Podstawowe ustawienia sieci VPN
 
 
-**Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy zobaczą tę nazwę, przeglądając na urządzeniu listę dostępnych połączeń sieci VPN.
-- **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia będą się łączyć. Przykłady: **192.168.1.1**, **vpn.contoso.com**.
+**Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą. Przykłady: **192.168.1.1**, **vpn.contoso.com**.
 - **Metoda uwierzytelniania** — umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN:
-    - **Certyfikaty** — w obszarze **Certyfikat uwierzytelniania** można wybrać profil certyfikatu protokołu SCEP lub PKCS, który został wcześniej utworzony do uwierzytelniania połączenia. Aby uzyskać więcej szczegółowych informacji o profilach certyfikatów, zobacz artykuł [Konfigurowanie certyfikatów](certificates-configure.md).
+    - **Certyfikaty** — w obszarze **Certyfikat uwierzytelniania** można wybrać profil certyfikatu protokołu SCEP lub PKCS, który został wcześniej utworzony do uwierzytelniania połączenia. Aby uzyskać więcej informacji o profilach certyfikatów, zobacz temat dotyczący [konfigurowania certyfikatów](certificates-configure.md).
     - **Nazwa użytkownika i hasło** — użytkownicy końcowi muszą podać nazwę użytkownika i hasło, aby zalogować się do serwera sieci VPN.
 - **Typ połączenia** — umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
     - **Check Point Capsule VPN**
@@ -44,7 +44,7 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
     - **Cisco (IPSec)**
     - **Citrix**
     - **Niestandardowa sieć VPN**
-- **Podziel tunelowanie** - wybierz ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu użyje połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
+- **Podziel tunelowanie** - wybierz ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu używa połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
 
 
 ## <a name="custom-vpn-settings"></a>Niestandardowe ustawienia sieci VPN
@@ -57,16 +57,16 @@ W przypadku wybrania opcji **Niestandardowa sieć VPN** jako typ połączenia sk
 ## <a name="apps-per-app-vpn-settings"></a>Ustawienia aplikacji (sieć VPN dla aplikacji)
 
 - **Sieć VPN dla aplikacji** — włącz tę opcję, jeśli chcesz, aby odwiedzenie określonych adresów URL podczas korzystania z przeglądarki Safari powodowało nawiązanie połączenia VPN. Aby można było skonfigurować tę opcję, należy wybrać pozycję **Certyfikaty** jako metodę uwierzytelniania w podstawowych ustawieniach sieci VPN.
-- **Określ adresy URL, które powodują nawiązanie połączenia VPN podczas korzystania z przeglądarki Safari** — kliknij przycisk Dodaj, aby dodać jeden lub więcej adresów URL witryn sieci Web. Odwiedzenie tych adresów URL spowoduje nawiązanie połączenia VPN.
+- **Określ adresy URL, które powodują nawiązanie połączenia VPN podczas korzystania z przeglądarki Safari** — kliknij przycisk Dodaj, aby dodać jeden lub więcej adresów URL witryn internetowych. Odwiedzenie tych adresów URL powoduje nawiązanie połączenia VPN.
 
 - **Reguły na żądanie** — to ustawienie umożliwia skonfigurowanie reguł warunkowych, które są stosowane po zainicjowaniu połączenia VPN. Na przykład można utworzyć warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z jedną z sieci Wi-Fi firmy. Można również utworzyć warunek, zgodnie z którym połączenie VPN nie będzie inicjowane, jeśli urządzenie nie może uzyskać dostępu do określonej domeny wyszukiwania DNS.
 
-    - **Identyfikatory SSID lub domeny wyszukiwania DNS** — wybierz, czy ten warunek będzie używać **identyfikatorów SSID** sieci bezprzewodowej czy **domen wyszukiwania DNS**. Kliknij przycisk Dodaj, aby skonfigurować jeden lub większą liczbę identyfikatorów SSID lub domen wyszukiwania.
-    - **Sonda ciągu adresu URL** — opcjonalnie można podać adres URL używany przez regułę do celów testowych. Jeśli urządzenie, na którym ten profil jest zainstalowany, może uzyskać dostęp do tego adresu URL bez przekierowania, połączenie VPN zostanie nawiązane i urządzenie połączy się z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
-    - **Akcja domeny** — wybierz jedną z następujących opcji:
+    - **Identyfikatory SSID lub domeny wyszukiwania DNS** — wybierz, czy ten warunek będzie używać **identyfikatorów SSID** sieci bezprzewodowej, czy **domen wyszukiwania DNS**. Kliknij przycisk Dodaj, aby skonfigurować jeden lub większą liczbę identyfikatorów SSID lub domen wyszukiwania.
+    - **Sonda ciągu adresu URL** — opcjonalnie można podać adres URL używany przez regułę do celów testowych. Jeśli urządzenie, na którym ten profil jest zainstalowany, może uzyskać dostęp do tego adresu URL bez przekierowania, połączenie VPN jest nawiązywane i urządzenie łączy się z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
+    - **Akcja domeny** — wybierz jedną z następujących pozycji:
         - Połącz w razie potrzeby — 
         - Nigdy nie łącz — 
-    - **Akcja** — wybierz jedną z następujących opcji:
+    - **Akcja** — wybierz jedną z następujących pozycji:
         - Połącz — 
         - Oceń połączenie — 
         - Ignoruj — 
