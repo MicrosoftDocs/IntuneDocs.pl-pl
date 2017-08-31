@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b02d7dfd2331db232269869fd941b687465f8221
-ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
+ms.openlocfilehash: be626985a020d518bd4285a4d0b280c6c66932a6
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Tworzenie i przypisywanie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Microsoft Intune
 
@@ -122,11 +122,7 @@ Począwszy od usługi Intune w wersji 1704, administratorzy mogą tworzyć zasad
 
 1. Na **pulpicie nawigacyjnym Intune** wybierz pozycję **Dostęp warunkowy**.
 
-2. Na **pulpicie nawigacyjnym dostępu warunkowego** wybierz pozycję **Dostęp warunkowy w usłudze Azure Active Directory**.
-
-3. Wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego usługi Azure AD.
-
-    ![Zasady dostępu warunkowego usługi Azure AD](./media/Azure-AD-CA-Intune.png)
+2. W bloku **Zasady** wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego usługi Azure AD.
 
 ## <a name="see-also"></a>Zobacz także
 

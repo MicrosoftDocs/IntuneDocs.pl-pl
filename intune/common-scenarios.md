@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 237e141eacb413eb130b17217116b6d0c7e085f8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d5db079d224f145336b5d3c9b9963f8a5f2c306a
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="common-ways-to-use-intune"></a>Typowe sposoby korzystania z usługi Intune
 
@@ -40,11 +40,11 @@ Poniżej przedstawiono krótkie wprowadzenia do sześciu najbardziej typowych sc
 Większość strategii rozwiązań typu Enterprise Mobility zaczyna się od planu umożliwienia pracownikom z urządzeniami przenośnymi bezpiecznego dostępu do poczty e-mail przez Internet. W wielu organizacjach lokalne dane i serwery aplikacji, takie jak Microsoft Exchange, są nadal hostowane w sieci firmowej.
 
 
-Usługa Intune oraz pakiet Microsoft Enterprise Mobility + Security (EMS) oferują unikatowo zintegrowane [rozwiązanie dostępu warunkowego](conditional-access.md) ([portal klasyczny](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune)) dla programu Exchange Server, dzięki któremu żadna aplikacja mobilna nie może uzyskać dostępu do poczty e-mail, dopóki urządzenie nie zostanie zarejestrowane w usłudze Intune. Jest to możliwe bez konieczności wdrażania kolejnej maszyny bramy na krawędzi sieci firmowej.
+Usługa Intune oraz pakiet Microsoft Enterprise Mobility + Security (EMS) oferują unikatowo zintegrowane [rozwiązanie dostępu warunkowego](conditional-access.md) ([portal klasyczny](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune)) dla programu Exchange Server, dzięki któremu żadna aplikacja mobilna nie może uzyskać dostępu do poczty e-mail, dopóki urządzenie nie zostanie zarejestrowane w usłudze Intune. Wszystko to można zrobić bez wdrażania kolejnej maszyny bramy na granicy sieci firmowej.
 
-Ponadto usługa Intune obsługuje umożliwianie dostępu do aplikacji mobilnych, które wymagają bezpiecznego dostępu do danych lokalnych, takich jak serwery aplikacji biznesowych. Zazwyczaj jest to wykonywane przy użyciu [zarządzanych przez usługę Intune certyfikatów](certificates-configure.md) kontroli dostępu ([portal klasyczny](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) w połączeniu ze standardową bramą sieci VPN lub serwerem proxy w sieci obwodowej, takim jak serwer proxy aplikacji usługi Microsoft Azure Active Directory.  
+Ponadto usługa Intune obsługuje umożliwianie dostępu do aplikacji mobilnych, które wymagają bezpiecznego dostępu do danych lokalnych, takich jak serwery aplikacji biznesowych. Zazwyczaj jest to wykonywane przy użyciu [zarządzanych przez usługę Intune certyfikatów](certificates-configure.md) kontroli dostępu ([portal klasyczny](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) w połączeniu ze standardową bramą sieci VPN lub serwerem proxy w sieci obwodowej, takim jak serwer proxy aplikacji usługi Microsoft Azure Active Directory. 
 
-W takich przypadkach jedynym sposobem na uzyskanie dostępu do danych firmowych jest rejestracja urządzenia w systemie zarządzania. Po zarejestrowaniu urządzeń system zarządzania zapewnia, że urządzenia są zgodne z zasadami, zanim będą mogły uzyskać dostęp do danych firmowych. Ponadto można użyć [narzędzia opakowującego aplikacje i zestawu SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune, aby pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej, aby nie mogła przekazywać danych firmowych do aplikacji lub usług konsumenckich.
+W takich przypadkach jedynym sposobem, aby uzyskać dostęp do danych firmowych, jest zarejestrowanie urządzenia w systemie zarządzania. Po zarejestrowaniu urządzeń system zarządzania zapewnia, że urządzenia są zgodne z zasadami, zanim będą mogły uzyskać dostęp do danych firmowych. Ponadto można użyć [narzędzia opakowującego aplikacje i zestawu SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune, aby pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej, aby nie mogła przekazywać danych firmowych do aplikacji lub usług konsumenckich.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
@@ -61,7 +61,7 @@ Aplikacje mobilne pakietu Office w odpowiednich sklepach z aplikacjami są gotow
 Powszechną praktyką wdrażania usługi Office 365 jest wymaganie zarejestrowania urządzeń w systemie zarządzania, jeśli wymagają one pełnego skonfigurowania przy użyciu konfiguracji firmowych aplikacji, certyfikatów, sieci Wi-Fi i VPN, co jest typowym scenariuszem w przypadku urządzeń firmowych.  
 
 
-Jeśli jednak użytkownik po prostu musi uzyskiwać dostęp do firmowej poczty e-mail i dokumentów, jak to często bywa w przypadku urządzeń należących do użytkownika, wówczas można wymagać od użytkownika korzystania z aplikacji mobilnych dla pakietu Office (do których zastosowano [zasady ochrony aplikacji](app-protection-policies.md)) ([portal klasyczny](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)) i pominąć rejestrowanie samego urządzenia.  
+Jeśli jednak użytkownik potrzebuje jedynie uzyskiwać dostęp do firmowej poczty e-mail i dokumentów, co ma często miejsce w przypadku urządzeń prywatnych, można zażądać od użytkownika korzystania z aplikacji mobilnych pakietu Office (do których zostały zastosowane [zasady ochrony aplikacji](app-protection-policies.md) ([portal klasyczny](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)) i całkowicie pominąć rejestrację urządzenia.  
 
 
 
@@ -75,7 +75,7 @@ Popularność strategii BYOD (bring your own device) wśród organizacji stale r
 
 Jeśli rejestracja urządzenia nie jest wygodną opcją, usługa Intune oferuje alternatywne podejście BYOD, umożliwiające po prostu [zarządzanie aplikacjami, które zawierają dane firmowe](app-protection-policies.md) ([portal klasyczny](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)). Usługa Intune chroni dane firmowe, nawet jeśli dana aplikacja uzyskuje dostęp zarówno do danych firmowych, jak i osobistych, ponieważ tak się dzieje w przypadku aplikacji mobilnych dla pakietu Office.  
 
-Jako administrator możesz wymagać od użytkowników uzyskiwania dostępu do usługi Office 365 z aplikacji mobilnych dla pakietu Office oraz skonfigurowania aplikacji z zasadami zapewniającymi ochronę danych (np. szyfrowanie, ochrona przy użyciu numeru PIN itp.). Te zasady zapobiegają utracie danych z niezarządzanych aplikacji i lokalizacji magazynu — wewnątrz lub na zewnątrz tych aplikacji. Na przykład zasady uniemożliwiają użytkownikowi kopiowanie tekstu z profilu firmowej poczty e-mail do profilu poczty e-mail klienta indywidualnego, nawet jeśli oba profile są skonfigurowane w programie Outlook Mobile. Podobne konfiguracje można wdrożyć dla innych usług i aplikacji wymaganych przez użytkowników infrastruktury BYOD („Przynieś własne urządzenie”).
+Jako administrator możesz wymagać od użytkowników uzyskiwania dostępu do usługi Office 365 z aplikacji mobilnych dla pakietu Office oraz skonfigurowania aplikacji z zasadami zapewniającymi ochronę danych (np. szyfrowanie, ochrona przy użyciu numeru PIN itp.). Te zasady ochrony aplikacji zapobiegają utracie danych w aplikacjach niezarządzanych i lokalizacjach magazynowania — wewnątrz tych aplikacji lub poza nimi. Na przykład zasady uniemożliwiają użytkownikowi kopiowanie tekstu z profilu firmowej poczty e-mail do profilu poczty e-mail klienta indywidualnego, nawet jeśli oba profile są skonfigurowane w programie Outlook Mobile. Podobne konfiguracje można wdrożyć dla innych usług i aplikacji wymaganych przez użytkowników infrastruktury BYOD („Przynieś własne urządzenie”).
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 

@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7f054868d0bae061f348239614f3a40b96a15b1
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 88db3730be62a9b481d924b4f09b70be775cb067
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="set-up-app-based-conditional-access-policies"></a>Konfigurowanie zasad dostępu warunkowego opartego na aplikacji
 
@@ -59,9 +59,30 @@ W tym temacie przedstawiono sposób konfigurowania zasad dostępu warunkowego op
 2. Kliknij ikonę wielokropka, aby wyświetlić opcje usuwania.
 3. Wybierz pozycję **Usuń**, aby usunąć grupę użytkowników z listy.
 
+## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Tworzenie zasad dostępu warunkowego bazujących na aplikacjach w obciążeniu usługi Azure AD
+
+Począwszy od wersji 1708 usługi Intune administratorzy mogą tworzyć zasady dostępu warunkowego bazujące na aplikacjach z obciążenia usługi Azure AD. Jest to wygodne, ponieważ nie trzeba przełączać się między obciążeniami platformy Azure i usługi Intune.
+
+> [!IMPORTANT]
+> Aby utworzyć zasady dostępu warunkowego usługi Azure AD w portalu Intune Azure, potrzebna jest licencja usługi Azure AD w wersji Premium.
+
+### <a name="to-create-an-app-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na aplikacji
+
+> [!IMPORTANT]
+> Zanim zaczniesz korzystać z zasad dostępu warunkowego bazującego na aplikacjach, musisz do swoich aplikacji zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policies.md).
+
+1. Na **pulpicie nawigacyjnym Intune** wybierz pozycję **Dostęp warunkowy**.
+
+2. W bloku **Zasady** wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego bazujące na aplikacjach.
+
+4. Po wprowadzeniu nazwy zasad i skonfigurowaniu ustawień dostępnych w sekcji **Przypisania** wybierz pozycję **Udziel** w sekcji **Kontrole dostępu**.
+
+5. Wybierz pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**, wybierz pozycję **Wybierz**, a następnie wybierz pozycję **OK** w celu zapisania nowych zasad.
+
 ## <a name="next-steps"></a>Następne kroki
 [Blokowanie aplikacji, które nie obsługują nowoczesnego uwierzytelniania](app-modern-authentication-block.md)
 
 ### <a name="see-also"></a>Zobacz także
 
-[Ochrona danych aplikacji za pomocą zasad ochrony aplikacji](app-protection-policies.md)
+[Ochrona danych aplikacji przy użyciu zasad ochrony aplikacji](app-protection-policies.md)
+[Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

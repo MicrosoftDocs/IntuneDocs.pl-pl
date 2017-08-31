@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/22/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 03a278762401ee9697909cf45b3fe86212393e66
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.openlocfilehash: 12556e394e2e09307c4f89e1ae56bb3f268b28ae
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
-# <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
+# <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,15 +31,13 @@ Urządzenie jest identyfikowane jako należące do firmy w przypadku spełnienia
 
 - Zarejestrowano je przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) (wszystkie platformy)
 - Zarejestrowano je przy użyciu programu [Device Enrollment Program](device-enrollment-program-enroll-ios.md) firmy Apple lub przy użyciu narzędzi [Apple School Manager](apple-school-manager-set-up-ios.md) albo [Apple Configurator](apple-configurator-enroll-ios.md) (tylko system iOS)
-- Wcześniej zadeklarowano je przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
-- Zarejestrowano je w usłudze Azure Active Directory lub pakiecie Enterprise Mobility Suite jako urządzenie z systemem Windows 10 Enterprise (tylko system Windows 10)
-- Wybrano wartość **Firmowe** w obszarze **Właściwości** urządzenia
+- [Zidentyfikowano je jako należące do firmy przed zarejestrowaniem](#identify-corporate-owned-devices-with-imei-or-serial-number) przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
+- Zarejestrowano je w usłudze Azure Active Directory lub pakiecie Enterprise Mobility + Security jako urządzenie z systemem Windows 10 Enterprise (tylko system Windows 10)
+- Z właściwości urządzenia wynika, że [jest ono własnością firmy](#change-device-ownership)
 
-Rekordy urządzeń należących do firmy w usłudze Intune zawierają wartość **Firmowe** w kolumnie **Własność**. Aby je wyświetlić, przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.
+## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identyfikowanie urządzeń należących do firmy przy użyciu numeru IMEI lub numeru seryjnego
 
-## <a name="predeclare-a-device-with-imei-or-serial-number"></a>Wstępne deklarowanie urządzenia przy użyciu numeru IMEI lub numeru seryjnego
-
-Jako administrator usługi Intune możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI lub numerów seryjnych. Usługa Intune używa tych identyfikatorów, aby określić własność urządzeń jako firmowe. Numery IMEI możesz deklarować dla wszystkich obsługiwanych platform. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
+Jako administrator usługi Intune możesz utworzyć i zaimportować plik z wartościami rozdzielanymi przecinkami (CSV) zawierający listę numerów IMEI lub numerów seryjnych. Usługa Intune używa tych identyfikatorów, aby określić własność urządzeń jako firmowe podczas ich rejestracji. Numery IMEI możesz deklarować dla wszystkich obsługiwanych platform. Numery seryjne można zadeklarować tylko dla urządzeń z systemem iOS i Android. Każdy numer IMEI lub numer seryjny może zawierać szczegółowe informacje określone na liście do celów administracyjnych.
 
 <!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
 
@@ -80,7 +78,7 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć stan **Zarejestrowane** lub **Nie kontaktowano się**. Wartość **Nie kontaktowano się** oznacza, że z urządzeniem nigdy nie nawiązano połączenia w usłudze Intune.
 
-## <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
+### <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
 
 1. W obszarze usługi Intune w witrynie Azure Portal wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**.
 2. Wybierz identyfikatory urządzeń do usunięcia, a następnie wybierz pozycję **Usuń**.
@@ -88,5 +86,16 @@ Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć s
 
 Usunięcie identyfikatora firmy zarejestrowanego urządzenia nie zmienia własności tego urządzenia. Aby zmienić własność urządzenia, przejdź kolejno do pozycji **Urządzenia** > **Wszystkie urządzenia**, wybierz urządzenie, wybierz pozycję **Właściwości** i zmień ustawienie **Własność urządzenia**.
 
-## <a name="imei-specifications"></a>Specyfikacje IMEI
+### <a name="imei-specifications"></a>Specyfikacje IMEI
 Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobile Equipment Identifier) można znaleźć w portalu [3GPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
+
+## <a name="change-device-ownership"></a>Zmienianie własności urządzeń
+
+We właściwościach urządzeń jest wyświetlana **Własność** dla rekordów każdego urządzenia w usłudze Intune. Jako administrator możesz określić urządzenia jako **Osobiste** lub **Firmowe**.
+
+**Aby zmienić własność urządzeń:**
+1. W usłudze Intune w witrynie Azure Portal przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia** i wybierz urządzenie.
+3. Wybierz pozycję **Właściwości**.
+4. Określ **Własność urządzeń** jako **Osobiste** lub **Firmowe**.
+
+  ![Zrzut ekranu przedstawiający właściwości urządzenia z opcjami Kategoria urządzenia i Własność urządzeń.](./media/device-properties.png)

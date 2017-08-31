@@ -14,35 +14,35 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e8b218ce38a7e76135a62b1155dbf9060ba511cc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2394068c43e652accfb428ff644229f794d33f24
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
-# <a name="prepare-line-of-business-apps-for-mam"></a>Przygotowanie aplikacji biznesowych do użycia funkcji MAM
+# <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-W aplikacjach można włączyć opcję użycia zasad zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) za pomocą narzędzia opakowującego aplikacje usługi Intune lub zestawu SDK aplikacji usługi Intune. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
+W swoich aplikacjach możesz umożliwić korzystanie z zasad ochrony aplikacji przez użycie narzędzia opakowującego aplikacje usługi Intune lub zestawu Intune App SDK. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
 
 ## <a name="intune-app-wrapping-tool"></a>Narzędzia opakowujące aplikacje usługi Intune
-Narzędzia opakowujące aplikacje jest używane głównie dla wewnętrznych aplikacji biznesowych. To narzędzie jest aplikacją wiersza polecenia tworzącą otokę aplikacji, która następnie umożliwia zarządzanie aplikacją za pośrednictwem zasad MAM usługi Intune.
+Narzędzia opakowujące aplikacje jest używane głównie dla wewnętrznych aplikacji biznesowych. Narzędzie to jest aplikacją wiersza polecenia tworzącą otokę wokół aplikacji, która następnie umożliwia zarządzanie aplikacją przez zasady ochrony aplikacji usługi Intune.
 
-Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania.  Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md) i [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md).
+Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania. Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md) i [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md).
 
 Narzędzie opakowujące aplikacje **nie** obsługuje aplikacji w sklepie Apple App Store ani w sklepie Google Play. Ponadto nie obsługuje niektórych funkcji wymagających integracji deweloperskiej (zobacz poniższą tabelę zawierającą porównanie funkcji).
 
 
-Aby uzyskać więcej informacji dotyczących narzędzia opakowującego aplikacje do zarządzania aplikacjami mobilnymi na urządzeniach, które nie są zarejestrowane w usłudze Intune, zobacz temat [Chronienie aplikacji biznesowych i danych na niezarejestrowanych urządzeniach w usłudze Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
+Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby zasad ochrony aplikacji na urządzeniach niezarejestrowanych w usłudze Intune, zobacz [Ochrona aplikacji biznesowych i danych na urządzeniach niezarejestrowanych w usłudze Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
 
-### <a name="reasons-to-use-the-app-wrapping-tool"></a>Powody korzystania z narzędzia opakowującego aplikacje:
-* Aplikacja nie ma wbudowanych funkcji ochrony danych.
-* Aplikacja jest prosta.
-* Aplikacja jest wdrażana wewnętrznie.
+### <a name="reasons-to-use-the-app-wrapping-tool"></a>Powody do korzystania z narzędzia opakowującego aplikacje
+* Twoja aplikacja nie ma wbudowanych funkcji ochrony danych
+* Twoja aplikacja jest prosta
+* Twoja aplikacja jest wdrażana wewnętrznie
 * Nie masz dostępu do kodu źródłowego aplikacji.
-* Aplikacja nie została utworzona przez Ciebie.
-* Aplikacja ma minimalne środowisko uwierzytelniania użytkownika.
+* Aplikacja nie jest Twojego autorstwa
+* Twoja aplikacja ma minimalne możliwości w zakresie uwierzytelniania użytkowników
 
 
 ### <a name="supported-app-development-platforms"></a>Obsługiwane platformy tworzenia aplikacji
@@ -57,13 +57,13 @@ Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikac
 
 Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](app-sdk-get-started.md).
 
-### <a name="reasons-to-use-the-sdk"></a>Powody korzystania z zestawu SDK
-* Aplikacja nie ma wbudowanych funkcji ochrony danych.
-* Aplikacja jest złożona i zawiera wiele środowisk.
-* Aplikacja jest wdrażana do publicznego magazynu aplikacji, takiego jak Google Play lub App Store firmy Apple.
-* Jesteś twórcą aplikacji i umiesz korzystać z zestawu SDK.
-* Aplikacja jest zintegrowana z innymi zestawami SDK.
-* Aplikacja jest często aktualizowana.
+### <a name="reasons-to-use-the-sdk"></a>Powody do korzystania z zestawu SDK
+* Twoja aplikacja nie ma wbudowanych funkcji ochrony danych
+* Twoja aplikacja jest złożona i zawiera wiele środowisk
+* Twoja aplikacja jest dostępna w publicznym sklepie z aplikacjami, takim jak Google Play lub App Store firmy Apple
+* Jesteś deweloperem aplikacji i masz wiedzę techniczną do korzystania z zestawu SDK
+* Twoja aplikacja jest zintegrowana z innymi zestawami SDK
+* Twoja aplikacja jest często aktualizowana
 
 ### <a name="supported-app-development-platforms"></a>Obsługiwane platformy tworzenia aplikacji
 
@@ -81,7 +81,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Funkcja|Zestaw SDK aplikacji|Narzędzie opakowujące aplikacje|
 |-----------|---------------------|-----------|
 |Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej|X|X|
-|Nie zezwalaj na kopie zapasowe systemu Android, programu iTunes i usługi iCloud|X|X|
+|Uniemożliwiaj tworzenie kopii zapasowych dla systemu Android, programu iTunes i usługi iCloud|X|X|
 |Zezwalaj aplikacji na transfer danych do innych aplikacji|X|X|
 |Zezwalaj aplikacji na odbieranie danych z innych aplikacji|X|X|
 |Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach|X|X|
@@ -102,8 +102,10 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Docelowa konfiguracja aplikacji |X||
 |Obsługa wielu tożsamości|X||
 |Możliwość dostosowywania stylów |X|||
-### <a name="see-also"></a>Zobacz także
+## <a name="next-steps"></a>Następne kroki
 
-[Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)</br>
-[Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)</br>
-[Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+Aby dowiedzieć się więcej na temat zasad ochrony aplikacji i usługi Intune, zobacz następujące tematy:
+
+  -  [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)</br>
+  - [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)</br>
+  - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
