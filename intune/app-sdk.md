@@ -4,7 +4,7 @@ description: "Zestaw SDK aplikacji usługi Intune jest dostępny na platformach 
 keywords: 
 author: mtillman
 manager: angrobe
-ms.date: 12/15/2016
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8a9b0c398c4b6dd46823ceaaefd68ee193ab4502
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c509e324788828d8ce5a3e9ac556c82ce57e9b07
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Intune
 Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć naszych interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
@@ -62,8 +62,7 @@ Funkcja umożliwiająca stosowanie wielu tożsamości pomaga w rozwiązaniu prob
 ### <a name="app-protection-without-device-enrollment"></a>Ochrona aplikacji bez rejestracji urządzeń
 
 >[!IMPORTANT]
->Ochrona aplikacji usługi Intune bez rejestracji urządzeń nie jest jeszcze dostępna w zestawie SDK aplikacji usługi Intune dla systemu Android. Jest ona dostępna w narzędziach opakowujących aplikacje usługi Intune, zestawie SDK dla systemu iOS, składniku Xamarin zestawu SDK i wtyczce Cordova zestawu SDK.
-
+>Ochrona aplikacji bez rejestracji urządzeń w usłudze Intune jest dostępna w narzędziach opakowujących aplikacje usługi Intune, zestawie SDK dla systemu Android, zestawie SDK dla systemu iOS, składniku Xamarin zestawu SDK i wtyczce Cordova zestawu SDK.
 
 Wielu użytkowników korzystających z urządzeń osobistych chce uzyskiwać dostęp do danych firmowych bez rejestrowania swoich urządzeń osobistych za pomocą dostawcy zarządzania urządzeniami przenośnymi (MDM). Ponieważ rejestracja w rozwiązaniu MDM wymaga globalnej kontroli nad urządzeniem, użytkownicy często mają wątpliwości przed przekazaniem swojej firmie kontroli nad ich urządzeniami osobistymi.
 

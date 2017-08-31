@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: fa70e21b9e9f7adfc508e24bd442a48c834ed7db
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="enable-byod-with-intune"></a>Włączanie modelu BYOD w usłudze Intune
 
@@ -44,7 +44,7 @@ W tym czasie pamiętaj również o [dostosowaniu portalu firmy](company-portal-c
 
 Po przygotowaniu usługi Intune musisz spełnić różne wymagania dotyczące rejestracji dla różnych typów urządzeń, którymi chcesz zarządzać. Proces rejestrowania urządzeń do zarządzania jest prosty, ale różni się nieco w zależności od typu urządzenia.
 
--   **Urządzenia z systemem iOS i MacOS** — aby rejestrować urządzenia iPad i iPhone oraz urządzenia z systemem MacOS, należy uzyskać [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md). Po przekazaniu certyfikatu wypychania MDM do usługi Intune użytkownicy mogą [rejestrować urządzenia z systemem iOS](/intune-user-help/enroll-your-device-in-intune-ios) za pomocą aplikacji Portal firmy, a także korzystać z witryny internetowej Portal firmy w celu [rejestrowania urządzeń z systemem MacOS](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **Urządzenia z systemem iOS i komputery Mac** — Aby rejestrować urządzenia iPad i iPhone oraz urządzenia z systemem macOS, należy uzyskać [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md). Po przekazaniu certyfikatu wypychania MDM do usługi Intune użytkownicy mogą [rejestrować urządzenia z systemem iOS](/intune-user-help/enroll-your-device-in-intune-ios) za pomocą aplikacji Portal firmy, a także korzystać z witryny internetowej Portal firmy w celu [rejestrowania urządzeń z systemem macOS](/intune-user-help/enroll-your-device-in-intune-macos).
 
 -   **Urządzenia z systemem Android** — żadne działania nie są konieczne, aby przygotować usługę Intune do rejestrowania urządzeń z systemem Android. Użytkownicy mogą po prostu [rejestrować swoje urządzenia z systemem Android](/intune-user-help/enroll-your-device-in-intune-android) na potrzeby zarządzania przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
 
@@ -55,7 +55,7 @@ Po przygotowaniu usługi Intune musisz spełnić różne wymagania dotyczące re
 
 Gdy użytkownicy zarejestrują swoje urządzenia do zarządzania, dział IT musi upewnić się, że urządzenia używane do uzyskiwania dostępu do danych i aplikacji firmowych spełniają podstawowe wymogi bezpieczeństwa. Te reguły mogą obejmować wymaganie użycia numeru PIN w celu uzyskania dostępu do urządzeń oraz szyfrowanie danych przechowywanych na urządzeniach. Zestaw takich reguł jest nazywany [zasadami zgodności](device-compliance.md).
 
-Podczas [tworzenia zasad zgodności](device-compliance-get-started.md) dla użytkownika wszystkie urządzenia zarządzane przez użytkownika w usłudze Intune są sprawdzane pod kątem tego, czy spełniają podstawowe wymogi bezpieczeństwa zdefiniowane w zasadach BYOD. Gdy urządzenie zostanie sprawdzone pod kątem zgodności z zasadami, jego stan jest zgłaszany do usługi Intune. W niektórych przypadkach użytkownicy mogą zostać poproszeni o poprawienie ustawień, takich jak numer PIN lub szyfrowanie urządzenia. W innych sytuacjach aplikacja Portal firmy po prostu powiadamia użytkownika o ustawieniach, które nie są zgodne z naszymi zasadami.
+Podczas [wdrażania zasad zgodności](device-compliance-get-started.md) dla użytkownika wszystkie urządzenia zarządzane przez użytkownika w usłudze Intune są sprawdzane pod kątem tego, czy spełniają podstawowe wymogi bezpieczeństwa zdefiniowane w zasadach BYOD. Gdy urządzenie zostanie sprawdzone pod kątem zgodności z zasadami, jego stan jest zgłaszany do usługi Intune. W niektórych przypadkach użytkownicy mogą zostać poproszeni o poprawienie ustawień, takich jak numer PIN lub szyfrowanie urządzenia. W innych sytuacjach aplikacja Portal firmy po prostu powiadamia użytkownika o ustawieniach, które nie są zgodne z naszymi zasadami.
 
 ## <a name="provide-access-to-company-resources"></a>Zapewnianie dostępu do zasobów firmowych
 
@@ -86,7 +86,7 @@ Za pomocą usługi Intune można również zarządzać aplikacjami zakupionymi z
 
 ## <a name="protect-company-data"></a>Ochrona zasobów firmy
 
-Usługa Intune chroni dane firmowe dzięki zastosowaniu wielu warstw technologicznych. W warstwie tożsamości funkcja dostępu warunkowego chroni dostęp do usług. Dostęp warunkowy umożliwia tylko zarządzanym i zgodnym urządzeniom dostęp do zasobów firmy. W warstwie aplikacji klienta funkcja zarządzania aplikacjami mobilnymi chroni przed utratą danych.  Zasady ochrony aplikacji uniemożliwiają przenoszenie danych do aplikacji lub lokalizacji magazynu, które nie są chronione. Zasady te pozwalają również na czyszczenie danych firmowych w przypadku utraty lub kradzieży urządzenia.
+Usługa Intune chroni dane firmowe dzięki zastosowaniu wielu warstw technologicznych. W warstwie tożsamości funkcja dostępu warunkowego chroni dostęp do usług. Dostęp warunkowy umożliwia tylko zarządzanym i zgodnym urządzeniom dostęp do zasobów firmy. W warstwie aplikacji klienta zasady ochrony aplikacji chronią przed utratą danych. Zasady ochrony aplikacji uniemożliwiają przenoszenie danych do aplikacji lub lokalizacji magazynu, które nie są chronione. Zasady te pozwalają również na czyszczenie danych firmowych w przypadku utraty lub kradzieży urządzenia.
 
 ### <a name="enforce-conditional-access-to-company-resources"></a>Wymuszanie dostępu warunkowego do zasobów firmy
 
@@ -97,17 +97,17 @@ third link was (https://docs.microsoft.com/intune/deploy-use/restrict-access-to-
 > [!IMPORTANT]
 > Zasady dostępu warunkowego nie będą działać, jeśli nie wdrożono żadnych zasad zgodności, względem których można by zweryfikować zgodność.
 
-### <a name="prevent-data-loss-of-company-data-with-application-protection-policies"></a>Ochrona przed utratą danych firmowych danych za pomocą zasad ochrony aplikacji
+### <a name="prevent-data-loss-of-company-data-with-app-protection-policies"></a>Zapobieganie utracie danych firmowych za pomocą zasad ochrony aplikacji
 
-Dzięki zasadom ochrony aplikacji w usłudze Intune możesz wybrać sposób uzyskiwania dostępu do danych — z rejestracją urządzeń lub bez niej. Ta wszechstronność umożliwia ochronę danych firmowych, dlatego nawet wtedy, gdy użytkownik nie zarejestruje urządzenia w usłudze Intune, nadal będzie mógł bezpiecznie uzyskiwać dostęp do danych firmowych.
+Zasady ochrony aplikacji w usłudze Intune pozwalają wybrać sposób uzyskiwania dostępu do danych: z rejestracją urządzeń lub bez niej. Ta wszechstronność umożliwia ochronę danych firmowych, dlatego nawet wtedy, gdy użytkownik nie zarejestruje urządzenia w usłudze Intune, nadal będzie mógł bezpiecznie uzyskiwać dostęp do danych firmowych.
 
-Do ochrony danych firmowych, do których użytkownicy uzyskują dostęp ze swoich urządzeń z systemami iOS i Android, można używać [zasad zarządzania aplikacjami mobilnymi w usłudze Intune](app-protection-policies.md). Używając tych zasad na poziomie aplikacji, można kontrolować sposób używania i udostępniania danych firmowych przez użytkowników, nawet jeśli samo urządzenie nie jest zarządzane przez usługę Intune.
+Do ochrony danych firmowych otwieranych z urządzeń z systemami iOS i Android można używać [zasad ochrony aplikacji usługi Intune](app-protection-policies.md). Używając tych zasad na poziomie aplikacji, można kontrolować sposób używania i udostępniania danych firmowych przez użytkowników, nawet jeśli samo urządzenie nie jest zarządzane przez usługę Intune.
 
-W przypadku zarządzanych urządzeń z systemem Windows 10 to samo można osiągnąć, korzystając z [zasad funkcji Windows Information Protection (WIP)](app-protection-policies-configure-windows-10.md). Te zasady działają bez zakłócania działania środowiska pracowników. Nie wymagają one zmian w środowisku sieci lub innych aplikacjach.
+W przypadku zarządzanych urządzeń z systemem Windows 10 to samo można osiągnąć, korzystając z [funkcji Windows Information Protection (WIP)](app-protection-policies-configure-windows-10.md). Te zasady działają bez zakłócania działania środowiska pracowników. Nie wymagają one zmian w środowisku sieci lub innych aplikacjach.
 
 ### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Usuwanie danych firmowych bez ingerowania w dane osobiste
 
-Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie ulegnie zmianie lub po prostu zostanie zgubione, istnieje możliwość usunięcia z niego aplikacji i danych firmy. Aby to zrobić, możesz użyć funkcji usługi Intune umożliwiających usunięcie danych firmowych i zresetowanie do ustawień fabrycznych. Użytkownicy mogą również zdalnie zresetować własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
+Gdy urządzenie nie jest już potrzebne do pracy, jego przeznaczenie ulegnie zmianie lub zostanie zgubione, istnieje możliwość usunięcia z niego aplikacji i danych firmowych. Aby to zrobić, możesz użyć funkcji usługi Intune umożliwiających usunięcie danych firmowych i zresetowanie do ustawień fabrycznych. Użytkownicy mogą również zdalnie zresetować własne urządzenia z Portalu firmy usługi Intune, jeśli zarejestrowali je w usłudze Intune.
 
 [Resetowanie do ustawień fabrycznych](devices-wipe.md) przywraca domyślne ustawienia fabryczne urządzenia przez usunięcie wszystkich danych i ustawień użytkownika oraz usuwa urządzenie z zarządzania w usłudze Intune. [Usunięcie danych firmowych](devices-wipe.md#remove-company-data) powoduje usunięcie tylko danych firmy z urządzenia i pozostawienie osobistych danych użytkowników bez zmian.
 

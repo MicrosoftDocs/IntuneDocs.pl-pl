@@ -14,11 +14,11 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a11b094a896a2358d8e414cc248976fd34bad38b
-ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
+ms.openlocfilehash: a6e0ea5edc5a174e0400ccca3931323712f3cbbe
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -663,6 +663,7 @@ Usługa Intune umożliwia korzystanie ze wszystkich [funkcji automatycznego twor
     ```xml
 android:backupAgent="com.microsoft.intune.mam.client.app.backup.MAMDefaultBackupAgent"
     ```
+
 
 2. **[Opcjonalnie]** Jeśli zaimplementowano opcjonalną niestandardową klasę BackupAgent, należy upewnić się, że jest używana klasa MAMBackupAgent lub MAMBackupAgentHelper. Zobacz sekcje poniżej. Rozważ zmianę na klasę **MAMDefaultFullBackupAgent** usługi Intune (opisaną w kroku 1), która umożliwia łatwe tworzenie kopii zapasowych w systemie Android w wersji M i nowszych.
 
@@ -1340,8 +1341,6 @@ Ograniczenia formatu pliku wykonywalnego dla platformy Dalvik mogą stać się p
 
  Plik AndroidManifest.xml dołączony do zestawu SDK aplikacji usługi Intune zawiera element **MAMNotificationReceiverService**. Musi to być wyeksportowana usługa umożliwiająca aplikacji Portal firmy wysyłanie powiadomień do usprawnionych aplikacji. Usługa sprawdza obiekt wywołujący, aby zapewnić, że tylko aplikacja Portal firmy ma zezwolenie na wysyłanie powiadomień.
 
-
-
 ## <a name="expectations-of-the-sdk-consumer"></a>Oczekiwania konsumentów korzystających z zestawu SDK
 
 Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API systemu Android, chociaż w wyniku wymuszania zasad warunki błędu mogą być wyzwalane częściej. Następujące najlepsze rozwiązania dla systemu Android zmniejszają prawdopodobieństwo wystąpienia błędu:
@@ -1353,6 +1352,13 @@ Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API 
 * Wszystkie funkcje pochodne muszą przywoływać swoje superklasy.
 
 * Unikaj stosowania jakiegokolwiek interfejsu API w sposób niejednoznaczny. Na przykład użycie metody `Activity.startActivityForResult` bez sprawdzenia elementu requestCode spowoduje wystąpienie nietypowego zachowania.
+
+## <a name="telemetry"></a>Telemetria
+
+Zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Domyślnie aplikacja portalu firmy rejestruje dane telemetryczne następujących zdarzeń użycia. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych.
+
+> [!NOTE]
+> Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/en-us/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Zalecane najlepsze rozwiązania dotyczące systemu Android
 

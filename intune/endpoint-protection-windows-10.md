@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4994656afcf1cdb97fdcd3877f6dabdadfb7d374
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f38320ca84a734f645c3d8554c5aef53836fd1be
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Ustawienia programu Endpoint Protection dla systemu Windows 10 i nowszych wersji w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Profil programu Endpoint Protection umożliwia kontrolowanie funkcji zabezpieczeń na urządzeniach z systemem Windows 10, takich jak funkcja BitLocker.
+Profil programu Endpoint Protection umożliwia kontrolowanie funkcji zabezpieczeń na urządzeniach z systemem Windows 10, takich jak funkcja BitLocker i usługa Windows Defender.
 
 Skorzystaj z informacji w tym temacie, aby dowiedzieć się, jak tworzyć profile programu Endpoint Protection.
 
@@ -38,13 +38,18 @@ Skorzystaj z informacji w tym temacie, aby dowiedzieć się, jak tworzyć profil
 3. W bloku profilów wybierz pozycję **Utwórz profil**.
 4. W bloku **Utwórz profil** wprowadź wartości pól **Nazwa** i **Opis** odnoszące się do profilu funkcji urządzenia.
 5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Endpoint Protection**. 
+6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Endpoint Protection**.
 7. W bloku **Szyfrowanie systemu Windows** skonfiguruj odpowiednie ustawienia. Zapoznaj się ze szczegółowymi informacjami w tym temacie, aby lepiej zrozumieć działanie poszczególnych ustawień. Gdy skończysz, wybierz przycisk **OK**.
 8. Wróć do bloku **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
-## <a name="endpoint-protection-profile-settings-reference"></a>Informacje o ustawieniach profilu programu Endpoint Protection
+## <a name="windows-defender-smartscreen-settings"></a>Ustawienia filtru Windows Defender SmartScreen
+
+- **Filtr SmartScreen dla aplikacji i plików** — Włącz filtr Windows SmartScreen na potrzeby wykonywania plików i uruchamiania aplikacji.
+- **Wykonywanie niezweryfikowanych plików** — Blokuj użytkownikowi końcowemu możliwość uruchamiania plików, które nie zostały zweryfikowane przez filtr Windows SmartScreen.
+
+## <a name="windows-encryption-settings"></a>Ustawienia szyfrowania systemu Windows
 
 ### <a name="windows-settings"></a>Ustawienia systemu Windows
 
@@ -62,16 +67,16 @@ Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
 ### <a name="bitlocker-os-drive-settings"></a>Ustawienia funkcji BitLocker dla dysku z systemem operacyjnym
 
-- **Wymagaj dodatkowego uwierzytelniania przy uruchamianiu** - 
-    - **Blokuj funkcję BitLocker na urządzeniach bez zgodnego mikroukładu TPM** - 
-    - **Uruchomienie modułu TPM** — pozwala określić, czy mikroukład TPM jest dozwolony, niedozwolony, czy wymagany. 
-    - **Numer PIN uruchomienia modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone, czy wymagane. 
-    - **Klucz uruchomienia modułu TPM** — pozwala określić, czy użycie klucza uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone, czy wymagane. 
+- **Wymagaj dodatkowego uwierzytelniania przy uruchamianiu** -
+    - **Funkcja BitLocker z niezgodnym modułem TPM** -
+    - **Uruchomienie modułu TPM** — pozwala określić, czy mikroukład TPM jest dozwolony, niedozwolony, czy wymagany.
+    - **Numer PIN uruchomienia modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone, czy wymagane.
+    - **Klucz uruchomienia modułu TPM** — pozwala określić, czy użycie klucza uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone, czy wymagane.
     - **Klucz uruchomienia i numer PIN modułu TPM** — pozwala określić, czy użycie klucza uruchomienia i numeru PIN dla mikroukładu TPM ma być dozwolone, niedozwolone, czy wymagane.
 - **Minimalna długość numeru PIN** — włącz to ustawienie, aby skonfigurować minimalną długość numeru PIN uruchomienia modułu TPM.
     - **Minimalna liczba znaków** — wprowadź liczbę znaków wymaganą dla numeru PIN uruchomienia z przedziału **4**-**20** znaków.
 - **Włącz odzyskiwanie dysku systemu operacyjnego** — włącz to ustawienie, aby określić sposób odzyskiwania dysków z systemem operacyjnym chronionych przez funkcję BitLocker, jeśli wymagane informacje dotyczące uruchamiania nie są dostępne.
-    - **Zezwalaj na używanie agenta odzyskiwania danych opartego na certyfikatach** — włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków z systemem operacyjnym chronionych przez funkcję BitLocker.
+    - **Agent odzyskiwania danych oparty na certyfikatach** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków z systemem operacyjnym chronionych przez funkcję BitLocker.
     - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
     - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
     - **Ukryj opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
@@ -92,7 +97,7 @@ Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
 - **Zabroń dostępu do zapisu dla stałych dysków danych, które nie są chronione przez funkcję BitLocker** — jeśli to ustawienie jest włączone, ochrona za pomocą funkcji BitLocker musi być włączona na wszystkich stałych lub wbudowanych dyskach danych, aby możliwy był na nich zapis.
 - **Włącz odzyskiwanie dysku stałego** — włącz to ustawienie, aby określić sposób odzyskiwania dysków stałych chronionych przez funkcję BitLocker, jeśli wymagane informacje dotyczące uruchamiania nie są dostępne.
-    - **Zezwalaj na używanie agenta odzyskiwania danych** — włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków stałych chronionych przez funkcję BitLocker.
+    - **Agent odzyskiwania danych** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków stałych chronionych przez funkcję BitLocker.
     - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.  
     - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
     - **Ukryj opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
@@ -113,5 +118,3 @@ Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 ## <a name="next-steps"></a>Następne kroki
 
 Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
-
-

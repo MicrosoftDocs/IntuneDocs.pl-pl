@@ -14,11 +14,11 @@ ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 68b02a52dce49db470b11cbdf32308a74688ca45
-ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
+ms.openlocfilehash: 1a1c853aa16b771eff47d1d179f8870d7c1036a8
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Jak użytkownicy systemu Windows uzyskują aplikacje
 
@@ -30,9 +30,9 @@ Dzięki tym informacjom możesz zrozumieć, jak i gdzie użytkownicy uzyskują a
 
 **Aplikacje dostępne** znajdują się na liście aplikacji w Portalu firmy i użytkownik może zdecydować o ich zainstalowaniu.
 
-**Aplikacje zarządzane** to aplikacje, które mogą być zarządzane za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Software Development Kit (SDK) funkcji Mobile Application Management (MAM) usługi Intune. Tymi aplikacjami można zarządzać za pomocą usługi Intune i można w ich przypadku stosować zasady aplikacji.
+**Aplikacje zarządzane** to aplikacje, które mogą być zarządzane za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Intune App Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można do nich stosować zasady ochrony aplikacji.
 
-**Aplikacje niezarządzane** to aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub nie zawierają zestawu SDK funkcji MAM usługi Intune. W przypadku tych aplikacji nie można stosować zasad aplikacji.
+**Aplikacje niezarządzane** to aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub nie zawierają zestawu Intune App SDK. W przypadku tych aplikacji nie można stosować zasad ochrony aplikacji.
 
 ### <a name="see-also"></a>Zobacz także
 [Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)

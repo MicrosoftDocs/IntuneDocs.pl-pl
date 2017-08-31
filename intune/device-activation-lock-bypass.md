@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 08/22/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c771d07cc41d91812a1cfa80ffe08234e58803e5
-ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
+ms.openlocfilehash: ae92a75958abdc97d781c5b518d70a4e54f4939a
+ms.sourcegitcommit: b5d7442e03d9727793acd1a1dd946779dbe9218d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Obejście blokady aktywacji na nadzorowanych urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -58,8 +58,8 @@ Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na na
 Aby obejść blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć, postępując zgodnie z następującymi instrukcjami:
 
 1. Skonfiguruj profil ograniczeń dotyczących urządzeń w usłudze Intune dla systemu iOS przy użyciu informacji w temacie [Jak skonfigurować ustawienia ograniczeń dotyczących urządzeń w usłudze Microsoft Intune](/intune-azure/configure-devices/how-to-configure-device-restrictions).
-2. Włącz ustawienie trybu **Kiosk** dla opcji **Blokada aktywacji**.
-3. Zapisz profil, a następnie przypisz go do urządzeń, na których chcesz zarządzać obejściem blokady aktywacji.
+2. W [ustawieniach ograniczeń urządzenia dla systemu iOS](device-restrictions-ios.md) w sekcji ustawień **Ogólne** włącz opcję **Blokada aktywacji**.
+3. Zapisz profil, a następnie [przypisz go](device-profile-assign.md) do urządzeń, na których chcesz zarządzać obejściem blokady aktywacji.
 
 
 ## <a name="how-to-use-activation-lock-bypass"></a>Jak korzystać z obejścia blokady aktywacji
