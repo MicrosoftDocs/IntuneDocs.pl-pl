@@ -5,7 +5,7 @@ description: "Włączanie zarządzania urządzeniami mobilnymi (MDM) dla urządz
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 06/30/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b873e72e39c5c6f1d96ddac138f920be9dc673dd
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 3b5b5e2cdf2b31c33a02a90560e4abf955d398b0
+ms.sourcegitcommit: d5b5cb9b6dcb59094e436e07f8ed46924b37ac94
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="enroll-windows-devices"></a>Rejestrowanie urządzeń z systemem Windows
 
@@ -56,9 +56,10 @@ Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Jeśli na pr
 
 Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM: enrollment.manage.microsoft.com.
 
-|Typ|Nazwa hosta|Przekierowanie na|TTL|  
+|Typ|Nazwa hosta|Przekierowanie na|TTL|
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.domena_firmowa.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 godzina|
+|CNAME|EnterpriseRegistration.domena_firmowa.com|EnterpriseRegistration.windows.net|1 godzina|
 
 Jeśli masz więcej niż jeden sufiks głównej nazwy użytkownika (UPN), musisz utworzyć jeden rekord CNAME dla każdej nazwy domeny i wskazać każdy z nich w witrynie EnterpriseEnrollment-s.manage.microsoft.com. Jeśli użytkownicy w firmie Contoso jako adresu e-mail/nazwy UPN używają adresu name@contoso.com, ale także adresów name@us.contoso.com i name@eu.constoso.com, administrator systemu DNS firmy Contoso powinien utworzyć poniższe rekordy CNAME:
 
