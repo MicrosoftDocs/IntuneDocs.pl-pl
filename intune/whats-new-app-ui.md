@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,35 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db9bc7a3bafd61d03513ea1b6e1f0246faaab57
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: c5f6c5a4f5d76845c435ce979068988807120769
+ms.sourcegitcommit: 2d67df51af66ec859587b66a6ce3965461601c29
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+
+## <a name="week-of-august-28-2017"></a>Tydzień od 28 sierpnia 2017 r.
+
+
+### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikacja Mail dla systemu iOS 11 będzie obsługiwać protokół OAuth <!---1196951--->
+
+Dostęp warunkowy przy użyciu usługi Intune obsługuje bezpieczniejsze uwierzytelnianie na urządzeniach z systemem iOS przy użyciu protokołu OAuth. W aplikacji Portal firmy będzie dostępny inny przepływ dla systemu iOS umożliwiający bezpieczniejsze uwierzytelnianie. Gdy użytkownicy końcowi spróbują się zalogować do nowego konta programu Exchange w aplikacji Mail, zostanie im wyświetlony monit widoku sieci Web. Po rejestracji w usłudze Intune użytkownikom zostanie wyświetlony monit o zezwolenie natywnej aplikacji Mail na dostęp do certyfikatu. Większość użytkowników końcowych nie zobaczy już żadnych wiadomości e-mail poddanych kwarantannie. Istniejące konta e-mail nadal będą korzystać z podstawowego protokołu uwierzytelniania, więc ci użytkownicy wciąż będą otrzymywać wiadomości e-mail poddane kwarantannie. Środowisko logowania dla użytkowników końcowych jest podobne do tego w aplikacjach mobilnych pakietu Office.
+
+![Wybieranie typu konta w natywnej aplikacji poczty e-mail.](./media/ios-11-ca-email-after-1708-01.png)
+
+![Po wybraniu pozycji Exchange urządzenie z systemem iOS wyświetli monit o podanie adresu e-mail i nazwy konta.](./media/ios-11-ca-email-after-1708-02.png)
+
+![Podawanie adresu e-mail i nazwy konta.](./media/ios-11-ca-email-after-1708-03.png)
+
+![Wysyłanie do zewnętrznej strony logowania firmy Microsoft.](./media/ios-11-ca-email-after-1708-04.png)
+
+![Podawanie hasła na stronie firmy Microsoft.](./media/ios-11-ca-email-after-1708-05.png)
+
+![Firma Microsoft wyświetla użytkownikowi monit o zarejestrowanie urządzenia w celu zarządzania.](./media/ios-11-ca-email-after-1708-06.png)
+
+![Użytkownikowi jest wyświetlany monit o zarejestrowanie z poziomu witryny Portal firmy.](./media/ios-11-ca-email-after-1708-07.png)
 
 ## <a name="week-of-august-21-2017"></a>Tydzień od 21 sierpnia 2017 r.
 
@@ -31,11 +52,11 @@ Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM) zostan
 
 **Poprzednie środowisko**
 
-![stary interfejs](media\NewUI_Old_AttachFileHandler.jpg)
+![stary interfejs](./media/NewUI_Old_AttachFileHandler.jpg)
 
 **Nowoczesne środowisko**
 
-![nowoczesny interfejs](media\NewUI_Modern_AttachFileHandler.jpg)
+![nowoczesny interfejs](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
 ## <a name="week-of-august-14-2017"></a>Tydzień od 14 sierpnia 2017 r.
