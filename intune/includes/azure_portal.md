@@ -1,4 +1,4 @@
-|Dotyczy: usługa Intune na platformie Azure |
+|Dotyczy: usługa Intune w witrynie Azure Portal |
 |--|
-|Szukasz dokumentacji dotyczącej usługi Intune dostępnej w klasycznej konsoli? Przejdź [tutaj](/intune/introduction-intune?toc=/intune-classic/toc.json).|
+|Szukasz dokumentacji dotyczącej usługi Intune w portalu klasycznym? [Przejdź tutaj](/intune/introduction-intune?toc=/intune-classic/toc.json).|
 | |
