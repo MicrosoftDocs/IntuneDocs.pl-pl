@@ -1,6 +1,6 @@
 ---
 title: "Słownik dotyczący usługi Intune"
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Zapoznaj się z terminologią dotyczącą usługi Microsoft Intune"
 keywords: 
 author: robstackmsft
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 8eaf82e995e3b572d897b63aaf36480424603ce6
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Słownik usługi Microsoft Intune
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="i"></a>I
 |||
 |-|-|
-|Portal usługi Intune|Witryna Azure Portal używana do wykonywania większości działań administracyjnych w usłudze Intune.|
+|Witryna Azure Portal|Witryna Azure Portal używana do wykonywania większości działań administracyjnych w usłudze Intune.|
 |Oprogramowanie klienckie usługi Intune|Alternatywny sposób [zarządzania niektórymi komputerami z systemem Windows](/intune-classic/get-started/choose-how-to-manage-devices) w celu uzyskania pomocy przy wyborze metody.|
 |Wydawcy oprogramowania usługi Intune|Narzędzie, za pomocą którego [definiujesz aplikacje, które chcesz wdrożyć, i przekazujesz te aplikacje do magazynu w chmurze](/intune-classic/deploy-use/add-apps).|
 |Stan zapasów|Służy do wyświetlania [sprzętu i zainstalowanego oprogramowania](/intune/device-inventory) urządzeń, którymi zarządzasz.|

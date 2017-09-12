@@ -1,6 +1,6 @@
 ---
 title: "Ustawienia sieci VPN dla urządzeń z systemem Android w usłudze Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń sieci VPN na urządzeniach z systemem Android"
 keywords: 
 author: lleonard-msft
@@ -15,11 +15,11 @@ ms.assetid: 16c056ca-320e-4107-ad03-a0cf96c28885
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69def564b145e58c2d5b58183e4044ae1997091d
-ms.sourcegitcommit: d1ad84edf4f03cb4c11fe55131556b43fc3a4500
+ms.openlocfilehash: 626db819f8dc9e68e38abe6de800fdf68cb5afe7
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="vpn-settings-for-android-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune
 

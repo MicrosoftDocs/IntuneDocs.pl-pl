@@ -1,6 +1,6 @@
 ---
 title: Profile aprowizowania aplikacji
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowego profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia."
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6635dc3f408984bf5f8b8ce04dc7a6f529616c0
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: bc627198aa4f1a2f5ebb9116ba85758c4669158e
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="use-ios-mobile-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Użycie profilów aprowizowania aplikacji mobilnych systemu iOS w celu zapobiegania wygaśnięciu aplikacji
 
