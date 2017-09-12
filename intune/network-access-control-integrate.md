@@ -1,6 +1,6 @@
 ---
 title: "Integracja kontroli dostępu do sieci z usługą Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Integracja kontroli dostępu do sieci (NAC) z usługą Intune"
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6037ec4638b487c0bae8fcecf2d9bd010e3bc59a
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 6d75d996f4166fb2a760d1ccb518ca7a228c1a0d
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -67,6 +67,6 @@ Poniżej przedstawiono omówienie działania integracji NAC z usługą Intune. T
 
 -   [Integracja platformy Cisco ISE z usługą Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 
--   [Integracja modułu Citrix NetScaler z usługą Intune](https://docs.citrix.com/netscaler-gateway/11-1/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+-   [Integracja modułu Citrix NetScaler z usługą Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 
 -   [Integracja rozwiązania HP Aruba Clear Pass z usługą Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=23757)

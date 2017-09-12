@@ -1,6 +1,6 @@
 ---
 title: "Jak używać funkcji zdalnego administrowania urządzeniami z systemem Android przy użyciu programu TeamViewer"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje dotyczące zdalnego administrowania urządzeniami z systemem Android przy użyciu programu TeamViewer."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bf25ec3fbdec76fb1defb5e4cb12be6dcdf03b0d
-ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
+ms.openlocfilehash: da908316989598134edc7ab46491890f81676db6
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-android-devices"></a>Zapewnienie pomocy zdalnej dla urządzeń z systemem Android zarządzanych przy użyciu usługi Intune
 
