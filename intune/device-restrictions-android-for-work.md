@@ -1,6 +1,6 @@
 ---
 title: "Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji urządzeń z programem Android for Work."
 keywords: 
 author: robstackmsft
@@ -15,18 +15,18 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a8053e54dcad692380b6762b22411f271337f29
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 7e7f74f516a4b60b6a727d6c51ec54dab96aa88e
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Ustawienia profilu służbowego
-- **Udostępnianie danych między profilami służbowym i osobistym** — użyj tego ustawienia, aby określić, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. To ustawienie określa akcje udostępniania w ramach aplikacji (na przykład opcję **Udostępnij…** w aplikacji Chrome) i nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. W odróżnieniu od [ustawień zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ustawienia ograniczeń urządzenia są zarządzane w portalu usługi Intune i używają partycji profilu służbowego programu Android for Work do izolowania zarządzanych aplikacji. Wybierz spośród opcji:
+- **Udostępnianie danych między profilami służbowym i osobistym** — użyj tego ustawienia, aby określić, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. To ustawienie określa akcje udostępniania w ramach aplikacji (na przykład opcję **Udostępnij…** w aplikacji Chrome) i nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. W odróżnieniu od [ustawień zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ustawienia ograniczeń urządzenia są zarządzane w witrynie Azure Portal i używają partycji profilu służbowego programu Android for Work do izolowania zarządzanych aplikacji. Wybierz spośród opcji:
     - **Domyślne ograniczenia udostępniania** — to ustawienie określa domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji zainstalowanego systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Google nie umożliwia blokowania udostępniania z profilu osobistego w profilu służbowym na urządzeniach z systemem w wersji 6.0 lub nowszej.   
     - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego** — ta opcja pozwala włączyć wbudowaną funkcję systemu Android pozwalającą na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
     - **Zezwalaj na udostępnianie przez granice** — umożliwia udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. Tego ustawienia należy używać ostrożnie, ponieważ pozwala ono zarządzanym aplikacjom z profilu służbowego udostępniać dane aplikacjom w niezarządzanym obszarze urządzenia.

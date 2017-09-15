@@ -1,10 +1,10 @@
 ---
 title: Wprowadzenie do witryny Azure Portal
-titleSuffix: Intune on Azure
-description: "Więcej informacji na temat tworzenia i udostępniania pulpitów nawigacyjnych w usłudze Intune na platformie Azure."
+titlesuffix: Azure portal
+description: "Więcej informacji na temat tworzenia i udostępniania pulpitów nawigacyjnych w usłudze Intune w witrynie Azure Portal."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 08/16/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27ae85160573f6757b20c885e95a280eb7f1155
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: 42c43ca5fa1eee28cb245c7a64e47f7f704183f4
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="getting-started-with-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Intune w witrynie Azure Portal
 
@@ -52,7 +52,7 @@ Ta możliwość będzie bardziej przydatna po dodaniu większej ilości zawarto�
 
 ## <a name="using-services"></a>Korzystanie z usług
 
-Otworzenie usługi Intune lub dowolnej innej usługi na platformie Azure spowoduje jej wyświetlenie w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą podczas otwierania wysuwane od prawej krawędzi bloku, a następnie zwijane pod głównym blokiem, z którego zostały otworzone. 
+Otworzenie usługi Intune lub dowolnej innej usługi na platformie Azure spowoduje jej wyświetlenie w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą podczas otwierania wysuwane od prawej krawędzi bloku, a następnie zwijane pod głównym blokiem, z którego zostały otworzone.
 
 ## <a name="next-steps"></a>Następne kroki
 

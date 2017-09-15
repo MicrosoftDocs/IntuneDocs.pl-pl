@@ -1,6 +1,6 @@
 ---
 title: "Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune"
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Jak zarejestrować się w 30-dniowej bezpłatnej wersji próbnej usługi Intune”."
 keywords: 
 author: lindavr
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 21ee75ab006c1770bc61039facc28d8a0118e706
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Rejestrowanie w celu skorzystania z bezpłatnej wersji próbnej usługi Microsoft Intune
 
@@ -47,11 +47,11 @@ Po utworzeniu konta w celu korzystania z wersji próbnej na adres e-mail podany 
 Na potrzeby witryny Azure Portal usługi Intune są używane trzy portale:
 - Pulpit nawigacyjny usługi Intune na platformie Azure ([portal.azure.com](https://portal.azure.com)), który umożliwia zapoznanie się z [możliwościami usługi Intune w portalu Azure Portal](what-is-intune.md).
 - Centrum administracyjne usługi Office 365 ([portal.office.com](https://portal.office.com)), gdzie możesz dodawać użytkowników i zarządzać nimi, jeśli nie używasz w tym celu usługi Azure Active Directory. Możesz również zarządzać innymi aspektami konta, w tym rozliczeniami i pomocą techniczną.
-- Klasyczna konsola administracyjna usługi Intune ([manage.microsoft.com](https://manage.microsoft.com)), która pozwala zapoznać się z funkcjami, które nie zostały jeszcze dodane do platformy Azure.
+- Konsola administracyjna usługi Intune ([manage.microsoft.com](https://manage.microsoft.com)), która pozwala zapoznać się z funkcjami, które nie zostały jeszcze dodane do platformy Azure.
 
 Zazwyczaj praca odbywa się na pulpicie nawigacyjnym usługi Intune, co pokazano poniżej. Jest to witryna, w której można konfigurować grupy, zasady, urządzenia i aplikacje oraz zarządzać nimi.
 
-Możesz przejść do klasycznej konsoli administracyjnej usługi Intune z pulpitu nawigacyjnego, wybierając pozycję **Portal klasyczny** dostępną w górnej części portalu.
+Możesz przejść do konsoli administracyjnej usługi Intune z pulpitu nawigacyjnego, wybierając pozycję **Portal klasyczny** w górnej części pulpitu.
 
 Aby powrócić do witryny Intune Azure Portal, na pasku adresu przeglądarki wpisz adres https://portal.azure.com, a następnie ponownie wybierz pozycję **Intune** z listy usług.
 
@@ -68,7 +68,7 @@ Aby wrócić z usługi Intune do Centrum administracyjnego usługi Office 365, w
 
 ## <a name="next-steps"></a>Następne kroki
 
-### <a name="intune-on-azure"></a>Usługa Intune na platformie Azure
+### <a name="intune-in-the-azure-portal"></a>Usługa Intune w witrynie Azure Portal
 Dowiedz się więcej na temat [usługi Intune w witrynie Azure Portal](what-is-intune.md)
 
 ### <a name="integration-with-other-products"></a>Integracja z innymi produktami

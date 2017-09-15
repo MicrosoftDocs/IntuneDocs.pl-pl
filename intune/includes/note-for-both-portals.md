@@ -1,4 +1,4 @@
 |Dotyczy: usługa Intune |
 |--|
-|Ten temat dotyczy usługi Intune zarówno w portalu Azure, jak i w klasycznej konsoli.|
+|Ten temat dotyczy usługi Intune zarówno w witrynie Azure Portal, jak i w portalu klasycznym.|
 | |

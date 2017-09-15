@@ -1,6 +1,6 @@
 ---
-title: "Znane problemy w usłudze Microsoft Intune na platformie Azure"
-titleSuffix: Intune on Azure
+title: "Znane problemy w usłudze Microsoft Intune w witrynie Azure Portal"
+titlesuffix: Azure portal
 description: "Informacje o znanych problemach w usłudze Intune"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5a9b7f69cded9258efb6c8a897e0c026f3228a6b
-ms.sourcegitcommit: c248b5a15894f0ade23bad4644c3b7035a9fcce8
+ms.openlocfilehash: 7570e7b2f612d1d2a017f82967cdc5baf798a761
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport 
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupy utworzone przez usługę Intune podczas migracji mogą mieć wpływ na funkcjonalność innych produktów firmy Microsoft
 
-W przypadku migracji z klasycznej usługi Intune do witryny Azure Portal może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
+W przypadku migracji z usługi Intune do witryny Azure Portal może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Niektóre funkcje wymagają dodatkowej migracji
 
@@ -49,20 +49,20 @@ Należy przeprowadzić migrację kont usługi Intune utworzonych przed styczniem
 - Konta menedżerów rejestracji urządzeń
 - Program Apple Volume Purchase Program
 
-Ponieważ tymi funkcjami nie można zarządzać z klasycznej konsoli usługi Intune (Silverlight) ani z witryny Azure Portal, migracja:
-- wyłącza je w konsoli klasycznej,
+Ponieważ tymi funkcjami nie można zarządzać z konsoli usługi Intune (Silverlight) ani z witryny Azure Portal, migracja:
+- wyłącza je w portalu klasycznym,
 - włącza je w witrynie Azure Portal.  
 
-Po 11 września 2017 r. migracja tych funkcji zostanie scalona w ramach migracji głównej na platformie Azure. Jeśli Twoje konto zostało już migrowane w celu korzystania z witryny Azure Portal, ta migracja dodatkowa zostanie przeprowadzona w okresie od 11 do 22 września 2017 r. Po rozpoczęciu migracji konta zostanie ona zakończona tego samego dnia. Migracja może potrwać do 6 godzin od momentu wyłączenia tych funkcji w konsoli klasycznej usługi Intune.
+Po 11 września 2017 r. migracja tych funkcji zostanie scalona w ramach migracji głównej na platformie Azure. Jeśli Twoje konto zostało już migrowane w celu korzystania z witryny Azure Portal, ta migracja dodatkowa zostanie przeprowadzona w okresie od 11 do 22 września 2017 r. Po rozpoczęciu migracji konta zostanie ona zakończona tego samego dnia. Migracja może potrwać do 6 godzin od momentu wyłączenia tych funkcji w portalu klasycznym usługi Intune.
 
 Jeśli obecnie zarządzasz tymi funkcjami usługi Intune w witrynie Azure Portal, pamiętaj o następujących kwestiach:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Usuwa domyślne profile rejestracji urządzeń firmowych usługi Apple DEP
-Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta dostępna w konsoli klasycznej usługi Intune (Silverlight) funkcja przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
+Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta funkcja, dostępna w konsoli usługi Intune (Silverlight), przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Token DEP firmy Apple przywrócony razem z migracją
 
-Jeśli token programu Device Enrollment Program firmy Apple zostanie usunięty w klasycznym portalu usługi Intune (Silverlight) i nie nastąpi przekazanie nowego tokenu do witryny Azure Portal, pierwotny token zostanie przywrócony w witrynie Azure Portal podczas migracji. Aby usunąć ten token i zapobiec rejestracji w programie DEP, usuń token w witrynie Azure Portal.
+Jeśli token programu Device Enrollment Program firmy Apple zostanie usunięty w portalu usługi Intune (Silverlight) i nie nastąpi przekazanie nowego tokenu do witryny Azure Portal, pierwotny token zostanie przywrócony w witrynie Azure Portal podczas migracji. Aby usunąć ten token i zapobiec rejestracji w programie DEP, usuń token w witrynie Azure Portal.
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Bloki stanu zmigrowanych zasad nie działają
 
@@ -101,8 +101,9 @@ Aby uzyskać więcej informacji o tych ustawieniach, zobacz temat [Ustawienia og
 
 ### <a name="compliance-policies-from-intune-do-not-show-up-in-new-console"></a>Zasady zgodności pochodzące z usługi Intune nie będą wyświetlane w nowej konsoli
 
-Zasady zgodności utworzone w klasycznym portalu zostaną objęte migracją, ale nie będą wyświetlane w witrynie Azure Portal z powodu zmian projektowych w tej witrynie. Mimo to zasady zgodności utworzone w klasycznym portalu usługi Intune są wymuszane, ale wyświetlać i edytować można je tylko w klasycznym portalu usługi Intune.
-Ponadto nowe zasady zgodności tworzone w witrynie Azure Portal nie będą widoczne w klasycznym portalu usługi Intune.
+Zasady zgodności utworzone w klasycznym portalu zostaną objęte migracją, ale nie będą wyświetlane w witrynie Azure Portal z powodu zmian projektowych w tej witrynie. Zasady zgodności utworzone w klasycznym portalu usługi Intune są mimo to wymuszane, ale trzeba je wyświetlać i edytować w portalu klasycznym.
+
+Ponadto nowe zasady zgodności tworzone w witrynie Azure Portal nie są widoczne w portalu klasycznym.
 
 Więcej informacji znajduje się w artykule [Co to jest zgodność urządzeń](device-compliance.md).
 

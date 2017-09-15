@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/21/2017
+ms.date: 09/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,36 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 88f1d4b3e54a27be86a542e1265ea9606498ab4f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8da134d768333fb03cc87ab38230f5f022fee2e1
+ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/08/2017
 ---
-# <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie w usłudze Intune?
+# <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?
 
-Rejestrując urządzenie w systemie zarządzania, zezwalasz działowi IT Twojej firmy na dostęp do niektórych rodzajów informacji znajdujących się na Twoim urządzeniu w celu umożliwienia ochrony znajdujących się na nim danych firmowych.
+Rejestrując urządzenie w systemie zarządzania, zezwalasz swojej firmie na wyświetlanie niektórych rodzajów informacji znajdujących się na Twoim urządzeniu w celu umożliwienia ochrony znajdujących się na nim danych firmowych.
 
-**Czego nie widzi dział IT**
+**Czego Twoja firma nigdy nie zobaczy**
 
 - Historia połączeń i przeglądania sieci Web
--   Lokalizacja
-- Osobisty adres e-mail
-- Wiadomości SMS
+- Wiadomości e-mail i SMS
 - Kontakty
--   Hasła do kont osobistych
-- Zdarzenia kalendarza
+- Kalendarz
+-   Hasła
 - Obrazy, w tym dane z aparatu i aplikacji Zdjęcia
 
-**Co widzi dział IT**
+**Co Twoja firma widzi zawsze**
 
--   Model
--   Numer seryjny
--   Wersja systemu operacyjnego
--   Nazwy aplikacji
--   Właściciel
--   Nazwa urządzenia
--   Producent (dla urządzeń, które nie zostały wyprodukowane przez firmę Apple)
--   Numer telefonu (dla urządzeń służbowych: cały numer; dla urządzeń osobistych: cztery ostatnie cyfry)
+- Model urządzenia, np. iPhone 7
+- Producent urządzenia, np. Microsoft
+- System operacyjny, np. Android 7.1
+- Nazwy aplikacji, np. Microsoft Word
+- Właściciel urządzenia
+- Nazwa urządzenia
+- Numer seryjny
+
+**Co firma może widzieć**
+
+-  Numer telefonu: w przypadku urządzeń **należących do firmy** może być widoczny Twój pełny numer telefonu. w przypadku urządzeń **prywatnych** dla firmy widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. **Typ własności** poszczególnych urządzeń można sprawdzić, otwierając stronę **Szczegóły urządzenia** odnoszącą się do tego urządzenia. 
+-  Lokalizacja: firma nigdy nie widzi lokalizacji urządzenia; wyjątkiem są nadzorowane urządzenia z systemem iOS, które zostały utracone. [Jak to sprawdzić?](https://go.microsoft.com/fwlink/?linkid=853816)

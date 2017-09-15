@@ -1,6 +1,6 @@
 ---
 title: "Ustawianie warunków i postanowień w usłudze Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Ustawianie warunków i postanowień widocznych dla użytkowników w aplikacji Portal firmy dla usługi Intune. "
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0262b8068ddf134de5ffec0965476fb513ceb9ab
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 47b153223e10ec358c61a212bdacd109ee90bbcd
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="ensure-users-accept-company-terms-for-access"></a>Zapewnienie akceptacji firmowych warunków dostępu przez użytkowników
 
@@ -32,14 +32,14 @@ Możesz utworzyć wiele zestawów warunków i postanowień oraz przypisać je do
 ## <a name="create-terms-and-conditions"></a>Tworzenie warunków i postanowień
 Wykonaj następujące kroki, aby utworzyć warunki i postanowienia. Wyświetlana nazwa i opis są przeznaczone do użytku administracyjnego, natomiast właściwości dotyczące warunków są widoczne dla użytkowników w aplikacji Portal firmy.
 
-1. W bloku Intune wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
+1. W witrynie Azure Portal wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
 2. Wybierz przycisk **Utwórz**.
-![Zrzut ekranu portalu usługi Intune przedstawiający przycisk Utwórz służący do tworzenia warunków i postanowień](media/terms-create-terms.png)
+![Zrzut ekranu witryny Azure Portal przedstawiający przycisk Utwórz służący do tworzenia warunków i postanowień](media/terms-create-terms.png)
 3. W rozwiniętym bloku określ następujące informacje:
 
-   - **Nazwa wyświetlana**: nazwa warunków w portalu usługi Intune. Użytkownicy nie widzą tej nazwy.
+   - **Nazwa wyświetlana**: nazwa warunków w witrynie Azure Portal. Użytkownicy nie widzą tej nazwy.
 
-   - **Opis**: opcjonalne szczegółowe informacje ułatwiające identyfikację danego zbioru warunków w portalu usługi Intune.
+   - **Opis**: opcjonalne szczegółowe informacje ułatwiające identyfikację danego zbioru warunków w witrynie Azure Portal.
 
 4. Wybierz strzałkę obok pozycji Definiuj warunki użytkowania, aby otworzyć blok Warunki i postanowienia, a następnie wprowadź następujące informacje:
 
@@ -64,9 +64,9 @@ W poniższym przykładzie przedstawiono warunki i postanowienia w konsoli admini
 
 Warunki i postanowienia można przypisywać do grup użytkowników, które muszą je zaakceptować przed rozpoczęciem korzystania z aplikacji Portal firmy.
 
-1. W bloku Intune wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
+1. W witrynie Azure Portal wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
 2. Na liście warunków i postanowień wybierz warunki i postanowienia, które chcesz przypisać, a następnie wybierz pozycję **Przypisane grupy**.
-![Zrzut ekranu przedstawiający blok Przypisz grupę portalu usługi Intune z przyciskami Wybierz grupę oraz Wybierz służącymi do przypisywania warunków i postanowień](media/terms-assign-groups.png)
+![Zrzut ekranu przedstawiający blok Przypisz grupę witryny Azure Portal z przyciskami Wybierz grupę oraz Wybierz służącymi do przypisywania warunków i postanowień](media/terms-assign-groups.png)
 3. Kliknij przycisk **Wybierz grupę** i w bloku **Wybierz grupy** wybierz te grupy, do których chcesz przypisać warunki, a następnie kliknij przycisk **Wybierz**. Warunków i postanowień nie można przypisać do grup dynamicznych.
 4. W bloku **Przypisane grupy** kliknij przycisk **Zapisz**.  Warunki i postanowienia są teraz przypisane do użytkowników z wybranych grup. Użytkownicy będą monitowani o zaakceptowanie warunków i postanowień przy następnej próbie uzyskania dostępu do aplikacji Portal firmy. Warunki i postanowienia wymagają jednokrotnej akceptacji. Użytkownicy z wieloma urządzeniami nie muszą ich akceptować na każdym urządzeniu.
 

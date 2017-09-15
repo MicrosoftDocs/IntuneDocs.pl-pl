@@ -14,11 +14,11 @@ ms.assetid: 396ea714 0433 4bd5 a934 8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: 7f8f914e9b7b0e2db2da3f9c8317485208d97574
-ms.sourcegitcommit: 2d67df51af66ec859587b66a6ce3965461601c29
+ms.openlocfilehash: 9a84cc5b294a1a330aab978de5ef0fd8cfa4c259
+ms.sourcegitcommit: 30b51c625311398b371c0326d41216f55315f627
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/05/2017
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Uzyskiwanie powiadomień dzięki alertom w usłudze Microsoft Intune
 
@@ -57,7 +57,7 @@ W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.c
 |---|------|
 |**Typy alertów**|Wybierz typ alertu, który chcesz skonfigurować, a następnie wykonaj jedną z następujących czynności:<br /><br />Wybierz pozycję **Konfiguruj**. W oknie dialogowym **Konfigurowanie typu alertu** skonfiguruj odpowiednie ustawienia, a następnie wybierz przycisk **OK**.<br /><br />**Włącz** lub **wyłącz** alert.<br /><br />Rozwiń węzeł **Typy alertów** i wybierz kategorię, aby wyświetlić tylko typy alertów z tej kategorii.|
 |**Adresaci**|Wybierz pozycję **Dodaj**, aby dodać nowy adres e-mail, na który będą wysyłane skonfigurowane powiadomienia e-mail.<br /><br />Możesz również **edytować** lub **usuwać** istniejących odbiorców.<br /><br />Aby otrzymywać powiadomienia, musisz również dodać ten adres e-mail jako adresata w obszarze **Reguły powiadomień**.|
-|**Reguły powiadomień**|Służą do konfigurowania reguł określających, do kogo będą wysyłane alerty w wiadomościach e-mail. Można:<br /><br />**Wybrać istniejącą regułę**   Wybierz regułę, a następnie wybierz pozycję **Wybierz adresatów**. Następnie możesz wybrać wszystkich adresatów, którzy otrzymają wiadomość e-mail po wygenerowaniu alertu spełniającego daną regułę.<br /><br />**Utworzyć nową regułę**   Wprowadź nazwę reguły, wybierz kategorie i ważność alertów stosowanych w przypadku zasad, wybierz grupy urządzeń, których dotyczy reguła, a następnie wybierz użytkowników, którzy otrzymają wiadomości e-mail po wygenerowaniu alertu.<br /><br />Możesz również **włączyć**, **wyłączyć**, **edytować**lub **usunąć** istniejącą regułę.|
+|**Reguły powiadomień**|Służą do konfigurowania reguł określających, do kogo będą wysyłane alerty w wiadomościach e-mail. Można:<br /><br />**Wybrać istniejącą regułę**   Wybierz regułę, a następnie wybierz pozycję **Wybierz adresatów**. Następnie możesz wybrać wszystkich adresatów, którzy otrzymają wiadomość e-mail po wygenerowaniu alertu spełniającego daną regułę.<br /><br />**Utworzyć nową regułę**   Wprowadź nazwę reguły, wybierz kategorie i ważność alertów stosowanych w przypadku zasad, wybierz grupy urządzeń, których dotyczy reguła, a następnie wybierz użytkowników, którzy otrzymają wiadomości e-mail po wygenerowaniu alertu.<br /><br />Możesz również **włączyć**, **wyłączyć**, **edytować** lub **usunąć** istniejącą regułę.|
 
 ## <a name="working-with-alerts"></a>Praca z alertami
 

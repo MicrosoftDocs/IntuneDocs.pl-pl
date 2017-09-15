@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 2a8754d684896f2c945e11ed0fc2577114459069
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
@@ -50,12 +50,12 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 
     ![Wyeksportuj certyfikat podpisywania](./media/wit-walk-cert2.gif)
 
-    W **Kreatorze eksportu certyfikatów**wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
+    W **Kreatorze eksportu certyfikatów** wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Przekaż aplikację do usługi Intune**<br>
     Aby udostępnić aplikację użytkownikom końcowym, przekaż podpisany plik aplikacji oraz certyfikat podpisywania kodu.
 
-    1.  W portalu usługi Intune kliknij pozycję **Administracja** &gt; **Windows Phone**.
+    1.  W witrynie Azure Portal kliknij pozycję **Administracja** &gt; **Windows Phone**.
 
     2.  Kliknij pozycję **Przekaż podpisany plik aplikacji** i zaloguj się przy użyciu swojego identyfikatora administratora usługi Intune.
 
@@ -118,7 +118,7 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w 
 
     -   `-EnterpriseId` — identyfikator przedsiębiorstwa. Należy podać ten argument lub argument AetxPath. Jeśli ten argument nie zostanie podany, identyfikator przedsiębiorstwa zostanie odczytany z pliku AETX. Na przykład 1000000001
 
-6.  Wdróż aplikację Portal firmy dla systemu Windows Phone 8.1 (SSP.appx). Aby uzyskać porady w tym temacie, zobacz [Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows Phone](lob-apps-windows-phone.md) ([konsola klasyczna](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Wdróż aplikację Portal firmy dla systemu Windows Phone 8.1 (SSP.appx). Aby uzyskać porady w tym zakresie, zobacz [Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows Phone](lob-apps-windows-phone.md) ([portal klasyczny](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Jak odnowić certyfikat podpisywania kodu przedsiębiorstwa firmy Symantec
 
@@ -136,7 +136,7 @@ Okresowo należy odnawiać certyfikat firmy Symantec służący do wdrażania ap
 
 1.  Podpisz najnowszą wersję aplikacji biznesowej.
 
-2.  Otwórz konsolę usługi Intune, przejdź do pozycji **Administrator** &gt; **Zarządzanie urządzeniami mobilnymi** &gt; **Windows Phone** i kliknij pozycję **Przekaż podpisaną aplikację**.
+2.  Otwórz witrynę Azure Portal, przejdź do pozycji **Administrator** &gt; **Zarządzanie urządzeniami mobilnymi** &gt; **Windows Phone** i kliknij pozycję **Przekaż podpisaną aplikację**.
 
 3.  Przekaż nowo podpisaną aplikację Portal firmy. Konieczny jest nowo podpisany plik SSP.xap oraz nowy plik .PFX otrzymany od firmy Symantec lub token rejestracji aplikacji utworzony za pomocą tego nowego pliku .PFX.
 

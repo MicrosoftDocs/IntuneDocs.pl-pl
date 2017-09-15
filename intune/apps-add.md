@@ -1,6 +1,6 @@
 ---
 title: "Jak dodawać aplikacje do usługi Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Te procedury ułatwiają przygotowanie aplikacji do usługi Intune w celu przypisania do użytkowników i urządzeń. \""
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 14f2ac5b25cfe3e688363a21775872baaa9ff89a
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 108f789f16304498cf54387326d112353bf70aa2
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Jak dodawać aplikacje do usługi Microsoft Intune
 
@@ -81,7 +81,7 @@ Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej k
 
 Wcześniej usługa Intune zawierała kilka wbudowanych aplikacji, które można było szybko przypisać. Na podstawie Twojej opinii usunęliśmy tę listę, a wbudowane aplikacje nie będą już dla Ciebie widoczne.
 Jeśli jednak przypisano już jakiekolwiek wbudowane aplikacje, będą one nadal widoczne na liście aplikacji. W razie potrzeby te aplikacje mogą pozostać przypisane.
-W nowszej wersji planujemy dodać łatwiejszy sposób wybierania i przypisywania wbudowanych aplikacji z portalu usługi Intune.
+W nowszej wersji planujemy dodać łatwiejszy sposób wybierania i przypisywania wbudowanych aplikacji z witryny Azure Portal.
 
 ## <a name="next-steps"></a>Następne kroki
 

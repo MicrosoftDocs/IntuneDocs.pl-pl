@@ -1,6 +1,6 @@
 ---
 title: "Ustawienia układu ekranu głównego dla urządzeń z systemem iOS w usłudze Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje o ustawieniach pozwalających dostosować ekran główny i dokowanie na urządzeniach z systemem iOS."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 6aba4491-afb9-43cd-9ccc-14e6a2a5a3b1
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de15a5f5291a6701782d357d24e2e802d7e7e44b
-ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.openlocfilehash: 4a3f175337d521c92c909db9972d844ac6997cb0
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-home-screen-layout-settings-for-ios-devices"></a>Ustawienia układu ekranu głównego dla urządzeń z systemem iOS w usłudze Intune
 
@@ -60,7 +60,7 @@ Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacj
 
 
 1. W bloku **Strony** wybierz pozycję **Dodaj**.
-2. W bloku **Dodaj wiersz** wypełnij pole **Nazwa strony**. Jest to nazwa, do której można się odwołać w portalu usługi Intune i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+2. W bloku **Dodaj wiersz** wypełnij pole **Nazwa strony**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 3. W bloku **Dodaj** określ, jaki element chcesz dodać na stronie, wybierając pozycję **Aplikacja** lub **Folder**.
 4. Korzystając z informacji w tym temacie, skonfiguruj aplikacje i foldery, które mają być wyświetlane na stronie.
 
@@ -76,7 +76,7 @@ Po przypisaniu zasad do telefonu iPhone wygląd strony tego urządzenia będzie 
 
 ## <a name="how-to-add-an-app-to-the-list"></a>Jak dodać aplikację do listy
 
-1. Wypełnij pole **Nazwa aplikacji**. Jest to nazwa, do której można się odwołać w portalu usługi Intune i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+1. Wypełnij pole **Nazwa aplikacji**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 2. Wprowadź **Identyfikator pakietu aplikacji** dla aplikacji, którą chcesz wyświetlić. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w dalszej części tego tematu.
 3. Kliknij przycisk **OK** i dodawaj kolejne elementy. W obszarze Docka można ich dodać maksymalnie **6**, a na stronie urządzenia — maksymalnie **60**.
 4. Po zakończeniu kliknij przycisk **OK**.
@@ -87,8 +87,8 @@ Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej —
 
 1. Wypełnij pole **Nazwa folderu**. Tę nazwę zobaczą użytkownicy na swoich urządzeniach.
 2. Wybierz pozycję **Dodaj**, aby utworzyć stronę w folderze. Możesz dodać maksymalnie 20 stron.
-3. W bloku **Dodaj wiersz** wpisz nazwę strony. Jest to nazwa, do której można się odwołać w portalu usługi Intune i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
-3. Wypełnij pole **Nazwa aplikacji**. Jest to nazwa, do której można się odwołać w portalu usługi Intune i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+3. W bloku **Dodaj wiersz** wpisz nazwę strony. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+3. Wypełnij pole **Nazwa aplikacji**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 2. Wprowadź **Identyfikator pakietu aplikacji** dla aplikacji, którą chcesz wyświetlić. Aby uzyskać pomoc, zobacz temat **Jak dodać aplikację do listy**.
 3. Wybierz pozycję **Dodaj**. Możesz dodać maksymalnie 60 elementów.
 4. Po zakończeniu kliknij przycisk **OK**.

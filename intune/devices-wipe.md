@@ -1,12 +1,12 @@
 ---
 title: "Korzystanie z resetowania do ustawień fabrycznych lub usuwania danych firmy na urządzeniach przy użyciu usługi Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Dowiedz się, jak usunąć dane firmy z urządzenia lub zresetować urządzenie do ustawień fabrycznych."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/07/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 331ced93f0697f7c76d1356aae32b955602d17a3
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -106,7 +106,7 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia usuwani
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Usuwanie urządzeń z portalu usługi Azure Active Directory
 
-Z powodu problemów z komunikacją lub braku urządzeń może być konieczne usunięcie urządzeń z usługi Azure Active Directory (AD). Polecenie usunięcia nie powoduje usunięcia urządzenia z zarządzania, ale polecenia **Usuń** możesz użyć do usuwania rekordów urządzeń z konsoli platformy Azure, gdy wiesz, że są one niedostępne i najprawdopodobniej nie będą się ponownie komunikować z platformą Azure.
+Z powodu problemów z komunikacją lub braku urządzeń może być konieczne usunięcie urządzeń z usługi Azure Active Directory (AD). Polecenie usunięcia nie powoduje usunięcia urządzenia z zarządzania, ale polecenia **Usuń** możesz użyć do usuwania rekordów urządzeń z witryny Azure Portal, gdy wiesz, że są one niedostępne i najprawdopodobniej nie będą się ponownie komunikować z platformą Azure.
 
 1.  Zaloguj się do [usługi Azure Active Directory w portalu platformy Azure](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz też zarejestrować się w [portalu usługi Office 365](https://portal.office.com), a następnie wybrać kolejno pozycje **Administrator** &gt; **Azure AD** przy użyciu linku w lewej części strony.
 3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).

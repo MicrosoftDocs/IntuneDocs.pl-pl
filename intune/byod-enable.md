@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: fa70e21b9e9f7adfc508e24bd442a48c834ed7db
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: f4e414f3696c64f8ea450394928aa055ad427afd
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enable-byod-with-intune"></a>Włączanie modelu BYOD w usłudze Intune
 
@@ -48,7 +48,7 @@ Po przygotowaniu usługi Intune musisz spełnić różne wymagania dotyczące re
 
 -   **Urządzenia z systemem Android** — żadne działania nie są konieczne, aby przygotować usługę Intune do rejestrowania urządzeń z systemem Android. Użytkownicy mogą po prostu [rejestrować swoje urządzenia z systemem Android](/intune-user-help/enroll-your-device-in-intune-android) na potrzeby zarządzania przy użyciu aplikacji Portal firmy dostępnej w sklepie Google Play.
 
--   **Telefony i komputery z systemem Windows** — urządzenia z systemem Windows można rejestrować po przeprowadzeniu dodatkowych czynności konfiguracyjnych. Aby uprościć środowisko użytkownika, można włączyć automatyczne rejestrowanie komputerów i urządzeń przenośnych z systemem Windows 10 w usłudze Azure Active Directory (AD) Premium. Jeśli nie masz usługi Azure AD Premium lub jeśli konieczna jest obsługa systemu Windows 8.1, możesz utworzyć [alias DNS dla serwera rejestracji](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) w celu ułatwienia rejestracji.
+-   **Telefony i komputery z systemem Windows** — urządzenia z systemem Windows można rejestrować po przeprowadzeniu dodatkowych czynności konfiguracyjnych. Aby uprościć środowisko użytkownika, można włączyć automatyczne rejestrowanie komputerów i urządzeń przenośnych z systemem Windows 10 w usłudze Azure Active Directory (AD) Premium. Jeśli nie masz usługi Azure AD Premium lub jeśli konieczna jest obsługa systemu Windows 8.1, możesz utworzyć [alias DNS dla serwera rejestracji](windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) w celu ułatwienia rejestracji.
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Sprawdzanie, czy zarządzane urządzenia spełniają podstawowe wymogi bezpieczeństwa
@@ -82,7 +82,7 @@ Za pomocą usługi Intune można również zarządzać aplikacjami zakupionymi z
 
 -   [Zarządzanie aplikacjami nabytymi w ramach zakupów zbiorczych na urządzeniach z systemem iOS](vpp-apps-ios.md). Wiele licencji dla aplikacji z systemem iOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business (VPP)](http://www.apple.com/business/vpp/). Należy skonfigurować konto VPP w witrynie internetowej firmy Apple i przekazać token VPP firmy Apple do usługi Intune. Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego.
 
--   [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md). [Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w portalu usługi Intune.
+-   [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md). [Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal.
 
 ## <a name="protect-company-data"></a>Ochrona zasobów firmy
 

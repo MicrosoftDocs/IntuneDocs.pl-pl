@@ -1,0 +1,134 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Dokumentacja usługi Microsoft Intune
+metadata:
+  document_id: 99e91b60-d6a5-44a8-908f-442161fbb077
+  title: Dokumentacja usługi Microsoft Intune
+  description: 'Szybko rozpocznij pracę z usługą Microsoft Intune. Oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, ang. enterprise mobility management) pozwala pracownikom zachować produktywność przy jednoczesnej ochronie danych firmowych.'
+  keywords: 'ochrona, firma, dane, Azure, Intune, EMM, urządzenie, aplikacja, zarządzanie'
+  author: arob98
+  ms.author: angrobe
+  manager: angrobe
+  ms.date: 08/06/2017
+  ms.topic: article
+  ms.devlang: na
+  ms.service: microsoft-intune
+sections:
+  - items:
+      - type: markdown
+        text: 'Szybko rozpocznij pracę z usługą Microsoft Intune. Oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, ang. enterprise mobility management) pozwala pracownikom zachować produktywność przy jednoczesnej ochronie danych firmowych. Usługa Intune jest zintegrowana z usługą Azure Active Directory, co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Information Protection, co zapewnia ochronę danych.'
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: introduction-intune.md
+            html: <p>Dowiedz się więcej o usłudze Intune i jej sposobie działania.</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
+            title: Co to jest usługa Intune?
+          - href: get-started-evaluation.md
+            html: '<p>Skorzystaj z tego samouczka, by zobaczyć, jak działa usługa Intune.</p>'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: Wprowadzenie
+          - href: get-support.md
+            html: '<p>Dowiedz się, jak utworzyć bilet pomocy technicznej i uzyskać pomoc.</p>'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_support.svg'
+            title: Uzyskiwanie pomocy technicznej
+          - href: whats-new.md
+            html: '<p>Przekonaj się, jakie nowe możliwości wprowadzono w usłudze Intune w tym tygodniu.</p>'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
+            title: Co nowego
+  - title: Nowe artykuły i wpisy w blogu
+    items:
+      - type: paragraph
+        text: Przeczytaj najnowsze i najważniejsze informacje.
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: what-is-intune.md
+            title: Dowiedz się więcej o usłudze Intune w witrynie Azure Portal
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
+          - href: ui-changes.md
+            title: 'Dowiedz się, jak uzyskać dostęp do funkcji usługi Intune w witrynie Azure Portal'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_guide.svg'
+          - href: high-level-architecture.md
+            title: Zobacz architekturę wysokiego poziomu usługi Intune
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+          - href: reports-nav-create-intune-reports.md
+            title: Twórz raporty z użyciem magazynu danych usługi Intune (wersja zapoznawcza)
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/07/using-the-new-role-based-access-controls-in-intune/'
+            title: '[Blog] Dowiedz się więcej na temat nowej kontroli dostępu opartej na rolach'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/06/28/demystifying-service-health-for-microsoft-intune/'
+            title: '[Blog] Uzyskaj podstawowe informacje na temat kondycji usługi Intune'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
+  - title: Filmy
+    items:
+      - type: markdown
+        text: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FpkCI6xmsE4" frameborder="0" allowfullscreen></iframe>'
+      - type: markdown
+        text: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Cn29dmgDcIw?list=PLXtHYVsvn_b-0X3R9QCJ4T-Y27DK376NR" frameborder="0" allowfullscreen></iframe>'
+  - title: Artykuły dotyczące planowania
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="/intune/planning-guide">Przewodnik planowania, projektowania i implementowania wdrożenia usługi Intune</a>'
+          - html: <a href="/intune/migration-guide">Przewodnik po migracji do usługi Intune</a>
+  - title: Artykuły instruktażowe
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/intune/device-enrollment">Rejestrowanie urządzeń</a>
+          - html: <a href="/intune/device-management">Zarządzanie urządzeniami</a>
+          - html: <a href="/intune/app-management">Zarządzanie aplikacjami</a>
+          - html: <a href="/intune/device-profiles">Konfigurowanie urządzeń</a>
+          - html: <a href="/intune/device-compliance-get-started">Ustawianie zgodności urządzenia</a>
+          - html: <a href="/intune/conditional-access">Zarządzanie dostępem warunkowym</a>
+          - html: <a href="/intune/app-protection-policy">Chronienie aplikacji</a>
+          - html: <a href="/intune/mobile-threat-defense">Konfigurowanie usługi Mobile Threat Defense</a>
+          - html: <a href="/intune/network-access-control-integrate">Integrowanie kontroli dostępu do sieci</a>
+          - html: <a href="/intune/role-based-access-control">Zarządzanie rolami</a>
+          - html: <a href="/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json">Zarządzanie komputerami z użyciem oprogramowania klienckiego usługi Intune</a>
+  - title: Artykuły dotyczące rozwiązywania problemów
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/intune/help-desk-operators">Korzystanie z portalu rozwiązywania problemów w celu udzielania pomocy użytkownikom</a>
+          - html: <a href="/intune/known-issues">Znane problemy z usługą Intune</a>
+          - html: <a href="/intune/get-support">Uzyskiwanie pomocy technicznej</a>
+  - title: Artykuły dotyczące tworzenia i dostosowywania
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/intune/custom-settings-configure">Konfigurowanie niestandardowych ustawień urządzenia</a>
+          - html: <a href="/intune/apps-prepare-mobile-application-management">Przygotowywanie aplikacji LOB przy użyciu narzędzia opakowującego aplikacje usługi Intune</a>
+          - html: <a href="/intune/app-sdk">Przygotowywanie aplikacji LOB przy użyciu zestawu Intune App SDK</a>
+          - html: '<a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Praca z usługą Intune w programie Microsoft Graph</a>'
+          - html: <a href="/intune/reports-nav-intune-date-warehouse">Interfejs API magazynu danych usługi Intune</a>
+  - title: Inne zasoby
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://blogs.technet.microsoft.com/enterprisemobility/">Przeczytaj bloga na temat rozwiązania Enterprise Mobility and Security</a>'
+          - html: '<a href="https://blogs.technet.microsoft.com/intunesupport/">Uzyskaj pomoc na blogu pomocy technicznej do usługi Intune</a>'
+          - html: '<a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Prześlij opinię na temat usługi Intune w usłudze UserVoice</a>'
+          - html: '<a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc">Zadaj pytanie lub udziel odpowiedzi na forum dyskusyjnym dotyczącym usługi Intune</a>'

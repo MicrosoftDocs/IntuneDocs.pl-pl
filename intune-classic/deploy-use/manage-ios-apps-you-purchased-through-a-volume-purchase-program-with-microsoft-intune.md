@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/12/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f2600864eaf127810639e76932adbd422b4e0008
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5da29dceb5308eab72e5b24e220586aa739982ea
+ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Zarządzanie aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych, w usłudze Microsoft Intune
 
@@ -30,7 +30,7 @@ Usługa Microsoft Intune ułatwia zarządzanie aplikacjami zakupionymi za pośre
 
 > [!Important]
 > Obecnie usługa Intune przypisuje licencje aplikacji z systemem iOS zakupionymi w ramach programu zakupów zbiorczych Apple Volume Purchase Program for Business (VPP) do użytkowników, nie urządzeń. W związku z tym użytkownicy muszą wprowadzić hasło identyfikatora Apple ID, aby zainstalować aplikację.
-> Program Apple Volume Purchase Program for Education nie jest obsługiwany w tym wydaniu.
+> Program Apple Volume Purchase Program for Education oraz aplikacje B2B nie są obsługiwane w tym wydaniu.
 
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Zarządzanie zbiorczo zakupionymi aplikacjami dla urządzeń z systemem iOS
 Wiele licencji dla aplikacji z systemem iOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business (VPP)](http://www.apple.com/business/vpp/). Obejmuje to skonfigurowanie konta VPP w witrynie sieci Web firmy Apple i przekazanie tokenu VPP firmy Apple do usługi Intune.  Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego.

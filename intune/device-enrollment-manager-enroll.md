@@ -1,6 +1,6 @@
 ---
 title: "Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune. \""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 204df4648f1d79167e8eb5941d91b48d65b90704
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: 5caf60d0512a33c0c88f4305b1a9eb189112ba02
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń
 
@@ -36,7 +36,7 @@ Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządze
 
 Restauracja potrzebuje 50 tabletów do punktów sprzedaży dla swoich kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy konto menedżera rejestracji urządzeń i dodaje do niego kierownika restauracji, dając tym samym kierownikowi restauracji możliwości konta DEM. Kierownik może teraz zarejestrować 50 tabletów przy użyciu poświadczeń DEM.
 
-Menedżerami rejestracji urządzeń mogą być tylko użytkownicy w konsoli usługi Intune. Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
+Menedżerami rejestracji urządzeń mogą być tylko użytkownicy w witrynie Azure Portal. Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
 
 Użytkownik DEM ma następujące uprawnienia:
 
@@ -95,5 +95,5 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Wyświetlanie właściwości menedżera rejestracji urządzeń
 
-1. W portalu usługi Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Menedżerowie rejestracji urządzeń**.
+1. W witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Menedżerowie rejestracji urządzeń**.
 2. W bloku **Menedżerowie rejestracji urządzeń** kliknij prawym przyciskiem myszy użytkownika DEM, a następnie wybierz pozycję **Właściwości**.

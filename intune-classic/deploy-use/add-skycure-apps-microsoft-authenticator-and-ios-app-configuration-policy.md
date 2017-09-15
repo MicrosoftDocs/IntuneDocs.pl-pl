@@ -1,6 +1,6 @@
 ---
 title: Dodawanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji systemu iOS
-description: "Dodawanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji systemu iOS w klasycznej konsoli usługi Intune."
+description: "Dodawanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji systemu iOS w portalu klasycznym usługi Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,11 +14,11 @@ ms.assetid: 018d26f4-4a75-4e27-bb04-54f54106cb2f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 425b86e92281bb6e3657a6c806be269ccae94311
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d762e1aed998642db66908549b2d15d54601aed
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-skycure-apps-microsoft-authenticator-app-and-ios-configuration-policy"></a>Dodawanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji systemu iOS
 
@@ -30,9 +30,9 @@ Ponadto wymagana jest aplikacja [Microsoft Authenticator](https://docs.microsoft
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
--   Poniższe kroki należy wykonać w [klasycznej konsoli usługi Intune](https://manage.microsoft.com/).
+-   Poniższe kroki należy wykonać w [portalu klasycznym usługi Intune](https://manage.microsoft.com/).
 
--   Użyj tego samego konta usługi Azure AD, które zostało wcześniej skonfigurowane w konsoli zarządzania Skycure. Powinno to być konto używane podczas logowania się do klasycznej konsoli usługi Intune.
+-   Użyj tego samego konta usługi Azure AD, które zostało wcześniej skonfigurowane w konsoli zarządzania aplikacji Skycure. Powinno to być konto używane podczas logowania się do portalu klasycznego usługi Intune.
 
 -   Plik integracji Skycure musi być gotowy do użycia. Jest to pobrany wcześniej z konsoli zarządzania Skycure plik ZIP, który zawiera plik **skycure\_configuration.plist** z parametrami zasad konfiguracji aplikacji systemu iOS.
 
@@ -44,7 +44,7 @@ Ponadto wymagana jest aplikacja [Microsoft Authenticator](https://docs.microsoft
 
 ## <a name="to-add-the-skycure-app-for-android"></a>Aby dodać aplikację Skycure dla systemu Android
 
-1.  W klasycznej konsoli usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
+1.  W portalu klasycznym usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
 
 2.  Na stronie **Instalator oprogramowania** wybierz opcję **Odnośnik zewnętrzny**, a następnie w polu **Określ adres URL** wklej [adres URL aplikacji Skycure dla systemu Android](https://play.google.com/store/apps/details?id=com.skycure.skycure).
 
@@ -58,7 +58,7 @@ Ponadto wymagana jest aplikacja [Microsoft Authenticator](https://docs.microsoft
 
 ## <a name="to-add-the-skycure-app-for-ios"></a>Aby dodać aplikację Skycure dla systemu iOS
 
-1.  W klasycznej konsoli usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
+1.  W portalu klasycznym usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
 
 2.  Na stronie **Instalator oprogramowania** wybierz opcję **Zarządzana aplikacja systemu iOS ze sklepu App Store**, a następnie w polu **Określ adres URL** wklej [adres URL aplikacji Skycure dla systemu iOS](https://itunes.apple.com/us/app/skycure/id695620821?mt=8).
 
@@ -74,7 +74,7 @@ Ponadto wymagana jest aplikacja [Microsoft Authenticator](https://docs.microsoft
 
 ## <a name="to-add-the-microsoft-authenticator-app-for-ios"></a>Aby dodać aplikację Microsoft Authenticator dla systemu iOS
 
-1.  W klasycznej konsoli usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
+1.  W portalu klasycznym usługi Intune wybierz opcję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune, a następnie kliknij przycisk **Dalej**.
 
 2.  Na stronie **Instalator oprogramowania** wybierz opcję **Zarządzana aplikacja systemu iOS ze sklepu App Store**, a następnie w polu **Określ adres URL** wklej [adres URL aplikacji Microsoft Administrator dla systemu iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
 
@@ -90,7 +90,7 @@ Ponadto wymagana jest aplikacja [Microsoft Authenticator](https://docs.microsoft
 
 ## <a name="to-add-the-skycure-ios-app-configuration-policy"></a>Aby dodać zasady konfiguracji aplikacji Skycure dla systemu iOS
 
-1.  W klasycznej konsoli usługi Intune wybierz opcję **Zasady** &gt; **Przegląd &gt; Dodaj zasady**.
+1.  W portalu klasycznym usługi Intune wybierz opcję **Zasady** &gt; **Przegląd &gt; Dodaj zasady**.
 
 2.  Na liście zasad rozwiń węzeł **iOS**, wybierz pozycję **Zasady konfiguracji aplikacji mobilnej (iOS 8.0 i nowsze)**, a następnie wybierz pozycję **Utwórz zasady**.
 
