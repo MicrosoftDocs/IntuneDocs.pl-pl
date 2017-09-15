@@ -1,6 +1,6 @@
 ---
 title: "Co nowego w usłudze Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Dowiedz się, co nowego w witrynie Azure Portal usługi Intune"
 keywords: 
 author: brenduns
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b50856bdc500cab4b206a105275b4842680d4423
-ms.sourcegitcommit: 71cdf99d639530e70dbe48d611d399e52c3150b0
+ms.openlocfilehash: c4787c716f94e95ab98badf924273af5d02751f8
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -85,7 +85,7 @@ W tej wersji wprowadziliśmy następujące ulepszenia dotyczące sposobu działa
  
 W obszarze **Ustawienia funkcji BitLocker dla dysku systemu operacyjnego** wybranie wartości **Blokuj** dla ustawienia **Funkcja BitLocker z niezgodnym modułem TPM** w rzeczywistości zezwalało na używanie funkcji BitLocker. Ten błąd został rozwiązany i funkcja BitLocker jest blokowana, gdy zostanie wybrane odpowiednie ustawienie.
 W obszarze **Ustawienia funkcji BitLocker dla dysku systemu operacyjnego** w przypadku ustawienia **Agent odzyskiwania danych oparty na certyfikatach** możesz teraz jawnie blokować agenta odzyskiwania danych opartego na certyfikatach. Jednak domyślnie agent nie jest blokowany.
-W obszarze **Ustawienia stałych dysków danych w funkcji BitLocker** w przypadku ustawienia **Agent odzyskiwania danych**  możesz teraz jawnie blokować agenta odzyskiwania danych.
+W obszarze **Ustawienia stałych dysków danych w funkcji BitLocker** w przypadku ustawienia **Agent odzyskiwania danych ** możesz teraz jawnie blokować agenta odzyskiwania danych.
 Aby uzyskać więcej informacji, zobacz [Ustawienia programu Endpoint Protection dla systemu Windows 10 i nowszych wersji](endpoint-protection-windows-10.md).
 
 
@@ -102,7 +102,7 @@ Użytkownicy końcowi mogą teraz używać w programie OneNote dla systemu iOS r
 - Dowiedz się więcej o aplikacjach, które obsługują [ochronę aplikacji i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
 
 #### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices"></a>Nowe ustawienia umożliwiające zezwalanie na działanie aplikacji i ich blokowanie na urządzeniach z systemem Samsung KNOX Standard
-<!-- 1305423 -->  
+<!-- 1305423 822899-->  
 W tej wersji dodajemy nowe [ustawienia ograniczeń urządzeń](device-restrictions-android.md) pozwalające określić następujące listy aplikacji:
  
 - Aplikacje, które użytkownicy mogą instalować
@@ -112,7 +112,7 @@ W tej wersji dodajemy nowe [ustawienia ograniczeń urządzeń](device-restrictio
 Możesz określić aplikacji przy użyciu adresu URL, nazwy pakietu lub zarządzanej przez Ciebie listy aplikacji.
 
 #### <a name="new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune"></a>Link do nowego opartego na aplikacji interfejsu użytkownika zasad dostępu warunkowego usługi Azure AD z usługi Intune
-
+<!-- 1016201 -->
 Administratorzy IT mogą teraz ustawiać zasady dostępu warunkowego opartego na aplikacji za pomocą nowego interfejsu użytkownika zasad dostępu warunkowego w obciążeniu usługi Azure AD. Dostęp warunkowy oparty na aplikacji, który znajduje się w sekcji usługi Intune App Protection w witrynie Azure Portal, pozostanie w tym miejscu i będzie wymuszany równolegle. Wygodny link do nowego interfejsu użytkownika zasad dostępu warunkowego jest dostępny z poziomu obciążenia usługi Intune.
 
 - Dowiedz się więcej o [dostępie warunkowym opartym na aplikacji w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
@@ -124,7 +124,7 @@ Administratorzy IT mogą teraz ustawiać zasady dostępu warunkowego opartego na
 [Zaktualizowana lista nazw DNS i adresów IP](/intune/network-bandwidth-use) jest dostępna dla ustawień serwera proxy zapory.
 
 ### <a name="use-azure-active-directory-for-conditional-access----967947---"></a>Używanie usługi Azure Active Directory do dostępu warunkowego <!-- 967947 -->
-Dostęp warunkowy jest dostępny w sekcji usługi Azure Active Directory konsoli platformy Azure i zapewnia bardziej wydajną i elastyczną platformę do ustawiania zasad dla aplikacji w chmurze, takich jak Office 365 Exchange Online i SharePoint Online.  Użyj bloku **Dostęp warunkowy w usłudze Azure Active Directory**, zamiast klasycznej konsoli usługi Intune, aby skonfigurować zasady. Zasady istniejące w klasycznej konsoli usługi Intune trzeba utworzyć ponownie w konsoli platformy Azure. Aby uzyskać więcej informacji, zobacz temat [Tworzenie zasad dostępu warunkowego w usłudze Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview).
+Dostęp warunkowy jest dostępny w sekcji usługi Azure Active Directory witryny Azure Portal i zapewnia bardziej wydajną i elastyczną platformę do ustawiania zasad dla aplikacji w chmurze, takich jak Office 365 Exchange Online i SharePoint Online.  Użyj bloku **Dostęp warunkowy w usłudze Azure Active Directory** zamiast konsoli usługi Intune, aby skonfigurować zasady. Zasady istniejące w konsoli usługi Intune trzeba utworzyć ponownie w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz temat [Tworzenie zasad dostępu warunkowego w usłudze Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview).
 
 ### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Bezpośredni dostęp do scenariuszy rejestracji firmy Apple <!--951869-->
 Na kontach usługi Intune utworzonych po styczniu 2017 roku włączono bezpośredni dostęp do scenariuszy rejestracji firmy Apple przy użyciu obciążenia Rejestruj urządzenia w witrynie Azure Portal. Wcześniej podgląd rejestracji firmy Apple był dostępny tylko z poziomu linków w klasycznym portalu Intune. Konta usługi Intune utworzone przed styczniem 2017 roku wymagają przeprowadzenia jednorazowej migracji, zanim funkcje te będą dostępne w systemie Azure. Harmonogram migracji nie został jeszcze ogłoszony, ale szczegółowe informacje zostaną udostępnione najszybciej, jak będzie to możliwe. Zdecydowanie zalecamy utworzenie konta w wersji próbnej w celu przetestowania nowego środowiska pracy w przypadku, gdy istniejące konto nie ma dostępu do witryny Azure portal.

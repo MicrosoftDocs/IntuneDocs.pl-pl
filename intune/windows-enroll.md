@@ -1,6 +1,6 @@
 ---
 title: "Rejestrowanie urządzeń z systemem Windows"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Włączanie zarządzania urządzeniami mobilnymi (MDM) dla urządzeń z systemem Windows w usłudze Intune."
 keywords: 
 author: nathbarn
@@ -14,11 +14,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3b5b5e2cdf2b31c33a02a90560e4abf955d398b0
-ms.sourcegitcommit: d5b5cb9b6dcb59094e436e07f8ed46924b37ac94
+ms.openlocfilehash: 067009356171184fa34dd51c9a0b01b41f14cab7
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enroll-windows-devices"></a>Rejestrowanie urządzeń z systemem Windows
 
@@ -27,8 +27,8 @@ ms.lasthandoff: 08/30/2017
 Ten temat ułatwia administratorom IT uproszczenie rejestracji urządzeń z systemem Windows dla użytkowników. Po [skonfigurowaniu usługi Intune](setup-steps.md) użytkownicy rejestrują urządzenia z systemem Windows, [logując się](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) za pomocą konta służbowego.  
 
 Jako administrator usługi Intune możesz uprościć rejestrację, korzystając z następujących sposobów:
-- Włączenie rejestracji automatycznej (wymagana usługa Azure AD Premium)
-- Rejestracja rekordu CNAME
+- [Włączenie rejestracji automatycznej](#enable-windows-10-automatic-enrollment) (wymagana usługa Azure AD Premium)
+- [Rejestracja rekordu CNAME]()
 - Włączenie rejestracji zbiorczej (wymagana usługa Azure AD Premium i aplikacja Windows Configuration Designer)
 
 O tym, jak można uprościć proces rejestrowania urządzenia z systemem Windows, decydują dwie kwestie:
@@ -48,8 +48,8 @@ Obecnie obsługiwane jest zarządzanie wieloma użytkownikami w usłudze Intune 
 
 [!INCLUDE[AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Włączanie rejestrowania dla systemu Windows bez usługi Azure AD Premium
-Aby uprościć rejestrację dla użytkowników, możesz utworzyć alias systemu DNS (typ rekordu CNAME), który automatycznie przekierowuje żądania rejestrowania do serwerów usługi Intune. Jeśli nie utworzysz rekordu zasobu CNAME systemu DNS, użytkownicy próbujący nawiązać połączenie z usługą Intune muszą wprowadzić nazwę serwera usługi Intune podczas rejestracji.
+## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Uproszczenie rejestrowania systemu Windows bez usługi Azure AD Premium
+Aby uprościć rejestrację dla użytkowników, możesz utworzyć alias serwera nazw domen (DNS) (typ rekordu CNAME), który automatycznie przekierowuje żądania rejestrowania do serwerów usługi Intune. Jeśli nie utworzysz rekordu zasobu CNAME systemu DNS, użytkownicy próbujący nawiązać połączenie z usługą Intune muszą wprowadzić nazwę serwera usługi Intune podczas rejestracji.
 
 **Krok 1. Tworzenie rekordu CNAME** (opcjonalnie)<br>
 Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
@@ -74,7 +74,7 @@ Jeśli masz więcej niż jeden sufiks głównej nazwy użytkownika (UPN), musisz
 Propagowanie zmian rekordów DNS może potrwać do 72 godzin. Nie można zweryfikować zmiany w systemie DNS w usłudze Intune, dopóki trwa propagowanie rekordu DNS.
 
 **Krok 2. Weryfikacja rekordu CNAME** (opcjonalnie)<br>
-W portalu usługi Intune na platformie Azure wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune wybierz kolejno opcje **Zarejestruj urządzenia** > **Rejestracja Windows**. W polu **Podaj nazwę zweryfikowanej domeny** wpisz adres URL witryny internetowej firmy, a następnie wybierz pozycję **Przetestuj automatyczne wykrywanie**.
+W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune wybierz kolejno opcje **Zarejestruj urządzenia** > **Rejestracja Windows**. W polu **Podaj nazwę zweryfikowanej domeny** wpisz adres URL witryny internetowej firmy, a następnie wybierz pozycję **Przetestuj automatyczne wykrywanie**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informowanie użytkowników o sposobie rejestrowania urządzeń z systemem Windows
 Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia z systemem Windows i czego mogą oczekiwać po włączeniu ich do zarządzania. Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Możesz również poinformować użytkowników, aby zapoznali się z tematem [Co widzi administrator IT na moim urządzeniu](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).

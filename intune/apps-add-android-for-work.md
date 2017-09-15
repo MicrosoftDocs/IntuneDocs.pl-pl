@@ -1,6 +1,6 @@
 ---
 title: "Przypisywanie aplikacji do urządzeń z programem Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "W tym temacie opisano sposób synchronizowania, a następnie przypisywania aplikacji ze sklepu Google Play for Work na urządzeniach z programem Android for Work."
 keywords: 
 author: mattbriggs
@@ -15,18 +15,18 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bbe5be4afead5d80f38e2ef56d12c0b26351dfd8
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 803f1475a220e52a0f7d8a41d58f0a5337ff6555
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Jak przypisywać aplikacje do urządzeń z programem Android for Work za pomocą usługi Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Przypisywanie aplikacji do urządzeń z programem Android for Work przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Wszystkie aplikacje, które instalujesz dla programu Android for Work, pochodzą ze sklepu Google Play for Work. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie.
-Następnie aplikacja jest widoczna w węźle **Licencjonowane aplikacje** w portalu usługi Intune. Z poziomu tej witryny możesz zarządzać przypisywaniem aplikacji w taki sam sposób, jak przypisywaniem dowolnych innych aplikacji.
+Następnie aplikacja pojawia się w węźle **Licencjonowane aplikacje** w witrynie Azure Portal. Z poziomu tej witryny możesz zarządzać przypisywaniem aplikacji w taki sam sposób, jak przypisywaniem dowolnych innych aplikacji.
 
 Ponadto możesz przypisywać własne aplikacje biznesowe, jeśli zostały one utworzone, w następujący sposób:
 - Utwórz w ramach programu Google Developer konto, które pozwala publikować aplikacje w prywatnym obszarze w sklepie Google Play.
@@ -34,7 +34,7 @@ Ponadto możesz przypisywać własne aplikacje biznesowe, jeśli zostały one ut
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w portalu usługi Intune usługa Intune i program Android for Work zostały skonfigurowane pod kątem do współpracy.
+Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure Portal usługa Intune i program Android for Work zostały skonfigurowane do współpracy.
 
 ## <a name="synchronize-an-app-from-the-google-play-for-work-store"></a>Synchronizowanie aplikacji ze sklepu Google Play for Work
 

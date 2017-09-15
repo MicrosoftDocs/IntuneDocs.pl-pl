@@ -1,6 +1,6 @@
 ---
 title: "Niestandardowe ustawienia profilu dla programu Android for Work z użyciem usługi Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje na temat tworzenia niestandardowych ustawień profilu dla urządzeń z programem Android for Work z użyciem usługi Intune."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b48fc7bd784b5d6d531ef5bf28fe835e394b106
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 47af10ea2eb04b5e5a470aff36d45d41105feb15
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Tworzenie niestandardowych ustawień profilu dla urządzeń z programem Android for Work z użyciem usługi Intune
 
@@ -32,7 +32,7 @@ Ta funkcja ma umożliwić przypisanie ustawień systemu Android, których nie mo
 1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [Jak skonfigurować niestandardowe ustawienia urządzenia](custom-settings-configure.md).
 2. W bloku **Niestandardowe ustawienia OMA-URI** kliknij przycisk **Dodaj**, aby dodać nowe ustawienie.
 3. W bloku **Dodaj wiersz** skonfiguruj następujące opcje:
-    - **Nazwa** — wprowadź unikatową nazwę niestandardowych ustawień programu Android for Work, która pomoże je zidentyfikować w portalu usługi Intune.
+    - **Nazwa** — wprowadź unikatową nazwę niestandardowych ustawień programu Android for Work, która pomoże je zidentyfikować w witrynie Azure Portal.
     - **Opis** — podaj opis zawierający omówienie zasad niestandardowych systemu Android oraz inne istotne informacje ułatwiające ich wyszukanie.
     - **OMA-URI** — wprowadź identyfikator OMA-URI, dla którego chcesz podać ustawienie.
     - **Typ danych** — wybierz typ danych, przy pomocy których określisz to ustawienie OMA-URI. Wybierz jedną z opcji: **Ciąg**, **Ciąg (plik XML)**, **Data i godzina**, **Liczba całkowita**, **Liczba zmiennoprzecinkowa**, **Wartość logiczna** lub **Base64 (plik)**.

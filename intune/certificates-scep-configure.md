@@ -1,6 +1,6 @@
 ---
 title: "Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów SCEP usługi Intune."
 keywords: 
 author: lleonard-msft
@@ -15,11 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e29e79b8598eddba951b3f8ee7a7bcd5c6271f83
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 406da09419e13319b8ebf4f59a05ca36eff1edad
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,7 +36,7 @@ Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworz
 -  **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi rejestracji urządzeń sieciowych.
 Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie może znajdować się na tym samym serwerze co ten urząd. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Łącznik certyfikatów usługi Microsoft Intune**: używając portalu usługi Intune, pobierz instalator **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. 
+-  **Łącznik certyfikatów usługi Microsoft Intune**: używając witryny Azure Portal, pobierz instalator **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. 
 -  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
     -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
     -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
@@ -263,9 +263,9 @@ To zadanie obejmuje:
 
     1.  Po uzyskaniu certyfikatu uwierzytelniania serwera otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie kliknij pozycję **Powiązania** w okienku **Akcje** .
 
-    2.  Kliknij pozycję **Dodaj**, ustaw wartość **https** w polu **Typ**i upewnij się, że ustawiony port to **443**. (W przypadku autonomicznej usługi Intune jest obsługiwany wyłącznie port 443).
+    2.  Kliknij pozycję **Dodaj**, ustaw wartość **https** w polu **Typ** i upewnij się, że ustawiony port to **443**. (W przypadku autonomicznej usługi Intune jest obsługiwany wyłącznie port 443).
 
-    3.  W polu **Certyfikat SSL**określ certyfikat uwierzytelniania serwera.
+    3.  W polu **Certyfikat SSL** określ certyfikat uwierzytelniania serwera.
 
         > [!NOTE]
         > Jeśli serwer NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, **Nazwa podmiotu** dla certyfikatu uwierzytelniania serwera musi zawierać zewnętrzną nazwę serwera publicznego, a **Alternatywna nazwa podmiotu** musi zawierać wewnętrzną nazwę serwera.
@@ -294,9 +294,9 @@ To zadanie obejmuje:
 
     Upewnij się, że następujące wartości są ustawione jako wpisy typu DWORD:
 
-    Nazwa: **MaxFieldLength**o wartości dziesiętnej **65534**
+    Nazwa: **MaxFieldLength** o wartości dziesiętnej **65534**
 
-    Nazwa: **MaxRequestBytes**o wartości dziesiętnej **65534**
+    Nazwa: **MaxRequestBytes** o wartości dziesiętnej **65534**
 
 4.  Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
 

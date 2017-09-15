@@ -1,6 +1,6 @@
 ---
 title: "Migracja zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Przeprowadź migrację zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5f1ea2b0ceb32d0aa05a28e0f01f65b80b1ddcf
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5b0b0982018dcfa3c606ea55b9264e5cd6cd1a82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -33,7 +33,7 @@ Jeśli wszystko jest już gotowe do przejścia na witrynę Azure Portal, wykonaj
 
 - Wykonaj kroki opisane w tym temacie, aby ponownie utworzyć te zasady w witrynie Azure Portal.
 
-- Po sprawdzeniu, czy nowe zasady w witrynie Azure Portal działają prawidłowo, wyłącz zasady dostępu warunkowego w konsoli klasycznej usługi Intune.
+- Po sprawdzeniu, czy nowe zasady w witrynie Azure Portal działają prawidłowo, wyłącz zasady dostępu warunkowego w portalu klasycznym usługi Intune.
 <br /><br />
     - **Przed wyłączeniem** zasad dostępu warunkowego w portalu klasycznym usługi Intune zaplanuj przeniesienie użytkowników, aby mogli korzystać z nowych zasad. Dostępne są dwie opcje:
 <br /><br />
@@ -82,7 +82,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
     ![Porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla portalu usługi Intune. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
+    > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla witryny Azure Portal. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
 
 5. Po wybraniu grupy kliknij pozycję **Wybierz**, a następnie kliknij pozycję **Gotowe**.
 
@@ -150,7 +150,7 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
     ![Porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla portalu usługi Intune. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
+    > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla witryny Azure Portal. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
 
 5. Po wybraniu grupy kliknij pozycję **Wybierz**, a następnie kliknij pozycję **Gotowe**.
 

@@ -1,6 +1,6 @@
 ---
 title: "Tworzenie i wdrażanie zasad ochrony aplikacji"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Informacje o tym, jak zasady ochrony aplikacji usługi Intune mogą chronić dane firmy używane przez aplikacje, którymi zarządzasz."
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 47cafd6fa252ca7db9ca1129c5dcc5bd0d70d154
-ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
+ms.openlocfilehash: 2e535b2aa11401d51edb33cbad54e9222fd6da6a
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Jeśli szukasz instrukcji dotyczących klasycznej konsoli usługi Intune, zobacz, [jak tworzyć zasady ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
+Jeśli szukasz instrukcji dotyczących portalu klasycznego usługi Intune, zobacz, [jak tworzyć zasady ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
 
 Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w artykule [What is Microsoft Intune app protection policies](app-protection-policy.md) (Co to są zasady ochrony aplikacji usługi Microsoft Intune).
 
@@ -79,7 +79,7 @@ Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi M
 > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Aby uzyskać więcej informacji, zobacz:
-* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
+* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)
 
 ##  <a name="change-existing-policies"></a>Zmiana istniejących zasad
@@ -125,5 +125,5 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 [Monitorowanie zgodności i stanu użytkownika](app-protection-policies-monitor.md)
 
 ### <a name="see-also"></a>Zobacz także
-* [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
+* [Czego można oczekiwać, gdy aplikacja sla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)

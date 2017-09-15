@@ -1,6 +1,6 @@
 ---
 title: "Klasyczne grupy usługi Intune w witrynie Azure Portal"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Poznaj nowe funkcje grup w portalu usługi Intune Azure"
 keywords: 
 author: nathbarn
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 ms.custom: intune-azure
-ms.openlocfilehash: c51c3102cc78cf095e27da4ff199cb3fb5ae14a6
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: 7ba5c3d0e6f241c5734d629a23f092ac007f8300
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-classic-groups-in-the-azure-portal"></a>Klasyczne grupy usługi Intune w witrynie Azure Portal
 
@@ -38,7 +38,7 @@ Niektóre funkcje, które były dostępne w przypadku grup Intune, są niedostę
 - Opcja **Wyklucz określonych członków** dla grupy nie istnieje w witrynie Azure Portal. W celu replikowania tego zachowania można jednak użyć grupy zabezpieczeń usługi Azure AD z regułami zaawansowanymi. Będzie można na przykład utworzyć następującą zaawansowaną regułę, która dołącza wszystkie osoby w Twoim dziale sprzedaży do grupy zabezpieczeń, ale wyklucza te grupy, których tytuły zawierają wyraz „Assistant”:
 
   `(user.department -eq "Sales") -and -not (user.jobTitle -contains "Assistant")`.
-- Grupa **Wszystkie urządzenia zarządzane za pośrednictwem programu Exchange ActiveSync** wbudowana w konsolę usługi Intune nie została poddana migracji do usługi Azure AD. Można jednak nadal uzyskiwać dostęp do informacji o zarządzanych urządzeniach EAS w witrynie Azure Portal.
+- Grupa **Wszystkie urządzenia zarządzane za pośrednictwem programu Exchange ActiveSync** w klasycznej konsoli usługi Intune nie została poddana migracji do usługi Azure AD. Można jednak nadal uzyskiwać dostęp do informacji o zarządzanych urządzeniach EAS w witrynie Azure Portal.
 
 ## <a name="how-to-get-started"></a>Wprowadzenie
 
@@ -51,9 +51,9 @@ Niektóre funkcje, które były dostępne w przypadku grup Intune, są niedostę
 
 
 ## <a name="what-happened-to-intune-groups"></a>Co stało się z grupami usługi Intune?
-Podczas migrowania grup z portalu klasycznego Intune do usługi Intune w witrynie Azure Portal stosowane są następujące reguły:
+Podczas migrowania grup z witryny Azure Portal do usługi Intune w witrynie Azure Portal stosowane są następujące reguły:
 
-| Grupy w klasycznym portalu usługi Intune|Grupy w usłudze Azure AD|
+| Grupy w usłudze Intune|Grupy w usłudze Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
 |Statyczna grupa użytkowników|Statyczna grupa zabezpieczeń usługi Azure AD|
 |Dynamiczna grupa użytkowników|statycznymi grupami zabezpieczeń usługi Azure AD z hierarchią grup zabezpieczeń usługi Azure AD|
@@ -65,7 +65,7 @@ Podczas migrowania grup z portalu klasycznego Intune do usługi Intune w witryni
 
 ## <a name="group-hierarchy"></a>Hierarchia grup
 
-W klasycznej konsoli usługi Intune wszystkie grupy mają grupę nadrzędną. Grupy mogą zawierać tylko elementy członkowskie ze swojej grupy nadrzędnej. W usłudze Azure AD grupy podrzędne mogą zawierać elementy członkowskie, których nie ma w grupie nadrzędnej.
+W konsoli usługi Intune wszystkie grupy mają grupę nadrzędną. Grupy mogą zawierać tylko elementy członkowskie ze swojej grupy nadrzędnej. W usłudze Azure AD grupy podrzędne mogą zawierać elementy członkowskie, których nie ma w grupie nadrzędnej.
 
 ## <a name="group-attributes"></a>Atrybuty grupy
 Atrybuty to właściwości urządzeń, za pomocą których można definiować grupy. W tej tabeli opisano, jak te kryteria są migrowane do grup zabezpieczeń usługi Azure AD.
@@ -84,4 +84,4 @@ Atrybuty to właściwości urządzeń, za pomocą których można definiować gr
 
 ## <a name="what-happens-to-policies-and-apps-you-previously-deployed"></a>Co się dzieje z wdrożonymi wcześniej zasadami i aplikacjami?
 
-Zasady i aplikacje można nadal wdrażać do grup, tak jak wcześniej. Tymi grupami można jednak teraz zarządzać w witrynie Azure Portal (zamiast przy użyciu klasycznej konsoli usługi Intune).
+Zasady i aplikacje można nadal wdrażać do grup, tak jak wcześniej. Tymi grupami można jednak teraz zarządzać w witrynie Azure Portal (zamiast przy użyciu konsoli usługi Intune).

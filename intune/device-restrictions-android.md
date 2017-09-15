@@ -1,12 +1,12 @@
 ---
 title: "Ustawienia ograniczeń urządzenia z systemem Android w usłudze Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Android."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09641b5e34ab8200e7dd9d4c27f0dabf59fa62d2
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: db7287dcccf45e0ce98a6fcae3c953dbebc2bb82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemami Android i Samsung KNOX Standard w usłudze Microsoft Intune
 
@@ -67,8 +67,8 @@ Te ustawienia wraz z zasadami ograniczeń urządzenia z systemem Android są pom
 <sup>1</sup> Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na tych urządzeniach do najnowszej wersji.
 
 W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego przypisania do urządzenia z systemem Android w wersji starszej niż 5.0 wystąpią opisane poniżej konsekwencje.
-- Jeśli na urządzeniu jest uruchomiona aplikacja Portal firmy w wersji wcześniejszej niż 1704, do urządzenia nie będą mieć zastosowania żadne zasady dotyczące numeru PIN, a w portalu usługi Intune będzie wyświetlany błąd.
-- Jeśli uruchomiona jest aplikacja Portal firmy w wersji 1704 lub nowszej, można stosować tylko prosty numer PIN. To ustawienie nie jest obsługiwane w wersjach systemu Android wcześniejszych niż 5.0. W portalu usługi Intune nie jest wyświetlany błąd.
+- Jeśli na urządzeniu jest uruchomiona aplikacja Portal firmy w wersji wcześniejszej niż 1704, do urządzenia nie będą mieć zastosowania żadne zasady dotyczące numeru PIN, a w witrynie Azure Portal będzie wyświetlany błąd.
+- Jeśli uruchomiona jest aplikacja Portal firmy w wersji 1704 lub nowszej, można stosować tylko prosty numer PIN. To ustawienie nie jest obsługiwane w wersjach systemu Android wcześniejszych niż 5.0. W witrynie Azure Portal nie jest wyświetlany błąd.
 
 
 ## <a name="google-play-store"></a>Sklep Google Play
@@ -79,7 +79,7 @@ W przypadku skonfigurowania ustawienia **Złożona wartość liczbowa** i jego p
 
 Na liście aplikacji z ograniczeniami można skonfigurować jedną z poniższych list dla urządzeń z systemem Android i funkcją Samsung KNOX Standard:
 
-Lista **Aplikacje zabronione** — lista aplikacji (niezarządzanych przez usługę Intune), których użytkownicy nie mogą instalować ani uruchamiać.
+Lista **Aplikacje zabronione** — lista aplikacji (niezarządzanych przez usługę Intune), których instalacja i uruchomienie przez użytkowników zostaną zgłoszone.
 Lista **Zatwierdzone aplikacje** — lista aplikacji, które użytkownicy mogą instalować. Aby utrzymać zgodność, użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.
 Profile urządzeń zawierające ustawienia aplikacji z ograniczeniami należy przypisać do grup użytkowników.
 
@@ -107,6 +107,21 @@ Możesz również kliknąć opcję **Importuj**, aby pobrać listę z pliku CSV.
 - **JavaScript (tylko system Samsung KNOX)** — umożliwia uruchamianie skryptów Java w przeglądarce internetowej na urządzeniu.
 - **Wyskakujące okienka (tylko system Samsung KNOX)** — umożliwia blokowanie wyskakujących okienek w przeglądarce internetowej.
 
+## <a name="allow-or-block-apps"></a>Zezwalanie na aplikacje lub ich blokowanie
+
+Te ustawienia pozwalają wskazać aplikacje, które mogą być instalowane lub uruchamiane wyłącznie na urządzeniach z rozwiązaniem Samsung KNOX Standard.
+Ponadto można również wskazać zainstalowane aplikacje, które będą ukryte dla użytkownika urządzenia. Użytkownicy nie mogą uruchamiać tych aplikacji.
+
+- **Aplikacje, które mogą być instalowane (tylko rozwiązanie Samsung KNOX Standard)**
+- **Aplikacje, których uruchamianie jest blokowane (tylko rozwiązanie Samsung KNOX Standard)**
+- **Aplikacje ukryte przed użytkownikiem (tylko rozwiązanie Samsung KNOX Standard)**
+
+Dla każdego ustawienia skonfiguruj listę aplikacji, wykonując jedną z następujących czynności:
+
+- **Dodaj aplikacje według nazwy pakietu** — opcja używana głównie w odniesieniu do aplikacji LOB. Wprowadź nazwę aplikacji i nazwę pakietu aplikacji. 
+- **Dodaj aplikacje według adresu URL** — wprowadź nazwę aplikacji i jej adres URL w sklepie Google Play.
+- **Dodaj aplikacje zarządzane** — wybierz odpowiednią aplikację z listy aplikacji zarządzanych przy użyciu usługi Intune.
+
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
 - **Kopie zapasowe w usłudze Google (tylko system Samsung KNOX)** — umożliwia korzystanie z kopii zapasowych w usłudze Google.
@@ -127,9 +142,9 @@ Możesz również kliknąć opcję **Importuj**, aby pobrać listę z pliku CSV.
 
 ## <a name="kiosk"></a>Kiosk
 
-Ustawienia kiosku dotyczą tylko urządzeń z systemem Samsung KNOX Standard.
+Ustawienia kiosku dotyczą tylko urządzeń z rozwiązaniem Samsung KNOX Standard i odnoszą się wyłącznie do aplikacji zarządzanych za pomocą usługi Intune.
 
-- **Wybierz zarządzaną aplikację** — wybierz jedną z poniższych opcji, aby dodać co najmniej jedną aplikację, którą można uruchomić, gdy urządzenie jest w trybie kiosku. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.
+- **Wybierz zarządzaną aplikację** — wybierz jedną z poniższych opcji, aby dodać co najmniej jedną zarządzaną aplikację, którą można uruchomić, gdy urządzenie jest w trybie kiosku. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.
     - **Dodaj aplikacje według nazwy pakietu**
     - **Dodaj aplikacje przez adres URL**
     - **Dodaj aplikacje zarządzane**.

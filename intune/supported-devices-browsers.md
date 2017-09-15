@@ -14,11 +14,11 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f862129d73c83e078d8b29201f1d92b9b65aa609
-ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
+ms.openlocfilehash: 00fc685062c090b40e20ed3dfa30afbeeb5c9780
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="supported-devices-and-browsers"></a>Obsługiwane urządzenia i przeglądarki
 
@@ -31,7 +31,7 @@ Przed rozpoczęciem konfigurowania usługi Microsoft Intune przejrzyj poniższe 
 - [Obsługiwane urządzenia i komputery](#intune-supported-devices)
 - [listę obsługiwanych przeglądarek sieci Web umożliwiających korzystanie z usługi Intune.](#intune-supported-web-browsers)
 
-Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([konsola klasyczna](/intune-classic/get-started/network-bandwidth-use)).
+Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-devices"></a>Urządzenia obsługiwane przez usługę Intune
 
@@ -43,7 +43,7 @@ Usługi Intune nie można używać do zarządzania systemami operacyjnymi Window
 
 ### <a name="windows-pc-software-client"></a>Oprogramowanie klienckie dla komputerów z systemem Windows
 
-[Oprogramowanie klienckie usługi Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą klasycznej konsoli usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
+[Oprogramowanie klienckie usługi Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą portalu klasycznego usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
 
 <!--  ### Exchange ActiveSync management
 
@@ -54,7 +54,7 @@ You can manage [Exchange ActiveSync devices](/intune-classic/deploy-use/mobile-d
 Różne zadania administracyjne wymagają użycia jednej z następujących witryn administracyjnych sieci Web.
 
 - [Portal usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Portal usługi Intune](https://portal.azure.com/)
+- [Portal Azure](https://portal.azure.com/)
 
 Dla tych portali obsługiwane są następujące przeglądarki:
 - Microsoft Edge (najnowsza wersja)
@@ -67,12 +67,12 @@ Dla tych portali obsługiwane są następujące przeglądarki:
 
 Tylko klasyczne funkcje usługi Intune, takie jak oprogramowanie klienckie usługi Intune na komputery PC i integracja z partnerami usługi Mobile Threat Defense, są dostępne tylko w klasycznym portalu usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
 
-Następujące przeglądarki programu Silverlight obsługują klasyczną konsolę usługi Intune:
+Następujące przeglądarki programu Silverlight obsługują konsolę usługi Intune:
 - Internet Explorer 10 lub nowsza wersja
 - Google Chrome (wersje poprzedzające wersję 42)
 - Mozilla Firefox z włączonym dodatkiem Silverlight [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=836872)
 
 > [!Note]
-> Przeglądarka Microsoft Edge i przeglądarki dla urządzeń mobilnych nie są obsługiwane przez klasyczną konsolę usługi Intune, ponieważ nie obsługują technologii [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane przez portal klasyczny usługi Intune, ponieważ nie obsługują technologii [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
 
 Do tego portalu mogą logować się tylko użytkownicy z uprawnieniami administratora usługi lub administratorzy dzierżawy z rolą administratora globalnego. Aby można było uzyskać dostęp do konsoli administracyjnej, konto musi mieć licencję na korzystanie z usługi Intune i stan logowania **Dozwolone**.

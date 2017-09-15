@@ -1,7 +1,7 @@
 ---
 title: "Konfigurowanie łącznika Exchange dla lokalnego programu EAS w usłudze Intune"
-titleSuffix: Intune Azure
-description: "Usługa Intune Azure: Exchange ActiveSync MDM — użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
+titleSuffix: Azure portal
+description: "Użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1dd5143ce6c604f416af1c6b6b1df684346e2f6d
-ms.sourcegitcommit: be12974a7eaa4ce9cffe45aabe456c858d582e20
+ms.openlocfilehash: f9dc93cf0a24032eba051f770af1b35f9932acc9
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -30,7 +30,7 @@ Lokalne środowiska serwera Exchange mogą używać programu On-premises Exchang
 
 Aby skonfigurować połączenie, które umożliwi usłudze Microsoft Intune komunikowanie się z lokalnym serwerem Exchange, konieczne jest wykonanie następujących czynności:
 
-1.  Pobranie programu On-premises Exchange Connector dla usługi Intune z portalu usługi Intune.
+1.  Pobranie programu On-premises Exchange Connector dla usługi Intune z witryny Azure Portal.
 2.  Zainstalowanie i skonfigurowanie programu On-premises Exchange Connector dla usługi Intune.
 3.  Sprawdzenie działania połączenia z serwerem Exchange.
 

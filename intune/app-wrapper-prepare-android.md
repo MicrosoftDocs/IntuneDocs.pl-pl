@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e8707253139ee5a12a48d38a333ae49fbb4d3ead
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: b82c0832fc102e4ae30268a6cd08ed0e14e1c931
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -122,14 +122,14 @@ Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyc
 
 Jeśli poprzedni certyfikat podpisywania nie może zostać użyty lub aplikacja nie została wcześniej wdrożona, możliwe jest utworzenie nowego certyfikatu podpisywania, zgodnie z instrukcjami znajdującymi się w [przewodniku dewelopera systemu Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
-Jeśli aplikacja została wcześniej wdrożona za pomocą innego certyfikatu podpisywania, nie można przekazać jej do konsoli usługi Intune po uaktualnieniu. Scenariusze uaktualniania aplikacji nie będą miały zastosowania, jeśli aplikacja została podpisana za pomocą innego certyfikatu niż ten, który został użyty podczas jej kompilacji. W związku z tym wszelkie nowe certyfikaty podpisywania powinny zostać zachowane na potrzeby uaktualnień aplikacji. 
+Jeśli aplikacja została wcześniej wdrożona za pomocą innego certyfikatu podpisywania, nie można przekazać jej do usługi Intune po uaktualnieniu. Scenariusze uaktualniania aplikacji nie będą miały zastosowania, jeśli aplikacja została podpisana za pomocą innego certyfikatu niż ten, który został użyty podczas jej kompilacji. W związku z tym wszelkie nowe certyfikaty podpisywania powinny zostać zachowane na potrzeby uaktualnień aplikacji. 
 
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje
 Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków opartych na podniesieniu uprawnień:
 
 -   Upewnij się, że wejściowa aplikacja biznesowa, aplikacja wyjściowa i magazyn kluczy środowiska Java są na tym samym komputerze, na którym jest uruchamiane narzędzie opakowujące aplikacje.
 
--   Zaimportuj aplikację wyjściową do konsoli usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji o narzędziu Java keytool.
+-   Zaimportuj aplikację wyjściową do usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji o narzędziu Java keytool.
 
 -   Jeśli aplikacja wyjściowa i narzędzie znajdują się w ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj zabezpieczenia środowiska, używając [zabezpieczeń protokołu internetowego (IPsec)](http://wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/kb/887429).
 

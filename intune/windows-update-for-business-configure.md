@@ -1,6 +1,6 @@
 ---
-title: "Zarządzanie aktualizacjami oprogramowania"
-titleSuffix: Configure Windows Update for Business settings - Intune
+title: "Konfigurowanie ustawień usługi Windows Update dla firm w usłudze Intune"
+titleSuffix: Azure portal
 description: "Informacje o konfigurowaniu ustawień usługi Windows Update dla firm w usłudze Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10."
 keywords: 
 author: dougeby
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 6d88fd62b84c0cc7c3678692cef5ab547bfb8c5d
-ms.sourcegitcommit: f9b01976c0fc479ac8bc3998eb55bbc517ed2d84
+ms.openlocfilehash: 71dad71cdfa9f503a47e301f0b5d3fef2567f886
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
@@ -54,20 +54,20 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
     To ustawienie można skonfigurować ręcznie lub też można użyć profilu ograniczeń urządzenia usługi Intune dla systemu Windows 10 i nowszych. Aby to zrobić, należy skonfigurować ustawienie **Ogólne** > **Przesłanie danych diagnostycznych** do wartości co najmniej **Podstawowe**. Aby uzyskać więcej informacji o profilach urządzenia, zobacz artykuł [Jak skonfigurować ustawienia ograniczeń dotyczących urządzeń w usłudze Microsoft Intune](device-restrictions-configure.md).
 
-- W klasycznej konsoli administracyjnej usługi Intune istnieją cztery ustawienia, które określają zachowanie aktualizacji oprogramowania. Te ustawienia są częścią ogólnych zasad konfiguracji systemu Windows 10 dla komputerów stacjonarnych oraz urządzeń przenośnych:
+- W konsoli administracyjnej usługi Intune istnieją cztery ustawienia określające zachowanie aktualizacji oprogramowania. Te ustawienia są częścią ogólnych zasad konfiguracji systemu Windows 10 dla komputerów stacjonarnych oraz urządzeń przenośnych:
     - **Zezwalaj na aktualizacje automatyczne**
     - **Zezwalaj na funkcje wersji wstępnej**
     - **Planowany dzień instalacji**
     - **Planowana godzina instalacji**
 
-  Konsola klasyczna zawiera również w swoim profilu konfiguracji urządzenia ograniczoną liczbę innych ustawień aktualizacji systemu Windows 10. Jeśli dowolne z tych ustawień jest skonfigurowane w klasycznej konsoli administracyjnej usługi Intune, zdecydowanie zalecamy, aby podczas migracji do witryny Azure Portal wykonać następujące czynności:
+  Portal klasyczny zawiera również w swoim profilu konfiguracji urządzenia ograniczoną liczbę innych ustawień aktualizacji systemu Windows 10. Jeśli dowolne z tych ustawień jest skonfigurowane w konsoli administracyjnej usługi Intune, zdecydowanie zalecamy, aby podczas migracji do witryny Azure Portal wykonać następujące czynności:
 
 1. Utwórz pierścienie aktualizacji systemu Windows 10 w witrynie Azure Portal, używając niezbędnych ustawień. Ustawienie **Zezwolenia na funkcje wersji wstępnej** nie jest obsługiwane w witrynie Azure Portal, ponieważ nie jest już stosowane w najnowszych wersjach systemu Windows 10. Podczas tworzenia pierścieni aktualizacji możesz skonfigurować trzy pozostałe ustawienia, jak również inne ustawienia aktualizacji systemu Windows 10.
 
   > [!NOTE]
-  > Aktualizacje systemu Windows 10 utworzone w klasycznej konsoli nie są wyświetlane w witrynie Azure Portal po migracji. Te ustawienia są jednak nadal stosowane. Ustawienie, które po migracji zostało poddane edycji w witrynie Azure Portal, zostanie usunięte z zasad.
+  > Ustawienia aktualizacji systemu Windows 10 utworzone w portalu klasycznym nie są wyświetlane w witrynie Azure Portal po migracji. Te ustawienia są jednak nadal stosowane. Ustawienie, które po migracji zostało poddane edycji w witrynie Azure Portal, zostanie usunięte z zasad.
 
-2. Ustawienia aktualizacji należy usuwać w konsoli klasycznej. Po migracji do witryny Azure Portal i dodaniu tego samego ustawienia do pierścienia aktualizacji należy usunąć ustawienie z portalu klasycznego, aby uniknąć potencjalnych konfliktów zasad. Na przykład jeśli to samo ustawienie jest skonfigurowane z różnymi wartościami, wystąpi konflikt, który pozostanie niewidoczny, ponieważ ustawienie skonfigurowane w konsoli klasycznej nie jest wyświetlane w witrynie Azure Portal.
+2. Ustawienia aktualizacji należy usuwać w portalu klasycznym. Po migracji do witryny Azure Portal i dodaniu tego samego ustawienia do pierścienia aktualizacji należy usunąć ustawienie z portalu klasycznego, aby uniknąć potencjalnych konfliktów zasad. Na przykład jeśli to samo ustawienie jest skonfigurowane z różnymi wartościami, wystąpi konflikt, który pozostanie niewidoczny, ponieważ ustawienie skonfigurowane w portalu klasycznym nie jest wyświetlane w witrynie Azure Portal.
 
 ## <a name="how-to-create-and-assign-update-rings"></a>Jak tworzyć i przypisywać pierścienie aktualizacji
 
@@ -140,7 +140,7 @@ Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkc
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Intune** wybierz opcję **Aktualizacje oprogramowania**.
 4. W bloku **Aktualizacje oprogramowania** wybierz kolejno opcje **Zarządzaj** > **Pierścienie aktualizacji systemu Windows 10**.
-5. W bloku z wyświetloną listą pierścieni aktualizacji wybierz pierścień, który chcesz wstrzymać, a następnie wybierz kolejno opcje **...**   >  **Wstrzymaj aktualizacje dotyczące jakości** > lub **Wstrzymaj aktualizacje dotyczące funkcji** w zależności od typu aktualizacji, który należy wstrzymać.
+5. W bloku z wyświetloną listą pierścieni aktualizacji wybierz pierścień, który chcesz wstrzymać, a następnie wybierz kolejno opcje **... **  >  **Wstrzymaj aktualizacje dotyczące jakości** > lub **Wstrzymaj aktualizacje dotyczące funkcji** w zależności od typu aktualizacji, który należy wstrzymać.
 
 > [!IMPORTANT]
 > Wydane polecenie wstrzymania urządzenia otrzymują przy następnym zarejestrowaniu się w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem.

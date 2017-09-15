@@ -7,7 +7,7 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
 - Subskrypcja usługi Microsoft Intune
 
 
-### <a name="configure-automatic-mdm-enrollment"></a>Konfigurowanie automatycznej rejestracji w zarządzaniu urządzeniami przenośnymi
+### <a name="configure-automatic-mdm-enrollment"></a>Konfigurowanie automatycznej rejestracji w usłudze MDM
 
 1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) i wybierz pozycję **Azure Active Directory**.
 
@@ -21,21 +21,21 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
 
   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
 
-4. Skonfiguruj **Zakres użytkownika oprogramowania MDM**. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Te urządzenia z systemem Windows 10 mogą zostać automatycznie zarejestrowane w celu zarządzania w usłudze Microsoft Intune.
+4. Skonfiguruj **zakres użytkownika oprogramowania MDM**. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Te urządzenia z systemem Windows 10 mogą zostać automatycznie zarejestrowane w celu zarządzania w usłudze Microsoft Intune.
 
-  - **Brak**
-  - **Niektóre**
-  - **Wszystkie**
+  - **Brak** — automatyczne rejestrowanie w usłudze zarządzania urządzeniami mobilnymi (MDM) jest wyłączone
+  - **Niektóre** — wybierz **grupy**, które mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
+  - **Wszystkie** — wszyscy użytkownicy mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
+
+      > [!IMPORTANT]
+      > Jeśli dla danej grupy są włączone zarówno **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**, jak i automatyczna rejestracja w zarządzaniu urządzeniami przenośnymi (**Zakres użytkownika oprogramowania MDM**), wówczas włączone jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Gdy użytkownicy w tej grupie dołączają urządzenia osobiste w miejscu pracy, dodawane jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Urządzenia nie są automatycznie rejestrowane przez rozwiązanie zarządzania urządzeniami przenośnymi.
 
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
 
 5. Użyj wartości domyślnych dla następujących adresów URL:
-    - **Adres URL Warunków użytkowania zarządzania urządzeniami przenośnymi**
-    - **Adres URL odnajdywania dla zarządzania urządzeniami przenośnymi**
-    - **Adres URL zgodności dla zarządzania urządzeniami przenośnymi**
-
-    > [!IMPORTANT]
-    > Jeśli dla danej grupy są włączone zarówno **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**, jak i automatyczna rejestracja w zarządzaniu urządzeniami przenośnymi (**Zakres użytkownika oprogramowania MDM**), wówczas włączone jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Gdy użytkownicy w tej grupie dołączają urządzenia osobiste w miejscu pracy, dodawane jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Urządzenia nie są automatycznie rejestrowane przez rozwiązanie zarządzania urządzeniami przenośnymi.
+    - **Adres URL Warunków użytkowania zarządzania urządzeniami mobilnymi**
+    - **Adres URL odnajdywania zarządzania urządzeniami przenośnymi**
+    - **Adres URL zgodności oprogramowania MDM**
 
 6. Wybierz pozycję **Zapisz**.
 

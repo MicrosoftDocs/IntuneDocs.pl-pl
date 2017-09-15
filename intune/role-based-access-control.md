@@ -1,6 +1,6 @@
 ---
 title: "Kontrola RBAC przy użyciu usługi Intune"
-titleSuffix: Intune Azure preview
+titleSuffix: Azure portal
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak kontrola dostępu oparta na rolach pozwala określić, kto może wykonywać akcje i wprowadzać zmiany."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
-ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
+ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -32,7 +32,7 @@ Kontrola RBAC ułatwia kontrolowanie, kto może wykonywać różne zadania usłu
 
 ![Przykład kontroli RBAC przy użyciu usługi Intune](./media/intune-rbac-1.PNG)
 
-Od nowego portalu usługi Intune usługa **Azure Active Directory (Azure AD)** zapewnia dwie role katalogu, których można użyć z usługą Intune. Tym rolom nadaje się pełne uprawnienia do wykonywania wszystkich działań w usłudze Intune:
+Od momentu udostępnienia nowej witryny Azure Portal usługa **Azure Active Directory (Azure AD)** zapewnia dwie role katalogu, których można użyć z usługą Intune. Tym rolom nadaje się pełne uprawnienia do wykonywania wszystkich działań w usłudze Intune:
 
 - **Administrator globalny:** użytkownicy posiadający tę rolę mają dostęp do wszystkich funkcji administracyjnych w usłudze Azure AD oraz usług, które federują do usługi Azure AD, np. Exchange Online, SharePoint Online oraz Skype dla firm Online. Osoba, która zarejestruje się dla dzierżawcy usługi Azure AD staje się administratorem globalnym. Tylko administratorzy globalni mogą przypisywać pozostałe role administratorów usługi Azure AD. Dana organizacja może mieć więcej niż jednego administratora globalnego. Administratorzy globalni mogą resetować hasła dla wszystkich użytkowników oraz wszystkich pozostałych administratorów.
 
@@ -46,12 +46,12 @@ Od nowego portalu usługi Intune usługa **Azure Active Directory (Azure AD)** z
     > [!TIP]
     > Usługa Intune wyświetla również trzy rozszerzenia usługi Azure AD: **Użytkownicy**, **Grupy** oraz **Dostęp warunkowy**, które są kontrolowane za pomocą usługi Azure AD RBAC. Ponadto **Administrator konta użytkownika** wykonuje tylko działania użytkownika/grupy usługi AAD i nie ma pełnych uprawnień do wykonywania wszystkich działań w usłudze Intune. Aby uzyskać więcej szczegółowych informacji, zobacz temat [RBAC with Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) (Kontrola RBAC przy użyciu usługi Azure AD).
 
-## <a name="roles-created-in-the-intune-classic-console"></a>Role utworzone w klasycznej konsoli usługi Intune
+## <a name="roles-created-in-the-intune-classic-portal"></a>Role utworzone w portalu klasycznym usługi Intune
 
-Tylko użytkownicy usługi Intune **Administratorzy usługi** z pełnymi uprawnieniami są migrowani z klasycznej konsoli usługi Intune do usługi Intune na platformie Azure. Musisz ponownie przypisać użytkowników usługi Intune **Administratorów usługi** z dostępem „Tylko do odczytu” lub „Pomoc techniczna” do ról usługi Intune w witrynie Azure Portal i usunąć ich z portalu klasycznego.
+Tylko użytkownicy usługi Intune **Administratorzy usługi** z pełnymi uprawnieniami są migrowani z portalu klasycznego usługi Intune do usługi Intune w witrynie Azure Portal. Musisz ponownie przypisać użytkowników usługi Intune **Administratorów usługi** z dostępem „Tylko do odczytu” lub „Pomoc techniczna” do ról usługi Intune w witrynie Azure Portal i usunąć ich z portalu klasycznego.
 
 > [!IMPORTANT]
-> Może być konieczne zachowanie dostępu Administratora usługi Intune w konsoli klasycznej, jeśli administratorzy będą nadal potrzebować dostępu do zarządzania komputerami przy użyciu usługi Intune.
+> Może być konieczne zachowanie dostępu Administratora usługi Intune w portalu klasycznym, jeśli administratorzy będą nadal potrzebować dostępu do zarządzania komputerami przy użyciu usługi Intune.
 
 ## <a name="built-in-roles"></a>Wbudowane role
 

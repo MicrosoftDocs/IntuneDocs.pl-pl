@@ -1,6 +1,6 @@
 ---
 title: Uzyskiwanie certyfikatu wypychania MDM firmy Apple
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Opis czynności niezbędnych w celu uzyskania certyfikatu wypychania MDM firmy Apple przeznaczonego do zarządzania urządzeniami z systemem iOS za pomocą usługi Intune."
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a100b436ecf257c1e3886c23f15fa967fb877b7c
-ms.sourcegitcommit: 10e3ab2aeb79a1fb2243bef2748ccc003fdd4cc7
+ms.openlocfilehash: 804ea185cf48b6781174b888436211a6d70823ca
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 09/02/2017
 Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi typu iPad, iPhone oraz komputerami Mac i zapewnia użytkownikom dostęp do poczty e-mail oraz aplikacji firmy. Aby zarządzać urządzeniami z systemem iOS i komputerami Mac, wymagany jest certyfikat usługi wypychania MDM. Po dodaniu certyfikatu do usługi Intune użytkownicy mogą zainstalować aplikację Portal firmy, aby zarejestrować swoje urządzenia. Możesz również skonfigurować zarządzanie urządzeniami iOS należącymi do firmy za pomocą programu rejestracji urządzeń firmy Apple lub zarejestrować urządzenia, na przykład przy użyciu programu Apple Configurator. Aby uzyskać więcej informacji o opcjach rejestracji, zobacz [Wybieranie sposobu rejestracji urządzenia z systemem iOS](enrollment-method-choose-ios.md).
 
 ## <a name="steps-to-get-your-certificate"></a>Procedura uzyskiwania certyfikatu
-W portalu usługi Intune wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja Apple** **Certyfikat wypychania Apple MDM**, a następnie wykonaj poniższe kroki w witrynie Azure Portal.
+W witrynie Azure Portal wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja Apple** **Certyfikat wypychania Apple MDM**, a następnie wykonaj poniższe kroki w witrynie Azure Portal.
 
 **Krok 1. Pobierz żądanie podpisania certyfikatu usługi Intune wymagane do utworzenia certyfikatu wypychania MDM firmy Apple.**<br>
 Wybierz pozycję **Pobierz żądanie CSR**, aby pobrać plik żądania i zapisać go lokalnie. Ten plik jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates.
@@ -55,11 +55,11 @@ Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworze
 > [!NOTE]
 > Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworzenia. Najlepszym rozwiązaniem jest użycie firmowego identyfikatora firmy Apple na potrzeby zadań zarządzania. Nigdy nie należy używać osobistego identyfikatora firmy Apple.
 
-1. W portalu usługi Intune wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Certyfikat wypychania Apple MDM**.
+1. W witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Certyfikat wypychania Apple MDM**.
 2. Wybierz pozycję **Pobierz żądanie CSR**, aby pobrać plik żądania i zapisać go lokalnie. Ten plik jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates.
 3. Znajdź certyfikat, który chcesz odnowić, i wybierz opcję **Odnów**.
 4. Na ekranie **Odnawianie certyfikatu wypychania** wpisz notatki, aby w przyszłości łatwiej zidentyfikować certyfikat, wybierz pozycję **Wybierz plik**, aby wskazać nowo pobrany plik żądania, a następnie wybierz opcję **Przekaż**.
 5. Na ekranie **Potwierdzenie** wybierz pozycję **Pobierz** i zapisz plik pem na urządzeniu lokalnym.
-6. W portalu usługi Intune na platformie Azure wybierz ikonę przeglądania **Certyfikat wypychania Apple MDM**, wybierz plik pem pobrany od firmy Apple, a następnie wybierz opcję **Przekaż**.
+6. W witrynie Azure Portal wybierz ikonę przeglądania **Certyfikat wypychania Apple MDM**, wybierz plik .pem pobrany od firmy Apple, a następnie wybierz opcję **Przekaż**.
 
 Twój certyfikat wypychania MDM firmy Apple będzie mieć stan **Aktywny** i 365 dni do wygaśnięcia.

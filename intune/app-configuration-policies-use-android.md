@@ -1,6 +1,6 @@
 ---
 title: "Korzystanie z zasad konfiguracji aplikacji usługi Intune w odniesieniu do programu Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji Android for Work po jej uruchomieniu."
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7486a62ed11b83f00414a74b2d816f6048826f73
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 4b73202a1a68bd2dd3dcbfa86c21cb09ae00056c
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-android-for-work"></a>Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune w odniesieniu do programu Android for Work
 
@@ -27,16 +27,16 @@ ms.lasthandoff: 08/15/2017
 
 Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie wartości ustawień, które mogą być dostępne, jeśli użytkownicy uruchamiają aplikację Android for Work. Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-Zasady konfiguracji aplikacji pozwalają na wstępne skonfigurowanie dostępnych ustawień aplikacji przed jej uruchomieniem przez użytkowników. Niektóre aplikacje dla systemu Android obsługują opcje konfiguracji zarządzanych, które można skonfigurować w konsoli usługi Intune z użyciem [projektanta konfiguracji](#use-configuration-designer). Nie jest możliwa konfiguracja niektórych ustawień konfiguracji aplikacji (np. typów pakietu) przy użyciu projektanta konfiguracji.  W przypadku tych wartości niezbędne jest użycie [edytora JSON](#use-json-editor).   Ustawienia są dostarczane do aplikacji automatycznie po zainstalowaniu aplikacji.
+Zasady konfiguracji aplikacji pozwalają na wstępne skonfigurowanie dostępnych ustawień aplikacji przed jej uruchomieniem przez użytkowników. Niektóre aplikacje dla systemu Android obsługują opcje konfiguracji zarządzanych, które można skonfigurować w witrynie Azure Portal z użyciem [projektanta konfiguracji](#use-configuration-designer). Nie jest możliwa konfiguracja niektórych ustawień konfiguracji aplikacji (np. typów pakietu) przy użyciu projektanta konfiguracji.  W przypadku tych wartości niezbędne jest użycie [edytora JSON](#use-json-editor).   Ustawienia są dostarczane do aplikacji automatycznie po zainstalowaniu aplikacji.
 
 Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń. W zamian należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
 ## <a name="use-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
-1. W portalu usługi Intune wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
+1. W witrynie Azure Portal wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
 2. Ustaw następujące szczegóły:
-    - **Nazwa** — nazwa profilu, która będzie wyświetlana w konsoli usługi Intune
-    - **Opis** — opis profilu, który będzie wyświetlany w konsoli usługi Intune
+    - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
+    - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Platforma** — wybierz opcję **Android**
     - **Typ rejestracji urządzenia** -  wstępnie wybrana wartość to **Zarejestrowane w usłudze Intune**.
 3. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji.  Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune
@@ -51,10 +51,10 @@ Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń.
 
 ## <a name="use-json-editor"></a>Korzystanie z edytora JSON
 
-1. W portalu usługi Intune wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
+1. W witrynie Azure Portal wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
 2. Ustaw następujące szczegóły:
-    - **Nazwa** — nazwa profilu, która będzie wyświetlana w konsoli usługi Intune
-    - **Opis** — opis profilu, który będzie wyświetlany w konsoli usługi Intune
+    - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
+    - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Platforma** — wybierz opcję **Android**
     - **Typ rejestracji urządzenia** -  wstępnie wybrana wartość to **Zarejestrowane w usłudze Intune**.
 3. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji.  Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
@@ -73,10 +73,10 @@ Po uruchomieniu przypisanej aplikacji na urządzeniu zostaną uruchomione ustawi
 
 Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika. Na przykład jeśli aplikacja używa mikrofonu urządzenia, użytkownik końcowy otrzyma monit o przyznanie aplikacji uprawnienia do użycia mikrofonu.
 
-1. W portalu usługi Intune wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
+1. W witrynie Azure Portal wybierz pozycję **Aplikacje mobilne**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji aplikacji**, a następnie kliknij przycisk **Dodaj**.
 2. Ustaw następujące szczegóły:
-    - **Nazwa** — nazwa profilu, która będzie wyświetlana w konsoli usługi Intune
-    - **Opis** — opis profilu, który będzie wyświetlany w konsoli usługi Intune
+    - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
+    - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Platforma** — wybierz opcję **Android**
     - **Typ rejestracji urządzenia** -  wstępnie wybrana wartość to **Zarejestrowane w usłudze Intune**.
 3. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji.  Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.

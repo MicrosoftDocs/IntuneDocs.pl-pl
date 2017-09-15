@@ -1,6 +1,6 @@
 ---
 title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Ograniczanie rejestrowania według platformy i ustawianie limitu rejestracji urządzeń w usłudze Intune. \""
 keywords: 
 author: nathbarn
@@ -15,17 +15,17 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 47dc35e5b50670027a85f395f674345b934d377b
-ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
+ms.openlocfilehash: 06c0c58992a2119aff7fd5be54ae90be886d2a53
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako administrator usługi Intune możesz określić, które urządzenia mogą być rejestrowane w celu zarządzania za pomocą usługi Intune. Użyj portalu usługi Intune, aby ustawić następujące ograniczenia dotyczące rejestrowania urządzeń:
+Jako administrator usługi Intune możesz określić, które urządzenia mogą być rejestrowane w celu zarządzania za pomocą usługi Intune. Użyj witryny Azure Portal, aby ustawić następujące ograniczenia dotyczące rejestrowania urządzeń:
 
 - Maksymalna liczba zarejestrowanych urządzeń
 - Platformy urządzeń, które można zarejestrować:
@@ -68,7 +68,7 @@ Domyślnie ograniczenia rejestrowania mają zastosowanie do wszystkich użytkown
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
-4. W portalu usługi Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Ograniczenia rejestracji**.
+4. W witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Ograniczenia rejestracji**.
 5. Wybierz pozycję **Ograniczenia rejestracji** > **Ograniczenia limitu urządzeń**.
 6. W obszarze **Wszyscy użytkownicy** wybierz pozycję **Limit urządzeń**. Określ maksymalną liczbę zarejestrowanych urządzeń na użytkownika.  
 ![Zrzut ekranu przedstawiający blok ograniczeń dotyczących limitu liczby urządzeń z ograniczeniami limitu liczby urządzeń.](./media/device-restrictions-limit.png)
