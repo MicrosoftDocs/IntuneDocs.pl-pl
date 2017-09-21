@@ -1,6 +1,6 @@
 ---
 title: "Zarządzanie urządzeniami w usłudze Intune"
-titlesuffix: Azure portal
+titleSuffix: Intune on Azure
 description: "Dowiedz się, jak wyświetlać urządzenia zarządzane w usłudze Intune i wykonywać na nich różne operacje."
 keywords: 
 author: nathbarn
@@ -14,23 +14,33 @@ ms.technology:
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ca40eee8a53fa3e8b2610ce414f0037180d4beaf
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 0686b3ece3a929cb06a29f4e58046872b70ec926
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Jako administrator IT musisz się upewnić, że zarządzane urządzenia udostępniają zasoby, których użytkownicy końcowi potrzebują do wykonania swojej pracy, a jednocześnie chronić te dane przed ryzykiem.
+
 Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożliwia wykonywanie zadań zdalnych na tych urządzeniach. Aby uzyskać dostęp do obciążenia:
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. Możesz wyświetlać informacje na temat urządzeń i zdalnie wykonywać na urządzeniach wymienione akcje.
+3. W obszarze **Intune** wybierz pozycję **Urządzenia**.
+4. Możesz wyświetlać informacje na temat urządzeń i zdalnie wykonywać na urządzeniach następujące akcje:
+    - **Przegląd** — migawka zarejestrowanych urządzeń, którymi możesz zarządzać.
+    - **Wszystkie urządzenia** — lista zarejestrowanych urządzeń, którymi zarządzasz. Wybierz pozycję **Filtr** lub **Kolumny**, aby zawęzić wyświetlane informacje. Wybierz urządzenie, aby [wyświetlić spis urządzeń](device-inventory.md):
+    - **Urządzenia w usłudze Azure AD** — lista urządzeń zarejestrowanych w usłudze Azure Active Directory (AD) lub dołączonych do tej usługi. Dowiedz się więcej o [zarządzaniu urządzeniami w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+    - **Akcje urządzenia** — historia zdalnych akcji wykonywanych na urządzeniach, obejmująca informacje o każdej akcji, jej stanie, osobie inicjującej i czasie akcji.
+
+    ![Monitorowanie akcji urządzenia](./media/monitor-device-actions.png)
+
+    - **TeamViewer** — usługa TeamViewer umożliwia użytkownikom urządzeń z systemem Android zarządzanych przez usługę Intune uzyskiwanie pomocy zdalnej od administratora IT. Dowiedz się więcej o programie [TeamViewer](device-profile-android-teamviewer.md).
 
 ## <a name="available-device-actions"></a>Dostępne akcje urządzenia
 Dostępne akcje zależą od platformy urządzenia i jego konfiguracji.
@@ -54,4 +64,3 @@ Dostępne akcje zależą od platformy urządzenia i jego konfiguracji.
 ## <a name="next-steps"></a>Następne kroki
 
 - Wybierz pozycję **Akcje urządzenia**, aby zobaczyć stan akcji podjętych na zarządzanych urządzeniach.
-![Monitoruj akcje urządzenia](./media/monitor-device-actions.png)
