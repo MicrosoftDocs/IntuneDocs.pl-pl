@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/13/2017
+ms.date: 09/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e12f8d31abc4e067a6339e93cc21680921ce88e4
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 256aa8f52bd25ddcb860aed25b22f1549053d2b1
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Rejestrowanie urządzenia z systemem Android w usłudze Intune
 
@@ -54,14 +54,14 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
 6.  Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **ROZPOCZNIJ**.
 
-    ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-4a-comp-access-setup.png)
+    ![Ekran konfigurowania dostępu do zasobów firmy](/intune/media/android_cp_enroll_02_post_1709.png)
 
     > [!NOTE]
     > Żółte trójkąty nie oznaczają wystąpienia błędu. Te ikony wskazują, że do zakończenia procesu rejestracji pozostało do wykonania kilka czynności.
 
-7. Na ekranie **Dlaczego warto zarejestrować urządzenie?** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
+7. Na ekranie **korzyści z zarządzania urządzeniami** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
 
-    ![Ekran „Dlaczego warto zarejestrować urządzenie?”](./media/and-enroll-4b-why-enroll.png)
+    ![Ekran korzyści z zarządzania urządzeniami](/intune/media/android_cp_enroll_02_post_1709.png)
 
 8.  Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
 
@@ -114,13 +114,13 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
 14. Po wyświetleniu ekranu **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **KONTYNUUJ**. Jeśli komunikat informuje o niezgodności urządzenia, wykonaj instrukcje rozwiązania problemu, a następnie naciśnij pozycję **KONTYNUUJ**.
 
-    ![Urządzenie nie jest zgodne, ale jest zarejestrowane](./media/and-enroll-9a-noncompliant-enrolled-device.png)
+    ![Urządzenie nie jest zgodne, ale jest zarejestrowane](/intune/media/android_cp_enroll_05_post_1709.png)
 
-    ![Wyświetlane są problemy ze zgodnością urządzenia wymagające rozwiązania](./media/and-enroll-9b-resolve-compliance-issues.png)
+    ![Wyświetlane są problemy ze zgodnością urządzenia wymagające rozwiązania](/intune/media/android_cp_enroll_03_post_1709.png)
 
     Można dowiedzieć się więcej o problemach, naciskając je.
 
-    ![Rozwinięte informacje o problemach ze zgodnością urządzeń](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
+    ![Rozwinięte informacje o problemach ze zgodnością urządzeń](/intune/media/android_cp_enroll_04_post_1709.png)
 
     ![Ekran konfigurowania dostępu do zasobów firmy](./media/and-enroll-9d-comp-access-setup.png)  
 

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.openlocfilehash: 6e3a5e39cf3ee38820b1ff79eb54c019dbb68d29
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: f1a5c8a15007a38942fe543e6c1062bf957a481c
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 
@@ -95,6 +95,17 @@ Podczas drugiego logowania użytkownika do aplikacji Portal firmy po odmowie dos
 ### <a name="how-to-explain-this-to-your-users"></a>Jak wyjaśnić to użytkownikom
 Odeślij użytkowników do sekcji [Wysyłanie dzienników do administratora IT pocztą e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android). Możesz także odesłać ich do sekcji [Wysyłanie dzienników do administratora IT za pomocą kabla](/intune-user-help/send-logs-to-your-it-admin-by-cable-android), aby umożliwić im porównanie obu metod.
 
+## <a name="your-company-support-needs-to-give-you-access-to-company-resources"></a>Dział pomocy technicznej firmy musi udzielić Ci dostępu do zasobów firmy
+
+### <a name="where-it-appears"></a>Gdzie jest dostępny
+Jeśli aplikacja Portal firmy nie została dodana do listy **Dozwolone aplikacje** lub **Aplikacje wykluczone**, a użytkownik spróbuje się zalogować, logowanie nie powiedzie się. Zostanie wyświetlony następujący komunikat:
+
+> **Dział pomocy technicznej firmy musi udzielić Ci dostępu do zasobów firmy**  
+> Firma używa zasad usługi Windows Information Protection do ochrony Twojego urządzenia. Dział pomocy technicznej firmy musi się upewnić, że aplikacja Portal firmy ma do nich dostęp.
+
+### <a name="what-it-means"></a>Znaczenie
+
+Dodaj listę **Dozwolone aplikacje** lub **Aplikacje wykluczone** aplikacji Portal firmy w zasadach ochrony aplikacji usługi Windows Information Protection (WIP). Aby uzyskać więcej informacji, zobacz [Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune](/intune-classic/deploy-use/create-windows-information-protection-policy-with-intune).
 
 ### <a name="see-also"></a>Zobacz także
 [Co powinni wiedzieć użytkownicy końcowi na temat korzystania z usługi Intune](end-user-educate.md)

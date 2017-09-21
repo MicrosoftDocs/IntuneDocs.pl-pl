@@ -15,19 +15,19 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b874523024b58098205d94da47c07ee432dfc
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 41b358f48412585ec40e369225b4263012bfd2f8
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, którą próbujesz znaleźć, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
 ## <a name="quick-reference-guide"></a>Krótki przewodnik
 |Funkcja |Ścieżka w portalu klasycznym|Ścieżka w usłudze Intune w witrynie Azure Portal|
 |------------|---------------|---------------|
-|Device Enrollment Program (DEP) |Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program|[Rejestrowanie urządzenia > Rejestracja Apple > Token programu Enrollment Program](#where-did-apple-dep-go) |
-|Device Enrollment Program (DEP)| Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program |[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Enrollment Program](#where-did-apple-dep-go) |
+|Program Device Enrollment Program (DEP) (tylko system iOS)|Administracja > Zarządzanie urządzeniami przenośnymi > iOS > Device Enrollment Program|[Rejestrowanie urządzenia > Rejestracja Apple > Token programu Enrollment Program](#where-did-apple-dep-go) |
+|Program Device Enrollment Program (DEP) (tylko system iOS)| Administracja > Zarządzanie urządzeniami przenośnymi > iOS i Mac OS X > Device Enrollment Program |[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Enrollment Program](#where-did-apple-dep-go) |
 |Reguły rejestracji |Administracja > Zarządzanie urządzeniami przenośnymi > Reguły rejestracji|[Rejestrowanie urządzenia > Ograniczenia rejestracji](#where-did-enrollment-rules-go) |
 |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia> Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS|[Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne programu Enrollment Program](#where-did-corporate-pre-enrolled-devices-go) |
 |Grupy według numeru seryjnego systemu iOS |Grupy > Wszystkie urządzenia> Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru seryjnego systemu iOS| [Rejestrowanie urządzenia > Rejestracja Apple > Numery seryjne AC](#where-did-corporate-pre-enrolled-devices-go)|

@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/21/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b3ecc9af91d1a78f84dd6d4b8f47f0bf3e8c742
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 787fbdd470b4e1fbb4cb3e22ba4065e52d4c63f8
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
@@ -38,17 +38,8 @@ Ponadto rejestracji w programie Apple School Manager nie można używać wraz z 
 - Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Urządzenia zakupione w programie [Apple School Management](http://school.apple.com)
 
-**Kroki rejestracji programu Apple School Manager**
-1. [Pobieranie tokenu programu Apple School Manager i przypisywanie urządzeń](#get-the-apple-token-and-assign-devices)
-2. [Tworzenie profilu rejestracji](#create-an-apple-enrollment-profile)
-3. [Łączenie się z usługą School Data Sync](#connect-school-data-sync) (opcjonalnie)
-4. [Synchronizowanie urządzeń zarządzanych w programie Apple School Manager](#sync-managed-devices)
-5. [Przypisywanie profilu programu Apple School Manager do urządzeń](#assign-a-profile-to-devices)
-6. [Przekazywanie urządzeń użytkownikom](#distribute-devices-to-users)
-
 >[!NOTE]
 >Uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestracji urządzeń korzystających z programu Apple School Manager, gdy jest używana koligacja użytkownika. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami. Po zarejestrowaniu usługa MFA działa zgodnie z oczekiwaniami na tych urządzeniach. Na urządzeniach nie mogą być wyświetlane monity dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania. Ponadto dla użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji. Muszą oni zresetować hasło za pomocą innego urządzenia.
-
 
 ## <a name="get-the-apple-token-and-assign-devices"></a>Pobieranie tokenu firmy Apple i przypisywanie urządzeń
 
@@ -104,7 +95,8 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń 
     - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
 
      - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia.
-   - **Udostępnione urządzenie iPad** — wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu **Nadzorowane**. Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md).
+   - **Udostępnione urządzenie iPad** — wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu **Nadzorowane**. Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+
    >[!NOTE]
    >Jeśli opcja **Koligacja użytkownika** jest ustawiona na wartość **Z koligacją użytkownika** lub tryb **Nadzorowane** jest ustawiony na wartość **Wyłączone**, tryb Udostępnione urządzenie iPad zostanie wyłączony dla profilu rejestracji.
 
