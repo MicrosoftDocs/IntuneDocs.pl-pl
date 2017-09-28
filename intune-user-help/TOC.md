@@ -27,7 +27,7 @@
 ### [Rozwiązywanie typowych problemów z systemem Android](troubleshoot-your-device-android.md)
 #### [Sprawdzanie zgodności urządzeń](check-compliance-on-your-device-android.md)
 
-#### [Korzystanie z dzienników w celu rozwiązywania problemów]
+#### Korzystanie z dzienników w celu rozwiązywania problemów
 ##### [Włączanie pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Wysyłanie dzienników pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Wysyłanie dzienników przy użyciu kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
