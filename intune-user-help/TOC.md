@@ -46,8 +46,15 @@
 
 ### Usługa Mobile Threat Defense
 #### [Instalowanie aplikacji usługi Mobile Threat Defense](you-are-prompted-to-install-mtd-android.md)
+##### [Instalowanie aplikacji Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+##### [Instalowanie aplikacji Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+##### [Instalowanie aplikacji SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+##### [Instalowanie aplikacji Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
 #### [Rozwiązywanie problemu zagrożenia](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-
+##### [Korzystanie z aplikacji Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
+##### [Korzystanie z aplikacji Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+##### [Korzystanie z aplikacji SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
+##### [Korzystanie z aplikacji Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](using-your-iOS-or-macOS-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem iOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
@@ -77,7 +84,15 @@
 
 ### Usługa Mobile Threat Defense
 #### [Instalowanie aplikacji usługi Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)
+##### [Instalowanie aplikacji Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+##### [Instalowanie aplikacji Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+##### [Instalowanie aplikacji SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+##### [Instalowanie aplikacji Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 #### [Rozwiązywanie problemu zagrożenia](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+##### [Korzystanie z aplikacji Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
+##### [Korzystanie z aplikacji Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
+##### [Korzystanie z aplikacji SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
+##### [Korzystanie z aplikacji Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
 
 ## [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
