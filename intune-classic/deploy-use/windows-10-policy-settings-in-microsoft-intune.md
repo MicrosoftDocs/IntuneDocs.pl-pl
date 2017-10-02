@@ -2,8 +2,8 @@
 title: Ustawienia zasad systemu Windows 10
 description: "Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 09/05/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1f19b7e9d57350f90baca96562a99b2fde66f91a
-ms.sourcegitcommit: 00352501833818a08479758ba1c9efdf7223e264
+ms.openlocfilehash: 3264bd25f3a30e12930cc6d89c18baea558ffccc
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
@@ -28,7 +28,7 @@ Ten temat zawiera informacje ułatwiające zrozumienie ustawień zasad usługi I
 
 Można wybrać spośród dwóch typów zasad:
 
-- **Zasady niestandardowe**: **zasady niestandardowe**  usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), których można użyć do sterowania funkcjami na urządzeniach. System Windows 10 zapewnia dostęp do wielu ustawień dostawcy usług konfiguracji, np. [Dostawca usługi konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+- **Zasady niestandardowe**: **zasady niestandardowe ** usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwiają wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), których można użyć do sterowania funkcjami na urządzeniach. System Windows 10 zapewnia dostęp do wielu ustawień dostawcy usług konfiguracji, np. [Dostawca usługi konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 - **Ogólne zasady konfiguracji**: użyj tego typu zasad, aby wybrać ustawienia z wbudowanej listy dostarczonej z usługą Microsoft Intune.
 
 ## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych

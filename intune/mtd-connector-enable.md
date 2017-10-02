@@ -15,16 +15,16 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ed7ac5467fe3a37a133aac61a9ccffe2e6119e6
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: d818581ca74e64bf27c968b39969afd889b6fbda
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="enable-mobile-threat-defense-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
 > [!NOTE] 
-> Niniejszy temat dotyczy wszystkich partnerów narzędzi Mobile Threat Defense.
+> Niniejszy temat dotyczy wszystkich partnerów usługi Mobile Threat Defense.
 
 Aby włączyć połączenie z usługą Mobile Threat Defense (MTD) w usłudze Intune, należy wcześniej skonfigurować łącznik usługi Intune w konsoli rozwiązania MTD.
 
@@ -65,7 +65,3 @@ Zgodnie z wymaganiami danej organizacji można określić, które opcje przełą
 
 > [!TIP]
 > W bloku usługi Mobile Threat Defense widać **Stan połączenia** i czas **ostatniej synchronizacji** między usługą Intune a partnerem MTD.
-
-## <a name="next-steps"></a>Następne kroki
-
-[Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense w usłudze Intune](mtd-device-compliance-policy-create.md)

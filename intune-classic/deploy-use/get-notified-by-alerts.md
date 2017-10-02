@@ -14,11 +14,11 @@ ms.assetid: 396ea714 0433 4bd5 a934 8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: 9a84cc5b294a1a330aab978de5ef0fd8cfa4c259
-ms.sourcegitcommit: 30b51c625311398b371c0326d41216f55315f627
+ms.openlocfilehash: 534af980ff66eaa54273aaabf14609b1e221c322
+ms.sourcegitcommit: 63d862f142e2f40a1eedb7d4cbdff4fbf6dd7296
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/22/2017
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Uzyskiwanie powiadomień dzięki alertom w usłudze Microsoft Intune
 
@@ -57,9 +57,11 @@ W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.c
 |---|------|
 |**Typy alertów**|Wybierz typ alertu, który chcesz skonfigurować, a następnie wykonaj jedną z następujących czynności:<br /><br />Wybierz pozycję **Konfiguruj**. W oknie dialogowym **Konfigurowanie typu alertu** skonfiguruj odpowiednie ustawienia, a następnie wybierz przycisk **OK**.<br /><br />**Włącz** lub **wyłącz** alert.<br /><br />Rozwiń węzeł **Typy alertów** i wybierz kategorię, aby wyświetlić tylko typy alertów z tej kategorii.|
 |**Adresaci**|Wybierz pozycję **Dodaj**, aby dodać nowy adres e-mail, na który będą wysyłane skonfigurowane powiadomienia e-mail.<br /><br />Możesz również **edytować** lub **usuwać** istniejących odbiorców.<br /><br />Aby otrzymywać powiadomienia, musisz również dodać ten adres e-mail jako adresata w obszarze **Reguły powiadomień**.|
-|**Reguły powiadomień**|Służą do konfigurowania reguł określających, do kogo będą wysyłane alerty w wiadomościach e-mail. Można:<br /><br />**Wybrać istniejącą regułę**   Wybierz regułę, a następnie wybierz pozycję **Wybierz adresatów**. Następnie możesz wybrać wszystkich adresatów, którzy otrzymają wiadomość e-mail po wygenerowaniu alertu spełniającego daną regułę.<br /><br />**Utworzyć nową regułę**   Wprowadź nazwę reguły, wybierz kategorie i ważność alertów stosowanych w przypadku zasad, wybierz grupy urządzeń, których dotyczy reguła, a następnie wybierz użytkowników, którzy otrzymają wiadomości e-mail po wygenerowaniu alertu.<br /><br />Możesz również **włączyć**, **wyłączyć**, **edytować** lub **usunąć** istniejącą regułę.|
+|**Reguły powiadomień**|Służą do konfigurowania reguł określających, do kogo będą wysyłane alerty w wiadomościach e-mail. Można:<br /><br />**Wybrać istniejącą regułę**   Wybierz regułę, a następnie wybierz pozycję **Wybierz adresatów**. Następnie możesz wybrać wszystkich adresatów, którzy otrzymają wiadomość e-mail po wygenerowaniu alertu spełniającego daną regułę.<br /><br />**Utworzyć nową regułę**   Wprowadź nazwę reguły, wybierz kategorie i ważność alertów stosowanych w przypadku zasad, wybierz grupy urządzeń, których dotyczy reguła, a następnie wybierz użytkowników, którzy otrzymają wiadomości e-mail po wygenerowaniu alertu.<br /><br />Możesz również **włączyć**, **wyłączyć**, **edytować**lub **usunąć** istniejącą regułę.|
 
 ## <a name="working-with-alerts"></a>Praca z alertami
+
+Aby wyświetlić alerty w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com), wybierz pozycję **Alerty**, a następnie typ alertu do wyświetlenia.
 
 Użyj poniższych opcji pomagających w pracy z alertami z konsoli administratora usługi Intune.
 
@@ -70,11 +72,12 @@ Użyj poniższych opcji pomagających w pracy z alertami z konsoli administrator
 |**Zamykanie alertu**|Na liście alertów wybierz alert do zamknięcia, a następnie wybierz pozycję **Zamknij alert**.<br /><br />Zamknięte alerty zostaną trwale usunięte po 90 dniach.|
 |**Ponowne uaktywnianie zamkniętego alertu**|Na liście alertów z listy rozwijanej **Filtry** wybierz pozycję **Zamknięte**.<br /><br />Na liście zamkniętych alertów wybierz alert, który chcesz ponownie uaktywnić, a następnie wybierz pozycję **Uaktywnij ponownie alert**.|
 
-Alerty usługi Intune pozostają aktywne do czasu, aż:
+Alerty usługi Intune pozostają aktywne przez 30 dni lub do czasu, aż:
 
-- Problem, który spowodował wygenerowanie alertu, zostanie rozwiązany
+- Problem, który spowodował wygenerowanie alertu, zostanie rozwiązany.
 - Alert zostanie ręcznie zamknięty.
-- Upłynie 45 dni od czasu wygenerowania alertu
+
+Zamknięte alerty można ponownie aktywować w ciągu 30 dni od zamknięcia. Po 30 dniach zamknięte i nieaktywne alerty są usuwane z usługi Intune.
 
 > [!TIP]
 > Jeśli ten sam alert jest generowany przez urządzenia z różnymi systemami operacyjnymi, na liście alertów może być wyświetlanych wiele wersji tego samego alertu.

@@ -81,12 +81,16 @@
           href: planning-guide-resources.md
     - name: Przewodniki po wdrażaniu scenariuszy
       items:
-        - name: '„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)'
-          href: byod-enable.md
         - name: Ochrona usługi Exchange Online
           href: exchange-online-protect.md
         - name: Zmniejszenie kosztów pomocy technicznej
           href: password-reset.md
+        - name: Zapobieganie dostępowi bez autoryzacji
+          href: data-outside-protect.md
+        - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
+          href: data-leak-prevention.md
+        - name: '„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)'
+          href: byod-enable.md
     - name: Przewodnik migracji
       href: migration-guide.md
       items:
@@ -115,7 +119,7 @@
     - name: Konfigurowanie usługi Intune
       href: setup-steps.md
       items:
-        - name: Wymagania wstępne
+        - name: Obsługiwane konfiguracje
           href: supported-devices-browsers.md
           items:
             - name: Użycie przepustowości sieci
@@ -434,12 +438,19 @@
               items:
                 - name: Integracja aplikacji Check Point i usługi Intune
                   href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-            - name: Dodawanie aplikacji MTD
-              href: mtd-apps-ios-app-configuration-policy-add-assign.md
-            - name: Włączanie usługi MTD w usłudze Intune
-              href: mtd-connector-enable.md
-            - name: Tworzenie zasad zgodności urządzenia usługi MTD
-              href: mtd-device-compliance-policy-create.md
+            - name: Konfigurowanie rozwiązania Zimperium
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Integracja rozwiązania Zimperium i usługi Intune
+                  href: zimperium-mtd-connector-integration.md
+            - name: Konfigurowanie usługi Intune na potrzeby usługi MTD
+              items:
+                - name: Dodawanie aplikacji MTD
+                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
+                - name: Tworzenie zasad zgodności urządzenia usługi MTD
+                  href: mtd-device-compliance-policy-create.md
+                - name: Włączanie usługi MTD w usłudze Intune
+                  href: mtd-connector-enable.md
         - name: Kontrola dostępu do sieci
           href: network-access-control-integrate.md
         - name: Konfigurowanie funkcji Windows Hello
@@ -541,7 +552,7 @@
           href: custom-settings-ios.md
         - name: macOS
           href: custom-settings-macos.md
-        - name: "Windows\_Phone\_8,1"
+        - name: "Windows\_Phone\_8.1"
           href: custom-settings-windows-phone-8-1.md
         - name: Windows 10
           href: custom-settings-windows-10.md

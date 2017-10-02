@@ -3,8 +3,8 @@ title: "Ustawienia udostępnionych urządzeń usługi Intune dla aplikacji Class
 titlesuffix: Azure portal
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień aplikacji Classroom na urządzeniach z systemem iOS."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 06/28/2017
 ms.topic: article
@@ -15,17 +15,18 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 860efd0fb312aab13e543b9a2b4114f408e7137e
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 9b24ee84d339b728addd753cb309b4d8572e5582
+ms.sourcegitcommit: e5501cdf08d3e79bc51dc726697606be02110e57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Jak skonfigurować ustawienia rozwiązań dla edukacji usługi Intune dla udostępnianych urządzeń iPad
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Wprowadzenie: Usługa Intune obsługuje aplikację Classroom dla systemu iOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Oprócz aplikacji Classroom firma Apple obsługuje możliwość skonfigurowania urządzeń iPad uczniów w taki sposób, że wielu uczniów może współdzielić jedno urządzenie. W tym dokumencie opisano sposób osiągnięcia tego celu przy użyciu usługi Intune.
+Usługa Intune obsługuje aplikację Classroom dla systemu iOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Oprócz aplikacji Classroom firma Apple obsługuje możliwość skonfigurowania urządzeń iPad uczniów w taki sposób, że wielu uczniów może współdzielić jedno urządzenie. W tym dokumencie opisano sposób osiągnięcia tego celu przy użyciu usługi Intune.
+
 Informacje o konfigurowaniu dedykowanych (1:1) urządzeń iPad do używania aplikacji Classroom zawiera temat [Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS](education-settings-configure-ios.md).
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem

@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/14/2017
+ms.date: 9/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 51e53e28-5c34-4d0f-a4b1-6390a337514c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a08296770ee3a326411d3267705ed6a912ab17bd
-ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
+ms.openlocfilehash: 040ce88c47eb12bbe9b228189d90ca422e5185e7
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -35,13 +35,6 @@ Omówmy kilka założeń dotyczących dodawania zasad funkcji WIP.
 -   **Dozwolone aplikacje:** są to aplikacje, które muszą stosować się do tych zasad.
 
 -   **Wykluczone aplikacje:** te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
-
-> [!IMPORTANT]  
-> Usługa Intune zaleca dodanie aplikacji Portal firmy do listy wykluczonych, aby umożliwić prawidłowe działanie aplikacji. Aby to zrobić, dodaj następującą **aplikację ze sklepu** do listy **Aplikacje wykluczone**:  
->   - Nazwa: Portal firmy  
->   - Wydawca: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S Waszyngton, C = USA  
->   - Nazwa produktu: Microsoft.CompanyPortal  
-
 
 ### <a name="types-of-apps"></a>Typy aplikacji
 
