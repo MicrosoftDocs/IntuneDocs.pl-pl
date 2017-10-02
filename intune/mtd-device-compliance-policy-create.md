@@ -15,11 +15,11 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b2cffc21ba78cbd54edfb75eaa892df1539ad62b
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 2e9b1a3dc42a9c18d61fc9b55d5a7b71f00c3e29
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -35,8 +35,6 @@ W ramach procesu konfiguracji usługi MTD w konsoli tej usługi zostały utworzo
 Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 -   Skonfigurowanie integracji z usługą MTD w usłudze Intune
-
--   Włączenie łącznika MTD w usłudze Intune
 
 ## <a name="to-create-a-mtd-device-compliance-policy"></a>Utworzenie zasad zgodności urządzeń usługi MTD
 
@@ -77,3 +75,7 @@ Aby przypisać użytkownikom zasady zgodności urządzeń, wybierz wcześniej sk
 
     > [!NOTE] 
     > Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Włączanie rozwiązania MTD w usłudze Intune](mtd-connector-enable.md)

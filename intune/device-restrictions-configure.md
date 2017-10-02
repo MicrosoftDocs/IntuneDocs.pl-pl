@@ -3,8 +3,8 @@ title: "Konfigurowanie ustawień ograniczeń dotyczących urządzeń w usłudze 
 titleSuffix: Azure portal
 description: "Informacje dotyczące konfigurowania ustawień i funkcji na zarządzanych urządzeniach przy użyciu usługi Intune."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 04/12/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc818d1fa1d72165a8d456718d506c7e18c944ba
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 8beabb21df8b122b7a1dd18a698a8075604046b5
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia ograniczeń dotyczących urządzeń w usłudze Microsoft Intune
 
