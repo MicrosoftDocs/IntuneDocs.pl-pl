@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5db7489d379ca374e41030870df20ff16b919bbc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c32dad761275e9a31937e5777d85939915882849
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Windows za pomocą szyfrowania
 
@@ -35,4 +35,4 @@ Jeśli masz urządzenie stacjonarne, poniższe instrukcje opisują sposób jego 
 
 2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
