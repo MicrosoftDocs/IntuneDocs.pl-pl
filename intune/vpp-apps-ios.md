@@ -1,12 +1,12 @@
 ---
-title: "Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych"
+title: "Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Informacje o synchronizowaniu aplikacji kupionych w ramach zakupów zbiorczych w sklepie z aplikacjami dla systemu iOS z usługą Intune oraz o zarządzaniu ich użyciem i jego śledzeniu."
 keywords: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/18/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8be922d6cc839708ff26de2ebe792241b9bf357a
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dc3160d40d4ddabcd0a7d8d5557b07b4086eea7c
+ms.sourcegitcommit: 4184db38d1a9a223e680bcb4c9b732f7069bf510
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 ---
-# <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
+# <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -48,12 +48,17 @@ W przypadku przypisania aplikacji nabytych w ramach zakupów zbiorczych do urzą
 W przypadku przypisania aplikacji do użytkowników używana jest jedna licencja aplikacji, która jest skojarzona z użytkownikiem. Aplikacja może być uruchamiana na wielu urządzeniach, które należą do użytkownika (z limitem kontrolowanym przez firmę Apple).
 W przypadku przypisania aplikacji nabytych w ramach zakupów zbiorczych do użytkowników każdy użytkownik końcowy musi mieć prawidłowy i unikatowy identyfikator Apple ID, aby uzyskać dostęp do sklepu z aplikacjami.
 
-
 Oprócz tego możesz także synchronizować książki kupione w sklepie programu Apple Volume Purchase Program oraz zarządzać nimi i przypisywać je przy użyciu usługi Intune. Aby uzyskać więcej informacji, zobacz [Jak zarządzać książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych](vpp-ebooks-ios.md).
 
-
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Zarządzanie zbiorczo zakupionymi aplikacjami dla urządzeń z systemem iOS
+
+### <a name="supports-apple-volume-purchase-program-volume-purchased-apps-for-ios-devices"></a>Obsługuje aplikacje dla urządzeń z systemem iOS zbiorczo zakupione w ramach programu Apple Volume Purchase Program
+
 Wiele licencji dla aplikacji systemu iOS można kupić za pośrednictwem programu [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/) lub [Apple Volume Purchase Program for Education](http://volume.itunes.apple.com/us/store). Ten proces obejmuje skonfigurowanie konta programu VPP firmy Apple w witrynie sieci Web firmy Apple i przekazanie tokenu VPP firmy Apple do usługi Intune.  Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego.
+
+### <a name="supports-business-to-business-volume-purchased-apps-for-ios-devices"></a>Obsługuje zbiorczo zakupione aplikacje firma-firma dla urządzeń z systemem iOS
+
+Ponadto deweloperzy innych firm mogą również prywatnie dystrybuować aplikacje do autoryzowanych członków programu Volume Purchase Program for Business określonych w usłudze iTunes Connect. Ci członkowie programu VPP for Business mogą zalogować się do sklepu Volume Purchase Program App Store i zakupić ich aplikacje. Aplikacje programu VPP for Business zakupione przez użytkownika końcowego zsynchronizują się z ich dzierżawami usługi Intune.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do konta usługi Intune. Ponadto należy zapoznać się z następującymi kwestiami:
@@ -64,12 +69,9 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
 * Przed rozpoczęciem korzystania z programu VPP dla systemu iOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta usługi VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami przenośnymi. Usługa Intune nie synchronizuje tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune synchronizuje tylko dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
 * Usługa Intune obsługuje dodawanie maksymalnie 256 tokenów usługi VPP.
-* W przypadku przypisania aplikacji kupionych w ramach zakupów zbiorczych do urządzenia zarejestrowanego przy użyciu profilu rejestracji urządzeń lub programu Apple Configurator działają tylko te aplikacje, które są docelowe dla określonych urządzeń. Nie można przypisać aplikacji kupionych zbiorczo użytkownikom urządzenia DEP, które nie ma żadnych koligacji użytkownika.
-Dzieje się tak, ponieważ licencjonowanie użytkownika VPP w systemie iOS pozwala na rejestrowanie tysięcy urządzeń za pomocą tego samego konta użytkownika. Licencjonowanie użytkownika VPP w systemie iOS pozwala użytkownikowi końcowemu na instalowanie aplikacji na 5–10 urządzeniach.
-Oznacza to, że na kilku pierwszych urządzeniach zarejestrowanych przy użyciu DEM aplikacja VPP zostanie zainstalowana w ramach licencjonowania użytkownika i nie będzie instalowana na innych urządzeniach.”
+* Program Device Enrollment Profile (DEP) firmy Apple automatyzuje rejestrację zarządzania urządzeniami przenośnymi (MDM). Przy użyciu programu DEP możesz skonfigurować urządzenia w przedsiębiorstwie bez dotykania ich. Możesz zarejestrować się w programie DEP przy użyciu tego samego konta agenta programu co dla programu VPP firmy Apple. Identyfikator programu Apple Deployment Program jest unikatowy dla programów wymienionych w witrynie internetowej [Programy wdrożenia](https://deploy.apple.com) i nie można go używać do logowania się do usług firmy Apple, takich jak sklep iTunes. 
 * W danym momencie token VPP może być używany tylko w ramach jednego konta usługi Intune. Nie używaj tego samego tokenu VPP dla wielu dzierżaw usługi Intune.
-* Jeśli aplikacje VPP zostały przypisane do użytkowników lub urządzeń (z koligacją użytkowników) za pomocą modelu licencjonowania użytkowników, każdy użytkownik usługi Intune musi zostać skojarzony z unikatowym identyfikatorem Apple ID lub adresem e-mail, aby mógł zaakceptować warunki i postanowienia firmy Apple na swoim urządzeniu.
-Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfiguruj je przy użyciu unikatowego identyfikatora Apple ID lub adresu e-mail tego użytkownika. Identyfikator Apple ID lub adres e-mail i użytkownik usługi Intune stanowią unikatową parę i mogą być używane na maksymalnie 5 urządzeniach.
+* Jeśli aplikacje VPP zostały przypisane do użytkowników lub urządzeń (z koligacją użytkowników) za pomocą modelu licencjonowania użytkowników, każdy użytkownik usługi Intune musi zostać skojarzony z unikatowym identyfikatorem Apple ID lub adresem e-mail, aby mógł zaakceptować warunki i postanowienia firmy Apple na swoim urządzeniu. Nie używaj identyfikatora Apple ID użytego dla identyfikatora programu wdrożenia firmy Apple. Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfiguruj je przy użyciu unikatowego identyfikatora Apple ID lub adresu e-mail tego użytkownika. Identyfikator Apple ID lub adres e-mail stanowią z użytkownikiem usługi Intune unikatową parę i mogą być używane na maksymalnie pięciu urządzeniach.
 
 >[!IMPORTANT]
 >Po zaimportowaniu tokenu VPP do usługi Intune nie należy importować tego samego tokenu do żadnego innego rozwiązania do zarządzania urządzeniami. Może to spowodować utratę przypisania licencji i rekordów użytkowników.
@@ -78,17 +80,13 @@ Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfi
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Tokeny programu VPP dla systemu iOS**.
-2.  W bloku listy tokenów programu VPP kliknij pozycję **Dodaj**.
-3.  W bloku **Nowy token programu VPP** określ następujące informacje:
+2.  W bloku z listą tokenów programu VPP kliknij pozycję **Utwórz**.
+4. W bloku **Utwórz token programu VPP** określ następujące informacje:
     - **Plik tokenu programu VPP** — jeśli nie jesteś jeszcze zarejestrowanym członkiem programu Volume Purchase Program for Business lub Volume Purchase Program for Education, zarejestruj się. Po zarejestrowaniu się pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
-    - **Identyfikator firmy Apple** — wprowadź identyfikator firmy Apple dla konta skojarzonego z programem zakupów zbiorczych.
-    - **Typ konta programu VPP** — wybierz opcję **Biznes** lub **Edukacja**.
+    - **Aktualizacje automatyczne aplikacji** — wybierz **Wł.** lub **Wył.**, aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune aktualizuje wszystkie aplikacje zakupione dla określonego tokenu za pośrednictwem usługi Intune, gdy urządzenie się zamelduje. Usługa Intune wykryje aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypchnie je do urządzenia po jego zameldowaniu.
 4. Gdy wszystko będzie gotowe, kliknij pozycję **Przekaż**.
 
 Token zostanie wyświetlony na liście w bloku tokenów.
-
 
 Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizować z usługą Intune, wybierając pozycję **Synchronizuj teraz**.
 
@@ -97,10 +95,9 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Licencje aplikacji**.
-2.  W bloku listy aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
-3.  W bloku *<app name>* - **Przypisania** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
-4.  Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybieranie grup** wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
+1.  W bloku **Intune** wybierz pozycję **Aplikacje mobilne** > **Aplikacje** w obszarze **Zarządzaj**.
+2.  W bloku z listą aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
+3.  W bloku ***Nazwa aplikacji*** - **Przypisania** wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybieranie grup** wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
 5.  Dla każdej wybranej grupy wybierz następujące ustawienia:
     - **Typ** — wybierz, czy aplikacja będzie **dostępna** (użytkownicy końcowi mogą instalować aplikację z Portalu firmy), czy **wymagana** (urządzenia użytkowników końcowych automatycznie pobiorą i zainstalują aplikację).
     - **Typ licencji** — wybierz **Licencjonowanie na użytkownika** lub **Licencjonowanie na urządzenie**.

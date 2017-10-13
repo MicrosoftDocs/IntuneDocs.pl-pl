@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 910fe2bc4e616c3b60d351efaffe173f58c04bc6
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 53bb84c3f2f9e8ee0c0bda419015ff35d1a51488
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Brak wymaganego certyfikatu urządzenia
 
@@ -30,12 +30,12 @@ ms.lasthandoff: 07/01/2017
 
 ## <a name="fixing-certificate-issues"></a>Rozwiązywanie problemów z certyfikatami
 
-Jeśli urządzenie z systemem Android nie zostało zarejestrowane w usłudze Intune i nie ma certyfikatu wymaganego przez administratora IT, nie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
+Jeśli urządzenie z systemem Android nie zostało zarejestrowane w usłudze Intune i nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy, nie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
 Pierwszym krokiem, jaki należy wykonać, jest sprawdzenie, czy w urządzeniu [brakuje certyfikatu, który zwykle jest na nim wstępnie zainstalowany](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Jeśli wykonanie tej czynności nie rozwiąże problemu, administrator IT może [narzucić wymóg zainstalowania drugiego certyfikatu w celu zapewnienia dodatkowego bezpieczeństwa](your-device-is-missing-an-IT-required-certificate-android.md).
+Jeśli wykonanie tej czynności nie rozwiąże problemu, dział pomocy technicznej Twojej firmy może [narzucić wymóg zainstalowania drugiego certyfikatu w celu zapewnienia dodatkowego bezpieczeństwa](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

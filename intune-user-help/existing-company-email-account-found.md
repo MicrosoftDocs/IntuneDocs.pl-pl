@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 510e35a7c60709a6f002907e0f7963ba5b78f35c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 21d9e6678c9981b3c1d918f337322d50aa0fecb5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
 
-Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uzyskać dostęp do tego konta, korzystając z urządzenia przenośnego. Administrator IT potrzebuje Twojej pomocy, aby móc chronić dostęp do poczty e-mail podczas drogi, jaką poczta pokonuje od nadawcy do Twojego urządzenia. Aktualnie używany przez Ciebie program poczty e-mail może dobrze spełniać swoją rolę, wykonanie tych czynności pozwoli jednak zwiększyć bezpieczeństwo informacji.
+Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uzyskać dostęp do tego konta, korzystając z urządzenia przenośnego. Dział pomocy technicznej Twojej firmy potrzebuje Twojej pomocy, aby móc chronić dostęp do poczty e-mail podczas drogi, jaką poczta pokonuje od nadawcy do Twojego urządzenia. Aktualnie używany przez Ciebie program poczty e-mail może dobrze spełniać swoją rolę, wykonanie tych czynności pozwoli jednak zwiększyć bezpieczeństwo informacji.
 
 1.  W menu **Ustawienia** na Twoim urządzeniu usuń uprzednio skonfigurowane połączenie z firmową pocztą e-mail.
 
@@ -34,4 +34,4 @@ Masz już konto e-mail w domenie Twojej organizacji lub firmy, a teraz chcesz uz
 
 3.  Poczekaj chwilę na automatyczne zastosowanie nowych ustawień poczty e-mail w odniesieniu do urządzenia.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

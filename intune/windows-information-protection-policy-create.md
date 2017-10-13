@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 10/3/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 524b4b506855b50bb5312dc31e98eb5f451cb66d
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 3cf11c53a5f1ce78dda9c703da32270b0b07874a
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -47,7 +47,7 @@ Omówmy kilka założeń dotyczących dodawania zasad funkcji WIP.
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, trzeba skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, musisz skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Ponadto wymagane są następujące elementy:
 
@@ -155,16 +155,13 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 ### <a name="use-wip-learning"></a>Korzystanie z opcji Uczenie funkcji WIP
 
-1. Przejdź do pulpitu nawigacyjnego platformy Azure. <!---since they're changing from Intune MAM to Intune proper, a screenshot might be helpful.--->
+1. Otwórz witrynę Azure Portal. Wybierz pozycję **Więcej usług**. Wpisz **Intune** w polu tekstowym filtru.
 
-2. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+3. Wybierz pozycje **Intune** > **Mobile Apps**.
 
-3. Wybierz pozycję **Intune**, a kiedy zostanie otwarty **pulpit nawigacyjny Intune**, wybierz pozycję **Aplikacje mobilne**.
-
-4. Wybierz pozycję **Uczenie funkcji WIP** w obszarze **Monitor**. Zostaną wyświetlone nieznane aplikacje zarejestrowane przy użyciu funkcji Uczenie funkcji WIP.
-
-> [!IMPORTANT]
-> Gdy aplikacje pojawią się w raporcie rejestracji funkcji Uczenie funkcji WIP, można dodać je do zasad ochrony aplikacji.
+4. Wybierz pozycje **Stan ochrony aplikacji** > **Raporty** > **Windows Information Protection — nauka**.  
+ 
+    Gdy aplikacje pojawią się w raporcie rejestracji funkcji Uczenie funkcji WIP, możesz dodać je do zasad ochrony aplikacji.
 
 ## <a name="deploy-your-wip-app-protection-policy"></a>Wdrażanie zasad ochrony aplikacji w funkcji WIP
 
@@ -175,7 +172,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 Po utworzeniu zasad ochrony aplikacji w funkcji WIP trzeba je wdrożyć do organizacji przy użyciu funkcji MAM.
 
-1.  W bloku **Zasady aplikacji** wybierz nowo utworzone zasady ochrony aplikacji, wybierz pozycję **Grupy użytkowników** > **Dodaj grupę użytkowników**.
+1.  W bloku **Zasady aplikacji** wybierz swoje nowo utworzone zasady ochrony aplikacji i wybierz pozycje **Grupy użytkowników** > **Dodaj grupę użytkowników**.
 
     Lista grup użytkowników zawierająca wszystkie grupy zabezpieczeń w usłudze Azure Active Directory zostanie otwarta w bloku **Dodaj grupę użytkowników**.
 

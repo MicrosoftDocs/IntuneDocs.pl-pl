@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ce0ce291f303b04f0851b93add5f5cde5e2ee13f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cadc8ac211f60fd767dbfa7d412b089c3c1c94ea
+ms.sourcegitcommit: f254f49fc65fc75a779ff721e2202c53d03cb981
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/02/2017
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
+Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
 
 Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych.
 
@@ -33,7 +33,7 @@ Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócen
 
 Aby zresetować urządzenie:
 
-1.  W [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/Intune/whats-new/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
+1.  W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
 
 2. Na stronie __Moje urządzenia__ wybierz urządzenie, którego nazwę chcesz zmienić.
 
@@ -47,4 +47,4 @@ Aby zresetować urządzenie:
 
 Twoje urządzenie zostało zresetowane.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

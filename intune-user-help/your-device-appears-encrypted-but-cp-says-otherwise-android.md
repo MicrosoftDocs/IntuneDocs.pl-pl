@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/10/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 370fbcf8bb424030eb7b7dbaba66fa943f08aa42
-ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
+ms.openlocfilehash: 208cf6eb2d29ec5458d97d0a4481cec420acc281
+ms.sourcegitcommit: 59811bf1183b3ef9c9e81eded634bd0d3124d0bb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
 
@@ -38,7 +38,7 @@ Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem
 
 ### <a name="downgrade-your-version-of-android"></a>Zmień wersję systemu Android na starszą
 
-Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0+, należy to zrobić. Zmiana wersji urządzenia może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z administratorem IT, aby rozwiązać ten problem. Informacje kontaktowe administratora IT znajdziesz w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0+, należy to zrobić. Zmiana wersji urządzenia może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z działem pomocy technicznej Twojej firmy, aby rozwiązać ten problem. Informacje kontaktowe działu pomocy technicznej Twojej firmy znajdziesz w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
 
 ## <a name="specific-manufacturer-issues"></a>Problemy z urządzeniami niektórych producentów
 
@@ -54,12 +54,11 @@ Niektóre urządzenia z systemem Android w wersji 7.0+ szyfrują dane metodami, 
 W przypadku wymienionych poniżej urządzeń problem może wystąpić, jeśli urządzenie nie zostało zaktualizowane do najnowszej wersji systemu Android. Aktualizacje można zainstalować przy użyciu opcji **Ustawienia** > **Aktualizuj**. 
 
 - [Huawei Honor 8](http://consumer.huawei.com/en/support/mobile-phones/honor8_en-sup.htm)
-- [Huawei P9](http://consumer.huawei.com/mobile-phones/p9/index.html)
+- [Huawei P9](http://consumer.huawei.com/en/phones/p9/)
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Znane urządzenia, których obecnie nie można zaktualizować w celu rozwiązania tego problemu
 
 Nie można rozwiązać tego problemu w przypadku urządzeń wymienionych poniżej. Konieczne może być użycie innego urządzenia w celu uzyskania dostępu do zasobów firmy. 
 
 - [Huawei Mate 8](http://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [Huawei Mate 9](http://consumer.huawei.com/en/phones/mate9/)
 - [Smartfony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)

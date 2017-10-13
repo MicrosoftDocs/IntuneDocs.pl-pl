@@ -16,20 +16,20 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 16f7f06d02a56b4887c0d29ffcaed111185652a9
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 04009fa3fea401e3093a444b0fdbbbe12bd31c84
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-macos-device-in-intune"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune
 
-Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci wykonywanie pracy. Jeśli używasz urządzenia z systemem macOS w miejscu pracy, musisz zainstalować __profil zarządzania__. Jest to po prostu plik skonfigurowany przez administratora IT, umożliwiający załadowanie ustawień i informacji dotyczących dostępu na komputerze Mac. Chcesz wiedzieć więcej? Sprawdź, [co dzieje się w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci wykonywanie pracy. Jeśli używasz urządzenia z systemem macOS w miejscu pracy, musisz zainstalować __profil zarządzania__. Jest to po prostu plik skonfigurowany przez dział pomocy technicznej Twojej firmy umożliwiający załadowanie ustawień i informacji dotyczących dostępu na komputerze Mac. Chcesz wiedzieć więcej? Sprawdź, [co dzieje się w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 
   > [!NOTE]
   > Jeśli próbujesz zarejestrować urządzenie z systemem iOS, takie jak iPhone lub iPad, [zamiast tego spróbuj wykonać te instrukcje](enroll-your-device-in-intune-ios.md).
 
-1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](http://portal.manage.microsoft.com).
+1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com).
 2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego.
 
   [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
@@ -65,4 +65,4 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci w
 
  ![Zainstalowany profil w systemie macOS](./media/macOS_enroll_007_sysprefs_installed_profile.png)
 
-Nadal potrzebujesz pomocy? Skonsultuj się z administratorem IT. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com).

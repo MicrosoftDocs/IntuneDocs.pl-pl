@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 90168dae6b73185ae8cdf6c55093c79ab3d729c0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6213bcf2e7ee2ad1ffd15010d8741b86b065d147
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="using-the-intune-company-portal-website"></a>Korzystanie z witryny Portal firmy usługi Intune
 [Witryna sieci Web Portal firmy](https://portal.manage.microsoft.com) to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune.
@@ -39,10 +39,10 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 
 -   [Ręczne synchronizowanie urządzenia w celu pobrania aplikacji do szybszego zainstalowania](sync-your-device-manually-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych administratora IT (jeśli zostały one skonfigurowane)
+-   Znajdowanie informacji kontaktowych działu pomocy technicznej Twojej firmy (jeśli zostały one skonfigurowane)
 
 -   Wyświetlanie szczegółowych informacji o urządzeniu, w tym informacji o zgodności z zasadami obowiązującymi w firmie lub szkole
 
 -   Zdalne zarządzanie komputerem (dotyczy tylko komputerów)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

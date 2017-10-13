@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
@@ -33,8 +33,8 @@ Dział IT firmy ma dostęp do informacji mających związek z wykonywaną pracą
 ## <a name="how-do-i-get-the-company-portal"></a>Jak uzyskać aplikację Portal firmy?
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
-- Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także administrator IT może zainstalować aplikację Portal firmy dla Ciebie.
-- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) skonfigurowanej przez administratora IT.
+- Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także dział pomocy technicznej Twojej firmy może zainstalować aplikację Portal firmy dla Ciebie.
+- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?
 Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną internetową Portal firmy, jednak większość zadań można wykonać w obu. Oto niektóre dostępne zadania:
@@ -54,9 +54,9 @@ Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a
 - [Korzystanie z witryny sieci Web Portal firmy](using-the-intune-company-portal-website.md)
 
 ## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Co się stanie po dodaniu komputera lub urządzenia do Portalu firmy?
-Po dodaniu komputera lub urządzenia do Portalu firmy może zostać zainstalowane określone oprogramowanie lub może zostać pobrana aplikacja (w zależności od urządzenia). Można również w ten sposób nadać administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje o firmie.
+Po dodaniu komputera lub urządzenia do Portalu firmy może zostać zainstalowane określone oprogramowanie lub może zostać pobrana aplikacja (w zależności od urządzenia). Można również w ten sposób nadać działowi pomocy technicznej Twojej firmy uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje o firmie.
 
-Aby dowiedzieć się, co administrator IT może zobaczyć na Twoim urządzeniu, kliknij link odpowiadający typowi używanego urządzenia:
+Aby dowiedzieć się, co dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu, kliknij link odpowiadający typowi używanego urządzenia:
 
 - [Instalowanie aplikacji Portal firmy dla systemu Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Instalowanie aplikacji Portal firmy dla systemów iOS i macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
@@ -96,4 +96,4 @@ Firma Microsoft zaleca, aby w pierwszej kolejności spróbować rozwiązać prob
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS](troubleshoot-your-device-ios.md)
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Windows](troubleshoot-your-device-windows.md)
 
-Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z administratorem IT. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

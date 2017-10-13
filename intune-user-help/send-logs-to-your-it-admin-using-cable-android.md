@@ -1,5 +1,5 @@
 ---
-title: "Wysyłanie dzienników do administratora IT za pomocą kabla USB | Dokumentacja firmy Microsoft"
+title: "Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB | Microsoft Docs"
 description: "Wysyłanie dzienników danych za pomocą kabla USB"
 keywords: 
 author: barlanmsft
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f6df910d60498b0ed272ebeb86d54273e8c6dd1a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Wysyłanie dzienników do administratora IT za pomocą kabla USB
+# <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB
 
-Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
+Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
 
 > [!Note]
-> Przed rozpoczęciem upewnij się, że masz przygotowany adres e-mail administratora IT. Adres ten znajduje się w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) lub w aplikacji Portal firmy.
+> Przed rozpoczęciem upewnij się, że masz przygotowany adres e-mail działu pomocy technicznej Twojej firmy. Adres ten znajduje się w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com) lub w aplikacji Portal firmy.
 
 1.  Na ekranie błędu naciśnij pozycję **Wyślij informacje**. Po wyświetleniu komunikatu z pytaniem o metodę wysyłania dzienników wybierz opcję, która zapisze pliki na urządzeniu.
 
@@ -35,6 +35,6 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem An
 
 3.  Na komputerze wyszukaj katalog o nazwie odpowiadającej nazwie urządzenia. W tym katalogu znajdź folder **Urządzenie z systemem Android\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\**.
 
-4.  Wybierz pliki, a następnie dołącz je do wiadomości e-mail. Wyślij utworzoną wiadomość e-mail do administratora IT.
+4.  Wybierz pliki, a następnie dołącz je do wiadomości e-mail. Wyślij utworzoną wiadomość e-mail do działu pomocy technicznej Twojej firmy.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 052de47e19f4e171428ee22b4701ed516461231f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 926e09173918488d6beb1f0e3f725a0cff2971b4
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows w usłudze Intune?
 
-Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone pozwalasz administratorowi IT na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych. W tym temacie opisano, co się dzieje w przypadku urządzeń z systemem starszym niż Windows 10. W przypadku urządzeń z systemem Windows 10 zobacz [temat pokrewny](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+Podczas instalowania aplikacji Portal firmy, a następnie używania jej do zarejestrowania urządzenia z systemem Windows lub Windows Phone, pozwalasz działowi pomocy technicznej Twojej firmy na zarządzanie urządzeniem, aby zachować bezpieczeństwo danych służbowych. W tym temacie opisano, co się dzieje w przypadku urządzeń z systemem starszym niż Windows 10. W przypadku urządzeń z systemem Windows 10 zobacz [temat pokrewny](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Co się dzieje na wszystkich urządzeniach z systemem Windows po rejestracji
 Zarejestrowanie urządzenia z systemem Windows lub Windows Phone w usłudze Intune pozwala:
@@ -37,15 +37,15 @@ Zarejestrowanie urządzenia z systemem Windows lub Windows Phone w usłudze Intu
 
 -   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży.
 
-Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, które pozwalają mu:
+Zarejestrowanie urządzenia spowoduje nadanie działowi pomocy technicznej Twojej firmy uprawnień, które pozwalają mu:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych. Jest to przydatne w przypadku utracenia lub kradzieży urządzenia.
 
 -   Usuwać tylko pliki związane z firmą i aplikacje biznesowe. *Dane osobiste oraz ustawienia użytkownika nie zostaną usunięte.*
 
--   Administrator IT będzie widzieć oprogramowanie zainstalowane na urządzeniu (z uwzględnieniem oprogramowania zainstalowanego przez użytkownika).
+-   Dział pomocy technicznej Twojej firmy będzie widzieć oprogramowanie zainstalowane na urządzeniu (z uwzględnieniem oprogramowania zainstalowanego przez użytkownika).
 
--   Ustawiać na Twoim urządzeniu wymagania, takie jak wymaganie ustawienia hasła lub numeru PIN urządzenia, aby pomóc w ochronie danych firmy. Administrator IT może także ograniczać to, ile razy można wprowadzić niepoprawne hasło, i może zablokować dostęp do urządzenia, jeśli spróbujesz zbyt wiele razy.
+-   Ustawiać na Twoim urządzeniu wymagania, takie jak wymaganie ustawienia hasła lub numeru PIN urządzenia, aby pomóc w ochronie danych firmy. Dział pomocy technicznej Twojej firmy może także ograniczać to, ile razy można wprowadzić niepoprawne hasło, i może zablokować dostęp do urządzenia, jeśli spróbujesz zbyt wiele razy.
 
 -   Wymagać od Ciebie szyfrowania danych na urządzeniu, aby chronić dane firmy na wypadek utraty lub kradzieży urządzenia.
 
@@ -55,22 +55,22 @@ Zarejestrowanie urządzenia spowoduje nadanie administratorowi IT uprawnień, kt
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Co się dzieje na wszystkich komputerach z systemem Windows po rejestracji
 
--  Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
+-  Na komputerze zostanie zainstalowane oprogramowanie umożliwiające działowi pomocy technicznej Twojej firmy zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Dział pomocy technicznej Twojej firmy może automatycznie aktualizować to oprogramowanie.
 
 -  Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie wyszukuje wirusy i złośliwe oprogramowanie.
 
--  Administrator IT może zbierać lub usuwać dane z dysku twardego komputera.
+-  Dział pomocy technicznej Twojej firmy może zbierać lub usuwać dane z dysku twardego Twojego komputera.
 
--  Administrator IT może instalować na komputerze aplikacje i aktualizacje.
+-  Dział pomocy technicznej Twojej firmy może instalować na Twoim komputerze aplikacje i aktualizacje.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Co się dzieje co 8 godzin po rejestracji urządzenia
 
 Mniej więcej co 8 godzin zarejestrowane urządzenia wykonują następujące czynności:
 
--   Pobieranie wszystkich aktualizacji aplikacji lub zasad udostępnionych przez administratora IT.
+-   Pobieranie wszystkich aktualizacji aplikacji lub zasad udostępnionych przez dział pomocy technicznej Twojej firmy.
 
 -   Wysyłanie wszystkich aktualizacji spisu sprzętu.
 
 -   Wysyłanie wszystkich aktualizacji spisu aplikacji firmowych.
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

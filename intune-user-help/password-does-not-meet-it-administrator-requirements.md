@@ -1,5 +1,5 @@
 ---
-title: "Hasło nie spełnia wymagań administratora IT | Microsoft Docs"
+title: "Hasło nie spełnia wymagań działu pomocy technicznej Twojej firmy | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -14,15 +14,15 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 2b2c86a46c671d35551a8485b5b1a70674168ac5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 88d7ca7a73f32c90f589cd51b299350879914b69
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Hasło nie spełnia wymagań administratora IT
+# <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Hasło nie spełnia wymagań działu pomocy technicznej Twojej firmy
 
-Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły nie spełnia co najmniej jednego wymagania skonfigurowanego przez administratora IT. Aby rozwiązać ten problem, postępuj zgodnie z instrukcjami wyświetlanymi na urządzeniu. Poniżej przedstawiono opisy problemów.
+Hasło używane przez Ciebie na potrzeby dostępu do zasobów firmy lub szkoły nie spełnia co najmniej jednego wymagania skonfigurowanego przez dział pomocy technicznej Twojej firmy. Aby rozwiązać ten problem, postępuj zgodnie z instrukcjami wyświetlanymi na urządzeniu. Poniżej przedstawiono opisy problemów.
 
 Aby przejść do instrukcji dotyczącej sposobu ustawiania numeru PIN lub hasła na posiadanym przez Ciebie urządzeniu, użyj odpowiedniego linku:
 
@@ -32,18 +32,18 @@ Aby przejść do instrukcji dotyczącej sposobu ustawiania numeru PIN lub hasła
 
 Opisy problemów związanych z numerem PIN lub hasłem:
 
-- **Hasło nie zawiera znaków złożonych**. Administrator IT wymaga użycia znaków złożonych w haśle. Znaki złożone to na przykład liczby, wielkie litery i symbole, takie jak $, % oraz #.
+- **Hasło nie zawiera znaków złożonych**. Dział pomocy technicznej Twojej firmy wymaga użycia znaków złożonych w haśle. Znaki złożone to na przykład liczby, wielkie litery i symbole, takie jak $, % oraz #.
 
 - **Hasło jest zbyt proste i nie jest dostatecznie bezpieczne**. Proste hasła to na przykład 1234 lub 1111. Jeśli nie masz pewności, jakiego rodzaju hasła są dozwolone, upewnij się, że hasło, którego chcesz użyć, nie zawiera kolejnych lub powtarzających się liczb, jak w powyższym przykładzie.
 
-- **Hasło wygasło**. Twoje hasło wygasło, musisz więc ustawić nowe hasło, które będzie zgodne z wymaganiami ustawionymi przez administratora IT.
+- **Hasło wygasło**. Twoje hasło wygasło, musisz więc ustawić nowe hasło, które będzie zgodne z wymaganiami ustawionymi przez dział pomocy technicznej Twojej firmy.
 
-- **Hasło nie zostało ustawione**. Aby uzyskać dostęp do służbowej poczty e-mail i danych na swoim urządzeniu, najpierw musisz ustawić hasło zgodne z wymaganiami skonfigurowanymi przez administratora IT.
+- **Hasło nie zostało ustawione**. Aby uzyskać dostęp do służbowej poczty e-mail i danych na swoim urządzeniu, najpierw musisz ustawić hasło zgodne z wymaganiami skonfigurowanymi przez dział pomocy technicznej Twojej firmy.
 
-- **Hasło jest za krótkie**. Administrator IT wymaga zastosowania dłuższego hasła składającego się z większej liczby znaków.
+- **Hasło jest za krótkie**. Dział pomocy technicznej Twojej firmy wymaga zastosowania dłuższego hasła składającego się z większej liczby znaków.
 
-- **Hasło było używane niedawno**. Administrator IT uniemożliwia ustawianie haseł, które były już używane w przeszłości. Wybierz hasło, które nie było dotąd używane.
+- **Hasło było używane niedawno**. Dział pomocy technicznej Twojej firmy uniemożliwia ustawianie haseł, które były już używane w przeszłości. Wybierz hasło, które nie było dotąd używane.
 
-- **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Administrator IT wymaga użycia większej liczby znaków złożonych w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #. Może to także dotyczyć innych kont na urządzeniu, więc pamiętaj o sprawdzeniu wszystkich pozostałych kont służbowych, aby upewnić się, że hasło spełnia wymagania określone przez dział IT dla urządzenia.
+- **Hasło nie jest dostatecznie złożone i dlatego nie spełnia wymagań**. Dział pomocy technicznej Twojej firmy wymaga użycia bardziej złożonych znaków w haśle. Spróbuj użyć znaków, takich jak liczby, wielkie litery i symbole, na przykład $, % oraz #. Może to także dotyczyć innych kont na urządzeniu, więc pamiętaj o sprawdzeniu wszystkich pozostałych kont służbowych, aby upewnić się, że hasło spełnia wymagania określone przez dział IT dla urządzenia.
 
-Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz problem z ustaleniem, jak określić hasło zgodne z wymaganiami, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

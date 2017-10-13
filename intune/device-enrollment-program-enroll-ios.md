@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/13/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 94eeb453e5c83c2dadaa757b4c7867f9dd3f62ff
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 311bb42f2ef9fbf689e32eacca7420c8189251bf
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -30,6 +30,9 @@ W tym temacie przedstawiono informacje przydatne podczas włączania rejestracji
 Włączenie rejestracji w programie DEP wymaga użycia zarówno portalu usługi Intune, jak i portalu DEP firmy Apple. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
 Należy zwrócić uwagę, że rejestracja w ramach programu DEP nie działa z [menedżerem rejestracji urządzeń](device-enrollment-manager-enroll.md).
+
+## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
+Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple. 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -77,7 +80,6 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 5. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Kliknij pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
 
-6.  W oknie dialogowym **Add&lt; <nazwa_serwera>&gt;** (Dodawanie serwera <nazwa_serwera>) zostanie wyświetlony link **Your Server Token** (Token serwera). Pobierz plik tokenu serwera (p7m) na komputer, a następnie wybierz pozycję **Done**(Gotowe).
 
 7. Wybierz kolejno pozycje **Deployment Programs** (Programy wdrażania)&gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzaj urządzeniami).
 8. W obszarze **Choose Devices By** (Sposób wybierania urządzeń) określ sposób identyfikowania urządzeń:
@@ -114,8 +116,11 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
 4. Wybierz pozycję **Ustawienia zarządzania urządzeniami**, aby skonfigurować następujące ustawienia profilu:
 
-  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, opcja zezwalania parowania ustawiona na odrzucanie wszystkich. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
-    - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
+  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, zezwalanie na parowanie ustawione na odrzucanie wszystkiego. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
+    - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
+
+ > [!NOTE]
+ > Konfigurowania urządzenia dla trybu nadzorowanego nie można wykonać przy użyciu usługi Intune po zarejestrowaniu urządzenia. Po rejestracji jedynym sposobem włączenia trybu nadzorowanego jest podłączenie urządzenia z systemem iOS do komputera Mac za pomocą kabla USB i użycie narzędzia Apple Configurator. Spowoduje to zresetowanie urządzenia i skonfigurowanie go w trybie nadzorowanym. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3). Nadzorowane urządzenie wyświetli komunikat „Ten telefon iPhone jest zarządzany przez firmę Contoso” na ekranie blokady oraz „Ten telefon iPhone jest nadzorowany. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie” w pozycji **Ustawienia** > **Ogólne** > **Informacje**.
 
     - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych.
 
@@ -146,6 +151,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
         - **Dane diagnostyczne**
 
     Wybierz polecenie **Zapisz**.
+
 9. Aby zapisać ustawienia profilu, wybierz pozycję **Utwórz** w bloku **Utwórz profil rejestracji**. Profil rejestracji zostanie wyświetlony na liście Profile rejestracji programu Enrollment Program firmy Apple.
 
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 256aa8f52bd25ddcb860aed25b22f1549053d2b1
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 621468db51e7e6172d142501a4637794e4cb57b8
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Rejestrowanie urządzenia z systemem Android w usłudze Intune
 
@@ -30,21 +30,19 @@ Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować
 
 Te instrukcje dotyczące rejestracji są przeznaczone dla urządzeń z systemem Android Samsung KNOX i urządzeń z natywnym systemem Android. Samsung KNOX to rodzaj zabezpieczenia dostępnego w niektórych urządzeniach firmy Samsung. Funkcja ta zapewnia dodatkową ochronę poza zabezpieczeniami dostępnymi w natywnym systemie Android. Aby sprawdzić, czy masz urządzenie z rozwiązaniem Samsung KNOX, przejdź do pozycji **Ustawienia** > **Informacje o urządzeniu**. Jeśli na tej liście nie widzisz pozycji „KNOX version” (Wersja systemu KNOX), oznacza to, że masz urządzenie z natywnym systemem Android.
 
-Przed zarejestrowaniem lub po nim może pojawić się monit o wybranie kategorii, która najlepiej opisuje Twój sposób korzystania z urządzenia. Administrator IT używa tej kategorii, aby pomóc sprawdzić aplikacje, do których masz dostęp.
-
-Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi błąd, możesz [wysłać błędy rejestracji do administratora IT](send-enrollment-errors-to-your-it-admin-android.md).
+Przed zarejestrowaniem lub po nim może pojawić się monit o wybranie kategorii, która najlepiej opisuje Twój sposób korzystania z urządzenia. Dział pomocy technicznej Twojej firmy używa tej kategorii, aby pomóc sprawdzić aplikacje, do których masz dostęp.
 
 **Aby zarejestrować urządzenie z systemem Android:**
 
 1.  Zainstaluj bezpłatną aplikację Portal firmy usługi Intune ze sklepu [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
-2.  Otwórz aplikację Portal firmy usługi Microsoft Intune.
+2.  Otwórz aplikację Portal firmy.
 
 3.  Na **ekranie powitalnym** Portalu firmy naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego.
 
     ![Ekran powitalny aplikacji Portal firmy dla systemu Android, która prosi użytkownika o zalogowanie się przy użyciu odpowiedniego konta służbowego. Warto wiedzieć, że konta Microsoft i inne konta osobiste nie są akceptowane.](./media/and-enroll-0-welcome-screen.png)   
 
-4.  Jeśli administrator IT skonfigurował firmowe warunki i postanowienia, naciśnij przycisk **AKCEPTUJ**, aby zaakceptować postanowienia. Zawartość tego ekranu może różnić się nieco od poniższej ilustracji w zależności od używanej wersji systemu Android.
+4.  Jeśli dział pomocy technicznej Twojej firmy skonfigurował firmowe warunki i postanowienia, naciśnij przycisk **AKCEPTUJ**, aby zaakceptować postanowienia. Zawartość tego ekranu może różnić się nieco od poniższej ilustracji w zależności od używanej wersji systemu Android.
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
@@ -52,28 +50,24 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
 
-6.  Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **ROZPOCZNIJ**.
+6.  Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij pozycję **KONTYNUUJ**.
 
-    ![Ekran konfigurowania dostępu do zasobów firmy](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Ekran konfigurowania dostępu do zasobów firmy](/intune/media/android_cp_enroll_01_1709_new.png)
 
     > [!NOTE]
     > Żółte trójkąty nie oznaczają wystąpienia błędu. Te ikony wskazują, że do zakończenia procesu rejestracji pozostało do wykonania kilka czynności.
 
-7. Na ekranie **korzyści z zarządzania urządzeniami** przeczytaj, co możesz zrobić po zarejestrowaniu urządzenia, a następnie naciśnij pozycję **KONTYNUUJ**.
+7.  Przejrzyj listę rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
 
-    ![Ekran korzyści z zarządzania urządzeniami](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Ustawienia prywatności](/intune/media/android_cp_enroll_02_after_1710.png)
 
-8.  Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
+9.  Na ekranie **Co dalej?** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij pozycję **ZAREJESTRUJ**.
 
-    ![Ustawienia prywatności](./media/and-enroll-4c-we-care-privacy.png)
-
-9.  Na ekranie **Co teraz** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij przycisk **ZAREJESTRUJ**.
-
-    ![Ekran Co teraz](./media/and-enroll-4d-what-comes-next.png)
+    ![Ekran Co teraz](/intune/media/android_cp_enroll_03_after_1710.png)
 
 10.  Wykonaj ten krok, jeśli używasz systemu Android w wersji 6.0 lub nowszej. W przeciwnym razie przejdź do następnego kroku.
 
-    Jeśli administrator IT skonfigurował pewne zasady, mogą pojawić się następujące komunikaty:
+    Jeśli dział pomocy technicznej Twojej firmy skonfigurował pewne zasady, mogą pojawić się następujące komunikaty:
     -   **Zezwolić aplikacji Portal firmy na połączenia telefoniczne i zarządzanie nimi?**
 
         ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
@@ -96,9 +90,9 @@ Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi bł
 
     Do zarządzania urządzeniem Portal firmy wymaga roli administratora. Umożliwia ona administratorowi wyświetlenie niektórych informacji – na przykład o liczbie prób odblokowania ekranu — oraz podjęcie określonych działań.
 
-    Należy pamiętać, że te działania są podejmowane w trosce o bezpieczeństwo. Administrator IT nie dokonuje próby naruszenia prywatności lub usunięcia informacji bez powodu, ale aby się upewnić, że dane firmowe są bezpieczne.
+    Należy pamiętać, że te działania są podejmowane w trosce o bezpieczeństwo. Dział pomocy technicznej Twojej firmy nie dokonuje próby naruszenia prywatności lub usunięcia informacji bez powodu, ale aby się upewnić, że dane firmowe są bezpieczne.
 
-    Firma Microsoft nie kontroluje tego komunikatu i zdaje sobie sprawę, że jego brzmienie może się wydawać nieco drastyczne. Nie istnieje metoda wyświetlania w Portalu firmy wyłącznie ograniczeń i dostępu odpowiedniego dla Twojej organizacji. Wszystkie te elementy pojawiają się na tym ekranie jednocześnie. Jeśli masz pytania dotyczące sposobu używania aplikacji w Twojej organizacji, skontaktuj się ze swoim administratorem IT, korzystając z informacji kontaktowych zawartych w [witrynie sieci Web aplikacji Portal firmy](http://portal.manage.microsoft.com) w celu uzyskania dodatkowych informacji.
+    Firma Microsoft nie kontroluje tego komunikatu i zdaje sobie sprawę, że jego brzmienie może się wydawać nieco drastyczne. Nie istnieje metoda wyświetlania w Portalu firmy wyłącznie ograniczeń i dostępu odpowiedniego dla Twojej organizacji. Wszystkie te elementy pojawiają się na tym ekranie jednocześnie. Jeśli masz pytania dotyczące sposobu używania aplikacji w Twojej organizacji, skontaktuj się z działem pomocy technicznej Twojej firmy, korzystając z informacji kontaktowych zawartych w [witrynie internetowej aplikacji Portal firmy](https://portal.manage.microsoft.com) w celu uzyskania dodatkowych informacji.
 
 12.  Postępuj zgodnie z monitami o wprowadzenie numeru PIN lub hasła. Jeśli skonfigurowano już numer PIN lub hasło na tym urządzeniu, ten ekran nie będzie widoczny lub wymagane będzie wprowadzenie nowego numeru PIN lub hasła.
 
@@ -133,4 +127,6 @@ Zanim spróbujesz zainstalować aplikacje firmowe, przejdź kolejno do pozycji *
 > [!Note]
 > Jeśli Twoja organizacja korzysta z oprogramowania do zarządzania wydatkami telekomunikacyjnymi, musisz wykonać kilka dodatkowych czynności, zanim urządzenie zostanie w pełni zarejestrowane. Dowiedz się więcej [tutaj](enroll-your-device-with-telecom-expense-management-android.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android firmy Microsoft</a>.
+Jeśli podczas próby zarejestrowania urządzenia w usłudze Intune wystąpi błąd, możesz [wysłać błędy rejestracji do działu pomocy technicznej Twojej firmy](send-enrollment-errors-to-your-it-admin-android.md).
+
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.

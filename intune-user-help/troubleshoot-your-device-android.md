@@ -15,21 +15,21 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: f46a93d42427ea41adf71403c91fa95052c0bba2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 976b58fcc7835b0992c5d53934642bd4fedb5b50
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android
 
-Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z administratorem IT przy użyciu jego danych kontaktowych zamieszczonych w [witrynie sieci Web portalu firmy](http://portal.manage.microsoft.com).
+Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
 
 - [Sprawdzanie zgodności na urządzeniu z systemem Android](check-compliance-on-your-device-android.md)
-- [Używanie pełnego rejestrowania ułatwiającego administratorowi IT rozwiązywanie problemów z urządzeniami](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Wysyłanie dzienników do administratora IT pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
-- [Wysyłanie dzienników do administratora IT za pomocą kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
-- [Wysyłanie błędów rejestracji do administratora IT](send-enrollment-errors-to-your-it-admin-android.md)
+- [Używanie pełnego rejestrowania ułatwiającego działowi pomocy technicznej Twojej firmy rozwiązywanie problemów z urządzeniami](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
+- [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
+- [Wysyłanie błędów rejestracji do działu pomocy technicznej Twojej firmy](send-enrollment-errors-to-your-it-admin-android.md)
 - [Należy zaktualizować urządzenie z systemem Android](you-need-to-update-your-android-device.md)
 - [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](your-android-version-isnt-yet-supported.md)
 - [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)

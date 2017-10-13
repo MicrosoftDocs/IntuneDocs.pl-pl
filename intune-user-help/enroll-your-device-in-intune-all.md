@@ -14,15 +14,15 @@ ms.assetid: b51dbdd6-aaa3-48dd-a47f-9d01a4ca37f6
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 7b4206d49731195dc08fed5e91942f6071789724
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d6b1addbc03664e5eeaff34eef3042503a1470e
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-device-in-intune"></a>Rejestracja urządzenia w usłudze Intune
 
-Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzeń umożliwia organizacji ochronę danych firmy. Aby dowiedzieć się więcej na temat rejestracji oraz zawartości Twojego urządzenia widocznej dla administratora IT, skorzystaj z linków na końcu tego tematu.
+Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować urządzenie, aby uzyskać dostęp do poczty e-mail, plików i innych zasobów firmy. Rejestracja urządzeń umożliwia organizacji ochronę danych firmy. Aby dowiedzieć się więcej na temat rejestracji oraz zawartości Twojego urządzenia widocznej dla działu pomocy technicznej Twojej firmy, skorzystaj z linków na końcu tego tematu.
 
 Aby wyświetlić instrukcje dotyczące rejestracji, użyj linku dla typu urządzenia, z którego korzystasz:
 

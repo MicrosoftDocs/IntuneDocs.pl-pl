@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 701ee2081d8f696a1c37eaa2857ab92942d79f48
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 4b0891541de125220aa278a4f4ebc0dec0d9a27b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
 Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.
@@ -57,6 +57,6 @@ Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Rozwiązywanie problemów w przypadku pozycji „Konfigurowanie konta służbowego”
 
-Jeśli zostanie wyświetlony komunikat __Nie można automatycznie odnaleźć punktu końcowego zarządzania zgodnego z podaną nazwą użytkownika. Sprawdź nazwę użytkownika i spróbuj ponownie. Jeśli znasz adres URL punktu końcowego zarządzania, wpisz go.__ Następnie należy ponownie wprowadzić nazwę użytkownika i hasło. Jeśli to nie zadziała, skontaktuj się z administratorem IT w celu sprawdzenia witryny internetowej, którą musisz podać w polu tekstowym **Punkt końcowy zarządzania**. To jest witryna, której adres prawdopodobnie wygląda podobnie do tego: **www.twojafirma.onmicrosoft.com**. 
+Jeśli zostanie wyświetlony komunikat __Nie można automatycznie odnaleźć punktu końcowego zarządzania zgodnego z podaną nazwą użytkownika. Sprawdź nazwę użytkownika i spróbuj ponownie. Jeśli znasz adres URL punktu końcowego zarządzania, wpisz go.__ Następnie należy ponownie wprowadzić nazwę użytkownika i hasło. Jeśli to nie zadziała, skontaktuj się z działem pomocy technicznej Twojej firmy w celu sprawdzenia witryny internetowej, którą musisz podać w polu tekstowym **Punkt końcowy zarządzania**. To jest witryna, której adres prawdopodobnie wygląda podobnie do tego: **www.twojafirma.onmicrosoft.com**. 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

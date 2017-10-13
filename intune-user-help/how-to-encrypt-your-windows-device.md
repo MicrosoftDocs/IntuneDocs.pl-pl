@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 56d1f2598c7489fdd09b1c27c6c76c5d80fb6e7e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 41f79bcccd4868f5d8a73926cd47d73c904c8df5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-encrypt-your-windows-device"></a>Jak zaszyfrować urządzenie z systemem Windows
 
-Aby chronić dane firmy lub szkoły, administrator IT może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows Phone i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
+Aby chronić dane firmy lub szkoły, dział pomocy technicznej Twojej firmy może zażądać zaszyfrowania urządzenia z systemem Windows. Jeśli masz telefon z systemem Windows Phone i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
 
 Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, aby je zaszyfrować.
 
@@ -32,4 +32,4 @@ Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, ab
 
 2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z wyświetlanymi instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

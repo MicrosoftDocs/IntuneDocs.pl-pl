@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6d18e7c2fc0e0aff071b60f5a51238897c56b247
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: eca9ef81acb4d1535649d4e13e1b5b2e18ed109a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-install-your-companys-virtual-private-network-vpn"></a>Jak zainstalować sieć Virtual Private Network (VPN) firmy
 
-Jeśli administrator IT skonfigurował aplikację sieci VPN w taki sposób, aby umożliwiała łączenie się z zasobami firmy, na Twoim urządzeniu z systemem Android zostanie wyświetlone powiadomienie wskazujące, że musisz zainstalować aplikację sieci VPN. W celu zainstalowania aplikacji sieci VPN wykonaj następujące kroki:
+Jeśli dział pomocy technicznej Twojej firmy skonfigurował aplikację sieci VPN w taki sposób, aby umożliwiała łączenie się z zasobami firmy, na Twoim urządzeniu z systemem Android zostanie wyświetlone powiadomienie wskazujące, że musisz zainstalować aplikację sieci VPN. W celu zainstalowania aplikacji sieci VPN wykonaj następujące kroki:
 
 1.  Rozwiń menu powiadomień, a następnie wybierz pozycję **Naciśnij, aby zainstalować tę wymaganą aplikację**.
 
@@ -33,4 +33,4 @@ Jeśli administrator IT skonfigurował aplikację sieci VPN w taki sposób, aby 
 3.  Naciśnij pozycję **Zainstaluj profil firmowej sieci VPN** i postępuj zgodnie z monitami. Kroki instalacji mogą być nieco inne w zależności od dostawcy sieci VPN używanego przez firmę.
 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
