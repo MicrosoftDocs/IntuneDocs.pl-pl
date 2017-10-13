@@ -1,5 +1,5 @@
 ---
-title: "Wysyłanie błędów rejestracji do administratora IT | Microsoft Docs"
+title: "Wysyłanie błędów rejestracji do działu pomocy technicznej Twojej firmy | Microsoft Docs"
 description: "Wysyłanie błędów rejestracji do administratora"
 keywords: 
 author: barlanmsft
@@ -16,19 +16,19 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 667282ef1ab6e5058e852b6e3b94daecd01c5d53
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 95be9fd1df23e8cc4c6d41f6c9f49cd30eef87cf
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-enrollment-errors-to-your-it-admin"></a>Wysyłanie błędów rejestracji do administratora IT
+# <a name="send-enrollment-errors-to-your-company-support"></a>Wysyłanie błędów rejestracji do działu pomocy technicznej Twojej firmy
 
-Jeśli podczas próby zarejestrowania urządzenia z systemem Android w usłudze Intune wystąpi błąd, możesz spróbować ponownie, wybierając pozycję **Ponów**. Jeśli wykonanie tych czynności nie rozwiąże problemu, możesz wysłać do administratora IT informacje o tym, co się dzieje, w formie wiadomości e-mail, dotykając pozycji **Wyślij informacje**.
+Jeśli podczas próby zarejestrowania urządzenia z systemem Android w usłudze Intune wystąpi błąd, możesz spróbować ponownie, wybierając pozycję **Ponów**. Jeśli wykonanie tych czynności nie rozwiąże problemu, możesz wysłać do działu pomocy technicznej Twojej firmy wiadomość e-mail z informacjami o tym, co się dzieje, dotykając pozycji **Wyślij informacje**.
 
-Wybranie opcji **Wyślij informacje** powoduje automatyczne utworzenie wiadomości e-mail. Adresatem wiadomość e-mail jest administrator IT, sama wiadomość zawiera natomiast informacje (_dzienniki_) wymagane do rozwiązania przez niego problemów z urządzeniem.
+Wybranie opcji **Wyślij informacje** powoduje automatyczne utworzenie wiadomości e-mail. Adresatem wiadomość e-mail jest dział pomocy technicznej Twojej firmy, sama wiadomość zawiera natomiast informacje (_dzienniki_) wymagane do rozwiązania przez dział pomocy technicznej Twojej firmy problemów z urządzeniem.
 
-Istnieją różne sposoby wysyłania dzienników danych urządzenia do administratora IT w celu uzyskania pomocy dotyczącej błędów:
+Istnieją różne sposoby wysyłania dzienników danych urządzenia do działu pomocy technicznej Twojej firmy w celu uzyskania pomocy dotyczącej błędów:
 
 - [Użyj przycisku Wyślij informacje w celu przesłania dzienników pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 - [Wyślij dzienniki jako załącznik wiadomości e-mail za pomocą kabla USB](send-logs-to-your-it-admin-using-cable-android.md)

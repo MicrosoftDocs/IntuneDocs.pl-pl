@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 208b7775ef66042339ed5e77637a6f0d63eb9831
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a808f9030053b1aee571dbde9bba01d5d503a8a2
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Jak ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami
 
-Administrator informatyczny wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że urządzenie zostało zmodyfikowane w celu umożliwienia nieograniczonego dostępu do pewnych krytycznych plików, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy.
+Dział pomocy technicznej Twojej firmy wykrył, że używasz urządzenia ze złamanymi zabezpieczeniami. Zdjęcie zabezpieczeń systemu oznacza, że urządzenie zostało zmodyfikowane w celu umożliwienia nieograniczonego dostępu do pewnych krytycznych plików, co może naruszyć bezpieczeństwo i być zagrożeniem dla zasobów firmy.
 
-W takim przypadku urządzenie nie może uzyskać dostępu do zasobów firmy, a Ty musisz skontaktować się z administratorem IT, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+W takim przypadku urządzenie nie może uzyskać dostępu do zasobów firmy, a Ty musisz skontaktować się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

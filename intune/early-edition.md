@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 09/05/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0ac0d1fd2f618339f847201f333d3f32561ca6b1
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: f2e11a7fbe226932206f6946ef0603307e76c69c
+ms.sourcegitcommit: 4184db38d1a9a223e680bcb4c9b732f7069bf510
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---september-2017"></a>Wczesna wersja usługi Microsoft Intune — wrzesień 2017
 
@@ -184,6 +184,14 @@ Zalecamy możliwie najwcześniejsze uaktualnienie kwalifikujących się urządze
 
 
 ## <a name="intune-apps"></a>Aplikacje usługi Intune
+
+### <a name="search-improvements-to-the-company-portal-website---1331697--"></a>Ulepszenia wyszukiwania w witrynie internetowej Portal firmy <!--1331697-->
+Ulepszyliśmy możliwości wyszukiwania naszych aplikacji, zaczynając od [witryny internetowej Portal firmy](https://portal.manage.microsoft.com). Wyszukiwanie będzie teraz przeprowadzane dodatkowo według kategorii aplikacji, a nie tylko pól nazwy i opisu. Wyniki będą domyślnie posortowane malejąco według zgodności. 
+
+Użytkownicy systemu iOS również skorzystają z tej zmiany, ponieważ witryna internetowa Portal firmy jest też używana jako część aplikacji Portal firmy dla systemu iOS. Aplikacje Portal firmy dla systemów Android i Windows otrzymają analogiczne aktualizacje w najbliższych miesiącach. 
+
+Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak to działa (link „Opinia” u dołu witryny internetowej Portal firmy).
+
 ### <a name="refresh-action-added-to-the-company-portal-app-for-windows-10---1132468--"></a>Dodanie akcji odświeżenia do aplikacji Portal firmy dla systemu Windows 10 <!--1132468-->
 Aplikacja Portal firmy dla systemu Windows 10 pozwoli użytkownikom odświeżać dane w aplikacji poprzez przeciągnięcie ekranu lub — w przypadku komputerów — naciśnięcie klawisza F5.
 

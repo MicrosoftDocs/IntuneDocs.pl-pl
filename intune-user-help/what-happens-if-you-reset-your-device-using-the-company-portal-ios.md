@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: be7a0e7650e798babba66344e50abe7f958f1dda
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cf3c9d121f2e2578219137161a972d5d58255058
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem iOS przy użyciu Portalu firmy?
 
 W przypadku zresetowania telefonu iPhone lub tabletu iPad za pomocą Portalu firmy niektóre aplikacje i ustawienia w urządzeniu (w tym dane osobowe użytkownika) mogą zostać usunięte. Wpływ na poszczególne urządzenia zależy od sposobu korzystania z urządzenia, zgodnie z opisem na poniższych listach.
 
-**Urządzeniem przenośnym zarządza administrator IT**
+**Urządzeniem przenośnym zarządza dział pomocy technicznej Twojej firmy**
 
 -   Urządzenie nie będzie już wyświetlane w Portalu firmy.
 
@@ -38,4 +38,4 @@ W przypadku zresetowania telefonu iPhone lub tabletu iPad za pomocą Portalu fir
 
 -   Konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

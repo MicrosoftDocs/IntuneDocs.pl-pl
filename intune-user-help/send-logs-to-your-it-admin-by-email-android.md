@@ -1,5 +1,5 @@
 ---
-title: "Wysyłanie dzienników do administratora IT pocztą e-mail | Microsoft Docs"
+title: "Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail | Microsoft Docs"
 description: "Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android"
 keywords: 
 author: barlanmsft
@@ -16,20 +16,20 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3794f6c908dabb1946a262a7238a38537b7b06ec
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b10e4f6571d581b76d8e9d280767ce09ec8e3684
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-using-email"></a>Wysyłanie dzienników do administratora IT pocztą e-mail
+# <a name="send-logs-to-your-company-support-using-email"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail
 
-Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
+Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
 
 > [!Note]
-> Aby ułatwić administratorowi IT ustalenie problemu, włącz _pełne rejestrowanie_. Pełne rejestrowanie powoduje umieszczenie wszystkich odpowiednich szczegółów w raporcie. Dowiedz się, jak [włączyć pełne rejestrowanie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+> Aby ułatwić działowi pomocy technicznej Twojej firmy ustalenie problemu, włącz _pełne rejestrowanie_. Pełne rejestrowanie powoduje umieszczenie wszystkich odpowiednich szczegółów w raporcie. Dowiedz się, jak [włączyć pełne rejestrowanie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
-Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą poczty e-mail:
+Aby wysłać dzienniki do działu pomocy technicznej Twojej firmy pocztą e-mail:
 
 1.  Otwórz aplikację Portal firmy.
 
@@ -40,4 +40,4 @@ Aby wysyłać dzienniki danych diagnostycznych do administratora IT za pomocą p
 
 3.  W obszarze **Pomoc** naciśnij pozycję **Uzyskaj pomoc**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

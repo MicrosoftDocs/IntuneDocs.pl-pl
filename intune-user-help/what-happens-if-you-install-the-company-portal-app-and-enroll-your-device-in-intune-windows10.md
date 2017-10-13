@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 53fe121c5d565fe7bd35843b92f9480cfd5bd5e8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 31b6545b0518e369b95b6e4830617988aa806112
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Windows 10 w usłudze Intune?
 
@@ -34,22 +34,22 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 -   Przywracać ustawienia fabryczne telefonu w przypadku jego utraty lub kradzieży.
 
-Kroki rejestracji opisano w temacie [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Aby dowiedzieć się, co Twój administrator IT może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać mój administrator IT, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+Kroki rejestracji opisano w temacie [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Aby dowiedzieć się, co dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu, zobacz [Jakie dane może wyświetlać dział pomocy technicznej Twojej firmy, gdy zarejestruję swoje urządzenie w usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 W przypadku dodawania komputera:
 
--   Na komputerze zostanie zainstalowane oprogramowanie umożliwiające administratorowi IT zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Administrator IT może automatycznie aktualizować to oprogramowanie.
+-   Na komputerze zostanie zainstalowane oprogramowanie umożliwiające działowi pomocy technicznej Twojej firmy zarządzanie komputerem oraz pozwalające użytkownikowi na uzyskanie dostępu do zasobów firmy, takich jak aplikacje czy informacje pomocy technicznej. Dział pomocy technicznej Twojej firmy może automatycznie aktualizować to oprogramowanie.
 
 -   Na komputerze można zainstalować program Intune Endpoint Protection. To oprogramowanie wyszukuje wirusy i złośliwe oprogramowanie.
 
--   Administrator IT może pobrać spis wszystkich programów zainstalowanych na komputerze, łącznie z oprogramowaniem zainstalowanym przez użytkownika.
+-   Dział pomocy technicznej Twojej firmy może pobrać spis wszystkich programów zainstalowanych na komputerze, łącznie z oprogramowaniem zainstalowanym przez Ciebie.
 
 -   Konieczne może być zaakceptowanie warunków i postanowień.
 
--   Administrator IT może zbierać lub usuwać dane z dysku twardego komputera. Administrator IT może również usunąć cały dysk twardy.
+-   Dział pomocy technicznej Twojej firmy może zbierać lub usuwać dane z dysku twardego Twojego komputera. Dział pomocy technicznej Twojej firmy może również usunąć cały dysk twardy.
 
--   Administrator IT może instalować na komputerze aplikacje i aktualizacje.
+-   Dział pomocy technicznej Twojej firmy może instalować na Twoim komputerze aplikacje i aktualizacje.
 
--   Administrator IT może wymuszać stosowanie zasad na komputerze. Może na przykład być wymagane ustawienie na komputerze hasła lub numeru PIN. Administrator IT może także ograniczyć liczbę prób wprowadzenia niepoprawnego hasła i zablokować dostęp do komputera lub usunąć wszystkie dane z dysku twardego komputera, jeśli próba zostanie podjęta zbyt wiele razy.
+-   Dział pomocy technicznej Twojej firmy może wymuszać stosowanie zasad na komputerze. Może na przykład być wymagane ustawienie na komputerze hasła lub numeru PIN. Dział pomocy technicznej Twojej firmy może także ograniczyć liczbę prób wprowadzenia niepoprawnego hasła i zablokować dostęp do komputera lub usunąć wszystkie dane z dysku twardego Twojego komputera, jeśli próba zostanie podjęta zbyt wiele razy.
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

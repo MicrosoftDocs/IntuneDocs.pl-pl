@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa36b1449cb1ce5d9e0d3b1ca2f3e0db78729f1d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 87704687947aee7c1169b36009ea1960bec37edd
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Rejestrowanie urządzenia z systemem Android w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi
 
@@ -30,7 +30,7 @@ Organizacja może używać oprogramowania do zarządzania wydatkami telekomunika
 
 Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczności instalacji aplikacji [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) ze Sklepu Google Play. Aplikacja Datalert pozwala organizacji dokonywać pomiaru stopnia wykorzystania danych. Jeśli dla organizacji została skonfigurowana opcja rejestracji przy użyciu konta służbowego, konieczne będzie zalogowanie się przy użyciu danych konta służbowego. Jeśli opcja ta nie została włączona, w celu zarejestrowania w usłudze Datalert konieczne będzie podanie informacji takich jak numer telefonu oraz zweryfikowanie urządzenia przy użyciu kodu uzyskanego z aplikacji.
 
-Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować. Administrator IT powinien poinformować Cię, czy logowanie będzie przebiegać z użyciem __konta służbowego Microsoft__ czy z użyciem __numeru telefonu__.
+Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować. Dział pomocy technicznej Twojej firmy powinien poinformować Cię, czy logowanie będzie przebiegać z użyciem __konta służbowego Microsoft__ czy z użyciem __numeru telefonu__.
 
   ![Zrzut ekranu przedstawiający ekran powitalny aplikacji Datalert, z którego można przejść do następnego ekranu po wpisaniu krótkiego sposobu, w jaki aplikacja Datalert może pomóc organizacji optymalnie wykorzystać plan taryfowy obejmujący usługi transmisji danych.](./media/and-enroll-12-tem-datalert-setup.png)
 
@@ -62,4 +62,4 @@ Wybierz strzałkę __dalej__ w prawym górnym rogu ekranu, aby kontynuować. Adm
 
 Po zakończeniu rejestracji zobaczysz swoje użycie danych w aplikacji Datalert.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

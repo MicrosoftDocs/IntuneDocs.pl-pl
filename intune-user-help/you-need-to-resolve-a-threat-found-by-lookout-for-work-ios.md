@@ -1,6 +1,6 @@
 ---
 title: "Rozwiązywanie problemów związanych z zagrożeniami wykrytymi przez aplikację Lookout for Work w systemie iOS | Microsoft Docs"
-description: 
+description: "Dowiedz się, jak usunąć zagrożenie wykryte przez aplikację Lookout for Work w systemie iOS."
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -14,13 +14,13 @@ ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 4b51ad3fcc04d8e4b2cb6da6982f62885f466080
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1b5a49c4bb29f5511dc13b7d12928b11fd98b2de
+ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Należy rozwiązać problem związany z zagrożeniem wykrytym przez aplikację Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Usuwanie zagrożenia wykrytego przez aplikację Lookout for Work
 
 Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak:
 
@@ -34,7 +34,7 @@ W przypadku próby uzyskania dostępu do firmowej poczty e-mail lub plików w sy
 
 ![Komunikat o błędzie aplikacji Lookout for Work z linkiem do witryny internetowej Portal firmy](./media/mtd-go-to-device-management-portal-android.png)
 
-Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](http://portal.manage.microsoft.com), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
+Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
 
 ## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Przykład aplikacji uznawanej za zagrożenie przez aplikację Lookout for Work
 
@@ -46,4 +46,5 @@ Jeśli widzisz podobny ekran, naciśnij nazwę aplikacji wyświetlaną u góry e
 
 Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+

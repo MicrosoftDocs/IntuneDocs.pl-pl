@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 975344e5eb773a2bff3a04d11e4e63d167b30b29
-ms.sourcegitcommit: 2d67df51af66ec859587b66a6ce3965461601c29
+ms.openlocfilehash: 41f39740b62074e06ccc64c6211d642d224efd6c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-ios-device-in-intune"></a>Rejestrowanie urządzenia z systemem iOS w usłudze Intune
 
@@ -54,7 +54,7 @@ Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować
   > [!NOTE]
   > Żółte trójkąty nie oznaczają wystąpienia błędu. Te ikony wskazują, że do zakończenia procesu rejestracji pozostało do wykonania kilka czynności.
 
-4. Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim zarejestrowanym urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **Kontynuuj**.
+4. Przejrzyj listę rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim zarejestrowanym urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **Kontynuuj**.
 
     ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
 
@@ -101,4 +101,4 @@ Urządzenie zostanie zarejestrowane w usłudze Intune. Użytkownik zostanie prze
 > [!Note]
 > Pozostało kilka kroków do zakończenia rejestracji urządzenia. Dowiedz się więcej o [rejestrowaniu urządzenia przy użyciu zarządzania kosztami telekomunikacyjnymi](enroll-your-device-with-telecom-expense-management-ios.md). Jeśli organizacja korzysta z programu Device Enrollment Program firmy Apple, dowiedz się więcej [tutaj](enroll-your-device-dep-ios.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

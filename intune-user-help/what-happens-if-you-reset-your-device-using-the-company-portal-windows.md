@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4c4d46a8d90c3435b640a6135d69df1f3949b6a3
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0720707c5e24daa9ef1677c549a8d2a763944f3b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Windows przy użyciu Portalu firmy?
 
@@ -28,8 +28,8 @@ Zresetowanie urządzenia z systemem Windows przy użyciu aplikacji Portal firmy 
 
 |Konfiguracja urządzenia i zarządzanie nim|Typ urządzenia|
 |---------------------------------------|---------------|
-|Urządzeniem przenośnym zarządza administrator IT|**Windows 10 i Windows Phone 8.1**</br>Urządzenie nie będzie już wyświetlane w Portalu firmy, a Portal firmy podejmie próbę zresetowania urządzenia do domyślnych ustawień fabrycznych. Dane osobowe, aplikacje i ustawienia użytkownika zostaną usunięte. <br /><br />**Windows 10 Mobile**</br>Jedyną metodą wyrejestrowania urządzenia jest jego zresetowanie.|
+|Urządzeniem przenośnym zarządza dział pomocy technicznej Twojej firmy|**Windows 10 i Windows Phone 8.1**</br>Urządzenie nie będzie już wyświetlane w Portalu firmy, a Portal firmy podejmie próbę zresetowania urządzenia do domyślnych ustawień fabrycznych. Dane osobowe, aplikacje i ustawienia użytkownika zostaną usunięte. <br /><br />**Windows 10 Mobile**</br>Jedyną metodą wyrejestrowania urządzenia jest jego zresetowanie.|
 |Urządzenie może uzyskiwać dostęp tylko do firmowej poczty e-mail|**Windows Phone 8.1**<br />Urządzenie nie będzie dłużej wyświetlane w Portalu firmy, a konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.<br /><br />**Windows 7 lub Windows Vista**<br />Nie można zresetować komputera z uruchomionym systemem Windows 7 lub starszym używanego tylko do obsługi poczty e-mail.<br /><br />**Windows 8.1 i Windows 8**<br />Urządzenie nie będzie dłużej wyświetlane w Portalu firmy, a konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.|
 |Komputery osobiste i laptopy|**Windows 8.1 i Windows 8**<br />Komputer z systemem Windows 8 lub Windows 8.1 można zresetować tylko wtedy, gdy jest on używany tylko do obsługi poczty e-mail.<br /><br />**Windows 7 lub Windows Vista**<br />Nie można zresetować komputera z systemem Windows 7 lub starszym.|
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

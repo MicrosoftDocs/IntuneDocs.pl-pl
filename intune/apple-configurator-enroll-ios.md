@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/12/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b139db1780881e5bc0aed2345f9dc456a18f0e0
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 22a03068c543ebaa410521532dfdfc96e0f10eb0
+ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune obsługuje rejestrowanie urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) działającego na komputerze Mac. Rejestrowanie przy użyciu narzędzia Apple Configurator wymaga, aby poszczególne urządzenia z systemem iOS zostały podłączone do komputera Mac za pośrednictwem portu USB w celu skonfigurowania rejestracji firmowej. Urządzenia można zarejestrować w usłudze Intune przy użyciu narzędzia Apple Configurator na dwa sposoby:
+Usługa Intune obsługuje rejestrowanie urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) działającego na komputerze Mac. Rejestrowanie przy użyciu narzędzia Apple Configurator wymaga, aby poszczególne urządzenia z systemem iOS zostały podłączone do komputera Mac za pośrednictwem portu USB w celu skonfigurowania rejestracji firmowej. Urządzenia można zarejestrować w usłudze Intune przy użyciu narzędzia Apple Configurator na dwa sposoby:
 - **Rejestracja przy użyciu Asystenta ustawień** — resetuje urządzenie do ustawień fabrycznych i przygotowuje je do rejestracji z wykorzystaniem Asystenta ustawień.
 - **Rejestracja bezpośrednia** — nie powoduje przywrócenia ustawień fabrycznych urządzenia i rejestruje je za pośrednictwem ustawień systemu iOS. Ta metoda obsługuje jedynie rejestrowanie urządzeń **bez koligacji użytkownika**.
 
@@ -38,7 +38,7 @@ Metody rejestracji z narzędziem Apple Configurator nie można używać z rejest
 - [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 - Numery seryjne urządzeń (tylko rejestracja z wykorzystaniem Asystenta ustawień)
 - Kable połączenia USB
-- Komputer Mac z programem [Apple Configurator 2.0](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
+- Komputer z systemem macOS z programem [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
 
 ## <a name="create-an-apple-configurator-profile-for-devices"></a>Tworzenie profilu programu Apple Configurator dla urządzeń
 
@@ -69,7 +69,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
 
 **Aby dodać numery seryjne programu Apple Configurator do usługi Intune**
 
-1. Utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj numer seryjny w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Obecnie maksymalna liczba wierszy na liście wynosi 500. W edytorze tekstu lista csv wygląda następująco:
+1. Utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj numer seryjny w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Obecnie maksymalna liczba wierszy na liście wynosi 5000. W edytorze tekstu lista csv wygląda następująco:
 
     F7TLWCLBX196, szczegóły urządzenia</br>
     DLXQPCWVGHMJ,szczegóły urządzenia

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 734856b1598a225f6f3a2aaf640d34d393c744e7
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fa95dc161adabcf280d9933770ce68b719a47a74
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
 
-Rejestrowanie urządzenia z systemem Android umożliwia dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. W ramach rejestracji konfigurowany jest profil pracy, który oddziela dane osobiste na urządzeniu od danych służbowych. Administrator IT może zarządzać tylko profilem służbowym, który zawiera dane służbowe. Administrator IT nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
+Rejestrowanie urządzenia z systemem Android umożliwia dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. W ramach rejestracji konfigurowany jest profil pracy, który oddziela dane osobiste na urządzeniu od danych służbowych.
+
+Dział pomocy technicznej Twojej firmy może zarządzać tylko profilem służbowym, który zawiera dane służbowe. Dział pomocy technicznej Twojej firmy nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
 
 Aby utworzyć profil służbowy:
 
@@ -32,27 +34,27 @@ Aby utworzyć profil służbowy:
 
     ![Ekran powitalny aplikacji Portal firmy dla systemu Android](./media/and-enroll-0-welcome-screen.png)
 
-2. Na ekranie **Konfiguracja dostępu do zasobów firmy** naciśnij przycisk **ROZPOCZNIJ**.
+2. Na ekranie **Konfigurowanie dostępu do zasobów firmy** naciśnij pozycję **KONTYNUUJ**.
 
-    ![Ekran Konfiguracja dostępu do zasobów firmy](./media/andr-afw-begin-company-access-setup.png)
+    ![Ekran Konfiguracja dostępu do zasobów firmy](/intune/media/android_cp_enroll_01_1709_new.png)
 
 3.  Na ekranie **Po co tworzyć profil służbowy?** przeczytaj, co możesz zrobić, a następnie naciśnij pozycję **KONTYNUUJ**.
 
     ![Po co tworzyć profil służbowy](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Przejrzyj listę rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
+4.  Przejrzyj listę rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
 
-    ![Lista rzeczy, które administrator IT może zobaczyć na Twoim urządzeniu i których nie może zobaczyć](./media/andr-afw-what-it-can-see-on-your-device.png)
+    ![Lista rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  Na ekranie **Co teraz** przeczytaj, co będzie się działo dalej, a następnie naciśnij pozycję **KONTYNUUJ**.
+5.  Na ekranie **Co dalej?** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij pozycję **ZAREJESTRUJ**.
 
-    ![Ekran Co teraz](./media/andr-afw-what-comes-next.png)
+    ![Ekran Co dalej](/intune/media/android_work_cp_enroll_03_after_1710.png)
 
 6. Na ekranie **Konfiguracja profilu służbowego** naciśnij przycisk **DALEJ**, aby umożliwić aplikacji Portal firmy dostęp do profilu służbowego.
 
     ![Przyznawanie aplikacji Portal firmy dostępu do profilu służbowego](./media/andr-afw-tap-next-to-set-up-work-profile.png)
 
-7. Przejrzyj ekran Google opisujący, co administrator IT może zrobić, gdy utworzysz profil służbowy, a następnie naciśnij przycisk **OK**.
+7. Przejrzyj ekran Google opisujący, co dział pomocy technicznej Twojej firmy może zrobić, gdy utworzysz profil służbowy, a następnie naciśnij przycisk **OK**.
 
     ![Przeglądanie informacji firmy Google o profilach służbowych](./media/andr-afw-google-screen-what-it-can-do.png)
 
@@ -70,16 +72,12 @@ Aby utworzyć profil służbowy:
 
     Na krótko pojawi się komunikat „Rejestrowanie urządzenia”.
 
-11. Gdy na ekranie **Konfigurowanie dostępu do zasobów firmy** zostanie wyświetlona informacja, że wszystko zostało skonfigurowane prawidłowo, naciśnij pozycję **KONTYNUUJ**.
+11. Gdy na ekranie **Wszystko jest gotowe!** zostanie wyświetlona informacja, że wszystko zostało skonfigurowane prawidłowo, naciśnij pozycję **GOTOWE**.
 
-    ![Ekran Konfigurowanie dostępu do zasobów firmy pokazujący, że profil służbowy i rejestracja są zakończone](./media/andr-afw-company-access-setup-green-checks.png)
-
-12. Na ekranie **Zakończono konfigurowanie dostępu do zasobów firmy** naciśnij przycisk **GOTOWE**. Należy wykonać dodatkowe kroki, jeśli administrator IT dodał inne wymagania.
-
-    ![Konfigurowanie dostępu do zasobów firmy jest zakończone](./media/andr-afw-company-access-setup-complete.png)
+    ![Ekran Konfigurowanie dostępu do zasobów firmy pokazujący, że profil służbowy i rejestracja są zakończone](/intune/media/android_work_cp_enroll_04_after_1710.png)
 
     Możesz teraz uzyskać aplikacje firmowe ze Sklepu Play dla firm.
 
     ![Strona aplikacji Sklepu Play dla firm](./media/andr-afw-tap-work-play-store-icon.png)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

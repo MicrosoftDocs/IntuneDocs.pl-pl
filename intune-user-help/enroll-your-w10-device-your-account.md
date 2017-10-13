@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 39d2dad94b949a39451dca79431be22782cddcb8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3c110bab95cbdb7c0dbe3fbe47d34b4cad5aaf07
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-windows-10-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 07/01/2017
 
     ![Zaloguj się](./media/W10-enroll-4-sign-in.png)
 
-Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Spróbuj pozbyć się trudności związanych z dostępem, [rozwiązując problemy z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Jeśli to nie pomoże, skontaktuj się z administratorem IT w celu uzyskania dalszej pomocy.
+Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Spróbuj pozbyć się trudności związanych z dostępem, [rozwiązując problemy z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Jeśli to nie pomoże, skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania dalszej pomocy.
 
-Aby łatwo uzyskać pomoc od administratora IT, użyj informacji kontaktowych dostępnych w aplikacji Portal firmy, która umożliwia również wyszukiwanie i pobieranie aplikacji zalecanych i wymaganych do codziennej pracy. Być może aplikacja Portal firmy jest już zainstalowana na urządzeniu. Aby szybko to sprawdzić, poszukaj nazwy __Portal firmy__ na liście __Wszystkie aplikacje__.
+Aby łatwo uzyskać pomoc od działu pomocy technicznej Twojej firmy, użyj informacji kontaktowych dostępnych w aplikacji Portal firmy, która umożliwia również wyszukiwanie i pobieranie aplikacji zalecanych i wymaganych do codziennej pracy. Być może aplikacja Portal firmy jest już zainstalowana na urządzeniu. Aby szybko to sprawdzić, poszukaj nazwy __Portal firmy__ na liście __Wszystkie aplikacje__.
 
 Jeśli lista nie zawiera aplikacji Portal firmy, wykonaj następujące kroki, aby ją zainstalować.
 

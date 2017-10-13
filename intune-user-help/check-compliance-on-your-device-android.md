@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 088012a1dd9ee1997e7d2b578e54774c4bd586fb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2692bc1e6652d5290afd577247344762e5bcb91a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="check-compliance-on-your-android-device"></a>Sprawdzanie zgodności na urządzeniu z systemem Android
 
@@ -30,4 +30,4 @@ Jeśli urządzenie przez jakiś czas nie meldowało się w usłudze Intune, praw
 
 2. Naciśnij pozycję **Sprawdź zgodność**.
 
-Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go administratora IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Jeśli nie możesz zresetować zgubionego lub skradzionego urządzenia, poproś o zresetowanie go dział pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

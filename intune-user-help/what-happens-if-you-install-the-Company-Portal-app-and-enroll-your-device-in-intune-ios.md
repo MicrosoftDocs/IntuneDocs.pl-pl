@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8867125c9112089bda574f2bd710ddbc3d0b214c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-macos-device-in-intune"></a>Co się dzieje po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem iOS lub macOS w usłudze Intune?
 
@@ -34,9 +34,9 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 -   Automatycznie konfigurować służbowe konto e-mail.
 
-Rejestrując urządzenie w usłudze Intune, nadajesz administratorowi IT uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
+Rejestrując urządzenie w usłudze Intune, nadajesz działowi pomocy technicznej Twojej firmy uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
 
-Gdy urządzenie jest zarejestrowane, administrator IT może:
+Gdy urządzenie jest zarejestrowane, dział pomocy technicznej Twojej firmy może:
 
 -   Resetować urządzenie do domyślnych ustawień fabrycznych w przypadku utraty lub kradzieży urządzenia.
 
@@ -62,4 +62,4 @@ Gdy urządzenie jest zarejestrowane, administrator IT może:
 
 -   Włączać lub wyłączać automatyczną synchronizację plików w trybie roamingu na urządzeniu. Włączenie automatycznej synchronizacji plików może wiązać się z naliczeniem opłat za roaming.
 
-Jeśli masz pytania, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

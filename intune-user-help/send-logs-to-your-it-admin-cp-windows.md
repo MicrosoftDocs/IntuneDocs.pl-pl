@@ -1,5 +1,5 @@
 ---
-title: "Wysyłanie dzienników z urządzeń z systemem Windows 10 do administratora IT | Dokumentacja firmy Microsoft"
+title: "Wysyłanie dzienników z urządzeń z systemem Windows 10 do działu pomocy technicznej Twojej firmy | Dokumentacja firmy Microsoft"
 description: "Rejestrowanie urządzenia z systemem Windows 10 (w wersji 1511) w usłudze Intune"
 keywords: 
 author: barlanmsft
@@ -16,22 +16,22 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 47e6b663cead876b1b19f61d02efed81be4d0dbc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f2287700e96c798be7033eac35539e3490bc3f8a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-from-the-company-portal-app-for-windows-10"></a>Wysyłanie dzienników z aplikacji Portal firmy w systemie Windows 10 do administratora IT
+# <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Wysyłanie dzienników z aplikacji Portal firmy w systemie Windows 10 do działu pomocy technicznej Twojej firmy
 
-Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Windows 10 wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
+Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Windows 10 wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
 
 1.  Otworzyć aplikację **Portal firmy**.
 2.  Wybierz koło zębate **Ustawienia**, a następnie **Wyślij dzienniki**.
-3.  Zostanie otwarte okno **Udostępnij**. Wybierz pozycję **Poczta**. Spowoduje to utworzenie wiadomości e-mail z dołączonymi dziennikami aplikacji Portal firmy, które będzie można wysłać administratorowi IT.
+3.  Zostanie otwarte okno **Udostępnij**. Wybierz pozycję **Poczta**. Spowoduje to utworzenie wiadomości e-mail z dołączonymi dziennikami aplikacji Portal firmy, które będzie można wysłać do działu pomocy technicznej Twojej firmy .
 
-  ![Okno dialogowe Wyślij dzienniki ze strony Ustawienia w aplikacji Portal firmy. Link będzie zawierać następujące informacje: „Wyślij dzienniki — Wyślij dzienniki diagnostyczne do administratora IT, aby ułatwić rozwiązanie problemów z Portalem firmy”.](./media/w10-share-logs.png)
+  ![Okno dialogowe Wyślij dzienniki ze strony Ustawienia w aplikacji Portal firmy. Link będzie zawierać następujące informacje: „Wyślij dzienniki — Wyślij dzienniki diagnostyczne do działu pomocy technicznej Twojej firmy, aby ułatwić rozwiązanie problemów z Portalem firmy”.](./media/w10-share-logs.png)
 
-Być może trzeba będzie również wysłać [dzienniki z aplikacji Ustawienia](send-logs-to-your-it-admin-settings-windows.md), które jeszcze bardziej ułatwią administratorowi IT rozwiązanie wszelkich napotkanych problemów. 
+Być może trzeba będzie również wysłać [dzienniki z aplikacji Ustawienia](send-logs-to-your-it-admin-settings-windows.md), które jeszcze bardziej ułatwią działowi pomocy technicznej Twojej firmy rozwiązanie wszelkich napotkanych problemów. 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

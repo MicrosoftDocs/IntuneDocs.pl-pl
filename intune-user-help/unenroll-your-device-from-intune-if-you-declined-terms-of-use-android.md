@@ -1,5 +1,5 @@
 ---
-title: "Wyrejestrowywanie urządzenia w przypadku odrzucenia warunków użytkowania | Dokumentacja firmy Microsoft"
+title: "Wyrejestrowywanie urządzenia w przypadku odrzucenia warunków użytkowania | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b99ce8b30e25960e09e39b81f0f58aa09af2affa
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d96619693c879d7e3041b6554363bea58f6792a5
+ms.sourcegitcommit: 659fe1b08eb7f02bc7eaed6b9e21a95fa1ef45b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="unenroll-your-device-if-you-declined-terms-of-use"></a>Wyrejestrowywanie urządzenia w przypadku odrzucenia warunków użytkowania
 
@@ -40,4 +40,4 @@ Aby wyrejestrować urządzenie z usługi Intune i odinstalować aplikację Porta
 
     Teraz możesz odinstalować aplikację Portal firmy.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android firmy Microsoft</a>.
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.

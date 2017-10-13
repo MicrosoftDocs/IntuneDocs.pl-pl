@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 787fbdd470b4e1fbb4cb3e22ba4065e52d4c63f8
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: afb3aeff7a7c6cc481d24bac3a61de0816b4d34b
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
@@ -90,12 +90,12 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń 
 
 6. Wybierz pozycję **Ustawienia zarządzania urządzeniami**. Te pozycje są konfigurowane podczas aktywacji i do ich zmiany wymagane jest zresetowanie do ustawień fabrycznych. Skonfiguruj następujące ustawienia profilu, a następnie wybierz pozycję **Zapisz**:
 
-  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, opcja zezwalania parowania ustawiona na odrzucanie wszystkich. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
+  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, zezwalanie na parowanie ustawione na odrzucanie wszystkiego. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
 
     - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
 
      - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia.
-   - **Udostępnione urządzenie iPad** — wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu **Nadzorowane**. Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+   - **Udostępnione urządzenie iPad** — (wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu nadzorowanego). Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
    >[!NOTE]
    >Jeśli opcja **Koligacja użytkownika** jest ustawiona na wartość **Z koligacją użytkownika** lub tryb **Nadzorowane** jest ustawiony na wartość **Wyłączone**, tryb Udostępnione urządzenie iPad zostanie wyłączony dla profilu rejestracji.

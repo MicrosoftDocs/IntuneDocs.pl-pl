@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e47e6fd8bbb3476beb8bd9df22376fdfd339ba2e
-ms.sourcegitcommit: 83dd7a127898dd9528187aa8d430cc1be9dd7738
+ms.openlocfilehash: 398b6be25b1d927170571af23a9424a6d7e68c0b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
 
-Aplikacje zarządzane to aplikacje, które administrator IT może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem iOS, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
+Aplikacje zarządzane to aplikacje, które dział pomocy technicznej Twojej firmy może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmy w aplikacji zarządzanej na urządzeniu z systemem iOS, możesz zauważyć, że aplikacja działa w sposób nieco różniący się od oczekiwań. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
 
 Różne aplikacje zarządzane mogą również współpracować ze sobą na urządzeniu, aby umożliwić wykonywanie codziennych zadań z zachowaniem ochrony danych firmowych. Na przykład jeśli otwierasz plik firmowy w jednej aplikacji zarządzanej, a do wyświetlenia tego pliku jest wymagana inna aplikacja zarządzana, automatycznie otwiera się aplikacja zarządzana, która umożliwia wyświetlenie pliku. Jeśli wymagana aplikacja jest niedostępna, pewne akcje, takie jak otwieranie dokumentu lub uzyskiwanie dostępu do linku sieci Web z dokumentu zarządzanego, mogą być niedostępne.
 
@@ -35,14 +35,14 @@ Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświ
 ### <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
 Aplikacje zarządzane można uzyskać na kilka sposobów:
 
--   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu administrator IT. Aby uzyskać informacje na temat rejestrowania, zobacz artykuł [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md).
+-   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu dział pomocy technicznej Twojej firmy. Aby uzyskać informacje na temat rejestrowania, zobacz artykuł [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md).
 
 -   Zainstaluj aplikację ze sklepu App Store, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
 
-Administrator IT może czasami zakupić wiele licencji dla instalowanej przez Ciebie aplikacji. Jeśli zostanie wyświetlony komunikat z prośbą o zaakceptowanie umowy programu Apple Volume Purchase Program, jest to zjawisko normalne i można go zaakceptować. Jeśli go nie zaakceptujesz, nie będzie można zainstalować aplikacji.
+Dział pomocy technicznej Twojej firmy może czasami zakupić wiele licencji dla instalowanej przez Ciebie aplikacji. Jeśli zostanie wyświetlony komunikat z prośbą o zaakceptowanie umowy programu Apple Volume Purchase Program, jest to zjawisko normalne i można go zaakceptować. Jeśli go nie zaakceptujesz, nie będzie można zainstalować aplikacji.
 
-### <a name="what-can-my-it-admin-manage-in-an-app"></a>Czym może zarządzać mój administrator IT w aplikacji?
-Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
+### <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?
+Oto kilka przykładowych opcji, którymi dział pomocy technicznej Twojej firmy może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
 
 -   Dostęp do określonych witryn sieci Web
 
@@ -62,4 +62,4 @@ Oto kilka przykładowych opcji, którymi administrator IT może zarządzać w ap
 
 -   Wymagania dotyczące szyfrowania danych
 
-Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

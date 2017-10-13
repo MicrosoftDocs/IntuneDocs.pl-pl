@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 075435a190fba28d548b1fa54ba7bafeec3ba217
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c75d7bee46f87bf171d105b6ebbf1ec0636e32df
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Android z usługi Intune?
 
 Wyrejestrowanie urządzenia z systemem Android z usługi Intune oznacza, że:
 
--   Administrator IT nie zarządza już urządzeniem.
+-   Dział pomocy technicznej Twojej firmy nie zarządza już tym urządzeniem.
 
 -   Nie masz już dostępu do danych i zasobów firmy.
 
@@ -40,4 +40,4 @@ Jeśli urządzenie jest skonfigurowane tylko do pobierania firmowych wiadomości
 
 Aby uzyskać instrukcje na temat sposobu wyrejestrowywania, zobacz [Wyrejestrowywanie urządzenia z usługi Intune przy użyciu aplikacji Portal firmy](unenroll-your-device-from-intune-android.md).
 
-Potrzebujesz pomocy? Skontaktuj się z administratorem IT (sprawdź [witrynę sieci Web Portal firmy](http://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android firmy Microsoft</a>.
+Potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.

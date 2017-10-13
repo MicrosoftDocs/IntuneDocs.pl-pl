@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2208d25b4e27f3a896c431f301a46392a4b21f80
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 407ef838fca1f47a191b5a99648dcc68433621f6
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Podczas korzystania z aplikacji Portal firmy występuje błąd
 
-Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iOS wystąpi błąd, możesz pomóc administratorowi IT rozwiązać problem, wysyłając mu odpowiednie informacje. Informacje o błędach możesz wysłać na różne sposoby:
+Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iOS wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając do niego odpowiednie informacje. Informacje o błędach możesz wysłać na różne sposoby:
 
 -   Po wystąpieniu komunikatów alertów o błędzie naciśnij pozycję **Raport**.
 
@@ -32,4 +32,4 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iO
 
 -   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie naciśnij pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

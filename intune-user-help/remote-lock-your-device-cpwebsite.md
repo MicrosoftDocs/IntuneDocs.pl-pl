@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a213a46066de4244df23d0cd532b5fb4596ede77
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3976327decf6b1850baed8e781609e458d375aa1
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Zdalne blokowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -28,7 +28,7 @@ Wypadki się zdarzają, a urządzenia czasem giną lub się gubią. Jeśli urzą
 
 [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
 
-Aby zapewnić sobie bezpieczeństwo danych, można zablokować urządzenie przy użyciu opcji zdalnego blokowania dostępnej z poziomu [witryny sieci Web Portal firmy](http://portal.manage.microsoft.com). Zdalne blokowanie działa w urządzeniach z systemem operacyjnym:
+Aby zapewnić sobie bezpieczeństwo danych, można zablokować urządzenie przy użyciu opcji zdalnego blokowania dostępnej z poziomu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com). Zdalne blokowanie działa w urządzeniach z systemem operacyjnym:
 
 * Android
 * iOS
@@ -38,7 +38,7 @@ Aby zapewnić sobie bezpieczeństwo danych, można zablokować urządzenie przy 
 
 ## <a name="to-use-remote-lock-to-lock-your-device"></a>Aby zablokować urządzenie przy użyciu funkcji zdalnego blokowania:
 
-1.  W [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/Intune/whats-new/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
+1.  W [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/Intune/whats-new/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
 
   ![Obraz witryny sieci Web Portal firmy ze znajdującym się po lewej stronie ekranu rozwiniętym menu bocznym oraz przyciskami Strona główna, Wszystkie aplikacje, Moje urządzenia, Pomoc techniczna i Wyloguj.](/media/iwp-expanded-sidebar.png)
 
@@ -61,8 +61,8 @@ Aby zapewnić sobie bezpieczeństwo danych, można zablokować urządzenie przy 
     * Kafelek, na którym jest wyświetlana nazwa urządzenia, w sekcji **Moje urządzenia**.
 
 > [!Note]
-> Jeśli zostanie wyświetlone powiadomienie „Zdalne blokowanie nie powiodło się”, zaczekaj kilka minut, a następnie spróbuj ponownie zablokować urządzenie. Po podjęciu kolejnej próby stan zmieni się ponownie na „Zdalne blokowanie oczekuje”. Jeśli ponowienie próby nie rozwiąże problemu, konieczny będzie kontakt z administratorem IT organizacji.
+> Jeśli zostanie wyświetlone powiadomienie „Zdalne blokowanie nie powiodło się”, zaczekaj kilka minut, a następnie spróbuj ponownie zablokować urządzenie. Po podjęciu kolejnej próby stan zmieni się ponownie na „Zdalne blokowanie oczekuje”. Jeśli ponowienie próby nie rozwiąże problemu, konieczny będzie kontakt z działem pomocy technicznej Twojej firmy.
 
 Jeśli po użyciu opcji zdalnego blokowania odnajdziesz swoje urządzenie i zechcesz je odblokować, po prostu wprowadź kod dostępu.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

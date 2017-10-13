@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 393a1aa0f9e917d2a124f4deaa086f0369ded4ef
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0b6667bc25263cdc8d638027f4e846724e15b1d0
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="set-your-pin-or-password"></a>Ustaw swój numer PIN lub hasło
 
-Jeśli korzystasz z usługi Intune w celu uzyskiwania dostępu do danych służbowych, administrator IT może wymagać ustawienia na urządzeniu z systemem Android numeru PIN lub hasła. Mogą również pojawić się komunikaty informujące o konieczności utworzenia dłuższego lub bardziej złożonego numeru PIN albo hasła, co zapewni większe bezpieczeństwo. Te kody dostępu są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
+Jeśli korzystasz z usługi Intune w celu uzyskiwania dostępu do danych służbowych, dział pomocy technicznej Twojej firmy może wymagać ustawienia na urządzeniu z systemem Android numeru PIN lub hasła. Mogą również pojawić się komunikaty informujące o konieczności utworzenia dłuższego lub bardziej złożonego numeru PIN albo hasła, co zapewni większe bezpieczeństwo. Te kody dostępu są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
 
 Następujące kroki służą do ustawiania numeru PIN i hasła.
 
@@ -33,4 +33,4 @@ Następujące kroki służą do ustawiania numeru PIN i hasła.
 2.  Wybierz i potwierdź nowe hasło.
 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

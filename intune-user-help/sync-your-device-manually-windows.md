@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 05b290345c761372850fb501a3707dbd53a3ef07
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cf43ed13b852cccbce44e2a31890e164e3519490
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
 
@@ -62,7 +62,7 @@ Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie p
 
     ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)
 
-2. Wybierz swoje konto służbowe. W zależności od tego, jak administrator IT skonfigurował środowisko, mogą zostać wyświetlone dwa konta wyglądające podobnie jak na poniższym przykładzie. Obok jednego konta jest wyświetlona ikona aktówki, a obok drugiego — logo firmy Microsoft.
+2. Wybierz swoje konto służbowe. W zależności od tego, jak dział pomocy technicznej Twojej firmy skonfigurował środowisko, mogą zostać wyświetlone dwa konta wyglądające podobnie jak na poniższym przykładzie. Obok jednego konta jest wyświetlona ikona aktówki, a obok drugiego — logo firmy Microsoft.
 
     - Jeśli widzisz konto z aktówką, wybierz je i poszukaj pod nim przycisku **Informacje**.
     - Jeśli widzisz tylko konto z logo firmy Microsoft, wybierz je i poszukaj pod nim przycisku **Informacje**.
@@ -129,4 +129,4 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu pr
 
    W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).

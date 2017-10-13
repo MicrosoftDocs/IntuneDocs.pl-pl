@@ -14,31 +14,31 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: fbb3143baa0063343d639d2df6101ebaec98ee65
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7272c3d21674e4e0029cf49140638d9a3fd3306f
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="set-or-change-your-passcode"></a>Ustawianie lub zmienianie kodu dostępu
 
-Jeśli urządzenie z systemem iOS nie jest zgodne z zasadami kodów dostępu określonymi przez administratora IT, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby kod dostępu spełniał wymagania.
+Jeśli urządzenie z systemem iOS nie jest zgodne z zasadami kodów dostępu określonymi przez dział pomocy technicznej Twojej firmy, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby kod dostępu spełniał wymagania.
 
-Administrator IT może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Na przykład może być wymagana określona liczba znaków lub kombinacja cyfr, liter i znaków w kodzie dostępu. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach można tylko objaśnić, jak ustawić lub zmienić kod dostępu. Nie objaśniono w nich każdej możliwej kombinacji wymagań. Te kody dostępu są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
+Dział pomocy technicznej Twojej firmy może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Na przykład może być wymagana określona liczba znaków lub kombinacja cyfr, liter i znaków w kodzie dostępu. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach można tylko objaśnić, jak ustawić lub zmienić kod dostępu. Nie objaśniono w nich każdej możliwej kombinacji wymagań. Te kody dostępu są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
 
-Jeśli masz problem z ustawieniem kodu dostępu spełniającego wymagania dotyczące kodów dostępu, skontaktuj się z administratorem IT w celu uzyskania pomocy.
+Jeśli masz problem z ustawieniem kodu dostępu spełniającego wymagania dotyczące kodów dostępu, skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania pomocy.
 
 ## <a name="set-your-passcode"></a>Ustawianie kodu dostępu
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. W menu **Touch ID i kod dostępu** wybierz pozycję **Włącz kod dostępu**.
-3. Wprowadź nowy kod dostępu spełniający wymagania administratora IT, a następnie wprowadź go ponownie w celu zweryfikowania.
+3. Wprowadź nowy kod dostępu spełniający wymagania działu pomocy technicznej Twojej firmy, a następnie wprowadź go ponownie w celu zweryfikowania.
 
 ## <a name="change-your-passcode"></a>Zmienianie kodu dostępu
 
 1. Naciśnij pozycję **Ustawienia** > **Touch ID i kod dostępu**.
 2. Wprowadź kod dostępu. Zostanie otwarte menu **Touch ID i kod dostępu**.
 2. Naciśnij pozycję **Zmień kod dostępu** i wprowadź stare hasło.
-3. Wprowadź nowy kod dostępu spełniający wymagania administratora IT, a następnie wprowadź go ponownie w celu zweryfikowania.
+3. Wprowadź nowy kod dostępu spełniający wymagania działu pomocy technicznej Twojej firmy, a następnie wprowadź go ponownie w celu zweryfikowania.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](http://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
