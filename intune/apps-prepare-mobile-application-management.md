@@ -2,8 +2,8 @@
 title: "Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune"
 description: "Informacje przedstawione w tym temacie ułatwiają określenie, kiedy należy używać narzędzia opakowującego aplikację i zestawu SDK aplikacji w celu umożliwienia niestandardowym aplikacjom biznesowym użycia zasad zarządzania aplikacjami mobilnymi."
 keywords: 
-author: mtillman
-ms.author: mtillman
+author: mattbriggs
+ms.author: mabriggs
 manager: angrobe
 ms.date: 02/08/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2394068c43e652accfb428ff644229f794d33f24
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: e6c464e16079df0c1188870b234615c811963f08
+ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -57,7 +57,7 @@ Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikac
 
 Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](app-sdk-get-started.md).
 
-### <a name="reasons-to-use-the-sdk"></a>Powody do korzystania z zestawu SDK
+### <a name="reasons-to-use-the-sdk"></a>Powody korzystania z zestawu SDK
 * Twoja aplikacja nie ma wbudowanych funkcji ochrony danych
 * Twoja aplikacja jest złożona i zawiera wiele środowisk
 * Twoja aplikacja jest dostępna w publicznym sklepie z aplikacjami, takim jak Google Play lub App Store firmy Apple
