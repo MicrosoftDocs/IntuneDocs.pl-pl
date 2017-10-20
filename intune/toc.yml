@@ -536,6 +536,8 @@
       items:
         - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
           href: reports-proc-get-a-link-powerbi.md
+        - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+          href: reports-proc-create-with-odata.md
 - name: Automatyzacja i dostosowywanie
   items:
     - name: Konfigurowanie niestandardowych ustawień urządzenia
