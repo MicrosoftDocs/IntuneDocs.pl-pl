@@ -5,20 +5,21 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 09/07/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bbb67c9225ef99f57f12c839b81b95a1956b70f3
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 5140d2fa04a229dda0896a74333801899f5946e2
+ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Zarządzanie aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych, w usłudze Microsoft Intune
 
@@ -29,8 +30,7 @@ Sklep z aplikacjami systemu iOS umożliwia zakup wielu licencji dla aplikacji, k
 Usługa Microsoft Intune ułatwia zarządzanie aplikacjami zakupionymi za pośrednictwem tego programu przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana.
 
 > [!Important]
-> Obecnie usługa Intune przypisuje licencje aplikacji z systemem iOS zakupionymi w ramach programu zakupów zbiorczych Apple Volume Purchase Program for Business (VPP) do użytkowników, nie urządzeń. W związku z tym użytkownicy muszą wprowadzić hasło identyfikatora Apple ID, aby zainstalować aplikację.
-> Program Apple Volume Purchase Program for Education oraz aplikacje B2B nie są obsługiwane w tym wydaniu.
+> Obecnie usługa Intune przypisuje licencje aplikacji dla systemu iOS zakupione w ramach programu zakupów zbiorczych Apple Volume Purchase Program for Business (VPP) do użytkowników i urządzeń. W związku z tym użytkownicy mogą być zmuszeni do wprowadzenia hasła identyfikatora Apple ID, aby zainstalować aplikację.
 
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Zarządzanie zbiorczo zakupionymi aplikacjami dla urządzeń z systemem iOS
 Wiele licencji dla aplikacji z systemem iOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business (VPP)](http://www.apple.com/business/vpp/). Obejmuje to skonfigurowanie konta VPP w witrynie sieci Web firmy Apple i przekazanie tokenu VPP firmy Apple do usługi Intune.  Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego.
