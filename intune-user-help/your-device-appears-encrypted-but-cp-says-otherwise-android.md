@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/29/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 208cf6eb2d29ec5458d97d0a4481cec420acc281
-ms.sourcegitcommit: 59811bf1183b3ef9c9e81eded634bd0d3124d0bb
+ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
+ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
 
@@ -39,6 +39,15 @@ Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem
 ### <a name="downgrade-your-version-of-android"></a>Zmień wersję systemu Android na starszą
 
 Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0+, należy to zrobić. Zmiana wersji urządzenia może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z działem pomocy technicznej Twojej firmy, aby rozwiązać ten problem. Informacje kontaktowe działu pomocy technicznej Twojej firmy znajdziesz w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
+
+### <a name="encrypt-the-entire-device"></a>Szyfrowanie całego urządzenia
+
+Niektóre urządzenia umożliwiają wybór między szyfrowaniem całego urządzenia i szyfrowaniem tylko używanego miejsca. Wybierz opcję szyfrowania całego urządzenia zamiast opcji „tylko używane miejsce”. Jeśli masz już zaszyfrowane tylko używane miejsce:
+
+1. [Usuń to urządzenie z Portalu firmy](unenroll-your-device-from-intune-android.md)
+2. Odszyfruj używane miejsce
+3. Zaszyfruj całe urządzenie
+4. Zarejestruj ponownie urządzenie
 
 ## <a name="specific-manufacturer-issues"></a>Problemy z urządzeniami niektórych producentów
 

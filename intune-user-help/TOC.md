@@ -62,6 +62,7 @@
 ### [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
 ### [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos.md)
 ### [Rejestrowanie urządzenia z systemem macOS przy użyciu aplikacji Portal firmy](enroll-your-device-in-intune-macos-cp.md)
+### [Postępowanie w przypadku nieco innego urządzenia](device-little-different-jamf.md)
 
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 ### [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)

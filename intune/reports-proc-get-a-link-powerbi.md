@@ -5,7 +5,7 @@ keywords: "Magazyn danych usługi Intune"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 10/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b3ce7e895920d2bb9ff3537fd0ef87ecb4efcc0
-ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
+ms.openlocfilehash: 0b3436a22543eb07cedb0780984766bcb7faa284
+ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
@@ -34,13 +34,13 @@ Możesz pobrać plik do użycia z usługą Microsoft Power BI, który umożliwia
   -  Aktualizacje oprogramowania
   -  Dzienniki spisu urządzeń
 
-Dostępne są także trendy wyróżnione do aktualizacji oprogramowania, rejestracji, zgodności i profilu konfiguracji urządzeń. Przykładowe wykresy i raporty dodają do kanwy przyjazne dla użytkownika filtry. Aby użyć filtrów zaawansowanych, zapoznaj się z zawartością okienka **Filtr** w usłudze Power BI. 
+Dostępne są także trendy wyróżnione do aktualizacji oprogramowania, rejestracji, zgodności i profilu konfiguracji urządzeń. Przykładowe wykresy i raporty dodają do kanwy przyjazne dla użytkownika filtry. Aby użyć filtrów zaawansowanych, zapoznaj się z zawartością okienka **Filtr** w usłudze Power BI.
 
 W poniższej procedurze pokazano, jak pobrać plik usługi Power BI i jak użyć linku usługi OData w usłudze Power BI.
 
 ## <a name="install-power-bi"></a>Instalowanie usługi Power BI
 
-Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny [PowerBI.microsoft.com](https://powerbi.microsoft.com/en-us/desktop) 
+Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny [PowerBI.microsoft.com](https://powerbi.microsoft.com/en-us/desktop)
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Ładowanie danych i raportów przy użyciu pliku usługi Power BI (pbix)
 
@@ -54,7 +54,7 @@ Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzie
 3.  Kliknij pozycję **Pobierz plik usługi Power BI**. Plik z rozszerzeniem pbix zostanie pobrany do wskazanej lokalizacji.
 4.  Otwórz plik w usłudze Power BI. Zostaną załadowane *raporty magazynu danych usługi Intune*, ale może to chwilę potrwać, ponieważ konieczne jest uzyskanie danych dzierżawy.
 5.  Kliknij pozycję **Odśwież**, aby załadować dane dzierżawy i przejrzeć raporty.
-6.  Jeśli usługa Power BI nie dokona uwierzytelnienia przy użyciu poświadczeń usługi Azure Active Directory, zostanie wyświetlony monit o podanie poświadczeń. Wybierając poświadczenia, jako metodę uwierzytelnienia wskaż **Konto organizacyjne**.
+6.  Jeśli usługa Power BI nie dokona uwierzytelnienia przy użyciu poświadczeń usługi Azure Active Directory, zostanie wyświetlony monit o podanie poświadczeń. Wybierając poświadczenia, jako metodę uwierzytelnienia wskaż **Konto służbowe**.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Ładowanie danych w usłudze Power BI przy użyciu linku usługi OData
 
@@ -69,7 +69,7 @@ Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąż
 7. Wpisz lub wklej **adres URL usługi OData** w polu adresu URL.
 8. Kliknij przycisk **OK**.
 9. Jeśli nie dokonano uwierzytelnienia w usłudze Azure AD dla dzierżawy z poziomu klienta aplikacji Power BI Desktop, wpisz swoje poświadczenia.  
-    1.  Wybierz pozycję **Konto organizacyjne**.  
+    1.  Wybierz pozycję **Konto służbowe**.  
     2.  Wpisz nazwę użytkownika i hasło.  
     3.  Kliknij przycisk **Zaloguj**.  
     4.  Kliknij przycisk **Połącz**.  
@@ -80,5 +80,5 @@ Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąż
 Możesz znaleźć odpowiedzi na pytania dotyczące środowiska, takie jak liczba rejestrowanych urządzeń na dzień w ostatnim tygodniu. Możesz uzyskać wgląd w dzierżawę usługi Intune i populację klientów przy użyciu raportów w pliku pbix (pliku usługi Power BI magazynu danych usługi Intune) pobranego z bloku na platformie Azure. Usługa Intune umożliwia jednak rozszerzenie lub ponowne użycie danych na szereg dodatkowych sposobów. Usługa Power BI i interfejs API magazynu danych usługi Intune dają znacznie większe możliwości, na przykład:
 
 <!-- -  You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
- -  Dane dzierżawy są organizowane, aby ułatwić ściąganie analizy danych. Aby uzyskać więcej informacji na temat sposobu organizowania danych, zobacz [Model danych magazynu danych](reports-ref-data-model.md). 
+ -  Dane dzierżawy są organizowane, aby ułatwić ściąganie analizy danych. Aby uzyskać więcej informacji na temat sposobu organizowania danych, zobacz [Model danych magazynu danych](reports-ref-data-model.md).
  -  Możesz również uzyskać dostęp do danych za pomocą interfejsu RESTful i dołączyć dane do własnej aplikacji. Aby uzyskać więcej informacji, zobacz [Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST](reports-proc-data-rest.md).
