@@ -162,6 +162,8 @@
               href: windows-enroll.md
             - name: Rejestrowanie zbiorcze
               href: windows-bulk-enroll.md
+            - name: Program Windows AutoPilot Deployment
+              href: enrollment-autopilot.md
         - name: Konfiguracja rejestrowania urządzeń z systemem Android
           href: android-enroll.md
         - name: Konfigurowanie rejestrowania urządzeń z systemem iOS
@@ -591,21 +593,19 @@
         - name: Model danych magazynu danych
           href: reports-ref-data-model.md
           items:
-            - name: Odwołanie do jednostki Date
+            - name: Dokumentacja jednostki Date
               href: reports-ref-date.md
             - name: Dokumentacja jednostki użytkownika
               href: reports-ref-user.md
             - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
               href: reports-ref-mobile-app-management.md
-            - name: Odwołanie do jednostek urządzeń
+            - name: Dokumentacja jednostek urządzeń
               href: reports-ref-devices.md
             - name: Dokumentacja jednostek aplikacji
               href: reports-ref-application.md
-            - name: Dokumentacja jednostek zasad
-              href: reports-ref-policy.md
+            - name: Dokumentacja jednostki skojarzeń urządzenia użytkownika
+              href: reports-ref-userdeviceassociations.md
     - name: Ładowanie bezpośrednie aplikacji systemu Windows
-      href: app-sideload-windows.md
-    - name: Korzystanie z interfejsu API programu Graph na potrzeby usługi Intune
       href: intune-graph-apis.md
       items:
         - name: Interfejsy API programu Graph dla odwołań usługi Intune
