@@ -381,6 +381,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Tworzenie zasad dla systemu Windows
           href: compliance-policy-create-windows.md
+        - name: Akcje w przypadku niezgodności
+          href: actions-for-noncompliance.md
         - name: Monitorowanie zgodności urządzenia
           href: compliance-policy-monitor.md
     - name: Zarządzanie dostępem warunkowym
@@ -461,6 +463,8 @@
           href: windows-hello.md
     - name: Zarządzanie rolami
       href: role-based-access-control.md
+    - name: Zarządzanie wersjami systemu operacyjnego
+      href: manage-os-versions.md
     - name: Zarządzanie aktualizacjami oprogramowania
       href: windows-update-for-business-configure.md
     - name: Zarządzanie komputerami przy użyciu oprogramowania agenta
@@ -593,13 +597,13 @@
         - name: Model danych magazynu danych
           href: reports-ref-data-model.md
           items:
-            - name: Dokumentacja jednostki Date
+            - name: Odwołanie do jednostki Date
               href: reports-ref-date.md
             - name: Dokumentacja jednostki użytkownika
               href: reports-ref-user.md
             - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
               href: reports-ref-mobile-app-management.md
-            - name: Dokumentacja jednostek urządzeń
+            - name: Odwołanie do jednostek urządzeń
               href: reports-ref-devices.md
             - name: Dokumentacja jednostek aplikacji
               href: reports-ref-application.md
