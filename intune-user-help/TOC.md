@@ -26,6 +26,7 @@
 
 ### [Rozwiązywanie typowych problemów z systemem Android](troubleshoot-your-device-android.md)
 #### [Sprawdzanie zgodności urządzeń](check-compliance-on-your-device-android.md)
+#### [Synchronizowanie wiadomości e-mail w programie Outlook w trybie oszczędzania baterii](power-saving-mode-android.md)
 
 #### Korzystanie z dzienników w celu rozwiązywania problemów
 ##### [Włączanie pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
