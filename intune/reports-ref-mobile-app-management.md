@@ -14,11 +14,11 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 44358d68a653760804f11668ab64d30ebf7ae9eb
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 32b5f3515c0b77ea8f411c1c1f42e7b44669ca23
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
 
@@ -38,13 +38,13 @@ Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które s
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| ApplicationKey |Unikatowy identyfikator aplikacji MAM w magazynie danych |123 |
-| ApplicationName |Nazwa aplikacji MAM |„Word” |
-| ApplicationId |Identyfikator aplikacji dla aplikacji MAM |b66bc706-ffff-7437-0340-032819502773 |
-| IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. False — to jest najnowszy rekord dla tej aplikacji MAM. |True/False |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych |2016-11-23 12:00:00 |
-| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej aplikacji MAM w magazynie danych |2016-11-23 12:00:00 |
+| ApplicationKey |Unikatowy identyfikator aplikacji MAM w magazynie danych. |123 |
+| ApplicationName |Nazwa aplikacji MAM. |„Word” |
+| ApplicationId |Identyfikator aplikacji dla aplikacji MAM. |b66bc706-ffff-7437-0340-032819502773 |
+| IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |True/False |
+| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 
 ## <a name="mamapplicationinstance"></a>MamApplicationInstance
 
@@ -52,21 +52,21 @@ Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarz�
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| ApplicationInstanceKey |Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy |123 |
-| UserId |Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationInstanceId |Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym |b66bc706-ffff-7437-0340-032819502773 |
+| ApplicationInstanceKey |Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy. |123 |
+| UserId |Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM. |b66bc706-ffff-7437-0340-032819502773 |
+| ApplicationInstanceId |Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
 | ApplicationId |Identyfikator aplikacji dla tej aplikacji MAM |com.microsoft.groupies-daily.<IOS> |
-| ApplicationVersion |Wersja aplikacji dla tej aplikacji MAM |2 |
+| ApplicationVersion |Wersja aplikacji dla tej aplikacji MAM. |2 |
 | CreatedDate |Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
-| Platforma |Platforma urządzenia, na której zainstalowano tę aplikację MAM |2 |
-| PlatformVersion |Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM |2.2 |
-| SdkVersion |Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana |3.2 |
-| DeviceId |Identyfikator urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM |b66bc706-ffff-7437-0340-032819502773 |
-| DeviceName |Nazwa urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM |„MyDevice” |
-| IsDeleted |Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |True/False |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych |2016-11-23 12:00:00 |
-| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych |2016-11-23 12:00:00 |
+| Platforma |Platforma urządzenia, na której zainstalowano tę aplikację MAM. |2 |
+| PlatformVersion |Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM. |2.2 |
+| SdkVersion |Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana. |3.2 |
+| DeviceId |Identyfikator urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |b66bc706-ffff-7437-0340-032819502773 |
+| DeviceName |Nazwa urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |„MyDevice” |
+| IsDeleted |Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |True/False |
+| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -77,12 +77,12 @@ Jednostka **MamCheckin** reprezentuje dane zebrane po zameldowaniu wystąpienia 
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych | 20160703 |
-| ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM |1900-02-05 12:00:00 |
-| UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM |1900-12-01 12:00:00 |
-| ApplicationKey |Klucz aplikacji MAM, która została zameldowana |1900-01-10 12:00:00 |
-| DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM |1900-02-01 12:00:00 |
-| PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM |1900-01-01 12:00:00 |
+| DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych. | 20160703 |
+| ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. |1900-02-05 12:00:00 |
+| UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. |1900-12-01 12:00:00 |
+| ApplicationKey |Klucz aplikacji MAM, która została zameldowana. |1900-01-10 12:00:00 |
+| DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. |1900-02-01 12:00:00 |
+| PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |1900-01-01 12:00:00 |
 | EffectiveAppliedPolicyKey |Reprezentuje efektywnie zastosowane zasady skojarzone z aplikacją MAM, która została zameldowana. Efektywne zastosowanie zasad jest wynikiem scalenia wszystkich zasad dotyczących danej aplikacji i użytkownika. |1900-02-05 12:00:00 |
 | LastCheckInDate |Data i godzina ostatniego zameldowania tej aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
 
@@ -92,10 +92,10 @@ Jednostka **MamDeviceHealth** reprezentuje urządzenia, które mają wdrożone z
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| DeviceHealthKey |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji w magazynie danych — klucz zastępczy |1900-01-01 12:00:00 |
-| DeviceHealth |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji — podobny do wartości DeviceHealthKey, ale identyfikator jest kluczem naturalnym |1900-01-01 12:00:00 |
-| DeviceHealthName |Reprezentuje stan urządzenia. Not available — brak informacji o tym urządzeniu. Healthy — urządzenie nie ma zdjętych zabezpieczeń systemu. Unhealthy — urządzenie ma zdjęte zabezpieczenia systemu. |Not Available Healthy Unhealthy |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji kondycji konkretnego urządzenia MAM w magazynie danych |2016-11-23 12:00:00 |
+| DeviceHealthKey |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji w magazynie danych — klucz zastępczy. |1900-01-01 12:00:00 |
+| DeviceHealth |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji — podobny do wartości DeviceHealthKey, ale identyfikator jest kluczem naturalnym. |1900-01-01 12:00:00 |
+| DeviceHealthName |Reprezentuje stan urządzenia. <br>Not available — brak informacji o tym urządzeniu. <br>Healthy — urządzenie nie ma zdjętych zabezpieczeń systemu. <br>Unhealthy — urządzenie ma zdjęte zabezpieczenia systemu. |Not Available Healthy Unhealthy |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji kondycji konkretnego urządzenia MAM w magazynie danych. |2016-11-23 12:00:00 |
 
 ## <a name="mameffectivepolicy"></a>MamEffectivePolicy
 
@@ -103,7 +103,7 @@ Jednostka **MamEffectivePolicy** zawiera listę wszystkich efektywnych zasad zar
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| EffectivePolicyKey |Unikatowy identyfikator efektywnych zasad MAM w magazynie danych |2 |
+| EffectivePolicyKey |Unikatowy identyfikator efektywnych zasad MAM w magazynie danych. |2 |
 | RealPolicyKey |Unikatowy identyfikator zasad MAM utworzonych przez informatyka. |1 |
 | RowCreatedDateTimeUtc |Data i godzina w formacie UTC utworzenia efektywnych zasad MAM w magazynie danych. |2016-11-23 12:00:00 |
 
@@ -124,7 +124,7 @@ Jednostka **MamPlatform** tworzy listę nazw platform i typów, na których zain
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| PlatformKey |Unikatowy identyfikator platformy w magazynie danych — klucz zastępczy |123 |
-| Platforma |Unikatowy identyfikator platformy — podobny do wartości PlatformKey, ale jest kluczem naturalnym |123 |
-| PlatformName |Nazwa platformy |Not Available None Windows IOS Android |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej platformy w magazynie danych |2016-11-23 12:00:00 |
+| PlatformKey |Unikatowy identyfikator platformy w magazynie danych — klucz zastępczy. |123 |
+| Platforma |Unikatowy identyfikator platformy — podobny do wartości PlatformKey, ale jest kluczem naturalnym. |123 |
+| PlatformName |Nazwa platformy |Niedostępny <br>Brak <br>Windows <br>System iOS <br>Urządzenia z systemem Android. |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej platformy w magazynie danych. |2016-11-23 12:00:00 |

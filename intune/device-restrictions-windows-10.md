@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fee635b6c50355a4af8b418c9f8e7fae8e88cff0
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 759207adf49308dcd4e6253627e4a1213be22904
+ms.sourcegitcommit: 2e77fe177a3df1dfe48e72f4c2bfaa1f0494c621
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
 
@@ -64,7 +64,7 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
     -   **Zapobiegaj ponownemu użyciu starych haseł** — określa liczbę poprzednich haseł zapamiętywanych przez urządzenie.
     -   **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności** — określa, że użytkownik musi wprowadzić hasło, aby odblokować urządzenie (tylko system Windows 10 Mobile).
     -   **Proste hasła** — umożliwia korzystanie z prostych haseł, takich jak 1111 lub 1234. To ustawienie zezwala również na używanie haseł obrazkowych systemu Windows lub blokuje tę możliwość.
--   **Szyfrowanie** — włącza szyfrowanie na urządzeniach docelowych (tylko system Windows 10 Mobile).
+-   **Szyfrowanie** — włącz szyfrowanie na urządzeniach docelowych.
 
 ## <a name="personalization"></a>Personalizacja
 

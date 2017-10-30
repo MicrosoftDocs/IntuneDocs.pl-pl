@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b3436a22543eb07cedb0780984766bcb7faa284
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 56f80e7cede68364d1a98b58acab3e7dd2f51b73
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
@@ -38,6 +38,8 @@ Dostępne są także trendy wyróżnione do aktualizacji oprogramowania, rejestr
 
 W poniższej procedurze pokazano, jak pobrać plik usługi Power BI i jak użyć linku usługi OData w usłudze Power BI.
 
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
+
 ## <a name="install-power-bi"></a>Instalowanie usługi Power BI
 
 Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny [PowerBI.microsoft.com](https://powerbi.microsoft.com/en-us/desktop)
@@ -52,9 +54,9 @@ Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzie
 1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę **Intune**.  
 2.  Otwórz blok **Interfejs API magazynu danych usługi Microsoft Intune (wersja zapoznawcza)**.
 3.  Kliknij pozycję **Pobierz plik usługi Power BI**. Plik z rozszerzeniem pbix zostanie pobrany do wskazanej lokalizacji.
-4.  Otwórz plik w usłudze Power BI. Zostaną załadowane *raporty magazynu danych usługi Intune*, ale może to chwilę potrwać, ponieważ konieczne jest uzyskanie danych dzierżawy.
+4.  Otwórz plik w usłudze Power BI. Zostaną załadowane *raporty magazynu danych usługi Intune*, ale pobieranie danych dzierżawy może chwilę potrwać.
 5.  Kliknij pozycję **Odśwież**, aby załadować dane dzierżawy i przejrzeć raporty.
-6.  Jeśli usługa Power BI nie dokona uwierzytelnienia przy użyciu poświadczeń usługi Azure Active Directory, zostanie wyświetlony monit o podanie poświadczeń. Wybierając poświadczenia, jako metodę uwierzytelnienia wskaż **Konto służbowe**.
+6.  Jeśli usługa Power BI nie dokona uwierzytelnienia przy użyciu poświadczeń usługi Azure Active Directory, zostanie wyświetlony monit o podanie poświadczeń. Wybierając poświadczenia, jako metodę uwierzytelnienia wskaż **Konto organizacyjne**.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Ładowanie danych w usłudze Power BI przy użyciu linku usługi OData
 
@@ -68,8 +70,8 @@ Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąż
 6. Wybierz pozycję **Podstawowe**.
 7. Wpisz lub wklej **adres URL usługi OData** w polu adresu URL.
 8. Kliknij przycisk **OK**.
-9. Jeśli nie dokonano uwierzytelnienia w usłudze Azure AD dla dzierżawy z poziomu klienta aplikacji Power BI Desktop, wpisz swoje poświadczenia.  
-    1.  Wybierz pozycję **Konto służbowe**.  
+9. Jeśli nie dokonano uwierzytelnienia w usłudze Azure AD dla dzierżawy z poziomu klienta aplikacji Power BI Desktop, wpisz swoje poświadczenia. Aby uzyskać dostęp do danych, musisz autoryzować się w usłudze Azure Active Directory (Azure AD) przy użyciu protokołu OAuth 2.0.  
+    1.  Wybierz pozycję **Konto organizacyjne**.  
     2.  Wpisz nazwę użytkownika i hasło.  
     3.  Kliknij przycisk **Zaloguj**.  
     4.  Kliknij przycisk **Połącz**.  

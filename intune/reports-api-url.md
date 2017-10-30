@@ -14,27 +14,17 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7723bb42eedcd97142f039ca52b60911fa91838b
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: f36327f21fbb2f08906a7621b701a4e6c9deee03
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Punkt końcowy interfejsu API magazynu danych usługi Intune
 
 Możesz korzystać z interfejsu API magazynu danych usługi Intune przy użyciu konta z kontrolą dostępu opartej na określonych rolach oraz przy użyciu poświadczeń usługi Azure AD. Następnie należy autoryzować klienta REST w usłudze Azure AD przy użyciu protokołu OAuth 2.0. I wreszcie należy utworzyć opisowy adres URL do wywołania zasobu magazynu danych.
 
-## <a name="azure-ad-and-intune-credential-requirements"></a>Wymagania dotyczące poświadczeń usług Azure AD i Intune
-
-Uwierzytelnianie i autoryzacja są oparte na poświadczeniach usługi Azure AD i kontroli dostępu opartej na rolach (RBAC). Wszyscy administratorzy globalni i administratorzy usługi Intune dla dzierżawy domyślnie mają dostęp do interfejsu API. Przy użyciu ról usługi Intune możesz zapewnić dostęp dla większej liczby użytkowników, dając im dostęp do **zasobu raportowania**.
-
-Wymagania dotyczące dostępu do interfejsu API są następujące:
-
-  -  Licencja usługi Intune musi być przypisana do użytkownika
-  -  Użytkownik musi być:
-      -  administratorem globalnym usługi Azure AD,
-      -  administratorem usługi Intune,
-      -  użytkownikiem z dostępem opartym na rolach do zasobu **Raporty**.
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
 
 ## <a name="authorization"></a>Autoryzacja
 
@@ -64,4 +54,4 @@ Bieżąca wersja interfejsu API to: `beta`.
 
 ## <a name="odata-query-options"></a>Opcje zapytania OData
 
-Bieżąca wersja obsługuje następujące parametry zapytania OData: `$skip, $top, $filter, $orderby`.
+Bieżąca wersja obsługuje następujące parametry zapytania OData: `$filter, $orderby, $select, $skip,` i `$top`.
