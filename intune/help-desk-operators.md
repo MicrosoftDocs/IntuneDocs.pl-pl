@@ -1,12 +1,12 @@
 ---
-title: "Portal pomocy technicznej służący do rozwiązywania problemów"
+title: "Portal pomocy technicznej służący do rozwiązywania problemów | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników"
 keywords: 
-author: NathBarn
-ms.author: NathBarn
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,58 +14,228 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 14b47727428fcd6a16f9960e21f70ee64c7757d1
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: f5678752830e2c4c9afbe75c9c6891d525eec34a
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Portal służący do rozwiązywania problemów pozwala operatorom pomocy technicznej i administratorom usługi Intune wyświetlać informacje dotyczące użytkowników w celu rozwiązywania zgłoszonych przez nich problemów. Organizacje, w których pracują operatorzy pomocy technicznej, mogą przypisać rolę **Operator pomocy technicznej** do grupy użytkowników, którzy będą wówczas mogli pomagać użytkownikom, korzystając z bloku Rozwiązywanie problemów.
+Portal służący do rozwiązywania problemów pozwala operatorom pomocy technicznej i administratorom usługi Intune wyświetlać informacje dotyczące użytkowników w celu rozwiązywania zgłoszonych przez nich problemów. Organizacje z działami pomocy technicznej mogą przypisać do grupy użytkowników rolę **operatora pomocy technicznej**. Rola operatora pomocy technicznej może używać bloku **Rozwiązywanie problemów**.
 
-Jeśli na przykład użytkownik zgłasza do działu pomocy technicznej problem techniczny dotyczący usługi Intune, operator pomocy technicznej wprowadza imię i nazwisko użytkownika. W usłudze Intune wyświetlane są przydatne dane, które mogą ułatwić rozwiązanie wielu problemów warstwy 1, w tym:
+Procedura dodawania roli operatora pomocy technicznej jest dostępna w artykule [Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune](/intune/role-based-access-control)
+
+Jeśli użytkownik zgłasza do działu pomocy technicznej problem techniczny dotyczący usługi Intune, operator pomocy technicznej wprowadza imię i nazwisko użytkownika. W usłudze Intune wyświetlane są przydatne dane, które mogą ułatwić rozwiązanie wielu problemów warstwy 1, w tym:
+
 - Stan użytkownika
 - Przypisania
 - Problemy ze zgodnością
 - Urządzenie nie odpowiada
--   Urządzenie nie pobiera ustawień sieci VPN lub Wi-Fi
--   Nie można zainstalować aplikacji
+- Urządzenie nie pobiera ustawień sieci VPN lub Wi-Fi
+- Nie można zainstalować aplikacji
 
-## <a name="add-help-desk-operators"></a>Dodawanie operatorów pomocy technicznej
-Jako administrator usługi Intune możesz przypisać rolę operatora pomocy technicznej do grupy użytkowników. Członkowie tej grupy mogą korzystać z witryny Azure Portal w celu rozwiązywania problemów użytkowników. Aby mieć dostęp do witryny Azure Portal, każdy operator pomocy technicznej musi mieć licencję na usługę Intune. Dowiedz się, jak [przypisywać licencje na usługę Intune](licenses-assign.md).
+## <a name="to-review-troubleshooting-details"></a>Przeglądanie szczegółów dotyczących rozwiązywania problemów
 
-Aby dodać użytkowników pomocy technicznej:
-1. W razie potrzeby [dodaj użytkowników do usługi Intune](users-add.md).
-2. [Utwórz grupę pomocy technicznej](groups-add.md) i dodaj do niej użytkowników.
-3. [Przypisz rolę RBAC operatora pomocy technicznej](role-based-access-control.md#built-in-roles).
+Aby wyświetlić informacje o użytkownikach, w bloku rozwiązywania problemów wybierz pozycję **Wybierz użytkownika**. Informacje o użytkowniku mogą ułatwić zrozumienie bieżącego stanu użytkowników i ich urządzeń.  
 
-  ![Zrzut ekranu witryny Azure Portal pokazujący wyróżnione role usługi Intune i listę wbudowanych ról łącznie z rolą operatora pomocy technicznej](./media/help-desk-user-add.png) Możesz też [utworzyć rolę niestandardową](role-based-access-control.md#custom-roles), którą można dalej modyfikować, aby przyznać dostęp operatorom pomocy technicznej.  Operatorzy pomocy technicznej wymagają następujących uprawnień, aby pomóc w rozwiązywaniu problemów użytkownika:
-    - MobileApps: Odczyt
-    - ManagedApps: Odczyt
-    - ManagedDevices: Odczyt
-    - Organization: Odczyt
-    - DeviceCompliancePolices: Odczyt
-    - DeviceConfigurations: Odczyt
+1. Zaloguj się do portalu Azure Portal.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+3. W bloku **Intune** wybierz pozycję **Rozwiązywanie problemów**.
+4. Kliknij pozycję **Wybierz użytkownika**.
+5. Wybierz użytkownika przez wpisanie jego nazwy lub adresu e-mail. Kliknij pozycję **Wybierz**. Informacje dotyczące rozwiązywania problemów użytkownika zostaną wyświetlone w bloku Rozwiązywanie problemów. Te informacje objaśniono w poniższych tabelach.
 
-4. Aby udzielić operatorom pomocy technicznej uprawnienia do wyświetlania kondycji usługi i otwierania biletów pomocy technicznej dla usługi Intune, [udziel użytkownikom uprawnień administratora](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal) jako **Administrator usługi**. Nie nadawaj uprawnienia **Administrator usługi Intune**, ponieważ ta rola katalogu ma więcej uprawnień niż te, które są potrzebne dla operatów pomocy technicznej.
+> [!Note]  
+> Dostęp do bloku **Rozwiązywanie problemów** można też uzyskać przez przejście w przeglądarce do strony [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="access-the-troubleshooting-portal"></a>Dostęp do portalu rozwiązywania problemów
+## <a name="areas-of-troubleshooting-dashboard"></a>Obszary pulpitu nawigacyjnego rozwiązywania problemów
 
-Personel działu pomocy i administratorzy usługi Intune mogą uzyskać dostęp do portalu rozwiązywania problemów na dwa sposoby:
-- Otwórz stronę [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting) w przeglądarce internetowej, aby wyświetlić tylko portal rozwiązywania problemów.
-  ![Zrzut ekranu przedstawiający konsolę rozwiązywania problemów](./media/help-desk-console.png)
-- Zaloguj się do witryny Azure Portal, wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**, a następnie przejdź do obszaru **Pomoc i obsługa techniczna** > **Rozwiązywanie problemów**.
+Blok **Rozwiązywanie problemów** umożliwia przeglądanie informacji o użytkownikach. 
 
-Kliknij pozycję **Wybierz użytkownika**, aby wyświetlić użytkownika wraz ze szczegółami, które go dotyczą.
+![](/intune/media/troubleshooting-dash.png)
 
-## <a name="use-the-troubleshooting-portal"></a>Korzystanie z portalu rozwiązywania problemów
+| Obszar | Nazwa | Opis |
+| ---  | ---  | ---         |
+| 1.   | Stan konta  | Pokazuje stan bieżącej dzierżawy usługi Intune (**Aktywny** lub **Nieaktywny**).       |
+| 2.   | Wybrany użytkownik  | Nazwa obecnie wybranego użytkownika. Kliknij pozycję **Zmień użytkownika**, aby wybrać nowego użytkownika.       |
+| 3.   | Stan użytkownika  | Wyświetla stan licencji usługi Intune użytkownika, liczbę urządzeń, informacje o zgodności poszczególnych urządzeń, liczbę aplikacji i informacje o zgodności aplikacji.       |
+| 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w bloku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje mobilne<li>Zasady ochrony aplikacji<li>Zasady zgodności<li> Zasady konfiguracji</ul>      |
+| 5.   | Członkostwo w grupach  | Yadda       |
 
-Aby wyświetlić informacje o użytkownikach, w portalu rozwiązywania problemów można wybrać opcję **Wybierz użytkownika**. Informacje o użytkowniku mogą ułatwić zrozumienie bieżącego stanu użytkowników i ich urządzeń. W portalu rozwiązywania problemów dostępne są następujące szczegóły dotyczące rozwiązywania problemów:
-- **Stan konta**
-- **Stan użytkownika**
-- **Urządzenia** z akcjami urządzenia
-- **Członkostwo w grupach**
-- **Stan ochrony aplikacji**
+## <a name="mobile-apps-reference"></a>Odwołanie do aplikacji mobilnych
+
+Aplikacje na urządzeniach lub urządzenia należące do użytkowników zarządzanych przez usługi Intune i Azure Active Directory (AD).
+
+### <a name="properties"></a>Właściwości
+
+Właściwości aplikacji mobilnych.
+
+| Właściwość      | Opis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa          | Nazwa aplikacji.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| System operacyjny            | System operacyjny zainstalowany na urządzeniu.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Typ          | Możesz wybrać typ przypisania dla każdej aplikacji.  <br> **Dostępne** — użytkownicy instalują aplikację z aplikacji Portal firmy lub witryny sieci Web.  <br> **Nie dotyczy** — aplikacja nie jest instalowana ani wyświetlana w Portalu firmy. <br> **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.  <br> **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. |
+| Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+### <a name="devices"></a>Urządzenia
+
+Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
+
+| Właściwość           | Opis                                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
+| Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
+| Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
+| Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Wersja systemu operacyjnego         | Numer wersji systemu operacyjnego urządzenia.                                                                                  |
+| Ostatnie zaewidencjonowanie      | Nazwa typu urządzenia.                                                                                                     |
+
+### <a name="app-protection-status"></a>Stan ochrony aplikacji
+
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami Enterprise Mobility Solution (EMS). Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+
+| Właściwość    | Opis                                                                           |
+|-------------|---------------------------------------------------------------------------------------|
+| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Nazwa aplikacji    | Nazwa aplikacji                                                           |
+| Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
+| Typ urządzenia | Nazwa typu urządzenia.                                                       |
+| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
+
+## <a name="app-protection-policies-reference"></a>Odwołanie do zasad ochrony aplikacji
+
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+
+### <a name="properties"></a>Właściwości
+
+Tabela zawiera podsumowanie stanu zasad ochrony aplikacji dla urządzeń zarządzanych przez usługę Intune.
+
+| Właściwość    | Opis                                                                                                                                |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa        | Nazwa aplikacji.                                                                                                        |
+| Wdrożony    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Platforma    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Rejestrowanie  | Nazwa typu urządzenia.                                                                                                     |
+| Ostatnia aktualizacja | Sygnatura czasowa modyfikacji zasad.                                                                                              |
+
+### <a name="devices"></a>Urządzenia
+
+Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
+
+| Właściwość           | Tekst                                                                                                                                |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
+| Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
+| Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
+| Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Wersja systemu operacyjnego         | Numer wersji systemu operacyjnego urządzenia.                                                                                  |
+| Ostatnie zaewidencjonowanie      | Nazwa typu urządzenia.                                                                                                     |
+
+## <a name="compliance-policies-reference"></a>Odwołanie do zasad zgodności
+
+Pozwala zagwarantować, że urządzenia używane do uzyskiwania dostępu do aplikacji oraz danych firmowych są zgodne z pewnymi regułami, takimi jak wymaganie użycia numeru PIN w celu uzyskania dostępu do urządzenia oraz szyfrowanie danych przechowywanych na urządzeniu.
+
+### <a name="properties"></a>Właściwości
+
+Właściwości zasad zgodności.
+
+| Właściwość      | Opis                                                                                                                         |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Przypisania    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Nazwa          | Nazwa aplikacji.                                                                                                        |
+| System operacyjny            | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
+
+### <a name="devices"></a>Urządzenia
+
+Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
+
+| Właściwość           | Opis                                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
+| Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
+| Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
+| Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Wersja systemu operacyjnego         | Numer wersji systemu operacyjnego urządzenia.                                                                                  |
+| Ostatnie zaewidencjonowanie      | Nazwa typu urządzenia.                                                                                                     |
+
+### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
+
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+
+| Właściwość    | Opis                                                                           |
+|-------------|---------------------------------------------------------------------------------------|
+| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Nazwa aplikacji    | Nazwa aplikacji                                                           |
+| Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
+| Typ urządzenia | Nazwa typu urządzenia.                                                       |
+| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
+
+## <a name="configuration-policies-reference"></a>Informacje o zasadach konfiguracji
+
+Dostępne są zasady konfiguracji aplikacji dla aplikacji mobilnych z konfiguracją specyficzną dla dostawcy. 
+
+### <a name="properties"></a>Właściwości
+
+Właściwości zasad konfiguracji.
+
+| Właściwość      | Opis                                                                                                                         |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Przypisania    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Nazwa          | Nazwa aplikacji.                                                                                                        |
+| System operacyjny            | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
+
+### <a name="devices"></a>Urządzenia
+
+Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
+
+| Właściwość           | Opis                                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
+| Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
+| Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
+| Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
+| Wersja systemu operacyjnego         | Numer wersji systemu operacyjnego urządzenia.                                                                                  |
+| Ostatnie zaewidencjonowanie      | Nazwa typu urządzenia.                                                                                                     |
+
+
+### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
+
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+
+| Właściwość    | Opis                                                                           |
+|-------------|---------------------------------------------------------------------------------------|
+| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Nazwa aplikacji    | Nazwa aplikacji                                                           |
+| Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
+| Typ urządzenia | Nazwa typu urządzenia.                                                       |
+| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
+
+## <a name="next-steps"></a>Następne kroki
+
+Dowiedz się więcej na temat kontroli administracji opartej na rolach (RBAC), aby definiować role na urządzeniu organizacji, zarządzanie aplikacjami mobilnymi i zadania ochrony danych. Aby uzyskać więcej informacji, zobacz [Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune](/intune/role-based-access-control).
+
+Dowiedz się więcej o wszelkich znanych problemach w usłudze Microsoft Intune. Aby uzyskać więcej informacji, zobacz [Znane problemy w usłudze Microsoft Intune](/intune/known-issues).
+
+Dowiedz się, jak utworzyć bilet pomocy technicznej i uzyskać pomoc. [Uzyskaj pomoc techniczną](/intune/get-support).

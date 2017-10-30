@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/30/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 38ee5446c679472927f4dccecfdc56f1228fb92c
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 053f6449ebe3a4ad375c51d7bbc4ccc9709fdcf7
+ms.sourcegitcommit: 128770ecc820f6ff3c99b15752bce7a58257f1d5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-android-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem Android w usłudze Intune?
 
@@ -44,7 +44,7 @@ Zarejestrowanie urządzenia z systemem Android spowoduje nadanie działowi pomoc
 
 -   Wymagać od użytkownika zaakceptowania postanowień.
 
--   Wyłączać aparat (tylko na urządzeniach z systemem Samsung KNOX, nie dotyczy urządzeń Nexus), aby uniemożliwić robienie zdjęć poufnym materiałom służbowym, które nie powinny być rozpowszechniane.
+-   Wyłączać aparat, aby uniemożliwić robienie zdjęć poufnym materiałom służbowym, które nie powinny być rozpowszechniane.
 
 -   Wymagać zaszyfrowania wszystkich danych na urządzeniu, aby chronić dane na wypadek utraty lub kradzieży urządzenia.
 

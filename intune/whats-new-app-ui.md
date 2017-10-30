@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/05/2017
+ms.date: 10/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,32 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11a3c96046a194e10d952508669b7e8fac0d1ee8
-ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
+ms.openlocfilehash: 4719f31b2ea6144bc8113c596155de70aa22ace1
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+
+## <a name="week-of-october-16-2017"></a>Tydzień 16 października 2017 r.
+
+### <a name="search-improvements-to-the-company-portal-website---1331697--"></a>Ulepszenia wyszukiwania w witrynie internetowej Portal firmy <!--1331697-->
+Ulepszyliśmy możliwości wyszukiwania naszych aplikacji, zaczynając od [witryny internetowej Portal firmy](https://portal.manage.microsoft.com). Wyszukiwanie będzie teraz przeprowadzane dodatkowo według kategorii aplikacji, a nie tylko pól nazwy i opisu. Wyniki będą domyślnie posortowane malejąco według zgodności. 
+
+Użytkownicy systemu iOS również skorzystają z tej zmiany, ponieważ witryna internetowa Portal firmy jest też używana jako część aplikacji Portal firmy dla systemu iOS. Aplikacje Portal firmy dla systemów Android i Windows otrzymają analogiczne aktualizacje w najbliższych miesiącach.
+
+Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak to działa (link „Opinia” u dołu witryny internetowej Portal firmy).
+
+
+### <a name="ios-company-portal-displays-large-icons----1454593---"></a>Wyświetlanie dużych ikon w aplikacji Portal firmy dla systemu iOS <!-- 1454593 -->
+W tej wersji naprawiono znany problem ze sposobem wyświetlania ikon aplikacji Portal firmy dla systemu iOS na kafelku aplikacji. Przesłane ikony aplikacji o rozmiarach 120x120 pikseli lub większe są teraz wyświetlane w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com) i na stronach aplikacji Portal firmy dla systemu iOS w pełnym rozmiarze kafelka aplikacji.
+
+
+
+
+
 
 ## <a name="week-of-october-2-2017"></a>Tydzień 2 października 2017 r.
 
@@ -67,7 +85,7 @@ Proces rejestracji w aplikacji Portal firmy dla systemu Android został uproszcz
 |![05](./media/android_cp_enroll_05_before_1709.png)|![05](./media/android_cp_enroll_05_post_1709.png)|
 
 
-## <a name="week-of-august-28-2017"></a>Tydzień od 28 sierpnia 2017 r.
+## <a name="august-2017"></a>Sierpień 2017
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikacja Mail dla systemu iOS 11 będzie obsługiwać protokół OAuth <!---1196951--->
 
@@ -87,7 +105,7 @@ Dostęp warunkowy przy użyciu usługi Intune obsługuje bezpieczniejsze uwierzy
 
 ![Użytkownikowi jest wyświetlany monit o zarejestrowanie z poziomu witryny Portal firmy.](./media/ios-11-ca-email-after-1708-07.png)
 
-## <a name="week-of-august-21-2017"></a>Tydzień od 21 sierpnia 2017 r.
+
 
 ### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM) będą miały nowoczesny interfejs <!-- 1199015 -->
 
@@ -102,15 +120,13 @@ Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM) zostan
 ![nowoczesny interfejs](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
-## <a name="week-of-august-14-2017"></a>Tydzień od 14 sierpnia 2017 r.
-
 ### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Aktualizacje na stronie „Szczegóły urządzeń” w aplikacji Portal firmy dla systemu Windows 10 <!---1287448--->
 
 W aplikacji Portal firmy dla systemu Windows 10 przeniesiono tag __Kategoria__ spod tytułu do właściwości na stronie __Szczegóły urządzenia__.
 
 ![Ekran „Szczegóły urządzenia” aplikacji Portal firmy dla systemu Windows 10, na którym pole „Kategorie” jest teraz wyświetlane jako właściwość, a nie bezpośrednio pod tytułem ekranu.](./media/cp_win10_category_tag_move_after_1708.png)
 
-## <a name="week-of-july-31-2017"></a>Tydzień od 31 lipca 2017 r.
+## <a name="july-2017"></a>Lipiec 2017
 
 ### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Na stronie szczegółów aplikacji będą wyświetlane nowe informacje dla urządzeń z systemem Android <!--1287476-->
 
@@ -164,7 +180,7 @@ W aplikacji Portal firmy rozpocznie się logowanie.
 
 ![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
-## <a name="week-of-june-12-2017"></a>Tydzień od 12 czerwca 2017 r.
+## <a name="june-2017"></a>Czerwiec 2017
 
 ### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Aplikacja Portal firmy dla systemu Android ma teraz nowe środowisko użytkownika końcowego dla zasad ochrony aplikacji <!--1305217-->
 Na podstawie opinii klientów zmodyfikowaliśmy aplikację Portal firmy dla systemu Android w celu wyświetlania przycisku **Dostęp do zawartości firmowej**. Ma to na celu zapobieganie niepotrzebnemu przechodzeniu przez użytkowników końcowych przez proces rejestracji, gdy potrzebują tylko dostępu do aplikacji obsługujących zasady ochrony aplikacji, czyli funkcję zarządzania aplikacjami mobilnymi usługi Intune.
@@ -210,8 +226,6 @@ W odpowiedzi na opinie użytkowników w aplikacji Portal firmy dla systemu Andro
 ![Obraz aplikacji Portal firmy dla systemu Android z otwartym menu akcji w prawym górnym rogu. Nowa opcja „usuń portal firmy” jest dostępna jako trzecia opcja poniżej opcji „mój profil” i „ustawienia”, powyżej pozycji „warunki i postanowienia”, „pomoc i opinie” oraz „informacje”.](./media/android_remove_cp_menu_action_after_1705.png)
 
 ![Obraz okna dialogowego potwierdzenia, które jest dostępne po wybraniu w menu akcji nowej opcji „usuń portal firmy”. Okno dialogowe informuje użytkownika, że „po usunięciu portalu firmy urządzenie przestanie być zarządzane przez administratora IT, a dostęp do firmowych danych, aplikacji i poczty e-mail może zostać utracony”. Następnie użytkownik jest proszony o potwierdzenie za pomocą przycisku „Tak”, że chce usunąć aplikację Portal firmy.](./media/android_remove_cp_menu_confirmation_after_1705.png)
-
-## <a name="week-of-june-5-2017"></a>Tydzień od 5 czerwca 2017 r.
 
 ### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Ulepszenia kafelków aplikacji w aplikacji Portal firmy dla systemu iOS <!--1230777-->
 Zaktualizowaliśmy wygląd kafelków aplikacji na stronie głównej, aby odpowiadał on kolorowi ustawionemu dla Portalu firmy.

@@ -14,11 +14,11 @@ ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 52b498beb024b86282c93be7aa5a248800db6609
-ms.sourcegitcommit: 294de4d4058de2c625abb8143e90880d27da9284
+ms.openlocfilehash: a0d6bcb4ccac3563dd642ec0ad621645b7053dea
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 10/20/2017
 ---
 #  <a name="intune-data-warehouse-api"></a>Interfejs API magazynu danych usługi Intune
 
@@ -41,9 +41,12 @@ W sekcji informacji referencyjnych można znaleźć przegląd punktów końcowyc
 
 ## <a name="odata-custom-client"></a>Klient niestandardowy OData
 
-Dostęp do modelu danych magazynu danych usługi Intune można uzyskać za pośrednictwem punktów końcowych RESTful. Aby uzyskać dostęp do danych, należy autoryzować klienta w usłudze Microsoft Azure Active Directory (Azure AD) przy użyciu protokołu OAuth 2.0. Najpierw skonfiguruj aplikację internetową i aplikację kliencką na platformie Azure, a następnie udziel uprawnień klientowi. Klient lokalny uzyska autoryzację, a następnie będzie mógł komunikować się z punktami końcowymi magazynu danych.
+Dostęp do modelu danych magazynu danych usługi Intune można uzyskać za pośrednictwem punktów końcowych RESTful. Aby uzyskać dostęp do danych, należy autoryzować klienta w usłudze Azure Active Directory (Azure AD) przy użyciu protokołu OAuth 2.0. Najpierw skonfiguruj aplikację internetową i aplikację kliencką na platformie Azure, a następnie udziel uprawnień klientowi. Klient lokalny uzyska autoryzację, a następnie będzie mógł komunikować się z punktami końcowymi magazynu danych.
 
 Aby uzyskać więcej informacji, zobacz [Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST](reports-proc-data-rest.md)
+
+> [!Note]  
+> Przykłady kodu można znaleźć w [repozytorium GitHub magazynu danych usługi Intune](https://github.com/Microsoft/Intune-Data-Warehouse) w usłudze Github.
 
 ## <a name="interacting-with-the-api"></a>Interakcja z interfejsem API
 
@@ -58,6 +61,8 @@ Usługa OData definiuje abstrakcyjny model danych i protokół, które umożliwi
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Scenariusze uwierzytelniania dla usługi Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)  
-[odata.org](http://www.odata.org)  
-[OData w wersji 4.0](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Dowiedz się więcej na temat pracy z usługą Azure AD, czytając artykuł [Scenariusze uwierzytelniania dla usługi Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+
+Źródła danych OData znajdziesz w witrynie [odata.org](http://www.odata.org).
+  
+Za poznaj się ze standardem OData Version 4.0 na stronie [OData Version 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  

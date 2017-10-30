@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e6334421-85e1-4457-9c44-e5db8d4ee00e
-ms.openlocfilehash: a119f00cc8a92aa6cf7a1009f910df817593e0e8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 199760a60ee2290560ebdf933192de0eaf569e9e
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="configure-ios-update-policies"></a>Konfigurowanie zasad aktualizacji systemu iOS
 Zasady aktualizacji systemu iOS umożliwiają wymuszenie automatycznej instalacji najnowszej dostępnej aktualizacji oprogramowania na urządzeniach nadzorowanych z systemem iOS. Możesz skonfigurować dni i godziny, w których urządzenia nie powinny być aktualizowane.
@@ -31,7 +31,7 @@ Profil zostanie utworzony i wyświetlony w bloku zasad aktualizacji systemu iOS.
 
 ## <a name="assign-an-ios-update-policy-to-users"></a>Przypisywanie zasad aktualizacji systemu iOS do użytkowników
 Aby przypisać użytkownikom zasady aktualizacji systemu iOS, wybierz skonfigurowane przez siebie zasady. Istniejące zasady można znaleźć w bloku **Aktualizacje oprogramowania** > **Zasady aktualizacji systemu iOS**.
-1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać grupy zabezpieczeń usługi Azure Active Directory i przypisać je do zasad.
+1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Zostanie otwarty blok, w którym można wybrać grupy zabezpieczeń usługi Azure Active Directory i przypisać je do zasad.
 2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD. Wybierz pozycję **Wybierz**, aby wdrożyć zasady dla użytkowników.
 
 Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności aktualizacji.
@@ -40,3 +40,7 @@ Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują
 1. W bloku **Aktualizacje oprogramowania** wybierz opcję **Zasady aktualizacji systemu iOS**.
 2. Wybierz zasady aktualizacji systemu iOS, które chcesz zaktualizować.
 3. Wybierz opcję **Właściwości** i zaktualizuj informacje dotyczące ograniczonych dni.
+
+## <a name="monitor-ios-devices-with-older-ios-versions"></a>Monitorowanie urządzeń ze starszymi wersjami systemu iOS 
+<!-- 1352223 -->
+Raport **Nieaktualne urządzenia z systemem iOS** jest dostępny z poziomu bloku **Aktualizacje oprogramowania** > **Zasady aktualizacji systemu iOS**. W raporcie można przejrzeć listę nadzorowanych urządzeń z systemem iOS, których dotyczyły zasady aktualizacji systemu iOS i których nie można było zaktualizować. Dla każdego urządzenia można wyświetlić stan z informacją, dlaczego urządzenie nie zostało zaktualizowane automatycznie.

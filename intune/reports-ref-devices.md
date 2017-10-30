@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 957f05e87f777f62b74c8849c5b494fa638e92f4
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 6d8c4af1ff091fbb125ec8a06b3c46cc2424a0bd
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-devices-entities"></a>Odwołanie do jednostek urządzeń
 
@@ -122,9 +122,9 @@ Jednostka **EnrollmentTypes** wskazuje, czy urządzenie jest firmowe, osobiste c
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| ownerTypeID |Unikatowy identyfikator typu właściciela | |
-| ownerTypeKey |Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy | |
-| ownerTypeName |Reprezentuje typ właściciela urządzeń: Company — urządzenie jest własnością przedsiębiorstwa. Personal — urządzenie jest własnością osobistą (BYOD).  Unknown — brak informacji o tym urządzeniu. |Company Personal Unknown |
+| ownerTypeID |Unikatowy identyfikator typu właściciela. | |
+| ownerTypeKey |Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy. | |
+| ownerTypeName |Reprezentuje typ właściciela urządzeń:  <br>Company — urządzenie jest własnością przedsiębiorstwa. <br>Personal — urządzenie jest własnością osobistą (BYOD).  <br>Unknown — brak informacji o tym urządzeniu. |Company Personal Unknown |
 
 ## <a name="mdmstatuses"></a>MdmStatuses
 
@@ -132,7 +132,7 @@ Jednostka **MdmStatuses** wskazuje stan zgodności urządzenia.
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| MdmStatusName |Identyfikator MdmStatus |0 — Nieznany 1 — Zgodny 2 — Niezgodny |
+| MdmStatusName |Identyfikator MdmStatus |0 — Nieznany <br>1— Zgodny <br>2 — Niezgodny |
 | MdmStatusKey |Unikatowy identyfikator stanu zgodności w magazynie danych — klucz zastępczy | |
 
 ## <a name="managementstates"></a>ManagementStates
@@ -141,26 +141,26 @@ Jednostka **ManagementStates** zawiera szczegółowe informacje dotyczące stanu
 
 | Właściwość  | Opis |
 |---------|------------|
-| managementStateID |Unikatowy identyfikator stanu zarządzania |
-| managementStateKey |Unikatowy identyfikator stanu zarządzania w magazynie danych — klucz zastępczy |
-| managementStateName |Wskazuje stan zdalnej akcji zastosowanej do tego urządzenia. |
+| managementStateID | Unikatowy identyfikator stanu zarządzania. |
+| managementStateKey | Unikatowy identyfikator stanu zarządzania w magazynie danych — klucz zastępczy. |
+| managementStateName | Wskazuje stan zdalnej akcji zastosowanej do tego urządzenia. |
 
 ## <a name="example"></a>Przykład
 
 | managementStateID  | Nazwa | Opis |
 |---------|------------|--------|
-| 0 |Zarządzani |Zarządzane bez żadnych oczekujących akcji zdalnych. |
-| 1 |RetirePending |Dla tego urządzenia istnieje oczekujące polecenie wycofania. |
-| 2 |RetireFailed |Polecenie wycofania nie powiodło się na tym urządzeniu. |
-| 3 |WipePending |Dla tego urządzenia istnieje oczekujące polecenie wyczyszczenia. |
-| 4 |WipeFailed |Polecenie wyczyszczenia nie powiodło się na tym urządzeniu. |
-| 5 |Nieprawidłowy |Stan złej kondycji |
-| 6 |DeletePending |Dla tego urządzenia istnieje oczekujące polecenie usunięcia. |
-| 7 |RetireIssued |Wydano polecenie wycofania tego urządzenia. |
-| 8 |WipeIssued |Wydano polecenie wyczyszczenia. |
-| 9 |WipeCanceled |Anulowano polecenie wyczyszczenia. |
-| 10 |RetireCanceled |Anulowano polecenie wycofania. |
-| 11 |Discovered |Urządzenie jest nowo odnalezione przez usługę Intune, przy czym po zameldowaniu po raz pierwszy następuje przeniesienie do stanu -Zarządzane- |
+| 0 |Zarządzani | Zarządzane bez żadnych oczekujących akcji zdalnych. |
+| 1 |RetirePending | Dla tego urządzenia istnieje oczekujące polecenie wycofania. |
+| 2 |RetireFailed | Polecenie wycofania nie powiodło się na tym urządzeniu. |
+| 3 |WipePending | Dla tego urządzenia istnieje oczekujące polecenie wyczyszczenia. |
+| 4 |WipeFailed | Polecenie wyczyszczenia nie powiodło się na tym urządzeniu. |
+| 5 |Nieprawidłowy | Stan złej kondycji. |
+| 6 |DeletePending | Dla tego urządzenia istnieje oczekujące polecenie usunięcia. |
+| 7 |RetireIssued | Wydano polecenie wycofania tego urządzenia. |
+| 8 |WipeIssued | Wydano polecenie wyczyszczenia. |
+| 9 |WipeCanceled | Anulowano polecenie wyczyszczenia. |
+| 10 |RetireCanceled | Anulowano polecenie wycofania. |
+| 11 |Discovered | Urządzenie jest nowo odnalezione przez usługę Intune, przy czym po zameldowaniu po raz pierwszy następuje przeniesienie do stanu -Zarządzane-. |
 
 ## <a name="workplacejoinstatetypes"></a>WorkPlaceJoinStateTypes
 
@@ -168,9 +168,9 @@ Jednostka **WorkPlaceJoinStateTypes** reprezentuje stan dołączania urządzenia
 
 | Właściwość  | Opis |
 |---------|------------|
-| WorkPlaceJoinStateID |Unikatowy identyfikator stanu dołączania do miejsca pracy |
-| WorkPlaceJoinStateKey |Unikatowy identyfikator stanu dołączenia do miejsca pracy w magazynie danych — klucz zastępczy |
-| WorkPlaceJoinStateName |Stan dołączenia do miejsca pracy |
+| WorkPlaceJoinStateID | Unikatowy identyfikator stanu dołączania do miejsca pracy |
+| WorkPlaceJoinStateKey | Unikatowy identyfikator stanu dołączenia do miejsca pracy w magazynie danych — klucz zastępczy |
+| WorkPlaceJoinStateName | Stan dołączenia do miejsca pracy |
 
 ## <a name="example"></a>Przykład
 
@@ -192,21 +192,21 @@ Jednostka **ManagementAgentTypes** reprezentuje agentów używanych do zarządza
 
 | Właściwość  | Opis |
 |---------|------------|
-| ManagementAgentTypeID |Unikatowy identyfikator typu agenta zarządzania |
-| ManagementAgentTypeKey |Unikatowy identyfikator typu agenta zarządzania w magazynie danych — klucz zastępczy |
+| ManagementAgentTypeID | Unikatowy identyfikator typu agenta zarządzania. |
+| ManagementAgentTypeKey | Unikatowy identyfikator typu agenta zarządzania w magazynie danych — klucz zastępczy. |
 | ManagementAgentTypeName |Wskazuje, jaki rodzaj agenta służy do zarządzania urządzeniem. |
 
 ## <a name="example"></a>Przykład
 
 | ManagementAgentTypeID  | Nazwa | Opis |
 |---------|------------|--------|
-| 1 |EAS |Urządzenie jest zarządzane przy użyciu programu Exchange Active Sync |
-| 2 |MDM |Urządzenie jest zarządzane przy użyciu agenta MDM |
-| 3 |EasMdm |Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta MDM |
-| 4 |IntuneClient |Urządzenie jest zarządzane przez agenta PC usługi Intune |
-| 5 |EasIntuneClient |Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta PC usługi Intune |
-| 8 |ConfigManagerClient |Urządzenie jest zarządzane przez agenta programu System Center Configuration Manager |
-| 16 |Nieznane |Nieznany typ agenta zarządzania |
+| 1 |EAS | Urządzenie jest zarządzane przy użyciu programu Exchange Active Sync |
+| 2 |MDM | Urządzenie jest zarządzane przy użyciu agenta MDM |
+| 3 |EasMdm | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta MDM |
+| 4 |IntuneClient | Urządzenie jest zarządzane przez agenta PC usługi Intune |
+| 5 |EasIntuneClient | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta PC usługi Intune |
+| 8 |ConfigManagerClient | Urządzenie jest zarządzane przez agenta programu System Center Configuration Manager |
+| 16 |Nieznane | Nieznany typ agenta zarządzania |
 
 ## <a name="devices"></a>Devices
 
@@ -214,44 +214,44 @@ Jednostka **Devices** zawiera listę wszystkich zarejestrowanych urządzeń w ob
 
 | Właściwość  | Opis |
 |---------|------------|
-| DeviceKey |Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy |
-| DeviceId |Unikatowy identyfikator urządzenia |
-| DeviceName |Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń. |
-| DeviceTypeKey |Klucz atrybutu typu urządzenia dla tego urządzenia |
-| ClientRegisterationStateKey |Klucz atrybutu stanu rejestracji klienta dla tego urządzenia |
-| OwnerTypeKey |Klucz atrybutu typu właściciela dla tego urządzenia: corporate (firmowy), personal (osobisty) lub unknown (nieznany). |
-| objectSourceKey |Zignoruj tę kolumnę. |
-| CreatedDate |Data rejestracji urządzenia |
-| LastContact |Ostatnie znane zameldowanie urządzenia za pomocą usługi Intune |
-| LastContactNotification |Czas ostatniego powiadomienia urządzenia przez usługę Intune o zameldowaniu przy użyciu usługi Intune |
-| LastContactWorkplaceJoin |Sygnatura czasowa wskazująca ostatni znany stan dołączenia do miejsca pracy dla tego urządzenia. |
-| ManagementAgentKey |Klucz agenta zarządzania skojarzony z tym urządzeniem. |
-| ManagementStateKey |Klucz stanu zarządzania skojarzony z tym urządzeniem, wskazujący najnowszy stan zdalnej akcji lub to, czy były złamane ograniczenia lub odblokowany dostęp do konta root. |
-| Identyfikator odwołania |Identyfikator urządzenia w usłudze Azure Active Directory |
-| WorkPlaceJoinStateKey |Klucz stanu dołączania do miejsca pracy skojarzony z tym urządzeniem. |
-| CategoryId |Zignoruj tę kolumnę. |
-| EnrollmentTypeKey |Klucz typu rejestracji skojarzony z tym urządzeniem wskazujący metodę rejestracji. |
-| CertExpirationDate |Data wygaśnięcia certyfikatu zarządzania MDM. |
-| MdmStatusKey |Klucz dla wartości MdmStatus |
-| OSFamily |Rodzina systemów operacyjnych (Windows, iOS, Android itd.) |
-| OSVersion |Wersja systemu operacyjnego |
-| OSMajorVersion |Składnik wersji głównej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSMinorVersion |Składnik wersji pomocniczej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSBuildNumber |Składnik wersji kompilacji wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSRevisionNumber |Składnik wersji poprawki wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| EasID |Identyfikator EAS tych urządzeń, jeśli urządzenie jest zarządzane przez program Exchange Active Sync. |
-| GraphDeviceIsManaged |Ostatni stan zarządzania ustawiony przez usługę Intune w usłudze AAD |
-| GraphDeviceIsCompliant |Ostatni stan zgodności ustawiony przez usługę Intune w usłudze AAD |
-| SerialNumber |Numer seryjny urządzenia, o ile jest dostępny |
-| EnrolledByUser |Identyfikator użytkownika, który zarejestrował to urządzenie. Odwołuje się do kolumny userId w tabeli użytkownika. |
-| RowLastModifiedDateTimeUTC |Czas ostatniej modyfikacji tego rekordu. |
-| ProcessorArchitecture |Architektura procesora |
-| DeviceAction |Ostatnia zlecona akcja urządzenia, na razie zignorować. |
-| Producent |Producent urządzenia |
-| Model |Model urządzenia |
-| LastPolicyUpdateUtc |Ostatni raz, gdy zaktualizowano zasady na urządzeniu |
-| LastExchangeStatusUtc |Ostatni raz, gdy urządzenie było synchronizowane z programem Exchange. |
-| IsDeleted |Ustawione na wartość True, jeśli urządzenie nie jest już zarządzane przez usługę Intune. Zachowuje ostatni znany stan. |
+| DeviceKey | Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy. |
+| DeviceId | Unikatowy identyfikator urządzenia. |
+| DeviceName | Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń. |
+| DeviceTypeKey | Klucz atrybutu typu urządzenia dla tego urządzenia. |
+| ClientRegisterationStateKey | Klucz atrybutu stanu rejestracji klienta dla tego urządzenia. |
+| OwnerTypeKey | Klucz atrybutu typu właściciela dla tego urządzenia: corporate (firmowy), personal (osobisty) lub unknown (nieznany). |
+| objectSourceKey | Zignoruj tę kolumnę. |
+| CreatedDate | Data rejestracji urządzenia. |
+| LastContact | Ostatnie znane zameldowanie urządzenia w usłudze Intune. |
+| LastContactNotification | Czas ostatniego powiadomienia urządzenia przez usługę Intune o zameldowaniu w usłudze Intune. |
+| LastContactWorkplaceJoin | Sygnatura czasowa wskazująca ostatni znany stan dołączenia do miejsca pracy dla tego urządzenia. |
+| ManagementAgentKey | Klucz agenta zarządzania skojarzony z tym urządzeniem. |
+| ManagementStateKey | Klucz stanu zarządzania skojarzony z tym urządzeniem, wskazujący najnowszy stan zdalnej akcji lub to, czy były złamane ograniczenia lub odblokowany dostęp do konta root. |
+| Identyfikator odwołania | Identyfikator urządzenia w usłudze Azure Active Directory. |
+| WorkPlaceJoinStateKey | Klucz stanu dołączania do miejsca pracy skojarzony z tym urządzeniem. |
+| CategoryId | Zignoruj tę kolumnę. |
+| EnrollmentTypeKey | Klucz typu rejestracji skojarzony z tym urządzeniem wskazujący metodę rejestracji. |
+| CertExpirationDate | Data wygaśnięcia certyfikatu zarządzania MDM. |
+| MdmStatusKey | Klucz dla wartości MdmStatus. |
+| OSFamily | Rodzina systemów operacyjnych (Windows, iOS, Android itd.) |
+| OSVersion | Wersja systemu operacyjnego |
+| OSMajorVersion | Składnik wersji głównej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSMinorVersion | Składnik wersji pomocniczej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSBuildNumber | Składnik wersji kompilacji wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSRevisionNumber | Składnik wersji poprawki wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| EasID | Identyfikator EAS tych urządzeń, jeśli urządzenie jest zarządzane przez program Exchange Active Sync. |
+| GraphDeviceIsManaged | Ostatni stan zarządzania ustawiony przez usługę Intune w usłudze Azure AD. |
+| GraphDeviceIsCompliant | Ostatni stan zgodności ustawiony przez usługę Intune w usłudze Azure AD. |
+| SerialNumber | Numer seryjny urządzenia, o ile jest dostępny. |
+| EnrolledByUser | Identyfikator użytkownika, który zarejestrował to urządzenie. Odwołuje się do kolumny userId w tabeli użytkownika. |
+| RowLastModifiedDateTimeUTC | Czas ostatniej modyfikacji tego rekordu. |
+| ProcessorArchitecture | Architektura procesora. |
+| DeviceAction | Ostatnia zlecona akcja urządzenia, na razie zignorować. |
+| Producent | Producent urządzenia. |
+| Model | Model urządzenia. |
+| LastPolicyUpdateUtc | Ostatni raz, gdy zaktualizowano zasady na urządzeniu. |
+| LastExchangeStatusUtc | Ostatni raz, gdy urządzenie było synchronizowane z programem Exchange. |
+| IsDeleted | Ustawione na wartość True, jeśli urządzenie nie jest już zarządzane przez usługę Intune. Zachowuje ostatni znany stan. |
 
 ## <a name="devicepropertyhistory"></a>DevicePropertyHistory
 
@@ -259,100 +259,101 @@ Jednostka **DevicePropertyHistory** ma takie same właściwości, jak tabela urz
 
 | Właściwość  | Opis |
 |---------|------------|
-| DateKey |Odwołanie do tabeli dat wskazujące dzień |
-| DeviceKey |Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy. To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune |
+| DateKey |Odwołanie do tabeli dat wskazujące dzień. |
+| DeviceKey |Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy. To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune. |
 | DeviceName |Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń. |
-| DeviceTypeKey |Klucz atrybutu typu urządzenia dla tego urządzenia |
-| ClientRegisterationStateKey |Klucz atrybutu stanu rejestracji klienta dla tego urządzenia |
+| DeviceTypeKey |Klucz atrybutu typu urządzenia dla tego urządzenia. |
+| ClientRegisterationStateKey |Klucz atrybutu stanu rejestracji klienta dla tego urządzenia. |
 | OwnerTypeKey |Klucz atrybutu typu właściciela dla tego urządzenia: corporate (firmowy), personal (osobisty) lub unknown (nieznany). |
 | objectSourceKey |Zignoruj tę kolumnę. |
-| CreatedDate |Data rejestracji urządzenia |
-| LastContact |Ostatnie znane zameldowanie urządzenia za pomocą usługi Intune |
-| LastContactNotification |Czas ostatniego powiadomienia urządzenia przez usługę Intune o zameldowaniu przy użyciu usługi Intune |
+| CreatedDate |Data rejestracji urządzenia. |
+| LastContact |Ostatnie znane zameldowanie urządzenia w usłudze Intune. |
+| LastContactNotification |Czas ostatniego powiadomienia urządzenia przez usługę Intune o zameldowaniu w usłudze Intune. |
 | LastContactWorkplaceJoin |Sygnatura czasowa wskazująca ostatni znany stan dołączenia do miejsca pracy dla tego urządzenia. |
 | ManagementAgentKey |Klucz agenta zarządzania skojarzony z tym urządzeniem. |
 | ManagementStateKey |Klucz stanu zarządzania skojarzony z tym urządzeniem, wskazujący najnowszy stan zdalnej akcji lub to, czy były złamane ograniczenia lub odblokowany dostęp do konta root. |
-| Identyfikator odwołania |Identyfikator urządzenia w usłudze Azure Active Directory |
+| Identyfikator odwołania |Identyfikator urządzenia w usłudze Azure Active Directory. |
 | WorkPlaceJoinStateKey |Klucz stanu dołączania do miejsca pracy skojarzony z tym urządzeniem. |
 | CategoryId |Zignoruj tę kolumnę. |
 | EnrollmentTypeKey |Klucz typu rejestracji skojarzony z tym urządzeniem wskazujący metodę rejestracji. |
 | CertExpirationDate |Data wygaśnięcia certyfikatu zarządzania MDM. |
-| MdmStatusKey |Klucz dla wartości MdmStatus |
+| MdmStatusKey |Klucz dla wartości MdmStatus. |
 | OSFamily |Rodzina systemów operacyjnych (Windows, iOS, Android itd.) |
-| OSVersion |Wersja systemu operacyjnego |
-| OSMajorVersion |Składnik wersji głównej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSMinorVersion |Składnik wersji pomocniczej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSBuildNumber |Składnik wersji kompilacji wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
-| OSRevisionNumber |Składnik wersji poprawki wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka) |
+| OSVersion |Wersja systemu operacyjnego. |
+| OSMajorVersion |Składnik wersji głównej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSMinorVersion |Składnik wersji pomocniczej wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSBuildNumber |Składnik wersji kompilacji wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
+| OSRevisionNumber |Składnik wersji poprawki wersji systemu operacyjnego (główna.pomocnicza.kompilacja.poprawka). |
 | EasID |Identyfikator EAS tych urządzeń, jeśli urządzenie jest zarządzane przez program Exchange Active Sync. |
-| GraphDeviceIsManaged |Ostatni stan zarządzania ustawiony przez usługę Intune w usłudze AAD |
-| GraphDeviceIsCompliant |Ostatni stan zgodności ustawiony przez usługę Intune w usłudze AAD |
-| SerialNumber |Numer seryjny urządzenia, o ile jest dostępny |
+| GraphDeviceIsManaged |Ostatni stan zarządzania ustawiony przez usługę Intune w usłudze Azure AD. |
+| GraphDeviceIsCompliant |Ostatni stan zgodności ustawiony przez usługę Intune w usłudze Azure AD. |
+| SerialNumber |Numer seryjny urządzenia, o ile jest dostępny. |
 | EnrolledByUser |Identyfikator użytkownika, który zarejestrował to urządzenie. Odwołuje się do kolumny userId w tabeli użytkownika. |
 | RowLastModifiedDateTimeUTC |Czas ostatniej modyfikacji tego rekordu. |
-| ProcessorArchitecture |Architektura procesora |
+| ProcessorArchitecture |Architektura procesora. |
 | DeviceAction |Ostatnia zlecona akcja urządzenia, na razie zignorować. |
-| Producent |Producent urządzenia |
-| Model |Model urządzenia |
-| LastPolicyUpdateUtc |Ostatni raz, gdy zaktualizowano zasady na urządzeniu |
+| Producent |Producent urządzenia. |
+| Model |Model urządzenia. |
+| LastPolicyUpdateUtc |Ostatni raz, gdy zaktualizowano zasady na urządzeniu. |
 | LastExchangeStatusUtc |Ostatni raz, gdy urządzenie było synchronizowane z programem Exchange. |
+
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
 Jednostka **MdmDeviceInventoryHistories** zawiera dzienne migawki danych spisu dla urządzeń zarządzanych przez usługę MDM w ciągu ostatnich 90 dni. Kolumna DateKey wskazuje dzień wiersza. Niektóre właściwości mogą nie mieć zastosowania lub nie zostaną wypełnione dla wszystkich urządzeń, więc zapoznaj się z tą stroną, aby uzyskać więcej szczegółowych informacji. Aby uzyskać więcej informacji, zobacz [Understand your devices with inventory in Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
 
 | Właściwość  | Opis |
 |---------|------------|
-| DateKey |Odwołanie do tabeli dat wskazujące dzień |
-| DeviceKey |Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy. To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune |
-| DeviceModel |Model urządzenia |
-| System operacyjny |System operacyjny urządzenia |
+| DateKey | Odwołanie do tabeli dat wskazujące dzień. |
+| DeviceKey |Unikatowy identyfikator urządzenia w magazynie danych — klucz zastępczy. To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune. |
+| DeviceModel |Model urządzenia. |
+| System operacyjny |System operacyjny urządzenia. |
 | DeviceName |Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń. |
 | SoftwareVersion |W większości przypadków jest to wersja systemu operacyjnego. Wyjątkiem są platformy firmy Apple, gdzie różni się od wersji systemu operacyjnego. |
 | Imei |Numer IMEI |
 | HardwareInventoryTimeUtc |Pierwszy raz, gdy spis został zgłoszony dla tego urządzenia. |
-| InventoryModifiedTimeUtc |Ostatni raz inwentaryzacja została zapisana, gdy została wykonana ta migawka |
+| InventoryModifiedTimeUtc |Ostatni raz inwentaryzacja została zapisana, gdy została wykonana ta migawka. |
 | InventoryReportingTimeUtc |Ostatni raz, gdy inwentaryzacja została przeprowadzona dla tego urządzenia. |
-| ExchangeActiveSyncId |Identyfikator urządzenia w programie Exchange ActiveSync |
-| ComputerSystemDescription |Opis systemu |
-| ComputerSystemName |Nazwa systemu |
-| ComputerSystemManufacturer |Producent systemu |
-| ComputerSystemModel |Model systemu |
-| UserName |Nazwa użytkownika |
-| OSType |Typ systemu operacyjnego |
-| OSCaption |Podpis systemu operacyjnego |
-| OSName |Nazwa systemu operacyjnego |
-| OSManufacturer |Producent systemu operacyjnego |
-| OSProductSuite |Pakiet produktów systemu operacyjnego |
-| OSProductType |Typ produktu systemu operacyjnego |
-| Locale |Ustawienia regionalne systemu operacyjnego |
-| PhysicalMemoryCapacity |Pojemność pamięci fizycznej (w bajtach) |
-| PhysicalMemoryRemovable |Wymienna pamięć fizyczna (w bajtach) |
-| SystemEnclosureChassisTypesInnerText |Definiuje typ podstawy systemu dla tego urządzenia. Liczby oznaczają następujące wartości: 0 lub pusty = Nieznany   1 = Komputer stacjonarny   2 = Laptop   3 = Stacja robocza   4 = Serwer przedsiębiorstwa  100 = Telefon  101 = Tablet  102/103 = Inny nieznany typ urządzenia przenośnego |
-| SystemEnclosureModel |Model obudowy systemu |
-| SystemEnclosureSerialNumber |Numer seryjny obudowy systemu |
-| NetworkAdapterConfigurationText |Tekst konfiguracji z karty sieciowej |
-| MacAddress |Adres MAC |
-| SmsID |Identyfikator urządzenia w usłudze Intune |
-| CertExpiry |Data wygaśnięcia certyfikatu zarządzania MDM |
-| DeviceClientAgentVersion |Wersja agenta klienta |
-| DeviceClientID |Identyfikator klienta urządzenia |
-| SerialNumber |Numer seryjny |
-| DeviceManufacturer |Producent urządzenia |
-| DMVersion |Wersja DM |
-| Wersja oprogramowania układowego |Wersja oprogramowania układowego |
-| HardwareVersion |Wersja sprzętu |
-| PlatformType |Typ platformy |
-| ProcessorLevel |Poziom procesora |
-| ProcessorRevision |Poprawka procesora |
-| Produkt |Produkt |
-| ProductVersion |Wersja produktu |
-| OEM |Producent oryginalnego sprzętu |
-| DeviceBuildVersion |Wersja kompilacji urządzenia |
+| ExchangeActiveSyncId |Identyfikator urządzenia w programie Exchange ActiveSync. |
+| ComputerSystemDescription |Opis systemu. |
+| ComputerSystemName |Nazwa systemu. |
+| ComputerSystemManufacturer |Producent systemu. |
+| ComputerSystemModel |Model systemu. |
+| UserName |Nazwa użytkownika. |
+| OSType |Typ systemu operacyjnego. |
+| OSCaption |Podpis systemu operacyjnego. |
+| OSName |Nazwa systemu operacyjnego. |
+| OSManufacturer |Producent systemu operacyjnego. |
+| OSProductSuite |Pakiet produktów systemu operacyjnego. |
+| OSProductType |Typ produktu systemu operacyjnego. |
+| Locale |Ustawienia regionalne systemu operacyjnego. |
+| PhysicalMemoryCapacity |Pojemność pamięci fizycznej (w bajtach). |
+| PhysicalMemoryRemovable |Wymienna pamięć fizyczna (w bajtach). |
+| SystemEnclosureChassisTypesInnerText |Definiuje typ podstawy systemu dla tego urządzenia. Liczby wskazują następujące wartości:  <br>0 lub puste = nieznany   <br>1 = komputer stacjonarny   <br>2 = laptop  <br>3 = stacja robocza  <br>4 = serwer przedsiębiorstwa  <br>100 = telefon  <br>101 = tablet  <br>102/103 = inny nieznany typ urządzenia przenośnego |
+| SystemEnclosureModel |Model obudowy systemu. |
+| SystemEnclosureSerialNumber |Numer seryjny obudowy systemu. |
+| NetworkAdapterConfigurationText |Tekst konfiguracji z karty sieciowej. |
+| MacAddress |Adres MAC. |
+| SmsID |Identyfikator urządzenia w usłudze Intune. |
+| CertExpiry |Data wygaśnięcia certyfikatu zarządzania MDM. |
+| DeviceClientAgentVersion |Wersja agenta klienta. |
+| DeviceClientID |Identyfikator klienta urządzenia. |
+| SerialNumber |Numer seryjny. |
+| DeviceManufacturer |Producent urządzenia. |
+| DMVersion |Wersja DM. |
+| FirmwareVersion |Wersja oprogramowania układowego. |
+| HardwareVersion |Wersja sprzętu. |
+| PlatformType |Typ platformy. |
+| ProcessorLevel |Poziom procesora. |
+| ProcessorRevision |Poprawka procesora. |
+| Product |Produkt. |
+| ProductVersion |Wersja produktu. |
+| OEM |Producent oryginalnego sprzętu. |
+| DeviceBuildVersion |Wersja kompilacji urządzenia. |
 | Meid |Identyfikator sprzętu przenośnego. |
-| PhoneNumber |Numer telefonu |
-| SubscriberCarrierNetwork |Nazwa sieci telefonicznej operatora |
-| CellularTechnology |Typ sieci telefonicznej operatora (CDMA/GSM) |
-| Imsi |Numer IMSI |
+| PhoneNumber |Numer telefonu. |
+| SubscriberCarrierNetwork |Nazwa sieci telefonicznej operatora. |
+| CellularTechnology |Typ sieci telefonicznej operatora (CDMA/GSM). |
+| Imsi |Numer IMSI. |
 | JailBroken |Wartość True, jeśli urządzenie ma złamane zabezpieczenia lub odblokowany dostęp do konta root. |
 | IsActivationLockEnabled |Wartość True, jeśli blokada aktywacji jest włączona |
 | DeviceType |Typ urządzenia |
@@ -376,23 +377,23 @@ Jednostka **MdmDeviceInventoryHistories** zawiera dzienne migawki danych spisu d
 | PasswordMinLength |Minimalna wymagana długość hasła |
 | PasswordHistory |Hasło — minimalna liczba niezaakceptowanych haseł historycznych |
 | PasswordEnabled |Hasło — włączone? |
-| PasswordExpiration |Hasło — data wygaśnięcia |
-| AllowRecoveryPassword |Zezwalaj na odzyskiwanie hasła |
-| PasswordAutoLockTimeout |Hasło — limit czasu automatycznej blokady |
-| PasswordType |Typ hasła |
-| BacklightACTimeout |Limit czasu podświetlenia po podłączeniu do źródła zasilania |
-| BacklightBatTimeout |Limit czasu podświetlenie na baterii |
-| PowerBackupPercent |Procent zapasu zasilania |
+| PasswordExpiration |Hasło — data wygaśnięcia. |
+| AllowRecoveryPassword |Zezwalaj na odzyskiwanie hasła. |
+| PasswordAutoLockTimeout |Hasło — limit czasu automatycznej blokady. |
+| PasswordType |Typ hasła. |
+| BacklightACTimeout |Limit czasu podświetlenia po podłączeniu do źródła zasilania. |
+| BacklightBatTimeout |Limit czasu podświetlenie na baterii. |
+| PowerBackupPercent |Procent zapasu zasilania. |
 | BatteryPercent |Pozostały procent naładowania baterii. |
-| PlatformID |Identyfikator platformy |
-| ExchangeDeviceID |Identyfikator urządzenia programu Exchange |
-| SmsProcessorDescription |Opis procesora |
-| OwnerEmailAddress |Adres e-mail właściciela |
-| DeviceOSName |Nazwa systemu operacyjnego |
-| WifiMac |Adres MAC sieci Wi-Fi |
-| EthernetMac |Adres MAC sieci Ethernet |
+| PlatformID |Identyfikator platformy. |
+| ExchangeDeviceID |Identyfikator urządzenia programu Exchange. |
+| SmsProcessorDescription |Opis procesora. |
+| OwnerEmailAddress |Adres e-mail właściciela. |
+| DeviceOSName |Nazwa systemu operacyjnego. |
+| WifiMac |Adres MAC sieci Wi-Fi. |
+| EthernetMac |Adres MAC sieci Ethernet. |
 | RequireEncryption |Wskazuje, czy urządzenie jest zaszyfrowane, czy nie. |
-| ActivationLockBypassCode |Kod obejścia blokady aktywacji |
+| ActivationLockBypassCode |Kod obejścia blokady aktywacji. |
 
 ## <a name="applicationinventory"></a>ApplicationInventory
 
@@ -400,8 +401,8 @@ Jednostka **ApplicationInventory** tworzy listę aplikacji znalezionych na urzą
 
 | Właściwość  | Opis |
 |---------|------------|
-| DeviceKey |Odwołanie do tabeli urządzeń |
-| ApplicationKey |? (skopiowany z ExchangeDeviceService\DeviceApplication) |
-| ApplicationName |? (skopiowany z ExchangeDeviceService\DeviceApplication) |
-| ApplicationVersion |? (skopiowany z ExchangeDeviceService\DeviceApplication) |
-| BundleSize |? (skopiowany z ExchangeDeviceService\DeviceApplication) |
+| DeviceKey |Odwołanie do tabeli urządzeń. |
+| ApplicationKey |? (skopiowany z ExchangeDeviceService\DeviceApplication). |
+| ApplicationName |? (skopiowany z ExchangeDeviceService\DeviceApplication). |
+| ApplicationVersion |? (skopiowany z ExchangeDeviceService\DeviceApplication). |
+| BundleSize |? (skopiowany z ExchangeDeviceService\DeviceApplication). |

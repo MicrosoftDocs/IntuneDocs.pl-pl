@@ -14,11 +14,11 @@ ms.assetid: D5ADB9D8-D46A-43BD-AB0F-D6927508E3F4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6af0ff1f463c153e62f6df63ce811076c5f692f2
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 079cfe097d6cf462f9ccd0a32d2e327b3b605e40
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-policy-entities"></a>Dokumentacja jednostek zasad
 
@@ -35,14 +35,14 @@ Jednostka **Policy** zawiera listę profilów konfiguracji urządzeń, profilów
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| PolicyKey |Unikatowy klucz reprezentujący zasady w magazynie danych |123 |
-| PolicyId |Unikatowy identyfikator zasad w magazynie danych |b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName |Nazwa zasad |„Plan bazowy systemu Windows 10” |
+| PolicyKey |Unikatowy klucz reprezentujący zasady w magazynie danych. |123 |
+| PolicyId |Unikatowy identyfikator zasad w magazynie danych. |b66bc706-ffff-7437-0340-032819502773 |
+| PolicyName |Nazwa zasad. |„Plan bazowy systemu Windows 10” |
 | PolicyVersion |Wersja zasad. Po edycji lub zmianie zasad tworzona jest nowa wersja. |1, 2, 3 |
-| IsDeleted |Wskazuje, czy rekord zasad został zaktualizowany.  True — zasady mają nowy rekord ze zaktualizowanymi polami. False — najnowszy rekord zasad. |True/False |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia zasad w magazynie danych |2016-11-23 12:00:00 |
-| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji zasad w magazynie danych |2016-11-23 12:00:00 |
+| IsDeleted |Wskazuje, czy rekord zasad został zaktualizowany.  <br>True — zasady mają nowy rekord ze zaktualizowanymi polami. <br>False — najnowszy rekord zasad. |True/False |
+| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia zasad w magazynie danych. |2016-11-23 12:00:00 |
+| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji zasad w magazynie danych. |2016-11-23 12:00:00 |
 
 ## <a name="policytype"></a>PolicyType
 
@@ -50,9 +50,9 @@ Jednostka **PolicyType** zawiera listę typów konfiguracji urządzeń, profiló
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| PolicyTypeId |Unikatowy identyfikator zasad w systemie źródłowym |123 |
-| PolicyTypeKey |Unikatowy identyfikator zasad w magazynie danych |1 |
-| PolicyTypeName |Nazwa typu zasad. |Zasady zgodności systemu Windows 10 |
+| PolicyTypeId |Unikatowy identyfikator zasad w systemie źródłowym. |123 |
+| PolicyTypeKey |Unikatowy identyfikator zasad w magazynie danych. |1 |
+| PolicyTypeName |Nazwa typu zasad. |Zasady zgodności systemu Windows 10. |
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
@@ -60,11 +60,11 @@ Jednostka **DeviceConfigurationProfileDeviceActivity** zawiera liczbę urządze�
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych |20160703 |
-| Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie |123 |
-| Sukces |Liczba unikatowych urządzeń w stanie Sukces |12 |
-| Błąd |Liczba unikatowych urządzeń w stanie Błąd |10 |
-| Niepowodzenie |Liczba unikatowych urządzeń w stanie Niepowodzenie |2 |
+| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
+| Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
+| Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
+| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Niepowodzenie |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |
 
 ## <a name="userconfiguration"></a>UserConfiguration
 
@@ -72,11 +72,11 @@ Jednostka **UserConfigurationProfileDeviceActivity** zawiera liczbę użytkownik
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych |20160703 |
-| Oczekiwanie |Liczba unikatowych użytkowników w stanie Oczekiwanie |123 |
-| Sukces |Liczba unikatowych użytkowników w stanie Sukces |12 |
-| Błąd |Liczba unikatowych użytkowników w stanie Błąd |10 |
-| Niepowodzenie |Liczba unikatowych użytkowników w stanie Niepowodzenie |2 |
+| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
+| Oczekiwanie |Liczba unikatowych użytkowników w stanie Oczekiwanie. |123 |
+| Sukces |Liczba unikatowych użytkowników w stanie Sukces. |12 |
+| Błąd |Liczba unikatowych użytkowników w stanie Błąd. |10 |
+| Niepowodzenie |Liczba unikatowych użytkowników w stanie Niepowodzenie. |2 |
 
 ## <a name="policytypeactivity"></a>PolicyTypeActivity
 
@@ -84,10 +84,10 @@ Jednostka **PolicyTypeActivity** zawiera łączną liczbę urządzeń w stanie S
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych |20160703 |
-| PolicyKey |Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName |Plan bazowy systemu Windows 10 |
-| PolicyTypeKey |Typ klucza zasad; można go połączyć z typem zasad w celu otrzymania nazwy typu zasad |Zasady zgodności systemu Windows 10 |
-| Pending |Liczba unikatowych urządzeń w stanie Oczekiwanie |123 |
-| Succeeded |Liczba unikatowych urządzeń w stanie Sukces |12 |
-| Error |Liczba unikatowych urządzeń w stanie Błąd |10 |
-| Fail- |Liczba unikatowych urządzeń w stanie Niepowodzenie |2 |
+| DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
+| PolicyKey |Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName. |Plan bazowy systemu Windows 10 |
+| PolicyTypeKey |Typ klucza zasad; można go połączyć z typem zasad w celu otrzymania nazwy typu zasad. |Zasady zgodności systemu Windows 10 |
+| Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
+| Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
+| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Fail- |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |

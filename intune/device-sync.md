@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ab24b147b32c94ba51728c0c223de3e6c92dd215
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: dadcd33f39827365fc3f22c46d4332f3ea3cbf09
+ms.sourcegitcommit: a1c751959c9b3d5678bd9d67007e762df30eab59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synchronizacja urządzeń w usłudze Intune w celu pobrania najnowszych zasad i akcji
 
@@ -29,11 +29,11 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
-- Windows — obsługiwana
-- Windows Phone — obsługiwana
-- iOS — obsługiwana
-- macOS — obsługiwana
-- Android — obsługiwana
+- Windows
+- Windows Phone
+- iOS
+- macOS
+- Android
 
 ## <a name="how-to-sync-a-device"></a>Jak zsynchronizować urządzenie
 
@@ -43,6 +43,26 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
 5. Z listy zarządzanych przez Ciebie urządzeń wybierz urządzenie, a następnie wybierz akcję zdalną **Synchronizacja**.
 7. Kliknij przycisk **Tak**, aby potwierdzić akcję.
+
+
+## <a name="retriable-error-codes"></a>Kody błędów z możliwością ponowienia próby
+
+Gdy administrator uruchamia akcję **synchronizacji** urządzenia, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem, ale które wywołały kod błędu z możliwością ponowienia próby, będą dostępne dla urządzenia. Jednak w przypadku aplikacji, które wywołały kod błędu bez możliwości ponowienia próby, udostępnienie ich dla urządzenia będzie możliwe dopiero po 7 dniach.
+
+
+| Kod błędu  | Sugerowany opis                                                                                                                  | Z możliwością ponowienia próby |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| 2016330898 | Wystąpił nieznany błąd.                                                                                                             | Nie        |
+| 2016330897 | Przekroczono limit czasu połączenia z usługą Intune. Zresetuj połączenie.                                                                             | Tak       |
+| 2016330896 | Utracono połączenie z Internetem. Zresetuj połączenie.                                                                            | Tak       |
+| 2016330895 | Utracono połączenie z Internetem. Zresetuj połączenie.                                                                            | Tak       |
+| 2016330894 | Utracono połączenie z Internetem. Zresetuj połączenie.                                                                            | Tak       |
+| 2016330893 | Utracono połączenie z Internetem. Zresetuj połączenie.                                                                            | Tak       |
+| 2016330892 | Roaming międzynarodowy jest wyłączony.                                                                                                     | Nie        |
+| 2016330891 | Nie można uzyskać dostępu do połączenia danych komórkowych na tym urządzeniu podczas prowadzenia rozmowy telefonicznej. Poczekaj na zakończenie rozmowy telefonicznej. | Tak       |
+| 2016330890 | Sieć komórkowa dla tego urządzenia. W tym momencie nie można użyć tych urządzeń.                                                   | Nie        |
+| 2016330889 | Nawiązanie bezpiecznego połączenia nie powiodło się. Zresetuj połączenie.                                                                                   | Tak       |
+| 2016330888 | Ocena relacji zaufania serwera nie powiodła się.                                                                                                | Nie        |
 
 ## <a name="next-steps"></a>Następne kroki
 
