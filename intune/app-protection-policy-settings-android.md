@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 635f99a0fd4857e9c0c2266371713c102ce37912
-ms.sourcegitcommit: 4b776d1a87c0707244f4ae0122de882e0eef6fa3
+ms.openlocfilehash: df96d525efc49cb1916812a547daababbfeea051
+ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu Android
 Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -86,3 +86,8 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | **Interwał offline przed wyczyszczeniem danych aplikacji (w dniach)** | Po tej liczbie dni (zdefiniowanej przez administratora) pracy w trybie offline aplikacja będzie wymagała od użytkownika nawiązania połączenia z siecią i przeprowadzenia ponownego uwierzytelnienia. Jeśli użytkownik zostanie pomyślnie uwierzytelniony, może nadal uzyskiwać dostęp do danych, a interwał przebywania w trybie offline zostanie zresetowany.  Jeśli uwierzytelnienie użytkownika zakończy się niepowodzeniem, aplikacja przeprowadzi selektywne czyszczenie konta i danych użytkownika.  Zobacz [Jak czyścić z aplikacji usługi Intune tylko dane firmowe](https://docs.microsoft.com/en-us/intune/apps-selective-wipe), aby uzyskać więcej informacji o rodzaju danych usuwanych podczas selektywnego czyszczenia danych.<br><br> | 90 dni |
 | **Zablokuj przechwytywanie ekranu i asystenta systemu Android (Android 6.0 i nowsze)** | Wybierz opcję **Tak**, aby zablokować funkcję przechwytywania ekranu i możliwości **asystenta systemu Android** na urządzeniu podczas korzystania z tej aplikacji. Wybranie opcji **Tak** spowoduje również rozmycie obrazu podglądu przełącznika aplikacji podczas korzystania z tej aplikacji przy użyciu konta służbowego. | Nie |
 | **Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia** | Wybierz opcję **Tak**, aby wyłączyć numer PIN aplikacji, gdy na zarejestrowanym urządzeniu zostanie wykryta blokada urządzenia. | Nie |
+| **Wymagaj minimalnej wersji systemu operacyjnego Android** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego Android do korzystania z tej aplikacji. Jeśli wersja systemu operacyjnego Android na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany. | Nie |
+| **Wymagaj minimalnej wersji systemu operacyjnego Android (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego Android do korzystania z tej aplikacji. Jeśli wersja systemu operacyjnego Android na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić. | Nie |
+| **Wymagaj minimalnej wersji aplikacji** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br>Podczas wybierania aplikacji docelowych należy pamiętać, że aplikacje mają często różne schematy określania numerów wersji.<br><br> | Nie | 
+| **Wymagaj minimalnej wersji aplikacji (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby zalecić minimalną wersję aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br>Podczas wybierania aplikacji docelowych należy pamiętać, że aplikacje mają często różne schematy określania numerów wersji.<br><br> | Nie | 
+

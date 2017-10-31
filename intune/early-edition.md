@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a2e6fd2381286aa652a04b5ed34ab21c57ed85f6
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 973408b292261b86f0a49bfaf4c786d6a6dacf28
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2017"></a>Wersja wczesna usługi Microsoft Intune — październik 2017
 
@@ -151,19 +151,6 @@ Wraz z wydaniem systemu Android Oreo firma Google wprowadza zestaw funkcji zabez
 ### <a name="support-for-windows-10-edition-upgrade-policy------903672archived-1119689---"></a>Obsługa zasad uaktualniania wydania systemu Windows 10 <!-- 903672(archived), 1119689 -->  
 Można utworzyć zasady uaktualniania wydania systemu Windows 10, które umożliwią uaktualnienie urządzeń z systemem Windows 10 do systemu Windows 10 Education, Windows 10 Education N, Windows 10 Professional, Windows 10 Professional N, Windows 10 Professional Education oraz Windows 10 Professional Education N. Aby uzyskać szczegółowe informacje dotyczące uaktualnień wydania systemu Windows 10, zobacz artykuł [How to configure Windows 10 edition upgrades (Jak skonfigurować uaktualnienia wydania systemu Windows 10)](edition-upgrade-configure-windows-10.md).
 
-
-### <a name="intune-mam-and-outlook-for-android-add-ins-----1450688---"></a>Zarządzanie aplikacjami mobilnymi usługi Intune i dodatki dla aplikacji Outlook dla systemu Android <!-- 1450688 -->
-W ciągu kilku tygodni zespół Office ogłosi dodatki dla programu Outlook dla systemu Android. Wspomniany zestaw dodatków istnieje już w programie Outlook w systemach Windows i iOS, w aplikacji Outlook Web App oraz w aplikacji dla komputerów Mac. Ponieważ dodatki są zarządzane przez program Exchange, użytkownicy otrzymają możliwość kopiowania i udostępniania danych i wiadomości między programem Outlook i niezarządzanymi aplikacjami zgodnymi z dodatkami, chyba że dostęp do dodatków zostanie wyłączony przez administratora programu Exchange. 
-
-Aby zarządzać uprawnieniami użytkowników w zakresie dostępu do dodatków, skontaktuj się z administratorem programu Exchange i upewnij się, że zasady ochrony danych funkcji MAM mają zastosowanie do dodatków.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Jeśli obowiązujące zasady programu Exchange zostały już skonfigurowane pod kątem uniemożliwienia ładowania bezpośredniego dodatków lub ich instalowania, lektura reszty tego artykułu mija się z celem. Zasady zarządzania aplikacjami mobilnymi będą stosowane zgodnie z wybranymi ustawieniami. Należy jednak pamiętać, że jeśli zasady funkcji MAM zostały skonfigurowane pod kątem ograniczenia operacji wycinania, kopiowania i wklejania danych w programie Outlook dla systemu Android, a w programie Exchange nie ustawiono zasad dotyczących dodatków, domyślne ustawienie będzie umożliwiać użytkownikom instalowanie dodatków programu Outlook. Dodatki te mają dostęp do treści, tematu i innych właściwości wiadomości. Możliwość instalowania dodatków przez użytkownika można wyłączyć. Aby to zrobić, administrator programu Exchange musi usunąć role „Moje aplikacje z portalu Marketplace” i „Moje aplikacje niestandardowe”.
-
-Zmiana ustawienia w programie Exchange ma zastosowanie do programu Outlook dla systemu Windows i iOS, aplikacji Outlook Web App, aplikacji dla komputerów Mac i dla urządzeń przenośnych. 
-
-#### <a name="what-do-i-need-to-do"></a>Co mam zrobić?
-Już dzisiaj przejrzyj zasady programu Exchange. Poinformuj personel działu IT i pracowników pomocy technicznej. Zwróć się do naszego zespołu pomocy technicznej ze wszelkimi konkretnymi pytaniami i wątpliwościami. 
 
 
 
