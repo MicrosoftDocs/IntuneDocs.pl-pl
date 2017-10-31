@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 76b709f97b349966fbca7115959f64a56741380b
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 83ab9e4a6fae4fda4c8e97c5fc091d4e5a03f3ea
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Rejestrowanie urządzeń z systemem Windows za pomocą programu Windows AutoPilot Deployment
 Program Windows AutoPilot Deployment upraszcza aprowizowanie urządzeń. Obecnie tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Sporo czasu może też zajmować stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu AutoPilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem AutoPilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami itp. na urządzeniach po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows AutoPilot (Przegląd rozwiązania Windows AutoPilot)](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
@@ -47,13 +47,16 @@ Profile wdrażania rozwiązania AutoPilot służą do konfigurowania urządzeń 
    - **Ustawienia prywatności**: wybierz, czy ustawienia prywatności mają być pokazywane użytkownikom. 
    - **Umowa licencyjna użytkownika oprogramowania (EULA, End User License Agreement)**: określ, czy umowa licencyjna użytkownika oprogramowania ma być pokazywana użytkownikom.
    - **Typ konta użytkownika**: wybierz typ konta użytkownika: **Administrator** lub **Standardowe** konto użytkownika.
+
+     > [!Note]    
+     > To ustawienie nie ma zastosowania w przypadku konta administratora globalnego ani konta administratora firmy. Te konta nie mogą odpowiadać użytkownikom standardowym, ponieważ mają dostęp do wszystkich funkcji administracyjnych w usłudze Azure AD.
 8. Kliknij pozycję **Utwórz**, aby utworzyć profil. Profil wdrażania rozwiązania AutoPilot jest teraz dostępny do przypisania do urządzeń.
      
-   > [!Note]    
-   > Następujące ustawienia są konfigurowane dla wszystkich profilów wdrażania rozwiązania AutoPilot:
-   > - Pomijanie stron konfiguracji funkcji Cortana, usługi OneDrive i rejestracji OEM
-   > - Automatyczne konfigurowanie pod kątem firmy lub szkoły
-   > - Środowisko logowania z oznaczeniami firmy lub szkoły    
+> [!Note]    
+> Następujące ustawienia są konfigurowane dla wszystkich profilów wdrażania rozwiązania AutoPilot:
+> - Pomijanie stron konfiguracji funkcji Cortana, usługi OneDrive i rejestracji OEM
+> - Automatyczne konfigurowanie pod kątem firmy lub szkoły
+> - Środowisko logowania z oznaczeniami firmy lub szkoły    
 
 ## <a name="assign-an-autopilot-deployment-profile"></a>Przypisywanie profilu wdrażania rozwiązania AutoPilot
 Po utworzeniu profilów wdrażania rozwiązania AutoPilot można przypisać je do wybranych urządzeń.

@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6d8c4af1ff091fbb125ec8a06b3c46cc2424a0bd
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 1e3352335a5804575a39bbbf050ccb41b2674f2c
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="reference-for-devices-entities"></a>Odwołanie do jednostek urządzeń
 
@@ -130,10 +130,23 @@ Jednostka **EnrollmentTypes** wskazuje, czy urządzenie jest firmowe, osobiste c
 
 Jednostka **MdmStatuses** wskazuje stan zgodności urządzenia.
 
-| Właściwość  | Opis | Przykład |
+| Właściwość  | Opis |
+|---------|------------|
+| MdmStatusID |Unikatowy identyfikator stanu zgodności |
+| MdmStatusKey |Unikatowy identyfikator stanu zgodności w magazynie danych — klucz zastępczy | 
+| ComplianceStatus |Stan zgodności urządzenia, powinien mieć jedną z wartości z poniższej tabeli | 
+
+
+## <a name="example"></a>Przykład
+
+| MdmStatusID  | ComplianceStatus | Opis |
 |---------|------------|--------|
-| MdmStatusName |Identyfikator MdmStatus |0 — Nieznany <br>1— Zgodny <br>2 — Niezgodny |
-| MdmStatusKey |Unikatowy identyfikator stanu zgodności w magazynie danych — klucz zastępczy | |
+| 0 |Nieznane |Stan zgodności urządzenia jest nieznany. |
+| 1 |Zgodny |Urządzenie jest zgodne. |
+| 2 |Niezgodny |Urządzenie jest niezgodne. |
+| 3 |Konflikt |Zgodność urządzenia spowodowała konflikt. |
+| 4 |Błąd |Wystąpił błąd podczas odczytywania stanu zgodności urządzenia. |
+
 
 ## <a name="managementstates"></a>ManagementStates
 
@@ -340,12 +353,12 @@ Jednostka **MdmDeviceInventoryHistories** zawiera dzienne migawki danych spisu d
 | SerialNumber |Numer seryjny. |
 | DeviceManufacturer |Producent urządzenia. |
 | DMVersion |Wersja DM. |
-| FirmwareVersion |Wersja oprogramowania układowego. |
+| Wersja oprogramowania układowego |Wersja oprogramowania układowego. |
 | HardwareVersion |Wersja sprzętu. |
 | PlatformType |Typ platformy. |
 | ProcessorLevel |Poziom procesora. |
 | ProcessorRevision |Poprawka procesora. |
-| Product |Produkt. |
+| Produkt |Produkt. |
 | ProductVersion |Wersja produktu. |
 | OEM |Producent oryginalnego sprzętu. |
 | DeviceBuildVersion |Wersja kompilacji urządzenia. |
