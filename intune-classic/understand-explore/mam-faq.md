@@ -5,7 +5,7 @@ keywords:
 author: oydang
 ms.author: oydang
 manager: angrobe
-ms.date: 01/20/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56d0d3e79e38b20cb00a528fc6b55ca9de6ba871
-ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
+ms.openlocfilehash: 6ba1d1d9d0b1c21c364ef97f8340157a94ae996b
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -70,16 +70,16 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint](https://products.office.com/business/office)?**
 
-  1. Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](http://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+  1. Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](http://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-  2. Użytkownik końcowy musi mieć zainstalowaną na urządzeniu aplikację [OneDrive](https://onedrive.live.com/about/) i zalogować się przy użyciu konta AAD.
+  2. Użytkownik końcowy musi mieć w ramach ustawienia zasad ochrony aplikacji „Nie zezwalaj na używanie polecenia Zapisz jako” skonfigurowaną zarządzaną lokalizację przy użyciu funkcji szczegółowego zapisywania jako. Jeśli na przykład zarządzana lokalizacja to usługa OneDrive, aplikację [OneDrive](https://onedrive.live.com/about/) należy skonfigurować w aplikacji Word, Excel lub PowerPoint użytkownika końcowego.
 
-  3. Aplikacja OneDrive musi być objęta zasadami ochrony aplikacji wdrożonymi dla użytkownika końcowego.
+  3. Jeśli zarządzana lokalizacja to usługa OneDrive, aplikacja musi być objęta zasadami ochrony aplikacji wdrożonymi dla użytkownika końcowego.
 
   >[!NOTE]
   > Aplikacje mobilne pakietu Office obsługują obecnie tylko usługę SharePoint Online, a nie lokalny program SharePoint.
 
-**Dlaczego usługa OneDrive jest wymagana dla pakietu Office?** Usługa Intune oznacza wszystkie dane w aplikacji jako „firmowe” lub „osobiste”. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm).
+**Dlaczego w pakiecie Office jest wymagana zarządzana lokalizacja (np. usługa OneDrive)?** Usługa Intune oznacza wszystkie dane w aplikacji jako „firmowe” lub „osobiste”. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm).
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z usługi Skype dla firm?** Zobacz wymagania licencyjne usługi [Skype dla firm](https://products.office.com/skype-for-business/it-pros).
   >[!NOTE]
@@ -102,6 +102,18 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
   2. **Czy numer PIN jest bezpieczny?** Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest niewidoczne dla zestawu SDK aplikacji usługi Intune. Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
 
   3. **Jak usługa Intune chroni numer PIN przed atakami siłowymi?** W ramach zasad numeru PIN aplikacji administrator IT może ustawić maksymalną liczbę prób uwierzytelniania numeru PIN przez użytkownika przed zablokowaniem aplikacji. Po wykonaniu pewnej liczby prób zestaw SDK aplikacji usługi Intune może wyczyścić dane „firmowe” z aplikacji.
+  
+**Jak działa kod PIN aplikacji usługi Intune typu numerycznego i typu „kod dostępu”?**
+Usługa MAM umożliwia obecnie korzystanie z kodu PIN na poziomie aplikacji (system iOS) ze znakami alfanumerycznymi i specjalnymi („kod dostępu”), co wymaga udziału aplikacji (np. WXP, Outlook, Managed Browser, Yammer) w procesie integracji zestawu SDK aplikacji usługi Intune dla systemu iOS. Bez tego ustawienia kodu dostępu nie są prawidłowo wymuszane w aplikacjach docelowych. Ze względu na to, że aplikacje będą przeprowadzać tę integrację w sposób ciągły, zachowanie kodu PIN typu „kod dostępu” i typu numerycznego zostało tymczasowo zmienione dla użytkownika końcowego i wymaga ważnego wyjaśnienia. W przypadku wersji usługi Intune z października 2017 r. zachowanie jest następujące...
+
+Aplikacje, które mają
+1. tego samego wydawcę aplikacji
+2. kod PIN typu „kod dostępu” obsługiwany za pośrednictwem konsoli oraz 
+3. zestaw SDK przyjęty przy użyciu tej funkcji (wersja 7.1.12 i nowsze), będą mogły udostępniać kod dostępu między sobą. 
+
+Aplikacje, które mają
+1. tego samego wydawcę aplikacji
+2. kod PIN typu numerycznego obsługiwany za pośrednictwem konsoli będą mogły udostępniać kod PIN typu numerycznego między sobą. 
 
 **Jak to wygląda w przypadku szyfrowania?** Administratorzy IT mogą wdrażać zasady ochrony aplikacji, które wymagają szyfrowania danych aplikacji. W ramach zasad administrator IT może również określić, kiedy zawartość będzie szyfrowana.
 

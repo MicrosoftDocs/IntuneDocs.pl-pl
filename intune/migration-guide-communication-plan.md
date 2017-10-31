@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 59b978fa9c9084c5a70c912ca6a9b1e6c364722c
-ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
+ms.openlocfilehash: 806e355acd84f5c70029f8612c444b077c0631e4
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji
 
@@ -52,6 +52,8 @@ W usłudze Intune dostępne są dodatkowe szablony zachęcające użytkowników 
 -   [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
 
 -   [Szablon rejestracji użytkowników końcowych usługi Intune dla administratorów IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) to modyfikowalny dokument programu Word, który objaśnia, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
+
+-   [Przewodniki z instrukcjami i wiadomości e-mail dostępne w ramach usługi FastTrack dla pakietu EMS](https://gallery.technet.microsoft.com/FastTrack-for-EMS-How-To-f170da4c) można dostosować, używając logo swojej firmy, aby promować wdrożenia usługi Intune i pakietu EMS w danej organizacji.
 
 ## <a name="next-steps"></a>Następne kroki
 

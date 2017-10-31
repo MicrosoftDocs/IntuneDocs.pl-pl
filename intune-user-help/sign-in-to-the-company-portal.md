@@ -1,11 +1,11 @@
 ---
 title: "Jak zalogować się do aplikacji Portal firmy | Microsoft Docs"
-description: 
+description: "Dowiedz się, jak zalogować się do aplikacji Portal firmy na wielu platformach."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ca6d811d884b5405bdb4e5f096366c123d8e00d1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: caea74745dc58a04c60e780727b318ebdb8ff235
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-do-i-sign-in-to-the-company-portal-app---user-story-1132123--"></a>Jak zalogować się do aplikacji Portal firmy? <!--User Story 1132123-->
 
@@ -50,6 +50,16 @@ Chociaż poniższe ilustracje przedstawiają system iOS, proces jest w zasadzie 
 4. Gdy aplikacja Portal firmy zaakceptuje Twoje dane logowania, zaloguje Cię i uzyskasz dostęp do zasobów firmy.   
 
   ![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp sygnalizuje pasek ładowania.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+## <a name="signing-in-with-certificate-based-authentication"></a>Logowanie przy użyciu uwierzytelniania opartego na certyfikatach
+
+1.  Otwórz aplikację Portal firmy na urządzeniu.
+
+2.  Wprowadź swoje **konto służbowe**.
+
+3.  Wybierz link **Zaloguj się przy użyciu certyfikatu**.
+
+4.  Wybierz pozycję **Kontynuuj**, aby używać certyfikatu.
 
 ## <a name="signing-in-from-another-device"></a>Logowanie z innego urządzenia
 
