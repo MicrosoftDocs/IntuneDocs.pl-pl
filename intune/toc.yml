@@ -240,10 +240,15 @@
           href: apps-deploy.md
         - name: Monitorowanie aplikacji
           href: apps-monitor.md
-        - name: Profile konfiguracji aplikacji systemu iOS
-          href: app-configuration-policies-use-ios.md
-        - name: Profile konfiguracji aplikacji systemu Android
-          href: app-configuration-policies-use-android.md
+        - name: Zasady konfigurowania aplikacji
+          href: app-configuration-policies-overview.md
+          items:
+            - name: iOS urządzenia zarządzane
+              href: app-configuration-policies-use-ios.md
+            - name: Android urządzenia zarządzane
+              href: app-configuration-policies-use-android.md
+            - name: Aplikacje zarządzane
+              href: app-configuration-policies-managed-app.md
         - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
           href: app-provisioning-profile-ios.md
         - name: Czyszczenie selektywne aplikacji
