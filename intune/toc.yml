@@ -545,6 +545,8 @@
     - name: Korzystanie z magazynu danych usługi Intune
       href: reports-nav-create-intune-reports.md
       items:
+        - name: Dziennik zmian dla magazynu danych
+          href: reports-changelog.md
         - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
           href: reports-proc-get-a-link-powerbi.md
         - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
@@ -602,18 +604,20 @@
         - name: Model danych magazynu danych
           href: reports-ref-data-model.md
           items:
-            - name: Odwołanie do jednostki Date
-              href: reports-ref-date.md
-            - name: Dokumentacja jednostki użytkownika
-              href: reports-ref-user.md
-            - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
-              href: reports-ref-mobile-app-management.md
-            - name: Odwołanie do jednostek urządzeń
-              href: reports-ref-devices.md
             - name: Dokumentacja jednostek aplikacji
               href: reports-ref-application.md
-            - name: Dokumentacja jednostki skojarzeń urządzenia użytkownika
-              href: reports-ref-userdeviceassociations.md
+            - name: Odwołanie do jednostki daty
+              href: reports-ref-date.md
+            - name: Odwołanie do jednostek urządzeń
+              href: reports-ref-devices.md
+            - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
+              href: reports-ref-mobile-app-management.md
+            - name: Dokumentacja jednostek zasad
+              href: reports-ref-policy.md
+            - name: Dokumentacja Skojarzenie urządzenia użytkownika
+              href: reports-ref-user-device.md
+            - name: Dokumentacja jednostki użytkownika
+              href: reports-ref-user.md
     - name: Ładowanie bezpośrednie aplikacji systemu Windows
       href: intune-graph-apis.md
       items:
