@@ -14,11 +14,11 @@ ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e399c36d4c6a855766ee956b3ca24c503a1f974b
-ms.sourcegitcommit: e57512698a479df0d25ece6ece4492ec0e4f0f3e
+ms.openlocfilehash: d485f0d53ac57a2f159ebd56b6b3823a8a49d5ad
+ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="use-the-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Intune
 
@@ -35,8 +35,12 @@ Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mo
   -  Dane odświeżane codziennie
   -  Model danych korzystający ze standardu OData
 
+> [!Note]
+> Jeśli korzystasz z hybrydowego zarządzania urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu SCCM. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Do tworzenia niestandardowych raportów można używać pulpitu nawigacyjnego usługi Power BI w programie SCCM. Aby uzyskać więcej informacji, zobacz [Announcing the Power BI solution template for System Center Configuration Manager (Przedstawiamy szablon rozwiązania Power BI dla programu System Center Configuration Manager)]( https://powerbi.microsoft.com/blog/sccm-solution-template) i [Create a Power BI report and dashboard (Tworzenie raportu i pulpitu nawigacyjnego usługi Power BI)](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/create-powerbi-report-dashboard).
+
+
 > [!Important]  
-> Możesz zapoznać się z najnowszymi funkcjami magazynu danych, korzystając z wersji beta. Aby skorzystać z wersji beta, adres URL musi zawierać parametr zapytania `api-version=beta`. Wersja beta umożliwia korzystanie z funkcji jeszcze przed ich ogólnym udostępnieniem jako obsługiwana usługa. W miarę dodawania nowych funkcji do usługi Intune zachowanie wersji beta i kontrakty danych mogą ulec zmianie. Każdy kod niestandardowy lub narzędzia raportowania zależne od wersji beta mogą przestać działać po zainstalowaniu aktualizacji. <!-- If you experience problems with the beta service, follow [link to feedback process]() to report the issue or provide feedback.-->
+> Możesz zapoznać się z najnowszymi funkcjami magazynu danych, korzystając z wersji beta. Aby skorzystać z wersji beta, adres URL musi zawierać parametr zapytania `api-version=beta`. Wersja beta umożliwia korzystanie z funkcji jeszcze przed ich ogólnym udostępnieniem jako obsługiwana usługa. W miarę dodawania nowych funkcji do usługi Intune zachowanie wersji beta i kontrakty danych mogą ulec zmianie. Każdy kod niestandardowy lub narzędzia raportowania zależne od wersji beta mogą przestać działać po zainstalowaniu aktualizacji.
 
 **Następne kroki**
 

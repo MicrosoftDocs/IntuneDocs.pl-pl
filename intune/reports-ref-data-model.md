@@ -14,11 +14,11 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d52e240763263ac4f761a8635ee6694a45168354
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 37af15a36ff20b2c13b5fb1157d04a05c40d3216
+ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="data-warehouse-data-model"></a>Model danych magazynu danych
 
@@ -38,14 +38,10 @@ Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
 
 W modelu danych zestawy jednostek są nazywane kolekcjami jednostek. Te zestawy zawierają jednostki definiujące dane zebrane w modelu. Każdy zestaw jednostek zapewnia punkt dostępu do modelu danych magazynu danych. Możesz znaleźć szczegółowe informacje dotyczące następujących kategorii jednostek:
 
-  -  [Data](reports-ref-date.md)
-  -  [Użytkownik](reports-ref-user.md)
-  -  [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
-  -  [Urządzenia](reports-ref-devices.md)
   -  [Aplikacja](reports-ref-application.md)
+  -  [Data](reports-ref-date.md)
+  -  [Urządzenia](reports-ref-devices.md)
   -  [Zasady](reports-ref-policy.md)
-  -  [Skojarzenie urządzenia użytkownika](reports-ref-userdeviceassociations.md)
-
-<!-- ## Data Model relationships
-
-For more information on the relationships in the data model, see [Relationships of Entities](reports-api-entity-relationships.md). -->
+  -  [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
+  -  [User](reports-ref-user.md)
+  -  [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)

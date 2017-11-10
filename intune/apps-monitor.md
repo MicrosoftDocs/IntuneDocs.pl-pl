@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fbb1d3e11f8ba3e508a261981e461f35c99ca110
-ms.sourcegitcommit: f8672ff73066c2d8bcb78c30f84fda8aa3057a1c
+ms.openlocfilehash: 3736b6d43f5cd3b6c75097a2ceabebffd75f0caa
+ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -27,8 +27,22 @@ ms.lasthandoff: 10/11/2017
 
 Usługa Intune zapewnia szereg sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu ich przypisania.
 
-1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
-2. W bloku listy aplikacji wybierz aplikację, o której chcesz wyświetlić informacje. Zostanie wyświetlony blok **Stan instalacji urządzenia** dotyczące aplikacji <*nazwa aplikacji*> : ![blok stanu instalacji aplikacji.](./media/monitor-apps.png)
+1. Zaloguj się do witryny Azure Portal.
+2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
+3. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w grupie **Zarządzaj**.
+     
+    ![Blok stanu instalacji aplikacji.](./media/monitor-apps.png)
+5. W bloku listy aplikacji wybierz aplikację. Zostanie wyświetlony blok **Stan instalacji urządzenia** dla aplikacji <*nazwa aplikacji*> .
+
+Raport o stanie instalacji urządzeń zawiera następujące kolumny:
+
+1.  **Nazwa urządzenia** — nazwa typu urządzenia.
+2.  **Nazwa użytkownika** — nazwa użytkownika.
+3.   **Platforma** — system operacyjny zainstalowany na urządzeniu.
+4.  **Wersja** — numer wersji aplikacji.
+5.   **Stan** — możliwe stany aplikacji obejmują: **Zainstalowana**, **Niezainstalowana**, **Oczekiwanie na instalację** i **Błąd**.
+6. **Szczegóły stanu** — czytelny opis stanu aplikacji na urządzeniu.
+7. **Ostatnie zaewidencjonowanie** — czas ostatniego zaewidencjonowania urządzenia w usłudze Intune.
 
 Następnie wykonaj jedną z następujących czynności, aby dowiedzieć się więcej o aplikacjach i ich przypisaniach.
 

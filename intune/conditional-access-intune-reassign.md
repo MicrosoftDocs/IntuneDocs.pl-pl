@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b0b0982018dcfa3c606ea55b9264e5cd6cd1a82
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: ff83c5926b04b11c67799e0486249dc339a167c1
+ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -82,7 +82,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
     ![Porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla witryny Azure Portal. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
+    > Wybór w witrynie Azure Portal powinien odpowiadać wyborowi w portalu klasycznym. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
 
 5. Po wybraniu grupy kliknij pozycję **Wybierz**, a następnie kliknij pozycję **Gotowe**.
 
