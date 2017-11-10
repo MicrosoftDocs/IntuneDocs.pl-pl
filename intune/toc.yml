@@ -164,6 +164,8 @@
               href: windows-bulk-enroll.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
+            - name: Ekran ze stanem rejestracji
+              href: windows-enrollment-status.md
         - name: Konfiguracja rejestrowania urządzeń z systemem Android
           href: android-enroll.md
         - name: Konfigurowanie rejestrowania urządzeń z systemem iOS
@@ -365,6 +367,8 @@
               href: certficates-pfx-configure.md
         - name: Konfigurowanie ustawień usługi Windows Information Protection
           href: windows-information-protection-configure.md
+        - name: Zarządzanie skryptami środowiska PowerShell
+          href: intune-management-extension.md
         - name: Monitorowanie wydatków telekomunikacyjnych
           href: telecom-expenses-monitor.md
         - name: Przypisywanie profilów
