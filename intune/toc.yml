@@ -608,19 +608,23 @@
         - name: Model danych magazynu danych
           href: reports-ref-data-model.md
           items:
+            - name: Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune
+              href: reports-ref-user-timeline.md
             - name: Dokumentacja jednostek aplikacji
               href: reports-ref-application.md
+            - name: Dokumentacja jednostki bieżącego użytkownika
+              href: reports-ref-current-user.md
             - name: Odwołanie do jednostki daty
               href: reports-ref-date.md
             - name: Odwołanie do jednostek urządzeń
               href: reports-ref-devices.md
-            - name: Dokumentacja rozszerzenia do zarządzania usługi Intune
+            - name: Dokumentacja jednostki rozszerzenia do zarządzania usługi Intune
               href: reports-ref-intunemanagementextension.md
             - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
               href: reports-ref-mobile-app-management.md
             - name: Dokumentacja jednostek zasad
               href: reports-ref-policy.md
-            - name: Dokumentacja Skojarzenie urządzenia użytkownika
+            - name: Dokumentacja jednostki skojarzenia urządzenia użytkownika
               href: reports-ref-user-device.md
             - name: Dokumentacja jednostki użytkownika
               href: reports-ref-user.md
