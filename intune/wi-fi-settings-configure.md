@@ -15,11 +15,11 @@ ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3333a5addfd0c4ab757121e22e19ac66c0b3e1d
-ms.sourcegitcommit: ec8561b8c63515e0b5f21a858984108dc5dbd5d3
+ms.openlocfilehash: ae5210cb3da5503c4cf1b85be8b8522fa1cfd6ce
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/10/2017
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Microsoft Intune
 
@@ -58,9 +58,7 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
     - **iOS**
     - **macOS**
     - **Windows 8.1 lub nowszy (importuj profil)**
-6. Z listy rozwijanej typu **profilu** wybierz pozycję **Podstawowa sieć Wi-Fi** lub **Firmowa sieć Wi-Fi**.
-    >[!TIP]
-    >Użyj opcji **Podstawowa sieć Wi-Fi**, aby dostarczyć podstawowe funkcje, takie jak nazwa sieci i identyfikator SSID. **Firmowa sieć Wi-Fi** umożliwia dostarczenie bardziej zaawansowanych informacji, takich jak protokół uwierzytelniania rozszerzonego (EAP) (o ile jest używany przez sieć Wi-Fi). **Importowanie sieci Wi-Fi** (dla systemu Windows 8.1 i Windows 10) pozwala zaimportować ustawienia sieci Wi-Fi jako plik XML wyeksportowany wcześniej z innego urządzenia.
+6. Z listy rozwijanej typu **profilu** wybierz pozycję **Podstawowa sieć Wi-Fi** lub **Firmowa sieć Wi-Fi**. Możesz użyć opcji **Podstawowa sieć Wi-Fi**, aby dostarczyć podstawowe funkcje, takie jak nazwa sieci i identyfikator SSID. **Firmowa sieć Wi-Fi** umożliwia dostarczenie bardziej zaawansowanych informacji, takich jak protokół uwierzytelniania rozszerzonego (EAP) (o ile jest używany przez sieć Wi-Fi). **Importowanie sieci Wi-Fi** (dla systemu Windows 8.1 i Windows 10) pozwala zaimportować ustawienia sieci Wi-Fi jako plik XML wyeksportowany wcześniej z innego urządzenia.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
     - [Ustawienia systemu Android i programu Android for Work](wi-fi-settings-android.md)
     - [Ustawienia systemu iOS](wi-fi-settings-ios.md)

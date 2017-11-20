@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f1b9f6900a5dfded736bd0cc92283fdca2220a5
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c7947c9d047c6f206f9f93c389d418379fe8267a
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -134,13 +134,18 @@ Po skonfigurowaniu połączenia w programie Exchange Connector urządzenia przen
 > [!NOTE]
 > Jeśli po zainstalowaniu łącznika On-Premises Exchange Connector połączenie z programem Exchange zostanie usunięte, musisz odinstalować łącznik On-Premises Exchange Connector z komputera, na którym został zainstalowany.
 
-## <a name="validate-the-exchange-connection"></a>Weryfikacja połączenia z programem Exchange
+## <a name="monitor-the-exchange-connector-activity"></a>Monitorowanie działania łącznika programu Exchange
 
 Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączenia oraz ostatniej pomyślnej próby synchronizacji. Aby dokonać weryfikacji łącznika programu Exchange:
 
-- Na pulpicie nawigacyjnym usługi Intune wybierz pozycję **Dostęp warunkowy**. W obszarze **Zarządzaj** wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**, aby sprawdzić stan połączenia.
+1. Na pulpicie nawigacyjnym usługi Intune wybierz pozycję **Dostęp warunkowy**.
+2. W obszarze **Zarządzaj** wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**, aby sprawdzić stan połączenia.
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
+
+### <a name="system-center-operations-manager-scom-management-pack"></a>Pakiet administracyjny programu System Center Operations Manager (SCOM)
+
+Począwszy od wersji 1710 usługi Intune, można korzystać z [pakietu administracyjnego programu SCOM dla łącznika programu Exchange oraz usługi Intune](https://www.microsoft.com/en-us/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Zapewnia on różne sposoby monitorowania łącznika programu Exchange w przypadku konieczności rozwiązywania problemów.
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](conditional-access-exchange-create.md)

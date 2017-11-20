@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
+ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
@@ -28,7 +28,7 @@ Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie 
 Po zarejestrowaniu urządzeń do zarządzania za pomocą usługi Intune dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Podstawowym sposobem osiągnięcia tego stanu jest zarejestrowanie urządzenia do zarządzania za pośrednictwem Portalu firmy.
 
 ## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie w usłudze Intune?
-Dział IT firmy ma dostęp do informacji mających związek z wykonywaną pracą, ale nie do informacji osobistych. Ma to szczególne znaczenie dla osób, które chcą zarejestrować swoje urządzenie osobiste w celu używania go w pracy. [Lista rzeczy, które dział IT może zobaczyć bądź też nie](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) znajduje się w kolejnym artykule dotyczącym wsparcia użytkowników.
+Dział wsparcia technicznego firmy ma dostęp do informacji mających związek z wykonywaną pracą, ale nie do informacji osobistych. Ma to szczególne znaczenie dla osób, które chcą zarejestrować swoje urządzenie osobiste w celu używania go w pracy. [Lista rzeczy, które dział IT może zobaczyć bądź też nie](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) znajduje się w kolejnym artykule dotyczącym wsparcia użytkowników.
 
 ## <a name="how-do-i-get-the-company-portal"></a>Jak uzyskać aplikację Portal firmy?
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
@@ -49,7 +49,8 @@ Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną i
 Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a co w aplikacji Portal firmy na urządzeniu, kliknij jeden z poniższych linków:
 
 - [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem iOS lub macOS](using-your-ios-or-macOS-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem iOS](using-your-ios-device-with-intune.md)
+- [Korzystanie z urządzenia z systemem macOS](using-your-macos-device-with-intune.md)
 - [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
 - [Korzystanie z witryny sieci Web Portal firmy](using-the-intune-company-portal-website.md)
 

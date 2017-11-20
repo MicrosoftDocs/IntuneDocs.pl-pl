@@ -14,11 +14,11 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37af15a36ff20b2c13b5fb1157d04a05c40d3216
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: f720d5f9dbf91d7f098a640d640f8f35136da4fc
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="data-warehouse-data-model"></a>Model danych magazynu danych
 
@@ -41,6 +41,7 @@ W modelu danych zestawy jednostek są nazywane kolekcjami jednostek. Te zestawy 
   -  [Aplikacja](reports-ref-application.md)
   -  [Data](reports-ref-date.md)
   -  [Urządzenia](reports-ref-devices.md)
+  -  [Rozszerzenie do zarządzania usługi Intune](reports-ref-intunemanagementextension.md)
   -  [Zasady](reports-ref-policy.md)
   -  [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
   -  [User](reports-ref-user.md)

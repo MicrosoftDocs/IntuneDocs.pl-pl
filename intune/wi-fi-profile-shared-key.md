@@ -3,10 +3,10 @@ title: "Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego"
 titleSuffix: Azure portal
 description: "Użycie niestandardowego profilu usługi Intune do utworzenia profilu sieci Wi-Fi przy użyciu klucza wstępnego."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/15/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c524acc403d6a1c041aa0dcea0948c2707202e03
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: bfcce8d38bc403a13aa28cc762370a7cfaa0bc2d
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/10/2017
 ---
-# <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą niestandardowego profilu urządzenia usługi Microsoft Intune
+# <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Niestandardowe profile urządzenia** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
@@ -205,3 +205,12 @@ Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi:
     Najlepiej użyć komputera, który nie jest połączony z wieloma sieciami, ponieważ w przeciwnym razie trzeba będzie przeszukiwać poszczególne profile, aby znaleźć właściwy.
 3.     Wyszukaj plik z odpowiednią nazwą wśród plików XML.
 4.     Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
+
+## <a name="best-practices"></a>Najlepsze rozwiązania
+Przed utworzeniem profilu sieci Wi-Fi z użyciem klucza wstępnego należy sprawdzić, czy urządzenie może połączyć się bezpośrednio z punktem końcowym.
+
+W przypadku rotacji kluczy (haseł lub kodów dostępu) należy spodziewać się przestoju i odpowiednio zaplanować wdrożenia. Rozważ wypchnięcie nowych profilów sieci Wi-Fi w czasie poza godzinami pracy. Ponadto należy ostrzec użytkowników, że może to mieć wpływ na łączność.
+ 
+Aby zapewnić bezproblemową obsługę przejścia i terminowe dostarczanie aktualizacji zasad, urządzenia muszą zachować co najmniej jeden otwarty kanał komunikacji z usługą Intune. Aby to zapewnić, należy użyć łączności komórkowej lub dostępu gościa do sieci Wi-Fi, który łączy użytkowników tylko z punktami końcowymi usługi Intune.
+
+

@@ -14,11 +14,11 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b81846c2e45f968184d50d2ea7c50aabb86b4964
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 6d675a36cd5ea4c11d755174bf2b0bbc5d4b18ec
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
@@ -27,15 +27,16 @@ ms.lasthandoff: 11/02/2017
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
 
 ## <a name="1710"></a>1710
-_Wydanie: październik 2017 r._
+_Wydane w listopadzie 2017 r._
 
 ### <a name="user-entity-contains-latest-user-data-in-data-warehouse-data-model----1544273---"></a>Jednostka użytkownika zawiera najnowsze dane użytkownika w modelu danych magazynu danych <!-- 1544273 -->
 
 Pierwsza wersja modelu danych magazynu danych usługi Intune zawierała tylko ostatnie, historyczne dane usługi Intune. Podczas tworzenia raportu nie było możliwe uchwycenie bieżącego stanu użytkownika. Po wprowadzeniu tej aktualizacji [**jednostka użytkownika**](reports-ref-user.md) będzie wypełniana najnowszymi danymi użytkownika.
 
-### <a name="new-entity-in-the-in-data-warehouse-data-model----1479526---"></a>Nowa jednostka w modelu danych magazynu danych <!-- 1479526 -->
+### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nowe jednostki w modelu danych magazynu danych <!-- 1479526 --><!-- -->
 
-Dodano jednostkę [**UserDeviceAssociation**](reports-ref-user-device.md). Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji.
+ - Dodano jednostkę [**UserDeviceAssociation**](reports-ref-user-device.md). Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji.
+ - Jednostka, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), dodana. Jednostka **IntuneManagementExtension** zawiera jednostki dla urządzeń przenośnych, które śledzą informacje, takie jak wersja i stan instalacji.
 
 ## <a name="next-steps"></a>Następne kroki
  - Dowiedz się, [co nowego w usłudze Intune w każdym tygodniu](whats-new.md). Możesz również sprawdzić informacje o nadchodzących zmianach, ważnych powiadomieniach dotyczących usługi oraz poprzednich wersjach. 

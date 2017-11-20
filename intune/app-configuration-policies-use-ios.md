@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d293ff6001ef937c7da0055e6642aa5a1226bd2e
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: 2226477d40f2bb70dd047ed58e8789fd9bee4ecb
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -40,21 +40,21 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
 3. Wybierz obciążenie **Aplikacje mobilne**.
-4. Kliknij pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie kliknij przycisk **Dodaj**.
+4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
-    - **Nazwa**  
+    - **Nazwa**<br>
       — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
-    - **Opis**  
-      — opis profilu, który będzie wyświetlany w witrynie Azure Portal
-    - **Typ rejestracji urządzenia**  
+    - **Opis**<br>
+      — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
+    - **Typ rejestracji urządzenia**<br>
       Wybierz pozycję **Urządzenia zarządzane**.
 6. Dla elementu **Platforma** wybierz pozycję **iOS**.
-7.  Wybierz pozycję **Skojarzona aplikacja**, po czym w bloku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację.
+7.  Wybierz pozycję **Skojarzona aplikacja**. Następnie w bloku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację.
 8.  W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
-9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z opcji:
+9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z poniższych opcji:
     - **[Korzystanie z projektanta konfiguracji](#Use-the-configuration-designer)**
     - **[Wprowadzanie danych XML](#enter-xml-data)**
-10. Kliknij przycisk **OK**, a następnie pozycję **Dodaj**.
+10. Wybierz **OK**, a następnie wybierz pozycję **Dodaj**.
 
 ## <a name="use-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
@@ -62,27 +62,32 @@ Projektanta konfiguracji można używać w przypadku aplikacji na urządzeniach 
 
 ### <a name="add-a-setting"></a>Dodawanie ustawienia
 
-1. Dla każdego klucza i wartości konfiguracji ustaw następujące elementy: <ul><li>**Klucz konfiguracji**<br>Służy do jednoznacznego zidentyfikowania konfiguracji określonego ustawienia.</li><li>**Typ wartości**<br>Typ danych wartości konfiguracji. Typy obejmują liczby całkowite, liczby rzeczywiste, ciągi i wartości logiczne.</li><li>**Wartość konfiguracji**<br>Wartość konfiguracji.</li></ul>
-2. Kliknij przycisk **OK**, aby zastosować ustawienia konfiguracji.
+1. Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:
+   - **Klucz konfiguracji**<br>
+     Klucz, który jednoznacznie identyfikuje konfigurację określonego ustawienia.
+   - **Typ wartości**<br>
+     Typ danych wartości konfiguracji. Typy obejmują liczby całkowite, liczby rzeczywiste, ciągi i wartości logiczne.
+   - **Wartość konfiguracji**<br>
+     Wartość konfiguracji.
+2. Wybierz przycisk **OK**, aby zastosować ustawienia konfiguracji.
 
 ### <a name="delete-a-setting"></a>Usuwanie ustawienia
 
-1. Kliknij przycisk wielokropka (...) obok ustawienia.
+1. Wybierz przycisk wielokropka (**...**) obok ustawienia.
 2. Wybierz pozycję **Usuń**.
 
 Znaki \{\{ i \}\} są używane tylko przez typy tokenów i nie mogą być używane do innych celów.
 
 ## <a name="enter-xml-data"></a>Wprowadzanie danych XML
 
-Możesz wpisać lub wkleić listę właściwości XML zawierającą ustawienia konfiguracji aplikacji dla urządzeń zarejestrowanych w usłudze Intune. Format listy właściwości XML różni się zależnie od konfigurowanej aplikacji. Szczegółowe informacje na temat dokładnego formatu do użycia możesz uzyskać od dostawcy aplikacji.
+Możesz wpisać lub wkleić listę właściwości XML zawierającą ustawienia konfiguracji aplikacji dla urządzeń zarejestrowanych w usłudze Intune. Format listy właściwości XML różni się zależnie od konfigurowanej aplikacji. Aby uzyskać szczegółowe informacje na temat dokładnego formatu do użycia, skontaktuj się z dostawcą aplikacji.
 
-Usługa Intune weryfikuje format XML. Nie sprawdza ona jednak, czy lista właściwości XML będzie współdziałać z docelową aplikacją.
-Aby dowiedzieć się więcej na temat list właściwości XML, zobacz [Informacje na temat list właściwości XML].
+Usługa Intune weryfikuje format XML. Nie sprawdza ona jednak, czy lista właściwości XML (PList) będzie współdziałać z docelową aplikacją.
 
 Aby dowiedzieć się więcej na temat list właściwości XML:
 
   -  Zobacz temat [Konfigurowanie aplikacji systemu iOS przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
-  -  Zobacz temat [Understand XML Plist (Plik XML Plist)](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) w bibliotece deweloperów systemu iOS.
+  -  Zobacz temat [Understand XML Property Lists (Listy właściwości XML)](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) w bibliotece deweloperów systemu iOS.
 
 ### <a name="example-format-for-an-app-configuration-xml-file"></a>Przykładowy format pliku XML konfiguracji aplikacji
 
@@ -126,15 +131,15 @@ Usługa Intune obsługuje następujące typy danych na liście właściwości:
 ### <a name="tokens-used-in-the-property-list"></a>Tokeny używane na liście właściwości
 
 Ponadto usługa Intune obsługuje następujące typy tokenów na liście właściwości:
-- \{\{userprincipalname\}\} — (przykład: **John@contoso.com**)
-- \{\{mail\}\} — (przykład: **John@contoso.com**)
-- \{\{partialupn\}\} — (przykład: **Michał**)
-- \{\{accountid\}\} -—(przykład: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-- \{\{deviceid\}\} — (przykład: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-- \{\{userid\}\} — (przykład: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-- \{\{username\}\} — (przykład: **Michał Kowalski**)
-- \{\{serialnumber\}\} — (przykład: **F4KN99ZUG5V2**) dla urządzeń z systemem iOS
-- \{\{serialnumberlast4digits\}\} — (przykład: **G5V2**) dla urządzeń z systemem iOS
+- \{\{userprincipalname\}\}—na przykład **John@contoso.com**
+- \{\{mail\}\}—na przykład **John@contoso.com**
+- \{\{partialupn\}\}—na przykład **Jan**
+- \{\{accountid\}\}—na przykład **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{deviceid\}\}—na przykład **b9841cd9-9843-405f-be28-b2265c59ef97**
+- \{\{userid\}\}—na przykład **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{username\}\}—na przykład **Jan Nowak**
+- \{\{serialnumber\}\}—na przykład **F4KN99ZUG5V2** (dla urządzeń z systemem iOS)
+- \{\{serialnumberlast4digits\}\}—na przykład **G5V2** (dla urządzeń z systemem iOS)
 
 ## <a name="next-steps"></a>Następne kroki
 

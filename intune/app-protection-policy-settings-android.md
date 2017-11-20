@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/20/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c07125901709d4d7baf3339e4dd09cb5620e8d1
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 2383d41c52618710a1d42f0b2236d41d117b42be
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu Android
 Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -90,3 +90,5 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | **Wymagaj minimalnej wersji systemu operacyjnego Android (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego Android do korzystania z tej aplikacji. Jeśli wersja systemu operacyjnego Android na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić. | Nie |
 | **Wymagaj minimalnej wersji aplikacji** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br>Podczas wybierania aplikacji docelowych należy pamiętać, że aplikacje mają często różne schematy określania numerów wersji.<br><br> | Nie | 
 | **Wymagaj minimalnej wersji aplikacji (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby zalecić minimalną wersję aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br>Podczas wybierania aplikacji docelowych należy pamiętać, że aplikacje mają często różne schematy określania numerów wersji.<br><br> | Nie | 
+| **Wymagana minimalna wersja poprawki zabezpieczeń systemu Android** | Wybierz **Tak**, aby wymagać minimalnej wersji poprawki zabezpieczeń systemu Android wydanej przez firmę Google. Jeśli poprawka zabezpieczeń systemu Android na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany. | Nie |
+| **Wymagana minimalna wersja poprawki zabezpieczeń systemu Android (tylko ostrzeżenie)** | Wybierz **Tak**, aby wymagać minimalnej wersji poprawki zabezpieczeń systemu Android wydanej przez firmę Google. Jeśli wersja poprawki zabezpieczeń systemu Android na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić. | Nie |
