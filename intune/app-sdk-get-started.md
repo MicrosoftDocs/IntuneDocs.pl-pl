@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 12/15/2016
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65350c9a247c5820cb2080d8230d308a37e98d7c
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: a0134f19aea3956a6aff852d97e9d95e1882e056
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -113,8 +113,50 @@ Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
     * Jeśli zrezygnujesz z wysyłania danych telemetrycznych zestawu SDK do usługi Microsoft Intune z aplikacji, musisz wyłączyć funkcję przesyłania danych telemetrycznych przez ustawienie dla właściwości `MAMTelemetryDisabled` wartości „YES” w słowniku IntuneMAMSettings.
 
-
 * **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK nie rejestruje danych telemetrycznych.
+
+ Widoczny numer wersji aplikacji biznesowej dla systemu iOS lub Android <!-- 1380712 -->
+
+## <a name="line-of-business-app-version-numbers"></a>Numery wersji aplikacji biznesowych
+
+W usłudze Intune są teraz wyświetlane numery wersji aplikacji biznesowych dla systemu iOS lub Android. W witrynie Azure Portal numer jest widoczny na liście aplikacji i w bloku przeglądu aplikacji. Użytkownicy końcowi widzą numer aplikacji w aplikacji Portal firmy i w portalu internetowym.
+
+### <a name="full-version-number"></a>Pełny numer wersji
+
+Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), na przykład 2.2(2.2.17560800).
+
+Pełny numer wersji ma dwa składniki:
+
+ - **Wersja**  
+   Numer wersji to zrozumiały dla użytkownika numer wydania aplikacji. Jest on używany przez użytkowników końcowych do identyfikowania różnych wydań aplikacji.
+
+ - **Numer kompilacji**  
+    Numer kompilacji to numer wewnętrzny, który może być używany do wykrywania aplikacji i programowego zarządzania nią. Numer kompilacji dotyczy iteracji aplikacji, która odnosi się do zmian w kodzie.
+
+### <a name="version-and-build-number-in-android-and-ios"></a>Numer wersji i numer kompilacji w systemach Android i iOS
+
+W obu systemach — Android i iOS — numer wersji i numer kompilacji są używane w odniesieniu do aplikacji. Jednak znaczenie tych numerów zależy od systemu operacyjnego. W poniższej tabeli opisano powiązanie tych terminów.
+
+Tworząc aplikację biznesową używaną w usłudze Intune, pamiętaj, aby korzystać zarówno z numeru wersji, jak i numeru kompilacji. Funkcje zarządzania aplikacjami w usłudze Intune wymagają zrozumiałych wartości **CFBundleVersion** (dla systemu iOS) i **PackageVersionCode** (dla systemu Android). Numery te są zawarte w manifeście aplikacji. 
+
+Intune|iOS|Android|Opis|
+|---|---|---|---|
+Numer wersji|CFBundleShortVersionString|PackageVersionName |Ten numer wskazuje na określone wydanie aplikacji i jest przeznaczony dla użytkowników końcowych.|
+Numer kompilacji|CFBundleVersion|PackageVersionCode |Ten numer jest używany do wskazania iteracji w kodzie aplikacji.|
+
+#### <a name="ios"></a>iOS
+
+- **CFBundleShortVersionString**  
+    Określa numer wydania pakietu. Ten numer określa wydaną wersję aplikacji. Jest używany przez użytkowników końcowych do wskazywania aplikacji.
+ - **CFBundleVersion**  
+    Wersja kompilacji pakietu, która identyfikuje iterację pakietu. Ten numer może określać wydanie lub niewydany pakiet. Jest używany do wykrywania aplikacji.
+
+#### <a name="android"></a>Android
+
+ - **PackageVersionName**  
+    Numer wersji, który widzą użytkownicy. Ten atrybut można ustawić jako nieprzetworzony ciąg lub odwołanie do zasobu ciągu. Jedynym przeznaczeniem tego ciągu jest wyświetlanie go dla użytkowników.
+ - **PackageVersionCode**  
+    Wewnętrzny numer wersji. Ten numer jest używany tylko w celu określenia, czy dana wersja jest nowsza niż inna. Wyższe numery wskazują na nowsze wersje. To nie jest wersja. 
 
 ## <a name="next-steps-after-integration"></a>Następne kroki po integracji
 

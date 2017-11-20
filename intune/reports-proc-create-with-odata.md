@@ -14,11 +14,11 @@ ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37f36aca0d58f5d87b9d54a1a4bdf18eb011b40b
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 1e0ffcaa2ff8bd9e622c1d27f27564bd78df0276
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
 
@@ -60,16 +60,16 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 
     ![Źródło danych OData](media/reports-create-01-odatafeed.png)
 
-9. Kliknij przycisk **OK**.
+9. Wybierz przycisk **OK**.
 10. Wybierz pozycję **Konto organizacji**, a następnie zaloguj się za pomocą poświadczeń usługi Intune. 
 
     ![Poświadczenia konta organizacyjnego](media/reports-create-02-org-account.png)
 
-11. Kliknij przycisk **Połącz**. Zostanie otwarty Nawigator z listą tabel w magazynie danych usługi Intune. 
+11. Wybierz polecenie **Połącz**. Zostanie otwarty Nawigator z listą tabel w magazynie danych usługi Intune. 
 
     ![Nawigator](media/reports-create-02-loadentities.png)
 
-12. Wybierz tabele **devices** i **ownerTypes**.  Kliknij przycisk **Załaduj**. Usługa Power BI załaduje dane do modelu.
+12. Wybierz tabele **devices** i **ownerTypes**.  Wybierz polecenie **Załaduj**. Usługa Power BI załaduje dane do modelu.
 
 ## <a name="create-a-relationship"></a>Tworzenie relacji 
 
@@ -77,8 +77,8 @@ Zaimportować możesz wiele tabel, aby przeanalizować nie tylko dane w pojedync
 
 ![Zarządzanie relacjami](media/reports-create-03-managerelationships.png)
 
-1. Kliknij pozycję **Zarządzaj relacjami**.
-2. Jeśli usługa Power BI nie wykryła jeszcze relacji, kliknij pozycję **Wykryj automatycznie**.  
+1. Wybierz pozycję **Zarządzaj relacjami**.
+2. Jeśli usługa Power BI nie wykryła jeszcze relacji, wybierz pozycję **Wykryj automatycznie**.  
 Relacja jest wyświetlana w kolumnach Od i Do. W tym przykładzie pole danych **ownerTypeKey** w tabeli **devices** jest połączone z polem danych **ownerTypeKey** w tabeli **ownerTypes**. Relacja zostanie użyta do wyszukania zwykłej nazwy dla kodu typu urządzenia w tabeli **devices**.
 
 ## <a name="create-a-treemap-visualization"></a>Tworzenie wizualizacji w formie mapy drzewa
@@ -100,7 +100,7 @@ Masz teraz wizualizację pokazującą rozkład producentów urządzeń w organiz
 
 Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na inne pytania. 
 
-1. Kliknij kanwę raportu, a następnie kliknij **ikonę fragmentatora** (![Mapa drzewa z danymi](media/reports-create-slicer.png) ) w sekcji **Wizualizacje** w celu dodania filtru.
+1. Wybierz kanwę raportu, a następnie wybierz **ikonę fragmentatora** (![Mapa drzewa z danymi](media/reports-create-slicer.png)) w sekcji **Wizualizacje** w celu dodania filtru.
 2. Znajdź tabelę **ownerTypes** i przeciągnij pole danych **ownerTypeName** do sekcji **Filtry** w panelu **Wizualizacje**.  
    W tabeli devices znajduje się pole danych **OwnerTypeKey**, które zawiera kod informujący o tym, czy urządzenie jest własnością firmy, czy prywatną. Ponieważ za pomocą tego filtru chcesz pokazać przyjazne nazwy, znajdź tabelę **ownerTypes** i przeciągnij pole **ownerTypeName**. To jest przykład tego, jak model danych obsługuje relacje między tabelami.
 
@@ -108,8 +108,8 @@ Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na i
 
 Masz teraz interakcyjny filtr, za pomocą którego możesz się przełączać między urządzeniami firmowymi i prywatnymi, aby zobaczyć zmiany w rozkładzie.
 
-1. Kliknij pozycję **Firmowe**, aby zobaczyć rozkład urządzeń firmowych.
-2. Kliknij pozycję **Osobiste**, aby zobaczyć urządzenia prywatne.
+1. Wybierz pozycję **Firmowe**, aby zobaczyć rozkład urządzeń firmowych.
+2. Wybierz pozycję **Osobiste**, aby zobaczyć urządzenia prywatne.
 
 ## <a name="next-steps"></a>Następne kroki
 

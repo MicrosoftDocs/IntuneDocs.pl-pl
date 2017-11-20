@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42c43ca5fa1eee28cb245c7a64e47f7f704183f4
-ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
+ms.openlocfilehash: cce99fb69abd5f99a4a1eae0c6fbe0e5178af450
+ms.sourcegitcommit: fc24d7eb4838b9102088dd4dcf5d1aa6b2c2e590
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="getting-started-with-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Intune w witrynie Azure Portal
 
@@ -27,7 +27,7 @@ Usługę Intune można znaleźć w witrynie Azure Portal. Na platformie Azure je
 
 ## <a name="changing-the-sidebar"></a>Zmienianie paska bocznego
 
-Na __pasku bocznym__ po lewej stronie witryny Azure Portal znajduje się lista wszystkich dostępnych usług platformy Azure. Domyślny wygląd tej kompleksowej listy można zmodyfikować, aby najważniejsze usługi były zawsze widoczne. Na potrzeby przykładu u góry listy dodamy usługę Intune.
+Na __pasku bocznym__ po lewej stronie witryny Azure Portal znajduje się lista wszystkich dostępnych usług platformy Azure. Domyślny wygląd tej kompleksowej listy można zmienić, aby najważniejsze usługi były zawsze widoczne. Na potrzeby przykładu u góry listy dodamy usługę Intune.
 
 ![Użytkownik wyszukuje usługę Intune na liście „Więcej usług”.](./media/azure-add-intune1.png)
 
@@ -52,7 +52,7 @@ Ta możliwość będzie bardziej przydatna po dodaniu większej ilości zawarto�
 
 ## <a name="using-services"></a>Korzystanie z usług
 
-Otworzenie usługi Intune lub dowolnej innej usługi na platformie Azure spowoduje jej wyświetlenie w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą podczas otwierania wysuwane od prawej krawędzi bloku, a następnie zwijane pod głównym blokiem, z którego zostały otworzone.
+Otwarcie usługi Intune lub dowolnej innej usługi platformy Azure spowoduje wyświetlenie tej usługi w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą wysuwane od prawej krawędzi bloku i zwijane pod głównym blokiem, z poziomu którego zostały otwarte.
 
 ## <a name="next-steps"></a>Następne kroki
 

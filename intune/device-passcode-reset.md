@@ -1,12 +1,12 @@
 ---
-title: "Resetowanie kodu dostępu urządzenia przy użyciu usługi Intune"
+title: "Resetowanie i usuwanie kodów dostępu urządzeń w usłudze Intune"
 titlesuffix: Azure portal
-description: "Dowiedz się, jak zresetować kod dostępu na urządzeniach zarządzanych przy użyciu usługi Intune."
+description: "Dowiedz się, jak zresetować lub usunąć kod dostępu na urządzeniach zarządzanych za pomocą usługi Intune."
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 11/06/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,20 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3defec3624944918d14b9c4527487c368c487dd6
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dfa94d11f978bbe4d23b6672423c849e1f061986
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="reset-the-passcode-on-intune-managed-devices"></a>Resetowanie kodu dostępu na urządzeniach zarządzanych przy użyciu usługi Intune
+# <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Resetowanie i usuwanie kodu dostępu na urządzeniach zarządzanych przez usługę Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akcja **Resetuj kod dostępu** generuje nowy kod dostępu urządzenia, które jest wyświetlane w bloku <*nazwa urządzenia*> **Przegląd**.
+Terminy *usuwanie* i *resetowanie* są używane zamiennie w tym artykule.
+
+Akcja **Resetuj kod dostępu** generuje nowy kod dostępu do urządzenia, wyświetlany w bloku <*nazwa urządzenia*> **Przegląd**.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 

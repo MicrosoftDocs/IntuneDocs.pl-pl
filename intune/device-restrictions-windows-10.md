@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 759207adf49308dcd4e6253627e4a1213be22904
-ms.sourcegitcommit: 2e77fe177a3df1dfe48e72f4c2bfaa1f0494c621
+ms.openlocfilehash: 903ba99a747689dd8882acedcb24fef2dd00a01d
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 10/19/2017
 -   **Ręczne wyrejestrowanie**— umożliwia użytkownikowi ręczne usunięcie konta firmowego z urządzenia.
 -   **Ręczne instalowanie certyfikatu głównego (tylko dla urządzeń przenośnych)** — uniemożliwia użytkownikowi ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji.
 -   **Przesyłanie danych diagnostycznych** — możliwe wartości to:
-    -       **Brak** — do firmy Microsoft nie są wysyłane żadne dane.
-    -       **Podstawowe** — do firmy Microsoft są wysyłane ograniczone informacje.
-    -       **Rozszerzone** — do firmy Microsoft są wysyłane rozszerzone dane diagnostyczne.
-    -       **Pełne** — wysyłane są te same dane, co w przypadku wartości Rozszerzone, oraz dodatkowe dane dotyczące stanu urządzenia.
+    - **Brak** — do firmy Microsoft nie są wysyłane żadne dane.
+    - **Podstawowe** — ograniczone informacje są wysyłane do firmy Microsoft
+    - **Rozszerzone** — do firmy Microsoft są wysyłane rozszerzone dane diagnostyczne.
+    - **Pełne** — wysyłane są te same dane, co w przypadku wartości Rozszerzone, oraz dodatkowe dane dotyczące stanu urządzenia.
 -   **Aparat fotograficzny** — umożliwia lub blokuje użycie aparatu fotograficznego urządzenia.
 -   **Synchronizacja plików w usłudze OneDrive** — uniemożliwia synchronizowanie plików z urządzenia z usługą OneDrive.
 -   **Magazyn wymienny** — określa, czy na urządzeniu można używać zewnętrznych urządzeń pamięci masowej, na przykład kart SD.
@@ -105,6 +105,7 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
 
 ## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
+
 -   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
 -   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Edge a usługami firmy Microsoft.
 -   **Synchronizuj ulubione między przeglądarkami firmy Microsoft (tylko wersja klasyczna)** — umożliwia synchronizowanie ulubionych między przeglądarkami Internet Explorer i Edge.
@@ -180,6 +181,44 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
     -   **Ułatwienia dostępu** — blokuje dostęp do obszaru ułatwień dostępu w aplikacji Ustawienia.
     -   **Prywatność** — blokuje dostęp do obszaru prywatności w aplikacji Ustawienia.
     -   **Aktualizacja i zabezpieczenia** — blokuje dostęp do obszaru aktualizacji i zabezpieczeń w aplikacji Ustawienia.
+
+## <a name="kiosk"></a>Kiosk
+
+-   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady.  Dostępne opcje:
+
+      - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
+      - **Kiosk z pojedynczą aplikacją** — profil włącza urządzenie jako kiosk z pojedynczą aplikacją.
+      - **Kiosk z wieloma aplikacjami** — profil włącza urządzenie jako kiosk z wieloma aplikacjami.
+
+    Kioski z pojedynczą aplikacją wymagają następujących ustawień:
+
+      - **Konto użytkownika** — określa lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku.  W przypadku kont przyłączonych do domeny usługi Azure AD należy określić konto w postaci `domain\\username@tenant.org`.
+
+         Dla urządzeń w środowiskach publicznych należy użyć kont z minimalnymi uprawnieniami, aby uniemożliwić autoryzowane działanie.  
+
+      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku.  Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+    Kioski z wieloma aplikacjami wymagają konfiguracji kiosku.  Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku, lub wybierz istniejącą konfigurację.
+
+    Konfiguracje kiosku z wieloma aplikacjami obejmują następujące ustawienia:
+
+    - **Nazwa konfiguracji kiosku** — przyjazna nazwa używana do identyfikowania danej konfiguracji.
+
+    - Co najmniej jedna **aplikacja kiosku** składająca się z następujących elementów:
+
+        - **Typ aplikacji** — określa typ aplikacji kiosku.  Obsługiwane wartości:   
+
+            - **Aplikacja Win32** — tradycyjna aplikacja klasyczna.  (Będziesz potrzebować w pełni kwalifikowanej nazwy ścieżki pliku wykonywalnego, w odniesieniu do urządzenia).
+
+            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows.  Będziesz potrzebować identyfikatora [AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+        - **Identyfikator aplikacji** — określa pełną nazwę ścieżki pliku wykonywalnego (aplikacji Win32) lub [identyfikatora AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacji platformy UWP).
+
+    - **Pasek zadań** — wskazuje, czy pasek zadań jest wyświetlany (**Włączone**), czy ukryty (**Nieskonfigurowane**) na kiosku.
+
+    - **Układ menu Start** — określa plik XML, który opisuje sposób, w jaki aplikacje [są wyświetlane w menu Start](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+
+    - **Przypisani użytkownicy** — określa co najmniej jedno konto użytkownika skojarzone z konfiguracją kiosku.  Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku.  Konta przyłączonych do domeny należy określić w postaci `domain\\username@tenant.org`.
 
 ## <a name="defender"></a>Usługa Defender
 

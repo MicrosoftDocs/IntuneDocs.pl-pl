@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 10/27/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 043bc1ecf652802dc569d2df8b287b2246585f15
-ms.sourcegitcommit: 1416daed6803546445b6f280a86c663e6e00465a
+ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Ogólne
-    
+
 -   **Przesyłanie danych diagnostycznych** — umożliwia lub blokuje przesyłanie danych diagnostycznych z urządzenia do firmy Apple.
 -   **Przechwytywanie ekranu** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
     - **Zdalny podgląd ekranu za pomocą aplikacji Classroom (tylko nadzorowany)** — blokuje lub zezwala na podgląd ekranu na urządzeniach z systemem iOS za pomocą aplikacji Apple Classroom.
@@ -44,6 +44,54 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 - **Zmiany profilu konfiguracji** — umożliwia użytkownikowi instalowanie profilów konfiguracji.
 - **Blokada aktywacji (tylko nadzorowany)** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
 
+## <a name="configurations-requiring-supervision"></a>Konfiguracje wymagające nadzoru
+
+Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfigurowania urządzenia za pośrednictwem programu Device Enrollment Program firmy Apple lub programu Apple Configurator. Po włączeniu trybu nadzorowanego na urządzeniu można skonfigurować następujące funkcje za pomocą usługi Intune:
+
+- Blokada aplikacji (tryb jednej aplikacji) 
+- Globalny serwer proxy HTTP 
+- Obejście blokady aktywacji 
+- Autonomiczny tryb jednej aplikacji 
+- Filtr zawartości internetowej 
+- Ustawianie tła i ekranu blokady 
+- Dyskretne wypychanie aplikacji 
+- Zawsze włączona sieć VPN 
+- Zezwalanie wyłącznie na instalację zarządzanych aplikacji 
+- iBookstore 
+- iMessages 
+- Centrum gier 
+- AirDrop 
+- AirPlay 
+- Parowanie hostów 
+- Synchronizacja z chmurą 
+- Wyszukiwanie Spotlight 
+- Handoff 
+- Wymazywanie urządzenia 
+- Interfejs użytkownika ograniczeń 
+- Instalacja profilów konfiguracji przez interfejs użytkownika 
+- News 
+- Skróty klawiaturowe 
+- Modyfikacje kodu dostępu 
+- Zmiany nazwy urządzenia 
+- Zmiany tapety 
+- Automatyczne pobieranie aplikacji 
+- Zmiany zaufania aplikacji przedsiębiorstwa 
+- Apple Music 
+- Mail Drop 
+- Parowanie z zegarkiem Apple Watch 
+
+> [!NOTE]
+> Firma Apple potwierdza, że w 2018 r. niektóre ustawienia będą dostępne wyłącznie w trybie nadzorowanym. Zalecamy wzięcie tego pod uwagę podczas używania tych ustawień zamiast czekania, aż firma Apple przeprowadzi ich migrację do trybu nadzorowanego:
+> - Instalowanie aplikacji przez użytkowników końcowych
+> - Usuwanie aplikacji
+> - FaceTime
+> - Safari
+> - iTunes
+> - Zawartość dla dorosłych
+> - Dokumenty i dane iCloud
+> - Gry dla wielu graczy
+> - Dodaj przyjaciół centrum gier
+
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
     -   **Proste hasła** — zezwala na proste hasła, takie jak „0000” i „1234”.
@@ -56,7 +104,7 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
     -   **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.
     -   **Zapobiegaj ponownemu użyciu starych haseł** — określa liczbę poprzednich haseł zapamiętywanych przez urządzenie.
     -   **Odblokowywanie za pomocą odcisku palca** — umożliwia użycie odcisku palca do odblokowania zgodnych urządzeń.
-- **Modyfikacja kodu dostępu (tylko nadzorowany)** — uniemożliwia zmianę, dodanie i usunięcie kodu dostępu. 
+- **Modyfikacja kodu dostępu (tylko nadzorowany)** — uniemożliwia zmianę, dodanie i usunięcie kodu dostępu.
     - **Modyfikacja odcisku palca (tylko nadzorowany)** — uniemożliwia zmianę, dodanie i usunięcie ustawień identyfikatora TouchID.
 
 <sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
@@ -89,7 +137,7 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
--   **Aparat fotograficzny** — określa, czy można używać aparatu fotograficznego urządzenia. 
+-   **Aparat fotograficzny** — określa, czy można używać aparatu fotograficznego urządzenia.
     -   **FaceTime** — umożliwia korzystanie z aplikacji FaceTime na urządzeniu.
 -   **Siri** — umożliwia korzystanie z asystenta głosowego Siri na urządzeniu.
     -   **Program Siri, gdy urządzenie jest zablokowane** — umożliwia korzystanie z asystenta głosowego Siri na zablokowanym urządzeniu.
@@ -125,8 +173,6 @@ Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, któr
 
 > [!Note]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
-
-
 
 ### <a name="additional-options"></a>Opcje dodatkowe
 
@@ -247,7 +293,7 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 ,com.apple.mobileslideshow,Photos,Apple
 ,com.apple.podcasts,Podcasts,Apple
 ,com.apple.reminders,Reminders,Apple
-,com.apple.mobilesafariSafari,Apple
+,com.apple.MobileSafari,Safari,Apple
 ,com.apple.Preferences,Settings,Apple
 ,com.apple.stocks,Stocks,Apple
 ,com.apple.tips,Tips,Apple
@@ -305,6 +351,6 @@ W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres
 W polu **Adres URL domeny sieci Web** dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane ze wskazanych domen będą uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Domeny automatycznego wypełniania haseł w programie Safari
+### <a name="safari-password-autofill-domains"></a>Domeny automatycznego wypełniania haseł w programie Safari
 
 W polu **Adres URL domeny** dodaj do listy co najmniej jeden adres URL. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń z systemem iOS w wersji 9.3 lub nowszym działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn sieci Web.

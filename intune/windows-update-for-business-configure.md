@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 08/21/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +14,21 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 4b4c2b008536881a56e768c480338b54a9e87b7e
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-System Windows jako usługa to sposób aktualizowania urządzeń z systemem Windows 10. W systemie Windows 10 nowe funkcjonalne i jakościowe aktualizacje obejmują zawartość wszystkich poprzednich aktualizacji. Oznacza to, że po zainstalowaniu najnowszej aktualizacji masz pewność, iż urządzenia systemu Windows 10 są całkowicie aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
+System Windows jako usługa to sposób aktualizowania urządzeń z systemem Windows 10. W systemie Windows 10 nowe funkcjonalne i jakościowe aktualizacje obejmują zawartość wszystkich poprzednich aktualizacji. Oznacza to, że po zainstalowaniu najnowszej aktualizacji masz pewność, iż urządzenia systemu Windows 10 są aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
 
 Za pomocą usługi Windows Update dla firm można uprościć zarządzanie aktualizacjami, dzięki czemu nie trzeba zatwierdzać poszczególnych aktualizacji dla grup urządzeń. Nadal możesz zarządzać ryzykiem w swoich środowiskach, konfigurując strategię wdrażania aktualizacji, dzięki czemu usługa Windows Update gwarantuje zainstalowanie aktualizacji w odpowiednim czasie. Usługa Microsoft Intune zapewnia możliwość konfigurowania ustawień aktualizacji na urządzeniach oraz odroczenia instalacji aktualizacji. Usługa Intune nie przechowuje aktualizacji, a jedynie przypisanie zasad aktualizacji. W celu pobrania aktualizacji urządzenia uzyskują dostęp bezpośrednio do usługi Windows Update. Przy użyciu usługi Intune możesz konfigurować **pierścienie aktualizacji systemu Windows 10** i zarządzać nimi. Pierścień aktualizacji zawiera grupę ustawień, które konfigurują, kiedy i w jaki sposób aktualizacje systemu Windows 10 mają zostać zainstalowane. Na przykład można skonfigurować następujące ustawienia:
 
-- **Windows 10 Servicing Branch**: wybierz, czy grupy urządzeń mają otrzymywać aktualizacje od usługi Current Branch, czy też od usługi Current Branch for Business.  
+- **Kanał obsługi systemu Windows 10**: wybierz, czy grupy urządzeń mają otrzymywać aktualizacje przez Półroczny kanał (kierowany), czy też przez Półroczny kanał.  
 - **Ustawienia opóźnień**: skonfiguruj ustawienia opóźnień aktualizacji w celu opóźnienia instalacji aktualizacji grup urządzeń. Użyj tych ustawień, aby uzyskać wdrażanie aktualizacji w etapach, których postęp będzie można śledzić.
 - **Wstrzymywanie**: odłóż instalację aktualizacji, jeśli zostanie wykryty problem w dowolnym momencie wdrażania aktualizacji.
 - **Okno obsługi**: skonfiguruj godziny, w których można instalować aktualizacje.
@@ -78,7 +78,7 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 5. W bloku z listą pierścieni aktualizacji wybierz pozycję **Utwórz**.
 6. W bloku **Tworzenie pierścienia aktualizacji** podaj nazwę i opcjonalny opis pierścienia aktualizacji, a następnie wybierz opcję **Ustawienia**.
 7. W bloku **Ustawienia** skonfiguruj następujące informacje:
-    - **Gałąź obsługi**: ustaw gałąź, dla której urządzenie otrzymuje aktualizacje systemu Windows (Current Branch lub Current Branch for Business).
+    - **Kanał obsługi**: ustaw kanał, dla którego urządzenie odbiera aktualizacje systemu Windows (Półroczny kanał (kierowany) lub Półroczny kanał).
     - **Aktualizacje firmy Microsoft**: określ, czy używać skanowania przy poszukiwaniu aktualizacji aplikacji w witrynie Microsoft Update.
     - **Sterowniki systemu Windows**: wybierz, czy podczas aktualizacji chcesz wykluczyć aktualizację sterowników z witryny Windows Update.
     - **Zachowanie podczas automatycznej aktualizacji**: wybierz sposób zarządzania automatyczną aktualizacją podczas skanowania, pobierania i instalowania aktualizacji. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
@@ -87,12 +87,12 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
     Aktualizacje dotyczące jakości są zazwyczaj poprawkami i ulepszeniami istniejących funkcji systemu Windows i najczęściej są publikowane w pierwszy wtorek każdego miesiąca, choć firma Microsoft może je udostępnić w dowolnym momencie. Możesz zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących jakości po dniu ich udostępnienia.
     - **Okres opóźnienia aktualizacji dotyczących funkcji (dni)**: określ, o ile dni mają być opóźniane aktualizacje dotyczące funkcji. Okres opóźnienia aktualizacji dotyczących funkcji może wynosić do 180 dni od daty wydania aktualizacji.
 
-    Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Gałąź obsługi** (**CB** lub **CBB**) można zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących funkcji po ich udostępnieniu przez firmę Microsoft w usłudze Windows Update.
+    Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Kanał obsługi** (Półroczny kanał (kierowany) lub Półroczny kanał) można zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących funkcji po ich udostępnieniu przez firmę Microsoft w usłudze Windows Update.
 
     Na przykład:  
-    **Jeśli ustawiono wartość gałęzi obsługi równą CB i okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została udostępniona w usłudze Windows Update jako CB w styczniu. Urządzenie nie będzie otrzymywać tej aktualizacji do lutego — 30 dni później.
+    **Jeśli ustawiono kanał obsługi Półroczny kanał (kierowany), a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie będzie otrzymywać tej aktualizacji do lutego — 30 dni później.
 
-    **Jeśli ustawiono wartość gałęzi obsługi równą CBB i okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została udostępniona w usłudze Windows Update jako CB w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje opublikowana jako CBB. Urządzenie otrzyma aktualizację dotyczącą funkcji po 30 dniach od opublikowania wersji CBB i aktualizacja nastąpi w maju.
+    **Jeśli ustawiono kanał obsługi Półroczny kanał, a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację dotyczącą funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
 
     - **Optymalizacja dostarczania** — wybór metody używanej przez urządzenie do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
 8. Gdy skończysz, kliknij przycisk **OK**, a następnie w bloku **Tworzenie pierścienia aktualizacji** kliknij przycisk **Utwórz**.

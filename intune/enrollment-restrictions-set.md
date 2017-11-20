@@ -3,10 +3,10 @@ title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
 titlesuffix: Azure portal
 description: "Ograniczanie rejestrowania według platformy i ustawianie limitu rejestracji urządzeń w usłudze Intune. \""
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 10/31/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0117d3249f7fd2568201762b7dd16af9cc26392c
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 463278e4dc9ad677f654754d4710b110b376cc2d
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -33,7 +33,7 @@ Jako administrator usługi Intune możesz określić, które urządzenia mogą b
   - iOS
   - macOS
   - Windows
-- Wersja systemu operacyjnego platformy (tylko z systemem iOS i Android)
+- Wersja systemu operacyjnego platformy dla systemu iOS, Android i Windows (mogą być używane tylko wersje systemu Windows 10, pozostaw to pole puste, jeśli dozwolony jest system Windows 8.1)
   - Minimalna wersja
   - Maksymalna wersja
 - Ograniczenia urządzeń prywatnych (tylko z systemem iOS, Android i macOS)
@@ -55,7 +55,7 @@ Domyślnie ograniczenia rejestrowania mają zastosowanie do wszystkich użytkown
 
   Kliknij polecenie **Zapisz**.
 6. W obszarze **Wszyscy użytkownicy** wybierz pozycję **Konfiguracje platformy** i wybierz następujące konfiguracje. Dla każdej dozwolonej platformy możesz skonfigurować następujące opcje:
-  - **Wersje** — określ **minimalną** i **maksymalną** wersję systemu operacyjnego platformy dla urządzeń z systemem Android i iOS. Wersje systemu operacyjnego nie mają zastosowania do urządzeń rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator.
+  - **Wersje** — określ **minimalną** i **maksymalną** wersję systemu operacyjnego platformy dla urządzeń z systemem Android, iOS lub Windows. System Android obsługuje wersję major.minor.rev.build. System iOS obsługuje wersję major.minor.rev. System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10. Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator. 
   - **Własność użytkownika** — określ, czy **zezwalać**, czy **blokować** urządzenia z systemami Android, iOS i macOS.
   ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślnymi konfiguracjami platformy urządzeń i widocznymi skonfigurowanymi ustawieniami urządzeń będących własnością użytkownika.](media/device-restrictions-platform-configurations.png)
   Kliknij polecenie **Zapisz**.

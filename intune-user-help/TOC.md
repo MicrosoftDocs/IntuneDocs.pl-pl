@@ -8,7 +8,7 @@
 
 ## [Jak zalogować się do Portalu firmy](sign-in-to-the-company-portal.md)
 
-## [Korzystanie z urządzenia z systemem Android i usługi Intune](using-your-android-device-with-intune.md)
+## [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem Android?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 ### [Rejestrowanie urządzenia](enroll-your-device-in-Intune-android.md)
 #### [Rejestrowanie urządzenia z programem Android for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
@@ -57,13 +57,10 @@
 ##### [Korzystanie z aplikacji SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 ##### [Korzystanie z aplikacji Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
-## [Korzystanie z urządzenia z systemem iOS lub macOS i usługi Intune](using-your-iOS-or-macOS-device-with-intune.md)
+## [Korzystanie z urządzenia z systemem iOS](using-your-iOS-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem iOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Instalowanie aplikacji Portal firmy i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
-### [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos.md)
-### [Rejestrowanie urządzenia z systemem macOS przy użyciu aplikacji Portal firmy](enroll-your-device-in-intune-macos-cp.md)
-### [Postępowanie w przypadku nieco innego urządzenia](device-little-different-jamf.md)
 
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 ### [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)
@@ -96,6 +93,11 @@
 ##### [Korzystanie z aplikacji SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 ##### [Korzystanie z aplikacji Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
+## [Korzystanie z urządzenia z systemem macOS](using-your-macos-device-with-intune.md)
+### [Co się dzieje po zarejestrowaniu urządzenia z systemem macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+### [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos-cp.md)
+### [Rejestrowanie starszego urządzenia z systemem macOS](enroll-your-device-in-intune-macos-legacy.md)
+### [Postępowanie w przypadku nieco innego urządzenia](device-little-different-jamf.md)
 
 ## [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
@@ -123,6 +125,9 @@
 #### [Moje urządzenie wymaga oprogramowania chroniącego przed złośliwym kodem](your-device-needs-antimalware-software.md)
 #### [Włączanie bezpiecznego rozruchu](you-need-to-enable-secure-boot-windows.md)
 #### [Włączanie integralności kodu](you-need-to-enable-code-integrity.md)
-
+#### [Potrzebuję włączyć zaporę](you-need-to-enable-defender-firewall-windows.md)
+#### [Potrzebuję włączyć funkcję Kontrola konta użytkownika](you-need-to-enable-uac-windows.md)
+#### [Potrzebuję zaktualizować system Windows](you-need-to-update-os-build-version-windows.md)
+#### [Potrzebuję włączyć usługę Windows Defender](turn-on-defender-windows.md) 
 
 ## [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
