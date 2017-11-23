@@ -386,6 +386,8 @@
           href: compliance-policy-create-android.md
         - name: Tworzenie zasad dla programu Android for Work
           href: compliance-policy-create-android-for-work.md
+        - name: Tworzenie zasad w celu włączenia funkcji Google Play Protect
+          href: compliance-policy-create-google-play-protect.md
         - name: Tworzenie zasad dla systemu iOS
           href: compliance-policy-create-ios.md
         - name: Tworzenie zasad dla systemu macOS
