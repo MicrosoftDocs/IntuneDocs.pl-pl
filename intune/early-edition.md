@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 11/6/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f7cc595655950ef1bf2586e939b6f02e270e7afc
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: f4fd810529732d2b24b948eb0ae741d37e0fb59e
+ms.sourcegitcommit: d64b03bff0566f08d88ecb488dd48f19af74cab3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="the-early-edition-for-microsoft-intune---november-2017"></a>Wczesna wersja usługi Microsoft Intune — listopad 2017
+# <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Wczesna wersja usługi Microsoft Intune — grudzień 2017
 
 **Wczesna wersja** zawiera listę funkcji, które zostaną wprowadzone w przyszłych wersjach usługi Microsoft Intune. Te informacje są przekazywane w ograniczonym zakresie i mogą ulec zmianie. Nie należy udostępniać tych informacji poza firmą. Niektóre funkcje wymienione w tym miejscu mogą nie być wdrożone na czas i zostać opóźnione do przyszłych wersji. Inne funkcje są testowane w wersji pilotażowej, aby zapewnić przygotowanie ich do użytku przez klientów. W przypadku pytań lub wątpliwości skontaktuj się z osobą kontaktową ds. tej grupy produktów firmy Microsoft.
 
@@ -39,7 +39,102 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 
 ## <a name="intune-in-the-azure-portal"></a>Usługa Intune w witrynie Azure Portal
 
+### <a name="app-protection-policies-----679615---"></a>Zasady usługi App Protection <!-- 679615 -->
+Zasady usługi Intune App Protection umożliwiają tworzenie globalnych, domyślnych zasad, które pozwalają na szybkie włączenie ochrony dla wszystkich użytkowników w całej dzierżawie.
 
+### <a name="revoking-ios-volume-purchase-program-apps-----820863---"></a>Odwołanie aplikacji dla systemu iOS zakupionych w ramach programu zakupów zbiorczych  <!-- 820863 -->
+Dla danego urządzenia z zainstalowaną przynajmniej jedną aplikacją dla systemu iOS zakupioną w ramach programu zakupów zbiorczych (Volume-Purchase Program — VPP) będzie można odwołać skojarzoną licencję aplikacji urządzenia dla tego urządzenia. Odwołanie licencji aplikacji nie spowoduje odinstalowania powiązanych aplikacji VPP z urządzenia. Aby odinstalować aplikację VPP, należy zmienić akcję przypisywania na **Odinstaluj**. Aby uzyskać więcej informacji, zobacz temat [Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych](vpp-apps-ios.md).
+
+### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Odwołanie licencji dla tokenu programu zakupów zbiorczych dla systemu iOS <!-- 820870 -->
+Istnieje możliwość odwołania licencji wszystkich aplikacji dla systemu iOS zakupionych w ramach programu zakupów zbiorczych (VPP) dla danego tokenu programu VPP.
+
+### <a name="delete-an-ios--volume-purchasing-program-token----820879---"></a>Usuwanie tokenu programu zakupów zbiorczych dla systemu iOS <!-- 820879 -->
+Istnieje możliwość usunięcia tokenu programu zakupów zbiorczych (VPP) dla systemu iOS przy użyciu konsoli. Może to być konieczne w przypadku występowania zduplikowanych wystąpień tokenu programu VPP.
+
+### <a name="network-access-control-nac-device-check-in-reporting-----1232250---"></a>Raportowanie zaewidencjonowania urządzenia NAC (Network Access Control) <!-- 1232250 -->
+Przed wprowadzeniem tej zmiany administratorzy IT nie mogli określić po stronie usługi Intune, czy urządzenie zarządzane w ramach NAC komunikowało się z rozwiązaniem NAC czy nie. Gdy urządzenie zarządzane w ramach NAC nie komunikuje się z rozwiązaniem NAC, urządzenie jest traktowane przez rozwiązanie NAC jako niezgodne i zostaje zablokowane przez to rozwiązanie, a następnie przez zasady dostępu warunkowego oparte na stanie zgodności urządzenia.
+
+Dzięki tej zmianie administratorzy IT wiedzą, które urządzenia zarządzane w ramach NAC pomyślnie nawiązały komunikację z rozwiązaniem NAC, a które nie. Ta nowa możliwość obejmuje dwie nowe funkcje monitorowania znajdujące się w obciążeniu Zgodność urządzeń w usłudze Intune. Poniżej podano używane statystyki:
+- **Średnia liczba wywołań NAC w ciągu ostatniej godziny**
+- **Ostatnie żądanie przychodzące NAC (data/godzina)**
+
+### <a name="new-ios-device-action------1244701---"></a>Nowa akcja dotycząca urządzenia z systemem iOS <!-- 1244701 -->
+Można zamknąć nadzorowane urządzenia z systemem iOS 10.3. Ta akcja natychmiast wyłącza urządzenie bez ostrzeżenia dla użytkownika końcowego. Akcję **Wyłącz (tylko nadzorowane)** można znaleźć we właściwościach urządzenia po wybraniu urządzenia w obciążeniu **Urządzenie**.
+
+### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Dodano obsługę sieci VPN Palo Alto <!-- 1333680 eeready -->
+Lista **Typ połączenia** podczas konfigurowania podstawowej sieci VPN obejmuje sieć VPN Palo Alto.
+
+### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Obsługa wielu łączników na potrzeby obsługi certyfikatów protokołu SCEP i PFX <!-- 1361755 eeready -->
+Klienci, którzy korzystają z lokalnego łącznika usługi NDES w celu dostarczania certyfikatów na urządzenia, będą mogli skonfigurować wiele łączników w jednej dzierżawie.
+
+Ta nowa możliwość obsługuje następujący scenariusz:
+
+- **Wysoka dostępność**
+
+    Każdy łącznik usługi NDES ściąga żądania certyfikatu z usługi Intune.  Jeśli jeden łącznik usługi NDES przejdzie do trybu offline, inny łącznik może dalej przetwarzać żądania.
+
+### <a name="new-automatic-redeployment-setting----1469168---"></a>Nowe ustawienie automatycznego ponownego wdrażania<!-- 1469168 -->
+To ustawienie pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL + Win + R** na ekranie blokady urządzenia. Urządzenie zostanie automatycznie ponownie skonfigurowane i zarejestrowane do zarządzania.
+
+To ustawienie można znaleźć w obszarze Windows 10 -> Ograniczenia dotyczące urządzeń -> Ogólne -> Automatyczne ponowne wdrażanie.
+
+### <a name="install-office-apps-on-macos-devices----1494311---"></a>Instalacja aplikacji pakietu Office na urządzeniach z systemem macOS<!-- 1494311 -->
+Istnieje możliwość instalacji aplikacji pakietu Office na urządzeniach z systemem macOS. Ten nowy typ aplikacji umożliwi instalację programów Word, Excel, PowerPoint, Outlook i OneNote. Do aplikacji dołączona jest usługa Microsoft AutoUpdater (MAU), która pozwala zapewnić ich bezpieczeństwo i aktualność.
+
+### <a name="surface-hub-resource-account-supported----1566442-eeready---"></a>Obsługa konta zasobu Surface Hub <!-- 1566442 eeready -->
+Zostanie dodana nowa akcja urządzenia, która umożliwi administratorom określanie i aktualizację konta zasobu skojarzonego z rozwiązaniem Surface Hub.
+
+Konto zasobu jest używane przez rozwiązanie Surface Hub do uwierzytelniania w programie Skype/Exchange, co pozwala przyłączyć je do spotkania. Można utworzyć unikatowe konto zasobu, aby rozwiązanie Surface Hub było wyświetlane w spotkaniu jako sala konferencyjna. Na przykład konto zasobu może być widoczne jako *Sala konferencyjna B41/6233*. Konto zasobu (nazywane kontem urządzenia) dla rozwiązania Surface Hub zwykle trzeba skonfigurować dla lokalizacji sali konferencyjnej i gdy trzeba zmienić inne parametry konta zasobu.
+
+Gdy administratorzy chcą zaktualizować konto zasobu na urządzeniu, muszą podać bieżące poświadczenia usługi Active Directory/Azure Active Directory skojarzone z tym urządzeniem. Jeśli dla urządzenia jest włączona funkcja rotacji haseł, administratorzy muszą przejść do usługi Azure Active Directory, aby znaleźć hasło.
+
+> [!NOTE]
+> Wszystkie pola są wysyłane w pakiecie i zastępują wszystkie pola skonfigurowane wcześniej. Puste pola również zastępują pola istniejące.
+
+Poniżej przedstawiono ustawienia, które mogą skonfigurować administratorzy:
+
+- **Konto zasobu**  
+
+   - **Użytkownik usługi Active Directory**   
+   Nazwa_domeny\nazwa_użytkownika lub główna nazwa użytkownika (UPN): user@domainname.com
+   - **Hasło**
+
+
+- **Opcjonalne parametry konta zasobu** (trzeba je ustawić przy użyciu określonego konta zasobu)
+   - **Okres rotacji hasła**   
+     Ze względów bezpieczeństwa zapewnia co tydzień automatyczną aktualizację hasła konta przez rozwiązanie Surface Hub. Aby skonfigurować jakiekolwiek parametry po włączeniu tej opcji, należy najpierw zresetować hasło konta w usłudze Azure Active Directory.
+
+   - **Adres SIP (Session Initiation Protocol — protokół inicjowania sesji)**    
+     Używany tylko wtedy, gdy wykrywanie automatyczne zakończy się niepowodzeniem.
+
+   - **Poczta e-mail**    
+     Adres e-mail konta urządzenia/zasobu.
+
+   - **Serwer programu Exchange**    
+     Wymagany tylko wtedy, gdy wykrywanie automatyczne zakończy się niepowodzeniem.
+
+   - **Synchronizacja kalendarza**    
+     Określa, czy jest włączona synchronizacja kalendarza oraz pozostałe usługi serwera Exchange. Na przykład: synchronizacja spotkania.
+
+### <a name="intune-now-provides-the-account-move-operation-----1573558-1579830---"></a>Usługa Intune obejmuje teraz operację przenoszenia konta<!-- 1573558, 1579830 -->
+Funkcja **Przenoszenie konta** migruje dzierżawę z jednej jednostki skalowania Azure (ASU) na inną. Funkcji **Przenoszenie konta** można użyć w obu scenariuszach inicjowanych przez klienta, kiedy klient dzwoni do zespołu pomocy technicznej usługi Intune z prośbą o przeniesienie, oraz w scenariuszu inicjowanym przez Microsoft, w którym firma Microsoft musi wprowadzić zmiany na zapleczu usługi. W trakcie **przenoszenia konta** dzierżawa działa w trybie tylko do odczytu (ROM). Operacje usług, takie jak rejestrowanie, zmiana nazwy urządzenia, aktualizowanie stanu zgodności, w okresie ROM zakończą się niepowodzeniem.
+
+### <a name="new-windows-defender-security-center-wdsc-device-configuration-profile-settings----1335507---"></a>Nowe ustawienia profilu konfiguracji urządzenia w aplikacji Windows Defender Security Center (WDSC)<!-- 1335507 -->
+Usługa Intune została wzbogacona o nową sekcję ustawień profilu konfiguracji urządzenia w obszarze Ochrona punktu końcowego o nazwie **Windows Defender Security Center**. Administratorzy IT mogą skonfigurować, do których filarów aplikacji Windows Defender Security Center użytkownicy końcowi mogą uzyskać dostęp. Jeśli administrator IT ukrywa filar w aplikacji Windows Defender Security Center, wszystkie powiadomienia powiązane z ukrytym filarem nie będą wyświetlane na urządzeniu użytkownika.
+
+Poniżej wymieniono filary, które administratorzy mogą ukryć w ustawieniach profilu konfiguracji urządzenia w aplikacji Windows Defender Security Center:
+- Ochrona przed wirusami i zagrożeniami
+- Wydajność i kondycja urządzenia
+- Zapora i ochrona sieci
+- Kontrola aplikacji i przeglądarki
+- Opcje rodziny
+
+Administratorzy IT mogą również dostosować to, które powiadomienia będą otrzymywać użytkownicy. Na przykład można określić, czy użytkownicy będą otrzymywać wszystkie powiadomienia generowane w ramach widocznych filarów w aplikacji WDSC, czy tylko powiadomienia krytyczne. Powiadomienia niekrytyczne obejmują okresowe podsumowania działania programu antywirusowego Windows Defender i powiadomienia po zakończeniu skanowania. Wszystkie pozostałe powiadomienia są traktowane jako krytyczne. Ponadto można również dostosować zawartość powiadomień, na przykład można podać informacje kontaktowe do działu IT do osadzenia w powiadomieniach wyświetlanych na rządzeniach użytkowników.
+
+
+
+
+<!-- the following are present prior to 1712 -->
 ### <a name="assign-office-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type----1332318---"></a>Przypisywanie aplikacji mobilnych usługi Office 365 do urządzeń z systemami iOS i Android przy użyciu wbudowanego typu aplikacji <!-- 1332318 -->
 **Wbudowany** typ aplikacji ułatwia tworzenie aplikacji usługi Office 365 oraz ich przypisywanie do zarządzanych urządzeń z systemami iOS i Android. Są to na przykład aplikacje usługi 0365, takie jak Word, Excel, PowerPoint i OneDrive. Do typu aplikacji można przypisać określone aplikacje, a następnie zmodyfikować konfigurację informacji o aplikacji.
 
