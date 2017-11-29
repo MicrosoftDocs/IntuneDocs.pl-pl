@@ -5,7 +5,7 @@ keywords: "Magazyn danych usługi Intune"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +14,26 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f720d5f9dbf91d7f098a640d640f8f35136da4fc
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 29825c58febc813c7b11072699d06106725584d3
+ms.sourcegitcommit: d26930f45ba9e6292a49bcb08defb5b3f14b704b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="data-warehouse-data-model"></a>Model danych magazynu danych
 
-Magazyn danych usługi Intune każdego dnia próbkuje dane, aby przedstawić widok historyczny ciągle zmieniającego się środowiska mobilnego.
+Magazyn danych usługi Intune codziennie próbkuje dane w celu udostępnienia historycznego widoku ciągle zmieniającego się środowiska urządzeń przenośnych. Widok składa się z elementów powiązanych w czasie.
 
-Dane pobrane z dzierżawy są dodawane do magazynu danych. Magazyn to zestaw jednostek i relacji zrozumiałych dla typu pytań, które chcesz zadać. Możesz na przykład przejrzeć liczbę dziennych instalacji z ostatniego tygodnia aplikacji dla systemu Android opracowanej w firmie, aby sprawdzić, czy trend instalacji jest rosnący. Struktura magazynu danych umożliwia szczegółowy wgląd w środowisko mobilne. Z kolei narzędzia analityczne, takie jak usługa Microsoft Power BI, mogą przy użyciu modelu danych magazynu danych tworzyć wizualizacje i dynamiczne pulpity nawigacyjne.
-
-W strukturze magazynu danych usługi Intune użyto modelu schematu gwiazdy. Schemat gwiazdy rozpoznaje fakty w wymiarze czasu. W kontekście modelu *fakt* to pomiar ilościowy, na przykład liczba urządzeń, liczba aplikacji lub czas rejestracji. W kontekście modelu *wymiar* to zestaw kategorii i ich hierarchiczne relacje. Na przykład dni są pogrupowane w miesiące, a miesiące w lata. Model schematu gwiazdy jest zoptymalizowany pod kątem elastyczności i analizy danych, aby umożliwić tworzenie raportów potrzebnych do zrozumienia ewoluującego środowiska mobilnego.
+## <a name="things-entity-sets"></a>Elementy: zestawy jednostek
 
 Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
+
   -  Aplikacje z włączoną ochroną aplikacji i ich użycie
   -  Zarejestrowane urządzenia, właściwości i spis
   -  Spis aplikacji i oprogramowania
   -  Zasady zgodności i konfiguracji urządzenia
 
-**Zestawy jednostek modelu danych**
-
-W modelu danych zestawy jednostek są nazywane kolekcjami jednostek. Te zestawy zawierają jednostki definiujące dane zebrane w modelu. Każdy zestaw jednostek zapewnia punkt dostępu do modelu danych magazynu danych. Możesz znaleźć szczegółowe informacje dotyczące następujących kategorii jednostek:
+Te obszary zawierają jednostki lub elementy, które mają znaczenie dla danego środowiska usługi Intune. Szczegółowe informacje dotyczące zestawów jednostek można znaleźć w następujących tematach:
 
   -  [Aplikacja](reports-ref-application.md)
   -  [Data](reports-ref-date.md)
@@ -45,4 +42,23 @@ W modelu danych zestawy jednostek są nazywane kolekcjami jednostek. Te zestawy 
   -  [Zasady](reports-ref-policy.md)
   -  [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
   -  [User](reports-ref-user.md)
+  -  [Bieżący użytkownik](reports-ref-current-user.md)
   -  [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
+
+## <a name="relationships-star-schema-model"></a>Relacje: Model o schemacie gwiazdy
+
+Magazyn organizuje jednostki w relacje zrozumiałe dla typu pytań, które chcesz zadać. Na przykład możesz sprawdzić liczbę instalacji wewnętrznie opracowanych aplikacji systemu Android. Struktura magazynu danych umożliwia szczegółowy wgląd w środowisko mobilne. Z kolei narzędzia analityczne, takie jak usługa Microsoft Power BI, mogą przy użyciu modelu danych magazynu danych tworzyć wizualizacje i dynamiczne pulpity nawigacyjne.
+
+Jednostki i relacje korzystają z modelu o schemacie gwiazdy. W schemacie gwiazdy fakty są korelowane w wymiarze czasu. W kontekście modelu *fakt* to pomiar ilościowy, na przykład liczba urządzeń, liczba aplikacji lub czas rejestracji. Tabele faktów przechowują duże ilości danych. Mogą stać się bardzo duże, dlatego zwykle ograniczają informacje do 30 dni. *Wymiar* udostępnia kontekst dla faktów. Podczas gdy fakt reprezentuje to, co się stało, to wymiar wskazuje, kogo to dotyczy. Tabele wymiarów, takie jak tabela **Użytkownik**, są mniejsze i mogą przechowywać dane przez dłuższy czas niż tabele faktów. 
+
+Model schematu gwiazdy jest zoptymalizowany pod kątem elastyczności i analizy danych, aby umożliwić tworzenie raportów potrzebnych do zrozumienia ewoluującego środowiska mobilnego.
+
+## <a name="time-daily-snapshots"></a>Czas: dzienne migawki
+
+Magazyn jest elementem podrzędnym względem danych w usłudze Intune. Usługa Intune wykonuje dzienną migawkę codziennie o północy czasu UTC i przechowuje ją w magazynie. Czasy przechowywania migawek w różnych tabelach faktów różnią się. Niektóre mogą je utrzymywać przez siedem dni, inne 30 dni, a niektóre nawet dłużej.
+
+## <a name="next-steps"></a>Następne kroki
+
+ - Aby uzyskać więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, zobacz temat [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).
+ - Więcej na temat pracy z magazynami danych można dowiedzieć się z tematu [Create First Data WareHouse](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) (Tworzenie pierwszego magazynu danych).
+ - Więcej na temat pracy z usługą Power BI i magazynem danych można dowiedzieć się z tematu [Create a new Power BI report by importing a dataset](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/) (Tworzenie nowego raportu usługi Power BI przez importowanie zestawu danych). 

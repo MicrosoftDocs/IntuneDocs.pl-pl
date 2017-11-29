@@ -5,7 +5,7 @@ keywords: "Magazyn danych usługi Intune"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,30 +14,36 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8088127f5968c0b4f07f83b1dad02ba90f4e6b9a
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 2d81d17bc9489900f9d17101db1f1496ba8d55e9
+ms.sourcegitcommit: d26930f45ba9e6292a49bcb08defb5b3f14b704b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="reference-for-user-entity"></a>Dokumentacja jednostki użytkownika
 
 Kategoria **Użytkownik** zawiera jednostkę **User**, która definiuje właściwości użytkownika i agenta w modelu danych.
 
-**User**
+## <a name="user"></a>Użytkownik
 
 Jednostka **User** zawiera listę wszystkich użytkowników usługi Azure Active Directory (Azure AD) w przedsiębiorstwie wraz z przypisanymi licencjami.
+
+Kolekcja jednostek **User** zawiera dane z ostatniego miesiąca. Te rekordy obejmują stany użytkowników w okresie zbierania danych, nawet jeśli użytkownik został usunięty. Na przykład w ciągu ostatniego miesiąca użytkownik mógł zostać dodany do usługi Intune, a następnie z niej usunięty. Chociaż ten użytkownik nie występuje w chwili tworzenia raportu, on i jego stan znajdują się jednak w danych z poprzedniego miesiąca. Możesz utworzyć raport, który pokazuje okres historycznej obecności użytkownika w Twoich danych.
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
 | UserKey |Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy. |123 |
 | UserId |Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Adres e-mail użytkownika. |John@constoso.com |
+| UPN | Główna nazwa użytkownika. | John@constoso.com |
 | Nazwa wyświetlana |Nazwa wyświetlana użytkownika. |Michał |
 | IntuneLicensed |Określa, czy użytkownik ma licencję usługi Intune, czy nie. |True/False |
-| IsDeleted |Wskazuje, czy ten rekord użytkownika został zaktualizowany.  True — użytkownik ma nowy rekord ze zaktualizowanymi polami w tej tabeli. False — to jest najnowszy rekord dla tego użytkownika. |Prawda/Fałsz |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tego użytkownika w magazynie danych. |2016-11-23 12:00:00 |
-| EndDateExclusiveUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
-| IsCurrent |Wskazuje, czy ten rekord użytkownika jest aktualny w magazynie danych, czy nie. |Prawda/Fałsz |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tego użytkownika w magazynie danych. |2016-11-23 12:00:00 |
+| IsDeleted | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. |Prawda/Fałsz |
+| StartDateInclusiveUTC |Jeśli flaga IsDeleted = FAŁSZ, data i godzina przypisania licencji użytkownikowi i początku jego obecności w usłudze Intune (w formacie UTC). Jeśli flaga IsDeleted = PRAWDA, data i godzina wygaśnięcia ważności licencji użytkownika i usunięcia go z usługi Intune (w formacie UTC). |2016-11-23 12:00:00 |
+| EndDateExclusiveUTC |Jeśli flaga IsDeleted = FAŁSZ, data i godzina wygaśnięcia ważności licencji użytkownika i usunięcia go z usługi Intune (w formacie UTC). Licencja wygasła w pewnym momencie poprzedniego dnia. Jeśli flaga IsDeleted = PRAWDA, data i godzina uzyskania nowej licencji przez użytkownika i ponownego utworzenia go w usłudze Intune (w formacie UTC).  |2016-11-23 12:00:00 |
+| IsCurrent |Wskazuje, czy ten rekord reprezentuje najnowszy stan użytkownika. Dla pojedynczego użytkownika może istnieć wiele rekordów, ale tylko jeden z nich reprezentuje bieżący stan.  |Prawda/Fałsz |
+| RowLastModifiedDateTimeUTC |Data i godzina ostatniej modyfikacji rekordu w magazynie danych (w formacie UTC)  |2016-11-23 12:00:00 |
 
+## <a name="next-steps"></a>Następne kroki
+ - Aby ograniczyć dane użytkownika do użytkowników, którzy są obecnie aktywni, można użyć kolekcji jednostek **Bieżący użytkownik**. Aby uzyskać więcej informacji, zobacz temat [Dokumentacja jednostki bieżącego użytkownika](reports-ref-current-user.md). 
+ - Aby uzyskać więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, zobacz temat [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).

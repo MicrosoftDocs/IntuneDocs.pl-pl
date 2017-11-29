@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 904041ba4936917dc976fd0a6de869e931927c2d
+ms.sourcegitcommit: f9bfdaed6037bd76f8715fa7ca15a3457d26370a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
@@ -50,7 +50,7 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 
     ![Wyeksportuj certyfikat podpisywania](./media/wit-walk-cert2.gif)
 
-    W **Kreatorze eksportu certyfikatów** wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
+    W **Kreatorze eksportu certyfikatów**wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Przekaż aplikację do usługi Intune**<br>
     Aby udostępnić aplikację użytkownikom końcowym, przekaż podpisany plik aplikacji oraz certyfikat podpisywania kodu.
@@ -192,8 +192,9 @@ Poniżej przedstawiono procedurę rejestrowania i wdrażania aplikacji w ten spo
 
 |Parametr | Opis|
 | ------------- | ------------- |
-|InputWin10AppxBundle |Ścieżka, w której znajduje się źródłowy plik appxbundle |
-|OutputWin10AppxBundle |Ścieżka wyjściowa dla podpisanego pliku appxbundle.  Win81Appx — ścieżka, w której znajduje się plik aplikacji Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1 (plik APPX).|
+|InputWin10AppxBundle |Ścieżka pliku źródłowego appxbundle. |
+|OutputWin10AppxBundle |Ścieżka wyjściowa dla podpisanego pliku appxbundle. |
+|Win81Appx | Ścieżka pliku aplikacji Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1 (pliku APPX).|
 |PfxFilePath |Ścieżka pliku z certyfikatem podpisywania kodu firmy Symantec dla firmowych urządzeń przenośnych (pliku PFX). |
 |PfxPassword| Hasło certyfikatu podpisywania kodu firmy Symantec dla firmowych urządzeń przenośnych. |
 |PublisherId |Identyfikator wydawcy przedsiębiorstwa. Jeśli go nie ma, używane jest pole Podmiot certyfikatu podpisywania kodu firmy Symantec dla firmowych urządzeń przenośnych.|

@@ -1,208 +1,172 @@
 ---
 title: "Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune"
-titlesuffix: Azure portal
-description: "Informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania certyfikatów PKCS za pomocą usługi Intune."
+titleSuffix: Intune on Azure
+description: "Tworzenie i przypisywanie certyfikatów PKCS za pomocą usługi Intune."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: MicrosoftGuyJFlo
+ms.author: joflore
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
-ms.reviewer: vinaybha
+ms.assetid: 
+ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1dff7d3e00b26b4f186beb71bacf13738ac857a3
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 105b5fc73bc537eaca67a0e6943701ba25a53972
+ms.sourcegitcommit: 2b35c99ca7d3dbafe2dfe1e0b9de29573db403b9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune
+
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Ten temat zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów PKCS za pomocą usługi Intune.
+## <a name="requirements"></a>Wymagania
 
-Aby przeprowadzać uwierzytelnianie oparte na certyfikatach w organizacji, należy zastosować urząd certyfikacji przedsiębiorstwa.
+Aby korzystać z certyfikatów PKCS za pomocą usługi Intune, musisz mieć następującą infrastrukturę:
 
-Do korzystania z profilów certyfikatu PKCS w połączeniu z urzędem certyfikacji przedsiębiorstwa są wymagane również następujące elementy:
+* Skonfigurowana istniejąca domena usługi Active Directory Domain Services (AD DS).
+ 
+  Aby uzyskać więcej informacji o sposobie instalowania i konfigurowania usług AD DS, zobacz artykuł [Projekt i planowanie AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
--   Komputer, który może komunikować się z urzędem certyfikacji, lub komputer urzędu certyfikacji.
+* Skonfigurowany istniejący urząd certyfikacji przedsiębiorstwa (CA).
 
--  Łącznik certyfikatów usługi Intune uruchamiany na komputerze, który może komunikować się z urzędem certyfikacji.
+  Aby uzyskać więcej informacji o sposobie instalowania i konfigurowania usług certyfikatów Active Directory (AD CS), zobacz artykuł [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393) (Usługi certyfikatów Active Directory — przewodnik krok po kroku).
 
-## <a name="important-terms"></a>Ważne warunki
+  > [!WARNING]
+  > Usługa Intune wymaga uruchomienia usług AD CS z urzędu certyfikacji przedsiębiorstwa (CA), a nie autonomicznego urzędu certyfikacji.
 
+* Klient, który jest połączony z urzędem certyfikacji przedsiębiorstwa.
+* Wyeksportowana kopia certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa.
+* Program Łącznik certyfikatów usługi Microsoft Intune (NDESConnectorSetup.exe) pobrany z portalu usługi Intune.
+* System Windows Server dostępny na potrzeby hostowania programu Łącznik certyfikatów usługi Microsoft Intune (NDESConnectorSetup.exe).
 
--    **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji sieci Web) muszą należeć do Twojej domeny usługi Active Directory.
+## <a name="export-the-root-certificate-from-the-enterprise-ca"></a>Eksportowanie certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa
 
--  **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
-    Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
+Na każdym urządzeniu wymagany jest certyfikat głównego lub pośredniego urzędu certyfikacji do uwierzytelniania w ramach sieci VPN, Wi-Fi i innych zasobów. Poniższe kroki objaśniają, jak uzyskać wymagany certyfikat z Twojego urzędu certyfikacji przedsiębiorstwa.
 
--  **Komputer, który może komunikować się z urzędem certyfikacji**: alternatywnie można użyć komputera urzędu certyfikacji.
--  **Łącznik certyfikatów usługi Microsoft Intune**: w witrynie Azure Portal możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. W przypadku profilów certyfikatów PKCS zainstaluj łącznik certyfikatów na komputerze, który komunikuje się z urzędem certyfikacji.
--  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) można użyć serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
-    -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
-    -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
+1. Zaloguj się do swojego urzędu certyfikacji przedsiębiorstwa za pomocą konta z uprawnieniami administracyjnymi.
+2. Otwórz wiersz polecenia jako administrator.
+3. Wyeksportuj certyfikat głównego urzędu certyfikacji do lokalizacji, w której można będzie później uzyskać do niego dostęp.
 
- > [!NOTE]           
-> -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych (NDES). Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
->-  Ponadto serwer, który hostuje serwer proxy aplikacji sieci Web, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej dla klientów zewnętrznych oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
-    Informacje na temat certyfikatów dla serwera proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
+   Na przykład:
 
+   `certutil -ca.cert certnew.cer`
 
-## <a name="certificates-and-templates"></a>Certyfikaty i szablony
-
-|Obiekt|Szczegóły|
-|----------|-----------|
-|**Szablon certyfikatu**|Ten szablon należy skonfigurować na serwerze wystawiającego urzędu certyfikacji.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w pliku w formacie **.cer** z urzędu wystawiającego certyfikaty lub dowolnego urządzenia traktującego urząd wystawiający certyfikaty jako zaufany, a następnie przypisać go do urządzeń, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+   Aby uzyskać więcej informacji, zobacz temat [Zadania polecenia certutil służące do zarządzania certyfikatami](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
 
 
-## <a name="configure-your-infrastructure"></a>Konfigurowanie infrastruktury
-Aby można było skonfigurować profile certyfikatów, należy najpierw wykonać poniższe kroki. Te kroki wymagają znajomości systemu Windows Server 2012 R2 oraz usług certyfikatów Active Directory (ADCS):
+## <a name="configure-certificate-templates-on-the-certification-authority"></a>Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 
-- **Krok 1** — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji.
-- **Krok 2** — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune.
+1. Zaloguj się do swojego urzędu certyfikacji przedsiębiorstwa za pomocą konta z uprawnieniami administracyjnymi.
+2. Otwórz konsolę **Urząd certyfikacji**.
+3. Kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, a następnie kliknij polecenie **Zarządzaj**.
+4. Zlokalizuj szablon certyfikatu **Użytkownik**, kliknij go prawym przyciskiem myszy i wybierz opcję **Duplikuj szablon**. Zostanie otwarte okno **Właściwości nowego szablonu**.
+5. Na karcie **Zgodność**
+   * W opcji **Urząd certyfikacji** podaj wartość **Windows Server 2008 R2**
+   * W opcji **Odbiorca certyfikatu** podaj wartość **Windows 7 / Server 2008 R2**
+6. Na karcie **Ogólne**:
+   * W polu **Nazwa wyświetlana szablonu** wpisz zrozumiały dla Ciebie tekst opisowy.
 
-## <a name="step-1---configure-certificate-templates-on-the-certification-authority"></a>Krok 1 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
+   > [!WARNING]
+   > Domyślnie pole **Nazwa szablonu** ma taką samą wartość jak pole **Nazwa wyświetlana szablonu** *bez spacji*. Zanotuj nazwę szablonu do późniejszego użycia.
 
-### <a name="to-configure-the-certification-authority"></a>Aby skonfigurować urząd certyfikacji
+7. Na karcie **Obsługiwanie żądań** zaznacz opcję **Zezwalaj na eksportowanie klucza prywatnego**.
+8. Na karcie **Kryptografia** potwierdź, że **Minimalny rozmiar klucza** wynosi 2048.
+9. Na karcie **Nazwa podmiotu** wybierz przycisk radiowy **Dostarcz w żądaniu**.
+10. Na karcie **Rozszerzenia** upewnij się, że w obszarze **Zasady aplikacji** wyświetlane są pozycje System szyfrowania plików, Bezpieczna poczta e-mail i Uwierzytelnienie klienta.
+    
+      > [!IMPORTANT]
+      > W przypadku szablonów certyfikatów dla systemu iOS i macOS na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
-1.  Za pomocą przystawki Szablony certyfikatów dla wystawiającego urzędu certyfikacji utwórz nowy szablon niestandardowy lub skopiuj i zmodyfikuj istniejący szablon (na przykład szablon użytkownika), aby używać go z profilem PKCS.
+11. Na karcie **Zabezpieczenia** dodaj konto komputera dla serwera, na którym instalowany jest program Łącznik certyfikatów usługi Microsoft Intune.
+    * Nadaj dla tego konta uprawnienia **Odczyt** i **Rejestracja**.
+12. Kliknij przycisk **Zastosuj**, a następnie kliknij przycisk **OK**, aby zapisać szablon certyfikatu.
+13. Zamknij okno **Konsola szablonów certyfikatów**.
+14. W konsoli **Urząd certyfikacji** kliknij prawym przyciskiem myszy pozycję **Szablony certyfikatów**, **Nowy**, **Szablon certyfikatu do wystawienia**.
+    * Wybierz szablon utworzony w poprzednich krokach, a następnie kliknij przycisk **OK**.
+15. W przypadku serwera do zarządzania certyfikatami w imieniu urządzeń i użytkowników zarejestrowanych w usłudze Intune wykonaj następujące kroki:
 
-    Dla szablonu należy uwzględnić następujące kwestie:
+    a. Kliknij prawym przyciskiem myszy urząd certyfikacji, a następnie wybierz pozycję **Właściwości**.
 
-    -   Określ przyjazną **nazwę wyświetlaną szablonu** .
+    b. Na karcie Zabezpieczenia dodaj konto komputera serwera, na którym uruchamiasz program Łącznik certyfikatów usługi Microsoft Intune.
+      * Dla konta komputera przydziel uprawnienia **Wystawianie certyfikatów i zarządzanie nimi** i **Żądaj certyfikatów**.
+16. Wyloguj się z urzędu certyfikacji przedsiębiorstwa.
 
-    -   Na karcie **Nazwa podmiotu** zaznacz opcję **Dostarcz w żądaniu**. (Zabezpieczenia są wymuszane przez moduł zasad usługi Intune dla usługi NDES).
+## <a name="download-install-and-configure-the-microsoft-intune-certificate-connector"></a>Pobieranie, instalowanie i konfigurowanie programu Łącznik certyfikatów usługi Microsoft Intune
 
-    -   Na karcie **Rozszerzenia** upewnij się, że **Opis zasad aplikacji** obejmuje pozycję **Uwierzytelnianie klienta**.
+![ConnectorDownload][ConnectorDownload]
 
-        > [!IMPORTANT]
-        > W przypadku szablonów certyfikatów dla systemu iOS i macOS na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Przejdź do opcji **Intune**, **Konfiguracja urządzeń**, **Urząd certyfikacji** i kliknij przycisk **Pobierz łącznik certyfikatów**.
+   * Pobraną zawartość należy zapisać w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana.
+3. Zaloguj się do serwera, na którym zostanie zainstalowany program Łącznik certyfikatów usługi Microsoft Intune.
+4. Uruchom Instalatora i zaakceptuj lokalizację domyślną. Łącznik zostanie zainstalowany w lokalizacji C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
 
-2.  Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune używa wartości skonfigurowanej w szablonie. Można jednak skonfigurować urząd certyfikacji tak, aby umożliwiał żądającemu określenie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora w usłudze Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
+      a. Na stronie Opcje instalatora wybierz pozycję **Dystrybucja PFX** i kliknij przycisk **Dalej**.
 
-    > [!IMPORTANT]
-    > W przypadku platform iOS i macOS wartość ustawiona w szablonie jest używana zawsze, niezależnie od innych ustawień.
+   b. Kliknij opcję **Zainstaluj** i zaczekaj na ukończenie instalacji.
 
-    W celu skonfigurowania urzędu certyfikacji tak, aby umożliwiał żądającemu określenie okresu ważności, uruchom następujące polecenia w urzędzie certyfikacji:
+   c. Na stronie ukończenia zaznacz pole wyboru o nazwie **Uruchom łącznik usługi Intune** i kliknij przycisk **Zakończ**.
 
-    a.  **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
+5. W oknie łącznika usługi NDES powinna zostać teraz otwarta karta **Rejestracja**. Aby włączyć połączenia z usługą Intune, należy kliknąć opcję **Zaloguj** i podać nazwę konta z uprawnieniami administracyjnymi.
+6. Na karcie **Zaawansowane** można pozostawić wybrany przycisk radiowy **Użyj konta SYSTEM na tym komputerze (domyślnie)**.
+7. Kliknij przycisk **Zastosuj**, a następnie **Zamknij**.
+8. Teraz wróć do witryny Azure Portal. W obszarze **Intune**, **Konfiguracja urządzeń**, **Urząd certyfikacji** po kilku minutach powinien zostać wyświetlony zielony znacznik wyboru oraz słowo **Aktywne** w obszarze **Stan połączenia**. Dzięki temu możesz upewnić się, że serwer łącznika może komunikować się z usługą Intune.
 
-    b.  **net stop certsvc**
+## <a name="create-a-device-configuration-profile"></a>Tworzenie profilu konfiguracji urządzenia
 
-    c.  **net start certsvc**
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Przejdź do opcji **Intune**, **Konfiguracja urządzeń**, **Profile** i kliknij przycisk **Utwórz profil**.
 
-3.  Użyj przystawki Urząd certyfikacji dla wystawiającego urzędu certyfikacji, aby opublikować szablon certyfikatu.
+   ![NavigateIntune][NavigateIntune]
 
-    a.  Zaznacz węzeł **Szablony certyfikatów**, kliknij pozycję **Akcja**-&gt; **Nowy** &gt; **Szablon certyfikatu do wystawienia**, a następnie wybierz szablon utworzony w kroku 2.
+3. Wprowadź następujące informacje:
+   * **Nazwa** profilu
+   * Opcjonalne określenie opisu
+   * **Platforma**, na której ma być wdrożony profil
+   * Ustaw wartość pola **Typ profilu** na **Zaufany certyfikat**
+4. Przejdź do opcji **Ustawienia** i wskaż wyeksportowany wcześniej plik .CER certyfikatu głównego urzędu certyfikacji.
 
-    b.  Sprawdź, czy certyfikat został opublikowany, wyświetlając go w folderze **Szablony certyfikatów** .
+   > [!NOTE]
+   > W zależności od platformy wybranej w ramach **Kroku 3** możesz mieć możliwość wyboru **Magazynu docelowego** certyfikatu lub jej nie mieć.
 
-4.  Na komputerze urzędu certyfikacji sprawdź, czy komputer hostujący łącznik certyfikatów usługi Intune ma uprawnienia do rejestracji, dzięki czemu może uzyskiwać dostęp do szablonu używanego podczas tworzenia profilu certyfikatów PKCS. Ustaw to uprawnienie na karcie **Zabezpieczenia** właściwości komputera urzędu certyfikacji.
+   ![ProfileSettings][ProfileSettings]
 
-## <a name="step-2---enable-install-and-configure-the-intune-certificate-connector"></a>Krok 2 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
-W tym kroku:
+5. Kliknij przycisk **OK**, a następnie przycisk **Utwórz**, aby zapisać profil.
+6. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz temat [Jak przypisywać profile urządzeń usługi Microsoft Intune](device-profile-assign.md).
 
-- Włączanie obsługi łącznika certyfikatów
-- Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
+## <a name="create-a-pkcs-certificate-profile"></a>Tworzenie profilu certyfikatu PKCS
 
-### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Przejdź do opcji **Intune**, **Konfiguracja urządzeń**, **Profile** i kliknij przycisk **Utwórz profil**.
+3. Wprowadź następujące informacje:
+   * **Nazwa** profilu
+   * Opcjonalne określenie opisu
+   * **Platforma**, na której ma być wdrożony profil
+   * Ustaw wartość pola **Typ profilu** na **Certyfikat PKCS**
+4. Przejdź do opcji **Ustawienia** i podaj następujące informacje:
+   * **Próg odnawiania (%)** — zalecana wartość wynosi 20%.
+   * **Okres ważności certyfikatu** — jeśli nie zmieniono szablonu certyfikatu, wartość tej opcji powinna być ustawiona na jeden rok.
+   * **Urząd certyfikacji** — ta opcja określa wewnętrzną w pełni kwalifikowaną nazwę domeny (nazwę FQDN) urzędu certyfikacji przedsiębiorstwa.
+   * **Nazwa urzędu certyfikacji** — ta opcja określa nazwę urzędu certyfikacji przedsiębiorstwa i może różnić się od poprzedniej pozycji.
+   * **Nazwa szablonu certyfikatu** — ta opcja określa nazwę utworzonego wcześniej szablonu. Należy pamiętać, że **Nazwa szablonu** domyślnie jest taka sama jak **Nazwa wyświetlana szablonu** *bez spacji*.
+   * **Format nazwy podmiotu** — ta opcja powinna mieć wartość **Nazwa pospolita**, chyba że wymagana jest inna wartość.
+   * **Alternatywna nazwa podmiotu** — ta opcja powinna mieć wartość **Główna nazwa użytkownika (UPN)**, chyba że wymagana jest inna.
+   * **Rozszerzone użycie klucza** — jeśli w kroku 10 w poprzedniej sekcji **Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji** używane są ustawienia domyślne, z pola wyboru należy dodać następujące **wstępnie zdefiniowane wartości**:
+      * **Dowolny cel**
+      * **Uwierzytelnianie klienta**
+      * **Bezpieczna poczta e-mail**
+   * **Certyfikat główny** — (dla profilów systemu Android) wartość tej opcji określa plik CER wyeksportowany w kroku 3 w poprzedniej sekcji [Eksportowanie certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa](#export-the-root-certificate-from-the-enterprise-ca).
 
-1.  Zaloguj się do portalu Azure Portal.
-2.  Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3.  W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
-2.  W bloku **Konfiguracja urządzenia** wybierz kolejno pozycje **Instalacja** > **Urząd certyfikacji**.
-2.  W obszarze **Krok 1** wybierz przycisk **Włącz**.
-
-### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
-
-1.  W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Instalacja** > **Urząd certyfikacji**.
-2.  Wybierz pozycję **Pobierz łącznik certyfikatów**.
-2.  Po zakończeniu uruchom pobrany program instalacyjny (**ndesconnectorssetup.exe**).
-  Uruchom instalatora na komputerze, który może połączyć się z urzędem certyfikacji. Wybierz opcję Dystrybucja PKCS (PFX), a następnie wybierz przycisk **Zainstaluj**. Po ukończeniu instalacji utwórz profil certyfikatu zgodnie z opisem w sekcji [Jak konfigurować profile certyfikatów](certificates-configure.md).
-
-3.  Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, wybierz pozycję **Wybierz**, a następnie wybierz zainstalowany certyfikat **uwierzytelniania klienta**.
-
-    Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Chociaż wybrany certyfikat nie jest wyświetlany, wybierz przycisk **Dalej**, aby wyświetlić właściwości certyfikatu. Następnie wybierz przycisk **Dalej**, a następnie pozycję **Zainstaluj**.
-
-4.  Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
-
-    > [!TIP]
-    > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
-    >
-    > **&lt;ścieżka_instalacji&gt;\NDESConnectorUI\NDESConnectorUI.exe**
-
-5.  W interfejsie użytkownika **łącznika certyfikatów** :
-
-    a. Wybierz pozycję **Zaloguj** i wprowadź swoje poświadczenia administratora usługi Intune lub poświadczenia administratora dzierżawy z uprawnieniami administratora globalnego.
-
-  <!--  If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, click **Use proxy server** and then provide the proxy server name, port, and account credentials to connect.-->
-
-    b. Wybierz kartę **Zaawansowane**, wprowadź poświadczenia konta, do którego przypisano uprawnienia **Wystawianie certyfikatów i zarządzanie nimi** w urzędzie wystawiającym certyfikaty.
-
-    c. Wybierz pozycję **Zastosuj**.
-
-    Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
-
-6.  Otwórz wiersz polecenia i wpisz **services.msc**. Naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i wybierz polecenie **Uruchom ponownie**.
-
-Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź następujący adres URL, co powinno spowodować zwrócenie błędu **403** :
-
-**http://&lt;nazwa_FQDN_serwera_usługi_NDES&gt;/certsrv/mscep/mscep.dll**
+5. Kliknij przycisk **OK**, a następnie przycisk **Utwórz**, aby zapisać swój profil.
+6. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz artykuł [Jak przypisywać profile urządzeń usługi Microsoft Intune](device-profile-assign.md).
 
 
-### <a name="how-to-create-a-pkcs-certificate-profile"></a>Tworzenie profilu certyfikatu PKCS
-
-W witrynie Azure Portal wybierz obciążenie **Konfiguruj urządzenia**.
-2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
-3. W bloku profilów kliknij pozycję **Utwórz profil**.
-4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu protokołu PKCS.
-5. Z listy rozwijanej **Platforma** wybierz odpowiednią platformę urządzenia dla danego certyfikatu protokołu PKCS:
-    - **Android**
-    - **Android for Work**
-    - **iOS**
-    - **Windows 10 lub nowszy**
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat PKCS**.
-7. W bloku **Certyfikat PKCS** skonfiguruj następujące ustawienia:
-    - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
-    - **Okres ważności certyfikatu** — jeśli dla urzędu wystawiającego certyfikaty uruchomiono polecenie **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**, które dopuszcza niestandardowy okres ważności, możesz określić czas pozostały do wygaśnięcia certyfikatu.<br>Możesz podać wartość niższą niż okres ważności danego szablonu certyfikatu, ale nie wyższą. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić wartość jednego roku, ale nie pięciu lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty.
-    - **Dostawca magazynu kluczy (KSP)** (Windows 10) — określ miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:
-        - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie u dostawcy magazynu kluczy oprogramowania**
-        - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie niepowodzenie**
-        - **Zarejestruj w usłudze Passport, w przeciwnym razie niepowodzenie (system Windows 10 i nowsze)**
-        - **Zarejestruj u dostawcy magazynu kluczy oprogramowania**
-    - **Urząd certyfikacji** — wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx). Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
-    - **Nazwa urzędu certyfikacji** — wprowadź nazwę urzędu certyfikacji.
-    - **Nazwa szablonu certyfikatu** — wprowadź nazwę szablonu certyfikatu, do którego użycia skonfigurowano usługę rejestracji urządzeń sieciowych i który dodano do urzędu wystawiającego certyfikaty.
-    Upewnij się, że nazwa ta dokładnie pokrywa się z nazwą jednego z szablonów certyfikatów wymienionych w rejestrze serwera z uruchomioną usługą rejestracji urządzeń sieciowych. Zwróć uwagę, aby podać nazwę szablonu certyfikatu, a nie nazwę wyświetlaną szablonu certyfikatu. 
-    Aby znaleźć nazwy szablonów certyfikatów, przejdź do następującego klucza: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP. Szablony certyfikatów są w nim wyświetlane jako wartości kluczy **EncryptionTemplate**, **GeneralPurposeTemplate**i **SignatureTemplate**. Dla wszystkich trzech szablonów certyfikatów domyślna wartość to IPSECIntermediateOffline, mapująca się na nazwę wyświetlaną szablonu **IPSec (żądanie offline)**. 
-    - **Format nazwy podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune nazwy podmiotu w żądaniu certyfikatu. Jeśli certyfikat przeznaczony jest dla użytkownika, możesz również uwzględnić w nazwie podmiotu adres e-mail tego użytkownika. Wybierz spośród opcji:
-        - **Nieskonfigurowany**
-        - **Nazwa pospolita**
-        - **Nazwa pospolita obejmująca adres e-mail**
-        - **Nazwa pospolita jako adres e-mail**
-    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu należy ustawić nazwę UPN. 
-    Możesz też wybrać pozycję **Niestandardowy atrybut usługi Azure AD**. Po wybraniu tej opcji wyświetlane jest inne pole listy rozwijanej. Pole listy rozwijanej **Niestandardowy atrybut usługi Azure AD** zawiera jedną opcję: **Dział**. Po wybraniu tej opcji w przypadku, gdy w usłudze Azure AD nie został określony dział, certyfikat nie zostanie wystawiony. Aby rozwiązać ten problem, należy określić dział i zapisać zmiany. Przy kolejnym ewidencjonowaniu urządzenia problem zostanie rozwiązany, a certyfikat zostanie wystawiony. ASN.1 to oznaczenie użyte w tym polu. 
-    - **Rozszerzone użycie klucza** (Android) — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków będzie wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
-    - **Certyfikat główny** (Android) — wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Jest to profil zaufanego certyfikatu, który został utworzony wcześniej.
-8. Gdy skończysz, wróć do bloku **Utwórz profil** i kliknij pozycję **Utwórz**.
-
-Profil zostanie utworzony i wyświetlony w bloku listy profilów.
-
-## <a name="how-to-assign-the-certificate-profile"></a>Przypisywanie profilu certyfikatu
-
-Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę następujące kwestie:
-
-- Podczas przypisywania profilów certyfikatów do grup na urządzeniu jest instalowany plik certyfikatu z profilu certyfikatu zaufanego urzędu certyfikacji. Profil certyfikatu PKCS jest używany przez urządzenie do tworzenia żądania certyfikatu.
-- Profile certyfikatów mogą być instalowane wyłącznie na urządzeniach z platformą użytą podczas tworzenia profilu.
-- Profile certyfikatów można również przypisywać do kolekcji użytkowników lub kolekcji urządzeń.
-- Aby opublikować certyfikat dla urządzenia jak najszybciej po jego rejestracji, należy przypisać profil certyfikatu do grupy użytkowników, a nie do grupy urządzeń. W przypadku przypisania do grupy urządzeń wymagana jest pełna rejestracja urządzenia przed otrzymaniem przez nie zasad.
-- Mimo że każdy profil należy przypisać osobno, konieczne jest również przypisanie profilu zaufanego certyfikatu głównego urzędu certyfikacji oraz profilu PKCS. W przeciwnym razie zasady certyfikatu PKCS nie będą działać.
-
-Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
+[NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Przejdź do usługi Intune w witrynie Azure portal i utwórz nowy profil zaufanego certyfikatu"
+[ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Utwórz profil i przekaż zaufany certyfikat"
+[ConnectorDownload]: ./media/certificates-pfx-configure-connector-download.png "Pobierz łącznik certyfikatów z witryny Azure portal"

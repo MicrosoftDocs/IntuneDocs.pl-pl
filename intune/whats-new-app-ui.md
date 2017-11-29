@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,49 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dff1cb496b85f933d8f462b94f6e15fa7ff69a28
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 7ec7f322f0d35d50a7c84d8e40d43a6a04ae1b7d
+ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
 
+## <a name="week-of-november-13-2017"></a>Tydzień 13 listopada 2017 r.
+
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Ulepszenia przepływu pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS w wersji 2.9.0 <!---1417174--->
+
+Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS. Używany język jest bardziej przyjazny dla użytkownika i tam, gdzie było to możliwe, ekrany zostały połączone. Ponadto język jest lepiej dostosowany do Twojej firmy, ponieważ w tekście instalatora używana jest jej nazwa.
+
+> [!NOTE]
+> Jest to nazwa ustawiona w witrynie Azure Portal w opcji **Microsoft Intune** > **Mobile Apps** > **Znakowanie Portalu firmy** > **Nazwa firmy**. Jeśli nie ustawiono tej wartości, używana jest nazwa dzierżawy ustawiona w opcji **Azure Active Directory** > **Właściwości** > **Nazwa**. Jeśli w funkcji znakowania aplikacji Portal firmy nie ustawiono nazwy firmy, ale nie chcesz, aby wyświetlana była nazwa dzierżawy, zaleca się ustawienie nazwy firmy na karcie znakowania aplikacji Portal firmy. Jeśli nie chcesz, aby ten ciąg znaków był wyświetlany w nagłówku w aplikacji Portal firmy, możesz usunąć zaznaczenie pola wyboru „Pokaż nazwę firmy obok logo”.
+
+|Stary adres|Nowy adres|
+|---|---|
+|![01](./media/ios_cp_enroll_01_before_1711.png)|![01](./media/ios_cp_enroll_01_after_1711.png)|
+|![02](./media/ios_cp_enroll_02_before_1711.png)|*Połączone z poprzednim krokiem*|
+|![03](./media/ios_cp_enroll_03_before_1711.png)|![03](./media/ios_cp_enroll_03_after_1711.png)|
+|![04](./media/ios_cp_enroll_04_before_1711.png)|![04](./media/ios_cp_enroll_04_after_1711.png)|
+|![05](./media/ios_cp_enroll_05_before_1711.png)|![05](./media/ios_cp_enroll_05_after_1711.png)|
+|![06](./media/ios_cp_enroll_06_before_1711.png)|![06](./media/ios_cp_enroll_06_after_1711.png)|
+|![07](./media/ios_cp_enroll_07_before_1711.png)|![07](./media/ios_cp_enroll_07_after_1711.png)|
+
 
 ## <a name="week-of-november-6-2017"></a>Tydzień 6 listopada 2017 r.
+
+### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Aktualizacje aplikacji Portal firmy dla systemu Windows 10 <!--1299474-->
+Strona Ustawienia w aplikacji Portal firmy dla systemu Windows 10 została zaktualizowana, dzięki czemu ustawienia i spodziewane akcje użytkownika są bardziej spójne z pozostałymi ustawieniami. Zaktualizowany został również układ aplikacji, który teraz lepiej odpowiada układom innych aplikacji systemu Windows.
+
+|Stary adres|Nowy adres|
+|---|---|
+|![01](./media/w10-share-logs.png)|![02](./media/w10-share-logs-after-1711.png)|
+
 
 ### <a name="search-improvements-to-the-company-portal-apps-and-website---1418189--"></a>Ulepszenia wyszukiwania w aplikacjach Portalu firmy i witrynie internetowej Portal firmy <!--1418189-->
 Aplikacje Portalu firmy korzystają teraz z wyszukiwania w kategoriach, nazwach i opisach aplikacji. Wyniki są sortowane malejąco według zgodności. Te aktualizacje są również dostępne w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
 
 Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak to działa (link „Opinia” u dołu witryny internetowej Portal firmy).
-
-
 
 ## <a name="week-of-october-16-2017"></a>Tydzień 16 października 2017 r.
 
@@ -45,10 +70,6 @@ Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak 
 
 ### <a name="ios-company-portal-displays-large-icons----1454593---"></a>Wyświetlanie dużych ikon w aplikacji Portal firmy dla systemu iOS <!-- 1454593 -->
 W tej wersji naprawiono znany problem ze sposobem wyświetlania ikon aplikacji Portal firmy dla systemu iOS na kafelku aplikacji. Przesłane ikony aplikacji o rozmiarach 120x120 pikseli lub większe są teraz wyświetlane w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com) i na stronach aplikacji Portal firmy dla systemu iOS w pełnym rozmiarze kafelka aplikacji.
-
-
-
-
 
 
 ## <a name="week-of-october-2-2017"></a>Tydzień 2 października 2017 r.

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3a2622c7c981e64b3e220424c6661a5ba9e30751
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 895a089a58845da609423ab7fd74fbf26e0b967f
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Android za pomocą szyfrowania
 
 Zaszyfrowanie urządzenia polega na opakowaniu zawartych na nim informacji w warstwie kodu ochronnego, który uniemożliwia dostęp do niego przez osoby bez autoryzacji. W ramach zabezpieczania informacji użytkowników organizacja wymaga szyfrowania urządzenia z systemem Android w celu uzyskania dostępu do firmowych plików, poczty e-mail lub danych.
 
 > [!Note]
-> Może zostać wyświetlony monit o ustawienie numeru PIN lub hasła przed szyfrowaniem, jeśli dział pomocy technicznej Twojej firmy wymaga takiego zabezpieczenia.
+> Niektóre urządzenia z systemem Android, w tym niektóre urządzenia Huawei oraz urządzenia Vivo i OPPO, nie mogą być szyfrowane. Dowiedz się więcej [tutaj](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
 
@@ -37,9 +37,6 @@ Jeśli wyrejestrujesz telefon, pozostanie on zaszyfrowany.
     (W niektórych telefonach należy kliknąć pozycję **Pamięć** > **Szyfrowanie pamięci** lub **Pamięć** > **Blokada ekranu i zabezpieczenia** > **Inne ustawienia zabezpieczeń**, aby uzyskać dostęp do opcji „Szyfruj”).
 
 3.  Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
-
-> [!Note]
-> Niektórych urządzeń z systemem Android nie można zaszyfrować. Dowiedz się więcej [tutaj](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 ### <a name="what-to-do-if-you-have-issues"></a>Co zrobić, jeśli masz problemy
 **Problem**: urządzenie jest już zaszyfrowane i wystąpiła jedna z następujących sytuacji:

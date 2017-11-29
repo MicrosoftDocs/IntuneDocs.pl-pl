@@ -1,11 +1,11 @@
 ---
-title: "Urządzenie z systemem Android wydaje się być szyfrowane"
+title: "Urządzenie z systemem Android wydaje się być szyfrowane | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
-ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
+ms.openlocfilehash: 04ce17615055d67f38e49158bec806de9f322bfd
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
 
@@ -40,7 +40,7 @@ Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem
 
 Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0+, należy to zrobić. Zmiana wersji urządzenia może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z działem pomocy technicznej Twojej firmy, aby rozwiązać ten problem. Informacje kontaktowe działu pomocy technicznej Twojej firmy znajdziesz w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
 
-### <a name="encrypt-the-entire-device"></a>Szyfrowanie całego urządzenia
+### <a name="encrypt-the-entire-device"></a>Zaszyfruj całe urządzenie
 
 Niektóre urządzenia umożliwiają wybór między szyfrowaniem całego urządzenia i szyfrowaniem tylko używanego miejsca. Wybierz opcję szyfrowania całego urządzenia zamiast opcji „tylko używane miejsce”. Jeśli masz już zaszyfrowane tylko używane miejsce:
 
@@ -69,5 +69,7 @@ W przypadku wymienionych poniżej urządzeń problem może wystąpić, jeśli ur
 
 Nie można rozwiązać tego problemu w przypadku urządzeń wymienionych poniżej. Konieczne może być użycie innego urządzenia w celu uzyskania dostępu do zasobów firmy. 
 
-- [Huawei Mate 8](http://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [Urządzenia OPPO](http://www.oppo.com/en/smartphones)
+- [Urządzenia Vivo](https://www.vivo.co.in)
 - [Smartfony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)

@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/3/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3cf11c53a5f1ce78dda9c703da32270b0b07874a
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: ab0456b58704f17d3dc5885ab5ae6b902c9ef152
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -125,13 +125,13 @@ Po dodaniu aplikacji, które chcesz chronić za pomocą funkcji WIP, konieczne j
 
 ### <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Uczenie funkcji WIP to raport, który umożliwia monitorowanie nieznanych aplikacji funkcji WIP. Nieznane aplikacje to te, które nie zostały wdrożone przez dział informatyczny organizacji użytkownika. Możesz wyeksportować te aplikacje z raportu i dodać je do swoich zasad funkcji WIP, aby uniknąć zakłóceń produktywności przed wymuszeniem działania funkcji WIP w trybie „Ukryj przesłonięcia”.
+Uczenie funkcji WIP to raport, który umożliwia monitorowanie nieznanych aplikacji funkcji WIP. Nieznane aplikacje to te, które nie zostały wdrożone przez dział informatyczny organizacji użytkownika. Możesz wyeksportować te aplikacje z raportu i dodać je do swoich zasad funkcji WIP, aby uniknąć zakłóceń produktywności przed wymuszeniem działania funkcji WIP w trybie „Zablokowanie”.
 
-Firma Microsoft zaleca rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowania w małej grupie, czy na liście aplikacji dozwolonych znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania **Ukryj przesłonięcia**.
+Firma Microsoft zaleca rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowania w małej grupie, czy na liście aplikacji dozwolonych znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania, **Zablokowanie**.
 
 ### <a name="what-are-the-protection-modes"></a>Jakie są tryby ochrony?
 
-#### <a name="hide-overrides"></a>Ukryj przesłonięcia
+#### <a name="block"></a>Zablokowanie
 Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji. Może to obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
 
 #### <a name="allow-overrides"></a>Zezwalaj na przesłonięcia
