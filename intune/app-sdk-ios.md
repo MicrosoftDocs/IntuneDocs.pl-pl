@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56bc71124c5a2714746dffcce256f0e604e9f62c
-ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
+ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
+ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -95,6 +95,10 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
         > [!NOTE]
         > Aby ustalić wartość elementu `PATH_TO_LIB`, wybierz plik `libIntuneMAM.a`, a następnie wybierz polecenie **Get Info** (Pobierz informacje) z menu **File** (Plik). Skopiuj i wklej informacje z pola **Where** (Gdzie; ścieżka) z sekcji **General** (Ogólne) okna **Info** (Informacje).
 
+    Dodaj pakiet zasobów `IntuneMAMResources.bundle` do projektu, przeciągając pakiet zasobów w obszarze **Copy Bundle Resources** (Kopiuj pakiety zasobów) w sekcji **Build Phases** (Fazy kompilacji).
+
+    ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: kopiowanie zasobów pakietów](./media/intune-app-sdk-ios-copy-bundle-resources.png)
+
 3. Dodaj następujące struktury systemu iOS do projektu:
     * MessageUI.framework
     * Security.framework
@@ -106,12 +110,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
     * LocalAuthentication.framework
     * AudioToolbox.framework
 
-
-4. Dodaj pakiet zasobów `IntuneMAMResources.bundle` do projektu, przeciągając pakiet zasobów w obszarze **Copy Bundle Resources** (Kopiuj pakiety zasobów) w sekcji **Build Phases** (Fazy kompilacji).
-
-    ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: kopiowanie zasobów pakietów](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-
-5. Jeśli w pliku Info.plist Twojej aplikacji mobilnej zdefiniowano główny plik nib lub storyboard, usuń pole **Main Storyboard** lub **Main Nib**. W pliku Info.plist wklej te pola oraz odpowiadające im wartości do nowego słownika o nazwie **IntuneMAMSettings** z następującymi nazwami kluczy zgodnie z wymaganiami:
+4. Jeśli w pliku Info.plist Twojej aplikacji mobilnej zdefiniowano główny plik nib lub storyboard, usuń pole **Main Storyboard** lub **Main Nib**. W pliku Info.plist wklej te pola oraz odpowiadające im wartości do nowego słownika o nazwie **IntuneMAMSettings** z następującymi nazwami kluczy zgodnie z wymaganiami:
     * MainStoryboardFile
     * MainStoryboardFile~ipad
     * MainNibFile
@@ -121,7 +120,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
     Możesz przeglądać plik Info.plist w formacie nieprzetworzonym (aby zobaczyć nazwy kluczy), klikając prawym przyciskiem myszy w dowolnym miejscu w treści dokumentu i zmieniając typ widoku na **Show Raw Keys/Values** (Pokaż nieprzetworzone klucze/wartości).
 
-6. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
+5. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
 
   > [!NOTE]
     > Twój profil aprowizacji musi obsługiwać nowe wartości udostępniania łańcucha kluczy. Grupy dostępu łańcucha kluczy powinny obsługiwać symbol wieloznaczny. Możesz to sprawdzić, otwierając plik mobileprovision w edytorze tekstów, wyszukując frazę **keychain-access-groups** i sprawdzając, czy używany jest symbol wieloznaczny. Na przykład:
@@ -132,7 +131,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
     </array>
     ```
 
-7. Po włączeniu udostępniania łańcucha kluczy wykonaj następujące kroki, aby utworzyć oddzielną grupę dostępu, w której będą przechowywane dane zestawu SDK aplikacji usługi Intune. Grupę dostępu łańcucha kluczy możesz utworzyć za pomocą interfejsu użytkownika lub pliku uprawnień. Jeśli używasz interfejsu użytkownika do utworzenia grupy dostępu łańcucha kluczy, koniecznie wykonaj następujące czynności:
+6. Po włączeniu udostępniania łańcucha kluczy wykonaj następujące kroki, aby utworzyć oddzielną grupę dostępu, w której będą przechowywane dane zestawu SDK aplikacji usługi Intune. Grupę dostępu łańcucha kluczy możesz utworzyć za pomocą interfejsu użytkownika lub pliku uprawnień. Jeśli używasz interfejsu użytkownika do utworzenia grupy dostępu łańcucha kluczy, koniecznie wykonaj następujące czynności:
 
     1. Jeśli dla Twojej aplikacji mobilnej nie zdefiniowano żadnych grup dostępu łańcucha kluczy, dodaj identyfikator pakietu aplikacji jako pierwszą grupę.
 
@@ -140,24 +139,23 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
     3. Dodaj grupę `com.microsoft.adalcache` do Twoich istniejących grup dostępu.
 
-        4. Dodaj grupę `com.microsoft.workplacejoin` do Twoich istniejących grup dostępu.
-            ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: udostępnianie łańcucha kluczy](./media/intune-app-sdk-ios-keychain-sharing.png)
+        ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: udostępnianie łańcucha kluczy](./media/intune-app-sdk-ios-keychain-sharing.png)
 
-    5. Jeśli używasz pliku uprawnień do utworzenia grupy dostępu łańcucha kluczy, dołącz ciąg `$(AppIdentifierPrefix)` jako prefiks grupy dostępu łańcucha kluczy w pliku uprawnień. Na przykład:
+    4. Jeśli edytujesz plik uprawnień bezpośrednio, a nie za pomocą przedstawionego powyżej interfejsu użytkownika środowiska Xcode, aby utworzyć grupy dostępu pęku kluczy, dołącz grupy dostępu pęku kluczy przy użyciu elementu `$(AppIdentifierPrefix)` (środowisko Xcode wykonuje tę czynność automatycznie). Na przykład:
 
             * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
             * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
     > [!NOTE]
-    > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS.
+    > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS. Jeśli aplikacja nie miała wcześniej pliku uprawnień, włączenie udostępniania pęku kluczy (krok 6) powinno spowodować wygenerowanie takiego pliku dla aplikacji w środowisku Xcode.
 
-8. Jeśli w pliku info.plist aplikacji zdefiniowano schematy adresów URL, dodaj kolejny schemat z sufiksem `-intunemam` dla każdego schematu URL.
+7. Jeśli w pliku info.plist aplikacji zdefiniowano schematy adresów URL, dodaj kolejny schemat z sufiksem `-intunemam` dla każdego schematu URL.
 
-9. Jeśli aplikacja definiuje typy dokumentów w jej pliku Info.plist, dla każdego elementu tablicy „Document Content Type UTIs” dodaj zduplikowany wpis dla każdego ciągu z prefiksem „com.microsoft.intune.mam.” .
+8. Jeśli aplikacja definiuje typy dokumentów w jej pliku Info.plist, dla każdego elementu tablicy „Document Content Type UTIs” dodaj zduplikowany wpis dla każdego ciągu z prefiksem „com.microsoft.intune.mam.” .
 
-10. W przypadku aplikacji mobilnych opracowywanych dla systemu iOS 9 i nowszych uwzględnij każdy protokół, przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Ponadto dla każdego protokołu uwzględnionego na liście dodaj nowy protokół i dołącz do jego nazwy sufiks `-intunemam`. W tabeli należy również uwzględnić pozycje `http-intunemam`, `https-intunemam`i `ms-outlook-intunemam` .
+9. W przypadku aplikacji mobilnych opracowywanych dla systemu iOS 9 i nowszych uwzględnij każdy protokół, przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Ponadto dla każdego protokołu uwzględnionego na liście dodaj nowy protokół i dołącz do jego nazwy sufiks `-intunemam`. W tabeli należy również uwzględnić pozycje `http-intunemam`, `https-intunemam`i `ms-outlook-intunemam`.
 
-11. Jeśli w uprawnieniach aplikacji zdefiniowano grupy aplikacji, dodaj te grupy do słownika **IntuneMAMSettings** w kluczu `AppGroupIdentifiers` jako tabelę ciągów.
+10. Jeśli w uprawnieniach aplikacji zdefiniowano grupy aplikacji, dodaj te grupy do słownika **IntuneMAMSettings** w kluczu `AppGroupIdentifiers` jako tabelę ciągów.
 
 ## <a name="using-the-intune-mam-configurator-tool"></a>Korzystanie z narzędzia konfiguratora zarządzania aplikacjami mobilnymi w usłudze Intune
 
