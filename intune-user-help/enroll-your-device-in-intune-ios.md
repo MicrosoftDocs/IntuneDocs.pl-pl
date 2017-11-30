@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ee4275ec7b9b455cf6ebf032123127fde97a9a74
-ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
+ms.openlocfilehash: 790b935b71b641aec3093a9cdd7f7a98ba90babb
+ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Konfigurowanie dostępu do zasobów firmy
 
@@ -48,7 +48,7 @@ Twoja firma jest w posiadaniu wielu zastrzeżonych informacji pochodzących z po
 |![Monit wprowadzenia hasła usługi Azure Active Directory.](./media/ios-0b-cp-enroll-1711.png)|Wprowadź hasło, a następnie naciśnij przycisk **Zaloguj się**.|
 |![Ekran powitalny ładowania zasobów firmy.](./media/ios-1-cp-enroll-1711.png)|Poczekaj na załadowanie.|
 |![Warunki i postanowienia.](./media/ios-2-cp-enroll-1711.png)|Przeczytaj warunki i postanowienia i naciśnij przycisk **Zaakceptuj wszystkie**.|
-|![Ekran konfigurowania dostępu do zasobów firmy. Zarządzanie i ustawienia wymagają obecnie rozpoznania.](./media/ios-3-cp-enroll-1711.png)|Naciśnij opcję **Uczyń swoje urządzenie zarządzanym**, aby rozpocząć proces dopuszczenia urządzenia do uzyskania dostępu do zasobów firmy. Jeśli nie możesz zrobić tego teraz, możesz **odłożyć** proces, jednak oznacza to, że nie będzie można pobrać wiadomości e-mail, dokumentów i innych elementów.|
+|![Ekran konfigurowania dostępu do zasobów firmy. Zarządzanie i ustawienia wymagają obecnie rozpoznania.](./media/ios-3-cp-enroll-1711.png)|Naciśnij opcję **Rozpocznij**, aby rozpocząć proces dopuszczenia urządzenia do uzyskania dostępu do zasobów firmy. Jeśli nie możesz zrobić tego teraz, możesz **odłożyć** proces, jednak oznacza to, że nie będzie można pobrać wiadomości e-mail, dokumentów i innych elementów.|
 |![Ekran Elementy widoczne dla firmy.](./media/ios-4-cp-enroll-1711.png)|Możesz **dowiedzieć się więcej** o tym, co jest widoczne dla Twojej firmy, naciskając link na dole ekranu. Jeśli nie chcesz, naciśnij opcję **Kontynuuj**.|
 |![Ekran Co dalej.](./media/ios-5-cp-enroll-1711.png)|Na tym ekranie wyświetlony jest opis wszystkich kroków konfiguracji. Aby dokończyć ten proces, musisz wykonać pewne czynności w programie Safari, aplikacji Ustawienia i aplikacji Portal firmy. Naciśnij opcję **Dalej**.|
 |![Ekran ładowania po naciśnięciu opcji Dalej na ekranie Co dalej.](./media/ios-6-cp-enroll-1711.png)||
@@ -66,7 +66,7 @@ Twoja firma jest w posiadaniu wielu zastrzeżonych informacji pochodzących z po
 |![Ekran ładowania zasobów firmy.](./media/ios-18-cp-enroll-1711.png)|Poczekaj na załadowanie.|
 |![Wybierz kategorię urządzenia w aplikacji Portal firmy.](./media/ios-19-cp-enroll-1711.png)|Wybierz najlepszą kategorię dla swojego urządzenia. Ma to zazwyczaj związek z osobą, która jest właścicielem tego urządzenia, lub z miejscem, w którym urządzenie znajduje się przez większość czasu.|
 |![Kategoria wybrana.](./media/ios-20-cp-enroll-1711.png)||
-|![Zarządzanie urządzeniem zakończone powodzeniem; teraz należy zaktualizować ustawienia.](./media/ios-21-cp-enroll-1711.png)|Twoje urządzenie zostało pomyślnie udostępnione do zarządzania. Prawdopodobnie wciąż istnieją ustawienia, takie jak długość hasła, których aktualizacja może być wymagana przez Twoją firmę. Aby kontynuować, naciśnij opcję **Aktualizuj ustawienia urządzenia**.|
+|![Zarządzanie urządzeniem zakończone powodzeniem; teraz należy zaktualizować ustawienia.](./media/ios-21-cp-enroll-1711.png)|Twoje urządzenie zostało pomyślnie udostępnione do zarządzania. Prawdopodobnie wciąż istnieją ustawienia, takie jak długość hasła, których aktualizacja może być wymagana przez Twoją firmę. Aby kontynuować, naciśnij przycisk **Kontynuuj**.|
 |![Potwierdzanie ustawień urządzenia.](./media/ios-22-cp-enroll-1711.png)|Aplikacja Portal firmy sprawdzi, czy jakiekolwiek z Twoich ustawień wymaga zaktualizowania.|
 |![Sprawdzanie ustawień zakończone, z nieprawidłową wersją systemu operacyjnego](./media/ios-23-cp-enroll-1711.png)|Aplikacja Portal firmy udostępni instrukcje dotyczące sposobu rozwiązywania wszelkich problemów z ustawieniami. Po zakończeniu rozwiązywania tych problemów, naciśnij opcję **Sprawdź ustawienia**.|
 |![Ekran ładowania potwierdzania ustawień urządzenia](./media/ios-24-cp-enroll-1711.png)|Twoje urządzenie będzie sprawdzać, czy Twoje ustawienia zapewniają wystarczający poziom bezpieczeństwa w dostępie do zasobów firmy.|
