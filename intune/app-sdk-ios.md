@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
-ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
+ms.openlocfilehash: 6d7b22c871ed1e62bfdc148f30fb832786baf294
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -153,7 +153,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
 8. Jeśli aplikacja definiuje typy dokumentów w jej pliku Info.plist, dla każdego elementu tablicy „Document Content Type UTIs” dodaj zduplikowany wpis dla każdego ciągu z prefiksem „com.microsoft.intune.mam.” .
 
-9. W przypadku aplikacji mobilnych opracowywanych dla systemu iOS 9 i nowszych uwzględnij każdy protokół, przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Ponadto dla każdego protokołu uwzględnionego na liście dodaj nowy protokół i dołącz do jego nazwy sufiks `-intunemam`. W tabeli należy również uwzględnić pozycje `http-intunemam`, `https-intunemam`i `ms-outlook-intunemam`.
+9. W przypadku aplikacji mobilnych opracowywanych dla systemu iOS 9 i nowszych uwzględnij każdy protokół, przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Ponadto dla każdego protokołu uwzględnionego na liście dodaj nowy protokół i dołącz do jego nazwy sufiks `-intunemam`. W tabeli należy również uwzględnić pozycje `http-intunemam`, `https-intunemam`i `ms-outlook-intunemam` .
 
 10. Jeśli w uprawnieniach aplikacji zdefiniowano grupy aplikacji, dodaj te grupy do słownika **IntuneMAMSettings** w kluczu `AppGroupIdentifiers` jako tabelę ciągów.
 
@@ -172,9 +172,9 @@ Narzędzie konfiguratora zarządzania aplikacjami mobilnymi w usłudze Intune mo
 * Dowolnych schematów adresów URL zdefiniowanych w pliku Info.plist Twojej aplikacji przy użyciu sufiksu -intunemam dla każdego schematu URL.
 * Dowolnych typów dokumentów zdefiniowanych w pliku Info.plist Twojej aplikacji — dla każdego elementu tablicy „Document Content Type UTIs” dodaj zduplikowany wpis dla każdego ciągu z prefiksem „com.microsoft.intune.mam.” .
 * Dowolnych grup aplikacji zdefiniowanych w uprawnieniach Twojej aplikacji — dodaj te grupy do słownika IntuneMAMSettings w kluczu AppGroupIdentitifiers jako tabelę ciągów.
-
     
->[!NOTE] Jeśli zdecydujesz się używać tego narzędzia zamiast ręcznego manipulowania plikiem info.plist, zalecamy jego ponowne uruchomienie po każdym wprowadzeniu zmian w pliku info.plist lub uprawnieniach aplikacji.
+> [!Note]
+> Jeśli zdecydujesz się używać tego narzędzia zamiast ręcznego manipulowania plikiem info.plist, zalecamy jego ponowne uruchomienie po każdym wprowadzeniu zmian w pliku info.plist lub uprawnieniach aplikacji.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurowanie biblioteki uwierzytelniania usługi Azure Active Directory (ADAL)
 
