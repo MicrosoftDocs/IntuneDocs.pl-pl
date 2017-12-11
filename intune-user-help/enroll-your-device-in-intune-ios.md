@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 790b935b71b641aec3093a9cdd7f7a98ba90babb
-ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
+ms.openlocfilehash: 206de56ee967f4cd142e5cd7c9d63971b9b727c6
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Konfigurowanie dostępu do zasobów firmy
 
@@ -36,7 +36,7 @@ Twoja firma jest w posiadaniu wielu zastrzeżonych informacji pochodzących z po
 - Zadbaj o to, aby zakończyć cały proces niezwłocznie po rozpoczęciu. Wstrzymywanie go przez okres dłuższy niż kilka minut zwykle zatrzymuje postęp i powoduje konieczność ponownego rozpoczęcia.
 - Jeśli ten proces zakończy się niepowodzeniem, musisz powrócić do aplikacji Portal firmy, aby spróbować ponownie.
 - Upewnij się, że Twoja sieć Wi-Fi działa i że na Twoim urządzeniu działa program Safari.
-- Pobierz dokument [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
+- Pobierz i zainstaluj aplikację [Portal firmy w usłudze Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
 
 ## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Korzystanie z aplikacji Portal firmy w celu konfigurowania dostępu do zasobów firmy
