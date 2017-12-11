@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 406da09419e13319b8ebf4f59a05ca36eff1edad
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 03c78fde793809713e630f371a02c48393b68810
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -83,10 +83,6 @@ Skonfigurowanie profilów certyfikatów będzie możliwe po wykonaniu poniższyc
 
 **Krok 5**: Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 
-> [!NOTE]
-> Ze względu na znany problem w celu pobrania, zainstalowania i skonfigurowania łącznika certyfikatów należy wykonać następującą procedurę: [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP -> Konfigurowanie infrastruktury -> Zadanie 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
-
-
 #### <a name="step-1---create-an-ndes-service-account"></a>Krok 1 — Tworzenie konta usługi NDES
 
 Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne, **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
@@ -118,7 +114,7 @@ To zadanie obejmuje:
         > [!IMPORTANT]
         > W przypadku szablonów certyfikatów dla systemu iOS i macOS na karcie **Rozszerzenia** edytuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
-    -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, którzy będą tworzyć profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
+    -   Na karcie **Zabezpieczenia** dodaj konto usługi NDES i przypisz do niego uprawnienia **Rejestracja** dla szablonu. Administratorzy usługi Intune, którzy tworzą profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
 
     > [!NOTE]
     > Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
@@ -207,7 +203,7 @@ To zadanie obejmuje:
 -   Konfigurowanie filtrowania żądań w usługach IIS
 
 
-1.  Na serwerze NDES otwórz kreatora Konfiguracja usług AD CS, a następnie wprowadź następujące ustawienia.
+1.  Na serwerze NDES otwórz kreatora Konfiguracja usług AD CS, a następnie wprowadź następujące ustawienia:
 
     > [!TIP]
     > Jeśli w poprzednim zadaniu kliknięto odpowiedni link, kreator jest już otwarty. W przeciwnym przypadku otwórz Menedżera serwera, aby przejść do konfiguracji powdrożeniowej usług certyfikatów Active Directory.
@@ -235,7 +231,7 @@ To zadanie obejmuje:
     |Podpis i szyfrowanie|GeneralPurposeTemplate|Szyfrowanie klucza<br /><br />Podpis cyfrowy|
     Na przykład jeśli Cel szablonu certyfikatu to **Szyfrowanie**, należy edytować wartość **EncryptionTemplate** i wprowadzić nazwę szablonu certyfikatu.
 
-3. Serwer usługi NDES będzie otrzymywać bardzo długie adresy URL (zapytania), co wymaga dodania dwóch wpisów rejestru:
+3. Serwer usługi NDES odbiera bardzo długie adresy URL (zapytania), co wymaga dodania dwóch wpisów rejestru:
 
     |Lokalizacja|Wartość|Typ|Dane|
     |-------|-----|----|----|
@@ -263,9 +259,9 @@ To zadanie obejmuje:
 
     1.  Po uzyskaniu certyfikatu uwierzytelniania serwera otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie kliknij pozycję **Powiązania** w okienku **Akcje** .
 
-    2.  Kliknij pozycję **Dodaj**, ustaw wartość **https** w polu **Typ** i upewnij się, że ustawiony port to **443**. (W przypadku autonomicznej usługi Intune jest obsługiwany wyłącznie port 443).
+    2.  Kliknij pozycję **Dodaj**, ustaw wartość **https** w polu **Typ**i upewnij się, że ustawiony port to **443**. (W przypadku autonomicznej usługi Intune jest obsługiwany wyłącznie port 443).
 
-    3.  W polu **Certyfikat SSL** określ certyfikat uwierzytelniania serwera.
+    3.  W polu **Certyfikat SSL**określ certyfikat uwierzytelniania serwera.
 
         > [!NOTE]
         > Jeśli serwer NDES używa zarówno nazwy zewnętrznej, jak i wewnętrznej dla jednego adresu sieciowego, **Nazwa podmiotu** dla certyfikatu uwierzytelniania serwera musi zawierać zewnętrzną nazwę serwera publicznego, a **Alternatywna nazwa podmiotu** musi zawierać wewnętrzną nazwę serwera.
@@ -282,7 +278,7 @@ To zadanie obejmuje:
 
 1.  Na serwerze NDES otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie otwórz **Filtrowanie żądań**.
 
-2.  Kliknij pozycję **Edytuj ustawienia funkcji**, a następnie wprowadź następujące ustawienia:
+2.  Kliknij pozycję **Edytuj ustawienia funkcji**, a następnie wprowadź następujące wartości:
 
     **Długość ciągu zapytania (w bajtach)** = **65534**
 
@@ -294,18 +290,23 @@ To zadanie obejmuje:
 
     Upewnij się, że następujące wartości są ustawione jako wpisy typu DWORD:
 
-    Nazwa: **MaxFieldLength** o wartości dziesiętnej **65534**
+    Nazwa: **MaxFieldLength**o wartości dziesiętnej **65534**
 
-    Nazwa: **MaxRequestBytes** o wartości dziesiętnej **65534**
+    Nazwa: **MaxRequestBytes**o wartości dziesiętnej **65534**
 
-4.  Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
+4. Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
 
 #### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Krok 5 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
 To zadanie obejmuje:
 
-Włączanie obsługi usługi NDES w usłudze Intune.
+- Włączanie obsługi usługi NDES w usłudze Intune.
 
-Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze usługi NDES.
+- Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze usługi NDES.
+
+   > [!NOTE]
+   > Aby zapewnić wysoką dostępność, możesz zainstalować wiele wystąpień łącznika certyfikatów.
+
+<!--1528104 we need to flesh out the HA recommendation in the note above -->
 
 ##### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
 
@@ -316,9 +317,6 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 5.  Kliknij pozycję **Włącz łącznik certyfikatów**.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
-
-> [!NOTE]
-> Ze względu na znany problem w celu pobrania, zainstalowania i skonfigurowania łącznika certyfikatów należy wykonać następującą procedurę: [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP -> Konfigurowanie infrastruktury -> Zadanie 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
 
 1. Zaloguj się do portalu Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
@@ -383,19 +381,21 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
         - **Nazwa pospolita**
         - **Nazwa pospolita obejmująca adres e-mail**
         - **Nazwa pospolita jako adres e-mail**
+        - **Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)**
+        - **Numer seryjny**
         - **Niestandardowy** — po wybraniu tej opcji wyświetlane jest inne pole listy rozwijanej. To pole służy do wprowadzania niestandardowego formatu nazwy podmiotu. Obsługiwane są dwie zmienne dla formatu niestandardowego: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Przy użyciu kombinacji co najmniej jednej z tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki: **CN={{NazwaUżytkownika}},E={{AdresEmail}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. W tym przykładzie utworzono format nazwy podmiotu, w którym oprócz zmiennych CN i E użyto ciągów zmiennych Organizational Unit (Jednostka organizacyjna), Organization (Organizacja), Location (Lokalizacja), State (Stan) i Country (Kraj). [W tym temacie](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) omówiono funkcję **CertStrToName** i obsługiwane przez nią ciągi.
         
-    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN. 
+    - **Nazwa alternatywna podmiotu** — wybierz z listy sposób automatycznego tworzenia przez usługę Intune wartości nazwy alternatywnej podmiotu w żądaniu certyfikatu. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta jest używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN. 
     - **Użycie klucza** — określ opcje użycia klucza certyfikatu. Można wybrać następujące opcje: 
         - **Szyfrowanie klucza** — zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany. 
         - **Podpis cyfrowy** — zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego. 
     - **Rozmiar klucza (bity)** —wybierz liczbę bitów zawartych w kluczu. 
     - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) — wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia. 
     - **Certyfikat główny** — wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. 
-    - **Rozszerzone użycie klucza** — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków będzie wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
+    - **Rozszerzone użycie klucza** — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
     - **Ustawienia rejestracji**
         - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
-        - **Adresy URL serwerów SCEP** — określ co najmniej jeden adres URL dla serwerów usługi NDES, które będą wystawiać certyfikaty za pośrednictwem protokołu SCEP. 
+        - **Adresy URL serwerów SCEP** — określ co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. 
 8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.

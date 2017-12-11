@@ -89,8 +89,8 @@
           href: data-outside-protect.md
         - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
           href: data-leak-prevention.md
-        - name: '„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)'
-          href: byod-enable.md
+        - name: Porównanie zarządzania urządzeniami mobilnymi i zarządzania aplikacjami mobilnymi
+          href: byod-technology-decisions.md
     - name: Przewodnik migracji
       href: migration-guide.md
       items:

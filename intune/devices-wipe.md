@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
+ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -39,7 +39,21 @@ Z usługi Intune możesz usunąć urządzenia, które nie są już potrzebne, ma
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 3. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, które chcesz zresetować do ustawień fabrycznych.
-5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Resetowanie do ustawień fabrycznych**, a następnie wybierz pozycję **Tak**, aby potwierdzić.
+5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Resetowanie do ustawień fabrycznych**.
+6. W systemie Windows 10 w wersji 1709 lub nowszej istnieje dodatkowa opcja „Zachowaj stan rejestracji i konto użytkownika”. 
+    
+    |Zachowywanie w przypadku resetowania do ustawień fabrycznych|Niezachowane|
+    | -------------|------------|
+    |Konta użytkowników skojarzone z urządzeniem|Pliki użytkownika|
+    |Stan komputera \(dołączenie do domeny, dołączenie do usługi Azure Active Directory)| Aplikacje zainstalowane przez użytkownika \(aplikacje ze Sklepu i aplikacje Win32)|
+    |Rejestracja w usłudze zarządzania urządzeniami przenośnymi|Ustawienia urządzenia inne niż domyślne|
+    |Aplikacje zainstalowane przez producenta OEM \(aplikacje ze Sklepu i aplikacje Win32)||
+    |Profil użytkownika||
+    |Dane użytkownika przechowywane poza profilem użytkownika||
+    |Informacje o logowaniu automatycznym użytkownika|| 
+    
+         
+7. Kliknij przycisk **Tak**, aby potwierdzić resetowanie do ustawień fabrycznych.
 
 Jeśli urządzenie zostało włączone i połączone, propagowanie polecenia resetowania do ustawień fabrycznych do wszystkich typów urządzeń trwa mniej niż 15 minut.
 

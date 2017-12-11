@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/20/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3736b6d43f5cd3b6c75097a2ceabebffd75f0caa
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 0298fc255b3c11a12b5bf225968d6f2303192053
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -30,32 +30,74 @@ Usługa Intune zapewnia szereg sposobów monitorowania właściwości zarządzan
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
 3. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w grupie **Zarządzaj**.
-     
-    ![Blok stanu instalacji aplikacji.](./media/monitor-apps.png)
 5. W bloku listy aplikacji wybierz aplikację. Zostanie wyświetlony blok **Stan instalacji urządzenia** dla aplikacji <*nazwa aplikacji*> .
 
-Raport o stanie instalacji urządzeń zawiera następujące kolumny:
+## <a name="app-overview-blade"></a>Blok przeglądu aplikacji
 
-1.  **Nazwa urządzenia** — nazwa typu urządzenia.
-2.  **Nazwa użytkownika** — nazwa użytkownika.
-3.   **Platforma** — system operacyjny zainstalowany na urządzeniu.
-4.  **Wersja** — numer wersji aplikacji.
-5.   **Stan** — możliwe stany aplikacji obejmują: **Zainstalowana**, **Niezainstalowana**, **Oczekiwanie na instalację** i **Błąd**.
-6. **Szczegóły stanu** — czytelny opis stanu aplikacji na urządzeniu.
-7. **Ostatnie zaewidencjonowanie** — czas ostatniego zaewidencjonowania urządzenia w usłudze Intune.
+Możesz użyć bloku <*nazwa aplikacji*> **Stan instalacji urządzenia**, aby zweryfikować szczegółowe informacje dotyczące stanu aplikacji w środowisku.
 
-Następnie wykonaj jedną z następujących czynności, aby dowiedzieć się więcej o aplikacjach i ich przypisaniach.
+### <a name="essentials"></a>Podstawy
 
-## <a name="general"></a>Ogólne
+Sekcja **Podstawy** zawiera następujące informacje dotyczące aplikacji:
 
-- **Przegląd** — podstawowe informacje o aplikacji oraz o stanie wszelkich przypisań dotyczących danej aplikacji. Możesz wybrać jeden z wykresów, aby otworzyć bloki **Stan instalacji urządzenia** lub **Stan instalacji użytkownika** w celu uzyskania bardziej szczegółowych informacji.
+ - **Wydawca**  
+Wydawca aplikacji.
+ - **System operacyjny**  
+System operacyjny aplikacji (Windows, iOS, Android itp.)
+ - **Utworzenie**  
+Godzina utworzenia tej poprawki.
+ - **Przypisane**  
+**Tak** lub **Nie** — czy aplikacja została przypisana.
 
-## <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
+### <a name="status"></a>Stan
+Każdy wykres pokazuje liczby dla bieżącego stanu:
 
-- **Właściwości** — umożliwia wyświetlanie i modyfikowanie informacji na temat wybranej aplikacji. Aby uzyskać więcej informacji na temat właściwości aplikacji, zobacz artykuł [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md).
-- **Przypisania** — informacje o przypisaniach danej aplikacji. Aby uzyskać więcej informacji, zobacz artykuł [How to assign apps to groups with Microsoft Intune](apps-deploy.md) (Jak przypisać aplikacje do grup w usłudze Microsoft Intune).
+ - **Zainstalowane**  
+Liczba zainstalowanych aplikacji.
+ - **Niezainstalowane**  
+Liczba niezainstalowanych aplikacji.
+ - **Oczekująca instalacja**  
+Liczba aplikacji, których instalacja trwa.
+ - **Niepowodzenie**  
+Liczba instalacji zakończonych niepowodzeniem.
+ - **Nieznane**  
+Liczba aplikacji z nieznanym stanem.
 
-## <a name="monitor"></a>Monitor
+### <a name="device-status"></a>Stan urządzenia
 
-- **Stan instalacji urządzenia** — zawiera szczegółowe informacje na temat każdego urządzenia, do którego została przypisana dana aplikacja, takie jak nazwa urządzenia, system operacyjny, czas ostatniego zaewidencjonowania urządzenia w usłudze Intune oraz stan instalacji aplikacji.
-- **Stan instalacji użytkownika** — zawiera szczegółowe informacje o użytkowniku, do którego została przypisana dana aplikacja, takie jak liczba instalacji aplikacji na wszystkich urządzeniach użytkownika oraz informacje o wszelkich błędach instalacji.
+Stan urządzenia. Wykres pierścieniowy przedstawiający stan instalacji aplikacji na urządzeniach. Kliknij wykres, aby otworzyć listę szczegółowych informacji o stanie urządzenia. Tabela szczegółów zawiera następujące kolumny:
+
+ - **Nazwa urządzenia**  
+Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń.
+ - **Nazwa użytkownika**  
+Nazwa użytkownika.
+ - **Platforma**  
+System operacyjny urządzenia (Windows, iOS, Android itp.)
+ - **Wersja**  
+Numer wersji aplikacji. W przypadku aplikacji biznesowych jest wyświetlany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), na przykład 2.2(2.2.17560800).
+ - **Stan**  
+Stan aplikacji.
+ - **Szczegóły stanu**  
+Szczegółowe informacje o stanie.
+ - **Ostatnie zaewidencjonowanie**  
+Data ostatniej synchronizacji urządzenia z usługą Intune.
+
+
+### <a name="user-status"></a>Stan użytkownika
+
+Stan użytkownika. Wykres pierścieniowy przedstawiający stan instalacji aplikacji według użytkowników. Kliknij wykres, aby otworzyć listę szczegółowych informacji o stanie urządzenia. Tabela szczegółów zawiera następujące kolumny:
+ - **Nazwa**  
+Nazwa użytkownika w usłudze Azure AD.
+ - **Nazwa użytkownika**  
+Unikatowa nazwa użytkownika.
+ - **Instalacje**  
+Liczba instalacji aplikacji użytych przez użytkownika.
+ - **Niepowodzenia**  
+Liczba instalacji zakończonych niepowodzeniem według użytkownika.
+ - **Niezainstalowane**  
+Liczba aplikacji niezainstalowanych przez użytkownika.
+
+
+## <a name="next-steps"></a>Następne kroki
+
+Aby dowiedzieć się więcej na temat pracy z danymi usługi Intune, zobacz [Korzystanie z magazynu danych usługi Intune](reports-nav-create-intune-reports.md).

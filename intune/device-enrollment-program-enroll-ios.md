@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 311bb42f2ef9fbf689e32eacca7420c8189251bf
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: a10d158816f17c7fbe07fd14172d1a9abb9ed9b9
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -157,11 +157,11 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
 
-1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** >  **Rejestracja Apple** > **Urządzenia programu Enrollment Program**.
-2. W obszarze **Urządzenia programu Enrollment Program** wybierz pozycję **Synchronizuj**.
+1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Urządzenia programu Enrollment Program** > **Synchronizacja**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
   ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/enrollment-program-device-sync.png)
-3. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
+  
+2. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
   ![Zrzut ekranu przedstawiający blok Synchronizuj i wybierany link Żądaj synchronizacji.](./media/enrollment-program-device-request-sync.png)
 
@@ -170,7 +170,7 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
      -  Każde żądanie synchronizacji ma przydzielone 15 minut na zakończenie. W tym czasie lub do momentu zakończenia żądania powodzeniem przycisk **synchronizacji** jest wyłączony.
      - Usługa Intune co 24 godziny synchronizuje z firmą Apple urządzenia nowe i usunięte.
 
-4. W obszarze roboczym Urządzenia programu Enrollment Program wybierz pozycję **Odśwież**, aby wyświetlić urządzenia.
+3. W obszarze roboczym Urządzenia programu Enrollment Program wybierz pozycję **Odśwież**, aby wyświetlić urządzenia.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Przypisywanie profilu rejestracji do urządzeń
 Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil programu rejestracji.

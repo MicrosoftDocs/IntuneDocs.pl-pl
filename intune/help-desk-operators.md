@@ -14,17 +14,19 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: f5678752830e2c4c9afbe75c9c6891d525eec34a
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: dfe6e552917a006175e394b8c569b1000a002015
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Portal służący do rozwiązywania problemów pozwala operatorom pomocy technicznej i administratorom usługi Intune wyświetlać informacje dotyczące użytkowników w celu rozwiązywania zgłoszonych przez nich problemów. Organizacje z działami pomocy technicznej mogą przypisać do grupy użytkowników rolę **operatora pomocy technicznej**. Rola operatora pomocy technicznej może używać bloku **Rozwiązywanie problemów**.
+
+Problemy z rejestracją są widoczne dla użytkownika w bloku **Rozwiązywanie problemów**. Szczegółowe informacje o problemie i sugerowane kroki korygujące mogą ułatwić administratorom i operatorom pomocy technicznej rozwiązywanie problemów. Niektóre problemy z rejestracją nie są rejestrowane i dla niektórych błędów może nie być sugestii korekty. 
 
 Procedura dodawania roli operatora pomocy technicznej jest dostępna w artykule [Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune](/intune/role-based-access-control)
 
@@ -33,7 +35,7 @@ Jeśli użytkownik zgłasza do działu pomocy technicznej problem techniczny dot
 - Stan użytkownika
 - Przypisania
 - Problemy ze zgodnością
-- Urządzenie nie odpowiada
+- Urządzenie nie
 - Urządzenie nie pobiera ustawień sieci VPN lub Wi-Fi
 - Nie można zainstalować aplikacji
 
