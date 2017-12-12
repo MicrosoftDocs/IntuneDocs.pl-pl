@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
-ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
+ms.openlocfilehash: ca1f1c0572a2a3c1484b9c23bd14e029e506e536
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
@@ -94,8 +94,8 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
     **Jeśli ustawiono kanał obsługi Półroczny kanał, a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację dotyczącą funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
 
-    - **Optymalizacja dostarczania** — wybór metody używanej przez urządzenie do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
-8. Gdy skończysz, kliknij przycisk **OK**, a następnie w bloku **Tworzenie pierścienia aktualizacji** kliknij przycisk **Utwórz**.
+    - **Optymalizacja dostarczania** — wybór metody używanej przez urządzenie do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+1. Gdy skończysz, kliknij przycisk **OK**, a następnie w bloku **Tworzenie pierścienia aktualizacji** kliknij przycisk **Utwórz**.
 
 Nowy pierścień aktualizacji jest wyświetlany na liście pierścieni aktualizacji.
 
