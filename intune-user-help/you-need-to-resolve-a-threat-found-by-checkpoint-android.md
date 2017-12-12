@@ -14,11 +14,11 @@ ms.assetid: 449c34ec-2d94-4c7f-8691-a5200efee3cb
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 2bcf23192829b5613b9245699cea47ffb85492f3
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 8a8a2d6669e1360ee033744120af415d7310c346
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Usuwanie zagrożenia wykrytego przez aplikację SandBlast Mobile Protect
 
@@ -30,7 +30,7 @@ Aby rozwiązać ten problem, otwórz aplikację SandBlast Mobile Protect i wykon
 
 W przypadku próby uzyskania dostępu do firmowej poczty e-mail lub plików w sytuacji, gdy na zarejestrowanym urządzeniu znajduje się wirus lub występuje inne zagrożenie bezpieczeństwa, komunikat aplikacji SandBlast Mobile Protect powiadomi o konieczności podjęcia odpowiednich akcji.
 
-Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
+Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
 
 ## <a name="example-of-an-app-that-sandblast-mobile-protect-sees-as-a-threat"></a>Przykład aplikacji, którą aplikacja SandBlast Mobile Protect uznaje za zagrożenie
 
@@ -38,4 +38,4 @@ Jeśli zainstalowana aplikacja jest uznawana przez aplikację SandBlast Mobile P
 
 W takiej sytuacji należy odinstalować tę aplikację, aby natychmiast odzyskać dostęp do firmowej poczty e-mail i danych. Jeśli jej nie odinstalujesz, utracisz dostęp do poczty e-mail i danych do czasu odinstalowania aplikacji.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

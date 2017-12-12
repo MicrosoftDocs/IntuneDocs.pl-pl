@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1ea734e83cfab3fff22c775764ac9814012d52b6
-ms.sourcegitcommit: 70dc0aaad51b447e173b663d1092d993dc81ffdd
+ms.openlocfilehash: 35bf193563deb34ac59df245c622bbc011d80b76
+ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Wczesna wersja usługi Microsoft Intune — grudzień 2017
 
@@ -60,9 +60,6 @@ Dzięki tej zmianie administratorzy IT wiedzą, które urządzenia zarządzane w
 
 ### <a name="new-ios-device-action------1244701---"></a>Nowa akcja dotycząca urządzenia z systemem iOS <!-- 1244701 -->
 Można zamknąć nadzorowane urządzenia z systemem iOS 10.3. Ta akcja natychmiast wyłącza urządzenie bez ostrzeżenia dla użytkownika końcowego. Akcję **Wyłącz (tylko nadzorowane)** można znaleźć we właściwościach urządzenia po wybraniu urządzenia w obciążeniu **Urządzenie**.
-
-### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Dodano obsługę sieci VPN Palo Alto <!-- 1333680 eeready -->
-Lista **Typ połączenia** podczas konfigurowania podstawowej sieci VPN obejmuje sieć VPN Palo Alto.
 
 ### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Obsługa wielu łączników na potrzeby obsługi certyfikatów protokołu SCEP i PFX <!-- 1361755 eeready -->
 Klienci, którzy korzystają z lokalnego łącznika usługi NDES w celu dostarczania certyfikatów na urządzenia, będą mogli skonfigurować wiele łączników w jednej dzierżawie.

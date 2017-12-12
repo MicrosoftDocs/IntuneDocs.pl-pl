@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50b4b9c8399e854e2f5961f6711090778b41ba37
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 656c2891a0f3c1b54d419f9d5dc3138126f7dc96
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS
 
-Niektóre problemy dotyczące urządzeń z systemem iOS można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
+Niektóre problemy dotyczące urządzeń z systemem iOS można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 - [Chcę ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 - [Chcę wysłać błędy do działu pomocy technicznej mojej firmy](send-errors-to-your-it-admin-ios.md)

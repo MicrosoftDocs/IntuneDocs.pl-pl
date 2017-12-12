@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ac9b138edeb77eee3dc223eee8a35dc4cfd4e273
-ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
+ms.openlocfilehash: c71ac6ec64bb60bf4cdd06639e1c178c1b236e4c
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalowanie aplikacji Portal firmy i logowanie się do niej
 
@@ -36,4 +36,4 @@ Portal firmy jest aplikacją instalowaną na urządzeniu z systemem iOS w celu u
 
     Jeśli logujesz się w aplikacji Portal firmy po raz pierwszy, a Twoja firma lub instytucja edukacyjna korzysta z usługi Intune, zostanie wyświetlony monit o zarejestrowanie urządzenia w usłudze Intune. Aby zarejestrować urządzenie, wykonaj czynności opisane w temacie [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md). Możesz również [zalogować się przy użyciu innego urządzenia](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
