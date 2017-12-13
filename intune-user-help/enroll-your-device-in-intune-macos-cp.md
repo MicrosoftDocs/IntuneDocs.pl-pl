@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a49df5ee93138bd15052bfd630633b443e026e5d
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 1559692de1a8c9c356a3f5b30e80d1abd31853d2
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
@@ -29,7 +29,7 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykony
 > [!NOTE]
 > Instrukcje dotyczące rejestrowania urządzeń z systemem macOS dla wcześniejszych wersji systemu macOS można znaleźć [tutaj](enroll-your-device-in-intune-macos-legacy.md).
 
-1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com).
+1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego.
 
@@ -51,7 +51,7 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykony
 
 7. Po zakończeniu działania instalatora otwórz folder **Aplikacje** lub **Launchpad**, a następnie otwórz aplikację **Portal firmy**.
 
-8. Komputer Mac wyświetli komunikat **„CompanyPortal” to aplikacja pobrana z Internetu. Czy na pewno chcesz ją otworzyć?** Kliknij pozycję **Otwórz**.
+8. Komputer Mac wyświetli komunikat **„CompanyPortal” to aplikacja pobrana z Internetu. Czy na pewno chcesz ją otworzyć?** Kliknij przycisk **Otwórz**.
 
   > [!NOTE]
   > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Jeśli Twój komputer odmawia otwarcia aplikacji Portal firmy, spróbuj [wyłączyć funkcję Gatekeeper](https://support.apple.com/HT202491) i wtedy otworzyć aplikację.
@@ -62,4 +62,4 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykony
 
 11. Komputer Mac zacznie rejestrację w systemie zarządzania. Może wtedy zostać wyświetlony monit o podanie informacji logowania na komputerze. Rejestracja może zająć kilka minut. W tym czasie można robić inne rzeczy na komputerze. Gdy konfigurowanie dostępu do zasobów firmy zostanie zakończone, pojawi się odpowiedni komunikat.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: cadc8ac211f60fd767dbfa7d412b089c3c1c94ea
-ms.sourcegitcommit: f254f49fc65fc75a779ff721e2202c53d03cb981
+ms.openlocfilehash: 98bc92eeba4c92a38aacf05f0eab1ea742dff031
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
+Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
 
 Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych.
 
@@ -33,7 +33,7 @@ Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócen
 
 Aby zresetować urządzenie:
 
-1.  W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
+1.  W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
 
 2. Na stronie __Moje urządzenia__ wybierz urządzenie, którego nazwę chcesz zmienić.
 
@@ -47,4 +47,4 @@ Aby zresetować urządzenie:
 
 Twoje urządzenie zostało zresetowane.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

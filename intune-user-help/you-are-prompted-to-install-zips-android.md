@@ -14,11 +14,11 @@ ms.assetid: eb1884b2-d760-4a14-800b-378a33774a41
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 395afad276db8502896f6d903c8d97d1578ca5dd
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 5d151953ef2ccb5ae46c603be6073695f134f308
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalacja aplikacji Zimperium zIPS na urządzeniu z systemem Android
 
@@ -56,4 +56,4 @@ Jeśli masz problemy z instalacją, spróbuj wykonać kroki związane z rozwiąz
 
 Czasami instalacja może zakończyć się niepowodzeniem w związku z problemami technicznymi wykraczającymi poza Twoją kontrolę. W takim przypadku spróbuj zainstalować aplikację Zimperium zIPS [ręcznie, pobierając ją ze Sklepu Play](https://play.google.com/store/apps/details?id=com.zimperium.zips).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

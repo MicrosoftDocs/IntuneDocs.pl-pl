@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 115f32989cfbb991e097404c5297e7997f28f796
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: f46d9cc4fad54415aeea8deaf1b8daa0c274c1dc
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-legacy-macos-device-in-intune"></a>Rejestrowanie starszego urządzenia z systemem macOS w usłudze Intune
 
@@ -28,7 +28,7 @@ Te instrukcje będą działać w przypadku urządzeń z systemem macOS w wersji 
 
 Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci wykonywanie pracy. Jeśli używasz urządzenia z systemem macOS w miejscu pracy, musisz zainstalować __profil zarządzania__. Jest to po prostu plik skonfigurowany przez dział pomocy technicznej Twojej firmy umożliwiający załadowanie ustawień i informacji dotyczących dostępu na komputerze Mac. Chcesz wiedzieć więcej? Sprawdź, [co dzieje się w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 
-1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com).
+1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
 2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego.
 
   [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
@@ -66,4 +66,4 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji umożliwia Ci w
 
 Niektóre profile mogą informować, że są **Niezweryfikowane**; o ile pochodzą one z Twojej firmy, jest to normalne.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

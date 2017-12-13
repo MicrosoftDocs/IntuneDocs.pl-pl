@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 446b395aab311d13ebc7ac6b8c3ed7c740070729
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: d2a7cd5cc4c201a73570f73892563463cb0bdcc7
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy
 
@@ -48,4 +48,4 @@ Upewnij się, że ochrona w czasie rzeczywistym jest włączona, przechodząc do
 
 Upewnij się, że definicje antywirusowe są aktualne, przechodząc do menu **Start** i wyszukując pozycję **Windows Defender Security Center**. Wybierz pozycje **Aktualizacje ochrony** i **Sprawdź aktualizacje**, aby upewnić się, że urządzenie ma bieżącą ochronę przed wirusami. Jeśli ta opcja nie jest wyświetlana, postępuj zgodnie z instrukcjami w sekcji [Włączanie ochrony w czasie rzeczywistym](turn-on-defender-windows.md#turn-on-real-time-protection)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

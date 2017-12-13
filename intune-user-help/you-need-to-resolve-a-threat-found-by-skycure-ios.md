@@ -14,11 +14,11 @@ ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: a80ab4b22aa7ace1b6df53722c5fdfaf44134e0d
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: ef3b94251b324ed95d127cde5a58517747b3ea0b
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Usuwanie zagrożenia wykrytego przez aplikację Symantec Endpoint Protection Mobile
 
@@ -34,7 +34,7 @@ W przypadku próby uzyskania dostępu do firmowej poczty e-mail lub plików w sy
 
 ![Komunikat o błędzie aplikacji Skycure z linkiem do witryny internetowej Portal firmy](./media/mtd-go-to-device-management-portal-android.png)
 
-Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
+Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
 
 ## <a name="example-of-an-app-that-symantec-endpoint-protection-mobile-sees-as-a-threat"></a>Przykład aplikacji, którą aplikacja Symantec Endpoint Protection Mobile widzi jako zagrożenie
 
@@ -44,5 +44,5 @@ Naciśnij nazwę aplikacji wyświetlaną u góry ekranu, a następnie wykonaj in
 
 Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
 

@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: aff747c4888c0ad9a222735b8eadf40878cc294b
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 2aa8ee8803e3001abeb8da92fb61c93c81ffb135
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Wysyłanie błędów do działu pomocy technicznej Twojej firmy w przypadku problemów z urządzeniem z systemem iOS
 
@@ -32,4 +32,4 @@ Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z a
 
 -   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie po wyświetleniu alertu diagnostyki dotknij pozycję **Wyślij raport diagnostyczny**. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

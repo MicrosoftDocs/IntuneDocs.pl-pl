@@ -15,15 +15,15 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 976b58fcc7835b0992c5d53934642bd4fedb5b50
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: dd211b9dd8b09f2e3eab570eab48664fab55e3df
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android
 
-Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com).
+Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 - [Sprawdzanie zgodności na urządzeniu z systemem Android](check-compliance-on-your-device-android.md)
 - [Używanie pełnego rejestrowania ułatwiającego działowi pomocy technicznej Twojej firmy rozwiązywanie problemów z urządzeniami](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)

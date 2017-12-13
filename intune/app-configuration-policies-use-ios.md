@@ -3,8 +3,8 @@ title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z sy
 titlesuffix: Azure portal
 description: "Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji dla systemu iOS po jej uruchomieniu."
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2226477d40f2bb70dd047ed58e8789fd9bee4ecb
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: a39b2d120a804d32b93b7a240af246327514b1b7
+ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -51,7 +51,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 6. Dla elementu **Platforma** wybierz pozycję **iOS**.
 7.  Wybierz pozycję **Skojarzona aplikacja**. Następnie w bloku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację.
 8.  W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
-9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z poniższych opcji:
+9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących opcji:
     - **[Korzystanie z projektanta konfiguracji](#Use-the-configuration-designer)**
     - **[Wprowadzanie danych XML](#enter-xml-data)**
 10. Wybierz **OK**, a następnie wybierz pozycję **Dodaj**.

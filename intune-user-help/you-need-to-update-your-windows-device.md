@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5c2c27f48eec08724b1ced23d564e3df6ab18303
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 7e27e1bbe9b48b24e02b9b77a93ddc10f7a1d9b0
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Należy zaktualizować urządzenie z systemem Windows
 
@@ -35,4 +35,4 @@ Komputer z systemem Windows: wyszukaj frazę **system operacyjny** i postępuj z
 
 W przypadku systemów Windows 10 i Windows 8.1 wpisz __Wersja systemu Windows__ na __pasku wyszukiwania__. W obszarze __Czy mogę pomóc?__ wybierz pozycję __Wersja systemu Windows__. Zostanie wyświetlony numer wersji. Będzie on wyglądać podobnie do następującego numeru: __10.0.14393.447__.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
