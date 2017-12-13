@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 52070573560b798044c929b0fa9476cf1f7bbf89
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d6bd59800b13539558fbf56afab9fe5293f3e5bd
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Urządzenie z systemem Android nie ma certyfikatu, który zazwyczaj jest zainstalowany na telefonie
 
@@ -42,9 +42,9 @@ Można rozwiązać ten problem, uzyskując wymagane certyfikaty ze [strony certy
 
 5. Zamknij przeglądarkę i aplikację Portal firmy.
 
-6. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli korzystanie z aplikacji Portal firmy nadal nie jest możliwe, skontaktuj się z działem pomocy technicznej Twojej firmy, korzystając z informacji podanych w [witrynie internetowej aplikacji Portal firmy](https://portal.manage.microsoft.com) w celu uzyskania szczegółowych instrukcji.
+6. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli korzystanie z aplikacji Portal firmy nadal nie jest możliwe, skontaktuj się z działem pomocy technicznej Twojej firmy, korzystając z informacji podanych w [witrynie internetowej aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) w celu uzyskania szczegółowych instrukcji.
 
 >[!NOTE]
 > Jeśli zainstalowanie certyfikatu nie rozwiąże problemu i jeśli zostanie wyświetlony inny komunikat informujący o „braku certyfikatu”, niezbędne będzie wykonanie dodatkowych czynności w celu [zainstalowania brakującego certyfikatu](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

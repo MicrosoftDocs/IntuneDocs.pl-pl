@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4fad2b78b8224fc1a90ad8c81d350917b17e3d57
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 1b0d1df8e34a6a942a3fbb16baba4311fc1083d4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-need-to-enable-code-integrity"></a>Należy włączyć integralność kodu
 
@@ -33,4 +33,4 @@ Integralność kodu jest automatycznie włączona, gdy system aktywnie korzysta 
 
 Jeśli czujesz się na tyle pewnie, aby kontynuować, przeczytaj sekcję „Aby ponownie włączyć funkcję Bezpieczny rozruch” na stronie [Wyłączanie funkcji Bezpieczny rozruch](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) i spróbuj samodzielnie włączyć funkcję Bezpieczny rozruch.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

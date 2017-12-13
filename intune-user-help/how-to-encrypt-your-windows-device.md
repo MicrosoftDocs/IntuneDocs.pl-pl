@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 41f79bcccd4868f5d8a73926cd47d73c904c8df5
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: a5c747dd4691e20c680547d4fcd74cc8288eb50d
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-encrypt-your-windows-device"></a>Jak zaszyfrować urządzenie z systemem Windows
 
@@ -32,4 +32,4 @@ Jeśli masz urządzenie klasyczne, postępuj zgodnie z instrukcjami poniżej, ab
 
 2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z wyświetlanymi instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
