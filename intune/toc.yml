@@ -552,6 +552,8 @@
   items:
     - name: Pomaganie użytkownikom w rozwiązywaniu problemów
       href: help-desk-operators.md
+    - name: Dzienniki inspekcji dla działań usługi Intune
+      href: monitor-audit-logs.md
     - name: Korzystanie z magazynu danych usługi Intune
       href: reports-nav-create-intune-reports.md
       items:
