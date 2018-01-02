@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 68d93fe98b89f27c947e07d79eca9a0e02dea582
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: 1c78c41b9883cac41b4506c1c02790008115e210
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
@@ -69,6 +69,17 @@ Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządze
    - **Zarządzaj wszystkimi urządzeniami jako urządzeniami z systemem Android** — wszystkie urządzenia z systemem Android, w tym urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako konwencjonalne urządzenia z systemem Android.
    - **Zarządzaj obsługiwanymi urządzeniami jako urządzeniami z programem Android for Work** — wszystkie urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako urządzenia z programem Android for Work. Każde urządzenie z systemem Android, które nie obsługuje programu Android for Work, zostanie zarejestrowane jako konwencjonalne urządzenie z systemem Android.
    - **Zarządzaj obsługiwanymi urządzeniami jako urządzeniami z programem Android for Work tylko dla użytkowników w tych grupach użytkowników** — umożliwia zastosowanie zarządzania programem Android for Work do ograniczonego zestawu użytkowników. Tylko urządzenia z programem Android for Work rejestrowane przez członków wybranych grup zostaną zarejestrowane jako urządzenia z programem Android for Work. Wszystkie inne zostaną zarejestrowane jako urządzenia z systemem Android. Jest to przydatne podczas etapów pilotażowych programu Android for Work.
+
+## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Zatwierdzanie aplikacji Portal firmy w zarządzanym sklepie Google Play
+Należy najpierw zatwierdzić aplikację Portal firmy dla systemu Android w zarządzanym sklepie Google Play, aby zapewnić, że będzie ona otrzymywać automatyczne aktualizacje aplikacji. Jeśli ta aplikacja nie zostanie zatwierdzona, aplikacja Portal firmy po pewnym czasie stanie się nieaktualna i może nie otrzymywać ważnych poprawek błędów i nowych funkcji wydawanych przez firmę Microsoft.
+
+Wykonaj następujące kroki, aby zatwierdzić aplikację Portal firmy usługi Intune:
+
+1.  Pobierz aplikację Portal firmy z [zarządzanego sklepu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
+2.  Zaloguj się do zarządzanego sklepu Google Play za pomocą tego samego konta, którego użyto do skonfigurowania powiązania na potrzeby programu Android for Work.
+3.  Kliknij pozycję **Zatwierdź**.  Spowoduje to otwarcie nowego okna dialogowego.
+4.  Przejrzyj uprawnienia w tym oknie dialogowym, a następnie kliknij przycisk **Zatwierdź**. Jest to konieczne, aby zezwolić na te uprawnienia w celu umożliwienia aplikacji Portal firmy zarządzanie profilem służbowym na urządzeniu.
+5.  Wybierz pozycję **Utrzymuj zatwierdzenie, gdy aplikacja żąda nowych uprawnień**, a następnie kliknij przycisk **Zapisz**.
 
 <!--  ## Next steps for Android for Work
 After configuring the Android for Work binding and settings, you can do the following:

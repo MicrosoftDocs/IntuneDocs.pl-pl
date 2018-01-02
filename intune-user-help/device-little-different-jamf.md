@@ -1,11 +1,11 @@
 ---
-title: "Postępowanie w przypadku nieco innego urządzenia | Microsoft Docs"
+title: "Błędy, które można napotkać, w przypadku używania usługi Jamf Self Service | Microsoft Docs"
 description: "Dowiedz się więcej o urządzeniu z systemem macOS, które obsługuje usługę Intune i jest zarządzane przez oprogramowanie Jamf."
 keywords: Mac OS X, macOS, OS X
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/13/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 14db11738b1ef34a9180515e5f909ff1960bfbb0
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 080bc7c287dcc068ac18a3aec60295e777840368
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Wykonywanie akcji na urządzeniu z systemem macOS zarządzanym przez oprogramowanie Jamf
 
@@ -28,4 +28,8 @@ Firma korzysta z różnych narzędzi, aby zapewnić bezpieczny dostęp do zasob�
 
 Jeśli problemy ze zgodnością występują na urządzeniu z systemem macOS zarządzanym przez oprogramowanie Jamf, kliknij przycisk **Rozwiąż**, aby uruchomić proces **samoobsługi**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com).
+__Co zrobić, jeśli zostanie wyświetlony komunikat „AccountNotOnboarded” lub „Urządzenie zostało już zarejestrowane”__
+
+Jeśli po otwarciu aplikacji Portal firmy zostanie wyświetlony komunikat „AccountNotOnboarded”, należy zamknąć aplikację Portal firmy i przejść do obszaru **Aplikacje** > **Samoobsługa**. Twoja firma będzie posiadać zasady rejestracji urządzeń, które należy zainstalować. Kliknij zasady, aby je zainstalować, a następnie ponownie otwórz aplikację Portal firmy.
+
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 599da7c664c139eac472c8d9ec2e418c01eeaeb4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
@@ -34,7 +34,7 @@ Dział wsparcia technicznego firmy ma dostęp do informacji mających związek z
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także dział pomocy technicznej Twojej firmy może zainstalować aplikację Portal firmy dla Ciebie.
-- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
+- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?
 Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną internetową Portal firmy, jednak większość zadań można wykonać w obu. Oto niektóre dostępne zadania:
@@ -60,8 +60,9 @@ Po dodaniu komputera lub urządzenia do Portalu firmy może zostać zainstalowan
 Aby dowiedzieć się, co dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu, kliknij link odpowiadający typowi używanego urządzenia:
 
 - [Instalowanie aplikacji Portal firmy dla systemu Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [Instalowanie aplikacji Portal firmy dla systemów iOS i macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Instalowanie aplikacji Portal firmy dla systemu Windows](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Instalowanie aplikacji Portal firmy dla systemu iOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Instalowanie aplikacji Portal firmy dla systemu macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+- [Instalowanie aplikacji Portal firmy dla systemu Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jakiego rodzaju komputery i urządzenia można dodać do Portalu firmy?
 -   Urządzenia firmy Apple z systemem iOS (np. iPhone oraz iPad) i macOS (np. MacBook oraz iMac)
@@ -78,7 +79,8 @@ Tak, można usunąć komputer lub urządzenie z Portalu firmy lub zresetować je
 Gdy *usuniesz* komputer lub urządzenie z Portalu firmy, urządzenie zostanie wyrejestrowane z usługi Intune. Po wyrejestrowaniu nie będzie można uzyskać dostępu do Portalu firmy za pomocą tego urządzenia, a niektóre dane firmowe mogą zostać z niego usunięte. Aby zobaczyć, jak usunąć urządzenie z portalu firmy, kliknij jeden z następujących linków:
 
 - [Wyrejestrowywanie urządzenia z systemem Android](unenroll-your-device-from-intune-android.md)
-- [Wyrejestrowywanie urządzenia z systemem iOS lub macOS](unenroll-your-device-from-intune-ios.md)
+- [Wyrejestrowywanie urządzenia z systemem iOS](unenroll-your-device-from-intune-ios.md)
+- [Wyrejestrowywanie urządzenia z systemem macOS](unenroll-your-device-from-intune-macos.md)
 - [Wyrejestrowywanie urządzenia z systemem Windows](unenroll-your-device-from-intune-windows.md)
 
 Po *zresetowaniu* komputera lub urządzenia portal firmy podejmuje próbę przywrócenia domyślnych ustawień fabrycznych komputera lub urządzenia. Zresetowanie urządzenia spowoduje usunięcie wszystkich danych osobistych i firmowych z urządzenia! Jeśli zgubisz urządzenie, możesz zresetować je zdalnie z poziomu witryny sieci Web Portal firmy.
@@ -95,6 +97,7 @@ Firma Microsoft zaleca, aby w pierwszej kolejności spróbować rozwiązać prob
 
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android](troubleshoot-your-device-android.md)
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS](troubleshoot-your-device-ios.md)
+- [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem macOS](troubleshoot-your-device-macos.md)
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Windows](troubleshoot-your-device-windows.md)
 
-Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com).
+Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

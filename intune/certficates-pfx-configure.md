@@ -6,7 +6,7 @@ keywords:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: angrobe
-ms.date: 11/16/2017
+ms.date: 12/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b5fc73bc537eaca67a0e6943701ba25a53972
-ms.sourcegitcommit: 2b35c99ca7d3dbafe2dfe1e0b9de29573db403b9
+ms.openlocfilehash: b72c4899debb0bbb7cb755327606cad1e239c611
+ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune
 
@@ -101,22 +101,20 @@ Na każdym urządzeniu wymagany jest certyfikat głównego lub pośredniego urz�
 
 ![ConnectorDownload][ConnectorDownload]
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Przejdź do opcji **Intune**, **Konfiguracja urządzeń**, **Urząd certyfikacji** i kliknij przycisk **Pobierz łącznik certyfikatów**.
-   * Pobraną zawartość należy zapisać w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana.
-3. Zaloguj się do serwera, na którym zostanie zainstalowany program Łącznik certyfikatów usługi Microsoft Intune.
-4. Uruchom Instalatora i zaakceptuj lokalizację domyślną. Łącznik zostanie zainstalowany w lokalizacji C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+2. W bloku **Intune** wybierz pozycję **Konfiguracja urządzenia**. 
+3. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**. 
+4. Kliknij przycisk **Dodaj**, a następnie wybierz pozycję **Pobierz plik łącznika**. Zapisz pobraną zawartość w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana. 
+5.  Zaloguj się do serwera, na którym zostanie zainstalowany program Łącznik certyfikatów usługi Microsoft Intune.
+6.  Uruchom Instalatora i zaakceptuj lokalizację domyślną. Łącznik zostanie zainstalowany w lokalizacji C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+    1. Na stronie Opcje instalatora wybierz pozycję **Dystrybucja PFX** i kliknij przycisk **Dalej**.
+    2. Kliknij opcję **Zainstaluj** i zaczekaj na ukończenie instalacji.
+    3. Na stronie ukończenia zaznacz pole wyboru o nazwie **Uruchom łącznik usługi Intune**, a następnie kliknij przycisk **Zakończ**.
+7.  W oknie łącznika usługi NDES powinna zostać teraz otwarta karta **Rejestracja**. Aby włączyć połączenia z usługą Intune, kliknij pozycję **Zaloguj**, a następnie podaj nazwę konta z uprawnieniami administracyjnymi.
+8.  Na karcie **Zaawansowane** można pozostawić wybrany przycisk radiowy **Użyj konta SYSTEM na tym komputerze (domyślnie)**.
+9.  Kliknij przycisk **Zastosuj**, a następnie **Zamknij**.
+10. Teraz wróć do witryny Azure Portal. W obszarze **Intune** > **Konfiguracja urządzenia** > **Urząd certyfikacji** po kilku minutach powinien zostać wyświetlony zielony znacznik wyboru oraz słowo **Aktywne** w obszarze **Stan połączenia**. Dzięki temu możesz upewnić się, że serwer łącznika może komunikować się z usługą Intune.
 
-      a. Na stronie Opcje instalatora wybierz pozycję **Dystrybucja PFX** i kliknij przycisk **Dalej**.
-
-   b. Kliknij opcję **Zainstaluj** i zaczekaj na ukończenie instalacji.
-
-   c. Na stronie ukończenia zaznacz pole wyboru o nazwie **Uruchom łącznik usługi Intune** i kliknij przycisk **Zakończ**.
-
-5. W oknie łącznika usługi NDES powinna zostać teraz otwarta karta **Rejestracja**. Aby włączyć połączenia z usługą Intune, należy kliknąć opcję **Zaloguj** i podać nazwę konta z uprawnieniami administracyjnymi.
-6. Na karcie **Zaawansowane** można pozostawić wybrany przycisk radiowy **Użyj konta SYSTEM na tym komputerze (domyślnie)**.
-7. Kliknij przycisk **Zastosuj**, a następnie **Zamknij**.
-8. Teraz wróć do witryny Azure Portal. W obszarze **Intune**, **Konfiguracja urządzeń**, **Urząd certyfikacji** po kilku minutach powinien zostać wyświetlony zielony znacznik wyboru oraz słowo **Aktywne** w obszarze **Stan połączenia**. Dzięki temu możesz upewnić się, że serwer łącznika może komunikować się z usługą Intune.
 
 ## <a name="create-a-device-configuration-profile"></a>Tworzenie profilu konfiguracji urządzenia
 
@@ -169,4 +167,4 @@ Na każdym urządzeniu wymagany jest certyfikat głównego lub pośredniego urz�
 
 [NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Przejdź do usługi Intune w witrynie Azure portal i utwórz nowy profil zaufanego certyfikatu"
 [ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Utwórz profil i przekaż zaufany certyfikat"
-[ConnectorDownload]: ./media/certificates-pfx-configure-connector-download.png "Pobierz łącznik certyfikatów z witryny Azure portal"
+[ConnectorDownload]: ./media/certificates-download-connector.png "Pobierz łącznik certyfikatów z witryny Azure portal"  
