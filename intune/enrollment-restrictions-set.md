@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 376236634ba9579e6496fa252c6a3638197fbcb9
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: bdb89d3426bd2dd040b184c8f7c23397bbed576b
+ms.sourcegitcommit: a99a5104400708b47ecee80075264d541b82874f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -28,7 +28,10 @@ ms.lasthandoff: 12/01/2017
 Jako administrator usługi Intune możesz utworzyć ograniczenia rejestracji i zarządzać nimi. Ograniczenia te definiują liczbę i rodzaje urządzeń, które mogą zarejestrować się do zarządzania przy użyciu usługi Intune. Możesz utworzyć wiele ograniczeń i zastosować je do różnych grup użytkowników. Możesz ustawić [priorytet](#change-enrollment-restriction-priority) dla różnych ograniczeń.
 
 >[!NOTE]
->Ograniczenia rejestrowania nie są funkcjami zabezpieczeń. Urządzenia, na których złamano zabezpieczenia, mogą błędnie podawać swój charakter. Te ograniczenia stanowią optymalną barierę dla niezłośliwych użytkowników. 
+>Ograniczenia rejestrowania nie są funkcjami zabezpieczeń. Urządzenia, na których złamano zabezpieczenia, mogą błędnie podawać swój charakter. Te ograniczenia stanowią optymalną barierę dla niezłośliwych użytkowników.
+
+>[!NOTE]
+>Wspomniane poniżej ograniczenia rejestracji przypisane do grupy i funkcje ustawiania priorytetu są właśnie wdrażane w ramach bazy klientów usługi. Do czasu ukończenia tego procesu możesz nie mieć dostępu do funkcji dotyczących grup i ustawiania priorytetu. 
 
 Konkretne ograniczenia rejestracji, które możesz utworzyć, obejmują poniższe:
 
@@ -60,7 +63,7 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 8. W przypadku ograniczeń dotyczących typu urządzeń kliknij opcję **Platformy** oraz **Konfiguracje platformy**, aby zezwalać na różne platformy i wersje lub je blokować.
 9. Kliknij pozycję **Przypisania** > **+ Wybierz grupy**.
 10. W pozycji **Wybierz grupy** wybierz co najmniej jedną grupę, a następnie kliknij przycisk **Wybierz**. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu.
-11. Kliknij polecenie **Zapisz**.
+11. Kliknij przycisk**Save (Zapisz)**.
 12. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
 
 ## <a name="set-device-type-restrictions"></a>Ustawianie ograniczeń typu urządzeń
@@ -72,7 +75,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. W obszarze **Ograniczenia typu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Pod nazwą ograniczenia (w przypadku ograniczenia domyślnego **Wszyscy użytkownicy**) wybierz opcję **Platformy**. Wybierz pozycję **Zezwalaj** lub **Blokuj** dla każdej platformy na liście.
-6. Kliknij polecenie **Zapisz**.
+6. Kliknij przycisk**Save (Zapisz)**.
 7. Pod nazwą ograniczenia (w przypadku ograniczenia domyślnego **Wszyscy użytkownicy**) wybierz opcję **Konfiguracje platformy**, a następnie wybierz minimalne i maksymalne **Wersje** dla platform na liście. Obsługiwane wersje obejmują:
   - systemy Android i Android for Work obsługują wersję major.minor.rev.build.
   - System iOS obsługuje wersję major.minor.rev.
@@ -81,7 +84,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 8. Określ opcję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
 
     ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślnymi konfiguracjami platformy urządzeń i widocznymi skonfigurowanymi ustawieniami urządzeń będących własnością użytkownika.](media/device-restrictions-platform-configurations.png)
-9. Kliknij polecenie **Zapisz**.
+9. Kliknij przycisk**Save (Zapisz)**.
 
 >[!NOTE]
 >- Jeśli zablokujesz rejestrację prywatnych urządzeń z systemem Android, urządzenia z programem Android for Work nadal będą mogły być rejestrowane.
@@ -98,7 +101,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących limitu liczby urządzeń, w
 4. W obszarze **Ograniczenia limitu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Wybierz opcję **Limit urządzeń**, a następnie na liście rozwijanej wybierz maksymalną liczbę urządzeń, które może zarejestrować użytkownik.
     ![Zrzut ekranu przedstawiający blok ograniczeń dotyczących limitu liczby urządzeń z ograniczeniami limitu liczby urządzeń.](./media/device-restrictions-limit.png)
-6. Kliknij polecenie **Zapisz**.
+6. Kliknij przycisk**Save (Zapisz)**.
 
 ## <a name="change-enrollment-restriction-priority"></a>Zmiana priorytetu ograniczenia rejestracji
 

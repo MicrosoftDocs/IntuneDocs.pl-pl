@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,13 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e34b9cd030244db4bdde78eedbb0f874f49fa1e1
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: ddcd4639c1f5a0949be46025e16e44d0b6ac6616
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="map-device-groups"></a>Mapowanie grup urządzeń
-
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -54,7 +53,7 @@ Nazwa kategorii urządzeń będzie używana podczas tworzenia grup zabezpieczeń
 ### <a name="step-2---create-azure-active-directory-security-groups"></a>Krok 2. Utworzenie grup zabezpieczeń usługi Azure Active Directory
 W tym kroku utworzysz grupy dynamiczne w Portalu Azure na podstawie kategorii urządzeń i ich nazw.
 
-Aby kontynuować, zobacz [Tworzenie zaawansowanych reguł przy użyciu atrybutów](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) w dokumentacji usługi Azure Active Directory. 
+Aby kontynuować, zobacz [Tworzenie zaawansowanych reguł przy użyciu atrybutów](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) w dokumentacji usługi Azure Active Directory.
 
 Skorzystaj z informacji podanych w tej sekcji, aby utworzyć grupę urządzeń za pomocą zaawansowanej reguły, używając atrybutu **deviceCategory**. Przykład: (**device.deviceCategory -eq** "*<the device category name you got from the Azure portal>*")
 
@@ -84,7 +83,7 @@ Jeśli kolumna **Kategoria** nie jest wyświetlana, kliknij przycisk **Kolumny**
 
 Gdy użytkownik końcowy urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
 
-Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy końcowi muszą po zarejestrowaniu urządzenia skorzystać z witryny internetowej Portal firmy (portal.manage.microsoft.com). Na urządzeniu z systemem Windows uzyskaj dostęp do tej witryny internetowej i wybierz kolejno pozycje **Menu** > **Moje urządzenia**. Wybierz zarejestrowane urządzenie wymienione na stronie, a następnie wybierz kategorię. 
+Bez względu na platformę użytkownicy końcowi mogą po zarejestrowaniu urządzenia skorzystać z witryny internetowej portal.manage.microsoft.com. Użytkownik powinien uzyskać dostęp do witryny internetowej Portal firmy i przejść do obszaru **Moje urządzenia**. Możliwe jest wybranie zarejestrowanego urządzenia wymienionego na stronie, a następnie wybranie kategorii.
 
 Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie zostało zarejestrowane przed skonfigurowaniem kategorii, użytkownik końcowy zobaczy powiadomienie dotyczące urządzenia w witrynie internetowej Portal firmy i zostanie poproszony o wybranie kategorii przy następnej próbie uzyskania dostępu do aplikacji Portal firmy dla systemu iOS lub Android.
 
@@ -92,5 +91,3 @@ Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowied
 - Możesz edytować kategorię urządzenia w witrynie Azure Portal, jeśli jednak to zrobisz, musisz ręcznie zaktualizować wszystkie grupy zabezpieczeń usługi Azure Active Directory odwołujące się do tej kategorii.
 
 - Jeśli usuniesz kategorię, dla wszelkich urządzeń, które zostały do niej przypisane, zostanie wyświetlona nazwa kategorii **Nieprzypisane**.
-
-

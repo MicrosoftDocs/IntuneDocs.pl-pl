@@ -198,7 +198,7 @@
           href: device-logout-user.md
         - name: Usuń użytkownika
           href: device-remove-user.md
-        - name: Zdalne sterowanie dla systemu Android
+        - name: Zdalne sterowanie urządzeniami przenośnymi
           href: device-profile-android-teamviewer.md
         - name: Resetowanie numeru PIN w systemie Windows 10
           href: device-windows-pin-reset.md
@@ -236,6 +236,8 @@
               href: apps-add-android-for-work.md
             - name: Aplikacje pakietu Office 365 dla systemu Windows 10
               href: apps-add-office365.md
+            - name: Aplikacje pakietu Office 365 dla systemu macOS
+              href: apps-add-office365-macos.md
         - name: Przypisywanie aplikacji
           href: apps-deploy.md
         - name: Monitorowanie aplikacji
@@ -417,6 +419,10 @@
           href: app-modern-authentication-block.md
         - name: Monitorowanie zgodności z dostępem warunkowym
           href: conditional-access-exchange-monitor.md
+        - name: Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
+          href: conditional-access-integrate-jamf.md
+        - name: Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
+          href: conditional-access-assign-jamf.md
     - name: Ochrona danych aplikacji i urządzeń
       items:
         - name: Korzystanie z zasad ochrony aplikacji

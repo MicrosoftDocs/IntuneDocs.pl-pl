@@ -3,10 +3,10 @@ title: "Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomo
 titlesuffix: Azure portal
 description: "Informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów SCEP usługi Intune."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 11/29/2017
+ms.date: 12/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 03c78fde793809713e630f371a02c48393b68810
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 36c495767d41c83c1393d837a808961ed9868bed
+ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -164,7 +164,7 @@ To zadanie obejmuje:
 
 
 
-   1.  Na serwerze, na którym będzie uruchomiona usługa NDES, należy zalogować się jako **Administrator przedsiębiorstwa**, a następnie użyć [kreatora Dodaj role i funkcje](https://technet.microsoft.com/library/hh831809.aspx) w celu instalacji usługi NDES:
+   1.  Na serwerze, na którym uruchomiona jest usługa NDES, zaloguj się jako **Administrator przedsiębiorstwa**, a następnie użyj [Kreatora dodawanie ról i funkcji](https://technet.microsoft.com/library/hh831809.aspx) w celu instalacji usługi NDES:
 
     1.  W kreatorze wybierz pozycję **Usługi certyfikatów Active Directory**, aby uzyskać dostęp do usług ról ADCS. Zaznacz pozycję **Usługa rejestracji urządzeń sieciowych**, wyczyść pole wyboru **Urząd certyfikacji**, a następnie zakończ pracę kreatora.
 
@@ -239,7 +239,7 @@ To zadanie obejmuje:
     |HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters|MaxRequestBytes|DWORD|65534 (dziesiętnie)|
 
 
-4. W Menedżerze usług IIS wybierz pozycję **Domyślna witryna sieci Web** -> **Filtrowanie żądań** -> **Edytuj ustawienia funkcji** i zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534*, tak jak pokazano.
+4. W Menedżerze usług IIS wybierz pozycję **Domyślna witryna sieci Web** -> **Filtrowanie żądań** -> **Edytuj ustawienia funkcji**, a następnie zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534* w przedstawiony sposób.
 
     ![Maksymalna długość adresu URL i zapytania w programie IIS](.\media\SCEP_IIS_max_URL.png)
 
@@ -255,7 +255,7 @@ To zadanie obejmuje:
 1.  Na serwerze usługi NDES zażądaj certyfikatu **uwierzytelniania serwera** od wewnętrznego lub publicznego urzędu certyfikacji i zainstaluj ten certyfikat. Następnie powiąż ten certyfikat SSL w usługach IIS.
 
     > [!TIP]
-    > Po powiązaniu certyfikatu SSL w usługach IIS zainstaluj również certyfikat uwierzytelniania klienta. Ten certyfikat może zostać wystawiony przez dowolny urząd certyfikacji traktowany jako zaufany przez serwer usługi NDES. Chociaż nie jest to zalecane, możesz użyć tego samego certyfikatu do uwierzytelniania serwera i klienta, o ile dany certyfikat ma obie wartości ulepszonego użycia klucza (EKU). Poniższe kroki zawierają informacje na temat tych certyfikatów uwierzytelniania.
+    > Po powiązaniu certyfikatu SSL w usługach IIS zainstaluj certyfikat uwierzytelniania klienta. Ten certyfikat może zostać wystawiony przez dowolny urząd certyfikacji traktowany jako zaufany przez serwer usługi NDES. Chociaż nie jest to zalecane, możesz użyć tego samego certyfikatu do uwierzytelniania serwera i klienta, o ile dany certyfikat ma obie wartości ulepszonego użycia klucza (EKU). Poniższe kroki zawierają informacje na temat tych certyfikatów uwierzytelniania.
 
     1.  Po uzyskaniu certyfikatu uwierzytelniania serwera otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie kliknij pozycję **Powiązania** w okienku **Akcje** .
 
@@ -300,29 +300,16 @@ To zadanie obejmuje:
 To zadanie obejmuje:
 
 - Włączanie obsługi usługi NDES w usłudze Intune.
-
-- Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze usługi NDES.
-
-   > [!NOTE]
-   > Aby zapewnić wysoką dostępność, możesz zainstalować wiele wystąpień łącznika certyfikatów.
-
-<!--1528104 we need to flesh out the HA recommendation in the note above -->
-
-##### <a name="to-enable-support-for-the-certificate-connector"></a>Aby włączyć obsługę łącznika certyfikatów
-
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
-4. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
-5.  Kliknij pozycję **Włącz łącznik certyfikatów**.
+- Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze w danym środowisku. Aby zapewnić wysoką dostępność, możesz zainstalować wiele wystąpień łącznika certyfikatów na różnych serwerach.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
-
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
+![ConnectorDownload](./media/certificates-download-connector.png)   
+ 
+1. Zaloguj się do portalu Azure Portal. 
+2. Wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+3. W bloku **Intune** wybierz pozycję **Konfiguracja urządzenia**.
 4. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
-5. Wybierz pozycję **Pobierz łącznik certyfikatów**.
+5. Kliknij przycisk **Dodaj**, a następnie wybierz pozycję **Pobierz plik łącznika**. Zapisz pobraną zawartość w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana. 
 6.  Po zakończeniu pobierania uruchom pobranego instalatora (**ndesconnectorssetup.exe**) na serwerze z systemem Windows Server 2012 R2. Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. (Usługa sieci Web CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.)
 
     > [!NOTE]
@@ -392,7 +379,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
     - **Rozmiar klucza (bity)** —wybierz liczbę bitów zawartych w kluczu. 
     - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) — wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia. 
     - **Certyfikat główny** — wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. 
-    - **Rozszerzone użycie klucza** — kliknij pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
+    - **Rozszerzone użycie klucza** — wybierz pozycję **Dodaj**, aby dodać wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami. 
     - **Ustawienia rejestracji**
         - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
         - **Adresy URL serwerów SCEP** — określ co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. 

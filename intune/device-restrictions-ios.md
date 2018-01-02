@@ -3,8 +3,8 @@ title: "Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Intune"
 titleSuffix: Azure portal
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem iOS."
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 11/03/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
-ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
+ms.openlocfilehash: b871726c887916662986008010e0728811f2ba98
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -41,7 +41,7 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 - **Modyfikacja ustawień powiadamiania (tylko nadzorowany)** — umożliwia użytkownikowi zmianę ustawień powiadamiania na urządzeniu.
 - **Modyfikacja tapety (tylko nadzorowany)** — umożliwia użytkownikowi zmianę tapety urządzenia.
 - **Modyfikacja ustawień zaufania dla aplikacji firmy (tylko nadzorowany)** — umożliwia użytkownikowi wybranie zaufania do aplikacji, które nie zostały pobrane ze sklepu z aplikacjami.
-- **Zmiany profilu konfiguracji** — umożliwia użytkownikowi instalowanie profilów konfiguracji.
+- **Zmiany profilu konfiguracji (tylko nadzorowany)** — umożliwia użytkownikowi instalowanie profilów konfiguracji.
 - **Blokada aktywacji (tylko nadzorowany)** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
 
 ## <a name="configurations-requiring-supervision"></a>Konfiguracje wymagające nadzoru

@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 791d93326ed1af173606d28639e92647ed7c1312
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -36,7 +36,7 @@ Od momentu udostępnienia nowej witryny Azure Portal usługa **Azure Active Dire
 
 - **Administrator globalny:** użytkownicy posiadający tę rolę mają dostęp do wszystkich funkcji administracyjnych w usłudze Azure AD oraz usług, które federują do usługi Azure AD, np. Exchange Online, SharePoint Online oraz Skype dla firm Online. Osoba, która zarejestruje się dla dzierżawcy usługi Azure AD staje się administratorem globalnym. Tylko administratorzy globalni mogą przypisywać pozostałe role administratorów usługi Azure AD. Dana organizacja może mieć więcej niż jednego administratora globalnego. Administratorzy globalni mogą resetować hasła dla wszystkich użytkowników oraz wszystkich pozostałych administratorów.
 
-- **Administrator usługi Intune:** użytkownicy posiadający tę rolę mają globalne uprawnienia w ramach usługi Intune, gdy usługa ta jest dostępna. Ponadto ta rola zapewnia możliwość zarządzania użytkownikami, urządzeniami oraz tworzenia grup i zarządzania nimi.
+- **Administrator usługi Intune:** użytkownicy posiadający tę rolę mają globalne uprawnienia w ramach usługi Intune, gdy usługa ta jest dostępna. Ponadto oprócz zastępowanych ograniczeń platformy Azure ta rola zapewnia możliwość zarządzania użytkownikami, urządzeniami oraz tworzenia grup usługi Intune i zarządzania nimi.
 
 - **Administrator dostępu warunkowego:** użytkownicy posiadający tę rolę mają uprawnienia tylko do wyświetlania, tworzenia, modyfikowania i usuwania zasad dostępu warunkowego.
 
