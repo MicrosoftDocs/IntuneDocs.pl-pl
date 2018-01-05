@@ -27,12 +27,14 @@
 ### [Rozwiązywanie typowych problemów z systemem Android](troubleshoot-your-device-android.md)
 #### [Sprawdzanie zgodności urządzeń](check-compliance-on-your-device-android.md)
 #### [Synchronizowanie wiadomości e-mail w programie Outlook w trybie oszczędzania baterii](power-saving-mode-android.md)
+#### [Fixing common issues with Samsung Knox (Rozwiązywanie typowych problemów z systemem Samsung Knox)](samsung-knox-errors-android.md)
 
 #### Korzystanie z dzienników w celu rozwiązywania problemów
 ##### [Włączanie pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Wysyłanie dzienników pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Wysyłanie dzienników przy użyciu kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
 ##### [Przesyłanie błędów rejestracji](send-enrollment-errors-to-your-it-admin-android.md)
+##### [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-android.md)
 
 ### Kwestie dotyczące systemu operacyjnego
 #### [Aktualizowanie urządzenia](you-need-to-update-your-android-device.md)
@@ -74,6 +76,7 @@
 #### [ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 #### [Wysyłanie błędów do swojej firmy](send-errors-to-your-it-admin-ios.md)
 #### [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-ios.md)
+#### [Znaleziono istniejące konto firmowej poczty e-mail](existing-company-email-account-found.md)
 #### [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Wystąpił błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identyfikowanie urządzenia](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
@@ -109,13 +112,13 @@
 #### [Identyfikowanie urządzenia](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 
 ## [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
-### [Rejestrowanie urządzeń z systemem Windows 10](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Rejestrowanie innych wersji systemu Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-
+### [Co się dzieje po zarejestrowaniu urządzenia z systemem Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
+#### [What happens when you enroll other versions of Windows? (Co się dzieje po zarejestrowaniu innych wersji systemu Windows?)](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Rejestrowanie urządzenia z systemem Windows](enroll-your-device-in-intune-windows.md)
-### [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+#### [Enroll your Windows 10 device (Rejestrowanie urządzenia z systemem Windows 10)](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Enroll your Windows 8.1 or Windows RT 8.1 device (Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1)](enroll-your-w81-or-rt81-windows.md)
+#### [Enroll your Windows Phone 8.1 device (Rejestrowanie urządzenia z systemem Windows Phone 8.1)](enroll-your-wp81-windows.md)
 ### [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
-
 ### [Szyfrowanie urządzenia](encrypt-your-device-windows.md)
 ### [Ustawianie lub zmienianie hasła](set-or-change-your-password-windows.md)
 ### [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-windows.md)
