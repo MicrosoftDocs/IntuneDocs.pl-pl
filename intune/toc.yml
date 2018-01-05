@@ -301,7 +301,7 @@
               href: device-restrictions-macos.md
             - name: Windows 8.1
               href: device-restrictions-windows-8-1.md
-            - name: "Windows\_Phone\_8.1"
+            - name: "Windows\_Phone\_8,1"
               href: device-restrictions-windows-phone-8-1.md
             - name: Windows 10
               href: device-restrictions-windows-10.md
@@ -316,7 +316,7 @@
               href: email-settings-android.md
             - name: iOS
               href: email-settings-ios.md
-            - name: "Windows\_Phone\_8.1"
+            - name: "Windows\_Phone\_8,1"
               href: email-settings-windows-phone-8-1.md
             - name: Windows 10
               href: email-settings-windows-10.md
@@ -333,7 +333,7 @@
               href: vpn-settings-macos.md
             - name: Windows 8.1
               href: vpn-settings-windows-8-1.md
-            - name: "Windows\_Phone\_8.1"
+            - name: "Windows\_Phone\_8,1"
               href: vpn-settings-windows-phone-8-1.md
             - name: Windows 10
               href: vpn-settings-windows-10.md
@@ -527,7 +527,7 @@
             - name: Zapora systemu Windows
               href: /intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune
               maintainContext: true
-            - name: Program Endpoint Protection
+            - name: Ochrona punktu końcowego
               href: /intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune
               maintainContext: true
         - name: Dodawanie aplikacji dla komputerów klienckich usługi Intune
@@ -581,13 +581,13 @@
           items:
             - name: Profil sieci VPN dla aplikacji
               href: android-pulse-secure-per-app-vpn.md
-            - name: Zezwalanie na aplikacje dla systemu Samsung KNOX Standard lub blokowanie ich
+            - name: Zezwalanie na aplikacje dla systemu Samsung Knox Standard lub blokowanie ich
               href: samsung-knox-apps-allow-block.md
         - name: iOS
           href: custom-settings-ios.md
         - name: macOS
           href: custom-settings-macos.md
-        - name: "Windows\_Phone\_8.1"
+        - name: "Windows\_Phone\_8,1"
           href: custom-settings-windows-phone-8-1.md
         - name: Windows 10
           href: custom-settings-windows-10.md
