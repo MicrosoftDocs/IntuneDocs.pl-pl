@@ -3,8 +3,8 @@ title: "Kontrola RBAC przy użyciu usługi Intune"
 titleSuffix: Azure portal
 description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak kontrola dostępu oparta na rolach pozwala określić, kto może wykonywać akcje i wprowadzać zmiany."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 791d93326ed1af173606d28639e92647ed7c1312
-ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
+ms.openlocfilehash: e33ee50ea7973a2ea2cf71c06255d99e1bc48f45
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -128,6 +128,6 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 [Użyj roli operatora pomocy technicznej usługi Intune w portalu do rozwiązywania problemów](help-desk-operators.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przypisz role przy użyciu usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)

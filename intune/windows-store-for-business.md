@@ -3,8 +3,8 @@ title: "Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm"
 titlesuffix: Azure portal
 description: "Informacje dotyczące synchronizacji aplikacji ze Sklepu Microsoft dla Firm w usłudze Intune, a następnie ich przypisywania i śledzenia."
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 11/20/2017
 ms.topic: article
@@ -15,18 +15,18 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ecb5a310e8b869deb493bc5554029d641ba419c3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 0ca1ab9ca0e6bd734fa756cd32e64bde7ff4cb40
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-[Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal. Na przykład:
+[Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal. Przykład:
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
 * Zsynchronizowane aplikacje są wyświetlane w konsoli administracyjnej usługi Intune. Można je przypisać w taki sam sposób, jak wszystkie inne aplikacje.
 * Można śledzić liczbę dostępnych i używanych licencji w konsoli administracyjnej usługi Intune.

@@ -14,27 +14,27 @@ ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 4b25e1c40473ac3c37c9122386611a1a23fb62cb
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 703150417e1bec5923f46259f53194b33223add5
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Należy zaktualizować system operacyjny urządzenia z systemem Android
 
 Wyświetlenie komunikatu informującego, że „minimalny poziom poprawki zabezpieczeń systemu Android nie został skonfigurowany”, oznacza, że konieczne jest zainstalowanie aktualizacji w celu zagwarantowania, że urządzenie pozostanie bezpieczne. _Poprawka_ stanowi element procesu konserwacji i jest udostępniana w celu umożliwienia bezproblemowego działania oprogramowania oraz zapewnienia jego aktualności. Dział pomocy technicznej Twojej firmy wymaga zainstalowania tej poprawki, ponieważ stanowi ona gwarancję, że dane firmowe na urządzeniu są chronione w najlepszy możliwy sposób. Lokalizacja wymaganej poprawki zabezpieczeń może się różnić w zależności od tego, czy masz określony typ urządzenia firmy Samsung.
 
-Jeśli masz urządzenie firmy Samsung, przejdź do menu **Ustawienia** > **Informacje o telefonie** i sprawdź, czy na ekranie telefonu w jakimkolwiek kontekście widnieje słowo „KNOX”. Jeśli tak, postępuj zgodnie z poniższymi instrukcjami dotyczącymi rozwiązania Samsung KNOX.
+Jeśli masz urządzenie firmy Samsung, przejdź do menu **Ustawienia** > **Informacje o telefonie** i sprawdź, czy na ekranie telefonu w jakimkolwiek kontekście widnieje słowo „Knox”. Jeśli tak, postępuj zgodnie z instrukcjami dotyczącymi rozwiązania Samsung Knox podanymi poniżej.
 
 [!INCLUDE[wit_nextref](includes/end-user-os-update-guidance.md)]
 
-## <a name="for-most-android-devices-non-samsung-knox"></a>Większość urządzeń z systemem Android (bez rozwiązania Samsung KNOX)
+## <a name="for-most-android-devices-non-samsung-knox"></a>Większość urządzeń z systemem Android (bez rozwiązania Samsung Knox)
 
 Przejdź do menu **Ustawienia** > **Informacje** > **Aktualizacje oprogramowania**. Po zainstalowaniu aktualizacji w urządzeniu powinna być zainstalowana odpowiednia poprawka zabezpieczeń.
 
-## <a name="for-samsung-knox-android-devices"></a>Urządzenia z systemem Android i rozwiązaniem Samsung KNOX
+## <a name="for-samsung-knox-android-devices"></a>Urządzenia z systemem Android z rozwiązaniem Samsung Knox
 
-Przejdź do menu **Ustawienia** > **Aktualizacje systemu** > **Sprawdź dostępność nowej aktualizacji systemu**. Po zainstalowaniu aktualizacji na urządzeniu z rozwiązaniem Samsung KNOX powinna być zainstalowana odpowiednia poprawka zabezpieczeń.
+Przejdź do menu **Ustawienia** > **Aktualizacje systemu** > **Sprawdź dostępność nowej aktualizacji systemu**. Po zainstalowaniu aktualizacji w urządzeniu obsługującym rozwiązanie Samsung Knox powinna być zainstalowana odpowiednia poprawka zabezpieczeń.
 
 
 
