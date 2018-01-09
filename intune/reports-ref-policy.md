@@ -2,8 +2,8 @@
 title: Zasady | Microsoft Docs
 description: "Temat referencyjny dotyczący kategorii Zasady kolekcji jednostek w interfejsie API magazynu danych usługi Microsoft Intune."
 keywords: "Magazyn danych usługi Intune"
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: D5ADB9D8-D46A-43BD-AB0F-D6927508E3F4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 079cfe097d6cf462f9ccd0a32d2e327b3b605e40
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 06c489f8519bda2f3f0359589c3af845ade423fe
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="reference-for-policy-entities"></a>Dokumentacja jednostek zasad
 
@@ -39,7 +39,7 @@ Jednostka **Policy** zawiera listę profilów konfiguracji urządzeń, profilów
 | PolicyId |Unikatowy identyfikator zasad w magazynie danych. |b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName |Nazwa zasad. |„Plan bazowy systemu Windows 10” |
 | PolicyVersion |Wersja zasad. Po edycji lub zmianie zasad tworzona jest nowa wersja. |1, 2, 3 |
-| IsDeleted |Wskazuje, czy rekord zasad został zaktualizowany.  <br>True — zasady mają nowy rekord ze zaktualizowanymi polami. <br>False — najnowszy rekord zasad. |True/False |
+| IsDeleted |Wskazuje, czy rekord zasad został zaktualizowany.  <br>True — zasady mają nowy rekord ze zaktualizowanymi polami. <br>False — najnowszy rekord zasad. |Prawda/Fałsz |
 | StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia zasad w magazynie danych. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
 | RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji zasad w magazynie danych. |2016-11-23 12:00:00 |
@@ -63,7 +63,7 @@ Jednostka **DeviceConfigurationProfileDeviceActivity** zawiera liczbę urządze�
 | DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
 | Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
-| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Error |Liczba unikatowych urządzeń w stanie Błąd. |10 |
 | Niepowodzenie |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |
 
 ## <a name="userconfiguration"></a>UserConfiguration
@@ -75,7 +75,7 @@ Jednostka **UserConfigurationProfileDeviceActivity** zawiera liczbę użytkownik
 | DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
 | Oczekiwanie |Liczba unikatowych użytkowników w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych użytkowników w stanie Sukces. |12 |
-| Błąd |Liczba unikatowych użytkowników w stanie Błąd. |10 |
+| Error |Liczba unikatowych użytkowników w stanie Błąd. |10 |
 | Niepowodzenie |Liczba unikatowych użytkowników w stanie Niepowodzenie. |2 |
 
 ## <a name="policytypeactivity"></a>PolicyTypeActivity
@@ -89,5 +89,5 @@ Jednostka **PolicyTypeActivity** zawiera łączną liczbę urządzeń w stanie S
 | PolicyTypeKey |Typ klucza zasad; można go połączyć z typem zasad w celu otrzymania nazwy typu zasad. |Zasady zgodności systemu Windows 10 |
 | Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
-| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Error |Liczba unikatowych urządzeń w stanie Błąd. |10 |
 | Fail- |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |

@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87ddb1a5f6ca5cc9be2815aacc9c1570a51e792f
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 8207c77688bcc6e14064322ab2447435c2377b09
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -28,18 +28,12 @@ ms.lasthandoff: 12/01/2017
 |Szukasz dokumentacji dotyczącej usługi Intune w portalu klasycznym? [Przejdź tutaj](/intune/introduction-intune?toc=/intune-classic/toc.json).|
 | |
 
-|Aktualnie w prywatnej wersji zapoznawczej|
-|--|
-|Funkcje opisane w tym temacie są aktualnie dostępne jedynie dla klientów prywatnej wersji zapoznawczej. Ten komunikat zostanie usunięty po udostępnieniu funkcji wszystkim klientom.|
-| |
-
 Jeśli do zarządzania użytkownikami końcowymi komputerów Mac Twoja organizacja używa narzędzia [Jamf Pro](https://www.jamf.com), zastosowanie zasad zgodności usługi Microsoft Intune i dostępu warunkowego usługi Azure Active Directory zapewnia, że urządzenia w organizacji będą zgodne.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Aby skonfigurować dostęp warunkowy przy użyciu narzędzia Jamf Pro, wymagane są następujące elementy:
 
-- Dostęp do prywatnej wersji zapoznawczej usługi Intune w celu uzyskania dostępu warunkowego urządzeń z systemem macOS
 - Program Jamf Pro 10.1.0 lub nowsza wersja
 - [Aplikacja Portal firmy dla systemu macOS](https://aka.ms/macoscompanyportal)
 - Urządzenia z systemem macOS (OS X 10.11 Yosemite lub nowszy)
@@ -60,7 +54,7 @@ Usługę Intune można połączyć z narzędziem Jamf Pro poprzez:
 4. Wybierz opcję **Interfejs API/aplikacja sieci Web**.
 5. Określ **Adres URL logowania** przy użyciu adresu URL wystąpienia narzędzia Jamf Pro.
 6. Kliknij przycisk **Utwórz aplikację**.
-7. Zapisz nowo utworzony **Identyfikator aplikacji**, a następnie otwórz opcję **Ustawienia** i przejdź do pozycji **Dostęp do interfejsu API** > **Klucze**, aby utworzyć nowy klucz aplikacji. Wprowadź **Opis**, czas oczekiwania przed **wygaśnięciem**, a następnie zapisz klucz aplikacji. 
+7. Zapisz nowo utworzony **Identyfikator aplikacji**, a następnie otwórz opcję **Ustawienia** i przejdź do pozycji **Dostęp do interfejsu API** > **Klucze**, aby utworzyć nowy klucz aplikacji. Wprowadź **Opis**, czas oczekiwania przed **wygaśnięciem**, a następnie zapisz klucz aplikacji.
 
   > [!IMPORTANT]
   > W trakcie tego procesu klucz aplikacji jest wyświetlany tylko raz. Pamiętaj, aby zapisać go w innym miejscu, z którego łatwo można go będzie pobrać.
@@ -105,7 +99,7 @@ Narzędzie Jamf Pro przechwytuje informacje dotyczące spisu zarządzanych urzą
 * Zaszyfrowane (FileVault 2)
 * Stan programu Gatekeeper
 * Hasło: minimalna liczba zestawów znaków
-* Wygaśnięcie hasła (dni)
+* Wygaśnięcie hasła w dniach
 * Typ hasła — prosty, alfanumeryczny lub nieznany
 * Zapobieganie automatycznemu logowaniu
 * Wymagana długość kodu dostępu

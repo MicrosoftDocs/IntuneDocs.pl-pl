@@ -3,8 +3,8 @@ title: "Jak przypisać aplikacje do grup"
 titlesuffix: Azure portal
 description: "Po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/24/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 51abb6daad11b9d6036396dcc5a5ce8f2a2c4ac4
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 7121cffaf1deb206aa88373a3aa77ce23bdf030e
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
 
@@ -75,14 +75,14 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
 |Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
 |Użytkownik, dostępne|Użytkownik, niedostępne|Niedostępny|
-|Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstaluj|
-|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstaluj
+|Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstalowanie|
+|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstalowanie
 |Użytkownik, wymagane|Urządzenie, wymagane|Oba elementy istnieją, brama traktuje jako wymagane 
 |Użytkownik, wymagane|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane 
 |Użytkownik, dostępne|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane (wymagane i dostępne)
 |Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako dostępne.<br>Aplikacja jest wyświetlana w Portalu firmy.<br>Jeśli aplikacja jest już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), wówczas ta aplikacja zostaje odinstalowana.<br>Jeśli jednak użytkownik kliknie w Portalu firmy polecenie instalacji, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
 |Użytkownik, niedostępne|Urządzenie, wymagane|Wymagane|
-|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstaluj|
+|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstalowanie|
 |Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane|
 |Użytkownik, odinstalowywanie|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako odinstalowywanie|
 |Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagane|

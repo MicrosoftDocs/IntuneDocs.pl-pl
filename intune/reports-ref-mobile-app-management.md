@@ -2,8 +2,8 @@
 title: "Zarządzanie aplikacjami mobilnymi (MAM) | Microsoft Docs"
 description: "Temat referencyjny dotyczący kategorii Zarządzanie aplikacjami mobilnymi kolekcji jednostki w interfejsie API magazynu danych usługi Microsoft Intune."
 keywords: "Magazyn danych usługi Intune"
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 32b5f3515c0b77ea8f411c1c1f42e7b44669ca23
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 4951ec43b2abdb52af091b2d1366bd23a9c2ab5b
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
 
@@ -41,7 +41,7 @@ Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które s
 | ApplicationKey |Unikatowy identyfikator aplikacji MAM w magazynie danych. |123 |
 | ApplicationName |Nazwa aplikacji MAM. |„Word” |
 | ApplicationId |Identyfikator aplikacji dla aplikacji MAM. |b66bc706-ffff-7437-0340-032819502773 |
-| IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |True/False |
+| IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |Prawda/Fałsz |
 | StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
 | RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
@@ -63,7 +63,7 @@ Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarz�
 | SdkVersion |Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana. |3.2 |
 | DeviceId |Identyfikator urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |b66bc706-ffff-7437-0340-032819502773 |
 | DeviceName |Nazwa urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |„MyDevice” |
-| IsDeleted |Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |True/False |
+| IsDeleted |Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |Prawda/Fałsz |
 | StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
 | RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
