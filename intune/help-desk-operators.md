@@ -3,8 +3,8 @@ title: "Portal pomocy technicznej służący do rozwiązywania problemów | Micr
 titlesuffix: Azure portal
 description: "Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników"
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 09/26/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: dfe6e552917a006175e394b8c569b1000a002015
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 845b225fe60ecde71f364b224a0984638662a3db
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom
 
@@ -81,7 +81,7 @@ Właściwości aplikacji mobilnych.
 | Typ          | Możesz wybrać typ przypisania dla każdej aplikacji.  <br> **Dostępne** — użytkownicy instalują aplikację z aplikacji Portal firmy lub witryny sieci Web.  <br> **Nie dotyczy** — aplikacja nie jest instalowana ani wyświetlana w Portalu firmy. <br> **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.  <br> **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. |
 | Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 
 Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
 
@@ -126,7 +126,7 @@ Tabela zawiera podsumowanie stanu zasad ochrony aplikacji dla urządzeń zarząd
 | Rejestrowanie  | Nazwa typu urządzenia.                                                                                                     |
 | Ostatnia aktualizacja | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 
 Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
 
@@ -159,7 +159,7 @@ Właściwości zasad zgodności.
 | Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
 | Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
 
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 
 Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
 
@@ -204,7 +204,7 @@ Właściwości zasad konfiguracji.
 | Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
 | Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
 
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 
 Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych przez usługę Intune lub Azure AD.
 

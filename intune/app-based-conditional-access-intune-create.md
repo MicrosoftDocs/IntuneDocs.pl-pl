@@ -2,8 +2,8 @@
 title: "Korzystające z usługi Intune zasady dostępu warunkowego opartego na aplikacji"
 description: "W tym temacie opisano sposób konfigurowania zasad dostępu warunkowego opartego na aplikacji z użyciem usługi Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 06/28/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88db3730be62a9b481d924b4f09b70be775cb067
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: ccbbe448a61d19b18c9f4f02f90aefa4f415d80b
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-app-based-conditional-access-policies"></a>Konfigurowanie zasad dostępu warunkowego opartego na aplikacji
 
@@ -82,7 +82,7 @@ Począwszy od wersji 1708 usługi Intune administratorzy mogą tworzyć zasady d
 ## <a name="next-steps"></a>Następne kroki
 [Blokowanie aplikacji, które nie obsługują nowoczesnego uwierzytelniania](app-modern-authentication-block.md)
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 
 [Ochrona danych aplikacji przy użyciu zasad ochrony aplikacji](app-protection-policies.md)
 [Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
