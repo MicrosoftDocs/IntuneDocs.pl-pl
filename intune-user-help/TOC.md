@@ -6,6 +6,8 @@
 
 ## [Resetowanie urządzenia](what-happens-if-you-reset-your-device-cpwebsite.md)
 
+## [Aktualizowanie hasła](password-does-not-meet-it-administrator-requirements.md)
+
 ## [Logowanie się w aplikacji Portal firmy](sign-in-to-the-company-portal.md)
 
 ## [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
@@ -72,7 +74,7 @@
 #### [Co się stanie w przypadku wyrejestrowania urządzenia?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Ręczne synchronizowanie urządzenia](sync-your-device-manually-ios.md)
 
-#### [Rozwiązywanie typowych problemów z systemem iOS](troubleshoot-your-device-iOS.md)
+### [Rozwiązywanie typowych problemów z systemem iOS](troubleshoot-your-device-iOS.md)
 #### [ponownie połączyć urządzenie z systemem iOS z naruszonymi zabezpieczeniami](how-to-reconnect-a-compromised-ios-device.md)
 #### [Wysyłanie błędów do swojej firmy](send-errors-to-your-it-admin-ios.md)
 #### [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-ios.md)
@@ -116,6 +118,7 @@
 #### [What happens when you enroll other versions of Windows? (Co się dzieje po zarejestrowaniu innych wersji systemu Windows?)](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Rejestrowanie urządzenia z systemem Windows](enroll-your-device-in-intune-windows.md)
 #### [Enroll your Windows 10 device (Rejestrowanie urządzenia z systemem Windows 10)](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Enroll your Windows 10 device through "Access work or school" (Rejestrowanie urządzenia z systemem Windows 10 za pomocą opcji „Uzyskaj dostęp do miejsca pracy lub nauki”)](enroll-your-w10-device-access-work-or-school.md)
 #### [Enroll your Windows 8.1 or Windows RT 8.1 device (Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1)](enroll-your-w81-or-rt81-windows.md)
 #### [Enroll your Windows Phone 8.1 device (Rejestrowanie urządzenia z systemem Windows Phone 8.1)](enroll-your-wp81-windows.md)
 ### [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
