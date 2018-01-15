@@ -642,7 +642,7 @@
               href: reports-ref-user-device.md
             - name: Dokumentacja jednostki użytkownika
               href: reports-ref-user.md
-    - name: Ładowanie bezpośrednie aplikacji systemu Windows
+    - name: Interfejs API programu Graph usługi Intune
       href: intune-graph-apis.md
       items:
         - name: Interfejsy API programu Graph dla odwołań usługi Intune
