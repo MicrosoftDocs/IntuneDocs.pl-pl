@@ -79,6 +79,7 @@
 #### [Wysyłanie błędów do swojej firmy](send-errors-to-your-it-admin-ios.md)
 #### [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-ios.md)
 #### [Znaleziono istniejące konto firmowej poczty e-mail](existing-company-email-account-found.md)
+#### [Osiągnięto limit urządzeń](device-limit-wpj-ios.md)
 #### [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Wystąpił błąd](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identyfikowanie urządzenia](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
@@ -112,6 +113,7 @@
 #### [Postępowanie w przypadku nieco innego urządzenia](device-little-different-jamf.md)
 #### [Znajdowanie numeru seryjnego](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identyfikowanie urządzenia](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+#### [Osiągnięto limit urządzeń](device-limit-wpj-macos.md)
 
 ## [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)

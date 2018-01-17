@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 07/11/2017
+ms.date: 01/08/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5a1cbd6fc3244686c1f5a1db3e4365e615662f0e
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 0ea0c9a406d6ddb78cd016a7b594d077d7181952
+ms.sourcegitcommit: 12b2111839e648f85374c1c0db4288f08e0ef85d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -29,10 +29,10 @@ ms.lasthandoff: 12/08/2017
 
 Do Twoich obowiązków jako administratora IT należy zapewnienie użytkownikom końcowym dostępu do aplikacji, które są im niezbędne do pracy. Może to być trudne, ponieważ:
 - Istnieje szeroka gama platform urządzeń i typów aplikacji.
-- Może okazać się konieczne zarządzanie aplikacjami na urządzeniach firmy i na własnych urządzeniach użytkowników.
+- Konieczne może okazać się zarządzanie aplikacjami zarówno na urządzeniach firmowych, jak i na własnych urządzeniach użytkowników.
 - Musisz mieć pewność, że sieć i dane pozostaną bezpieczne.
 
-Na dodatek możesz też przypisywać aplikacje na urządzeniach niezarejestrowanych w usłudze Intune i zarządzać nimi.
+Dodatkowo możesz przypisywać aplikacje na urządzeniach niezarejestrowanych w usłudze Intune i zarządzać nimi.
 
 Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach.
 
@@ -40,7 +40,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 ||||||
 |-|-|-|-|-|
-|&nbsp; |Android|iOS|Windows Phone 8.1|Windows 10|
+|&nbsp; |Android|iOS|Windows Phone 8,1|Windows 10|
 |Dodawanie aplikacji i przypisywanie ich do urządzeń i użytkowników|Tak|Tak|Tak|Tak|
 |Przypisywanie aplikacji do urządzeń, które nie zostały zarejestrowane za pomocą usługi Intune|Tak|Tak|Nie|Nie|
 |Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania|Nie|Tak|Nie|Nie|
@@ -85,19 +85,33 @@ Większość elementów powiązanych z aplikacjami można znaleźć w obciążen
 - **Profile aprowizacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
     - [Profile aprowizowania aplikacji dla systemu iOS](app-provisioning-profile-ios.md)
 
+Więcej szczegółów można znaleźć w temacie [Zarządzanie aplikacjami](app-management.md).
+
 ### <a name="monitor"></a>Monitor
-- **Licencjonowane aplikacje** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
+- **Licencje aplikacji** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
-- **Wykryte aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
+- **Odnalezione aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
 - **Stan instalacji aplikacji** — pokazuje stan utworzonego przez Ciebie przypisania aplikacji.
 - **Stan ochrony aplikacji** — pokazuje stan zasad ochrony aplikacji dla wybranego użytkownika.
+- **Dzienniki inspekcji** -pokazuje działania wszystkich administratorów IT związane z aplikacją usługi Intune.
 
-Aby uzyskać szczegółowe informacje, zobacz sekcję [Monitorowanie aplikacji](apps-monitor.md)
+Aby uzyskać więcej szczegółów, zobacz temat [Monitorowanie aplikacji](apps-monitor.md).
 
 ### <a name="setup"></a>Setup
-<!--- **iOS VPP Tokens**
-    - [iOS volume-purchased apps](vpp-apps-ios.md) --->
+- **Tokeny programu VPP dla systemu iOS** — stosowanie i wyświetlanie licencji Volume Purchase Program (VPP) dla systemu iOS.
+    - [Aplikacje systemu iOS nabyte w ramach zakupów zbiorczych](vpp-apps-ios.md)
+- **Certyfikat przedsiębiorstwa systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu używanego do dystrybuowania aplikacji biznesowych na zarządzanych urządzeniach z systemem Windows. 
+- **Certyfikat firmy Symantec systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu firmy Symantec potrzebnego do rozpowszechniania plików appx XAP i WP8.x na urządzeniach z systemem Windows 10 Mobile. 
 - **Sklep Microsoft dla Firm** — umożliwia skonfigurowanie integracji ze Sklepem Microsoft dla Firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
+- **Klucze ładowania bezpośredniego systemu Windows** — można dodać klucz ładowania bezpośredniego systemu Windows, który może służyć do bezpośredniej instalacji aplikacji na urządzeniach bez konieczności publikowania aplikacji i pobierania jej ze Sklepu Windows.
+    - [Ładowanie bezpośrednie aplikacji systemu Windows](app-sideload-windows.md) 
 - **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy.
     - [Konfiguracja portalu firmy](company-portal-app.md)
+- **Kategorie aplikacji** — dodawanie, przypinanie i usuwanie nazw kategorii aplikacji.
+- **Android for Work** — zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa.
+    - [Aplikacje programu Android for Work](apps-add-android-for-work.md) 
+
+### <a name="help-and-support"></a>Pomoc i obsługa techniczna
+- **Pomoc i obsługa techniczna** — rozwiązywanie problemów, wnioskowanie o pomoc techniczną lub wyświetlanie stanu usługi Intune.
+    - [Rozwiązywanie problemów](help-desk-operators.md)

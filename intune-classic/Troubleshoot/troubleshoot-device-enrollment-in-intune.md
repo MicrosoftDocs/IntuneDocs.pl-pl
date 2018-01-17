@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2ec41724eacc4abca994b1dadff6e6d9df63c74d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
@@ -37,6 +37,12 @@ Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune zosta
 -   [Konfigurowanie zarządzania urządzeniami z systemem Windows](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 -   [Konfigurowanie zarządzania urządzeniami z systemem Android](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) — nie są wymagane dodatkowe kroki
 -   [Konfigurowanie zarządzania urządzeniami z systemem Android for Work](/intune-classic/deploy-use/set-up-android-for-work)
+
+Można również upewnić się, czy data i godzina są prawidłowo ustawione na urządzeniu użytkownika:
+
+1. Uruchom urządzenie ponownie.
+2. Upewnij się, że data i godzina są w przybliżeniu ustawione zgodnie ze standardami GMT (+ lub - 12 godzin) względem strefy czasowej użytkownika końcowego.
+3. Odinstaluj i zainstaluj ponownie Portal firmy w usłudze Intune (jeśli dotyczy).
 
 Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dzienniki diagnostyczne, z którymi możesz się zapoznać. Instrukcje użytkownika dotyczące zbierania tych dzienników przedstawiono w następujących tematach:
 
@@ -229,27 +235,29 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 **Rozwiązanie 1**:
 
-poproś użytkowników o wykonanie instrukcji zawartych w artykule [Brak wymaganego certyfikatu urządzenia](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Jeśli po wykonaniu instrukcji błąd nadal występuje, spróbuj rozwiązania 2.
+Użytkownik może mieć możliwość pobrania brakującego certyfikatu przez wykonanie instrukcji podanych w temacie [Brak wymaganego certyfikatu urządzenia](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Jeśli błąd będzie się powtarzać, spróbuj zastosować rozwiązanie 2.
 
 **Rozwiązanie 2**:
 
-jeśli użytkownicy nadal widzą błąd braku certyfikatu po wprowadzeniu poświadczeń firmowych i przekierowaniu w celu obsługi logowania federacyjnego, być może brakuje pośredniego certyfikatu z serwera usług Active Directory Federation Services (AD FS).
+Jeśli użytkownicy nadal widzą błąd braku certyfikatu po wprowadzeniu poświadczeń firmowych i przekierowaniu w celu obsługi logowania federacyjnego, być może brakuje pośredniego certyfikatu z serwera usług Active Directory Federation Services (AD FS).
 
-Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagają certyfikatów pośrednich zawartych w [powitaniu serwera SSL](https://technet.microsoft.com/library/cc783349.aspx), ale obecnie instalacja serwera domyślnego usług AD FS lub serwera proxy usług AD FS w odpowiedzi serwera SSL na powitanie klienta SSL wysyła jedynie certyfikat SSL usług AD FS.
+Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagają, by do [powitania serwera SSL](https://technet.microsoft.com/library/cc783349.aspx) były dołączone certyfikaty pośrednie. Obecnie domyślna instalacja serwera usług AD FS lub serwera proxy WAP usług AD FS powoduje wysłanie tylko certyfikatu SSL usług AD FS w odpowiedzi na powitanie klienta SSL.
 
 Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
 
-1.  Na serwerach usług AD FS i serwerach proxy uruchom konsolę zarządzania certyfikatami dla komputera lokalnego, klikając prawym przyciskiem myszy przycisk **Start**, a następnie wybierając polecenie **Uruchom** i wpisując ciąg **certlm.msc**.
+1.  Na serwerach usług ADFS i serwerach proxy kliknij prawym przyciskiem myszy pozycje **Start** > **Uruchom** > **certlm.msc**. Spowoduje to uruchomienie konsoli zarządzania certyfikatami komputera lokalnego.
 2.  Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
 3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
 4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
 5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
-6.  Wybierz kartę **Szczegóły** i wybierz pozycję **Kopiuj do pliku...**.
-7.  Postępuj zgodnie z poleceniami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu do żądanej lokalizacji pliku.
-8.  Zaimportuj certyfikaty nadrzędne wyeksportowane w kroku 3 do lokalizacji Local Computer\Personal\Certificates, klikając prawym przyciskiem myszy pozycję **Certyfikaty**, wybierając pozycję **Wszystkie zadania** > **Importowanie**, a następnie wykonując polecenia kreatora w celu zaimportowania certyfikatów.
-9.  Uruchom ponownie serwery usług AD FS.
-10. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
-Zalogowanie się do aplikacji Portal firmy na urządzeniu z systemem Android powinno być teraz możliwe.
+6.  Wybierz kartę **Szczegóły**, a następnie pozycję **Kopiuj do pliku…**.
+7.  Postępuj zgodnie z instrukcjami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu nadrzędnego do żądanej lokalizacji pliku.
+8.  Kliknij prawym przyciskiem myszy pozycje **Certyfikaty** > **Wszystkie zadania** > **Importuj**.
+9.  Postępuj zgodnie z instrukcjami kreatora, aby zaimportować certyfikaty nadrzędne do katalogu **Komputer lokalny\Osobiste\Certyfikaty**.
+10. Uruchom ponownie serwery usług AD FS.
+11. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
+
+W celu sprawdzenia, czy zainstalowano odpowiedni certyfikat, można użyć narzędzia diagnostycznego dostępnego w witrynie [https://www.digicert.com/help/](https://www.digicert.com/help/). W polu **Adres serwera** wprowadź w pełni kwalifikowaną nazwę domeny serwera usług AD FS (IE: sts.contoso.com) i kliknij przycisk **Sprawdź serwer**.
 
 **Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
 
@@ -306,7 +314,7 @@ Po zarejestrowaniu urządzenie powraca do stanu prawidłowego i odzyskuje dostę
 ### <a name="verify-ws-trust-13-is-enabled"></a>Sprawdzanie, czy usługa WS-Trust 1.3 jest włączona
 **Problem** Nie można zarejestrować urządzeń z systemem iOS objętych programem Device Enrollment Program (DEP)
 
-Rejestrowanie urządzeń objętych programem Device Enrollment Program z koligacją użytkownika wymaga nazwy użytkownika/mieszanego punktu końcowego protokołu WS-Trust 1.3/, aby było możliwe żądanie tokenu użytkownika. Usługa Active Directory domyślnie włącza ten punkt końcowy. Punktu końcowego trust/13/UsernameMixed należy szukać na liście dopuszczonych punktów końcowych dostępnej za pośrednictwem polecenia cmdlet programu PowerShell Get-AdfsEndpoint. Na przykład:
+Rejestrowanie urządzeń objętych programem Device Enrollment Program z koligacją użytkownika wymaga nazwy użytkownika/mieszanego punktu końcowego protokołu WS-Trust 1.3/, aby było możliwe żądanie tokenu użytkownika. Usługa Active Directory domyślnie włącza ten punkt końcowy. Punktu końcowego trust/13/UsernameMixed należy szukać na liście dopuszczonych punktów końcowych dostępnej za pośrednictwem polecenia cmdlet programu PowerShell Get-AdfsEndpoint. Przykład:
 
       Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
 

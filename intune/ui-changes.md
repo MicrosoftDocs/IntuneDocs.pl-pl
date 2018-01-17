@@ -6,7 +6,7 @@ keywords:
 author: dagerrit
 ms.author: dagerrit
 manager: angrobe
-ms.date: 03/31/2017
+ms.date: 1/4/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41b358f48412585ec40e369225b4263012bfd2f8
-ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
+ms.openlocfilehash: d5f4947191ddc7462749bb03f86919fc38196672
+ms.sourcegitcommit: 6e91c1aed7e4d3bb57051b41ce69cc15d70844f6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
-Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, którą próbujesz znaleźć, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
+Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
 ## <a name="quick-reference-guide"></a>Krótki przewodnik
 |Funkcja |Ścieżka w portalu klasycznym|Ścieżka w usłudze Intune w witrynie Azure Portal|
 |------------|---------------|---------------|
@@ -36,6 +36,7 @@ Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, a
 | Profil rejestracji urządzeń firmowych | Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile AC](#where-did-corporate-pre-enrolled-devices-go) |
 | Program Android for Work | Administracja > Zarządzanie urządzeniami przenośnymi > Android for Work | Rejestrowanie urządzenia > Rejestracja w programie Android for Work |
 | Warunki i postanowienia | Zasady > Warunki i postanowienia | Rejestrowanie urządzeń > Warunki i postanowienia |
+Ustawienia aplikacji Portal firmy|Administracja > Portal firmy|**Zarządzaj** > Aplikacje mobilne<br> **Konfiguracja** > Znakowanie Portalu firmy
 
 
 ## <a name="where-do-i-manage-groups"></a>Gdzie mogę zarządzać grupami?
@@ -73,7 +74,7 @@ W witrynie Azure Portal program Device Enrollment Program firmy Apple konfiguruj
 
 ![Ilustracja przedstawiająca token DEP na platformie Azure](./media/07-azure-dep-token.png)
 
-Jednak opcja **synchronizacji** w portalu klasycznym została przeniesiona do przepływu pracy zarządzania numerami seryjnymi, ponieważ tam będą wyświetlane wyniki synchronizacji ręcznej:
+Jednak opcja **synchronizacji** w portalu klasycznym została przeniesiona do przepływu pracy zarządzania numerami seryjnymi, ponieważ są tam wyświetlane wyniki synchronizacji ręcznej:
 
 ![Ilustracja przedstawiająca synchronizację programu DEP na platformie Azure](./media/08-azure-dep-sync.png)
 
@@ -97,7 +98,7 @@ W portalu klasycznym możesz wstępnie wyświetlić listę numerów IMEI urządz
 
 ![Ilustracja przedstawiająca klasyczną listę numerów IMEI](./media/12-classic-corp-imei.png)
 
-W witrynie Azure Portal musisz przekazać te same numery IMEI na listę identyfikatorów urządzeń firmowych za pomocą pliku zawierającego wartości rozdzielane przecinkami (CSV). Nowy portal nie będzie obsługiwał ręcznego wprowadzania numerów IMEI:
+W witrynie Azure Portal musisz przekazać te same numery IMEI na listę identyfikatorów urządzeń firmowych za pomocą pliku zawierającego wartości rozdzielane przecinkami (CSV). Nowy portal nie obsługuje ręcznego wprowadzania numerów IMEI:
 
 ![Ilustracja przedstawiająca listę numerów IMEI na platformie Azure](./media/13-azure-corp-imei.png)
 

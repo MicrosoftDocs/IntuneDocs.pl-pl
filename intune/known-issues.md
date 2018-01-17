@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 372e25968005258fd1e00cbab7db542ad0211206
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 5cdda6a34311bb7b70234ab046975e6ff5417878
+ms.sourcegitcommit: cfe3607ba0b76a37a3c54f465754482d49a816a0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -43,31 +43,6 @@ Możliwość zarządzania systemem Windows 10 w usłudze Intune w witrynie Azure
 
 W przypadku migracji z usługi Intune do witryny Azure Portal może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
 
-### <a name="secondary-migration-required-for-select-capabilities"></a>Niektóre funkcje wymagają dodatkowej migracji
-
-Należy przeprowadzić migrację kont usługi Intune utworzonych przed styczniem 2017 roku, zanim w witrynie Azure Portal będą mogły być używane następujące funkcje:
-
-- Profile rejestracji urządzeń firmowych
-- Program Device Enrollment Program firmy Apple
-- Wstępna deklaracja urządzeń firmowych według numeru seryjnego systemu iOS
-- Konta menedżerów rejestracji urządzeń
-- Program Apple Volume Purchase Program
-
-Ponieważ tymi funkcjami nie można zarządzać z konsoli usługi Intune (Silverlight) ani z witryny Azure Portal, migracja:
-- wyłącza je w portalu klasycznym,
-- włącza je w witrynie Azure Portal.  
-
-Po 22 września 2017 r. migracja tych funkcji zostanie scalona w ramach migracji głównej na platformie Azure. Jeśli Twoje konto zostało już poddane migracji w celu korzystania z witryny Azure Portal, ta migracja dodatkowa może już być przeprowadzona. Jeśli nie, te funkcje zostaną poddane migracji na platformę Azure do listopada. Po rozpoczęciu migracji konta zostanie ona zakończona tego samego dnia. Migracja może potrwać do 6 godzin od momentu wyłączenia tych funkcji w portalu klasycznym usługi Intune.
-
-Jeśli obecnie zarządzasz tymi funkcjami usługi Intune w witrynie Azure Portal, pamiętaj o następujących kwestiach:
-
-#### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Usuwa domyślne profile rejestracji urządzeń firmowych usługi Apple DEP
-Witryna Azure Portal nie obsługuje domyślnego profilu rejestracji urządzeń firmowych w odniesieniu do urządzeń firmy Apple w ramach programu DEP (Device Enrollment Program). Ta funkcja, dostępna w konsoli usługi Intune (Silverlight), przestaje być obsługiwana, aby zapobiec przypadkowemu przypisaniu profili. Podczas synchronizacji numerów seryjnych usługi DEP w witrynie Azure Portal żaden profil rejestracji urządzeń firmowych nie zostanie przypisany. Profil rejestracji musi zostać przypisany przed użyciem urządzenia.
-
-#### <a name="apple-dep-token-restored-with-migration"></a>Token DEP firmy Apple przywrócony razem z migracją
-
-Jeśli token programu Device Enrollment Program firmy Apple zostanie usunięty w portalu usługi Intune (Silverlight) i nie nastąpi przekazanie nowego tokenu do witryny Azure Portal, pierwotny token zostanie przywrócony w witrynie Azure Portal podczas migracji. Aby usunąć ten token i zapobiec rejestracji w programie DEP, usuń token w witrynie Azure Portal.
-
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Bloki stanu zmigrowanych zasad nie działają
 
 Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznego portalu do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
@@ -79,6 +54,9 @@ Aplikacje dla systemu iOS nabyte w ramach zakupów zbiorczych są wyświetlane i
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Przekazywanych jest wiele kopii tego samego programu dla systemu iOS nabytego w ramach zakupów zbiorczych
 Nie klikaj wielokrotnie przycisku **Przekaż** dla tego samego tokenu VPP. Spowoduje to, że przekazywane będą zduplikowane tokeny VPP, a aplikacje będą synchronizowane wiele razy dla tego samego tokenu VPP.
+
+### <a name="assigning-office-365-to-macos-devices"></a>Przypisywanie usługi Office 365 do urządzeń z systemem macOS
+Funkcja przypisywania usługi Office 365 do urządzeń z systemem macOS za pomocą usługi Microsoft Intune będzie dostępna po zakończeniu aktualizacji interfejsu użytkownika.
 
 <!-- ## Groups -->
 

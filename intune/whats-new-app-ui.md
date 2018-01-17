@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/11/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61306d1da81340ef2e922abdf944243eac8de219
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 7e7810652fdf5b7b84b4fd7bb6367ec76901b4f0
+ms.sourcegitcommit: 06abc5ccc8b868c9ff3ad3f8f62473a87b2da481
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+
+## <a name="week-of-december-11-2017"></a>Tydzień 11 grudnia 2017 r.
+
+### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Komunikaty dla użytkowników końcowych dotyczące kont<!--1573558, 1712; changes to be made for other platforms for 1801-->
+
+Użytkownicy witryny Portal firmy będą mieć zablokowaną możliwość podejmowania działań, które wymagają prawa do zapisu w dzierżawie. Zostanie wyświetlony odpowiedni komunikat o błędzie z wyjaśnieniem, że konto podlega pracom konserwacyjnym. Podobne zmiany zostaną wkrótce wprowadzone w aplikacjach Portal firmy dla systemów Android, iOS, macOS i Windows.
+
+![Komunikat o błędzie, który występuje podczas przenoszenia konta](./media/account-move-rom-iwp-user-1712.png)
 
 ## <a name="week-of-november-27-2017"></a>Tydzień 27 listopada 2017 r.
 
@@ -380,7 +388,7 @@ __Aktualizacje sekcji Polecane aplikacje__ — do witryny dodaliśmy dedykowaną
 
 ![Kolorowe kafelki przedstawiające aplikacje. Są to duże kolorowe kwadraty znajdujące się poniżej każdej aplikacji, których kolor jest określany na podstawie podstawowego koloru logo aplikacji. Sekcja „Polecane aplikacje” jest wyświetlana w górnej części aplikacji Portal firmy.](./media/cp_win10_colorful_tiles_after_1708.png)
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plan platformy w chmurze](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
 * [Co nowego w usłudze Intune](https://docs.microsoft.com/intune/whats-new)

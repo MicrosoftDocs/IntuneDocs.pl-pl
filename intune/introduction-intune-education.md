@@ -5,22 +5,22 @@ keywords: "co to jest usługa Intune"
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 12/21/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
-ms.reviewer: lindavr
+ms.reviewer: travisj
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c094d59d7261b602c51196233286d10c27732236
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.custom: intune-azure
+ms.openlocfilehash: 78286293dc57bfded09eb29c5809c09e5acff49b
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="what-is-intune-for-education"></a>Co to jest usługa Intune for Education?
+# <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Czym różni się usługa Intune for Education od pełnego środowiska zarządzania urządzeniami w usłudze Intune?
 
 Usługa Intune for Education ma umożliwić nauczycielom i uczniom efektywną pracę, a jednocześnie zapewnić ochronę danych szkoły. Podstawą usługi Intune for Education jest usługa Intune będąca usługą Enterprise Mobility Management (EMM) opartą na chmurze.
 
@@ -33,12 +33,12 @@ Usługi Intune for Education można używać oddzielnie lub razem z [pełnym śr
 > [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 
 Zarówno za pomocą usługi Intune, jak i Intune for Education można:
-* Zarządzać urządzeniami przenośnymi używanymi przez pracowników w celu uzyskiwania dostępu do danych.
+* Zarządzać urządzeniami przenośnymi używanymi przez pracowników i studentów w celu uzyskiwania dostępu do danych.
 * Zarządzać aplikacjami mobilnymi, do których użytkownicy uzyskują codziennie dostęp.
 * Chronić dane organizacji przez kontrolowanie sposobu, w jaki użytkownicy uzyskują do nich dostęp i je udostępniają.
 * Zapewnić zgodność urządzeń i aplikacji z wymaganiami bezpieczeństwa.
 
 ### <a name="next-steps"></a>Następne kroki
-* Zapoznaj się z produktem, korzystając [z 30-dniowej wersji próbnej usługi Intune](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune).
+* Zapoznaj się z produktem, korzystając z [90-dniowej bezpłatnej wersji próbnej usługi Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). Jeśli masz już dostęp, przejdź do strony (https://intuneeducation.portal.azure.com), aby rozpocząć pracę.
 * Przeczytaj informacje wyjaśniające, jak najszybciej [rozpocząć pracę z usługą Intune for Education](/intune-education/what-is-express-configuration).
 * Poznaj [wymagania techniczne i możliwości](/intune/supported-devices-browsers) usługi Intune.

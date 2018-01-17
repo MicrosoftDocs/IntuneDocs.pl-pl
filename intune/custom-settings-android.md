@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 86f5b505923a709cd8f8ab4e2d91c6a891e2acc6
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 3b1ccb3b0b7b2ce024ff6a09d7f9d8366896fb67
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Ustawienia niestandardowe dla urządzeń z systemem Android w usłudze Microsoft Intune
 
@@ -31,7 +31,7 @@ Ta funkcja ma umożliwić przypisanie następujących ustawień systemu Android,
 
 - [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą niestandardowego profilu urządzenia usługi Microsoft Intune](/intune/wi-fi-profile-shared-key)
 - [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](/intune/android-pulse-secure-per-app-vpn)
-- [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX Standard w usłudze Microsoft Intune](/intune/samsung-knox-apps-allow-block)
+- [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung Knox Standard w usłudze Microsoft Intune](/intune/samsung-knox-apps-allow-block)
 
 >[!IMPORTANT]
 >Obecnie tylko ustawienia wymienione powyżej mogą być konfigurowane przez ten typ profilu. Urządzenia z systemem Android nie ujawniają pełnej listy ustawień OMA-URI, które można skonfigurować. Jeśli chcesz zobaczyć więcej dodanych ustawień, prześlij żądanie w [witrynie Intune Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas).

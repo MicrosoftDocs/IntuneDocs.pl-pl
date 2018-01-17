@@ -2,10 +2,10 @@
 title: "Obsługiwane urządzenia — Microsoft Intune"
 description: "Podaje listę obsługiwanych platform urządzeń i przeglądarki do zarządzania urządzeniami w usłudze Intune"
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b168cbf5282b4e016133d071c56c8abd54c2e23b
-ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
+ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="supported-devices-and-browsers"></a>Obsługiwane urządzenia i przeglądarki
 
@@ -39,11 +39,14 @@ Korzystając z funkcji zarządzania urządzeniami przenośnymi usługi Intune, m
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
-### <a name="supported-samsung-knox-standard-devices"></a>Obsługiwane urządzenia z systemem Samsung KNOX Standard
+### <a name="supported-samsung-knox-standard-devices"></a>Obsługiwane urządzenia z systemem Samsung Knox Standard
 
-Aplikacja Portal firmy próbuje uaktywnić system Samsung KNOX podczas rejestracji w systemie MDM tylko wtedy, gdy urządzenie znajduje się na [liście obsługiwanych urządzeń z systemem KNOX](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Dzięki temu można uniknąć błędów aktywacji systemu KNOX, które uniemożliwiają rejestrację w systemie MDM. Urządzenia, które nie obsługują aktywacji systemu Samsung KNOX, są rejestrowane jako standardowe urządzenia z systemem Android. Urządzenia firmy Samsung mogą mieć pewne numery modelu, które obsługują system KNOX, podczas gdy inne go nie obsługują. Sprawdź zgodność systemu KNOX u odsprzedawcy urządzenia przed zakupem i wdrożeniem urządzeń firmy Samsung.
+Aplikacja Portal firmy podejmuje próbę aktywacji systemu Samsung Knox podczas rejestracji w usłudze MDM tylko w przypadku, gdy urządzenie znajduje się na [liście obsługiwanych urządzeń z systemem Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Pozwala to uniknąć błędów aktywacji systemu Knox, które uniemożliwiają rejestrację w usłudze MDM. Urządzenia, które nie obsługują aktywacji systemu Samsung Knox, są rejestrowane jako standardowe urządzenia z systemem Android. Urządzenia firmy Samsung z określonymi numerami modelu mogą obsługiwać system Knox, podczas gdy inne go nie obsługują. Przed zakupem i wdrożeniem urządzeń firmy Samsung należy sprawdzić zgodność systemu Knox u odsprzedawcy urządzenia.
 
-Poniższa lista modeli zawiera urządzenia firmy Samsung, które nie obsługują systemu KNOX i są rejestrowane jako urządzenia z natywnym systemem Android przez aplikację Portal firmy dla systemu Android:
+> [!NOTE]
+> Rejestrowanie urządzeń z systemem Samsung Knox może wiązać się z koniecznością [włączenia dostępu do serwerów firmy Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+
+Poniższa lista obejmuje modele urządzeń firmy Samsung, które nie obsługują systemu Knox i są rejestrowane jako urządzenia z natywnym systemem Android przez aplikację Portal firmy dla systemu Android:
 
 | **Nazwa urządzenia** | **Numery modelu urządzenia** |
 | --- | --- |

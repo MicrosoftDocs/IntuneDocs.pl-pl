@@ -5,20 +5,20 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 07/07/2017
+ms.date: 01/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
-ms.reviewer: oldang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bc907e5671fcd6c7b777f3bc95a533503d85ca64
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: a691786ce2ee975086899844b285a91f676aa71f
+ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -112,6 +112,14 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 Zostanie wyświetlony monit o hasła **KeyStorePassword** i **KeyPassword**. Wprowadź poświadczenia użyte do utworzenia pliku magazynu kluczy.
 
 Opakowana aplikacja zostanie wygenerowana i zapisana wraz z plikiem dziennika w określonej ścieżce danych wyjściowych.
+
+## <a name="how-often-should-i-rewrap-my-android-application-with-the-intune-app-wrapping-tool"></a>Jak często należy ponownie opakowywać aplikację systemu Android za pomocą narzędzia opakowującego aplikacje usługi Intune?
+Główne scenariusze, w których trzeba będzie ponownie opakować aplikacje:
+* Sama aplikacja wydała nową wersję.
+* Narzędzie opakowujące aplikacje usługi Intune dla systemu Android wydało nową wersję, która oferuje kluczowe poprawki usterek i nowe funkcje zasad ochrony aplikacji, przeznaczone specjalnie dla usługi Intune. Taka sytuacja występuje co 6–8 tygodni za pośrednictwem repozytorium GitHub dla [narzędzia opakowującego aplikacje usługi Intune dla systemu Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
+
+Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania: 
+* Obsługa certyfikatów podpisywania używanych podczas procesu kompilacji, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps)
 
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji
 System Android wymaga podpisania wszystkich aplikacji za pomocą ważnego certyfikatu przed zainstalowaniem ich na urządzeniach z systemem Android.

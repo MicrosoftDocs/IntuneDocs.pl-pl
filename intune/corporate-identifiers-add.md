@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 01/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1095ef736488754296eca4f21b2bf10226b43847
-ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
+ms.openlocfilehash: a278a0ca4614611685420cfeed898270926cd9ca
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -27,13 +27,15 @@ ms.lasthandoff: 01/03/2018
 
 Jako administrator usługi Intune możesz określić urządzenia jako należące do firmy, aby doprecyzować zarządzanie i identyfikację. Usługa Intune może wykonywać dodatkowe zadania zarządzania i zbierać dodatkowe informacje, takie jak pełny numer telefonu i spis aplikacji z urządzeń należących do firmy. Można również ustawić ograniczenia urządzenia, aby zablokować rejestrację przez urządzenia, które nie należą do firmy.
 
-Urządzenie jest identyfikowane jako należące do firmy w przypadku spełnienia dowolnego z poniższych warunków:
+Podczas rejestracji usługa Intune automatycznie przypisuje stan „należące do firmy” do urządzeń spełniających następujące warunki:
 
 - Zarejestrowano je przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) (wszystkie platformy)
 - Zarejestrowano je przy użyciu programu [Device Enrollment Program](device-enrollment-program-enroll-ios.md) firmy Apple lub przy użyciu narzędzi [Apple School Manager](apple-school-manager-set-up-ios.md) albo [Apple Configurator](apple-configurator-enroll-ios.md) (tylko system iOS)
 - [Zidentyfikowano je jako należące do firmy przed zarejestrowaniem](#identify-corporate-owned-devices-with-imei-or-serial-number) przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
 - Zarejestrowano je w usłudze Azure Active Directory lub pakiecie Enterprise Mobility + Security jako urządzenie z systemem Windows 10 Enterprise
-- Z właściwości urządzenia wynika, że [jest ono własnością firmy](#change-device-ownership)
+- Na [liście właściwości urządzenia](#change-device-ownership) ustawiono je jako firmowe
+
+Po zarejestrowaniu można [zmieniać ustawienie własności](#change-device-ownership) z **Osobiste** na **Firmowe**.
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identyfikowanie urządzeń należących do firmy przy użyciu numeru IMEI lub numeru seryjnego
 

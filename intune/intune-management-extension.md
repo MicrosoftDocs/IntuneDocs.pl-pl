@@ -14,11 +14,11 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 237d6d090d0aae7f9a0853839b72d55618f4607e
-ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
+ms.openlocfilehash: 1bdd9002c70ea8d9e8b16b73d4d8416eeec3341b
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 Rozszerzenie do zarządzania usługi Intune pozwala przekazywać skrypty programu PowerShell w usłudze Intune w celu uruchamiania ich na urządzeniach z systemem Windows 10. Rozszerzenie do zarządzania uzupełnia możliwości funkcji zarządzania urządzeniami mobilnymi (MDM, Mobile Device Management) z systemem Windows 10 i ułatwia migrację do nowoczesnego zarządzania.
@@ -57,7 +57,7 @@ Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
   ![Blok Dodaj skrypt programu PowerShell](./media/mgmt-extension-assignments.png)
  
 6. Wybierz pozycję **Wybierz grupy**, aby wyświetlić listę dostępnych grup usługi Azure AD. 
-7. Wybierz grupy, a następnie kliknij przycisk **Wybierz**, aby przypisać zasady do wybranych grup.
+7. Wybierz co najmniej jedną grupę zawierającą użytkowników, których urządzenia będą otrzymywać skrypt, a następnie kliknij przycisk **Wybierz**, aby przypisać zasady do wybranych grup.
 
 Rozszerzenie do zarządzania usługi Intune synchronizuje informacje z usługą Intune co godzinę. Po przypisaniu zasad do grup usługi Azure AD skrypt programu PowerShell będzie uruchamiany, a wyniki jego działania będą zgłaszane. 
  

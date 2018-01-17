@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6cf2d958e5775281cca7878c54b2c9d9f593f509
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 485517f589649bdb805f94503df716b82de17b06
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="common-ways-to-use-intune"></a>Typowe sposoby korzystania z usługi Intune
 
@@ -82,7 +82,7 @@ Jako administrator możesz wymagać od użytkowników uzyskiwania dostępu do us
 ## <a name="issue-corporate-owned-phones-to-your-employees"></a>Wydawanie firmowych telefonów pracownikom
 Obecnie wielu pracowników korzysta z technologii mobilnych, przez co wydajność pracy na urządzeniach przenośnych staje się niezbędna dla utrzymania konkurencyjności. Pracownicy ci potrzebują bezproblemowego dostępu do wszystkich aplikacji i danych firmowych, w dowolnym miejscu i czasie. Należy się upewnić, że dane firmowe są bezpieczne, a koszty administracyjne niskie.  
 
-Usługa Intune oferuje [rozwiązania udostępniania i zarządzania zbiorczego](device-enrollment.md) ([portal klasyczny](/intune-classic/deploy-use/manage-corporate-owned-devices)) zintegrowane z głównymi platformami zarządzania urządzeniami firmowymi na rynku, w tym programem Device Enrollment Program firmy Apple i platformą zabezpieczeń urządzeń mobilnych Samsung KNOX. Scentralizowane tworzenie konfiguracji urządzeń za pomocą usługi Intune sprawia, że inicjowanie obsługi firmowych urządzeń może być wysoce zautomatyzowane.  
+Usługa Intune oferuje [rozwiązania do zbiorczej obsługi administracyjnej i zarządzania](device-enrollment.md) ([portal klasyczny](/intune-classic/deploy-use/manage-corporate-owned-devices)) zintegrowane z głównymi platformami zarządzania urządzeniami firmowymi na rynku, w tym programem Device Enrollment Program firmy Apple i platformą zabezpieczeń urządzeń mobilnych Samsung Knox. Scentralizowane tworzenie konfiguracji urządzeń za pomocą usługi Intune sprawia, że inicjowanie obsługi firmowych urządzeń może być wysoce zautomatyzowane.  
 
 Wyobraź sobie: wręczasz pracownikowi nieotwarte pudełko z telefonem iPhone. Pracownik go włącza i zostaje przeprowadzony przez firmowy przepływ konfiguracji, podczas którego musi się uwierzytelnić. Telefon iPhone jest bezproblemowo konfigurowany z użyciem [zasad zabezpieczeń](device-profiles.md) ([portal klasyczny](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)).
 

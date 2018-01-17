@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/10/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: dd211b9dd8b09f2e3eab570eab48664fab55e3df
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: a83d938abbaefe35d028e50ed13c422b97bc3987
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android
 
@@ -30,6 +30,7 @@ Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, kor
 - [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 - [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
 - [Wysyłanie błędów rejestracji do działu pomocy technicznej Twojej firmy](send-enrollment-errors-to-your-it-admin-android.md)
+- [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-android.md)
 - [Należy zaktualizować urządzenie z systemem Android](you-need-to-update-your-android-device.md)
 - [Urządzenie nie jest zgodne z maksymalną wersją systemu operacyjnego](your-android-version-isnt-yet-supported.md)
 - [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
@@ -41,3 +42,4 @@ Niektóre problemy dotyczące urządzeń z systemem Android można usunąć, kor
 - [Urządzenie wydaje się szyfrowane, ale aplikacja Portal Firmy informuje, że jest inaczej](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 - [Został wyświetlony monit o przeprowadzenie instalacji aplikacji Device Threat Protection na urządzeniu z systemem Android](you-are-prompted-to-install-mtd-android.md)
 - [Należy rozwiązać problem zagrożenia wykrytego przez aplikację Device Threat Protection na urządzeniu z systemem Android](you-need-to-resolve-a-threat-found-by-mtd-android.md)
+- [Naprawianie błędów dotyczących urządzeń z systemem Samsung Knox](samsung-knox-errors-android.md)

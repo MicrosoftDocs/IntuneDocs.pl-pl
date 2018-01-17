@@ -1,12 +1,12 @@
 ---
-title: "Stosowanie zasad zgodności do urządzeń zarządzanych za pomocą narzędzia Jamf"
+title: "Wymuszanie zasad zgodności na urządzeniach zarządzanych za pomocą narzędzia Jamf"
 titlesuffix: Azure portal
 description: "Wykorzystaj zgodność w celu ułatwienia zabezpieczania urządzeń zarządzanych za pomocą narzędzia Jamf."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/05/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,22 +15,17 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fd9a9444d5a91a44672d9e0a60fb6da961883986
-ms.sourcegitcommit: 548b9e6c1e50074a5ffb89160ae23ee3caa5ba65
+ms.openlocfilehash: c72de87b87775155672994163140e342b7ba99b4
+ms.sourcegitcommit: 000684953cbb3ceae0e2bcaa51186c9221f7aa86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
 
 |Dotyczy: usługa Intune w witrynie Azure Portal |
 |--|
 |Szukasz dokumentacji dotyczącej usługi Intune w portalu klasycznym? [Przejdź tutaj](/intune/introduction-intune?toc=/intune-classic/toc.json).|
-| |
-
-|Aktualnie w prywatnej wersji zapoznawczej|
-|--|
-|Funkcje opisane w tym temacie są aktualnie dostępne jedynie dla klientów prywatnej wersji zapoznawczej. Ten komunikat zostanie usunięty po udostępnieniu funkcji wszystkim klientom.|
 | |
 
 W celu zapewnienia, że użytkownicy końcowi spełniają wymagania obowiązujące w organizacji, można wykorzystać usługę Azure Active Directory i zasady dostępu warunkowego usługi Microsoft Intune. Te zasady można stosować na komputerach Mac, które są [zarządzane za pomocą narzędzia Jamf Pro](conditional-access-integrate-jamf.md). Wymaga to dostępu do konsol usługi Intune i narzędzia Jamf Pro.
@@ -48,14 +43,14 @@ Aplikację Portal firmy dla systemu macOS w narzędziu Jamf Pro należy wdroży�
 2. Otwórz program Jamf Pro, a następnie przejdź do opcji **Zarządzanie komputerem** > **Pakiety**.
 3. Utwórz nowy pakiet z aplikacją Portal firmy dla systemu macOS, a następnie kliknij przycisk **Zapisz**.
 4. Otwórz opcję **Komputery** > **Zasady**, a następnie wybierz pozycję **Nowy**.
-5. Użyj ładunku **Ogólne**, aby skonfigurować ustawienia zasad. Te ustawienia powinny być następujące: 
+5. Użyj ładunku **Ogólne**, aby skonfigurować ustawienia zasad. Te ustawienia powinny być następujące:
    - Wyzwalacz: wybierz opcję **Ukończenie rejestracji** i **Cykliczne zaewidencjonowanie**
    - Częstotliwość wykonywania: wybierz opcję **Raz na komputerze**
 6. Wybierz ładunek **Pakiety** i kliknij przycisk **Konfiguruj**.
 7. Aby wybrać pakiet z aplikacją Portal firmy, kliknij przycisk **Dodaj**.
 8. Wybierz opcję **Zainstaluj** z menu podręcznego **Akcje**.
 9. Skonfiguruj ustawienia pakietu.
-10. Kliknij kartę **Zakres**, aby określić, na których komputerach należy zainstalować aplikację Portal firmy. Kliknij przycisk**Save (Zapisz)**. W urządzeniach objętych zakresem zasady zostaną uruchomione przy następnym wystąpieniu na komputerze wybranego wyzwalacza spełniającego kryteria ładunku **Ogólne**.
+10. Kliknij kartę **Zakres**, aby określić, na których komputerach należy zainstalować aplikację Portal firmy. Kliknij polecenie **Zapisz**. W urządzeniach objętych zakresem zasady zostaną uruchomione przy następnym wystąpieniu na komputerze wybranego wyzwalacza spełniającego kryteria ładunku **Ogólne**.
 
 ## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Tworzenie zasad narzędzia Jamf Pro, które umożliwią użytkownikom rejestrowanie swoich urządzeń w usłudze Azure Active Directory
 
@@ -70,7 +65,7 @@ Użytkownicy końcowi muszą za pośrednictwem usługi Jamf Self Service uruchom
 1. W programie Jamf Pro przejdź do opcji **Komputery** > **Zasady** i utwórz nowe zasady na potrzeby rejestracji urządzenia.
 2. Skonfiguruj ładunek **Integracja z usługą Intune**, łącznie z określeniem wyzwalacza i częstotliwości wykonywania.
 3. Kliknij kartę **Zakres** i ustaw zakres zasad dla wszystkich urządzeń docelowych.
-4. Kliknij kartę **Samoobsługa**, aby udostępnić zasady w usłudze Jamf Self Service. Dołącz zasady do kategorii **Zgodność urządzeń**. Kliknij przycisk**Save (Zapisz)**.
+4. Kliknij kartę **Samoobsługa**, aby udostępnić zasady w usłudze Jamf Self Service. Dołącz zasady do kategorii **Zgodność urządzeń**. Kliknij polecenie **Zapisz**.
 
 ## <a name="next-steps"></a>Następne kroki
 

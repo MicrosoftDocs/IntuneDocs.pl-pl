@@ -3,10 +3,10 @@ title: "Integracja kontroli dostępu do sieci z usługą Intune"
 titlesuffix: Azure portal
 description: "Integracja kontroli dostępu do sieci (NAC) z usługą Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: bruceperlerMS
+ms.author: bruceper
 manager: angrobe
-ms.date: 06/23/2017
+ms.date: 12/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d75d996f4166fb2a760d1ccb518ca7a228c1a0d
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 0379f2843b77b0d7ed6a54065e14f91946398d65
+ms.sourcegitcommit: 061dab899e3fbc59b0128e2b4fbdf8ebf80afddd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -33,40 +33,34 @@ Rozwiązania NAC są odpowiedzialne za sprawdzanie stanu rejestracji i zgodnośc
 
 Jeśli urządzenie zostało zarejestrowane i jest zgodne z usługą Intune, rozwiązanie NAC powinno zezwolić na dostęp urządzenia do zasobów firmy. Użytkownikom można na przykład zezwolić lub nie zezwolić na dostęp do zasobów firmowej sieci Wi-Fi lub VPN.
 
+## <a name="feature-behaviors"></a>Zachowania funkcji
+
+Urządzenia objęte aktywną synchronizacją z usługą Intune nie mogą przechodzić ze stanów **Zgodne** / **Niezgodne** na **Niezsynchronizowane** (lub **Nieznane**). Stan **Nieznane** jest zarezerwowany dla nowo zarejestrowanych urządzeń, które nie zostały jeszcze ocenione pod kątem zgodności.
+
+W przypadku urządzeń z zablokowanym dostępem do zasobów usługa blokowania powinna przekierować wszystkich użytkowników do [portalu zarządzania](https://portal.manage.microsoft.com), aby ustalić, dlaczego urządzenie zostało zablokowane.  Gdy użytkownicy odwiedzą tę stronę, ich urządzenia zostaną synchronicznie ponownie ocenione pod kątem zgodności.
+
 ## <a name="nac-and-conditional-access"></a>Kontrola dostępu do sieci i dostęp warunkowy
 
-Rozwiązania NAC współpracują z rozwiązaniami dostępu warunkowego w celu zapewnienia decyzji dotyczących kontroli dostępu.
-
-- Zobacz [Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md), aby uzyskać więcej szczegółów.
+Rozwiązanie NAC współpracuje z funkcją dostępu warunkowego w celu umożliwienia podejmowania decyzji dotyczących kontroli dostępu. Aby uzyskać więcej szczegółów, zobacz temat [Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="how-the-nac-integration-works"></a>Jak działa integracja NAC
 
-Poniżej przedstawiono omówienie działania integracji NAC z usługą Intune. Trzy pierwsze kroki objaśniają proces dołączania. Po zintegrowaniu rozwiązania NAC z usługą Intune kroki 4–9 opisują bieżące działanie.
+Poniżej przedstawiono omówienie działania integracji kontroli dostępu do sieci w przypadku integracji z usługą Intune. W pierwszych trzech krokach (1–3) wyjaśniono proces dołączania. Po zintegrowaniu rozwiązania NAC z usługą Intune kroki 4–9 opisują bieżące działanie.
 
 ![Jak rozwiązanie NAC współpracuje z usługą Intune](./media/ca-intune-common-ways-2.png)
 
-1.  Zarejestruj rozwiązanie partnerskie NAC za pomocą usługi Azure Active Directory (AAD) i przydziel uprawnienia delegowane do interfejsu API NAC usługi Intune.
-
-2.  Skonfiguruj rozwiązanie partnerskie NAC za pomocą odpowiednich ustawień z uwzględnieniem adresu URL odnajdowania usługi Intune.
-
-3.  Skonfiguruj rozwiązanie partnerskie NAC w celu uwierzytelnienia certyfikatu.
-
-4.  Użytkownik łączy się z punktem dostępu firmowej sieci Wi-Fi lub wysyła żądanie połączenia z siecią VPN.
-
-5.  Rozwiązanie partnerskie NAC przekazuje informacje o urządzeniu do usługi Intune i pyta usługę Intune o stan rejestracji i zgodności urządzenia.
-
-6.  Jeśli urządzenie nie jest zgodne lub nie zostało zarejestrowane, rozwiązanie partnerskie NAC instruuje użytkownika, aby zarejestrował urządzenie lub rozwiązał problem z jego zgodnością.
-
-7.  Urządzenie próbuje ponownie zweryfikować swój stan zgodności i/lub rejestracji.
-
-8.  Gdy urządzenie zostanie zarejestrowane i będzie zgodne, rozwiązanie partnerskie NAC pobiera ten stan z usługi Intune.
-
-9.  Połączenie jest pomyślnie ustanawiane, co umożliwia urządzeniu dostęp do zasobów firmy.
+1. Zarejestruj rozwiązanie partnerskie NAC za pomocą usługi Azure Active Directory (AAD) i przydziel uprawnienia delegowane do interfejsu API NAC usługi Intune.
+2. Skonfiguruj rozwiązanie partnerskie NAC za pomocą odpowiednich ustawień z uwzględnieniem adresu URL odnajdowania usługi Intune.
+3. Skonfiguruj rozwiązanie partnerskie NAC w celu uwierzytelnienia certyfikatu.
+4. Użytkownik łączy się z punktem dostępu firmowej sieci Wi-Fi lub wysyła żądanie połączenia z siecią VPN.
+5. Rozwiązanie partnerskie NAC przekazuje informacje o urządzeniu do usługi Intune i pyta usługę Intune o stan rejestracji i zgodności urządzenia.
+6. Jeśli urządzenie nie jest zgodne lub nie zostało zarejestrowane, rozwiązanie partnerskie NAC instruuje użytkownika, aby zarejestrował urządzenie lub rozwiązał problem z jego zgodnością.
+7. Urządzenie próbuje ponownie zweryfikować stan zgodności i/lub rejestracji.
+8. Gdy urządzenie zostanie zarejestrowane i będzie zgodne, rozwiązanie partnerskie NAC pobiera ten stan z usługi Intune.
+9. Połączenie jest pomyślnie ustanawiane, co umożliwia urządzeniu dostęp do zasobów firmy.
 
 ## <a name="next-steps"></a>Następne kroki
 
--   [Integracja platformy Cisco ISE z usługą Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
-
--   [Integracja modułu Citrix NetScaler z usługą Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
-
--   [Integracja rozwiązania HP Aruba Clear Pass z usługą Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=23757)
+- [Integracja platformy Cisco ISE z usługą Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
+- [Integracja modułu Citrix NetScaler z usługą Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integracja rozwiązania HP Aruba Clear Pass z usługą Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=23757)

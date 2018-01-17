@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b37cf4c93d3eb7e56be3716de6b1b5ffb373673
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b55c5d588eb366487a9e1594a46f88551e0b6ee2
+ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune
 
@@ -30,7 +30,7 @@ Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządz
 Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządzeń, muszą oni istnieć w witrynie Azure Portal. Aby możliwe było zapewnienie optymalnego poziomu bezpieczeństwa, użytkownik DEM nie powinien być jednocześnie administratorem usługi Intune.
 
 >[!NOTE]
->Metoda rejestracji za pomocą menedżera rejestracji urządzeń nie może być używana razem z [metodą rejestracji za pośrednictwem asystenta ustawień programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) bądź [metodą rejestracji bezpośredniej](ios-direct-enrollment-in-microsoft-intune.md) ani z [metodą rejestracji za pomocą programu Device Enrollment Program](ios-device-enrollment-program-in-microsoft-intune.md).
+>Metoda rejestracji przy użyciu menedżera rejestracji urządzeń nie może być stosowana razem z [metodą rejestracji z użyciem asystenta ustawień programu Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md), [metodą rejestracji bezpośredniej](ios-direct-enrollment-in-microsoft-intune.md), metodą rejestracji za pośrednictwem systemu macOS ani z [metodą rejestracji za pomocą programu DEP](ios-device-enrollment-program-in-microsoft-intune.md).
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Przykład scenariusza menedżera rejestracji urządzeń
 

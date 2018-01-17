@@ -3,8 +3,8 @@ title: "Rejestracja zbiorcza urządzeń z systemem Windows 10"
 titlesuffix: Azure portal
 description: "Tworzenie pakietu rejestracji zbiorczej dla usługi Microsoft Intune"
 keywords: 
-author: NathBarn
-ms.author: NathBarn
+author: Erikje
+ms.author: erikje
 manager: angrobe
 ms.date: 10/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 7738935675595bbdd3ba1f6411a78a2646894073
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: f24bf5f8767763c3ca56d51127ab1d3f484e51d8
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -29,8 +29,6 @@ Jako administrator możesz dołączyć dużą liczbę nowych urządzeń z system
 Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady usługi Intune oraz wymagane aplikacje. Scenariusze samoobsługowe i scenariusze użycia witryny internetowej Portal firmy nie są w tej chwili obsługiwane.
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Wymagania wstępne dotyczące rejestracji zbiorczej urządzeń z systemem Windows
-
-Rejestrowanie zbiorcze dla urządzeń z systemem Windows wymaga następujących elementów:
 
 - Urządzenia z aktualizacją systemu Windows 10 dla twórców lub nowszą wersją
 - [Automatyczne rejestrowanie urządzeń z systemem Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
@@ -43,15 +41,15 @@ Rejestrowanie zbiorcze dla urządzeń z systemem Windows wymaga następujących 
 2. Otwórz aplikację **Windows Configuration Designer** i wybierz opcję **Provision desktop devices** (Aprowizuj urządzenia stacjonarne).
 ![Zrzut ekranu przedstawiający wybór opcji aprowizacji urządzeń stacjonarnych w aplikacji Windows Configuration Designer](media/bulk-enroll-select.png)
 
-3. Nastąpi wyświetlenie okna tekstowego **New project** (Nowy projekt), w którym należy podać następujące dane:
+3. Zostanie wyświetlone okno dialogowe **New project** (Nowy projekt), w którym należy podać następujące dane:
   - **Name** (Nazwa) — nazwa projektu
-  - **Project folder** (Folder projektu) — lokalizacja, w której zostanie zapisany projekt
+  - **Project folder** (Folder projektu) — lokalizacja zapisu dla projektu
   - **Description** (Opis) — opcjonalny opis projektu ![Zrzut ekranu przedstawiający proces wpisywania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4.  Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%% SERIAL%%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.
 ![Zrzut ekranu przedstawiający proces określania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](media/bulk-enroll-device.png)
 
-5.  Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli to ustawienie nie zostanie skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.
+5.  Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli urządzenia sieciowe nie zostaną skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.
 ![Zrzut ekranu przedstawiający włączanie w aplikacji Windows Configuration Designer obsługi sieci Wi-Fi, w tym ustawienia SSID sieci i typu sieci](media/bulk-enroll-network.png)
 
 6.  Wybierz opcję **Enroll in Azure AD** (Zarejestruj w usłudze Azure AD), wypełnij pole **Bulk Token Expiry** (Data wygaśnięcia tokenu zbiorczego), a następnie wybierz przycisk **Get Bulk Token** (Uzyskaj token zbiorczy).
@@ -77,7 +75,7 @@ Rejestrowanie zbiorcze dla urządzeń z systemem Windows wymaga następujących 
 
  Aby uzyskać instrukcje krok po kroku dotyczące stosowania pakietu aprowizacyjnego, zobacz artykuł [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package) (Stosowanie pakietu aprowizacyjnego).
 
-3. Po zastosowaniu pakietu urządzenie zostanie automatycznie uruchomione ponownie w ciągu 1 minuty.
+3. Po zastosowaniu pakietu urządzenie zostanie automatycznie uruchomione ponownie w ciągu jednej minuty.
  ![Zrzut ekranu przedstawiający proces określania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](media/bulk-enroll-add.png)
 
 4. Po ponownym uruchomieniu urządzenie nawiązuje połączenie z usługą Azure Active Directory i zostaje zarejestrowane w usłudze Microsoft Intune.
@@ -88,14 +86,14 @@ Rejestrowanie zbiorcze dla urządzeń z systemem Windows wymaga następujących 
 Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systemem Windows. Problemy z aprowizowaniem mogą wymagać przywrócenia w urządzeniu ustawień fabrycznych lub odzyskania urządzenia z obrazu rozruchowego. Poniżej opisano przykładowe przyczyny niepowodzeń aprowizacji:
 
 - Pakiet aprowizacyjny, który próbuje przyłączyć urządzenie do domeny usługi Active Directory lub dzierżawy usługi Azure Active Directory, która nie tworzy konta lokalnego, może spowodować, że urządzenie będzie nieosiągalne w przypadku niepowodzenia procesu przyłączania do domeny w wyniku braku łączności sieciowej.
-- Skrypty uruchamiane przez pakiet aprowizacyjny zostają uruchomione w kontekście systemowym i mogą wprowadzać dowolne zmiany w systemie plików urządzenia i jego konfiguracji. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub przywrócenia ustawień fabrycznych.
+- Skrypty są uruchamiane przez pakiet aprowizacyjny w kontekście systemu. Skrypty mogą wprowadzać dowolne zmiany w systemie plików i konfiguracji urządzenia. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub przywrócenia ustawień fabrycznych.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problemy z rejestracją zbiorczą i Portalem firmy
 Jeśli użytkownik próbuje zarejestrować urządzenie przy użyciu Portalu firmy, ale zostało ono wcześniej zarejestrowane zbiorczo, otrzyma ostrzeżenie, że jego urządzenie wymaga dalszych akcji: konfiguracji albo rejestracji. Urządzenie jest zarejestrowane, ale rejestracja nie jest rozpoznawana przez witrynę internetową lub aplikację Portal firmy.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Rejestrowanie zbiorcze za pomocą sieci Wi-Fi 
 
-W przypadku urządzeń zarejestrowanych zbiorczo nie można używać certyfikatów ukierunkowanych na użytkowników i wdrożenia sieci Wi-Fi. Aby zarządzać tymi połączeniami, trzeba będzie używać [certyfikatów na poziomie urządzeń](certificates-configure.md). 
+W przypadku urządzeń zarejestrowanych zbiorczo nie można używać certyfikatów ukierunkowanych na użytkowników i wdrożenia sieci Wi-Fi. Aby zarządzać tymi połączeniami, trzeba użyć [certyfikatów na poziomie urządzeń](certificates-configure.md). 
 
 ### <a name="conditional-access"></a>Dostęp warunkowy
 Dostęp warunkowy nie jest dostępny dla urządzeń z systemem Windows zarejestrowanych zbiorczo.
