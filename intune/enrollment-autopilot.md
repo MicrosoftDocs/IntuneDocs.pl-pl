@@ -2,8 +2,8 @@
 title: "Rejestrowanie urządzeń z systemem Windows za pomocą programu Windows AutoPilot Deployment"
 description: "Dowiedz się, jak zarejestrować nowe urządzenia z systemem Windows 10 za pomocą programu Windows AutoPilot Deployment."
 keywords: 
-author: dougeby
-ms.author: dougeby
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 11/08/2017
 ms.topic: article
@@ -11,17 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 736eda24e355024e2abadd57206c0f0423e6d4b4
-ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
+ms.openlocfilehash: cbccff7ac58c98e85f5a038950feb5bd6590922b
+ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Rejestrowanie urządzeń z systemem Windows za pomocą programu Windows AutoPilot Deployment
-Program Windows AutoPilot Deployment upraszcza aprowizowanie urządzeń. Obecnie tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Sporo czasu może też zajmować stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu AutoPilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem AutoPilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami itp. na urządzeniach po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows AutoPilot (Przegląd rozwiązania Windows AutoPilot)](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
+Program Windows AutoPilot Deployment upraszcza aprowizowanie urządzeń. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu AutoPilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem AutoPilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami itp. na urządzeniach po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows AutoPilot (Przegląd rozwiązania Windows AutoPilot)](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-- [Urządzenia zarejestrowane w Twojej organizacji](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot#registering-devices-to-your-organization)
+- [Urządzenia zarejestrowane w Twojej organizacji](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-10-autopilot#device-registration-and-oobe-customization)
 - [Włączona funkcja automatycznej rejestracji w systemie Windows](https://docs.microsoft.com/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#enable-windows-10-automatic-enrollment)
 - [Subskrypcja usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -30,8 +30,8 @@ Zsynchronizuj swoje zarejestrowane urządzenia z usługą Intune, aby można je 
 
 1. Zaloguj się do platformy [Azure](https://portal.azure.com/).
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
-4. W bloku **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Urządzenia**.
+3. W obszarze **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+4. W obszarze **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Urządzenia**.
 5. Kliknij pozycję **Synchronizuj**, aby zaimportować swoje zarejestrowane urządzenia. Zostanie wyświetlony komunikat o synchronizacji w toku.
 6. Odśwież widok, aby zobaczyć nowe urządzenia. Proces może potrwać kilka minut, w zależności od tego, ile urządzeń jest synchronizowanych.  
 
@@ -39,8 +39,8 @@ Zsynchronizuj swoje zarejestrowane urządzenia z usługą Intune, aby można je 
 Profile wdrażania rozwiązania AutoPilot służą do konfigurowania urządzeń z rozwiązaniem AutoPilot.
 1. Zaloguj się do platformy [Azure](https://portal.azure.com/). 
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
-4. W bloku **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Profile wdrażania**.
+3. W obszarze **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+4. W obszarze **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Profile wdrażania**.
 5. Kliknij pozycję **Utwórz profil** i wybierz nazwę oraz opcjonalny opis. 
 6. Jako **Typ sprzężenia** wybierz pozycję **Dołączono do usługi Azure AD**.
 7. Dla pozycji **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** skonfiguruj następujące opcje, a następnie kliknij przycisk **OK**: 
@@ -62,22 +62,22 @@ Profile wdrażania rozwiązania AutoPilot służą do konfigurowania urządzeń 
 Możesz wyświetlić alert dla urządzeń nieprzypisanych w programie Windows AutoPilot, aby sprawdzić, ile urządzeń z programu AutoPilot nie ma przypisanych profilów wdrażania rozwiązania AutoPilot. Skorzystaj z informacji w alercie, aby utworzyć profile i przypisać je do nieprzypisanych urządzeń. Po kliknięciu alertu zostanie wyświetlona pełna lista urządzeń w programie Windows AutoPilot. 
 1. Zaloguj się do platformy [Azure](https://portal.azure.com/). 
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
-4. Wybierz pozycję **Przegląd**, aby wyświetlić alert. Kliknij alert, aby wyświetlić listę urządzeń w programie AutoPilot.  
+3. W obszarze **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+4. Aby wyświetlić alert, wybierz pozycję **Przegląd**. Kliknij alert, aby wyświetlić listę urządzeń w programie AutoPilot.  
 
 ## <a name="assign-an-autopilot-deployment-profile"></a>Przypisywanie profilu wdrażania rozwiązania AutoPilot
 Po utworzeniu profilów wdrażania rozwiązania AutoPilot można przypisać je do wybranych urządzeń.
 
 1. Zaloguj się do platformy [Azure](https://portal.azure.com/). 
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+3. W obszarze **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
 4. W bloku **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Urządzenia**.
 5. Wybierz urządzenia, do których chcesz przypisać profil wdrażania. Aby łatwo znaleźć urządzenia bez przypisanego profilu, możesz przefiltrować listę według kolumny **Stan**. 
 6. Kliknij pozycję **Przypisz profil**, wybierz profil wdrażania rozwiązania AutoPilot, a następnie kliknij pozycję **Przypisz**. Zostanie wyświetlony komunikat o przypisywaniu w toku.
 7. Odśwież widok, aby zobaczyć, że profil został przypisany do urządzeń. Proces może potrwać kilka minut, w zależności od tego, ile urządzeń zostało wybranych. 
 
 > [!Note]
-> Nowy profil zostanie przypisany do urządzenia. Jednak profil nie zostanie zastosowany do urządzeń już zarejestrowanych w usłudze Intune, dopóki nie zostaną zresetowane i ponownie zarejestrowane.
+> Nowy profil zostanie przypisany do urządzenia. W przypadku urządzeń już zarejestrowanych w usłudze Intune profil zostaje zastosowany po zresetowaniu i ponownym zarejestrowaniu urządzenia.
 
 ### <a name="assign-a-different-autopilot-deployment-profile"></a>Przypisywanie innego profilu wdrażania rozwiązania AutoPilot
 Jeśli po przypisaniu do urządzenia profilu wdrażania rozwiązania AutoPilot zdecydujesz, że chcesz do niego przypisać inny profil, przypisz nowy profil do urządzenia.  
@@ -86,8 +86,8 @@ Jeśli po przypisaniu do urządzenia profilu wdrażania rozwiązania AutoPilot z
 Po utworzeniu profilu wdrażania rozwiązania AutoPilot możesz edytować niektóre jego części.   
 1. Zaloguj się do platformy [Azure](https://portal.azure.com/). 
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
-4. W bloku **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Profile wdrażania**. 
+3. W obszarze **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
+4. W obszarze **Rejestracja w systemie Windows** w sekcji **Program wdrażania rozwiązania Windows AutoPilot** wybierz pozycję **Profile wdrażania**. 
 5. Wybierz profil, który chcesz edytować. 
 6. Kliknij pozycję **Właściwości** po lewej stronie, aby zmienić nazwę lub opis profilu wdrażania. Po wprowadzeniu zmian kliknij pozycję **Zapisz**. 
 7. Kliknij pozycję **Ustawienia**, aby wprowadzić zmiany do ustawień trybu OOBE. Po wprowadzeniu zmian kliknij pozycję **Zapisz**. 
@@ -103,4 +103,4 @@ Jeśli nie interesuje Cię zarządzanie urządzeniami przenośnymi, z rozwiązan
 - Synchronizować przypisań profilów wykonanych w innym portalu.
 
 ## <a name="next-steps"></a>Następne kroki
-Po skonfigurowaniu rozwiązania Windows AutoPilot dla zarejestrowanych urządzeń z systemem Windows 10 dowiedz się, jak zarządzać tymi urządzeniami. Aby poznać szczegóły, zobacz [Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?](https://docs.microsoft.com/intune/device-management)
+Po skonfigurowaniu rozwiązania Windows AutoPilot dla zarejestrowanych urządzeń z systemem Windows 10 dowiedz się, jak zarządzać tymi urządzeniami. Aby uzyskać więcej informacji, zobacz artykuł [Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?](https://docs.microsoft.com/intune/device-management)

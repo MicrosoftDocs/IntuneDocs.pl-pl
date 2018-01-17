@@ -1,4 +1,4 @@
-- name: Wprowadzenie
+- name: Przegląd
   href: introduction-intune.md
   expanded: true
   items:
@@ -22,24 +22,13 @@
           href: whats-new-archive.md
         - name: Archiwum nowości (portal klasyczny)
           href: whats-new-archive-classic.md
-    - name: Architektura wysokiego poziomu
-      href: high-level-architecture.md
-    - name: Cykle życia urządzeń i aplikacji
-      href: introduction-device-app-lifecycles.md
-      items:
-        - name: Cykl wsparcia technicznego urządzenia
-          href: device-lifecycle.md
-        - name: Cykl wsparcia technicznego aplikacji
-          href: app-lifecycle.md
-    - name: Typowe scenariusze
-      href: common-scenarios.md
     - name: Opis usługi
       href: microsoft-intune-service-description.md
     - name: Znane problemy
       href: known-issues.md
     - name: Uzyskiwanie pomocy technicznej
       href: get-support.md
-- name: Wprowadzenie do usługi Intune
+- name: Przewodniki Szybki start
   href: get-started-evaluation.md
   items:
     - name: Nawigowanie po witrynie Azure Portal
@@ -54,6 +43,31 @@
       href: get-started-enroll.md
     - name: Przypisywanie aplikacji
       href: get-started-apps.md
+- name: Przewodniki po wdrażaniu scenariuszy
+  items:
+    - name: Ochrona usługi Exchange Online
+      href: exchange-online-protect.md
+    - name: Zmniejszenie kosztów pomocy technicznej
+      href: password-reset.md
+    - name: Zapobieganie dostępowi bez autoryzacji
+      href: data-outside-protect.md
+    - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
+      href: data-leak-prevention.md
+    - name: Porównanie zarządzania urządzeniami mobilnymi i zarządzania aplikacjami mobilnymi
+      href: byod-technology-decisions.md
+- name: Pojęcia
+  items:
+    - name: Architektura wysokiego poziomu
+      href: high-level-architecture.md
+    - name: Cykle życia urządzeń i aplikacji
+      href: introduction-device-app-lifecycles.md
+      items:
+        - name: Cykl wsparcia technicznego urządzenia
+          href: device-lifecycle.md
+        - name: Cykl wsparcia technicznego aplikacji
+          href: app-lifecycle.md
+    - name: Typowe scenariusze
+      href: common-scenarios.md
 - name: Planowanie wdrożenia
   items:
     - name: Przewodnik planowania
@@ -79,18 +93,6 @@
           href: planning-guide-test-validation.md
         - name: Dodatkowe zasoby
           href: planning-guide-resources.md
-    - name: Przewodniki po wdrażaniu scenariuszy
-      items:
-        - name: Ochrona usługi Exchange Online
-          href: exchange-online-protect.md
-        - name: Zmniejszenie kosztów pomocy technicznej
-          href: password-reset.md
-        - name: Zapobieganie dostępowi bez autoryzacji
-          href: data-outside-protect.md
-        - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
-          href: data-leak-prevention.md
-        - name: Porównanie zarządzania urządzeniami mobilnymi i zarządzania aplikacjami mobilnymi
-          href: byod-technology-decisions.md
     - name: Przewodnik migracji
       href: migration-guide.md
       items:
@@ -114,7 +116,7 @@
               href: migration-guide-drive-adoption.md
             - name: Typowy cykl migracji
               href: migration-guide-cycle.md
-- name: Instrukcje
+- name: Przewodniki z instrukcjami
   items:
     - name: Konfigurowanie usługi Intune
       href: setup-steps.md
@@ -214,35 +216,39 @@
         - name: Dodawanie aplikacji
           href: apps-add.md
           items:
-            - name: Aplikacje ze sklepu dla systemu Android
-              href: store-apps-android.md
-            - name: Aplikacje LOB dla systemu Android
-              href: lob-apps-android.md
-            - name: Aplikacje ze sklepu dla systemu iOS
-              href: store-apps-ios.md
-            - name: Aplikacje LOB dla systemu iOS
-              href: lob-apps-ios.md
+            - name: Aplikacje ze Sklepu
+              items:
+                - name: Aplikacje ze sklepu dla systemu Android
+                  href: store-apps-android.md
+                - name: Aplikacje ze sklepu dla systemu iOS
+                  href: store-apps-ios.md
+                - name: Aplikacje ze sklepu dla systemu Windows Phone 8.1
+                  href: store-apps-windows-phone-8-1.md
+                - name: Aplikacje ze Sklepu Microsoft
+                  href: store-apps-windows.md
+                - name: Aplikacje programu Android for Work
+                  href: apps-add-android-for-work.md
+                - name: Aplikacje pakietu Office 365 dla systemu Windows 10
+                  href: apps-add-office365.md
+                - name: Aplikacje pakietu Office 365 dla systemu macOS
+                  href: apps-add-office365-macos.md
+            - name: Kompilowanie aplikacji (LOB)
+              items:
+                - name: Aplikacje LOB dla systemu Android
+                  href: lob-apps-android.md
+                - name: Aplikacje LOB dla systemu iOS
+                  href: lob-apps-ios.md
+                - name: Aplikacje LOB dla systemu Windows Phone
+                  href: lob-apps-windows-phone.md
+                - name: Aplikacja LOB dla systemu Windows
+                  href: lob-apps-windows.md
             - name: Aplikacje sieci Web
               href: web-app.md
-            - name: Aplikacje ze sklepu dla systemu Windows Phone 8.1
-              href: store-apps-windows-phone-8-1.md
-            - name: Aplikacje LOB dla systemu Windows Phone
-              href: lob-apps-windows-phone.md
-            - name: Aplikacje ze Sklepu Microsoft
-              href: store-apps-windows.md
-            - name: Aplikacja LOB dla systemu Windows
-              href: lob-apps-windows.md
-            - name: Aplikacje programu Android for Work
-              href: apps-add-android-for-work.md
-            - name: Aplikacje pakietu Office 365 dla systemu Windows 10
-              href: apps-add-office365.md
-            - name: Aplikacje pakietu Office 365 dla systemu macOS
-              href: apps-add-office365-macos.md
-        - name: Przypisywanie aplikacji
+        - name: Wdrażanie aplikacji
           href: apps-deploy.md
         - name: Monitorowanie aplikacji
           href: apps-monitor.md
-        - name: Zasady konfigurowania aplikacji
+        - name: Konfigurowanie aplikacji
           href: app-configuration-policies-overview.md
           items:
             - name: iOS urządzenia zarządzane
@@ -251,23 +257,25 @@
               href: app-configuration-policies-use-android.md
             - name: Aplikacje zarządzane
               href: app-configuration-policies-managed-app.md
-        - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
-          href: app-provisioning-profile-ios.md
-        - name: Czyszczenie selektywne aplikacji
-          href: apps-selective-wipe.md
-        - name: Praca z aplikacjami i książkami nabytymi w ramach zakupów zbiorczych
-          href: vpp-apps.md
+            - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
+              href: app-provisioning-profile-ios.md
+            - name: Praca z aplikacjami i książkami nabytymi w ramach zakupów zbiorczych
+              href: vpp-apps.md
+              items:
+                - name: Aplikacje VPP dla systemu iOS
+                  href: vpp-apps-ios.md
+                - name: Aplikacje ze Sklepu Microsoft dla Firm
+                  href: windows-store-for-business.md
+                - name: Książki elektroniczne dla systemu iOS
+                  href: vpp-ebooks-ios.md
+            - name: Konfigurowanie aplikacji Portal firmy
+              href: company-portal-app.md
+            - name: Konfigurowanie programu Managed Browser
+              href: app-configuration-managed-browser.md
+        - name: Chronienie aplikacji
           items:
-            - name: Aplikacje VPP dla systemu iOS
-              href: vpp-apps-ios.md
-            - name: Aplikacje ze Sklepu Microsoft dla Firm
-              href: windows-store-for-business.md
-            - name: Książki elektroniczne dla systemu iOS
-              href: vpp-ebooks-ios.md
-        - name: Konfigurowanie aplikacji Portal firmy
-          href: company-portal-app.md
-        - name: Konfigurowanie programu Managed Browser
-          href: app-configuration-managed-browser.md
+            - name: Czyszczenie selektywne aplikacji
+              href: apps-selective-wipe.md
     - name: Konfigurowanie urządzeń
       href: device-profiles.md
       items:
@@ -435,8 +443,6 @@
                   href: app-protection-policy-settings-android.md
                 - name: Ustawienia systemu iOS
                   href: app-protection-policy-settings-ios.md
-                - name: Przeglądanie dzienników ochrony aplikacji w programie Managed Browser
-                  href: app-protection-policy-settings-log.md
             - name: Weryfikowanie zasad ochrony aplikacji
               href: app-protection-policies-validate.md
             - name: Monitorowanie stanu użytkownika ochrony aplikacji
@@ -554,45 +560,42 @@
           href: end-user-apps-ios.md
         - name: Jak uzyskiwać aplikacje dla systemu Windows
           href: end-user-apps-windows.md
-- name: Monitorowanie i rozwiązywanie problemów
-  items:
-    - name: Pomaganie użytkownikom w rozwiązywaniu problemów
-      href: help-desk-operators.md
-    - name: Dzienniki inspekcji dla działań usługi Intune
-      href: monitor-audit-logs.md
-    - name: Korzystanie z magazynu danych usługi Intune
-      href: reports-nav-create-intune-reports.md
+    - name: Monitorowanie i rozwiązywanie problemów
       items:
-        - name: Dziennik zmian dla magazynu danych
-          href: reports-changelog.md
-        - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
-          href: reports-proc-get-a-link-powerbi.md
-        - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
-          href: reports-proc-create-with-odata.md
-- name: Automatyzacja i dostosowywanie
-  items:
-    - name: Konfigurowanie niestandardowych ustawień urządzenia
-      href: custom-settings-configure.md
+        - name: Pomaganie użytkownikom w rozwiązywaniu problemów
+          href: help-desk-operators.md
+        - name: Dzienniki inspekcji dla działań usługi Intune
+          href: monitor-audit-logs.md
+        - name: Przeglądanie dzienników ochrony aplikacji
+          href: app-protection-policy-settings-log.md
+    - name: Automatyzacja i dostosowywanie
       items:
-        - name: Profil sieci Wi-Fi z kluczem wstępnym
-          href: wi-fi-profile-shared-key.md
-        - name: Android
-          href: custom-settings-android.md
+        - name: Konfigurowanie niestandardowych ustawień urządzenia
+          href: custom-settings-configure.md
           items:
-            - name: Profil sieci VPN dla aplikacji
-              href: android-pulse-secure-per-app-vpn.md
-            - name: Zezwalanie na aplikacje dla systemu Samsung Knox Standard lub blokowanie ich
-              href: samsung-knox-apps-allow-block.md
-        - name: iOS
-          href: custom-settings-ios.md
-        - name: macOS
-          href: custom-settings-macos.md
-        - name: "Windows\_Phone\_8,1"
-          href: custom-settings-windows-phone-8-1.md
-        - name: Windows 10
-          href: custom-settings-windows-10.md
-        - name: Program Android for Work
-          href: custom-settings-android-for-work.md
+            - name: Profil sieci Wi-Fi z kluczem wstępnym
+              href: wi-fi-profile-shared-key.md
+            - name: Android
+              href: custom-settings-android.md
+              items:
+                - name: Profil sieci VPN dla aplikacji
+                  href: android-pulse-secure-per-app-vpn.md
+                - name: Zezwalanie na aplikacje dla systemu Samsung Knox Standard lub blokowanie ich
+                  href: samsung-knox-apps-allow-block.md
+            - name: iOS
+              href: custom-settings-ios.md
+            - name: macOS
+              href: custom-settings-macos.md
+            - name: "Windows\_Phone\_8,1"
+              href: custom-settings-windows-phone-8-1.md
+            - name: Windows 10
+              href: custom-settings-windows-10.md
+            - name: Program Android for Work
+              href: custom-settings-android-for-work.md
+        - name: Ładowanie bezpośrednie aplikacji biznesowych
+          href: app-sideload-windows.md
+- name: Wskazówki dla deweloperów
+  items:
     - name: Ochrona aplikacji z użyciem zestawu Intune App SDK
       href: app-sdk.md
       items:
@@ -612,6 +615,15 @@
           href: app-sdk-cordova.md
         - name: Składnik Xamarin zestawu SDK aplikacji usługi Intune
           href: app-sdk-xamarin.md
+    - name: Korzystanie z magazynu danych usługi Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Dziennik zmian dla magazynu danych
+          href: reports-changelog.md
+        - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+          href: reports-proc-create-with-odata.md
     - name: Tworzenie raportów z użyciem interfejsu API magazynu danych usługi Intune
       href: reports-nav-intune-data-warehouse.md
       items:
@@ -647,5 +659,7 @@
       items:
         - name: Interfejsy API programu Graph dla odwołań usługi Intune
           href: 'https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview'
-- name: Słownik
-  href: intune-glossary.md
+- name: Zasoby
+  items:
+    - name: Słownik
+      href: intune-glossary.md

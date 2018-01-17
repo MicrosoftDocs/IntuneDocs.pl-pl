@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
-ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
+ms.openlocfilehash: 54def958cb82709f55b3c5f75d85f3b530e3d70b
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -77,7 +77,7 @@ Polecenie **usunięcia danych firmy** powoduje usunięcie danych zarządzanych a
 
 ### <a name="android"></a>Android
 
-|Typ danych|Android|Android Samsung KNOX Standard|
+|Typ danych|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Linki sieci Web|Usuwane.|Usuwane.|
 |Aplikacje niezarządzane ze sklepu Google Play|Aplikacje i dane pozostają zainstalowane.|Aplikacje i dane pozostają zainstalowane.|
@@ -89,7 +89,7 @@ Polecenie **usunięcia danych firmy** powoduje usunięcie danych zarządzanych a
 |Ustawienia profili certyfikatów|Certyfikaty zostaną odwołane, ale nie zostaną usunięte.|Certyfikaty zostaną usunięte i odwołane.|
 |Agent zarządzania|Uprawnienie administratora urządzenia jest odwoływane.|Uprawnienie administratora urządzenia jest odwoływane.|
 |Poczta e-mail|Nie dotyczy (profile poczty e-mail nie są obsługiwane przez urządzenia z systemem Android)|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune i poczta e-mail zapisana w pamięci podręcznej na urządzeniu zostaną usunięte.|
-|Outlook|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|Poczta e-mail odebrana w aplikacji Microsoft Outlook dla systemu Android zostanie usunięta.|
+|Outlook|Poczta e-mail odebrana przez aplikację Microsoft Outlook dla systemu Android zostanie usunięta, ale tylko w przypadku, gdy program Outlook jest chroniony przy użyciu zasad zarządzania aplikacjami mobilnymi. W przeciwnym razie program Outlook nie zostanie wyczyszczony podczas wyrejestrowania.|Poczta e-mail odebrana przez aplikację Microsoft Outlook dla systemu Android zostanie usunięta, ale tylko w przypadku, gdy program Outlook jest chroniony przy użyciu zasad zarządzania aplikacjami mobilnymi. W przeciwnym razie program Outlook nie zostanie wyczyszczony podczas wyrejestrowania.|
 |Odłączanie usługi Azure Active Directory (AD)|Rekord usługi Azure AD zostanie usunięty.|Rekord usługi Azure AD zostanie usunięty.|
 |Kontakty | Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane.  Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 

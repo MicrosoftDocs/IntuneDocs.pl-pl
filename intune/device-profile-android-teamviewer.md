@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a4e2b3493467f922b844130829db8e5ba14b246
-ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
+ms.openlocfilehash: 46e850cdda27444d18354b972d10b0cd02c036d9
+ms.sourcegitcommit: 000684953cbb3ceae0e2bcaa51186c9221f7aa86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-devices"></a>Zapewnienie pomocy zdalnej dla urządzeń zarządzanych przy użyciu usługi Intune
 
@@ -32,7 +32,7 @@ Usługa Intune może korzystać z zakupionego osobno oprogramowania [TeamViewer]
 Urządzenia z systemami Windows i Android zarządzane przez usługę Intune obsługują administrację zdalną.
 
 >[!NOTE]
->Systemy Windows Holographic (HoloLens), Windows Team (Surface Hub) i Windows 10 S nie są obsługiwane przez oprogramowanie TeamViewer. 
+>Systemy Windows Holographic (HoloLens), Windows Team (Surface Hub) i Windows 10 S nie są obsługiwane przez oprogramowanie TeamViewer. Nadal trzeba zarządzać urządzeniami przy użyciu [klienta](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json) w klasycznym portalu usługi Intune.
 
 
 
@@ -77,4 +77,3 @@ Po zakończeniu zamknij okno programu TeamViewer.
 ## <a name="next-steps"></a>Następne kroki
 
 Użytkownik końcowy zobaczy flagę powiadomienia na ikonie aplikacji Portal firmy na swoim urządzeniu oraz powiadomienie po otwarciu aplikacji. Wtedy może zaakceptować żądanie pomocy zdalnej.
-

@@ -14,11 +14,11 @@ ms.assetid: 4b3c9af9-78da-44d2-8bd2-3f0f8885952d
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 864f99f52e0c8b46307f1ec24d11da51d8f52662
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c77e2f9f46e61442261f65ddaa90877fc0063906
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identyfikowanie scenariuszy przypadków użycia zarządzania urządzeniami mobilnymi
 
@@ -59,7 +59,7 @@ Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.co
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Grupy organizacyjne dla scenariuszy
 
-Następnie należy zidentyfikować grupy organizacyjne, które są skojarzone z poszczególnymi scenariuszami przypadków użycia i podrzędnych przypadków użycia. Na przykład:
+Następnie należy zidentyfikować grupy organizacyjne, które są skojarzone z poszczególnymi scenariuszami przypadków użycia i podrzędnych przypadków użycia. Przykład:
 
 | **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy organizacyjne** |
 |:---:|:---:|:---:|
@@ -74,7 +74,7 @@ Następnie należy zidentyfikować grupy organizacyjne, które są skojarzone z 
 
 Kolejnym krokiem jest zidentyfikowanie platform urządzeń mobilnych skojarzonych z poszczególnymi scenariuszami przypadków użycia. Może ich być więcej niż jedna.
 
-Na przykład firmowy scenariusz przypadków użycia może obsługiwać platformy urządzeń iOS i Android Samsung KNOX. Zasady BYOD mogą obejmować obsługę dodatkowych platform urządzeń mobilnych, takich jak Android (inne niż Samsung KNOX) i Windows 10 Mobile. Opierając się na powyższych przykładach, skojarzyliśmy platformy urządzeń mobilnych z poszczególnymi scenariuszami przypadków użycia.
+Na przykład firmowy scenariusz przypadków użycia może obsługiwać platformy urządzeń iOS i Android Samsung Knox. Zasady BYOD mogą obejmować obsługę dodatkowych platform urządzeń mobilnych, takich jak Android (w wersjach innych niż Samsung Knox) i Windows 10 Mobile. Opierając się na powyższych przykładach, skojarzyliśmy platformy urządzeń mobilnych z poszczególnymi scenariuszami przypadków użycia.
 
 | **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy** | **Platformy urządzeń** |   
 |:---:|:---:|:---:|:---:|

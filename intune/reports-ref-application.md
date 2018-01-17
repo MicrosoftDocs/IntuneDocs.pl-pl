@@ -2,10 +2,10 @@
 title: Aplikacja | Microsoft Docs
 description: "Temat referencyjny dotyczący kategorii Aplikacja w kolekcji jednostek w interfejsie API magazynu danych usługi Intune."
 keywords: "Magazyn danych usługi Intune"
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fd14c985b4cedcd0575b2b6ea29e7aa4d8bb2d4
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 6698ff8d333d386c1401f942b2bbd4a75d86943c
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="reference-for-application-entities"></a>Dokumentacja jednostek aplikacji
 
@@ -62,7 +62,7 @@ Jednostka **AppTypes** przedstawia źródło instalacji aplikacji.
 | AppTypeKey |Klucz zastępczy klucza |
 | AppTypeName |Typ aplikacji |
 
-## <a name="example"></a>Przykład
+### <a name="example"></a>Przykład
 
 | AppTypeID  | Nazwa | Opis |
 |---------|------------|--------|
@@ -91,7 +91,7 @@ Jednostka **VppProgramTypes** zawiera listę możliwych typów programów VPP dl
 | VppProgramTypeKey | Klucz zastępczy klucza. |
 | VppProgramTypeName | Typ programu VPP. |
 
-## <a name="example"></a>Przykład
+### <a name="example"></a>Przykład
 
 | VppProgramID  | Nazwa | Opis |
 |---------|------------|--------|
@@ -112,3 +112,26 @@ Jednostka **ApplicationInventory** tworzy listę aplikacji znalezionych na urzą
 | ApplicationName | Nazwa aplikacji. |
 | ApplicationVersion | Wersja aplikacji. |
 | BundleSize | Rozmiar aplikacji w bajtach. |
+
+## <a name="mobileappinstallstate"></a>MobileAppInstallState
+
+Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie.
+
+| Właściwość | Opis |
+|---|---|
+| AppInstallStateKey | Unikatowy identyfikator stanu instalacji aplikacji dla konta użytkownika. |
+| AppInstallState | Wartość wyliczenia stanu instalacji aplikacji. |
+| AppInstallStateName | Nazwa stanu instalacji aplikacji. |
+
+## <a name="mobileappdeviceuserinstallstatus"></a>MobileAppDeviceUserInstallStatus
+
+Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
+
+| Właściwość | Opis |
+|---|---|
+| DateKey | Klucz daty rejestracji stanu instalacji aplikacji. |
+| AppKey | Klucz aplikacji mobilnej służący do identyfikowania wystąpienia AppRevision. |
+| DeviceKey | Klucz urządzenia docelowego służący do identyfikowania wystąpienia urządzenia. |
+| UserKey | Klucz użytkownika docelowego, który służy do identyfikowania wystąpienia użytkownika. |
+|AppInstallStateKey | Klucz stanu instalacji aplikacji, który służy do identyfikowania wystąpienia MobileAppInstallState. |
+| ErrorCode | Kod błędu zwracany przez instalatora aplikacji, platformę mobilną lub usługę dotyczący instalacji aplikacji. |

@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 18e0608c28a6a292da7fc766fb50edfd27e5a138
-ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
+ms.openlocfilehash: 644f7be61a8d26470a54b0eff46f20e3fbaef1d5
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-your-android-device-with-intune"></a>Korzystanie z urządzenia z systemem Android i usługi Intune
 
@@ -28,7 +28,7 @@ Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Usługa Intune obsługuje obecnie system operacyjny Android w wersjach 4.4 i nowszych. Dotyczy to także urządzeń z systemem Samsung KNOX w wersjach 4.4 i nowszych.
+Usługa Intune obsługuje obecnie system operacyjny Android w wersjach 4.4 i nowszych. Dotyczy to także urządzeń z systemem Samsung Knox w wersji 4.4 i nowszych.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 

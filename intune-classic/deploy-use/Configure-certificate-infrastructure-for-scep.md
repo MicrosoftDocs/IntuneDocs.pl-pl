@@ -5,7 +5,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 1/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 54b8a14c01e0a08e76843b02f00124117617540d
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ddf7b2e90b0008e23d550cc347d2c904cc9bc9be
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurowanie infrastruktury certyfikatów dla profilu SCEP
 
@@ -280,7 +280,7 @@ To zadanie obejmuje:
 
 ##### <a name="to-configure-iis-request-filtering"></a>Aby skonfigurować filtrowanie żądań w usługach IIS
 
-1.  Na serwerze NDES otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia**, a następnie otwórz **Filtrowanie żądań**.
+1.  Na serwerze NDES otwórz **Menedżera usług IIS**, kliknij pozycję **Domyślna witryna sieci Web** w okienku **Połączenia** , a następnie otwórz **Filtrowanie żądań**.
 
 2.  Kliknij pozycję **Edytuj ustawienia funkcji**, a następnie wprowadź następujące ustawienia:
 
@@ -338,6 +338,9 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze u
 5.  W interfejsie użytkownika **łącznika certyfikatów** :
 
     Kliknij pozycję **Zaloguj** i wprowadź swoje poświadczenia administratora usługi Intune lub poświadczenia administratora dzierżawy z uprawnieniami administratora globalnego.
+
+    > [!NOTE]
+    > Jeśli podczas rejestrowania w pliku NDESConnectorUI.exe jest wyświetlany błąd **Nie rozpoznano nazwy użytkownika**, zwykle oznacza to, że użyto konta, które nie ma prawidłowej licencji usługi Intune. Przypisz do konta licencję usługi Intune lub rozwiązania EMS i spróbuj ponownie wykonać operację.
 
     Jeśli Twoja organizacja korzysta z serwera proxy i jest on wymagany do połączenia serwera usługi NDES z Internetem, kliknij pozycję **Użyj serwera proxy**, a następnie wprowadź nazwę serwera proxy, port oraz poświadczenia konta, aby nawiązać połączenie.
 

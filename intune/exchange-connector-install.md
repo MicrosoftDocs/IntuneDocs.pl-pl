@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7947c9d047c6f206f9f93c389d418379fe8267a
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 9650afefc8ba0ba782e95b28feaaf1aaceea8d7f
+ms.sourcegitcommit: 06abc5ccc8b868c9ff3ad3f8f62473a87b2da481
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -133,6 +133,13 @@ Po skonfigurowaniu połączenia w programie Exchange Connector urządzenia przen
 
 > [!NOTE]
 > Jeśli po zainstalowaniu łącznika On-Premises Exchange Connector połączenie z programem Exchange zostanie usunięte, musisz odinstalować łącznik On-Premises Exchange Connector z komputera, na którym został zainstalowany.
+
+## <a name="on-premises-exchange-connector-high-availability-support"></a>Obsługa wysokiej dostępności łącznika lokalnego programu Exchange 
+Gdy łącznik programu Exchange utworzy połączenie z programem Exchange za pomocą określonego zabezpieczenia dostępu kodu, ma możliwość odnajdywania innych zabezpieczeń dostępu kodu. Jeśli podstawowe zabezpieczenia dostępu kodu będą niedostępne, łącznik przejdzie w tryb failover, korzystając z innych zabezpieczeń dostępu kodu (jeśli będą dostępne) do momentu przywrócenia dostępności podstawowych zabezpieczeń dostępu kodu. Ta funkcja jest domyślnie włączona. Funkcję można wyłączyć, korzystając z następującej procedury:
+1. Na serwerze, na którym jest zainstalowany program Exchange Connector, przejdź do folderu %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
+2. Za pomocą edytora tekstów otwórz plik **OnPremisesExchangeConnectorServiceConfiguration.xml**.
+3. Zastąp ciąg &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; ciągiem &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;, aby wyłączyć tę funkcję.    
+
 
 ## <a name="monitor-the-exchange-connector-activity"></a>Monitorowanie działania łącznika programu Exchange
 

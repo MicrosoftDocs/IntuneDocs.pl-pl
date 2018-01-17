@@ -1,7 +1,7 @@
 ---
-title: "Zasady zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX w usłudze Intune"
+title: "Zasady zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung Knox w usłudze Intune"
 titlesuffix: Azure portal
-description: "Tworzenie profilu niestandardowego w celu blokowania aplikacji na urządzeniach z systemem Samsung KNOX Standard lub zezwalania na nie."
+description: "Tworzenie profilu niestandardowego w celu zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung Knox Standard."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -15,13 +15,13 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aaa85347dc647658faf981e93d7fb0ea60c9e296
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 22d1e578da6a0085fd2e41ffc1d2322d01d971f1
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX Standard w usłudze Microsoft Intune
+# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Używanie zasad niestandardowych w celu zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung Knox Standard w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -30,7 +30,7 @@ Użyj procedur opisanych w tym temacie, aby utworzyć niestandardowe zasady usł
 - Lista aplikacji, których uruchamianie na urządzeniu jest zablokowane. Uruchamianie aplikacji na tej liście jest blokowane, nawet jeśli były one już zainstalowane, gdy zasady zostały zastosowane.
 - Lista aplikacji, które użytkownicy urządzenia mogą instalować ze sklepu Google Play. Można zainstalować tylko aplikacje na liście. Nie będzie można instalować żadnych innych aplikacji ze sklepu.
 
-Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung KNOX Standard.
+Tych ustawień można używać tylko na urządzeniach z systemem Samsung Knox Standard.
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Tworzenie listy dozwolonych lub zablokowanych aplikacji
 

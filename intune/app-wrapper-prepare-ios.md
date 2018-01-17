@@ -5,7 +5,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4ef7c8bb8daa76c5555b5d55d06fc30a9bb6c317
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 05d60bfea2058e3360c350d227b0031b6b620913
+ms.sourcegitcommit: 4eafb3660d6f5093c625a21e41543b06c94a73ad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -256,7 +256,7 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |Należy określić prawidłowy profil inicjowania obsługi administracyjnej systemu iOS.|Twój profil inicjowania obsługi administracyjnej może być nieprawidłowy. Upewnij się, że masz odpowiednie uprawnienia do urządzeń oraz że Twój profil prawidłowo wskazuje programowanie lub dystrybucję. Twój profil inicjowania obsługi administracyjnej mógł również wygasnąć.|
 |Określ prawidłową nazwę aplikacji wejściowej.|Upewnij się, że podana nazwa aplikacji wejściowej jest prawidłowa.|
 |Określ prawidłową ścieżkę do aplikacji wyjściowej.|Upewnij się, że podana ścieżka do aplikacji wyjściowej istnieje i że jest prawidłowa.|
-|Określ prawidłowy wejściowy profil inicjowania obsługi administracyjnej.|Upewnij się, że podana nazwa oraz rozszerzenie profilu aprowizacji są prawidłowe. Być może nie wprowadzono opcji wiersza poleceń –p lub w Twoim profilu aprowizacji brakuje uprawnień.|
+|Określ prawidłowy wejściowy profil aprowizacji.|Upewnij się, że podana nazwa oraz rozszerzenie profilu aprowizacji są prawidłowe. Być może nie wprowadzono opcji wiersza poleceń –p lub w Twoim profilu aprowizacji brakuje uprawnień.|
 |Nie odnaleziono wskazanej aplikacji wejściowej. Określ prawidłową nazwę i ścieżkę aplikacji wejściowej.|Upewnij się, że podana ścieżka do aplikacji wejściowej istnieje i że jest prawidłowa. Upewnij się, że aplikacja wejściowa znajduje się w tej lokalizacji.|
 |Nie odnaleziono wskazanego wejściowego profilu inicjowania obsługi administracyjnej. Określ prawidłowy plik wejściowego profilu inicjowania obsługi administracyjnej.|Upewnij się, że podana ścieżka do pliku wejściowego profilu inicjowania obsługi administracyjnej jest prawidłowa i że podany plik istnieje.|
 |Nie odnaleziono wskazanego folderu aplikacji wyjściowej. Określ prawidłową ścieżkę do aplikacji wyjściowej.|Upewnij się, że podana ścieżka wyjściowa istnieje i że jest prawidłowa.|
@@ -392,6 +392,18 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 -   Aplikacje dla systemu iOS zawierające okno dialogowe przekazywania plików mogą umożliwiać użytkownikom obejście zastosowanych do aplikacji ograniczeń wycinania, kopiowania i wklejania. Użytkownik może na przykład użyć okna dialogowego przekazywania plików do przekazania zrzutu ekranu zawierającego dane aplikacji.
 
 -   W przypadku monitorowania folderu dokumentów na urządzeniu przy użyciu opakowanej aplikacji może być widoczny folder o nazwie .msftintuneapplauncher. Modyfikacja lub usunięcie tego pliku może zakłócić działanie aplikacji z ograniczeniami.
+
+## <a name="getting-logs-for-your-wrapped-applications"></a>Pobieranie dzienników opakowanych aplikacji
+Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.
+
+1. Przejdź do aplikacji Ustawienia systemu iOS na urządzeniu i wybierz aplikację LOB.
+2. Przełącz opcję **Diagnostics Console** (Konsola diagnostyczna) na ustawienie **On** (Włączona).
+3. Uruchom aplikację LOB.
+4. Kliknij link „Wprowadzenie”.
+5. Możesz teraz udostępniać dzienniki za pośrednictwem poczty e-mail lub przez ich skopiowanie do lokalizacji usługi OneDrive.
+
+>[!NOTE]
+Funkcja rejestrowania jest włączona dla aplikacji, które zostały opakowane za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje w wersji 7.1.13 lub nowszej.
 
 ### <a name="see-also"></a>Zobacz też
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](apps-prepare-mobile-application-management.md)</br>

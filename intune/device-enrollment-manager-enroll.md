@@ -3,10 +3,10 @@ title: "Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń"
 titlesuffix: Azure portal
 description: "Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune. \""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0faca372a8bc9a632cf99133b9843b4b219f285c
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 03facdde2ff5652799cc3d2113a48ea5ae772ea9
+ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Rejestrowanie urządzeń przy użyciu menedżera rejestracji urządzeń
 
@@ -30,7 +30,7 @@ Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządz
 Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządzeń, muszą oni istnieć w witrynie Azure Portal. Aby możliwe było zapewnienie optymalnego poziomu bezpieczeństwa, użytkownik DEM nie powinien być jednocześnie administratorem usługi Intune.
 
 >[!NOTE]
->Metody rejestracji przez użytkownika DEM nie można używać w połączeniu z następującymi innymi metodami rejestracji: [program Apple Configurator z Asystentem ustawień](apple-configurator-setup-assistant-enroll-ios.md), [program Apple Configurator z bezpośrednią rejestracją](apple-configurator-direct-enroll-ios.md), [program Apple School Manager (ASM)](apple-school-manager-set-up-ios.md) i [Device Enrollment Program (DEP)](device-enrollment-program-enroll-ios.md).
+>Metody rejestracji przez użytkownika DEM nie można używać w połączeniu z następującymi innymi metodami rejestracji: [program Apple Configurator z Asystentem ustawień](apple-configurator-setup-assistant-enroll-ios.md), [program Apple Configurator z bezpośrednią rejestracją](apple-configurator-direct-enroll-ios.md), [program Apple School Manager (ASM)](apple-school-manager-set-up-ios.md) i [Device Enrollment Program (DEP)](device-enrollment-program-enroll-ios.md). Nie można jej również używać do rejestrowania urządzeń z systemem macOS. 
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Przykład scenariusza menedżera rejestracji urządzeń
 
