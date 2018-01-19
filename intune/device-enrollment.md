@@ -14,72 +14,58 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d9773d9c6c22717abd3590929e499c45fc8bed19
-ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
+ms.openlocfilehash: dc0105bb786d8b1e569b11898b0d3757feba406a
+ms.sourcegitcommit: a55a7119a15836b6941fdd5b32b9076139093693
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-W tym temacie opisano rejestrację oraz różne sposoby rejestrowania urządzeń przenośnych w celu zarządzania nimi w usłudze Intune.
+Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników oraz sposobem uzyskiwania przez nich dostępu do danych firmy. Aby można było użyć tego rozwiązania do zarządzania urządzeniami przenośnymi (MDM, mobile device management), urządzenia muszą być zarejestrowane w usłudze Intune. Dla zarejestrowanego urządzenia jest wystawiany certyfikat MDM. Ten certyfikat jest używany do komunikacji z usługą Intune.
 
-Zarejestrowanie urządzeń w usłudze Intune umożliwia zarządzanie nimi. W dokumentacji usługi Intune funkcja ta jest określana mianem zarządzania urządzeniami przenośnymi (MDM, mobile device management). Gdy urządzenia są rejestrowane w usłudze Intune, wystawiane są dla nich certyfikaty MDM, używane następnie przez urządzenia do komunikowania się z usługą Intune.
+Jak pokazano w poniższych tabelach, istnieje kilka metod rejestracji urządzeń pracowników. Każda metoda zależy od własności urządzenia (osobiste lub firmowe), typu urządzenia (system iOS, Windows lub Android) i wymagań dotyczących zarządzania (resetowanie, koligacja i blokowanie).
 
-Sposób rejestrowania urządzeń zależy od typu urządzenia, własności i wymaganego poziomu zarządzania. Metoda rejestracji „Przynieś własne urządzenie” (BYOD) umożliwia użytkownikom rejestrowanie swoich osobistych telefonów, tabletów lub komputerów. Rejestracja urządzeń należących do firmy umożliwia korzystanie ze scenariuszy zarządzania, takich jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji.
+## <a name="ios-enrollment-methods"></a>Metody rejestracji urządzeń z systemem iOS
 
-Organizacje korzystające z programu Exchange ActiveSync (lokalnie lub w chmurze) mogą używać prostszych metod zarządzania usługi Intune, w których nie jest wymagana rejestracja urządzeń. Komputerami z systemem Windows można zarządzać jak urządzeniami przenośnymi. Tę zalecaną metodę opisano poniżej.
-
-
-## <a name="overview-of-device-enrollment-methods"></a>Przegląd metod rejestracji urządzeń
-
-Tabela zawiera przegląd metod rejestracji w usłudze Intune, a poniżej opisano ich możliwości i wymagania.
-
-**Legenda**
-
-- **Wymagane zresetowanie** — urządzenia są resetowane do ustawień fabrycznych podczas rejestracji.
-- **Koligacja użytkownika** — kojarzy urządzenia z użytkownikami. Aby uzyskać więcej informacji, zobacz [Koligacja użytkownika](device-enrollment-program-enroll-ios.md).
-- **Zablokowane** — uniemożliwia użytkownikom wyrejestrowanie urządzeń.
-
-**Metody rejestracji urządzeń z systemem iOS**
-
-| **Metoda** |  **Wymagane zresetowanie** |    **Koligacja użytkownika**   |   **Zablokowane** | **Szczegóły** |
+| **Metoda** |  **Wymagane zresetowanie** |    [**Koligacja użytkownika**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) |   **Zablokowane** | **Szczegóły** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](./apple-mdm-push-certificate-get.md)|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  | [Więcej informacji](./device-enrollment-program-enroll-ios.md)|
-|**[Device Enrollment Program](#dep)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](./device-enrollment-program-enroll-ios.md)|
+| | Urządzenia są resetowane do ustawień fabrycznych podczas rejestracji. |  Kojarzy każde urządzenie z użytkownikiem.| Użytkownicy nie mogą wyrejestrowywać urządzeń.  | |
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie|   Tak |   Nie | [Więcej informacji](./apple-mdm-push-certificate-get.md)|
+|**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  | [Więcej informacji](./device-enrollment-program-enroll-ios.md)|
+|**[Device Enrollment Program](#apple-device-enrollment-program)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](./device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Tak |   Opcjonalne |  Nie| [Więcej informacji](./apple-configurator-setup-assistant-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Nie |    Nie  | Nie|[Więcej informacji](./apple-configurator-direct-enroll-ios.md)|
 
-**Metody rejestracji urządzeń z systemem Windows**
+## <a name="windows-enrollment-methods"></a>Metody rejestracji systemu Windows
 
 | **Metoda** |  **Wymagane zresetowanie** |    **Koligacja użytkownika**   |   **Zablokowane** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie |   Tak |   Nie | [Więcej informacji](windows-enroll.md)|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](device-enrollment-manager-enroll.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie |  Tak |   Nie | [Więcej informacji](windows-enroll.md)|
+|**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](device-enrollment-manager-enroll.md)|
 |**Automatyczne rejestrowanie** | Nie |Tak |Nie | [Więcej informacji](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
 |**Rejestrowanie zbiorcze** |Nie |Nie |Nie | [Więcej informacji](./windows-bulk-enroll.md) |
 
-**Metody rejestracji urządzeń z systemem Android**
+## <a name="android-enrollment-methods"></a>Metody rejestracji systemu Android
 
 | **Metoda** |  **Wymagane zresetowanie** |    **Koligacja użytkownika**   |   **Zablokowane** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#byod)** | Nie|    Tak |   Nie | [Więcej informacji](./android-enroll.md)|
-|**[Menedżer rejestracji urządzeń](#dem)**|   Nie |Nie |Nie  |[Więcej informacji](./device-enrollment-manager-enroll.md)|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie|   Tak |   Nie | [Więcej informacji](./android-enroll.md)|
+|**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](./device-enrollment-manager-enroll.md)|
 |**Android for Work**| Nie | Tak | Nie| [Więcej informacji](./android-enroll.md#enable-enrollment-of-android-for-work-devices) |
 
 
-## <a name="byod"></a>„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)
-Użytkownicy korzystający z metody „Przynieś własne urządzenie” w celu zarejestrowania swoich urządzeń instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
+## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń
+Model „Przynieś własne urządzenie” (BYOD) obejmuje osobiste telefony, tablety i komputery. W celu zarejestrowania urządzeń BYOD użytkownicy instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
 
-## <a name="corporate-owned-devices"></a>Urządzenia należące do firmy
-Poniżej przedstawiono scenariusze rejestracji urządzeń należących do firmy (COD, Corporate-Owned Device). Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi dostarczonych przez firmę Apple. Wszystkie typy urządzeń mogą być rejestrowane przez administratora lub menedżera za pomocą menedżera rejestracji urządzeń. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy, umożliwiając korzystanie ze scenariuszy COD.
+## <a name="corporate-owned-device"></a>Urządzenie należące do firmy
+Urządzenia należące do firmy (COD) obejmują telefony, tablety oraz komputery należące do organizacji i dostarczane do pracowników. Rejestracja urządzeń COD obsługuje takie scenariusze jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji. Często stosowaną metodą rejestracji urządzeń COD jest użycie menedżera rejestracji urządzeń (DEM) przez administratora lub kierownika. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi programu Device Enrollment Program (DEP) dostarczonych przez firmę Apple. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy.
 
-### <a name="dem"></a>Menedżer rejestracji urządzeń
+### <a name="device-enrollment-manager"></a>Menedżer rejestracji urządzeń
 Menedżer rejestracji urządzeń (DEM) to specjalne konto użytkownika używane do rejestrowania wielu urządzeń należących do firmy i zarządzania nimi. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](./device-enrollment-manager-enroll.md).
 
-### <a name="dep"></a>Program Device Enrollment Program
+### <a name="apple-device-enrollment-program"></a>Program Device Enrollment Program firmy Apple
 Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień systemu iOS. Ta metoda obsługuje tryb nadzorowany systemu iOS, który umożliwia skonfigurowanie określonej funkcji na urządzeniu.
 
 Więcej informacji o rejestracji DEP urządzeń z systemem iOS:

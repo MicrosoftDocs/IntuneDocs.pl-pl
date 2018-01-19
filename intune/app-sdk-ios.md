@@ -5,20 +5,20 @@ keywords:
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/10/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-ms.reviewer: oydang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 031ae18fb88a04cd02ca3ced5c39a33e49610bef
-ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
+ms.openlocfilehash: 942e7ceb8d42240c46387889677cb4620a9da103
+ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -29,9 +29,9 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* Wymagany jest komputer z systemem Mac OS X 10.8.5 lub nowszym z zainstalowanym programem Xcode 8 lub nowszym.
+* Wymagany jest komputer z systemem Mac OS X 10.8.5 lub nowszym z zainstalowanym programem Xcode 9 lub nowszym.
 
-* Aplikacja jest zgodna z systemem iOS 9 lub nowszym.
+* Aplikacja jest zgodna z systemem iOS 9.3.5 lub nowszym.
 
 * Należy zapoznać się z [postanowieniami licencyjnymi zestawu SDK aplikacji usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Wydrukuj i zachowaj kopię postanowień licencyjnych. Pobranie i rozpoczęcie używania zestawu SDK aplikacji usługi Intune dla systemu iOS oznacza akceptację tych postanowień licencyjnych.  Jeśli nie akceptujesz tych postanowień, nie możesz używać tego oprogramowania.
 
@@ -208,7 +208,7 @@ Jeśli aplikacja nie używa biblioteki ADAL, zestaw SDK aplikacji usługi Intune
 ## <a name="receiving-app-protection-policy"></a>Otrzymywanie zasad ochrony aplikacji
 
 ### <a name="overview"></a>Przegląd
-Aby otrzymać zasady ochrony aplikacji usługi Intune, aplikacje muszą zainicjować żądanie rejestracji w usłudze Intune. W konsoli usługi Intune można skonfigurować aplikacje do otrzymywania zasad ochrony aplikacji po rejestracji urządzeń lub bez rejestracji. Zasady ochrony aplikacji bez rejestracji, określane również jako zasady **APP-WE** lub MAM-WE, umożliwiają zarządzanie aplikacjami przez usługę Intune bez konieczności rejestracji urządzenia do celów zarządzania urządzeniami mobilnymi (MDM) usługi Intune. W obu przypadkach do otrzymania zasad konieczna jest rejestracja w usłudze Intune.
+Aby otrzymać zasady ochrony aplikacji usługi Intune, aplikacje muszą zainicjować żądanie rejestracji w usłudze MAM usługi Intune. W konsoli usługi Intune można skonfigurować aplikacje do otrzymywania zasad ochrony aplikacji po rejestracji urządzeń lub bez rejestracji. Zasady ochrony aplikacji bez rejestracji, określane również jako zasady **APP-WE** lub MAM-WE, umożliwiają zarządzanie aplikacjami przez usługę Intune bez konieczności rejestracji urządzenia do celów zarządzania urządzeniami mobilnymi (MDM) usługi Intune. W obu przypadkach do otrzymania zasad konieczna jest rejestracja w usłudze MAM usługi Intune.
 
 ### <a name="apps-that-use-adal"></a>Aplikacje korzystające z biblioteki ADAL
 
@@ -235,7 +235,7 @@ Po wywołaniu tego interfejsu API aplikacja może kontynuować normalne działan
 
 ### <a name="apps-that-do-not-use-adal"></a>Aplikacje, które nie korzystają z bibliotek ADAL
 
-Aplikacje, które nie logują użytkownika za pomocą biblioteki ADAL, mogą mimo to otrzymywać zasady ochrony aplikacji z usługi Intune, wywołując interfejs API, aby zestaw SDK obsłużył to uwierzytelnianie. Tej techniki należy używać w aplikacjach, jeśli nie uwierzytelniły one użytkownika w usłudze Azure AD, ale muszą pobierać zasady ochrony aplikacji w celu ochrony danych. Taka sytuacja może mieć miejsce na przykład wtedy, gdy na potrzeby logowania do aplikacji jest używana inna usługa uwierzytelniania lub gdy aplikacja w ogóle nie obsługuje logowania. W tym celu aplikacja powinna wywołać metodę `loginAndEnrollAccount` dla wystąpienia `IntuneMAMEnrollmentManager`:
+Aplikacje, które nie logują użytkownika za pomocą biblioteki ADAL, mogą mimo to otrzymywać zasady ochrony aplikacji z usługi MAM w usłudze Intune, wywołując interfejs API, aby zestaw SDK obsłużył to uwierzytelnianie. Tej techniki należy używać w aplikacjach, jeśli nie uwierzytelniły one użytkownika w usłudze Azure AD, ale muszą pobierać zasady ochrony aplikacji w celu ochrony danych. Taka sytuacja może mieć miejsce na przykład wtedy, gdy na potrzeby logowania do aplikacji jest używana inna usługa uwierzytelniania lub gdy aplikacja w ogóle nie obsługuje logowania. W tym celu aplikacja powinna wywołać metodę `loginAndEnrollAccount` dla wystąpienia `IntuneMAMEnrollmentManager`:
 
 ```objc
 /**
@@ -248,7 +248,7 @@ Aplikacje, które nie logują użytkownika za pomocą biblioteki ADAL, mogą mim
 
 ```
 
-W przypadku wywołania tej metody zestaw SDK będzie monitował użytkownika o poświadczenia, jeśli nie można znaleźć istniejącego tokenu. Zestaw SDK podejmie następnie próbę zarejestrowania aplikacji przy użyciu usługi Intune w imieniu podanego konta użytkownika. Metodę można wywołać z tożsamością „zero”. W tym przypadku zestaw SDK zarejestruje istniejącego zarządzanego użytkownika na urządzeniu (w przypadku zarządzania urządzeniami mobilnymi) lub będzie monitować o nazwę użytkownika, jeśli istniejący użytkownik nie zostanie znaleziony.
+W przypadku wywołania tej metody zestaw SDK będzie monitował użytkownika o poświadczenia, jeśli nie można znaleźć istniejącego tokenu. Zestaw SDK podejmie następnie próbę zarejestrowania aplikacji przy użyciu usługi MAM w usłudze Intune w imieniu podanego konta użytkownika. Metodę można wywołać z tożsamością „zero”. W tym przypadku zestaw SDK zarejestruje istniejącego zarządzanego użytkownika na urządzeniu (w przypadku zarządzania urządzeniami mobilnymi) lub będzie monitować o nazwę użytkownika, jeśli istniejący użytkownik nie zostanie znaleziony.
 
 W razie niepowodzenia rejestracji aplikacja powinna rozważyć wywołanie tego interfejsu API ponownie w przyszłości, w zależności od szczegółów błędu. Aplikacja może otrzymywać [powiadomienia](#Status-result-and-debug-notifications) o wynikach żądań rejestracji (za pośrednictwem delegata).
 
@@ -287,7 +287,7 @@ Przed wylogowaniem użytkownika aplikacja powinna wywołać następującą metod
 
 ```
 
-Ta metoda musi być wywoływana przed usunięciem tokenów usługi Azure AD konta użytkownika. Zestaw SDK wymaga tokenu AAD konta użytkownika, aby wysyłać określone żądania do usługi Intune w imieniu użytkownika.
+Ta metoda musi być wywoływana przed usunięciem tokenów usługi Azure AD konta użytkownika. Zestaw SDK wymaga tokenu AAD konta użytkownika, aby wysyłać określone żądania do usługi MAM w usłudze Intune w imieniu użytkownika.
 
 Jeśli aplikacja usunie dane firmowe użytkownika samodzielnie, flagę `doWipe` można ustawić na wartość false. W przeciwnym razie aplikacja może zainicjować selektywne czyszczenie za pomocą zestawu SDK. Spowoduje to wywołanie delegata selektywnego czyszczenia aplikacji.
 
@@ -453,10 +453,10 @@ WebViewHandledURLSchemes | Tablica ciągów | Określa schematy adresów URL obs
 > Jeśli aplikacja zostanie udostępniona w sklepie App Store, ustawienie `MAMPolicyRequired` musi być ustawione na wartość „NO” (Nie) zgodnie ze standardami sklepu App Store.
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Włączanie docelowej konfiguracji MAM dla aplikacji systemu iOS
-Docelowa konfiguracja MAM umożliwia aplikacjom odbieranie danych konfiguracji za pośrednictwem zestawu SDK aplikacji usługi Intune. Format i odmiany tych danych muszą zostać zdefiniowane i przekazane klientom usługi Intune przez właściciela/dewelopera aplikacji. Administratorzy usługi Intune mogą przekazywać dane konfiguracji do miejsc docelowych i wdrażać te dane za pośrednictwem witryny Intune Azure Portal. Począwszy od zestawu SDK aplikacji usługi Intune dla systemu iOS (w wersji 7.0.1), aplikacje uwzględnione w docelowej konfiguracji MAM mogą otrzymywać dane docelowej konfiguracji MAM za pośrednictwem usługi MAM. Dane konfiguracji aplikacji zostaną przypisane do aplikacji bezpośrednio za pośrednictwem naszej usługi MAM zamiast za pośrednictwem kanału zarządzania urządzeniami mobilnymi (MDM). Zestaw SDK aplikacji usługi Intune udostępnia klasę umożliwiającą uzyskanie dostępu do danych pobranych z tych konsol. Rozważ poniższe kwestie w charakterze wymagań wstępnych: <br>
-* Aby można było korzystać z interfejsu użytkownika docelowej konfiguracji MAM, aplikacja musi być zarejestrowana w rozwiązaniu MAM-WE. Więcej informacji o rozwiązaniu MAM-WE można znaleźć w [przewodniku po zasadach zabezpieczania aplikacji bez rejestrowania urządzeń w zestawie SDK aplikacji usługi Intune](https://docs.microsoft.com/en-us/intune/app-sdk-ios#app-protection-policy-without-device-enrollment).
+Docelowa konfiguracja MAM umożliwia aplikacjom odbieranie danych konfiguracji za pośrednictwem zestawu SDK aplikacji usługi Intune. Format i odmiany tych danych muszą zostać zdefiniowane i przekazane klientom usługi Intune przez właściciela/dewelopera aplikacji. Administratorzy usługi Intune mogą przekazywać dane konfiguracji do miejsc docelowych i wdrażać te dane za pośrednictwem witryny Intune Azure Portal. Począwszy od wersji 7.0.1 zestawu SDK aplikacji usługi Intune dla systemu iOS, aplikacje uwzględnione w docelowej konfiguracji MAM mogą otrzymywać dane docelowej konfiguracji MAM za pośrednictwem usługi MAM. Dane konfiguracji aplikacji zostaną przypisane do aplikacji bezpośrednio za pośrednictwem naszej usługi MAM zamiast za pośrednictwem kanału zarządzania urządzeniami mobilnymi (MDM). Zestaw SDK aplikacji usługi Intune udostępnia klasę umożliwiającą uzyskanie dostępu do danych pobranych z tych konsol. Rozważ poniższe kwestie w charakterze wymagań wstępnych: <br>
+* Aby można było uzyskać dostęp do interfejsu użytkownika docelowej konfiguracji MAM, aplikacja musi być zarejestrowana w usłudze MAM usługi Intune. Aby uzyskać więcej informacji, zobacz [Otrzymywanie zasad ochrony aplikacji](#receiving-app-protection-policy).
 * Uwzględnij element ```IntuneMAMAppConfigManager.h``` w pliku źródłowym aplikacji.
-* Wywołaj element ```[[IntuneMAMAppConfig instance] appConfigForIdentity:]``` w celu pobrania obiektu konfiguracji aplikacji.
+* Wywołaj element ```[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]``` w celu pobrania obiektu konfiguracji aplikacji.
 * Wywołaj odpowiedni selektor w obiekcie ```IntuneMAMAppConfig```. Jeśli na przykład klucz aplikacji jest ciągiem, możesz użyć elementu ```stringValueForKey``` lub ```allStringsForKey```. Plik ```IntuneMAMAppConfig.h header``` dotyczy wartości zwracanych/warunków błędów.
 
 Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph w odniesieniu do wartości docelowej konfiguracji MAM, zobacz [Konfiguracja docelowej konfiguracji MAM w zakresie odwołań do interfejsu API programu Graph](https://graph.microsoft.io/en-us/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>

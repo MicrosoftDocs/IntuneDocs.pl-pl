@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/31/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54def958cb82709f55b3c5f75d85f3b530e3d70b
-ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
+ms.openlocfilehash: 343078bf802aa45ec0cd0a3f2e554ab74e1f0b8a
+ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -96,6 +96,18 @@ Polecenie **usunięcia danych firmy** powoduje usunięcie danych zarządzanych a
 ### <a name="android-for-work"></a>Program Android for Work
 
 Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Powoduje to wycofanie urządzenia z zarządzania za pomocą usługi Intune. Resetowanie do ustawień fabrycznych nie jest obsługiwane w przypadku programu Android for Work.
+
+
+### <a name="macos"></a>macOS
+
+|Typ danych|macOS|
+|-------------|-------|
+|Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, przestaną być wymuszane, a użytkownicy będą mogli zmieniać ustawienia.|
+|Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
+|Ustawienia profili certyfikatów|Certyfikaty wdrożone za pomocą oprogramowania MDM są usuwane i odwoływane.|
+|Agent zarządzania|Profil zarządzania jest usuwany.|
+|Outlook|Jeśli dostęp warunkowy jest włączony, na urządzeniu nie będą odbierane żadne nowe wiadomości.|
+|Odłączanie usługi Azure Active Directory (AD)|Rekord usługi Azure AD zostanie usunięty.|
 
 ### <a name="windows"></a>Windows
 
