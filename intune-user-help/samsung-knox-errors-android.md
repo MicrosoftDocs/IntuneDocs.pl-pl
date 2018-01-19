@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/02/2018
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 8edfc4f55e9265ef6bd2dfbcb5871496d5679a9f
-ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
+ms.openlocfilehash: 77b3b8f3fff39df94d535b28c060334b3e0a63ce
+ms.sourcegitcommit: a55a7119a15836b6941fdd5b32b9076139093693
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Samsung Knox
 
-Niektóre problemy dotyczące urządzeń z systemem Samsung Knox można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy skontaktowanie się z działem pomocy technicznej Twojej firmy przy użyciu jego danych kontaktowych zamieszczonych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Niektóre problemy dotyczące urządzeń z systemem Samsung Knox można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy [skontaktowanie się z zespołem aplikacji Portal firmy dla systemu Android](https://github.com/MicrosoftDocs/IntuneDocs/blob/master/intune-user-help/send-logs-to-microsoft-android.md).
 
 ## <a name="network-activation-error"></a>Błąd aktywacji sieci
 
@@ -31,7 +31,7 @@ Wyświetlony komunikat może wyglądać podobnie jak poniższy:
 
 |Komunikat o błędzie|Co należy zrobić|
 |---|---|
-|**Błąd aktywacji systemu Samsung Knox** — nie można aktywować licencji systemu Samsung Knox. Przełącz urządzenie do innej sieci bezprzewodowej lub komórkowej i spróbuj ponownie.|Urządzenia nie można aktywować w bieżącej sieci. Jeśli używasz danych komórkowych, przełącz się do sieci Wi-Fi i spróbuj ponownie.|
+|**Błąd aktywacji systemu Samsung Knox** — nie można aktywować licencji systemu Samsung Knox. Przełącz urządzenie do innej sieci bezprzewodowej lub komórkowej i spróbuj ponownie.|Urządzenia nie można aktywować w bieżącej sieci. Jeśli używasz danych komórkowych, przełącz się do sieci Wi-Fi (lub odwrotnie) i spróbuj ponownie.|
 
 ## <a name="license-activation-error"></a>Błąd aktywacji licencji
 

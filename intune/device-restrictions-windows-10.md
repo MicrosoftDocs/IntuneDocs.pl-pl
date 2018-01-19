@@ -6,51 +6,51 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 1/8/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf39d06bb033f15a667a88f7628bcfc1401a275e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 2774b59001cb4ce277048e60a81243cde15cb53d
+ms.sourcegitcommit: 5ecb0d6625e6972cc5ccdca7538f41f4aa8da46a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Ogólne
--   **Przechwytywanie ekranu (tylko dla urządzeń przenośnych)** — umożliwia użytkownikowi przechwycenie ekranu urządzenia w formie obrazu.
--   **Kopiuj i wklej (tylko urządzenia przenośne)** — umożliwia kopiowanie i wklejanie między aplikacjami na urządzeniu.
--   **Ręczne wyrejestrowanie**— umożliwia użytkownikowi ręczne usunięcie konta firmowego z urządzenia.
--   **Ręczne instalowanie certyfikatu głównego (tylko dla urządzeń przenośnych)** — uniemożliwia użytkownikowi ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji.
--   **Przesyłanie danych diagnostycznych** — możliwe wartości to:
+- **Przechwytywanie ekranu (tylko dla urządzeń przenośnych)** — umożliwia użytkownikowi przechwycenie ekranu urządzenia w formie obrazu.
+- **Kopiuj i wklej (tylko urządzenia przenośne)** — umożliwia kopiowanie i wklejanie między aplikacjami na urządzeniu.
+- **Ręczne wyrejestrowanie**— umożliwia użytkownikowi ręczne usunięcie konta firmowego z urządzenia.
+- **Ręczne instalowanie certyfikatu głównego (tylko dla urządzeń przenośnych)** — uniemożliwia użytkownikowi ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji.
+- **Przesyłanie danych diagnostycznych** — możliwe wartości to:
     - **Brak** — do firmy Microsoft nie są wysyłane żadne dane.
     - **Podstawowe** — ograniczone informacje są wysyłane do firmy Microsoft
     - **Rozszerzone** — do firmy Microsoft są wysyłane rozszerzone dane diagnostyczne.
     - **Pełne** — wysyłane są te same dane, co w przypadku wartości Rozszerzone, oraz dodatkowe dane dotyczące stanu urządzenia.
--   **Aparat fotograficzny** — umożliwia lub blokuje użycie aparatu fotograficznego urządzenia.
--   **Synchronizacja plików w usłudze OneDrive** — uniemożliwia synchronizowanie plików z urządzenia z usługą OneDrive.
--   **Magazyn wymienny** — określa, czy na urządzeniu można używać zewnętrznych urządzeń pamięci masowej, na przykład kart SD.
--   **Geolokalizacja** — określa, czy urządzenie może używać informacji z usług lokalizacyjnych.
--   **Udostępnianie Internetu** — umożliwia udostępnianie połączenia internetowego przy użyciu urządzenia.
--   **Resetowanie telefonu** — określa, czy użytkownik może zresetować urządzenie do ustawień fabrycznych.
--   **Połączenie USB (tylko dla urządzeń przenośnych)** — określa, czy urządzenia mogą uzyskiwać dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.
--   **Tryb przeciwkradzieżowy (tylko na urządzeniach przenośnych)** — pozwala określić, czy jest włączony tryb przeciwkradzieżowy systemu Windows.
--   **Cortana** — włącza lub wyłącza asystenta głosowego Cortana.
--   **Nagrywanie głosu (tylko dla urządzeń przenośnych)** — umożliwia lub blokuje użycie rejestratora głosu w urządzeniu.
--   **Modyfikacja nazwy urządzenia** — uniemożliwia użytkownikowi końcowemu zmianę nazwy urządzenia (tylko system Windows 10 Mobile)
--   **Dodaj pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który instaluje pakiety aprowizacji.
--   **Usuń pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który usuwa pakiety aprowizacji.
--   **Odnajdywanie urządzeń** — blokuje wykrywanie urządzenia przez inne urządzenia.
--   **Przełącznik zadań (tylko urządzenia przenośne)** — blokuje przełącznik zadań na urządzeniu.
--   **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)** — w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
+- **Aparat fotograficzny** — umożliwia lub blokuje użycie aparatu fotograficznego urządzenia.
+- **Synchronizacja plików w usłudze OneDrive** — uniemożliwia synchronizowanie plików z urządzenia z usługą OneDrive.
+- **Magazyn wymienny** — określa, czy na urządzeniu można używać zewnętrznych urządzeń pamięci masowej, na przykład kart SD.
+- **Geolokalizacja** — określa, czy urządzenie może używać informacji z usług lokalizacyjnych.
+- **Udostępnianie Internetu** — umożliwia udostępnianie połączenia internetowego przy użyciu urządzenia.
+- **Resetowanie telefonu** — określa, czy użytkownik może zresetować urządzenie do ustawień fabrycznych.
+- **Połączenie USB (tylko dla urządzeń przenośnych)** — określa, czy urządzenia mogą uzyskiwać dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.
+- **Tryb przeciwkradzieżowy (tylko na urządzeniach przenośnych)** — pozwala określić, czy jest włączony tryb przeciwkradzieżowy systemu Windows.
+- **Cortana** — włącza lub wyłącza asystenta głosowego Cortana.
+- **Nagrywanie głosu (tylko dla urządzeń przenośnych)** — umożliwia lub blokuje użycie rejestratora głosu w urządzeniu.
+- **Modyfikacja nazwy urządzenia** — uniemożliwia użytkownikowi końcowemu zmianę nazwy urządzenia (tylko system Windows 10 Mobile)
+- **Dodaj pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który instaluje pakiety aprowizacji.
+- **Usuń pakiety aprowizacji** — blokuje agenta konfiguracji środowiska uruchomieniowego, który usuwa pakiety aprowizacji.
+- **Odnajdywanie urządzeń** — blokuje wykrywanie urządzenia przez inne urządzenia.
+- **Przełącznik zadań (tylko urządzenia przenośne)** — blokuje przełącznik zadań na urządzeniu.
+- **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)** — w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
+- **Automatyczne ponowne wdrażanie** — pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
 
 
 ## <a name="password"></a>Hasło
@@ -68,19 +68,68 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
 ## <a name="personalization"></a>Personalizacja
 
--   **Adres URL obrazu tła pulpitu (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie PNG, JPG lub JPEG, który będzie używany jako tapeta pulpitu systemu Windows. Użytkownicy nie będą mogli zmienić tego ustawienia.
+- **Adres URL obrazu tła pulpitu (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie PNG, JPG lub JPEG, który będzie używany jako tapeta pulpitu systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
 
 ## <a name="privacy"></a>Ochrona prywatności
 
 -   **Personalizacja danych wejściowych** — nie zezwala na korzystanie z chmurowych usług przetwarzania mowy razem z aplikacją Cortana, funkcją dyktowania czy aplikacjami ze Sklepu Microsoft. Jeśli zezwolisz na te usługi, firma Microsoft może zbierać dane dotyczące głosu w celu usprawnienia świadczonej usługi.
 -   **Automatyczne akceptowanie w przypadku monitów o wyrażenie zgody przez użytkownika dotyczących parowania i prywatności** — zezwala systemowi Windows na automatyczne akceptowanie komunikatów dotyczących parowania i prywatności wyświetlanych w uruchamianych aplikacjach.
 
+Można zdefiniować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Można także zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
+
+### <a name="exceptions"></a>Wyjątki
+
+- **Informacje o koncie** — określ, czy ta aplikacja może uzyskiwać dostęp do nazwy użytkownika, zdjęcia oraz innych informacji kontaktowych.
+- **Aplikacje w tle** — określ, czy ta aplikacja można działać w tle.
+- **Kalendarz** — określ, czy ta aplikacja może uzyskiwać dostęp do kalendarza.
+- **Historia połączeń** — określ, czy ta aplikacja może uzyskiwać dostęp do historii połączeń.
+- **Aparat fotograficzny** — określ, czy ta aplikacja może uzyskiwać dostęp do aparatu fotograficznego.
+- **Kontakty** — określ, czy ta aplikacja może uzyskiwać dostęp do kontaktów.
+- **E-mail** — określ, czy ta aplikacja może uzyskiwać dostęp do wiadomości e-mail i je wysyłać.
+- **Lokalizacja** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji o lokalizacji.
+- **Obsługa wiadomości** — określ, czy ta aplikacja może odczytywać lub wysyłać wiadomości tekstowe lub MMS.
+- **Mikrofon** — określ, czy ta aplikacja może korzystać z mikrofonu.
+- **Ruch** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji o ruchu urządzenia.
+- **Powiadomienia** — określ, czy ta aplikacja może uzyskiwać dostęp do powiadomień.
+- **Telefon** — określ, czy ta aplikacja może uzyskiwać dostęp do telefonu.
+- **Urządzenia radiowe** — niektóre aplikacje używają urządzeń radiowych (np. Bluetooth) w urządzeniu do wysyłania lub odbierania danych i muszą te urządzenia radiowe włączać lub wyłączać. Określ, czy ta aplikacja będzie mogła sterować tymi urządzeniami radiowymi.
+- **Zadania** — określ, czy ta aplikacja może uzyskiwać dostęp do zadań użytkownika.
+- **Zaufane urządzenia** — określ, czy ta aplikacja może używać zaufanych urządzeń (sprzętu, z którym już nawiązano połączenie lub dołączonego do tego komputera, tabletu lub telefonu), na przykład telewizorów, projektorów, itp.
+- **Opinie i diagnostyka** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
+- **Synchronizacja z urządzeniami** — określ, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym komputerem, tabletem lub telefonem.
+
+## <a name="per-app-privacy-exceptions"></a>Wyjątki prywatności dla aplikacji
+
+Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyczące prywatności niż zachowanie zdefiniowane w domyślnym ustawieniu prywatności.
+
+- **Nazwa pakietu** — nazwa rodziny pakietów aplikacji.
+- **Nazwa aplikacji** — nazwa aplikacji.
+
+### <a name="exceptions"></a>Wyjątki
+
+- **Informacje o koncie** — określ, czy ta aplikacja może uzyskiwać dostęp do nazwy użytkownika, zdjęcia oraz innych informacji kontaktowych.
+- **Aplikacje w tle** — określ, czy ta aplikacja można działać w tle.
+- **Kalendarz** — określ, czy ta aplikacja może uzyskiwać dostęp do kalendarza.
+- **Historia połączeń** — określ, czy ta aplikacja może uzyskiwać dostęp do historii połączeń.
+- **Aparat fotograficzny** — określ, czy ta aplikacja może uzyskiwać dostęp do aparatu fotograficznego.
+- **Kontakty** — określ, czy ta aplikacja może uzyskiwać dostęp do kontaktów.
+- **E-mail** — określ, czy ta aplikacja może uzyskiwać dostęp do wiadomości e-mail i je wysyłać.
+- **Lokalizacja** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji o lokalizacji.
+- **Obsługa wiadomości** — określ, czy ta aplikacja może odczytywać lub wysyłać wiadomości tekstowe lub MMS.
+- **Mikrofon** — określ, czy ta aplikacja może korzystać z mikrofonu.
+- **Ruch** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji o ruchu urządzenia.
+- **Powiadomienia** — określ, czy ta aplikacja może uzyskiwać dostęp do powiadomień.
+- **Telefon** — określ, czy ta aplikacja może uzyskiwać dostęp do telefonu.
+- **Urządzenia radiowe** — niektóre aplikacje używają urządzeń radiowych (np. Bluetooth) w urządzeniu do wysyłania lub odbierania danych i muszą te urządzenia radiowe włączać lub wyłączać. Określ, czy ta aplikacja będzie mogła sterować tymi urządzeniami radiowymi.
+- **Zadania** — określ, czy ta aplikacja może uzyskiwać dostęp do zadań użytkownika.
+- **Zaufane urządzenia** — określ, czy ta aplikacja może używać zaufanych urządzeń (sprzętu, z którym już nawiązano połączenie lub dołączonego do tego komputera, tabletu lub telefonu), na przykład telewizorów, projektorów, itp.
+- **Opinie i diagnostyka** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
+- **Synchronizacja z urządzeniami** — określ, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym komputerem, tabletem lub telefonem.
 
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
-
--   **Powiadomienia centrum akcji (tylko dla urządzeń przenośnych)** — włącza powiadomienia z centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
--   **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie PNG, JPG lub JPEG, który będzie używany jako tapeta ekranu blokady systemu Windows. Użytkownicy nie będą mogli zmienić tego ustawienia.
+- **Powiadomienia centrum akcji (tylko dla urządzeń przenośnych)** — włącza powiadomienia z centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
+- **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie PNG, JPG lub JPEG, który będzie używany jako tapeta ekranu blokady systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
 -   **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)** — pozwala na ustawienie czasu przez użytkownika. 
 -   **Cortana na zablokowanym ekranie (tylko komputery stacjonarne)** — nie zezwala użytkownikowi na interakcję z funkcją Cortana, gdy jest wyświetlany ekran blokady (tylko system Windows 10 Desktop).
 -   **Wyskakujące powiadomienia na zablokowanym ekranie** — blokuje wyświetlanie alertów na ekranie blokady.
@@ -131,11 +180,11 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Edge do menu Start.
 
-## <a name="edge-browser-smartscreen"></a>Filtr SmartScreen przeglądarki Edge
+## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
 
--   **Filtr SmartScreen** — włącza lub wyłącza filtr SmartScreen, który blokuje fałszywe witryny internetowe.
--   **Przesłonięcie monitu filtru SmartScreen** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen o potencjalnie złośliwych witrynach sieci Web.
--   **Przesłonięcie monitu filtru SmartScreen dla plików** — umożliwia użytkownikowi pominięcie ostrzeżeń filtru SmartScreen dotyczących pobierania potencjalnie złośliwych plików.
+- **Filtr SmartScreen dla przeglądarki Microsoft Edge** — włącz filtr SmartScreen dla przeglądarki Edge używany podczas uzyskiwania dostępu do witryn i pobierania plików.
+- **Dostęp do złośliwych witryn** — zablokuj użytkownikom możliwość ignorowania ostrzeżeń filtru Windows Defender SmartScreen oraz przechodzenia do witryny.
+- **Pobieranie niezweryfikowanych plików** — zablokuj użytkownikom możliwość ignorowania ostrzeżeń filtru Windows Defender SmartScreen oraz pobierania niezweryfikowanych plików.
 
 ## <a name="search"></a>Wyszukaj
 - **Bezpieczne wyszukiwanie (tylko urządzenia przenośne)** — pozwala określić sposób, w jaki Cortana filtruje treści dla dorosłych w wynikach wyszukiwania. Można wybrać opcję **Ścisłe** lub **Umiarkowane** albo zezwolić użytkownikom końcowym na wybór własnych ustawień.
@@ -182,9 +231,30 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
     -   **Prywatność** — blokuje dostęp do obszaru prywatności w aplikacji Ustawienia.
     -   **Aktualizacja i zabezpieczenia** — blokuje dostęp do obszaru aktualizacji i zabezpieczeń w aplikacji Ustawienia.
 
-## <a name="kiosk"></a>Kiosk
+## <a name="start"></a>Początek
 
--   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady.  Dostępne opcje:
+- **Odpinanie aplikacji od paska zadań** — uniemożliwia użytkownikowi odpinanie aplikacji od menu Start.
+- **Folder Dokumenty w menu Start** — pozwala ukryć lub pokazać folder Dokumenty w menu Start systemu Windows.
+- **Folder Pliki do pobrania w menu Start** — pozwala ukryć lub pokazać folder pobranych plików w menu Start systemu Windows.
+- **Folder Eksplorator plików w menu Start** — pozwala ukryć lub pokazać aplikację Eksplorator plików w menu Start systemu Windows.
+- **Folder Grupa domowa w menu Start** — pozwala ukryć lub pokazać folder Grupa domowa w menu Start systemu Windows.
+- **Folder Muzyka w menu Start** — pozwala ukryć lub pokazać folder Muzyka w menu Start systemu Windows.
+- **Folder Sieć w menu Start** — pozwala ukryć lub pokazać folder Sieć w menu Start systemu Windows.
+- **Folder Osobiste w menu Start** — pozwala ukryć lub pokazać folder Osobiste w menu Start systemu Windows.
+- **Folder Obrazy w menu Start** — pozwala ukryć lub pokazać folder obrazów w menu Start systemu Windows.
+- **Folder Ustawienia w menu Start** — pozwala ukryć lub pokazać aplikację Ustawienia w menu Start systemu Windows.
+- **Folder Wideo w menu Start** — pozwala ukryć lub pokazać folder Wideo w menu Start systemu Windows.
+
+## <a name="display"></a>Wyświetlanie
+
+- **Włącz skalowanie z użyciem interfejsu GDI dla aplikacji**
+- **Wyłącz skalowanie z użyciem interfejsu GDI dla aplikacji**
+
+  Skalowanie DPI z użyciem interfejsu GDI umożliwia rozpoznawanie wartości DPI monitora tym aplikacjom, które jej nie rozpoznają. Określ starsze aplikacje, które mają włączone skalowanie DPI z użyciem interfejsu GDI. Jeśli w aplikacji skonfigurowano zarówno włączanie, jak i wyłączanie skalowania DPI z użyciem interfejsu GDI, skalowanie dla aplikacji jest wyłączone.
+
+## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
+
+-   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady. Dostępne opcje:
 
       - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
       - **Kiosk z pojedynczą aplikacją** — profil włącza urządzenie jako kiosk z pojedynczą aplikacją.
@@ -192,13 +262,13 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
     Kioski z pojedynczą aplikacją wymagają następujących ustawień:
 
-      - **Konto użytkownika** — określa lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku.  W przypadku kont przyłączonych do domeny usługi Azure AD należy określić konto w postaci `domain\\username@tenant.org`.
+      - **Konto użytkownika** — określa lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku. W przypadku kont przyłączonych do domeny usługi Azure AD należy określić konto w postaci `domain\\username@tenant.org`.
 
          Dla urządzeń w środowiskach publicznych należy użyć kont z minimalnymi uprawnieniami, aby uniemożliwić autoryzowane działanie.  
 
-      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku.  Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-    Kioski z wieloma aplikacjami wymagają konfiguracji kiosku.  Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku, lub wybierz istniejącą konfigurację.
+    Kioski z wieloma aplikacjami wymagają konfiguracji kiosku. Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku, lub wybierz istniejącą konfigurację.
 
     Konfiguracje kiosku z wieloma aplikacjami obejmują następujące ustawienia:
 
@@ -208,9 +278,9 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
         - **Typ aplikacji** — określa typ aplikacji kiosku.  Obsługiwane wartości:   
 
-            - **Aplikacja Win32** — tradycyjna aplikacja klasyczna.  (Będziesz potrzebować w pełni kwalifikowanej nazwy ścieżki pliku wykonywalnego, w odniesieniu do urządzenia).
+            - **Aplikacja Win32** — tradycyjna aplikacja klasyczna. (Potrzebna jest ścieżka bezwzględna pliku wykonywalnego w odniesieniu do urządzenia).
 
-            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows.  Będziesz potrzebować identyfikatora [AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows. Potrzebny jest [identyfikator AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
         - **Identyfikator aplikacji** — określa pełną nazwę ścieżki pliku wykonywalnego (aplikacji Win32) lub [identyfikatora AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacji platformy UWP).
 
@@ -218,9 +288,9 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
     - **Układ menu Start** — określa plik XML, który opisuje sposób, w jaki aplikacje [są wyświetlane w menu Start](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
-    - **Przypisani użytkownicy** — określa co najmniej jedno konto użytkownika skojarzone z konfiguracją kiosku.  Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku.  Konta przyłączonych do domeny należy określić w postaci `domain\\username@tenant.org`.
+    - **Przypisani użytkownicy** — określa co najmniej jedno konto użytkownika skojarzone z konfiguracją kiosku. Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku. Konta przyłączonych do domeny należy określić w postaci `domain\\username@tenant.org`.
 
-## <a name="defender"></a>Usługa Defender
+## <a name="windows-defender-antivirus"></a>Program antywirusowy Windows Defender
 
 -   **Monitorowanie w czasie rzeczywistym** — włącza skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania.
 -   **Monitorowanie zachowania** — umożliwia usłudze Defender sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności.
@@ -256,7 +326,7 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 
 
 
-## <a name="defender-exclusions"></a>Wykluczenia programu Defender
+### <a name="windows-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Windows Defender
 
 -   **Pliki i foldery do wyłączenia ze skanów i ochrony w czasie rzeczywistym** — umożliwia dodanie do listy wykluczeń pojedynczych plików lub folderów lub większej ich liczby, na przykład **C:\ścieżka** lub **%ProgramFiles%\ścieżka\nazwa_pliku.exe**. Te pliki i foldery nie są uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.
 -   **Rozszerzenia plików do wyłączenia ze skanów i ochrony w czasie rzeczywistym** — umożliwia dodanie do listy wykluczeń pojedynczych rozszerzeń plików lub większej ich liczby, np. **JPG** lub **TXT**. Żadne pliki z tymi rozszerzeniami nie będą uwzględniane podczas skanowania w czasie rzeczywistym lub skanowania planowanego.
@@ -294,16 +364,41 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 - **Projekcja na tym komputerze** — uniemożliwia innym urządzeniom odnajdywanie tego komputera dla celów projekcji.
 - **Wymagaj numeru PIN do parowania** — wybór powoduje, że podczas nawiązywania połączenia z urządzeniem do projekcji wymagane jest podanie numeru PIN.
 
-## <a name="start"></a>Początek
+## <a name="cloud-printer"></a>Drukarka w chmurze
 
-- **Odpinanie aplikacji od paska zadań** — uniemożliwia użytkownikowi odpinanie aplikacji od menu Start.
-- **Folder Dokumenty w menu Start** — pozwala ukryć lub pokazać folder Dokumenty w menu Start systemu Windows.
-- **Folder Pliki do pobrania w menu Start** — pozwala ukryć lub pokazać folder pobranych plików w menu Start systemu Windows.
-- **Folder Eksplorator plików w menu Start** — pozwala ukryć lub pokazać aplikację Eksplorator plików w menu Start systemu Windows.
-- **Folder Grupa domowa w menu Start** — pozwala ukryć lub pokazać folder Grupa domowa w menu Start systemu Windows.
-- **Folder Muzyka w menu Start** — pozwala ukryć lub pokazać folder Muzyka w menu Start systemu Windows.
-- **Folder Sieć w menu Start** — pozwala ukryć lub pokazać folder Sieć w menu Start systemu Windows.
-- **Folder Osobiste w menu Start** — pozwala ukryć lub pokazać folder Osobiste w menu Start systemu Windows.
-- **Folder Obrazy w menu Start** — pozwala ukryć lub pokazać folder obrazów w menu Start systemu Windows.
-- **Folder Ustawienia w menu Start** — pozwala ukryć lub pokazać aplikację Ustawienia w menu Start systemu Windows.
-- **Folder Wideo w menu Start** — pozwala ukryć lub pokazać folder Wideo w menu Start systemu Windows.
+- **Adres URL na potrzeby wykrywania drukarek** — punkt końcowy służący do wykrywania drukarek w chmurze.
+- **Adres URL urzędu dostępu do drukarek** — punkt końcowy uwierzytelniania na potrzeby pobierania tokenów OAuth.
+- **Identyfikator GUID aplikacji klienta natywnego platformy Azure** — identyfikator GUID aplikacji klienckiej uprawnionej do pobierania tokenów OAuth z urzędu OAuthAuthority.
+- **Identyfikator URI zasobu usługi drukowania** — identyfikator URI zasobu OAuth dla usługi drukowania skonfigurowanej w witrynie Azure Portal.
+- **Maksymalna liczba drukarek do uwzględnienia w zapytaniu (tylko wersja mobilna)** — maksymalna liczba drukarek, która powinna zostać uwzględniona w zapytaniu z punktu końcowego wykrywania.
+- **Identyfikator URI zasobu usługi wykrywania drukarek** — identyfikator URI zasobu OAuth dla usługi wykrywania drukarek skonfigurowany w witrynie Azure Portal.
+
+## <a name="reporting-and-telemetry"></a>Raportowanie i telemetria
+
+- **Udostępnij dane użycia** — wybierz poziom przesyłania danych diagnostycznych.
+- **Serwer proxy telemetrii**
+
+  Określ w pełni kwalifikowaną nazwę domeny (FQDN) lub adres IP serwera proxy do przekazywania żądań środowisk i telemetrii połączonego użytkownika przy użyciu połączenia SSL (Secure Sockets Layer). Format dla tego ustawienia to: *serwer*:*port*. Jeśli nazwany serwer proxy ulegnie awarii lub jeśli serwer proxy nie będzie określony w momencie włączenia tych zasad, dane środowisk i telemetrii połączonego użytkownika nie zostaną przesłane i pozostaną na urządzeniu lokalnym.
+
+   Przykładowe formaty:
+
+   IPv4: 192.246.246.106:100<br>
+ IPv6: [2001:4898:4010:4013:95c1:a8b2:953c:c633]:100<br> FQDN: www.contoso.com:345
+
+## <a name="messaging"></a>Obsługa wiadomości
+
+- **Synchronizowanie wiadomości (tylko na urządzeniach przenośnych)** — wyłącz funkcję Wiadomości na wszystkich urządzeniach oraz tworzenie kopii zapasowych wiadomości SMS i ich przywracanie.
+- **MMS (tylko na urządzeniach przenośnych)** — wyłącz funkcję wysyłania i odbierania wiadomości MMS na urządzeniu.
+- **RCS (tylko na urządzeniach przenośnych)** — wyłącz funkcję wysyłania i odbierania wiadomości Rich Communication Services na urządzeniu.
+
+
+
+
+
+
+
+
+
+
+
+
