@@ -12,14 +12,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1326e65e-56cc-4987-9006-3a788597ca19
-ms.reviewer: jeffgilb
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 41eb9e7ef59af185bae10664123098641f9c3826
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 868a8e043c05e0913d49933270110bb084c5fb4a
+ms.sourcegitcommit: d44c32aad3e84f6c0b296bdb010981d3a818befb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/15/2017
 |Niemcy|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|niemiecki&#42;, angielski|0800 5892332|069380789508||
 |Grecja|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 EET (UTC +2)|grecki&#42;, angielski|0080044142831||
 |Gwatemala|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CST (UTC -6)|hiszpański&#42;, angielski|1-800-300-0069<br /><br />Krok 1. Wybierz opcję 4 (na potrzeby dostępu specjalnego)<br /><br />Krok 2. Wprowadź kod: 7007||
-|Hongkong SAR|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 HKT (UTC +8)|kantoński&#42;, mandaryński&#42;, angielski||30713055|
+|SRA Hongkong|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 HKT (UTC +8)|kantoński&#42;, mandaryński&#42;, angielski||30713055|
 |Węgry|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|węgierski&#42;, angielski|36 80 983 899|36 1 778 9292|
 |Islandia|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 GMT (UTC)|angielski|8009609||
 |Indie|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 IST (UTC +5:30)|angielski|000800 4402038|18002002052|
