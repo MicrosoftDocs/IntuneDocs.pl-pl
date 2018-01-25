@@ -5,7 +5,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: angrobe
-ms.date: 01/02/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ac9cb0ad7d1b5e2c29e80f16c172f41c08d3a15d
-ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
+ms.openlocfilehash: 12f4a09fe10ec792abe8183369a21f53c23f5d1a
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---january-2018"></a>Wczesna wersja usługi Microsoft Intune — styczeń 2018
 
@@ -33,7 +33,7 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 <!--
 ## What's coming to Intune in the Azure portal  
 ## What's coming to Intune apps
-## Notices 
+## Notices
 -->
 
 
@@ -41,7 +41,7 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 
 ### <a name="easier-resolution-of-compliance-issues-for-the-company-portal-app-for-windows-10---676546---"></a>Łatwiejsze rozwiązywanie problemów ze zgodnością aplikacji Portal firmy dla systemu Windows 10<!--676546 -->
 
-Użytkownicy końcowi mający urządzenia z systemem Windows będą mogli wybierać przyczynę niezgodności w aplikacji Portal firmy. Gdy będzie to możliwe, przeniesie to ich bezpośrednio do poprawnej lokalizacji w aplikacji ustawień, aby rozwiązać ten problem. 
+Użytkownicy końcowi mający urządzenia z systemem Windows będą mogli wybierać przyczynę niezgodności w aplikacji Portal firmy. Gdy będzie to możliwe, przeniesie to ich bezpośrednio do poprawnej lokalizacji w aplikacji ustawień, aby rozwiązać ten problem.
 
 ### <a name="new-option-for-user-authentication-for-apple-bulk-enrollment----747625---"></a>Nowa opcja uwierzytelniania użytkownika na potrzeby rejestracji zbiorczej firmy Apple <!-- 747625 -->
 Usługa Intune zapewni możliwość uwierzytelniania urządzeń przy użyciu aplikacji Portal firmy dla następujących metod rejestracji:
@@ -59,16 +59,16 @@ Usługa Intune będzie obsługiwać rejestrowanie urządzeń z maksymalnie 100 r
 
 Po przeprowadzeniu migracji interfejsy API programu Graph w wersji beta i opublikowane skrypty do zarządzania usługami Apple DEP lub ASM za pośrednictwem programu Graph nie będą już działać. Nowe interfejsy API programu Graph w wersji beta znajdują się w fazie projektowania i zostaną wydane po zakończeniu migracji.
 
-### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963-eeready---"></a>Wybieranie kategorii urządzeń przy użyciu ustawień opcji Uzyskaj dostęp do miejsca pracy lub nauki <!-- 1058963 eeready --> 
+### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963-eeready---"></a>Wybieranie kategorii urządzeń przy użyciu ustawień opcji Uzyskaj dostęp do miejsca pracy lub nauki <!-- 1058963 eeready -->
 Jeśli włączono [mapowanie grup urządzeń](https://docs.microsoft.com/en-us/intune/device-group-mapping), w systemie Windows 10 po dokonaniu rejestracji przy użyciu przycisku **Połącz** w obszarze **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** lub w trakcie pracy w środowisku gotowym do użycia zostanie wyświetlony monit o wybranie kategorii urządzenia.
 
 ### <a name="targeting-compliance-policies-to-devices-in-device-groups---1307012---"></a>Określanie zasad zgodności dla urządzeń w grupach urządzeń<!--1307012 -->
 
-Możesz określać zasady zgodności dla użytkowników w grupach użytkowników. Możesz także określać zasady zgodności dla urządzeń w grupach urządzeń. 
+Możesz określać zasady zgodności dla użytkowników w grupach użytkowników. Możesz także określać zasady zgodności dla urządzeń w grupach urządzeń.
 
 ### <a name="including-and-excluding-app-assignment-based-on-groups----1406920---"></a>Uwzględnianie i wykluczanie przypisania aplikacji na podstawie grup <!-- 1406920 -->
 
-Podczas przypisywania aplikacji i po wybraniu typu przypisania będzie można wybrać grupy, które mają być uwzględnione, a także grupy, które mają zostać wykluczone. Będzie można również użyć wstępnie utworzonych grup (Wszyscy użytkownicy, Wszystkie urządzenia i Wszyscy użytkownicy+urządzenia) jako tych, które mają być uwzględnione.
+Podczas przypisywania aplikacji i po wybraniu typu przypisania będzie można wybrać grupy, które mają być uwzględnione, a także grupy, które mają zostać wykluczone.
 
 ### <a name="remote-erase-command-support----1438084---"></a>Zdalna obsługa polecenia wymazywania <!-- 1438084 -->
 
@@ -93,7 +93,7 @@ Usługa Intune wprowadzi rozszerzenie trybu nauki funkcji Windows Information Pr
 
 Wiadomość e-mail wysłana w celu zgłoszenia niezgodnego urządzenia będzie zawierać szczegóły dotyczące niezgodnego urządzenia. Informacje na ten temat będzie można znaleźć w zaktualizowanej wersji następującego artykułu: [Automatyzacja akcji w przypadku niezgodności](#actions-for-noncompliance).
 
-### <a name="conditional-access-policies-for-intune-is-only-available-from-the-azure-portal-----1737088-1634311---"></a>Zasady dostępu warunkowego dla usługi Intune są dostępne tylko w witrynie Azure Portal <!-- 1737088 1634311 --> 
+### <a name="conditional-access-policies-for-intune-is-only-available-from-the-azure-portal-----1737088-1634311---"></a>Zasady dostępu warunkowego dla usługi Intune są dostępne tylko w witrynie Azure Portal <!-- 1737088 1634311 -->
 Obszary konfigurowania dostępu warunkowego oraz zarządzania nim zostaną uproszczone. Konfigurowanie zasad i zarządzanie nimi będzie odbywać się w witrynie [Azure Portal](https://portal.azure.com), po wybraniu opcji **Azure Active Directory** > **Dostęp warunkowy**. Dla wygody użytkowników przejście do tego bloku będzie również możliwe z usługi Intune w witrynie Azure Portal, po wybraniu opcji **Intune** > **Dostęp warunkowy**.
 
 ###  <a name="alerts-for-expired-tokens-and-tokens-that-will-soon-expire----1639263---"></a>Alerty dotyczące wygasłych tokenów i tokenów, które wkrótce wygasną<!-- 1639263 -->
@@ -105,8 +105,11 @@ Rozwiązania bezprzewodowego drukowania mobilnego PrinterOn umożliwią użytkow
 ### <a name="approve-the-company-portal-app-for-android-for-work---1797090---"></a>Zatwierdzanie aplikacji Portal firmy dla programu Android for Work <!--1797090 -->
 Jeśli organizacja korzysta z programu Android for Work, należy ręcznie zatwierdzić aplikację Portal firmy dla systemu Android, dzięki czemu będzie ona nadal otrzymywać aktualizacje automatyczne z zarządzanego sklepu Google Play.
 
+### <a name="faceid-on-ios-devices----1807377---"></a>Funkcja FaceID na urządzeniach z systemem iOS <!-- 1807377 -->
+Zasady ochrony aplikacji usługi Intune obsługują teraz ustawienie sterujące funkcją FaceID na urządzeniach z systemem iOS. To ustawienie dotyczy urządzeń, które obsługuje funkcję FaceID (obecnie jest to jedynie telefon iPhone X). Ustawienie nie ma związku z obecnie obsługiwanymi kontrolkami funkcji TouchID. Organizacje mają możliwość wybrania, czy można korzystać z funkcji FaceID, aby udzielić prawidłowej odpowiedzi na monit o kod PIN w ramach alternatywy dla kontrolek TouchID.
+
 ### <a name="microsoft-graph-api-for-intune---general-availability-----1833289---"></a>Interfejs API programu Microsoft Graph dla usługi Intune — ogólna dostępność <!-- 1833289 -->
-Interfejsy API programu Microsoft Graph w usłudze Intune zapewnią programowy dostęp do danych i metod na potrzeby automatyzacji działań administracyjnych dla usługi Intune.  Dzięki **ogólnej dostępności** tych interfejsów API klienci, partnerzy i deweloperzy będą mogli używać interfejsów API do integracji z rozwiązaniami wewnętrznymi lub komercyjnymi, które są związane z obsługą usługi Intune bądź wymagają takiej obsługi, albo z innymi usługami firmy Microsoft dostępnymi za pośrednictwem programu Microsoft Graph. 
+Interfejsy API programu Microsoft Graph w usłudze Intune zapewnią programowy dostęp do danych i metod na potrzeby automatyzacji działań administracyjnych dla usługi Intune.  Dzięki **ogólnej dostępności** tych interfejsów API klienci, partnerzy i deweloperzy będą mogli używać interfejsów API do integracji z rozwiązaniami wewnętrznymi lub komercyjnymi, które są związane z obsługą usługi Intune bądź wymagają takiej obsługi, albo z innymi usługami firmy Microsoft dostępnymi za pośrednictwem programu Microsoft Graph.
 
 <!-- the following are present prior to 1801 -->
 
@@ -118,13 +121,6 @@ Dla danego urządzenia z zainstalowaną przynajmniej jedną aplikacją dla syste
 
 ### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Odwołanie licencji dla tokenu programu zakupów zbiorczych dla systemu iOS <!-- 820870 -->
 Istnieje możliwość odwołania licencji wszystkich aplikacji dla systemu iOS zakupionych w ramach programu zakupów zbiorczych (VPP) dla danego tokenu programu VPP.
-
-### <a name="network-access-control-nac-device-check-in-reporting-----1232250---"></a>Raportowanie zaewidencjonowania urządzenia NAC (Network Access Control) <!-- 1232250 -->
-Przed wprowadzeniem tej zmiany administratorzy IT nie mogli określić po stronie usługi Intune, czy urządzenie zarządzane w ramach NAC komunikowało się z rozwiązaniem NAC czy nie. Gdy urządzenie zarządzane w ramach NAC nie komunikuje się z rozwiązaniem NAC, urządzenie jest traktowane przez rozwiązanie NAC jako niezgodne i zostaje zablokowane przez to rozwiązanie, a następnie przez zasady dostępu warunkowego oparte na stanie zgodności urządzenia.
-
-Dzięki tej zmianie administratorzy IT wiedzą, które urządzenia zarządzane w ramach NAC pomyślnie nawiązały komunikację z rozwiązaniem NAC, a które nie. Ta nowa możliwość obejmuje dwie nowe funkcje monitorowania znajdujące się w obciążeniu Zgodność urządzeń w usłudze Intune. Poniżej podano używane statystyki:
-- **Średnia liczba wywołań NAC w ciągu ostatniej godziny**
-- **Ostatnie żądanie przychodzące NAC (data/godzina)**
 
 ### <a name="new-ios-device-action------1244701---"></a>Nowa akcja dotycząca urządzenia z systemem iOS <!-- 1244701 -->
 Można zamknąć nadzorowane urządzenia z systemem iOS 10.3. Ta akcja natychmiast wyłącza urządzenie bez ostrzeżenia dla użytkownika końcowego. Akcję **Wyłącz (tylko nadzorowane)** można znaleźć we właściwościach urządzenia po wybraniu urządzenia w obciążeniu **Urządzenie**.
@@ -185,6 +181,14 @@ Zmiany zostaną wprowadzone wraz z listopadową aktualizacją, ale ich wdrożeni
 ### <a name="configure-an-ios-app-pin----1586774---"></a>Konfigurowanie numeru PIN aplikacji dla systemu iOS <!-- 1586774 -->
 Już wkrótce będzie można wymagać wprowadzenia numeru PIN dla aplikacji docelowych z systemem iOS. Wymaganie wprowadzenia numeru PIN i datę wygaśnięcia liczoną w dniach można skonfigurować za pośrednictwem witryny Azure Portal. W razie potrzeby będzie można narzucić wymaganie używania nowego numeru PIN w celu uzyskania dostępu do aplikacji dla systemu iOS. Ta funkcja będzie dostępna tylko dla aplikacji dla systemu iOS, dla których włączono ochronę aplikacji przy użyciu zestawu SDK aplikacji usługi Intune.
 
+### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!--1412866-->
+
+Niedługo wydamy dużą aktualizację środowiska użytkownika w aplikacji Portal firmy dla systemu iOS. Aktualizacja obejmie całkowicie nowy projekt wizualny, w tym zmodernizowany wygląd i działanie oraz większą użyteczność i dostępność. Cała obecna funkcjonalność aplikacji Portal firmy dla systemu iOS zostanie zachowana.
+
+Za pośrednictwem programu Apple TestFlight oferujemy wersję wstępną zaktualizowanej aplikacji Portal firmy dla systemu iOS, aby umożliwić korzystanie z niej i przesyłanie opinii na jej temat. Zarejestruj się pod adresem https://aka.ms/intune_ios_cp_testflight, aby uzyskać dostęp do programu TestFlight. 
+
+![wzbudzające ciekawość obrazy nowej aplikacji Portal firmy dla systemu iOS](./media/ios-cp-app-redesign-1801-teaser.png)
+
 
 <!-- the following are present prior to 1711 -->
 
@@ -204,10 +208,6 @@ Można utworzyć zasady uaktualniania wydania systemu Windows 10, które umożli
 
 <!-- the following are present prior to 1709 -->
 
-
-
-### <a name="android-for-work-support-for-lookout----1087312---"></a>Obsługa programu Android for Work dla usługi Lookout <!-- 1087312 -->   
-Łącznik usługi Intune z usługą Lookout będzie obsługiwać urządzenia z programem Android for Work w przypadku korzystania z aplikacji Lookout for Work. Można wdrożyć aplikację Lookout wewnątrz lub na zewnątrz kontenera.
 
 ### <a name="intune-app-protection-and-citrix-mdx-development-tools----709185---"></a>Narzędzia deweloperskie usług Intune App Protection i Citrix MDX <!-- 709185 -->
 Urządzeniami i aplikacjami można zarządzać przy użyciu kombinacji usług Citrix XenMobile MDX i Microsoft Intune. Umożliwia ona zarządzanie aplikacjami za pomocą zasad usługi Intune App Protection przy równoczesnym wykorzystaniu technologii mVPN firmy Citrix.

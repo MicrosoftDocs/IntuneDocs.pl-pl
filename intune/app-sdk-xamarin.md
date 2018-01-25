@@ -14,11 +14,11 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c5645e337e34c6310c82a76d537fe6539e04e71e
-ms.sourcegitcommit: 5ecb0d6625e6972cc5ccdca7538f41f4aa8da46a
+ms.openlocfilehash: 73caf124e94994acf816c98f0788efdabe024cc4
+ms.sourcegitcommit: c3bd0d192d712fcfd52f64dd1377155796239fcb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Składnik Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/12/2018
 
 
 ## <a name="overview"></a>Przegląd
-[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://components.xamarin.com/view/microsoft.intune.mam) umożliwia korzystanie z [zasad ochrony aplikacji usługi Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ochrony aplikacji Intune do ich aplikacji opartych na środowisku Xamarin.
+[Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) umożliwia korzystanie z [zasad ochrony aplikacji usługi Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą platformy Xamarin. Składnik ten umożliwia deweloperom łatwe dołączanie funkcji ochrony aplikacji Intune do ich aplikacji opartych na środowisku Xamarin.
 
 > [!NOTE]
 > Obsługa zestawu SDK usługi Intune dla platformy Xamarin jest obecnie dostępna w wersji zapoznawczej. 
@@ -64,7 +64,7 @@ Aplikacje Xamarin utworzone za pomocą składnika Xamarin zestawu Intune App SDK
 
 2. Zapoznaj się z [postanowieniami licencyjnymi](https://components.xamarin.com/license/microsoft.intune.mam) dla składnika Xamarin zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune.
 
-3.  Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 3 powinny znajdować się w katalogach tego samego poziomu.
+3.  Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Nuget.org](https://www.nuget.org/profiles/msintuneappsdk) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 3 powinny znajdować się w katalogach tego samego poziomu.
 
 4.  W wierszu polecenia uruchom polecenie `Xamarin.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
 

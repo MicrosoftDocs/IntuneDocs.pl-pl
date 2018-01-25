@@ -1,6 +1,6 @@
 ---
-title: "Jak korzystać z usługi Azure AD w celu uzyskania dostępu do interfejsu API programu Intune Graph"
-description: "W tym artykule opisano kroki niezbędne do uzyskania przez aplikację dostępu do interfejsu API programu Intune Graph przy użyciu usługi Azure AD"
+title: "Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph"
+description: "W tym artykule opisano kroki niezbędne do uzyskiwania przez aplikacje dostępu do interfejsów API usługi Intune w programie Microsoft Graph przy użyciu usługi Azure AD."
 keywords: "intune graphapi c# powershell role uprawnień"
 author: vhorne
 manager: angrobe
@@ -13,20 +13,20 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 351a066c8852125b6fbf26c039dd3718b63f8980
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 6637d7269f7620dc348b80533661afac8f12e0ba
+ms.sourcegitcommit: d6dc1211e9128c2e0608542b72d1caa4d6ba691d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-use-azure-ad-to-access-the-intune-graph-api"></a>Jak korzystać z usługi Azure AD w celu uzyskania dostępu do interfejsu API programu Intune Graph
+# <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
-[Interfejs API programu Microsoft Graph](https://developer.microsoft.com/graph/) obsługuje teraz usługę Microsoft Intune za pomocą określonych interfejsów API i ról uprawnień.  Interfejsu API programu Graph używa usługi Azure Active Directory (Azure AD) do uwierzytelniania i kontroli dostępu.  
-Do uzyskania dostępu do interfejsu API programu Intune Graph wymagane są następujące elementy:
+[Interfejs API programu Microsoft Graph](https://developer.microsoft.com/graph/) obsługuje teraz usługę Microsoft Intune za pomocą określonych interfejsów API i ról uprawnień.  Interfejs API programu Microsoft Graph używa usługi Azure Active Directory (Azure AD) do uwierzytelniania i kontroli dostępu.  
+Dostęp do interfejsów API usługi Intune w programie Microsoft Graph wymaga elementów, takich jak:
 
 - Identyfikator aplikacji z:
 
-    - Uprawnieniem do wywołania usługi Azure AD i interfejsów API programu Graph.
+    - Uprawnieniem do wywołania usługi Azure AD i interfejsów API programu Microsoft Graph.
     - Zakresy uprawnień odpowiednich do określonych zadań aplikacji.
 
 - Poświadczenia użytkownika z:
@@ -38,11 +38,11 @@ Do uzyskania dostępu do interfejsu API programu Intune Graph wymagane są nast�
 
 W tym artykule:
 
-- Pokazano, jak zarejestrować aplikację za pośrednictwem dostępu do interfejsu API programu Graph i odpowiednich ról uprawnień.
+- Pokazano, jak zarejestrować aplikację za pośrednictwem dostępu do interfejsu API programu Microsoft Graph i odpowiednich ról uprawnień.
 
-- Opisano role uprawnień interfejsu API programu Graph usługi Intune.
+- Opisano role uprawnień interfejsu API usługi Intune.
 
-- Zamieszczono przykłady uwierzytelniania interfejsu API programu Intune Graph dla języka C# i programu PowerShell.
+- Zamieszczono przykłady uwierzytelniania interfejsu API usługi Intune dla języka C# i programu PowerShell.
 
 - Opisano sposób obsługi wielu dzierżawców.
 
@@ -53,9 +53,9 @@ Aby dowiedzieć się więcej, zobacz następujące artykuły:
 - [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Koncepcja protokołu OAuth 2.0](https://oauth.net/2/)
 
-## <a name="register-apps-to-use-graph-api"></a>Rejestrowanie aplikacji w celu użycia interfejsu API programu Graph
+## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Rejestrowanie aplikacji do korzystania z interfejsu API programu Microsoft Graph
 
-Aby zarejestrować aplikację w celu użycia interfejsu API programu Graph:
+Aby zarejestrować aplikację do korzystania z interfejsu API programu Microsoft Graph:
 
 1.  Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) przy użyciu poświadczeń administracyjnych.
 
@@ -127,15 +127,15 @@ W tym momencie możesz również:
 
 ## <a name="intune-permission-scopes"></a>Zakresy uprawnień usługi Intune
 
-Usługa Azure AD i interfejs API programu Graph używają zakresów uprawnień do kontrolowania dostępu do zasobów firmy.  
+Usługa Azure AD i program Microsoft Graph używają zakresów uprawnień do kontrolowania dostępu do zasobów firmy.  
 
-Zakresy uprawnień (nazywane również _zakresami uwierzytelniania protokołu OAuth_) kontrolują dostęp do konkretnych obiektów usługi Intune i ich właściwości. Ta sekcja zawiera podsumowanie informacji o zakresach uprawnień dla funkcji interfejsu API programu Graph usługi Intune.
+Zakresy uprawnień (nazywane również _zakresami uwierzytelniania protokołu OAuth_) kontrolują dostęp do konkretnych obiektów usługi Intune i ich właściwości. Ta sekcja zawiera podsumowanie informacji o zakresach uprawnień dla funkcji interfejsu API usługi Intune.
 
 Dodatkowe informacje:
 - [Uwierzytelnianie usługi Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Zakresy uprawnień aplikacji](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Przy udzielaniu uprawnienia do interfejsu API programu Graph można określić wymienione poniżej zakresy umożliwiające kontrolę dostępu do funkcji usługi Intune. Poniższa tabela zawiera podsumowanie zakresów uprawnień interfejsu API programu Graph usługi Intune.  W pierwszej kolumnie znajduje się nazwa funkcji wyświetlana w witrynie Azure Portal, a w drugiej — nazwa zakresu uprawnień.
+Przy udzielaniu uprawnienia do interfejsu API programu Microsoft Graph można określić wymienione poniżej zakresy umożliwiające kontrolę dostępu do funkcji usługi Intune. Poniższa tabela zawiera podsumowanie zakresów uprawnień interfejsu API usługi Intune.  W pierwszej kolumnie znajduje się nazwa funkcji wyświetlana w witrynie Azure Portal, a w drugiej — nazwa zakresu uprawnień.
 
 Ustawienie _Włącz dostęp_ | Nazwa zakresu
 :--|:--
@@ -153,7 +153,7 @@ __Odczyt konfiguracji usługi Microsoft Intune__ | [DeviceManagementServiceConfi
 
 W tabeli wymieniono ustawienia w takiej formie, w jakiej są wyświetlane w witrynie Azure Portal. W poniższych sekcjach opisano zakresy w kolejności alfabetycznej.
 
-Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu administratora.  Oznacza to, że gdy uruchamiane są aplikacje lub skrypty wymagające dostępu do zasobów interfejsu API programu Intune Graph, niezbędne są odpowiednie poświadczenia.
+Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu administratora.  Oznacza to, że gdy uruchamiane są aplikacje lub skrypty wymagające dostępu do zasobów interfejsu API usługi Intune, niezbędne są odpowiednie poświadczenia.
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
@@ -319,7 +319,7 @@ Podczas testowania dowolnego przykładu możesz otrzymać błędy stanu HTTP 403
 
 Jeśli tak się stanie, sprawdź, czy:
 
-- Identyfikator aplikacji został zaktualizowany do jednego z dysponujących prawem do korzystania z interfejsu API programu Graph i zakresu uprawnień `DeviceManagementManagedDevices.Read.All`.
+- Identyfikator aplikacji został zaktualizowany do jednego z dysponujących prawem do korzystania z interfejsu API programu Microsoft Graph i zakresu uprawnień `DeviceManagementManagedDevices.Read.All`.
 
 - Twoje poświadczenia dzierżawy obsługują funkcje administracyjne.
 

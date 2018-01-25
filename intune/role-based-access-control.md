@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 06/21/2017
+ms.date: 01/17/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99af53b3b22d0ed0196ee3dcd7af91a972f1f0be
-ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
+ms.openlocfilehash: 87a921d02b4564a30d6bab0009b82d29a5252680
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -61,6 +61,18 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 - **Menedżer zasad i profilów**: zarządza zasadami zgodności, profilami konfiguracji i rejestracją Apple oraz identyfikatorami urządzeń firmowych.
 - **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji. Nie może wprowadzać zmian w usłudze Intune.
 - **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi i może odczytywać informacje o urządzeniu.
+- **Administrator szkoły**: zarządza urządzeniami z systemem Windows 10 w usłudze [Intune for Education](introduction-intune-education.md) i może wykonywać następujące akcje: 
+
+|Uprawnienie|Operacja|
+|---|---|
+|Inspekcja danych|Odczyt|
+|DeviceConfigurations|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
+|Menedżerowie rejestracji urządzeń|Odczyt, aktualizowanie|
+|Urządzenia zarządzane|Odczyt, aktualizowanie<!--, Delete [To be added in 1803]-->|
+|Aplikacje mobilne|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
+|Reports|Odczyt|
+|Zdalne działania|Czyszczenie komputera, ponowny rozruch, zdalne blokowanie, wycofywanie, synchronizowanie urządzeń, czyszczenie|
+|Organizacja|Odczyt|
 
 ### <a name="to-assign-a-built-in-role"></a>Aby przypisać rolę wbudowaną
 

@@ -15,11 +15,11 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 44e96ba9fac5b95e6a508b7c2c314a49c04a6d30
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: a85207effabfb1f986ba3901051bd51886c5e7be
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
 
@@ -41,7 +41,7 @@ W przypadku urządzeń, które są **zarejestrowane w celu zarządzania w usłud
 
 Zasady ochrony aplikacji są stosowane tylko podczas służbowego używania aplikacji, więc w zależności od trybu działania (służbowego lub osobistego) aplikacja może zachowywać się różnie.  
 
-W przypadku aplikacji, które obsługują wiele tożsamości, usługa Intune stosuje zasady ochrony aplikacji tylko, jeśli użytkownik korzysta z aplikacji służbowo.  Na przykład podczas uzyskiwania dostępu do danych służbowych użytkownik zobaczy monit o podanie kodu PIN.  W przypadku **aplikacji Outlook** użytkownik końcowy musi podać kod PIN podczas uruchamiania aplikacji. W przypadku **aplikacji OneDrive** trzeba to zrobić po wybraniu konta służbowego.  W przypadku aplikacji Microsoft **Word**, **PowerPoint* i **Excel** kod PIN trzeba podać w celu uzyskania dostępu do dokumentów przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
+W przypadku aplikacji, które obsługują wiele tożsamości, usługa Intune stosuje zasady ochrony aplikacji tylko, jeśli użytkownik korzysta z aplikacji służbowo.  Na przykład podczas uzyskiwania dostępu do danych służbowych użytkownik zobaczy monit o podanie kodu PIN.  W przypadku **aplikacji Outlook** użytkownik końcowy musi podać kod PIN podczas uruchamiania aplikacji. W przypadku **aplikacji OneDrive** trzeba to zrobić po wybraniu konta służbowego.  W przypadku aplikacji Microsoft **Word**, **PowerPoint** i **Excel** ma to miejsce, gdy użytkownik spróbuje uzyskać dostęp do dokumentów przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
 ##  <a name="managing-user-accounts-on-the-device"></a>Zarządzanie kontami użytkowników na urządzeniu
 
 Usługa Intune obsługuje wdrażanie zasad ochrony aplikacji na koncie tylko jednego użytkownika dla każdego urządzenia.
@@ -64,6 +64,6 @@ Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego 
 ![Zrzut ekranu okna dialogowego z komunikatem o blokadzie i opcjami Tak i Nie](./media/ios-switch-user.PNG)
 
 ## <a name="next-steps"></a>Następne kroki
-[Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
-### <a name="see-also"></a>Zobacz także
+[Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
+### <a name="see-also"></a>Zobacz też
 [Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune](app-protection-policies.md)
