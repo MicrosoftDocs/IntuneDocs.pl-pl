@@ -1,11 +1,11 @@
 ---
 title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android"
 description: "Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android można wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM, Mobile App Management) usługi Intune w swojej aplikacji systemu Android."
-keywords: Zestaw SDK
+keywords: SDK
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/28/2017
+ms.date: 01/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7bb78d05f9225c681c5b8a3bb6f1fcee4581a0de
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: c3c6c82dcec8d85d0748d5966f6898f219b620d7
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
 > [!NOTE]
 > Warto najpierw przeczytać artykuł [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md), w którym opisano aktualne funkcje zestawu SDK oraz sposób przygotowania się do integracji na każdej z obsługiwanych platform.
 
-Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android możesz wdrożyć zasady ochrony aplikacji usługi Intune (nazywane również zasadami **APP** lub MAM) w swojej natywnej aplikacji dla systemu Android. Aplikacja obsługująca usługę Intune to aplikacja zintegrowana z zestawem SDK aplikacji usługi Intune. Administratorzy usługi Intune mogą z łatwością wdrażać zasady ochrony aplikacji w aplikacji obsługującej usługę Intune, gdy usługa Intune aktywnie zarządza aplikacją.
+Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android możesz wdrożyć zasady ochrony aplikacji usługi Intune (nazywane również zasadami **APP** lub MAM) w swojej natywnej aplikacji dla systemu Android. Aplikacja zarządzana przez usługę Intune to aplikacja zintegrowana z zestawem SDK aplikacji usługi Intune. Administratorzy usługi Intune mogą z łatwością wdrażać zasady ochrony aplikacji w aplikacji zarządzanej przez usługę Intune, gdy usługa Intune aktywnie zarządza aplikacją.
 
 
 ## <a name="whats-in-the-sdk"></a>Zawartość zestawu SDK
@@ -55,11 +55,11 @@ Zestaw SDK aplikacji usługi Intune to skompilowany projekt systemu Android. Dla
 Zestaw SDK aplikacji usługi Intune dla systemu Android wymaga obecności na urządzeniu aplikacji [Portal firmy](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) umożliwiającej włączenie zasad ochrony aplikacji. Aplikacja Portal firmy pobiera zasady ochrony aplikacji z usługi Intune. Po uruchomieniu aplikacji zostają załadowane zasady i kod umożliwiający wymuszenie danej zasady z aplikacji Portal firmy.
 
 > [!NOTE]
-> Jeśli na urządzeniu nie ma aplikacji Portal firmy, aplikacja obsługująca usługę Intune działa tak samo jak zwykła aplikacja, która nie obsługuje zasad ochrony aplikacji usługi Intune.
+> Jeśli na urządzeniu nie ma aplikacji Portal firmy, aplikacja zarządzana przez usługę Intune działa tak samo jak zwykła aplikacja, która nie obsługuje zasad ochrony aplikacji usługi Intune.
 
 W przypadku ochrony aplikacji bez rejestracji urządzeń _**nie**_ jest wymagane, aby użytkownik rejestrował urządzenie za pomocą aplikacji Portal firmy.
 
-## <a name="sdk-integration"></a>Integracja zestawów SDK
+## <a name="sdk-integration"></a>Integracja z zestawem SDK
 
 ### <a name="build-integration"></a>Integracja kompilacji
 
@@ -875,7 +875,7 @@ Możesz również zastąpić metodę w klasie `MAMActivity`, aby otrzymywać pow
 
 ### <a name="implicit-identity-changes"></a>Niejawne zmienianie tożsamości
 
-Oprócz możliwości ustawiania tożsamości przez aplikację tożsamość wątku lub kontekstu może zostać zmieniona na podstawie transferu danych przychodzących od innej aplikacji obsługującej usługę Intune i objętej zasadą ochrony aplikacji.
+Oprócz możliwości ustawiania tożsamości przez aplikację tożsamość wątku lub kontekstu może zostać zmieniona na podstawie transferu danych przychodzących od innej aplikacji zarządzanej przez usługę Intune i objętej zasadami ochrony aplikacji.
 
 #### <a name="examples"></a>Przykłady
 
@@ -947,7 +947,7 @@ Metoda `onMAMIdentitySwitchRequired` jest wywoływana dla wszystkich niejawnych 
 Typowym zachowaniem operacji w wątku interfejsu użytkownika jest wysyłanie zadań w tle do innego wątku. Aplikacja o wielu tożsamościach powinna upewnić się, że te zadania w tle działają z wykorzystaniem odpowiedniej tożsamości, która często jest taka sama, jak tożsamość używana przez działanie, które je wysłało. Zestaw SDK zarządzania aplikacjami mobilnymi zapewnia `MAMAsyncTask` i `MAMIdentityExecutors`, aby ułatwić zachowywanie tożsamości.
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Aby użyć klasy `MAMAsyncTask`, skorzystaj z dziedziczenia z tej klasy zamiast AsyncTask i zastąp przesłonięcia `doInBackground` oraz `onPreExecute` odpowiednio przy użyciu `doInBackgroundMAM` i `onPreExecuteMAM`. Konstruktor `MAMAsyncTask` pobiera kontekst działania. Na przykład:
+Aby użyć klasy `MAMAsyncTask`, skorzystaj z dziedziczenia z tej klasy zamiast AsyncTask i zastąp przesłonięcia `doInBackground` oraz `onPreExecute` odpowiednio przy użyciu `doInBackgroundMAM` i `onPreExecuteMAM`. Konstruktor `MAMAsyncTask` pobiera kontekst działania. Przykład:
 
 ```java
   AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -1353,6 +1353,32 @@ Poniżej znajduje się pełna lista dozwolonych atrybutów stylu, elementów int
 | Kolor akcentu | Obramowanie wyróżnionego pola numeru PIN <br> Hiperlinki |accent_color | Kolor |
 | Logo aplikacji | Duża ikona wyświetlana na ekranie numeru PIN aplikacji usługi Intune | logo_image | Obiekt rysowalny |
 
+## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-sdk-integrated-android-lob-app-and-enabling-adal-sso-optional"></a>Wymaganie monitu logowania użytkownika na potrzeby automatycznej rejestracji w usłudze APP-WE, wymaganie zasad ochrony aplikacji usługi Intune w celu korzystania ze zintegrowanej z zestawem SDK aplikacji LOB dla systemu Android i włączanie logowania jednokrotnego do biblioteki ADAL (opcjonalnie)
+
+Poniżej przedstawiono wskazówki dotyczące wymagania monitowania użytkownika podczas uruchamiania aplikacji w celu automatycznej rejestracji w usłudze APP-WE (w tej sekcji nazywanej **rejestracją domyślną**) oraz wymagania zasad ochrony aplikacji usługi Intune, aby umożliwić używanie zintegrowanej z zestawem SDK aplikacji LOB dla systemu Android tylko chronionym użytkownikom usługi Intune. Omówiono również sposób włączenia logowania jednokrotnego w przypadku zintegrowanej z zestawem SDK aplikacji LOB dla systemu Android. Te możliwości **nie** są obsługiwane w przypadku aplikacji ze sklepu, których mogą używać użytkownicy niekorzystający z usługi Intune.
+
+> [!NOTE] 
+> Korzyści wynikające z **rejestracji domyślnej** obejmują uproszczone uzyskiwanie zasad z usługi APP-WE dla aplikacji na urządzeniu.
+
+### <a name="general-requirements"></a>Wymagania ogólne
+* Zespół zestawu SDK usługi Intune będzie wymagać identyfikatora Twojej aplikacji. Można go znaleźć za pośrednictwem witryny [Azure Portal](https://portal.azure.com/) w obszarze **Wszystkie aplikacje** w kolumnie **Identyfikator aplikacji**. Dobrym sposobem na skontaktowanie się z zespołem zestawu SDK usługi Intune jest wysłanie wiadomości e-mail na adres msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Korzystanie z zestawu SDK usługi Intune
+Te instrukcje dotyczą wszystkich aplikacji Android i Xamarin, w przypadku których chcesz wymagać zasad ochrony aplikacji usługi Intune do użycia na urządzeniu użytkownika końcowego.
+
+1. Skonfiguruj bibliotekę ADAL, korzystając z kroków zdefiniowanych w [przewodniku zestawu SDK usługi Intune dla systemu Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termin „identyfikator klienta” związany z Twoją aplikacją jest taki sam jak termin „identyfikator aplikacji” w witrynie Azure Portal. 
+* Aby włączyć logowanie jednokrotne, skorzystaj z typowej konfiguracji biblioteki ADAL nr 2.
+
+2. Włącz rejestrację domyślną przez umieszczenie w manifeście następującej wartości: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager mogą powodować konflikty.
+
+3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Wymusi to na użytkowniku pobranie aplikacji Portal firmy na urządzenie i ukończenie przepływu rejestracji domyślnej przed użyciem.
+
 ## <a name="limitations"></a>Ograniczenia
 
 ### <a name="file-size-limitations"></a>Ograniczenia rozmiaru plików
@@ -1380,7 +1406,7 @@ Ograniczenia formatu pliku wykonywalnego dla platformy Dalvik mogą stać się p
     
 ### <a name="exported-services"></a>Wyeksportowane usługi
 
- Plik AndroidManifest.xml dołączony do zestawu SDK aplikacji usługi Intune zawiera element **MAMNotificationReceiverService**. Musi to być wyeksportowana usługa umożliwiająca aplikacji Portal firmy wysyłanie powiadomień do usprawnionych aplikacji. Usługa sprawdza obiekt wywołujący, aby zapewnić, że tylko aplikacja Portal firmy ma zezwolenie na wysyłanie powiadomień.
+ Plik AndroidManifest.xml dołączony do zestawu SDK aplikacji usługi Intune zawiera element **MAMNotificationReceiverService**. Musi to być wyeksportowana usługa, aby umożliwić aplikacji Portal firmy wysyłanie powiadomień do zarządzanej aplikacji. Usługa sprawdza obiekt wywołujący, aby zapewnić, że tylko aplikacja Portal firmy ma zezwolenie na wysyłanie powiadomień.
 
 ### <a name="reflection-limitations"></a>Ograniczenia odbicia
 Niektóre z klas bazowych MAM (np. MAMActivity, MAMDocumentsProvider) zawierają metody (oparte na oryginalnych klasach bazowych systemu Android), które używają parametru lub zwracanych typów obecnych tylko powyżej określonych poziomów interfejsu API. Z tego powodu użycie odbicia w celu wyliczenia wszystkich metod składników aplikacji nie zawsze jest możliwe. To ograniczenie nie dotyczy tylko zarządzania aplikacjami mobilnymi. Będzie mieć również zastosowanie, jeśli aplikacja samodzielnie wdroży te metody na podstawie klas bazowych systemu Android.

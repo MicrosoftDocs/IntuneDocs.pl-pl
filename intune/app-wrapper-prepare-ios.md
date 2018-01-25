@@ -5,20 +5,20 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 12/12/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-ms.reviewer: oldang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 05d60bfea2058e3360c350d227b0031b6b620913
-ms.sourcegitcommit: 4eafb3660d6f5093c625a21e41543b06c94a73ad
+ms.openlocfilehash: dc031b12ed49766c70a6a4ff373a7c5843ca21ad
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -53,7 +53,6 @@ Przed uruchomieniem narzędzia opakowującego aplikacje należy spełnić pewne 
   * Aplikacja wejściowa musi mieć ustawione uprawnienia, aby mogła zostać przetworzona przez narzędzie opakowujące aplikacje usługi Intune. [Uprawnienia](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) zapewniają aplikacji dodatkowe możliwości poza tymi, które są zwykle przyznawane. Instrukcje można znaleźć w artykule [Ustawienie uprawnień dla aplikacji](#setting-app-entitlements).
 
 ## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Wymagania wstępne dotyczące narzędzia opakowującego aplikacje dla deweloperów firmy Apple
-
 
 Aby można było rozpowszechniać opakowane aplikacje wyłącznie wśród użytkowników w organizacji, musisz mieć konto w ramach programu [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) i jednostki podpisywania aplikacji połączone z kontem dewelopera firmy Apple.
 
@@ -204,8 +203,8 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**|Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje.|
 |**-v**|(Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów.|
-|**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Więcej szczegółowych informacji można znaleźć w artykule Ustawianie uprawnień dla aplikacji.|
-|**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Więcej szczegółowych informacji można znaleźć w artykule Ustawianie uprawnień dla aplikacji. |
+|**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje.|
+|**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje. |
 |**-x**| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
 |**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 |**-b**|(Opcjonalnie) Użyj właściwości -b bez argumentu, jeśli chcesz, aby opakowana aplikacja wyjściowa miała taką samą wersję pakietu jak aplikacja wejściowa (niezalecane). <br/><br/> Użyj właściwości `-b <custom bundle version>`, jeśli chcesz, aby opakowana aplikacja miała niestandardową wartość CFBundleVersion. Jeśli chcesz określić niestandardową wartość CFBundleVersion, zaleca się podwyższenie najmniej istotnego składnika wartości CFBundleVersion aplikacji natywnej, na przykład z 1.0.0 na 1.0.1. |
@@ -244,6 +243,16 @@ Przetworzona aplikacja zostanie zapisana we wskazanym wcześniej folderze wyjśc
 > Podczas przekazywania opakowanej aplikacji możesz spróbować zaktualizować starszą wersję aplikacji, jeśli starsza wersja (opakowana lub natywna) została już wdrożona w usłudze Intune. Jeśli wystąpi błąd, przekaż opakowaną aplikację jako nową aplikację, a następnie usuń starszą wersję.
 
 Teraz możesz wdrożyć aplikację do grup użytkowników i przypisać zasady ochrony do aplikacji. Aplikacja będzie uruchamiana na urządzeniu przy użyciu wybranych zasad ochrony aplikacji.
+
+## <a name="how-often-should-i-rewrap-my-ios-application-with-the-intune-app-wrapping-tool"></a>Jak często należy ponownie opakowywać aplikację systemu iOS za pomocą narzędzia opakowującego aplikacje usługi Intune?
+Główne scenariusze, w których trzeba będzie ponownie opakować aplikacje:
+* Sama aplikacja wydała nową wersję. Poprzednia wersja aplikacji została opakowana i przekazana do konsoli usługi Intune.
+* Narzędzie opakowujące aplikacje usługi Intune dla systemu iOS wydało nową wersję, która oferuje kluczowe poprawki usterek i nowe funkcje zasad ochrony aplikacji, przeznaczone specjalnie dla usługi Intune. Taka sytuacja występuje co 6–8 tygodni za pośrednictwem repozytorium GitHub dla [narzędzia opakowującego aplikacje usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
+
+W przypadku systemu iOS, chociaż możliwe jest opakowywanie przy użyciu profilu aprowizacji/certyfikatu innego niż oryginalnie zastosowany do podpisania aplikacji, jeśli uprawnienia określone w aplikacji nie zostaną uwzględnione w nowym profilu aprowizacji, opakowywanie nie powiedzie się. Użycie opcji „-e” wiersza polecenia, która usuwa wszystkie brakujące uprawnienia z aplikacji, w celu wymuszenia zakończenia opakowywania powodzeniem w tym scenariuszu może spowodować uszkodzenie funkcjonalności aplikacji.
+
+Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania:
+* Upewnienie się, że inny profil aprowizacji ma wszystkie wymagane uprawnienia dowolnego poprzedniego profilu aprowizacji. 
 
 ## <a name="error-messages-and-log-files"></a>Komunikaty o błędach i pliki dziennika
 Skorzystaj z poniższych informacji przy rozwiązywaniu problemów z narzędziem opakowującym aplikacje.
