@@ -5,7 +5,7 @@ description: "Konfigurowanie dostawcy zarządzania aplikacjami mobilnymi (MAM) w
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 91e26256d220ba70e5ad6daa3910d34eea8bb5ed
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 3254adc66c5fd5dc991364c3a33aabef8ac2030b
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Windows 10
 
@@ -52,7 +52,7 @@ Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawia
     **Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi**  
       Adres URL punktu końcowego informacji o zgodności usługi MAM. Jeśli użytkownikowi odmówiono dostępu do zasobu z niezgodnego urządzenia, jest wyświetlany link do adresu URL informacji o zgodności. Użytkownicy mogą przejść do tego adresu URL hostowanego przez usługę MAM, aby zrozumieć, dlaczego ich urządzenie jest uznawane za niezgodne. Użytkownicy mogą również zainicjować samodzielne rozwiązanie problemu, aby ich urządzenie stało się zgodne i zapewniało dostęp do zasobów.
 
-5.  Kliknij przycisk**Save (Zapisz)**.
+5.  Kliknij polecenie **Zapisz**.
 
 ## <a name="next-steps"></a>Następne kroki
 

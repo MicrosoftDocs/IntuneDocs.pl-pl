@@ -5,7 +5,7 @@ description: "Uzyskaj podstawowe informacje o usłudze Intune w witrynie Azure P
 keywords: 
 author: arob98
 ms.author: angrobe
-nmanager: angrobe
+nmanager: dougeby
 ms.date: 10/30/2017
 ms.topic: get-started-article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: d83b3d6609e5fd6839e17e46520e4ef3d4551568
-ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
+ms.openlocfilehash: 19b5d98165be67b32afa86ba942c42fc4a3048b3
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
@@ -77,7 +77,7 @@ Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-desig
 [Zdefiniuj poziom zgodności urządzeń, a następnie zgłoś wszystkie niezgodne urządzenia](device-compliance.md).
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 [Poznaj profile, których można użyć do skonfigurowania ustawień i funkcji na urządzeniach, którymi zarządzasz](device-profiles.md).
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 [Za pomocą spisu i raportów ustal, jakimi urządzeniami zarządzasz](device-management.md).
 ### <a name="mobile-apps"></a>Aplikacje mobilne
 [Jak publikować, konfigurować i ochronić aplikacje oraz zarządzać nimi](app-management.md).
