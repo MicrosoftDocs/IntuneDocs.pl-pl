@@ -4,7 +4,7 @@ description: "Dowiedz się więcej na temat cyklu życia aplikacji zarządzanych
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 06/07/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e50e3af525be48bf058dd32bfb7b93508d500a3
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 87bd0ceed846052444e4dac4366e3a0304b1452c
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="overview-of-the-app-lifecycle"></a>Przegląd cyklu życia aplikacji
 
@@ -32,7 +32,7 @@ Cykl życia aplikacji w usłudze Intune rozpoczyna się po dodaniu aplikacji i j
 
 Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i przypisać, do usługi Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Usługa Intune umożliwia dodawanie aplikacji zarówno dla [zarejestrowanych urządzeń](apps-add.md) ([portal klasyczny](/intune-classic/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune)), jak i dla [komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune](/intune-classic/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune).
 
-## <a name="deploy"></a>Wdróż
+## <a name="deploy"></a>Wdróż program
 
 Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do użytkowników oraz do urządzeń, którymi zarządzasz](apps-deploy.md) ([portal klasyczny](/intune-classic/deploy-use/deploy-apps)). Usługa Intune ułatwia ten proces, a po wdrożeniu aplikacji możesz [monitorować powodzenie](apps-monitor.md) ([portal klasyczny](/intune-classic/deploy-use/monitor-apps-in-microsoft-intune)) wdrożenia z konsoli administracyjnej usługi Intune. Ponadto niektóre sklepy z aplikacjami, takie jak [Apple](vpp-apps-ios.md) ([portal klasyczny](/intune-classic/deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune)) i [Windows](windows-store-for-business.md) ([portal klasyczny](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune)), umożliwiają zakup zbiorczych licencji na aplikacje dla firm. Usługa Intune może synchronizować dane z tymi sklepami, aby umożliwić wdrażanie licencji i śledzenie ich użycia dla tych typów aplikacji bezpośrednio z Konsoli administracyjnej usługi Intune.
 

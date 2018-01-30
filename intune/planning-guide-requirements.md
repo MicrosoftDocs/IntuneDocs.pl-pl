@@ -4,7 +4,7 @@ description: "W tym artykule zawarto informacje ułatwiające określenie wymaga
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: fd8cb5f7-19f0-4d80-8825-2bafa49624af
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65a1fb8fb41fa8d9f3e707c73bf752a997a8a1a1
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 7f4f080201d1a089a8ae10a6acf81c0c28fa33c9
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Określanie wymagań scenariusza przypadku użycia
 
@@ -30,7 +30,7 @@ Poszczególne grupy organizacyjne dla firmowego scenariusza przypadku użycia mo
 
 Oto kilka przykładów wymagań dotyczących przypadków użycia w organizacji z różnymi zestawami wymagań dla poszczególnych scenariuszy przypadków użycia/podrzędnych przypadków użycia, grup organizacyjnych i platform urządzeń mobilnych. Poniższa tabela może również służyć jako wzór do wprowadzania wymagań przypadków użycia w Twojej organizacji:
 
-| **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy** | **Platformy urządzeń** | **Requirements** |
+| **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy** | **Platformy urządzeń** | **Wymagania** |
 |:---:|:---:|:---:|:---:|:---:|
 | Firmowe | Pracownik przetwarzający informacje | Kadry, księgowość | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                          
 | Firmowe | Kierownictwo | Kadry, księgowość | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                         

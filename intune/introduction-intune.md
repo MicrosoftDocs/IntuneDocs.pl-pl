@@ -4,7 +4,7 @@ description: "Dowiedz się, w jaki sposób usługa Intune pełni rolę składnik
 keywords: "co to jest usługa Intune"
 author: Lindavr
 ms.author: lindavr
-manager: angrobe
+manager: dougeby
 ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 527a2a1578fcf9ef8e8f80c68091e582f8f2ebd2
-ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
+ms.openlocfilehash: 64fd5e506d0c2fdfa5d99e6ac96d6e12c886fcbe
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="what-is-intune"></a>Co to jest usługa Intune?
 
@@ -47,7 +47,7 @@ Usługa Intune jest składnikiem pakietu Enterprise Mobility + Security (EMS), k
 
 Wyświetl [powiększony](./media/intunearchitecture.svg) diagram architektury usługi Intune.
 
-Sposób użycia funkcji zarządzania urządzeniami i aplikacjami usługi Intune oraz ochrony danych pakietu EMS zależy od [problemu biznesowego, który próbujesz rozwiązać](#common-business-problems-that-intune-helps-solve). Na przykład:
+Sposób użycia funkcji zarządzania urządzeniami i aplikacjami usługi Intune oraz ochrony danych pakietu EMS zależy od [problemu biznesowego, który próbujesz rozwiązać](#common-business-problems-that-intune-helps-solve). Przykład:
 * Funkcja zarządzania urządzeniami znajdzie zastosowanie przy tworzeniu puli urządzeń współdzielonych przez pracowników zmianowych w sklepie detalicznym.
 * Funkcja zarządzania aplikacjami i ochrona danych jest przydatna w sytuacji, gdy pracownicy uzyskują dostęp do danych firmowych za pomocą urządzeń osobistych (Przynieś własne urządzenie).  
 * Będziesz polegać na wszystkich tych technologiach, jeśli wydajesz telefony firmowe pracownikom przetwarzającym informacje.

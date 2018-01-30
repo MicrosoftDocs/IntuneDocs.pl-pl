@@ -4,7 +4,7 @@ description: "Ten artykuł jest pomocny w przypadku tworzenia projektu i impleme
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: bd8f3372f3546b5fba20a253611e382f780b3236
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 38cae4b0726d4ad96c243dd87ea2581a691da306
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -177,7 +177,7 @@ Przyjrzyj się bliżej następującym aspektom swoich urządzeń, aby zrozumieć
 
 -   Obsługiwane platformy urządzeń
 
--   Urządzenia
+-   Devices
 
 -   Własność urządzeń
 
@@ -191,9 +191,9 @@ W momencie tworzenia projektu należy wiedzieć, jakie urządzenia będą znajdo
 
 [Pełna lista urządzeń obsługiwanych przez usługę Intune](supported-devices-browsers.md).
 
-### <a name="devices"></a>Urządzenia
+### <a name="devices"></a>Devices
 
-Usługa Intune zarządza urządzeniami przenośnymi w celu zabezpieczenia danych firmowych i umożliwienia użytkownikom końcowym pracy z większej liczby lokalizacji. Usługa Intune obsługuje wiele platform urządzeń, dlatego zalecane jest dokumentowanie urządzeń oraz platform i wersji systemów operacyjnych, które będą obsługiwane w projekcie w organizacji. Na przykład:
+Usługa Intune zarządza urządzeniami przenośnymi w celu zabezpieczenia danych firmowych i umożliwienia użytkownikom końcowym pracy z większej liczby lokalizacji. Usługa Intune obsługuje wiele platform urządzeń, dlatego zalecane jest dokumentowanie urządzeń oraz platform i wersji systemów operacyjnych, które będą obsługiwane w projekcie w organizacji. Przykład:
 
 | **Platforma urządzeń** | **Wersje systemu operacyjnego** |
 |:---:|:---:|
@@ -349,7 +349,7 @@ Usługi Intune możesz użyć do dostarczania aplikacji użytkownikom lub do urz
 
 -   [iOS Volume Purchase Program for Business (VPP)](vpp-apps-ios.md)
 
--   [Aplikacje ze Sklepu Windows dla firm](windows-store-for-business.md)
+-   [Aplikacje ze Sklepu Microsoft dla Firm](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Wymagania dotyczące typu aplikacji
 
@@ -399,7 +399,7 @@ Dostęp warunkowy służy do umożliwiania dostępu do poczty e-mail i innych za
 
 Na potrzeby dostępu online zdecyduj, których platform i grup użytkowników będą dotyczyć zasady dostępu warunkowego. Ponadto określ, czy należy zainstalować lub skonfigurować łącznik Intune Service To Service Connector na potrzeby usługi Exchange Online lub lokalnej instalacji programu Exchange. Dowiedz się więcej na temat sposobu instalowania i konfigurowania łączników Intune Service to Service Connector: <!---these links are correct--->
 
--   [Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
+-   [Usługa Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
 
 -   [Lokalna instalacja programu Exchange](exchange-connector-install.md)
 
