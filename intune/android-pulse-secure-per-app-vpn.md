@@ -5,7 +5,7 @@ description: "Instrukcje dotyczące tworzenia profilu sieci VPN dla aplikacji dl
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c5b8e85ded2ea515f361c91c61744956b8112757
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 46555f776ff93207f4672dc5d97abbaa2323b234
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android
 
@@ -63,7 +63,7 @@ Zapisz **nazwę połączenia** — wartość określaną podczas tworzenia profi
 3. W bloku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**.
     - Podaj nazwę ustawienia.
     - Dla pozycji **Typ danych** określ wartość **Ciąg**.
-    - Dla pozycji **OMA-URI** określ następujący ciąg: **./Vendor/MSFT/VPN/Profile/*Nazwa*/PackageList**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
+    - Dla pozycji **OMA-URI** określ następujący ciąg: ***./Vendor/MSFT/VPN/Profile/*Nazwa**/PackageList, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
     - W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
 
 ![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](./media/android_per_app_vpn_oma_uri.png)
@@ -74,7 +74,7 @@ Alternatywnie możesz użyć wartości **WHITELIST**, aby określić listę apli
   1.    W bloku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**.
   2.    Podaj nazwę ustawienia.
   3.    Dla pozycji **Typ danych** określ wartość **Ciąg**.
-  4.    Dla pozycji **OMA-URI** użyj ciągu **./Vendor/MSFT/VPN/Profile/*Nazwa*/Mode**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/Mode**.
+  4.    Dla pozycji **OMA-URI** użyj ciągu ***./Vendor/MSFT/VPN/Profile/*Nazwa**/Mode, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/Mode**.
   5.    W polu **Wartość** podaj wartość **BLACKLIST** lub **WHITELIST**.
 
 

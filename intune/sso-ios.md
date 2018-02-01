@@ -5,7 +5,7 @@ description: "Dowiedz się, jak konfigurować logowanie jednokrotne w usłudze I
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/7/2017
 ms.topic: article
 ms.prod: 
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff71239a360b09ca831a6e99f5f7a759b08f5d56
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS
 
@@ -89,7 +89,7 @@ Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adres
 
 Wskazuje aplikacje na urządzeniu użytkownika końcowego, które mogą korzystać z ładunku logowania jednokrotnego.
 
-Tablica `AppIdentifierMatches` musi zawierać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub mogą określać dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego *. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu (przykład: `com.contoso.*`). Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
+Tablica `AppIdentifierMatches` musi zawierać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub mogą określać dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego *\. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu (przykład: `com.contoso.*`). Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
 
 Pole **Nazwa aplikacji** służy do dodawania przyjaznej nazwy, która ułatwia identyfikowanie identyfikatora pakietu.
 

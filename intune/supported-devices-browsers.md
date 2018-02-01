@@ -4,7 +4,7 @@ description: "Podaje listę obsługiwanych platform urządzeń i przeglądarki d
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-manager: angrobe
+manager: dougeby
 ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
@@ -14,28 +14,28 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
-ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
+ms.openlocfilehash: 1e6b14d5152df8420c5d358ccd9057d7ba427800
+ms.sourcegitcommit: d9de1e92c3913f731d5da3c51a5e1e9b2686894b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="supported-devices-and-browsers"></a>Obsługiwane urządzenia i przeglądarki
+# <a name="supported-operating-systems-and-browsers"></a>Obsługiwane systemy operacyjne i przeglądarki
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Ten artykuł jest przeznaczony dla administratorów systemów odpowiedzialnych za zarządzanie urządzeniami w przedsiębiorstwie. Aby uzyskać pomoc dotyczącą instalowania usługi Intune na telefonie, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](/intune-user-help/company-portal-frequently-asked-questions).
+Ten artykuł jest przeznaczony dla administratorów systemów odpowiedzialnych za zarządzanie urządzeniami w przedsiębiorstwie. Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](/intune-user-help/company-portal-frequently-asked-questions).
 
 Przed rozpoczęciem konfigurowania usługi Microsoft Intune przejrzyj poniższe wymagania:
 
-- [Obsługiwane urządzenia i komputery](#intune-supported-devices)
+- [Obsługiwane systemy operacyjne](#intune-supported-operating-systems)
 - [listę obsługiwanych przeglądarek sieci Web umożliwiających korzystanie z usługi Intune.](#intune-supported-web-browsers)
 
 Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
 
-## <a name="intune-supported-devices"></a>Urządzenia obsługiwane przez usługę Intune
+## <a name="intune-supported-operating-systems"></a>Systemy operacyjne obsługiwane przez usługę Intune
 
-Korzystając z funkcji zarządzania urządzeniami przenośnymi usługi Intune, możesz zarządzać następującymi urządzeniami:
+Zarządzać możesz urządzeniami z następującymi systemami operacyjnymi:
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
@@ -85,7 +85,6 @@ Poniższa lista obejmuje modele urządzeń firmy Samsung, które nie obsługują
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-Usługi Intune nie można używać do zarządzania systemami operacyjnymi Windows Server.
 
 ### <a name="windows-pc-software-client"></a>Oprogramowanie klienckie dla komputerów z systemem Windows
 

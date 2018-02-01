@@ -5,7 +5,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1612f5af24bd4c96aced4e3a6f1572a4c49d9913
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 6b2ab30f9bf061e7ea4a34372e7c99e059c6e30f
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -50,7 +50,7 @@ Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby
 |**Narzędzie opakowujące aplikacje** | **Xamarin** |**Cordova** |
 |------|----|----|
 |**iOS** |Tak|Tak|
-|**Android**| Nie |Tak|
+|**Android**| W wersji zapoznawczej |Tak|
 
 ## <a name="intune-app-sdk"></a>Zestaw SDK aplikacji usługi Intune
 Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikacje znajdują się w sklepie Apple App Store lub sklepie Google Play i którzy chcą zarządzać aplikacjami za pomocą usługi Intune. Korzyści wynikające z integracji zestawu SDK są jednak dostępne dla wszystkich aplikacji, nawet aplikacji biznesowych.

@@ -5,7 +5,7 @@ description: "Dowiedz się, jak przy użyciu usługi Intune można ułatwić ins
 keywords: 
 author: dougeby
 ms.author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f1958e4a0fb5aeba3225ee7ea5fae1e7fb39db3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 7ee1657351551ea83c6089c5ac52655b9cd64fc2
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus 2016 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -35,7 +35,7 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 20
 - Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365 ProPlus 2016.
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, użytkownicy końcowi mogą utracić dane z niezapisanych plików.
 - Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S.
-- Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze Sklepu Windows (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, w których już wdrożono aplikacje usługi Office 365 z usługą Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
+- Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze sklepu Microsoft Store (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, na których już wdrożono aplikacje usługi Office 365 przy użyciu usługi Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
 
 
 ## <a name="get-started"></a>Wprowadzenie
@@ -63,7 +63,7 @@ W tym kroku wybierz aplikacje pakietu Office, które chcesz przypisać do urząd
 W tym kroku podaj informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet w usłudze Intune, a także ułatwiają użytkownikom wyszukiwanie go w aplikacji Portal firmy.
 
 1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Informacje o pakiecie aplikacji**.
-2.  W bloku **Informacje o pakiecie aplikacji** podaj następujące informacje: 
+2.  W bloku **Informacje o pakiecie aplikacji** podaj następujące informacje:
     - **Nazwa pakietu** — wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis pakietu** — wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
@@ -82,9 +82,9 @@ W tym kroku podaj informacje o pakiecie aplikacji. Te informacje pomagają ziden
 W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
 
 1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
-2.  W bloku **Ustawienia pakietu aplikacji** skonfiguruj poniższe informacje: 
+2.  W bloku **Ustawienia pakietu aplikacji** skonfiguruj poniższe informacje:
     - **Wersja pakietu Office** — wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
-    - **Kanał aktualizacji** — wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące innych kanałów aktualizacji, zapoznaj się z omówieniem kanałów aktualizacji usługi Office 365 ProPlus. Wybierz spośród opcji: 
+    - **Kanał aktualizacji** — wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące innych kanałów aktualizacji, zapoznaj się z omówieniem kanałów aktualizacji usługi Office 365 ProPlus. Wybierz spośród opcji:
         - **Bieżący**
         - **Odroczony**
         - **Bieżący kanał pierwszego wydania**
@@ -104,19 +104,19 @@ Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Zap
 
 W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą wystąpić, oraz ich znaczenie.
 
-### <a name="status-for-office-csp"></a>Stan dostawcy CSP pakietu Office: 
+### <a name="status-for-office-csp"></a>Stan dostawcy CSP pakietu Office:
 
 ||||
 |-|-|-|
 |Stan|Etap|Opis|
 |1460 (ERROR_TIMEOUT)|Pliki do pobrania|Nie można pobrać Narzędzia wdrażania pakietu Office|    
-|13 (ERROR_INVALID_DATA)|-|Nie można zweryfikować podpisu pobranego Narzędzia wdrażania pakietu Office| 
+|13 (ERROR_INVALID_DATA)|-|Nie można zweryfikować podpisu pobranego Narzędzia wdrażania pakietu Office|
 |Kod błędu z zasad CertVerifyCertificateChainPolicy|-|Nie można sprawdzić certyfikatów pobranego Narzędzia wdrażania pakietu Office|    
-|997|PWT|Instalowanie| 
+|997|PWT|Instalowanie|
 |0|Po instalacji|Instalacja zakończona pomyślnie|    
 |1603 (ERROR_INSTALL_FAILURE)|-|Nieudane sprawdzanie wymagań wstępnych, takich jak:<br>— SxS (nastąpiła próba instalacji po zainstalowaniu instalatora MSI 2016)<br>— niezgodność wersji<br>— itd.|     
 |0x8000ffff (E_UNEXPECTED)|-|Podjęto próbę odinstalowania w sytuacji, gdy na maszynie nie ma modułu Szybka instalacja pakietu Office.|    
-|17002|-|Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny:<br>— Instalacja została anulowana przez użytkownika<br>— Instalacja została anulowana przez inną instalację<br>— Brak miejsca na dysku podczas instalacji<br>— Nieznany identyfikator języka| 
+|17002|-|Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny:<br>— Instalacja została anulowana przez użytkownika<br>— Instalacja została anulowana przez inną instalację<br>— Brak miejsca na dysku podczas instalacji<br>— Nieznany identyfikator języka|
 |17004|-|Nieznane jednostki SKU|   
 
 
@@ -124,15 +124,15 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 
 |||||
 |-|-|-|-|
-|Scenariusz|Kod powrotu|Interfejs użytkownika|Uwaga| 
-|Podjęto działania związane z odinstalowywaniem w sytuacji, gdy nie ma aktywnego modułu Szybka instalacja|-2147418113, 0x8000ffff lub 2147549183|Kod błędu: 30088-1008<br>Kod błędu: 30125-1011 (404)|Narzędzie wdrażania pakietu Office| 
-|Instalacja, gdy zainstalowano wersję instalatora MSI|1603|-|Narzędzie wdrażania pakietu Office| 
-|Instalacja anulowana przez użytkownika lub inną instalację|17002|-|Szybka instalacja| 
-|Próba zainstalowania wersji 64-bitowej na urządzeniu z zainstalowaną wersją 32-bitową|1603|-|Kod zwrotny Narzędzia wdrażania pakietu Office| 
-|Próba zainstalowania nieznanej jednostki SKU (to nie jest rzeczywisty przypadek użycia dostawcy CSP pakietu Office, ponieważ należy przekazywać tylko prawidłowe jednostki SKU)|17004|-|Szybka instalacja| 
-|Brak miejsca|17002|-|Szybka instalacja| 
-|Nie można uruchomić modułu Szybka instalacja (nieoczekiwana sytuacja)|17000|-|Szybka instalacja| 
-|Moduł Szybka instalacja nie mógł umieścić scenariusza w kolejce (nieoczekiwana sytuacja)|17001|-|Szybka instalacja| 
+|Scenariusz|Kod powrotu|Interfejs użytkownika|Uwaga|
+|Podjęto działania związane z odinstalowywaniem w sytuacji, gdy nie ma aktywnego modułu Szybka instalacja|-2147418113, 0x8000ffff lub 2147549183|Kod błędu: 30088-1008<br>Kod błędu: 30125-1011 (404)|Narzędzie wdrażania pakietu Office|
+|Instalacja, gdy zainstalowano wersję instalatora MSI|1603|-|Narzędzie wdrażania pakietu Office|
+|Instalacja anulowana przez użytkownika lub inną instalację|17002|-|Szybka instalacja|
+|Próba zainstalowania wersji 64-bitowej na urządzeniu z zainstalowaną wersją 32-bitową|1603|-|Kod zwrotny Narzędzia wdrażania pakietu Office|
+|Próba zainstalowania nieznanej jednostki SKU (to nie jest rzeczywisty przypadek użycia dostawcy CSP pakietu Office, ponieważ należy przekazywać tylko prawidłowe jednostki SKU)|17004|-|Szybka instalacja|
+|Brak miejsca|17002|-|Szybka instalacja|
+|Nie można uruchomić modułu Szybka instalacja (nieoczekiwana sytuacja)|17000|-|Szybka instalacja|
+|Moduł Szybka instalacja nie mógł umieścić scenariusza w kolejce (nieoczekiwana sytuacja)|17001|-|Szybka instalacja|
 
 ## <a name="next-steps"></a>Następne kroki
 

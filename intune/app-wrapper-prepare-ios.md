@@ -4,7 +4,7 @@ description: "Ten temat zawiera informacje o sposobie opakowywania aplikacji sys
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: dc031b12ed49766c70a6a4ff373a7c5843ca21ad
-ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
+ms.openlocfilehash: 4925fc86596437d0560bd7fa2598eaf95126df16
+ms.sourcegitcommit: cede2e15bd62f1073131fbc9af7623cdfc3730cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -172,6 +172,9 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 3. Wybierz pozycję **Zgadzam się**, aby zaakceptować umowę EULA, co spowoduje zainstalowanie pakietu na komputerze.
 
 4.  Otwórz folder **IntuneMAMPackager** i zapisz jego zawartość na komputerze z systemem macOS. Można teraz uruchomić narzędzie opakowujące aplikacje.
+
+> [!NOTE]
+> Program Intune MAM Packager może zostać zainstalowany oddzielnie na komputerze z systemem macOS, co może spowodować błąd „Nie można odnaleźć pliku” podczas uruchamiania poleceń opakowywania. W związku z tym przeniesienie zawartości folderu IntuneMAMPackager pozwoli na znalezienie ścieżki do pakowarki podczas opakowywania.
 
 ## <a name="run-the-app-wrapping-tool"></a>Uruchamianie narzędzia opakowującego aplikacje
 

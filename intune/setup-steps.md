@@ -4,8 +4,8 @@ description: "Wymogi i wymagania wstępne dotyczące korzystania z subskrypcji u
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
-ms.date: 10/31/2017
+manager: dougeby
+ms.date: 01/24/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 54f2bdd4a415cb8a4432a8bdcf93c56ba995c201
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: a1203cf22fad93f245508284d93024df40e11b9a
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="set-up-intune"></a>Konfigurowanie usługi Intune
 
@@ -47,3 +47,4 @@ Jeśli obecnie używasz programu Microsoft System Center Configuration Manager d
 | 8 | [Konfigurowanie urządzeń](device-profiles.md) — skonfiguruj profile na potrzeby zarządzania ustawieniami urządzeń. Za pomocą profili urządzeń możesz wstępnie konfigurować ustawienia poczty e-mail, sieci VPN, sieci Wi-Fi i funkcji urządzeń. Dzięki nim możesz również ograniczyć urządzenia, aby pomóc w ochronie danych i urządzeń.  |
 | 9 | [Dostosowywanie portalu firmy](company-portal-app.md) — dostosuj portal firmy usługi Intune, za pomocą którego użytkownicy rejestrują urządzenia i instalują aplikacje. Te ustawienia są wyświetlane zarówno w aplikacji Portal firmy, jak i w witrynie internetowej Portal firmy usługi Intune. |
 | 10 | [Włączanie rejestrowania urządzeń](mdm-authority-set.md) — włącz zarządzanie urządzeniami z systemem iOS, Windows, Android i Mac przy użyciu usługi Intune, ustawiając urząd MDM i włączając określone platformy. |
+| 11 | [Konfigurowanie zasad aplikacji](app-protection-policy.md) — określ konkretne ustawienia na podstawie zasad ochrony aplikacji w usłudze Microsoft Intune. |
