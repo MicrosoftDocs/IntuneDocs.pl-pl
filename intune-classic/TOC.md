@@ -173,7 +173,7 @@
 #### [Ochrona dostępu do poczty e-mail: przykłady](deploy-use/restrict-email-access-example-scenarios.md)
 ### [Zezwalaj na dostęp do usług O365 tylko aplikacjom zarządzanym przez zasady](deploy-use/allow-policy-managed-apps-access-to-o365.md)
 #### [Używanie aplikacji z urzędem certyfikacji bazującym na aplikacji](deploy-use/use-apps-with-mam-ca.md)
-#### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
+#### [Usługa Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [SharePoint Online](deploy-use/mam-ca-for-sharepoint-online.md)
 #### [Blokowanie aplikacji bez biblioteki ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Ochrona dostępu do sieci (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
@@ -207,7 +207,7 @@
 
 #### [Konsola administracyjna usługi Intune dla zasad zarządzania aplikacjami mobilnymi](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
-### [Przygotowanie aplikacji biznesowych do współdziałania z zasadami zarządzania aplikacjami mobilnymi](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
+### [Przygotowanie aplikacji biznesowych do współdziałania z funkcją zarządzania aplikacjami mobilnymi](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
 #### [Opakowywanie aplikacji systemu iOS](/intune/app-wrapper-prepare-ios?toc=/intune-classic/toc.json)
 #### [Opakowywanie aplikacji systemu Android](/intune/app-wrapper-prepare-android?toc=/intune-classic/toc.json)
 #### [Aplikacje biznesowe na urządzeniach niezarządzanych przez usługę Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
