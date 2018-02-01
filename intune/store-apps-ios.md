@@ -5,7 +5,7 @@ description: "Informacje o dodawaniu aplikacji ze sklepu z aplikacjami dla syste
 keywords: Intune
 author: Erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7dcb857127b3c36d2b90208aac9b8ad901e31d89
-ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
+ms.openlocfilehash: e013b5c995274365978ee0c2ba2f45bfeef54baa
+ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu iOS do usługi Microsoft Intune
 
@@ -35,6 +35,8 @@ Informacje przedstawione w tym temacie ułatwiają dodawanie aplikacji ze sklepu
 
 Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatnie w sklepie z aplikacjami. Jeśli chcesz przy użyciu usługi Intune przypisać aplikacje płatne, rozważ skorzystanie z [programu zakupów zbiorczych dla systemu iOS](vpp-apps-ios.md).
 
+>[!NOTE]
+>Do pracy z usługą Microsoft Intune zalecane są przeglądarki Chrome i Edge.
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Krok 1 — Wyszukiwanie aplikacji w sklepie
 
@@ -63,9 +65,9 @@ Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatni
 - **Wyświetl jako polecaną aplikację w portalu firmy** — wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
 - **Adres URL informacji** — opcjonalnie wpisz adres URL witryny internetowej zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników portalu firmy.
 - **Adres URL zasad ochrony prywatności** — opcjonalnie wpisz adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres będzie widoczny dla użytkowników portalu firmy.
-- **Deweloper** — opcjonalnie wpisz nazwę dewelopera aplikacji. To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom.
-- **Właściciel** — opcjonalnie wpisz nazwę właściciela aplikacji, na przykład **Dział kadr**.  To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom.
-- **Uwagi** — wpisz wszelkie uwagi, które chcesz skojarzyć z aplikacją. To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom.
+- **Deweloper** — opcjonalnie wpisz nazwę dewelopera aplikacji. To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom końcowym.
+- **Właściciel** — opcjonalnie wpisz nazwę właściciela aplikacji, na przykład **Dział kadr**.  To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom końcowym.
+- **Uwagi** — wpisz wszelkie uwagi, które chcesz skojarzyć z aplikacją. To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom końcowym.
 - **Logo** — przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Gdy wszystko będzie gotowe, w bloku **Dodawanie aplikacji** wybierz przycisk **OK**.
 

@@ -5,7 +5,7 @@ description: "Informacje dotyczące ustawień usługi Intune, których można u�
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 89229a5e-3421-4221-a62f-fa800620cc0d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 087a8ad8ad8d07bee1d00cd6adaca86ede737eb7
-ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
+ms.openlocfilehash: 6a4a5b9b76995be6a82cc3dcaa9f782c158ba174
+ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/30/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -33,6 +33,7 @@ ms.lasthandoff: 12/30/2017
 - **Identyfikator SSID** — identyfikator zestawu usług. Jest to prawdziwa nazwa sieci bezprzewodowej, z którą będą łączyć się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko nazwę sieciową utworzoną wcześniej.
 - **Połącz automatycznie** — sprawia, że urządzenie łączy się zawsze, gdy znajdzie się w zasięgu tej sieci.
 - **Ukryta sieć** — uniemożliwia wyświetlanie tej sieci na liście dostępnych sieci na urządzeniu.
+- **Klucz wstępny** - 
 - **Ustawienia serwera proxy** — wybierz pozycję:
     - **Brak** — nie zostaną skonfigurowane żadne ustawienia serwera proxy.
     - **Ręczne** — uzupełnij pole **Adres serwera proxy** (jako adres IP) oraz wprowadź skojarzony z nim **numer portu**.

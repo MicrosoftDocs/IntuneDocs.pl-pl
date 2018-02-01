@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9707858ba2b0462edade4847dba09404a895fb34
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b289e69d834d43d29725a32c48b3ca0a19ee07ec
+ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 
@@ -48,7 +48,7 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 
   ## <a name="data-transfer-exemptions"></a>Wyjątki w transferze danych
 
-  Istnieją pewne aplikacje i usługi platform, w przypadku których zasady ochrony aplikacji usługi Intune mogą zezwolić na przesyłanie danych z tych aplikacji i usług oraz do nich. Na przykład wszystkie aplikacje obsługujące usługę Intune w systemie Android muszą mieć możliwość przesyłania danych z i do funkcji Zamiana tekstu na mowę Google, aby tekst z ekranu urządzenia przenośnego mógł być odczytywany na głos. Ta lista może ulec zmianom i odzwierciedla usługi oraz aplikacje uważane za przydatne w kwestii bezpieczeństwa wydajności.
+  Istnieją pewne aplikacje i usługi platform, w przypadku których zasady ochrony aplikacji usługi Intune mogą zezwolić na przesyłanie danych z tych aplikacji i usług oraz do nich. Na przykład wszystkie aplikacje zarządzane przez usługę Intune w systemie Android muszą mieć możliwość przesyłania danych z i do funkcji Zamiana tekstu na mowę Google, aby tekst z ekranu urządzenia przenośnego mógł być odczytywany na głos. Ta lista może ulec zmianom i odzwierciedla usługi oraz aplikacje uważane za przydatne w kwestii bezpieczeństwa wydajności.
 
   ### <a name="full-exemptions"></a>Pełna lista wyjątków
 

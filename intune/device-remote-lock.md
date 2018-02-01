@@ -5,8 +5,8 @@ description: "Informacje dotyczące zdalnego blokowania zarządzanych urządzeń
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
-ms.date: 11/21/2017
+manager: dougeby
+ms.date: 01/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d27b709ba8d4ff1d8fb4417a217ad008c19c36
-ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
+ms.openlocfilehash: ecd7fa03b35e91b5a77906858fb251348796704d
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="remotely-lock-managed-devices-with-intune"></a>Zdalne blokowanie urządzeń zarządzanych przy użyciu usługi Intune
 
@@ -29,14 +29,19 @@ ms.lasthandoff: 01/12/2018
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
-- Windows — nieobsługiwana
-- Windows Phone — obsługiwana dla systemu Windows Phone 8.1 i nowszego
-- iOS — obsługiwana
-- macOS — obsługiwana
+Zdalne blokowanie jest obsługiwane na następujących platformach:
 
-    > [!Note]  
-    > Ustaw 6-cyfrowy numer PIN umożliwiający odzyskiwanie. Gdy blokada jest aktywna, do momentu wysłania innej akcji urządzenia na ekranie jest widoczny blok **Przegląd urządzenia** z monitem o numer PIN.
-- Android — obsługiwana
+|Platforma|Stan obsługi|
+|---|---|
+|Android|Tak|
+|iOS|Tak|
+|macOS|Tak|
+|Windows 10|Tak|
+|Windows 10 Mobile|Tak|
+|Windows Phone|Tak, w przypadku systemu Windows Phone 8.1 i nowszych|
+
+> [!NOTE]  
+> Dla urządzeń z systemem macOS należy ustawić 6-cyfrowy numer PIN na potrzeby odzyskiwania. Gdy blokada jest aktywna, do momentu wysłania innej akcji urządzenia na ekranie jest widoczny blok **Przegląd urządzenia** z monitem o numer PIN.
 
 ## <a name="how-to-remote-lock-a-device"></a>Jak zdalnie zablokować urządzenie
 

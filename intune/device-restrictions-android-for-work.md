@@ -5,21 +5,20 @@ description: "Informacje na temat ustawień usługi Intune służących do kontr
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
-ms.date: 08/01/2017
+manager: dougeby
+ms.date: 1/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: beb8368aa2db33df84bb64985177b47beebc80ac
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: c7c69bb3984ae4ffa81aa81ae24cfe17663bc191
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Microsoft Intune
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/12/2017
 ### <a name="work-profile-password"></a>Hasło profilu służbowego
 - **Wymagaj hasła profilu służbowego** — (Android 7.0 i nowsze wersje z włączonym profilem służbowym) definiuje zasady kodu dostępu mające zastosowanie tylko do aplikacji w profilu służbowym. Domyślnie użytkownik końcowy może użyć dwóch różnych kodów PIN lub wybrać opcję połączenia ich w celu uzyskania kodu PIN o większej sile.
 - **Minimalna długość hasła** — określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**16**).
-- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określ, po jakim czasie następuje zablokowanie profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem profilu służbowego** — określ, po jakim czasie następuje zablokowanie profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określ, ile razy może zostać podane nieprawidłowe hasło, zanim profil służbowy zostanie wyczyszczony z urządzenia.
 - **Wygaśnięcie hasła (dni)** — określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
 - **Wymagany typ hasła** — wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:

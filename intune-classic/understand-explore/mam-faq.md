@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4c345673eceea4da4efc3b90f43c6f9313ee15f1
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: abb0267f46d2933b0037ed661281198a5981f659
+ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -32,7 +32,7 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 **Co to jest MAM?** [Zarządzanie aplikacjami mobilnymi (MAM) usługi Intune](/intune/app-lifecycle) obejmuje zestaw funkcji zarządzania usługi Intune, które umożliwiają publikowanie, wypychanie, konfigurowanie, zabezpieczanie, monitorowanie i aktualizowanie aplikacji mobilnych dla użytkowników.
 
-**Jakie są zalety ochrony aplikacji MAM?** Zarządzanie aplikacjami mobilnymi pozwala chronić dane organizacji w obrębie aplikacji. Konfiguracja MAM-WE umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego urządzenia, w tym z urządzenia osobistego w scenariuszach BYOD (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
+**Jakie są zalety ochrony aplikacji MAM?** Zarządzanie aplikacjami mobilnymi pozwala chronić dane organizacji w obrębie aplikacji. Konfiguracja MAM-WE umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego urządzenia, w tym z urządzenia osobistego w scenariuszach BYOD (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji zarządzanych przez usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
 
 **Jakie konfiguracje urządzeń obsługuje zarządzanie aplikacjami mobilnymi?** Zarządzanie aplikacjami mobilnymi usługi Intune obsługuje dwie konfiguracje:
   1. **Intune MDM + MAM**: jest to pierwsza konfiguracja obsługiwana przy użyciu zarządzania aplikacjami mobilnymi po jego pierwszym wdrożeniu. Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Do zarządzania aplikacjami przy użyciu konfiguracji MDM + MAM klienci powinni używać autonomicznej konsoli usługi Intune, korzystając z adresu https://manage.microsoft.com.
@@ -48,9 +48,9 @@ Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikacje, którymi można zarządzać za pomocą zasad ochrony aplikacji
 
-**Którymi aplikacjami można zarządzać przy użyciu zasad ochrony aplikacji?** Każdą aplikacją obsługiwaną przez [zestaw SDK aplikacji usługi Intune](/intune/app-sdk) lub opakowaną za pomocą [Narzędzia opakowującego aplikacje usługi Intune](/intune/apps-prepare-mobile-application-management) można zarządzać przy użyciu zasad ochrony aplikacji usługi Intune. Zobacz oficjalną listę [aplikacji obsługujących usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
+**Którymi aplikacjami można zarządzać przy użyciu zasad ochrony aplikacji?** Każdą aplikacją obsługiwaną przez [zestaw SDK aplikacji usługi Intune](/intune/app-sdk) lub opakowaną za pomocą [Narzędzia opakowującego aplikacje usługi Intune](/intune/apps-prepare-mobile-application-management) można zarządzać przy użyciu zasad ochrony aplikacji usługi Intune. Zobacz oficjalną listę [aplikacji zarządzanych przez usługę Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) dostępnych do użytku publicznego.
 
-**Jakie są podstawowe wymagania dotyczące użycia zasad ochrony aplikacji w aplikacji obsługującej usługę Intune?**
+**Jakie są podstawowe wymagania dotyczące użycia zasad ochrony aplikacji w aplikacji zarządzanej przez usługę Intune?**
   1. Użytkownik końcowy musi mieć konto usługi Azure Active Directory (AAD). Zobacz temat [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](/intune/users-permissions-add), aby dowiedzieć się, jak utworzyć użytkowników usługi Intune w usłudze Azure Active Directory.
 
   2. Użytkownik końcowy musi mieć licencję usługi Microsoft Intune przypisaną do swojego konta usługi Azure Active Directory. Zobacz temat [Zarządzanie licencjami usługi Intune](/intune/licenses-assign), aby dowiedzieć się, jak przypisać licencje usługi Intune użytkownikom końcowym.
@@ -136,7 +136,7 @@ Zarządzanie aplikacjami mobilnymi (w systemie iOS) umożliwia obecnie korzystan
 
 **Dlaczego usługi lokalne nie są obsługiwane w aplikacjach chronionych przy użyciu usługi Intune?** Ochrona aplikacji usługi Intune zależy od zgodności tożsamości użytkownika między aplikacją i zestawem SDK aplikacji usługi Intune. Można to zagwarantować tylko przez nowoczesne uwierzytelnianie. Istnieją scenariusze, w których aplikacje mogą działać w konfiguracji lokalnej, ale nie są one ani zgodne, ani gwarantowane.
 
-**Czy istnieje bezpieczny sposób na otwieranie linków sieci Web z zarządzanych aplikacji?** Tak! Administrator IT może wdrożyć i ustawić zasady ochrony aplikacji dla [aplikacji Intune Managed Browser](../deploy-use/manage-internet-access-using-managed-browser-policies.md), przeglądarki sieci Web opracowanej przez Microsoft Intune, którą można łatwo zarządzać za pomocą usługi Intune. Administrator IT może wymagać, by wszystkie linki sieci Web w aplikacjach obsługiwanych przez usługę Intune były otwierane przy użyciu aplikacji Managed Browser.
+**Czy istnieje bezpieczny sposób na otwieranie linków sieci Web z zarządzanych aplikacji?** Tak! Administrator IT może wdrożyć i ustawić zasady ochrony aplikacji dla [aplikacji Intune Managed Browser](../deploy-use/manage-internet-access-using-managed-browser-policies.md), przeglądarki sieci Web opracowanej przez Microsoft Intune, którą można łatwo zarządzać za pomocą usługi Intune. Administrator IT może wymagać, aby wszystkie linki internetowe w aplikacjach zarządzanych przez usługę Intune były otwierane przy użyciu aplikacji Managed Browser.
 
 
 ## <a name="app-experience-on-android"></a>Środowisko aplikacji w systemie Android

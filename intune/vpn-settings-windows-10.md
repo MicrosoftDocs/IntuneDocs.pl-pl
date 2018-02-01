@@ -5,21 +5,19 @@ description: "Informacje dotyczące ustawień usługi Intune służących do kon
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
-ms.date: 10/20/2017
+manager: dougeby
+ms.date: 1/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 495e4ed6-b2ef-47cc-a110-13fa9b5f85a6
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54ff681c96dc01587cd9a2770dacc5bb9a54d134
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: e7bd1d15276f93b50a22c7b47de6bd1eb619264a
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
@@ -81,6 +79,8 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 ```
 
 Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
+
+Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML protokołu EAP, zobacz [EAP configuration (Konfiguracja protokołu EAP)](https://docs.microsoft.com/en-us/windows/client-management/mdm/eap-configuration).
 
 **Podziel tunelowanie** - wybierz ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu użyje połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
 - **Podziel trasy tunelowania dla tego połączenia VPN** — umożliwia dodanie opcjonalnych tras dla dostawców sieci VPN innej firmy. Określ prefiks docelowy i rozmiar prefiksu dla każdego miejsca docelowego.
