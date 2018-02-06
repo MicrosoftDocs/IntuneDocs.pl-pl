@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4cd446310256a71e7306364b4142bfacce482fe4
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fc50d6f5c4b0350d0117b5d68a0b9ac3e9ec3ab3
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
 
@@ -254,7 +254,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
 ## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
 
--   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady. Dostępne opcje:
+-   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady. Dostępne opcje:
 
       - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
       - **Kiosk z pojedynczą aplikacją** — profil włącza urządzenie jako kiosk z pojedynczą aplikacją.
@@ -266,7 +266,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
          Dla urządzeń w środowiskach publicznych należy użyć kont z minimalnymi uprawnieniami, aby uniemożliwić autoryzowane działanie.  
 
-      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     Kioski z wieloma aplikacjami wymagają konfiguracji kiosku. Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku, lub wybierz istniejącą konfigurację.
 
@@ -280,13 +280,13 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
             - **Aplikacja Win32** — tradycyjna aplikacja klasyczna. (Potrzebna jest ścieżka bezwzględna pliku wykonywalnego w odniesieniu do urządzenia).
 
-            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows. Potrzebny jest [identyfikator AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows. Potrzebny jest [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-        - **Identyfikator aplikacji** — określa pełną nazwę ścieżki pliku wykonywalnego (aplikacji Win32) lub [identyfikatora AUMID aplikacji](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacji platformy UWP).
+        - **Identyfikator aplikacji** — określa pełną nazwę ścieżki pliku wykonywalnego (aplikacji Win32) lub [identyfikatora AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacji platformy UWP).
 
     - **Pasek zadań** — wskazuje, czy pasek zadań jest wyświetlany (**Włączone**), czy ukryty (**Nieskonfigurowane**) na kiosku.
 
-    - **Układ menu Start** — określa plik XML, który opisuje sposób, w jaki aplikacje [są wyświetlane w menu Start](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+    - **Układ menu Start** — określa plik XML, który opisuje sposób, w jaki aplikacje [są wyświetlane w menu Start](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
     - **Przypisani użytkownicy** — określa co najmniej jedno konto użytkownika skojarzone z konfiguracją kiosku. Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku. Konta przyłączonych do domeny należy określić w postaci `domain\\username@tenant.org`.
 

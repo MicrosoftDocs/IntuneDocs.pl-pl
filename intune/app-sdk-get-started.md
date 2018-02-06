@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 13a6174856ad18034fc3d3c912339c8f844b3db0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dc061a525a4b20cafbbb2ae31ee90c878d2a98fe
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -92,9 +92,9 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
  
  Oprócz włączenia zasad ochrony aplikacji do prawidłowego współdziałania aplikacji z dostępem warunkowym opartym na aplikacji w usłudze Azure Active Directory (AAD) wymagane jest spełnienie następujących warunków:
  
- * Aplikacja została skompilowana z użyciem [biblioteki uwierzytelniania usługi Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-libraries) i włączono w niej opcję uwierzytelniania brokera usługi AAD.
+ * Aplikacja została skompilowana z użyciem [biblioteki uwierzytelniania usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) i włączono w niej opcję uwierzytelniania brokera usługi AAD.
  
- * [Identyfikator klienta usługi AAD](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) dla aplikacji musi być unikatowy w obrębie platform iOS i Android.
+ * [Identyfikator klienta usługi AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) dla aplikacji musi być unikatowy w obrębie platform iOS i Android.
  
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurowanie telemetrii dla aplikacji
 
@@ -106,7 +106,7 @@ Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
 * **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych. 
 
-    * Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/en-us/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
+    * Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
 
  Widoczny numer wersji aplikacji biznesowej dla systemu iOS lub Android <!-- 1380712 -->

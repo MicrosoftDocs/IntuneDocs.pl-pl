@@ -15,11 +15,11 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3554623db2a153fd7f281a3b8453bedf1de3c77a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3e79ee1ddd2f8a8a9d7a3089e21b8807b9895d2c
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
@@ -71,8 +71,8 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
 
 1. Utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj numer seryjny w lewej kolumnie i szczegółowe informacje w prawej kolumnie. Obecnie maksymalna liczba wierszy na liście wynosi 5000. W edytorze tekstu lista csv wygląda następująco:
 
-    F7TLWCLBX196, szczegóły urządzenia</br>
-    DLXQPCWVGHMJ,szczegóły urządzenia
+  F7TLWCLBX196, szczegóły urządzenia</br>
+  DLXQPCWVGHMJ,szczegóły urządzenia
 
    [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem iOS](https://support.apple.com/HT204073).
 2. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Rejestracja Apple**.
@@ -164,3 +164,5 @@ Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używ
 7. Na urządzeniu z systemem iOS otwórz pozycję **Ustawienia** i przejdź do pozycji **Ogólne** > **Zarządzanie urządzeniem** > **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
 
 8. Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
+
+

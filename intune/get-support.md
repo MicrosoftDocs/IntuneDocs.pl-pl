@@ -15,11 +15,11 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 00a7bf5b3f5df58e29c3eb92a516b1ace3eea705
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5a844255451f441f0b64cb020b863b4775fbb768
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -47,7 +47,7 @@ Jako administrator IT możesz utworzyć bilet pomocy technicznej z poziomu witry
     - **Plan pomocy technicznej**: **Subskrypcja z pomocą techniczną w pakiecie** (w przypadku problemów technicznych z usługą Intune pomoc techniczna jest bezpłatna).
 
     >[!IMPORTANT]
-    >Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Aby poznać szczegóły pomocy technicznej Premier, zapoznaj się z sekcją 5.3.3 dokumentacji [Opis usług](https://www.microsoft.com/microsoftservices/services-list.aspx) dotyczącą usług doradczych.
+    >Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Aby poznać szczegóły pomocy technicznej Premier, zapoznaj się z sekcją 5.3.3 dokumentacji [Opis usług](https://www.microsoft.com/en-us/microsoftservices/services-list.aspx) dotyczącą usług doradczych.
 
     Wybierz pozycję **Dalej**, aby kontynuować.
 4. Aby mieć pewność, że zgłoszonym problemem zajmie się odpowiedni specjalista, w bloku **Problem** wybierz poniższe opcje:
