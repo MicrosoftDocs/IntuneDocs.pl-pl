@@ -126,10 +126,6 @@
           items:
             - name: Konfiguracja sieci
               href: network-bandwidth-use.md
-            - name: Windows Holographic for Business
-              href: windows-holographic-for-business.md
-            - name: Aktualizacja platformy Windows Holographic
-              href: holographic-upgrade.md
         - name: Logowanie się do usługi Intune
           href: account-sign-up.md
         - name: Konfigurowanie domen
@@ -206,6 +202,8 @@
           href: device-logout-user.md
         - name: Usuń użytkownika
           href: device-remove-user.md
+        - name: Wymazywanie urządzenia
+          href: device-erase.md
         - name: Zdalne sterowanie urządzeniami przenośnymi
           href: device-profile-android-teamviewer.md
         - name: Resetowanie numeru PIN w systemie Windows 10
@@ -250,8 +248,13 @@
                   href: lob-apps-windows.md
             - name: Aplikacje sieci Web
               href: web-app.md
+            - name: Aplikacje wbudowane
+              href: apps-add-bulit-in.md
         - name: Wdrażanie aplikacji
           href: apps-deploy.md
+          items:
+            - name: Uwzględnianie i wykluczanie aplikacji
+              href: apps-inc-exl-assignments.md
         - name: Monitorowanie aplikacji
           href: apps-monitor.md
         - name: Konfigurowanie aplikacji
@@ -553,6 +556,11 @@
         - name: Rozwiązywanie konfliktów zasad
           href: /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts
           maintainContext: true
+    - name: Zarządzanie platformą Windows Holographic
+      href: windows-holographic-for-business.md
+      items:
+        - name: Aktualizacja platformy Windows Holographic
+          href: holographic-upgrade.md
     - name: Informowanie użytkowników
       href: end-user-educate.md
       items:
