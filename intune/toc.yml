@@ -68,6 +68,8 @@
           href: app-lifecycle.md
     - name: Typowe scenariusze
       href: common-scenarios.md
+    - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
+      href: mam-faq.md
 - name: Planowanie wdrożenia
   items:
     - name: Przewodnik planowania
