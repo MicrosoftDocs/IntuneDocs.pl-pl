@@ -56,7 +56,7 @@ ms.lasthandoff: 10/10/2017
 |Niemcy|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|niemiecki&#42;, angielski|0800 5892332|069380789508||
 |Grecja|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 EET (UTC +2)|grecki&#42;, angielski|0080044142831||
 |Gwatemala|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CST (UTC -6)|hiszpański&#42;, angielski|1-800-300-0069<br /><br />Krok 1. Wybierz opcję 4 (na potrzeby dostępu specjalnego)<br /><br />Krok 2. Wprowadź kod: 7007||
-|Hongkong SAR|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 HKT (UTC +8)|kantoński&#42;, mandaryński&#42;, angielski||30713055|
+|SRA Hongkong|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 HKT (UTC +8)|kantoński&#42;, mandaryński&#42;, angielski||30713055|
 |Węgry|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|węgierski&#42;, angielski|36 80 983 899|36 1 778 9292|
 |Islandia|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 GMT (UTC)|angielski|8009609||
 |Indie|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 IST (UTC +5:30)|angielski|000800 4402038|18002002052|
@@ -73,7 +73,7 @@ ms.lasthandoff: 10/10/2017
 |Liechtenstein|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|francuski&#42;, niemiecki&#42;, włoski&#42;, angielski|0800000300|0227614114|
 |Litwa|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 EET (UTC +2)|litewski&#42;, angielski|880030960||
 |Luksemburg|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|francuski&#42;, niemiecki&#42;, angielski|80021094|24871510|
-|BJR Macedonia|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0800-94288<br /><br />Krok 1: wybierz numer telefonu<br /><br />Krok 2: wprowadź kod: 001<br /><br />Krok 3: wprowadź numer 877-663-5075||
+|Macedonia, BJR|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0800-94288<br /><br />Krok 1: wybierz numer telefonu<br /><br />Krok 2: wprowadź kod: 001<br /><br />Krok 3: wprowadź numer 877-663-5075||
 |Malezja|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 MYT (UTC +8)|bahasa&#42;, malajski&#42;, angielski|1800 220030|362074606|
 |M alta|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0 80062231||
 |Meksyk|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CST (UTC -6)|hiszpański&#42;, angielski|01-8005630605|55473856567|

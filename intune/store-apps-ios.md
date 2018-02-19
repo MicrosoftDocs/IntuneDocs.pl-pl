@@ -36,7 +36,7 @@ Informacje przedstawione w tym temacie ułatwiają dodawanie aplikacji ze sklepu
 Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatnie w sklepie z aplikacjami. Jeśli chcesz przy użyciu usługi Intune przypisać aplikacje płatne, rozważ skorzystanie z [programu zakupów zbiorczych dla systemu iOS](vpp-apps-ios.md).
 
 >[!NOTE]
->Do pracy z usługą Microsoft Intune zalecane są przeglądarki Chrome i Edge.
+>Do pracy z usługą Microsoft Intune zalecane są przeglądarki Chrome i Microsoft Edge.
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Krok 1 — Wyszukiwanie aplikacji w sklepie
 
