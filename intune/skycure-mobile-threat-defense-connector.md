@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: df60b45ede53190660733d3879ab6c020e5448b1
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c8be5d271bfff84ec440b25724ca2101ec7f224d
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Łącznik Skycure Mobile Threat Defense
 
@@ -41,7 +41,7 @@ Aplikacja mobilna Skycure dla systemu Android lub iOS przechwytuje dane telemetr
 
 Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą usługi Skycure Mobile Threat Defense, która jest oparta na ocenie ryzyka Skycure. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
-Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do takich zasobów, jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji mobilnej Skycure dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
+Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji mobilnej Skycure dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
 
 Usługa Intune obsługuje dwa tryby integracji z programem Skycure:
 

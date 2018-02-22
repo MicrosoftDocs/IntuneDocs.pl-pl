@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a9cd5b0cddedc70c001ed8c50ecfbbc3334462f9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 040076248629faa40745b16f90b694331c60a9b1
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="common-ways-to-use-intune"></a>Typowe sposoby korzystania z usługi Intune
 
@@ -34,7 +34,7 @@ Poniżej przedstawiono krótkie wprowadzenia do sześciu najbardziej typowych sc
 >Czy chcesz wiedzieć, jak dział IT firmy Microsoft używa usługi Intune, aby umożliwić pracownikom firmy Microsoft dostęp do zasobów firmowych na ich urządzeniach przenośnych z zachowaniem ochrony danych firmowych? [Przeczytaj tę techniczną analizę przypadku](https://www.microsoft.com/itshowcase/Article/Content/588), aby zobaczyć szczegółowo, w jaki sposób dział IT firmy Microsoft używa usługi Intune i innych usług do zarządzania tożsamościami, urządzeniami, aplikacjami i danymi.  
 
 >[!IMPORTANT]
->Chcemy się upewnić, że urządzenia przenośne są aktualne w kontekście ostatnich ataków złośliwego oprogramowania „Trident” na urządzenia z systemem iOS. Dlatego opublikowaliśmy wpis na blogu — [Ensuring mobile devices are up to date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Zapewnianie aktualności urządzeń przenośnych za pomocą usługi Microsoft Intune). Zawiera on informacje dotyczące różnych sposobów zabezpieczania i zapewniania aktualności urządzeń przez usługę Intune.
+>Chcemy się upewnić, że urządzenia przenośne są aktualne w kontekście ostatnich ataków złośliwego oprogramowania „Trident” na urządzenia z systemem iOS. Dlatego opublikowaliśmy wpis na blogu — [Ensuring mobile devices are up-to-date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Zapewnianie aktualności urządzeń przenośnych za pomocą usługi Microsoft Intune). Zawiera on informacje dotyczące różnych sposobów zabezpieczania i zapewniania aktualności urządzeń przez usługę Intune.
 
 ## <a name="protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Zabezpieczanie lokalnej poczty e-mail i danych na potrzeby bezpiecznego uzyskiwania dostępu przez urządzenia przenośne
 Większość strategii rozwiązań typu Enterprise Mobility zaczyna się od planu umożliwienia pracownikom z urządzeniami przenośnymi bezpiecznego dostępu do poczty e-mail przez Internet. W wielu organizacjach lokalne dane i serwery aplikacji, takie jak Microsoft Exchange, są nadal hostowane w sieci firmowej.
@@ -44,7 +44,7 @@ Usługa Intune oraz pakiet Microsoft Enterprise Mobility + Security (EMS) oferuj
 
 Ponadto usługa Intune obsługuje umożliwianie dostępu do aplikacji mobilnych, które wymagają bezpiecznego dostępu do danych lokalnych, takich jak serwery aplikacji biznesowych. Zazwyczaj jest to wykonywane przy użyciu [zarządzanych przez usługę Intune certyfikatów](certificates-configure.md) kontroli dostępu ([portal klasyczny](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) w połączeniu ze standardową bramą sieci VPN lub serwerem proxy w sieci obwodowej, takim jak serwer proxy aplikacji usługi Microsoft Azure Active Directory. 
 
-W takich przypadkach jedynym sposobem, aby uzyskać dostęp do danych firmowych, jest zarejestrowanie urządzenia w systemie zarządzania. Po zarejestrowaniu urządzeń system zarządzania zapewnia, że urządzenia są zgodne z zasadami, zanim będą mogły uzyskać dostęp do danych firmowych. Ponadto można użyć [narzędzia opakowującego aplikacje i zestawu SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune, aby pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej, aby nie mogła przekazywać danych firmowych do aplikacji lub usług konsumenckich.
+W takich przypadkach jedynym sposobem, aby uzyskać dostęp do danych firmowych, jest zarejestrowanie urządzenia w systemie zarządzania. Po zarejestrowaniu urządzeń system zarządzania zapewnia, że urządzenia są zgodne z zasadami, zanim będą mogły uzyskać dostęp do danych firmowych. Ponadto można użyć [narzędzia opakowującego aplikacje i zestawu SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune, aby pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej w celu niedopuszczenia do przekazania danych firmowych do aplikacji lub usług konsumenckich.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 

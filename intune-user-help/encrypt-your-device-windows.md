@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,18 +17,21 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0cd9107462348e92c9b1a3122c19591bcab6a00e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ed8475956a13e2f35d37b57f0d404f916c239998
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Windows za pomocą szyfrowania
 
-Zaszyfrowanie urządzenia polega na opakowaniu zawartych na nim informacji w warstwie kodu ochronnego, który uniemożliwia dostęp do niego przez osoby bez autoryzacji. W ramach zabezpieczania informacji użytkowników organizacja wymaga szyfrowania urządzenia z systemem Windows w celu zapewnienia ochrony danych firmy, szkoły lub uczelni.
+Zaszyfrowanie urządzenia polega na opakowaniu zawartych na nim informacji w warstwie kodu ochronnego, który uniemożliwia dostęp do niego przez osoby bez autoryzacji. W ramach zabezpieczania informacji użytkowników organizacja wymaga szyfrowania urządzenia z systemem Windows w celu zapewnienia ochrony danych firmy, szkoły lub uczelni. 
+
+Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
 
 > [!Note]
-> Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie automatycznie zaszyfrowane, jeśli szyfrowanie jest wymagane.
+> Szyfrowanie nie jest obsługiwane w systemie Windows 10 Home. Dowiedz się, jak przeprowadzić uaktualnianie [systemu Windows 10 Home do systemu Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro).
+
 
 Jeśli masz urządzenie stacjonarne, poniższe instrukcje opisują sposób jego szyfrowania.
 

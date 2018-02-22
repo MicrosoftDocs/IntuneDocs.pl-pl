@@ -15,15 +15,15 @@ searchScope:
 - User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: ef8d10a1bc06234930ae32a2ce0dc8b1503e89d0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3851095689f194a2133aaa1b0ac8712098662226
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Należy zaktualizować system operacyjny urządzenia z systemem Android
 
-Wyświetlenie komunikatu informującego, że „minimalny poziom poprawki zabezpieczeń systemu Android nie został skonfigurowany”, oznacza, że konieczne jest zainstalowanie aktualizacji w celu zagwarantowania, że urządzenie pozostanie bezpieczne. _Poprawka_ stanowi element procesu konserwacji i jest udostępniana w celu umożliwienia bezproblemowego działania oprogramowania oraz zapewnienia jego aktualności. Dział pomocy technicznej Twojej firmy wymaga zainstalowania tej poprawki, ponieważ stanowi ona gwarancję, że dane firmowe na urządzeniu są chronione w najlepszy możliwy sposób. Lokalizacja wymaganej poprawki zabezpieczeń może się różnić w zależności od tego, czy masz określony typ urządzenia firmy Samsung.
+Wyświetlenie komunikatu informującego, że „minimalny poziom poprawki zabezpieczeń systemu Android nie został skonfigurowany”, oznacza, że konieczne jest zainstalowanie aktualizacji w celu zagwarantowania, że urządzenie pozostanie bezpieczne. _Poprawka_ stanowi element procesu konserwacji i jest udostępniana w celu umożliwienia bezproblemowego działania oprogramowania oraz zapewnienia jego aktualności. Dział pomocy technicznej Twojej firmy wymaga zainstalowania tej poprawki, ponieważ stanowi ona gwarancję, że dane firmowe na urządzeniu są chronione w najlepszy możliwy sposób. Lokalizacja wymaganej poprawki zabezpieczeń będzie się różnić w zależności od typu posiadanego urządzenia z systemem Android.
 
 Jeśli masz urządzenie firmy Samsung, przejdź do menu **Ustawienia** > **Informacje o telefonie** i sprawdź, czy na ekranie telefonu w jakimkolwiek kontekście widnieje słowo „Knox”. Jeśli tak, postępuj zgodnie z instrukcjami dotyczącymi rozwiązania Samsung Knox podanymi poniżej.
 

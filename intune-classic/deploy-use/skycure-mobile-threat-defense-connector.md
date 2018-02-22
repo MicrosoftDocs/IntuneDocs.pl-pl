@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 51f26d630537901ad39a215062f820a2c243e077
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 096cd7f2f7895531b00d77c5d26413471fb9bbcf
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Łącznik Skycure Mobile Threat Defense
 
@@ -43,7 +43,7 @@ Aplikacja mobilna Skycure dla systemu Android lub iOS przechwytuje dane telemetr
 
 Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą usługi Skycure Mobile Threat Defense, która jest oparta na ocenie ryzyka Skycure. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
-Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do takich zasobów, jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji mobilnej Skycure dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
+Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji mobilnej Skycure dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
 
 Usługa Intune obsługuje dwa tryby integracji z programem Skycure:
 
@@ -119,7 +119,7 @@ Poniżej przedstawiono kroki, które należy wykonać w celu zintegrowania usłu
 
 1.  [Konfigurowanie programu Skycure do użycia z funkcją logowania jednokrotnego (SSO) usługi Azure Active Directory](/intune-classic/deploy-use/configure-skycure-to-use-azure-active-directory-single-sign-on)
 
-2.  [Pobranie zasad konfiguracji aplikacji Skycure dla systemu iOS](/intune-classic/deploy-use/download-skycure-ios-app-configuration-policy)
+2.  [Pobieranie zasad konfiguracji aplikacji Skycure dla systemu iOS](/intune-classic/deploy-use/download-skycure-ios-app-configuration-policy)
 
 3.  [Dodanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS](/intune-classic/deploy-use/add-skycure-apps-microsoft-authenticator-and-ios-app-configuration-policy)
 

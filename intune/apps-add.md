@@ -3,10 +3,10 @@ title: "Jak dodawać aplikacje do usługi Microsoft Intune"
 titlesuffix: Azure portal
 description: "Te procedury ułatwiają przygotowanie aplikacji do usługi Intune w celu przypisania do użytkowników i urządzeń. \""
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f84adced59d2057cd4d18f05ff6953293f7c44cc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9d5fda9cc74ffa3d7be43c90efa65c59451662d3
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Jak dodawać aplikacje do usługi Microsoft Intune
 
@@ -28,11 +28,12 @@ ms.lasthandoff: 01/25/2018
 Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, trzeba je najpierw dodać do usługi Intune. Usługa Intune obsługuje szeroką gamę różnych typów aplikacji. Dostępne opcje różnią się dla poszczególnych typów aplikacji.
 
 Usługa Intune pozwala dodawać i przypisywać następujące typy aplikacji:
-| Typ aplikacji                                  | Instalacja                                                                  | Aktualizacje                       |
+| Typ aplikacji                                  | Instalacja                                                                  | Updates                       |
 |------------------------------------------ |----------------------------------------------------------------------------   |---------------------------    |
 | Aplikacje w Internecie                           | Usługa Intune tworzy skrót do aplikacji internetowej na ekranie głównym urządzenia          | Aktualizacje aplikacji są automatyczne     |
 | Aplikacje napisane w firmie (biznesowe)  | Usługa Intune instaluje aplikację na urządzeniu (dostarczasz plik instalacyjny)    | Należy zaktualizować aplikację       |
 | Aplikacje ze sklepu                       | Usługa Intune instaluje aplikację na urządzeniu                                       | Aktualizacje aplikacji są automatyczne     |
+| Aplikacje, które są wbudowane                        | Usługa Intune instaluje aplikację na urządzeniu                                       | Aktualizacje aplikacji są automatyczne     |
 
 
 Oprócz aplikacji internetowych usługa Intune obsługuje następujące platformy dla aplikacji ze sklepu i aplikacji LOB:
@@ -49,6 +50,7 @@ Oprócz aplikacji internetowych usługa Intune obsługuje następujące platform
     - Aplikacje biznesowe (LOB) dla systemu iOS
     - Aplikacje biznesowe (LOB) dla systemu Windows Phone (pliki xap)
     - Aplikacje biznesowe (LOB) dla systemu Windows (tylko pliki msi)
+- Aplikacje wbudowane    
 
 >[!TIP]
 > Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** z bloku **Dodaj aplikację**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
@@ -147,4 +149,5 @@ Wybierz jeden z poniższych tematów, aby dowiedzieć się, jak dodawać aplikac
 - [Aplikacje ze sklepu dla systemu Windows](store-apps-windows.md)
 - [Aplikacja LOB dla systemu Windows](lob-apps-windows.md)
 - [Aplikacje pakietu Office 365 dla systemu Windows 10](apps-add-office365.md)
+- [Aplikacje wbudowane](apps-add-built-in.md)
 

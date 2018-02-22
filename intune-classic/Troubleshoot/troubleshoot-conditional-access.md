@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 21053cd7ce930bd11625807f7fdda3ebbdd953f3
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5f16e14b32508adf1fc4f3f448f53a7dcad8e137
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 
@@ -90,7 +90,7 @@ Dostęp warunkowy urządzenia może zostać zablokowany bez otrzymania wiadomoś
 - Sprawdź dzienniki programu Exchange Connector pod kątem działań związanych z wysyłaniem wiadomości e-mail i sprawdzaniem błędów. Przykład polecenia do wyszukiwania to SendEmail z konta powiadomień na konto użytkownika.
 - Przed zablokowaniem urządzenia przez program Exchange Connector wysyła on wiadomość e-mail dotyczącą aktywacji. Jeśli urządzenie jest w trybie offline, może nie otrzymać wiadomości e-mail dotyczącej aktywacji. Sprawdź, czy klient poczty e-mail urządzenia został skonfigurowany do pobierania poczty w trybie wypychania zamiast sondowania, ponieważ może to spowodować przeoczenie wiadomości e-mail przez użytkownika. Zmień tryb na sondowanie i sprawdź, czy urządzenie otrzyma wiadomość e-mail.
 
-## <a name="non-compliant-device-not-blocked"></a>Niezgodne urządzenie nie zostało zablokowane
+## <a name="noncompliant-device-not-blocked"></a>Niezgodne urządzenie nie zostało zablokowane
 
 W przypadku napotkania niezgodnego urządzenia, które nadal posiada dostęp, należy wykonać następujące działania.
 

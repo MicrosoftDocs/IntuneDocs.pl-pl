@@ -15,11 +15,11 @@ ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41270fb217c87880e67c1c5e0adf319576031126
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 2647875ed6753cf437d4487faf0137e28bd40f43
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Łącznik Lookout Mobile Threat Defense z usługą Intune
 
@@ -35,7 +35,7 @@ Aplikacja mobilna usługi Lookout, **Lookout for work**, jest instalowana i dzia
 
 Zasady zgodności w usłudze Intune zawierają regułę dla usługi Lookout Mobile Threat Defense, która jest oparta na ocenie ryzyka przeprowadzanej przez usługę Lookout. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
-Jeśli okaże się, że urządzenie nie jest zgodne, dostęp do takich zasobów jak usługa Exchange Online czy SharePoint Online, może zostać zablokowany. Użytkownicy korzystający z zablokowanych urządzeń zostaną poinformowani o czynnościach, które należy wykonać w celu rozwiązania problemu i ponownego uzyskania dostępu. Te wskazówki są wyświetlane w aplikacji Lookout for work.
+Jeśli się okaże, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online czy SharePoint Online. Użytkownicy korzystający z zablokowanych urządzeń zostaną poinformowani o czynnościach, które należy wykonać w celu rozwiązania problemu i ponownego uzyskania dostępu. Te wskazówki są wyświetlane w aplikacji Lookout for work.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 Po zarejestrowaniu w usłudze Intune narzędzie Lookout jest obsługiwane na następujących platformach:

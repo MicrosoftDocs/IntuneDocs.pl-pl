@@ -17,11 +17,11 @@ ROBOTS:
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 36b5332737ce6fc1c7e0ca8f31a4b6936aec4ec1
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 71cb70926f02023eae82885b8f525a18c8382e79
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="update-your-windows-10-device"></a>Aktualizowanie urządzenia z systemem Windows 10
 
@@ -31,6 +31,6 @@ Administrator Twojego konta służbowego chce mieć pewność, że urządzenia u
 2. Przejdź do pozycji **Ustawienia** > **Systemu** > **Informacje** > **Kompilacja systemu operacyjnego**.
 3. Jeśli kompilacja systemu operacyjnego jest starsza niż wersja, której używania wymaga Twoja firma, wybierz pozycję **Aktualizuj**, aby zaktualizować urządzenie do nowszej wersji systemu Windows.
 
-Jeśli zainstalowana wersja systemu Windows jest nowsza niż obsługiwana przez Twoją firmę, konieczne będzie [wykonanie innych czynności, aby rozwiązać ten problem](your-windows-version-isnt-yet-supported.md)
+Jeśli zainstalowana wersja systemu Windows jest nowsza niż obsługiwana przez Twoją firmę, konieczne jest [wykonanie innych czynności, aby rozwiązać ten problem](your-windows-version-isnt-yet-supported.md)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

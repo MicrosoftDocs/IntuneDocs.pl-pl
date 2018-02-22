@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5ee11809349999a795aca0a373724ce18eedbe65
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: f649227c6ad49cd9c788e75097bc4a5eeb71f350
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="create-lookout-device-compliance-policy-in-intune"></a>Tworzenie zasad zgodności urządzeń z rozwiązaniem Lookout w usłudze Intune
 
@@ -46,7 +46,7 @@ W ramach procesu konfiguracji usługi Lookout Mobile Threat Defense w [konsoli u
 
 ![zrzut ekranu przedstawiający opcję poziomu zagrożeń dla ustawienia reguły ochrony urządzeń przed zagrożeniami](../media/mtp/mtp-compliance-policy-setting.png)
 
-W przypadku tworzenia zasad dostępu warunkowego dla usługi Office 365 lub innych usług ta ocena zgodności jest oceniana i dostęp niezgodnych urządzeń do tych usług pozostanie zablokowany do momentu usunięcia zagrożenia.
+W przypadku tworzenia zasad dostępu warunkowego dla usługi Office 365 lub innych usług ta ocena zgodności jest oceniana i dostęp niezgodnych urządzeń do tych usług jest blokowany do momentu usunięcia zagrożenia.
 
 ## <a name="monitor-device-threats"></a>Monitorowanie zagrożeń dotyczących urządzeń
 Aby wyświetlić stan zgodności urządzenia, przejdź do [konsoli administratora usługi Intune](https://manage.microsoft.com) i wyświetl pozycję **Wszystkie urządzenia**.

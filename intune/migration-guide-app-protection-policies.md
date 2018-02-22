@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93cda587-bf56-4d41-b123-9fe203fad788
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: d3c176b84a8555de245a1f4014c39885e50ab21d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 009759aa826872fc2c608c6786749d6706cd2f93
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurowanie zasad ochrony aplikacji (opcjonalnie)
 
@@ -33,7 +33,7 @@ Zasady ochrony aplikacji pozwalają stosować zabezpieczenia na poziomie aplikac
 
 ## <a name="app-protection-policies-with-lob-apps"></a>Zasady ochrony aplikacji biznesowych
 
-Działanie zasad ochrony aplikacji mobilnych można także rozszerzyć na aplikacje biznesowe, korzystając z dostępnych zarówno dla platformy [iOS](https://www.microsoft.com/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True), jak i [Android](https://www.microsoft.com/download/details.aspx?id=47267), [zestawu SDK aplikacji usługi Microsoft Intune](app-sdk-get-started.md) lub narzędzia opakowującego aplikacje usługi Microsoft Intune.
+Działanie zasad ochrony aplikacji mobilnych można także rozszerzyć na aplikacje biznesowe, korzystając z zestawu [Microsoft Intune App SDK](app-sdk-get-started.md) lub narzędzia opakowującego aplikacje usługi Microsoft Intune. Materiały te są dostępne zarówno dla platformy iOS, jak i Android. Aby uzyskać więcej informacji, zobacz temat [Narzędzie opakowujące aplikacje dla systemu iOS](app-wrapper-prepare-ios.md) i [Narzędzie opakowujące aplikacje dla systemu Android](app-wrapper-prepare-android.md). Zobacz też temat [Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji](apps-prepare-mobile-application-management.md).
 
 ## <a name="how-do-app-protection-policies-help-during-migration"></a>Jak zasady ochrony aplikacji mogą pomóc podczas migracji?
 
