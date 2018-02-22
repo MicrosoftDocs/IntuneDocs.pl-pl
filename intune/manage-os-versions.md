@@ -10,11 +10,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-ms.openlocfilehash: ede4be83b995bbb415184275c34f0e1b4feb4091
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 78abef01e968b59b81a74dcd6b67df31dbf29def
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.
@@ -35,13 +35,13 @@ Organizacje używają ograniczeń typu urządzeń, aby kontrolować dostęp do z
 1. Użyj minimalnej wersji systemu operacyjnego, aby użytkownicy końcowi korzystali z aktualnych platform obsługiwanych w Twojej organizacji. 
 2. Nie określaj maksymalnej wersji systemu operacyjnego (brak ograniczenia) albo ustaw ją na ostatnią wersję zweryfikowaną przez Twoją organizację, aby był czas na wewnętrzne testy nowych wersji systemu operacyjnego.
 
-Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](https://docs.microsoft.com/en-us/intune/enrollment-restrictions-set#set-device-type-restrictions).
+Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions).
  
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Raportowanie wersji systemu operacyjnego i zgodność z zasadami zgodności urządzeń w systemie MDM usługi Intune
 Zasady zgodności urządzeń systemu MDM usługi Intune zapewniają następujące narzędzia: 
 - Określanie reguł zgodności
 - Wyświetlanie stanu zgodności za pośrednictwem raportowania
-- Stosowanie kwarantanny lub dostępu warunkowego w przypadku braku zgodności
+- Stosowanie kwarantanny lub dostępu warunkowego dla urządzeń w przypadku braku zgodności
 
 Podobnie jak w przypadku ograniczeń rejestracji, zasady zgodności urządzeń zawierają minimalną i maksymalną wersję systemu operacyjnego. Zasady mają również oś czasu zgodności, dzięki której można dać użytkownikom czas na osiągnięcie zgodności. Zasady zgodności urządzeń sprawiają, że zarejestrowane urządzenia użytkowników końcowych pozostają zgodne z zasadami organizacji.
 
@@ -50,7 +50,7 @@ Podobnie jak w przypadku ograniczeń rejestracji, zasady zgodności urządzeń z
 ### <a name="in-practice"></a>W praktyce
 Organizacje stosują zasady zgodności urządzeń dla tych samych scenariuszy co ograniczenia rejestracji. Te zasady powodują, że użytkownicy korzystają z aktualnych wersji systemów operacyjnych zweryfikowanych w Twojej organizacji. Gdy urządzenia użytkowników końcowych utracą zgodność, dostęp do zasobów organizacji może zostać zablokowany przez zastosowanie dostępu warunkowego, który zostanie wycofany, gdy użytkownicy znów będą mieć systemy operacyjne z zakresu obsługiwanego przez organizację. Użytkownicy końcowi są powiadamiani, że ich urządzenia są niezgodne, i przedstawiane im są kroki, które muszą wykonać, aby odzyskać dostęp do zasobów.   
 
-Aby uzyskać szczegółowe informacje, zobacz [Get started with device compliance (Wprowadzenie do zgodności urządzeń)](https://docs.microsoft.com/en-us/intune/device-compliance-get-started).
+Aby uzyskać szczegółowe informacje, zobacz [Get started with device compliance (Wprowadzenie do zgodności urządzeń)](https://docs.microsoft.com/intune/device-compliance-get-started).
  
 ## <a name="operating-system-version-controls-using-intune-app-protection-policies"></a>Kontrolowanie wersji systemu operacyjnego za pomocą zasad ochrony aplikacji usługi Intune    
 Zasady ochrony aplikacji usługi Intune i ustawienia dostępu w systemie zarządzania aplikacjami mobilnymi (MAM) pozwalają określać minimalną wersję systemu operacyjnego w warstwie aplikacji. Dzięki temu można informować użytkowników o konieczności zaktualizowania ich systemów operacyjnych do określonej minimalnej wersji, zachęcać ich do tego, a nawet tego wymagać.
@@ -82,6 +82,6 @@ Z funkcji usługi Intune opisanych w tym artykule można korzystać, aby przejś
 ## <a name="next-steps"></a>Następne kroki
 Użyj następujących zasobów, aby zarządzać wersjami systemów operacyjnych w swojej organizacji: 
 
-- [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/en-us/intune/enrollment-restrictions-set#set-device-type-restrictions)
-- [Wprowadzenie do zasad zgodności urządzeń](https://docs.microsoft.com/en-us/intune/device-compliance-get-started)
+- [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)
+- [Wprowadzenie do zasad zgodności urządzeń](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Tworzenie i przypisywanie zasad ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies)

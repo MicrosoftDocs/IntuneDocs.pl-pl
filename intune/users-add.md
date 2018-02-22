@@ -14,11 +14,11 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 45e1b3747b4c1b74401fc1ce73716abe5e06110d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8ce84f51dcfb61ec16c78a6216135c2a7639657f
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune
 
@@ -102,7 +102,7 @@ Przypisz użytkownikom co najmniej jedne uprawnienia administratora. Uprawnienia
 - **Administrator użytkowników** — (usługa Office 365 i Intune) resetuje hasła, monitoruje kondycję usługi, dodaje i usuwa konta użytkowników oraz zarządza żądaniami obsługi. Administrator zarządzający użytkownikami nie może usunąć administratora globalnego, tworzyć innych ról administratora ani resetować haseł innych administratorów.
 - **Administrator usługi Intune** — ma wszystkie uprawnienia administratora globalnego usługi Intune z wyjątkiem uprawnienia do tworzenia administratorów za pomocą opcji **Rola katalogu**.
 
-Konto użyte do utworzenia subskrypcji usługi Microsoft Intune jest administratorem globalnym. Najlepszym rozwiązaniem jest nieużywanie konta administratora globalnego do wykonywania codziennych zadań zarządzania. Administrator nie musi dysponować licencją na korzystanie z usługi Intune, aby uzyskać dostęp do witryny Azure Portal. 
+Konto użyte do utworzenia subskrypcji usługi Microsoft Intune jest administratorem globalnym. Najlepszym rozwiązaniem jest nieużywanie konta administratora globalnego do wykonywania codziennych zadań zarządzania. Mimo że administrator nie wymaga licencji usługi Intune na dostęp do usługi Intune w witrynie Azure Portal, to w celu wykonania pewnych zadań zarządzania, takich jak konfigurowanie konektora usługi Exchange, wymagana jest licencja usługi Intune. 
 
 Aby uzyskać dostęp do portalu usługi Office 365, Twoje konto musi mieć ustawioną opcję **Logowanie dozwolone**. W witrynie Azure Portal w obszarze **Profil** ustaw wartość opcji **Blokuj logowanie** na **Nie**, aby zezwolić na dostęp. Ten stan nie oznacza posiadania licencji na korzystanie z subskrypcji. Domyślnie wszystkie konta użytkowników mają stan **Dozwolone**. Użytkownicy bez uprawnień administratora mogą używać portalu usługi Office 365 do resetowania haseł usługi Intune.
 
