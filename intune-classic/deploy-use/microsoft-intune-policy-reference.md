@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1dbac49ad8fe94e9000e609dea8ae8dd6749be52
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: bf92e34c5bb94fe0cb3c0cc9dabd687a0f2710b9
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="microsoft-intune-configuration-policy-reference"></a>Informacje o zasadach konfiguracji usługi Microsoft Intune
 
@@ -35,7 +35,7 @@ Użyj informacji w tym temacie, aby określić zasady konfiguracji usługi Micro
 
 |Nazwa zasad|Cel używania|
 |---------------|------------------------|
-|**Konfiguracja niestandardowa (Android 4 i nowsze, Samsung KNOX Standard 4.0 i nowsze)**<br><br>**Konfiguracja niestandardowa (aplikacja Android for Work)**|Wdrożenie ustawień jednolitego identyfikatora zasobów organizacji Open Mobile Alliance (OMA-URI), takich jak ustawienia sieci Wi-Fi, których można użyć do kontrolowania funkcji urządzenia. Jest to przydatne tylko w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Android w usłudze Microsoft Intune](android-policy-settings-in-microsoft-intune.md).|
+|**Konfiguracja niestandardowa (Android 4 i nowsze, Samsung KNOX Standard 4.0 i nowsze)**<br><br>**Konfiguracja niestandardowa (aplikacja Android for Work)**|Wdrożenie ustawień jednolitego identyfikatora zasobów organizacji Open Mobile Alliance (OMA-URI), takich jak ustawienia sieci Wi-Fi, których można użyć do kontrolowania funkcji urządzenia. Jest to przydatne w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Android w usłudze Microsoft Intune](android-policy-settings-in-microsoft-intune.md).|
 |**Profil poczty e-mail (Samsung KNOX Standard 4.0 i nowsze)**<br><br>**Profil poczty e-mail (Android for Work — Gmail)**<br><br>**Profil poczty e-mail (Android for Work — Nine Work)**|Tworzenie, wdrażanie i monitorowanie ustawień poczty e-mail programu Exchange ActiveSync na zarządzanych urządzeniach. Umożliwia to użytkownikom dostęp do firmowej poczty e-mail na urządzeniach osobistych, przy czym nie muszą oni przeprowadzać żadnej konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Konfiguracja ogólna (Android 4 i nowsze, Samsung KNOX Standard 4.0 i nowsze)**<br><br>**Konfiguracja ogólna (Android for Work)**|Skonfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego.<br />Określenie aplikacji, które są zgodne lub niezgodne, a następnie składanie raportu, gdy są one używane.<br />Skonfigurowanie trybu kiosku, który umożliwia działanie tylko określonych funkcji, na przykład umożliwia uruchamianie tylko jednej aplikacji na urządzeniu lub wyłącza przyciski głośności.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Android w usłudze Microsoft Intune](android-policy-settings-in-microsoft-intune.md).|
 |**Profil certyfikatu PKCS #12 (PFX) (system Android 4 lub nowszy)**<br><br>**Profil certyfikatu PKCS #12 (PFX) (Android for Work)**|Za pomocą tego profilu możesz utworzyć i wdrożyć ustawienia PFX dotyczące żądań certyfikatów urządzeń.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
@@ -65,7 +65,7 @@ Użyj informacji w tym temacie, aby określić zasady konfiguracji usługi Micro
 
 |Nazwa zasad|Cel używania|
 |---------------|------------------------|
-|**Konfiguracja niestandardowa (Mac OS X 10.9 i nowsze)**|Wdrażanie profilów konfiguracji, które zostały utworzone za pomocą narzędzia Apple Configurator, na komputerach Mac. Jest to przydatne tylko w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Mac OS X w usłudze Microsoft Intune](mac-os-x-policy-settings-in-microsoft-intune.md).|
+|**Konfiguracja niestandardowa (Mac OS X 10.9 i nowsze)**|Wdrażanie profilów konfiguracji, które zostały utworzone za pomocą narzędzia Apple Configurator, na komputerach Mac. Jest to przydatne w przypadku, gdy potrzebne ustawienie jest niedostępne w zasadach konfiguracji.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Mac OS X w usłudze Microsoft Intune](mac-os-x-policy-settings-in-microsoft-intune.md).|
 |**Konfiguracja ogólna (Mac OS X 10.9 i nowsze)**|Skonfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego.<br />Określenie aplikacji, które są zgodne lub niezgodne, a następnie składanie raportu, gdy są one używane.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad systemu Mac OS X w usłudze Microsoft Intune](mac-os-x-policy-settings-in-microsoft-intune.md).|
 |**Profil certyfikatu protokołu SCEP (Mac OS X 10.9 i nowsze)**|Konfigurowanie certyfikatu protokołu SCEP (Simple Certificate Enrollment Protocol), którego można użyć w połączeniu z zaufanym certyfikatem urządzenia przenośnego do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Profil zaufanego certyfikatu (Mac OS X 10.9 i nowsze)**|Konfigurowanie zaufanego certyfikatu urządzenia przenośnego, którego można użyć do uwierzytelniania urządzeń przenośnych. Umożliwia im to dostęp do zasobów sieciowych, takich jak zasoby konfigurowane za pomocą profili sieci Wi-Fi i VPN.<br /><br />Aby uzyskać więcej informacji, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
@@ -117,6 +117,6 @@ Usługa Microsoft Intune obejmuje teraz oddzielne **zasady konfiguracji** dotycz
 |**Ustawienia programu Microsoft Intune Center**|Konfigurowanie szczegółów wyświetlanych w programie Microsoft Intune Center na zarządzanych komputerach.<br /><br />Ten typ zasad można wdrożyć tylko w grupach urządzeń.<br /><br />Aby uzyskać więcej informacji, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).|
 |**Ustawienia Zapory systemu Windows**|Konfigurowanie ustawień Zapory systemu Windows i wyjątków dla typowej komunikacji sieciowej na komputerach, w tym następujących funkcjonalności:<br /><br />- Usługa BranchCache<br />- Pomoc zdalna<br />- Udostępnianie multimediów<br /><br />Ten typ zasad można wdrożyć tylko w grupach urządzeń.<br /><br />Aby uzyskać więcej informacji, zobacz [Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).|
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

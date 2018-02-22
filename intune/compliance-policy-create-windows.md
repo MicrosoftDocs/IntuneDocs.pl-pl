@@ -6,29 +6,27 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 1/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 13fc7783-d4de-47d0-b1b8-4c8710a9e6ab
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59a68bbe3c7030e44e4b1eacb5601dd7a3121673
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 05fb016277f8645c661bc8dee213ed98b95c0198
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem Windows w usłudze Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności są tworzone dla każdej platformy.  Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](device-compliance.md) (Czym jest zgodność z urządzeniem). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
+Zasady zgodności są tworzone dla każdej platformy. Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](device-compliance.md) (Czym jest zgodność z urządzeniem). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
 
-W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
 ---------------------------
 
@@ -46,7 +44,7 @@ W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w prz
 
 **Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).+
 
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenia nie są zgodne, zostaną wykonane następujące akcje:+
+**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
 
 - Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
 - Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
@@ -71,7 +69,7 @@ Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez sie
 1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
 2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Wybierz** powoduje wdrożenie zasad dla użytkowników.
 
-Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
+Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
 
 <!---## Compliance policy settings--->
 
@@ -84,7 +82,7 @@ Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługuj�
 - **Minimalna długość hasła:** określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło użytkownika.
 - **Wymagany typ hasła:** określ, czy użytkownicy muszą utworzyć hasła **alfanumeryczne**, czy też **numeryczne**.
 
-W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem, jeśli minimalna długość hasła jest większa niż osiem znaków lub minimalna liczba zestawów znaków jest większa niż dwa.
+W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności kończy się niepowodzeniem, jeśli minimalna długość hasła jest większa niż osiem znaków lub minimalna liczba zestawów znaków jest większa niż dwa.
 
 - **Minimalna liczba zestawów znaków:** jeśli parametr **Wymagany typ hasła** ma wartość **Alfanumeryczne**, wtedy to ustawienie określa minimalną liczbę zestawów znaków użytych w haśle. Są cztery zestawy znaków:
   - Małe litery
@@ -92,9 +90,9 @@ W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp prz
   - Symbole
   - Liczby
 
-Im większa liczba zostanie podana dla tego ustawienia, tym bardziej skomplikowane hasła będą musieli tworzyć użytkownicy. W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem, jeśli minimalna długość hasła jest większa niż osiem znaków lub minimalna liczba zestawów znaków jest większa niż dwa.
+Im większa liczba zostanie podana dla tego ustawienia, tym bardziej skomplikowane hasła będą musieli tworzyć użytkownicy. W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności kończy się niepowodzeniem, jeśli minimalna długość hasła jest większa niż osiem znaków lub minimalna liczba zestawów znaków jest większa niż dwa.
 
-- **Liczba minut braku aktywności, zanim będzie wymagane hasło:** określa czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
+- **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła:** określa czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
 - **Wygaśnięcie hasła (w dniach):** wybierz liczbę dni, po których hasło użytkownika wygasa i należy utworzyć nowe.
 - **Pamiętaj historię haseł:** używaj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu używaniu poprzednich haseł**, aby uniemożliwić użytkownikowi ponowne używanie wcześniej utworzonych haseł.
 - **Zapobiegaj ponownemu używaniu poprzednich haseł:** jeśli jest zaznaczona opcja **Pamiętaj historię haseł**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
@@ -132,11 +130,11 @@ Aby uzyskać informacje o sposobie działania usługi HAS, zobacz [Zaświadczani
 
 Określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło użytkownika.
 
-W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem, jeśli **Minimalna długość hasła** jest większa niż 8 znaków lub **Minimalna liczba zestawów znaków** jest większa niż 2.
+W przypadku urządzeń, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności kończy się niepowodzeniem, jeśli **Minimalna długość hasła** jest większa niż osiem znaków lub **Minimalna liczba zestawów znaków** jest większa niż dwa.
 
 - **Wymagany typ hasła:** opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1.
 
-Określ, czy użytkownicy muszą tworzyć hasła **alfanumeryczne**, czy też **numeryczne**.
+Określ, czy użytkownicy muszą utworzyć hasła **Alfanumeryczne**, czy też **Numeryczne**.
 
 - **Minimalna liczba zestawów znaków:** opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1. Jeśli parametr **Wymagany typ hasła** ma wartość **Alfanumeryczne**, wówczas to ustawienie określa minimalną liczbę zestawów znaków użytych w haśle. Są cztery zestawy znaków:
   - Małe litery
@@ -144,7 +142,7 @@ Określ, czy użytkownicy muszą tworzyć hasła **alfanumeryczne**, czy też **
   - Symbole
   - Liczby: im większa liczba zostanie podana dla tego ustawienia, tym bardziej skomplikowane hasła będą musieli tworzyć użytkownicy.
 
-W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem, jeśli **Minimalna długość hasła** jest większa niż 8 znaków lub **Minimalna liczba zestawów znaków** jest większa niż 2.
+W przypadku urządzeń, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności kończy się niepowodzeniem, jeśli **Minimalna długość hasła** jest większa niż osiem znaków lub **Minimalna liczba zestawów znaków** jest większa niż dwa.
 
 - **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła:** — opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1.
 
@@ -160,7 +158,7 @@ Używaj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu uży
 
 - **Zapobiegaj ponownemu używaniu poprzednich haseł:** — opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1.
 
-Jeśli jest zaznaczona opcja **Pamiętaj historię haseł:**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
+Jeśli jest zaznaczona opcja **Pamiętaj historię haseł**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
 
 
 ## <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
@@ -189,6 +187,14 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 
 - Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
 - W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję &quot;10.0&quot; z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie winver.
+
+## <a name="windows-holographic-for-business-support"></a>Obsługa systemu Windows Holographic for Business
+
+System Windows Holographic for Business obsługuje następujące ustawienie:
+
+- Zabezpieczenia systemu / szyfrowanie
+
+  **Szyfrowanie magazynu danych urządzenia**.
 
 <!--- ## Next steps
 

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/29/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3e3f35648784de860eb7e3f2e203488bc77a96d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -31,7 +31,7 @@ Jako administrator usługi Intune możesz utworzyć ograniczenia rejestracji i z
 >Ograniczenia rejestrowania nie są funkcjami zabezpieczeń. Urządzenia, na których złamano zabezpieczenia, mogą błędnie podawać swój charakter. Te ograniczenia stanowią optymalną barierę dla niezłośliwych użytkowników.
 
 >[!NOTE]
->Wspomniane poniżej ograniczenia rejestracji przypisane do grupy i funkcje ustawiania priorytetu są właśnie wdrażane w ramach bazy klientów usługi. Do czasu ukończenia tego procesu możesz nie mieć dostępu do funkcji dotyczących grup i ustawiania priorytetu. 
+>Wspomniane poniżej ograniczenia rejestracji przypisane do grupy i funkcje ustawiania priorytetu są właśnie wdrażane w ramach bazy klientów usługi. Do czasu ukończenia tego procesu możesz nie mieć dostępu do funkcji dotyczących grup i ustawiania priorytetu.
 
 Konkretne ograniczenia rejestracji, które możesz utworzyć, obejmują poniższe:
 
@@ -80,7 +80,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
   - systemy Android i Android for Work obsługują wersję major.minor.rev.build.
   - System iOS obsługuje wersję major.minor.rev.
   - System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10.
-  Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator. 
+  Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator.
 8. Określ opcję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
 
     ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślnymi konfiguracjami platformy urządzeń i widocznymi skonfigurowanymi ustawieniami urządzeń będących własnością użytkownika.](media/device-restrictions-platform-configurations.png)
@@ -103,15 +103,19 @@ Możesz zmienić ustawienia ograniczeń dotyczących limitu liczby urządzeń, w
     ![Zrzut ekranu przedstawiający blok ograniczeń dotyczących limitu liczby urządzeń z ograniczeniami limitu liczby urządzeń.](./media/device-restrictions-limit.png)
 6. Kliknij polecenie **Zapisz**.
 
+Użytkownikowi końcowemu zostanie wyświetlone powiadomienie z informacją o terminie osiągnięcia limitu liczby zarejestrowanych urządzeń. Na przykład w systemie iOS to powiadomienie będzie wyglądać następująco:
+
+![Zrzut ekranu z powiadomieniem o limicie urządzeń w systemie iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
 ## <a name="change-enrollment-restriction-priority"></a>Zmiana priorytetu ograniczenia rejestracji
 
-Priorytet jest używany, jeśli użytkownik istnieje w wielu grupach, którym przypisano ograniczenia. Użytkownicy podlegają tylko ograniczeniu o najwyższym priorytecie, które zostało przypisane do grupy, w której się znajdują. Przykładowo Jan znajduje się w grupie A, której przypisano ograniczenia o priorytecie 5, oraz w grupie B, której przypisano ograniczenia o priorytecie 2. Jan podlega wyłącznie ograniczeniom o priorytecie 2. 
+Priorytet jest używany, jeśli użytkownik istnieje w wielu grupach, którym przypisano ograniczenia. Użytkownicy podlegają tylko ograniczeniu o najwyższym priorytecie, które zostało przypisane do grupy, w której się znajdują. Przykładowo Jan znajduje się w grupie A, której przypisano ograniczenia o priorytecie 5, oraz w grupie B, której przypisano ograniczenia o priorytecie 2. Jan podlega wyłącznie ograniczeniom o priorytecie 2.
 
 Po utworzeniu ograniczenia jest ono dodawane do listy bezpośrednio nad ograniczeniem domyślnym.
 
-Rejestracja urządzeń obejmuje domyślne ograniczenia dla typu urządzeń i liczby urządzeń. Te dwa ograniczenia mają zastosowanie do wszystkich użytkowników, chyba że zostaną zastąpione przez ograniczenia o wyższym priorytecie. 
+Rejestracja urządzeń obejmuje domyślne ograniczenia dla typu urządzeń i liczby urządzeń. Te dwa ograniczenia mają zastosowanie do wszystkich użytkowników, chyba że zostaną zastąpione przez ograniczenia o wyższym priorytecie.
 
-Możesz zmienić priorytet dowolnego ograniczenia innego niż domyślne. 
+Możesz zmienić priorytet dowolnego ograniczenia innego niż domyślne.
 
 **Aby zmienić priorytet ograniczeń**
 
@@ -120,8 +124,3 @@ Możesz zmienić priorytet dowolnego ograniczenia innego niż domyślne.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. Umieść kursor nad ograniczeniem na liście priorytetów.
 5. Używając trzech pionowych punktów, przeciągnij priorytet do żądanej pozycji na liście.
-
-
-
-
-

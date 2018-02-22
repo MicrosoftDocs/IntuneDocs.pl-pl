@@ -2,10 +2,10 @@
 title: "Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune"
 description: 
 keywords: sdk, Cordova, intune
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,23 @@ ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 00c1c805dbbf661bdcd4ad6b153fee8b2bbba9ee
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d42f8418e2f277dca0fbb2f01248f5a815606cb6
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune
 
-> [!NOTE]
-> Warto najpierw przeczytać artykuł [Wprowadzenie do zestawu SDK aplikacji usługi Intune](app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
+> [!IMPORTANT]
+> Usługa Intune kończy obsługę wtyczki zestawu SDK aplikacji usługi Intune Microsoft dla oprogramowania Cordova z dniem 1 maja 2018 r. Firma Microsoft zaleca, aby zamiast tej wtyczki używać narzędzia opakowującego aplikacje usługi Intune. Aby uzyskać więcej informacji o narzędziu do opakowywania aplikacji, zobacz [Narzędzie opakowujące aplikacje dla systemu iOS](app-wrapper-prepare-ios.md) i [Narzędzie opakowujące aplikacje dla systemu Android](app-wrapper-prepare-android.md). Aby uzyskać więcej informacji na temat tej zmiany, zobacz sekcję [Uwagi](whats-new.md#notices) w artykule [Co nowego w usłudze Microsoft Intune](whats-new.md).
 
 ## <a name="overview"></a>Przegląd
 
 [Wtyczka Cordova zestawu SDK aplikacji usługi Intune](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) w aplikacjach dla systemów iOS i Android utworzonych za pomocą struktury Cordova. Wtyczka ta pozwala deweloperom na integrowanie funkcji ochrony danych i aplikacji usługi Intune w ramach aplikacji opartych na platformie Cordova.
+
+> [!NOTE]
+> Warto najpierw przeczytać artykuł [Wprowadzenie do zestawu SDK aplikacji usługi Intune](app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
 
 Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po wbudowaniu wtyczki do aplikacji dla systemu iOS lub Android administrator usługi Microsoft Intune będzie mógł wdrożyć zasady ochrony aplikacji usługi Intune, które obejmują różne funkcje ochrony danych. Wtyczka jest kompilowana w taki sposób, aby większość czynności było wykonywanych automatycznie podczas kompilacji aplikacji Cordova. Pozwala to na szybkie włączenie aplikacji w zakres ochrony aplikacji usługi Intune. Aby rozpocząć pracę, wykonaj poniższe kroki, odpowiadające platformie docelowej.
 
@@ -65,7 +68,7 @@ Aplikacje Cordova skompilowane za pomocą wtyczki Cordova zestawu SDK aplikacji 
 
 
 
-## <a name="quick-start"></a>Szybki start
+## <a name="quickstart"></a>Szybki start
 
 1. Zaktualizuj wersję bibliotek ADAL:
 

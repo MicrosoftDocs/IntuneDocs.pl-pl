@@ -150,3 +150,4 @@
 #### [Potrzebuję włączyć usługę Windows Defender](turn-on-defender-windows.md)
 
 ## [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
+### [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)

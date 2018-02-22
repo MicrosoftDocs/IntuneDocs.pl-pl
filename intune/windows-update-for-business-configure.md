@@ -6,19 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/01/2017
+ms.date: 1/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: fa9b09f97568b54a68f34a609c91426eb12b71e0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1a7d047de1faa019eb137516ef75d64657e22e5a
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
@@ -45,8 +44,9 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 - Usługa Windows Update obsługuje następujące wersje systemu Windows 10:
     - Windows 10
     - Windows 10 Team (dla urządzeń Surface Hub)
+    - [Windows Holographic for Business](#windows-holographic-for-business-support)
 
- Urządzenia z systemem Windows 10 Mobile i Windows 10 Holographic nie są obsługiwane.
+ Urządzenia z systemem Windows 10 Mobile nie są obsługiwane.
 
 - Na urządzeniach z systemem Windows opcja **Opinia i diagnostyka** > **Dane diagnostyczne i dane użycia** musi mieć co najmniej wartość **Podstawowa**.
 
@@ -89,8 +89,7 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
     Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Kanał obsługi** (Półroczny kanał (kierowany) lub Półroczny kanał) można zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących funkcji po ich udostępnieniu przez firmę Microsoft w usłudze Windows Update.
 
-    Przykład:  
-    **Jeśli ustawiono kanał obsługi Półroczny kanał (kierowany), a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie będzie otrzymywać tej aktualizacji do lutego — 30 dni później.
+    Na przykład **jeśli ustawiono kanał obsługi Półroczny kanał (kierowany), a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie będzie otrzymywać tej aktualizacji do lutego — 30 dni później.
 
     **Jeśli ustawiono kanał obsługi Półroczny kanał, a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację dotyczącą funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
 
@@ -154,3 +153,11 @@ Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkc
 > [!IMPORTANT]
 > Wydane polecenie wstrzymania urządzenia otrzymują przy następnym zarejestrowaniu się w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem.
 > Ponadto jeśli urządzenie docelowe jest wyłączone w momencie wydania polecenia wstrzymania, może ono po włączeniu pobrać i zainstalować zaplanowane aktualizacje przed zarejestrowaniem się w usłudze Intune.
+
+## <a name="windows-holographic-for-business-support"></a>Obsługa systemu Windows Holographic for Business
+
+System Windows Holographic for Business obsługuje następujące ustawienia:
+
+- **Zachowanie automatycznych aktualizacji**
+- **Aktualizacje produktów firmy Microsoft**
+- **Kanał obsługi**

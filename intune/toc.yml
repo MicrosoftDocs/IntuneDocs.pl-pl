@@ -287,6 +287,26 @@
           items:
             - name: Czyszczenie selektywne aplikacji
               href: apps-selective-wipe.md
+            - name: Korzystanie z zasad ochrony aplikacji
+              href: app-protection-policy.md
+              items:
+                - name: Tworzenie zasad ochrony aplikacji
+                  href: app-protection-policies.md
+                  items:
+                    - name: Ustawienia systemu Android
+                      href: app-protection-policy-settings-android.md
+                    - name: Ustawienia systemu iOS
+                      href: app-protection-policy-settings-ios.md
+                - name: Weryfikowanie zasad ochrony aplikacji
+                  href: app-protection-policies-validate.md
+                - name: Monitorowanie stanu użytkownika ochrony aplikacji
+                  href: app-protection-policies-monitor.md
+                - name: Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP
+                  href: app-protection-policies-configure-windows-10.md
+                - name: Tworzenie i przypisywanie zasad ochrony aplikacji WIP
+                  href: windows-information-protection-policy-create.md
+                - name: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
+                  href: data-transfer-between-apps-manage-ios.md
     - name: Konfigurowanie urządzeń
       href: device-profiles.md
       items:
@@ -444,28 +464,8 @@
           href: conditional-access-integrate-jamf.md
         - name: Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
           href: conditional-access-assign-jamf.md
-    - name: Ochrona danych aplikacji i urządzeń
+    - name: Ochrona danych na urządzeniu
       items:
-        - name: Korzystanie z zasad ochrony aplikacji
-          href: app-protection-policy.md
-          items:
-            - name: Tworzenie zasad ochrony aplikacji
-              href: app-protection-policies.md
-              items:
-                - name: Ustawienia systemu Android
-                  href: app-protection-policy-settings-android.md
-                - name: Ustawienia systemu iOS
-                  href: app-protection-policy-settings-ios.md
-            - name: Weryfikowanie zasad ochrony aplikacji
-              href: app-protection-policies-validate.md
-            - name: Monitorowanie stanu użytkownika ochrony aplikacji
-              href: app-protection-policies-monitor.md
-            - name: Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP
-              href: app-protection-policies-configure-windows-10.md
-            - name: Tworzenie i przypisywanie zasad ochrony aplikacji WIP
-              href: windows-information-protection-policy-create.md
-            - name: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
-              href: data-transfer-between-apps-manage-ios.md
         - name: Usługa Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
@@ -651,6 +651,8 @@
           href: reports-proc-data-rest.md
         - name: Punkt końcowy interfejsu API magazynu danych
           href: reports-api-url.md
+        - name: Uwierzytelnianie tylko aplikacji w magazynie danych
+          href: data-warehouse-app-only-auth.md
         - name: Model danych magazynu danych
           href: reports-ref-data-model.md
           items:
