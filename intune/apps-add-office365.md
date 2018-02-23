@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3174fc498b5d8cffaade7c52f417409de64c7eb6
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: f6ef1d1dab39a6939b80bd13ba090424a67c6f53
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus 2016 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
+# <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
-Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 2016 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jeden wpis na liście aplikacji w konsoli usługi Intune.
+Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jeden wpis na liście aplikacji w konsoli usługi Intune.
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -32,7 +32,7 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus 20
 >Ta metoda instalacji pakietu Office jest obsługiwana tylko w przypadku, gdy żadne inne wersje pakietu Microsoft Office nie zostały zainstalowane na urządzeniu.
 
 - Na urządzeniach, na których wdrażasz te aplikacje, musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
-- Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365 ProPlus 2016.
+- Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365 ProPlus.
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, instalacja może zakończyć się niepowodzeniem, a użytkownicy końcowi mogą utracić dane z niezapisanych plików.
 - Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S, Windows Home, Windows Team, Windows Holographic i Windows Holographic for Business.
 - Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze sklepu Microsoft Store (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, na których już wdrożono aplikacje usługi Office 365 przy użyciu usługi Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
