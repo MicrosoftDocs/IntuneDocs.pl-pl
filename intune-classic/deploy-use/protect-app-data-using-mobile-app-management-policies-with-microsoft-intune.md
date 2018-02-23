@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 23dca24c69cca3c7a2851cb3fa7d9959f31df8e7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e5f9eb33ca877fba0d59cfd9ddbc23f5eb2cd05c
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Ochrona danych aplikacji przy użyciu zasad ochrony aplikacji w usłudze Microsoft Intune
 
@@ -57,9 +57,7 @@ Stosowanie rozwiązań MDM jednocześnie z zasadami ochrony aplikacji jest możl
 - **Zasady ochrony aplikacji zapewniają ochronę warstwy aplikacji.** Na przykład możesz mieć zasadę, która wymaga zastosowania numeru PIN w celu otwarcia aplikacji w kontekście służbowym, chroni dane przed udostępnieniem innym aplikacjom i uniemożliwia zapisywanie firmowych danych aplikacji w prywatnej lokalizacji magazynu.
 
 ## <a name="devices-that-support-mam"></a>Urządzenia, które obsługują zasady MAM
-Zasady ochrony aplikacji są obecnie obsługiwane w następujących systemach operacyjnych:
--   System iOS 8.1 lub nowszy
--   System Android 4 lub nowszy
+Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji pakietu Office. Aby uzyskać więcej informacji, zobacz [wymagania systemowe pakietu Office](https://products.office.com/en-US/office-system-requirements).
 
 >[!NOTE]
 >Urządzenia z systemem Windows nie są obsługiwane w rozwiązaniu do zarządzania aplikacjami mobilnymi bez scenariusza rejestracji. Jednak podczas rejestrowania urządzeń z systemem Windows 10 w usłudze Intune możesz użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).

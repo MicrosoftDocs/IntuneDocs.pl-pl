@@ -6,20 +6,19 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 11/17/2017
+ms.date: 2/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 0444183e-f924-4605-96a8-48fdfbc58fd1
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7eb36cc8de655766afabc60f33a316cb6ef3bfb8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a5f1caeddbd3d171092ef59cfb092404b31154f2
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem macOS za pomocą usługi Intune
 
@@ -35,25 +34,21 @@ Przed utworzeniem i przypisaniem zasad zgodności urządzeń przejrzyj koncepcje
 > [!IMPORTANT]
 > Zasady zgodności urządzeń należy utworzyć osobno dla każdej platformy. Ustawienia zasad zgodności urządzeń usługi Intune zależą od możliwości platformy, czyli ustawień dostępnych za pośrednictwem protokołu MDM.
 
-W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
-
--------------------------------
+W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego:
 
 
-| **Ustawienie zasad** | **System macOS 10.11 i nowsze** |
+| Ustawienie zasad | System macOS 10.11 i nowsze |
 | --- | --- |
 | **Konfiguracja kodu PIN lub hasła** | Skorygowane |   
 | **Szyfrowanie urządzenia** | Skorygowane (przez ustawienie kodu PIN) |
 | **Profil e-mail** | Poddane kwarantannie |
 |**Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
 | **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |  
-| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |  
-----------------------------
 
 
 **Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).
 
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenia nie są zgodne, zostaną wykonane następujące akcje:
+**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
 
 - Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
 - Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
@@ -70,42 +65,42 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 ### <a name="device-health"></a>Kondycja urządzenia
 
-- **Wymagaj ochrony integralności systemu**: ustaw tę opcję na wartość **Wymagaj** w celu sprawdzenia, czy urządzenia z systemem macOS mają włączoną ochronę integralności systemu.
+- **Wymagaj ochrony integralności systemu** — ustaw tę opcję na wartość **Wymagaj** w celu sprawdzenia, czy urządzenia z systemem macOS mają włączoną ochronę integralności systemu.
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
-- **Minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może wybrać opcję uaktualnienia urządzenia, co umożliwi korzystanie z zasobów firmy.
+- **Minimalna wersja systemu operacyjnego** — jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może wybrać opcję uaktualnienia urządzenia, co umożliwi korzystanie z zasobów firmy.
 
-- **Maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
+- **Maksymalna wersja systemu operacyjnego** — jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
 ### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
 #### <a name="password"></a>Hasło
 
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: ustaw tę opcję na wartość **Wymagaj**, aby wymagać od użytkowników wprowadzenia hasła przed uzyskaniem dostępu do swojego urządzenia.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych** — ustaw tę opcję na wartość **Wymagaj**, aby wymagać od użytkowników wprowadzenia hasła przed uzyskaniem dostępu do swojego urządzenia.
 
-- **Proste hasła**: ustaw tę opcję na wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**.
+- **Proste hasła** —ustaw tę opcję na wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**.
 
-- **Minimalna długość hasła**: określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
+- **Minimalna długość hasła** — określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
 
-- **Typ hasła**: określ, czy użytkownik musi utworzyć hasło **alfanumeryczne**, czy **numeryczne**.
+- **Typ hasła** — określ, czy użytkownik musi utworzyć hasło **alfanumeryczne**, czy **numeryczne**.
 
-- **Liczba znaków niealfanumerycznych w haśle**: jeśli opcja **Wymagany typ hasła** zostanie ustawiony na wartość **Alfanumeryczne**, użyj tego ustawienia do określenia minimalnej liczby zestawów znaków, które muszą zostać użyte w haśle. 
+- **Liczba znaków niealfanumerycznych w haśle** — jeśli opcja **Wymagany typ hasła** zostanie ustawiony na wartość **Alfanumeryczne**, użyj tego ustawienia do określenia minimalnej liczby zestawów znaków, które muszą zostać użyte w haśle. 
 
     > [!NOTE]
-    > Ustawienie większej liczby spowoduje wymaganie wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
+    > Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
     > [!IMPORTANT]
     > W przypadku urządzeń z systemem macOS to ustawienie oznacza liczbę znaków specjalnych (na przykład **!** , **#**, **&amp;**), które muszą znajdować się w haśle.
 
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: określ czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła** — określ czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
 
-- **Wygaśnięcie hasła (w dniach)**: wybierz liczbę dni (z zakresu od 1 do 250), po których hasło wygasa i należy utworzyć nowe.
+- **Wygaśnięcie hasła (w dniach)** — wybierz liczbę dni (z zakresu od 1 do 250), po których hasło wygasa i należy utworzyć nowe.
 
 - **Liczba poprzednich haseł, których nie można użyć ponownie** — określ liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 
     > [!IMPORTANT]
-    > W przypadku zmiany wymagania dotyczącego hasła na urządzeniu z systemem macOS zmiana będzie obowiązywać dopiero od następnej zmiany hasła przez użytkownika. Na przykład jeśli ustawiono ograniczenie długości hasła do ośmiu cyfr, a na urządzeniu z systemem macOS jest obecnie stosowane hasło o długości 6 cyfr, urządzenie pozostanie zgodne, dopóki użytkownik nie zechce zaktualizować swojego hasła na tym urządzeniu.
+    > W przypadku zmiany wymagania dotyczącego hasła na urządzeniu z systemem macOS zmiana będzie obowiązywać dopiero od następnej zmiany hasła przez użytkownika. Na przykład jeśli ustawiono ograniczenie długości hasła do ośmiu cyfr, a na urządzeniu z systemem macOS jest obecnie stosowane hasło o długości sześciu cyfr, urządzenie pozostanie zgodne, dopóki użytkownik nie zechce zaktualizować swojego hasła na tym urządzeniu.
 
 ## <a name="to-create-a-device-compliance-policy"></a>Aby utworzyć zasadę zgodności urządzenia
 
@@ -142,7 +137,7 @@ Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez sie
 4. Po przypisaniu zasad zgodności urządzeń do grup można zamknąć blok **Przypisania**.
 
     > [!TIP]
-    > Domyślnie urządzenia sprawdzają zgodność co 8 godzin, ale użytkownicy mogą wymusić ten proces za pomocą aplikacji Portal firmy usługi Intune.
+    > Domyślnie urządzenia sprawdzają zgodność co osiem godzin, ale użytkownicy mogą wymusić ten proces za pomocą aplikacji Portal firmy usługi Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 

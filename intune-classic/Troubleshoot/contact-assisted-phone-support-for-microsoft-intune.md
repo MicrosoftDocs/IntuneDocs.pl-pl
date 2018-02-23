@@ -16,10 +16,10 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.openlocfilehash: 821234397df511e054e98bc11cd6da21ce8370d7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 10/10/2017
 |Liechtenstein|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|francuski&#42;, niemiecki&#42;, włoski&#42;, angielski|0800000300|0227614114|
 |Litwa|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 EET (UTC +2)|litewski&#42;, angielski|880030960||
 |Luksemburg|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|francuski&#42;, niemiecki&#42;, angielski|80021094|24871510|
-|Macedonia, BJR|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0800-94288<br /><br />Krok 1: wybierz numer telefonu<br /><br />Krok 2: wprowadź kod: 001<br /><br />Krok 3: wprowadź numer 877-663-5075||
+|BJR Macedonia|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0800-94288<br /><br />Krok 1: wybierz numer telefonu<br /><br />Krok 2: wprowadź kod: 001<br /><br />Krok 3: wprowadź numer 877-663-5075||
 |Malezja|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 18:00 MYT (UTC +8)|bahasa&#42;, malajski&#42;, angielski|1800 220030|362074606|
 |M alta|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CET (UTC +1)|angielski|0 80062231||
 |Meksyk|24 x 7|Poniedziałek — piątek<br /><br />09:00 – 17:00 CST (UTC -6)|hiszpański&#42;, angielski|01-8005630605|55473856567|

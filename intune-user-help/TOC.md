@@ -104,7 +104,6 @@
 ## [Korzystanie z urządzenia z systemem macOS](using-your-macos-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos-cp.md)
-### [Rejestrowanie starszego urządzenia z systemem macOS](enroll-your-device-in-intune-macos-legacy.md)
 ### [Wyrejestrowywanie urządzenia z systemem macOS](unenroll-your-device-from-intune-macos.md)
 
 ### [Rozwiązywanie typowych problemów z systemem macOS](troubleshoot-your-device-macos.md)
@@ -140,6 +139,7 @@
 #### [Wysyłanie dzienników z aplikacji Portal firmy](send-logs-to-your-it-admin-cp-windows.md)
 #### [Wysyłanie dzienników z aplikacji Ustawienia](send-logs-to-your-it-admin-settings-windows.md)
 #### [Moja wersja systemu Windows nie jest jeszcze obsługiwana](your-windows-version-isnt-yet-supported.md)
+#### [Instalowanie usługi Office 365 na urządzeniu z systemem Windows 10](install-office-windows.md)
 #### [Włączanie szyfrowania systemu Windows](you-need-to-enable-windows-encryption.md)
 #### [Moje urządzenie wymaga oprogramowania chroniącego przed złośliwym kodem](your-device-needs-antimalware-software.md)
 #### [Włączanie bezpiecznego rozruchu](you-need-to-enable-secure-boot-windows.md)

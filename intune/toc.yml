@@ -138,6 +138,8 @@
           href: groups-add.md
         - name: Przypisywanie licencji
           href: licenses-assign.md
+        - name: Licencje usługi Intune
+          href: licenses.md
         - name: Ustawianie urzędu zarządzania urządzeniami mobilnymi
           href: mdm-authority-set.md
     - name: Rejestrowanie urządzeń
@@ -194,6 +196,8 @@
           href: device-locate.md
         - name: Włączanie trybu zgubienia w systemie iOS
           href: device-lost-mode.md
+        - name: Włączanie trybu nadzorowanego dla systemu iOS
+          href: device-supervised-mode.md
         - name: Blokowanie urządzenia
           href: device-remote-lock.md
         - name: Zresetuj kod dostępu
@@ -251,7 +255,7 @@
             - name: Aplikacje sieci Web
               href: web-app.md
             - name: Aplikacje wbudowane
-              href: apps-add-bulit-in.md
+              href: apps-add-built-in.md
         - name: Wdrażanie aplikacji
           href: apps-deploy.md
           items:
