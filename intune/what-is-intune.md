@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 nmanager: dougeby
-ms.date: 10/30/2017
+ms.date: 02/14/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +14,25 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 19b5d98165be67b32afa86ba942c42fc4a3048b3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6e2528c243938e81a6f730a950ee3949ca44047c
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Usługa Microsoft Intune jest obecnie dostępna w witrynie Azure Portal, co oznacza, że przepływy pracy i funkcje, które były dotychczas używane, zmieniły się.
-Azure Portal oferuje nowe i zaktualizowane funkcje. W witrynie tej można zarządzać urządzeniami mobilnymi, komputerami i aplikacjami w organizacji.
+Podobnie jak inne usługi platformy Azure, usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Wybierając usługę **Intune** w witrynie Azure Portal, możesz zarządzać urządzeniami przenośnymi, komputerami i aplikacjami organizacji.
 
-* [Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?](ui-changes.md) to artykuł, w którym można znaleźć opis określonych przepływów pracy i interfejsów użytkownika, które zmieniły się wraz z przejściem na platformę Azure.
-* [Klasyczne grupy usługi Intune w witrynie Azure Portal](groups-get-started.md) to artykuł, w którym opisano wpływ przejścia do grup zabezpieczeń usługi Azure Active Directory na potrzeby zarządzania grupami.
+>[!NOTE] 
+> Jeśli używano poprzedniej wersji usługi Microsoft Intune, przydatne mogą być następujące informacje:
+    * [Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?](ui-changes.md) to artykuł, w którym można znaleźć opis określonych przepływów pracy i interfejsów użytkownika, które zmieniły się wraz z przejściem na platformę Azure.
+    * [Klasyczne grupy usługi Intune w witrynie Azure Portal](groups-get-started.md) to artykuł, w którym opisano wpływ przejścia do grup zabezpieczeń usługi Azure Active Directory na potrzeby zarządzania grupami.
 
-
-
-
-Informacje dotyczące nowego portalu można znaleźć w tej bibliotece i są one na bieżąco aktualizowane. Jeśli masz sugestie dotyczące tego, co powinno się tu znaleźć, dodaj swoją opinię w komentarzach do tematu. Chętnie poznamy Twoje zdanie.
-
-Do najważniejszych elementów nowego środowiska należą:
+Najważniejsze funkcje środowiska usługi Microsoft Intune w witrynie Azure Portal obejmują:
 
 - Zintegrowana konsola dla wszystkich składników Enterprise Mobility + Security (EMS)
 - Konsola oparta na języku HTML, skonstruowana zgodnie ze standardami sieci Web
@@ -61,41 +57,37 @@ Obecnie obsługiwane są następujące przeglądarki:
 
 Sprawdź najnowsze informacje o obsługiwanych przeglądarkach w witrynie [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices).
 
-## <a name="whats-in-this-library"></a>Co znajduje się w tej bibliotece?
+## <a name="microsoft-intune-in-the-azure-portal"></a>Usługa Microsoft Intune w witrynie Azure Portal
 
-Dokumentacja odzwierciedla układ witryny Azure Portal, co ułatwia znalezienie potrzebnych informacji.
+Usługę Microsoft Intune można znaleźć w witrynie [Azure Portal](https://portal.azure.com). Na platformie Azure jest dostępnych wiele usług, ale ze znacznej ich części prawdopodobnie nie będziesz regularnie korzystać. Aby uzyskać krótki przewodnik po dostosowywaniu środowiska portalu, zobacz [Wprowadzenie do usługi Intune w witrynie Azure Portal](get-started-azure.md).
+
+## <a name="the-microsoft-intune-documentation"></a>Dokumentacja usługi Microsoft Intune
+
+Ten temat, jak również cały zestaw dokumentacji usługi Microsoft Intune, są stale aktualizowane. Jeśli masz sugestie dotyczące tego, co powinno się tu znaleźć, dodaj swoją opinię w komentarzach do tematu. Chętnie poznamy Twoje zdanie.
+
+Dokumentacja odzwierciedla układ usługi Microsoft Intune w witrynie Azure Portal (pokazany poniżej), aby ułatwić znajdowanie potrzebnych informacji.
 
 ![Obciążenia portalu Azure](./media/azure-portal-workloads.png)
 
-### <a name="introduction-and-get-started"></a>Wprowadzenie i rozpoczynanie pracy
-Ta sekcja zawiera [informacje wprowadzające](introduction-intune.md), które ułatwiają rozpoczęcie korzystania z usługi Intune.
-### <a name="plan-and-design"></a>Planowanie i projektowanie
-Informacje ułatwiające [planowanie i projektowanie](/intune-classic/plan-design/introduction) środowiska usługi Intune.
-### <a name="device-enrollment"></a>Rejestrowanie urządzeń
-[Jak zarządzać urządzeniami za pomocą usługi Intune](device-enrollment.md).
-### <a name="device-compliance"></a>Zgodność urządzeń
-[Zdefiniuj poziom zgodności urządzeń, a następnie zgłoś wszystkie niezgodne urządzenia](device-compliance.md).
-### <a name="device-configuration"></a>Konfiguracja urządzenia
-[Poznaj profile, których można użyć do skonfigurowania ustawień i funkcji na urządzeniach, którymi zarządzasz](device-profiles.md).
-### <a name="devices"></a>Devices
-[Za pomocą spisu i raportów ustal, jakimi urządzeniami zarządzasz](device-management.md).
-### <a name="mobile-apps"></a>Aplikacje mobilne
-[Jak publikować, konfigurować i ochronić aplikacje oraz zarządzać nimi](app-management.md).
-### <a name="conditional-access"></a>Dostęp warunkowy
-[Ogranicz dostęp do usług programu Exchange w zależności od określonych warunków](conditional-access.md).
-### <a name="on-premises-access"></a>Dostęp lokalny
-[Konfigurowanie dostępu do programu Exchange ActiveSync i lokalnego programu Exchange](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
-### <a name="users"></a>Users
-[Więcej informacji na temat użytkowników z zarządzanymi urządzeniami i sortowaniu zasobów według grup](users-add.md).
-### <a name="groups"></a>Grupy
-[Dowiedz się, jak używać grup usługi Azure Active Directory w usłudze Intune](groups-get-started.md)
-### <a name="intune-roles"></a>Role usługi Intune
-[Decyduj, kto może wykonywać różne akcje usługi Intune i kogo mogą one dotyczyć](role-based-access-control.md). Możesz użyć wbudowanych ról, które obejmują kilka typowych scenariuszy usługi Intune, lub utworzyć własne.
-### <a name="software-updates"></a>Aktualizacje oprogramowania
-[Dowiedz się, jak konfigurować aktualizacje oprogramowania dla urządzeń z systemem Windows 10](windows-update-for-business-configure.md).
+### <a name="documentation-guide"></a>Przewodnik po dokumentacji
 
+Skorzystaj z poniższej tabeli, aby szybko odnaleźć i zrozumieć główne obszary usługi Microsoft Intune.
 
+| Sekcja                                                      | Opis                                                                                                                                                                                                                                                                                      |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Wprowadzenie i rozpoczynanie pracy](introduction-intune.md)       | Omówienie podstaw usługi Intune, w tym:<br /> — Typowe rozwiązania<br /> — Sposób, w jaki działa usługa Microsoft Intune<br /> — Zarządzanie urządzeniami w usłudze Intune<br /> — Zarządzanie aplikacjami w usłudze Intune<br /> — Zarządzania mobilnością w przedsiębiorstwie (Enterprise Mobility Management, EMM) z rejestracją lub bez rejestracji urządzeń                                                         |
+| [Planowanie i projektowanie](planning-guide.md)                         | Wskazówki ułatwiające pomyślnie zaplanowanie i zaprojektowanie środowiska usługi Microsoft Intune.                                                                                                                                                                                                             |
+| [Rejestrowanie urządzeń](device-enrollment.md)                    | Dowiedz się, jak usługa Microsoft Intune pomaga zarządzać urządzeniami pracowników, rejestrując urządzenia w usłudze Intune. Istnieje kilka metod rejestrowania urządzeń pracowników.                                                                                                         |
+| [Zgodność urządzeń](device-compliance.md)                    | Zasady zgodności urządzeń usługi Intune służą do definiowania reguł i ustawień, z którymi urządzenie musi być zgodne, aby było uważane za spełniające zasady usługi Microsoft Intune. Przykładami zgodności są na przykład wymaganie hasła do uzyskiwania dostępu do urządzenia, szyfrowanie urządzeń i wymaganie minimalnej wersji systemu operacyjnego. |
+| [Konfiguracja urządzeń](device-profiles.md)                   | Skonfiguruj ustawienia i funkcje na wszystkich urządzeniach zarządzanych za pomocą usługi Microsoft Intune przez utworzenie profilów urządzeń. Możesz na przykład skonfigurować takie funkcje jak powiadomienia, udostępnianie danych, obsługa poczty e-mail, łączność Wi-Fi, certyfikaty i program Endpoint Protection.              |
+| [Urządzenia](device-management.md)                              | Upewnij się, że zarządzane urządzenia udostępniają zasoby, których użytkownicy końcowi potrzebują do wykonania swojej pracy, a jednocześnie chroń dane firmy przed ryzykiem. Zarządzaj urządzeniami, przeglądając spis urządzeń pracowników i wykonując akcje urządzeń zdalnych.                                                      |
+| [Aplikacje mobilne](app-management.md)                             | Informacje o sposobie dodawania, wdrażania, monitorowania, konfigurowania i ochrony aplikacji.                                                                                                                                                                                                                             |
+| [Dostęp warunkowy](conditional-access.md)                  | Definiowanie warunków opartych na urządzeniach i opartych na aplikacjach dla bramy dostępu do danych firmowych.                                                                                                                                                                                                            |
+| [Użytkownicy](users-add.md)                                        | Dowiedz się, jak dodać użytkowników, urządzenia i aplikacje, którymi zarządzasz.                                                                                                                                                                                                                                           |
+| [Grupy](groups-get-started.md)                              | Dowiedz się, jak możesz utworzyć grupy w usłudze Intune i zarządzać nimi. Przy użyciu grup możesz szybko przypisać zasady konfiguracji i ochrony aplikacji i urządzeń.                                                                                                                                             |
+| [Role usługi Intune](role-based-access-control.md)                 | Informacje o sposobie kontrolowania tego, kto może wykonywać różne akcje usługi Intune i jak są stosowane te akcje. Możesz użyć wbudowanych ról, które obejmują kilka typowych scenariuszy usługi Intune, lub utworzyć własne.                                                                                 |
+| [Aktualizacje oprogramowania](windows-update-for-business-configure.md) | Dowiedz się, jak konfigurować aktualizacje oprogramowania dla urządzeń z systemem Windows 10.                                                                                                                                                                                                                                  |
 
 ## <a name="whats-new"></a>Co nowego
 
-[Dowiedz się, co nowego w usłudze Intune](whats-new.md).
+Aby dowiedzieć się więcej o najnowszych funkcjach usługi Microsoft Intune, zobacz [Co nowego](whats-new.md).

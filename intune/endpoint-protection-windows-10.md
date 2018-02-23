@@ -15,11 +15,11 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f33598abe08ffb958ddac9eb7725ab500f9db981
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Ustawienia programu Endpoint Protection dla systemu Windows 10 i nowszych wersji w usłudze Microsoft Intune
 
@@ -225,7 +225,9 @@ Aby włączyć ochronę przed programami wykorzystującymi luki w zabezpieczenia
 
 Użyj **zasad integralności kodu kontroli aplikacji**, aby wybrać dodatkowe aplikacje, które muszą być poddawane inspekcji przez usługę Windows Defender Security Center lub którym ta usługa może ufać. Składniki systemu Windows i wszystkie aplikacje ze Sklepu Windows są automatycznie zaufane do uruchomienia.
 
-Aplikacje działające w trybie „tylko do inspekcji” nie będą blokowane. Tryb „tylko do inspekcji” rejestruje wszystkie zdarzenia w lokalnych dziennikach klienta.
+Aplikacje działające w trybie **tylko do inspekcji** nie będą blokowane. Tryb **tylko do inspekcji** rejestruje wszystkie zdarzenia w lokalnych dziennikach klienta.
+
+Po włączeniu kontrolę aplikacji można wyłączyć tylko przez zmianę trybu z **Wymuszanie** na **Tylko inspekcja**. Zmiana trybu z **Wymuszanie** na **Nieskonfigurowane** skutkuje tym, że kontrola aplikacji nadal jest wymuszana na przypisanych urządzeniach.
 
 ## <a name="windows-defender-security-center"></a>Windows Defender Security Center
 
