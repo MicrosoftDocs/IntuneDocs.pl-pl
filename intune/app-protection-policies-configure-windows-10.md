@@ -3,10 +3,10 @@ title: Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Win
 titlesuffix: Azure portal
 description: "Konfigurowanie dostawcy zarządzania aplikacjami mobilnymi (MAM) w usłudze Azure AD"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4b6a442f83491160f72955d02b8023ee4d949f2
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 5514ea423f67e5bc824b4ee947f630c7f1b43d8f
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Windows 10
 
@@ -40,17 +40,17 @@ Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawia
 
 4. Skonfiguruj ustawienia w grupie **Przywróć domyślne adresy URL funkcji zarządzania aplikacjami przenośnymi** w bloku **Konfigurowanie**.
 
-    **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**  
-      Automatyczna rejestracja w usłudze MAM umożliwia zarządzanie danymi przedsiębiorstwa na należących do pracowników urządzeniach z systemem Windows. Automatyczna rejestracja w usłudze MAM zostanie skonfigurowana na potrzeby scenariuszy obejmujących przynoszenie własnego urządzenia.<ul><li>**Brak**<br>Wybierz tę opcję, jeśli wszyscy użytkownicy mogą rejestrować się w usłudze MAM.</li><li>**Niektóre**<br>Wybierz grupy usługi Azure AD zawierające użytkowników, którzy zostaną zarejestrowani w usłudze MAM.</li><li>**Wszystkie**<br>Wybierz tę opcję, jeśli wszyscy użytkownicy mogą rejestrować się w usłudze MAM.</li></ul>
+   **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**  
+   Automatyczna rejestracja w usłudze MAM umożliwia zarządzanie danymi przedsiębiorstwa na należących do pracowników urządzeniach z systemem Windows. Automatyczna rejestracja w usłudze MAM zostanie skonfigurowana na potrzeby scenariuszy obejmujących przynoszenie własnego urządzenia.<ul><li>**Brak**<br>Wybierz tę opcję, jeśli wszyscy użytkownicy mogą rejestrować się w usłudze MAM.</li><li>**Niektóre**<br>Wybierz grupy usługi Azure AD zawierające użytkowników, którzy zostaną zarejestrowani w usłudze MAM.</li><li>**Wszystkie**<br>Wybierz tę opcję, jeśli wszyscy użytkownicy mogą rejestrować się w usłudze MAM.</li></ul>
 
-    **Adres URL warunków użytkowania usługi zarządzania aplikacjami mobilnymi**  
-     Adres URL punktu końcowego warunków użytkowania usługi MAM. Punkt końcowy warunków użytkowania umożliwia użytkownikom końcowym wyświetlanie warunków użytkowania usługi przed zarejestrowaniem ich urządzeń na potrzeby zarządzania. Tekst warunków użytkowania informuje użytkowników o zasadach wymuszanych na urządzeniu przenośnym.
+   **Adres URL warunków użytkowania usługi zarządzania aplikacjami mobilnymi**  
+   Adres URL warunków użytkowania usługi zarządzania aplikacjami mobilnymi nie jest obsługiwany w przypadku usługi Microsoft Intune. Aby zasady ochrony zostały zastosowane, to pole wejściowe musi pozostać puste.
 
-    **Adres URL odnajdywania usługi zarządzania aplikacjami mobilnymi**  
-    Adres URL punktu końcowego rejestracji usługi MAM. Punkt końcowy rejestracji umożliwia rejestrowanie urządzeń na potrzeby zarządzania w usłudze MAM.
+   **Adres URL odnajdywania usługi zarządzania aplikacjami mobilnymi**  
+   Adres URL punktu końcowego rejestracji usługi MAM. Punkt końcowy rejestracji umożliwia rejestrowanie urządzeń na potrzeby zarządzania w usłudze MAM.
 
-    **Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi**  
-      Adres URL punktu końcowego informacji o zgodności usługi MAM. Jeśli użytkownikowi odmówiono dostępu do zasobu z niezgodnego urządzenia, jest wyświetlany link do adresu URL informacji o zgodności. Użytkownicy mogą przejść do tego adresu URL hostowanego przez usługę MAM, aby zrozumieć, dlaczego ich urządzenie jest uznawane za niezgodne. Użytkownicy mogą również zainicjować samodzielne rozwiązanie problemu, aby ich urządzenie stało się zgodne i zapewniało dostęp do zasobów.
+   **Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi**  
+   Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi nie jest obsługiwany w przypadku usługi Microsoft Intune. Aby zasady ochrony zostały zastosowane, to pole wejściowe musi pozostać puste. 
 
 5.  Kliknij polecenie **Zapisz**.
 
