@@ -470,30 +470,6 @@
           href: conditional-access-assign-jamf.md
     - name: Ochrona danych na urządzeniu
       items:
-        - name: Korzystanie z zasad ochrony aplikacji
-          href: app-protection-policy.md
-          items:
-            - name: Tworzenie zasad ochrony aplikacji
-              href: app-protection-policies.md
-              items:
-                - name: Ustawienia systemu Android
-                  href: app-protection-policy-settings-android.md
-                - name: Ustawienia systemu iOS
-                  href: app-protection-policy-settings-ios.md
-                - name: Wyjątki od zasad przesyłania danych
-                  href: app-protection-policies-exception.md
-                - name: Przeglądanie dzienników ochrony aplikacji w programie Managed Browser
-                  href: app-protection-policy-settings-log.md
-            - name: Weryfikowanie zasad ochrony aplikacji
-              href: app-protection-policies-validate.md
-            - name: Monitorowanie stanu użytkownika ochrony aplikacji
-              href: app-protection-policies-monitor.md
-            - name: Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP
-              href: app-protection-policies-configure-windows-10.md
-            - name: Tworzenie i przypisywanie zasad ochrony aplikacji WIP
-              href: windows-information-protection-policy-create.md
-            - name: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
-              href: data-transfer-between-apps-manage-ios.md
         - name: Usługa Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
