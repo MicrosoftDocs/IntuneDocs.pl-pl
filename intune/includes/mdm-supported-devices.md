@@ -7,7 +7,7 @@
 ### <a name="google"></a>Google
 - System Android 4.4 lub nowszy (w tym system Samsung Knox Standard w wersji 4.4 lub nowszej)
 
-  Pełna lista zweryfikowanych urządzeń z systemem Samsung Knox Standard jest dostępna w [ustawieniach zasad systemów Android i Samsung Knox Standard](/intune-classic/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
+  Pełna lista zweryfikowanych urządzeń z systemem Samsung Knox Standard jest dostępna w [ustawieniach zasad systemów Android i Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
 
 
 - Program Android for Work [(wymagania)](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window")
