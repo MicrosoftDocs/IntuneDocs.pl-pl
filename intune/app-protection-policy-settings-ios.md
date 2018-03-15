@@ -1,12 +1,12 @@
 ---
 title: Ustawienia zasad ochrony aplikacji dla systemu iOS
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem iOS."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5366062588d518a7072fb4d56e4eade0f492bebf
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 6225afab71d1f47793ea295553dfcaf169374a06
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
+Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Dodawanie zasad** > **Ustawienia** w witrynie Azure Portal.
 
 Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym temacie termin ***aplikacje zarządzane przez zasady*** dotyczy aplikacji konfigurowanych przy użyciu zasad ochrony aplikacji.
 
@@ -32,8 +32,8 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 
 | Ustawienie | Sposób użycia | Wartość domyślna |
 |------|------|------|
-| **Nie zezwalaj na kopie zapasowe programu iTunes i usługi iCloud** | Wybierz pozycję **Tak**, aby wyłączyć tworzenie kopii zapasowych wszystkich plików zarządzanych w programie iTunes i usłudze iCloud. Wybierz pozycję **Nie**, aby umożliwić tej aplikacji tworzenie kopii zapasowych plików zarządzanych w programie iTunes i usłudze iCloud.| Tak |
-| **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych do wszystkich aplikacji. </li> <li>**Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji. <br><br> Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych. Sekcja [Wyjątki w transferze danych](#data-transfer-exemptions) zawiera pełną listę aplikacji i usług. | Wszystkie aplikacje |
+| **Nie zezwalaj na kopie zapasowe programu iTunes i usługi iCloud** | Wybierz opcję **Tak**, aby uniemożliwić tej aplikacji tworzenie kopii zapasowych danych służbowych w programie iTunes i usłudze iCloud. Wybierz opcję **Nie**, aby zezwolić tej aplikacji na tworzenie kopii zapasowych danych służbowych w programie iTunes i usłudze iCloud.| Tak |
+| **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych do wszystkich aplikacji. </li> <li>**Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji. <br><br> Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może domyślnie zezwolić na przesyłanie danych. Ponadto możesz utworzyć własne wyjątki, jeśli musisz zezwolić na przesyłanie danych do aplikacji, która nie obsługuje zasad ochrony aplikacji usługi Intune. Zobacz [wyjątki w transferze danych](#data-transfer-exemptions), aby uzyskać więcej informacji. | Wszystkie aplikacje |
 | **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** | Określ, jakie aplikacje mogą przesyłać dane do tej aplikacji: <ul><li>**Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko z innych aplikacji zarządzanych przez zasady.</li><li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych z wszystkich aplikacji.</li><li>**Brak**: nie zezwalaj na przesyłanie danych z żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych. Sekcja [Wyjątki w transferze danych](#data-transfer-exemptions) zawiera pełną listę aplikacji i usług. Aplikacje objęte zarządzaniem aplikacjami mobilnymi obsługujące wiele tożsamości na niezarejestrowanych urządzeniach z systemem iOS ignorują te zasady i zezwalają na wszystkie dane przychodzące. | Wszystkie aplikacje |
 | **Nie zezwalaj na używanie polecenia „Zapisz jako”** | Wybierz opcję **Tak**, aby wyłączyć używanie opcji Zapisz jako w tej aplikacji. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako. | Nie |
 | **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach** | Określ, kiedy można używać akcji wycinania, kopiowania i wklejania w tej aplikacji. Wybierz spośród opcji: <ul><li>**Zablokowane**: nie zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i dowolną inną aplikacją.</li><li>**Aplikacje zarządzane przez zasady**: zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady.</li><li>**Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych z dowolnych aplikacji.</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji. | Dowolna aplikacja |
@@ -53,13 +53,12 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | Nazwy aplikacji/usług | Opis |
 | ---- | --- |
 |<code>tel; telprompt</code> | Natywna aplikacja telefoniczna |
-| <code>skype</code> | Skype |
-| <code>app-settings</code> | Ustawienia urządzenia |
-| <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
-| <code>calshow</code> | Kalendarz natywny |
+|<code>skype</code> | Skype |
+|<code>app-settings</code> | Ustawienia urządzenia |
+|<code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
+|<code>calshow</code> | Kalendarz natywny |
 
-
-
+Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych dla aplikacji](app-protection-policies-exception.md). 
 
 ## <a name="access-settings"></a>Ustawienia dostępu
 

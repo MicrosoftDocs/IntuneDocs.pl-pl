@@ -1,12 +1,12 @@
 ---
 title: "Tworzenie i wdrażanie zasad ochrony aplikacji"
-titleSuffix: Azure portal
-description: "Informacje o tym, jak zasady ochrony aplikacji usługi Intune mogą chronić dane firmy używane przez aplikacje, którymi zarządzasz."
+titleSuffix: Microsoft Intune
+description: "Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,18 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fbb9a1f6697a8339a2854e4352749ca04bb612e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: cd92e787fd3c1abaa8b20ce1d75141b46ab17934
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+
+Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Microsoft Intune do użytkowników. W tym temacie opisano również sposób wprowadzania zmian istniejących zasad.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -34,49 +37,52 @@ Zasady ochrony aplikacji można stosować do aplikacji działających na urządz
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
-1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Zasady ochrony aplikacji**.
+1.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. 
+2. Wybierz pozycję **Dodaj zasady**. 
 
-2.  Spowoduje to otwarcie bloku **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. Wybierz pozycję **Dodaj zasady**.
+  ![Zrzut ekranu przedstawiający blok „Dodawanie zasad”](./media/app-protection-add-policy.png)
 
-  ![Zrzut ekranu przedstawiający blok Dodawanie zasad](./media/app-protection-add-policy.png)
+3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. W razie potrzeby dla każdej platformy można utworzyć większą liczbę zasad.
 
-3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy do utworzenia zasad dla systemu iOS lub Android. Dla każdej platformy można utworzyć większą liczbę zasad.
-
-4.  Wybierz pozycję **Aplikacje**, aby otworzyć **blok Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. Po wybraniu aplikacji wybierz opcję **Wybierz** w dolnej części bloku **Aplikacje**, aby zapisać wybrane opcje.
+4.  Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. 
+5. Po wybraniu aplikacji wybierz pozycję **Wybierz**, aby zapisać swoje opcje.
 
     > [!IMPORTANT]
     > W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
 
-5.  W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć blok ustawień zasad.
+6.  Wybierz pozycję **Skonfiguruj wymagane ustawienia** w bloku **Dodawanie zasad**, aby otworzyć obszar **Ustawienia**.
 
-    Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady przeniesienia danych stosują się do przenoszenia danych do i z aplikacji, podczas gdy zasady dostępu określają metodę dostępu użytkownika końcowego do aplikacji w kontekście pracy.
+    Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady relokacji danych są stosowane w przypadku przenoszenia danych do i z aplikacji. Zasady dostępu określają, jak użytkownicy końcowi uzyskują dostęp do aplikacji w kontekście roboczym.
     Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy. Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
 
     > [!TIP]
-    > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy.  W przypadku gdy użytkownik końcowy używa aplikacji do wykonywania zadań osobistych, zasady te nie obowiązują.
+    > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują.
 
+7.  Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w okienku **Dodawanie zasad**. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
+8. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**. 
+9. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
-
-6.  Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad** . Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
-
-
-Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz następującą sekcję: „Wdrażanie zasad dla użytkowników”.
+Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz [Wdrażanie zasad dla użytkowników](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Wdrażanie zasad dla użytkowników
 
-1.  W bloku **Zasady** wybierz pozycję **Grupy użytkowników**, co spowoduje otwarcie bloku **Grupy użytkowników**. Wybierz pozycję **Dodaj grupę użytkowników** w bloku **Grupy użytkowników**, aby otworzyć blok **Dodawanie grupy użytkowników**.
 
-  ![Zrzut ekranu przedstawiający blok Grupy użytkowników z podświetloną opcją menu Dodaj grupę użytkowników](./media/app-protection-policy-add-users.png)
+1. W okienku **Zasady ochrony aplikacji** wybierz zasady.
 
-2.  W bloku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
-  ![Zrzut ekranu przedstawiający blok Dodaj grupę użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
+1. W okienku **Zasady** wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka **Intune App Protection — przypisania**. Wybierz pozycję **Wybierz grupy do uwzględnienia** w okienku **Przypisania**, aby otworzyć okienko **Wybieranie grup do uwzględnienia**.
+
+   ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
+
+2.  W okienku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
+  
+    ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
 
 Zasady zostały utworzone i wdrożone dla użytkowników.
 
-Zasady wpływają tylko na użytkowników, którym przypisano licencje usługi Microsoft Intune. Zasady nie wpływają na użytkowników należących do wybranej grupy zabezpieczeń, którym nie przypisano licencji usługi Microsoft Intune.
+Zasady wpływają tylko na użytkowników z przypisanymi licencjami usługi Microsoft Intune. Nie mają one wpływu na użytkowników w wybranej grupie zabezpieczeń, którym nie przypisano licencji usługi Intune.
 
 >[!IMPORTANT]
-> Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami z systemami Android i iOS, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
+> Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 Użytkownicy końcowi mogą pobrać aplikacje ze sklepu App Store lub Google Play. Aby uzyskać więcej informacji, zobacz:
 * [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
@@ -89,34 +95,33 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 
 ### <a name="to-change-the-list-of-apps-associated-with-the-policy"></a>Aby zmienić listę aplikacji powiązanych z zasadami
 
-1.  W bloku **Zasady aplikacji** wybierz zasady, które chcesz zmienić. Spowoduje to otwarcie bloku specyficznego dla właśnie wybranych zasad.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z właśnie wybranymi zasadami.
 
-2.  W bloku zasad wybierz pozycję **Aplikacje docelowe**, aby otworzyć listę aplikacji.
+2.  W okienku zasad wybierz pozycję **Aplikacje docelowe**, aby otworzyć listę aplikacji.
 
 3.  Usuń lub dodaj aplikacje do listy i wybierz pozycję **Zapisz**, aby zapisać zmiany.
 
 ### <a name="to-change-the-list-of-user-groups"></a>Aby zmienić listę grup użytkowników
 
-1.  W bloku **Zasady aplikacji** wybierz zasady, które chcesz zmienić. Spowoduje to otwarcie bloku specyficznego dla wybranych zasad.
 
-2.  W bloku zasad wybierz pozycję **Grupy użytkowników**, aby otworzyć blok **Grupa użytkowników** z listą bieżących grup użytkowników, których dotyczą dane zasady.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z wybranymi zasadami.
 
-3.  Aby dodać nową grupę użytkowników do zasad, wybierz pozycję **Dodaj grupę użytkowników** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby wdrożyć zasady dla wybranej grupy.
+2.  W okienku zasad wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania** zawierające listę bieżących grup użytkowników, których dotyczą dane zasady.
 
-4.  Aby usunąć grupę użytkowników, wyróżnij grupę użytkowników, którą chcesz usunąć. Następnie kliknij przycisk wielokropka (...) i wybierz polecenie **Usuń**, aby usunąć grupę użytkowników.
-  ![Zrzut ekranu przedstawiający opcję Usuń ](./media/app-protection-policy-delete-user.png)
+3.  Aby dodać nową grupę użytkowników do zasad, na karcie **Uwzględnianie** wybierz pozycję **Wybierz grupy do uwzględnienia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby wdrożyć zasady dla wybranej grupy.
+
+4.  Aby usunąć grupę użytkowników, na karcie **Wykluczanie** wybierz pozycję **Wybierz grupy do wykluczenia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby usunąć grupę użytkowników.
 
 ### <a name="to-change-policy-settings"></a>Aby zmienić ustawienia zasad
 
-1.  W bloku **Zasady aplikacji** wybierz zasady, które chcesz zmienić. Spowoduje to otwarcie bloku specyficznego dla właśnie wybranych zasad.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z właśnie wybranymi zasadami.
 
-
-2.  Wybierz pozycję **Ustawienia zasad**, aby otworzyć blok **Ustawienia zasad**.
+2.  Wybierz pozycję **Ustawienia zasad**, aby otworzyć okienko **Ustawienia zasad**.
 
 3.  Zmień ustawienia i wybierz ikonę **Zapisz**, aby zapisać zmiany.
 
 ## <a name="policy-settings"></a>Ustawienia zasad
-Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących elementów:
+Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących linków:
 
 - [Zasady systemu iOS](app-protection-policy-settings-ios.md)
 - [Zasady systemu Android](app-protection-policy-settings-android.md)

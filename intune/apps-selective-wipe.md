@@ -1,12 +1,12 @@
 ---
 title: "Czyszczenie wyłącznie danych firmowych z aplikacji"
-titleSuffix: Azure portal
+titleSuffix: Microsoft Intune
 description: "Informacje dotyczące selektywnego czyszczenia aplikacji w usłudze Microsoft Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7a9690e75e0d0dced9ad30951b0178685813eeae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dfd1b37c1b944a545234b93b44d651ead8f0f486
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -39,21 +39,23 @@ Aby selektywnie usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia
 
 1.  Zaloguj się do [portalu Azure](https://portal.azure.com).
 
-2.  Wybierz pozycję **Więcej usług**, wpisz **Intune** w polu tekstowym filtru i wybierz pozycję **Usługa Intune**. Zostanie otwarty blok usługi Intune. Wybierz blok **Aplikacje mobilne**.
+2.  Wybierz pozycję **Więcej usług**, wpisz **Intune** w polu tekstowym filtru i wybierz pozycję **Usługa Intune**. Zostanie otwarty blok usługi Intune. Wybierz pozycję **Aplikacje mobilne**.
 
     ![Zrzut ekranu przedstawiający blok Microsoft Intune](./media/apps-selective-wipe01.png)
 
 3.  W bloku **Aplikacje mobilne** wybierz pozycję **Selektywne czyszczenie aplikacji**.
 
-4.  Wybierz pozycję **Nowe żądanie czyszczenia**. Zostanie otwarty blok **Nowe żądanie czyszczenia**.
+4.  Wybierz pozycję **Nowe żądanie czyszczenia**. Zostanie otwarte okienko **Nowe żądanie czyszczenia**.
 
-    ![Zrzut ekranu przedstawiający blok Nowe żądanie czyszczenia](./media/AzurePortal_MAM_NewWipeRequest.png)
+    ![Zrzut ekranu przedstawiający okienko Nowe żądanie czyszczenia](./media/AzurePortal_MAM_NewWipeRequest.png)
 
 5.  Wybierz pozycję **Użytkownik**, aby otworzyć blok **Użytkownik** i wybrać użytkownika, którego dane aplikacji chcesz wyczyścić.
 
-6.  Następnie wybierz pozycję **Urządzenie** z bloku **Nowe żądanie czyszczenia**. Spowoduje to otwarcie bloku **Wybieranie urządzenia**, który zawiera listę wszystkich urządzeń skojarzonych z wybranym użytkownikiem, a także dwie kolumny: nazwę urządzenia, którą jest przyjazna nazwa zdefiniowana przez użytkownika, oraz typ urządzenia, czyli jego platformę. Wybierz urządzenie, którego dane chcesz wyczyścić.
+6.  Następnie wybierz pozycję **Urządzenie** z bloku **Nowe żądanie czyszczenia**. To spowoduje otwarcie bloku **Wybierz urządzenie**. Znajduje się tam lista wszystkich urządzeń skojarzonych z wybranym użytkownikiem. Ponadto okienko zawiera nazwę urządzenia, czyli przyjazną nazwę skonfigurowaną przez użytkownika, oraz typ urządzenia, określający platformę tego urządzenia. 
 
-7.  Zostanie ponownie wyświetlony blok **Nowe żądanie czyszczenia**. Wybierz pozycję **OK**, aby wykonać żądanie czyszczenia.
+7. Wybierz z listy urządzenie, którego dane chcesz wyczyścić.
+
+8.  Zostanie ponownie wyświetlony blok **Nowe żądanie czyszczenia**. Wybierz pozycję **OK**, aby wykonać żądanie czyszczenia.
 
 Usługa tworzy i śledzi oddzielne żądanie czyszczenia dla każdej chronionej aplikacji na urządzeniu oraz użytkownika skojarzonego z żądaniem czyszczenia.
 
@@ -63,7 +65,7 @@ Można wygenerować sumaryczny raport informujący o ogólnym stanie żądania c
 
 1.  W bloku **Aplikacje mobilne — Selektywne czyszczenie aplikacji** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
 
-    ![Zrzut ekranu przedstawiający stan żądania czyszczenia w bloku Selektywne czyszczenie aplikacji](./media/wipe-request-status-1.png)
+    ![Zrzut ekranu przedstawiający stan żądania czyszczenia w okienku Selektywne czyszczenie aplikacji](./media/wipe-request-status-1.png)
 
 Ponadto można wyświetlić nazwę i typ urządzenia, co może być przydatne podczas odczytywania raportów.
 
@@ -72,13 +74,13 @@ Ponadto można wyświetlić nazwę i typ urządzenia, co może być przydatne po
 
 ## <a name="delete-a-wipe-request"></a>Usuwanie żądania czyszczenia
 
-Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usunięcia.  Aby ręcznie usunąć żądanie czyszczenia:
+Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usunięcia. Aby ręcznie usunąć żądanie czyszczenia:
 
-1.  W bloku **Aplikacje mobilne — Selektywne czyszczenie aplikacji**.
+1.  Otwórz blok **Aplikacje mobilne — Selektywne czyszczenie aplikacji**.
 
 2.  Na liście kliknij prawym przyciskiem myszy żądanie czyszczenia do usunięcia, a następnie wybierz pozycję **Usuń żądanie czyszczenia**.
 
-    ![Zrzut ekranu przedstawiający listę żądań czyszczenia w bloku Selektywne czyszczenie aplikacji](./media/delete-wipe-request.png)
+    ![Zrzut ekranu przedstawiający listę żądań czyszczenia w okienku Selektywne czyszczenie aplikacji](./media/delete-wipe-request.png)
 
 3.  Zostanie wyświetlony monit o potwierdzenie usunięcia. Wybierz przycisk **Tak** lub **Nie**, następnie kliknij przycisk **OK**.
 

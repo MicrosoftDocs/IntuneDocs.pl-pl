@@ -1,11 +1,11 @@
 ---
-title: "Rejestrowanie urządzeń z systemem macOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje o rejestrowaniu urządzeń z systemem macOS w usłudze Intune."
+title: "Konfigurowanie rejestracji dla urządzeń z systemem macOS"
+titlesuffix: Microsoft Intune
+description: "Informacje dotyczące rejestrowania urządzeń z systemem macOS w usłudze Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-nmanager: dougeby
+manager: dougeby
 ms.date: 10/30/2017
 ms.topic: article
 ms.prod: 
@@ -15,13 +15,13 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f896ebd51f989c0e441043d320247946cdb8997b
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 77a1551321079765f00f0e35d57211ae4c99e5a6
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="enroll-macos-devices-in-intune"></a>Rejestrowanie urządzeń z systemem macOS w usłudze Intune
+# <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -37,6 +37,13 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 - [Skonfigurowanie aplikacji Portal firmy](company-portal-app.md)
 - Przypisanie licencji użytkowników w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
+
+## <a name="user-owned-ios-devices-byod"></a>Urządzenia z systemem iOS należące do użytkownika (BYOD)
+
+Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Gdy ukończysz wymagania wstępne i przypiszesz użytkownikom licencje, użytkownicy muszą pobrać aplikację Portal firmy dla systemu macOS ze sklepu App Store i postępować zgodnie z instrukcjami w aplikacji dotyczącymi rejestrowania.
+
+## <a name="company-owned-ios-devices"></a>Urządzenia z systemem iOS należące do firmy
+W przypadku organizacji, które kupują urządzenia dla swoich użytkowników, usługa Intune obsługuje rejestrację urządzeń z systemem macOS należących do firmy przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
 ## <a name="set-up-macos-enrollment"></a>Konfigurowanie rejestracji urządzeń z systemem macOS
 

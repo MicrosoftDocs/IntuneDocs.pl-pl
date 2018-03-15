@@ -1,7 +1,7 @@
 ---
 title: "Konfigurowanie rejestrowania urządzeń z systemem iOS w programie Apple School Manager"
-titlesuffix: Azure portal
-description: "Informacje o sposobie konfigurowania rejestracji firmowych urządzeń z systemem iOS w programie Apple School Manager przy użyciu usługi Intune"
+titlesuffix: Microsoft Intune
+description: "Dowiedz się, jak skonfigurować rejestrację firmowych urządzeń z systemem iOS w programie Apple School Manager przy użyciu usługi Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,13 +15,13 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87e4c16fbb87ee83a01fe44a46c55c6243c8fc8a
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: f639a61c4d481a891156383c3a23e0e1511a5fbe
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
+# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,13 +32,13 @@ ms.lasthandoff: 02/09/2018
 >
 >Jeśli Twoja strona **Rejestracja urządzeń** wygląda jak obraz poniżej, Twoje konto nie zostało jeszcze zaktualizowane do nowego interfejsu użytkownika i można użyć tej strony pomocy.
 >
->![Stary interfejs użytkownika](./media/appleenroll-oldui.png)
+>![Stary interfejs użytkownika usługi Intune](./media/appleenroll-oldui.png)
 >
 >Jeśli Twoja strona **Rejestracja urządzeń** wygląda jak obraz poniżej, masz zaktualizowane interfejsy użytkownika.  Przejdź do [tej strony pomocy](apple-school-manager-set-up-ios-newui.md).
 >
->![Nowy interfejs użytkownika](./media/appleenroll-newui.png)
+>![Nowy interfejs użytkownika usługi Intune](./media/appleenroll-newui.png)
 
-W tym temacie przedstawiono informacje ułatwiające włączenie rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+W tym temacie przedstawiono informacje ułatwiające skonfigurowanie rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Aby włączyć rejestrację w programie Apple School Manager, należy użyć portalu usługi Intune i portalu programu Apple School Manager. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
@@ -61,7 +61,7 @@ Przed zarejestrowaniem firmowych urządzeń z systemem iOS w programie Apple Sch
 **Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu firmy Apple.**<br>
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia**, a następnie wybierz pozycję **Token programu Enrollment Program**.
 
-  ![Zrzut ekranu przedstawiający okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego.](./media/enrollment-program-token-download.png)
+  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
 
 2. W bloku **Token programu Enrollment Program** wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (pem). Plik .pem jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu Apple School Manager.
 
@@ -69,19 +69,19 @@ Przed zarejestrowaniem firmowych urządzeń z systemem iOS w programie Apple Sch
 1. Wybierz pozycję **Utwórz token za pomocą usługi Apple School Manager** i zaloguj się przy użyciu identyfikatora Apple ID swojej firmy. Tego identyfikatora Apple ID można także użyć do odnowienia tokenu programu Apple School Manager.
 2.  W [portalu Apple School Manager](https://school.apple.com) wybierz pozycję **MDM Servers** (Serwery MDM), a następnie wybierz **Add MDM Server** (Dodaj serwer MDM) (w prawym górnym rogu).
 3.  Wypełnij pole **MDM Server Name** (Nazwa serwera MDM). Nazwa serwera służy użytkownikowi do identyfikowania serwera MDM. Nie jest to nazwa ani adres URL serwera usługi Microsoft Intune.
-   ![Zrzut ekranu portalu programu Apple School Manager z wybraną opcją Serial Number (Numer seryjny)](./media/asm-server-assignment.png)
+   ![Portal programu Apple School Manager z wybraną opcją Serial Number (Numer seryjny)](./media/asm-server-assignment.png)
 
 4.  Wybierz pozycję **Upload File...** (Przekaż plik...) w portalu firmy Apple, przejdź do pliku pem, a następnie wybierz pozycję **Save MDM Server** (Zapisz serwer MDM) (w lewym dolnym rogu).
 5.  Wybierz opcję **Get Token** (Pobierz token), a następnie pobierz na komputer plik tokenu serwera (p7m).
 6. Przejdź do pozycji **Device Assignments** (Przypisania urządzeń) i **Choose Device** (Wybierz urządzenie). W tym celu wypełnij ręcznie pole **Serial Numbers** (Numery seryjne), **Order Number** (Numer zamówienia) lub **Upload CSV File** (Przekaż plik CSV).
-     ![Zrzut ekranu portalu programu Apple School Manager z wybraną opcją Serial Number (Numer seryjny)](./media/asm-device-assignment.png)
+     ![Portal programu Apple School Manager z wybraną opcją Serial Number (Numer seryjny)](./media/asm-device-assignment.png)
 7.  Wybierz akcję **Assign to Server** (Przypisz do serwera) i wybierz utworzony serwer MDM (**MDM Server**).
 8. Określ sposób **wyboru urządzeń**, a następnie podaj informacje i szczegóły dotyczące urządzenia.
 9. Wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz nazwę serwera &lt;nazwa_serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**.
 
 **Krok 3. Wprowadź identyfikator Apple ID użyty do utworzenia tokenu programu Apple School Manager.**<br>Tego identyfikatora należy użyć do odnowienia tokenu programu Apple School Manager. Jest on przechowywany do użytku w przyszłości.
 
-![Zrzut ekranu przedstawiający wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji.](./media/enrollment-program-token-apple-id.png)
+![Wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji](./media/enrollment-program-token-apple-id.png)
 
 **Krok 4. Zlokalizuj i przekaż token.**<br>
 Przejdź do pliku certyfikatu (.p7m) i wybierz pozycję **Otwórz**, a następnie wybierz pozycję **Przekaż**. Usługa Intune przeprowadzi automatyczną synchronizację urządzeń firmy Apple korzystających z programu Apple School Manager.
@@ -103,7 +103,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń 
 
 6. Wybierz pozycję **Ustawienia zarządzania urządzeniami**. Te pozycje są konfigurowane podczas aktywacji i do ich zmiany wymagane jest zresetowanie do ustawień fabrycznych. Skonfiguruj następujące ustawienia profilu, a następnie wybierz pozycję **Zapisz**:
 
-  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, zezwalanie na parowanie ustawione na odrzucanie wszystkiego. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
+  ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
 
     - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
 
@@ -151,10 +151,10 @@ Teraz, gdy do usługi Intune zostało przypisane uprawnienie do zarządzania urz
 
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Urządzenia programu Enrollment Program** > **Synchronizacja**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/enrollment-program-device-sync.png)
+  ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
 2. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Zrzut ekranu przedstawiający blok Synchronizuj i wybierany link Żądaj synchronizacji.](./media/enrollment-program-device-request-sync.png)
+  ![Blok Synchronizuj z wybranym linkiem Żądaj synchronizacji](./media/enrollment-program-device-request-sync.png)
 
   Aby spełnić warunki dopuszczalnego ruchu firmy Apple, usługa Intune nakłada następujące ograniczenia:
    -    Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune, niezależnie od tego, czy numer seryjny był już wcześniej synchronizowany. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
@@ -169,7 +169,7 @@ Przed zarejestrowaniem urządzeń korzystających z programu Apple School Manage
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Profile programu Enrollment Program**.
 2. Z listy **Profile programu Enrollment Program** wybierz profil, który ma zostać przypisany do urządzeń, a następnie wybierz pozycję **Przypisania urządzeń**.
 
- ![Zrzut ekranu z przypisaniami urządzeń z wybranym przyciskiem Przypisz.](./media/enrollment-program-device-assign.png)
+ ![Przypisania urządzeń z wybranym przyciskiem Przypisz.](./media/enrollment-program-device-assign.png)
 
 3. Wybierz pozycję **Przypisz**, a następnie wybierz urządzenia korzystające z programu Apple School Manager, do których chcesz przypisać ten profil. Możesz zastosować filtr, aby wyświetlić dostępne urządzenia:
   - **nieprzypisane**
@@ -177,7 +177,7 @@ Przed zarejestrowaniem urządzeń korzystających z programu Apple School Manage
   - **&lt;nazwa profilu&gt;**
 4. Wybierz urządzenia, które chcesz przypisać. Pole wyboru powyżej kolumny pozwala wybrać maksymalnie 1000 wyświetlanych urządzeń. Kliknij przycisk **Przypisz**. Aby zarejestrować więcej niż 1000 urządzeń, powtarzaj procedurę przypisania, aż profil rejestracji zostanie przypisany do wszystkich urządzeń.
 
-  ![Zrzut ekranu przedstawiający przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
+  ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Przekazywanie urządzeń użytkownikom
 

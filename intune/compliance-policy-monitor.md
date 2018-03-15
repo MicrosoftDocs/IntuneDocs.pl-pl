@@ -1,25 +1,23 @@
 ---
 title: "Monitorowanie zasad zgodności urządzeń Intune"
 titlesuffix: Azure portal
-description: "Informacje na temat monitorowania zasad zgodności urządzeń."
+description: "Informacje na temat monitorowania zasad zgodności urządzeń"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 03/10/2017
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f82293ee3803f189cbb67549b1a6cd653572eaaf
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 2f80d46e3e7c25c2b2e7a7c1af9604de1257a21e
+ms.sourcegitcommit: a55c009a2ab223f79dc7439539937b284aee0626
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -27,7 +25,7 @@ Raporty zgodności umożliwiają administratorom analizowanie stanu zgodności u
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Wykonaj poniższe kroki, aby znaleźć **pulpit nawigacyjny zgodności urządzeń Intune** w witrynie Azure Portal:
+Wykonaj następujące kroki, aby znaleźć **pulpit nawigacyjny zgodności urządzeń Intune** w witrynie Azure Portal:
 
 1.  Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
@@ -64,18 +62,18 @@ Jest to wykres pierścieniowy przedstawiający zagregowany stan zgodności dla w
 
     -   Dowiedz się więcej o akcjach dla niezgodnych urządzeń.
 
--   **Urządzenie nie jest zsynchronizowane**: urządzenie nie zgłosiło stanu zasady zgodności urządzenia z jednej z następujących przyczyn:
+-   **Urządzenie nie jest zsynchronizowane**: urządzenie nie zgłosiło stanu zasady zgodności urządzenia z jednej z przyczyn:
 
     -   **Nieznany**: urządzenie jest w trybie offline lub nie nawiązało łączności z usługą Intune lub Azure AD z innych przyczyn.
 
     -   **Błąd**: urządzenie nie skomunikowało się z usługą Intune i Azure AD i otrzymało komunikat o błędzie z podanym powodem.
 
 > [!IMPORTANT] 
-> Urządzenia, które są zarejestrowane w usłudze Intune, ale nie są objęte żadnymi zasadami zgodności urządzeń, zostaną uwzględnione w raporcie w obszarze **Zgodne**.
+> Urządzenia, które są zarejestrowane w usłudze Intune, ale nie są objęte żadnymi zasadami zgodności urządzeń, są uwzględnione w raporcie w obszarze **Zgodne**.
 
 #### <a name="drill-down-option"></a>Opcja przechodzenia do informacji szczegółowych
 
-Jeśli na **pulpicie nawigacyjnym zgodności urządzeń** klikniesz kafelek zgodności urządzenia, będzie można przejść do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte zasadami zgodności urządzeń.
+Jeśli na **pulpicie nawigacyjnym zgodności urządzeń** klikniesz kafelek zgodności urządzenia, możesz przejść do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte zasadami zgodności urządzeń.
 
 ![Przechodzenie do informacji szczegółowych na pulpicie nawigacyjnym zgodności urządzeń](./media/idc-2.png)
 
@@ -131,22 +129,33 @@ Po kliknięciu samego ustawienia zasad urządzenia zostanie wyświetlona nazwa z
 
 ![Nazwa ustawienia zgodności urządzenia](./media/idc-7.png)
 
-### <a name="per-policy-device-compliance-report"></a>Raport zgodności urządzeń wg zasady
+## <a name="policy-compliance-report"></a>Raport o zgodności z zasadami
 
 Ten raport zawiera widok wg zasady zgodności oraz łączną liczbę urządzeń znajdujących się w poszczególnych stanach zgodności. Kafelek **Zgodność z zasadami** jest dostępny na **pulpicie nawigacyjnym zgodności urządzenia** i zawiera wszystkie zasady wcześniej utworzone przez administratora, platformy, na których zasady są stosowane, liczbę zgodnych urządzeń oraz liczbę urządzeń niezgodnych.
 
 ![Raport zgodności urządzeń wg zasady](./media/idc-8.png)
 
-Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność z zasadami umożliwi przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
+Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność z zasadami umożliwia przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
 
 ![Kafelek Zgodność z zasadami](./media/idc-9.png)
 
-### <a name="per-setting-device-compliance-report"></a>Raport zgodności urządzeń wg ustawienia
+## <a name="setting-compliance-report"></a>Raport o zgodności ustawień
 
 Ten raport umożliwia zapoznanie się z łączną liczbą urządzeń znajdujących się w poszczególnych stanach zgodności dla każdego ustawienia zgodności. Kafelek **Zgodność ustawień** jest dostępny na **pulpicie nawigacyjnym zgodności urządzenia** i pokazuje wszystkie ustawienia zasad zgodności urządzeń dla wszystkich zasad zgodności urządzeń utworzonych przez administratora, platformy, na których zastosowano ustawienia zasad, oraz liczbę niezgodnych urządzeń.
 
 ![Raport zgodności urządzeń wg ustawienia](./media/idc-10.png)
 
-Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność ustawień umożliwi przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
+Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność ustawień umożliwia przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
 
 ![Kafelek Zgodność ustawień](./media/idc-11.png)
+
+## <a name="threat-agent-status-report"></a>Raport o stanie agenta zagrożeń
+
+Ten raport umożliwia wyświetlenie stanu i kondycji agenta programu Windows Defender. Za pomocą zbiorczego raportu stanu w obszarze **Zgodność urządzenia** można wyświetlić urządzenia, dla których trzeba wykonać jedną z następujących czynności:
+- Aktualizacja sygnatur
+- Uruchom ponownie
+- Ręczna interwencja
+- Pełne skanowanie
+- Inne stany agentów, które wymagają interwencji
+
+Raport szczegółowy dla każdej kategorii stanu zawiera listę poszczególnych komputerów osobistych, które wymagają uwagi, lub komputerów osobistych, których stan jest zgłaszany jako **Czysty**.

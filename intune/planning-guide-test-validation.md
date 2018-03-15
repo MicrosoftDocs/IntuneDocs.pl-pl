@@ -1,9 +1,10 @@
 ---
 title: "Testowanie i sprawdzanie poprawności usługi Intune"
-description: "Szczegółowe informacje, które należy wziąć pod uwagę podczas testowania i weryfikowania opartego tylko na chmurze usługi Intune w danym środowisku."
+titlesuffix: Microsoft Intune
+description: "Jak testować i weryfikować oparte tylko na chmurze rozwiązanie usługi Intune w danym środowisku."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -13,15 +14,15 @@ ms.technology:
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 8521ae12062ad73dfddb0f03aeac8c07ce65de58
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1346c0f5b0e1665e49e09fc566b9ff3da17fc17a
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="intune-testing-and-validation"></a>Testowanie i sprawdzanie poprawności usługi Intune
 
-Faza testowania występuje podczas i po fazie wdrożenia. Należy przetestować konta, grupy i urządzenia, aby sprawdzić wszystkie wymagane scenariusze administratora IT i użytkownika końcowego (przypadek użycia), które zostały wcześniej zidentyfikowane.
+Podczas testowania implementacji usługi Microsoft Intune uwzględnij weryfikację funkcjonalną i weryfikację przypadku użycia. Sprawdzanie poprawności funkcjonalnej polega na testowaniu poszczególnych składników i konfiguracji w celu ustalenia, czy działają one poprawnie. Weryfikacja przypadku użycia polega na sprawdzeniu, czy scenariusze obejmujące serię zadań działają zgodnie z oczekiwaniami. 
 
 Zalecamy uwzględnienie w fazie testowania pracowników wsparcia/pomocy technicznej w celu utworzenia dokumentacji z pomocą techniczną i ułatwienia pracownikom uzyskiwania wsparcia/pomocy technicznej dotyczącej obsługi produktu. Jeśli składnik lub scenariusz nie działa w oparciu o przypadki użycia, upewnij się, że udokumentowano niezbędne zmiany i podano przyczynę dokonanych zmian.
 

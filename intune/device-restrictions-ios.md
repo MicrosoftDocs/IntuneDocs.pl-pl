@@ -1,27 +1,26 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Intune"
-titleSuffix: Azure portal
+title: "Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune"
+titleSuffix: 
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 11/03/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b450becb45aea7ba5aa6ac2b6798e2062c08b4f2
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: bc53a7a6a4c961a649d01f23f30c59ff4dc90fe2
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
+# <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
+W tym artykule opisano wszystkie ustawienia ograniczeń urządzeń, które można skonfigurować dla urządzeń z systemem iOS.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -107,7 +106,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 - **Modyfikacja kodu dostępu (tylko nadzorowany)** — uniemożliwia zmianę, dodanie i usunięcie kodu dostępu.
     - **Modyfikacja odcisku palca (tylko nadzorowany)** — uniemożliwia zmianę, dodanie i usunięcie ustawień identyfikatora TouchID.
 
-<sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
+<sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekran wyłączy się automatycznie po 5 minutach, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
@@ -133,7 +132,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 -   **Game Center (tylko nadzorowany)** — blokuje lub umożliwia korzystanie z aplikacji Game Center.
 -   **Gry dla wielu graczy (tylko w trybie nadzorowanym)** — umożliwia użytkownikowi granie na urządzeniu w gry dla wielu graczy.
 -   **Region klasyfikacji** — wybierz region klasyfikacji, dla którego chcesz skonfigurować dozwolone pliki do pobrania, a następnie wybierz dozwoloną klasyfikację dla opcji **Filmy** i **Programy telewizyjne**.
--   **Aplikacje** — wybierz dozwoloną klasyfikację wiekową dla aplikacji, które użytkownicy będą mogli pobierać, lub wybierz opcję **Zezwalaj na wszystkie aplikacje**.
+-   **Aplikacje** — wybierz dozwoloną klasyfikację wiekową dla aplikacji, które użytkownicy mogą pobierać, lub wybierz opcję **Zezwalaj na wszystkie aplikacje**.
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
@@ -182,8 +181,8 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 
 Na liście Pokaż lub ukryj aplikacje możesz skonfigurować jedną z następujących list (wymagane są urządzenia nadzorowane z systemem iOS 9.3 lub nowszym).
 
-Lista **Ukryte aplikacje** — określ listę aplikacji, które będą ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
-Lista **Widoczne aplikacje** — określ listę aplikacji, które użytkownicy będą mogli wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
+Lista **Ukryte aplikacje** — określ listę aplikacji, które mają być ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
+Lista **Widoczne aplikacje** — określ listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i adres URL aplikacji w sklepie z aplikacjami.
 
@@ -240,7 +239,7 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 -   **Synchronizowanie dokumentów z usługą iCloud (tylko w trybie nadzorowanym)** — umożliwia synchronizowanie dokumentów i wartości kluczy w obszarze magazynu usługi iCloud.
 -   **Synchronizowanie strumienia zdjęć z usługą iCloud** — umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniach, co pozwala synchronizować zdjęcia z usługą iCloud i udostępniać je na wszystkich urządzeniach użytkownika.
 -   **Szyfrowana kopia zapasowa** — wymaga szyfrowania wszystkich kopii zapasowych urządzenia.
--   **Biblioteka zdjęć usługi iCloud** — wybór ustawienia **Nie** powoduje wyłączenie możliwości korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.    W przypadku ustawienia opcji **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, zostaną usunięte z urządzenia.
+-   **Biblioteka zdjęć usługi iCloud** — ustawienie wartości **Nie** powoduje wyłączenie możliwości korzystania z biblioteki zdjęć iCloud, która pozwala użytkownikom przechowywać zdjęcia i klipy wideo w chmurze.   W przypadku ustawienia wartości **Nie** wszelkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, są usuwane z urządzenia.
 -   **Zarządzane aplikacje są synchronizowane z chmurą** — zezwala aplikacjom zarządzanym za pomocą usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud.
 -   **Udostępniony strumień zdjęć** — wybór ustawienia **Nie** powoduje wyłączenie funkcji **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu.
 -   **Kontynuacja aktywności** — umożliwia użytkownikowi kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS (program Handoff).
@@ -251,7 +250,7 @@ Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruch
 
 ### <a name="settings"></a>Ustawienia
 
-- **Nazwa aplikacji** — wprowadź nazwę aplikacji, która będzie wyświetlana na liście aplikacji w tym bloku.
+- **Nazwa aplikacji** — wprowadź nazwę aplikacji wyświetlaną na liście aplikacji w tym bloku.
 - **Identyfikator pakietu aplikacji** — wprowadź identyfikator pakietu aplikacji. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w tym temacie.
 
 Po określeniu nazwy i identyfikatora pakietu każdej aplikacji wybierz pozycję **Dodaj**, aby dołączyć aplikację do listy.
@@ -308,7 +307,7 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 
 
 ## <a name="kiosk-supervised-only"></a>Kiosk (tylko nadzorowany)
--   **Aplikacja pracująca w trybie kiosku** — wybierz opcję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, lub wybierz opcję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
+-   **Aplikacja pracująca w trybie kiosku** — wybierz opcję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, lub wybierz opcję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
     -   **Dotyk wspomagający** — włącza lub wyłącza funkcję ułatwień dostępu **Dotyk wspomagający**, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.
     -   **Odwróć kolory** — włącza lub wyłącza funkcję ułatwień dostępu Odwróć kolory, która umożliwia dostosowanie wyświetlanego obrazu do potrzeb użytkowników niedowidzących.
     -   **Dźwięk mono** — włącza lub wyłącza ustawienie ułatwień dostępu Dźwięk mono.
@@ -343,12 +342,12 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 
 ### <a name="unmarked-email-domains"></a>Nieoznaczone domeny poczty e-mail
 
-W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż skonfigurowane, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
+W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż skonfigurowano, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
 
 
 ### <a name="managed-web-domains"></a>Zarządzane domeny sieci Web
 
-W polu **Adres URL domeny sieci Web** dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane ze wskazanych domen będą uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
+W polu **Adres URL domeny sieci Web** dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane ze wskazanych domen są uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
 
 ### <a name="safari-password-autofill-domains"></a>Domeny automatycznego wypełniania haseł w programie Safari

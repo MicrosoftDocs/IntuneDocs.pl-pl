@@ -1,12 +1,12 @@
 ---
-title: "Jak przypisać aplikacje do grup"
-titlesuffix: Azure portal
-description: "Po dodaniu aplikacji do usługi Intune należy przypisać ją do grup użytkowników lub urządzeń."
+title: "Jak przypisywać aplikacje do grup w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Po dodaniu aplikacji do usługi Microsoft Intune należy przypisać ją do grup użytkowników lub urządzeń."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc4732043153662ac83beac950d53246caff1b94
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 78a9e9f4af41cdb97efd017eec56e676eda82856
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
 
@@ -38,29 +38,30 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 |Przypisz aplikacje jako dostępne|Tak|Tak|
 |Przypisz aplikacje jako wymagane|Tak|Nie|
 |Odinstaluj aplikacje|Tak|Nie|
+|Otrzymuj aktualizacje aplikacji z usługi Intune|Tak|Nie|
 |Użytkownicy końcowi instalują dostępne aplikacje z aplikacji Portal firmy|Tak|Nie|
 |Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy|Tak|Tak|
 
 > [!NOTE]
-> Obecnie można przypisać aplikacje iOS i Android (zarówno biznesowe, jak i zakupione w sklepie) do urządzeń, które nie są zarejestrowane w usłudze Intune.
+> Obecnie można przypisać aplikacje iOS i Android (zarówno biznesowe, jak i zakupione w sklepie) do urządzeń, które nie są zarejestrowane w usłudze Intune.<br></br><br></br>
+> Aby otrzymywać aktualizacje aplikacji na urządzeniach, które nie są zarejestrowane w usłudze Intune, użytkownicy urządzeń muszą przejść do portalu swojej firmy i ręcznie zainstalować aktualizacje aplikacji.
 
 ## <a name="how-to-assign-an-app"></a>Jak przypisać aplikację
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
 2. W bloku listy aplikacji kliknij aplikację, którą chcesz przypisać.
-3. W bloku <*nazwa aplikacji*> — **Przegląd** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
-4. Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy Azure AD, do których chcesz przypisać aplikację.
+3. W bloku **Przegląd** wybierz pozycję **Zarządzaj** > **Przypisania**.
+4. Wybierz pozycję **Dodaj grupę**, a następnie w bloku **Dodawanie grupy** wybierz grupy usługi Azure AD, które mają zostać uwzględnione w przypisywaniu aplikacji lub z niego wykluczone.
 5. Dla każdej wybranej aplikacji wybierz **typ przypisania** dla aplikacji:
-    - **Dostępne** — użytkownicy instalują aplikację z aplikacji Portal firmy lub witryny sieci Web.
-    - **Nie dotyczy** — aplikacja nie jest instalowana ani wyświetlana w Portalu firmy.
+    - **Dostępne dla zarejestrowanych urządzeń** — użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
+    - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune.
     - **Wymagane** — aplikacja jest instalowana na urządzeniach w wybranych grupach.
     - **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
-    - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune.
 6. **Tylko dla aplikacji systemu iOS** — jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można go wybrać w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
-6. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
+6. Gdy wszystko będzie gotowe, wybierz przycisk **OK**, a następnie wybierz przycisk **Zapisz**.
 
 Aplikacja jest teraz przypisana do wybranych grup.
 

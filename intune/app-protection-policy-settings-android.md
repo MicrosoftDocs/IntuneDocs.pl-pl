@@ -1,12 +1,12 @@
 ---
 title: Ustawienia zasad ochrony aplikacji dla systemu Android
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 10c09b4669371fbb61ad4d30f44fcaf5e2db3482
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu Android
-Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
+W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
 Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym temacie termin *aplikacje zarządzane przez zasady* dotyczy aplikacji konfigurowanych przy użyciu zasad ochrony aplikacji.
 
 ##  <a name="data-relocation-settings"></a>Ustawienia relokacji danych
@@ -30,7 +30,7 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
 | Ustawienie | Sposób użycia | Wartości domyślne |
 |------|------|------|
 | **Blokuj kopie zapasowe systemu Android** | Wybierz opcję **Tak**, aby uniemożliwić tej aplikacji tworzenie kopii zapasowych danych służbowych w [usłudze kopii zapasowych systemu Android](https://developer.android.com/google/backup/index.html). Wybierz opcję **Nie**, aby umożliwić tej aplikacji tworzenie kopii zapasowych danych służbowych.| Tak |
-| **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych do wszystkich aplikacji. </li> <li>**Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych. Sekcja [Wyjątki w transferze danych](#Data-transfer-exemptions) zawiera pełną listę aplikacji i usług.<p>**Uwaga:** usługa Intune nie obsługuje obecnie funkcji Android Instant Apps. Usługa Intune zablokuje wszelkie połączenia danych do i z aplikacji.  Zobacz dokumentację dewelopera systemu Android, aby uzyskać więcej informacji o rozwiązaniu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Wszystkie aplikacje |
+| **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych do wszystkich aplikacji. </li> <li>**Brak**: nie zezwalaj na przesyłanie danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może domyślnie zezwolić na przesyłanie danych. Ponadto możesz utworzyć własne wyjątki, jeśli musisz zezwolić na przesyłanie danych do aplikacji, która nie obsługuje zasad ochrony aplikacji usługi Intune. Zobacz [Wyjątki w transferze danych](#Data-transfer-exemptions), aby uzyskać więcej informacji.<p>**Uwaga:** usługa Intune nie obsługuje obecnie funkcji Android Instant Apps. Usługa Intune zablokuje wszelkie połączenia danych do i z aplikacji.  Zobacz dokumentację dewelopera systemu Android, aby uzyskać więcej informacji o rozwiązaniu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Wszystkie aplikacje |
 | **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** | Określ, jakie aplikacje mogą przesyłać dane do tej aplikacji: <ul><li>**Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko z innych aplikacji zarządzanych przez zasady.</li><li>**Wszystkie aplikacje**: zezwalaj na przesyłanie danych z wszystkich aplikacji.</li><li>**Brak**: nie zezwalaj na przesyłanie danych z żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady. </li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych z tych aplikacji i usług. Sekcja [Wyjątki w transferze danych](#Data-transfer-exemptions) zawiera pełną listę aplikacji i usług. | Wszystkie aplikacje |
 | **Nie zezwalaj na używanie polecenia „Zapisz jako”** | Wybierz opcję **Tak**, aby wyłączyć używanie opcji Zapisz jako w tej aplikacji. Wybierz opcję **Nie**, jeśli chcesz zezwolić na używanie polecenia Zapisz jako. <p><br>**Wybierz, w których usługach magazynu można zapisywać dane firmowe** <br>Użytkownicy będą mogli zapisywać dane w wybranych usługach (OneDrive dla Firm, SharePoint i Magazyn lokalny). Wszystkie pozostałe usługi będą zablokowane.</p> | Nie <br><br> Wybrano 0 |
 | **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach** | Określ, kiedy można używać akcji wycinania, kopiowania i wklejania w tej aplikacji. Wybierz spośród opcji: <ul><li>**Zablokowane**: nie zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i dowolną inną aplikacją.</li><li>**Aplikacje zarządzane przez zasady**: zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady.</li><li>**Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych z dowolnych aplikacji.</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji. | Dowolna aplikacja |
@@ -73,7 +73,7 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
   | com.android.providers.media | Dostawca zawartości multimedialnej systemu Android | Dostawca zawartości multimedialnej jest dozwolony tylko w przypadku akcji wybierania dzwonka. |
   | com.google.android.gms; com.google.android.gsf | Pakiety usług Google Play | Ta pakiety są dozwolone tylko w przypadku akcji usługi Google Cloud Messaging takich jak powiadomienia wypychane. |
 
-
+Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych dla aplikacji](app-protection-policies-exception.md). 
 
 ##  <a name="access-settings"></a>Ustawienia dostępu
 

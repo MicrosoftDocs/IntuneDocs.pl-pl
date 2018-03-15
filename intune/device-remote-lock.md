@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ecd7fa03b35e91b5a77906858fb251348796704d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 0a8f3c93507cde4363570a9a39f8b3b1f69c07df
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="remotely-lock-managed-devices-with-intune"></a>Zdalne blokowanie urządzeń zarządzanych przy użyciu usługi Intune
 
@@ -36,7 +36,7 @@ Zdalne blokowanie jest obsługiwane na następujących platformach:
 |Android|Tak|
 |iOS|Tak|
 |macOS|Tak|
-|Windows 10|Tak|
+|Windows 10 Desktop|Nie|
 |Windows 10 Mobile|Tak|
 |Windows Phone|Tak, w przypadku systemu Windows Phone 8.1 i nowszych|
 
@@ -45,12 +45,12 @@ Zdalne blokowanie jest obsługiwane na następujących platformach:
 
 ## <a name="how-to-remote-lock-a-device"></a>Jak zdalnie zablokować urządzenie
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 5. Z listy zarządzanych urządzeń wybierz urządzenie, a następnie wybierz akcję zdalną **Zdalne blokowanie** urządzenia.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby wyświetlić stan akcji, należy w bloku **Urządzenia i grupy** wybrać pozycję **Akcje urządzenia**.
+Aby wyświetlić stan akcji, należy w bloku **Urządzenia** wybrać pozycję **Akcje urządzenia**.

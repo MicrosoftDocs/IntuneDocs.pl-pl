@@ -1,10 +1,10 @@
 ---
 title: "Monitorowanie zgodności urządzenia"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Informacje dotyczące monitorowania zgodności urządzenia."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
@@ -15,32 +15,32 @@ ms.assetid: 0790934b-48b9-435b-a8aa-e83ed5b73191
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9cd8bb0486164dd9dfe020261da9079ea5a68633
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 708ed5a335d3475c213a536da9072afb1ad32ef9
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="how-to-monitor-device-compliance-in-intune"></a>Monitorowanie zgodności urządzenia w usłudze Intune
+# <a name="monitor-device-compliance-in-intune"></a>Monitorowanie zgodności urządzenia w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 W bloku **Przegląd** możesz wyświetlić podsumowanie stanu **profilów zgodności**.
-Po kliknięciu poszczególnych wykresów możesz uzyskać dostęp do szczegółowych informacji. W przypadku skonfigurowania wielu profilów zgodności możesz także wyświetlić stan każdej zasady, przechodząc do bloku zasady, a następnie wybierając pozycję **Raporty** w sekcji **Zarządzaj**.  Poniżej przedstawiono szczegółowe informacje o dostępnych raportach.
+Po kliknięciu poszczególnych wykresów możesz uzyskać dostęp do szczegółowych informacji. Jeśli skonfigurowano wiele profilów zgodności, stan zasad można wyświetlić w bloku zasad w obszarze **Zarządzaj** > **Raporty**.
 
 ##  <a name="device-compliance"></a>Zgodność urządzeń
 
-Widok zbiorczy raportu zgodności urządzeń rozpoczyna się od prezentacji zagregowanych informacji o liczbie urządzeń przesyłających raporty i przynależnych do jednej z kategorii:
+Widok zbiorczy raportu zgodności urządzeń zawiera listę zagregowanych informacji o liczbie urządzeń przesyłających raporty w jednym z następujących stanów:
 
-- **Zgodne**: urządzenie zostało niedawno poddane ocenie pod kątem zgodności i uznane za zgodne z ustawieniami wybranego profilu zgodności.
+- **Zgodne**: urządzenie zostało niedawno poddane ocenie i jest zgodne z określonymi ustawieniami profilu zgodności.
 - **Niezgodne**: urządzenie zostało poddane ocenie i uznane za niezgodne.  Jeśli dla profilu skonfigurowano okres prolongaty, upłynął on, co spowodowało przełączenie urządzenia w stan niezgodności.
-- **Okres prolongaty**: urządzenie zostało poddane ocenie i uznane za niezgodne. Jednak przed faktycznym oznaczeniem urządzenia jako niezgodnego musi upłynąć okres prolongaty.
+- **Okres prolongaty**: urządzenie zostało poddane ocenie i uznane za niezgodne. Jednak przed oznaczeniem urządzenia jako niezgodnego musi upłynąć okres prolongaty.
 
 Przechodząc do poszczególnych sekcji, możesz uzyskać szczegółowe informacje o konkretnych urządzeniach i użytkownikach.
 
 ## <a name="setting-compliance"></a>Zgodność ustawienia
 
-Raport zgodności ustawienia zawiera szczegóły poszczególnych zgodnych ustawień, takie jak:
+Raport zgodności ustawienia zawiera szczegóły każdego ustawienia zgodności, takie jak:
 
 - Liczba urządzeń, które są niezgodne z ustawieniem.
 - Platforma, do której ustawienie ma zastosowanie.

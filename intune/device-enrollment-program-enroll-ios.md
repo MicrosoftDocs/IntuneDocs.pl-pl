@@ -1,6 +1,6 @@
 ---
-title: "Rejestrowanie urządzeń z systemem iOS — program Device Enrollment Program"
-titlesuffix: Azure portal
+title: "Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program"
+titlesuffix: Microsoft Intune
 description: "Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Device Enrollment Program."
 keywords: 
 author: ErikjeMS
@@ -15,13 +15,13 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b56907217b45ddb2bfe869f23abc34c0508bdbd7
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 8e770c39a22b620bb642b7b15a456369bb4acec2
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
+# <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program firmy Apple
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 02/09/2018
 >
 >Jeśli Twoja strona **Rejestracja urządzeń** wygląda jak obraz poniżej, Twoje konto nie zostało jeszcze zaktualizowane do nowego interfejsu użytkownika i można użyć tej strony pomocy.
 >
->![Stary interfejs użytkownika](./media/appleenroll-oldui.png)
+>![Stary interfejs użytkownika usługi Intune](./media/appleenroll-oldui.png)
 >
 >Jeśli Twoja strona **Rejestracja urządzeń** wygląda jak obraz poniżej, masz zaktualizowane interfejsy użytkownika.  Przejdź do [tej strony pomocy](device-enrollment-program-enroll-ios-newui.md).
 >
->![Nowy interfejs użytkownika](./media/appleenroll-newui.png)
+>![Nowy interfejs użytkownika usługi Intune](./media/appleenroll-newui.png)
 
 W tym temacie przedstawiono informacje przydatne podczas włączania rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Rejestrację w ramach programu DEP można włączyć dla dużej liczby urządzeń bez konieczności używania ich. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
@@ -76,11 +76,11 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Token programu Enrollment Program**.
 
-  ![Zrzut ekranu przedstawiający okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple.](./media/enrollment-program-token-add.png)
+  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple](./media/enrollment-program-token-add.png)
 
 2. Wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (PEM). Plik PEM jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu programu Device Enrollment Program firmy Apple.
 
-  ![Zrzut ekranu przedstawiający okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego.](./media/enrollment-program-token-download.png)
+  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
 
 **Krok 2. Utwórz i pobierz token DEP firmy Apple.**<br>
 1. Wybierz pozycję **Utwórz token za pomocą programu Device Enrollment Program firmy Apple**, aby otworzyć portal programu wdrażania firmy Apple i zalogować się przy użyciu firmowego identyfikatora Apple ID. Tego identyfikatora firmy Apple możesz użyć do odnowienia tokenu DEP.
@@ -89,29 +89,25 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 3. Na stronie **Manage Servers** (Zarządzanie serwerami) wybierz pozycję **Add MDM Server** (Dodaj serwer MDM).
 4. Wprowadź nazwę serwera w polu **MDM Server Name** (Nazwa serwera MDM), a następnie wybierz przycisk **Next**(Dalej). Nazwa serwera służy użytkownikowi do identyfikowania serwera MDM. Nie jest to nazwa ani adres URL serwera usługi Microsoft Intune.
 
-   ![Zrzut ekranu przedstawiający dodawanie nazwy serwera MDM dla programu DEP, a następnie klikanie przycisku Next (Dalej).](./media/enrollment-program-token-add-server.png)
+   ![Dodawanie nazwy serwera MDM dla programu DEP, a następnie klikanie przycisku Next (Dalej)](./media/enrollment-program-token-add-server.png)
 
 5. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Kliknij pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).  
-<<<<<<< HEAD
 
-=======
->>>>>>> e19b417f8bc134dc5a5a9f60354f017ccc42fd88
-
-7. Wybierz kolejno pozycje **Deployment Programs** (Programy wdrażania)&gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzaj urządzeniami).
-8. W obszarze **Choose Devices By** (Sposób wybierania urządzeń) określ sposób identyfikowania urządzeń:
+6. Wybierz kolejno pozycje **Deployment Programs** (Programy wdrażania)&gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzaj urządzeniami).
+7. W obszarze **Choose Devices By** (Sposób wybierania urządzeń) określ sposób identyfikowania urządzeń:
     - **Serial Number** (Numer seryjny)
     - **Order Number** (Numer zamówienia)
     - **Upload CSV File** (Przekaż plik CSV).
 
-   ![Zrzut ekranu przedstawiający wybraną opcję wybierania urządzeń według numerów seryjnych, akcję po wybraniu ustawioną jako przypisywanie do serwera oraz wybraną nazwę serwera.](./media/enrollment-program-token-specify-serial.png)
+   ![Określanie opcji wybierania urządzeń według numerów seryjnych, ustawianie akcji wybierania jako Assign to server (Przypisz do serwera) i wybieranie nazwy serwera](./media/enrollment-program-token-specify-serial.png)
 
-9. W kroku **Choose Action** (Wybierz akcję) wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz &lt;nazwę serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**. Portal firmy Apple przypisze wskazane urządzenia do funkcji zarządzania na serwerze Intune, a następnie wyświetli komunikat **Assignment Complete** (Przypisanie zostało ukończone).
+8. W kroku **Choose Action** (Wybierz akcję) wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz &lt;nazwę serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**. Portal firmy Apple przypisze wskazane urządzenia do funkcji zarządzania na serwerze Intune, a następnie wyświetli komunikat **Assignment Complete** (Przypisanie zostało ukończone).
 
    W portalu firmy Apple wybierz pozycję **Deployment Programs** (Programy wdrażania) &gt; **Device Enrollment Program** &gt; **View Assignment History** (Wyświetl historię przypisania), aby wyświetlić listę urządzeń i ich przypisania do serwera MDM.
 
 **Krok 3. Wprowadź identyfikator Apple ID użyty do utworzenia tokenu programu rejestracji.**<br>W usłudze Intune w witrynie Azure Portal podaj identyfikator Apple ID do użytku w przyszłości.
 
-![Zrzut ekranu przedstawiający wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji.](./media/enrollment-program-token-apple-id.png)
+![Wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji](./media/enrollment-program-token-apple-id.png)
 
 **Krok 4. Przechodzenie do tokenu programu rejestracji w celu jego przekazania.**<br>
 Przejdź do pliku certyfikatu (.pem) i wybierz pozycję **Otwórz**, a następnie wybierz pozycję **Przekaż**. Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune automatycznie synchronizuje dane z firmą Apple, co pozwala wyświetlić konto programu rejestracji.
@@ -132,7 +128,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
 4. Wybierz pozycję **Ustawienia zarządzania urządzeniami**, aby skonfigurować następujące ustawienia profilu:
 
-  ![Zrzut ekranu przedstawiający wybór trybu zarządzania. Urządzenie ma następujące ustawienia: nadzorowane, zablokowana rejestracja, zezwalanie na parowanie ustawione na odrzucanie wszystkiego. Pozycja certyfikatów programu Apple Configurator jest wyszarzona dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-mode.png)
+  ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
   - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
 
  > [!NOTE]
@@ -150,7 +146,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
 5. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu:
 
-  ![Zrzut ekranu przedstawiający wybór ustawień konfiguracji z dostępnymi ustawieniami dla nowego profilu rejestracji programu.](./media/enrollment-program-profile-settings.png)
+  ![Wybieranie ustawień konfiguracji z dostępnymi ustawieniami dla nowego profilu rejestracji programu](./media/enrollment-program-profile-settings.png)
   - **Nazwa działu** — jest wyświetlana, gdy użytkownik dotknie pozycji **Informacje o konfiguracji** podczas aktywacji.
 
   - **Telefon działu** — jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk **Potrzebna pomoc**.
@@ -175,11 +171,11 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
 
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Urządzenia programu Enrollment Program** > **Synchronizacja**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/enrollment-program-device-sync.png)
+  ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
   
 2. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-   ![Zrzut ekranu przedstawiający blok Synchronizuj i wybierany link Żądaj synchronizacji.](./media/enrollment-program-device-request-sync.png)
+   ![Blok Synchronizuj z wybranym linkiem Żądaj synchronizacji](./media/enrollment-program-device-request-sync.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
      -  Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
@@ -197,7 +193,7 @@ Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil progr
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Profile programu Enrollment Program**.
 2. Z listy **Profile programu Enrollment Program** wybierz profil, który ma zostać przypisany do urządzeń, a następnie wybierz pozycję **Przypisz urządzenia**.
 
- ![Zrzut ekranu z przypisaniami urządzeń z wybranym przyciskiem Przypisz.](./media/enrollment-program-device-assign.png)
+ ![Przypisania urządzeń z wybraną pozycją Przypisz](./media/enrollment-program-device-assign.png)
 
 3. Wybierz przycisk **Przypisz**, a następnie wybierz urządzenia, do których chcesz przypisać ten profil. Możesz zastosować filtr, aby wyświetlić dostępne urządzenia:
   - **nieprzypisane**
@@ -205,7 +201,7 @@ Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil progr
   - **&lt;nazwa profilu&gt;**
 4. Wybierz urządzenia, które chcesz przypisać. Pole wyboru nad kolumną pozwala na wybranie z listy maksymalnie 1000 urządzeń. Po wybraniu urządzeń kliknij przycisk **Przypisz**. Aby zarejestrować więcej niż 1000 urządzeń, powtarzaj procedurę przypisania, aż profil rejestracji zostanie przypisany do wszystkich urządzeń.
 
-  ![Zrzut ekranu przedstawiający przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
+  ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 Włączono zarządzanie i synchronizację między danymi firmy Apple i usługą Intune oraz przypisano profil umożliwiający rejestrowanie urządzeń korzystających z programu DEP. Możesz teraz przekazać urządzenia użytkownikom. W przypadku urządzeń z koligacją użytkownika wymagane jest, aby poszczególni użytkownicy mieli przypisane licencje na korzystanie z usługi Intune. Urządzenia bez koligacji użytkownika wymagają licencji urządzenia. Aktywowane urządzenie nie może stosować profilu rejestracji, dopóki urządzenie nie zostanie zresetowane do ustawień fabrycznych.

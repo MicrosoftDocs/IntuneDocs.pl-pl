@@ -1,7 +1,7 @@
 ---
-title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
-titlesuffix: Azure portal
-description: "Ograniczanie rejestrowania według platformy i ustawianie limitu rejestracji urządzeń w usłudze Intune. \""
+title: "Ustawianie ograniczeń rejestracji w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Ograniczanie rejestrowania według platformy i ustawianie limitu rejestracji urządzeń w usłudze Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,17 +15,17 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Jako administrator usługi Intune możesz utworzyć ograniczenia rejestracji i zarządzać nimi. Ograniczenia te definiują liczbę i rodzaje urządzeń, które mogą zarejestrować się do zarządzania przy użyciu usługi Intune. Możesz utworzyć wiele ograniczeń i zastosować je do różnych grup użytkowników. Możesz ustawić [priorytet](#change-enrollment-restriction-priority) dla różnych ograniczeń.
+Jako administrator usługi Intune możesz utworzyć ograniczenia rejestracji i zarządzać nimi. Te ograniczenia definiują liczbę i rodzaj urządzeń, które mogą rejestrować się do zarządzania przy użyciu usługi Intune. Możesz utworzyć wiele ograniczeń i zastosować je do różnych grup użytkowników. Możesz ustawić [priorytet](#change-enrollment-restriction-priority) dla różnych ograniczeń.
 
 >[!NOTE]
 >Ograniczenia rejestrowania nie są funkcjami zabezpieczeń. Urządzenia, na których złamano zabezpieczenia, mogą błędnie podawać swój charakter. Te ograniczenia stanowią optymalną barierę dla niezłośliwych użytkowników.
@@ -83,7 +83,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
   Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator.
 8. Określ opcję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
 
-    ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślnymi konfiguracjami platformy urządzeń i widocznymi skonfigurowanymi ustawieniami urządzeń będących własnością użytkownika.](media/device-restrictions-platform-configurations.png)
+    ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślną platformą urządzeń skonfigurowaną dla urządzeń będących własnością użytkownika](media/device-restrictions-platform-configurations.png)
 9. Kliknij polecenie **Zapisz**.
 
 >[!NOTE]
@@ -100,7 +100,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących limitu liczby urządzeń, w
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. W obszarze **Ograniczenia limitu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Wybierz opcję **Limit urządzeń**, a następnie na liście rozwijanej wybierz maksymalną liczbę urządzeń, które może zarejestrować użytkownik.
-    ![Zrzut ekranu przedstawiający blok ograniczeń dotyczących limitu liczby urządzeń z ograniczeniami limitu liczby urządzeń.](./media/device-restrictions-limit.png)
+    ![Zrzut ekranu bloku ograniczeń limitu urządzeń](./media/device-restrictions-limit.png)
 6. Kliknij polecenie **Zapisz**.
 
 Użytkownikowi końcowemu zostanie wyświetlone powiadomienie z informacją o terminie osiągnięcia limitu liczby zarejestrowanych urządzeń. Na przykład w systemie iOS to powiadomienie będzie wyglądać następująco:

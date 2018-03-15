@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7884682b765fe0df0ecb8b55b18f7a85ac4b2ec9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fcdd5e6fa844d4c475462cd0b2a4883f8ff9ba90
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="activate-lost-mode-on-ios-devices"></a>Aktywowanie trybu zgubienia na urządzeniach z systemem iOS
 
@@ -37,11 +37,11 @@ Akcja urządzenia **Tryb zgubienia** ułatwia włączenie trybu zgubienia na zgu
 
 ## <a name="how-to-activate-lost-mode"></a>Jak uaktywnić tryb zgubienia
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz akcję zdalną **Tryb zgubienia**.
+4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną **Tryb zgubienia**.
 6. W bloku **Tryb zgubienia** włącz tryb zgubienia. Następnie wprowadź komunikat, który ma być wyświetlany, i, opcjonalnie, numer telefonu do kontaktu.
 7. Kliknij przycisk **OK**.
 
@@ -57,5 +57,5 @@ Aby użyć trybu zgubienia, urządzenie musi być urządzeniem z systemem iOS na
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby wyświetlić stan akcji, należy w bloku **Urządzenia i grupy** wybrać pozycję **Akcje urządzenia**.
+Aby wyświetlić stan akcji, w bloku **Urządzenia** wybierz pozycję **Akcje urządzenia**.
 

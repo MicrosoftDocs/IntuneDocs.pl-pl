@@ -1,7 +1,7 @@
 ---
-title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji Android for Work po jej uruchomieniu."
+title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android"
+titlesuffix: Microsoft Intune
+description: "Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work przez użytkowników."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fbf1466b02da66e5c7d115d60aa43912322ebeb
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 206e229e95633ce553637bcedef708ee5630864c
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
@@ -30,8 +30,8 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 > [!Note]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz obciążenie **Aplikacje mobilne**.
 4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
@@ -41,7 +41,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
       — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Typ rejestracji urządzenia**  
       Wybierz pozycję **Urządzenia zarządzane**.
-6. Dla opcji **Platforma** wybierz pozycję **Android**.
+6. Wybierz pozycję **Android for Work** w obszarze **Platforma**.
 7. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
 8. Wybierz pozycję **Ustawienia konfiguracji**. Konfigurację możesz ustawić przy użyciu następujących narzędzi:
     - [projektant konfiguracji](#Use-the-configuration-designer)
@@ -77,14 +77,15 @@ Po uruchomieniu przypisanej aplikacji na urządzeniu uruchamiane są ustawienia 
 
 Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika. Na przykład jeśli aplikacja używa mikrofonu urządzenia, użytkownik otrzyma monit o przyznanie aplikacji uprawnienia do użycia mikrofonu.
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
-3. Wybierz pozycję **Mobile Apps**. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji** aplikacji, a następnie wybierz pozycję **Dodaj**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. Wybierz pozycję **Mobile Apps**.
+3. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji** aplikacji, a następnie wybierz pozycję **Dodaj**.
 4. Ustaw następujące szczegóły:
     - **Nazwa**. — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
     - **Opis**. — opis profilu, który będzie wyświetlany w witrynie Azure Portal
-    - **Platforma**. — wybierz opcję **Android**.
-    - **Typ rejestracji urządzenia**. Wstępnie wybrana wartość to **Urządzenia zarządzane**.
+    - **Typ rejestracji urządzenia**. Wybierz pozycję **Urządzenia zarządzane**.
+    - **Platforma**. Wybierz pozycję **Android for Work**.
 5. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
 6. Wybierz **Uprawnienia**, a następnie wybierz **Dodaj**.
 7. Wybierz odpowiednie opcje z listy dostępnych uprawnień aplikacji, a następnie wybierz pozycję **OK**.

@@ -1,12 +1,12 @@
 ---
-title: "Co to jest zarządzanie aplikacjami"
-titlesuffix: Azure portal
-description: "Z tego tematu nauczysz się podstaw zarządzania aplikacjami w usłudze Microsoft Intune"
+title: "Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Poznaj podstawy zarządzania aplikacjami w usłudze Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2018
+ms.date: 03/01/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00e6b9f05f967da9066639dbf1b25bc76a49541b
-ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
+ms.openlocfilehash: 9372a77a63f48c8215a02ccd784fb0a812f5a12f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -27,14 +27,14 @@ ms.lasthandoff: 02/13/2018
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Do Twoich obowiązków jako administratora IT należy zapewnienie użytkownikom końcowym dostępu do aplikacji, które są im niezbędne do pracy. Może to być trudne, ponieważ:
+Usługa Microsoft Intune umożliwia Ci, jako administratorowi IT, zarządzanie aplikacjami mobilnymi używanymi przez pracowników firmy. Ta funkcja jest dodatkiem do funkcji zarządzania urządzeniami oraz ochrony danych. W ramach tej funkcji jednym z priorytetów jest zapewnienie, że użytkownicy końcowi mają dostęp do aplikacji potrzebnych im do wykonywania pracy. Może to być trudne, ponieważ:
 - Istnieje szeroka gama platform urządzeń i typów aplikacji.
 - Konieczne może okazać się zarządzanie aplikacjami zarówno na urządzeniach firmowych, jak i na własnych urządzeniach użytkowników.
 - Musisz mieć pewność, że sieć i dane pozostaną bezpieczne.
 
 Dodatkowo możesz przypisywać aplikacje na urządzeniach niezarejestrowanych w usłudze Intune i zarządzać nimi.
 
-Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach.
+Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach. Poniższa tabela zawiera podsumowanie możliwości dotyczących zarządzania aplikacjami. Pod tabelą znajduje się punkt wyjścia do poznania usługi Microsoft Intune w witrynie Azure Portal. 
 
 ## <a name="app-management-capabilities-by-platform"></a>Możliwości zarządzania aplikacjami według platformy
 
@@ -64,8 +64,8 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 Większość elementów powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
@@ -115,3 +115,7 @@ Aby uzyskać więcej szczegółów, zobacz temat [Monitorowanie aplikacji](apps-
 ### <a name="help-and-support"></a>Pomoc i obsługa techniczna
 - **Pomoc i obsługa techniczna** — rozwiązywanie problemów, wnioskowanie o pomoc techniczną lub wyświetlanie stanu usługi Intune.
     - [Rozwiązywanie problemów](help-desk-operators.md)
+    
+## <a name="next-steps"></a>Następne kroki
+
+- [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md)

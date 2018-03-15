@@ -1,6 +1,6 @@
 ---
 title: "Zarządzanie dostępem do sieci Web za pomocą aplikacji Managed Browser"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Informacje o wdrażaniu aplikacji Managed Browser w celu ograniczenia przeglądania sieci Web i transferu danych sieci Web do innych aplikacji."
 keywords: 
 author: erikre
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 613099d1d30a8be3787bd0004a376302da3dc231
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3d902ada21c2cf864c3e21ef02b886d16162853c
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
@@ -63,17 +63,17 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 ## <a name="create-a-managed-browser-app-configuration"></a>Tworzenie konfiguracji aplikacji Managed Browser
 
-1.  Zaloguj się do portalu Azure Portal.
-2.  Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3.  W bloku **Aplikacje mobilne** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
 4.  W bloku **Zasady konfiguracji aplikacji** wybierz pozycję **Dodaj**.
-5.  W bloku **Dodaj konfigurację aplikacji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
+5.  W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
 6.  Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
 7.  Wybierz pozycję **Wybierz wymagane aplikacje**, a następnie przejdź do bloku **Docelowe aplikacje** i wybierz pozycję **Managed Browser** dla systemu iOS, Android lub dla obu tych systemów.
-8.  Wybierz pozycję **OK**, aby powrócić do bloku **Dodaj konfigurację aplikacji**.
+8.  Wybierz pozycję **OK**, aby powrócić do bloku **Dodaj zasady konfiguracji**.
 9.  Wybierz pozycję **Ustawienia konfiguracji**. W bloku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla programu Managed Browser. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
 10. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
-11. W bloku **Dodaj konfigurację aplikacji** wybierz pozycję **Utwórz**.
+11. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.
 12. Nowa konfiguracja zostanie utworzona i wyświetlona w bloku **Konfiguracja aplikacji**.
 
 >[!IMPORTANT]
@@ -83,10 +83,10 @@ Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [p
 
 Ustawienia są przypisywane do grup użytkowników usługi Azure AD. Jeśli dany użytkownik ma zainstalowaną aplikację Managed Browser, aplikacja jest zarządzana z uwzględnieniem określonych ustawień.
 
-1. Przejdź do bloku **Ustawienia** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune i wybierz pozycję **Konfiguracja aplikacji**.
+1. Przejdź do bloku **Aplikacje mobilne** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune i wybierz pozycję **Zasady konfiguracji aplikacji**.
 2. Z listy konfiguracji aplikacji wybierz tę, która ma zostać przypisana.
-3. W następnym bloku wybierz pozycję **Grupy użytkowników**.
-4. W bloku **Grupy użytkowników** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie wybierz **OK**.
+3. W następnym bloku wybierz pozycję **Przypisania**.
+4. W bloku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie wybierz przycisk **OK**.
 
 
 ## <a name="how-to-configure-application-proxy-settings-for-the-managed-browser"></a>Jak skonfigurować ustawienia serwera proxy aplikacji dla aplikacji Managed Browser

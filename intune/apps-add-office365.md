@@ -1,12 +1,12 @@
 ---
-title: "Instalowanie aplikacji usługi Office 365 na urządzeniach przenośnych przy użyciu usługi Intune"
-titlesuffix: Azure portal
-description: "Dowiedz się, jak przy użyciu usługi Intune można ułatwić instalowanie aplikacji usługi Office 365 na urządzeniach z systemem Windows 10."
+title: "Instalowanie aplikacji usługi Office 365 na urządzeniach przy użyciu usługi Microsoft Intune"
+titlesuffix: 
+description: "Dowiedz się, jak przy użyciu usługi Microsoft Intune można ułatwić instalowanie aplikacji usługi Office 365 na urządzeniach z systemem Windows 10."
 keywords: 
-author: dougeby
-ms.author: dougeby
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f6ef1d1dab39a6939b80bd13ba090424a67c6f53
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -85,11 +85,11 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
 1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
 2.  W bloku **Ustawienia pakietu aplikacji** skonfiguruj poniższe informacje:
     - **Wersja pakietu Office** — wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
-    - **Kanał aktualizacji** — wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące innych kanałów aktualizacji, zapoznaj się z omówieniem kanałów aktualizacji usługi Office 365 ProPlus. Wybierz spośród opcji:
-        - **Bieżący**
-        - **Odroczony**
-        - **Bieżący kanał pierwszego wydania**
-        - **Odroczony kanał pierwszego wydania**
+    - **Kanał aktualizacji** — wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące innych kanałów aktualizacji, zobacz [Omówienie kanałów aktualizacji usługi Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Wybierz spośród opcji:
+        - **Raz na miesiąc**
+        - **Raz na miesiąc (docelowy)**
+        - **Półroczny**
+        - **Półroczny (docelowy)**
     - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji** — wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
     - **Użyj aktywacji na komputerze udostępnionym** — aktywacja na komputerze udostępnionym jest używana w przypadku, gdy wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365 ProPlus.
     - **Języki** — pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.

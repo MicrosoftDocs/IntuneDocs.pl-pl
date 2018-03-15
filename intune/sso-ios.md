@@ -1,25 +1,25 @@
 ---
-title: "Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS"
-titlesuffix: Azure portal
-description: "Dowiedz się, jak konfigurować logowanie jednokrotne w usłudze Intune dla urządzeń z systemem iOS."
+title: "Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS"
+titlesuffix: 
+description: "Dowiedz się, jak konfigurować logowanie jednokrotne w usłudze Microsoft Intune dla urządzeń z systemem iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/7/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="configure-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS
+# <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -35,16 +35,16 @@ Aby skorzystać z logowania jednokrotnego dla urządzeń z systemem iOS, koniecz
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. W bloku **Konfiguracja urządzenia** wybierz pozycję **Profile**.
-3. W bloku profilów wybierz pozycję **Utwórz profil**, podaj nazwę i opis, a następnie skonfiguruj następujące ustawienia:
+3. Na stronie **Intune** wybierz opcję **Konfiguracja urządzeń**.
+2. Na stronie **Konfiguracja urządzeń** wybierz pozycję **Profile**.
+3. Na stronie profilów wybierz pozycję **Utwórz profil**, podaj nazwę i opis, a następnie skonfiguruj następujące ustawienia:
    - **Platforma**: wybierz pozycję **iOS**. 
    - **Typ profilu**: wybierz pozycję **Funkcje urządzenia**.
-4. W bloku **Funkcje urządzenia** wybierz pozycję **Logowanie jednokrotne**.
+4. Na stronie **Funkcje urządzenia** wybierz pozycję **Logowanie jednokrotne**.
 
-   ![Blok Logowanie jednokrotne](./media/sso-blade.png)
+   ![Strona Logowanie jednokrotne](./media/sso-blade.png)
 
-2. Skorzystaj z poniższej tabeli podsumowania, która ułatwia wypełnianie pól w bloku **Logowanie jednokrotne**. Więcej informacji zawierają sekcje pod tabelą.
+2. Skorzystaj z poniższej tabeli podsumowania, która ułatwia wypełnianie pól na stronie **Logowanie jednokrotne**. Więcej informacji zawierają sekcje pod tabelą.
    
    |Pole  |Uwagi|
    |---------|---------|
@@ -82,7 +82,7 @@ Na przykład gdy użytkownik nawiązuje połączenie z dowolną z tych witryn, u
 > [!NOTE]
 > Te adresy URL muszą być poprawnie sformatowanymi nazwami FQDN. Firma Apple wymaga, aby miały one postać `http://<yourURL.domain>`
 
-Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Wykonywane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 9.0 lub nowszych można jednak użyć pojedynczego symbolu wieloznacznego *, aby określić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
+Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Wykonywane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 9.0 lub nowszych można jednak użyć pojedynczego symbolu wieloznacznego \*, aby określić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
 Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adresami URL HTTP i HTTPS.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Aplikacje, które będą korzystały z logowania jednokrotnego

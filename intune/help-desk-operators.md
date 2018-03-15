@@ -1,12 +1,12 @@
 ---
-title: "Portal pomocy technicznej służący do rozwiązywania problemów | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników"
+title: "Portal pomocy technicznej służący do rozwiązywania problemów"
+titlesuffix: Microsoft Intune
+description: "Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/26/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 2da1a37af1ab0b0b1566738bf1ecdfe990dd760d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7997bf0494ff52ad25b09301173b65f2478dca37
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-the-troubleshooting-portal-to-help-users"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom
+# <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -63,7 +63,7 @@ Blok **Rozwiązywanie problemów** umożliwia przeglądanie informacji o użytko
 | 1.   | Stan konta  | Pokazuje stan bieżącej dzierżawy usługi Intune (**Aktywny** lub **Nieaktywny**).       |
 | 2.   | Wybrany użytkownik  | Nazwa obecnie wybranego użytkownika. Kliknij pozycję **Zmień użytkownika**, aby wybrać nowego użytkownika.       |
 | 3.   | Stan użytkownika  | Wyświetla stan licencji usługi Intune użytkownika, liczbę urządzeń, informacje o zgodności poszczególnych urządzeń, liczbę aplikacji i informacje o zgodności aplikacji.       |
-| 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w bloku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje mobilne<li>Zasady ochrony aplikacji<li>Zasady zgodności<li> Zasady konfiguracji</ul>      |
+| 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w bloku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje mobilne<li>Zasady ochrony aplikacji<li>Zasady zgodności<li> Zasady konfiguracji<li> Ograniczenia rejestracji</ul>      |
 | 5.   | Członkostwo w grupach  | Yadda       |
 
 ## <a name="mobile-apps-reference"></a>Odwołanie do aplikacji mobilnych

@@ -1,7 +1,7 @@
 ---
-title: Dzienniki zasad ochrony aplikacji
-titlesuffix: Azure portal
-description: "W tym temacie opisano rekord ustawień zasad ochrony aplikacji przechowywany w dziennikach aplikacji."
+title: "Przeglądanie dzienników zasad ochrony aplikacji"
+titlesuffix: Microsoft Intune
+description: "Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76b7771f974fb1c9a5de8afe52ef79eaa0ed0c2a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f91328561f0dd4dc669844c0398a89f1abf15bf8
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
-Dostęp do dzienników można uzyskać przez włączenie trybu diagnostycznego usługi Intune dla aplikacji na kliencie mobilnym. W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzienniku.
+Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji. Dostęp do dzienników jest uzyskiwany przez włączenie trybu diagnostycznego usługi Intune dla aplikacji na kliencie mobilnym. W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzienniku.
 
 ## <a name="app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji
 
