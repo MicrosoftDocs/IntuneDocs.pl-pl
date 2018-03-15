@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 62404f6ffede7a7f3f7150da1fde289f2ba9e64f
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: b56f7d7bcf576a0b2342c7c5394c08661b6a45fd
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -36,7 +36,7 @@ Z usługi Intune możesz usunąć urządzenia, które nie są już potrzebne, ma
 ### <a name="to-factory-reset-a-device"></a>Aby zresetować urządzenie do ustawień fabrycznych
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, które chcesz zresetować do ustawień fabrycznych.
 5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Resetowanie do ustawień fabrycznych**.
@@ -123,7 +123,7 @@ Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usu
 ### <a name="to-remove-company-data"></a>Aby usunąć dane firmy
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, z którego chcesz usunąć dane firmy.
 5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Usuń dane firmowe**, a następnie wybierz pozycję **Tak**, aby potwierdzić.

@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 62c12cde5ca128a26b10e0e4516e0bbf7e0f0bbb
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: c5ccb928b8ff3f9cebbd6f51d99cddd1f36fb074
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia ograniczeń dotyczących urządzeń w usłudze Microsoft Intune
 
@@ -36,7 +36,7 @@ Zapoznaj się z podstawowymi informacjami na temat profilów ograniczeń, a nast
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia ograniczeń dotyczących urządzeń
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Na stronie **Intune** wybierz opcję **Konfiguracja urządzeń**.
 2. Na stronie **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz opcję **Profile**.
 3. Na stronie **Profile** wybierz pozycję **Utwórz profil**.

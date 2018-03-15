@@ -14,11 +14,11 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c40fd13a46a61ec0ee05efba7ece7653f5de90ca
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e4e1febb5f12de038d2ddd543be883f71ef79005
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/05/2018
 
 2. W obszarze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzeń**, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
 
-3. Wprowadź następujące właściwości: 
+3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę nowego profilu
     - **Opis**: opcjonalny, ale zalecany. Wprowadź opis profilu.
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/05/2018
 
     ![Wprowadzanie ustawień w celu utworzenia profilu urządzenia](./media/create-device-profile.png)
 
-4. Po zakończeniu wybierz pozycję **Utwórz**. 
+4. Po zakończeniu wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [How to assign device profiles (Jak przypisywać profile urządzeń)](device-profile-assign.md).
 

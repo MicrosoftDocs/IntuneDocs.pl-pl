@@ -15,11 +15,11 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd92e787fd3c1abaa8b20ce1d75141b46ab17934
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c7ad60a27e32aaab49e77789364aecdc5ea7fc60
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -37,14 +37,14 @@ Zasady ochrony aplikacji można stosować do aplikacji działających na urządz
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
-1.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące. 
-2. Wybierz pozycję **Dodaj zasady**. 
+1.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
+2. Wybierz pozycję **Dodaj zasady**.
 
   ![Zrzut ekranu przedstawiający blok „Dodawanie zasad”](./media/app-protection-add-policy.png)
 
 3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. W razie potrzeby dla każdej platformy można utworzyć większą liczbę zasad.
 
-4.  Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. 
+4.  Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami.
 5. Po wybraniu aplikacji wybierz pozycję **Wybierz**, aby zapisać swoje opcje.
 
     > [!IMPORTANT]
@@ -59,7 +59,7 @@ Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z
     > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują.
 
 7.  Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w okienku **Dodawanie zasad**. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
-8. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**. 
+8. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**.
 9. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz [Wdrażanie zasad dla użytkowników](app-protection-policies.md#deploy-a-policy-to-users).
@@ -74,7 +74,7 @@ Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie s�
    ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
 
 2.  W okienku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
-  
+
     ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
 
 Zasady zostały utworzone i wdrożone dla użytkowników.
