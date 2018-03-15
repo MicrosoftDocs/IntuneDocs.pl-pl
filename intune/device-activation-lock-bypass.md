@@ -1,10 +1,10 @@
 ---
 title: "Obejście blokady aktywacji systemu iOS przy użyciu usługi Intune"
-titlesuffix: Azure portal
-description: "Informacje dotyczące użycia usługi Intune w celu obejścia blokady aktywacji systemu iOS, by uzyskać dostęp do zablokowanych urządzeń."
+titlesuffix: Microsoft Intune
+description: "Dowiedz się, jak za pomocą usługi Intune obejść blokadę aktywacji systemu iOS, by uzyskać dostęp do zablokowanych urządzeń."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 08/22/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15c288b31ab3fb31080aff72d2461dc1d24ec5ae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6141b325c5087544a1b78e03209322023f2374e3
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Obejście blokady aktywacji na nadzorowanych urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -69,11 +69,11 @@ Aby obejść blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć
 
 Akcja zdalna **Zastosuj obejście blokady aktywacji** dotycząca urządzenia w usłudze Intune powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz nadzorowane urządzenie z systemem iOS, a następnie wybierz akcję zdalną **Zastosuj obejście blokady aktywacji** dla urządzenia.
+4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+5. Z listy zarządzanych urządzeń wybierz nadzorowane urządzenie z systemem iOS, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną **Zastosuj obejście blokady aktywacji** dla urządzenia.
 
 ## <a name="next-steps"></a>Następne kroki
 

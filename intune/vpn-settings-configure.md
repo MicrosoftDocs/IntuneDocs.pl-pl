@@ -1,7 +1,7 @@
 ---
-title: "Jak konfigurować ustawienia sieci VPN w usłudze Intune"
-titleSuffix: Azure portal
-description: "Informacje dotyczące konfigurowania ustawień sieci VPN na zarządzanych urządzeniach przy użyciu usługi Intune."
+title: "Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune"
+titleSuffix: 
+description: "Dowiedz się, jak za pomocą usługi Microsoft Intune skonfigurować połączenia wirtualnej sieci prywatnej (VPN) na zarządzanych urządzeniach."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 772b7f025adc7ae80d0f14c5c630209c4c7529b2
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: feba7e7dc3e88d7d9beefc548c20bf19fbba662d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune
 
@@ -88,7 +88,7 @@ Profile sieci VPN mogą używać różnych typów połączeń i protokołów ró
 
 ### <a name="certificates"></a>Certyfikaty
 
-Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PKCS utworzony wcześniej w usłudze Intune. Jest on znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest przypisywany do komputera przeprowadzającego uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
+Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PKCS utworzony wcześniej w usłudze Intune. Ten profil jest znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest przypisywany do komputera przeprowadzającego uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
 
 Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [How to configure certificates with Microsoft Intune](certificates-configure.md) (Konfigurowanie certyfikatów przy użyciu usługi Microsoft Intune).
 

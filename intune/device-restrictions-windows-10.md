@@ -1,25 +1,26 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem Windows 10 w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Windows 10."
+title: "Ustawienia ograniczeń urządzenia z systemem Windows 10 w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Informacje na temat ustawień usługi Microsoft Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Windows 10."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 2/15/2018
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 128e16ad989293e168d2bb53d5974e479e09a000
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 861c971c98493f6adab78e6bc93d560bbc1d5243
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
+#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
+W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -30,11 +31,7 @@ ms.lasthandoff: 02/19/2018
    - To ustawienie zasad nie jest stosowane, jeśli komputer jest przyłączony do usługi Azure Active Directory i włączono automatyczne rejestrowanie. 
    - To ustawienie zasad nie ma zastosowania do komputerów z systemem Windows 10 Home.
 - **Ręczne instalowanie certyfikatu głównego (tylko dla urządzeń przenośnych)** — uniemożliwia użytkownikowi ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji.
-- **Przesyłanie danych diagnostycznych** — możliwe wartości to:
-    - **Brak** — do firmy Microsoft nie są wysyłane żadne dane.
-    - **Podstawowe** — ograniczone informacje są wysyłane do firmy Microsoft
-    - **Rozszerzone** — do firmy Microsoft są wysyłane rozszerzone dane diagnostyczne.
-    - **Pełne** — wysyłane są te same dane, co w przypadku wartości Rozszerzone, oraz dodatkowe dane dotyczące stanu urządzenia.
+
 - **Aparat fotograficzny** — umożliwia lub blokuje użycie aparatu fotograficznego urządzenia.
 - **Synchronizacja plików w usłudze OneDrive** — uniemożliwia synchronizowanie plików z urządzenia z usługą OneDrive.
 - **Magazyn wymienny** — określa, czy na urządzeniu można używać zewnętrznych urządzeń pamięci masowej, na przykład kart SD.
@@ -51,6 +48,7 @@ ms.lasthandoff: 02/19/2018
 - **Odnajdywanie urządzeń** — blokuje wykrywanie urządzenia przez inne urządzenia.
 - **Przełącznik zadań (tylko urządzenia przenośne)** — blokuje przełącznik zadań na urządzeniu.
 - **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)** — w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
+- **Obszar roboczy pisma odręcznego** — blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Jeśli to ustawienie nie zostanie skonfigurowane, obszar roboczy pisma odręcznego będzie dostępny (funkcja będzie włączona), a użytkownik będzie mógł używać jej na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie** — pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
 
 
@@ -75,6 +73,9 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
 -   **Personalizacja danych wejściowych** — nie zezwala na korzystanie z chmurowych usług przetwarzania mowy razem z aplikacją Cortana, funkcją dyktowania czy aplikacjami ze Sklepu Microsoft. Jeśli zezwolisz na te usługi, firma Microsoft może zbierać dane dotyczące głosu w celu usprawnienia świadczonej usługi.
 -   **Automatyczne akceptowanie w przypadku monitów o wyrażenie zgody przez użytkownika dotyczących parowania i prywatności** — zezwala systemowi Windows na automatyczne akceptowanie komunikatów dotyczących parowania i prywatności wyświetlanych w uruchamianych aplikacjach.
+- **Publikuj działania użytkownika**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań.
+- **Tylko działania lokalne**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych.
+
 
 Można zdefiniować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Można także zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
 
@@ -130,7 +131,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
 - **Powiadomienia centrum akcji (tylko dla urządzeń przenośnych)** — włącza powiadomienia z centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
-- **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie PNG, JPG lub JPEG, który będzie używany jako tapeta ekranu blokady systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
+- **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie JPEG, który będzie używany jako tapeta ekranu blokady systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
 -   **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)** — pozwala na ustawienie czasu przez użytkownika. 
 -   **Cortana na zablokowanym ekranie (tylko komputery stacjonarne)** — nie zezwala użytkownikowi na interakcję z funkcją Cortana, gdy jest wyświetlany ekran blokady (tylko system Windows 10 Desktop).
 -   **Wyskakujące powiadomienia na zablokowanym ekranie** — blokuje wyświetlanie alertów na ekranie blokady.
@@ -180,6 +181,8 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
 -   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Microsoft Edge do menu Start.
+-  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/ulubione.html.
+-  **Ograniczanie zmian ulubionych** — wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
 

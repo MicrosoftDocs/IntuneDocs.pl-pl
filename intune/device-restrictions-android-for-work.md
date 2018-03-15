@@ -1,30 +1,34 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Intune"
-titlesuffix: Azure portal
+title: "Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Microsoft Intune"
+titlesuffix: 
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji urządzeń z programem Android for Work."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/23/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7c69bb3984ae4ffa81aa81ae24cfe17663bc191
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d4d8089d7ae57c4bf95038e5f9dc88f4949f069e
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Microsoft Intune
+# <a name="microsoft-intune-android-for-work-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z programem Android for Work w usłudze Microsoft Intune
+
+W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z programem Android for Work.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Ustawienia profilu służbowego
+
+### <a name="general-settings"></a>Ustawienia ogólne
+
 -   **Kopiuj i wklejaj między profilem służbowym a osobistym** — steruje kopiowaniem i wklejaniem między aplikacjami służbowymi i prywatnymi. Wybierz pozycję **Blokuj**, aby włączyć blokowanie. Wybierz pozycję **Nieskonfigurowane**, aby wyłączyć blokowanie.
 - **Udostępnianie danych między profilami służbowym i osobistym** — użyj tego ustawienia, aby określić, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. To ustawienie określa akcje udostępniania w ramach aplikacji (na przykład opcję **Udostępnij…** w aplikacji Chrome) i nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. W odróżnieniu od [ustawień zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ustawienia ograniczeń urządzenia są zarządzane w portalu usługi Intune i używają partycji profilu służbowego programu Android for Work do izolowania zarządzanych aplikacji. Wybierz spośród opcji:
     - **Domyślne ograniczenia udostępniania** — to ustawienie określa domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji zainstalowanego systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Google nie umożliwia blokowania udostępniania z profilu osobistego w profilu służbowym na urządzeniach z systemem w wersji 6.0 lub nowszej.   
@@ -39,6 +43,12 @@ ms.lasthandoff: 01/25/2018
     -   **Automatyczne odmawiaj**
 
     Stan nadania uprawnień można dodatkowo zdefiniować dla określonych aplikacji, definiując zasady konfiguracji aplikacji dla poszczególnych aplikacji (w obszarze **Aplikacje mobilne** > **Zasady konfiguracji aplikacji**).
+
+- **Dodawanie i usuwanie kont**
+
+   Uniemożliwia użytkownikom końcowym ręczne dodawanie i usuwanie kont w profilu służbowym.
+
+   Na przykład w przypadku wdrożenia aplikacji Gmail w profilu programu Android for Work można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym.
 
 ### <a name="work-profile-password"></a>Hasło profilu służbowego
 - **Wymagaj hasła profilu służbowego** — (Android 7.0 i nowsze wersje z włączonym profilem służbowym) definiuje zasady kodu dostępu mające zastosowanie tylko do aplikacji w profilu służbowym. Domyślnie użytkownik końcowy może użyć dwóch różnych kodów PIN lub wybrać opcję połączenia ich w celu uzyskania kodu PIN o większej sile.
@@ -83,8 +93,8 @@ ms.lasthandoff: 01/25/2018
  - **Skanowanie aplikacji pod kątem zagrożeń** — wymuszaj włączenie ustawienia **Weryfikuj aplikacje** w profilach służbowych i osobistych.
 
    > [!Note]  
-   > To ustawienie będzie działać tylko w przypadku urządzeń z systemem Android O lub nowszym. 
+   > To ustawienie działa tylko w przypadku urządzeń z systemem Android O lub nowszym. 
 
 ## <a name="next-steps"></a>Następne kroki
 
-Skorzystaj z informacji w temacie [Jak skonfigurować ustawienia ograniczeń urządzeń](device-restrictions-configure.md), aby zapisać i przypisać profil do użytkowników i urządzeń.
+Skorzystaj z informacji w artykule [Jak skonfigurować ustawienia ograniczeń urządzeń](device-restrictions-configure.md), aby zapisać i przypisać profil do użytkowników i urządzeń.

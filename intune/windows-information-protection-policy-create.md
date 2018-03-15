@@ -3,10 +3,10 @@ title: "Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Informa
 titlesuffix: Azure portal
 description: "Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji WIP za pomocą usługi Intune"
 keywords: 
-author: arob98
-ms.author: angrobe
-manager: dougeby
-ms.date: 12/29/2017
+author: Erikre
+ms.author: erikre
+manager: doubeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 940c4bc17face7ecef2b6888e199ba47073659ba
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 647e6fd129593156f2ba24299a19e96686206165
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -47,9 +47,9 @@ Omówmy kilka założeń dotyczących dodawania zasad funkcji WIP.
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, musisz skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, musisz skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](app-protection-policies-configure-windows-10.md).
 
-Ponadto wymagane są następujące elementy:
+Ponadto wymagane są następujące licencje i aktualizacje:
 
 -   Licencja [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium).
 -   [Aktualizacja systemu Windows dla twórców](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
@@ -60,7 +60,7 @@ Ponadto wymagane są następujące elementy:
 
 ## <a name="to-add-a-wip-policy"></a>Aby dodać zasady funkcji WIP
 
-Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczące funkcji WIP za pośrednictwem witryny [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure docset?--->
+Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczące funkcji WIP za pośrednictwem witryny [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure doc set?--->
 
 1.  Przejdź do **pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune**, wybierz pozycję **Wszystkie ustawienia** > **Zasady aplikacji**.
 
@@ -80,7 +80,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 
 1.  W bloku **Zasady aplikacji** wybierz nazwę swoich zasad, a następnie wybierz pozycję **Dozwolone aplikacje** w bloku **Dodaj zasady**. Zostanie otwarty blok **Dozwolone aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
 
-2.  W bloku **Dozwolone aplikacje** wybierz pozycję **Dodaj aplikacje**. Zostanie otwarty blok **Dodaj aplikacje** zawierający wszystkie aplikacje należące do tej listy.
+2.  W bloku **Dozwolone aplikacje** wybierz pozycję **Dodaj aplikacje**. Informacje **Dodawanie aplikacji** zawierają wszystkie aplikacje, które są częścią tej listy.
 
 3.  Wybierz każdą aplikację, która ma uzyskiwać dostęp do danych firmowych, a następnie wybierz przycisk **OK**. Blok **Dozwolone aplikacje** zostanie zaktualizowany i będzie zawierać wszystkie wybrane aplikacje.
 
@@ -92,7 +92,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 
 2.  W bloku **Dozwolone aplikacje** wybierz pozycję **Dodaj aplikacje**.
 
-3.  W bloku **Dodaj aplikacje** z listy rozwijanej wybierz pozycję **Aplikacje ze Sklepu**. Blok zostanie zmieniony, aby udostępnić pola umożliwiające dodanie **wydawcy** oraz **nazwy** aplikacji.
+3.  W bloku **Dodaj aplikacje** z listy rozwijanej wybierz pozycję **Aplikacje ze Sklepu**. Informacje zostaną zmienione, aby udostępnić pola umożliwiające dodanie **wydawcy** oraz **nazwy** aplikacji.
 
 4.  Wpisz nazwę aplikacji i nazwę jej wydawcy, a następnie wybierz przycisk **OK**.
 
@@ -137,7 +137,7 @@ Podczas pracy z aplikacjami obsługującymi funkcję WIP i nieznanych aplikacji 
 Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji. Może to obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
 
 #### <a name="allow-overrides"></a>Zezwalaj na przesłonięcia
-Funkcja WIP szuka niewłaściwych przypadków udostępniania danych, ostrzegając użytkowników, jeśli robią coś, co zostanie uznane za potencjalnie niebezpieczne. Ten tryb pozwala jednak użytkownikowi przesłonić zasady i udostępnić dane, przy czym dana akcja jest rejestrowana w dzienniku inspekcji.
+Funkcja WIP szuka niewłaściwych przypadków udostępniania danych, ostrzegając użytkowników, gdy robią coś, co zostanie uznane za potencjalnie niebezpieczne. Ten tryb pozwala jednak użytkownikowi przesłonić zasady i udostępnić dane, przy czym dana akcja jest rejestrowana w dzienniku inspekcji.
 
 #### <a name="silent"></a>Dyskretnej
 Funkcja WIP jest uruchamiana w trybie cichym: niewłaściwe udostępnianie danych jest rejestrowane i nie są blokowane żadne akcje, które w trybie zezwolenia na przesłonięcia pojawiłyby się w monicie wymagającym interakcji z pracownikiem. Niedozwolone akcje, np. gdy aplikacje podejmują próby uzyskania nieuprawnionego dostępu do zasobów sieciowych lub danych chronionych przy użyciu funkcji WIP, są nadal zatrzymywane.
@@ -145,7 +145,7 @@ Funkcja WIP jest uruchamiana w trybie cichym: niewłaściwe udostępnianie danyc
 #### <a name="off-not-recommended"></a>Wyłączona (niezalecane)
 Funkcja WIP zostanie wyłączona i nie będzie używana do ochrony ani inspekcji danych.
 
-Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich plików oznakowanych przy użyciu funkcji WIP na dyskach podłączonych lokalnie. Należy mieć świadomość, że informacje dotyczące poprzedniego odszyfrowania i poprzednich zasad nie są automatycznie stosowane ponownie po ponownym włączeniu ochrony WIP.
+Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich plików oznakowanych przy użyciu funkcji WIP na dyskach podłączonych lokalnie. Zauważ, że informacje dotyczące poprzedniego odszyfrowywania i poprzednich zasad nie są automatycznie stosowane ponownie po ponownym włączeniu ochrony WIP.
 
 ### <a name="add-a-protection-mode"></a>Dodawanie trybu ochrony
 
@@ -153,7 +153,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
     ![Zrzut ekranu trybu uczenia](./media/learning-mode-sc1.png)
 
-1.  Wybierz polecenie **Zapisz**.
+2.  Wybierz polecenie **Zapisz**.
 
 ### <a name="use-wip-learning"></a>Korzystanie z opcji Uczenie funkcji WIP
 
@@ -165,10 +165,23 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
  
     Gdy aplikacje pojawią się w raporcie rejestracji funkcji Uczenie funkcji WIP, możesz dodać je do zasad ochrony aplikacji.
 
+## <a name="allow-windows-search-indexer-to-search-encrypted-items"></a>Zezwalanie indeksatorowi programu Windows Search na wyszukiwanie zaszyfrowanych elementów
+Zezwala lub nie zezwala na indeksowanie elementów. Ten przełącznik jest przeznaczony dla indeksatora programu Windows Search, który kontroluje, czy indeksuje on elementy, które są zaszyfrowane, takie jak pliki chronione przez funkcję Windows Information Protection (WIP).
+
+Ta opcja zasad ochrony aplikacji znajduje się w **Ustawieniach zaawansowanych** zasad Windows Information Protection. Zasady ochrony aplikacji muszą być ustawione na platformę *Windows 10*, a zasady aplikacji **Stan rejestracji** muszą być ustawione na wartość **Z rejestracją**. 
+
+Gdy te zasady są włączone, elementy chronione przez funkcję WIP są indeksowane, a dotyczące ich metadane są przechowywane w lokalizacji niezaszyfrowanej. Metadane obejmują takie informacje, jak ścieżka do pliku i data modyfikacji.
+
+Gdy zasady są wyłączone, elementy chronione przez funkcję WIP nie są indeksowane i nie są wyświetlane w wynikach w Cortanie ani Eksploratorze plików. Jeśli na urządzeniu istnieje wiele plików multimedialnych chronionych przez funkcję WIP, może to także mieć wpływ na wydajność dla zdjęć i aplikacji Groove.
+
+## <a name="add-encrypted-file-extensions"></a>Dodawanie rozszerzeń szyfrowanych plików
+
+Oprócz ustawienia opcji **Zezwalaj indeksatorowi programu Windows Search na wyszukiwanie elementów zaszyfrowanych** możesz określić listę rozszerzeń nazw plików. Pliki z tymi rozszerzeniami są szyfrowane podczas kopiowania z udziału bloku komunikatów serwera (SMB, Server Message Block) w obrębie przedsiębiorstwa zgodnie z definicją na liście lokalizacji sieciowych. Gdy te zasady nie zostaną określone, jest stosowane istniejące zachowanie automatycznego szyfrowania. Gdy te zasady zostaną skonfigurowane, będą szyfrowane tylko pliki mające rozszerzenia znajdujące się na liście.
+
 ## <a name="deploy-your-wip-app-protection-policy"></a>Wdrażanie zasad ochrony aplikacji w funkcji WIP
 
 > [!IMPORTANT]
-> Ma to zastosowanie do funkcji WIP bez rejestracji urządzeń.
+> Te informacje mają zastosowanie do funkcji WIP bez rejestracji urządzeń.
 
 <!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
@@ -178,4 +191,8 @@ Po utworzeniu zasad ochrony aplikacji w funkcji WIP trzeba je wdrożyć do organ
 
     Lista grup użytkowników zawierająca wszystkie grupy zabezpieczeń w usłudze Azure Active Directory zostanie otwarta w bloku **Dodaj grupę użytkowników**.
 
-1.  Wybierz grupę, do której mają się odnosić zasady, a następnie wybierz pozycję **Wybierz**, aby wdrożyć zasady.
+2.  Wybierz grupę, do której mają się odnosić zasady, a następnie wybierz pozycję **Wybierz**, aby wdrożyć zasady.
+
+## <a name="next-steps"></a>Następne kroki
+
+- Aby dowiedzieć się więcej na temat funkcji Windows Information Protection, zobacz [Protect your enterprise data using Windows Information Protection (Chronienie danych przedsiębiorstwa przy użyciu funkcji Windows Information Protection [WIP])](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip). 

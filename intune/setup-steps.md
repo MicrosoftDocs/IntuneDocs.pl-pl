@@ -1,9 +1,9 @@
 ---
-title: "Konfigurowanie usługi Intune"
+title: "Konfigurowanie usługi Microsoft Intune"
 description: "Wymogi i wymagania wstępne dotyczące korzystania z subskrypcji usługi Intune"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: get-started-article
@@ -14,17 +14,17 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a1203cf22fad93f245508284d93024df40e11b9a
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: d2abd140dc83cffa11777ab75f7fb40e76fc1b83
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="set-up-intune"></a>Konfigurowanie usługi Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Te kroki konfiguracji ułatwiają włączenie zarządzania urządzeniami przenośnymi (MDM, mobile device management). Urządzenia muszą być zarządzane, aby można było zapewnić użytkownikom dostęp do zasobów firmy lub zarządzać ustawieniami tych urządzeń.
+Te kroki konfiguracji ułatwiają włączenie zarządzania urządzeniami przenośnymi (MDM, mobile device management) w usłudze Intune. Urządzenia muszą być zarządzane, aby można było zapewnić użytkownikom dostęp do zasobów firmy lub zarządzać ustawieniami tych urządzeń.
 
 Niektóre kroki, takie jak skonfigurowanie subskrypcji usługi Intune i ustawienie urzędu MDM, są wymagane w większości scenariuszy. Inne kroki, np. skonfigurowanie domeny niestandardowej lub dodanie aplikacji, są opcjonalne i zależą od potrzeb firmy.
 

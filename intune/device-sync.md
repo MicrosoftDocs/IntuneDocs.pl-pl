@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f784143535188c6bee2082c5717b752f08c5490
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7d48b81e6df912815d9ef843b4588f8c1076a8a7
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synchronizacja urządzeń w usłudze Intune w celu pobrania najnowszych zasad i akcji
 
@@ -37,17 +37,17 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 
 ## <a name="how-to-sync-a-device"></a>Jak zsynchronizować urządzenie
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych przez Ciebie urządzeń wybierz urządzenie, a następnie wybierz akcję zdalną **Synchronizacja**.
+4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+5. Z listy zarządzanych przez Ciebie urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną **Synchronizuj**.
 7. Kliknij przycisk **Tak**, aby potwierdzić akcję.
 
 
 ## <a name="retriable-error-codes"></a>Kody błędów z możliwością ponowienia próby
 
-Gdy administrator uruchamia akcję **synchronizacji** urządzenia, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem, ale które wywołały kod błędu z możliwością ponowienia próby, będą dostępne dla urządzenia. Jednak w przypadku aplikacji, które wywołały kod błędu bez możliwości ponowienia próby, udostępnienie ich dla urządzenia będzie możliwe dopiero po 7 dniach.
+Gdy administrator uruchamia akcję **Synchronizuj** urządzenia, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem, ale które wywołały kod błędu z możliwością ponowienia próby, będą dostępne dla urządzenia. Jednak w przypadku aplikacji, które wywołały kod błędu bez możliwości ponowienia próby, udostępnienie ich dla urządzenia będzie możliwe dopiero po 7 dniach.
 
 
 | Kod błędu  | Sugerowany opis                                                                                                                  | Z możliwością ponowienia próby |

@@ -1,32 +1,32 @@
 ---
-title: "Korzystanie z usługi Windows Hello dla firm"
-titleSuffix: Azure portal
+title: "Jak zintegrować usługę Windows Hello dla firm z usługą Microsoft Intune"
+titleSuffix: 
 description: "Tworzenie zasad umożliwiających kontrolę sposobu korzystania z funkcji Windows Hello dla firm na urządzeniach zarządzanych."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/12/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 465de83c5bd15cfab67a4307000c0aa9cbfb1730
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 46bb82fd49fa58e87c22c8bf0abb57e1587b8b40
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-windows-hello-for-business"></a>Korzystanie z usługi Windows Hello dla firm
+# <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Usługa Microsoft Intune umożliwia integrację z usługą Hello dla firm (znaną wcześniej jako Microsoft Passport for Work), czyli alternatywną metodą logowania korzystającą z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej.
+Usługę Windows Hello dla firm (poprzednio Microsoft Passport for Work) można zintegrować z usługą Microsoft Intune.
 
-Usługa Hello dla firm pozwala używać do logowania *gestu użytkownika* zamiast hasła. Gestem użytkownika może być prosty numer PIN, uwierzytelnianie biometryczne, takie jak Windows Hello, lub urządzenie zewnętrzne, np. czytnik linii papilarnych.
+ Usługa Hello dla firm to alternatywna metoda logowania korzystająca z usługi Active Directory lub konta usługi Azure Active Directory w celu zastąpienia hasła, karty inteligentnej lub wirtualnej karty inteligentnej. Pozwala ona używać do logowania *gestu użytkownika* zamiast hasła. Gestem użytkownika może być prosty numer PIN, uwierzytelnianie biometryczne, takie jak Windows Hello, lub urządzenie zewnętrzne, np. czytnik linii papilarnych.
 
 Integracja usługi Intune z usługą Hello dla firm następuje na dwa sposoby:
 
@@ -50,19 +50,19 @@ Aby zapewnić rozwiązywanie konfliktów i prawidłowe stosowanie zasad dotyczą
 
 1.  W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
-2.  W bloku Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Rejestracja w systemie Windows** > **Windows Hello dla firm**.
+2.  Na stronie usługi Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Rejestracja w systemie Windows** > **Windows Hello dla firm**.
 
-3.  W bloku, który zostanie otwarty, wybierz ustawienie **Domyślne**.
+3.  Na otwartej stronie wybierz ustawienia **Domyślne**.
 
-4.  W bloku **Wszyscy użytkownicy** kliknij opcję **Właściwości**, a następnie uzupełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień usługi Windows Hello dla firm.
+4.  Na stronie **Wszyscy użytkownicy** kliknij pozycję **Właściwości**, a następnie uzupełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień usługi Windows Hello dla firm.
 
-5. W bloku **Wszyscy użytkownicy** kliknij opcję **Ustawienia**, a następnie wybierz jedną z następujących wartości opcji **Skonfiguruj program Windows Hello dla firm**:
+5. Na stronie **Wszyscy użytkownicy** kliknij pozycję **Ustawienia**, a następnie wybierz jedną z następujących wartości pozycji **Skonfiguruj usługę Windows Hello dla firm**:
 
     - **Wyłączony**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Windows Hello dla firm. Wszystkie inne ustawienia na ekranie będą wtedy niedostępne.
     - **Włączony**. Wybierz to ustawienie, jeśli chcesz skonfigurować ustawienia usługi Windows Hello dla firm.
-    - **Nieskonfigurowane**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Intune do kontrolowania ustawień usługi Windows Hello dla firm. Żadne z istniejących ustawień usługi Windows Hello dla firm na urządzeniach z systemem Windows 10 nie są zmieniane. Wszystkie inne ustawienia w bloku są niedostępne.
+    - **Nieskonfigurowane**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Intune do kontrolowania ustawień usługi Windows Hello dla firm. Żadne z istniejących ustawień usługi Windows Hello dla firm na urządzeniach z systemem Windows 10 nie są zmieniane. Wszystkie inne ustawienia na stronie są niedostępne.
 
-6.  W przypadku wybrania w poprzednim kroku opcji **Włączony** należy skonfigurować wymagane ustawienia, które są stosowane do wszystkich zarejestrowanych urządzeń z systemami Windows 10 i Windows 10 Mobile.
+6.  W przypadku wybrania w poprzednim kroku pozycji **Włączony** należy skonfigurować wymagane ustawienia, które są stosowane do wszystkich zarejestrowanych urządzeń z systemami Windows 10 i Windows 10 Mobile.
 
  - **Używaj modułu TPM (Trusted Platform Module)**. Moduł TPM zapewnia dodatkową warstwę zabezpieczeń danych.<br>Wybierz jedną z następujących opcji:
 

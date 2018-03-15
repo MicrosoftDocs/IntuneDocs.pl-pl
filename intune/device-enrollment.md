@@ -1,6 +1,6 @@
 ---
 title: "Co to jest rejestrowanie urządzenia w usłudze Microsoft Intune"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Dowiedz się więcej o rejestrowaniu urządzeń z systemem iOS, Android i Windows."
 keywords: 
 author: ErikjeMS
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a94703ecc1d7fd464f565855bb9b8dd9ee3c3bfb
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f49178a2d8e8a73a693ed2f374b86b8e702680f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,6 +37,14 @@ Jak pokazano w poniższych tabelach, istnieje kilka metod rejestracji urządzeń
 |**[Device Enrollment Program](#apple-device-enrollment-program)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](./device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Tak |   Opcjonalne |  Nie| [Więcej informacji](./apple-configurator-setup-assistant-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Nie |    Nie  | Nie|[Więcej informacji](./apple-configurator-direct-enroll-ios.md)|
+
+## <a name="macos-enrollment-methods"></a>Metody rejestracji urządzeń z systemem macOS
+
+| **Metoda** |  **Wymagane zresetowanie** |  **Koligacja użytkownika** | **Zablokowane** | **Szczegóły**|
+|:---:|:---:|:---:|:---:|:---:|
+|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie| Tak | Nie | [Więcej informacji](./macos-enroll.md)|
+|**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  | [Więcej informacji](./device-enrollment-manager-enroll.md)|
+
 
 ## <a name="windows-enrollment-methods"></a>Metody rejestracji systemu Windows
 

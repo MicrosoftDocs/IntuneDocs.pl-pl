@@ -1,7 +1,7 @@
 ---
-title: "Konfigurowanie sieci VPN dla aplikacji w usłudze Microsoft Intune na urządzeniach z systemem iOS"
-titleSuffix: Intune on Azure
-description: "Określ aplikacje zarządzane, które mogą używać sieci VPN na urządzeniach z systemem iOS zarządzanych przez usługę Intune."
+title: "Konfigurowanie sieci VPN dla aplikacji na urządzeniach z systemem iOS w usłudze Microsoft Intune"
+titleSuffix: 
+description: "Określanie aplikacji zarządzanych, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f7e53f9a440d945d834c17b9db85ed5f6e42229
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4e01ca43cc42ee7228e42cd3b0176475905ef566
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="set-up-per-app-vpn-in-microsoft-intune-for-ios-devices"></a>Konfigurowanie sieci VPN dla aplikacji w usłudze Microsoft Intune na urządzeniach z systemem iOS
+# <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurowanie wirtualnej sieci prywatnej (sieci VPN) dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
-Możesz określić aplikacje zarządzane, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune. Po określeniu sieci VPN dla aplikacji w usłudze Intune użytkownik końcowy automatycznie nawiązuje połączenie za pośrednictwem sieci VPN przy uzyskiwaniu dostępu do dokumentów firmowych.
+Możesz określić aplikacje zarządzane, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune. Po utworzeniu sieci VPN dla aplikacji w usłudze Intune użytkownik końcowy automatycznie nawiązuje połączenie za pośrednictwem sieci VPN przy uzyskiwaniu dostępu do dokumentów firmowych.
 
 ## <a name="prerequisites-for-the-per-app-vpn"></a>Wymagania wstępne dotyczące sieci VPN dla aplikacji
 

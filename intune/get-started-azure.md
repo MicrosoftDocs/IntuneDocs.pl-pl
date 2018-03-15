@@ -1,13 +1,13 @@
 ---
-title: Wprowadzenie do witryny Azure Portal
-titlesuffix: Azure portal
-description: "Więcej informacji na temat tworzenia i udostępniania pulpitów nawigacyjnych w usłudze Intune w witrynie Azure Portal."
+title: "Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal"
+titlesuffix: 
+description: "Informacje na temat tworzenia i udostępniania pulpitów nawigacyjnych usługi Microsoft Intune i poruszania się po nich w witrynie Azure Portal."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
-ms.topic: article
+ms.date: 02/22/2018
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,21 +15,21 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 27567c8a8b8b406bbffceafc1d742b202999425f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: bd2a5af8c5535fc45083b1386f378604b0b67353
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="getting-started-with-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Intune w witrynie Azure Portal
+# <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
-Usługę Intune można znaleźć w witrynie Azure Portal. Na platformie Azure jest dostępnych wiele usług, ale ze znacznej ich części prawdopodobnie nie będziesz regularnie korzystać. Dostosowanie pulpitu nawigacyjnego i paska bocznego ułatwia szybkie znajdowanie potrzebnych informacji po każdym logowaniu w celu zarządzania urządzeniami przy użyciu usługi Intune.
+Usługę Microsoft Intune można znaleźć w witrynie Azure Portal. Na platformie Azure jest dostępnych wiele usług, ale ze znacznej ich części prawdopodobnie nie będziesz regularnie korzystać. Dostosowanie pulpitu nawigacyjnego i paska bocznego na platformie Azure ułatwia szybkie znajdowanie potrzebnych informacji po każdym logowaniu w celu zarządzania urządzeniami przy użyciu usługi Intune.
 
 ## <a name="changing-the-sidebar"></a>Zmienianie paska bocznego
 
-Na __pasku bocznym__ po lewej stronie witryny Azure Portal znajduje się lista wszystkich dostępnych usług platformy Azure. Domyślny wygląd tej kompleksowej listy można zmienić, aby najważniejsze usługi były zawsze widoczne. Na potrzeby przykładu u góry listy dodamy usługę Intune.
+Na __pasku bocznym__ po lewej stronie witryny Azure Portal znajduje się lista wszystkich dostępnych usług platformy Azure. Domyślny wygląd tej kompleksowej listy można zmienić, aby najważniejsze usługi były zawsze widoczne. W poniższym opisie przykładową usługą dodawaną na górze listy jest usługa Intune.
 
-![Użytkownik wyszukuje usługę Intune na liście „Więcej usług”.](./media/azure-add-intune1.png)
+![Użytkownik wyszukuje usługę Microsoft Intune na liście „Więcej usług”.](./media/azure-add-intune1.png)
 
 1. Wybierz pozycję **Więcej usług** u dołu paska bocznego w lewej części strony.
 2. Wpisz ciąg **Intune** w polu filtru.
@@ -38,11 +38,11 @@ Na __pasku bocznym__ po lewej stronie witryny Azure Portal znajduje się lista w
 
 ## <a name="changing-the-dashboard"></a>Zmienianie pulpitu nawigacyjnego
 
-Domyślna strona docelowa to **pulpit nawigacyjny**. W tym miejscu zmodyfikujesz kafelki, aby przedstawiały informacje najważniejsze dla Ciebie.
+Domyślna strona docelowa to **pulpit nawigacyjny**. Na tej stronie możesz zmodyfikować kafelki, aby przedstawiały informacje najważniejsze dla Ciebie.
 
 ![Obraz standardowego nowego pulpitu nawigacyjnego. Pasek boczny ze wszystkimi usługami znajduje się po lewej stronie, a główny pulpit nawigacyjny jest na środku. Przyciski służące do modyfikowania pulpitu nawigacyjnego są umieszczone u góry wraz z kafelkami umożliwiającymi dostęp do wszystkich zasobów, samouczków Szybki start, kondycji usług i witryny Azure Marketplace.](./media/azure-default-dashboard.png)
 
-Aby zmodyfikować bieżący pulpit nawigacyjny, wybierz przycisk **Edytuj pulpit nawigacyjny**. Jeśli nie chcesz zmieniać domyślnego pulpitu nawigacyjnego, możesz również utworzyć **Nowy pulpit nawigacyjny**. Utworzenie nowego pulpitu nawigacyjnego powoduje udostępnienie pustego, prywatnego pulpitu nawigacyjnego z pozycją **Galeria kafelków**. Umożliwia ona dodawanie oraz zmianę układu kafelków. Kafelki możesz znajdować za pomocą następujących metod: **Kategoria ogólna**, **Typ**, **Wyszukiwanie**, **Grupa zasobów** lub **Tag**.
+Aby zmodyfikować bieżący pulpit nawigacyjny, wybierz przycisk **Edytuj pulpit nawigacyjny**. Jeśli nie chcesz zmieniać domyślnego pulpitu nawigacyjnego, możesz również utworzyć **Nowy pulpit nawigacyjny**. Utworzenie nowego pulpitu nawigacyjnego powoduje udostępnienie pustego, prywatnego pulpitu nawigacyjnego z pozycją **Galeria kafelków**, umożliwiającą dodawanie kafelków i zmienianie ich rozmieszczenia. Kafelki możesz znajdować za pomocą następujących metod: **Kategoria ogólna**, **Typ**, **Wyszukiwanie**, **Grupa zasobów** lub **Tag**.
 
 Oprócz tego kafelki można dodawać do pulpitu nawigacyjnego bezpośrednio za pomocą dowolnego przycisku **wielokropka**, wybierając pozycję **Przypnij do pulpitu nawigacyjnego**.
 
@@ -52,7 +52,7 @@ Ta możliwość będzie bardziej przydatna po dodaniu większej ilości zawarto�
 
 ## <a name="using-services"></a>Korzystanie z usług
 
-Otwarcie usługi Intune lub dowolnej innej usługi platformy Azure spowoduje wyświetlenie tej usługi w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą wysuwane od prawej krawędzi bloku i zwijane pod głównym blokiem, z poziomu którego zostały otwarte.
+Otwarcie usługi Microsoft Intune lub dowolnej innej usługi platformy Azure spowoduje wyświetlenie tej usługi w **bloku**. Jedne z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne** są wyświetlane w bloku na pełnym ekranie. Po wybraniu obciążenia odpowiedni blok zostanie otwarty na pełnej stronie. Inne bloki będą wysuwane od prawej krawędzi bloku i zwijane pod głównym blokiem, z poziomu którego zostały otwarte.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -1,12 +1,12 @@
 ---
 title: "Przypisywanie aplikacji do urządzeń z programem Android for Work"
-titlesuffix: Azure portal
-description: "W tym temacie opisano sposób synchronizowania, a następnie przypisywania aplikacji ze sklepu Google Play for Work na urządzeniach z programem Android for Work."
+titlesuffix: Microsoft Intune
+description: "Dowiedz się, jak synchronizować aplikacje ze sklepu Google Play for Work Store i przypisywać je do urządzeń z programem Android for Work."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/13/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 248dcc978b5324733d5d640230aba2b6db1a2c62
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6a0b488120ed62031f8af5b8b65d9e90ea6d252b
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Jak przypisywać aplikacje do urządzeń z programem Android for Work za pomocą usługi Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Przypisywanie aplikacji do urządzeń z programem Android for Work przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Wszystkie aplikacje, które instalujesz dla programu Android for Work, pochodzą ze sklepu Google Play for Work. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie.
-Następnie aplikacja pojawia się w węźle **Licencjonowane aplikacje** w witrynie Azure Portal. Z poziomu tej witryny możesz zarządzać przypisywaniem aplikacji w taki sam sposób, jak przypisywaniem dowolnych innych aplikacji.
+Android for Work to program dla urządzeń z systemem Android. Wszystkie aplikacje instalowane na urządzeniach z programem Android for Work pochodzą ze sklepu Google Play for Work. Przypisywanie aplikacji do urządzeń z programem Android for Work przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja pojawia się w węźle **Licencjonowane aplikacje** w witrynie Azure Portal. Z poziomu tej witryny możesz zarządzać przypisywaniem aplikacji w taki sam sposób, jak przypisywaniem dowolnych innych aplikacji.
 
 Ponadto możesz przypisywać własne aplikacje biznesowe, jeśli zostały one utworzone, w następujący sposób:
 - Utwórz w ramach programu Google Developer konto, które pozwala publikować aplikacje w prywatnym obszarze w sklepie Google Play.

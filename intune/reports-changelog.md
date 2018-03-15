@@ -2,10 +2,10 @@
 title: "Dziennik zmian magazynu danych usługi Intune | Microsoft Docs"
 description: "Lista zmian w interfejsie API magazynu danych usługi Intune."
 keywords: "Magazyn danych usługi Intune"
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,40 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 306cceb704c1153b5691181d576561d9c93a36d3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67eedf528763ae302e3850710b3fab026e15f813
+ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
+
+## <a name="1801"></a>1801
+_Wydanie: styczeń 2018 r._
+
+### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune <!-- 1867540 -->
+
+Aplikację można skonfigurować przy użyciu usługi Azure Active Directory (Azure AD) i uwierzytelnić w magazynie danych usługi Intune. Aby uzyskać więcej informacji, zobacz [Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune](data-warehouse-app-only-auth.md).
+
+### <a name="azure-ad-and-intune-credential-requirements----2077525---"></a>Wymagania dotyczące poświadczeń usług Azure AD i Intune <!-- 2077525 -->
+
+- Licencja usługi Intune nie musi już być przypisana do użytkownika podczas uzyskiwania dostępu do magazynu danych usługi Intune (dotyczy to także interfejsu API).
+- Nazwa roli usługi Intune została zmieniona z **Raporty** na **Magazyn danych usługi Intune**. 
+
+    Aby uzyskać więcej informacji, zobacz [Wymagania dotyczące poświadczeń usług Azure AD i Intune](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+
+### <a name="odata-query-options----2077711---"></a>Opcje zapytania OData <!-- 2077711 -->
+
+Parametru <code>$select</code> można użyć jako parametru zapytania OData. Bieżąca wersja obsługuje następujące parametry zapytania OData: <code>$filter</code>, <code>$orderby</code>, <code>$select</code>, <code>$skip</code> i <code>$top</code>. Aby uzyskać więcej informacji, zobacz [Opcje zapytania OData](reports-api-url.md#odata-query-options).
+
+### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nowe jednostki w modelu danych magazynu danych <!-- 2077804 -->
+
+ - Dodano jednostkę [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus). Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
+ - Dodano jednostkę [**MobileAppInstallStatus**](reports-ref-application.md#mobileappinstallstate). Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie. 
 
 ## <a name="1710"></a>1710
 _Wydanie: listopad 2017 r._

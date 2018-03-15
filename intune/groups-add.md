@@ -1,10 +1,10 @@
 ---
-title: "Ustawianie ograniczeń rejestracji w usłudze Intune"
-titlesuffix: Azure portal
-description: "Ograniczanie rejestrowania według platformy i ustawianie limitu rejestracji urządzeń w usłudze Intune. \""
+title: "Dodawanie grup w celu zorganizowania użytkowników i urządzeń"
+titlesuffix: Microsoft Intune
+description: "Możesz dodawać grupy, aby organizować użytkowników i urządzenia na podstawie lokalizacji geograficznej, działu lub kryteriów dotyczących sprzętu."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,13 +15,13 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5e55a96ee1bee5b1f25a4ddf3366f3e7dc94122a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 42e7e2c8d239b8150f67a699ba6fef156b3e1a7d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="add-groups-in-intune"></a>Dodawanie grup w usłudze Intune
+# <a name="add-groups-to-organize-users-and-devices"></a>Dodawanie grup w celu zorganizowania użytkowników i urządzeń
 Do zarządzania urządzeniami i użytkownikami w usłudze Intune służą grupy usługi Azure Active Directory (AD). Jako administrator usługi Intune możesz skonfigurować grupy zgodnie z potrzebami organizacji. Utwórz grupy w celu zorganizowania użytkowników i urządzeń według lokalizacji geograficznej, działu lub parametrów sprzętowych. Użyj grup, aby zarządzać zadaniami na dużą skalę. Możesz na przykład ustawić zasady dla wielu użytkowników lub wdrożyć aplikacje na zestawie urządzeń.
 
 W tym temacie wyjaśniono, jak dodać grupy do użytku w usłudze Intune.
@@ -34,7 +34,7 @@ Dodawać można następujące typy grup:
 
 Aby utworzyć nową grupę, wykonaj następujące czynności.
 1. W witrynie Azure Portal wybierz pozycję **Grupy**, a następnie wybierz pozycję **Nowa grupa** w bloku **Wszystkie grupy**.
-  ![Zrzut ekranu przedstawiający witrynę Azure Portal z wybraną pozycją Nowa grupa](./media/groups-add-new.png)
+  ![Zrzut ekranu przedstawiający ekran Użytkownicy i grupy z wybraną pozycją Nowa grupa](./media/groups-add-new.png)
 2. Określ wartości w polach **Nazwa** i **Opis** dla nowej grupy. Te właściwości są wyświetlane tylko w portalu zarządzania i nie są widoczne dla użytkowników.
 
 3. Wybierz opcję w obszarze **Typ członkostwa**:
@@ -42,7 +42,7 @@ Aby utworzyć nową grupę, wykonaj następujące czynności.
   - **Użytkownik dynamiczny**, aby utworzyć grupę użytkowników zdefiniowaną za pomocą **zapytania dynamicznego**.
   - **Urządzenie dynamiczne**, aby utworzyć grupę urządzeń zdefiniowaną za pomocą **zapytania dynamicznego**.
 
-  ![Zrzut ekranu przedstawiający właściwości grupy usługi Intune z pozycjami Nazwa, Opis, Typ członkostwa, Włącz funkcje pakietu Office i Członkowie](./media/groups-add-properties.png)
+  ![Zrzut ekranu przedstawiający właściwości grupy w usłudze Intune](./media/groups-add-properties.png)
 
   Usługa Azure AD umożliwia tworzenie grup dynamicznych na podstawie reguł, które definiują członkostwo. Dowiedz się, jak [tworzyć grupy dynamiczne oparte na atrybutach](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
 

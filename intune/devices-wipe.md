@@ -1,6 +1,6 @@
 ---
-title: "Korzystanie z resetowania do ustawień fabrycznych lub usuwania danych firmy na urządzeniach przy użyciu usługi Intune"
-titlesuffix: Azure portal
+title: "Korzystanie z resetowania do ustawień fabrycznych lub usuwania danych firmy na urządzeniach przy użyciu usługi Microsoft Intune"
+titlesuffix: 
 description: "Dowiedz się, jak usunąć dane firmy z urządzenia lub zresetować urządzenie do ustawień fabrycznych."
 keywords: 
 author: nathbarn
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46cb8510e80db7092de472a769fb5dc78eb5e167
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 62404f6ffede7a7f3f7150da1fde289f2ba9e64f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -35,9 +35,9 @@ Z usługi Intune możesz usunąć urządzenia, które nie są już potrzebne, ma
 
 ### <a name="to-factory-reset-a-device"></a>Aby zresetować urządzenie do ustawień fabrycznych
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, które chcesz zresetować do ustawień fabrycznych.
 5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Resetowanie do ustawień fabrycznych**.
 6. W systemie Windows 10 w wersji 1709 lub nowszej istnieje dodatkowa opcja „Zachowaj stan rejestracji i konto użytkownika”. 
@@ -122,9 +122,9 @@ Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usu
 
 ### <a name="to-remove-company-data"></a>Aby usunąć dane firmy
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, z którego chcesz usunąć dane firmy.
 5. W bloku, w którym wyświetlona jest nazwa urządzenia, wybierz pozycję **Usuń dane firmowe**, a następnie wybierz pozycję **Tak**, aby potwierdzić.
 
@@ -134,9 +134,9 @@ Jeśli urządzenie jest włączone i połączone, propagowanie polecenia usuwani
 
 Z powodu problemów z komunikacją lub braku urządzeń może być konieczne usunięcie urządzeń z usługi Azure Active Directory (AD). Polecenie usunięcia nie powoduje usunięcia urządzenia z zarządzania, ale polecenia **Usuń** możesz użyć do usuwania rekordów urządzeń z witryny Azure Portal, gdy wiesz, że są one niedostępne i najprawdopodobniej nie będą się ponownie komunikować z platformą Azure.
 
-1.  Zaloguj się do [usługi Azure Active Directory w portalu platformy Azure](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz też zarejestrować się w [portalu usługi Office 365](https://portal.office.com), a następnie wybrać kolejno pozycje **Administrator** &gt; **Azure AD** przy użyciu linku w lewej części strony.
+1.  Zaloguj się do [usługi Azure Active Directory w portalu platformy Azure](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz też zarejestrować się w [portalu usługi Office 365](https://portal.office.com), a następnie wybrać pozycję **Centra administracyjne** &gt; **Azure AD** przy użyciu linku w lewej części strony.
 3.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
-4.  Wybierz pozycję **Active Directory**, a następnie wybierz organizację.
+4.  Wybierz pozycję **Azure Active Directory**, a następnie wybierz organizację.
 5.  Wybierz kartę **Użytkownicy** .
 6.  Wybierz użytkownika, którego urządzenia chcesz usunąć.
 7.  Wybierz pozycję **Urządzenia**.

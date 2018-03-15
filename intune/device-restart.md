@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9afe804d2f9e48e27ced4bd92959cd065f6ec89a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a49f95ce81f750c539959674a15df41118f20aaa
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
 
@@ -40,12 +40,12 @@ Akcja urządzenia **Uruchom ponownie** powoduje ponowne uruchomienie wybranego u
 
 ## <a name="how-to-restart-a-device"></a>Jak ponownie uruchomić urządzenie
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz urządzenie, a następnie wybierz akcję zdalną urządzenia **Uruchom ponownie**.
+4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+5. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną urządzenia **Uruchom ponownie**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby wyświetlić stan akcji, należy w bloku **Urządzenia i grupy** wybrać pozycję **Akcje urządzenia**.
+Aby wyświetlić stan akcji, w bloku **Urządzenia** wybierz pozycję **Akcje urządzenia**.

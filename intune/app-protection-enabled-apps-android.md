@@ -1,7 +1,7 @@
 ---
 title: Aplikacje dla systemu Android z zasadami ochrony aplikacji
-titlesuffix: Azure portal
-description: "W tym temacie opisano, czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji."
+titlesuffix: Microsoft Intune
+description: "Dowiedz się, czego oczekiwać od aplikacji systemu Android zawierającej zasady ochrony."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,50 +15,50 @@ ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ee7977d8608327560b4df0c1bfbcc60ff150da9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: af25dc918907e086441a89f222985a75199bbe95
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-W tym temacie opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane służbowo, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji służbowej w usłudze OneDrive.
+Dowiedz się, czego oczekiwać od aplikacji systemu Android zawierających zasady ochrony. Zasady ochrony aplikacji są stosowane wyłącznie podczas korzystania z aplikacji w kontekście służbowym. Na przykład w przypadku uzyskiwania dostępu do aplikacji przy użyciu konta służbowego lub w przypadku uzyskiwania dostępu do plików przechowywanych w firmowej lokalizacji w usłudze OneDrive.
 ##  <a name="accessing-apps"></a>Uzyskiwanie dostępu do aplikacji
 
-Aplikacja Portal firmy jest wymagana dla wszystkich aplikacji skojarzonych z zasadami ochrony aplikacji na urządzeniach z systemem Android.
+Aplikacja Portal firmy jest wymagana dla wszystkich aplikacji na urządzeniach z systemem Android, które mają zasady ochrony aplikacji.
 
-W przypadku urządzeń, które nie zostały zarejestrowane w usłudze Intune, aplikacja Portal firmy musi zostać zainstalowana na urządzeniu. Użytkownik nie musi jednak jej uruchamiać ani logować się w niej, aby korzystać z aplikacji zarządzanych przy użyciu zasad ochrony aplikacji.
-Aplikacja Portal firmy umożliwia usłudze Intune udostępnianie danych w bezpiecznej lokalizacji, przez co jest wymagana, nawet jeśli urządzenie nie jest zarejestrowane w usłudze Intune.
+Zainstaluj aplikację Portal firmy na wszystkich urządzeniach, które nie zostały zarejestrowane w usłudze Intune. Użytkownicy nie muszą logować się do aplikacji Portal firmy, aby korzystać z aplikacji z zasadami ochrony aplikacji.
+Aplikacja Portal firmy umożliwia udostępnianie danych w bezpiecznej lokalizacji. Dlatego to wymaganie obowiązuje nawet w przypadku urządzeń niezarejestrowanych.
 
 
 ##  <a name="using-apps-with-multi-identity-support"></a>Korzystanie z aplikacji z obsługą wielu tożsamości
 
-Zasady ochrony aplikacji są stosowane tylko podczas służbowego używania aplikacji, więc w zależności od trybu działania (służbowego lub osobistego) aplikacja może zachowywać się różnie.
+Zasady ochrony aplikacji mają zastosowanie tylko wtedy, gdy użytkownik próbuje uzyskać dostęp do danych służbowych.  Jeśli użytkownik uzyska dostęp do aplikacji w ramach użytku osobistego, można będzie zaobserwować inne zachowania.
 
-W przypadku aplikacji, które obsługują wiele tożsamości, usługa Intune stosuje zasady ochrony aplikacji tylko, jeśli użytkownik korzysta z aplikacji służbowo.  Na przykład podczas uzyskiwania dostępu do danych służbowych użytkownik zobaczy monit o podanie kodu PIN.  W przypadku **aplikacji Outlook** użytkownik końcowy musi podać kod PIN podczas uruchamiania aplikacji. W przypadku **aplikacji OneDrive** trzeba to zrobić po wybraniu konta służbowego.  W przypadku aplikacji Microsoft **Word**, **PowerPoint* i **Excel** kod PIN trzeba podać w celu uzyskania dostępu do dokumentów przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
+Niektóre aplikacje obsługują wiele tożsamości. W takim przypadku usługa Intune stosuje tylko zasady ochrony aplikacji, gdy użytkownik uzyskuje dostęp do danych służbowych.  Na przykład może zostać wyświetlony monit o podanie kodu PIN.  W **aplikacji Outlook** monit jest wyświetlany tylko wtedy, gdy użytkownik uruchamia aplikację. W **aplikacji OneDrive** monit jest wyświetlany, gdy użytkownik wpisuje konto służbowe.  W programach Microsoft **Word**, **PowerPoint** i **Excel** monit jest wyświetlany, gdy użytkownik uzyskuje dostęp do firmowych dokumentów w usłudze OneDrive.
 ##  <a name="managing-user-accounts-on-the-device"></a>Zarządzanie kontami użytkowników na urządzeniu
 
-Usługa Intune obsługuje wdrażanie zasad ochrony aplikacji na koncie tylko jednego użytkownika dla każdego urządzenia.
+Usługa Intune obsługuje wdrażanie zasad ochrony aplikacji na koncie jednego użytkownika dla każdego urządzenia.
 
 * W zależności od używanej aplikacji drugi użytkownik może być blokowany na urządzeniu. Jednak we wszystkich przypadkach zasady dotyczą tylko pierwszego użytkownika, który pobierze zasady ochrony aplikacji.
 
-  * Programy **Microsoft Word**, **Excel** i **PowerPoint** nie blokują drugiego konta użytkownika, ale zasady ochrony aplikacji nie są stosowane do tego konta.
+  * Programy **Microsoft Word**, **Excel** i **PowerPoint** nie będą blokować dostępu do dodatkowego konta użytkownika. Zasady ochrony aplikacji nie będą mieć jednak wpływu na konto użytkownika.
 
-  * W przypadku **aplikacji OneDrive i Outlook** możesz używać tylko jednego konta służbowego.  Dodawanie większej liczby kont służbowych w tych aplikacjach jest zablokowane.  Możesz natomiast usunąć użytkownika na urządzeniu i dodać innego użytkownika.
-
-
-* Jeśli urządzenie ma wiele istniejących kont użytkowników przed wdrożeniem zasad ochrony aplikacji, pierwsze konto, na którym wdrożono zasady ochrony aplikacji, jest zarządzane przez zasady ochrony aplikacji usługi Intune.
+  * W przypadku **aplikacji OneDrive i Outlook** możesz używać tylko jednego konta służbowego.  Dodawanie większej liczby kont służbowych w tych aplikacjach jest zablokowane.  Jednak możesz usunąć użytkownika z urządzenia, a następnie dodać innego użytkownika do urządzenia.
 
 
-Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasady traktowania wielu kont użytkowników.
+* Przed wdrożeniem zasad ochrony aplikacji urządzenie może mieć wiele istniejących kont użytkowników. W takim przypadku pierwsze konto, na którym są wdrażane zasady ochrony aplikacji, będzie zarządzane przez zasady ochrony aplikacji usługi Intune.
 
-Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady ochrony aplikacji za pomocą usługi Intune. **Firma X** wdraża zasady ochrony aplikacji **przed** **Firmą Y**. Zasady ochrony aplikacji zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane przez zasady ochrony aplikacji, musisz usunąć konto użytkownika skojarzone z Firmą X.
+
+Przeczytaj poniższy przykładowy scenariusz, aby dowiedzieć się, jak usługa Intune obsługuje wiele kont użytkowników.
+
+Użytkownik A pracuje dla dwóch firm: **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady ochrony aplikacji za pomocą usługi Intune. **Firma X** wdraża zasady ochrony aplikacji **przed** **Firmą Y**. Zasady ochrony aplikacji zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Aby konto użytkownika skojarzone z Firmą Y było zarządzane przez zasady ochrony aplikacji, użytkownik A musi usunąć konto użytkownika skojarzone z Firmą X.
 ### <a name="adding-a-second-account"></a>Dodawanie drugiego konta
 ####  <a name="android"></a>Android
-Jeśli korzystasz z urządzenia z systemem Android, może zostać wyświetlony komunikat o blokadzie z instrukcjami usunięcia istniejącego konta i dodania nowego.  Aby usunąć istniejące konto, przejdź do pozycji **Ustawienia &gt; Ogólne &gt; Menedżer aplikacji &gt; Portal firmy, a następnie wybierz pozycję „Wyczyść dane”**.
+Może pojawić się monit o usunięcie istniejącego konta i dodanie nowego.  Aby usunąć istniejące konto, przejdź do pozycji **Ustawienia &gt;Ogólne &gt; Menedżer aplikacji &gt;Portal firmy. Następnie wybierz pozycję „Wyczyść dane”.**
 
 ![Zrzut ekranu komunikatu o błędzie i instrukcjami dotyczącymi usunięcia konta](./media/android-switch-user.png)
 
@@ -77,7 +77,7 @@ Obsługiwane są następujące typy plików:
 ------------
 |**pfile**|**tekst**|
 |----|----|
-|Pfile jest ogólnym formatem „otoki” dla plików chronionych, który hermetyzuje zaszyfrowaną zawartość i licencje usługi Azure Information Protection oraz może służyć do ochrony dowolnego typu pliku.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|Pfile to ogólny format „otoki” chronionych plików. Hermetyzuje on zaszyfrowaną zawartość i licencje usługi Azure Information Protection. Może służyć do ochrony pliku dowolnego typu.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
 ---------------
 ## <a name="next-steps"></a>Następne kroki
 [Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)

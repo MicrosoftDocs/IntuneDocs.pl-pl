@@ -1,6 +1,7 @@
 ---
-title: "Komunikaty aplikacji Portal firmy, które mogą zobaczyć użytkownicy korzystający z systemu Android"
-description: "Opis komunikatów, które mogą zobaczyć użytkownicy końcowi usługi Intune."
+title: "Komunikaty aplikacji Portal firmy, które mogą być wyświetlane na urządzeniach użytkowników"
+titlesuffix: Microsoft Intune
+description: "Wyjaśnienie różnych komunikatów, które użytkownicy końcowi mogą zobaczyć w aplikacji Portal firmy."
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -13,11 +14,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
-ms.openlocfilehash: 58468a81d0ec3e7bfc051a6edc6a09ef1c5e62a2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: e78d43cf1cb96575ebc8d8143b7b4fc1103a9bd1
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > Poniższe informacje dotyczą tylko urządzeń z systemem Android 6.0 lub nowszym.
 
-Użytkownicy końcowi zobaczą na różnych etapach procesu rejestracji dwa różne komunikaty, które mogą ich zaniepokoić.
+Wyjaśnienie różnych komunikatów, które użytkownicy końcowi mogą zobaczyć w aplikacji Portal firmy. Te komunikaty aplikacji są często wyświetlane na różnych etapach procesu rejestracji. Dowiedz się, gdzie są wyświetlane te komunikaty, co oznaczają i co się stanie, jeśli użytkownik nie zezwoli na dostęp. Dowiedz się również, jak najlepiej wyjaśnić znaczenie tych komunikatów użytkownikom.
 
 - __Zezwolić aplikacji Portal firmy na połączenia telefoniczne i zarządzanie nimi?__
 - __Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?__
@@ -42,7 +43,7 @@ Akceptując ten monit, użytkownicy zezwalają na przesłanie numeru telefonu i 
 > [!NOTE]
 > **Aplikacja Portal firmy nigdy nie wykonuje połączeń telefonicznych ani nimi nie zarządza.** Tekst komunikatu jest kontrolowany przez firmę Google i nie można go zmienić.
 
-Aby wyświetlić stronę **Sprzęt**, wybierz pozycję **Grupy** > **Wszystkie urządzenia przenośne** > **Urządzenia**. Wybierz urządzenie użytkownika, a następnie wybierz pozycje **Wyświetl właściwości** > **Sprzęt**.
+Aby wyświetlić stronę **Sprzęt**, należy wybrać pozycję **Grupy** > **Wszystkie urządzenia przenośne** > **Urządzenia**. Wybierz urządzenie użytkownika, a następnie wybierz pozycje **Wyświetl właściwości** > **Sprzęt**.
 
 ### <a name="what-happens-if-users-deny-access"></a>Co się stanie, gdy użytkownik nie zezwoli na dostęp
 Użytkownicy, którzy wybiorą opcję odmowy dostępu, mogą nadal korzystać z aplikacji Portal firmy i zarejestrować swoje urządzenie. Pola numeru telefonu i numeru IMEI urządzenia pozostaną jednak puste na stronie __Sprzęt__ w konsoli administracyjnej. Podczas drugiego logowania użytkownika do aplikacji Portal firmy po odmowie dostępu w komunikacie zostanie wyświetlone pole wyboru **Nigdy nie pytaj ponownie**. Jego zaznaczenie spowoduje, że komunikat przestanie być wyświetlany.
@@ -81,7 +82,7 @@ Odeślij użytkowników do sekcji [Rejestrowanie urządzenia z systemem Android 
 Komunikat **Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?** jest wyświetlany, gdy użytkownik wybierze opcję **Wyślij dane**, aby wysłać dzienniki do administratora IT.
 
 ### <a name="what-it-means"></a>Znaczenie
-Akceptując ten monit, użytkownicy zezwalają swoim urządzeniom na zapisywanie dzienników danych na kartach SD oraz umożliwiają przenoszenie tych dzienników za pośrednictwem kabla USB.   
+Akceptując ten monit, użytkownicy zezwalają swoim urządzeniom na zapisywanie dzienników danych na karcie SD urządzenia. To umożliwia też przenoszenie tych dzienników za pośrednictwem kabla USB.   
 
 > [!NOTE]
 > **Aplikacja Portal firmy nigdy nie uzyskuje dostępu do zdjęć, multimediów ani plików użytkownika.** Tekst komunikatu jest kontrolowany przez firmę Google i nie można go zmienić.
@@ -89,7 +90,7 @@ Akceptując ten monit, użytkownicy zezwalają swoim urządzeniom na zapisywanie
 ### <a name="what-happens-if-users-deny-access"></a>Co się stanie, gdy użytkownik nie zezwoli na dostęp
 Jeśli użytkownik nie zezwoli na dostęp, nadal może wysyłać dzienniki danych za pośrednictwem poczty e-mail, ale dzienniki nie będą kopiowane na kartę SD urządzenia.
 
-Podczas drugiego logowania użytkownika do aplikacji Portal firmy po odmowie dostępu w komunikacie zostanie wyświetlone pole wyboru **Nigdy nie pytaj ponownie**. Jego zaznaczenie spowoduje, że komunikat nigdy nie zostanie wyświetlony ponownie. Jeśli użytkownik zezwoli na dostęp, lecz potem anuluje zezwolenie, komunikat zostanie wyświetlony podczas następnej próby wysłania dzienników przez użytkownika. Jeśli później użytkownik zdecyduje się zezwolić na dostęp, może wybrać pozycję **Ustawienia** > **Aplikacje** > **Portal firmy** > **Uprawnienia** > **Pamięć** i włączyć uprawnienie.
+Podczas drugiego logowania użytkownika do aplikacji Portal firmy po odmowie dostępu w komunikacie zostanie wyświetlone pole wyboru **Nigdy nie pytaj ponownie**. Jego zaznaczenie spowoduje, że komunikat nigdy nie zostanie wyświetlony ponownie. Jeśli użytkownik zezwoli na dostęp, lecz potem anuluje zezwolenie, komunikat zostanie wyświetlony podczas następnej próby wysłania dzienników przez użytkownika. Jeśli jednak później użytkownik zdecyduje się zezwolić na dostęp, może wybrać pozycję **Ustawienia** > **Aplikacje** > **Portal firmy** > **Uprawnienia** > **Pamięć** i włączyć uprawnienie.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak wyjaśnić to użytkownikom
@@ -101,7 +102,7 @@ Odeślij użytkowników do sekcji [Wysyłanie dzienników do administratora IT p
 Jeśli aplikacja Portal firmy nie została dodana do listy **Dozwolone aplikacje** lub **Aplikacje wykluczone**, a użytkownik spróbuje się zalogować, logowanie nie powiedzie się. Zostanie wyświetlony następujący komunikat:
 
 > **Dział pomocy technicznej firmy musi udzielić Ci dostępu do zasobów firmy**  
-> Firma używa zasad usługi Windows Information Protection do ochrony Twojego urządzenia. Dział pomocy technicznej firmy musi się upewnić, że aplikacja Portal firmy ma do nich dostęp.
+> Firma używa zasad usługi Windows Information Protection do ochrony Twojego urządzenia. Dział pomocy technicznej firmy musi się upewnić, że aplikacja Portal firmy ma dostęp do tych zasobów.
 
 ### <a name="what-it-means"></a>Znaczenie
 

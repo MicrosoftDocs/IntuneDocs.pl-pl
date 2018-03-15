@@ -3,8 +3,8 @@ title: "Konfigurowanie integracji usługi Lookout za pomocą usługi Intune"
 titlesuffix: Azure portal
 description: "Konfigurowanie subskrypcji usługi Lookout za pomocą usługi Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 891fbda72d38b829397158a75bdceeb452bc8d3b
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: fa13ee9239dcb1f62f4fb06e876ecc272a8f620c
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Threat Defense za pomocą usługi Intune
 
@@ -54,7 +54,7 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji.
 
 3. Wyszukaj identyfikator grupy usługi Azure AD. Konsola usługi Lookout obsługuje 2 poziomy dostępu:  
-  * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy będą mieć pełny dostęp i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
+  * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy mają pełny dostęp, i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
   * **Ograniczony dostęp:** użytkownicy w tej grupie nie będą mieć dostępu do kilku modułów konsoli usługi Lookout związanych z konfiguracją oraz rejestracją i będą mieć dostęp tylko do odczytu do modułu **Security Policy** (Zasady zabezpieczeń) konsoli usługi Lookout.  
 
     > [!TIP] 
@@ -131,7 +131,7 @@ Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla ur
 > Poziomy ryzyka są istotnym elementem usługi Mobile Threat Defense, ponieważ podczas integracji usługi Intune na ich podstawie jest określana zgodność urządzenia w czasie wykonywania. Administrator usługi Intune ustawia regułę w zasadach, aby uznawać urządzenie za niezgodne, jeśli zawiera ono aktywne zagrożenie z **wysokim**, **średnim** lub **niskim** poziomem ryzyka. Obliczanie zgodności urządzenia w usłudze Intune zależy bezpośrednio od zasad klasyfikacji zagrożeń w usłudze Lookout Mobile Threat Defense.
 
 ## <a name="watching-enrollment"></a>Obserwowanie rejestracji
-Po zakończeniu konfiguracji usługa Lookout Mobile Threat Defense rozpoczyna sondowanie usługi Azure AD pod kątem urządzeń, które odpowiadają określonym grupom rejestracji.  Informacje o zarejestrowanych urządzeniach znajdują się w module Devices (Urządzenia).  Początkowy stan urządzeń jest wyświetlany jako oczekujący.  Stan urządzenia ulega zmianie po zainstalowaniu, otwarciu i aktywowaniu aplikacji Lookout for Work na danym urządzeniu.  Aby uzyskać szczegółowe informacje na temat sposobu wypychania aplikacji Lookout for Work do urządzenia, zobacz temat [Add Lookout for work apps with Intune (Dodawanie aplikacji Lookout for Work za pomocą usługi Intune)](mtd-apps-ios-app-configuration-policy-add-assign.md).
+Po zakończeniu konfiguracji usługa Lookout Mobile Threat Defense rozpoczyna sondowanie usługi Azure AD pod kątem urządzeń, które odpowiadają określonym grupom rejestracji.  Informacje o zarejestrowanych urządzeniach znajdują się w module Devices (Urządzenia).  Początkowy stan urządzeń jest wyświetlany jako oczekujący.  Stan urządzenia ulega zmianie po zainstalowaniu, otwarciu i aktywowaniu aplikacji Lookout for Work na danym urządzeniu.  Aby uzyskać szczegółowe informacje na temat sposobu wypychania aplikacji Lookout for Work do urządzenia, zobacz [Add Lookout for work apps with Intune (Dodawanie aplikacji Lookout for Work za pomocą usługi Intune)](mtd-apps-ios-app-configuration-policy-add-assign.md).
 
 ## <a name="next-steps"></a>Następne kroki
 

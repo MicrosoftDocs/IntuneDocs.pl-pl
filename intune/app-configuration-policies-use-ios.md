@@ -1,6 +1,6 @@
 ---
-title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS | Microsoft Docs"
-titlesuffix: Azure portal
+title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS"
+titlesuffix: Microsoft Intune
 description: "Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji dla systemu iOS po jej uruchomieniu."
 keywords: 
 author: erikre
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b64d8b60a4c577acc2f6ef161f6de37ac529e7ac
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: bdaec3150062dce5da5566fa9534425e11f3cdec
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -44,34 +44,34 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 
 ## <a name="create-an-app-configuration-policy"></a>Tworzenie zasad konfiguracji aplikacji
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz opcję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz obciążenie **Aplikacje mobilne**.
 4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
     - **Nazwa**<br>
-      — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
+      Nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis**<br>
-      — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
+      Opis profilu, który będzie wyświetlany w witrynie Azure Portal.
     - **Typ rejestracji urządzenia**<br>
       Wybierz pozycję **Urządzenia zarządzane**.
 6. Dla elementu **Platforma** wybierz pozycję **iOS**.
-7.  Wybierz pozycję **Skojarzona aplikacja**. Następnie w bloku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację.
-8.  W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
+7.  Wybierz pozycję **Skojarzona aplikacja**. Następnie w okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację, a następnie wybierz opcję **OK**.
+8.  W okienku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
 9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z poniższych opcji:
     - **[Korzystanie z projektanta konfiguracji](#use-configuration-designer)**
     - **[Wprowadzanie danych XML](#enter-xml-data)**
-10. Po dodaniu informacji XML wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlony blok omówienia zasad konfiguracji.
+10. Po dodaniu informacji XML wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlone okienko omówienia zasad konfiguracji.
 11. Wybierz pozycję **Przypisania**, aby wyświetlić opcje dołączania i wykluczania. 
 
-    ![Przypisania zasad](./media/app-config-policy01.png)
+    ![Zrzut ekranu karty Dołącz okna przypisywania zasad](./media/app-config-policy01.png)
 12. Wybierz pozycję **Wszyscy użytkownicy** na karcie **Dołącz**.
 
-    ![Przypisania zasad — wszyscy użytkownicy](./media/app-config-policy02.png)
+    ![Zrzut ekranu przypisywania zasad — opcja listy rozwijanej Wszyscy użytkownicy](./media/app-config-policy02.png)
 13. Wybierz kartę **Wyklucz**. 
-14. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązany blok.
+14. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
 
-    ![Przypisania zasad — Wybierz grupy do wykluczenia](./media/app-config-policy03.png)
+    ![Zrzut ekranu bloku Przypisanie zasad — Wybierz grupy do wykluczenia](./media/app-config-policy03.png)
 15. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
 
     >[!NOTE]
@@ -104,7 +104,7 @@ Znaki \{\{ i \}\} są używane tylko przez typy tokenów i nie mogą być używa
 
 Możesz wpisać lub wkleić listę właściwości XML zawierającą ustawienia konfiguracji aplikacji dla urządzeń zarejestrowanych w usłudze Intune. Format listy właściwości XML różni się zależnie od konfigurowanej aplikacji. Aby uzyskać szczegółowe informacje na temat dokładnego formatu do użycia, skontaktuj się z dostawcą aplikacji.
 
-Usługa Intune weryfikuje format XML. Nie sprawdza ona jednak, czy lista właściwości XML (PList) będzie współdziałać z docelową aplikacją.
+Usługa Intune weryfikuje format XML. Nie sprawdza ona jednak, czy lista właściwości XML (PList) współpracuje z docelową aplikacją.
 
 Aby dowiedzieć się więcej na temat list właściwości XML:
 

@@ -1,6 +1,6 @@
 ---
-title: "Rejestrowanie urządzeń z systemem Android w usłudze Intune | Microsoft Docs"
-titlesuffix: Azure portal
+title: "Rejestrowanie urządzeń z systemem Android w usłudze Intune"
+titlesuffix: Microsoft Intune
 description: "Informacje o sposobie rejestrowania urządzeń z systemem Android w usłudze Intune."
 keywords: 
 author: ErikjeMS
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e137da3ad4121f4b9cdfbb765ee00f71beca610a
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
@@ -43,14 +43,14 @@ Aby włączyć zarządzanie urządzeniami, użytkownicy muszą zarejestrować ur
 
 ## <a name="enable-enrollment-of-android-for-work-devices"></a>Włączanie rejestracji urządzeń z programem Android for Work
 
-Aby włączyć zarządzanie profilem służbowym na urządzeniach [obsługujących program Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), dodaj powiązanie programu Android for Work do usługi Intune. Aby zarejestrować urządzenia, które obsługują program Android for Work, ale zostały wcześniej zarejestrowane jako zwykłe urządzenia z systemem Android, musisz wyrejestrować urządzenia i ponownie je zarejestrować.
+Aby włączyć zarządzanie profilem służbowym na urządzeniach [obsługujących program Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), dodaj powiązanie programu Android for Work do usługi Intune. Jeśli chcesz zarejestrować urządzenia w programie Android for Work, ale zostały one już zarejestrowane jako zwykłe urządzenia z systemem Android, musisz wyrejestrować te urządzenia i ponownie je zarejestrować.
 
 W przypadku rejestrowania urządzeń z programem Android for Work za pomocą konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) na jednym koncie można zarejestrować maksymalnie 10 urządzeń.
 
 ## <a name="add-android-for-work-binding-for-intune"></a>Dodawanie powiązania programu Android for Work dla usługi Intune
 
 > [!NOTE]
-> Ze względu na interakcję między domenami firm Google i Microsoft ten krok może wymagać dostosowania ustawień przeglądarki, aby pomyślnie zakończyć akcję.  Upewnij się, że witryny „portal.azure.com” i „play.google.com” znajdują się w tej samej strefie zabezpieczeń w przeglądarce.
+> Ze względu na interakcję między domenami firm Google i Microsoft ten krok może wymagać dostosowania ustawień przeglądarki, aby pomyślnie zakończyć akcję.  Upewnij się, że adresy „portal.azure.com” i „play.google.com” znajdują się w tej samej strefie zabezpieczeń w przeglądarce.
 
 1. **Konfigurowanie funkcji zarządzania urządzeniami mobilnymi w usłudze Intune**<br>
 Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządzeniami mobilnymi przez [skonfigurowanie jako urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md) usługi **Microsoft Intune**.
@@ -58,7 +58,7 @@ Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządze
     Jako administrator usługi Intune wybierz w witrynie Azure Portal pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
 
    a. W bloku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work** i wybierz pozycję **Konfiguruj**, aby otworzyć witrynę internetową sklepu Google Play dotyczącą programu Android for Work. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
-   ![Zrzut ekranu przedstawiający link do konfiguracji powiązania programu Android for Work](./media/android-work-bind.png)
+   ![Ekran rejestracji programu Android for Work](./media/android-work-bind.png)
 
    b. **Logowanie do usługi Google**<br>
    Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Jest to konto Google używane przez administratorów IT organizacji do zarządzania aplikacjami i ich publikowania w konsoli Play for Work. Możesz użyć istniejącego konta Google lub utworzyć nowe konto.  Wybrane konto nie może być skojarzone z domeną G-Suite.
@@ -79,7 +79,7 @@ Wykonaj następujące kroki, aby zatwierdzić aplikację Portal firmy usługi In
 
 1.  Przejdź do aplikacji Portal firmy w [zarządzanym sklepie Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
 2.  Zaloguj się do zarządzanego sklepu Google Play za pomocą tego samego konta, którego użyto do skonfigurowania powiązania na potrzeby programu Android for Work.
-3.  Kliknij pozycję **Zatwierdź**.  Spowoduje to otwarcie nowego okna dialogowego.
+3.  Kliknij pozycję **Zatwierdź**, co spowoduje otwarcie nowego okna dialogowego.
 4.  Przejrzyj uprawnienia w tym oknie dialogowym, a następnie kliknij przycisk **Zatwierdź**. Jest to konieczne, aby zezwolić na te uprawnienia w celu umożliwienia aplikacji Portal firmy zarządzanie profilem służbowym na urządzeniu.
 5.  Wybierz pozycję **Utrzymuj zatwierdzenie, gdy aplikacja żąda nowych uprawnień**, a następnie kliknij przycisk **Zapisz**.
 

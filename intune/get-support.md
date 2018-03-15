@@ -1,10 +1,10 @@
 ---
 title: "Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune"
-titlesuffix: Azure portal
-description: "Pomoc techniczna jest dostępna online i telefonicznie w przypadku subskrypcji płatnych i ich wersji próbnych."
+titlesuffix: Microsoft Intune
+description: "Uzyskaj pomoc techniczną online i telefoniczną dla płatnych i próbnych subskrypcji usługi Microsoft Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 00a7bf5b3f5df58e29c3eb92a516b1ace3eea705
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 5cb06625351e67bea8b467f6ab6873d258ee8175
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/14/2018
 Firma Microsoft zapewnia globalne wsparcie dotyczące kwestii technicznych, przedsprzedaży, rozliczeń i subskrypcji dla usługi Microsoft Intune. Pomoc techniczna jest dostępna online i telefonicznie w przypadku subskrypcji wersji próbnych i płatnych. Pomoc techniczna online jest dostępna w języku angielskim i japońskim. Telefoniczna pomoc techniczna i pomoc online związana z rozliczeniami są dostępne w dodatkowych językach.
 
 >[!IMPORTANT]
-> Aby uzyskać pomoc techniczną dotyczącą produktów, które działają z usługą Intune, ale nie zostały przygotowane przez firmę Microsoft, na przykład Saaswedo, Cisco lub Lookout, najpierw skontaktuj się z dostawcą danego produktu. Zanim utworzysz żądanie obsługi usługi Intune, upewnij się, że produkt został poprawnie skonfigurowany.
+> Aby uzyskać pomoc techniczną dotyczącą produktów innych firm, które działają z usługą Intune (na przykład Saaswedo, Cisco lub Lookout), najpierw skontaktuj się z dostawcą danego produktu. Zanim utworzysz żądanie obsługi usługi Intune, upewnij się, że produkt został poprawnie skonfigurowany.
 
 ## <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online
 
@@ -41,16 +41,20 @@ Jako administrator IT możesz utworzyć bilet pomocy technicznej z poziomu witry
 2. Na stronie Pomoc i obsługa techniczna w witrynie Azure wybierz pozycję **Nowe żądanie obsługi**.
 
     ![Zrzut ekranu przedstawiający stronę pomocy i obsługi technicznej witryny Azure Portal z wyróżnionym linkiem Nowe żądanie obsługi](./media/azure-support-ticket-link.png)
+
 3. W bloku **Podstawowe** w przypadku większości problemów technicznych z usługą Intune wybierz następujące opcje:
     - **Typ problemu**: **Techniczny**
     - **Usługa**: **Microsoft Intune**
-    - **Plan pomocy technicznej**: **Subskrypcja z pomocą techniczną w pakiecie** (w przypadku problemów technicznych z usługą Intune pomoc techniczna jest bezpłatna).
-
+    - **Plan pomocy technicznej**: **Subskrypcja z pomocą techniczną w pakiecie** (w przypadku problemów technicznych z usługą Intune pomoc techniczna jest bezpłatna) lub **Premier**
+    
     >[!IMPORTANT]
-    >Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Aby poznać szczegóły pomocy technicznej Premier, zapoznaj się z sekcją 5.3.3 dokumentacji [Opis usług](https://www.microsoft.com/microsoftservices/services-list.aspx) dotyczącą usług doradczych.
+    >- Jeśli jesteś **klientem planu Premier** i nie widzisz opcji **Plan pomocy technicznej: Premier**, skontaktuj się z menedżerem ds. technicznych, aby uzyskać pomoc w powiązaniu umowy i dzierżawy.
+    >- Pomoc techniczna dla usługi Intune oraz dla usługi Intune, gdy jest używana z programem Configuration Manager, jest bezpłatna. Aby poznać szczegóły pomocy technicznej Premier, zapoznaj się z sekcją 5.3.3 dokumentacji [Opis usług](https://enterprise.microsoft.com/en-us/services/services-list/) dotyczącą usług doradczych.
 
     Wybierz pozycję **Dalej**, aby kontynuować.
+
 4. Aby mieć pewność, że zgłoszonym problemem zajmie się odpowiedni specjalista, w bloku **Problem** wybierz poniższe opcje:
+
     - **Ważność**
     - **Typ problemu**
     - **Kategoria**
@@ -59,13 +63,15 @@ Jako administrator IT możesz utworzyć bilet pomocy technicznej z poziomu witry
 
     ![Zrzut ekranu strony Pomoc i obsługa techniczna witryny Azure Portal z wpisanymi problemami i wyświetlonymi rozwiązaniami](./media/support-need-solutions.png)
 
-    Aby pomóc nam w zbadaniu i rozwiązaniu problemu, wprowadź następujące informacje:
-    -   **Szczegóły**
+    Aby pomóc zespołowi pomocy technicznej w zbadaniu i rozwiązaniu problemu, wprowadź następujące informacje:
+    
+    - **Szczegóły**
     - **Data**
     - **Godzina**
-    - Dane dodatkowe
+    - **Dane dodatkowe**
 
     Wybierz pozycję **Next** (Dalej).
+
 5. Podaj **Informacje kontaktowe** na potrzeby tego żądania obsługi. Dział pomocy technicznej firmy Microsoft używa tych informacji do kontaktowania się z użytkownikami zgłaszającymi problem.
 6. Wybierz pozycję **Utwórz**, aby przesłać żądanie obsługi.
 
@@ -74,6 +80,5 @@ Jako administrator IT możesz utworzyć bilet pomocy technicznej z poziomu witry
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 - [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](phone-support-contact.md)
-- [Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkID=282016)
 - [Pomoc dotycząca rozliczeń i subskrypcji](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Licencjonowanie zbiorowe](http://go.microsoft.com/fwlink/p/?LinkID=282015)
