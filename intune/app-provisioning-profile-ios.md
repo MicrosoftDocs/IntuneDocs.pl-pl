@@ -15,11 +15,11 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7637dcb3aba4f46a3e97c8de47d974b46af27b47
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 87d97ddd4c70236193d4e6bb12ac6d68e4085903
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-ios-mobile-provisioning-profiles-in-intune-to-prevent-your-apps-from-expiring"></a>Użycie profilów aprowizowania aplikacji mobilnych systemu iOS w usłudze Intune w celu zapobiegania wygaśnięciu aplikacji
 
@@ -40,7 +40,7 @@ Po wygaśnięciu certyfikatu należy ponownie podpisać aplikację przy użyciu 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak utworzyć profil aprowizowania aplikacji mobilnych systemu iOS
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzanie** > **Profile aprowizacji aplikacji systemu iOS**.
 2.  W okienku listy profilów wybierz pozycję **Utwórz profil**.
