@@ -15,11 +15,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 283685629ac1e268a66d82250273a17f9baa5d17
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 2539ff1703809f5f89183a9d0cfd448f2e57fd64
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem Android w usłudze Intune
 
@@ -71,8 +71,6 @@ Aplikacje ładowania bezpośredniego wymagają włączenia ustawienia **Nieznane
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli dotyczące go zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: to ustawienie zapewnia najniższy poziom zabezpieczeń. Zasadniczo to ustawienie dopuszcza wszystkie poziomy zagrożeń. Ustawienie to może być przydatne na przykład w przypadku użycia rozwiązania tylko na potrzeby raportowania.
 
-Aby uzyskać więcej informacji, zobacz [Włączanie reguły ochrony urządzenia przed zagrożeniami w zasadach zgodności](https://docs.microsoft.com/intune-classic/deploy-use/enable-device-threat-protection-rule-in-compliance-policy).
-
 ## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
 ### <a name="password"></a>Hasło
@@ -109,12 +107,12 @@ W tabeli poniżej opisano sposób postępowania z niezgodnymi ustawieniami w prz
 
 |**Ustawienie zasad**| **System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy** |
 | --- | ----|
-| **Konfiguracja kodu PIN lub hasła** |  Kwarantanna |
-| **Szyfrowanie urządzenia** | Kwarantanna |
+| **Konfiguracja kodu PIN lub hasła** |  Poddane kwarantannie |
+| **Szyfrowanie urządzenia** | Poddane kwarantannie |
 | **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Poddane kwarantannie (to nie jest ustawienie) |
 | **profil e-mail** | Nie dotyczy |
-| **Minimalna wersja systemu operacyjnego** | Kwarantanna |
-| **Maksymalna wersja systemu operacyjnego** |   Kwarantanna |
+| **Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
+| **Maksymalna wersja systemu operacyjnego** |   Poddane kwarantannie |
 | **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |
 
 --------------------------
