@@ -1,12 +1,12 @@
 ---
-title: "Włączanie łącznika Mobile Threat Defense przy użyciu usługi Intune"
+title: "Włączanie łącznika Mobile Threat Defense w usłudze Microsoft Intune"
 titlesuffix: Azure portal
-description: "Włącz łącznik Mobile Threat Defense w usłudze Intune."
+description: "Włącz łącznik między partnerem usługi Mobile Threat Defense (MTD) i usługą Microsoft Intune."
 keywords: 
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,30 +15,30 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99b73cb0885c4d93cf91ea219ca98a8a81d67b39
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 28233965fb68ef1b83b07d14d39568b5bd997c89
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="enable-mobile-threat-defense-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
+# <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
 > [!NOTE] 
 > Niniejszy temat dotyczy wszystkich partnerów usługi Mobile Threat Defense.
 
-Aby włączyć połączenie z usługą Mobile Threat Defense (MTD) w usłudze Intune, należy wcześniej skonfigurować łącznik usługi Intune w konsoli rozwiązania MTD.
+Podczas konfiguracji usługi Mobile Threat Defense (MTD) skonfigurowano zasady służące do klasyfikowania zagrożeń w konsoli partnera usługi MTD i utworzono zasady zgodności urządzeń w usłudze Intune. Jeśli łącznik usługi Intune został już skonfigurowany w konsoli partnera usługi MTD, możesz teraz włączyć połączenie z usługą MTD w usłudze Intune.
 
 ## <a name="to-enable-the-mtd-connector"></a>Aby włączyć łącznik MTD
 
 1. Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune. Po pomyślnym zalogowaniu zostanie wyświetlona strona **Pulpit nawigacyjny Azure**.
 
-2. Na stronie **Pulpit nawigacyjny Azure** w menu po lewej stronie wybierz opcję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+2. Na stronie **Pulpit nawigacyjny platformy Azure** w menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz wartość **Intune**.
 
-3. Wybierz pozycję **Intune**. Zostanie otwarty **Pulpit nawigacyjny Intune**.
+3. Wybierz pozycję **Intune**. Zostanie otwarta strona **Pulpit nawigacyjny platformy Azure**.
 
 4. Na stronie **Pulpit nawigacyjny usługi Intune** wybierz opcję **Zgodność urządzeń**, a następnie wybierz opcję **Mobile Threat Defense** pod sekcją **Instalator**.
 
-5. W bloku **Mobile Threat Defense** wybierz opcję **Dodaj**.
+5. W okienku **Mobile Threat Defense** wybierz pozycję **Dodaj**.
 
 6. Z listy rozwijanej wybierz rozwiązanie MTD jako wartość pola **Łącznik usługi Mobile Threat Defense do instalacji**.
 
@@ -48,7 +48,7 @@ Aby włączyć połączenie z usługą Mobile Threat Defense (MTD) w usłudze In
 
 ## <a name="mtd-toggle-options"></a>Opcje przełącznika usługi MTD
 
-Zgodnie z wymaganiami danej organizacji można określić, które opcje przełącznika usługi MTD należy włączyć. Poniżej znajdziesz więcej szczegółów:
+Zgodnie z wymaganiami danej organizacji można określić, które opcje przełącznika usługi MTD należy włączyć. Poniżej przedstawiono więcej informacji:
 
 - **Połącz urządzenia z systemem Android 4.1 lub nowszym z usługą [nazwa partnera MTD]**: po włączeniu tej opcji urządzenia z systemem Android 4.1 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
     - **Oznacz jako niezgodne w przypadku nieodebrania żadnych danych**: jeśli usługa Intune nie odbiera danych dotyczących urządzenia na tej platformie od partnera MTD, należy uznać to urządzenie za niezgodne.
@@ -64,4 +64,4 @@ Zgodnie z wymaganiami danej organizacji można określić, które opcje przełą
 > Aplikacje MTD należy dodać i przypisać przed utworzeniem reguł zasad dotyczących zgodności urządzeń oraz dostępu warunkowego. Dzięki temu dana aplikacja MTD będzie gotowa i dostępna do zainstalowania dla użytkowników końcowych, zanim będą oni mogli uzyskać dostęp do poczty e-mail lub innych zasobów firmy.
 
 > [!TIP]
-> W bloku usługi Mobile Threat Defense widać **Stan połączenia** i czas **ostatniej synchronizacji** między usługą Intune a partnerem MTD.
+> W okienku usługi Mobile Threat Defense wyświetlany jest **stan połączenia** i czas **ostatniej synchronizacji** między usługą Intune a partnerem usługi MTD.

@@ -1,12 +1,12 @@
 ---
-title: "Konfigurowanie łącznika Exchange dla lokalnego programu EAS w usłudze Intune"
-titleSuffix: Azure portal
-description: "Użycie łącznika w celu umożliwienia komunikacji między usługą Intune a lokalnym serwerem Exchange"
+title: "Konfigurowanie lokalnego programu Exchange Connector usługi Microsoft Intune"
+titleSuffix: 
+description: "Za pomocą lokalnego programu Exchange Connector możesz zarządzać dostępem urządzeń do skrzynek pocztowych programu Exchange na podstawie rejestracji w usłudze Intune oraz programu Exchange Active Sync (EAS)."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb82b1a9af0cc8dd2f394747ce7ed8b695260bb9
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0caea2e8b7704fe2dfcbec937b59000ac2a12ae5
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
-Lokalne środowiska serwera Exchange mogą używać programu On-premises Exchange Connector w celu zarządzania dostępem urządzeń do skrzynek pocztowych Exchange w oparciu o to, czy urządzenia są zarejestrowane w usłudze Intune i spełniają zasady zgodności w usłudze Intune. Program On-premises Exchange Connector odpowiada także za odnajdywanie urządzeń mobilnych łączących się z lokalnymi serwerami programu Exchange poprzez synchronizowanie istniejącego rekordu programu Exchange Active Sync (EAS) z usługą Intune.
+Lokalne środowiska serwera Exchange mogą za pomocą lokalnego programu Exchange Connector zarządzać dostępem urządzeń do skrzynek pocztowych programu Exchange w oparciu o to, czy urządzenia są zarejestrowane w usłudze Intune i spełniają zasady zgodności w usłudze Intune. Program On-premises Exchange Connector odpowiada także za odnajdywanie urządzeń mobilnych łączących się z lokalnymi serwerami programu Exchange poprzez synchronizowanie istniejącego rekordu programu Exchange Active Sync (EAS) z usługą Intune.
 
 > [!IMPORTANT]
 > Usługa Intune obsługuje tylko jedno połączenie programu On-premises Exchange Connector dowolnego typu w ramach jednej subskrypcji.
@@ -70,11 +70,11 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego programu On-premises Exchange Connector otwórz [witrynę Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika, który jest administratorem lokalnego serwera Exchange i ma licencję na korzystanie z programu Exchange Server.
 
-2. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
 3. Wybierz pozycję **Intune**, a po otwarciu pulpitu nawigacyjnego usługi Intune wybierz opcję **Dostęp lokalny**.
 
-4. W bloku **Dostęp lokalny — łącznik Exchange ActiveSync** w sekcji **Konfiguracja** wybierz polecenie **Pobierz łącznik lokalny**.
+4. Wybierz pozycję **Lokalny łącznik Exchange ActiveSync**, a następnie pozycję **Pobierz łącznik lokalny**.
 
 5.  Program On-Premises Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz polecenie **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
 
@@ -93,7 +93,7 @@ Wykonaj następujące kroki, aby zainstalować program Intune On-Premises Exchan
 
 3.  W oknie dialogowym **Microsoft Intune Exchange Connector** wybierz opcję **Lokalny program Microsoft Exchange Server** lub **Hostowany program Microsoft Exchange Server**.
 
-  ![Wybierz typ serwera Exchange Server](./media/intune-sa-exchange-connector-config.png)
+  ![Obraz przedstawiający miejsce, w którym należy wybrać typ serwera Exchange Server](./media/intune-sa-exchange-connector-config.png)
 
   W przypadku lokalnego serwera Exchange podaj jego nazwę lub w pełni kwalifikowaną nazwę domeny serwera Exchange, który hostuje rolę **serwera dostępu klienta**.
 
@@ -116,7 +116,7 @@ Wykonaj następujące kroki, aby zainstalować program Intune On-Premises Exchan
 
     5. W polach **Nazwa użytkownika (domena\nazwa_użytkownika)** i **Hasło** podaj poświadczenia wymagane do nawiązania połączenia z serwerem Exchange.
 
-    6.  Podaj poświadczenia administracyjne, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników w programie Exchange Server. Powiadomienia te można skonfigurować za pomocą reguł dostępu warunkowego w usłudze Intune.
+    6.  Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą zasad dostępu warunkowego w usłudze Intune.  
 
         Upewnij się, że usługa wykrywania automatycznego i usługi sieci Web programu Exchange są skonfigurowane na serwerze dostępu klienta programu Exchange. Aby uzyskać więcej informacji na ten temat, zapoznaj się z artykułem [Client Access server](https://technet.microsoft.com/library/dd298114.aspx) (Serwer dostępu klienta).
 

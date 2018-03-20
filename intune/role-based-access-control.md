@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 01/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e89ba73869d7453b74edb1e7f87f6c8edb210bf
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
 
@@ -70,22 +70,25 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 |Menedżerowie rejestracji urządzeń|Odczyt, aktualizowanie|
 |Urządzenia zarządzane|Odczyt, aktualizowanie<!--, Delete [To be added in 1803]-->|
 |Aplikacje mobilne|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
-|Reports|Odczyt|
+|Raporty|Odczyt|
 |Zdalne działania|Czyszczenie komputera, ponowny rozruch, zdalne blokowanie, wycofywanie, synchronizowanie urządzeń, czyszczenie|
 |Organizacja|Odczyt|
 
 ### <a name="to-assign-a-built-in-role"></a>Aby przypisać rolę wbudowaną
 
-1. W bloku **Role usługi Intune** wybierz rolę wbudowaną, którą chcesz przypisać.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Role usługi Intune**, a następnie wybierz pozycję **Wszystkie role**.
+1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
 
-2. W bloku <*nazwa roli*> - **Właściwości** wybierz pozycję **Zarządzaj**, a następnie **Przypisania**.
+2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**.
 
     > [!NOTE]
     > Nie można usunąć ani edytować ról wbudowanych
 
-3. W bloku roli niestandardowej wybierz pozycję **Przypisz**.
+3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
 
-4. W bloku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
+4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
     - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
     - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
 <br></br>
@@ -108,29 +111,29 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 1. Zaloguj się do [witryny Azure Portal](https://portal.azure.com) przy użyciu poświadczeń usługi Intune.
 
-2. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
 3. Wybierz pozycję **Intune**, a kiedy zostanie otwarty Pulpit nawigacyjny usługi Intune, wybierz pozycję **Role usługi Intune**.
 
-4. W bloku **Role usługi Intune** wybierz kolejno pozycje **Role usługi Intune**, **Dodaj niestandardowe**.
+4. W okienku **Role usługi Intune** wybierz pozycję **Wszystkie role** i wybierz pozycję **Dodaj niestandardowe**.
 
-5. W bloku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.
+5. W okienku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.
 
-3. W bloku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
+3. W okienku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
 
 4. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
 
-5. W bloku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w bloku **Role usługi Intune**.
+5. W okienku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w okienku **Role usługi Intune — Wszystkie role**.
 
 ### <a name="to-assign-a-custom-role"></a>Aby przypisać rolę niestandardową
 
-1. W bloku **Role usługi Intune** wybierz rolę niestandardową, którą chcesz przypisać.
+1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę niestandardową, którą chcesz przypisać.
 
-2. W bloku <*nazwa roli*> - **Właściwości** wybierz pozycję **Zarządzaj**, a następnie **Przypisania**. W tym bloku możesz również edytować i usuwać istniejące role.
+2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**. W tym okienku możesz również edytować i usuwać istniejące role.
 
-3. W bloku roli niestandardowej wybierz pozycję **Przypisz**.
+3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
 
-4. W bloku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
+4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
     - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
     - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
 <br></br>
@@ -140,6 +143,6 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 [Użyj roli operatora pomocy technicznej usługi Intune w portalu do rozwiązywania problemów](help-desk-operators.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przypisz role przy użyciu usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)

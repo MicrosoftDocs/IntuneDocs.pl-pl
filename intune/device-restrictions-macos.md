@@ -1,29 +1,29 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem macOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem macOS."
+title: "Ustawienia ograniczeń urządzeń z systemem macOS w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem macOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/31/2018
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a88cf11209726a622863339c3a6c117f7b83be1e
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 72c9036bd6062e719d55876d77f44123fe2af392
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="macos-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem macOS w usłudze Microsoft Intune
+# <a name="microsoft-intune-macos-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem macOS w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Ustawienia te umożliwiają zarządzanie urządzeniami z systemem macOS w profilu ograniczeń urządzenia.
+W tym artykule opisano ustawienia ograniczeń urządzeń, które można skonfigurować dla urządzeń z systemem macOS.
 
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
@@ -45,9 +45,9 @@ Na liście aplikacji z ograniczeniami można skonfigurować jedną z następują
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i identyfikator pakietu aplikacji (np. *com.apple.calculator*).
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domeny
 
 ### <a name="unmarked-email-domains"></a>Nieoznaczone domeny poczty e-mail
 
-W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
+W polu **Adres URL domeny poczty e-mail** dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
 

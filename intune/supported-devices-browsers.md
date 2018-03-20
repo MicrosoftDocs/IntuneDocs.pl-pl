@@ -1,5 +1,6 @@
 ---
-title: "Obsługiwane urządzenia — Microsoft Intune"
+title: "Systemy operacyjne i przeglądarki obsługiwane przez usługę Microsoft Intune"
+titleSuffix: 
 description: "Podaje listę obsługiwanych platform urządzeń i przeglądarki do zarządzania urządzeniami w usłudze Intune"
 keywords: 
 author: ErikjeMS
@@ -14,24 +15,19 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 11c4336979ee9089b218ea79ac826176d99492d9
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 1e58201620612118f0984a1c477b3fa3bc7e923a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Obsługiwane systemy operacyjne i przeglądarki
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Ten artykuł jest przeznaczony dla administratorów systemów odpowiedzialnych za zarządzanie urządzeniami w przedsiębiorstwie. Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](/intune-user-help/company-portal-frequently-asked-questions).
+Przed skonfigurowaniem usługi Microsoft Intune sprawdź obsługiwane systemy operacyjne i przeglądarki.
 
-Przed rozpoczęciem konfigurowania usługi Microsoft Intune przejrzyj poniższe wymagania:
-
-- [Obsługiwane systemy operacyjne](#intune-supported-operating-systems)
-- [listę obsługiwanych przeglądarek sieci Web umożliwiających korzystanie z usługi Intune.](#intune-supported-web-browsers)
-
-Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
+Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](/intune-user-help/company-portal-frequently-asked-questions). Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Systemy operacyjne obsługiwane przez usługę Intune
 

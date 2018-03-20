@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/17/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01c90818cf789bdb79b3b4efe5a1db8a2cf1cdfe
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6053eba7bcda74eaf3b2d7de8eecd81487ea3a8d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -52,28 +52,29 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Aby uzyskać i przekazać token usługi VPP firmy Apple
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Tokeny programu VPP dla systemu iOS**.
-2.  W bloku listy tokenów programu VPP kliknij pozycję **Dodaj**.
-3.  W bloku **Nowy token programu VPP** określ następujące informacje:
+2.  W okienku z listą tokenów programu VPP kliknij pozycję **Utwórz**.
+3.  W okienku **Nowy token programu VPP** określ następujące informacje:
     - **Plik tokenu programu VPP** — zapewnia, że jesteś zarejestrowanym uczestnikiem programu Volume Purchase Program for Business lub Volume Purchase Program for Education. Następnie pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
     - **Identyfikator firmy Apple** — wprowadź identyfikator firmy Apple dla konta skojarzonego z programem zakupów zbiorczych.
     - **Typ konta programu VPP** — wybierz opcję **Biznes** lub **Edukacja**.
-4. Gdy wszystko będzie gotowe, kliknij pozycję **Przekaż**.
+4. Po zakończeniu kliknij przycisk **Utwórz**.
 
-Token zostanie wyświetlony na liście w bloku tokenów.
+Token zostanie wyświetlony na liście w okienku tokenów.
 
 
 Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizować z usługą Intune, wybierając pozycję **Synchronizuj teraz**.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
+3. W okienku **Intune** wybierz pozycję **Książki elektroniczne**.
 1. W obciążeniu **Książki elektroniczne** wybierz opcję **Zarządzaj** > **Wszystkie książki elektroniczne**.
-2. W bloku listy książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
-3. W bloku <*nazwa książki*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
-4. Wybierz pozycję **Przypisz grupy**, a następnie w bloku **Wybierz grupy** wybierz grupy użytkowników usługi Azure AD, do których chcesz przypisać książkę. Grupy urządzeń nie są obecnie obsługiwane.
+2. W okienku z listą książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
+3. W okienku <*nazwa książki*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
+4. Wybierz pozycję **Przypisz grupy**, a następnie w okienku **Wybierz grupy** wybierz grupy użytkowników usługi Azure AD, do których chcesz przypisać książkę. Grupy urządzeń nie są obecnie obsługiwane.
 Wybierz akcję przypisania **Dostępne** lub **Wymagane**. 
 5. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 

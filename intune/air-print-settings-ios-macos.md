@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5f55d05dd39fca02e72535cbbff9afb8d575ed9f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7a8ef24a9e6946145bf69d279566f3b736e6efa1
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="airprint-settings-for-ios-and-macos-devices"></a>Ustawienia funkcji AirPrint dla urządzeń z systemami iOS i macOS
 
@@ -40,8 +40,9 @@ Wykonaj tę procedurę, aby dodać informacje o drukarkach AirPrint do ładunku 
 
 ## <a name="configure-an-airprint-profile"></a>Konfigurowanie profilu AirPrint
 
-1. W bloku **Funkcje urządzenia** wybierz pozycję **AirPrint**.
-2. Aby dodać miejsce docelowe funkcji AirPrint, wpisz w bloku **AirPrint** jego **adres IP** i **ścieżkę zasobu**, a następnie kliknij przycisk **Dodaj**.
+1. Z obszaru [Usługa Intune w witrynie Azure Portal](https://portal.azure.com) przejdź do obszaru [**Funkcje urządzenia** w obszarze konfiguracji urządzenia](device-features-configure.md). 
+1. W okienku **Funkcje urządzenia** wybierz pozycję **AirPrint**.
+2. Aby dodać miejsce docelowe funkcji AirPrint, w okienku **AirPrint** wpisz jej **adres IP** i **ścieżkę zasobu**, a następnie kliknij pozycję **Dodaj**.
 3. W miarę potrzeby dodaj kolejne miejsca docelowe. Gdy skończysz, wybierz przycisk **OK**.
 
 Możesz również zaimportować listę drukarek z pliku wartości rozdzielanych przecinkami (csv) lub wyeksportować listę.

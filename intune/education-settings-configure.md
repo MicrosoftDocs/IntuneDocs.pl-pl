@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b50c35dc805d033bd905105c22c4ec287dfaa1b7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 18987c65c7ad0443c8bf3dc268284306cf64080d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-windows-10-education-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia edukacyjne systemu Windows 10 w usłudze Microsoft Intune
 
@@ -31,22 +31,23 @@ Aby uzyskać więcej informacji o aplikacji Take a Test, zobacz [Wykonywanie tes
 
 ## <a name="create-a-device-profile-containing-education-profile-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia profilu edukacji
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
-3. W bloku profilów wybierz pozycję **Utwórz profil**.
-4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu ograniczeń urządzenia.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
+2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
+3. W okienku profilów wybierz pozycję **Utwórz profil**.
+4. W okienku **Tworzenie profilu** wprowadź wartość w polach **Nazwa** i **Opis** dotyczących profilu ograniczeń urządzenia.
 5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Profil edukacji**. 
-7. Wybierz opcję Ustawienia > Konfiguruj, a następnie w bloku **Take a Test** skonfiguruj następujące opcje:
+7. Wybierz opcję **Ustawienia > Konfiguruj**, a następnie w okienku **Take a Test** skonfiguruj następujące elementy:
+    - **Typ konta** — wybierz typ konta z pola listy rozwijanej.
     - **Nazwa użytkownika konta** — wprowadź nazwę użytkownika konta używanego z aplikacją Take a Test. Może to być konto domeny, konto usługi Azure Active Directory (AAD) lub lokalne konto na komputerze.
     - **Adres URL oceny** — podaj adres URL testu, który mają wykonać użytkownicy. Więcej informacji znajduje się w dokumentacji aplikacji Take a Test.
     - **Monitorowanie ekranu** — określ, czy chcesz mieć możliwość monitorowania działania ekranu podczas wykonywania testu przez użytkowników.
     - **Podpowiedzi tekstowe** — włącz lub zablokuj podpowiedzi tekstowe podczas wykonywania testu przez użytkowników.
-8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
+8. Gdy skończysz, wróć do okienka **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
 
-Profil zostanie utworzony i wyświetlony w bloku listy profilów.
+Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1a30a86ae924777b435c67e67f926819753d67
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9de6f0e2f7c74e7aec45c27f0fa20189b26c5e22
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="intune-airplay-settings-for-ios-devices"></a>Ustawienia funkcji AirPlay dla urządzeń z systemem iOS w usłudze Intune
 
@@ -33,19 +33,20 @@ Daje to następujące możliwości:
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1. W bloku **Funkcje urządzenia** wybierz pozycję **AirPlay**.
-2. W bloku **AirPlay** wybierz co najmniej jedną z następujących czynności:
+1. Z obszaru [Usługa Intune w witrynie Azure Portal](https://portal.azure.com) przejdź do obszaru [**Funkcje urządzenia** w obszarze konfiguracji urządzenia](device-features-configure.md). 
+1. W okienku **Funkcje urządzenia** wybierz pozycję **AirPlay**.
+2. W okienku **AirPlay** wybierz jedną z następujących czynności (lub obie):
 
 ## <a name="configure-a-device-and-password-list"></a>Konfigurowanie listy urządzeń i haseł
 
-1. W bloku **Hasła** wypełnij pola **Nazwa urządzenia** i **Hasło** urządzenia AirPlay, na przykład **Contoso Apple TV**.
+1. W okienku **Hasła** wprowadź wartość w polach **Nazwa urządzenia** i **Hasło** urządzenia AirPlay, na przykład **Contoso Apple TV**.
 2. Po wprowadzeniu szczegółowych danych urządzenia kliknij przycisk **Dodaj**. Urządzenie pojawi się na liście **Nazwa urządzenia**.
 3. Kontynuuj dodawanie urządzeń. Gdy skończysz, wybierz przycisk **OK**.
 
 
 ## <a name="configure-allowed-destinations"></a>Konfigurowanie dozwolonych miejsc docelowych
 
-1. W bloku **Dozwolone miejsca docelowe (tylko nadzorowane)** wypełnij pole **Identyfikator urządzenia** odnoszące się do urządzenia AirPlay, na przykład 52:46:CD:51:83:4C.
+1. W okienku **Dozwolone miejsca docelowe (tylko nadzorowane)** wprowadź wartość w polu **Identyfikator urządzenia** dotyczącym urządzenia AirPlay, na przykład 52:46:CD:51:83:4C.
 2. Po wprowadzeniu identyfikatora urządzenia kliknij przycisk **Dodaj**. Identyfikator pojawi się na liście **Identyfikator urządzenia**.
 3. Kontynuuj dodawanie urządzeń. Gdy skończysz, wybierz przycisk **OK**.
 

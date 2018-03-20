@@ -1,12 +1,12 @@
 ---
-title: "Ustawienia programu Endpoint Protection usługi Intune dla systemu Windows 10"
-titlesuffix: Azure portal
+title: "Ustawienia programu Endpoint Protection usługi Microsoft Intune dla systemu Windows 10"
+titlesuffix: 
 description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień programu Endpoint Protection, na przykład funkcji BitLocker, na urządzeniach z systemem Windows 10."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 01/16/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,34 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 02a32f678b40b2b40535984e17b41e0a864d8fdf
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Ustawienia programu Endpoint Protection dla systemu Windows 10 i nowszych wersji w usłudze Microsoft Intune
+# <a name="create-endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Tworzenie ustawień programu Endpoint Protection dla systemu Windows 10 i nowszych wersji w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Profil programu Endpoint Protection umożliwia kontrolowanie funkcji zabezpieczeń na urządzeniach z systemem Windows 10, takich jak funkcja BitLocker i usługa Windows Defender.
 
-Skorzystaj z informacji w tym temacie, aby dowiedzieć się, jak tworzyć profile programu Endpoint Protection.
+Skorzystaj z informacji w tym artykule, aby dowiedzieć się, jak tworzyć profile programu Endpoint Protection.
 
 > [!Note]
 > Te ustawienia nie są obsługiwane w systemie Windows 10 w wersjach Home i Professional.
 
 ## <a name="create-an-endpoint-protection-profile"></a>Tworzenie profilu programu Endpoint Protection
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
+2. W bloku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz opcję **Profile**.
 3. W bloku profilów wybierz pozycję **Utwórz profil**.
 4. W bloku **Utwórz profil** wprowadź wartości pól **Nazwa** i **Opis** odnoszące się do profilu funkcji urządzenia.
 5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Endpoint Protection**.
-7. Skonfiguruj odpowiednie ustawienia. Zapoznaj się ze szczegółowymi informacjami w tym temacie, aby lepiej zrozumieć działanie poszczególnych ustawień. Gdy skończysz, wybierz przycisk **OK**.
+7. Skonfiguruj odpowiednie ustawienia. Zapoznaj się ze szczegółowymi informacjami w tym artykule, aby lepiej zrozumieć działanie poszczególnych ustawień. Gdy skończysz, wybierz przycisk **OK**.
 8. Wróć do bloku **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony w bloku listy profilów.
@@ -57,6 +57,7 @@ Funkcja Application Guard jest dostępna tylko dla urządzeń z systemem Windows
 - **Drukuj z przeglądarki wirtualnej** — zezwalanie drukarkom PDF, XPS, lokalnym i/lub sieciowym na drukowanie zawartości z przeglądarki wirtualnej.
 - **Zbieraj dzienniki** — zbieranie dzienników dla zdarzeń występujących w sesji przeglądania funkcji Application Guard.
 - **Zachowuj dane przeglądarki generowane przez użytkownika** — zezwala na zapisywanie danych użytkownika (na przykład haseł, ulubionych i plików cookie) utworzonych podczas wirtualnej sesji przeglądania funkcji Application Guard.
+- **Przyspieszanie grafiki** — szybsze ładowanie witryn internetowych z dużą ilością grafiki podczas pracy w sesji przeglądania w funkcji Application Guard poprzez umożliwienie dostępu do wirtualnej jednostki przetwarzania grafiki.
 
 
 ## <a name="windows-defender-firewall"></a>Zapora Windows Defender

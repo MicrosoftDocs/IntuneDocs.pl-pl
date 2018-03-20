@@ -5,7 +5,7 @@ keywords: "intune graphapi c# powershell role uprawnień"
 author: vhorne
 manager: dougeby
 ms.author: victorh
-ms.date: 06/20/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1c97c32f5f6c81f1112c99b486898c271cc5ff2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 7b59d4bc689daf462ac01a106457c3835a78b98b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -44,7 +44,7 @@ W tym artykule:
 
 - Zamieszczono przykłady uwierzytelniania interfejsu API usługi Intune dla języka C# i programu PowerShell.
 
-- Opisano sposób obsługi wielu dzierżawców.
+- Opisano sposób obsługi wielu dzierżaw.
 
 Aby dowiedzieć się więcej, zobacz następujące artykuły:
 
@@ -97,7 +97,7 @@ Aby zarejestrować aplikację do korzystania z interfejsu API programu Microsoft
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Wybierz role wymagane dla aplikacji, umieszczając znacznik wyboru z lewej strony odpowiednich nazw.  Aby dowiedzieć się więcej na temat zakresów uprawnień usługi Intune, zobacz temat [Zakresy uprawnień usługi Intune](#user-content-intune-permission-scopes).  Aby poznać inne zakresy uprawnień interfejsu API programu Graph, zobacz temat [Lista uprawnień w programie Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Wybierz role wymagane dla aplikacji, umieszczając znacznik wyboru z lewej strony odpowiednich nazw.  Aby dowiedzieć się więcej na temat zakresów uprawnień usługi Intune, zobacz temat [Zakresy uprawnień usługi Intune](#intune-permission-scopes).  Aby poznać inne zakresy uprawnień interfejsu API programu Graph, zobacz temat [Lista uprawnień w programie Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
 
     Aby osiągnąć najlepsze rezultaty, wybierz jak najmniej ról wymaganych do wdrożenia aplikacji.
 
@@ -139,7 +139,7 @@ Przy udzielaniu uprawnienia do interfejsu API programu Microsoft Graph można ok
 
 Ustawienie _Włącz dostęp_ | Nazwa zakresu
 :--|:--
-__Wykonywanie akcji zdalnych mających wpływ na użytkownika na urządzeniach Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#user-content-mgd-po)
+__Wykonywanie akcji zdalnych mających wpływ na użytkownika na urządzeniach Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Odczyt i zapis na urządzeniach Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Odczyt z urządzeń Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Odczyt i zapis ustawień kontroli RBAC usługi Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
@@ -585,7 +585,7 @@ Pamiętaj, aby dodać użytkownika do innych ról, zgodnie z potrzebami. Na przy
 
 Ponadto:
 
-- Aby przypisać licencję usługi Intune do konta użytkownika, skorzystaj z witryny http://portal.office.com.
+- Aby przypisać licencję usługi Intune do konta użytkownika, skorzystaj z witryny https://portal.office.com.
 
 - Zaktualizuj kod aplikacji do uwierzytelniania klienta domeny dzierżawy usługi Azure AD zamiast własnej.
 
