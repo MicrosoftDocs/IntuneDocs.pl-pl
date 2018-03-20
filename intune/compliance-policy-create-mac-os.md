@@ -1,12 +1,12 @@
 ---
-title: "Jak tworzyć zasady zgodności dla systemu macOS"
-titleSuffix: Azure portal
-description: "Dowiedz się, jak tworzyć zasady zgodności dla urządzeń z systemem macOS."
+title: "Tworzenie zasad zgodności w usłudze Microsoft Intune dla urządzeń z systemem macOS"
+titleSuffix: 
+description: "Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem macOS w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 2/13/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,18 @@ ms.technology:
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a5f1caeddbd3d171092ef59cfb092404b31154f2
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem macOS za pomocą usługi Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Zasady zgodności urządzeń w usłudze Intune dla systemu macOS określają reguły i ustawienia, które urządzenia z systemem macOS muszą spełnić, aby zostały uznane za zgodne. Tych zasad można używać z dostępem warunkowym, aby zezwalać na dostęp do zasobów firmy lub go blokować. Można także uzyskiwać raporty urządzeń i podejmować działania w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -41,9 +43,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 | --- | --- |
 | **Konfiguracja kodu PIN lub hasła** | Skorygowane |   
 | **Szyfrowanie urządzenia** | Skorygowane (przez ustawienie kodu PIN) |
-| **Profil e-mail** | Poddane kwarantannie |
-|**Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |  
+| **Profil e-mail** | Kwarantanna |
+|**Minimalna wersja systemu operacyjnego** | Kwarantanna |
+| **Maksymalna wersja systemu operacyjnego** | Kwarantanna |  
 
 
 **Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).
@@ -108,7 +110,7 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 2. Po pomyślnym zalogowaniu się zostanie wyświetlony **pulpit nawigacyjny platformy Azure**.
 
-3. W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+3. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
 4. Wybierz pozycję **Intune**. Zostanie wyświetlony **pulpit nawigacyjny usługi Intune**.
 
@@ -118,7 +120,7 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 7. Wpisz nazwę, opis i wybierz platformę, której te zasady mają dotyczyć.
 
-8. Zostanie otwarty blok **Zasady zgodności systemu macOS**. Wybierz kategorie ustawień zgodności urządzeń — **Zabezpieczenia**, **Kondycja urządzenia** i **Właściwości urządzenia**, aby określić własne ustawienia.
+8. Zostanie otwarte okienko **Zasady zgodności dla komputerów Mac**. Wybierz kategorie ustawień zgodności urządzeń — **Zabezpieczenia systemu**, **Kondycja urządzenia** i **Właściwości urządzenia**, aby określić własne ustawienia.
 
 10. Po zakończeniu wybierania ustawień wybierz pozycję **OK** w każdej kategorii ustawień zgodności urządzeń.
 
@@ -126,15 +128,15 @@ Podczas tworzenia nowych zasad zgodności urządzeń za pomocą usługi Intune m
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 
-Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zasady zgodności**.
+Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w okienku **Zgodność urządzeń — zasady**.
 
-1. Wybierz zasady zgodności urządzeń, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
+1. Wybierz zasady zgodności urządzeń, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
 
-2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.
+2. Wybierz pozycję **Wybrane grupy**, aby otworzyć okienko, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.
 
-3. Wybierz pozycję **Wybierz**, a następnie wybierz pozycję **Zapisz**, aby przypisać zasady zgodności urządzeń do grup zabezpieczeń usługi Azure AD.
+3. Wybierz pozycję **Zapisz**, aby przypisać zasady zgodności urządzeń do grup zabezpieczeń usługi Azure AD.
 
-4. Po przypisaniu zasad zgodności urządzeń do grup można zamknąć blok **Przypisania**.
+4. Po przypisaniu zasad zgodności urządzeń do grup można zamknąć okienko **Przypisania**.
 
     > [!TIP]
     > Domyślnie urządzenia sprawdzają zgodność co osiem godzin, ale użytkownicy mogą wymusić ten proces za pomocą aplikacji Portal firmy usługi Intune.

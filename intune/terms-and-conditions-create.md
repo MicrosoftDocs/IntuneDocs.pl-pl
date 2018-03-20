@@ -1,12 +1,12 @@
 ---
 title: "Ustawianie warunków i postanowień w usłudze Microsoft Intune"
-titlesuffix: Azure portal
-description: "Ustawianie warunków i postanowień widocznych dla użytkowników w aplikacji Portal firmy dla usługi Intune. "
+titlesuffix: 
+description: "Ustawianie warunków i postanowień widocznych dla użytkowników w aplikacji Portal firmy dla usługi Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: df7f91cbdcbafb785d0c4cfb1612d6c2f9e5581e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8fb386948d14fcbd26cffcd1b531b6ae61e9d669
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="ensure-users-accept-company-terms-for-access"></a>Zapewnienie akceptacji firmowych warunków dostępu przez użytkowników
+# <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Zarządzanie warunkami i postanowieniami obowiązującymi w firmie na potrzeby dostępu użytkowników
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,16 +32,18 @@ Możesz utworzyć wiele zestawów warunków i postanowień oraz przypisać je do
 ## <a name="create-terms-and-conditions"></a>Tworzenie warunków i postanowień
 Wykonaj następujące kroki, aby utworzyć warunki i postanowienia. Wyświetlana nazwa i opis są przeznaczone do użytku administracyjnego, natomiast właściwości dotyczące warunków są widoczne dla użytkowników w aplikacji Portal firmy.
 
-1. W witrynie Azure Portal wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Rejestrowanie urządzeń**, a następnie wybierz pozycję **Warunki i postanowienia**.
 2. Wybierz przycisk **Utwórz**.
 ![Zrzut ekranu witryny Azure Portal przedstawiający przycisk Utwórz służący do tworzenia warunków i postanowień](media/terms-create-terms.png)
-3. W rozwiniętym bloku określ następujące informacje:
+3. W rozwiniętym okienku określ następujące informacje:
 
    - **Nazwa wyświetlana**: nazwa warunków w witrynie Azure Portal. Użytkownicy nie widzą tej nazwy.
 
    - **Opis**: opcjonalne szczegółowe informacje ułatwiające identyfikację danego zbioru warunków w witrynie Azure Portal.
 
-4. Wybierz strzałkę obok pozycji Definiuj warunki użytkowania, aby otworzyć blok Warunki i postanowienia, a następnie wprowadź następujące informacje:
+4. Wybierz strzałkę obok pozycji **Definiuj warunki użytkowania**, aby otworzyć okienko Warunki i postanowienia, a następnie wprowadź następujące informacje:
 
    ![Zrzut ekranu akceptacji warunków i postanowień użytkownika końcowego z podsumowaniem warunków](./media/terms-summary-create.png)
 
@@ -65,25 +67,26 @@ W poniższym przykładzie przedstawiono warunki i postanowienia w konsoli admini
 Warunki i postanowienia można przypisywać do grup użytkowników, które muszą je zaakceptować przed rozpoczęciem korzystania z aplikacji Portal firmy.
 
 1. W witrynie Azure Portal wybierz opcję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
-2. Na liście warunków i postanowień wybierz warunki i postanowienia, które chcesz przypisać, a następnie wybierz pozycję **Przypisane grupy**.
-![Zrzut ekranu przedstawiający blok Przypisz grupę witryny Azure Portal z przyciskami Wybierz grupę oraz Wybierz służącymi do przypisywania warunków i postanowień](media/terms-assign-groups.png)
-3. Kliknij przycisk **Wybierz grupę** i w bloku **Wybierz grupy** wybierz te grupy, do których chcesz przypisać warunki, a następnie kliknij przycisk **Wybierz**. Warunków i postanowień nie można przypisać do grup dynamicznych.
-4. W bloku **Przypisane grupy** kliknij przycisk **Zapisz**.  Warunki i postanowienia są teraz przypisane do użytkowników z wybranych grup. Użytkownicy będą monitowani o zaakceptowanie warunków i postanowień przy następnej próbie uzyskania dostępu do aplikacji Portal firmy. Warunki i postanowienia wymagają jednokrotnej akceptacji. Użytkownicy z wieloma urządzeniami nie muszą ich akceptować na każdym urządzeniu.
+2. Na liście warunków i postanowień wybierz warunki i postanowienia, które chcesz przypisać, a następnie wybierz pozycję **Zarządzaj** > **Przypisania**.
+![Zrzut ekranu przedstawiający okienko Przypisywanie grupy w witrynie Azure Portal z przyciskami Wybierz grupę oraz Wybierz służącymi do przypisywania warunków i postanowień](media/terms-assign-groups.png)
+3. Kliknij pozycję **Wybierz grupy do uwzględnienia**, wybierz grupy, do których chcesz przypisać warunki, a następnie kliknij pozycję **Wybierz**. Warunków i postanowień nie można przypisać do grup dynamicznych.
+4. W okienku **Przypisane grupy** kliknij pozycję **Zapisz**.  Warunki i postanowienia są teraz przypisane do użytkowników z wybranych grup. Użytkownicy będą monitowani o zaakceptowanie warunków i postanowień przy następnej próbie uzyskania dostępu do aplikacji Portal firmy. Warunki i postanowienia wymagają jednokrotnej akceptacji. Użytkownicy z wieloma urządzeniami nie muszą ich akceptować na każdym urządzeniu.
 
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorowanie warunków i postanowień
 
-1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**. W bloku Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie **Warunki i postanowienia**.
-2. Na liście warunków i postanowień wybierz warunki i postanowienia, które mają zostać zaakceptowane, a następnie wybierz pozycję **Stany akceptacji**.
+1. W witrynie Azure Portal wybierz pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**. 
+1. W okienku Intune wybierz pozycję **Rejestrowanie urządzeń**, a następnie wybierz pozycję **Warunki i postanowienia**.
+2. Na liście warunków i postanowień wybierz warunki i postanowienia, dla których mają zostać wyświetlone kryteria akceptacji, a następnie wybierz pozycję **Raportowanie akceptacji**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Praca z wieloma wersjami warunków i postanowień
 Możesz edytować warunki i postanowienia oraz zarządzać ich wersjami. Zalecamy zwiększenie numeru wersji i wymaganie akceptacji po każdym wprowadzeniu znaczących zmian w warunkach i postanowieniach. Jeśli zmiany obejmują na przykład poprawki błędów pisowni lub zmiany formatowania, zachowaj bieżący numer wersji.
 
-1. W witrynie Azure Portal wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1. W witrynie Azure Portal wybierz pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
 
-2. W bloku Intune wybierz kolejno pozycje **Rejestrowanie urządzenia** i **Warunki i postanowienia**, a następnie wybierz warunki i postanowienia, które chcesz zmodyfikować i wybierz pozycję **Właściwości**.
+2. W okienku Intune wybierz pozycję **Rejestrowanie urządzeń**, wybierz pozycję **Warunki i postanowienia**, wybierz warunki i postanowienia, które chcesz zmodyfikować, a następnie wybierz pozycję **Właściwości**.
 
-4. W bloku **Właściwości** wybierz pozycję **Warunki i postanowienia**, a następnie zmodyfikuj wartość pól **Tytuł**, **Podsumowanie warunków** i **Warunki i postanowienia** odpowiednio do potrzeb. Jeśli dokonane zmiany wymagają ponownej akceptacji nowych warunków przez użytkowników, kliknij pozycję **Wymagaj od użytkowników ponownego zaakceptowania i zwiększ numer wersji do**
+4. W okienku **Właściwości** wybierz pozycję **Warunki i postanowienia**, a następnie zmodyfikuj wartość pól **Tytuł**, **Podsumowanie warunków** i **Warunki i postanowienia** zgodnie z potrzebami. Jeśli dokonane zmiany wymagają ponownej akceptacji nowych warunków przez użytkowników, kliknij pozycję **Wymagaj od użytkowników ponownego zaakceptowania i zwiększ numer wersji do**
 
 4.  Wybierz pozycję **OK**, a następnie pozycję **Zapisz**.
 

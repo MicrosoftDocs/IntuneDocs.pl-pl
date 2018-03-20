@@ -1,12 +1,12 @@
 ---
-title: "Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ustawień, których można użyć w celu umożliwienia i zablokowania dostępu do witryn sieci Web z urządzeń z systemem iOS."
+title: "Ustawienia filtru zawartości internetowej dla urządzeń z systemem iOS w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Informacje na temat ustawień, których można użyć w celu umożliwienia i zablokowania dostępu do witryn internetowych z urządzeń z systemem iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +14,29 @@ ms.technology:
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f46ddd58434be750bac74fb99b526d64fccdb179
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a401a3a04d10587606b8ec4862a62e551e7aadf0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Te ustawienia umożliwiają skonfigurowanie adresów URL, które mogą lub których nie mogą odwiedzić użytkownicy końcowi przeglądarek sieci Web na urządzeniach z systemem iOS. Istnieją dwie metody konfigurowania adresów URL:
+W tym artykule opisano ustawienia usługi Microsoft Intune, które pozwalają sterować dostępem do adresów URL w przeglądarce na urządzeniach z systemem iOS.
+
+Istnieją dwie metody konfigurowania adresów URL:
 
 - **Konfiguruj adresy URL** — użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje język dla dorosłych, czyli przekleństwa i słowa o charakterze seksualnym. Ta funkcja dokonuje oceny każdej strony sieci Web podczas jej ładowania i podejmuje próbę identyfikacji i zablokowania nieodpowiedniej zawartości. Możesz także skonfigurować adresy URL, które nie są sprawdzane przez filtr, lub adresy URL, które są blokowane niezależnie od ustawień filtru.
 
 - **Tylko określone witryny sieci Web** (dotyczy wyłącznie przeglądarki Safari) — te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn sieci Web i nie ma możliwości dostępu do żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
 Jeśli nie dodasz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskać dostępu do żadnych witryn internetowych z wyjątkiem witryn microsoft.com, microsoft.net i apple.com.
 
-
-
 ## <a name="get-started"></a>Wprowadzenie
 
-1. W bloku Funkcje urządzenia wybierz pozycję **Filtr zawartości sieci Web (tylko w trybie nadzorowanym)**.
-2. W bloku **Filtr zawartości sieci Web** wybierz **Typ filtru**, który chcesz skonfigurować:
+1. Na stronie Funkcje urządzenia wybierz pozycję **Filtr zawartości sieci Web (tylko w trybie nadzorowanym)**.
+2. Na stronie **Filtr zawartości sieci Web** wybierz **Typ filtru**, który chcesz skonfigurować:
     - **Nieskonfigurowane** — filtrowanie nie ma miejsca.
     - **Konfiguruj adresy URL**
     - **Tylko określone witryny sieci Web**
@@ -45,25 +45,25 @@ Jeśli nie dodasz żadnych adresów URL, użytkownicy końcowi nie będą mogli 
 
 ## <a name="configure-urls"></a>Konfiguruj adresy URL
 
-1. W bloku **Filtr zawartości sieci Web** wybierz jedno z następujących ustawień, zgodnie z potrzebami:
-   - **Dozwolone adresy URL** — w bloku **Dozwolone adresy URL** wprowadź kolejno adresy URL, których odwiedzanie ma być możliwe (z pominięciem filtru sieci Web firmy Apple), naciskając klawisz Enter po każdym z nich.
+1. Na stronie **Filtr zawartości sieci Web** wybierz zgodnie z potrzebami jedno z następujących ustawień:
+   - **Dozwolone adresy URL** — na stronie **Dozwolone adresy URL** wprowadź kolejno adresy URL, których odwiedzanie ma być możliwe (z pominięciem filtru internetowego firmy Apple), naciskając klawisz Enter po każdym z nich.
      > [!NOTE]
      > Wybrane adresy URL to adresy, które nie mają być obiektem filtru internetowego firmy Apple. Te adresy URL nie reprezentują listy jednych dozwolonych witryn internetowych. Jeśli chcesz tak zrobić, użyj pozycji **Tylko określone witryny internetowe**.
 
-   - **Zablokowane adresy URL** — w bloku **Zablokowane adresy URL** wprowadź kolejno adresy URL, dostęp do których ma zostać zablokowany (niezależnie od ustawień filtru sieci Web firmy Apple), naciskając klawisz Enter po każdym z nich.
+   - **Zablokowane adresy URL** — na stronie **Zablokowane adresy URL** wprowadź kolejno adresy URL, dostęp do których ma zostać zablokowany (niezależnie od ustawień filtru internetowego firmy Apple), naciskając klawisz Enter po każdym z nich.
 2. Po zakończeniu kliknij przycisk **OK**.
 
 
 ## <a name="specific-websites-only"></a>Tylko określone witryny sieci Web
 
-1. W bloku **Filtr zawartości sieci Web** skonfiguruj następujące ustawienia dla każdej dozwolonej witryny internetowej:
+1. W okienku **Filtr zawartości sieci Web** skonfiguruj następujące ustawienia dla każdej dozwolonej witryny internetowej:
     - **Adres URL** — wprowadź adres URL dozwolonej witryny sieci Web, na przykład **http://www.contoso.com**.
     - **Ścieżka do zakładki** — wpisz ścieżkę do lokalizacji, w której chcesz przechowywać zakładkę, na przykład **/Contoso/Business Apps**. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
     - **Tytuł** — wprowadź opisowy tytuł zakładki.
 2. Po wprowadzeniu niezbędnych informacji dla każdej z witryn sieci Web kliknij przycisk **Dodaj**.
 3. Po zakończeniu kliknij przycisk **OK**.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > Poniższe adresy URL są automatycznie uznawane za dozwolone przez usługę Intune.
 > - www.microsoft.com
 > - www.microsoft.net
@@ -71,7 +71,7 @@ Jeśli nie dodasz żadnych adresów URL, użytkownicy końcowi nie będą mogli 
 
 ## <a name="finish-up"></a>Zakończenie
 
-Wybierz przycisk **OK**, aby powrócić do bloku **Utwórz profil**, a następnie wybierz pozycję **Utwórz**.
+Wybierz przycisk **OK**, aby powrócić do okienka **Utwórz profil**, a następnie wybierz pozycję **Utwórz**.
 
 ## <a name="next-steps"></a>Następne kroki
 

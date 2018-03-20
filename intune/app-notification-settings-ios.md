@@ -1,12 +1,11 @@
 ---
-title: "Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ustawień służących do kontrolowania powiadomień z aplikacji na urządzeniach z systemem iOS."
+title: "Tworzenie powiadomień aplikacji dla urządzeń z systemem iOS — Microsoft Intune — Azure | Microsoft Docs"
+description: "Dodawaj lub twórz powiadomienia aplikacji dla systemu iOS w usłudze Microsoft Intune. Wybierz, które aplikacje mają wysyłać powiadomienia, skonfiguruj ustawienia powiadomień na ekranie blokady, włącz dźwięk, wybierz typ alertu i dodaj znaczek."
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,41 +14,44 @@ ms.assetid: bda26d1d-2a3b-4669-adf8-a5aa7f994916
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 91e4b6197c7606a70862ad5fb12b10b5e0f3ed81
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 018a04bd674e4f270ed2e356c08825ab1d5878da
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="intune-app-notifications-settings-for-ios-devices"></a>Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS w usłudze Intune
+# <a name="configure-app-notifications-settings-on-ios-devices-in-intune"></a>Konfigurowanie ustawień powiadomień aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Umożliwia skonfigurowanie sposobu, w jaki aplikacje zainstalowane na urządzeniu wysyłają powiadomienia. Te ustawienia obsługują nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
+Skonfiguruj sposób, w jaki aplikacje na urządzeniu z systemem iOS wysyłają powiadomienia. Te ustawienia obsługują nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
 
-## <a name="configure-settings"></a>Konfigurowanie ustawień
+## <a name="add-the-app-notification"></a>Dodawanie powiadomienia aplikacji
 
-1. W bloku Funkcje urządzenia wybierz pozycję **Powiadomienia w aplikacji (tylko nadzorowane)**.
-2. W bloku **Powiadomienia aplikacji** wybierz pozycję **Dodaj**, a następnie skonfiguruj następujące wartości:
-    - **Identyfikator pakietu aplikacji** — wprowadź **identyfikator pakietu aplikacji**, którą chcesz skonfigurować. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w dalszej części tego tematu.
-    - **Nazwa aplikacji** — wprowadź nazwę aplikacji, którą chcesz skonfigurować. Ta nazwa nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
-    - **Wydawca** — wprowadź wydawcę aplikacji, którą chcesz skonfigurować. Ta nazwa wydawcy nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
-    - **Powiadomienia** — włącz lub wyłącz powiadomienia wysyłane z aplikacji do urządzenia. Jeśli to ustawienie zostanie wyłączone, zostaną wyłączone także następujące ustawienia.
-        - **Pokaż w centrum powiadomień** — włączenie tego ustawienia powoduje zezwolenie aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu.
-        - **Pokaż na ekranie blokady** — włączenie tego ustawienia powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia.
-        - **Typ alertu** — wybierz typ powiadomienia, które będzie wyświetlane po odblokowaniu urządzenia:
-            - **Brak** — nie zostanie wyświetlone żadne powiadomienie.
-            - **Transparent** — zostanie na krótko wyświetlony transparent z powiadomieniem.
-            - **Modalne** — zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
-        - **Znaczek na ikonie aplikacji** — włącz to ustawienie, aby dodać na ikonie aplikacji znaczek, który będzie sygnalizować powiadomienie wysłane z aplikacji.
-        - **Dźwięki** — po włączeniu tego ustawienia w przypadku dostarczania powiadomienia zostanie odtworzony dźwięk.
-3. Kontynuuj konfigurowanie dla kolejnych aplikacji, zgodnie z potrzebami. Gdy skończysz, wybierz przycisk **OK**.
-4. Wybieraj przycisk **OK**, aż powrócisz do bloku **Utwórz profil**, a następnie wybierz pozycję **Utwórz**. 
+1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com).
+2. W profilu systemu iOS lub macOS wybierz pozycję **Funkcje urządzenia**. Obszar [Funkcje urządzenia z systemem iOS lub macOS](device-features-configure.md) zawiera listę czynności, które należy wykonać, aby utworzyć profil.
+3. Wybierz pozycję **Powiadomienia w aplikacji (tylko nadzorowane)**, a następnie pozycję **Dodaj**: ![Dodaj powiadomienie w aplikacji w profilu systemu iOS lub macOS w usłudze Intune](./media/ios-macos-app-notifications.png).
+4. Wprowadź następujące właściwości:
 
+  - **Identyfikator pakietu aplikacji** — wprowadź **identyfikator pakietu aplikacji**, którą chcesz skonfigurować. Aby uzyskać pomoc, zobacz **Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS** w tym temacie.
+  - **Nazwa aplikacji** — wprowadź nazwę aplikacji, którą chcesz skonfigurować. Ta nazwa nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
+  - **Wydawca** — wprowadź wydawcę aplikacji, którą chcesz skonfigurować. Ta nazwa wydawcy nie jest wyświetlana na urządzeniu i ma na celu ułatwienie identyfikacji aplikacji na liście.
+  - **Powiadomienia** — włącz lub wyłącz powiadomienia wysyłane z aplikacji do urządzenia. Jeśli to ustawienie zostanie wyłączone, zostaną wyłączone także następujące ustawienia.
+    - **Pokaż w centrum powiadomień** — włączenie tego ustawienia powoduje zezwolenie aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu.
+    - **Pokaż na ekranie blokady** — włączenie tego ustawienia powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia.
+    - **Typ alertu** — wybierz typ powiadomienia, które będzie wyświetlane po odblokowaniu urządzenia:
+      - **Brak** — nie zostanie wyświetlone żadne powiadomienie.
+      - **Transparent** — zostanie na krótko wyświetlony transparent z powiadomieniem.
+      - **Modalne** — zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
+    - **Znaczek na ikonie aplikacji** — włącz to ustawienie, aby dodać na ikonie aplikacji znaczek, który będzie sygnalizować powiadomienie wysłane z aplikacji.
+    - **Dźwięki** — po włączeniu tego ustawienia w przypadku dostarczania powiadomienia zostanie odtworzony dźwięk.
+
+5. Kontynuuj konfigurowanie dla kolejnych aplikacji, zgodnie z potrzebami. Po zakończeniu dodawania aplikacji wybierz przycisk **OK**.
+6. Wybierz pozycję **Utwórz**, aby zapisać profil.
 
 ## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
 
-Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania. 
+Następująca lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, najlepiej skontaktuj się z dostawcą oprogramowania.
 
 |||
 |-|-|
@@ -95,4 +97,4 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz można przypisać profil urządzenia do wybranych grup. Aby uzyskać szczegółowe informacje, zobacz [Przypisywanie profilów urządzeń](device-profile-assign.md).
+Przypisz profil urządzenia do wybranych grup. Aby poznać czynności, które należy wykonać, zobacz [Przypisywanie profilów urządzeń](device-profile-assign.md).

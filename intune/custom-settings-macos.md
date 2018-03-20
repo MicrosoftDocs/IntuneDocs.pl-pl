@@ -1,27 +1,25 @@
 ---
-title: "Ustawienia niestandardowe dla urządzeń z systemem macOS w usłudze Intune"
-titleSuffix: Azure portal
-description: "Informacje dotyczące ustawień, których można używać w niestandardowym profilu systemu macOS."
+title: "Ustawienia niestandardowe w usłudze Microsoft Intune dla urządzeń z systemem macOS"
+titleSuffix: 
+description: "Dowiedz się więcej na temat ustawień, których można używać w niestandardowym profilu systemu macOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/04/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 68100ea5-7d9b-4c0b-8df7-b9a24b2442c8
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88224849de0727418197fcfdb96cac3b4c2ca0e7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5ccc9d48eb16ce155bbed2bbdf38793b8f3bdfda
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="custom-settings-for-macos-devices-in-microsoft-intune"></a>Ustawienia niestandardowe dla urządzeń z systemem macOS w usłudze Microsoft Intune
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-macos"></a>Niestandardowe ustawienia urządzeń w usłudze Microsoft Intune dla urządzeń z systemem macOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,10 +29,10 @@ Ta funkcja umożliwia przypisywanie ustawień systemu macOS, których nie można
 
 
 1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [How to configure custom device settings in Microsoft Intune](custom-settings-configure.md) (Jak skonfigurować niestandardowe ustawienia urządzenia w usłudze Microsoft Intune).
-2. W bloku **Utwórz profil** określ następujące pozycje:
+2. W okienku **Niestandardowy profil konfiguracji** skonfiguruj każde z następujących ustawień:
 
-- **Nazwa niestandardowego profilu konfiguracji** — podaj nazwę zasad, która będzie wyświetlana na urządzeniu i w stanie usługi Intune.
+- **Nazwa niestandardowego profilu konfiguracji** — podaj nazwę zasad, która jest wyświetlana na urządzeniu i w ramach stanu usługi Intune.
 - **Plik profilu konfiguracji** — przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator.
 Upewnij się, że ustawienia wyeksportowane z programu Apple Configurator są zgodne z wersją systemu macOS na urządzeniach, do których są przypisywane niestandardowe zasady systemu macOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web programu [Apple Developer](https://developer.apple.com/).
 
-Zaimportowany plik będzie wyświetlany w obszarze bloku **Zawartość pliku**.
+Zaimportowany plik jest wyświetlany w obszarze **Zawartość pliku** okienka.

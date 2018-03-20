@@ -1,7 +1,7 @@
 ---
-title: "Łącznik programu Skycure w usłudze Intune"
-titlesuffix: Azure portal
-description: "Integracja łącznika programu Skycure w usłudze Intune."
+title: "Łącznik Skycure w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Skycure Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 333322022882566b55e869e5d6a1a1e2b203b830
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: b3148a24b077dfd491ce06fcf708a81de7d12dc1
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Łącznik Skycure Mobile Threat Defense
 
@@ -69,7 +69,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Udzielono dostępu po wykryciu złośliwych aplikacji](./media/skycure-arch-2.png)
+![Dostęp udzielany po skorygowaniu w następstwie wykrycia złośliwych aplikacji](./media/skycure-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 

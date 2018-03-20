@@ -1,29 +1,29 @@
 ---
-title: "Ustawienia konfiguracji urządzenia udostępnianego dla urządzeń z systemem iOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ustawień usługi Intune umożliwiających wyświetlanie informacji na ekranie blokady urządzenia z systemem iOS."
+title: "Ustawienia konfiguracji urządzeń udostępnianych dla urządzeń z systemem iOS w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Informacje na temat ustawień usługi Microsoft Intune umożliwiających wyświetlanie informacji na ekranie blokady urządzeń z systemem iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: f122e4ee-90e7-4b42-b801-8c1c7c0a5bf7
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c5473a280551ab74f781a2de682d7e5922491e98
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9147eaff2bd366dbfd86c6422e0f7a29f685db62
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="shared-device-configuration-settings-to-display-messages-on-the-ios-device-lock-screen"></a>Ustawienia konfiguracji udostępnionego urządzenia umożliwiające wyświetlanie komunikatów na ekranie blokady urządzenia z systemem iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+W tym artykule opisano ustawienia usługi Microsoft Intune umożliwiające wyświetlanie informacji na ekranie blokady urządzeń z systemem iOS.
 
 Ustawienia konfiguracji udostępnionego urządzenia umożliwiają określenie opcjonalnego tekstu wyświetlanego w oknie logowania i na ekranie blokady. Można na przykład wprowadzić komunikat „W razie zgubienia zwróć do” oraz informacje dotyczące tagu zasobu. 
 
@@ -32,11 +32,12 @@ Ustawienia konfiguracji udostępnionego urządzenia umożliwiają określenie op
 
 ## <a name="create-shared-device-settings"></a>Tworzenie ustawień udostępnionego urządzenia
 
-1. W bloku **Funkcje urządzenia** wybierz pozycję **Konfiguracja urządzenia udostępnianego (tylko nadzorowane)**.
-2. W bloku **Konfiguracja urządzenia udostępnianego (tylko nadzorowane)** skonfiguruj następujące ustawienia:
+1. Z obszaru [Usługa Intune w witrynie Azure Portal](https://portal.azure.com) przejdź do obszaru [**Funkcje urządzenia** w obszarze konfiguracji urządzenia](device-features-configure.md). 
+1. W okienku **Funkcje urządzenia** wybierz pozycję **Konfiguracja urządzenia udostępnianego (tylko nadzorowane)**.
+2. W okienku **Konfiguracja urządzenia udostępnianego (tylko nadzorowane)** skonfiguruj następujące ustawienia:
     - **Informacje dotyczące tagu zasobu** — wprowadź informacje o tagu zasobu urządzenia. Na przykład: **Własność firmy Contoso Corp**. Wprowadzone informacje zostaną zastosowane do wszystkich urządzeń, do których zostanie przypisany ten profil.
     - **Przypis dolny ekranu blokady** — wprowadź informację, która może ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Na przykład: **W razie znalezienia zadzwoń: „numer”**.
-3. Gdy skończysz, wybieraj przycisk **OK**, aż powrócisz do bloku **Utwórz profil**, a następnie wybierz pozycję **Utwórz**. 
+3. Gdy skończysz, wybieraj przycisk **OK**, aż powrócisz do okienka **Utwórz profil**, a następnie wybierz pozycję **Utwórz**. 
 
 
 ## <a name="next-steps"></a>Następne kroki

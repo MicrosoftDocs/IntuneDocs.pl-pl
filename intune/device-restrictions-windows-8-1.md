@@ -1,29 +1,30 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem Windows 8.1 w usłudze Intune"
-titleSuffix: Azure portal
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Windows 8.1."
+title: "Ustawienia ograniczeń urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune"
+titleSuffix: 
+description: "Dowiedz się więcej na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem Windows 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: fe5785e9-8d35-4ad7-95e8-d50f8d87154a
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c96340255e9b71694278b5a396d907a6212541d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8cfaad3c35a0035546e5ebb7a55b9978da8025d8
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-81-and-later-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 8.1 lub nowszym w usłudze Microsoft Intune
+# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows 8.1 lub nowszym w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+W tym artykule opisano wszystkie ustawienia ograniczeń urządzeń, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 8.1 lub nowszym.
+
 
 ## <a name="general"></a>Ogólne
 
@@ -62,7 +63,7 @@ W przypadku wymuszania szyfrowania na urządzeniu klucz odzyskiwania jest dostę
 -   **Wysoki poziom zabezpieczeń dla witryn ograniczonych** — konfiguruje poziom zabezpieczeń strefy witryn ograniczonych.
 -   **Dostęp do trybu przedsiębiorstwa w menu** — umożliwia użytkownikom dostęp do opcji menu trybu przedsiębiorstwa w programie Internet Explorer.
 Jeśli to ustawienie jest wybrane, możesz również określić opcję **Lokalizacja raportu rejestrowania**, która zawiera adres URL do raportu przedstawiającego witryny sieci Web, dla których użytkownicy włączyli dostęp w trybie przedsiębiorstwa.
--   **Lokalizacja listy witryn trybu przedsiębiorstwa** — określa lokalizację listy witryn sieci Web, które będą używać trybu przedsiębiorstwa, gdy będzie aktywny.
+-   **Lokalizacja listy witryn trybu przedsiębiorstwa** — określa lokalizację listy witryn internetowych, które będą używać trybu przedsiębiorstwa, gdy będzie aktywny.
 
 ## <a name="cellular"></a>Komórkowe
 -   **Roaming danych** — umożliwia roaming danych, gdy urządzenie korzysta z sieci komórkowej.

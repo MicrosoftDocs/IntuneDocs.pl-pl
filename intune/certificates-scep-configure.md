@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61193cc96f0ea22e9a80d24fe8ee0499e80d4202
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: d723bc4d5032a7a5c330367fe83eabd4763917a2
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -304,10 +304,10 @@ To zadanie obejmuje:
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
 ![ConnectorDownload](./media/certificates-download-connector.png)   
  
-1. Zaloguj się do portalu Azure Portal. 
-2. Wybierz pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz pozycję **Konfiguracja urządzenia**.
-4. W bloku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzenia**.
+4. W okienku **Konfiguracja urządzenia** wybierz pozycję **Urząd certyfikacji**.
 5. Kliknij przycisk **Dodaj**, a następnie wybierz pozycję **Pobierz plik łącznika**. Zapisz pobraną zawartość w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana. 
 6.  Po zakończeniu pobierania uruchom pobrany instalator (**ndesconnectorssetup.exe**) na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. (Usługa sieci Web CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.)
 
@@ -346,10 +346,10 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
 
 ## <a name="how-to-create-a-scep-certificate-profile"></a>Tworzenie profilu certyfikatu protokołu SCEP
 
-1. W witrynie Azure Portal wybierz obciążenie **Konfiguruj urządzenia**.
-2. W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
-3. W bloku profilów wybierz pozycję **Utwórz profil**.
-4. W bloku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu protokołu SCEP.
+1. W witrynie Azure Portal wybierz obciążenie **Konfiguracja urządzeń**.
+2. W okienku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
+3. W okienku profilów wybierz pozycję **Utwórz profil**.
+4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu protokołu SCEP.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego certyfikatu protokołu SCEP. Obecnie dla ustawień ograniczeń dotyczących urządzeń można wybrać jedną z następujących platform:
     - **Android**
     - **iOS**
@@ -358,7 +358,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
     - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.
-7. W bloku **Certyfikat SCEP** skonfiguruj następujące ustawienia:
+7. W okienku **Certyfikat SCEP** skonfiguruj następujące ustawienia:
     - **Okres ważności certyfikatu** — jeśli dla urzędu wystawiającego certyfikaty uruchomiono polecenie **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**, które dopuszcza niestandardowy okres ważności, możesz określić czas pozostały do wygaśnięcia certyfikatu.<br>Możesz podać wartość niższą niż okres ważności danego szablonu certyfikatu, ale nie wyższą. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić wartość jednego roku, ale nie pięciu lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
     - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) — określ miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:
         - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie u dostawcy magazynu kluczy oprogramowania**
@@ -385,9 +385,9 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i wprowadź
     - **Ustawienia rejestracji**
         - **Próg odnawiania (%)** — określ wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
         - **Adresy URL serwerów SCEP** — określ co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. 
-8. Gdy skończysz, wróć do bloku **Utwórz profil** i wybierz pozycję **Utwórz**.
+8. Wybierz przycisk **OK**, a następnie wróć do okienka **Utwórz profil** i wybierz opcję **Utwórz**.
 
-Profil zostanie utworzony i wyświetlony w bloku listy profilów.
+Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 ## <a name="how-to-assign-the-certificate-profile"></a>Przypisywanie profilu certyfikatu
 

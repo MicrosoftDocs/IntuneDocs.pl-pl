@@ -1,12 +1,12 @@
 ---
-title: "Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online"
-titlesuffix: Azure portal
-description: "Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online za pośrednictwem portalu Intune Azure"
+title: "Monitorowanie dostępu warunkowego programu Exchange w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online za pośrednictwem witryny Azure Portal usługi Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2025bbb008be090420ebb3778fc37a0b1790608b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 932dfe32c6df5741615d9db9f303aaee7785d3a3
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online w usłudze Intune
 
@@ -36,25 +36,25 @@ Począwszy od usługi Intune w wersji 1704 administratorzy mogą zobaczyć infor
 
 2.  Po pomyślnym zalogowaniu zostanie wyświetlona strona **Pulpit nawigacyjny Azure**.
 
-3.  W menu po lewej stronie wybierz pozycję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+3.  W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
 4.  Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
 
 5.  Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz pozycję **Przegląd**.
 
-6.  Na wykresie wybierz jeden z trzech obszarów (**Zablokowane**, **Kwarantanna** lub **Dozwolone**), aby wyświetlić raport dotyczący zgodności z dostępem warunkowym.
+6.  Na wykresie wybierz jeden z trzech obszarów (**Dozwolone**, **Zablokowane** lub **Kwarantanna**), aby wyświetlić raport dotyczący zgodności z dostępem warunkowym.
 
-    ![Pulpit nawigacyjny dostępu warunkowego](./media/CA-reporting-intune-1.png)
+    ![Obraz przedstawiający pulpit nawigacyjny dostępu warunkowego](./media/CA-reporting-intune-1.png)
 
-Po wybraniu jednego z trzech obszarów można zobaczyć bardziej szczegółowe informacje o urządzeniach dozwolonych, zablokowanych lub poddanych kwarantannie.
+Po wybraniu jednego z trzech obszarów wyświetlane są bardziej szczegółowe informacje o urządzeniach dozwolonych, zablokowanych lub poddanych kwarantannie.
 
-Można również przejść do informacji o określonych urządzeniach i wyświetlić więcej szczegółów. Na przykład urządzenie wybrane na ilustracji poniżej jest zablokowane. Usługa Intune zapewnia możliwość usunięcia danych firmowych z poziomu bloku raportu dotyczącego zgodności z dostępem warunkowym.
+Można również przejść do informacji o określonych urządzeniach i wyświetlić więcej szczegółów. Na przykład urządzenie wybrane na poniższym obrazie jest zablokowane. Usługa Intune zapewnia możliwość usunięcia danych firmowych z poziomu okienka raportu dotyczącego zgodności z dostępem warunkowym.
 
-![Raportowanie szczegółów urządzenia z dostępem warunkowym](./media/CA-reporting-intune-3.png)
+![Obraz przedstawiający raportowanie szczegółów urządzenia z dostępem warunkowym](./media/CA-reporting-intune-3.png)
 
-W bloku szczegółów urządzenia można zobaczyć więcej informacji:
+W okienku szczegółów urządzenia można wyświetlić więcej informacji:
 
--   **Przegląd:** można wyświetlić właściwości urządzenia, takie jak: wersja systemu operacyjnego, model urządzenia, własność, numer seryjny, producent urządzenia, numer telefonu oraz godzina ostatniego zameldowania.
+-   **Przegląd:** można wyświetlić właściwości urządzenia, takie jak wersja systemu operacyjnego, model urządzenia, własność, numer seryjny, producent urządzenia, numer telefonu oraz godzina ostatniego zaewidencjonowania.
 
 -   **Właściwości:** można ustawić własność urządzenia (osobista lub firmowa).
 

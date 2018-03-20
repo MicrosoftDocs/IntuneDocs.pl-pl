@@ -1,7 +1,7 @@
 ---
-title: "Konfiguracja integracji z programem Skycure w usłudze Intune"
-titlesuffix: Azure portal
-description: "Skonfiguruj integrację z programem Skycure w usłudze Microsoft Intune."
+title: "Konfigurowanie integracji z programem Skycure w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Jak skonfigurować rozwiązanie Skycure Mobile Threat Defense (MTD) za pomocą usługi Microsoft Intune w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,15 +15,15 @@ ms.assetid: 359448d9-2384-42ac-a21c-a25148c20a7b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7a1cea01960512ca484caa643862d90cbb867963
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 3a09806afae72f60961a94ab27707b4851006cf0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-the-skycure-integration-with-intune"></a>Konfiguracja integracji z programem Skycure w usłudze Intune
 
-Aby uzyskać możliwości rejestracji jednokrotnej, do usługi Azure AD należy dodać aplikacje Skycure.
+Aby zintegrować rozwiązanie Skycure Mobile Threat Defense z usługą Intune, wykonaj kroki opisane poniżej. Aby uzyskać możliwości rejestracji jednokrotnej, do usługi Azure AD należy dodać aplikacje Skycure.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -62,15 +62,15 @@ Program Skycure obsługuje dwa tryby integracji z usługą Intune:
 
 4.  Na etykiecie **Aplikacja systemu iOS** kliknij opcję **Dodaj do usługi Active Directory**.
 
-    ![Aplikacja systemu iOS w konsoli zarządzania programu Skycure](./media/skycure-setup-1.png)
+    ![Obraz przedstawiający aplikację systemu iOS w konsoli zarządzania programu Skycure](./media/skycure-setup-1.png)
 
 5.  Po otwarciu strony logowania wprowadź swoje poświadczenia usługi Intune, a następnie kliknij przycisk **Akceptuj**.
 
-    ![Monit logowania usługi Intune aplikacji systemu iOS](./media/skycure-setup-2.png)
+    ![Obraz przedstawiający monit logowania usługi Intune aplikacji systemu iOS](./media/skycure-setup-2.png)
 
 6.  Po dodaniu aplikacji w usłudze Azure AD można zauważyć wskaźnik oznaczający, że aplikacja została pomyślnie dodana do usługi Azure AD w konsoli zarządzania Skycure.
 
-    ![Ekran końcowy aplikacji dla systemu iOS](./media/skycure-setup-3.png)
+    ![Obraz przedstawiający ekran końcowy aplikacji systemu iOS](./media/skycure-setup-3.png)
 
 > [!NOTE]
 > Powtórz ten sam proces dla aplikacji **Skycure systemu Android** i aplikacji **zarządzania**.
@@ -79,13 +79,13 @@ Program Skycure obsługuje dwa tryby integracji z usługą Intune:
 
 Należy dodać grupę zabezpieczeń usługi Azure AD, która zawiera wszystkie urządzenia z uruchomionym programem Skycure.
 
-1.  Wprowadź i wybierz wszystkie grupy zabezpieczeń urządzeń z uruchomionym programem Skycure, a następnie kliknij opcję **Zastosuj zmiany**.
+-  Wprowadź i wybierz wszystkie grupy zabezpieczeń urządzeń z uruchomionym programem Skycure, a następnie kliknij opcję **Zastosuj zmiany**.
 
-    ![Konfigurowanie konsoli zarządzania Skycure grupy zabezpieczeń](./media/skycure-setup-4.png)
+    ![Obraz przedstawiający miejsce konfigurowania konsoli zarządzania programu Skycure grupy zabezpieczeń](./media/skycure-setup-4.png)
 
 Program Skycure synchronizuje urządzenia z uruchomioną jego usługą Mobile Threat Defense z grupami zabezpieczeń usługi Azure AD.
 
-![Konfiguracja grupy zabezpieczeń na konsoli zarządzania Skycure została ukończona](./media/skycure-setup-5.png)
+![Obraz przedstawiający ukończoną konfigurację grupy zabezpieczeń w konsoli zarządzania programu Skycure](./media/skycure-setup-5.png)
 
 ## <a name="set-up-the-full-integration-between-intune-and-skycure"></a>Konfigurowanie pełnej integracji między usługą Intune i programem Skycure
 
@@ -103,7 +103,7 @@ Program Skycure synchronizuje urządzenia z uruchomioną jego usługą Mobile Th
 
 5.  Kliknij opcję **Zastosuj zmiany**.
 
-    ![Pełna integracja Skycure została ukończona](./media/skycure-setup-6.png)
+    ![Obraz przedstawiający ukończoną pełną integrację z programem Skycure](./media/skycure-setup-6.png)
 
 ## <a name="next-steps"></a>Następne kroki
 

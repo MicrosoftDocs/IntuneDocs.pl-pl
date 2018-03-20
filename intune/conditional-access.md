@@ -1,12 +1,12 @@
 ---
-title: "Dostęp warunkowy przy użyciu usługi Intune"
-titlesuffix: Azure portal
-description: "Poznaj sposoby definiowania warunków, które muszą spełniać użytkownicy i urządzenia, aby uzyskać dostęp do zasobów firmy w usłudze Microsoft Intune."
+title: "Dostęp warunkowy w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Dowiedz się, jak definiować warunki, które muszą spełniać użytkownicy, urządzenia i aplikacje, aby uzyskać dostęp do zasobów firmy w usłudze Microsoft Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 05/23/2017
+ms.date: 03/06/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,17 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4d3d84f8010b72b9595f3ff54924d6c3fe245702
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 08589f3d9186699ce5241579cc1879be2d442e3d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="whats-conditional-access"></a>Co to jest dostęp warunkowy?
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-W tym temacie opisano funkcję dostępu warunkowego stosowaną w pakiecie Enterprise Mobility + Security (EMS), a w dalszej kolejności wspólne scenariusze w zakresie dostępu warunkowego w usłudze Intune.
+Dostęp warunkowy dotyczy sposobów kontrolowania urządzeń i aplikacji, które mogą nawiązywać połączenie z pocztą e-mail i zasobami firmy. W tym temacie uzyskasz informacje dotyczące dostępu warunkowego opartego na urządzeniach i aplikacjach, a także poznasz typowe scenariusze dotyczące używania dostępu warunkowego za pomocą usługi Intune.
 
 Dostęp warunkowy w pakiecie Enterprise Mobility + Security (EMS) nie jest produktem autonomicznym. Jest rozwiązaniem, które obejmuje wszystkie usługi i produkty będące częścią pakietu EMS. Zapewnia pełną kontrolę dostępu, co pozwala zabezpieczyć dane firmowe, udostępniając użytkownikom środowisko, które umożliwia wykonywanie pracy w najbardziej wydajny sposób na dowolnym urządzeniu i w dowolnym miejscu.
 

@@ -1,27 +1,25 @@
 ---
-title: "Ustawienia niestandardowe usługi Intune dla urządzeń z systemem iOS"
+title: "Ustawienia niestandardowe w usłudze Microsoft Intune dla urządzeń z systemem iOS"
 titleSuffix: Azure portal
 description: "Informacje dotyczące ustawień, których można używać w niestandardowym profilu systemu iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/04/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6da8caa8-65c2-4f47-842f-9570dcb1ac22
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 761b19de8442e88717a5dcd52f7f0375bace91da
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 40e34a2e22c9349cad63d813b892863e0e8a2933
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-settings-for-ios-devices"></a>Ustawienia niestandardowe usługi Microsoft Intune dla urządzeń z systemem iOS
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-ios"></a>Niestandardowe ustawienia urządzeń w usłudze Microsoft Intune dla urządzeń z systemem iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,10 +29,10 @@ Ta funkcja umożliwia przypisywanie ustawień systemu iOS, których nie można s
 
 
 1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [How to configure custom device settings in Microsoft Intune](custom-settings-configure.md) (Jak skonfigurować niestandardowe ustawienia urządzenia w usłudze Microsoft Intune).
-2. W bloku **Utwórz profil** określ następujące pozycje:
+2. W okienku **Niestandardowy profil konfiguracji** skonfiguruj każde z następujących ustawień:
 
-- **Nazwa niestandardowego profilu konfiguracji** — podaj nazwę zasad, która będzie wyświetlana na urządzeniu i w stanie usługi Intune.
+- **Nazwa niestandardowego profilu konfiguracji** — podaj nazwę zasad, która jest wyświetlana na urządzeniu i w ramach stanu usługi Intune.
 - **Plik profilu konfiguracji** — przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator.
 Upewnij się, że ustawienia wyeksportowane z programu Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, do których są przypisywane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web programu [Apple Developer](https://developer.apple.com/).
 
-Zaimportowany plik będzie wyświetlany w obszarze bloku **Zawartość pliku**.
+Zaimportowany plik jest wyświetlany w obszarze **Zawartość pliku** okienka.

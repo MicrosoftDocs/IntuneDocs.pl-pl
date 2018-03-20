@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 08e1126e05d101669c5796e4bd7fcaf08339fa43
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 7c63c817ccddd0abc6c5c6b0ae2f2a7d1cb2d9bf
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vpn-connections-in-microsoft-intune"></a>Połączenia VPN w usłudze Microsoft Intune
 
@@ -46,14 +46,14 @@ Opcje konfiguracji profilu sieci VPN różnią się w zależności od wybranego 
 Usługa Intune umożliwia tworzenie profilów sieci VPN korzystających z następujących typów połączeń:
 
 
-Typ połączenia |iOS i Mac OS X  |Android i Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop i Mobile |
+Typ połączenia |iOS i Mac OS X  |Android i Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8,1|Windows 10 Desktop i Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Tak |Tak   |Nie    |Nie  |Nie    | Tak (OMA-URI, tylko urządzenia przenośne)|     
 Cisco (IPsec)|Tak |Tak   |Nie  |Nie  |Nie | Nie|
 Citrix|Tak |Tak (tylko Android)   |Nie  |Nie  |Nie | Nie|
 Pulse Secure|Tak  |Tak |Tak   |Tak  |Tak| Tak|        
 F5 Edge Client|Tak |Tak |Tak |Tak  |   Tak |  Tak|   
-Dell SonicWALL Mobile Connect|Tak |Tak |Tak |Tak |Tak |Tak|         
+SonicWall Mobile Connect|Tak |Tak |Tak |Tak |Tak |Tak|         
 CheckPoint Mobile VPN|Tak |Tak |Tak |Tak|Tak|Tak|
 Microsoft SSL (SSTP)|Nie |Nie |Nie |Nie|Nie|VPNv1 OMA-URI*|
 Tryb automatyczny firmy Microsoft|Nie |Nie |Nie |Nie|Tak (OMA-URI)|Tak|
@@ -64,7 +64,7 @@ L2TP|Profil niestandardowy systemu iOS|Nie |Nie |Nie|Tak (OMA-URI)|Tak|
 \* Bez dodatkowych ustawień, które w przeciwnym razie są dostępne w systemie Windows 10.
 
 > [!IMPORTANT]
-> Aby używanie profili sieci VPN wdrożonych na urządzeniu było możliwe, należy zainstalować odpowiednią do profilu aplikację VPN. W temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md) znajdziesz informacje, które pomogą Ci we wdrażaniu odpowiedniej aplikacji w usłudze Intune.  
+> Aby używanie profilów sieci VPN wdrożonych na urządzeniu było możliwe, należy zainstalować odpowiednią do profilu aplikację VPN. W temacie [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md) znajdziesz informacje, które pomogą Ci we wdrażaniu odpowiedniej aplikacji w usłudze Intune.  
 
  Dowiedz się, jak utworzyć niestandardowe profile sieci VPN za pomocą ustawienia identyfikatora URI w temacie [Konfiguracje niestandardowe dla profilów sieci VPN](create-custom-vpn-profiles.md).     
 
@@ -108,7 +108,7 @@ Nazwa ustawienia  |Więcej informacji
 **Nazwa**     |Wprowadzenie unikatowej nazwy profilu sieci VPN pomaga zidentyfikować te zasady w konsoli usługi Intune.         
 **Opis**     |Podaj opis, który umożliwia identyfikowanie profilu sieci VPN, i inne istotne informacje ułatwiające znalezienie go.         
 **Nazwa połączenia VPN (wyświetlana dla użytkowników)**     |Wprowadź nazwę profilu sieci VPN. Jest to nazwa, którą użytkownicy zobaczą na liście dostępnych połączeń VPN na swoich urządzeniach.         
-**Typ połączenia**     |  Wybierz jeden z następujących typów połączeń do użycia w danym profilu sieci VPN: **Cisco AnyConnect** (niedostępne dla systemów Windows 8.1 i Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
+**Typ połączenia**     |  Wybierz jeden z następujących typów połączeń do użycia w danym profilu sieci VPN: **Cisco AnyConnect** (niedostępne dla systemów Windows 8.1 i Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **SonicWall Mobile Connect**, **CheckPoint Mobile VPN**.
 **Opis serwera sieci VPN**     | Wprowadź opis serwera sieci VPN, z którym będą łączyć się urządzenia. Przykład: **Serwer sieci VPN firmy Contoso**. Jeśli typ połączenia to **F5 Edge Client**, użyj pola **Lista serwerów**, aby określić listę opisów i adresów IP serwerów.
 **Adres IP lub nazwa FQDN serwera**    |Podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym będą łączyć się urządzenia. Przykłady: **192.168.1.1**, **vpn.contoso.com**.  Jeśli typ połączenia to **F5 Edge Client**, użyj pola **Lista serwerów**, aby określić listę opisów i adresów IP serwerów.         |         
 **Lista serwerów**     |Wybierz pozycję **Dodaj**, aby dodać nowy serwer sieci VPN do użycia na potrzeby połączenia z siecią VPN. Możesz również określić, który serwer będzie serwerem domyślnym dla danego połączenia. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **F5 Edge Client**.         
@@ -118,7 +118,7 @@ Nazwa ustawienia  |Więcej informacji
 **Wybierz certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz wcześniej utworzony certyfikat SCEP klienta, który będzie używany do uwierzytelniania połączenia z siecią VPN. Aby uzyskać więcej informacji o sposobie używania profilów certyfikatów w usłudze Intune, zobacz [Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów](secure-resource-access-with-certificate-profiles.md). Ta opcja jest wyświetlana tylko wtedy, gdy metoda uwierzytelniania to **Certyfikaty**.
 **Rola**| Określ nazwę roli użytkownika, która ma dostęp do tego połączenia. Rola użytkownika definiuje ustawienia osobiste i opcje oraz włączenie lub wyłączenie określonych funkcji dostępu. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Pulse Secure** lub **Citrix**.
 **Obszar**|Określ nazwę obszaru uwierzytelniania, który ma być używany. Obszar uwierzytelniania to grupa zasobów uwierzytelniania używana przez typ połączenia Pulse Secure lub Citrix. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Pulse Secure** lub **Citrix**.
-**Grupa lub domena logowania**|Określ nazwę grupy lub domeny logowania, z którą chcesz nawiązać połączenie. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **Dell SonicWALL Mobile Connect**.
+**Grupa lub domena logowania**|Określ nazwę grupy lub domeny logowania, z którą chcesz nawiązać połączenie. Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **SonicWall Mobile Connect**.
 **Odcisk palca**|Określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, który będzie używany do sprawdzenia, czy dany serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca serwera. (Użytkownik samodzielnie weryfikuje odcisk palca i wybiera opcję **Zaufane** w celu nawiązania połączenia). Ta opcja jest wyświetlana tylko wtedy, gdy typ połączenia to **CheckPoint Mobile VPN**.
 **Sieć VPN dla aplikacji**|Wybierz tę opcję, jeśli chcesz powiązać to połączenie VPN z aplikacją dla systemu iOS lub Mac OS X, tak aby połączenie było otwierane w momencie uruchomienia aplikacji. Podczas wdrażania oprogramowania możesz powiązać ten profil sieci VPN z aplikacją. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 **Sieć VPN na żądanie**|Można skonfigurować sieci VPN na żądanie dla urządzeń z systemem iOS w wersji 8.0 lub nowszych. Instrukcje dotyczące konfigurowania znajdują się w części [Sieci VPN na żądanie dla urządzeń z systemem iOS](#on-demand-vpn-for-ios-devices).
@@ -126,7 +126,7 @@ Nazwa ustawienia  |Więcej informacji
 **Użyj skryptu automatycznej konfiguracji** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, określ, czy chcesz używać skryptu automatycznej konfiguracji do określenia ustawień, a następnie wprowadź adres URL pliku zawierającego ustawienia. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
 **Użyj serwera proxy** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, zaznacz tę opcję, a następnie wprowadź adres i numer portu serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
 **Pomiń ustawienia serwera proxy dla adresów lokalnych** (tylko systemy iOS, Mac OS X, Windows 8.1 i Windows Phone 8.1)|Jeśli serwer sieci VPN wymaga połączenia przez serwer proxy, zaznacz tę opcję, aby serwer proxy nie był używany dla określonych adresów lokalnych. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
-**Niestandardowy plik XML** (systemy Windows 8.1 i nowsze oraz Windows Phone 8.1 i nowsze)|Określ niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN. Przykład dla programu **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Przykład dla programu **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Przykład dla programu **Dell SonicWALL Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Przykład dla programu **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
+**Niestandardowy plik XML** (systemy Windows 8.1 i nowsze oraz Windows Phone 8.1 i nowsze)|Określ niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN. Przykład dla programu **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Przykład dla programu **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Przykład dla programu **SonicWall Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Przykład dla programu **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
 **Lista wyszukiwania sufiksów DNS** (tylko system Windows Phone 8.1)|Wprowadź jeden sufiks DNS w każdym wierszu. Wszystkie wprowadzone sufiksy DNS będą wyszukiwane podczas łączenia z witryną sieci Web za pomocą nazwy skróconej. Na przykład podaj sufiksy DNS **domena1.contoso.com** i **domena2.contoso.com**, odwiedź adres URL **http://mojawitryna**, a zostaną wyszukane adresy URL **http://mojawitryna.domena1.contoso.com** i **http://mojawitryna.domena2.contoso.com**.
 **Obejdź sieć VPN w przypadku połączenia z firmową siecią Wi-Fi** (tylko system Windows Phone 8.1)|Wybierz tę opcję, aby określić, że połączenie z siecią VPN nie będzie używane, jeśli urządzenie jest połączone z firmową siecią Wi-Fi.
 **Obejdź sieć VPN w przypadku połączenia z domową siecią Wi-Fi** (tylko system Windows Phone 8.1)|Wybierz tę opcję, aby określić, że połączenie z siecią VPN nie będzie używane, jeśli urządzenie jest połączone z domową siecią Wi-Fi.

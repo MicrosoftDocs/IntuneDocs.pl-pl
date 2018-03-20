@@ -1,10 +1,10 @@
 ---
-title: "Migracja zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal"
-titlesuffix: Azure portal
-description: "Przeprowadź migrację zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal."
+title: "Migracja dostępu warunkowego do witryny Azure Portal"
+titlesuffix: Microsoft Intune
+description: "Ponowne przypisywanie zasad dostępu warunkowego utworzonych wcześniej w klasycznym portalu usługi Intune do witryny Azure Portal."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdb64d4cc668bf382c39a235111547c2f4e21c9c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 80c8c994486dd340c9037817854eb35b32ab3a9e
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
-W nowej witrynie Azure Portal dostęp warunkowy zapewnia obsługę wielu zasad na aplikację. Możliwe jest także dostosowywanie w szerszym zakresie.
+W nowej witrynie Azure Portal dostęp warunkowy zapewnia obsługę wielu zasad na aplikację. Możliwe jest także dostosowywanie w szerszym zakresie. Jeśli wcześniej utworzono zasady dostępu warunkowego w klasycznym portalu usługi Intune, można migrować je do witryny Azure Portal. 
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -79,7 +79,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 4. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, aby wybrać użytkowników i grupy docelowe dla nowych zasad dostępu warunkowego.
     
-    ![Porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-1.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
     > Wybór w witrynie Azure Portal powinien odpowiadać wyborowi w portalu klasycznym. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
@@ -94,7 +94,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 9. Kliknij pozycję **Gotowe**.
 
-    ![Porównanie interfejsu użytkownika aplikacji w chmurze w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-3.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji w chmurze w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-3.png)
 
     > [!TIP] 
     > Jeśli masz wiele aplikacji objętych tymi samymi zasadami, rozważ połączenie ich w jeden zestaw zasad w witrynie Azure Portal.
@@ -105,7 +105,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 12. Po wybraniu platform urządzeń dwa razy kliknij pozycję **Gotowe**.
 
-    ![Porównanie interfejsu użytkownika platform urządzeń w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-4.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika platform urządzeń w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-4.png)
 
     > [!TIP] 
     > Jeśli w portalu klasycznym usługi Intune wybrano poszczególne platformy, należy wybrać te poszczególne platformy w witrynie Azure Portal.
@@ -119,7 +119,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 15. Po wybraniu aplikacji klienckiej kliknij dwa razy pozycję **Gotowe**.
 
-    ![Porównanie interfejsu użytkownika aplikacji klienckiej w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-6.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji klienckiej w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-6.png)
 
 16. Jeśli w portalu klasycznym usługi Intune zostały wybrane ustawienia przeglądarki, zaznacz zarówno pozycję **Przeglądarka**, jak i pozycję **Aplikacje mobilne i klienci stacjonarni** w witrynie Azure Portal. Jeśli w portalu klasycznym usługi Intune nie zostały wybrane ustawienia przeglądarki, zaznacz tylko pozycję **Aplikacje mobilne i klienci stacjonarni**. 
 
@@ -133,7 +133,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 21. W bloku **Nowy** zasad dostępu warunkowego włącz przełącznik **Włącz zasady**, a następnie kliknij pozycję **Utwórz**.
 
-    ![Porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-11.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-11.png)
 
 ## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Ponowne przypisywanie zdefiniowanych w usłudze Intune zasad dostępu warunkowego opartego na urządzeniach dla klientów programu EAS
 
@@ -147,7 +147,7 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 4. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, aby wybrać użytkowników i grupy docelowe dla nowych zasad dostępu warunkowego.
 
-    ![Porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-12.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
     > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla witryny Azure Portal. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
@@ -158,14 +158,14 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 7. W bloku **Aplikacje w chmurze** kliknij pozycję **Wybierz aplikacje**, a następnie wybierz pozycję **Exchange Online**. Następnie kliknij pozycję **Wybierz** i pozycję **Gotowe**.
 
-    ![Porównanie interfejsu użytkownika aplikacji w chmurze w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-14.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji w chmurze w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-14.png)
 
     > [!IMPORTANT] 
     > Zasady dostępu warunkowego dla klientów programu EAS nie mogą obejmować żadnej innej aplikacji w chmurze.
 
 8. W bloku **Warunki** wybierz pozycję **Aplikacje klienckie**, a następnie wybierz odpowiednią aplikację kliencką. Jeśli wybrano blokowanie klientów nieobsługiwanych przez usługę Intune, użyj opcji **Zastosuj zasady tylko do obsługiwanych platform**.
 
-    ![Porównanie interfejsu użytkownika aplikacji klienckiej w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-15.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji klienckiej w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-15.png)
 
 9. Po wybraniu aplikacji klienckiej kliknij dwa razy pozycję **Gotowe**.
 
@@ -173,11 +173,11 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 11. W sekcji **Udziel kontroli dostępu** wybierz pozycję **Wymagaj, aby urządzenie było oznaczone jako zgodne**, a następnie kliknij pozycję **Wybierz**.
 
-    ![Porównanie interfejsu użytkownika udzielania dostępu w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-16.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika udzielania dostępu w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-16.png)
 
 12. W bloku **Nowy** zasad dostępu warunkowego włącz przełącznik **Włącz zasady**, a następnie kliknij pozycję **Utwórz**.
 
-    ![Porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-17.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-17.png)
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune
 
@@ -196,7 +196,7 @@ Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal nale�
 
 4.  Usuń zaznaczenie opcji **Włącz zasady dostępu warunkowego**, a następnie kliknij pozycję **Zapisz**.
 
-    ![Wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune](./media/reassign-ca-18.png)
+    ![Obraz przedstawiający wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune](./media/reassign-ca-18.png)
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,11 +1,12 @@
 ---
-title: Model danych magazynu danych | Microsoft Docs
-description: "Magazyn danych usługi Intune każdego dnia próbkuje dane, aby przedstawić widok historyczny ciągle zmieniającego się środowiska mobilnego."
+title: Model danych magazynu danych
+titlesuffix: Microsoft Intune
+description: "Magazyn danych usługi Microsoft Intune każdego dnia próbkuje dane, aby przedstawić widok historyczny ciągle zmieniającego się środowiska mobilnego."
 keywords: "Magazyn danych usługi Intune"
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,17 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f52531f854c57551613b1e94f0cfd0925c6d3d12
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7bf893acd5a3d162b767744001fe2257824d86a4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="data-warehouse-data-model"></a>Model danych magazynu danych
 
-Magazyn danych usługi Intune codziennie próbkuje dane w celu udostępnienia historycznego widoku ciągle zmieniającego się środowiska urządzeń przenośnych. Widok składa się z elementów powiązanych w czasie.
+Magazyn danych usługi Intune codziennie próbkuje dane w celu udostępnienia historycznego widoku ciągle zmieniającego się środowiska urządzeń przenośnych. Widok składa się z jednostek powiązanych w czasie.
 
-## <a name="things-entity-sets"></a>Elementy: zestawy jednostek
+## <a name="entities-entity-sets"></a>Jednostki: zestawy jednostek
 
 Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
 
@@ -33,7 +34,7 @@ Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
   -  Spis aplikacji i oprogramowania
   -  Zasady zgodności i konfiguracji urządzenia
 
-Te obszary zawierają jednostki lub elementy, które mają znaczenie dla danego środowiska usługi Intune. Szczegółowe informacje dotyczące zestawów jednostek można znaleźć w następujących tematach:
+Te obszary zawierają jednostki, które mają znaczenie dla danego środowiska usługi Intune. Szczegółowe informacje dotyczące zestawów jednostek można znaleźć w następujących tematach:
 
   -  [Aplikacja](reports-ref-application.md)
   -  [Data](reports-ref-date.md)

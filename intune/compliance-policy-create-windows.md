@@ -1,30 +1,30 @@
 ---
-title: "Tworzenie zasad zgodności dla systemu Windows"
-titleSuffix: Azure portal
-description: "Informacje dotyczące tworzenia zasad zgodności dla urządzeń z systemem Windows."
+title: "Tworzenie zasad zgodności urządzeń z systemem Windows w usłudze Microsoft Intune"
+titleSuffix: 
+description: "Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem Windows w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 2/13/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fe5a66ca91181d0cebdaea846f0ee08f9252d76b
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 32af54e3e753e7ded3c86d9d44b793da7fe2e9c0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem Windows w usłudze Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności są tworzone dla każdej platformy. Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej na temat tego, czym są zasady zgodności, zobacz artykuł [What is a device compliance](device-compliance.md) (Czym jest zgodność z urządzeniem). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
+Zasady zgodności urządzeń w usłudze Intune dla systemu Windows określają reguły i ustawienia, które urządzenia z systemem Windows muszą spełnić, aby zostały uznane za zgodne. Tych zasad można używać z dostępem warunkowym, aby zezwalać na dostęp do zasobów firmy lub go blokować. Można także uzyskiwać raporty urządzeń i podejmować działania w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej o zasadach zgodności i wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
@@ -42,7 +42,7 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 -------------------------------
 
-**Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).+
+**Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).
 
 **Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
 
@@ -51,12 +51,14 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 ## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Tworzenie zasad zgodności w witrynie Azure Portal
 
-1. W bloku **Intune** wybierz pozycję **Ustaw zgodność urządzenia**. W obszarze **Zarządzaj** wybierz pozycję **Wszystkie zasady zgodności urządzeń** i wybierz przycisk **Utwórz**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. W okienku **Intune** wybierz pozycję **Zgodność urządzeń**. W obszarze **Zarządzaj** wybierz pozycję **Zasady** i wybierz pozycję **Utwórz zasady**.
 2. Wpisz nazwę, opis i wybierz platformę, której te zasady mają dotyczyć.
-3. Wybierz pozycję **Wymagania zgodności**, aby otworzyć blok wymagań zgodności.  Możesz określić ustawienia **Zabezpieczenia**, **Kondycja urządzenia** i **Właściwości urządzenia**, a gdy wszystko będzie gotowe, wybierz przycisk **Ok**.
+3. Wybierz pozycję **Konfiguruj ustawienia**, aby określić ustawienia **zabezpieczeń systemu**, **kondycji urządzenia** i **właściwości urządzenia** w tym miejscu. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
-5. In the **Actions for noncompliance** blade, choose **Add** to create a new action.  The action parameters blade allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
+5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
 6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
 7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
 8. Choose **Add** to finish creating the action.
@@ -64,10 +66,10 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 
-Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zgodność — zasady**.
+Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w okienku **Zgodność urządzeń — zasady**.
 
-1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
-2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Wybierz** powoduje wdrożenie zasad dla użytkowników.
+1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
+2. Wybierz pozycję **Wybrane grupy**, aby otworzyć okienko, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Zapisz** powoduje wdrożenie zasad dla użytkowników.
 
 Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
 
@@ -93,7 +95,7 @@ W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp prz
 Im większa liczba zostanie podana dla tego ustawienia, tym bardziej skomplikowane hasła będą musieli tworzyć użytkownicy. W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konta Microsoft, sprawdzanie zasad zgodności kończy się niepowodzeniem, jeśli minimalna długość hasła jest większa niż osiem znaków lub minimalna liczba zestawów znaków jest większa niż dwa.
 
 - **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła:** określa czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
-- **Wygaśnięcie hasła (w dniach):** wybierz liczbę dni, po których hasło użytkownika wygasa i należy utworzyć nowe.
+- **Wygaśnięcie hasła (dni):** wybierz liczbę dni, po których wygasa hasło użytkownika i należy utworzyć nowe.
 - **Pamiętaj historię haseł:** używaj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu używaniu poprzednich haseł**, aby uniemożliwić użytkownikowi ponowne używanie wcześniej utworzonych haseł.
 - **Zapobiegaj ponownemu używaniu poprzednich haseł:** jeśli jest zaznaczona opcja **Pamiętaj historię haseł**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
 - **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownicy końcowi otrzymają monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
@@ -150,7 +152,7 @@ Określ czas bezczynności, po którym użytkownik musi ponownie wprowadzić swo
 
 - **Wygaśnięcie hasła (dni):** opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1.
 
-Wybierz liczbę dni, po których hasło użytkownika wygasa i należy utworzyć nowe.
+Wybierz liczbę dni, po których wygasa hasło użytkownika i należy utworzyć nowe.
 
 - **Pamiętaj historię haseł:** — opcja obsługiwana w systemach Windows RT, Windows RT 8.1 i Windows 8.1.
 
@@ -183,10 +185,10 @@ Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż określon
 
 Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
-Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana minimalna wersja systemu operacyjnego** i **Dozwolona maksymalna wersja systemu operacyjnego**, uruchom polecenie **winver** w wierszu polecenia. Polecenie winver zwraca zgłoszoną wersję systemu operacyjnego.+
+Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana minimalna wersja systemu operacyjnego** i **Dozwolona maksymalna wersja systemu operacyjnego**, uruchom polecenie **winver** w wierszu polecenia. Polecenie winver zwraca zgłoszoną wersję systemu operacyjnego.
 
 - Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
-- W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję &quot;10.0&quot; z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie winver.
+- W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję „10.0” z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie winver.
 
 ## <a name="windows-holographic-for-business-support"></a>Obsługa systemu Windows Holographic for Business
 

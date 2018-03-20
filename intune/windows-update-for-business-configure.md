@@ -6,18 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 1/30/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 63d8628c183b3efb924cae6635e2c8038fd42598
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: d6ccda2aba0b1383de6c38b7a2fdcfdc742d0e15
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
@@ -71,20 +71,21 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
 ## <a name="how-to-create-and-assign-update-rings"></a>Jak tworzyć i przypisywać pierścienie aktualizacji
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Aktualizacje oprogramowania**.
-4. W bloku **Aktualizacje oprogramowania** wybierz kolejno opcje **Zarządzaj** > **Pierścienie aktualizacji systemu Windows 10**.
-5. W bloku z listą pierścieni aktualizacji wybierz pozycję **Utwórz**.
-6. W bloku **Tworzenie pierścienia aktualizacji** podaj nazwę i opcjonalny opis pierścienia aktualizacji, a następnie wybierz opcję **Ustawienia**.
-7. W bloku **Ustawienia** skonfiguruj następujące informacje:
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aktualizacje oprogramowania**.
+4. W okienku **Aktualizacje oprogramowania** wybierz kolejno opcje **Zarządzaj** > **Pierścienie aktualizacji systemu Windows 10**.
+5. W okienku z listą pierścieni aktualizacji wybierz pozycję **Utwórz**.
+6. W okienku **Tworzenie pierścienia aktualizacji** podaj nazwę i opcjonalny opis pierścienia aktualizacji, a następnie wybierz opcję **Ustawienia — Konfiguruj**.
+7. W okienku **Ustawienia** skonfiguruj następujące informacje:
     - **Kanał obsługi**: ustaw kanał, dla którego urządzenie odbiera aktualizacje systemu Windows (Półroczny kanał (kierowany) lub Półroczny kanał).
-    - **Aktualizacje firmy Microsoft**: określ, czy używać skanowania przy poszukiwaniu aktualizacji aplikacji w witrynie Microsoft Update.
+    - **Aktualizacje produktów firmy Microsoft**: określ, czy używać skanowania przy poszukiwaniu aktualizacji aplikacji w witrynie Microsoft Update.
     - **Sterowniki systemu Windows**: wybierz, czy podczas aktualizacji chcesz wykluczyć aktualizację sterowników z witryny Windows Update.
     - **Zachowanie podczas automatycznej aktualizacji**: wybierz sposób zarządzania automatyczną aktualizacją podczas skanowania, pobierania i instalowania aktualizacji. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
     - **Okres opóźnienia aktualizacji dotyczących jakości (dni)**: określ, o ile dni mają być opóźniane aktualizacje dotyczące jakości. Okres opóźnienia aktualizacji dotyczących jakości może wynosić do 30 dni od daty wydania aktualizacji.  
 
     Aktualizacje dotyczące jakości są zazwyczaj poprawkami i ulepszeniami istniejących funkcji systemu Windows i najczęściej są publikowane w pierwszy wtorek każdego miesiąca, choć firma Microsoft może je udostępnić w dowolnym momencie. Możesz zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących jakości po dniu ich udostępnienia.
+
     - **Okres opóźnienia aktualizacji dotyczących funkcji (dni)**: określ, o ile dni mają być opóźniane aktualizacje dotyczące funkcji. Okres opóźnienia aktualizacji dotyczących funkcji może wynosić do 180 dni od daty wydania aktualizacji.
 
     Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Kanał obsługi** (Półroczny kanał (kierowany) lub Półroczny kanał) można zdefiniować, czy i na jak długo chcesz odłożyć otrzymywanie aktualizacji dotyczących funkcji po ich udostępnieniu przez firmę Microsoft w usłudze Windows Update.
@@ -93,13 +94,13 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
     **Jeśli ustawiono kanał obsługi Półroczny kanał, a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację dotyczącą funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
 
-    - **Optymalizacja dostarczania** — wybór metody używanej przez urządzenie do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
-1. Gdy skończysz, kliknij przycisk **OK**, a następnie w bloku **Tworzenie pierścienia aktualizacji** kliknij przycisk **Utwórz**.
+    - **Tryb pobierania optymalizacji dostarczania** — wybór metody używanej przez urządzenie do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+1. Gdy skończysz, kliknij przycisk **OK**, a następnie w okienku **Tworzenie pierścienia aktualizacji** kliknij przycisk **Utwórz**.
 
 Nowy pierścień aktualizacji jest wyświetlany na liście pierścieni aktualizacji.
 
 1. Aby przypisać pierścień, wybierz go na liście, a następnie na karcie <*nazwa pierścienia*> wybierz opcję **Przypisania**.
-2. Na następnej karcie wybierz opcję **Wybierz grupy**, a następnie wybierz grupy, do których chcesz przypisać ten pierścień.
+2. Na następnej karcie wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie wybierz grupy, do których chcesz przypisać ten pierścień.
 3. Gdy skończysz, wybierz opcję **Wybierz** w celu zakończenia przypisywania.
 
 ## <a name="update-compliance-reporting"></a>Raportowanie zgodności aktualizacji
@@ -108,22 +109,21 @@ Zgodność aktualizacji można monitorować w usłudze Intune za pomocą bezpła
 ### <a name="review-update-compliance-in-intune"></a>Przeglądanie zgodności aktualizacji w usłudze Intune 
 <!-- 1352223 -->
 Przejrzyj raport zasad, aby poznać stan wdrożenia dla skonfigurowanych pierścieni aktualizacji systemu Windows 10. 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Aktualizacje oprogramowania**.
-4. W bloku **Aktualizacje oprogramowania** wybierz pozycję **Przegląd**. W tym miejscu znajdują się ogólne informacje o stanie wszystkich przypisanych pierścieni aktualizacji.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aktualizacje oprogramowania**.
+4. W okienku **Aktualizacje oprogramowania** wybierz pozycję **Przegląd**. W tym miejscu znajdują się ogólne informacje o stanie wszystkich przypisanych pierścieni aktualizacji.
 5. Otwórz jeden z następujących raportów: 
      
    **Dla wszystkich pierścieni wdrażania:**
-   1. W bloku **Aktualizacje oprogramowania** > **Pierścienie aktualizacji systemu Windows 10**. 
+   1. W okienku **Aktualizacje oprogramowania** > **Pierścienie aktualizacji systemu Windows 10**. 
    2. W sekcji **Monitorowanie** wybierz pozycję **Stan wdrożenia według pierścienia aktualizacji**.
                    
    **Dla określonych pierścieni wdrażania:** 
-   1. W bloku **Aktualizacje oprogramowania** > **Pierścienie aktualizacji systemu Windows 10** wybierz pierścień wdrażania, który chcesz przejrzeć.
+   1. W okienku **Aktualizacje oprogramowania** > **Pierścienie aktualizacji systemu Windows 10** wybierz pierścień wdrażania, który chcesz przejrzeć.
    2. W sekcji **Monitorowanie** wybierz jeden z następujących raportów, aby wyświetlić bardziej szczegółowe informacje o pierścieniu aktualizacji:
-      - **Wdrażanie pierścienia aktualizacji dla urządzeń**
-      - **Wdrażanie pierścienia aktualizacji dla użytkowników**
-      - **Stan wdrożenia według ustawienia**
+      - **Stan urządzenia**
+      - **Stan użytkownika**
 
 ### <a name="review-update-compliance-using-oms"></a>Przeglądanie zgodności aktualizacji przy użyciu pakietu OMS
 Wdrożenia aktualizacji systemu Windows 10 można monitorować za pomocą bezpłatnego rozwiązanie wchodzącego w skład usługi OMS (Operations Management Service) o nazwie Update Compliance. Aby uzyskać szczegółowe informacje, zobacz artykuł [Monitor Windows Updates with Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) (Monitorowanie aktualizacji systemu Windows za pomocą aplikacji Update Compliance). Dzięki temu rozwiązaniu można nadać komercyjny identyfikator dowolnemu urządzeniu z systemem Windows 10 zarządzanemu przez usługę Intune, dla którego chcesz otrzymywać raport zgodności aktualizacji.
@@ -136,19 +136,19 @@ Na przykład można użyć następujących wartości w obszarze **Dodaj lub edyt
 
 - **Nazwa ustawienia**: identyfikator komercyjny programu Windows Analytics
 - **Opis ustawienia**: konfigurowanie komercyjnych identyfikatorów rozwiązań programu Windows Analytics
-- **Typ danych:**: ciąg
 - **OMA-URI** (wielkość liter jest istotna): ./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID
+- **Typ danych:**: ciąg
 - **Wartość**: <*użyj identyfikatora GUID wyświetlanego na karcie Telemetria systemu Windows w obszarze roboczym usługi OMS*>
 
 ![Ustawienie systemu Windows dla danych diagnostycznych i danych dotyczących użycia](./media/commID.png)
 
 ## <a name="how-to-pause-updates"></a>Jak wstrzymywać aktualizacje
 Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkcji lub aktualizacji dotyczących jakości przez okres do 35 dni od chwili wstrzymania aktualizacji. Po upływie maksymalnej liczby dni automatycznie wygasa działanie funkcji wstrzymania i urządzenie rozpoczyna skanowanie usługi Windows Update w poszukiwaniu odpowiednich aktualizacji. Po tym skanowaniu można ponownie wstrzymać aktualizacje.
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Aktualizacje oprogramowania**.
-4. W bloku **Aktualizacje oprogramowania** wybierz kolejno opcje **Zarządzaj** > **Pierścienie aktualizacji systemu Windows 10**.
-5. W bloku z wyświetloną listą pierścieni aktualizacji wybierz pierścień, który chcesz wstrzymać, a następnie wybierz kolejno opcje **...**   >  **Wstrzymaj aktualizacje dotyczące jakości** > lub **Wstrzymaj aktualizacje dotyczące funkcji** w zależności od typu aktualizacji, który należy wstrzymać.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aktualizacje oprogramowania**.
+4. W okienku **Aktualizacje oprogramowania** wybierz kolejno opcje **Zarządzaj** > **Pierścienie aktualizacji systemu Windows 10**.
+5. W okienku z wyświetloną listą pierścieni aktualizacji wybierz pierścień, który chcesz wstrzymać, a następnie wybierz kolejno opcje **...**   >  **Wstrzymaj aktualizacje dotyczące jakości** > lub **Wstrzymaj aktualizacje dotyczące funkcji** w zależności od typu aktualizacji, który należy wstrzymać.
 
 > [!IMPORTANT]
 > Wydane polecenie wstrzymania urządzenia otrzymują przy następnym zarejestrowaniu się w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem.

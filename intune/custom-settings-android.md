@@ -1,12 +1,11 @@
 ---
-title: "Ustawienia niestandardowe dla urządzeń z systemem Android w usłudze Intune"
-titleSuffix: Azure portal
-description: "Informacje dotyczące ustawień, których można używać w niestandardowym profilu systemu Android."
+title: "Dodawanie ustawień niestandardowych dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs"
+description: "Dodawanie lub tworzenie profilu niestandardowego dla urządzeń z systemem Android w celu utworzenia profilu sieci Wi-Fi z kluczem wstępnym, utworzenia profilu sieci VPN dla aplikacji lub zezwalania na użycie bądź blokowanie aplikacji dla urządzeń z system Samsung Knox Standard w usłudze Microsoft Intune"
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,43 +14,43 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 293137705fc8d5a37ac0dd7101a7ce80c9f7e917
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: aa105cc96cd0fa7d8c6beb32cdb80b7782d9828c
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Ustawienia niestandardowe dla urządzeń z systemem Android w usłudze Microsoft Intune
+# <a name="custom-settings-for-android-devices---intune"></a>Ustawienia niestandardowe dla urządzeń z systemem Android — Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Profil **Niestandardowy** systemu Android w usłudze Microsoft Intune umożliwia przypisanie ustawień OMA-URI, których można użyć do sterowania funkcjami na urządzeniach z systemem Android. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
+W przypadku profilów niestandardowych używane są ustawienia jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania różnych funkcji na urządzeniach z systemem Android. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania funkcji na urządzeniu.
 
-Ta funkcja ma umożliwić przypisanie następujących ustawień systemu Android, których nie można skonfigurować przy użyciu zasad usługi Intune:
+Używając profilu niestandardowego, możesz skonfigurować lub przypisać następujące ustawienia systemu Android. Te ustawienia nie są wbudowane w zasady usługi Intune:
 
-- [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą niestandardowego profilu urządzenia usługi Microsoft Intune](/intune/wi-fi-profile-shared-key)
-- [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](/intune/android-pulse-secure-per-app-vpn)
-- [Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung Knox Standard w usłudze Microsoft Intune](/intune/samsung-knox-apps-allow-block)
+- [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego](/intune/wi-fi-profile-shared-key)
+- [Tworzenie profilu sieci VPN dla aplikacji](/intune/android-pulse-secure-per-app-vpn)
+- [Zezwalanie na użycie i blokowanie aplikacji na urządzeniach z systemem Samsung Knox Standard](/intune/samsung-knox-apps-allow-block)
 
 >[!IMPORTANT]
->Obecnie tylko ustawienia wymienione powyżej mogą być konfigurowane przez ten typ profilu. Urządzenia z systemem Android nie ujawniają pełnej listy ustawień OMA-URI, które można skonfigurować. Jeśli chcesz zobaczyć więcej dodanych ustawień, prześlij żądanie w [witrynie Intune Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas).
+> Przez ten typ profilu można skonfigurować tylko wymienione ustawienia. Urządzenia z systemem Android nie ujawniają pełnej listy ustawień identyfikatora OMA-URI, które można skonfigurować. Jeśli chcesz widzieć więcej ustawień, zagłosuj na więcej ustawień na [witrynie Intune Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas).
 
 ## <a name="custom-profile-settings-for-android-devices"></a>Niestandardowe ustawienia profilu dla urządzeń z systemem Android
 
-1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [How to configure custom device settings in Microsoft Intune](custom-settings-configure.md) (Jak skonfigurować niestandardowe ustawienia urządzenia w usłudze Microsoft Intune).
-2. W bloku **Tworzenie profilu** wybierz pozycję **Ustawienia**, aby dodać co najmniej jedno ustawienie OMA-URI.
-3. W bloku **Edytowanie wiersza** skonfiguruj następujące wartości dla każdego ustawienia:
-    - **Nazwa** — wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis** — podaj opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające jego wyszukanie.
-    - **Typ danych** — wybierz typ danych, przy pomocy których określisz to ustawienie OMA-URI. Wybierz jedną z opcji: **Ciąg**, **Ciąg (XML)**, **Data i godzina**, **Liczba całkowita**, **Liczba zmiennoprzecinkowa** lub **Wartość logiczna**.
-    - **OMA-URI** — określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.
-    - **Wartość** — wprowadź wartość, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI.
-4. Gdy wszystko będzie gotowe, kliknij przycisk **OK**, a następnie, jeśli to konieczne, dodaj więcej ustawień.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com). 
+2. Wybierz pozycję **Wszystkie usługi**, odfiltruj ciąg **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Utwórz profil niestandardowy przy użyciu platformy systemu Android. Aby poznać czynności, jakie należy wykonać, zobacz [Konfigurowanie niestandardowych ustawień urządzenia w usłudze Microsoft Intune](custom-settings-configure.md).
+4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**, a następnie pozycję **Dodaj wiersz**.
+5. Wprowadź następujące właściwości:
+
+  - **Nazwa** — wprowadź unikatową nazwę dla ustawienia identyfikatora OMA-URI, aby możne je było łatwo odnaleźć.
+  - **Opis elementu** — wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+  - **Typ danych** — wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Wybierz jedną z opcji: **Ciąg**, **Ciąg (XML)**, **Data i godzina**, **Liczba całkowita**, **Liczba zmiennoprzecinkowa** lub **Wartość logiczna**.
+  - **OMA-URI** — wprowadź odpowiedni identyfikator OMA-URI.
+  - **Wartość** — wprowadź wartość, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI.
+
+6. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po zakończeniu konfiguracji ustawień profil zostanie utworzony i wyświetlony w bloku listy profilów. Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
-
-
-
-
+Po zakończeniu konfiguracji ustawień profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [Jak przypisywać profile urządzeń](device-profile-assign.md).

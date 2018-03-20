@@ -1,12 +1,12 @@
 ---
-title: "Jak dodawać aplikacje biznesowe dla systemu Windows Phone do usługi Intune"
-titlesuffix: Azure portal
-description: "Informacje o dodawaniu aplikacji biznesowych dla systemu Windows Phone do usługi Intune."
+title: "Jak dodawać aplikacje biznesowe dla systemu Windows Phone do usługi Microsoft Intune"
+titlesuffix: 
+description: "Informacje o dodawaniu aplikacji biznesowych (LOB) dla systemu Windows Phone do usługi Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/3/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,40 +15,42 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6c20414c2df5616a2616d64f88718761be8a57b0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8466a77929620ef9ef7c1559dae62990730d0acd
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-add-windows-phone-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows Phone do usługi Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesowych dla systemu Windows Phone do usługi Microsoft Intune. Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pliku instalacyjnego aplikacji. Aplikacje tego typu są zwykle pisane w firmie. Usługa Intune instaluje aplikację LOB na urządzeniu użytkownika. 
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6. W bloku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**.
+6. W okienku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**.
 
 ## <a name="step-2---configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
 
-1. W bloku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W bloku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu Windows Phone z rozszerzeniem **.xap**.
+1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
+2. W okienku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu Windows Phone z rozszerzeniem **.xap**.
 3. Gdy skończysz, wybierz przycisk **OK**.
 
 
 ## <a name="step-3---configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
 
-1. W bloku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W bloku **Informacje o aplikacji** skonfiguruj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
+1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
+2. W okienku **Informacje o aplikacji** skonfiguruj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
     - **Nazwa** — wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis** — wprowadź opis aplikacji. Opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
+    - **Ignoruj wersję aplikacji** — ustaw opcję na **Tak**, jeśli aplikacja jest automatycznie aktualizowania przez dewelopera aplikacji.
     - **Kategoria** — wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Używanie kategorii ułatwia użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
     - **Wyświetl jako polecaną aplikację w portalu firmy** — wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
     - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
@@ -61,13 +63,13 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="step-4---finish-up"></a>Krok 4. Zakończenie
 
-1. W bloku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
+1. W okienku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Utworzona aplikacja jest wyświetlana na liście aplikacji. Teraz można przypisać ją do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
+- Utworzona aplikacja jest wyświetlana na liście aplikacji. Teraz można przypisać ją do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
-Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
+- Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
 
-Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md)
+- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md)

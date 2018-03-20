@@ -1,29 +1,29 @@
 ---
-title: "Ograniczenia urządzenia z systemem Windows 10 Team w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje na temat ograniczeń urządzenia dotyczących urządzeń z systemem Windows 10 Team."
+title: "Ograniczenia urządzeń w usłudze Intune dotyczące systemu Windows 10 Team"
+titlesuffix: 
+description: "Dowiedz się więcej na temat ograniczeń dotyczących urządzeń z systemem Windows 10 Team."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 677c41a2-5344-4c52-85f0-809dce3a5d5b
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3648f8b273f666d1898226f3da8580e55a6bc6f8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 69cceda6857412f7e9a50c58d075caeee4ea9c20
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-10-team-device-restriction-settings-in-microsoft-intune"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 Team w usłudze Microsoft Intune
+# <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows 10 Team w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+W tym artykule opisano ustawienia ograniczeń urządzeń w usłudze Microsoft Intune, które można skonfigurować dla urządzeń z systemem Windows 10 Team.
 
 
 ## <a name="apps-and-experience"></a>Aplikacje i środowisko
@@ -47,7 +47,7 @@ Aby połączyć z usługą Azure Operational Insights, należy określić **iden
 
 - **Numer PIN projekcji bezprzewodowej** — określa, czy przed korzystaniem z funkcji projekcji bezprzewodowej na urządzeniu jest wymagane wprowadzenie numeru PIN.
 - **Projekcja bezprzewodowa Miracast** — jeśli chcesz zezwolić urządzeniu z systemem Windows 10 Team na korzystanie z projekcji przy użyciu urządzeń z funkcją Miracast, wybierz tę opcję.
-- **Kanał projekcji bezprzewodowej Miracast** — wybierz kanał Miracast, który będzie używany do nawiązania połączenia.
+- **Kanał projekcji bezprzewodowej Miracast** — wybierz kanał Miracast, który jest używany do nawiązywania połączenia.
 
 
 ## <a name="next-steps"></a>Następne kroki

@@ -1,11 +1,12 @@
 ---
 title: "Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST"
+titlesuffix: Microsoft Intune
 description: "Pobieraj dane z magazynu danych usługi Intune za pomocą interfejsu API RESTful."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/31/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +15,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e96e1a728fbb054f412dc6c2a3610179aec18b75
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 22bfcc4e2947cba54509409132da3687d51a472d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Pobieranie danych z interfejsu API magazynu danych usługi Intune za pomocą klienta REST
 
@@ -34,9 +35,9 @@ Dzięki poniższym krokom dowiesz się, jak autoryzować interfejs API i uzyskiw
 
 ## <a name="create-a-client-app-as-a-native-app-in-azure"></a>Utworzyć aplikację kliencką jako aplikację natywną na platformie Azure
 
-Utwórz aplikację natywną na platformie Azure. Ta aplikacja natywna jest aplikacją kliencką. Klient uruchomiony na maszynie lokalnej odwołuje się do interfejsu API magazynu danych usługi Intune, gdy klient lokalny żąda poświadczeń. 
+Utwórz aplikację natywną na platformie Azure. Ta aplikacja natywna jest aplikacją kliencką. Klient uruchomiony na maszynie lokalnej odwołuje się do interfejsu API magazynu danych usługi Intune, gdy klient lokalny żąda poświadczeń.
 
-1. Zaloguj się do witryny Azure Portal dla swojej dzierżawy. Wybierz pozycję **Azure Active Directory** > **Rejestracje aplikacji**, aby otworzyć blok **Rejestracje aplikacji**.
+1. Zaloguj się do witryny Azure Portal dla swojej dzierżawy. Wybierz pozycję **Azure Active Directory** > **Rejestracje aplikacji**, aby otworzyć okienko **Rejestracje aplikacji**.
 2. Wybierz pozycję **Rejestracja nowej aplikacji**.
 3. Wpisz szczegóły aplikacji.
     1.  W polu **Nazwa** wpisz przyjazną nazwę, na przykład Intune Data Warehouse Client.
@@ -53,19 +54,19 @@ Utwórz aplikację natywną na platformie Azure. Ta aplikacja natywna jest aplik
 Możesz teraz mieć aplikację zdefiniowaną na platformie Azure. Przyznaj aplikacji natywnej dostęp do interfejsu API usługi Microsoft Intune.
 
 1.  Wybierz aplikację natywną. Aplikacji nadano nazwę taką jak na przykład **Intune Data Warehouse Client**.
-2.  W bloku **Ustawienia** wybierz pozycję **Wymagane uprawnienia**.
-3.  W bloku **Wymagane uprawnienia** wybierz pozycję **Dodaj**.
+2.  W okienku **Ustawienia** wybierz pozycję **Wymagane uprawnienia**.
+3.  W okienku **Wymagane uprawnienia** wybierz pozycję **Dodaj**.
 4.  Wybierz pozycję **Wybierz interfejs API**.
 5.  Wyszukaj nazwę aplikacji internetowej. Ma nazwę **Microsoft Intune API**.
 6.  Wybierz aplikację na liście.
 7.  Wybierz pozycję **Wybierz**.
 8.  Zaznacz pole **Uprawnienia delegowane**, aby dodać pozycję **Pobierz informacje magazynu danych z usługi Microsoft Intune**.
 
-    ![Włączanie dostępu](media\reports-get_rest_data_client_access.png)
+    ![Włączanie dostępu — interfejs Microsot Intune API](media\reports-get_rest_data_client_access.png)
 
 9.  Wybierz pozycję **Wybierz**.
 10.  Wybierz pozycję **Gotowe**.
-11.  Opcjonalnie wybierz pozycję **Udziel uprawnień** w bloku Wymagane uprawnienia. Spowoduje to zezwolenie na dostęp do wszystkich kont w bieżącym katalogu. Dzięki temu okno dialogowe zgody nie będzie wyświetlane dla każdego użytkownika w dzierżawie. Aby uzyskać więcej informacji, zobacz [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+11.  Opcjonalnie wybierz pozycję **Udziel uprawnień** w okienku Wymagane uprawnienia. Spowoduje to zezwolenie na dostęp do wszystkich kont w bieżącym katalogu. Dzięki temu okno dialogowe zgody nie będzie wyświetlane dla każdego użytkownika w dzierżawie. Aby uzyskać więcej informacji, zobacz [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 12.  Wybierz pozycję **Tak**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Pobieranie danych z interfejsu API usługi Microsoft Intune przy użyciu narzędzia Postman
@@ -88,14 +89,14 @@ Do wykonania wywołania REST przy użyciu narzędzia Postman potrzebne są nast�
 
 ### <a name="odata-endpoint"></a>Punkt końcowy OData
 
-Potrzebny jest również punkt końcowy. Aby uzyskać punkt końcowy magazynu danych, potrzebny będzie adres URL niestandardowego źródła danych. Punkt końcowy OData można pobrać z bloku Magazyn danych.
+Potrzebny jest również punkt końcowy. Aby uzyskać punkt końcowy magazynu danych, potrzebny będzie adres URL niestandardowego źródła danych. Punkt końcowy OData można pobrać z okienka Magazyn danych.
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Wybierz pozycję **Skonfiguruj magazyn danych usługi Intune** w obszarze **Inne zadania**.
 4. Skopiuj adres URL niestandardowego źródła danych w obszarze **Użyj usług raportowania innych firm**. Powinien on wyglądać następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 
-Punkt końcowy ma następujący format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`. 
+Punkt końcowy ma następujący format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
 
 Na przykład jednostka **dates** wygląda następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 
@@ -151,10 +152,10 @@ Następujący przykład zawiera prostego klienta REST. W kodzie użyto klasy **h
 > Możesz skorzystać z następującego [przykładowego kodu w serwisie GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Zapoznaj się z repozytorium GitHub, aby poznać najnowsze zmiany i aktualizacje w przykładzie.
 
 1.  Otwórz program **Microsoft Visual Studio**.
-2.  Wybierz pozycję **Plik** > **Nowy projekt**. Rozwiń pozycję **Visual C#** i wybierz pozycję **Aplikacja konsoli (.NET Framework)**. 
+2.  Wybierz pozycję **Plik** > **Nowy projekt**. Rozwiń pozycję **Visual C#** i wybierz pozycję **Aplikacja konsoli (.NET Framework)**.
 3.  Nadaj projektowi nazwę ` IntuneDataWarehouseSamples`, przejdź do lokalizacji, w której chcesz zapisać projekt, i wybierz pozycję **OK**.
 4.  Kliknij prawym przyciskiem myszy nazwę rozwiązania w Eksploratorze rozwiązań, a następnie wybierz pozycję **Zarządzaj pakietami NuGet rozwiązania**. Wybierz pozycję **Przeglądaj**, a następnie wpisz `Microsoft.IdentityModel.Clients.ActiveDirectory` w polu wyszukiwania.
-5. Wybierz pakiet, wybierz projekt **IntuneDataWarehouseSamples** w obszarze Zarządzaj pakietami dla rozwiązania, a następnie wybierz pozycję **Zainstaluj**. 
+5. Wybierz pakiet, wybierz projekt **IntuneDataWarehouseSamples** w obszarze Zarządzaj pakietami dla rozwiązania, a następnie wybierz pozycję **Zainstaluj**.
 6. Wybierz pozycję **Akceptuję**, aby zaakceptować licencję pakietu NuGet.
 7. Otwórz plik `Program.cs` z poziomu Eksploratora rozwiązań.
 
@@ -178,15 +179,15 @@ namespace IntuneDataWarehouseSamples
     * emailAddress - The email address of the user that you will authenticate as.
     *
     * password  - The password for the above email address.
-    *    This is inline only for simplicity in this sample. We do not 
+    *    This is inline only for simplicity in this sample. We do not
     *    recommend storing passwords in plaintext.
     *
     * applicationId - The application ID of the native app that was created in AAD.
     *
-    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in 
+    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
     *      the Azure portal.
-    * 
-    * collectionName - The name of the warehouse entity collection you would like to 
+    *
+    * collectionName - The name of the warehouse entity collection you would like to
     *      access.
     */
    var emailAddress = "intuneadmin@yourcompany.com";
@@ -224,6 +225,6 @@ namespace IntuneDataWarehouseSamples
 
 ## <a name="next-steps"></a>Następne kroki
 
-Szczegółowe informacje dotyczące autoryzacji, struktury adresu URL interfejsu API i punktów końcowych OData znajdziesz w artykule [Korzystanie z interfejsu API magazynu danych usługi Intune](reports-api-url.md). 
+Szczegółowe informacje dotyczące autoryzacji, struktury adresu URL interfejsu API i punktów końcowych OData znajdziesz w artykule [Korzystanie z interfejsu API magazynu danych usługi Intune](reports-api-url.md).
 
 Możesz także zapoznać się z modelem danych magazynu danych usługi Intune, aby znaleźć jednostki danych zawarte w interfejsie API. Aby uzyskać więcej informacji, zobacz [Model danych interfejsu API magazynu danych usługi Intune](reports-ref-data-model.md)

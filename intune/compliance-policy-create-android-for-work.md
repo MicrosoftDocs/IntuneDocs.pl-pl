@@ -1,12 +1,12 @@
 ---
-title: "Tworzenie zasad zgodności dla programu Android for Work"
-titleSuffix: Azure portal
-description: "Informacje dotyczące tworzenia zasad zgodności dla urządzeń z programem Android for Work."
+title: "Tworzenie zasad zgodności programu Android for Work"
+titleSuffix: Microsoft Intune
+description: "Utwórz zasady zgodności urządzeń w usłudze Intune dla urządzeń z programem Android for Work w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b5ff76137da7b42fddc5c1238ef9e102adfa1307
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 8ca31d4c83ccc6b786933080b96f66953cf1a108
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z programem Android for Work w usłudze Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności są tworzone dla każdej platformy.  Zasady zgodności można tworzyć w witrynie Azure Portal. Aby dowiedzieć się więcej o tym, czym są zasady zgodności, zobacz [What is device compliance](device-compliance.md) (Czym jest zgodność urządzenia). Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz [Get started with device compliance](device-compliance-get-started.md) (Wprowadzenie do zgodności z urządzeniem).
+Zasady zgodności urządzeń w usłudze Intune dla programu Android for Work określają reguły i ustawienia, które urządzenia z programem Android for Work muszą spełnić, aby zostały uznane za zgodne. Tych zasad można używać z dostępem warunkowym, aby zezwalać na dostęp do zasobów firmy lub go blokować. Można także uzyskiwać raporty urządzeń i podejmować działania w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej o zasadach zgodności i wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
@@ -51,12 +51,14 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 ## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Tworzenie zasad zgodności w witrynie Azure Portal
 
-1. W bloku **Intune** wybierz pozycję **Ustaw zgodność urządzenia**. W obszarze **Zarządzaj** wybierz pozycję **Wszystkie zasady zgodności urządzeń** i wybierz przycisk **Utwórz**.
-2. Wpisz nazwę oraz opis i wybierz platformę, której te zasady mają dotyczyć.
-3. Wybierz pozycję **Wymagania zgodności**, aby określić ustawienia **Zabezpieczenia**, **Kondycja urządzenia** i **Właściwości urządzenia**. Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. W okienku **Intune** wybierz pozycję **Zgodność urządzeń**. W obszarze **Zarządzaj** wybierz pozycję **Zasady** i wybierz pozycję **Utwórz zasady**.
+2. Wpisz nazwę, opis i wybierz platformę, której te zasady mają dotyczyć.
+3. Wybierz pozycję **Konfiguruj ustawienia**, aby określić ustawienia **zabezpieczeń systemu**, **kondycji urządzenia** i **właściwości urządzenia** w tym miejscu. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
-5. In the **Actions for noncompliance** blade, choose **Add** to create a new action.  The action parameters blade allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
+5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
 6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
 7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
 8. Choose **Add** to finish creating the action.
@@ -64,10 +66,10 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 
-Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zgodność — zasady**.
+Aby przypisać użytkownikom zasady zgodności, wybierz skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w okienku **Zgodność urządzeń — zasady**.
 
-1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
-2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Wybierz** powoduje wdrożenie zasad dla użytkowników.
+1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
+2. Wybierz pozycję **Wybrane grupy**, aby otworzyć okienko, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Zapisz** powoduje wdrożenie zasad dla użytkowników.
 
 Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
 

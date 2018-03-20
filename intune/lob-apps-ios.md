@@ -1,12 +1,12 @@
 ---
-title: "Jak dodawać aplikacje biznesowe dla systemu iOS do usługi Intune"
-titlesuffix: Azure portal
-description: "Informacje o dodawaniu aplikacji biznesowych dla systemu iOS do usługi Intune."
+title: "Jak dodawać aplikacje biznesowe dla systemu iOS do usługi Microsoft Intune"
+titlesuffix: 
+description: "Dowiedz się, jak dodawać aplikacje biznesowe (LOB) dla systemu iOS do usługi Microsoft Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/3/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,45 +15,46 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 684237a894c2bb2171be65fb86c82342a7f42ac1
-ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
+ms.openlocfilehash: 225d598cfeb1c358131365efd1664dbdd9a76a5c
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe dla systemu iOS do usługi Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Informacje przedstawione w tym temacie ułatwiają dodawanie aplikacji biznesowych ze sklepu dla systemu do usługi Intune.
+Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesowych dla systemu iOS do usługi Microsoft Intune.
 
 >[!NOTE]
 >Użytkownicy urządzeń z systemem iOS mogą usuwać niektóre wbudowane aplikacje dla systemu iOS, takie jak Stocks i Maps, ale nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy końcowi usuwają te aplikacje, muszą przejść do sklepu z aplikacjami i ręcznie zainstalować je ponownie.
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
-3. W bloku **Intune** wybierz opcję **Zarządzaj aplikacjami**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6. W bloku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**.
+6. W okienku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**.
 
 ## <a name="step-2---configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
 
-1. W bloku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W bloku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.
+1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
+2. W okienku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.
 3. Gdy skończysz, wybierz przycisk **OK**.
 
 
 ## <a name="step-3---configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
 
-1. W bloku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W bloku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
+1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
+2. W okienku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
     - **Nazwa** — wprowadź nazwę aplikacji do wyświetlenia w Portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis** — wprowadź opis aplikacji, który ma być wyświetlany użytkownikom w Portalu firmy.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
     - **Minimalna wersja systemu operacyjnego** — wybierz z listy minimalną wersję systemu operacyjnego, na którym można zainstalować aplikację. W przypadku przypisania aplikacji do urządzenia z wcześniejszą wersją systemu operacyjnego instalacja nie będzie możliwa.
+    - **Ignoruj wersję aplikacji** — ustaw opcję na **Tak**, jeśli aplikacja jest automatycznie aktualizowania przez dewelopera aplikacji.
     - **Kategoria** — wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
     - **Wyświetl jako polecaną aplikację w portalu firmy** — wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
     - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
@@ -66,7 +67,7 @@ Informacje przedstawione w tym temacie ułatwiają dodawanie aplikacji biznesowy
 
 ## <a name="step-4---finish-up"></a>Krok 4. Zakończenie
 
-1. W bloku **Dodaj aplikację** sprawdź poprawność szczegółów aplikacji.
+1. W okienku **Dodaj aplikację** sprawdź poprawność szczegółów aplikacji.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 Utworzona aplikacja pojawi się na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
@@ -74,12 +75,14 @@ Utworzona aplikacja pojawi się na liście aplikacji, skąd można ją przypisa�
 ## <a name="step-5---update-a-line-of-business-app"></a>Krok 5. Aktualizacja aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]  
-Uwaga: aby usługa Intune mogła wdrożyć nowy plik IPA na urządzeniu, należy zwiększyć numer w ciągu znaków CFBundleVersion w pliku Info.plist w pakiecie IPA.
+
+> [!NOTE]
+> Aby usługa Intune mogła wdrożyć nowy plik IPA na urządzeniu, należy zwiększyć numer w ciągu znaków *CFBundleVersion* w pliku *Info.plist* w pakiecie IPA.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Utworzona aplikacja jest wyświetlana na liście aplikacji. Teraz można przypisać ją do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
+- Utworzona aplikacja jest wyświetlana na liście aplikacji. Teraz można przypisać ją do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
-Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
+- Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
 
-Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md)
+- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md)

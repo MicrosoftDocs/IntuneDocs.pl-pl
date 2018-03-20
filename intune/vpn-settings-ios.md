@@ -1,29 +1,29 @@
 ---
-title: "Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Intune"
-titlesuffix: Azure portal
-description: "Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń VPN na urządzeniach z systemem iOS."
+title: "Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Informacje dotyczące ustawień usługi Intune, za pomocą których można skonfigurować połączenia sieci VPN na urządzeniach z systemem iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3db57b851c405758c9cccdc3e70c96ca9e76000
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 70721d1d2f360527af0e269a93d6243b6a42431b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Ten artykuł zawiera informacje dotyczące ustawień usługi Intune, za pomocą których można skonfigurować połączenia sieci VPN na urządzeniach z systemem iOS.
 
 W zależności od wybranych ustawień niektórych wartości z poniższej listy nie będzie można skonfigurować.
 
@@ -38,7 +38,7 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 - **Typ połączenia** — umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
     - **Check Point Capsule VPN**
     - **Cisco AnyConnect**
-    - **Dell SonicWALL Mobile Connect**
+    - **SonicWall Mobile Connect**
     - **F5 Edge Client**
     - **Pulse Secure**
     - **Cisco (IPSec)**
@@ -62,7 +62,7 @@ W przypadku wybrania opcji **Niestandardowa sieć VPN** jako typ połączenia sk
 - **Reguły na żądanie** — to ustawienie umożliwia skonfigurowanie reguł warunkowych, które są stosowane po zainicjowaniu połączenia VPN. Na przykład można utworzyć warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z jedną z sieci Wi-Fi firmy. Można również utworzyć warunek, zgodnie z którym połączenie VPN nie będzie inicjowane, jeśli urządzenie nie może uzyskać dostępu do określonej domeny wyszukiwania DNS.
 
     - **Identyfikatory SSID lub domeny wyszukiwania DNS** — wybierz, czy ten warunek będzie używać **identyfikatorów SSID** sieci bezprzewodowej, czy **domen wyszukiwania DNS**. Kliknij przycisk Dodaj, aby skonfigurować jeden lub większą liczbę identyfikatorów SSID lub domen wyszukiwania.
-    - **Sonda ciągu adresu URL** — opcjonalnie można podać adres URL używany przez regułę do celów testowych. Jeśli urządzenie, na którym ten profil jest zainstalowany, może uzyskać dostęp do tego adresu URL bez przekierowania, połączenie VPN jest nawiązywane i urządzenie łączy się z docelowym adresem URL. Użytkownik nie będzie widział witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
+    - **Sonda ciągu adresu URL** — opcjonalnie można podać adres URL używany przez regułę do celów testowych. Jeśli urządzenie, na którym ten profil jest zainstalowany, może uzyskać dostęp do tego adresu URL bez przekierowania, połączenie VPN jest nawiązywane i urządzenie łączy się z docelowym adresem URL. Użytkownik nie widzi witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera sieci Web, która sprawdza zgodność urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
     - **Akcja domeny** — wybierz jedną z następujących pozycji:
         - Połącz w razie potrzeby — 
         - Nigdy nie łącz — 

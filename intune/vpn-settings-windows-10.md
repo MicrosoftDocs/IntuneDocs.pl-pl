@@ -1,127 +1,128 @@
 ---
-title: "Ustawienia sieci VPN w usłudze Intune dla urządzeń z systemem Windows 10"
-titlesuffix: Azure portal
-description: "Informacje dotyczące ustawień usługi Intune służących do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 10."
+title: "Wyświetlanie ustawień sieci VPN w usłudze Microsoft Intune — Azure | Microsoft Docs"
+description: "Dowiedz się więcej o dostępnych ustawieniach sieci VPN w usłudze Microsoft Intune, ich użyciu oraz działaniu, w tym o regułach ruchu, dostępie warunkowym oraz ustawieniach DNS i serwera proxy dla urządzeń z systemem Windows 10 oraz urządzeń z systemem Windows Holographic for Business."
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 1/26/2018
+ms.date: 3/8/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
+ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: d126853051bb4a6c2f1ea6fbd54195ae06254b51
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 1c1ed2946782f92313aacec05a65a80b2704ddaa
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia sieci VPN dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
+# <a name="read-about-the-vpn-settings-in-intune"></a>Przeczytaj informacje o ustawieniach sieci VPN w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-W zależności od wybranych ustawień niektórych wartości z poniższej listy nie można skonfigurować.
+Możesz skonfigurować połączenia sieci VPN przy użyciu usługi Intune. W tym artykule opisano te ustawienia, reguły ruchu, dostęp warunkowy oraz ustawienia DNS i serwera proxy.
 
-> [!NOTE]
-> Te ustawienia dotyczą również urządzeń z systemem Windows Holographic for Business.
+Te ustawienia mają zastosowanie do:
 
+- urządzeń z systemem Windows 10,
+- urządzeń z systemem Holographic Windows for Business.
+
+W zależności od wybranych ustawień niektórych wartości nie będzie można skonfigurować.
 
 ## <a name="base-vpn-settings"></a>Podstawowe ustawienia sieci VPN
 
+- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Serwery**: umożliwia dodanie jednego lub większej liczby serwerów sieci VPN, z którymi urządzenia się łączą.
+  - **Dodaj**: otwiera okno **Dodaj wiersz**, w którym możesz wprowadzić następujące informacje:
+    - **Opis**: umożliwia podanie opisowej nazwy serwera, na przykład **Serwer sieci VPN firmy Contoso**
+    - **Adres IP lub nazwa FQDN**: umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą, np. **192.168.1.1** lub **vpn.contoso.com**
+    - **Serwer domyślny**: określa ten serwer jako serwer domyślny używany przez urządzenia do nawiązania połączenia. Ustaw tylko jeden serwer jako domyślny.
+  - **Importuj**: umożliwia przejście do pliku zawierającego rozdzielaną przecinkami listę serwerów w formacie: opis, adres IP lub nazwa FQDN, serwer domyślny. Wybierz pozycję **OK**, aby zaimportować te serwery do listy **Serwery**.
+  - **Eksportuj**: umożliwia wyeksportowanie listy serwerów do pliku CSV (plik wartości rozdzielanych przecinkami)
 
-- **Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
-- **Serwery** — umożliwia dodanie jednego lub większej liczby serwerów sieci VPN, z którymi urządzenia się łączą.
-    - **Dodaj** — otwiera blok **Dodaj wiersz**, w którym można określić następujące informacje:
-        - **Opis** — umożliwia określenie opisowej nazwy serwera, na przykład **Serwer sieci VPN firmy Contoso**.
-        - **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą. Przykłady: **192.168.1.1**, **vpn.contoso.com**.
-        - **Serwer domyślny** — określa ten serwer jako serwer domyślny używany przez urządzenia do nawiązania połączenia. Upewnij się, że tylko jeden serwer jest ustawiony jako domyślny.
-    - **Importuj** — umożliwia przejście do pliku zawierającego rozdzielaną przecinkami listę serwerów w formacie: opis, adres IP lub nazwa FQDN, serwer domyślny. Wybierz pozycję **OK**, aby zaimportować te dane do listy **Serwery**.
-    - **Eksportuj** — umożliwia wyeksportowanie listy serwerów do pliku CSV (plik wartości rozdzielany przecinkami).
+**Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 
-**Typ połączenia** — umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 - **Automatyczne**
 - **Check Point Capsule VPN**
 - **Sieć VPN Citrix**
-- **Dell SonicWALL Mobile Connect**
+- **SonicWALL Mobile Connect**
 - **F5 Edge Client**
 - **IKEv2**
 - **L2TP**
 - **PPTP**
 - **Pulse Secure**
 
+**Grupa lub domena logowania** (tylko dla SonicWALL Mobile Connect): nie można ustawić tej właściwości w profilu sieci VPN. Zamiast tego rozwiązanie Mobile Connect analizuje tę wartość, jeśli nazwa użytkownika i domeny zostały wprowadzone w formacie `username@domain` lub `DOMAIN\username`.
 
-**Grupa lub domena logowania** (tylko dla Dell SonicWALL Mobile Connect) — umożliwia określenie nazwy grupy lub domeny logowania, z którą chcesz nawiązać połączenie.
-
-**Niestandardowy kod XML**/**Kod XML protokołu EAP** — umożliwia określenie niestandardowych poleceń XML do konfiguracji połączenia z siecią VPN.
+**Niestandardowy kod XML**/**Kod XML protokołu EAP**: umożliwia wprowadzenie niestandardowych poleceń XML do konfiguracji połączenia z siecią VPN.
 
 **Przykład dotyczący Pulse Secure:**
 
 ```
-    <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
+<pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
 ```
 
 **Przykład dotyczący CheckPoint Mobile VPN:**
 
 ```
-    <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
+<CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
 ```
 
-**Przykład dotyczący Dell SonicWALL Mobile Connect:**
+**Przykład dotyczący SonicWALL Mobile Connect:**
 
 ```
-    <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
+<MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 ```
 
 **Przykład dotyczący F5 Edge Client:**
 
 ```
-    <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
+<f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
 ```
 
 Więcej informacji na temat pisania niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
 
 Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML protokołu EAP, zobacz [EAP configuration (Konfiguracja protokołu EAP)](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
 
-**Podziel tunelowanie** - wybierz ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu użyje połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
-- **Podziel trasy tunelowania dla tego połączenia VPN** — umożliwia dodanie opcjonalnych tras dla dostawców sieci VPN innej firmy. Określ prefiks docelowy i rozmiar prefiksu dla każdego miejsca docelowego.
+**Podziel tunelowanie**: ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu używa połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
+- **Podziel trasy tunelowania dla tego połączenia VPN**: umożliwia dodanie opcjonalnych tras dla dostawców sieci VPN innej firmy. Wprowadź prefiks docelowy i rozmiar prefiksu dla każdego miejsca docelowego.
 
 ## <a name="apps-and-traffic-rules"></a>Reguły dotyczące aplikacji i ruchu
 
-**Ogranicz połączenie sieci VPN do tych aplikacji** — włącz tę opcję, aby tylko określone aplikacje mogły korzystać z połączenia VPN.
-**Skojarzone aplikacje** — podaj listę aplikacji, które automatycznie będą używać połączenia VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnej podaj nazwę rodziny pakietów. W przypadku aplikacji klasycznej podaj ścieżkę pliku aplikacji.
+**Ogranicz połączenie sieci VPN do tych aplikacji**: włącz to ustawienie, aby tylko wybrane aplikacje mogły korzystać z połączenia VPN.
+**Skojarzone aplikacje**: podaj listę aplikacji, które automatycznie będą używać połączenia VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnej podaj nazwę rodziny pakietów. W przypadku aplikacji klasycznej podaj ścieżkę pliku aplikacji.
 
 >[!IMPORTANT]
->Zalecamy zabezpieczenie wszystkich list aplikacji kompilowanych do użytku w konfiguracji sieci VPN aplikacji. Jeśli nieautoryzowany użytkownik zmodyfikuje listę, po czym zaimportujesz listę do sieci VPN aplikacji, możesz potencjalnie autoryzować dostęp za pośrednictwem sieci VPN do aplikacji, które nie powinny mieć dostępu. Jednym ze sposobów na zabezpieczenie listy aplikacji jest użycie listy kontroli dostępu (ACL).
+>Zalecamy zabezpieczenie wszystkich list aplikacji utworzonych dla sieci VPN dla poszczególnych aplikacji. Jeśli nieautoryzowany użytkownik wprowadzi zmiany na liście, po czym zaimportujesz listę do sieci VPN aplikacji, możesz potencjalnie autoryzować dostęp za pośrednictwem sieci VPN do aplikacji, które nie powinny mieć dostępu. Jednym ze sposobów na zabezpieczenie listy aplikacji jest użycie listy kontroli dostępu (ACL).
 
-**Reguły ruchu sieciowego dla tego połączenia sieci VPN** — wybierz protokoły oraz zakresy portów i adresów lokalnych oraz zdalnych, które mają być włączone dla połączenia sieci VPN. Jeśli nie utworzysz reguły ruchu sieciowego, wszystkie protokoły, porty i zakresy adresów zostaną włączone. Po utworzeniu reguły połączenie sieci VPN będzie używało tylko protokołów, portów i zakresów adresów wybranych w tej regule.
-
+**Reguły ruchu sieciowego dla tego połączenia sieci VPN**: wybierz protokoły oraz zakresy portów i adresów lokalnych oraz zdalnych, które mają być włączone dla połączenia sieci VPN. Jeśli nie utworzysz reguły ruchu sieciowego, wszystkie protokoły, porty i zakresy adresów zostaną włączone. Po utworzeniu reguły połączenie sieci VPN będzie używało tylko protokołów, portów i zakresów adresów wybranych w tej regule.
 
 ## <a name="conditional-access"></a>Dostęp warunkowy
 
-**Dostęp warunkowy dla tego połączenia VPN** — umożliwia przepływ zgodności urządzenia od klienta. Po włączeniu klient VPN będzie podejmować próby komunikacji z usługą Azure Active Directory, aby uzyskać certyfikat do użycia na potrzeby uwierzytelniania. Sieć VPN należy skonfigurować do używania uwierzytelniania certyfikatów, a serwer sieci VPN musi mieć relację zaufania z serwerem zwracanym przez usługę Azure Active Directory.
+**Dostęp warunkowy dla tego połączenia VPN**: umożliwia przepływ zgodności urządzenia od klienta. Po włączeniu klient VPN będzie podejmować próby komunikacji z usługą Azure Active Directory, aby uzyskać certyfikat do użycia na potrzeby uwierzytelniania. Sieć VPN należy skonfigurować do używania uwierzytelniania certyfikatów, a serwer sieci VPN musi mieć relację zaufania z serwerem zwracanym przez usługę Azure Active Directory.
 
-**Logowanie jednokrotne z certyfikatem alternatywnym** — na potrzeby zgodności urządzeń użyj certyfikatu innego niż certyfikat uwierzytelniania sieci VPN podczas uwierzytelniania Kerberos. Wybierz certyfikat z następującymi ustawieniami: 
+**Logowanie jednokrotne z certyfikatem alternatywnym**: na potrzeby zgodności urządzeń użyj certyfikatu innego niż certyfikat uwierzytelniania sieci VPN podczas uwierzytelniania Kerberos. Wprowadź certyfikat z następującymi ustawieniami:
 
-- **Rozszerzone użycie klucza** — nazwa rozszerzonego użycia klucza (EKU).
-- **Identyfikator obiektu** — identyfikator obiektu dla EKU.
-- **Skrót wystawcy** — odcisk palca certyfikatu logowania jednokrotnego.
+- **Rozszerzone użycie klucza**: nazwa rozszerzonego użycia klucza (EKU).
+- **Identyfikator obiektu**: identyfikator obiektu dla EKU.
+- **Skrót wystawcy**: odcisk palca certyfikatu logowania jednokrotnego.
 
 ## <a name="dns-settings"></a>Ustawienia DNS
 
-**Nazwy i serwery DNS dla tego połączenia sieci VPN** — umożliwia wybór serwerów DNS, które będą używane przez połączenie sieci VPN po jego nawiązaniu.
-Dla każdego serwera określ następujące parametry:
+**Nazwy i serwery DNS dla tego połączenia sieci VPN**: umożliwia wybór serwerów DNS, które będą używane przez połączenie sieci VPN po jego nawiązaniu.
+Dla każdego serwera wprowadź:
 - **Nazwa DNS**
 - **Serwer DNS**
 - **Serwer proxy**
 
 ## <a name="proxy-settings"></a>Ustawienia serwera proxy
 
-- **Automatycznie wykrywaj ustawienia proxy** — umożliwia określenie, czy urządzenia mają automatycznie wykrywać ustawienia połączenia w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
-- **Skrypt konfiguracji automatycznej** — umożliwia skonfigurowanie serwera proxy przy użyciu pliku. W polu **Adres URL serwera proxy** wprowadź adres URL (na przykład **http://proxy.contoso.com), który zawiera plik konfiguracji.
-- **Użyj serwera proxy** — włącz tę opcję, jeśli chcesz ręcznie wprowadzić ustawienia serwera proxy.
-    - **Adres** — wprowadź adres serwera proxy (jako adres IP).
-    - **Numer portu** — wprowadź numer portu skojarzony z serwerem proxy.
-- **Pomijaj serwer proxy dla adresów lokalnych** — zaznacz tę opcję, aby serwer proxy nie był używany dla określonych adresów lokalnych w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
+- **Automatycznie wykrywaj ustawienia proxy**: umożliwia określenie, czy urządzenia mają automatycznie wykrywać ustawienia połączenia w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy.
+- **Skrypt konfiguracji automatycznej**: umożliwia skonfigurowanie serwera proxy przy użyciu pliku. Wprowadź **Adres URL serwera proxy**, np. `http://proxy.contoso.com`, który zawiera plik konfiguracji.
+- **Użyj serwera proxy**: włącz tę opcję, aby ręcznie wprowadzić ustawienia serwera proxy.
+  - **Adres**: wprowadź adres serwera proxy (jako adres IP)
+  - **Numer portu**: wprowadź numer portu skojarzony z serwerem proxy
+- **Pomijaj serwer proxy dla adresów lokalnych**: zaznacz to ustawienie, aby serwer proxy nie był używany dla wprowadzonych adresów lokalnych w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy.

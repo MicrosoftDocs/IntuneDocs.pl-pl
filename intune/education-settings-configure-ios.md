@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7bbf0ab4196f5e86d7f25aa23f12d89f1bb5ee5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d9b2e6df6c40ec142554db22a64d362e02884c1d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS
 
@@ -72,12 +72,12 @@ Informacje do usługi SDS możesz zaimportować przy użyciu jednej z następuj�
 
 ### <a name="configure-general-settings"></a>Konfigurowanie ustawień ogólnych
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3.  W bloku **Intune** wybierz pozycję **Konfiguruj urządzenia**.
-4.  W bloku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile**.
-5.  W bloku profilów wybierz pozycję **Utwórz profil**.
-6.  W bloku **Utwórz profil** wypełnij pola **Nazwa** i **Opis** odnoszące się do profilu Edukacja w systemie iOS.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
+2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
+5.  W okienku profilów wybierz pozycję **Utwórz profil**.
+6.  W okienku **Utwórz profil** wypełnij pola **Nazwa** i **Opis** odnoszące się do profilu Edukacja w systemie iOS.
 7.  Z listy rozwijanej **Platforma** wybierz pozycję **iOS**.
 8.  Z listy rozwijanej **Typ profilu** wybierz pozycję **Edukacja**.
 9.  Wybierz kolejno pozycje **Ustawienia** > **Konfiguruj**.
@@ -94,7 +94,7 @@ Tworzone certyfikaty poza uwierzytelnianiem użytkowników muszą obsługiwać u
 
 ### <a name="configure-teacher-certificates"></a>Konfigurowanie certyfikatów dla nauczycieli
 
-W bloku **Edukacja** wybierz pozycję **Certyfikaty nauczycieli**.
+W okienku **Edukacja** wybierz pozycję **Certyfikaty nauczycieli**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurowanie certyfikatu głównego dla nauczycieli
 
@@ -116,8 +116,8 @@ Po zakończeniu konfigurowania certyfikatów wybierz przycisk **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurowanie certyfikatów dla uczniów
 
-1.  W bloku **Edukacja** wybierz pozycję **Certyfikaty uczniów**.
-2.  W bloku **Certyfikaty uczniów** z listy **Typ certyfikatów urządzenia ucznia** wybierz pozycję **1:1**.
+1.  W okienku **Edukacja** wybierz pozycję **Certyfikaty uczniów**.
+2.  W okienku **Certyfikaty uczniów** z listy **Typ certyfikatów urządzenia ucznia** wybierz pozycję **1:1**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurowanie certyfikatu głównego dla uczniów
 
@@ -139,10 +139,10 @@ Po zakończeniu konfigurowania certyfikatów wybierz przycisk **OK**.
 
 ## <a name="finish-up"></a>Zakończenie
 
-1.  W bloku **Edukacja** wybierz przycisk OK.
-2.  W bloku **Utwórz profil** wybierz pozycję **Utwórz**.
+1.  W okienku **Edukacja** wybierz przycisk OK.
+2.  W okienku **Utwórz profil** wybierz pozycję **Utwórz**.
     
-Profil zostanie utworzony i wyświetlony w bloku listy profilów.
+Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 Przypisz profil do urządzeń dla uczniów w grupach, które zostały utworzone podczas synchronizowania danych szkoły z usługą Azure AD (zobacz temat [Przypisywanie profilów urządzeń](device-profile-assign.md)).
 

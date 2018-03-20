@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: E9810BEB-000A-4DFB-B5C7-A22A92082B22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 13aa627515b74d3c9fe6d091c44dd5147bd786bd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 01b26a6165db6e3016d2b3d7063a4bca60ce0266
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Jak utworzyć zasady zgodności urządzenia w celu włączenia funkcji Google Play Protect
 
@@ -29,14 +29,15 @@ Zasady zgodności, które wymagają tych ustawień, można następnie zastosowa�
 
 ## <a name="create-a-compliance-policy"></a>Tworzenie zasad zgodności
 
-1. Zaloguj się do witryny Azure Portal. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** + **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 2. Wybierz pozycję **Zgodność urządzenia** w grupie **Zarządzanie**. 
-3. Wybierz pozycję **Zasady** i wybierz pozycję **Utwórz zasady**.
+3. Wybierz pozycję **Zasady**, a następnie wybierz pozycję **Utwórz zasady**.
 4. Wpisz informacje w następujących polach zasad: **Nazwa** i **Opis**.
 5. Wybierz platformę **Android**.
 6. Wybierz kolejno pozycje **Ustawienia** > **Kondycja urządzenia**.
 7. Skonfiguruj ustawienia funkcji **Google Play Protect**.
-8. Po zdefiniowaniu ustawień funkcji Google Play Protect określ ustawienia w obszarach **Zabezpieczenia** i **Właściwości urządzenia**. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
+8. Po zdefiniowaniu ustawień funkcji Google Play Protect określ ustawienia w obszarach **Zabezpieczenia systemu** i **Właściwości urządzenia**. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
 
 ## <a name="configure-the-google-play-protect-settings"></a>Konfigurowanie ustawień funkcji Google Play Protect
 
