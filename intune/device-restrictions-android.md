@@ -6,19 +6,19 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: ayesham
+ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d939d86f6ccd7f9851cfc52f1080fddaeee6a947
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: f938967951045d24ae65315b3b4d40749c1bc20f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia usługi Microsoft Intune z systemami Android i Samsung Knox Standard 
 
@@ -144,7 +144,7 @@ Dla każdego ustawienia skonfiguruj listę aplikacji, wykonując jedną z nastę
 
 Ustawienia kiosku dotyczą tylko urządzeń z rozwiązaniem Samsung Knox Standard i odnoszą się wyłącznie do aplikacji zarządzanych za pomocą usługi Intune.
 
-- **Wybierz zarządzaną aplikację** — wybierz jedną z poniższych opcji, aby dodać co najmniej jedną zarządzaną aplikację, którą można uruchomić, gdy urządzenie jest w trybie kiosku. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji.
+- **Wybierz zarządzaną aplikację** — wybierz jedną z poniższych opcji, aby dodać co najmniej jedną zarządzaną aplikację, którą można uruchomić, gdy urządzenie jest w trybie kiosku. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji. Wstępnie zainstalowanych przeglądarek nie można zdefiniować jako aplikacji, która może zostać uruchomiona, gdy urządzenie jest w trybie kiosku. Jeśli wymagana jest przeglądarka, rozważ użycie programu [Managed Browser](app-configuration-managed-browser.md).
     - **Dodaj aplikacje według nazwy pakietu**
     - **Dodaj aplikacje przez adres URL**
     - **Dodaj aplikacje zarządzane**.

@@ -6,20 +6,20 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ad8553506752cce99f22283e50cc5f490d72ed0b
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 88be142c98d7b89720d245c738a45a26ac825395
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Ustawienia układu ekranu głównego usługi Microsoft Intune dla urządzeń z systemem iOS 
+# <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Ustawienia układu ekranu głównego usługi Microsoft Intune dla urządzeń z systemem iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -27,20 +27,21 @@ Te ustawienia umożliwiają konfigurację układu aplikacji i folderów w obszar
 
 Urządzenia iOS z przypisanym profilem muszą działać w trybie nadzorowanym i muszą mieć zainstalowany system iOS w wersji 9.3 lub nowszej.
 
-1. Na stronie **Konfiguracja urządzenia**, **Utwórz profil**, **Funkcje urządzenia** wybierz pozycję **Układ ekranu głównego (tylko tryb nadzorowany)**.
-2. Na stronie **Układ ekranu głównego (tylko tryb nadzorowany)** wybierz odpowiednio pozycję **Dock** lub **Strony**, w zależności od tego, dla jakiego obszaru chcesz skonfigurować układ.
+1. Z obszaru [Usługa Intune w witrynie Azure Portal](https://portal.azure.com) przejdź do obszaru [**Funkcje urządzenia** w obszarze konfiguracji urządzenia](device-features-configure.md).
+2. W okienku **Funkcje urządzenia** wybierz pozycję **Układ ekranu głównego (tylko tryb nadzorowany)**.
+3. W okienku **Układ ekranu głównego (tylko tryb nadzorowany)** wybierz odpowiednio pozycję **Dock** lub **Strony**, w zależności od tego, dla jakiego obszaru chcesz skonfigurować układ.
 
 ## <a name="add-items-to-the-dock"></a>Dodawanie elementów do obszaru Docka
 
-Na stronie **Dock** możesz dodać do sześciu elementów lub folderów, które zostaną dodane do obszaru Docka w systemie iOS. Wiele urządzeń obsługuje jednak mniejszą liczbę elementów, na przykład w telefonach iPhone obsługiwane są maksymalnie cztery elementy. W takim przypadku na urządzeniu wyświetlane są tylko pierwsze cztery elementy, które zostały skonfigurowane.
+W okienku **Dock** możesz dodać do sześciu elementów lub folderów, które zostaną dodane do obszaru Docka w systemie iOS. Wiele urządzeń obsługuje jednak mniejszą liczbę elementów, na przykład w telefonach iPhone obsługiwane są maksymalnie cztery elementy. W takim przypadku na urządzeniu wyświetlane są tylko pierwsze cztery elementy, które zostały skonfigurowane.
 
 1. Wybierz pozycję **Dodaj**, aby dodać element do obszaru Docka.
-2. Na stronie **Dodawanie wiersza** określ element, który chcesz dodać, wybierając pozycję **Aplikacja** lub **Folder**.
+2. W okienku **Dodawanie wiersza** określ element, który chcesz dodać, wybierając pozycję **Aplikacja** lub **Folder**.
 3. Korzystając z informacji w tym temacie, skonfiguruj aplikacje i foldery, które mają być wyświetlane w obszarze Docka.
-4. Kontynuuj dodawanie elementów. Gdy skończysz, klikaj przycisk **OK** na kolejnych stronach, aż wrócisz na stronę **Tworzenie profilu**. Wybierz pozycję **Utwórz**.
+4. Kontynuuj dodawanie elementów. Gdy skończysz, klikaj przycisk **OK** w kolejnych okienkach, aż wrócisz do okienka **Tworzenie profilu**. Wybierz pozycję **Utwórz**.
 
 >[!TIP]
-> Możesz przeciągać i upuszczać elementy w obszarze list ekranu głównego i stron, aby zmieniać ich kolejność. 
+> Możesz przeciągać i upuszczać elementy w obszarze list ekranu głównego i stron, aby zmieniać ich kolejność.
 
 ### <a name="example"></a>Przykład
 
@@ -56,9 +57,8 @@ Po przypisaniu zasad do telefonu iPhone wygląd Docka tego urządzenia będzie z
 
 Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacje widoczne na każdej ze stron. Aplikacje dodawane do strony są rozmieszczane od lewej do prawej — w kolejności, w której są wymienione na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na następną stronę.
 
-
-1. Na stronie **Strony** wybierz pozycję **Dodaj**.
-2. Na stronie **Dodawanie wiersza** wypełnij pole **Nazwa strony**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+1. W okienku **Strony** wybierz pozycję **Dodaj**.
+2. W okienku **Dodawanie wiersza** wypełnij pole **Nazwa strony**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 3. W bloku **Dodaj** określ, jaki element chcesz dodać na stronie, wybierając pozycję **Aplikacja** lub **Folder**.
 4. Korzystając z informacji w tym temacie, skonfiguruj aplikacje i foldery, które mają być wyświetlane na stronie.
 
@@ -85,7 +85,7 @@ Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej —
 
 1. Wypełnij pole **Nazwa folderu**. Tę nazwę zobaczą użytkownicy na swoich urządzeniach.
 2. Wybierz pozycję **Dodaj**, aby utworzyć stronę w folderze. Możesz dodać maksymalnie 20 stron.
-3. Na stronie **Dodawanie wiersza** wpisz nazwę strony. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
+3. W okienku **Dodawanie wiersza** wpisz nazwę strony. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 3. Wypełnij pole **Nazwa aplikacji**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest wyświetlana* na urządzeniu z systemem iOS.
 2. Wprowadź **Identyfikator pakietu aplikacji** dla aplikacji, którą chcesz wyświetlić. Aby uzyskać pomoc, zobacz temat **Jak dodać aplikację do listy**.
 3. Wybierz pozycję **Dodaj**. Możesz dodać maksymalnie 60 elementów.
@@ -94,7 +94,7 @@ Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej —
 
 ## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
 
-Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania. 
+Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
 
 |||
 |-|-|

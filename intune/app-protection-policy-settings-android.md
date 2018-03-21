@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 34334186fbf74507b54d1bf4df347de2c16c39c0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu Android
 W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -73,7 +73,7 @@ Istnieją dwie kategorie ustawień zasad: relokacja danych i dostęp. W tym tema
   | com.android.providers.media | Dostawca zawartości multimedialnej systemu Android | Dostawca zawartości multimedialnej jest dozwolony tylko w przypadku akcji wybierania dzwonka. |
   | com.google.android.gms; com.google.android.gsf | Pakiety usług Google Play | Ta pakiety są dozwolone tylko w przypadku akcji usługi Google Cloud Messaging takich jak powiadomienia wypychane. |
 
-Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych dla aplikacji](app-protection-policies-exception.md). 
+Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych dla aplikacji](app-protection-policies-exception.md).
 
 ##  <a name="access-settings"></a>Ustawienia dostępu
 
@@ -88,7 +88,10 @@ Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych d
 | **Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia** | Wybierz opcję **Tak**, aby wyłączyć numer PIN aplikacji, gdy na zarejestrowanym urządzeniu zostanie wykryta blokada urządzenia. | Nie |
 | **Wymagaj minimalnej wersji systemu operacyjnego Android** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego Android do korzystania z tej aplikacji. Jeśli wersja systemu operacyjnego Android na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka.| Nie |
 | **Wymagaj minimalnej wersji systemu operacyjnego Android (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji systemu operacyjnego Android do korzystania z tej aplikacji. Jeśli wersja systemu operacyjnego Android na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka. | Nie |
-| **Wymagaj minimalnej wersji aplikacji** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br>Jako że aplikacje często różnią się pod względem schematu określania numerów wersji, dla każdej aplikacji należy utworzyć zasadę z jedną minimalną wersją (np. „Zasady wersji programu Outlook”). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka.| Nie | 
-| **Wymagaj minimalnej wersji aplikacji (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby zalecić minimalną wersję aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br>Jako że aplikacje często różnią się pod względem schematu określania numerów wersji, dla każdej aplikacji należy utworzyć zasadę z jedną minimalną wersją (np. „Zasady wersji programu Outlook”). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka.| Nie | 
+| **Wymagaj minimalnej wersji aplikacji** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br>Jako że aplikacje często różnią się pod względem schematu określania numerów wersji, dla każdej aplikacji należy utworzyć zasadę z jedną minimalną wersją (np. „Zasady wersji programu Outlook”). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka.| Nie |
+| **Wymagaj minimalnej wersji aplikacji (tylko ostrzeżenie)** | Wybierz przycisk **Tak**, aby zalecić minimalną wersję aplikacji do użycia. Jeśli wersja aplikacji na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br>Jako że aplikacje często różnią się pod względem schematu określania numerów wersji, dla każdej aplikacji należy utworzyć zasadę z jedną minimalną wersją (np. „Zasady wersji programu Outlook”). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka.| Nie |
 | **Wymagana minimalna wersja poprawki zabezpieczeń systemu Android** | Wybierz **Tak**, aby wymagać minimalnej wersji poprawki zabezpieczeń systemu Android wydanej przez firmę Google. Jeśli poprawka zabezpieczeń systemu Android na urządzeniu nie spełnia wymagań, dostęp użytkownika zostanie zablokowany.<br><br> Ten format ustawień zasad obsługuje format daty RRRR-MM-DD. | Nie |
 | **Wymagana minimalna wersja poprawki zabezpieczeń systemu Android (tylko ostrzeżenie)** | Wybierz **Tak**, aby wymagać minimalnej wersji poprawki zabezpieczeń systemu Android wydanej przez firmę Google. Jeśli wersja poprawki zabezpieczeń systemu Android na urządzeniu nie spełnia wymagań, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić.<br><br> Ten format ustawień zasad obsługuje format daty RRRR-MM-DD. | Nie |
+
+> [!NOTE]
+> Aby dowiedzieć się więcej na temat tego, w jaki sposób wiele ustawień ochrony aplikacji usługi Intune skonfigurowanych w sekcji Dostęp dla tego samego zestawu aplikacji i użytkowników działa w systemie Android, zobacz [Funkcje MAM usługi Intune — często zadawane pytania](mam-faq.md).

@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d805d10efccb92ca3fe65b771bf7689e22f42088
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 83d508f0ce33becb9abcef7434845836d8dd2bca
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
 
@@ -39,17 +39,19 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
 
 ## <a name="create-a-device-profile-containing-email-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia poczty e-mail
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. Na stronie **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. Na stronie **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Profile**.
-3. Na stronie profilów wybierz pozycję **Utwórz profil**.
-4. Na stronie **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu poczty e-mail.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
+2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
+3. W okienku profilów wybierz pozycję **Utwórz profil**.
+4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu poczty e-mail.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia poczty e-mail. Obecnie dla ustawień poczty e-mail urządzenia można wybrać jedną z następujących platform:
     - **Android** (tylko system Samsung Android Knox Standard)
     - **Android for Work**
     - **iOS**
+    - **macOS**
     - **Windows Phone 8.1**
+    - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Poczta e-mail**.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
@@ -57,9 +59,9 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
     - [Ustawienia systemu iOS](email-settings-ios.md)
     - [Ustawienia systemu Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Windows 10 settings](email-settings-windows-10.md) (Ustawienia systemu Windows 10)
-8. Gdy skończysz, wróć na stronę **Utwórz profil** i wybierz pozycję **Utwórz**.
+8. Gdy skończysz, wróć do okienka **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
 
-Profil zostanie utworzony i wyświetlony na stronie listy profilów.
+Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
 
 ## <a name="further-information"></a>Dodatkowe informacje

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/30/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: a6466d62cf8af4e6b8a14980db5e9a244deb45c4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -53,8 +53,8 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 
 ## <a name="create-a-restriction"></a>Tworzenie ograniczenia
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. Wybierz opcję **Utwórz ograniczenie**.
 5. Nadaj nazwę i wprowadź opis ograniczenia.
@@ -70,8 +70,8 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 
 Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonując poniższe czynności:
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. W obszarze **Ograniczenia typu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Pod nazwą ograniczenia (w przypadku ograniczenia domyślnego **Wszyscy użytkownicy**) wybierz opcję **Platformy**. Wybierz pozycję **Zezwalaj** lub **Blokuj** dla każdej platformy na liście.
@@ -81,10 +81,10 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
   - System iOS obsługuje wersję major.minor.rev.
   - System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10.
   Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, Apple School Manager lub aplikacji Apple Configurator.
-8. Określ opcję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
+6. Określ opcję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
 
     ![Zrzut ekranu przedstawiający obszar roboczy ograniczania urządzeń z domyślną platformą urządzeń skonfigurowaną dla urządzeń będących własnością użytkownika](media/device-restrictions-platform-configurations.png)
-9. Kliknij polecenie **Zapisz**.
+7. Kliknij polecenie **Zapisz**.
 
 >[!NOTE]
 >- Jeśli zablokujesz rejestrację prywatnych urządzeń z systemem Android, urządzenia z programem Android for Work nadal będą mogły być rejestrowane.
@@ -95,13 +95,13 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 
 Możesz zmienić ustawienia ograniczeń dotyczących limitu liczby urządzeń, wykonując poniższe czynności:
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. W obszarze **Ograniczenia limitu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Wybierz opcję **Limit urządzeń**, a następnie na liście rozwijanej wybierz maksymalną liczbę urządzeń, które może zarejestrować użytkownik.
     ![Zrzut ekranu bloku ograniczeń limitu urządzeń](./media/device-restrictions-limit.png)
-6. Kliknij polecenie **Zapisz**.
+4. Kliknij polecenie **Zapisz**.
 
 Użytkownikowi końcowemu zostanie wyświetlone powiadomienie z informacją o terminie osiągnięcia limitu liczby zarejestrowanych urządzeń. Na przykład w systemie iOS to powiadomienie będzie wyglądać następująco:
 
@@ -119,8 +119,8 @@ Możesz zmienić priorytet dowolnego ograniczenia innego niż domyślne.
 
 **Aby zmienić priorytet ograniczeń**
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. Wybierz kolejno opcje **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
 4. Umieść kursor nad ograniczeniem na liście priorytetów.
-5. Używając trzech pionowych punktów, przeciągnij priorytet do żądanej pozycji na liście.
+5. Używając trzech pionowych punktów po lewej, przeciągnij priorytet do żądanej pozycji na liście.

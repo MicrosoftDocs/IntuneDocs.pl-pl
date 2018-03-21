@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/13/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c2cbc68aa3ea11e3b5593597a94aa059dd2927ed
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 87fea551dea1f80ee071fe6b477b84729e000874
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-add-android-store-apps-to-microsoft-intune"></a>Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu Android do usługi Microsoft Intune
 
@@ -28,12 +28,12 @@ ms.lasthandoff: 03/05/2018
 Przed przypisaniem aplikacji do urządzenia lub grupy użytkowników należy najpierw dodać aplikację do usługi Microsoft Intune. Poniższe kroki umożliwiają dodanie aplikacji ze sklepu dla systemu Android do usługi Intune w portalu Azure.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6. W bloku **Dodaj aplikację** wybierz opcję **Android** w obszarze dostępnych typów **aplikacji ze sklepu**.
-7. Wybierz pozycję **Konfiguruj**, aby skonfigurować następujące informacje o aplikacji: w zależności od wybranej aplikacji niektóre wartości w tym bloku mogą zostać wypełnione automatycznie:
+6. W okienku **Dodaj aplikację** wybierz pozycję **Android** w obszarze dostępnych typów **aplikacji ze sklepu**.
+7. Wybierz pozycję **Konfiguruj**, aby skonfigurować następujące informacje o aplikacji: w zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
     - **Nazwa** — wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis** — wprowadź opis aplikacji. Ten opis będzie widoczny dla użytkowników w Portalu firmy.
     - **Wydawca** — wprowadź nazwę wydawcy aplikacji.

@@ -13,19 +13,21 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bc53a7a6a4c961a649d01f23f30c59ff4dc90fe2
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: b0523a514eb9d6a5c0429f1a2e2fa84d1ca00de4
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
-W tym artykule opisano wszystkie ustawienia ograniczeń urządzeń, które można skonfigurować dla urządzeń z systemem iOS.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+W tym artykule opisano ustawienia ograniczeń urządzeń, które można skonfigurować dla urządzeń z systemem iOS.
+
 ## <a name="general"></a>Ogólne
 
+-   **Udostępnij dane użycia** — 	zezwala lub blokuje możliwość przesyłania danych diagnostycznych i danych telemetrycznych dotyczących użycia z urządzenia do firmy Apple.
 -   **Przesyłanie danych diagnostycznych** — umożliwia lub blokuje przesyłanie danych diagnostycznych z urządzenia do firmy Apple.
 -   **Przechwytywanie ekranu** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
     - **Zdalny podgląd ekranu za pomocą aplikacji Classroom (tylko nadzorowany)** — blokuje lub zezwala na podgląd ekranu na urządzeniach z systemem iOS za pomocą aplikacji Apple Classroom.
@@ -213,8 +215,8 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 -   **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji (tylko nadzorowany)** — zezwalaj na dołączanie urządzenia tylko do sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu sieci Wi-Fi usługi Intune.
 
 - **Zasady użycia danych komórkowych (tylko aplikacje zarządzane)** — umożliwia definiowanie typów danych, których aplikacje zarządzane mogą używać podczas pracy w sieciach komórkowych. Wybierz spośród opcji:
-    - **Zablokuj użycie danych komórkowych**
-    - **Zablokuj użycie danych komórkowych podczas roamingu**
+    - **Zablokuj użycie danych komórkowych** — możesz zablokować użycie danych komórkowych dla ** wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
+    - **Zablokuj użycie danych komórkowych podczas roamingu** — możesz zablokować użycie danych komórkowych podczas roamingu dla ** wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 

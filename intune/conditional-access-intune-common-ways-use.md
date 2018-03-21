@@ -1,10 +1,10 @@
 ---
-title: "Dostęp warunkowy przy użyciu usługi Intune"
-titlesuffix: Azure portal
-description: "Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune"
+title: "Dostęp warunkowy w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Dowiedz się, w jaki sposób dostęp warunkowy usługi Intune jest powszechnie używany dla dostępu warunkowego opartego na urządzeniach i dostępu warunkowego na podstawie aplikacji."
 keywords: 
-author: Erikre
-ms.author: erikre
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: get-started-article
@@ -14,17 +14,17 @@ ms.technology:
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5ec945cdbc4efa791edc51e659a1546876446c5
-ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
+ms.openlocfilehash: 9c34e6e2891769d64885d364f05dbedaa1fb7d57
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="common-ways-to-use-conditional-access-with-intune"></a>Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune
+# <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-W usłudze Intune istnieją dwa główne typy dostępu warunkowego. Pierwszy typ to dostęp warunkowy oparty na urządzeniu. Drugi typ to dostęp warunkowy oparty na aplikacji. Musisz skonfigurować powiązane zasady zgodności, aby sterować dostępem warunkowym w swojej organizacji.
+Istnieją dwa typy dostępu warunkowego w usłudze Intune: dostęp warunkowy oparty na urządzeniu i dostęp warunkowy na podstawie aplikacji. Musisz skonfigurować powiązane zasady zgodności, aby sterować dostępem warunkowym w swojej organizacji. Dostęp warunkowy jest najczęściej używany do wykonywania czynności takich jak zezwalanie na dostęp lub blokowanie dostępu do lokalnego programu Exchange, kontrola dostępu do sieci lub integracja z rozwiązaniem Mobile Threat Defense.
 
 Poniższe informacje pomagają zrozumieć sposób korzystania z możliwości zapewnienia zgodności *urządzenia* przenośnego w usłudze Intune i możliwości zarządzania *aplikacjami* mobilnymi (MAM) w usłudze Intune. 
 

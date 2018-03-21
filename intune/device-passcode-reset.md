@@ -1,12 +1,11 @@
 ---
-title: "Resetowanie i usuwanie kodów dostępu urządzeń w usłudze Intune"
-titlesuffix: Azure portal
-description: "Dowiedz się, jak zresetować lub usunąć kod dostępu na urządzeniach zarządzanych za pomocą usługi Intune."
+title: "Resetowanie kodów dostępu urządzenia za pomocą usługi Microsoft Intune — Azure | Microsoft Docs"
+description: "Usuwanie lub resetowanie kodu dostępu przy użyciu akcji kodu Usuń kod dostępu na urządzeniach zarządzanych i monitorowanych przy użyciu usługi Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,37 +13,37 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e1496d24fd9d3bb636a4eab00c254b753210f63
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 8f23a79bbe72d12750ef642226aefd1e11dcac24
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Resetowanie i usuwanie kodu dostępu na urządzeniach zarządzanych przez usługę Intune
-
+# <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Terminy *usuwanie* i *resetowanie* są używane zamiennie w tym artykule.
-
-Akcja **Resetuj kod dostępu** generuje nowy kod dostępu do urządzenia, wyświetlany w bloku <*nazwa urządzenia*> **Przegląd**.
+Aby utworzyć nowy kod dostępu urządzenia, użyj akcji **Resetuj kod dostępu**.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
-- Windows — nieobsługiwana
-- Windows Phone — obsługiwana w systemach od Windows Phone 8.1 do Windows 10 z aktualizacją systemu Windows 10 dla twórców nieprzyłączonych do usługi Azure AD, aktualizacja systemu Windows 10 dla twórców i nowsze wersje
-- iOS — obsługiwana
-- macOS — nieobsługiwana
-- Android — obsługiwana w wersjach wcześniejszych niż Android 7. Program Android for Work nie jest obsługiwany.
+- Systemy od Windows Phone 8.1 do Windows 10 z aktualizacją systemu Windows 10 dla twórców nieprzyłączone do usługi Azure AD, aktualizacja systemu Windows 10 dla twórców i nowsze wersje
+- iOS
+- Wersje systemu Android wcześniejsze niż Android 7
 
-## <a name="how-to-reset-a-passcode"></a>Jak zresetować kod dostępu
+Ta funkcja **nie jest** obsługiwana w następujących systemach:
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
-3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną urządzenia **Resetuj kod dostępu**.
+- Windows
+- macOS
+- Program Android for Work
+
+## <a name="reset-a-passcode"></a>Resetowanie kodu dostępu
+
+1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
+4. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną urządzenia **Resetuj kod dostępu**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby wyświetlić stan akcji, w bloku **Urządzenia** wybierz pozycję **Akcje urządzenia**.
+Aby wyświetlić stan właśnie wykonanej akcji, w obszarze **Urządzenia** wybierz pozycję **Akcje urządzenia**.

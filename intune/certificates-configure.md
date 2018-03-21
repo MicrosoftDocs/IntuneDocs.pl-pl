@@ -14,17 +14,17 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b9d181c4a6e490018c88214a2ed91c90327f2526
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 5b1691e3474b021754e0ee6a1a1977efecc82eac
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz uwierzytelnić te połączenia przy użyciu certyfikatów. Nie musisz wprowadzać nazw użytkownika i haseł, aby uwierzytelnić połączenia, jeśli używasz certyfikatów 
+Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz uwierzytelnić te połączenia przy użyciu certyfikatów. Nie musisz wprowadzać nazw użytkownika i haseł, aby uwierzytelnić połączenia, jeśli używasz certyfikatów
 
 Możesz użyć usługi Intune w celu przypisania tych certyfikatów do zarządzanych urządzeń. Usługa Intune obsługuje przypisywanie następujących typów certyfikatów i zarządzanie nimi:
 
@@ -85,10 +85,13 @@ Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego c
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3 — Tworzenie profilów zaufanych certyfikatów
 Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Kroki związane z tworzeniem zaufanych certyfikatów są podobne dla każdej platformy urządzeń.
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz opcję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
-2. W obszarze **Microsoft Intune** wybierz opcję **Konfiguracja urządzeń** i opcję **Profile**. Następnie wybierz opcję **Utwórz profil**.
-3. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
-4. W pozycji **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu: 
+1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
+2. W okienku **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Profile**.
+3. W okienku profilów wybierz pozycję **Utwórz profil**.
+4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
+5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Obecnie dla ustawień certyfikatu można wybrać jedną z następujących platform:
 
     - **Android**
     - **Android for Work**
@@ -98,15 +101,13 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
     - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
 
-5. W obszarze **Typ profilu** wybierz opcję **Zaufany certyfikat**. Przejdź do certyfikatu (*NazwaCertyfikatu*.cer), który został wcześniej zapisany (krok 2).
-
-    Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:  
-
+6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Zaufany certyfikat**.
+7. Przejdź do lokalizacji certyfikatu zapisanego w zadaniu 1, a następnie kliknij przycisk **OK**.
+8. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
     - **Magazyn certyfikatów komputera — główny**
     - **Magazyn certyfikatów komputera — pośredni**
     - **Magazyn certyfikatów użytkownika — pośredni**
-
-6. Wybierz opcję **OK**, aby zapisać zmiany, a następnie wybierz opcję **Utwórz**, aby zapisać nowy profil.
+8. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Utwórz profil** i wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 

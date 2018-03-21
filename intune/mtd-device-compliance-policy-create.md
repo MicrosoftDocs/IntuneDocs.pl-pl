@@ -1,12 +1,12 @@
 ---
-title: "Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense za pomocą usługi Intune"
-titlesuffix: Azure portal
-description: "Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense w usłudze Intune"
+title: "Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft Intune"
+titlesuffix: 
+description: "Utwórz zasady zgodności urządzeń usługi Intune wykorzystujące poziomy zagrożeń partnera MTD w celu określenia, czy urządzenie przenośne może uzyskiwać dostęp do zasobów firmy."
 keywords: 
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a02f08c347f40821a10f6d9b6df3a6b26178180b
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: b719bb1841cfc1aa98808b9c09db43d9c654d63f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -40,7 +40,7 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 1.  Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
-2.  Na stronie **Pulpit nawigacyjny Azure** w menu po lewej stronie wybierz opcję **Więcej usług**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+2.  Na stronie **Pulpit nawigacyjny platformy Azure** w menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz wartość **Intune**.
 
 3.  Wybierz pozycję **Intune**. Zostanie otwarty **Pulpit nawigacyjny Intune**.
 
@@ -48,9 +48,9 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 5.  Wybierz pozycję **Utwórz zasady**, wypełnij pola **Nazwa** i **Opis** dotyczące zgodności urządzeń, zaznacz pozycję **Platforma**, a następnie wybierz pozycję **Konfiguruj** w sekcji **Ustawienia**.
 
-6.  W bloku **Zasady zgodności** wybierz pozycję **Kondycja urządzenia**.
+6.  W okienku **Zasady zgodności** wybierz pozycję **Kondycja urządzenia**.
 
-7.  W bloku **Kondycja urządzenia** wybierz poziom zagrożeń mobilnych z listy rozwijanej w obszarze **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożeń mobilnych**.
+7.  W okienku **Kondycja urządzenia** wybierz poziom zagrożeń mobilnych z listy rozwijanej w obszarze **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożenia urządzenia**.
 
     a.  **Zabezpieczone**: ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
 
@@ -67,11 +67,11 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 ## <a name="to-assign-a-mtd-device-compliance-policy"></a>Aby przypisać zasady zgodności urządzeń usługi MTD
 
-Aby przypisać użytkownikom zasady zgodności urządzeń, wybierz wcześniej skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w bloku **Zasady zgodności urządzeń**.
+Aby przypisać użytkownikom zasady zgodności urządzeń, wybierz wcześniej skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w okienku **Zgodność urządzeń — zasady**.
 
-1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie bloku, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
+1. Wybierz zasady, które chcesz przypisać użytkownikom, a następnie wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka, w którym można wybrać **grupy zabezpieczeń usługi Azure Active Directory** i przypisać je do zasad.
 
-2. Wybierz pozycję **Wybierz grupy**, aby otworzyć blok, w którym zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Wybierz** powoduje wdrożenie zasad dla użytkowników.
+2. Wybierz pozycję **Wybierz grupy do uwzględnienia**, aby otworzyć stronę, na której zostaną wyświetlone grupy zabezpieczeń usługi Azure AD.  Wybranie pozycji **Wybierz** powoduje wdrożenie zasad dla użytkowników.
 
     > [!NOTE] 
     > Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.

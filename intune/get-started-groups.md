@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e052f7c8d5742859d009816473fe97a98c499b17
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4fc4ee80b1cf5a8422d135d13a9fb498980500b5
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Tworzenie grupy w celu zarządzania użytkownikami i dostępem do danych
 
@@ -30,11 +30,13 @@ Usługa Microsoft Intune używa usługi Azure Active Directory (Azure AD) w celu
 ## <a name="how-do-i-create-a-group"></a>Jak mogę utworzyć grupę?
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Za pomocą pola **Wyszukaj zasoby** wyszukaj usługę **Intune**.
-3. Po otwarciu bloku **Microsoft Intune** wybierz opcję **Grupy**.
-4. W bloku **Użytkownicy i grupy — wszystkie grupy** wybierz polecenie **Nowa grupa**.
-5. W bloku **Grupa** dodaj **nazwę** i **opis** grupy.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. Po otwarciu okienka **Microsoft Intune** wybierz opcję **Grupy**.
+4. W okienku **Użytkownicy i grupy — Wszystkie grupy** wybierz polecenie **Nowa grupa**.
+5. W okienku **Grupa** wybierz pozycję **Typ grupy**.
+5. Dodaj wartości w polach **Nazwa** i **Opis** dla grupy.
 6. Ustaw opcję **Typ członkostwa** na wartość **Przypisany**. Nie włączaj opcji **Włącz funkcje pakietu Office** dla grupy testowej.
+7. Wybierz **elementy członkowskie** grupy.
 7. Kliknij przycisk **Utwórz**.
 
 Jeśli grupa została pomyślnie utworzona, powinna zostać wyświetlona na liście **Wszystkie grupy**. Jeśli grupa nie znajduje się na tej liście, spróbuj utworzyć inną grupę.

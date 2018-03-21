@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS
 
@@ -34,18 +34,19 @@ Aby skorzystać z logowania jednokrotnego dla urządzeń z systemem iOS, koniecz
 
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. Na stronie **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. Na stronie **Konfiguracja urządzeń** wybierz pozycję **Profile**.
-3. Na stronie profilów wybierz pozycję **Utwórz profil**, podaj nazwę i opis, a następnie skonfiguruj następujące ustawienia:
-   - **Platforma**: wybierz pozycję **iOS**. 
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
+4. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
+5. W okienku profilów wybierz pozycję **Utwórz profil**.
+6. Podaj nazwę i opis, a następnie skonfiguruj następujące ustawienia:
+   - **Platforma**: wybierz pozycję **iOS**.
    - **Typ profilu**: wybierz pozycję **Funkcje urządzenia**.
-4. Na stronie **Funkcje urządzenia** wybierz pozycję **Logowanie jednokrotne**.
+7. W okienku **Funkcje urządzenia** wybierz pozycję **Logowanie jednokrotne**.
 
-   ![Strona Logowanie jednokrotne](./media/sso-blade.png)
+   ![Okienko Logowanie jednokrotne](./media/sso-blade.png)
 
-2. Skorzystaj z poniższej tabeli podsumowania, która ułatwia wypełnianie pól na stronie **Logowanie jednokrotne**. Więcej informacji zawierają sekcje pod tabelą.
-   
+8. Skorzystaj z poniższej tabeli podsumowania, która ułatwia wypełnianie pól w okienku **Logowanie jednokrotne**. Więcej informacji zawierają sekcje pod tabelą.
+
    |Pole  |Uwagi|
    |---------|---------|
    |**Atrybut nazwy użytkownika z usługi AAD**|Atrybut sprawdzany przez usługę Intune dla każdego użytkownika w usłudze AAD i umożliwiający wypełnienie odpowiednich pól (na przykład nazwy UPN) przed wygenerowaniem ładunku XML instalowanego na urządzeniu.|

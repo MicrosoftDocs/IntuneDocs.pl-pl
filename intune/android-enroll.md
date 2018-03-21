@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
@@ -55,9 +55,9 @@ W przypadku rejestrowania urządzeń z programem Android for Work za pomocą kon
 1. **Konfigurowanie funkcji zarządzania urządzeniami mobilnymi w usłudze Intune**<br>
 Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządzeniami mobilnymi przez [skonfigurowanie jako urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md) usługi **Microsoft Intune**.
 2. **Konfigurowanie powiązania programu Android for Work**<br>
-    Jako administrator usługi Intune wybierz w witrynie Azure Portal pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+    Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
 
-   a. W bloku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work** i wybierz pozycję **Konfiguruj**, aby otworzyć witrynę internetową sklepu Google Play dotyczącą programu Android for Work. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
+   a. W okienku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work** i wybierz pozycję **Zarządzany sklep Google Play — Konfiguruj**, aby otworzyć witrynę internetową sklepu Google Play dotyczącą programu Android for Work. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
    ![Ekran rejestracji programu Android for Work](./media/android-work-bind.png)
 
    b. **Logowanie do usługi Google**<br>
@@ -106,7 +106,7 @@ Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. W
 ### <a name="to-unbind-an-android-for-work-account"></a>Jak usunąć powiązanie konta programu Android for Work
 
 1. **Usuwanie powiązania programu Android for Work**<br>
-    Jako administrator usługi Intune wybierz w witrynie Azure Portal pozycję **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.  W bloku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work**, a następnie wybierz pozycję **Usuń powiązanie**.
+    Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.  W okienku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work**, a następnie wybierz pozycję **Usuń powiązanie**.
 
 2. **Wyrażanie zgody na usunięcie powiązania programu Android for Work**<br>
   Wybierz pozycję **Tak**, aby usunąć powiązanie i wyrejestrować wszystkie urządzenia z programem Android for Work z usługi Intune.

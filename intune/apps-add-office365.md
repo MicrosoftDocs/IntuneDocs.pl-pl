@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 076d228f3b18416e4ecb8fd1b3543a58d037e386
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 ProPlus do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
+# <a name="how-to-assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
-Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jeden wpis na liście aplikacji w konsoli usługi Intune.
+Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jeden wpis na liście aplikacji w konsoli usługi Intune.
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -32,7 +32,7 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus do
 >Ta metoda instalacji pakietu Office jest obsługiwana tylko w przypadku, gdy żadne inne wersje pakietu Microsoft Office nie zostały zainstalowane na urządzeniu.
 
 - Na urządzeniach, na których wdrażasz te aplikacje, musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
-- Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365 ProPlus.
+- Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365.
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, instalacja może zakończyć się niepowodzeniem, a użytkownicy końcowi mogą utracić dane z niezapisanych plików.
 - Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S, Windows Home, Windows Team, Windows Holographic i Windows Holographic for Business.
 - Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze sklepu Microsoft Store (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, na których już wdrożono aplikacje usługi Office 365 przy użyciu usługi Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
@@ -41,12 +41,13 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 ProPlus do
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1.  Zaloguj się do portalu Azure Portal.
-2.  Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
+1.  Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
+2.  Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3.  W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4.  W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
+4.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
 5.  Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6.  W bloku **Dodawanie aplikacji** wybierz pozycję **Pakiet usługi Office 365 ProPlus (Windows 10)**.
+6.  Na liście **Typ aplikacji** w bloku **Dodaj aplikacje** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**.
+    Możesz teraz skonfigurować pakiet aplikacji.
 
 ## <a name="configure-the-app-suite"></a>Konfigurowanie pakietu aplikacji
 
@@ -61,7 +62,7 @@ W tym kroku wybierz aplikacje pakietu Office, które chcesz przypisać do urząd
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 
-W tym kroku podaj informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet w usłudze Intune, a także ułatwiają użytkownikom wyszukiwanie go w aplikacji Portal firmy.
+W tym kroku musisz podać informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune, a także ułatwiają użytkownikom wyszukiwanie go w aplikacji Portal firmy.
 
 1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Informacje o pakiecie aplikacji**.
 2.  W bloku **Informacje o pakiecie aplikacji** podaj następujące informacje:
@@ -75,7 +76,7 @@ W tym kroku podaj informacje o pakiecie aplikacji. Te informacje pomagają ziden
     - **Deweloper** — opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel** — opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład **Dział kadr**.
     - **Uwagi** — wprowadź wszelkie uwagi, które chcesz skojarzyć z aplikacją.
-    - **Przekaż ikonę** — przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Logo** — przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3.  Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurowanie ustawień aplikacji
@@ -91,7 +92,7 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
         - **Półroczny**
         - **Półroczny (docelowy)**
     - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji** — wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
-    - **Użyj aktywacji na komputerze udostępnionym** — aktywacja na komputerze udostępnionym jest używana w przypadku, gdy wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365 ProPlus.
+    - **Użyj aktywacji na komputerze udostępnionym** — aktywacja na komputerze udostępnionym jest używana w przypadku, gdy wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365.
     - **Języki** — pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.
 
 >[!IMPORTANT]
@@ -99,7 +100,7 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
 
 ## <a name="finish-up"></a>Zakończenie
 
-Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Zapisz**. Utworzona aplikacja jest wyświetlana na liście aplikacji.
+Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Dodaj**. Utworzona aplikacja jest wyświetlana na liście aplikacji.
 
 ## <a name="error-codes-when-installing-the-app-suite"></a>Kody błędów występujących podczas instalowania pakietu aplikacji
 
@@ -137,4 +138,4 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz można przypisać aplikacje do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](/intune-azure/manage-apps/deploy-apps) (Jak przypisać aplikacje do grupy).
+- Teraz można przypisać aplikacjom wybrane grupy — zobacz [Jak przypisać aplikacje do grup](/intune-azure/manage-apps/deploy-apps).

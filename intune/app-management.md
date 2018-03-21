@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 03/09/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9372a77a63f48c8215a02ccd784fb0a812f5a12f
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 737c2900b2cdd57cb4dfc8373d06111a52e772b2
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -34,7 +34,7 @@ Usługa Microsoft Intune umożliwia Ci, jako administratorowi IT, zarządzanie a
 
 Dodatkowo możesz przypisywać aplikacje na urządzeniach niezarejestrowanych w usłudze Intune i zarządzać nimi.
 
-Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach. Poniższa tabela zawiera podsumowanie możliwości dotyczących zarządzania aplikacjami. Pod tabelą znajduje się punkt wyjścia do poznania usługi Microsoft Intune w witrynie Azure Portal. 
+Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać dostęp do potrzebnych aplikacji na wybranych urządzeniach. Poniższa tabela zawiera podsumowanie możliwości dotyczących zarządzania aplikacjami. Pod tabelą znajduje się punkt wyjścia do poznania usługi Microsoft Intune w witrynie Azure Portal.
 
 ## <a name="app-management-capabilities-by-platform"></a>Możliwości zarządzania aplikacjami według platformy
 
@@ -51,7 +51,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 |Przypisywanie i śledzenie aplikacji nabytych w ramach zakupów zbiorczych w sklepie z aplikacjami|Nie|Nie|Nie|Tak|
 |Obowiązkowe instalowanie aplikacji na urządzeniach (wymagane)<sup>2</sup>|Tak|Tak|Tak|Tak|
 |Opcjonalna instalacja na urządzeniach z portalu firmy (dostępna instalacja)|Tak|Tak|Tak|Tak|
-|Instalowanie skrótu do aplikacji w sieci Web (składnik Web Clip)|Tak|Tak|Tak|Tak|
+|Instalowanie skrótu do aplikacji Internecie (link internetowy)|Tak|Tak|Tak|Tak|
 |Aplikacje wewnętrzne (biznesowe)|Tak|Tak|Nie|Tak|
 |Aplikacje ze sklepu|Tak|Tak|Tak|Tak|
 |Aktualizowanie aplikacji|Tak|Tak|Tak|Tak|
@@ -65,30 +65,34 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 Większość elementów powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 
     ![Obciążenie Aplikacje mobilne](./media/apps-workload.png)
 
+Poniższe informacje odpowiadają opcjom dostępnym w bloku **Aplikacje mobilne**.
+
 ### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
-- **Aplikacje** — ten węzeł to miejsce, w którym będziesz dodawać, przypisywać i monitorować większość swoich aplikacji.
+- **Aplikacje** — wybierz tę opcję, aby dodawać, wyświetlać, przypisywać i monitorować aplikacje używane przez pracowników. Więcej informacji znajduje się w poniższych artykułach:
     - [Dodawanie aplikacji](apps-add.md)
     - [Przypisywanie aplikacji](apps-deploy.md)
     - [Monitorowanie aplikacji](apps-monitor.md)
-- **Zasady konfigurowania aplikacji** — zasady konfigurowania aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację.
-    - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md)
-    - [Zasady konfiguracji aplikacji systemu Android](app-configuration-policies-use-android.md)
-- **Zasady ochrony aplikacji** — umożliwia skojarzenie ustawień z aplikacją w taki sposób, aby umożliwić ochronę używanych przez nią danych firmy. Na przykład można ograniczyć możliwości komunikowania się aplikacji z innymi aplikacjami lub wymagać od użytkownika wprowadzania numeru PIN umożliwiającego dostęp do aplikacji firmowej.
+- **Zasady konfigurowania aplikacji** — zasady konfiguracji aplikacji umożliwiają określanie ustawień, które mogą być wymagane, gdy użytkownik uruchamia aplikację. Więcej informacji znajduje się w poniższych artykułach:
+    - [Zasady konfiguracji aplikacji usługi Intune](app-configuration-policies-overview.md)
+        - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md)
+        - [Zasady konfiguracji aplikacji systemu Android](app-configuration-policies-use-android.md)
+- **Zasady ochrony aplikacji** — zasady ochrony aplikacji umożliwiają skojarzenie ustawień z aplikacją w taki sposób, aby umożliwić ochronę używanych przez nią danych firmy. Na przykład można ograniczyć możliwości komunikowania się aplikacji z innymi aplikacjami lub wymagać od użytkownika wprowadzania numeru PIN umożliwiającego dostęp do aplikacji firmowej. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Zasady ochrony aplikacji](app-protection-policies.md)
-- **Selektywne czyszczenie aplikacji** — usunięcie tylko danych firmowych z wybranego urządzenia.
+- **Selektywne czyszczenie aplikacji** — usunięcie tylko danych firmowych z wybranego urządzenia użytkownika. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Selektywne czyszczenie danych](apps-selective-wipe.md)
-- **Profile aprowizacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
+- **Profile aprowizacji aplikacji systemu iOS** — aplikacje dla systemu iOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Profile aprowizowania aplikacji dla systemu iOS](app-provisioning-profile-ios.md)
 
 Więcej szczegółów można znaleźć w temacie [Zarządzanie aplikacjami](app-management.md).
 
 ### <a name="monitor"></a>Monitor
-- **Licencje aplikacji** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami.
+- **Licencje aplikacji** — przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami. Więcej informacji znajduje się w poniższych artykułach:
+    - [Aplikacje dla systemu iOS zakupione w ramach programu zakupów zbiorczych (VPP)](vpp-apps-ios.md)
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
 - **Odnalezione aplikacje** — pokazuje wszystkie aplikacje, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
 - **Stan instalacji aplikacji** — pokazuje stan utworzonego przez Ciebie przypisania aplikacji.
@@ -100,22 +104,22 @@ Aby uzyskać więcej szczegółów, zobacz temat [Monitorowanie aplikacji](apps-
 ### <a name="setup"></a>Setup
 - **Tokeny programu VPP dla systemu iOS** — stosowanie i wyświetlanie licencji Volume Purchase Program (VPP) dla systemu iOS.
     - [Aplikacje systemu iOS nabyte w ramach zakupów zbiorczych](vpp-apps-ios.md)
-- **Certyfikat przedsiębiorstwa systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu używanego do dystrybuowania aplikacji biznesowych na zarządzanych urządzeniach z systemem Windows. 
-- **Certyfikat firmy Symantec systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu firmy Symantec potrzebnego do rozpowszechniania plików appx XAP i WP8.x na urządzeniach z systemem Windows 10 Mobile. 
-- **Sklep Microsoft dla Firm** — umożliwia skonfigurowanie integracji ze Sklepem Microsoft dla Firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji.
+- **Certyfikat przedsiębiorstwa systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu używanego do dystrybuowania aplikacji biznesowych na zarządzanych urządzeniach z systemem Windows.
+- **Certyfikat firmy Symantec systemu Windows** — stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu firmy Symantec potrzebnego do rozpowszechniania plików appx XAP i WP8.x na urządzeniach z systemem Windows 10 Mobile.
+- **Sklep Microsoft dla Firm** — umożliwia skonfigurowanie integracji ze Sklepem Microsoft dla Firm. Po wykonaniu tej czynności można zsynchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić wykorzystanie licencji. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Aplikacje nabyte w ramach zakupów zbiorczych w Sklepie Microsoft dla Firm](windows-store-for-business.md)
-- **Klucze ładowania bezpośredniego systemu Windows** — można dodać klucz ładowania bezpośredniego systemu Windows, który może służyć do bezpośredniej instalacji aplikacji na urządzeniach bez konieczności publikowania aplikacji i pobierania jej ze Sklepu Windows.
-    - [Ładowanie bezpośrednie aplikacji systemu Windows](app-sideload-windows.md) 
-- **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy.
+- **Klucze ładowania bezpośredniego systemu Windows** — można dodać klucz ładowania bezpośredniego systemu Windows, który może służyć do bezpośredniej instalacji aplikacji na urządzeniach bez konieczności publikowania aplikacji i pobierania jej ze Sklepu Windows. Aby uzyskać więcej informacji, zobacz następujący artykuł:
+    - [Ładowanie bezpośrednie aplikacji systemu Windows](app-sideload-windows.md)
+- **Znakowanie portalu firmy** — dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Konfiguracja portalu firmy](company-portal-app.md)
 - **Kategorie aplikacji** — dodawanie, przypinanie i usuwanie nazw kategorii aplikacji.
-- **Android for Work** — zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa.
-    - [Aplikacje programu Android for Work](apps-add-android-for-work.md) 
+- **Android for Work** — zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa. Aby uzyskać więcej informacji, zobacz następujący artykuł:
+    - [Aplikacje programu Android for Work](apps-add-android-for-work.md)
 
 ### <a name="help-and-support"></a>Pomoc i obsługa techniczna
-- **Pomoc i obsługa techniczna** — rozwiązywanie problemów, wnioskowanie o pomoc techniczną lub wyświetlanie stanu usługi Intune.
+- **Pomoc i obsługa techniczna** — rozwiązywanie problemów, wnioskowanie o pomoc techniczną lub wyświetlanie stanu usługi Intune. Aby uzyskać więcej informacji, zobacz następujący artykuł:
     - [Rozwiązywanie problemów](help-desk-operators.md)
-    
+
 ## <a name="next-steps"></a>Następne kroki
 
 - [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md)
