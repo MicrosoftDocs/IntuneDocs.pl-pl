@@ -13,13 +13,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 156d37874529b4ae5a8176d7e9a8873cf440c32c
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4bb86d0f80a4d337e0ab63ae7f90d6c3541462d9
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Ustawienia niestandardowe urządzeń z systemem Windows 10 w usłudze Microsoft Intune 
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Ustawienia niestandardowe urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -29,11 +29,11 @@ Jeśli szukasz konkretnego ustawienia, pamiętaj, że [profil ograniczeń urząd
 ## <a name="configure-custom-settings"></a>Konfigurowanie ustawień niestandardowych
 
 1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [How to configure custom device settings in Microsoft Intune](custom-settings-configure.md) (Jak skonfigurować niestandardowe ustawienia urządzenia w usłudze Microsoft Intune).
-2. Na stronie **Tworzenie profilu** wybierz pozycję **Ustawienia**, aby dodać co najmniej jedno ustawienie OMA-URI.
-3. Na stronie **Ustawienia niestandardowe OMA-URI** kliknij przycisk **Dodaj**, aby dodać nową wartość. Możesz również kliknąć przycisk **Eksportuj**, aby utworzyć listę wszystkich wartości skonfigurowanych w pliku wartości rozdzielanych przecinkami (.csv).
-4. Dla każdego ustawienia OMA-URI, które chcesz dodać, wprowadź następujące informacje. Lista w tym artykule zawiera informacje dotyczące ustawień, których można użyć:
-    - **Nazwa ustawienia** — Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis** — Opcjonalnie wprowadź opis ustawienia.
+1. W okienku **Ustawienia niestandardowe OMA-URI** kliknij przycisk **Dodaj**, aby dodać nową wartość. Możesz również kliknąć przycisk **Eksportuj**, aby utworzyć listę wszystkich wartości skonfigurowanych w pliku wartości rozdzielanych przecinkami (.csv).
+1. Dla każdego ustawienia OMA-URI, które chcesz dodać, wprowadź następujące informacje. Lista w tym artykule zawiera informacje dotyczące ustawień, których można użyć:
+    - **Nazwa** — wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis** — opcjonalnie wprowadź opis ustawienia.
+    - **OMA-URI (z uwzględnieniem wielkości liter)** — Określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.
     - **Typ danych** — Wybierz spośród opcji:
         - **Ciąg**
         - **Ciąg (XML)**
@@ -41,10 +41,10 @@ Jeśli szukasz konkretnego ustawienia, pamiętaj, że [profil ograniczeń urząd
         - **Liczba całkowita**
         - **Liczba zmiennoprzecinkowa**
         - **Wartość logiczna**
-    - **OMA-URI (z uwzględnieniem wielkości liter)** — Określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.
-    - **Wartość** — Określ wartość, która będzie kojarzona z określonym wcześniej identyfikatorem OMA-URI.
-5. Po zakończeniu wróć na stronę **Utwórz profil** i wybierz pozycję **Utwórz**.
-Profil zostanie utworzony i wyświetlony na stronie listy profilów.
+        - **Base64**
+    - **Wartość** — określ wartość lub plik, który będzie skojarzony z określonym wcześniej identyfikatorem OMA-URI.
+1. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Tworzenie profilu** i wybierz pozycję **Utwórz**.
+Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 ## <a name="example"></a>Przykład
 Na poniższym zrzucie ekranu ustawienie **Connectivity/AllowVPNOverCellular** jest włączone. Pozwala to urządzeniu z systemem Windows 10 na otwarcie połączenia sieci VPN w sieci komórkowej.
@@ -59,5 +59,3 @@ Pełna lista wszystkich dostawców usług konfiguracji (CSP) obsługiwanych w sy
 Nie wszystkie ustawienia są zgodne ze wszystkimi wersjami systemu Windows 10. Tabela w artykule poświęconym systemowi Windows zawiera informacje o wersjach obsługiwanych w przypadku poszczególnych dostawców usług konfiguracji.
 
 Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artykule. Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
-
-

@@ -1,7 +1,7 @@
 ---
-title: "Narzędzie Mobile Threat Defense w usłudze Intune"
-titleSuffix: Azure portal
-description: "Ochrona dostępu do zasobów firmy na podstawie ryzyka dotyczącego urządzeń"
+title: "Usługa Mobile Threat Defense w usłudze Microsoft Intune"
+titleSuffix: 
+description: "Usługa Mobile Threat Defense (MTD) w usłudze Intune razem z partnerem usługi Mobile Threat Defense umożliwia ochronę dostępu do zasobów firmy na podstawie ryzyka dotyczącego urządzeń."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,13 +15,13 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da0f21a822608052846200e13ef37ca4606e6079
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 2eaba4f04d6a1daedf40b7b37d2b44ed5aff4533
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="mobile-threat-defense-integration-with-intune"></a>Integracja narzędzia Mobile Threat Defense z usługą Intune
+# <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co to jest integracja usługi Mobile Threat Defense z usługą Intune?
 
 
 Łączniki Mobile Threat Defense usługi Intune umożliwiają wykorzystanie wybranego dostawcy narzędzie Mobile Threat Defense jako źródła informacji dla zasad zgodności i zasad dostępu warunkowego. Umożliwia to administratorom IT dodanie warstwy zabezpieczeń do zasobów firmy, takich jak Exchange i Sharepoint, w szczególności związanych z zagrożonymi urządzeniami przenośnymi.
@@ -32,7 +32,7 @@ Firmy muszą chronić dane poufne przed pojawiającymi się zagrożeniami, do kt
 
 Wcześniej firmy aktywnie chroniły komputery przed atakami, pozostawiając urządzenia przenośne bez monitorowania i ochrony. Platformy urządzeń przenośnych mają wbudowaną ochronę polegającą na izolacji aplikacji i weryfikacji sklepów z aplikacjami, ale platformy te nadal są narażone na zaawansowane ataki. Obecnie coraz więcej pracowników korzysta w swojej pracy z urządzeń i wymaga dostępu do poufnych informacji. Urządzenia muszą być chronione przed coraz bardziej zaawansowanymi atakami.
 
-## <a name="how-the-intune-mobile-threat-defense-connectors-work"></a>Jak działają łączniki Mobile Threat Defense usługi Intune?
+## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Jak działają łączniki Mobile Threat Defense usługi Intune?
 
 Łącznik chroni zasoby firmy, tworząc kanał komunikacji między usługą Intune a wybranym dostawcą narzędzi Mobile Threat Defense. Partnerzy narzędzi Mobile Threat Defense usługi Intune oferują intuicyjne, łatwe do wdrożenia aplikacje dla urządzeń przenośnych, które aktywnie skanują i analizują informacje o zagrożeniach oraz udostępniają je usłudze Intune do celów raportowania lub wymuszania. 
 
@@ -58,11 +58,11 @@ Spisy pochodzące zarówno z urządzeń osobistych, jak i urządzeń firmowych z
 
 Gdy urządzenie jest uznawane za zainfekowane przez rozwiązanie Mobile Threat Defense:
 
-![Urządzenie zainfekowane w rozwiązaniu Mobile Threat Defense](./media/MTD-image-1.png)
+![Obraz przedstawiający urządzenie zainfekowane w rozwiązaniu Mobile Threat Defense](./media/MTD-image-1.png)
 
 Dostęp jest udzielany po skorygowaniu urządzenia:
 
-![Udzielono dostępu do aplikacji Mobile Threat Defense](./media/MTD-image-2.png)
+![Obraz przedstawiający udzielony dostęp do usługi Mobile Threat Defense](./media/MTD-image-2.png)
 
 > [!NOTE] 
 > Używanie wielu dostawców rozwiązania Mobile Threat Defense w usłudze Intune nie jest obsługiwane. Występowanie wielu włączonych narzędzi MTD wymusi zainstalowanie i zeskanowanie wszystkich aplikacji MTD na urządzeniach pod kątem zagrożeń.

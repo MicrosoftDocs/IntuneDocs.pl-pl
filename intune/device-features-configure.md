@@ -1,12 +1,11 @@
 ---
-title: "Konfigurowanie ustawień funkcji urządzenia w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Informacje dotyczące konfigurowania funkcji na zarządzanych urządzeniach przy użyciu usługi Microsoft Intune."
+title: "Tworzenie profilu urządzenia z systemem iOS lub macOS w usłudze Microsoft Intune — Azure | Microsoft Docs"
+description: "Dodaj lub utwórz profil urządzenia z systemem iOS lub macOS, a następnie skonfiguruj ustawienia funkcji AirPrint i AirPlay, układu ekranu głównego, powiadomień aplikacji, urządzenia udostępnionego, logowania jednokrotnego i filtru zawartości internetowej w usłudze Microsoft Intune"
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,33 +13,42 @@ ms.technology:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6cd646976deb1599c4cbc9154b6f2a487029dd79
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e3de7d1bccd57da1290987a714416373cbdd2b0d
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/09/2018
 ---
-#<a name="configure-device-feature-settings-in-microsoft-intune"></a>Konfigurowanie ustawień funkcji urządzeń w usłudze Microsoft Intune
+# <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Dodawanie ustawień funkcji urządzenia z systemem iOS lub macOS w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Funkcje urządzenia pozwalają sterować funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i udostępniane konfiguracje urządzeń.
+Funkcje urządzenia umożliwiają sterowanie różnymi ustawieniami i funkcjami na urządzeniach z systemem iOS i macOS, takimi jak:
 
-Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedzę z zakresu konfigurowania profilów funkcji urządzeń, a następnie zapoznaj się z artykułami dotyczącymi poszczególnych platform, aby dowiedzieć się więcej o charakterystyce urządzeń.
+- Ustawienia funkcji AirPrint i AirPlay
+- Układ ekranu głównego
+- Powiadomienia z aplikacji
+- Konfiguracja urządzenia udostępnianego
+- Konfigurowanie logowania jednokrotnego
+- Filtrowanie zawartości internetowej
 
-## <a name="create-a-device-profile-containing-device-feature-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia funkcji dotyczących urządzeń
+W tym artykule przedstawiono podstawowe informacje na temat konfigurowania profilów funkcji urządzeń z systemem iOS. Następnie możesz przejrzeć dodatkowe artykuły, aby skonfigurować ustawienia specyficzne dla platformy na urządzeniach.
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
-3. Na stronie **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. Na stronie **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz opcję **Profile**.
-3. Na stronie profilów wybierz pozycję **Utwórz profil**.
-4. Na stronie **Tworzenie profilu** wprowadź wartości pól **Nazwa** i **Opis** odnoszące się do profilu funkcji urządzenia.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia. Obecnie dla funkcji urządzenia można wybrać jedną z następujących platform:
+## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
+
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+4. Wprowadź następujące właściwości:
+
+  - **Nazwa**: wprowadź opisową nazwę nowego profilu
+  - **Opis**: (opcjonalne, ale zalecane) wprowadź opis profilu
+  - **Platforma**: wybierz typ platformy:
     - **iOS**
     - **macOS**
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Funkcje urządzenia**. 
-7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących artykułach:
+  - **Typ profilu**: wybierz pozycję **Funkcje urządzenia**
+  - **Ustawienia**: ustawienia zależą od wybranej platformy. Ustawienia poszczególnych typów profilów opisano w następujących artykułach:
+
     - [Ustawienia funkcji AirPrint dla urządzeń z systemami iOS i MacOS](air-print-settings-ios-macos.md)
     - [Ustawienia funkcji AirPlay dla urządzeń z systemem iOS](airplay-settings-ios.md)
     - [Ustawienia układu ekranu głównego dla urządzeń z systemem iOS](home-screen-settings-ios.md)
@@ -49,12 +57,10 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
     - [Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS](sso-ios.md)
     - [Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS](web-content-filter-settings-ios.md)
 
-8. Gdy skończysz, wybierz opcję **OK**, wróć do strony **Tworzenie profilu** i wybierz pozycję **Utwórz**.
+5. Gdy wszystko będzie gotowe, wybierz przycisk **OK** i wybierz pozycję **Utwórz**, aby zapisać zmiany.
 
-Profil zostanie utworzony i wyświetlony na stronie listy profilów.
-## <a name="next-steps"></a>Następne kroki
+Profil zostanie utworzony i wyświetlony na liście.
 
-Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [Jak przypisywać profile urządzeń](device-profile-assign.md).
+## <a name="next-step"></a>Następny krok
 
-
-
+Aby przypisać ten profil do grup, zobacz [How to assign device profiles (Jak przypisywać profile urządzeń)](device-profile-assign.md).
