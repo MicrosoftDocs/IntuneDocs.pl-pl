@@ -1,20 +1,21 @@
 ---
-title: "Dzienniki inspekcji dla działań usługi Intune"
-description: "Dowiedz się, jak przeglądać dzienniki inspekcji służące do rejestrowania działań usługi Intune"
-keywords: 
+title: Dzienniki inspekcji dla działań usługi Microsoft Intune
+description: Dowiedz się, jak przeglądać dzienniki inspekcji służące do rejestrowania działań usługi Microsoft Intune.
+keywords: ''
+ms.author: dougeby
 author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
-ms.openlocfilehash: 55499bc8126958918ac2494fc86059eb3d331c69
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c7c8b860be9722138f8bd804a66131328b592022
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="audit-logs-for-intune-activities"></a>Dzienniki inspekcji dla działań usługi Intune
 Dzienniki inspekcji stanowią rekord działań, które generują zmiany w usłudze Microsoft Intune. Możesz tworzyć, aktualizować (edytować), usuwać i przypisywać akcje lub zadania zdalne, a także generować zdarzenia inspekcji, które można przeglądać. Możesz przeglądać dzienniki inspekcji dla większości obciążeń usługi Intune. Inspekcja jest domyślnie włączona dla wszystkich klientów i nie można jej wyłączyć. Rejestrowanie zdarzeń inspekcji rozpoczęto w dniu wydania funkcji w grudniu 2017 r. Wcześniejsze zdarzenia są niedostępne.
@@ -28,7 +29,7 @@ Dzienniki inspekcji mogą przeglądać użytkownicy z następującymi uprawnieni
 ## <a name="audit-logs-for-intune-workloads"></a>Dzienniki inspekcji dla obciążeń usługi Intune
 Dzienniki inspekcji można przeglądać w grupie monitorowania dla poszczególnych obciążeń usługi Intune.  
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz obciążenie, dla którego chcesz przejrzeć dzienniki inspekcji, na przykład **Urządzenia**.
 4. W grupie **Monitorowanie** dla danego obciążenia wybierz pozycję **Dzienniki inspekcji**.
 
