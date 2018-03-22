@@ -1,25 +1,25 @@
 ---
-title: "Konfigurowanie integracji usługi Lookout za pomocą usługi Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
-keywords: 
+title: Konfigurowanie integracji usługi Lookout za pomocą usługi Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ffd55a82af4f7fdc8d8df7cab818c59def74109
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8b1b7d9ef1a7dce0b5a139f3b8acb85ab7d11d4c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Threat Defense za pomocą usługi Intune
 
@@ -72,8 +72,6 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 2.  Podczas pierwszego logowania do konsoli usługi Lookout należy użyć konta użytkownika w roli administratora globalnego usługi Azure AD w celu zarejestrowania dzierżawy usługi Azure AD. Później podczas logowania ten poziom uprawnienia usługi Azure AD nie będzie używany. Zostanie wyświetlona strona zgody użytkownika. Wybierz przycisk **Accept** (Akceptuj) w celu ukończenia rejestracji. Po zaakceptowaniu i wyrażeniu zgody nastąpi przekierowanie do konsoli usługi Lookout.
 
     ![zrzut ekranu przedstawiający stronę pierwszego logowania konsoli usługi Lookout](./media/lookout_mtp_initial_login.png)
-    > [!NOTE] 
-    > Aby uzyskać pomoc dotyczącą problemów z logowaniem, zobacz [Rozwiązywanie problemów dotyczących integracji aplikacji Lookout z usługą Intune](https://docs.microsoft.com/intune/troubleshoot/troubleshooting-lookout-integration).
 
 3.  W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Intune**.
 
