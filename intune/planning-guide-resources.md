@@ -1,23 +1,24 @@
 ---
-title: "Szablony i zasoby związane z planowaniem i projektowaniem wdrożenia usługi Intune"
-description: "Linki do szablonów planów i dodatkowych informacji dotyczących usługi Intune, które mogą być przydatne podczas procesu planowania i implementowania wdrożenia usługi Intune."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Szablony i zasoby związane z planowaniem i projektowaniem wdrożenia usługi Intune
+titlesuffix: Microsoft Intune
+description: Linki do szablonów planów i dodatkowych informacji dotyczących usługi Intune, które mogą być przydatne podczas procesu planowania i implementowania wdrożenia usługi Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 63060896-e00e-4ef0-b2ad-276e55164895
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 8a5a819fc8d081330be60e8b83944e326baaba2b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67476afbd00cf54162b316e6c38967bccbed34ad
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Dodatkowe zasoby związane z planowaniem wdrożenia usługi Intune
 
@@ -50,7 +51,7 @@ Poniższe zasoby zawierają dodatkowe informacje, które mogą być przydatne po
 
 -   [Blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/) — wpisy wyjaśniające, jaką rolę usługa Intune odgrywa w obszarze Enterprise Mobility.
 
--   [Centrum zaufania Microsoft](http://www.microsoft.com/TrustCenter/default.aspx) — informacje na temat podejścia firmy Microsoft do kwestii bezpieczeństwa, ochrony prywatności, zgodności i transparentności we wszystkich produktach i usługach w chmurze firmy Microsoft.
+-   [Centrum zaufania Microsoft](http://www.microsoft.com/TrustCenter) — informacje na temat podejścia firmy Microsoft do kwestii bezpieczeństwa, ochrony prywatności, zgodności i transparentności we wszystkich produktach i usługach w chmurze firmy Microsoft.
 
 -   [Witryna User Voice dotycząca usługi Intune](http://microsoftintune.uservoice.com/) — chcesz zażądać jakiejś funkcji lub głosować w sprawie funkcji z innymi klientami? Podziel się swoim zdaniem na temat usługi Intune przez witrynę User Voice. Czekamy na opinie.
 

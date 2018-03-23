@@ -1,25 +1,25 @@
 ---
-title: "Ustawianie źródła zarządzania urządzeniem przenośnym"
+title: Ustawianie źródła zarządzania urządzeniem przenośnym
 titlesuffix: Microsoft Intune
-description: "Konfigurowanie urzędu zarządzania urządzeniami przenośnymi w usłudze Intune."
-keywords: 
+description: Konfigurowanie urzędu zarządzania urządzeniami przenośnymi w usłudze Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5d48a2cea096c1639cd3661521cd636454f3e0ba
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ce6464cc6aa67636743479e69ad2b55c9b102ed9
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -41,7 +41,7 @@ W programie Configuration Manager w wersji 1610 lub nowszej i w usłudze Microso
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 2. Wybierz pomarańczowy transparent, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**.
 3. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
   - **Urząd MDM w usłudze Intune**
@@ -60,7 +60,7 @@ Różne platformy mają następujące wymagania dotyczące włączania lub upras
 - **iOS** — (wymagane) [Uzyskaj certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md), a następnie [włącz rejestrowanie urządzeń z systemem iOS należących do firmy](ios-enroll.md) (opcjonalnie).
 - **Android** — (opcjonalne) [Włącz profile służbowe w systemie Android](android-enroll.md)
 - **Windows** — (opcjonalnie) Włącz [rejestrowanie automatyczne](windows-enroll.md) lub [rejestrowanie zbiorcze](windows-bulk-enroll.md)
-- **macOS** — brak wymagań
+- **macOS** — (wymagane) [Uzyskaj certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md).
 
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM

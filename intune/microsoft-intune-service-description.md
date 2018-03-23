@@ -1,24 +1,24 @@
 ---
-title: "Opis usługi Microsoft Intune"
-description: "Intune jest usługą opartą na chmurze, która ułatwia zarządzanie urządzeniami z systemem Windows, iOS, Mac OS X, Android i Windows Mobile."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Opis usługi Microsoft Intune
+description: Microsoft Intune jest usługą opartą na chmurze, która ułatwia zarządzanie urządzeniami z systemami Windows, iOS, Mac OS X, Android i Windows Mobile.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f4671f643f9806945043adcb9279c7bc95d8efe2
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 7b9c3965d99e0058ae0236e1efc3daa840aebc6c
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -33,7 +33,7 @@ Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azu
 Aby dowiedzieć się więcej o zarządzaniu urządzeniami i aplikacjami oraz o ochronie danych firmowych za pomocą usługi Intune, zobacz [Dokumentacja usługi Intune](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>30-dniowa bezpłatna wersja próbna
-Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
+Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
 
 > [!NOTE]
 > Jeśli Twoja organizacja ma konto służbowe usług Microsoft Online Services i zamierzasz kontynuować tę subskrypcję usługi Intune w środowisku produkcyjnym po zakończeniu okresu próbnego, wybierz opcję **Zaloguj** na tej stronie i uwierzytelnij się przy użyciu konta administratora globalnego Twojej organizacji. Ta akcja zagwarantuje, że wersja próbna usługi Intune zostanie połączona z istniejącym kontem służbowym.

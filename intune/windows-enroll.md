@@ -1,25 +1,25 @@
 ---
-title: "Konfigurowanie rejestracji dla urządzeń z systemem Windows przy użyciu usługi Microsoft Intune"
-titlesuffix: 
-description: "Skonfiguruj rejestrację dla urządzeń z systemem Windows."
-keywords: 
+title: Konfigurowanie rejestracji dla urządzeń z systemem Windows przy użyciu usługi Microsoft Intune
+titlesuffix: ''
+description: Skonfiguruj rejestrację dla urządzeń z systemem Windows.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 03/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21849cd4bb1c77334fdc3e9e347365a25ab4df2d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 896c984cb5831dc84a041d4ad39e4cdf6819f0f8
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -85,6 +85,9 @@ Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia z systemem
 > Użytkownicy końcowi muszą uzyskać dostęp do witryny Portal firmy przy użyciu przeglądarki Microsoft Edge, aby wyświetlać aplikacje systemu Windows przypisane do konkretnych wersji systemu Windows. Inne przeglądarki, w tym Google Chrome, Mozilla Firefox oraz Internet Explorer nie obsługują tego typu filtrowania.
 
 Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleźć w temacie [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Możesz również poinformować użytkowników, aby zapoznali się z tematem [Co widzi administrator IT na moim urządzeniu](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+
+>[!IMPORTANT]
+> Jeśli nie włączono automatycznej rejestracji w rozwiązaniu MDM, ale masz urządzenia z systemem Windows 10, które zostały dołączone do usługi Azure AD, po rejestracji w konsoli usługi Intune będą widoczne dwa rekordy. Możesz rozwiązać ten problem, upewniając się, że użytkownicy z urządzeniami dołączonymi do usługi Azure AD przechodzą do pozycji **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** i **Połącz** przy użyciu tego samego konta. 
 
 Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](end-user-educate.md).
 

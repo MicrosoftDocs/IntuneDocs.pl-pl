@@ -1,24 +1,24 @@
 ---
-title: "Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune"
-titleSuffix: Azure portal
-description: "Jak zarejestrować się w 30-dniowej bezpłatnej wersji próbnej usługi Intune”."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Rejestracja w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune
+titleSuffix: Microsoft Intune
+description: Dowiedz się, jak zarejestrować się w 30-dniowej bezpłatnej wersji próbnej usługi Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 03/04/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
-ms.custom: 
-ms.openlocfilehash: 08fa759515d437e40a751ce39b3ef617dd92e83f
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.custom: ''
+ms.openlocfilehash: 389981fc207371d64064872235fc9babde6b3f6a
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Rejestrowanie w celu skorzystania z bezpłatnej wersji próbnej usługi Microsoft Intune
 
@@ -30,11 +30,15 @@ W tym artykule opisano kolejne kroki tworzenia konta w celu korzystania z wersji
 
 * Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych, możesz wybrać odpowiednie ustawienia regionalne w obszarze **Where's your company located?** (Gdzie znajduje się Twoja firma?).
 
-2. Pod koniec procesu rejestracji zostanie wyświetlony komunikat z informacjami o nowym koncie. <br/> ![Obraz przedstawiający informacje o koncie](./media/2-end-of-sign-up-process.png) <br/>Jeśli na tym etapie klikniesz pozycję **You're ready to go** (Możemy zaczynać), nastąpi przekierowanie do Centrum administracyjnego usługi Office 365, gdzie można dodać użytkowników do środowiska testowego. <br/><br/>Jeśli jednak chcesz przejść bezpośrednio do witryny Intune Azure Portal, otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com**. Nastąpi przekierowanie do strony logowania platformy Azure, gdzie możesz się zalogować przy użyciu otrzymanych poświadczeń. Używaj tego adresu za każdym razem, gdy chcesz zalogować się do wersji próbnej usługi Intune. <br/> ![Obraz przedstawiający stronę logowania portalu Azure Portal](./media/azure-portal-signin.png)
+2. Pod koniec procesu rejestracji zostanie wyświetlony komunikat z informacjami o nowym koncie. <br/> 
+
+![Obraz przedstawiający informacje o koncie](./media/2-end-of-sign-up-process.png) <br/>
+
+Jeśli na tym etapie klikniesz pozycję **You're ready to go** (Możemy zaczynać), nastąpi przekierowanie do Centrum administracyjnego usługi Office 365, gdzie można dodać użytkowników do środowiska testowego. <br/><br/>Jeśli jednak chcesz przejść bezpośrednio do witryny Azure Portal usługi Intune, otwórz nowe okno przeglądarki i w pasku adresu wpisz adres **https://portal.azure.com**. Nastąpi przekierowanie do strony logowania platformy Azure, gdzie możesz się zalogować przy użyciu otrzymanych poświadczeń. Używaj tego adresu za każdym razem, gdy chcesz zalogować się do wersji próbnej usługi Intune. <br/> ![Obraz przedstawiający stronę logowania witryny Azure Portal](./media/azure-portal-signin.png)
 
 Po pierwszym zalogowaniu się w witrynie Intune [Azure Portal](https://portal.azure.com) usługa Intune może być niewidoczna na pulpicie nawigacyjnym platformy Azure. Aby dodać usługę Intune do pulpitu nawigacyjnego platformy Azure:
 1. Wybierz pozycję **Wszystkie usługi >** na liście usług platformy Azure z lewej strony pulpitu nawigacyjnego, a następnie wprowadź wyrażenie **Intune** w polu wyszukiwania.
-2. Wybierz z listy pozycję **Intune**, a następnie wybierz gwiazdkę, aby dodać usługę do listy usług.<br/> ![Obraz przedstawiający wybieranie usługi Intune z listy usług](./media/azure-add-intune1.png)
+2. Wybierz z listy pozycję **Intune**, a następnie wybierz gwiazdkę, aby dodać usługę do listy usług.<br/> ![Obraz przedstawiający wybieranie usługi Microsoft Intune w witrynie Azure Portal](./media/azure-add-intune1.png)
 3. Następnie z listy usług wybierz pozycję **Intune**, aby otworzyć pulpit nawigacyjny usługi Intune.
 
 Po utworzeniu konta w celu korzystania z wersji próbnej na adres e-mail podany w procesie rejestracji zostanie wysłana wiadomość e-mail zawierająca informacje o koncie. Stanowi ona potwierdzenie, że Twoja wersja próbna jest aktywna.

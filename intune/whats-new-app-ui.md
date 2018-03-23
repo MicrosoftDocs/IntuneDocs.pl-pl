@@ -1,35 +1,30 @@
 ---
-title: "Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune"
-description: "Dowiedz się więcej na temat zmian interfejsu użytkownika dla aplikacji, które działają na urządzeniach użytkownika końcowego z usługą Intune."
-keywords: 
+title: Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
+titlesuffix: Microsoft Intune
+description: Dowiedz się więcej na temat zmian interfejsu użytkownika dla aplikacji, które działają na urządzeniach użytkownika końcowego z usługą Microsoft Intune.
+keywords: ''
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 01/18/2018
+ms.date: 03/16/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f39c908e6de55c0668f507c3d7eed9545deba82
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 753b3a345dc84bee80921fd0c7994dfac79a3df6
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
-Dowiedz się, jakie aktualizacje wprowadziliśmy w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Może to ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
 
-## <a name="week-of-december-11-2017"></a>Tydzień 11 grudnia 2017 r.
-
-### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Komunikaty dla użytkowników końcowych dotyczące kont<!--1573558, 1712; changes to be made for other platforms for 1801-->
-
-Użytkownicy witryny Portal firmy będą mieć zablokowaną możliwość podejmowania działań, które wymagają prawa do zapisu w dzierżawie. Zostanie wyświetlony odpowiedni komunikat o błędzie z wyjaśnieniem, że konto podlega pracom konserwacyjnym. Podobne zmiany zostaną wkrótce wprowadzone w aplikacjach Portal firmy dla systemów Android, iOS, macOS i Windows.
-
-![Komunikat o błędzie, który występuje podczas przenoszenia konta](./media/account-move-rom-iwp-user-1712.png)
+<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
 ## <a name="week-of-november-27-2017"></a>Tydzień 27 listopada 2017 r.
 
@@ -121,7 +116,7 @@ Zaktualizowaliśmy również ekran aktywacji dostępu warunkowego do poczty e-ma
 
 ### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Bardziej zrozumiałe komunikaty w aplikacji Portal firmy dla systemu Android <!---1396349--->  
 
-Proces rejestracji w aplikacji Portal firmy dla systemu Android został uproszczony poprzez dodanie nowego tekstu w celu ułatwienia użytkownikom końcowym przeprowadzenia procesu rejestracji. Jeśli masz dokumentację rejestracji niestandardowej, możesz ją zaktualizować, aby odzwierciedlić nowe ekrany. Przykładowe obrazy można znaleźć poniżej:
+Proces rejestracji w aplikacji Portal firmy dla systemu Android został uproszczony przez dodanie nowego tekstu w celu ułatwienia użytkownikom końcowym przeprowadzenia procesu rejestracji. Jeśli masz dokumentację rejestracji niestandardowej, możesz ją zaktualizować, aby odzwierciedlić nowe ekrany. Przykładowe obrazy można znaleźć poniżej:
 
 |Stary adres|Nowy adres|
 |---|---|
@@ -183,13 +178,13 @@ Na stronie szczegółów aplikacji w aplikacji Portal firmy dla systemu Android 
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
 
-Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
+Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portalu firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
 
 Poniżej przedstawiono poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia.
 
 __Poprzednie środowisko logowania__
 
-![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
+![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny internetowej. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_before_1704_001.png)
 
 ![Po wybraniu przycisku Zaloguj użytkownik wprowadza swoje poświadczenia na stronie z monitem o podanie adresu e-mail i hasła, na której znajdują się także informacje dotyczące rozwiązywania problemów z hasłem.](./media/cp_ios_aad_signin_before_1704_002.png)
 
@@ -207,13 +202,13 @@ __Nowe środowisko logowania__
 
 __Nowe środowisko logowania dostępne podczas logowania za pomocą innego urządzenia__
 
-![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny sieci Web. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+![Strona logowania do Portalu firmy z ikoną osoby przed graficzną reprezentacją witryny internetowej. Poniżej znajduje się przycisk „Zaloguj”. Link u dołu pozwala uzyskać dostęp do informacji dotyczących polityki prywatności firmy Microsoft oraz sposobu korzystania przez nią z plików cookie.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
 Wybierz link __Zaloguj się za pomocą innego urządzenia__.
 
 ![Zgodnie z instrukcjami po uzyskaniu unikatowego kodu dostępu należy na komputerze służbowym przejść na stronę aka.ms/devicelogin, a następnie zalogować się, korzystając z kodu.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Uruchom przeglądarkę i przejdź na stronę [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Uruchom przeglądarkę i przejdź do witryny [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
 
 ![Zrzut ekranu przedstawiający przeglądarkę użytkownika na komputerze służbowym zamiast aplikacji Portal firmy. Na stronie „Logowanie do urządzenia” zostanie wyświetlony monit o podanie kodu odebranego w aplikacji Portal firmy.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -229,7 +224,7 @@ W aplikacji Portal firmy rozpocznie się logowanie.
 
 ## <a name="june-2017"></a>Czerwiec 2017
 
-### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Aplikacja Portal firmy dla systemu Android ma teraz nowe środowisko użytkownika końcowego dla zasad ochrony aplikacji <!--1305217-->
+### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies"></a>Aplikacja Portal firmy dla systemu Android ma teraz nowe środowisko użytkownika końcowego dla zasad ochrony aplikacji
 Na podstawie opinii klientów zmodyfikowaliśmy aplikację Portal firmy dla systemu Android w celu wyświetlania przycisku **Dostęp do zawartości firmowej**. Ma to na celu zapobieganie niepotrzebnemu przechodzeniu przez użytkowników końcowych przez proces rejestracji, gdy potrzebują tylko dostępu do aplikacji obsługujących zasady ochrony aplikacji, czyli funkcję zarządzania aplikacjami mobilnymi usługi Intune.
 
 Użytkownik naciśnie przycisk **Dostęp do zawartości firmowej**, zamiast rozpoczynać rejestrowanie urządzenia.
@@ -259,9 +254,9 @@ Ta aktualizacja jest widoczna tylko na urządzeniach z Rocznicową aktualizacją
 
 ![Obraz strony docelowej aplikacji Portal firmy dla systemu Windows 10 z komunikatem o stanie w środku na liście „urządzenia”, który informuje użytkownika, że używanego przez niego urządzenia nie skonfigurowano jeszcze do użytku firmowego i że użytkownik powinien wybrać ten komunikat, aby rozpocząć konfigurowanie.](./media/win10_guided_enroll_select_setup_after_1706.png)
 
-![Obraz strony konfiguracji aplikacji Portal firmy dla systemu Windows 10 z ostrzeżeniem dla użytkownika, że musi on dodać do tego urządzenia konto firmowe, aby móc zarejestrować urządzenie w celu objęcia go zarządzaniem.](./media/win10_guided_enroll_we_help_setup_after_1706.png)
+![Obraz strony konfiguracji aplikacji Portal firmy dla systemu Windows 10 z ostrzeżeniem dla użytkownika, że należy dodać do tego urządzenia konto firmowe, aby móc zarejestrować urządzenie w celu objęcia go zarządzaniem.](./media/win10_guided_enroll_we_help_setup_after_1706.png)
 
-![Obraz strony aplikacji Portal firmy dla systemu Windows 10 służącej do dodawania konta firmowego do danego urządzenia z informacją dla użytkownika, że musi on przejść do aplikacji Ustawienia i wybrać pozycję Połącz, aby sfinalizować rejestrację. Gdy to zrobi, na ekranie pojawi się informacja, że należy powrócić do aplikacji Portal firmy, aby sfinalizować rejestrację.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
+![Obraz strony aplikacji Portal firmy dla systemu Windows 10 służącej do dodawania konta firmowego do danego urządzenia z informacją dla użytkownika, że należy przejść do aplikacji Ustawienia i wybrać pozycję „Połącz”, aby sfinalizować rejestrację. Gdy to zrobi, na ekranie pojawi się informacja, że należy powrócić do aplikacji Portal firmy, aby sfinalizować rejestrację.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
 
 ![Obraz strony aplikacji Portal firmy dla systemu Windows 10 służącej do rejestrowania w systemie zarządzania z komunikatem o stanie wskazującym ukończenie operacji: urządzenie jest zarejestrowane i użytkownik powinien nacisnąć przycisk Dalej, aby kontynuować.](./media/win10_guided_enroll_youre_now_enrolled_after_1706.png)
 
@@ -322,13 +317,13 @@ Aktualizacja aplikacji Portal firmy dla systemu Android pokazuje wskaźnik post�
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
+            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
+             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
            </td>
            <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
+              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -382,11 +377,28 @@ Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualiz
 > [!Note]
 > Należy pamiętać, że poniższe obrazy mogą być wersjami wstępnymi i zapowiadany produkt może różnić się od prezentowanych wersji.
 
+### <a name="ui-iwp"></a>Aktualizacja nowego środowiska użytkownika witryny internetowej Portal firmy<!--2000968-->
+
+W kwietniu wprowadzimy nowe środowisko witryny Portal firmy zawierające aktualizacje interfejsu użytkownika, usprawnione przepływy pracy i ulepszone ułatwienia dostępu. Będzie ono obejmować ulepszenia oparte na potrzebach klientów, takie jak udostępnianie aplikacji i lepsza ogólna wydajność, aby zapewnić użytkownikom większy komfort pracy.
+
+Na podstawie opinii klientów dodaliśmy nowe funkcje, które znacznie udoskonalą istniejące funkcje i użyteczność:
+
+-   Ulepszenia interfejsu użytkownika w całej witrynie internetowej
+-   Możliwość udostępniania bezpośrednich linków do aplikacji
+- Zwiększona wydajność dużych wykazów aplikacji
+
+Nie musisz niczego robić, aby przygotować się do tej zmiany. Powiadomimy Cię, gdy zaktualizowana witryna internetowa Portal firmy będzie dla Ciebie dostępna. Może być jednak konieczne zaktualizowanie zrzutów ekranu w dokumentach użytkownika końcowego. Pamiętaj, że może być też konieczne zaktualizowanie dokumentacji dla aplikacji Portal firmy w systemie iOS, ponieważ witryna internetowa obsługuje sekcję **Aplikacje** w aplikacji systemu iOS.
+
+|Zaktualizowana|Wstecz|
+|---|---|
+|![Na zaktualizowanej stronie urządzenia urządzenie jest wyrównane nad informacjami o urządzeniu i już nie wystaje poza pełną listę.](./media/iwp-device-after-1803.png)|![Poprzedniej wersji strony urządzenia.](./media/iwp-device-before-1803.png)|
+|![Na zaktualizowanej stronie instalowania aplikacji aplikacja znajduje się nad opisem oraz informacjami dotyczącymi instalacji, w tym datą publikacji, wersją i typem aplikacji.](./media/iwp-app-install-after-1803.png)|![Poprzednia wersja strony instalowania aplikacji.](./media/iwp-app-install-before-1803.png)|
+
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!--1412866-->
 
 Niedługo wydamy dużą aktualizację środowiska użytkownika w aplikacji Portal firmy dla systemu iOS. Aktualizacja obejmie całkowicie nowy projekt wizualny, w tym zmodernizowany wygląd i działanie oraz większą użyteczność i dostępność. Cała obecna funkcjonalność aplikacji Portal firmy dla systemu iOS zostanie zachowana.
 
-Za pośrednictwem programu Apple TestFlight oferujemy wersję wstępną zaktualizowanej aplikacji Portal firmy dla systemu iOS, aby umożliwić korzystanie z niej i przesyłanie opinii na jej temat. Zarejestruj się pod adresem https://aka.ms/intune_ios_cp_testflight, aby uzyskać dostęp do programu TestFlight.
+Za pośrednictwem programu Apple TestFlight oferujemy wersję wstępną zaktualizowanej aplikacji Portal firmy dla systemu iOS, aby umożliwić korzystanie z niej i przesyłanie opinii na jej temat. Zarejestruj się na stronie https://aka.ms/intune_ios_cp_testflight, aby uzyskać dostęp do programu TestFlight. Najnowsze informacje o tej aktualizacji znajdziesz na stronie https://aka.ms/iOS_companyportal_update.
 
 ![wzbudzające ciekawość obrazy nowej aplikacji Portal firmy dla systemu iOS](./media/ios-cp-app-redesign-1801-teaser.png)
 
@@ -400,5 +412,5 @@ __Aktualizacje sekcji Polecane aplikacje__ — do witryny dodaliśmy dedykowaną
 
 ### <a name="see-also"></a>Zobacz też
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plan platformy w chmurze](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Plan platformy w chmurze](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co nowego w usłudze Intune](https://docs.microsoft.com/intune/whats-new)

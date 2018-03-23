@@ -1,23 +1,23 @@
 ---
-title: "Konfigurowanie ustawień usługi Windows Update dla firm w usłudze Intune"
-titleSuffix: Azure portal
-description: "Informacje o konfigurowaniu ustawień usługi Windows Update dla firm w usłudze Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10."
-keywords: 
+title: Konfigurowanie ustawień usługi Windows Update dla firm w usłudze Microsoft Intune
+titleSuffix: ''
+description: Informacje o konfigurowaniu ustawień usługi Windows Update dla firm w usłudze Microsoft Intune w celu kontrolowania aktualizacji urządzeń z systemem Windows 10.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: d6ccda2aba0b1383de6c38b7a2fdcfdc742d0e15
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ac26d0ac1855aa32ef0f00de6a4056bd57c07528
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="manage-software-updates"></a>Zarządzanie aktualizacjami oprogramowania
 
@@ -140,7 +140,7 @@ Na przykład można użyć następujących wartości w obszarze **Dodaj lub edyt
 - **Typ danych:**: ciąg
 - **Wartość**: <*użyj identyfikatora GUID wyświetlanego na karcie Telemetria systemu Windows w obszarze roboczym usługi OMS*>
 
-![Ustawienie systemu Windows dla danych diagnostycznych i danych dotyczących użycia](./media/commID.png)
+![Ustawienie OMA-URI — Dodaj wiersz](./media/commID.png)
 
 ## <a name="how-to-pause-updates"></a>Jak wstrzymywać aktualizacje
 Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkcji lub aktualizacji dotyczących jakości przez okres do 35 dni od chwili wstrzymania aktualizacji. Po upływie maksymalnej liczby dni automatycznie wygasa działanie funkcji wstrzymania i urządzenie rozpoczyna skanowanie usługi Windows Update w poszukiwaniu odpowiednich aktualizacji. Po tym skanowaniu można ponownie wstrzymać aktualizacje.

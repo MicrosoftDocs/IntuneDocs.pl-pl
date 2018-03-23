@@ -1,24 +1,24 @@
 ---
-title: "Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune"
-description: 
+title: Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune
+description: Wtyczka Cordova zestawu SDK aplikacji usługi Intune pozwala deweloperom na integrowanie funkcji ochrony danych i aplikacji usługi Intune w ramach aplikacji opartych na platformie Cordova.
 keywords: sdk, Cordova, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d42f8418e2f277dca0fbb2f01248f5a815606cb6
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 84ff217361108ac3518567f31af8943d0b3032fe
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/03/2018
 > [!NOTE]
 > Warto najpierw przeczytać artykuł [Wprowadzenie do zestawu SDK aplikacji usługi Intune](app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
 
-Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po wbudowaniu wtyczki do aplikacji dla systemu iOS lub Android administrator usługi Microsoft Intune będzie mógł wdrożyć zasady ochrony aplikacji usługi Intune, które obejmują różne funkcje ochrony danych. Wtyczka jest kompilowana w taki sposób, aby większość czynności było wykonywanych automatycznie podczas kompilacji aplikacji Cordova. Pozwala to na szybkie włączenie aplikacji w zakres ochrony aplikacji usługi Intune. Aby rozpocząć pracę, wykonaj poniższe kroki, odpowiadające platformie docelowej.
+Funkcje zestawu SDK można włączyć bez zmiany zachowania aplikacji. Po wbudowaniu wtyczki do aplikacji dla systemu iOS lub Android administrator usługi Microsoft Intune będzie mógł wdrożyć zasady ochrony aplikacji usługi Intune, które obejmują różne funkcje ochrony danych. Wtyczka jest kompilowana w taki sposób, aby większość czynności było wykonywanych automatycznie podczas kompilacji aplikacji Cordova. Pozwala to na szybkie włączenie aplikacji w zakres ochrony aplikacji usługi Intune. Aby rozpocząć pracę, wykonaj poniższe kroki odpowiadające platformie docelowej.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -96,7 +96,7 @@ Ten instalator obsługuje tylko jeden element docelowy. Jeśli istnieje wiele ob
 
 1. Zaimportuj tę wtyczkę przy użyciu najnowszych narzędzi platformy Cordova. Wtyczka zostanie automatycznie wywołana w kroku `after_compile`.
 
-2. Pod koniec procesu kompilacji wtyczka utworzy skompilowany pakiet apk (interfejs API systemu Android w wersji 14 lub nowszej) z obsługą usługi Intune. Skompilowane dane wyjściowe będą zawierać pakiet `[Project]-intunewrapped-[Build_Configuration].apk` (np. `helloWorld-intunewrapped-debug.apk`).
+2. Pod koniec procesu kompilacji wtyczka utworzy skompilowany pakiet apk (interfejs API systemu Android w wersji 14 lub nowszej) z obsługą usługi Intune. Skompilowane dane wyjściowe będą zawierać pakiet `[Project]-intunewrapped-[Build_Configuration].apk` (na przykład `helloWorld-intunewrapped-debug.apk`).
 
 > [!NOTE]
 > Wtyczka obsługuje tylko kompilacje wykonywane za pomocą narzędzia Gradle.
@@ -118,7 +118,7 @@ Wtyczka automatycznie rozpoznaje informacje o podpisywaniu podane na platformie 
 
 Aby uzyskać więcej informacji dotyczących oczekiwanego formatu, zobacz [informacje o podpisywaniu narzędzia Gradle aplikacji Cordova ](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-gradle).
 
-Obecnie firma Microsoft nie obsługuje udostępniania informacji o podpisywaniu w pliku `build.json` lub w dowolnych miejscach przekazanych za pośrednictwem parametrów do kompilacji aplikacji Cordova.
+Obecnie usługa Intune nie obsługuje udostępniania informacji o podpisywaniu w pliku `build.json` lub w dowolnych miejscach przekazanych za pośrednictwem parametrów do kompilacji aplikacji Cordova.
 
 ## <a name="debugging-from-visual-studio"></a>Debugowanie w programie Visual Studio
 
@@ -129,8 +129,8 @@ Przy pierwszym uruchomieniu aplikacji powinno pojawić się okno dialogowe z inf
 ### <a name="android"></a>Android
 
 * Obsługa klasy MultiDex jest niepełna.
-* Wartość `minSdkVersion` musi wynosić 14, a wartość `targetSdkVersion` 24 lub mniej. Obecnie firma Microsoft nie obsługuje aplikacji interfejsu API 25
-* Nie możemy ponownie podpisać aplikacji, które zostały podpisane przy użyciu schematu podpisu V2. Jeśli aplikacje podpisane przy użyciu schematu podpisu V2 zostaną opakowane przy użyciu wtyczki, podpis opakowanego wyjściowego pliku apk zostanie cofnięty.
+* Wartość `minSdkVersion` musi wynosić 14, a wartość `targetSdkVersion` 24 lub mniej. Obecnie usługa Intune nie obsługuje aplikacji interfejsu API 25
+* Usługa Intune nie może ponownie podpisać aplikacji, które zostały podpisane przy użyciu schematu podpisu V2. Jeśli aplikacje podpisane przy użyciu schematu podpisu V2 zostaną opakowane przy użyciu wtyczki, podpis opakowanego wyjściowego pliku apk zostanie cofnięty.
 *
   * Można wyłączyć domyślne podpisywanie przy użyciu schematu V2 aplikacji Cordova przez dodanie do pliku `build-extras.gradle`:
 

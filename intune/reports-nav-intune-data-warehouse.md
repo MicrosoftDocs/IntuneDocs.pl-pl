@@ -1,24 +1,25 @@
 ---
-title: "Interfejs API magazynu danych usługi Intune | Microsoft Docs"
-description: "Przy użyciu interfejsu API możesz tworzyć raporty zapewniające wgląd w środowisko mobilne przedsiębiorstwa."
-keywords: "Magazyn danych usługi Intune"
+title: Interfejs API magazynu danych usługi Intune
+titlesuffix: Microsoft Intune
+description: Przy użyciu interfejsu API magazynu danych usługi Intune możesz tworzyć raporty zapewniające wgląd w środowisko mobilne przedsiębiorstwa.
+keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/31/2017
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e5c12ea4212bf7276b2cb0a4b09ecff648d67583
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7291e6f0d6094801383ba7fd606c0238e85ba01f
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 #  <a name="intune-data-warehouse-api"></a>Interfejs API magazynu danych usługi Intune
 
@@ -65,4 +66,4 @@ Dowiedz się więcej na temat pracy z usługą Azure AD, czytając artykuł [Sce
 
 Źródła danych OData znajdziesz w witrynie [odata.org](http://www.odata.org).
   
-Za poznaj się ze standardem OData Version 4.0 na stronie [OData Version 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Zapoznaj się ze standardem OData w wersji 4.0 na stronie [OData w wersji 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
