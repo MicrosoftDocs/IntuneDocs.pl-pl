@@ -1,30 +1,31 @@
 ---
 title: Konfigurowanie niestandardowej nazwy domeny
-description: "Dodawanie niestandardowej nazwy domeny dla subskrypcji usługi Intune"
-keywords: 
-author: arob98
-ms.author: angrobe
+titlesuffix: Microsoft Intune
+description: Dodawanie niestandardowej nazwy domeny dla subskrypcji usługi Microsoft Intune
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6046b574c495035977dcd635786409e52be85bb8
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 913334a9fee8ab584cb11f8124ef2a491e01661f
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurowanie niestandardowej nazwy domeny
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Ten temat zawiera informacje dla administratorów dotyczące tworzenia rekordu CNAME systemu DNS w celu uproszczenia i dostosowania środowiska logowania.
+Ten temat zawiera informacje dla administratorów dotyczące tworzenia rekordu CNAME systemu DNS w celu uproszczenia i dostosowania środowiska logowania przy użyciu usługi Microsoft Intune.
 
 Gdy organizacja rejestruje się w usłudze w chmurze firmy Microsoft, takiej jak Intune, otrzymuje początkową nazwę domeny hostowaną w usłudze Azure Active Directory (AD), która wygląda podobnie do: **twojadomena.onmicrosoft.com**. W tym przykładzie **twojadomena** to nazwa domeny wybrana podczas rejestracji. **onmicrosoft.com** jest sufiksem przypisanym do kont dodanych do subskrypcji. Można skonfigurować domenę niestandardową organizacji zapewniającą dostęp do usługi Intune zamiast nazwy domeny zapewnionej w ramach subskrypcji.
 

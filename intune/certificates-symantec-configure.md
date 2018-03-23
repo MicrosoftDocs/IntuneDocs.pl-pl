@@ -1,25 +1,25 @@
 ---
-title: "Wystawianie certyfikatów PKCS firmy Symantec w usłudze Intune"
-titlesuffix: Azure portal
-description: "Instalacja i konfiguracja łącznika certyfikatów usługi Intune w celu wystawiania certyfikatów PKCS przy użyciu usługi sieci Web Symantec PKI Manager dla urządzeń zarządzanych przez usługę Intune"
-keywords: 
-author: MicrosoftGuyJFlo
-ms.author: joflore
+title: Wystawianie certyfikatów PKCS firmy Symantec w usłudze Microsoft Intune
+titlesuffix: ''
+description: Instalacja i konfiguracja łącznika certyfikatów usługi Intune w celu wystawiania certyfikatów PKCS przy użyciu usługi internetowej Symantec PKI Manager dla urządzeń zarządzanych przez usługę Intune.
+keywords: ''
+author: vhorne
+ms.author: victorh
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f2d37a9033464381de5c23a558d0205f85fe56a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1fbb0ccd21ff15cf86656d7badf08002f1e42bb3
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Konfiguracja łącznika certyfikatów usługi Intune dla usługi sieci Web Symantec PKI Manager
 

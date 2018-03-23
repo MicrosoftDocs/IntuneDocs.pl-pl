@@ -1,25 +1,26 @@
 ---
-title: "Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Intune"
-description: "Ten artykuł zawiera niezbędne instrukcje dotyczące konfigurowania zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Intune."
-keywords: 
-author: andredm7
-ms.author: andredm
+title: Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Intune
+titlesuffix: Microsoft Intune
+description: Ten artykuł zawiera niezbędne instrukcje dotyczące konfigurowania zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 07/11/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0062d08e-e5b3-4f73-8b64-5ad95adbe945
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 96541c503a387e1a2ad3a4158f441266f1202be0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 13a9c0a036eb6ce6ea7e984419c9598194b35b68
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="configure-device-compliance-and-app-management-policies"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami
+# <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune
 
 Głównym celem migracji do usługi Intune jest zarejestrowanie wszystkich urządzeń w usłudze Intune i zapewnienie ich zgodności z zasadami tej usługi. Zasady dotyczące urządzeń ułatwiają zarządzanie nie tylko firmowymi urządzeniami, z których korzystają pojedynczy użytkownicy, ale także urządzeniami osobistymi (BYOD) i urządzeniami udostępnianymi, takimi jak kioski, urządzenia używane w punktach sprzedaży czy tablety używane przez wielu uczniów w klasie, oraz urządzeniami nienależącymi do żadnego użytkownika (tylko z systemem iOS).
 

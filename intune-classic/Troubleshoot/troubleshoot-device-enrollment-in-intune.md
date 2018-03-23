@@ -1,25 +1,25 @@
 ---
-title: "Rozwiązywanie problemów z rejestrowaniem urządzeń"
-description: "Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia."
-keywords: 
+title: Rozwiązywanie problemów z rejestrowaniem urządzeń
+description: Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 09/15/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
-ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
+ms.openlocfilehash: 0293614e2654c16b6fd5fd43d40331453b332e3c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
@@ -70,7 +70,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Aby usunąć urządzenia w portalu usługi Azure Active Directory
 
-1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator** &gt; **Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
+1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator**&gt;**Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
 
 2.  Zaloguj się za pomocą identyfikatora organizacji, korzystając z linku w lewej części strony.
 
@@ -99,7 +99,7 @@ Administratorzy mogą usuwać urządzenia w portalu usługi Azure Active Directo
 
 1.  Usuń aplikację Portal firmy dla usługi Intune z urządzenia.
 
-2.  Na urządzeniu otwórz przeglądarkę, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)i spróbuj zalogować użytkownika.
+2.  Na urządzeniu otwórz przeglądarkę, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zalogować użytkownika.
 
 3.  Jeśli użytkownik nie może się zalogować, niech spróbuje skorzystać z innej sieci.
 
@@ -165,8 +165,8 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 
 |Komunikat o błędzie|Problem|Rozwiązanie|
 |---|---|---|
-|**Administrator IT musi przypisać licencję w celu udzielenia praw dostępu**<br>Administrator IT nie nadał Ci praw dostępu do korzystania z tej aplikacji. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie ma potrzebnej licencji.|Aby umożliwić użytkownikom rejestrowanie urządzeń, należy przypisać im wymaganą licencję. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br><br>Zobacz informacje na temat [przypisywania licencji usługi Intune do kont użytkowników](/intune/licenses-assign.md).
-|**Administrator IT musi ustawić urząd MDM**<br>Wygląda na to, że administrator IT nie ustawił urzędu MDM. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie określono urzędu zarządzania urządzeniami przenośnymi.|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune. Zobacz informacje na temat [ustawiania urzędu zarządzania urządzeniami mobilnymi](/intune/mdm-authority-set.md).|
+|**Administrator IT musi przypisać licencję w celu udzielenia praw dostępu**<br>Administrator IT nie nadał Ci praw dostępu do korzystania z tej aplikacji. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie ma potrzebnej licencji.|Aby umożliwić użytkownikom rejestrowanie urządzeń, należy przypisać im wymaganą licencję. Ten komunikat oznacza, że użytkownik ma niewłaściwy typ licencji dla wyznaczonego źródła zarządzania urządzeniami przenośnymi. Ten błąd wystąpi, jeśli na przykład jako źródło zarządzania urządzeniami przenośnymi zostanie wyznaczona usługa Intune, a użytkownik będzie korzystać z licencji programu System Center 2012 R2 Configuration Manager.<br><br>Zobacz informacje na temat [przypisywania licencji usługi Intune do kont użytkowników](/intune/licenses-assign).
+|**Administrator IT musi ustawić urząd MDM**<br>Wygląda na to, że administrator IT nie ustawił urzędu MDM. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie określono urzędu zarządzania urządzeniami przenośnymi.|Nie wyznaczono źródła zarządzania urządzeniami przenośnymi w usłudze Intune. Zobacz informacje na temat [ustawiania urzędu zarządzania urządzeniami mobilnymi](/intune/mdm-authority-set).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Nie można zaewidencjonować urządzeń w usłudze Intune — w konsoli administracyjnej usługi Intune stan urządzeń jest wyświetlany jako „W niedobrej kondycji”
@@ -257,7 +257,7 @@ Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych 
 10. Uruchom ponownie serwery usług AD FS.
 11. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 
-W celu sprawdzenia, czy zainstalowano odpowiedni certyfikat, można użyć narzędzia diagnostycznego dostępnego w witrynie [https://www.digicert.com/help/](https://www.digicert.com/help/). W polu **Adres serwera** wprowadź w pełni kwalifikowaną nazwę domeny serwera usług AD FS (IE: sts.contoso.com) i kliknij przycisk **Sprawdź serwer**.
+Możesz sprawdzić, czy zainstalowano odpowiedni certyfikat, używając narzędzia diagnostycznego dostępnego w witrynie [https://www.digicert.com/help/](https://www.digicert.com/help/). W polu **Adres serwera** wprowadź w pełni kwalifikowaną nazwę domeny serwera usług AD FS (IE: sts.contoso.com) i kliknij przycisk **Sprawdź serwer**.
 
 **Aby sprawdzić, czy certyfikat jest zainstalowany prawidłowo**:
 
@@ -332,7 +332,7 @@ Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotycz�
 
 2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM lub czy nie zainstalowano już dla niego profilu zarządzania.
 
-3.  Przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i po wyświetleniu monitu spróbuj zainstalować profil.
+3.  Gdy zostanie wyświetlony monit, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zainstalować profil.
 
 4.  Upewnij się, że domyślną przeglądarką jest program Safari dla systemu iOS oraz że pliki cookie są włączone.
 
@@ -377,7 +377,7 @@ Przykłady zawartości, pod kątem obecności której należy sprawdzić pliki d
 
 
 ### <a name="other-ios-enrollment-errors"></a>Inne błędy rejestracji urządzeń z systemem iOS
-Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji użytkownika urządzenia w temacie [You see errors while trying to enroll your device in Intune](/intune-user-help/using-your-iOS-or-macOS-device-with-intune) (Podczas próby zarejestrowania urządzenia w usłudze Intune występują błędy).
+Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji w artykule [Rozwiązywanie problemów z rejestracją urządzeń z systemem iOS w usłudze Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Problemy z komputerem PC
 

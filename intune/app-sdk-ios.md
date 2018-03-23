@@ -1,24 +1,24 @@
 ---
-title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS"
-description: "Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz wdrożyć zasady ochrony aplikacji usługi Intune (nazywane również zasadami APP lub MAM) w swojej natywnej aplikacji dla systemu iOS."
-keywords: 
+title: Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
+description: Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz wdrożyć zasady ochrony aplikacji usługi Intune (nazywane również zasadami APP lub MAM) w swojej natywnej aplikacji dla systemu iOS.
+keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 49ffac609ec24917b8490c535ebd74c6d2729ccd
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 498b9ec1ab98358f73c0ca2139f156164a253a75
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -470,7 +470,7 @@ Docelowa konfiguracja MAM umożliwia aplikacjom odbieranie danych konfiguracji z
 * Wywołaj element ```[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]``` w celu pobrania obiektu konfiguracji aplikacji.
 * Wywołaj odpowiedni selektor w obiekcie ```IntuneMAMAppConfig```. Jeśli na przykład klucz aplikacji jest ciągiem, możesz użyć elementu ```stringValueForKey``` lub ```allStringsForKey```. Plik ```IntuneMAMAppConfig.h header``` dotyczy wartości zwracanych/warunków błędów.
 
-Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph w odniesieniu do wartości docelowej konfiguracji MAM, zobacz [Konfiguracja docelowej konfiguracji MAM w zakresie odwołań do interfejsu API programu Graph](https://developer.microsoft.com/graph/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph, zobacz [Dokumentacja interfejsu API programu Graph](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
 Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji MAM w systemie iOS można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji MAM w artykule opisującym [sposób używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
 

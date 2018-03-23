@@ -1,29 +1,30 @@
 ---
-title: "Przewodnik po migracji funkcji zarządzania urządzeniami mobilnymi do usługi Intune"
-description: "Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez różne etapy migracji od innego dostawcy usług MDM do usługi Microsoft Intune."
-keywords: 
-author: andredm7
-ms.author: andredm
+title: Przewodnik po migracji funkcji zarządzania urządzeniami mobilnymi do usługi Intune
+titlesuffix: Microsoft Intune
+description: Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez różne etapy migracji od innego dostawcy usług MDM do usługi Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 07/11/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dcfc21f9-1bcd-4371-a46d-f2e18154ec50
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 888624530fe77f22ea9391b688fa9f9b92f0ac75
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9bfefff2ef5960b6e52a8a37c2fd31466d16cbff
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="intune-migration-guide"></a>Przewodnik po migracji do usługi Intune
 
-![Graficzne przedstawienie przewodnika po migracji funkcji MDM do usługi Intune](./media/MDM-migration-guide-art.PNG)
+![Graficzne przedstawienie przewodnika po migracji funkcji MDM do usługi Microsoft Intune](./media/MDM-migration-guide-art.PNG)
 
-Aby migracja do usługi Intune zakończyła się powodzeniem, należy rozpocząć od opracowania dobrego planu, który uwzględnia bieżące środowisko zarządzania urządzeniami mobilnymi (MDM), cele biznesowe i wymagania techniczne. Dodatkowym wymogiem jest współpraca z najważniejszymi uczestnikami projektu, którzy udzielą wsparcia podczas prac nad planem migracji.
+Aby migracja do usługi Microsoft Intune zakończyła się powodzeniem, należy rozpocząć od opracowania dobrego planu, który uwzględnia bieżące środowisko zarządzania urządzeniami mobilnymi (MDM), cele biznesowe i wymagania techniczne. Dodatkowym wymogiem jest uwzględnienie najważniejszych uczestników projektu, którzy udzielą wsparcia podczas prac nad planem migracji.
 
 Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez różne etapy migracji od innego dostawcy usług MDM do usługi Intune.
 

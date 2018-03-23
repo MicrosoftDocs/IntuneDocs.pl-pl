@@ -1,25 +1,25 @@
 ---
-title: "Zarządzanie dostępem do sieci Web za pomocą aplikacji Managed Browser"
+title: Zarządzanie dostępem do sieci Web za pomocą aplikacji Managed Browser
 titlesuffix: Microsoft Intune
-description: "Informacje o wdrażaniu aplikacji Managed Browser w celu ograniczenia przeglądania sieci Web i transferu danych sieci Web do innych aplikacji."
-keywords: 
-author: erikre
+description: Informacje o wdrażaniu aplikacji Managed Browser w celu ograniczenia przeglądania sieci Web i transferu danych sieci Web do innych aplikacji.
+keywords: ''
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7c36639272bd8738bff33f6039a2d26e6147729
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 742173c1ef53337dab35694c0c04cbca60dbb07c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
@@ -35,7 +35,7 @@ Ta aplikacja jest zintegrowana z zestawem SDK usługi Intune, dlatego można do 
 - Zapobieganie przechwytywaniu ekranu
 - Zapewnienie, że linki do zawartości wybierane przez użytkowników są otwierane tylko w innych aplikacjach zarządzanych.
 
-Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](/intune/app-protection-policy)?
+Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](/intune/app-protection-policy.md)?
 
 Te ustawienia można zastosować do:
 
@@ -59,12 +59,52 @@ Zasady programu Managed Browser można tworzyć dla następujących typów urzą
 >Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
 
 
-Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx).
+Program Intune Managed Browser obsługuje otwieranie zawartości sieci Web od [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+## <a name="conditional-access-for-the-intune-managed-browser"></a>Dostęp warunkowy dla aplikacji Intune Managed Browser
+
+Aplikacja Managed Browser jest teraz zatwierdzoną aplikacją kliencką dla dostępu warunkowego. Oznacza to, że możesz ograniczyć dostęp przeglądarki mobilnej do aplikacji internetowych połączonych z usługą Azure AD, aby użytkownicy mogli używać tylko aplikacji Managed Browser, a dostęp był zablokowany z innych niezabezpieczonych przeglądarek, takich jak Safari czy Chrome. Taką ochronę można zastosować do zasobów platformy Azure, takich jak usługi Exchange Online i SharePoint Online, portal usługi Office, a nawet witryny lokalne, które są dostępne dla użytkowników zewnętrznych za pośrednictwem [serwera proxy aplikacji usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+
+Aby ograniczyć aplikacje internetowe usługi Azure AD do używania aplikacji Intune Managed Browser na platformach urządzeń przenośnych, możesz utworzyć zasady dostępu warunkowego usługi Azure AD wymagające zatwierdzonych aplikacji klienckich. 
+
+1. W witrynie Azure Portal wybierz pozycję **Azure Active Directory** > **Aplikacje dla przedsiębiorstw** > **Dostęp warunkowy** > **Nowe zasady**. 
+2. Następnie wybierz pozycję **Udziel** w sekcji **Kontrole dostępów** bloku. 
+3. Kliknij pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**. 
+4. Kliknij pozycję **Wybierz** w bloku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
+
+    ![Azure AD — zasady dostępu warunkowego aplikacji Managed Browser](./media/managed-browser-conditional-access-01.png)
+
+5. W sekcji **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**. Zostanie wyświetlony blok **Aplikacje klienckie**.
+6. Kliknij pozycję **Tak** w obszarze **Konfiguruj**, aby zastosować zasady do określonych aplikacji klienckich.
+7. Sprawdź, czy jako aplikację kliencką wybrano pozycję **Przeglądarka**.
+
+    ![Azure AD — Managed Browser — wybieranie aplikacji klienckich](./media/managed-browser-conditional-access-02.png)
+
+    > [!NOTE]
+    > Jeśli chcesz ograniczyć, które aplikacje natywne (aplikacje nie korzystające z przeglądarki) mają mieć dostęp do tych aplikacji w chmurze, możesz także zaznaczyć pozycję **Aplikacje mobilne i klienci stacjonarni**.
+
+8. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, a następnie wybierz użytkowników lub grupy, do których chcesz przypisać te zasady. 
+
+    > [!NOTE]
+    > Użytkownicy muszą również zostać objęci zasadami ochrony aplikacji usługi Intune. Aby uzyskać więcej informacji na temat tworzenia zasad ochrony aplikacji usługi Intune, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
+
+9. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**, aby wybrać, które aplikacje mają być chronione przez te zasady.
+
+Po skonfigurowaniu powyższych zasad użytkownicy będą musieli uzyskiwać dostęp do połączonych z usługą Azure AD aplikacji internetowych chronionych przez te zasady za pomocą aplikacji Intune Managed Browser. Jeśli użytkownicy spróbują użyć niezarządzanej przeglądarki w tym scenariuszu, zostanie wyświetlone powiadomienie o konieczności użycia aplikacji Intune Managed Browser.
+
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Logowanie jednokrotne do aplikacji internetowych połączonych z usługą Azure AD w aplikacji Intune Managed Browser
+
+Aplikacja Intune Managed Browser w systemach iOS i Android może teraz korzystać z logowania jednokrotnego do wszystkich aplikacji internetowych (SaaS i lokalnych), które są połączone z usługą Azure AD. Gdy w systemie iOS jest obecna aplikacja Microsoft Authenticator lub gdy w systemie Android jest obecna aplikacja Portal firmy usługi Intune, użytkownicy aplikacji Intune Managed Browser mogą uzyskiwać dostęp do aplikacji internetowych połączonych z usługą Azure AD bez konieczności ponownego wprowadzania poświadczeń.
+
+Logowanie jednokrotne w aplikacji Intune Managed Browser wymaga, aby urządzenie było zarejestrowane przez aplikację Microsoft Authenticator w systemie iOS lub przez aplikację Portal firmy usługi Intune w systemie Android. Użytkownikom z aplikacją Authenticator lub Portal firmy usługi Intune zostanie wyświetlony monit o zarejestrowanie urządzenia, gdy przejdą do aplikacji internetowej połączonej z usługą Azure AD w aplikacji Intune Managed Browser, a ich urządzenie nie zostało jeszcze zarejestrowane przez inną aplikację. Po zarejestrowaniu urządzenia przy użyciu konta zarządzanego przez usługę Intune dla tego konta zostanie włączone logowanie jednokrotne dla aplikacji internetowych połączonych z usługą Azure AD. 
+
+> [!NOTE]
+> Rejestracja urządzenia to proste zaewidencjonowanie go w usłudze Azure AD. Nie wymaga pełnej rejestracji urządzenia ani nie daje działowi IT żadnych dodatkowych uprawnień na urządzeniu.
 
 ## <a name="create-a-managed-browser-app-configuration"></a>Tworzenie konfiguracji aplikacji Managed Browser
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3.  W bloku **Aplikacje mobilne** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
 4.  W bloku **Zasady konfiguracji aplikacji** wybierz pozycję **Dodaj**.
 5.  W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
@@ -102,7 +142,10 @@ Aplikacja Intune Managed Browser i [serwer proxy aplikacji usługi Azure AD]( ht
     - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
 - Wymagana jest aplikacja Managed Browser w wersji 1.2.0 lub nowszej.
 - Użytkownicy aplikacji Managed Browser mają przypisane do aplikacji [zasady ochrony aplikacji usługi Intune]( app-protection-policy.md).
-Uwaga: Zanim zaktualizowane dane przekierowania serwera proxy aplikacji przyniosą efekt w aplikacji Managed Browser może minąć do 24 godzin.
+
+    > [!NOTE]
+    > Zanim zaktualizowane dane przekierowania serwera proxy aplikacji zaczną obowiązywać w aplikacji Managed Browser, może minąć do 24 godzin.
+
 
 #### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Krok 1. Włączenie automatycznego przekierowania do aplikacji Managed Browser z poziomu programu Outlook
 Program Outlook musi być skonfigurowany przy użyciu zasad ochrony aplikacji, które powodują włączenie ustawienia **Ogranicz zawartość sieci Web wyświetlaną w programie Managed Browser**.
@@ -115,6 +158,7 @@ Ta procedura umożliwia skonfigurowanie aplikacji Managed Browser, aby korzysta�
 |Klucz|Wartość|
 |**com.microsoft.intune.mam.managedbrowser.AppProxyRedirection**|**true**|
 
+Aby uzyskać więcej informacji o sposobie używania aplikacji Managed Browser w połączeniu z serwerem proxy aplikacji usługi Azure AD w celu zapewnienia bezproblemowego (i bezpiecznego) dostępu do lokalnych aplikacji internetowych, zobacz wpis w blogu usług Enterprise Mobility + Security [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Razem lepiej: usługi Intune i Azure Active Directory łączą siły, aby zapewnić lepszy dostęp użytkownikom).
 
 ## <a name="how-to-configure-the-homepage-for-the-managed-browser"></a>Jak skonfigurować stronę główną dla aplikacji Managed Browser
 
@@ -247,3 +291,7 @@ Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i kor
 
 ### <a name="turn-off-usage-data"></a>Wyłączanie danych użycia
 Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług. Użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoich urządzeniach. Użytkownik nie kontroluje zbierania tych danych.
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Co to są zasady ochrony aplikacji?](app-protection-policy.md)

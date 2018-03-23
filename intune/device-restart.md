@@ -1,24 +1,24 @@
 ---
-title: "Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune"
-titlesuffix: Azure portal
-description: "Dowiedz się, jak zdalnie ponownie uruchamiać urządzenia za pomocą akcji ponownego uruchomienia urządzenia."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
+titlesuffix: Microsoft Intune
+description: Dowiedz się, jak zdalnie ponownie uruchamiać urządzenia za pomocą akcji ponownego uruchomienia urządzenia w usłudze Microsoft Intune.
+keywords: ''
+author: vhorne
+ms.author: victorh
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ab2bf622211c1a81ca9732aabebea43b5b0dcc4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1bd5a01b8aac91c3bd6ea033d62d41e19aab65f8
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
 
@@ -41,7 +41,7 @@ Akcja urządzenia **Uruchom ponownie** powoduje ponowne uruchomienie wybranego u
 ## <a name="how-to-restart-a-device"></a>Jak ponownie uruchomić urządzenie
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz opcję **Urządzenia**.
 4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 5. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną urządzenia **Uruchom ponownie**.

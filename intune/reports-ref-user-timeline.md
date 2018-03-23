@@ -1,34 +1,35 @@
 ---
-title: "Oś czasu jednostki Użytkownik w magazynie danych |Microsoft Docs"
-description: "Magazyn danych usługi Intune reprezentuje użytkowników na osi czasu."
-keywords: "Magazyn danych usługi Intune"
+title: Oś czasu jednostki Użytkownik w magazynie danych
+titlesuffix: Microsoft Intune
+description: Dowiedz się, jak magazyn danych usługi Intune reprezentuje użytkowników na osi czasu.
+keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 363D148E-688F-4830-B6DE-AB4FE3648817
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e72f60b9ad604f756f74b1ba7cbbde7e5c2ab9f8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7448954fce2b81c5783845c9fbdaaebf43fdf326
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="user-lifetime-representation-in-the-intune-data-warehouse"></a>Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune
+# <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Microsoft Intune
 
 Migawki danych przechowywanych w magazynie danych usługi Intune w ciągu miesiąca mogą posłużyć do odpowiedzi na pytania dotyczące trendów w czasie. Na przykład można przyjrzeć się liczbie użytkowników dodawanych w ciągu miesiąca. Można również dowiedzieć się, jaka jest liczba użytkowników usuniętych z systemu.
 
-W celu umożliwienia takiej analizy magazyn danych przechowuje informacje historyczne. Oznacza to, że może posłużyć do śledzenia okresu istnienia jednostki. Magazyn rejestruje chwilę, w której jednostka została utworzona, kiedy zmienił się jej stan oraz kiedy została usunięta. Dzięki danym historycznym przechwytywanym za pomocą codziennych migawek pomiarów ilościowych można porównać dany dzień z dniem poprzednim i tak dalej.
+W celu umożliwienia tego typu analizy magazyn danych przechowuje informacje historyczne. Magazyn danych może śledzić okres istnienia jednostki. Magazyn rejestruje chwilę, w której jednostka została utworzona, kiedy zmienił się jej stan oraz kiedy została usunięta. Dzięki danym historycznym przechwytywanym za pomocą codziennych migawek pomiarów ilościowych można porównać dany dzień z dniem poprzednim i tak dalej.
 
 Praca z okresami istnienia jednostek może sprawiać problemy, ponieważ jednostki zmieniają stan. Oznacza to, że jeśli analizujesz migawkę w dniu 30, rekord użytkownika może nie występować w danych w stanie aktywnym. W dniach 29-28 rekord jednostki może istnieć jako aktywny. Z kolei przed dniem 28 użytkownik w ogóle nie istniał.
 
-Może to stać się bardziej zrozumiałe, jeśli przeanalizujemy okres istnienia jednostki.
+Ten scenariusz może się stać bardziej zrozumiały, jeśli przeanalizujemy okres istnienia jednostki.
 
 Załóżmy, że użytkownik, **Jan Kowalski**, pobiera przypisaną mu licencję w dniu 1 czerwca 2017 r., co spowoduje, że w tabeli **Użytkownik** znajdzie się następujący wpis: 
  

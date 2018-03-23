@@ -1,24 +1,24 @@
 ---
-title: "Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android"
-description: "Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android można wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM, Mobile App Management) usługi Intune w swojej aplikacji systemu Android."
+title: Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
+description: Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android można wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM, Mobile App Management) usługi Intune w swojej aplikacji systemu Android.
 keywords: SDK
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 53f0d46fa1a9452b7a0cc1e243373f21556f5fb6
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 0eafbe9c57051b62f6ed53a3930705eabf5aebd0
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -1311,7 +1311,7 @@ public interface MAMAppConfig {
 Konfiguracja aplikacji wprowadza nowy typ powiadomienia:
 * **REFRESH_APP_CONFIG**: to powiadomienie jest wysyłane w ramach obiektu `MAMUserNotification` i służy do informowania aplikacji, że nowe dane konfiguracji aplikacji są dostępne.
 
-Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph w odniesieniu do wartości docelowej konfiguracji MAM, zobacz [Konfiguracja docelowej konfiguracji MAM w zakresie odwołań do interfejsu API programu Graph]((https://developer.microsoft.com/graph/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph, zobacz [Dokumentacja interfejsu API programu Graph](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
 Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji funkcji MAM w systemie Android można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji funkcji MAM znajdującej się w artykule [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android) (Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu Android).
 

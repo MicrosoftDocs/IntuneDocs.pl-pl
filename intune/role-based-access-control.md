@@ -1,27 +1,26 @@
 ---
-title: "Kontrola RBAC przy użyciu usługi Intune"
-titleSuffix: Azure portal
-description: "Wersja zapoznawcza usługi Intune Azure: dowiedz się, jak kontrola dostępu oparta na rolach pozwala określić, kto może wykonywać akcje i wprowadzać zmiany."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Kontrola RBAC w usłudze Microsoft Intune
+description: Dowiedz się, jak kontrola dostępu na podstawie ról (RBAC) umożliwia kontrolowanie, kto może wykonywać akcje i wprowadzać zmiany w usłudze Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: edf17d98bb733f7567a615eec856fb7122ba251b
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="role-based-administration-control-rbac-with-intune"></a>Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Intune
+# <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune
 
 Kontrola RBAC ułatwia kontrolowanie, kto może wykonywać różne zadania usługi Intune w organizacji i kogo te zadania dotyczą. Możesz użyć wbudowanych ról, które obejmują kilka typowych scenariuszy usługi Intune, lub utworzyć własne. Rolę definiują następujące właściwości:
 
@@ -70,7 +69,7 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 |Menedżerowie rejestracji urządzeń|Odczyt, aktualizowanie|
 |Urządzenia zarządzane|Odczyt, aktualizowanie<!--, Delete [To be added in 1803]-->|
 |Aplikacje mobilne|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
-|Raporty|Odczyt|
+|Reports|Odczyt|
 |Zdalne działania|Czyszczenie komputera, ponowny rozruch, zdalne blokowanie, wycofywanie, synchronizowanie urządzeń, czyszczenie|
 |Organizacja|Odczyt|
 
@@ -143,6 +142,6 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 [Użyj roli operatora pomocy technicznej usługi Intune w portalu do rozwiązywania problemów](help-desk-operators.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przypisz role przy użyciu usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)

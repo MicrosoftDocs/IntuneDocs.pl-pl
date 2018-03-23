@@ -1,28 +1,28 @@
 ---
-title: "Ustawianie podstawowych opcji zarządzania danymi w aplikacjach usługi Office 365 w usłudze Intune"
-titlesuffix: Azure portal
-description: "Dokumentacja uzupełniająca kreatora Zarządzaj aplikacjami usługi Office 365."
-keywords: 
+title: Zarządzanie danymi aplikacji usługi Office 365 w usłudze Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się więcej na temat zarządzania danymi aplikacji usługi Office 365 w usłudze Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 852612ac-f146-4372-a900-3f6fdebd05ad
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e12f5becc1f3c03af0ee6d1fab9cd7ee16f2a547
-ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
+ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365
+# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365 w usłudze Microsoft Intune
 
 Kreator **Zarządzaj aplikacjami usługi Office 365** tworzy zasady ochrony aplikacji dla każdej platformy urządzeń.
 
@@ -46,30 +46,30 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 
 ## <a name="user-experience-on-an-ios-device"></a>Środowisko użytkownika urządzenia z systemem iOS
 
-1. Uruchom aplikację OneDrive dla Firm, aby otworzyć stronę logowania.  <br/> ![Ilustracja przedstawiająca ekran logowania programu OneDrive dla urządzeń z systemem iOS](./media/onedrive-ios-sign-in.png)
-2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. <br/> ![Ilustracja przedstawiająca stronę logowania usługi Office 365](./media/o365-sign-in-ios.png)
-3. Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostaną zastosowane zasady ochrony aplikacji i pojawi się prośba o ponowne uruchomienie aplikacji OneDrive dla Firm.  <br/>![Ilustracja przedstawiająca monit o ponowne uruchomienie w systemie iOS](./media/ios-restart-prompt.png)    
+1. Uruchom aplikację OneDrive dla Firm, aby otworzyć stronę logowania.  
+2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. 
+3. Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostaną zastosowane zasady ochrony aplikacji i pojawi się prośba o ponowne uruchomienie aplikacji OneDrive dla Firm. 
+
   > [!NOTE]
   > Komunikat informujący o konieczności ponownego uruchomienia aplikacji jest wyświetlany tylko na urządzeniach, które nie zostały zarejestrowane w usłudze Intune.
 
+4. Uruchom ponownie aplikację OneDrive dla Firm. Aplikacja zostanie uruchomiona z włączonymi zasadami ochrony aplikacji, po czym zostanie wyświetlony monit o ustawienie kodu PIN dla urządzenia (o ile jeszcze nie został skonfigurowany na tym urządzeniu).  
 
-4. Uruchom ponownie aplikację OneDrive dla Firm. Aplikacja zostanie uruchomiona z włączonymi zasadami ochrony aplikacji, po czym zostanie wyświetlony monit o ustawienie kodu PIN dla urządzenia (o ile jeszcze nie został skonfigurowany na tym urządzeniu). <br/> ![Ilustracja przedstawiająca monit o utworzenie kodu PIN](./media/pin-prompt-ios.png)    
   > [!NOTE]
   > Większość użytkowników nie otrzyma tego monitu. Zobaczą go tylko ci użytkownicy, którzy nie włączyli kodu PIN na swoim urządzeniu z systemem iOS.
 
-
-5. Po ustawieniu kodu PIN i jego zatwierdzeniu powróć do aplikacji OneDrive dla Firm. Zostanie wyświetlona jednorazowa informacja, że dane służbowe w usłudze OneDrive są teraz objęte ochroną administratora IT. <br/> ![Ilustracja przedstawiająca jednorazowe powiadomienie od administratora IT](./media/one-time-notice.png)
-6. Zamknij powiadomienie, aby uzyskać dostęp do plików w aplikacji OneDrive dla Firm. <br/> ![Ilustracja przedstawiająca pliki w aplikacji OneDrive na urządzeniu z systemem iOS](./media/onedrive-files-ios.png) <br/>
+5. Po ustawieniu kodu PIN i jego zatwierdzeniu powróć do aplikacji OneDrive dla Firm. Zostanie wyświetlona jednorazowa informacja, że dane służbowe w usłudze OneDrive są teraz objęte ochroną administratora IT. 
+6. Zamknij powiadomienie, aby uzyskać dostęp do plików w aplikacji OneDrive dla Firm. 
 
 >[!NOTE]
 >Jeśli zmienisz wdrożone zasady, zmiany te zostaną zastosowane przy następnym otwarciu aplikacji.
-
 
 ## <a name="user-experience-on-an-android-device"></a>Środowisko użytkownika urządzenia z systemem Android
 
 1. Uruchom aplikację OneDrive dla Firm, aby otworzyć stronę logowania.  <br/> ![Ilustracja przedstawiająca ekran powitalny aplikacji OneDrive](./media/onedrive-android-welcome.png)
 2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. <br/> ![Ilustracja przedstawiająca logowanie do usługi O365 w systemie Android](./media/o365-sign-in-android.png)
-3. Jeśli na urządzeniu nie została wcześniej zainstalowana aplikacja Portal firmy, po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostanie wyświetlony komunikat z instrukcją dotyczącą instalacji tej aplikacji. Aby kontynuować, wybierz pozycję **Przejdź do sklepu**. <br/> ![Ilustracja przedstawiająca komunikat z informacją o konieczności pobrania aplikacji Portal firmy](./media/get-company-portal-android.png) <br/>Jeśli na telefonie została wcześniej zainstalowana aplikacja Portal firmy, nastąpi automatyczne uruchomienie usługi OneDrive dla Firm. Możesz przejść do uwagi końcowej.    
+3. Jeśli na urządzeniu nie została wcześniej zainstalowana aplikacja Portal firmy, po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostanie wyświetlony komunikat z instrukcją dotyczącą instalacji tej aplikacji. Aby kontynuować, wybierz pozycję **Przejdź do sklepu**. <br/> ![Ilustracja przedstawiająca komunikat z informacją o konieczności pobrania aplikacji Portal firmy](./media/get-company-portal-android.png) <br/>Jeśli na telefonie została wcześniej zainstalowana aplikacja Portal firmy, nastąpi automatyczne uruchomienie usługi OneDrive dla Firm. Możesz przejść do uwagi końcowej.   
+
   > [!IMPORTANT]
   > Choć użytkownik końcowy nie musi w praktyce otwierać aplikacji Portal firmy ani logować się do niej, aby odczytać wiadomości e-mail i dokumenty, to w systemie Android po skonfigurowaniu aplikacji pakietu Office pod kątem zarządzania przy użyciu zasad ochrony aplikacji użytkownik urządzenia **musi** zainstalować aplikację Portal firmy w celu uzyskania dostępu do służbowych wiadomości e-mail i dokumentów.
 
@@ -128,4 +128,4 @@ Aby wyświetlić lub zaktualizować powyższe zasady lub dowolne inne zasady utw
 ![Ilustracja przedstawiająca ścieżkę interfejsu użytkownika umożliwiającą wyświetlenie zasad](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Następne kroki
-Dowiedz się więcej o [zasadach ochrony aplikacji](app-protection-policy.md).
+- Dowiedz się więcej o [zasadach ochrony aplikacji](app-protection-policy.md).
