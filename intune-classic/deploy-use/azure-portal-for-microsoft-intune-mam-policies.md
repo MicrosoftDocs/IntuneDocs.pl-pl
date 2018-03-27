@@ -1,25 +1,25 @@
 ---
-title: "Portal Azure — zasady zarządzania aplikacjami mobilnymi"
-description: "Utwórz zasady zarządzania aplikacjami mobilnymi za pomocą witryny Azure Portal. Zasady tworzone w tym miejscu można zastosować do urządzeń z rejestracją lub bez rejestracji w usłudze Intune."
-keywords: 
+title: Portal Azure — zasady zarządzania aplikacjami mobilnymi
+description: Utwórz zasady zarządzania aplikacjami mobilnymi za pomocą witryny Azure Portal. Zasady tworzone w tym miejscu można zastosować do urządzeń z rejestracją lub bez rejestracji w usłudze Intune.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 10/22/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: be6435b3418f06908a972fc298a26765e67c4d26
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: ae0acf53a4987dac21e576826477d32da1f56155
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-portal-for-intune-app-protection-policies"></a>Witryna Azure Portal dla zasad ochrony aplikacji usługi Intune
 

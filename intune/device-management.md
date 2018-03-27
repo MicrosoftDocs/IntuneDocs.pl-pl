@@ -1,24 +1,24 @@
 ---
-title: "Zarządzanie urządzeniami przy użyciu usługi Microsoft Intune"
-titleSuffix: 
-description: "Przeglądaj urządzenia zarządzane w usłudze Intune i wykonuj na nich różne operacje."
-keywords: 
+title: Zarządzanie urządzeniami przy użyciu usługi Microsoft Intune
+titleSuffix: ''
+description: Przeglądaj urządzenia zarządzane w usłudze Intune i wykonuj na nich różne operacje.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e69f47e841cb44ab646431d5bd81b9c1d874c64
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 436eeb306bf4ba343ae4d88a824aeed2077a3426
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
@@ -30,7 +30,7 @@ Jako administrator IT musisz się upewnić, że zarządzane urządzenia udostęp
 Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożliwia wykonywanie zadań zdalnych na tych urządzeniach. Aby uzyskać dostęp do obciążenia:
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W obszarze **Intune** wybierz pozycję **Urządzenia**.
 4. Możesz wyświetlać informacje na temat urządzeń i zdalnie wykonywać na urządzeniach następujące akcje:
     - **Przegląd** — migawka zarejestrowanych urządzeń, którymi możesz zarządzać.
