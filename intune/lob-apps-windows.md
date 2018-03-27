@@ -1,25 +1,25 @@
 ---
-title: "Dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się, jak dodawać aplikacje biznesowe (LOB) dla systemu Windows do usługi Microsoft Intune."
-keywords: 
+title: Dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się, jak dodawać aplikacje biznesowe (LOB) dla systemu Windows do usługi Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e23ddb70bb2c12e1278f4167ec074972eeba3003
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: f975f2018d2ce1d7affded3c3386c479e6877388
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows do usługi Microsoft Intune
 
@@ -30,7 +30,7 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego 
 ## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz kolejno pozycje **Zarządzaj** > **Aplikacje**.
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.

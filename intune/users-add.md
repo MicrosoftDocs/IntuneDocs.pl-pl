@@ -1,25 +1,25 @@
 ---
-title: "Dodawanie użytkowników i przyznawanie uprawnień"
+title: Dodawanie użytkowników i przyznawanie uprawnień
 titlesuffix: Microsoft Intune
-description: "Synchronizuj lokalnych użytkowników z usługą Azure AD i przyznawaj uprawnienia administratora dla subskrypcji usługi Intune."
-keywords: 
+description: Synchronizuj lokalnych użytkowników z usługą Azure AD i przyznawaj uprawnienia administratora dla subskrypcji usługi Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
-ms.reviewer: angrobe
+ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f8fe6d668885345f4bd710e4b96b8d7855f12632
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6bbfa42b8ec03cfbe97efdae21f493b68c53d769
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune
 
@@ -84,14 +84,14 @@ Po dodaniu użytkowników do subskrypcji usługi Intune zaleca się przyznanie u
 
 5. Z listy dostępnych ról wybierz uprawnienia administratora, które mają zostać przyznane.
 ![Zrzut ekranu przedstawiający przypisywanie ról](./media/office-assign-roles.png)
-6. Wybierz pozycję **Zapisz**.
+6. Wybierz polecenie **Zapisz**.
 
 ### <a name="give-admin-permissions-in-the-azure-portal"></a>Nadawanie uprawnień administratora w witrynie Azure Portal
 1. Zaloguj się do [witryny Azure Portal](https://www.office.com/signin) przy użyciu konta administratora globalnego.
 2. W witrynie Azure Portal wybierz pozycję **Użytkownik**, a następnie wybierz użytkownika, któremu chcesz nadać uprawnienia administratora.
 3. Wybierz pozycję **Rola katalogu**, a następnie wybierz uprawnienie.
   ![Zrzut ekranu przedstawiający rolę katalogu](./media/add-intune-directory-role.png)
-4. Wybierz pozycję **Zapisz**.
+4. Wybierz polecenie **Zapisz**.
 
 ### <a name="types-of-administrators"></a>Typy administratorów
 

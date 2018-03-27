@@ -1,25 +1,25 @@
 ---
-title: "Tworzenie i wdrażanie zasad MAM"
-description: "Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi."
-keywords: 
+title: Tworzenie i wdrażanie zasad MAM
+description: Postępuj zgodnie z instrukcjami krok po kroku w tym temacie, aby utworzyć i wdrożyć zasady zarządzania aplikacjami mobilnymi.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 11/14/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 93ec41c756c802986b85a45f53329ef6daba6c08
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e751934549490885c1ebf2445ec8f112f640f5bd
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 
@@ -96,7 +96,7 @@ Wykonaj poniższe kroki, aby utworzyć zasady ochrony aplikacji:
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz następującą sekcję: „Wdrażanie zasad dla użytkowników”.
 
 > [!IMPORTANT]
-> Jeśli utworzysz zasady ochrony aplikacji dla aplikacji przy pomocy konsoli administracyjnej usługi Intune oraz zasady ochrony aplikacji przy pomocy witryny Azure Portal, pierwszeństwo będą miały zasady utworzone w witrynie Azure Portal. Jednak raportowanie w konsoli usługi Intune lub programu Configuration Manager będzie zgłaszać ustawienia zasad utworzonych w konsoli administracyjnej usługi Intune. Na przykład:
+> Jeśli utworzysz zasady ochrony aplikacji dla aplikacji przy pomocy konsoli administracyjnej usługi Intune oraz zasady ochrony aplikacji przy pomocy witryny Azure Portal, pierwszeństwo będą miały zasady utworzone w witrynie Azure Portal. Jednak raportowanie w konsoli usługi Intune lub programu Configuration Manager będzie zgłaszać ustawienia zasad utworzonych w konsoli administracyjnej usługi Intune. Przykład:
 >
 > -   W konsoli administracyjnej usługi Intune utworzono zasady ochrony aplikacji, które blokują kopiowanie danych z aplikacji.
 > -   W konsoli platformy Azure utworzono zasady ochrony aplikacji, które zezwalają na kopiowanie danych z aplikacji.
@@ -216,6 +216,6 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 ## <a name="next-steps"></a>Następne kroki
 [Monitorowanie zgodności i stanu użytkownika](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 * [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-android)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-ios)

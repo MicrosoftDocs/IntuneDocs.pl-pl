@@ -1,25 +1,25 @@
 ---
-title: "Zarządzanie blokadą aktywacji systemu iOS na urządzeniach"
-description: "Usługa Microsoft Intune ułatwia zarządzanie blokadą aktywacji systemu iOS — funkcją aplikacji Znajdź mój iPhone dla urządzeń z systemem iOS 7.1 lub nowszym."
-keywords: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
+title: Zarządzanie blokadą aktywacji systemu iOS na urządzeniach
+description: Usługa Microsoft Intune ułatwia zarządzanie blokadą aktywacji systemu iOS — funkcją aplikacji Znajdź mój iPhone dla urządzeń z systemem iOS 7.1 lub nowszym.
+keywords: ''
+author: dougeby
+ms.author: dougeby
+manager: dougeby
 ms.date: 04/24/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a05c8e6a45c57f5f6f0c90d5fbb48164cde34a1c
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 12363a677bc7d1ffefe224ff0bb10067903132ae
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune"></a>Ochrona urządzeń z systemem iOS przez obejście blokady aktywacji w usłudze Microsoft Intune
 
@@ -34,7 +34,7 @@ Usługa Microsoft Intune ułatwia zarządzanie blokadą aktywacji systemu iOS �
 -   Ponowne uaktywnienie urządzenia
 
 ## <a name="how-activation-lock-affects-you"></a>Wpływ blokady aktywacji na Twoje działania
-Blokada aktywacji pomaga w zabezpieczaniu urządzeń z systemem iOS i zwiększa szanse na odzyskanie urządzenia w razie jego zgubienia lub kradzieży, jednak może ona powodować problemy dla administratora systemu informatycznego. Na przykład:
+Blokada aktywacji pomaga w zabezpieczaniu urządzeń z systemem iOS i zwiększa szanse na odzyskanie urządzenia w razie jego zgubienia lub kradzieży, jednak może ona powodować problemy dla administratora systemu informatycznego. Przykład:
 
 -   Użytkownik konfiguruje blokadę aktywacji na urządzeniu. Następnie użytkownik odchodzi z firmy i zwraca urządzenie. Bez identyfikatora Apple ID i hasła użytkownika nie ma możliwości ponownego uaktywnienia urządzenia.
 
@@ -101,6 +101,6 @@ Aby sprawdzić, które urządzenia korzystają z blokady aktywacji, użyj jednej
     >Usługa Intune pobiera spis urządzeń dla funkcji blokady aktywacji co siedem dni. W związku z tym urządzenia mogą nie być natychmiast wyświetlane ze stanem blokady aktywacji w konsoli usługi Intune.
 
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Wycofywanie urządzeń](retire-devices-from-microsoft-intune-management.md)
 [Łatwiejsza ochrona urządzeń za pomocą funkcji zdalnego blokowania i resetowania kodu dostępu](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)

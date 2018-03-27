@@ -1,25 +1,25 @@
 ---
 title: Zasady konfiguracji aplikacji programu Android for Work
-description: "Zasady konfiguracji aplikacji mobilnych w usłudze Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację programu Android for Work."
-keywords: 
+description: Zasady konfiguracji aplikacji mobilnych w usłudze Intune umożliwiają określanie wartości ustawień, które mogą być wymagane, jeśli użytkownicy uruchamiają aplikację programu Android for Work.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3fd5e2891eb628fe84fae8842791b4ac4e883d21
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 02934e40346be88cb823bcfa80ff9618e86e757b
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurowanie aplikacji programu Android for Work przy użyciu zasad konfiguracji aplikacji mobilnych w usłudze Microsoft Intune
 
@@ -41,7 +41,7 @@ Zasady konfiguracji aplikacji są wdrażane do tych samych użytkowników, do kt
 
 ## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurowanie zasad konfiguracji aplikacji mobilnych
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
+1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Zasady** &gt; **Przegląd** &gt; **Dodaj zasady**.
 
 2.  Na liście zasad rozwiń węzeł **Android for Work**, wybierz pozycję **Zasady konfiguracji aplikacji mobilnych (Android for Work)**, a następnie wybierz pozycję **Utwórz zasady**.
 

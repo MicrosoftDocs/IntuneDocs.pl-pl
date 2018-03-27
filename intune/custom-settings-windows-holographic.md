@@ -1,23 +1,23 @@
 ---
-title: "Ustawienia niestandardowe urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Informacje dotyczące ustawień, których można używać w niestandardowym profilu systemu Holographic for Business."
-keywords: 
+title: Ustawienia niestandardowe urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune
+titlesuffix: ''
+description: Informacje dotyczące ustawień, których można używać w niestandardowym profilu systemu Holographic for Business.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 3/6/2018
 ms.article: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b95d891d1dfaecbce182fde4a2221255a7e1eb06
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d5cdba24c10b90756d9a2b9f08fd7d4dcd727303
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-holographic-for-business"></a>Niestandardowe ustawienia urządzenia w usłudze Microsoft Intune dla urządzeń z systemem Windows Holographic for Business
 
@@ -58,7 +58,7 @@ Następujące ustawienia są przydatne w przypadku urządzeń z systemem Windows
 |[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|String<br>Adres URL — urządzenie sprawdza dostępność aktualizacji na serwerze WSUS pod określonym adresem URL.<br>Nieskonfigurowane — urządzenie sprawdza dostępność aktualizacji w witrynie Microsoft Update.|
 |[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Integer<br>0 — nieskonfigurowane. Urządzenie instaluje wszystkie odpowiednie aktualizacje.<br>1 — urządzenie instaluje tylko aktualizacje, które zarówno można zastosować, jak i znajdują się na liście zatwierdzonych aktualizacji. Ustaw te zasady na wartość 1, jeśli dział IT chce kontrolować wdrożenia aktualizacji na urządzeniach, np. wtedy, gdy przed wdrożeniem jest wymagane testowanie.|
 |[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)|./Vendor/MSFT/Update/ApprovedUpdates<br><br>**Ważne**<br>Musisz przeczytać i zaakceptować zaktualizowane Umowy licencyjne użytkownika oprogramowania (EULA) w imieniu swoich użytkowników końcowych. Niewykonanie tej czynności jest naruszeniem zobowiązań prawnych lub umownych.|Węzeł zatwierdzania aktualizacji i akceptacji Umowy licencyjnej użytkownika oprogramowania (EULA) w imieniu użytkownika końcowego.|
-[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Ważne**<br>W artykule dostawcy usług kryptograficznych funkcji AppLocker są używane przykłady XML. Aby skonfigurować ustawienia przy użyciu profilów niestandardowych w usłudze Intune, należy użyć zwykłego kodu XML.|String<br>Aby uzyskać więcej informacji, zobacz artykuł o [dostawcy usług kryptograficznych funkcji AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp). 
+[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Ważne**<br>W artykule dostawcy usług kryptograficznych funkcji AppLocker są używane przykłady XML. Aby skonfigurować ustawienia przy użyciu profilów niestandardowych w usłudze Intune, należy użyć zwykłego kodu XML.|String<br>Aby uzyskać więcej informacji, zobacz artykuł o [dostawcy usług kryptograficznych funkcji AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
 
 ## <a name="how-to-find-the-policies-you-can-configure"></a>Jak znaleźć zasady, które można skonfigurować
 

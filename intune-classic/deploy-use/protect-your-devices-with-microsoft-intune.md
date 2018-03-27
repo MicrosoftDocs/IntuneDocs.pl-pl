@@ -1,25 +1,25 @@
 ---
-title: "Ochrona danych za pomocą usługi Microsoft Intune"
-description: "Poznaj sposoby, za pomocą których usługa Intune chroni urządzenia przed nieautoryzowanym dostępem i innymi zagrożeniami."
-keywords: 
-author: arob98
+title: Ochrona danych za pomocą usługi Microsoft Intune
+description: Poznaj sposoby, za pomocą których usługa Intune chroni urządzenia przed nieautoryzowanym dostępem i innymi zagrożeniami.
+keywords: ''
+author: dougeby
 ms.author: angrobe
 manager: angrobe
 ms.date: 02/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c866f2a8eebdb2f6c07314b745f65c06e3469e4e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 699d07daa1f16dd7746b531a1687ba97b06973a2
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Ochrona danych za pomocą usługi Microsoft Intune
 
@@ -30,7 +30,7 @@ Usługa Microsoft Intune oferuje pełny zestaw możliwości, aby pomóc w ochron
 ## <a name="general-ways-to-protect-all-devices"></a>Ogólne sposoby ochrony wszystkich urządzeń
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
-[Zasady konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) usługi Intune ułatwiają ochronę i konfigurowanie urządzeń poprzez kontrolowanie wielu ustawień i funkcji. Na przykład:
+[Zasady konfiguracji](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) usługi Intune ułatwiają ochronę i konfigurowanie urządzeń poprzez kontrolowanie wielu ustawień i funkcji. Przykład:
 - Możesz ograniczyć użycie funkcji sprzętu na urządzeniu, takich jak funkcje aparatu lub Bluetooth.
 - Możesz skonfigurować zgodne i niezgodne aplikacje. Otrzymasz alert w przypadku zainstalowania niezgodnej aplikacji (a niektóre platformy mogą faktycznie zablokować instalację).
 
