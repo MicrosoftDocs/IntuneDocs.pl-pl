@@ -1,25 +1,25 @@
 ---
-title: "Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Intune"
-description: "Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie."
-keywords: 
+title: Konfigurowanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Intune
+description: Zasady zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 881180fec0fe4fca8b49106bcae6ea1ecd52c2eb
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 94c6a46d2213ba3d1389b52f7684ec531e40228a
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune
 
@@ -76,7 +76,7 @@ Na przykład, jeśli używana jest aplikacja Outlook:
 
 ## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mam-enabled-app"></a>Krok 1. Uzyskiwanie linku do aplikacji zarządzanej przez zasady, tworzenie opakowanej aplikacji lub używanie zestawu SDK aplikacji usługi Intune do napisania aplikacji objętej zarządzaniem aplikacjami mobilnymi
 
-W sklepie z aplikacjami znajdź i zanotuj adres URL aplikacji zarządzanej przez zasady, którą chcesz wdrożyć. Na przykład adres URL aplikacji Microsoft Word dla urządzenia iPad to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
+W sklepie z aplikacjami znajdź i zanotuj adres URL aplikacji zarządzanej przez zasady, którą chcesz wdrożyć. Na przykład adres URL aplikacji Microsoft Word dla tabletu iPad to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 
 ## <a name="step-2-publish-the-app-to-your-cloud-storage-space"></a>Krok 2. Publikowanie aplikacji w magazynie w chmurze
@@ -128,7 +128,7 @@ Po upewnieniu się, że aplikacja została pomyślnie przekazana, przejdź do kr
     |**Opis**|Opcjonalnie określ opis dla tych zasad.|
     |**Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej**|Jeśli to ustawienie jest włączone, wszystkie linki w aplikacji będą otwierane w zarządzanej przeglądarce. Aby ta opcja działała, aplikacja musi być wdrożona na urządzeniach.|
     |**Nie zezwalaj na kopie zapasowe systemu Android** lub **Nie zezwalaj na kopie zapasowe programu iTunes i usługi iCloud**|To ustawienie wyłącza wykonywanie kopii zapasowych informacji aplikacji.|
-    |**Zezwalaj aplikacji na przesyłanie danych do innych aplikacji**|To ustawienie określa aplikacje, do których ta aplikacja może przesyłać dane. Możesz nie zezwalać na transfer danych do żadnych aplikacji, zezwalać na transfer danych tylko do innych aplikacji zarządzanych lub zezwalać na transfer danych do dowolnych aplikacji. <br /><br />Jeśli na przykład nie zezwalasz na przesyłanie danych, możesz ograniczyć przesyłanie danych do usług, takich jak wiadomości SMS, przypisywanie obrazów do kontaktów oraz publikowanie wpisów w serwisie Facebook lub Twitter.<br /><br />Na urządzeniach z systemem iOS, aby uniemożliwić przesyłanie dokumentów między aplikacjami zarządzanymi i niezarządzanymi, musisz również skonfigurować i wdrożyć zasady zabezpieczeń urządzeń przenośnych, które wyłączają ustawienie **Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**. W przypadku zezwolenia na przesyłanie tylko do innych aplikacji zarządzanych do otwierania zawartości odpowiednich typów będą używane przeglądarki plików PDF i obrazów usługi Intune (jeśli je wdrożono).<br /><br />Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji.<br><br>To ustawienie nie kontroluje użycia funkcji Otwórz za pomocą na urządzeniach przenośnych. Aby zarządzać funkcją Otwórz za pomocą, zobacz [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).|
+    |**Zezwalaj aplikacji na przesyłanie danych do innych aplikacji**|To ustawienie określa aplikacje, do których ta aplikacja może przesyłać dane. Możesz nie zezwalać na transfer danych do żadnych aplikacji, zezwalać na transfer danych tylko do innych aplikacji zarządzanych lub zezwalać na transfer danych do dowolnych aplikacji. <br /><br />Jeśli na przykład nie zezwalasz na transfer danych, możesz ograniczyć transfer danych do usług, takich jak wiadomości SMS, przypisywanie obrazów do kontaktów oraz publikowanie wpisów w serwisie Facebook lub Twitter.<br /><br />Na urządzeniach z systemem iOS, aby uniemożliwić przesyłanie dokumentów między aplikacjami zarządzanymi i niezarządzanymi, musisz również skonfigurować i wdrożyć zasady zabezpieczeń urządzeń przenośnych, które wyłączają ustawienie **Zezwalaj na niezarządzane dokumenty w innych zarządzanych aplikacjach**. W przypadku zezwolenia na przesyłanie tylko do innych aplikacji zarządzanych do otwierania zawartości odpowiednich typów będą używane przeglądarki plików PDF i obrazów usługi Intune (jeśli je wdrożono).<br /><br />Ponadto jeśli ta opcja zostanie ustawiona na wartość **Aplikacje zarządzane przez zasady** lub **Brak**, zostanie zablokowana funkcja systemu iOS 9, która umożliwia narzędziu Spotlight Search wyszukiwanie danych w ramach aplikacji.<br><br>To ustawienie nie kontroluje użycia funkcji Otwórz za pomocą na urządzeniach przenośnych. Aby zarządzać funkcją Otwórz za pomocą, zobacz [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).|
     |**Zezwalaj aplikacji na odbieranie danych z innych aplikacji**|To ustawienie określa aplikacje, z których ta aplikacja może odbierać dane. Możesz nie zezwalać na transfer danych z żadnych aplikacji, zezwalać na transfer danych tylko z innych aplikacji zarządzanych lub zezwalać na przesyłanie danych z dowolnych aplikacji.<br /><br />Gdy użytkownik uzyskuje dostęp do danych z aplikacji, która nie jest zarządzana przez zasady zarządzania aplikacjami mobilnymi, te dane będą traktowane jako dane firmowe i będą chronione przez zasady. Dotyczy to aplikacji dla systemu iOS obsługujących wiele tożsamości (w przypadku których usługa Intune stosuje ustawienia zarządzania tylko do firmowych kont lub danych w aplikacji). Może to też dotyczyć zarejestrowanych urządzeń z zastosowanymi zasadami zarządzania aplikacjami mobilnymi.|
     |**Nie zezwalaj na używanie polecenia „Zapisz jako”**|To ustawienie wyłącza opcję **Zapisz jako** we wszystkich aplikacjach korzystających z tych zasad w celu zapisywania danych w chmurze osobistej (na przykład w usłudze OneDrive lub Dropbox).|
     |**Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach**|To ustawienie określa możliwości korzystania z operacji wycinania, kopiowania i wklejania w ramach aplikacji. Wybierz spośród opcji:<br /><br />**Zablokowane**. Nie zezwalaj na wycinanie, kopiowanie i wklejanie między tą aplikacją i innymi aplikacjami.<br /><br />**Aplikacje zarządzane przez zasady**. Zezwalaj na wycinanie, kopiowanie i wklejanie tylko między tą aplikacją i innymi aplikacjami zarządzanymi.<br /><br />**Aplikacje zarządzane przez zasady z funkcją wklejania**. Zezwalaj na wklejanie wyciętych i skopiowanych danych z tej aplikacji tylko do innych aplikacji zarządzanych. Zezwalaj na wklejanie w tej aplikacji danych wyciętych lub skopiowanych z dowolnych aplikacji.<br /><br />**Dowolna aplikacja**. Nie nakładaj żadnych ograniczeń na operacje wycinania, kopiowania i wklejania dotyczące tej aplikacji.<br /><br />Aby możliwe było wykonywanie operacji kopiowania i wklejania danych między aplikacjami zarządzanymi, obie aplikacje muszą mieć skonfigurowane ustawienie **Aplikacje zarządzane przez zasady** lub **Aplikacje zarządzane przez zasady z funkcją wklejania**.|

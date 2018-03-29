@@ -1,25 +1,25 @@
 ---
-title: "Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji"
-description: "Znajdź nazwę PFN w celu skonfigurowania sieci VPN dla aplikacji."
-keywords: 
+title: Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji
+description: Znajdź nazwę PFN w celu skonfigurowania sieci VPN dla aplikacji.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 10/25/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tycast
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f4b5d71e46fbc78ebadf52e96bb75eedecc291ee
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: de1a5beafae900a21f685cf1daeb2302cbf245b3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn-configuration"></a>Znajdowanie nazwy rodziny pakietów (PFN) w celu konfiguracji sieci VPN dla aplikacji
 
@@ -72,7 +72,7 @@ Oto informacje uzyskane dla programu OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Znajdowanie nazwy PFN, jeśli aplikacja nie jest zainstalowana na komputerze
 
-1.  Przejdź do strony https://www.microsoft.com/store/apps.
+1.  Przejdź do witryny https://www.microsoft.com/store/apps.
 2.  Wprowadź nazwę aplikacji na pasku wyszukiwania. W tym przykładzie wyszukaj aplikację OneNote.
 3.  Wybierz link do aplikacji. Zwróć uwagę, że adres URL zawiera serię liter na końcu. W tym przykładzie adres URL wygląda następująco: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
 4.  Wklej następujący adres URL w innej karcie `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Zastąp ciąg `<app id>` identyfikatorem aplikacji uzyskanym ze strony https://www.microsoft.com/store/apps — serią liter na końcu adresu URL w kroku 3. W tym przykładzie (aplikacja OneNote) należy wkleić ciąg: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.

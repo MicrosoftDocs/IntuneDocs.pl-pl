@@ -1,38 +1,38 @@
 ---
-title: "Tworzenie profilów urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Dodawanie lub konfigurowanie profilu urządzenia w usłudze Microsoft Intune, w tym wybieranie typu platformy i konfigurowanie ustawień w witrynie Azure Portal"
-keywords: 
+title: Tworzenie profilów urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Dodaj lub skonfiguruj profil urządzenia w usłudze Microsoft Intune, w tym wybierz typ platformy i skonfiguruj ustawienia w witrynie Azure Portal.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4e1febb5f12de038d2ddd543be883f71ef79005
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: e5070052c0d4cce3cfd81a7bae259bc7dfb22e7f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz opcję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
 
-2. W obszarze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzeń**, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+2. W obszarze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**. Następnie wybierz opcję **Utwórz profil**.
 
 3. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę nowego profilu
-    - **Opis**: opcjonalny, ale zalecany. Wprowadź opis profilu.
+    - **Nazwa**: wprowadź opisową nazwę nowego profilu.
+    - **Opis:** wprowadź opis profilu. (Jest to opcjonalne, ale zalecane).
     - **Platforma**: wybierz typ platformy:  
 
         - **Android**
@@ -57,11 +57,11 @@ ms.lasthandoff: 03/08/2018
         -  [Ustawienia rozwiązań dla edukacji](education-settings-configure.md)
         -  [Ustawienia niestandardowe](custom-settings-configure.md)
 
-    ![Wprowadzanie ustawień w celu utworzenia profilu urządzenia](./media/create-device-profile.png)
+    ![Zrzut ekranu opcji Utwórz profil](./media/create-device-profile.png)
 
 4. Po zakończeniu wybierz pozycję **Utwórz**.
 
-Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [How to assign device profiles (Jak przypisywać profile urządzeń)](device-profile-assign.md).
+Profil zostanie utworzony i wyświetlony na liście.
 
 
 ## <a name="next-steps"></a>Następne kroki

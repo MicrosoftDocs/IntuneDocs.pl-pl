@@ -1,23 +1,23 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem iOS."
-keywords: 
+title: Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
+titleSuffix: ''
+description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/1/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b0523a514eb9d6a5c0429f1a2e2fa84d1ca00de4
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 436be436991ea4f2f295291fb95122cddf4e7ac5
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -40,7 +40,6 @@ Dotyczy to również ustawień dostępnych z poziomu ustawień takich aplikacji 
 - **Użyj funkcji wymazania całej zawartości i wszystkich ustawień z urządzenia (tylko nadzorowany)** — umożliwia użytkownikowi korzystanie z opcji wymazywania całej zawartości i wszystkich ustawień z urządzenia.
 - **Modyfikacja nazwy urządzenia (tylko nadzorowany)** — umożliwia użytkownikowi zmianę nazwy urządzenia.
 - **Modyfikacja ustawień powiadamiania (tylko nadzorowany)** — umożliwia użytkownikowi zmianę ustawień powiadamiania na urządzeniu.
-- **Modyfikacja tapety (tylko nadzorowany)** — umożliwia użytkownikowi zmianę tapety urządzenia.
 - **Modyfikacja ustawień zaufania dla aplikacji firmy (tylko nadzorowany)** — umożliwia użytkownikowi wybranie zaufania do aplikacji, które nie zostały pobrane ze sklepu z aplikacjami.
 - **Zmiany profilu konfiguracji (tylko nadzorowany)** — umożliwia użytkownikowi instalowanie profilów konfiguracji.
 - **Blokada aktywacji (tylko nadzorowany)** — umożliwia blokadę aktywacji na nadzorowanych urządzeniach z systemem iOS.
@@ -74,7 +73,6 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 - Skróty klawiaturowe 
 - Modyfikacje kodu dostępu 
 - Zmiany nazwy urządzenia 
-- Zmiany tapety 
 - Automatyczne pobieranie aplikacji 
 - Zmiany zaufania aplikacji przedsiębiorstwa 
 - Apple Music 
@@ -170,7 +168,7 @@ Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz
 Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy aplikacji zatwierdzonych lub zabronionych bądź aplikacji działających w trybie kiosku.
 Profile urządzeń zawierające ustawienia aplikacji z ograniczeniami należy przypisać do grup użytkowników.
 
-Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, którego należy użyć, to https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Używany adres URL to https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
@@ -195,7 +193,7 @@ Aby określić adres URL aplikacji na liście aplikacji, użyj następującego f
 Korzystając z wyszukiwarki, znajdź w sklepie iTunes aplikację, której chcesz użyć, i otwórz jej stronę.
 Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy aplikacji zatwierdzonych lub zabronionych bądź aplikacji działających w trybie kiosku.
 
-Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Adres URL, którego należy użyć, to https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Przykład: wyszukaj aplikację Microsoft Word dla tabletu iPad. Używany adres URL to https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.

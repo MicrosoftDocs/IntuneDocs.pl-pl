@@ -1,25 +1,25 @@
 ---
-title: "Systemy operacyjne i przeglądarki obsługiwane przez usługę Microsoft Intune"
-titleSuffix: 
-description: "Podaje listę obsługiwanych platform urządzeń i przeglądarki do zarządzania urządzeniami w usłudze Intune"
-keywords: 
+title: Systemy operacyjne i przeglądarki obsługiwane przez usługę Microsoft Intune
+titleSuffix: ''
+description: Podaje listę obsługiwanych platform urządzeń i przeglądarki do zarządzania urządzeniami w usłudze Intune
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/03/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
-ms.reviewer: angrobe
+ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e58201620612118f0984a1c477b3fa3bc7e923a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 5a8962223bac0ed27b6a52404973f2c30abfc28b
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Obsługiwane systemy operacyjne i przeglądarki
 
@@ -109,7 +109,7 @@ Dla tych portali obsługiwane są następujące przeglądarki:
 
 ### <a name="intune-classic-portal"></a>Klasyczny portal usługi Intune
 
-Tylko klasyczne funkcje usługi Intune, takie jak oprogramowanie klienckie usługi Intune na komputery PC i integracja z partnerami usługi Mobile Threat Defense, są dostępne tylko w klasycznym portalu usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
+Funkcje obecne jedynie w klasycznej wersji usługi Intune, takie jak oprogramowanie klienckie usługi Intune na komputery i integracja z partnerami usługi Mobile Threat Defense, są dostępne tylko w klasycznym portalu usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
 
 Następujące przeglądarki programu Silverlight obsługują konsolę usługi Intune:
 - Internet Explorer 10 lub nowsza wersja

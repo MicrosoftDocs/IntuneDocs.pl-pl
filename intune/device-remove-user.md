@@ -1,31 +1,31 @@
 ---
-title: "Usuwanie użytkownika z urządzenia z systemem iOS przy użyciu usługi Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się, jak usunąć użytkownika ze współdzielonego urządzenia z systemem iOS przy użyciu usługi Intune."
-keywords: 
+title: Usuwanie użytkownika z urządzenia z systemem iOS przy użyciu usługi Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się, jak usunąć użytkownika ze współdzielonego urządzenia z systemem iOS przy użyciu usługi Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2ea5941c-a69b-4e1c-b42c-a1fc0c3a7de7
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce1b6b439c287b67a7c9e776edf136e78e5ecf5b
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 01928439f3a4d9280036b2e1a9576175ef425050
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remove-a-user-from-a-shared-ios-device"></a>Usuwanie użytkownika ze współdzielonego urządzenia z systemem iOS
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akcja **Usuń użytkownika** usuwa wybranego użytkownika z lokalnej pamięci podręcznej na udostępnionym urządzeniu iPad, które zostało skonfigurowane w celu zarządzania aplikacją Classroom systemu iOS przy użyciu [profilu systemu iOS dla instytucji edukacyjnych](education-settings-configure-ios.md). 
+Akcja **Usuń użytkownika** powoduje usunięcie wybranego użytkownika z lokalnej pamięci podręcznej na udostępnionym urządzeniu iPad. Urządzenie iPad należy skonfigurować do zarządzania aplikacją iOS Classroom przy użyciu [profilu Edukacja w systemie iOS](education-settings-configure-ios.md). 
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -35,16 +35,16 @@ Akcja **Usuń użytkownika** usuwa wybranego użytkownika z lokalnej pamięci po
 - macOS — nieobsługiwana
 - Android — nieobsługiwana
 
-## <a name="how-to-remove-a-user"></a>Jak usunąć użytkownika
+## <a name="remove-a-user"></a>Usuwanie użytkownika
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
-3. W bloku **Intune** wybierz opcję **Urządzenia**.
-4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Urządzenia**.
+4. W okienku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS.
-6. W bloku tego urządzenia wybierz pozycję **Użytkownicy**.
+6. W okienku urządzenia wybierz pozycję **Użytkownicy**.
 7. Na liście kliknij prawym przyciskiem myszy użytkownika, którego chcesz usunąć, a następnie wybierz polecenie **Usuń użytkownika**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby wyświetlić stan akcji, w bloku **Urządzenia** wybierz pozycję **Akcje urządzenia**.
+- Aby wyświetlić stan akcji **Usuń użytkownika**, wybierz pozycję **Urządzenia** > **Akcje urządzenia**.

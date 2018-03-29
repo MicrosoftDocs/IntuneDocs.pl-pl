@@ -1,40 +1,40 @@
 ---
-title: "Przypisywanie profili urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Przypisywanie profili urządzeń i zasad do użytkowników i urządzeń przy użyciu witryny Azure Portal oraz wykluczanie grup z przypisania profilu w usłudze Microsoft InTune"
-keywords: 
+title: Przypisywanie profili urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Przypisz zasady i profile urządzeń do użytkowników i urządzeń za pomocą witryny Azure Portal. Dowiedz się, jak wykluczyć grupy z przypisania profilu w usłudze Microsoft Intune.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b09650bc99b1bdf892b60828f0b524467d7b60ac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9840298df981bee6c33d3cb36ec5e4ada46d11bd
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
-Po utworzeniu profilu można przypisać go do grup usługi Azure Active Directory.
+Po utworzeniu profilu można przypisać go do grup usługi Azure Active Directory (Azure AD).
 
 ## <a name="assign-a-device-profile"></a>Przypisywanie profilu urządzenia
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
 2. W obszarze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**.
 3. Na liście profili zaznacz profil, który chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
-4. Wybierz **dołączenie** lub **wykluczenie** grup, a następnie **Wybierz grupy**:  
+4. Wybierz **dołączenie** lub **wykluczenie** grup, a następnie wybierz grupy.  
 
-    ![Dołączanie grup do przypisania profilu i wykluczanie grup z przypisania profilu](./media/group-include-exclude.png)
+    ![Zrzut ekranu przedstawiający opcje dołączania grup do przypisania profilu i wykluczania grup z przypisania profilu](./media/group-include-exclude.png)
 
-5. Wybierane grupy są grupami usługi Azure Active Directory. Możesz nacisnąć i przytrzymać klawisz **CTRL**, aby wybrać wiele grup.
-6. Po zakończeniu **Zapisz** zmiany.
+5. Wybierane grupy są grupami usługi Azure AD. Aby wybrać wiele grup, możesz nacisnąć i przytrzymać klawisz **Ctrl**.
+6. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Wykluczanie grup z przypisania profilu
 
@@ -42,9 +42,7 @@ Profile konfiguracji urządzeń w usłudze Intune umożliwiają wykluczanie grup
 
 Podczas wykluczania grup z przypisania należy uwzględnić tylko grupy użytkowników lub tylko grupy urządzeń (a nie oba rodzaje grup). Usługa Intune nie uwzględnia relacji między użytkownikami a urządzeniami. Dołączanie grup użytkowników przy jednoczesnym wykluczaniu grup urządzeń może nie przynieść oczekiwanych rezultatów. Jeśli są używane mieszane grupy lub występują inne konflikty, operacja dołączania ma pierwszeństwo przed operacją wykluczania.
 
-Możesz na przykład chcieć przypisać profil urządzenia do wszystkich urządzeń w organizacji z wyjątkiem kiosków. Musisz dołączyć grupę **Wszyscy użytkownicy**, ale wykluczyć grupę **Wszystkie urządzenia**.
-
-Zasady zostaną wtedy zastosowane do wszystkich użytkowników i ich urządzeń, nawet jeśli dane urządzenie użytkownika należy do grupy **Wszystkie urządzenia**.
+Możesz na przykład chcieć przypisać profil urządzenia do wszystkich urządzeń w organizacji z wyjątkiem kiosków. Musisz dołączyć grupę **Wszyscy użytkownicy**, ale wykluczyć grupę **Wszystkie urządzenia**. Zasady zostaną wtedy zastosowane do wszystkich użytkowników i ich urządzeń, nawet jeśli dane urządzenie użytkownika należy do grupy **Wszystkie urządzenia**.
 
 Podczas wykluczania są uwzględniani tylko członkowie konkretnych grup. Urządzenia skojarzone z użytkownikami nie są uwzględniane. Jednak urządzenia nieskojarzone z żadnym użytkownikiem nie otrzymają zasad. Dzieje się tak, ponieważ te urządzenia nie mają relacji z grupą **Wszyscy użytkownicy**.
 

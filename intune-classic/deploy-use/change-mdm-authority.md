@@ -1,24 +1,24 @@
 ---
-title: "Zmiana urzędu MDM na program Configuration Manager (rozwiązanie hybrydowe MDM)"
-description: "Dowiedz się, jak zmienić urząd MDM z autonomicznej usługi Intune na program Configuration Manager (rozwiązanie hybrydowe MDM)."
-keywords: 
+title: Zmiana urzędu MDM na program Configuration Manager (rozwiązanie hybrydowe MDM)
+description: Dowiedz się, jak zmienić urząd MDM z autonomicznej usługi Intune na program Configuration Manager (rozwiązanie hybrydowe MDM).
+keywords: ''
 author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 10/04/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1b4bce3-7932-4a0d-aa92-6dacc7060f42
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 64e79da53aec646fc65285e41f86541ecdf6d804
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="change-the-mdm-authority"></a>Zmiana urzędu MDM
 Począwszy od programu Configuration Manager w wersji 1610, można zmienić urząd MDM bez konieczności kontaktowania się z pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Ten temat zawiera instrukcje dotyczące zmiany istniejącego dzierżawcy usługi Microsoft Intune skonfigurowanego w usłudze Intune i zmiany ustawienia urzędu MDM z usługi **Microsoft Intune** (autonomicznej) na program **Configuration Manager** (rozwiązanie hybrydowe) bez konieczności wyrejestrowywania i ponownej rejestracji istniejących zarządzanych urządzeń.

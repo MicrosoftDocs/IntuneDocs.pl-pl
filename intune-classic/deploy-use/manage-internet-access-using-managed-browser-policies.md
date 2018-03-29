@@ -1,25 +1,25 @@
 ---
-title: "Zarządzanie dostępem do sieci Web za pomocą programu Managed Browser"
-description: "Wdróż aplikację Managed Browser, aby ograniczyć przeglądanie sieci Web i transfer danych sieci Web do innych aplikacji."
-keywords: 
+title: Zarządzanie dostępem do sieci Web za pomocą programu Managed Browser
+description: Wdróż aplikację Managed Browser, aby ograniczyć przeglądanie sieci Web i transfer danych sieci Web do innych aplikacji.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 05/10/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a8b928de0bc9dddc35da188ad619b35541027364
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 559866fff63b0ad77a43ce337adede5cd8b27302
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
@@ -31,7 +31,7 @@ Ta aplikacja jest zintegrowana z zestawem SDK usługi Intune, dlatego można do 
 
 >[!IMPORTANT]
 >Aplikacja Managed Browser pobiera i stosuje zasady ochrony aplikacji usługi Intune wyłącznie w przypadku, gdy inna aplikacja na urządzeniu pobierze zasady ochrony aplikacji.<br><br> Ponadto, jeśli użytkownicy instalują program Managed Browser ze sklepu z aplikacjami i nie jest on zarządzany przez usługę Intune, mają zastosowanie następujące zasady:<br /><br />
->**iOS** — program Managed Browser może być używany jako podstawowa przeglądarka sieci Web, ale niektóre funkcje będą niedostępne i nie będzie można uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.<br />
+>**iOS** — program Managed Browser może być używany jako podstawowa przeglądarka internetowa, ale niektóre funkcje będą niedostępne i nie będzie można uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune.<br />
 **Android** — nie można używać programu Managed Browser.<br /><br />
 Jeśli użytkownicy sami zainstalują program Managed Browser na urządzeniu z systemem iOS w wersji wcześniejszej niż iOS 9, przeglądarka nie będzie zarządzana przez żadną z utworzonych przez Ciebie zasad. Aby zapewnić zarządzanie przeglądarką przez usługę Intune, użytkownicy muszą odinstalować aplikację, zanim wdrożysz ją dla nich jako aplikację zarządzaną. W systemie iOS w wersji 9 i nowszych jeśli użytkownicy sami zainstalują program Managed Browser, otrzymają monit o umożliwienie zarządzania tym programem przez zasady.
 

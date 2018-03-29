@@ -1,25 +1,25 @@
 ---
 title: Ustawienia zasad systemu iOS
-description: "Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune."
-keywords: 
+description: Utwórz zasady określające ustawienia i funkcje na urządzeniach z systemem iOS zarządzanych za pomocą usługi Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e9d014eb504098ff4361add7a0f3715f33be9083
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu iOS w usłudze Microsoft Intune
 
@@ -222,10 +222,10 @@ Aby określić adres URL na liście zgodnych i niezgodnych aplikacji lub w opcji
 
 2. Skopiuj adres URL strony i użyj go jako adresu URL do skonfigurowania listy zgodnych lub niezgodnych aplikacji lub aplikacji, która będzie działać w trybie kiosku.
 
-**Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Adres URL, którego użyjesz, to **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
+**Przykład:** Wyszukaj aplikację **Microsoft Word dla tabletu iPad**. Używanym adresem URL będzie **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 > [!NOTE]
-> Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link** , aby uzyskać adres URL aplikacji.
+> Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć polecenia **Kopiuj link**, aby uzyskać adres URL aplikacji.
 
 ### <a name="enrollment-settings"></a>Ustawienia rejestracji
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
@@ -383,5 +383,5 @@ Przed rozpoczęciem trzeba mieć zainstalowany program Apple Configurator i utwo
 |**Plik profilu konfiguracji**|Wybierz pozycję **Importuj**, a następnie przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator. **Uwaga:** upewnij się, że ustawienia wyeksportowane z narzędzia Apple Configurator są zgodne z wersją systemu iOS na urządzeniach, na których są wdrażane niestandardowe zasady systemu iOS. Aby uzyskać informacje o sposobie postępowania w przypadku niezgodnych ustawień, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie sieci Web programu [Apple Developer](https://developer.apple.com/).|
     |**Szczegóły profilu konfiguracji**|Wyświetla kod XML zaimportowanego profilu konfiguracji.|
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

@@ -1,24 +1,24 @@
 ---
-title: "Profile urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Przegląd różnych profilów urządzeń usługi Microsoft Intune, takich jak na przykład funkcje, ograniczenia, poczta e-mail, sieć Wi-Fi, sieć VPN, wiedza, certyfikaty, uaktualnianie systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługa Windows Information Protection i niestandardowe ustawienia konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie."
-keywords: 
+title: Profile urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Przegląd różnych profilów urządzeń usługi Microsoft Intune, takich jak na przykład funkcje, ograniczenia, poczta e-mail, sieć Wi-Fi, sieć VPN, wiedza, certyfikaty, uaktualnianie systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługa Windows Information Protection i niestandardowe ustawienia konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 03/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 79ca6eaf22233dd6d024a28e456e57a8a74d02aa
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e92a10f51fb403c802c1c6d3ea79ccf49a1e93fb
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co to są profile urządzeń w usłudze Microsoft Intune?
 
@@ -99,7 +99,7 @@ Ta funkcja obsługuje systemy:
 - Windows 10
 
 ## <a name="education-profile"></a>Profil edukacji
-Profil [Ustawienia edukacji](education-settings-configure.md) umożliwia konfigurowanie opcji [aplikacji systemu Windows Take a Test.](https://education.microsoft.com/gettrained/win10takeatest). Po skonfigurowaniu tych opcji do czasu ukończenia testu nie można uruchomić na urządzeniu żadnych innych aplikacji.
+Profil [Ustawienia edukacji](education-settings-configure.md) umożliwia konfigurowanie opcji [aplikacji systemu Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). Po skonfigurowaniu tych opcji do czasu ukończenia testu nie można uruchomić na urządzeniu żadnych innych aplikacji.
 
 ## <a name="certificates-profile"></a>Profil Certyfikaty
 Profil [Certyfikaty](certificates-configure.md) umożliwia skonfigurowanie zaufanych certyfikatów oraz certyfikatów SCEP i PKCS, które mogą zostać przypisane do urządzeń i być używane do uwierzytelniania sieci Wi-Fi, sieci VPN oraz profilów poczty e-mail.
@@ -120,6 +120,8 @@ Ta funkcja obsługuje systemy: tylko Windows 10
 ## <a name="endpoint-protection-profile"></a>Profil programu Endpoint Protection
 Profil [Ustawienia programu Endpoint Protection dla systemu Windows 10](endpoint-protection-windows-10.md) umożliwia konfigurowanie ustawień funkcji BitLocker i usługa Windows Defender dla urządzeń z systemem Windows 10.
 
+Aby dołączyć zaawansowaną ochronę przed zagrożeniami w usłudze Windows Defender do usługi Microsoft Intune, zobacz [Configure endpoints using Mobile Device Management (MDM) tools (Konfigurowanie punktów końcowych przy użyciu narzędzi do zarządzania urządzeniami przenośnymi)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-mdm-windows-defender-advanced-threat-protection).
+
 Ta funkcja obsługuje systemy: tylko Windows 10
 
 ## <a name="windows-information-protection-profile"></a>Profil usługi Windows Information Protection
@@ -130,7 +132,7 @@ Ta funkcja obsługuje systemy: tylko Windows 10
 ## <a name="custom-profile"></a>Profil niestandardowy
 Profil [Ustawienia niestandardowe](custom-settings-configure.md) obejmuje możliwość przypisania ustawień urządzenia, które nie są wbudowane w usłudze Intune. Na przykład na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator. 
 
-Ta funkcja obsługuje systemy: 
+Ta funkcja obsługuje systemy:
 
 - Android
 - iOS

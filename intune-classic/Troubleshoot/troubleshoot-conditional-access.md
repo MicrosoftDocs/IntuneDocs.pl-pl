@@ -1,25 +1,25 @@
 ---
-title: "Rozwiązywanie problemów z dostępem warunkowym"
-description: "Co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów za pomocą dostępu warunkowego usługi Intune."
-keywords: 
+title: Rozwiązywanie problemów z dostępem warunkowym
+description: Co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów za pomocą dostępu warunkowego usługi Intune.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 10/24/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5f16e14b32508adf1fc4f3f448f53a7dcad8e137
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 
@@ -118,7 +118,7 @@ Jeśli powyższe procedury nie rozwiążą problemu, pomoc techniczna firmy Micr
 ### <a name="exchange-connector-logs"></a>Dzienniki programu Exchange Connector
 
 #### <a name="general-log-information"></a>Ogólne informacje o dziennikach
-Aby wyświetlić dzienniki programu Exchange Connector, użyj narzędzia do przeglądania danych śledzenia serwera [Server Trace Viewer Tool] (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
+Aby wyświetlić dzienniki programu Exchange Connector, użyj narzędzia [Server Trace Viewer Tool] (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
 
 >[!NOTE]
 >Dzienniki znajdują się w folderze C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Dzienniki są grupowane w serie 30 plików dzienników, od *Connector0.log* do *Connector29.log*. Dzienniki są zmieniane po zebraniu w jednym dzienniku 10 MB danych. Po zapełnieniu pliku Connector29 następuje powrót do pliku Connector0 i zastąpienie starszych plików dzienników.

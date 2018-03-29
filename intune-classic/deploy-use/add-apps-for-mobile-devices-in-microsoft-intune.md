@@ -1,25 +1,25 @@
 ---
-title: "Dodawanie aplikacji dla zarejestrowanych urządzeń"
-description: "Przed wdrożeniem aplikacji należy ją dodać do usługi Intune. Będzie ona wówczas dostępna w konsoli usługi Intune, w której można wdrożyć aplikację i zarządzać nią."
-keywords: 
+title: Dodawanie aplikacji dla zarejestrowanych urządzeń
+description: Przed wdrożeniem aplikacji należy ją dodać do usługi Intune. Będzie ona wówczas dostępna w konsoli usługi Intune, w której można wdrożyć aplikację i zarządzać nią.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 01/11/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c688bf0912ec1150924743a9211a1268427fb13a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9f5fec22a17eef39819b38567793a2f579815e59
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Dodawanie aplikacji dla zarejestrowanych urządzeń do usługi Intune
 

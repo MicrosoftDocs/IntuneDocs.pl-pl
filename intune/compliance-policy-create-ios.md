@@ -1,49 +1,42 @@
 ---
-title: "Tworzenie zasad zgodności urządzeń z systemem iOS w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem iOS w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
-keywords: 
-author: msmimart
-ms.author: mimart
+title: Tworzenie zasad zgodności urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Intune
+description: Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem iOS, aby wprowadzać konto e-mail, sprawdzać urządzenia, w przypadku których wykonano jailbreak, sprawdzać minimalne i maksymalne wersje systemu operacyjnego oraz ustawiać ograniczenia haseł, w tym długość hasła i brak aktywności urządzenia.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
-ms.reviewer: muhosabe
+ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b024c846f9fc79fe214e3e90b094384455f2b086
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: b05eb725adb61ae47a24ca884d0e73ffe0dd269f
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-create-a-device-compliance-policy-for-ios-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem iOS w usłudze Intune
-
+# <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem iOS w usłudze Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności urządzeń w usłudze Intune dla systemu iOS określają reguły i ustawienia, które urządzenia z systemem iOS muszą spełnić, aby zostały uznane za zgodne. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej o wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz temat [Wprowadzenie do zgodności urządzeń](device-compliance-get-started.md).
+Zasady zgodności urządzeń z systemem iOS w usłudze Intune określają reguły i ustawienia, które urządzenia z systemem iOS muszą spełnić, aby zapewnić zgodność. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej o zasadach zgodności i wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
--------------------------------
-
-
 | **Ustawienie zasad** | **System iOS 8.0 lub nowszy** |
 | --- | --- |
-| **Konfiguracja kodu PIN lub hasła** | Skorygowane |   
+| **Konfiguracja kodu PIN lub hasła** | Skorygowane |
 | **Szyfrowanie urządzenia** | Skorygowane (przez ustawienie kodu PIN) |
 | **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Poddane kwarantannie (to nie jest ustawienie)
 | **Profil e-mail** | Poddane kwarantannie |
 |**Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |  
-| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |  
-----------------------------
-
+| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |
+| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |
 
 **Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).
 
@@ -54,11 +47,11 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 ## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Tworzenie zasad zgodności w witrynie Azure Portal
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-1. W okienku **Intune** wybierz pozycję **Zgodność urządzeń**. W obszarze **Zarządzaj** wybierz pozycję **Zasady** i wybierz pozycję **Utwórz zasady**.
-2. Wpisz nazwę, opis i wybierz platformę, której te zasady mają dotyczyć.
-3. Wybierz pozycję **Wymagania zgodności**, aby określić ustawienia **Zabezpieczenia systemu**, **Kondycja urządzenia** i **Właściwości urządzenia**, a gdy wszystko będzie gotowe, wybierz przycisk **OK**.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
+4. Wpisz nazwę i opis oraz wybierz platformę, której te zasady mają dotyczyć.
+5. Wybierz pozycję **Ustawienia**, aby określić ustawienia **E-mail**, **Kondycja urządzenia**, **Właściwości urządzenia** oraz **Zabezpieczenia systemu**. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -78,31 +71,7 @@ Zasady zostały zastosowane do użytkowników.  Urządzenia, którymi posługuj�
 
 <!---## Compliance policy settings--->
 
-## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
-
-### <a name="password"></a>Hasło
-
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: ustaw tę opcję na wartość **Tak**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do swoich urządzeń. Urządzenia z systemem iOS używające haseł są szyfrowane.
-- **Zezwalaj na proste hasła**: ustaw tę opcję na wartość **Tak**, aby zezwolić użytkownikom na tworzenie haseł takich jak **1234** lub **1111**.
-- **Minimalna długość hasła**: określ minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
-- **Wymagany typ hasła:** określ, czy użytkownicy muszą utworzyć hasła **alfanumeryczne** czy też **numeryczne**.
-- **Minimalna liczba zestawów znaków:** jeśli parametr **Wymagany typ hasła** ma wartość **Alfanumeryczne**, ustawienie to określa minimalną liczbę zestawów znaków użytych w haśle. Są cztery zestawy znaków:
-  - Małe litery
-  - Wielkie litery
-  - Symbole
-  - Liczby
-
-Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
-
-W przypadku urządzeń z systemem iOS to ustawienie oznacza liczbę znaków specjalnych (na przykład **!** , **#**, **&amp;**), które muszą znajdować się w haśle.
-
-- **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła:** określ czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło.
-- **Wygaśnięcie hasła (w dniach)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
-- **Pamiętaj historię haseł:** użyj tego ustawienia w połączeniu z ustawieniem **Zapobiegaj ponownemu używaniu poprzednich haseł**, aby uniemożliwić użytkownikowi ponowne używanie wcześniej utworzonych haseł.
-- **Zapobiegaj ponownemu używaniu poprzednich haseł:** jeśli jest zaznaczona opcja **Pamiętaj historię haseł**, określ liczbę uprzednio używanych haseł, które nie mogą być ponownie używane.
-- **Wymagaj hasła, gdy urządzenie powraca ze stanu bezczynności:** tego ustawienia należy używać razem z ustawieniem **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**. Użytkownik otrzyma monit o wprowadzenie hasła w celu uzyskania dostępu do urządzenia, które było nieaktywne przez czas określony w ustawieniu **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**.
-
-### <a name="email-profile"></a>Profil e-mail
+## <a name="email"></a>Poczta e-mail
 
 - **Konto e-mail musi być zarządzane przez usługę Intune:** jeśli ta opcja została ustawiona na **Tak**, urządzenie musi używać profilu poczty e-mail wdrożonego na urządzeniu. Urządzenie jest uznawane za niezgodne w następujących sytuacjach:
   - Profil poczty e-mail jest wdrażany w innej grupie użytkowników niż grupa, której dotyczą zasady zgodności.
@@ -111,14 +80,34 @@ W przypadku urządzeń z systemem iOS to ustawienie oznacza liczbę znaków spec
 
 Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz artykuł [Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune).
 
-## <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
+## <a name="device-health"></a>Device health
 
-- **Nie zezwalaj na zdjęcie zabezpieczeń systemu ani na uzyskanie dostępu do konta root:** w przypadku włączenia tego ustawienia urządzenia ze zdjętymi zabezpieczeniami systemu nie będą zgodne.
+- **Urządzenia ze zdjętymi zabezpieczeniami systemu**: jeśli włączysz to ustawienie, urządzenia, w przypadku których wykonano jailbreak, nie będą uznawane za zgodne.
+- **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożenia urządzenia**: wybierz maksymalny poziom zagrożenia na potrzeby oznaczania urządzenia jako niezgodnego. Jeśli przykładowo ustawisz poziom zagrożenia **Średni**, urządzenia na poziomie średnim, niskim lub zabezpieczonym będą zgodne. Urządzenia o wysokim poziomie zagrożenia będą niezgodne.
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może wybrać opcję uaktualnienia urządzenia, co umożliwi korzystanie z zasobów firmy.
-- **Dozwolona maksymalna wersja systemu operacyjnego:** jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
+- **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Następnie użytkownik zostanie poproszony o kontakt z administratorem IT. Do momentu zmiany reguły, aby dopuścić daną wersję systemu operacyjnego, urządzenie nie będzie mogło uzyskać dostępu do zasobów firmy.
+
+## <a name="system-security"></a>Zabezpieczenia systemu
+
+### <a name="password"></a>Hasło
+
+> [!NOTE]
+> Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony.
+
+- **Wymagaj hasła do odblokowania urządzeń przenośnych**: ustaw tę opcję na wartość **Tak**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do swoich urządzeń. Urządzenia z systemem iOS używające haseł są szyfrowane.
+- **Proste hasła**: ustaw tę opcję na wartość **Tak**, aby zezwolić użytkownikom na tworzenie haseł takich jak **1234** lub **1111**.
+- **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
+- **Wymagany typ hasła**: określ, czy użytkownik musi utworzyć hasło **alfanumeryczne**, czy **liczbowe**.
+- **Liczba znaków innych niż alfanumeryczne w haśle**: określ minimalną liczbę znaków specjalnych (takich jak &, #, % i !), którą musi zawierać hasło.
+
+    Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
+
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
+- **Wygaśnięcie hasła (w dniach)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
+- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 
 <!--- ## Next steps
 

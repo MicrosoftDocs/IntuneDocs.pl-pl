@@ -1,23 +1,23 @@
 ---
-title: "Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS"
-titlesuffix: 
-description: "Dowiedz się, jak konfigurować logowanie jednokrotne w usłudze Microsoft Intune dla urządzeń z systemem iOS."
-keywords: 
+title: Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS
+titlesuffix: ''
+description: Dowiedz się, jak konfigurować logowanie jednokrotne w usłudze Microsoft Intune dla urządzeń z systemem iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/2/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8f19320df9a9728cdd77e608fc0ad219272a731f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS
 
@@ -34,7 +34,7 @@ Aby skorzystać z logowania jednokrotnego dla urządzeń z systemem iOS, koniecz
 
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 4. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
 5. W okienku profilów wybierz pozycję **Utwórz profil**.
@@ -90,7 +90,7 @@ Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adres
 
 Wskazuje aplikacje na urządzeniu użytkownika końcowego, które mogą korzystać z ładunku logowania jednokrotnego.
 
-Tablica `AppIdentifierMatches` musi zawierać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub mogą określać dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego *\. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu (przykład: `com.contoso.*`). Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
+Tablica `AppIdentifierMatches` musi zawierać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub mogą określać dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego \*. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu (przykład: `com.contoso.*`). Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
 
 Pole **Nazwa aplikacji** służy do dodawania przyjaznej nazwy, która ułatwia identyfikowanie identyfikatora pakietu.
 
