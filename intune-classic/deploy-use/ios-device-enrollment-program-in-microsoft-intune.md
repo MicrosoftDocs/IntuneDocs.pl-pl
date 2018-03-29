@@ -1,25 +1,25 @@
 ---
-title: "Zarządzanie programem DEP firmy Apple dla urządzeń z systemem iOS"
-description: "Aby zarządzać urządzeniami firmy Apple, wdróż profil rejestracji służący do bezprzewodowego rejestrowania urządzeń z systemem iOS zakupionych w ramach programu Device Enrollment Program (DEP)."
-keywords: 
+title: Zarządzanie programem DEP firmy Apple dla urządzeń z systemem iOS
+description: Aby zarządzać urządzeniami firmy Apple, wdróż profil rejestracji służący do bezprzewodowego rejestrowania urządzeń z systemem iOS zakupionych w ramach programu Device Enrollment Program (DEP).
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 885e3f0608cd367cb23658c342451a4a56e5474d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: bf47c802291d802ac890aa4ba00cf79d9d2d10f0
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Rejestrowanie firmowych urządzeń z systemem iOS przy użyciu Device Enrollment Program
 
@@ -29,13 +29,14 @@ Usługa Microsoft Intune może wdrożyć profil rejestracji, który będzie bezp
 
 >[!NOTE]
 >Rejestracji DEP nie można używać razem z metodą korzystającą z [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
->Ponadto jeśli użytkownicy zarejestrują swoje urządzenia z systemem iOS za pomocą aplikacji Portal firmy, a następnie numery seryjne tych urządzeń zostaną zaimportowane i przypisane do profilu DEP, urządzenia te zostaną wyrejestrowane z usługi Intune.
+>Dodatkowo jeśli użytkownicy zarejestrują swoje urządzenia z systemem iOS (np. za pomocą aplikacji Portal firmy), a następnie numery seryjne tych urządzeń zostaną zaimportowane i przypisane do profilu DEP, urządzenia te zostaną wyrejestrowane z usługi Intune.
+> Ponadto system macOS obecnie nie obsługuje programu DEP.
 
 ## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-dep-management"></a>Wymagania wstępne dotyczące rejestracji urządzeń z systemem iOS za pośrednictwem funkcji zarządzania w programie DEP firmy Apple
 
 - [Zainstalowany certyfikat APNs](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
-- Organizacja musi dołączyć do programu DEP firmy Apple i pobrać urządzenia za pośrednictwem tego programu. Szczegóły tego procesu są dostępne pod adresem: [https://deploy.apple.com](https://deploy.apple.com). Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu kabla USB.
+- Organizacja musi dołączyć do programu DEP firmy Apple i pobrać urządzenia za pośrednictwem tego programu. Szczegóły tego procesu są dostępne na stronie: [https://deploy.apple.com](https://deploy.apple.com). Zalety programu obejmują funkcje bezobsługowego konfigurowania urządzeń bez konieczności podłączania poszczególnych urządzeń do komputera przy użyciu kabla USB.
 
 - Aby zarejestrować firmowe urządzenia z systemem iOS w programie DEP, należy uzyskać token programu DEP od firmy Apple. Token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń uczestniczących w programie DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 

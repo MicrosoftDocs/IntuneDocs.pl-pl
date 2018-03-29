@@ -1,30 +1,30 @@
 ---
-title: "Synchronizacja urządzeń w usłudze Microsoft Intune — Azure | Micrososft Docs"
-description: "Synchronizowanie urządzeń zarejestrowanych lub zarządzanych w usłudze Microsoft Intune w celu pobrania najnowszych zasad i akcji. Obejmuje kroki synchronizowania przy użyciu witryny Azure Portal i zawiera listę kodów błędów z możliwością ponowienia próby."
-keywords: 
+title: Synchronizacja urządzeń w usłudze Microsoft Intune — Azure | Micrososft Docs
+description: Synchronizuj urządzenia zarejestrowane lub zarządzane w usłudze Microsoft Intune w celu pobierania najnowszych zasad i akcji. Obejmuje kroki synchronizowania przy użyciu witryny Azure Portal i zawiera listę kodów błędów z możliwością ponowienia próby.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d2d13ce2ed06549a6cd09fd766a0072b15fcd067
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 7af71a2d5c3ad871e69424cf6afbf7c364bb888d
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="sync-devices-to-get-the-latest-policies-and-actions---intune"></a>Synchronizacja urządzeń w celu pobrania najnowszych zasad i akcji — usługa Intune
+# <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizacja urządzeń w celu pobierania najnowszych zasad i akcji przy użyciu usługi Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zameldowanie się wybranego urządzenia w usłudze Intune. Zameldowane urządzenie natychmiast odbiera wszelkie przypisane do niego oczekujące akcje lub zasady. Ta funkcja ułatwia natychmiastowe weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zameldowanie.
+Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie wybranego urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane do niego oczekujące akcje lub zasady. Ta funkcja ułatwia natychmiastowe weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zameldowanie.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -36,16 +36,16 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zameldowanie się wy
 
 ## <a name="sync-a-device"></a>Synchronizowanie urządzenia
 
-1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com).
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**. 
-3. W obszarze **Intune** wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-4. Z listy zarządzanych przez Ciebie urządzeń wybierz urządzenie, wybierz pozycję **...Więcej**, a następnie wybierz akcję **Synchronizuj**.
-5. Kliknij przycisk **Tak**, aby potwierdzić.
+3. W usłudze **Intune** wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
+4. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **Więcej**, a następnie wybierz opcję **Synchronizuj**.
+5. Wybierz pozycję **Tak**, aby potwierdzić.
 
 
 ## <a name="retryable-error-codes"></a>Kody błędów z możliwością ponowienia próby
 
-Gdy administrator uruchamia akcję **Synchronizuj** urządzenia, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem i które wywołały kod błędu z możliwością ponowienia próby, będą nadal dostępne dla urządzenia. Jednak w przypadku aplikacji, które wywołały kod błędu bez możliwości ponowienia próby, udostępnienie ich dla urządzenia nastąpi dopiero po 7 dniach.
+Gdy administrator uruchomi akcję urządzenia **Synchronizuj**, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem i które zwróciły kod błędu z możliwością ponowienia próby, będą nadal dostępne dla urządzenia. Jednak w przypadku aplikacji, które zwróciły kod błędu bez możliwości ponowienia próby, należy poczekać siedem dni, zanim staną się dostępne dla urządzenia.
 
 
 | Kod błędu  | Sugerowany opis | Z możliwością ponowienia próby |
@@ -62,6 +62,6 @@ Gdy administrator uruchamia akcję **Synchronizuj** urządzenia, aplikacje syste
 | 2016330889 | Nawiązanie bezpiecznego połączenia nie powiodło się. Zresetuj połączenie. | Tak|
 | 2016330888 | Ocena relacji zaufania serwera nie powiodła się. | Nie|
 
-## <a name="next-step"></a>Następny krok
+## <a name="next-steps"></a>Następne kroki
 
-Wybierz pozycję **Akcje urządzeń**, aby zobaczyć stan akcji synchronizacji. 
+- Aby zobaczyć stan akcji synchronizacji, wybierz pozycję **Akcje urządzenia**. 

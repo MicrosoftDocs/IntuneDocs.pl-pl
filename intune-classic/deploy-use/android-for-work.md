@@ -1,22 +1,22 @@
 ---
 title: Informacje o programie Android for Work
-description: "Zarządzany przez usługę Intune program Android for Work udostępnia dodatkowe funkcje zarządzania i ochrony prywatności, które ułatwiają użytkownikom korzystanie z urządzeń z systemem Android w celach służbowych."
-keywords: 
+description: Zarządzany przez usługę Intune program Android for Work udostępnia dodatkowe funkcje zarządzania i ochrony prywatności, które ułatwiają użytkownikom korzystanie z urządzeń z systemem Android w celach służbowych.
+keywords: ''
 author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 03/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: d7939a20e9729487ce5824ba3f67cd84ec970032
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: b6dd287bfd610d5c35f0bfeadb5fcaeae6dddf3c
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-android-for-work-devices-with-intune"></a>Zarządzanie urządzeniami z programem Android for Work za pomocą usługi Intune
 
@@ -58,7 +58,7 @@ Jeśli na urządzeniach z programem Android for Work korzystasz z dostępu warun
 
 ## <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbowym i w profilu osobistym. Aplikacje biznesowe można opublikować przy użyciu konsoli publikowania aplikacji systemu Android, dostępnej pod adresem https://play.google.com/apps/publish. Konsola ta pozwala określić aplikacje jako prywatne w obrębie organizacji. Dowiedz się więcej o [ustawieniach zasad zgodności programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Aby uzyskać ogólne informacje o zasadach ochrony aplikacji, zobacz [zasady aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbowym i w profilu osobistym. Aplikacje biznesowe można opublikować przy użyciu konsoli publikowania aplikacji systemu Android dostępnej pod adresem https://play.google.com/apps/publish. Konsola ta pozwala określić aplikacje jako prywatne w obrębie organizacji. Dowiedz się więcej o [ustawieniach zasad zgodności programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Aby uzyskać ogólne informacje o zasadach ochrony aplikacji, zobacz [zasady aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 ## <a name="vpn-profiles"></a>profile sieci VPN,
 

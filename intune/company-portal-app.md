@@ -1,25 +1,25 @@
 ---
 title: Konfigurowanie aplikacji Portal firmy
 titleSuffix: Microsoft Intune
-description: "Informacje dotyczące zastosowania znakowania firmowego do aplikacji Portal firmy usługi Intune."
-keywords: 
+description: Informacje dotyczące zastosowania znakowania firmowego do aplikacji Portal firmy usługi Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd876739fb0f3ad6d2e0fea705825a26ebc9fe03
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 186f6c1749d94a995ad145ca535bb59c6f02875c
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -41,7 +41,7 @@ Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i
 |**Nazwa firmy**|40|Ta nazwa jest wyświetlana jako tytuł portalu firmy.|        
 |**Imię i nazwisko osoby do kontaktu w dziale IT**|40|Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**.|      
 |**Numer telefonu działu IT**|20|Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**.|        
-|Adres e-mail działu IT|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@domainname.com**.|     
+|**Adres e-mail działu IT**|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@domainname.com**.|     
 |**Dodatkowe informacje**|120|Wyświetlane na stronie **Kontakt z działem IT**.|      
 |**Adres URL zasad zachowania poufności informacji firmy**|79|Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Należy wprowadzić prawidłowy adres URL w formacie **https://www.contoso.com**.|        
 

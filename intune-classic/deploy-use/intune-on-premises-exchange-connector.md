@@ -1,25 +1,25 @@
 ---
 title: Program Exchange Connector dla lokalnego programu EAS
-description: "Użyj narzędzia Connector, aby umożliwić komunikację między konsolą administracyjną usługi Intune a lokalnym serwerem Exchange na potrzeby funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync."
-keywords: 
+description: Użyj narzędzia Connector, aby umożliwić komunikację między konsolą administracyjną usługi Intune a lokalnym serwerem Exchange na potrzeby funkcji zarządzania urządzeniami przenośnymi programu Exchange ActiveSync.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cb627843879a784eb4f597839058f54f9744542f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 96d61ccae4e70a3e99da70a0ef19218ddbd218f3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="install-the-intune-on-premises-exchange-connector"></a>Instalowanie programu Intune On-premises Exchange Connector
 
@@ -62,7 +62,7 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Pobieranie pakietu instalacyjnego programu On-premises Exchange Connector
 
-1. W obsługiwanym systemie operacyjnym Windows Server dla programu On-Premises Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](https://manage.microsoft.com) (https://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange i ma licencję na korzystanie z programu Exchange Server.
+1. W obsługiwanym systemie operacyjnym Windows Server dla programu On-premises Exchange Connector otwórz [konsolę administracyjną Microsoft Intune](https://manage.microsoft.com) (https://manage.microsoft.com) przy użyciu konta użytkownika, który jest administratorem dzierżawy programu Exchange i ma licencję na korzystanie z serwera Exchange Server.
 ![Otwórz konfigurację połączenia z programem Exchange.](../media/ExchangeConnector.gif)
 
 2.  W okienku skrótów obszaru roboczego wybierz pozycje **Administracja**>**Zarządzanie urządzeniami przenośnymi** > **Microsoft Exchange**>**Skonfiguruj połączenie programu Exchange**.

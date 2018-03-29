@@ -1,25 +1,25 @@
 ---
-title: "Bezpośrednia rejestracja urządzeń z systemem iOS"
-description: "Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrować firmowe urządzenia z systemem iOS za pomocą wstępnie zdefiniowanych zasad poprzez połączenie USB z komputerem Mac."
-keywords: 
+title: Bezpośrednia rejestracja urządzeń z systemem iOS
+description: Użyj narzędzia Apple Configurator, aby bezpośrednio zarejestrować firmowe urządzenia z systemem iOS za pomocą wstępnie zdefiniowanych zasad poprzez połączenie USB z komputerem Mac.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 01/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: db07c6c6aa98d880bcc9f32204dffddebe6f45b4
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 79f720af293b6062e140fac9341f97a55bf598fe
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
@@ -88,6 +88,6 @@ W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zare
 
     6.  Wyświetlenie okna dialogowego **Profil został zainstalowany** oznacza, że profil został **zainstalowany**. Wybierz pozycję **Gotowe**.
 
-9.  Na urządzeniu z systemem iOS otwórz pozycję **Ustawienia** i przejdź do pozycji **Ogólne** &gt; **Zarządzanie urządzeniem** &gt; **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
+9.  Na urządzeniu z systemem iOS otwórz obszar **Ustawienia** i wybierz pozycję **Ogólne** &gt; **Zarządzanie urządzeniem** &gt; **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
 
 10.  Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.

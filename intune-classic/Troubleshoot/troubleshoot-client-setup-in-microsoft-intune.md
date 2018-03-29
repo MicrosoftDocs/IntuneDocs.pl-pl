@@ -1,25 +1,25 @@
 ---
-title: "Rozwiązywanie problemów z konfigurowaniem klientów"
-description: "Rozwiązywanie typowych problemów z instalacją klientów."
-keywords: 
+title: Rozwiązywanie problemów z konfigurowaniem klientów
+description: Rozwiązywanie typowych problemów z instalacją klientów.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 02/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5c9ac6ecc75c25f910a8aecd1632c947c95b26d6
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: f9cb68fcac7abc895f51cf2c8758c2cf59b32759
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-client-setup-in-microsoft-intune"></a>Rozwiązywanie problemów z instalacją klientów w usłudze Microsoft Intune
 
@@ -29,7 +29,7 @@ Skorzystaj z następujących informacji, aby rozwiązać typowe problemy z insta
 
 ## <a name="client-installation-fails"></a>Instalacja klienta kończy się niepowodzeniem
 
--   Jeśli w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) nie są wyświetlane dla komputera żadne alerty dotyczące wdrażania oprogramowania klienckiego, sprawdź łączność komputera z Internetem oraz konfigurację serwera i upewnij się, że komputer może komunikować się z adresem URL usługi: [https://manage.microsoft.com](https://manage.microsoft.com/). Następnie ponów próbę instalacji oprogramowania klienckiego.
+-   Jeśli w [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) nie są wyświetlane dla komputera żadne alerty dotyczące wdrażania oprogramowania klienckiego, sprawdź łączność komputera z Internetem oraz konfigurację serwera proxy i upewnij się, że komputer może komunikować się z adresem URL usługi: [https://manage.microsoft.com](https://manage.microsoft.com/). Następnie ponów próbę instalacji oprogramowania klienckiego.
 
 -   Możesz ustawić wysyłanie wiadomości e-mail do wybranych adresatów, gdy występuje alert o niepowodzeniu wdrażania oprogramowania klienckiego, konfigurując regułę powiadomień w obszarze roboczym **Administrator** . Aby uzyskać więcej informacji, zobacz [Otrzymywanie powiadomień dzięki alertom w usłudze Microsoft Intune](/intune-classic/deploy-use/get-notified-by-alerts).
 
