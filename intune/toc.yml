@@ -357,6 +357,13 @@
               href: device-restrictions-windows-holographic.md
             - name: Program Android for Work
               href: device-restrictions-android-for-work.md
+        - name: Konfigurowanie ochrony punktu końcowego
+          href: endpoint-protection-configure.md
+          items:
+            - name: macOS
+              href: endpoint-protection-macos.md
+            - name: Windows 10
+              href: endpoint-protection-windows-10.md
         - name: Konfigurowanie ustawień poczty e-mail
           href: email-settings-configure.md
           items:
@@ -398,8 +405,6 @@
               href: wi-fi-settings-import-windows-8-1.md
         - name: Konfigurowanie ustawień uaktualniania systemu Windows 10
           href: edition-upgrade-configure-windows-10.md
-        - name: Ochrona punktu końcowego w systemie Windows 10
-          href: endpoint-protection-windows-10.md
         - name: Konfigurowanie ustawień edukacyjnych dla urządzeń z systemem Windows 10
           href: education-settings-configure.md
         - name: Konfigurowanie ustawień usług edukacyjnych dla urządzeń z systemem iOS
