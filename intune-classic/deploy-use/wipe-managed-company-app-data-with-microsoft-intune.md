@@ -1,29 +1,29 @@
 ---
-title: "Czyszczenie danych zarządzanych aplikacji firmowych"
-description: "Dowiedz się, jak można selektywnie zdalnie usunąć dane firmy z urządzeń."
-keywords: 
+title: Czyszczenie danych zarządzanych aplikacji firmowych
+description: Dowiedz się, jak można selektywnie zdalnie usunąć dane firmy z urządzeń.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/25/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d7f89d79edcc52892e2988e4b2f152cb68d80070
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 8d946b551118441b737335f6bd8c4603a49e0dd2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wipe-company-app-data-with-intune-mam"></a>Czyszczenie danych aplikacji firmowych za pomocą funkcji MAM usługi Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W przypadku utraty lub kradzieży urządzenia lub jeśli pracownik odchodzi z firmy dane aplikacji firmowych powinny zostać usunięte z urządzenia. Jednak możesz nie chcieć usuwać osobistych danych znajdujących się na urządzeniu, zwłaszcza jeśli jest to urządzenie należące do pracownika.
 
@@ -89,7 +89,7 @@ Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usuni
 4.  Zostanie wyświetlony monit o potwierdzenie usunięcia. Wybierz przycisk **Tak** lub **Nie**, następnie kliknij przycisk **OK**.
 
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Ochrona danych aplikacji przy użyciu zasad zarządzania aplikacjami mobilnymi](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Korzystanie z witryny Azure Portal](azure-portal-for-microsoft-intune-mam-policies.md)

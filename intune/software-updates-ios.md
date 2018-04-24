@@ -11,11 +11,11 @@ ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 39432d09bea822c25ca9e11181a11a1e2298dfef
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 58727a501d6a8ec14e964094eac9fcd6eb3868da
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Microsoft Intune
 
@@ -55,3 +55,4 @@ Zasady zostały zastosowane do użytkowników lub urządzeń. Urządzenia, któr
 ## <a name="monitor-ios-device-installation-failures"></a>Monitorowanie niepowodzeń instalacji na urządzeniach z systemem iOS
 <!-- 1352223 -->
 Raport **Niepowodzenia instalacji na urządzeniach z systemem iOS** jest dostępny z poziomu okienka **Aktualizacje oprogramowania**. W raporcie można przejrzeć listę nadzorowanych urządzeń z systemem iOS, których dotyczyły zasady aktualizacji systemu iOS, które podjęły próbę przeprowadzenia aktualizacji oraz których nie można było zaktualizować. Dla każdego urządzenia można wyświetlić stan z informacją, dlaczego urządzenie nie zostało zaktualizowane automatycznie. Aktualne urządzenia w dobrej kondycji nie będą wyświetlane na liście. „Aktualne” oznacza urządzenie korzystające z najnowszej aktualizacji, którą obsługuje.
+

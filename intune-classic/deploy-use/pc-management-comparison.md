@@ -1,28 +1,28 @@
 ---
-title: "Porównanie opcji zarządzania komputerem z systemem Windows"
-description: "Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator"
-keywords: 
+title: Porównanie opcji zarządzania komputerem z systemem Windows
+description: Rejestrowanie urządzeń firmowych z systemem iOS przy użyciu programu Apple Device Enrollment Program (DEP) lub narzędzia Apple Configurator
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 10/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8f6de91724db10ef64e2c1fd6eee6101c6eac79a
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: c760f9c76e54c0b5f9eb037414870ab1c8943803
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Organizacje mogą użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo jako urządzeniami mobilnymi z wykorzystaniem zarządzania urządzeniami mobilnymi (MDM), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune.  Firma Microsoft zaleca, aby klienci używali rozwiązania MDM do zarządzania zawsze, gdy jest to możliwe. Aby lepiej zrozumieć różnice między tymi dwiema opcjami zarządzania, zapoznaj się z poniższą tabelą.
 

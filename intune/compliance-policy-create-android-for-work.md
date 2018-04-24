@@ -1,30 +1,30 @@
 ---
-title: "Tworzenie zasad zgodności programu Android for Work"
+title: Tworzenie zasad zgodności programu Android for Work
 titleSuffix: Microsoft Intune
-description: "Utwórz zasady zgodności urządzeń w usłudze Intune dla urządzeń z programem Android for Work w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
-keywords: 
+description: Utwórz zasady zgodności urządzeń w usłudze Intune dla urządzeń z programem Android for Work w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ca31d4c83ccc6b786933080b96f66953cf1a108
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 00fa4508cdd4e74a20205ce46025b414cc0bb4cf
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Tworzenie zasad zgodności dla urządzeń z programem Android for Work w usłudze Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zasady zgodności urządzeń w usłudze Intune dla programu Android for Work określają reguły i ustawienia, które urządzenia z programem Android for Work muszą spełnić, aby zostały uznane za zgodne. Tych zasad można używać z dostępem warunkowym, aby zezwalać na dostęp do zasobów firmy lub go blokować. Można także uzyskiwać raporty urządzeń i podejmować działania w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej o zasadach zgodności i wymaganiach wstępnych, które należy spełnić przed utworzeniem zasad zgodności, zobacz artykuł [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 

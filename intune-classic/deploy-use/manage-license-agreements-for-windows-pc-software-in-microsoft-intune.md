@@ -14,15 +14,15 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 73fa5866efe10006a8a3d7de38ec4c552d0df06e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: f1d4eb8ea128ba453e555836289fb7d1ce8b34c4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Microsoft Intune umożliwia dodawanie informacji o umowach licencyjnych i zarządzanie umowami licencyjnymi dotyczącymi oprogramowania zakupionego w ramach umów licencjonowania zbiorowego firmy Microsoft. Można to również robić dla oprogramowania firmy Microsoft i innych firm, które zostało zakupione w inny sposób. Możesz również organizować te informacje w logiczne grupy.
 
@@ -174,10 +174,12 @@ Zostanie wyświetlony widok listy **Wszystkie umowy** .
 ## <a name="manage-license-agreements"></a>Zarządzanie umowami licencyjnymi
 Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. Możesz użyć grup licencji do organizowania umów licencyjnych w logiczne jednostki odpowiednie dla Twojej organizacji. Ponadto możesz usunąć wcześniej utworzone umowy licencyjne.
 
-|||
-|-|-|
-|Zadanie|Szczegóły|
-|Tworzenie grupy licencji|Na stronie **Przegląd** w obszarze roboczym **Licencje** wybierz polecenie **Utwórz grupę licencji** z menu **Zadania**. **Uwaga:** możesz utworzyć maksymalnie 500 grup licencji.|
-|Zmienianie nazwy grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Edytuj grupę licencji** w menu **Zadania** .|
-|Usuwanie grupy licencji|W obszarze roboczym **Licencje** wybierz grupę licencji, a następnie wybierz polecenie **Usuń grupę licencji** w menu **Zadania** . **Porada:** wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji **Nieprzypisane umowy**.|
-|Usuwanie umowy licencyjnej|W obszarze roboczym **Licencje** wybierz umowę, a następnie wybierz polecenie **Usuń**. **Wskazówka:** aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie **Odśwież teraz** na stronie **Omówienie licencji** lub na karcie **Ogólne** dla konkretnej grupy licencji.|
+
+|                            |                                                                                                                                                                                                                                                                                                                                                                          |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            Zadanie            |                                                                                                                                                                                 Szczegóły                                                                                                                                                                                  |
+|   Tworzenie grupy licencji   |                                                            Na stronie <strong>Przegląd</strong> w obszarze roboczym <strong>Licencje</strong> wybierz polecenie <strong>Utwórz grupę licencji</strong> z menu <strong>Zadania</strong>. <strong>Uwaga:</strong> możesz utworzyć maksymalnie 500 grup licencji.                                                             |
+|   Zmienianie nazwy grupy licencji   |                                                                                                      W obszarze roboczym <strong>Licencje</strong> wybierz grupę licencji, a następnie wybierz polecenie <strong>Edytuj grupę licencji</strong> w menu <strong>Zadania</strong> .                                                                                                       |
+|   Usuwanie grupy licencji   |                                 W obszarze roboczym <strong>Licencje</strong> wybierz grupę licencji, a następnie wybierz polecenie <strong>Usuń grupę licencji</strong> w menu <strong>Zadania</strong> . <strong>Porada:</strong> wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji <strong>Nieprzypisane umowy</strong>.                                 |
+| Usuwanie umowy licencyjnej | W obszarze roboczym <strong>Licencje</strong> wybierz umowę, a następnie wybierz polecenie <strong>Usuń</strong>. <strong>Wskazówka:</strong> aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie <strong>Odśwież teraz</strong> na stronie <strong>Omówienie licencji</strong> lub na karcie <strong>Ogólne</strong> dla konkretnej grupy licencji. |
+

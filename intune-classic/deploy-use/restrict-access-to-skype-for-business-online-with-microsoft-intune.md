@@ -1,29 +1,29 @@
 ---
-title: "Ochrona dostępu do usługi Skype dla firm Online"
-description: "Ochrona i kontrola dostępu do usługi Skype dla firm Online przy użyciu dostępu warunkowego."
-keywords: 
+title: Ochrona dostępu do usługi Skype dla firm Online
+description: Ochrona i kontrola dostępu do usługi Skype dla firm Online przy użyciu dostępu warunkowego.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 30d1abb3e7411cae73a98be51489cffdfc738e7f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: d9d912cc0a2d8f815e046d888fc8878a8703c514
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Ochrona dostępu do usługi Skype dla firm Online przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Możesz użyć zasad dostępu warunkowego dla usługi **Skype dla firm Online** w celu kontroli dostępu do usługi Skype dla firm Online.
 Dostęp warunkowy ma dwa składniki:
@@ -87,23 +87,23 @@ Gdy wszystko będzie gotowe, przejdź do **kroku 3**.
 ### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Krok 3. Konfigurowanie zasad usługi Skype dla firm Online
 Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miały dostęp do usługi Skype dla firm Online. Te zasady będą przechowywane w usłudze Azure Active Directory.
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Zasady** > **Dostęp warunkowy** > **Skype dla firm Online — zasady**.
+1. W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Zasady** > **Dostęp warunkowy** > **Skype dla firm Online — zasady**.
 
-  ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Skype dla firm Online](./media/conditional_access_SFBPolicy.png)
+   ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Skype dla firm Online](./media/conditional_access_SFBPolicy.png)
 
-2.  Wybierz pozycję **Włącz zasady dostępu warunkowego**.
+2. Wybierz pozycję **Włącz zasady dostępu warunkowego**.
 
-3.  W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
+3. W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
 
-    -   **iOS**
+   -   **iOS**
 
-    -   **Android**
+   -   **Android**
 
-4.  W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, do których zostaną zastosowane zasady. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
+4. W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, do których zostaną zastosowane zasady. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
 
-5.  W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
+5. W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
 
-6.  Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
+6. Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
 
 Dostęp warunkowy dla usługi Skype dla firm Online został skonfigurowany. Nie musisz wdrażać zasad dostępu warunkowego, ponieważ zostają one natychmiast zastosowane.
 

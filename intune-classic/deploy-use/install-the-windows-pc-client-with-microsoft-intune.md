@@ -1,27 +1,27 @@
 ---
 title: Instalowanie oprogramowania klienckiego komputera
-description: "Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune."
-keywords: 
+description: Ten przewodnik ułatwia skonfigurowanie komputerów z systemem Windows jako zarządzanych przez oprogramowanie klienckie usługi Microsoft Intune.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 ms.date: 07/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9316f78155b38f74765a353186a29dc90afce547
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 56ae374f5b930c55fbe12305f4246c52e6213a20
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Komputery z systemem Windows można zarejestrować, instalując oprogramowanie klienckie usługi Intune. Oprogramowanie klienckie usługi Intune można zainstalować na następujące sposoby:
 
@@ -39,13 +39,13 @@ Jedna licencja usługi Intune umożliwia zainstalowanie oprogramowania klienckie
 
 Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie instalują oprogramowanie klienckie usługi Intune, wymagają, aby administratorzy IT pobrali oprogramowanie, które następnie zostanie wdrożone u użytkowników końcowych.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt;  **Pobieranie oprogramowania klienckiego**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt;  **Pobieranie oprogramowania klienckiego**.
 
-  ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
+   ![Pobieranie klienta komputerowego usługi Intune](../media/pc-sa-client-download.png)
 
 2. Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
 
-  Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
+   Pakiet instalacyjny oprogramowania klienckiego usługi Intune zawiera unikatowe i specyficzne informacje dotyczące Twojego konta, które są dostępne za pośrednictwem osadzonego certyfikatu. Jeśli nieautoryzowani użytkownicy uzyskają dostęp do pakietu instalacyjnego, mogą zarejestrować komputery na koncie reprezentowanym przez osadzony certyfikat tego pakietu i mogą uzyskać dostęp do zasobów firmy.
 
 3. Wyodrębnij zawartość pakietu instalacyjnego w bezpiecznej lokalizacji w sieci.
 

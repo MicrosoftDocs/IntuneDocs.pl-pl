@@ -1,29 +1,29 @@
 ---
-title: "Dodawanie identyfikatorów firmy do usługi Intune"
+title: Dodawanie identyfikatorów firmy do usługi Intune
 titlesuffix: Microsoft Intune
-description: "Informacje dotyczące dodawania identyfikatorów urządzeń firmowych (metody rejestracji, numerów IMEI i numerów seryjnych) do usługi Microsoft Intune."
-keywords: 
+description: Informacje dotyczące dodawania identyfikatorów urządzeń firmowych (metody rejestracji, numerów IMEI i numerów seryjnych) do usługi Microsoft Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d014ae02f3db2ea9175e74f2a867bd12f1d4f22
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d9557c5f962390a9893109bc6f5175b1e709f7cd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako administrator usługi Intune możesz określić urządzenia jako należące do firmy, aby doprecyzować zarządzanie i identyfikację. Usługa Intune może wykonywać dodatkowe zadania zarządzania i zbierać dodatkowe informacje, takie jak pełny numer telefonu i spis aplikacji z urządzeń należących do firmy. Można również ustawić ograniczenia urządzenia, aby zablokować rejestrację przez urządzenia, które nie należą do firmy.
 
@@ -72,7 +72,7 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 1. W obszarze usługi [Intune w witrynie Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**, a następnie kliknij przycisk **Dodaj**.
 
- ![Obszar roboczy identyfikatorów urządzeń firmowych z wyróżnionym przyciskiem Dodaj](./media/add-corp-id.png)
+   ![Obszar roboczy identyfikatorów urządzeń firmowych z wyróżnionym przyciskiem Dodaj](./media/add-corp-id.png)
 
 2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**. Możesz określić, czy poprzednio zaimportowane numery powinny **zastąpić szczegóły istniejących identyfikatorów**.
 
@@ -97,7 +97,7 @@ We właściwościach urządzeń jest wyświetlana **Własność** dla rekordów 
 
 **Aby zmienić własność urządzeń:**
 1. W usłudze [Intune w witrynie Azure Portal](https://portal.azure.com) przejdź do pozycji **Urządzenia** i wybierz urządzenie.
-3. Wybierz pozycję **Właściwości**.
-4. Określ **Własność urządzeń** jako **Osobiste** lub **Firmowe**.
+2. Wybierz pozycję **Właściwości**.
+3. Określ **Własność urządzeń** jako **Osobiste** lub **Firmowe**.
 
-  ![Właściwości urządzenia z opcjami Kategoria urządzenia i Własność urządzeń](./media/device-properties.png)
+   ![Właściwości urządzenia z opcjami Kategoria urządzenia i Własność urządzeń](./media/device-properties.png)

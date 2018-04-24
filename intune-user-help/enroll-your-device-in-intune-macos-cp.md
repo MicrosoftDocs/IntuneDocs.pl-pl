@@ -1,27 +1,27 @@
 ---
-title: "Rejestrowanie urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy | Microsoft Docs"
-description: "Opis sposobu rejestrowania urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy"
+title: Rejestrowanie urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy | Microsoft Docs
+description: Opis sposobu rejestrowania urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy
 keywords: Mac OS X, macOS, OS X
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 04/11/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4f01a5aa9567ea914da2c36756e8c3f12f55c58d
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: e3990c0670516de907ac048b844152014db5be57
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
@@ -30,11 +30,12 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykony
 > [!NOTE]
 > Instrukcje dotyczące rejestrowania urządzeń z systemem macOS dla wcześniejszych wersji systemu macOS można znaleźć [tutaj](enroll-your-device-in-intune-macos-legacy.md).
 
-1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com).
 
 2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego.
 
-  [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
+   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+
 
 3. Po zalogowaniu się kliknij pozycję **Menu** w lewym górnym rogu strony i wybierz pozycję **Moje urządzenia**.
 
@@ -54,8 +55,8 @@ Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykony
 
 8. Komputer Mac wyświetli komunikat **„CompanyPortal” to aplikacja pobrana z Internetu. Czy na pewno chcesz ją otworzyć?** Kliknij pozycję **Otwórz**.
 
-  > [!NOTE]
-  > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Jeśli Twój komputer odmawia otwarcia aplikacji Portal firmy, spróbuj [wyłączyć funkcję Gatekeeper](https://support.apple.com/HT202491) i wtedy otworzyć aplikację.
+   > [!NOTE]
+   > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Jeśli Twój komputer odmawia otwarcia aplikacji Portal firmy, spróbuj [wyłączyć funkcję Gatekeeper](https://support.apple.com/HT202491) i wtedy otworzyć aplikację.
 
 9. Pierwszy ekran wyświetlony w aplikacji Portal firmy poprosi Cię o **zalogowanie się** za pomocą tego samego konta służbowego, które zostało użyte do zalogowania się do witryny internetowej Portal firmy.
 

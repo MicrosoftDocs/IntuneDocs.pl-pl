@@ -1,29 +1,29 @@
 ---
-title: "Jak dodawać aplikacje do usługi Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się, jak dodawać aplikacje do usługi Microsoft Intune, aby móc przypisywać aplikacje do użytkowników i urządzeń. Usługa Intune obsługuje szeroką gamę różnych typów aplikacji."
-keywords: 
+title: Jak dodawać aplikacje do usługi Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się, jak dodawać aplikacje do usługi Microsoft Intune, aby móc przypisywać aplikacje do użytkowników i urządzeń. Usługa Intune obsługuje szeroką gamę różnych typów aplikacji.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 407a332e170497dbb618a2915bba6b794c4a720f
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 6b4e87c36c3aa0aaeae1e1bf265902100612db15
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Jak dodawać aplikacje do usługi Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Aby móc przypisywać, monitorować, konfigurować i chronić aplikacje, trzeba najpierw dodać je do usługi Intune.
 
@@ -136,7 +136,7 @@ Kategorie aplikacji mogą ułatwić ich sortowanie, aby użytkownicy mogli je ł
 Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej kategorii. Tematy dotyczące określonych platform zawierają informacje o dodawaniu aplikacji i przypisywaniu kategorii. Do tworzenia i edytowania własnych kategorii użyj następującej procedury:
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Kategorie aplikacji** w sekcji **Konfiguracja**. 
 5. W bloku **Kategorie aplikacji** zostanie wyświetlona lista bieżących kategorii. Wybierz jedno z następujących działań:

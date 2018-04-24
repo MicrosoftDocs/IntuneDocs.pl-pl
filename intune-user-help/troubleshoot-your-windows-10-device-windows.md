@@ -1,27 +1,27 @@
 ---
-title: "Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10 | Microsoft Docs"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10 | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 936a336019c37fb5ae5f7ef8f5b1201faee553fc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 97f23594a5c7b047caf37dbaa39c481585a96d76
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
 Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.
@@ -38,15 +38,15 @@ Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z sy
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Rozwiązywanie problemów w przypadku pozycji „Uzyskaj dostęp do miejsca pracy lub nauki”
 
-1.  Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowej poczty e-mail i plików, wróć do pozycji **Dostęp do zasobów służbowych**.
+1. Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowej poczty e-mail i plików, wróć do pozycji **Dostęp do zasobów służbowych**.
 
 2. Wykonaj jedną z następujących czynności:
 
-    - Jeśli widzisz połączenie, które wygląda podobnie do poniższego obrazu, wybierz je, a następnie sprawdź, czy widzisz opcje Zarządzanie, Informacje i Rozłącz. Jeśli widzisz te opcje, oznacza to, że nastąpiła rejestracja i zostało nawiązane połączenie.
+   - Jeśli widzisz połączenie, które wygląda podobnie do poniższego obrazu, wybierz je, a następnie sprawdź, czy widzisz opcje Zarządzanie, Informacje i Rozłącz. Jeśli widzisz te opcje, oznacza to, że nastąpiła rejestracja i zostało nawiązane połączenie.
 
-    ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-    - Jeśli nie widzisz informacji o połączeniu pokazanych powyżej lub jeśli są one wyświetlane, ale brakuje niektórych opcji, naciśnij przycisk **Połącz**, a następnie zaloguj się przy użyciu swoich poświadczeń służbowych. Na tym etapie powinno zostać nawiązane połączenie.
+   - Jeśli nie widzisz informacji o połączeniu pokazanych powyżej lub jeśli są one wyświetlane, ale brakuje niektórych opcji, naciśnij przycisk **Połącz**, a następnie zaloguj się przy użyciu swoich poświadczeń służbowych. Na tym etapie powinno zostać nawiązane połączenie.
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Rozwiązywanie problemów w przypadku pozycji „Konto”
 
@@ -58,6 +58,6 @@ Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Rozwiązywanie problemów w przypadku pozycji „Konfigurowanie konta służbowego”
 
-Jeśli zostanie wyświetlony komunikat __Nie można automatycznie odnaleźć punktu końcowego zarządzania zgodnego z podaną nazwą użytkownika. Sprawdź nazwę użytkownika i spróbuj ponownie. Jeśli znasz adres URL punktu końcowego zarządzania, wpisz go.__ Następnie należy ponownie wprowadzić nazwę użytkownika i hasło. Jeśli to nie zadziała, skontaktuj się z działem pomocy technicznej Twojej firmy w celu sprawdzenia witryny internetowej, którą musisz podać w polu tekstowym **Punkt końcowy zarządzania**. To jest witryna, której adres prawdopodobnie wygląda podobnie do tego: **www.twojafirma.onmicrosoft.com**.
+Jeśli zostanie wyświetlony komunikat <strong>Nie można automatycznie odnaleźć punktu końcowego zarządzania zgodnego z podaną nazwą użytkownika. Sprawdź nazwę użytkownika i spróbuj ponownie. Jeśli znasz adres URL punktu końcowego zarządzania, wpisz go.</strong> Następnie należy ponownie wprowadzić nazwę użytkownika i hasło. Jeśli to nie zadziała, skontaktuj się z działem pomocy technicznej Twojej firmy w celu sprawdzenia witryny internetowej, którą musisz podać w polu tekstowym <strong>Punkt końcowy zarządzania</strong>. To jest witryna, której adres prawdopodobnie wygląda podobnie do tego: <strong>www.twojafirma.onmicrosoft.com</strong>.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

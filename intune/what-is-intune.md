@@ -1,36 +1,36 @@
 ---
-title: "Wprowadzenie do usługi Intune w witrynie Azure Portal"
-titlesuffix: 
-description: "Usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Uzyskaj podstawowe informacje na temat usługi Intune w witrynie Azure Portal."
-keywords: 
+title: Wprowadzenie do usługi Intune w witrynie Azure Portal
+titlesuffix: ''
+description: Usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Uzyskaj podstawowe informacje na temat usługi Intune w witrynie Azure Portal.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
-ms.custom: 
-ms.openlocfilehash: c9c8485a3ab68be745c8903659df0fd35af2a644
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.custom: ''
+ms.openlocfilehash: 4dee2c2204b90a35f0b03e2cd78a6662f67f680d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Podobnie jak inne usługi platformy Azure, usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Wybierając usługę **Intune** w witrynie Azure Portal, możesz zarządzać urządzeniami przenośnymi, komputerami i aplikacjami organizacji.
 
->[!NOTE] 
+> [!NOTE]
 > Jeśli używano poprzedniej wersji usługi Microsoft Intune, przydatne mogą być następujące informacje:
-    * [Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?](ui-changes.md) to artykuł, w którym można znaleźć opis określonych przepływów pracy i interfejsów użytkownika, które zmieniły się wraz z przejściem na platformę Azure.
-    * [Klasyczne grupy usługi Intune w witrynie Azure Portal](groups-get-started.md) to artykuł, w którym opisano wpływ przejścia do grup zabezpieczeń usługi Azure Active Directory na potrzeby zarządzania grupami.
+>     * [Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?](ui-changes.md) to artykuł, w którym można znaleźć opis określonych przepływów pracy i interfejsów użytkownika, które zmieniły się wraz z przejściem na platformę Azure.
+>     * [Klasyczne grupy usługi Intune w witrynie Azure Portal](groups-get-started.md) to artykuł, w którym opisano wpływ przejścia do grup zabezpieczeń usługi Azure Active Directory na potrzeby zarządzania grupami.
 
 Najważniejsze funkcje środowiska usługi Microsoft Intune w witrynie Azure Portal obejmują:
 

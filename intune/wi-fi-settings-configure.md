@@ -1,27 +1,27 @@
 ---
-title: "Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Intune"
+title: Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Intune
 titleSuffix: Microsoft Intune
-description: "Informacje dotyczące konfigurowania ustawień sieci Wi-Fi na zarządzanych urządzeniach przy użyciu usługi Microsoft Intune."
-keywords: 
+description: Informacje dotyczące konfigurowania ustawień sieci Wi-Fi na zarządzanych urządzeniach przy użyciu usługi Microsoft Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90d2df028d5a61bb134b6a2b76efa570eed80f20
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9a550e2963fa60a91db3ef63f7771bc4ca352d98
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Aby przypisać ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profili sieci Wi-Fi usługi Microsoft Intune. W przypadku przypisania profilu sieci Wi-Fi użytkownicy mają dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego konfigurowania połączenia.
 
@@ -47,7 +47,7 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia sieci Wi-Fi
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
 3. W okienku profilów wybierz pozycję **Utwórz profil**.

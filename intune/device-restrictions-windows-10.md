@@ -1,28 +1,27 @@
 ---
-title: "Ustawienia ograniczeń urządzenia z systemem Windows 10 w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Informacje na temat ustawień usługi Microsoft Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Windows 10."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Ustawienia ograniczeń urządzeń dla systemu Windows 10 w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: Informacje na temat ustawień usługi Microsoft Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Windows 10.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 4/9/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eee23afb4e2398358dc2c6b19b7d85be6b4f9edb
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem Windows 10 lub nowszym w usłudze Microsoft Intune
+# <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Ogólne
 - **Przechwytywanie ekranu (tylko dla urządzeń przenośnych)** — umożliwia użytkownikowi przechwycenie ekranu urządzenia w formie obrazu.
@@ -51,7 +50,6 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Obszar roboczy pisma odręcznego** — blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Jeśli to ustawienie nie zostanie skonfigurowane, obszar roboczy pisma odręcznego będzie dostępny (funkcja będzie włączona), a użytkownik będzie mógł używać jej na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie** — pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
 
-
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
     -   **Wymagany typ hasła** — określa, czy hasło musi być wyłącznie numeryczne, czy też alfanumeryczne.
@@ -75,7 +73,6 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 -   **Automatyczne akceptowanie w przypadku monitów o wyrażenie zgody przez użytkownika dotyczących parowania i prywatności** — zezwala systemowi Windows na automatyczne akceptowanie komunikatów dotyczących parowania i prywatności wyświetlanych w uruchamianych aplikacjach.
 - **Publikuj działania użytkownika**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań.
 - **Tylko działania lokalne**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych.
-
 
 Można zdefiniować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Można także zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
 
@@ -137,8 +134,6 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **Wyskakujące powiadomienia na zablokowanym ekranie** — blokuje wyświetlanie alertów na ekranie blokady.
 -   **Limit czasu ekranu (tylko urządzenia przenośne)** — określa czas (w sekundach) wyświetlania ekranu blokady, po którym ekran zostanie wyłączony.
 
-
-
 ## <a name="app-store"></a>App Store
 
 -   **App Store (tylko dla urządzeń przenośnych)** — umożliwia lub blokuje korzystanie ze sklepu z aplikacjami na urządzeniach z systemem Windows 10 Mobile.
@@ -152,8 +147,6 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **Instaluj aplikacje na dysku systemowym** — uniemożliwia aplikacjom przechowywanie danych na dysku systemowym urządzenia.
 -   **DVR z gry (tylko dla komputerów stacjonarnych)** — pozwala określić, czy nagrania i emisje z gier są dozwolone.
 -   **Tylko aplikacje ze sklepu** — Określa, czy użytkownicy mogą instalować aplikacje z miejsc innych niż sklep z aplikacjami.
-
-
 
 ## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
 
@@ -181,7 +174,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
 -   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Microsoft Edge do menu Start.
--  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/ulubione.html.
+-  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/favorites.html.
 -  **Ograniczanie zmian ulubionych** — wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
@@ -192,6 +185,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
 ## <a name="search"></a>Wyszukaj
 - **Bezpieczne wyszukiwanie (tylko urządzenia przenośne)** — pozwala określić sposób, w jaki Cortana filtruje treści dla dorosłych w wynikach wyszukiwania. Można wybrać opcję **Ścisłe** lub **Umiarkowane** albo zezwolić użytkownikom końcowym na wybór własnych ustawień.
+- **Wyświetl wyniki internetowe w wyszukiwaniu** — umożliwia blokowanie lub akceptowanie wyświetlania wyników internetowych w wynikach wyszukiwania na urządzeniu.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 -   **Konto Microsoft** — umożliwia użytkownikowi skojarzenie konta Microsoft z urządzeniem.
@@ -215,7 +209,6 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **Ręczna konfiguracja sieci Wi-Fi** — określa, czy użytkownik może konfigurować własne połączenia sieci Wi-Fi, czy używać tylko połączeń skonfigurowanych przez profil sieci Wi-Fi (tylko system Windows 10 Mobile).
 -   **Interwał skanowania sieci Wi-Fi** — pozwala określić, jak często urządzenie ma wyszukiwać sieci Wi-Fi. Podaj wartość z zakresu od 1 (najczęściej) do 500 (najrzadziej).
 -   **Dozwolone usługi Bluetooth** — lista dozwolonych usług i profilów Bluetooth określana w postaci ciągów szesnastkowych.
-
 
 ## <a name="control-panel-and-settings"></a>Panel sterowania i Ustawienia
 
@@ -258,41 +251,48 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
 ## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
 
--   **Tryb kiosku** — wskazuje typ [tryb kiosku](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) obsługiwany przez zasady. Dostępne opcje:
+Kiosk to urządzenie, na którym jest zwykle uruchamiana jedna aplikacja lub zestaw konkretnych aplikacji. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
 
-      - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
-      - **Kiosk z pojedynczą aplikacją** — profil włącza urządzenie jako kiosk z pojedynczą aplikacją.
-      - **Kiosk z wieloma aplikacjami** — profil włącza urządzenie jako kiosk z wieloma aplikacjami.
+- **Tryb kiosku** — wskazuje typ trybu kiosku obsługiwany przez zasady. Dostępne opcje:
 
-    Kioski z pojedynczą aplikacją wymagają następujących ustawień:
+  - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
+  - **Kiosk z pojedynczą aplikacją** — profil umożliwia uruchamianie tylko jednej aplikacji na urządzeniu. Gdy użytkownik zaloguje się, jest uruchamiana konkretna aplikacja. Ten tryb uniemożliwia także użytkownikowi otwieranie nowych aplikacji oraz zmianę uruchomionej aplikacji.
+  - **Kiosk z wieloma aplikacjami** — profil umożliwia uruchamianie wielu aplikacji na urządzeniu. Tylko dodane aplikacje są dostępne dla użytkownika. Korzyści z kiosku z wieloma aplikacjami (czyli urządzenia o stałym przeznaczeniu) polegają na udostępnieniu użytkownikom łatwego do poznania środowiska, w którym są dostępne tylko potrzebne im aplikacje, a pozostałe są ukryte.
 
-      - **Konto użytkownika** — określa lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku. W przypadku kont przyłączonych do domeny usługi Azure AD należy określić konto w postaci `domain\\username@tenant.org`.
+#### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
+Podaj następujące ustawienia:
 
-         Dla urządzeń w środowiskach publicznych należy użyć kont z minimalnymi uprawnieniami, aby uniemożliwić nieautoryzowane działanie.  
+- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku. W przypadku kont przyłączonych do domeny usługi Azure AD podaj konto w formacie `domain\username@tenant.org`. 
 
-      - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — określa identyfikator modelu użytkownika aplikacji (AUMID) aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). Aby skonfigurować konto usługi Azure Active Directory (AD) pod kątem trybu kiosku, użyj formatu `AzureAD\user@contoso.com`.
 
-    [Kioski z wieloma aplikacjami](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) wymagają konfiguracji kiosku. Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku, lub wybierz istniejącą konfigurację.
+- **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — podaj identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-    Konfiguracje kiosku z wieloma aplikacjami obejmują następujące ustawienia:
+#### <a name="multi-app-kiosks"></a>Kioski z wieloma aplikacjami
+[Kioski z wieloma aplikacjami](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) korzystają z konfiguracji kiosku zawierającej listę dozwolonych aplikacji i inne ustawienia. 
 
-    - **Nazwa konfiguracji kiosku** — przyjazna nazwa używana do identyfikowania danej konfiguracji.
+Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istniejącą konfigurację). Następnie podaj następujące ustawienia:
 
-    - Co najmniej jedna **aplikacja kiosku** składająca się z następujących elementów:
+- **Nazwa konfiguracji kiosku** — podaj przyjazną nazwę używaną do identyfikowania konfiguracji.
 
-        - **Typ aplikacji** — określa typ aplikacji kiosku.  Obsługiwane wartości:   
+- **Aplikacje kiosku** — podaj aplikacje dostępne w menu Start. Dodane aplikacje to jedyne aplikacje, które użytkownik może otwierać.
 
-            - **Aplikacja Win32** — tradycyjna aplikacja klasyczna. (Potrzebna jest ścieżka bezwzględna pliku wykonywalnego w odniesieniu do urządzenia).
+  - **Typ aplikacji** — wybierz typ aplikacji kiosku:
+    - **Aplikacja Win32** — tradycyjna aplikacja klasyczna. Potrzebna jest w pełni kwalifikowana nazwa ścieżki pliku wykonywalnego określona względem urządzenia.
+    - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows. Potrzebny jest [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-            - **Aplikacja platformy UWP** — aplikacja uniwersalna systemu Windows. Potrzebny jest [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+  - **Identyfikator aplikacji** — podaj w pełni kwalifikowaną nazwę ścieżki pliku wykonywalnego (aplikacje Win32) lub [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacje platformy UWP).
 
-        - **Identyfikator aplikacji** — określa pełną nazwę ścieżki pliku wykonywalnego (aplikacji Win32) lub [identyfikatora AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacji platformy UWP).
+- **Pasek zadań**: wybierz wartość **Włącz**, aby wyświetlać pasek zadań, lub wartość **Nieskonfigurowany**, aby go ukryć na kiosku.
 
-    - **Pasek zadań** — wskazuje, czy pasek zadań jest wyświetlany (**Włączone**), czy ukryty (**Nieskonfigurowane**) na kiosku.
+- **Układ menu Start** — podaj plik XML, który opisuje sposób, w jaki aplikacje są wyświetlane w menu Start. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) zawiera wskazówki i przykładowy kod XML.
 
-    - **Układ menu Start** — określa plik XML, który opisuje sposób, w jaki aplikacje [są wyświetlane w menu Start](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
-    - **Przypisani użytkownicy** — określa co najmniej jedno konto użytkownika skojarzone z konfiguracją kiosku. Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku. Konta przyłączonych do domeny należy określić w postaci `domain\\username@tenant.org`.
+  Artykuł [Create a Windows 10 kiosk that runs multiple apps (Tworzenie kiosku z systemem Windows 10 obsługującego wiele aplikacji)](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) zawiera więcej szczegółowych informacji na temat używania i tworzenia plików XML.
+
+- **Przypisani użytkownicy** — dodaj co najmniej jedno konta użytkownika, które może używać dodanych aplikacji. Po zalogowaniu przy użyciu konta będą dostępne tylko aplikacje określone w konfiguracji. Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku.
+
+    W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). Aby skonfigurować konto usługi Azure Active Directory (AD) pod kątem trybu kiosku, użyj formatu `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Program antywirusowy Windows Defender
 
@@ -328,14 +328,11 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
     -   **Zdefiniowane przez użytkownika**
     -   **Zablokuj**
 
-
-
 ### <a name="windows-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Windows Defender
 
 -   **Pliki i foldery do wyłączenia ze skanów i ochrony w czasie rzeczywistym** — umożliwia dodanie do listy wykluczeń pojedynczych plików lub folderów lub większej ich liczby, na przykład **C:\ścieżka** lub **%ProgramFiles%\ścieżka\nazwa_pliku.exe**. Te pliki i foldery nie są uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.
 -   **Rozszerzenia plików do wyłączenia ze skanów i ochrony w czasie rzeczywistym** — umożliwia dodanie do listy wykluczeń pojedynczych rozszerzeń plików lub większej ich liczby, np. **JPG** lub **TXT**. Żadne pliki z tymi rozszerzeniami nie będą uwzględniane podczas skanowania w czasie rzeczywistym lub skanowania planowanego.
 -   **Procesy do wyłączenia ze skanów i ochrony w czasie rzeczywistym** — umożliwia dodanie do listy wykluczeń pojedynczych procesów typu **EXE**, **COM** lub **SCR** lub większej ich liczby. Te procesy nie są uwzględniane podczas skanowania w czasie rzeczywistym ani podczas zaplanowanego skanowania.
-
 
 ## <a name="network-proxy"></a>Serwer proxy sieci
 
@@ -348,9 +345,7 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
     -   **Wyjątki serwera proxy** — wprowadź wszystkie adresy URL, w przypadku których korzystanie z serwera proxy będzie zabronione. Rozdziel kolejne elementy średnikiem.
     -   **Pomiń serwer proxy dla adresów lokalnych** — włącz tę opcję, jeśli nie chcesz używać serwera proxy dla adresów lokalnych w sieci intranet.
 
-
 ## <a name="windows-spotlight"></a>W centrum uwagi Windows
-
 
 - **W centrum uwagi Windows** — to ustawienie umożliwia zablokowanie wszystkich funkcji W centrum uwagi Windows na urządzeniach z systemem Windows 10. Jeśli to ustawienie zostanie wyłączone, następujące ustawienia nie będą dostępne.
     - **Funkcja W centrum uwagi Windows na ekranie blokady** — wyłącza wyświetlanie informacji funkcji W centrum uwagi Windows na ekranie blokady urządzenia.
@@ -360,7 +355,6 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
     - **Funkcja W centrum uwagi Windows w Centrum akcji** — uniemożliwia wyświetlanie sugestii funkcji W centrum uwagi Windows, na przykład zawartości dotyczących nowych aplikacji lub zabezpieczeń, w Centrum akcji systemu Windows.
     - **Personalizacja funkcji W centrum uwagi Windows** — wyłącza personalizowanie opartych na użyciu urządzenia wyników przez funkcję W centrum uwagi Windows.
     - **Środowisko powitalne systemu Windows** — wyłącza wyświetlanie środowiska powitalnego systemu Windows, w którym są widoczne informacje o nowych lub zaktualizowanych funkcjach.
-
 
 ## <a name="projection"></a>Projekcja
 
@@ -394,15 +388,3 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 - **Synchronizowanie wiadomości (tylko na urządzeniach przenośnych)** — wyłącz funkcję Wiadomości na wszystkich urządzeniach oraz tworzenie kopii zapasowych wiadomości SMS i ich przywracanie.
 - **MMS (tylko na urządzeniach przenośnych)** — wyłącz funkcję wysyłania i odbierania wiadomości MMS na urządzeniu.
 - **RCS (tylko na urządzeniach przenośnych)** — wyłącz funkcję wysyłania i odbierania wiadomości Rich Communication Services na urządzeniu.
-
-
-
-
-
-
-
-
-
-
-
-

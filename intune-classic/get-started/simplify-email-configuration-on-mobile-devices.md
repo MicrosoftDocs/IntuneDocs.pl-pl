@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8e11ae063bc2cc302af238ab9062da82c6b6c30c
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 058a44d6ef97cbc35786312461c6077bc2feaf3b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-start-guide-simplify-email-configuration-on-mobile-devices"></a>Przewodnik Szybki start: upraszczanie konfiguracji poczty e-mail na urządzeniach przenośnych
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Microsoft Intune oszczędza czas i zasoby firmy, umożliwiając wdrażanie profilów poczty e-mail (a także sieci VPN i Wi-Fi) na urządzeniach przenośnych z systemami Windows, iOS i Android zarządzanych przez usługę Intune. Automatyczne konfigurowanie profilów poczty e-mail może znacznie ulepszyć środowisko użytkownika końcowego i zwiększyć poziom zadowolenia użytkowników, a jednocześnie obniżyć koszty pomocy technicznej.
 

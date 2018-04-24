@@ -1,32 +1,31 @@
 ---
-title: "Zarządzanie aplikacjami zakupionymi w sklepie Microsoft Store dla Firm"
+title: Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm
 titlesuffix: Microsoft Intune
-description: "Informacje dotyczące synchronizacji aplikacji ze sklepu Microsoft Store dla Firm w usłudze Intune, a następnie przypisywania i śledzenia tych aplikacji."
-keywords: 
+description: Informacje dotyczące synchronizacji aplikacji ze sklepu Microsoft Store dla Firm w usłudze Intune, a następnie przypisywania i śledzenia tych aplikacji.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa5e3b5559c5c17ea726b26f1c1f56ef37cfe0ae
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 512fab5a8ed70af989d6057308b48185cd697d8f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune
+# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-
-[Sklep Microsoft Store dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal. Przykład:
+[Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal. Przykład:
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
 * Zsynchronizowane aplikacje są wyświetlane w konsoli administracyjnej usługi Intune. Można je przypisać w taki sam sposób, jak wszystkie inne aplikacje.
 * Można śledzić liczbę dostępnych i używanych licencji w konsoli administracyjnej usługi Intune.
@@ -63,7 +62,7 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 ## <a name="configure-synchronization"></a>Konfigurowanie synchronizacji
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 1. W okienku **Aplikacje mobilne** wybierz kolejno pozycje **Konfiguracja** > **Microsoft Store dla Firm**.
 2. Kliknij przycisk **Włącz**.

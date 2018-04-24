@@ -1,50 +1,50 @@
 ---
-title: "Profile certyfikatów zapewniające dostęp do zasobów"
-description: "Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika."
-keywords: 
+title: Profile certyfikatów zapewniające dostęp do zasobów
+description: Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76083268d3c7ed43cea0bc0d9751ae9c37c7227b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ccfd69579832c553dc1416c21ca93b85cd93cd78
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz zabezpieczyć dostęp przy użyciu certyfikatu zainstalowanego na urządzeniu każdego użytkownika. Oto jak to działa:
 
 1. Upewnij się, że jest dostępna właściwa infrastruktura certyfikatu, zgodna z opisem w tematach [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) i [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md).
 
 2. Zainstaluj certyfikat główny lub certyfikat pośredniego urzędu certyfikacji (CA) na każdym urządzeniu, aby urządzenia rozpoznawały urząd certyfikacji jako wiarygodny. W tym celu należy utworzyć i wdrożyć **profil zaufanego certyfikatu**. Po wdrożeniu tego profilu urządzenia zarządzane przy użyciu usługi Intune zażądają certyfikatu głównego i otrzymają go. Należy utworzyć oddzielny profil dla każdej platformy. **Profil zaufanego certyfikatu** jest dostępny dla następujących platform:
- -  System iOS 8.0 i nowsze
- -  System Mac OS X 10.9 lub nowszy
- -  Android 4.0 i nowsze
- -  Program Android for Work
- -  Windows 8.1 i nowsze
- -  System Windows Phone 8.1 lub nowszy
+   -  System iOS 8.0 i nowsze
+   -  System Mac OS X 10.9 lub nowszy
+   -  Android 4.0 i nowsze
+   -  Program Android for Work
+   -  Windows 8.1 i nowsze
+   -  System Windows Phone 8.1 lub nowszy
 
 3. Utwórz profile certyfikatów, tak aby poszczególne urządzenia żądały certyfikatu do użytku podczas uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi — zgodnie z opisem w temacie [Configure Intune certificate profiles](configure-intune-certificate-profiles.md) (Konfigurowanie profilów certyfikatów usługi Intune). Dla urządzeń korzystających z następujących platform można utworzyć i wdrożyć **profil certyfikatu PKCS #12 (PFX)** *albo* **profil certyfikatu protokołu SCEP**:
 
-  -  System iOS 8.0 i nowsze
-  -  Android 4.0 i nowsze
-  -  Program Android for Work
-  -  System Windows 10 (Desktop i Mobile) i nowsze
+   -  System iOS 8.0 i nowsze
+   -  Android 4.0 i nowsze
+   -  Program Android for Work
+   -  System Windows 10 (Desktop i Mobile) i nowsze
 
-  Użyj **profilu certyfikatu protokołu SCEP** dla urządzeń z następującymi platformami:
+   Użyj **profilu certyfikatu protokołu SCEP** dla urządzeń z następującymi platformami:
     -   System Mac OS X 10.9 lub nowszy
     -   Windows Phone 8,1
 

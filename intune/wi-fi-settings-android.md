@@ -1,27 +1,27 @@
 ---
-title: "Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem Android i programem Android for Work."
-keywords: 
+title: Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune
+titleSuffix: ''
+description: Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem Android i programem Android for Work.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d327c2d3cadf441f74e35af86b19438159225771
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c110121ceb3d7ff871078c39f73b17606e2e7f13
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurowanie ustawień sieci Wi-Fi w usłudze Microsoft Intune dla urządzeń z systemem Android i programem Android for Work  
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Android i programem Android for Work.
 
@@ -58,7 +58,8 @@ W przypadku urządzeń z systemem Android i programem Android for Work dostępne
 #### <a name="client-authentication"></a>Uwierzytelnianie klienta
 
 
-|Nazwa ustawienia|Więcej informacji|Zastosowania|
-|----------|--------------|----------|
-|**Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.|Jako typ protokołu EAP wybrano wartość **EAP-TLS**|
-|**Metoda uwierzytelniania**|Wybierz metodę uwierzytelniania dla połączenia:<br>- **Certyfikaty**, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- **Nazwa użytkownika i hasło**, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji **Nazwa użytkownika i hasło** należy skonfigurować ustawienia:<br><br>-  **Metoda inna niż EAP (tożsamość wewnętrzna)**, a następnie wybrać sposób uwierzytelniania połączenia:<br>- **Brak**<br>- **Hasło nieszyfrowane (PAP)**<br>- **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP wersja 2 (MS-CHAP v2)**<br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br>**i**<br><br>- **Prywatność tożsamości (tożsamość zewnętrzna)** — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.|Jako typ protokołu EAP wybrano wartość **EAP-TTLS** lub **PEAP**|
+|                                     Nazwa ustawienia                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Więcej informacji                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                            Zastosowania                            |
+|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| <strong>Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)</strong> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |              Jako typ protokołu EAP wybrano wartość <strong>EAP-TLS</strong>              |
+|                        <strong>Metoda uwierzytelniania</strong>                        | Wybierz metodę uwierzytelniania dla połączenia:<br>- <strong>Certyfikaty</strong>, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- <strong>Nazwa użytkownika i hasło</strong>, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji <strong>Nazwa użytkownika i hasło</strong> należy skonfigurować ustawienia:<br><br>-  <strong>Metoda inna niż EAP (tożsamość wewnętrzna)</strong>, a następnie wybrać sposób uwierzytelniania połączenia:<br>- <strong>Brak</strong><br>- <strong>Hasło nieszyfrowane (PAP)</strong><br>- <strong>Protokół uwierzytelniania typu Challenge Handshake (CHAP)</strong><br>- <strong>Microsoft CHAP (MS-CHAP)</strong><br>- <strong>Microsoft CHAP wersja 2 (MS-CHAP v2)</strong><br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br><strong>i</strong><br><br>- <strong>Prywatność tożsamości (tożsamość zewnętrzna)</strong> — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu. | Jako typ protokołu EAP wybrano wartość <strong>EAP-TTLS</strong> lub <strong>PEAP</strong> |
+

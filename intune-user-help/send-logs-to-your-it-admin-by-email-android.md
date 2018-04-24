@@ -1,44 +1,47 @@
 ---
-title: "Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail | Microsoft Docs"
-description: "Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail | Microsoft Docs
+description: Wysyłanie dzienników danych za pomocą poczty e-mail na urządzeniu z systemem Android
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 04/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ddd0c1113b7cce6f461b627a3d346806df3bbc8c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5e37ab05889a1141464b75a36b4f156f897799ae
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="send-logs-to-your-company-support-using-email"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail
+# <a name="email-logs-to-your-company-support"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail
 
-Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Android wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
+Czasami może wystąpić błąd podczas używania aplikacji Portal firmy na urządzeniu z systemem Android. W takim przypadku możesz wysłać szczegóły dotyczące błędu w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.  
+
+Szczegóły dotyczące błędu są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_. Podczas przekazywania dzienników do aplikacji Portal firmy najpierw są one wysyłane do deweloperów firmy Microsoft, którzy pracują nad aplikacją. Używają oni dzienników, aby poprawiać funkcjonowanie aplikacji i zapobiegać błędom w przyszłości. Następnie zostanie podany identyfikator zdarzenia dla danego błędu, który możesz udostępnić osobie odpowiedzialnej za pomoc techniczną w firmie.  
 
 > [!Note]
-> Aby ułatwić działowi pomocy technicznej Twojej firmy ustalenie problemu, włącz _pełne rejestrowanie_. Pełne rejestrowanie powoduje umieszczenie wszystkich odpowiednich szczegółów w raporcie. Dowiedz się, jak [włączyć pełne rejestrowanie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+> Aby ułatwić działowi pomocy technicznej Twojej firmy ustalenie przyczyny problemu, włącz _pełne rejestrowanie_. Pełne rejestrowanie powoduje rejestrowanie wszystkich szczegółów dotyczących błędu oraz uwzględnia te szczegóły w raporcie. Dowiedz się, jak [włączyć pełne rejestrowanie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
 
 Aby wysłać dzienniki do działu pomocy technicznej Twojej firmy pocztą e-mail:
 
 1.  Otwórz aplikację Portal firmy.
 
-2.  Naciśnij pozycję **Menu**  >   **Pomoc i opinie**.
+2.  Naciśnij pozycję **Menu** > **Pomoc** > **Pomoc techniczna pocztą e-mail**.
 
     > [!NOTE]
     > Przycisk **Menu** może być przyciskiem programowym lub sprzętowym, w zależności od posiadanego urządzenia z systemem Android.
 
-3.  W obszarze **Pomoc** naciśnij pozycję **Uzyskaj pomoc**.
+3.  Naciśnij pozycję **Wyślij wiadomość e-mail i przekaż dzienniki**.
+4.  Po zakończeniu przekazywania naciśnij aplikację poczty e-mail. Zostanie otwarta wiadomość e-mail z wstępnie uzupełnionym identyfikatorem zdarzenia w polu tematu. W treści wiadomości e-mail opisz napotkany problem.  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

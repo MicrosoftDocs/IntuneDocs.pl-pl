@@ -1,27 +1,27 @@
 ---
-title: "Ustawienia poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Dowiedz się więcej o ustawieniach usługi Microsoft Intune, których możesz użyć do konfigurowania ustawień poczty e-mail na urządzeniach z systemem iOS."
-keywords: 
+title: Ustawienia poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune
+titleSuffix: ''
+description: Dowiedz się więcej o ustawieniach usługi Microsoft Intune, których możesz użyć do konfigurowania ustawień poczty e-mail na urządzeniach z systemem iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/2/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1634512c85c156046d0324953463d745be06d649
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d7b050e94114b0d3c9dcec765f4dd6e7700a801f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-ios"></a>Ustawienia profilu poczty e-mail w usłudze Microsoft Intune dla urządzeń z systemem iOS 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia profilu poczty e-mail, które możesz skonfigurować dla urządzeń z systemem iOS.
 

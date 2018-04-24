@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b0117ef734a8549593992108105192ce1c4de5b0
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 85233c06d9cbbc697aecabc75ba538612c0fa5fa
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-start-guide-prevent-company-data-leaks-from-office-365-mobile-apps"></a>Przewodnik Szybki Start: zapobieganie wyciekom danych firmowych z aplikacji mobilnych usługi Office 365
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Korzystając z usługi Microsoft Intune, można zabezpieczyć dane organizacji przy użyciu zasad zarządzania aplikacjami mobilnymi (MAM), które pomagają zapobiec przeciekom danych firmowych z aplikacji mobilnych usługi Office 365 lub innych aplikacji biznesowych. Używanie zasad zarządzania aplikacjami mobilnymi usługi Intune nie wymaga od użytkowników końcowych zarejestrowania swoich urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi (rozwiązaniu MDM) w usłudze Intune. Jeśli zatem masz użytkowników, którzy nie chcą rejestrować swoich własnych urządzeń przenośnych BYOD z systemem iOS lub Android w rozwiązaniu MDM firmy Microsoft (usługi Intune, programu Configuration Manager lub EAS), chcesz chronić dane firmowe bez zarządzania urządzeniami użytkowników końcowych lub korzystasz już z rozwiązania MDM firmy innej niż Microsoft, usługa Intune może pomóc Ci zwiększyć bezpieczeństwo danych firmy.   
 

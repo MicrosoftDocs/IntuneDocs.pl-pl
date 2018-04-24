@@ -1,25 +1,25 @@
 ---
-title: "Wprowadzenie do zarządzania użytkownikami"
+title: Wprowadzenie do zarządzania użytkownikami
 titlesuffix: Microsoft Intune
-description: "Dodaj użytkownika do usługi Intune i przypisz do niego licencję, aby umożliwić mu uzyskanie dostępu do zasobów firmy na urządzeniach mobilnych."
-keywords: 
+description: Dodaj użytkownika do usługi Intune i przypisz do niego licencję, aby umożliwić mu uzyskanie dostępu do zasobów firmy na urządzeniach mobilnych.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 53b5be6e5cdf8f60304126e133a727123bfef58d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6ed6b95a11eddfeb748b21d6df55f3a5668d9e1d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-managing-users"></a>Wprowadzenie do zarządzania użytkownikami
 
@@ -28,7 +28,7 @@ Pomyśl o wszystkich osobach w Twojej organizacji. Dla każdej osoby korzystają
 ## <a name="how-do-i-create-a-user"></a>Jak utworzyć użytkownika?
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Po otwarciu okienka **Microsoft Intune** wybierz opcję **Użytkownicy**. Na stronie **Wszyscy użytkownicy** wybierz pozycję **+ Nowy użytkownik**.
 4. Wprowadź szczegółowe informacje dotyczące użytkownika, takie jak **nazwa** i **nazwa użytkownika**. Część nazwy użytkownika stanowiąca nazwę domeny musi być początkową, domyślną nazwą domeny, „contoso.onmicrosoft.com”, lub zweryfikowaną, niefederacyjną nazwą domeny, na przykład „contoso.com”.
 5. W obszarze **Grupy** wybierz grupę testową, do której zostanie dodany użytkownik.
@@ -44,8 +44,8 @@ Po utworzeniu użytkownika należy użyć [portalu usługi Office 365](http://go
 3. Może chwilę potrwać, aż wszystkie informacje dotyczące użytkownika zostaną załadowane. Po ich załadowaniu wybierz pozycję **Edytuj** dla **licencji produktu** użytkownika.
 4. Przypisz użytkownikowi **lokalizację**, a następnie przełącz usługę Intune na wartość **Włączona**.
 
- > [!NOTE]
- > Spowoduje to użycie jednej z Twoich licencji na potrzeby tego użytkownika. Jeśli używasz swojego działającego środowiska, możesz później wyłączyć używanie tej licencji, aby przypisać ją ponownie do rzeczywistego użytkownika.
+   > [!NOTE]
+   > Spowoduje to użycie jednej z Twoich licencji na potrzeby tego użytkownika. Jeśli używasz swojego działającego środowiska, możesz później wyłączyć używanie tej licencji, aby przypisać ją ponownie do rzeczywistego użytkownika.
 
 5. Wybierz pozycję **Zapisz**.
 

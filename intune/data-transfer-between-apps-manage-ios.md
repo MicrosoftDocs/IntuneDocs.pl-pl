@@ -1,25 +1,25 @@
 ---
-title: "Zarządzanie przesyłaniem danych między aplikacjami systemu iOS"
+title: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
 titlesuffix: Microsoft Intune
-description: "Informacje na temat używania zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune do zarządzania przesyłaniem danych między aplikacjami."
-keywords: 
+description: Informacje na temat używania zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune do zarządzania przesyłaniem danych między aplikacjami.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 441f78a8b3b9c41610b78a27dbe51fb144dd82da
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4c2872e70697b15326f89abd5721048643c5421a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 ## <a name="manage-ios-apps"></a>Zarządzanie aplikacjami systemu iOS
@@ -63,9 +63,9 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
 
 2. W sekcji Konfiguracja aplikacji wprowadź następujące ustawienie:
 
-  **key** = IntuneMAMUPN, **value** = <username@company.com>
+   **key** = IntuneMAMUPN, **value** = <username@company.com>
 
-  Dokładna składnia pary key/value (klucz/wartość) może się różnić w zależności od dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy. W poniższej tabeli przedstawiono przykłady dostawców rozwiązania do zarządzania urządzeniami przenośnymi innej firmy i dokładnie wartości, które należy wprowadzić dla pary key/value.
+   Dokładna składnia pary key/value (klucz/wartość) może się różnić w zależności od dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy. W poniższej tabeli przedstawiono przykłady dostawców rozwiązania do zarządzania urządzeniami przenośnymi innej firmy i dokładnie wartości, które należy wprowadzić dla pary key/value.
 
 |Dostawca rozwiązania do zarządzania urządzeniami przenośnymi innej firmy| Klucz konfiguracji | Typ wartości | Wartość konfiguracji|
 | ------- | ---- | ---- | ---- |

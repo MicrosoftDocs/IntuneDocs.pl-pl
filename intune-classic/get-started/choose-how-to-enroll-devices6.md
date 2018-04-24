@@ -14,26 +14,26 @@ ms.assetid: 40262e47-1ab4-437d-8ca5-c89b5022f91f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.custom: intune-classic EXPIERIMENT
-ms.openlocfilehash: fd09126b8226828ccb60f30e0daa6135643303e2
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b730aae4e3e8f576824ac61811018293cc07e080
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choose-how-to-enroll-mobile-devices"></a>Wybieranie metody rejestrowania urządzeń przenośnych
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę rejestracji dla urządzeń, którymi zarządzasz.
 
 ## <a name="how-will-you-manage-dedicated-corporate-owned-devices"></a>**Jak można zarządzać dedykowanymi urządzeniami należącymi do firmy?**
 
-  > [!div class="button"]
-[Program DEP dla systemu iOS >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
 > [!div class="button"]
-[Asystent ustawień systemu iOS >](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [Program DEP dla systemu iOS >](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)  
 > [!div class="button"]
-[Oznaczanie numerami IMEI >](/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
+> [Asystent ustawień systemu iOS >](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
+> [!div class="button"]
+> [Oznaczanie numerami IMEI >](/intune-classic/deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
 
   Należące do firmy urządzenia z dedykowanymi użytkownikami można zarejestrować na następujące sposoby:
 
@@ -44,4 +44,4 @@ Twoje odpowiedzi na tę serię pytań pomogą określić najlepszą metodę reje
   - **Oznaczanie numerami IMEI** — importując międzynarodowe numery identyfikujące urządzenia przenośne (IMEI) urządzeń należących do firmy, można oznaczyć je jako urządzenia należące do firmy w usłudze Intune. Jest to jedyny sposób pozwalający zidentyfikować należące do firmy dedykowane (przeznaczone do użytku przez jednego użytkownika) urządzenia z systemem Windows i Android. Urządzenia z systemem iOS, które nie zostaną zarejestrowane przy użyciu programu Device Enrollment Program firmy Apple lub programu Apple Configurator, mogą również być oznaczane numerem IMEI. Po wstępnym zadeklarowaniu urządzenia, które ma na celu oznaczenie go jako „firmowe”, można przekazać urządzenia użytkownikom. Następnie użytkownicy mogą zarejestrować swoje urządzenia jako urządzenia dedykowane, instalując aplikację Portal firmy, aby uzyskać dostęp do zasobów firmowych, np. poczty e-mail, aplikacji i innych danych.
 
 > [!div class="button"]
-[< Wstecz](choose-how-to-enroll-devices3.md)
+> [< Wstecz](choose-how-to-enroll-devices3.md)

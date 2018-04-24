@@ -1,27 +1,27 @@
 ---
-title: "Zasady zezwalania na aplikacje i blokowania w usłudze Microsoft Intune dla systemu Samsung Knox"
-titlesuffix: 
-description: "Utwórz profil niestandardowy w celu zezwalania na aplikacje i blokowanie ich na urządzeniach z systemem Samsung Knox Standard."
-keywords: 
+title: Zasady zezwalania na aplikacje i blokowania w usłudze Microsoft Intune dla systemu Samsung Knox
+titlesuffix: ''
+description: Utwórz profil niestandardowy w celu zezwalania na aplikacje i blokowanie ich na urządzeniach z systemem Samsung Knox Standard.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 95f35cfd869975a43fd54a1e6a9ff6ae35ffa6af
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 61a4d059eb771e22075796def5e1a273b02d932e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Używanie zasad niestandardowych w usłudze Microsoft Intune w celu zezwalania na aplikacje i blokowanie ich dla urządzeń z systemem Samsung Knox Standard 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Użyj procedur opisanych w tym artykule, aby utworzyć niestandardowe zasady usługi Microsoft Intune, co powoduje utworzenie następujących elementów:
 
@@ -39,7 +39,7 @@ Tych ustawień można używać tylko na urządzeniach z systemem Samsung Knox St
 2. W okienku z listą profilów wybierz pozycję **Utwórz profil**.
 3. W okienku **Tworzenie profilu** wprowadź wartość w polach **Nazwa** i **Opis** (opcjonalnie) dotyczących profilu urządzenia.
 2. Wybierz dla pozycji **Platforma** wartość **Android**, a dla pozycji **Typ profilu** wartość **Niestandardowy**.
-3. Kliknij przycisk **Ustawienia**.
+3. Kliknij pozycję **Ustawienia**.
 3. W okienku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**.
 4. W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ następujące ustawienia:
 

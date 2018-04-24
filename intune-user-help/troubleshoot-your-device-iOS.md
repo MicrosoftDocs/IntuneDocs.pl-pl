@@ -1,27 +1,27 @@
 ---
-title: "Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS | Microsoft Docs"
-description: "Dowiedz się, jak rozwiązać typowe problemy dotyczące urządzeń z systemem iOS."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS | Microsoft Docs
+description: Dowiedz się, jak rozwiązać typowe problemy dotyczące urządzeń z systemem iOS.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 06/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 66436fd8-1582-41f5-9c3b-abd914365f2d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8e92b1d877723dbfd5a866f0bf2b0af68d3130e7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b0edd35aa1b202b9494c31d91a0ca5584f1cc251
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS
 

@@ -1,29 +1,29 @@
 ---
-title: "Ochrona poczty e-mail i usługi Office 365"
-description: "W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń."
-keywords: 
+title: Ochrona poczty e-mail i usługi Office 365
+description: W tym temacie opisano, jak można wykorzystać dostęp warunkowy do umożliwienia dostępu do firmowej poczty e-mail i danych firmowych w usłudze SharePoint Online i innych usługach tylko ze zgodnych urządzeń.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ab45292734c39d3eaf4a5f0403cbff6e77d9d7e6
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e121a3aaf4988bd92c36eb79131b2205263fb309
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Ochrona dostępu do poczty e-mail, usług Office 365 i innych usług przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Za pomocą dostępu warunkowego pakietu Enterprise Mobility + Security (EMS) można zabezpieczyć dostęp do firmowej poczty e-mail, usług Office 365, takich jak **lokalna instalacja programu Exchange**, **usługa Exchange Online**, **usługa Exchange Online w wersji dedykowanej**, **usługa SharePoint Online**, **usługa Skype dla firm Online** i innych. Ta funkcja pozwala na zapewnienie, że dostęp do poczty e-mail i usług Office 365 w Twojej firmie jest ograniczony do urządzeń zgodnych z zasadami ustawionymi w konsoli administracyjnej usługi Intune lub w klasycznym portalu Azure.
 ## <a name="how-does-conditional-access-work"></a>W jaki sposób działa dostęp warunkowy?
@@ -72,12 +72,12 @@ W odróżnieniu od innych zasad usługi Intune zasady dostępu warunkowego nie s
 
 2. [Tworzenie zasad zgodności urządzenia](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-2.  Utwórz zasady dostępu warunkowego dla jednej z wybranych usług lub jednego z wybranych produktów firmy Microsoft w chmurze:
+3. Utwórz zasady dostępu warunkowego dla jednej z wybranych usług lub jednego z wybranych produktów firmy Microsoft w chmurze:
 
-  - [Tworzenie zasad dostępu warunkowego dla usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla nowej usługi Exchange Online w wersji dedykowanej](restrict-access-to-exchange-online-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla starszej usługi Exchange Online w wersji dedykowanej](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-  - [Tworzenie zasad dostępu warunkowego dla usługi Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla usługi Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla lokalnego programu Exchange](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla nowej usługi Exchange Online w wersji dedykowanej](restrict-access-to-exchange-online-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla starszej usługi Exchange Online w wersji dedykowanej](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla usługi SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla usługi Skype dla firm Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+   - [Tworzenie zasad dostępu warunkowego dla usługi Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)

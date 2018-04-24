@@ -15,15 +15,15 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4054eb3804c159e6256b07bf89b8ccd93f7b2e8e
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 7d9a51cb4e76f5aa0f89f9160af6f5fe62f0bbbd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tymczasowe różnice dotyczące interfejsu użytkownika
@@ -59,7 +59,7 @@ Przed zarejestrowaniem firmowych urządzeń z systemem iOS w programie Apple Sch
 
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > **Dodaj**.
 
-  ![Pobierz token programu rejestracji.](./media/device-enrollment-program-enroll-ios/image01.png)
+   ![Pobierz token programu rejestracji.](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. W bloku **Token programu Enrollment Program** wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (pem). Plik .pem jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu Apple School Manager.
      ![Blok Token programu rejestracji.](./media/device-enrollment-program-enroll-ios/image02.png)
@@ -94,7 +94,7 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 2. Wybierz token, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
 3. W obszarze **Utwórz profil** wprowadź nazwę w polu **Nazwa** i opis w polu **Opis**. Informacje te będą używane do celów administracyjnych. Te szczegóły nie są widoczne dla użytkowników. Możesz użyć pola **Nazwa**, aby utworzyć grupę dynamiczną w usłudze Azure Active Directory. Nazwa profilu umożliwia zdefiniowanie parametru enrollmentProfileName w celu przypisania urządzeń z tym profilem rejestracji. Dowiedz się więcej o [grupach dynamicznych usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
     ![Nazwa i opis profilu.](./media/device-enrollment-program-enroll-ios/image05.png)
-    
+
 4. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
     - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Ta opcja umożliwia również uwierzytelnianie urządzeń przy użyciu aplikacji Portal firmy. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Tryb udostępniania urządzenia iPad w programie Apple School Manager wymaga od użytkownika zarejestrowania urządzenia bez koligacji użytkownika.
 
@@ -112,8 +112,8 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 
     Użytkownicy są powiadamiani o tym, że ich urządzenia są nadzorowane, na dwa sposoby:
 
-    - Na ekranie blokady jest wyświetlany komunikat: „Ten iPhone jest zarządzany przez firmę Contoso”.
-    - Na ekranie **Ustawienia** > **Ogólne** > **Informacje** jest wyświetlany komunikat: „Ten iPhone jest nadzorowany. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie”
+   - Na ekranie blokady jest wyświetlany komunikat: „Ten iPhone jest zarządzany przez firmę Contoso”.
+   - Na ekranie **Ustawienia** > **Ogólne** > **Informacje** jest wyświetlany komunikat: „Ten iPhone jest nadzorowany. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie”
 
      > [!NOTE]
      > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
@@ -124,31 +124,33 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 
 9. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
-9. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
+10. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
 
-10. Wybierz przycisk **OK**.
+11. Wybierz przycisk **OK**.
 
-11. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+12. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
-    | Ustawienie | Opis |
-    | --- | --- |
-    | **Nazwa działu** | Wyświetlane, gdy użytkownicy klikną pozycję **Informacje o konfiguracji** podczas aktywacji. |
-    | **Telefon działu** | Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk **Potrzebna pomoc**. |
-    | **Opcje Asystenta ustawień** | Następujące opcjonalne ustawienia mogą być później konfigurowane w menu **Ustawienia** systemu iOS. |
-    | **Kod dostępu** | Wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
-    | **Usługi lokalizacyjne** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
-    | **Przywróć** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji. |
-    | **Identyfikator Apple ID i usługa iCloud** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o zalogowanie przy użyciu identyfikatora Apple ID, a ekran Aplikacje i dane umożliwi przywrócenie urządzenia z kopii zapasowej usługi iCloud. |
-    | **Warunki i postanowienia** | Jeśli to ustawienie zostało włączone, Asystent ustawień monituje użytkowników o zaakceptowanie warunków i postanowień firmy Apple podczas aktywacji. |
-    | **Touch ID** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
-    | **Apple Pay** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
-    | **Powiększenie** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
-    | **Siri** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
-    | **Dane diagnostyczne** | Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji. |
 
-12. Wybierz przycisk **OK**.
+    |                 Ustawienie                  |                                                                                               Opis                                                                                               |
+    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |     <strong>Nazwa działu</strong>     |                                                             Wyświetlane, gdy użytkownicy klikną pozycję <strong>Informacje o konfiguracji</strong> podczas aktywacji.                                                              |
+    |    <strong>Telefon działu</strong>     |                                                          Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk <strong>Potrzebna pomoc</strong>.                                                          |
+    | <strong>Opcje Asystenta ustawień</strong> |                                                     Następujące opcjonalne ustawienia mogą być później konfigurowane w menu <strong>Ustawienia</strong> systemu iOS.                                                      |
+    |        <strong>Kod dostępu</strong>         | Wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
+    |    <strong>Usługi lokalizacyjne</strong>    |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                  |
+    |         <strong>Przywróć</strong>         |                                                                Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji.                                                                 |
+    |   <strong>Identyfikator Apple ID i usługa iCloud</strong>   |                         Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o zalogowanie przy użyciu identyfikatora Apple ID, a ekran Aplikacje i dane umożliwi przywrócenie urządzenia z kopii zapasowej usługi iCloud.                         |
+    |  <strong>Warunki i postanowienia</strong>   |                                                   Jeśli to ustawienie zostało włączone, Asystent ustawień monituje użytkowników o zaakceptowanie warunków i postanowień firmy Apple podczas aktywacji.                                                   |
+    |        <strong>Touch ID</strong>         |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
+    |        <strong>Apple Pay</strong>        |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
+    |          <strong>Powiększenie</strong>           |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
+    |          <strong>Siri</strong>           |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
+    |     <strong>Dane diagnostyczne</strong>     |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
 
-13. Abu zapisać profil, wybierz pozycję **Utwórz**.
+
+13. Wybierz przycisk **OK**.
+
+14. Abu zapisać profil, wybierz pozycję **Utwórz**.
 
 ## <a name="connect-school-data-sync"></a>Łączenie się z usługą School Data Sync
 Opcjonalnie: program Apple School Manager obsługuje synchronizowanie danych listy uczniów z usługą Azure Active Directory (AD) przy użyciu aplikacji Microsoft School Data Sync (SDS). Z aplikacją SDS można zsynchronizować tylko jeden token. Jeśli z programem School Data Sync skonfigurujesz inny token, SDS zostanie usunięty z tokenu, który wcześniej go obejmował. Nowe połączenie spowoduje zastąpienie bieżącego tokenu. Wykonaj poniższe kroki, aby użyć aplikacji SDS w celu zsynchronizowania danych szkolnych.
@@ -164,7 +166,7 @@ Opcjonalnie: program Apple School Manager obsługuje synchronizowanie danych lis
 Teraz, gdy do usługi Intune zostało przypisane uprawnienie do zarządzania urządzeniami korzystającymi z programu Apple School Manager, możliwe jest zsynchronizowanie usługi Intune z usługą firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune.
 
 W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
-  
+
   Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
   - Każde żądanie synchronizacji ma przydzielone 15 minut na zakończenie. W tym czasie lub do momentu zakończenia żądania powodzeniem przycisk **synchronizacji** jest wyłączony.

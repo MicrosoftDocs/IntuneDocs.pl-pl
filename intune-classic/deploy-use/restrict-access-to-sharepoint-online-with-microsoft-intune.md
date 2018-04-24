@@ -1,29 +1,29 @@
 ---
-title: "Ochrona dostępu do usługi SharePoint Online"
-description: "Ochrona i kontrola dostępu do danych firmy w usłudze SharePoint Online przy użyciu dostępu warunkowego."
-keywords: 
+title: Ochrona dostępu do usługi SharePoint Online
+description: Ochrona i kontrola dostępu do danych firmy w usłudze SharePoint Online przy użyciu dostępu warunkowego.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f86508d9b187e0026a74c4e82e94cdd5a4d29c3a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2b7285c272efac8eab406393b0b896795fa5d8ed
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Ochrona dostępu do usługi SharePoint Online przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Za pomocą dostępu warunkowego usługi Microsoft Intune możesz kontrolować dostęp do plików znajdujących się w usłudze SharePoint Online.
 Dostęp warunkowy ma dwa składniki:
@@ -81,16 +81,16 @@ Istnieje możliwość ochrony dostępu do usługi SharePoint Online w przypadku 
 Obsługiwane są następujące funkcje:
 - System Windows 8.1 lub nowszy (jeśli komputery są zarejestrowane w usłudze Intune)
 - System Windows 7.0, Windows 8.1 lub Windows 10 (jeśli komputery są przyłączone do domeny)
-> [!NOTE]
->Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
+  > [!NOTE]
+  >Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
 
   - Komputery przyłączone do domeny muszą zostać skonfigurowane do [automatycznego rejestrowania](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory. Usługa rejestracji urządzeń w usłudze Azure AD zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
 
   - Jeśli zasady zostały skonfigurowane w taki sposób, aby przyłączenie do domeny było wymagane, a komputer nie został przyłączony do domeny, zostanie wyświetlony komunikat o konieczności skontaktowania się z administratorem IT.
 
   - Jeśli zasady zostały ustawione w taki sposób, aby wymagane było przyłączenie do domeny lub zgodność, a komputer nie spełnia żadnego z tych wymagań, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalacji aplikacji Portal firmy i dokonywania rejestracji.
-  >[!NOTE]
-  >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
+    >[!NOTE]
+    >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
 
 [Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
@@ -132,24 +132,24 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 > Można też utworzyć zasady dostępu warunkowego dla urządzeń z usługą Intune w konsoli zarządzania usługi Azure AD (w usłudze Azure AD zasady są określane jako **zasady dostępu warunkowego oparte na urządzeniu**). Ponadto można tworzyć inne zasady dostępu warunkowego, np. dotyczące uwierzytelniania wieloskładnikowego. Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi SharePoint Online**.
-![Zrzut ekranu przedstawiający stronę zasad usługi SharePoint Online](../media/mdm-ca-spo-policy-configuration.png)
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi SharePoint Online**.
+   ![Zrzut ekranu przedstawiający stronę zasad usługi SharePoint Online](../media/mdm-ca-spo-policy-configuration.png)
 
-2.  Wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi SharePoint Online**.
+2. Wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi SharePoint Online**.
 
-3.  W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
+3. W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
 
-    -   **Wszystkie platformy**
+   - **Wszystkie platformy**
 
-        W przypadku wybrania tego ustawienia wszystkie urządzenia próbujące uzyskać dostęp do usługi **SharePoint Online** będą musiały być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana przez usługę Intune, dostęp do usługi **SharePoint Online** zostanie zablokowany.
+     W przypadku wybrania tego ustawienia wszystkie urządzenia próbujące uzyskać dostęp do usługi **SharePoint Online** będą musiały być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana przez usługę Intune, dostęp do usługi **SharePoint Online** zostanie zablokowany.
 
-        Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform będzie wymagana rejestracja w usłudze Intune oraz zgodność, z następującymi wyjątkami:
-        *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
-        * Nieobsługiwane platformy takie jak Mac. Aplikacje korzystające z nowoczesnego uwierzytelniania pochodzące z tych platform będą jednak nadal blokowane.
+     Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform będzie wymagana rejestracja w usłudze Intune oraz zgodność, z następującymi wyjątkami:
+     *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
+     * Nieobsługiwane platformy takie jak Mac. Aplikacje korzystające z nowoczesnego uwierzytelniania pochodzące z tych platform będą jednak nadal blokowane.
 
-    -   **Określone platformy**
+   - **Określone platformy**
 
-         Zasady dostępu warunkowego są stosowane do wszystkich aplikacji klienckich korzystających z nowoczesnego uwierzytelniania na określonych platformach.
+      Zasady dostępu warunkowego są stosowane do wszystkich aplikacji klienckich korzystających z nowoczesnego uwierzytelniania na określonych platformach.
 
      Komputery z systemem Windows muszą zostać przyłączone do domeny lub zarejestrowane w usłudze Intune i być zgodne. Można ustawić następujące wymagania:
 
@@ -157,28 +157,28 @@ Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miał
 
      -   **Urządzenia muszą być zgodne.** Wybierz tę opcję, jeśli komputery mają być zarejestrowane w usłudze Intune i zgodne. Jeśli komputer nie został zarejestrowany, zostanie wyświetlony komunikat z instrukcjami dotyczącymi rejestracji.
 
-4.   W obszarze **dostępu za pomocą przeglądarki** do usług SharePoint Online i OneDrive dla Firm można zezwolić na dostęp do usługi Exchange Online tylko za pośrednictwem obsługiwanych przeglądarek: Safari (iOS) i Chrome (Android). Dostęp z innych przeglądarek będzie zablokowany. Ograniczenia platformy wybrane dla dostępu aplikacji do usługi OneDrive mają zastosowanie również w tym miejscu.
+4. W obszarze **dostępu za pomocą przeglądarki** do usług SharePoint Online i OneDrive dla Firm można zezwolić na dostęp do usługi Exchange Online tylko za pośrednictwem obsługiwanych przeglądarek: Safari (iOS) i Chrome (Android). Dostęp z innych przeglądarek będzie zablokowany. Ograniczenia platformy wybrane dla dostępu aplikacji do usługi OneDrive mają zastosowanie również w tym miejscu.
 
-  Na urządzeniach z systemem **Android** użytkownicy muszą włączyć dostęp za pomocą przeglądarki. W tym celu użytkownik musi wybrać opcję **Włączanie dostępu za pomocą przeglądarki** na zarejestrowanym urządzeniu, wykonując następujące czynności:
-  1.    Otworzyć aplikację **Portal firmy**.
-  2.    Przejść do strony **Ustawienia** za pomocą przycisku oznaczonego wielokropkiem (…) lub przycisku menu urządzenia.
-  3.    Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**.
-  4.    W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
+   Na urządzeniach z systemem **Android** użytkownicy muszą włączyć dostęp za pomocą przeglądarki. W tym celu użytkownik musi wybrać opcję **Włączanie dostępu za pomocą przeglądarki** na zarejestrowanym urządzeniu, wykonując następujące czynności:
+   1.    Otworzyć aplikację **Portal firmy**.
+   2.    Przejść do strony **Ustawienia** za pomocą przycisku oznaczonego wielokropkiem (…) lub przycisku menu urządzenia.
+   3.    Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**.
+   4.    W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
 
-  Na platformach **iOS** i **Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia. Urządzenie wyświetli użytkownikowi certyfikat wraz z monitem o wybranie certyfikatu, jak przedstawiono na zrzutach ekranu poniżej. Użytkownik musi wybrać ten certyfikat przed rozpoczęciem korzystania z przeglądarki.
+   Na platformach **iOS** i **Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia. Urządzenie wyświetli użytkownikowi certyfikat wraz z monitem o wybranie certyfikatu, jak przedstawiono na zrzutach ekranu poniżej. Użytkownik musi wybrać ten certyfikat przed rozpoczęciem korzystania z przeglądarki.
 
-  **iOS**
+   **iOS**
 
-  ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+   ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+   **Android**
 
-  ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu z systemem Android](../media/mdm-browser-ca-android-cert-prompt.png)
-5.  W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, które zostaną objęte zasadami. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
+   ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu z systemem Android](../media/mdm-browser-ca-android-cert-prompt.png)
+5. W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, które zostaną objęte zasadami. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
 
-6.  W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
+6. W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
 
-7.  Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
+7. Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
 
 Nie musisz wdrażać zasad dostępu warunkowego, ponieważ zostają one natychmiast zastosowane.
 
@@ -193,5 +193,5 @@ Wybierz dowolną grupę urządzeń przenośnych. Następnie na karcie **Urządze
 
 -   **Urządzenia, które są zarejestrowane w usłudze AAD i są zgodne**. Te urządzenia mogą uzyskiwać dostęp do usługi SharePoint Online.
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Ochrona dostępu do poczty e-mail i usług O365 przy użyciu usługi Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)

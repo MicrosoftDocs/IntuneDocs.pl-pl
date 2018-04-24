@@ -1,30 +1,29 @@
 ---
-title: "Tworzenie i wdrażanie zasad ochrony aplikacji"
+title: Tworzenie i wdrażanie zasad ochrony aplikacji
 titleSuffix: Microsoft Intune
-description: "Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Microsoft Intune."
-keywords: 
+description: Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7ad60a27e32aaab49e77789364aecdc5ea7fc60
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8ffe409e376ec2d15c537fb6ac258e5b3b71cdf2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Microsoft Intune do użytkowników. W tym temacie opisano również sposób wprowadzania zmian istniejących zasad.
 
@@ -37,28 +36,28 @@ Zasady ochrony aplikacji można stosować do aplikacji działających na urządz
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
-1.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
+1. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
 2. Wybierz pozycję **Dodaj zasady**.
 
-  ![Zrzut ekranu przedstawiający blok „Dodawanie zasad”](./media/app-protection-add-policy.png)
+   ![Zrzut ekranu przedstawiający blok „Dodawanie zasad”](./media/app-protection-add-policy.png)
 
-3.  Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. W razie potrzeby dla każdej platformy można utworzyć większą liczbę zasad.
+3. Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. W razie potrzeby dla każdej platformy można utworzyć większą liczbę zasad.
 
-4.  Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami.
+4. Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami.
 5. Po wybraniu aplikacji wybierz pozycję **Wybierz**, aby zapisać swoje opcje.
 
     > [!IMPORTANT]
     > W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
 
-6.  Wybierz pozycję **Skonfiguruj wymagane ustawienia** w bloku **Dodawanie zasad**, aby otworzyć obszar **Ustawienia**.
+6. Wybierz pozycję **Skonfiguruj wymagane ustawienia** w bloku **Dodawanie zasad**, aby otworzyć obszar **Ustawienia**.
 
-    Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady relokacji danych są stosowane w przypadku przenoszenia danych do i z aplikacji. Zasady dostępu określają, jak użytkownicy końcowi uzyskują dostęp do aplikacji w kontekście roboczym.
-    Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy. Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
+   Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady relokacji danych są stosowane w przypadku przenoszenia danych do i z aplikacji. Zasady dostępu określają, jak użytkownicy końcowi uzyskują dostęp do aplikacji w kontekście roboczym.
+   Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy. Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
 
-    > [!TIP]
-    > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują.
+   > [!TIP]
+   > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują.
 
-7.  Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w okienku **Dodawanie zasad**. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
+7. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w okienku **Dodawanie zasad**. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 8. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**.
 9. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
@@ -119,6 +118,16 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 2.  Wybierz pozycję **Ustawienia zasad**, aby otworzyć okienko **Ustawienia zasad**.
 
 3.  Zmień ustawienia i wybierz ikonę **Zapisz**, aby zapisać zmiany.
+
+## <a name="target-app-protection-policies-based-on-device-management-state"></a>Zasady ochrony aplikacji docelowych oparte na stanie zarządzania urządzeniem
+W wielu organizacjach jest powszechne korzystanie przez użytkowników końcowych zarówno z urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami mobilnymi usługi Intune, takich jak urządzenia należące do firmy, jak i urządzeń niezarządzanych chronionych tylko za pomocą zasad ochrony aplikacji usługi Intune, takich jak urządzenia BYOD.
+
+Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkownika, ustawienia ochrony dla użytkownika zwyczajowo stosują się zarówno do urządzeń zarejestrowanych (zarządzanych przez rozwiązanie MDM), jak i niezarejestrowanych (niezarządzanych przez rozwiązanie MDM). Dlatego można określić zasady ochrony aplikacji usługi Intune dla zarejestrowanych lub niezarejestrowanych w usłudze Intune urządzeń z systemem iOS lub Android. Jedne zasady ochrony mogą być przeznaczone dla urządzeń niezarządzanych, w przypadku których są wdrożone ścisłe środki ochrony przed utratą danych, a inne zasady mogą być przeznaczone dla urządzeń zarządzanych przez rozwiązanie MDM, w przypadku których środki ochrony przed utratą danych mogą być mniej restrykcyjne. 
+
+Aby utworzyć te zasady, przejdź do zasad **Aplikacje mobilne** > **Ochrona aplikacji** w konsoli usługi Intune i kliknij polecenie **Dodaj zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Jeśli chcesz stosować zasady ochrony aplikacji do urządzeń zarządzanych i niezarządzanych, potwierdź, że pozycja **Przeznaczone dla wszystkich typów aplikacji** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, określ dla pozycji **Przeznaczone dla wszystkich typów aplikacji** wartość **Nie**. 
+
+> [!NOTE]
+> Informacje dotyczące obsługi zasad ochrony aplikacji stosowanych na podstawie stanu zarządzania urządzeniem przez konkretną wersję systemu iOS zawiera artykuł [MAM protection policies targeted based on management state (Zasady ochrony rozwiązania MAM stosowane na podstawie stanu zarządzania)](whats-new.md#mam-protection-policies-targeted-based-on-management-state----1665993---).
 
 ## <a name="policy-settings"></a>Ustawienia zasad
 Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących linków:

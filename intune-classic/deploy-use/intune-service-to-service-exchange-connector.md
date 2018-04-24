@@ -15,27 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 78b4e91fd61bb79c2a3a6d86d5a79c39b320cc5e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 8af8d79d6f8ea9037c6bef532ad45185830c358d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-intune-service-to-service-connector-for-exchange-online"></a>Konfigurowanie łącznika Intune Service to Service Connector dla programu Exchange Online
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Dzięki tym informacjom można połączyć usługę Microsoft Intune i usługę Exchange Online lub nową usługę Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej jest w wersji **nowej**, czy **starszej**, skontaktuj się z menedżerem ds. klientów. Usługa Intune obsługuje tylko jedno połączenie programu Exchange Connector dowolnego typu na subskrypcję.
 
 ## <a name="service-to-service-connector-requirements"></a>Wymagania dotyczące łącznika Service To Service Connector
 Łącznik **Service To Service Connector** obsługuje tylko usługę Exchange Online lub usługę Exchange Online w wersji dedykowanej i nie ma wymagań dotyczących infrastruktury lokalnej.
 
-|Wymaganie|Więcej informacji|
-|---------------|--------------------|
-|Usługa Exchange Online — skonfigurowana i uruchomiona|[Usługa Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
-|Urząd zarządzania urządzeniami przenośnymi| [Ustawianie usługi Microsoft Intune jako urzędu zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#step-2-set-mdm-authority)|
-|Wersja programu Microsoft Exchange|Usługa Exchange Online lub nowa usługa Exchange Online w wersji dedykowanej|/intune/users-permissions-add
-|Synchronizacja z usługą Active Directory|Zanim będzie możliwe użycie łącznika Intune Connector, należy [skonfigurować synchronizację z usługą Active Directory](/intune/users-permissions-add), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.|
+
+|              Wymaganie               |                                                                                                            Więcej informacji                                                                                                            |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Usługa Exchange Online — skonfigurowana i uruchomiona |                                                                                 [Usługa Exchange Online](https://technet.microsoft.com/library/jj200580.aspx)                                                                                 |
+|   Urząd zarządzania urządzeniami przenośnymi   |                                                       [Ustawianie usługi Microsoft Intune jako urzędu zarządzania urządzeniami przenośnymi](prerequisites-for-enrollment.md#step-2-set-mdm-authority)                                                       |
+|       Wersja programu Microsoft Exchange       |                                                                                      Usługa Exchange Online lub nowa usługa Exchange Online w wersji dedykowanej                                                                                      |
+|    Synchronizacja z usługą Active Directory    | Zanim będzie możliwe użycie łącznika Intune Connector, należy [skonfigurować synchronizację z usługą Active Directory](/intune/users-permissions-add), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory. |
 
 ### <a name="exchange-cmdlet-requirements"></a>Wymagania poleceń cmdlet programu Exchange
 

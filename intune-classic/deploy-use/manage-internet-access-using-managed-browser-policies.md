@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 559866fff63b0ad77a43ce337adede5cd8b27302
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Program Managed Browser to aplikacja służąca do przeglądania sieci Web, którą można wdrożyć w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.
 
@@ -99,52 +99,52 @@ Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i kor
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>Format adresu URL dla dozwolonych i zablokowanych adresów URL
 Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych, których można używać podczas określania adresów URL na listach witryn dozwolonych i zablokowanych:
 
--   Symbol wieloznaczny (**&#42;**) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
+- Symbol wieloznaczny (**&#42;**) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
 
--   Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https** .
+- Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https** .
 
--   W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
+- W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
 
-    -   Port 80 dla protokołu http
+  -   Port 80 dla protokołu http
 
-    -   Port 443 dla protokołu https
+  -   Port 443 dla protokołu https
 
-    Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy **http&colon;//www&period;contoso&period;com:*;** oraz **http&colon;//www&period;contoso&period;com: /*;** nie są obsługiwane.
+  Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy <strong>http&colon;//www&period;contoso&period;com:*;</strong> i <strong>http&colon;//www&period;contoso&period;com: /*;</strong> nie są obsługiwane.
 
--   W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
+- W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
 
-|Adres URL|Szczegóły|Jest zgodny z|Nie jest zgodny z|
-    |-------|---------------|-----------|------------------|
-    |http://www.contoso.com|Zgodny z pojedynczą stroną|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
-    |http://contoso.com|Zgodny z pojedynczą stroną|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
-    |http://www.contoso.com/&#42;|Zgodny ze wszystkimi adresami URL rozpoczynającymi się od www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
-    |http://&#42;.contoso.com/&#42;|Zgodny ze wszystkimi domenami podrzędnymi w domenie contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
-    |http://www.contoso.com/images|Zgodny z pojedynczym folderem|www.contoso.com/images|www.contoso.com/images/dogs|
-    |http://www.contoso.com:80|Zgodny z pojedynczą stroną z użyciem numeru portu|http://www.contoso.com:80||
-    |https://www.contoso.com|Zgodny z pojedynczą, bezpieczną stroną|https://www.contoso.com|http://www.contoso.com|
-    |http://www.contoso.com/images/&#42;|Zgodny z pojedynczym folderem ze wszystkimi podfolderami|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
+|                  Adres URL                  |                     Szczegóły                      |                                                Jest zgodny z                                                |                                Nie jest zgodny z                                 |
+|---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|        http://www.contoso.com         |              Zgodny z pojedynczą stroną               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
+|          http://contoso.com           |              Zgodny z pojedynczą stroną               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
+|    <http://www.contoso.com/&#42>;     | Zgodny ze wszystkimi adresami URL rozpoczynającymi się od www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|    http://&#42;.contoso.com/&#42;     |     Zgodny ze wszystkimi domenami podrzędnymi w domenie contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
+|     http://www.contoso.com/images     |             Zgodny z pojedynczym folderem              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|       http://www.contoso.com:80       |  Zgodny z pojedynczą stroną z użyciem numeru portu   |                                       http://www.contoso.com:80                                       |                                                                               |
+|        https://www.contoso.com        |          Zgodny z pojedynczą, bezpieczną stroną           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
+| <http://www.contoso.com/images/&#42>; |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
 
--   Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
+- Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
 
-    -   &#42;.com
+  - &#42;.com
 
-    -   &#42;.contoso/&#42;
+  - &#42;.contoso/&#42;
 
-    -   www.contoso.com/&#42;images
+  - www.contoso.com/&#42;images
 
-    -   www.contoso.com/&#42;images&#42;pigs
+  - www.contoso.com/&#42;images&#42;pigs
 
-    -   www.contoso.com/page&#42;
+  - www.contoso.com/page&#42;
 
-    -   Adresy IP
+  - Adresy IP
 
-    -   https://&#42;
+  - https://&#42;
 
-    -   http://&#42;
+  - http://&#42;
 
-    -   http://www.contoso.com:&#42;
+  - http://www.contoso.com:&#42;
 
-    -   http://www.contoso.com: /&#42;
+  - http://www.contoso.com: /&#42;
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Jak rozwiązywane są konflikty pozycji list witryn dozwolonych i zablokowanych
 Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi konflikt ustawień, analizowane są listy trybu (zezwalania lub blokowania) oraz adresów URL. W przypadku konfliktu stosowane są następujące rozwiązania:

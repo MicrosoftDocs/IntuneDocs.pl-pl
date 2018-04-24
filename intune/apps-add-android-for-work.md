@@ -1,29 +1,29 @@
 ---
-title: "Przypisywanie aplikacji do urządzeń z programem Android for Work"
+title: Przypisywanie aplikacji do urządzeń z programem Android for Work
 titlesuffix: Microsoft Intune
-description: "Dowiedz się, jak synchronizować aplikacje ze sklepu Google Play for Work Store i przypisywać je do urządzeń z programem Android for Work."
-keywords: 
+description: Dowiedz się, jak synchronizować aplikacje ze sklepu Google Play for Work Store i przypisywać je do urządzeń z programem Android for Work.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e3b5a742fb480cf9c4c77106b849eebb95ad2439
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 4168f78bff8937ca403cdb75b1028954cbbebd6f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Jak przypisywać aplikacje do urządzeń z programem Android for Work za pomocą usługi Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Android for Work to program dla urządzeń z systemem Android. Wszystkie aplikacje instalowane na urządzeniach z programem Android for Work pochodzą ze sklepu Google Play for Work. Przypisywanie aplikacji do urządzeń z programem Android for Work przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja pojawia się w węźle **Licencjonowane aplikacje** w witrynie Azure Portal. Z poziomu tej witryny możesz zarządzać przypisywaniem aplikacji w taki sam sposób, jak przypisywaniem dowolnych innych aplikacji.
 
@@ -43,7 +43,7 @@ Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure 
 
     ![Przykład — zatwierdzanie aplikacji w sklepie Google Play for Work](media/approve.png)</br>
     
-  Zostanie otwarte okno aplikacji z monitem o nadanie uprawnień dla aplikacji do wykonywania poszczególnych operacji. 
+   Zostanie otwarte okno aplikacji z monitem o nadanie uprawnień dla aplikacji do wykonywania poszczególnych operacji. 
 
 4. Wybierz pozycję **Zatwierdź**, aby zaakceptować uprawnienia aplikacji i kontynuować.</br>
 
@@ -60,7 +60,7 @@ Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure 
 Jeśli aplikacja ze sklepu została zatwierdzona, ale nie jest widoczna w węźle **Licencjonowane aplikacje** w obciążeniu **Aplikacje mobilne**, wymuś natychmiastową synchronizację w następujący sposób:
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Android for Work** w sekcji **Konfiguracja**.
 5. W okienku Android for Work wybierz pozycję **Synchronizuj**. Strona zaktualizuje godzinę i stan ostatniej synchronizacji.

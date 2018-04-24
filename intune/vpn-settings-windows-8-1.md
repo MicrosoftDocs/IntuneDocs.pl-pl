@@ -1,27 +1,27 @@
 ---
-title: "Ustawienia sieci VPN w usłudze Microsoft Intune dla urządzeń z systemem Windows 8.1"
-titleSuffix: 
-description: "Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 8.1."
-keywords: 
+title: Ustawienia sieci VPN w usłudze Microsoft Intune dla urządzeń z systemem Windows 8.1
+titleSuffix: ''
+description: Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 8.1.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ced3e03fa337034076af75c7984a30cd75105bb
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: cbcc3be31a6d9de7ce87ea5b25b8c1a2c42b47cd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Ten artykuł zawiera informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń sieci VPN na urządzeniach z systemem Windows 8.1.
 
@@ -61,26 +61,22 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 
 ```
     <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
-
 ```
 
 **Przykład dotyczący CheckPoint Mobile VPN:**
 ```
     <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
-
 ```
 
 **Przykład dotyczący SonicWall Mobile Connect:**
 ```
     <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
-
 ```
 
 **Przykład dotyczący F5 Edge Client:**
 
 ```
     <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
-
 ```
 
 Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
@@ -89,7 +85,7 @@ Więcej informacji na temat tworzenia niestandardowych poleceń XML zawiera doku
 ## <a name="proxy-settings"></a>Ustawienia serwera proxy
 
 - **Automatycznie wykrywaj ustawienia proxy** — umożliwia określenie, czy urządzenia mają automatycznie wykrywać ustawienia połączenia w przypadku, gdy serwer sieci VPN wymaga połączenia za pośrednictwem serwera proxy. Więcej informacji znajduje się w dokumentacji systemu Windows Server.
-- **Skrypt konfiguracji automatycznej** — umożliwia skonfigurowanie serwera proxy przy użyciu pliku. W polu **Adres URL serwera proxy** wprowadź adres URL (na przykład **http://proxy.contoso.com**), który zawiera plik konfiguracji.
+- **Skrypt konfiguracji automatycznej** — umożliwia skonfigurowanie serwera proxy przy użyciu pliku. Podaj **adres URL serwera proxy**, np. **http://proxy.contoso.com**, który zawiera plik konfiguracji.
 - **Użyj serwera proxy** — włącz tę opcję, jeśli chcesz ręcznie wprowadzić ustawienia serwera proxy.
     - **Adres** — wprowadź adres serwera proxy (jako adres IP).
     - **Numer portu** — wprowadź numer portu skojarzony z serwerem proxy.

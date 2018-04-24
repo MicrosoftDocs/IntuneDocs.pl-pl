@@ -1,27 +1,27 @@
 ---
-title: "Uaktualnianie urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs"
-description: "Utwórz profil urządzenia w usłudze Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do nowszych wersji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile."
-keywords: 
+title: Uaktualnianie urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
+description: Utwórz profil urządzenia w usłudze Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do nowszych wersji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8084f1b2fbd513de596bd97f4ffec995b6f7aac4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 994ab8e7d955d18b293e4d9e9661e0c44baaaa1f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-10-edition-upgrade-profile-in-intune"></a>Konfigurowanie profilu uaktualniania wersji systemu Windows 10 w usłudze Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Skonfiguruj profil uaktualniania w usłudze Intune, aby automatycznie uaktualnić urządzenia z uruchomioną wersją systemu Windows 10 do innej wersji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania.
 
@@ -122,16 +122,16 @@ The following lists provide the supported upgrade paths for the Windows 10 editi
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia ograniczeń dotyczących urządzeń
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 3. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
 4. Wprowadź wartość w polach **Nazwa** i **Opis** dotyczących profilu uaktualnienia wersji.
 5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Uaktualnienie wersji**.
 7. W ramach właściwości **Uaktualnienie wersji** wprowadź następujące ustawienia:
-  - **Wersja, do której chcesz uaktualnić** — z listy rozwijanej wybierz wersję systemu — Windows 10 Desktop, Windows 10 Holographic lub Windows 10 Mobile — do której zostaną uaktualnione docelowe urządzenia.
-  - **Klucz produktu** — wprowadź otrzymany od firmy Microsoft klucz produktu, który może zostać użyty do uaktualnienia wszystkich docelowych urządzeń z systemem Windows 10 Desktop. 
+   - **Wersja, do której chcesz uaktualnić** — z listy rozwijanej wybierz wersję systemu — Windows 10 Desktop, Windows 10 Holographic lub Windows 10 Mobile — do której zostaną uaktualnione docelowe urządzenia.
+   - **Klucz produktu** — wprowadź otrzymany od firmy Microsoft klucz produktu, który może zostać użyty do uaktualnienia wszystkich docelowych urządzeń z systemem Windows 10 Desktop. 
     Po utworzeniu zasad zawierających klucz produktu nie jest możliwe zaktualizowanie takiego klucza i jest on ukryty ze względów bezpieczeństwa. Aby zmienić klucz produktu, ponownie wprowadź cały klucz.
-  - **Plik licencji** — wybierz pozycję **Przeglądaj**, aby wybrać plik licencji otrzymany od firmy Microsoft. Ten plik licencji otrzymany od firmy Microsoft zawiera informacje o licencji dla wersji Windows Holographic lub Windows 10 Mobile, do której są uaktualniane docelowe urządzenia.
+   - **Plik licencji** — wybierz pozycję **Przeglądaj**, aby wybrać plik licencji otrzymany od firmy Microsoft. Ten plik licencji otrzymany od firmy Microsoft zawiera informacje o licencji dla wersji Windows Holographic lub Windows 10 Mobile, do której są uaktualniane docelowe urządzenia.
 8. Po zakończeniu wybierz pozycję **Utwórz**, aby zapisać zmiany.
 
 Profil zostanie utworzony i wyświetlony na liście profilów.

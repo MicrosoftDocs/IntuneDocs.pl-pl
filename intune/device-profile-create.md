@@ -14,15 +14,15 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e5070052c0d4cce3cfd81a7bae259bc7dfb22e7f
-ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
+ms.openlocfilehash: 3d46960e6ea7e2ae9bed6c0016ddc309bd15f572
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
@@ -31,33 +31,33 @@ ms.lasthandoff: 03/20/2018
 
 3. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę nowego profilu.
-    - **Opis:** wprowadź opis profilu. (Jest to opcjonalne, ale zalecane).
-    - **Platforma**: wybierz typ platformy:  
+   - **Nazwa**: wprowadź opisową nazwę nowego profilu.
+   - **Opis:** wprowadź opis profilu. (Jest to opcjonalne, ale zalecane).
+   - **Platforma**: wybierz typ platformy:  
 
-        - **Android**
-        - **Android for Work**
-        - **iOS**
-        - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 lub nowszy**
-        - **Windows 10 lub nowszy**
+       - **Android**
+       - **Android for Work**
+       - **iOS**
+       - **macOS**
+       - **Windows Phone 8.1**
+       - **Windows 8.1 lub nowszy**
+       - **Windows 10 lub nowszy**
 
-    - **Typ profilu**: wybierz typ, który ma zostać utworzony. Lista zależy od wybranej platformy.
-    - **Ustawienia**: ustawienia poszczególnych typów profilów opisano w następujących tematach:
+   - **Typ profilu**: wybierz typ, który ma zostać utworzony. Lista zależy od wybranej platformy.
+   - **Ustawienia**: ustawienia poszczególnych typów profilów opisano w następujących tematach:
 
-        -  [Ustawienia funkcji urządzeń](device-features-configure.md)
-        -  [Ustawienia ograniczeń dotyczących urządzeń](device-restrictions-configure.md)
-        -  [Ustawienia poczty e-mail](email-settings-configure.md)
-        -  [Ustawienia sieci VPN](vpn-settings-configure.md)
-        -  [Ustawienia sieci Wi-Fi](wi-fi-settings-configure.md)
-        -  [Ustawienia uaktualniania wersji systemu Windows 10](edition-upgrade-configure-windows-10.md)
-        -  [Ustawienia certyfikatów](certificates-configure.md)
-        -  [Ustawienia usługi Windows Information Protection](windows-information-protection-configure.md)
-        -  [Ustawienia rozwiązań dla edukacji](education-settings-configure.md)
-        -  [Ustawienia niestandardowe](custom-settings-configure.md)
+       -  [Ustawienia funkcji urządzeń](device-features-configure.md)
+       -  [Ustawienia ograniczeń dotyczących urządzeń](device-restrictions-configure.md)
+       -  [Ustawienia poczty e-mail](email-settings-configure.md)
+       -  [Ustawienia sieci VPN](vpn-settings-configure.md)
+       -  [Ustawienia sieci Wi-Fi](wi-fi-settings-configure.md)
+       -  [Ustawienia uaktualniania wersji systemu Windows 10](edition-upgrade-configure-windows-10.md)
+       -  [Ustawienia certyfikatów](certificates-configure.md)
+       -  [Ustawienia usługi Windows Information Protection](windows-information-protection-configure.md)
+       -  [Ustawienia rozwiązań dla edukacji](education-settings-configure.md)
+       -  [Ustawienia niestandardowe](custom-settings-configure.md)
 
-    ![Zrzut ekranu opcji Utwórz profil](./media/create-device-profile.png)
+     ![Zrzut ekranu opcji Utwórz profil](./media/create-device-profile.png)
 
 4. Po zakończeniu wybierz pozycję **Utwórz**.
 

@@ -1,29 +1,29 @@
 ---
 title: Aplikacje dla systemu iOS z zasadami ochrony aplikacji
 titlesuffix: Microsoft Intune
-description: "Dowiedz się, czego oczekiwać od aplikacji systemu iOS zawierającej zasady ochrony."
-keywords: 
+description: Dowiedz się, czego oczekiwać od aplikacji systemu iOS zawierającej zasady ochrony.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 13833d41603e24e4471f0bb5fdda40d000f29a34
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 2804003a0f1acac56ecaae5e24dcf34b4eb0c256
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Dowiedz się więcej o środowisku użytkownika aplikacji systemu iOS z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane wyłącznie podczas korzystania z aplikacji w kontekście służbowym. Na przykład w przypadku uzyskiwania dostępu do aplikacji przy użyciu konta służbowego lub w przypadku uzyskiwania dostępu do plików przechowywanych w firmowej lokalizacji w usłudze OneDrive.
 ##  <a name="accessing-apps"></a>Uzyskiwanie dostępu do aplikacji
@@ -47,7 +47,7 @@ W przypadku aplikacji obsługujących wiele tożsamości usługa Intune stosuje 
 Usługa Intune obsługuje wdrażanie zasad ochrony aplikacji na koncie tylko jednego użytkownika dla każdego urządzenia.
 
 * W zależności od używanej aplikacji drugi użytkownik może być blokowany na urządzeniu. Jednak we wszystkich przypadkach zasady dotyczą tylko pierwszego użytkownika, który pobierze zasady ochrony aplikacji.
-  * Programy **Microsoft Word**, **Excel** i **PowerPoint** nie będą blokować dostępu do dodatkowego konta użytkownika. Niemniej zasady ochrony aplikacji nie będą mieć wpływu na konto użytkownika.
+  * Programy **Microsoft Word**, **Excel** i **PowerPoint** nie będą blokować dostępu do dodatkowego konta użytkownika. Zasady ochrony aplikacji nie będą mieć jednak wpływu na konto użytkownika.
 
   * W przypadku **aplikacji OneDrive i Outlook** możesz używać tylko jednego konta służbowego.  Dodawanie większej liczby kont służbowych w tych aplikacjach jest zablokowane.  Jednak możesz usunąć użytkownika z urządzenia, a następnie dodać innego użytkownika do urządzenia.
 

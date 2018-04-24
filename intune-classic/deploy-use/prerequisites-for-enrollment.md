@@ -1,29 +1,29 @@
 ---
-title: "Wymagania wstępne dotyczące rejestrowania urządzeń mobilnych"
-description: "Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych."
-keywords: 
+title: Wymagania wstępne dotyczące rejestrowania urządzeń mobilnych
+description: Skonfiguruj wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi (MDM, mobile device management) i przygotuj się do rejestrowania różnych systemów operacyjnych.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9d02a822dc9a403806657f36ae0ac4bfad8246d0
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 57dfc1bf2765de6c2e02352caca58f3859742fd6
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Wymagania wstępne dotyczące zarządzania urządzeniami przenośnymi w usłudze Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Wykonanie poniższych czynności pozwala umożliwić pracownikom rejestrowanie ich urządzeń przenośnych w usłudze Intune. Te same kroki umożliwiają zarządzanie urządzeniami należącymi do firmy.
 
@@ -39,7 +39,7 @@ Wykonanie poniższych czynności pozwala umożliwić pracownikom rejestrowanie i
 
 Szukasz usługi Intune z programem Configuration Manager?
 > [!div class="button"]
-[Zobacz dokumentację programu SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+> [Zobacz dokumentację programu SCCM >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
 ## <a name="step-1-enable-connections"></a>Krok 1. Włączanie połączeń
 
@@ -80,21 +80,22 @@ Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowi
 
 Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie Kontakt z działem IT w portalu firmy na komputerach użytkowników. Zasady zachowania poufności informacji są wyświetlane, gdy użytkownik kliknie odpowiedni link.
 
-|Nazwa pola|Długość maksymalna|Więcej informacji|
-    |----------|------------------------|----------------|
-    |Nazwa firmy|40|Ta nazwa jest wyświetlana jako tytuł portalu firmy. **Uwaga**: tylko znaki alfanumeryczne. To pole nie obsługuje znaków specjalnych.|
-    |Imię i nazwisko osoby kontaktowej w dziale IT|40|Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**.|
-    |Numer telefonu działu IT|20|Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**.|
-    |Adres e-mail działu IT|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@domainname.com**.|
-    |Dodatkowe informacje|120|Te informacje są wyświetlane na stronie **Kontakt z działem IT**.|
-    |Adres URL zasad zachowania poufności informacji firmy|79|Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Należy wprowadzić prawidłowy adres URL w formacie https://www.contoso.com.|
+
+|          Nazwa pola           | Długość maksymalna |                                                                                       Więcej informacji                                                                                        |
+|-------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Nazwa firmy          |     40     |                Ta nazwa jest wyświetlana jako tytuł portalu firmy. <strong>Uwaga</strong>: tylko znaki alfanumeryczne. To pole nie obsługuje znaków specjalnych.                |
+|  Imię i nazwisko osoby kontaktowej w dziale IT   |     40     |                                                                Ta nazwa jest wyświetlana na stronie <strong>Kontakt z działem IT</strong>.                                                                |
+|  Numer telefonu działu IT   |     20     |                                                           Ten numer kontaktowy jest wyświetlany na stronie <strong>Kontakt z działem IT</strong>.                                                           |
+|  Adres e-mail działu IT  |     40     |             Ten adres kontaktowy jest wyświetlany na stronie <strong>Kontakt z działem IT</strong>. Należy wprowadzić prawidłowy adres e-mail w formacie <strong>alias@domainname.com</strong>.              |
+|    Dodatkowe informacje     |    120     |                                                            Te informacje są wyświetlane na stronie <strong>Kontakt z działem IT</strong>.                                                             |
+| Adres URL zasad zachowania poufności informacji firmy |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Musisz podać prawidłowy adres URL w postaci https://www.contoso.com. |
 
 ### <a name="support-contacts"></a>Kontakt z pomocą techniczną
 Witryna sieci Web z pomocą techniczną wyświetlana w portalu firmy umożliwia użytkownikom dostęp do pomocy online.
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
     |----------|------------------------|----------------|
-    |Adres URL witryny sieci Web pomocy technicznej|150|Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL należy wpisać w formacie https://www.contoso.com. Jeśli nie określisz adresu URL, w Portalu firmy w witrynie pomocy technicznej na stronie **Kontakt z działem IT** nie będą wyświetlane żadne informacje.|
+    |Adres URL witryny sieci Web pomocy technicznej|150|Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL musi mieć postać https://www.contoso.com. Jeśli nie określisz adresu URL, w Portalu firmy w witrynie pomocy technicznej na stronie **Kontakt z działem IT** nie będą wyświetlane żadne informacje.|
     |Nazwa witryny sieci Web|40|Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli zostanie określony tylko adres URL witryny sieci Web pomocy technicznej, ale nie zostanie podana przyjazna nazwa, w portalu firmy na stronie **Kontakt z działem IT** będzie wyświetlany komunikat **Przejdź do witryny sieci Web działu IT**.|
 
 
@@ -109,7 +110,7 @@ Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu
     |Wybierz tło dla aplikacji Portal firmy|To ustawienie ma wpływ wyłącznie na tło w aplikacji Portal firmy systemu.|
 
 
-Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal firmy** w konsoli administracyjnej, aby wyświetlić witrynę sieci Web Portal firmy. Tych linków nie można zmienić. Po zalogowaniu użytkownika wyświetlane linki odpowiadają subskrypcjom w portalu firmy.
+Po zapisaniu zmian można użyć linków dostępnych na dole strony **Portal firmy** w konsoli administracyjnej, aby wyświetlić witrynę sieci Web Portal firmy. Tych linków nie można zmienić. Po zalogowaniu użytkownika wyświetlane linki odpowiadają subskrypcjom w Portalu firmy.
 
 ## <a name="step-5-assign-user-licenses"></a>Krok 5. Przypisywanie licencji użytkownika
 
@@ -199,7 +200,7 @@ Usuń subskrypcję usługi Intune, klikając prawym przyciskiem myszy subskrypcj
 
 #### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Resetowanie urzędu certyfikacji MDM z poziomu usługi Office 365 do programu Configuration Manager
 
-1. Przejdź do witryny [https://protection.office.com](https://protection.office.com).
+1. Przejdź na stronę [https://protection.office.com](https://protection.office.com).
 2. Wybierz kartę **Zasady zabezpieczeń**, a następnie wybierz pozycję **Zarządzanie urządzeniami**.
 3. Wycofaj wszystkie urządzenia, wybierając polecenie **Selektywne czyszczenie**. Nie należy wycofywać urządzenia, na którym przeprowadza się opisane czynności. Jeśli selektywne czyszczenie jest wyłączone, nie są wymagane dalsze działania.
 4. Wybierz kartę **Zasady zabezpieczeń**, a następnie wybierz pozycję **Zasady zabezpieczeń urządzeń**.

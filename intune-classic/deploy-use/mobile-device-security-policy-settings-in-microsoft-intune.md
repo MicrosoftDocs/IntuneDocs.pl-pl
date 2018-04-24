@@ -1,29 +1,29 @@
 ---
-title: "Ustawienia zasad zabezpieczeń urządzeń przenośnych"
-description: "Usługa Intune umożliwia skonfigurowanie wielu ustawień, które możesz wdrożyć na urządzeniach zarządzanych w Twojej organizacji."
-keywords: 
+title: Ustawienia zasad zabezpieczeń urządzeń przenośnych
+description: Usługa Intune umożliwia skonfigurowanie wielu ustawień, które możesz wdrożyć na urządzeniach zarządzanych w Twojej organizacji.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 11/02/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fa86e50ebf7e65be0ce8ace65e2cb0bc7e38658e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 83536a4d9858454505a84a2e394ace1119255049
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mobile-device-security-policy-settings-in-microsoft-intune"></a>Ustawienia zasad zabezpieczeń urządzeń przenośnych w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!IMPORTANT]
 > Usługa Microsoft Intune obsługuje teraz oddzielne zasady konfiguracji dla każdej platformy urządzeń. Te zasady zawierają najbardziej aktualne ustawienia, których można użyć. Zasady zabezpieczeń urządzenia przenośnego można stosować w dalszym ciągu, a wszystkie istniejące wdrożenia będą nadal działać. Należy jednak możliwie jak najszybciej zaplanować migrację do nowych zasad konfiguracji, ponieważ zasady zabezpieczeń urządzenia przenośnego zostaną w przyszłości usunięte.
@@ -48,32 +48,34 @@ Możesz tworzyć i wdrażać zasady zabezpieczeń urządzeń przenośnych dla na
 
 ## <a name="security-settings"></a>Ustawienia zabezpieczeń
 
-|Nazwa ustawienia|Windows 8.1 i Windows RT 8.1|Windows RT|Windows Phone 8 i Windows Phone 8.1|iOS|Systemy Android i Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Nie|Nie|Tak|Tak|Tak|
-|**Wymagany typ hasła**<br /><br />To ustawienie określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub wyłącznie liczbowe.|Tak|Tak|Tak|Tak|Nie|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**<br /><br />Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. To ustawienie określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę znaków symbolicznych, które muszą być zawarte w haśle.|Tak|Tak|Tak|Tak|Nie|
-|**Minimalna długość hasła**|Tak|Tak|Tak|Tak|Tak|
-|**Zezwalaj na proste hasła**<br /><br />Proste hasła zawierają ciągi „0000” i „1234”.|Nie|Nie|Tak|Tak|Nie|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Tak|Tak|Tak|Tak|Tak|
-|**Liczba minut braku aktywności przed wyłączeniem ekranu**<sup>1</sup>|Tak|Tak|Tak|Tak|Tak|
-|**Dni do wygaśnięcia hasła**|Tak|Tak|Tak|Tak|Tak|
-|**Pamiętaj historię haseł**|Tak|Tak|Tak|Tak|Tak|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Tak|Tak|Tak|Tak|Tak|
-|**Jakość hasła**|Nie|Nie|Nie|Nie|Tak|
-|**Zezwalaj na hasło obrazkowe i numer PIN**|Tak|Tak|Nie|Nie|Nie|
-|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**|Nie|Nie|Nie|Tak|Nie|
-|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Nie|Nie|Nie|iOS 7 i nowsze|Nie|
+|                                                                                                                                                                                        Nazwa ustawienia                                                                                                                                                                                         | Windows 8.1 i Windows RT 8.1 | Windows RT | Windows Phone 8 i Windows Phone 8.1 |       iOS       | Systemy Android i Samsung KNOX Standard |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|---------------------------------------|-----------------|-----------------------------------|
+|                                                                                                                                                                <strong>Wymagaj hasła do odblokowania urządzeń przenośnych</strong>                                                                                                                                                                 |               Nie               |     Nie     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                 <strong>Wymagany typ hasła</strong><br /><br />To ustawienie określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub wyłącznie liczbowe.                                                                                                                 |              Tak               |    Tak     |                  Tak                  |       Tak       |                Nie                 |
+| <strong>Wymagany typ hasła — Minimalna liczba zestawów znaków</strong><br /><br />Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. To ustawienie określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę znaków symbolicznych, które muszą być zawarte w haśle. |              Tak               |    Tak     |                  Tak                  |       Tak       |                Nie                 |
+|                                                                                                                                                                          <strong>Minimalna długość hasła</strong>                                                                                                                                                                           |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                               <strong>Zezwalaj na proste hasła</strong><br /><br />Proste hasła zawierają ciągi „0000” i „1234”.                                                                                                                                                |               Nie               |     Nie     |                  Tak                  |       Tak       |                Nie                 |
+|                                                                                                                                                  <strong>Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia</strong>                                                                                                                                                   |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                                         <strong>Liczba minut braku aktywności przed wyłączeniem ekranu</strong><sup>1</sup>                                                                                                                                                          |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                                                         <strong>Dni do wygaśnięcia hasła</strong>                                                                                                                                                                         |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                                                         <strong>Pamiętaj historię haseł</strong>                                                                                                                                                                          |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                              <strong>Pamiętaj historię haseł</strong> — <strong>Zapobiegaj ponownemu używaniu poprzednich haseł</strong>                                                                                                                                              |              Tak               |    Tak     |                  Tak                  |       Tak       |                Tak                |
+|                                                                                                                                                                              <strong>Jakość hasła</strong>                                                                                                                                                                              |               Nie               |     Nie     |                  Nie                   |       Nie        |                Tak                |
+|                                                                                                                                                                       <strong>Zezwalaj na hasło obrazkowe i numer PIN</strong>                                                                                                                                                                       |              Tak               |    Tak     |                  Nie                   |       Nie        |                Nie                 |
+|                                                                                                                                                             <strong>Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła</strong>                                                                                                                                                              |               Nie               |     Nie     |                  Nie                   |       Tak       |                Nie                 |
+|                                                                                                                                                                          <strong>Zezwalaj na odblokowanie na podstawie linii papilarnych</strong>                                                                                                                                                                          |               Nie               |     Nie     |                  Nie                   | iOS 7 i nowsze |                Nie                 |
+
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Liczba minut braku aktywności przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła** są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 Po wdrożeniu zasad długości hasła na urządzeniach z systemem Windows RT użytkownicy będą zmuszeni do zresetowania swojego hasła nawet wtedy, gdy ich bieżące hasło spełnia wymagania zasad.
 
 ## <a name="encryption-settings"></a>Ustawienia szyfrowania
 
-|Nazwa ustawienia|Windows 8.1 i Windows RT 8.1|Windows RT|Windows Phone 8 i Windows Phone 8.1|iOS|Systemy Android i Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup><br /><br />Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie **Wymagaj hasła do odblokowania urządzeń przenośnych**.|Tak|Nie|Tak|Nie|Tak|
-|**Wymagaj szyfrowania na kartach pamięci**<br /><br />To ustawienie dotyczy urządzeń, które są także zarządzane przez program Exchange ActiveSync.|n/d|n/d|n/d <br />Aplikacje i skojarzone dane są automatycznie szyfrowane.|n/d|Tak|
+|                                                                                                                                     Nazwa ustawienia                                                                                                                                     | Windows 8.1 i Windows RT 8.1 | Windows RT |              Windows Phone 8 i Windows Phone 8.1              | iOS | Systemy Android i Samsung KNOX Standard |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|-----------------------------------------------------------------|-----|-----------------------------------|
+| <strong>Wymagaj szyfrowania na urządzeniu przenośnym</strong><sup>1</sup><br /><br />Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość <strong>Tak</strong>.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie <strong>Wymagaj hasła do odblokowania urządzeń przenośnych</strong>. |              Tak               |     Nie     |                               Tak                               | Nie  |                Tak                |
+|                                                                    <strong>Wymagaj szyfrowania na kartach pamięci</strong><br /><br />To ustawienie dotyczy urządzeń, które są także zarządzane przez program Exchange ActiveSync.                                                                     |              n/d               |    n/d     | n/d <br />Aplikacje i skojarzone dane są automatycznie szyfrowane. | n/d |                Tak                |
+
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1:
 
 -   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na wszystkich urządzeniach [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](http://support.microsoft.com/kb/3013816) 

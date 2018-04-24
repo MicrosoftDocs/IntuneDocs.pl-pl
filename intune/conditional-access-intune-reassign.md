@@ -1,25 +1,25 @@
 ---
-title: "Migracja dostępu warunkowego do witryny Azure Portal"
+title: Migracja dostępu warunkowego do witryny Azure Portal
 titlesuffix: Microsoft Intune
-description: "Ponowne przypisywanie zasad dostępu warunkowego utworzonych wcześniej w klasycznym portalu usługi Intune do witryny Azure Portal."
-keywords: 
+description: Ponowne przypisywanie zasad dostępu warunkowego utworzonych wcześniej w klasycznym portalu usługi Intune do witryny Azure Portal.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80c8c994486dd340c9037817854eb35b32ab3a9e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -183,8 +183,8 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal należy stopniowo wyłączać zasady dostępu warunkowego utworzone wcześniej w portalu klasycznym usługi Intune. Ponadto może być konieczne użycie tej samej grupy zabezpieczeń w celu zastosowania zasad dostępu warunkowego utworzonych w witrynie Azure Portal.
 
-> [!NOTE] 
-    > Przed wyłączeniem zasad dostępu warunkowego w portalu klasycznym usługi Intune zobacz sekcję [Przed rozpoczęciem](#before-you-begin) dostępną na początku tego tematu.
+> [!NOTE]
+> Przed wyłączeniem zasad dostępu warunkowego w portalu klasycznym usługi Intune zobacz sekcję [Przed rozpoczęciem](#before-you-begin) dostępną na początku tego tematu.
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Aby wyłączyć zasady dostępu warunkowego
 

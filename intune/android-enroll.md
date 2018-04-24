@@ -1,29 +1,29 @@
 ---
-title: "Rejestrowanie urządzeń z systemem Android w usłudze Intune"
+title: Rejestrowanie urządzeń z systemem Android w usłudze Intune
 titlesuffix: Microsoft Intune
-description: "Informacje o sposobie rejestrowania urządzeń z systemem Android w usłudze Intune."
-keywords: 
+description: Informacje o sposobie rejestrowania urządzeń z systemem Android w usłudze Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d74f59f1df0a4a4e1285b58d7ac5b3677d3c5e48
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako administrator usługi Intune możesz zarządzać urządzeniami z systemem Android, w tym urządzeniami z systemem Samsung Knox Standard. Możesz również zarządzać profilem służbowym [na urządzeniach z programem Android for Work](#enable-enrollment-of-android-for-work-devices).
 
@@ -47,6 +47,8 @@ Aby włączyć zarządzanie profilem służbowym na urządzeniach [obsługujący
 
 W przypadku rejestrowania urządzeń z programem Android for Work za pomocą konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) na jednym koncie można zarejestrować maksymalnie 10 urządzeń.
 
+Aby uzyskać więcej informacji, zobacz artykuł [Data Intune sends to Google (Dane wysyłane przez usługę Intune do firmy Google)](data-intune-sends-to-google.md).
+
 ## <a name="add-android-for-work-binding-for-intune"></a>Dodawanie powiązania programu Android for Work dla usługi Intune
 
 > [!NOTE]
@@ -55,15 +57,18 @@ W przypadku rejestrowania urządzeń z programem Android for Work za pomocą kon
 1. **Konfigurowanie funkcji zarządzania urządzeniami mobilnymi w usłudze Intune**<br>
 Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządzeniami mobilnymi przez [skonfigurowanie jako urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md) usługi **Microsoft Intune**.
 2. **Konfigurowanie powiązania programu Android for Work**<br>
-    Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
-
-   a. W okienku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work** i wybierz pozycję **Zarządzany sklep Google Play — Konfiguruj**, aby otworzyć witrynę internetową sklepu Google Play dotyczącą programu Android for Work. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
+    
+   a. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal), wybierz pozycje **Rejestrowanie urządzenia** > **Rejestrowanie systemu Android** > **Zarządzany sklep Google Play**.
    ![Ekran rejestracji programu Android for Work](./media/android-work-bind.png)
 
-   b. **Logowanie do usługi Google**<br>
+   b. Wybierz pozycję **Zgadzam się**, aby udzielić firmie Microsoft uprawnień do [wysłania informacji o użytkowniku i urządzeniu do firmy Google](data-intune-sends-to-google.md). 
+   
+   c. Wybierz pozycję **Uruchom usługę Google, aby połączyć teraz** w celu otwarcia witryny internetowej aplikacji Android for Work w sklepie Google Play. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
+  
+   d. **Logowanie do usługi Google**<br>
    Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Jest to konto Google używane przez administratorów IT organizacji do zarządzania aplikacjami i ich publikowania w konsoli Play for Work. Możesz użyć istniejącego konta Google lub utworzyć nowe konto.  Wybrane konto nie może być skojarzone z domeną G-Suite.
 
-   c. **Podawanie szczegółów dotyczących organizacji**<br>
+   e. **Podawanie szczegółów dotyczących organizacji**<br>
    Podaj nazwę firmy w polu **Organization name** (Nazwa organizacji). W polu **Enterprise mobility management (EMM) provider** (Dostawca usługi zarządzania mobilnością w przedsiębiorstwie (EMM)) powinna być wyświetlona wartość **Microsoft Intune**. Wyraź zgodę na umowę programu Android for Work, a następnie wybierz pozycję **Confirm** (Potwierdź). Twoje żądanie zostanie przetworzone.
 
 ## <a name="specify-android-for-work-enrollment-settings"></a>Określanie ustawień rejestracji programu Android for Work
@@ -110,3 +115,14 @@ Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. W
 
 2. **Wyrażanie zgody na usunięcie powiązania programu Android for Work**<br>
   Wybierz pozycję **Tak**, aby usunąć powiązanie i wyrejestrować wszystkie urządzenia z programem Android for Work z usługi Intune.
+
+## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Środowisko użytkownika końcowego podczas rejestrowania urządzenia z rozwiązaniem Samsung Knox
+Podczas rejestrowania urządzeń z rozwiązaniem Samsung Knox należy uwzględnić kilka zagadnień:
+-   Nawet jeśli żadne zasady nie wymagają numeru PIN, urządzenie musi mieć co najmniej czterocyfrowy numer PIN, aby można było je zarejestrować. Jeśli urządzenie nie ma numeru PIN, dla użytkownika zostanie wyświetlony monit z żądaniem jego utworzenia.
+-   Nie ma żadnych interakcji użytkownika dla certyfikatów WPJ (Workplace Join Certificate).
+-   Monit zawiera informacje o rejestracji w usłudze i możliwościach aplikacji.
+-   Monit zawiera informacje o rejestracji urządzenia z rozwiązaniem Knox i o możliwościach rozwiązania Knox.
+-   Jeśli zasady szyfrowania są wymuszane, użytkownicy muszą ustawić sześcioznakowe hasło złożone jako kod dostępu urządzenia.
+-   Nie są wyświetlane żadne dodatkowe monity dotyczące instalowania certyfikatów wypchniętych przez usługę na potrzeby dostępu do zasobów firmy.
+- Niektóre starsze urządzenia z rozwiązaniem Knox monitują użytkownika w związku z dodatkowymi certyfikatami używanymi na potrzeby dostępu do zasobów firmy.
+- Jeśli instalowanie certyfikatu WPJ na urządzeniu Samsung Mini nie powiedzie się z błędem **Nie znaleziono certyfikatu** lub **Nie można zarejestrować urządzenia**, zainstaluj najnowsze aktualizacje oprogramowania układowego firmy Samsung.

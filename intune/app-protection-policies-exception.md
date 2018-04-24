@@ -1,29 +1,29 @@
 ---
-title: "Wyjątki od zasad transferu danych dla aplikacji"
+title: Wyjątki od zasad transferu danych dla aplikacji
 titleSuffix: Microsoft Intune
-description: "Tworzenie wyjątków od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune."
-keywords: 
+description: Tworzenie wyjątków od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1e37e78f7272b0f53f974eccb20c7e02574a9a9
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 1910334093a416933912c9cdeedac85e36d66e92
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Jak utworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako administrator możesz tworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune. Wyjątek pozwala wybrać konkretne niezarządzane aplikacje, które mogą przesyłać dane do i z zarządzanych aplikacji. Niezarządzane aplikacje, które zostały dodane do listy wyjątków, muszą być uznane za zaufane przez dział IT. 
 
@@ -39,6 +39,10 @@ W przypadku zasad przeznaczonych dla systemu iOS możesz skonfigurować wyjątki
 
 ## <a name="android-data-transfer-exceptions"></a>Wyjątki transferu danych w systemie Android
 W przypadku zasad przeznaczonych dla systemu Android możesz skonfigurować wyjątki transferu danych według nazwy pakietu aplikacji. Możesz sprawdzić stronę sklepu **Google Play** aplikacji, dla której chcesz dodać wyjątek, aby odnaleźć nazwę pakietu aplikacji. Aby uzyskać dodatkowe informacje dotyczące wyjątków transferu danych w systemie Android, zobacz [Ustawienia zasad ochrony aplikacji dla systemu Android — Wyjątki w transferze danych](app-protection-policy-settings-android.md#data-transfer-exemptions).
+
+
+>[!TIP]
+> Identyfikator pakietu aplikacji możesz znaleźć, przechodząc do aplikacji w sklepie Google Play. Identyfikator pakietu znajduje się w adresie URL strony aplikacji. Na przykład identyfikator pakietu aplikacji Microsoft Word to **com.microsoft.office.word**.
 
 ### <a name="example"></a>Przykład
 Po dodaniu pakietu **Webex** jako wyjątku do zasad transferu danych funkcji MAM linki Webex w wiadomości e-mail zarządzanego programu Outlook mogą być otwierane bezpośrednio w aplikacji Webex. Transfer danych jest nadal ograniczony w innych niezarządzanych aplikacjach.

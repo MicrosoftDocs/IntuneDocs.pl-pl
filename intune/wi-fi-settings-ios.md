@@ -1,27 +1,27 @@
 ---
-title: "Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem iOS"
-keywords: 
+title: Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
+titleSuffix: ''
+description: Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem iOS
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fcb21657d8abe1c966aa924993f733b039302268
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9abba211216e13f303a82c7bf3fe028672040d94
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Ustawienia sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem iOS.
 
@@ -35,7 +35,7 @@ W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w us
 - **Ustawienia serwera proxy** — wybierz pozycję:
     - **Brak** — nie są konfigurowane żadne ustawienia serwera proxy.
     - **Ręczne** — uzupełnij pole **Adres serwera proxy** (jako adres IP) oraz wprowadź skojarzony z nim **numer portu**.
-    - **Automatyczne** — użyj pliku do konfiguracji serwera proxy. W polu **Adres URL serwera proxy** wprowadź adres URL (na przykład **http://proxy.contoso.com**), który zawiera plik konfiguracji.
+    - **Automatyczne** — użyj pliku do konfiguracji serwera proxy. Podaj **adres URL serwera proxy**, np. **http://proxy.contoso.com**, który zawiera plik konfiguracji.
 
 ## <a name="wi-fi-settings-for-basic-profiles-only"></a>Ustawienia sieci Wi-Fi tylko dla profilów podstawowych
 
@@ -74,7 +74,8 @@ W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w us
 #### <a name="client-authentication"></a>Uwierzytelnianie klienta
 
 
-|Nazwa ustawienia|Więcej informacji|Zastosowania|
-|--------------|-------------|----------|
-|**Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**|Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.|Jako typ protokołu EAP wybrano wartość **EAP-TLS**|
-|**Metoda uwierzytelniania**|Wybierz metodę uwierzytelniania dla połączenia:<br>- **Certyfikaty**, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- **Nazwa użytkownika i hasło**, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji **Nazwa użytkownika i hasło** należy skonfigurować ustawienia:<br><br>-  **Metoda inna niż EAP (tożsamość wewnętrzna)**, a następnie wybrać sposób uwierzytelniania połączenia:<br>- **Brak**<br>- **Hasło nieszyfrowane (PAP)**<br>- **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP wersja 2 (MS-CHAP v2)**<br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br>**i**<br><br>- **Prywatność tożsamości (tożsamość zewnętrzna)** — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.|Jako typ protokołu EAP wybrano wartość **EAP-TTLS** lub *
+|                                     Nazwa ustawienia                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Więcej informacji                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                  Zastosowania                  |
+|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| <strong>Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)</strong> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Wybierz profil certyfikatu SCEP lub PKCS używany do uwierzytelniania połączenia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |    Jako typ protokołu EAP wybrano wartość <strong>EAP-TLS</strong>    |
+|                        <strong>Metoda uwierzytelniania</strong>                        | Wybierz metodę uwierzytelniania dla połączenia:<br>- <strong>Certyfikaty</strong>, aby wybrać certyfikat klienta dla protokołu SCEP lub PKCS, który jest certyfikatem tożsamości przesłanym do serwera.<br><br>- <strong>Nazwa użytkownika i hasło</strong>, aby określić inną metodę uwierzytelniania. <br><br>W przypadku wybrania opcji <strong>Nazwa użytkownika i hasło</strong> należy skonfigurować ustawienia:<br><br>-  <strong>Metoda inna niż EAP (tożsamość wewnętrzna)</strong>, a następnie wybrać sposób uwierzytelniania połączenia:<br>- <strong>Brak</strong><br>- <strong>Hasło nieszyfrowane (PAP)</strong><br>- <strong>Protokół uwierzytelniania typu Challenge Handshake (CHAP)</strong><br>- <strong>Microsoft CHAP (MS-CHAP)</strong><br>- <strong>Microsoft CHAP wersja 2 (MS-CHAP v2)</strong><br>Dostępne opcje zależą od wybranego typu protokołu EAP.<br><br><strong>i</strong><br><br>- <strong>Prywatność tożsamości (tożsamość zewnętrzna)</strong> — podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu. | Jako typ protokołu EAP wybrano wartość <strong>EAP-TTLS</strong> lub * |
+

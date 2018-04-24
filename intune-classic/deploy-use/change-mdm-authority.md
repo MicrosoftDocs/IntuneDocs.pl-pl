@@ -14,11 +14,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc73befb46f1f159d9a8c023bb5604517b9f73f4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-mdm-authority"></a>Zmiana urzędu MDM
 Począwszy od programu Configuration Manager w wersji 1610, można zmienić urząd MDM bez konieczności kontaktowania się z pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Ten temat zawiera instrukcje dotyczące zmiany istniejącego dzierżawcy usługi Microsoft Intune skonfigurowanego w usłudze Intune i zmiany ustawienia urzędu MDM z usługi **Microsoft Intune** (autonomicznej) na program **Configuration Manager** (rozwiązanie hybrydowe) bez konieczności wyrejestrowywania i ponownej rejestracji istniejących zarządzanych urządzeń.
@@ -76,16 +76,16 @@ Jeśli masz urządzenia z systemem iOS, musisz skonfigurować certyfikat usługi
 
 1. **Pobierz żądanie podpisania certyfikatu**
 
-    1. W konsoli programu Configuration Manager przejdź do pozycji**Administracja** &gt; **Usługi w chmurze** &gt; **Subskrypcje usługi Microsoft Intune** i wybierz pozycję **Utwórz żądanie certyfikatu APNs**, aby otworzyć okno dialogowe **Zgłoś żądanie podpisania certyfikatu usługi wypychania powiadomień firmy Apple**.  
-    2. Kliknij przycisk**Przeglądaj** i przejdź do ścieżki, w której ma zostać zapisany plik nowego żądania podpisania certyfikatu (csr). Zapisz lokalnie plik żądania podpisania certyfikatu (CSR).  
-    3. Kliknij przycisk **Pobierz**. Nowy plik .csr usługi Microsoft Intune zostanie pobrany i zapisany przez program Configuration Manager.   
+   1. W konsoli programu Configuration Manager przejdź do pozycji**Administracja** &gt; **Usługi w chmurze** &gt; **Subskrypcje usługi Microsoft Intune** i wybierz pozycję **Utwórz żądanie certyfikatu APNs**, aby otworzyć okno dialogowe **Zgłoś żądanie podpisania certyfikatu usługi wypychania powiadomień firmy Apple**.  
+   2. Kliknij przycisk**Przeglądaj** i przejdź do ścieżki, w której ma zostać zapisany plik nowego żądania podpisania certyfikatu (csr). Zapisz lokalnie plik żądania podpisania certyfikatu (CSR).  
+   3. Kliknij przycisk **Pobierz**. Nowy plik .csr usługi Microsoft Intune zostanie pobrany i zapisany przez program Configuration Manager.   
 
-    > [!IMPORTANT]
-    > Musisz pobrać nowe żądanie podpisania certyfikatu. Nie używaj istniejącego pliku, w przeciwnym razie operacja zakończy się niepowodzeniem.  
+      > [!IMPORTANT]
+      > Musisz pobrać nowe żądanie podpisania certyfikatu. Nie używaj istniejącego pliku, w przeciwnym razie operacja zakończy się niepowodzeniem.  
 
-2.  Przejdź do [portalu Apple Push Certificates](http://go.microsoft.com/fwlink/?LinkId=269844) i zaloguj się przy użyciu **tego samego** identyfikatora Apple ID, który został wcześniej użyty do utworzenia i odnowienia certyfikatu usługi APNs używanego w autonomicznej usłudze Intune.
+2. Przejdź do [portalu Apple Push Certificates](http://go.microsoft.com/fwlink/?LinkId=269844) i zaloguj się przy użyciu **tego samego** identyfikatora Apple ID, który został wcześniej użyty do utworzenia i odnowienia certyfikatu usługi APNs używanego w autonomicznej usłudze Intune.
 
-    ![Strona logowania portalu Apple Push Certificates](../media/mdm-change-apns-portal.png)
+   ![Strona logowania portalu Apple Push Certificates](../media/mdm-change-apns-portal.png)
 
 3. Wybierz certyfikat usługi APNs używany w autonomicznej usłudze Intune, a następnie kliknij pozycję**Odnów**.
 

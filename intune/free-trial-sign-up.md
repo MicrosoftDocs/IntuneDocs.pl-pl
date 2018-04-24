@@ -14,11 +14,11 @@ ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 389981fc207371d64064872235fc9babde6b3f6a
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: b68c2d93071d545bf25f7810a6908099988fb902
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Rejestrowanie w celu skorzystania z bezpłatnej wersji próbnej usługi Microsoft Intune
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/17/2018
 W tym artykule opisano kolejne kroki tworzenia konta w celu korzystania z wersji próbnej autonomicznej usługi Intune w witrynie Azure Portal.
 
 1. Odwiedź stronę [Rejestracja w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) i wypełnij formularz rejestracji, aby zamówić subskrypcję wersji próbnej.
-* Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](/intune/account-sign-up).
+2. Jeśli masz konto służbowe i chcesz z niego skorzystać w celu uzyskania wersji próbnej usługi Intune, zamiast tego wykonaj [te instrukcje logowania](/intune/account-sign-up).
 
 * Jeśli większość operacji IT i użytkowników korzysta z innych ustawień regionalnych, możesz wybrać odpowiednie ustawienia regionalne w obszarze **Where's your company located?** (Gdzie znajduje się Twoja firma?).
 

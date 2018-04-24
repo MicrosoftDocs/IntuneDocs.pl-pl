@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a70b2707b38534826577bfe47bcd8e575c09a71f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0eef4e2ae3792c601bd4a32cd041d7d041091cca
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-the-exchange-connector"></a>Rozwiązywanie problemów z programem Exchange Connector
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W tym temacie opisano sposób rozwiązywania problemów, które mogą być związane z programem Intune Exchange Connector.
 
@@ -36,8 +36,8 @@ Sprawdź konfigurację programu Exchange Connector, a następnie zobacz, czy pro
 - Podczas konfigurowania programu Exchange Connector należy określić serwer (CAS) znajdujący się możliwie najbliżej serwera hostującego program Exchange Connector. Opóźnienie komunikacji między serwerem CAS i programem Exchange Connector może spowodować opóźnienia odnajdywania urządzeń, zwłaszcza w przypadku korzystania z usługi O365 w wersji dedykowanej.
 - Należy pamiętać, że istnieje opóźnienie czasowe między synchronizacjami programu Exchange Connector z serwerem CAS programu Exchange. Pełna synchronizacja jest wykonywana raz dziennie, a co około dwie godziny odbywa się synchronizacja różnicowa (szybka). Istnieje prawdopodobieństwo, że użytkownik z nowo zarejestrowanym urządzeniem doświadczy opóźnienia podczas uzyskiwania dostępu.
 - 
-## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Urządzenie z programem Exchange ActiveSync nie zostało wykryte za pomocą programu Exchange
-Sprawdź, czy program Exchange Connector jest synchronizowany z serwerem Exchange. Aby to zrobić, zlokalizuj dzienniki pełnej synchronizacji lub synchronizacji różnicowej. Zobacz dzienniki programu Exchange Connector. Jeśli synchronizacja pełna lub różnicowa została pomyślnie ukończona od czasu dołączenia urządzenia, nie może być ona źródłem problemu. Jeśli synchronizacja nie została wykonana, zbierz dzienniki synchronizacji i dołącz je do żądania pomocy technicznej.
+  ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Urządzenie z programem Exchange ActiveSync nie zostało wykryte za pomocą programu Exchange
+  Sprawdź, czy program Exchange Connector jest synchronizowany z serwerem Exchange. Aby to zrobić, zlokalizuj dzienniki pełnej synchronizacji lub synchronizacji różnicowej. Zobacz dzienniki programu Exchange Connector. Jeśli synchronizacja pełna lub różnicowa została pomyślnie ukończona od czasu dołączenia urządzenia, nie może być ona źródłem problemu. Jeśli synchronizacja nie została wykonana, zbierz dzienniki synchronizacji i dołącz je do żądania pomocy technicznej.
 
 - Jeśli użytkownik nie ma licencji usługi Intune, program Exchange Connector nie wykryje urządzeń tego użytkownika.
 - Jeśli podstawowy adres SMTP użytkownika różni się od jego nazwy UPN w usłudze AAD, program Exchange Connector nie wykryje żadnych urządzeń dla tego użytkownika usługi Intune/AAD. Popraw podstawowy adres SMTP.

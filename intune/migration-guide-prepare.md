@@ -14,11 +14,11 @@ ms.technology: ''
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 52af99e79b9c97fc38dc911fb55070180667b7a1
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: f7bf390bd581e3edee1c94f446e89b16163cadee
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Faza 1: Przygotowanie usługi Microsoft Intune do zarządzania urządzeniami przenośnymi (MDM)
 
@@ -55,23 +55,23 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 ### <a name="what-is-your-device-security-policy"></a>Jakie zasady zabezpieczeń urządzeń są używane?
 
--   Czy jest potrzebne szyfrowanie na poziomie urządzenia?
+- Czy jest potrzebne szyfrowanie na poziomie urządzenia?
 
--   Jaka jest bieżąca długość kodów dostępu/kodów PIN do urządzeń?
+- Jaka jest bieżąca długość kodów dostępu/kodów PIN do urządzeń?
 
--   Czy konieczne jest wyłączenie funkcji urządzeń lub nałożenie ograniczeń na wybrane elementy ich działania? Przy użyciu profilów konfiguracji urządzeń można kontrolować różne ustawienia specyficzne dla danej platformy — można na przykład:
-      - Wyłączyć aparat fotograficzny
-      - Wymusić tryb korzystania tylko z jednej aplikacji<br/>
+- Czy konieczne jest wyłączenie funkcji urządzeń lub nałożenie ograniczeń na wybrane elementy ich działania? Przy użyciu profilów konfiguracji urządzeń można kontrolować różne ustawienia specyficzne dla danej platformy — można na przykład:
+    - Wyłączyć aparat fotograficzny
+    - Wymusić tryb korzystania tylko z jednej aplikacji<br/>
 
--   Jakie rodzaje uwierzytelniania muszą być obsługiwane? Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
+- Jakie rodzaje uwierzytelniania muszą być obsługiwane? Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
   - Usługa Intune może aprowizować certyfikaty z profilami dostępu do zasobów dla zarejestrowanych urządzeń.
-    -   Jaka infrastruktura kluczy publicznych (PKI) musi być obsługiwana?
-<br></br>
--   Czy obsługa wirtualnych sieci prywatnych (VPN) odbywa się na poziomie aplikacji czy urządzenia?
+  -   Jaka infrastruktura kluczy publicznych (PKI) musi być obsługiwana?
+  <br></br>
+- Czy obsługa wirtualnych sieci prywatnych (VPN) odbywa się na poziomie aplikacji czy urządzenia?
 
-    -   Intune może udostępniać konfiguracje sieci VPN dla innych dostawców sieci VPN.
-<br/><br/>
--   Czy jest dopuszczalne stosowanie tymczasowych wyjątków dla niektórych wymagań w celu uniknięcia przestoju? Czy urządzenia z dostępem muszą zawsze spełniać wszystkie wymagania dotyczące zabezpieczeń?
+  -   Intune może udostępniać konfiguracje sieci VPN dla innych dostawców sieci VPN.
+  <br/><br/>
+- Czy jest dopuszczalne stosowanie tymczasowych wyjątków dla niektórych wymagań w celu uniknięcia przestoju? Czy urządzenia z dostępem muszą zawsze spełniać wszystkie wymagania dotyczące zabezpieczeń?
 
 ## <a name="next-steps"></a>Następne kroki
 Przejrzyj te [analizy przypadków](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune), aby zapoznać się z procesem oceny wymagań w zakresie zarządzania urządzeniami przenośnymi w organizacjach z różnych branż.

@@ -1,24 +1,24 @@
 ---
 title: Policy
 titlesuffix: Microsoft Intune
-description: "Temat referencyjny dotyczący kategorii Zasady kolekcji jednostek w interfejsie API magazynu danych usługi Microsoft Intune."
-keywords: "Magazyn danych usługi Intune"
+description: Temat referencyjny dotyczący kategorii Zasady kolekcji jednostek w interfejsie API magazynu danych usługi Microsoft Intune.
+keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c5546c686a51170c8c854252cddb048685c6b2d2
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 0cfeffd4cb466d8bcfc2da072e7e6c028a4e0c8a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-policy-entities"></a>Dokumentacja jednostek zasad
 
@@ -157,10 +157,12 @@ PolicyKey|Klucz zasad; można go połączyć z zasadami w celu otrzymania jednos
 
 Poniższa tabela zawiera liczbę użytkowników w stanie Sukces, Oczekiwanie, Niepowodzenie lub Błąd na dzień. Liczba odzwierciedla dane dla profilów typów zasad. Jeśli na przykład użytkownik jest w stanie Sukces dla wszystkich przypisanych mu zasad, zwiększa to w danym dniu licznik powodzeń o 1. Jeśli do użytkownika są przypisane dwa profile, jeden w stanie Sukces i drugi w stanie Błąd, uwzględniany jest użytkownik w stanie Błąd. Jednostka PolicyUserActivity przedstawia liczbę użytkowników w określonym stanie w danym dniu z 30 ostatnich dni.
 
-|Właściwość  |Opis  |Przykład  |
-|---------|---------|---------|
-|DateKey|Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych.|20160703|
-|Oczekiwanie|Liczba unikatowych urządzeń w stanie Oczekiwanie.|123|
-|Sukces|Liczba unikatowych urządzeń w stanie Sukces.|12|
-PolicyKey|Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName.|Plan bazowy systemu Windows 10|
-|Error|Liczba unikatowych urządzeń w stanie Błąd.|10|
+
+| Właściwość  |                                         Opis                                         |       Przykład       |
+|-----------|---------------------------------------------------------------------------------------------|---------------------|
+|  DateKey  | Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |      20160703       |
+|  Oczekiwanie  |                         Liczba unikatowych urządzeń w stanie Oczekiwanie.                          |         123         |
+| Sukces |                         Liczba unikatowych urządzeń w stanie Sukces.                          |         12          |
+| PolicyKey |                Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName.                 | Plan bazowy systemu Windows 10 |
+|   Error   |                          Liczba unikatowych urządzeń w stanie Błąd.                           |         10          |
+

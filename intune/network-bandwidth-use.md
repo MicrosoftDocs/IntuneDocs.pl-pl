@@ -1,29 +1,29 @@
 ---
-title: "Wymagania dotyczące sieci i szczegóły przepustowości dla usługi Microsoft Intune"
-titlesuffix: 
-description: "Zapoznaj się z wymaganiami dotyczącymi konfiguracji sieci i szczegółami przepustowości dla usługi Intune."
-keywords: 
+title: Wymagania dotyczące sieci i szczegóły przepustowości dla usługi Microsoft Intune
+titlesuffix: ''
+description: Zapoznaj się z wymaganiami dotyczącymi konfiguracji sieci i szczegółami przepustowości dla usługi Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b21c4421914294e84bae637e489065c5e4410839
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c161d1ca120d5a0210cffca01e781f1ae9206fe4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Niniejsze wskazówki pomagają administratorom usługi Intune poznać wymagania sieciowe dla usługi Intune. Informacje te zawierają wymagania dotyczące przepustowości oraz adres IP i ustawienia portu potrzebne do ustawień serwera proxy.
 
@@ -58,11 +58,13 @@ Serwer proxy pamięci podręcznej, który odbiera żądania zawartości od klien
 
 Poniżej przedstawiono typowe ustawienia serwera proxy, który buforuje zawartość dla klientów usługi Intune.
 
-|Ustawienie|Zalecana wartość|Szczegóły|
-|-----------|---------------------|-----------|
-|Rozmiar pamięci podręcznej|Od 5 GB do 30 GB|Wartość zależy od liczby komputerów klienckich w sieci i używanej konfiguracji. Aby zapobiec przedwczesnemu usuwaniu plików, dostosuj rozmiar pamięci podręcznej środowiska.|
-|Rozmiar pamięci podręcznej pojedynczego pliku|950 MB|To ustawienie może nie być dostępne na wszystkich serwerach proxy pamięci podręcznej.|
-|Typy buforowanych obiektów|HTTP<br /><br />HTTPS<br /><br />BITS|Pakiety usługi Intune to pliki CAB pobierane przez Usługę inteligentnego transferu w tle (BITS) za pośrednictwem protokołu HTTP.|
+
+|          Ustawienie           |           Zalecana wartość           |                                                                                                  Szczegóły                                                                                                  |
+|----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Rozmiar pamięci podręcznej         |             Od 5 GB do 30 GB             | Wartość zależy od liczby komputerów klienckich w sieci i używanej konfiguracji. Aby zapobiec przedwczesnemu usuwaniu plików, dostosuj rozmiar pamięci podręcznej środowiska. |
+| Rozmiar pamięci podręcznej pojedynczego pliku |                950 MB                 |                                                                     To ustawienie może nie być dostępne na wszystkich serwerach proxy pamięci podręcznej.                                                                     |
+|   Typy buforowanych obiektów    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Pakiety usługi Intune to pliki CAB pobierane przez Usługę inteligentnego transferu w tle (BITS) za pośrednictwem protokołu HTTP.                                               |
+
 Informacje dotyczące korzystania z serwera proxy w celu buforowania zawartości można znaleźć w dokumentacji serwera proxy.
 
 ### <a name="use-background-intelligent-transfer-service-on-computers"></a>Korzystanie z usługi inteligentnego transferu (BITS) w tle na komputerach
@@ -159,14 +161,16 @@ Poniższe tabele zawierają listę portów i usług, do których uzyskuje dostę
 |fef.msuc05.manage.microsoft.com|52.230.16.180|
 
 ### <a name="apple-device-network-information"></a>Informacje o sieci urządzeń firmy Apple
-| Nazwa hosta  | Adres URL (adres IP/podsieć) | Protokół | Port | Urządzenie |
-| --- | --- | --- | --- | --- |
-|  Konsola administracyjna  | gateway.push.apple.com (17.0.0.0/8) | TCP | 2195 | Apple iOS i macOS |
-| Konsola administracyjna  | feedback.push.apple.com(17.0.0.0/8) | TCP | 2196 | Apple iOS i macOS |
-| Konsola administracyjna  | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple iOS i macOS  |
-| Serwer PI  | gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8) | TCP | 2195, 2196 | Do obsługi wiadomości w chmurze dla systemu iOS i macOS firmy Apple. |
-| Usługi urządzenia  | gateway.push.apple.com | TCP | 2195 | Apple  |
-| Usługi urządzenia  | feedback.push.apple.com | TCP | 2196 | Apple  |
-| Usługi urządzenia  | Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple  |
-| Urządzenia (Internet/Wi-Fi) | #-courier.push.apple.com(17.0.0.0/8) | TCP | 5223 i 443 | Tylko Apple. &#39;#&#39; jest liczbę losową z zakresu od 0 do 200. |
-| Urządzenia (Internet/Wi-Fi) | phobos.apple.comocsp.apple.comax.itunes.apple.com | HTTP/HTTPS | 80 lub 443 | Tylko Apple |
+
+|         Nazwa hosta         |                                        Adres URL (adres IP/podsieć)                                        |  Protokół  |     Port     |                          Urządzenie                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
+|      Konsola administracyjna       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS i macOS                    |
+|      Konsola administracyjna       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS i macOS                    |
+|      Konsola administracyjna       | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net |    HTTP    |      80      |                    Apple iOS i macOS                    |
+|        Serwer PI         |                gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8)                 |    TCP     |  2195, 2196  |         Do obsługi wiadomości w chmurze dla systemu iOS i macOS firmy Apple.          |
+|     Usługi urządzenia      |                                        gateway.push.apple.com                                         |    TCP     |     2195     |                           Apple                           |
+|     Usługi urządzenia      |                                        feedback.push.apple.com                                        |    TCP     |     2196     |                           Apple                           |
+|     Usługi urządzenia      |   Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net   |    HTTP    |      80      |                           Apple                           |
+| Urządzenia (Internet/Wi-Fi) |                                 #-courier.push.apple.com(17.0.0.0/8)                                  |    TCP     | 5223 i 443 | Tylko Apple. &#39;#&#39; jest liczbę losową z zakresu od 0 do 200. |
+| Urządzenia (Internet/Wi-Fi) |                           phobos.apple.comocsp.apple.comax.itunes.apple.com                           | HTTP/HTTPS |  80 lub 443   |                        Tylko Apple                         |
+

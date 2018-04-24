@@ -15,11 +15,11 @@ ms.assetid: 73DF3B90-6D52-4EF6-AFFD-1873A18C7421
 ms.reviewer: dariusz
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 74c6868caace323699e4c84ddc90278dadb56b6a
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: bd4ddf9712746cb97886e94e728b5a31a26f8786
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-intune-management-extension"></a>Dokumentacja rozszerzenia do zarządzania usługi Intune
 
@@ -51,10 +51,12 @@ Jednostka **IntuneManagementExtensionHealthState** zawiera listę wszystkich mo�
 Jednostka **IntuneManagementExtension** zawiera listę kondycji jednostki IntuneManagementExtension na każdym urządzeniu z systemem Windows 10 dziennie.
 Dane są zachowywane przez ostatnie 60 dni. 
 
-| Właściwość  | Opis | Przykład |
-|---------|------------|--------|
-| DateKey |Unikatowy identyfikator daty. | 123 |
-| TenantKey |Unikatowy identyfikator dzierżawy. | 456 |
-| DeviceKey |Unikatowy identyfikator urządzenia. | 789 |
-| ExtensionVersionKey |Unikatowy identyfikator wersji jednostki IntuneManagementExtension. | 1 |
-| ExtensionStateKey|Unikatowy identyfikator kondycji. | 2 |
+
+|      Właściwość       |                         Opis                         | Przykład |
+|---------------------|-------------------------------------------------------------|---------|
+|       DateKey       |               Unikatowy identyfikator daty.                |   123   |
+|      TenantKey      |              Unikatowy identyfikator dzierżawy.               |   456   |
+|      DeviceKey      |              Unikatowy identyfikator urządzenia.               |   789   |
+| ExtensionVersionKey | Unikatowy identyfikator wersji jednostki IntuneManagementExtension. |    1    |
+|  ExtensionStateKey  |             Unikatowy identyfikator kondycji.              |    2    |
+

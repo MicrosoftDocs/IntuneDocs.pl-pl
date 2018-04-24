@@ -1,29 +1,29 @@
 ---
-title: "Tworzenie zasad zgodności w usłudze Microsoft Intune dla urządzeń z systemem macOS"
-titleSuffix: 
-description: "Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem macOS w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne."
-keywords: 
+title: Tworzenie zasad zgodności w usłudze Microsoft Intune dla urządzeń z systemem macOS
+titleSuffix: ''
+description: Utwórz zasady zgodności urządzeń w usłudze Microsoft Intune dla urządzeń z systemem macOS w celu określenia wymagań, które urządzenie musi spełniać, aby było zgodne.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d6252680e64067e6d12530e0226632a1c5db7d28
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Tworzenie zasad zgodności dla urządzeń z systemem macOS za pomocą usługi Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zasady zgodności urządzeń w usłudze Intune dla systemu macOS określają reguły i ustawienia, które urządzenia z systemem macOS muszą spełnić, aby zostały uznane za zgodne. Tych zasad można używać z dostępem warunkowym, aby zezwalać na dostęp do zasobów firmy lub go blokować. Można także uzyskiwać raporty urządzeń i podejmować działania w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune.
 
@@ -43,9 +43,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 | --- | --- |
 | **Konfiguracja kodu PIN lub hasła** | Skorygowane |   
 | **Szyfrowanie urządzenia** | Skorygowane (przez ustawienie kodu PIN) |
-| **Profil e-mail** | Kwarantanna |
-|**Minimalna wersja systemu operacyjnego** | Kwarantanna |
-| **Maksymalna wersja systemu operacyjnego** | Kwarantanna |  
+| **Profil e-mail** | Poddane kwarantannie |
+|**Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
+| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |  
 
 
 **Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).

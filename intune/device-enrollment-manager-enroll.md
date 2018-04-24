@@ -1,29 +1,29 @@
 ---
-title: "Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń"
+title: Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 titlesuffix: Microsoft Intune
-description: "Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune. \""
-keywords: 
+description: Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune. "
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f5d723c86c120bb8dee1f4e109b70d9ea4e6091
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 870d61cce47132b19b4c3d8b7357f84a21a443e4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* (DEM, ang. Device Enrollment Manager) jest specjalnym kontem użytkownika umożliwiającym rejestrację do 1000 urządzeń. Istniejących użytkowników dodaje się do konta menedżera rejestracji urządzeń w celu nadania im szczególnych możliwości związanych z tym kontem. Każde zarejestrowane urządzenie używa jednej licencji. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”).  
 
@@ -49,12 +49,12 @@ Użytkownik DEM ma następujące uprawnienia:
 Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń mają następujące ograniczenia:
 
   - Brak dostępu do poszczególnych użytkowników. Ponieważ urządzenia nie mają przypisanych użytkowników, urządzenie nie ma dostępu do poczty e-mail ani danych firmowych. Można jednak skorzystać na przykład z konfiguracji sieci VPN, dzięki czemu aplikacje urządzenia otrzymają dostęp do danych.
-  - Nie ma warunkowego dostępu, ponieważ są to scenariusze dla poszczególnych użytkowników.
   - Użytkownik DEM nie może wyrejestrować zarejestrowanych z użyciem konta DEM urządzeń z poziomu samych urządzeń, korzystając z Portalu firmy. Administrator usługi Intune może wykonać wyrejestrowanie.
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
-  - Użytkownicy nie mogą używać aplikacji z programu zakupów zbiorczych VPP (ang. Volume Purchase Program) firmy Apple ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
+  - Użytkownicy nie mogą używać aplikacji z programu Apple Volume Purchase Program (VPP) z licencjami użytkowników ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
   - (Dotyczy tylko systemu iOS) Jeśli do celów rejestrowania urządzeń z systemem iOS zostanie użyta metoda DEM, nie będzie można użyć do rejestrowania urządzeń programu Apple Configurator, programu Device Enrollment Program (DEP) firmy Apple ani programu Apple School Manager (ASM).
   - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z programem Android for Work, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń może być zarejestrowane maksymalnie 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
+  - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń.
   - Każde urządzenie wymaga licencji urządzenia. Dowiedz się więcej o [licencjach użytkowników i urządzeń](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 

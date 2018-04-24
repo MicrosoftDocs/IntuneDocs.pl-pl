@@ -1,29 +1,29 @@
 ---
 title: Ustawienia zasad systemu Windows 10
-description: "Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile."
-keywords: 
+description: Ustawienia zasad wymienione w tym temacie ułatwiają konfigurowanie wbudowanych i niestandardowych ustawień dla zarejestrowanych urządzeń z systemem Windows 10 Desktop lub Windows 10 Mobile.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 09/05/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fff34b145660e1d0e78e05de467629f9421fcf7a
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 202f15766aa740755669ab246739a5331ea328a4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Ten temat zawiera informacje ułatwiające zrozumienie ustawień zasad usługi Intune, których można użyć do zarządzania urządzeniami z systemem Windows 10. Z tym tematem zapoznawaj się wraz z procedurami w temacie [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](/intune-classic/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 
@@ -121,7 +121,7 @@ Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w temaci
 |**Zezwalaj na wysyłanie ruchu intranetowego do programu Internet Explorer**|Zezwala użytkownikom na otwieranie intranetowych witryn sieci Web w programie Internet Explorer<br>(Tylko Windows 10 Desktop)|
 |**Zezwalaj na żądania Nie śledź**|Konfiguruje przeglądarkę Microsoft Edge, aby wysyłała nagłówki „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników|
 |**Włącz filtr SmartScreen**||
-|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Microsoft Edge|
+|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Edge|
 |**Zezwalaj na wyskakujące okienka**|Dotyczy tylko systemu Windows 10 Desktop|
 |**Zezwalaj na pliki cookie**||
 |**Zezwalaj na automatyczne uzupełnianie**|Umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce<br>(Tylko Windows 10 Desktop)|
@@ -210,5 +210,5 @@ Wszystkie ustawienia dotyczą wyłącznie systemu Windows 10 Desktop.
 |**Zezwalaj na aktualizacje automatyczne**|Zezwala na aktualizacje automatyczne. Skonfiguruj jedno z następujących ustawień kontrolowania zachowania aktualizacji:<br />**Powiadamiaj o pobieraniu**<br />**Instaluj automatycznie podczas konserwacji**<br />**Automatycznie instaluj i uruchamiaj ponownie podczas konserwacji**<br />**Automatycznie zainstaluj i uruchom ponownie w zaplanowanym czasie**: Należy pamiętać, że jeśli ta opcja jest wybrana, możesz również skonfigurować następujące ustawienia: **Pomiń powiadamianie użytkownika końcowego** i **Zdefiniuj dzień instalacji zaplanowanych aktualizacji**.<br>(Tylko Windows 10 Desktop)|
 |**Zezwalaj na funkcje wersji wstępnej**|Umożliwia firmie Microsoft wdrażanie na urządzeniach z systemem Windows 10 ustawień i funkcji wersji wstępnej. Możesz zezwolić na instalowanie tylko ustawień lub wszystkich ustawień i funkcji wersji wstępnej.|
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

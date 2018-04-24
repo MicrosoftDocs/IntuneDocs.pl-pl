@@ -15,15 +15,15 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f975f2018d2ce1d7affded3c3386c479e6877388
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: aa11c29a50006053b6e9b52516a595683d6f4cfd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) dla systemu Windows do usługi Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aplikacje tego typu są zwykle pisane w firmie. W poniższych krokach przedstawiono wskazówki ułatwiające dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune.
 
@@ -39,7 +39,7 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego 
 ## <a name="step-2---configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
 
 1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W okienku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu Windows Phone z rozszerzeniem **.msi**, **.appx** lub**.appxbundle**.
+2. W okienku pliku **Pakiet aplikacji** kliknij przycisk przeglądania i wybierz plik instalacyjny systemu Windows Phone z rozszerzeniem **.msi**, **.appx** lub **.appxbundle**.
 3. Gdy skończysz, wybierz przycisk **OK**.
 
 
@@ -69,7 +69,7 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego 
 
 ## <a name="step-5---update-a-line-of-business-app"></a>Krok 5. Aktualizacja aplikacji biznesowej
 
-[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+[!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 
 ## <a name="configuring-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurowanie mobilnej aplikacji MSI korzystającej z samoaktualizacji w celu ignorowania procesu sprawdzania wersji
 

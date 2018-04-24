@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8f19318256dc4480207097d2f4ab393b799e207a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b39f7cac8c09813eb9db94e761ec6fa6ab53c7a0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-lookout-device-compliance-policy-in-intune"></a>Tworzenie zasad zgodności urządzeń z rozwiązaniem Lookout w usłudze Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune z usługą Lookout Mobile Threat Defense umożliwia wykrywanie zagrożeń na urządzeniach przenośnych i ocenę ryzyka na tych urządzeniach. Można utworzyć regułę zasad zgodności, która ocenia ryzyko w celu określenia, czy urządzenie jest zgodne. Następnie można użyć zasad dostępu warunkowego, aby zablokować dostęp do usług w oparciu o zgodność urządzenia.
 
@@ -36,13 +36,13 @@ Wymagania wstępne dotyczące zasad zgodności z usługą Lookout Mobile Threat 
 W ramach procesu konfiguracji usługi Lookout Mobile Threat Defense w [konsoli usługi Lookout](https://aad.lookout.com) zostały utworzone zasady, które klasyfikują zagrożenia jako wysokie, średnie i niskie. W zasadach zgodności usługi Intune można ustawić maksymalny dozwolony poziom zagrożenia.
 
 1. W [konsoli administratora usługi Intune](https://manage.microsoft.com) przejdź do strony **Zasady zgodności**. Możesz użyć istniejących zasad zgodności lub utworzyć nowe. Przejdź do pozycji **Kondycja urządzenia** i włącz opcję **Ochrona urządzenia przed zagrożeniami**.
-  ![zrzut ekranu przedstawiający ustawienie reguły ochrony urządzenia przed zagrożeniami w ](../media/mtp/mtp-compliance-policy-rule.png)
+   ![zrzut ekranu przedstawiający ustawienie reguły ochrony urządzenia przed zagrożeniami w ](../media/mtp/mtp-compliance-policy-rule.png)
 
 2. Wybierz pozycję **Maksymalny dozwolony poziom zagrożenia**:
-  * **Brak (zabezpieczone)** — to ustawienie zapewnia najwyższy poziom zabezpieczeń.  Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy.  Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.  
-  * **Niski**: urządzenie jest zgodne, jeśli są obecne tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
-  * **Średni**: urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
-  * **Wysoki**: to ustawienie zapewnia najniższy poziom zabezpieczeń. Zezwala na wszystkie poziomy zagrożenia, a usługa Lookout do ochrony urządzeń przenośnych przed zagrożeniami jest używana tylko do celów raportowania.
+   * **Brak (zabezpieczone)** — to ustawienie zapewnia najwyższy poziom zabezpieczeń.  Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy.  Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.  
+   * **Niski**: urządzenie jest zgodne, jeśli są obecne tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
+   * **Średni**: urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
+   * **Wysoki**: to ustawienie zapewnia najniższy poziom zabezpieczeń. Zezwala na wszystkie poziomy zagrożenia, a usługa Lookout do ochrony urządzeń przenośnych przed zagrożeniami jest używana tylko do celów raportowania.
 
 ![zrzut ekranu przedstawiający opcję poziomu zagrożeń dla ustawienia reguły ochrony urządzeń przed zagrożeniami](../media/mtp/mtp-compliance-policy-setting.png)
 

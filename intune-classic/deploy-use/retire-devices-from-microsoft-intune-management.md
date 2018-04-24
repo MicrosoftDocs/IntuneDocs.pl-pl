@@ -1,29 +1,29 @@
 ---
-title: "Wycofywanie urządzeń"
-description: "Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy."
-keywords: 
+title: Wycofywanie urządzeń
+description: Usługa Intune obsługuje zarówno selektywne czyszczenie, jak i pełne czyszczenie na potrzeby usunięcia urządzenia z zarządzania w usłudze Intune przez usunięcie jego zasad i Portalu firmy.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 02/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d304e0d27b6aa1ee568bc71272781f44efdce121
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: d9dc8fdd7437c9de49df9ea9a4c9641ac9d590de
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retire-devices-from-intune-management"></a>Wycofywanie urządzeń z zarządzania przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Bez względu na to, czy urządzenia są osobiste, czy firmowe, w którymś momencie konieczne jest wycofanie zarządzanego urządzenia z zarządzania w usłudze Intune.
 
@@ -50,7 +50,7 @@ Po usunięciu licencji użytkownika jego zarejestrowane urządzenia nie będą j
 
 ## <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Aby usunąć urządzenia w portalu usługi Azure Active Directory
 
-1.  Zaloguj się przy użyciu poświadczeń swojej organizacji w witrynie [http://aka.ms/accessaad](http://aka.ms/accessaad) lub [https://portal.office.com](https://portal.office.com), a następnie wybierz pozycje **Centra administracji** &gt; **Azure AD**.
+1.  Zaloguj się przy użyciu poświadczeń swojej organizacji w witrynie [http://aka.ms/accessaad](http://aka.ms/accessaad) lub [https://portal.office.com](https://portal.office.com), a następnie wybierz pozycję **Centra administracji** &gt; **Azure AD**.
 
 2.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej. Wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**.
 
@@ -75,5 +75,5 @@ Warto też odwołać licencję z konta użytkownika usługi Intune pracownika. S
 ## <a name="retire-hardware"></a>Wycofanie sprzętu
 Czasami może dojść do zużycia urządzenia. W takiej sytuacji [zresetowanie urządzenia do ustawień fabrycznych](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) wraz z pełnym czyszczeniem powoduje usunięcie wszystkich danych i usunięcie urządzenia z usługi Intune. Następnie można pozbyć się urządzenia zgodnie z zasadami firmy.
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Zapewnianie lepszej ochrony danych dzięki funkcji pełnego lub selektywnego czyszczenia](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)

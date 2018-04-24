@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e751934549490885c1ebf2445ec8f112f640f5bd
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: cc133071f4d6c0d1a3bbb3acc7c0bd5cb45b6cef
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W tym temacie opisano proces tworzenia zasad ochrony aplikacji w witrynie **Azure Portal**. Witryna Azure Portal to nowa konsola administracyjna do tworzenia zasad ochrony aplikacji. Do ich tworzenia zalecane jest użycie tego portalu. Portal Azure obsługuje następujące scenariusze zarządzania aplikacjami mobilnymi:
 
@@ -31,23 +31,23 @@ W tym temacie opisano proces tworzenia zasad ochrony aplikacji w witrynie **Azur
 - Urządzenia zarządzane przez rozwiązanie MDM innej firmy.
 - Urządzenia niezarządzane przez żadne rozwiązanie MDM (BYOD).
 
->[!IMPORTANT]
-Jeśli zarządzasz urządzeniami za pomocą **konsoli administracyjnej usługi Intune**, weź pod uwagę następujące informacje:
-
+> [!IMPORTANT]
+> Jeśli zarządzasz urządzeniami za pomocą **konsoli administracyjnej usługi Intune**, weź pod uwagę następujące informacje:
+> 
 > * Zasady ochrony aplikacji, które obsługują aplikacje na potrzeby urządzeń przenośnych zarejestrowanych w usłudze Intune, możesz utworzyć przy użyciu [konsoli administracyjnej usługi Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 > * Zasad ochrony aplikacji utworzonych w konsoli administracyjnej usługi Intune nie można zaimportować do witryny Azure Portal.  Zasady ochrony aplikacji należy ponownie utworzyć w witrynie Azure Portal.
-
+> 
 > * W konsoli administracyjnej usługi Intune mogą nie być wyświetlane wszystkie ustawienia zasad ochrony aplikacji. Witryna Azure Portal to nowa konsola administracyjna do tworzenia zasad ochrony aplikacji.
-
+> 
 > * Aby wdrożyć aplikacje zarządzane, należy utworzyć zasady ochrony aplikacji w konsoli administracyjnej usługi Intune. W takim przypadku można utworzyć zasady ochrony aplikacji zarówno w konsoli administracyjnej usługi Intune, jak i w witrynie Azure Portal. Konsola administracyjna usługi Intune umożliwia wdrażanie aplikacji zarządzanych, a witryna Azure Portal to nowa konsola administracyjna, która udostępnia wszystkie ustawienia zasad ochrony aplikacji.
-
+> 
 > * Jeśli utworzysz zasady ochrony aplikacji zarówno za pomocą konsoli administracyjnej usługi Intune, jak i witryny Azure Portal, dla aplikacji zostaną zastosowane zasady utworzone w witrynie Azure Portal.
 
 Aby wyświetlić listę zasad obsługiwanych na platformach Android i iOS, wybierz jeden z następujących elementów:
 
 > [!div class="op_single_selector"]
-- [Zasady systemu iOS](ios-mam-policy-settings.md)
-- [Zasady systemu Android](android-mam-policy-settings.md)
+> - [Zasady systemu iOS](ios-mam-policy-settings.md)
+> - [Zasady systemu Android](android-mam-policy-settings.md)
 
 - Bardziej szczegółowy opis działania zasad ochrony aplikacji i scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w temacie [Ochrona danych aplikacji przy użyciu zasad ochrony aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
@@ -129,13 +129,13 @@ Począwszy od wersji Intune 1703, podczas tworzenia nowych zasad ochrony aplikac
 > [!IMPORTANT]
 > Podczas tworzenia nowych zasad ochrony aplikacji musisz z listy rozwijanej platform wybrać system Windows 10.
 
-1.  W bloku Dodawanie zasad wybierz pozycję **Aplikacje dozwolone** lub **Aplikacje wykluczone**, aby otworzyć blok Aplikacje dozwolone lub Aplikacje wykluczone.
+1. W bloku Dodawanie zasad wybierz pozycję **Aplikacje dozwolone** lub **Aplikacje wykluczone**, aby otworzyć blok Aplikacje dozwolone lub Aplikacje wykluczone.
 
-    > [!NOTE]
-    >
-    - **Aplikacje dozwolone**: są to aplikacje, które muszą stosować się do tych zasad.
-    - **Aplikacje wykluczone**: te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
-<br></br>
+   > [!NOTE]
+   > 
+   > - **Aplikacje dozwolone**: są to aplikacje, które muszą stosować się do tych zasad.
+   > - **Aplikacje wykluczone**: te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
+   > <br></br>
 2. W bloku Aplikacje dozwolone lub Aplikacje wykluczone kliknij pozycję **Dodaj aplikacje**. Możesz dodać zalecane aplikacje firmy Microsoft, aplikacje ze sklepu lub aplikacje klasyczne.
 
     a.  **Aplikacje zalecane:** wstępnie wypełniona lista aplikacji (przede wszystkim pakietu Office), które pozwalamy administratorom łatwo importować do zasad.
@@ -210,8 +210,8 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących elementów:
 
 > [!div class="op_single_selector"]
-- [Zasady systemu iOS](ios-mam-policy-settings.md)
-- [Zasady systemu Android](android-mam-policy-settings.md)
+> - [Zasady systemu iOS](ios-mam-policy-settings.md)
+> - [Zasady systemu Android](android-mam-policy-settings.md)
 
 ## <a name="next-steps"></a>Następne kroki
 [Monitorowanie zgodności i stanu użytkownika](monitor-mobile-app-management-policies-with-microsoft-intune.md)

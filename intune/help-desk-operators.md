@@ -1,28 +1,28 @@
 ---
-title: "Portal pomocy technicznej służący do rozwiązywania problemów"
+title: Portal pomocy technicznej służący do rozwiązywania problemów
 titlesuffix: Microsoft Intune
-description: "Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników."
-keywords: 
+description: Personel działu pomocy korzysta z tego portalu do rozwiązywania problemów technicznych użytkowników.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 9582b53c4f992b5f788f10a262bb802e80580144
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9ff0d6f662fca4cb223496d342de5d6378c05ceb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Portal służący do rozwiązywania problemów pozwala operatorom pomocy technicznej i administratorom usługi Intune wyświetlać informacje dotyczące użytkowników w celu rozwiązywania zgłoszonych przez nich problemów. Organizacje z działami pomocy technicznej mogą przypisać do grupy użytkowników rolę **operatora pomocy technicznej**. Rola operatora pomocy technicznej może używać okienka **Rozwiązywanie problemów**.
 
@@ -44,7 +44,7 @@ Jeśli użytkownik zgłasza do działu pomocy technicznej problem techniczny dot
 Aby wyświetlić informacje o użytkownikach, w okienku rozwiązywania problemów wybierz pozycję **Wybierz użytkownika**. Informacje o użytkowniku mogą ułatwić zrozumienie bieżącego stanu użytkowników i ich urządzeń.  
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Rozwiązywanie problemów**.
 4. Kliknij pozycję **Wybierz**, aby wybrać użytkownika do rozwiązywania problemów.
 5. Wybierz użytkownika przez wpisanie jego nazwy lub adresu e-mail. Kliknij pozycję **Wybierz**. Informacje dotyczące rozwiązywania problemów użytkownika zostaną wyświetlone w okienku Rozwiązywanie problemów. Te informacje objaśniono w poniższych tabelach.

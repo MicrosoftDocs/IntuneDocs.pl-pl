@@ -128,7 +128,7 @@
 ### [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
 ### [Szyfrowanie urządzenia](encrypt-your-device-windows.md)
 ### [Ustawianie lub zmienianie hasła](set-or-change-your-password-windows.md)
-### [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-windows.md)
+### [Usuwanie urządzenia z usługi Intune](unenroll-your-device-from-intune-windows.md)
 ### [Co się stanie w przypadku wyrejestrowania urządzenia?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
 ### [Co się stanie w przypadku zresetowania urządzenia](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-windows.md)

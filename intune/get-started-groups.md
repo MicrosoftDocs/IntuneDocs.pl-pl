@@ -1,25 +1,25 @@
 ---
-title: "Tworzenie grupy w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Umieszczaj użytkowników w grupach, aby ułatwić zarządzanie zasadami i aplikacjami, do których mogą uzyskiwać dostęp."
-keywords: 
+title: Tworzenie grupy w usłudze Microsoft Intune
+titleSuffix: ''
+description: Umieszczaj użytkowników w grupach, aby ułatwić zarządzanie zasadami i aplikacjami, do których mogą uzyskiwać dostęp.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fc4ee80b1cf5a8422d135d13a9fb498980500b5
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d039cfe5509990ff15fe8a1cb476ad44037d60df
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Tworzenie grupy w celu zarządzania użytkownikami i dostępem do danych
 
@@ -30,7 +30,7 @@ Usługa Microsoft Intune używa usługi Azure Active Directory (Azure AD) w celu
 ## <a name="how-do-i-create-a-group"></a>Jak mogę utworzyć grupę?
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Po otwarciu okienka **Microsoft Intune** wybierz opcję **Grupy**.
 4. W okienku **Użytkownicy i grupy — Wszystkie grupy** wybierz polecenie **Nowa grupa**.
 5. W okienku **Grupa** wybierz pozycję **Typ grupy**.

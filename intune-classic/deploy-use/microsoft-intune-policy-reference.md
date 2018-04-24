@@ -1,29 +1,29 @@
 ---
 title: Informacje o zasadach konfiguracji
-description: "Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami."
-keywords: 
+description: Użyj informacji w tym temacie, aby określić zasady usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bf92e34c5bb94fe0cb3c0cc9dabd687a0f2710b9
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 46bc3408f861bcd249ca5071abf1ee80733af10d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-configuration-policy-reference"></a>Informacje o zasadach konfiguracji usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Użyj informacji w tym temacie, aby określić zasady konfiguracji usługi Microsoft Intune, których należy użyć do zarządzania urządzeniami.
 
@@ -102,12 +102,13 @@ Dotyczy tylko systemu Windows Phone i zarejestrowanych urządzeń systemu Window
 
 ## <a name="common-mobile-device-settings"></a>Typowe ustawienia urządzeń przenośnych
 
-|Nazwa zasad|Cel używania|
-|---------------|------------------------|
-|**Zasady programu Exchange ActiveSync**|Konfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego zarządzanego przez program Exchange ActiveSync.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad programu Exchange ActiveSync w usłudze Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md).|
-|**Zasady zabezpieczeń urządzeń przenośnych**|<ul><li>Konfigurowanie ustawień urządzeń przenośnych (wszystkie platformy), w tym:<br /><br /><ul><li>Zabezpieczenia</li><li>Szyfrowanie</li><li>System</li><li>Poczta e-mail</li><li>Aplikacje</li></ul></li></ul>
+|                  Nazwa zasad                   |                                                                                                                       Cel używania                                                                                                                       |
+|------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Zasady programu Exchange ActiveSync</strong>   | Konfigurowanie ustawień zabezpieczeń i funkcjonalnych urządzenia przenośnego zarządzanego przez program Exchange ActiveSync.<br /><br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad programu Exchange ActiveSync w usłudze Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md). |
+| <strong>Zasady zabezpieczeń urządzeń przenośnych</strong> |                                  <ul><li>Konfigurowanie ustawień urządzeń przenośnych (wszystkie platformy), w tym:<br /><br /><ul><li>Zabezpieczenia</li><li>Szyfrowanie</li><li>System</li><li>Poczta e-mail</li><li>Aplikacje</li></ul></li></ul>                                  |
+
 > [!IMPORTANT]
-Usługa Microsoft Intune obejmuje teraz oddzielne **zasady konfiguracji** dotyczące każdej platformy urządzeń, a zasady te zawierają najbardziej aktualne ustawienia, których można użyć. Można nadal używać zasad zabezpieczeń urządzenia przenośnego i wszystkie istniejące wdrożenia będą nadal działać, ale należy zaplanować jak najszybszą migrację do nowych zasad konfiguracji.<br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad zabezpieczeń urządzeń przenośnych w usłudze Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
+> Usługa Microsoft Intune obejmuje teraz oddzielne **zasady konfiguracji** dotyczące każdej platformy urządzeń, a zasady te zawierają najbardziej aktualne ustawienia, których można użyć. Można nadal używać zasad zabezpieczeń urządzenia przenośnego i wszystkie istniejące wdrożenia będą nadal działać, ale należy zaplanować jak najszybszą migrację do nowych zasad konfiguracji.<br />Aby uzyskać więcej informacji, zobacz [Ustawienia zasad zabezpieczeń urządzeń przenośnych w usłudze Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
 
 ## <a name="policies-for-windows-pcs-managed-by-the-intune-software-client"></a>Zasady dla komputerów z systemem Windows zarządzanych przez klienta oprogramowania usługi Intune
 

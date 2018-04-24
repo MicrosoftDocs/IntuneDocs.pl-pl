@@ -1,28 +1,28 @@
 ---
-title: "Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego aplikacje dostępnego w usłudze Intune"
-description: "Dowiedz się, jak opakowywać aplikacje systemu iOS bez konieczności zmieniania kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi."
-keywords: 
+title: Opakowywanie aplikacji systemu iOS za pomocą narzędzia opakowującego aplikacje dostępnego w usłudze Intune
+description: Dowiedz się, jak opakowywać aplikacje systemu iOS bez konieczności zmieniania kodu samej aplikacji. Przygotuj aplikacje tak, aby można było stosować zasady zarządzania aplikacjami mobilnymi.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c9329c25d6211149102c06b44fdb6d6222b13550
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: e8e2783be3c515aa742a3adc149304e0a2ae3b99
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Za pomocą dostępnego w usłudze Microsoft Intune narzędzia opakowującego aplikacje dla systemu iOS można włączyć zasady ochrony aplikacji w usłudze Intune dla wewnętrznych aplikacji systemu iOS bez konieczności zmieniania kodu aplikacji.
 
@@ -98,48 +98,48 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 4. Kliknij pozycję **Certificates, IDs & Profiles** (Certyfikaty, identyfikatory i profile).
 
-  ![Portal dla deweloperów firmy Apple](./media/iOS-signing-cert-1.png)
+   ![Portal dla deweloperów firmy Apple](./media/iOS-signing-cert-1.png)
 
 5. Kliknij kartę ![znak plus w portalu dla deweloperów firmy Apple](./media/iOS-signing-cert-2.png) w prawym górnym rogu, aby dodać certyfikat systemu iOS.
 
 6. Utwórz certyfikat **wewnętrzny i tymczasowy** w obszarze **Production** (Produkcja).
 
-  ![Wybieranie certyfikatu wewnętrznego i tymczasowego](./media/iOS-signing-cert-3.png)
+   ![Wybieranie certyfikatu wewnętrznego i tymczasowego](./media/iOS-signing-cert-3.png)
 
-  >[!NOTE]
-  >Jeśli nie planujesz dystrybuować aplikacji i chcesz ją tylko przetestować wewnętrznie, możesz skorzystać z certyfikatu iOS App Development zamiast certyfikatu Production. Jeśli używasz certyfikatu deweloperskiego, upewnij się, że profil aprowizowania dla urządzeń przenośnych odwołuje się do urządzeń, na których aplikacja ma być instalowana.
+   >[!NOTE]
+   >Jeśli nie planujesz dystrybuować aplikacji i chcesz ją tylko przetestować wewnętrznie, możesz skorzystać z certyfikatu iOS App Development zamiast certyfikatu Production. Jeśli używasz certyfikatu deweloperskiego, upewnij się, że profil aprowizowania dla urządzeń przenośnych odwołuje się do urządzeń, na których aplikacja ma być instalowana.
 
 7. Kliknij pozycję **Next** (Dalej) w dolnej części strony.
 
 8. Przeczytaj instrukcje dotyczące tworzenia **żądania podpisania certyfikatu (CSR)** za pomocą aplikacji Dostęp do pęku kluczy na komputerze z systemem MacOS.
 
-  ![Przeczytaj instrukcje dotyczące tworzenia żądania CSR](./media/iOS-signing-cert-4.png)
+   ![Przeczytaj instrukcje dotyczące tworzenia żądania CSR](./media/iOS-signing-cert-4.png)
 
 9. Postępuj zgodnie z powyższymi instrukcjami, aby utworzyć żądanie podpisania certyfikatu. Na komputerze z systemem MacOS uruchom aplikację **dostępu łańcucha kluczy**.
 
 10. W menu systemu macOS u góry ekranu przejdź do pozycji **Dostęp do pęku kluczy > Asystent certyfikatów > Wniosek o wydanie certyfikatu z urzędu certyfikacji**.  
 
-  ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](./media/iOS-signing-cert-5.png)
+    ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](./media/iOS-signing-cert-5.png)
 
 11. Postępuj zgodnie z powyższymi instrukcjami w witrynie dla deweloperów firmy Apple dotyczącymi tworzenia pliku CSR. Zapisz plik CSR na komputerze z systemem macOS.
 
-  ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](./media/iOS-signing-cert-6.png)
+    ![Wniosek o wydanie certyfikatu z urzędu certyfikacji w aplikacji Dostęp do pęku kluczy](./media/iOS-signing-cert-6.png)
 
 12. Wróć do witryny dla deweloperów firmy Apple. Kliknij przycisk **Kontynuuj**. Następnie przekaż plik CSR.
 
 13. Firma Apple wygeneruje certyfikat podpisywania. Pobierz i zapisz go w łatwej do zapamiętania lokalizacji na komputerze z systemem macOS.
 
-  ![Pobieranie certyfikatu podpisywania](./media/iOS-signing-cert-7.png)
+    ![Pobieranie certyfikatu podpisywania](./media/iOS-signing-cert-7.png)
 
 14. Kliknij dwukrotnie pobrany właśnie plik certyfikatu, aby dodać certyfikat do łańcucha kluczy.
 
 15. Ponownie otwórz aplikację **Dostęp do pęku kluczy**. Zlokalizuj swój certyfikat, wyszukując jego nazwę na pasku wyszukiwania u góry z prawej strony. Kliknij element prawym przyciskiem myszy, aby wyświetlić menu, i kliknij pozycję **Informacje**. Na ekranach przykładowych używamy certyfikatu deweloperskiego zamiast certyfikatu produkcyjnego.
 
-  ![Dodawanie certyfikatu do łańcucha kluczy](./media/iOS-signing-cert-8.png)
+    ![Dodawanie certyfikatu do łańcucha kluczy](./media/iOS-signing-cert-8.png)
 
 16. Zostanie wyświetlone okno z informacjami. Przewiń do dołu i przejdź do etykiety **Skróty kluczy**. Skopiuj ciąg **SHA1** (rozmyty) do użytku jako argument „-c” dla narzędzia opakowującego aplikacje.
 
-  ![Dodawanie certyfikatu do łańcucha kluczy](./media/iOS-signing-cert-9.png)
+    ![Dodawanie certyfikatu do łańcucha kluczy](./media/iOS-signing-cert-9.png)
 
 
 
@@ -153,7 +153,7 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 4. Utwórz profil aprowizacji **In House** (Wewnętrzny) w obszarze **Distribution** (Dystrybucja).
 
-  ![Wybieranie wewnętrznego profilu aprowizacji](./media/iOS-provisioning-profile-1.png)
+   ![Wybieranie wewnętrznego profilu aprowizacji](./media/iOS-provisioning-profile-1.png)
 
 5. Kliknij przycisk **Kontynuuj**. Upewnij się, że wcześniej wygenerowany certyfikat podpisywania zostanie połączony z profilem aprowizacji.
 
@@ -414,8 +414,8 @@ Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzien
 4. Kliknij link „Wprowadzenie”.
 5. Możesz teraz udostępniać dzienniki za pośrednictwem poczty e-mail lub przez ich skopiowanie do lokalizacji usługi OneDrive.
 
->[!NOTE]
-Funkcja rejestrowania jest włączona dla aplikacji, które zostały opakowane za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje w wersji 7.1.13 lub nowszej.
+> [!NOTE]
+> Funkcja rejestrowania jest włączona dla aplikacji, które zostały opakowane za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje w wersji 7.1.13 lub nowszej.
 
 ### <a name="see-also"></a>Zobacz też
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](apps-prepare-mobile-application-management.md)</br>

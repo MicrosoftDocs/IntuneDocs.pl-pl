@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune"
-description: "Włączanie zarządzania urządzeniami przenośnymi (MDM) z systemem Windows w usłudze Microsoft Intune."
-keywords: 
+title: Konfigurowanie zarządzania urządzeniami z systemem Windows przy użyciu usługi Microsoft Intune
+description: Włączanie zarządzania urządzeniami przenośnymi (MDM) z systemem Windows w usłudze Microsoft Intune.
+keywords: ''
 author: NathBarn
 manager: angrobe
 ms.date: 03/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 44559572a048a0ad8e79d6fdac837f0c71a42646
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: fb2d724cc87ffdc506eda8d5ea2330ab9aacd3e9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-windows-device-management"></a>Konfigurowanie zarządzania urządzeniami z systemem Windows
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Ten temat ułatwia administratorom IT uproszczenie rejestracji urządzeń z systemem Windows dla użytkowników.  Urządzenia z systemem Windows można rejestrować bez żadnych dodatkowych czynności, ale możesz ułatwić użytkownikom tę rejestrację.
 
@@ -35,7 +35,7 @@ O tym, jak można uprościć proces rejestrowania urządzenia z systemem Windows
 |**Windows 10**|[Rejestrowanie automatyczne](#enable-windows-10-automatic-enrollment) |[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-automatic-enrollment)|
 |**Starsze wersje systemu Windows**|[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-automatic-enrollment)|[Rejestrowanie przez użytkownika](#enable-windows-enrollment-without-automatic-enrollment)|
 
-[!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
+[!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-automatic-enrollment"></a>Włączanie rejestrowania urządzeń z systemem Windows bez rejestrowania automatycznego
 Możesz pozwolić użytkownikom na rejestrowanie ich urządzeń bez automatycznego rejestrowania w usłudze Azure AD w wersji Premium. Gdy licencje zostaną już przypisane, użytkownicy będą mogli rejestrować się po dodaniu konta służbowego na swoich urządzeniach osobistych lub połączeniu używanych przez nich urządzeń firmowych z usługą Azure AD. Utworzenie aliasu systemu DNS (typ rekordu CNAME) ułatwia użytkownikom rejestrowanie swoich urządzeń. Utworzenie rekordów zasobów CNAME systemu DNS umożliwia użytkownikom łączenie się i rejestrowanie w usłudze Intune bez podawania nazwy serwera Intune.
@@ -69,5 +69,5 @@ Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleź
 
 Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](/intune/end-user-educate).
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Wymagania wstępne dotyczące rejestrowania urządzeń w usłudze Microsoft Intune](prerequisites-for-enrollment.md)

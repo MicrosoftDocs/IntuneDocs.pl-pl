@@ -1,29 +1,29 @@
 ---
-title: "Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure"
-description: "Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji."
-keywords: 
+title: Sieć VPN dla aplikacji systemu Android korzystających z typu połączenia Pulse Secure
+description: Dla urządzeń z systemem Android zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 06/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65bd7e15a49d5b563b6a095593ca5d8d5316a1fa
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: fb4b6ad21b83d6ed2844238091f2e24e0d15cea5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Używanie zasad niestandardowych do tworzenia profilu sieci VPN dla aplikacji na urządzeniach z systemem Android
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W przypadku urządzeń z systemem Android 5.0 i nowszymi zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw utwórz profil sieci VPN, który używa typu połączenia Pulse Secure lub Citrix. Następnie utwórz niestandardowe zasady konfiguracji, które kojarzą profil sieci VPN z określonymi aplikacjami. 
 
@@ -52,7 +52,7 @@ Po wdrożeniu zasad w grupach użytkowników lub na urządzeniu z systemem Andro
    3. W obszarze **Ustawienia OMA-URI** wybierz pozycję **Dodaj**.
    4. Podaj nazwę ustawienia.
    5. Dla pozycji **Typ danych** określ wartość **Ciąg**.
-   6. Dla pozycji **OMA-URI** określ następujący ciąg: **./Vendor/MSFT/VPN/Profile/*Nazwa*/PackageList**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/PackageList**.
+   6. Dla pozycji **OMA-URI** określ następujący ciąg: ***./Vendor/MSFT/VPN/Profile/* Nazwa**/PackageList, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/PackageList**.
    7.   W polu **Wartość** utwórz listę pakietów rozdzielonych średnikami do skojarzenia z profilem. Jeśli na przykład chcesz, aby program Excel i przeglądarka Google Chrome używały połączenia sieci VPN, podaj ciąg: **com.microsoft.office.excel;com.android.chrome**.
 
 ![Przykład niestandardowych zasad sieci VPN dla aplikacji systemu Android](./media/android_per_app_vpn_oma_uri.png)
@@ -63,7 +63,7 @@ Alternatywnie możesz użyć wartości **WHITELIST**, aby określić listę apli
   1.    W obszarze **Ustawienia OMA-URI** wybierz pozycję **Dodaj**.
   2.    Podaj nazwę ustawienia.
   3.    Dla pozycji **Typ danych** określ wartość **Ciąg**.
-  4.    Dla pozycji **OMA-URI** użyj ciągu **./Vendor/MSFT/VPN/Profile/*Nazwa*/Mode**, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/Mode**.
+  4.    Dla pozycji **OMA-URI** użyj ciągu ***./Vendor/MSFT/VPN/Profile/* Nazwa**/Mode, gdzie wartość *Nazwa* jest nazwą profilu sieci VPN zanotowaną w kroku 1. W tym przykładzie byłby to ciąg **./Vendor/MSFT/VPN/Profile/mój_profil_VPN_aplikacji/Mode**.
   5.    W polu **Wartość** podaj wartość **BLACKLIST** lub **WHITELIST**.
 
 

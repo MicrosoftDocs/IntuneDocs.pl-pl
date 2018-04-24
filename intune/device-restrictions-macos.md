@@ -1,27 +1,27 @@
 ---
-title: "Ustawienia ograniczeń urządzeń z systemem macOS w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem macOS."
-keywords: 
+title: Ustawienia ograniczeń urządzeń z systemem macOS w usłudze Microsoft Intune
+titlesuffix: ''
+description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem macOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 72c9036bd6062e719d55876d77f44123fe2af392
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: f4cf5a5eb716760034b25b52098b9e65e6540c63
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-macos-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem macOS w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia ograniczeń urządzeń, które można skonfigurować dla urządzeń z systemem macOS.
 
@@ -45,7 +45,7 @@ Na liście aplikacji z ograniczeniami można skonfigurować jedną z następują
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i identyfikator pakietu aplikacji (np. *com.apple.calculator*).
 
-## <a name="domains"></a>Domeny
+## <a name="domains"></a>Domains
 
 ### <a name="unmarked-email-domains"></a>Nieoznaczone domeny poczty e-mail
 

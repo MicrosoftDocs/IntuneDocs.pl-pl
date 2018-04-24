@@ -331,6 +331,6 @@ __Składnik Xamarin zestawu SDK aplikacji usługi Intune obsługuje obecnie usł
 
 __Do pobrania certyfikatu podpisywania firmy Symantec nie jest już wymagana podpisana aplikacja Portal firmy dla systemu Windows Phone 8__ Pobieranie certyfikatu podpisywania firmy Symantec nie wiąże się już z koniecznością posiadania podpisanej aplikacji Portal firmy dla systemu Windows Phone 8. Certyfikat można przekazać niezależnie.
 
-###<a name="deprecations"></a>Zakończenie obsługi
+### <a name="deprecations"></a>Zakończenie obsługi
 
 __Obsługa aplikacji Portal firmy dla systemu Windows Phone 8__ Pomoc techniczna dla aplikacji Portal firmy systemu Windows Phone 8 zostanie wycofana. Obsługa platform systemów Windows Phone 8 i WinRT została zakończona w październiku 2016 r. Obsługa Portalu firmy dla systemu Windows 8 została również zakończona w październiku 2016 r.

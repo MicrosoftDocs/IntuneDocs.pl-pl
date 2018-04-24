@@ -15,15 +15,15 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 896c984cb5831dc84a041d4ad39e4cdf6819f0f8
-ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
+ms.openlocfilehash: e2759146634f16e5d92ca8c497aa2856f071a679
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Ten temat ułatwia administratorom IT uproszczenie rejestracji urządzeń z systemem Windows dla użytkowników. Po [skonfigurowaniu usługi Intune](setup-steps.md) użytkownicy rejestrują urządzenia z systemem Windows, [logując się](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) za pomocą konta służbowego.  
 
@@ -48,7 +48,7 @@ Organizacje, które mogą używać rejestrowania automatycznego, mogą także sk
 **Obsługa wielu użytkowników**<br>
 Obecnie obsługiwane jest zarządzanie wieloma użytkownikami w usłudze Intune na urządzeniach z aktualizacją systemu Windows 10 dla twórców, które zostały dołączone do domeny usługi Azure Active Directory. Gdy użytkownicy standardowi logują się przy użyciu poświadczeń usługi Azure AD, otrzymują aplikacje i zasady przypisane do ich nazwy użytkownika. Obecnie użytkownicy nie mogą używać witryny internetowej Portal firmy na potrzeby samoobsługowych scenariuszy, takich jak instalowanie aplikacji.
 
-[!INCLUDE[AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
+[!INCLUDE [AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Uproszczenie rejestrowania systemu Windows bez usługi Azure AD Premium
 Aby uprościć rejestrację dla użytkowników, możesz utworzyć alias serwera nazw domen (DNS) (typ rekordu CNAME), który automatycznie przekierowuje żądania rejestrowania do serwerów usługi Intune. Jeśli nie utworzysz rekordu zasobu CNAME systemu DNS, użytkownicy próbujący nawiązać połączenie z usługą Intune muszą wprowadzić nazwę serwera usługi Intune podczas rejestracji.

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0f9ecb8cf16d8c344ea595c53ab91c9b1f00c90e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4973e896109589a91891545bbf6db6ca6df45aad
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* (DEM, ang. Device Enrollment Manager) jest specjalnym kontem użytkownika umożliwiającym rejestrację do 1000 urządzeń. Istniejących użytkowników dodaje się do konta menedżera rejestracji urządzeń w celu nadania im szczególnych możliwości związanych z tym kontem. Każde zarejestrowane urządzenie używa jednej licencji. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych (czyli bez koligacji użytkownika), a nie jako urządzeń osobistych („BYOD”).  
 
@@ -67,22 +67,22 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
 
 ## <a name="add-a-device-enrollment-manager"></a>Dodawanie menedżera rejestracji urządzeń
 
-1.  Upewnij się, że użytkownik, którego chcesz dodać do konta DEM, już istnieje. Aby dodać użytkownika, zaloguj się do [portalu usługi Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) i wykonaj instrukcje zawarte w temacie [Pojedyncze lub zbiorcze dodawanie użytkowników do usługi Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1. Upewnij się, że użytkownik, którego chcesz dodać do konta DEM, już istnieje. Aby dodać użytkownika, zaloguj się do [portalu usługi Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) i wykonaj instrukcje zawarte w temacie [Pojedyncze lub zbiorcze dodawanie użytkowników do usługi Office 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com), korzystając z poświadczeń administratora.
+2. Zaloguj się do [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com), korzystając z poświadczeń administratora.
 
-3.  W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
+3. W okienku nawigacji wybierz pozycję **Administrator**, a następnie przejdź do sekcji **Zarządzanie administratorami** i wybierz pozycję **Menedżer rejestracji urządzeń**. Zostanie otwarta strona **Menedżerowie rejestracji urządzeń**.
 
-4.  Wybierz pozycję **Dodaj**. Zostanie otwarte okno dialogowe **Dodawanie menedżera rejestracji urządzeń** .
+4. Wybierz pozycję **Dodaj**. Zostanie otwarte okno dialogowe **Dodawanie menedżera rejestracji urządzeń** .
 
-5.  Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz opcję **OK**.
+5. Wprowadź **identyfikator użytkownika** konta usługi Intune, a następnie wybierz opcję **OK**.
 
-    Użytkownik DEM może teraz rejestrować urządzenia przenośne za pomocą tej samej procedury, której używa użytkownik końcowy w ramach scenariusza „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) w Portalu firmy. Użytkownik końcowy menedżera może zainstalować aplikację Portal firmy i zarejestrować urządzenie, używając jego poświadczeń menedżera rejestrowania urządzeń dla maksymalnie 1000 urządzeń. Instrukcje dotyczące rejestrowania przez użytkownika końcowego odnoszące się do poszczególnych platform znajdują się w tematach:
+   Użytkownik DEM może teraz rejestrować urządzenia przenośne za pomocą tej samej procedury, której używa użytkownik końcowy w ramach scenariusza „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) w Portalu firmy. Użytkownik końcowy menedżera może zainstalować aplikację Portal firmy i zarejestrować urządzenie, używając jego poświadczeń menedżera rejestrowania urządzeń dla maksymalnie 1000 urządzeń. Instrukcje dotyczące rejestrowania przez użytkownika końcowego odnoszące się do poszczególnych platform znajdują się w tematach:
 
-  - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
-  - [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
-  - [Rejestrowanie urządzenia z systemem Android w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
-  - [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
+   - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
+   - [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
+   - [Rejestrowanie urządzenia z systemem Android w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
+   - [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Usuwanie menedżera rejestracji urządzeń z usługi Intune
 

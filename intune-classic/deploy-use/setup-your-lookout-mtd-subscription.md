@@ -1,29 +1,29 @@
 ---
-title: "Konfigurowanie subskrypcji przy użyciu aplikacji Lookout"
-description: "Ten temat zawiera szczegółowe informacje dotyczące sposobu konfigurowania ochrony urządzeń przed zagrożeniami w usłudze Lookout."
-keywords: 
+title: Konfigurowanie subskrypcji przy użyciu aplikacji Lookout
+description: Ten temat zawiera szczegółowe informacje dotyczące sposobu konfigurowania ochrony urządzeń przed zagrożeniami w usłudze Lookout.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 03/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0e8a6e52b5bdb9df03af88988f2e4ac49ecf2ab8
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: defd1373ac53d354ffb97a17ebdaeafe7ba460b2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-subscription"></a>Konfigurowanie subskrypcji usługi Lookout Mobile Threat Defense
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Do skonfigurowania usługi Lookout Mobile Threat Defense wymagane są następujące kroki:
 
@@ -53,59 +53,59 @@ Dzierżawa usługi Lookout Mobility Endpoint Security zostanie skojarzona z subs
 Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zespołowi pomocy technicznej firmy Lookout.
 
 1. Zaloguj się do [portalu zarządzania usługi Azure AD](https://manage.windowsazure.com) i wybierz swoją subskrypcję. 
-  ![Zrzut ekranu strony usługi Azure AD przedstawiający nazwę dzierżawy](../media/mtp/aad_tenant_name.png)
+   ![Zrzut ekranu strony usługi Azure AD przedstawiający nazwę dzierżawy](../media/mtp/aad_tenant_name.png)
 2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji. 
 3. Wyszukaj identyfikator grupy usługi Azure AD. Konsola usługi Lookout obsługuje 2 poziomy dostępu:  
-  * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy będą mieć pełny dostęp i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
-  * **Ograniczony dostęp:** użytkownicy w tej grupie nie będą mieć dostępu do kilku modułów konsoli usługi Lookout związanych z konfiguracją oraz rejestracją i będą mieć dostęp tylko do odczytu do modułu **Security Policy** (Zasady zabezpieczeń) konsoli usługi Lookout.  
+   * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy będą mieć pełny dostęp i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
+   * **Ograniczony dostęp:** użytkownicy w tej grupie nie będą mieć dostępu do kilku modułów konsoli usługi Lookout związanych z konfiguracją oraz rejestracją i będą mieć dostęp tylko do odczytu do modułu **Security Policy** (Zasady zabezpieczeń) konsoli usługi Lookout.  
 
-  Więcej informacji dotyczących uprawnień znajduje się w witrynie sieci Web [w tym artykule](https://personal.support.lookout.com/hc/articles/114094105653).
+   Więcej informacji dotyczących uprawnień znajduje się w witrynie sieci Web [w tym artykule](https://personal.support.lookout.com/hc/articles/114094105653).
 
-  **Identyfikator obiektu grupy** można znaleźć na stronie **Właściwości** grupy w **konsoli zarządzania usługi Azure AD**.
+   **Identyfikator obiektu grupy** można znaleźć na stronie **Właściwości** grupy w **konsoli zarządzania usługi Azure AD**.
 
-  ![Zrzut ekranu strony właściwości z wyróżnionym polem Identyfikator grupy](../media/mtp/aad_group_object_id.png)
+   ![Zrzut ekranu strony właściwości z wyróżnionym polem Identyfikator grupy](../media/mtp/aad_group_object_id.png)
 
 4. Po zebraniu tych informacji skontaktuj się z zespołem pomocy technicznej firmy Lookout (adres e-mail: enterprisesupport@lookout.com). Pomoc techniczna firmy Lookout wspólnie z główną osobą kontaktową doda subskrypcję i utworzy konto przedsiębiorstwa w usłudze Lookout przy użyciu zebranych wcześniej informacji.
 
 ## <a name="configure-your-subscription"></a>Konfigurowanie subskrypcji
-1. Po utworzeniu przez zespół pomocy technicznej firmy Lookout konta usługi Lookout Enterprise do głównej osoby kontaktowej w firmie zostanie wysłana wiadomość e-mail zawierająca link do adresu URL logowania: https://aad.lookout.com/les?action=consent.
+1. Po utworzeniu przez zespół pomocy technicznej firmy Lookout konta usługi Lookout Enterprise do głównej osoby kontaktowej w firmie zostanie wysłana wiadomość e-mail zawierająca link do adresu URL logowania: <https://aad.lookout.com/les?action=consent>.
 
-2.  Podczas pierwszego logowania do konsoli usługi Lookout należy użyć konta użytkownika w roli administratora globalnego usługi Azure AD w celu zarejestrowania dzierżawy usługi Azure AD. Później podczas logowania ten poziom uprawnienia usługi Azure AD nie będzie używany. Zostanie wyświetlona strona zgody użytkownika. Wybierz przycisk **Accept** (Akceptuj) w celu ukończenia rejestracji.
+2. Podczas pierwszego logowania do konsoli usługi Lookout należy użyć konta użytkownika w roli administratora globalnego usługi Azure AD w celu zarejestrowania dzierżawy usługi Azure AD. Później podczas logowania ten poziom uprawnienia usługi Azure AD nie będzie używany. Zostanie wyświetlona strona zgody użytkownika. Wybierz przycisk **Accept** (Akceptuj) w celu ukończenia rejestracji.
 
-  ![Zrzut ekranu strony pierwszego logowania do konsoli aplikacji Lookout](../media/mtp/lookout_mtp_initial_login.png) Po zaakceptowaniu i wyrażeniu zgody nastąpi przekierowanie do konsoli usługi Lookout.
+   ![Zrzut ekranu strony pierwszego logowania do konsoli aplikacji Lookout](../media/mtp/lookout_mtp_initial_login.png) Po zaakceptowaniu i wyrażeniu zgody nastąpi przekierowanie do konsoli usługi Lookout.
 
-  Aby uzyskać pomoc dotyczącą problemów z logowaniem, zobacz [Rozwiązywanie problemów dotyczących integracji aplikacji Lookout z usługą Intune](/intune-classic/Troubleshoot/device-threat-protection-troubleshooting.md).
+   Aby uzyskać pomoc dotyczącą problemów z logowaniem, zobacz [Rozwiązywanie problemów dotyczących integracji aplikacji Lookout z usługą Intune](/intune-classic/Troubleshoot/device-threat-protection-troubleshooting.md).
 
-3.  W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Intune**.
+3. W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Intune**.
 
-  ![Zrzut ekranu konsoli usługi Lookout z otwartą kartą łączników i wyróżnioną opcją Intune](../media/mtp/lookout_mtp_setup-intune-connector.png)
+   ![Zrzut ekranu konsoli usługi Lookout z otwartą kartą łączników i wyróżnioną opcją Intune](../media/mtp/lookout_mtp_setup-intune-connector.png)
 
-4.  Wybierz kolejno pozycje **Connectors** > **Connection Settings** (Łączniki > Ustawienia połączeń) i określ wartość **Heartbeat Frequency** (Częstotliwość pulsu) w minutach.
+4. Wybierz kolejno pozycje **Connectors** > **Connection Settings** (Łączniki > Ustawienia połączeń) i określ wartość **Heartbeat Frequency** (Częstotliwość pulsu) w minutach.
 
-  ![Zrzut ekranu przedstawiający kartę ustawień połączenia i skonfigurowaną częstotliwość pulsu](../media/mtp/lookout-mtp-connection-settings.png)
+   ![Zrzut ekranu przedstawiający kartę ustawień połączenia i skonfigurowaną częstotliwość pulsu](../media/mtp/lookout-mtp-connection-settings.png)
 
 ## <a name="configure-enrollment-groups"></a>Konfigurowanie grup rejestracji
 1. Najlepszym rozwiązaniem jest utworzenie w [portalu zarządzania usługi Azure AD](https://manage.windowsazure.com) grupy zabezpieczeń usługi Azure AD zawierającej małą liczbę użytkowników na potrzeby testowania integracji z usługą Lookout.
 
-  Wszystkie urządzenia obsługiwane przez usługę Lookout i zarejestrowane w usłudze Intune, które należą do użytkowników w grupie rejestracji w usłudze Azure AD oraz zostały zidentyfikowane w usłudze Azure AD i są przez nią obsługiwane, są zarejestrowane i uprawnione do aktywacji w usłudze ochrony urządzeń przed zagrożeniami w usłudze Lookout.
+   Wszystkie urządzenia obsługiwane przez usługę Lookout i zarejestrowane w usłudze Intune, które należą do użytkowników w grupie rejestracji w usłudze Azure AD oraz zostały zidentyfikowane w usłudze Azure AD i są przez nią obsługiwane, są zarejestrowane i uprawnione do aktywacji w usłudze ochrony urządzeń przed zagrożeniami w usłudze Lookout.
 
 2. W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Enrollment Management** (Zarządzenia rejestracjami), aby zdefiniować zestaw użytkowników, których urządzenia powinny zostać zarejestrowane w usłudze Lookout. Dodaj grupę zabezpieczeń usługi Azure AD **Nazwa wyświetlana** na potrzeby rejestracji.
 
-  ![Zrzut ekranu strony rejestracji łącznika usługi Intune](../media/mtp/lookout-mtp-enrollment.png)
+   ![Zrzut ekranu strony rejestracji łącznika usługi Intune](../media/mtp/lookout-mtp-enrollment.png)
 
-  >[!IMPORTANT]
-  > Wartość **Nazwa wyświetlana** uwzględnia wielkość liter, jak pokazano w obszarze **Właściwości** grupy zabezpieczeń w witrynie Azure Portal. Jak widać poniżej, wartość **Nazwa wyświetlana** ma format camelCase, a tytuł jest pisany małymi literami. W konsoli usługi Lookout dopasuj wielkość liter wartości **Nazwa wyświetlana** dla grupy zabezpieczeń.
-  >![Zrzut ekranu przedstawiający witrynę Azure Portal, usługę Azure Active Directory i stronę właściwości](../media/mtp/aad-group-display-name.png)
+   >[!IMPORTANT]
+   > Wartość **Nazwa wyświetlana** uwzględnia wielkość liter, jak pokazano w obszarze **Właściwości** grupy zabezpieczeń w witrynie Azure Portal. Jak widać poniżej, wartość **Nazwa wyświetlana** ma format camelCase, a tytuł jest pisany małymi literami. W konsoli usługi Lookout dopasuj wielkość liter wartości **Nazwa wyświetlana** dla grupy zabezpieczeń.
+   >![Zrzut ekranu przedstawiający witrynę Azure Portal, usługę Azure Active Directory i stronę właściwości](../media/mtp/aad-group-display-name.png)
 
-  Najlepszym rozwiązaniem jest użycie domyślnej wartości (5 minut) określającej, ile czasu ma upłynąć między kolejnymi próbami wykrywania nowego urządzenia.
+   Najlepszym rozwiązaniem jest użycie domyślnej wartości (5 minut) określającej, ile czasu ma upłynąć między kolejnymi próbami wykrywania nowego urządzenia.
 
-  **Aktualne ograniczenia:**
-  * Usługa Lookout nie może walidować nazw wyświetlanych grup.  Upewnij się, że wartość pola **NAZWA WYŚWIETLANA** w witrynie Azure Portal odpowiada dokładnie grupie zabezpieczeń usługi Azure AD.
-  * Tworzenie grup zagnieżdżonych nie jest obsługiwane.  Grupy zabezpieczeń usługi Azure AD używane w usłudze Lookout muszą zawierać tylko użytkowników. Nie mogą zawierać innych grup.
+   **Aktualne ograniczenia:**
+   * Usługa Lookout nie może walidować nazw wyświetlanych grup.  Upewnij się, że wartość pola **NAZWA WYŚWIETLANA** w witrynie Azure Portal odpowiada dokładnie grupie zabezpieczeń usługi Azure AD.
+   * Tworzenie grup zagnieżdżonych nie jest obsługiwane.  Grupy zabezpieczeń usługi Azure AD używane w usłudze Lookout muszą zawierać tylko użytkowników. Nie mogą zawierać innych grup.
 
-3.  Po dodaniu grupy przy następnym otwarciu aplikacji Lookout for Work przez użytkownika na obsługiwanym urządzeniu zostanie ono aktywowane w usłudze Lookout.
+3. Po dodaniu grupy przy następnym otwarciu aplikacji Lookout for Work przez użytkownika na obsługiwanym urządzeniu zostanie ono aktywowane w usłudze Lookout.
 
-4.  Jeśli wyniki są satysfakcjonujące, można rozszerzyć rejestrację na dodatkowe grupy użytkowników.
+4. Jeśli wyniki są satysfakcjonujące, można rozszerzyć rejestrację na dodatkowe grupy użytkowników.
 
 ## <a name="configure-state-sync"></a>Konfigurowanie synchronizacji stanu
 W opcji **State Sync** (Synchronizacja stanu) określ typ danych, które powinny być przesyłane do usługi Intune.  Do prawidłowego działania integracji usług Lookout i Intune jest wymagany stan urządzenia i stan zagrożenia.  Oba są domyślnie włączone.

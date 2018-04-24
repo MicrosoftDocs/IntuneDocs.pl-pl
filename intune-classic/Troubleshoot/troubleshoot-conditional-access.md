@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: eb27605108feb3a2db3072d4a8b7a296f0f74cfc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zazwyczaj użytkownik próbuje uzyskać dostęp do poczty e-mail lub programu SharePoint i otrzymuje monit o rejestrację. Ten monit doprowadzi użytkownika do portalu firmy.
 
@@ -49,20 +49,20 @@ Te warunki można wyświetlić dla każdego urządzenia w portalu zarządzania A
 
 ## <a name="compliance-issues"></a>Problemy ze zgodnością
 
- -  Urządzenie nie jest zgodne z zasadami usługi Intune. Typowymi problemami są wymagania dotyczące szyfrowania i hasła. Użytkownik zostanie przekierowany do portalu firmy, w którym może skonfigurować swoje urządzenie tak, aby było zgodne.
- -  Może upłynąć trochę czasu, zanim informacje o zgodności zostaną zarejestrowane dla urządzenia. Odczekaj kilka minut i spróbuj ponownie.
- -  Urządzenia z systemem iOS:
-     -   Istniejący profil e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy poinformuje użytkownika, że nie urządzenie nie jest zgodne z powodu ręcznie skonfigurowanego profilu poczty e-mail i wyświetli monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby umożliwić wdrożenie profilu z usługi Intune. Aby uniknąć problemu, poinstruuj użytkowników, aby dokonali rejestracji bez instalowana profilu poczty e-mail i pozwolili usłudze Intune na wdrożenie profilu.
-     -   Urządzenie z systemem iOS może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia zainicjowanie innego ewidencjonowania użytkownika. Ponowne uruchomienie portalu firmy może naprawić ten problem, a stan zgodności będzie odpowiadał stanowi urządzenia w usłudze Intune. Po pobraniu wszystkich danych z synchronizacji urządzenia sprawdzanie zgodności trwa bardzo krótko — średnio pół sekundy.
+- Urządzenie nie jest zgodne z zasadami usługi Intune. Typowymi problemami są wymagania dotyczące szyfrowania i hasła. Użytkownik zostanie przekierowany do portalu firmy, w którym może skonfigurować swoje urządzenie tak, aby było zgodne.
+- Może upłynąć trochę czasu, zanim informacje o zgodności zostaną zarejestrowane dla urządzenia. Odczekaj kilka minut i spróbuj ponownie.
+- Urządzenia z systemem iOS:
+  - Istniejący profil e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez administratora usługi Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Portal firmy poinformuje użytkownika, że nie urządzenie nie jest zgodne z powodu ręcznie skonfigurowanego profilu poczty e-mail i wyświetli monit o usunięcie tego profilu. Użytkownik powinien usunąć swój profil poczty e-mail, aby umożliwić wdrożenie profilu z usługi Intune. Aby uniknąć problemu, poinstruuj użytkowników, aby dokonali rejestracji bez instalowana profilu poczty e-mail i pozwolili usłudze Intune na wdrożenie profilu.
+  - Urządzenie z systemem iOS może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia zainicjowanie innego ewidencjonowania użytkownika. Ponowne uruchomienie portalu firmy może naprawić ten problem, a stan zgodności będzie odpowiadał stanowi urządzenia w usłudze Intune. Po pobraniu wszystkich danych z synchronizacji urządzenia sprawdzanie zgodności trwa bardzo krótko — średnio pół sekundy.
 
-        Zazwyczaj przyczyną pozostawania urządzeń w tym stanie są problemy z połączeniem z usługą lub długi czas trwania synchronizacji.  Jeśli problem będzie nadal występował w różnych konfiguracjach sieci (komórkowych, Wi-Fi, VPN) pomimo ponownego uruchomienia urządzeń i po sprawdzeniu aktualności dostawcy SSP na urządzeniu, należy skontaktować się z pomocą techniczną firmy Microsoft zgodnie z opisem w artykule [Jak uzyskać pomoc techniczną dla usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    Zazwyczaj przyczyną pozostawania urządzeń w tym stanie są problemy z połączeniem z usługą lub długi czas trwania synchronizacji.  Jeśli problem będzie nadal występował w różnych konfiguracjach sieci (komórkowych, Wi-Fi, VPN) pomimo ponownego uruchomienia urządzeń i po sprawdzeniu aktualności dostawcy SSP na urządzeniu, należy skontaktować się z pomocą techniczną firmy Microsoft zgodnie z opisem w artykule [Jak uzyskać pomoc techniczną dla usługi Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
- - Urządzenia z systemem Android:
-    - Niektóre urządzenia z systemem Android mogą być zaszyfrowane, ale aplikacja Portal firmy rozpoznaje je jako niezaszyfrowane. 
+- Urządzenia z systemem Android:
+   - Niektóre urządzenia z systemem Android mogą być zaszyfrowane, ale aplikacja Portal firmy rozpoznaje je jako niezaszyfrowane. 
     
-        -   W przypadku urządzeń w tym stanie wymagane jest, aby użytkownik ustawił bezpieczny startowy kod dostępu. W aplikacji Portal firmy zostanie wyświetlone powiadomienie dotyczące urządzenia z prośbą o ustawienie startowego kodu dostępu. Po naciśnięciu powiadomienia i potwierdzeniu istniejącego numeru PIN lub hasła wybierz opcję **Wymagaj numeru PIN do uruchomienia urządzenia** na ekranie **Bezpieczny start**. Następnie naciśnij przycisk **Sprawdź zgodność** dla urządzenia z aplikacji Portal firmy. Urządzenie powinno teraz zostać wykryte jako zaszyfrowane.
+       -   W przypadku urządzeń w tym stanie wymagane jest, aby użytkownik ustawił bezpieczny startowy kod dostępu. W aplikacji Portal firmy zostanie wyświetlone powiadomienie dotyczące urządzenia z prośbą o ustawienie startowego kodu dostępu. Po naciśnięciu powiadomienia i potwierdzeniu istniejącego numeru PIN lub hasła wybierz opcję **Wymagaj numeru PIN do uruchomienia urządzenia** na ekranie **Bezpieczny start**. Następnie naciśnij przycisk **Sprawdź zgodność** dla urządzenia z aplikacji Portal firmy. Urządzenie powinno teraz zostać wykryte jako zaszyfrowane.
     
-        -   Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie tajnego numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN w formie niezabezpieczonej, ponieważ ta metoda szyfrowania może spowodować, że dane na urządzeniu będą narażone na zagrożenie ze strony złośliwych użytkowników mających fizyczny dostęp do urządzenia. Jeśli wystąpi taki problem, rozważ użycie [zasad ochrony aplikacji](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+       -   Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie tajnego numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN w formie niezabezpieczonej, ponieważ ta metoda szyfrowania może spowodować, że dane na urządzeniu będą narażone na zagrożenie ze strony złośliwych użytkowników mających fizyczny dostęp do urządzenia. Jeśli wystąpi taki problem, rozważ użycie [zasad ochrony aplikacji](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>Problemy dotyczące zasad
 
@@ -118,22 +118,22 @@ Jeśli powyższe procedury nie rozwiążą problemu, pomoc techniczna firmy Micr
 ### <a name="exchange-connector-logs"></a>Dzienniki programu Exchange Connector
 
 #### <a name="general-log-information"></a>Ogólne informacje o dziennikach
-Aby wyświetlić dzienniki programu Exchange Connector, użyj narzędzia [Server Trace Viewer Tool] (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
+Aby wyświetlić dzienniki programu Exchange Connector, użyj narzędzia [Server Trace Viewer Tool] (<https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx>). To narzędzie wymaga pobrania zestawu SDK systemu Windows Server.
 
 >[!NOTE]
 >Dzienniki znajdują się w folderze C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Dzienniki są grupowane w serie 30 plików dzienników, od *Connector0.log* do *Connector29.log*. Dzienniki są zmieniane po zebraniu w jednym dzienniku 10 MB danych. Po zapełnieniu pliku Connector29 następuje powrót do pliku Connector0 i zastąpienie starszych plików dzienników.
 
 #### <a name="locating-sync-logs"></a>Lokalizowanie dzienników synchronizacji
 
--    Pełną synchronizację w dziennikach można zlokalizować, wyszukując termin **full sync**. Początek synchronizacji jest oznaczony następującym zdaniem:
+- Pełną synchronizację w dziennikach można zlokalizować, wyszukując termin **full sync**. Początek synchronizacji jest oznaczony następującym zdaniem:
 
-    'Handling command: Getting the mobile device list without a time filter (full sync) for <number> users`
+  'Handling command: Getting the mobile device list without a time filter (full sync) for <number> users`
 
-    Koniec dziennika pełnej synchronizacji wygląda następująco:
+  Koniec dziennika pełnej synchronizacji wygląda następująco:
 
-    Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected','
+  Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected','
 
--   Szybką synchronizację (delta) można odnaleźć w dziennikach, wyszukując termin **quick sync**.
+- Szybką synchronizację (delta) można odnaleźć w dziennikach, wyszukując termin **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Wyjątki w poleceniu Get next
 Sprawdź dzienniki programu Exchange Connector pod katem wyjątków w **poleceniu Get next** i przekaż je pomocy technicznej firmy Microsoft.

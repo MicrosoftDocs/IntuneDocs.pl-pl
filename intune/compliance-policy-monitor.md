@@ -1,27 +1,30 @@
 ---
-title: "Monitorowanie zasad zgodności urządzeń w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Pulpit nawigacyjny zgodności urządzeń służy do monitorowania ogólnej zgodności urządzeń, wyświetlania raportów i wyświetlania zgodności urządzeń z poszczególnymi zasadami i ustawieniami."
-keywords: 
+title: Monitorowanie zasad zgodności urządzeń w usłudze Microsoft Intune
+titlesuffix: ''
+description: Pulpit nawigacyjny zgodności urządzeń służy do monitorowania ogólnej zgodności urządzeń, wyświetlania raportów i wyświetlania zgodności urządzeń z poszczególnymi zasadami i ustawieniami.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 146b8034022ed5f5a50de9910d28baf27f7482ac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 557018264da5c21459e47e3e139ddd327a4a5ea6
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
 Raporty zgodności umożliwiają administratorom analizowanie stanu zgodności urządzeń w organizacji i szybkie rozwiązywanie problemów ze zgodnością napotykanych przez użytkowników w organizacji. Można wyświetlić informacje o ogólnym stanie zgodności urządzeń, stanie zgodności poszczególnych ustawień, stanie zgodności dla poszczególnych zasad, a także przejść do poszczególnych urządzeń, aby wyświetlić konkretne ustawienia i zasady, które wpływają na urządzenie.
+
+> [!NOTE]
+> W marcu w usłudze Intune wprowadzamy pewne rozszerzenia w zakresie zabezpieczeń oparte na opiniach użytkowników. W zależności od konfiguracji zasad zgodności może być wymagane podjęcie działań w celu uniknięcia utraty dostępu do poczty e-mail dla użytkowników końcowych. Aby uzyskać więcej informacji, zobacz [Nadchodzące rozszerzenia zabezpieczeń](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -124,6 +127,19 @@ Po kliknięciu przycisku **Aktualizuj** powinny zostać zamknięte wyświetlane 
 Kliknięcie urządzenia powoduje otwarcie **okienka urządzeń** z wybranym urządzeniem, które udostępnia więcej szczegółowych informacji na temat ustawienia zasad zgodności urządzeń zastosowanych dla tego urządzenia.
 
 Po kliknięciu samego ustawienia zasad urządzenia zostanie wyświetlona nazwa zasady zgodności urządzenia wskazująca, że ustawienie zgodności urządzenia zostało zalecone przez administratora.
+
+### <a name="devices-without-compliance-policy"></a>Urządzenia bez zasad zgodności
+Ten raport wskazuje urządzenia, które nie mają przypisanych żadnych zasad zgodności. Wraz z wprowadzeniem ustawienia zabezpieczeń, które oznacza wszystkie urządzenia bez zasad zgodności jako „niezgodne”, ważne jest, aby można było zidentyfikować te urządzenia. Następnie możesz im przypisać co najmniej jedne zasady zgodności.
+
+> [!NOTE]
+> Nowe ustawienie zabezpieczeń można skonfigurować w portalu usługi Intune. Wybierz opcję **Zgodność urządzenia**, a następnie w obszarze **Konfiguracja** wybierz opcję **Ustawienia zasad zgodności**. Następnie użyj przełącznika, aby ustawić opcję **Oznaczaj urządzenia bez przypisanych zasad zgodności jako** na wartość **Zgodne** lub **Niezgodne**. Dowiedz się więcej o tym [ulepszeniu zabezpieczeń w usłudze Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+
+![Obraz przedstawiający raport urządzeń bez zasad zgodności](./media/idc-12.png)
+
+Kafelek **Urządzenia bez zasad zgodności** jest dostępny z poziomu pulpitu nawigacyjnego zgodności urządzeń i przedstawia wszystkie urządzenia bez zasad zgodności, użytkownika urządzenia, stan zgodności i model urządzenia.
+
+> [!NOTE]
+> Użytkownicy z przypisanymi zasadami zgodności dowolnego typu nie będą wyświetlani w raporcie, niezależnie od platformy urządzeń. Jeśli na przykład przypadkowo przypiszesz zasady zgodności systemu Windows do użytkownika z systemem Android, urządzenie nie będzie ujęte w raporcie. Jednak usługa Intune uzna urządzenie z systemem Android za niezgodne. Aby uniknąć problemów, firma Microsoft zaleca utworzenie zasad dla każdej platformy urządzeń i wdrożenie ich do wszystkich użytkowników.
 
 ### <a name="per-policy-device-compliance-report"></a>Raport zgodności urządzeń wg zasady
 

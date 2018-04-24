@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5d2ec278d182f3d9dbe03fbdf86791b59debf79
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 52cba4de7d19744e1a011071ac6c9bbb168ffb30
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji w witrynie Azure Portal
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W tym temacie opisano wymagania wstępne oraz czynności, które należy wykonać **przed** rozpoczęciem tworzenia zasad ochrony aplikacji w witrynie Azure Portal.
 
@@ -74,18 +74,18 @@ Pełna lista obsługiwanych aplikacji firmy Microsoft jest dostępna w [galerii 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
--   **Subskrypcja usługi Microsoft Intune**. Użytkownicy potrzebują licencji usługi Intune w celu pobierania aplikacji z zasadami ochrony aplikacji.
-Jeśli aktualnie używasz usługi Intune do zarządzania urządzeniami, masz już subskrypcję usługi Intune. Masz również subskrypcję usługi Intune, jeśli masz kupioną licencję pakietu Enterprise Mobility Suite (EMS). Jeśli wypróbowujesz usługę Intune w celu zapoznania się z możliwościami w zakresie zarządzania aplikacjami mobilnymi, konto próbne możesz uzyskać na [stronie usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
+- **Subskrypcja usługi Microsoft Intune**. Użytkownicy potrzebują licencji usługi Intune w celu pobierania aplikacji z zasadami ochrony aplikacji.
+  Jeśli aktualnie używasz usługi Intune do zarządzania urządzeniami, masz już subskrypcję usługi Intune. Masz również subskrypcję usługi Intune, jeśli masz kupioną licencję pakietu Enterprise Mobility Suite (EMS). Jeśli wypróbowujesz usługę Intune w celu zapoznania się z możliwościami w zakresie zarządzania aplikacjami mobilnymi, konto próbne możesz uzyskać na [stronie usługi Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
 
-    Aby sprawdzić, czy masz subskrypcję usługi Intune, przejdź do strony **Rozliczenia** w portalu usługi Office.  Jeśli masz subskrypcję, usługa Intune powinna być widoczna jako **Aktywna** w obszarze subskrypcji.
+  Aby sprawdzić, czy masz subskrypcję usługi Intune, przejdź do strony **Rozliczenia** w portalu usługi Office.  Jeśli masz subskrypcję, usługa Intune powinna być widoczna jako **Aktywna** w obszarze subskrypcji.
 
--   **Subskrypcja usługi Office 365**, która jest wymagana do:
+- **Subskrypcja usługi Office 365**, która jest wymagana do:
 
   - Stosowania zasad ochrony aplikacji do aplikacji z obsługą wielu tożsamości.
 
   - Tworzenia kont służbowych usług SharePoint Online i Exchange Online. Lokalna instalacja programu Exchange i lokalna instalacja programu SharePoint nie są obsługiwane.
 
--   **Konfiguracja programu Skype dla firm Online do korzystania z nowoczesnego uwierzytelniania**. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+- **Konfiguracja programu Skype dla firm Online do korzystania z nowoczesnego uwierzytelniania**. Aby uzyskać więcej informacji, zobacz [Włączanie nowoczesnego uwierzytelniania](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Usługa Azure Active Directory (Azure AD) do tworzenia użytkowników. Usługa Azure AD uwierzytelnia użytkowników, gdy otworzą oni aplikację i wprowadzą poświadczenia robocze.

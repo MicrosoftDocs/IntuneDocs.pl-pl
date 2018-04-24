@@ -1,28 +1,28 @@
 ---
-title: "Nowości w klasycznym portalu usługi Microsoft Intune — archiwum"
-description: "Zarchiwizowane artykuły „Co nowego” dla usługi Microsoft Intune"
-keywords: 
+title: Nowości w klasycznym portalu usługi Microsoft Intune — archiwum
+description: Zarchiwizowane artykuły „Co nowego” dla usługi Microsoft Intune
+keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 06/08/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ed2db991-4729-49a7-a1e6-be2ffa0d03d1
 ROBOTS: noindex,nofollow
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: edbb76e0eb4a1157e70a24c47b960ef138a0f876
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 5ba8d7940f9c02a1f01a115e16be331bb4fc2fcd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nowości w portalu klasycznym usługi Intune — poprzednie miesiące
 
-[!INCLUDE[classic-portal](./includes/classic-portal.md)]
+[!INCLUDE [classic-portal](./includes/classic-portal.md)]
 
 Ta strona zawiera listę nowych funkcji i powiadomień ogłoszonych wcześniej na [stronie nowości](whats-new.md) dotyczących portalu klasycznego usługi Intune.
 
@@ -359,7 +359,7 @@ __Składnik Xamarin zestawu SDK aplikacji usługi Intune obsługuje obecnie usł
 
 __Do pobrania certyfikatu podpisywania firmy Symantec nie jest już wymagana podpisana aplikacja Portal firmy dla systemu Windows Phone 8__ Pobieranie certyfikatu podpisywania firmy Symantec nie wiąże się już z koniecznością posiadania podpisanej aplikacji Portal firmy dla systemu Windows Phone 8. Certyfikat można przekazać niezależnie.
 
-###<a name="deprecations"></a>Zakończenie obsługi
+### <a name="deprecations"></a>Zakończenie obsługi
 
 __Obsługa aplikacji Portal firmy dla systemu Windows Phone 8__ Pomoc techniczna dla aplikacji Portal firmy systemu Windows Phone 8 zostanie wycofana. Obsługa platform systemów Windows Phone 8 i WinRT została zakończona w październiku 2016 r. Obsługa Portalu firmy dla systemu Windows 8 została również zakończona w październiku 2016 r.
 

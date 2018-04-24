@@ -1,30 +1,30 @@
 ---
-title: "Co to są zasady ochrony aplikacji"
+title: Co to są zasady ochrony aplikacji
 titleSuffix: Microsoft Intune
-description: "Dowiedz się, w jaki sposób zasady ochrony aplikacji w usłudze Microsoft Intune wspomagają ochronę danych firmowych i zapobiegają utracie danych."
-keywords: 
+description: Dowiedz się, w jaki sposób zasady ochrony aplikacji w usłudze Microsoft Intune wspomagają ochronę danych firmowych i zapobiegają utracie danych.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/19/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 691c7317cda07be292cc2d778b853727124dba8a
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: c4483baa68267b7a7218a4e78fe5275d1ea8d330
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zasady ochrony aplikacji w usłudze Microsoft Intune wspomagają ochronę danych firmowych i zapobiegają utracie danych.
 
@@ -37,12 +37,12 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchamianych na ur
 
 - **Zarejestrowane w usłudze Microsoft Intune:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
--   **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
+- **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
 
   > [!NOTE]
   > Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami bezpiecznego kontenera ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
 
--   **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi :** urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
+- **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi :** urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
 
 > [!IMPORTANT]
 > Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Zasady ochrony aplikacji nie są obsługiwane w przypadku aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.

@@ -1,22 +1,22 @@
 ---
-title: "Komunikaty i akcje dotyczące braku zgodności w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Utwórz wiadomość e-mail z powiadomieniem, która zostanie wysłana do niezgodnych urządzeń. Dodaj akcje do wykonania po oznaczeniu urządzenia jako niezgodne, takie jak dodanie okresu prolongaty na zapewnienie zgodności lub utworzenie harmonogram w celu zablokowania dostępu, dopóki urządzenie nie będzie zgodne. Zrób to za pomocą usługi Microsoft Intune na platformie Azure."
-keywords: 
+title: Komunikaty i akcje dotyczące braku zgodności w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Utwórz wiadomość e-mail z powiadomieniem, która zostanie wysłana do niezgodnych urządzeń. Dodaj akcje do wykonania po oznaczeniu urządzenia jako niezgodne, takie jak dodanie okresu prolongaty na zapewnienie zgodności lub utworzenie harmonogram w celu zablokowania dostępu, dopóki urządzenie nie będzie zgodne. Zrób to za pomocą usługi Microsoft Intune na platformie Azure.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37a8deca147bbad1e706b814f366a2c3f1247869
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: a4b5e55b404da907d8f17a658483b4802af8226d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń — Intune
 
@@ -54,14 +54,14 @@ Istnieją dwa rodzaje działań:
 3. Wybierz pozycję **Zgodność urządzenia**, a następnie pozycję **Powiadomienia**. 
 4. Wybierz pozycję **Utwórz powiadomienie**, a następnie wprowadź następujące informacje:
 
-  - Nazwa
-  - Temat
-  - Wiadomość
-  - Nagłówek wiadomości e-mail — dołącz logo firmy
-  - Stopka wiadomości e-mail — dołącz nazwę firmy
-  - Stopka wiadomości e-mail — dołącz informacje kontaktowe
+   - Nazwa
+   - Temat
+   - Wiadomość
+   - Nagłówek wiadomości e-mail — dołącz logo firmy
+   - Stopka wiadomości e-mail — dołącz nazwę firmy
+   - Stopka wiadomości e-mail — dołącz informacje kontaktowe
 
-  ![Przykład powiadomienia dotyczącego zgodności w usłudze Intune](./media/actionsfornoncompliance-1.PNG)
+   ![Przykład powiadomienia dotyczącego zgodności w usłudze Intune](./media/actionsfornoncompliance-1.PNG)
 
 Gdy skończysz dodawać informacje, wybierz pozycję **Utwórz**. Szablon wiadomości z powiadomieniem jest gotowy do użytku.
 
@@ -77,7 +77,7 @@ Akcję można dodać podczas tworzenia nowej zasady zgodności lub aktualizowani
 1. W witrynie [Azure Portal](https://portal.azure.com) otwórz usługę **Microsoft Intune** i wybierz pozycję **Zgodność urządzenia**.
 2. Wybierz pozycję **Zasady**, wybierz jedną z zasad, a następnie wybierz pozycję **Właściwości**. 
 
-  Nie masz jeszcze zasad? Utwórz zasady dla systemu [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) lub innej platformy.
+   Nie masz jeszcze zasad? Utwórz zasady dla systemu [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) lub innej platformy.
 
 3. Wybierz pozycję **Akcje w przypadku braku zgodności**, a następnie wybierz pozycję **Dodaj**, aby wprowadzić parametry akcji. Możesz wybrać wcześniej utworzony szablon wiadomości, dodać dodatkowych adresatów oraz zaktualizować harmonogram okresu prolongaty. W harmonogramie możesz wprowadzić liczbę dni (od 0 do 365), a następnie możesz wymusić zasady dostępu warunkowego. Jeśli jako liczbę dni wprowadzisz **0**, dostęp warunkowy **natychmiast** zablokuje dostęp do zasobów firmowych.
 

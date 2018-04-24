@@ -1,27 +1,27 @@
 ---
-title: "Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Docs"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 181c3df521e9cf213367becf00e4a53469ad69a9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -34,17 +34,17 @@ Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócen
 
 Aby zresetować urządzenie:
 
-1.  W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
+1. W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
 
 2. Na stronie __Moje urządzenia__ wybierz urządzenie, którego nazwę chcesz zmienić.
 
-  ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
+   ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.  Urządzenie wyświetli się w oknie podręcznym. Naciśnij przycisk **Resetuj**.
+3. Urządzenie wyświetli się w oknie podręcznym. Naciśnij przycisk **Resetuj**.
 
-    ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)
+   ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)
 
-4.  Zostanie wyświetlony komunikat informujący o zamiarze wymazania z urządzenia całej zawartości po przywróceniu domyślnych ustawień fabrycznych. Naciśnij przycisk **Resetuj**, aby potwierdzić wykonanie wybranej czynności.
+4. Zostanie wyświetlony komunikat informujący o zamiarze wymazania z urządzenia całej zawartości po przywróceniu domyślnych ustawień fabrycznych. Naciśnij przycisk **Resetuj**, aby potwierdzić wykonanie wybranej czynności.
 
 Twoje urządzenie zostało zresetowane.
 

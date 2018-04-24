@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: b4415b7b4b1cd48accae3f0d0d39caedd9cf6b3c
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9ddf972795d9ced6aff6dd01da4469d49f11c951
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Słownik usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -40,11 +40,13 @@ ms.lasthandoff: 03/22/2018
 |Portal Azure|Nowa konsola usługi Intune, która zostanie wkrótce wprowadzona. [Przeczytaj więcej na temat nowego portalu](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
+
 |||
 |-|-|
 |„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)|[„Przynieś własne urządzenie”](/intune-classic/get-started/choose-how-to-enroll-devices1). Użytkownicy mogą instalować aplikację Portal firmy usługi Intune na urządzeniach, a następnie rejestrować je, aby uzyskać dostęp do zasobów firmy, takich jak poczta e-mail, aplikacje firmowe, dane firmowe i pomoc techniczna.|
 
 ## <a name="c"></a>C
+
 |||
 |-|-|
 |Profil certyfikatu|Ten typ zasad służy do [uzyskiwania bezpiecznego dostępu do zasobów firmowych](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles) przy użyciu certyfikatów podczas korzystania z sieci Wi-Fi, poczty e-mail lub profilów sieci VPN.|
@@ -57,6 +59,7 @@ ms.lasthandoff: 03/22/2018
 |Zasady niestandardowe|[Zasad tych należy użyć](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) w sytuacji, gdy ogólne zasady konfiguracji nie zawierają wbudowanego ustawiania, które spełnia określone potrzeby. Za pomocą zasad niestandardowych możesz na przykład utworzyć ustawienie przy użyciu innych metod, takich jak program Apple Configurator lub identyfikator URI OMA.|
 
 ## <a name="d"></a>D
+
 |||
 |-|-|
 |wdrażania|Czynność wysyłania aplikacji lub zasad na zarządzane urządzenie lub do zarządzanego użytkownika.|
@@ -65,6 +68,7 @@ ms.lasthandoff: 03/22/2018
 |Mapowanie grupy urządzeń|Ułatwia [automatyczne dodawanie urządzeń do grup](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune) na podstawie kategorii urządzenia (np. „Osobiste” lub „Dział sprzedaży”), która może zostać przypisana do urządzenia przez Ciebie lub użytkownika końcowego.|
 
 ## <a name="e"></a>E
+
 |||
 |-|-|
 |Profil e-mail|Za pomocą tych zasad można skonfigurować [ustawienia dostępu do poczty e-mail](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) dla określonych klientów poczty e-mail na urządzeniach przenośnych, co pozwala zminimalizować liczbę czynności konfiguracyjnych, które musi wykonać użytkownik końcowy.|
@@ -73,21 +77,25 @@ ms.lasthandoff: 03/22/2018
 |Zarejestruj|Usługa Microsoft Intune używa [rejestracji](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune), która umożliwia zarządzanie urządzeniami i zezwala na nich na dostęp do zasobów.|
 
 ## <a name="f"></a>F
+
 |||
 |-|-|
 |FastTrack|[Usługa firmy Microsoft](https://technet.microsoft.com/library/mt228265.aspx) dla użytkowników usługi Intune ze 150 licencjami w uprawniającym planie. W ramach tej usługi specjaliści firmy Microsoft będą współpracować z Tobą, aby ułatwić szybkie i łatwe rozpoczęcie korzystania z usługi Intune.|
 
 ## <a name="g"></a>G
+
 |||
 |-|-|
 |Grupy|Grupy pozwalają [logicznie zbierać razem użytkowników lub urządzenia](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune). Możesz na przykład utworzyć grupę wszystkich komputerów z systemem Windows. Następnie możesz wdrażać do tych grup aplikacje i zasady.|
 
 ## <a name="h"></a>H
+
 |||
 |-|-|
 |Hybrydowe|Konfiguracja, w ramach której możesz zarządzać urządzeniami zarejestrowanymi w usłudze Intune [za pomocą konsoli programu System Center Configuration Manager](/intune-classic/get-started/integration-with-cloud-services).|
 
 ## <a name="i"></a>I
+
 |||
 |-|-|
 |Konsola administracyjna Intune|Bieżąca konsola, której używasz do wykonywania większości operacji usługi Intune w zakresie zarządzania.|
@@ -96,11 +104,13 @@ ms.lasthandoff: 03/22/2018
 |Stan zapasów|Służy do wyświetlania [sprzętu i zainstalowanego oprogramowania](/intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune) urządzeń, którymi zarządzasz.|
 
 ## <a name="k"></a>K
+
 |||
 |-|-|
 |Tryb kiosku|Tryb ten pozwala blokować urządzenia. Jest on konfigurowany w ramach [ogólnych zasad konfiguracji](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies). Możesz na przykład skonfigurować urządzenie sieci sprzedaży, aby zezwalać na nim na uruchomienie tylko jednej aplikacji.|
 
 ## <a name="m"></a>M
+
 |||
 |-|-|
 |Managed Browser|[Aplikacja służąca do przeglądania sieci Web](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies), którą można wdrożyć w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.|
@@ -111,18 +121,21 @@ ms.lasthandoff: 03/22/2018
 |Zasady konfiguracji aplikacji mobilnych|Zasady systemu iOS służące do [określania ustawień dla zgodnych aplikacji systemu iOS](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) podczas ich uruchamiania, na przykład do podawania im nazwy firmy lub adresu serwera.|
 
 ## <a name="o"></a>O
+
 |||
 |-|-|
 |Protokół OMA-DM|Zarządzanie urządzeniami Open Mobile Alliance (Open Mobile Alliance Device Management). Będący standardem branżowym protokół zarządzania urządzeniami używany przez wielu producentów sprzętu w celu umożliwienia sterowania funkcjami urządzeń przenośnych i komputerów.|
 |Identyfikator URI OMA|Jednolity identyfikator zasobów Open Mobile Alliance (Open Mobile Alliance Uniform Resource Identifier). Identyfikatory te identyfikują poszczególne ustawienia urządzeń zgodne ze standardem OMA-DM. Niektóre z nich można używać w [zasadach niestandardowych usługi Intune](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies), gdy nie ma wbudowanego ustawienia spełniającego określone potrzeby.|
 
 ## <a name="p"></a>P
+
 |||
 |-|-|
 |Policy|[Pakiet informacji](/intune-classic/deploy-use/microsoft-intune-policy-reference) wysyłany z usługi Intune na urządzenie. Możesz na przykład wdrożyć na urządzeniu ustawienia zabezpieczeń lub informacje dotyczące zgodności urządzenia.|
 |Resetowanie kodu dostępu|Funkcja usługi Intune pozwalająca wymuszać na użytkownikach końcowych [resetowanie kodów dostępu](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune) na obsługiwanych urządzeniach.|
 
 ## <a name="r"></a>R
+
 |||
 |-|-|
 |Zdalne blokowanie|Funkcja usługi Intune pozwalająca [blokować obsługiwane urządzenia](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune), nawet jeśli nie masz fizycznego dostępu do urządzenia.|
@@ -131,12 +144,14 @@ ms.lasthandoff: 03/22/2018
 |Wymagania|[Operacja wdrażania aplikacji](/intune-classic/deploy-use/add-apps) pozwalająca wybrać wymagania, które muszą zostać spełnione na urządzeniu, zanim aplikacja zostanie zainstalowana. Możesz na przykład określić wersję systemu operacyjnego iOS, która musi być zainstalowana, zanim aplikacja zostanie zainstalowana.|
 
 ## <a name="s"></a>S
+
 |||
 |-|-|
 |Selektywne czyszczenie danych|[Selektywne czyszczenie danych](/intune-classic/deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune) powoduje usunięcie z urządzenia tylko danych firmowych, w tym danych zarządzania aplikacjami mobilnymi (jeśli ma to zastosowanie), ustawień i profilów poczty e-mail. Selektywne czyszczenie danych nie powoduje usunięcia osobistych danych użytkownika z urządzenia.|
 |Subskrypcja|Zawarta umowa, która umożliwia dostęp do dzierżawy usługi Intune.|
 
 ## <a name="t"></a>T
+
 |||
 |-|-|
 |TeamViewer|Aplikacja innej firmy współdziałająca z usługą Intune, aby udostępnić [funkcje pomocy zdalnej](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-for-windows-pcs) dla komputerów z systemem Windows zarządzanych za pomocą oprogramowania klienckiego usługi Intune.|
@@ -144,12 +159,15 @@ ms.lasthandoff: 03/22/2018
 |Warunki i postanowienia|Typ wdrażanych do użytkowników zasad zawierających informacje, które użytkownicy muszą [przeczytać i zaakceptować](/intune-classic/deploy-use/terms-and-condition-policy-settings-in-microsoft-intune), zanim będą mogli za pomocą Portalu firmy zarejestrować swoje urządzenia i uzyskać dostęp do swojej pracy.|
 
 ## <a name="v"></a>V
+
 |||
 |-|-|
 |Aplikacje nabyte w ramach zakupów zbiorczych|Niektóre sklepy z aplikacjami umożliwiają zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Usługa Intune ułatwia zarządzanie aplikacjami [zakupionymi za pośrednictwem takiego programu](/intune-classic/deploy-use/manage-volume-purchased-apps-in-microsoft-intune) przez zaimportowanie informacji o licencji ze sklepu z aplikacjami, śledzenie, ile licencji jest używanych, i zapobieganie instalacji większej liczby kopii aplikacji niż posiadana.|
 |Profil sieci VPN|Zasady wdrażające [ustawienia sieci VPN](/intune-classic/deploy-use/vpn-connections-in-microsoft-intune) na urządzeniach, którymi zarządzasz. Zasady te pozwalają zminimalizować wszelkie czynności konfiguracyjne, które muszą wykonywać użytkownicy końcowi.|
 
 ## <a name="w"></a>W
-|||
-|-|-|
-|Profil sieci Wi-Fi|Zasady wdrażające [ustawienia sieci bezprzewodowej](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) na urządzenia, aby pozwolić użytkownikom na łączenie się z siecią firmową bez znajomości czy konfigurowania jakichkolwiek ustawień.
+
+|               |                                                                                                                                                                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Profil sieci Wi-Fi | Zasady wdrażające [ustawienia sieci bezprzewodowej](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) na urządzenia, aby pozwolić użytkownikom na łączenie się z siecią firmową bez znajomości czy konfigurowania jakichkolwiek ustawień. |
+

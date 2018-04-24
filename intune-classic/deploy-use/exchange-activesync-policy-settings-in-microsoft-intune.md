@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ce43f43e2d5522d947f0db244023b93635f1d19f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 25bdc7da543cdc38ccbe70651c145750ba96c082
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-policy-settings-in-microsoft-intune"></a>Ustawienia zasad programu Exchange ActiveSync w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają skonfigurować ustawienia sterujące różnymi funkcjami na urządzeniach zarządzanych przez program Exchange ActiveSync.
 
@@ -44,10 +44,11 @@ Zasady programu **Exchange ActiveSync** w usłudze Microsoft Intune pozwalają s
 
 ## <a name="encryption-settings"></a>Ustawienia szyfrowania
 
-|Nazwa ustawienia|Szczegóły|
-|----------------|---|
-|**Wymagaj szyfrowania na urządzeniu przenośnym**<sup>1</sup>|Wymaga szyfrowania danych na urządzeniu z obsługą tej funkcji.<br><br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość **Tak**.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie **Wymagaj hasła do odblokowania urządzeń przenośnych**.|
-|**Wymagaj szyfrowania na kartach pamięci**|Wymaga szyfrowania danych przechowywanych w pamięci zewnętrznej, np. na kartach SD (w obsługiwanych urządzeniach).
+|                           Nazwa ustawienia                           |                                                                                                                                    Szczegóły                                                                                                                                    |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Wymagaj szyfrowania na urządzeniu przenośnym</strong><sup>1</sup> | Wymaga szyfrowania danych na urządzeniu z obsługą tej funkcji.<br><br>Dla urządzeń z systemem Windows Phone 8 trzeba ustawić wartość <strong>Tak</strong>.<br /><br />Aby włączyć szyfrowanie na urządzeniach z systemem iOS, włącz ustawienie <strong>Wymagaj hasła do odblokowania urządzeń przenośnych</strong>. |
+|       <strong>Wymagaj szyfrowania na kartach pamięci</strong>       |                                                                                  Wymaga szyfrowania danych przechowywanych w pamięci zewnętrznej, np. na kartach SD (w obsługiwanych urządzeniach).                                                                                  |
+
 <sup>1</sup> Dodatkowe informacje dotyczące urządzeń z systemem Windows 8.1
 
 -   Aby wymusić szyfrowanie na urządzeniach z systemem Windows 8.1, trzeba zainstalować na każdym urządzeniu [aktualizację klienta MDM dla systemu Windows z grudnia 2014 r.](https://support.microsoft.com/kb/3013816)

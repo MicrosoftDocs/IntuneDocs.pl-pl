@@ -1,29 +1,29 @@
 ---
 title: Aplikacje dla systemu Android z zasadami ochrony aplikacji
 titlesuffix: Microsoft Intune
-description: "Dowiedz się, czego oczekiwać od aplikacji systemu Android zawierającej zasady ochrony."
-keywords: 
+description: Dowiedz się, czego oczekiwać od aplikacji systemu Android zawierającej zasady ochrony.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: af25dc918907e086441a89f222985a75199bbe95
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 450bcd9c807bdfae16e9c2fa1eb813b00444df65
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Dowiedz się, czego oczekiwać od aplikacji systemu Android zawierających zasady ochrony. Zasady ochrony aplikacji są stosowane wyłącznie podczas korzystania z aplikacji w kontekście służbowym. Na przykład w przypadku uzyskiwania dostępu do aplikacji przy użyciu konta służbowego lub w przypadku uzyskiwania dostępu do plików przechowywanych w firmowej lokalizacji w usłudze OneDrive.
 ##  <a name="accessing-apps"></a>Uzyskiwanie dostępu do aplikacji
@@ -75,9 +75,11 @@ Obsługiwane są następujące typy plików:
 * **Dokumenty:** PDF, PPDF
 
 ------------
-|**pfile**|**tekst**|
-|----|----|
-|Pfile to ogólny format „otoki” chronionych plików. Hermetyzuje on zaszyfrowaną zawartość i licencje usługi Azure Information Protection. Może służyć do ochrony pliku dowolnego typu.|Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+
+|                                                                                 <strong>pfile</strong>                                                                                 |                                                                      <strong>tekst</strong>                                                                      |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Pfile to ogólny format „otoki” chronionych plików. Hermetyzuje on zaszyfrowaną zawartość i licencje usługi Azure Information Protection. Może służyć do ochrony pliku dowolnego typu. | Pliki tekstowe, w tym XML, CSV itp., można otworzyć w celu wyświetlania w aplikacji nawet wtedy, gdy są chronione. Typy plików: txt, ptxt, csv, pcsv, log, plog, xml, pxml. |
+
 ---------------
 ## <a name="next-steps"></a>Następne kroki
 [Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)

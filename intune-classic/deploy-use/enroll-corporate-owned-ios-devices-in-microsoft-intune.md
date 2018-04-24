@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e07bc0eb78145d508085120e9ef764cc4b02ae4d
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 93ff84d263c2fe8825d2cf5a86249bbf19cb9173
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-corporate-owned-ios-devices-in-microsoft-intune"></a>Rejestrowanie firmowych urządzeń z systemem iOS w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Microsoft Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS w ramach programu Device Enrollment Program (DEP) firmy Apple lub przy użyciu narzędzia [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac.
 
@@ -71,11 +71,11 @@ Koligacja użytkownika jest wymagana do obsługi:
 
 5. Po zalogowaniu użytkownik jest monitowany o zarejestrowanie urządzenia. Pierwszym krokiem jest zidentyfikowanie urządzenia. Aplikacja wyświetla listę urządzeń z systemem iOS, które zostały już zarejestrowane przez firmę i przypisane do konta użytkownika w usłudze Intune. Użytkownicy powinni wybrać odpowiednie urządzenie.
 
-  Jeśli to urządzenie nie zostało jeszcze zarejestrowane przez firmę, użytkownicy powinni wybrać pozycję **nowe urządzenie**, aby kontynuować standardową procedurę rejestracji.
+   Jeśli to urządzenie nie zostało jeszcze zarejestrowane przez firmę, użytkownicy powinni wybrać pozycję **nowe urządzenie**, aby kontynuować standardową procedurę rejestracji.
 
 6. Na następnym ekranie użytkownik musi potwierdzić numer seryjny nowego urządzenia. Użytkownik może nacisnąć link **Potwierdź numer seryjny**, aby otworzyć instrukcje korzystania z aplikacji Ustawienia w celu zweryfikowania numeru seryjnego. Użytkownik musi następnie wprowadzić cztery ostatnie znaki numeru seryjnego do aplikacji Portal firmy.
 
-  Ten krok umożliwia zweryfikowanie, że urządzenie zostało zarejestrowane przez firmę w usłudze Intune. Jeśli numer seryjny urządzenia nie jest zgodny, oznacza to, że wybrano niewłaściwe urządzenie. Użytkownik powinien wrócić do poprzedniego ekranu i wybrać inne urządzenie.
+   Ten krok umożliwia zweryfikowanie, że urządzenie zostało zarejestrowane przez firmę w usłudze Intune. Jeśli numer seryjny urządzenia nie jest zgodny, oznacza to, że wybrano niewłaściwe urządzenie. Użytkownik powinien wrócić do poprzedniego ekranu i wybrać inne urządzenie.
 
 7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny internetowej Portalu firmy w celu sfinalizowania rejestracji. Następnie w witrynie pojawia się monit o powrót użytkownika do aplikacji.
 

@@ -1,29 +1,29 @@
 ---
 title: Ustawienia zasad systemu Windows Phone 8.1
-description: "Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune."
-keywords: 
+description: Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości OMA-URI, aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 083ac6c4bbab6cdad9fd07ac68cdd7447f14fe5e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: b44215e301bb712cc4d27722515d2e51b124101b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-phone-81-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu Windows Phone 8.1 w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem Windows Phone 8.1. Ponadto można określić wartości jednolitego identyfikatora zasobów organizacji Open Mobile Alliance (OMA-URI), aby utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
 
@@ -43,18 +43,18 @@ Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można
 
 ### <a name="password-settings"></a>Ustawienia hasła
 
-|Nazwa ustawienia|Szczegóły|
-|----------------|------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określa, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do swoich urządzeń.|
-|**Wymagany typ hasła**|Określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub tylko liczbowe.|
-|**Wymagany typ hasła — Minimalna liczba zestawów znaków**|Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę symboli, które muszą być zawarte w haśle.|
-|**Minimalna długość hasła**|Określa minimalną wymaganą liczbę znaków w haśle.|
-|**Zezwalaj na proste hasła**|Określa, czy można używać prostych haseł, takich jak ciągi „0000” i „1234”.|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.|
-|**Czas braku aktywności (w minutach) przed wyłączeniem ekranu**|Określa czas, przez jaki urządzenie musi pozostawać bezczynne, zanim ekran zostanie automatycznie zablokowany.|
-|**Dni do wygaśnięcia hasła**|Określa liczbę dni, po której należy zmienić hasło urządzenia.|Tak|Tak|
-|**Pamiętaj historię haseł**|Określa, czy wcześniej używane hasła są zapamiętywane, aby uniemożliwić użytkownikowi ich ponowne użycie.|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określa liczbę poprzednich haseł, które są zapamiętywane.|
+|                                           Nazwa ustawienia                                            |                                                                                                                                    Szczegóły                                                                                                                                     |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Wymagaj hasła do odblokowania urządzeń przenośnych</strong>                    |                                                                                                     Określa, czy użytkownicy muszą wprowadzić hasło, aby uzyskać dostęp do swoich urządzeń.                                                                                                     |
+|                              <strong>Wymagany typ hasła</strong>                              |                                                                                          Określa typ hasła, które będzie wymagane, na przykład alfanumeryczne lub tylko liczbowe.                                                                                           |
+|            <strong>Wymagany typ hasła — Minimalna liczba zestawów znaków</strong>             | Określa, z ilu różnych zestawów znaków muszą pochodzić znaki zawarte w haśle. Istnieją cztery zestawy znaków: małe litery, wielkie litery, cyfry oraz symbole. Jednak w przypadku urządzeń z systemem iOS ustawienie określa liczbę symboli, które muszą być zawarte w haśle. |
+|                             <strong>Minimalna długość hasła</strong>                              |                                                                                                 Określa minimalną wymaganą liczbę znaków w haśle.                                                                                                  |
+|                              <strong>Zezwalaj na proste hasła</strong>                              |                                                                                                     Określa, czy można używać prostych haseł, takich jak ciągi „0000” i „1234”.                                                                                                     |
+|     <strong>Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia</strong>      |                                                                                         Określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.                                                                                         |
+|                <strong>Czas braku aktywności (w minutach) przed wyłączeniem ekranu</strong>                 |                                                                                       Określa czas, przez jaki urządzenie musi pozostawać bezczynne, zanim ekran zostanie automatycznie zablokowany.                                                                                        |
+|                            <strong>Dni do wygaśnięcia hasła</strong>                            |                                                                                                    Określa liczbę dni, po której należy zmienić hasło urządzenia.                                                                                                    |
+|                            <strong>Pamiętaj historię haseł</strong>                             |                                                                                     Określa, czy wcześniej używane hasła są zapamiętywane, aby uniemożliwić użytkownikowi ich ponowne użycie.                                                                                      |
+| <strong>Pamiętaj historię haseł</strong> — <strong>Zapobiegaj ponownemu używaniu poprzednich haseł</strong> |                                                                                                          Określa liczbę poprzednich haseł, które są zapamiętywane.                                                                                                          |
 
 ### <a name="encryption-settings"></a>Ustawienia szyfrowania
 
@@ -119,14 +119,15 @@ Na liście **Aplikacje dozwolone i zablokowane** określ aplikacje, które mają
 > [!NOTE]
 > W ramach jednych zasad można określić wyłącznie listę dozwolonych lub zablokowanych aplikacji. Nie można wprowadzić obu list w ramach jednych zasad.
 
-|Nazwa ustawienia|Szczegóły|
-|----------------|--------------------|
-|**Blokuj otwieranie aplikacji z listy przez urządzenia**|Tworzy listę aplikacji niezarządzanych przez usługę Intune, których użytkownicy nie mogą instalować ani uruchamiać.|
-|**Zezwalaj urządzeniom na instalowanie tylko aplikacji z listy**|Tworzy listę aplikacji, które użytkownicy mogą instalować. Użytkownicy nie będą mogli instalować żadnych innych aplikacji. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.|
-|**Dodaj**|Dodaje aplikację do wybranej listy. Podaj wybraną nazwę, adres URL aplikacji w sklepie z aplikacjami, a także, opcjonalnie, wydawcę aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
-|**Importuj aplikacje**|Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.|
-|**Edytowanie**|Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.|
-|**Usuwanie**|Usuwa wybraną aplikację z listy.|
+|                          Nazwa ustawienia                          |                                                                                                      Szczegóły                                                                                                      |
+|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Blokuj otwieranie aplikacji z listy przez urządzenia</strong>   |                                                        Tworzy listę aplikacji niezarządzanych przez usługę Intune, których użytkownicy nie mogą instalować ani uruchamiać.                                                         |
+| <strong>Zezwalaj urządzeniom na instalowanie tylko aplikacji z listy</strong> |                                 Tworzy listę aplikacji, które użytkownicy mogą instalować. Użytkownicy nie będą mogli instalować żadnych innych aplikacji. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone.                                 |
+|                      <strong>Dodaj</strong>                      | Dodaje aplikację do wybranej listy. Podaj wybraną nazwę, adres URL aplikacji w sklepie z aplikacjami, a także, opcjonalnie, wydawcę aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu. |
+|                  <strong>Importuj aplikacje</strong>                  |                              Importuje listę aplikacji wprowadzoną w pliku w formacie wartości rozdzielanych przecinkami. W pliku użyj formatu: nazwa aplikacji, wydawca, adres URL.                               |
+|                     <strong>Edytowanie</strong>                      |                                                                          Umożliwia edytowanie nazwy, wydawcy i adresu URL wybranej aplikacji.                                                                          |
+|                    <strong>Usuwanie</strong>                     |                                                                                      Usuwa wybraną aplikację z listy.                                                                                      |
+
 > [!IMPORTANT]
 > Jeśli określono listę dozwolonych aplikacji dla urządzeń z systemem Windows Phone 8.1, należy dodać do tej listy aplikację Portal firmy — w przeciwnym razie zostanie ona zablokowana.
 
@@ -140,7 +141,7 @@ Na stronie [Aplikacje+Gry systemu Windows Phone](http://www.windowsphone.com/sto
 
 Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście dozwolonych lub zablokowanych aplikacji.
 
-**Przykład:** Wyszukaj aplikację Skype w sklepie. Adres URL, którego użyjesz, to **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
+**Przykład:** Wyszukaj aplikację Skype w sklepie. Używanym adresem URL będzie **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 ## <a name="custom-policy-settings"></a>Ustawienia zasad niestandardowych
 **Niestandardowe zasady konfiguracji systemu Windows Phone** w usłudze Microsoft Intune umożliwiają wdrożenie ustawień OMA-URI, których można użyć do sterowania funkcjami na **urządzeniach z systemem Windows Phone 8.1**. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
@@ -170,5 +171,5 @@ W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ nast�
     |**OMA-URI (z uwzględnieniem wielkości liter)**|Określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.|
     |**Wartość**|Określ wartość, która będzie kojarzona z określonym wcześniej identyfikatorem OMA-URI.|
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

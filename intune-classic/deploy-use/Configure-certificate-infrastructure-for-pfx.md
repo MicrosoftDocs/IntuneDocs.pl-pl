@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a19dbd6ad2b65e7d2d090b543f3e2200180c660a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 819c314b2fe69077fb545afa670587c85d4fa7ef
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurowanie infrastruktury certyfikatu
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W tym temacie opisano elementy potrzebne do utworzenia i wdrożenia profilów certyfikatów PFX.
 
@@ -38,21 +38,21 @@ Do korzystania z profilów certyfikatu PFX w połączeniu z urzędem certyfikacj
 ## <a name="on-premises-infrastructure-description"></a>Opis infrastruktury lokalnej
 
 
--    **Domena usługi Active Directory**: wszystkie serwery wymienione w tej sekcji (z wyjątkiem serwera proxy aplikacji sieci Web) muszą być przyłączone do Twojej domeny usługi Active Directory.
+- **Domena usługi Active Directory**: wszystkie serwery wymienione w tej sekcji (z wyjątkiem serwera proxy aplikacji sieci Web) muszą być przyłączone do Twojej domeny usługi Active Directory.
 
--  **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
-    Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
+- **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Instrukcje dotyczące sposobu konfigurowania urzędu certyfikacji znajdują się w temacie [Instalacja urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
+   Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
 
--  **Komputer, który może komunikować się z urzędem certyfikacji**: alternatywnie można użyć komputera urzędu certyfikacji.
--  **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. W przypadku profilów certyfikatów PFX zainstaluj łącznik certyfikatów na komputerze, który komunikuje się z urzędem certyfikacji.
--  **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) można użyć serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
-    -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
-    -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
+- **Komputer, który może komunikować się z urzędem certyfikacji**: alternatywnie można użyć komputera urzędu certyfikacji.
+- **Łącznik certyfikatów usługi Microsoft Intune**: używając konsoli administracyjnej usługi Intune, możesz pobrać instalatora **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić plik **ndesconnectorssetup.exe** na komputerze, na którym chcesz zainstalować łącznik certyfikatów. W przypadku profilów certyfikatów PFX zainstaluj łącznik certyfikatów na komputerze, który komunikuje się z urzędem certyfikacji.
+- **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) można użyć serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+   -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
+   -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
- > [!NOTE]           
-> -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych (NDES). Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
->-  Ponadto serwer, który hostuje serwer proxy aplikacji sieci Web, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej dla klientów zewnętrznych oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
-    Informacje na temat certyfikatów dla serwera proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
+  > [!NOTE]           
+  > -    Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych (NDES). Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
+  >-  Ponadto serwer, który hostuje serwer proxy aplikacji sieci Web, musi mieć certyfikat SSL odpowiadający nazwie opublikowanej dla klientów zewnętrznych oraz uznawać certyfikat SSL używany na serwerze usługi NDES za zaufany. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
+   Informacje na temat certyfikatów dla serwera proxy aplikacji sieci Web zawiera sekcja **Planowanie certyfikatów** w temacie [Planowanie publikowania aplikacji przy użyciu serwera proxy aplikacji sieci Web](https://technet.microsoft.com/library/dn383650.aspx). Ogólne informacje na temat serwerów proxy aplikacji sieci Web znajdują się w temacie [Praca z serwerem proxy aplikacji sieci Web](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
 ### <a name="certificates-and-templates"></a>Certyfikaty i szablony
@@ -123,36 +123,36 @@ Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Aby pobrać, zainstalować i skonfigurować łącznik certyfikatów
 
-1.  Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com), a następnie wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Łącznik certyfikatów** &gt; **Pobierz łącznik certyfikatów**.
+1. Otwórz [konsolę administracyjną usługi Intune](https://manage.microsoft.com), a następnie wybierz pozycję **Administracja** &gt; **Zarządzanie urządzeniami przenośnymi** &gt; **Łącznik certyfikatów** &gt; **Pobierz łącznik certyfikatów**.
 
-2.  Po zakończeniu uruchom pobrany program instalacyjny (**ndesconnectorssetup.exe**).
+2. Po zakończeniu uruchom pobrany program instalacyjny (**ndesconnectorssetup.exe**).
 
-  Uruchom instalatora na komputerze, który może połączyć się z urzędem certyfikacji. Wybierz opcję dystrybucji certyfikatu PFX, a następnie wybierz pozycję **Zainstaluj**. Po ukończeniu instalacji utwórz profil certyfikatu zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](configure-intune-certificate-profiles.md).
+   Uruchom instalatora na komputerze, który może połączyć się z urzędem certyfikacji. Wybierz opcję dystrybucji certyfikatu PFX, a następnie wybierz pozycję **Zainstaluj**. Po ukończeniu instalacji utwórz profil certyfikatu zgodnie z opisem w sekcji [Konfigurowanie profilów certyfikatów](configure-intune-certificate-profiles.md).
 
    <!-- Not sure about step 3 below -->
 
-3.  Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, wybierz pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany w zadaniu 3.
+3. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, wybierz pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany w zadaniu 3.
 
-    Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Chociaż wybrany certyfikat nie jest wyświetlany, wybierz przycisk **Dalej**, aby wyświetlić właściwości certyfikatu. Następnie wybierz przycisk **Dalej**, a następnie pozycję **Zainstaluj**.
+   Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Chociaż wybrany certyfikat nie jest wyświetlany, wybierz przycisk **Dalej**, aby wyświetlić właściwości certyfikatu. Następnie wybierz przycisk **Dalej**, a następnie pozycję **Zainstaluj**.
 
-4.  Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
+4. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
 
-    > [!TIP]
-    > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
-    >
-    > **&lt;ścieżka_instalacji&gt;\NDESConnectorUI\NDESConnectorUI.exe**
+   > [!TIP]
+   > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
+   >
+   > **&lt;ścieżka_instalacji&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
-5.  W interfejsie użytkownika **łącznika certyfikatów** :
+5. W interfejsie użytkownika **łącznika certyfikatów** :
 
-    a. Wybierz pozycję **Zaloguj** i wprowadź swoje poświadczenia administratora usługi Intune lub poświadczenia administratora dzierżawy z uprawnieniami administratora globalnego.
+   a. Wybierz pozycję **Zaloguj** i wprowadź swoje poświadczenia administratora usługi Intune lub poświadczenia administratora dzierżawy z uprawnieniami administratora globalnego.
 
-    b. Wybierz kartę **Zaawansowane**, wprowadź poświadczenia konta, do którego przypisano uprawnienia **Wystawianie certyfikatów i zarządzanie nimi** w urzędzie wystawiającym certyfikaty.
+   b. Wybierz kartę **Zaawansowane**, wprowadź poświadczenia konta, do którego przypisano uprawnienia **Wystawianie certyfikatów i zarządzanie nimi** w urzędzie wystawiającym certyfikaty.
 
-    c. Wybierz pozycję **Zastosuj**.
+   c. Wybierz pozycję **Zastosuj**.
 
-    Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
+   Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
 
-6.  Otwórz wiersz polecenia i wpisz **services.msc**. Naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i wybierz polecenie **Uruchom ponownie**.
+6. Otwórz wiersz polecenia i wpisz **services.msc**. Naciśnij klawisz **Enter**, kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i wybierz polecenie **Uruchom ponownie**.
 
 
 ### <a name="next-steps"></a>Następne kroki

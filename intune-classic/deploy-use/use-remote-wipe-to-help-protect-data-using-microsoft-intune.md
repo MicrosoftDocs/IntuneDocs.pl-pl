@@ -1,29 +1,29 @@
 ---
-title: "Zapewnianie lepszej ochrony danych dzięki zdalnemu czyszczeniu danych"
-description: "Usługa Intune udostępnia funkcje czyszczenia selektywnego i pełnego umożliwiające usunięcie poufnych danych firmy oraz dostępu do wielu zasobów firmy."
-keywords: 
+title: Zapewnianie lepszej ochrony danych dzięki zdalnemu czyszczeniu danych
+description: Usługa Intune udostępnia funkcje czyszczenia selektywnego i pełnego umożliwiające usunięcie poufnych danych firmy oraz dostępu do wielu zasobów firmy.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 07/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 85907167305e822ddf6a29475f032b2eb5f97a74
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 82c50be9a8def23fadd8d24fc7654312d5c7ca5c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Zapewnianie lepszej ochrony danych dzięki pełnemu lub selektywnemu czyszczeniu przy użyciu usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Z urządzeń zarządzanych przez usługę Intune, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione, można wyczyścić aplikacje i dane. Usługa Intune umożliwia selektywne i pełne czyszczenie danych. Użytkownicy mogą także wydać z aplikacji Portal firmy usługi Intune polecenie zdalnego wyczyszczenia urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
 
@@ -40,37 +40,37 @@ Z urządzeń zarządzanych przez usługę Intune, które nie są już potrzebne,
 
 ### <a name="remotely-wipe-a-device-from-the-intune-administrator-console"></a>Zdalne czyszczenie urządzenia z poziomu konsoli administratora usługi Intune
 
-1.  Wybierz urządzenia do wyczyszczenia. Można je znaleźć według użytkownika lub według urządzenia.
+1. Wybierz urządzenia do wyczyszczenia. Można je znaleźć według użytkownika lub według urządzenia.
 
-    -   **Według użytkownika:**
+   - **Według użytkownika:**
 
-        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszyscy użytkownicy**.
+     1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycje **Grupy** &gt; **Wszyscy użytkownicy**.
 
-        2.  Wybierz nazwę użytkownika, którego urządzenie przenośne ma zostać wyczyszczone. Wybierz pozycję **Wyświetl właściwości**.
+     2.  Wybierz nazwę użytkownika, którego urządzenie przenośne ma zostać wyczyszczone. Wybierz pozycję **Wyświetl właściwości**.
 
-        3.  Na stronie **Właściwości** użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
+     3.  Na stronie **Właściwości** użytkownika wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
 
-    -   **Według urządzenia:**
+   - **Według urządzenia:**
 
-        1.  W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia przenośne**.
+     1. W [konsoli administratora usługi Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia przenośne**.
 
-         ![Rozpoczynanie operacji wycofania lub czyszczenia](../media/dev-sa-wipe.png)
+        ![Rozpoczynanie operacji wycofania lub czyszczenia](../media/dev-sa-wipe.png)
 
-        2.  Wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
+     2. Wybierz pozycję **Urządzenia**, a następnie wybierz nazwę urządzenia przenośnego, które chcesz wyczyścić. Użyj kombinacji klawisza Ctrl i kliknięcia, aby wybrać wiele urządzeń.
 
-2.  Wybierz pozycję **Wycofaj/wyczyść**.
+2. Wybierz pozycję **Wycofaj/wyczyść**.
 
-3.  Zostanie wyświetlony komunikat potwierdzenia z pytaniem, czy chcesz wycofać urządzenie.
+3. Zostanie wyświetlony komunikat potwierdzenia z pytaniem, czy chcesz wycofać urządzenie.
 
-    -   Aby przeprowadzić **selektywne czyszczenie danych**, które powoduje usunięcie tylko aplikacji i danych firmy, wybierz pozycję **Tak**.
+   -   Aby przeprowadzić **selektywne czyszczenie danych**, które powoduje usunięcie tylko aplikacji i danych firmy, wybierz pozycję **Tak**.
 
-    -   Aby przeprowadzić **pełne czyszczenie danych**, które powoduje usunięcie wszystkich aplikacji i danych, a następnie przywraca domyślne ustawienia fabryczne urządzenia, wybierz pozycję **Wyczyść urządzenie przed jego wycofaniem**. Ta akcja ma zastosowanie do wszystkich platform z wyjątkiem systemu Windows 8.1. **Nie można odzyskać danych usuniętych przez pełne czyszczenie danych**.
+   -   Aby przeprowadzić **pełne czyszczenie danych**, które powoduje usunięcie wszystkich aplikacji i danych, a następnie przywraca domyślne ustawienia fabryczne urządzenia, wybierz pozycję **Wyczyść urządzenie przed jego wycofaniem**. Ta akcja ma zastosowanie do wszystkich platform z wyjątkiem systemu Windows 8.1. **Nie można odzyskać danych usuniętych przez pełne czyszczenie danych**.
 
 Jeśli urządzenie jest włączone i połączone, propagowanie polecenia czyszczenia do wszystkich typów urządzeń trwa mniej niż 15 minut.
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Aby usunąć urządzenia w portalu usługi Azure Active Directory
 
-1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator** &gt; **Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
+1.  Przejdź do witryny [http://aka.ms/accessaad](http://aka.ms/accessaad) lub wybierz pozycję **Administrator**&gt;**Azure AD** w witrynie [https://portal.office.com](https://portal.office.com).
 
 2.  Zaloguj się za pomocą Identyfikatora organizacji, korzystając z linku w lewej części strony.
 

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6139b656c69b58bdbdd02e296f8a061dd598a1c6
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 512bd38802dbb97a74d3d19d74a7d5086784d327
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-configurations-for-microsoft-intune-vpn-profiles"></a>Konfiguracje niestandardowe dla profilów sieci VPN usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="create-a-custom-configuration"></a>Tworzenie konfiguracji niestandardowej
 Zasady konfiguracji niestandardowych usługi Intune umożliwiają tworzenie profilów sieci VPN dla następujących urządzeń:
@@ -39,13 +39,13 @@ Ten typ zasad może być przydatny, gdy standardowe zasady sieci VPN usługi Int
 
 ## <a name="to-create-a-custom-configuration-policy"></a>Aby utworzyć niestandardowe zasady konfiguracji:
 
-   1. W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dodaj zasady** > *Rozwiń platformę* > **Konfiguracja niestandardowa** > **Utwórz zasady**.
-   2. Podaj nazwę zasad.
-   3. Dla każdego ustawienia identyfikatora URI, które chcesz określić, wybierz pozycję **Dodaj** i podaj wymagane informacje. Przykład:
+1. W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dodaj zasady** > *Rozwiń platformę* > **Konfiguracja niestandardowa** > **Utwórz zasady**.
+2. Podaj nazwę zasad.
+3. Dla każdego ustawienia identyfikatora URI, które chcesz określić, wybierz pozycję **Dodaj** i podaj wymagane informacje. Przykład:
 
    ![Okno dialogowe konfiguracji niestandardowej profilu VPN](./media/Intune_Add_VPN_URI.png)
 
-   4.  Po wprowadzeniu wszystkich ustawień identyfikatora URI wybierz pozycję **Zapisz zasady**, a następnie wdróż zasady.
+4. Po wprowadzeniu wszystkich ustawień identyfikatora URI wybierz pozycję **Zapisz zasady**, a następnie wdróż zasady.
 
 Następnie [wdróż zasady](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#deploy-a-configuration-policy) w zwykły sposób.
 

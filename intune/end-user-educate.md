@@ -1,27 +1,27 @@
 ---
-title: "Jak edukować użytkowników końcowych na temat usługi Microsoft Intune | Microsoft Intune"
-description: "Udostępnij informacje użytkownikom końcowym, aby wdrożenie usługi Intune było pomyślne."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Jak edukować użytkowników końcowych na temat usługi Microsoft Intune | Microsoft Intune
+description: Udostępnij informacje użytkownikom końcowym, aby wdrożenie usługi Intune było pomyślne.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/10/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
-ms.openlocfilehash: 7fc524fe3f31d886427e5ebff56d3f2cb7b14693
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a8b5f44482a55a6bb9e9da9e2aa9a8fb67f0a713
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Jak edukować użytkowników końcowych na temat usługi Microsoft Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Usługa Microsoft Intune ułatwia pracę pracowników mających urządzenia przenośne, chroniąc dane firmowe. Istnieje wiele kroków niezbędnych do zapewnienia pomyślnego wdrożenia, w tym ocena usługi Intune przy użyciu [bezpłatnej wersji próbnej](app-sdk.md).
 

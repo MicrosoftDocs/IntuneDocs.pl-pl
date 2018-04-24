@@ -15,58 +15,58 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9baa0325a90e152ffd6cf6a31cdd0a458588758a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: bdc248689f586a44f4c84568b9d9f9c1fa3e059a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-intune-console-views-according-to-admin-roles"></a>Dostosowywanie widoków konsoli usługi Intune zgodnie z rolami administratora
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Można filtrować widoki konsoli administracyjnej usługi Microsoft Intune, aby umożliwić administratorom wyświetlanie tylko tych elementów, które są im potrzebne w danej roli. Na przykład można zezwolić operatorom konsoli administracyjnej tylko na aktualizację definicji złośliwego oprogramowania lub resetowanie kodu dostępu na urządzeniach. Można uzyskać taki efekt za pomocą wstępnie ustawionych **oznaczeń** przypisywanych do konkretnych użytkowników. Gdy ci użytkownicy uzyskują dostęp do konsoli administracyjnej, mogą zobaczyć tylko elementy odpowiednie do swojego oznaczenia.
 
 ## <a name="to-create-a-custom-view"></a>Aby utworzyć widok niestandardowy
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Administracja** &gt; **Administratorzy usługi**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycje **Administracja** &gt; **Administratorzy usługi**.
 
-2.  Z listy administratorów usługi wybierz użytkownika, którego wyznaczenie chcesz zmienić, a następnie wybierz opcję **Zarządzaj dostępem**.
+2. Z listy administratorów usługi wybierz użytkownika, którego wyznaczenie chcesz zmienić, a następnie wybierz opcję **Zarządzaj dostępem**.
 
-3.  W oknie dialogowym **Zarządzanie dostępem** wybierz poziom dostępu, który chcesz nadać wybranemu użytkownikowi. Można wybrać jedną z następujących opcji:
+3. W oknie dialogowym **Zarządzanie dostępem** wybierz poziom dostępu, który chcesz nadać wybranemu użytkownikowi. Można wybrać jedną z następujących opcji:
 
-    -   **Pełny dostęp**
-    -   **Dostęp tylko do odczytu**
-    -   **Pomoc techniczna — węzeł Grupy**
+   -   **Pełny dostęp**
+   -   **Dostęp tylko do odczytu**
+   -   **Pomoc techniczna — węzeł Grupy**
 
-    Pełny dostęp i dostęp tylko do odczytu nie wymagają wyjaśnień. <!--- **Helpdesk - Groups Node** allows users to choose from one of the following designations that provide custom levels of access to the Intune admin console:--->
+   Pełny dostęp i dostęp tylko do odczytu nie wymagają wyjaśnień. <!--- **Helpdesk - Groups Node** allows users to choose from one of the following designations that provide custom levels of access to the Intune admin console:--->
 
-    **Pomoc techniczna — węzeł Grupy** ogranicza elementy, które administrator może zobaczyć, i zadania, które może wykonać, do następujących:
+   **Pomoc techniczna — węzeł Grupy** ogranicza elementy, które administrator może zobaczyć, i zadania, które może wykonać, do następujących:
 
-    -   Wyświetlać listy użytkowników i urządzeń. Administrator nie może używać filtrów do modyfikowania widoku. Natomiast Ty możesz użyć filtrowania grup w celu modyfikacji tego, co administrator może zobaczyć. Aby uzyskać więcej informacji, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
+   -   Wyświetlać listy użytkowników i urządzeń. Administrator nie może używać filtrów do modyfikowania widoku. Natomiast Ty możesz użyć filtrowania grup w celu modyfikacji tego, co administrator może zobaczyć. Aby uzyskać więcej informacji, zobacz [Używanie grup do zarządzania użytkownikami i urządzeniami w usłudze Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
-    -   Drukować listę użytkowników i urządzeń.
+   -   Drukować listę użytkowników i urządzeń.
 
-    -   Eksportować listę użytkowników i urządzeń
+   -   Eksportować listę użytkowników i urządzeń
 
-    -   Wyświetlać właściwości użytkownika lub urządzenia.
+   -   Wyświetlać właściwości użytkownika lub urządzenia.
 
-    -   Wykonywać następujące zadania zdalne:
+   -   Wykonywać następujące zadania zdalne:
 
-        -   Uruchamianie pełnego skanowania pod kątem złośliwego oprogramowania
+       -   Uruchamianie pełnego skanowania pod kątem złośliwego oprogramowania
 
-        -   Uruchamianie szybkiego skanowania pod kątem złośliwego oprogramowania
+       -   Uruchamianie szybkiego skanowania pod kątem złośliwego oprogramowania
 
-        -   Ponowne uruchamianie komputera
+       -   Ponowne uruchamianie komputera
 
-        -   Aktualizacja definicji złośliwego oprogramowania
+       -   Aktualizacja definicji złośliwego oprogramowania
 
-        -   Odświeżanie zasad
+       -   Odświeżanie zasad
 
-        -   Odświeżanie magazynu
+       -   Odświeżanie magazynu
 
-        -   Zdalne blokowanie urządzenia
+       -   Zdalne blokowanie urządzenia
 
-        -   Resetowanie kodu dostępu
+       -   Resetowanie kodu dostępu
 
 Gdy skonfigurowany przez Ciebie administrator otworzy następnie konsolę administracyjną usługi Intune, otrzyma określony przez Ciebie poziom dostępu.
