@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5fd86b380a80529ba7f6c431452ae89e22c0de25
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5a346c321147656d748d3abde78575268b20e9ab
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Użyj funkcji **mapowania grup urządzeń** w usłudze Microsoft Intune, aby automatycznie dodać urządzenia do grup na podstawie zdefiniowanych kategorii, co ułatwi zarządzanie tymi urządzeniami. 
 
@@ -67,10 +67,10 @@ W związku z etapową implementacją grup zabezpieczeń opartych na usłudze Azu
 
 ### <a name="step-1---create-device-categories-in-the-intune-administration-console"></a>Krok 1. Utworzenie kategorii urządzeń w konsoli administratora usługi Intune
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja**.
-3. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Kategorie urządzeń**.
-4. Na stronie **Kategorie urządzeń** zostanie wyświetlona lista, na której możesz skonfigurować kategorie urządzeń: 
-- Możesz wprowadzić nazwę, a następnie kliknąć przycisk **Dodaj**, aby dodać ją jako nową kategorię urządzeń.
-- Ponadto możesz wybrać kategorię, a następnie ją usunąć, klikając przycisk **Usuń**.
+2. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi**, a następnie wybierz pozycję **Kategorie urządzeń**.
+3. Na stronie **Kategorie urządzeń** zostanie wyświetlona lista, na której możesz skonfigurować kategorie urządzeń: 
+4. Możesz wprowadzić nazwę, a następnie kliknąć przycisk **Dodaj**, aby dodać ją jako nową kategorię urządzeń.
+5. Ponadto możesz wybrać kategorię, a następnie ją usunąć, klikając przycisk **Usuń**.
 
 Nazwa kategorii urządzeń będzie używana podczas tworzenia grup zabezpieczeń usługi Azure Active Directory w kroku 2.
 

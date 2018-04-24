@@ -1,29 +1,29 @@
 ---
-title: "Konfigurowanie rejestrowania urządzeń z systemem iOS w programie Apple School Manager"
+title: Konfigurowanie rejestrowania urządzeń z systemem iOS w programie Apple School Manager
 titlesuffix: Microsoft Intune
-description: "Dowiedz się, jak skonfigurować rejestrację firmowych urządzeń z systemem iOS w programie Apple School Manager przy użyciu usługi Intune."
-keywords: 
+description: Dowiedz się, jak skonfigurować rejestrację firmowych urządzeń z systemem iOS w programie Apple School Manager przy użyciu usługi Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3a599ff1dff3e27214dfcca694f6b97333f370a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: afcca0cc1f7786f468856f2aacefc0b8168b4934
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tymczasowe różnice dotyczące interfejsu użytkownika
@@ -61,7 +61,7 @@ Przed zarejestrowaniem firmowych urządzeń z systemem iOS w programie Apple Sch
 **Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu firmy Apple.**<br>
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia**, a następnie wybierz pozycję **Token programu Enrollment Program**.
 
-  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
+   ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
 
 2. W bloku **Token programu Enrollment Program** wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (pem). Plik .pem jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu Apple School Manager.
 
@@ -95,20 +95,20 @@ Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń 
 4. W bloku **Utwórz profil rejestracji** wypełnij pola **Nazwa** i **Opis** odnoszące się do profilu wyświetlanego w usłudze Intune.
 5. Dla pozycji **Koligacja użytkownika** wskaż, czy urządzenia z tym profilem będą rejestrowane z koligacją użytkownika, czy bez niej.
 
- - **Zarejestruj z koligacją użytkownika** — tworzy koligację urządzenia z użytkownikiem podczas instalacji.
+   - **Zarejestruj z koligacją użytkownika** — tworzy koligację urządzenia z użytkownikiem podczas instalacji.
 
-  Tryb udostępniania urządzenia iPad w programie Apple School Manager wymaga od użytkownika zarejestrowania urządzenia bez koligacji użytkownika.
+   Tryb udostępniania urządzenia iPad w programie Apple School Manager wymaga od użytkownika zarejestrowania urządzenia bez koligacji użytkownika.
 
- - **Zarejestruj bez koligacji użytkownika** — to ustawienie należy wybrać dla urządzenia, dla którego nie istnieje koligacja z żadnym użytkownikiem, np. dla urządzenia udostępnionego. Ma to zastosowanie w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje, takie jak Portal firmy, nie działają.
+   - **Zarejestruj bez koligacji użytkownika** — to ustawienie należy wybrać dla urządzenia, dla którego nie istnieje koligacja z żadnym użytkownikiem, np. dla urządzenia udostępnionego. Ma to zastosowanie w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje, takie jak Portal firmy, nie działają.
 
 6. Wybierz pozycję **Ustawienia zarządzania urządzeniami**. Te pozycje są konfigurowane podczas aktywacji i do ich zmiany wymagane jest zresetowanie do ustawień fabrycznych. Skonfiguruj następujące ustawienia profilu, a następnie wybierz pozycję **Zapisz**:
 
-  ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
+   ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
 
-    - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
+   - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania.
 
      - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia.
-   - **Udostępnione urządzenie iPad** — (wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu nadzorowanego). Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+     - **Udostępnione urządzenie iPad** — (wymaga ustawienia **Zarejestruj z koligacją użytkownika** i trybu nadzorowanego). Umożliwia wielu użytkownikom logowanie się do zarejestrowanych urządzeń iPad przy użyciu zarządzanego identyfikatora Apple ID. Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
    >[!NOTE]
    >Jeśli opcja **Koligacja użytkownika** jest ustawiona na wartość **Z koligacją użytkownika** lub tryb **Nadzorowane** jest ustawiony na wartość **Wyłączone**, tryb Udostępnione urządzenie iPad zostanie wyłączony dla profilu rejestracji.
@@ -151,12 +151,12 @@ Teraz, gdy do usługi Intune zostało przypisane uprawnienie do zarządzania urz
 
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Urządzenia programu Enrollment Program** > **Synchronizacja**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
+   ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
 2. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Blok Synchronizuj z wybranym linkiem Żądaj synchronizacji](./media/enrollment-program-device-request-sync.png)
+   ![Blok Synchronizuj z wybranym linkiem Żądaj synchronizacji](./media/enrollment-program-device-request-sync.png)
 
-  Aby spełnić warunki dopuszczalnego ruchu firmy Apple, usługa Intune nakłada następujące ograniczenia:
+   Aby spełnić warunki dopuszczalnego ruchu firmy Apple, usługa Intune nakłada następujące ograniczenia:
    -    Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune odświeża każdy numer seryjny Apple przypisany do usługi Intune, niezależnie od tego, czy numer seryjny był już wcześniej synchronizowany. W przypadku próby przeprowadzenia pełnej synchronizacji przed upływem siedmiu dni od poprzedniej pełnej synchronizacji usługa Intune odświeża tylko numery seryjne, które jeszcze nie zostały przypisane do usługi Intune.
    -    Każde żądanie synchronizacji ma przydzielone 15 minut na zakończenie. W tym czasie lub do momentu zakończenia żądania powodzeniem przycisk **synchronizacji** jest wyłączony.
 
@@ -169,15 +169,15 @@ Przed zarejestrowaniem urządzeń korzystających z programu Apple School Manage
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Profile programu Enrollment Program**.
 2. Z listy **Profile programu Enrollment Program** wybierz profil, który ma zostać przypisany do urządzeń, a następnie wybierz pozycję **Przypisania urządzeń**.
 
- ![Przypisania urządzeń z wybranym przyciskiem Przypisz.](./media/enrollment-program-device-assign.png)
+   ![Przypisania urządzeń z wybranym przyciskiem Przypisz.](./media/enrollment-program-device-assign.png)
 
 3. Wybierz pozycję **Przypisz**, a następnie wybierz urządzenia korzystające z programu Apple School Manager, do których chcesz przypisać ten profil. Możesz zastosować filtr, aby wyświetlić dostępne urządzenia:
-  - **nieprzypisane**
-  - **dowolne**
-  - **&lt;nazwa profilu&gt;**
+   - **nieprzypisane**
+   - **dowolne**
+   - **&lt;nazwa profilu&gt;**
 4. Wybierz urządzenia, które chcesz przypisać. Pole wyboru powyżej kolumny pozwala wybrać maksymalnie 1000 wyświetlanych urządzeń. Kliknij przycisk **Przypisz**. Aby zarejestrować więcej niż 1000 urządzeń, powtarzaj procedurę przypisania, aż profil rejestracji zostanie przypisany do wszystkich urządzeń.
 
-  ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
+   ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Przekazywanie urządzeń użytkownikom
 

@@ -1,43 +1,43 @@
 ---
-title: "Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego"
-description: "Utwórz profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji Konfiguracja niestandardowa."
-keywords: 
+title: Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego
+description: Utwórz profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji Konfiguracja niestandardowa.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0e2dff26e6dcbe1db6a9cef58af10901178e432b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: a023b6829b33c3b3bff94021ecd3c90d8b41f30f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego za pomocą zasad niestandardowych
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Oto jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opcji **Konfiguracja niestandardowa** usługi Intune. Ten temat zawiera również przykład sposobu tworzenia profilu sieci przy użyciu protokołu EAP.
 
 > [!NOTE]
--   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
-- W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
--   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
--  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
+> -   Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z poniższym opisem.
+> - W przypadku urządzeń z systemem Android można skorzystać z aplikacji [Android PSK Generator](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) wydanej przez Johnathona Biersacka.
+> -   Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
+> -  W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) wydanej przez Johnathona Biersacka.
 
 
-1.  Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
+1. Aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego dla systemu Android lub Windows albo profil sieci Wi-Fi z użyciem protokołu EAP, podczas tworzenia zasad wybierz opcję **Konfiguracja niestandardowa** dla danej platformy urządzenia zamiast profilu sieci Wi-Fi.
 
-2.  Podaj nazwę i opis.
-3.  Dodaj nowe ustawienie OMA-URI:
+2. Podaj nazwę i opis.
+3. Dodaj nowe ustawienie OMA-URI:
 
    a.   Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
 
@@ -47,15 +47,15 @@ Oto jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego za pomocą opc
 
    d.   **OMA-URI**:
 
-    - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-Należy pamiętać o kropce na początku.
+   > [!NOTE]
+   > Należy pamiętać o kropce na początku.
 
-    Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+   Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
-  e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Przykład: Każdą wartość należy dostosować do ustawień sieciowych. Wskazówki można znaleźć w sekcji komentarzy kodu.
+   e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Przykład: Każdą wartość należy dostosować do ustawień sieciowych. Wskazówki można znaleźć w sekcji komentarzy kodu.
 4. Wybierz **OK**, zapisz, a następnie wdróż zasady.
 
     > [!NOTE]
@@ -202,8 +202,8 @@ Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi:
 1. Na komputerze połączonym lub niedawno połączonym z siecią bezprzewodową otwórz następujący folder: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
 
     Najlepiej użyć komputera, który nie jest połączony z wieloma sieciami, ponieważ w przeciwnym razie trzeba będzie przeszukiwać poszczególne profile, aby znaleźć właściwy.
-3.     Wyszukaj plik z odpowiednią nazwą wśród plików XML.
-4.     Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
+2. Wyszukaj plik z odpowiednią nazwą wśród plików XML.
+3. Po zlokalizowaniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu Dane na stronie ustawień OMA-URI.
 
 ## <a name="deploy-the-policy"></a>Wdrożenie zasad
 

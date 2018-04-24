@@ -1,39 +1,33 @@
 ---
-title: "Wyrejestrowywanie urządzenia z systemem Windows z usługi Intune | Microsoft Docs"
-description: "Opis sposobu wyrejestrowania urządzenia z systemem Windows z usługi Intune"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Usuwanie urządzenia z systemem Windows z usługi Intune | Microsoft Docs
+description: Opis sposobu usunięcia urządzenia z systemem Windows z usługi Intune
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 03/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 searchScope:
 - User help
-ROBOTS: 
-ms.reviewer: priyar
+ROBOTS: ''
+ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 898501d2cf87f73243a97b8c1e99633d30bab982
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f9051fb393c82031d581f7fec731a3b148cbf2e
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="unenroll-your-windows-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem Windows z usługi Intune
+# <a name="remove-your-windows-device-from-intune"></a>Usuwanie urządzenia z systemem Windows z usługi Intune
 
-Jeśli Twoje urządzenie z systemem Windows zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do celów służbowych i nie musisz uzyskiwać dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz je wyrejestrować. Po wyrejestrowaniu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po wyrejestrowaniu urządzenia, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
+Jeśli Twoje urządzenie zostało zarejestrowane w usłudze Intune, ale nie chcesz już używać go do dostępu do służbowych wiadomości e-mail, aplikacji oraz innych zasobów, musisz usunąć je z zarządzania. Po usunięciu urządzenia z usługi Intune nie będzie można uzyskiwać dostępu do tych zasobów. Aby uzyskać więcej informacji o tym, co się stanie po usunięciu urządzenia z zarządzania, zobacz [Co się stanie w przypadku wyrejestrowania urządzenia z usługi Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
-Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykule”, który odpowiada typowi używanego urządzenia:
-
--   [Wyrejestrowywanie urządzenia z systemem Windows 10](#unenroll-your-windows-10-device)
--   [Wyrejestrowywanie komputera z systemem Windows 8.1](#unenroll-your-windows-81-computer)
--   [Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1](#unenroll-your-windows-phone-81-device)
-
-## <a name="unenroll-your-windows-10-device"></a>Wyrejestrowywanie urządzenia z systemem Windows 10
+## <a name="remove-your-windows-10-device"></a>Usuwanie urządzenia z systemem Windows 10
 
 1.  Na liście aplikacji naciśnij aplikację **Portal firmy** .
 
@@ -43,7 +37,7 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 
 4.  Naciśnij pozycję **Usuń** &gt; **Usuń**.
 
-## <a name="unenroll-your-windows-81-computer"></a>Wyrejestrowywanie komputera z systemem Windows 8.1
+## <a name="remove-your-windows-81-computer"></a>Usuwanie komputera z systemem Windows 8.1
 
 1.  Przejdź do pozycji **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.
 
@@ -53,7 +47,7 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 
 4.  W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
 
-## <a name="unenroll-your-windows-phone-81-device"></a>Wyrejestrowywanie urządzenia z systemem Windows Phone 8.1
+## <a name="remove-your-windows-phone-81-mobile-device"></a>Usuwanie urządzenia przenośnego z systemem Windows Phone 8.1
 
 1.  Przejdź do pozycji **Ustawienia** &gt; **Miejsce pracy**.
 
@@ -62,5 +56,22 @@ Aby wyrejestrować urządzenie, użyj linku z powyższej sekcji „W tym artykul
 3.  W dolnej części ekranu naciśnij pozycję **Usuń**.
 
 4.  W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.
+
+## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Usuwanie danych osobowych po usunięciu aplikacji Portal firmy
+
+Istnieją dwa rodzaje danych, które aplikacja Portal firmy przechowuje na urządzeniu z systemem Windows:
+
+-   **Dzienniki diagnostyczne**: standardowe dane o aktywności aplikacji, które zbiera firma Microsoft, np. czas otwarcia aplikacji lub informacje o awarii — są automatycznie usuwane w przypadku usunięcia urządzenia z aplikacji Portal firmy.
+-   **Pamięć podręczna aplikacji**: przechowywanie wybranych plików pomocniczych wymaganych do działania aplikacji, np. ikon i ustawień.
+
+Istnieje kilka kroków, które należy podjąć, aby całkowicie usunąć te informacje.
+
+### <a name="uninstall-the-company-portal"></a>Odinstalowanie aplikacji Portal firmy  
+
+[Odinstalowanie aplikacji Portal firmy](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) spowoduje usunięcie niektórych danych aplikacji przechowywanych na urządzeniu.  
+
+### <a name="reset-the-company-portal"></a>Resetowanie aplikacji Portal firmy
+
+Możesz zresetować pozostałe dane aplikacji Portal firmy poprzez zresetowanie aplikacji w ustawieniach. Otwórz pozycję **Ustawienia** > **Aplikacje i funkcje** > **Portal firmy** > **Opcje zaawansowane** > **Resetuj**.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

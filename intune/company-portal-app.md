@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 186f6c1749d94a995ad145ca535bb59c6f02875c
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: aed2bec6e6fea40fdbd78bc487896d167d036f06
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT.        
 
@@ -36,14 +36,14 @@ Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowi
 Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie **Kontakt z działem IT** w portalu firmy na komputerach użytkowników. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.        
 
 
-|Nazwa pola|Długość maksymalna|Więcej informacji|        
-|-|-|-|     
-|**Nazwa firmy**|40|Ta nazwa jest wyświetlana jako tytuł portalu firmy.|        
-|**Imię i nazwisko osoby do kontaktu w dziale IT**|40|Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**.|      
-|**Numer telefonu działu IT**|20|Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**.|        
-|**Adres e-mail działu IT**|40|Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie **alias@domainname.com**.|     
-|**Dodatkowe informacje**|120|Wyświetlane na stronie **Kontakt z działem IT**.|      
-|**Adres URL zasad zachowania poufności informacji firmy**|79|Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Należy wprowadzić prawidłowy adres URL w formacie **https://www.contoso.com**.|        
+|                   Nazwa pola                   | Długość maksymalna |                                                                                                 Więcej informacji                                                                                                 |
+|------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         <strong>Nazwa firmy</strong>          |     40     |                                                                            Ta nazwa jest wyświetlana jako tytuł portalu firmy.                                                                            |
+|  <strong>Imię i nazwisko osoby do kontaktu w dziale IT</strong>   |     40     |                                                                         Ta nazwa jest wyświetlana na stronie <strong>Kontakt z działem IT</strong>.                                                                          |
+|  <strong>Numer telefonu działu IT</strong>   |     20     |                                                                    Ten numer kontaktowy jest wyświetlany na stronie <strong>Kontakt z działem IT</strong>.                                                                     |
+|  <strong>Adres e-mail działu IT</strong>  |     40     |                       Ten adres kontaktowy jest wyświetlany na stronie <strong>Kontakt z działem IT</strong>. Należy wprowadzić prawidłowy adres e-mail w formacie <strong>alias@domainname.com</strong>.                       |
+|    <strong>Dodatkowe informacje</strong>     |    120     |                                                                                Wyświetlane na stronie <strong>Kontakt z działem IT</strong>.                                                                                |
+| <strong>Adres URL zasad zachowania poufności informacji firmy</strong> |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Należy wprowadzić prawidłowy adres URL w formacie <strong><https://www.contoso.com></strong>. |
 
 ## <a name="support-contacts"></a>Kontakt z pomocą techniczną     
 Witryna sieci Web z pomocą techniczną wyświetlana w portalu firmy umożliwia użytkownikom dostęp do pomocy online.        
@@ -62,7 +62,7 @@ Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu
 
 |Nazwa pola|Więcej informacji|       
 |-|-|       
-|**Kolor motywu**|Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy.|      
+|**Kolor motywu**|Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć selektora kolorów lub wprowadzić konkretny kod szesnastkowy.|      
 |**Wyświetl logo firmy**|Po włączeniu tej opcji możesz przekazać logo firmy, aby było wyświetlane w portalu firmy. Można przekazać dwa logo: jedno wyświetlane, gdy tło portalu firmy jest białe, i drugie — wyświetlane, gdy tło Portalu firmy ma wybrany przez użytkownika kolor motywu. Każdy plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 100 pikseli i mieć rozmiar nie większy niż 750 KB.<br>Można również wyświetlić nazwę firmy wprowadzoną obok załadowanego logo.|      
 
 Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień w portalu sieci Web usługi Intune**, aby zobaczyć, jak wyglądają konfiguracje.

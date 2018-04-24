@@ -15,11 +15,11 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: eb9f63199063db34361c7d463b8cef37bb8bfa1f
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 317e884cd54b57f4892c4e101e206089ef335f0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
 
@@ -51,23 +51,24 @@ Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które s
 
 Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarządzania aplikacjami mobilnymi (MAM) jako pojedynczych wystąpień na użytkownika na urządzeniu. Wszyscy użytkownicy i urządzenia wymienieni w jednostce są chronieni, jakby mieli przypisane do siebie co najmniej jedne zasady MAM.
 
-| Właściwość | Opis | Przykład |
-|---------|------------|--------|
-| ApplicationInstanceKey |Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy. |123 |
-| UserId |Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM. |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationInstanceId |Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationId |Identyfikator aplikacji dla tej aplikacji MAM |com.microsoft.groupies-daily.<IOS> |
-| ApplicationVersion |Wersja aplikacji dla tej aplikacji MAM. |2 |
-| CreatedDate |Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
-| Platforma |Platforma urządzenia, na której zainstalowano tę aplikację MAM. |2 |
-| PlatformVersion |Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM. |2.2 |
-| SdkVersion |Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana. |3.2 |
-| DeviceId |Identyfikator urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |b66bc706-ffff-7437-0340-032819502773 |
-| DeviceName |Nazwa urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM. |„MyDevice” |
-| IsDeleted |Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |Prawda/Fałsz |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
-| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+
+|          Właściwość          |                                                                                                  Opis                                                                                                  |               Przykład                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy.                                                                |                 123                  |
+|           UserId           |                                                                              Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|       ApplicationId        |                                                                                        Identyfikator aplikacji dla tej aplikacji MAM                                                                                         |  com.microsoft.groupies-daily.<IOS>  |
+|     ApplicationVersion     |                                                                                     Wersja aplikacji dla tej aplikacji MAM.                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null.                                                                 |        2016-11-23 12:00:00        |
+|          Platforma          |                                                                          Platforma urządzenia, na której zainstalowano tę aplikację MAM.                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM.                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana.                                                                            |                 3.2                  |
+|          DeviceId          |                                                                          Identyfikator urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM.                                                                          | b66bc706-ffff-7437-0340-032819502773 |
+|         DeviceName         |                                                                         Nazwa urządzenia dla urządzenia, na którym zainstalowano tę aplikację MAM.                                                                         |              „MyDevice”              |
+|         IsDeleted          | Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |              Prawda/Fałsz              |
+|   StartDateInclusiveUTC    |                                                              Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych.                                                               |        2016-11-23 12:00:00        |
+|       DeletedDateUTC       |                                                                             Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True.                                                                              |        2016-11-23 12:00:00        |
+| RowLastModifiedDateTimeUTC |                                                           Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych.                                                            |        2016-11-23 12:00:00        |
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -112,20 +113,23 @@ Jednostka **MamEffectivePolicy** zawiera listę wszystkich efektywnych zasad zar
 
 Jednostka **MamGlobalApplication** tworzy listę aplikacji ze sklepu, które są zarządzane za pomocą zarządzania aplikacjami mobilnymi (MAM) bez rejestracji w Twoim przedsiębiorstwie.
 
-| Właściwość | Opis | Przykład |
-|---------|------------|--------|
-| ApplicationKey |Unikatowy identyfikator aplikacji ze sklepu w magazynie danych, znany jako klucz zastępczy. |123 |
-| ApplicationId |Unikatowy identyfikator aplikacji ze sklepu. Identyfikator jest podobny do wartości ApplicationKey, ale jest kluczem naturalnym. |com.microsoft.skydrive.<ios> |
-| ApplicationName |Nazwa globalnej aplikacji MAM. |SkyDrive |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji konkretnej globalnej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+
+|          Właściwość          |                                               Opis                                               |           Przykład            |
+|----------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
+|       ApplicationKey       |          Unikatowy identyfikator aplikacji ze sklepu w magazynie danych, znany jako klucz zastępczy.          |             123              |
+|       ApplicationId        | Unikatowy identyfikator aplikacji ze sklepu. Identyfikator jest podobny do wartości ApplicationKey, ale jest kluczem naturalnym.  | com.microsoft.skydrive.<ios> |
+|      ApplicationName       |                                      Nazwa globalnej aplikacji MAM.                                       |           SkyDrive           |
+| RowLastModifiedDateTimeUTC | Data i godzina w formacie UTC ostatniej modyfikacji konkretnej globalnej aplikacji MAM w magazynie danych. |    2016-11-23 12:00:00    |
 
 ## <a name="mamplatform"></a>MamPlatform
 
 Jednostka **MamPlatform** tworzy listę nazw platform i typów, na których zainstalowano aplikację zarządzania aplikacjami mobilnymi (MAM).
 
-| Właściwość | Opis | Przykład |
-|---------|------------|--------|
-| PlatformKey |Unikatowy identyfikator platformy w magazynie danych — klucz zastępczy. |123 |
-| Platforma |Unikatowy identyfikator platformy — podobny do wartości PlatformKey, ale jest kluczem naturalnym. |123 |
-| PlatformName |Nazwa platformy |Niedostępny <br>Brak <br>Windows <br>System iOS <br>Urządzenia z systemem Android. |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej platformy w magazynie danych. |2016-11-23 12:00:00 |
+
+|          Właściwość          |                                    Opis                                    |                         Przykład                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Unikatowy identyfikator platformy w magazynie danych — klucz zastępczy.      |                           123                           |
+|          Platforma          | Unikatowy identyfikator platformy — podobny do wartości PlatformKey, ale jest kluczem naturalnym. |                           123                           |
+|        PlatformName        |                                   Nazwa platformy                                   | Niedostępny <br>Brak <br>Windows <br>System iOS <br>Urządzenia z systemem Android. |
+| RowLastModifiedDateTimeUTC | Data i godzina w formacie UTC ostatniej modyfikacji tej platformy w magazynie danych.  |                 2016-11-23 12:00:00                  |
+

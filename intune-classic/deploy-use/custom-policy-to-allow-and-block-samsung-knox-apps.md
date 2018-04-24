@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a47e1388f640f96c2650e284ae0a5311fd816ba7
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 22018a241664a02aa99b9a3b1a53aa559ab42db5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Użycie niestandardowych zasad do zezwalania na aplikacje i blokowania ich na urządzeniach z systemem Samsung KNOX Standard
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Użyj procedur opisanych w tym temacie, aby utworzyć niestandardowe zasady usługi Microsoft Intune, co powoduje utworzenie następujących elementów:
 
@@ -39,21 +39,21 @@ Tych ustawień można używać tylko w przypadku urządzeń z systemem Samsung K
 3. Podaj nazwę i opcjonalny opis zasad, a następnie w sekcji **Ustawienia OMA-URI** wybierz polecenie **Dodaj**.
 4. W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** podaj następujące dane: listę aplikacji, których uruchamianie na urządzeniu jest zablokowane:
     
-    - **Nazwa ustawienia.** Podaj ciąg **PreventStartPackages**.
-    - **Opis ustawienia.** Podaj opcjonalny opis, taki jak „Lista aplikacji, których uruchamianie jest zablokowane”.
-    -   **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
-    -   **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -   **Wartość.** Podaj listę nazw pakietów aplikacji, których uruchamianie chcesz blokować. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
+   - **Nazwa ustawienia.** Podaj ciąg **PreventStartPackages**.
+   - **Opis ustawienia.** Podaj opcjonalny opis, taki jak „Lista aplikacji, których uruchamianie jest zablokowane”.
+   - **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
+   - **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+   - **Wartość.** Podaj listę nazw pakietów aplikacji, których uruchamianie chcesz blokować. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
 
-    Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play, przy czym wszystkie inne aplikacje są wykluczone:
+     Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play, przy czym wszystkie inne aplikacje są wykluczone:
 
-    - **Nazwa ustawienia.** Podaj ciąg **AllowInstallPackages**.
-    - **Opis ustawienia.** Wpisz opcjonalny opis, taki jak „Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play”.
-    - **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
-    - **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
-    - **Wartość.** Podaj listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
+   - **Nazwa ustawienia.** Podaj ciąg **AllowInstallPackages**.
+   - **Opis ustawienia.** Wpisz opcjonalny opis, taki jak „Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play”.
+   - **Typ danych.** Wybierz z listy rozwijanej opcję **Ciąg**.
+   - **OMA-URI.** Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
+   - **Wartość.** Podaj listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku **; : ,** lub **|**. (Przykład: pakiet1;pakiet2;)
 
-4. Kliknij pozycję **OK**, a następnie kliknij polecenie **Zapisz zasady**. 
+5. Kliknij pozycję **OK**, a następnie kliknij polecenie **Zapisz zasady**. 
 
 >[!TIP]
 > Identyfikator pakietu aplikacji możesz znaleźć, przechodząc do aplikacji w sklepie Google Play. Identyfikator pakietu znajduje się w adresie URL strony aplikacji. Na przykład identyfikator pakietu aplikacji Microsoft Word to **com.microsoft.office.word**.

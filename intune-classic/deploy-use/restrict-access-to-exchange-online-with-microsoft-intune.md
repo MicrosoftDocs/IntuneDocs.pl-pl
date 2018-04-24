@@ -1,29 +1,29 @@
 ---
-title: "Ochrona dostępu do poczty e-mail w usłudze Exchange Online"
-description: "Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego."
-keywords: 
+title: Ochrona dostępu do poczty e-mail w usłudze Exchange Online
+description: Chroń i kontroluj dostęp do firmowej poczty e-mail w usłudze Exchange Online przy użyciu dostępu warunkowego.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5b0bb2b518705c92089e1e9ed1d1cfece7f2572f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5ea0e0c31dc3b24c0093d6e3b73d38f2bee50bd7
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Ochrona dostępu do poczty e-mail za pośrednictwem usługi Exchange Online i nowej usługi Exchange Online w wersji dedykowanej przy użyciu usługi Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Za pomocą usługi Microsoft Intune można skonfigurować dostęp warunkowy dla usługi Exchange Online lub usługi Exchange Online w wersji dedykowanej. Aby dowiedzieć się więcej o sposobie działania dostępu warunkowego, przeczytaj artykuł [Ochrona dostępu do poczty e-mail, usług O365 i innych usług](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
@@ -48,13 +48,13 @@ Aby skonfigurować dostęp warunkowy, trzeba:
 
 Aby po skonfigurowaniu zasad dostępu warunkowego i skierowaniu ich do użytkownika mógł on połączyć się ze swoją pocztą e-mail, jego **urządzenie** musi:
 
--   Być komputerem przyłączonym do domeny lub zostać **zarejestrowane** w usłudze Intune.
+- Być komputerem przyłączonym do domeny lub zostać **zarejestrowane** w usłudze Intune.
 
--  **Zostać zarejestrowane w usłudze Azure Active Directory**. Dzieje się to automatycznie podczas rejestrowania urządzenia w usłudze Intune. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
+- **Zostać zarejestrowane w usłudze Azure Active Directory**. Dzieje się to automatycznie podczas rejestrowania urządzenia w usłudze Intune. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
 
   Usługa rejestracji urządzeń w usłudze Azure Active Directory zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestracji urządzeń w usługach AD FS, nie będą widzieć zarejestrowanych urządzeń w lokalnej usłudze Active Directory.
 
--   **Być zgodne** ze wszystkimi zasadami zgodności usługi Intune wdrożonymi na tym urządzeniu lub podłączone do domeny lokalnej.
+- **Być zgodne** ze wszystkimi zasadami zgodności usługi Intune wdrożonymi na tym urządzeniu lub podłączone do domeny lokalnej.
 
 ### <a name="when-the-device-is-not-compliant"></a>Niezgodne urządzenie
 
@@ -105,7 +105,7 @@ Dostęp do poczty e-mail programu Exchange z poziomu wbudowanego **klienta poczt
 
 Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznymi pakietu Office, aby uzyskiwać dostęp do usług **Exchange Online** i **SharePoint Online** na komputerach spełniających następujące wymagania:
 
--   Na komputerze musi działać system Windows 7.0, Windows 8.1 lub Windows 10.
+- Na komputerze musi działać system Windows 7.0, Windows 8.1 lub Windows 10.
 
   >[!NOTE]
   > Aby korzystać z dostępu warunkowego na komputerach z systemem Windows 10, trzeba na nich zainstalować Rocznicową aktualizację systemu Windows 10.
@@ -117,13 +117,13 @@ Dostęp warunkowy można skonfigurować dla komputerów z aplikacjami klasycznym
   W przypadku komputerów przyłączonych do domeny należy skonfigurować dostęp warunkowy do [automatycznego rejestrowania urządzenia](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) w usłudze Azure Active Directory.
 
   >[!NOTE]
-    >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
+  >Dostęp warunkowy nie jest obsługiwany na komputerach z uruchomionym oprogramowaniem klienckim usługi Intune.
 
--   [Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
+- [Należy włączyć nowoczesne uwierzytelnianie w usłudze Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) i zainstalować wszystkie najnowsze aktualizacje pakietu Office.
 
-    Nowoczesne uwierzytelnianie umożliwia logowanie do klientów pakietu Office 2013/systemu Windows oparte na bibliotece Active Directory Authentication Library (ADAL). Zapewnia to większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**.
+  Nowoczesne uwierzytelnianie umożliwia logowanie do klientów pakietu Office 2013/systemu Windows oparte na bibliotece Active Directory Authentication Library (ADAL). Zapewnia to większe bezpieczeństwo dzięki zastosowaniu **uwierzytelniania wieloskładnikowego** i **uwierzytelniania opartego na certyfikatach**.
 
--   Reguły oświadczeń ADFS są skonfigurowane tak, aby zablokować starsze protokoły uwierzytelniania. Szczegółowe instrukcje zostały przedstawione w punkcie [Scenariusz 3: Całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
+- Reguły oświadczeń ADFS są skonfigurowane tak, aby zablokować starsze protokoły uwierzytelniania. Szczegółowe instrukcje zostały przedstawione w punkcie [Scenariusz 3: Całkowite blokowanie dostępu do usługi O365 z wyjątkiem aplikacji opartych na przeglądarce](https://technet.microsoft.com/library/dn592182.aspx).
 
 ## <a name="configure-conditional-access"></a>Konfigurowanie zasad dostępu warunkowego
 ### <a name="step-1-configure-and-deploy-a-compliance-policy"></a>Krok 1. Konfigurowanie i wdrażanie zasad zgodności
@@ -161,10 +161,12 @@ Po uruchomieniu raportu sprawdź następujące cztery kolumny w celu określenia
 Urządzenia, które należą do grupy docelowej, nie mają dostępu do programu Exchange, chyba że wartości w kolumnach są zgodne z wartościami w poniższej tabeli:
 
 --------------------------
-|Kanał zarządzania|Rejestracja w usłudze AAD|Zgodny|Identyfikator programu Exchange ActiveSync|Wynikowa akcja|
-|----------------------|------------------|-------------|--------------------------|--------------------|
-|**Zarządzane przez usługę Microsoft Intune i program Exchange ActiveSync**|Tak|Tak|Wartość jest wyświetlana|Dostęp do poczty e-mail jest dozwolony|
-|Dowolna inna wartość|Nie|Nie|Żadna wartość nie jest wyświetlana|Dostęp do poczty e-mail jest zablokowany|
+
+|                          Kanał zarządzania                          | Rejestracja w usłudze AAD | Zgodny | Identyfikator programu Exchange ActiveSync |    Wynikowa akcja     |
+|----------------------------------------------------------------------|----------------|-----------|------------------------|-------------------------|
+| <strong>Zarządzane przez usługę Microsoft Intune i program Exchange ActiveSync</strong> |      Tak       |    Tak    |  Wartość jest wyświetlana  | Dostęp do poczty e-mail jest dozwolony |
+|                           Dowolna inna wartość                            |       Nie       |    Nie     | Żadna wartość nie jest wyświetlana  | Dostęp do poczty e-mail jest zablokowany |
+
 ----------------------
 Możesz wyeksportować zawartość raportu i użyć kolumny **Adres e-mail**, aby poinformować użytkowników o tym, że będą blokowani.
 
@@ -185,71 +187,71 @@ Oceniane są tylko grupy objęte zasadami dostępu warunkowego.
 
 ### <a name="step-4-configure-the-conditional-access-policy"></a>Krok 4. Konfigurowanie zasad dostępu warunkowego
 
->[!NOTE]
+> [!NOTE]
 > Zasady dostępu warunkowego można też utworzyć za pomocą konsoli zarządzania usługi Azure AD. Konsola zarządzania usługi Azure AD umożliwia tworzenie zasad dostępu warunkowego urządzeń w usłudze Intune (nazywanych w usłudze Azure AD **zasadami dostępu warunkowego opartymi na urządzeniach**) oraz innych zasad dostępu warunkowego, takich jak uwierzytelnianie wieloskładnikowe.
+> 
+> Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
->Można także ustawić zasady dostępu warunkowego dla aplikacji korporacyjnych innych firm obsługiwanych przez usługę Azure AD, np. Salesforce i Box. Aby uzyskać więcej informacji, zobacz [Jak ustawić oparte na urządzeniach zasady dostępu warunkowego usługi Azure Active Directory w celu kontrolowania dostępu do aplikacji połączonych z usługą Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
 
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Exchange Online**.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** > **Dostęp warunkowy** > **Zasady usługi Exchange Online**.
+2. Na stronie **Zasady usługi Exchange Online** wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi Exchange Online**.
 
-2.  Na stronie **Zasady usługi Exchange Online** wybierz pozycję **Włącz zasady dostępu warunkowego dla usługi Exchange Online**.
+   > [!NOTE]
+   > Jeśli zasady zgodności nie zostały wdrożone, urządzenia są traktowane jako zgodne.
+   >
+   > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, muszą zarejestrować swoje urządzenia w usłudze Intune.
 
-    > [!NOTE]
-    > Jeśli zasady zgodności nie zostały wdrożone, urządzenia są traktowane jako zgodne.
-    >
-    > Bez względu na stan zgodności wszyscy użytkownicy, którzy są objęci zasadami, muszą zarejestrować swoje urządzenia w usłudze Intune.
+3. W obszarze **Dostęp do aplikacji** w przypadku aplikacji używających nowoczesnego uwierzytelniania użytkownik ma dwa sposoby wyboru platform, których mają dotyczyć zasady. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
 
-3.  W obszarze **Dostęp do aplikacji** w przypadku aplikacji używających nowoczesnego uwierzytelniania użytkownik ma dwa sposoby wyboru platform, których mają dotyczyć zasady. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
+   -   **Wszystkie platformy**
 
-    -   **Wszystkie platformy**
+       W przypadku wybrania tego ustawienia wszystkie urządzenia, za pomocą których jest uzyskiwany dostęp do usługi **Exchange Online**, muszą być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **Exchange Online** jest blokowany.
 
-        W przypadku wybrania tego ustawienia wszystkie urządzenia, za pomocą których jest uzyskiwany dostęp do usługi **Exchange Online**, muszą być zarejestrowane w usłudze Intune i zgodne z zasadami. Każda aplikacja kliencka korzystająca z **nowoczesnego uwierzytelniania** będzie podlegała zasadom dostępu warunkowego. Jeśli dana platforma nie jest aktualnie obsługiwana w usłudze Intune, dostęp do usługi **Exchange Online** jest blokowany.
+       Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform jest wymagana rejestracja w usłudze Intune oraz zgodność, istnieją jednak wyjątki:
+       *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
+       * Nieobsługiwane platformy takie jak system Mac OS. Jednak aplikacje korzystające z nowoczesnego uwierzytelniania i pochodzące z tych platform nadal są zablokowane.
 
-        Wybranie opcji **Wszystkie platformy** oznacza, że usługa Azure Active Directory będzie stosować te zasady do wszystkich żądań uwierzytelniania zgłoszonych przez aplikację klienta, niezależnie od platformy. W przypadku wszystkich platform jest wymagana rejestracja w usłudze Intune oraz zgodność, istnieją jednak wyjątki:
-        *   Urządzenia z systemem Windows, które są objęte wymogiem rejestracji i zgodności, przyłączone do domeny przy użyciu lokalnej usługi Active Directory lub spełniające oba te wymogi.
-        * Nieobsługiwane platformy takie jak system Mac OS. Jednak aplikacje korzystające z nowoczesnego uwierzytelniania i pochodzące z tych platform nadal są zablokowane.
+   -   **Określone platformy**
 
-    -   **Określone platformy**
-
-         Zasady dostępu warunkowego są stosowane do wszystkich aplikacji klienckich korzystających z **nowoczesnego uwierzytelniania** na określonych platformach urządzeń.
+        Zasady dostępu warunkowego są stosowane do wszystkich aplikacji klienckich korzystających z **nowoczesnego uwierzytelniania** na określonych platformach urządzeń.
 
 4. W obszarze **Outlook Web Access (OWA)** można zezwolić na dostęp do usługi Exchange Online tylko za pośrednictwem obsługiwanych przeglądarek: Safari (iOS) i Chrome (Android). Dostęp z innych przeglądarek będzie zablokowany. Ograniczenia platformy wybrane dla dostępu aplikacji dla programu Outlook mają zastosowanie również w tym miejscu.
 
-  Na urządzeniach z systemem **Android** użytkownicy muszą włączyć dostęp za pomocą przeglądarki. W tym celu użytkownik musi włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
-  1.    Otworzyć **aplikację Portal firmy**.
-  2.    Przejść do strony **Ustawienia** za pomocą przycisku oznaczonego wielokropkiem (…) lub przycisku menu urządzenia.
-  3.    Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**.
-  4.    W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
+   Na urządzeniach z systemem **Android** użytkownicy muszą włączyć dostęp za pomocą przeglądarki. W tym celu użytkownik musi włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
+   1.    Otworzyć **aplikację Portal firmy**.
+   2.    Przejść do strony **Ustawienia** za pomocą przycisku oznaczonego wielokropkiem (…) lub przycisku menu urządzenia.
+   3.    Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**.
+   4.    W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
 
-  Na platformach **iOS** i **Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia. Urządzenie wyświetli użytkownikowi certyfikat wraz z monitem o wybranie certyfikatu, jak przedstawiono na zrzutach ekranu poniżej. Użytkownik musi wybrać ten certyfikat przed kontynuowaniem pracy z przeglądarką.
+   Na platformach **iOS** i **Android** w celu zidentyfikowania urządzenia używanego do uzyskania dostępu do usługi usługa Azure Active Directory wystawi certyfikat TLS (Transport Layer Security) dla urządzenia. Urządzenie wyświetli użytkownikowi certyfikat wraz z monitem o wybranie certyfikatu, jak przedstawiono na zrzutach ekranu poniżej. Użytkownik musi wybrać ten certyfikat przed kontynuowaniem pracy z przeglądarką.
 
-  **iOS**
+   **iOS**
 
-  ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+   ![Zrzut ekranu przedstawiający monit dotyczący certyfikatu na urządzeniu iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+   **Android**
 
-  ![Zrzut ekranu przedstawiający monit certyfikatu na urządzeniu z systemem Android](../media/mdm-browser-ca-android-cert-prompt.png)
+   ![Zrzut ekranu przedstawiający monit certyfikatu na urządzeniu z systemem Android](../media/mdm-browser-ca-android-cert-prompt.png)
 
-5.  W obszarze **Aplikacje programu Exchange ActiveSync** można zablokować niezgodnym urządzeniom dostęp do usługi Exchange Online. Można również wybrać, czy dostęp do poczty e-mail ma być blokowany, czy nie, gdy na urządzeniu nie działa obsługiwana platforma. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
+5. W obszarze **Aplikacje programu Exchange ActiveSync** można zablokować niezgodnym urządzeniom dostęp do usługi Exchange Online. Można również wybrać, czy dostęp do poczty e-mail ma być blokowany, czy nie, gdy na urządzeniu nie działa obsługiwana platforma. Obsługiwane platformy to Android, iOS, Windows i Windows Phone.
 
- Aplikacje programu Exchange Active Sync na urządzeniach z programem **Android for Work**:
- -  Na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy działał na urządzeniach z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć go jako **wymaganą** instalację.
+   Aplikacje programu Exchange Active Sync na urządzeniach z programem **Android for Work**:
+   -  Na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy działał na urządzeniach z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć go jako **wymaganą** instalację.
 
-6.  W obszarze **Grupy docelowe** wybierz grupy zabezpieczeń użytkowników usługi Active Directory, których dotyczą te zasady. Można wybrać objęcie wszystkich użytkowników lub wybranej listy grup użytkowników.
-![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online, na której wyświetlone są opcje Grupa docelowa i Grupa wykluczona](../media/IntuneSA5eTargetedExemptedGroups.PNG)
-    > [!NOTE]
-    > W przypadku użytkowników należących do **grup docelowych** zasady usługi Intune powodują zastąpienie reguł i zasad programu Exchange.
-    >
-    > Program Exchange wymusza reguły zezwalania, blokowania i kwarantanny programu Exchange oraz zasady programu Exchange tylko w następujących sytuacjach:
-    >
-    > -   Użytkownik nie ma licencji na usługę Intune.
-    > -   Użytkownik ma licencję na usługę Intune, ale nie należy do żadnej grupy zabezpieczeń użytej w zasadach dostępu warunkowego.
+6. W obszarze **Grupy docelowe** wybierz grupy zabezpieczeń użytkowników usługi Active Directory, których dotyczą te zasady. Można wybrać objęcie wszystkich użytkowników lub wybranej listy grup użytkowników.
+   ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Exchange Online, na której wyświetlone są opcje Grupa docelowa i Grupa wykluczona](../media/IntuneSA5eTargetedExemptedGroups.PNG)
+   > [!NOTE]
+   > W przypadku użytkowników należących do **grup docelowych** zasady usługi Intune powodują zastąpienie reguł i zasad programu Exchange.
+   >
+   > Program Exchange wymusza reguły zezwalania, blokowania i kwarantanny programu Exchange oraz zasady programu Exchange tylko w następujących sytuacjach:
+   >
+   > -   Użytkownik nie ma licencji na usługę Intune.
+   > -   Użytkownik ma licencję na usługę Intune, ale nie należy do żadnej grupy zabezpieczeń użytej w zasadach dostępu warunkowego.
 
-6.  W obszarze **Grupy docelowe**wybierz grupy zabezpieczeń użytkowników usługi Active Directory wykluczane z tych zasad. Jeśli użytkownik należy zarówno do grupy objętej zasadami, jak i do grupy wykluczonej z zasad, jest wykluczony z zasad.
+7. W obszarze **Grupy docelowe**wybierz grupy zabezpieczeń użytkowników usługi Active Directory wykluczane z tych zasad. Jeśli użytkownik należy zarówno do grupy objętej zasadami, jak i do grupy wykluczonej z zasad, jest wykluczony z zasad.
 
-7.  Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
+8. Po zakończeniu tych czynności wybierz pozycję **Zapisz**.
 
 -   Nie musisz wdrażać zasad dostępu warunkowego, ponieważ zostają one natychmiast zastosowane.
 

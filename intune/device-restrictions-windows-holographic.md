@@ -1,27 +1,26 @@
 ---
-title: Ustawienia ograniczeń urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune
-titleSuffix: ''
-description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem Windows Holographic for Business.
+title: Ograniczenia urządzeń dotyczące systemu Windows Holographic for Business w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy i dane użycia na platformie Azure.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 4/9/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 694b81434a95f48abc98f5012460523420df58cc
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5b0784aeb1dc1022b4be824c2f858f9525d03918
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="microsoft-intune-windows-holographic-for-business-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune
+# <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows Holographic for Business w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzeniach z systemem Windows Holographic for Business, takich jak Microsoft Hololens.
 
@@ -31,13 +30,9 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 - **Cortana** — włącza lub wyłącza asystenta głosowego Cortana.
 - **Geolokalizacja** — określa, czy urządzenie może używać informacji z usług lokalizacyjnych.
 
-
-
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
     -   **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności** — określa, że użytkownik musi wprowadzić hasło, aby odblokować urządzenie.
-
-
 
 ## <a name="app-store"></a>App Store
 
@@ -47,7 +42,6 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 
 ## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
 
--   **Przeglądarka Microsoft Edge** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
 -   **Pliki cookie** — umożliwia przeglądarce na urządzeniu zapisywanie plików cookie z Internetu.
 -   **Wyskakujące okienka** — umożliwia blokowanie wyskakujących okienek w przeglądarce (tylko system Windows 10 Desktop).
 -   **Sugestie wyszukiwania** — umożliwia sugerowanie witryn przez wyszukiwarkę podczas wpisywania wyszukiwanych fraz.
@@ -61,7 +55,6 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 ## <a name="search"></a>Wyszukaj
 - **Lokalizacja wyszukiwania** — określ, czy podczas wyszukiwania mogą być używane informacje o lokalizacji.
 
-
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 -   **Konto Microsoft** — umożliwia użytkownikowi skojarzenie konta Microsoft z urządzeniem.
 
@@ -74,6 +67,24 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 ## <a name="control-panel-and-settings"></a>Panel sterowania i Ustawienia
 
 - **Modyfikowanie czasu systemowego** — uniemożliwia użytkownikowi końcowemu zmianę daty i godziny na urządzeniu.
+
+## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
+
+Na kiosku jest zazwyczaj uruchamiana konkretna aplikacja. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
+
+- **Tryb kiosku** — wskazuje typ trybu kiosku obsługiwany przez zasady. Dostępne opcje:
+
+  - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
+  - **Kiosk z pojedynczą aplikacją** — profil umożliwia uruchamianie tylko jednej aplikacji na urządzeniu. Gdy użytkownik zaloguje się, jest uruchamiana konkretna aplikacja. Ten tryb uniemożliwia także użytkownikowi otwieranie nowych aplikacji oraz zmianę uruchomionej aplikacji.
+
+#### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
+Podaj następujące ustawienia:
+
+- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku. W przypadku kont przyłączonych do domeny usługi Azure AD podaj konto w formacie `domain\username@tenant.org`. 
+
+    W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). Aby skonfigurować konto usługi Azure Active Directory (AD) pod kątem trybu kiosku, użyj formatu `AzureAD\user@contoso.com`.
+
+- **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — podaj identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
 ## <a name="reporting-and-telemetry"></a>Raportowanie i telemetria
 

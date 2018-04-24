@@ -1,28 +1,28 @@
 ---
-title: "Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune"
-description: "Dowiedz się, jak działa dostęp warunkowy na podstawie aplikacji w usłudze Intune."
-keywords: 
+title: Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune
+description: Dowiedz się, jak działa dostęp warunkowy na podstawie aplikacji w usłudze Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 604eb86e6ae712bac360ecf45dd8f20e611bc52a
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 35d7be91201f8cf4fc3016363770b65bcea9ed72
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 [Zasady ochrony aplikacji w usłudze Intune](app-protection-policy.md) pomagają chronić dane firmy na urządzeniach zarejestrowanych w usłudze Intune. Możesz również korzystać z zasad ochrony aplikacji na urządzeniach należących do pracowników, które nie zostały zarejestrowane na potrzeby zarządzania przez usługę Intune. W takim przypadku, nawet jeśli nie zarządzasz danym urządzeniem, musisz upewnić się, że dane i zasoby firmy zostały odpowiednio zabezpieczone.
 
@@ -56,29 +56,29 @@ W tym przykładzie administrator zastosował zasady ochrony aplikacji w odniesie
 
 ![Proces dostępu warunkowego na podstawie aplikacji zilustrowany na schemacie blokowym](./media/ca-intune-common-ways-3.png)
 
-1.  Użytkownik próbuje przeprowadzić uwierzytelnienie w usłudze Azure Active Directory z aplikacji Outlook.
+1. Użytkownik próbuje przeprowadzić uwierzytelnienie w usłudze Azure Active Directory z aplikacji Outlook.
 
-2.  W ramach pierwszej próby uwierzytelnienia użytkownik zostaje przekierowany do sklepu z aplikacjami w celu przeprowadzenia instalacji aplikacji brokera. Aplikacją brokera jest aplikacja Microsoft Authenticator w przypadku systemu iOS lub aplikacja Portal firmy Microsoft w przypadku urządzeń z systemem Android.
+2. W ramach pierwszej próby uwierzytelnienia użytkownik zostaje przekierowany do sklepu z aplikacjami w celu przeprowadzenia instalacji aplikacji brokera. Aplikacją brokera jest aplikacja Microsoft Authenticator w przypadku systemu iOS lub aplikacja Portal firmy Microsoft w przypadku urządzeń z systemem Android.
 
- Próba użycia natywnej aplikacji poczty e-mail przez użytkownika spowoduje jego przekierowanie do sklepu z aplikacjami, z którego możliwe będzie pobranie aplikacji Outlook i jej zainstalowanie.
+   Próba użycia natywnej aplikacji poczty e-mail przez użytkownika spowoduje jego przekierowanie do sklepu z aplikacjami, z którego możliwe będzie pobranie aplikacji Outlook i jej zainstalowanie.
 
-3.  Na urządzeniu zostaje zainstalowana aplikacja brokera.
+3. Na urządzeniu zostaje zainstalowana aplikacja brokera.
 
-4.  Aplikacja brokera rozpoczyna proces rejestracji usługi Azure AD, która tworzy rekord urządzenia w usłudze Azure AD. Omawiany proces nie jest tym samym co proces rejestracji w usłudze zarządzania urządzeniami mobilnymi (MDM), ale rekord ten jest niezbędny, aby można było wymusić na urządzeniu zasady dostępu warunkowego.
+4. Aplikacja brokera rozpoczyna proces rejestracji usługi Azure AD, która tworzy rekord urządzenia w usłudze Azure AD. Omawiany proces nie jest tym samym co proces rejestracji w usłudze zarządzania urządzeniami mobilnymi (MDM), ale rekord ten jest niezbędny, aby można było wymusić na urządzeniu zasady dostępu warunkowego.
 
-5.  Aplikacja brokera weryfikuje tożsamość aplikacji. Istniejąca warstwa zabezpieczeń umożliwia aplikacji brokera sprawdzenie, czy użytkownik może używać aplikacji.
+5. Aplikacja brokera weryfikuje tożsamość aplikacji. Istniejąca warstwa zabezpieczeń umożliwia aplikacji brokera sprawdzenie, czy użytkownik może używać aplikacji.
 
-6.  Aplikacja brokera wysyła identyfikator klienta aplikacji do usługi Azure AD w ramach procesu uwierzytelniania użytkownika w celu sprawdzania, czy został on ujęty na liście pozycji zatwierdzonych z użyciem zasad.
+6. Aplikacja brokera wysyła identyfikator klienta aplikacji do usługi Azure AD w ramach procesu uwierzytelniania użytkownika w celu sprawdzania, czy został on ujęty na liście pozycji zatwierdzonych z użyciem zasad.
 
-7.  Usługa Azure AD umożliwia użytkownikowi uwierzytelnienie oraz korzystanie z aplikacji na podstawie listy pozycji zatwierdzonych z użyciem zasad. Jeśli aplikacja nie znajduje się na liście, usługa Azure AD nie zezwala na dostęp do aplikacji.
+7. Usługa Azure AD umożliwia użytkownikowi uwierzytelnienie oraz korzystanie z aplikacji na podstawie listy pozycji zatwierdzonych z użyciem zasad. Jeśli aplikacja nie znajduje się na liście, usługa Azure AD nie zezwala na dostęp do aplikacji.
 
-8.  Aplikacja Outlook komunikuje się z usługą Outlook w chmurze w celu zainicjowania komunikacji z usługą Exchange Online.
+8. Aplikacja Outlook komunikuje się z usługą Outlook w chmurze w celu zainicjowania komunikacji z usługą Exchange Online.
 
-9.  Usługa Outlook w chmurze komunikuje się z usługą Azure AD w celu pobrania dla użytkownika tokenu dostępu do usługi Exchange Online.
+9. Usługa Outlook w chmurze komunikuje się z usługą Azure AD w celu pobrania dla użytkownika tokenu dostępu do usługi Exchange Online.
 
-10.  Aplikacja Outlook komunikuje się z usługą Exchange Online w celu pobrania firmowej poczty e-mail użytkownika.
+10. Aplikacja Outlook komunikuje się z usługą Exchange Online w celu pobrania firmowej poczty e-mail użytkownika.
 
-11.  Firmowa poczta e-mail jest dostarczana do skrzynki pocztowej użytkownika.
+11. Firmowa poczta e-mail jest dostarczana do skrzynki pocztowej użytkownika.
 
 ## <a name="next-steps"></a>Następne kroki
 [Tworzenie zasad dostępu warunkowego opartego na aplikacji](app-based-conditional-access-intune-create.md)

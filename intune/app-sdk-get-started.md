@@ -1,24 +1,24 @@
 ---
-title: "Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune"
-description: "Szybkie włączanie w aplikacji mobilnej obsługi zarządzania aplikacjami mobilnymi (MAM) za pomocą usługi Microsoft Intune."
-keywords: 
+title: Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
+description: Szybkie włączanie w aplikacji mobilnej obsługi zarządzania aplikacjami mobilnymi (MAM) za pomocą usługi Microsoft Intune.
+keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5827c82d84be45020aa2bdec16c92e0296431cf8
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -69,7 +69,7 @@ Zestawy SDK aplikacji usługi Intune dla natywnych systemów iOS i Android są h
 
 Jeśli Twoja aplikacja jest aplikacją Xamarin lub Cordova, użyj następujących wariantów zestawu SDK:
 
-* [Składnik Xamarin zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Powiązania platformy Xamarin dla zestawu Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * [Wtyczka Cordova zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Warto utworzyć konto usługi GitHub, które pozwoli rozwidlać nasze repozytoria i z nich pobierać. Usługa GitHub umożliwia deweloperom komunikowanie się z naszym zespołem produktu, zgłaszanie problemów i uzyskiwanie szybkich odpowiedzi, wyświetlanie informacji o wersjach oraz przesyłanie opinii do firmy Microsoft. Pytania dotyczące strony zestawu SDK aplikacji usługi Intune w usłudze GitHub należy kierować na adres msintuneappsdk@microsoft.com.
@@ -84,7 +84,7 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
 
 * **[Przewodnik dotyczący wtyczki Cordova zestawu SDK aplikacji Intune](app-sdk-cordova.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Cordova i zasad ochrony aplikacji usługi Intune.
 
-* **[Przewodnik dotyczący składnika Xamarin zestawu SDK aplikacji Intune](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Cordova i zasad ochrony aplikacji usługi Intune.
+* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
 
 
@@ -142,7 +142,7 @@ Numer kompilacji|CFBundleVersion|PackageVersionCode |Ten numer jest używany do 
 
 - **CFBundleShortVersionString**  
     Określa numer wydania pakietu. Ten numer określa wydaną wersję aplikacji. Jest używany przez użytkowników końcowych do wskazywania aplikacji.
- - **CFBundleVersion**  
+  - **CFBundleVersion**  
     Wersja kompilacji pakietu, która identyfikuje iterację pakietu. Ten numer może określać wydanie lub niewydany pakiet. Jest używany do wykrywania aplikacji.
 
 #### <a name="android"></a>Android

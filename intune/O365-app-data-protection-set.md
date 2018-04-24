@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 242ee454ec42c54bb9437fbdf0a7efeca926d193
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365 w usłudze Microsoft Intune
 
@@ -50,13 +50,13 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. 
 3. Po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostaną zastosowane zasady ochrony aplikacji i pojawi się prośba o ponowne uruchomienie aplikacji OneDrive dla Firm. 
 
-  > [!NOTE]
-  > Komunikat informujący o konieczności ponownego uruchomienia aplikacji jest wyświetlany tylko na urządzeniach, które nie zostały zarejestrowane w usłudze Intune.
+   > [!NOTE]
+   > Komunikat informujący o konieczności ponownego uruchomienia aplikacji jest wyświetlany tylko na urządzeniach, które nie zostały zarejestrowane w usłudze Intune.
 
 4. Uruchom ponownie aplikację OneDrive dla Firm. Aplikacja zostanie uruchomiona z włączonymi zasadami ochrony aplikacji, po czym zostanie wyświetlony monit o ustawienie kodu PIN dla urządzenia (o ile jeszcze nie został skonfigurowany na tym urządzeniu).  
 
-  > [!NOTE]
-  > Większość użytkowników nie otrzyma tego monitu. Zobaczą go tylko ci użytkownicy, którzy nie włączyli kodu PIN na swoim urządzeniu z systemem iOS.
+   > [!NOTE]
+   > Większość użytkowników nie otrzyma tego monitu. Zobaczą go tylko ci użytkownicy, którzy nie włączyli kodu PIN na swoim urządzeniu z systemem iOS.
 
 5. Po ustawieniu kodu PIN i jego zatwierdzeniu powróć do aplikacji OneDrive dla Firm. Zostanie wyświetlona jednorazowa informacja, że dane służbowe w usłudze OneDrive są teraz objęte ochroną administratora IT. 
 6. Zamknij powiadomienie, aby uzyskać dostęp do plików w aplikacji OneDrive dla Firm. 
@@ -70,8 +70,8 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 2. Wpisz nazwę użytkownika konta służbowego. Nastąpi przekierowanie do strony uwierzytelniania usługi Office 365, gdzie wprowadzisz swoje poświadczenia służbowe. <br/> ![Ilustracja przedstawiająca logowanie do usługi O365 w systemie Android](./media/o365-sign-in-android.png)
 3. Jeśli na urządzeniu nie została wcześniej zainstalowana aplikacja Portal firmy, po pomyślnym uwierzytelnieniu poświadczeń przez usługę Azure Active Directory zostanie wyświetlony komunikat z instrukcją dotyczącą instalacji tej aplikacji. Aby kontynuować, wybierz pozycję **Przejdź do sklepu**. <br/> ![Ilustracja przedstawiająca komunikat z informacją o konieczności pobrania aplikacji Portal firmy](./media/get-company-portal-android.png) <br/>Jeśli na telefonie została wcześniej zainstalowana aplikacja Portal firmy, nastąpi automatyczne uruchomienie usługi OneDrive dla Firm. Możesz przejść do uwagi końcowej.   
 
-  > [!IMPORTANT]
-  > Choć użytkownik końcowy nie musi w praktyce otwierać aplikacji Portal firmy ani logować się do niej, aby odczytać wiadomości e-mail i dokumenty, to w systemie Android po skonfigurowaniu aplikacji pakietu Office pod kątem zarządzania przy użyciu zasad ochrony aplikacji użytkownik urządzenia **musi** zainstalować aplikację Portal firmy w celu uzyskania dostępu do służbowych wiadomości e-mail i dokumentów.
+   > [!IMPORTANT]
+   > Choć użytkownik końcowy nie musi w praktyce otwierać aplikacji Portal firmy ani logować się do niej, aby odczytać wiadomości e-mail i dokumenty, to w systemie Android po skonfigurowaniu aplikacji pakietu Office pod kątem zarządzania przy użyciu zasad ochrony aplikacji użytkownik urządzenia **musi** zainstalować aplikację Portal firmy w celu uzyskania dostępu do służbowych wiadomości e-mail i dokumentów.
 
 4. Nastąpi przekierowanie do sklepu Google Play, z którego można pobrać aplikację Portal firmy, którą następnie należy zainstalować. Aplikacja pomaga w zabezpieczeniu i ochronie danych. <br/> ![Ilustracja przedstawiająca aplikację w sklepie Google Play](./media/google-play-get-app-android.png)
 5. Po zakończeniu instalacji aplikacji wybierz pozycję **Akceptuj**, aby zaakceptować warunki. Nastąpi automatyczne uruchomienie aplikacji OneDrive dla Firm.
@@ -86,6 +86,7 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 <!--- Original steps: 6. The next time you open OneDrive for Business, you may be asked to set a PIN, if your IT requires one to use the OneDrive for Business app. ART 7. After you set and confirm the PIN, you can continue on to OneDrive for Business. -->
 
 ## <a name="what-policies-does-this-wizard-set"></a>Jakie zasady można ustawić, korzystając z tego kreatora?
+
 |     |       | |
 |----|--------|-|
 |**Nazwa**|Zarządzaj aplikacjami usługi Office 365| |

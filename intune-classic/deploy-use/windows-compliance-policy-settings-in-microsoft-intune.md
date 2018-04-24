@@ -1,37 +1,37 @@
 ---
-title: "Ustawienia zasad zgodności dla urządzeń z systemem Windows"
-description: "W tym temacie opisano reguły i ustawienia, które można skonfigurować w zakresie zasad zgodności dla urządzeń z systemem Windows."
-keywords: 
+title: Ustawienia zasad zgodności dla urządzeń z systemem Windows
+description: W tym temacie opisano reguły i ustawienia, które można skonfigurować w zakresie zasad zgodności dla urządzeń z systemem Windows.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f996842c-e9a4-4819-acb4-ee66e8fb35b8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1c9a59fa97c11794ff8ad0a0eaa41630bfdf847e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 6a54943873a6af158badb92cef4610e54fc8889b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compliance-policy-settings-for-windows-devices-in-microsoft-intune"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Ustawienia zasad opisane w tym temacie mają zastosowanie do urządzeń, na których działa system operacyjny Windows. W poniższych sekcjach opisano obsługiwane wersje systemu Windows.
 
 Jeśli szukasz informacji o innych platformach, wybierz jedną z następujących opcji:
 > [!div class="op_single_selector"]
-- [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
-- [Ustawienia zasad zgodności dla urządzeń z systemem Android](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
+> - [Ustawienia zasad zgodności dla urządzeń z systemem iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
+> - [Ustawienia zasad zgodności dla urządzeń z systemem Android](android-compliance-policy-settings-in-microsoft-intune.md)
+> - [Ustawienia zasad zgodności dla programu Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 
 ## <a name="compliance-policy-settings-for-windows-phone-devices"></a>Ustawienia zasad zgodności dla urządzeń z systemem Windows Phone
 Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1 lub nowszym.
@@ -67,7 +67,7 @@ Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1
   > [!NOTE]
   > To ustawienie dotyczy tylko urządzeń z systemem Windows 10 Mobile.
 
-#### <a name="encryption"></a>Encryption
+#### <a name="encryption"></a>Szyfrowanie
 - **Wymagaj szyfrowania na urządzeniu przenośnym:** ustaw tę opcję na wartość **Tak**, aby wymagać zaszyfrowania urządzenia w celu połączenia się z zasobami.
 
 ### <a name="device-health-settings"></a>Ustawienia kondycji urządzenia
@@ -80,7 +80,7 @@ Ustawienia wymienione w tej sekcji są obsługiwane w systemie Windows Phone 8.1
   > Urządzenia z systemem Windows nie obsługują oprogramowania **wczesnej ochrony przed złośliwym kodem** (ELAM) należącego do innych firm i zainstalowanego w ramach zaświadczania o kondycji urządzenia.
 
   Aby uzyskać informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://msdn.microsoft.com/library/dn934876.aspx).
-###  <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
+  ###  <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne.
     Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
@@ -153,4 +153,4 @@ Aby znaleźć wersję systemu operacyjnego do użycia w ustawieniach **Wymagana 
 - Komputery z systemem Windows 8.1 zwracają wersję **6.3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
 
 - W przypadku komputerów z systemem operacyjnym Windows 10 należy ustawić wersję „**10.0**” z dołączonym numerem kompilacji systemu operacyjnego zwróconym przez polecenie **winver**. Na przykład może to wyglądać mniej więcej tak: 10.0.10586.
-> ![Zaznaczona wersja kompilacji systemu operacyjnego w oknie dialogowym „Informacje o systemie Windows”](./media/ca_win10-os-version.png)
+  > ![Zaznaczona wersja kompilacji systemu operacyjnego w oknie dialogowym „Informacje o systemie Windows”](./media/ca_win10-os-version.png)

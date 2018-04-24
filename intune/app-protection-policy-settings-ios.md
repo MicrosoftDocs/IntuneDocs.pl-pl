@@ -1,28 +1,28 @@
 ---
 title: Ustawienia zasad ochrony aplikacji dla systemu iOS
 titlesuffix: Microsoft Intune
-description: "W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem iOS."
-keywords: 
+description: W tym temacie opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem iOS.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fcdcc7c91791713ef784fbcebd23aa4b96c732dc
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 4a4339a4e0491ada9e03731a5636df37209e16e0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Opisane w tym temacie ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Dodawanie zasad** > **Ustawienia** w witrynie Azure Portal.
 

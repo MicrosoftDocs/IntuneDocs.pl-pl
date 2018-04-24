@@ -1,29 +1,29 @@
 ---
-title: "Używanie aplikacji korzystających z dostępu warunkowego przy użyciu zasad zarządzania aplikacjami mobilnymi"
-description: "Poznaj sposób, w jaki dostęp warunkowy zarządzania aplikacjami mobilnymi może pomóc w kontrolowaniu tego, które aplikacje mogą mieć dostęp do usług O365."
-keywords: 
+title: Używanie aplikacji korzystających z dostępu warunkowego przy użyciu zasad zarządzania aplikacjami mobilnymi
+description: Poznaj sposób, w jaki dostęp warunkowy zarządzania aplikacjami mobilnymi może pomóc w kontrolowaniu tego, które aplikacje mogą mieć dostęp do usług O365.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 71dcf9bc-bfd1-4e06-b7ad-14b33a2288d0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 725783751c13b2301e7fbef4dea1a47bc339c8b7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2f313fcbfa26c8f82708f8f830404da97a3eca25
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-to-expect-when-using-an-app-with-app-based-ca"></a>Oczekiwany przebieg korzystania z aplikacji z dostępem warunkowym opartym na aplikacji
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Dostęp warunkowy oparty na aplikacji weryfikuje tożsamość zatwierdzonych aplikacji za pomocą aplikacji brokera, która musi być obecna na urządzeniu:
 *  W systemie **iOS** aplikacją brokera jest **aplikacja Azure Authenticator**.
@@ -40,8 +40,8 @@ Poniżej przedstawiono listę właściwości, które pochodzą bezpośrednio z u
 
 > [!NOTE]
 > Urządzenia z systemem Android:
-  * Na urządzeniu musi być zainstalowana aplikacja Portal firmy, ale użytkownik końcowy nie musi logować się do tej aplikacji.
-  * Rejestracja urządzenia musi zostać przeprowadzona przez aplikację OneDrive lub Outlook.
+>   * Na urządzeniu musi być zainstalowana aplikacja Portal firmy, ale użytkownik końcowy nie musi logować się do tej aplikacji.
+>   * Rejestracja urządzenia musi zostać przeprowadzona przez aplikację OneDrive lub Outlook.
 
 ## <a name="to-remove-a-device-from-azure-ad-registration"></a>Aby usunąć urządzenie zarejestrowane w usłudze Azure AD
 Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli administracyjnej usługi Azure AD, co zazwyczaj jest wykonywane przez administratora IT.  Usunąć urządzenie może także użytkownik końcowy za pomocą swojego urządzenia.
@@ -52,7 +52,7 @@ Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli admin
 
 ## <a name="app-based-ca-with-device-based-ca"></a>Dostęp warunkowy oparty na aplikacji z dostępem warunkowym opartym na urządzeniu  
 
-[Dostęp warunkowy oparty na zgodności urządzeń](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**dostęp warunkowy do urządzenia**) można skonfigurować przy użyciu [konsoli administratora usługi Intune](https://manage.microsoft.com) lub [konsoli zarządzania usługi Azure AD Premium] (https://manage.windowsazure.com). Dostęp warunkowy do urządzenia wymaga od użytkowników nawiązania połączenia z usługą Exchange Online tylko za pośrednictwem urządzeń zarządzanych przez usługę Intune, które są zgodne z zasadami zgodności urządzeń usługi Intune, lub komputerów połączonych z domeną.  Jeśli użytkownik należy do co najmniej jednej grupy zabezpieczeń, w której stosowane są zarówno zasady dostępu warunkowego opartego na aplikacji, jak i zasady dostępu warunkowego do urządzeń, musi spełnić jedno z poniższych wymagań:
+[Dostęp warunkowy oparty na zgodności urządzeń](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (<strong>dostęp warunkowy do urządzenia</strong>) można skonfigurować przy użyciu [konsoli administratora usługi Intune](https://manage.microsoft.com) lub [konsoli zarządzania usługi Azure AD Premium](https://manage.windowsazure.com). Dostęp warunkowy do urządzenia wymaga od użytkowników nawiązania połączenia z usługą Exchange Online tylko za pośrednictwem urządzeń zarządzanych przez usługę Intune, które są zgodne z zasadami zgodności urządzeń usługi Intune, lub komputerów połączonych z domeną.  Jeśli użytkownik należy do co najmniej jednej grupy zabezpieczeń, w której stosowane są zarówno zasady dostępu warunkowego opartego na aplikacji, jak i zasady dostępu warunkowego do urządzeń, musi spełnić jedno z poniższych wymagań:
 * Aplikacja, za pomocą której uzyskuje się dostęp do usługi, jest aplikacją mobilną obsługiwaną przez 
 * , a urządzenie, na którym działa aplikacja, ma zainstalowane narzędzie **iOS Authenticator (w przypadku urządzeń z systemem iOS)** lub aplikację **Portal firmy (w przypadku urządzeń z systemem Android)**.
 * Urządzenie używane do uzyskiwania dostępu do usługi jest **zarządzane przez usługę Intune i zgodne** z zasadami zgodności urządzeń usługi Intune lub jest **komputerem połączonym z domeną**.  Oto kilka przykładów ilustrujących tę sytuację:
@@ -64,6 +64,6 @@ Zarejestrowane urządzenie można usunąć na przykład za pomocą konsoli admin
 
 [Blokowanie aplikacji, które nie obsługują nowoczesnego uwierzytelniania](block-apps-with-no-modern-authentication.md)
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 
 [Ochrona danych aplikacji za pomocą zasad ochrony aplikacji](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)

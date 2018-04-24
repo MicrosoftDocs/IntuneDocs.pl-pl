@@ -1,25 +1,25 @@
 ---
-title: "Wprowadzenie do aplikacji w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Znajduj i dodawaj aplikacje do urządzeń, aby umożliwić pracownikom wykonywanie zadań."
-keywords: 
+title: Wprowadzenie do aplikacji w usłudze Microsoft Intune
+titlesuffix: ''
+description: Znajduj i dodawaj aplikacje do urządzeń, aby umożliwić pracownikom wykonywanie zadań.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 3/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a1542fc3-672e-47c1-a21f-82826a2f8ac4
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3198a62e437e5ccaa3cfc71d1f643f073d41ed05
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: cf7b2cca28e16825c368cb3e5dc793d25daaa4d0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-adding-apps-in-microsoft-intune"></a>Wprowadzenie do dodawania aplikacji w usłudze Microsoft Intune
 
@@ -34,7 +34,7 @@ Usługa Intune pozwala dodawać i przypisywać następujące typy aplikacji do u
 ## <a name="how-do-i-assign-a-public-store-app"></a>Jak mogę przypisać aplikację ze sklepu publicznego?
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Wybierz pozycję **Aplikacje mobilne**, a następnie wybierz pozycję **Aplikacje**.
 4. Wybierz pozycję **Dodaj**, a następnie wybierz pozycję **iOS** jako **typ aplikacji**.
 5. Wybierz pozycję **Wybierz aplikację**, aby wyświetlić okienko **Wyszukaj w sklepie App Store**.

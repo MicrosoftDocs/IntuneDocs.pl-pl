@@ -1,28 +1,28 @@
 ---
-title: "Przegląd cyklu życia aplikacji dla usługi Microsoft Intune"
-description: "Dowiedz się więcej na temat cyklu życia aplikacji zarządzanych w usłudze Microsoft Intune. Cykl życia aplikacji obejmuje dodawanie, wdrażanie, konfigurowanie, ochronę i wycofywanie aplikacji."
-keywords: 
+title: Przegląd cyklu życia aplikacji dla usługi Microsoft Intune
+description: Dowiedz się więcej na temat cyklu życia aplikacji zarządzanych w usłudze Microsoft Intune. Cykl życia aplikacji obejmuje dodawanie, wdrażanie, konfigurowanie, ochronę i wycofywanie aplikacji.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: apps
-ms.openlocfilehash: 732323d1d882a256128ae731cab68656126583b2
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 853873480beb5e95a195e04e251cea9975ce03b4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu aplikacji i jest realizowany przez dodatkowe fazy aż do usunięcia aplikacji. Zrozumienie tych faz pozwala uzyskać szczegółowe informacje konieczne do rozpoczęcia zarządzania aplikacjami w usłudze Intune.
 
@@ -32,7 +32,7 @@ Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu apl
 
 Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i przypisać, do usługi Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Za pomocą usługi Intune możesz dodawać różne typy aplikacji, w tym aplikacje napisane w firmie (biznesowe), aplikacje ze sklepu, aplikacje wbudowane i aplikacje w Internecie. Aby uzyskać więcej informacji na temat tych typów aplikacji, zobacz [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md). 
 
-## <a name="deploy"></a>Wdróż
+## <a name="deploy"></a>Wdróż program
 
 Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do użytkowników oraz do urządzeń, którymi zarządzasz](apps-deploy.md). Usługa Intune ułatwia ten proces, a po wdrożeniu aplikacji możesz [monitorować sukces](apps-monitor.md) wdrożenia z poziomu usługi Intune w witrynie Azure Portal. Ponadto niektóre sklepy z aplikacjami, takie jak [Apple](vpp-apps-ios.md) i [Windows](windows-store-for-business.md), pozwalają na zakup zbiorczych licencji na aplikacje dla firm. Usługa Intune może synchronizować dane z tymi sklepami, aby umożliwić wdrażanie licencji i śledzenie ich użycia dla tych typów aplikacji bezpośrednio z Konsoli administracyjnej usługi Intune.
 

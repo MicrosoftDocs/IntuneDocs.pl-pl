@@ -1,28 +1,28 @@
 ---
-title: "Ustawienia filtru zawartości internetowej dla urządzeń z systemem iOS w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Informacje na temat ustawień, których można użyć w celu umożliwienia i zablokowania dostępu do witryn internetowych z urządzeń z systemem iOS."
-keywords: 
+title: Ustawienia filtru zawartości internetowej dla urządzeń z systemem iOS w usłudze Microsoft Intune
+titlesuffix: ''
+description: Informacje na temat ustawień, których można użyć w celu umożliwienia i zablokowania dostępu do witryn internetowych z urządzeń z systemem iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a401a3a04d10587606b8ec4862a62e551e7aadf0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c5e3dbdc339fd25289e1aed526bc03e4691c3812
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia usługi Microsoft Intune, które pozwalają sterować dostępem do adresów URL w przeglądarce na urządzeniach z systemem iOS.
 
@@ -57,13 +57,13 @@ Jeśli nie dodasz żadnych adresów URL, użytkownicy końcowi nie będą mogli 
 ## <a name="specific-websites-only"></a>Tylko określone witryny sieci Web
 
 1. W okienku **Filtr zawartości sieci Web** skonfiguruj następujące ustawienia dla każdej dozwolonej witryny internetowej:
-    - **Adres URL** — wprowadź adres URL dozwolonej witryny sieci Web, na przykład **http://www.contoso.com**.
+    - **Adres URL** — wprowadź adres URL dozwolonej witryny internetowej, na przykład **http://www.contoso.com**.
     - **Ścieżka do zakładki** — wpisz ścieżkę do lokalizacji, w której chcesz przechowywać zakładkę, na przykład **/Contoso/Business Apps**. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
     - **Tytuł** — wprowadź opisowy tytuł zakładki.
 2. Po wprowadzeniu niezbędnych informacji dla każdej z witryn sieci Web kliknij przycisk **Dodaj**.
 3. Po zakończeniu kliknij przycisk **OK**.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Poniższe adresy URL są automatycznie uznawane za dozwolone przez usługę Intune.
 > - www.microsoft.com
 > - www.microsoft.net

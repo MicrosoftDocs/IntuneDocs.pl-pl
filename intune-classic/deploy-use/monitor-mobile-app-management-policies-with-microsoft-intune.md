@@ -1,25 +1,25 @@
 ---
-title: "Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune"
-description: "Zobacz, jak wielu użytkowników korzysta z zasad, i poznaj więcej szczegółów."
-keywords: 
+title: Monitorowanie zasad zarządzania aplikacjami mobilnymi przy użyciu usługi Microsoft Intune
+description: Zobacz, jak wielu użytkowników korzysta z zasad, i poznaj więcej szczegółów.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 02/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b4b25c2ebe6fa8edf7ce954f68c22d4086fcaf7c
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: de26b7614578b275802ca048ed17bfa5969f0387
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Monitorowanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 Możesz monitorować stan zgodności zasad ochrony aplikacji, które zostały zastosowane do użytkowników. Możesz uzyskać dostęp do informacji o użytkownikach, których dotyczą zasady ochrony aplikacji, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
@@ -131,7 +131,7 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
     ![Zrzut ekranu nr 7](../media/app-protection-report-csv-1.png)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 * [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](/intune/end-user-mam-apps-android)

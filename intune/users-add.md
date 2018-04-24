@@ -15,15 +15,15 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6bbfa42b8ec03cfbe97efdae21f493b68c53d769
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0d38d7671218bfcecd3d2aa4671a565e0cabe37f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Jako administrator możesz bezpośrednio dodawać użytkowników lub synchronizować użytkowników w lokalnej usłudze Active Directory. Po dodaniu użytkownicy mogą rejestrować urządzenia i uzyskiwać dostęp do zasobów firmy. Użytkownikom możesz też przyznawać dodatkowe uprawnienia, takie jak uprawnienia *administratora globalnego* i *administratora usługi*.
 
@@ -35,16 +35,16 @@ Można ręcznie dodawać użytkowników do subskrypcji usługi Intune za pośred
 2. W menu usługi Office 365 wybierz pozycję **Administracja**.
 3. W centrum administracyjnym wybierz pozycję **Dodaj użytkownika**.
 
-  ![Zrzut ekranu przedstawiający sekcję Dodawanie użytkownika](media/office-add-user.png)
+   ![Zrzut ekranu przedstawiający sekcję Dodawanie użytkownika](media/office-add-user.png)
 
 4. Określ następujące dane użytkownika:
-  - **Imię**
-  - **Nazwisko**
-  - **Nazwa wyświetlana**
-  - **Nazwa użytkownika** — uniwersalna nazwa główna (nazwa UPN) przechowywana w usłudze Azure Active Directory używana do uzyskania dostępu do usługi
-  - **Lokalizacja**
-  - **Informacje kontaktowe** (opcjonalnie)
-  - **Hasło** — generowane automatycznie lub określone
+   - **Imię**
+   - **Nazwisko**
+   - **Nazwa wyświetlana**
+   - **Nazwa użytkownika** — uniwersalna nazwa główna (nazwa UPN) przechowywana w usłudze Azure Active Directory używana do uzyskania dostępu do usługi
+   - **Lokalizacja**
+   - **Informacje kontaktowe** (opcjonalnie)
+   - **Hasło** — generowane automatycznie lub określone
 
      ![Zrzut ekranu przedstawiający sekcję Nowy użytkownik](media/office-add-user-details.png)
 
@@ -55,16 +55,16 @@ Można ręcznie dodawać użytkowników do subskrypcji usługi Intune za pośred
 1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com), a następnie wybierz pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**. Możesz również *wyszukać zasoby* i znaleźć usługę **Intune**.
 2. Wybierz pozycję **Użytkownicy** > **Wszyscy użytkownicy**.
 3. W centrum administracyjnym wybierz pozycję **Nowy użytkownik**.
-  ![Zrzut ekranu przedstawiający dodawanie nowego użytkownika](media/intune-add-user.png)
+   ![Zrzut ekranu przedstawiający dodawanie nowego użytkownika](media/intune-add-user.png)
 4. Określ następujące dane użytkownika:
-  - **Nazwa**
-  - **Nazwa użytkownika** — nowa nazwa w portalu usługi Azure Active Directory ![Zrzut ekranu przedstawiający dodawanie nazwy i nazwy użytkownika](media/intune-add-user-info.png). Wybierz przycisk **OK**, aby kontynuować.
+   - **Nazwa**
+   - **Nazwa użytkownika** — nowa nazwa w portalu usługi Azure Active Directory ![Zrzut ekranu przedstawiający dodawanie nazwy i nazwy użytkownika](media/intune-add-user-info.png). Wybierz przycisk **OK**, aby kontynuować.
 5. Opcjonalnie możesz określić następujące właściwości użytkownika:
-  - **Profil** — informacje służbowe, w tym **Stanowisko** i **Dział**
-  -  **Grupy** — wybierz grupy do dodania dla użytkownika
-  - **Rola katalogu** — przyznaj użytkownikowi uprawnienia administracyjne, w tym rolę administratora usługi Intune.
+   - **Profil** — informacje służbowe, w tym **Stanowisko** i **Dział**
+   -  **Grupy** — wybierz grupy do dodania dla użytkownika
+   - **Rola katalogu** — przyznaj użytkownikowi uprawnienia administracyjne, w tym rolę administratora usługi Intune.
 
-  Wybierz pozycję **Utwórz**, aby dodać nowego użytkownika do usługi Intune.
+   Wybierz pozycję **Utwórz**, aby dodać nowego użytkownika do usługi Intune.
 6. Wybierz pozycję **Profil**, a następnie wybierz pozycję **Lokalizacja użycia** dla nowego użytkownika. Lokalizacja użycia jest wymagana, zanim będzie można przypisać licencję usługi Intune do nowego użytkownika. Wybierz przycisk **Zapisz**, aby kontynuować.
     ![Zrzut ekranu przedstawiający lokalizację użytkowania](media/intune-add-user-loc.png)
 7. Wybierz pozycję **Licencje**, a następnie wybierz pozycję **Przypisz**, aby przypisać licencję usługi Intune do tego użytkownika. Licencja usługi Intune jest wymagana, aby zarejestrować urządzenia lub uzyskać dostęp do zasobów firmy. Wybierz pozycję **Produkty**, wybierz typ licencji, wybierz pozycję **Wybierz**, a następnie wybierz pozycję **Przypisz**.
@@ -112,7 +112,7 @@ Aby uzyskać dostęp do portalu usługi Office 365, Twoje konto musi mieć ustaw
 Istnieje możliwość skonfigurowania synchronizacji katalogów w celu zaimportowania kont użytkowników z lokalnej usługi Active Directory do usługi Microsoft Azure Active Directory (Azure AD), co obejmuje użytkowników usługi Intune. Połączenie lokalnej usługi Active Directory z wszystkimi usługami opartymi na usłudze Azure Active Directory znacznie ułatwia zarządzanie tożsamościami użytkowników. Można także skonfigurować funkcje logowania jednokrotnego, aby znacznie ułatwić uwierzytelnianie użytkowników. Dzięki połączeniu tej samej [dzierżawy usługi Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) z wieloma usługami wcześniej zsynchronizowane konta użytkowników są dostępne dla wszystkich usług w chmurze.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Jak zsynchronizować użytkowników lokalnych z usługą Azure AD
-Jedynym narzędziem potrzebnym do synchronizowania kont użytkowników z usługą Azure AD jest [Kreator Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). Kreator Azure AD Connect zapewnia uproszczoną obsługę i przewodnik łączenia lokalnej infrastruktury tożsamości z chmurą.  Wybierz topologię i potrzeby (jeden lub wiele katalogów, synchronizacja haseł lub federacja). Kreator wdroży i skonfiguruje wszystkie składniki wymagane do uruchomienia połączenia. Dotyczy to następujących składników: usług synchronizacji, Usług federacyjne Active Directory (AD FS) i modułu Azure AD PowerShell.
+Jedynym narzędziem potrzebnym do synchronizowania kont użytkowników z usługą Azure AD jest [Kreator Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). Kreator Azure AD Connect zapewnia uproszczoną obsługę i przewodnik łączenia lokalnej infrastruktury tożsamości z chmurą. Wybierz topologię i potrzeby (jeden lub wiele katalogów, synchronizację skrótów haseł, uwierzytelnianie przekazywane lub federację). Kreator wdroży i skonfiguruje wszystkie składniki wymagane do uruchomienia połączenia. Dotyczy to następujących składników: usług synchronizacji, Usług federacyjne Active Directory (AD FS) i modułu Azure AD PowerShell.
 
 > [!TIP]
 > Kreator Azure AD Connect obejmuje funkcje, które były wcześniej dostępne w narzędziach Dirsync i Azure AD Sync. Dowiedz się więcej na temat [integracji katalogów](http://technet.microsoft.com/library/jj573653.aspx). Aby dowiedzieć się więcej o synchronizowaniu kont użytkowników z katalogu lokalnego do usługi Azure AD, zobacz [Podobieństwa między usługami Active Directory i Azure AD](http://technet.microsoft.com/library/dn518177.aspx).

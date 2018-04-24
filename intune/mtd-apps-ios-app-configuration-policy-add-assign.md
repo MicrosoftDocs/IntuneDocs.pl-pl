@@ -1,25 +1,25 @@
 ---
-title: "Dodawanie i przypisywanie aplikacji usługi MTD do usługi Microsoft Intune"
-titleSuffix: 
-description: "Użyj usługi Intune, aby dodać aplikacje usługi Mobile Threat Defense (MTD), aplikację Microsoft Authenticator i zasady konfiguracji systemu iOS w witrynie Azure Portal."
-keywords: 
+title: Dodawanie i przypisywanie aplikacji usługi MTD do usługi Microsoft Intune
+titleSuffix: ''
+description: Użyj usługi Intune, aby dodać aplikacje usługi Mobile Threat Defense (MTD), aplikację Microsoft Authenticator i zasady konfiguracji systemu iOS w witrynie Azure Portal.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3fc71620fee1b1df907a4027c1c57cd91b53032e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 08cebf84443e65ded5f7884218fbe17d722bddf2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Dodawanie i przypisywanie aplikacji usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -75,7 +75,7 @@ Aby uzyskać szczegółowe instrukcje dotyczące ponownego podpisywania aplikacj
 Włącz uwierzytelnianie za pomocą usługi Azure Active Directory dla użytkowników systemu iOS, wykonując poniższe czynności:
 
 1. Przejdź do witryny [Azure Portal](https://portal.azure.com), zaloguj się przy użyciu swoich poświadczeń, a następnie przejdź do strony aplikacji.
-  
+
 2. Dodaj **aplikację Lookout for Work systemu iOS** jako **natywną aplikację kliencką**.
 
 3. Zastąp ciąg **com.lookout.enterprise.nazwa_Twojej_firmy** identyfikatorem pakietu klienta wybranym podczas podpisywania pakietu aplikacji (IPA).
@@ -133,13 +133,13 @@ Włącz uwierzytelnianie za pomocą usługi Azure Active Directory dla użytkown
 
 -   Musisz **pobrać** plik zasad konfiguracji aplikacji systemu iOS: 
     -   Przejdź do [konsoli zarządzania aplikacji Skycure](https://aad.skycure.com) i zaloguj się przy użyciu poświadczeń administratora.
-    
+
     -   Przejdź do opcji **Ustawienia** &gt; **Integracje zarządzania urządzeniami** &gt; **Wybór integracji EMM**, wybierz opcję **Microsoft Intune**, a następnie zapisz wybór.
-    
+
     -   Kliknij link **Pliki instalacyjne integracji** i zapisz wygenerowany \*plik ZIP. Plik ZIP zawiera plik **skycure\_configuration.plist**, który będzie używany do tworzenia zasad konfiguracji aplikacji systemu iOS w usłudze Intune.
-    
+
     -   Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md), aby dodać zasady konfiguracji aplikacji Skycure dla systemu iOS.
-    
+
     - W **kroku 8** użyj opcji **Wprowadź dane XML**, skopiuj zawartość z pliku **skycure_configuration.plist** i wklej jego zawartość do treści zasad konfiguracji.
 
 Zawartość pliku **skycure_configuration.plist** możesz również skopiować z tego miejsca:
@@ -151,7 +151,6 @@ Zawartość pliku **skycure_configuration.plist** możesz również skopiować z
     <key>UserEmail</key>
     <string>{{userprincipalname}}</string>
 </dict>
-
 ```
 ### <a name="for-check-point-sandblast-mobile"></a>W przypadku aplikacji Check Point SandBlast Mobile
 
@@ -160,7 +159,6 @@ Zawartość pliku **skycure_configuration.plist** możesz również skopiować z
 
 ```
 <dict><key>MDM</key><string>INTUNE</string></dict>
-
 ```
 
 ### <a name="for-zimperium"></a>Dla rozwiązania Zimperium
@@ -179,7 +177,6 @@ Zawartość pliku **skycure_configuration.plist** możesz również skopiować z
 <key>udidlast4digits</key>
 <string>{{udidlast4digits}}</string>
 </dict>
-
 ```
 
 ## <a name="to-assign-apps-all-mtd-partners"></a>Aby przypisać aplikacje (wszyscy partnerzy usługi MTD)

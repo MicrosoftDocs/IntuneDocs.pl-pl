@@ -1,31 +1,29 @@
 ---
-title: "Rozwiązywanie problemów związanych z zagrożeniami wykrytymi przez aplikację Lookout for Work w systemie iOS | Microsoft Docs"
-description: "Dowiedz się, jak usunąć zagrożenie wykryte przez aplikację Lookout for Work w systemie iOS."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Rozwiązywanie problemów związanych z zagrożeniami wykrytymi przez aplikację Lookout for Work w systemie iOS | Microsoft Docs
+description: Dowiedz się, jak usunąć zagrożenie wykryte przez aplikację Lookout for Work w systemie iOS.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 04/03/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: f317c8ddf89510e695b727548d5abafdf9319c25
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: be7d54cdde7e82cd0e0d4820ecfddff171e5984a
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Usuwanie zagrożenia wykrytego przez aplikację Lookout for Work
 
-Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak:
-
-![Komunikat o braku zgodności z aplikacji Lookout for Work](./media/ios-lfw-noncompliant-in-ssp.png)
+Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych.
 
 Aby rozwiązać ten problem, otwórz aplikację Lookout for Work i wykonaj instrukcje wyświetlane w aplikacji.
 

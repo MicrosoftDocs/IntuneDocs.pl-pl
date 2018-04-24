@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9785078341c8e3469067042a3f3e8588f29c3a3b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Ustawienia zasad systemu iOS w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune udostępnia szereg wbudowanych ustawień ogólnych, które można skonfigurować na urządzeniach z systemem iOS. Ponadto przy użyciu narzędzia Apple Configurator można utworzyć ustawienia niestandardowe, które nie są dostępne w usłudze Intune.
 
@@ -45,20 +45,22 @@ Jeśli ustawienia, którego szukasz, nie ma w tym temacie, można je utworzyć z
 ### <a name="security-settings"></a>Ustawienia zabezpieczeń
 Wszystkie ustawienia dotyczą systemu iOS 8.0 i nowszych.
 
-|Nazwa ustawienia|Szczegóły|
-|----------------|-------|
-|**Wymagaj hasła do odblokowania urządzeń przenośnych**|Określ, czy użytkownik musi wprowadzić hasło, aby uzyskać dostęp do urządzenia.|
-|**Wymagany typ hasła**|Określ typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.|
-|**Wymagana liczba znaków złożonych w haśle**|Określ liczbę znaków symbolicznych (takich jak **#** lub **@**), które muszą być zawarte w haśle.|
-|**Minimalna długość hasła**|Określ minimalną liczbę znaków w haśle.|
-|**Zezwalaj na proste hasła**|Zezwalaj na proste hasła, takie jak **0000** i **1234**.|
-|**Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia**|Określ liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia.|
-|**Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**<sup>1</sup>|Określ, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.|
-|**Dni do wygaśnięcia hasła**|Określ liczbę dni, po której należy zmienić hasło urządzenia.|
-|**Pamiętaj historię haseł**|Określ, czy użytkownik może użyć poprzednio używanego hasła.|
-|**Pamiętaj historię haseł** — **Zapobiegaj ponownemu używaniu poprzednich haseł**|Określ liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.|
-|**Liczba minut braku aktywności przed wyłączeniem ekranu**<sup>1</sup>|Określ liczbę minut przed wyłączeniem ekranu urządzenia.|
-|**Zezwalaj na odblokowanie na podstawie linii papilarnych**|Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.|
+
+|                                           Nazwa ustawienia                                            |                                                            Szczegóły                                                             |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Wymagaj hasła do odblokowania urządzeń przenośnych</strong>                    |                        Określ, czy użytkownik musi wprowadzić hasło, aby uzyskać dostęp do urządzenia.                        |
+|                              <strong>Wymagany typ hasła</strong>                              |                   Określ typ hasła, które będzie wymagane, na przykład wyłącznie numeryczne lub alfanumeryczne.                    |
+|                <strong>Wymagana liczba znaków złożonych w haśle</strong>                 | Określ liczbę znaków symbolicznych (takich jak <strong>#</strong> lub <strong>@</strong>), które muszą być zawarte w haśle. |
+|                             <strong>Minimalna długość hasła</strong>                              |                                   Określ minimalną liczbę znaków w haśle.                                    |
+|                              <strong>Zezwalaj na proste hasła</strong>                              |                          Zezwalaj na proste hasła, takie jak <strong>0000</strong> i <strong>1234</strong>.                          |
+|     <strong>Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia</strong>      |                       Określ liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia.                        |
+|          <strong>Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła</strong><sup>1</sup>           |                   Określ, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.                    |
+|                            <strong>Dni do wygaśnięcia hasła</strong>                            |                             Określ liczbę dni, po której należy zmienić hasło urządzenia.                             |
+|                            <strong>Pamiętaj historię haseł</strong>                             |                           Określ, czy użytkownik może użyć poprzednio używanego hasła.                           |
+| <strong>Pamiętaj historię haseł</strong> — <strong>Zapobiegaj ponownemu używaniu poprzednich haseł</strong> |                           Określ liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.                           |
+|            <strong>Liczba minut braku aktywności przed wyłączeniem ekranu</strong><sup>1</sup>             |                             Określ liczbę minut przed wyłączeniem ekranu urządzenia.                             |
+|                             <strong>Zezwalaj na odblokowanie na podstawie linii papilarnych</strong>                             |                                        Zezwalaj na odblokowywanie urządzenia przy użyciu linii papilarnych.                                         |
+
 <sup>1</sup> W przypadku urządzeń z systemem iOS skonfigurowane ustawienia **Liczba minut braku aktywności przed wyłączeniem ekranu** i **Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła** są stosowane jedno po drugim. Na przykład, jeśli wartość obu ustawień zostanie ustawiona na **5** minut, ekranie wyłączy się automatycznie po 5 minut, a urządzenie zostanie zablokowane po kolejnych 5 minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie, jeśli użytkownik wyłączy ekran, po 5 minutach urządzenie zostanie zablokowane.
 
 ### <a name="system-settings"></a>Ustawienia systemowe
@@ -180,25 +182,26 @@ Zasady zawierające ustawienia zgodnych i niezgodnych aplikacji należy wdraża�
 
 ### <a name="kiosk-mode-settings"></a>Ustawienia trybu kiosku
 
-|Nazwa ustawienia|Szczegóły|
-|----------------|--------------------|
-|**Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku**|Wybierz pozycję **Przeglądaj**, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.|
-|**Zezwalaj na obsługę dotykową**|Włącza lub wyłącza ekran dotykowy na urządzeniu.|
-|**Zezwalaj na obracanie ekranu**|Włącza lub wyłącza zmianę orientacji ekranu podczas obracania urządzenia.|
-|**Zezwalaj na używanie przycisków regulacji głośności**|Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.|
-|**Zezwalaj na przełączanie dzwonka**|Włącza lub wyłącza przełączanie dzwonka (wyciszanie) na urządzeniu.|
-|**Zezwalaj na używanie przycisku usypiania/budzenia ekranu**|Włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.|
-|**Zezwalaj na automatyczne blokowanie**|Włącza lub wyłącza automatyczne blokowanie urządzenia.|
-|**Włącz dźwięk mono**|Włącza lub wyłącza ustawienie ułatwień dostępu **Dźwięk mono**.|
-|**Włącz lektora**|Włącza lub wyłącza funkcję ułatwień dostępu **VoiceOver** , która odczytuje na głos tekst wyświetlany na ekranie urządzenia.|
-|**Włącz korektę lektora**|Włącza lub wyłącza możliwość dostosowania ustawień funkcji VoiceOver (na przykład tempa odczytywania tekstu z ekranu).|
-|**Włącz powiększenie**|Włącza lub wyłącza funkcję ułatwień dostępu **Zoom** umożliwiającą użytkownikowi powiększenie fragmentu ekranu urządzenia za pomocą gestu.|
-|**Włącz korektę powiększenia**|Włącza lub wyłącza ustawienia funkcji Zoom.|
-|**Włącz odwrócone kolory**|Włącza lub wyłącza funkcję ułatwień dostępu **Odwróć kolory** dostosowującą wyświetlany obraz do potrzeb użytkowników niedowidzących.|
-|**Włącz korektę odwróconych kolorów**|Włącza lub wyłącza ustawienia funkcji Odwróć kolory, która umożliwia użytkownikowi korektę odwróconych kolorów.|
-|**Włącz obsługę dotykową z ułatwieniami**|Włącza lub wyłącza funkcję ułatwień dostępu **Assistive Touch**, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.|
-|**Włącz korektę obsługi dotykowej z ułatwieniami**|Włącza lub wyłącza ustawienia obsługi dotykowej z ułatwieniami, które umożliwiają użytkownikom dostosowanie funkcji obsługi dotykowej z ułatwieniami.|
-|**Włącz wybór mowy**|Włącza lub wyłącza funkcję ułatwień dostępu **wyboru mowy**, dzięki której zaznaczony tekst może zostać odczytany użytkownikowi na głos przez urządzenie.|
+|                                            Nazwa ustawienia                                            |                                                                                                                                      Szczegóły                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Wybierz zarządzaną aplikację, która będzie mogła działać na urządzeniu w trybie kiosku</strong> | Wybierz pozycję <strong>Przeglądaj</strong>, a następnie wskaż zarządzaną aplikację lub aplikację ze sklepu, która będzie mogła działać na urządzeniu w trybie kiosku. Na tym urządzeniu nie będzie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu. |
+|                                    <strong>Zezwalaj na obsługę dotykową</strong>                                    |                                                                                                                  Włącza lub wyłącza ekran dotykowy na urządzeniu.                                                                                                                  |
+|                               <strong>Zezwalaj na obracanie ekranu</strong>                               |                                                                                                Włącza lub wyłącza zmianę orientacji ekranu podczas obracania urządzenia.                                                                                                 |
+|                               <strong>Zezwalaj na używanie przycisków regulacji głośności</strong>                                |                                                                                                           Włącza lub wyłącza przyciski regulacji głośności na urządzeniu.                                                                                                           |
+|                                <strong>Zezwalaj na przełączanie dzwonka</strong>                                |                                                                                                             Włącza lub wyłącza przełączanie dzwonka (wyciszanie) na urządzeniu.                                                                                                              |
+|                          <strong>Zezwalaj na używanie przycisku usypiania/budzenia ekranu</strong>                           |                                                                                                           Włącza lub wyłącza przycisk usypiania/budzenia ekranu na urządzeniu.                                                                                                            |
+|                                  <strong>Zezwalaj na automatyczne blokowanie</strong>                                  |                                                                                                                 Włącza lub wyłącza automatyczne blokowanie urządzenia.                                                                                                                 |
+|                                 <strong>Włącz dźwięk mono</strong>                                 |                                                                                                      Włącza lub wyłącza ustawienie ułatwień dostępu <strong>Dźwięk mono</strong>.                                                                                                      |
+|                                 <strong>Włącz lektora</strong>                                 |                                                                               Włącza lub wyłącza funkcję ułatwień dostępu <strong>VoiceOver</strong> , która odczytuje na głos tekst wyświetlany na ekranie urządzenia.                                                                                |
+|                           <strong>Włącz korektę lektora</strong>                           |                                                                  Włącza lub wyłącza możliwość dostosowania ustawień funkcji VoiceOver (na przykład tempa odczytywania tekstu z ekranu).                                                                   |
+|                                    <strong>Włącz powiększenie</strong>                                    |                                                                         Włącza lub wyłącza funkcję ułatwień dostępu <strong>Zoom</strong> umożliwiającą użytkownikowi powiększenie fragmentu ekranu urządzenia za pomocą gestu.                                                                         |
+|                              <strong>Włącz korektę powiększenia</strong>                              |                                                                                                  Włącza lub wyłącza ustawienia funkcji Zoom.                                                                                                  |
+|                               <strong>Włącz odwrócone kolory</strong>                                |                                                                    Włącza lub wyłącza funkcję ułatwień dostępu <strong>Odwróć kolory</strong> dostosowującą wyświetlany obraz do potrzeb użytkowników niedowidzących.                                                                    |
+|                         <strong>Włącz korektę odwróconych kolorów</strong>                          |                                                                                         Włącza lub wyłącza ustawienia funkcji Odwróć kolory, która umożliwia użytkownikowi korektę odwróconych kolorów.                                                                                         |
+|                              <strong>Włącz obsługę dotykową z ułatwieniami</strong>                               |                                                     Włącza lub wyłącza funkcję ułatwień dostępu <strong>Assistive Touch</strong>, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.                                                     |
+|                        <strong>Włącz korektę obsługi dotykowej z ułatwieniami</strong>                         |                                                                                       Włącza lub wyłącza ustawienia obsługi dotykowej z ułatwieniami, które umożliwiają użytkownikom dostosowanie funkcji obsługi dotykowej z ułatwieniami.                                                                                       |
+|                              <strong>Włącz wybór mowy</strong>                              |                                                                        Włącza lub wyłącza funkcję ułatwień dostępu <strong>wyboru mowy</strong>, dzięki której zaznaczony tekst może zostać odczytany użytkownikowi na głos przez urządzenie.                                                                         |
+
 > [!NOTE]
 > Poniższe uwagi dotyczą ustawień trybu kiosku dla urządzeń z systemem iOS:
 >
@@ -349,8 +352,6 @@ Użyj informacji na tej liście, aby określić nazwę, wydawcę i identyfikator
 ,com.apple.Passbook,Wallet,Apple
 ,com.apple.Bridge,Watch,Apple
 ,com.apple.weather,Weather,Apple
-
-
 ```
 
 

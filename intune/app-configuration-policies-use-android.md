@@ -1,37 +1,37 @@
 ---
-title: "Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android"
+title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 titlesuffix: Microsoft Intune
-description: "Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work przez użytkowników."
-keywords: 
+description: Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work przez użytkowników.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a448c33e8324492c68d509a12d5901f41ed4873a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6fbf70630124614aa1ed302a41d6e3f33c10c63d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work przez użytkowników. Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń. W zamian należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work. Deweloper aplikacji musi ujawnić ustawienia konfiguracji aplikacji zarządzane w systemie Android, aby określić ustawienia konfiguracji dla aplikacji. Przypisz zasady konfiguracji aplikacji do grupy użytkowników, wobec których chcesz zastosować ustawienia.  Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
 > [!Note]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Wybierz obciążenie **Aplikacje mobilne**.
 4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
@@ -50,16 +50,27 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 
 ## <a name="use-the-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
-Projektanta konfiguracji można używać w przypadku aplikacji na urządzeniach zarejestrowanych lub niezarejestrowanych w usłudze Intune. Projektant umożliwia skonfigurowanie określonych kluczy i wartości konfiguracji. Dla każdej wartości należy również wskazać typ danych.
+W przypadku aplikacji systemu Android obsługujących konfigurację możesz użyć projektanta konfiguracji. Konfiguracja będzie mieć zastosowanie wobec urządzeń zarejestrowanych w usłudze Intune. Projektant umożliwia określanie konkretnych wartości konfiguracji dla ustawień ujawnianych przez aplikację.
 
+Wybierz opcję **Dodaj**, aby wybrać listę ustawień konfiguracji, które chcesz określić dla aplikacji.  
 Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:
 
-  - **Klucz konfiguracji**  
-     Klucz, który jednoznacznie identyfikuje konfigurację określonego ustawienia.
   - **Typ wartości**  
-    Typ danych wartości konfiguracji. Typy obejmują liczby całkowite, liczby rzeczywiste, ciągi i wartości logiczne.
+    Typ danych wartości konfiguracji. W przypadku typu wartości ciągu możesz opcjonalnie wybrać zmienną lub profil certyfikatu jako typ wartości.
   - **Wartość konfiguracji**  
-    Wartość konfiguracji. 
+    Wartość konfiguracji. Jeśli wybierzesz zmienną lub certyfikat jako typ wartości, możesz wybrać pozycję z listy zmiennych lub profilów certyfikatów dostępnej na liście rozwijanej wartości konfiguracji.  Jeżeli wybierzesz certyfikat, alias certyfikatu wdrożonego na urządzeniu zostanie wypełniony w czasie uruchamiania.
+    
+### <a name="supported-variables-for-configuration-values"></a>Obsługiwane zmienne dla wartości konfiguracji
+
+Jeśli wybierzesz zmienną jako typ wartości, możesz wybrać następujące opcje:
+- Główna nazwa użytkownika — na przykład **John@contoso.com**
+- Poczta — na przykład **John@contoso.com**
+- Częściowa nazwa UPN — na przykład **John**
+- Identyfikator konta — na przykład **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- Identyfikator urządzenia — na przykład **b9841cd9-9843-405f-be28-b2265c59ef97**
+- Identyfikator użytkownika — na przykład **3ec2c00f-b125-4519-acf0-302ac3761822**
+- Nazwa użytkownika — na przykład **John Doe**
+
 
 ## <a name="enter-the-json-editor"></a>Edytor JSON
 
@@ -78,7 +89,7 @@ Po uruchomieniu przypisanej aplikacji na urządzeniu uruchamiane są ustawienia 
 Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika. Na przykład jeśli aplikacja używa mikrofonu urządzenia, użytkownik otrzyma monit o przyznanie aplikacji uprawnienia do użycia mikrofonu.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Wybierz pozycję **Mobile Apps**.
 3. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji** aplikacji, a następnie wybierz pozycję **Dodaj**.
 4. Ustaw następujące szczegóły:

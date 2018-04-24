@@ -1,27 +1,27 @@
 ---
-title: "Korzystanie z urządzenia z systemem macOS w usłudze Intune | Microsoft Docs"
-description: "Lista linków do zadań, które można wykonać na urządzeniu z systemem iOS, gdy urządzenie zostało zarejestrowane w usłudze Intune."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Korzystanie z urządzenia z systemem macOS w usłudze Intune | Microsoft Docs
+description: Lista linków do zadań, które można wykonać na urządzeniu z systemem iOS, gdy urządzenie zostało zarejestrowane w usłudze Intune.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8e6eb579968fe8499b176e58ff50b9d7635aa3c0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 51bca0c2aa10f15511e1644eda9ca6dd11c36f8b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-your-ios-device-with-intune"></a>Korzystanie z urządzenia z systemem iOS i usługi Intune
 
@@ -41,7 +41,7 @@ Usługa Intune obsługuje obecnie system operacyjny iOS w wersjach 9.0 i nowszyc
 
 - [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 - [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
+  <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md)
 - [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
 - [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-ios.md)

@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9762c20abb9e4eedded50c92fb10ffb6119be63e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc2a8cb8fc07f87dd0a4e9d8f3935c04a73fe8fd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-apps-with-microsoft-intune"></a>Wdrażanie aplikacji w usłudze Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 W tym temacie omówiono pojęcia, które należy zrozumieć przed rozpoczęciem wdrażania aplikacji w usłudze Microsoft Intune.
 
@@ -46,18 +46,19 @@ Podczas wdrażania aplikacji można wybrać jedną z następujących akcji wdra�
 
 #### <a name="understand-which-deployment-actions-are-available-for-each-installer-type"></a>Opis akcji wdrażania dostępnych dla poszczególnych typów instalatora
 
-|Typ instalatora|Wymagana instalacja|Dostępna instalacja|Odinstaluj|Nie dotyczy|
-|------------------|--------------------|---------------------|-------------|------------------|
-|Pakiet aplikacji systemu Windows (wdrożenie w grupie użytkowników)|Tak|Tak|Tak|Tak|
-|Pakiet aplikacji systemu Windows (wdrożenie w grupie urządzeń)|Tak|Nie|Tak|Tak|
-|Pakiet aplikacji dla urządzeń przenośnych (wdrożenie w grupie użytkowników)|Tak|Tak|Tak|Tak|
-|Pakiet aplikacji dla urządzeń przenośnych (wdrożenie w grupie urządzeń)|Tak|Nie|Tak|Tak|
-|Instalator systemu Windows (wdrożenie w grupie użytkowników)|Nie|Tak|Nie|Tak|
-|Instalator systemu Windows (wdrożenie w grupie urządzeń)|Tak|Nie|Tak|Tak|
-|Link zewnętrzny (wdrożenie w grupie użytkowników)|Nie|Tak|Nie|Tak|
-|Link zewnętrzny (wdrożenie w grupie urządzeń)|Nie|Nie|Nie|Nie|
-|Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie użytkowników)|Tak|Tak|Tak|Tak|
-|Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie urządzeń)|Tak|Nie|Tak|Tak|
+|                         Typ instalatora                          | Wymagana instalacja | Dostępna instalacja | Odinstaluj | Nie dotyczy |
+|-----------------------------------------------------------------|------------------|-------------------|-----------|----------------|
+|         Pakiet aplikacji systemu Windows (wdrożenie w grupie użytkowników)          |       Tak        |        Tak        |    Tak    |      Tak       |
+|        Pakiet aplikacji systemu Windows (wdrożenie w grupie urządzeń)         |       Tak        |        Nie         |    Tak    |      Tak       |
+|    Pakiet aplikacji dla urządzeń przenośnych (wdrożenie w grupie użytkowników)    |       Tak        |        Tak        |    Tak    |      Tak       |
+|   Pakiet aplikacji dla urządzeń przenośnych (wdrożenie w grupie urządzeń)   |       Tak        |        Nie         |    Tak    |      Tak       |
+|          Instalator systemu Windows (wdrożenie w grupie użytkowników)           |        Nie        |        Tak        |    Nie     |      Tak       |
+|         Instalator systemu Windows (wdrożenie w grupie urządzeń)          |       Tak        |        Nie         |    Tak    |      Tak       |
+|            Link zewnętrzny (wdrożenie w grupie użytkowników)             |        Nie        |        Tak        |    Nie     |      Tak       |
+|           Link zewnętrzny (wdrożenie w grupie urządzeń)            |        Nie        |        Nie         |    Nie     |       Nie       |
+|  Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie użytkowników)  |       Tak        |        Tak        |    Tak    |      Tak       |
+| Zarządzana aplikacja systemu iOS ze sklepu App Store (wdrożenie w grupie urządzeń) |       Tak        |        Nie         |    Tak    |      Tak       |
+
 > [!TIP]
 > Jeśli podczas wdrażania aplikacji wybierzesz zarówno grupę użytkowników, jak i grupę urządzeń, możesz wdrożyć aplikację jedynie przy użyciu ustawienia **Dostępna instalacja**.
 

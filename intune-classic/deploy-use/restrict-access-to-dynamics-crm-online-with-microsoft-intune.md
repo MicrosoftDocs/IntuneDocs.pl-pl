@@ -1,29 +1,29 @@
 ---
-title: "Ochrona dostępu do usługi Dynamics CRM Online"
-description: "Ochrona i kontrola dostępu do usługi Dynamics CRM Online przy użyciu dostępu warunkowego."
-keywords: 
+title: Ochrona dostępu do usługi Dynamics CRM Online
+description: Ochrona i kontrola dostępu do usługi Dynamics CRM Online przy użyciu dostępu warunkowego.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bae29ed7eba164ce19ea5db7d003ab38b4683454
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e2f720c8a6613884397111c2a421fa1cfdc0eb53
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Ochrona dostępu do usługi Dynamics CRM Online przy użyciu usługi Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Dostęp do usługi Microsoft Dynamics CRM Online na urządzeniach z systemem iOS i Android można kontrolować przy użyciu dostępu warunkowego usługi Microsoft Intune.  Dostęp warunkowy usługi Intune ma dwa składniki:
 * [Zasady zgodności urządzenia](introduction-to-device-compliance-policies-in-microsoft-intune.md), które urządzenie musi spełniać, aby można je było uważać za zgodne.
@@ -73,17 +73,17 @@ Gdy wszystko będzie gotowe, przejdź do kroku 3.
 ### <a name="step-3-configure-the-dynamics-crm-policy"></a>Krok 3. Konfigurowanie zasad usługi Dynamics CRM
 Skonfiguruj zasady wymagające, aby tylko urządzenia zarządzane i zgodne miały dostęp do usługi Dynamics CRM. Te zasady będą przechowywane w usłudze Azure Active Directory.
 
-1.  W konsoli administracyjnej usługi Intune wybierz pozycje **Zasady > Dostęp warunkowy > Zasady usługi Dynamics CRM Online**.
+1. W konsoli administracyjnej usługi Intune wybierz pozycje **Zasady > Dostęp warunkowy > Zasady usługi Dynamics CRM Online**.
 
-  ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
+   ![Zrzut ekranu przedstawiający stronę zasad dostępu warunkowego usługi Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  Wybierz pozycję **Włącz zasady dostępu warunkowego**.
-3.  W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
-  * **iOS**
-  * **Android**
-4.  W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, do których zostaną zastosowane zasady. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
-5.  W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
-6.  Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
+2. Wybierz pozycję **Włącz zasady dostępu warunkowego**.
+3. W obszarze **Dostęp do aplikacji** możesz wybrać platformy, do których zostaną zastosowane zasady dostępu warunkowego:
+   * **iOS**
+   * **Android**
+4. W obszarze **Grupy docelowe** wybierz pozycję **Modyfikuj**, aby wybrać grupy zabezpieczeń usługi Azure Active Directory, do których zostaną zastosowane zasady. Możesz objąć zasadami wszystkich użytkowników lub ich wybrane grupy.
+5. W obszarze **Wykluczone grupy** możesz wybrać pozycję **Modyfikuj**, jeśli chcesz, aby zasady nie były stosowane dla wskazanych grup zabezpieczeń usługi Azure Active Directory.
+6. Gdy wszystko będzie gotowe, wybierz pozycję **Zapisz**.
 
 Dostęp warunkowy dla usługi Dynamics CRM został skonfigurowany. Nie musisz wdrażać zasad dostępu warunkowego; są one aktywne natychmiast.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Monitorowanie zgodności i zasad dostępu warunkowego

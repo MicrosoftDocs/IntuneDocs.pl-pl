@@ -15,15 +15,15 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 05b03502a27c244dd665363741f70a695f8e945b
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: 32e61f95a1e6c197b8d732019a19222d437292bc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program firmy Apple
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tymczasowe różnice dotyczące interfejsu użytkownika
@@ -76,11 +76,11 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Token programu Enrollment Program**.
 
-  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple](./media/enrollment-program-token-add.png)
+   ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple](./media/enrollment-program-token-add.png)
 
 2. Wybierz pozycję **Pobierz klucz publiczny**, aby pobrać i zapisać lokalnie plik klucza szyfrowania (PEM). Plik PEM jest używany na potrzeby żądania certyfikatu relacji zaufania z portalu programu Device Enrollment Program firmy Apple.
 
-  ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
+   ![Okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego](./media/enrollment-program-token-download.png)
 
 **Krok 2. Utwórz i pobierz token DEP firmy Apple.**<br>
 1. Wybierz pozycję **Utwórz token za pomocą programu Device Enrollment Program firmy Apple**, aby otworzyć portal programu wdrażania firmy Apple i zalogować się przy użyciu firmowego identyfikatora Apple ID. Tego identyfikatora firmy Apple możesz użyć do odnowienia tokenu DEP.
@@ -120,37 +120,37 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 2. W obszarze **Program Enrollment Program dla firmy Apple** wybierz pozycję **Profile programu Enrollment Program** > **Utwórz**.
 3. W obszarze **Utwórz profil rejestracji** wprowadź nazwę w polu **Nazwa** i opis w polu **Opis** dotyczące profilu do celów administracyjnych. Te szczegóły nie są widoczne dla użytkowników. Możesz użyć pola **Nazwa**, aby utworzyć grupę dynamiczną w usłudze Azure Active Directory. Nazwa profilu umożliwia zdefiniowanie parametru enrollmentProfileName w celu przypisania urządzeń z tym profilem rejestracji. Dowiedz się więcej o [grupach dynamicznych usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
-  Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem będą rejestrowane z przypisanym użytkownikiem, czy bez niego.
+   Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem będą rejestrowane z przypisanym użytkownikiem, czy bez niego.
 
- - **Zarejestruj z koligacją użytkownika** — to ustawienie należy wybrać w przypadku urządzeń należących do użytkowników, które muszą korzystać z Portalu firmy na potrzeby usług, takich jak instalowanie aplikacji. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+   - **Zarejestruj z koligacją użytkownika** — to ustawienie należy wybrać w przypadku urządzeń należących do użytkowników, które muszą korzystać z Portalu firmy na potrzeby usług, takich jak instalowanie aplikacji. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
- - **Zarejestruj bez koligacji użytkownika** — to ustawienie należy wybrać dla urządzenia, dla którego nie istnieje koligacja z żadnym użytkownikiem. Ma to zastosowanie w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje, takie jak Portal firmy, nie działają.
+   - **Zarejestruj bez koligacji użytkownika** — to ustawienie należy wybrać dla urządzenia, dla którego nie istnieje koligacja z żadnym użytkownikiem. Ma to zastosowanie w przypadku urządzeń wykonujących zadania bez uzyskiwania dostępu do danych użytkowników lokalnych. Aplikacje, takie jak Portal firmy, nie działają.
 
 4. Wybierz pozycję **Ustawienia zarządzania urządzeniami**, aby skonfigurować następujące ustawienia profilu:
 
-  ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
-  - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
+   ![Wybieranie trybu zarządzania](./media/enrollment-program-profile-mode.png)
+   - **Nadzorowane** — tryb zarządzania, w ramach którego następuje włączenie większej liczby opcji zarządzania i domyślne wyłączenie blokady aktywacji. Jeśli pole pozostanie puste, użytkownik będzie mieć ograniczone możliwości w zakresie zarządzania. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
 
- > [!NOTE]
- > Konfigurowania urządzenia dla trybu nadzorowanego nie można wykonać przy użyciu usługi Intune po zarejestrowaniu urządzenia. Po rejestracji jedynym sposobem włączenia trybu nadzorowanego jest podłączenie urządzenia z systemem iOS do komputera Mac za pomocą kabla USB i użycie narzędzia Apple Configurator. Spowoduje to zresetowanie urządzenia i skonfigurowanie go w trybie nadzorowanym. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3). Nadzorowane urządzenie wyświetli komunikat „Ten telefon iPhone jest zarządzany przez firmę Contoso” na ekranie blokady oraz „Ten telefon iPhone jest nadzorowany. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie” w pozycji **Ustawienia** > **Ogólne** > **Informacje**.
+   > [!NOTE]
+   > Konfigurowania urządzenia dla trybu nadzorowanego nie można wykonać przy użyciu usługi Intune po zarejestrowaniu urządzenia. Po rejestracji jedynym sposobem włączenia trybu nadzorowanego jest podłączenie urządzenia z systemem iOS do komputera Mac za pomocą kabla USB i użycie narzędzia Apple Configurator. Spowoduje to zresetowanie urządzenia i skonfigurowanie go w trybie nadzorowanym. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3). Nadzorowane urządzenie wyświetli komunikat „Ten telefon iPhone jest zarządzany przez firmę Contoso” na ekranie blokady oraz „Ten telefon iPhone jest nadzorowany. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie” w pozycji **Ustawienia** > **Ogólne** > **Informacje**.
 
-  - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych.
+   - **Rejestracja zablokowana** — (wymaga zastosowania ustawienia Tryb zarządzania = Nadzorowane) wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania. W przypadku pozostawienia tego pola pustego istnieje możliwość usunięcia profilu zarządzania z poziomu menu Ustawienia. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych.
 
-  - **Włącz udostępnione urządzenie iPad** — program Device Enrollment Program firmy Apple nie obsługuje udostępnionego urządzenia iPad.
+   - **Włącz udostępnione urządzenie iPad** — program Device Enrollment Program firmy Apple nie obsługuje udostępnionego urządzenia iPad.
 
-  - **Zezwalaj na parowanie** — określa, czy urządzenia z systemem iOS można synchronizować z komputerami. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
+   - **Zezwalaj na parowanie** — określa, czy urządzenia z systemem iOS można synchronizować z komputerami. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
-  - **Certyfikaty programu Apple Configurator** — w przypadku wyboru pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** w obszarze **Zezwalaj na parowanie** należy wybrać certyfikat programu Apple Configurator do zaimportowania.
+   - **Certyfikaty programu Apple Configurator** — w przypadku wyboru pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** w obszarze **Zezwalaj na parowanie** należy wybrać certyfikat programu Apple Configurator do zaimportowania.
 
-  Wybierz polecenie **Zapisz**.
+   Wybierz polecenie **Zapisz**.
 
 5. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu:
 
-  ![Wybieranie ustawień konfiguracji z dostępnymi ustawieniami dla nowego profilu rejestracji programu](./media/enrollment-program-profile-settings.png)
-  - **Nazwa działu** — jest wyświetlana, gdy użytkownik dotknie pozycji **Informacje o konfiguracji** podczas aktywacji.
+   ![Wybieranie ustawień konfiguracji z dostępnymi ustawieniami dla nowego profilu rejestracji programu](./media/enrollment-program-profile-settings.png)
+   - **Nazwa działu** — jest wyświetlana, gdy użytkownik dotknie pozycji **Informacje o konfiguracji** podczas aktywacji.
 
-  - **Telefon działu** — jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk **Potrzebna pomoc**.
-    - **Opcje Asystenta ustawień** — te opcjonalne ustawienia mogą być później konfigurowane z poziomu menu **Ustawienia** systemu iOS.
+   - **Telefon działu** — jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk **Potrzebna pomoc**.
+     - **Opcje Asystenta ustawień** — te opcjonalne ustawienia mogą być później konfigurowane z poziomu menu **Ustawienia** systemu iOS.
         - **Kod dostępu**
         - **Usługi lokalizacyjne**
         - **Przywróć**
@@ -162,16 +162,19 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
         - **Siri**
         - **Dane diagnostyczne**
 
-    Wybierz polecenie **Zapisz**.
+     Wybierz polecenie **Zapisz**.
 
-9. Aby zapisać ustawienia profilu, wybierz pozycję **Utwórz** w bloku **Utwórz profil rejestracji**. Profil rejestracji zostanie wyświetlony na liście Profile rejestracji programu Enrollment Program firmy Apple.
+>[!NOTE]
+>Począwszy od systemu iOS 11, jeśli chcesz umożliwić przywracanie z kopii zapasowej w usłudze iCloud, w obszarze Opcje asystenta ustawień muszą być wyświetlone pozycje „Przywróć” i „Identyfikator Apple ID”.
+
+6. Aby zapisać ustawienia profilu, wybierz pozycję **Utwórz** w bloku **Utwórz profil rejestracji**. Profil rejestracji zostanie wyświetlony na liście Profile rejestracji programu Enrollment Program firmy Apple.
 
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
 
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Urządzenia programu Enrollment Program** > **Synchronizacja**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
-  ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
+   ![Wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj](./media/enrollment-program-device-sync.png)
 
 2. W bloku **synchronizacji** wybierz pozycję **Żądaj synchronizacji**. Pasek postępu pokazuje, ile czasu minie przed ponownym przesłaniem żądania synchronizacji.
 
@@ -193,15 +196,15 @@ Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil progr
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz pozycję **Profile programu Enrollment Program**.
 2. Z listy **Profile programu Enrollment Program** wybierz profil, który ma zostać przypisany do urządzeń, a następnie wybierz pozycję **Przypisz urządzenia**.
 
- ![Przypisania urządzeń z wybraną pozycją Przypisz](./media/enrollment-program-device-assign.png)
+   ![Przypisania urządzeń z wybraną pozycją Przypisz](./media/enrollment-program-device-assign.png)
 
 3. Wybierz przycisk **Przypisz**, a następnie wybierz urządzenia, do których chcesz przypisać ten profil. Możesz zastosować filtr, aby wyświetlić dostępne urządzenia:
-  - **nieprzypisane**
-  - **dowolne**
-  - **&lt;nazwa profilu&gt;**
+   - **nieprzypisane**
+   - **dowolne**
+   - **&lt;nazwa profilu&gt;**
 4. Wybierz urządzenia, które chcesz przypisać. Pole wyboru nad kolumną pozwala na wybranie z listy maksymalnie 1000 urządzeń. Po wybraniu urządzeń kliknij przycisk **Przypisz**. Aby zarejestrować więcej niż 1000 urządzeń, powtarzaj procedurę przypisania, aż profil rejestracji zostanie przypisany do wszystkich urządzeń.
 
-  ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
+   ![Przycisk Przypisz służący do przypisywania profilu programu Enrollment Program w usłudze Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 Włączono zarządzanie i synchronizację między danymi firmy Apple i usługą Intune oraz przypisano profil umożliwiający rejestrowanie urządzeń korzystających z programu DEP. Możesz teraz przekazać urządzenia użytkownikom. W przypadku urządzeń z koligacją użytkownika wymagane jest, aby poszczególni użytkownicy mieli przypisane licencje na korzystanie z usługi Intune. Urządzenia bez koligacji użytkownika wymagają licencji urządzenia. Aktywowane urządzenie nie może stosować profilu rejestracji, dopóki urządzenie nie zostanie zresetowane do ustawień fabrycznych.

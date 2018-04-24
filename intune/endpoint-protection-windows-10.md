@@ -1,29 +1,28 @@
 ---
-title: "Ustawienia programu Endpoint Protection usługi Microsoft Intune dla systemu Windows 10"
-titlesuffix: 
-description: "Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień programu Endpoint Protection, na przykład funkcji BitLocker, na urządzeniach z systemem Windows 10."
-keywords: 
+title: Dodawanie programu Endpoint Protection do systemu Windows 10 w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: Na urządzeniach z systemem Windows 10 możesz użyć ustawień programu Endpoint Protection lub skonfigurować je, aby włączyć w usłudze Microsoft Intune usługę Windows Defender, w tym program Application Guard, zaporę, filtr SmartScreen, szyfrowanie i funkcję BitLocker, program Exploit Guard, kontrolę aplikacji, Centrum zabezpieczeń i zabezpieczenia na urządzeniach lokalnych.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/23/2018
+ms.date: 03/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02a32f678b40b2b40535984e17b41e0a864d8fdf
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: afe1e737bb5214af76395db91b8aea72cb5d42a0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Tworzenie ustawień programu Endpoint Protection dla systemu Windows 10 i nowszych wersji w usłudze Microsoft Intune
+# <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Ustawienia programu Endpoint Protection dla systemu Windows 10 (i nowszych) w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Profil programu Endpoint Protection umożliwia kontrolowanie funkcji zabezpieczeń na urządzeniach z systemem Windows 10, takich jak funkcja BitLocker i usługa Windows Defender.
 
@@ -31,21 +30,6 @@ Skorzystaj z informacji w tym artykule, aby dowiedzieć się, jak tworzyć profi
 
 > [!Note]
 > Te ustawienia nie są obsługiwane w systemie Windows 10 w wersjach Home i Professional.
-
-## <a name="create-an-endpoint-protection-profile"></a>Tworzenie profilu programu Endpoint Protection
-
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W bloku **Intune** wybierz opcję **Konfiguracja urządzeń**.
-2. W bloku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz opcję **Profile**.
-3. W bloku profilów wybierz pozycję **Utwórz profil**.
-4. W bloku **Utwórz profil** wprowadź wartości pól **Nazwa** i **Opis** odnoszące się do profilu funkcji urządzenia.
-5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Endpoint Protection**.
-7. Skonfiguruj odpowiednie ustawienia. Zapoznaj się ze szczegółowymi informacjami w tym artykule, aby lepiej zrozumieć działanie poszczególnych ustawień. Gdy skończysz, wybierz przycisk **OK**.
-8. Wróć do bloku **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
-
-Profil zostanie utworzony i wyświetlony w bloku listy profilów.
 
 ## <a name="windows-defender-application-guard"></a>Windows Defender Application Guard
 
@@ -56,9 +40,9 @@ Funkcja Application Guard jest dostępna tylko dla urządzeń z systemem Windows
 - **Zawartość zewnętrzna w witrynach przedsiębiorstw** — blokowanie ładowania zawartości z niezatwierdzonych witryn internetowych.
 - **Drukuj z przeglądarki wirtualnej** — zezwalanie drukarkom PDF, XPS, lokalnym i/lub sieciowym na drukowanie zawartości z przeglądarki wirtualnej.
 - **Zbieraj dzienniki** — zbieranie dzienników dla zdarzeń występujących w sesji przeglądania funkcji Application Guard.
-- **Zachowuj dane przeglądarki generowane przez użytkownika** — zezwala na zapisywanie danych użytkownika (na przykład haseł, ulubionych i plików cookie) utworzonych podczas wirtualnej sesji przeglądania funkcji Application Guard.
-- **Przyspieszanie grafiki** — szybsze ładowanie witryn internetowych z dużą ilością grafiki podczas pracy w sesji przeglądania w funkcji Application Guard poprzez umożliwienie dostępu do wirtualnej jednostki przetwarzania grafiki.
-
+- **Zachowuj dane przeglądarki generowane przez użytkownika** — umożliwia zapisywanie danych użytkownika (na przykład haseł, ulubionych i plików cookie) utworzonych podczas wirtualnej sesji przeglądania funkcji Application Guard.
+- **Przyspieszanie grafiki** — szybsze ładowanie witryn internetowych z dużą ilością grafiki podczas pracy w wirtualnej sesji przeglądania funkcji Application Guard. Witryny internetowe ładują się szybciej dzięki dostępowi do wirtualnego procesora GPU.
+- **Pobierz pliki do systemu plików hosta** — umożliwia użytkownikom pobieranie plików ze zwirtualizowanej przeglądarki do systemu operacyjnego hosta.
 
 ## <a name="windows-defender-firewall"></a>Zapora Windows Defender
 
@@ -72,7 +56,7 @@ Te ustawienia mają zastosowanie do wszystkich typów urządzeń.
 - **Wykluczenia IPsec** — konfigurowanie wykluczenia określonego ruchu z protokołu IPsec, w tym opcji **Odnajdywanie sąsiadujących kodów typu IPv6 protokołu ICMP**, **Protokół ICMP**, **Odnajdywanie routera kodów typu IPv6 protokołu ICMP** i **Ruch sieciowy DHCP IPv4 i IPv6**.
 - **Weryfikacja listy odwołania certyfikatów** — ustawianie wartości określającej sposób wymuszania weryfikacji listy odwołania certyfikatów, w tym opcji **Wyłącz weryfikację listy CRL**, **Niepowodzenie weryfikacji listy CRL tylko w przypadku odwołanego certyfikatu** i **Niepowodzenie weryfikacji listy CRL przy dowolnym błędzie**.
 - **Odpowiednio uzgodnij zestaw uwierzytelniania dla modułu kluczy** — ustawianie modułów kluczy w celu ignorowania całego zestawu uwierzytelniania, jeśli nie obsługują wszystkich pakietów uwierzytelniania w tym zestawie.
-- **Kolejkowanie pakietów** — określa sposób włączania skalowania oprogramowania po stronie odbierającej w przypadku zaszyfrowanego odbierania i przekazywania w postaci zwykłego tekstu dla scenariusza z bramą tunelu IPsec. Zapewnia to zachowanie kolejności pakietów.
+- **Kolejkowanie pakietów** — określa sposób włączania skalowania oprogramowania po stronie odbierającej w przypadku zaszyfrowanego odbierania i przekazywania w postaci zwykłego tekstu dla scenariusza z bramą tunelu IPsec. To ustawienie zapewnia zachowanie kolejności pakietów.
 
 ### <a name="network-settings"></a>Ustawienia sieciowe
 
@@ -81,7 +65,7 @@ Te ustawienia mają zastosowanie do sieci określonych typów, w tym **sieci z d
 #### <a name="general-settings"></a>Ustawienia ogólne
 
 - **Zapora Windows Defender** — włączenie tego ustawienia powoduje blokowanie ruchu sieciowego.
-- **Tryb niewidzialności** — blokowanie działania zapory w trybie niewidzialności. Blokowanie to pozwala również zablokować **wykluczanie pakietów zabezpieczonych przez protokół IPsec**.
+- **Tryb niewidzialności** — blokowanie działania zapory w trybie niewidzialności. Blokowanie trybu niewidzialności pozwala również zablokować **wykluczanie pakietów zabezpieczonych przez protokół IPsec**.
 - **Chronione** — włączenie tego ustawienia i ustawienia zapory powoduje blokowanie całego ruchu przychodzącego.
 - **Odpowiedzi emisji pojedynczej na multiemisję/emisje** — blokowanie odpowiedzi emisji pojedynczej na multiemisję/emisje. Zwykle nie chcesz otrzymywać odpowiedzi emisji pojedynczej na komunikaty multiemisji lub emisji, ponieważ takie odpowiedzi mogą wskazywać na atak typu „odmowa usługi” lub osobę atakującą próbującą sondować znany aktywny komputer.
 - **Powiadomienia przychodzące** — blokowanie wyświetlania powiadomień użytkownikom, gdy nasłuchiwanie przez aplikację na porcie jest zablokowane.
@@ -115,53 +99,52 @@ Podstawowe ustawienia to uniwersalne ustawienia funkcji BitLocker dla wszystkich
 
 - **Ostrzeżenie dotyczące innego szyfrowania dysku** — wyłączanie ostrzeżenia dotyczącego innego szyfrowania dysków na komputerach użytkowników końcowych.
 - **Konfiguruj metody szyfrowania** — włącz to ustawienie, aby skonfigurować algorytmy szyfrowania na potrzeby systemu operacyjnego, danych i dysków wymiennych.
-    - **Szyfrowanie dla dysków z systemami operacyjnymi** — wybierz metodę szyfrowania dla dysków z systemami operacyjnymi. Zaleca się użycie algorytmu XTS-AES.
-    - **Szyfrowanie dla stałych dysków danych** — wybierz metodę szyfrowania dla stałych (wbudowanych) dysków danych. Zaleca się użycie algorytmu XTS-AES.
-    - **Szyfrowanie dla wymiennych dysków danych** — wybierz metodę szyfrowania dla wymiennych dysków danych. Jeśli dysk wymienny jest używany z urządzeniami z systemem innym niż Windows 10, zaleca się użycie algorytmu AES-CBC.
+  - **Szyfrowanie dla dysków z systemami operacyjnymi** — wybierz metodę szyfrowania dla dysków z systemami operacyjnymi. Zaleca się użycie algorytmu XTS-AES.
+  - **Szyfrowanie dla stałych dysków danych** — wybierz metodę szyfrowania dla stałych (wbudowanych) dysków danych. Zaleca się użycie algorytmu XTS-AES.
+  - **Szyfrowanie dla wymiennych dysków danych** — wybierz metodę szyfrowania dla wymiennych dysków danych. Jeśli dysk wymienny jest używany z urządzeniami z systemem innym niż Windows 10, zaleca się użycie algorytmu AES-CBC.
 
 ### <a name="bitlocker-os-drive-settings"></a>Ustawienia funkcji BitLocker dla dysku z systemem operacyjnym
 
 Te ustawienia dotyczą w szczególności dysków danych systemu operacyjnego.
 
 - **Dodatkowe uwierzytelnianie podczas uruchamiania** — skonfiguruj wymagania dotyczące uwierzytelniania dla uruchamiania komputera, w tym użycie modułu TPM (Trusted Platform Module).
-    - **Funkcja BitLocker z niezgodnym mikroukładem modułu TPM**
-    - **Uruchomienie zgodnego modułu TPM** — pozwala określić, czy mikroukład TPM jest dozwolony, niedozwolony czy wymagany.
-    - **Numer PIN uruchomienia zgodnego modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
-    - **Klucz uruchomienia zgodnego modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
-    - **Klucz uruchomienia i numer PIN zgodnego modułu TPM** — pozwala określić, czy użycie klucza uruchomienia i numeru PIN dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
+  - **Funkcja BitLocker z niezgodnym mikroukładem modułu TPM**
+  - **Uruchomienie zgodnego modułu TPM** — pozwala określić, czy mikroukład TPM jest dozwolony, niedozwolony czy wymagany.
+  - **Numer PIN uruchomienia zgodnego modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
+  - **Klucz uruchomienia zgodnego modułu TPM** — pozwala określić, czy użycie numeru PIN uruchomienia dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
+  - **Klucz uruchomienia i numer PIN zgodnego modułu TPM** — pozwala określić, czy użycie klucza uruchomienia i numeru PIN dla mikroukładu TPM ma być dozwolone, niedozwolone czy wymagane.
 - **Minimalna długość numeru PIN** — włącz to ustawienie, aby skonfigurować minimalną długość numeru PIN uruchomienia modułu TPM.
-    - **Minimalna liczba znaków** — wprowadź liczbę znaków wymaganą dla numeru PIN uruchomienia z przedziału **4**-**20** znaków.
+  - **Minimalna liczba znaków** — wprowadź liczbę znaków wymaganą dla numeru PIN uruchomienia z przedziału **4**-**20** znaków.
 - **Odzyskiwanie dysku systemu operacyjnego** — włącz to ustawienie, aby określić sposób odzyskiwania dysków z systemem operacyjnym chronionych przez funkcję BitLocker, jeśli wymagane informacje dotyczące uruchamiania nie są dostępne.
-    - **Agent odzyskiwania danych oparty na certyfikatach** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków z systemem operacyjnym chronionych przez funkcję BitLocker.
-    - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
-    - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
-    - **Opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
-    - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — umożliwia zapisywanie informacji odzyskiwania funkcji BitLocker w usłudze Active Directory.
-    - **Informacje dotyczące odzyskiwania funkcji BitLocker przechowywane w usługach AD DS** — pozwala określić, które części informacji odzyskiwania funkcji BitLocker są zapisywane w usłudze Active Directory. Wybierz spośród opcji:
-        - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**
-        - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**
-    - **Przechowuj informacje dotyczące odzyskiwania w usługach AD DS przed włączeniem funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom włączenie funkcji BitLocker, chyba że urządzenie jest przyłączone do domeny, a informacje odzyskiwania funkcji BitLocker zostały pomyślnie zapisane w usłudze Active Directory.
+  - **Agent odzyskiwania danych oparty na certyfikatach** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków z systemem operacyjnym chronionych przez funkcję BitLocker.
+  - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
+  - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
+  - **Opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
+  - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — umożliwia zapisywanie informacji odzyskiwania funkcji BitLocker w usłudze Active Directory.
+  - **Informacje dotyczące odzyskiwania funkcji BitLocker przechowywane w usługach AD DS** — pozwala określić, które części informacji odzyskiwania funkcji BitLocker są zapisywane w usłudze Active Directory. Wybierz spośród opcji:
+    - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**
+    - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**
+  - **Przechowuj informacje dotyczące odzyskiwania w usługach AD DS przed włączeniem funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom włączenie funkcji BitLocker, chyba że urządzenie jest przyłączone do domeny, a informacje odzyskiwania funkcji BitLocker zostały pomyślnie zapisane w usłudze Active Directory.
 - **Komunikat odzyskiwania i adres URL przed rozruchem** — włącz to ustawienie, aby skonfigurować komunikat i adres URL wyświetlane na ekranie odzyskiwania kluczy przed rozruchem.
-    - **Komunikat odzyskiwania przed rozruchem** — pozwala określić sposób wyświetlania użytkownikom komunikatu odzyskiwania przed rozruchem. Wybierz spośród opcji:
-        - **Użyj domyślnego komunikatu i adresu URL dotyczącego odzyskiwania**
-        - **Użyj pustego komunikatu i adresu URL dotyczącego odzyskiwania**
-        - **Użyj niestandardowego komunikatu dotyczącego odzyskiwania**
-        - **Użyj niestandardowego adresu URL odzyskiwania**
-
+  - **Komunikat odzyskiwania przed rozruchem** — pozwala określić sposób wyświetlania użytkownikom komunikatu odzyskiwania przed rozruchem. Wybierz spośród opcji:
+    - **Użyj domyślnego komunikatu i adresu URL dotyczącego odzyskiwania**
+    - **Użyj pustego komunikatu i adresu URL dotyczącego odzyskiwania**
+    - **Użyj niestandardowego komunikatu dotyczącego odzyskiwania**
+    - **Użyj niestandardowego adresu URL odzyskiwania**
 
 ### <a name="bitlocker-fixed-data-drive-settings"></a>Ustawienia stałych dysków danych w funkcji BitLocker
 
 - **Dostęp do zapisu dla stałych dysków danych, które nie są chronione przez funkcję BitLocker** — jeśli to ustawienie jest włączone, ochrona za pomocą funkcji BitLocker musi być włączona na wszystkich stałych lub wbudowanych dyskach danych, aby możliwy był na nich zapis.
 - **Odzyskiwanie dysku stałego** — włącz to ustawienie, aby określić sposób odzyskiwania dysków stałych chronionych przez funkcję BitLocker, jeśli wymagane informacje dotyczące uruchamiania nie są dostępne.
-    - **Agent odzyskiwania danych** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków stałych chronionych przez funkcję BitLocker.
-    - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.  
-    - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
-    - **Opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
-    - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — umożliwia zapisywanie informacji odzyskiwania funkcji BitLocker w usłudze Active Directory.
-    - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — pozwala określić, które części informacji odzyskiwania funkcji BitLocker są zapisywane w usłudze Active Directory. Wybierz spośród opcji:
-        - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**
-        - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**
-    - **Przechowuj informacje dotyczące odzyskiwania w usługach AD DS przed włączeniem funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom włączenie funkcji BitLocker, chyba że urządzenie jest przyłączone do domeny, a informacje odzyskiwania funkcji BitLocker zostały pomyślnie zapisane w usłudze Active Directory.
+  - **Agent odzyskiwania danych** — Włącz to ustawienie, aby możliwe było używanie agentów odzyskiwania danych względem dysków stałych chronionych przez funkcję BitLocker.
+  - **Tworzenie hasła odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 48-cyfrowego hasła odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.  
+  - **Tworzenie klucza odzyskiwania przez użytkownika** — pozwala określić, czy wygenerowanie przez użytkowników 256-bitowego klucza odzyskiwania ma być dozwolone, wymagane, czy niedozwolone.
+  - **Opcje odzyskiwania w kreatorze konfiguracji funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom wyświetlanie lub zmianę opcji odzyskiwania po włączeniu funkcji BitLocker.
+  - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — umożliwia zapisywanie informacji odzyskiwania funkcji BitLocker w usłudze Active Directory.
+  - **Zapisz informacje o odzyskiwaniu funkcji BitLocker w usługach AD DS** — pozwala określić, które części informacji odzyskiwania funkcji BitLocker są zapisywane w usłudze Active Directory. Wybierz spośród opcji:
+    - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**
+    - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**
+  - **Przechowuj informacje dotyczące odzyskiwania w usługach AD DS przed włączeniem funkcji BitLocker** — włącz to ustawienie, aby uniemożliwić użytkownikom włączenie funkcji BitLocker, chyba że urządzenie jest przyłączone do domeny, a informacje odzyskiwania funkcji BitLocker zostały pomyślnie zapisane w usłudze Active Directory.
 
 ### <a name="bitlocker-removable-data-drive-settings"></a>Ustawienia wymiennych dysków danych w funkcji BitLocker
 
@@ -173,6 +156,8 @@ Te ustawienia dotyczą w szczególności dysków danych systemu operacyjnego.
 Usługa [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) służy do zarządzania obszarem ataków i zmniejszania obszaru ataków w aplikacjach używanych przez pracowników.
 
 ### <a name="attack-surface-reduction"></a>Zmniejszenie obszaru ataków
+
+- **Flaguj kradzież poświadczeń z podsystemu lokalnego uwierzytelniania zabezpieczeń systemu Windows**
 
 Ułatwia [blokowanie akcji i aplikacji](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) zwykle używanych przez złośliwe oprogramowanie wyszukujące luki w zabezpieczeniach do infekowania maszyn.
 
@@ -187,16 +172,25 @@ Zablokuj aplikacjom pakietu Office możliwość wykonywania następujących akcj
 
 #### <a name="rules-to-prevent-script-threats"></a>Reguły zapobiegania zagrożeniom ze strony skryptów
 
-Blokowanie tych elementów pomaga zapobiegać zagrożeniom ze strony skryptów:
+Blokowanie następujących elementów pomaga zapobiegać zagrożeniom ze strony skryptów:
 
 - **Zaciemniony kod w plikach js/vbs/ps i makrach**
 - **Wykonywanie ładunku pobranego z Internetu przez pliki js/vbs (bez wyjątków)**
+- **Tworzenie procesów za pomocą poleceń narzędzia PSExec i usługi WMI**
+- **Niezaufane i niepodpisane procesy uruchamiane z dysku USB**
+- **Pliki wykonywalne, które nie spełniają kryteriów występowania lub wieku albo nie są na liście zaufanych**
 
 #### <a name="rules-to-prevent-email-threats"></a>Reguły zapobiegania zagrożeniom ze strony poczty e-mail
 
-Blokowanie tych elementów pomaga zapobiegać zagrożeniom ze strony poczty e-mail:
+Zablokowanie następujących elementów ułatwia zapobieganie zagrożeniom związanym z pocztą e-mail:
 
 - **Wykonywanie zawartości wykonywalnej (exe, dll, ps, js, vbs itd.) pochodzącej z wiadomości e-mail (poczty internetowej lub klienta poczty) (bez wyjątków)**
+
+#### <a name="rules-to-protect-against-ransomware"></a>Reguły ochrony przed oprogramowaniem wymuszającym okup
+- **Zaawansowana ochrona przed oprogramowaniem wymuszającym okup**
+
+> [!TIP]
+> Artykuł [Reduce attack surfaces with Windows Defender Exploit Guard (Zmniejszanie obszarów podatnych na ataki za pomocą funkcji Windows Defender Exploit Guard)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) zawiera więcej szczegółowych informacji dotyczących tych reguł.
 
 #### <a name="attack-surface-reduction-exceptions"></a>Wyjątki zmniejszenia obszaru ataków
 
@@ -236,7 +230,7 @@ Aplikacja usługi Windows Defender Security Center działa jako osobna aplikacja
 
 #### <a name="windows-defender-security-center-app-and-notifications"></a>Aplikacja i powiadomienia usługi Windows Defender Security Center
 
-Zablokuj dostęp użytkowników do różnych obszarów aplikacji usługi Windows Defender Security Center. Ukrywanie sekcji spowoduje również blokowanie pokrewnych powiadomień.
+Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Windows Defender Security Center. Ukrywanie sekcji spowoduje również blokowanie pokrewnych powiadomień.
 
 - **Ochrona przed wirusami i zagrożeniami**
 - **Wydajność i kondycja urządzenia**
@@ -255,4 +249,4 @@ Podaj informacje kontaktowe działu IT do wyświetlania w aplikacji Windows Defe
 
 ## <a name="next-steps"></a>Następne kroki
 
-Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
+Aby przypisać ten profil do grup, zobacz [Jak przypisywać profile urządzeń](device-profile-assign.md).

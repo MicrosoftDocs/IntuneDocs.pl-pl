@@ -1,29 +1,29 @@
 ---
-title: "Jak przypisywać aplikacje do grup w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Po dodaniu aplikacji do usługi Microsoft Intune należy przypisać ją do grup użytkowników lub urządzeń."
-keywords: 
+title: Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
+titlesuffix: ''
+description: Po dodaniu aplikacji do usługi Microsoft Intune należy przypisać ją do grup użytkowników lub urządzeń.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eba329be463fbf0593638bd4cf41c404a17f9cc0
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: de95f5516298e8ade9e394fab8b05fc056651b0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać użytkownikom i urządzeniom.
 
@@ -49,28 +49,28 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 ## <a name="how-to-assign-an-app"></a>Jak przypisać aplikację
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
+2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-1. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
-2. W bloku listy aplikacji kliknij aplikację, którą chcesz przypisać.
-3. W bloku **Omówienie** specyficznym dla aplikacji wybierz pozycję **Przypisania** w sekcji **Zarządzaj**.
-4. Wybierz pozycję **Dodaj grupę**, aby wyświetlić blok **Dodawanie grupy** powiązany z aplikacją.
-5. Dla określonej aplikacji wybierz **typ przypisania** z następujących:
-    - **Dostępne dla zarejestrowanych urządzeń** — użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
-    - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Należy pamiętać, że typ **Aplikacja programu Android for Work** nie obsługuje tej opcji. 
-    - **Wymagane** — aplikacja jest instalowana na urządzeniach w wybranych grupach.
-    - **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
+4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
+5. W bloku listy aplikacji kliknij aplikację, którą chcesz przypisać.
+6. W bloku **Omówienie** specyficznym dla aplikacji wybierz pozycję **Przypisania** w sekcji **Zarządzaj**.
+7. Wybierz pozycję **Dodaj grupę**, aby wyświetlić blok **Dodawanie grupy** powiązany z aplikacją.
+8. Dla określonej aplikacji wybierz **typ przypisania** z następujących:
+   - **Dostępne dla zarejestrowanych urządzeń** — użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
+   - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Należy pamiętać, że typ **Aplikacja programu Android for Work** nie obsługuje tej opcji. 
+   - **Wymagane** — aplikacja jest instalowana na urządzeniach w wybranych grupach.
+   - **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
 
-    > [!NOTE]
-    > **Tylko dla aplikacji systemu iOS** — jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można go wybrać w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
+     > [!NOTE]
+     > **Tylko dla aplikacji systemu iOS** — jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można go wybrać w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
 
-6. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupy użytkowników, na które będzie mieć wpływ to przypisanie aplikacji.
-7. Po wybraniu co najmniej jednej grupy do uwzględnienia kliknij pozycję **Wybierz**.
-8. Kliknij przycisk **OK** w bloku **Przypisanie**, aby ukończyć wybieranie uwzględnionych grup.
-9. Kliknij pozycję **Wykluczenie grup**, jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji.
-10. Jeśli chcesz wykluczyć wszystkie grupy, kliknij pozycję **Wybierz** w bloku **Wybierz grupy**.
-11. Kliknij przycisk **OK** w bloku **Dodaj grupę**.
-12. Kliknij pozycję **Zapisz** w bloku **Przypisania** aplikacji, aby zapisać swoje przypisania.
+9. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupy użytkowników, na które będzie mieć wpływ to przypisanie aplikacji.
+10. Po wybraniu co najmniej jednej grupy do uwzględnienia kliknij pozycję **Wybierz**.
+11. Kliknij przycisk **OK** w bloku **Przypisanie**, aby ukończyć wybieranie uwzględnionych grup.
+12. Kliknij pozycję **Wykluczenie grup**, jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji.
+13. Jeśli chcesz wykluczyć wszystkie grupy, kliknij pozycję **Wybierz** w bloku **Wybierz grupy**.
+14. Kliknij przycisk **OK** w bloku **Dodaj grupę**.
+15. Kliknij pozycję **Zapisz** w bloku **Przypisania** aplikacji, aby zapisać swoje przypisania.
 
 Aplikacja jest teraz przypisana do wybranych grup. Aby uzyskać więcej informacji o dołączaniu i wykluczaniu przypisań aplikacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji](apps-inc-exl-assignments.md).
 

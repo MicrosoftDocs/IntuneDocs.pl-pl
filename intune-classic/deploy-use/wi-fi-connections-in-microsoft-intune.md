@@ -1,35 +1,35 @@
 ---
-title: "Połączenia Wi-Fi"
-description: "Aby ułatwić użytkownikom nawiązywanie połączeń z sieciami Wi-Fi, użyj profilów sieci Wi-Fi."
-keywords: 
+title: Połączenia Wi-Fi
+description: Aby ułatwić użytkownikom nawiązywanie połączeń z sieciami Wi-Fi, użyj profilów sieci Wi-Fi.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 99ac426d2210aa22a7c0151aea59e14b848bbe1f
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 5eebe251371d466421bfe936a1f991c988e490b0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurowanie urządzeń do łączenia się z firmową siecią Wi-Fi
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Aby wdrożyć ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profilu sieci Wi-Fi usługi Microsoft Intune. W przypadku wdrożenia profilu sieci Wi-Fi użytkownicy mają dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego jej konfigurowania.
 
 Załóżmy, że zainstalowano nową sieć Wi-Fi o nazwie **Sieć Wi-Fi firmy Contoso** i chcesz skonfigurować wszystkie urządzenia z systemem iOS do łączenia się z tą siecią. Oto proces:
 
-![Podsumowanie procesu profilu sieci Wi-Fi](..\media\wi-fi-process-diagram.png)
+![Podsumowanie procesu profilu sieci Wi-Fi](../media/wi-fi-process-diagram.png)
 
 1.   Utwórz profil sieci Wi-Fi zawierający ustawienia wymagane do łączenia się z siecią bezprzewodową **Sieć Wi-Fi firmy Contoso**.
 
@@ -67,23 +67,25 @@ W przypadku urządzeń z systemami operacyjnymi Windows 8.1 oraz Windows 10 (na 
 
 Nie ma żadnych zalecanych ustawień dla tego typu zasad. Należy utworzyć zasady niestandardowe.
 
-3.  Podaj nazwę i opis profilu.
+3. Podaj nazwę i opis profilu.
 
 4. Określ wartości w obszarze **Połączenia sieciowe**.
- - **Identyfikator zestawu usług (SSID)**: wybierz tę opcję, jeśli użytkownicy mają widzieć nazwę sieci, a nie identyfikator SSID.
- - **Połącz, gdy sieć nie rozgłasza swojej nazwy (SSID)**: wybierz tę opcję, aby umożliwić urządzeniom łączenie się z siecią, gdy nie jest ona widoczna na liście sieci (ponieważ jest ukryta i nie rozgłasza swojej nazwy).
+   - **Identyfikator zestawu usług (SSID)**: wybierz tę opcję, jeśli użytkownicy mają widzieć nazwę sieci, a nie identyfikator SSID.
+   - **Połącz, gdy sieć nie rozgłasza swojej nazwy (SSID)**: wybierz tę opcję, aby umożliwić urządzeniom łączenie się z siecią, gdy nie jest ona widoczna na liście sieci (ponieważ jest ukryta i nie rozgłasza swojej nazwy).
 
 5. Skonfiguruj opcje w obszarze **Ustawienia zabezpieczeń** dla wybranej platformy. Dostępne ustawienia zależą od wybranych typów zabezpieczeń. Opisano je w części [Ustawienia zabezpieczeń](#security-settings).
 
 6. Skonfiguruj **ustawienia serwera proxy** (dotyczy tylko systemów iOS i MAC OS X).
 
-    |Nazwa ustawienia|Więcej informacji|Kiedy używać|
-    |----------------|-------------------|-------------|
-    |**Ustawienia serwera proxy dla tego połączenia Wi-Fi**|Wybierz typ ustawień serwera proxy:<br /><br />-   **Brak** (domyślnie)<br />-   **Ręczne** — ręcznie podaj adres URL i numer portu serwera proxy.<br />-   **Automatyczne** — skonfiguruj serwer proxy przy użyciu pliku konfiguracji.|Zawsze|
-    |**Adres serwera proxy** i **Numer portu**|Podaj adres URL i numer portu serwera proxy.|Jeśli opcja **Ustawienia serwera proxy dla tego połączenia Wi-Fi** ma wartość **Ręczne**|
-    |**Adres URL serwera proxy**|Podaj adres URL pliku zawierającego ustawienia serwera proxy.|Jeśli opcja **Ustawienia serwera proxy dla tego połączenia Wi-Fi** ma wartość **Automatyczne**|
 
-7.  Zapisywanie profilu sieci Wi-Fi
+   |                              Nazwa ustawienia                              |                                                                                                                                Więcej informacji                                                                                                                                 |                                            Kiedy używać                                            |
+   |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+   |       <strong>Ustawienia serwera proxy dla tego połączenia Wi-Fi</strong>        | Wybierz typ ustawień serwera proxy:<br /><br />-   <strong>Brak</strong> (domyślnie)<br />-   <strong>Ręczne</strong> — ręcznie podaj adres URL i numer portu serwera proxy.<br />-   <strong>Automatyczne</strong> — skonfiguruj serwer proxy przy użyciu pliku konfiguracji. |                                              Zawsze                                               |
+   | <strong>Adres serwera proxy</strong> i <strong>Numer portu</strong> |                                                                                                              Podaj adres URL i numer portu serwera proxy.                                                                                                               |  Jeśli opcja <strong>Ustawienia serwera proxy dla tego połączenia Wi-Fi</strong> ma wartość <strong>Ręczne</strong>   |
+   |                   <strong>Adres URL serwera proxy</strong>                    |                                                                                                      Podaj adres URL pliku zawierającego ustawienia serwera proxy.                                                                                                       | Jeśli opcja <strong>Ustawienia serwera proxy dla tego połączenia Wi-Fi</strong> ma wartość <strong>Automatyczne</strong> |
+
+
+7. Zapisywanie profilu sieci Wi-Fi
 
 Nowe zasady są wyświetlane w węźle **Zasady konfiguracji** w obszarze roboczym **Zasady**. Informacje o wdrażaniu usługi można znaleźć w temacie **Następne kroki**.
 
@@ -177,5 +179,5 @@ Te tabele zawierają szczegółowe informacje dotyczące ustawień zabezpieczeń
 |**Włącz prywatność tożsamości (tożsamość zewnętrzna)**|Podaj tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość.<br /><br />Podczas uwierzytelniania początkowo jest wysyłana tożsamość anonimowa. Następnie za pośrednictwem bezpiecznego tunelu jest wysyłana tożsamość rzeczywista.|Jeśli dla ustawienia **Typ protokołu EAP** wybrano wartość **PEAP**, **EAP-TTLS** lub **EAP-FAST**.|
 
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 Dowiedz się, jak utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego — zobacz temat [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego](pre-shared-key-wi-fi-profile.md).

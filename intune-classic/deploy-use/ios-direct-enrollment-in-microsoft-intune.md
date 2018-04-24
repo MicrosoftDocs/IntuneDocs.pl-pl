@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 79f720af293b6062e140fac9341f97a55bf598fe
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c4c98c6b279ecc99d2220a7e5071a1f92af1ea8b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Bezpośrednie rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune obsługuje rejestrowanie firmowych urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) działającego na komputerze Mac. Ten proces nie powoduje przywrócenia ustawień fabrycznych urządzenia i powoduje zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda jest przeznaczona dla urządzeń, których przynależność do użytkowników została ustawiona na wartość **Brak koligacji użytkownika** i wymaga podłączenia urządzenia z systemem iOS do komputera Mac przy użyciu połączenia USB w celu skonfigurowania rejestracji firmowej.
 
@@ -32,62 +32,63 @@ W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS możesz zare
 >[!NOTE]
 >Tej metody rejestracji nie można używać z metodą korzystającą z [menedżera rejestracji urządzeń](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-1.  Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator. Profil rejestracji urządzeń określa ustawienia stosowane do urządzeń.
+1. Jeśli jeszcze tego nie zrobiono, utwórz profil rejestracji dla urządzeń z systemem iOS rejestrowanych przy użyciu programu Apple Configurator. Profil rejestracji urządzeń określa ustawienia stosowane do urządzeń.
 
-    1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
+   1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Zasady** &gt; **Rejestracja urządzeń firmowych**, a następnie wybierz pozycję **Dodaj**.
 
-        ![Tworzenie strony profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
+      ![Tworzenie strony profilu rejestracji urządzenia](../media/pol-sa-corp-enroll.png)
 
-    2.  Wprowadź szczegóły profilów urządzeń:
+   2. Wprowadź szczegóły profilów urządzeń:
 
-        -   **Nazwa**: nazwa profilu rejestracji urządzeń. Niewidoczne dla użytkowników.
+      - **Nazwa**: nazwa profilu rejestracji urządzeń. Niewidoczne dla użytkowników.
 
-        -   **Opis**: opis profilu rejestracji urządzeń. Niewidoczne dla użytkowników.
+      - **Opis**: opis profilu rejestracji urządzeń. Niewidoczne dla użytkowników.
 
-        -   **Przynależność do użytkownika**: określa sposób rejestracji urządzeń. W celu bezpośredniej rejestracji wybierz pozycję **Brak koligacji użytkownika**.
+      - **Przynależność do użytkownika**: określa sposób rejestracji urządzeń. W celu bezpośredniej rejestracji wybierz pozycję **Brak koligacji użytkownika**.
 
-        -   **Wstępne przypisanie do grupy urządzeń**: wszystkie urządzenia, które mają ten profil, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
+      - **Wstępne przypisanie do grupy urządzeń**: wszystkie urządzenia, które mają ten profil, będą początkowo należeć do tej grupy. Po rejestracji można ponownie przypisać urządzenia.
 
-            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
+        [!INCLUDE [groups deprecated](../includes/group-deprecation.md)]
 
-    3.  Wybierz pozycję **Zapisz profil**, aby dodać profil.
 
-5.  Eksportowanie profilu jako pliku mobileconfig do wdrożenia na urządzeniach z systemem iOS:
+   3. Wybierz pozycję **Zapisz profil**, aby dodać profil.
 
-    1.   Wybierz utworzony profil urządzenia.
+2. Eksportowanie profilu jako pliku mobileconfig do wdrożenia na urządzeniach z systemem iOS:
 
-    2.   Na pasku zadań kliknij przycisk **Eksportuj**.
+   1.   Wybierz utworzony profil urządzenia.
 
-    3.   Wybierz pozycję **Pobierz profil** i zapisz pobrany plik mobileconfig.
+   2.   Na pasku zadań kliknij przycisk **Eksportuj**.
 
-6.  Przetransferuj plik, kopiując pobrany plik mobileconfig na komputer Mac.
-    > [!NOTE]
-    > Adres URL profilu rejestracji jest ważny przez dwa tygodnie od momentu jego wyeksportowania. Po dwóch tygodniach należy wyeksportować nowy adres URL profilu rejestracji, aby zarejestrować urządzenia z systemem iOS przy użyciu Asystenta ustawień.
+   3.   Wybierz pozycję **Pobierz profil** i zapisz pobrany plik mobileconfig.
 
-7.  Przygotuj urządzenie przy użyciu programu Apple Configurator. Urządzenia z systemem iOS są podłączane do komputera Mac i rejestrowane w usłudze zarządzania urządzeniami przenośnymi.
+3. Przetransferuj plik, kopiując pobrany plik mobileconfig na komputer Mac.
+   > [!NOTE]
+   > Adres URL profilu rejestracji jest ważny przez dwa tygodnie od momentu jego wyeksportowania. Po dwóch tygodniach należy wyeksportować nowy adres URL profilu rejestracji, aby zarejestrować urządzenia z systemem iOS przy użyciu Asystenta ustawień.
 
-    1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2.0**.
+4. Przygotuj urządzenie przy użyciu programu Apple Configurator. Urządzenia z systemem iOS są podłączane do komputera Mac i rejestrowane w usłudze zarządzania urządzeniami przenośnymi.
 
-    2.  Podłącz urządzenia z systemem iOS do komputera Mac przy użyciu kabla USB. Zamknij aplikacje **Photos** (Zdjęcia), **iTunes** i inne aplikacje otwarte na urządzeniu po jego wykryciu.
+   1.  Na komputerze Mac otwórz narzędzie **Apple Configurator 2.0**.
 
-    3.  W programie Apple Configurator wybierz podłączone urządzenie z systemem iOS, a następnie wybierz przycisk **Add** (Dodaj). Opcje, które można dodać do urządzenia, są wyświetlane na liście rozwijanej. Wybierz pozycję **Profiles** (Profile).
+   2.  Podłącz urządzenia z systemem iOS do komputera Mac przy użyciu kabla USB. Zamknij aplikacje **Photos** (Zdjęcia), **iTunes** i inne aplikacje otwarte na urządzeniu po jego wykryciu.
 
-    4.  Użyj selektora plików w celu wybrania pliku mobileconfig wyeksportowanego za pomocą usługi Intune, a następnie wybierz pozycję **Add** (Dodaj). Profil zostanie dodany do urządzenia.  Jeśli urządzenie jest **nienadzorowane**, instalacja będzie wymagać akceptacji na urządzeniu.
+   3.  W programie Apple Configurator wybierz podłączone urządzenie z systemem iOS, a następnie wybierz przycisk **Add** (Dodaj). Opcje, które można dodać do urządzenia, są wyświetlane na liście rozwijanej. Wybierz pozycję **Profiles** (Profile).
 
-8.  Wszystko jest gotowe do zainstalowania profilu na urządzeniu z systemem iOS. Na urządzeniu musi zostać zakończona praca Asystenta ustawień i musi być one gotowe do użycia. Jeśli rejestracja wiąże się z wdrożeniami aplikacji, urządzenie powinno mieć ustawiony identyfikator firmy Apple, ponieważ wdrożenia aplikacji będą wymagać posiadania identyfikatora Apple ID powiązanego ze sklepem App Store.
+   4.  Użyj selektora plików w celu wybrania pliku mobileconfig wyeksportowanego za pomocą usługi Intune, a następnie wybierz pozycję **Add** (Dodaj). Profil zostanie dodany do urządzenia.  Jeśli urządzenie jest **nienadzorowane**, instalacja będzie wymagać akceptacji na urządzeniu.
 
-    1.  Odblokuj urządzenie z systemem iOS.
+5. Wszystko jest gotowe do zainstalowania profilu na urządzeniu z systemem iOS. Na urządzeniu musi zostać zakończona praca Asystenta ustawień i musi być one gotowe do użycia. Jeśli rejestracja wiąże się z wdrożeniami aplikacji, urządzenie powinno mieć ustawiony identyfikator firmy Apple, ponieważ wdrożenia aplikacji będą wymagać posiadania identyfikatora Apple ID powiązanego ze sklepem App Store.
 
-    2.  W oknie dialogowym **Instalacja profilu** dla pola **Profil zarządzania** wybierz pozycję **Zainstaluj**.
+   1.  Odblokuj urządzenie z systemem iOS.
 
-    3.  Podaj **kod dostępu urządzenia** lub **identyfikator Apple ID**, jeśli jest to wymagane.
+   2.  W oknie dialogowym **Instalacja profilu** dla pola **Profil zarządzania** wybierz pozycję **Zainstaluj**.
 
-    4.  Zaakceptuj **ostrzeżenie** i wybierz pozycję **Zainstaluj**.
+   3.  Podaj **kod dostępu urządzenia** lub **identyfikator Apple ID**, jeśli jest to wymagane.
 
-    5.  Zaakceptuj **ostrzeżenie zdalne** i wybierz pozycję **Ufaj**.
+   4.  Zaakceptuj **ostrzeżenie** i wybierz pozycję **Zainstaluj**.
 
-    6.  Wyświetlenie okna dialogowego **Profil został zainstalowany** oznacza, że profil został **zainstalowany**. Wybierz pozycję **Gotowe**.
+   5.  Zaakceptuj **ostrzeżenie zdalne** i wybierz pozycję **Ufaj**.
 
-9.  Na urządzeniu z systemem iOS otwórz obszar **Ustawienia** i wybierz pozycję **Ogólne** &gt; **Zarządzanie urządzeniem** &gt; **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
+   6.  Wyświetlenie okna dialogowego **Profil został zainstalowany** oznacza, że profil został **zainstalowany**. Wybierz pozycję **Gotowe**.
 
-10.  Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
+6. Na urządzeniu z systemem iOS otwórz obszar **Ustawienia** i wybierz pozycję **Ogólne** &gt; **Zarządzanie urządzeniem** &gt; **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
+
+7. Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.

@@ -1,27 +1,27 @@
 ---
-title: "Ustawienia poczty e-mail w usłudze Intune dla systemu Windows Phone 8.1"
-titleSuffix: 
-description: "Dowiedz się więcej na temat ustawień usługi Intune służących do konfigurowania połączeń z pocztą e-mail na urządzeniach z systemem Windows Phone 8.1."
-keywords: 
+title: Ustawienia poczty e-mail w usłudze Intune dla systemu Windows Phone 8.1
+titleSuffix: ''
+description: Dowiedz się więcej na temat ustawień usługi Intune służących do konfigurowania połączeń z pocztą e-mail na urządzeniach z systemem Windows Phone 8.1.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 06815ac6ed6e24bc1efb4ea612b867fc78e7fb5e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: a8d0ce028fbfa214240ce7973a2a0699a8c88a6a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Ustawienia profilu poczty e-mail w usłudze Microsoft Intune dla urządzeń z systemem Windows Phone 8.1
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W tym artykule opisano ustawienia profilu poczty e-mail, które możesz skonfigurować dla urządzeń z systemem Windows Phone 8.1.
 

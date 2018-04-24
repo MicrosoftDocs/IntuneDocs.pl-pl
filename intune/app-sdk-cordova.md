@@ -14,11 +14,11 @@ ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 84ff217361108ac3518567f31af8943d0b3032fe
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: d32c024d6cd526062c373b56dd18bca9480c32fa
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Wtyczka Cordova zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -72,16 +72,16 @@ Aplikacje Cordova skompilowane za pomocą wtyczki Cordova zestawu SDK aplikacji 
 
 1. Zaktualizuj wersję bibliotek ADAL:
 
-  ```shell
-  cordova plugin remove cordova-plugin-ms-adal
-  cordova plugin add cordova-plugin-ms-adal@0.8.x
-  ```
+   ```shell
+   cordova plugin remove cordova-plugin-ms-adal
+   cordova plugin add cordova-plugin-ms-adal@0.8.x
+   ```
 
 2. Dodaj zestaw SDK aplikacji usługi Intune dla wtyczki Cordova:
 
-  ```shell
-  cordova plugin add cordova-plugin-ms-intune-mam
-  ```
+   ```shell
+   cordova plugin add cordova-plugin-ms-intune-mam
+   ```
 
 ## <a name="build-the-plugin-into-your-ios-app"></a>Dołączanie wtyczki do aplikacji systemu iOS
 
@@ -131,7 +131,7 @@ Przy pierwszym uruchomieniu aplikacji powinno pojawić się okno dialogowe z inf
 * Obsługa klasy MultiDex jest niepełna.
 * Wartość `minSdkVersion` musi wynosić 14, a wartość `targetSdkVersion` 24 lub mniej. Obecnie usługa Intune nie obsługuje aplikacji interfejsu API 25
 * Usługa Intune nie może ponownie podpisać aplikacji, które zostały podpisane przy użyciu schematu podpisu V2. Jeśli aplikacje podpisane przy użyciu schematu podpisu V2 zostaną opakowane przy użyciu wtyczki, podpis opakowanego wyjściowego pliku apk zostanie cofnięty.
-*
+  *
   * Można wyłączyć domyślne podpisywanie przy użyciu schematu V2 aplikacji Cordova przez dodanie do pliku `build-extras.gradle`:
 
   ```gradle

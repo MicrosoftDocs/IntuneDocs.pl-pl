@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d6230fbc50ae79702cfd938f158d2961b5d720c9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 51da197b9b805fbac22b6a46453617b7703a37e8
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-intune-certificate-profiles"></a>Konfigurowanie profilów certyfikatów usługi Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Po skonfigurowaniu infrastruktury oraz certyfikatów zgodnie z opisem w sekcji [Konfigurowanie infrastruktury certyfikatów dla profilu SCEP](configure-certificate-infrastructure-for-scep.md) lub [Konfigurowanie infrastruktury certyfikatów dla profilu PFX](configure-certificate-infrastructure-for-pfx.md) można utworzyć profile certyfikatów. Oto proces:
 
@@ -92,39 +92,39 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
 
 -  System Windows Phone 8.1 lub nowszy
 
-2.  Dodaj zasady **profilu certyfikatu protokołu SCEP**.
+2. Dodaj zasady **profilu certyfikatu protokołu SCEP**.
 
-    Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+   Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Postępuj zgodnie z instrukcjami na stronie konfiguracji profilu, aby skonfigurować ustawienia profilu certyfikatu SCEP.
-    > [!NOTE]
-    >
-    > W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby wprowadzić niestandardowy format nazwy podmiotu (tylko w profilach systemu iOS).
-    >
-    > Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: `Common Name (CN)` i `Email (E)`. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki:
+3. Postępuj zgodnie z instrukcjami na stronie konfiguracji profilu, aby skonfigurować ustawienia profilu certyfikatu SCEP.
+   > [!NOTE]
+   > 
+   > W obszarze **Format nazwy podmiotu** wybierz opcję **Niestandardowy**, aby wprowadzić niestandardowy format nazwy podmiotu (tylko w profilach systemu iOS).
+   > 
+   > Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: `Common Name (CN)` i `Email (E)`. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki:
+   > 
+   >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+   > 
+   > W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych `CN` i `E` używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) wyświetla listę obsługiwanych ciągów.
 
-    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
-
-    > W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych `CN` i `E` używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) wyświetla listę obsługiwanych ciągów.
-
-4.  Wybierz pozycję **Zapisz zasady**.
+4. Wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady**. Teraz możesz je wdrożyć.
 
 ### <a name="to-create-a-pfx-certificate-profile"></a>Aby utworzyć profil certyfikatu PFX
 
-1.  W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**, a następnie wybierz platformę urządzeń. Certyfikaty PFX są obsługiwane na poniższych platformach urządzeń:
-  - System Android 4 lub nowszy
-  - Program Android for Work
-  - System Windows 10 lub nowszy
-  - System Windows Phone 10 lub nowszy
-  - System iOS 8.0 i nowsze    
+1. W [konsoli administracyjnej usługi Intune](https://manage.microsoft.com) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**, a następnie wybierz platformę urządzeń. Certyfikaty PFX są obsługiwane na poniższych platformach urządzeń:
+   - System Android 4 lub nowszy
+   - Program Android for Work
+   - System Windows 10 lub nowszy
+   - System Windows Phone 10 lub nowszy
+   - System iOS 8.0 i nowsze    
 
 
-2.  Dodaj zasady **profilu certyfikatu PFX**.
-      Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-3.  Wprowadź informacje wymagane w formularzu zasad.
-4.  Wybierz pozycję **Zapisz zasady**.
+2. Dodaj zasady **profilu certyfikatu PFX**.
+     Dowiedz się więcej: [Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+3. Wprowadź informacje wymagane w formularzu zasad.
+4. Wybierz pozycję **Zapisz zasady**.
 
 Nowe zasady zostaną wyświetlone w obszarze roboczym **Zasady**. Teraz możesz je wdrożyć.
 

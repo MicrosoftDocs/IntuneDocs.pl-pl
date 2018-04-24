@@ -1,27 +1,27 @@
 ---
-title: "Rejestrowanie urządzenia z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi za pomocą usługi Intune"
-description: "Dowiedz się, jak zarejestrować urządzenie z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Rejestrowanie urządzenia z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi za pomocą usługi Intune
+description: Dowiedz się, jak zarejestrować urządzenie z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 90b07e1f18ab3cb9c74337e2a3538f186f4ea52a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ff51405ee48851b5a48c4d6142c33bc16ed6218e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Rejestrowanie urządzenia z systemem iOS w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi
 
@@ -40,11 +40,11 @@ Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczno
 
 1. Wybierz pozycję __Enroll with Microsoft account__ (Rejestracja za pomocą konta Microsoft).
 
-  ![Zrzut ekranu ustawień aplikacji Datalert dla użytkowników posiadających konto w usłudze Microsoft Office 365 i subskrypcję usługi Intune: u góry pole numeru telefonu pozwalające zarejestrować urządzenie, u dołu opcja rejestracji przy użyciu konta Microsoft.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
+   ![Zrzut ekranu ustawień aplikacji Datalert dla użytkowników posiadających konto w usłudze Microsoft Office 365 i subskrypcję usługi Intune: u góry pole numeru telefonu pozwalające zarejestrować urządzenie, u dołu opcja rejestracji przy użyciu konta Microsoft.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
 2. Otrzymasz powiadomienie, że aplikacja __„Datalert” chce otworzyć aplikację „Authenticator”__. Wybierz pozycję __Open__ (Otwórz).
 
-  ![Zrzut ekranu przedstawiający wyskakujące okienko z monitem o otwarcie aplikacji Authenticator na żądanie aplikacji Datalert.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
+   ![Zrzut ekranu przedstawiający wyskakujące okienko z monitem o otwarcie aplikacji Authenticator na żądanie aplikacji Datalert.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 
 3. Zaloguj się przy użyciu __służbowego konta Microsoft__. Poczekaj chwilę na zakończenie konfigurowania usługi Datalert. Gdy proces się zakończy się, wybierz opcję __Finish__ (Zakończ).
 
@@ -52,15 +52,15 @@ Po wybraniu odpowiedniej opcji otrzymasz powiadomienie z informacją o konieczno
 
 1. Podaj numer telefonu urządzenia.
 
-  ![Zrzut ekranu aplikacji Datalert z żądaniem podania numeru telefonu.](./media/ios-enroll-12-tem-datalert-phone-number.png)
+   ![Zrzut ekranu aplikacji Datalert z żądaniem podania numeru telefonu.](./media/ios-enroll-12-tem-datalert-phone-number.png)
 
 2. Następnie otrzymasz kod weryfikacyjny za pośrednictwem wiadomości SMS. Wpisz kod i naciśnij przycisk __OK__.
 
-  ![Zrzut ekranu aplikacji Datalert z żądaniem wpisania kodu weryfikacyjnego z wiadomości SMS.](./media/ios-enroll-13-tem-datalert-sms.png)
+   ![Zrzut ekranu aplikacji Datalert z żądaniem wpisania kodu weryfikacyjnego z wiadomości SMS.](./media/ios-enroll-13-tem-datalert-sms.png)
 
 3. Wpisanie kodu weryfikacyjnego stanowi zakończenie procesu instalacji aplikacji Datalert. Po wybraniu opcji __Zakończ__ możesz monitorować użycie danych w aplikacji Datalert.
 
-  ![Zrzut ekranu przedstawiający proces monitorowania dziennego użycia danych w aplikacji Datalert.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
+   ![Zrzut ekranu przedstawiający proces monitorowania dziennego użycia danych w aplikacji Datalert.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
 
 Po zakończeniu rejestracji zobaczysz swoje użycie danych w aplikacji Datalert.
 

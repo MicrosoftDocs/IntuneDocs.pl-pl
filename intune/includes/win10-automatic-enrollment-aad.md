@@ -11,21 +11,21 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
 
 1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) i wybierz pozycję **Azure Active Directory**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-azure-main.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-azure-main.png)
 
 2. Wybierz pozycję **Mobilność (MDM i MAM)**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-mdm.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-mdm.png)
 
 3. Wybierz pozycję **Microsoft Intune**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
 
 4. Skonfiguruj **zakres użytkownika oprogramowania MDM**. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Te urządzenia z systemem Windows 10 mogą zostać automatycznie zarejestrowane w celu zarządzania w usłudze Microsoft Intune.
 
-  - **Brak** — automatyczne rejestrowanie w usłudze zarządzania urządzeniami mobilnymi (MDM) jest wyłączone
-  - **Niektóre** — wybierz **grupy**, które mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
-  - **Wszystkie** — wszyscy użytkownicy mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
+   - **Brak** — automatyczne rejestrowanie w usłudze zarządzania urządzeniami mobilnymi (MDM) jest wyłączone
+   - **Niektóre** — wybierz **grupy**, które mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
+   - **Wszystkie** — wszyscy użytkownicy mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
 
       > [!IMPORTANT]
       > Jeśli dla danej grupy są włączone zarówno **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**, jak i automatyczna rejestracja w zarządzaniu urządzeniami przenośnymi (**Zakres użytkownika oprogramowania MDM**), wówczas włączone jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Gdy użytkownicy w tej grupie dołączają urządzenia osobiste w miejscu pracy, dodawane jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Urządzenia nie są automatycznie rejestrowane przez rozwiązanie zarządzania urządzeniami przenośnymi.

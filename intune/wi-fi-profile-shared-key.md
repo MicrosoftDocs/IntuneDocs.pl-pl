@@ -1,29 +1,33 @@
 ---
-title: "Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego — Microsoft Intune — Azure | Micrososft Docs"
-description: "Użyj profilu niestandardowego, aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego i pobrać przykładowy kod XML dla systemu Android lub Windows albo profile sieci Wi-Fi z użyciem protokołu EAP w usłudze Microsoft Intune"
-keywords: 
+title: Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego — Microsoft Intune — Azure | Micrososft Docs
+description: Użyj profilu niestandardowego, aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego i pobrać przykładowy kod XML dla systemu Android lub Windows albo profile sieci Wi-Fi z użyciem protokołu EAP w usłudze Microsoft Intune
+keywords: ''
 author: mandia
 ms.author: MandiOhlinger
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85543d87ca79fa301ee1e9c242c053c1c34e18c3
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 27ced5debc7eb063be03f4e6a1932425717318af
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Klucze wstępne (PSK) są zazwyczaj używane do uwierzytelniania użytkowników w sieciach Wi-Fi lub bezprzewodowych sieciach LAN. Za pomocą usługi Intune można utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego. Aby utworzyć profil, skorzystaj z funkcji **Niestandardowe profile urządzenia** w usłudze Intune. Ten artykuł zawiera także przykłady sposobu tworzenia profilu sieci Wi-Fi z użyciem protokołu EAP.
+
+> [!IMPORTANT]
+>- Użycie klucza wstępnego w systemie Windows 10 powoduje wystąpienie błędu korygowania w usłudze Intune. W takim przypadku profil sieci Wi-Fi zostanie prawidłowo przypisany do urządzenia i będzie działać zgodnie z oczekiwaniami.
+>- Jeśli eksportujesz profil sieci Wi-Fi, który zawiera klucz wstępny, upewnij się, że plik jest chroniony. Klucz ma postać zwykłego tekstu, więc odpowiedzialność za jego ochronę spoczywa na Tobie.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -46,15 +50,15 @@ Możesz utworzyć profil niestandardowy z użyciem klucza wstępnego dla systemu
 
    d. **OMA-URI**:
 
-    - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-    > Należy pamiętać o kropce na początku.
+     > [!NOTE]
+     > Należy pamiętać o kropce na początku.
 
-    Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład wprowadź `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+     Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład wprowadź `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-  e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Zobacz przykłady w tym artykule. Zaktualizuj każdą wartość w celu dopasowania do ustawień sieci. Wskazówki można znaleźć w sekcji komentarzy w kodzie.
+   e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Zobacz przykłady w tym artykule. Zaktualizuj każdą wartość w celu dopasowania do ustawień sieci. Wskazówki można znaleźć w sekcji komentarzy w kodzie.
 3. Wybierz przycisk **OK**, zapisz, a następnie przypisz zasady.
 
     > [!NOTE]
@@ -203,7 +207,7 @@ Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi, wy
 
 1. Na komputerze, który jest lub niedawno był połączony z siecią bezprzewodową, otwórz folder `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`.
 
-  Najlepiej użyć komputera, który nie łączył się z wieloma sieciami bezprzewodowymi. W przeciwnym razie może być konieczne przeszukanie poszczególnych profilów, aby znaleźć właściwy.
+   Najlepiej użyć komputera, który nie łączył się z wieloma sieciami bezprzewodowymi. W przeciwnym razie może być konieczne przeszukanie poszczególnych profilów, aby znaleźć właściwy.
 
 2. Przeszukaj pliki XML, aby zlokalizować plik z właściwą nazwą.
 3. Po znalezieniu odpowiedniego pliku XML skopiuj i wklej kod XML w polu **Dane** na stronie ustawień OMA-URI.

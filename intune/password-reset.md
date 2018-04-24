@@ -1,22 +1,22 @@
 ---
-title: "Zmniejszenie kosztów pomocy technicznej"
+title: Zmniejszenie kosztów pomocy technicznej
 titlesuffix: Microsoft Intune
-description: "Zmniejszenie kosztów pomocy technicznej za pomocą samoobsługowego resetowania hasła"
-keywords: "Resetowanie hasła przy użyciu samoobsługowego resetowania hasła w usłudze Azure Active Directory"
+description: Zmniejszenie kosztów pomocy technicznej za pomocą samoobsługowego resetowania hasła
+keywords: Resetowanie hasła przy użyciu samoobsługowego resetowania hasła w usłudze Azure Active Directory
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
-ms.openlocfilehash: e2bd79e33080a0cc402d38f45b72ddbe9fd7816b
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ce9cdfa2f1f9414bd0517ff9fe12a5cca64c63cd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Zmniejszenie kosztów pomocy technicznej za pomocą samoobsługowego resetowania hasła
 

@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: f5f413ed050bd5f5620d0e15d5584a7db06eaaff
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 2b59ed38329462ad8d8db604979c8eb725f7973a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Słownik usługi Microsoft Intune
 Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
@@ -39,11 +39,13 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Portal Azure|Nowa konsola usługi Intune. [Dowiedz się więcej](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
+
 |||
 |-|-|
 |„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)|[„Przynieś własne urządzenie”](/intune/device-enrollment). Użytkownicy mogą instalować aplikację Portal firmy usługi Intune na urządzeniach, a następnie rejestrować je, aby uzyskać dostęp do zasobów firmy, takich jak poczta e-mail, aplikacje firmowe, dane firmowe i pomoc techniczna.|
 
 ## <a name="c"></a>C
+
 |||
 |-|-|
 |Profil certyfikatu|Ten typ zasad służy do [uzyskiwania bezpiecznego dostępu do zasobów firmowych](/intune/certificates-configure) przy użyciu certyfikatów podczas korzystania z sieci Wi-Fi, poczty e-mail lub profilów sieci VPN.|
@@ -55,6 +57,7 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Zasady niestandardowe|[Zasad tych należy użyć](/intune/custom-settings-configure) w sytuacji, gdy ogólne zasady konfiguracji nie zawierają wbudowanego ustawiania, które spełnia określone potrzeby. Za pomocą zasad niestandardowych możesz na przykład utworzyć ustawienie przy użyciu innych metod, takich jak program Apple Configurator lub identyfikator URI OMA.|
 
 ## <a name="d"></a>D
+
 |||
 |-|-|
 |wdrażania|Czynność wysyłania aplikacji lub zasad na zarządzane urządzenie lub do zarządzanego użytkownika. Ta czynność jest teraz określana jako *przypisanie*.|
@@ -62,6 +65,7 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Profile urządzeń|[Profile](/intune/device-profile-create), które pozwalają skonfigurować szeroki zakres zabezpieczeń, funkcji i ustawień dostępu na urządzeniach zarządzanych przez użytkownika.|
 
 ## <a name="e"></a>E
+
 |||
 |-|-|
 |Profil e-mail|Za pomocą tych zasad można skonfigurować [ustawienia dostępu do poczty e-mail](/intune/email-settings-configure) na urządzeniach mobilnych, co pozwala zminimalizować liczbę czynności konfiguracyjnych, które musi wykonać użytkownik końcowy.|
@@ -70,21 +74,25 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Zarejestruj|Usługa Microsoft Intune używa [rejestracji](/intune/device-enrollment), która umożliwia zarządzanie urządzeniami i zezwala na nich na dostęp do zasobów.|
 
 ## <a name="f"></a>F
+
 |||
 |-|-|
 |FastTrack|[Usługa firmy Microsoft](https://technet.microsoft.com/library/mt228265.aspx) dla użytkowników usługi Intune ze 150 licencjami w uprawniającym planie. W ramach tej usługi specjaliści firmy Microsoft będą współpracować z użytkownikiem, aby ułatwić szybkie rozpoczęcie korzystania z usługi Intune.|
 
 ## <a name="g"></a>G
+
 |||
 |-|-|
 |Grupy|Grupy pozwalają [logicznie zbierać razem użytkowników lub urządzenia](/intune/groups-get-started). Możesz na przykład utworzyć grupę wszystkich komputerów z systemem Windows. Następnie można przypisać aplikacje i profile do tych grup.|
 
 ## <a name="h"></a>H
+
 |||
 |-|-|
 |Hybrydowe|Konfiguracja, w ramach której możesz zarządzać urządzeniami zarejestrowanymi w usłudze Intune za pomocą konsoli programu System Center Configuration Manager.|
 
 ## <a name="i"></a>I
+
 |||
 |-|-|
 |Witryna Azure Portal|Witryna Azure Portal używana do wykonywania większości działań administracyjnych w usłudze Intune.|
@@ -93,11 +101,13 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Stan zapasów|Służy do wyświetlania [sprzętu i zainstalowanego oprogramowania](/intune/device-inventory) urządzeń, którymi zarządzasz.|
 
 ## <a name="k"></a>K
+
 |||
 |-|-|
 |Tryb kiosku|Tryb ten pozwala blokować urządzenia. Jest on konfigurowany w [profilu ograniczeń urządzenia](/intune/device-restrictions-configure). Można na przykład skonfigurować urządzenie sieci sprzedaży, aby zezwalać na nim na uruchomienie tylko niektórych aplikacji.|
 
 ## <a name="m"></a>M
+
 |||
 |-|-|
 |Managed Browser|[Aplikacja służąca do przeglądania sieci Web](/intune/app-configuration-managed-browser), którą można przypisać w organizacji za pomocą usługi Microsoft Intune. Zasady programu Managed Browser umożliwiają skonfigurowanie listy dozwolonych lub zablokowanych witryn sieci Web ograniczającej zakres witryn, które użytkownicy programu Managed Browser mogą odwiedzać.|
@@ -110,17 +120,20 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 
 
 ## <a name="o"></a>O
+
 |||
 |-|-|
 |Protokół OMA-DM|Zarządzanie urządzeniami Open Mobile Alliance (Open Mobile Alliance Device Management). Będący standardem branżowym protokół zarządzania urządzeniami używany przez wielu producentów sprzętu w celu umożliwienia sterowania funkcjami urządzeń przenośnych i komputerów.|
 |Identyfikator URI OMA|Jednolity identyfikator zasobów Open Mobile Alliance (Open Mobile Alliance Uniform Resource Identifier). Te elementy identyfikują poszczególne ustawienia urządzeń zgodne ze standardem OMA-DM. Z tych ustawień można korzystać w [niestandardowych profilach usługi Intune](/intune/custom-settings-configure), gdy nie ma wbudowanego ustawienia spełniającego określone potrzeby.|
 
 ## <a name="p"></a>P
+
 |||
 |-|-|
 |Resetowanie kodu dostępu|Funkcja usługi Intune pozwalająca wymuszać na użytkownikach końcowych [resetowanie kodów dostępu](/intune/device-passcode-reset) na obsługiwanych urządzeniach.|
 
 ## <a name="r"></a>R
+
 |||
 |-|-|
 |Zdalne blokowanie|Funkcja usługi Intune pozwalająca [blokować obsługiwane urządzenia](/intune/device-remote-lock), nawet bez fizycznego dostępu do nich.|
@@ -128,6 +141,7 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 
 
 ## <a name="s"></a>S
+
 |||
 |-|-|
 |Selektywne czyszczenie danych|[Selektywne czyszczenie danych](/intune/device-company-data-remove) powoduje usunięcie z urządzenia tylko danych firmowych, dla których mają zastosowanie zasady ochrony aplikacji, w tym ustawień i profilów poczty e-mail. Selektywne czyszczenie danych nie powoduje usunięcia osobistych danych użytkownika z urządzenia.|
@@ -135,6 +149,7 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Subskrypcja|Zawarta umowa, która umożliwia dostęp do dzierżawy usługi Intune.|
 
 ## <a name="t"></a>T
+
 |||
 |-|-|
 |TeamViewer|Aplikacja innej firmy współdziałająca z usługą Intune w celu udostępnienia [funkcji pomocy zdalnej](/intune/device-profile-android-teamviewer) na urządzeniu z systemem Android zarządzanym w usłudze Intune.|
@@ -142,12 +157,15 @@ Poznaj definicje typowych terminów używanych w usłudze Microsoft Intune.
 |Warunki i postanowienia|Typ przypisywanych do użytkowników zasad zawierających informacje, które użytkownicy muszą [przeczytać i zaakceptować](/intune/terms-and-conditions-create), zanim będą mogli za pomocą Portalu firmy zarejestrować swoje urządzenia i uzyskać dostęp do swojej pracy.|
 
 ## <a name="v"></a>V
+
 |||
 |-|-|
 |Aplikacje i książki kupione w ramach zakupów zbiorczych|Niektóre sklepy z aplikacjami umożliwiają zakup wielu licencji aplikacji lub książek, które mają być wykorzystywane w firmie. Usługa Intune ułatwia zarządzanie aplikacjami i książkami [kupionymi za pośrednictwem takiego programu](/intune/vpp-apps). Można zaimportować informacje o licencjach z dowolnego sklepu z aplikacjami, śledzić liczbę wykorzystanych licencji oraz uniemożliwić użytkownikom instalowanie większej liczby kopii aplikacji, niż jest dla nich dostępna.|
 |Profil sieci VPN|Zasady przypisujące [ustawienia sieci VPN](/intune/vpn-settings-configure) do urządzeń zarządzanych przez użytkownika. Zasady te pozwalają zminimalizować wszelkie czynności konfiguracyjne wymagane od użytkowników końcowych.|
 
 ## <a name="w"></a>W
-|||
-|-|-|
-|Profil sieci Wi-Fi|Zasady przypisujące [ustawienia sieci bezprzewodowej](/intune/wi-fi-settings-configure) do urządzeń, aby umożliwić użytkownikom łączenie się z siecią firmową bez znajomości lub konfigurowania jakichkolwiek ustawień.
+
+|               |                                                                                                                                                                                                 |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Profil sieci Wi-Fi | Zasady przypisujące [ustawienia sieci bezprzewodowej](/intune/wi-fi-settings-configure) do urządzeń, aby umożliwić użytkownikom łączenie się z siecią firmową bez znajomości lub konfigurowania jakichkolwiek ustawień. |
+

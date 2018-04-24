@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9f5fec22a17eef39819b38567793a2f579815e59
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4e53acad9fb2cf1e6c18b71900c6b671dd031e98
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Dodawanie aplikacji dla zarejestrowanych urządzeń do usługi Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Aby można było wdrożyć aplikację i zarządzać nią, należy ją najpierw dodać do usługi Microsoft Intune. W tym temacie przedstawiono sposób dodawania aplikacji dla zarejestrowanych urządzeń.
 
@@ -34,32 +34,32 @@ Aby można było wdrożyć aplikację i zarządzać nią, należy ją najpierw d
 ## <a name="add-the-app"></a>Dodawanie aplikacji
 Narzędzie Wydawca oprogramowania usługi Intune służy do konfigurowania właściwości aplikacji i (jeśli to możliwe) przekazywania aplikacji do magazynu w chmurze. Użyj następującej procedury:
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune.
+1. W [konsoli administratora usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Aplikacje** &gt; **Dodaj aplikacje**, aby uruchomić narzędzie Wydawca oprogramowania usługi Intune.
 
-    > [!TIP]
-    > Przed uruchomieniem narzędzia może być konieczne wprowadzenie nazwy użytkownika i hasła usługi Intune.
+   > [!TIP]
+   > Przed uruchomieniem narzędzia może być konieczne wprowadzenie nazwy użytkownika i hasła usługi Intune.
 
-2.  Na stronie **Instalator oprogramowania** Wydawcy wybierz jedną z następujących opcji dla pozycji **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom**:
-    - **Instalator oprogramowania** — dla aplikacji z rozszerzeniem **msi**:
-        - **Wybierz typ pliku instalatora oprogramowania**. To ustawienie określa typ oprogramowania, które chcesz wdrożyć. Jeśli na przykład chcesz zainstalować aplikację systemu iOS, wybierz pozycję **Pakiet aplikacji dla systemu iOS (plik &#42;.ipa)**.
-        - **Określ lokalizację plików instalacyjnych oprogramowania**. Wprowadź lokalizację plików instalacyjnych lub wybierz pozycję **Przeglądaj**, aby wybrać lokalizację z listy.
-        - **Dołącz dodatkowe pliki i podfoldery z tego samego folderu**. Ta opcja dotyczy tylko typu pliku **Instalator Windows**.<br>Niektóre programy korzystające z Instalatora Windows wymagają plików pomocniczych, które zwykle znajdują się w folderze plików instalacyjnych. Wybierz tę opcję, jeśli chcesz również wdrożyć te pliki.<br>W przypadku tego typu instalacji jest używana część miejsca do magazynowania w chmurze.
+2. Na stronie **Instalator oprogramowania** Wydawcy wybierz jedną z następujących opcji dla pozycji **Wybierz, w jaki sposób to oprogramowanie ma zostać udostępnione urządzeniom**:
+   - **Instalator oprogramowania** — dla aplikacji z rozszerzeniem **msi**:
+       - **Wybierz typ pliku instalatora oprogramowania**. To ustawienie określa typ oprogramowania, które chcesz wdrożyć. Jeśli na przykład chcesz zainstalować aplikację systemu iOS, wybierz pozycję **Pakiet aplikacji dla systemu iOS (plik &#42;.ipa)**.
+       - **Określ lokalizację plików instalacyjnych oprogramowania**. Wprowadź lokalizację plików instalacyjnych lub wybierz pozycję **Przeglądaj**, aby wybrać lokalizację z listy.
+       - **Dołącz dodatkowe pliki i podfoldery z tego samego folderu**. Ta opcja dotyczy tylko typu pliku **Instalator Windows**.<br>Niektóre programy korzystające z Instalatora Windows wymagają plików pomocniczych, które zwykle znajdują się w folderze plików instalacyjnych. Wybierz tę opcję, jeśli chcesz również wdrożyć te pliki.<br>W przypadku tego typu instalacji jest używana część miejsca do magazynowania w chmurze.
 
-  -   **Link zewnętrzny** — dla aplikacji, które mają zostać utworzone za pośrednictwem linku do sklepu z aplikacjami:
+   -   **Link zewnętrzny** — dla aplikacji, które mają zostać utworzone za pośrednictwem linku do sklepu z aplikacjami:
 
-        - **Podaj adres URL**. Podaj adres URL prowadzący do jednego z następujących elementów:
-            - Adres URL sklepu z aplikacjami dla aplikacji, którą chcesz wdrożyć. Jeśli na przykład chcesz wdrożyć aplikację Pulpit zdalny firmy Microsoft dla systemu Android, podaj adres **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Aby znaleźć adres URL aplikacji, przy użyciu aparatu wyszukiwania znajdź stronę sklepu zawierającą aplikację. Aby na przykład znaleźć aplikację Pulpit zdalny, możesz wyszukać frazę **Pulpit zdalny firmy Microsoft dla systemu Android**.
-            - Witryna sieci Web. Usługa Intune wdroży na urządzeniu ikonę skrótu prowadzącą do witryny (zwaną klipem sieci Web).
-            - Aplikacja sieci Web. Usługa Intune wdroży na urządzeniu ikonę skrótu prowadzącą do aplikacji.
-        - **Wymagaj otwierania tego linku przez program Managed Browser (tylko systemy Android i iOS)**. Jeśli wdrażasz link do witryny lub aplikacji sieci Web dla użytkowników, będą oni mogli otworzyć je tylko w programie Intune Managed Browser. Ten program musi być zainstalowany na urządzeniu.<br>Aby uzyskać więcej informacji o aplikacji Managed Browser, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>W przypadku tego typu instalacji nie jest używane miejsce do magazynowania w chmurze.
+       - **Podaj adres URL**. Podaj adres URL prowadzący do jednego z następujących elementów:
+           - Adres URL sklepu z aplikacjami dla aplikacji, którą chcesz wdrożyć. Jeśli na przykład chcesz wdrożyć aplikację Pulpit zdalny firmy Microsoft dla systemu Android, podaj adres **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Aby znaleźć adres URL aplikacji, przy użyciu aparatu wyszukiwania znajdź stronę sklepu zawierającą aplikację. Aby na przykład znaleźć aplikację Pulpit zdalny, możesz wyszukać frazę **Pulpit zdalny firmy Microsoft dla systemu Android**.
+           - Witryna sieci Web. Usługa Intune wdroży na urządzeniu ikonę skrótu prowadzącą do witryny (zwaną klipem sieci Web).
+           - Aplikacja sieci Web. Usługa Intune wdroży na urządzeniu ikonę skrótu prowadzącą do aplikacji.
+       - **Wymagaj otwierania tego linku przez program Managed Browser (tylko systemy Android i iOS)**. Jeśli wdrażasz link do witryny lub aplikacji sieci Web dla użytkowników, będą oni mogli otworzyć je tylko w programie Intune Managed Browser. Ten program musi być zainstalowany na urządzeniu.<br>Aby uzyskać więcej informacji o aplikacji Managed Browser, zobacz [Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>W przypadku tego typu instalacji nie jest używane miejsce do magazynowania w chmurze.
 
-  -   **Zarządzana aplikacja systemu iOS ze sklepu App Store** — w przypadku bezpłatnych aplikacji ze sklepu iTunes, którymi chcesz zarządzać za pomocą zasad zarządzania urządzeniami mobilnymi (MAM):
+   -   **Zarządzana aplikacja systemu iOS ze sklepu App Store** — w przypadku bezpłatnych aplikacji ze sklepu iTunes, którymi chcesz zarządzać za pomocą zasad zarządzania urządzeniami mobilnymi (MAM):
 
-        - **Podaj adres URL**. Wprowadź adres URL sklepu z aplikacjami dla aplikacji, którą chcesz wdrożyć. Jeśli na przykład chcesz wdrożyć aplikację Foldery robocze firmy Microsoft dla systemu iOS, podaj adres **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>W przypadku tego typu instalacji nie jest używane miejsce do magazynowania w chmurze.
+       - **Podaj adres URL**. Wprowadź adres URL sklepu z aplikacjami dla aplikacji, którą chcesz wdrożyć. Jeśli na przykład chcesz wdrożyć aplikację Foldery robocze firmy Microsoft dla systemu iOS, podaj adres **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>W przypadku tego typu instalacji nie jest używane miejsce do magazynowania w chmurze.
 
-        Jeśli na przykład chcesz wdrożyć aplikację Microsoft Word ze sklepu iTunes na urządzeniach, strona będzie wyglądała następująco:
+       Jeśli na przykład chcesz wdrożyć aplikację Microsoft Word ze sklepu iTunes na urządzeniach, strona będzie wyglądała następująco:
 
-        ![Wydawcy oprogramowania usługi Intune](./media/publisher-for-mobile.png)
+       ![Wydawcy oprogramowania usługi Intune](./media/publisher-for-mobile.png)
 
 > [!NOTE]
 > Kiedy dodajesz i wdrażasz aplikację ze sklepu, użytkownicy końcowi muszą mieć konto w danym sklepie, aby móc zainstalować daną aplikację.

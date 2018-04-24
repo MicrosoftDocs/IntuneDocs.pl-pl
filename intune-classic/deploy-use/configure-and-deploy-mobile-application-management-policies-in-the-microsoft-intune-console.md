@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 94c6a46d2213ba3d1389b52f7684ec531e40228a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: e1b4903eedaec53015a01a7711f87401dc02d24e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Konfigurowanie i wdrażanie zasad zarządzania aplikacjami mobilnymi w konsoli usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Zasady zarządzania aplikacjami mobilnymi (MAM) w usłudze Microsoft Intune umożliwiają modyfikację funkcji wdrażanych aplikacji, co pomaga dostosować je do zasad zgodności i zabezpieczeń w firmie. Na przykład w aplikacji zarządzanej można ograniczyć wykonywanie operacji wycinania, kopiowania i wklejania lub skonfigurować aplikację tak, aby wszystkie linki sieci Web były otwierane w przeglądarce zarządzanej.
 
@@ -180,7 +180,7 @@ Po utworzeniu i wdrożeniu aplikacji skojarzonej z zasadami zarządzania aplikac
 
 4.  Wybierz zasady zarządzania aplikacjami mobilnymi, których stan chcesz sprawdzić. Szczegóły zasad będą widoczne w okienku u dołu. Rozwiń ich węzeł, aby wyświetlić ustawienia.
 
-5.  W kolumnie **Stan** poszczególnych zasad zarządzania aplikacjami mobilnymi będą wyświetlane wartości **Zgodne**, **Zgodne (oczekiwanie)**lub **Błąd**. Jeśli co najmniej jedno ustawienie wybranych zasad powoduje konflikt, w tym polu będzie wyświetlana wartość **Błąd**.
+5.  W kolumnie **Stan** poszczególnych zasad zarządzania aplikacjami mobilnymi będą wyświetlane wartości **Zgodne**, **Zgodne (oczekiwanie)** lub **Błąd**. Jeśli co najmniej jedno ustawienie wybranych zasad powoduje konflikt, w tym polu będzie wyświetlana wartość **Błąd**.
 
 6.  Po zidentyfikowaniu konfliktu możesz skorygować sprzeczne ustawienia zasad, aby używać tego samego ustawienia, lub wdrożyć tylko jedne zasady dla aplikacji i użytkownika.
 

@@ -1,31 +1,39 @@
 ---
-title: "Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune"
-titleSuffix: 
-description: "Dowiedz się, jak za pomocą usługi Microsoft Intune skonfigurować połączenia wirtualnej sieci prywatnej (VPN) na zarządzanych urządzeniach."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Tworzenie profilu urządzenia sieci VPN w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: W przypadku urządzeń z systemem iOS można w usłudze Microsoft Intune wyświetlić typy połączenia wirtualnej sieci prywatnej (VPN), utworzyć profil urządzenia sieci VPN w witrynie Azure Portal i wyświetlić opcje zabezpieczania profilu sieci VPN za pomocą certyfikatów, czyli nazwę użytkownika i hasło.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 04/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9480f19a8cd71e001d196674d3e285c8f2a8bb09
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 792e2ae45e6331b91b1727af113604186c9bb72a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci VPN w usłudze Microsoft Intune
+# <a name="create-vpn-profiles-in-intune"></a>Tworzenie profilów sieci VPN w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. Za pomocą opcji w obszarze **Profile sieci VPN** w usłudze Microsoft Intune możesz przypisywać ustawienia sieci VPN do użytkowników i urządzeń w organizacji tak, aby łączenie z siecią było łatwe i bezpieczne.
 
-Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS ustawienia wymagane do połączenia z udziałem plików w sieci firmowej. W tym celu tworzysz profil sieci VPN zawierający ustawienia wymagane do połączenia z siecią firmową, a następnie przypisujesz go do wszystkich użytkowników mających urządzenia z systemem iOS. Użytkownicy widzą połączenie VPN na liście dostępnych sieci i mogą łatwo nawiązać połączenie.
+Na przykład możesz chcieć udostępnić wszystkim urządzeniom z systemem iOS ustawienia wymagane do połączenia z udziałem plików w sieci firmowej. Istnieje możliwość utworzenia profilu sieci VPN zawierającego ustawienia łączenia z siecią firmową. Następnie można przypisać ten profil do wszystkich użytkowników, którzy mają urządzenia z systemem iOS. Użytkownicy widzą połączenie sieci VPN na liście dostępnych sieci i mogą łatwo nawiązać połączenie.
+
+Zasady konfiguracji niestandardowych usługi Intune umożliwiają tworzenie profilów sieci VPN dla następujących platform:
+
+* System Android 4 lub nowszy
+* Zarejestrowane urządzenia z systemem Windows 8.1 lub nowszym
+* System Windows Phone 8.1 lub nowszy
+* Zarejestrowane urządzenia z systemem Windows 10 Desktop
+* Windows 10 Mobile
+* Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>Typy połączeń z siecią VPN
 
@@ -46,41 +54,36 @@ Możesz utworzyć profile sieci VPN, korzystając z następujących typów poł�
 |PPTP|Nie|Nie|Nie|Nie|Nie|Tak|
 |Niestandardowy|Nie|Tak|Tak|Nie|Nie|Nie|
 
-
 > [!IMPORTANT]
 > Aby używanie profilów sieci VPN przypisanych do urządzenia było możliwe, należy zainstalować aplikację VPN odpowiednią do profilu. W artykule [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?](app-management.md) znajdziesz informacje, które pomogą Ci przypisać aplikację przy użyciu usługi Intune.  
 
-Zapoznaj się z artykułem [Create custom VPN profiles](custom-vpn-profiles-create.md) (Tworzenie niestandardowych profilów sieci VPN), aby dowiedzieć się, jak tworzyć niestandardowe profile sieci VPN z użyciem ustawień identyfikatora URI.     
+Zapoznaj się z artykułem [Create a profile with custom settings (Tworzenie profilu za pomocą ustawień niestandardowych)](custom-settings-configure.md), aby dowiedzieć się, jak tworzyć niestandardowe profile sieci VPN za pomocą ustawień identyfikatora URI.
 
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia sieci VPN
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
-2. W okienku **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Profile**.
-3. W okienku profilów wybierz pozycję **Utwórz profil**.
-4. W okienku **Tworzenie profilu** wprowadź wartość w polach **Nazwa** i **Opis** dotyczących profilu sieci VPN.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+4. Podaj wartości **Nazwa** i **Opis** dla profilu sieci VPN.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia sieci VPN. Obecnie dla ustawień sieci VPN urządzenia można wybrać jedną z następujących platform:
-    - **Android**
-    - **Android for Work**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 lub nowszy**
-    - **Windows 10 lub nowszy**
+  - **Android**
+  - **Android for Work**
+  - **iOS**
+  - **macOS**
+  - **Windows Phone 8.1**
+  - **Windows 8.1 lub nowszy**
+  - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Sieć VPN**.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Ustawienia systemu Android i programu Android for Work](vpn-settings-android.md)
-    - [Ustawienia systemu iOS](vpn-settings-ios.md)
-    - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
-    - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-    - [Windows 8.1 settings](vpn-settings-windows-8-1.md) (Ustawienia systemu Windows 8.1)
-    - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
-8. Gdy skończysz, wróć do okienka **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
+  - [Ustawienia systemu Android i programu Android for Work](vpn-settings-android.md)
+  - [Ustawienia systemu iOS](vpn-settings-ios.md)
+  - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
+  - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
+  - [Windows 8.1 settings](vpn-settings-windows-8-1.md) (Ustawienia systemu Windows 8.1)
+  - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
+8. Gdy wszystko będzie gotowe, **utwórz** profil.
 
-Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
-Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
-
+Profil zostanie utworzony i wyświetlony na liście profilów. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 
 ## <a name="methods-of-securing-vpn-profiles"></a>Metody zabezpieczania profilów sieci VPN
 
@@ -88,7 +91,7 @@ Profile sieci VPN mogą używać różnych typów połączeń i protokołów ró
 
 ### <a name="certificates"></a>Certyfikaty
 
-Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PKCS utworzony wcześniej w usłudze Intune. Ten profil jest znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony do określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest przypisywany do komputera przeprowadzającego uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
+Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PKCS utworzony wcześniej w usłudze Intune. Ten profil jest znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony, aby umożliwić urządzeniu użytkownika nawiązanie połączenia. Zaufany certyfikat jest przypisywany do komputera przeprowadzającego uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
 
 Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [How to configure certificates with Microsoft Intune](certificates-configure.md) (Konfigurowanie certyfikatów przy użyciu usługi Microsoft Intune).
 

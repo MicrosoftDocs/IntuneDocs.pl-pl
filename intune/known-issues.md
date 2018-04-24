@@ -1,33 +1,31 @@
 ---
-title: "Znane problemy w usłudze Microsoft Intune"
-titlesuffix: Microsoft Intune
-description: "Informacje o znanych problemach w usłudze Microsoft Intune."
-keywords: 
+title: Znane problemy w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Informacje o znanych problemach w usłudze Microsoft Intune.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 03/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02efc7e2369c590e2d21ac8c27db54ffbaae38c1
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: d0a8a189e708ed140c3cda987a20cebb562fdb34
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-
-Zapoznaj się z tym tematem, aby dowiedzieć się więcej o wszelkich znanych problemach w usłudze Intune.
+Zapoznaj się z tym artykułem, aby dowiedzieć się więcej o wszelkich znanych problemach w usłudze Intune.
 
 Aby zgłosić błąd, którego nie ma na tej liście, [otwórz żądanie pomocy technicznej](get-support.md).
 
@@ -45,7 +43,7 @@ W przypadku migracji z usługi Intune do witryny Azure Portal może zostać wyś
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Bloki stanu zmigrowanych zasad nie działają
 
-Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznego portalu do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
+Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznej witryny Azure Portal do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
 
 ## <a name="apps"></a>Aplikacje
 
@@ -66,9 +64,8 @@ W przypadku urządzeń, które nie zostały zarejestrowane w usłudze Intune, mo
 Jeśli dodasz dodatkowe domeny (przy użyciu opcji **Zaawansowane ustawienia** > **Sieć obwodowa** > **Dodaj domenę chronioną**), nie można będzie zapisać zasad. Komunikat o błędzie, który zostanie wyświetlony w tej sytuacji, zostanie wkrótce zmieniony na bardziej precyzyjny.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Obsługa klientów VPN Cisco AnyConnect
+Najnowsza wersja klienta VPN Cisco AnyConnect (4.0.07072) nie jest aktualnie zgodna z usługą Intune. Przyszła aktualizacja usługi Intune będzie obejmować zapewnienie zgodności z tą wersją klienta VPN. Na razie zalecamy kontynuowanie używania bieżącej wersji klienta VPN Cisco AnyConnect i powstrzymanie się od jego aktualizacji.
 
-Najnowsza wersja klienta VPN Cisco AnyConnect (4.0.07072) nie jest aktualnie zgodna z usługą Intune.
-Przyszła aktualizacja usługi Intune będzie obejmować zapewnienie zgodności z tą wersją klienta VPN. Na razie zalecamy kontynuowanie używania bieżącej wersji klienta VPN Cisco AnyConnect i powstrzymanie się od jego aktualizacji.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Użycie hasła liczbowego na urządzeniach z systemem macOS Sierra
 

@@ -1,11 +1,11 @@
 ---
-title: Wyświetlanie urządzeń za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
+title: Wyświetlanie szczegółów urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Wyświetl szczegóły urządzeń, w tym system operacyjny, miejsce do magazynowania, producenta i model. Pobierz listę zainstalowanych aplikacji, sprawdź zasady zgodności i skonfiguruj program TeamViewer za pomocą usługi Microsoft Intune na platformie Azure. Podobnie jak w przypadku wyświetlania spisu urządzeń, którymi zarządzasz.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,36 +13,37 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eaaf3e9807a8eab66c24f4d1bb3c3c5ea9f4cfe0
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 404fb301d9ab749f887840208e12388e12d79db4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Funkcja **Urządzenia** udostępnia dodatkowe szczegóły dotyczące zarządzanych urządzeń, w tym informacje o ich sprzęcie i zainstalowanych aplikacjach. 
+Funkcja **Urządzenia** udostępnia dodatkowe szczegóły dotyczące zarządzanych urządzeń, w tym informacje o ich sprzęcie i zainstalowanych aplikacjach.
 
 W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich właściwości w witrynie Azure Portal.
 
-## <a name="view-your-device-details"></a>Wyświetlanie szczegółów urządzenia
+## <a name="view-the-device-details"></a>Wyświetlanie szczegółów urządzenia
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Urządzenia**. W obszarze Urządzenia masz kilka opcji:
+3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz jedno z wymienionych na liście urządzeń, aby otworzyć jego szczegóły:
 
-   - **Przegląd**: uzyskaj informacje o zarejestrowanych urządzeniach i systemach operacyjnych działających na każdym z nich.
-   - **Zarządzanie**: aby wyświetlić listę wszystkich zarządzanych urządzeń, wybierz opcję **Wszystkie urządzenia** lub **Urządzenia w usłudze Azure AD**.
-    Wybierz jedno z urządzeń na liście. Ten krok powoduje otwarcie okienka <*nazwa urządzenia*> **Omówienie**, w którym można wybrać następujące opcje:
-     - **Przegląd**: wyświetlanie nazwy urządzenia, jego właściciela, informacji, czy jest to urządzenie w modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device), czasu jego zameldowania i innych informacji.
-     - **Sprzęt**: wyświetlanie ilości wolnego miejsca, modelu i producenta oraz dodatkowych szczegółowych informacji o urządzeniu.
-     - **Odnalezione aplikacje**: wyświetla listę wszystkich aplikacji, które zostały odnalezione na urządzeniu przez usługę Intune.
-     - **Zgodność urządzenia**: wyświetla stan wszystkich zasad zgodności przypisanych do urządzenia.
-     - **Konfiguracja urządzenia**: wyświetla stan zgodności wszystkich zasad konfiguracji przypisanych do urządzenia.
-   - **Monitoruj**: wybranie opcji **Akcje urządzenia** umożliwia wyświetlenie listy akcji, które zostały wykonane na zarządzanych urządzeniach wraz z ich bieżącym stanem. **Dzienniki inspekcji** wyświetlają stan różnych zadań.
-   - **Konfiguracja** > **Łącznik programu TeamViewer**: umożliwia skonfigurowanie administrowania zdalnego na urządzeniach przy użyciu oprogramowania TeamViewer. Aby uzyskać szczegółowe informacje, zobacz [Zapewnienie pomocy zdalnej dla urządzeń z systemem Android zarządzanych przy użyciu usługi Intune](device-profile-android-teamviewer.md).
+   - **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane itp. Wybierz opcję **Więcej**, aby wykonać następujące czynności:
+     - Usuwanie danych firmy
+     - Usuwanie urządzenia
+     - Zdalne blokowanie urządzenia
+     - Wymazywanie
+     - Uruchamianie sesji pomocy zdalnej
+   - Za pomocą opcji **Właściwości** możesz przypisać [utworzoną kategorię urządzeń](device-group-mapping.md) i zmienić własność urządzenia na urządzenie osobiste lub urządzenie firmowe.
+   - **Sprzęt** — zawiera wiele szczegółów dotyczących urządzenia, w tym identyfikator urządzenia, system operacyjny wraz z wersją, miejsce do magazynowania, model i producenta, ustawienia dostępu warunkowego oraz inne informacje.
+   - **Odnalezione aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione jako zainstalowane na urządzeniu przez usługę Intune, wraz z wersjami aplikacji. Możesz też **wyeksportować** listę aplikacji do pliku CSV.
+   - **Zgodność urządzenia** — wyświetla wszystkie przypisane zasady zgodności oraz informację o tym, czy urządzenie jest zgodne.
+   - **Konfiguracja urządzenia** — zawiera wszystkie zasady konfiguracji urządzeń przypisane do urządzenia oraz informację o tym, czy wdrożenie zasad powiodło się.
 
 Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do firmy. Aplikacje nie są sprawdzane na urządzeniach osobistych. W przypadku komputerów z systemem Windows 10 wyszczególniane są tylko aplikacje nowoczesne na urządzeniach należących do firmy. Usługa Intune nie zbiera informacji o aplikacjach Win32 na urządzeniu. W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystkie aplikacje.
 

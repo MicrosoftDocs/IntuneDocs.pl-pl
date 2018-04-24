@@ -1,28 +1,28 @@
 ---
-title: "Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Intune"
-description: "Dowiedz się, jak rozwiązywać konflikty między zasadami grupy i zasadami konfiguracji usługi Intune."
-keywords: 
+title: Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Intune
+description: Dowiedz się, jak rozwiązywać konflikty między zasadami grupy i zasadami konfiguracji usługi Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9764a1fec44ff5aae7ebcf63b3ebde252bb687f9
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: f6d12dd886fe475161e767e63177313a729e170d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Usługa Intune używa zasad, które ułatwiają zarządzanie ustawieniami na komputerach z systemem Windows. Na przykład możesz użyć zasad, aby kontrolować ustawienia Zapory systemu Windows na komputerach. Wiele ustawień usługi Intune jest podobnych do ustawień konfigurowanych za pomocą zasad grupy systemu Windows. Jednak czasami te dwie metody mogą wchodzić ze sobą w konflikt.
 
@@ -116,5 +116,5 @@ Możesz zastosować obiekty zasad grupy tylko do grup zabezpieczeń, które są 
 
 Nową grupę zabezpieczeń należy aktualizować zgodnie ze zmianami rejestracji w usłudze Intune.
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 [Zarządzanie komputerami osobistymi z systemem Windows przy użyciu usługi Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)

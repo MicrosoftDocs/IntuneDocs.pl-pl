@@ -1,26 +1,26 @@
 ---
-title: "Korzystanie z niestandardowych ustawień urządzenia w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Dodawanie lub tworzenie profilu umożliwiającego korzystanie z niestandardowych ustawień dla urządzeń z systemami Windows, Android i iOS za pomocą usługi Microsoft Intune"
-keywords: 
+title: Korzystanie z niestandardowych ustawień urządzenia w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Dodawanie lub tworzenie profilu umożliwiającego korzystanie z niestandardowych ustawień dla urządzeń z systemami Windows, Android i iOS za pomocą usługi Microsoft Intune
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: adecb332c91f17cf92362295b6b0c81445f5acaf
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ce7c263435f92a041b93dc5d34ffa912c6fa87fb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Tworzenie profilu z ustawieniami niestandardowymi w usłudze Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Usługa Intune może nie mieć wbudowanych wszystkich ustawień, których potrzebujesz. Możesz też zechcieć skorzystać z ustawień dostępnych w innych profilach urządzeń. Aby dodać te ustawienia, utwórz profil urządzenia i skonfiguruj go z użyciem niestandardowych ustawień urządzenia.
 
@@ -32,7 +32,7 @@ Konfiguracja ustawień niestandardowych przebiega różnie w zależności od pla
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 3. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
 4. Wprowadź **nazwę** i **opis** profilu niestandardowego.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której mają zostać zastosowane ustawienia niestandardowe. Można wybrać dowolną z następujących platform:

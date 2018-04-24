@@ -1,29 +1,29 @@
 ---
-title: "Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji"
+title: Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 titlesuffix: Microsoft Intune
-description: "Użyj narzędzia opakowującego aplikacje oraz zestawu SDK aplikacji, aby umożliwić niestandardowym aplikacjom biznesowym korzystanie z zasad ochrony aplikacji w usłudze Microsoft Intune."
-keywords: 
+description: Użyj narzędzia opakowującego aplikacje oraz zestawu SDK aplikacji, aby umożliwić niestandardowym aplikacjom biznesowym korzystanie z zasad ochrony aplikacji w usłudze Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76330c926ecac9ae8b071837465d800f48f925fb
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d61ba21ba465037fbf2ef4e1c7423f6649fc810f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 W swoich aplikacjach możesz umożliwić korzystanie z zasad ochrony aplikacji przez użycie narzędzia opakowującego aplikacje usługi Intune lub zestawu Intune App SDK. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
 
@@ -70,8 +70,8 @@ Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby
 
 |**Zestaw SDK aplikacji usługi Intune** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](app-sdk-cordova.md).|
-|**Android**| Tak — użyj [składnika Xamarin zestawu SDK aplikacji usługi Intune](app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](app-sdk-cordova.md).|
+|**iOS**|Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](app-sdk-cordova.md).|
+|**Android**| Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak — użyj [wtyczki Cordova zestawu SDK aplikacji usługi Intune](app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Porównanie funkcji
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.
@@ -79,30 +79,30 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 > [!NOTE]
 > Narzędzie opakowujące aplikacje może być stosowane z autonomiczną usługą Intune lub usługą Intune z programem Configuration Manager.
 
-|Funkcja|Zestaw SDK aplikacji|Narzędzie opakowujące aplikacje|
-|-----------|---------------------|-----------|
-|Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej|X|X|
-|Uniemożliwiaj tworzenie kopii zapasowych dla systemu Android, programu iTunes i usługi iCloud|X|X|
-|Zezwalaj aplikacji na transfer danych do innych aplikacji|X|X|
-|Zezwalaj aplikacji na odbieranie danych z innych aplikacji|X|X|
-|Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach|X|X|
-|Wymagaj prostego numeru PIN w celu udzielenia dostępu|X|X|
-|Zastąp numer PIN wbudowanej aplikacji numerem PIN usługi Intune|X||
-|Określ liczbę prób przed zresetowaniem numeru PIN|X|X|
-|Zezwalaj na odcisk palca zamiast numeru PIN |X|X|
-|Wymagaj poświadczeń firmowych w celu udzielenia dostępu|X|X|
-|Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root|X|X|
-|Szyfruj dane aplikacji|X|X|
-|Ponownie sprawdź wymagania dostępu po upływie określonej liczby minut|X|X|
-|Wybierz okres karencji w trybie offline|X|X|
-|Zablokuj przechwytywanie ekranu (tylko system Android)|X|X|
-|Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
-|Pełne czyszczenie|X|X|
-|Selektywne czyszczenie <br></br>**Uwaga:** w systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
-|Nie zezwalaj na używanie polecenia „Zapisz jako” |X||
-|Docelowa konfiguracja aplikacji |X||
-|Obsługa wielu tożsamości|X||
-|Możliwość dostosowywania stylów |X|||
+|                                                         Funkcja                                                          | Zestaw SDK aplikacji | Narzędzie opakowujące aplikacje |
+|--------------------------------------------------------------------------------------------------------------------------|---------|-------------------|
+|                              Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej                              |    X    |         X         |
+|                                        Uniemożliwiaj tworzenie kopii zapasowych dla systemu Android, programu iTunes i usługi iCloud                                        |    X    |         X         |
+|                                         Zezwalaj aplikacji na transfer danych do innych aplikacji                                         |    X    |         X         |
+|                                        Zezwalaj aplikacji na odbieranie danych z innych aplikacji                                         |    X    |         X         |
+|                                      Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach                                       |    X    |         X         |
+|                                              Wymagaj prostego numeru PIN w celu udzielenia dostępu                                               |    X    |         X         |
+|                                         Zastąp numer PIN wbudowanej aplikacji numerem PIN usługi Intune                                         |    X    |                   |
+|                                     Określ liczbę prób przed zresetowaniem numeru PIN                                      |    X    |         X         |
+|                                             Zezwalaj na odcisk palca zamiast numeru PIN                                             |    X    |         X         |
+|                                         Wymagaj poświadczeń firmowych w celu udzielenia dostępu                                         |    X    |         X         |
+|                             Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root                              |    X    |         X         |
+|                                                     Szyfruj dane aplikacji                                                     |    X    |         X         |
+|                           Ponownie sprawdź wymagania dostępu po upływie określonej liczby minut                            |    X    |         X         |
+|                                             Wybierz okres karencji w trybie offline                                             |    X    |         X         |
+|                                           Zablokuj przechwytywanie ekranu (tylko system Android)                                            |    X    |         X         |
+|                                        Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia                                         |    X    |         X         |
+|                                                        Pełne czyszczenie                                                         |    X    |         X         |
+| Selektywne czyszczenie <br></br><strong>Uwaga:</strong> w systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji. |    X    |                   |
+|                                                    Nie zezwalaj na używanie polecenia „Zapisz jako”                                                     |    X    |                   |
+|                                            Docelowa konfiguracja aplikacji                                            |    X    |                   |
+|                                                Obsługa wielu tożsamości                                                |    X    |                   |
+|                                                    Możliwość dostosowywania stylów                                                    |    X    |                   |
 
 ## <a name="next-steps"></a>Następne kroki
 

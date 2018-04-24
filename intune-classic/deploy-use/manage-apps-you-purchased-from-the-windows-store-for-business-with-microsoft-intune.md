@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50fc27efc34ab6c13fad714e41be0d87c5ab0df9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b32f9c6be910156c26b446b7bf70a7975b4afaff
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 [Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc Sklep Windows z usługą Microsoft Intune, można zarządzać aplikacjami zakupionymi zbiorczo z poziomu konsoli usługi Intune. Przykład:
 * Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
@@ -57,8 +57,8 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com) wybierz pozycję **Administracja**.
 2. W obszarze roboczym **Administracja** rozwiń węzeł **Zarządzanie urządzeniami przenośnymi** > **Windows**, a następnie wybierz pozycję **Sklep dla firm**.
 3. Na stronie **Sklepu Microsoft dla firm** wykonaj następujące czynności:
- * Jeśli jeszcze tego nie zrobiono, kliknij link do rejestracji w Sklepie Microsoft dla Firm.
- * Po zarejestrowaniu się wybierz opcję **Konfiguruj synchronizację**.
+   * Jeśli jeszcze tego nie zrobiono, kliknij link do rejestracji w Sklepie Microsoft dla Firm.
+   * Po zarejestrowaniu się wybierz opcję **Konfiguruj synchronizację**.
 4. W oknie dialogowym **Konfiguracja synchronizacji aplikacji Sklepu Microsoft dla Firm** wybierz pozycję **Włącz synchronizację Sklepu Microsoft dla Firm**.
 5. Z listy rozwijanej **Język** wybierz język, w którym aplikacje ze Sklepu Microsoft dla Firm będą wyświetlane w konsoli usługi Intune. Niezależnie od języka, w którym są wyświetlane, aplikacje zostaną zainstalowane w języku użytkownika końcowego, o ile będzie dostępny.
 6. Kliknij przycisk **OK**.

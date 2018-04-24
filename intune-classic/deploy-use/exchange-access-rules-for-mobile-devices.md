@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9c3da7d517bd26bf694ea7bfa658ec1a4688d8f8
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 93dece592ce5280b1650303484bd24169814465c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-access-rules-for-mobile-devices"></a>Reguły dostępu do programu Exchange dla urządzeń przenośnych
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Reguły dostępu dla urządzeń przenośnych określają poziom dostępu tych urządzeń do programu Exchange ActiveSync. Te ustawienia dotyczą wszystkich urządzeń przenośnych, w tym niezarejestrowanych w usłudze Microsoft Intune. Można rozpocząć od zdefiniowania **reguły domyślnej**, która dotyczy wszystkich urządzeń przenośnych, do których nie zastosowano reguły niestandardowej.
 
@@ -37,11 +37,13 @@ Poniższa tabela przedstawia poziomy dostępu zarządzane przez program Exchange
 
 Strategia dostępu jest połączeniem opcji **Reguła domyślna** i **Wyjątki dla platform**, które są stosowane do wszystkich urządzeń przenośnych połączonych z programem Exchange. W poniższej tabeli przedstawiono kilka przykładowych strategii dostępu.
 
-|Strategia dostępu|Opis|
-|-------------------|---------------|
-|Lista dozwolonych|*Lista dozwolonych* umożliwia udzielenie dostępu znanym urządzeniem z listy i ograniczenie dostępu wszystkim innym urządzeniom. W tym celu musisz utworzyć reguły niestandardowe dotyczące platform urządzeń, która mają dostęp do skrzynek pocztowych użytkowników. Po utworzeniu takiej reguły musisz ustawić domyślną regułę dostępu blokującą lub poddającą kwarantannie wszystkie inne urządzenia. Aby dodać nowe urządzenie do listy dozwolonych, utwórz nową regułę niestandardową.|
-|Lista zablokowanych|*Listy zablokowanych* możesz użyć, aby domyślnie przyznać dostęp wszystkim urządzeniom, lecz blokować zbiór urządzeń, które nie mają mieć dostępu do Twojej organizacji. Listę zablokowanych tworzy się za pomocą reguł niestandardowych blokujących platformy urządzeń, które nie mają być synchronizowane ze skrzynkami pocztowymi organizacji. Zalecamy ustawienie reguły domyślnej zezwalającej na dostęp wszystkich urządzeń, które nie są jawnie zablokowane przez istniejące reguły. Aby dodać nowe urządzenie lub zbiór urządzeń do listy zablokowanych, utwórz nową regułę niestandardową.|
-|Mieszane zezwalanie i blokowanie|Oprócz tworzenia list dozwolonych i zablokowanych możesz poddawać kwarantannie nowe urządzenia przenośne wprowadzane do organizacji, na czas oceny. Na przykład jeśli masz listę zablokowanych urządzeń przenośnych, które są niedozwolone w organizacji, i listę dozwolonych urządzeń przenośnych, które są dozwolone w organizacji, możesz ustawić kwarantannę jako regułę domyślną. Wszystkie inne urządzenia są automatycznie poddawane kwarantannie. Takie działanie umożliwia wykrywanie nowych urządzeń w miarę ich wprowadzania do organizacji i decydowanie, czy mają zostać dodane do listy dozwolonych, czy zablokowanych.|
+
+|    Strategia dostępu    |                                                                                                                                                                                                                                                                                       Opis                                                                                                                                                                                                                                                                                        |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Lista dozwolonych       |                                                                                  <em>Lista dozwolonych</em> umożliwia udzielenie dostępu znanym urządzeniem z listy i ograniczenie dostępu wszystkim innym urządzeniom. W tym celu musisz utworzyć reguły niestandardowe dotyczące platform urządzeń, która mają dostęp do skrzynek pocztowych użytkowników. Po utworzeniu takiej reguły musisz ustawić domyślną regułę dostępu blokującą lub poddającą kwarantannie wszystkie inne urządzenia. Aby dodać nowe urządzenie do listy dozwolonych, utwórz nową regułę niestandardową.                                                                                  |
+|      Lista zablokowanych       |                              <em>Listy zablokowanych</em> możesz użyć, aby domyślnie przyznać dostęp wszystkim urządzeniom, lecz blokować zbiór urządzeń, które nie mają mieć dostępu do Twojej organizacji. Listę zablokowanych tworzy się za pomocą reguł niestandardowych blokujących platformy urządzeń, które nie mają być synchronizowane ze skrzynkami pocztowymi organizacji. Zalecamy ustawienie reguły domyślnej zezwalającej na dostęp wszystkich urządzeń, które nie są jawnie zablokowane przez istniejące reguły. Aby dodać nowe urządzenie lub zbiór urządzeń do listy zablokowanych, utwórz nową regułę niestandardową.                               |
+| Mieszane zezwalanie i blokowanie | Oprócz tworzenia list dozwolonych i zablokowanych możesz poddawać kwarantannie nowe urządzenia przenośne wprowadzane do organizacji, na czas oceny. Na przykład jeśli masz listę zablokowanych urządzeń przenośnych, które są niedozwolone w organizacji, i listę dozwolonych urządzeń przenośnych, które są dozwolone w organizacji, możesz ustawić kwarantannę jako regułę domyślną. Wszystkie inne urządzenia są automatycznie poddawane kwarantannie. Takie działanie umożliwia wykrywanie nowych urządzeń w miarę ich wprowadzania do organizacji i decydowanie, czy mają zostać dodane do listy dozwolonych, czy zablokowanych. |
+
 Poniższa procedura opisuje sposób tworzenia reguły niestandardowej.
 
 ## <a name="create-a-default-access-rule"></a>Tworzenie domyślnej reguły dostępu

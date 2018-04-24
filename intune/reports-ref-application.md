@@ -1,25 +1,25 @@
 ---
 title: Aplikacja
 titlesuffix: Microsoft Intune
-description: "Temat referencyjny dotyczący kategorii Aplikacja w kolekcji jednostek w interfejsie API magazynu danych usługi Intune."
-keywords: "Magazyn danych usługi Intune"
+description: Temat referencyjny dotyczący kategorii Aplikacja w kolekcji jednostek w interfejsie API magazynu danych usługi Intune.
+keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e7de3ab89ff75b381d0438f49fb6015b0eb28d28
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 5fd8f9744e68a19cc9411fe366aff4050cc3caa6
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-application-entities"></a>Dokumentacja jednostek aplikacji
 
@@ -128,11 +128,13 @@ Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobil
 
 Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
 
-| Właściwość | Opis |
-|---|---|
-| DateKey | Klucz daty rejestracji stanu instalacji aplikacji. |
-| AppKey | Klucz aplikacji mobilnej służący do identyfikowania wystąpienia AppRevision. |
-| DeviceKey | Klucz urządzenia docelowego służący do identyfikowania wystąpienia urządzenia. |
-| UserKey | Klucz użytkownika docelowego, który służy do identyfikowania wystąpienia użytkownika. |
-|AppInstallStateKey | Klucz stanu instalacji aplikacji, który służy do identyfikowania wystąpienia MobileAppInstallState. |
-| ErrorCode | Kod błędu zwracany przez instalatora aplikacji, platformę mobilną lub usługę dotyczący instalacji aplikacji. |
+
+|      Właściwość      |                                                         Opis                                                         |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------|
+|      DateKey       |                                  Klucz daty rejestracji stanu instalacji aplikacji.                                  |
+|       AppKey       |                             Klucz aplikacji mobilnej służący do identyfikowania wystąpienia AppRevision.                              |
+|     DeviceKey      |                              Klucz urządzenia docelowego służący do identyfikowania wystąpienia urządzenia.                               |
+|      UserKey       |                                Klucz użytkownika docelowego, który służy do identyfikowania wystąpienia użytkownika.                                 |
+| AppInstallStateKey |                     Klucz stanu instalacji aplikacji, który służy do identyfikowania wystąpienia MobileAppInstallState.                     |
+|     ErrorCode      | Kod błędu zwracany przez instalatora aplikacji, platformę mobilną lub usługę dotyczący instalacji aplikacji. |
+

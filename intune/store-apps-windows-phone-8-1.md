@@ -1,29 +1,29 @@
 ---
-title: "Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu Windows Phone 8.1 do usługi Microsoft Intune"
-titleSuffix: 
-description: "Informacje o dodawaniu aplikacji ze sklepu z aplikacjami systemu Windows Phone 8.1 do usługi Microsoft Intune."
-keywords: 
+title: Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu Windows Phone 8.1 do usługi Microsoft Intune
+titleSuffix: ''
+description: Informacje o dodawaniu aplikacji ze sklepu z aplikacjami systemu Windows Phone 8.1 do usługi Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4c3935c8dc263ceef9981a9fc9c47ace6f77d86
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 772257369368783a02a826cddc323960fea436b9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-windows-phone-81-store-apps-to-microsoft-intune"></a>Jak dodawać aplikacje ze sklepu z aplikacjami dla systemu Windows Phone 8.1 do usługi Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Przed przypisaniem aplikacji do urządzenia lub grupy użytkowników należy najpierw dodać aplikację do usługi Microsoft Intune. Poniższe kroki umożliwiają dodanie aplikacji ze sklepu systemu Windows Phone 8.1 do usługi Intune w portalu Azure.
 

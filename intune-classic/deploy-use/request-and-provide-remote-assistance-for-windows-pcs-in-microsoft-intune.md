@@ -1,29 +1,28 @@
 ---
-title: "Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows"
-description: "W tym artykule opisano kroki wykonywane przez użytkownika i administratora IT zapewniające uzyskanie pomocy zdalnej dla komputerów z systemem Windows zarządzanych jako komputery osobiste i zdalne uruchamianie komputera osobistego."
-keywords: 
+title: Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
+description: W tym artykule opisano kroki wykonywane przez użytkownika i administratora IT zapewniające uzyskanie pomocy zdalnej dla komputerów z systemem Windows zarządzanych jako komputery osobiste i zdalne uruchamianie komputera osobistego.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c2654491-5144-408a-a45a-644eb91ac1bb
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1bfa7f1dedecd47aeb30a12c5627a137b775d12a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 245d18b89be9b9884df6c7ee41436e747c0557fe
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune.
 
@@ -59,8 +58,8 @@ Zanim zaczniesz korzystać z żądań pomocy zdalnej i odpowiadać na nie, upewn
 
 ## <a name="respond-to-a-remote-assistance-request"></a>Odpowiadanie na żądanie pomocy zdalnej
 
-1. Gdy użytkownik prześle żądanie pomocy zdalnej, możesz je wyświetlić w obszarze roboczym **Alerty** w obszarze **Monitorowanie** > **Pomoc zdalna**. Na przykład:
-> ![Zrzut ekranu przedstawiający żądanie pomocy zdalnej](./media/team-viewer.png)
+1. Gdy użytkownik prześle żądanie pomocy zdalnej, możesz je wyświetlić w obszarze roboczym **Alerty** w obszarze **Monitorowanie** > **Pomoc zdalna**. Przykład:
+   > ![Zrzut ekranu przedstawiający żądanie pomocy zdalnej](./media/team-viewer.png)
 
 <br>Jeśli żądanie pozostanie bez odpowiedzi przez więcej niż 4 godziny, zostanie usunięte.
 2. Aby zaakceptować żądanie, wybierz pozycję **Zatwierdź żądanie i uruchom pomoc zdalną**.
@@ -84,6 +83,6 @@ W trakcie udzielania pomocy użytkownikom w rozwiązywaniu problemów od czasu d
 
 4.  W oknie dialogowym **Stan zadania** przejrzyj bieżące zadania zdalne, stan zadania, nazwę urządzenia i wszystkie zgłoszone błędy.
 
-### <a name="see-also"></a>Zobacz także
+### <a name="see-also"></a>Zobacz też
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

@@ -9,30 +9,30 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie ich urządzeń z
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurowanie automatycznej rejestracji w usłudze MDM
 
-1. Zaloguj się do [Portalu zarządzania Azure](https://portal.azure.com) (https://manage.windowsazure.com) i wybierz usługę **Azure Active Directory**.
+1. Zaloguj się do [portalu zarządzania platformy Azure](https://portal.azure.com) (https://manage.windowsazure.com)) i wybierz pozycję **Azure Active Directory**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-azure-main.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-azure-main.png)
 
 2. Wybierz pozycję **Mobilność (MDM i MAM)**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-mdm.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-mdm.png)
 
 3. Wybierz pozycję **Microsoft Intune**.
 
-  ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-intune.png)
 
 4. Skonfiguruj **zakres użytkownika oprogramowania MDM**. Określ użytkowników, których urządzenia powinny być zarządzane przez usługę Microsoft Intune. Urządzenia z systemem Windows 10 tych użytkowników zostaną automatycznie zarejestrowane w usłudze Microsoft Intune.
 
-  - **Brak**
-  - **Niektóre**
-  - **Wszystkie**
+   - **Brak**
+   - **Niektóre**
+   - **Wszystkie**
 
- ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
+   ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
 
 5. Użyj wartości domyślnych dla następujących adresów URL:
-  - **Adres URL Warunków użytkowania zarządzania urządzeniami mobilnymi**
-  - **Adres URL odnajdywania zarządzania urządzeniami przenośnymi**
-  - **Adres URL zgodności oprogramowania MDM**
+   - **Adres URL Warunków użytkowania zarządzania urządzeniami mobilnymi**
+   - **Adres URL odnajdywania zarządzania urządzeniami przenośnymi**
+   - **Adres URL zgodności oprogramowania MDM**
 
 6. Wybierz pozycję **Zapisz**.
 

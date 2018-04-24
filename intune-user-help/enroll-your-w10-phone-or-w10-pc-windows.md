@@ -1,27 +1,27 @@
 ---
-title: "Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Microsoft Docs"
-description: "Opis sposobu rejestrowania urządzenia przenośnego lub stacjonarnego z systemem Windows 10 w usłudze Intune"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Rejestrowanie urządzenia z systemem Windows 10 w usłudze Intune | Microsoft Docs
+description: Opis sposobu rejestrowania urządzenia przenośnego lub stacjonarnego z systemem Windows 10 w usłudze Intune
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f3debd0177df0aa0bdf5cb3cea8bf18054407b87
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 22d23751aaa3416fb13c7b08451ea91c3ee308e2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Rejestrowanie urządzeń z systemem Windows 10 w usłudze Intune
 
@@ -35,13 +35,13 @@ Chcesz wiedzieć więcej? Dowiedz się, co się dzieje po [zarejestrowaniu urzą
 
 2. Wpisz „informacje o komputerze” na __pasku wyszukiwania__, a następnie wybierz pozycję __Informacje o komputerze__.
 
- ![ustawienia wyszukiwania dla opcji informacje o komputerze](media/searching_for_about_your_pc.png)
+   ![ustawienia wyszukiwania dla opcji informacje o komputerze](media/searching_for_about_your_pc.png)
 
-3.  W obszarze __Ustawienia__ zobaczysz informacje dotyczące wersji systemu Windows 10 zainstalowanej na komputerze. Znajdź pozycję __Wersja__ na tej liście.
+3. W obszarze __Ustawienia__ zobaczysz informacje dotyczące wersji systemu Windows 10 zainstalowanej na komputerze. Znajdź pozycję __Wersja__ na tej liście.
 
- ![Opcja Informacje o komputerze w systemie Windows 10 Desktop](media/settings_about_pc.png)
+   ![Opcja Informacje o komputerze w systemie Windows 10 Desktop](media/settings_about_pc.png)
 
-4.  W przypadku używania wersji __1607 lub nowszej__ wykonaj [te kroki](enroll-your-w10-device-access-work-or-school.md). W przypadku użycia wersji __1511 lub starszej__ wykonaj [te kroki](enroll-your-w10-device-your-account.md).
+4. W przypadku używania wersji __1607 lub nowszej__ wykonaj [te kroki](enroll-your-w10-device-access-work-or-school.md). W przypadku użycia wersji __1511 lub starszej__ wykonaj [te kroki](enroll-your-w10-device-your-account.md).
 
 ## <a name="windows-10-mobile-devices"></a>Urządzenia z systemem Windows 10 Mobile        
 

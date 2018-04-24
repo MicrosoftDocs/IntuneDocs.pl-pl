@@ -1,42 +1,43 @@
 ---
-title: "Ręczne synchronizowanie urządzenia z systemem iOS | Microsoft Docs"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Ręczne synchronizowanie urządzenia z systemem iOS | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/11/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9c9144fbb20842a9ac8148827b85ac49d23a3d6d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a896e4a86cbeaacc07bdb4a32606a67b0049e3e1
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sync-your-ios-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem iOS
 
-Może się zdarzyć, że pobieranie aplikacji z Portalu firmy będzie trwać zbyt długo. W takim przypadku możesz spróbować ręcznie zsynchronizować urządzenie. Sprowadza się to do wprowadzenia w urządzeniu polecenia podjęcia kolejnej próby pobrania informacji przeznaczonych do pobrania.
+Może się zdarzyć, że pobieranie aplikacji z Portalu firmy będzie trwać zbyt długo. W takim przypadku spróbuj ręcznie zsynchronizować urządzenie. Spowoduje to podjęcie próby pobrania informacji, których urządzenie nie mogło pobrać.
 
 1. Otwórz aplikację Portal firmy.
 
-2. W sekcji **Moje urządzenia** wybierz urządzenie, którego obecnie używasz. Reprezentuje je kafelek urządzenia po lewej stronie, na którym jest także widoczny znacznik wyboru.
+2. Naciśnij opcję **Urządzenia**. Jeśli masz wiele urządzeń, zobaczysz listę urządzeń. Wybierz urządzenie, którego obecnie używasz. Jeśli masz tylko jedno urządzenie, przejdziesz bezpośrednio do ekranu szczegółów urządzenia.
 
-    ![Ekran urządzenia z sekcją Moje urządzenia](./media/ios-sync-1-comp-portal-apps.png)
+    ![Zrzut ekranu przedstawiający ekran Urządzenia z dwoma urządzeniami. Górne urządzenie jest opisane tekstem „Jest to obecnie używane urządzenie iPhone 6 Plus”.](/intune-user-help/media/ios_sync_1_CP_after_1804.png)
 
-3. Naciśnij przycisk **Synchronizuj** w prawym dolnym rogu ekranu.
+3. Naciśnij opcję **Sprawdź ustawienia**, aby zsynchronizować urządzenie. Na ekranie zostanie wyświetlony pasek ładowania do czasu zakończenia synchronizacji.
 
-    ![Szczegóły urządzenia z przyciskiem Synchronizuj](./media/ios-sync-2-sync-button.png)
+    ![Zrzut ekranu przedstawiający ekran Szczegóły urządzenia z ostatnim czasem zaewidencjonowania urządzenia oraz linkiem Sprawdź ustawienia.](/intune-user-help/media/ios_sync_2_CP_after_1804.png)  
 
-Na ekranie zostanie wyświetlony pasek ładowania; proces ładowania będzie trwał do czasu zakończenia synchronizacji.
+   ![Zrzut ekranu przedstawiający ekran Szczegóły urządzenia z paskiem ładowania po kliknięciu opcji Sprawdź ustawienia przez użytkownika.](/intune-user-help/media/ios_sync_3_CP-after_1804.png)
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+

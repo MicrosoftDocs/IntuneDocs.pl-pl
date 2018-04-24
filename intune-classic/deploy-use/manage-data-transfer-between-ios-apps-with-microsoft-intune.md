@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b83e5fa37f9a9844e3011cded3c3cd58f268521
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c27b191f8a0f9fbd298b820114f27acb4c31f966
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="manage-ios-apps"></a>Zarządzanie aplikacjami systemu iOS
 W ramach ochrony danych firmowych należy upewnić się, że przesyłanie plików jest ograniczone do aplikacji zarządzanych przez Ciebie.  Aplikacjami systemu iOS można zarządzać następująco:
@@ -51,17 +51,17 @@ Aby upewnić się, że aplikacje, które wdrażasz za pomocą rozwiązania do za
 Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy. Poniżej przedstawiono ogólną procedurę konfigurowania ustawienia nazwy UPN oraz ogólny opis wynikowego środowiska użytkownika końcowego:
 
 
-1.  W witrynie Azure Portal [skonfiguruj zasady ochrony aplikacji](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) dla platformy iOS. Skonfiguruj ustawienia zasad zgodnie z wymaganiami firmy i wybierz aplikacje, wobec których należy zastosować te zasady.
+1. W witrynie Azure Portal [skonfiguruj zasady ochrony aplikacji](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) dla platformy iOS. Skonfiguruj ustawienia zasad zgodnie z wymaganiami firmy i wybierz aplikacje, wobec których należy zastosować te zasady.
 
-2.  Wdróż aplikacje i profil poczty e-mail, które mają być zarządzane **za pośrednictwem rozwiązania do zarządzania urządzeniami przenośnymi innej firmy**, korzystając z poniższych ogólnych instrukcji. Opisano to również w Przykładzie 1.
+2. Wdróż aplikacje i profil poczty e-mail, które mają być zarządzane **za pośrednictwem rozwiązania do zarządzania urządzeniami przenośnymi innej firmy**, korzystając z poniższych ogólnych instrukcji. Opisano to również w Przykładzie 1.
 
-  1.  Wdróż aplikację z następującymi ustawieniami konfiguracji aplikacji:
+   1. Wdróż aplikację z następującymi ustawieniami konfiguracji aplikacji:
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
       Przykład: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
-  2.  Wdróż zasadę funkcji Otwórz w przy użyciu dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy na zarejestrowanych urządzeniach.
+   2. Wdróż zasadę funkcji Otwórz w przy użyciu dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy na zarejestrowanych urządzeniach.
 
 
 ### <a name="example-1-admin-experience-in-third-party-mdm-console"></a>Przykład 1: Środowisko administracyjne w konsoli rozwiązania do zarządzania urządzeniami przenośnymi innej firmy
@@ -70,9 +70,9 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
 
 2. W sekcji Konfiguracja aplikacji wprowadź następujące ustawienie:
 
-  **key** = IntuneMAMUPN, **value** = <username@company.com>
+   **key** = IntuneMAMUPN, **value** = <username@company.com>
 
-  Dokładna składnia pary key/value (klucz/wartość) może się różnić w zależności od dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy. W poniższej tabeli przedstawiono przykłady dostawców rozwiązania do zarządzania urządzeniami przenośnymi innej firmy i dokładnie wartości, które należy wprowadzić dla pary key/value.
+   Dokładna składnia pary key/value (klucz/wartość) może się różnić w zależności od dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy. W poniższej tabeli przedstawiono przykłady dostawców rozwiązania do zarządzania urządzeniami przenośnymi innej firmy i dokładnie wartości, które należy wprowadzić dla pary key/value.
 
 |Dostawca rozwiązania do zarządzania urządzeniami przenośnymi innej firmy| Klucz konfiguracji | Typ wartości | Wartość konfiguracji|
 | ------- | ---- | ---- | ---- |

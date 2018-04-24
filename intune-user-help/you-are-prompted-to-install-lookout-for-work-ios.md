@@ -1,25 +1,25 @@
 ---
-title: "Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS | Microsoft Docs"
-description: "Dowiedz się, jak zainstalować aplikację Lookout for Work dla systemu iOS."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Konieczne jest zainstalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS | Microsoft Docs
+description: Dowiedz się, jak zainstalować aplikację Lookout for Work dla systemu iOS.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ae05df1478baa8b965cdcd11a47ffc0d694734ab
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fda95e461fe8412b26289bc601d8282588cd211c
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Instalowanie aplikacji Lookout for Work na urządzeniu z systemem iOS
 
@@ -31,15 +31,15 @@ Twoja firma wymaga, aby przed uzyskaniem dostępu do swoich danych zainstalować
 
 1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji Lookout for Work na urządzeniu.
 
-  ![Naciśnij pozycję Zainstaluj, aby zainstalować aplikację Lookout for Work](./media/ios-mtd-install-app-request.png)
+      ![Zrzut ekranu monitu instalacji aplikacji z przyciskami Anuluj i Zainstaluj.](/intune-user-help/media/ios-mts-install-app-request-after-1804.png)
 
 2. Jeśli zobaczysz następujący komunikat, naciśnij pozycję **Ustawienia**, włącz opcję **Usługi lokalizacji**, a następnie naciśnij przycisk **Kontynuuj**.
 
-  ![Naciśnij pozycję Ustawienia, a następnie opcję Usługi lokalizacji](./media/ios-lfw-allow-location-services.png)
+      ![Naciśnij pozycję Ustawienia, a następnie opcję Usługi lokalizacji](./media/ios-lfw-allow-location-services.png)
 
 3. Sprawdź uprawnienia, których wymaga aplikacja Lookout for Work, i naciśnij przycisk **Kontynuuj**.
 
-  ![Masz teraz połączenie z aplikacją Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
+      ![Masz teraz połączenie z aplikacją Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
 4. W monicie proszącym o zezwolenie aplikacji Lookout for Work na wysyłanie powiadomień naciśnij pozycję **Zezwalaj**.
 

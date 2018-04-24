@@ -1,28 +1,28 @@
 ---
-title: "Używanie certyfikatów PKCS z usługą Microsoft Intune — Azure | Micrososft Docs"
-description: "Dodawanie lub tworzenie certyfikatów Public Key Cryptography Standards za pomocą usługi Microsoft Intune, w tym kroki eksportowania certyfikatu głównego, konfigurowania szablonu certyfikatów, pobierania i instalowania Łącznika certyfikatów usługi Microsoft Intune, tworzenia profilu konfiguracji urządzenia, tworzenia profilu certyfikatu PKCS na platformie Azure i w urzędzie certyfikacji"
-keywords: 
+title: Używanie certyfikatów PKCS z usługą Microsoft Intune — Azure | Micrososft Docs
+description: Dodawanie lub tworzenie certyfikatów Public Key Cryptography Standards za pomocą usługi Microsoft Intune, w tym kroki eksportowania certyfikatu głównego, konfigurowania szablonu certyfikatów, pobierania i instalowania Łącznika certyfikatów usługi Microsoft Intune, tworzenia profilu konfiguracji urządzenia, tworzenia profilu certyfikatu PKCS na platformie Azure i w urzędzie certyfikacji
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c0668921f03b24b319c2c37837dbd2cc053370ca
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 0dfcaa2e37fecc4c5a075931489c106b78c17b7e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Certyfikaty służą do uwierzytelniania i zabezpieczania dostępu do zasobów firmowych, takich jak sieć VPN lub sieć WiFi. W tym artykule pokazano, jak wyeksportować certyfikat PKCS, a następnie dodać ten certyfikat do profilu usługi Intune. 
 
@@ -56,7 +56,7 @@ Do uwierzytelniania w ramach sieci VPN, sieci Wi-Fi i innych zasobów na każdym
 
    Przykład:
 
-4.  Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
+4. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
 
    `certutil -ca.cert certnew.cer`
 
