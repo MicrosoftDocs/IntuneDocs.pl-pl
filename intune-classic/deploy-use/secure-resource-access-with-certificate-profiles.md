@@ -1,4 +1,4 @@
----
+﻿---
 title: Profile certyfikatów zapewniające dostęp do zasobów
 description: Bezpieczna sieć VPN, sieć Wi-Fi i dostęp do poczty e-mail przy użyciu certyfikatu zainstalowanego na każdym urządzeniu użytkownika.
 keywords: ''
