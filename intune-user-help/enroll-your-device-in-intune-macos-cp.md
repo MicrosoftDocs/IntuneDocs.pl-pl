@@ -17,18 +17,16 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e3990c0670516de907ac048b844152014db5be57
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3dac9446d7a1097f5be4d0851cd78e8cbb86cc4e
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
 Uzyskiwanie dostępu do aplikacji, danych i zasobów organizacji ułatwia wykonywanie pracy. Twoja organizacja używa usługi Intune do [zarządzania dostępem do tych zasobów](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md), co wymaga pobrania aplikacji Portal firmy dla systemu macOS. Te instrukcje będą działać w przypadku urządzeń z systemem macOS w wersji OS X El Capitan 10.11 i nowszych.
 
-> [!NOTE]
-> Instrukcje dotyczące rejestrowania urządzeń z systemem macOS dla wcześniejszych wersji systemu macOS można znaleźć [tutaj](enroll-your-device-in-intune-macos-legacy.md).
 
 1. Na __Docku__ znajdź pozycję __Safari__ i otwórz nowe okno, a następnie otwórz [witrynę aplikacji Portal firmy](https://portal.manage.microsoft.com).
 

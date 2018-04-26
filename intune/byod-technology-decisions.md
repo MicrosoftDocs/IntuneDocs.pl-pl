@@ -3,7 +3,7 @@ title: Podejmowanie decyzji technologicznych dotyczących modelu „Przynieś w�
 description: Podejmowanie kluczowych decyzji technologicznych dotyczących włączania modelu BYOD i ochrony danych firmowych za pomocą pakietu Microsoft Enterprise Mobility + Security.
 keywords: ''
 author: dougeby
-ms.author: pfetty
+ms.author: dougeby
 manager: dougeby
 ms.date: 12/8/2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 7d04abfe7886e4ef42cf168dbb495e987fdba425
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 7fb86ae8d3163e14581ee495004b74f684d30cec
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Podejmowanie kluczowych decyzji technologicznych dotyczących włączania modelu BYOD za pomocą pakietu Microsoft Enterprise Mobility + Security
 
@@ -78,6 +78,6 @@ Wiele organizacji ma często określone zagrożenia, które ich dotyczą.  W pon
 |Przypadkowe udostępnienie danych lub zapisanie w niezabezpieczonych lokalizacjach | Wyłącz drukowanie | n/d|
 
 ## <a name="next-steps"></a>Następne kroki
-Teraz należy podjąć decyzję o tym, czy model BYOD ma zostać włączony w organizacji, koncentrując swoje działania na zarządzaniu urządzeniami, zarządzaniu aplikacjami lub obu tych czynnościach. Wybór implementacji należy do Ciebie, ale możesz mieć pewność, że funkcje tożsamości i zabezpieczeń dostępne dzięki użyciu usługi Azure AD będą dostępne niezależnie od tego wyboru.
+Teraz należy podjąć decyzję o tym, czy model BYOD ma zostać włączony w organizacji, koncentrując swoje działania na zarządzaniu urządzeniami, zarządzaniu aplikacjami lub obu tych czynnościach. Wybór implementacji należy do Ciebie, ale możesz mieć pewność, że funkcje tożsamości i zabezpieczeń dostępne dzięki użyciu usługi Azure AD będą dostępne niezależnie od tego wyboru.  
 
 Użyj [Przewodnika planowania](planning-guide.md), aby ustalić szczegóły dotyczące następnego poziomu planowania.

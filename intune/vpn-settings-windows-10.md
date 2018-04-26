@@ -13,11 +13,11 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 9464b73acc43b9625560156617359c374d7100fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 787501892d0955e3396bc8f37e5da8ba0d312c74
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="read-about-the-vpn-settings-in-intune"></a>Przeczytaj informacje o ustawieniach sieci VPN w usłudze Intune
 
@@ -93,6 +93,7 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 ## <a name="apps-and-traffic-rules"></a>Reguły dotyczące aplikacji i ruchu
 
 **Ogranicz połączenie sieci VPN do tych aplikacji**: włącz to ustawienie, aby tylko wybrane aplikacje mogły korzystać z połączenia VPN.
+
 **Skojarzone aplikacje**: podaj listę aplikacji, które automatycznie będą używać połączenia VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnej podaj nazwę rodziny pakietów. W przypadku aplikacji klasycznej podaj ścieżkę pliku aplikacji.
 
 >[!IMPORTANT]
