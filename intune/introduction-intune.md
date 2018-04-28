@@ -14,11 +14,11 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 23d669bfd535fb08bb52d194a1852aa774b5a186
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6f92cb350a69aeb600f1d48e9bdb0b22a623cb52
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-intune"></a>Co to jest usługa Intune?
 
@@ -81,7 +81,7 @@ Omawiając konfigurację aplikacji i usługę Intune, odnosimy się w szczególn
 Korzystając z usługi Intune w połączeniu z innymi usługami pakietu EMS, możesz zapewnić swojej organizacji lepsze bezpieczeństwo aplikacji mobilnych niż to dostarczane przez system operacyjny urządzeń przenośnych i same aplikacje mobilne za pośrednictwem konfiguracji aplikacji. Aplikacja zarządzana za pomocą pakietu EMS ma dostęp do szerszego zakresu zabezpieczeń aplikacji mobilnych i danych, który obejmuje:
 
 * [Logowanie jednokrotne](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/multi-factor-authentication/multi-factor-authentication)
+*   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
 * [Warunkowy dostęp do aplikacji — dostęp jest możliwy, jeśli aplikacja mobilna zawiera dane firmy](app-based-conditional-access-intune.md)
 * [Izolowanie danych firmowych od danych osobistych w ramach tej samej aplikacji](app-protection-policy.md)
 * [Zasady ochrony aplikacji (numer PIN, szyfrowanie, funkcja „Zapisz jako”, schowek itp.)](app-protection-policies.md)
