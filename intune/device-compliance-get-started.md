@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3326ecccd0d20602d6a9445b62c39f582354f238
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2f599f168c1b4ae9aa94324b69ed11e6d426c86d
+ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -80,6 +80,8 @@ Do korzystania z zasad zgodności urządzeń są wymagane następujące elementy
   - Windows 10
 
 - Urządzenia muszą być zarejestrowane w usłudze Intune, aby mogły zgłaszać stan zgodności.
+
+- Urządzenia zarejestrowane dla jednego użytkownika lub urządzenia bez użytkownika podstawowego są obsługiwane. Wiele kontekstów użytkownika nie jest obsługiwanych.
 
 ## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak zasady zgodności urządzeń usługi Intune działają z usługą Azure AD
 
@@ -148,9 +150,9 @@ W przypadku urządzeń zgodnych z regułami zasad możesz udzielić im dostępu 
 Zasady zgodności można również stosować bez dostępu warunkowego. Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, w których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Jeśli zasady zgodności są stosowane bez dostępu warunkowego, dostęp do zasobów firmy nie jest ograniczany.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sposoby wdrażania zasad zgodności urządzeń
-Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników lub urządzeń w grupach urządzeń. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność urządzeń użytkownika.
+Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników lub urządzeń w grupach urządzeń. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność wszystkich urządzeń użytkownika.
 
-W przypadku urządzeń w grupach urządzeń **ustawienia zasad zgodności** (Witryna Azure Portal > Zgodność urządzenia) obejmują następujące ustawienia:
+**Ustawienia zasad zgodności** (witryna Azure Portal > Zgodność urządzenia) obejmują następujące ustawienia:
 
 - **Oznacz urządzenia bez przypisanych zasad zgodności jako**: ta właściwość ma dwie wartości:
 

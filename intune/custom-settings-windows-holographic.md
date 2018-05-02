@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 4/26/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b349a61d61288f700294e04d029d825afba13445
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d1825d99243654c9fecac7729153a95234d435ff
+ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Niestandardowe ustawienia urządzeń z systemem Windows Holographic for Business w usłudze Intune
 
@@ -89,14 +89,14 @@ Następujące ustawienia są przydatne w przypadku urządzeń z systemem Windows
 ---
 |Identyfikator URI OMA|Typ danych  |
 |---------|---------|
-|./Vendor/MSFT/Update/ApprovedUpdates<br><br>**Ważne**<br>Musisz przeczytać i zaakceptować zaktualizowane Umowy licencyjne użytkownika oprogramowania (EULA) w imieniu swoich użytkowników końcowych. Niewykonanie tej czynności jest naruszeniem zobowiązań prawnych lub umownych.|Węzeł zatwierdzania aktualizacji i akceptacji Umowy licencyjnej użytkownika oprogramowania (EULA) w imieniu użytkownika końcowego.|
+|./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br><br>**Ważne**<br>Musisz przeczytać i zaakceptować zaktualizowane Umowy licencyjne użytkownika oprogramowania (EULA) w imieniu swoich użytkowników końcowych. Niewykonanie tej czynności jest naruszeniem zobowiązań prawnych lub umownych.|Węzeł zatwierdzania aktualizacji i akceptacji Umowy licencyjnej użytkownika oprogramowania (EULA) w imieniu użytkownika końcowego.<br/><br/>Aby uzyskać więcej informacji, zobacz [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) (Dostawca usługi konfiguracji Aktualizacja).|
 
 ### <a name="applicationlaunchrestrictionshttpsdocsmicrosoftcomwindowsclient-managementmdmapplocker-csp"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 ---
 |Identyfikator URI OMA|Typ danych  |
 |---------|---------|
-|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Ważne**<br>W artykule dostawcy usług kryptograficznych funkcji AppLocker są używane przykłady XML. Aby skonfigurować ustawienia przy użyciu profilów niestandardowych w usłudze Intune, należy użyć zwykłego kodu XML.|String<br>Aby uzyskać więcej informacji, zobacz artykuł dotyczący [dostawcy usług kryptograficznych funkcji AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Ważne**<br>W artykule dostawcy usług kryptograficznych funkcji AppLocker są używane przykłady XML. Aby skonfigurować ustawienia przy użyciu profilów niestandardowych w usłudze Intune, należy użyć zwykłego kodu XML.|String<br>Aby uzyskać więcej informacji, zobacz [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp) (Dostawca usługi konfiguracji AppLocker).|
 
 ## <a name="find-the-policies-you-can-configure"></a>Wyszukiwanie zasad, które można skonfigurować
 
