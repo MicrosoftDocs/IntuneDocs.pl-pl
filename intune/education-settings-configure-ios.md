@@ -15,18 +15,18 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63284a1dd5c1d5a6c588775f1c282bfcfef5de67
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c5820d058479bbf37c5dffdb930792f4f84afa69
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Wprowadzenie
-[Classroom](https://itunes.apple.com/app/id1085319084) jest aplikacją, która pomaga nauczycielom w prowadzeniu nauczania oraz sterowaniu urządzeniami uczniów w klasie. Przy użyciu aplikacji nauczyciel może na przykład:
+[Classroom](https://itunes.apple.com/app/id1085319084) jest aplikacją, która pomaga nauczycielom w prowadzeniu nauczania oraz sterowaniu urządzeniami uczniów w klasie. Na przykład aplikacja pozwala nauczycielom:
 
 - Otwierać aplikacje na urządzeniach uczniów
 - Blokować i odblokowywać ekran tabletu iPad
@@ -34,16 +34,16 @@ ms.lasthandoff: 04/16/2018
 - Nawigować w tabletach iPad uczniów do zakładki lub rozdziału w książce
 - Wyświetlać ekran z tabletu iPad ucznia w urządzeniu Apple TV
 
-Użyj profilu urządzenia **Edukacja** dla systemu iOS w usłudze Intune oraz informacji przedstawionych w tym temacie, aby skonfigurować aplikację Classroom oraz urządzenia, na których jest ona używana.
+Aby skonfigurować aplikację Classroom na urządzeniu, należy w usłudze Intune utworzyć i skonfigurować profil urządzenia Edukacja dla systemu iOS.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
 Przed rozpoczęciem konfiguracji tych ustawień należy uwzględnić następujące kwestie:
 
-- Tablety iPad zarówno dla nauczycieli, jak i dla uczniów muszą być zarejestrowane w usłudze Intune
+- Tablety iPad, zarówno dla nauczycieli, jak i dla uczniów, muszą być zarejestrowane w usłudze Intune.
 - Upewnij się, że na urządzeniu nauczyciela została zainstalowana aplikacja [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Aplikację możesz zainstalować ręcznie lub użyć funkcji [zarządzania aplikacjami usługi Intune](app-management.md).
-- Należy skonfigurować certyfikaty, aby uwierzytelnić połączenia między urządzeniami dla nauczycieli i uczniów (zobacz Krok 2).
-- Tablety iPad dla nauczycieli i uczniów muszą znajdować się w tej samej sieci Wi-Fi, jak również mieć włączoną funkcję Bluetooth.
+- Należy skonfigurować certyfikaty, aby uwierzytelnić połączenia między urządzeniami dla nauczycieli i uczniów (zobacz Krok 2, Tworzenie i przypisywanie profilu Edukacja dla systemu iOS w usłudze Intune).
+- Tablety iPad dla nauczycieli i uczniów muszą znajdować się w tej samej sieci Wi-Fi oraz mieć włączoną funkcję Bluetooth.
 - Aplikacja Classroom jest uruchamiania na nadzorowanych tabletach iPad z systemem iOS 9.3 lub nowszym.
 - W tej wersji usługa Intune obsługuje zarządzanie scenariuszem 1:1, zgodnie z którym każdy uczeń ma swój własny dedykowany tablet iPad.
 
@@ -82,14 +82,14 @@ Informacje do usługi SDS możesz zaimportować przy użyciu jednej z następuj�
 9.  Wybierz kolejno pozycje **Ustawienia** > **Konfiguruj**.
 
 
-Następnie potrzebne są certyfikaty, aby ustanowić relację zaufania między tabletami iPad dla nauczycieli i uczniów. Certyfikaty służą do uwierzytelniania połączeń między urządzeniami w sposób płynny i dyskretny bez konieczności wprowadzania nazwy użytkownika i hasła.
+W następnej sekcji utworzysz certyfikaty, aby ustanowić relację zaufania między tabletami iPad dla nauczycieli i uczniów. Certyfikaty służą do uwierzytelniania połączeń między urządzeniami w sposób płynny i dyskretny bez konieczności wprowadzania nazwy użytkownika i hasła.
 
 >[!IMPORTANT]
 >Używane certyfikaty dla nauczycieli i uczniów muszą być wystawiane przez różne urzędy certyfikacji. Należy utworzyć dwa nowe podrzędne urzędy certyfikacji połączone z istniejącą infrastrukturą certyfikatów — jeden dla nauczycieli i jeden dla uczniów.
 
 Profile edukacyjne systemu iOS obsługują tylko certyfikaty PFX. Certyfikaty SCEP nie są obsługiwane.
 
-Tworzone certyfikaty poza uwierzytelnianiem użytkowników muszą obsługiwać uwierzytelnianie serwera.
+Utworzone certyfikaty muszą obsługiwać uwierzytelnianie serwera i uwierzytelnianie użytkowników.
 
 ### <a name="configure-teacher-certificates"></a>Konfigurowanie certyfikatów dla nauczycieli
 
@@ -97,13 +97,15 @@ W okienku **Edukacja** wybierz pozycję **Certyfikaty nauczycieli**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurowanie certyfikatu głównego dla nauczycieli
 
-W obszarze **Certyfikat główny nauczyciela** wybierz przycisk przeglądania, aby wybrać certyfikat główny dla nauczycieli z rozszerzeniem .cer (zakodowany w formacie DER lub Base64) lub .P7B (z pełnym łańcuchem lub bez).
+W obszarze **Certyfikat główny nauczyciela** kliknij przycisk przeglądania. Wybierz certyfikat główny z jednym z rozszerzeń:
+- .cer (zakodowany w formacie DER lub Base64) 
+- .P7B (z pełnym łańcuchem lub bez)
 
 #### <a name="configure-teacher-pkcs12-certificate"></a>Konfigurowanie certyfikatu PKCS#12 dla nauczycieli
 
 W obszarze **Certyfikat PKCS#12 nauczyciela** skonfiguruj następujące wartości:
 
-- **Format nazwy obiektu** — usługa Intune automatycznie wstawia prefiks do nazwy pospolitej certyfikatu — **leader** w przypadku certyfikatu dla nauczycieli i **member** w przypadku certyfikatu dla uczniów.
+- **Format nazwy podmiotu** — usługa Intune automatycznie wstawia prefiks **leader** do nazw pospolitych certyfikatów dla nauczycieli. Nazwy pospolite certyfikatów dla uczniów mają prefiks **member**.
 - **Urząd certyfikacji** — wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. 
 - **Nazwa urzędu certyfikacji** — wprowadź nazwę urzędu certyfikacji.
 - **Nazwa szablonu certyfikatu** — wprowadź nazwę szablonu certyfikatu, który dodano do urzędu wystawiającego certyfikaty. 
@@ -120,13 +122,15 @@ Po zakończeniu konfigurowania certyfikatów wybierz przycisk **OK**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurowanie certyfikatu głównego dla uczniów
 
-W obszarze **Certyfikat główny ucznia** wybierz przycisk przeglądania, aby wybrać certyfikat główny dla uczniów z rozszerzeniem .cer (zakodowany w formacie DER lub Base64) lub .P7B (z pełnym łańcuchem lub bez).
+W obszarze **Certyfikat główny ucznia** wybierz przycisk przeglądania. Wybierz certyfikat główny z jednym z rozszerzeń:
+- .cer (zakodowany w formacie DER lub Base64) 
+- .P7B (z pełnym łańcuchem lub bez)
 
 #### <a name="configure-student-pkcs12-certificate"></a>Konfigurowanie certyfikatów PKCS#12 dla uczniów
 
 W obszarze **Certyfikat PKCS#12 ucznia** skonfiguruj następujące wartości:
 
-- **Format nazwy obiektu** — usługa Intune automatycznie wstawia prefiks do nazwy pospolitej certyfikatu — **leader** w przypadku certyfikatu dla nauczycieli i **member** w przypadku certyfikatu dla uczniów.
+- **Format nazwy podmiotu** — usługa Intune automatycznie wstawia prefiks **leader** do nazw pospolitych certyfikatów dla nauczycieli. Nazwy pospolite certyfikatów dla uczniów mają prefiks **member**.
 - **Urząd certyfikacji** — wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. 
 - **Nazwa urzędu certyfikacji** — wprowadź nazwę urzędu certyfikacji.
 - **Nazwa szablonu certyfikatu** — wprowadź nazwę szablonu certyfikatu, który dodano do urzędu wystawiającego certyfikaty. 
@@ -147,7 +151,7 @@ Przypisz profil do urządzeń dla uczniów w grupach, które zostały utworzone 
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz gdy nauczyciel używa aplikacji Classroom, będzie miał pełną kontrolę nad urządzeniami uczniów.
+Teraz, gdy nauczyciele używają aplikacji Classroom, mają pełną kontrolę nad urządzeniami uczniów.
 
 Aby uzyskać więcej informacji o aplikacji Classroom, zobacz [pomoc dotyczącą aplikacji Classroom](https://help.apple.com/classroom/ipad/2.0/) w witrynie sieci Web firmy Apple.
 

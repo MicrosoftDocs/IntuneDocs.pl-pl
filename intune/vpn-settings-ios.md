@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 4/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce970f942d8ea20eb9ea593c23160757122926e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 374c3937d04fd546c17d6f147609f448875dddba
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -36,12 +36,17 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 - **Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+  - **Cisco AnyConnect w starszej wersji**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
   - **Pulse Secure**
   - **Cisco (IPSec)**
   - **Citrix**
   - **Niestandardowa sieć VPN**
+
+    > [!NOTE]
+    > - Profile **sieci VPN Cisco AnyConnect w starszej wersji** są przeznaczone dla aplikacji [Cisco AnyConnect w starszej wersji](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) w wersji 4.0.5x i starszych
+    > - Profile **sieci VPN Cisco AnyConnect** są przeznaczone dla aplikacji [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) w wersji 4.0.7x i nowszych
 
 - **Podziel tunelowanie**: ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu używa połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
 
@@ -75,3 +80,6 @@ W przypadku wybrania opcji **Niestandardowa sieć VPN** jako typ połączenia sk
 - **Skrypt konfiguracji automatycznej**: umożliwia skonfigurowanie serwera proxy przy użyciu pliku. Podaj **adres URL serwera proxy**, np. **http://proxy.contoso.com**, który zawiera plik konfiguracji.
 - **Adres**: podaj adres IP dla w pełni kwalifikowanej nazwy hosta serwera proxy.
 - **Numer portu**: podaj numer portu skojarzony z serwerem proxy.
+
+## <a name="next-step"></a>Następny krok
+[Tworzenie profilów sieci VPN w usłudze Intune](vpn-settings-configure.md)

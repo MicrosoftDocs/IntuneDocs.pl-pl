@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 611ec516b87f42b41a80de605d0d511ed2c58309
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
@@ -370,6 +370,11 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 - **Identyfikator URI zasobu usługi drukowania** — identyfikator URI zasobu OAuth dla usługi drukowania skonfigurowanej w witrynie Azure Portal.
 - **Maksymalna liczba drukarek do uwzględnienia w zapytaniu (tylko wersja mobilna)** — maksymalna liczba drukarek, która powinna zostać uwzględniona w zapytaniu z punktu końcowego wykrywania.
 - **Identyfikator URI zasobu usługi wykrywania drukarek** — identyfikator URI zasobu OAuth dla usługi wykrywania drukarek skonfigurowany w witrynie Azure Portal.
+
+## <a name="local-printer"></a>Drukarka lokalna
+- **Drukarki** — lista dodanych drukarek lokalnych.
+- **Drukarka lokalna** — ustaw tę drukarkę jako domyślną.
+- **Dostęp użytkownika pozwalający na dodanie nowych drukarek** — zezwala na korzystanie z drukarek lokalnych lub je blokuje.
 
 ## <a name="reporting-and-telemetry"></a>Raportowanie i telemetria
 

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 01/10/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 74c709790295a971ff9efe7c2cc348d13d471d5a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 486ff2d22cb201abc926efc96a83455be98e7536
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -458,6 +458,73 @@ WebViewHandledURLSchemes | Tablica ciągów | Określa schematy adresów URL obs
 
 > [!NOTE]
 > Jeśli aplikacja zostanie udostępniona w sklepie App Store, ustawienie `MAMPolicyRequired` musi być ustawione na wartość „NO” (Nie) zgodnie ze standardami sklepu App Store.
+
+## <a name="sharing-data-via-uiactivityviewcontroller"></a>Udostępnianie danych przy użyciu kontrolera UIActivityViewController 
+Począwszy od wersji 8.0.2, w zestawie SDK aplikacji Intune będzie można filtrować akcje kontrolera UIActivityViewController w taki sposób, aby nie było możliwości wybrania żadnych lokalizacji udostępniania poza usługą Intune. To zachowanie będzie uzależnione od zasad transferu danych aplikacji oraz zapowiadanej funkcji aplikacji. Zapowiadana funkcja zostanie włączona, gdy w większości aplikacji własnych firmy Microsoft (tj. Word, Excel, Powerpoint) zostaną wprowadzone wymagane zmiany, które umożliwią obsługę udostępniania danych przy użyciu kontrolera UIActivityViewController. 
+ 
+### <a name="copy-to-actions"></a>Akcje „Kopiuj do” 
+W przypadku udostępniania dokumentów przy użyciu kontrolerów UIActivityViewController i UIDocumentInteractionController system iOS wyświetla akcje „Kopiuj do” dla każdej aplikacji obsługującej otwieranie udostępnianego dokumentu. Aplikacje deklarują obsługiwane przez siebie typy dokumentów za pomocą ustawienia klucza CFBundleDocumentTypes w pliku Info.plist. Tej metody udostępniania nie będzie można już używać, jeśli zasady nie będą zezwalać na udostępnianie niezarządzanym aplikacjom. Zamiast tego aplikacje będą musiały dodać do swoich aplikacji rozszerzenie akcji inne niż interfejsu użytkownika i połączyć je z zestawem SDK aplikacji Intune dla systemu iOS. Rozszerzenie akcji pełni funkcję podobną do klasy zastępczej. Zestaw SDK wdroży całe zachowanie udostępniania pliku. Wykonaj kroki integracji zestawu SDK przedstawione powyżej oraz następujące: 
+ 
+1. Aplikacja musi mieć zdefiniowany przynajmniej jeden parametr schemeURL w obszarze klucza CFBundleURLTypes w pliku Info.plist. 
+2. Aplikacja i rozszerzenie aplikacji muszą dzielić przynajmniej jedną grupę aplikacji z listy w obszarze tablicy AppGroupIdentifiers w obszarze słownika IntuneMAMSettings aplikacji i rozszerzeń. 
+3. Nazwij rozszerzenie akcji „Otwórz w”, dodając nazwę aplikacji. W zależności od potrzeb zlokalizuj plik Info.plist. 
+4. Zaprojektuj ikonę szablonu rozszerzenia zgodnie z opisem w [dokumentacji dla deweloperów firmy Apple](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Możesz też użyć narzędzia IntuneMAMConfigurator do wygenerowania tych obrazów z katalogu .app aplikacji. Uruchom polecenie „IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory” 
+5. W obszarze IntuneMAMSettings w pliku Info.plist rozszerzenia dodaj ustawienie wartości logicznej o nazwie OpenInActionExtension z wartością YES (TAK). 
+6. Skonfiguruj słownik NSExtensionActivationRule do obsługi pojedynczego pliku oraz wszystkich typów klucza CFBundleDocumentTypes aplikacji poprzedzonego prefiksem „com.microsoft.intune.mam”. Jeśli na przykład aplikacja obsługuje public.text i public.image, reguła aktywacji powinna wyglądać następująco: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.text” || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image”).@count == 1 
+).@count == 1 
+```
+
+### <a name="update-existing-share-and-action-extensions"></a>Aktualizowanie istniejących rozszerzeń udostępniania i akcji 
+Jeśli aplikacja zawiera już rozszerzenia udostępniania i akcji, regułę NSExtensionActivationRule trzeba będzie zmodyfikować, aby zezwolić na typy usługi Intune. Dla każdego typu obsługiwanego przez rozszerzenie dodatkowy typ poprzedzony prefiksem „com.microsoft.intune.mam”. Jeśli na przykład istniejąca reguła aktywacji wygląda w następujący sposób:  
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+Należy ją zmienić na: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.data 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+>[!Note] Narzędzia IntuneMAMConfigurator można użyć do dodania typów usługi Intune do reguły aktywacji. Jeśli istniejąca reguła aktywacji korzysta ze wstępnie zdefiniowanych stałych ciągów (np. NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText, itp.), składnia predykatu może być dość złożona. Narzędzia IntuneMAMConfigurator można również użyć do konwersji reguły aktywacji ze stałych ciągów do ciągu predykatu podczas dodawania typów usługi Intune. Narzędzie IntuneMAMConfigurator znajduje się w repozytorium GitHub. 
+
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Włączanie docelowej konfiguracji MAM dla aplikacji systemu iOS
 Docelowa konfiguracja MAM umożliwia aplikacjom odbieranie danych konfiguracji za pośrednictwem zestawu SDK aplikacji usługi Intune. Format i odmiany tych danych muszą zostać zdefiniowane i przekazane klientom usługi Intune przez właściciela/dewelopera aplikacji. Administratorzy usługi Intune mogą przekazywać dane konfiguracji do miejsc docelowych i wdrażać te dane za pośrednictwem witryny Intune Azure Portal. Począwszy od wersji 7.0.1 zestawu SDK aplikacji usługi Intune dla systemu iOS, aplikacje uwzględnione w docelowej konfiguracji MAM mogą otrzymywać dane docelowej konfiguracji MAM za pośrednictwem usługi MAM. Dane konfiguracji aplikacji zostaną przypisane do aplikacji bezpośrednio za pośrednictwem naszej usługi MAM zamiast za pośrednictwem kanału zarządzania urządzeniami mobilnymi (MDM). Zestaw SDK aplikacji usługi Intune udostępnia klasę umożliwiającą uzyskanie dostępu do danych pobranych z tych konsol. Rozważ poniższe kwestie w charakterze wymagań wstępnych: <br>

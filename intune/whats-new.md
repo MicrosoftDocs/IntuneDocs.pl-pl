@@ -1,12 +1,12 @@
 ---
-title: Co nowego w usłudze Microsoft Intune
+title: Co nowego w usłudze Microsoft Intune — Azure | Microsoft Docs
 titlesuffix: ''
 description: Dowiedz się, co nowego w witrynie Azure Portal usługi Intune
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 04/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: a2692163977a352e7a26dfc656d601d70ef401b4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9be6e0a3364f6ee0a077c1435d66498aba898430
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,30 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-april-23-2018"></a>Tydzień od 23 kwietnia 2018 r.
+
+#### <a name="advanced-threat-protection-atp-and-intune-are-fully-integrated----eeready-1629303---"></a>Zaawansowana ochrona przed zagrożeniami (ATP) i usługi Intune są w pełni zintegrowane <!-- EEready 1629303 -->
+
+W usłudze Windows Defender Security Center (portal ATP) można utworzyć połączenie z usługą Microsoft Intune. Po jego utworzeniu zostają użyte zasady zgodności z usługą Intune, aby określić dopuszczalny poziom zagrożenia. Jeśli poziom zagrożenia zostanie przekroczony, zasady dostępu warunkowego usługi Azure Active Directory (AD) mogą zablokować dostęp do różnych aplikacji w ramach danej organizacji.
+
+Ta funkcja pozwala systemowi ATP skanować pliki, wykrywać zagrożenia oraz zgłaszać zdarzenia o podwyższonym ryzyku na urządzeniach z systemem Windows 10.
+
+Zobacz temat [Enable ATP with conditional access in Intune](advanced-threat-protection.md) (Włączanie systemu ATP z dostępem warunkowym w usłudze Intune).
+
+## <a name="week-of-april-16-2018"></a>Tydzień od 16 kwietnia 2018 r.
+
+#### <a name="use-cisco-anyconnect-client-for-ios----eeready-1333708---"></a>Korzystanie z klienta Cisco AnyConnect dla systemu iOS <!-- EEready 1333708 -->
+
+W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS istnieją obecnie dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują oprogramowanie w wersji 4.0.7x oraz nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
+
+> [!NOTE]
+> Ta zmiana dotyczy tylko systemu iOS. W przypadku platform systemów Android i macOS oraz programu Android for Work nadal będzie dostępna tylko jedna opcja oprogramowania Cisco AnyConnect.
+
+#### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Urządzenia z systemem macOS zarejestrowane w oprogramowaniu Jamf można obecnie zarejestrować w usłudze Intune <!-- 2370684 -->
+
+W wersjach 1.3 i 1.4 portalu firmy systemu macOS nie można było pomyślnie rejestrować urządzeń z oprogramowaniem Jamf w usłudze Intune. W wersji 1.4.2 portalu macOS rozwiązano ten problem.
+
 
 ## <a name="week-of-april-9-2018"></a>Tydzień od 9 kwietnia 2018 r.
 
@@ -140,8 +164,6 @@ Jest to opcjonalna kolumna w bloku urządzeń. Domyślnie jest ona niedostępna 
 #### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837---"></a>W przypadku urządzeń z systemem iOS co 15 minut jest wyświetlany monit o ustawienie numeru PIN <!--1550837 -->
 Po zastosowaniu zasad zgodności lub konfiguracji względem urządzenia z systemem iOS użytkownikom będzie wyświetlany co 15 minut monit o ustawienie numeru PIN. Monity będą wyświetlane, dopóki numer PIN nie zostanie ustawiony.
 
-
-
 #### <a name="schedule-your-automatic-updates---1805514---"></a>Planowanie aktualizacji automatycznych <!--1805514 -->
 Usługa Intune zapewnia kontrolę nad instalowaniem aktualizacji automatycznych za pomocą [ustawień pierścienia aktualizacji systemu Windows](windows-update-for-business-configure.md). Ta aktualizacja wprowadza możliwość zaplanowania cyklicznych aktualizacji, w tym tygodnia, dnia i godziny.
 
@@ -179,6 +201,10 @@ Po włączeniu ustawienia Zapora możesz skonfigurować zaporę przy pomocy dwó
 - Zezwalanie na określone aplikacje lub ich blokowanie
 
    Możesz zezwalać określonym aplikacjom na odbieranie połączeń przychodzących lub blokować im tę możliwość. Możesz także włączyć tryb niewidzialności, aby uniemożliwić wysyłanie odpowiedzi na żądania sondowania.
+
+####  <a name="detailed-error-codes-and-messages----1376342---"></a>Szczegółowe kody błędów i komunikaty <!-- 1376342 -->
+
+W konfiguracji urządzenia są widoczne bardziej szczegółowe kody błędów i komunikaty o błędach. Dzięki ulepszonemu raportowaniu można zobaczyć ustawienia, stan tych ustawień oraz szczegóły dotyczące rozwiązywania problemów.
 
 ##### <a name="more-information"></a>Więcej informacji
 
@@ -935,12 +961,6 @@ Pierwsza wersja modelu danych magazynu danych usługi Intune zawierała tylko os
 
 
 ## <a name="notices"></a>Uwagi
-
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-
-Nie musisz wykonywać żadnych czynności w związku z tą zmianą, ponieważ są to niewielkie aktualizacje interfejsu użytkownika przepływów pracy.
-Aby uzyskać więcej informacji na temat zgodności firmy Microsoft z rozporządzeniem RODO, przejdź do Centrum zaufania za pośrednictwem linku Dodatkowe informacje.
 
 ### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Planowanie zmian: nowe ustawienie systemu Windows 10 dla konfiguracji kiosku w usłudze Intune <!-- 1560072 -->
 Zmieniamy sposób oraz miejsce konfiguracji systemu Windows 10 1709 i nowszego (RS3 i nowszy) w witrynie Azure Portal usługi Intune.

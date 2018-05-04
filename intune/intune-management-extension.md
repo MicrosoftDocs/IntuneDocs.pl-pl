@@ -3,8 +3,8 @@ title: Zarządzanie skryptami programu PowerShell w usłudze Microsoft Intune dl
 titlesuffix: ''
 description: Dowiedz się, jak przekazywać skrypty programu PowerShell w usłudze Microsoft Intune w celu uruchamiania ich na urządzeniach z systemem Windows 10.
 keywords: ''
-ms.author: dougeby
-author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c501292126200baa88e06e30b6226e5c5021b8ec
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 3de7af01ffa64293e420913258919eff118b4abc
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 Rozszerzenie do zarządzania usługi Intune pozwala przekazywać skrypty programu PowerShell w usłudze Intune w celu uruchamiania ich na urządzeniach z systemem Windows 10. Rozszerzenie do zarządzania uzupełnia możliwości funkcji zarządzania urządzeniami mobilnymi (MDM, Mobile Device Management) z systemem Windows 10 i ułatwia migrację do nowoczesnego zarządzania.
@@ -33,8 +33,8 @@ Rozszerzenie do zarządzania usługi Intune uzupełnia możliwości usług MDM d
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
-- Urządzenia muszą być przyłączone do usługi Azure AD
-- Na urządzeniach musi działać system Windows 10 w wersji 1607 lub nowszej
+- Urządzenia muszą być przyłączone do usługi Azure AD. Nie dotyczy to urządzeń przyłączonych do usługi Hybrid AD.
+- Na urządzeniach musi działać system Windows 10 w wersji 1607 lub nowszej.
 
 ## <a name="create-a-powershell-script-policy"></a>Tworzenie zasad skryptu programu PowerShell 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
@@ -43,7 +43,7 @@ Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
 4. W okienku **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Skrypty programu PowerShell**.
 5. W okienku **Skrypty programu PowerShell** wybierz pozycję **Dodaj**.
 6. W okienku **Dodaj skrypt programu PowerShell** wprowadź **nazwę** i **opis** skryptu programu PowerShell.
-7. Aby podać **lokalizację skryptu**, przeglądaj w poszukiwaniu skryptu programu PowerShell. Rozmiar skryptu musi być mniejszy niż 10 KB (ASCII) lub 5 KB (Unicode).
+7. Aby podać **lokalizację skryptu**, przeglądaj w poszukiwaniu skryptu programu PowerShell. Wielkość skryptu musi być mniejsza niż 200 KB.
 8. Wybierz pozycję **Konfiguruj**, a następnie określ, czy skrypt ma być uruchamiany przy użyciu poświadczeń użytkownika na urządzeniu (**Tak**), czy w kontekście systemu (**Nie**). Domyślnie skrypt jest uruchamiany w kontekście systemu. Wybierz pozycję **Tak**, chyba że skrypt musi zostać uruchomiony w kontekście systemu. 
   ![Okienko Dodaj skrypt programu PowerShell](./media/mgmt-extension-add-script.png)
 9. Określ, czy skrypt musi być podpisany przez zaufanego wydawcę (**Tak**). Domyślnie nie jest wymagane, aby skrypt był podpisany. 

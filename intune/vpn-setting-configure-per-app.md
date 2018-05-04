@@ -3,8 +3,8 @@ title: Konfigurowanie sieci VPN dla aplikacji na urządzeniach z systemem iOS w 
 titleSuffix: ''
 description: Określanie aplikacji zarządzanych, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune.
 keywords: ''
-author: Erikre
-ms.author: erikre
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
@@ -15,15 +15,23 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b28f809c924ec2699647a3cc377b3bdde86afe5
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 67e2630fc2a7ccd75ac86c797e36c389757d908a
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurowanie wirtualnej sieci prywatnej (sieci VPN) dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
 Możesz określić aplikacje zarządzane, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune. Po utworzeniu sieci VPN dla aplikacji w usłudze Intune użytkownik końcowy automatycznie nawiązuje połączenie za pośrednictwem sieci VPN przy uzyskiwaniu dostępu do dokumentów firmowych.
+
+Sieć VPN dla aplikacji jest obecnie dostępna dla następujących dostawców: 
+
+ - Pulse Connect Secure
+ - Checkpoint Remote Access VPN
+ - F5
+ - SonicWall
+
 
 ## <a name="prerequisites-for-the-per-app-vpn"></a>Wymagania wstępne dotyczące sieci VPN dla aplikacji
 
@@ -37,7 +45,7 @@ Wyeksportuj certyfikat i dodaj urząd certyfikacji.
 4. Dodaj nazwę urzędu certyfikacji, który wystawił certyfikat uwierzytelniania serwera sieci VPN.
     Jeśli urząd certyfikacji przedstawiony przez urządzenie pasuje do jednego z urzędów certyfikacji na liście zaufanych urzędów certyfikacji na serwerze sieci VPN, serwer sieci VPN pomyślnie uwierzytelnia urządzenie.
 
-## <a name="create-a--group-for-your-vpn-users"></a>Tworzenie grupy dla użytkowników sieci VPN
+## <a name="create-a-group-for-your-vpn-users"></a>Tworzenie grupy dla użytkowników sieci VPN
 
 Utwórz lub wybierz istniejącą grupę w usłudze Azure Active Directory (Azure AD), aby zawierała członków, którzy mają dostęp do sieci VPN dla aplikacji.
 

@@ -3,8 +3,8 @@ title: Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Intune
 titleSuffix: Microsoft Intune
 description: Informacje dotyczące konfigurowania ustawień sieci Wi-Fi na zarządzanych urządzeniach przy użyciu usługi Microsoft Intune.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9a550e2963fa60a91db3ef63f7771bc4ca352d98
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: fb4d9fc6f0f0609062c408fd85921c1f86bd7303
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Microsoft Intune
 
@@ -38,7 +38,7 @@ Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
 - System Android 4 lub nowszy
 - Program Android for Work
 - System iOS 8.0 i nowsze
-- macOS (Mac OS X 10.9 lub nowszy)
+- macOS (Mac OS X 10.11 lub nowszy)
 
 Na urządzeniach z systemem Windows 8.1, Windows 10, Windows 10 Mobile lub Windows Holographic for Business możesz zaimportować konfigurację sieci Wi-Fi, która została wcześniej wyeksportowana z innego urządzenia.
 

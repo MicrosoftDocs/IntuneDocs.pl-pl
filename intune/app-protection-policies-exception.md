@@ -3,10 +3,10 @@ title: Wyjątki od zasad transferu danych dla aplikacji
 titleSuffix: Microsoft Intune
 description: Tworzenie wyjątków od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune.
 keywords: ''
-author: Erikre
-ms.author: erikre
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 03/26/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1910334093a416933912c9cdeedac85e36d66e92
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d33768206c53550ec1cb34d5c1ad5e2f33e4f8c8
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Jak utworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune
 
@@ -47,9 +47,18 @@ W przypadku zasad przeznaczonych dla systemu Android możesz skonfigurować wyj�
 ### <a name="example"></a>Przykład
 Po dodaniu pakietu **Webex** jako wyjątku do zasad transferu danych funkcji MAM linki Webex w wiadomości e-mail zarządzanego programu Outlook mogą być otwierane bezpośrednio w aplikacji Webex. Transfer danych jest nadal ograniczony w innych niezarządzanych aplikacjach.
 
-- Przykład pakietu **Webex** w systemie iOS: aby wykluczyć aplikację **Webex** tak, aby mogła być wywoływana przez zarządzane aplikacje usługi Intune, musisz dodać wyjątek transferu danych dla następującego ciągu: <code>wbx</code>.
+- Przykład pakietu **Webex** w systemie iOS: aby zwolnić aplikację **Webex** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego łańcucha: <code>wbx</code>
+    
+ - Przykład pakietu **Mapy** w systemie iOS: aby zwolnić aplikację **Mapy** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego łańcucha: <code>maps</code>
 
-- Przykład pakietu **Webex** w systemie Android: aby wykluczyć aplikację **Webex** tak, aby mogła być wywoływana przez zarządzane aplikacje usługi Intune, musisz dodać wyjątek transferu danych dla następującego ciągu: <code>com.cisco.webex.meetings</code>. 
+- Przykład pakietu **Webex** w systemie Android: aby zwolnić aplikację **Android** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego łańcucha: <code>com.cisco.webex.meetings</code>
+    
+- Przykład pakietu **SMS** w systemie Android: aby zwolnić aplikację **SMS** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune w różnych aplikacjach do obsługi wiadomości i na różnych urządzeniach z systemem Android, należy dodać wyjątek transferu danych dla następującego łańcucha: 
+    <code>com.google.android.apps.messaging</code>
+    
+    <code>com.android.mms</code>
+    
+    <code>com.samsung.android.messaging</code>
 
 ## <a name="next-steps"></a>Następne kroki
 

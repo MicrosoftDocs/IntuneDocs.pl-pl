@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/07/2017
+ms.date: 4/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: bbb51300867f273da033b38d05d857034012a24e
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 02ccde8299e4ad5d6aacb2abd120c094f752c5e6
+ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="using-your-macos-device-with-intune"></a>Korzystanie z urządzenia z systemem macOS w usłudze Intune
 
@@ -29,7 +29,7 @@ Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Usługa Intune obecnie obsługuje system macOS w wersjach 10.9 Mavericks i nowszych.
+W przypadku urządzeń z systemem macOS usługa Intune obsługuje obecnie system OS X El Capitan 10.11 lub nowszy.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
