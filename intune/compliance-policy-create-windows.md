@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bb79a6c18ff8b6eec20f4ce8813d8dea188215e7
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -121,23 +121,23 @@ Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
-- **Wymagana minimalna wersja systemu operacyjnego**: wprowadź numer wersja_główna.wersja_pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
 
   Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż określona, zostanie zgłoszone jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Dozwolona maksymalna wersja systemu operacyjnego**: wprowadź numer wersja_główna.wersja_pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
-- **Wymagana minimalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź numer wersja_główna.wersja_pomocnicza.kompilacja.
+- **Wymagana minimalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
   Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż określona, zostanie zgłoszone jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Wymagana maksymalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź numer wersja_główna.wersja_pomocnicza.kompilacja.
+- **Wymagana maksymalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
-- **Prawidłowe kompilacje systemów operacyjnych**: wprowadź zakres dopuszczalnych wersji systemu operacyjnego, w tym wersję minimalną i maksymalną.
+- **Prawidłowe kompilacje systemów operacyjnych**: wprowadź zakres dopuszczalnych wersji systemu operacyjnego, w tym wersję minimalną i maksymalną. Możesz również **wyeksportować** listę plików wartości rozdzielanych przecinkami (CSV), która będzie zawierać dopuszczalne numery kompilacji systemu operacyjnego.
 
 ### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 

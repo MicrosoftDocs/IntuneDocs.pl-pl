@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/19/2018
+ms.date: 4/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5715cca4a2f3deff925c5ba2575771c548261e53
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e1db0e98318c05c7a1a854ed1af77d9d9654cc38
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Ustawienia ograniczeń urządzenia służbowego w usłudze Intune
 
@@ -50,6 +50,12 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
    Na przykład w przypadku wdrożenia aplikacji Gmail w profilu programu Android for Work można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym.
 
 - **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**: umożliwia dostęp do kontaktów służbowych z innego urządzenia, takiego jak samochód, sparowanego za pomocą połączenia Bluetooth. Domyślnie to ustawienie nie jest skonfigurowane i kontakty służbowe nie są wyświetlane. Wybierz pozycję **Włącz**, aby zezwolić na udostępnianie i wyświetlić kontakty z profilu służbowego. To ustawienie dotyczy urządzeń z systemem Android w wersji 6.0 i nowszych oraz profilem służbowym. Włączenie tego ustawienia może umożliwić niektórym urządzeniom Bluetooth zapisanie w pamięci podręcznej kontaktów służbowych przy pierwszym połączeniu. Wyłączenie tych zasad po przeprowadzeniu początkowego parowania/synchronizacji może nie spowodować usunięcia kontaktów służbowych z urządzenia Bluetooth.
+
+- **Przechwytywanie ekranu**: blokuje przechwytywanie ekranu na urządzeniu w profilu służbowym. Zapobiega również wyświetlaniu zawartości na urządzeniach wyświetlających, które nie mają zabezpieczonego wyjścia wideo.
+
+- **Wyświetlanie identyfikatora rozmówcy dla kontaktu służbowego w profilu osobistym**: po włączeniu (bez konfigurowania) szczegóły rozmówcy dla kontaktu służbowego są wyświetlane w profilu osobistym. Po zablokowaniu numer rozmówcy dla kontaktu służbowego nie jest wyświetlany w profilu osobistym. Dotyczy systemu operacyjnego Android w wersji 6.0 i nowszych wersji.
+
+- **Aparat fotograficzny**: blokuje aparat w urządzeniu w profilu służbowym. To ustawienie nie wpływa na aparat w profilu osobistym.
 
 ### <a name="work-profile-password"></a>Hasło profilu służbowego
 
