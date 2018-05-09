@@ -149,6 +149,6 @@
 #### [Potrzebuję włączyć funkcję Kontrola konta użytkownika](you-need-to-enable-uac-windows.md)
 #### [Potrzebuję zaktualizować system Windows](you-need-to-update-os-build-version-windows.md)
 #### [Potrzebuję włączyć usługę Windows Defender](turn-on-defender-windows.md)
-
+## [Zdalne blokowanie urządzenia z aplikacji Portal firmy dla systemu Windows](remote-lock-your-device-cp-app.md) 
 ## [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 ### [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
