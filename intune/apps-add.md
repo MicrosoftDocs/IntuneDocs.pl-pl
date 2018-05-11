@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88b8d9aa8e65e0238ab634b23836ee9c02234dd3
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8c54dd0180788a83ee01607e0e6d895fdb9a85ab
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -155,6 +155,16 @@ Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej k
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Aplikacje dodawane automatycznie przez usługę Intune
 
 Wcześniej usługa Intune zawierała kilka wbudowanych aplikacji, które można było szybko przypisać. Ze względu na opinie klientów dotyczące usługi Intune firma Microsoft usunęła tę listę i wbudowane aplikacje nie są już wyświetlane. Jeśli jednak przypisano już jakiekolwiek wbudowane aplikacje, będą one nadal widoczne na liście aplikacji. W razie potrzeby można dalej przypisywać aplikacje.
+
+## <a name="installing-updating-or-removing-required-apps"></a>Instalowanie, aktualizowanie lub usuwanie wymaganych aplikacji
+
+Usługa Intune automatycznie zainstaluje ponownie, zaktualizuje lub usunie wymaganą aplikację w ciągu 24 godzin, nie czekając na zakończenie 7-dniowego cyklu ponownej oceny.
+
+Usługa Intune automatycznie zainstaluje ponownie, zaktualizuje lub usunie wymaganą aplikację w następujących sytuacjach:
+- Jeśli użytkownik końcowy odinstaluje aplikację, której zainstalowanie na urządzeniu użytkownika końcowego jest wymagane, usługa Intune automatycznie zainstaluje ponownie aplikację po upływie tego terminu.
+- Jeśli instalacja wymaganej aplikacji nie powiedzie się lub aplikacja nie będzie znajdować się na urządzeniu z innego powodu, usługa Intune oceni zgodność i ponownie zainstaluje aplikację po upływie tego terminu.  
+- Administrator określa aplikację jako dostępną dla grupy użytkowników, a następnie użytkownik końcowy instaluje aplikację z poziomu Portalu firmy na urządzeniu. Później administrator aktualizuje aplikację z wersji 1 do wersji 2. Usługa Intune zaktualizuje tę aplikację po upływie tego terminu, o ile na urządzeniu nadal znajduje się dowolna wcześniejsza wersja tej aplikacji.
+- Jeśli administrator wdroży opcję odinstalowania, a odinstalowanie aplikacji znajdującej się na urządzeniu zakończy się niepowodzeniem, usługa Intune oceni zgodność i odinstaluje aplikację po upływie tego terminu.   
 
 ## <a name="next-steps"></a>Następne kroki
 

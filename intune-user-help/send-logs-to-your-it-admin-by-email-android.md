@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5e37ab05889a1141464b75a36b4f156f897799ae
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="email-logs-to-your-company-support"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail
 
 Czasami może wystąpić błąd podczas używania aplikacji Portal firmy na urządzeniu z systemem Android. W takim przypadku możesz wysłać szczegóły dotyczące błędu w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.  
 
-Szczegóły dotyczące błędu są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_. Podczas przekazywania dzienników do aplikacji Portal firmy najpierw są one wysyłane do deweloperów firmy Microsoft, którzy pracują nad aplikacją. Używają oni dzienników, aby poprawiać funkcjonowanie aplikacji i zapobiegać błędom w przyszłości. Następnie zostanie podany identyfikator zdarzenia dla danego błędu, który możesz udostępnić osobie odpowiedzialnej za pomoc techniczną w firmie.  
+Szczegóły dotyczące błędu są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_. Podczas przekazywania dzienników do aplikacji Portal firmy najpierw są one wysyłane do deweloperów firmy Microsoft, którzy pracują nad aplikacją. Używają oni dzienników, aby poprawiać funkcjonowanie aplikacji i zapobiegać błędom w przyszłości. Następnie zostanie podany identyfikator zdarzenia dla danego błędu, który możesz udostępnić osobie odpowiedzialnej za pomoc techniczną w firmie w celu użycia w zgłoszeniu do pomocy technicznej firmy Microsoft.
 
 > [!Note]
 > Aby ułatwić działowi pomocy technicznej Twojej firmy ustalenie przyczyny problemu, włącz _pełne rejestrowanie_. Pełne rejestrowanie powoduje rejestrowanie wszystkich szczegółów dotyczących błędu oraz uwzględnia te szczegóły w raporcie. Dowiedz się, jak [włączyć pełne rejestrowanie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  

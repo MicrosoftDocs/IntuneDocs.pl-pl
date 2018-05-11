@@ -5,7 +5,7 @@ description: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows In
 keywords: ''
 author: msmimart
 ms.author: mimart
-manager: doubeby
+manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
 ms.prod: ''
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7273a29eea9cd9b55e998302de2bc57d26d34e04
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f08dde25de5962eaaa11487a367b2895c6c047d4
+ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -33,7 +33,7 @@ Podczas dodawania zasad funkcji WIP należy zrozumieć kilka koncepcji:
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Lista aplikacji dozwolonych i wykluczonych
 
--   **Dozwolone aplikacje:** są to aplikacje, które muszą stosować się do tych zasad.
+-   **Chronione aplikacje:** są to aplikacje, które muszą stosować się do tych zasad.
 
 -   **Wykluczone aplikacje:** te aplikacje nie podlegają tym zasadom i mogą uzyskiwać dostęp do danych firmowych bez ograniczeń.
 
@@ -63,7 +63,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**.
 3. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
-5. Kliknij pozycję **Dodaj zasady**, aby wyświetlić blok **Dodawanie zasad**.
+5. Wybierz pozycję **Dodaj zasady**, aby wyświetlić blok **Dodawanie zasad**.
 6. Dodaj następujące wartości:
     - **Nazwa:** wpisz nazwę (wymaganą) dla nowych zasad.
     - **Opis:** (opcjonalnie) wpisz opis.
@@ -71,7 +71,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
     - **Stan rejestracji:** wybierz **Bez rejestracji** jako stan rejestracji dla zasad.
 7.  Wybierz pozycję **Utwórz**. Zasady zostaną utworzone i pojawią się w tabeli w bloku **Zasady ochrony aplikacji**.
 
-## <a name="to-add-recommended-apps-to-your-allowed-apps-list"></a>Aby dodać aplikacje zalecane do listy Dozwolone aplikacje
+## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Aby dodać aplikacje zalecane do listy Chronione aplikacje
 
 1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
 2. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
@@ -82,7 +82,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 7. Kliknij przycisk **OK**. Blok **Chronione aplikacje** zostanie zaktualizowany w celu wyświetlenia wszystkich wybranych aplikacji.
 8. Kliknij polecenie **Zapisz**.
 
-## <a name="add-a-store-app-to-your-allowed-apps-list"></a>Dodawanie aplikacji ze Sklepu do listy Dozwolone aplikacje
+## <a name="add-a-store-app-to-your-protected-apps-list"></a>Dodawanie aplikacji ze Sklepu do listy Chronione aplikacje
 
 **Aby dodać aplikację ze Sklepu**
 1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
@@ -95,7 +95,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 9. Kliknij przycisk **OK**. Blok **Chronione aplikacje** zostanie zaktualizowany w celu wyświetlenia wszystkich wybranych aplikacji.
 10. Kliknij polecenie **Zapisz**.
 
-## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Dodawanie aplikacji klasycznej do listy Dozwolone aplikacje
+## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Dodawanie aplikacji klasycznej do listy Chronione aplikacje
 
 **Aby dodać aplikację klasyczną**
 1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
@@ -118,7 +118,7 @@ Uczenie funkcji WIP to raport, który umożliwia monitorowanie aplikacji obsług
 <!-- 1631908 -->
 Oprócz wyświetlania informacji o aplikacjach z włączoną funkcją WIP możesz wyświetlać podsumowanie urządzeń, które udostępniły dane robocze witrynom internetowym. Dzięki tym informacjom można ustalić, które witryny sieci Web należy dodać do zasad WIP dotyczących grupy i użytkownika. Podsumowanie pokazuje, które adresy URL witryn internetowych są dostępne dla aplikacji obsługujących funkcję WIP.
 
-Podczas pracy z aplikacjami obsługującymi funkcję WIP i nieznanych aplikacji funkcji WIP zalecamy rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowanie w małej grupie, czy na liście aplikacji dozwolonych znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania, **Zablokowanie**.
+Podczas pracy z aplikacjami obsługującymi funkcję WIP i nieznanych aplikacji funkcji WIP zalecamy rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowanie w małej grupie, czy na liście chronionych aplikacji znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania, **Zablokowanie**.
 
 ### <a name="what-are-the-protection-modes"></a>Jakie są tryby ochrony?
 

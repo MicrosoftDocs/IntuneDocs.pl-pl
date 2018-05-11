@@ -14,11 +14,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 388c9f69b6cbee1353b0e21121a47576b58b3ba6
-ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
+ms.openlocfilehash: b8ef4688a5d1a98a27a2fcb6fc5b6ce456b5fd25
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -46,6 +46,14 @@ W przypadku migracji z usługi Intune do witryny Azure Portal może zostać wyś
 Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznej witryny Azure Portal do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
 
 ## <a name="apps"></a>Aplikacje
+
+
+### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Wiele monitów o instalację niektórych aplikacji VPP
+Może być wyświetlanych wiele monitów o zainstalowane niektórych aplikacji VPP, które są już zainstalowane na urządzeniach użytkowników końcowych. Ten problem występuje, jeśli ustawiono opcję **Aktualizacje automatyczne aplikacji** na **Wł.** dla tokenu VPP przekazanego do witryny Azure Portal usługi Intune.    
+
+Aby obejść ten problem, możesz wyłączyć opcję **Aktualizacje automatyczne aplikacji** dla tego tokenu VPP. W tym celu przejdź do usługi Microsoft Intune w witrynie Azure Portal. W usłudze Intune wybierz pozycję **Aplikacje mobilne** > **Tokeny programu VPP dla systemu iOS**. Następnie wybierz token VPP użyty do wdrożenia aplikacji, której dotyczy problem, i wybierz kolejno pozycje **Edytuj** > **Aktualizacje automatyczne aplikacji** > **Wył.** > **Zapisz**. Innym sposobem jest zatrzymanie wdrażania aplikacji, której dotyczy problem, jako aplikacji VPP, co spowoduje, że monity nie będą już wyświetlane.    
+
+Jest to znany problem w bieżącej wersji. Wkrótce zostanie wydana poprawka, która rozwiąże ten problem. Po wdrożeniu poprawki użytkownicy nie będą już otrzymywać wielu monitów o instalację aplikacji.
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Aplikacje dla systemu iOS nabyte w ramach zakupów zbiorczych dostępne tylko w domyślnym języku dzierżawy usługi Intune
 Aplikacje dla systemu iOS nabyte w ramach zakupów zbiorczych są wyświetlane i mogą zostać przypisane tylko w przypadku kodu kraju określonego dla konta usługi Intune. Usługa Intune synchronizuje tylko aplikacje z ustawieniami regionalnymi usługi iTunes zgodnymi z kodem kraju konta dzierżawy usługi Intune. Jeśli na przykład zakupisz aplikację dostępną tylko w sklepie dla Stanów Zjednoczonych, a Twoje konto usługi Intune ma niemieckie ustawienia regionalne, usługa Intune nie wyświetli tej aplikacji.

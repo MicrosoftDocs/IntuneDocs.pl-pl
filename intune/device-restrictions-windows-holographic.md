@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/9/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b0784aeb1dc1022b4be824c2f858f9525d03918
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e8a1abb4229b3e6b4c91cfd49b4f66dbe739ea7d
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows Holographic for Business w usłudze Intune
 
@@ -68,7 +68,7 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 
 - **Modyfikowanie czasu systemowego** — uniemożliwia użytkownikowi końcowemu zmianę daty i godziny na urządzeniu.
 
-## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
+## <a name="kiosk"></a>Kiosk
 
 Na kiosku jest zazwyczaj uruchamiana konkretna aplikacja. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
 
@@ -76,6 +76,9 @@ Na kiosku jest zazwyczaj uruchamiana konkretna aplikacja. Użytkownicy nie mogą
 
   - **Nieskonfigurowane** (domyślne) — zasady nie umożliwiają trybu kiosku. 
   - **Kiosk z pojedynczą aplikacją** — profil umożliwia uruchamianie tylko jednej aplikacji na urządzeniu. Gdy użytkownik zaloguje się, jest uruchamiana konkretna aplikacja. Ten tryb uniemożliwia także użytkownikowi otwieranie nowych aplikacji oraz zmianę uruchomionej aplikacji.
+  - **Kiosk z wieloma aplikacjami** — profil umożliwia uruchamianie wielu aplikacji na urządzeniu. Tylko dodane aplikacje są dostępne dla użytkownika. Korzyści z kiosku z wieloma aplikacjami (czyli urządzenia o stałym przeznaczeniu) polegają na udostępnieniu użytkownikom łatwego do poznania środowiska, w którym są dostępne tylko potrzebne im aplikacje. Aplikacje, których użytkownicy nie potrzebują, są ukryte. 
+  
+    Dodając aplikacje do środowiska kiosku z wieloma aplikacjami, dodajesz również plik układu menu Start. Temat [Start menu layout file (Plik układu menu Start)](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) zawiera przykładowy kod XML, którego można użyć w usłudze Intune. 
 
 #### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
 Podaj następujące ustawienia:

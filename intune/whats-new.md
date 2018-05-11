@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/27/2018
+ms.date: 05/02/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 68997e16269f7f7a9265fc96d04de2c39c9fefeb
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 9004441a41c5e7458447b5c5f7e1d91e630bd412
+ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -149,9 +149,6 @@ Nie trzeba już wymagać usunięcia danych firmy ani resetować do ustawień fab
 Aby zobaczyć nową funkcję, zaloguj się do usługi Intune i wybierz pozycje **Urządzenia** > **Wszystkie urządzenia** > nazwa urządzenia > **Usuń**.
 
 Jeśli chcesz nadal otrzymywać powiadomienia o wyczyszczeniu lub wycofaniu, możesz użyć standardowego cyklu życia urządzenia, uruchamiając polecenie **Usuń dane firmy** oraz **Resetuj do ustawień fabrycznych**, a następnie polecenie **Usuń**. 
-
-#### <a name="autopilot-profiles-moving-to-group-targeting----1877935---"></a>Profile rozwiązania AutoPilot będą stosowane dla grup <!-- 1877935 -->
-Profile wdrażania rozwiązania AutoPilot można przypisywać do grup usługi Azure AD zawierających urządzenia rozwiązania AutoPilot.
 
 #### <a name="play-sounds-on-ios-when-in-lost-mode----1947769---"></a>Odtwarzanie dźwięków w systemie iOS w trybie utraty <!-- 1947769 -->
 Jeśli urządzenia z systemem iOS nadzorowane w rozwiązaniu do zarządzania urządzeniami przenośnymi są w [trybie utraty](device-lost-mode.md), możesz [odtwarzać dźwięk](device-locate.md#activate-lost-mode-sound-alert-on-an-ios-device) (**Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie z systemem iOS > **Przegląd** > **Więcej**). Dźwięk będzie odtwarzany w sposób ciągły aż do zakończenia trybu utraty na urządzeniu lub wyłączenia przez użytkownika dźwięku na urządzeniu. Dotyczy urządzeń z systemem iOS 9.3 lub nowszym.

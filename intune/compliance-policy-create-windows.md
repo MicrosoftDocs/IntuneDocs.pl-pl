@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 64df804bf2f882991cccd3f77014369cd86b69a8
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -121,11 +121,11 @@ Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
-- **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.poprawka. Numer kompilacja.poprawka musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
 
   Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż określona, zostanie zgłoszone jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.aktualizacja_zbiorcza. Numer kompilacja.aktualizacja_zbiorcza musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.poprawka. Numer kompilacja.poprawka musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 

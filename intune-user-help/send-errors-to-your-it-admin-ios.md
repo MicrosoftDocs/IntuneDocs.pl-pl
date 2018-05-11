@@ -17,19 +17,22 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b9bbd44fcace579803fc4e5c24324d70b8831645
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 449413a87c79645240bc18be41fb6e88d4c071f8
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Wysyłanie błędów do działu pomocy technicznej Twojej firmy w przypadku problemów z urządzeniem z systemem iOS
+Czasami może wystąpić błąd podczas używania aplikacji Portal firmy na urządzeniu z systemem iOS. W takim przypadku możesz wysłać szczegóły dotyczące błędu w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.
+
+Podczas przekazywania dzienników w aplikacji Portal firmy najpierw są one wysyłane do deweloperów firmy Microsoft, którzy pracują nad aplikacją. Używają oni dzienników, aby poprawiać funkcjonowanie aplikacji i zapobiegać błędom w przyszłości. Następnie zostanie podany identyfikator zdarzenia dla danego błędu, który możesz udostępnić osobie odpowiedzialnej za pomoc techniczną w firmie w celu użycia w zgłoszeniu do pomocy technicznej firmy Microsoft.
 
 Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z aplikacji Portal firmy, możesz wysłać informacje, aby pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem. Informacje o błędach możesz wysłać na różne sposoby:
 
 -   Po wystąpieniu komunikatów alertów o błędzie wybierz pozycję **Raport**.
 
--   Na ekranie **Informacje** w aplikacji Portal firmy wybierz pozycję **Wyślij raport diagnostyczny**.
+-   Na karcie **Więcej** w aplikacji Portal firmy naciśnij pozycję **Uzyskaj pomoc**.
 
 -   Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie po wyświetleniu alertu diagnostyki dotknij pozycję **Wyślij raport diagnostyczny**. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 

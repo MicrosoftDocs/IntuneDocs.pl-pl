@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e15e1678fa93269eb650f8a5684091b430ebf1cd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8f903e9dfe5fb30f45806aac5694171814492f2e
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -62,6 +62,19 @@ Różne platformy mają następujące wymagania dotyczące włączania lub upras
 - **Windows** — (opcjonalnie) Włącz [rejestrowanie automatyczne](windows-enroll.md) lub [rejestrowanie zbiorcze](windows-bulk-enroll.md)
 - **macOS** — (wymagane) [Uzyskaj certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md).
 
+### <a name="workflow-of-intune-administration-ui"></a>Przepływ pracy interfejsu użytkownika administrowania usługą Intune
+Gdy zarządzanie urządzeniami firmy Apple i urządzeniami z systemem Android jest włączone, usługa Intune wysyła informacje o urządzeniu i użytkowniku w celu integracji z usługami innych firm i zarządzania urządzeniami.
+
+Dodanie zgody na udostępnianie danych ma miejsce:
+- Podczas włączania programu Android for Work.
+- Podczas włączania i przekazywania certyfikatów wypychania MDM firmy Apple.
+- Podczas włączania dowolnych usługi firmy Apple takich jak Device Enrollment Program, School Manager czy Volume Purchasing Program (program zakupów zbiorczych).
+
+W każdym przypadku zgoda ściśle dotyczy uruchamiania usługi zarządzania urządzeniami przenośnymi. Może to być na przykład potwierdzenie, że administrator IT zezwolił na rejestrację urządzeń firmy Google lub Apple. Dokumentacja opisująca, jakie informacje są udostępniane po wprowadzeniu nowych przepływów pracy, jest dostępna w następujących lokalizacjach:
+- [Dane wysyłane przez usługę Intune do firmy Google](https://aka.ms/Data-intune-sends-to-google)
+- [Dane wysyłane przez usługę Intune do firmy Apple](https://aka.ms/data-intune-sends-to-apple)
+
+Aby uzyskać więcej informacji na temat zgodności z RODO w produktach firmy Microsoft, zobacz [Trust Center — Assess your GDPR compliance (Centrum zaufania — ocena zgodności z RODO)](https://aka.ms/trust_center_info).
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM
 

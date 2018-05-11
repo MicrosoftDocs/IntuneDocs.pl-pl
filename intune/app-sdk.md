@@ -15,11 +15,11 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b34963761e9700d6cb742cb90979be30d5ae6b3e
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: bb54772010ef71e7d4bd2252f3886e9a3dd37ef1
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Intune
 Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
@@ -64,7 +64,7 @@ Funkcja umożliwiająca stosowanie wielu tożsamości pomaga w rozwiązaniu prob
 ### <a name="app-protection-without-device-enrollment"></a>Ochrona aplikacji bez rejestracji urządzeń
 
 >[!IMPORTANT]
->Ochrona aplikacji bez rejestracji urządzeń w usłudze Intune jest dostępna w narzędziach opakowujących aplikacje usługi Intune, zestawie SDK dla systemu Android, zestawie SDK dla systemu iOS, powiązaniach Xamarin dla zestawu SDK aplikacji Intune i wtyczce Cordova zestawu SDK.
+>Ochrona aplikacji bez rejestracji urządzeń w usłudze Intune jest dostępna w narzędziach opakowujących aplikacje usługi Intune, zestawie SDK dla systemu Android, zestawie SDK dla systemu iOS oraz powiązaniach Xamarin dla zestawu SDK aplikacji Intune.
 
 Wielu użytkowników korzystających z urządzeń osobistych chce uzyskiwać dostęp do danych firmowych bez rejestrowania swoich urządzeń osobistych za pomocą dostawcy zarządzania urządzeniami przenośnymi (MDM). Ponieważ rejestracja w rozwiązaniu MDM wymaga globalnej kontroli nad urządzeniem, użytkownicy często mają wątpliwości przed przekazaniem swojej firmie kontroli nad ich urządzeniami osobistymi.
 

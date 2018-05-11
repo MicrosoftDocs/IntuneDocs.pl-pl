@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/5/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d8f5051d9663273c6515717b7930145ff8a964
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 18f86580fc4c80fade7aeaa9678e9d8edac9a53e
+ms.sourcegitcommit: b57be56524ddb5026fab94f7638dc516ed118325
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Dostosowywanie urządzeń z systemem Windows Holographic przy użyciu usługi Intune
 
@@ -25,6 +25,16 @@ Usługa Microsoft Intune obsługuje urządzenia z systemem Windows Holographic f
 Aby zarządzać urządzeniami z systemem Windows Holographic przy użyciu usługi Microsoft Intune, musisz utworzyć profil uaktualniania wersji. Ten profil uaktualniania zapewnia uaktualnienie urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Uaktualnianie urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business](holographic-upgrade.md).
 
 Aby uzyskać pomoc w zarządzaniu i dostosowywaniu urządzeń z systemem Windows Holographic for Business, możesz użyć zadań opisanych w tym artykule. Na przykład możesz zarządzać aktualizacjami oprogramowania, konfigurować ustawienia sieci VPN i inne.
+
+## <a name="azure-active-directory"></a>Azure Active Directory
+
+Usługa Azure Active Directory (AD) jest bardzo pomocna w zarządzaniu i sterowaniu urządzeniami z systemem Windows Holographic for Business. Usługi Intune i Azure AD umożliwiają: 
+
+- **[Konfigurowanie urządzeń dołączonych do usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: w usłudze Azure Active Directory (AD) możesz dodawać służbowe urządzenia z systemem Windows 10, w tym urządzenia z systemem Windows Holographic for Business. Ta funkcja umożliwia usłudze Azure AD sterowanie urządzeniem. Pozwala zapewnić, że w celu uzyskania dostępu do zasobów firmowych użytkownicy korzystają z urządzeń spełniających normy zabezpieczeń i zgodności obowiązujące w firmie.
+
+  Artykuł [Introduction to device management in Azure AD (Wprowadzenie do zarządzania urządzeniami w usłudze Azure AD)](https://docs.microsoft.com/azure/active-directory/device-management-introduction) zawiera więcej szczegółowych informacji.
+
+- **[Zbiorcze rejestrowanie urządzeń z systemem Windows](windows-bulk-enroll.md)**: możesz dołączać do usług Azure Active Directory (AD) i Intune dużą liczbę nowych urządzeń z systemem Windows. W ramach tej funkcji, nazywanej rejestrowaniem zbiorczym, są używane pakiety aprowizacji. Te pakiety umożliwiają dołączenie urządzeń z systemem Windows Holographic for Business do dzierżawy usługi Azure AD i zarejestrowanie ich w usłudze Intune.
 
 ## <a name="company-portal"></a>Portal firmy
 **[Konfigurowanie aplikacji Portal firmy](company-portal-app.md)**
@@ -56,6 +66,18 @@ Usługa Microsoft Intune może wdrażać aplikacje uniwersalne systemu Windows n
 > [!NOTE]
 > Urządzenia HoloLens z systemem Windows 10 Holographic dla firm 1607 nie obsługują aplikacji licencjonowanych online ze sklepu Microsoft Store dla Firm. Aby dowiedzieć się więcej, zobacz temat [Instalowanie aplikacji na urządzeniach HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
 
+## <a name="device-actions"></a>Działania na urządzeniach
+Usługa Intune oferuje pewne wbudowane działania umożliwiające administratorom IT wykonywanie różnorodnych zadań lokalnie na urządzeniu lub zdalnie za pośrednictwem usługi Intune w witrynie Azure Portal. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
+
+W przypadku urządzeń z systemem Windows Holographic for Business można korzystać z następujących działań: 
+
+- **[Resetowanie do ustawień fabrycznych](devices-wipe.md#factory-reset)**: działanie **Resetowanie do ustawień fabrycznych** usuwa urządzenie z usługi Intune i przywraca na nim domyślne ustawienia fabryczne. Można zastosować to działanie przed przekazaniem urządzenia nowemu użytkownikowi albo w przypadku kradzieży lub utraty urządzenia.
+
+- **[Usuwanie danych firmy](devices-wipe.md#remove-company-data)**: działanie **Usuwanie danych firmy** usuwa urządzenie z usługi Intune oraz usuwa dane zarządzanych aplikacji, ustawienia i profile poczty e-mail przypisane przez usługę Intune. Dane osobiste użytkownika pozostają na urządzeniu.
+
+- **[Synchronizacja urządzeń w celu pobrania najnowszych zasad i akcji](device-sync.md)**: działanie **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane oczekujące akcje lub zasady. Ta funkcja ułatwia weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zaewidencjonowanie.
+
+Artykuł **[Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?](device-management.md)** to dobre źródło informacji na temat zarządzania urządzeniami w witrynie Azure Portal. 
 
 ## <a name="device-categories-and-groups"></a>Kategorie i grupy urządzeń
 **[Kategoryzowanie urządzeń do grup](device-group-mapping.md)**

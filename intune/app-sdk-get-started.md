@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f0fcd4b04541593f41abb35be6558be2375a0131
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -67,10 +67,9 @@ Zestawy SDK aplikacji usługi Intune dla natywnych systemów iOS i Android są h
 * [Zestaw SDK aplikacji usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Zestaw SDK aplikacji usługi Intune dla systemu Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-Jeśli Twoja aplikacja jest aplikacją Xamarin lub Cordova, użyj następujących wariantów zestawu SDK:
+Jeśli Twoja aplikacja jest aplikacją Xamarin, użyj następującego wariantu zestawu SDK:
 
 * [Powiązania platformy Xamarin dla zestawu Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-* [Wtyczka Cordova zestawu SDK aplikacji usługi Intune](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Warto utworzyć konto usługi GitHub, które pozwoli rozwidlać nasze repozytoria i z nich pobierać. Usługa GitHub umożliwia deweloperom komunikowanie się z naszym zespołem produktu, zgłaszanie problemów i uzyskiwanie szybkich odpowiedzi, wyświetlanie informacji o wersjach oraz przesyłanie opinii do firmy Microsoft. Pytania dotyczące strony zestawu SDK aplikacji usługi Intune w usłudze GitHub należy kierować na adres msintuneappsdk@microsoft.com.
 
@@ -81,8 +80,6 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune.
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
-
-* **[Przewodnik dotyczący wtyczki Cordova zestawu SDK aplikacji Intune](app-sdk-cordova.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Cordova i zasad ochrony aplikacji usługi Intune.
 
 * **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
