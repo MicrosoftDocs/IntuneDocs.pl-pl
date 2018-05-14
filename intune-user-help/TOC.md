@@ -125,6 +125,7 @@
 #### [Enroll your Windows 10 device through "Access work or school" (Rejestrowanie urządzenia z systemem Windows 10 za pomocą opcji „Uzyskaj dostęp do miejsca pracy lub nauki”)](enroll-your-w10-device-access-work-or-school.md)
 #### [Enroll your Windows 8.1 or Windows RT 8.1 device (Rejestrowanie urządzenia z systemem Windows 8.1 lub Windows RT 8.1)](enroll-your-w81-or-rt81-windows.md)
 #### [Enroll your Windows Phone 8.1 device (Rejestrowanie urządzenia z systemem Windows Phone 8.1)](enroll-your-wp81-windows.md)
+### [Instalowanie aplikacji z aplikacji Portal firmy dla systemu Windows](install-apps-cpapp-windows.md)
 ### [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
 ### [Szyfrowanie urządzenia](encrypt-your-device-windows.md)
 ### [Ustawianie lub zmienianie hasła](set-or-change-your-password-windows.md)
