@@ -15,20 +15,27 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8da396e41844c854cd18a9384fe97ac0bee59355
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: da85b0087709a719cafaaf893c3188a3bf3148d8
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-april-23-2018"></a>Tydzień od 23 kwietnia 2018 r.
+#### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Zaktualizowany widok nawigacji w aplikacji Portal firmy dla systemu Windows 10 <!-- 1195010 -->
+Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizowana w celu dodania [widoku nawigacji systemu Fluent Design System](https://docs.microsoft.com/en-us/windows/uwp/design/basics/navigation-basics). Wzdłuż boku aplikacji znajduje się statyczna, pionowa lista wszystkich stron najwyższego poziomu. Kliknij dowolny link, aby szybko wyświetlać strony i przełączać się między nimi. Jest to pierwsza z kilku aktualizacji, które będą wprowadzane w ramach naszych ciągłych wysiłków mających na celu stworzenie bardziej adaptacyjnego, empatycznego, znanego środowiska pracy w usłudze Intune. 
+
+![Zrzut ekranu pulpitu nawigacyjnego aplikacji Portal firmy przedstawiający widok nawigacji systemu Fluent Design](./media/1804_WindowsCP_Fluent_01.png)
+
+
 ## <a name="week-of-april-2-2018"></a>Tydzień od 2 kwietnia 2018 r.
 
-#### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866---"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!--1412866 -->
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!-- 1412866 -->
 Wydaliśmy dużą aktualizację środowiska użytkownika w aplikacji Portal firmy dla systemu iOS. Aktualizacja obejmuje całkiem nowy projekt wizualny, który zapewnia zmodernizowany wygląd i działanie. Zachowaliśmy funkcjonalność aplikacji, ale zwiększyliśmy jej użyteczność i dostępność.  
 
 Ponadto wprowadziliśmy następujące zmiany:

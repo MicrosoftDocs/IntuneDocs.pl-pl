@@ -15,26 +15,27 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01b7972a6a4dbb641f4c656190324d8572f9010c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0408ce3a4c2d4224780b4b23b0fb1b7d690471fe
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
+# <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune zapewnia szereg sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu ich przypisania.
+Usługa Intune oferuje szereg sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu przypisania aplikacji.
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w grupie **Monitorowanie + zarządzanie**.
-3. Wybierz pozycję **Aplikacje mobilne**, a następnie **Aplikacje** w grupie **Zarządzaj**.
-5. Na liście aplikacji wybierz aplikację, którą chcesz monitorować. Zostanie wyświetlony blok aplikacji z przeglądem stanu urządzenia i stanu użytkownika.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W menu usługi **Intune** wybierz pozycję **Aplikacje mobilne**.
+4. W sekcji **Zarządzanie** menu wybierz pozycję **Aplikacje**.
+5. Na liście aplikacji wybierz aplikację do monitorowania. Zostanie wyświetlone okienko aplikacji z przeglądem stanu urządzenia i stanu użytkownika.
 
-## <a name="app-overview-blade"></a>Blok przeglądu aplikacji
+## <a name="app-overview-pane"></a>Okienko przeglądu aplikacji
 
-Możesz użyć bloku konkretnej aplikacji, aby zweryfikować szczegółowe informacje dotyczące stanu aplikacji w środowisku.
+W okienku aplikacji możesz przejrzeć szczegółowe informacje dotyczące stanu aplikacji w środowisku.
 
 ### <a name="essentials"></a>Podstawy
 Sekcja **Podstawy** zawiera następujące informacje dotyczące aplikacji:
@@ -42,12 +43,12 @@ Sekcja **Podstawy** zawiera następujące informacje dotyczące aplikacji:
  | **Szczegóły aplikacji**            | **Opis**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Wydawca**          | Wydawca aplikacji.                                            |
-| **System operacyjny**   | System operacyjny aplikacji (Windows, iOS, Android itp.) |
+| **System operacyjny**   | System operacyjny aplikacji (Windows, iOS, Android itp.). |
 | **Utworzono**             | Data i godzina utworzenia tej poprawki.                         |
-| **Przypisane**           | **Tak** lub **Nie** — czy aplikacja została przypisana.                  |
+| **Przypisane**           | Czy aplikacja została przypisana (**Tak** lub **Nie**).                  |
 
 ### <a name="device-and-user-status-graphs"></a>Wykresy stanu urządzenia i użytkowników
-Wykresy pokazują liczbę dla następujących stanów:
+Wykresy pokazują liczbę aplikacji dla następujących stanów:
 
 | **Stan urządzenia**       | **Opis**                                       |
 |-----------------------|-------------------------------------------------------|
@@ -59,14 +60,14 @@ Wykresy pokazują liczbę dla następujących stanów:
 
 ### <a name="device-install-status"></a>Stan instalacji urządzenia
 
-Lista stanu urządzenia zostanie wyświetlona po wybraniu pozycji **Stan instalacji urządzenia** w sekcji **Monitorowanie**. Tabela szczegółów zawiera następujące kolumny:
+Lista stanu urządzenia zostanie pokazana po wybraniu pozycji **Stan instalacji urządzenia** w sekcji **Monitorowanie** menu. Tabela szczegółów zawiera następujące kolumny:
 
 | **Kolumna urządzenia**      | **Opis**                                                                                                                                                                                                                                            |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nazwa urządzenia**      | Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune tworzy nazwę na podstawie innych właściwości. Ten atrybut nie może być dostępny dla wszystkich urządzeń.                                                                       |
+| **Nazwa urządzenia**      | Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut jest niedostępny w przypadku innych urządzeń.                                                                       |
 | **Nazwa użytkownika**        | Nazwa użytkownika.                                                                                                                                                                                                                                      |
-| **Platforma**         | System operacyjny urządzenia (Windows, iOS, Android itp.)                                                                                                                                                                                           |
-| **Wersja**          | Numer wersji aplikacji. W przypadku aplikacji biznesowych jest wyświetlany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), Na przykład 2.2(2.2.17560800) |
+| **Platforma**         | System operacyjny urządzenia (Windows, iOS, Android itp.).                                                                                                                                                                                           |
+| **Wersja**          | Numer wersji aplikacji. W przypadku aplikacji biznesowych jest pokazywany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), Na przykład 2.2(2.2.17560800). |
 | **Stan**           | Stan aplikacji.                                                                                                                                                                                                                                     |
 | **Szczegóły stanu**   | Szczegółowe informacje o stanie.                                                                                                                                                                                                                                     |
 | **Ostatnie zaewidencjonowanie**    | Data ostatniej synchronizacji urządzenia z usługą Intune.                                                                                                                                                                                                                  |
@@ -74,14 +75,14 @@ Lista stanu urządzenia zostanie wyświetlona po wybraniu pozycji **Stan instala
 
 ### <a name="user-install-status"></a>Stan instalacji użytkownika
 
-Lista stanu użytkownika zostanie wyświetlona po wybraniu sekcji **Stan instalacji użytkownika** w sekcji **Monitorowanie**. Tabela szczegółów zawiera następujące kolumny:
+Lista stanów użytkownika zostanie pokazana po wybraniu pozycji **Stan instalacji użytkownika** w sekcji **Monitorowanie** menu. Tabela szczegółów zawiera następujące kolumny:
 
 | **Kolumna użytkownika**     | **Opis**                           |
 |---------------------|-------------------------------------------|
-| **Nazwa**            | Nazwa użytkownika w usłudze Azure AD.         |
+| **Nazwa**            | Nazwa użytkownika w usłudze Azure Active Directory.         |
 | **Nazwa użytkownika**       | Unikatowa nazwa użytkownika.              |
-| **Instalacje**   | Liczba instalacji aplikacji użytych przez użytkownika. |
-| **Niepowodzenia**        | Liczba instalacji zakończonych niepowodzeniem według użytkownika.     |
+| **Instalacje**   | Liczba aplikacji zainstalowanych przez użytkownika. |
+| **Niepowodzenia**        | Liczba nieudanych instalacji aplikacji dla użytkownika.     |
 | **Niezainstalowane**   | Liczba aplikacji niezainstalowanych przez użytkownika. |
 
 

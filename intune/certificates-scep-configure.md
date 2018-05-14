@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dabf8d67b4d0bd7252f306d6b21949cf501eca8d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 834eb66e21820880f644c33d7e5d6aedad6bd502
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -40,13 +40,11 @@ Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfi
   -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
   -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
-> [!NOTE]
-> - Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
-> - Serwer WAP musi mieć certyfikat SSL pasujący do nazwy opublikowanej dla klientów zewnętrznych oraz ufać certyfikatowi SSL używanemu na serwerze usługi NDES. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
-> 
->   Aby uzyskać informacje na temat certyfikatów serwera WAP, zobacz sekcję [Plan certificates (Planowanie certyfikatów)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates).
-> 
->   Ogólne informacje na temat serwerów WAP, zobacz temat [Praca z serwerem proxy aplikacji internetowej](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+#### <a name="additional"></a>Dodatkowe
+- Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
+- Serwer WAP musi mieć certyfikat SSL pasujący do nazwy opublikowanej dla klientów zewnętrznych oraz ufać certyfikatowi SSL używanemu na serwerze usługi NDES. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
+
+Aby uzyskać więcej informacji, zobacz [Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (Planowanie certyfikatów protokołu WAP) i [ogólne informacje na temat serwerów WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="network-requirements"></a>Wymagania dotyczące sieci
 
@@ -369,13 +367,13 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
        - **CN={{IMEINumber}}**: unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
        - **CN={{OnPrem_Distinguished_Name}}**: sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
-       > [!TIP]
-       > Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą narzędzia [Azure Active Directory (AD) Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+          Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+
+       - **CN = {{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
+
+          Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
        Przy użyciu jednej z tych zmiennych lub ich kombinacji oraz ciągów statycznych możesz utworzyć niestandardowy format nazwy podmiotu, taki jak: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. <br/> W tym przykładzie utworzono format nazwy podmiotu, który oprócz zmiennych CN i E używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. Temat [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) zawiera opis tej funkcji i ciągi obsługiwane przez nią.
-
-
-
 
 - **Nazwa alternatywna podmiotu**: określ sposób automatycznego tworzenia wartości dla nazwy alternatywnej podmiotu w żądaniu certyfikatu przez usługę Intune. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta jest używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN.
 - **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:

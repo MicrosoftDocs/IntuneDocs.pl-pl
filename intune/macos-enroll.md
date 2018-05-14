@@ -15,11 +15,11 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1e522708879818f644780904c42fe9e6fb19a402
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4f8cddb69ac85e45acde8a846df3b5413c3b75bf
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
@@ -70,3 +70,11 @@ Maszyny wirtualne z systemem macOS można zarejestrować na potrzeby testowania 
 W przypadku oprogramowania Parallels Desktop należy ustawić typ sprzętu i numer seryjny dla maszyn wirtualnych, aby usługa Intune mogła je rozpoznać. Postępuj zgodnie z instrukcjami firmy Parallels dotyczącymi [ustawiania typu sprzętu](http://kb.parallels.com/123594) i [numeru seryjnego](http://kb.parallels.com/123455), aby skonfigurować wymagane ustawienia na potrzeby testowania. Zaleca się dopasowanie typu sprzętu urządzenia, na którym są uruchomione maszyny wirtualne, do typu sprzętu tworzonych maszyn wirtualnych. Ten typ sprzętu można znaleźć, wybierając kolejno **menu Apple** > **Informacje o tym Macu** > **Raport systemowy** > **Identyfikator modelu**. 
 
 W przypadku oprogramowania VMware Fusion należy [edytować plik vmx](https://kb.vmware.com/s/article/1014782), aby ustawić model sprzętu i numer seryjny maszyny wirtualnej. Zaleca się dopasowanie typu sprzętu urządzenia, na którym są uruchomione maszyny wirtualne, do typu sprzętu tworzonych maszyn wirtualnych. Ten typ sprzętu można znaleźć, wybierając kolejno **menu Apple** > **Informacje o tym Macu** > **Raport systemowy** > **Identyfikator modelu**. 
+
+## <a name="user-approved-enrollment"></a>Rejestracja zatwierdzona przez użytkownika
+
+Rejestracja MDM zatwierdzona przez użytkownika to typ rejestracji w systemie macOS, którego można używać do zarządzania niektórymi ustawieniami istotnymi dla bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [dokumentację pomocy technicznej firmy Apple](https://support.apple.com/HT208019).
+
+W celu uzyskania zatwierdzenia użytkownika użytkownik końcowy musi — po zarejestrowaniu przy użyciu Portalu firmy dla systemu macOS — ręcznie przeprowadzić zatwierdzanie przy użyciu preferencji systemowych. Instrukcje dotyczące wykonywania tej czynności są dostępne w aplikacji Portal firmy dla systemu macOS dla użytkowników systemu macOS w wersji 10.13.2 i nowszych.
+
+Aby sprawdzić, czy urządzenie zostało zatwierdzone przez użytkownika, przejdź do portalu usługi Intune, a następnie wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia**> wybierz urządzenie > **Sprzęt**. Zaznacz pole **Zatwierdzone przez użytkownika**.

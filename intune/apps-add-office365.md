@@ -1,29 +1,29 @@
 ---
-title: "Instalowanie aplikacji usługi Office 365 na urządzeniach przy użyciu usługi Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się, jak przy użyciu usługi Microsoft Intune można ułatwić instalowanie aplikacji usługi Office 365 na urządzeniach z systemem Windows 10."
-keywords: 
+title: Instalowanie aplikacji usługi Office 365 na urządzeniach przy użyciu usługi Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się, jak przy użyciu usługi Microsoft Intune można ułatwić instalowanie aplikacji usługi Office 365 na urządzeniach z systemem Windows 10.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 076d228f3b18416e4ecb8fd1b3543a58d037e386
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: da02a71d3801d0e00362617dd5d0cc76ffdd4722
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Jak przypisać aplikacje usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
+# <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
-Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako jeden wpis na liście aplikacji w konsoli usługi Intune.
+Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako pojedynczy wpis na liście aplikacji w konsoli usługi Intune.
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -32,81 +32,83 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarząd
 >Ta metoda instalacji pakietu Office jest obsługiwana tylko w przypadku, gdy żadne inne wersje pakietu Microsoft Office nie zostały zainstalowane na urządzeniu.
 
 - Na urządzeniach, na których wdrażasz te aplikacje, musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
-- Usługa Intune obsługuje tylko dodawanie aplikacji pakietu Office z pakietu usługi Office 365.
-- Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, instalacja może zakończyć się niepowodzeniem, a użytkownicy końcowi mogą utracić dane z niezapisanych plików.
-- Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10S, Windows Home, Windows Team, Windows Holographic i Windows Holographic for Business.
+- Usługa Intune obsługuje dodawanie aplikacji pakietu Office tylko z pakietu usługi Office 365.
+- Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, instalacja może zakończyć się niepowodzeniem, a użytkownicy mogą utracić dane z niezapisanych plików.
+- Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10 S, Windows Home, Windows Team, Windows Holographic lub Windows Holographic for Business.
 - Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze sklepu Microsoft Store (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, na których już wdrożono aplikacje usługi Office 365 przy użyciu usługi Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
-- Wielokrotne wymagane lub dostępne przypisania aplikacji nie są dodawane. Nowsze przypisanie aplikacji spowoduje zastąpienie zainstalowanych wcześniej przypisań aplikacji. Jeśli na przykład pierwszy zestaw aplikacji pakietu Office zawiera program Word, a późniejszy go nie zawiera, program Word zostanie odinstalowany. Takie zachowanie nie dotyczy aplikacji Visio ani Project.
+- Wielokrotne wymagane lub dostępne przypisania aplikacji nie są dodawane. Nowsze przypisanie aplikacji spowoduje zastąpienie zainstalowanych wcześniej przypisań aplikacji. Jeśli na przykład pierwszy zestaw aplikacji pakietu Office zawiera program Word, a późniejszy go nie zawiera, program Word zostanie odinstalowany. Ten warunek nie dotyczy aplikacji Visio ani Project.
 
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1.  Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2.  Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie + zarządzanie**.
-3.  W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4.  W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
-5.  Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6.  Na liście **Typ aplikacji** w bloku **Dodaj aplikacje** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**.
-    Możesz teraz skonfigurować pakiet aplikacji.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
+4. W okienku obciążenia **Aplikacje mobilne** w obszarze **Zarządzaj** wybierz pozycję **Aplikacje**.
+5. Wybierz pozycję **Dodaj**.
+6. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Office 365 Office** wybierz pozycję **Windows 10**.
+
+Możesz teraz skonfigurować pakiet aplikacji.
 
 ## <a name="configure-the-app-suite"></a>Konfigurowanie pakietu aplikacji
 
-W tym kroku wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
 
-1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
-2.  W bloku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń. Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje.
-3.  Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
+2. W okienku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.  
+    Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje.
+3. Wybierz przycisk **OK**.
 
 >[!IMPORTANT]
-> Po utworzeniu pakietu aplikacji nie można edytować jej właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
+> Po utworzeniu pakietu aplikacji nie można edytować jego właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 
-W tym kroku musisz podać informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune, a także ułatwiają użytkownikom wyszukiwanie go w aplikacji Portal firmy.
+W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
 
-1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Informacje o pakiecie aplikacji**.
-2.  W bloku **Informacje o pakiecie aplikacji** podaj następujące informacje:
-    - **Nazwa pakietu** — wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
-    - **Opis pakietu** — wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
-    - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
-    - **Kategoria** — opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy** — wyróżnij pakiet aplikacji na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Adres URL zasad ochrony prywatności** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Deweloper** — opcjonalnie wprowadź nazwę dewelopera aplikacji.
-    - **Właściciel** — opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład **Dział kadr**.
-    - **Uwagi** — wprowadź wszelkie uwagi, które chcesz skojarzyć z aplikacją.
-    - **Logo** — przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
-3.  Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Informacje o pakiecie aplikacji**.
+2. W okienku **Informacje o pakiecie aplikacji** wykonaj następujące czynności:
+    - **Nazwa pakietu**: wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
+    - **Opis pakietu**: wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
+    - **Wydawca**: wprowadź nazwę wydawcy aplikacji.
+    - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
+    - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład *Dział kadr*.
+    - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
+    - **Logo**: przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+3. Wybierz przycisk **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurowanie ustawień aplikacji
 
 W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
 
-1.  W bloku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
-2.  W bloku **Ustawienia pakietu aplikacji** skonfiguruj poniższe informacje:
-    - **Wersja pakietu Office** — wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
-    - **Kanał aktualizacji** — wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące innych kanałów aktualizacji, zobacz [Omówienie kanałów aktualizacji usługi Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Wybierz spośród opcji:
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
+2. W okienku **Ustawienia pakietu aplikacji** wykonaj następujące czynności:
+    - **Wersja pakietu Office**: wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
+    - **Kanał aktualizacji**: wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące różnych kanałów aktualizacji, zobacz [Omówienie kanałów aktualizacji usługi Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Wybierz spośród opcji:
         - **Raz na miesiąc**
         - **Raz na miesiąc (docelowy)**
         - **Półroczny**
         - **Półroczny (docelowy)**
-    - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji** — wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
-    - **Użyj aktywacji na komputerze udostępnionym** — aktywacja na komputerze udostępnionym jest używana w przypadku, gdy wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365.
-    - **Języki** — pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.
+    - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji**: wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
+    - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365.
+    - **Języki**: pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.
 
 >[!IMPORTANT]
-> Po utworzeniu pakietu aplikacji nie można edytować jej właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
+> Po utworzeniu pakietu aplikacji nie można edytować jego właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
 
 ## <a name="finish-up"></a>Zakończenie
 
-Gdy wszystko będzie gotowe, w bloku **Dodaj aplikację** wybierz pozycję **Dodaj**. Utworzona aplikacja jest wyświetlana na liście aplikacji.
+Po zakończeniu w okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj**. Utworzona aplikacja jest wyświetlana na liście aplikacji.
 
-## <a name="error-codes-when-installing-the-app-suite"></a>Kody błędów występujących podczas instalowania pakietu aplikacji
+## <a name="errors-during-installation-of-the-app-suite"></a>Błędy podczas instalacji pakietu aplikacji
 
 W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą wystąpić, oraz ich znaczenie.
 
-### <a name="status-for-office-csp"></a>Stan dostawcy CSP pakietu Office:
+### <a name="status-for-office-csp"></a>Stan dostawcy CSP pakietu Office
 
 ||||
 |-|-|-|
@@ -116,9 +118,9 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 |Kod błędu z zasad CertVerifyCertificateChainPolicy|-|Nie można sprawdzić certyfikatów pobranego Narzędzia wdrażania pakietu Office|    
 |997|PWT|Instalowanie|
 |0|Po instalacji|Instalacja zakończona pomyślnie|    
-|1603 (ERROR_INSTALL_FAILURE)|-|Nieudane sprawdzanie wymagań wstępnych, takich jak:<br>— SxS (nastąpiła próba instalacji po zainstalowaniu instalatora MSI 2016)<br>— niezgodność wersji<br>— itd.|     
-|0x8000ffff (E_UNEXPECTED)|-|Podjęto próbę odinstalowania w sytuacji, gdy na maszynie nie ma modułu Szybka instalacja pakietu Office.|    
-|17002|-|Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny:<br>— Instalacja została anulowana przez użytkownika<br>— Instalacja została anulowana przez inną instalację<br>— Brak miejsca na dysku podczas instalacji<br>— Nieznany identyfikator języka|
+|1603 (ERROR_INSTALL_FAILURE)|-|Nieudane sprawdzanie wymagań wstępnych, takich jak:<ul><li>SxS (nastąpiła próba instalacji po zainstalowaniu instalatora MSI 2016)</li><li>Niezgodność wersji</li><li>Inne</li></ul>|  
+|0x8000ffff (E_UNEXPECTED)|-|Podjęto próbę odinstalowania w sytuacji, gdy na maszynie nie ma modułu Szybka instalacja pakietu Office|     
+|17002|-|Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny:<ul><li>Instalacja anulowana przez użytkownika</li><li>Instalacja anulowana przez inną instalację</li><li>Brak miejsca na dysku podczas instalacji</li><li>Nieznany identyfikator języka</li></ul>|
 |17004|-|Nieznane jednostki SKU|   
 
 
@@ -138,4 +140,4 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Teraz można przypisać aplikacjom wybrane grupy — zobacz [Jak przypisać aplikacje do grup](/intune-azure/manage-apps/deploy-apps).
+- Aby przypisać aplikacje do wybranych grup, [Przypisywanie aplikacji do grup](/intune-azure/manage-apps/deploy-apps).

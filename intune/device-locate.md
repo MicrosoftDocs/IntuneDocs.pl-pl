@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da8bb19db8c2da2d5854c3f991ccce4d124d594c
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 735b3323527487e231d190ffd45e9083c4f524a2
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Znajdowanie zgubionych lub skradzionych urządzeń z systemem iOS przy użyciu usługi Intune
 
@@ -46,6 +46,15 @@ Ta funkcja nie jest obsługiwana w następujących systemach:
 
 >[!NOTE]
 >W celu zachowania prywatności stopień powiększenia mapy jest ograniczony.
+
+## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktywowanie alertu dźwiękowego trybu utraty na urządzeniu z systemem iOS
+
+Jeśli użytkownik zgubi urządzenie z systemem iOS 9.3 lub nowszym, można zdalnie wyzwolić odtwarzanie dźwięku alertu w urządzeniu, aby ułatwić jego znalezienie. Urządzenie musi działać w [trybie utraty](device-lost-mode.md).
+
+W obszarze usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie z systemem iOS > **Omówienie** > **Więcej** > **Odtwórz dźwięk trybu utraty (tylko tryb nadzorowany)**.
+
+Ten dźwięk będzie odtwarzany aż do wyłączenia przez użytkownika dźwięku na urządzeniu lub zakończenia trybu utraty na urządzeniu.
+
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Informacje o zabezpieczeniach i prywatności w trybie zgubienia oraz akcjach lokalizowania urządzenia
 - Do momentu włączenia tej akcji żadne informacje o lokalizacji urządzenia nie są wysyłane do usługi Intune.

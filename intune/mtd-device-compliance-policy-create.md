@@ -1,25 +1,25 @@
 ---
-title: "Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Utwórz zasady zgodności urządzeń usługi Intune wykorzystujące poziomy zagrożeń partnera MTD w celu określenia, czy urządzenie przenośne może uzyskiwać dostęp do zasobów firmy."
-keywords: 
+title: Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft Intune
+titlesuffix: ''
+description: Utwórz zasady zgodności urządzeń usługi Intune wykorzystujące poziomy zagrożeń partnera MTD w celu określenia, czy urządzenie przenośne może uzyskiwać dostęp do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b719bb1841cfc1aa98808b9c09db43d9c654d63f
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1152473206826aa2e3f63c7196a3d0538101a948
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -36,7 +36,7 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 -   Skonfigurowanie integracji z usługą MTD w usłudze Intune
 
-## <a name="to-create-a-mtd-device-compliance-policy"></a>Utworzenie zasad zgodności urządzeń usługi MTD
+## <a name="to-create-an-mtd-device-compliance-policy"></a>Aby utworzyć zasady zgodności urządzenia usługi MTD
 
 1.  Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
@@ -65,7 +65,7 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 > [!IMPORTANT]
 > W przypadku tworzenia zasad dostępu warunkowego dla usługi Office 365 lub innych usług ta ocena zgodności urządzeń jest oceniana i dostęp niezgodnych urządzeń do tych zasobów firmowych jest blokowany do momentu usunięcia zagrożenia na urządzeniu.
 
-## <a name="to-assign-a-mtd-device-compliance-policy"></a>Aby przypisać zasady zgodności urządzeń usługi MTD
+## <a name="to-assign-an-mtd-device-compliance-policy"></a>Aby przypisać zasady zgodności urządzenia usługi MTD
 
 Aby przypisać użytkownikom zasady zgodności urządzeń, wybierz wcześniej skonfigurowane przez siebie zasady. Istniejące zasady znajdują się w okienku **Zgodność urządzeń — zasady**.
 

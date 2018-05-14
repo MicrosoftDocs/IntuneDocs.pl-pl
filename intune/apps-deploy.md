@@ -1,7 +1,7 @@
 ---
-title: Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
+title: Przypisywanie aplikacji do grup w usłudze Microsoft Intune
 titlesuffix: ''
-description: Po dodaniu aplikacji do usługi Microsoft Intune należy przypisać ją do grup użytkowników lub urządzeń.
+description: Dowiedz się, jak przypisać aplikację usługi Intune do grup użytkowników lub urządzeń.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,23 +15,25 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de95f5516298e8ade9e394fab8b05fc056651b0c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 99eb2c70994fcb2b6ed116530f4a82d8db7bcb9b
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Jak przypisywać aplikacje do grup w usłudze Microsoft Intune
+# <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać użytkownikom i urządzeniom.
+Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń.
 
-Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządzane przez usługę Intune. Poniższa tabela pomoże zapoznać się z różnymi opcjami przypisywania aplikacji użytkownikom i urządzeniom:
+Aplikację można przypisać do urządzenia, bez względu na to, czy jest ono zarządzane przez usługę Intune. 
+
+Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użytkowników i urządzeń:
 
 ||||
 |-|-|-|-|
-|&nbsp;|Urządzenia zarejestrowane w usłudze Intune|Urządzenia niezarejestrowane w usłudze Intune|
+|&nbsp;|**Urządzenia zarejestrowane w usłudze Intune**|**Urządzenia niezarejestrowane w usłudze Intune**|
 |Przypisz do użytkowników|Tak|Tak|
 |Przypisz do urządzeń|Tak|Nie|
 |Przypisz opakowane aplikacje lub aplikacje zawierające zestaw Intune SDK (dla zasad ochrony aplikacji)|Tak|Tak|
@@ -43,44 +45,45 @@ Aplikacje można przypisać do urządzeń niezależnie od tego, czy są zarządz
 |Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy|Tak|Tak|
 
 > [!NOTE]
-> Obecnie można przypisać aplikacje iOS i Android (zarówno biznesowe, jak i zakupione w sklepie) do urządzeń, które nie są zarejestrowane w usłudze Intune.<br></br><br></br>
-> Aby otrzymywać aktualizacje aplikacji na urządzeniach, które nie są zarejestrowane w usłudze Intune, użytkownicy urządzeń muszą przejść do portalu swojej firmy i ręcznie zainstalować aktualizacje aplikacji.
+> Obecnie można przypisać aplikacje systemu iOS i Android (aplikacje biznesowe i zakupione w sklepie) do urządzeń, które nie zostały zarejestrowane w usłudze Intune.
+>
+> Aby otrzymywać aktualizacje aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune, użytkownicy urządzeń muszą przejść do Portalu firmy swojej organizacji i ręcznie zainstalować aktualizacje aplikacji.
 
-## <a name="how-to-assign-an-app"></a>Jak przypisać aplikację
+## <a name="to-assign-an-app"></a>Aby przypisać aplikację
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W bloku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Aplikacje** w sekcji **Zarządzaj**.
-5. W bloku listy aplikacji kliknij aplikację, którą chcesz przypisać.
-6. W bloku **Omówienie** specyficznym dla aplikacji wybierz pozycję **Przypisania** w sekcji **Zarządzaj**.
-7. Wybierz pozycję **Dodaj grupę**, aby wyświetlić blok **Dodawanie grupy** powiązany z aplikacją.
-8. Dla określonej aplikacji wybierz **typ przypisania** z następujących:
-   - **Dostępne dla zarejestrowanych urządzeń** — użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
-   - **Dostępne z rejestracją lub bez** — przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Należy pamiętać, że typ **Aplikacja programu Android for Work** nie obsługuje tej opcji. 
-   - **Wymagane** — aplikacja jest instalowana na urządzeniach w wybranych grupach.
-   - **Odinstaluj** — aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W menu usługi **Intune** wybierz pozycję **Aplikacje mobilne**.
+4. W sekcji **Zarządzaj** menu wybierz pozycję **Aplikacje**.
+5. W okienku **Aplikacje** wybierz aplikację, którą chcesz przypisać.
+6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
+7. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
+8. Dla określonej aplikacji wybierz **typ przypisania**:
+   - **Dostępne dla zarejestrowanych urządzeń**: użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
+   - **Dostępne z rejestracją lub bez**: przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Typ **Aplikacja programu Android for Work** nie obsługuje tej opcji. 
+   - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
+   - **Odinstaluj**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
 
      > [!NOTE]
-     > **Tylko dla aplikacji systemu iOS** — jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można go wybrać w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
+     > **Tylko dla aplikacji systemu iOS**: jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można wybrać ten profil w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
 
-9. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupy użytkowników, na które będzie mieć wpływ to przypisanie aplikacji.
-10. Po wybraniu co najmniej jednej grupy do uwzględnienia kliknij pozycję **Wybierz**.
-11. Kliknij przycisk **OK** w bloku **Przypisanie**, aby ukończyć wybieranie uwzględnionych grup.
-12. Kliknij pozycję **Wykluczenie grup**, jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji.
-13. Jeśli chcesz wykluczyć wszystkie grupy, kliknij pozycję **Wybierz** w bloku **Wybierz grupy**.
-14. Kliknij przycisk **OK** w bloku **Dodaj grupę**.
-15. Kliknij pozycję **Zapisz** w bloku **Przypisania** aplikacji, aby zapisać swoje przypisania.
+9. Aby wybrać grupy użytkowników, na które ma wpływ to przypisanie aplikacji, wybierz pozycję **Uwzględnione grupy**.
+10. Po wybraniu co najmniej jednej grupy do dołączenia wybierz pozycję **Wybierz**.
+11. W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
+12. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
+13. Jeśli chcesz wykluczyć wszystkie grupy, w obszarze **Wybieranie grup** wybierz pozycję **Wybierz**.
+14. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
+15. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
 Aplikacja jest teraz przypisana do wybranych grup. Aby uzyskać więcej informacji o dołączaniu i wykluczaniu przypisań aplikacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji](apps-inc-exl-assignments.md).
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Jak są rozwiązywane konflikty intencji aplikacji
 
-Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi intencjami. W poniższej tabeli przedstawiono wynikowe intencje w takich przypadkach.
+Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi intencjami. Informacje przedstawione w poniższej tabeli pomogą w zrozumieniu wynikowej intencji:
 
 ||||
 |-|-|-|
-|Intencja grupy 1|Intencja grupy 2|Intencja wynikowa|
+|**Intencja grupy 1**|**Intencja grupy 2**|**Intencja wynikowa**|
 |Użytkownik, wymagane|Użytkownik, dostępne|Wymagane i dostępne|
 |Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
 |Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
@@ -90,7 +93,7 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, wymagane|Urządzenie, wymagane|Oba elementy istnieją, brama traktuje jako wymagane
 |Użytkownik, wymagane|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane
 |Użytkownik, dostępne|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane (wymagane i dostępne)
-|Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako dostępne.<br>Aplikacja jest wyświetlana w Portalu firmy.<br>Jeśli aplikacja jest już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), wówczas ta aplikacja zostaje odinstalowana.<br>Jeśli jednak użytkownik kliknie w Portalu firmy polecenie instalacji, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
+|Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako dostępne.<br><br>Aplikacja jest wyświetlana w Portalu firmy.<br><br>Jeśli aplikacja została już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), ta aplikacja zostaje odinstalowana.<br><br>Jeśli użytkownik wybierze pozycję **Zainstaluj z Portalu firmy**, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
 |Użytkownik, niedostępne|Urządzenie, wymagane|Wymagane|
 |Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstalowanie|
 |Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, brama rozstrzyga jako wymagane|
@@ -101,7 +104,7 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, wymagane i dostępne|Użytkownik, niedostępne|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Urządzenie, wymagane|Oba elementy istnieją, wymagane i dostępne
 |Użytkownik, wymagane i dostępne|Urządzenie, niedostępne|Wymagane i dostępne|
-|Użytkownik, wymagane i dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane. Wymagane i dostępne
+|Użytkownik, wymagane i dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, brama rozstrzyga jako wymagane (wymagane i dostępne)
 |Użytkownik, niedostępne|Urządzenie, niedostępne|Niedostępny|
 |Użytkownik, dostępne|Urządzenie, niedostępne|Dostępne|
 |Użytkownik, wymagane|Urządzenie, niedostępne|Wymagane|
@@ -111,11 +114,11 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, dostępne bez rejestracji|Użytkownik, dostępne|Dostępne|
 |Użytkownik, dostępne bez rejestracji|Urządzenie, wymagane|Wymagane i dostępne bez rejestracji|
 |Użytkownik, dostępne bez rejestracji|Urządzenie, niedostępne|Dostępne bez rejestracji|
-|Użytkownik, dostępne bez rejestracji|Urządzenie, odinstalowywanie|Odinstalowywanie i dostępne bez rejestracji.<br>Jeśli użytkownik nie zainstalował aplikacji z Portalu firmy, odinstalowywanie zostanie uznane.<br>Jeśli użytkownik instaluje aplikację z Portalu firmy, instalowanie ma priorytet nad odinstalowywaniem.|
+|Użytkownik, dostępne bez rejestracji|Urządzenie, odinstalowywanie|Odinstalowywanie i dostępne bez rejestracji.<br><br>Jeśli użytkownik nie zainstalował aplikacji z Portalu firmy, odinstalowywanie zostanie uznane.<br><br>Jeśli użytkownik instaluje aplikację z Portalu firmy, instalowanie ma priorytet nad odinstalowywaniem.|
 
->[!NOTE]
->W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Microsoft Intune i przypisania ich jako **Wymagane** są one automatycznie tworzone z intencjami **Wymagane** i **Dostępne**.
+> [!NOTE]
+> W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Microsoft Intune i przypisania ich jako **Wymagane** są one automatycznie tworzone z intencjami **Wymagane** i **Dostępne**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Informacje przydatne do monitorowania przypisań aplikacji znajdują się w artykule [How to monitor apps](apps-monitor.md) (Jak monitorować aplikacje).
+Aby dowiedzieć się więcej na temat monitorowania przypisań aplikacji, zobacz [Jak monitorować aplikacje](apps-monitor.md).

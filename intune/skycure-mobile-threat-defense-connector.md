@@ -1,29 +1,29 @@
 ---
-title: "Łącznik Skycure w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Skycure Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
-keywords: 
+title: Łącznik Symantec w usłudze Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się więcej na temat integracji usługi Intune z programem Symantec Endpoint Protection Mobile w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 12/09/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b3148a24b077dfd491ce06fcf708a81de7d12dc1
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 577eff3a5f3965065a4066973ea8c61160ab4563
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="skycure-mobile-threat-defense-connector"></a>Łącznik Skycure Mobile Threat Defense
+# <a name="symantec-endpoint-protection-mobile-connector"></a>Łącznik Symantec Endpoint Protection Mobile
 
-Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez usługę Skycure — rozwiązaniu usługi Mobile Threat Defense zintegrowanemu z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
+Dostęp urządzeń przenośnych do zasobów firmy można kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez produkt Symantec Endpoint Protection Mobile (SEP Mobile). Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzenia przenośne zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą SEP Mobile. Są to na przykład:
 
 -   Ochrona fizyczna
 
@@ -33,21 +33,21 @@ Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą
 
 -   Ochrona przed lukami w zabezpieczeniach
 
-Można skonfigurować zasady dostępu warunkowego oparte na ocenie ryzyka Skycure włączone za pomocą zasad zgodności urządzeń usługi Intune, których w przypadku niezgodnego urządzenia można użyć do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
+Może włączyć ocenę ryzyka SEP Mobile za pomocą zasad zgodności urządzeń usługi Intune, a następnie używać zasad dostępu warunkowego do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
 
-## <a name="how-do-intune-and-skycure-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i program Skycure ułatwiają ochronę zasobów firmy?
+## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i program SEP Mobile ułatwiają ochronę zasobów firmy?
 
-Aplikacja mobilna Skycure dla systemu Android lub iOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Skycure w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
+Aplikacja SEP Mobile dla systemu Android lub iOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Symantec w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
 
-Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą usługi Skycure Mobile Threat Defense, która jest oparta na ocenie ryzyka Skycure. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
+Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą programu SEP Mobile, która jest oparta na ocenie ryzyka SEP Mobile. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
-Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji mobilnej Skycure dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
+Jeśli okaże się, że urządzenie nie jest zgodne, może zostać zablokowany dostęp do zasobów, takich jak usługa Exchange Online lub SharePoint Online. Użytkownicy zablokowanych urządzeń otrzymają wskazówki z aplikacji SEP Mobile dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
 
-Usługa Intune obsługuje dwa tryby integracji z programem Skycure:
+Usługa Intune obsługuje dwa tryby integracji z programem SEP Mobile:
 
--   **Konfiguracja podstawowa**, który jest trybem tylko do odczytu, umożliwiającym widoczność Skycure dla urządzeń w usłudze Intune.
+-   **Konfiguracja podstawowa**, który jest trybem tylko do odczytu, umożliwiającym widoczność programu SEP Mobile dla urządzeń w usłudze Intune.
 
--   **Pełna integracja**, który umożliwia programowi Skycure raportowanie do usługi Intune ryzyka urządzeń i szczegółowych informacji dotyczących incydentów zabezpieczeń.
+-   **Pełna integracja**, który umożliwia programowi SEP Mobile raportowanie do usługi Intune ryzyka urządzeń i szczegółowych informacji dotyczących incydentów zabezpieczeń.
 
 ## <a name="sample-scenarios"></a>Przykładowe scenariusze
 
@@ -65,11 +65,11 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
-![Wykryto złośliwe aplikacje](./media/skycure-arch-1.png)
+![Wykryto złośliwe aplikacje](./media/symantec-arch-1.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Dostęp udzielany po skorygowaniu w następstwie wykrycia złośliwych aplikacji](./media/skycure-arch-2.png)
+![Dostęp udzielany po skorygowaniu w następstwie wykrycia złośliwych aplikacji](./media/symantec-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
@@ -77,11 +77,11 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i oc
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
-![Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi](./media/skycure-arch-3.png)
+![Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi](./media/symantec-arch-3.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Dostęp udzielany po skorygowaniu](./media/skycure-arch-4.png)
+![Dostęp udzielany po skorygowaniu](./media/symantec-arch-4.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
@@ -89,11 +89,11 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i bl
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 
-![Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych](./media/skycure-arch-5.png)
+![Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych](./media/symantec-arch-5.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Dostęp udzielany po skorygowaniu — przykład dla programu Sharepoint](./media/skycure-arch-6.png)
+![Dostęp udzielany po skorygowaniu — przykład dla programu Sharepoint](./media/symantec-arch-6.png)
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -107,18 +107,18 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i bl
 
 -   Subskrypcja usługi Microsoft Intune
 
--   Subskrypcja usługi Skycure Mobile Threat Defense
+-   Subskrypcja programu Symantec Endpoint Protection Mobile
 
-Więcej informacji można znaleźć w [witrynie sieci Web Skycure](https://www.skycure.com/skycure-microsoft-integration/).
+Więcej informacji można znaleźć w [witrynie internetowej firmy Symantec](https://www.skycure.com/skycure-microsoft-integration/).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Poniżej przedstawiono kroki, które należy wykonać w celu zintegrowania usługi Intune z programem Skycure:
+Poniżej przedstawiono kroki, które należy wykonać w celu zintegrowania usługi Intune z programem SEP Mobile:
 
-- [Konfiguracja integracji z programem Skycure w usłudze Intune](skycure-mtd-connector-integration.md)
+- [Konfiguracja integracji z programem SEP Mobile w usłudze Intune](skycure-mtd-connector-integration.md)
 
-- [Dodawanie i przypisywanie aplikacji Skycure, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Dodawanie i przypisywanie aplikacji SEP Mobile, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-- [Tworzenie zasad zgodności urządzeń w programie Skycure przy użyciu usługi Intune](mtd-device-compliance-policy-create.md)
+- [Tworzenie zasad zgodności urządzeń w programie SEP Mobile przy użyciu usługi Intune](mtd-device-compliance-policy-create.md)
 
-- [Włączenie programu Skycure MTD w usłudze Intune](mtd-connector-enable.md)
+- [Włączanie łącznika MTD programu SEP Mobile w usłudze Intune](mtd-connector-enable.md)

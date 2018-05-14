@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 228198276643f1eb8dfcb0392e4902a7f56875c9
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
@@ -58,7 +58,9 @@ Jeśli urządzenie jest włączone i połączone, propagowanie akcji **Resetowan
 
 ## <a name="remove-company-data"></a>Usuwanie danych firmy
 
-Akcja **Usuń dane firmowe** powoduje usunięcie zarządzanych danych aplikacji (jeśli dotyczy), ustawień i profilów poczty e-mail, które zostały przypisane przy użyciu usługi Intune. Akcja **Usuń dane firmowe** nie powoduje usunięcia osobistych danych użytkownika z urządzenia. Urządzenie jest usuwane z zarządzania przez usługę Intune. 
+Akcja **Usuń dane firmowe** powoduje usunięcie zarządzanych danych aplikacji (jeśli dotyczy), ustawień i profilów poczty e-mail, które zostały przypisane przy użyciu usługi Intune. Urządzenie jest usuwane z zarządzania przez usługę Intune. Stanie się tak, gdy urządzenie zostanie zaewidencjonowane następny raz i otrzyma zdalną akcję **Usuń dane firmowe**.
+
+Akcja **Usuń dane firmowe** nie powoduje usunięcia osobistych danych użytkownika z urządzenia.  
 
 W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Usuń dane firmowe** na dane pozostające na urządzeniu po usunięciu danych firmowych.
 
@@ -123,13 +125,19 @@ Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usu
 
 ### <a name="remove-company-data"></a>Usuwanie danych firmy
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
-4. Wybierz nazwę urządzenia, z którego chcesz usunąć dane firmowe.
-5. W okienku wyświetlającym nazwę urządzenia wybierz pozycję **Usuń dane firmowe**. Wybierz pozycję **Tak**, aby potwierdzić.
+1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+2. W okienku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
+3. Wybierz nazwę urządzenia, z którego chcesz usunąć dane firmowe.
+4. W okienku wyświetlającym nazwę urządzenia wybierz pozycję **Usuń dane firmowe**. Wybierz pozycję **Tak**, aby potwierdzić.
 
 Jeśli urządzenie jest włączone i połączone, propagowanie akcji **Usuń dane firmowe** do wszystkich typów urządzeń potrwa mniej niż 15 minut.
+
+## <a name="delete-devices-from-the-intune-portal"></a>Usuwanie urządzeń z portalu usługi Intune
+
+Jeśli chcesz usunąć urządzenia z portalu usługi Intune, możesz usunąć je z okienka określonego urządzenia. Przy następnym zaewidencjonowaniu urządzenia zostaną z niego usunięte wszystkie dane firmy.
+
+1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+2. Wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenia do usunięcia > **Usuń**.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Usuwanie urządzeń z portalu usługi Azure Active Directory
 

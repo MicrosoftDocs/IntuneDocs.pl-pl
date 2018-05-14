@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/07/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,30 +17,34 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa294e5df63106f949da94aec766c04839e0171f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 52431d900ee9abe71458b8b22d8a0946f22ce583
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Przekazuj błędy do odpowiednich osób dotyczące zarządzanego urządzenia z systemem macOS
 
-Jeśli na urządzeniu z systemem macOS występują błędy podczas korzystania z aplikacji Portal firmy, możesz wysłać informacje, aby pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem.
+Czasami w aplikacji Portal firmy występują błędy niemożliwe do wyjaśnienia. Gdy taki błąd wystąpi, możesz wysłać jego szczegóły w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.
 
 ## <a name="send-errors-to-your-company-support"></a>Wysyłanie błędów do działu pomocy technicznej firmy
 
- Informacje o błędach do działu pomocy technicznej firmy możesz wysłać na różne sposoby:
+Aby wysłać szczegóły błędu w aplikacji Portal firmy:
 
--   Po wystąpieniu komunikatów alertów o błędzie kliknij pozycję **Zgłoś**.
+-   W wyświetlonym komunikacie o błędzie kliknij pozycję **Zgłoś**.
 
--   W menu **Pomoc** w aplikacji Portal firmy kliknij pozycję **Zapisz raport diagnostyczny**. Wybierz lokalizację, w której chcesz zapisać plik. Ten plik możesz wysłać w wiadomości e-mail lub przekazać do działu pomocy technicznej swojej firmy.
+-   Kliknij menu **Pomoc** > **Zapisz raport diagnostyczny**. Wybierz lokalizację, w której chcesz zapisać plik. Następnie wyślij ten plik pocztą e-mail lub przekaż go do osoby odpowiedzialnej w firmie za pomoc techniczną.
 
-- Jeśli aplikacja poczty e-mail została już skonfigurowana, możesz również wysłać raport diagnostyczny, przechodząc do obszaru **Pomoc** > **Wyślij raport diagnostyczny**.
+-   Jeśli aplikacja poczty e-mail została skonfigurowana, możesz wysłać raport diagnostyczny, przechodząc do obszaru **Pomoc** > **Wyślij raport diagnostyczny**. Po przekazaniu dzienników kliknij pozycję **Wyślij szczegóły pocztą e-mail**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Wysyłanie błędów do deweloperów aplikacji Portal firmy w przypadku urządzeń z systemem macOS
 
-Czasami aplikacja Portal firmy może działać w sposób nieoczekiwany. Są to problemy, o których występowaniu deweloperzy aplikacji chcieliby wiedzieć, ponieważ może to pomóc w usprawnieniu aplikacji i zapobieganiu takim nietypowym zachowaniom w przyszłości. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _raportem diagnostycznym_.
+Czasami aplikacja Portal firmy może zostać nieoczekiwanie zamknięta. Deweloperzy aplikacji chcą wiedzieć, kiedy takie nieoczekiwane zachowanie wystąpi. Używają oni szczegółów błędu, aby znaleźć główną przyczynę i uniknąć przyszłych wystąpień. Takie błędy są szczegółowo opisywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_. Zespół aplikacji Portal firmy potrzebuje dzienników właściwych dla aplikacji Portal firmy, aby zdiagnozować problem.
 
-Jeśli chcesz wysyłać raporty diagnostyczne do zespołu firmy Microsoft, który jest odpowiedzialny za rozwój aplikacji Portal firmy, konieczne będzie podanie pewnych informacji w celu przetestowania i zdiagnozowania głównej przyczyny problemu. Zamiast wysyłać wiadomość e-mail do zespołu pomocy technicznej swojej firmy, użyj <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">tego szablonu wiadomości e-mail</a>, aby wysłać ją do firmy Microsoft.
+Aby wysłać dzienniki do firmy Microsoft:
+
+1.  Otwórz aplikację Portal firmy.
+2.  Kliknij menu **Pomoc** > **Wyślij raport diagnostyczny**.  Po przekazaniu dzienników otrzymasz identyfikator zdarzenia. Skopiuj i zapisz identyfikator.
+3.  Wyślij wiadomość e-mail do firmy Microsoft przy użyciu <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">tego szablonu</a>.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
