@@ -13,11 +13,11 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: b6371da954aa913e1378c065b203fa197f3fc767
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: d41ec494672340a9f5751e6fc40edf1a7b06bb40
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Ustawienia sieci VPN systemu Windows 10 w usłudze Intune
 
@@ -99,17 +99,10 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 
 ## <a name="apps-and-traffic-rules"></a>Reguły dotyczące aplikacji i ruchu
 
-<<<<<<< HEAD
 - **Skojarz PWT lub aplikacje z tą siecią VPN**: włącz to ustawienie, aby tylko wybrane aplikacje mogły korzystać z połączenia VPN. Dostępne opcje:
 
   - **Skojarz PWT z tym połączeniem**: wprowadź **domenę PWT dla tego połączenia**
   - **Skojarz aplikacje z tym połączeniem**: możesz **ograniczyć połączenie z siecią VPN do tych aplikacji**, a następnie dodać **skojarzone aplikacje**. Wprowadzone aplikacje będą automatycznie korzystać z połączenia z siecią VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnej podaj nazwę rodziny pakietów. W przypadku aplikacji klasycznej podaj ścieżkę pliku aplikacji.
-=======
-**Ogranicz połączenie sieci VPN do tych aplikacji**: włącz to ustawienie, aby tylko wybrane aplikacje mogły korzystać z połączenia VPN.
-
-**Skojarzone aplikacje**: podaj listę aplikacji, które automatycznie będą używać połączenia VPN. Typ aplikacji określa identyfikator aplikacji. W przypadku aplikacji uniwersalnej podaj nazwę rodziny pakietów. W przypadku aplikacji klasycznej podaj ścieżkę pliku aplikacji.
->>>>>>> b2f641d045b7649f641fb98e07accc745e697d84
-
   >[!IMPORTANT]
   >Zalecamy zabezpieczenie wszystkich list aplikacji utworzonych dla sieci VPN dla poszczególnych aplikacji. Jeśli nieautoryzowany użytkownik wprowadzi zmiany na liście, po czym zaimportujesz listę do sieci VPN aplikacji, możesz potencjalnie autoryzować dostęp za pośrednictwem sieci VPN do aplikacji, które nie powinny mieć dostępu. Jednym ze sposobów na zabezpieczenie listy aplikacji jest użycie listy kontroli dostępu (ACL).
 

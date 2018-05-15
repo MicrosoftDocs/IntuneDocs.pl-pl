@@ -173,7 +173,11 @@
             - name: Ekran ze stanem rejestracji
               href: windows-enrollment-status.md
         - name: Konfiguracja rejestrowania urządzeń z systemem Android
-          href: android-enroll.md
+          items:
+            - name: Konfiguracja rejestrowania urządzeń z systemem Android
+              href: android-enroll.md
+            - name: Program Samsung Knox Mobile Enrollment
+              href: android-samsung-knox-mobile-enroll.md
         - name: Konfigurowanie rejestrowania urządzeń z systemem iOS
           href: ios-enroll.md
           items:
@@ -462,6 +466,8 @@
           href: conditional-access-intune-common-ways-use.md
         - name: Instalowanie lokalnego łącznika programu Exchange
           href: exchange-connector-install.md
+        - name: Instalowanie łącznika usługi programu Exchange
+          href: exchange-service-connector-configure.md
         - name: Tworzenie i przypisywanie zasad dostępu warunkowego
           href: conditional-access-exchange-create.md
         - name: Ponowne przypisywanie zasad dostępu warunkowego z portalu klasycznego usługi Intune
@@ -511,7 +517,7 @@
                   href: mtd-device-compliance-policy-create.md
                 - name: Włączanie usługi MTD w usłudze Intune
                   href: mtd-connector-enable.md
-        - name: Zaawansowana ochrona przed zagrożeniami
+        - name: Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
           href: advanced-threat-protection.md
         - name: Kontrola dostępu do sieci
           href: network-access-control-integrate.md
@@ -598,9 +604,9 @@
           href: data-intune-sends-to-apple.md
         - name: Dane wysyłane przez usługę Intune do Google
           href: data-intune-sends-to-google.md
-        - name: Dane wysyłane do usługi Intune przez Apple
+        - name: Dane wysyłane do usługi Intune przez firmę Apple
           href: data-apple-sends-to-intune.md
-        - name: Dane wysyłane do usługi Intune przez Google
+        - name: Dane wysyłane do usługi Intune przez firmę Google
           href: data-google-sends-to-intune.md
     - name: Monitorowanie i rozwiązywanie problemów
       items:
@@ -655,8 +661,6 @@
           href: app-wrapper-prepare-android.md
         - name: Zestaw SDK aplikacji usługi Intune dla systemu Android
           href: app-sdk-android.md
-        - name: Wtyczka Cordova zestawu SDK aplikacji usługi Intune
-          href: app-sdk-cordova.md
         - name: Składnik Xamarin zestawu SDK aplikacji usługi Intune
           href: app-sdk-xamarin.md
     - name: Korzystanie z magazynu danych usługi Intune
@@ -700,7 +704,7 @@
               href: reports-ref-user-device.md
             - name: Dokumentacja jednostki użytkownika
               href: reports-ref-user.md
-        - name: Przenoszenie danych konta z Magazynu danych usługi Intune
+        - name: Przenoszenie danych konta z magazynu danych usługi Intune
           href: data-warehouse-account-move.md
     - name: Korzystanie z usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
       href: intune-graph-apis.md

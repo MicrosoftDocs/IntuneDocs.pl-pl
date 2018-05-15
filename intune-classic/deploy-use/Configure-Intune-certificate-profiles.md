@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 51da197b9b805fbac22b6a46453617b7703a37e8
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9c2b17e1acff965a08245094c57df81c58f44fda
+ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="configure-intune-certificate-profiles"></a>Konfigurowanie profilów certyfikatów usługi Intune
 
@@ -103,7 +103,7 @@ Po utworzeniu profilu certyfikatu zaufanego urzędu certyfikacji należy utworzy
    > 
    > Aktualnie są obsługiwane dwie zmienne dla formatu niestandardowego: `Common Name (CN)` i `Email (E)`. Przy użyciu kombinacji tych zmiennych i statycznych ciągów można utworzyć niestandardowy format nazwy podmiotu, na przykład taki:
    > 
-   >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+   >     `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`
    > 
    > W tym przykładzie administrator utworzył format nazwy podmiotu, który oprócz zmiennych `CN` i `E` używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) wyświetla listę obsługiwanych ciągów.
 
