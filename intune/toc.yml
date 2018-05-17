@@ -170,8 +170,6 @@
               href: windows-bulk-enroll.md
             - name: Program Windows AutoPilot Deployment
               href: enrollment-autopilot.md
-            - name: Ekran ze stanem rejestracji
-              href: windows-enrollment-status.md
         - name: Konfiguracja rejestrowania urządzeń z systemem Android
           items:
             - name: Konfiguracja rejestrowania urządzeń z systemem Android
@@ -310,6 +308,8 @@
                       href: app-protection-policy-settings-android.md
                     - name: Ustawienia systemu iOS
                       href: app-protection-policy-settings-ios.md
+                    - name: Wyjątki transferu danych
+                      href: app-protection-policies-exception.md
                 - name: Weryfikowanie zasad ochrony aplikacji
                   href: app-protection-policies-validate.md
                 - name: Monitorowanie stanu użytkownika ochrony aplikacji
