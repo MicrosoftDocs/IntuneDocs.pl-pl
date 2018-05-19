@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 05/08/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 9004441a41c5e7458447b5c5f7e1d91e630bd412
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: e677e15d1e4ee688a826683ecd1d8d68620d2796
+ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,18 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-may-7-2018"></a>Tydzień od 7 maja 2018 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="samsung-knox-mobile-enrollment-support---1112863--"></a>Pomoc techniczna dotycząca programu Samsung Knox Mobile Enrollment<!--1112863-->
+
+Korzystając z usługi Intune z programem Samsung Knox Mobile Enrollment (KME) można zarejestrować dużą liczbę urządzeń firmowych z systemem Android. Użytkownicy korzystający z sieci komórkowej lub Wi-Fi mogą za pomocą kilku naciśnięć zarejestrować urządzenie przy jego pierwszym włączeniu. Podczas korzystania z aplikacji Knox Deployment urządzenia mogą być rejestrowane za pomocą funkcji Bluetooth lub NFC. Aby uzyskać więcej informacji, zobacz temat [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md) (Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung).
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10----1874137---"></a>Żądanie pomocy w aplikacji Portal firmy w systemie Windows 10 <!-- 1874137 -->
+
+Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone do firmy Microsoft.
 
 ## <a name="week-of-april-23-2018"></a>Tydzień od 23 kwietnia 2018 r.
 
@@ -369,12 +381,21 @@ Aby uzyskać więcej informacji na temat tworzenia kanałów wdrażania w usłud
 
 #### <a name="company-portal-enrollment-improved----1874230-eeready--"></a>Ulepszona rejestracja za pomocą aplikacji Portal firmy <!-- 1874230 eeready-->
 Użytkownicy rejestrujący urządzenia za pomocą aplikacji Portal firmy w systemie Windows 10 (kompilacja 1703 i nowsza) mogą teraz wykonać pierwszy krok rejestracji bez wychodzenia z aplikacji.
-
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868---"></a>Urządzenia HoloLens i Surface Hub są teraz wyświetlane na liście urządzeń <!--1725868 -->
 Dodaliśmy obsługę wyświetlania urządzeń HoloLens i Surface Hub zarejestrowanych w usłudze Intune do aplikacji Portal firmy dla systemu Android.
 
 #### <a name="custom-book-categories-for-volume-purchase-progream-vpp-ebooks----1488911---"></a>Niestandardowe kategorie książek dla książek elektronicznych programu zakupów zbiorczych (VPP) <!-- 1488911 -->
-Możliwe jest tworzenie niestandardowych kategorii książek elektronicznych, a następnie przypisywanie do tych kategorii książek elektronicznych programu VPP. Użytkownicy końcowi będą mogli wtedy wyświetlać nowo utworzone kategorie książek elektronicznych oraz książki przypisane do tych kategorii. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune](vpp-apps.md).
+Możliwe jest tworzenie niestandardowych kategorii książek elektronicznych, a następnie przypisywanie do tych kategorii książek elektronicznych programu VPP. Użytkownicy końcowi będą mogli wtedy wyświetlać nowo utworzone kategorie książek elektronicznych oraz książki przypisane do tych kategorii. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune](vpp-apps.md).  
+
+#### <a name="support-changes-for-company-portal-app-for-windows-send-feedback-option----2070166---"></a>Zmiana obsługi opcji wysyłania opinii w aplikacji Portal firmy dla systemu Windows <!-- 2070166 -->
+Od dnia 30 kwietnia 2018 r. opcja **Prześlij opinię** w aplikacji Portal firmy dla systemu Windows działa tylko na urządzeniach z wersją Rocznicowa aktualizacja systemu Windows 10 (1607) lub nowszą. Opcja wysyłania opinii nie jest już obsługiwana podczas korzystania z aplikacji Portal firmy dla systemu Windows w przypadku systemu:  
+- Windows 10, wersja 1507  
+- Windows 10, wersja 1511  
+- Windows Phone 8,1 
+
+Jeśli na Twoim urządzeniu jest uruchomiony system Windows 10 RS1 lub nowszy, pobierz najnowszą wersję aplikacji Portal firmy systemu Windows dostępną w sklepie Store. Jeśli używasz nieobsługiwanej wersji, przekaż opinię za pośrednictwem następujących kanałów: 
+- Aplikacja Centrum opinii w systemie Windows 10
+- Wiadomość e-mail na adres WinCPfeedback@microsoft.com  
 
 #### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nowe ustawienia funkcji Windows Defender Application Guard <!-- 1631890 -->
 
@@ -1110,23 +1131,6 @@ Ta zmiana wpłynie zarówno na klientów z autonomiczną usługą Intune, jak i 
 Otaguj usługę Intune jako ulubioną zamiast bloku usługi Intune App Protection i zapoznaj się z przepływem pracy zasad ochrony aplikacji w bloku aplikacji mobilnych w usłudze Intune. Przez krótki okres będzie działać przekierowanie, a następnie blok App Protection zostanie usunięty. Wszystkie zasady usługi App Protection są już dostępne w usłudze Intune i można modyfikować dowolne zasady dostępu warunkowego, postępując zgodnie z następującą dokumentacją: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
 
 **Dodatkowe informacje**: [https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
-
-### <a name="plan-for-change-windows-company-portal-send-feedback-option-may-no-longer-work"></a>Planowanie zmian: opcja Prześlij opinię w aplikacji Portal firmy systemu Windows może przestać działać  
-Aplikacja Portal firmy dla systemu Windows zawiera opcję **Prześlij opinię** umożliwiającą użytkownikom przesyłanie opinii o aplikacji do firmy Microsoft. Od 30 kwietnia 2018 r. ta opcja będą nadal obsługiwana tylko w aplikacji Portal firmy dla systemu Windows 10 1607 (rocznicowa aktualizacja) lub nowszego.  
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?  
-Jeśli dla użytkowników końcowych nie została zainstalowana aplikacja Portal firmy, możesz zignorować tę wiadomość. Jeśli którykolwiek z Twoich użytkowników końcowych ma aplikację Portal firmy, należy pamiętać, że od 30 kwietnia przycisk **Prześlij opinię** nie będzie działać dla aplikacji w następujących scenariuszach:  
-- Aplikacja Portal firmy w systemie Windows 10 w przypadku używania w wersjach 1507 i 1511 systemu Windows 10  
-- Aplikacja Portal firmy w systemie Windows Phone 8.1  
-
-W przypadku urządzeń, na które ma to wpływ, działanie opcji **Prześlij opinię** zakończy się niepowodzeniem i nie powiedzie się nawet w przypadku ponawiania prób. Aby wysłać opinię do firmy Microsoft dotyczącą doświadczeń z tymi platformami, zapoznaj się z alternatywnymi kanałami przesyłania opinii, które są wyświetlone poniżej.  
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?  
-Poinformuj użytkowników o tej zmianie i w razie potrzeby zaktualizuj wszystkie wskazówki dla użytkowników. Poinformuj użytkowników końcowych systemu Windows Phone 8.1, Windows 10 1507 i Windows 10 1511 przy użyciu aplikacji Portal firmy, że są dla nich dostępne dwa alternatywne kanały przesyłania opinii. Możliwe jest:  
-- Użycie aplikacji Centrum opinii w systemie Windows 10
-- Wysłanie wiadomości e-mail na adres WinCPfeedback@microsoft.com  
-
-Poproś użytkowników końcowych z systemem Windows 10 RS1 lub nowszym o przeprowadzenie aktualizacji do najnowszej wersji aplikacji Portal firmy systemu Windows dostępnej w sklepie.
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Planowanie zmian: zmiany w obsłudze wtyczki zestawu SDK aplikacji usługi Microsoft Intune dla oprogramowania Cordova
 Usługa Intune kończy obsługę [wtyczki zestawu Microsoft Intune App SDK dla oprogramowania Cordova](app-sdk-cordova.md) z dniem 1 maja 2018 r. W zamian zalecamy używanie dostępnego w usłudze Intune narzędzia opakowującego aplikacje, aby przygotować swoje aplikacje oparte na oprogramowaniu Cordova do zapewnienia zarządzania i dostępności w usłudze Intune. Gdy ta zmiana zacznie obowiązywać, wtyczka zestawu Microsoft Intune App SDK dla oprogramowania Cordova nie będzie już utrzymywana ani nie będzie otrzymywać aktualizacji. Deweloperzy aplikacji nie będą mogli używać tej wtyczki. Usługa Intune planuje kontynuowanie obsługi aplikacji skompilowanych przy użyciu oprogramowania Cordova. Jednak wszelkie aplikacje skompilowane z użyciem wtyczki zestawu Microsoft Intune App SDK dla oprogramowania Cordova będą miały ograniczoną funkcjonalność w usłudze Intune. Po opakowaniu za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje można wdrożyć aplikacje dla użytkowników końcowych w zwykły sposób. W przypadku aplikacji systemu Android opartych na oprogramowaniu Cordova, które są publikowane w sklepie Google Play:

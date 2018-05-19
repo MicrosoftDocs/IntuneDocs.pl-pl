@@ -1,6 +1,6 @@
 ---
 title: Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: 'Istnieje możliwość wyświetlenia następujących informacji usługi Intune dotyczących urządzeń z systemem iOS: ustawienia konfiguracji wirtualnej sieci prywatnej (VPN) ze szczegółami połączenia, metody uwierzytelniania, dzielenie tuneli w ustawieniach podstawowych, niestandardowe ustawienia sieci VPN z identyfikatorem i parami klucz-wartość, ustawienia sieci VPN dla aplikacji obejmujące adresy URL przeglądarki Safari, sieci VPN na żądanie z identyfikatorami SSID lub domenami wyszukiwania DNS, ustawienia serwera proxy obejmujące skrypt konfiguracji, adres IP lub FQDN i port TCP.'
+description: 'Istnieje możliwość wyświetlenia następujących informacji usługi Microsoft Intune dotyczących urządzeń z systemem iOS: ustawienia konfiguracji wirtualnej sieci prywatnej (VPN) ze szczegółami połączenia, metody uwierzytelniania, dzielenie tuneli w ustawieniach podstawowych, niestandardowe ustawienia sieci VPN z identyfikatorem i parami klucz-wartość, ustawienia sieci VPN dla aplikacji obejmujące adresy URL przeglądarki Safari, sieci VPN na żądanie z identyfikatorami SSID lub domenami wyszukiwania DNS, ustawienia serwera proxy obejmujące skrypt konfiguracji, adres IP lub FQDN i port TCP.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 374c3937d04fd546c17d6f147609f448875dddba
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: eb87d75512d9f04abac9db256d0d968bb85116ef
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -31,8 +31,12 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 - **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę podczas przeglądania na urządzeniu listy dostępnych połączeń sieci VPN.
 - **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN:
-  - **Certyfikaty**: w obszarze **Certyfikat uwierzytelniania** wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. Artykuł [Configure certificates (Konfigurowanie certyfikatów)](certificates-configure.md) zawiera pewne wskazówki dotyczące profili certyfikatów.
+  - **Certyfikaty**: w obszarze **Certyfikat uwierzytelniania** wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. Artykuł [Konfigurowanie certyfikatów](certificates-configure.md) zawiera pewne wskazówki dotyczące profili certyfikatów.
   - **Nazwa użytkownika i hasło**: użytkownicy końcowi muszą podać nazwę użytkownika i hasło, aby zalogować się do serwera sieci VPN.
+
+    > [!NOTE]
+    > Jeśli w przypadku sieci VPN Cisco IPsec używana jest metoda uwierzytelniania polegająca na podaniu nazwy użytkownika i hasła, użytkownicy końcowi muszą dostarczyć wspólny klucz tajny za pomocą niestandardowego profilu programu Apple Configurator.
+  
 - **Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**

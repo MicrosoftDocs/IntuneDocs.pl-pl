@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,35 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 84fc162eda25970c14ed1014b9f67ef3e782c663
+ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Z usługi Intune możesz usunąć urządzenia, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione. Możesz to zrobić przy użyciu akcji **Usuń dane firmowe** lub **Resetowanie do ustawień fabrycznych**. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
+Za pomocą akcji **Usuń dane firmowe** lub **Resetowanie do ustawień fabrycznych** możesz usunąć z usługi Intune urządzenia, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
 
 > [!NOTE]
 > Zanim usuniesz użytkownika z usługi Azure Active Directory, użyj akcji **Resetowanie do ustawień fabrycznych** lub **Usuń dane firmowe** na wszystkich urządzeniach skojarzonych z tym użytkownikiem. Jeśli usuniesz użytkowników mających zarządzane urządzenia z usługi Azure AD, usługa Intune nie będzie już mogła wydawać tym urządzeniom poleceń resetowania do ustawień fabrycznych ani usuwania danych firmowych.
 
 ## <a name="factory-reset"></a>Resetowanie do ustawień fabrycznych
 
-Akcja **Resetowanie do ustawień fabrycznych** przywraca domyślne ustawienia fabryczne na urządzeniu. Reset do ustawień fabrycznych spowoduje usunięcie wszystkich ustawień i danych firmowych oraz użytkownika. Urządzenie jest usuwane z zarządzania przez usługę Intune. Reset do ustawień fabrycznych jest przydatny w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia. Rozważnie korzystaj z funkcji **Resetowanie do ustawień fabrycznych**. Nie będzie można odzyskać danych na urządzeniu.
+Akcja **Resetowanie do ustawień fabrycznych** przywraca domyślne ustawienia fabryczne na urządzeniu. W zależności od tego, czy pole wyboru **Zachowaj stan rejestracji i konto użytkownika** jest zaznaczone, dane użytkownika są zachowywane lub czyszczone.
+
+|Akcja Resetowanie do ustawień fabrycznych|**Zachowaj stan rejestracji i konto użytkownika**|Usunięto z zarządzania przez usługę Intune|Opis|
+|:-------------:|:------------:|:------------:|------------|
+|**Resetowanie do ustawień fabrycznych**| Nie zaznaczono | Tak | Czyści wszystkie konta użytkowników, dane, zasady zarządzania urządzeniami przenośnymi i ustawienia. Resetuje system operacyjny do domyślnego stanu i ustawień.|
+|**Resetowanie do ustawień fabrycznych**| Zaznaczono | Nie | Czyści wszystkie zasady zarządzania urządzeniami przenośnymi. Zachowuje konta i dane użytkowników. Przywraca domyślne ustawienia użytkownika. Resetuje system operacyjny do domyślnego stanu i ustawień.|
+
+Opcja **Zachowaj stan rejestracji i konto użytkownika** jest dostępna tylko w wersji 1709 systemu Windows 10 lub nowszej.
+
+Zasady zarządzania urządzeniami przenośnymi zostaną zastosowane przy następnym połączeniu urządzenia z usługą Intune.
+
+Reset do ustawień fabrycznych jest przydatny w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia. Rozważnie korzystaj z funkcji **Resetowanie do ustawień fabrycznych**. Nie będzie można odzyskać danych na urządzeniu.
 
 ### <a name="factory-reset-a-device"></a>Resetowanie urządzenia do ustawień fabrycznych
 

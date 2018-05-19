@@ -5,97 +5,103 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/19/2017
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e8b8b1e4ffd4e58b5f3cc1b9acfc004f4b97b40b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: aa556b2939986759aa92e63750fd161c05afbc38
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
 
-Czasami próba zainstalowania aplikacji na urządzeniu z systemem Windows może trwać dłużej niż się wydaje. W takim przypadku można spróbować ręcznie zsynchronizować urządzenie z systemem Windows. Synchronizacja może przyspieszyć instalację.
+W przypadku niezadowalającej prędkości instalacji aplikacji należy zainicjować ręczną synchronizację urządzenia. Ręczna synchronizacja wymusza połączenie urządzenia z usługą Intune w celu pobrania najnowszych aktualizacji i wiadomości. Po ukończeniu synchronizacji urządzenia prędkość instalacji może wzrosnąć.
 
-> [!Note]
-> Instalowanie aplikacje może potrwać trochę czasu w przypadku pracy w wolniejszej sieci lub w sieci z większą ilością urządzeń pobierających zawartość w tym samym czasie.
+Usługa Intune obsługuje ręczną synchronizację z aplikacji Portal firmy i aplikacji Ustawienia na urządzeniu. 
 
-Poniższe wersje systemu Windows można synchronizować ręcznie. Niestety, jeśli Twoje urządzenie używa innej wersji systemu Windows, nie jest możliwe uruchomienie synchronizacji ręcznej.
+Funkcje aplikacji Portal firmy są obsługiwane na urządzeniach z systemem Windows 10 z aktualizacją Creator’s Update (1703) lub nowszą. 
+* [Synchronizacja z aplikacji Portal firmy](#Sync-from-Company-Portal-app-for-Windows)  
 
-* [Synchronizuj system Windows 10 Desktop](#windows-10-desktop)
-* [Synchronizuj system Windows 10 Mobile](#windows-10-mobile)
-* [Synchronizuj system Windows Phone 8.1](#windows-phone-81)
+Za pomocą aplikacji Ustawienia na urządzeniu można synchronizować wszystkie urządzenia z systemem Windows, w tym:
 
-## <a name="windows-10-desktop"></a>Windows 10 Desktop
-Istnieje więcej niż jedna wersja systemu Windows 10, więc przygotowano dwie procedury. Aby wybrać odpowiednią procedurę, spójrz na zrzuty ekranu, a następnie wykonaj kroki, które odpowiadają temu, co widzisz na swoim urządzeniu.
+* [Windows 10 Desktop](#windows-10-desktop)  
+* [Microsoft HoloLens](#microsoft-hololens)   
+* [Windows 10 Mobile](#windows-10-mobile)  
+* [Windows Phone 8.1](#windows-phone-81)    
 
-1. Wybierz przycisk **Start**, a następnie wybierz pozycję **Ustawienia**.
+## <a name="sync-from-company-portal-app-for-windows"></a>Synchronizacja z aplikacji Portal firmy dla systemu Windows
+Wykonaj następujące kroki, aby ręcznie zsynchronizować wszystkie urządzenia z systemem Windows 10 zawierającym aktualizację Creator’s Update (wersja 1703) lub nowszą.
 
-    ![Przycisk Start](./media/win10pc-sync-1-start-button.png)
+1.  Otwórz aplikację Portal firmy na urządzeniu.
 
-2. Na stronie **Ustawienia** wybierz pozycję **Konta**.
+2.  Wybierz **Ustawienia** > **Synchronizacja**.
 
-    ![Wybieranie kont na stronie Ustawienia](./media/win10pc-sync-2-settings-accounts.png)
+    ![Zrzut ekranu strony głównej aplikacji Portal firmy, wyróżnione Ustawienia](./media/RS1_homePage_settings_04.png)  
+    
+    ![Zrzut ekranu strony ustawień aplikacji Portal firmy, wyróżniony przycisk Synchronizuj](./media/RS1_settingspage_sync05.png)    
 
-3. Przyjrzyj się obu ekranom i zastanów się, który z nich przypomina zawartość ekranu urządzenia. Wykonaj kroki odnoszące się do ekranu przypominającego ekran urządzenia.
+## <a name="sync-from-settings-app"></a>Synchronizacja z ustawień aplikacji 
+Wykonaj następujące kroki, aby ręcznie zsynchronizować urządzenia Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile lub Windows Phone 8.1 przy użyciu aplikacji Ustawienia.
 
-    Jeśli widzisz ten ekran („Uzyskaj dostęp do miejsca pracy lub nauki”), postępuj zgodnie z instrukcjami opisanymi w sekcji [Procedura w przypadku wyświetlenia ekranu Uzyskaj dostęp do miejsca pracy lub nauki](#steps-to-follow-if-you-see-access-work-or-school).
+### <a name="windows-10-desktop"></a>Windows 10 Desktop
+1. Na urządzeniu wybierz opcje **Start** > **Ustawienia**.
 
-    ![Procedura synchronizacji w przypadku wyświetlenia ekranu Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+2. Wybierz pozycję **Konta**.
 
-    Jeśli widzisz ten ekran („Dostęp z miejsca pracy”), postępuj zgodnie z instrukcjami opisanymi w sekcji [Procedura w przypadku wyświetlenia ekranu Dostęp z miejsca pracy](#steps-to-follow-if-you-see-work-access).
+    ![Wybieranie kont na stronie Ustawienia](./media/win10pc-sync-2-settings-accounts.png)  
+
+3. Istnieje wiele wersji systemu Windows 10 na komputery stacjonarne. Porównaj swój ekran z przedstawionymi poniżej zrzutami, aby określić czynności do wykonania. 
+
+    * Jeśli na ekranie jest wyświetlany napis**Uzyskaj dostęp do miejsca pracy lub nauki**, przejdź do procedury w sekcji [Uzyskaj dostęp do miejsca pracy lub nauki](#access-work-or-school).
+
+    ![Opcja Uzyskaj dostęp do miejsca pracy lub nauki w ustawieniach aplikacji](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+
+    * W przypadku napisu **Dostęp z miejsca pracy** przejdź do procedury w sekcji [Dostęp z miejsca pracy](#work-access).  
 
     ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 
-### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Czynności w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych
+#### <a name="access-work-or-school-steps"></a>Czynności dla opcji Uzyskaj dostęp do miejsca pracy lub nauki
 
-1. Na stronie **Konta** wybierz pozycję **Uzyskaj dostęp do miejsca pracy lub nauki**.
+1. Wybierz **Uzyskaj dostęp do miejsca pracy lub nauki**.
 
-    ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+    ![Zrzut ekranu przedstawiający opcję Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Wybierz swoje konto służbowe. W zależności od tego, jak dział pomocy technicznej Twojej firmy skonfigurował środowisko, mogą zostać wyświetlone dwa konta wyglądające podobnie jak na poniższym przykładzie. Obok jednego konta jest wyświetlona ikona aktówki, a obok drugiego — logo firmy Microsoft.
-
-   - Jeśli widzisz konto z aktówką, wybierz je i poszukaj pod nim przycisku **Informacje**.
-   - Jeśli widzisz tylko konto z logo firmy Microsoft, wybierz je i poszukaj pod nim przycisku **Informacje**.
+2. Wybierz konto, obok którego znajduje się ikona aktówki. Jeśli nie widzisz takiego konta, może to oznaczać, że firma skonfigurowała ustawienia w inny sposób. Zamiast tego kliknij konto, obok którego znajduje się logo firmy Microsoft.
 
      ![Wybieranie nazwy konta obok logo aktówki lub logo firmy Microsoft](./media/win10pc-rs1-sync-info-button.png)
 
-3. Wybierz przycisk **Informacje**. Zostanie otwarte okno dialogowe przypominające poniższe.
+3. Kliknij **Informacje**. 
 
-    ![Wybieranie nazwy konta obok logo aktówki lub logo firmy Microsoft](./media/win10pc-rs1-sync-button.png)
+4. Kliknij **Synchronizuj**. 
 
-4. Wybierz przycisk **Synchronizuj**. Urządzenie zostanie zsynchronizowane z usługą Intune.
+#### <a name="work-access-steps"></a>Czynności dla opcji Dostęp z miejsca pracy
 
-### <a name="steps-to-follow-if-you-see-work-access"></a>Procedura w przypadku wyświetlenia ekranu Dostęp z miejsca pracy
-
-1. Na stronie **Konta** wybierz pozycję **Dostęp z miejsca pracy**.
+1.  Kliknij **Dostęp z miejsca pracy**.
 
     ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 
-2. W sekcji **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę swojej firmy.
+2. W obszarze **Rejestrowanie w celu zarządzania urządzeniami** wybierz nazwę firmy.
 
     ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Wybierz przycisk **Synchronizuj**.
+3. Kliknij **Synchronizuj**. Przycisk pozostaje wyłączony do zakończenia synchronizacji.
 
-    ![Wybieranie przycisku Synchronizuj](./media/win10pc-sync-5-tap-sync.png)
+    ![Wybieranie przycisku Synchronizuj](./media/win10pc-sync-5-tap-sync.png)  
 
-   Przycisk będzie szary aż do zakończenia synchronizacji.
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
-Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu przyspieszenia powolnej instalacji aplikacji:
 
-   1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
+   1. Na swoim urządzeniu wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Konta**.
 
        ![Wybieranie kont na ekranie Ustawienia](./media/win10m-sync-1-settings-accounts.png)
 
@@ -107,14 +113,19 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows 10 Mobile w celu pr
 
        ![Wybieranie nazwy firmy w celu zarządzania urządzeniami](./media/win10m-sync-3-tap-comp-name.png)
 
-   4. Wybierz ikonę **Synchronizuj**.
+   4. Wybierz ikonę **Synchronizacja**. Przycisk pozostaje wyłączony do zakończenia synchronizacji.
 
-       ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)
+       ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)  
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+Te instrukcje dotyczą urządzeń HoloLens z systemem Windows 10 z aktualizacją Anniversary Update (znanej także jako RS1). 
+1.  Otwórz na urządzeniu aplikację Ustawienia.  
 
-       W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”. Przycisk **Synchronizuj** będzie szary, dopóki synchronizacja urządzenia nie zakończy się.
+2.  Wybierz **Konta** > **Dostęp z miejsca pracy**.  
+    ![Zrzut ekranu aplikacji Ustawienia na urządzeniu HoloLens, wyróżniony link kont](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-## <a name="windows-phone-81"></a>Windows Phone 8,1
-Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu przyspieszenia powolnej instalacji aplikacji:
+3.  Wybierz swoje połączone konto > **Synchronizacja**. ![Zrzut ekranu aplikacji Ustawienia na urządzeniu HoloLens, wyróżniony przycisk synchronizacji](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+
+### <a name="windows-phone-81"></a>Windows Phone 8,1
 
 1. Wybierz pozycje **Wszystkie aplikacje** > **Ustawienia** > **Miejsce pracy**.
 
@@ -124,10 +135,8 @@ Aby ręcznie zsynchronizować urządzenie z systemem Windows Phone 8.1 w celu pr
 
     ![Wybieranie nazwy firmy dla konta firmowego](./media/wp81-2-sync-tap-compname.png)
 
-3. Wybierz ikonę **Synchronizuj**.
+3. Wybierz ikonę **Synchronizacja**.
 
     ![Wybieranie ikony Synchronizuj](./media/wp81-3-sync-tap-sync-button.png)
-
-   W górnej części ekranu pojawi się komunikat „Synchronizujemy Twoje konto”, który będzie widoczny aż do zakończenia synchronizowania urządzenia.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

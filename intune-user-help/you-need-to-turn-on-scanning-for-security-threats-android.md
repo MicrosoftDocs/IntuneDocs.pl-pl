@@ -1,6 +1,6 @@
 ---
-title: Konieczne jest włączenie skanowania pod kątem zagrożeń | Microsoft Docs
-description: ''
+title: Konieczne jest włączenie skanowania pod kątem zagrożeń zabezpieczeń
+description: Dowiedz się, jak włączyć funkcję skanowania zagrożenia zabezpieczeń na Twoim urządzeniu
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -15,16 +15,20 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 403b3b50cd8fba7d8d0c8ee6fd6f20d0d5561b76
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: cf2413ee879cf4a6cb2742d34f452105057ccf59
+ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/12/2018
 ---
-# <a name="you-need-to-make-your-device-able-to-scan-for-security-threats"></a>Musisz włączyć w urządzeniu funkcję skanowania w poszukiwaniu zagrożeń
+# <a name="enable-security-threat-scans-on-your-device"></a>Włączanie funkcji skanowania zagrożenia zabezpieczeń na Twoim urządzeniu 
+W przypadku nieświadomego zainstalowania niebezpiecznej aplikacji dane przechowywane w urządzeniu mogą być narażone na ryzyko. W celu zapewnienia ochrony danych na urządzeniu zalecamy przestrzeganie następujących zasad: 
 
-Urządzenia z systemem Android umożliwiają pobieranie i instalowanie aplikacji, które pozwalają wykonywać wiele różnych zadań. Nie wszystkie aplikacje są jednak takie same. Ponadto niektóre aplikacje mogą powodować problemy. Ogólnie zalecane jest, aby pobierać aplikacje tylko ze zweryfikowanych źródeł, takich jak sklep Google Play. Jednym z wybranych przez dział pomocy technicznej Twojej firmy sposobów zapewnienia dodatkowej ochrony danych na urządzeniu jest ustawienie funkcji skanowania instalowanych aplikacji przez usługę Google w celu zagwarantowania, że są one bezpieczne.
+* Pobieraj aplikacje tylko ze zweryfikowanych źródeł, takich jak sklep Google Play.  
+* Włącz funkcję skanowania zagrożenia zabezpieczeń na urządzeniu. Procesy skanowania są wykonywane przez firmę Google i służą sprawdzeniu, czy aplikacje są wystarczająco bezpieczne, aby je zainstalować.  
 
-Możesz włączyć tę funkcję skanowania, przechodząc do pozycji **Ustawienia** > **Google** > **Zabezpieczenia** i włączając opcję **Skanuj urządzenie pod kątem zagrożeń**.
+Aby włączyć funkcję skanowania na urządzeniu, przejdź do opcji **Ustawienia** > **Google** > **Zabezpieczenia**. Włącz opcję **Skanuj urządzenie pod kątem zagrożeń zabezpieczeń**.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Na niektórych urządzeniach firmy Samsung to ustawienie można znaleźć w opcji **Ustawienia** > **Google** > **Zabezpieczenia** > **Google Play Protect**.
+
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). 

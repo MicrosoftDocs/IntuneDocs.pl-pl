@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a40b855d1dbaeece1dc91648866285c0a01fb338
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
+ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -46,6 +46,16 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
    - **Konfiguracja urządzenia** — zawiera wszystkie zasady konfiguracji urządzeń przypisane do urządzenia oraz informację o tym, czy wdrożenie zasad powiodło się.
 
 Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do firmy. Aplikacje nie są sprawdzane na urządzeniach osobistych. W przypadku komputerów z systemem Windows 10 wyszczególniane są tylko aplikacje nowoczesne na urządzeniach należących do firmy. Usługa Intune nie zbiera informacji o aplikacjach Win32 na urządzeniu. W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystkie aplikacje.
+
+|Platforma|Urządzenia osobiste|Urządzenia należące do firmy|  
+|--------------|---------------------------------|--------------------------------|  
+|Windows 10 (bez klienta programu Configuration Manager)|Tylko aplikacje zarządzane|Tylko aplikacje zarządzane|
+|Windows 8.1 (bez klienta programu Configuration Manager)|Tylko aplikacje zarządzane|Tylko aplikacje zarządzane|  
+|Windows Phone 8|Tylko aplikacje zarządzane|Tylko aplikacje zarządzane|  
+|Windows RT|Tylko aplikacje zarządzane|Tylko aplikacje zarządzane|  
+|iOS|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|
+|macOS|Wszystkie aplikacje zainstalowane na urządzeniu|Wszystkie aplikacje zainstalowane na urządzeniu|  
+|Android|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|  
 
 ## <a name="next-steps"></a>Następne kroki
 Zobacz, co jeszcze możesz zrobić, aby [zarządzać urządzeniami](device-management.md) przy użyciu usługi Intune.
