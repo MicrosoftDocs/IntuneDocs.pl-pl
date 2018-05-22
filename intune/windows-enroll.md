@@ -15,11 +15,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2759146634f16e5d92ca8c497aa2856f071a679
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 02cc111f8991a855db4f05360e54598af511f28f
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -31,7 +31,6 @@ Jako administrator usługi Intune możesz uprościć rejestrację, korzystając 
 - [Włączenie rejestracji automatycznej](#enable-windows-10-automatic-enrollment) (wymagana usługa Azure AD Premium)
 - [Rejestracja rekordu CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Włączenie rejestracji zbiorczej](windows-bulk-enroll.md) (wymagana usługa Azure AD Premium i aplikacja Windows Configuration Designer)
-- [Dodanie niestandardowego komunikatu](windows-enrollment-status.md) w celu powitania użytkowników podczas rejestracji i wyświetlania postępu ustawień zasad, kiedy są one stosowane
 
 O tym, jak można uprościć proces rejestrowania urządzenia z systemem Windows, decydują dwie kwestie:
 

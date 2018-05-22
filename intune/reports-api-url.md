@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2b25140cb5c3c8c70ff42186352362c57dcf6ee7
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6f99ce2ae7937fe0b90353037e72f453a703dd8c
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Punkt końcowy interfejsu API magazynu danych usługi Intune
 
@@ -38,7 +38,7 @@ Aby uzyskać więcej informacji, zobacz [Autoryzacja dostępu do aplikacji sieci
 Punkty końcowe interfejsu API magazynu danych odczytują jednostki dla każdego zestawu. Interfejs API obsługuje czasownik HTTP **GET** i podzestaw opcji zapytania.
 
 Adres URL dla usługi Intune ma następujący format:  
-https://fef.{<strong><em>lokalizacja</em></strong>}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{<strong><em>kolekcja-jednostek</em></strong>}?api-version={<strong><em>wersja-interfejsu-API</em></strong>}
+`https://fef.{<strong><em>location</em></strong>}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{<strong><em>entity-collection</em></strong>}?api-version={<strong><em>api-version</em></strong>}`
 
 Adres URL zawiera następujące elementy:
 

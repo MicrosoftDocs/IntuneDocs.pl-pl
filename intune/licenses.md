@@ -14,11 +14,11 @@ ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0cfedebb3ca70bdff0cd66e41557046708d24a89
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: de71b0b542836be6c7d1e4a0c4483bb65a9cb9a3
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="licenses-that-include-intune"></a>Licencje, które obejmują usługę Intune
 
@@ -38,7 +38,7 @@ W poniższej tabeli przedstawiono wersje usługi Intune dostępne w poszczególn
 | Microsoft 365 E5 | Intune | [Dowiedz się więcej](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
 | Microsoft 365 F1 | Intune | [Dowiedz się więcej](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
 | Office 365 F1 | Brak | [Dowiedz się więcej](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
-| Microsoft 365 Business | Brak | [Dowiedz się więcej](https://www.microsoft.com/en-us/microsoft-365/business) |
+| Microsoft 365 Business | Intune | [Dowiedz się więcej](https://www.microsoft.com/en-us/microsoft-365/business) |
 | Office 365 Business Premium | Brak | [Dowiedz się więcej](https://www.microsoft.com/en-us/microsoft-365/business) |
 | Usługa Azure Active Directory w wersjach Bezpłatna, Podstawowa, Premium P1 i Premium P2 | Brak | [Dowiedz się więcej](https://azure.microsoft.com/en-us/pricing/details/active-directory/) |
 

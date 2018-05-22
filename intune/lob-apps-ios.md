@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fcbdf0a61b7b001dc7d3b1d620df7a88bb44e2ca
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e76e8940334e90f41fe5e5132f9210d69359f74a
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS
 
@@ -41,29 +41,29 @@ Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesow
 
 ## <a name="step-2-configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
 
-1. W okienku **Dodaj aplikację** wybierz opcję **Plik pakietu aplikacji**.
+1. W okienku **Dodaj aplikację** wybierz pozycję **Plik pakietu aplikacji**.
 2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.
 3. Po zakończeniu wybierz opcję **OK**.
 
 
-## <a name="step-3-configure-app-information"></a>Krok 3: Konfigurowanie informacji o aplikacji
+## <a name="step-3-configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
 
-1. W okienku **Dodaj aplikację** wybierz opcję **Informacje o aplikacji**.
+1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2. W okienku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, w portalu firmy będzie widoczna tylko jedna aplikacja o tej nazwie.
-    - **Opis**: wprowadź opis aplikacji. Opis jest widoczny w portalu firmy.
+    - **Opis**: wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
     - **Wydawca**: wprowadź nazwę wydawcy aplikacji.
     - **Minimalna wersja systemu operacyjnego**: wybierz z listy minimalną wersję systemu operacyjnego, w którym można zainstalować aplikację. W przypadku przypisania aplikacji do urządzenia z wcześniejszą wersją systemu operacyjnego instalacja nie będzie możliwa.
-    - **Ignoruj wersję aplikacji**: nadaj tej opcji wartość **Tak**, jeśli deweloper aplikacji automatycznie aktualizuje aplikację.
-    - **Kategoria**: wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
+    - **Ignoruj wersję aplikacji**: wybierz wartość **Tak**, jeśli deweloper aplikacji automatycznie aktualizuje aplikację.
+    - **Kategoria**: wybierz co najmniej jedną wbudowaną kategorię aplikacji lub kategorię utworzoną przez siebie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
     - **Wyświetl jako polecaną aplikację w portalu firmy**: wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres URL będzie widoczny w portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres URL będzie widoczny w portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Logo**: przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania witryny Portal firmy.
-3. Po zakończeniu wybierz opcję **OK**.
+    - **Logo**: przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+3. Po zakończeniu wybierz przycisk **OK**.
 
 ## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
 
@@ -81,8 +81,8 @@ Utworzona przez Ciebie aplikacja jest widoczna na liście aplikacji. Korzystają
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Utworzona przez Ciebie aplikacja zostanie wyświetlona na liście aplikacji. Teraz możesz przypisać ją do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
+- Utworzona przez Ciebie aplikacja jest wyświetlana na liście aplikacji. Teraz możesz ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
-- Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Zobacz temat [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
+- Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
 
-- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Zobacz temat [Przegląd cykli życia urządzeń i aplikacji](introduction-device-app-lifecycles.md).
+- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Zobacz temat [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md).
