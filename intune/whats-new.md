@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: e677e15d1e4ee688a826683ecd1d8d68620d2796
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: 81e6dba8cabb9339c7c83a3ac95fd7cf7c0a1fa7
+ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,18 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 
 -->   
 
+## <a name="week-of-may-14-2018"></a>Tydzień od 14 maja 2018 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="require-installation-of-policies-apps-certificate-and-network-profiles----1553555---"></a>Wymagana instalacja zasad, aplikacji oraz profilów certyfikatów i sieciowych <!-- 1553555 -->
+
+Administratorzy mogą zablokować dostęp użytkowników końcowych do pulpitu systemu Windows 10 RS4 do momentu zainstalowania zasad, aplikacji oraz profilów certyfikatów i sieciowych przez usługę Intune podczas aprowizowania urządzeń z rozwiązaniem AutoPilot. Aby uzyskać więcej informacji, zobacz [Konfigurowanie strony ze stanem rejestracji](windows-enrollment-status.md).
+
+#### <a name="configuring-your-app-protection-policies----2144597-part-2---"></a>Konfigurowanie zasad ochrony aplikacji <!-- 2144597 Part 2 -->
+
+W witrynie Azure Portal zamiast przechodzenia do bloku usługi Intune App Protection możesz teraz po prostu przejść do usługi Intune. Teraz jest tylko jedna lokalizacja zasad ochrony aplikacji w ramach usługi Intune. Zapamiętaj, że wszystkie zasady ochrony aplikacji znajdują się w bloku **Aplikacja mobilna** w usłudze Intune w obszarze **Zasady ochrony aplikacji**. Ta integracja pomaga uprościć administrowanie chmurą. Pamiętaj, że wszystkie zasady ochrony aplikacji są już dostępne w usłudze Intune i możesz modyfikować dowolne wcześniej skonfigurowane zasady. Zasady ochrony aplikacji (APP) i zasady dostępu warunkowego (CA) w usłudze Intune znajdują się teraz w obszarze **Dostęp warunkowy**, który znajduje się w sekcji **Zarządzanie** w bloku **Microsoft Intune** lub w sekcji **Zabezpieczenia** w bloku **Azure Active Directory**. Aby uzyskać więcej informacji na temat modyfikowania zasad dostępu warunkowego, zobacz [Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Aby uzyskać dodatkowe informacje, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
+
 ## <a name="week-of-may-7-2018"></a>Tydzień od 7 maja 2018 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
@@ -51,7 +63,7 @@ Korzystając z usługi Intune z programem Samsung Knox Mobile Enrollment (KME) m
 
 #### <a name="requesting-help-in-the-company-portal-for-windows-10----1874137---"></a>Żądanie pomocy w aplikacji Portal firmy w systemie Windows 10 <!-- 1874137 -->
 
-Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone do firmy Microsoft.
+Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone firmie Microsoft.
 
 ## <a name="week-of-april-23-2018"></a>Tydzień od 23 kwietnia 2018 r.
 
@@ -292,7 +304,7 @@ Pamiętaj, że chociaż domyślny stan przełącznika jest wyświetlany w interf
 Ulepszone wykrywanie zdjęcia zabezpieczeń systemu jest nowym ustawieniem zgodności, które usprawnia sposób, w jaki usługa Intune ocenia urządzenia ze zdjętymi zabezpieczeniami systemu. To ustawienie powoduje częstsze ewidencjonowanie urządzenia w usłudze Intune z wykorzystaniem usług lokalizacyjnych urządzenia, co ma wpływ na użycie baterii.
 
 #### <a name="reset-passwords-for-android-o-devices----1238299---"></a>Resetowanie haseł dla urządzeń z systemem Android O <!-- 1238299 -->
-Możliwe będzie resetowanie haseł zarejestrowanych urządzeń z systemem Android 8.0 z profilami służbowymi. Po wysłaniu żądania „Resetuj hasło” do urządzenia z systemem Android 8.0 ustawi ono nowe hasło odblokowania urządzenia lub wezwanie zarządzanego profilu dla bieżącego użytkownika. Hasło lub wezwanie jest wysyłane i zaczyna obowiązywać natychmiast.
+Możliwe będzie resetowanie haseł zarejestrowanych urządzeń z systemem Android 8.0 z profilami służbowymi. Po wysłaniu żądania „Resetuj hasło” do urządzenia z systemem Android 8.0 ustawi ono nowe hasło odblokowania urządzenia lub test zarządzanego profilu dla bieżącego użytkownika. Hasło lub test jest wysyłany i zaczyna obowiązywać natychmiast.
 
 #### <a name="targeting-compliance-policies-to-devices-in-device-groups---1307012---"></a>Określanie zasad zgodności dla urządzeń w grupach urządzeń<!--1307012 -->
 
@@ -437,7 +449,7 @@ Funkcja [zarządzania urządzeniami](device-management.md) zawiera bardziej szcz
 
 ### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview----710595---"></a>Witryny internetowe usługi Azure Active Directory mogą wymagać aplikacji Intune Managed Browser i obsługiwać rejestrację jednokrotną w aplikacji Managed Browser (publiczna wersja zapoznawcza) <!-- 710595 -->
 
-Korzystając z usługi Azure Active Directory (Azure AD), można teraz ograniczyć dostęp do witryn internetowych na urządzeniach przenośnych tylko do aplikacji Intune Managed Browser. W aplikacji Managed Browser dane witryn internetowych będą bezpieczne i odseparowane od osobistych danych użytkowników końcowych. Ponadto w przypadku witryn chronionych przez usługę Azure AD aplikacja Managed Browser będzie obsługiwać funkcje logowania jednokrotnego. Zarejestrowanie się w aplikacji Managed Browser lub korzystanie z aplikacji Managed Browser na urządzeniu z inną aplikacją zarządzaną przez usługę Intune umożliwia aplikacji Managed Browser dostęp do witryn firmowych chronionych przez usługę Azure AD bez konieczności wprowadzania poświadczeń użytkownika. Ta funkcja ma zastosowanie do witryn takich jak Outlook Web Access (OWA) i SharePoint Online, a także innych witryn firmowych, takich jak zasoby intranetowe dostępne za pośrednictwem serwera proxy aplikacji platformy Azure.
+Korzystając z usługi Azure Active Directory (Azure AD), można teraz ograniczyć dostęp do witryn internetowych na urządzeniach przenośnych tylko do aplikacji Intune Managed Browser. W aplikacji Managed Browser dane witryn internetowych będą bezpieczne i odseparowane od osobistych danych użytkowników końcowych. Ponadto w przypadku witryn chronionych przez usługę Azure AD aplikacja Managed Browser będzie obsługiwać funkcje logowania jednokrotnego. Zarejestrowanie się w aplikacji Managed Browser lub korzystanie z aplikacji Managed Browser na urządzeniu z inną aplikacją zarządzaną przez usługę Intune umożliwia aplikacji Managed Browser dostęp do witryn firmowych chronionych przez usługę Azure AD bez konieczności wprowadzania poświadczeń użytkownika. Ta funkcja ma zastosowanie do witryn takich jak Outlook Web Access (OWA) i SharePoint Online, a także innych witryn firmowych, takich jak zasoby intranetowe dostępne za pośrednictwem serwera proxy aplikacji platformy Azure. Aby uzyskać dodatkowe informacje, zobacz [Access controls in Azure Active Directory conditional access (Elementy kontroli dostępu dla dostępu warunkowego w usłudze Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-controls).
 
 #### <a name="company-portal-app-for-android-visual-updates---976944---"></a>Aktualizacje wizualne aplikacji Portal firmy dla systemu Android <!--976944 -->
 
