@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/09/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,23 +15,26 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0408ce3a4c2d4224780b4b23b0fb1b7d690471fe
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 0cd9db9399eb08c3ed04ff1d8920082aa0c04f06
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune oferuje szereg sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu przypisania aplikacji.
+Usługa Intune oferuje kilka sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu przypisania aplikacji.
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W menu usługi **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W sekcji **Zarządzanie** menu wybierz pozycję **Aplikacje**.
-5. Na liście aplikacji wybierz aplikację do monitorowania. Zostanie wyświetlone okienko aplikacji z przeglądem stanu urządzenia i stanu użytkownika.
+5. Na liście aplikacji wybierz aplikację do monitorowania. Zostanie wyświetlone okienko aplikacji, które zawiera przegląd stanu urządzenia i stanu użytkownika.
+
+> [!NOTE]
+> Aplikacje w sklepie dla systemu Android, które są wdrażane jako **dostępne**, nie zgłaszają swojego stanu instalacji.
 
 ## <a name="app-overview-pane"></a>Okienko przeglądu aplikacji
 

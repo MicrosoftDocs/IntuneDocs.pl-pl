@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 04/06/2018
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 486ff2d22cb201abc926efc96a83455be98e7536
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.custom: ''
+ms.openlocfilehash: f8f81b4ff3bf5d17832d2f943fffb905eba52b6e
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
 > [!NOTE]
-> Warto najpierw przeczytać artykuł [Wprowadzenie do zestawu SDK aplikacji usługi Intune](app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
+> Rozważ przeczytanie artykułu [Wprowadzenie do zestawu SDK aplikacji usługi Intune](app-sdk-get-started.md), w którym omówiono przygotowanie do integracji na poszczególnych obsługiwanych platformach.
 
 Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz wdrożyć zasady ochrony aplikacji usługi Intune (nazywane również zasadami **APP** lub **MAM**) w swojej natywnej aplikacji dla systemu iOS. Aplikacja obsługująca zarządzanie aplikacjami mobilnymi to aplikacja zintegrowana z zestawem SDK aplikacji usługi Intune. Administratorzy IT mogą wdrażać zasady ochrony aplikacji w aplikacji mobilnej, gdy usługa Intune aktywnie zarządza aplikacją.
 
@@ -81,8 +81,8 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
 1. **Opcja 1 (zalecana)**: połącz strukturę `IntuneMAM.framework` z projektem. Przeciągnij element `IntuneMAM.framework` na listę **Embedded Binaries** (Osadzone pliki binarne) obiektu docelowego projektu.
 
-    > [!NOTE]
-    > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#Submit-your-app-to-the-App-Store).
+   > [!NOTE]
+   > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#Submit-your-app-to-the-App-Store).
 
 2. **Opcja 2**: połącz z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
 
@@ -179,7 +179,7 @@ Wykonaj następujące czynności, aby połączyć aplikację z plikami binarnymi
 
 
 
-### <a name="share-the-adal-token-cache-with-other-apps-signed-with-the-same-provisioning-profile"></a>Udostępnić pamięć podręczną tokenu biblioteki ADAL innym aplikacjom podpisanym za pomocą tego samego profilu aprowizacji?**
+### <a name="share-the-adal-token-cache-with-other-apps-signed-with-the-same-provisioning-profile"></a>Udostępnić pamięć podręczną tokenu biblioteki ADAL innym aplikacjom podpisanym za pomocą tego samego profilu aprowizacji?
 
 Postępuj zgodnie z instrukcjami poniżej, jeśli chcesz udostępnić tokeny biblioteki ADAL między aplikacjami podpisanymi za pomocą tego samego profilu aprowizacji:
 
@@ -523,7 +523,8 @@ SUBQUERY (
 ).@count > 0 
  ```
 
->[!Note] Narzędzia IntuneMAMConfigurator można użyć do dodania typów usługi Intune do reguły aktywacji. Jeśli istniejąca reguła aktywacji korzysta ze wstępnie zdefiniowanych stałych ciągów (np. NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText, itp.), składnia predykatu może być dość złożona. Narzędzia IntuneMAMConfigurator można również użyć do konwersji reguły aktywacji ze stałych ciągów do ciągu predykatu podczas dodawania typów usługi Intune. Narzędzie IntuneMAMConfigurator znajduje się w repozytorium GitHub. 
+> [!NOTE]
+> Narzędzia IntuneMAMConfigurator można użyć do dodania typów usługi Intune do reguły aktywacji. Jeśli istniejąca reguła aktywacji korzysta ze wstępnie zdefiniowanych stałych ciągów (np. NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText, itp.), składnia predykatu może być dość złożona. Narzędzia IntuneMAMConfigurator można również użyć do konwersji reguły aktywacji ze stałych ciągów do ciągu predykatu podczas dodawania typów usługi Intune. Narzędzie IntuneMAMConfigurator znajduje się w repozytorium GitHub. 
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Włączanie docelowej konfiguracji MAM dla aplikacji systemu iOS

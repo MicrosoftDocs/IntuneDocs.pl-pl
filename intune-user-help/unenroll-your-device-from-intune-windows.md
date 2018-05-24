@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1dd64250c1996c6b13c62f80572282d639112ba6
-ms.sourcegitcommit: 8ee543c864097dc195b6f440471dca713fc21ed2
+ms.openlocfilehash: a3cad6a73b3455790441c594933d599b2c6e89f9
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="remove-your-windows-device-from-intune-management"></a>Usuwanie urządzenia z systemem Windows z zarządzania za pomocą usługi Intune
 
@@ -72,13 +72,13 @@ Aby usunąć urządzenie przenośne z systemem Windows 8.1 z usługi Intune, wyk
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Usuwanie danych osobowych po usunięciu aplikacji Portal firmy
 Istnieją dwa rodzaje danych, które aplikacja Portal firmy przechowuje na urządzeniu z systemem Windows:
 
--   **Dzienniki diagnostyczne**: standardowe dane o aktywności aplikacji, które zbiera firma Microsoft, są automatycznie usuwane w przypadku usunięcia urządzenia z aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
+-   **Dzienniki diagnostyczne**: dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
 -   **Pamięć podręczna aplikacji**: wybrane pliki pomocnicze wymagane do działania aplikacji, np. ikony i ustawienia.
 
-Istnieje kilka kroków, które należy podjąć, aby całkowicie usunąć te informacje.
+Aby usunąć przechowywane dzienniki i pamięć podręczna, wykonaj jeden z następujących kroków:
 
-1. Odinstaluj aplikację Portal firmy. [Odinstalowanie aplikacji Portal firmy](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) spowoduje usunięcie niektórych danych aplikacji przechowywanych na urządzeniu.  
+* [Odinstalowywanie aplikacji Portal firmy](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-2. Zresetuj aplikację Portal firmy, aby zresetować przechowywane dane aplikacji. Otwórz aplikację **Ustawienia** i wybierz opcję > **Aplikacje** > **Portal firmy** > **Opcje zaawansowane** > **Resetuj**. 
+* Zresetuj aplikację Portal firmy. Otwórz aplikację **Ustawienia** i wybierz pozycję > **Aplikacje** > **Portal firmy** > **Opcje zaawansowane** > **Resetuj**. 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).

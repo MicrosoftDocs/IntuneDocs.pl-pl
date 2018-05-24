@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,21 +17,21 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c7cd6380cbb596779a3094b18eef4e91b6161871
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f22509d780ec4d877e7e780109b34776b269c8b3
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Usuwanie urządzenia z Portalu firmy
 
-Jeśli zdecydujesz, że urządzenie ma już nie być zarządzane przez Twoją firmę lub organizację, możesz je usunąć z Portalu firmy przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze zarządzania przez dział IT firmy. Gdy urządzenie zostanie usunięte, nie będzie już widoczne w portalu firmy, a ponadto możesz utracić dostęp do służbowych danych, aplikacji i poczty e-mail.
+Jeśli zdecydujesz, że urządzenie ma już nie być zarządzane przez Twoją firmę lub organizację, możesz je usunąć z Portalu firmy za pośrednictwem [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). Jeśli Twoje urządzenie zostanie usunięte, nie będzie już wyświetlane w Portalu firmy. Ponadto możesz też stracić dostęp do danych, aplikacji i poczty e-mail organizacji.
 
 Aby usunąć urządzenie:
 
 1. W [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/Intune/whats-new/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
 
-   ![Obraz witryny sieci Web Portal firmy ze znajdującym się po lewej stronie ekranu rozwiniętym menu bocznym oraz przyciskami Strona główna, Wszystkie aplikacje, Moje urządzenia, Pomoc techniczna i Wyloguj.](/media/iwp-expanded-sidebar.png)
+   ![Obraz witryny internetowej Portal firmy ze znajdującym się po lewej stronie ekranu rozwiniętym menu bocznym oraz przyciskami Strona główna, Wszystkie aplikacje, Moje urządzenia, Pomoc techniczna i Wyloguj.](/media/iwp-expanded-sidebar.png)
 
 2. Na stronie __Moje urządzenia__ wybierz nazwę urządzenia, które chcesz usunąć.
 

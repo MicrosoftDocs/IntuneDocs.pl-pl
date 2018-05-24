@@ -14,11 +14,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a3b98dad86b7abe5ce330ae99fdf008137cc2b11
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: eb88bf64db8eaa82a68f56f8c3235030539f1959
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -35,6 +35,7 @@ Klucze wstępne (PSK) są zazwyczaj używane do uwierzytelniania użytkowników 
 - W przypadku systemu Android można skorzystać z aplikacji [Android PSK Generator](http://intunepskgenerator.johnathonb.com/).
 - Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
 - W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://intunepskgenerator.johnathonb.com/).
+- Klucz wstępny wymaga ciągu 64 cyfr szesnastkowych lub hasła o długości 8–63 drukowalnych znaków ASCII. Niektóre znaki, takie jak znak gwiazdki (*), nie są obsługiwane.
 
 ## <a name="create-a-custom-profile"></a>Tworzenie profilu niestandardowego
 Możesz utworzyć profil niestandardowy z użyciem klucza wstępnego dla systemu Android lub Windows albo profilu Wi-Fi z użyciem protokołu EAP. Aby utworzyć profil za pomocą witryny Azure Portal, zobacz [Tworzenie niestandardowych ustawień urządzenia](custom-settings-configure.md). Podczas tworzenia profilu urządzenia wybierz opcję **Niestandardowe** dla platformy urządzenia. Nie wybieraj profilu sieci Wi-Fi. Po wybraniu profilu niestandardowego należy: 
@@ -42,16 +43,16 @@ Możesz utworzyć profil niestandardowy z użyciem klucza wstępnego dla systemu
 1. Wprowadzić nazwę i opis profilu.
 2. Dodać nowe ustawienie OMA-URI z następującymi właściwościami: 
 
-   a. Wprowadź nazwę dla tego ustawienia sieci Wi-Fi
+   a. Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
 
-   b. (Opcjonalnie) Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole
+   b. (Opcjonalnie) Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
 
-   c. Ustaw w polu **Typ danych** wartość **Ciąg**
+   c. Ustaw w polu **Typ danych** wartość **Ciąg**.
 
    d. **OMA-URI**:
 
-   - **System Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-   - **System Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **System Android**: ./Vendor/MSFT/WiFi/Profile/SSID/Settings
+   - **System Windows**: ./Vendor/MSFT/WiFi/Profile/SSID/WlanXml
 
      > [!NOTE]
      > Należy pamiętać o kropce na początku.

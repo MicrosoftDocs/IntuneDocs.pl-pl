@@ -15,11 +15,11 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 812f73cb0857298f01967cebbb36f0b8220fb9c6
-ms.sourcegitcommit: 179bea63fe52a8cce236b6ca8d82a6bd51bf17a5
+ms.openlocfilehash: b860b68bbf8940a89533159885f471f5337ca0e8
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Jak utworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune
 
@@ -31,6 +31,9 @@ Jako administrator możesz tworzyć wyjątki od zasad transferu danych zarządza
 > Użytkownik jest odpowiedzialny za wprowadzanie zmian w zasadach wyjątków transferu danych. Dodatki do tych zasad umożliwiają niezarządzanym aplikacjom (aplikacjom, które nie są zarządzane przez usługę Intune) dostęp do danych chronionych przez aplikacje zarządzane. Ten dostęp do chronionych danych może spowodować przecieki zabezpieczeń danych. Wyjątki transferu danych należy dodawać tylko dla aplikacji, których organizacja musi używać, ale które nie obsługują zasad ochrony aplikacji usługi Intune. Ponadto wyjątki należy dodawać tylko dla aplikacji, w przypadku których uznano, że nie powodują ryzyka wycieku danych.
 
 W ramach zasad ochrony aplikacji usługi Intune ustawienie właściwości **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** na wartość **Aplikacje zarządzane przez zasady** oznacza, że aplikacja może przesyłać dane tylko do aplikacji, które są zarządzane przez usługę Intune. Jeśli chcesz zezwolić na przesyłanie danych do określonych aplikacji, które nie obsługują zasad ochrony aplikacji usługi Intune, możesz utworzyć wyjątki od tych zasad, korzystając z właściwości **Wybierz aplikacje, które będą wykluczone**. Wykluczenia umożliwiają aplikacjom zarządzanym przez usługę Intune wywoływanie niezarządzanych aplikacji na podstawie protokołu adresu URL (iOS) lub nazwy pakietu (Android). Domyślnie usługa Intune dodaje ważne aplikacje natywne do tej listy wyjątków. 
+
+> [!NOTE]
+> Modyfikowanie lub dodawanie do wyjątków zasad przesyłania danych nie wpływa na inne zasady ochrony aplikacji, takie jak ograniczenia wycinania, kopiowania i wklejania. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Wyjątki transferu danych w systemie iOS
 W przypadku zasad przeznaczonych dla systemu iOS możesz skonfigurować wyjątki transferu danych według protokołu URL. Aby dodać wyjątek, zapoznaj się z dokumentacją dostarczoną przez dewelopera aplikacji, gdzie można znaleźć informacje o obsługiwanych protokołach URL. Aby uzyskać dodatkowe informacje dotyczące wyjątków transferu danych w systemie iOS, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — Wyjątki w transferze danych](app-protection-policy-settings-ios.md#data-transfer-exemptions).

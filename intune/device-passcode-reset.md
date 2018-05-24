@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 905c51dcbc5b7731be207c25ffd368b339dbec57
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 5783558a768e1d58087168f81ad27e5acf9aae09
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
@@ -47,7 +47,7 @@ Aby utworzyć nowy kod dostępu urządzenia, użyj akcji **Resetuj kod dostępu*
 
 ## <a name="resetting-android-for-work-passcodes"></a>Resetowanie kodów dostępu programu Android for Work
 
-Obsługiwane urządzenia z programem Android for Work otrzymują nowe hasło do odblokowywania urządzenia lub wyzwanie profilu zarządzanego dla użytkownika końcowego. W przypadku urządzeń z systemem Android 7.0 lub nowszym z profilami służbowymi użytkownicy końcowi otrzymują powiadomienia o potrzebie aktywacji tokenu resetowania kodu dostępu natychmiast po zakończeniu rejestracji. Powiadomienie jest wyświetlane, jeśli hasło profilu służbowego jest wymagane i ustawione. Po wprowadzeniu kodu dostępu powiadomienie jest odrzucane.
+Obsługiwane urządzenia z programem Android for Work otrzymują nowe hasło do odblokowywania profilu zarządzanego lub test profilu zarządzanego dla użytkownika końcowego. W przypadku urządzeń z systemem Android 7.0 lub nowszym z profilami służbowymi użytkownicy końcowi otrzymują powiadomienia o potrzebie aktywacji tokenu resetowania kodu dostępu natychmiast po zakończeniu rejestracji. Powiadomienie jest wyświetlane, jeśli hasło profilu służbowego jest wymagane i ustawione. Po wprowadzeniu kodu dostępu powiadomienie jest odrzucane.
 
 ## <a name="resetting-ios-passcodes"></a>Resetowanie kodów dostępu w systemie iOS
 

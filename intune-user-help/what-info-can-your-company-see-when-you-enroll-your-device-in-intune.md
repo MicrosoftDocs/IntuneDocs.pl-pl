@@ -1,11 +1,11 @@
 ---
-title: Jakie informacje może wyświetlać Twoja firma, gdy zarejestrujesz swoje urządzenie? | Microsoft Docs
-description: Lista rzeczy, które dział IT może zobaczyć bądź też nie na zarządzanym urządzeniu.
+title: Jakie informacje może wyświetlać Twoja firma, gdy zarejestrujesz swoje urządzenie?
+description: Objaśnia, co dział IT może zobaczyć bądź nie na Twoim zarządzanym urządzeniu.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/13/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: fefc9c5a74afca1dad662e6d5ccde6afce6e2113
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 7e722195ce1b1b34a65cd8e936ad8a702f145691
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?
 

@@ -14,11 +14,11 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 619d9e86bd130a617155d262f3e09882ce26ec1e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia usługi Microsoft Intune z systemami Android i Samsung Knox Standard 
 
@@ -47,6 +47,10 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 ## <a name="password"></a>Hasło
 
 - **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.|Tak|Tak|
+
+    > [!NOTE]
+    > Urządzenia Samsung Knox automatycznie wymagają 4-cyfrowego kodu PIN podczas rejestracji w usłudze zarządzania urządzeniami przenośnymi. Urządzenia z natywnym systemem Android mogą automatycznie wymagać kodu PIN w celu osiągnięcia zgodności z dostępem warunkowym.
+
 - **Minimalna długość hasła** — określa minimalną długość hasła, które musi skonfigurować użytkownik (od 4 do 16 znaków).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określa liczbę minut braku aktywności przed automatycznym zablokowaniem urządzenia.
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem zawartości urządzenia.
@@ -55,7 +59,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
     - **Ustawienie domyślne urządzenia**
     - **Zabezpieczenia biometryczne na niskim poziomie**
     - **Co najmniej numeryczne**
-    - **Złożona wartość liczbowa** — powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone<sup>1</sup>
+    - **Złożona wartość liczbowa** — powtarzające się lub kolejne cyfry (np. „1111” lub „1234”) są niedozwolone.<sup>1</sup>
     - **Co najmniej alfabetyczne**
     - **Co najmniej alfanumeryczne**
     - **Co najmniej alfanumeryczne z symbolami**
@@ -63,6 +67,9 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Odblokowywanie odciskiem palca (tylko rozwiązanie Samsung Knox)** — umożliwia odblokowywanie obsługiwanych urządzeń odciskiem palca.
 - **Blokada Smart Lock i inni agenci zaufania** — umożliwia sterowanie funkcją Smart Lock na zgodnych urządzeniach z systemem Android (tylko system Samsung Knox Standard 5.0 lub nowszy). Ta funkcja telefonu, czasami znana jako funkcja agentów zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie jest w zaufanej lokalizacji. Na przykład można z tego skorzystać, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.
 - **Szyfrowanie** — wymaga szyfrowania plików na urządzeniu.
+
+    > [!NOTE]
+    > Jeśli zasady szyfrowania są wymuszane, urządzenia Samsung Knox wymagają od użytkowników ustawienia złożonego 6-znakowego hasła jako kodu dostępu urządzenia.
 
 <sup>1</sup> Przed przypisaniem tego ustawienia do urządzeń upewnij się, że aplikacja Portal firmy została zaktualizowana na tych urządzeniach do najnowszej wersji.
 

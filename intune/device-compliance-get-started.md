@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f599f168c1b4ae9aa94324b69ed11e6d426c86d
-ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
+ms.openlocfilehash: 777cfa7d387c2bd19d529dbfc6d1aeab5dbad67e
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -159,7 +159,7 @@ Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników l
   - **Zgodne**: funkcja zabezpieczeń wyłączona
   - **Niezgodne** (domyślna): funkcja zabezpieczeń włączona
 
-  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone za pomocą wartości **Niezgodne**. Jeśli dostęp warunkowy jest używany, zalecamy pozostawienie ustawienia domyślnego **Niezgodne**. Jeśli użytkownik jest niezgodny, ponieważ zasady nie są przypisane, w aplikacji Portal firmy zostanie wyświetlony komunikat `No compliance policies have been assigned`.
+  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone jako **Zgodne**. Jeśli korzystasz z dostępu warunkowego, zalecamy zmianę ustawienia na **Niezgodne**. Jeśli użytkownik jest niezgodny, ponieważ zasady nie są przypisane, w aplikacji Portal firmy zostanie wyświetlony komunikat `No compliance policies have been assigned`.
 
 - **Rozszerzone wykrywanie jailbreaku**: włączenie tego ustawienia powoduje, że urządzenia z systemem iOS są częściej ewidencjonowane w usłudze Intune. Włączenie tej właściwości powoduje użycie usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune.
 
