@@ -151,28 +151,28 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 ## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
 
 -   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
--   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
+-   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Microsoft Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
 -   **Synchronizuj ulubione między przeglądarkami firmy Microsoft (tylko wersja klasyczna)** — umożliwia synchronizowanie ulubionych między przeglądarkami Internet Explorer i Microsoft Edge.
--   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
+-   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Microsoft Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
 -   **Pliki cookie** — umożliwia przeglądarce na urządzeniu zapisywanie plików cookie z Internetu.
--   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Edge.
+-   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Microsoft Edge.
 -   **Wyskakujące okienka** — umożliwia blokowanie wyskakujących okienek w przeglądarce (tylko system Windows 10 Desktop).
 -   **Sugestie wyszukiwania** — umożliwia sugerowanie witryn przez wyszukiwarkę podczas wpisywania wyszukiwanych fraz.
 -   **Wysyłaj ruch intranetowy do programu Internet Explorer** — umożliwia użytkownikom otwieranie intranetowych witryn sieci Web w programie Internet Explorer (tylko system Windows 10 Desktop).
 -   **Autowypełnianie** — umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce (tylko system Windows 10 Desktop).
 -   **Menedżer haseł** — włącza lub wyłącza funkcję menedżera haseł w przeglądarce Microsoft Edge.
 -   **Lokalizacja listy witryn trybu przedsiębiorstwa** — określa lokalizację listy witryn sieci Web, które można otwierać w trybie przedsiębiorstwa. Użytkownicy nie mogą edytować tej listy.<br>(Tylko system Windows 10 Desktop).
--   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Edge.
--   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Edge na urządzeniu.
+-   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Microsoft Edge.
+-   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Microsoft Edge na urządzeniu.
 -   **Przeglądanie InPrivate** — uniemożliwia otwieranie sesji przeglądania InPrivate przez użytkownika końcowego.
--   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Edge.
+-   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Microsoft Edge.
     -   **Adres URL pierwszego uruchomienia** — umożliwia podanie adresu URL strony wyświetlanej przy pierwszym uruchomieniu przeglądarki Microsoft Edge (tylko system Windows 10 Mobile).
 -   **Strony główne** — umożliwia dodanie listy witryn, które mają być używane jako strony główne w przeglądarce Microsoft Edge (tylko wersja Desktop).
 -   **Zmiany strony startowej** — umożliwia użytkownikom zmienianie stron startowych wyświetlanych po otwarciu przeglądarki Microsoft Edge. Użyj ustawienia Strony główne, aby wskazać stronę (lub listę stron) otwieraną podczas uruchamiania przeglądarki Microsoft Edge.
 -   **Blokuj dostęp do flag informacji** — uniemożliwia użytkownikowi końcowemu uzyskanie dostępu do strony about:flags przeglądarki Microsoft Edge zawierającej ustawienia programistyczne i eksperymentalne.
 -   **Adres IP lokalnego hosta dla protokołu WebRTC** — blokuje wyświetlanie adresu IP lokalnego hosta użytkownika podczas nawiązywania połączeń telefonicznych przy użyciu protokołu WebRTC.
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
--   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
+-   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Microsoft Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Microsoft Edge do menu Start.
 -  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/favorites.html.
 -  **Ograniczanie zmian ulubionych** — wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 

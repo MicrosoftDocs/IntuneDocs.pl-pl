@@ -36,7 +36,7 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
    - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS i innych.
    - **Wszystkie urządzenia** — wyświetla listę zarejestrowanych urządzeń, którymi zarządzasz.
 
-     Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Edge, Chrome).
+     Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Microsoft Edge, Chrome).
 
      Wybierz dowolne urządzenie, aby [wyświetlić dodatkowe szczegóły o tym urządzeniu](device-inventory.md), w tym szczegóły dotyczące sprzętu, zainstalowanych aplikacji, stanu zasad zgodności i innych informacji.
 

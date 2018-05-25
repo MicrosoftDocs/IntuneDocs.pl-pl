@@ -121,7 +121,7 @@ Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w temaci
 |**Zezwalaj na wysyłanie ruchu intranetowego do programu Internet Explorer**|Zezwala użytkownikom na otwieranie intranetowych witryn sieci Web w programie Internet Explorer<br>(Tylko Windows 10 Desktop)|
 |**Zezwalaj na żądania Nie śledź**|Konfiguruje przeglądarkę Microsoft Edge, aby wysyłała nagłówki „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników|
 |**Włącz filtr SmartScreen**||
-|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Edge|
+|**Zezwalaj na wykonywanie aktywnych skryptów**|Zezwala na uruchamianie skryptów, takich jak skrypty JavaScript, w przeglądarce Microsoft Edge|
 |**Zezwalaj na wyskakujące okienka**|Dotyczy tylko systemu Windows 10 Desktop|
 |**Zezwalaj na pliki cookie**||
 |**Zezwalaj na automatyczne uzupełnianie**|Umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce<br>(Tylko Windows 10 Desktop)|

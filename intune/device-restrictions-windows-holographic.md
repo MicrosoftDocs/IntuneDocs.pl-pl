@@ -1,6 +1,6 @@
 ---
 title: Ograniczenia urządzeń dotyczące systemu Windows Holographic for Business w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy i dane użycia na platformie Azure.
+description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Microsoft Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy i dane użycia na platformie Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia

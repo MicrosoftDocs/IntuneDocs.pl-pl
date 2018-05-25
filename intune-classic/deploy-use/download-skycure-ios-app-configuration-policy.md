@@ -30,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 Aby wykonać kolejne kroki, musisz zalogować się do konsoli zarządzania Skycure.
 
 > [!TIP] 
-> Jeśli używasz przeglądarki Microsoft Internet Explorer 11 lub Edge, może być konieczne otwarcie konsoli zarządzania Skycure w trybie In-Private.
+> Jeśli używasz przeglądarki Microsoft Internet Explorer 11 lub Microsoft Edge, może być konieczne otwarcie konsoli zarządzania Skycure w trybie In-Private.
 
 ## <a name="to-download-the-ios-app-configuration-policy"></a>Aby pobrać zasady konfiguracji aplikacji dla systemu iOS
 
