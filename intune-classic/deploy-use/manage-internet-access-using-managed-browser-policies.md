@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1722defcb29c9cd5a15c68e01114f4ffb80e3859
+ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34456371"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
@@ -75,7 +76,7 @@ Po utworzeniu zasad programu Managed Browser można utworzyć wdrożenie oprogra
 > [!IMPORTANT]
 > Zasady programu Managed Browser nie są wdrażane w taki sam sposób jak inne zasady usługi Intune. Ten typ zasad należy skojarzyć z pakietem oprogramowania Managed Browser.
 
-Wdróż aplikację, wybierając zasady programu Managed Browser na stronie **Zarządzanie aplikacjami mobilnymi** , aby skojarzyć zasady z aplikacją.
+Wdróż aplikację, wybierając zasady programu Managed Browser na stronie **Zarządzanie aplikacjami mobilnymi**, aby skojarzyć zasady z aplikacją.
 
 Aby uzyskać więcej informacji na temat sposobu wdrażania aplikacji, zobacz [Wdrażanie aplikacji w usłudze Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
@@ -101,7 +102,7 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
 - Symbol wieloznaczny (**&#42;**) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
 
-- Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https** .
+- Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https**.
 
 - W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
 
@@ -115,14 +116,14 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
 |                  Adres URL                  |                     Szczegóły                      |                                                Jest zgodny z                                                |                                Nie jest zgodny z                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|        http://www.contoso.com         |              Zgodny z pojedynczą stroną               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
-|          http://contoso.com           |              Zgodny z pojedynczą stroną               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
-|    <http://www.contoso.com/&#42>;     | Zgodny ze wszystkimi adresami URL rozpoczynającymi się od www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|        http://www.contoso.com         |              Zgodny z pojedynczą stroną               |                                            <www.contoso.com>                                           |  host.contoso.com<br /><br /><www.contoso.com/images><br /><br />contoso.com/   |
+|          http://contoso.com           |              Zgodny z pojedynczą stroną               |                                             contoso.com/                                              | host.contoso.com<br /><br /><www.contoso.com/images><br /><br /><www.contoso.com>  |
+|    <http://www.contoso.com/&#42>;     | Zgodny ze wszystkimi adresami URL rozpoczynającymi się od www.contoso.com  |      <www.contoso.com> <br /><br /><www.contoso.com/images><br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
 |    http://&#42;.contoso.com/&#42;     |     Zgodny ze wszystkimi domenami podrzędnymi w domenie contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
-|     http://www.contoso.com/images     |             Zgodny z pojedynczym folderem              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|     http://www.contoso.com/images     |             Zgodny z pojedynczym folderem              |                                        <www.contoso.com/images>                                         |                          <www.contoso.com/images/dogs>                          |
 |       http://www.contoso.com:80       |  Zgodny z pojedynczą stroną z użyciem numeru portu   |                                       http://www.contoso.com:80                                       |                                                                               |
 |        https://www.contoso.com        |          Zgodny z pojedynczą, bezpieczną stroną           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
-| <http://www.contoso.com/images/&#42>; |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
+| <http://www.contoso.com/images/&#42>; |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |                 <www.contoso.com/images/dogs><br /><br /><www.contoso.com/images/cats>                   |                            <www.contoso.com/videos>                             |
 
 - Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
 
@@ -130,11 +131,11 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
   - &#42;.contoso/&#42;
 
-  - www.contoso.com/&#42;images
+  - <www.contoso.com/>&#42;images
 
-  - www.contoso.com/&#42;images&#42;pigs
+  - <www.contoso.com/>&#42;images&#42;pigs
 
-  - www.contoso.com/page&#42;
+  - <www.contoso.com/page>&#42;
 
   - Adresy IP
 
@@ -153,6 +154,6 @@ Jeśli zasady programu Managed Browser są wdrażane na urządzeniu i wystąpi k
 
 -   Jeśli tryby w każdej z zasad są różne, a adresy URL są takie same, adresy URL nie są wymuszane na urządzeniu.
 
--   Jeśli urządzenie otrzymuje zasady programu Managed Browser po raz pierwszy i wystąpi konflikt dwóch zasad, adresy URL nie są wymuszane na urządzeniu. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
+-   Jeśli urządzenie otrzymuje zasady programu Managed Browser po raz pierwszy i wystąpi konflikt dwóch zasad, adresy URL nie są wymuszane na urządzeniu. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady**.
 
--   Jeśli urządzenie już otrzymało zasady programu Managed Browser, a drugie zasady są wdrażane z ustawieniami powodującymi konflikt, na urządzeniu będą używane ustawienia oryginalne. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady** .
+-   Jeśli urządzenie już otrzymało zasady programu Managed Browser, a drugie zasady są wdrażane z ustawieniami powodującymi konflikt, na urządzeniu będą używane ustawienia oryginalne. Aby przejrzeć informacje o konfliktach, użyj węzła **Konflikty zasad** w obszarze roboczym **Zasady**.
