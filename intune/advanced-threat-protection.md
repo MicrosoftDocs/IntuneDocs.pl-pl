@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/24/2018
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e99ed0bd1eb5bae90913aedba5973e5e1282f70
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 99d848fb1efea2ea2d557ab8d4f19881705ec991
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/02/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744673"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -51,19 +52,19 @@ Aby używać usługi ATP z usługą Intune, należy się upewnić, że następuj
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz kolejno pozycje **Zgodność urządzeń** > **Windows Defender ATP** > **Otwórz konsolę administratora zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender**.
+3. Wybierz kolejno pozycje **Zgodność urządzeń** > **Windows Defender ATP** > **Otwórz usługę Windows Defender Security Center**.
 
-    ![Tekst alternatywny](./media/atp-device-compliance-open-windows-defender.png)
+    ![Wybieranie pozycji otwierającej usługę Windows Defender Security Center](./media/atp-device-compliance-open-windows-defender.png)
 
 4. W usłudze **Windows Defender Security Center**:
     1. Wybierz pozycję **Ustawienia** > **Funkcje zaawansowane**.
     2. Dla pozycji **Połączenie z usługą Microsoft Intune** wybierz ustawienie **Wł.**:
 
-        ![Tekst alternatywny](./media/atp-security-center-intune-toggle.png)
+        ![Włączanie połączenia z usługą Intune](./media/atp-security-center-intune-toggle.png)
 
     3. Wybierz pozycję **Zapisz preferencje**.
 
-5. Wróć do usługi Intune, **Zgodność urządzeń** > **Windows Defender ATP**. Ustaw opcję **Połącz urządzenia z systemem Windows 10.0.15063+ z zaawansowaną ochroną przed zagrożeniami w usłudze Windows Defender** w pozycji **Wł.**
+5. Wróć do usługi Intune, **Zgodność urządzeń** > **Windows Defender ATP**. Ustaw pozycję **Połącz urządzenia systemu Windows w wersji 10.0.15063 lub nowszej z usługą Windows Defender ATP** na **Wł.**
 6. Wybierz pozycję **Zapisz**.
 
 Zwykle należy wykonać to zadanie raz. Jeśli usługa ATP jest już włączona w zasobie usługi Intune, nie trzeba tego robić ponownie.
@@ -115,9 +116,9 @@ Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 2. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
 3. Uzupełnij pola **Nazwa** i **Opis**.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
-5. W ustawieniach **Kondycja urządzenia** ustaw opcję **Wymagaj, aby poziom zagrożenia urządzenia był niższy lub równy podanemu poziomowi zagrożenia urządzenia** na preferowany poziom:
+5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom:
 
-  - **Zabezpieczone**: ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
+  - **Czyste**: ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
   - **Niski**: urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
   - **Średni**: urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.

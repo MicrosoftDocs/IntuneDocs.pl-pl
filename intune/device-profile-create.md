@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3d46960e6ea7e2ae9bed6c0016ddc309bd15f572
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f62e306574606ffa1eb1e6f242c3cb30b1a9c1b
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744656"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
@@ -46,16 +47,19 @@ ms.lasthandoff: 04/16/2018
    - **Typ profilu**: wybierz typ, który ma zostać utworzony. Lista zależy od wybranej platformy.
    - **Ustawienia**: ustawienia poszczególnych typów profilów opisano w następujących tematach:
 
-       -  [Ustawienia funkcji urządzeń](device-features-configure.md)
-       -  [Ustawienia ograniczeń dotyczących urządzeń](device-restrictions-configure.md)
-       -  [Ustawienia poczty e-mail](email-settings-configure.md)
-       -  [Ustawienia sieci VPN](vpn-settings-configure.md)
-       -  [Ustawienia sieci Wi-Fi](wi-fi-settings-configure.md)
-       -  [Ustawienia uaktualniania wersji systemu Windows 10](edition-upgrade-configure-windows-10.md)
-       -  [Ustawienia certyfikatów](certificates-configure.md)
-       -  [Ustawienia usługi Windows Information Protection](windows-information-protection-configure.md)
-       -  [Ustawienia rozwiązań dla edukacji](education-settings-configure.md)
-       -  [Ustawienia niestandardowe](custom-settings-configure.md)
+       -  [Funkcje urządzenia](device-features-configure.md)
+       -  [Ograniczenia dotyczące urządzeń](device-restrictions-configure.md)
+       -  [Program Endpoint Protection](endpoint-protection-configure.md)
+       -  [Kiosk](kiosk-settings.md)
+       -  [Poczta e-mail](email-settings-configure.md)
+       -  [VPN](vpn-settings-configure.md)
+       -  [Wi-Fi](wi-fi-settings-configure.md)
+       -  Edukacja dla [systemu Windows 10](education-settings-configure.md) i [systemu iOS](wi-fi-settings-ios.md)
+       -  [Windows 10 — uaktualnienie wersji](edition-upgrade-configure-windows-10.md)
+       -  [Zasady aktualizacji systemu iOS](software-updates-ios.md)
+       -  [Certyfikaty](certificates-configure.md)
+       -  [Rozwiązanie Windows Information Protection](windows-information-protection-configure.md)
+       -  [Niestandardowe](custom-settings-configure.md)
 
      ![Zrzut ekranu opcji Utwórz profil](./media/create-device-profile.png)
 
@@ -63,6 +67,5 @@ ms.lasthandoff: 04/16/2018
 
 Profil zostanie utworzony i wyświetlony na liście.
 
-
 ## <a name="next-steps"></a>Następne kroki
-Aby przypisywać profile urządzeń, zobacz [How to assign device profiles with Microsoft Intune (Jak przypisywać profile urządzeń przy użyciu usługi Microsoft Intune)](device-profile-assign.md).
+[Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).

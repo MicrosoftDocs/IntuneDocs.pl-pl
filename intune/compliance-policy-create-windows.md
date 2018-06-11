@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 64df804bf2f882991cccd3f77014369cd86b69a8
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 6e5fb28e001dbe69f392d1ea730e415515fe4c5c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744911"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -111,21 +112,20 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 - **Wymagaj funkcji BitLocker**: po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub przechodzi w stan hibernacji. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Zapewnia ona także, że komputer nie zostanie naruszony nawet wtedy, gdy zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
 - **Wymagaj włączenia bezpiecznego rozruchu w urządzeniu**: po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
 - **Wymagaj integralności kodu**: integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Sprawdza także, czy plik systemowy został zmodyfikowany przez złośliwe oprogramowanie uruchomione przez konto użytkownika z uprawnieniami administratora.
-- **Wymagaj, aby poziom zagrożenia urządzenia był niższy lub równy podanemu poziomowi zagrożenia urządzenia**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z usług ochrony przed zagrożeniami jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia:
-  - **Zabezpieczony**: ta opcja jest najbezpieczniejsza, ponieważ urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające jakikolwiek poziom zagrożenia, zostanie ono ocenione jako niezgodne.
-  - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
-  - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
-  - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
 
 Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) (Zaświadczanie o kondycji CSP), aby uzyskać szczegółowe informacje o sposobie działania usługi HAS.
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
-- **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.poprawka. Numer kompilacja.poprawka musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym **główna.pomocnicza.kompilacja.aktualizacja_zbiorcza**. Aby uzyskać prawidłową wartość, otwórz wiersz polecenia i wpisz `ver`. Polecenie `ver` zwraca wersję w następującym formacie:
+
+  `Microsoft Windows [Version 10.0.17134.1]`
 
   Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż określona, zostanie zgłoszone jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 
-- **Maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.poprawka. Numer kompilacja.poprawka musi odpowiadać wersji zwracanej przez polecenie `ver` lub `winver`.
+- **Maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym **główna.pomocnicza.kompilacja.poprawka**. Aby uzyskać prawidłową wartość, otwórz wiersz polecenia i wpisz `ver`. Polecenie `ver` zwraca wersję w następującym formacie:
+
+  `Microsoft Windows [Version 10.0.17134.1]`
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Do momentu zmiany reguły dopuszczającej daną wersję systemu operacyjnego urządzenie nie może być stosowane do uzyskiwania dostępu do zasobów firmy.
 
@@ -161,9 +161,17 @@ Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-
 - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 - **Wymagaj hasła, gdy urządzenie wraca ze stanu bezczynności (Mobile i Holographic)**: wymuszaj wprowadzanie haseł przez użytkowników za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
 
-### <a name="encryption"></a>Szyfrowanie
+#### <a name="encryption"></a>Szyfrowanie
 
 - **Szyfrowanie magazynu danych na urządzeniu**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
+
+### <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
+
+- **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z usług ochrony przed zagrożeniami jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia:
+  - **Czyste**: ta opcja jest najbezpieczniejsza, ponieważ urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające jakikolwiek poziom zagrożenia, zostanie ono ocenione jako niezgodne.
+  - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
+  - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
+  - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

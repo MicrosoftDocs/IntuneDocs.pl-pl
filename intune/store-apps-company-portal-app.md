@@ -15,11 +15,12 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 169d0a32fdc86b5cd3f36421e6057cdeae1a078f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: edd0ec0d717d4303ad2a452c5d60009ac09aa05f
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703319"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -73,7 +74,7 @@ Zalecana przez nas ścieżka migracji polega na usunięciu przypisania aplikacji
 
 Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została przypisana bez rejestrowania jej za pomocą certyfikatu firmy Symantec, wykonaj czynności opisane w poprzednich sekcjach tego artykułu, aby ukończyć uaktualnianie.
 
-Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została podpisana i przypisana za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w następnej sekcji.  
+Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została podpisana i przypisana za pomocą certyfikatu podpisywania kodu firmy Symantec, wykonaj instrukcje zawarte w następnej sekcji.
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak uaktualnić podpisaną i ładowaną bezpośrednio aplikację Portal firmy dla systemu Windows Phone 8.1 lub aplikację Portal firmy dla systemu Windows 8.1 do aplikacji Portal firmy dla systemu Windows 10?
 Zalecana przez nas ścieżka migracji polega na usunięciu istniejącego przypisania aplikacji Portal firmy dla systemu Windows Phone 8.1 lub aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji przypisania na **Odinstaluj**. Po wybraniu tego ustawienia możesz przypisać aplikację Portal firmy dla systemu Windows 10 zwykłą metodą.  

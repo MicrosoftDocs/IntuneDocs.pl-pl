@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61d58c794015b0b87f4c9949d9c53e7166925022
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: c63e632036d38fb1fde2e4b26313b4447b9db25e
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744588"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -35,35 +36,49 @@ Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowi
 > [!Note]       
 > Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone firmie Microsoft.  
 
-## <a name="company-contact-information-and-privacy-statement"></a>Informacje kontaktowe i zasady zachowania poufności informacji firmy        
-Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Informacje kontaktowe i szczegóły są wyświetlane na ekranie **Kontakt z działem IT** w portalu firmy na komputerach użytkowników. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.
+## <a name="company-information-and-privacy-statement"></a>Informacje o firmie i zasady zachowania poufności informacji        
+Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.
 
 Pola oznaczone gwiazdką (*) są obowiązkowe.       
 
 
 | Nazwa pola | Długość maksymalna | Więcej informacji |
 |---|---|---|
-|**Nazwa firmy**| 40 | Ta nazwa jest wyświetlana jako tytuł portalu firmy. |
-|**Imię i nazwisko osoby do kontaktu w dziale IT** | 40 | Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**. |
-|**Numer telefonu działu IT** | 20 | Ten numer kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. |
-|**Adres e-mail działu IT**| 40 | Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie `alias@domainname.com`. |
-| **Dodatkowe informacje**|    120     | Wyświetlane na stronie **Kontakt z działem IT**. |
-| **Adres URL zasad zachowania poufności informacji firmy** |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Musisz podać prawidłowy adres URL w postaci `<https://www.contoso.com>`. |
+|**Nazwa firmy**| 40 | Ta nazwa jest wyświetlana jako tytuł Portalu firmy i będzie pojawiać się jako tekst w całym środowisku użytkownika usługi Intune. |
+| **Adres URL zasad zachowania poufności informacji** |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Musisz podać prawidłowy adres URL w postaci `<https://www.contoso.com>`. |
 
-## <a name="support-contacts"></a>Kontakt z pomocą techniczną     
-Witryna sieci Web z pomocą techniczną wyświetlana w portalu firmy umożliwia użytkownikom dostęp do pomocy online.        
+## <a name="support-information"></a>Informacje dotyczące pomocy technicznej      
+Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pracownikom dane kontaktowe do użycia w przypadku pytań związanych z usługą Intune.       
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
 |---|---|---|
-|**Adres URL witryny sieci Web pomocy technicznej**|150|Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL należy wpisać w formacie **https://www.contoso.com**. Jeśli nie określisz adresu URL, w Portalu firmy w witrynie pomocy technicznej na stronie **Kontakt z działem IT** nie będą wyświetlane żadne informacje.|
-|**Nazwa witryny sieci Web pomocy technicznej**|40|Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli zostanie określony tylko adres URL witryny sieci Web pomocy technicznej, ale nie zostanie podana przyjazna nazwa, w portalu firmy na stronie **Kontakt z działem IT** będzie wyświetlany komunikat Przejdź do witryny sieci Web działu IT.
+|**Nazwa kontaktu** | 40 | Ta nazwa jest wyświetlana na stronie **Kontakt z działem IT**. |
+|**Numer telefonu** | 20 | Ten numer kontaktowy jest wyświetlany na stronie **informacji kontaktowych działu IT** i umożliwia pracownikom kontaktowanie się z pomocą techniczną. |
+|**Adres e-mail**| 40 | Ten adres kontaktowy jest wyświetlany na stronie **Kontakt z działem IT**. Należy wprowadzić prawidłowy adres e-mail w formacie `alias@domainname.com`. |
+|**Nazwa witryny internetowej**| 40 | Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli zostanie określony tylko adres URL witryny sieci Web pomocy technicznej, ale nie zostanie podana przyjazna nazwa, w portalu firmy na stronie **Kontakt z działem IT** będzie wyświetlany komunikat Przejdź do witryny sieci Web działu IT. |
+|**Adres URL witryny internetowej**| 150 | Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL należy wpisać w formacie **https://www.contoso.com**. Jeśli nie określisz adresu URL, w Portalu firmy w witrynie pomocy technicznej na stronie **Kontakt z działem IT** nie będą wyświetlane żadne informacje. |
+| **Dodatkowe informacje**| 120 | Wyświetlane na stronie **Kontakt z działem IT**. |
+
 
 ## <a name="company-branding-customization"></a>Dostosowywanie oznaczeń marki       
 Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło.     
 
+### <a name="theme-color"></a>Kolor motywu
+Zastosuj kolor motywu w Portalu firmy. Wybierz kolor standardowy lub wprowadź sześciocyfrowy kod szesnastkowy koloru niestandardowego.
+
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Kolor motywu**|Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć selektora kolorów lub wprowadzić konkretny kod szesnastkowy.|
-|**Wyświetl logo firmy**|Po włączeniu tej opcji możesz przekazać logo firmy, aby było wyświetlane w portalu firmy. Można przekazać dwa logo: jedno wyświetlane, gdy tło portalu firmy jest białe, i drugie — wyświetlane, gdy tło Portalu firmy ma wybrany przez użytkownika kolor motywu. Każdy plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 100 pikseli i mieć rozmiar nie większy niż 750 KB.<br>Można również wyświetlić nazwę firmy wprowadzoną obok załadowanego logo.|
+|**Typ koloru**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. |
+|**Wybierz kolor** lub **Kod szesnastkowy koloru**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. Te opcje są dostępne w zależności od wybranego **typu koloru**.  |
 
-Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień w portalu sieci Web usługi Intune**, aby zobaczyć, jak wyglądają konfiguracje.
+### <a name="company-logo"></a>Logo firmy
+Przekaż logo firmy, aby było widoczne w całym środowisku użytkownika usługi Intune.
+
+|Nazwa pola|Więcej informacji|
+|---|---|
+|**Wyświetl logo firmy**|Po włączeniu tej opcji możesz przekazać logo firmy, aby było wyświetlane w portalu firmy. Można przekazać dwa logo: jedno wyświetlane, gdy tło portalu firmy jest białe, i drugie — wyświetlane, gdy tło Portalu firmy ma wybrany przez użytkownika kolor motywu. |
+|**Przekaż logo do użycia na tle koloru motywu**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 400 pikseli i mieć rozmiar nie większy niż 750 KB. |
+|**Przekaż logo do użycia na jasnym tle**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 400 pikseli i mieć rozmiar nie większy niż 750 KB. |
+|**Wyświetl nazwę firmy obok logo**| Wybierz tę opcję, aby wyświetlić wprowadzoną nazwę firmy obok załadowanego logo. |
+
+Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień w portalu internetowym usługi Intune** w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje.
