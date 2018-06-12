@@ -14,11 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 183eb3f121e1b5c53673d10a04d0710baeb5a703
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a1476ad4237b6355d0cb87fcc643bf0234e7f457
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744775"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -37,9 +38,9 @@ Przed skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
 - Należy użyć [łącznika lokalnego programu Exchange programu Exchange Active Sync](exchange-connector-install.md), który łączy usługę Intune z lokalnym programem Exchange.
 
     >[!IMPORTANT]
-    >Łącznik lokalnego programu Exchange jest przeznaczony dla Twojej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami. Ponadto upewnij się, że łącznik programu Exchange dla Twojej dzierżawy został zainstalowany **tylko na jednej maszynie**.
+    >Łącznik lokalnego programu Exchange jest przeznaczony dla Twojej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami. Usługa Intune obsługuje teraz wiele lokalnych łączników programu Exchange na subskrypcję. Jeśli masz więcej niż jedną lokalną organizację programu Exchange, możesz skonfigurować osobny łącznik dla każdej organizacji programu Exchange.
 
-- Łącznik można zainstalować na dowolnym komputerze, jeśli komputer ten jest w stanie komunikować się z programem Exchange Server.
+- Łącznik dla lokalnej organizacji programu Exchange można zainstalować na dowolnej maszynie, jeśli jest ona w stanie komunikować się z programem Exchange Server.
 
 - Łącznik obsługuje **środowisko serwera CAS programu Exchange**. Z technicznego punktu widzenia można bezpośrednio zainstalować łącznik na serwerze CAS programu Exchange, ale nie jest to zalecane, ponieważ zwiększa to obciążenie serwera. Podczas konfigurowania łącznika należy ustawić go tak, aby komunikował się z jednym z serwerów CAS programu Exchange.
 
@@ -49,7 +50,7 @@ Przed skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
     - Zostać **zarejestrowane** w usłudze Intune lub być komputerem przyłączonym do domeny.
     - **Zostać zarejestrowane w usłudze Azure Active Directory**. Ponadto identyfikator klienta programu Exchange ActiveSync musi być zarejestrowany w usłudze Azure Active Directory.
 <br></br>
-- Usługa AAD DRS jest automatycznie uaktywniona dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestrowania urządzeń usług AD FS, nie widzą zarejestrowanych urządzeń w lokalnej usłudze Active Directory. **Nie dotyczy to komputerów z systemem Windows i urządzeń z systemem Windows Phone**.
+- Usługa rejestrowania urządzeń w usłudze Azure AD (DRS) zostanie aktywowana automatycznie dla klientów usług Intune i Office 365. Klienci, którzy już wdrożyli usługę rejestrowania urządzeń usług AD FS, nie widzą zarejestrowanych urządzeń w lokalnej usłudze Active Directory. **Nie dotyczy to komputerów z systemem Windows i urządzeń z systemem Windows Phone**.
 
 - **Być zgodne** z zasadami zgodności urządzenia wdrożonymi na tym urządzeniu.
 
@@ -89,7 +90,7 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 1. W okienku **Dostęp do lokalnego programu Exchange** wybierz pozycję **Tak**, aby włączyć kontrolę dostępu do lokalnego programu Exchange.
 
     > [!NOTE]
-    > Jeśli łącznik lokalnego programu Exchange Active Sync nie został skonfigurowany, opcja ta będzie wyłączona.  Należy najpierw zainstalować i skonfigurować ten łącznik, a potem włączyć dostęp warunkowy do lokalnego programu Exchange. Więcej szczegółowych informacji znajduje się w temacie [Install the Intune On-premises Exchange Connector](exchange-connector-install.md) (Instalowanie łącznika lokalnego programu Exchange w usłudze Intune)
+    > Jeśli łącznik lokalnego programu Exchange Active Sync nie został skonfigurowany, opcja ta będzie wyłączona.  Należy najpierw zainstalować i skonfigurować co najmniej jeden łącznik przed włączeniem dostępu warunkowego do lokalnego programu Exchange. Więcej szczegółowych informacji znajduje się w temacie [Install the Intune On-premises Exchange Connector](exchange-connector-install.md) (Instalowanie łącznika lokalnego programu Exchange w usłudze Intune)
 
 1. W obszarze **Przypisanie** wybierz pozycję **Objęte grupy**.  Użyj grupy zabezpieczeń użytkowników, która powinna mieć przypisany dostęp warunkowy. W wyniku tej akcji użytkownicy będą musieli zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności.
 

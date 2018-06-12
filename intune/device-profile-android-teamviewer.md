@@ -1,23 +1,24 @@
 ---
-title: "Zdalne administrowanie urządzeniami w usłudze Microsoft Intune — Azure | Microsoft Docs"
-description: "Zapoznaj się z rolami wymaganymi do korzystania z programu TeamViewer, sposobem instalowania łącznika programu TeamViewer oraz szczegółowymi wskazówkami dotyczącymi zdalnego administrowania urządzeniami w usłudze Microsoft Intune w witrynie Azure Portal"
-keywords: 
+title: Zdalne administrowanie urządzeniami w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z rolami wymaganymi do korzystania z programu TeamViewer, sposobem instalowania łącznika programu TeamViewer oraz szczegółowymi wskazówkami dotyczącymi zdalnego administrowania urządzeniami w usłudze Microsoft Intune w witrynie Azure Portal
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 64f6dd6bf787a6f590655f03ac8f04312836e0b5
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 60d9398b80a30adee194470ac4e5c6c1efc0bd4c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744639"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune
 
@@ -25,7 +26,7 @@ Urządzeniami zarządzanymi przez usługę Intune można administrować zdalnie 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Korzystanie z obsługiwanego urządzenia. Urządzenia z systemami Windows i Android zarządzane przez usługę Intune obsługują administrację zdalną. Program TeamViewer może nie obsługiwać systemu Windows Holographic (HoloLens), Windows Team (Surface Hub) lub Windows 10 S. Listę obsługiwanych produktów i odpowiednie aktualizacje można znaleźć w witrynie programu [TeamViewer](https://www.teamviewer.com).
+- Korzystanie z obsługiwanego urządzenia. Urządzenia z systemami Android, Windows, iOS i macOS zarządzane przez usługę Intune obsługują administrację zdalną. Program TeamViewer może nie obsługiwać systemu Windows Holographic (HoloLens), Windows Team (Surface Hub) lub Windows 10 S. Listę obsługiwanych produktów i odpowiednie aktualizacje można znaleźć w witrynie programu [TeamViewer](https://www.teamviewer.com).
 
 - Administrator usługi Intune w witrynie Azure Portal musi mieć następujące [role usługi Intune](role-based-access-control.md):  
 

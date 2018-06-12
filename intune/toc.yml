@@ -372,6 +372,8 @@
               href: endpoint-protection-macos.md
             - name: Windows 10
               href: endpoint-protection-windows-10.md
+        - name: Konfigurowanie ustawień kiosku
+          href: kiosk-settings.md
         - name: Konfigurowanie ustawień poczty e-mail
           href: email-settings-configure.md
           items:
@@ -411,12 +413,14 @@
               href: wi-fi-settings-macos.md
             - name: Windows 8.1 i Windows 10
               href: wi-fi-settings-import-windows-8-1.md
+        - name: Edukacja
+          items:
+            - name: Udostępnione urządzenia z systemem iOS
+              href: education-settings-configure-ios-shared.md
+            - name: Windows 10
+              href: education-settings-configure.md
         - name: Konfigurowanie ustawień uaktualniania systemu Windows 10
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurowanie ustawień edukacyjnych dla urządzeń z systemem Windows 10
-          href: education-settings-configure.md
-        - name: Konfigurowanie urządzeń udostępnionych w usługach edukacyjnych dla urządzeń z systemem iOS
-          href: education-settings-configure-ios-shared.md
         - name: Konfigurowanie zasad aktualizacji systemu iOS
           href: software-updates-ios.md
         - name: Konfigurowanie certyfikatów
@@ -455,6 +459,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Tworzenie zasad dla systemu Windows
           href: compliance-policy-create-windows.md
+        - name: Zasady oparte na lokalizacji
+          href: use-network-locations.md
         - name: Ocena zasad
           href: policy-evaluate.md
         - name: Akcje w przypadku niezgodności

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 069f71d75c0a9c7cec083a929f89a2b39bb4aac5
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 0831f374b9c6da417d8159dce1b58e40f0d3643c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744945"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Ustawienia programu Endpoint Protection dla systemu Windows 10 (i nowszych) w usłudze Intune
 
@@ -300,15 +301,21 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
 
 - **Minuty braku aktywności ekranu blokady przed aktywowaniem wygaszacza ekranu**: definiowanie maksymalnej liczby minut braku aktywności na ekranie logowania pulpitu interaktywnego przed uruchomieniem wygaszacza ekranu.
 - **Wymagaj kombinacji CTRL+ALT+DEL do zalogowania**: aby użytkownik mógł się zalogować, należy nacisnąć kombinację klawiszy CTRL+ALT+DEL.
-- **Zachowanie przy usuwaniu karty inteligentnej**: określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych.
-Dalsze szczegóły można znaleźć w temacie dotyczącym [opcji zabezpieczeń LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior).
+- **Zachowanie przy usuwaniu karty inteligentnej**: określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne opcje:
+
+  - **Zablokuj stację roboczą**: stacja robocza zostanie zablokowana po wyjęciu karty inteligentnej. Ta opcja umożliwia użytkownikom opuszczenie miejsca pracy i zabranie ze sobą karty inteligentnej przy jednoczesnym zachowaniu chronionej sesji.
+  - **Wymuszaj wylogowanie**: użytkownik jest automatycznie wylogowywany po wyjęciu karty inteligentnej.
+  - **Rozłącz, gdy istnieje sesja usług pulpitu zdalnego**: usunięcie karty inteligentnej powoduje rozłączenie sesji bez wylogowywania użytkownika. Ta opcja umożliwia użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.
+
+    Dalsze szczegóły można znaleźć w temacie dotyczącym [opcji zabezpieczeń LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior).
 
 #### <a name="display"></a>Wyświetlanie
 
 - **Informacje o użytkowniku na ekranie blokady**: konfigurowanie informacji o użytkowniku wyświetlanych po zablokowaniu sesji. Jeśli nie zostaną one skonfigurowane, będzie pokazywana nazwa wyświetlana użytkownika, domena i nazwa użytkownika.
+  - **Nieskonfigurowane**: nazwa wyświetlana użytkownika, domena i nazwa użytkownika
+  - **Nazwa wyświetlana użytkownika, domena i nazwa użytkownika**
   - **Tylko nazwa wyświetlana użytkownika**
   - **Nie wyświetlaj informacji o użytkowniku**
-  - **Nieskonfigurowane**: nazwa wyświetlana użytkownika, domena i nazwa użytkownika
 - **Ukryj ostatnio zalogowanego użytkownika**: nie jest wyświetlana nazwa użytkownika ostatniej osoby, która zalogowała się na tym urządzeniu.
 - **Ukryj nazwę użytkownika podczas logowania**: nazwa użytkownika osoby logującej się do tego urządzenia nie jest wyświetlana po wprowadzeniu poświadczeń i przed wyświetleniem pulpitu urządzenia.
 - **Tytuł komunikatu logowania**: ustaw tytuł komunikatu dla użytkowników próbujących się zalogować.
@@ -316,13 +323,13 @@ Dalsze szczegóły można znaleźć w temacie dotyczącym [opcji zabezpieczeń L
 
 ### <a name="network-access-and-security"></a>Dostęp do sieci i jej zabezpieczenia
 
-- **Dostęp anonimowy do nazwanych potoków i udziałów**: ogranicza dostęp anonimowy do ustawień udziałów i nazwanych potoków. Dotyczy ustawień, do których można uzyskiwać anonimowy dostęp.
-- **Anonimowe wyliczanie kont SAM**: umożliwia użytkownikom anonimowym wyliczanie kont SAM. System Windows pozwala użytkownikom anonimowym na wyliczanie nazw kont domeny i udziałów sieciowych.
-- **Anonimowe wyliczanie kont SAM i udziałów**: możliwość blokowania anonimowego wyliczania kont SAM i udziałów. System Windows pozwala użytkownikom anonimowym na wyliczanie nazw kont domeny i udziałów sieciowych.
-- **Wartość skrótu programu LAN Manager przechowywana przy zmianie hasła**: podczas kolejnej zmiany hasła wybierz, czy wartość skrótu programu LAN Manager (LM) dla nowego hasła ma być przechowywana. Nie jest ona przechowywana domyślnie.
-- **Żądania uwierzytelniania protokołu PKU2U**: blokowanie żądań uwierzytelniania protokołu PKU2U do tego urządzenia w celu używania tożsamości online.
-- **Ograniczanie połączeń zdalnych zdalnego wywołania procedury z rozwiązaniem SAM**: edytowanie ciągu języka Security Descriptor Definition Language w celu zezwolenia użytkownikom i grupom na wykonywanie zdalnych wywołań do rozwiązania SAM lub odmowy takiego zezwolenia.
-- **Deskryptor zabezpieczeń**
+- **Dostęp anonimowy do nazwanych potoków i udziałów**: ustawienie na wartość **Nie skonfigurowano** (ustawienie domyślnie) ogranicza dostęp anonimowy do ustawień udziałów i nazwanych potoków. Dotyczy ustawień, do których można uzyskiwać anonimowy dostęp.
+- **Anonimowe wyliczanie kont SAM**: **umożliwia** użytkownikom anonimowym wyliczanie kont SAM. System Windows pozwala użytkownikom anonimowym na wyliczanie nazw kont domeny i udziałów sieciowych.
+- **Anonimowe wyliczanie kont SAM i udziałów**: ustawienie na wartość **Nie skonfigurowano** (ustawienie domyślne) oznacza, że użytkownicy anonimowi mogą wyliczać nazwy kont domen i udziałach sieciowych. Aby zapobiec anonimowemu wyliczaniu kont SAM i udziałów, ustaw na wartość **Blokuj**.
+- **Wartość skrótu programu LAN Manager przechowywana przy zmianie hasła**: podczas kolejnej zmiany hasła **zezwól** na przechowywanie wartości skrótu dla nowego hasła przez program LAN Manager (LM). W przypadku ustawienia na wartość **Nie skonfigurowano** (ustawienie domyślne), wartość skrótu nie będzie przechowywana.
+- **Żądania uwierzytelniania protokołu PKU2U**: **blokuj** żądania uwierzytelniania protokołu PKU2U do tego urządzenia w celu używania tożsamości online. Ustawienie na wartość **Nie skonfigurowano** (ustawienie domyślne) zezwala na te żądania.
+- **Ograniczanie połączeń zdalnych zdalnego wywołania procedury z rozwiązaniem SAM**: **zezwól** na odmowę użytkownikom i grupom wykonywania zdalnych wywołań do rozwiązania SAM przez ciąg języka Security Descriptor Definition Language. **Nie skonfigurowano**: (ustawienie domyślne) domyślny ciąg języka Security Descriptor Definition Language zezwalający użytkownikom i grupom na wykonywanie zdalnych wywołań do rozwiązania SAM.
+  - **Deskryptor zabezpieczeń**
 
 ### <a name="recovery-console-and-shutdown"></a>Konsola odzyskiwania i zamykanie
 
@@ -359,13 +366,13 @@ Dalsze szczegóły można znaleźć w temacie dotyczącym [opcji zabezpieczeń L
 
 ### <a name="microsoft-network-client"></a>Klient sieci firmy Microsoft
 
-- **Podpisuj cyfrowo komunikację (za zgodą serwera)**: określa, czy klient SMB podejmuje próbę negocjowania podpisywania pakietów SMB. W przypadku włączenia tej opcji (ustawienie domyślne) klient sieci firmy Microsoft żąda od serwera podpisania pakietów SMB podczas konfigurowania sesji. Jeśli podpisywanie pakietów zostało włączone na serwerze, jest negocjowane podpisywanie pakietów. Jeśli te zasady zostały wyłączone, klient SMB nigdy nie negocjuje podpisywania pakietów SMB.
+- **Podpisuj cyfrowo komunikację (za zgodą serwera)**: określa, czy klient SMB podejmuje próbę negocjowania podpisywania pakietów SMB. W przypadku włączenia tej opcji (ustawienie na wartość Nie skonfigurowano) klient sieci firmy Microsoft żąda od serwera podpisania pakietów SMB podczas konfigurowania sesji. Jeśli podpisywanie pakietów jest włączone na serwerze, ma miejsce negocjowanie podpisywania pakietów. Jeśli te zasady zostały wyłączone, klient SMB nigdy nie negocjuje podpisywania pakietów SMB.
 - **Wyślij niezaszyfrowane hasło w celu nawiązania połączenia z innymi serwerami SMB**: po włączeniu tej opcji przekierowanie bloku komunikatów serwera (SMB) może wysyłać hasła w postaci zwykłego tekstu do serwerów SMB firm innych niż Microsoft, które nie obsługują szyfrowania hasła podczas uwierzytelniania.
 
 ### <a name="microsoft-network-server"></a>Serwer sieci Microsoft
 
-- **Podpisuj cyfrowo komunikację (za zgodą klienta)**: określa, czy serwer SMB negocjuje podpisywanie pakietów SMB z klientami, którzy wykonują żądanie. Po włączeniu tej opcji serwer sieci Microsoft negocjuje podpisywanie pakietów SMB zgodnie z żądaniem klienta. Oznacza to, że jeśli podpisywanie pakietów zostało włączone na kliencie, jest negocjowane podpisywanie pakietów. Jeśli ta opcja jest wyłączona (ustawienie domyślne), klient SMB nigdy nie negocjuje podpisywania pakietów SMB.
-- **Podpisuj cyfrowo komunikację (zawsze)**: określa, czy podpisywanie pakietów jest wymagane przez składnik serwera SMB. W przypadku włączenia tej opcji serwer sieci Microsoft nie komunikuje się z klientem sieci Microsoft, chyba że klient zgadza się przeprowadzić podpisywanie pakietów SMB. Jeśli ta opcja jest wyłączona (ustawienie domyślne), podpisywanie pakietów jest negocjowane między klientem a serwerem.
+- **Podpisuj cyfrowo komunikację (za zgodą klienta)**: określa, czy serwer SMB negocjuje podpisywanie pakietów SMB z klientami, którzy wykonują żądanie. Po włączeniu tej opcji serwer sieci Microsoft negocjuje podpisywanie pakietów SMB zgodnie z żądaniem klienta. Oznacza to, że jeśli podpisywanie pakietów zostało włączone na kliencie, jest negocjowane podpisywanie pakietów. Jeśli ta opcja jest ustawiona na wartość **Nie skonfigurowano** lub jest wyłączona (ustawienie domyślne), klient SMB nigdy nie negocjuje podpisywania pakietów SMB.
+- **Podpisuj cyfrowo komunikację (zawsze)**: określa, czy podpisywanie pakietów jest wymagane przez składnik serwera SMB. W przypadku włączenia tej opcji serwer sieci Microsoft nie komunikuje się z klientem sieci Microsoft, chyba że klient zgadza się przeprowadzić podpisywanie pakietów SMB. Jeśli ta opcja jest ustawiona na wartość **Nie skonfigurowano** (ustawienie domyślne), podpisywanie pakietów jest negocjowane między klientem a serwerem.
 
 ## <a name="next-steps"></a>Następne kroki
 

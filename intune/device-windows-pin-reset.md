@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3ceaaa1cce79483c446342b12d9918bb6beac42
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 356997859942443ace0749ece8954bf609f9d91e
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703302"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetowanie kodu dostępu na urządzeniach z systemem Windows przy użyciu usługi Intune
 
@@ -25,10 +26,10 @@ Możesz zresetować kod dostępu dla urządzeń z systemem Windows. Funkcja rese
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
-- Aktualizacja systemu Windows 10 dla twórców i nowsze wersje (z przyłączeniem do usługi Azure AD)
+- Windows 10 Mobile z aktualizacją dla twórców i nowszymi (z przyłączeniem do usługi Azure AD).
 
 Następujące platformy **nie są** obsługiwane:
-- Windows Phone
+- Windows
 - iOS
 - macOS
 - Android

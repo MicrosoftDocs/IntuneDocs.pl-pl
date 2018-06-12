@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/5/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 792e2ae45e6331b91b1727af113604186c9bb72a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744605"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Tworzenie profilów sieci VPN w usłudze Intune
 
@@ -41,18 +42,19 @@ Możesz utworzyć profile sieci VPN, korzystając z następujących typów poł�
 
 |Typ połączenia|Android<br>Program Android for Work|iOS|macOS|Windows Phone 8,1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
-|Pulse Secure|Tak|Tak|Tak|Tak|Tak|Tak|
-|Cisco (IPSec)|Nie|Tak|Nie|Nie|Nie|Nie|
-|Citrix|Tak|Tak|Nie|Nie|Nie|Tak|
-|F5 Edge Client|Tak|Tak|Tak|Tak|Tak|Tak|
-|SonicWall Mobile Connect|Tak|Tak|Tak|Tak|Tak|Tak|
+|Automatyczny|Nie|Nie|Nie|Nie|Nie|Tak|
 |Check Point Capsule VPN|Tak|Tak|Tak|Tak|Tak|Tak|
 |Cisco AnyConnect|Tak|Tak|Tak|Nie|Nie|Nie|
-|Automatyczny|Nie|Nie|Nie|Nie|Nie|Tak|
+|SonicWall Mobile Connect|Tak|Tak|Tak|Tak|Tak|Tak|
+|F5 Edge Client|Tak|Tak|Tak|Tak|Tak|Tak|
+|Palo Alto Networks GlobalProtect|Nie|Tak|Nie|Nie|Nie|Tak|
+|Pulse Secure|Tak|Tak|Tak|Tak|Tak|Tak|
+|Cisco (IPSec)|Nie|Tak|Nie|Nie|Nie|Nie|
+|Citrix|Tak (tylko Android)|Tak|Nie|Nie|Nie|Tak|
 |IKEv2|Nie|Nie|Nie|Nie|Nie|Tak|
 |L2TP|Nie|Nie|Nie|Nie|Nie|Tak|
 |PPTP|Nie|Nie|Nie|Nie|Nie|Tak|
-|Niestandardowy|Nie|Tak|Tak|Nie|Nie|Nie|
+|Niestandardowa sieć VPN|Nie|Tak|Tak|Nie|Nie|Nie|
 
 > [!IMPORTANT]
 > Aby używanie profilów sieci VPN przypisanych do urządzenia było możliwe, należy zainstalować aplikację VPN odpowiednią do profilu. W artykule [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?](app-management.md) znajdziesz informacje, które pomogą Ci przypisać aplikację przy użyciu usługi Intune.  

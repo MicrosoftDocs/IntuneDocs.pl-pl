@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 05/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 559fd83d83c7312e0efe0d2c3f6bb7e5ec596a1b
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: 2277da45ad1404269571f36dec0c16443409b39f
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744707"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem Android w usłudze Intune
 
@@ -122,6 +123,17 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 - **Integralność środowiska uruchomieniowego aplikacji Portal firmy**: sprawdza, czy aplikacja Portal firmy ma zainstalowane domyślne środowisko uruchomieniowe, jest poprawnie podpisana, nie jest w trybie debugowania i została zainstalowana ze znanego źródła.
 - **Blokuj debugowanie USB na urządzeniu** (Android 4.2 i nowsze): wybierz, aby zablokować używanie funkcji debugowania USB na urządzeniu.
 - **Minimalny poziom poprawki bezpieczeństwa** (Android 6.0 lub nowszy): wybierz poziom najstarszej poprawki zabezpieczeń, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie `YYYY-MM-DD`.
+
+## <a name="locations"></a>Lokalizacje
+
+W swoich zasadach dokonuj wyboru spośród istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w temacie [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).
+
+1. Wybierz pozycję **Wybierz lokalizacje**.
+2. Na liście zaznacz swoją lokalizację, a następnie wybierz pozycję **Wybierz**.
+3. **Zapisz** zasady.
+4. Wybierz pozycję **Akcje w przypadku niezgodności**. Domyślna akcja natychmiast oznacza urządzenie jako niezgodne. Ta akcja jest stosowana, gdy wybrana jest co najmniej jedna lokalizacja, a urządzenie nie jest połączone z wybranymi lokalizacjami.
+
+  Tę akcję możesz zmienić, aby zaktualizować harmonogram oznaczania urządzenia jako niezgodnego (np. po jednym dniu). Możesz również skonfigurować drugą akcję, która wysyła wiadomość e-mail do użytkownika, gdy urządzenie nie jest już zgodne z Twoimi lokalizacjami.
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 

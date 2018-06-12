@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,26 +14,31 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a467983b0d6ce94c32080f4d5cd78683471fb58
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
+ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753896"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurowanie wirtualnej sieci prywatnej (sieci VPN) dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
 Możesz określić aplikacje zarządzane, które mogą używać wirtualnej sieci prywatnej (VPN) na urządzeniach z systemem iOS zarządzanych przez usługę Intune. Po utworzeniu sieci VPN dla aplikacji w usłudze Intune użytkownik końcowy automatycznie nawiązuje połączenie za pośrednictwem sieci VPN przy uzyskiwaniu dostępu do dokumentów firmowych.
 
-Sieć VPN dla aplikacji jest obecnie dostępna dla następujących dostawców: 
+Sieć VPN dla aplikacji jest obecnie dostępna dla następujących dostawców:
 
- - Checkpoint Remote Access VPN
+ - Check Point Remote Access VPN
  - Cisco AnyConnect
+ - Citrix
  - F5
  - Pulse Connect Secure
  - SonicWall
-
+ - Palo Alto Networks GlobalProtect
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Wymagania wstępne dotyczące sieci VPN dla aplikacji
+
+> [!IMPORTANT]
+> Dostawca połączeń VPN może mieć inne określone wymagania dotyczące sieci VPN dla danej aplikacji, na przykład dotyczące sprzętu lub licencjonowania. Należy zapoznać się z dokumentacją dostawcy połączeń VPN i spełnić określone w niej wymagania wstępne przed skonfigurowaniem połączenia VPN dla aplikacji w usłudze Intune.
 
 Aby potwierdzić swoją tożsamość, serwer sieci VPN przedstawia certyfikat, który bez monitu musi zostać zaakceptowany przez urządzenie. W celu zapewnienia automatycznego zatwierdzania certyfikatu utwórz profil zaufanego certyfikatu, który zawiera certyfikat główny serwera sieci VPN wystawiony przez urząd certyfikacji. 
 
@@ -162,14 +167,15 @@ Za pomocą skonfigurowanej i skojarzonej z aplikacją sieci VPN dla aplikacji sp
 
 ### <a name="before-you-attempt-to-connect"></a>Przed podjęciem próby nawiązania połączenia
 
- - Upewnij się, że używasz systemu iOS 7 lub nowszego.
+ - Upewnij się, że używasz systemu iOS 9 lub nowszego.
  - Upewnij się, że *wszystkie* wyżej wymienione zasady zostały wdrożone do tej samej grupy użytkowników. Nieprzestrzeganie tego kroku spowoduje, że środowisko sieci VPN dla aplikacji na pewno zostanie przerwane.  
  - Upewnij się, że masz zainstalowaną obsługiwaną aplikację sieci VPN innych firm. Obsługiwane są następujące aplikacje sieci VPN:
-    - Pulse Secure
-    - Punkt kontrolny
+    - Check Point Capsule Connect
     - Cisco AnyConnect
-    - F5
-    - SonicWall
+    - Citrix VPN
+    - F5 Access
+    - Pulse Secure
+    - SonicWall Mobile Connect
 
 ### <a name="connect-using-the-per-app-vpn"></a>Nawiązywanie połączenia przy użyciu sieci VPN dla aplikacji
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1c2eb08db58940ed575b3dea011395edd6711fc
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: bffb6832200379fca0221d8718afdebe06163980
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744792"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorowanie profilów urządzeń w usłudze Microsoft Intune
 
@@ -41,19 +42,27 @@ Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. 
 1. Wybierz istniejący profil. Na przykład wybierz profil systemu macOS.
 2. Wybierz kartę **Omówienie**.
 
-    Wykres graficzny pokazuje liczbę urządzeń przypisanych do określonego profilu urządzenia. Na przykład jeśli profil urządzenia konfiguracji dotyczy urządzeń z systemem macOS, wykres zawiera liczbę urządzeń z systemem iOS.
+    Górny wykres graficzny przedstawia liczbę urządzeń przypisanych do określonego profilu urządzenia. Na przykład jeśli profil urządzenia konfiguracji dotyczy urządzeń z systemem macOS, wykres zawiera liczbę urządzeń z systemem iOS.
 
     Zawiera on również liczbę urządzeń dla innych platform, które zostały przypisane do tego samego profilu urządzenia. Na przykład przedstawia liczbę urządzeń z systemem innym niż macOS.
 
     ![Wyświetlanie liczby urządzeń przypisanych do profilu urządzenia](./media/device-configuration-profile-graphical-chart.png)
 
-3. Wybierz okrąg na wykresie graficznym. Zostanie otwarte okno **Stan urządzenia**.
+    Dolny wykres graficzny przedstawia liczbę użytkowników przypisanych do określonego profilu urządzenia. Na przykład jeśli profil urządzenia konfiguracji dotyczy użytkowników systemu macOS, wykres zawiera liczbę użytkowników systemu iOS.
+
+3. Wybierz okrąg na górnym wykresie graficznym. Zostanie otwarte okno **Stan urządzenia**.
 
     Zawiera ono listę urządzeń przypisanych do tego profilu oraz informację o tym, czy profil został pomyślnie wdrożony. Należy również zauważyć, że są wyświetlane tylko urządzenia dla określonej platformy (na przykład macOS).
 
-    Zamknij szczegóły stanu urządzenia.
+    Zamknij okno **Stan urządzenia**.
 
-4. W obszarze właściwości profilu (**Profile** > wybierz określony profil) możesz również zmienić istniejące właściwości:
+4. Wybierz okrąg na dolnym wykresie graficznym. Zostanie otwarte okno **Stan użytkownika**. 
+
+    Zawiera ono listę użytkowników przypisanych do tego profilu oraz informację o tym, czy profil został pomyślnie wdrożony. Należy również zauważyć, że są wyświetlani tylko użytkownicy określonej platformy (na przykład macOS).
+
+    Zamknij okno **Stan użytkownika**.
+
+5. Na liście **Profile** wybierz określony profil. Możesz również zmienić istniejące właściwości:
   - **Właściwości**: zmień nazwę lub zaktualizuj dowolne istniejące ustawienia.
   - **Przypisania**: dołącz lub wyklucz urządzenia, których mają dotyczyć zasady. Wybierz pozycję **Wybrane grupy**, aby wybrać określone grupy.
   - **Stan urządzenia**: lista urządzeń przypisanych do tego profilu oraz informacja o tym, czy profil został pomyślnie wdrożony. Można wybrać określone urządzenie, aby uzyskać więcej szczegółów, na przykład listę zainstalowanych aplikacji.

@@ -1,11 +1,11 @@
 ---
 title: Używanie certyfikatów SCEP z usługą Microsoft Intune na platformie Azure | Microsoft Docs
-description: Aby korzystać z certyfikatów SCEP w usłudze Microsoft Intune, skonfiguruj lokalną domenę usługi AD, utwórz urząd certyfikacji, skonfiguruj serwer usługi NDES i zainstaluj łącznik certyfikatów usługi Intune. Następnie utwórz profil certyfikatu SCEP i przypisz go do grup.
+description: Aby korzystać z certyfikatów SCEP w usłudze Microsoft Intune, skonfiguruj lokalną domenę usługi AD, utwórz urząd certyfikacji, skonfiguruj serwer usługi NDES i zainstaluj łącznik certyfikatów usługi Intune. Następnie utwórz profil certyfikatu SCEP i przypisz go do grup. Zapoznaj się też z różnymi identyfikatorami zdarzeń i ich opisami oraz kodami diagnostycznymi dla usługi łącznika Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f67ccf1c2fb3b708916ef4ed4209bd3be07d9a5e
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: f5441bb15d6906257432afbfe51fffc6c11a6324
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745030"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -407,3 +408,54 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
     > W przypadku systemu iOS należy oczekiwać występowania wielu kopii certyfikatu w profilu zarządzania, jeśli wdrożono wiele profilów zasobu, które używają tego samego profilu certyfikatu.
     
 Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
+
+## <a name="intune-connector-events-and-diagnostic-codes"></a>Zdarzenia łącznika usługi Intune i kody diagnostyczne
+
+Począwszy od wersji 6.1803.x.x, usługa łącznika Intune rejestruje zdarzenia w **Podglądzie zdarzeń** (**Dzienniki aplikacji i usług** > **Łącznik usługi Microsoft Intune**). Użyj tych zdarzeń, aby w łatwiejszy sposób rozwiązywać potencjalne problemy związane z konfiguracją łącznika usługi Intune. Te zdarzenia rejestrują powodzenia i niepowodzenia operacji, a także zawierają kody diagnostyczne wraz z komunikatami, które ułatwiają administratorowi IT rozwiązywanie problemów.
+
+### <a name="event-ids-and-descriptions"></a>Identyfikatory i opisy zdarzeń
+
+> [!NOTE]
+> Szczegółowe informacje dotyczące powiązanych kodów diagnostycznych dla poszczególnych zdarzeń zawiera tabela **Kody diagnostyczne** (w tym artykule).
+
+| Identyfikator zdarzenia      | Nazwa zdarzenia    | Opis zdarzenia | Powiązane kody diagnostyczne |
+| ------------- | ------------- | -------------     | -------------            |
+| 10010 | StartedConnectorService  | Usługa łącznika została uruchomiona | 0x00000000, 0x0FFFFFFF |
+| 10020 | StoppedConnectorService  | Usługa łącznika została zatrzymana | 0x00000000, 0x0FFFFFFF |
+| 10100 | CertificateRenewal_Success  | Pomyślnie odnowiono certyfikat rejestracji łącznika | 0x00000000, 0x0FFFFFFF |
+| 10102 | CertificateRenewal_Failure  | Odnowienie certyfikatu rejestracji łącznika nie powiodło się. Ponownie zainstaluj łącznik. | 0x00000000, 0x00000405, 0x0FFFFFFF |
+| 10302 | RetrieveCertificate_Error  | Nie można pobrać certyfikatu rejestracji łącznika z rejestru. Przejrzyj szczegóły zdarzenia dla odcisku palca certyfikatu powiązanego z tym zdarzeniem. | 0x00000000, 0x00000404, 0x0FFFFFFF |
+| 10301 | RetrieveCertificate_Warning  | Sprawdź informacje diagnostyczne w szczegółach zdarzenia. | 0x00000000, 0x00000403, 0x0FFFFFFF |
+| 20100 | PkcsCertIssue_Success  | Pomyślnie wystawiono certyfikat PKCS. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji, nazwa szablonu certyfikatu i odcisk palca certyfikatu. | 0x00000000, 0x0FFFFFFF |
+| 20102 | PkcsCertIssue_Failure  | Nie można wystawić certyfikatu PKCS. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji, nazwa szablonu certyfikatu i odcisk palca certyfikatu. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
+| 20200 | RevokeCert_Success  | Pomyślnie odwołano certyfikat. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji i numer seryjny certyfikatu. | 0x00000000, 0x0FFFFFFF |
+| 20202 | RevokeCert_Failure | Nie można odwołać certyfikatu. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji i numer seryjny certyfikatu. Aby uzyskać dodatkowe informacje, zobacz Dzienniki SVC usługi NDES.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
+| 20300 | Download_Success | Pomyślnie pobrano żądanie podpisania certyfikatu, pobrania certyfikatu klienta lub odwołania certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia.  | 0x00000000, 0x0FFFFFFF |
+| 20302 | Download_Failure | Nie można pobrać żądania podpisania certyfikatu, pobrać certyfikatu klienta lub odwołać certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia. | 0x00000000, 0x0FFFFFFF |
+| 20400 | Upload_Success | Pomyślnie przekazano żądanie certyfikatu lub dane dotyczące odwołania. Przejrzyj szczegóły zdarzenia, aby uzyskać informacje o przekazaniu. | 0x00000000, 0x0FFFFFFF |
+| 20402 | Upload_Failure | Nie można przekazać żądania certyfikatu lub danych dotyczących odwołania. Przejrzyj stan przekazania w szczegółach zdarzenia, aby określić punkt awarii.| 0x00000000, 0x0FFFFFFF |
+| 20500 | CRPVerifyMetric_Success  | Zweryfikowanie wezwania klienta przez punkt rejestracji certyfikatu powiodło się | 0x00000000, 0x0FFFFFFF |
+| 20501 | CRPVerifyMetric_Warning  | Punkt rejestracji certyfikatu został ukończony, ale żądanie zostało odrzucone. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. | 0x00000000, 0x00000411, 0x0FFFFFFF |
+| 20502 | CRPVerifyMetric_Failure  | Zweryfikowanie wezwania klienta przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. Wyświetl szczegóły komunikatu zdarzeń dla identyfikatora urządzenia odpowiadającego wezwaniu. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |
+| 20600 | CRPNotifyMetric_Success  | Punkt rejestracji certyfikatu pomyślnie ukończył proces powiadamiania i wysłał certyfikat na urządzenie klienckie. | 0x00000000, 0x0FFFFFFF |
+| 20602 | CRPNotifyMetric_Failure  | Ukończenie procesu powiadamiania przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać informacji dotyczące żądania, zobacz szczegóły komunikatu o zdarzeniu. Sprawdź połączenie między serwerem usługi NDES i urzędem certyfikacji. | 0x00000000, 0x0FFFFFFF |
+
+### <a name="diagnostic-codes"></a>Kody diagnostyczne
+
+| Kod diagnostyczny | Nazwa diagnostyki | Komunikatu diagnostyczny |
+| -------------   | -------------   | -------------      |
+| 0x00000000 | Powodzenie  | Powodzenie |
+| 0x00000400 | PKCS_Issue_CA_Unavailable  | Urząd certyfikacji jest nieprawidłowy lub nieosiągalny. Sprawdź, czy urząd certyfikacji jest dostępny i Twój serwer może się z nim komunikować. |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](https://docs.microsoft.com/en-us/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000402 | RevokeCert_AccessDenied  | Określone konto nie ma uprawnień do odwołania certyfikatu z urzędu certyfikacji. Zobacz pole Nazwa urzędu certyfikacji w szczegółach komunikatu o zdarzeniu, aby określić urząd certyfikacji.  |
+| 0x00000403 | CertThumbprint_NotFound  | Nie można odnaleźć certyfikatu zgodnego z danymi wejściowymi. Zarejestruj łącznik certyfikatów i spróbuj ponownie. |
+| 0x00000404 | Certificate_NotFound  | Nie można odnaleźć certyfikatu zgodnego z podanymi danymi wejściowymi. Ponownie zarejestruj łącznik certyfikatów i spróbuj ponownie. |
+| 0x00000405 | Certificate_Expired  | Certyfikat wygasł. Ponownie zarejestruj łącznik certyfikatów, aby odnowić certyfikat, a następnie spróbuj ponownie. |
+| 0x00000408 | CRPSCEPCert_NotFound  | Nie można odnaleźć certyfikatu szyfrowania CRP. Sprawdź, czy prawidłowo skonfigurowano usługę NDES i łącznik usługi Intune. |
+| 0x00000409 | CRPSCEPSigningCert_NotFound  | Nie można pobrać certyfikatu podpisywania. Sprawdź, czy usługa łącznika Intune jest poprawnie skonfigurowana i uruchomiona. Sprawdź również, czy zdarzenia pobierania certyfikatów zakończyły się pomyślnie. |
+| 0x00000410 | CRPSCEPDeserialize_Failed  | Nie można zdeserializować żądania wezwania SCEP. Sprawdź, czy prawidłowo skonfigurowano usługę NDES i łącznik usługi Intune. |
+| 0x00000411 | CRPSCEPChallenge_Expired  | Wezwanie odrzucone z powodu wygasłego testu certyfikatu. Urządzenie klienckie może ponowić próbę po uzyskaniu nowego wezwania z serwera zarządzania. |
+| 0x0FFFFFFFF | Unknown_Error  | Nie można wykonać żądania, ponieważ wystąpił błąd po stronie serwera. Spróbuj ponownie. |
+
+## <a name="next-steps"></a>Następne kroki
+[Użyj certyfikatów PKCS](certficates-pfx-configure.md) lub [wystaw certyfikaty PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md).
