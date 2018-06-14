@@ -137,6 +137,7 @@
 ### [Ręczne synchronizowanie urządzenia](sync-your-device-manually-windows.md)
 
 ### [Rozwiązywanie typowych problemów z systemem Windows](troubleshoot-your-device-windows.md)
+### [Rozwiązywanie ograniczeń punktu dostępu](resolve-access-point-restrictions.md)
 #### [Nie mogę zarejestrować urządzenia z systemem Windows 10](troubleshoot-your-windows-10-device-windows.md)
 #### [Aktualizowanie urządzenia z systemem Windows](you-need-to-update-your-windows-device.md)
 #### [Wysyłanie dzienników z aplikacji Portal firmy](send-logs-to-your-it-admin-cp-windows.md)
@@ -158,4 +159,3 @@
 ### [Usuwanie urządzenia](remove-your-device-cpwebsite.md)
 ### [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
 ### [Resetowanie i wymazywanie urządzenia](reset-erase-your-device-cpwebsite.md)
-### [Ręczne synchronizowanie urządzenia](sync-your-device-manually-cpwebsite.md)
