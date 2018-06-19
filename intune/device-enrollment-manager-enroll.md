@@ -20,6 +20,7 @@ ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34216330"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 

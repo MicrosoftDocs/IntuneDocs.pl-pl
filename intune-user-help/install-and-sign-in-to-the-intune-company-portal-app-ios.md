@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31015153"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalowanie aplikacji Portal firmy i logowanie się do niej
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31017618"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Usuwanie urządzenia z zarządzania w przypadku odrzucenia warunków użytkowania
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32327708"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Wysyłanie błędów do działu pomocy technicznej Twojej firmy w przypadku problemów z urządzeniem z systemem iOS
 Czasami może wystąpić błąd podczas używania aplikacji Portal firmy na urządzeniu z systemem iOS. W takim przypadku możesz wysłać szczegóły dotyczące błędu w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.

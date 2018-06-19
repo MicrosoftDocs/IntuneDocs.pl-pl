@@ -17,6 +17,7 @@ ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32017961"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń — Intune
 

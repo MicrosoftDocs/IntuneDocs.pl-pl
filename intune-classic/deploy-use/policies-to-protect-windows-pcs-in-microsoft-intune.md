@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31015561"
 ---
 # <a name="use-policies-to-help-protect-windows-pcs-that-run-the-intune-client-software"></a>Stosowanie zasad w celu ochrony komputerów z systemem Windows, na których działa oprogramowanie klienckie usługi Intune
 

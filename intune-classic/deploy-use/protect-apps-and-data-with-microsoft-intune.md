@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31017550"
 ---
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Ochrona aplikacji i danych w usłudze Microsoft Intune
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30755236"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.

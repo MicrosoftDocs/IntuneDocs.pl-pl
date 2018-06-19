@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30755491"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Windows przy użyciu Portalu firmy?
 

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32046200"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Włączanie trybu zgubienia na urządzeniach z systemem iOS przy użyciu usługi Intune
 

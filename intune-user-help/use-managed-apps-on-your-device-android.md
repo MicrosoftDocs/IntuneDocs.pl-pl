@@ -22,6 +22,7 @@ ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31442479"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 

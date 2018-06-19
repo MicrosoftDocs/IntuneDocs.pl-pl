@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31016309"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Wysyłanie dzienników z aplikacji Ustawienia w systemie Windows 10 do działu pomocy technicznej Twojej firmy
 

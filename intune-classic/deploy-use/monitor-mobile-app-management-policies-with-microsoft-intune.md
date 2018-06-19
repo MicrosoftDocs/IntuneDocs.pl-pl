@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31021524"
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Monitorowanie zasad ochrony aplikacji przy użyciu usługi Microsoft Intune
 Możesz monitorować stan zgodności zasad ochrony aplikacji, które zostały zastosowane do użytkowników. Możesz uzyskać dostęp do informacji o użytkownikach, których dotyczą zasady ochrony aplikacji, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.

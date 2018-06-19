@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30754930"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
 

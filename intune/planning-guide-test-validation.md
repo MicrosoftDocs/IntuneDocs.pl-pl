@@ -1,16 +1,16 @@
 ---
-title: "Testowanie i sprawdzanie poprawności usługi Intune"
+title: Testowanie i sprawdzanie poprawności usługi Intune
 titlesuffix: Microsoft Intune
-description: "Jak testować i weryfikować oparte tylko na chmurze rozwiązanie usługi Intune w danym środowisku."
-keywords: 
+description: Jak testować i weryfikować oparte tylko na chmurze rozwiązanie usługi Intune w danym środowisku.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/02/2018
+ms.locfileid: "29720686"
 ---
 # <a name="intune-testing-and-validation"></a>Testowanie i sprawdzanie poprawności usługi Intune
 

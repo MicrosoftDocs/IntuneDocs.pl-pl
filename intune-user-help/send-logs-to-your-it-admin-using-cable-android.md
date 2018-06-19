@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31015612"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB
 

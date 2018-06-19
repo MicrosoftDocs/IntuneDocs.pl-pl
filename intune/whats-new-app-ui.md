@@ -20,6 +20,7 @@ ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32046285"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.

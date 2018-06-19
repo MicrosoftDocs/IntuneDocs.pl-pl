@@ -20,6 +20,7 @@ ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915815"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32046251"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 

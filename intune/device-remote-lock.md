@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31829768"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Zdalne blokowanie urządzeń przy użyciu usługi Intune
 

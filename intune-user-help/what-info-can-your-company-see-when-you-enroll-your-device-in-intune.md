@@ -21,6 +21,7 @@ ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34308878"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?
 

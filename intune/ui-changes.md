@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31032595"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.

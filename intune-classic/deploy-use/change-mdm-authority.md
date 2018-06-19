@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31028065"
 ---
 # <a name="change-the-mdm-authority"></a>Zmiana urzędu MDM
 Począwszy od programu Configuration Manager w wersji 1610, można zmienić urząd MDM bez konieczności kontaktowania się z pomocą techniczną firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. Ten temat zawiera instrukcje dotyczące zmiany istniejącego dzierżawcy usługi Microsoft Intune skonfigurowanego w usłudze Intune i zmiany ustawienia urzędu MDM z usługi **Microsoft Intune** (autonomicznej) na program **Configuration Manager** (rozwiązanie hybrydowe) bez konieczności wyrejestrowywania i ponownej rejestracji istniejących zarządzanych urządzeń.

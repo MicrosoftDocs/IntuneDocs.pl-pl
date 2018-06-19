@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31025709"
 ---
 # <a name="configure-app-notifications-settings-on-ios-devices-in-intune"></a>Konfigurowanie ustawień powiadomień aplikacji na urządzeniach z systemem iOS w usłudze Intune
 

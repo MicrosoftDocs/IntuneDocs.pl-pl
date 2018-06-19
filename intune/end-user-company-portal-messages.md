@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31025811"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 

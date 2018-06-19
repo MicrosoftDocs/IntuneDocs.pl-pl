@@ -20,6 +20,7 @@ ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31617349"
 ---
 # <a name="understand-the-users-experience-enrolling-an-ios-device"></a>Informacje na temat środowiska użytkownika służącego do rejestracji urządzenia z systemem iOS
 

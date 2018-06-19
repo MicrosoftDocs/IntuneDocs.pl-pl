@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31017992"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Jak zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune
 

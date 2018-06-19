@@ -20,6 +20,7 @@ ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32046081"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 

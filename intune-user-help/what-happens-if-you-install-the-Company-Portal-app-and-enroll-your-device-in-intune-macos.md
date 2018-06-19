@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31031706"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-macos-device-in-intune"></a>Co się dzieje po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systemem macOS w usłudze Intune?
 

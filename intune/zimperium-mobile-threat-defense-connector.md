@@ -1,16 +1,16 @@
 ---
-title: "Łącznik rozwiązania Zimperium MTD w usłudze Intune"
+title: Łącznik rozwiązania Zimperium MTD w usłudze Intune
 titleSuffix: Intune on Azure
-description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Zimperium Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
-keywords: 
+description: Dowiedz się więcej na temat integracji usługi Intune z usługą Zimperium Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 12/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29780071"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Zimperium Mobile Threat Defense z usługą Intune
 

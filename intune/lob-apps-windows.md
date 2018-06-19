@@ -20,6 +20,7 @@ ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34223909"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune
 

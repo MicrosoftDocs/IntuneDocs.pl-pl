@@ -16,6 +16,7 @@ ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/17/2018
+ms.locfileid: "29962450"
 ---
 # <a name="audit-logs-for-intune-activities"></a>Dzienniki inspekcji dla działań usługi Intune
 Dzienniki inspekcji stanowią rekord działań, które generują zmiany w usłudze Microsoft Intune. Możesz tworzyć, aktualizować (edytować), usuwać i przypisywać akcje lub zadania zdalne, a także generować zdarzenia inspekcji, które można przeglądać. Możesz przeglądać dzienniki inspekcji dla większości obciążeń usługi Intune. Inspekcja jest domyślnie włączona dla wszystkich klientów i nie można jej wyłączyć. Rejestrowanie zdarzeń inspekcji rozpoczęto w dniu wydania funkcji w grudniu 2017 r. Wcześniejsze zdarzenia są niedostępne.

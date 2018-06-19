@@ -1,16 +1,16 @@
 ---
-title: "Rozwiązanie Check Point SandBlast MTD w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Check Point SandBlast Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
-keywords: 
+title: Rozwiązanie Check Point SandBlast MTD w usłudze Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się więcej na temat integracji usługi Intune z usługą Check Point SandBlast Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 ms.reviewer: heenamac
 ms.suite: ems
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29776009"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Check Point SandBlast Mobile Threat Defense z usługą Intune
 

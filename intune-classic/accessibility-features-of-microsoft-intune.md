@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31013062"
 ---
 # <a name="accessibility-features-of-microsoft-intune"></a>Funkcje ułatwień dostępu usługi Microsoft Intune
 Oprócz funkcji i narzędzi ułatwień dostępu w systemie Microsoft Windows pomocne są również następujące funkcje dla osób niepełnosprawnych dostępne w samej usłudze Microsoft Intune: Używanie skrótów klawiaturowych

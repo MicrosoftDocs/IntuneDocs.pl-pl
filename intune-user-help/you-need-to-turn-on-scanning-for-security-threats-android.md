@@ -20,6 +20,7 @@ ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34073822"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Włączanie funkcji skanowania zagrożenia zabezpieczeń na Twoim urządzeniu 
 W przypadku nieświadomego zainstalowania niebezpiecznej aplikacji dane przechowywane w urządzeniu mogą być narażone na ryzyko. W celu zapewnienia ochrony danych na urządzeniu zalecamy przestrzeganie następujących zasad: 

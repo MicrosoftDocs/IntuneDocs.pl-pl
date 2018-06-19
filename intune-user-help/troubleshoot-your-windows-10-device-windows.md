@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31018179"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
 Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.

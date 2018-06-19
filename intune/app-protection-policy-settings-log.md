@@ -20,6 +20,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31832252"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 

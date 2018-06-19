@@ -1,16 +1,16 @@
 ---
-title: "Łącznik usługi Lookout MTD w usłudze Microsoft Intune"
-titlesuffix: 
-description: "Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense (MTD) w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy."
-keywords: 
+title: Łącznik usługi Lookout MTD w usłudze Microsoft Intune
+titlesuffix: ''
+description: Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense (MTD) w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/09/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 ms.reviewer: heenamac
 ms.suite: ems
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29775787"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Łącznik Lookout Mobile Threat Defense z usługą Intune
 

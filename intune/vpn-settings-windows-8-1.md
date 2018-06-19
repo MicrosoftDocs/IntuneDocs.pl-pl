@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31834174"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune
 

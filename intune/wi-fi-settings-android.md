@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31831065"
 ---
 # <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurowanie ustawień sieci Wi-Fi w usłudze Microsoft Intune dla urządzeń z systemem Android i programem Android for Work  
 

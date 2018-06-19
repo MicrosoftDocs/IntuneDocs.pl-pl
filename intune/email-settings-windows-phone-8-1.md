@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31832856"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Ustawienia profilu poczty e-mail w usłudze Microsoft Intune dla urządzeń z systemem Windows Phone 8.1
 

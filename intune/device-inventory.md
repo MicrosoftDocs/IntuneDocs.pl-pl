@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34051610"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 

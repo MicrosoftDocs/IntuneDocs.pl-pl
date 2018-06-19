@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31026985"
 ---
 # <a name="enroll-devices-for-management-in-intune"></a>Rejestrowanie urządzeń do zarządzania w usłudze Intune
 

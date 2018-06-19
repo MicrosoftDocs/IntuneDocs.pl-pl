@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31020133"
 ---
 # <a name="help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune"></a>Ochrona urządzeń z systemem iOS przez obejście blokady aktywacji w usłudze Microsoft Intune
 

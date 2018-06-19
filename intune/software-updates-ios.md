@@ -16,6 +16,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31836592"
 ---
 # <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Microsoft Intune
 

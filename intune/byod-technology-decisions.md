@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31832771"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Podejmowanie kluczowych decyzji technologicznych dotyczących włączania modelu BYOD za pomocą pakietu Microsoft Enterprise Mobility + Security
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34223615"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Przypisywanie usługi Office 365 do urządzeń z systemem macOS za pomocą usługi Microsoft Intune
 

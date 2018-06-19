@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31033304"
 ---
 # <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Zarządzanie warunkami i postanowieniami obowiązującymi w firmie na potrzeby dostępu użytkowników
 

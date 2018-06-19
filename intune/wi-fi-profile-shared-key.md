@@ -19,6 +19,7 @@ ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34190643"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]

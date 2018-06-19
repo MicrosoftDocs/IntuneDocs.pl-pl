@@ -17,6 +17,7 @@ ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34223926"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
