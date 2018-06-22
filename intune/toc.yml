@@ -1,4 +1,4 @@
-- name: Przegląd
+- name: Omówienie
   href: introduction-intune.md
   expanded: true
   items:
@@ -97,7 +97,7 @@
           href: planning-guide-onboarding.md
         - name: Testowanie i walidacja
           href: planning-guide-test-validation.md
-        - name: Dodatkowe zasoby
+        - name: Zasoby dodatkowe
           href: planning-guide-resources.md
     - name: Przewodnik migracji
       href: migration-guide.md
@@ -369,7 +369,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: Windows 8.1
+            - name: "Windows\_8.1"
               href: device-restrictions-windows-8-1.md
             - name: "Windows\_Phone\_8,1"
               href: device-restrictions-windows-phone-8-1.md
@@ -412,7 +412,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: Windows 8.1
+            - name: "Windows\_8.1"
               href: vpn-settings-windows-8-1.md
             - name: "Windows\_Phone\_8,1"
               href: vpn-settings-windows-phone-8-1.md
@@ -578,56 +578,40 @@
     - name: Zarządzanie aktualizacjami oprogramowania
       href: windows-update-for-business-configure.md
     - name: Zarządzanie komputerami przy użyciu oprogramowania agenta
-      href: /intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune
-      maintainContext: true
+      href: manage-windows-pcs-with-microsoft-intune.md
       items:
         - name: Porównanie zarządzania komputerami
-          href: /intune-classic/deploy-use/pc-management-comparison
-          maintainContext: true
+          href: pc-management-comparison.md
         - name: Instalowanie klienta komputera
-          href: /intune-classic/deploy-use/install-the-windows-pc-client-with-microsoft-intune
-          maintainContext: true
+          href: install-the-windows-pc-client-with-microsoft-intune.md
         - name: Typowe zadania związane z zarządzaniem komputerami
-          href: /intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client
-          maintainContext: true
+          href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
           items:
             - name: Zasady dotyczące komputerów
-              href: /intune-classic/deploy-use/use-policies-to-simplify-windows-pc-management
-              maintainContext: true
+              href: use-policies-to-simplify-windows-pc-management.md
             - name: Wyświetlanie spisu
-              href: /intune-classic/deploy-use/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune
-              maintainContext: true
+              href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
             - name: Wycofywanie komputerów
-              href: /intune-classic/deploy-use/retire-a-windows-pc-with-microsoft-intune
-              maintainContext: true
+              href: retire-a-windows-pc-with-microsoft-intune.md
             - name: Łączenie komputerów z użytkownikami
-              href: /intune-classic/deploy-use/manage-user-device-linking-for-windows-pcs-with-microsoft-intune
-              maintainContext: true
+              href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
             - name: Pomoc zdalna
-              href: /intune-classic/deploy-use/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune
-              maintainContext: true
+              href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
         - name: Zasady ochrony komputerów z systemem Windows
-          href: /intune-classic/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune
-          maintainContext: true
+          href: policies-to-protect-windows-pcs-in-microsoft-intune.md
           items:
             - name: Aktualizacje oprogramowania
-              href: /intune-classic/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune
-              maintainContext: true
+              href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
             - name: Zapora systemu Windows
-              href: /intune-classic/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune
-              maintainContext: true
+              href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
             - name: Ochrona punktu końcowego
-              href: /intune-classic/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune
-              maintainContext: true
+              href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
         - name: Dodawanie aplikacji dla komputerów klienckich usługi Intune
-          href: /intune-classic/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune
-          maintainContext: true
+          href: add-apps-for-windows-pcs-in-microsoft-intune.md
         - name: Zarządzanie umowami licencyjnymi
-          href: /intune-classic/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune
-          maintainContext: true
+          href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
         - name: Rozwiązywanie konfliktów zasad
-          href: /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts
-          maintainContext: true
+          href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
     - name: Zarządzanie platformą Windows Holographic
       href: windows-holographic-for-business.md
       items:
