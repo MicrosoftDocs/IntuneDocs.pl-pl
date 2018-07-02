@@ -1,1 +1,1 @@
-Aby uzyskać więcej informacji
+Więcej informacji

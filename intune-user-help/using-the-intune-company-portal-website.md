@@ -17,11 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: eca19c189a48e8173232cfe6fde9e33eb6fb1090
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 83dd6265d4d34ea46a7299e3a6bdf8a06baa30c1
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762233"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Korzystanie z witryny Portal firmy usługi Intune
 [Witryna sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) to strona sieci Web umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune.
@@ -37,8 +38,6 @@ Witryna sieci Web Portalu firmy umożliwia wykonywanie następujących zadań:
 -   [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
 
 -   [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
-
--   [Ręczne synchronizowanie urządzenia w celu pobrania aplikacji do szybszego zainstalowania](sync-your-device-manually-cpwebsite.md)
 
 -   Znajdowanie informacji kontaktowych działu pomocy technicznej Twojej firmy (jeśli zostały one skonfigurowane)
 

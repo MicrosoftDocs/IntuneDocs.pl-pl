@@ -17,11 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2df474e8b0a5af2ac294715135804ef0713a3015
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34547492"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Usuwanie urządzenia z systemem iOS z usługi Intune
 
@@ -59,6 +60,8 @@ Aby usunąć urządzenie z usługi Intune, wykonaj następujące czynności lub 
   -   Profile firmowej poczty e-mail zostaną usunięte z urządzenia.
 
   -   Urządzenia, które są skonfigurowane tylko do obsługi poczty e-mail, nie będą wyświetlane w aplikacji Portal firmy ani w witrynie sieci Web Portalu firmy.
+  
+  -   Aplikacje zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Usuwanie danych zebranych przez aplikację Portal firmy
 

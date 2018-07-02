@@ -14,11 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0d27648d4d5033f2c2e849b31d19403600692b4f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bb94c5a0941dc4f4d626c6316f79d5e4b1f4b551
+ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "35679448"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -124,9 +125,7 @@ Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania:
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji
 System Android wymaga podpisania wszystkich aplikacji za pomocą ważnego certyfikatu przed zainstalowaniem ich na urządzeniach z systemem Android.
 
-Opakowane aplikacje mogą zostać podpisane podczas procesu opakowywania lub *po* tym procesie przy użyciu istniejących narzędzi do podpisywania. Wszystkie informacje dotyczące podpisywania znajdujące się w aplikacji przed jej opakowaniem zostaną odrzucone.
- 
-Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyczących podpisywania, które zostały wcześniej użyte podczas procesu kompilacji. W niektórych organizacjach może to wymagać współpracy z właścicielami informacji o magazynie kluczy (tj. zespołem zajmującym się kompilacją aplikacji). 
+Opakowane aplikacje mogą zostać podpisane podczas procesu opakowywania lub *po* tym procesie przy użyciu istniejących narzędzi do podpisywania. Wszystkie informacje dotyczące podpisywania znajdujące się w aplikacji przed jej opakowaniem zostaną odrzucone. Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyczących podpisywania, które zostały wcześniej użyte podczas procesu kompilacji. W niektórych organizacjach może to wymagać współpracy z właścicielami informacji o magazynie kluczy (tj. zespołem zajmującym się kompilacją aplikacji). 
 
 Jeśli poprzedni certyfikat podpisywania nie może zostać użyty lub aplikacja nie została wcześniej wdrożona, możliwe jest utworzenie nowego certyfikatu podpisywania, zgodnie z instrukcjami znajdującymi się w [przewodniku dewelopera systemu Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
