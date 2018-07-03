@@ -1,4 +1,4 @@
-- name: Omówienie
+- name: Przegląd
   href: introduction-intune.md
   expanded: true
   items:
@@ -97,7 +97,7 @@
           href: planning-guide-onboarding.md
         - name: Testowanie i walidacja
           href: planning-guide-test-validation.md
-        - name: Zasoby dodatkowe
+        - name: Dodatkowe zasoby
           href: planning-guide-resources.md
     - name: Przewodnik migracji
       href: migration-guide.md
@@ -369,7 +369,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: device-restrictions-windows-8-1.md
             - name: "Windows\_Phone\_8,1"
               href: device-restrictions-windows-phone-8-1.md
@@ -412,7 +412,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: "Windows\_8.1"
+            - name: Windows 8.1
               href: vpn-settings-windows-8-1.md
             - name: "Windows\_Phone\_8,1"
               href: vpn-settings-windows-phone-8-1.md
@@ -557,6 +557,11 @@
               items:
                 - name: Integracja rozwiązania Zimperium i usługi Intune
                   href: zimperium-mtd-connector-integration.md
+            - name: Konfigurowanie usługi Pradeo
+              href: pradeo-mobile-threat-defense-connector.md
+              items:
+                - name: Integracja usług Pradeo i Intune
+                  href: pradeo-mtd-connector-integration.md
             - name: Konfigurowanie usługi Intune na potrzeby usługi MTD
               items:
                 - name: Dodawanie aplikacji MTD
