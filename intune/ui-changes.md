@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9c89098b9cb775e287cbe4c4ae4c56b9566b9fd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 861be39feab15c453fd102593b0501202faa3684
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31032595"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232940"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
-Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Dlatego przygotowaliśmy ten przewodnik dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
+Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
 ## <a name="quick-reference-guide"></a>Krótki przewodnik
 
 |Funkcja |Ścieżka w portalu klasycznym|Ścieżka w usłudze Intune w witrynie Azure Portal|
@@ -45,27 +45,37 @@ Ustawienia aplikacji Portal firmy|Administracja > Portal firmy|**Zarządzaj** > 
 Do zarządzania grupami w witrynie Azure Portal służy usługa [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
 
 ## <a name="where-did-enrollment-rules-go"></a>Dokąd zostały przeniesione reguły rejestracji?
-W portalu klasycznym można było określić reguły rejestracji urządzeń przenośnych oraz nowoczesnych urządzeń z systemem Windows i macOS w rozwiązaniu MDM:
+W portalu klasycznym można było określić reguły rejestracji urządzeń przenośnych oraz nowoczesnych urządzeń z systemem Windows i macOS w rozwiązaniu MDM.
 
 ![Ilustracja przedstawiająca klasyczne reguły rejestracji urządzeń przenośnych](./media/01-classic-rules.png)
 
-Te reguły dotyczyły wszystkich bez wyjątku użytkowników na Twoim koncie usługi Intune. W witrynie Azure Portal te reguły są teraz widoczne w dwóch odrębnych typach zasad: ograniczeniach typów urządzeń i ograniczeniach limitu urządzeń:
+Te reguły dotyczyły wszystkich bez wyjątku użytkowników na Twoim koncie usługi Intune. W witrynie Azure Portal te reguły są teraz widoczne w dwóch odrębnych typach zasad: ograniczeniach typów urządzeń i ograniczeniach limitu urządzeń.
 
 ![Ilustracja przedstawiająca ograniczenia rejestracji urządzeń przenośnych na platformie Azure](./media/02-azure-enroll-restrictions.png)
 
-Domyślne ograniczenie limitu urządzeń odpowiada limitowi rejestracji urządzeń w portalu klasycznym:
+Domyślne ograniczenie limitu urządzeń odpowiada limitowi rejestracji urządzeń w portalu klasycznym.
 
 ![Ilustracja przedstawiająca ograniczenia limitu urządzeń na platformie Azure](./media/03-azure-device-limit.png)
 
-Domyślne ograniczenie typów urządzeń odpowiada ograniczeniom platformy w portalu klasycznym:
+Domyślne ograniczenie typów urządzeń odpowiada ograniczeniom platformy w portalu klasycznym.
 
 ![Ilustracja przedstawiająca ograniczenia typów urządzeń na platformie Azure](./media/04-azure-platform-restrictions.png)
 
-Funkcją zezwalania lub blokowania urządzeń osobistych zarządza się teraz w ramach konfiguracji platformy ograniczenia typów urządzeń:
+Funkcją zezwalania lub blokowania urządzeń osobistych zarządza się teraz w ramach konfiguracji platformy ograniczenia typów urządzeń.
 
 ![Ilustracja przedstawiająca ustawienia blokowania urządzeń osobistych na platformie Azure](./media/05-azure-personal-block.png)
 
 Nowe możliwości ograniczania zostaną dodane tylko do witryny Azure Portal.
+
+## <a name="where-did-my-conditional-access-policies-go"></a>Gdzie się podziały moje zasady dostępu warunkowego?
+Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal zasady dostępu warunkowego Twojej dzierżawy są w dalszym ciągu wymuszane. Jednak nie można ich wyświetlić ani zmodyfikować z poziomu usługi Intune w witrynie Azure Portal.
+
+Jeśli chcesz wyświetlić lub zmienić zasady dostępu warunkowego w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby uzyskać więcej informacji na temat migrowania zasad dostępu warunkowego, zobacz [Migrowanie zasad klasycznych w witrynie Azure Portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+
+## <a name="where-did-my-compliance-policies-go"></a>Gdzie się podziały moje zasady zgodności?
+Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal zasady zgodności Twojej dzierżawy są w dalszym ciągu wymuszane. Jednak nie można ich wyświetlić ani zmodyfikować z poziomu usługi Intune w witrynie Azure Portal.
+
+Jeśli chcesz wyświetlić lub zmienić zasady zgodności w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Dokąd został przeniesiony program DEP firmy Apple?
 W portalu klasycznym można było skonfigurować usługę Intune tak, aby integrowała się z programem Device Enrollment Program firmy Apple, oraz ręcznie zażądać synchronizacji z usługą firmy Apple:

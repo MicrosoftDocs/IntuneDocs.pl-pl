@@ -180,7 +180,13 @@
           items:
             - name: Konfiguracja rejestrowania urządzeń z systemem Android
               href: android-enroll.md
-            - name: Zarządzanie urządzeniami z systemem Android for Work
+            - name: Łączenie usługi Intune z firmą z systemem Android
+              href: connect-intune-android-enterprise.md
+            - name: Konfigurowanie rejestracji profilu służbowego systemu Android
+              href: android-work-profile-enroll.md
+            - name: Konfigurowanie rejestracji kiosku systemu Android
+              href: android-kiosk-enroll.md
+            - name: Zarządzanie urządzeniami profilu służbowego systemu Android
               href: android-enterprise-overview.md
             - name: Program Samsung Knox Mobile Enrollment
               href: android-samsung-knox-mobile-enroll.md
@@ -255,7 +261,7 @@
                   items:
                     - name: Ręczne dodawanie aplikacji Portal firmy
                       href: store-apps-company-portal-app.md
-                - name: Aplikacje programu Android for Work
+                - name: Aplikacje profilu służbowego systemu Android
                   href: apps-add-android-for-work.md
                 - name: Aplikacje pakietu Office 365 dla systemu Windows 10
                   href: apps-add-office365.md
@@ -326,6 +332,8 @@
                       href: app-protection-policy-settings-android.md
                     - name: Ustawienia systemu iOS
                       href: app-protection-policy-settings-ios.md
+                    - name: Uzyskiwanie dostępu do akcji
+                      href: app-protection-policies-access-actions.md
                     - name: Wyjątki transferu danych
                       href: app-protection-policies-exception.md
                 - name: Weryfikowanie zasad ochrony aplikacji
@@ -379,7 +387,7 @@
               href: device-restrictions-windows-10-teams.md
             - name: Windows Holographic for Business
               href: device-restrictions-windows-holographic.md
-            - name: Program Android for Work
+            - name: Profil służbowy systemu Android
               href: device-restrictions-android-for-work.md
         - name: Konfigurowanie ochrony punktu końcowego
           href: endpoint-protection-configure.md
@@ -390,6 +398,10 @@
               href: endpoint-protection-windows-10.md
         - name: Konfigurowanie ustawień kiosku
           href: kiosk-settings.md
+        - name: Konfigurowanie ustawień kiosku systemu Android
+          href: android-kiosk-settings.md
+        - name: Ustawienia kiosku w firmie z systemem Android
+          href: android-enterprise-settings.md
         - name: Konfigurowanie ustawień poczty e-mail
           href: email-settings-configure.md
           items:
@@ -465,7 +477,7 @@
       items:
         - name: Tworzenie zasad dla systemu Android
           href: compliance-policy-create-android.md
-        - name: Tworzenie zasad dla programu Android for Work
+        - name: Tworzenie zasad profilu służbowego w systemie Android
           href: compliance-policy-create-android-for-work.md
         - name: Tworzenie zasad w celu włączenia funkcji Google Play Protect
           href: compliance-policy-create-google-play-protect.md
@@ -691,7 +703,7 @@
               href: custom-settings-windows-10.md
             - name: Windows Holographic for Business
               href: custom-settings-windows-holographic.md
-            - name: Program Android for Work
+            - name: Profil służbowy systemu Android
               href: custom-settings-android-for-work.md
 - name: Wskazówki dla deweloperów
   items:
