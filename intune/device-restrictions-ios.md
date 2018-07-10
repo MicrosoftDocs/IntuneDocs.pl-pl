@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b810a9dd783f59e778f3ffcb40da8fa52acf70ff
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2987ca7ce3a9b99249fc62fc7de5c9cca22b0b26
+ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34803826"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -97,7 +98,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
     -   **Wymagany typ hasła** — określa wymagany typ hasła, na przykład alfanumeryczne lub wyłącznie numeryczne.
     -   **Liczba znaków innych niż alfanumeryczne w haśle** — określa liczbę znaków symboli (takich jak **#** lub **@**), którą musi zawierać hasło.
     -   **Minimalna długość hasła** — określa minimalną liczbę znaków w haśle.
-    -   **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa dozwoloną liczbę nieudanych logowań przed wyczyszczeniem urządzenia.
+    -   **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa dozwoloną liczbę zakończonych niepowodzeniem unikatowych prób wprowadzenia hasła przed wyczyszczeniem urządzenia.
     -   **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła**<sup>1</sup> — określa, jak długo urządzenie może pozostawać bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło.
     -   **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**<sup>1</sup> — określa liczbę minut przed wyłączeniem ekranu urządzenia.
     -   **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.

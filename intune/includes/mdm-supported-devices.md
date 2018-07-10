@@ -10,7 +10,7 @@
   Pełna lista zweryfikowanych urządzeń z systemem Samsung Knox Standard jest dostępna w [ustawieniach zasad systemów Android i Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
 
 
-- Program Android for Work [(wymagania)](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window")
+- [Wymagania](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) programu Android for Work.
 
 ### <a name="microsoft"></a>Microsoft
 

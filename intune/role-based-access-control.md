@@ -2,10 +2,10 @@
 title: Kontrola RBAC w usłudze Microsoft Intune
 description: Dowiedz się, jak kontrola dostępu na podstawie ról (RBAC) umożliwia kontrolowanie, kto może wykonywać akcje i wprowadzać zmiany w usłudze Microsoft Intune.
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8cce5da762c119ec04553d80d717fb586c962566
-ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
+ms.openlocfilehash: 287e644e50b1f6b41f404cfd2102a8efc0fbaad9
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34474568"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune
 
@@ -26,7 +27,7 @@ Kontrola RBAC ułatwia kontrolowanie, kto może wykonywać różne zadania usłu
 
 - **Definicja roli**: nazwa roli, zarządzane przez nią zasoby oraz uprawnienia nadane dla każdego zasobu.
 - **Elementy członkowskie**: grupy użytkowników, którym nadano uprawnienia.
-- **Zakres**: grupy użytkowników lub urządzeń, których elementy członkowskie mogą być celem wdrożenia aplikacji lub zasad albo wykonywać zadania zdalne.
+- **Zakres**: grupy użytkowników lub urządzeń, którymi mogą zarządzać elementy członkowskie.
 - **Przypisanie**: po skonfigurowaniu definicji, elementów członkowskich i zakresu jest przypisywana rola.
 
 ![Przykład kontroli RBAC przy użyciu usługi Intune](./media/intune-rbac-1.PNG)
@@ -59,7 +60,8 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 - **Pracownik punktu pomocy**: wykonuje zadania zdalne na użytkownikach i urządzeniach i może przypisywać aplikacje lub zasady do użytkowników lub urządzeń.
 - **Menedżer zasad i profilów**: zarządza zasadami zgodności, profilami konfiguracji i rejestracją Apple oraz identyfikatorami urządzeń firmowych.
 - **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji. Nie może wprowadzać zmian w usłudze Intune.
-- **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi i może odczytywać informacje o urządzeniu.
+- **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi, może odczytywać informacje o urządzeniu i może wyświetlać profile konfiguracji urządzeń.
+- **Administrator ról usługi Intune**: zarządza niestandardowymi rolami usługi Intune i dodaje przypisania dla wbudowanych ról usługi Intune. Jest to jedyna rola usługi Intune, która może przypisywać uprawnienia administratorom.
 - **Administrator szkoły**: zarządza urządzeniami z systemem Windows 10 w usłudze [Intune for Education](introduction-intune-education.md) i może wykonywać następujące akcje: 
 
 |Uprawnienie|Operacja|
@@ -78,18 +80,20 @@ Poniższe role są wbudowane w usługę Intune i można je przypisać do grup be
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Role usługi Intune**, a następnie wybierz pozycję **Wszystkie role**.
-4. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
+1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
 
-5. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Przypisania** > **Przypisz**.
+2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**.
 
     > [!NOTE]
     > Nie można usunąć ani edytować ról wbudowanych
 
-6. W okienku **Przypisania ról** uzupełnij pole **Nazwa przypisania** i opcjonalne pole **Opis przypisania**, po czym wybierz następujące właściwości:
+3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
+
+4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
     - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
-    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek. Możesz też ustawić zakres na **Wszyscy użytkownicy**, **Wszystkie urządzenia** lub **Wszyscy użytkownicy i wszystkie urządzenia**.
+    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
 <br></br>
-7. Gdy wszystko będzie gotowe, kliknij przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
+5. Gdy wszystko będzie gotowe, kliknij przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
 ### <a name="intune-rbac-table"></a>Tabela kontroli RBAC przy użyciu usługi Intune
 
@@ -126,13 +130,13 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę niestandardową, którą chcesz przypisać.
 
-2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Przypisania**. W tym okienku możesz również edytować i usuwać istniejące role.
+2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**. W tym okienku możesz również edytować i usuwać istniejące role.
 
 3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
 
 4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
     - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
-    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek. Możesz też ustawić zakres na **Wszyscy użytkownicy**, **Wszystkie urządzenia** lub **Wszyscy użytkownicy i wszystkie urządzenia**.
+    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
 <br></br>
 5. Gdy wszystko będzie gotowe, kliknij przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
@@ -143,5 +147,3 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 ## <a name="see-also"></a>Zobacz też
 
 [Przypisz role przy użyciu usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
-
-

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/18/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f8f81b4ff3bf5d17832d2f943fffb905eba52b6e
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: 2effa1d63be57c938a4e5763090bce8f20f48192
+ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042807"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -84,7 +85,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
    > [!NOTE]
    > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#Submit-your-app-to-the-App-Store).
 
-2. **Opcja 2**: połącz z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
+   **Opcja 2**: połącz z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
 
     ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: połączone struktury i biblioteki](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -99,7 +100,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
      ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: kopiowanie zasobów pakietów](./media/intune-app-sdk-ios-copy-bundle-resources.png)
 
-     Dodaj następujące struktury systemu iOS do projektu:  
+2. Dodaj następujące struktury systemu iOS do projektu:  
     * MessageUI.framework  
     * Security.framework  
     * MobileCoreServices.framework  
@@ -152,6 +153,9 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
    |- o |  (Opcjonalnie:) `<Path to the output plist>` |
 
 Jeśli parametr „-o” nie zostanie określony, plik wejściowy zostanie zmodyfikowany w miejscu. Narzędzie jest idempotentne i wymaga ponownego uruchomienia po każdym wprowadzeniu zmian w pliku Info.plist lub uprawnieniach aplikacji. Należy również pobrać i uruchomić najnowszą wersję narzędzia podczas aktualizowania zestawu SDK usługi Intune w przypadku, gdy wymagania dotyczące konfiguracji pliku Info.plist zostały zmienione w najnowszej wersji.
+
+> [!NOTE]
+> Jeśli Twoja aplikacja nie używa już identyfikatora FaceID, upewnij się, że klucz `NSFaceIDUsageDescription` info.plist jest skonfigurowany z domyślnym komunikatem. Jest to wymagane, aby system iOS mógł poinformować użytkownika, jak aplikacja zamierza użyć identyfikatora FaceID. Ustawienie zasad ochrony aplikacji usługi Intune umożliwia używanie identyfikatora FaceID jako metody dostępu do aplikacji, gdy jest to skonfigurowane przez administratora IT.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurowanie biblioteki uwierzytelniania usługi Azure Active Directory (ADAL)
 

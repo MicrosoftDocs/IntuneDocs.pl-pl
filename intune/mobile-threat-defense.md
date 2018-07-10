@@ -15,12 +15,12 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d840bf62682621e4ec3848538a96066c0fd228fe
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 8c8fa146f01caae08f35ae824563ceb328c9d7f4
+ms.sourcegitcommit: 7daa778b3a5adb41acfe23495cb63754afda1c58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046268"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123405"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co to jest integracja usługi Mobile Threat Defense z usługą Intune?
 
@@ -41,10 +41,12 @@ Jeśli na przykład połączona aplikacja Mobile Threat Defense zgłasza dostawc
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Jakie dane zbiera usługa Intune na potrzeby ochrony przed zagrożeniami mobilnymi?
 
-Usługa Intune zbiera informacje dotyczące spisu aplikacji zarówno z urządzeń osobistych, jak i firmowych i udostępnia je dostawcom usługi ochrony przed zagrożeniami mobilnymi (MTD), na przykład aplikacji Lookout for Work. Możesz zbierać informacje o spisie aplikacji z urządzeń z systemem iOS 11 lub nowszym.
+Usługa Intune, jeśli jest włączona, zbiera informacje dotyczące spisu aplikacji zarówno z urządzeń osobistych, jak i firmowych i udostępnia je dostawcom usługi ochrony przed zagrożeniami mobilnymi (MTD), na przykład aplikacji Lookout for Work. Możesz zbierać informacje o spisie aplikacji od użytkowników urządzeń z systemem iOS.
+
+Konieczne jest wyrażenie zgody na uczestnictwo w tej usłudze; żadne informacje o spisie aplikacji nie są domyślnie udostępniane. Administrator usługi Intune musi włączyć synchronizację aplikacji dla urządzeń z systemem iOS w ustawieniach usługi zanim zostaną udostępnione jakiekolwiek informacje dotyczące spisu aplikacji.
 
 **Spis aplikacji**  
-Spisy pochodzące zarówno z urządzeń osobistych, jak i urządzeń firmowych z systemem iOS 11 lub nowszym są wysyłane do dostawcy usługi MTD. Spis aplikacji zawiera następujące dane:
+W przypadku włączenia synchronizacji aplikacji dla urządzeń z systemem iOS spisy zarówno z urządzeń z systemem iOS będących własnością firmy, jak i poszczególnych osób są wysyłane do dostawcy usługi MTD. Spis aplikacji zawiera następujące dane:
 
  - Identyfikator aplikacji
  - Wersja aplikacji
@@ -52,8 +54,8 @@ Spisy pochodzące zarówno z urządzeń osobistych, jak i urządzeń firmowych z
  - Nazwa aplikacji
  - Rozmiar pakietu aplikacji
  - Dynamiczny rozmiar aplikacji
- - Wskazanie, czy aplikacja została zweryfikowana
- - Wskazanie, czy aplikacja jest zarządzana
+ - Czy aplikacja została zweryfikowana
+ - Czy aplikacja jest zarządzana
 
 ## <a name="sample-scenarios"></a>Przykładowe scenariusze
 
@@ -76,3 +78,4 @@ Dowiedz się, jak chronić dostęp do zasobów firmy na podstawie ryzyka dotycz�
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
+- [Pradeo](pradeo-mobile-threat-defense-connector.md)

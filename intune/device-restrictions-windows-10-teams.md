@@ -1,5 +1,5 @@
 ---
-title: Ograniczenia urządzeń w usłudze Intune dotyczące systemu Windows 10 Team
+title: Ograniczenia urządzeń w usłudze Microsoft Intune dotyczące systemu Windows 10 Team
 titlesuffix: ''
 description: Dowiedz się więcej na temat ograniczeń dotyczących urządzeń z systemem Windows 10 Team.
 keywords: ''
@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 124c44a18daa2c8967b40b5d535d2b7002bce1dd
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: c251a45f8c319bdebbc6904c10fbf423bb1c1128
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34562164"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows 10 Team w usłudze Microsoft Intune
 

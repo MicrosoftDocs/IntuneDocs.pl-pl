@@ -3,10 +3,10 @@ title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z sys
 titlesuffix: Microsoft Intune
 description: Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji dla systemu iOS po jej uruchomieniu.
 keywords: ''
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 06/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,24 +15,25 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0b71b52ffa58f847fc0efcd2924fd04a7a16a099
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e3e81b52f10bb94d90d5f66ca5aee13daaf4941e
+ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232237"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie wartości ustawień, które są używane, gdy użytkownicy uruchamiają aplikacje dla systemu iOS. Tych zasad nie można przypisywać bezpośrednio do użytkowników i urządzeń. W zamian należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie niestandardowych ustawień konfiguracji dla aplikacji dla systemu iOS. Dzięki tym ustawieniom konfiguracji aplikację można dostosować na podstawie wskazówek dostawcy. Te ustawienia konfiguracji (klucze i wartości) należy uzyskać od dostawcy aplikacji. Aby skonfigurować aplikację, określ ustawienia jako klucze i wartości lub jako plik XML zawierający klucze i wartości. Ponadto zasad konfiguracji nie można przypisywać bezpośrednio do użytkowników i urządzeń. Zamiast tego należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
-Zasady konfiguracji aplikacji możesz przypisać do grupy użytkowników i urządzeń za pomocą kombinacji dołączania i wykluczania przypisań. Po dodaniu zasad konfiguracji aplikacji możesz ustawić przypisania zasad konfiguracji aplikacji. Po ustawieniu przypisań dla zasad możesz dołączać i wykluczać grupy użytkowników, dla których zasady będą stosowane. Po wybraniu dołączenia co najmniej jednej grupy możesz wybrać określone grupy do dołączenia lub wybrać wbudowane grupy. Wbudowane grupy obejmują **Wszystkich użytkowników**, **Wszystkie urządzenia** i **Wszystkich użytkowników i wszystkie urządzenia**. 
+Po dodaniu zasad konfiguracji aplikacji możesz ustawić przypisania zasad konfiguracji aplikacji. Po ustawieniu przypisań dla zasad możesz dołączać i wykluczać grupy użytkowników, dla których zasady będą stosowane. Po wybraniu dołączenia co najmniej jednej grupy możesz wybrać określone grupy do dołączenia lub wybrać wbudowane grupy. Wbudowane grupy obejmują **Wszystkich użytkowników**, **Wszystkie urządzenia** i **Wszystkich użytkowników i wszystkie urządzenia**. 
 
 >[!NOTE]
 >Usługa Intune udostępnia w konsoli wstępnie utworzone grupy **Wszyscy użytkownicy** i **Wszystkie urządzenia** z wbudowanymi optymalizacjami dla wygody użytkownika. Zdecydowanie zaleca się używanie tych grup dla wszystkich użytkowników i wszystkich urządzeń zamiast wszelkich grup „Wszyscy użytkownicy” lub „Wszystkie urządzenia”, które mogły zostać utworzone samodzielnie.
 
-Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wybrać określone grupy, które mają zostać wykluczone.
+Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wybrać określone grupy, które mają zostać wykluczone. Aby uzyskać więcej informacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
 > Ten typ zasad jest obecnie dostępny tylko na urządzeniach z systemem iOS 8.0 lub nowszym. Obsługiwane są następujące typy instalacji aplikacji:
@@ -49,18 +50,16 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 3. Wybierz obciążenie **Aplikacje mobilne**.
 4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
-    - **Nazwa**<br>
-      Nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
-    - **Opis**<br>
-      Opis profilu, który będzie wyświetlany w witrynie Azure Portal.
-    - **Typ rejestracji urządzenia**<br>
-      Wybierz pozycję **Urządzenia zarządzane**.
+    - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
+    - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
+    - **Typ rejestracji urządzenia** — wybierz pozycję **Urządzenia zarządzane**.
 6. Dla elementu **Platforma** wybierz pozycję **iOS**.
 7.  Wybierz pozycję **Skojarzona aplikacja**. Następnie w okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację, a następnie wybierz opcję **OK**.
 8.  W okienku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
-9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z poniższych opcji:
-    - **[Korzystanie z projektanta konfiguracji](#use-configuration-designer)**
-    - **[Wprowadzanie danych XML](#enter-xml-data)**
+9. Wybierz pozycję **Format ustawień konfiguracji**. Aby dodać informacje XML, wybierz jeden z następujących tematów:
+    - **Korzystanie z projektanta konfiguracji**
+    - **Wprowadzanie danych XML**<br></br>
+    Aby uzyskać szczegółowe informacje o używaniu projektanta konfiguracji, zobacz [Korzystanie z projektanta konfiguracji](#use-configuration-designer). Aby uzyskać szczegółowe informacji o wprowadzaniu danych XML, zobacz [Wprowadzanie danych XML](#enter-xml-data). 
 10. Po dodaniu informacji XML wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlone okienko omówienia zasad konfiguracji.
 11. Wybierz pozycję **Przypisania**, aby wyświetlić opcje dołączania i wykluczania. 
 
@@ -80,17 +79,14 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 
 ## <a name="use-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
-Projektanta konfiguracji można używać w przypadku aplikacji na urządzeniach zarejestrowanych lub niezarejestrowanych w usłudze Intune. Projektant umożliwia skonfigurowanie określonych kluczy i wartości konfiguracji. Dla każdej wartości należy również wskazać typ danych. Ustawienia są dostarczane do aplikacji automatycznie po zainstalowaniu aplikacji.
+Usługa Microsoft Intune dostarcza ustawienia konfiguracji, które są unikatowe dla aplikacji. Projektanta konfiguracji można używać w przypadku aplikacji na urządzeniach zarejestrowanych lub niezarejestrowanych w usłudze Microsoft Intune. Projektant umożliwia skonfigurowanie określonych kluczy i wartości konfiguracji, które pomagają w utworzeniu bazowego pliku XML. Dla każdej wartości należy również wskazać typ danych. Te ustawienia są dostarczane do aplikacji automatycznie po zainstalowaniu aplikacji.
 
 ### <a name="add-a-setting"></a>Dodawanie ustawienia
 
 1. Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:
-   - **Klucz konfiguracji**<br>
-     Klucz, który jednoznacznie identyfikuje konfigurację określonego ustawienia.
-   - **Typ wartości**<br>
-     Typ danych wartości konfiguracji. Typy obejmują liczby całkowite, liczby rzeczywiste, ciągi i wartości logiczne.
-   - **Wartość konfiguracji**<br>
-     Wartość konfiguracji.
+   - **Klucz konfiguracji** — klucz, który jednoznacznie identyfikuje konfigurację określonego ustawienia.
+   - **Typ wartości** — typ danych wartości konfiguracji. Typy obejmują liczby całkowite, liczby rzeczywiste, ciągi i wartości logiczne.
+   - **Wartość konfiguracji** — wartość dla danej konfiguracji.
 2. Wybierz przycisk **OK**, aby zastosować ustawienia konfiguracji.
 
 ### <a name="delete-a-setting"></a>Usuwanie ustawienia
@@ -165,4 +161,4 @@ Ponadto usługa Intune obsługuje następujące typy tokenów na liście właśc
 
 ## <a name="next-steps"></a>Następne kroki
 
-Kontynuuj [przypisywanie](apps-deploy.md) i [monitorowanie](apps-monitor.md) aplikacji tak jak dotychczas.
+Kontynuuj [przypisywanie](apps-deploy.md) i [monitorowanie](apps-monitor.md) aplikacji.

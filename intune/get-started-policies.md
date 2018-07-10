@@ -1,12 +1,11 @@
 ---
-title: Wprowadzenie do zasad w usłudze Microsoft Intune
-titlesuffix: ''
-description: Utwórz zasady, aby chronić dane firmowe i zarządzać urządzeniami używanymi przez użytkowników końcowych w celu uzyskiwania dostępu do zasobów firmy.
+title: Wprowadzenie do zasad w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Utwórz zasady, aby chronić dane firmowe i zarządzać urządzeniami używanymi przez użytkowników końcowych w celu uzyskiwania dostępu do zasobów firmy. Następnie przypisz te zasady do grup.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +14,27 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b8bffd0435988cc59c5c0e4d754b861729d466ae
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: d7fa1b596a1800971919cfc0ab3e94d2d16ec328
+ms.sourcegitcommit: afda8a0fc0f615e976b18ddddf81d56d7ae3566e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271528"
 ---
 # <a name="get-started-with-creating-policies"></a>Wprowadzenie do tworzenia zasad
 
-Jednym z głównych celów rozpoczynania pracy z usługą Intune jest rejestrowanie urządzeń w celu zapewnienia, że są one zgodne z zasadami firmy. Zasady zgodności nie tylko ułatwiają zarządzanie specjalnymi typami urządzeń, takimi jak kioski należące do firmy, ale także urządzeniami osobistymi (BYOD), takimi jak tablety, oraz urządzeniami nienależącymi do żadnego użytkownika.
+Zasady usługi Intune to bardzo dobry sposób na rejestrowanie urządzeń i upewnienie się, że są one zgodne z zasadami firmowymi. Zasady zgodności ułatwiają zarządzanie specjalnymi typami urządzeń, takimi jak kioski należące do firmy, oraz urządzeniami osobistymi (BYOD), tabletami i urządzeniami nienależącymi do żadnego użytkownika.
 
 ![Pulpit nawigacyjny zgodności z małą ilością danych](/intune/media/generic-compliance-dashboard.png)
 
-Zarządzaj urządzeniami przenośnymi w następujących obszarach za pomocą zasad zgodności:
+Urządzeniami przenośnymi można zarządzać za pomocą zasad zgodności, które obejmują między innymi:
 
-* Określanie liczby urządzeń, które może zarejestrować każdy użytkownik
-* Zarządzanie ustawieniami urządzeń (na przykład szyfrowaniem na poziomie urządzenia, długością hasła czy użyciem aparatu fotograficznego)
-* Dostarczanie aplikacji, profilów poczty e-mail, profilów sieci VPN itp.
+* Regulowanie liczby urządzeń, które użytkownik może zarejestrować w usłudze Intune
+* Zarządzanie ustawieniami urządzeń, takimi jak szyfrowanie na poziomie urządzenia, długość hasła i użycie aparatu
+* Dostarczanie aplikacji, profilów poczty e-mail, profilów sieci VPN i nie tylko
 * Ocenianie na poziomie urządzenia kryteriów dotyczących zasad zgodności z zabezpieczeniami
 
-Zasady zgodności są tworzone osobno dla każdej platformy. Na potrzeby tego ćwiczenia używany będzie system iOS. Dla urządzeń z systemem iOS dostępne są następujące zasady:
+Zasady zgodności są tworzone dla poszczególnych platform, takich jak systemy iOS, Android, Windows i inne. W tym ćwiczeniu użyjemy systemu iOS. Dla urządzeń z systemem iOS dostępne są następujące zasady:
 
 * Konfiguracja kodu PIN lub hasła
 * Szyfrowanie urządzenia
@@ -43,18 +43,30 @@ Zasady zgodności są tworzone osobno dla każdej platformy. Na potrzeby tego ć
 * Minimalna wersja systemu operacyjnego
 * Maksymalna wersja systemu operacyjnego
 
-__Jak utworzyć zasady?__
+## <a name="create-a-policy"></a>Tworzenie zasad
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz pozycję **Zgodność urządzenia**.
-4. W okienku **Zgodność urządzeń** wybierz pozycję **Zasady**.
-5. Wybierz pozycję **Utwórz zasady**, a następnie wprowadź szczegółowe informacje, takie jak **Nazwa** i **Opis**. 
-6. Wybierz pozycję **iOS** na liście **Platforma**.
-6. W obszarze **Ustawienia** wybierz pozycję **Zabezpieczenia systemu**, a następnie przełącz opcję **Wymagaj hasła do odblokowania urządzeń przenośnych** na wartość **Wymagaj**. Możesz również ustawić inne reguły, takie jak **Minimalna długość hasła**, **Wymagany typ hasła** i **Liczba znaków innych niż alfanumeryczne w haśle**. Po zakończeniu konfigurowania zasad wybierz przycisk **OK**.
-7. Wróć do okienka **Tworzenie zasad**, a następnie wybierz pozycję **Utwórz**.
-8. Po utworzeniu zasad wybierz pozycję **Przypisania**, aby przypisać je do grupy testowej. Wybierz grupę testową (powinien do niej należeć użytkownik testowy), a następnie przypisz zasady do tej grupy, klikając pozycję **Zapisz**.
-9. Poczekaj kilka minut, po których na zarejestrowanym urządzeniu powinien zostać wyświetlony monit z informacją, że wymagane jest zaktualizowanie hasła, aby utrzymać zgodność z zasadami firmowymi. Można to również sprawdzić ręcznie w **aplikacji Portal firmy dla systemu iOS**, naciskając nazwę urządzenia, a następnie przycisk **Synchronizuj**.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
+4. Wprowadź **nazwę** i **opis** zasady. 
+5. W polu **Platforma** wybierz pozycję **iOS**.
+6. W obszarze **Ustawienia** wybierz pozycję **Zabezpieczenia systemu**, a następnie dla opcji **Wymagaj hasła do odblokowania urządzeń przenośnych** ustaw wartość **Wymagaj**. 
+
+    Możesz również ustawić inne zasady, takie jak: 
+    - **Minimalna długość hasła**
+    - **Wymagany typ hasła**
+    - **Liczba znaków innych niż alfanumeryczne w haśle**
+    
+    Po zakończeniu konfigurowania zasad wybierz przycisk **OK**.
+  
+7. Wróć do pozycji **Utwórz zasady** i wybierz pozycję **Utwórz**. Ta czynność powoduje utworzenie zasad i wymienienie ich w obszarze **Zgodność urządzeń** > **Zasady**.
+8. Wybierz swoje nowe zasady i wybierz pozycję **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
+Wybierz pozycję Wybrane grupy, aby wyświetlić istniejące grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie opcję **Zapisz**, aby je wdrożyć.
+
+Aby zachować zgodność z nowymi zasadami firmy, po upływie kilku minut na zarejestrowanym urządzeniu zostanie wyświetlony monit dotyczący zaktualizowanego hasła. Możesz ręcznie sprawdzić aktualizację w **aplikacji Portal firmy dla systemu iOS**. Otwórz aplikację Portal firmy, wybierz nazwę urządzenia, a następnie wybierz pozycję **Synchronizuj**.
+
+> [!NOTE]
+> Zastosowanie nowych zasad stosowanych do grupy dynamicznej na wszystkich urządzeniach w grupie może potrwać do ośmiu godzin.
 
 ## <a name="next-steps"></a>Następne kroki
 

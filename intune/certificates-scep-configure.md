@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/04/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f5441bb15d6906257432afbfe51fffc6c11a6324
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
+ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745030"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36297909"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -28,7 +28,8 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 
 ## <a name="configure-on-premises-infrastructure"></a>Konfigurowanie infrastruktury lokalnej
 
-- **Domena usługi Active Directory**: wszystkie serwery wymienione w tej sekcji (z wyjątkiem serwera proxy aplikacji sieci Web) muszą być przyłączone do Twojej domeny usługi Active Directory.
+- 
+  **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowej) muszą należeć do Twojej domeny usługi Active Directory.
 
 - **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
@@ -36,12 +37,17 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 - **Serwer usługi NDES**: na serwerze z systemem Windows Server 2012 R2 lub nowszym należy skonfigurować usługę rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES uruchomionej na tym samym serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi rejestracji urządzeń sieciowych.
 Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfikacji i nie może znajdować się na tym samym serwerze co ten urząd. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Łącznik certyfikatów usługi Microsoft Intune**: używając witryny Azure Portal, pobierz instalator **łącznika certyfikatów** (**ndesconnectorssetup.exe**). Następnie możesz uruchomić program **ndesconnectorssetup.exe** na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES), na którym chcesz zainstalować łącznik certyfikatów. 
-- **Serwer proxy aplikacji sieci Web** (opcjonalnie): jako serwera proxy aplikacji sieci Web (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
-  -  Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
-  -  Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
+- **Łącznik certyfikatów usługi Microsoft Intune**: używając witryny Azure Portal, pobierz instalator **łącznika certyfikatów** (**NDESConnectorSetup.exe**). Następnie możesz uruchomić program **NDESConnectorSetup.exe** na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES), na którym chcesz zainstalować łącznik certyfikatów.
+
+  - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale możesz wystawiać i odwoływać certyfikaty, gdy jest on włączony.
+
+- 
+  **Serwer proxy aplikacji internetowej** (opcjonalnie): jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+  - Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
+  - Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 
 #### <a name="additional"></a>Dodatkowe
+
 - Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](http://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](http://support.microsoft.com/kb/3011135).
 - Serwer WAP musi mieć certyfikat SSL pasujący do nazwy opublikowanej dla klientów zewnętrznych oraz ufać certyfikatowi SSL używanemu na serwerze usługi NDES. Te certyfikaty umożliwiają serwerowi proxy aplikacji sieci Web zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z serwerem usługi NDES.
 
@@ -71,17 +77,7 @@ Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, t
 |**Konto usługi NDES**|Podaj konto użytkownika domeny, które będzie używane jako konto usługi NDES.|
 
 ## <a name="configure-your-infrastructure"></a>Konfigurowanie infrastruktury
-Aby można było skonfigurować profile certyfikatów, wykonaj poniższe zadania. Te zadania wymagają znajomości systemu Windows Server 2012 R2 oraz usług certyfikatów Active Directory (ADCS):
-
-**Krok 1**: Tworzenie konta usługi NDES
-
-**Krok 2**: Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
-
-**Krok 3**: Konfigurowanie wymagań wstępnych na serwerze usługi NDES
-
-**Krok 4**: Konfigurowanie usługi NDES do użycia z usługą Intune
-
-**Krok 5**: Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
+Aby można było skonfigurować profile certyfikatów, wykonaj poniższe kroki. Te kroki wymagają znajomości systemu Windows Server 2012 R2 i nowszego oraz usług certyfikatów Active Directory (ADCS):
 
 #### <a name="step-1---create-an-ndes-service-account"></a>Krok 1 — Tworzenie konta usługi NDES
 
@@ -226,7 +222,6 @@ To zadanie obejmuje:
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (dziesiętnie) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (dziesiętnie) |
 
-
 4. W Menedżerze usług IIS wybierz pozycję **Domyślna witryna sieci Web** > **Filtrowanie żądań** > **Edytuj ustawienia funkcji**. Zmień wartości **Maksymalna długość adresu URL** i **Maksymalna długość ciągu zapytania** na *65534*, tak jak pokazano:
 
     ![Maksymalna długość adresu URL i zapytania w programie IIS](./media/SCEP_IIS_max_URL.png)
@@ -291,13 +286,17 @@ To zadanie obejmuje:
 - Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES) w środowisku. Aby zwiększyć skalę wdrożenia usługi NDES w organizacji, można zainstalować wiele serwerów usługi NDES z łącznikiem certyfikatów usługi Microsoft Intune na każdym z nich.
 
 ##### <a name="download-install-and-configure-the-certificate-connector"></a>Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów
+
 ![ConnectorDownload](./media/certificates-download-connector.png)
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 3. Wybierz pozycję **Konfiguracja urządzenia**, a następnie pozycję **Urząd certyfikacji**.
 4. Wybierz pozycję **Dodaj**, a następnie pozycję **Pobierz plik łącznika**. Zapisz pobraną zawartość w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana.
-5. Po zakończeniu pobierania uruchom pobrany instalator (**ndesconnectorssetup.exe**) na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. (Usługa sieci Web CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.)
+5. Po zakończeniu pobierania przejdź do serwera hostującego rolę usługi rejestracji urządzeń sieciowych (NDES). Następnie:
+
+    1. Upewnij się, że jest zainstalowany program .NET 4.5 Framework, ponieważ jest on wymagany przez łącznik certyfikatów usługi NDES. Program .NET 4.5 Framework jest automatycznie dołączany do systemu Windows Server 2012 R2 i nowszych wersji.
+    2. Uruchom instalator (**NDESConnectorSetup.exe**). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. Usługa internetowa CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.
 
     > [!NOTE]
     > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP jest instalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku używania usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
@@ -305,7 +304,7 @@ To zadanie obejmuje:
 6. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach Zadania 3.
 
     Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Mimo że wybrany certyfikat nie jest wyświetlany, wybierz pozycję **Dalej**, aby wyświetlić właściwości certyfikatu. Wybierz pozycję **Dalej**, a następnie pozycję **Zainstaluj**.
-    
+
     > [!IMPORTANT]
     > Nie można zarejestrować łącznika certyfikatów usługi Intune z włączoną opcją Konfiguracja zwiększonych zabezpieczeń programu Internet Explorer. Aby można było korzystać z łącznika certyfikatów usługi Intune, należy [wyłączyć opcję Konfiguracja zwiększonych zabezpieczeń programu IE](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).
 
@@ -335,10 +334,13 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 
 `http://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
+> [!NOTE]
+> Obsługa protokołu TLS 1.2 jest dołączona do łącznika certyfikatów usługi NDES. Jeśli więc serwer z zainstalowanym łącznikiem certyfikatów usługi NDES obsługuje protokół TLS 1.2, jest używany protokół TLS 1.2. Jeśli serwer nie obsługuje protokołu TLS 1.2, jest używany protokół TLS 1.1. Obecnie protokół TLS 1.1 jest używany do uwierzytelniania między urządzeniami a serwerem.
+
 ## <a name="create-a-scep-certificate-profile"></a>Tworzenie profilu certyfikatu protokołu SCEP
 
 1. W witrynie Azure Portal otwórz usługę Microsoft Intune.
-2. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu SCEP.
 4. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego certyfikatu protokołu SCEP. Obecnie dla ustawień ograniczeń dotyczących urządzeń można wybrać jedną z następujących platform:
    - **Android**
@@ -406,12 +408,16 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 
     > [!NOTE]
     > W przypadku systemu iOS należy oczekiwać występowania wielu kopii certyfikatu w profilu zarządzania, jeśli wdrożono wiele profilów zasobu, które używają tego samego profilu certyfikatu.
-    
-Informacje dotyczące sposobu przypisywania profilów znajdują się w temacie [Jak przypisywać profile urządzeń](device-profile-assign.md).
+
+Informacje dotyczące sposobu przypisywania profilów znajdują się w opisie [przypisywanie profilów urządzeń](device-profile-assign.md).
+
+## <a name="intune-connector-setup-verification-and-troubleshooting"></a>Weryfikacja instalacji łącznika usługi Intune i rozwiązywanie problemów
+
+Aby rozwiązać problemy i zweryfikować instalację łącznika usługi Intune, zobacz [Przykłady skryptów urzędu certyfikacji](https://aka.ms/intuneconnectorverificationscript)
 
 ## <a name="intune-connector-events-and-diagnostic-codes"></a>Zdarzenia łącznika usługi Intune i kody diagnostyczne
 
-Począwszy od wersji 6.1803.x.x, usługa łącznika Intune rejestruje zdarzenia w **Podglądzie zdarzeń** (**Dzienniki aplikacji i usług** > **Łącznik usługi Microsoft Intune**). Użyj tych zdarzeń, aby w łatwiejszy sposób rozwiązywać potencjalne problemy związane z konfiguracją łącznika usługi Intune. Te zdarzenia rejestrują powodzenia i niepowodzenia operacji, a także zawierają kody diagnostyczne wraz z komunikatami, które ułatwiają administratorowi IT rozwiązywanie problemów.
+Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia w **Podglądzie zdarzeń** (**Dzienniki aplikacji i usług** > **Łącznik usługi Microsoft Intune**). Użyj tych zdarzeń, aby w łatwiejszy sposób rozwiązywać potencjalne problemy związane z konfiguracją łącznika usługi Intune. Te zdarzenia rejestrują powodzenia i niepowodzenia operacji, a także zawierają kody diagnostyczne wraz z komunikatami, które ułatwiają administratorowi IT rozwiązywanie problemów.
 
 ### <a name="event-ids-and-descriptions"></a>Identyfikatory i opisy zdarzeń
 
@@ -430,10 +436,10 @@ Począwszy od wersji 6.1803.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | 20102 | PkcsCertIssue_Failure  | Nie można wystawić certyfikatu PKCS. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji, nazwa szablonu certyfikatu i odcisk palca certyfikatu. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Pomyślnie odwołano certyfikat. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji i numer seryjny certyfikatu. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Nie można odwołać certyfikatu. Przejrzyj szczegóły zdarzeń dla następujących elementów powiązanych z tym zdarzeniem: identyfikator urządzenia, identyfikator użytkownika, nazwa urzędu certyfikacji i numer seryjny certyfikatu. Aby uzyskać dodatkowe informacje, zobacz Dzienniki SVC usługi NDES.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Download_Success | Pomyślnie pobrano żądanie podpisania certyfikatu, pobrania certyfikatu klienta lub odwołania certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia.  | 0x00000000, 0x0FFFFFFF |
-| 20302 | Download_Failure | Nie można pobrać żądania podpisania certyfikatu, pobrać certyfikatu klienta lub odwołać certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia. | 0x00000000, 0x0FFFFFFF |
-| 20400 | Upload_Success | Pomyślnie przekazano żądanie certyfikatu lub dane dotyczące odwołania. Przejrzyj szczegóły zdarzenia, aby uzyskać informacje o przekazaniu. | 0x00000000, 0x0FFFFFFF |
-| 20402 | Upload_Failure | Nie można przekazać żądania certyfikatu lub danych dotyczących odwołania. Przejrzyj stan przekazania w szczegółach zdarzenia, aby określić punkt awarii.| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | Pomyślnie przekazano żądanie certyfikatu lub dane dotyczące odwołania. Przejrzyj szczegóły zdarzenia, aby uzyskać informacje o przekazaniu. | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Nie można przekazać żądania certyfikatu lub danych dotyczących odwołania. Przejrzyj stan przekazania w szczegółach zdarzenia, aby określić punkt awarii.| 0x00000000, 0x0FFFFFFF |
+| 20400 | Download_Success | Pomyślnie pobrano żądanie podpisania certyfikatu, pobrania certyfikatu klienta lub odwołania certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia.  | 0x00000000, 0x0FFFFFFF |
+| 20402 | Download_Failure | Nie można pobrać żądania podpisania certyfikatu, pobrać certyfikatu klienta lub odwołać certyfikatu. Aby uzyskać informacje o pobieraniu, przejrzyj szczegóły zdarzenia. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Zweryfikowanie wezwania klienta przez punkt rejestracji certyfikatu powiodło się | 0x00000000, 0x0FFFFFFF |
 | 20501 | CRPVerifyMetric_Warning  | Punkt rejestracji certyfikatu został ukończony, ale żądanie zostało odrzucone. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. | 0x00000000, 0x00000411, 0x0FFFFFFF |
 | 20502 | CRPVerifyMetric_Failure  | Zweryfikowanie wezwania klienta przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. Wyświetl szczegóły komunikatu zdarzeń dla identyfikatora urządzenia odpowiadającego wezwaniu. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |

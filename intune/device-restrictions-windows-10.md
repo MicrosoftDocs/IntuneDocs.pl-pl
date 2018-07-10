@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/9/2018
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 611ec516b87f42b41a80de605d0d511ed2c58309
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: a4bbc89f66b49fe6a5c4ff8595c5913583288e0f
+ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34803843"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
@@ -151,28 +152,28 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 ## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
 
 -   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
--   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Microsoft Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
+-   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
 -   **Synchronizuj ulubione między przeglądarkami firmy Microsoft (tylko wersja klasyczna)** — umożliwia synchronizowanie ulubionych między przeglądarkami Internet Explorer i Microsoft Edge.
--   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Microsoft Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
+-   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
 -   **Pliki cookie** — umożliwia przeglądarce na urządzeniu zapisywanie plików cookie z Internetu.
--   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Microsoft Edge.
+-   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Edge.
 -   **Wyskakujące okienka** — umożliwia blokowanie wyskakujących okienek w przeglądarce (tylko system Windows 10 Desktop).
 -   **Sugestie wyszukiwania** — umożliwia sugerowanie witryn przez wyszukiwarkę podczas wpisywania wyszukiwanych fraz.
 -   **Wysyłaj ruch intranetowy do programu Internet Explorer** — umożliwia użytkownikom otwieranie intranetowych witryn sieci Web w programie Internet Explorer (tylko system Windows 10 Desktop).
 -   **Autowypełnianie** — umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce (tylko system Windows 10 Desktop).
 -   **Menedżer haseł** — włącza lub wyłącza funkcję menedżera haseł w przeglądarce Microsoft Edge.
 -   **Lokalizacja listy witryn trybu przedsiębiorstwa** — określa lokalizację listy witryn sieci Web, które można otwierać w trybie przedsiębiorstwa. Użytkownicy nie mogą edytować tej listy.<br>(Tylko system Windows 10 Desktop).
--   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Microsoft Edge.
--   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Microsoft Edge na urządzeniu.
+-   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Edge.
+-   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Edge na urządzeniu.
 -   **Przeglądanie InPrivate** — uniemożliwia otwieranie sesji przeglądania InPrivate przez użytkownika końcowego.
--   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Microsoft Edge.
+-   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Edge.
     -   **Adres URL pierwszego uruchomienia** — umożliwia podanie adresu URL strony wyświetlanej przy pierwszym uruchomieniu przeglądarki Microsoft Edge (tylko system Windows 10 Mobile).
 -   **Strony główne** — umożliwia dodanie listy witryn, które mają być używane jako strony główne w przeglądarce Microsoft Edge (tylko wersja Desktop).
 -   **Zmiany strony startowej** — umożliwia użytkownikom zmienianie stron startowych wyświetlanych po otwarciu przeglądarki Microsoft Edge. Użyj ustawienia Strony główne, aby wskazać stronę (lub listę stron) otwieraną podczas uruchamiania przeglądarki Microsoft Edge.
 -   **Blokuj dostęp do flag informacji** — uniemożliwia użytkownikowi końcowemu uzyskanie dostępu do strony about:flags przeglądarki Microsoft Edge zawierającej ustawienia programistyczne i eksperymentalne.
 -   **Adres IP lokalnego hosta dla protokołu WebRTC** — blokuje wyświetlanie adresu IP lokalnego hosta użytkownika podczas nawiązywania połączeń telefonicznych przy użyciu protokołu WebRTC.
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
--   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Microsoft Edge.
+-   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Microsoft Edge do menu Start.
 -  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/favorites.html.
 -  **Ograniczanie zmian ulubionych** — wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 
@@ -249,7 +250,9 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
   Skalowanie DPI z użyciem interfejsu GDI umożliwia rozpoznawanie wartości DPI monitora tym aplikacjom, które jej nie rozpoznają. Określ starsze aplikacje, które mają włączone skalowanie DPI z użyciem interfejsu GDI. Jeśli w aplikacji skonfigurowano zarówno włączanie, jak i wyłączanie skalowania DPI z użyciem interfejsu GDI, skalowanie dla aplikacji jest wyłączone.
 
-## <a name="kiosk-preview"></a>Kiosk (wersja zapoznawcza)
+## <a name="kiosk-preview---obsolete"></a>Kiosk (wersja zapoznawcza) — przestarzałe
+
+Te ustawienia są przenoszone i w nowej wersji zostaną usunięte. Aby użyć nowych ustawień, zobacz [Ustawienia kiosku w systemie Windows 10 lub nowszym](kiosk-settings.md).
 
 Kiosk to urządzenie, na którym jest zwykle uruchamiana jedna aplikacja lub zestaw konkretnych aplikacji. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
 
@@ -262,9 +265,12 @@ Kiosk to urządzenie, na którym jest zwykle uruchamiana jedna aplikacja lub zes
 #### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
 Podaj następujące ustawienia:
 
-- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku. W przypadku kont przyłączonych do domeny usługi Azure AD podaj konto w formacie `domain\username@tenant.org`. 
+- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika, konto domeny usługi AD lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku.
+  - Konto lokalne: wprowadź w formacie `devicename\accountname`, `.\accountname` lub `accountname`
+  - Konto domeny: wprowadź w formacie `domain\accountname`
+  - Konto usługi Azure AD: wprowadź w formacie `AzureAD\emailaddress`. Pamiętaj, aby wprowadzić nazwę „AzureAD”, ponieważ jest to ustalona nazwa domeny. Następnie podaj adres e-mail usługi Azure AD. Na przykład wprowadź `AzureAD\user@contoso.onmicrosoft.com`.
 
-    W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). Aby skonfigurować konto usługi Azure Active Directory (AD) pod kątem trybu kiosku, użyj formatu `AzureAD\user@contoso.com`.
+    W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). W przypadku używania konta usługi Azure AD w trybie kiosku pamiętaj, aby wprowadzić wartość `AzureAD\user@yourorganization.com`.
 
 - **Identyfikator modelu użytkownika aplikacji (AUMID) aplikacji** — podaj identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji kiosku. Aby dowiedzieć się więcej, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 

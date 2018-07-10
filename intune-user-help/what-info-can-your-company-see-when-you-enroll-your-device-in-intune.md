@@ -16,18 +16,18 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 7e722195ce1b1b34a65cd8e936ad8a702f145691
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: ad949cc9d20e0e46ab986b4646059af733018255
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34308878"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232810"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?
 
-Rejestrując urządzenie w systemie zarządzania, zezwalasz swojej firmie na wyświetlanie niektórych rodzajów informacji znajdujących się na Twoim urządzeniu w celu umożliwienia ochrony znajdujących się na nim danych firmowych.
+Gdy zarejestrujesz urządzenie w usłudze Microsoft Intune, Twoja firma nie będzie mogła wyświetlać Twoich informacji osobistych. Gdy rejestrujesz urządzenie, dajesz firmie uprawnienia do wyświetlania określonych fragmentów informacji na swoim urządzeniu, takich jak model urządzenia i jego numer seryjny. Firma używa tych informacji w celu ochrony danych firmowych znajdujących się na urządzeniu.
 
-**Czego Twoja firma nigdy nie zobaczy**
+**Czego Twoja firma nigdy nie zobaczy:**
 
 - Historia połączeń i przeglądania sieci Web
 - Wiadomości e-mail i SMS
@@ -36,7 +36,7 @@ Rejestrując urządzenie w systemie zarządzania, zezwalasz swojej firmie na wy�
 -   Hasła
 - Obrazy, w tym dane z aparatu i aplikacji Zdjęcia
 
-**Co Twoja firma widzi zawsze**
+**Co Twoja firma widzi zawsze:**
 
 - Model urządzenia, np. Google Pixel
 - Producent urządzenia, np. Microsoft
@@ -46,7 +46,7 @@ Rejestrując urządzenie w systemie zarządzania, zezwalasz swojej firmie na wy�
 - Nazwa urządzenia
 - Numer seryjny
 
-**Co firma może widzieć**
+**Co firma może widzieć:**
 
 -  Numer telefonu: w przypadku urządzeń **należących do firmy** może być widoczny Twój pełny numer telefonu. w przypadku urządzeń **prywatnych** dla firmy widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. **Typ własności** poszczególnych urządzeń można sprawdzić, otwierając stronę **Szczegóły urządzenia** odnoszącą się do tego urządzenia.
 -  Lokalizacja: firma nigdy nie widzi lokalizacji urządzenia; wyjątkiem są nadzorowane urządzenia z systemem iOS, które zostały utracone. [Jak to sprawdzić?](https://go.microsoft.com/fwlink/?linkid=853816)

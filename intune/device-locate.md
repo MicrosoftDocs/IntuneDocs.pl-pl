@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 735b3323527487e231d190ffd45e9083c4f524a2
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 259cc7653f97cbb9e07ba681e142c62e42c5a124
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34444918"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Znajdowanie zgubionych lub skradzionych urządzeń z systemem iOS przy użyciu usługi Intune
 
@@ -45,7 +46,7 @@ Ta funkcja nie jest obsługiwana w następujących systemach:
     ![Zrzut ekranu lokalizowania urządzenia przy użyciu usługi Intune na platformie Azure](./media/locate-device.png)
 
 >[!NOTE]
->W celu zachowania prywatności stopień powiększenia mapy jest ograniczony.
+>W celu zachowania prywatności stopień powiększenia mapy jest ograniczony do obszaru o promieniu 300 metrów.
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktywowanie alertu dźwiękowego trybu utraty na urządzeniu z systemem iOS
 
@@ -58,7 +59,7 @@ Ten dźwięk będzie odtwarzany aż do wyłączenia przez użytkownika dźwięku
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Informacje o zabezpieczeniach i prywatności w trybie zgubienia oraz akcjach lokalizowania urządzenia
 - Do momentu włączenia tej akcji żadne informacje o lokalizacji urządzenia nie są wysyłane do usługi Intune.
-- Po użyciu akcji lokalizacji urządzenia współrzędne geograficzne urządzenia są wysyłane do usługi Intune i wyświetlane w witrynie Azure Portal.
+- Po użyciu akcji lokalizacji urządzenia współrzędne geograficzne urządzenia można pobrać za pomocą interfejsu API programu Graph.
 - Dane są przechowywane przez 24 godziny, a następnie usuwane. Nie można ręcznie usunąć danych lokalizacji.
 - Dane lokalizacji są szyfrowane zarówno podczas przechowywania, jak i podczas przesyłania.
 - Podczas konfigurowania trybu zgubienia można dostosować komunikat wyświetlany na ekranie blokady. W tym komunikacie, aby pomóc znalazcy urządzenia, należy podać szczegółowe informacje umożliwiające zwrot zgubionego urządzenia.

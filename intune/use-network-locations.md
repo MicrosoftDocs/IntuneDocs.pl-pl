@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b6ab5e4de2d3a888d6b3372b75b9a95af54a591a
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 988407d6d736b669854ef8420b71a092765162b7
+ms.sourcegitcommit: 445fcf9e2a185e5c987334cad398bce71383be03
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745166"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843127"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune
 
@@ -35,7 +35,7 @@ W Twoim zakładzie produkcyjnym niektórzy pracownicy używają urządzeń z sys
 2. Utworzyć zasady zgodności, które wymagają połączenia tych urządzeń z siecią firmową, a następnie przypisać te zasady.
 3. Jeśli urządzenie znajdzie się poza zakładem produkcyjnym, będzie uznawane za niezgodne i nie będzie mieć dostępu do zasobów firmy.
 
-Korzystając z zasad usługi Intune, można wysłać powiadomienie o braku zgodności oraz zablokować urządzenie. Gdy urządzenie znajdzie się z powrotem w środowisku lokalnym i w zasięgu lokalizacji sieciowej, można będzie je odblokować i odzyskać dostęp do zasobów firmy.
+Ponadto można dodać [akcje w przypadku niezgodności](#configure-the-actions-for-noncompliance). Gdy urządzenie znajdzie się z powrotem w środowisku lokalnym i w zasięgu lokalizacji sieciowej, odzyska dostęp do zasobów firmy.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

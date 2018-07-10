@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 75e36456c03cd0a769e9741606a2b70fa7e49c35
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: caed42642a87d38076f755cd356cc7ab7c6a3d8a
+ms.sourcegitcommit: 95ffcd5ddd3e5df7d68ae75218c5ff2ea076133e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744996"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36263408"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -56,11 +56,11 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Aplikacje pakietu Office 365 dla systemu macOS | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **macOS** jako **typ aplikacji**, a następnie wybierz pakiet aplikacji usługi Office 365. |
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
 | Aplikacje LOB dla systemu iOS | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.  |
-| Aplikacje LOB dla systemu Windows Phone | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.xap**.  |
-| Aplikacja LOB dla systemu Windows | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.msi**, **.appx** lub **.appxbundle**. |
+| Aplikacje LOB dla systemu Windows Phone | Aplikacja LOB | Wybierz opcję **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows Phone z rozszerzeniem **xap**.  |
+| Aplikacja LOB dla systemu Windows | Aplikacja LOB | Wybierz opcję **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows z rozszerzeniem **msi**, **appx** lub **appxbundle**. |
 | Wbudowana aplikacja systemu iOS  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Wbudowana aplikacja systemu Android  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
-| Aplikacje sieci Web  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
+| Aplikacje internetowe  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
 
 Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje mobilne** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
 
@@ -176,7 +176,8 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Aplikacje LOB dla systemu Android](lob-apps-android.md)
 - [Aplikacje ze sklepu dla systemu iOS](store-apps-ios.md)
 - [Aplikacje LOB dla systemu iOS](lob-apps-ios.md)
-- [Aplikacje sieci Web (dla wszystkich platform)](web-app.md)
+- 
+  [Aplikacje internetowe (dla wszystkich platform)](web-app.md)
 - [Aplikacje ze sklepu dla systemu Windows Phone 8.1](store-apps-windows-phone-8-1.md)
 - [Aplikacje LOB dla systemu Windows Phone](lob-apps-windows-phone.md)
 - [Aplikacje ze sklepu Microsoft Store](store-apps-windows.md)

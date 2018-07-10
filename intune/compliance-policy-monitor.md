@@ -1,54 +1,54 @@
 ---
-title: Monitorowanie zasad zgodności urządzeń w usłudze Microsoft Intune
-titlesuffix: ''
+title: Monitorowanie zasad zgodności urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Pulpit nawigacyjny zgodności urządzeń służy do monitorowania ogólnej zgodności urządzeń, wyświetlania raportów i wyświetlania zgodności urządzeń z poszczególnymi zasadami i ustawieniami.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 2/27/2018
+ms.date: 6/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c4c3c3a2d73c6390ef5761f1bd0b12fe55855c6e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 33e42c821881a5cc7eb9e4be65f6f7e56263480e
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831875"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232974"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
 Raporty zgodności umożliwiają administratorom analizowanie stanu zgodności urządzeń w organizacji i szybkie rozwiązywanie problemów ze zgodnością napotykanych przez użytkowników w organizacji. Można wyświetlić informacje o ogólnym stanie zgodności urządzeń, stanie zgodności poszczególnych ustawień, stanie zgodności dla poszczególnych zasad, a także przejść do poszczególnych urządzeń, aby wyświetlić konkretne ustawienia i zasady, które wpływają na urządzenie.
 
-> [!NOTE]
-> W marcu w usłudze Intune wprowadzamy pewne rozszerzenia w zakresie zabezpieczeń oparte na opiniach użytkowników. W zależności od konfiguracji zasad zgodności może być wymagane podjęcie działań w celu uniknięcia utraty dostępu do poczty e-mail dla użytkowników końcowych. Aby uzyskać więcej informacji, zobacz [Nadchodzące rozszerzenia zabezpieczeń](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
-
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 Wykonaj następujące kroki, aby znaleźć **pulpit nawigacyjny zgodności urządzeń Intune** w witrynie Azure Portal:
 
-1.  Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
+1. W witrynie [Azure Portal](https://portal.azure.com) zaloguj się przy użyciu poświadczeń usługi Intune.
 
-2.  W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 
-3.  Wybierz kolejno opcje **Intune** &gt; **Zgodność urządzenia** &gt; **Przegląd**. Zostanie otwarty **pulpit nawigacyjny zgodności urządzeń**.
+3. Wybierz pozycję **Zgodność urządzenia** > **Przegląd**. Zostanie otwarty **pulpit nawigacyjny zgodności urządzeń**.
 
 > [!IMPORTANT]
 > Aby otrzymać zasady zgodności urządzeń, urządzenia muszą być zarejestrowane w usłudze Intune.
 
 ## <a name="device-compliance-dashboard"></a>Pulpit nawigacyjny zgodności urządzeń
 
-Na **pulpicie nawigacyjnym zgodności urządzeń** można monitorować stany zasad zgodności urządzeń i otrzymywać różne raporty dla poszczególnych kafelków, co pozwala na ocenę stanu zgodności urządzeń w Twojej organizacji. Istnieje możliwość wyświetlenia następujących raportów:
+Za pomocą **pulpitu nawigacyjnego zgodności urządzeń** można monitorować zgodność różnych urządzeń, ich stan ochrony i inne dane. Istnieje możliwość wyświetlenia następujących raportów:
 
--   Ogólna zagregowana zgodność urządzeń
+- Ogólna zagregowana zgodność urządzeń
 
--   Zgodność urządzeń wg zasady
+- Zgodność urządzeń wg zasady
 
--   Zgodność urządzeń wg ustawienia
+- Zgodność urządzeń wg ustawienia
+
+- Stan ochrony urządzenia
+
+- Stan agenta zagrożeń
 
 ![Obraz przedstawiający pulpit nawigacyjny zgodności urządzeń](./media/idc-1.png)
 
@@ -58,26 +58,26 @@ Można także wyświetlić określone zasady i ustawienia zgodności, które maj
 
 Jest to wykres pierścieniowy przedstawiający zagregowany stan zgodności dla wszystkich urządzeń zarejestrowanych w usłudze Intune. Stany zgodności urządzeń są przechowywane w dwóch różnych bazach danych, Intune i Azure Active Directory. Poniżej przedstawiono szczegółowe informacje o stanach zasad zgodności urządzeń:
 
--   **Zgodne**: urządzenie pomyślnie zastosowało co najmniej jedno ustawienie zasady zgodności urządzenia przepisane przez administratora.
+- **Zgodne**: urządzenie pomyślnie zastosowało co najmniej jedno ustawienie zasady zgodności urządzenia przepisane przez administratora.
 
--   **Niezgodne**: nie udało się zastosować co najmniej jednego ustawienia zasady zgodności urządzenia przepisanego przez administratora lub też użytkownik nie spełnił zasad zgodności przepisanych przez administratora.
+- **Niezgodne**: nie udało się zastosować co najmniej jednego ustawienia zasady zgodności urządzenia przepisanego przez administratora lub też użytkownik nie spełnił zasad zgodności przepisanych przez administratora.
 
--   **Okres prolongaty**: administrator przepisał do urządzenia co najmniej jedno ustawienie zasady zgodności, ale użytkownik nie zastosował tych zasad, co oznacza, że urządzenie nie jest zgodne ze specyfikacją, ale trwa okres prolongaty zdefiniowany przez administratora.
+- **Okres prolongaty**: administrator przepisał do urządzenia co najmniej jedno ustawienie zasady zgodności, ale użytkownik nie zastosował tych zasad, co oznacza, że urządzenie nie jest zgodne ze specyfikacją, ale trwa okres prolongaty zdefiniowany przez administratora.
 
-    -   Dowiedz się więcej o akcjach dla niezgodnych urządzeń.
+  - Dowiedz się więcej o akcjach dla niezgodnych urządzeń.
 
--   **Urządzenie nie jest zsynchronizowane**: urządzenie nie zgłosiło stanu zasad zgodności urządzenia z jednej z następujących przyczyn:
+- **Urządzenie nie jest zsynchronizowane**: urządzenie nie zgłosiło stanu zasad zgodności urządzenia z jednej z następujących przyczyn:
 
-    -   **Nieznany**: urządzenie jest w trybie offline lub nie nawiązało łączności z usługą Intune lub Azure AD z innych przyczyn.
+  - **Nieznany**: urządzenie jest w trybie offline lub nie nawiązało łączności z usługą Intune lub Azure AD z innych przyczyn.
 
-    -   **Błąd**: urządzenie nie skomunikowało się z usługą Intune i Azure AD i otrzymało komunikat o błędzie z podanym powodem.
+  - **Błąd**: urządzenie nie skomunikowało się z usługą Intune i Azure AD i otrzymało komunikat o błędzie z podanym powodem.
 
 > [!IMPORTANT]
 > Urządzenia, które są zarejestrowane w usłudze Intune, ale nie są objęte żadnymi zasadami zgodności urządzeń, są uwzględnione w raporcie w obszarze **Zgodne**.
 
 #### <a name="drill-down-option"></a>Opcja przechodzenia do informacji szczegółowych
 
-Jeśli na **pulpicie nawigacyjnym zgodności urządzeń** klikniesz kafelek zgodności urządzenia, możesz przejść do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte zasadami zgodności urządzeń.
+Na **pulpicie nawigacyjnym zgodności urządzeń** wybierz kafelek zgodności urządzenia, aby przejść do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które jest objęte zasadami zgodności urządzeń.
 
 ![Obraz przedstawiający przechodzenie do informacji szczegółowych na pulpicie nawigacyjnym zgodności urządzeń](./media/idc-2.png)
 
@@ -91,43 +91,43 @@ Możesz również kliknąć inny stan zgodności na wykresie zgodności urządze
 
 #### <a name="filter"></a>Filtr
 
-Po kliknięciu przycisku **Filtr** staną się dostępne następujące opcje:
+Po wybraniu **przycisku Filtr** będą dostępne następujące opcje:
 
--   Model
+- Model
 
-    -   Pole tekstowe, w którym można wpisać dowolny wyszukiwany ciąg
-<br></br>
--   Platforma
+  - Pole tekstowe, w którym można wpisać dowolny wyszukiwany ciąg
 
-    -   Android
+- Platforma
 
-    -   iOS
+  - Android
 
-    -   macOS
+  - iOS
 
-    -   Windows
+  - macOS
 
-    -   Windows Phone
+  - Windows
 
--   Stan
+  - Windows Phone
 
-    -   Zgodny
+- Stan
 
-    -   Niezgodny
+  - Zgodny
 
-    -   Okres prolongaty
+  - Niezgodny
 
-    -   Nieznane
+  - Okres prolongaty
 
-    -   Error
+  - Nieznane
 
-Po kliknięciu przycisku **Aktualizuj** powinny zostać zamknięte wyświetlane elementy, zaś wyniki powinny zostać zaktualizowane zgodnie z wybranymi kryteriami filtrowania.
+  - Error
+
+Po wybraniu **przycisku Aktualizuj** wyświetlane elementy zostaną zamknięte, a wyniki zostaną zaktualizowane przy użyciu wybranych kryteriów filtrowania.
 
 ##### <a name="device-details"></a>Szczegóły urządzenia
 
-Kliknięcie urządzenia powoduje otwarcie **okienka urządzeń** z wybranym urządzeniem, które udostępnia więcej szczegółowych informacji na temat ustawienia zasad zgodności urządzeń zastosowanych dla tego urządzenia.
+Wybranie urządzenia powoduje otwarcie okna **Urządzenia** z wybranym urządzeniem. Dzięki temu jest dostępnych więcej szczegółów dotyczących ustawienia zasad zgodności urządzenia zastosowanego do danego urządzenia.
 
-Po kliknięciu samego ustawienia zasad urządzenia zostanie wyświetlona nazwa zasady zgodności urządzenia wskazująca, że ustawienie zgodności urządzenia zostało zalecone przez administratora.
+Po wybraniu samego ustawienia zasad urządzenia zostanie wyświetlona nazwa zasad zgodności urządzenia wskazująca, że ustawienie zgodności urządzenia zostało zalecone przez administratora.
 
 ### <a name="devices-without-compliance-policy"></a>Urządzenia bez zasad zgodności
 Ten raport wskazuje urządzenia, które nie mają przypisanych żadnych zasad zgodności. Wraz z wprowadzeniem ustawienia zabezpieczeń, które oznacza wszystkie urządzenia bez zasad zgodności jako „niezgodne”, ważne jest, aby można było zidentyfikować te urządzenia. Następnie możesz im przypisać co najmniej jedne zasady zgodności.
@@ -157,3 +157,10 @@ Ten raport umożliwia zapoznanie się z łączną liczbą urządzeń znajdujący
 ![Obraz przedstawiający raport zgodności urządzeń wg ustawienia](./media/idc-10.png)
 
 Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność ustawień umożliwia przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
+
+## <a name="how-intune-resolves-policy-conflicts"></a>Jak są rozwiązywane konflikty zasad usługi Intune
+Konflikty zasad mogą wystąpić, gdy na urządzeniu stosuje się wiele zasad usługi Intune. Jeśli ustawienia zasad nakładają się na siebie, usługa Intune rozwiązuje konflikty, używając następujących reguł:
+
+- Jeżeli sprzeczne ustawienia pochodzą z zasad konfiguracji usługi Intune i zasad zgodności, ustawienia w zasadach zgodności mają pierwszeństwo względem ustawień w zasadach konfiguracji. Dzieje się tak nawet wtedy, gdy ustawienia w zasadach konfiguracji są bardziej bezpieczne.
+
+- Jeśli wdrożono wiele zasad zgodności, usługa Intune użyje najbezpieczniejszych z nich.

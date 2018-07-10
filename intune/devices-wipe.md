@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 84fc162eda25970c14ed1014b9f67ef3e782c663
-ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
+ms.openlocfilehash: 5b5eadc4ee23a89624cde9f1246f64aafce0b06c
+ms.sourcegitcommit: 3284586d9260a66ce99029b7808e4807f8780d20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37091731"
 ---
-# <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy
+# <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych, usuwanie danych firmowych lub ręczne wyrejestrowywanie urządzenia
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -147,7 +148,7 @@ Jeśli urządzenie jest włączone i połączone, propagowanie akcji **Usuń dan
 
 Jeśli chcesz usunąć urządzenia z portalu usługi Intune, możesz usunąć je z okienka określonego urządzenia. Przy następnym zaewidencjonowaniu urządzenia zostaną z niego usunięte wszystkie dane firmy.
 
-1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+1. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
 2. Wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenia do usunięcia > **Usuń**.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Usuwanie urządzeń z portalu usługi Azure Active Directory

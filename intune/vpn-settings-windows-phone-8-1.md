@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3572022b491439d2cf624b2ed3f1d53ffaf54d7d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 3397c10ae572a248507f15e5145fef68898d30c4
+ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291448"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune
 
@@ -56,7 +57,7 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 - **Rola** (tylko dla Pulse Secure) — umożliwia określenie nazwy roli użytkownika, która ma dostęp do tego połączenia. Rola użytkownika definiuje ustawienia osobiste i opcje oraz włączenie lub wyłączenie określonych funkcji dostępu.
 - **Obszar** (tylko dla Pulse Secure) — umożliwia określenie nazwy obszaru uwierzytelniania, który ma być używany. Obszar uwierzytelniania to grupa zasobów uwierzytelniania używana przez typ połączenia Pulse Secure.
 
-- **Lista przeszukiwania sufiksów DNS** - korzystając z opcji **Dodaj**, możesz dodać jeden lub więcej sufiksów DNS. Wszystkie wprowadzone sufiksy DNS są wyszukiwane podczas łączenia z witryną internetową za pomocą nazwy skróconej. Na przykład określ sufiksy usługi DNS **domena1.contoso.com** i **domena2.contoso.com**, a następnie otwórz adres URL **http://mywebsite**, aby przeszukać adresy URL **http://mywebsite.domain1.contoso.com** i **http://mywebsite.domain2.contoso.com**.
+- **Lista przeszukiwania sufiksów DNS** - korzystając z opcji **Dodaj**, możesz dodać jeden lub więcej sufiksów DNS. Wszystkie wprowadzone sufiksy DNS są wyszukiwane podczas łączenia z witryną internetową za pomocą nazwy skróconej. Na przykład określ sufiksy usługi DNS **domena1.contoso.com** i **domena2.contoso.com**, a następnie otwórz adres URL `http://mywebsite`, aby przeszukać adresy URL `http://mywebsite.domain1.contoso.com` i `http://mywebsite.domain2.contoso.com`.
 
 - **Niestandardowy kod XML** — określ niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN.
 
