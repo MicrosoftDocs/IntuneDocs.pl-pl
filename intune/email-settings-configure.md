@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b71c004a165bd6d38cd1907eadc05ac20f27bd1a
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834214"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905312"
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
 
@@ -31,7 +31,7 @@ Wbudowany klient poczty e-mail jest obsługiwany w przypadku większości platfo
 Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
 
 - System Android Samsung Knox Standard 4.0 i nowsze wersje
-- Program Android for Work
+- Urządzenia profilu służbowego systemu Android
 - System iOS 8.0 i nowsze
 - System Windows Phone 8.1 lub nowszy
 - System Windows 10 Mobile Desktop i Windows 10 Mobile
@@ -48,7 +48,7 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
 4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu poczty e-mail.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia poczty e-mail. Obecnie dla ustawień poczty e-mail urządzenia można wybrać jedną z następujących platform:
     - **Android** (tylko system Samsung Android Knox Standard)
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -56,7 +56,7 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
     - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Poczta e-mail**.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Android for Work and Samsung Knox Standard settings](email-settings-android.md) (Ustawienia programu Android for Work i systemu Samsung Knox Standard)
+    - [Android work profile and Samsung Knox Standard settings (Ustawienia profilu służbowego w systemie Android i systemu Samsung Knox Standard)](email-settings-android.md)
     - [Ustawienia systemu iOS](email-settings-ios.md)
     - [Ustawienia systemu Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Windows 10 settings](email-settings-windows-10.md) (Ustawienia systemu Windows 10)
@@ -89,7 +89,7 @@ Jeśli użytkownik skonfigurował już konto e-mail, wynik przypisania profilu p
 - **Windows**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika.
 - **Android Samsung Knox Standard**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune.
 Ponieważ system Android nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one się nawzajem zastępować.
-- **Android for Work** Usługa Intune udostępnia dwa profile poczty e-mail usługi Android for Work — jeden dla aplikacji Gmail i drugi dla Nine Work. Aplikacje te, dostępne w sklepie Google Play, są instalowane w profilu służbowym urządzenia, dlatego powstanie zduplikowanych profilów jest wykluczone. Obie aplikacje obsługują połączenia z programem Exchange. Aby włączyć łączność za pośrednictwem poczty e-mail, wdróż jedną z tych aplikacji na urządzeniach użytkowników, a następnie utwórz i wdróż odpowiedni profil poczty e-mail. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
+- **Profile służbowe w systemie Android** Usługa Intune udostępnia dwa służbowe profile poczty e-mail systemu Android — jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji Nine Work. Aplikacje te, dostępne w sklepie Google Play, są instalowane w profilu służbowym urządzenia, dlatego powstanie zduplikowanych profilów jest wykluczone. Obie aplikacje obsługują połączenia z programem Exchange. Aby włączyć łączność za pośrednictwem poczty e-mail, wdróż jedną z tych aplikacji na urządzeniach użytkowników, a następnie utwórz i wdróż odpowiedni profil poczty e-mail. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
 
 ### <a name="update-an-email-profile"></a>Aktualizowanie profilu poczty e-mail
 
