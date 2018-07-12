@@ -15,12 +15,12 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4c1902e319a862c9ffcda5068753f917bf8f4c3f
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 0f4687b3a2b1064fbfe3a9c8aa9da6cc7d336d78
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232922"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906043"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -41,9 +41,11 @@ Możliwe są następujące konfiguracje:
 
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
+Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zmienić urząd MDM na inny, zobacz poniżej sekcję dotyczącą [zmiany urzędu MDM](#prepare-to-change-the-mdm-authority-to-configuration-manager).
+
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz pomarańczowy transparent, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**.
+3. Wybierz pomarańczowy transparent, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
 4. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
    - **Urząd MDM w usłudze Intune**
    - **Urząd MDM w programie Configuration Manager**
@@ -57,7 +59,7 @@ Możliwe są następujące konfiguracje:
 Gdy zarządzanie urządzeniami firmy Apple i urządzeniami z systemem Android jest włączone, usługa Intune wysyła informacje o urządzeniu i użytkowniku w celu integracji z usługami innych firm i zarządzania urządzeniami.
 
 Dodanie zgody na udostępnianie danych ma miejsce:
-- Podczas włączania programu Android for Work.
+- Podczas włączania profilów służbowych systemu Android.
 - Podczas włączania i przekazywania certyfikatów wypychania MDM firmy Apple.
 - Podczas włączania dowolnych usługi firmy Apple takich jak Device Enrollment Program, School Manager czy Volume Purchasing Program (program zakupów zbiorczych).
 

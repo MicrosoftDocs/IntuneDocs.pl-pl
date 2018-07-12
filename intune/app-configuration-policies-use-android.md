@@ -1,7 +1,7 @@
 ---
 title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 titlesuffix: Microsoft Intune
-description: Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work przez użytkowników.
+description: Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji profilu służbowego systemu Android przez użytkowników.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,18 +15,18 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3011d98b73ef95d1c5a527798ab004f788c9eee9
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: c837f9a5a2cb1a6f267f85f888453725da6acb66
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34470869"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905754"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji Android for Work. Deweloper aplikacji musi ujawnić ustawienia konfiguracji aplikacji zarządzane w systemie Android, aby określić ustawienia konfiguracji dla aplikacji. Przypisz zasady konfiguracji aplikacji do grupy użytkowników, wobec których chcesz zastosować ustawienia.  Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień aplikacji profilu służbowego systemu Android. Deweloper aplikacji musi ujawnić ustawienia konfiguracji aplikacji zarządzane w systemie Android, aby określić ustawienia konfiguracji dla aplikacji. Przypisz zasady konfiguracji aplikacji do grupy użytkowników, wobec których chcesz zastosować ustawienia.  Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
 > [!Note]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
@@ -39,8 +39,8 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
     - **Typ rejestracji urządzenia** — wybierz pozycję **Urządzenia zarządzane**.
-6. Wybierz pozycję **Android for Work** w obszarze **Platforma**.
-7. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
+6. Dla opcji **Platforma** wybierz pozycję **Android**.
+7. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji aplikacji. Wybierz z listy aplikacji profilu służbowego systemu Android aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
 8. Wybierz pozycję **Uprawnienia**. Konfigurację możesz ustawić przy użyciu następujących narzędzi:
     - [projektant konfiguracji](#Use-the-configuration-designer)
     - [edytor JSON](#Enter-the-JSON-editor)
@@ -94,8 +94,8 @@ Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem 
     - **Nazwa**. — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal
     - **Opis**. — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Typ rejestracji urządzenia**. Wybierz pozycję **Urządzenia zarządzane**.
-    - **Platforma**. Wybierz pozycję **Android for Work**.
-5. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy programu Android for Work aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
+    - **Platforma**. — wybierz opcję **Android**.
+5. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy aplikacji profilu służbowego systemu Android aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
 6. Wybierz **Uprawnienia**, a następnie wybierz **Dodaj**.
 7. Wybierz odpowiednie opcje z listy dostępnych uprawnień aplikacji, a następnie wybierz pozycję **OK**.
 8. Wybierz opcję dla każdego uprawnienia, które ma zostać przyznane zgodnie z tymi zasadami:

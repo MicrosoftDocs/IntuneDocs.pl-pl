@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 861be39feab15c453fd102593b0501202faa3684
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232940"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905380"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
@@ -36,7 +36,7 @@ Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, a
 |Grupy według numeru IMEI (wszystkie platformy)| Grupy > Wszystkie urządzenia> Wstępnie zarejestrowane urządzenia należące do firmy > Według numeru IMEI (wszystkie platformy) | [Rejestrowanie urządzenia > Identyfikatory urządzeń firmowych](#by-imei-all-platforms)|
 | Profil rejestracji urządzeń firmowych| Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile programu Enrollment Program](#where-did-corporate-pre-enrolled-devices-go) |
 | Profil rejestracji urządzeń firmowych | Zasady > Rejestracja urządzeń firmowych | [Rejestrowanie urządzenia > Rejestracja Apple > Profile AC](#where-did-corporate-pre-enrolled-devices-go) |
-| Program Android for Work | Administracja > Zarządzanie urządzeniami przenośnymi > Android for Work | Rejestrowanie urządzenia > Rejestracja w programie Android for Work |
+| Program Android for Work | Administracja > Zarządzanie urządzeniami przenośnymi > Android for Work | Rejestrowanie urządzenia > Rejestracja systemu Android |
 | Warunki i postanowienia | Zasady > Warunki i postanowienia | Rejestrowanie urządzeń > Warunki i postanowienia |
 Ustawienia aplikacji Portal firmy|Administracja > Portal firmy|**Zarządzaj** > Aplikacje mobilne<br> **Konfiguracja** > Znakowanie Portalu firmy
 

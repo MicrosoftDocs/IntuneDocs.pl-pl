@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3afe1ed48a21c26927b3686ae9a455ed8484e282
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 574880ae1ff7f734edcb02ebc89d7a0270064d4e
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34547407"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905975"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -135,8 +135,7 @@ Użytkownik końcowy otrzymuje monity dotyczące instalacji aplikacji programu V
 
 ## <a name="revoking-app-licenses-and-deleting-tokens"></a>Odwoływanie licencji aplikacji i usuwanie tokenów 
 
-<!-- 820863 -->  
-Dla danego urządzenia z zainstalowaną przynajmniej jedną aplikacją systemu iOS zakupioną w ramach programu zakupów zbiorczych (VPP, Volume-Purchase Program) możesz odwołać wszystkie skojarzone licencje oparte na urządzeniach dla tego urządzenia. Odwołanie licencji aplikacji nie spowoduje odinstalowania powiązanych aplikacji VPP z urządzenia. Aby odinstalować aplikację programu VPP i odzyskać licencję, należy zmienić typ przypisania aplikacji programu VPP na **Odinstaluj**. Jeśli usuniesz aplikację przypisaną do użytkownika, usługa Intune odzyska licencję użytkownika lub urządzenia i odinstaluje aplikację z urządzenia.
+Można odwołać wszystkie skojarzone licencje aplikacji licencje aplikacji systemu iOS w ramach programu Volume Purchase Program (VPP) na podstawie danego urządzenia, użytkownika lub aplikacji. Możesz powiadomić użytkowników, że aplikacja nie jest już do nich przypisana. Odwołanie licencji aplikacji nie spowoduje odinstalowania powiązanych aplikacji VPP z urządzenia. Aby odinstalować aplikację VPP i odzyskać licencję aplikacji przypisaną do użytkownika lub urządzenia, musisz zmienić akcję przypisywania na **Odinstaluj**. Gdy usuniesz aplikację przypisaną do użytkownika, usługa Intune odzyska licencję użytkownika lub urządzenia i odinstaluje aplikację z urządzenia. Liczba odzyskanych licencji zostanie odzwierciedlona w węźle **Licencjonowane aplikacje** w obciążeniu **Aplikacje** usługi Intune. Po odinstalowaniu aplikacji VPP i odzyskaniu licencji aplikacji można przypisać tę licencję do innego użytkownika lub urządzenia. 
 
 >[!NOTE]
 >Kiedy pracownik opuści firmę i przestanie być członkiem jakiejkolwiek grupy w usłudze AAD, usługa Intune pobierze wszystkie przypisane do użytkowników licencje aplikacji VPP dla systemu iOS.

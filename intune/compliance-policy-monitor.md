@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/18/2018
+ms.date: 6/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 33e42c821881a5cc7eb9e4be65f6f7e56263480e
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 5e9de6f1ac8bca1d65a94294d3b049dfccbe44c7
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232974"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905363"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -158,9 +158,27 @@ Ten raport umożliwia zapoznanie się z łączną liczbą urządzeń znajdujący
 
 Kliknięcie na pulpicie nawigacyjnym zgodności urządzeń kafelka Zgodność ustawień umożliwia przejście do określonego **stanu zgodności**, **aliasu adresu e-mail użytkownika**, **modelu urządzenia** i **lokalizacji** dla każdego urządzenia, które było objęte daną zasadą zgodności urządzeń.
 
+## <a name="view-status-of-device-policies"></a>Wyświetlanie stanu zasad dotyczących urządzenia
+
+Różne stany zasad można sprawdzać według platformy. Na przykład masz zasady zgodności systemu macOS. Chcesz wyświetlić urządzenia, na które wpływają te zasady, i dowiedzieć się, czy występują konflikty lub błędy.
+
+Ta funkcja jest uwzględniana w obszarze raportowania stanu urządzenia:
+
+1. Wybierz kolejno pozycje **Zgodność urządzenia** > **Zasady**. Zostanie wyświetlona lista zasad, w tym platforma, informacja o przypisaniu zasad i dalsze szczegóły.
+2. Wybierz zasadę > **Omówienie**. W tym widoku przypisanie zasad uwzględnia następujące stany:
+
+  - Sukces
+  - Error
+  - Konflikt
+  - Oczekiwanie
+  - Nie dotyczy
+
+3. Aby wyświetlić szczegóły urządzeń używających danych zasad, wybierz jeden z stanów. Na przykład wybierz pozycję **Powodzenie**. W następnym oknie jest wyświetlana lista szczegółów określonego urządzenia, w tym nazwa i stan jego wdrażania.
+
 ## <a name="how-intune-resolves-policy-conflicts"></a>Jak są rozwiązywane konflikty zasad usługi Intune
 Konflikty zasad mogą wystąpić, gdy na urządzeniu stosuje się wiele zasad usługi Intune. Jeśli ustawienia zasad nakładają się na siebie, usługa Intune rozwiązuje konflikty, używając następujących reguł:
 
 - Jeżeli sprzeczne ustawienia pochodzą z zasad konfiguracji usługi Intune i zasad zgodności, ustawienia w zasadach zgodności mają pierwszeństwo względem ustawień w zasadach konfiguracji. Dzieje się tak nawet wtedy, gdy ustawienia w zasadach konfiguracji są bardziej bezpieczne.
 
-- Jeśli wdrożono wiele zasad zgodności, usługa Intune użyje najbezpieczniejszych z nich.
+- Jeśli wdrożono wiele zasad zgodności, usługa Intune używa najbezpieczniejszych z nich.
+

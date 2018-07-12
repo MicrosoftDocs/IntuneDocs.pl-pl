@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f8517e9a9dd698e875214fe363d8e1246129b96a
-ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
+ms.openlocfilehash: 6bf9eaef010879835abb7cec57c2fbdce6aa1e0a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042715"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905873"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -47,7 +47,7 @@ Jako administrator usługi Intune możesz utworzyć i zaimportować plik z warto
 [Dowiedz się, jak znaleźć numer seryjny urządzenia marki Apple](https://support.apple.com/HT204308).<br>
 [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem Android](https://support.google.com/store/answer/3333000).
 
-## <a name="add-corporate-identifiers"></a>Dodawanie identyfikatorów firmy
+## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Dodawanie identyfikatorów firmy przy użyciu pliku CSV
 Aby utworzyć listę, utwórz listę wartości rozdzielonych przecinkami (.csv) zawierającą dwie kolumny, bez nagłówka. Dodaj identyfikatory IMEI lub numery seryjne w lewej kolumnie i szczegółowe informacje w prawej kolumnie. W jednym pliku csv można zaimportować tylko jeden typ identyfikatora: numer IMEI lub numer seryjny. Długość szczegółowych informacji nie może przekraczać 128 znaków. Są one przeznaczone tylko do użytku administracyjnego. Szczegóły nie są wyświetlane na urządzeniu. Aktualne ograniczenie wynosi 5000 wierszy na plik csv.
 
 **Przekaż plik csv zawierający numery seryjne** — utwórz listę wartości rozdzielanych przecinkami (csv) w dwóch kolumnach bez nagłówka i ogranicz listę do 5000 urządzeń lub 5 MB na plik csv.
@@ -70,19 +70,33 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 >Numery seryjne zgłaszane przez urządzenie do usługi Intune mogą być niezgodne z identyfikatorami wyświetlanymi w menu Ustawienia/Informacje o systemie Android na urządzeniu. Sprawdź typ numeru seryjnego podanego przez producenta urządzenia.
 >Próba przekazania pliku z numerami seryjnymi zawierającymi kropki (.) spowoduje niepowodzenie przekazywania. Numery seryjne z kropkami nie są obsługiwane.
 
-### <a name="add-a-csv-list-of-corporate-identifiers"></a>Dodawanie listy CSV identyfikatorów firmy
+### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Przekazywanie listy CSV identyfikatorów firmy
 
-1. W obszarze usługi [Intune w witrynie Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**, a następnie kliknij przycisk **Dodaj**.
+1. W obszarze usługi [Intune w witrynie Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Przekaż plik CSV**.
 
    ![Obszar roboczy identyfikatorów urządzeń firmowych z wyróżnionym przyciskiem Dodaj](./media/add-corp-id.png)
 
-2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**. Możesz określić, czy poprzednio zaimportowane numery powinny **zastąpić szczegóły istniejących identyfikatorów**.
+2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**.
 
-3. Kliknij ikonę folderu i określ ścieżkę do listy, którą chcesz zaimportować. Przejdź do pliku csv i wybierz przycisk **Dodaj**. Aby zobaczyć nowe identyfikatory urządzeń, możesz kliknąć pozycję **Odśwież**.
+3. Kliknij ikonę folderu i określ ścieżkę do listy, którą chcesz zaimportować. Przejdź do pliku CSV i wybierz pozycję **Dodaj**. 
+
+4. Jeśli plik CSV zawiera identyfikatory firmy, które znajdują się już w usłudze Intune, ale mają różne szczegóły, pojawi się okno podręczne **Przeglądanie zduplikowanych identyfikatorów**. Wybierz identyfikatory, które chcesz zastąpić w usłudze Intune, i wybierz przycisk **OK** w celu dodania identyfikatorów. Dla każdego identyfikatora zostanie porównany tylko pierwszy duplikat.
+
+## <a name="manually-enter-corporate-identifiers"></a>Ręczne wprowadzanie identyfikatorów firmy
+
+1. W obszarze usługi [Intune w witrynie Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Wprowadź ręcznie**.
+
+2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**.
+
+3. Wprowadź **identyfikator** i **szczegóły** dla każdego identyfikatora, który chcesz dodać. Po zakończeniu wprowadzania identyfikatorów wybierz pozycję **Dodaj**.
+
+5. Jeśli wprowadzono identyfikatory firmy, które znajdują się już w usłudze Intune, ale mają różne szczegóły, pojawi się okno podręczne **Przeglądanie zduplikowanych identyfikatorów**. Wybierz identyfikatory, które chcesz zastąpić w usłudze Intune, i wybierz przycisk **OK** w celu dodania identyfikatorów. Dla każdego identyfikatora zostanie porównany tylko pierwszy duplikat.
+
+Aby zobaczyć nowe identyfikatory urządzeń, możesz kliknąć pozycję **Odśwież**.
 
 Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć stan **Zarejestrowane** lub **Nie kontaktowano się**. Wartość **Nie kontaktowano się** oznacza, że z urządzeniem nigdy nie nawiązano połączenia w usłudze Intune.
 
-### <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
+## <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
 
 1. W obszarze usługi [Intune w witrynie Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**.
 2. Wybierz identyfikatory urządzeń do usunięcia, a następnie wybierz pozycję **Usuń**.
@@ -90,7 +104,7 @@ Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć s
 
 Usunięcie identyfikatora firmy zarejestrowanego urządzenia nie zmienia własności tego urządzenia. Aby zmienić własność urządzenia, przejdź do pozycji **Urządzenia**, wybierz urządzenie, wybierz pozycję **Właściwości** i zmień ustawienie **Własność urządzenia**.
 
-### <a name="imei-specifications"></a>Specyfikacje IMEI
+## <a name="imei-specifications"></a>Specyfikacje IMEI
 Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobile Equipment Identifier) można znaleźć w portalu [3GPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 
 ## <a name="change-device-ownership"></a>Zmienianie własności urządzeń

@@ -1,6 +1,6 @@
 ---
 title: Usuwanie danych firmowych z urządzeń przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
-description: Usuń dane firmowe z urządzenia lub wykonaj reset do ustawień fabrycznych w przypadku urządzeń z systemem Android, Android for Work, iOS, macOS lub Windows, korzystając z usługi Microsoft Intune. Ponadto możesz usunąć urządzenie z usługi Azure Active Directory.
+description: Usuń dane firmowe z urządzenia lub wykonaj resetowanie do ustawień fabrycznych w przypadku urządzeń z systemem Android, profilem służbowym systemu Windows, systemem iOS lub macOS albo urządzeń z systemem Windows, korzystając z usługi Microsoft Intune. Ponadto możesz usunąć urządzenie z usługi Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b5eadc4ee23a89624cde9f1246f64aafce0b06c
-ms.sourcegitcommit: 3284586d9260a66ce99029b7808e4807f8780d20
+ms.openlocfilehash: 326622c324f75e216db69bd850b707e0fc1c0679
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37091731"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906060"
 ---
 # <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych, usuwanie danych firmowych lub ręczne wyrejestrowywanie urządzenia
 
@@ -31,7 +31,7 @@ Za pomocą akcji **Usuń dane firmowe** lub **Resetowanie do ustawień fabryczny
 
 ## <a name="factory-reset"></a>Resetowanie do ustawień fabrycznych
 
-Akcja **Resetowanie do ustawień fabrycznych** przywraca domyślne ustawienia fabryczne na urządzeniu. W zależności od tego, czy pole wyboru **Zachowaj stan rejestracji i konto użytkownika** jest zaznaczone, dane użytkownika są zachowywane lub czyszczone.
+Akcja **Resetowanie do ustawień fabrycznych** przywraca domyślne ustawienia fabryczne na urządzeniu. Jeśli pole wyboru **Zachowaj stan rejestracji i konto użytkownika** zostało zaznaczone, dane użytkownika są zachowywane. W przeciwnym razie zawartość dysku jest bezpiecznie wymazywana.
 
 |Akcja Resetowanie do ustawień fabrycznych|**Zachowaj stan rejestracji i konto użytkownika**|Usunięto z zarządzania przez usługę Intune|Opis|
 |:-------------:|:------------:|:------------:|------------|
@@ -108,9 +108,13 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Usuń dane firmo
 |Odłączenie usługi Azure AD|Rekord usługi Azure AD jest usuwany.|Rekord usługi Azure AD jest usuwany.|
 |Kontakty |Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
-### <a name="android-for-work"></a>Program Android for Work
+### <a name="android-work-profile"></a>Profil służbowy systemu Android
 
-Usunięcie danych firmy z urządzenia z programem Android for Work spowoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Urządzenie jest wycofywane z zarządzania za pomocą usługi Intune. Resetowanie do ustawień fabrycznych nie jest obsługiwane w przypadku programu Android for Work.
+Usunięcie danych firmy z urządzenia z profilem służbowym systemu Android spowoduje usunięcie wszystkich danych, aplikacji i ustawień z profilu służbowego na tym urządzeniu. Urządzenie jest wycofywane z zarządzania za pomocą usługi Intune. Resetowanie do ustawień fabrycznych nie jest obsługiwane w przypadku profilów służbowych systemu Android.
+
+### <a name="android-enterprise-kiosk-devices"></a>Urządzenia kiosku w rozwiązaniu Android enterprise
+
+Urządzenia kiosku systemu Android można tylko resetować do ustawień fabrycznych. Z urządzeń tego typu nie można usuwać danych firmowych.
 
 
 ### <a name="macos"></a>macOS
@@ -150,6 +154,15 @@ Jeśli chcesz usunąć urządzenia z portalu usługi Intune, możesz usunąć je
 
 1. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
 2. Wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenia do usunięcia > **Usuń**.
+
+### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatyczne usuwanie urządzeń przy użyciu reguł oczyszczania
+Usługę Intune można skonfigurować tak, aby automatycznie usuwała urządzenia, które wyglądają na nieaktywne lub nieaktualne albo które nie odpowiadają. Te reguły oczyszczania stale monitorują spis urządzeń, aby zapewnić aktualność rekordów urządzeń. Urządzenia usunięte w ten sposób są usuwane z obszaru zarządzania usługi Intune.
+1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+2. Wybierz kolejno pozycje **Urządzenia** > **Reguły czyszczenia urządzeń** > **Tak**.
+3. W polu **Usuń urządzenia, które nie zostały zaewidencjonowane przez następującą liczbę dni** wprowadź liczbę z zakresu od 90 do 270.
+4. Wybierz polecenie **Zapisz**.
+
+
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Usuwanie urządzeń z portalu usługi Azure Active Directory
 
