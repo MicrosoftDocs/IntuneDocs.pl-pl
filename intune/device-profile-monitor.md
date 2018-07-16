@@ -1,11 +1,11 @@
 ---
 title: Wyświetlanie profilów urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Wyświetlanie szczegółów profilu konfiguracji urządzenia w usłudze Microsoft Intune i zarządzanie nimi oraz wyświetlanie graficznego wykresu liczby urządzeń przypisanych do profilu i urządzeń z przypisanymi lub wdrożonymi profilami.
+description: Wyświetlanie szczegółów profilu konfiguracji urządzenia w usłudze Microsoft Intune i zarządzanie nimi oraz wyświetlanie graficznego wykresu liczby urządzeń przypisanych do profilu i urządzeń z przypisanymi lub wdrożonymi profilami. Możesz też rozwiązywać problemy z profilami, które mają ustawienia powodujące konflikt.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2018
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bffb6832200379fca0221d8718afdebe06163980
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: dda53c7b21a743136bf1b16cc7bcf864c7b900fd
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744792"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905924"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorowanie profilów urządzeń w usłudze Microsoft Intune
 
@@ -68,6 +68,16 @@ Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. 
   - **Stan urządzenia**: lista urządzeń przypisanych do tego profilu oraz informacja o tym, czy profil został pomyślnie wdrożony. Można wybrać określone urządzenie, aby uzyskać więcej szczegółów, na przykład listę zainstalowanych aplikacji.
   - **Stan użytkownika**: wyświetla listę nazw użytkowników z urządzeniami, które wpływa ten profil, oraz informację o tym, czy profil został pomyślnie wdrożony. Można wybrać określonego użytkownika, aby uzyskać więcej szczegółów.
   - **Stan ustawień**: filtruje dane wyjściowe, pokazując poszczególne ustawienia w profilu i informację o tym, czy ustawienie zostało pomyślnie zastosowane.
+
+## <a name="view-conflicts"></a>Wyświetl konflikty
+
+W lokalizacji **Urządzenia**  >  **Wszystkie urządzenia** są wyświetlane wszelkie ustawienia powodujące konflikt. Gdy występuje konflikt, są także wyświetlane wszystkie profile konfiguracji, które zawierają to ustawienie. Administratorzy mogą używać tej funkcji, aby rozwiązywać problemy i naprawiać rozbieżności z profilami.
+
+1. W usłudze Intune wybierz pozycję **Urządzenia**  >  **Wszystkie urządzenia**, a następnie wybierz istniejące urządzenie z listy. Użytkownik końcowy może pobrać nazwę urządzenia z aplikacji Portal firmy.
+2. Wybierz pozycję **Konfiguracja urządzenia**. Zostaną wyświetlone wszystkie zasady konfiguracji dotyczące urządzenia.
+3. Wybierz zasady. Są tutaj wyświetlane wszystkie ustawienia w zasadach dotyczące urządzenia. Jeśli urządzenie ma stan **Konflikt**, zaznacz ten wiersz. W nowym oknie zostaną wyświetlone wszystkie profile i nazwy profili, które mają ustawienie powodujące konflikt.
+
+Znasz już ustawienie powodujące konflikt i zasady zawierające to ustawienie, co powinno ułatwić rozwiązanie konfliktu. 
 
 ## <a name="next-steps"></a>Następne kroki
 [Przypisywanie profilów użytkowników i urządzeń](device-profile-assign.md)  

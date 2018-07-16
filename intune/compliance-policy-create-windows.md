@@ -1,23 +1,23 @@
 ---
 title: Tworzenie zasad zgodności urządzeń z systemem Windows w usłudze Microsoft Intune — Azure | Microsoft Intune
-description: 'Utwórz lub skonfiguruj zasady zgodności urządzenia w usłudze Microsoft Intune w przypadku urządzeń z systemem Windows Phone 8.1, Windows 8.1 i nowszym oraz Windows 10 i nowszym. Sprawdź zgodność następujących elementów: minimalna i maksymalna wersja systemu operacyjnego, ustawianie ograniczeń i długości hasła, wymaganie funkcji BitLocker, ustawianie dopuszczalnego poziomu zagrożenia i włączanie szyfrowania w magazynie danych, z uwzględnieniem urządzeń Surface Hub i systemu Windows Holographic for Business.'
+description: 'Utwórz lub skonfiguruj zasady zgodności urządzenia w usłudze Microsoft Intune w przypadku urządzeń z systemem Windows Phone 8.1, Windows 8.1 i nowszym oraz Windows 10 i nowszym. Sprawdź zgodność następujących elementów: minimalna i maksymalna wersja systemu operacyjnego, ustawianie ograniczeń i długości hasła, wymaganie funkcji BitLocker, sprawdzanie rozwiązań antywirusowych innych firm, ustawianie dopuszczalnego poziomu zagrożenia i włączanie szyfrowania w magazynie danych, z uwzględnieniem urządzeń Surface Hub i systemu Windows Holographic for Business.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/24/2018
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6e5fb28e001dbe69f392d1ea730e415515fe4c5c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 8d06b5120bc3ff3e3e14d1c5b089bbebc7b53558
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744911"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909341"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -113,7 +113,9 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 - **Wymagaj włączenia bezpiecznego rozruchu w urządzeniu**: po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostały zmodyfikowane, co spowodowało uszkodzenie ich podpisu, system nie uruchomi się.
 - **Wymagaj integralności kodu**: integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Sprawdza także, czy plik systemowy został zmodyfikowany przez złośliwe oprogramowanie uruchomione przez konto użytkownika z uprawnieniami administratora.
 
-Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) (Zaświadczanie o kondycji CSP), aby uzyskać szczegółowe informacje o sposobie działania usługi HAS.
+Aby uzyskać szczegółowe informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
+
+Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Windows Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
@@ -164,6 +166,11 @@ Zobacz temat [Health Attestation CSP](https://docs.microsoft.com/windows/client-
 #### <a name="encryption"></a>Szyfrowanie
 
 - **Szyfrowanie magazynu danych na urządzeniu**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
+
+#### <a name="device-security"></a>Zabezpieczenia urządzeń
+
+- **Oprogramowanie antywirusowe**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
+- **Program antyszpiegowski**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
 
 ### <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
 

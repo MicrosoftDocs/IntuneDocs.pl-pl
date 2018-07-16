@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a32eb1d65710bf09d61c0846a8d949d5cd99ed2
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: b18a55d7bd37ab32f6b2f64eee00489389ea323d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216330"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905227"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 
@@ -35,7 +35,7 @@ Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządze
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Przykład scenariusza menedżera rejestracji urządzeń
 
-Restauracja potrzebuje 50 tabletów do punktów sprzedaży dla swoich kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy konto menedżera rejestracji urządzeń i dodaje do niego kierownika restauracji. W efekcie kierownik ma teraz możliwości konta DEM. Kierownik może teraz zarejestrować 50 tabletów przy użyciu poświadczeń DEM.
+Restauracja potrzebuje 50 tabletów do punktów sprzedaży dla swoich kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy nowe konto menedżera rejestracji urządzeń dla kierownika restauracji.  To konto jest osobne od podstawowego konta kierownika i używane wyłącznie na potrzeby rejestracji udostępnionych urządzeń przy użyciu usługi Intune. Kierownik może teraz zarejestrować 50 tabletów przy użyciu poświadczeń DEM.
 
 Menedżerami rejestracji urządzeń mogą być tylko użytkownicy w witrynie [Azure Portal](https://portal.azure.com). Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
 
@@ -54,7 +54,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
   - Użytkownicy nie mogą używać aplikacji z programu Apple Volume Purchase Program (VPP) z licencjami użytkowników ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
   - (Dotyczy tylko systemu iOS) Jeśli do celów rejestrowania urządzeń z systemem iOS zostanie użyta metoda DEM, nie będzie można użyć do rejestrowania urządzeń programu Apple Configurator, programu Device Enrollment Program (DEP) firmy Apple ani programu Apple School Manager (ASM).
-  - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z programem Android for Work, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń może być zarejestrowane maksymalnie 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
+  - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z profilami służbowymi systemu Android, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń może być zarejestrowane maksymalnie 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
   - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń.
   - Każde urządzenie wymaga licencji urządzenia. Dowiedz się więcej o [licencjach użytkowników i urządzeń](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 

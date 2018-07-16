@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 777cfa7d387c2bd19d529dbfc6d1aeab5dbad67e
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: fb81e070542248f585717564f0a609a512389ae2
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190762"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905074"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -195,14 +195,14 @@ Główna różnica w przypadku korzystania z zasad zgodności urządzeń w witry
 
 Zasady zgodności urządzeń tworzone w [klasycznym portalu Azure](https://manage.microsoft.com) nie są dostępne w [witrynie Azure Portal](https://portal.azure.com). Nadal jednak będą one stosowane dla użytkowników i będzie możliwe zarządzanie nimi za pośrednictwem klasycznego portalu Azure.
 
-Aby korzystać z funkcji dotyczących zgodności urządzeń w witrynie Azure Portal, musisz utworzyć tam nowe zasady zgodności urządzeń. Jeśli w witrynie Azure Portal przypiszesz zasady zgodności urządzeń do użytkownika, do którego zostały również przypisane zasady zgodności urządzeń z klasycznego portalu Azure, to zasady zgodności urządzeń z witryny Azure Portal będą mieć pierwszeństwo przed zasadami utworzonymi w klasycznym portalu Azure.
+Aby korzystać z funkcji dotyczących zgodności urządzeń w witrynie Azure Portal, musisz utworzyć tam nowe zasady zgodności urządzeń. Jeśli w witrynie Azure Portal przypiszesz zasady zgodności urządzeń do użytkownika, do którego zostały również przypisane zasady zgodności urządzeń z portalu klasycznego, to zasady zgodności urządzeń z witryny Azure Portal będą mieć pierwszeństwo przed zasadami utworzonymi w portalu klasycznym.
 
 ## <a name="next-steps"></a>Następne kroki
 
 - Utwórz zasady zgodności urządzeń dla następujących platform:
 
   - [Android](compliance-policy-create-android.md)
-  - [Android for Work](compliance-policy-create-android-for-work.md)
+  - [Profil służbowy systemu Android](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows](compliance-policy-create-windows.md)

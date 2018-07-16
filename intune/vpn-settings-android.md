@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6753e0232548d862b46a273f1be0105ad7f16d63
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 7f52c43f8918589c1b66034ad68908f4d5ddba6d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831949"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905125"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune 
 
@@ -30,7 +30,7 @@ Ten artykuł zawiera informacje dotyczące ustawień usługi Intune, za pomocą 
 Możesz skonfigurować ustawienia sieci VPN dla następujących platform:
 
 - [Android](#android-vpn-settings)
-- [Android for Work](#android-for-work-vpn-settings)
+- [Urządzenia z profilami służbowymi systemu Android](#android-for-work-vpn-settings)
 
 W zależności od wybranych ustawień niektórych wartości z poniższej listy nie będzie można skonfigurować.
 
@@ -51,7 +51,7 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 - **Odcisk palca** (tylko dla Check Point Capsule VPN) — określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, używany do sprawdzenia, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, wyświetla monit dotyczący zaufania do serwera sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca (użytkownik samodzielnie weryfikuje odcisk palca i wybiera opcję zaufania, aby nawiązać połączenie).
 - **Podaj pary klucza i wartości dla atrybutów sieci VPN Citrix** (tylko dla Citrix) — wprowadź pary klucza i wartości dostarczone przez dostawcę Citrix, aby skonfigurować właściwości połączenia sieci VPN.
 
-## <a name="android-for-work-vpn-settings"></a>Ustawienia sieci VPN dla programu Android for Work
+## <a name="android-work-profile-device-vpn-settings"></a>Ustawienia sieci VPN urządzeń z profilami służbowymi systemu Android
 
 **Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
 - **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą. Przykłady: **192.168.1.1**, **vpn.contoso.com**.

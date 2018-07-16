@@ -15,17 +15,20 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3212d1a3d3454542dd9d34409fc788558f2d7eed
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: f03c60c12bfd759c738de50d320787bf4b85f99d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909188"
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Jako administrator usługi Intune możesz zarządzać urządzeniami z systemem Android, w tym urządzeniami z systemem Samsung Knox Standard. Możesz również zarządzać profilem służbowym [na urządzeniach z programem Android for Work](#enable-enrollment-of-android-for-work-devices).
+Jako administrator usługi Intune możesz zarządzać następującymi urządzeniami z systemem Android:
+- Urządzenia z systemem Android, w tym urządzenia z systemem Samsung Knox Standard.
+- Urządzenia z rozwiązaniem Android enterprise, w tym [urządzenia z profilem służbowym Android](#enable-enrollment-of-android-for-work-devices) i urządzenia kiosku z systemem Android.
 
 Urządzenia z systemem Samsung Knox Standard są obsługiwane w przypadku zarządzania wieloma użytkownikami za pomocą usługi Intune. Oznacza to, że użytkownicy mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane. Po zalogowaniu się użytkownicy otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.
 
@@ -35,87 +38,25 @@ Aby przygotować się do zarządzania urządzeniami przenośnymi, należy ustawi
 
 ## <a name="set-up-android-enrollment"></a>Konfiguracja rejestrowania urządzeń z systemem Android
 
-Domyślnie usługa Intune zezwala na rejestrację urządzeń z systemem Android i Samsung Knox Standard.
+Domyślnie usługa Intune zezwala na rejestrację urządzeń z systemem Android i Samsung Knox Standard. Po spełnieniu wymagań wstępnych administratorzy muszą jedynie [poinformować użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android.md).
 
-Aby zablokować rejestrowanie urządzeń z systemem Android lub tylko urządzeń z systemem Android będących własnością użytkowników, zobacz [Ustawianie ograniczeń typu urządzeń](enrollment-restrictions-set.md).
-
-Aby włączyć zarządzanie urządzeniami, użytkownicy muszą zarejestrować urządzenia, pobierając aplikację Portal firmy usługi Intune (dostępną w usłudze Google Play), a następnie otwierając aplikację i postępując zgodnie z instrukcjami. W odniesieniu do zarządzanych urządzeń z systemem Android możesz [przypisywać zasady zgodności](compliance-policy-create-android.md), [zarządzać aplikacjami](app-management.md) i wykonywać inne czynności.
-
-## <a name="enable-enrollment-of-android-for-work-devices"></a>Włączanie rejestracji urządzeń z programem Android for Work
-
-Aby włączyć zarządzanie profilem służbowym na urządzeniach [obsługujących program Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), dodaj powiązanie programu Android for Work do usługi Intune. Jeśli chcesz zarejestrować urządzenia w programie Android for Work, ale zostały one już zarejestrowane jako zwykłe urządzenia z systemem Android, musisz wyrejestrować te urządzenia i ponownie je zarejestrować.
-
-W przypadku rejestrowania urządzeń z programem Android for Work za pomocą konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) na jednym koncie można zarejestrować maksymalnie 10 urządzeń.
-
-Aby uzyskać więcej informacji, zobacz artykuł [Data Intune sends to Google (Dane wysyłane przez usługę Intune do firmy Google)](data-intune-sends-to-google.md).
-
-## <a name="add-android-for-work-binding-for-intune"></a>Dodawanie powiązania programu Android for Work dla usługi Intune
-
-> [!NOTE]
-> Ze względu na interakcję między domenami firm Google i Microsoft ten krok może wymagać dostosowania ustawień przeglądarki, aby pomyślnie zakończyć akcję.  Upewnij się, że adresy „portal.azure.com” i „play.google.com” znajdują się w tej samej strefie zabezpieczeń w przeglądarce.
-
-1. **Konfigurowanie funkcji zarządzania urządzeniami mobilnymi w usłudze Intune**<br>
-Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządzeniami mobilnymi przez [skonfigurowanie jako urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md) usługi **Microsoft Intune**.
-2. **Konfigurowanie powiązania programu Android for Work**<br>
-    
-   a. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal), wybierz pozycje **Rejestrowanie urządzenia** > **Rejestrowanie systemu Android** > **Zarządzany sklep Google Play**.  Jeśli używasz niestandardowej roli administratora usługi Intune, dostęp wymaga uprawnień odczytu i aktualizacji w organizacji.
-   
-   ![Ekran rejestracji programu Android for Work](./media/android-work-bind.png)
-
-   b. Wybierz pozycję **Zgadzam się**, aby udzielić firmie Microsoft uprawnień do [wysłania informacji o użytkowniku i urządzeniu do firmy Google](data-intune-sends-to-google.md). 
-   
-   c. Wybierz pozycję **Uruchom usługę Google, aby połączyć teraz** w celu otwarcia witryny internetowej aplikacji Android for Work w sklepie Google Play. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
-  
-   d. **Logowanie do usługi Google**<br>
-   Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania programu Android for Work dla tej dzierżawy. Jest to konto Google używane przez administratorów IT organizacji do zarządzania aplikacjami i ich publikowania w konsoli Play for Work. Możesz użyć istniejącego konta Google lub utworzyć nowe konto.  Wybrane konto nie może być skojarzone z domeną G-Suite.
-
-   e. **Podawanie szczegółów dotyczących organizacji**<br>
-   Podaj nazwę firmy w polu **Organization name** (Nazwa organizacji). W polu **Enterprise mobility management (EMM) provider** (Dostawca usługi zarządzania mobilnością w przedsiębiorstwie (EMM)) powinna być wyświetlona wartość **Microsoft Intune**. Wyraź zgodę na umowę programu Android for Work, a następnie wybierz pozycję **Confirm** (Potwierdź). Twoje żądanie zostanie przetworzone.
-
-## <a name="specify-android-for-work-enrollment-settings"></a>Określanie ustawień rejestracji programu Android for Work
-Program Android for Work jest obsługiwany tylko na niektórych urządzeniach z systemem Android. Zobacz temat [Wymagania Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22) (program Google). Każde urządzenie, które obsługuje program Android for Work, obsługuje także konwencjonalne zarządzanie systemem Android. Usługa Intune pozwala określić, jak w ramach [ograniczeń rejestracji](enrollment-restrictions-set.md) powinny być zarządzane urządzenia, które obsługują program Android for Work.
-
-- **Blokuj (ustawienie domyślne)**: wszystkie urządzenia z systemem Android, w tym urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako konwencjonalne urządzenia z systemem Android.
-- **Zezwalaj**: wszystkie urządzenia, które obsługują program Android for Work, zostaną zarejestrowane jako urządzenia z programem Android for Work. Każde urządzenie z systemem Android, które nie obsługuje programu Android for Work, zostanie zarejestrowane jako konwencjonalne urządzenie z systemem Android.
-
-## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Zatwierdzanie aplikacji Portal firmy w zarządzanym sklepie Google Play
-Należy najpierw zatwierdzić aplikację Portal firmy dla systemu Android w zarządzanym sklepie Google Play, aby zapewnić, że będzie ona otrzymywać automatyczne aktualizacje aplikacji. Jeśli ta aplikacja nie zostanie zatwierdzona, aplikacja Portal firmy po pewnym czasie stanie się nieaktualna i może nie otrzymywać ważnych poprawek błędów i nowych funkcji wydawanych przez firmę Microsoft.
-
-Wykonaj następujące kroki, aby zatwierdzić aplikację Portal firmy usługi Intune:
-
-1.  Przejdź do aplikacji Portal firmy w [zarządzanym sklepie Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
-2.  Zaloguj się do zarządzanego sklepu Google Play za pomocą tego samego konta, którego użyto do skonfigurowania powiązania na potrzeby programu Android for Work.
-3.  Kliknij pozycję **Zatwierdź**, co spowoduje otwarcie nowego okna dialogowego.
-4.  Przejrzyj uprawnienia w tym oknie dialogowym, a następnie kliknij przycisk **Zatwierdź**. Jest to konieczne, aby zezwolić na te uprawnienia w celu umożliwienia aplikacji Portal firmy zarządzanie profilem służbowym na urządzeniu.
-5.  Wybierz pozycję **Utrzymuj zatwierdzenie, gdy aplikacja żąda nowych uprawnień**, a następnie kliknij przycisk **Zapisz**.
-
-<!--  ## Next steps for Android for Work
-After configuring the Android for Work binding and settings, you can do the following:
-- [Deploy Android for Work apps](android-for-work-apps.md)
-- [Add Android for Work configuration policies](android-for-work-policy-settings-in-microsoft-intune.md)  -->
-
-## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia w celu uzyskania dostępu do zasobów firmy
-
-Poinformuj użytkowników, aby przeszli do usługi Google Play, aby pobrać aplikację Portal firmy usługi Intune, a następnie otworzyli aplikację i postępowali zgodnie z instrukcjami w celu zarejestrowania urządzenia. W trakcie procesu rejestracji użytkownicy są informowani, czego mogą oczekiwać, a także co administratorzy IT mogą i czego nie mogą wyświetlać na swoich urządzeniach.
-
-Można także wysłać im link do kroków rejestracji online: [Rejestrowanie urządzenia z systemem Android w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android).
+Po wykonaniu rejestracji przez użytkownika można zacząć zarządzać jego urządzeniami w usłudze Intune, w tym [przypisywać zasady zgodności](compliance-policy-create-android.md), [zarządzać aplikacjami](app-management.md) i nie tylko.
 
 Aby uzyskać informacje o innych zadaniach użytkowników, zobacz następujące artykuły:
 
 - [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](end-user-educate.md)
 - [Korzystanie z urządzenia z systemem Android i usługi Intune](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
-## <a name="unbind-your-android-for-work-administrative-account"></a>Usuwanie powiązania konta administracyjnego programu Android for Work
+Aby zablokować rejestrowanie urządzeń z systemem Android lub tylko urządzeń z systemem Android będących własnością użytkowników, zobacz [Ustawianie ograniczeń typu urządzeń](enrollment-restrictions-set.md).
 
-Możesz wyłączyć rejestrację programu Android for Work i zarządzanie nim. Wybranie pozycji **Usuń powiązanie** w konsoli administracyjnej usługi Intune usuwa wszystkie zarejestrowane urządzenia z programem Android for Work z rejestracji. Usuwa także relacje między kontem programu Android for Work a usługą Intune.
+## <a name="set-up-android-enterprise-enrollment"></a>Konfigurowanie rejestracji rozwiązania Android enterprise
 
-### <a name="to-unbind-an-android-for-work-account"></a>Jak usunąć powiązanie konta programu Android for Work
+Android enterprise to zestaw funkcji i usług dostępnych na urządzeniach z systemem Android, które oddzielają osobiste aplikacje i dane od profilu służbowego zawierającego służbowe aplikacje i dane. Urządzenia z rozwiązaniem Android enterprise obejmują urządzenia z profilem służbowym i kioski. 
 
-1. **Usuwanie powiązania programu Android for Work**<br>
-    Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.  W okienku **Intune** wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w programie Android for Work**, a następnie wybierz pozycję **Usuń powiązanie**.
+Aby skonfigurować rejestrację urządzeń z rozwiązaniem Android enterprise, należy najpierw [połączyć rozwiązanie Android enterprise z usługą Intune](connect-intune-android-enterprise.md). Po ukończeniu tego kroku można wykonać następujące czynności:
 
-2. **Wyrażanie zgody na usunięcie powiązania programu Android for Work**<br>
-  Wybierz pozycję **Tak**, aby usunąć powiązanie i wyrejestrować wszystkie urządzenia z programem Android for Work z usługi Intune.
+[Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
+[Konfigurowanie rejestracji kiosków z systemem Android](android-kiosk-enroll.md)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Środowisko użytkownika końcowego podczas rejestrowania urządzenia z rozwiązaniem Samsung Knox
 Podczas rejestrowania urządzeń z rozwiązaniem Samsung Knox należy uwzględnić kilka zagadnień:

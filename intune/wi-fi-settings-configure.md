@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fb4d9fc6f0f0609062c408fd85921c1f86bd7303
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e2dba6e0d1c50790c8c2c2bf287695ab67fdb972
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832313"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905335"
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Załóżmy, że zainstalowano nową sieć Wi-Fi o nazwie Sieć Wi-Fi firmy Conto
 Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
 
 - System Android 4 lub nowszy
-- Program Android for Work
+- Profile służbowe systemu Android
 - System iOS 8.0 i nowsze
 - macOS (Mac OS X 10.11 lub nowszy)
 
@@ -55,7 +55,7 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
 4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu sieci Wi-Fi.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia sieci Wi-Fi. Obecnie dla ustawień sieci Wi-Fi można wybrać jedną z następujących platform:
     - **Android**
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -69,7 +69,7 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
 
    Profil **Importowanie sieci Wi-Fi** (dla systemu Windows 8.1 i nowszego) pozwala zaimportować ustawienia sieci Wi-Fi jako plik XML wyeksportowany wcześniej z innego urządzenia.
 1. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Ustawienia systemu Android i programu Android for Work](wi-fi-settings-android.md)
+    - [Ustawienia systemu Android i profilu służbowego w systemie Android](wi-fi-settings-android.md)
     - [Ustawienia systemu iOS](wi-fi-settings-ios.md)
     - [macOS settings](wi-fi-settings-macos.md) (Ustawienia systemu macOS)
     - [Ustawienia systemu Windows 8.1 i nowszego](wi-fi-settings-import-windows-8-1.md) (w tym systemu Windows Holographic for Business)

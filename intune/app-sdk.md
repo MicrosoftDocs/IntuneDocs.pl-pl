@@ -1,27 +1,20 @@
----
-title: Korzyści z zestawu SDK aplikacji usługi Intune
-titlesuffix: Microsoft Intune
-description: Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi za pomocą usługi Microsoft Intune.
-keywords: ''
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 05/15/2018
-ms.topic: article
-ms.prod: ''
-ms.service: microsoft-intune
-ms.technology: ''
-ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-ms.reviewer: aanavath
-ms.suite: ems
+--
+# <a name="required-metadata"></a>wymagane metadane
+
+title: Korzyści z zestawu SDK aplikacji usługi Intune titlesuffix: Microsoft Intune description: Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi umożliwiające zarządzanie takimi aplikacjami za pomocą usługi Microsoft Intune.
+keywords: author: Erikre ms.author: erikre manager: dougeby ms.date: 05/15/2018 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
+
+# <a name="optional-metadata"></a>opcjonalne metadane
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>audience:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: aanavath ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.openlocfilehash: 33e1cb6953891fa6d62841d10bc8011768938ee1
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223581"
+
 ---
+
 # <a name="intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Intune
 Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
 
@@ -70,3 +63,8 @@ Funkcja umożliwiająca stosowanie wielu tożsamości pomaga w rozwiązaniu prob
 Wielu użytkowników korzystających z urządzeń osobistych chce uzyskiwać dostęp do danych firmowych bez rejestrowania swoich urządzeń osobistych za pomocą dostawcy zarządzania urządzeniami przenośnymi (MDM). Ponieważ rejestracja w rozwiązaniu MDM wymaga globalnej kontroli nad urządzeniem, użytkownicy często mają wątpliwości przed przekazaniem swojej firmie kontroli nad ich urządzeniami osobistymi.
 
 Ochrona aplikacji bez rejestracji urządzeń umożliwia usłudze Microsoft Intune wdrożenie zasad ochrony aplikacji bezpośrednio w aplikacji, bez konieczności wdrażania zasad za pomocą kanału zarządzania urządzeniami.
+
+### <a name="on-demand-application-vpn-connections-with-citrix-mvpn"></a>Połączenia sieci VPN na żądanie aplikacji z użyciem technologii Citrix mVPN 
+Urządzeniami i aplikacjami można zarządzać przy użyciu kombinacji usług Citrix XenMobile MDX i Microsoft Intune. To połączenie oznacza, że można zarządzać aplikacjami za pomocą zasad ochrony aplikacji w usłudze Intune przy równoczesnym użyciu technologii mVPN firmy Citrix. Integracja z oprogramowaniem Citrix jest dostępna w przypadku zestawu SDK aplikacji usługi Intune dla systemów iOS i Android oraz narzędzia opakowującego aplikacje usługi Intune dla systemów iOS i Android (z flagą -citrix).
+ 
+Aby dowiedzieć się więcej na temat rozwiązania Citrix MDX, zobacz [About the MDX Toolkit (Informacje o zestawie narzędzi MDX)](http://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Citrix MDX app wrapper for iOS (Narzędzie opakowujące aplikacje Citrix MDX dla systemu iOS)](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) i [Citrix MDX app wrapper for Android (Narzędzie opakowujące aplikacje Citrix MDX dla systemu Android)](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).

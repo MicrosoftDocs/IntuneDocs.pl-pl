@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b09a4d528a95d682bf12e6610480b1aa1bcbdb83
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6b68d7eda57d50c3a1cb55979590e8b07d9daf50
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31829329"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37904952"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
 
@@ -31,12 +31,13 @@ Akcja urządzenia **Uruchom ponownie** powoduje ponowne uruchomienie wybranego u
 
 - Windows — obsługiwana dla systemu Windows 8.1 i nowszego
 - Windows Phone — obsługiwana dla systemu Windows Phone 8.1 i nowszego
+- Urządzenia kiosku z systemem Android — obsługiwana
 - iOS — obsługiwana
 
     > [!Note]  
     > To polecenie wymaga trybu nadzorowanego urządzenia i prawa dostępu do **blokady urządzenia**. Urządzenie jest natychmiast uruchamiane ponownie. Urządzenia z systemem iOS zablokowane przy użyciu kodu dostępu nie dołączają ponownie do sieci Wi-Fi po ponownym uruchomieniu. Po ponownym uruchomieniu urządzenie może nie być w stanie nawiązać komunikacji z serwerem.
 - macOS — nieobsługiwana
-- Android — nieobsługiwana
+- Urządzenia z systemem Android i służbowymi profilami systemu Android — nieobsługiwana
 
 ## <a name="restart-a-device"></a>Ponowne uruchamianie urządzenia
 

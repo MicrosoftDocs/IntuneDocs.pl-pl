@@ -14,12 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2277da45ad1404269571f36dec0c16443409b39f
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 85f11e3a9bfd43affde35806d9aeaf40dcbfe03d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744707"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906196"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem Android w usłudze Intune
 
@@ -77,9 +77,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 - **Skanowanie aplikacji pod kątem zagrożeń**: wymaga włączenia w systemie Android funkcji **Weryfikuj aplikacje**.
 
   > [!NOTE]
-  > Na platformie systemu Android w starszej wersji ta funkcja jest ustawieniem zgodności. Usługa Intune może tylko sprawdzić, czy to ustawienie zostało włączone na poziomie urządzenia. W urządzeniach z profilami służbowymi (Android for Work) to ustawienie można znaleźć w obszarze ustawień zasad konfiguracji. Umożliwia to administratorom włączenie ustawienia dla urządzenia.
+  > Na platformie systemu Android w starszej wersji ta funkcja jest ustawieniem zgodności. Usługa Intune może tylko sprawdzić, czy to ustawienie zostało włączone na poziomie urządzenia. Na urządzeniach z profilami służbowymi systemu Android to ustawienie można znaleźć w obszarze ustawień zasad konfiguracji. Umożliwia to administratorom włączenie ustawienia dla urządzenia.
 
-  Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, można włączyć opcję **Skanowanie aplikacji pod kątem zagrożeń** dla zarejestrowanych urządzeń. Ustanów profil urządzenia i wymagaj ustawienia zabezpieczeń systemu. Aby uzyskać więcej informacji, zobacz temat [Ustawienia ograniczeń urządzenia służbowego w usłudze Microsoft Intune](device-restrictions-android-for-work.md).
+  Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, można włączyć opcję **Skanowanie aplikacji pod kątem zagrożeń** dla zarejestrowanych urządzeń. Ustanów profil urządzenia i wymagaj ustawienia zabezpieczeń systemu. Aby uzyskać więcej informacji, zobacz [Ustawienia ograniczeń urządzenia z profilem służbowym systemu Android w usłudze Intune](device-restrictions-android-for-work.md).
 
 - **Zaświadczenie urządzeń SafetyNet**: wprowadź poziom [zaświadczenia rozwiązania SafetyNet](https://developer.android.com/training/safetynet/attestation.html), którego warunki muszą zostać spełnione. Dostępne opcje:
   - **Nieskonfigurowany**

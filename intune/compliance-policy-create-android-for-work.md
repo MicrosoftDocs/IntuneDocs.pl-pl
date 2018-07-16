@@ -1,6 +1,6 @@
 ---
-title: Tworzenie zasad zgodności urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: W usłudze Microsoft Intune dla urządzeń z programem Android for Work można tworzyć i konfigurować zasady zgodności. Można wybrać, czy zezwolić na dostęp urządzeniom z wyłączonymi zabezpieczeniami systemu, ustawić dopuszczalny poziom zagrożenia, sprawdzić, czy jest zainstalowana aplikacja Google Play, wprowadzić minimalną i maksymalną wersję systemu operacyjnego, określić wymagania dotyczące hasła i zezwalać na aplikacje ładowane bezpośrednio.
+title: Tworzenie zasad zgodności profilu służbowego systemu Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: W usłudze Microsoft Intune dla urządzeń z profilami służbowymi systemu Android można tworzyć i konfigurować zasady zgodności. Można wybrać, czy zezwolić na dostęp urządzeniom z wyłączonymi zabezpieczeniami systemu, ustawić dopuszczalny poziom zagrożenia, sprawdzić, czy jest zainstalowana aplikacja Google Play, wprowadzić minimalną i maksymalną wersję systemu operacyjnego, określić wymagania dotyczące hasła i zezwalać na aplikacje ładowane bezpośrednio.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,24 +14,24 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c1d438aa7416b1629af7ab2b899afa06720e2b49
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047989"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905091"
 ---
-# <a name="add-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z programem Android for Work w usłudze Intune
+# <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z profilami służbowymi systemu Android w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności urządzeń z programem Android for Work w usłudze Intune określają reguły i ustawienia, które te urządzenia muszą spełniać, aby zostały uznane za zgodne. Można je wykorzystać do dostępu warunkowego, aby zezwolić na dostęp do zasobów firmy lub go zablokować. Można również pobrać raporty urządzeń i podjąć działania przewidziane w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla różnych platform w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń i wymagań wstępnych, zobacz temat [Wprowadzenie do zgodności urządzeń](device-compliance-get-started.md).
+Zasady zgodności urządzeń z profilami służbowymi systemu Android w usłudze Intune określają reguły i ustawienia, które te urządzenia muszą spełniać, aby zostały uznane za zgodne. Można je wykorzystać do dostępu warunkowego, aby zezwolić na dostęp do zasobów firmy lub go zablokować. Można również pobrać raporty urządzeń i podjąć działania przewidziane w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla różnych platform w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń i wymagań wstępnych, zobacz temat [Wprowadzenie do zgodności urządzeń](device-compliance-get-started.md).
 
 W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
 --------------------------
 
-|**ustawienie zasad**| **Android for Work** |
+|**ustawienie zasad**| **Profil służbowy systemu Android** |
 | --- | --- |
 | **Konfiguracja kodu PIN lub hasła** |  Poddane kwarantannie |
 | **Szyfrowanie urządzenia** |  Poddane kwarantannie |
@@ -51,7 +51,7 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 ## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. W polu **Platforma** wybierz opcję **Android for Work**. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień dla pól **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Gdy wszystko będzie gotowe, wybierz opcję **OK** i **Utwórz**.
+5. W polu **Platforma** wybierz opcję **Android enterprise**. Wybierz pozycję **Konfiguruj ustawienia** i wprowadź wartości ustawień **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Gdy wszystko będzie gotowe, wybierz opcję **OK** i **Utwórz**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -77,9 +77,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 #### <a name="threat-scan-on-apps"></a>Skanowanie aplikacji pod kątem zagrożeń
 
-W urządzeniach z profilami służbowymi (Android for Work) ustawienie **Skanowanie aplikacji pod kątem zagrożeń** można znaleźć w obszarze ustawień zasad konfiguracji. Administratorzy mają możliwość włączenia tego ustawienia dla urządzenia.
+W urządzeniach z profilami służbowymi systemu Android ustawienie **Skanowanie aplikacji pod kątem zagrożeń** można znaleźć w obszarze ustawień zasad konfiguracji. Administratorzy mają możliwość włączenia tego ustawienia dla urządzenia.
 
-Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, można włączyć opcję **Skanowanie aplikacji pod kątem zagrożeń** dla zarejestrowanych urządzeń. Ustanów profil urządzenia i wymagaj ustawienia zabezpieczeń systemu. Aby uzyskać więcej informacji, zobacz temat [Ustawienia ograniczeń urządzenia służbowego w usłudze Microsoft Intune](device-restrictions-android-for-work.md).
+Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, można włączyć opcję **Skanowanie aplikacji pod kątem zagrożeń** dla zarejestrowanych urządzeń. Ustanów profil urządzenia i wymagaj ustawienia zabezpieczeń systemu. Aby uzyskać więcej informacji, zobacz [Ustawienia ograniczeń urządzenia służbowego w usłudze Intune](device-restrictions-android-for-work.md).
 
 ## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 
@@ -106,13 +106,13 @@ Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, mo�
 
 ### <a name="encryption"></a>Szyfrowanie
 
-- **Wymagaj szyfrowania na urządzeniu przenośnym:** nie musisz konfigurować tego ustawienia, ponieważ urządzenia z programem Android for Work wymuszają szyfrowanie.
+- **Wymagaj szyfrowania na urządzeniu przenośnym:** nie musisz konfigurować tego ustawienia, ponieważ urządzenia z profilami służbowymi systemu Android wymuszają szyfrowanie.
 
 ### <a name="device-security"></a>Zabezpieczenia urządzeń
 
-- **Blokuj aplikacje z nieznanych źródeł**: nie musisz konfigurować tego ustawienia, ponieważ urządzenia z programem Android for Work zawsze ograniczają instalację z nieznanych źródeł.
+- **Blokuj aplikacje z nieznanych źródeł**: nie musisz konfigurować tego ustawienia, ponieważ urządzenia z profilami służbowymi systemu Android zawsze ograniczają instalację z nieznanych źródeł.
 - **Integralność środowiska uruchomieniowego aplikacji Portal firmy**: sprawdza, czy aplikacja Portal firmy ma zainstalowane domyślne środowisko uruchomieniowe, jest poprawnie podpisana, nie jest w trybie debugowania i została zainstalowana ze znanego źródła.
-- **Blokuj debugowanie USB na urządzeniu**: nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB na urządzeniach z programem Android for Work zostało już wyłączone.
+- **Blokuj debugowanie USB na urządzeniu**: nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB na urządzeniach z profilami służbowymi systemu Android zostało już wyłączone.
 - **Minimalny poziom poprawki bezpieczeństwa**: wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie `YYYY-MM-DD`.
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników

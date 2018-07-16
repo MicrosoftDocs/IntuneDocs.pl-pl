@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a1476ad4237b6355d0cb87fcc643bf0234e7f457
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: fbe55be15df9755c109ec7e8e8e23db3c27931b0
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744775"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905533"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -54,7 +54,7 @@ Przed skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
 
 - **Być zgodne** z zasadami zgodności urządzenia wdrożonymi na tym urządzeniu.
 
-- Jeśli warunki dostępu warunkowego nie są spełnione, podczas logowania zostanie wyświetlony jeden z następujących komunikatów:
+- Jeśli warunki dostępu warunkowego nie zostaną spełnione, podczas logowania zostanie wyświetlony jeden z następujących komunikatów:
     - Jeśli urządzenie nie zostało zarejestrowane w usłudze Intune ani Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem urządzenia w usłudze Azure Active Directory.
     - Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny sieci Web portalu firmy usługi Intune lub aplikacji portalu firmy, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
@@ -63,7 +63,7 @@ Przed skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
 - System Windows Phone 8.1 lub nowszy
 - Natywna aplikacja poczty e-mail w systemie iOS
 - Klienci poczty korzystający z protokołu EAS (np. Gmail w systemie Android 4 lub nowszym).
-- Klienci poczty korzystający z protokołu EAS **Urządzenia z programem Android for Work:** na urządzeniach z programem Android for Work są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z programem Android for Work, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako instalację wymaganą.
+- Klienci poczty korzystający z protokołu EAS **Urządzenia z profilami służbowymi systemu Android:** w urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako instalację wymaganą.
 
 > [!NOTE]
 > Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana. 

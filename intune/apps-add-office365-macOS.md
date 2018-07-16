@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 78158afeb9c12e8056f42066be78c37f962b4462
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bffd53030c23f38f0548cb5bccf82f6dd5e85779
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223615"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869506"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Przypisywanie usługi Office 365 do urządzeń z systemem macOS za pomocą usługi Microsoft Intune
 
-Typ *Aplikacja ze sklepu* ułatwia przypisywanie aplikacji usługi Office 365 do urządzeń z systemem macOS. Korzystając z tego typu aplikacji, można instalować programy Word, Excel, PowerPoint, Outlook i OneNote. Aby pomóc w zachowaniu bezpieczeństwa i aktualności aplikacji, dołączamy do nich program Microsoft AutoUpdate (MAU). Wybrane aplikacje są wyświetlane jako jedna aplikacja na liście aplikacji w konsoli usługi Intune.
+Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 2016 do urządzeń z systemem macOS. Korzystając z tego typu aplikacji, można instalować programy Word, Excel, PowerPoint, Outlook i OneNote. Aby pomóc w zachowaniu bezpieczeństwa i aktualności aplikacji, dołączamy do nich program Microsoft AutoUpdate (MAU). Wybrane aplikacje są wyświetlane jako jedna aplikacja na liście aplikacji w konsoli usługi Intune.
 
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
@@ -70,7 +70,7 @@ W tym kroku skonfigurujesz przypisania pakietu aplikacji.
 2. W okienku **Office 365** wybierz pozycję **Przypisania**.
 3. Aby dodać grupę, która będzie używać pakietu aplikacji, wybierz pozycję **Dodaj grupę**.  
     Zostanie wyświetlone okienko **Dodawanie grupy**.
-4. Ustaw pozycję **Typ przypisania** na wartość **Wymagane**.
+4. Ustaw dla pozycji **Typ przypisania** wartość **Wymagane** lub **Dostępne**.
 5. Przypisz pakiet do wybranych grup. Aby uzyskać więcej informacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](apps-deploy.md).
 
     >[!Note]

@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11f1a48b5b2dcff421603dd4538ff054d174fe66
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223411"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869376"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -47,7 +47,7 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarząd
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
 4. W okienku obciążenia **Aplikacje mobilne** w obszarze **Zarządzaj** wybierz pozycję **Aplikacje**.
 5. Wybierz pozycję **Dodaj**.
-6. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Office 365 Office** wybierz pozycję **Windows 10**.
+6. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
 
 Możesz teraz skonfigurować pakiet aplikacji.
 
@@ -71,15 +71,15 @@ W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zi
 2. W okienku **Informacje o pakiecie aplikacji** wykonaj następujące czynności:
     - **Nazwa pakietu**: wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis pakietu**: wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
-    - **Wydawca**: wprowadź nazwę wydawcy aplikacji.
+    - **Wydawca**: w roli wydawcy występuje firma Microsoft.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
     - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
-    - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład *Dział kadr*.
+    - **Deweloper**: w roli dewelopera występuje firma Microsoft.
+    - **Właściciel**: w roli właściciela występuje firma Microsoft.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Logo**: przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Logo**: logo usługi Office 365 jest wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.
 3. Wybierz przycisk **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurowanie ustawień aplikacji

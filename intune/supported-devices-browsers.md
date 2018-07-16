@@ -15,12 +15,12 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f468ff8115fde79bf92825f06c37ff8affabf125
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 938bcd352294a9875aaa3eef717ef3857211961a
+ms.sourcegitcommit: abc3d51923e55e8779a5d84f2fcab60d0a0d8645
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31033378"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37434270"
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Obsługiwane systemy operacyjne i przeglądarki
 
@@ -28,7 +28,7 @@ ms.locfileid: "31033378"
 
 Przed skonfigurowaniem usługi Microsoft Intune sprawdź obsługiwane systemy operacyjne i przeglądarki.
 
-Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz artykuł [Korzystanie z zarządzanych urządzeń do wykonania pracy](/intune-user-help/company-portal-frequently-asked-questions). Zapoznaj się też z informacjami o [użyciu przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
+Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](/intune-user-help/company-portal-frequently-asked-questions) i [Użycie przepustowości sieci przez usługę Intune](network-bandwidth-use.md) ([portal klasyczny](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Systemy operacyjne obsługiwane przez usługę Intune
 
@@ -38,12 +38,12 @@ Zarządzać możesz urządzeniami z następującymi systemami operacyjnymi:
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Obsługiwane urządzenia z systemem Samsung Knox Standard
 
-Aplikacja Portal firmy podejmuje próbę aktywacji systemu Samsung Knox podczas rejestracji w usłudze MDM tylko w przypadku, gdy urządzenie znajduje się na [liście obsługiwanych urządzeń z systemem Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Pozwala to uniknąć błędów aktywacji systemu Knox, które uniemożliwiają rejestrację w usłudze MDM. Urządzenia, które nie obsługują aktywacji systemu Samsung Knox, są rejestrowane jako standardowe urządzenia z systemem Android. Urządzenia firmy Samsung z określonymi numerami modelu mogą obsługiwać system Knox, podczas gdy inne go nie obsługują. Przed zakupem i wdrożeniem urządzeń firmy Samsung należy sprawdzić zgodność systemu Knox u odsprzedawcy urządzenia.
+W celu uniknięcia błędów aktywacji, które uniemożliwiają rejestrację w usłudze zarządzania urządzeniami przenośnymi, aplikacja Portal firmy podejmuje próbę aktywacji systemu Samsung Knox podczas rejestracji w usłudze MDM tylko w przypadku, gdy urządzenie znajduje się na [liście obsługiwanych urządzeń z systemem Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Urządzenia, które nie obsługują aktywacji systemu Samsung Knox, są rejestrowane jako standardowe urządzenia z systemem Android. Urządzenia firmy Samsung z określonymi numerami modelu mogą obsługiwać system Knox, podczas gdy inne go nie obsługują. Przed zakupem i wdrożeniem urządzeń firmy Samsung należy sprawdzić zgodność systemu Knox u odsprzedawcy urządzenia.
 
 > [!NOTE]
 > Rejestrowanie urządzeń z systemem Samsung Knox może wiązać się z koniecznością [włączenia dostępu do serwerów firmy Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
 
-Poniższa lista obejmuje modele urządzeń firmy Samsung, które nie obsługują systemu Knox i są rejestrowane jako urządzenia z natywnym systemem Android przez aplikację Portal firmy dla systemu Android:
+Modele urządzeń firmy Samsung z poniższej listy nie obsługują systemu Knox. Zostaną one zarejestrowane jako natywne urządzenia z systemem Android przez aplikację Portal firmy dla systemu Android:
 
 | **Nazwa urządzenia** | **Numery modelu urządzenia** |
 | --- | --- |
@@ -103,7 +103,7 @@ Dla tych portali obsługiwane są następujące przeglądarki:
 - Microsoft Internet Explorer 11
 - Safari (najnowsza wersja, tylko Mac)
 - Chrome (najnowsza wersja)
-- Mozilla Firefox z włączonym dodatkiem Silverlight [Dowiedz się więcej (wersje wcześniejsze niż wersja 52)](https://go.microsoft.com/fwlink/?linkid=836872)
+- Firefox (najnowsza wersja)
 
 
 

@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 78f50bc49f9d7a1261759ec5fb9a1cd7628c998c
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744605"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905108"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Tworzenie profilów sieci VPN w usłudze Intune
 
@@ -40,7 +40,7 @@ Zasady konfiguracji niestandardowych usługi Intune umożliwiają tworzenie prof
 
 Możesz utworzyć profile sieci VPN, korzystając z następujących typów połączeń:
 
-|Typ połączenia|Android<br>Program Android for Work|iOS|macOS|Windows Phone 8,1|Windows 8.1|Windows 10|
+|Typ połączenia|Android<br>Profile służbowe systemu Android|iOS|macOS|Windows Phone 8,1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
 |Automatyczny|Nie|Nie|Nie|Nie|Nie|Tak|
 |Check Point Capsule VPN|Tak|Tak|Tak|Tak|Tak|Tak|
@@ -68,21 +68,21 @@ Zapoznaj się z artykułem [Create a profile with custom settings (Tworzenie pro
 3. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 4. Podaj wartości **Nazwa** i **Opis** dla profilu sieci VPN.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia sieci VPN. Obecnie dla ustawień sieci VPN urządzenia można wybrać jedną z następujących platform:
-  - **Android**
-  - **Android for Work**
-  - **iOS**
-  - **macOS**
-  - **Windows Phone 8.1**
-  - **Windows 8.1 lub nowszy**
-  - **Windows 10 lub nowszy**
+   - **Android**
+   - **Android enterprise**
+   - **iOS**
+   - **macOS**
+   - **Windows Phone 8.1**
+   - **Windows 8.1 lub nowszy**
+   - **Windows 10 lub nowszy**
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Sieć VPN**.
 7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-  - [Ustawienia systemu Android i programu Android for Work](vpn-settings-android.md)
-  - [Ustawienia systemu iOS](vpn-settings-ios.md)
-  - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
-  - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-  - [Windows 8.1 settings](vpn-settings-windows-8-1.md) (Ustawienia systemu Windows 8.1)
-  - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
+   - [Ustawienia systemu Android i profilu służbowego w systemie Android](vpn-settings-android.md)
+   - [Ustawienia systemu iOS](vpn-settings-ios.md)
+   - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
+   - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
+   - [Windows 8.1 settings](vpn-settings-windows-8-1.md) (Ustawienia systemu Windows 8.1)
+   - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
 8. Gdy wszystko będzie gotowe, **utwórz** profil.
 
 Profil zostanie utworzony i wyświetlony na liście profilów. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).

@@ -15,12 +15,12 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da85b0087709a719cafaaf893c3188a3bf3148d8
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: a7c961be9789309fdea57d1a97073c4292b20149
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046285"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906077"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
@@ -86,7 +86,7 @@ Jeśli włączono [mapowanie grup urządzeń](device-group-mapping.md), aplikacj
 
 ## <a name="week-of-november-13-2017"></a>Tydzień 13 listopada 2017 r.
 
-### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Ulepszenia przepływu pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS w wersji 2.9.0 <!---1417174--->
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Ulepszenia przepływu pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS w wersji 2.9.0 <!-- 1417174 -->
 
 Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS. Używany język jest bardziej przyjazny dla użytkownika i tam, gdzie było to możliwe, ekrany zostały połączone. Ponadto język jest lepiej dostosowany do Twojej firmy, ponieważ w tekście instalatora używana jest jej nazwa.
 
@@ -145,7 +145,7 @@ Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy 
 |![02](./media/android_cp_enroll_02_before_1710.png)|![02](./media/android_cp_enroll_02_after_1710.png)|
 |![03](./media/android_cp_enroll_03_before_1710.png)|![03](./media/android_cp_enroll_03_after_1710.png)|
 
-Ulepszono dodatkowe kroki na urządzeniach z programem Android for Work.
+Ulepszono dodatkowe kroki na urządzeniach z profilem służbowym systemu Android.
 
 |Stary adres|Nowy adres|
 |---|---|

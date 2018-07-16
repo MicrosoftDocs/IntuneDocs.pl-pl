@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d11de1e20f46fb6e13d6d3ef5c9f4a9ee0f98c1
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223785"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906111"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -114,8 +114,8 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Monitorowanie aplik
 - **Znakowanie portalu firmy**: dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy. Aby uzyskać więcej informacji, zobacz:
     - [Konfiguracja portalu firmy](company-portal-app.md).
 - **Kategorie aplikacji**: dodawanie, przypinanie i usuwanie nazw kategorii aplikacji.
-- **Android for Work**: zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa. Aby uzyskać więcej informacji, zobacz:
-    - [Aplikacje programu Android for Work](apps-add-android-for-work.md).
+- **Profil służbowy systemu Android**: zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa. Aby uzyskać więcej informacji, zobacz:
+    - [Aplikacje profilu służbowego systemu Android](apps-add-android-for-work.md).
 
 ### <a name="help-and-support"></a>Pomoc i obsługa techniczna
 - **Pomoc i obsługa techniczna**: rozwiązywanie problemów, wnioskowanie o pomoc techniczną lub wyświetlanie stanu usługi Intune. Aby uzyskać więcej informacji, zobacz:

@@ -14,12 +14,12 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 89f8ddc105787bc7ff4f7cfc1e226d28589ecbbf
-ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
+ms.openlocfilehash: 9329a57ee7d47cb99a7c87326bb043c0a04c6313
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2018
-ms.locfileid: "31771809"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905210"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
@@ -43,7 +43,7 @@ Każdy z tych typów certyfikatów ma własne wymagania wstępne i wymagania dot
     - System iOS 8.0 i nowsze
     - System macOS 10.11 i nowsze
     - Android 4.0 i nowsze
-    - Program Android for Work
+    - Profil służbowy systemu Android
     - Windows 8.1 i nowsze
     - System Windows Phone 8.1 lub nowszy
     - System Windows 10 lub nowszy
@@ -52,7 +52,7 @@ Każdy z tych typów certyfikatów ma własne wymagania wstępne i wymagania dot
 
    - System iOS 8.0 i nowsze
    - Android 4.0 i nowsze
-   - Program Android for Work
+   - Profil służbowy systemu Android
    - System Windows 10 (Desktop i Mobile) i nowsze
 
    Profilu certyfikatu protokołu **SCEP** możesz użyć wyłącznie na urządzeniach z następującymi platformami:
@@ -84,7 +84,7 @@ Wyeksportuj certyfikat zaufanego głównego urzędu certyfikacji w formacie cert
 Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego certyfikatu.
 
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3 — Tworzenie profilów zaufanych certyfikatów
-Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Kroki związane z tworzeniem zaufanych certyfikatów są podobne dla każdej platformy urządzeń.
+Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Procedura tworzenia zaufanych certyfikatów jest podobna dla każdej platformy urządzeń.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -95,7 +95,7 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Obecnie dla ustawień certyfikatu można wybrać jedną z następujących platform:
 
     - **Android**
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

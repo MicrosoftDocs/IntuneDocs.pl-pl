@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9b17cb50ead094962196bb030c3a18e4119c6904
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7eee5baebb8373488999a5e75db5288e483379e5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31026333"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905822"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -39,14 +39,14 @@ Konkretne ograniczenia rejestracji, które możesz utworzyć, obejmują poniższ
 - Maksymalna liczba zarejestrowanych urządzeń.
 - Platformy urządzeń, które można zarejestrować:
   - Urządzenia z systemem Android.
-  - Android for Work.
+  - Profil służbowy systemu Android.
   - iOS.
   - macOS.
   - Windows.
-- Wersja systemu operacyjnego platformy dla systemów iOS, Android, Android for Work i Windows. (Można używać wyłącznie wersji systemu Windows 10. Pozostaw pole puste, jeśli dozwolone jest użycie systemu Windows 8.1).
+- Wersja systemu operacyjnego platformy dla systemów iOS, Android i Windows oraz profilu służbowego systemu Android. (Można używać wyłącznie wersji systemu Windows 10. Pozostaw pole puste, jeśli dozwolone jest użycie systemu Windows 8.1).
   - Minimalna wersja.
   - Maksymalna wersja.
-- Ogranicz urządzenia prywatne (tylko z systemem iOS, Android, Android for Work i macOS).
+- Ogranicz urządzenia prywatne (tylko z systemami iOS, Android i macOS lub profilem służbowym systemu Android).
 
 ## <a name="default-restrictions"></a>Ograniczenia domyślne
 
@@ -78,7 +78,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 5. Pod nazwą ograniczenia (w przypadku ograniczenia domyślnego **Wszyscy użytkownicy**) wybierz opcję **Platformy**. Wybierz pozycję **Zezwalaj** lub **Blokuj** dla każdej platformy na liście.
 6. Wybierz pozycję **Zapisz**.
 7. Pod nazwą ograniczenia (**Wszyscy użytkownicy** w przypadku ograniczenia domyślnego) wybierz opcję **Konfiguracje platformy**. Następnie wybierz minimalną i maksymalną **wersję** dla wymienionych platform. Obsługiwane wersje obejmują:
-    - systemy Android i Android for Work obsługują wersję major.minor.rev.build.
+    - Profil służbowy systemu Android obsługuje wersję major.minor.rev.build.
     - System iOS obsługuje wersję major.minor.rev.
     - System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10.
   Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, usługi Apple School Manager lub aplikacji Apple Configurator.
@@ -88,9 +88,9 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 
 
 >[!NOTE]
->- Jeśli zablokujesz rejestrację prywatnych urządzeń z systemem Android, urządzenia z programem Android for Work nadal będą mogły być rejestrowane.
->- Domyślnie ustawienia urządzeń programu Android for Work są takie same jak ustawienia urządzeń z systemem Android. Nie będzie tak w przypadku zmiany ustawień programu Android for Work.
->- Jeśli zablokujesz rejestrację urządzeń osobistych w programie Android for Work, będzie można rejestrować tylko firmowe urządzenia z systemem Android.
+>- Jeśli zablokujesz rejestrację prywatnych urządzeń z systemem Android, urządzenia z profilami służbowymi systemu Android nadal będą mogły być rejestrowane.
+>- Domyślnie ustawienia urządzeń z profilami służbowymi systemu Android są takie same jak ustawienia urządzeń z systemem Android. Nie będzie tak w przypadku zmiany ustawień profilu służbowego systemu Android.
+>- Jeśli zablokujesz rejestrację urządzeń osobistych z profilami służbowymi systemu Android, jako profile służbowe systemu Android będzie można rejestrować tylko firmowe urządzenia z systemem Android.
 
 ## <a name="set-device-limit-restrictions"></a>Ustawianie ograniczeń limitu urządzeń
 

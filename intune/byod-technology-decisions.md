@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 7fb86ae8d3163e14581ee495004b74f684d30cec
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0a080660fcc1b285e0ed00b76a94c2f0cc1ba40a
+ms.sourcegitcommit: c78923b0d5b320322c828b1bbea2deb9062e30d2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832771"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37844967"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Podejmowanie kluczowych decyzji technologicznych dotyczących włączania modelu BYOD za pomocą pakietu Microsoft Enterprise Mobility + Security
 
@@ -39,7 +39,7 @@ Można łatwo zachęcić użytkowników do rejestrowania swoich urządzeń w sys
 **Zgodność** — niektóre organizacje muszą zapewnić zgodność z przepisami lub innymi zasadami, które wymagają użycia określonych kontrolek zarządzania urządzeniami przenośnymi. Na przykład za pomocą zarządzania urządzeniami przenośnymi ma zostać wykonane szyfrowanie wszystkich danych na urządzeniu lub wygenerowanie raportu dotyczącego wszystkich aplikacji na urządzeniu.
 
 ## <a name="common-reasons-to-only-manage-the-apps-mam"></a>Typowe przyczyny zarządzania tylko aplikacjami (zarządzanie aplikacjami mobilnymi)
-Zarządzanie aplikacjami mobilnymi bez zarządzania urządzeniami przenośnymi jest bardzo popularne w organizacjach, w których obsługiwany jest model BYOD. Można zachęcić użytkowników do uzyskiwania dostępu do poczty e-mail z poziomu aplikacji Outlook Mobile, która obsługuje ochronę usługi zarządzanie aplikacjami mobilnymi, wdrażając zasady dostępu warunkowego w usłudze Exchange Online. Poniżej przedstawiono potencjalne przyczyny zarządzania jedynie aplikacjami na urządzeniach osobistych:
+Zarządzanie aplikacjami mobilnymi bez zarządzania urządzeniami przenośnymi jest bardzo popularne w organizacjach, w których obsługiwany jest model BYOD. Można zachęcić użytkowników do uzyskiwania dostępu do poczty e-mail z poziomu aplikacji Outlook Mobile, która obsługuje ochronę usługi zarządzania aplikacjami mobilnymi, wdrażając zasady dostępu warunkowego w usłudze Exchange Online. Poniżej przedstawiono potencjalne przyczyny zarządzania jedynie aplikacjami na urządzeniach osobistych:
 
 **Środowisko użytkownika** — rejestracja w usłudze zarządzania urządzeniami przenośnymi obejmuje wiele monitów ostrzegawczych (wymuszanych przez platformę), co często skutkuje podjęciem przez użytkownika decyzji o tym, aby nie uzyskiwać dostępu do swojej poczty e-mail na urządzeniu osobistym. W usłudze zarządzania aplikacjami mobilnymi użytkownikom wyświetlanych jest znacznie mniej monitów — jest to tylko jedno okienko wyskakujące z informacją o tym, że ma miejsce ochrona usługi zarządzania aplikacjami mobilnymi.
 

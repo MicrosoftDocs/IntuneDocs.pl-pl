@@ -1,42 +1,47 @@
 ---
 title: Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune
 titleSuffix: ''
-description: Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem Android i programem Android for Work.
+description: Informacje na temat konfiguracji ustawień sieci Wi-Fi w usłudze Intune dla urządzeń z systemem Android.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 7/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ee82da997a794bb2f65929a6fd9e0de0cc776a6e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0157815322488525a4ce7a3d6d2c90cbb8d3ff2a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831065"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905669"
 ---
-# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurowanie ustawień sieci Wi-Fi w usłudze Microsoft Intune dla urządzeń z systemem Android i programem Android for Work  
+# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-android-work-profiles-and-android-kiosk-devices"></a>Konfigurowanie ustawień sieci Wi-Fi w usłudze Microsoft Intune dla urządzeń z systemem Android, urządzeń z profilami służbowymi systemu Android i urządzeń kiosku z systemem Android
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Android i programem Android for Work.
+W tym artykule opisano ustawienia sieci Wi-Fi, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Android i profilami służbowymi systemu Android.
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Ustawienia sieci Wi-Fi dla profilu podstawowego i firmowego
 
-W przypadku urządzeń z systemem Android i programem Android for Work dostępne są następujące ustawienia sieci Wi-Fi:
+W przypadku urządzeń z systemem Android i profilami służbowymi systemu Android dostępne są następujące ustawienia sieci Wi-Fi:
 
 - **Nazwa sieci** — wprowadź nazwę połączenia sieci Wi-Fi. Jest to nazwa, którą użytkownicy zobaczą podczas przeglądania listy dostępnych połączeń na swoich urządzeniach.
 - **Identyfikator SSID** — identyfikator zestawu usług. Jest to prawdziwa nazwa sieci bezprzewodowej, z którą będą łączyć się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko nazwę sieci utworzoną wcześniej.
 - **Połącz automatycznie** — sprawia, że urządzenie łączy się zawsze, gdy znajdzie się w zasięgu tej sieci.
 - **Ukryta sieć** — uniemożliwia wyświetlanie tej sieci na liście dostępnych sieci na urządzeniu.
 
+## <a name="wi-fi-settings-available-for-enterprise-kiosk-profiles"></a>Ustawienia sieci Wi-Fi dostępne dla profili kiosku w przedsiębiorstwie
+- **Typ sieci Wi-Fi**: te ustawienia typu te sieci Wi-Fi są dostępne tylko w przypadku wybrania pozycji **Typ profilu**  >  **Tylko właściciel urządzenia**  >  **Wi-Fi**.
+    - **Otwarte (brak uwierzytelniania)**
+    - **Wstępnie udostępniony klucz WEP**: musisz podać hasło w polu **Klucz wstępny**.
+    - **Wstępnie udostępniony klucz WPA**: musisz podać hasło w polu **Klucz wstępny**
 
-## <a name="wi-fi-settings-for-enterprise-profiles-only"></a>Ustawienia sieci Wi-Fi tylko dla profilów firmowych
+## <a name="wi-fi-settings-for-android-legacy-and-android-work-profiles-only"></a>Ustawienia sieci Wi-Fi tylko dla starszych wersji systemu Android i profili służbowych systemu Android
 
 - **Typ protokołu EAP** — wybierz typ protokołu uwierzytelniania rozszerzonego (EAP, Extensible Authentication Protocol) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych:
     - **EAP-TLS**

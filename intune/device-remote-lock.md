@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45ab6434245c0dd412b2e9d23e394f72871a459a
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: ae114b9aec2794556a8162604a533c24c11bafba
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31829768"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905142"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Zdalne blokowanie urządzeń przy użyciu usługi Intune
 
@@ -31,12 +31,14 @@ Akcja urządzenia **Zdalne blokowanie** umożliwia zablokowanie urządzenia. Aby
 **Zdalne blokowanie** jest obsługiwane na następujących platformach:
 
 - Android
+- Urządzenia kiosku w rozwiązaniu Android enterprise
+- Urządzenia z profilami służbowymi w rozwiązaniu Android enterprise
 - iOS
 - macOS
 - Windows 10 Mobile
 - System Windows Phone 8.1 lub nowszy
 
-**Zdalne blokowanie** *nie* jest obsługiwane na następujących platformach:
+**Zdalne blokowanie** nie jest obsługiwane na następujących platformach:
 - Windows 10 Desktop
 
 > [!NOTE]

@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ce8791eaf72f5fda969401c19e72c6cc8b538d6
-ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
+ms.openlocfilehash: b514efa27a2a037f2fa0492ae519e6b8c774e369
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291465"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869546"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń
 
@@ -49,7 +49,7 @@ Aplikacje współdziałające z zestawem SDK aplikacji usługi Intune obsługuj�
 
 Usługa Intune może generować pewne tokeny i wysyłać je do aplikacji zarządzanej. Na przykład jeśli konfiguracja aplikacji obejmuje użycie ustawienia poczty e-mail, można dynamicznie dodać wiadomość e-mail przy użyciu tokenu. Wpisz nazwę oczekiwaną przez aplikację w polu **Nazwa**, a następnie wpisz `\{\{mail\}\}` w polu **Wartość**.
 
-Usługa Intune obsługuje następujące typy tokenów w ustawieniach konfiguracji:
+Usługa Intune obsługuje następujące typy tokenów w ustawieniach konfiguracji. Inne niestandardowe pary klucz/wartość nie są obsługiwane.
 
 - \{\{userprincipalname\}\}—na przykład **John@contoso.com**
 - \{\{mail\}\}—na przykład **John@contoso.com**

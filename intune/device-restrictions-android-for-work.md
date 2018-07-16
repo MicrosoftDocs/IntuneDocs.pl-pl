@@ -1,6 +1,6 @@
 ---
-title: Ograniczenia urządzeń korzystających z programu Android for Work w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Na urządzeniach z programem Android for Work możesz ograniczyć część ustawień, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth.
+title: Ograniczenia urządzeń korzystających z profili służbowych systemu Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: W urządzeniach z profilami służbowymi systemu Android możesz ograniczyć część ustawień, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,16 +12,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1db0e98318c05c7a1a854ed1af77d9d9654cc38
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 34c66aabe8c094b67805bcf0eeae38dbbbbff627
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046319"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905941"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Ustawienia ograniczeń urządzenia służbowego w usłudze Intune
 
-W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z programem Android for Work.
+W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z profilami służbowymi systemu Android.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -30,7 +30,7 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
 ### <a name="general-settings"></a>Ustawienia ogólne
 
 - **Kopiuj i wklejaj między profilem służbowym a osobistym**: steruje kopiowaniem i wklejaniem między aplikacjami służbowymi i osobistymi. Wybierz pozycję **Blokuj**, aby włączyć blokowanie. Wybierz pozycję **Nieskonfigurowane**, aby wyłączyć blokowanie.
-- **Udostępnianie danych między profilami służbowym i osobistym**: określ, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. To ustawienie określa akcje udostępniania w ramach aplikacji (na przykład opcję **Udostępnij…** w aplikacji Chrome) i nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. W odróżnieniu od [ustawień zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ustawieniami ograniczeń urządzenia zarządza się w portalu usługi Intune i używa partycji profilu służbowego programu Android for Work do izolowania zarządzanych aplikacji. Wybierz spośród opcji:
+- **Udostępnianie danych między profilami służbowym i osobistym**: określ, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. To ustawienie określa akcje udostępniania w ramach aplikacji (na przykład opcję **Udostępnij…** w aplikacji Chrome) i nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. W odróżnieniu od [ustawień zasad ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) ustawieniami ograniczeń urządzenia zarządza się w portalu usługi Intune i używa partycji profilu służbowego systemu Android do izolowania zarządzanych aplikacji. Wybierz spośród opcji:
   - **Domyślne ograniczenia udostępniania**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Google nie umożliwia blokowania udostępniania z profilu osobistego w profilu służbowym na urządzeniach z systemem w wersji 6.0 lub nowszej.
   - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego**: umożliwia włączenie wbudowanej funkcji systemu Android pozwalającej na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
   - **Zezwalaj na udostępnianie przez granice**: umożliwia udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. Tego ustawienia należy używać ostrożnie, ponieważ pozwala ono zarządzanym aplikacjom z profilu służbowego na udostępnianie danych aplikacjom w niezarządzanym obszarze urządzenia.
@@ -48,7 +48,7 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
 
    Uniemożliwia użytkownikom końcowym ręczne dodawanie i usuwanie kont w profilu służbowym.
 
-   Na przykład w przypadku wdrożenia aplikacji Gmail w profilu programu Android for Work można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym.
+   Na przykład w przypadku wdrożenia aplikacji Gmail w profilu służbowym systemu Android można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym.
 
 - **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**: umożliwia dostęp do kontaktów służbowych z innego urządzenia, takiego jak samochód, sparowanego za pomocą połączenia Bluetooth. Domyślnie to ustawienie nie jest skonfigurowane i kontakty służbowe nie są wyświetlane. Wybierz pozycję **Włącz**, aby zezwolić na udostępnianie i wyświetlić kontakty z profilu służbowego. To ustawienie dotyczy urządzeń z systemem Android w wersji 6.0 i nowszych oraz profilem służbowym. Włączenie tego ustawienia może umożliwić niektórym urządzeniom Bluetooth zapisanie w pamięci podręcznej kontaktów służbowych przy pierwszym połączeniu. Wyłączenie tych zasad po przeprowadzeniu początkowego parowania/synchronizacji może nie spowodować usunięcia kontaktów służbowych z urządzenia Bluetooth.
 
