@@ -16,11 +16,11 @@ ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
 ms.openlocfilehash: c161d1ca120d5a0210cffca01e781f1ae9206fe4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029407"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38225361"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune
 
