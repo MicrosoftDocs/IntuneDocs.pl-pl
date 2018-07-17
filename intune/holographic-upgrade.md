@@ -13,17 +13,17 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 08763aa527f24ff7b357603be5e3bd4da5083b45
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e6a71d48e81914808b9af037692a44e4f651bf55
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31830437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38224773"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Uaktualnianie urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business
 
 
-Aby zarządzać urządzeniami z systemem Windows Holographic za pomocą usługi Microsoft Intune, musisz uaktualnić urządzenia z systemem Windows Holographic do systemu Windows Holographic for Business. W celu przeprowadzenia tego uaktualnienia możesz utworzyć profil uaktualniania wersji. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/en-us/hololens/hololens-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
+Aby zarządzać urządzeniami z systemem Windows Holographic za pomocą usługi Microsoft Intune, musisz uaktualnić urządzenia z systemem Windows Holographic do systemu Windows Holographic for Business. W celu przeprowadzenia tego uaktualnienia możesz utworzyć profil uaktualniania wersji. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
 
 ## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Aby skonfigurować profil konfiguracji urządzenia dla uaktualnienia wersji
 

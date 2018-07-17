@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a5abf774b6cb46b37d42ea1b73f653a02057528
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2db9d991c476d89399058137adb972c06029befc
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905992"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028732"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -51,7 +51,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Aplikacje ze sklepu dla systemu iOS  | Aplikacja ze sklepu  | Wybierz **iOS** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
 | Aplikacje ze sklepu dla systemu Windows Phone 8.1  | Aplikacja ze sklepu  | Wybierz **Windows Phone 8.1** jako **typ aplikacji**, a następnie wprowadź adres URL Sklepu Microsoft dla aplikacji. |
 | Aplikacje ze sklepu Microsoft Store  | Aplikacja ze sklepu  | Wybierz **Windows** jako **typ aplikacji**, a następnie wprowadź adres URL sklepu Microsoft Store dla aplikacji. |
-| Aplikacje służbowe systemu Android | Aplikacja ze sklepu  | Znajdź i zatwierdź aplikację profilu służbowego systemu Android w zarządzanym sklepie Google Play.  |
+| Aplikacje profilu służbowego systemu Android | Aplikacja ze sklepu  | Znajdź i zatwierdź aplikację profilu służbowego systemu Android w zarządzanym sklepie Google Play.  |
 | Aplikacje pakietu Office 365 dla systemu Windows 10  | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **Windows 10** jako **typ aplikacji**, a następnie wybierz aplikację usługi Office 365, którą chcesz zainstalować.  |
 | Aplikacje pakietu Office 365 dla systemu macOS | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **macOS** jako **typ aplikacji**, a następnie wybierz pakiet aplikacji usługi Office 365. |
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
