@@ -13,22 +13,22 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dd743bdb0eaf2e00c50aab85c497dd00aac773ed
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a233c62b76901d9bad00aa6d8b2a8a4dd45dea96
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905159"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039305"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Aby utworzyć nowy kod dostępu urządzenia, użyj akcji **Resetuj kod dostępu**.
+Aby utworzyć nowy kod dostępu urządzenia, użyj akcji **Resetuj kod dostępu**. Ta akcja powoduje zresetowanie numeru PIN tylko dla profilu służbowego. Resetowanie numerów PIN urządzeń nie jest obsługiwane w przypadku profilów służbowych systemu Android.
 
-## <a name="supported-platforms"></a>Obsługiwane platformy
+## <a name="work-profile-pin-reset-supported-platforms"></a>Resetowanie numeru PIN profilu służbowego — obsługiwane platformy
 
-- Zarejestrowane urządzenia z systemem Android z profilem służbowym, wersja 8.0 lub nowsza
+- Zarejestrowane urządzenia z systemem Android z profilem służbowym, wersja 8.0 lub nowsza 
 - Urządzenia z systemem Android w wersji 6.0 lub starszej
 - Urządzenia kiosku w rozwiązaniu Android enterprise
 - iOS 
@@ -49,7 +49,9 @@ Aby utworzyć nowy kod dostępu urządzenia, użyj akcji **Resetuj kod dostępu*
 
 ## <a name="resetting-android-work-profile-passcodes"></a>Resetowanie kodów dostępu profilu służbowego systemu Android
 
-Obsługiwane urządzenia profilu służbowego systemu Android otrzymują nowe hasło do odblokowywania profilu zarządzanego lub test profilu zarządzanego dla użytkownika końcowego. Na urządzeniach profilu służbowego systemu Android 8.0 użytkownicy końcowi otrzymują powiadomienia dotyczące konieczności aktywowania kodu dostępu resetowania natychmiast po zakończeniu rejestracji. Powiadomienie jest wyświetlane, jeśli hasło profilu służbowego jest wymagane i ustawione. Po wprowadzeniu kodu dostępu powiadomienie jest odrzucane.
+Obsługiwane urządzenia profilu służbowego systemu Android otrzymują nowe hasło do odblokowywania profilu zarządzanego lub test profilu zarządzanego dla użytkownika końcowego. 
+
+Na urządzeniach profilu służbowego systemu Android 8.0 użytkownicy końcowi otrzymują powiadomienia dotyczące konieczności aktywowania kodu dostępu resetowania natychmiast po zakończeniu rejestracji. Powiadomienie jest wyświetlane, jeśli hasło profilu służbowego jest wymagane i ustawione. Po wprowadzeniu kodu dostępu powiadomienie jest odrzucane.
 
 ## <a name="resetting-ios-passcodes"></a>Resetowanie kodów dostępu w systemie iOS
 

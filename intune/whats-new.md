@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2018
+ms.date: 07/13/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: e6d3640d63f16b80588860c3c36aba1a81ffbe09
-ms.sourcegitcommit: 8ea2ff0941219e72477d7ceaab40a0068e53d508
+ms.openlocfilehash: f2018b5a1ca2a6981b04951bcf8ecd8819eb47e2
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37927033"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039424"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,22 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->   
+## <a name="week-of-july-9-2018"></a>Tydzień od 9 lipca 2018 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+### <a name="block-app-access-based-on-unapproved-device-vendors-and-models-----1425689----"></a>Blokowanie dostępu do aplikacji dla niezatwierdzonych dostawców i modeli urządzeń <!-- 1425689 ! -->
+Administrator IT usługi Intune może wymuszać określoną listę producentów urządzeń z systemem Android i/lub modeli urządzeń z systemem iOS za pomocą zasad ochrony aplikacji w usłudze Intune. Administrator IT może przedstawić rozdzielaną średnikami listę producentów zgodnych z zasadami systemu Android oraz modeli urządzeń zgodnych z zasadami systemu iOS. Zasady ochrony aplikacji w usłudze Intune są przeznaczone tylko dla systemów Android i iOS. Dla podanej listy można wykonać dwie oddzielne akcje:
+- Blokowanie dostępu do aplikacji na urządzeniach, które nie zostały określone.
+- Lub selektywne czyszczenie danych firmowych na urządzeniach, które nie zostały określone. 
+
+Użytkownik nie będzie mógł uzyskiwać dostępu do aplikacji docelowej, jeśli wymagania zasad nie zostaną spełnione. Na podstawie ustawień użytkownik może zostać zablokowany albo jego dane firmowe mogą zostać selektywnie wyczyszczone z aplikacji. Na urządzeniach z systemem iOS ta funkcja wymaga udziału aplikacji (takich jak WXP, Outlook, Managed Browser, Yammer) w celu integracji zestawu Intune APP SDK, aby ta funkcja była wymuszana na docelowych aplikacjach. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. W systemie Android ta funkcja wymaga najnowszej wersji aplikacji Portal firmy. 
+
+Na urządzeniach użytkowników końcowych klient usługi Intune wykona akcję w oparciu o proste dopasowywanie ciągów określonych w bloku usługi Intune dla zasad ochrony aplikacji. Zależy to całkowicie od wartości zgłaszanej przez urządzenie. W takiej sytuacji administrator IT jest zachęcany do zapewniania, że założone zachowanie jest prawidłowe. Ten cel można osiągnąć, testując to ustawienie w oparciu o różnych producentów i modele urządzeń przeznaczone dla małej grupy użytkowników. W usłudze Microsoft Intune wybierz pozycję **Aplikacje mobilne** > **Zasady ochrony aplikacji**, aby wyświetlić i dodać zasady ochrony aplikacji. Aby uzyskać więcej informacji na temat zasad ochrony aplikacji, zobacz [Co to są zasady ochrony aplikacji](app-protection-policy.md) i [Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune](app-protection-policies-access-actions.md).
+
+### <a name="access-to-macos-company-portal-pre-release-build----1734766---"></a>Dostęp do kompilacji wersji wstępnej Portalu firmy dla systemu macOS <!-- 1734766 -->
+Za pomocą programu Microsoft AutoUpdate możesz zarejestrować się w celu wcześniejszego otrzymywania kompilacji przez dołączenie do niejawnego programu testów. Rejestracja umożliwi korzystanie ze zaktualizowanego Portalu firmy, zanim będzie on dostępny dla Twoich użytkowników końcowych. Aby uzyskać więcej informacji, zobacz [Blog usługi Microsoft Intune](https://blogs.technet.microsoft.com/intunesupport/2018/07/13/use-microsoft-autoupdate-for-early-access-to-the-macos-company-portal-app/).
+
 ## <a name="week-of-july-2-2018"></a>Tydzień od 2 lipca 2018 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
@@ -68,9 +84,6 @@ Następujący tekst „przed” i „po” jest przykładem ulepszenia komunikat
 
 #### <a name="revoke-ios-vpp-app-license----1863797---"></a>Odwoływanie licencji aplikacji zakupionych w ramach programu VPP dla systemu iOS <!-- 1863797 -->
 Jako administrator masz możliwość odzyskania licencji aplikacji programu VPP dla systemu iOS przypisanych do użytkownika lub urządzenia. Odinstalowanie aplikacji VPP dla systemu iOS pozwoli również na odzyskanie licencji aplikacji. Przed odinstalowaniem aplikacji należy usunąć użytkownika lub urządzenie z grupy, dla której jest przeznaczona aplikacja. Usunięcie użytkownika lub urządzenia z grupy pozwala uniknąć konieczności ponownej instalacji aplikacji. Po wykonaniu tych kroków można przypisać licencję aplikacji do innego użytkownika lub urządzenia. Aby uzyskać więcej informacji o licencjach aplikacji dla systemu iOS zakupionymi w ramach programu VPP, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych w usłudze Microsoft Intune](vpp-apps-ios.md).
-
-#### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Obsługa aplikacji biznesowych dla systemu macOS <!-- 1895847 -->
-Usługa Microsoft Intune umożliwia wdrażanie aplikacji biznesowych systemu macOS jako **wymaganych** lub **dostępnych z rejestracją**. Użytkownicy końcowi mogą wdrażać aplikacje jako **dostępne** przy użyciu aplikacji Portal firmy dla systemu macOS lub [witryny internetowej Portal firmy](https://portal.manage.microsoft.com).
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
@@ -1086,7 +1099,7 @@ Na urządzeniach z systemem Windows 10 będzie można włączać ustawienia zabe
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968--"></a>Aktualizacja nowego środowiska użytkownika witryny internetowej Portal firmy <!--2000968-->
 
-W kwietniu wprowadzimy nowe środowisko witryny internetowej Portal firmy zawierające aktualizacje interfejsu użytkownika, usprawnione przepływy pracy i ulepszone ułatwienia dostępu. Będzie ono obejmować ulepszenia oparte na potrzebach klientów, takie jak udostępnianie aplikacji i lepsza ogólna wydajność, które zapewnią użytkownikom większy komfort pracy.
+W sierpniu wprowadzimy nowe środowisko witryny internetowej Portal firmy zawierające aktualizacje interfejsu użytkownika, usprawnione przepływy pracy i ulepszone ułatwienia dostępu. Będzie ono obejmować ulepszenia oparte na potrzebach klientów, takie jak udostępnianie aplikacji i lepsza ogólna wydajność, które zapewnią użytkownikom większy komfort pracy.
 Na podstawie opinii klientów dodaliśmy nowe funkcje, które znacznie udoskonalą istniejącą funkcjonalność i użyteczność:
 
 * Ulepszenia interfejsu użytkownika w całej witrynie internetowej

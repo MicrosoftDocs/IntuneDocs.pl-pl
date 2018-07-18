@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 609e142551344a1ce39761280031463c8e34f1f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906026"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949496"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Wczesna wersja usługi Microsoft Intune — lipiec 2018
 
@@ -40,6 +40,9 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 ## <a name="intune-in-the-azure-portal"></a>Usługa Intune w witrynie Azure Portal
 
 <!-- 1807 start -->
+
+### <a name="more-sync-opportunities-in-the-company-portal-app-for-windows----2683177---"></a>Więcej możliwości synchronizacji w aplikacji Portal firmy dla systemu Windows <!-- 2683177 -->
+Aplikacja Portal firmy dla systemu Windows dodaje akcję synchronizacji urządzeń do paska zadań systemu Windows i list szybkiego dostępu w menu Start. Kliknięcie tej akcji w dowolnej lokalizacji umożliwia szybkie zsynchronizowanie urządzeń i uzyskanie dostępu do zasobów firmy.  
 
 ### <a name="reset-device-passcodes-from-company-portal-app-for-windows-10----2101282---"></a>Resetowanie kodów dostępu urządzeń w aplikacji Portal firmy dla systemu Windows 10 <!-- 2101282 --> 
 Twoi pracownicy będą wkrótce mogli resetować numer PIN lub kod dostępu dla swoich urządzeń bezpośrednio w aplikacji Portal firmy dla systemu Windows 10. Ta funkcja będzie dostępna na urządzeniach zdalnych i lokalnych zarządzanych przez usługę Intune, które obsługują resetowanie kodu dostępu. W zależności od rodzaju urządzenia żądanie wykonane dla urządzenia zdalnego spowoduje usunięcie bieżącego kodu dostępu urządzenia lub utworzenie tymczasowego kodu dostępu. Użytkownicy, którzy zażądają zresetowania dla urządzenia lokalnego, zostaną przekierowani do aplikacji Ustawienia urządzenia.  

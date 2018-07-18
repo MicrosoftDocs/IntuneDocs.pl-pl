@@ -15,12 +15,12 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d0afd1f1944101b2162d9115e84ea5aaac0abf2
-ms.sourcegitcommit: 3dbd73631dd0042dd013a380f4c15dfe284576c0
+ms.openlocfilehash: 65827fe280535aa48d1d44eda9fd8482002c2c3b
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36882532"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028766"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -75,7 +75,7 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | **Wymagaj minimalnej wersji zestawu SDK zasad ochrony aplikacji usługi Intune** | Wybierz przycisk **Tak**, aby wymagać minimalnej wersji zestawu SDK zasad ochrony aplikacji usługi Intune w używanej aplikacji. Jeśli wersja zestawu SDK zasad ochrony aplikacji usługi Intune danej aplikacji nie spełnia wymagań, dostęp zostanie dla użytkownika zablokowany. <br> <br> Aby dowiedzieć się więcej na temat zestawu SDK zasad ochrony aplikacji usługi Intune, zobacz temat [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka. <br><br> **Uwaga:** wymaga, aby aplikacja zawierała zestaw SDK usługi Intune w wersji 7.0.1 lub nowszej. | Nie |
 
 > [!NOTE]
-> Aby dowiedzieć się więcej na temat tego, w jaki sposób wiele ustawień ochrony aplikacji usługi Intune skonfigurowanych w sekcji Dostęp dla tego samego zestawu aplikacji i użytkowników działa w systemie iOS, zobacz [Funkcje MAM usługi Intune — często zadawane pytania](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios).
+> Aby dowiedzieć się więcej na temat tego, w jaki sposób wiele ustawień ochrony aplikacji usługi Intune skonfigurowanych w sekcji Dostęp dla tego samego zestawu aplikacji i użytkowników działa w systemie iOS, zobacz [Funkcje MAM usługi Intune — często zadawane pytania](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios) i [Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune](app-protection-policies-access-actions.md).
 
 ##  <a name="add-ins-for-outlook-app"></a>Dodatki dla aplikacji Outlook
 

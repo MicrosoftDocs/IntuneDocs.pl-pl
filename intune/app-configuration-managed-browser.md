@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4d0c63c5e926c3f8893762a9be3b6bed2d6844c4
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8b647e7b2a4d252041e60792b6fc49df8b961066
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37967242"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad programu Managed Browser w usłudze Microsoft Intune
 
@@ -35,7 +36,7 @@ Ta aplikacja jest zintegrowana z zestawem SDK usługi Intune, dlatego można do 
 - Zapobieganie przechwytywaniu ekranu
 - Zapewnienie, że linki do zawartości wybierane przez użytkowników są otwierane tylko w innych aplikacjach zarządzanych.
 
-Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](/intune/app-protection-policy.md)?
+Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](app-protection-policy.md)?
 
 Te ustawienia można zastosować do:
 
@@ -141,7 +142,7 @@ Aplikacja Intune Managed Browser i [serwer proxy aplikacji usługi Azure AD]( ht
 ### <a name="before-you-start"></a>Przed rozpoczęciem
 
 - Skonfiguruj wewnętrzne aplikacje przy użyciu serwera proxy aplikacji usługi Azure AD.
-    - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
+    - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
 - Wymagana jest aplikacja Managed Browser w wersji 1.2.0 lub nowszej.
 - Użytkownicy aplikacji Managed Browser mają przypisane do aplikacji [zasady ochrony aplikacji usługi Intune]( app-protection-policy.md).
 
@@ -167,7 +168,7 @@ To ustawienie pozwala skonfigurować stronę główną, którą widzą użytkown
 
 |                                Klucz                                |                                                           Wartość                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Określ prawidłowy adres URL. Niepoprawne adresy URL są blokowane ze względów bezpieczeństwa.<br>Przykład: <strong><https://www.bing.com></strong> |
+| <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Określ prawidłowy adres URL. Niepoprawne adresy URL są blokowane ze względów bezpieczeństwa.<br>Przykład: `<https://www.bing.com>` |
 
 ## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Jak skonfigurować zakładki dla aplikacji Managed Browser
 
@@ -181,7 +182,7 @@ Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser podaj 
 
 |                                Klucz                                 |                                                                                                                                                                                                                                                         Wartość                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Wartość dla tej konfiguracji to lista zakładek. Każda zakładka składa się z tytułu zakładki i jej adresu URL. Tytuł i adres URL oddziel za pomocą znaku <strong>&#124;</strong>.<br><br>Przykład: <strong>Microsoft Bing&#124;<https://www.bing.com></strong><br><br>Aby skonfigurować wiele zakładek, każdą parę należy rozdzielić podwójnym znakiem <strong>&#124;&#124;</strong><br><br>Przykład: <strong>Bing&#124;https://www.bing.com&#124;&#124;Contoso&#124;<https://www.contoso.com></strong> |
+| <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Wartość dla tej konfiguracji to lista zakładek. Każda zakładka składa się z tytułu zakładki i jej adresu URL. Tytuł i adres URL oddziel za pomocą znaku <strong>&#124;</strong>.<br><br>Przykład:<br> `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character, <strong>&#124;&#124;</strong><br><br>Example:<br> `Bing|https://www.bing.com||Contoso|https://www.contoso.com` |
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Jak określać dozwolone i blokowane adresy URL programu Managed Browser
 
@@ -189,7 +190,7 @@ Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser podaj 
 
 |Klucz|Wartość|
 |-|-|
-|Wybierz spośród opcji:<br><br>- Określ dozwolone adresy URL (dozwolone będą wyłącznie te i żadne inne adresy URL; tylko do nich będzie można uzyskać dostęp): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>- Określ zablokowane adresy URL (wszystkie inne witryny będą dostępne): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Wartość klucza to lista adresów URL. Wszystkie adresy URL, które mają być dozwolone lub blokowane, należy wprowadzać jako pojedyncze wartości rozdzielane znakiem pionowej kreski **&#124;**.<br><br>Przykłady:<br><br>`URL1\|URL2\|URL3`</code><br>`http://*.contoso.com/*\|https://*.bing.com/*\|https://expenses.contoso.com`|
+|Wybierz spośród opcji:<br><ul><li>Określ dozwolone adresy URL (tylko te adresy URL są dozwolone; nie można uzyskać dostępu do żadnych innych witryn):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Określ zablokowane adresy URL (wszystkie inne witryny będą dostępne):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Wartość klucza to lista adresów URL. Wszystkie adresy URL, które mają być dozwolone lub blokowane, należy wprowadzać jako pojedyncze wartości rozdzielane znakiem pionowej kreski **&#124;**.<br><br>Przykłady:<br><br>`URL1|URL2|URL3`<br>`http://*.contoso.com/*|https://*.bing.com/*|https://expenses.contoso.com`|
 
 >[!IMPORTANT]
 >Należy zdefiniować tylko jeden z tych kluczy. Jeśli dla tego samego użytkownika zostaną zdefiniowane oba klucze, zostanie użyty tylko klucz określający dostępne adresy URL jako bardziej restrykcyjny.
@@ -208,42 +209,42 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 
   -   Port 443 dla protokołu https
 
-  Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy <strong>http&colon;//www&period;contoso&period;com:*;</strong> i <strong>http&colon;//www&period;contoso&period;com: /*;</strong> nie są obsługiwane.
+  Symboli wieloznacznych nie można używać w numerze portu. Na przykład adresy `http://www.contoso.com:;` i `http://www.contoso.com: /;` nie są obsługiwane.
 
 - W poniższej tabeli przedstawiono dozwolone wzorce do użycia podczas określania adresów URL:
 
 |                  Adres URL                  |                     Szczegóły                      |                                                Jest zgodny z                                                |                                Nie jest zgodny z                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|        http://www.contoso.com         |              Zgodny z pojedynczą stroną               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
-|          http://contoso.com           |              Zgodny z pojedynczą stroną               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
-|    <http://www.contoso.com/&#42>;     | Zgodny ze wszystkimi adresami URL rozpoczynającymi się od www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
-|    http://&#42;.contoso.com/&#42;     |     Zgodny ze wszystkimi domenami podrzędnymi w domenie contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
-|     http://www.contoso.com/images     |             Zgodny z pojedynczym folderem              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
-|       http://www.contoso.com:80       |  Zgodny z pojedynczą stroną z użyciem numeru portu   |                                       http://www.contoso.com:80                                       |                                                                               |
-|        https://www.contoso.com        |          Zgodny z pojedynczą, bezpieczną stroną           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
-| <http://www.contoso.com/images/&#42>; |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
+|        `http://www.contoso.com`         |              Zgodny z pojedynczą stroną               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
+|          `http://contoso.com`           |              Zgodny z pojedynczą stroną               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
+|    `http://www.contoso.com/&#42;`     | Zgodny ze wszystkimi adresami URL rozpoczynającymi się od ciągu `www.contoso.com` |      `www.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com/videos/tvshows`      |              `host.contoso.com`<br /><br />`host.contoso.com/images`              |
+|    `http://*.contoso.com/*`     |     Zgodny ze wszystkimi domenami podrzędnymi w domenie contoso.com     | `developer.contoso.com/resources`<br /><br />`news.contoso.com/images`<br /><br />`news.contoso.com/videos` |                               `contoso.host.com`                                |
+|     `http://www.contoso.com/images`     |             Zgodny z pojedynczym folderem              |                                        `www.contoso.com/images`                                         |                          `www.contoso.com/images/dogs`                          |
+|       `http://www.contoso.com:80`       |  Zgodny z pojedynczą stroną z użyciem numeru portu   |                                       `http://www.contoso.com:80`                                       |                                                                               |
+|        `https://www.contoso.com`        |          Zgodny z pojedynczą, bezpieczną stroną           |                                        `https://www.contoso.com`                                        |                            `http://www.contoso.com`                             |
+| `http://www.contoso.com/images/&#42;` |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |                  `www.contoso.com/images/dogs`<br /><br />`www.contoso.com/images/cats`                   |                            `www.contoso.com/videos`                             |
 
 - Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
 
-  - &#42;.com
+  - `*.com`
 
-  - &#42;.contoso/&#42;
+  - `*.contoso/*`
 
-  - www.contoso.com/&#42;images
+  - `www.contoso.com/*images`
 
-  - www.contoso.com/&#42;images&#42;pigs
+  - `www.contoso.com/*images*pigs`
 
-  - www.contoso.com/page&#42;
+  - `www.contoso.com/page*`
 
   - Adresy IP
 
-  - https://&#42;
+  - `https://*`
 
-  - http://&#42;
+  - `http://*`
 
-  - http://www.contoso.com:&#42;
+  - `http://www.contoso.com:*`
 
-  - http://www.contoso.com: /&#42;
+  - `http://www.contoso.com: /*`
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu programu Managed Browser w systemie iOS
 
@@ -291,4 +292,4 @@ Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i kor
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
+- [Co to są zasady ochrony aplikacji?](app-protection-policy.md) 

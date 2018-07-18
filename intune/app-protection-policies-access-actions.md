@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/03/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2cfd426a0ae7165a7aae60a90d104852fd834db6
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 084200f5773e5f92288d64e0fea23f022d93f3a0
+ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909120"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993738"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
 
@@ -36,7 +36,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne** > **Zasady ochrony aplikacji**.
 4. Kliknij pozycję **Dodaj zasady**. Możesz również edytować istniejące zasady. 
 5. Kliknij pozycję **Skonfiguruj wymagane ustawienia**, aby wyświetlić listę ustawień dostępnych do skonfigurowania na potrzeby zasad. 
-6. Przewinięcie w dół w oknie **Ustawienia** spowoduje wyświetlenie sekcji o nazwie **Akcje dostępu**, w której będzie się znajdowała edytowalna tabela.
+6. Przewinięcie w dół w oknie Ustawienia spowoduje wyświetlenie sekcji o nazwie **Akcje dostępu**, w której będzie się znajdowała edytowalna tabela.
 
     ![Zrzut ekranu przedstawiający akcje dostępu zasad ochrony aplikacji usługi Intune](./media/apps-selective-wipe-access-actions01.png)
 
@@ -50,6 +50,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 
 Tabela ustawień zasad ochrony aplikacji zawiera kolumny **Ustawienie**, **Wartość** i **Akcja**.
 
+### <a name="ios-policy-settings"></a>Ustawienia zasad systemu iOS
 W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
 -  Maksymalna liczba prób wpisania numeru PIN
 -  Okres karencji w trybie offline
@@ -58,6 +59,19 @@ W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będ
 -  Minimalna wersja aplikacji
 -  Minimalna wersja zestawu SDK
 -  Modele urządzeń
+
+Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Identyfikator modelu urządzenia z systemem iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
+Przykładowe dane wejściowe: *iPhone5,2; iPhone5,3*
+
+Na urządzeniach użytkowników końcowych klient usługi Intune wykonuje akcję w oparciu o proste dopasowywanie ciągów modelu urządzenia określonych w usłudze Intune dla zasad ochrony aplikacji. Dopasowywanie całkowicie zależy od danych zgłoszonych przez urządzenie. Zachęcamy, aby administrator IT upewnił się, że faktyczne zachowanie odpowiada zamierzonemu przez przetestowanie tego ustawienia z użyciem różnych producentów i modeli urządzeń w ramach małej grupy użytkowników. Wartość domyślna to **Nie skonfigurowano**.<br>
+Ustaw jedną z następujących akcji: 
+- Zezwalaj na określone (blokuj nieokreślone)
+- Zezwalaj na określone (wyczyść nieokreślone)
+
+**Co się stanie, jeśli administrator IT wprowadzi różne listy identyfikatorów modeli urządzeń z systemem iOS w zasadach przeznaczonych dla tych samych aplikacji i dla tego samego użytkownika usługi Intune?**<br>
+W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną identyfikatorów modeli urządzeń z systemem iOS wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „iPhone5,2; iPhone5,3”, natomiast *zasady B* określają wartość „iPhone5,3”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „iPhone5,3”. 
+
+### <a name="android-policy-settings"></a>Ustawienia zasad systemu Android
 
 W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
 -  Maksymalna liczba prób wpisania numeru PIN
@@ -68,6 +82,19 @@ W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe 
 -  Minimalna wersja poprawki
 -  Producenci urządzeń
 
+Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
+Przykładowe dane wejściowe: *Producent A; Producent B; Google* 
+
+Na urządzeniach użytkowników końcowych klient usługi Intune wykonuje akcję w oparciu o proste dopasowywanie ciągów modelu urządzenia określonych w usłudze Intune dla zasad ochrony aplikacji. Dopasowywanie całkowicie zależy od danych zgłoszonych przez urządzenie. Zachęcamy, aby administrator IT upewnił się, że faktyczne zachowanie odpowiada zamierzonemu przez przetestowanie tego ustawienia z użyciem różnych producentów i modeli urządzeń w ramach małej grupy użytkowników. Wartość domyślna to **Nie skonfigurowano**.<br>
+Ustaw jedną z następujących akcji: 
+- Zezwalaj na określone (blokuj, jeśli nieokreślone)
+- Zezwalaj na określone (wyczyść, jeśli nieokreślone)
+
+**Co się stanie, jeśli administrator IT wprowadzi różne listy producentów urządzeń z systemem Android w zasadach przeznaczonych dla tych samych aplikacji i dla tego samego użytkownika usługi Intune?**<br>
+W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną producentów urządzeń z systemem Android wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „Google, Samsung”, natomiast *zasady B* określają wartość „Google”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „Google”. 
+
+### <a name="additional-settings-and-actions"></a>Dodatkowe ustawienia i akcje 
+
 Domyślnie w tabeli będą znajdowały się wypełnione wiersze jako ustawienia skonfigurowane dla wartości **Okres karencji w trybie offline** i **Maksymalna liczba prób wpisania numeru PIN**, jeśli ustawienie **Wymagaj numeru PIN w celu udzielenia dostępu** ma wartość **Tak**.
  
 Aby skonfigurować ustawienie, wybierz ustawienie z listy rozwijanej w kolumnie **Ustawienie**. Po wybraniu ustawienia w tym samym wierszu w kolumnie **Wartość** zostanie włączone edytowalne pole tekstowe, jeśli wymagane jest ustawienie wartości. Zostanie również włączona lista rozwijana w kolumnie **Akcja** zawierająca zestaw warunkowo uruchamianych akcji mających zastosowanie dla danego ustawienia. 
@@ -76,8 +103,6 @@ Poniższa lista zawiera typowe akcje:
 -  **Zablokuj dostęp** — zablokuj użytkownikowi końcowemu dostęp do aplikacji firmowej.
 -  **Wyczyść dane** — wyczyść dane firmowe z urządzenia użytkownika końcowego.
 -  **Ostrzegaj** — wyświetl okno dialogowe użytkownikowi końcowemu jako ostrzeżenie.
-
-### <a name="additional-settings-and-actions"></a>Dodatkowe ustawienia i akcje 
 
 W niektórych przypadkach, na przykład dla ustawienia **Minimalna wersja systemu operacyjnego**, można skonfigurować ustawienie w taki sposób, aby poszczególne odpowiednie akcje były wykonywane w zależności od numeru wersji. 
 

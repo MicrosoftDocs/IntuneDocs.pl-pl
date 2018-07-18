@@ -15,12 +15,12 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b860b68bbf8940a89533159885f471f5337ca0e8
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: 34174568570700e0b15d5bce1bb0bf239251b577
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216143"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039158"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Jak utworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune
 
@@ -38,6 +38,9 @@ W ramach zasad ochrony aplikacji usługi Intune ustawienie właściwości **Zezw
 
 ## <a name="ios-data-transfer-exceptions"></a>Wyjątki transferu danych w systemie iOS
 W przypadku zasad przeznaczonych dla systemu iOS możesz skonfigurować wyjątki transferu danych według protokołu URL. Aby dodać wyjątek, zapoznaj się z dokumentacją dostarczoną przez dewelopera aplikacji, gdzie można znaleźć informacje o obsługiwanych protokołach URL. Aby uzyskać dodatkowe informacje dotyczące wyjątków transferu danych w systemie iOS, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — Wyjątki w transferze danych](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+
+> [!NOTE]
+> Firma Microsoft nie dysponuje metodą ręcznego odnajdywania protokołu adresu URL na potrzeby tworzenia wyjątków dla aplikacji innych firm. 
 
 ## <a name="android-data-transfer-exceptions"></a>Wyjątki transferu danych w systemie Android
 W przypadku zasad przeznaczonych dla systemu Android możesz skonfigurować wyjątki transferu danych według nazwy pakietu aplikacji. Możesz sprawdzić stronę sklepu **Google Play** aplikacji, dla której chcesz dodać wyjątek, aby odnaleźć nazwę pakietu aplikacji. Aby uzyskać dodatkowe informacje dotyczące wyjątków transferu danych w systemie Android, zobacz [Ustawienia zasad ochrony aplikacji dla systemu Android — Wyjątki w transferze danych](app-protection-policy-settings-android.md#data-transfer-exemptions).

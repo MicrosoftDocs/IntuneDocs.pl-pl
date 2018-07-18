@@ -15,12 +15,12 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6ed6b95a11eddfeb748b21d6df55f3a5668d9e1d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 292df171b613ada7a5f8e2cf666ba358ef26df9b
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021566"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949479"
 ---
 # <a name="get-started-managing-users"></a>Wprowadzenie do zarządzania użytkownikami
 
@@ -31,8 +31,10 @@ Pomyśl o wszystkich osobach w Twojej organizacji. Dla każdej osoby korzystają
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Po otwarciu okienka **Microsoft Intune** wybierz opcję **Użytkownicy**. Na stronie **Wszyscy użytkownicy** wybierz pozycję **+ Nowy użytkownik**.
-4. Wprowadź szczegółowe informacje dotyczące użytkownika, takie jak **nazwa** i **nazwa użytkownika**. Część nazwy użytkownika stanowiąca nazwę domeny musi być początkową, domyślną nazwą domeny, „contoso.onmicrosoft.com”, lub zweryfikowaną, niefederacyjną nazwą domeny, na przykład „contoso.com”.
-5. W obszarze **Grupy** wybierz grupę testową, do której zostanie dodany użytkownik.
+4. Wprowadź szczegółowe informacje dotyczące użytkownika, takie jak **nazwa** i **nazwa użytkownika**. Część nazwy użytkownika będąca nazwą domeny musi być jedną z następujących domen:
+    - Wstępna domyślna nazwa domeny „contoso.onmicrosoft.com”
+    - Zweryfikowana, niefederacyjna nazwa domeny, taka jak „contoso.com”
+5. W obszarze **Grupy** wybierz [grupę](get-started-groups.md), do której zostanie dodany użytkownik.
 6. Zapisz automatycznie wygenerowane hasło użytkownika, aby użyć go do zalogowania się na urządzeniu testowym. To hasło należy przekazać użytkownikom, aby mogli zmienić je na normalne, łatwiejsze do zapamiętania hasło.
 7. W okienku **Użytkownik** wybierz pozycję **Utwórz**.
 
