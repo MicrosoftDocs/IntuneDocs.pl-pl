@@ -724,8 +724,6 @@
           href: app-wrapper-prepare-android.md
         - name: Zestaw SDK aplikacji usługi Intune dla systemu Android
           href: app-sdk-android.md
-        - name: Wtyczka Cordova zestawu SDK aplikacji usługi Intune
-          href: app-sdk-cordova.md
         - name: Powiązania platformy Xamarin dla zestawu Intune App SDK
           href: app-sdk-xamarin.md
     - name: Korzystanie z magazynu danych usługi Intune
