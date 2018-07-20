@@ -521,6 +521,7 @@
         - name: Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
           href: conditional-access-assign-jamf.md
     - name: Ochrona danych na urządzeniu
+      href: device-protect.md
       items:
         - name: Prywatność i dane osobowe
           href: privacy-personal-data.md
