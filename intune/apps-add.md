@@ -176,8 +176,7 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Aplikacje LOB dla systemu Android](lob-apps-android.md)
 - [Aplikacje ze sklepu dla systemu iOS](store-apps-ios.md)
 - [Aplikacje LOB dla systemu iOS](lob-apps-ios.md)
-- 
-  [Aplikacje internetowe (dla wszystkich platform)](web-app.md)
+- [Aplikacje internetowe (dla wszystkich platform)](web-app.md)
 - [Aplikacje ze sklepu dla systemu Windows Phone 8.1](store-apps-windows-phone-8-1.md)
 - [Aplikacje LOB dla systemu Windows Phone](lob-apps-windows-phone.md)
 - [Aplikacje ze sklepu Microsoft Store](store-apps-windows.md)
