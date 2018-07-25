@@ -15,12 +15,12 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 180988f296894c285b078f6906c4e77b832006f9
-ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
+ms.openlocfilehash: 2b3965c651bb6fcc38d61a55208fc8b199223891
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840278"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212124"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
@@ -135,7 +135,7 @@ Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używ
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Eksportowanie profilu jako pliku .mobileconfig do urządzeń z systemem iOS
 
 1. W usłudze [Intune](https://aka.ms/intuneportal), wybierz kolejno pozycje **Rejestracja urządzeń** > **Rejestracja w programie Apple** > **Apple Configurator** > **Profile** > wybierz profil do wyeksportowania > **Eksportuj profil**.
-2. W obszarze **Rejestracja bezpośrednia** wybierz opcję **Pobierz profil**i zapisz plik.
+2. W obszarze **Rejestracja bezpośrednia** wybierz opcję **Pobierz profil**i zapisz plik. Plik profilu rejestracji jest ważny tylko przez dwa tygodnie. Po tym czasie musisz utworzyć go ponownie.
 3. Przetransferuj plik na komputer Mac z programem [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), aby wypchnąć go bezpośrednio jako profil zarządzania do urządzeń z systemem iOS.
 4. Przygotuj urządzenie z zainstalowanym programem Apple Configurator, wykonując kroki opisane poniżej:
     1. Na komputerze Mac otwórz program Apple Configurator 2.0.

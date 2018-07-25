@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
-ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
+ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34051610"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117926"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -34,7 +34,7 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz jedno z wymienionych na liście urządzeń, aby otworzyć jego szczegóły:
 
-   - **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane itp. Wybierz opcję **Więcej**, aby wykonać następujące czynności:
+   - **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane itp. Wybierz pozycję **Więcej**, aby wykonać następujące czynności:
      - Usuwanie danych firmy
      - Usuwanie urządzenia
      - Zdalne blokowanie urządzenia
@@ -57,6 +57,49 @@ Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do fi
 |iOS|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|
 |macOS|Wszystkie aplikacje zainstalowane na urządzeniu|Wszystkie aplikacje zainstalowane na urządzeniu|  
 |Android|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|  
+
+## <a name="hardware-device-details"></a>Szczegóły urządzeń
+
+### <a name="windows-and-ios-device-details"></a>Szczegóły urządzeń z systemami Windows i iOS:
+|Szczegóły|Opis|  
+|--------------|----------------------|  
+|Nazwa|Nazwa urządzenia.|
+|Nazwa zarządzania|Nazwa urządzenia używana tylko w konsoli. Zmiana tej nazwy nie spowoduje zmiany nazwy w urządzeniu.|
+|Identyfikator UDID|Unikatowy identyfikator urządzenia.|
+|Identyfikator urządzenia usługi Intune|Identyfikator GUID, który unikatowo identyfikuje urządzenie.|
+|Numer seryjny|Numer seryjny urządzenia od producenta.|
+|Udostępnione urządzenie|Jeśli wybrano pozycję **Tak**, urządzenie jest współużytkowane przez więcej niż jednego użytkownika.|
+|Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń w urządzeniu.|
+|System operacyjny|System operacyjny używany w urządzeniu.|
+|Wersja systemu operacyjnego|Wersja systemu operacyjnego działającego na urządzeniu.|
+|Język systemu operacyjnego|Język ustawiony dla systemu operacyjnego w urządzeniu.|
+|Całkowita ilość miejsca|Całkowita ilość miejsca w urządzeniu (w gigabajtach).|
+|Wolne miejsce w magazynie|Nieużywane miejsce w urządzeniu (w gigabajtach).|
+
+
+### <a name="windows-ios-and-macos-device-details"></a>Szczegóły urządzeń z systemami Windows, iOS i macOS
+|Szczegóły|Opis|  
+|--------------|----------------------|  
+|IMEI|Numer IMEI (International Mobile Equipment Identity) urządzenia.|
+|MEID|Identyfikator sprzętu przenośnego urządzenia.|
+|Producent|Producent urządzenia.|
+|Model|Model urządzenia.|
+|Numer telefonu|Numer telefonu przypisany do urządzenia.|
+|Operator subskrybenta|Operator sieci bezprzewodowej urządzenia.|
+|Technologia sieci komórkowej|System radiowy używany przez urządzenie.|
+|Wi-Fi MAC|Adres MAC (Media Access Control) urządzenia.|
+|Identyfikator ICCID|Identyfikator ICCID (Integrated Circuit Card Identifier), który jest unikatowym numerem identyfikacyjnym karty SIM.|
+|Data rejestracji|Data i godzina rejestracji urządzenia w usłudze Intune.|
+|Ostatni kontakt|Data i godzina ostatniego połączenia urządzenia z usługą Intune.|
+|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|
+|Zarejestrowane w usłudze Azure AD|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Azure Active Directory.|
+|Zgodność|Stan zgodności urządzenia.|
+|Aktywowano program EAS|Jeśli wybrano pozycję **Tak**, urządzenie jest zsynchronizowane ze skrzynką pocztową programu Exchange.|
+|Identyfikator aktywacji programu EAS|Identyfikator programu Exchange ActiveSync urządzenia.|
+|Nadzorowane|Jeśli wybrano pozycję **Tak**, administratorzy mają rozszerzoną kontrolę nad urządzeniem.|
+|Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|
+
+
 
 ## <a name="next-steps"></a>Następne kroki
 Zobacz, co jeszcze możesz zrobić, aby [zarządzać urządzeniami](device-management.md) przy użyciu usługi Intune.

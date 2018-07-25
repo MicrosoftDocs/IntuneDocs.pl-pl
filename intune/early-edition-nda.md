@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: 3aed8fcefd640e5b7df46fe1ef8cd1c973a68044
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949496"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212141"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Wczesna wersja usługi Microsoft Intune — lipiec 2018
 
@@ -79,8 +79,8 @@ Aby utworzyć profil, przejdź kolejno do pozycji **Konfiguracja urządzenia** >
 
 Dotyczy systemu Windows 10 lub nowszych.
 
-###  <a name="windows-line-of-business-lob-apps-file-extension-rename----1884873---"></a>Zmiana nazwy rozszerzeń plików aplikacji biznesowych (LOB) dla systemu Windows <!-- 1884873 -->
-Rozszerzenia plików dla aplikacji LOB dla systemu Windows zostaną zmienione z *.appx* i *.appxbundle* na *.msix* i *.msixbundle*. Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje mobilne** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. Dla aplikacji LOB dla systemu Windows wybierz aplikację **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny z odpowiednim rozszerzeniem.
+###  <a name="windows-line-of-business-lob-apps-file-extensions----1884873---"></a>Rozszerzenia plików aplikacji biznesowych (LOB) dla systemu Windows <!-- 1884873 -->
+Rozszerzenia plików aplikacji LOB dla systemu Windows obejmują teraz rozszerzenia *msi*, *appx*, *appxbundle*, *msix* i *msixbundle*. Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje mobilne** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. Dla aplikacji LOB dla systemu Windows wybierz aplikację **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny z odpowiednim rozszerzeniem.
 
 ### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Pakiet konfiguracji zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender jest automatycznie dodawany do profilu konfiguracji <!-- 2144658 -->
 Obecnie w przypadku korzystania z [zaawansowanej ochrony przed zagrożeniami i dołączania](advanced-threat-protection.md#onboard-devices-using-a-configuration-profile) urządzeń w usłudze Intune pobierasz pakiet konfiguracyjny i dodajesz go do swojego profilu konfiguracji. W ramach przyszłej aktualizacji usługa Intune automatycznie pobierze pakiet z usługi Windows Defender Security Center i doda go do Twojego profilu.

@@ -15,12 +15,12 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01523dc4c887214794d4600219ce0b77549b4734
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 545c5b26b6c908f4a9e7066d3f76cbf774c8fbea
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027122"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146700"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Rejestrowanie urządzeń z systemem iOS w usłudze Intune
 
@@ -62,7 +62,7 @@ Dowiedz się więcej na temat [rejestrowanie programu Apple Configurator](apple-
 
 ## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Korzystanie z Portalu firmy na urządzeniach zarejestrowanych w programie DEP lub przy użyciu narzędzia Apple Configurator
 
-Na urządzeniach skonfigurowanych z koligacją użytkownika można zainstalować aplikację Portal firmy i używać jej do pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
+Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
 Koligacja użytkownika jest wymagana do obsługi:
   - Aplikacji do zarządzania aplikacjami mobilnymi
@@ -70,25 +70,11 @@ Koligacja użytkownika jest wymagana do obsługi:
   - Aplikacji Portal firmy
 
 **Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika**
-1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. Podczas instalacji użytkownicy są monitowani o podanie swoich poświadczeń. Muszą oni korzystać z poświadczeń (tj. unikatowej kombinacji imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
-
-2. Podczas instalacji użytkownicy są monitowani o podanie identyfikatora Apple ID. Muszą podać identyfikator Apple ID, aby umożliwić zainstalowanie aplikacji Portal firmy na urządzeniu. Mogą także podać identyfikator z menu ustawień systemu iOS po zakończeniu konfiguracji.
-
-3. Po ukończeniu konfiguracji na urządzeniu iOS trzeba zainstalować aplikację Portal firmy ze sklepu App Store.
-
-4. Użytkownik może się teraz zalogować do Portalu firmy przy użyciu nazwy UPN użytej podczas konfigurowania urządzenia.
-
-5. Po zalogowaniu użytkownik jest monitowany o zarejestrowanie urządzenia. Pierwszym krokiem jest zidentyfikowanie urządzenia. Aplikacja wyświetla listę urządzeń z systemem iOS, które zostały już zarejestrowane przez firmę i przypisane do konta użytkownika w usłudze Intune. Użytkownicy powinni wybrać odpowiednie urządzenie.
-
-   Jeśli to urządzenie nie zostało jeszcze zarejestrowane przez firmę, użytkownicy powinni wybrać pozycję **nowe urządzenie**, aby kontynuować standardową procedurę rejestracji.
-
-6. Na następnym ekranie użytkownik musi potwierdzić numer seryjny nowego urządzenia. Użytkownik może nacisnąć link **Potwierdź numer seryjny**, aby otworzyć instrukcje korzystania z aplikacji Ustawienia w celu zweryfikowania numeru seryjnego. Użytkownik musi następnie wprowadzić cztery ostatnie znaki numeru seryjnego do aplikacji Portal firmy.
-
-   Ten krok umożliwia zweryfikowanie, że urządzenie zostało zarejestrowane przez firmę w usłudze Intune. Jeśli numer seryjny urządzenia nie jest zgodny, oznacza to, że wybrano niewłaściwe urządzenie. Użytkownik powinien wrócić do poprzedniego ekranu i wybrać inne urządzenie.
-
-7. Po zweryfikowaniu numeru seryjnego aplikacja Portal firmy wykonuje przekierowanie do witryny internetowej Portalu firmy w celu sfinalizowania rejestracji. Następnie w witrynie pojawia się monit o powrót użytkownika do aplikacji.
-
-8. Rejestracja jest teraz ukończona. Użytkownik może teraz używać tego urządzenia z pełnym zestawem funkcji.
+1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. 
+2. Po ukończeniu instalacji użytkownicy są monitowani o podanie identyfikatora Apple ID. Muszą podać identyfikator Apple ID, aby umożliwić zainstalowanie aplikacji Portal firmy na urządzeniu. 
+3. Na urządzeniu z systemem iOS jest automatycznie instalowana aplikacja Portal firmy ze sklepu App Store.
+4. Użytkownicy muszą uruchamiać aplikację Portal firmy i logować się przy użyciu poświadczeń (na przykład unikatowego imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune. 
+5. Rejestracja zostanie ukończona po zalogowaniu się. Użytkownicy mogą teraz używać tego urządzenia z pełnym zestawem funkcji.
 
 ### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>Informacje dotyczące zarządzanych urządzeń należących do firmy bez koligacji użytkownika
 

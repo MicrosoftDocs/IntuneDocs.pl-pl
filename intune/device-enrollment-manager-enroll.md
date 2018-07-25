@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b18a55d7bd37ab32f6b2f64eee00489389ea323d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 76166fda33414c8ae3096ca12604a5edf07ad974
+ms.sourcegitcommit: a5bd08f2b6a0693fa62683aa2d3699041030269e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905227"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203224"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 
@@ -56,7 +56,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
   - (Dotyczy tylko systemu iOS) Jeśli do celów rejestrowania urządzeń z systemem iOS zostanie użyta metoda DEM, nie będzie można użyć do rejestrowania urządzeń programu Apple Configurator, programu Device Enrollment Program (DEP) firmy Apple ani programu Apple School Manager (ASM).
   - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z profilami służbowymi systemu Android, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń może być zarejestrowane maksymalnie 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
   - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń.
-  - Każde urządzenie wymaga licencji urządzenia. Dowiedz się więcej o [licencjach użytkowników i urządzeń](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
+  - Licencja urządzenia usługi Intune nie jest wymagana do używania menedżera rejestracji urządzeń. Dowiedz się więcej o [licencjach użytkowników i urządzeń](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 
 > [!NOTE]

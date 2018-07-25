@@ -15,18 +15,18 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd6aee30a88906c3f6ae078e338732589d88a5f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: d5a223834eed1b0174c56b5e33ad2140203073d0
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909137"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212039"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-System Android obsługuje kioski za pomocą zestawu rozwiązań modelu COSU (firmowych urządzeń mających określone zastosowanie) dla urządzeń z systemem Android. Takie urządzenia są używane w jednym celu, na przykład do cyfrowego znakowania, drukowania biletów lub zarządzania zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
+System Android obsługuje kioski za pomocą zestawu rozwiązań modelu firmowych urządzeń mających określone zastosowanie dla urządzeń z systemem Android. Takie urządzenia są używane w jednym celu, na przykład do cyfrowego znakowania, drukowania biletów lub zarządzania zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
 
 Usługa Intune ułatwia wdrażanie aplikacji i ustawień na kioskach z systemem Android. Aby uzyskać szczegółowe informacje na temat rozwiązania Android enterprise, zobacz [wymagania dotyczące rozwiązania Android enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 

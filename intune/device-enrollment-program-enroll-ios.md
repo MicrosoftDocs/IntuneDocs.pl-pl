@@ -15,18 +15,18 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c0eda06c0c781f0a789034abbf5ef8799a9b45c
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: bfc42775424ac84737af6c713a04295e24859f79
+ms.sourcegitcommit: a5bd08f2b6a0693fa62683aa2d3699041030269e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38219904"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203258"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym temacie przedstawiono informacje przydatne podczas włączania rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Rejestrację w ramach programu DEP można włączyć dla dużej liczby urządzeń bez konieczności używania ich. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+W tym artykule przedstawiono informacje przydatne podczas włączania rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Rejestrację w ramach programu DEP można włączyć dla dużej liczby urządzeń bez konieczności używania ich. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Włączenie rejestracji w programie DEP wymaga użycia zarówno portalu usługi Intune, jak i portalu DEP firmy Apple. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
@@ -115,7 +115,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     ![Nazwa i opis profilu.](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
-    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Ta opcja umożliwia również uwierzytelnianie urządzeń przy użyciu aplikacji Portal firmy. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Ta opcja umożliwia również uwierzytelnianie urządzeń przy użyciu aplikacji Portal firmy. W przypadku korzystania z usług ADFS koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Można jej używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
 
@@ -178,7 +178,7 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
-   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Urządzenia programu Enrollment Program usuniętego z portalu usługi Intune nie można ponownie zaimportować, dopóki nie zostanie przeprowadzona pełna synchronizacja.   
+   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Gdy urządzenie uczestniczące w programie rejestracji zostanie usunięte z portalu usługi Intune bez usuwania przypisania z serwera MDM firmy Apple w portalu programu DEP, zostanie ponownie zaimportowane do usługi Intune dopiero po uruchomieniu pełnej synchronizacji.   
    - Synchronizacja jest uruchamiana automatycznie co 24 godziny. Można też przeprowadzić synchronizację, klikając przycisk **Synchronizuj** (nie częściej niż raz na 15 minut). Każde żądanie synchronizacji ma przydzielone 15 minut na ukończenie. Przycisk **Synchronizuj** pozostaje wyłączony do ukończenia synchronizacji. Synchronizacja spowoduje odświeżenie stanu bieżącego urządzenia oraz zaimportowanie nowych urządzeń przypisanych do serwera MDM firmy Apple.   
 
 

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 7/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 05d93f1518427201d9d96dbc22c772967fe4fa0f
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: d35c9e32b7a0720d5d84a93a7edde6f2bd51911f
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744571"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146632"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -63,10 +63,10 @@ W przypadku wybrania opcji **Niestandardowa sieć VPN** jako typ połączenia sk
 - **Identyfikator sieci VPN**: to jest identyfikator używanej aplikacji sieci VPN udostępniony przez dostawcę sieci VPN.
 - **Podaj pary klucza i wartości dla atrybutów niestandardowej sieci VPN**: dodaj lub zaimportuj **klucze** i **wartości**, aby dostosować połączenie sieci VPN. Te wartości również są zwykle dostarczane przez dostawcę sieci VPN.
 
-## <a name="apps-per-app-vpn-settings"></a>Ustawienia aplikacji (sieć VPN dla aplikacji)
+## <a name="automatic-vpn-settings"></a>Ustawienia automatycznego połączenia VPN
 
-- **Sieć VPN dla aplikacji**: włącz tę opcję, jeśli chcesz użyć adresów URL umożliwiających nawiązanie połączenia sieci VPN podczas korzystania z przeglądarki Safari. Aby skonfigurować sieć VPN dla aplikacji, musisz wybrać metodę uwierzytelniania **Certyfikaty** w ustawieniach podstawowych sieci VPN.
-  - **Adresy URL przeglądarki Safari wyzwalające tę sieć VPN**: wybierz, aby dodać jeden lub wiele adresów URL witryn internetowych. Odwiedzenie tych adresów URL powoduje nawiązanie połączenia VPN.
+- **Sieć VPN dla aplikacji**: wybranie tej opcji umożliwia używanie sieci VPN dla aplikacji, co pozwala automatycznie wyzwolić połączenie sieci VPN w przypadku otwarcia określonych aplikacji. Oprócz wybrania tej opcji należy skojarzyć aplikacje z tym profilem sieci VPN. Aby uzyskać więcej informacji, zapoznaj się z [instrukcjami dotyczącymi konfigurowania sieci VPN dla systemu iOS](vpn-setting-configure-per-app.md). 
+  - **Adresy URL przeglądarki Safari wyzwalające tę sieć VPN**: wybierz, aby dodać jeden lub wiele adresów URL witryn internetowych. Gdy te adresy URL zostaną otwarte za pomocą przeglądarki Safari na urządzeniu, połączenie sieci VPN zostanie nawiązane automatycznie.
 
 - **Sieć VPN na żądanie**: skonfiguruj reguły warunkowe, które kontrolują moment inicjowania połączenia sieci VPN. Na przykład możesz utworzyć warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z siecią Wi-Fi firmy. Inna możliwość to utworzenie warunku, zgodnie z którym połączenie sieci VPN nie będzie inicjowane, jeśli urządzenie nie może uzyskać dostępu do określonej domeny wyszukiwania DNS.
 

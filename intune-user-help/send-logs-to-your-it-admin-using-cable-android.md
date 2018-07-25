@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a12e0103f9eae08003d8cca6a5eb4699ced27a27
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2a2c5c60f22aca6a9c989281ef2c5cc9e0c66911
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015612"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117858"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy za pomocą kabla USB
 
@@ -35,7 +35,7 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem An
 
 2. Podłącz urządzenie do komputera za pomocą kabla USB. Zasadniczo jest to ten sam kabel, którego używa się do ładowania urządzenia z gniazda ściennego.
 
-3. Na komputerze wyszukaj katalog o nazwie odpowiadającej nazwie urządzenia. W tym katalogu znajdź folder <strong>Urządzenie z systemem Android\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\</strong>.
+3. Na komputerze wyszukaj katalog o nazwie odpowiadającej nazwie urządzenia. W tym katalogu znajdź folder <strong>Urządzenie z systemem Android\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong>.
 
 4. Wybierz pliki, a następnie dołącz je do wiadomości e-mail. Wyślij utworzoną wiadomość e-mail do działu pomocy technicznej Twojej firmy.
 
