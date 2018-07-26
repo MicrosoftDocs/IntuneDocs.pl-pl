@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 084200f5773e5f92288d64e0fea23f022d93f3a0
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: 00f422b5619115b44b8d39c2d735f2163c22167f
+ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993738"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39138700"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
 
@@ -91,7 +91,7 @@ Ustaw jedną z następujących akcji:
 - Zezwalaj na określone (wyczyść, jeśli nieokreślone)
 
 **Co się stanie, jeśli administrator IT wprowadzi różne listy producentów urządzeń z systemem Android w zasadach przeznaczonych dla tych samych aplikacji i dla tego samego użytkownika usługi Intune?**<br>
-W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną producentów urządzeń z systemem Android wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „Google, Samsung”, natomiast *zasady B* określają wartość „Google”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „Google”. 
+W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną producentów urządzeń z systemem Android wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „Google; Samsung”, natomiast *zasady B* określają wartość „Google”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „Google”. 
 
 ### <a name="additional-settings-and-actions"></a>Dodatkowe ustawienia i akcje 
 

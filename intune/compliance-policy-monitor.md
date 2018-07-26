@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/25/2018
+ms.date: 7/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5e9de6f1ac8bca1d65a94294d3b049dfccbe44c7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 557bdbace1752b8680cd15d7ba190577bec23e24
+ms.sourcegitcommit: 2e849eea920dcd6ef1b78e5aee26434bb7b01bff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905363"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39132463"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -167,11 +167,11 @@ Ta funkcja jest uwzględniana w obszarze raportowania stanu urządzenia:
 1. Wybierz kolejno pozycje **Zgodność urządzenia** > **Zasady**. Zostanie wyświetlona lista zasad, w tym platforma, informacja o przypisaniu zasad i dalsze szczegóły.
 2. Wybierz zasadę > **Omówienie**. W tym widoku przypisanie zasad uwzględnia następujące stany:
 
-  - Sukces
-  - Error
-  - Konflikt
-  - Oczekiwanie
-  - Nie dotyczy
+  - Powodzenie: zasady zostały zastosowane.
+  - Błąd: nie można zastosować zasad. Ten stan jest przeważnie wyświetlany z kodem błędu stanowiącym link do wyjaśnienia. 
+  - Konflikt: na tym samym urządzeniu zostały zastosowane dwa ustawienia, a usługa Intune nie może rozwiązać konfliktu. Administrator powinien zapoznać się z tą sytuacją.
+  - Oczekujące: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
+  - Nie dotyczy: urządzenie nie może odebrać zasad. Na przykład zasady aktualizują ustawienie specyficzne dla systemu iOS 11.1, ale urządzenie używa systemu iOS 10. 
 
 3. Aby wyświetlić szczegóły urządzeń używających danych zasad, wybierz jeden z stanów. Na przykład wybierz pozycję **Powodzenie**. W następnym oknie jest wyświetlana lista szczegółów określonego urządzenia, w tym nazwa i stan jego wdrażania.
 
@@ -181,4 +181,3 @@ Konflikty zasad mogą wystąpić, gdy na urządzeniu stosuje się wiele zasad us
 - Jeżeli sprzeczne ustawienia pochodzą z zasad konfiguracji usługi Intune i zasad zgodności, ustawienia w zasadach zgodności mają pierwszeństwo względem ustawień w zasadach konfiguracji. Dzieje się tak nawet wtedy, gdy ustawienia w zasadach konfiguracji są bardziej bezpieczne.
 
 - Jeśli wdrożono wiele zasad zgodności, usługa Intune używa najbezpieczniejszych z nich.
-

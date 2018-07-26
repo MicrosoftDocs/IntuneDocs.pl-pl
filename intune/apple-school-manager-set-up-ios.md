@@ -15,18 +15,18 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 853b602781b221ba681d802ae0119fc184ab8d6b
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 31d09c8c97da823ec40785a6db42df64056277fb
+ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225156"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39164556"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym temacie przedstawiono informacje ułatwiające włączenie rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+W tym artykule przedstawiono informacje ułatwiające włączenie rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Aby włączyć rejestrację w programie Apple School Manager, należy użyć portalu usługi Intune i portalu programu Apple School Manager. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
@@ -36,7 +36,7 @@ Rejestracji w programie Apple School Manager nie można używać wraz z [program
 - [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 - [Urząd zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
 - [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
-- Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- W przypadku korzystania z usług ADFS koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Urządzenia zakupione w programie [Apple School Management](http://school.apple.com)
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Uzyskiwanie tokenu od firmy Apple i przypisywanie urządzeń
@@ -80,13 +80,15 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji**.
 2. Wybierz token, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+
 3. W obszarze **Utwórz profil** wprowadź nazwę w polu **Nazwa** i opis w polu **Opis**. Informacje te będą używane do celów administracyjnych. Te szczegóły nie są widoczne dla użytkowników. Możesz użyć pola **Nazwa**, aby utworzyć grupę dynamiczną w usłudze Azure Active Directory. Nazwa profilu umożliwia zdefiniowanie parametru enrollmentProfileName w celu przypisania urządzeń z tym profilem rejestracji. Dowiedz się więcej o [grupach dynamicznych usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
+
     ![Nazwa i opis profilu.](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
-    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Ta opcja umożliwia również uwierzytelnianie urządzeń przy użyciu aplikacji Portal firmy. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Tryb udostępniania urządzenia iPad w programie Apple School Manager wymaga od użytkownika zarejestrowania urządzenia bez koligacji użytkownika.
+    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Ta opcja umożliwia również uwierzytelnianie urządzeń przy użyciu aplikacji Portal firmy. W przypadku korzystania z usług ADFS koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Tryb udostępniania urządzenia iPad w programie Apple School Manager wymaga od użytkownika zarejestrowania urządzenia bez koligacji użytkownika.
 
-    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać dla urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem, np. dla urządzenia udostępnionego. Można jej używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
+    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać dla urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem, np. dla urządzenia udostępnionego. Tej opcji można używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
 
 5. Jeśli została wybrana opcja **Zarejestruj z użyciem koligacji użytkowników**, można zezwolić użytkownikom na uwierzytelnianie za pomocą aplikacji Portal firmy zamiast Asystenta ustawień firmy Apple.
 
@@ -108,7 +110,7 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 
 7. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
 
-8. Jeśli chcesz umożliwić wielu użytkownikom logowanie się na zarejestrowanych urządzeniach iPad za pomocą zarządzanego identyfikatora Apple ID, wybierz pozycję **Tak** w obszarze **Udostępnione urządzenie iPad**. (Wymaga to ustawienia **Zarejestruj bez koligacji użytkownika** i trybu **nadzorowanego** ustawionego na **Tak**). Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md). Należy także przejrzeć [wymagania firmy Apple dotyczące udostępnionych urządzeń iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+8. Jeśli chcesz umożliwić wielu użytkownikom logowanie się na zarejestrowanych urządzeniach iPad za pomocą zarządzanego identyfikatora Apple Id, wybierz pozycję **Tak** w obszarze **Udostępnione urządzenie iPad** (ta opcja wymaga ustawienia pozycji **Zarejestruj bez koligacji użytkownika** i trybu **Nadzorowane** na **Tak**). Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](education-settings-configure-ios-shared.md) i [wymagań dotyczących udostępnionego urządzenia iPad firmy Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
 9. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
@@ -151,7 +153,7 @@ Opcjonalnie: program Apple School Manager obsługuje synchronizowanie danych lis
 
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 
-Teraz, gdy do usługi Intune zostało przypisane uprawnienie do zarządzania urządzeniami korzystającymi z programu Apple School Manager, możliwe jest zsynchronizowanie usługi Intune z usługą firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune.
+Gdy do usługi Intune zostało przypisane uprawnienie do zarządzania urządzeniami korzystającymi z programu Apple School Manager, zsynchronizuj usługę Intune z usługą firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune.
 
 W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
