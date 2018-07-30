@@ -396,12 +396,12 @@
               href: endpoint-protection-macos.md
             - name: Windows 10
               href: endpoint-protection-windows-10.md
-        - name: Konfigurowanie ustawień kiosku
-          href: kiosk-settings.md
-        - name: Konfigurowanie ustawień kiosku systemu Android
+        - name: Ustawienia kiosku systemu Android
           href: android-kiosk-settings.md
         - name: Ustawienia kiosku w firmie z systemem Android
           href: android-enterprise-settings.md
+        - name: Ustawienia kiosku systemu Windows 10
+          href: kiosk-settings.md
         - name: Konfigurowanie ustawień poczty e-mail
           href: email-settings-configure.md
           items:
@@ -439,7 +439,9 @@
               href: wi-fi-settings-ios.md
             - name: macOS
               href: wi-fi-settings-macos.md
-            - name: Windows 8.1 i Windows 10
+            - name: Windows 10
+              href: wi-fi-settings-windows.md
+            - name: Windows 8.1
               href: wi-fi-settings-import-windows-8-1.md
         - name: Edukacja
           items:
@@ -458,6 +460,10 @@
               href: certificates-scep-configure.md
             - name: PKCS
               href: certficates-pfx-configure.md
+            - name: Używanie protokołu S/MIME do szyfrowania wiadomości e-mail
+              href: certificates-s-mime-encryption-sign.md
+            - name: Używanie urzędu certyfikacji innej firmy za pomocą protokołu SCEP
+              href: certificate-authority-add-scep-overview.md
             - name: Usługa internetowa Symantec PKI Manager
               href: certificates-symantec-configure.md
         - name: Konfigurowanie ustawień usługi Windows Information Protection
@@ -710,6 +716,8 @@
               href: custom-settings-android-for-work.md
 - name: Wskazówki dla deweloperów
   items:
+    - name: Interfejs API umożliwiający dodawanie urzędu certyfikacji innej firmy
+      href: scep-libraries-apis.md
     - name: Ochrona aplikacji z użyciem zestawu Intune App SDK
       href: app-sdk.md
       items:
