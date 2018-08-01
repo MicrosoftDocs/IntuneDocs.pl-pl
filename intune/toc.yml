@@ -443,6 +443,8 @@
               href: wi-fi-settings-windows.md
             - name: Windows 8.1
               href: wi-fi-settings-import-windows-8-1.md
+        - name: Konfigurowanie profilów sieci komórkowej eSIM
+          href: esim-device-configuration.md
         - name: Edukacja
           items:
             - name: Udostępnione urządzenia z systemem iOS
