@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 30f2bea4589e31f3012df1bd06e6327b923ec5d1
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 3da8a3f13e592483513daf81bc5ff1ad8af0f7e6
+ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225446"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268910"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -167,7 +167,7 @@ Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników l
   Włączenie tego ustawienia wymaga, aby na urządzeniach:
   - Włączyć usługi lokalizacyjne na poziomie systemu operacyjnego
   - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych
-  - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne.
+  - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej.
 
 - **Okres ważności stanu zgodności (dni)**: podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni.
 

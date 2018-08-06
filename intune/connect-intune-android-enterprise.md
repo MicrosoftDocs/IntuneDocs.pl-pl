@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0152d0cb7af418b500c1ac5991f2356bd2e19965
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1b1f54486ab2c3d98e663cfddded346eb61662ae
+ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909086"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279427"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Łączenie konta usługi Intune z kontem rozwiązania Android enterprise
 
@@ -51,7 +51,7 @@ Aby obsługiwać urządzenia z profilami służbowymi i urządzenia kiosku z sys
 
 ## <a name="disconnect-your-android-enterprise-administrative-account"></a>Rozłączanie konta administracyjnego rozwiązania Android enterprise
 
-Rejestrację rozwiązania Android enterprise i zarządzanie w ramach niego możesz wyłączyć. Wybranie pozycji **Rozłącz** w konsoli administracyjnej usługi Intune spowoduje usunięcie wszystkich zarejestrowanych urządzeń z profilem służbowym systemu Android z rejestracji. Usunięte zostaną również relacje między kontem rozwiązania Android enterprise a usługą Intune.
+Rejestrację rozwiązania Android enterprise i zarządzanie w ramach niego możesz wyłączyć. Aby to zrobić, należy najpierw wycofać wszystkie zarejestrowane urządzenia z profilem służbowym systemu Android. Następnie wybierz pozycję **Rozłącz** w konsoli administracyjnej usługi Intune, aby usunąć wszystkie zarejestrowanych urządzenia z profilem służbowym systemu Android z rejestracji. Usunięte zostaną również relacje między kontem rozwiązania Android enterprise a usługą Intune.
 
 1. Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
 2. Wybierz pozycję **Rejestracja urządzeń** > **Rejestracja systemu Android** > **Zarządzany sklep Google Play** > **Rozłącz**.

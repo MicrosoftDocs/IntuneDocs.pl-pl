@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00f422b5619115b44b8d39c2d735f2163c22167f
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138700"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254488"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
 
@@ -44,7 +44,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 8. W kolumnie **Akcja** wybierz akcję, którą chcesz wykonać, jeśli użytkownicy nie spełnili Twoich wymagań. W niektórych przypadkach dla pojedynczego ustawienia można skonfigurować wiele akcji. Aby uzyskać szczegółowe informacje, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md).
 
 >[!NOTE]
-> Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli. 
+> Aby użyć ustawienia **Modele urządzeń lub Producenci urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli. Unikaj spacji na listach wielu wartości. Te wartości nie uwzględniają wielkości liter. 
 
 ## <a name="policy-settings"></a>Ustawienia zasad 
 
@@ -83,7 +83,10 @@ W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe 
 -  Producenci urządzeń
 
 Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
-Przykładowe dane wejściowe: *Producent A; Producent B; Google* 
+Przykładowe dane wejściowe: *Producent A; Producent B* 
+
+>[!NOTE]
+> Oto niektórzy popularni producenci raportowani z urządzeń używających usługi Intune. Można ich użyć jako danych wejściowych: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
 
 Na urządzeniach użytkowników końcowych klient usługi Intune wykonuje akcję w oparciu o proste dopasowywanie ciągów modelu urządzenia określonych w usłudze Intune dla zasad ochrony aplikacji. Dopasowywanie całkowicie zależy od danych zgłoszonych przez urządzenie. Zachęcamy, aby administrator IT upewnił się, że faktyczne zachowanie odpowiada zamierzonemu przez przetestowanie tego ustawienia z użyciem różnych producentów i modeli urządzeń w ramach małej grupy użytkowników. Wartość domyślna to **Nie skonfigurowano**.<br>
 Ustaw jedną z następujących akcji: 

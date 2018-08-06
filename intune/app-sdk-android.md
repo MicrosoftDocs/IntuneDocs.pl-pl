@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/16/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ac85478abed049487c028c58637e7937876d2198
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 87333610380ef34e1d832694a30bfe97388bcb62
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34449874"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254403"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -463,7 +463,20 @@ Nie trzeba konfigurować żadnych dodatkowych wartości manifestu.
 
 W razie potrzeby można określić urząd i identyfikator NonBrokerRedirectURI.
 
-Zespół zestawu SDK usługi Intune będzie wymagać identyfikatora Twojej aplikacji (identyfikatora klienta). Można go znaleźć za pośrednictwem witryny [Azure Portal](https://portal.azure.com/) w obszarze **Wszystkie aplikacje** w kolumnie **Identyfikator aplikacji**. Zobacz [tutaj](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications), aby uzyskać informacje o rejestracji aplikacji przy użyciu usługi Azure AD. Z zespołem zestawu SDK usługi Intune można się skontaktować pod adresem msintuneappsdk@microsoft.com.
+Zarejestruj aplikację w usłudze Azure AD, wykonując następujące czynności.
+
+W witrynie Azure Portal:
+1.  Przejdź do bloku **Azure Active Directory**.
+2.  Wybierz konfigurację **Rejestracja aplikacji** dla swojej aplikacji.
+3.  W obszarze **Ustawienia** pod nagłówkiem **Dostęp do interfejsu API** wybierz pozycję **Wymagane uprawnienia**. 
+4.  Kliknij przycisk **+ Dodaj**.
+5.  Kliknij pozycję **Wybierz interfejs API**. 
+6.  W polu wyszukiwania wpisz frazę **Microsoft Mobile Application Management**.
+7.  Na liście interfejsów API wybierz pozycję **Microsoft Mobile Application Management** i kliknij przycisk Wybierz.
+8.  Wybierz pozycję **Odczyt i zapis danych zarządzania aplikacji użytkownika**.
+9.  Kliknij pozycję **Gotowe**.
+
+Zobacz [tutaj](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications), aby uzyskać informacje o rejestracji aplikacji przy użyciu usługi Azure AD. 
 
 Zobacz też wymagania dotyczące [dostępu warunkowego](#conditional-access) poniżej.
 
@@ -1418,7 +1431,7 @@ Poniżej przedstawiono wskazówki dotyczące wymagania monitowania użytkownika 
 > Korzyści wynikające z **rejestracji domyślnej** obejmują uproszczone uzyskiwanie zasad z usługi APP-WE dla aplikacji na urządzeniu.
 
 ### <a name="general-requirements"></a>Wymagania ogólne
-* Zespół zestawu SDK usługi Intune będzie wymagać identyfikatora Twojej aplikacji. Można go znaleźć za pośrednictwem witryny [Azure Portal](https://portal.azure.com/) w obszarze **Wszystkie aplikacje** w kolumnie **Identyfikator aplikacji**. Dobrym sposobem na skontaktowanie się z zespołem zestawu SDK usługi Intune jest wysłanie wiadomości e-mail na adres msintuneappsdk@microsoft.com.
+* Upewnij się, aplikacja została zarejestrowana w usłudze Zarządzanie aplikacjami mobilnymi w usłudze Intune, wykonując kroki opisane w temacie [Typowe konfiguracje biblioteki ADAL nr 2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations).
 
 ### <a name="working-with-the-intune-sdk"></a>Korzystanie z zestawu SDK usługi Intune
 Te instrukcje dotyczą wszystkich deweloperów aplikacji Android i Xamarin, którzy chcą wymagać zasad ochrony aplikacji usługi Intune w przypadku używania aplikacji na urządzeniu użytkownika końcowego.

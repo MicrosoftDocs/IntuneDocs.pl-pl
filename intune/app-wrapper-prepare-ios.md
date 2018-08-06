@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: edbd802b5f0482fc5dbaa801308447e2f8061189
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 050660b4da609d8e6c0dbf969eb71aa79945262a
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38224939"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254539"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -339,7 +339,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 
     b.  Włącz odpowiednie możliwości. Aby uzyskać szczegółowe informacje dotyczące poszczególnych możliwości oraz sposobu określania poprawnych wartości, zobacz [Dodawanie możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) w bibliotece deweloperów systemu iOS.
 
-    c.  Zanotuj wszystkie identyfikatory, które zostały utworzone podczas tego procesu.
+    c.  Zanotuj wszystkie identyfikatory, które zostały utworzone podczas tego procesu. Mogą być one również określane jako wartości `AppIdentifierPrefix`.
 
     d.  Skompiluj i podpisz swoją aplikację w celu jej opakowania.
 
@@ -349,7 +349,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 
     b.  Utwórz profil inicjowania obsługi administracyjnej dla swojej aplikacji. Aby uzyskać instrukcje, zobacz [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) (Jak uzyskać wymagania wstępne dotyczące narzędzia opakowującego aplikacje dla systemu iOS w usłudze Intune).
 
-    c.  W swoim profilu inicjowania obsługi administracyjnej włącz takie same uprawnienia, jakie ma Twoja aplikacja. Będzie konieczne podanie takich samych identyfikatorów, jakie zostały określone podczas opracowywania aplikacji.
+    c.  W swoim profilu inicjowania obsługi administracyjnej włącz takie same uprawnienia, jakie ma Twoja aplikacja. Będzie konieczne podanie takich samych identyfikatorów (wartości `AppIdentifierPrefix`), jakie zostały określone podczas opracowywania aplikacji. 
 
     d.  Zakończ pracę Kreatora profilu aprowizacji i pobierz odpowiedni plik.
 

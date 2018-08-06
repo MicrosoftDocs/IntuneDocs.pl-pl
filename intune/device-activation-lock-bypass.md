@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a8c14e523d33c9e0994134ff1ef468b290b3992
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
+ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022513"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39356577"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Obejście blokady aktywacji na nadzorowanych urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -66,15 +66,23 @@ Aby obejść blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć
 ## <a name="how-to-use-activation-lock-bypass"></a>Jak korzystać z obejścia blokady aktywacji
 
 >[!IMPORTANT]
->Po obejściu blokady aktywacji na urządzeniu, jeśli jest otwarta aplikacja Znajdź mój iPhone, zostanie automatycznie zastosowana nowa blokada aktywacji. Dlatego **musisz mieć fizyczny dostęp do urządzenia, aby móc wykonać tę procedurę**.
+>Po obejściu blokady aktywacji na urządzeniu, jeśli jest uruchomiona aplikacja Znajdź mój iPhone, zostanie automatycznie zastosowana nowa blokada aktywacji. Dlatego **musisz mieć fizyczny dostęp do urządzenia, aby móc wykonać tę procedurę**.
 
-Akcja zdalna **Zastosuj obejście blokady aktywacji** dotycząca urządzenia w usłudze Intune powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
+Akcja zdalna **Zastosuj obejście blokady aktywacji** dotycząca urządzenia w usłudze Intune powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez konieczności podania identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W bloku **Intune** wybierz opcję **Urządzenia**.
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**.
+3. W bloku **Intune** wybierz pozycję **Urządzenia**.
 4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz nadzorowane urządzenie z systemem iOS, wybierz pozycję **...Więcej**, a następnie wybierz akcję zdalną **Zastosuj obejście blokady aktywacji** dla urządzenia.
+5. Na liście zarządzanych urządzeń wybierz zdalną akcję urządzenia**Zastosuj obejście blokady aktywacji**.
+6. Przejdź do sekcji „Sprzęt”, a następnie skopiuj wartość **kodu obejścia blokady aktywacji** w obszarze **Dostęp warunkowy**.
+
+    >[!NOTE]
+    >Skopiuj kod obejścia przed zresetowaniem urządzenia do ustawień fabrycznych. Jeśli zresetujesz ustawienia urządzenia przed skopiowaniem kodu, kod zostanie usunięty z platformy Azure.
+
+7.  Przejdź do bloku **Przegląd** urządzenia, a następnie wybierz pozycję **Resetowanie do ustawień fabrycznych**.
+8.  Po zresetowaniu urządzenia zostanie wyświetlony monit o podanie *identyfikatora Apple ID* i *hasła*. Pozostaw pole *ID* puste, a następnie wprowadź **kod obejścia** *hasła*. Spowoduje to usunięcie konta z urządzenia. 
+
 
 ## <a name="next-steps"></a>Następne kroki
 

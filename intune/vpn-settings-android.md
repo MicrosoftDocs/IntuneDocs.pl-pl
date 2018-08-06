@@ -1,67 +1,76 @@
 ---
-title: Ustawienia sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune
-titlesuffix: ''
-description: Informacje dotyczące ustawień usługi Intune, których można użyć do konfigurowania połączeń sieci VPN na urządzeniach z systemem Android
+title: Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Podczas tworzenia profilu konfiguracji sieci VPN dla urządzeń z systemem Android i urządzeń z programem Android for Work wprowadź nazwę połączenia, adres IP lub nazwę FQDN serwera sieci VPN, wybierz sposób uwierzytelniania użytkowników przy użyciu serwera sieci VPN, a następnie wybierz typ połączenia Citrix, SonicWall, Check Point Capsule, Pulse Secure i Edge.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 7/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f52c43f8918589c1b66034ad68908f4d5ddba6d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: f02a76def463c4ef1c3ee24b021df3185d263ecf
+ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905125"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279325"
 ---
-# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune 
+# <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Ten artykuł zawiera informacje dotyczące ustawień usługi Intune, za pomocą których można skonfigurować połączenia sieci VPN na urządzeniach z systemem Android.
 
-
 Możesz skonfigurować ustawienia sieci VPN dla następujących platform:
 
 - [Android](#android-vpn-settings)
-- [Urządzenia z profilami służbowymi systemu Android](#android-for-work-vpn-settings)
+- [Android for Work](#android-for-work-vpn-settings)
 
 W zależności od wybranych ustawień niektórych wartości z poniższej listy nie będzie można skonfigurować.
 
 ## <a name="android-vpn-settings"></a>Ustawienia sieci VPN dla systemu Android
-**Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
-- **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą. Przykłady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda uwierzytelniania** — umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN:
-    - **Certyfikaty** — umożliwia wybór profilu certyfikatu protokołu SCEP lub PKCS, który został wcześniej utworzony do uwierzytelniania połączenia. Aby uzyskać więcej szczegółowych informacji o profilach certyfikatów, zobacz artykuł [Konfigurowanie certyfikatów](certificates-configure.md).
-    - **Nazwa użytkownika i hasło** — użytkownicy końcowi muszą podać nazwę użytkownika i hasło, aby zalogować się do serwera sieci VPN.
-- **Typ połączenia** — umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
-    - **Check Point Capsule VPN**
-    - **Cisco AnyConnect**
-    - **SonicWall Mobile Connect**
-    - **F5 Edge Client**
-    - **Pulse Secure**
-    - **Citrix**
 
-- **Odcisk palca** (tylko dla Check Point Capsule VPN) — określ ciąg znaków, na przykład „kod odcisku palca firmy Contoso”, używany do sprawdzenia, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie otrzymało jeszcze odcisku palca, wyświetla monit dotyczący zaufania do serwera sieci VPN, z którym jest nawiązywane połączenie, zawierający odcisk palca (użytkownik samodzielnie weryfikuje odcisk palca i wybiera opcję zaufania, aby nawiązać połączenie).
-- **Podaj pary klucza i wartości dla atrybutów sieci VPN Citrix** (tylko dla Citrix) — wprowadź pary klucza i wartości dostarczone przez dostawcę Citrix, aby skonfigurować właściwości połączenia sieci VPN.
+- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 
-## <a name="android-work-profile-device-vpn-settings"></a>Ustawienia sieci VPN urządzeń z profilami służbowymi systemu Android
+  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
 
-**Nazwa połączenia** — umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
-- **Adres IP lub nazwa FQDN** — umożliwia podanie adresu IP lub w pełni kwalifikowanej nazwy domeny serwera sieci VPN, z którym urządzenia się łączą. Przykłady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda uwierzytelniania** — umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN:
-    - **Certyfikaty** — umożliwia wybór profilu certyfikatu protokołu SCEP lub PKCS, który został wcześniej utworzony do uwierzytelniania połączenia. Aby uzyskać więcej szczegółowych informacji o profilach certyfikatów, zobacz artykuł [Konfigurowanie certyfikatów](certificates-configure.md).
-    - **Nazwa użytkownika i hasło** — użytkownicy końcowi muszą podać nazwę użytkownika i hasło, aby zalogować się do serwera sieci VPN.
-- **Typ połączenia** — umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
-    - **Check Point Capsule VPN**
-    - **Cisco AnyConnect**
-    - **SonicWall Mobile Connect**
-    - **F5 Edge Client**
-    - **Pulse Secure**
+    - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
+    - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
 
+- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
+
+  - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
+  - **Citrix**
+
+- **Odcisk palca** (tylko dla Check Point Capsule VPN) — wprowadź ciąg znaków, na przykład **Kod odcisku palca firmy Contoso**, aby sprawdzić, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie ma żadnego odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN zawierający odcisk palca serwera. Użytkownik samodzielnie weryfikuje odcisk palca i wybiera pozycję Zaufane w celu nawiązania połączenia.
+- **Podaj pary klucza i wartości dla atrybutów sieci VPN Citrix** (tylko dla dostawcy Citrix) — wprowadź pary klucza i wartości dostarczone przez dostawcę Citrix. Te wartości służą do konfigurowania właściwości połączenia sieci VPN.
+
+## <a name="android-for-work-vpn-settings"></a>Ustawienia sieci VPN dla programu Android for Work
+
+- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
+
+  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
+  
+    - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
+    - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
+
+- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
+
+  - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
+
+## <a name="next-steps"></a>Następne kroki
+[Profile poczty e-mail w usłudze Intune](vpn-settings-configure.md)

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/23/2018
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a4bbc89f66b49fe6a5c4ff8595c5913583288e0f
-ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
+ms.openlocfilehash: 42e0798b0c2941d9ea45e75b367b69bc7dab548f
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34803843"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321224"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
@@ -252,7 +252,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
 ## <a name="kiosk-preview---obsolete"></a>Kiosk (wersja zapoznawcza) — przestarzałe
 
-Te ustawienia są przenoszone i w nowej wersji zostaną usunięte. Aby użyć nowych ustawień, zobacz [Ustawienia kiosku w systemie Windows 10 lub nowszym](kiosk-settings.md).
+Te ustawienia są przeznaczone tylko do odczytu i nie można ich zmienić. Aby skonfigurować tryb kiosku, zobacz [Ustawienia kiosku w systemie Windows 10 lub nowszym](kiosk-settings.md).
 
 Kiosk to urządzenie, na którym jest zwykle uruchamiana jedna aplikacja lub zestaw konkretnych aplikacji. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
 

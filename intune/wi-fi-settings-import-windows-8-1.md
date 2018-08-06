@@ -1,30 +1,35 @@
 ---
-title: Importowanie ustawień sieci Wi-Fi dla systemu Windows 8.1 lub nowszego
-titleSuffix: Microsoft Intune
-description: Jak importować ustawienia sieci Wi-Fi z systemu Windows do profilu sieci Wi-Fi usługi Intune.
+title: Importowanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Możliwe jest wyeksportowanie ustawień sieci Wi-Fi z urządzenia z systemem Windows jako plik XML przy użyciu narzędzia netsh wlan. Następnie można zaimportować ten plik w usłudze Intune, aby utworzyć profil sieci Wi-Fi dla urządzeń z systemem Windows 8.1, Windows 10 i Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 157416738e4607d5022f1c3c7ed8251a8e32fe3e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6ce5cdd9509ed3407491714ccfa853613eb43973
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834020"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321139"
 ---
-# <a name="import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Importowanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows 8.1 lub nowszym w usłudze Microsoft Intune
+# <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importowanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W przypadku urządzeń z systemami operacyjnymi Windows 8.1, Windows 10 (na komputery i urządzenia mobilne) oraz Windows Holographic for Business można zaimportować profil konfiguracji sieci Wi-Fi, który został wcześniej wyeksportowany do pliku.
+W przypadku urządzeń z systemem Windows można zaimportować profil konfiguracji sieci Wi-Fi, który został wcześniej wyeksportowany do pliku. **Dla urządzeń z systemem Windows 10 lub nowszym można [utworzyć profil sieci Wi-Fi](wi-fi-settings-windows.md) bezpośrednio w usłudze Intune**.
+
+Dotyczy:  
+- Windows 8.1 i nowsze
+- System Windows 10 lub nowszy
+- Windows 10 Desktop lub Mobile
+- Windows Holographic for Business
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Eksportowanie ustawień sieci Wi-Fi z urządzenia z systemem Windows
 

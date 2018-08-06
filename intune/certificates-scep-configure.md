@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
-ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
+ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36297909"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321241"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -464,4 +464,6 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | 0x0FFFFFFFF | Unknown_Error  | Nie można wykonać żądania, ponieważ wystąpił błąd po stronie serwera. Spróbuj ponownie. |
 
 ## <a name="next-steps"></a>Następne kroki
-[Użyj certyfikatów PKCS](certficates-pfx-configure.md) lub [wystaw certyfikaty PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md).
+
+- [Używanie certyfikatów PKCS](certficates-pfx-configure.md) lub [wystawianie certyfikatów PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md)
+- [Dodawanie urzędu certyfikacji innej firmy w celu korzystania protokołu SCEP w usłudze Intune](certificate-authority-add-scep-overview.md)

@@ -1,22 +1,23 @@
 ---
 title: Ograniczenia urządzeń dotyczące systemu Windows Holographic for Business w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Microsoft Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy i dane użycia na platformie Azure.
+description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy i dane użycia na platformie Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/1/2018
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8a1abb4229b3e6b4c91cfd49b4f66dbe739ea7d
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 9d7f54ce0e288025a4a7f0f45bf5b10de5323021
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321758"
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows Holographic for Business w usłudze Intune
 
@@ -68,7 +69,9 @@ Następujące ustawienia ograniczeń urządzenia są obsługiwane na urządzenia
 
 - **Modyfikowanie czasu systemowego** — uniemożliwia użytkownikowi końcowemu zmianę daty i godziny na urządzeniu.
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk---obsolete"></a>Kiosk — przestarzałe
+
+Te ustawienia są przeznaczone tylko do odczytu i nie można ich zmienić. Aby skonfigurować tryb kiosku, zobacz [Ustawienia kiosku](kiosk-settings.md#windows-holographic-for-business).
 
 Na kiosku jest zazwyczaj uruchamiana konkretna aplikacja. Użytkownicy nie mogą uzyskać na urządzeniu dostępu do funkcjonalności lub funkcji spoza aplikacji kiosku.
 

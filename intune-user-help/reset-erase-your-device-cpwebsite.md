@@ -1,11 +1,11 @@
 ---
 title: Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy | Microsoft Docs
-description: ''
+description: Dowiedz się, jak zresetować urządzenie do ustawień fabrycznych z poziomu witryny internetowej Portal firmy.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/02/2017
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,32 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f9c59b1bfccabd8489cd466c645dc4a0051e97c
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016989"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321581"
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Resetowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli urządzenie zostanie utracone lub skradzione, może być konieczne zresetowanie go do domyślnych ustawień fabrycznych w celu uniemożliwienia nieupoważnionego dostępu do danych. Możesz również zresetować urządzenie zdalnie przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). Witryna sieci Web Portal firmy to strona internetowa umożliwiająca zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune. Przy użyciu tej witryny sieci Web można wykonywać większość zadań realizowanych za pomocą aplikacji Portal firmy.
+Dowiedz się, jak zresetować używane, zgubione lub skradzione urządzenie do ustawień fabrycznych z poziomu witryny internetowej Portal firmy.  
 
-Zresetowanie urządzenia spowoduje jego usunięcie z portalu firmy i przywrócenie jego domyślnych ustawień fabrycznych.
+Po zresetowaniu urządzenia nie będzie ono widoczne w aplikacji Portal firmy. Wcześniej istniejące aplikacje i pliki są usuwane, a urządzenie zostanie przywrócone do domyślnych ustawień fabrycznych.
 
 > [!Note]
-> Następujące czynności można również przeprowadzić z innego zarejestrowanego urządzenia. Najpierw należy otworzyć aplikację Portal firmy na tym urządzeniu, a następnie wykonać poszczególne kroki w celu ukończenia resetowania. 
+> Możesz również wykonać następujące czynności z poziomu innego zarejestrowanego urządzenia. Otwórz aplikację Portal firmy na tym urządzeniu i wykonaj podobne kroki w celu ukończenia resetowania.  
 
-Aby zresetować urządzenie:
+1. Otwórz [witrynę internetową Portal firmy](https://portal.manage.microsoft.com/#helpdeskDeskDialog), wybierz przycisk __Menu__, a następnie wybierz pozycję __Moje urządzenia__.
 
-1. W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__, a następnie wybierz pozycję __Moje urządzenia__.
+2. Wybierz urządzenie, które chcesz zresetować.
 
-2. Na stronie __Moje urządzenia__ wybierz urządzenie, którego nazwę chcesz zmienić.
+    ![Zrzut ekranu przedstawiający stronę Moje urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Urządzenie wyświetli się w oknie podręcznym. Wybierz pozycję **Resetuj**.  
 
-3. Urządzenie wyświetli się w oknie podręcznym. Naciśnij przycisk **Resetuj**.
+ ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)
+4. Zostanie wyświetlony komunikat z ostrzeżeniem, że będzie miało miejsce wymazanie całej zawartości znajdującej się na urządzeniu. Naciśnij pozycję **Resetuj** w celu potwierdzenia.  
 
-4. Zostanie wyświetlony komunikat informujący o zamiarze wymazania z urządzenia całej zawartości po przywróceniu domyślnych ustawień fabrycznych. Naciśnij przycisk **Resetuj**, aby potwierdzić wykonanie wybranej czynności.
-
-Twoje urządzenie zostało zresetowane.
-
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com/#helpdeskDeskDialog).

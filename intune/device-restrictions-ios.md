@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2987ca7ce3a9b99249fc62fc7de5c9cca22b0b26
-ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
+ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34803826"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321496"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -182,8 +182,8 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 
 Na liście Pokaż lub ukryj aplikacje możesz skonfigurować jedną z następujących list (wymagane są urządzenia nadzorowane z systemem iOS 9.3 lub nowszym).
 
-Lista **Ukryte aplikacje** — określ listę aplikacji, które mają być ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
-Lista **Widoczne aplikacje** — określ listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
+- Lista **Ukryte aplikacje** — określ listę aplikacji, które mają być ukryte dla użytkowników. Użytkownicy nie będą mogli wyświetlać ani uruchamiać tych aplikacji.
+- Lista **Widoczne aplikacje** — określ listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
 
 Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i adres URL aplikacji w sklepie z aplikacjami.
 
@@ -259,54 +259,8 @@ Po określeniu nazwy i identyfikatora pakietu każdej aplikacji wybierz pozycję
 - **Importuj** — umożliwia zaimportowanie pliku wartości rozdzielanych przecinkami (csv) zawierającego listę nazw aplikacji i powiązanych z nimi identyfikatorów pakietu.
 - **Eksportuj** — umożliwia wyeksportowanie skonfigurowanych nazw aplikacji i powiązanych z nimi identyfikatorów pakietu do pliku wartości rozdzielanych przecinkami (csv).
 
-### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
-
-Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
-
-```
-,com.apple.AppStore,App Store,Apple
-,com.apple.calculator,Calculator,Apple
-,com.apple.mobilecal,Calendar,Apple
-,com.apple.camera,Camera,Apple
-,com.apple.mobiletimer,Clock,Apple
-,com.apple.compass,Compass,Apple
-,com.apple.MobileAddressBook,Contacts,Apple
-,com.apple.facetime,FaceTime,Apple
-,com.apple.mobileme.fmf1,Find Friends,Apple
-,com.apple.mobileme.fmip1,Find iPhone,Apple
-,com.apple.gamecenter,Game Center,Apple
-,com.apple.mobilegarageband,GarageBand,Apple
-,com.apple.Health,Health,Apple
-,com.apple.iBooks,iBooks,Apple
-,com.apple.MobileStore,iTunes Store,Apple
-,com.apple.itunesu,iTunes U,Apple
-,com.apple.Keynote,Keynote,Apple
-,com.apple.mobilemail,Mail,Apple
-,com.apple.MapsMaps,Apple
-,com.apple.MobileSMS,Messages,Apple
-,com.apple.Music,Music,Apple
-,com.apple.news,News,Apple
-,com.apple.mobilenotes,Notes,Apple
-,com.apple.Numbers,Numbers,Apple
-,com.apple.Pages,Pages,Apple
-,com.apple.Photo-Booth,Photo Booth,Apple
-,com.apple.mobileslideshow,Photos,Apple
-,com.apple.podcasts,Podcasts,Apple
-,com.apple.reminders,Reminders,Apple
-,com.apple.MobileSafari,Safari,Apple
-,com.apple.Preferences,Settings,Apple
-,com.apple.stocks,Stocks,Apple
-,com.apple.tips,Tips,Apple
-,com.apple.videos,Videos,Apple
-,com.apple.VoiceMemos,VoiceMemos,Apple
-,com.apple.Passbook,Wallet,Apple
-,com.apple.Bridge,Watch,Apple
-,com.apple.weather,Weather,Apple
-```
-
-
 ## <a name="kiosk-supervised-only"></a>Kiosk (tylko nadzorowany)
--   **Aplikacja pracująca w trybie kiosku** — wybierz opcję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, lub wybierz opcję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie. Na tym urządzeniu nie można uruchamiać żadnych innych aplikacji. Aby uzyskać pomoc, zobacz sekcję „Jak określać adresy URL sklepów z aplikacjami” w dalszej części tego tematu.
+-   **Aplikacja pracująca w trybie kiosku** — wybierz pozycję **Aplikacja zarządzana**, aby wybrać aplikację dodaną do usługi Intune, pozycję **Aplikacja ze Sklepu**, aby określić adres URL aplikacji w sklepie lub pozycję **Aplikacja wbudowana**, aby określić identyfikator pakietu aplikacji wbudowanej. Aby uzyskać więcej informacji, zobacz [Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS](device-restrictions-ios.md#bundle-id-reference-for-built-in-ios-apps) i [Jak określić adres URL aplikacji w sklepie](device-restrictions-ios.md#how-to-specify-the-url-to-an-app-in-the-store-1).
     -   **Dotyk wspomagający** — włącza lub wyłącza funkcję ułatwień dostępu **Dotyk wspomagający**, która ułatwia użytkownikom wykonywanie trudnych dla nich gestów na ekranie.
     -   **Odwróć kolory** — włącza lub wyłącza funkcję ułatwień dostępu Odwróć kolory, która umożliwia dostosowanie wyświetlanego obrazu do potrzeb użytkowników niedowidzących.
     -   **Dźwięk mono** — włącza lub wyłącza ustawienie ułatwień dostępu Dźwięk mono.
@@ -327,6 +281,51 @@ Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu i
 >[!NOTE]
 > Aby można było skonfigurować urządzenie z systemem iOS do obsługi trybu kiosku, należy najpierw użyć narzędzia Apple Configurator lub programu Apple Device Enrollment Program w przełączenia go do trybu nadzorowanego. Aby uzyskać więcej informacji o narzędziu Apple Configurator, skorzystaj z dokumentacji firmy Apple.
 >Jeśli określona aplikacja dla systemu iOS zostanie zainstalowana po przypisaniu profilu, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
+
+## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Identyfikatory pakietu dla wbudowanych aplikacji systemu iOS
+
+Ta lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
+
+| Identyfikator pakietu                   | Nazwa aplikacji     | Wydawca |
+|-----------------------------|--------------|-----------|
+| com.apple.AppStore          | App Store    | Apple     |
+| com.apple.calculator        | Kalkulator   | Apple     |
+| com.apple.mobilecal         | Kalendarz     | Apple     |
+| com.apple.camera            | Aparat fotograficzny       | Apple     |
+| com.apple.mobiletimer       | Zegar        | Apple     |
+| com.apple.compass           | Kompas      | Apple     |
+| com.apple.MobileAddressBook | Kontakty     | Apple     |
+| com.apple.facetime          | FaceTime     | Apple     |
+| com.apple.mobileme.fmf1     | Moi znajomi | Apple     |
+| com.apple.mobileme.fmip1    | Znajdź mój iPhone  | Apple     |
+| com.apple.gamecenter        | Centrum gier  | Apple     |
+| com.apple.mobilegarageband  | GarageBand   | Apple     |
+| com.apple.Health            | Kondycja       | Apple     |
+| com.apple.iBooks            | iBooks       | Apple     |
+| com.apple.MobileStore       | iTunes Store | Apple     |
+| com.apple.itunesu           | iTunes U     | Apple     |
+| com.apple.Keynote           | Keynote      | Apple     |
+| com.apple.mobilemail        | Mail         | Apple     |
+| com.apple.MapsMaps          |              | Apple     |
+| com.apple.MobileSMS         | Komunikaty     | Apple     |
+| com.apple.Music             | Muzyka        | Apple     |
+| com.apple.news              | News         | Apple     |
+| com.apple.mobilenotes       | Uwagi        | Apple     |
+| com.apple.Numbers           | Liczby      | Apple     |
+| com.apple.Pages             | Pages        | Apple     |
+| com.apple.Photo-Booth       | Photo Booth  | Apple     |
+| com.apple.mobileslideshow   | Zdjęcia       | Apple     |
+| com.apple.podcasts          | Podcasty     | Apple     |
+| com.apple.reminders         | Przypomnienia    | Apple     |
+| com.apple.MobileSafari      | Safari       | Apple     |
+| com.apple.Preferences       | Ustawienia     | Apple     |
+| com.apple.stocks            | Giełda       | Apple     |
+| com.apple.tips              | Porady         | Apple     |
+| com.apple.videos            | Filmy       | Apple     |
+| com.apple.VoiceMemos        | Dyktafon   | Apple     |
+| com.apple.Passbook          | Wallet       | Apple     |
+| com.apple.Bridge            | Zegarek        | Apple     |
+| com.apple.weather           | Pogoda      | Apple     |
 
 ## <a name="safari"></a>Safari
 -   **Safari (tylko w trybie nadzorowanym)** — określa, czy na urządzeniu można używać przeglądarki Safari.

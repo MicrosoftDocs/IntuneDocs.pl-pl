@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,18 +14,16 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9329a57ee7d47cb99a7c87326bb043c0a04c6313
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 4a047ceb6baa15ad59a5792430b60f2adf18c98a
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905210"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321275"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Po zapewnieniu użytkownikom dostępu do zasobów firmowych za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail możesz uwierzytelnić te połączenia przy użyciu certyfikatów. Nie musisz wprowadzać nazw użytkownika i haseł, aby uwierzytelnić połączenia, jeśli używasz certyfikatów
+Dostęp do zasobów firmowych można zapewnić użytkownikom za pośrednictwem sieci VPN, sieci Wi-Fi lub profilów poczty e-mail. Te połączenia możesz uwierzytelnić za pomocą certyfikatów. Jeśli ich używasz, użytkownicy końcowi nie muszą wprowadzać nazw użytkownika i hasła w celu przeprowadzenia uwierzytelnienia.
 
 Możesz użyć usługi Intune w celu przypisania tych certyfikatów do zarządzanych urządzeń. Usługa Intune obsługuje przypisywanie następujących typów certyfikatów i zarządzanie nimi:
 
@@ -36,7 +34,7 @@ Każdy z tych typów certyfikatów ma własne wymagania wstępne i wymagania dot
 
 ## <a name="overview"></a>Przegląd
 
-1. Upewnij się, że dysponujesz odpowiednią infrastrukturą certyfikatów. Możesz użyć [certyfikatów protokołu SCEP](certificates-scep-configure.md) i [certyfikatów protokołu PKCS](certficates-pfx-configure.md).
+1. Upewnij się, że skonfigurowano odpowiednią infrastrukturę certyfikatów. Możesz użyć [certyfikatów protokołu SCEP](certificates-scep-configure.md) i [certyfikatów protokołu PKCS](certficates-pfx-configure.md).
 
 2. Zainstaluj certyfikat główny lub certyfikat pośredniego urzędu certyfikacji (CA) na każdym urządzeniu, aby urządzenia rozpoznawały urząd certyfikacji jako wiarygodny. W tym celu należy utworzyć i przypisać **profil zaufanego certyfikatu**. Po przypisaniu tego profilu urządzenia zarządzane przy użyciu usługi Intune zażądają certyfikatu głównego i otrzymają go. Dla każdej platformy należy utworzyć oddzielny profil. Profile zaufanego certyfikatu są dostępne dla następujących platform:
 
@@ -86,13 +84,11 @@ Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego c
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3 — Tworzenie profilów zaufanych certyfikatów
 Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Procedura tworzenia zaufanych certyfikatów jest podobna dla każdej platformy urządzeń.
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
-2. W okienku **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Profile**.
-3. W okienku profilów wybierz pozycję **Utwórz profil**.
-4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Obecnie dla ustawień certyfikatu można wybrać jedną z następujących platform:
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+3. Wybierz pozycję **Konfiguracja urządzenia** > **Zarządzaj** > **Profile** > **Utwórz profil**.
+4. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
+5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Dostępne opcje:
 
     - **Android**
     - **Android enterprise**
@@ -103,12 +99,14 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
     - **Windows 10 lub nowszy**
 
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Zaufany certyfikat**.
-7. Przejdź do lokalizacji certyfikatu zapisanego w zadaniu 1, a następnie kliknij przycisk **OK**.
+7. Przejdź do lokalizacji certyfikatu zapisanego w zadaniu 1, a następnie wybierz przycisk **OK**.
 8. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
+
     - **Magazyn certyfikatów komputera — główny**
     - **Magazyn certyfikatów komputera — pośredni**
     - **Magazyn certyfikatów użytkownika — pośredni**
-8. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Utwórz profil** i wybierz pozycję **Utwórz**.
+
+9. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Utwórz profil** i wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 
@@ -124,4 +122,6 @@ Aby uzyskać pomoc dotyczącą konfigurowania i przypisywania każdego z typów 
 Po utworzeniu profilu zaufanego certyfikatu należy utworzyć profile certyfikatów protokołu SCEP lub PKCS dla wszystkich platform, które będą używane. Podczas tworzenia profilu certyfikatu protokołu SCEP należy wskazać profil zaufanego certyfikatu dla danej platformy. W ten sposób oba profile certyfikatów zostaną połączone, niemniej jednak każdy profil należy przypisać osobno.
 
 ## <a name="next-steps"></a>Następne kroki
-Ogólne informacje dotyczące sposobu przypisywania profilów urządzeń znajdują się w temacie [How to assign device profiles](device-profile-assign.md) (Jak przypisywać profile urządzeń).
+[Przypisywanie profilów urządzeń](device-profile-assign.md)  
+[Używanie protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail](certificates-s-mime-encryption-sign.md)  
+[Używanie urzędu certyfikacji innej firmy](certificate-authority-add-scep-overview.md)

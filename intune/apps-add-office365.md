@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869376"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321479"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -60,9 +60,6 @@ Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
     Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje.
 3. Wybierz przycisk **OK**.
 
->[!IMPORTANT]
-> Po utworzeniu pakietu aplikacji nie można edytować jego właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
-
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 
 W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
@@ -95,11 +92,8 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
         - **Półroczny**
         - **Półroczny (docelowy)**
     - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji**: wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
-    - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz omówienie aktywacji na komputerze udostępnionym dla usługi Office 365.
+    - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Języki**: pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.
-
->[!IMPORTANT]
-> Po utworzeniu pakietu aplikacji nie można edytować jego właściwości. Aby skonfigurować inne właściwości, usuń pakiet aplikacji i utwórz nowy.
 
 ## <a name="finish-up"></a>Zakończenie
 

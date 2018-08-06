@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/19/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2db9d991c476d89399058137adb972c06029befc
-ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
+ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028732"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321292"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -57,7 +57,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
 | Aplikacje LOB dla systemu iOS | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.  |
 | Aplikacje LOB dla systemu Windows Phone | Aplikacja LOB | Wybierz opcję **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows Phone z rozszerzeniem **xap**.  |
-| Aplikacja LOB dla systemu Windows | Aplikacja LOB | Wybierz opcję **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows z rozszerzeniem **msi**, **appx** lub **appxbundle**. |
+| Aplikacja LOB dla systemu Windows | Aplikacja LOB | Wybierz pozycję **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows z rozszerzeniem **.msi**, **.appx**, **.appxbundle**, **.msix** lub **.msixbundle**. |
 | Wbudowana aplikacja systemu iOS  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Wbudowana aplikacja systemu Android  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Aplikacje internetowe  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
@@ -119,6 +119,9 @@ Oprócz zapoznania się z aplikacjami internetowymi, aplikacjami ze sklepu i apl
 - **Apple Volume Purchasing Program for Business (iOS i MacOS)**: ten sklep z aplikacjami systemu iOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
 - **Profil służbowy systemu Android**: przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
 - **Microsoft Store dla Firm (Windows 10)**: Microsoft Store dla Firm to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, aplikacjami nabytymi w ramach zakupów zbiorczych można zarządzać bezpośrednio w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
+
+    > [!NOTE]
+    > Rozszerzenia plików aplikacji dla systemu Windows to **msi**, **appx**, **appxbundle**, **msix** i **msixbundle**.  
 
 ## <a name="before-you-add-apps"></a>Przed dodaniem aplikacji
 Przed rozpoczęciem dodawania i przypisywania aplikacji należy wziąć pod uwagę poniższe kwestie:

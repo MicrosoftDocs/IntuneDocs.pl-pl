@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5ac976e07c98fae0941168cc94b5afc5ca09616
-ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
+ms.openlocfilehash: 0ada3be91c3b2c15e33e51449678212286362dbf
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964712"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321190"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -32,9 +32,8 @@ Aby włączyć rejestrację w usłudze Intune przy użyciu rozwiązania Samsung 
     1. [Utwórz profil oprogramowania MDM](#create-mdm-profile)
     2. [Dodaj urządzenia](#add-devices)
     3. [Przypisz profil oprogramowania MDM do urządzeń](#assign-an-mdm-profile-to-devices)
-2. W witrynie Azure Portal [zidentyfikuj urządzenia jako należące do firmy](#identify-devices-as-corporate-owned).
-3. W portalu rozwiązania Knox [skonfiguruj logowanie użytkownika końcowego](#configure-how-end-users-sign-in).
-4. [Rozdystrybuuj urządzenia](#distribute-devices).
+2. W portalu rozwiązania Knox [skonfiguruj logowanie użytkownika końcowego](#configure-how-end-users-sign-in).
+3. [Rozdystrybuuj urządzenia](#distribute-devices).
 
 
 Lista identyfikatorów urządzeń (numery seryjne i numery IMEI) jest automatycznie dodawana do portalu rozwiązania Knox w przypadku zakupu urządzeń od autoryzowanego odsprzedawcy biorącego udział w programie wdrażania rozwiązania Knox.
@@ -79,22 +78,6 @@ Aby przypisywać profile oprogramowania MDM do urządzeń, należy dodać obsłu
 ## <a name="assign-an-mdm-profile-to-devices"></a>Przypisywanie profilu oprogramowania MDM do urządzeń
 Przed rozpoczęciem rejestrowania dodanych urządzeń musisz przypisać do nich profil oprogramowania MDM w portalu rozwiązania Knox. [Odwiedź stronę podręcznika użytkownika rozwiązania Samsung Knox Enrollment, aby dowiedzieć się więcej na temat konfiguracji urządzeń](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
 
-## <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
-Urządzenia zarejestrowane przy użyciu rozwiązania KME można zidentyfikować jako należące do firmy. Tę czynność należy wykonać przed zarejestrowaniem urządzeń. Pozwoli to na wykonywanie dodatkowych zadań zarządzania i zbieranie dodatkowych informacji, takich jak pełny numer telefonu i spis aplikacji.
-
-Wykonaj poniższe czynności, aby zidentyfikować urządzenia jako należące do firmy:
-
-1. Wyeksportuj listę urządzeń z portalu rozwiązania Knox jako plik CSV.
-
-2. Sformatuj plik CSV przy użyciu numeru IMEI i numeru seryjnego, tak jak wskazano [tutaj](https://docs.microsoft.com/en-us/intune/corporate-identifiers-add#identify-corporate-owned-devices-with-imei-or-serial-number).
-
-3. W witrynie Azure Portal przekaż plik do obszaru **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj**.
-
-Teraz zidentyfikowane urządzenia będą podczas rejestracji oznaczane jako należące do firmy.
-
-> [!NOTE]
->Usługa Intune automatycznie przypisuje stan „należące do firmy” do urządzeń zarejestrowanych przy użyciu konta [menedżera rejestracji urządzeń](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll).
-
 ## <a name="configure-how-end-users-sign-in"></a>Konfigurowanie sposobu logowania użytkowników końcowych
 
 W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiązania KME można skonfigurować sposób logowania użytkownika końcowego w następujący sposób:
@@ -121,7 +104,7 @@ Nadal potrzebujesz pomocy? Zapoznaj się z pełną wersją [podręcznika użytko
 
 - **Pole „Password” (Hasło) jest ignorowane:** Jeśli pole **Password** (Hasło) zostało wypełnione w obszarze **Device details** (Szczegóły urządzenia) w portalu rozwiązania Knox, jest ono ignorowane przez aplikację Portal firmy w usłudze Intune. Użytkownik końcowy musi wprowadzić hasło na urządzeniu, aby ukończyć rejestrację tego urządzenia.
 
-- Rozwiązanie KME **Android Enterprise Enrollment** (Rejestracja systemu Android w firmie) nie obsługuje rejestracji systemu Android w firmie.
+- **Rejestracja rozwiązania Android enterprise:** rozwiązanie KME nie obsługuje rejestracji rozwiązania Android enterprise.
 
 ## <a name="getting-support"></a>Uzyskiwanie pomocy technicznej
 Dowiedz się więcej na temat [uzyskiwania pomocy technicznej dotyczącej rozwiązania Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).

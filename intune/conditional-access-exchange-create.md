@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fbe55be15df9755c109ec7e8e8e23db3c27931b0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 4fd82cf211360e77b17f8ea915c13719b8ab3408
+ms.sourcegitcommit: cd97505d6f5dc54db7f35a691376bcbf6f36ac9d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905533"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323246"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -63,7 +63,7 @@ Przed skonfigurowaniem dostępu warunkowego zweryfikuj następujące kwestie:
 - System Windows Phone 8.1 lub nowszy
 - Natywna aplikacja poczty e-mail w systemie iOS
 - Klienci poczty korzystający z protokołu EAS (np. Gmail w systemie Android 4 lub nowszym).
-- Klienci poczty korzystający z protokołu EAS **Urządzenia z profilami służbowymi systemu Android:** w urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work, a także wdrożyć te aplikacje jako instalację wymaganą.
+- Klienci poczty korzystający z protokołu EAS na **urządzeniach z profilami służbowymi systemu Android:** na urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work for Android Enterprise** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work for Android Enterprise, a także wdrożyć te aplikacje jako instalację wymaganą.
 
 > [!NOTE]
 > Aplikacja Microsoft Outlook dla systemów Android i iOS nie jest obsługiwana. 

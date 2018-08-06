@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 07/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f241c5bece72b44a6bd3c9047b5997bcd8879ec5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
+ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905193"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335830"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co to są profile urządzeń w usłudze Microsoft Intune?
 
@@ -113,6 +113,13 @@ Ta funkcja obsługuje systemy:
 - iOS
 - macOS
 - Windows 8.1 (tylko import)
+
+## <a name="esim-cellular---public-preview"></a>Sieć komórkowa eSIM — publiczna wersja zapoznawcza
+
+[Profile sieci komórkowej eSIM](esim-device-configuration.md) umożliwiają konfigurowanie planów danych komórkowych na zarządzanych urządzeniach w celu uzyskania dostępu do Internetu i danych.  Po otrzymaniu kodów aktywacji od operatora sieci komórkowej zaimportować je w usłudze Intune, a następnie przypisać je do urządzeń obsługujących kartę eSIM.
+
+Ta funkcja obsługuje systemy:
+- Windows 10 Fall Creators Update i nowsze
 
 ## <a name="education"></a>Edukacja
 Profil [Ustawienia edukacji — Windows 10](education-settings-configure.md) umożliwia konfigurowanie opcji [aplikacji systemu Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). Po skonfigurowaniu tych opcji do czasu ukończenia testu nie można uruchomić na urządzeniu żadnych innych aplikacji.
