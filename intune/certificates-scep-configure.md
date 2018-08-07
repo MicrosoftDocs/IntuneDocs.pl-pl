@@ -28,8 +28,7 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 
 ## <a name="configure-on-premises-infrastructure"></a>Konfigurowanie infrastruktury lokalnej
 
-- 
-  **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowej) muszą należeć do Twojej domeny usługi Active Directory.
+- **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowej) muszą należeć do Twojej domeny usługi Active Directory.
 
 - **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
@@ -41,8 +40,7 @@ Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfi
 
   - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale możesz wystawiać i odwoływać certyfikaty, gdy jest on włączony.
 
-- 
-  **Serwer proxy aplikacji internetowej** (opcjonalnie): jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+- **Serwer proxy aplikacji internetowej** (opcjonalnie): jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
   - Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
   - Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
 

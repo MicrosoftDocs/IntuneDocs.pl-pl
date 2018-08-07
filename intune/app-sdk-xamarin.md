@@ -14,12 +14,12 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 421dede4b0da71fe04649e21bfcf7c15d2270507
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 1cfbaa0cbdcc2263f6e8d1d3fc8562678e410537
+ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869359"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400321"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Powiązania Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -50,20 +50,6 @@ Powiązania Xamarin zestawu Microsoft Intune App SDK pozwalają wdrażać zasady
 Aplikacje Xamarin utworzone za pomocą powiązań Xamarin zestawu Intune App SDK mogą teraz odbierać zasady ochrony aplikacji usługi Intune zarówno na urządzeniach przenośnych zarejestrowanych w systemie zarządzania urządzeniami przenośnymi (MDM) usługi Intune, jak i na urządzeniach niezarejestrowanych.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-
-* **[Tylko system Android]** Na urządzeniu musi być zainstalowana najnowsza aplikacja Portal firmy usługi Microsoft Intune.
-
-## <a name="get-started"></a>Wprowadzenie
-
-1. Zapoznaj się z [postanowieniami licencyjnymi](https://components.xamarin.com/license/microsoft.intune.mam) dla składnika Xamarin zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune.
-
-2.  Pobierz folder składnika Xamarin zestawu SDK aplikacji usługi Intune z witryny [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) lub [Nuget.org](https://www.nuget.org/profiles/msintuneappsdk) i wyodrębnij jego zawartość. Oba pliki pobrane w punktach 1 i 3 powinny znajdować się w katalogach tego samego poziomu.
-
-3.  W wierszu polecenia uruchom polecenie `Xamarin.Component.exe install <.xam> file` z uprawnieniami administracyjnymi.
-
-4.  W programie Visual Studio kliknij prawym przyciskiem myszy **składniki** we wcześniej utworzonym projekcie Xamarin.
-
-5.  Wybierz pozycję **Edytuj składniki** i dodaj składnik zestawu SDK aplikacji usługi Intune, który został pobrany na komputer.
 
 Przejrzenie [postanowień licencyjnych](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Wydrukować i zachować kopię postanowień licencyjnych. Pobranie i rozpoczęcie używania powiązań Xamarin zestawu Intune App SDK oznacza akceptację tych postanowień licencyjnych. Jeśli użytkownik nie akceptuje niniejszych postanowień, nie może używać tego oprogramowania.
 
