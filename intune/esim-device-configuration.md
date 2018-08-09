@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 7/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac3bbb4a32e86d756835d136cd3923676f022a7b
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
+ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336080"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400287"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -26,7 +26,7 @@ ms.locfileid: "39336080"
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Karta eSIM to wbudowany mikroukład SIM, który umożliwia łączenie się z Internetem za pomocą połączenia danych komórkowych na urządzeniu obsługującym kartę eSIM, na przykład urządzeniu [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Dzięki karcie eSIM nie musisz otrzymywać karty SIM od operatora sieci komórkowej i możesz szybko zmieniać operatorów i plany taryfowe.
+Karta eSIM to wbudowany mikroukład SIM, który umożliwia łączenie się z Internetem za pomocą połączenia danych komórkowych na urządzeniu obsługującym kartę eSIM, na przykład urządzeniu [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Dzięki karcie eSIM nie trzeba uzyskiwać karty SIM od operatora sieci komórkowej. Podróżując po całym świecie, możesz także przełączać się między operatorami komórkowymi i planami taryfowymi, zawsze utrzymując połączenie.
 
 Możesz mieć na przykład jeden plan taryfowy do celów służbowych i drugi (u innego operatora) do celów prywatnych. W podróży możesz uzyskać dostęp do Internetu po odnalezieniu operatora sieci komórkowej udostępniającego plany taryfowe na określonym obszarze.
 

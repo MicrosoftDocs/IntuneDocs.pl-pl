@@ -4,8 +4,8 @@ description: Informacje przedstawione w tym temacie ułatwiają określenie, kie
 keywords: ''
 author: erikre
 ms.author: erikre
-manager: angrobe
-ms.date: 05/17/2018
+manager: dougeby
+ms.date: 07/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 89a8f29e2e31cf59ed237cbfae5c557f60bd8dfa
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 351282634d6c6e087456e61e9fd967b70f9cf515
+ms.sourcegitcommit: c109ea6e9b7104630cd767aa27c5f7789286a906
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225192"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39450794"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -48,8 +48,8 @@ Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby
 
 |**Narzędzie opakowujące aplikacje** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Tak|Tak|
-|**Android**| W wersji zapoznawczej |Tak|
+|**iOS** |Nie — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak|
+|**Android**|Nie — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak|
 
 ## <a name="intune-app-sdk"></a>Zestaw SDK aplikacji usługi Intune
 Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikacje znajdują się w sklepie Apple App Store lub sklepie Google Play i którzy chcą zarządzać aplikacjami za pomocą usługi Intune. Korzyści wynikające z integracji zestawu SDK są jednak dostępne dla wszystkich aplikacji, nawet aplikacji biznesowych.

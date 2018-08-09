@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7eee5baebb8373488999a5e75db5288e483379e5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2900f7c211a675a20300a2e212b0d57bad3a597a
+ms.sourcegitcommit: 32a4b1eb6bf20da7262f27276f8e94e435803386
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905822"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501153"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -77,7 +77,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
 4. W obszarze **Ograniczenia typu urządzenia** wybierz ograniczenie, które chcesz ustawić.
 5. Pod nazwą ograniczenia (w przypadku ograniczenia domyślnego **Wszyscy użytkownicy**) wybierz opcję **Platformy**. Wybierz pozycję **Zezwalaj** lub **Blokuj** dla każdej platformy na liście.
 6. Wybierz pozycję **Zapisz**.
-7. Pod nazwą ograniczenia (**Wszyscy użytkownicy** w przypadku ograniczenia domyślnego) wybierz opcję **Konfiguracje platformy**. Następnie wybierz minimalną i maksymalną **wersję** dla wymienionych platform. Obsługiwane wersje obejmują:
+7. Pod nazwą ograniczenia (**Wszyscy użytkownicy** w przypadku ograniczenia domyślnego) wybierz opcję **Konfiguracje platformy**. Następnie wybierz minimalną i maksymalną **wersję** dla wymienionych platform. Obsługiwane formaty wersji obejmują:
     - Profil służbowy systemu Android obsługuje wersję major.minor.rev.build.
     - System iOS obsługuje wersję major.minor.rev.
     - System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10.

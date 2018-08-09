@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/23/2018
+ms.date: 8/2/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f10e7bb7a2e7c5e1d0e8b27517a62454e8bd630
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
+ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321805"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39481125"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Ustawienia kiosku dla systemu Windows 10 (i nowszych) w usłudze Intune
 
@@ -25,9 +25,18 @@ Profile kiosku służą do konfigurowania urządzeń z systemem Windows 10 tak, 
 
 ## <a name="kiosk-settings"></a>Ustawienia kiosku
 
-1. Wybierz pozycję **Dodaj**, aby utworzyć środowisko kiosku.
-2. Wprowadź **nazwę konfiguracji kiosku** dla swojego kiosku. Ta nazwa identyfikuje grupę aplikacji, układ tych aplikacji w menu Start oraz użytkowników przypisanych do danej konfiguracji kiosku.
-3. Wybierz pozycję **Tryb kiosku**. **Tryb kiosku** wskazuje typ trybu kiosku obsługiwany przez zasady. Dostępne opcje:
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Wprowadź następujące właściwości:
+
+   - **Nazwa**: wprowadź opisową nazwę nowego profilu.
+   - **Opis:** wprowadź opis profilu. Jest to opcjonalne, ale zalecane.
+   - **Platforma**: wybierz pozycję **Windows 10 i nowsze**
+   - **Typ profilu**: wybierz pozycję **Kiosk (wersja zapoznawcza)**
+   
+4. Wybierz pozycję **Kiosk** > **Dodaj**.
+5. Wprowadź **nazwę konfiguracji kiosku** dla swojego kiosku. Ta nazwa identyfikuje grupę aplikacji, układ tych aplikacji w menu Start oraz użytkowników przypisanych do danej konfiguracji kiosku.
+6. Wybierz pozycję **Tryb kiosku**. **Tryb kiosku** wskazuje typ trybu kiosku obsługiwany przez zasady. Dostępne opcje:
 
     - **Nieskonfigurowane** (domyślne): te zasady nie umożliwiają korzystania z trybu kiosku.
     - **Kiosk z pojedynczą aplikacją w trybie pełnoekranowym**: profil umożliwia uruchamianie urządzenia w ramach pojedynczego konta użytkownika i blokowanie go jako jednej aplikacji platformy uniwersalnej systemu Windows (platformy UWP). Gdy użytkownik zaloguje się, jest uruchamiana konkretna aplikacja. Ten tryb uniemożliwia także użytkownikowi otwieranie nowych aplikacji oraz zmianę uruchomionej aplikacji.

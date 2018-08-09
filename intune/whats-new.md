@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 07/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 53be8456b09c7775a4de827eb09680f47e8d62d7
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 2a3c4484eb80fd753d00c851d3e5dc6b5f48347a
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321564"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362062"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -1123,6 +1123,16 @@ Niedozwolone aplikacje można określić w usłudze Intune. Jeśli aplikacja zos
 
 
 ## <a name="notices"></a>Uwagi
+
+### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Planowanie zmian: dodano ustawienie Zmień hasło przy następnym uwierzytelnianiu do usługi Intune<!-- 1873216 -->
+We wrześniowej wersji usługi Intune jest planowane zintegrowanie nowo udostępnionego przez firmę Apple ustawienia **Zmień hasło przy następnym uwierzytelnianiu** przeznaczonego dla urządzeń z systemem macOS w wersji 10.13 i nowszych. Przed wprowadzeniem tego ustawienia dostawcy rozwiązań MDM nie mogą zweryfikować, czy kod dostępu urządzenia został zmieniony na zgodny. Zasady konfiguracji i zgodności usługi Intune umożliwiają tylko zweryfikowanie, czy po następnej zmianie hasła urządzenia jest ono oznaczone jako zgodne. Po dodaniu tej nowej funkcji firmy Apple użytkownicy systemu macOS otrzymają żądanie aktualizacji hasła, nawet jeśli hasło jest zgodne.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Ma to wpływ na środowiska z zasadami urządzeń z systemem macOS korzystające z usługi Intune lub hybrydowego rozwiązania MDM. Teraz, gdy firma Apple udostępniła ustawienie **Zmień hasło przy następnym uwierzytelnianiu**, usługa Intune może wymusić na użytkownikach aktualizację haseł po wypchnięciu zasad haseł. Jeśli zablokujesz zasoby firmy aż do oznaczenia urządzenia jako zgodnego, użytkownicy końcowi mogą mieć zablokowany dostęp do zasobów firmy, takich jak wiadomości e-mail lub witryny programu SharePoint, do momentu zresetowania hasła. W przyszłości wszystkie aktualizacje zasad konfiguracji i zgodności haseł będą wymuszać na uwzględnionych użytkownikach zaktualizowanie haseł.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Poinformuj dział pomocy technicznej w swojej firmie. Jeśli nie chcesz wymuszać tych zasad urządzeń z systemem macOS, zalecamy anulowanie przypisania lub usunięcie istniejących zasad systemu macOS. Badania wśród klientów sugerują, że większości z nich ta zmiana nie dotyczy. Większość użytkowników końcowych aktualizuje hasło po odebraniu żądania rejestracji przy użyciu hasła lub zresetowania hasła w celu zachowania zgodności.
+
 
 ### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september----2454656---"></a>Planowanie zmian: w usłudze Intune nastąpi przejście do obsługi systemu iOS 10 i nowszych wersji we wrześniu <!-- 2454656 -->
 Oczekuje się, że firma Apple wyda system iOS 12. Wkrótce po wydaniu przeniesiemy rejestrację w usłudze Intune, aplikację Portal firmy oraz program Managed Browser do obsługi systemu iOS 10 i jego nowszych wersji.  

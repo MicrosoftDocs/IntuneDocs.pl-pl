@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5278b631d581c892f68e8ba08c2bc7893cd3782a
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 423bfc02edb9260adadf0a6dc67e6299639c7fbb
+ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321744"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575053"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Dodawanie urzędów certyfikacji innych firm dla protokołu SCEP do usługi Intune za pomocą interfejsów API
 
@@ -41,11 +41,18 @@ W usłudze Intune administratorzy mogą tworzyć profile protokołu SCEP, a nast
 - zaufany certyfikat główny urzędu certyfikacji,
 - atrybuty certyfikatu i nie tylko.
 
-Urządzenia zewidencjonowane w usłudze Intune są przypisywane do profilu SCEP i konfigurowane przy użyciu tych parametrów. W usłudze Intune jest tworzone dynamicznie generowane hasło protokołu SCEP, które jest następnie przypisywane do urządzenia.
+Urządzenia zewidencjonowane w usłudze Intune są przypisywane do profilu SCEP i konfigurowane przy użyciu tych parametrów. W usłudze Intune jest tworzone dynamicznie generowane hasło wyzwania protokołu SCEP, które jest następnie przypisywane do urządzenia.
 
-To hasło zawiera szczegółowe informacje dotyczące oczekiwanych parametrów w żądaniu podpisania certyfikatu, które urządzenie wysyła do serwera SCEP. Hasło zawiera także czas wygaśnięcia żądania. Usługa Intune szyfruje informacje, podpisuje zaszyfrowany obiekt blob, a następnie umieszcza te dane w haśle protokołu SCEP.
+To wyzwanie zawiera:
 
-Urządzenia, które kontaktują się z serwerem SCEP w celu zażądania certyfikatu, podają to hasło protokołu SCEP. To hasło musi przejść walidację, aby serwer SCEP wystawił certyfikat dla urządzenia. Po zwalidowaniu hasła SCEP sprawdzane są następujące elementy:
+- Dynamicznie wygenerowane hasło wyzwania
+- Szczegóły dotyczące oczekiwanych parametrów w żądaniu podpisania certyfikatu (CSR), które urządzenie wysyła do serwera SCEP
+- Czas wygaśnięcia wyzwania
+
+Usługa Intune szyfruje informacje, podpisuje zaszyfrowany obiekt blob, a następnie umieszcza te dane w haśle wyzwania protokołu SCEP.
+
+Urządzenia, które kontaktują się z serwerem SCEP w celu zażądania certyfikatu, podają to hasło wyzwania protokołu SCEP. Serwer SCEP wysyła żądanie CSR i zaszyfrowane hasło wyzwania SCEP do usługi Intune w celu wykonania walidacji.  Hasło wyzwania i żądanie CSR muszą przejść walidację, aby serwer SCEP wystawił certyfikat urządzenia. W trakcie walidacji wyzwania SCEP są sprawdzane następujące elementy:
+
 
 - podpis zaszyfrowanego obiektu blob,
 - data wygaśnięcia żądania,
