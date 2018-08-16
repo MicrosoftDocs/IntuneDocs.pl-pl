@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ab6c808fc860491ddece5751983071d40864c8dd
-ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
+ms.openlocfilehash: 2f9849b2c327397c0b8945ee42d9fca7f9f46250
+ms.sourcegitcommit: 58cddb08b64bd60f041eff46ff215e83e13db4e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575087"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40001914"
 ---
 # <a name="the-early-edition-for-microsoft-intune---august-2018"></a>Wczesna wersja usługi Microsoft Intune — sierpień 2018
 
@@ -99,18 +99,17 @@ Aby wyświetlić tę funkcję, wybierz pozycję **Rejestrowanie urządzenia** > 
 Włączenie tego ograniczenia nie ma wpływu na już zarejestrowane urządzenia.
 Po włączeniu ograniczenia usługa Intune będzie sprawdzać, czy każde żądanie nowej rejestracji systemu Windows zostało autoryzowane jako rejestracja firmowa. Następujące metody kwalifikują się do autoryzacji jako rejestracja firmowa:
 - Rejestrujący użytkownik korzysta z [konta menedżera rejestracji urządzeń]( device-enrollment-manager-enroll.md).
-
 - Urządzenie jest rejestrowane za pomocą rozwiązania [Windows AutoPilot](enrollment-autopilot.md).
 - Numer IMEI urządzenia znajduje się w polu **Rejestrowanie urządzenia** > **[Identyfikatory urządzeń firmowych]( corporate-identifiers-add.md)**).
 - Urządzenie jest rejestrowane za pomocą [pakietu aprowizacji zbiorczej](windows-bulk-enroll.md).
 - Urządzenie jest rejestrowane za pomocą [funkcji automatycznego rejestrowania z programu SCCM dla współzarządzania](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management).
-Nieautoryzowane rejestracje będą blokowane.
-Następujące rejestracje są oznaczone jako firmowe przez usługę Intune, ale ponieważ nie umożliwiają administratorowi usługi Intune kontroli na poziomie urządzenia, będą zablokowane:
+
+Nieautoryzowane rejestracje będą blokowane. Następujące rejestracje są oznaczone jako firmowe przez usługę Intune, ale ponieważ nie umożliwiają administratorowi usługi Intune kontroli na poziomie urządzenia, będą zablokowane:
 - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory podczas konfigurowania systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
 - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory z instalatora systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
+
 Następujące metody rejestracji urządzeń osobistych będą także blokowane:
 - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) za pomocą polecenia [Dodaj konto służbowe w oknie Ustawienia systemu Windows](https://docs.microsoft.com/azure/active-directory/user-help/device-management-azuread-registered-devices-windows10-setup).
-
 - Opcja [Tylko rejestracja w rozwiązaniu MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) w oknie Ustawienia systemu Windows.
 
 ### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Określanie wzorców nazw maszyn w profilu rozwiązania AutoPilot <!--1849855-->
@@ -167,6 +166,13 @@ Dotyczy:
 Zasady zgodności utworzone w klasycznej witrynie Azure Portal będą przestarzałe.  Gdy to się stanie, będzie można przeglądać i usuwać dowolne istniejące zasady, ale nie będzie można ich aktualizować. Zasady można wyeksportować w postaci pliku rozdzielanego przecinkami (pliku CSV). Szczegółów w pliku można użyć, aby utworzyć ponownie zasady w witrynie Azure Portal dla usługi Intune.
 > [!IMPORTANT]
 > Po wycofaniu klasycznej witryny Azure Portal nie będzie dostępu do zasad — nawet w celu ich wyświetlenia. Dlatego należy się upewnić, że zostały wyeksportowane, i utworzyć je ponownie w witrynie Azure Portal przed wycofaniem klasycznej witryny Azure Portal.
+
+### <a name="change-terminology-to-retire-and-wipe----2175759---"></a>Zmiana terminologii na „wycofaj” i „wyczyść” <!-- 2175759 -->
+Aby zachować spójność z interfejsem API programu Graph, w interfejsie użytkownika usługi Intune i w dokumentacji zmienią się następujące terminy:
+- **Usuń dane firmowe** zostanie zmieniony na **wycofaj**
+- **Resetowanie do ustawień fabrycznych** zostanie zmieniony na **wyczyść**
+
+
 
 <!-- 1807 start -->
 

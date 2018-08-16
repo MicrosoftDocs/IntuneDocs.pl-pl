@@ -1,12 +1,11 @@
 ---
-title: Ustawienia ograniczeń urządzenia z systemem Android w usłudze Microsoft Intune
-titlesuffix: ''
-description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcjonalności na urządzeniach z systemem Android.
+title: Ustawienia ograniczeń urządzeń dla systemu Android w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: Zobacz listę wszystkich ustawień urządzenia z systemem Android, które można kontrolować i ograniczać w usłudze Microsoft Intune. Te ustawienia służą do kontrolowania hasła, uzyskiwania dostępu do sklepu Google Play, zezwalania na aplikacje lub ich zabraniania, kontrolowania ustawień przeglądarki, blokowania aplikacji, tworzenia kopii zapasowej w usłudze Google Cloud oraz kontrolowania opcji dotyczących wiadomości, głosu, roamingu danych, sieci Wi-Fi i połączenia Bluetooth.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,14 +13,14 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
+ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190660"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587027"
 ---
-# <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia usługi Microsoft Intune z systemami Android i Samsung Knox Standard 
+# <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Ustawienia ograniczeń urządzeń z systemami Android i Samsung Knox Standard w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -53,7 +52,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
     > Urządzenia Samsung Knox automatycznie wymagają 4-cyfrowego kodu PIN podczas rejestracji w usłudze zarządzania urządzeniami przenośnymi. Urządzenia z natywnym systemem Android mogą automatycznie wymagać kodu PIN w celu osiągnięcia zgodności z dostępem warunkowym.
 
 - **Minimalna długość hasła** — określa minimalną długość hasła, które musi skonfigurować użytkownik (od 4 do 16 znaków).
-- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określa liczbę minut braku aktywności przed automatycznym zablokowaniem urządzenia.
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu. Na urządzeniu użytkownik końcowy nie może ustawić wartości czasu przekraczającej czas skonfigurowany w profilu. Użytkownik końcowy może ustawić niższą wartość czasu. Na przykład jeśli profil jest ustawiony na 15 minut, użytkownik końcowy może ustawić tę wartość na 5 minut. Użytkownik końcowy nie może ustawić tej wartości na 30 minut. 
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem zawartości urządzenia.
 - **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.
 -  **Wymagany typ hasła** — określa wymagany poziom złożoności hasła oraz możliwość stosowania urządzeń biometrycznych. Wybierz spośród opcji:

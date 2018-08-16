@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 2a3c4484eb80fd753d00c851d3e5dc6b5f48347a
-ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
+ms.openlocfilehash: ff2774b76bceeeeaecec7a4dc74876b11706d574
+ms.sourcegitcommit: 56a8a3c8974f54f0f9ecc1e5b43581502ecc348e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39362062"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39614517"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -57,6 +57,11 @@ Oprócz aplikacji ze Sklepu i aplikacji zarządzanych można teraz wybrać aplik
 
 #### <a name="edit-your-office-365-pro-plus-app-deployments----2150145---"></a>Edytowanie wdrożeń aplikacji usługi Office 365 Pro Plus <!-- 2150145 -->
 Jako administrator usługi Microsoft Intune masz większe możliwości edycji wdrożeń aplikacji usługi Office 365 Pro Plus. Ponadto nie musisz już usuwać swoich wdrożeń, aby zmienić jakiekolwiek właściwości pakietu. W witrynie Azure Portal wybierz pozycję **Microsoft Intune** > **Aplikacje mobilne** > **Aplikacje**. Z listy aplikacji wybierz pakiet Office 365 Pro Plus.  
+
+
+#### <a name="updated-intune-app-sdk-for-android-is-now-available----2744271--"></a>Zaktualizowany zestaw Intune App SDK dla systemu Android jest teraz dostępny <!-- 2744271-->
+
+Zaktualizowana wersja zestawu Intune App SDK dla systemu Android jest dostępna do obsługi wersji P systemu Android. Jeśli jesteś deweloperem aplikacji i używasz zestawu Intune SDK dla systemu Android, musisz zainstalować zaktualizowaną wersję zestawu Intune App SDK, aby zapewnić, że funkcje usługi Intune wykorzystywane w ramach Twoich aplikacji systemu Android będą nadal działać zgodnie z oczekiwaniami na urządzeniach z systemem Android P. Ta wersja zestawu Intune App SDK udostępnia wbudowany dodatek, który wykonuje aktualizacje zestawu SDK. Nie trzeba przepisywać istniejącego zintegrowanego kodu. Aby uzyskać szczegółowe informacje, zobacz temat [Zestaw Intune SDK dla systemu Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android). Jeśli używasz starego stylu ze wskaźnikami do usługi Intune, firma Microsoft zaleca użycie ikony Aktówka. Szczegóły dotyczące znakowania można znaleźć w [tym repozytorium GitHub](https://github.com/msintuneappsdk/intune-app-partner-badge).
 
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
