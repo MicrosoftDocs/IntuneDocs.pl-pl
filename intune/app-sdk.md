@@ -1,20 +1,27 @@
---
-# <a name="required-metadata"></a>wymagane metadane
-
-title: Korzyści z zestawu SDK aplikacji usługi Intune titlesuffix: Microsoft Intune description: Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi umożliwiające zarządzanie takimi aplikacjami za pomocą usługi Microsoft Intune.
-keywords: author: Erikre ms.author: erikre manager: dougeby ms.date: 05/15/2018 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-
-# <a name="optional-metadata"></a>opcjonalne metadane
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: aanavath ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-ms.custom: intune-classic
-
 ---
-
+title: Korzyści z zestawu SDK aplikacji usługi Intune
+titlesuffix: Microsoft Intune
+description: Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi za pomocą usługi Microsoft Intune.
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 05/15/2018
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.technology: ''
+ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
+ms.reviewer: aanavath
+ms.suite: ems
+ms.custom: intune-classic
+ms.openlocfilehash: 19a550b9ecdee55f29b9ac9424c009bf68c25ed1
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251903"
+---
 # <a name="intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Intune
 Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
 

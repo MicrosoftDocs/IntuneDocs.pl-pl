@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 095985bad8f7e35a953383fcce8296716723b8bc
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: fc1943781dcf95209b575cdb6e36d5065275626f
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909069"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255071"
 ---
 # <a name="set-up-enrollment-of-android-work-profile-devices"></a>Konfigurowanie rejestracji urządzeń z profilem służbowym systemu Android
 
@@ -34,7 +34,7 @@ Aby skonfigurować zarządzanie profilami służbowymi systemu Android, wykonaj 
 2. Określ ustawienia rejestracji profilu służbowego systemu Android. Profile służbowe systemu Android są [obsługiwane tylko na niektórych urządzeniach z systemem Android](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Każde urządzenie, które obsługuje profile służbowe systemu Android, obsługuje także konwencjonalne zarządzanie systemem Android. Usługa Intune pozwala określić, jak w ramach [ograniczeń rejestracji](enrollment-restrictions-set.md) powinny być zarządzane urządzenia, które obsługują profile służbowe systemu Android.
     - **Blokuj (ustawienie domyślne)**: wszystkie urządzenia z systemem Android, w tym urządzenia, które obsługują profile służbowe systemu Android, są rejestrowane jako konwencjonalne urządzenia z systemem Android.
     - **Zezwalaj**: wszystkie urządzenia, które obsługują profile służbowe systemu Android, są rejestrowane jako urządzenia z profilami służbowymi systemu Android. Każde urządzenie z systemem Android, które nie obsługuje profilów służbowych systemu Android, zostanie zarejestrowane jako konwencjonalne urządzenie z systemem Android.
-3. [Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android.md).
+3. [Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android).
 
 
 Jeśli chcesz zarejestrować urządzenia w ramach profilów służbowych systemu Android, ale zostały one już zarejestrowane jako zwykłe urządzenia z systemem Android, należy najpierw wyrejestrować te urządzenia, a następnie ponownie je zarejestrować.

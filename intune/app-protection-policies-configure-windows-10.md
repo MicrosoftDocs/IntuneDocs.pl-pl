@@ -15,21 +15,18 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d0956f56da4fd0e93bdcd26e06c7d48aa252f9b
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0f8e5c6319e01404500f5a31fabd1baeb3520067
+ms.sourcegitcommit: 0f8d46d644f78609fae8bf91197ae77c7af45d23
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831213"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251936"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Windows 10 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawiając dostawcę MAM w usłudze Azure AD. Ustawienie dostawcy MAM w usłudze Azure AD umożliwia definiowanie stanu rejestracji podczas tworzenia nowych zasad funkcji Windows Information Protection (WIP) za pomocą usługi Intune. Stanem rejestracji może być albo MAM, albo zarządzanie urządzeniami przenośnymi (MDM).
-
-> [!NOTE]
-> Urządzenia ze stanem rejestracji MAM muszą być dołączone do usługi Azure AD.
 
 ## <a name="to-configure-the-mam-provider"></a>Aby skonfigurować dostawcę MAM
 
