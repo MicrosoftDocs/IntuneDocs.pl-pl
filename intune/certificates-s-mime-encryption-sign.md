@@ -5,21 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/19/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e0eac3c1d6739ca70e485b0327e3257ba8d32d2b
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 3a31a43cfe45060891c30a7f159123a30b43173d
+ms.sourcegitcommit: 488be75cbee88455b33c68a3ec2acb864d461bf8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321723"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41910670"
 ---
 # <a name="smime-email-signing-and-encryption-in-intune"></a>Podpisywanie i szyfrowanie wiadomości e-mail przy użyciu protokołu S/MIME w usłudze Intune
+
+> [!IMPORTANT]
+> Wprowadzamy ulepszenia funkcji szyfrowania S/MIME opisanej w tym artykule. W wyniku funkcja szyfrowania S/MIME jest tymczasowo usuwana w usłudze Intune. Po wydaniu tej funkcji usuniemy tę uwagę.
 
 Protokół S/MIME zapewnia dodatkowy poziom zabezpieczeń komunikacji za pośrednictwem poczty e-mail dzięki użyciu szyfrowania i odszyfrowywania. Usługa Microsoft Intune może używać protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail na urządzeniach przenośnych z systemem iOS, Windows, Windows Phone, Android i macOS.
 

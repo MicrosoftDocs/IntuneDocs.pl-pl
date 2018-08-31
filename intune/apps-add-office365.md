@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 9db79e9d0dc82cd823663274aa02dbe097db74d4
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321479"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251720"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -29,8 +29,8 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarząd
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
->[!IMPORTANT]
->Ta metoda instalacji pakietu Office jest obsługiwana tylko w przypadku, gdy żadne inne wersje pakietu Microsoft Office nie zostały zainstalowane na urządzeniu.
+> [!IMPORTANT]
+> Jeśli na urządzeniu użytkownika końcowego znajdują się aplikacje msi pakietu Office, musisz użyć funkcji **Usuń pliki MSI**, aby je bezpiecznie odinstalować. W przeciwnym razie nie będzie można zainstalować aplikacji usługi Office 365 dostarczonych przez usługę Intune.
 
 - Na urządzeniach, na których wdrażasz te aplikacje, musi być zainstalowana aktualizacja Windows 10 Creators Update lub jej nowsza wersja.
 - Usługa Intune obsługuje dodawanie aplikacji pakietu Office tylko z pakietu usługi Office 365.
@@ -91,6 +91,7 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
         - **Raz na miesiąc (docelowy)**
         - **Półroczny**
         - **Półroczny (docelowy)**
+    - **Usuń inne wersje pakietu Office (MSI) z urządzeń użytkowników końcowych**: ta funkcja pozwala usunąć wszystkie istniejące wcześniej pakiety Office (MSI) z komputerów użytkowników końcowych. Nie dotyczy to tylko aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego.
     - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji**: wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
     - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Języki**: pakiet Office jest automatycznie instalowany w obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji.

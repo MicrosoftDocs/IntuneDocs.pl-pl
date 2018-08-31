@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99d848fb1efea2ea2d557ab8d4f19881705ec991
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: d43e95b2f236dc4c03bb3f63670b2b1400243531
+ms.sourcegitcommit: 0303e3b8c510f56e191e6079e3dcdccfc841f530
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744673"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40251945"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -44,7 +44,7 @@ W tym artykule wyjaśniono, jak:
 
 Aby używać usługi ATP z usługą Intune, należy się upewnić, że następujące elementy są skonfigurowane i gotowe do użycia:
 
-- Licencjonowana dzierżawa dla pakietu Enterprise Mobility + Security E5 i systemu Windows E5 (lub pakietu Microsoft 365 Enterprise E5)
+- Licencjonowana dzierżawa dla pakietu Enterprise Mobility + Security E3 i systemu Windows E5 (lub pakietu Microsoft 365 Enterprise E5)
 - Środowisko usługi Microsoft Intune oraz urządzenia z systemem Windows 10 [zarządzane przy użyciu usługi Intune](windows-enroll.md) przyłączone również do usługi Azure AD
 - Usługa [Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) oraz dostęp do usługi Windows Defender Security Center (portal ATP)
 

@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c871d32fbcdfa089de88ae649c2926d2c839cce2
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993721"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255487"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) systemu macOS do usługi Microsoft Intune
 
@@ -28,14 +28,15 @@ ms.locfileid: "38993721"
 
 Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesowych systemu macOS do usługi Microsoft Intune. Musisz pobrać narzędzie zewnętrzne, aby wstępnie przetworzyć pliki *PKG* przed przekazaniem pliku biznesowego do usługi Microsoft Intune. Przetwarzanie wstępne plików *PKG* należy przeprowadzić na urządzeniu z systemem macOS.
 
->[!NOTE]
->Użytkownicy urządzeń z systemem macOS mogą usuwać niektóre wbudowane aplikacje dla systemu macOS, takie jak Stocks i Maps, ale nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy końcowi usuwają te aplikacje, muszą przejść do sklepu z aplikacjami i ręcznie zainstalować je ponownie.
->
->Tylko pliki *PKG* mogą być używane do przekazywania aplikacji biznesowych systemu macOS do usługi Microsoft Intune. Konwersja innych formatów, na przykład *DMG* do *PKG*, nie jest obsługiwana.
+> [!NOTE]
+> Użytkownicy urządzeń z systemem macOS mogą usuwać niektóre wbudowane aplikacje dla systemu macOS, takie jak Stocks i Maps, ale nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy końcowi usuwają te aplikacje, muszą przejść do sklepu z aplikacjami i ręcznie zainstalować je ponownie.
 
-## <a name="step-1---pre-process-your-software-setup-file"></a>Krok 1. Wstępne przetwarzanie pliku konfiguracji oprogramowania
+## <a name="before-your-start"></a>Przed rozpoczęciem
 
-Użyj w usłudze Intune narzędzia opakowującego aplikacje dla komputerów Mac, aby umożliwić zarządzanie aplikacjami dla komputerów Mac przez usługę Intune.
+Musisz pobrać narzędzie zewnętrzne, aby wstępnie przetworzyć pliki *PKG* przed przekazaniem pliku biznesowego do usługi Microsoft Intune. Przetwarzanie wstępne plików *PKG* należy przeprowadzić na urządzeniu z systemem macOS. Użyj w usłudze Intune narzędzia opakowującego aplikacje dla komputerów Mac, aby umożliwić zarządzanie aplikacjami dla komputerów Mac przez usługę Intune.
+
+> [!IMPORTANT]
+> Tylko pliki *PKG* mogą być używane do przekazywania aplikacji biznesowych systemu macOS do usługi Microsoft Intune. Konwersja innych formatów, na przykład *DMG* do *PKG*, nie jest obsługiwana.
 
 1. Pobierz i uruchom [narzędzie opakowujące aplikacje w usłudze Intune dla komputerów Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -55,7 +56,7 @@ Użyj w usłudze Intune narzędzia opakowującego aplikacje dla komputerów Mac,
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     To polecenie wyodrębnia wykryte parametry i wersję utworzonego pliku *INTUNEMAC*.
 
-## <a name="step-2---specify-the-software-setup-file"></a>Krok 2. Określanie pliku konfiguracji oprogramowania
+## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -64,14 +65,14 @@ Użyj w usłudze Intune narzędzia opakowującego aplikacje dla komputerów Mac,
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
 6. W okienku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**.
 
-## <a name="step-3---configure-the-app-package-file"></a>Krok 3. Konfigurowanie pliku pakietu aplikacji
+## <a name="step-2---configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
 
 1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
 2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania, a następnie wybierz plik instalacji systemu macOS z rozszerzeniem *INTUNEMAC*.
 3. Gdy skończysz, wybierz przycisk **OK**.
 
 
-## <a name="step-4---configure-app-information"></a>Krok 4. Konfigurowanie informacji o aplikacji
+## <a name="step-3---configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
 
 1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2. W okienku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
@@ -89,7 +90,7 @@ Użyj w usłudze Intune narzędzia opakowującego aplikacje dla komputerów Mac,
     - **Logo** — przekaż ikonę, która zostanie skojarzona z aplikacją. Jest ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Gdy skończysz, wybierz przycisk **OK**.
 
-## <a name="step-5---finish-up"></a>Krok 5. Zakończenie
+## <a name="step-4---finish-up"></a>Krok 4. Zakończenie
 
 1. W okienku **Dodaj aplikację** sprawdź poprawność szczegółów aplikacji.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
@@ -99,7 +100,7 @@ Utworzona aplikacja pojawi się na liście aplikacji, skąd można ją przypisa�
 > [!NOTE]
 > Jeśli plik *PKG* zawiera wiele aplikacji lub instalatorów aplikacji, usługa Microsoft Intune będzie zgłaszać tylko, że *aplikacja* została pomyślnie zainstalowana po wykryciu wszystkich aplikacji zainstalowanych na urządzeniu.
 
-## <a name="step-6---update-a-line-of-business-app"></a>Krok 6. Aktualizowanie aplikacji biznesowej
+## <a name="step-5---update-a-line-of-business-app"></a>Krok 5. Aktualizacja aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

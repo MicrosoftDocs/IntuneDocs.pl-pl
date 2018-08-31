@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
-ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
+ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822725"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255255"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -115,11 +115,10 @@ Nowy pierścień aktualizacji jest wyświetlany na liście pierścieni aktualiza
 3. Gdy skończysz, wybierz opcję **Wybierz** w celu zakończenia przypisywania.
 
 ## <a name="update-compliance-reporting"></a>Raportowanie zgodności aktualizacji
-Zgodność aktualizacji można monitorować w usłudze Intune za pomocą bezpłatnego rozwiązanie wchodzącego w skład pakietu Operations Management Suite (OMS) o nazwie Update Compliance.
+Zgodność aktualizacji można monitorować w usłudze Intune za pomocą bezpłatnego rozwiązania o nazwie Update Compliance.
 
 ### <a name="review-update-compliance-in-intune"></a>Przeglądanie zgodności aktualizacji w usłudze Intune 
-<!-- 1352223 -->
-Przejrzyj raport zasad, aby poznać stan wdrożenia dla skonfigurowanych pierścieni aktualizacji systemu Windows 10.
+<!-- 1352223 --> Przejrzyj raport zasad, aby poznać stan wdrożenia dla skonfigurowanych pierścieni aktualizacji systemu Windows 10.
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
@@ -137,7 +136,7 @@ Przejrzyj raport zasad, aby poznać stan wdrożenia dla skonfigurowanych pierśc
       - **Stan użytkownika**
 
 ### <a name="review-update-compliance-using-oms"></a>Przeglądanie zgodności aktualizacji przy użyciu pakietu OMS
-Wdrożenia aktualizacji systemu Windows 10 można monitorować za pomocą bezpłatnego rozwiązanie wchodzącego w skład usługi OMS (Operations Management Service) o nazwie Update Compliance. Aby uzyskać szczegółowe informacje, zobacz artykuł [Monitor Windows Updates with Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) (Monitorowanie aktualizacji systemu Windows za pomocą aplikacji Update Compliance). Dzięki temu rozwiązaniu można nadać komercyjny identyfikator dowolnemu urządzeniu z systemem Windows 10 zarządzanemu przez usługę Intune, dla którego chcesz otrzymywać raport zgodności aktualizacji.
+Wdrożenia aktualizacji systemu Windows 10 można monitorować za pomocą bezpłatnego rozwiązania o nazwie Update Compliance. Aby uzyskać szczegółowe informacje, zobacz artykuł [Monitor Windows Updates with Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) (Monitorowanie aktualizacji systemu Windows za pomocą aplikacji Update Compliance). Dzięki temu rozwiązaniu można nadać komercyjny identyfikator dowolnemu urządzeniu z systemem Windows 10 zarządzanemu przez usługę Intune, dla którego chcesz otrzymywać raport zgodności aktualizacji.
 
 W konsoli usługi Intune możesz użyć ustawień ścieżki OMA-URI dla niestandardowych zasad do skonfigurowania identyfikatora komercyjnego. Szczegółowe informacje można znaleźć w artykule [Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
 

@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
-ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
+ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
+ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753896"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "40251717"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurowanie wirtualnej sieci prywatnej (sieci VPN) dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -145,21 +145,32 @@ Po dodaniu profilu sieci VPN skojarz aplikację i grupę usługi Azure AD z prof
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-2. Wybierz pozycję **Mobile Apps**.
-3. Kliknij pozycję **Aplikacje**.
-4. Wybierz aplikację z listy aplikacji.
-5. Kliknij pozycję **Przypisania**.
-6. Kliknij pozycję **Dodawanie grupy**.
-7. Wybierz wartość **Wymagane** dla elementu **Typ przydziału** w okienku **Dodaj grupę**.
-6. Wybierz wcześniej zdefiniowaną grupę i wybierz pozycję **Ustaw tę aplikację jako wymaganą**.
-8. Wybierz definicję sieci VPN dla elementu **Sieć VPN**.
+3. Wybierz pozycję **Mobile Apps**.
+4. Kliknij pozycję **Aplikacje**.
+5. Wybierz aplikację z listy aplikacji.
+6. Kliknij pozycję **Przypisania**.
+7. Kliknij pozycję **Dodawanie grupy**.
+8. Wybierz wartość **Wymagane** dla elementu **Typ przydziału** w okienku **Dodaj grupę**.
+9. Wybierz wcześniej zdefiniowaną grupę i wybierz pozycję **Ustaw tę aplikację jako wymaganą**.
+10. Wybierz definicję sieci VPN dla elementu **Sieć VPN**.
  
     > [!NOTE]  
     > Czasami pobranie wartości zajmuje definicji sieci VPN kilka chwil. Poczekaj od 3 do 5 minut, zanim klikniesz polecenie **Zapisz**.
 
-9. Kliknij przycisk **OK**, a następnie pozycję **Zapisz**.
+11. Kliknij przycisk **OK**, a następnie pozycję **Zapisz**.
 
     ![Kojarzenie aplikacji z siecią VPN](./media/vpn-per-app-app-to-vpn.png)
+
+Skojarzenie między aplikacją i profilem zostanie usunięte podczas następnego zaewidencjonowania urządzenia, jeśli zostaną spełnione następujące warunki:
+- Aplikacja została oznaczona jako docelowa przy użyciu intencji wymaganej instalacji.
+- Zarówno profil, jak i aplikacja mają tę samą grupę docelową.
+- Konfiguracja sieci VPN dla aplikacji jest usuwana z przypisania aplikacji.
+
+Skojarzenie między aplikacją i profilem będzie nadal istnieć do momentu, gdy użytkownik końcowy zażąda ponownej instalacji z portalu firmy, jeśli następujące warunki zostaną spełnione:
+- Aplikacja została oznaczona jako docelowa przy użyciu intencji dostępnej instalacji.
+- Zarówno profil, jak i aplikacja mają tę samą grupę docelową.
+- Użytkownik zażądał instalacji aplikacji z portalu firmy, w wyniku czego aplikacja i profil są instalowane na urządzeniu.
+- Konfiguracja sieci VPN dla aplikacji jest usuwana z przypisania aplikacji.
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Sprawdzanie połączenia na urządzeniu z systemem iOS
 
@@ -191,7 +202,7 @@ Sprawdź połączenie na urządzeniu z systemem iOS.
 2. Naciśnij polecenie **Połącz**.  
 Sieć VPN pomyślnie nawiązuje połączenie bez żadnych dodatkowych monitów.
 
-<!-- ## Troubleshooting the Per-App VPN
+<!-- ## Troubleshooting the per-app VPN
 
 The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
 

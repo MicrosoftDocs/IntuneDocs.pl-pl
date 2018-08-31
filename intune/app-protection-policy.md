@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 01/19/2018
+ms.date: 08/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f59bd4e0f795b73d830e41d47262c10c24d9398b
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e9dbda4c768bf9963a4ec168d6a613dca197995
+ms.sourcegitcommit: c5cba0f4bf01eb9a9492e4e3fb6cd756f0737057
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834282"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251618"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -46,7 +46,7 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchamianych na ur
 - **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi :** urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
 
 > [!IMPORTANT]
-> Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Zasady ochrony aplikacji nie są obsługiwane w przypadku aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
+> Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Możesz także chronić dostęp do lokalnych skrzynek pocztowych programu Exchange, tworząc zasady ochrony aplikacji usługi Intune dla aplikacji Outlook dla systemów iOS i Android, obsługiwane przez hybrydowe nowoczesne uwierzytelnianie. Przed użyciem tej funkcji upewnij się, że spełnione są [Wymagania dotyczące programu Outlook dla systemów iOS i Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zasady ochrony aplikacji nie są obsługiwane w przypadku innych aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
 
 **Do istotnych korzyści zapewnianych przez zasady ochrony aplikacji należą:**
 

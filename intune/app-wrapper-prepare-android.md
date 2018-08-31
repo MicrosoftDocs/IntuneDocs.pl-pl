@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/7/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bb94c5a0941dc4f4d626c6316f79d5e4b1f4b551
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: 3be9be3c290a6cbb2e68358a6810aa2dc1636065
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "35679448"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251818"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -50,6 +50,9 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
     > W pewnych sytuacjach 32-bitowa wersja programu Java może spowodować problemy z pamięcią. Warto zainstalować wersję 64-bitową.
 
 - System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Aby uzyskać informacje dotyczące **ponownego używania** istniejących certyfikatów i ogólne wskazówki dotyczące certyfikatów podpisywania, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Plik wykonywalny Java keytool.exe służy do generowania **nowych** poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Wszelkie ustawiane hasła muszą być bezpieczne, ale zanotuj je, ponieważ będą potrzebne do uruchomienia narzędzia opakowującego aplikacje.
+
+> [!NOTE]
+> Narzędzie opakowujące aplikacje usługi Intune nie obsługuje podpisywania aplikacji za pomocą schematów podpisów firmy Google w wersji v2 i w przyszłej wersji v3. Zaleca się, aby po opakowaniu pliku apk przy użyciu narzędzia opakowującego aplikacje usługi Intune skorzystać z [narzędzia Apksigner dostarczanego przez firmę Google]( https://developer.android.com/studio/command-line/apksigner). Pozwoli to zagwarantować, że po pobraniu aplikacji na urządzeniach użytkowników końcowych będzie można ją uruchomić poprawnie zgodnie ze standardami systemu Android. 
 
 - (Opcjonalnie) Włącz Multidex w aplikacji wejściowej. Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. W tym scenariuszu najlepszym rozwiązaniem jest włączenie obsługi Multidex w samej aplikacji. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji). 
 

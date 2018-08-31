@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3b835f9fb2c1f7695919fa7d7f237c3989bd470
-ms.sourcegitcommit: 58cddb08b64bd60f041eff46ff215e83e13db4e6
+ms.openlocfilehash: cf1b47b578c5abe0051b94c9f4c2127cd48f0e76
+ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40001931"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43092281"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -119,7 +119,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 4. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
     - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, którzy chcą korzystać z aplikacji Portal firmy w celu używania usług takich, jak instalowanie aplikacji. Gdy w przypadku korzystania z usług ADFS profil rejestracji ma w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji** wartość **Nie**, wymagana jest opcja [Nazwa użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints) [ Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Można jej używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
+    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Tej opcji można używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
 
 5. Jeśli została wybrana opcja **Zarejestruj z użyciem koligacji użytkowników**, można zezwolić użytkownikom na uwierzytelnianie za pomocą aplikacji Portal firmy zamiast Asystenta ustawień firmy Apple.
 
@@ -129,9 +129,17 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     > Jeśli chcesz wykonać dowolną z następujących czynności, w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji firmy Apple** ustaw wartość **Tak**.
     >    - Używanie uwierzytelniania wieloskładnikowego
     >    - wyświetlanie monitów dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania.
-    >    - wyświetlanie monitów dla użytkowników informujących o konieczności resetowania podczas rejestracji swoich wygasłych haseł; nie są one obsługiwane podczas uwierzytelniania przy użyciu Asystenta konfiguracji firmy Apple.
+    >    - Monitowanie użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji
+    >
+    > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
-6. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
+
+6. Jeśli wybrano pozycję **Tak** dla opcji **Uwierzytelniaj się za pomocą Portalu firmy zamiast asystenta ustawień firmy Apple**, masz możliwość użycia tokenu Programu zakupów zbiorczych (VPP, Volume Purchase Program) w celu automatycznego zainstalowania aplikacji Portal firmy na urządzeniu bez podawania przez użytkownika identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (spowoduje to wyświetlenie monitu o podanie identyfikatora Apple ID).
+
+    ![Zrzut ekranu przedstawiający instalowanie aplikacji Portal firmy przy użyciu programu vpp.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
+
+
+7. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
 
     ![Zrzut ekranu pozycji Ustawienia zarządzania urządzeniami.](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
 
@@ -145,37 +153,42 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
      > [!NOTE]
      > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
+8. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez resetowania urządzenia do ustawień fabrycznych. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
 
-8. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
+9. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
-9. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
+10. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
 
-10. Wybierz przycisk **OK**.
+11. Wybierz przycisk **OK**.
 
-11. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+12. Wybierz pozycję **Ustawienia Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
-
-    |                 Ustawienie                  |                                                                                               Opis                                                                                               |
+    | Ustawienia działu | Opis |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    |     <strong>Nazwa działu</strong>     |                                                             Wyświetlane, gdy użytkownicy klikną pozycję <strong>Informacje o konfiguracji</strong> podczas aktywacji.                                                              |
-    |    <strong>Telefon działu</strong>     |                                                          Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk <strong>Potrzebna pomoc</strong>.                                                          |
-    | <strong>Opcje Asystenta ustawień</strong> |                                                     Następujące opcjonalne ustawienia mogą być później konfigurowane w menu <strong>Ustawienia</strong> systemu iOS.                                                      |
-    |        <strong>Kod dostępu</strong>         | Wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
-    |    <strong>Usługi lokalizacyjne</strong>    |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                  |
-    |         <strong>Przywróć</strong>         |                                                                Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji.                                                                 |
-    |   <strong>Identyfikator Apple ID i usługa iCloud</strong>   |                         Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o zalogowanie przy użyciu identyfikatora Apple ID, a ekran Aplikacje i dane umożliwi przywrócenie urządzenia z kopii zapasowej usługi iCloud.                         |
-    |  <strong>Warunki i postanowienia</strong>   |                                                   Jeśli to ustawienie zostało włączone, Asystent ustawień monituje użytkowników o zaakceptowanie warunków i postanowień firmy Apple podczas aktywacji.                                                   |
-    |        <strong>Touch ID</strong>         |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
-    |        <strong>Apple Pay</strong>        |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
-    |          <strong>Powiększenie</strong>           |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
-    |          <strong>Siri</strong>           |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
-    |     <strong>Dane diagnostyczne</strong>     |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                 |
+    | <strong>Nazwa działu</strong> | Wyświetlane, gdy użytkownicy klikną pozycję <strong>Informacje o konfiguracji</strong> podczas aktywacji. |
+    |    <strong>Telefon działu</strong>     |                                                          Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk <strong>Potrzebna pomoc</strong>. |
+
+  Można wybrać opcję pokazywania lub ukrywania różnych ekranów Asystenta ustawień na urządzeniu podczas jego konfigurowania.
+  - Jeśli wybierzesz pozycję **Ukryj**, ekran nie będzie wyświetlany podczas konfigurowania. Po skonfigurowaniu urządzenia użytkownik może nadal przejść do menu **Ustawienia**, aby skonfigurować tę funkcję.
+  - Jeśli wybierzesz pozycję **Pokaż**, ekran będzie wyświetlany podczas konfigurowania. Użytkownik może czasami pominąć ekran bez podejmowania akcji. Później jednak może przejść do menu **Ustawienia** urządzenia, aby skonfigurować tę funkcję. 
+
+| Ustawienia ekranu Asystent ustawień | Jeśli wybierzesz pozycję **Pokaż**, podczas konfigurowania urządzenie będzie... |
+    |------------------------------------------|------------------------------------------|
+    | <strong>Kod dostępu</strong> | Monitować o wprowadzenie hasła. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
+    | <strong>Usługi lokalizacyjne</strong> | Monitować użytkownika o określenie lokalizacji. |
+    | <strong>Przywróć</strong> | Wyświetlać ekran **Aplikacje i dane**. Ten ekran oferuje użytkownikowi opcję przywracania lub przenoszenia danych z kopii zapasowej w usłudze iCloud podczas konfigurowania urządzenia. |
+    | <strong>Identyfikator Apple ID i usługa iCloud</strong> | Oferować użytkownikowi opcję logowania za pomocą **identyfikatora Apple ID** i używania usługi **iCloud**.                         |
+    | <strong>Warunki i postanowienia</strong> | Wymagać od użytkownika akceptacji warunków i postanowień firmy Apple. |
+    | <strong>Touch ID</strong> | Oferować użytkownikowi możliwość konfigurowania identyfikacji za pomocą odcisku palca w urządzeniu. |
+    | <strong>Apple Pay</strong> | Oferować użytkownikowi opcję skonfigurowania usługi Apple Pay na urządzeniu. |
+    | <strong>Powiększenie</strong> | Oferować użytkownikowi opcję powiększania ekranu podczas konfigurowania urządzenia. |
+    | <strong>Siri</strong> | Oferować użytkownikowi opcję konfigurowania programu Siri. |
+    | <strong>Dane diagnostyczne</strong> | Wyświetlać ekran **Diagnostyka** dla użytkownika. Na tym ekranie użytkownik może wybrać opcję wysyłania danych diagnostycznych do firmy Apple. |
 
 
-12. Wybierz przycisk **OK**.
+13. Wybierz przycisk **OK**.
 
-13. Abu zapisać profil, wybierz pozycję **Utwórz**.
+14. Abu zapisać profil, wybierz pozycję **Utwórz**.
 
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
@@ -183,7 +196,7 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
-   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Gdy urządzenie uczestniczące w programie rejestracji zostanie usunięte z portalu usługi Intune bez usuwania przypisania z serwera MDM firmy Apple w portalu programu DEP, zostanie ponownie zaimportowane do usługi Intune dopiero po uruchomieniu pełnej synchronizacji.   
+   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Gdy urządzenie uczestniczące w programie rejestracji zostanie usunięte z portalu usługi Intune bez usuwania przypisania z serwera MDM firmy Apple w portalu programu DEP, zostanie ono ponownie zaimportowane do usługi Intune dopiero po uruchomieniu pełnej synchronizacji.   
    - Synchronizacja jest uruchamiana automatycznie co 24 godziny. Można też przeprowadzić synchronizację, klikając przycisk **Synchronizuj** (nie częściej niż raz na 15 minut). Każde żądanie synchronizacji ma przydzielone 15 minut na ukończenie. Przycisk **Synchronizuj** pozostaje wyłączony do ukończenia synchronizacji. Synchronizacja spowoduje odświeżenie stanu bieżącego urządzenia oraz zaimportowanie nowych urządzeń przypisanych do serwera MDM firmy Apple.   
 
 
@@ -195,7 +208,7 @@ Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil progr
 
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy.
 2. Wybierz **Urządzenia** > wybierz urządzenia na liście > **Przypisz profil**.
-3. W obszarze **Przypisz profil** wybierz profil dla urządzeń, a następnie wybierz pozycję **Przypisz**.
+3. W obszarze **Przypisz profil** wybierz profil dla urządzeń > **Przypisz**.
 
 ### <a name="assign-a-default-profile"></a>Przypisywanie profilu domyślnego
 

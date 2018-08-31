@@ -64,7 +64,7 @@
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem iOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Instalowanie aplikacji Portal firmy i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
-### [Rejestrowanie urządzenia z systemem iOS biorącego udział w programie Device Enrollment Program](enroll-your-device-dep-ios.md)
+### [Rejestrowanie urządzenia z systemem iOS dostarczonego przez organizację](enroll-your-device-dep-ios.md)
 
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 ### [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)
@@ -103,7 +103,7 @@
 ## [Korzystanie z urządzenia z systemem macOS](using-your-macos-device-with-intune.md)
 ### [Co się dzieje po zarejestrowaniu urządzenia z systemem macOS?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos-cp.md)
-### [Rejestrowanie dostarczonego przez firmę urządzenia z systemem macOS](enroll-company-device-macos.md)  
+### [Rejestrowanie urządzenia z systemem macOS dostarczonego przez organizację](enroll-company-device-macos.md)  
 ### [Wyrejestrowywanie urządzenia z systemem macOS](unenroll-your-device-from-intune-macos.md)  
 ### [Rozwiązywanie typowych problemów z systemem macOS](troubleshoot-your-device-macos.md)
 #### [Moja wersja systemu macOS nie jest jeszcze obsługiwana](your-macos-version-isnt-yet-supported.md)

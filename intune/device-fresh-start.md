@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,32 +13,29 @@ ms.technology: ''
 ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5658bf2e1ee250ef9fd405b3f7ec1772b166f338
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6b66cd00f734cab3ca85f6d87f056f8c482a377d
+ms.sourcegitcommit: 2811df0f851ca6b08f6ae8c926fb2e6971c41690
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021000"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251646"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Użycie funkcji Rozpoczęcie od nowa do resetowania urządzeń z systemem Windows 10 przy użyciu usługi Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Akcja urządzenia **Rozpoczęcie od nowa** usuwa wszystkie aplikacje zainstalowane na komputerze z systemem Windows 10 z aktualizacją dla twórców. Następnie automatycznie aktualizuje komputer do najnowszej wersji systemu Windows.
+Akcja **Rozpoczęcie od nowa** urządzenia usuwa wszystkie aplikacje zainstalowane na komputerze z systemem Windows 10 w wersji 1703 lub nowszej. Akcja Rozpoczęcie od nowa ułatwia usunięcie wstępnie zainstalowanych aplikacji (OEM), które zwykle są zainstalowane na nowym komputerze.  
 
-Ta akcja ułatwia usunięcie wstępnie zainstalowanych aplikacji (OEM), które zwykle są zainstalowane na nowym komputerze. Aby zachować zawartość folderu macierzystego użytkownika i usunąć tylko aplikacje i ustawienia, użyj ustawienia `if user data is retained`.
-
-> [!IMPORTANT]
-> Rozpoczęcie od nowa powoduje wyrejestrowanie urządzenia z usługi Intune, ale urządzenie jest nadal przyłączone w usłudze Azure Active Directory.
-
-## <a name="use-fresh-start"></a>Używanie funkcji Rozpoczęcie od nowa
-
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-4. Z listy zarządzanych urządzeń wybierz urządzenie z systemem Windows 10 Desktop, a następnie wybierz pozycję **Rozpoczęcie od nowa**.
-
-## <a name="next-steps"></a>Następne kroki
-
-Aby wyświetlić stan tej akcji, wybierz pozycję **Akcje urządzenia** (**Microsoft Intune** > **Urządzenia**).
+1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) i przejdź do obszaru > **Microsoft Intune** > **Urządzenia** > **Wszystkie urządzenia**.
+2. Z listy urządzeń zarządzanych wybierz urządzenie z systemem Windows 10 Desktop.
+3. Kliknij pozycję **Rozpoczęcie od nowa**. 
+4. Wybierz opcję **Zachowaj dane użytkownika na tym urządzeniu**, aby:
+   * urządzenie pozostało dołączone do usługi Azure AD,
+    * urządzenie pozostało zarejestrowane w usłudze zarządzania urządzeniami przenośnymi, 
+    * zachować zawartość folderu macierzystego urządzenia użytkownika i usunąć aplikacje i ustawienia.  
+  > [!IMPORTANT]
+ > Jeśli nie zachowasz danych użytkownika, urządzenia zostanie przywrócone do stanu po zakupie. Zostanie ono wyrejestrowane z usługi Azure AD i z usługi zarządzania urządzeniami przenośnymi. 
+ 
+5. Kliknij przycisk **OK**.   
+6. Aby wyświetlić stan tej akcji, wróć do obszaru **Urządzenia** i kliknij przycisk **Akcje urządzenia**.  

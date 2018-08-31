@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6c7f3229c2cb4c5f3f57d84d348053f25eeeb9c9
-ms.sourcegitcommit: f70d6aaea59b52cd0d7bd3008afd243868967fd6
+ms.openlocfilehash: c64c267623db93128177d56ced29586d3a877b19
+ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066219"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42823056"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Dodawanie i przypisywanie aplikacji usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -56,6 +56,7 @@ Wybierz sekcję odpowiadającą Twojemu dostawcy usługi MTD:
   - [Check Point SandBlast Mobile](#configure-check-point-sandblast-mobile-apps)
   - [Zimperium](#configure-zimperium-apps)
   - [Pradeo](#configure-pradeo-apps)
+  - [Better Mobile](#configure-better-mobile-apps)
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurowanie aplikacji Lookout for Work
 
@@ -129,6 +130,16 @@ Wybierz sekcję odpowiadającą Twojemu dostawcy usługi MTD:
 
     - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji Pradeo](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) w **kroku 12** w sekcji **Konfigurowanie informacji o aplikacji**.
 
+### <a name="configure-better-mobile-apps"></a>Konfigurowanie aplikacji usługi Better Mobile
+
+ - **Android**
+
+    - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu Android do usługi Microsoft Intune](store-apps-android.md). Użyj tego [adresu URL sklepu z aplikacjami Active Shield](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) w **kroku 7**.
+
+ - **iOS**
+
+    - Zapoznaj się z instrukcjami dotyczącymi [dodawania aplikacji w sklepie dla systemu iOS do usługi Microsoft Intune](store-apps-ios.md). Użyj tego [adresu URL sklepu aplikacji ActiveShield](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) w **kroku 12** w sekcji **Konfigurowanie informacji o aplikacji**.
+
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfiguracja aplikacji usługi MTD przy użyciu zasad konfiguracji aplikacji systemu iOS
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Zasady konfiguracji aplikacji Lookout for Work
@@ -177,6 +188,22 @@ Wybierz sekcję odpowiadającą Twojemu dostawcy usługi MTD:
 <string>{{serialnumber}}</string>
 <key>udidlast4digits</key>
 <string>{{udidlast4digits}}</string>
+</dict>
+```
+
+### <a name="better-mobile-app-configuration-policy"></a>Zasady konfiguracji aplikacji Better Mobile
+
+- Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md), aby dodać zasady konfiguracji aplikacji Better Mobile dla systemu iOS.
+    - W **kroku 8** użyj opcji **Wprowadź dane XML**, skopiuj treść poniżej i wklej ją do treści zasad konfiguracji. Zastąp adres URL `https://client.bmobi.net` adresem URL odpowiedniej konsoli.
+
+```
+<dict>
+<key>better_server_url</key>
+<string>https://client.bmobi.net</string>
+<key>better_udid</key>
+<string>{{aaddeviceid}}</string>
+<key>better_user</key>
+<string>{{userprincipalname}}</string>
 </dict>
 ```
 

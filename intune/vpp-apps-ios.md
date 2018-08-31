@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/02/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 574880ae1ff7f734edcb02ebc89d7a0270064d4e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 115486f02a86616fdf2c340fa7e0e2ff6e505afa
+ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905975"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42823073"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -148,6 +148,10 @@ Istnieje możliwość usunięcia tokenu programu Volume Purchasing Program (VPP)
 
 <!-- 820870 -->  
 Aby odwołać licencję wszystkich aplikacji programu VPP dla danego tokenu programu VPP, należy najpierw odwołać wszystkie licencje aplikacji skojarzone z tokenem, a następnie usunąć token.
+
+## <a name="renewing-app-licenses"></a>Odnawianie licencji aplikacji
+
+Token VPP firmy Apple można odnowić, pobierając nowy token z portalu programu Apple Volume Purchase Program i aktualizując istniejący token w usłudze Intune.
 
 ## <a name="further-information"></a>Dodatkowe informacje
 

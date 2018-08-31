@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0cd9db9399eb08c3ed04ff1d8920082aa0c04f06
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bedd1108ce0c9e173e6e9519a29d3948f1320c3a
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224317"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251619"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -62,6 +62,12 @@ Wykresy pokazują liczbę aplikacji dla następujących stanów:
 | **Oczekująca instalacja**   | Liczba aplikacji, których instalacja trwa. |
 | **Nie dotyczy**           | Liczba aplikacji, w przypadku których stan nie ma zastosowania.            |
 
+> [!NOTE]
+> Liczba wykrytych aplikacji może być niezgodna z liczbą stanu instalacji aplikacji. Możliwe przyczyny niespójności to:
+>    - Ukierunkowana zmiana zainstalowanej aplikacji zarządzanej może spowodować spadek liczby instalacji w bloku stanu, ale będzie nadal zgłaszana w wykrytych aplikacjach.
+>    - Przeznaczenie tej samej aplikacji dla wielu wystąpień w dzierżawie spowoduje wygenerowanie różnych liczników z powodu potencjalnego nakładania się użytkowników lub urządzeń. W każdym wystąpieniu aplikacji będą liczeni nakładający się użytkownicy, ale odnalezione aplikacje będą mieć powielone liczby.
+>    - Odnalezione aplikacje i stan aplikacji są zbierane w różnych przedziałach czasowych, które mogą spowodować rozbieżności liczby aplikacji.
+ 
 ### <a name="device-install-status"></a>Stan instalacji urządzenia
 
 Lista stanu urządzenia zostanie pokazana po wybraniu pozycji **Stan instalacji urządzenia** w sekcji **Monitorowanie** menu. Tabela szczegółów zawiera następujące kolumny:

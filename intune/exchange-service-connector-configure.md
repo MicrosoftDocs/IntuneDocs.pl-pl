@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 640d1a5cbd785248cb309bc250c95631295955b3
-ms.sourcegitcommit: 71497f0215fc8bed454ac318b0548b1281a8fe0f
+ms.openlocfilehash: 141fcc4550b69d01d67e8d4aa9f0e6e05717353a
+ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33914159"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251844"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Konfiguracja łącznika usługi Exchange dla programów Intune i Exchange Online
 
@@ -50,7 +50,7 @@ Musisz też utworzyć konto użytkownika usługi Exchange Online, którego będz
 
 ## <a name="set-up-the-service-to-service-connector"></a>Konfigurowanie łącznika Service To Service Connector
 
-1. Zaloguj się w witrynie [Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika z prawami administratora programu Exchange i uprawnieniami do użycia [opisanych wcześniej](#exchange-cmdlet-requirements) poleceń cmdlet. Usługa Microsoft Intune używa adresu e-mail aktualnie zalogowanego użytkownika, aby skonfigurować połączenie.
+1. Zaloguj się w witrynie [Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika z prawami administratora programu Exchange, uprawnieniami do użycia [opisanych wcześniej](#exchange-cmdlet-requirements) poleceń cmdlet, ważną licencją usługi Intune i rolą administratora globalnego. Usługa Microsoft Intune używa adresu e-mail aktualnie zalogowanego użytkownika, aby skonfigurować połączenie.
 
 2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 

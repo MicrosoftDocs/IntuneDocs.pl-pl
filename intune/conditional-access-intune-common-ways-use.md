@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d147bc5ee22718ecce102cc549b29faa17a617e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 49fd06d4f0f75f1aeff434ce3b271284ec1a0340
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025916"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251549"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -28,6 +28,9 @@ ms.locfileid: "31025916"
 Istnieją dwa typy dostępu warunkowego w usłudze Intune: dostęp warunkowy oparty na urządzeniu i dostęp warunkowy na podstawie aplikacji. Musisz skonfigurować powiązane zasady zgodności, aby sterować dostępem warunkowym w swojej organizacji. Dostęp warunkowy jest najczęściej używany do wykonywania czynności takich jak zezwalanie na dostęp lub blokowanie dostępu do lokalnego programu Exchange, kontrola dostępu do sieci lub integracja z rozwiązaniem Mobile Threat Defense.
 
 Poniższe informacje pomagają zrozumieć sposób korzystania z możliwości zapewnienia zgodności *urządzenia* przenośnego w usłudze Intune i możliwości zarządzania *aplikacjami* mobilnymi (MAM) w usłudze Intune. 
+
+> [!NOTE]
+> Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną w wersji Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi.
 
 ## <a name="device-based-conditional-access"></a>Dostęp warunkowy oparty na urządzeniach
 
@@ -106,7 +109,7 @@ Gdy użytkownicy próbują uzyskać dostęp do firmowej sieci Wi-Fi lub zasobów
 
 ### <a name="conditional-access-based-on-device-risk"></a>Dostęp warunkowy w oparciu o ryzyko dotyczące urządzenia
 
-Usługa Intune współpracuje z dostawcami usługi Mobile Threat Defense, która zapewnia rozwiązanie zabezpieczeń do wykrywania złośliwego oprogramowania, koni trojańskich oraz innych zagrożeń na urządzeniach mobilnych.
+Usługa Intune współpracuje z dostawcami usługi Mobile Threat Defense, która zapewnia rozwiązanie zabezpieczeń do wykrywania złośliwego oprogramowania, koni trojańskich oraz innych zagrożeń na urządzeniach przenośnych.
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Jak działa usługa Intune oraz integracja z usługą Mobile Threat Defense
 
@@ -118,11 +121,11 @@ Usługa Intune oraz integracja z usługą Mobile Threat Defense stanowią czynni
 
 ### <a name="conditional-access-for-windows-pcs"></a>Dostęp warunkowy dla komputerów z systemem Windows
 
-Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępnych dla urządzeń mobilnych. Poniżej omówiono sposoby korzystania z dostępu warunkowego podczas zarządzania komputerami przy użyciu usługi Intune.
+Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępnych dla urządzeń przenośnych. Poniżej omówiono sposoby korzystania z dostępu warunkowego podczas zarządzania komputerami przy użyciu usługi Intune.
 
 #### <a name="corporate-owned"></a>Urządzenia należące do firmy
 
--   **Przyłączone do domeny w lokalnej usłudze AD:** była to najbardziej typowa i uzasadniona opcja wdrażania dostępu warunkowego dla organizacji, które zarządzały one już komputerami przy użyciu zasad grupy usługi AD i/lub programu System Center Configuration Manager.
+-   **Przyłączone do domeny w lokalnej usłudze AD:** ta opcja jest często używana przez organizacje, które są zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD i/lub programu System Center Configuration Manager.
 
 -   **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** ten scenariusz jest zwykle dostosowany do modelu „Wybierz swoje własne urządzenie” (CYOD) i scenariusza wykorzystania laptopów, które są rzadko podłączane do sieci firmowej. Urządzenie łączy się z usługą Azure AD i zostaje zarejestrowane w usłudze Intune, która usuwa wszystkie zależności od lokalnej usługi AD oraz kontrolerów domeny. Może to pełnić rolę kryteriów dostępu warunkowego podczas uzyskiwania dostępu do zasobów firmowych.
 

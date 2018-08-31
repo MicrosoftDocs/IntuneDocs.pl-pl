@@ -14,12 +14,12 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a6a5bbdd5c8cd155dad99b3a8fcceabb2ff1f6f8
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 8b132c0853bf9d591f16610f1e7a714b6288491b
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225412"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751654"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Przypisanie użytkownikom licencji umożliwiających rejestrowanie urządzeń w usłudze Intune
 
@@ -61,7 +61,7 @@ Aby dowiedzieć się więcej na temat narzędzia SDS, zobacz [omówienie narzęd
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>W jaki sposób licencje użytkownika i urządzeń wpływają na dostęp do usług
 * Każdy **użytkownik**, który ma przypisaną licencję na oprogramowanie, może uzyskać dostęp i korzystać z usług online i powiązanego oprogramowania (łącznie z oprogramowaniem System Center) do zarządzania aplikacjami maksymalnie na 15 urządzeniach.
-* Na każdym **urządzeniu**, które ma przypisaną licencję na oprogramowanie, dowolna liczba użytkowników może uzyskać dostęp i korzystać z usług online i powiązanego oprogramowania (łącznie z oprogramowaniem System Center).
+* Możesz kupić licencje dowolnego urządzenia niezależnie od licencji użytkowników. Licencji urządzenia nie trzeba przypisywać do urządzeń. Każde urządzenie, które uzyskuje dostęp do usług online i powiązanego oprogramowania (w tym oprogramowania System Center) oraz korzysta z tych rozwiązań, musi mieć licencję urządzenia.
 * Jeśli urządzenie jest używane przez więcej niż jednego użytkownika, każde z nich wymaga licencji na oprogramowanie lub wszyscy użytkownicy wymagają licencji użytkownika na oprogramowanie.
 
 ## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Opis typu zakupionych licencji

@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a62166792570c5bb81391d05d1cbc3f8486543a4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7faba9a0bfb6f07a80c4c0af947efbca9b33ae03
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022343"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251743"
 ---
 # <a name="whats-conditional-access"></a>Co to jest dostęp warunkowy?
 
@@ -38,7 +38,7 @@ Można określić warunki, które blokują dostęp do danych firmowych na podsta
 
 ## <a name="conditional-access-with-intune"></a>Dostęp warunkowy przy użyciu usługi Intune
 
-Usługa Intune dodaje zasady zgodności urządzeń przenośnych oraz zarządzania aplikacjami pozwalające obsługiwać rozwiązanie dostępu warunkowego w pakiecie EMS.
+Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną w wersji Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi. 
 
 ![Usługa Intune i dostęp warunkowy podczas korzystania z pakietu EMS](./media/intune-with-ca-1.png)
 

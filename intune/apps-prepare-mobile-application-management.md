@@ -14,12 +14,12 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 351282634d6c6e087456e61e9fd967b70f9cf515
-ms.sourcegitcommit: c109ea6e9b7104630cd767aa27c5f7789286a906
+ms.openlocfilehash: 9d4dbdb3aa07020aa027dc1a4a1b2edcefefb4ca
+ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39450794"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251975"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -28,7 +28,7 @@ ms.locfileid: "39450794"
 W swoich aplikacjach możesz umożliwić korzystanie z zasad ochrony aplikacji przez użycie narzędzia opakowującego aplikacje usługi Intune lub zestawu Intune App SDK. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
 
 ## <a name="intune-app-wrapping-tool"></a>Narzędzia opakowujące aplikacje usługi Intune
-Narzędzia opakowujące aplikacje jest używane głównie dla wewnętrznych aplikacji biznesowych. Narzędzie to jest aplikacją wiersza polecenia tworzącą otokę wokół aplikacji, która następnie umożliwia zarządzanie aplikacją przez zasady ochrony aplikacji usługi Intune.
+Narzędzia opakowujące aplikacje jest używane głównie dla **wewnętrznych** aplikacji biznesowych. Narzędzie to jest aplikacją wiersza polecenia tworzącą otokę wokół aplikacji, która następnie umożliwia zarządzanie aplikacją przez zasady ochrony aplikacji usługi Intune. Jeśli ochronę aplikacji zapewnia niezależny dostawca oprogramowania (ISV, independent software vendor), ważne jest, aby wyjaśnić, czy dostawca ISV będzie nadal obsługiwać opakowaną aplikację.
 
 Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania. Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md) i [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md).
 
@@ -48,7 +48,7 @@ Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby
 
 |**Narzędzie opakowujące aplikacje** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Nie — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak|
+|**iOS** |Tak|Tak|
 |**Android**|Nie — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak|
 
 ## <a name="intune-app-sdk"></a>Zestaw SDK aplikacji usługi Intune

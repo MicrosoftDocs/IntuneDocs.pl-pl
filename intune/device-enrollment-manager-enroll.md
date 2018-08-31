@@ -15,18 +15,18 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76166fda33414c8ae3096ca12604a5edf07ad974
-ms.sourcegitcommit: a5bd08f2b6a0693fa62683aa2d3699041030269e
+ms.openlocfilehash: ce785ad7898f9e792feeadcd1623bd0989f0d6d0
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203224"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255545"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* (DEM, ang. Device Enrollment Manager) jest specjalnym kontem użytkownika umożliwiającym rejestrację do 1000 urządzeń. Istniejących użytkowników dodaje się do konta menedżera rejestracji urządzeń w celu nadania im szczególnych możliwości związanych z tym kontem. Każde zarejestrowane urządzenie używa jednej licencji. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”).  
+Organizacje mogą używać usługi Intune do zarządzania dużą liczbą urządzeń przenośnych za pomocą jednego konta użytkownika. Konto *menedżera rejestracji urządzeń* (DEM, ang. Device Enrollment Manager) jest specjalnym kontem użytkownika umożliwiającym rejestrację do 1000 urządzeń. Istniejących użytkowników dodaje się do konta menedżera rejestracji urządzeń w celu udostępnienia im szczególnych opcji związanych z tym kontem. Każde zarejestrowane urządzenie używa jednej licencji. Zalecamy używanie urządzeń zarejestrowanych przy użyciu tego konta jako urządzeń udostępnionych, a nie urządzeń osobistych („BYOD”).  
 
 Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządzeń, muszą oni istnieć w witrynie [Azure Portal](https://portal.azure.com). Aby możliwe było zapewnienie optymalnego poziomu bezpieczeństwa, użytkownik DEM nie powinien być jednocześnie administratorem usługi Intune.
 
@@ -35,7 +35,7 @@ Aby było możliwe dodanie użytkowników jako menedżerów rejestracji urządze
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Przykład scenariusza menedżera rejestracji urządzeń
 
-Restauracja potrzebuje 50 tabletów do punktów sprzedaży dla swoich kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy nowe konto menedżera rejestracji urządzeń dla kierownika restauracji.  To konto jest osobne od podstawowego konta kierownika i używane wyłącznie na potrzeby rejestracji udostępnionych urządzeń przy użyciu usługi Intune. Kierownik może teraz zarejestrować 50 tabletów przy użyciu poświadczeń DEM.
+Restauracja potrzebuje 50 tabletów do punktów sprzedaży dla swoich kelnerów oraz monitorów zamówień dla personelu w kuchni. Pracownicy nigdy nie muszą uzyskiwać dostępu do danych firmowych ani logować się jako użytkownicy. Administrator usługi Intune tworzy nowe konto menedżera rejestracji urządzeń dla kierownika restauracji.  To konto jest osobne od podstawowego konta kierownika i używane wyłącznie do rejestracji udostępnionych urządzeń przy użyciu usługi Intune. Kierownik może teraz zarejestrować 50 tabletów przy użyciu poświadczeń DEM.
 
 Menedżerami rejestracji urządzeń mogą być tylko użytkownicy w witrynie [Azure Portal](https://portal.azure.com). Użytkownik konta menedżera rejestracji urządzeń nie może być administratorem usługi Intune.
 
@@ -54,7 +54,7 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
   - Użytkownicy nie mogą używać aplikacji z programu Apple Volume Purchase Program (VPP) z licencjami użytkowników ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
   - (Dotyczy tylko systemu iOS) Jeśli do celów rejestrowania urządzeń z systemem iOS zostanie użyta metoda DEM, nie będzie można użyć do rejestrowania urządzeń programu Apple Configurator, programu Device Enrollment Program (DEP) firmy Apple ani programu Apple School Manager (ASM).
-  - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z profilami służbowymi systemu Android, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń może być zarejestrowane maksymalnie 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
+  - (Tylko system Android) Istnieje ograniczenie dotyczące liczby urządzeń z profilami służbowymi systemu Android, które mogą być rejestrowane za pomocą jednego konta menedżera rejestracji urządzeń. Na jednym koncie menedżera rejestracji urządzeń można zarejestrować do 10 urządzeń z systemem Android z profilem służbowym. To ograniczenie nie dotyczy starszych rejestracji systemu Android.
   - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń.
   - Licencja urządzenia usługi Intune nie jest wymagana do używania menedżera rejestracji urządzeń. Dowiedz się więcej o [licencjach użytkowników i urządzeń](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
@@ -74,17 +74,20 @@ Urządzenia zarejestrowane przy użyciu konta menedżera rejestracji urządzeń 
 
 ## <a name="permissions-for-dem"></a>Uprawnienia dla użytkownika DEM
 
-Do wykonywania zadań związanych z rejestracją użytkowników DEM w portalu administracyjnym wymagana jest rola globalnego administratora lub administratora usługi Intune w usłudze Azure AD. Role te są również wymagane, aby wyświetlić wszystkich użytkowników DEM, niezależnie od uprawnień RBAC wymienionych i dostępnych w ramach niestandardowej roli użytkownika. Użytkownik bez przypisanej roli administratora globalnego lub administratora usługi Intune, który ma uprawnienia do odczytu dla roli menedżerów rejestracji urządzeń, może zobaczyć tylko użytkowników DEM utworzonych przez siebie. Obsługa kontroli dostępu na podstawie ról w odniesieniu do tych funkcji zostanie ogłoszona w przyszłości.
+Rola globalnego administratora lub administratora usługi Intune w usłudze Azure AD jest wymagana do
+- wykonywania zadań związanych z rejestracją DEM w portalu administracyjnym,
+- wyświetlania wszystkich użytkowników DEM, niezależnie od uprawnień RBAC wymienionych i dostępnych w ramach niestandardowej roli użytkownika.
 
-Jeśli użytkownik nie ma przypisanej roli administratora globalnego lub administratora usługi Intune, ale ma uprawnienia do odczytu włączone dla przypisanej do siebie roli menedżerów rejestracji urządzeń, może zobaczyć tylko użytkowników DEM utworzonych przez siebie.
+Użytkownik bez przypisanej roli administratora globalnego lub administratora usługi Intune, który ma uprawnienia do odczytu dla roli menedżerów rejestracji urządzeń, może zobaczyć tylko użytkowników DEM utworzonych przez siebie. Obsługa kontroli dostępu na podstawie ról w odniesieniu do tych funkcji zostanie ogłoszona w przyszłości.
+
 
 ## <a name="remove-a-device-enrollment-manager"></a>Usuwanie menedżera rejestracji urządzeń
 
-Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane urządzenia. Gdy menedżer rejestracji urządzeń zostanie usunięty:
+Gdy menedżer rejestracji urządzeń zostanie usunięty:
 
 -   Nie ma to wpływu na zarejestrowane urządzenia, które będą nadal w pełni zarządzane.
--   Poświadczenia konta usuniętego menedżera rejestracji urządzeń zachowają ważność.
--   Używając usuniętego menedżera rejestracji urządzeń, nie można jednak czyścić ani wycofywać urządzeń.
+-   Usunięte poświadczenia konta menedżera rejestracji urządzeń są nadal ważne.
+-   Usunięty menedżer rejestracji urządzeń nie może czyścić ani wycofywać urządzeń.
 -   Usunięty menedżer rejestracji urządzeń może zarejestrować tylko taką liczbę urządzeń, która nie przekracza limitu na użytkownika skonfigurowanego przez administratora usługi Intune.
 
 **Usuwanie menedżera rejestracji urządzeń**
@@ -92,7 +95,3 @@ Usunięcie menedżera rejestracji urządzeń nie ma wpływu na zarejestrowane ur
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Menedżerowie rejestracji urządzeń**.
 2. W bloku **Menedżerowie rejestracji urządzeń** wybierz użytkownika DEM, a następnie wybierz pozycję **Usuń**.
 
-## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Wyświetlanie właściwości menedżera rejestracji urządzeń
-
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Menedżerowie rejestracji urządzeń**.
-2. W bloku **Menedżerowie rejestracji urządzeń** kliknij prawym przyciskiem myszy użytkownika DEM, a następnie wybierz pozycję **Właściwości**.

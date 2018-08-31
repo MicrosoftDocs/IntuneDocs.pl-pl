@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 4150a513e909ccfd44db23eee9b5990d97d8d670
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329879"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251503"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
@@ -65,7 +65,7 @@ Okienko **Rozwiązywanie problemów** umożliwia przeglądanie informacji o uży
 | 2.   | Wybrany użytkownik  | Nazwa obecnie wybranego użytkownika. Kliknij pozycję **Zmień użytkownika**, aby wybrać nowego użytkownika.       |
 | 3.   | Stan użytkownika  | Wyświetla stan licencji usługi Intune użytkownika, liczbę urządzeń, informacje o zgodności poszczególnych urządzeń, liczbę aplikacji i informacje o zgodności aplikacji.       |
 | 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w okienku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje mobilne<li>Zasady ochrony aplikacji<li>Zasady zgodności<li> Zasady konfiguracji</ul>      |
-| 5.   | Członkostwo w grupach  | Yadda       |
+| 5.   | Członkostwo w grupach  | Pokazuje grupy, których wybrany użytkownik jest obecnie członkiem.       |
 
 ## <a name="mobile-apps-reference"></a>Odwołanie do aplikacji mobilnych
 

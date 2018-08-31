@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5a223834eed1b0174c56b5e33ad2140203073d0
-ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
+ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212039"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903147"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise
 
@@ -56,7 +56,7 @@ Aby zarejestrować urządzenia kiosku, należy utworzyć profil rejestracji. Po 
 1. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzenia z systemem Android** > **Rejestracja urządzenia kiosku i zadań**.
 2. Wybierz pozycję **Utwórz** i wypełnij wymagane pola.
     - **Nazwa**: wpisz nazwę, która będzie używana podczas przypisywania profilu do dynamicznej grupy urządzeń.
-    - **Data wygaśnięcia tokenu**: data wygaśnięcia tokenu. Firma Google wymusza maksymalnie 30 dni.
+    - **Data wygaśnięcia tokenu**: data wygaśnięcia tokenu. Firma Google wymusza maksymalnie 90 dni.
 3. Wybierz pozycję **Utwórz**, aby zapisać profil.
 
 ### <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
@@ -110,7 +110,7 @@ W przypadku urządzeń z systemem Android 5.1 lub nowszym obsługujących komuni
 
 ### <a name="enroll-by-using-a-token"></a>Rejestracja przy użyciu tokenu
 
-W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia.
+W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **aft#setup**.
 
 1. Włącz urządzenie zresetowane do ustawień fabrycznych.
 2. Na ekranie **powitalnym** wybierz swój język.
@@ -125,6 +125,9 @@ W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do 
 ### <a name="enroll-by-using-a-qr-code"></a>Rejestracja przy użyciu kodu QR
 
 Na urządzeniach z systemem Android 7 lub nowszym można zeskanować kod QR z profilu rejestracji w celu zarejestrowania urządzenia.
+
+> [!Note]
+> Powiększenie w przeglądarce może spowodować, że urządzenie nie będzie mogło zeskanować kodu QR. Aby rozwiązać problem, można zwiększyć powiększenie.
 
 1. Aby uruchomić odczyt kodu QR na urządzeniu z systemem Android, naciśnij wielokrotnie pierwszy ekran, który zostanie wyświetlony po zresetowaniu do ustawień fabrycznych.
 2. W przypadku urządzeń z systemem Android 7 i 8 zostanie wyświetlony monit o zainstalowanie czytnika kodów QR. Na urządzeniach z systemem Android 9 lub nowszym czytnik kodów QR jest już zainstalowany.

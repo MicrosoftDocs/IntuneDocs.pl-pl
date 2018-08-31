@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 050660b4da609d8e6c0dbf969eb71aa79945262a
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
+ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254539"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40251587"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -172,19 +172,14 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 3. Wybierz pozycję **Zgadzam się**, aby zaakceptować umowę EULA, co spowoduje zainstalowanie pakietu na komputerze.
 
-4.  Otwórz folder **IntuneMAMPackager** i zapisz jego zawartość na komputerze z systemem macOS. Można teraz uruchomić narzędzie opakowujące aplikacje.
-
-> [!NOTE]
-> Program Intune MAM Packager może zostać zainstalowany oddzielnie na komputerze z systemem macOS, co może spowodować błąd „Nie można odnaleźć pliku” podczas uruchamiania poleceń opakowywania. W związku z tym przeniesienie zawartości folderu IntuneMAMPackager pozwoli na znalezienie ścieżki do pakowarki podczas opakowywania.
-
 ## <a name="run-the-app-wrapping-tool"></a>Uruchamianie narzędzia opakowującego aplikacje
 
 ### <a name="use-terminal"></a>Korzystanie z terminala
 
-W systemie macOS otwórz program Terminal i przejdź do folderu, w którym zostały zapisane pliki narzędzia opakowującego aplikacje. Plik wykonywalny narzędzia nosi nazwę IntuneMAMPackager i znajduje się w folderze IntuneMAMPackager/Contents/MacOS. Uruchom następujące polecenie:
+Otwórz terminal systemu macOS i uruchom następujące polecenie:
 
 ```
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
+/Volumes/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 ```
 
 > [!NOTE]
@@ -405,6 +400,29 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 -   Aplikacje dla systemu iOS zawierające okno dialogowe przekazywania plików mogą umożliwiać użytkownikom obejście zastosowanych do aplikacji ograniczeń wycinania, kopiowania i wklejania. Użytkownik może na przykład użyć okna dialogowego przekazywania plików do przekazania zrzutu ekranu zawierającego dane aplikacji.
 
 -   W przypadku monitorowania folderu dokumentów na urządzeniu przy użyciu opakowanej aplikacji może być widoczny folder o nazwie .msftintuneapplauncher. Modyfikacja lub usunięcie tego pliku może zakłócić działanie aplikacji z ograniczeniami.
+
+## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Narzędzie opakowujące aplikacje dla systemu iOS w usłudze Intune z siecią mVPN w technologii Citrix MDX
+Ta funkcja jest integracją z narzędziem opakowującym aplikacje Citrix MDX dla systemu iOS. Integracja to po prostu dodatkowa, opcjonalna flaga wiersza polecenia, `-citrix`, do użycia z ogólnymi narzędziami opakowującymi aplikacje w usłudze Intune.
+
+### <a name="requirements"></a>Wymagania
+
+Aby używać flagi `-citrix`, należy również zainstalować [narzędzie opakowujące aplikacje Citrix MDX dla systemu iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) na tej samej maszynie z systemem macOS. Pliki do pobrania znajdują się w witrynie [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/) i są ograniczone tylko do zalogowanych klientów firmy Citrix. Upewnij się, że to narzędzie zostało zainstalowane w lokalizacji domyślnej: `/Applications/Citrix/MDXToolkit`. 
+
+> [!NOTE] 
+> Obsługa integracji usług Intune i Citrix jest ograniczona tylko urządzeń z systemem iOS 10+.
+
+### <a name="use-the--citrix-flag"></a>Używanie flagi `-citrix`
+Wystarczy uruchomić ogólne polecenie opakowujące aplikację z dołączoną flagą `-citrix`. Flaga `-citrix` aktualnie nie przyjmuje żadnych argumentów.
+
+**Format użycia**:
+```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
+```
+
+**Przykładowe polecenie**:
+```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
+```
 
 ## <a name="getting-logs-for-your-wrapped-applications"></a>Pobieranie dzienników opakowanych aplikacji
 Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.

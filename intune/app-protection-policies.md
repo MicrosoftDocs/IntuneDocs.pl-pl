@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 606c173c1723d526436b9ae75d9a4085883f071b
-ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
+ms.openlocfilehash: 3a66ed41442e89ed40850f5b9cd56cbc004a43d0
+ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305437"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251901"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -30,11 +30,11 @@ Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Micro
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Jeśli szukasz instrukcji dotyczących portalu klasycznego usługi Intune, zobacz, [jak tworzyć zasady ochrony aplikacji](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
-
-Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w artykule [What is Microsoft Intune app protection policies](app-protection-policy.md) (Co to są zasady ochrony aplikacji usługi Microsoft Intune).
+Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w artykule [What are Microsoft Intune app protection policies? (Co to są zasady ochrony aplikacji usługi Microsoft Intune)](app-protection-policy.md).
 
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+
+Aby uzyskać informacje o dodawaniu aplikacji biznesowych (LOB) Twojej organizacji do usługi Microsoft Intune w celu przygotowania do zastosowania zasad ochrony aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
 1. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.

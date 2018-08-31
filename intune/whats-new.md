@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: ff2774b76bceeeeaecec7a4dc74876b11706d574
-ms.sourcegitcommit: 56a8a3c8974f54f0f9ecc1e5b43581502ecc348e
+ms.openlocfilehash: 41c5af504bb65a661e55d09d735a78df780deb84
+ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39614517"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43092179"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,12 +42,21 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 
 -->   
 
+
+## <a name="week-of-august-27-2018"></a>Tydzień od 27 sierpnia 2018 r.
+
+### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Korzystanie z licencji programu VPP do wstępnego aprowizowania aplikacji Portal firmy podczas rejestracji w programie DEP <!-- 1608345 -->
+Można już używać licencji urządzeń zakupionych w ramach programu VPP (Volume Purchase Program) do wstępnej aprowizacji aplikacji Portal firmy podczas rejestracji w programie DEP (Device Enrollment Program). W tym celu podczas [tworzenia lub edytowania profilu rejestracji](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) należy określić token programu VPP, który zostanie użyty do zainstalowania aplikacji Portal firmy. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji dla aplikacji Portal firmy. W przypadkach, gdy token wygaśnie lub zabraknie dla niego licencji, usługa Intune wypchnie aplikację Portal firmy ze sklepu App Store (spowoduje to wyświetlenie monitu o podanie identyfikatora Apple ID).
+
+
+## <a name="week-of-august-14-2018"></a>Tydzień od 14 sierpnia 2018 r.
+
+### <a name="macos-support-for-apple-device-enrollment-program----747651---"></a>Obsługa systemu macOS w programie Device Enrollment Program firmy Apple <!-- 747651 -->
+Usługa Intune obsługuje już rejestrowanie urządzeń z systemem macOS w programie Device Enrollment Program (DEP) firmy Apple. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-macos.md).
+
 ## <a name="week-of-july-23-2018"></a>Tydzień od 23 lipca 2018 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
-
-####  <a name="windows-apps-file-extensions----1884873---"></a>Rozszerzenia plików aplikacji systemu Windows <!-- 1884873 -->
-Rozszerzenia plików aplikacji systemu Windows obejmują teraz rozszerzenia *msi*, *appx*, *appxbundle*, *msix* i *msixbundle*. Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje mobilne** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. Wybierz typ aplikacji umożliwiającej przekazywanie pliku pakietu aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny z odpowiednim rozszerzeniem.
 
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Obsługa aplikacji biznesowych dla systemu macOS <!-- 1895847 -->
 Usługa Microsoft Intune umożliwia wdrażanie aplikacji biznesowych systemu macOS jako **wymaganych** lub **dostępnych z rejestracją**. Użytkownicy końcowi mogą wdrażać aplikacje jako **dostępne** przy użyciu aplikacji Portal firmy dla systemu macOS lub [witryny internetowej Portal firmy](https://portal.manage.microsoft.com).
@@ -1129,6 +1138,16 @@ Niedozwolone aplikacje można określić w usłudze Intune. Jeśli aplikacja zos
 
 ## <a name="notices"></a>Uwagi
 
+### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Wymagana akcja: zaktualizuj ustawienia hasła zasad zgodności lub ograniczeń urządzenia z systemem Android w usłudze Intune
+Usługa Intune będzie usuwać dostępny typ hasła „ustawienie domyślne urządzenia” dla systemu Android w wersji 4.4 i nowszej. Z powodu różnic między platformami Android i domyślnymi ustawieniami urządzeń ta zasada jest często traktowana jako opcjonalna przez urządzenie. Aby wyjaśnić nieporozumienia dotyczące wymuszania tego ustawienia w systemie Android, w przyszłym wydaniu usuniemy to ustawienie z interfejsu użytkownika. 
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+- Jeśli chcesz wymagać hasła na urządzeniach, zalecamy, aby zamiast używania „ustawień domyślnych urządzenia” edytować profile platformy Android w celu jasnego określenia wymaganego typu hasła.
+- Jeśli chcesz, aby to użytkownicy decydowali, czy tworzyć hasło, wybierz przycisk „Nieskonfigurowane”. Kiedy to ustawienie zostanie usunięte z interfejsu użytkownika, jeśli będzie ono nadal wybrane, zostanie wyświetlony monit o wybranie wartości innej niż „Ustawienia domyślne urządzenia” podczas kolejnej edycji profilu.
+Co należy zrobić, aby przygotować się do tej zmiany?
+Przejrzyj ustawienia dotyczące haseł w zasadach zgodności i ograniczeń urządzenia z systemem Android i Android dla firm. Znajdują się one w obszarze Zabezpieczenia systemu dla zasad zgodności oraz w obszarze Hasło urządzenia lub Ustawienia profilu służbowego dla ograniczeń urządzenia. Sekcja Dodatkowe informacje zawiera link do bardziej szczegółowych informacji i zrzutów ekranu przedstawiających, gdzie są konfigurowane te ustawienia.
+####<a name="additional-information"></a>Dodatkowe informacje
+https://aka.ms/PasswordSettings 
+
 ### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Planowanie zmian: dodano ustawienie Zmień hasło przy następnym uwierzytelnianiu do usługi Intune<!-- 1873216 -->
 We wrześniowej wersji usługi Intune jest planowane zintegrowanie nowo udostępnionego przez firmę Apple ustawienia **Zmień hasło przy następnym uwierzytelnianiu** przeznaczonego dla urządzeń z systemem macOS w wersji 10.13 i nowszych. Przed wprowadzeniem tego ustawienia dostawcy rozwiązań MDM nie mogą zweryfikować, czy kod dostępu urządzenia został zmieniony na zgodny. Zasady konfiguracji i zgodności usługi Intune umożliwiają tylko zweryfikowanie, czy po następnej zmianie hasła urządzenia jest ono oznaczone jako zgodne. Po dodaniu tej nowej funkcji firmy Apple użytkownicy systemu macOS otrzymają żądanie aktualizacji hasła, nawet jeśli hasło jest zgodne.
 
@@ -1171,22 +1190,6 @@ Zalecamy aktywne usunięcie zależności protokołu TLS 1.0 i 1.1 w swoich środ
 
 **Dodatkowe informacje**: [Intune moving to TLS 1.2 for encryption (Przechodzenie do protokołu TLS 1.2 z powodu szyfrowania)](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
 
-### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Planowanie zmian: nowe ustawienie systemu Windows 10 dla konfiguracji kiosku w usłudze Intune <!-- 1560072 -->
-Zmieniamy sposób oraz miejsce konfiguracji systemu Windows 10 1709 i nowszego (RS3 i nowszy) w witrynie Azure Portal usługi Intune.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie? 
-Z naszych danych wynika, że używasz ustawienia Windows 10 > Ograniczenia dotyczące urządzeń > Ustawienie kiosku (wersja zapoznawcza). Nazwa tego ustawienia zostanie zmieniona w maju w interfejsie użytkownika na Windows 10 > Ograniczenia dotyczące urządzeń > Kiosk (przestarzałe), aby wskazać, że jego używanie nie jest zalecane. To ustawienie będzie jednak nadal działać do momentu aktualizacji usługi Intune w lipcu. Następnie zostanie ustawione jako przestarzałe w ramach zaplecza i nie będzie dłużej działać. Jako alternatywę w maju wydamy nowy profil konfiguracji urządzenia, Windows 10 > Kiosk, zawierający ustawienia służące do konfigurowania kiosków w systemie Windows 10 RS4 lub nowszym.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?  
-Po wydaniu aktualizacji usługi Intune pod koniec maja zostaną udostępnione instrukcje dotyczące testowania oraz weryfikowania, czy można przeprowadzić migrację konfiguracji kiosku z systemu Windows 10 RS3 do systemu Windows 10 RS4. Użyj tych instrukcji, aby skonfigurować urządzenia jako kioski przy użyciu nowego profilu konfiguracji urządzenia dla kiosków.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Ta zmiana wpłynie zarówno na klientów z autonomiczną usługą Intune, jak i na klientów ze środowiskami hybrydowymi (usługą Intune z programem Configuration Manager). Ta integracja pomoże uprościć administrowanie chmurą. Teraz wystarczy przejść do tylko jednego bloku na platformie Azure — bloku usługi Intune — w celu zarządzania grupami, zasadami, aplikacjami i urządzeniami przenośnymi.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Otaguj usługę Intune jako ulubioną zamiast bloku usługi Intune App Protection i zapoznaj się z przepływem pracy zasad ochrony aplikacji w bloku aplikacji mobilnych w usłudze Intune. Przez krótki okres będzie działać przekierowanie, a następnie blok App Protection zostanie usunięty. Wszystkie zasady usługi App Protection są już dostępne w usłudze Intune i można modyfikować dowolne zasady dostępu warunkowego, postępując zgodnie z następującą dokumentacją: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
-
-**Dodatkowe informacje**: [https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Planowanie zmian: zmiany w obsłudze wtyczki zestawu SDK aplikacji usługi Microsoft Intune dla oprogramowania Cordova
 Usługa Intune kończy obsługę [wtyczki zestawu Microsoft Intune App SDK dla oprogramowania Cordova](app-sdk-cordova.md) z dniem 1 maja 2018 r. W zamian zalecamy używanie dostępnego w usłudze Intune narzędzia opakowującego aplikacje, aby przygotować swoje aplikacje oparte na oprogramowaniu Cordova do zapewnienia zarządzania i dostępności w usłudze Intune. Gdy ta zmiana zacznie obowiązywać, wtyczka zestawu Microsoft Intune App SDK dla oprogramowania Cordova nie będzie już utrzymywana ani nie będzie otrzymywać aktualizacji. Deweloperzy aplikacji nie będą mogli używać tej wtyczki. Usługa Intune planuje kontynuowanie obsługi aplikacji skompilowanych przy użyciu oprogramowania Cordova. Jednak wszelkie aplikacje skompilowane z użyciem wtyczki zestawu Microsoft Intune App SDK dla oprogramowania Cordova będą miały ograniczoną funkcjonalność w usłudze Intune. Po opakowaniu za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje można wdrożyć aplikacje dla użytkowników końcowych w zwykły sposób. W przypadku aplikacji systemu Android opartych na oprogramowaniu Cordova, które są publikowane w sklepie Google Play:

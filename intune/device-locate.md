@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 259cc7653f97cbb9e07ba681e142c62e42c5a124
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: dc5d9f47a8d950c6c5de9f362bd618d1724055f4
+ms.sourcegitcommit: 3e3e2af98dd92f7ba710f393841cfdb3dbcc4867
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34444918"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912155"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Znajdowanie zgubionych lub skradzionych urządzeń z systemem iOS przy użyciu usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Akcja **Zlokalizuj urządzenie** umożliwia wyświetlenie na mapie lokalizacji zgubionego lub skradzionego urządzenia z systemem iOS. Urządzenie musi być urządzeniem z systemem iOS, należącym do firmy, zarejestrowanym w programie Device Enrollment Program i objętym trybem nadzorowanym. Przed użyciem tej akcji należy się upewnić, że urządzenie jest w [trybie zgubienia](device-lost-mode.md).
+Akcja **Zlokalizuj urządzenie** umożliwia wyświetlenie na mapie lokalizacji zgubionego lub skradzionego urządzenia z systemem iOS. Urządzenie musi działać w trybie nadzorowanym. Przed użyciem tej akcji należy się upewnić, że urządzenie jest w [trybie zgubienia](device-lost-mode.md).
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 

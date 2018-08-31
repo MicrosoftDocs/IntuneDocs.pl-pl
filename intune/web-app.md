@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff55b013d863d1676b9b83ec93e38defe222e2d7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905244"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251686"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -45,7 +45,11 @@ Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, w
 6. W okienku **Dodaj aplikację** wybierz typ **Link internetowy** z listy rozwijanej **Typ aplikacji**.
 7. Wybierz pozycję **Konfiguruj**.
 8. W okienku **Informacje o aplikacji** dodaj następujące informacje:
-    - **Nazwa**: wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy.
+    - **Nazwa**: wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. 
+    
+        > [!NOTE]
+        > Jeśli po wdrożeniu i zainstalowaniu aplikacji zmienisz jej nazwę za pośrednictwem witryny Azure Portal usługi Intune, nie będzie można już więcej oddziaływać na tę aplikację przy użyciu poleceń.
+    
     - **Opis**: wprowadź opis aplikacji. Ten opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca**: wprowadź nazwę wydawcy tej aplikacji.
     - **Adres URL aplikacji**: wprowadź adres URL witryny hostującej aplikację, którą chcesz przypisać.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321292"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251769"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -129,6 +129,9 @@ Przed rozpoczęciem dodawania i przypisywania aplikacji należy wziąć pod uwag
 - W przypadku dodawania i przypisywania aplikacji ze sklepu użytkownicy muszą mieć konto w danym sklepie, aby móc zainstalować daną aplikację.
 - Niektóre przypisywane aplikacje lub elementy mogą być zależne od wbudowanych aplikacji systemu iOS. Na przykład, jeśli przypisujesz książkę ze sklepu iOS, w urządzeniu musi być zainstalowana aplikacja iBooks. W przypadku usunięcia wbudowanej aplikacji iBooks nie ma możliwości użycia usługi Intune do jej przywrócenia.
 
+> [!IMPORTANT]
+> Jeśli po wdrożeniu i zainstalowaniu aplikacji zmienisz jej nazwę za pośrednictwem witryny Azure Portal usługi Intune, nie będzie można już więcej oddziaływać na tę aplikację przy użyciu poleceń.
+
 ## <a name="cloud-storage-space"></a>Miejsce do magazynowania w chmurze
 Wszystkie aplikacje tworzone przy użyciu instalatora oprogramowania (na przykład aplikacje biznesowe) zostają spakowane i przekazane do magazynu w chmurze usługi Intune. Subskrypcja próbna usługi Intune obejmuje 2 GB magazynu opartego na chmurze, który jest używany do przechowywania zarządzanych aplikacji i aktualizacji. Pełna subskrypcja nie ogranicza łącznej ilości miejsca do magazynowania.
 
@@ -170,6 +173,10 @@ Usługa Intune automatycznie zainstaluje ponownie, zaktualizuje lub usunie wymag
 - Jeśli instalacja wymaganej aplikacji nie powiedzie się lub aplikacja nie będzie znajdować się na urządzeniu z innego powodu, usługa Intune oceni zgodność i ponownie zainstaluje aplikację po upływie tego terminu.  
 - Administrator określa aplikację jako dostępną dla grupy użytkowników, a następnie użytkownik końcowy instaluje aplikację z poziomu Portalu firmy na urządzeniu. Później administrator aktualizuje aplikację z wersji 1 do wersji 2. Usługa Intune zaktualizuje tę aplikację po upływie tego terminu, o ile na urządzeniu nadal znajduje się dowolna wcześniejsza wersja tej aplikacji.
 - Jeśli administrator wdroży opcję odinstalowania, a odinstalowanie aplikacji znajdującej się na urządzeniu zakończy się niepowodzeniem, usługa Intune oceni zgodność i odinstaluje aplikację po upływie tego terminu.   
+
+## <a name="app-installation-errors"></a>Błędy instalacji aplikacji
+
+Aby uzyskać szczegółowe informacje o błędach instalacji aplikacji usługi Intune, zobacz [Błędy instalacji aplikacji](troubleshoot-app-install.md#app-installation-errors).
 
 ## <a name="next-steps"></a>Następne kroki
 

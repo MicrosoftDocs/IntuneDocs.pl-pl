@@ -15,12 +15,12 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 31d09c8c97da823ec40785a6db42df64056277fb
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
+ms.openlocfilehash: 59449efd592f3c47bdf2350b495f81c23f442999
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164556"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751806"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Włączanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
 
@@ -94,8 +94,13 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
 
     ![Uwierzytelnianie za pomocą aplikacji Portal firmy.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
-    >[!NOTE]
-    >Uwierzytelnianie wieloskładnikowe (MFA) nie działa podczas rejestrowania na urządzeniach z zainstalowanym programem Apple School Manager, jeśli właściwości profilu są ustawione w pozycji **Używaj z koligacji użytkownika** i nie używasz aplikacji Portal firmy. Po zarejestrowaniu tych urządzeń uwierzytelnianie wieloskładnikowe działa zgodnie z oczekiwaniami. Na urządzeniach nie mogą być wyświetlane monity dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania. Ponadto dla użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji. Muszą oni zresetować hasło za pomocą innego urządzenia.
+    > [!NOTE]
+    > Jeśli chcesz wykonać dowolną z następujących czynności, w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji firmy Apple** ustaw wartość **Tak**.
+    >    - Używanie uwierzytelniania wieloskładnikowego
+    >    - wyświetlanie monitów dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania.
+    >    - Monitowanie użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji
+    >
+    > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu Asystenta ustawień firmy Apple.
 
 6. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
     W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255382"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -38,23 +38,22 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 ## <a name="app-management-capabilities-by-platform"></a>Możliwości zarządzania aplikacjami według platformy
 
-||||||
-|-|-|-|-|-|
-| |Android|iOS|Windows Phone 8,1|Windows 10|
-|Dodawanie aplikacji i przypisywanie ich do urządzeń i użytkowników|Tak|Tak|Tak|Tak|
-|Przypisywanie aplikacji do urządzeń, które nie zostały zarejestrowane za pomocą usługi Intune|Tak|Tak|Nie|Nie|
-|Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania|Nie|Tak|Nie|Nie|
-|Użycie zasad aprowizowania aplikacji mobilnych do odnowienia wygasłych aplikacji|Nie|Tak|Nie|Nie|
-|Ochrona danych firmy w aplikacjach z zasadami ochrony aplikacji|Tak|Tak|Nie|Nie<sup>1</sup>|
-|Usuwanie jedynie danych firmowych z zainstalowanej aplikacji (selektywne czyszczenie aplikacji)|Tak|Tak|Tak|Tak|
-|Monitorowanie przypisań aplikacji|Tak|Tak|Tak|Tak|
-|Przypisywanie i śledzenie aplikacji nabytych w ramach zakupów zbiorczych w sklepie z aplikacjami|Nie|Nie|Nie|Tak|
-|Obowiązkowe instalowanie aplikacji na urządzeniach (wymagane)<sup>2</sup>|Tak|Tak|Tak|Tak|
-|Opcjonalna instalacja na urządzeniach z Portalu firmy (dostępna instalacja)|Tak|Tak|Tak|Tak|
-|Instalowanie skrótu do aplikacji Internecie (link internetowy)|Tak|Tak|Tak|Tak|
-|Aplikacje wewnętrzne (biznesowe)|Tak|Tak|Nie|Tak|
-|Aplikacje ze sklepu|Tak|Tak|Tak|Tak|
-|Aktualizowanie aplikacji|Tak|Tak|Tak|Tak|
+|  | Android | iOS | macOS | Windows 10 | Windows Phone 8,1 |
+|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| Dodawanie aplikacji i przypisywanie ich do urządzeń i użytkowników | Tak | Tak | Tak | Tak | Tak |
+| Przypisywanie aplikacji do urządzeń, które nie zostały zarejestrowane za pomocą usługi Intune | Tak | Tak | Nie | Nie | Nie |
+| Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania | Nie | Tak | Nie | Nie | Nie |
+| Użycie zasad aprowizowania aplikacji mobilnych do odnowienia wygasłych aplikacji | Nie | Tak | Nie | Nie | Nie |
+| Ochrona danych firmy w aplikacjach z zasadami ochrony aplikacji | Tak | Tak | Nie | Nie1 | Nie |
+| Usuwanie jedynie danych firmowych z zainstalowanej aplikacji (Selektywne czyszczenie aplikacji) | Tak | Tak | Nie | Tak | Tak |
+| Monitorowanie przypisań aplikacji | Tak | Tak | Tak | Tak | Tak |
+| Przypisywanie i śledzenie aplikacji nabytych w ramach zakupów zbiorczych w sklepie z aplikacjami | Nie | Nie | Nie | Tak | Nie |
+| Obowiązkowe instalowanie aplikacji na urządzeniach (wymagane)2 | Tak | Tak | Tak | Tak | Tak |
+| Opcjonalna instalacja na urządzeniach z Portalu firmy (dostępna instalacja) | Tak | Tak | Tak | Tak | Tak |
+| Instalowanie skrótu do aplikacji w Internecie (link internetowy) | Tak | Tak | Tak | Tak | Tak |
+| Aplikacje wewnętrzne (biznesowe) | Tak | Tak | Tak | Tak | Nie |
+| Aplikacje ze sklepu | Tak | Tak | Nie | Tak | Tak |
+| Aktualizowanie aplikacji | Tak | Tak | Nie | Tak | Tak |
 
 <sup>1</sup> Rozważ zastosowanie funkcji [Windows Information Protection](windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.
 
@@ -95,8 +94,8 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Zarządzanie aplika
 - **Licencje aplikacji**: przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami. Aby uzyskać więcej informacji, zobacz:
     - [Aplikacje dla systemu iOS zakupione w ramach programu zakupów zbiorczych (VPP)](vpp-apps-ios.md).
     - [Aplikacje nabyte w ramach zakupów zbiorczych w sklepie Microsoft Store dla Firm](windows-store-for-business.md).
-- **Odnalezione aplikacje**: wyświetlanie wszystkich aplikacji, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu.
-- **Stan instalacji aplikacji**: wyświetlanie stanu utworzonego przez siebie przypisania aplikacji.
+- **Odnalezione aplikacje**: wyświetlanie wszystkich aplikacji, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Stan instalacji aplikacji**: wyświetlanie stanu utworzonego przez siebie przypisania aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Stan ochrony aplikacji**: wyświetlanie stanu zasad ochrony aplikacji dla wybranego użytkownika.
 - **Dzienniki inspekcji**: wyświetlanie działań wszystkich administratorów IT związane z aplikacją usługi Intune.
 

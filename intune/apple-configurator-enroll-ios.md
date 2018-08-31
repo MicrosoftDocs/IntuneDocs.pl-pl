@@ -15,12 +15,12 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2b3965c651bb6fcc38d61a55208fc8b199223891
-ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
+ms.openlocfilehash: b7cff6c777de4a35aa6825d1d37fdd0c2f2d0b72
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212124"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751721"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
@@ -57,12 +57,18 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
 
     - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Należy określić przynależność urządzenia do użytkownika za pomocą Asystenta ustawień, po czym urządzenie będzie miało dostęp do firmowych danych i poczty e-mail. Obsługiwana tylko w przypadku rejestracji za pomocą asystenta ustawień. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-   > [!NOTE]
-   > Usługa Multi-Factor Authentication (MFA) nie działa podczas rejestracji skonfigurowanej z użyciem koligacji użytkownika. Po zarejestrowaniu usługa MFA działa zgodnie z oczekiwaniami na tych urządzeniach. Na urządzeniach nie mogą być wyświetlane monity dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania. Ponadto dla użytkowników, których hasła wygasły, nie zostanie wyświetlony monit o zresetowanie hasła podczas rejestracji. Muszą oni zresetować hasło za pomocą innego urządzenia.
-
     - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać dla urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Można jej używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie będą działać. Wymagane w przypadku rejestracji bezpośredniej.
 
 4. Jeśli została wybrana opcja **Zarejestruj z użyciem koligacji użytkowników**, można zezwolić użytkownikom na uwierzytelnianie za pomocą aplikacji Portal firmy zamiast Asystenta ustawień firmy Apple.
+
+    > [!NOTE]
+    > Jeśli chcesz wykonać dowolną z następujących czynności, w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji firmy Apple** ustaw wartość **Tak**.
+    >    - Używanie uwierzytelniania wieloskładnikowego
+    >    - wyświetlanie monitów dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania.
+    >    - Monitowanie użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji
+    >
+    > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu Asystenta ustawień firmy Apple.
+
 
 6. Wybierz pozycję **Utwórz**, aby zapisać profil.
 
