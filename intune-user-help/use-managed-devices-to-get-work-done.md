@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ecb0729a2c6911fa15dd99ad4abe990859c912ad
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150670"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
 Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
@@ -36,7 +36,7 @@ Dział wsparcia technicznego firmy ma dostęp do informacji mających związek z
 Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
 
 - Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także dział pomocy technicznej Twojej firmy może zainstalować aplikację Portal firmy dla Ciebie.
-- Przechodząc do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
+- Przechodząc do [witryny internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?
 Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną internetową Portal firmy, jednak większość zadań można wykonać w obu. Oto niektóre dostępne zadania:
@@ -102,4 +102,4 @@ Firma Microsoft zaleca, aby w pierwszej kolejności spróbować rozwiązać prob
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem macOS](troubleshoot-your-device-macos.md)
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Windows](troubleshoot-your-device-windows.md)
 
-Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Poniżej można zamieścić komentarz z prośbą o pomoc, ale ponieważ każda organizacja ma inne wymagania, firma Microsoft może nie być w stanie udzielić odpowiedzi na wszystkie pytania. Najszybszym i najbardziej efektywnym sposobem uzyskania odpowiedzi jest skontaktowanie się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe powinny być udostępnione w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

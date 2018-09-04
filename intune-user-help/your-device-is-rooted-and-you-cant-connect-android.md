@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 522a300760fe4446fc6e1ff211763279ba4fc7bf
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c4cce70abac079ab1761994ba91040c16375e013
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149759"
 ---
 # <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Nie można nawiązać połączenia, ponieważ na urządzeniu z systemem Android uzyskano dostęp do konta administratora
 
@@ -34,6 +34,6 @@ Istnieje kilka typowych metod, przy użyciu których na urządzeniu można odblo
 
 - Użytkownik mógł zainstalować na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. Jeśli ten komunikat został wyświetlony bezpośrednio po zainstalowaniu aplikacji, spróbuj ją odinstalować.
 
-- Producent urządzenia zainstalował na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. W takim przypadku skontaktuj się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+- Producent urządzenia zainstalował na urządzeniu aplikację, którą oprogramowanie do wykrywania odblokowanego dostępu uważa za zagrożenie bezpieczeństwa. W takim przypadku skontaktuj się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc. Informacje kontaktowe są dostępne w [witrynie Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 Jeśli dostęp do konta administratora na urządzeniu uzyskano samodzielnie, należy cofnąć ten proces i przywrócić urządzenie do stanu sprzed odblokowania dostępu do konta administratora.

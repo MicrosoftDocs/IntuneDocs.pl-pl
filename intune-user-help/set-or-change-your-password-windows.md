@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fb2f225d47d1589e7bccbafc4a23f3cecec12897
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2bd36a0327472f24a3a99b7975e736c9fa5385eb
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149067"
 ---
 # <a name="make-your-device-safer-with-the-right-password"></a>Zwiększenie bezpieczeństwa urządzenia za pomocą odpowiedniego hasła
 
@@ -46,4 +46,4 @@ Jeśli urządzenie z systemem Windows nie jest zgodne z zasadami haseł działu 
 3. Wprowadź nowe hasło w polu **Nowe hasło**, a następnie wprowadź je ponownie w polu **Potwierdź hasło**.
 4. Wybierz pozycję **gotowe**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

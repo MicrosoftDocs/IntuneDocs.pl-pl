@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2c806edbf3855bd23a470eefb6c7be1af65d3211
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4682269cf419fb3be19921e78e2aa7e762f0303d
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146581"
 ---
 # <a name="how-to-turn-off-microsoft-data-collection"></a>Jak wyłączyć zbieranie danych przez firmę Microsoft
 
@@ -30,4 +30,4 @@ Firma Microsoft automatycznie zbiera określone dane dotyczące swoich produktó
 
 Aby wyłączyć zbieranie danych użycia na urządzeniu z systemem iOS, otwórz **Ustawienia**, naciśnij pozycję **Portal firmy** i wyłącz ustawienie **Dane użycia**. W przypadku urządzeń z systemem macOS otwórz menu **Portal firmy** > **Preferencje**, a następnie cofnij zaznaczenie pola wyboru **Zezwalaj firmie Microsoft na zbieranie danych o użyciu**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

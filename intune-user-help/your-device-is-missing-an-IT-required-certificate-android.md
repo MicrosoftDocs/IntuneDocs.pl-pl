@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b12dcafa4ff7d45dd1d41c0311a2658b08acf12e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 19128e9de06239fb82266654fe038b4be9ce7d41
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149785"
 ---
 # <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Urządzenie z systemem Android nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy
 
@@ -37,9 +37,9 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 
 ## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego
 
-1. Na komputerze otwórz przeglądarkę Internet Explorer. Jeśli nie masz komputera do użycia w tym celu, skontaktuj się z działem pomocy technicznej Twojej firmy. Aby znaleźć informacje kontaktowe działu pomocy technicznej Twojej firmy, sprawdź [witrynę internetową Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+1. Na komputerze otwórz przeglądarkę Internet Explorer. Jeśli nie masz komputera do użycia w tym celu, skontaktuj się z działem pomocy technicznej Twojej firmy. Aby znaleźć informacje kontaktowe działu pomocy technicznej Twojej firmy, sprawdź [witrynę internetową Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
 
-2. Otwórz [witrynę sieci Web aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog), a następnie zaloguj się przy użyciu poświadczeń konta służbowego.
+2. Otwórz [witrynę sieci Web aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980), a następnie zaloguj się przy użyciu poświadczeń konta służbowego.
 
 3. Po prawej stronie paska adresu w przeglądarce wybierz symbol, który wygląda jak kłódka, jak pokazano na poniższym zrzucie ekranu.
 
@@ -71,4 +71,4 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 
 7. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli potrzebujesz pomocy, skontaktuj się z działem pomocy technicznej Twojej firmy.
 
-Jeśli widzisz tę samą wiadomość „Brak certyfikatu” jak pokazana wcześniej i została już wykonana procedura, oznacza to prawdopodobnie, że istnieje inny certyfikat, który trzeba będzie zainstalować, korzystając z pomocy działu pomocy technicznej Twojej firmy. Skontaktuj się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc w zakresie korzystania z informacji kontaktowych dostępnych w [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Jeśli widzisz tę samą wiadomość „Brak certyfikatu” jak pokazana wcześniej i została już wykonana procedura, oznacza to prawdopodobnie, że istnieje inny certyfikat, który trzeba będzie zainstalować, korzystając z pomocy działu pomocy technicznej Twojej firmy. Skontaktuj się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc w zakresie korzystania z informacji kontaktowych dostępnych w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

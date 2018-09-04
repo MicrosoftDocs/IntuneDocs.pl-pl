@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 1ce260b010658ade6c78361b980ca928a992d113
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 235356e88dc2ba25b789ebe262c1ae9b32840793
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150889"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Samsung Knox
 
@@ -51,4 +51,4 @@ Wyświetlony komunikat może wyglądać podobnie jak poniższy:
 |---|---|
 |**Błąd aktywacji systemu Samsung Knox** — nie można aktywować licencji systemu Samsung Knox. Może to być spowodowane tym, że włączony jest tryb oszczędzania energii. Wyłącz tryb oszczędzania energii w ustawieniach urządzenia i spróbuj ponownie. |Urządzenie może nie mieć ustawień zasilania odpowiednich do pracy z zasobami firmy. Dowiedz się więcej o [konfigurowaniu trybu oszczędzania energii](power-saving-mode-android.md).|
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

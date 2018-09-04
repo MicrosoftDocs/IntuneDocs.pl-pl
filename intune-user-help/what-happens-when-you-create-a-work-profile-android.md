@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3e3c5149ca9dd9b2e4f2df6b1512e488cb5d7bb9
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 5f063a9648c85c3d2734badf2994997803d12830
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148729"
 ---
 # <a name="what-happens-when-you-create-a-work-profile"></a>Co się dzieje w przypadku tworzenia profilu służbowego
 
@@ -45,4 +45,4 @@ Gdy tworzysz profil służbowy:
 
 Instrukcje dotyczące tworzenia profilu służbowego znajdziesz w temacie [Tworzenie profilu służbowego i rejestrowanie urządzenia](create-a-work-profile-and-enroll-your-device-in-intune-android.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

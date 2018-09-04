@@ -17,19 +17,19 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ea17263ebd6e836cad154ff2b67229c1c3ae0ed6
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: e1bf702dcc8f4f1163c26d25e42edf0a00825c81
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33915498"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146523"
 ---
 # <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Wysyłanie dzienników z aplikacji Portal firmy w systemie Windows 10 do działu pomocy technicznej Twojej firmy
 
 Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Windows 10 wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
 
 > [!Note]       
-> Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone do firmy Microsoft.
+> Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone firmie Microsoft.
 
 1. Otworzyć aplikację **Portal firmy**.
 2. Wybierz koło zębate **Ustawienia**, a następnie **Wyślij dzienniki**.
@@ -39,4 +39,4 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem Wi
 
 Być może trzeba będzie również wysłać [dzienniki z aplikacji Ustawienia](send-logs-to-your-it-admin-settings-windows.md), które jeszcze bardziej ułatwią działowi pomocy technicznej Twojej firmy rozwiązanie wszelkich napotkanych problemów.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

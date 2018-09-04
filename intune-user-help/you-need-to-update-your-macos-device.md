@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6f85ded485c4e97e100bc9a4531b6810f4fe0b0a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7c0d2d4d787f29f873302765e3b6ff0c58184db7
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017414"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149457"
 ---
 # <a name="your-macos-device-doesnt-have-the-required-minimum-operating-system-version"></a>Urządzenie z systemem macOS nie ma minimalnej wymaganej wersji systemu operacyjnego
 
@@ -30,4 +30,4 @@ ms.locfileid: "31017414"
 
 Zaktualizuj urządzenie z systemem macOS, klikając pozycję **App Store** > **Aktualizacje**. Wybierz najnowszą dostępną aktualizację systemu macOS, a następnie kliknij przycisk **Aktualizuj**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

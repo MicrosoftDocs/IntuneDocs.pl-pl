@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 390a236cf8eebae209c81b53d629cbd3f83899f8
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8c1806d8d35dd2a6e16f1041e2c9f844f637a046
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149875"
 ---
 # <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Ułatw działowi pomocy technicznej Twojej firmy rozwiązywanie problemów z urządzeniami, używając pełnego rejestrowania
 
@@ -30,4 +30,4 @@ Jeśli urządzenie z systemem Android zostało zarejestrowane w usłudze Intune,
 
 Aby włączyć lub wyłączyć Pełne rejestrowanie, zaloguj się do aplikacji Portal firmy przy użyciu poświadczeń konta służbowego, wybierz opcję **Ustawienia**, a następnie przycisk włączania/wyłączania obok ustawienia **Pełne rejestrowanie**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

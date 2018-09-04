@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 57342767b83c965c2d22ec68cd74132362b5b40e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c918b192d49c12735701382418e594b3ee4386f6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150603"
 ---
 # <a name="turn-on-your-windows-defender-firewall"></a>Włączanie Zapory Windows Defender
 
@@ -32,4 +32,4 @@ Administrator Twojego konta służbowego chce mieć pewność, że urządzenia u
 2. Otwórz pozycję **System i zabezpieczenia** > **Zapora Windows Defender**.
 3. Wybierz pozycje **Dostosowywanie ustawień** > **Włącz lub wyłącz Zaporę systemu Windows** dla domeny oraz sieci prywatnych i publicznych.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

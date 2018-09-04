@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f4a8ddb904d1007680777b9358feec08ae2cd0eb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f340df3463bc94afbe83efb8873f3f5a31326c8e
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015408"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147339"
 ---
 # <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem Android przy użyciu portalu firmy?
 
@@ -34,4 +34,4 @@ Jeśli masz urządzenie z systemem Samsung Knox, możesz przeprowadzić „selek
 - Poczta e-mail, sieci VPN i Wi-Fi
 - Możliwość wymuszenia określonych ustawień przez dział pomocy technicznej Twojej firmy.
 
-Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

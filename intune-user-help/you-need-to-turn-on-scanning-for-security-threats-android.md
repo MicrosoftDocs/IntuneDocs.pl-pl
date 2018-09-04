@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: cf2413ee879cf4a6cb2742d34f452105057ccf59
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: c98980cca305bef01dd91e69d00a471b10e741a8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147489"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Włączanie funkcji skanowania zagrożenia zabezpieczeń na Twoim urządzeniu 
 W przypadku nieświadomego zainstalowania niebezpiecznej aplikacji dane przechowywane w urządzeniu mogą być narażone na ryzyko. W celu zapewnienia ochrony danych na urządzeniu zalecamy przestrzeganie następujących zasad: 
@@ -32,4 +32,4 @@ Aby włączyć funkcję skanowania na urządzeniu, przejdź do opcji **Ustawieni
 
 Na niektórych urządzeniach firmy Samsung to ustawienie można znaleźć w opcji **Ustawienia** > **Google** > **Zabezpieczenia** > **Google Play Protect**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). 
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). 

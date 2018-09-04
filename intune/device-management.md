@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9e24f9aca0c06f69c61af6a7fab4f69afe381b6d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e2e81bdb3431ac8a2e0fdae6a7f3099512319aee
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836931"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313262"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
@@ -37,7 +37,7 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
    - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS i innych.
    - **Wszystkie urządzenia** — wyświetla listę zarejestrowanych urządzeń, którymi zarządzasz.
 
-     Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Microsoft Edge, Chrome).
+     Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Edge, Chrome).
 
      Wybierz dowolne urządzenie, aby [wyświetlić dodatkowe szczegóły o tym urządzeniu](device-inventory.md), w tym szczegóły dotyczące sprzętu, zainstalowanych aplikacji, stanu zasad zgodności i innych informacji.
 
@@ -55,8 +55,8 @@ Dostępne akcje zależą od platformy urządzenia i jego konfiguracji.
 
 - [Wyświetl spis urządzeń](device-inventory.md)
 - Uruchom akcje zdalne urządzenia:
-    - [Usuń dane firmy](devices-wipe.md#remove-company-data)
-    - [Resetuj do ustawień fabrycznych](devices-wipe.md#factory-reset)
+    - [Wycofaj](devices-wipe.md#retire)
+    - [Czyszczenie danych](devices-wipe.md#wipe)
     - [Zdalne blokowanie](device-remote-lock.md)
     - [Zresetuj kod dostępu](device-passcode-reset.md)
     - [Obchodzenie blokady aktywacji](device-activation-lock-bypass.md) (tylko system iOS)

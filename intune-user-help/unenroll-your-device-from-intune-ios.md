@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: ba0f2675bfd65f60f6f16d6be738cdc1baa3e7e5
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34547492"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148801"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Usuwanie urządzenia z systemem iOS z usługi Intune
 
@@ -74,4 +74,4 @@ Istnieją trzy miejsca, w których aplikacja Portal firmy przechowuje dane lokal
 -   **Pęk kluczy**: urządzenie przechowuje hasła i inne informacje używane do logowania w pęku kluczy. Aplikacje firmy Microsoft udostępniają informacje logowania innym aplikacjom opracowanym przez firmę Microsoft na urządzeniu, w tym programom Microsoft Outlook i Microsoft Authenticator. Podobnie jak w przypadku analiz firmy Apple te informacje można usunąć wyłącznie poprzez zresetowanie urządzenia do ustawień fabrycznych. Spowoduje to wymazanie wszystkich danych osobowych na urządzeniu. Aby to zrobić, otwórz pozycję **Ustawienia** > **Ogólne** > **Resetuj** > **Wymaż zawartość i ustawienia**.
 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

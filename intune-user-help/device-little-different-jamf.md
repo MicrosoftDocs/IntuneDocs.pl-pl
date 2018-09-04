@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 345b62c115525fb3be2a2bcfdffc5388df7417af
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 9e6935dd5f25e14a5cef44d899c647d2927ebbbb
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147081"
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Wykonywanie akcji na urządzeniu z systemem macOS zarządzanym przez oprogramowanie Jamf
 
@@ -34,4 +34,4 @@ __Co zrobić, jeśli zostanie wyświetlony komunikat „AccountNotOnboarded” l
 
 Jeśli po otwarciu aplikacji Portal firmy zostanie wyświetlony komunikat „AccountNotOnboarded”, należy zamknąć aplikację Portal firmy i przejść do obszaru **Aplikacje** > **Samoobsługa**. Twoja firma będzie posiadać zasady rejestracji urządzeń, które należy zainstalować. Kliknij zasady, aby je zainstalować, a następnie ponownie otwórz aplikację Portal firmy.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

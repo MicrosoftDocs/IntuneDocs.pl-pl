@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: efe251a9a347a179e56d496d761b0ea7f28ab66f
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149604"
 ---
 # <a name="email-logs-to-your-company-support"></a>Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail
 
@@ -45,4 +45,4 @@ Aby wysłać dzienniki do działu pomocy technicznej Twojej firmy pocztą e-mail
 3.  Naciśnij pozycję **Wyślij wiadomość e-mail i przekaż dzienniki**.
 4.  Po zakończeniu przekazywania naciśnij aplikację poczty e-mail. Zostanie otwarta wiadomość e-mail z wstępnie uzupełnionym identyfikatorem zdarzenia w polu tematu. W treści wiadomości e-mail opisz napotkany problem.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

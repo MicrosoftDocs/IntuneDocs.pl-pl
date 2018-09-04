@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: eb62b7fb16b14fd723d71d2e7044fc9603f86ed1
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8f4cec690431ded00e7645e7ca76bd156453fb62
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148205"
 ---
 # <a name="your-device-is-noncompliant"></a>Urządzenie nie jest zgodne
 
@@ -30,4 +30,4 @@ Urządzenie nie jest zgodne z co najmniej jedną z zasad zabezpieczeń organizac
 
 W aplikacji Portal firmy naciśnij pozycję **Sprawdź zgodność**. W aplikacji Portal firmy zostanie wyświetlona informacja o przyczynie braku zgodności urządzenia.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

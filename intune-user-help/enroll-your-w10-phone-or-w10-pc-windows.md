@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 22d23751aaa3416fb13c7b08451ea91c3ee308e2
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6395dc0d14b8947093d53865eb1d97f6ef56db25
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017295"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147116"
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Rejestrowanie urządzeń z systemem Windows 10 w usłudze Intune
 
@@ -51,4 +51,4 @@ Chcesz wiedzieć więcej? Dowiedz się, co się dzieje po [zarejestrowaniu urzą
 3.  W obszarze __Informacje o urządzeniu__ naciśnij pozycję __Więcej informacji__. Zobaczysz listę informacji o urządzeniu. Znajdź pozycję __Wersja__ na tej liście.        
 4.  W przypadku używania wersji __1607 lub nowszej__ wykonaj [te kroki](enroll-your-w10-device-access-work-or-school.md). W przypadku użycia wersji __1511 lub starszej__ wykonaj [te kroki](enroll-your-w10-device-your-account.md).
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

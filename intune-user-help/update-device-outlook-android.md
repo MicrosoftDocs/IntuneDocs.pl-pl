@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ff8a2650b0264662084a4bf3a8186808f5980faf
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 40cc6ec2daab92a226051e2d9bc11d7ac0fb105b
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31013980"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150467"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Instalacja aplikacji Outlook wymaga zaktualizowania urządzenia z systemem Android
 
@@ -36,4 +36,4 @@ Czasami instalowanie aplikacji może zakończyć się niepowodzeniem, zwłaszcza
 
 Przejdź do pozycji **Ustawienia**, a następnie użyj opcji **aktualizacji** lub **aktualizacji systemu**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

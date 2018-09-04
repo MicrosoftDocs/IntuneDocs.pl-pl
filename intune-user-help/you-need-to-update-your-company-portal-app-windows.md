@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7190049dbc204d3cdcc4b9dcfbe23e866980ce37
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 31d5a0879f3e3c3933e6b0a8f4e9ebf7e6056419
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016581"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147860"
 ---
 # <a name="your-company-portal-app-for-windows-is-out-of-date"></a>Aplikacja Portal firmy dla systemu Windows jest nieaktualna
 
 Musisz zaktualizować aplikację Portal firmy, aby nadal korzystać z dostępu do firmowej poczty e-mail, kontaktów i dokumentów. Aby rozwiązać ten problem, otwórz **Sklep Microsoft** i zainstaluj nową wersję aplikacji **Portal firmy**.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

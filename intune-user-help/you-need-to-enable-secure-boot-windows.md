@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 99431a9720ab0f97f869ea12496912391cce2179
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 32a6ff69bc848bbd0a2174ab4b60de905498d6fa
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150087"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Należy włączyć bezpieczny rozruch
 
@@ -32,4 +32,4 @@ Włączenie funkcji Bezpieczny rozruch jest zaawansowanym zadaniem. Jeśli używ
 
 Jeśli używasz komputera, możesz skontaktować się z działem pomocy technicznej Twojej firmy lub zobaczyć sekcję „Aby ponownie włączyć funkcję Bezpieczny rozruch” na stronie [Wyłączanie funkcji Bezpieczny rozruch](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) i spróbować włączyć Bezpieczny rozruch samodzielnie.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

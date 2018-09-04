@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 69a7855dc2df9f74fb529c405cbf02a32cfdea1e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4006f5784115a063eee80c817dc9b99c99dec827
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149691"
 ---
 # <a name="update-your-windows-10-device"></a>Aktualizowanie urządzenia z systemem Windows 10
 
@@ -34,4 +34,4 @@ Administrator Twojego konta służbowego chce mieć pewność, że urządzenia u
 
 Jeśli zainstalowana wersja systemu Windows jest nowsza niż obsługiwana przez Twoją firmę, konieczne jest [wykonanie innych czynności, aby rozwiązać ten problem](your-windows-version-isnt-yet-supported.md)
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
