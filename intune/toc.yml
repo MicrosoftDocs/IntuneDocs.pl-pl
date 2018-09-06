@@ -747,26 +747,30 @@ items:
     - name: Model danych magazynu danych
       href: reports-ref-data-model.md
       items:
-      - name: Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune
-        href: reports-ref-user-timeline.md
-      - name: Dokumentacja jednostek aplikacji
-        href: reports-ref-application.md
-      - name: Dokumentacja jednostki bieżącego użytkownika
-        href: reports-ref-current-user.md
-      - name: Odwołanie do jednostki daty
-        href: reports-ref-date.md
-      - name: Odwołanie do jednostek urządzeń
-        href: reports-ref-devices.md
-      - name: Dokumentacja jednostki rozszerzenia do zarządzania usługi Intune
-        href: reports-ref-intunemanagementextension.md
-      - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
-        href: reports-ref-mobile-app-management.md
-      - name: Dokumentacja jednostek zasad
-        href: reports-ref-policy.md
-      - name: Dokumentacja jednostki skojarzenia urządzenia użytkownika
-        href: reports-ref-user-device.md
-      - name: Dokumentacja jednostki użytkownika
-        href: reports-ref-user.md
+      - name: Kolekcje magazynów danych
+        href: intune-data-warehouse-collections.md
+      - name: Kolekcje magazynów danych (beta)
+        items:
+        - name: Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune
+          href: reports-ref-user-timeline.md
+        - name: Dokumentacja jednostek aplikacji
+          href: reports-ref-application.md
+        - name: Dokumentacja jednostki bieżącego użytkownika
+          href: reports-ref-current-user.md
+        - name: Odwołanie do jednostki daty
+          href: reports-ref-date.md
+        - name: Odwołanie do jednostek urządzeń
+          href: reports-ref-devices.md
+        - name: Dokumentacja jednostki rozszerzenia do zarządzania usługi Intune
+          href: reports-ref-intunemanagementextension.md
+        - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
+          href: reports-ref-mobile-app-management.md
+        - name: Dokumentacja jednostek zasad
+          href: reports-ref-policy.md
+        - name: Dokumentacja jednostki skojarzenia urządzenia użytkownika
+          href: reports-ref-user-device.md
+        - name: Dokumentacja jednostki użytkownika
+          href: reports-ref-user.md
     - name: Przenoszenie danych konta z magazynu danych usługi Intune
       href: data-warehouse-account-move.md
   - name: Korzystanie z usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
@@ -802,9 +806,9 @@ items:
       href: troubleshoot-exchange-connector.md
   - name: Słownik
     href: intune-glossary.md
-ms.openlocfilehash: a3e314760dbbfec82ce27b3bec12b21ab7ca5952
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 8926b2cb409f59bab9b4af8398dac146abeec3d2
+ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313585"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43821120"
