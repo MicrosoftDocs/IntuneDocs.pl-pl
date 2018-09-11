@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: cf6e7098462931000ce4cd5546390d27d68677f1
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251769"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330164"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -62,7 +62,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Wbudowana aplikacja systemu Android  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Aplikacje internetowe  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
 
-Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje mobilne** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
+Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
 
 >[!TIP]
 > Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Dodaj aplikację**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
@@ -148,8 +148,8 @@ Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej k
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W okienku obciążeń **Aplikacje mobilne** w obszarze **Instalacja** wybierz pozycję **Kategorie aplikacji**.  
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
+4. W okienku obciążeń **Aplikacje klienckie** w obszarze **Instalacja** wybierz pozycję **Kategorie aplikacji**.  
     W okienku **Kategorie aplikacji** zostanie wyświetlona lista bieżących kategorii. 
 5. Wykonaj jedną z następujących czynności:
     - Aby dodać kategorię, w okienku **Utwórz kategorię** wybierz pozycję **Dodaj**, a następnie wprowadź nazwę kategorii.  

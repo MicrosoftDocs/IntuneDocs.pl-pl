@@ -14,12 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f0c35caf841729aae8ce6ccdbf1c9709258a8f5b
-ms.sourcegitcommit: 2e08887c07d29979300e80e6a40372aec6287103
+ms.openlocfilehash: ab88c99694df95eeaf4b5529faec73dacd1a208c
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39249730"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241885"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -465,7 +465,7 @@ Począwszy od wersji 8.0.2, zestaw SDK aplikacji usługi Intune może filtrować
 
 ### <a name="copy-to-actions"></a>Akcje „Kopiuj do”
 
-W przypadku udostępniania dokumentów przy użyciu kontrolerów `UIActivityViewController` i `UIDocumentInteractionController` system iOS wyświetla akcje „Kopiuj do” dla każdej aplikacji obsługującej otwieranie udostępnianego dokumentu. Aplikacje deklarują obsługiwane przez siebie typy dokumentów za pomocą ustawienia klucza `CFBundleDocumentTypes` w pliku Info.plist. Tej metody udostępniania nie będzie można już używać, jeśli zasady będą zabraniać udostępniania niezarządzanym aplikacjom. Zamiast tego aplikacje będą musiały dodać do swoich aplikacji rozszerzenie akcji inne niż interfejsu użytkownika i połączyć je z zestawem SDK aplikacji usługi Intune. Rozszerzenie akcji jest jedynie klasą zastępczą. Zestaw SDK wdroży zachowanie udostępniania pliku. Wykonaj następujące czynności:
+W przypadku udostępniania dokumentów przy użyciu kontrolerów `UIActivityViewController` i `UIDocumentInteractionController` system iOS wyświetla akcje „Kopiuj do” dla każdej aplikacji obsługującej otwieranie udostępnianego dokumentu. Aplikacje deklarują obsługiwane przez siebie typy dokumentów za pomocą ustawienia klucza `CFBundleDocumentTypes` w pliku Info.plist. Tej metody udostępniania nie będzie można już używać, jeśli zasady będą zabraniać udostępniania niezarządzanym aplikacjom. Zamiast tego użytkownik będzie musiał dodać do swoich aplikacji rozszerzenie akcji inne niż interfejsu użytkownika i połączyć je z zestawem SDK aplikacji usługi Intune. Rozszerzenie akcji jest jedynie klasą zastępczą. Zestaw SDK wdroży zachowanie udostępniania pliku. Wykonaj następujące czynności:
 
 1. Aplikacja musi mieć zdefiniowany przynajmniej jeden parametr schemeURL w obszarze klucza `CFBundleURLTypes` w pliku Info.plist.
 

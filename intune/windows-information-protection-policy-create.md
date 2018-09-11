@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61df998dae611eb7350fa144260780b5589afc61
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762250"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347311"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -62,8 +62,8 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**.
-3. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
+3. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
+4. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
 5. Wybierz pozycję **Dodaj zasady**, aby wyświetlić blok **Dodawanie zasad**.
 6. Dodaj następujące wartości:
     - **Nazwa:** wpisz nazwę (wymaganą) dla nowych zasad.
@@ -74,8 +74,8 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Aby dodać aplikacje zalecane do listy Chronione aplikacje
 
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
-2. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
+1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
+2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
 3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
 4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
 5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
@@ -86,8 +86,8 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Dodawanie aplikacji ze Sklepu do listy Chronione aplikacje
 
 **Aby dodać aplikację ze Sklepu**
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
-2. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
+1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
+2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
 3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
 4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
 5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
@@ -99,8 +99,8 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Dodawanie aplikacji klasycznej do listy Chronione aplikacje
 
 **Aby dodać aplikację klasyczną**
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
-2. W bloku **Aplikacje mobilne** wybierz pozycję **Zasady ochrony aplikacji**.
+1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
+2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
 3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
 4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
 5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
@@ -116,8 +116,7 @@ Po dodaniu aplikacji, które chcesz chronić za pomocą funkcji WIP, konieczne j
 
 Uczenie funkcji WIP to raport, który umożliwia monitorowanie aplikacji obsługujących funkcję WIP i nieznanych aplikacji funkcji WIP. Nieznane aplikacje to te, które nie zostały wdrożone przez dział informatyczny organizacji użytkownika. Możesz wyeksportować te aplikacje z raportu i dodać je do swoich zasad funkcji WIP, aby uniknąć zakłóceń produktywności przed wymuszeniem działania funkcji WIP w trybie „Zablokowanie”.
 
-<!-- 1631908 -->
-Oprócz wyświetlania informacji o aplikacjach z włączoną funkcją WIP możesz wyświetlać podsumowanie urządzeń, które udostępniły dane robocze witrynom internetowym. Dzięki tym informacjom można ustalić, które witryny sieci Web należy dodać do zasad WIP dotyczących grupy i użytkownika. Podsumowanie pokazuje, które adresy URL witryn internetowych są dostępne dla aplikacji obsługujących funkcję WIP.
+<!-- 1631908 --> Oprócz wyświetlania informacji o aplikacjach z włączoną funkcją WIP możesz wyświetlać podsumowanie urządzeń, które udostępniły dane robocze witrynom internetowym. Dzięki tym informacjom można ustalić, które witryny sieci Web należy dodać do zasad WIP dotyczących grupy i użytkownika. Podsumowanie pokazuje, które adresy URL witryn internetowych są dostępne dla aplikacji obsługujących funkcję WIP.
 
 Podczas pracy z aplikacjami obsługującymi funkcję WIP i nieznanych aplikacji funkcji WIP zalecamy rozpoczęcie od opcji **Cichy** lub **Zezwalaj na przesłonięcia** i zweryfikowanie w małej grupie, czy na liście chronionych aplikacji znajdują się odpowiednie aplikacje. Po wykonaniu tych czynności można przełączyć na ostateczne zasady wymuszania, **Zablokowanie**.
 
@@ -149,7 +148,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 1. Otwórz [witrynę Azure Portal](https://portal.azure.com). Wybierz pozycję **Wszystkie usługi**. Wpisz **Intune** w polu tekstowym filtru.
 
-3. Wybierz pozycje **Intune** > **Mobile Apps**.
+3. Wybierz pozycję **Intune** > **Aplikacje klienckie**.
 
 4. Wybierz pozycje **Stan ochrony aplikacji** > **Raporty** > **Windows Information Protection — nauka**.  
 

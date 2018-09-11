@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f1aa88264ef277863f58d21baaa136c140c5c287
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949547"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329387"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Ustawienia kiosku dla urządzeń z systemem Android w usłudze Intune
 
@@ -55,7 +55,7 @@ Aby ustawić kiosk z systemem Android dla wielu aplikacji, wykonaj następujące
 
 1. Przejdź do [strony Managed Home Screen w sklepie Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) i zaloguj się przy użyciu konta, które jest używane dla innych aplikacji zarządzanych ze sklepu Google Play.
 2. Wybierz pozycję **Zatwierdź**.
-3. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Aplikacje mobilne** > **Zarządzany sklep Google Play** > **Synchronizuj**.
+3. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Aplikacje klienckie** > **Zarządzany sklep Google Play** > **Synchronizuj**.
 4. Wybierz pozycję **Aplikacje** > **Managed Home Screen** > **Przypisania** > **Dodaj grupę**.
 5. W obszarze **Typ przypisania** wybierz pozycję **Wymagane**.
 6. Wybierz pozycję **Dołączone grupy** > **Wybierz grupy do uwzględnienia** > wybierz grupę urządzeń utworzoną dla urządzeń kiosków > **Wybierz** > **OK** > **OK** > **Zapisz**.
@@ -65,13 +65,13 @@ Aby ustawić kiosk z systemem Android dla wielu aplikacji, wykonaj następujące
 Dla każdej aplikacji, która ma być dostępna na urządzeniach kiosku, wykonaj następujące kroki:
 
 1. [Dodaj aplikację do usługi Intune](store-apps-android.md).
-2. Wybierz pozycję **Aplikacje mobilne** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Dodaj grupę**.
+2. Wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Dodaj grupę**.
 3. W obszarze **Typ przypisania** wybierz pozycję **Wymagane**.
 4. Wybierz pozycję **Dołączone grupy** > **Wybierz grupy do uwzględnienia** > wybierz grupę urządzeń utworzoną dla urządzeń kiosków > **Wybierz** > **OK** > **OK** > **Zapisz**.
 
 ### <a name="add-web-links-that-can-be-used-in-kiosk-mode"></a>Dodawanie linków internetowych, które mogą być używane w trybie kiosku
 
-1. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Aplikacje mobilne** > **Aplikacje** > **Dodaj**.
+1. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
 2. W obszarze **Typ aplikacji** wybierz pozycję **Link internetowy**.
 3. Wybierz pozycję **Konfiguruj** i podaj wymagane informacje. Nie trzeba dodawać obrazu logo, ponieważ zostanie on automatycznie pobrany z obrazu favicon.ico witryny internetowej.
 4. Wybierz przycisk **OK** > **Dodaj**.

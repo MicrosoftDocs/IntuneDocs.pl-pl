@@ -15,20 +15,20 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7cff6c777de4a35aa6825d1d37fdd0c2f2d0b72
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 5653e5fda04295041ebc549977007e7060b5508b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751721"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312684"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Usługa Intune obsługuje rejestrowanie urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) działającego na komputerze Mac. Rejestrowanie przy użyciu narzędzia Apple Configurator wymaga, aby poszczególne urządzenia z systemem iOS zostały podłączone do komputera Mac za pośrednictwem portu USB w celu skonfigurowania rejestracji firmowej. Urządzenia można zarejestrować w usłudze Intune przy użyciu narzędzia Apple Configurator na dwa sposoby:
-- **Rejestracja przy użyciu Asystenta ustawień** — resetuje urządzenie do ustawień fabrycznych i przygotowuje je do rejestracji z wykorzystaniem Asystenta ustawień.
-- **Rejestracja bezpośrednia** — nie powoduje przywrócenia ustawień fabrycznych urządzenia i rejestruje je za pośrednictwem ustawień systemu iOS. Ta metoda obsługuje jedynie rejestrowanie urządzeń **bez koligacji użytkownika**.
+- **Rejestracja przy użyciu Asystenta ustawień** — czyści dane z urządzenia i przygotowuje je do rejestracji z wykorzystaniem Asystenta ustawień.
+- **Rejestracja bezpośrednia** — nie powoduje wyczyszczenia urządzenia i rejestruje je za pośrednictwem ustawień systemu iOS. Ta metoda obsługuje jedynie rejestrowanie urządzeń **bez koligacji użytkownika**.
 
 Metody rejestracji z narzędziem Apple Configurator nie można używać z rejestracją korzystającą z [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
@@ -67,7 +67,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
     >    - wyświetlanie monitów dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania.
     >    - Monitowanie użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji
     >
-    > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu Asystenta ustawień firmy Apple.
+    > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
 
 6. Wybierz pozycję **Utwórz**, aby zapisać profil.
@@ -134,7 +134,7 @@ Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i prz
 Użytkownicy po otrzymaniu urządzeń muszą zakończyć działania w Asystencie ustawień. Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami.
 
 ## <a name="direct-enrollment"></a>Rejestracja bezpośrednia
-W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS przy użyciu programu Apple Configurator możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. Użycie tej metody nie powoduje zresetowania urządzenia do ustawień fabrycznych.
+W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS przy użyciu programu Apple Configurator możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. Ta metoda nie powoduje wyczyszczenia urządzenia.
 
 Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie mogą zostać zainstalowane.
 

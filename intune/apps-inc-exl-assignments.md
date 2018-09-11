@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 47922a30d8106c4d60b6caa43c8855195e3a0220
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905414"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330249"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune
 
@@ -44,8 +44,8 @@ Podczas wykluczania grup usługa Intune nie uwzględnia żadnych skojarzeń uży
 Aby przypisać aplikację do grup za pomocą dołączania i wykluczania przypisania:
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W menu usługi **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W okienku **Aplikacje mobilne** wybierz pozycję **Aplikacje**. Zostanie wyświetlona lista dodanych aplikacji.
+3. W menu **Intune** wybierz opcję **Aplikacje klienckie**.
+4. W okienku **Aplikacje klienckie** wybierz pozycję **Aplikacje**. Zostanie wyświetlona lista dodanych aplikacji.
 5. Wybierz aplikację, którą chcesz przypisać. Na pulpicie nawigacyjnym zostaną wyświetlone informacje o aplikacji. 
 6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**. 
 

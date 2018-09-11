@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: aebfea2f52540b4193811121334e3cebf916175b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255382"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330147"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -61,16 +61,16 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 ## <a name="get-started"></a>Wprowadzenie
 
-Większość informacji powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje mobilne**, do którego dostęp można uzyskać w następujący sposób:
+Większość informacji powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje klienckie**, do którego dostęp można uzyskać w następujący sposób:
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**.  
     Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Microsoft Intune** wybierz pozycję **Aplikacje mobilne**.
+3. W okienku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
 
     ![Okienko obciążenia „Aplikacje mobilne”](./media/apps-workload.png)
 
-W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje mobilne**.
+W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje klienckie**.
 
 ### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
 - **Aplikacje**: wybierz tę opcję, aby dodawać, wyświetlać, przypisywać i monitorować aplikacje używane przez pracowników. Aby uzyskać więcej informacji, zobacz:

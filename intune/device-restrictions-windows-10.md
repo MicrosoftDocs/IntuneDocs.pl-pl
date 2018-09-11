@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42e0798b0c2941d9ea45e75b367b69bc7dab548f
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6aa2ade550a01a9e4758024213a67e6a7ddd8f03
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321224"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313857"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
@@ -37,7 +37,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Magazyn wymienny** — określa, czy na urządzeniu można używać zewnętrznych urządzeń pamięci masowej, na przykład kart SD.
 - **Geolokalizacja** — określa, czy urządzenie może używać informacji z usług lokalizacyjnych.
 - **Udostępnianie Internetu** — umożliwia udostępnianie połączenia internetowego przy użyciu urządzenia.
-- **Resetowanie telefonu** — określa, czy użytkownik może zresetować urządzenie do ustawień fabrycznych.
+- **Resetowanie telefonu** — określa, czy użytkownik może przeprowadzić czyszczenie swojego urządzenia.
 - **Połączenie USB (tylko dla urządzeń przenośnych)** — określa, czy urządzenia mogą uzyskiwać dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB.
 - **Tryb przeciwkradzieżowy (tylko na urządzeniach przenośnych)** — pozwala określić, czy jest włączony tryb przeciwkradzieżowy systemu Windows.
 - **Cortana** — włącza lub wyłącza asystenta głosowego Cortana.
@@ -50,6 +50,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)** — w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
 - **Obszar roboczy pisma odręcznego** — blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Jeśli to ustawienie nie zostanie skonfigurowane, obszar roboczy pisma odręcznego będzie dostępny (funkcja będzie włączona), a użytkownik będzie mógł używać jej na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie** — pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
+- **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)** — wybierz pozycję **Wymagane**, aby wymagać, żeby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
 
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.

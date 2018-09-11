@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
-ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
+ms.openlocfilehash: 7cf005b225dd11ca6b95dbed0a82330544575f92
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "40251717"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347478"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurowanie wirtualnej sieci prywatnej (sieci VPN) dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -34,6 +34,7 @@ Sieć VPN dla aplikacji jest obecnie dostępna dla następujących dostawców:
  - Pulse Connect Secure
  - SonicWall
  - Palo Alto Networks GlobalProtect
+ - Zscaler
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Wymagania wstępne dotyczące sieci VPN dla aplikacji
 
@@ -145,7 +146,7 @@ Po dodaniu profilu sieci VPN skojarz aplikację i grupę usługi Azure AD z prof
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Mobile Apps**.
+3. Wybierz pozycję **Aplikacje klienckie**.
 4. Kliknij pozycję **Aplikacje**.
 5. Wybierz aplikację z listy aplikacji.
 6. Kliknij pozycję **Przypisania**.
@@ -187,6 +188,10 @@ Za pomocą skonfigurowanej i skojarzonej z aplikacją sieci VPN dla aplikacji sp
     - F5 Access
     - Pulse Secure
     - SonicWall Mobile Connect
+    - Zscaler App
+
+    > [!NOTE]
+    > Jeśli używasz aplikacji sieci VPN połączenia Pulse Secure, możesz użyć warstwy aplikacji lub tunelowania warstwy pakietu. Ustaw wartość **Typ dostawcy** na **app-proxy** dla tunelowania warstwy aplikacji lub na **packet-tunnel** dla tunelowania warstwy pakietu.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Nawiązywanie połączenia przy użyciu sieci VPN dla aplikacji
 

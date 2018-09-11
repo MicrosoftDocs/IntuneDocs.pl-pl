@@ -15,12 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d39dca2a464886ae6752450636fe25a5f5701858
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 25d4bdc51f2dc12cddbfb30c82baa22aa8c4540b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251698"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329756"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad przeglądarki chronionej w usłudze Microsoft Intune
 
@@ -108,7 +108,7 @@ Logowanie jednokrotne w aplikacji Intune Managed Browser wymaga, aby urządzenie
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3.  W bloku **Aplikacje mobilne** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
+3.  W bloku **Aplikacje klienckie** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
 4.  W bloku **Zasady konfiguracji aplikacji** wybierz pozycję **Dodaj**.
 5.  W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
 6.  Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
@@ -126,7 +126,7 @@ Logowanie jednokrotne w aplikacji Intune Managed Browser wymaga, aby urządzenie
 
 Ustawienia są przypisywane do grup użytkowników usługi Azure AD. Jeśli dany użytkownik ma zainstalowaną docelową aplikację przeglądarki chronionej, aplikacja jest zarządzana z uwzględnieniem określonych ustawień.
 
-1. Przejdź do bloku **Aplikacje mobilne** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune i wybierz pozycję **Zasady konfiguracji aplikacji**.
+1. Przejdź do bloku **Aplikacje klienckie** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune i wybierz pozycję **Zasady konfiguracji aplikacji**.
 2. Z listy konfiguracji aplikacji wybierz tę, która ma zostać przypisana.
 3. W następnym bloku wybierz pozycję **Przypisania**.
 4. W bloku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie wybierz przycisk **OK**.

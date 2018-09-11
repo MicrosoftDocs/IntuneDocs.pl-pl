@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117926"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313182"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -34,11 +34,14 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
 2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz jedno z wymienionych na liście urządzeń, aby otworzyć jego szczegóły:
 
-   - **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane itp. Wybierz pozycję **Więcej**, aby wykonać następujące czynności:
-     - Usuwanie danych firmy
-     - Usuwanie urządzenia
-     - Zdalne blokowanie urządzenia
-     - Wymazywanie
+   - **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane itp. Możesz wykonać następujące akcje na urządzeniu:
+      - [Wycofaj](devices-wipe.md#retire)
+        - [Czyszczenie danych](devices-wipe.md#wipe)
+        - [Zdalne blokowanie](device-remote-lock.md)
+        - [Synchronizowanie urządzenia](device-sync.md)
+        - [Zresetuj kod dostępu](device-passcode-reset.md)
+        - [Ponowne uruchamianie](device-restart.md) (tylko system Windows)
+        - [Zaczynanie od początku](device-fresh-start.md) (tylko system Windows)
      - Uruchamianie sesji pomocy zdalnej
    - Za pomocą opcji **Właściwości** możesz przypisać [utworzoną kategorię urządzeń](device-group-mapping.md) i zmienić własność urządzenia na urządzenie osobiste lub urządzenie firmowe.
    - **Sprzęt** — zawiera wiele szczegółów dotyczących urządzenia, w tym identyfikator urządzenia, system operacyjny wraz z wersją, miejsce do magazynowania, model i producenta, ustawienia dostępu warunkowego oraz inne informacje.
@@ -64,7 +67,7 @@ Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do fi
 |Szczegóły|Opis|  
 |--------------|----------------------|  
 |Nazwa|Nazwa urządzenia.|
-|Nazwa zarządzania|Nazwa urządzenia używana tylko w konsoli. Zmiana tej nazwy nie spowoduje zmiany nazwy w urządzeniu.|
+|Nazwa zarządzania|Nazwa urządzenia używana tylko w konsoli. Zmiana tej nazwy nie spowoduje zmiany nazwy na urządzeniu.|
 |Identyfikator UDID|Unikatowy identyfikator urządzenia.|
 |Identyfikator urządzenia usługi Intune|Identyfikator GUID, który unikatowo identyfikuje urządzenie.|
 |Numer seryjny|Numer seryjny urządzenia od producenta.|

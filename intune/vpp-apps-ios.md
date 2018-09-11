@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 115486f02a86616fdf2c340fa7e0e2ff6e505afa
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: cbe9f28b66031f6eddef4804c157f01ca79ad81d
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42823073"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347522"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -83,9 +83,9 @@ Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfi
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-1.  W okienku **Intune** wybierz pozycję **Aplikacje mobilne** > **Tokeny programu VPP systemu iOS** w obszarze **Konfiguracja**.
-2.  W okienku z listą tokenów programu VPP wybierz pozycję **Utwórz**.
-4. W okienku **Utwórz token programu VPP** określ następujące informacje:
+3.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Tokeny programu VPP systemu iOS** w obszarze **Konfiguracja**.
+4.  W okienku z listą tokenów programu VPP wybierz pozycję **Utwórz**.
+5. W okienku **Utwórz token programu VPP** określ następujące informacje:
     - **Plik tokenu programu VPP** — jeśli nie jesteś jeszcze zarejestrowanym członkiem programu Volume Purchase Program for Business lub Volume Purchase Program for Education, zarejestruj się. Po zarejestrowaniu się pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
     - **Identyfikator firmy Apple** — wprowadź identyfikator firmy Apple dla konta skojarzonego z programem zakupów zbiorczych.
     - **Kraj/region** — wybierz sklep krajowy programu VPP.  Usługa Intune synchronizuje aplikacje VPP z określonego krajowego sklepu umożliwiającego korzystanie z programu zakupów zbiorczych zgodnie ze wszystkimi ustawieniami regionalnymi.
@@ -93,9 +93,10 @@ Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfi
         > Zmiana kraju spowoduje zaktualizowanie metadanych aplikacji i adresu URL sklepu przy następnej synchronizacji z usługą firmy Apple w przypadku aplikacji utworzonych za pomocą tego tokenu. Jeśli aplikacja nie istnieje w nowym sklepie krajowym, nie zostanie zaktualizowana.
 
     - **Typ konta programu VPP** — wybierz opcję **Biznes** lub **Edukacja**.
-    - **Aktualizacje automatyczne aplikacji** — wybierz **Wł.** lub **Wył.**, aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune aktualizuje wszystkie aplikacje zakupione dla określonego tokenu za pośrednictwem usługi Intune, gdy urządzenie się zamelduje.
-Usługa Intune wykryje aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypchnie je do urządzenia po jego zameldowaniu.
-4. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**.
+    - **Aktualizacje automatyczne aplikacji** — wybierz **Wł.** lub **Wył.**, aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune wykrywa aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypycha je do urządzenia po jego zaewidencjonowaniu.
+        > [!NOTE]
+        > Automatyczne aktualizacje aplikacji działają zarówno w przypadku aplikacji licencjonowanych dla urządzenia, jak i użytkownika dla systemu iOS w wersji 11.0 i nowszej.
+6. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**.
 
 Token zostanie wyświetlony na liście w okienku tokenów.
 
@@ -103,7 +104,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1.  W okienku **Intune** wybierz pozycję **Aplikacje mobilne** > **Aplikacje** w obszarze **Zarządzaj**.
+1.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** w obszarze **Zarządzanie**.
 2.  W okienku z listą aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
 3.  W okienku ***Nazwa aplikacji*** - **Przypisania** wybierz pozycję **Dodaj grupy**, a następnie w okienku **Dodawanie grup** wybierz pozycję **Typ przypisania** i wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
 5.  Dla każdej wybranej grupy wybierz następujące ustawienia:
@@ -153,9 +154,17 @@ Aby odwołać licencję wszystkich aplikacji programu VPP dla danego tokenu prog
 
 Token VPP firmy Apple można odnowić, pobierając nowy token z portalu programu Apple Volume Purchase Program i aktualizując istniejący token w usłudze Intune.
 
-## <a name="further-information"></a>Dodatkowe informacje
+## <a name="deleting-an-ios-vpp-app"></a>Usuwanie aplikacji programu VPP systemu iOS
+
+Obecnie nie można usunąć aplikacji programu VPP systemu iOS z usługi Microsoft Intune.
+
+## <a name="additional-information"></a>Dodatkowe informacje
 
 Gdy użytkownik mający kwalifikujące się urządzenie spróbuje zainstalować aplikację VPP na urządzeniu po raz pierwszy, zostanie poproszony o dołączenie do programu Apple Volume Purchase Program. Jest to konieczne, aby instalacja aplikacji mogła być kontynuowana. Zaproszenie do dołączenia do programu Apple Volume Purchase program wymaga, aby użytkownik był w stanie używać aplikacji iTunes na urządzeniu z systemem iOS. Jeśli ustawiono zasady wyłączające aplikację sklepu iTunes, oparte na użytkowniku licencje na aplikacje VPP nie działają. Rozwiązanie polega na zezwoleniu na działanie aplikacji iTunes poprzez usunięcie zasad lub na zastosowaniu licencji opartych na urządzeniach.
+
+Firma Apple zapewnia bezpośrednią pomoc dotyczącą tworzenia i odnawiania tokenów programu VPP. Aby uzyskać więcej informacji, zobacz artykuł [Dystrybucja zawartości wśród użytkowników za pośrednictwem programu zakupów grupowych (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) jako część dokumentacji firmy Apple. 
+
+Jeśli w portalu usługi Intune jest wskazana pozycja **Przypisane do zewnętrznego MDM**, wówczas Ty (administrator) musisz usunąć token VPP MDM od innej firmy przed użyciem tokenu VPP w usłudze Intune.
 
 ## <a name="frequently-asked-questions"></a>Często zadawane pytania
 

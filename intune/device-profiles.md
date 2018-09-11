@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 08/28/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: da220e1f82c59f3181d64dc01d071867d62df397
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335830"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313976"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co to są profile urządzeń w usłudze Microsoft Intune?
 
@@ -54,6 +54,7 @@ Ta funkcja obsługuje systemy:
 - iOS 
 - macOS
 
+
 ## <a name="device-restrictions"></a>Ograniczenia dotyczące urządzeń
 Profil [Ograniczenia urządzenia](device-restrictions-configure.md) steruje zabezpieczeniami, sprzętem, udostępnianiem danych i kolejnymi ustawieniami urządzeń. Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, który uniemożliwia użytkownikom urządzeń z systemem iOS dostęp do aparatu urządzenia. 
 
@@ -72,6 +73,13 @@ Aby dołączyć zaawansowaną ochronę przed zagrożeniami w usłudze Windows De
 
 Ta funkcja obsługuje systemy:
 - System Windows 10 lub nowszy
+
+## <a name="identity-protection"></a>Identity Protection
+Usługa [Identity Protection](identity-protection-configure.md) steruje środowiskiem usługi Windows Hello dla firm na urządzeniach z systemem Windows 10 i Windows 10 Mobile. Skonfiguruj te ustawienia, aby udostępnić usługę Windows Hello dla firm dla użytkowników i urządzeń oraz określić wymagania dotyczące numerów PIN urządzenia i gestów.  
+
+Ta funkcja obsługuje systemy:  
+- System Windows 10 lub nowszy
+- Windows Holographic for Business  
 
 ## <a name="kiosk"></a>Kiosk
 

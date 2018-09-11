@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 041b31373e774c86373762a6365b913de9708b51
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: df8b6effea08bcb03022511158cde2d4da4ca2e6
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241916"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
 
@@ -33,6 +33,8 @@ W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji do u
 
 Aby zainstalować aplikacje na komputerach, muszą one mieć możliwość dyskretnej instalacji bez interakcji ze strony użytkownika. Jeśli tak nie jest, instalacja nie powiedzie się.
 
+## <a name="additional-security-settings-for-windows-installer"></a>Dodatkowe ustawienia zabezpieczeń dla Instalatora Windows
+Można zezwolić użytkownikom na kontrolowanie instalacji aplikacji. Po włączeniu tej funkcji instalacje, które w przeciwnym razie mogły zostać zatrzymane z powodu naruszenia zabezpieczeń, będą kontynuowane. Można przekierować Instalatora Windows tak, aby używał podwyższonego poziomu uprawnień podczas instalowania dowolnego programu w systemie. Ponadto można włączyć indeksowanie elementów funkcji Windows Information Protection (WIP) oraz przechowywanie związanych z nimi metadanych w niezaszyfrowanej lokalizacji. Gdy zasady są wyłączone, elementy chronione przez funkcję WIP nie są indeksowane i nie są wyświetlane w wynikach w Cortanie ani Eksploratorze plików. Funkcje tych opcji są domyślnie wyłączone. 
 
 ## <a name="add-the-app"></a>Dodawanie aplikacji
 Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości aplikacji i przekazania jej do magazynu w chmurze za pomocą następującej procedury:

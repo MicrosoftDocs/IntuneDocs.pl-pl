@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 515853864236638bc2732f6539d087bd125e3c56
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903147"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313465"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise
 
@@ -112,7 +112,7 @@ W przypadku urządzeń z systemem Android 5.1 lub nowszym obsługujących komuni
 
 W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **aft#setup**.
 
-1. Włącz urządzenie zresetowane do ustawień fabrycznych.
+1. Włącz wyczyszczone urządzenie.
 2. Na ekranie **powitalnym** wybierz swój język.
 3. Połącz się ze swoją **siecią Wi-Fi**, a następnie wybierz przycisk **DALEJ**.
 4. Zaakceptuj warunki i postanowienia firmy Google, a następnie wybierz przycisk **DALEJ**.
@@ -129,7 +129,7 @@ Na urządzeniach z systemem Android 7 lub nowszym można zeskanować kod QR z pr
 > [!Note]
 > Powiększenie w przeglądarce może spowodować, że urządzenie nie będzie mogło zeskanować kodu QR. Aby rozwiązać problem, można zwiększyć powiększenie.
 
-1. Aby uruchomić odczyt kodu QR na urządzeniu z systemem Android, naciśnij wielokrotnie pierwszy ekran, który zostanie wyświetlony po zresetowaniu do ustawień fabrycznych.
+1. Aby uruchomić odczyt kodu QR na urządzeniu z systemem Android, naciśnij wielokrotnie pierwszy ekran, który zostanie wyświetlony po wyczyszczeniu.
 2. W przypadku urządzeń z systemem Android 7 i 8 zostanie wyświetlony monit o zainstalowanie czytnika kodów QR. Na urządzeniach z systemem Android 9 lub nowszym czytnik kodów QR jest już zainstalowany.
 3. Użyj czytnika kodów QR, aby zeskanować kod QR profilu rejestracji, a następnie postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aby ukończyć rejestrację.
 

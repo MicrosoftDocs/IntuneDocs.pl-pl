@@ -1,11 +1,11 @@
 ---
 title: Rozwiązywanie problemów związanych z zagrożeniami wykrytymi przez program Lookout for Work w systemie Android | Microsoft Docs
-description: Dowiedz się, jak usunąć zagrożenie wykryte przez aplikację Lookout for Work w systemie Android.
+description: Dowiedz się, jak usunąć zagrożenie wykryte na urządzeniu z systemem Android przy użyciu aplikacji Lookout for Work.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,35 +15,43 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: df7055f031fb7661cc0fa3bf2d00b16fc0a082dc
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0e8f10bac2c7ffc75f81572da60249842c8f4cc1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148525"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Usuwanie zagrożenia wykrytego przez aplikację Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Usuwanie zagrożenia wykrytego przez aplikację Lookout for Work  
 
-Aplikacja Lookout for Work wykryła potencjalne zagrożenie na urządzeniu i należy rozwiązać ten problem, aby odzyskać dostęp do poczty e-mail, aplikacji i plików służbowych. Wyświetlony komunikat może wyglądać tak:
+Aplikacja Lookout for Work to mobilna usługa ochrony przed zagrożeniami, która identyfikuje potencjalne zagrożenia na urządzeniach z systemem Android. Zagrożenia te są zgłaszane do aplikacji Portal firmy i pojawiają się tam jako nierozwiązane, niezgodne problemy. Tak długo, jak obecne będą te zagrożenia, wykonywanie następujących czynności może być niemożliwe:
 
-![Aplikacja Lookout for Work wykryła zagrożenie na urządzeniu](./media/lookout-threat-found-android.png)
+* Łączenie z firmową pocztą e-mail
+* Łączenie firmową siecią Wi-Fi
+* Łączenie z usługą SharePoint Online
+* Synchronizowanie plików firmowych z usługą OneDrive
+* Uzyskiwanie dostępu do aplikacji firmowych
 
-Aby rozwiązać ten problem, otwórz aplikację Lookout for Work i wykonaj instrukcje wyświetlane w aplikacji.
+W tym artykule opisano sposób rozpoznawania alertów zagrożeń aplikacji Lookout for Work oraz działania, które należy podjąć, aby je rozwiązać. 
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Ekran wyświetlany w przypadku zablokowania dostępu do wiadomości e-mail lub plików w zarejestrowanym urządzeniu
+## <a name="troubleshoot-virus-or-security-threat"></a>Rozwiązywanie problemów związanych z zagrożeniem ze strony wirusa lub zagrożeniem dla bezpieczeństwa  
+Odzyskaj dostęp do zasobów firmowych, gdy aplikacja Lookout for Work wykryje zagrożenie dla bezpieczeństwa lub wirusowe.  
 
-W przypadku próby uzyskania dostępu do firmowej poczty e-mail lub plików w sytuacji, gdy na zarejestrowanym urządzeniu znajduje się wirus lub występuje inne zagrożenie bezpieczeństwa, może zostać wyświetlony komunikat podobny do poniższego:
+1. W przypadku wykrycia zagrożenia dla bezpieczeństwa otrzymasz komunikat podobny do tego przedstawionego na poniższym zrzucie ekranu. Naciśnij link **portal zarządzania urządzeniami**, aby otworzyć [witrynę internetową Portal firmy](https://portal.manage.microsoft.com/devices).  
 
-![Komunikat o błędzie aplikacji Lookout for Work z linkiem do witryny internetowej Portal firmy](./media/mtd-go-to-device-management-portal-android.png)
+    ![Zrzut ekranu z przykładem komunikatu o błędzie aplikacji Lookout for Work, z linkiem do witryny Portal firmy oraz niebieskim przyciskiem OK.](./media/mtd-go-to-device-management-portal-android.png)
 
-Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
+2. Wybierz urządzenie.  
+3. Przeczytaj ostrzeżenie wyświetlane pod urządzeniem. Zostanie wyświetlone zalecenie otworzenia aplikacji Lookout for Work w celu wyeliminowania zagrożenia ze strony wirusa lub zagrożenia dla bezpieczeństwa. 
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Przykład aplikacji uznawanej za zagrożenie przez aplikację Lookout for Work
+    ![Zrzut ekranu przedstawiający stronę urządzenia w witrynie Portal firmy z ostrzeżeniem aplikacji Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
-W przypadku zainstalowania aplikacji, którą aplikacja Lookout for Work uzna za zagrożenie, zostanie wyświetlony ekran podobny do następującego:
+## <a name="troubleshoot-an-app-threat"></a>Rozwiązywanie problemów z zagrożeniem ze strony aplikacji  
 
-![Przykład alertu aplikacji Lookout for Work dotyczącego wykrycia wirusa](./media/lookout-virus-alert-android.png)
+Jeśli zainstalujesz aplikację, którą aplikacja Lookout for Work zidentyfikuje jako zagrożenie, otrzymasz komunikat podobny do przedstawionego na poniższym zrzucie ekranu.  
 
-Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do firmowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do poczty e-mail i danych do czasu odinstalowania aplikacji.
+![Zrzut ekranu przedstawiający komunikat z alertem o wykryciu wirusa w interfejsie aplikacji Lookout for Work. Pokazuje trzy przyciski: „Zamknij”, „Więcej informacji” oraz „Odinstaluj”.](./media/lookout-virus-alert-android.png)  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Aby odzyskać utracony dostęp do poczty e-mail i danych firmowych, odinstaluj wątpliwą aplikację. Tak długo, jak aplikacja będzie na urządzeniu, nie będzie można uzyskiwać dostępu do zasobów firmy.    
+
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

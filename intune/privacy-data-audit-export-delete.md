@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bea51227798e239bb74154e4d97e3efd6d55f807
-ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
+ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232271"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313602"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Inspekcja, eksportowanie i usuwanie danych osobowych w usłudze Intune
 
@@ -64,8 +64,8 @@ Zresetowanie do ustawień fabrycznych powoduje przywrócenie oryginalnych ustawi
 ### <a name="user-self-removal-from-intune-management"></a>Samodzielne usunięcie się użytkownika z zarządzania usługi Intune
 Użytkownik może usunąć swoje urządzenie osobiste z systemem [Android lub Windows albo systemem firmy Apple](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) z zarządzania usługi Intune bez pomocy administratora.   
 
-### <a name="remove-company-data"></a>Usuwanie danych firmy
-Usunięcie danych firmy powoduje usunięcie danych aprowizowanych przez usługę Intune, takich jak aplikacje firmy, dane dotyczące aplikacji, którymi zarządza usługa Intune, ustawienia zasad i profile poczty e-mail aprowizowane za pośrednictwem usługi Intune. Ta akcja nie powoduje usunięcia osobistych danych użytkownika z urządzenia.
+### <a name="retire"></a>Wycofaj
+Działanie **Wycofaj** powoduje usunięcie danych aprowizowanych przez usługę Intune, takich jak aplikacje firmy, dane dotyczące aplikacji, którymi zarządza usługa Intune, ustawienia zasad i profile poczty e-mail aprowizowane za pośrednictwem usługi Intune. Ta akcja nie powoduje usunięcia osobistych danych użytkownika z urządzenia.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Usuwanie dzierżawy z usługi Microsoft Intune
 

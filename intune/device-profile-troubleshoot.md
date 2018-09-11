@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ceebe8b306893f9e6362a1aeb6ec119a650b90b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d013ad2aefbfee5eea8f240277b0f84c2c6bf05a
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31026877"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312953"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów urządzeń w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -117,7 +117,7 @@ Usunięcie profilu lub usunięcie urządzenia z grupy zawierającej profil powod
         - Zezwalaj na tethering Wi-Fi
         - Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi
         - Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi
-        - Zezwalaj na resetowanie do ustawień fabrycznych
+        - Zezwalaj na czyszczenie
         - Zezwalaj na połączenia Bluetooth
         - Zezwalaj na komunikację NFC
         - Zezwalaj na połączenia Wi-Fi

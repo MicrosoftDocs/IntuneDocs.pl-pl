@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268842"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313500"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Intune
 
@@ -32,7 +32,7 @@ Ta funkcja obsługuje urządzenia z systemem iOS 10.3 lub nowszym.
 4. Wprowadź nazwę i opis zasad.
 5. Wybierz pozycję **Ustawienia**. 
 
-    Wprowadź szczegóły dotyczące czasu, kiedy na urządzeniach z systemem iOS nie jest wymuszana instalacja najnowszych aktualizacji. Te ustawienia tworzą przedział czasu z ograniczeniami. Skonfigurować możesz dni tygodnia, strefę czasową, godzinę rozpoczęcia i godzinę zakończenia.
+    Wprowadź szczegóły dotyczące czasu, kiedy na urządzeniach z systemem iOS nie jest wymuszana instalacja najnowszych aktualizacji. Te ustawienia tworzą przedział czasu z ograniczeniami. Możesz skonfigurować **dni** tygodnia, **strefę czasową**, **godzinę rozpoczęcia**, **godzinę zakończenia** oraz to, czy **opóźniać widoczność aktualizacji oprogramowania (w dniach)**, aby wprowadzić użytkowników. Możesz wybrać zakres opóźnienia aktualizacji oprogramowania z przedziału od 1 do 90 dni. Aby zrezygnować z ustawienia opóźnienia aktualizacji oprogramowania, wprowadź wartość 0. Te ustawienia aktualizacji będą stosowane tylko na nadzorowanych urządzeniach z systemem iOS.
 
 6. Wybierz przycisk **OK**, aby zapisać zmiany. Wybierz pozycję **Utwórz**, aby utworzyć zasady.
 

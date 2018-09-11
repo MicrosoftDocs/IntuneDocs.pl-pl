@@ -6,19 +6,19 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5220d9c2e1ba98873658631798240af9e7587758
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: ff3b482f974641dd7255dc98d3af62542d802de9
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834774"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313738"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune
 
@@ -31,7 +31,10 @@ Usługę Windows Hello dla firm (poprzednio Microsoft Passport for Work) można 
 
 Integracja usługi Intune z usługą Hello dla firm następuje na dwa sposoby:
 
--   Za pomocą zasad usługi Intune można określać gesty, przy użyciu których użytkownicy mogą się logować.
+-   Zasady usługi Intune można utworzyć w obszarze **Rejestracja urządzenia**. Te zasady są przeznaczone dla całej organizacji (na poziomie dzierżawy). Obsługują one tryb OOBE rozwiązania Windows AutoPilot i są stosowane podczas rejestrowania urządzenia. 
+-  Profil ochrony tożsamości można utworzyć w obszarze **Konfiguracja urządzenia**. Celem tego profilu są przypisani użytkownicy i urządzenia. Jest on stosowany podczas ewidencjonowania. 
+
+Użyj tego artykułu, aby utworzyć domyślne zasady usługi Windows Hello dla firm, które są przeznaczone dla całej organizacji. Aby utworzyć profil ochrony tożsamości, który jest stosowany w celu wybrania grupy użytkowników i urządzeń, zobacz [Konfigurowanie profilu ochrony tożsamości](identity-protection-configure.md).  
 
 <!--- -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
@@ -57,7 +60,7 @@ Integracja usługi Intune z usługą Hello dla firm następuje na dwa sposoby:
 
 4. W okienku **Wszyscy użytkownicy** kliknij pozycję **Właściwości**, a następnie uzupełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień usługi Windows Hello dla firm.
 
-5. W okienku **Wszyscy użytkownicy** kliknij pozycję **Ustawienia**, a następnie wybierz jedną z następujących wartości pozycji **Skonfiguruj usługę Windows Hello dla firm**:
+5. W okienku **Wszyscy użytkownicy** kliknij pozycję **Ustawienia**, a następnie wybierz jedną z następujących opcji pozycji **Skonfiguruj usługę Windows Hello dla firm**:
 
     - **Wyłączony**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Windows Hello dla firm. Wszystkie inne ustawienia na ekranie będą wtedy niedostępne.
     - **Włączony**. Wybierz to ustawienie, jeśli chcesz skonfigurować ustawienia usługi Windows Hello dla firm.

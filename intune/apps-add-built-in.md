@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b67b50a5bd372541cf0842696e5012ca991d8b8
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: b9520343f3b631fdc2732690b462c6d8fd010c82
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224164"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329499"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Dodawanie wbudowanych aplikacji do usługi Microsoft Intune
 
@@ -36,8 +36,8 @@ We wcześniejszych wersjach konsoli usługi Intune usługa Intune udostępniała
 Aby dodać aplikację wbudowaną do dostępnych dla Ciebie aplikacji w usłudze Microsoft Intune, wykonaj następujące czynności:
 1. Zaloguj się do witryny Azure Portal.
 2. Aby wyświetlić okienko usługi Microsoft Intune, wybierz pozycje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W okienku **Aplikacje mobilne** w obszarze **Zarządzaj** wybierz pozycję **Aplikacje**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
+4. W okienku **Aplikacje klienckie** w obszarze **Zarządzanie** wybierz pozycję **Aplikacje**.
 5. Wybierz pozycję **Dodaj**.
 6. W okienku aplikacji **Dodaj** z listy **Typ aplikacji** wybierz pozycję **Aplikacja wbudowana**.
 7. Wybierz pozycję **Wybierz aplikację**.

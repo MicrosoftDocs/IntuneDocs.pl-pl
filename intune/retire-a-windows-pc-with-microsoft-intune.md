@@ -15,18 +15,18 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: c3b0ba5fc46ad489dcb004554abfee4044a74195
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: 95525e66cce1e9691c60799df3da184954d6bf4b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310440"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312665"
 ---
 # <a name="retire-a-windows-pc"></a>Wycofanie komputera z systemem Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Wykonaj następujące kroki, aby wycofać komputery z systemem Windows, które są zarządzane jako komputery przy użyciu oprogramowania klienckiego usługi Intune. Wycofanie komputera spowoduje usunięcie go z zarządzania przy użyciu usługi Intune. Nie można zresetować komputera do ustawień fabrycznych przy użyciu usługi Intune, aby przywrócić jego ustawienia fabryczne.
+Wykonaj następujące kroki, aby wycofać komputery z systemem Windows, które są zarządzane jako komputery przy użyciu oprogramowania klienckiego usługi Intune. Wycofanie komputera spowoduje usunięcie go z zarządzania przy użyciu usługi Intune. Przy użyciu usługi Intune nie można wyczyścić komputera, aby przywrócić jego ustawienia fabryczne.
 
 1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer, który chcesz wycofać).
 

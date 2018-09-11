@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
-ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
+ms.openlocfilehash: b37c210425fd5abf8fd0b0501966fef8196b451b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39356577"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312625"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Obejście blokady aktywacji na nadzorowanych urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -78,9 +78,9 @@ Akcja zdalna **Zastosuj obejście blokady aktywacji** dotycząca urządzenia w u
 6. Przejdź do sekcji „Sprzęt”, a następnie skopiuj wartość **kodu obejścia blokady aktywacji** w obszarze **Dostęp warunkowy**.
 
     >[!NOTE]
-    >Skopiuj kod obejścia przed zresetowaniem urządzenia do ustawień fabrycznych. Jeśli zresetujesz ustawienia urządzenia przed skopiowaniem kodu, kod zostanie usunięty z platformy Azure.
+    >Skopiuj kod obejścia przed wyczyszczeniem urządzenia. Jeśli zresetujesz ustawienia urządzenia przed skopiowaniem kodu, kod zostanie usunięty z platformy Azure.
 
-7.  Przejdź do bloku **Przegląd** urządzenia, a następnie wybierz pozycję **Resetowanie do ustawień fabrycznych**.
+7.  Przejdź do bloku **Przegląd** urządzenia, a następnie wybierz pozycję **Wyczyść**.
 8.  Po zresetowaniu urządzenia zostanie wyświetlony monit o podanie *identyfikatora Apple ID* i *hasła*. Pozostaw pole *ID* puste, a następnie wprowadź **kod obejścia** *hasła*. Spowoduje to usunięcie konta z urządzenia. 
 
 

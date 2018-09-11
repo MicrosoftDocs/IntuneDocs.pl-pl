@@ -14,18 +14,18 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f711a6bec9be0ac1fd94183931070f9988d49e3
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1ee08c77fe085ad0f238d63481dd682ea15aa5ce
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442648"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313089"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem iOS w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności urządzeń z systemem iOS w usłudze Intune określają reguły i ustawienia, które urządzenia z systemem iOS muszą spełnić, aby zapewnić zgodność. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń i wymagań wstępnych, zobacz temat [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+Zasady zgodności urządzeń z systemem iOS w usłudze Intune określają reguły i ustawienia, które urządzenia z systemem iOS muszą spełnić, aby zapewnić zgodność. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
 
@@ -53,7 +53,7 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 ## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. W polu **Platforma** wybierz opcję **iOS**. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień dla pól **Poczta e-mail**, **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Gdy wszystko będzie gotowe, wybierz opcję **OK** i **Utwórz**.
+5. W polu **Platforma** wybierz opcję **iOS**. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień dla pól **Poczta e-mail**, **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -81,7 +81,7 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz a
   - **Zabezpieczony**: ta opcja jest najbezpieczniejsza, ponieważ urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające jakikolwiek poziom zagrożenia, zostanie ono ocenione jako niezgodne.
   - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
-  - **Wysoki**: ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
+  - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
@@ -96,7 +96,7 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz a
 > Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony.
 
 - **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia. Urządzenia z systemem iOS używające haseł są szyfrowane.
-- **Proste hasła**: ustaw tę opcję na wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie takich haseł, jak **1234** lub **1111**.
+- **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
 - **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
 - **Wymagany typ hasła**: określ, czy w skład hasła powinny wchodzić tylko znaki **Numeryczne** lub czy ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
 - **Liczba znaków innych niż alfanumeryczne w haśle**: określ minimalną liczbę znaków specjalnych (takich jak &, #, % i !), którą musi zawierać hasło.
@@ -104,12 +104,17 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz a
     Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
 - **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
-- **Wygaśnięcie hasła (w dniach)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
+- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
 - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
+
+### <a name="restricted-applications"></a>Aplikacje z ograniczeniami 
+Możesz ograniczyć aplikacje poprzez dodanie ich identyfikatorów pakietu do zasad. Następnie, jeśli urządzenie ma zainstalowaną aplikację, zostanie oznaczone jako niezgodne. 
+- **Nazwa aplikacji**: wprowadź przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu. 
+- **Identyfikator pakietu aplikacji**: wprowadź unikatowy identyfikator pakietu dostarczony przez dostawcę aplikacji. Aby znaleźć identyfikator pakietu, zobacz [Jak znaleźć identyfikator pakietu aplikacji z systemem iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 
-1. Wybierz zasady, które zostały przez Ciebie skonfigurowane. Dostęp do istniejących zasad można uzyskać po wybraniu opcji **Zgodność urządzeń** > **Zasady**.
+1. Wybierz skonfigurowane przez siebie zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
 2. Wybierz zasady, a następnie wybierz opcję **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
 3. Wybierz opcję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie opcję **Zapisz**, aby je wdrożyć.
 

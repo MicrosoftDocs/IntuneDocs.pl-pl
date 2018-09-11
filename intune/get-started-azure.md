@@ -15,12 +15,12 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 859194b364a64854922993d2d798f318b260fc80
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e070e80bb9575154aded12f0992d04bd7a4718f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836340"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329958"
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Wprowadzenie do usługi Microsoft Intune w witrynie Azure Portal
 
@@ -53,7 +53,7 @@ Ta możliwość będzie bardziej przydatna po dodaniu większej ilości zawarto�
 
 ## <a name="using-services"></a>Korzystanie z usług
 
-Otwarcie usługi Intune lub dowolnej innej usługi platformy Azure spowoduje wyświetlenie tej usługi w **okienku**. Niektóre z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje mobilne**, są wyświetlane w okienku na pełnym ekranie. Po wybraniu obciążenia odpowiednie okienko zostanie otwarte na pełnej stronie. Inne okienka będą wysuwane od prawej krawędzi bloku i zwijane pod głównym okienkiem, z poziomu którego zostały otwarte.
+Otwarcie usługi Intune lub dowolnej innej usługi platformy Azure spowoduje wyświetlenie tej usługi w **okienku**. Niektóre z pierwszych obciążeń używanych w usłudze Intune, np. **Użytkownicy**, **Grupy** i **Aplikacje klienckie**, są wyświetlane w okienku na pełnym ekranie. Po wybraniu obciążenia odpowiednie okienko zostanie otwarte na pełnej stronie. Inne okienka będą wysuwane od prawej krawędzi bloku i zwijane pod głównym okienkiem, z poziomu którego zostały otwarte.
 
 ## <a name="next-steps"></a>Następne kroki
 

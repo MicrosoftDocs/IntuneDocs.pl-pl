@@ -1,11 +1,11 @@
 ---
-title: Rejestrowanie należącego do firmy lub udostępnionego urządzenia z systemem iOS na potrzeby zarządzania | Microsoft Docs
+title: Rejestrowanie udostępnionego przez organizację urządzenia z systemem macOS na potrzeby zarządzania | Microsoft Docs
 description: Opis sposobu rejestrowania w usłudze Intune urządzenia z systemem macOS, które zostało zakupione i udostępnione przez Twoją organizację.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,26 +17,26 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 272a82f7d3d62d117fa5506ccf446b3169ff514f
-ms.sourcegitcommit: bb56ada81e6d4950f130415918c4acc455bb52dd
+ms.openlocfilehash: a5808a0ac80390b76058827d2ca0870249b043b9
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43016231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241834"
 ---
-# <a name="get-your-company-owned-macos-device-managed"></a>Umożliwianie zarządzania urządzeniem z systemem macOS należącego do firmy
+# <a name="enroll-your-organization-provided-macos-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem macOS na potrzeby zarządzania
 
-Dowiedz się, jak umożliwić automatyczne zarządzanie nowym urządzeniem z systemem macOS w usłudze Intune.
+Dowiedz się, jak umożliwić zarządzanie nowym urządzeniem z systemem macOS w usłudze Intune.  
 
-Urządzenia należące do firmy i szkoły są często wstępnie skonfigurowane, zanim je otrzymasz. Twoja organizacja wysyła wstępnie skonfigurowane ustawienia do urządzenia, gdy włączysz je i zalogujesz się po raz pierwszy. Po ukończeniu konfiguracji urządzenia otrzymasz dostęp do zasobów służbowych. 
+Urządzenia, które są dostarczane przez pracodawcę lub szkołę, często są wstępnie skonfigurowane przed ich odebraniem. Twoja organizacja będzie wysyłać te wstępnie skonfigurowane ustawienia do urządzenia, gdy włączysz je i zalogujesz się po raz pierwszy. Po ukończeniu konfiguracji urządzenia otrzymasz dostęp do zasobów służbowych. 
 
 Aby rozpocząć konfigurowanie zarządzania, włącz zasilanie urządzenia i zaloguj się przy użyciu poświadczeń służbowych. W pozostałej części tego artykułu opisano kroki i ekrany, które zobaczysz w miarę poruszania się po Asystencie ustawień.   
 
 ## <a name="what-is-apple-dep"></a>Co to jest program Apple DEP?
-Jeśli masz urządzenie należące do firmy, być może zostało ono zakupione w ramach programu Apple Device Enrollment Program (DEP). Niektóre organizacje kupują wiele urządzeń z systemem iOS lub macOS za pośrednictwem programu Apple DEP. Organizacje mogą następnie konfigurować urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
+Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego *Apple Device Enrollment Program* (DEP). Program Apple DEP umożliwia organizacjom kupowanie wielu urządzeń z systemem iOS lub macOS. Organizacje mogą następnie konfigurować te urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
 ## <a name="set-up-your-macos-device"></a>Konfigurowanie urządzenia z systemem macOS  
-Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potrzeby zarządzania. Jeśli używasz własnego urządzenia, a nie urządzenia należącego do firmy, wykonaj kroki dotyczące [urządzeń osobistych i przyniesionych przez siebie](enroll-your-device-in-intune-macos-cp.md).  
+Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potrzeby zarządzania. Jeśli używasz własnego urządzenia, a nie urządzenia dostarczonego przez organizację, wykonaj kroki dotyczące [urządzeń osobistych i przyniesionych przez siebie](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Włącz zasilanie urządzenia z systemem macOS. 
 2. Wybierz **język** i kliknij pozycję **Kontynuuj**.  
@@ -64,4 +64,4 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potr
 ## <a name="get-the-company-portal-app"></a>Pobranie aplikacji Portal firmy      
 Przejdź do sklepu App Store, aby pobrać aplikację Portal firmy usługi Intune na swoje urządzenie. Ta aplikacja umożliwia monitorowanie, synchronizowanie, dodawanie i usuwanie urządzenia z zarządzania oraz instalowanie aplikacji.
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

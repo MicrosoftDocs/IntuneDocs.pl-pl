@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,24 +15,44 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9180bf70c114a9bb1f034b51ee3a3d96bef253fa
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
+ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279495"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347698"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-august-27-2018"></a>Tydzień od 27 sierpnia 2018 r.  
+
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Aktualizacja nowego środowiska użytkownika witryny internetowej Portal firmy <!--2000968 -->  
+Na podstawie opinii klientów dodaliśmy nowe funkcje do witryny internetowej Portal firmy. Na swoich urządzeniach zobaczysz znaczące ulepszenia istniejących funkcji i poprawę użyteczności. Obszary witryny &ndash; takie jak szczegółowe informacje o urządzeniu, opinie i pomoc techniczna oraz przegląd urządzenia &ndash; zyskały nowy, nowoczesny i dynamiczny wygląd. [Dokumentacja witryny internetowej Portal firmy usługi Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website) została zaktualizowana w celu odzwierciedlenia tych zmian.   
+
+Wyświetlane aktualizacje obejmują:  
+
+- Usprawnione przepływy pracy na wszystkich platformach urządzeń
+- Ulepszone przepływy identyfikacji i rejestracji urządzeń
+- Bardziej pomocne komunikaty o błędach
+- Bardziej przyjazny język, mniej technicznego żargonu
+- Możliwość udostępniania bezpośrednich linków do aplikacji
+- Zwiększona wydajność dużych wykazów aplikacji
+- Zwiększona dostępność dla wszystkich użytkowników  
+
+|Zaktualizowana|Wstecz|
+|---|---|
+|![Na zaktualizowanej stronie urządzenia urządzenie jest wyrównane nad informacjami o urządzeniu i już nie wystaje poza pełną listę.](./media/iwp-device-after-1803.png)|![Poprzedniej wersji strony urządzenia.](./media/iwp-device-before-1803.png)|
+|![Na zaktualizowanej stronie instalowania aplikacji aplikacja znajduje się nad opisem oraz informacjami dotyczącymi instalacji, w tym datą publikacji, wersją i typem aplikacji.](./media/iwp-app-install-after-1803.png)|![Poprzednia wersja strony instalowania aplikacji.](./media/iwp-app-install-before-1803.png)|  
+
 ## <a name="week-of-july-16-2018"></a>Tydzień od 16 lipca 2018 r.  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Więcej możliwości synchronizacji w aplikacji Portal firmy dla systemu Windows   
 Aplikacja Portal firmy dla systemu Windows umożliwia teraz zainicjowanie synchronizacji bezpośrednio z poziomu paska zadań i menu Start systemu Windows. Ta funkcja jest szczególnie przydatna, jeśli Twoim jedynym zadaniem jest synchronizowanie urządzeń i uzyskiwanie dostępu do zasobów firmy. Aby skorzystać z nowych funkcji, kliknij prawym przyciskiem myszy ikonę aplikacji Portal firmy przypiętą do paska zadań lub menu Start. W opcjach menu (nazywanych również listą szybkiego dostępu) wybierz pozycję **Synchronizuj to urządzenie**. Spowoduje to otwarcie aplikacji Portal firmy na stronie **Ustawienia** i zainicjowanie synchronizacji.  
 
-![Zrzut ekranu przedstawiający pasek zadań systemu Windows na pulpicie urządzenia. Kliknięto ikonę aplikacji Portal firmy, aby wyświetlić menu z opcjami „Przypnij do paska zadań”,„Zamknij okno” i „Synchronizuj to urządzenie”.](./media/sync-device-from-start-menu-1807.png)  
+![Zrzut ekranu paska zadań systemu Windows na pulpicie urządzenia. Kliknięto ikonę aplikacji Portal firmy, aby wyświetlić menu z opcjami „Przypnij do paska zadań”,„Zamknij okno” i „Synchronizuj to urządzenie”.](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nowe środowisko przeglądania w aplikacji Portal firmy dla systemu Windows  
 
@@ -112,7 +132,7 @@ Jeśli włączono [mapowanie grup urządzeń](device-group-mapping.md), aplikacj
 Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS. Używany język jest bardziej przyjazny dla użytkownika i tam, gdzie było to możliwe, ekrany zostały połączone. Ponadto język jest lepiej dostosowany do Twojej firmy, ponieważ w tekście instalatora używana jest jej nazwa.
 
 > [!NOTE]
-> Jest to nazwa ustawiona w witrynie Azure Portal w opcji **Microsoft Intune** > **Mobile Apps** > **Znakowanie Portalu firmy** > **Nazwa firmy**. Jeśli nie ustawiono tej wartości, używana jest nazwa dzierżawy ustawiona w opcji **Azure Active Directory** > **Właściwości** > **Nazwa**. Jeśli w funkcji znakowania aplikacji Portal firmy nie ustawiono nazwy firmy, ale nie chcesz, aby wyświetlana była nazwa dzierżawy, zaleca się ustawienie nazwy firmy na karcie znakowania aplikacji Portal firmy. Jeśli nie chcesz, aby ten ciąg znaków był wyświetlany w nagłówku w aplikacji Portal firmy, możesz usunąć zaznaczenie pola wyboru „Pokaż nazwę firmy obok logo”.
+> Jest to nazwa ustawiona w witrynie Azure Portal w opcji **Microsoft Intune** > **Aplikacje klienckie** > **Znakowanie Portalu firmy** > **Nazwa firmy**. Jeśli nie ustawiono tej wartości, używana jest nazwa dzierżawy ustawiona w opcji **Azure Active Directory** > **Właściwości** > **Nazwa**. Jeśli w funkcji znakowania aplikacji Portal firmy nie ustawiono nazwy firmy, ale nie chcesz, aby wyświetlana była nazwa dzierżawy, zaleca się ustawienie nazwy firmy na karcie znakowania aplikacji Portal firmy. Jeśli nie chcesz, aby ten ciąg znaków był wyświetlany w nagłówku w aplikacji Portal firmy, możesz usunąć zaznaczenie pola wyboru „Pokaż nazwę firmy obok logo”.
 
 |Stary adres|Nowy adres|
 |---|---|
@@ -458,12 +478,7 @@ Na podstawie opinii klientów dodaliśmy nowe funkcje, które znacznie udoskonal
 -   Możliwość udostępniania bezpośrednich linków do aplikacji
 - Zwiększona wydajność dużych wykazów aplikacji
 
-Nie musisz niczego robić, aby przygotować się do tej zmiany. Powiadomimy Cię, gdy zaktualizowana witryna internetowa Portal firmy będzie dla Ciebie dostępna. Może być jednak konieczne zaktualizowanie zrzutów ekranu w dokumentach użytkownika końcowego. Pamiętaj, że może być też konieczne zaktualizowanie dokumentacji dla aplikacji Portal firmy w systemie iOS, ponieważ witryna internetowa obsługuje sekcję **Aplikacje** aplikacji systemu iOS.
-
-|Zaktualizowana|Wstecz|
-|---|---|
-|![Na zaktualizowanej stronie urządzenia urządzenie jest wyrównane nad informacjami o urządzeniu i już nie wystaje poza pełną listę.](./media/iwp-device-after-1803.png)|![Poprzedniej wersji strony urządzenia.](./media/iwp-device-before-1803.png)|
-|![Na zaktualizowanej stronie instalowania aplikacji aplikacja znajduje się nad opisem oraz informacjami dotyczącymi instalacji, w tym datą publikacji, wersją i typem aplikacji.](./media/iwp-app-install-after-1803.png)|![Poprzednia wersja strony instalowania aplikacji.](./media/iwp-app-install-before-1803.png)|
+Nie musisz niczego robić, aby przygotować się do tej zmiany. Powiadomimy Cię, gdy zaktualizowana witryna internetowa Portal firmy będzie dla Ciebie dostępna. Może być jednak konieczne zaktualizowanie zrzutów ekranu w dokumentach użytkownika końcowego. Pamiętaj, że może być też konieczne zaktualizowanie dokumentacji dla aplikacji Portal firmy w systemie iOS, ponieważ witryna internetowa obsługuje sekcję **Aplikacje** aplikacji systemu iOS.  
 
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizacje interfejsu użytkownika witryny internetowej Portal firmy <!--1313244 part 2-->
 

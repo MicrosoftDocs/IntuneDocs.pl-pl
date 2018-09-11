@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
+ms.openlocfilehash: 7b03c46a9095c0f300869ebd14d1a81698e294f7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400287"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43314027"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -179,7 +179,7 @@ Po usunięciu urządzenia z grupy usługi Azure AD profil karty eSIM również j
 2. Przejdź do grupy Azure AD i usuń urządzenie z grupy.
 3. Gdy usunięte urządzenie skontaktuje się z usługą Intune, zostaną ocenione zaktualizowane zasady, a profil karty eSIM zostanie usunięty.
 
-Profil karty eSIM zostanie również usunięty, jeśli rejestracja urządzenia zostanie cofnięta przez użytkownika lub jeśli na urządzeniu zostanie uruchomione zdalne działanie [usunięcia danych firmowych](devices-wipe.md#remove-company-data) lub [zresetowania urządzenia](devices-wipe.md#factory-reset).
+Profil karty eSIM zostanie również usunięty, jeśli urządzenie zostanie [wycofane](devices-wipe.md#retire) lub jego rejestracja zostanie cofnięta przez użytkownika, lub jeśli na urządzeniu zostanie uruchomione [zdalne działanie resetowania urządzenia](devices-wipe.md#wipe).
 
 > [!NOTE]
 > Usunięcie profilu nie jest równoznaczne z zatrzymaniem naliczania opłat. Skontaktuj się z operatorem sieci komórkowej, aby sprawdzić stan rozliczeń urządzenia.

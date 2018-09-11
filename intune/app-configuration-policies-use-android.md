@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ee53dd02fa008a2e885b789439e88c766205d13
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 3596d539319a5a91a1647555a89004683874aa06
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268876"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329465"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
@@ -33,7 +33,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz obciążenie **Aplikacje mobilne**.
+3. Wybierz obciążenie **Aplikacje klienckie**.
 4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
 5. Ustaw następujące szczegóły:
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
@@ -88,7 +88,7 @@ Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem 
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz pozycję **Mobile Apps**.
+3. Wybierz pozycję **Aplikacje klienckie**.
 3. W obszarze **Zarządzaj** wybierz pozycję **Zasady konfiguracji** aplikacji, a następnie wybierz pozycję **Dodaj**.
 4. Ustaw następujące szczegóły:
     - **Nazwa**. — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal

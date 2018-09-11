@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
-ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
+ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587027"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313703"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Ustawienia ograniczeń urządzeń z systemami Android i Samsung Knox Standard w usłudze Intune
 
@@ -35,7 +35,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Kopiuj i wklej (tylko rozwiązanie Samsung Knox)** — umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.
 - **Udostępnianie schowka między aplikacjami (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie ze schowka w celu kopiowania i wklejania między aplikacjami.
 - **Przesyłanie danych diagnostycznych (tylko rozwiązanie Samsung Knox)** — uniemożliwia użytkownikowi przesyłanie danych diagnostycznych z urządzenia.
-- **Resetowanie do ustawień fabrycznych (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi zresetowanie urządzenia do ustawień fabrycznych.
+- **Czyszczenie (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi przeprowadzenie [czyszczenia](devices-wipe.md) na urządzeniu.
 - **Geolokalizacja (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie z informacji o lokalizacji na urządzeniu.
 - **Wyłączanie (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi wyłączanie urządzenia.<br>Po wyłączeniu nie można ustawić opcji **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**.
 - **Przechwytywanie ekranu (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.

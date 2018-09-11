@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,26 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fee3f31b4a475ed3def1ee96fcdad2f2a414ab3c
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: f209fa315d5d5c36e661a931c32c70ba5ba93d81
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30752397"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150054"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Usuwanie zagrożenia wykrytego przez aplikację Mobile Threat Defense
 
-Aplikacja Mobile Threat Defense wykryła na urządzeniu z systemem iOS potencjalne zagrożenie. Należy rozwiązać ten problem, aby odzyskać dostęp do służbowej poczty e-mail oraz służbowych aplikacji i plików. W zależności od tego, jak dział pomocy technicznej Twojej firmy skonfigurował aplikację Mobile Threat Defense, tego rodzaju problemy będą rozwiązywane z użyciem jednej z następujących aplikacji.
+Aplikacje Mobile Threat Defense wykrywają potencjalne zagrożenia na urządzeniach i powiadamiają o nich użytkownika. Niektóre organizacje integrują usługę Mobile Threat Defense z dostawcą zarządzania urządzeniami przenośnymi, np. usługą Intune. Po zintegrowaniu usługa Mobile Threat Defense zgłasza zagrożenia (np. podejrzane aplikacje, sieci i luki w zabezpieczeniach systemu operacyjnego) i powiadamia użytkownika w aplikacji Portal firmy. Następnie możesz znaleźć szczegółowe informacje o zagrożeniu oraz kroki umożliwiające korygowanie w aplikacji Mobile Threat Defense.  
+
+Zagrożenia są wyświetlane w aplikacji Portal firmy jako nierozwiązane, niezgodne problemy. Jeśli zagrożenia zostaną zaklasyfikowane jako dostatecznie ryzykowne, firma cofnie dostęp do zasobów firmowych. Dopóki te zagrożenia pozostają na urządzeniu, wykonywanie następujących czynności może być niemożliwe:  
+
+* Łączenie z firmową pocztą e-mail
+* Łączenie firmową siecią Wi-Fi
+* Łączenie z usługą SharePoint Online
+* Synchronizowanie plików firmowych z usługą OneDrive
+* Uzyskiwanie dostępu do aplikacji firmowych
+
+Poniżej przedstawiono usługi Mobile Threat Defense właściwe dla systemu iOS, które mogła skonfigurować Twoja organizacja. Wybierz aplikację, aby przeczytać więcej o tym zachowaniu. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -32,13 +42,5 @@ Aplikacja Mobile Threat Defense wykryła na urządzeniu z systemem iOS potencjal
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Aby rozwiązać ten problem, otwórz aplikację Mobile Threat Defense i wykonaj instrukcje wyświetlane w aplikacji.
-
-**Przykład aplikacji, którą aplikacja Mobile Threat Defense uznaje za zagrożenie**
-
-Jeśli zainstalowano aplikację, która według aplikacji Mobile Threat Defense stanowi zagrożenie, zostanie wyświetlony ekran informujący o niebezpiecznym charakterze danej aplikacji. Jeśli widzisz podobny ekran, naciśnij nazwę aplikacji wyświetlaną u góry ekranu, a następnie wykonaj instrukcje, aby usunąć zagrożenie.
-
-Po odinstalowaniu aplikacji można natychmiast ponownie uzyskać dostęp do służbowej poczty e-mail i danych. Jeśli zignorujesz żądanie dotyczące odinstalowania aplikacji, utracisz dostęp do firmowej poczty e-mail i danych do czasu odinstalowania aplikacji.
-
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
 

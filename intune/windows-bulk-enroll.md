@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: a1d0c445c2e6e5f2e4227d1b04ead416bf73d737
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 937fdd2130a0ae85421a4310fe6a0dc70986d2de
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34444884"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313242"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -85,10 +85,10 @@ Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i
 ## <a name="troubleshooting-windows-bulk-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania zbiorczego w systemie Windows
 
 ### <a name="provisioning-issues"></a>Problemy z aprowizacją
-Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systemem Windows. Problemy z aprowizowaniem mogą wymagać przywrócenia w urządzeniu ustawień fabrycznych lub odzyskania urządzenia z obrazu rozruchowego. Poniżej opisano przykładowe przyczyny niepowodzeń aprowizacji:
+Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systemem Windows. Problemy z aprowizowaniem mogą wymagać wyczyszczenia urządzenia lub odzyskania urządzenia z obrazu rozruchowego. Poniżej opisano przykładowe przyczyny niepowodzeń aprowizacji:
 
 - Pakiet aprowizacyjny, który próbuje przyłączyć urządzenie do domeny usługi Active Directory lub dzierżawy usługi Azure Active Directory, która nie tworzy konta lokalnego, może spowodować, że urządzenie będzie nieosiągalne w przypadku niepowodzenia procesu przyłączania do domeny w wyniku braku łączności sieciowej.
-- Skrypty są uruchamiane przez pakiet aprowizacyjny w kontekście systemu. Skrypty mogą wprowadzać dowolne zmiany w systemie plików i konfiguracji urządzenia. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub przywrócenia ustawień fabrycznych.
+- Skrypty są uruchamiane przez pakiet aprowizacyjny w kontekście systemu. Skrypty mogą wprowadzać dowolne zmiany w systemie plików i konfiguracji urządzenia. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub wyczyszczenia danych z urządzenia.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problemy z rejestracją zbiorczą i Portalem firmy
 Jeśli użytkownik próbuje zarejestrować urządzenie przy użyciu Portalu firmy, ale zostało ono wcześniej zarejestrowane zbiorczo, otrzyma ostrzeżenie, że jego urządzenie wymaga dalszych akcji: konfiguracji albo rejestracji. Urządzenie jest zarejestrowane, ale rejestracja nie jest rozpoznawana przez witrynę internetową lub aplikację Portal firmy.

@@ -15,12 +15,12 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b65daa6e098954d88c502114fc7a33ad4cf5efcd
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: faa8918441bd705875fcdc72d3717af001ab2b85
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909290"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329874"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -59,18 +59,18 @@ Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure 
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune
 
-Jeśli aplikacja ze sklepu została zatwierdzona, ale nie jest widoczna w węźle **Licencjonowane aplikacje** w obciążeniu **Aplikacje mobilne**, wymuś natychmiastową synchronizację w następujący sposób:
+Jeśli aplikacja ze sklepu została zatwierdzona, ale nie jest widoczna w węźle **Licencjonowane aplikacje** w obciążeniu **Aplikacje klienckie**, wymuś natychmiastową synchronizację w następujący sposób:
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W okienku obciążenia **Aplikacje mobilne** w obszarze **Instalacja** wybierz pozycję **Zarządzany sklep Google Play**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
+4. W okienku obciążenia **Aplikacje klienckie** w obszarze **Instalacja** wybierz pozycję **Zarządzany sklep Google Play**.
 5. W okienku **Zarządzany sklep Google Play** wybierz pozycję **Odśwież**.  
     Strona aktualizuje godzinę i stan ostatniej synchronizacji.
-6. W okienku obciążenia **Aplikacje mobilne** wybierz pozycję **Aplikacje**.  
+6. W okienku obciążenia **Aplikacje klienckie** wybierz pozycję **Aplikacje**.  
     Zostanie wyświetlona nowo udostępniona aplikacja z zarządzanego sklepu Google Play.
 
-Gdy aplikacja zostanie wyświetlona w węźle **Licencje aplikacji** w okienku obciążenia **Aplikacje mobilne**, możesz [przypisać ją w taki sam sposób, jak dowolną inną aplikację](/intune-azure/manage-apps/deploy-apps). Aplikacje można przypisywać tylko do grup użytkowników.
+Gdy aplikacja zostanie wyświetlona w węźle **Licencje aplikacji** w okienku obciążenia **Aplikacje klienckie**, możesz [przypisać ją w taki sam sposób, jak dowolną inną aplikację](/intune-azure/manage-apps/deploy-apps). Aplikacje można przypisywać tylko do grup użytkowników.
 
 Po przypisaniu aplikacja jest instalowana na urządzeniach docelowych. Użytkownik urządzenia nie będzie monitowany o zatwierdzenie instalacji.
 

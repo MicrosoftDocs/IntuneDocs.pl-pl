@@ -15,12 +15,12 @@ ms.assetid: a1542fc3-672e-47c1-a21f-82826a2f8ac4
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 767402326c2b87043eea776a83d58a08072cd301
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 6b69934edc70e10ee01394cf5b6a4fed75334660
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869342"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330062"
 ---
 # <a name="get-started-with-adding-apps-in-microsoft-intune"></a>Wprowadzenie do dodawania aplikacji w usłudze Microsoft Intune
 
@@ -39,7 +39,7 @@ Usługa Intune pozwala dodawać i przypisywać następujące typy aplikacji do u
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz pozycję **Aplikacje mobilne**, a następnie wybierz pozycję **Aplikacje**.
+3. Wybierz pozycję **Aplikacje klienckie**, a następnie wybierz pozycje **Aplikacje**.
 4. Wybierz pozycję **Dodaj**, a następnie wybierz pozycję **iOS** jako **typ aplikacji**.
 5. Wybierz pozycję **Wybierz aplikację**, aby wyświetlić okienko **Wyszukaj w sklepie App Store**.
 6. W polu tekstowym wyszukaj aplikację, która zostanie przypisana do urządzenia. Wybierz aplikację, a następnie wybierz pozycję **Wybierz**.

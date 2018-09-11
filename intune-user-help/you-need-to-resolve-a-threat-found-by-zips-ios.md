@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,34 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 1ee101fe31b32ccd3d5b1c7cfd361b881e232ae5
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 9cb87541e45591ae8c4d1e8151fdb781ebd0b364
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148144"
 ---
-# <a name="you-need-to-resolve-a-threat-found-by-zimperium-zips"></a>Należy rozwiązać problem zagrożenia wykrytego przez aplikację Zimperium zIPS
+# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Rozwiązywanie problemu zagrożenia wykrytego przez aplikację Zimperium zIPS
 
-Aplikacja Zimperium zIPS wykryła potencjalne zagrożenie na urządzeniu. Należy usunąć ten problem, aby odzyskać dostęp do służbowej poczty e-mail oraz służbowych aplikacji i plików. Wyświetlany komunikat zależy od problemu wykrytego na urządzeniu przez aplikację Zimperium zIPS.
+Aplikacja Zimperium zIPS to mobilna usługa ochrony przed zagrożeniami, która identyfikuje potencjalne zagrożenia na urządzeniach z systemem iOS. Zagrożenia te są zgłaszane do aplikacji Portal firmy i pojawiają się tam jako nierozwiązane, niezgodne problemy. Jeśli urządzenie zostanie zidentyfikowane jako niezgodne, wykonywanie następujących czynności może być niemożliwe:
 
-Aby usunąć ten problem, otwórz aplikację Zimperium zIPS i wykonaj wyświetlane w niej instrukcje.
+* Łączenie z firmową pocztą e-mail
+* Łączenie firmową siecią Wi-Fi
+* Łączenie z usługą SharePoint Online
+* Synchronizowanie plików firmowych z usługą OneDrive
+* Uzyskiwanie dostępu do aplikacji firmowych
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Ekran wyświetlany w przypadku zablokowania dostępu do wiadomości e-mail lub plików w zarejestrowanym urządzeniu
+W tym artykule opisano sposób rozpoznawania alertów zagrożeń aplikacji Zimperium zIPS oraz działania, które należy podjąć, aby je rozwiązać. 
 
-W przypadku próby uzyskania dostępu do firmowej poczty e-mail lub plików w sytuacji, gdy na zarejestrowanym urządzeniu znajduje się wirus lub występuje inne zagrożenie bezpieczeństwa, komunikat aplikacji Zimperium zIPS powiadomi o konieczności podjęcia odpowiednich akcji.
+## <a name="troubleshoot-virus-or-security-threat"></a>Rozwiązywanie problemów związanych z zagrożeniem ze strony wirusa lub zagrożeniem dla bezpieczeństwa  
+W przypadku wykrycia zagrożenia wirusowego lub zagrożenia dla bezpieczeństwa aplikacja Zimperium zIPS wymusi ograniczenia zgodnie z zasadami dostępu organizacji. Zasady dostępu w firmie mogą uniemożliwiać dostęp do firmowej sieci, aplikacji i poczty e-mail z urządzenia.  
 
-Wybierz link **portal zarządzania urządzeniami**, aby przejść do [witryny internetowej Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog), gdzie zostaną wyświetlone instrukcje dotyczące sposobu rozwiązania problemu.
+Aplikacja Zimperium zIPS wyświetli monit o podjęcie działania w celu odzyskania utraconego dostępu. Wybierz zagrożenie i wykonaj instrukcje w aplikacji, aby rozwiązać problem.  
 
-## <a name="example-of-an-app-that-zimperium-zips-sees-as-a-threat"></a>Przykład aplikacji uznawanej za zagrożenie przez aplikację Zimperium zIPS
+## <a name="resolve-an-app-threat"></a>Rozwiązywanie zagrożenia aplikacji
 
-Jeśli zainstalowana aplikacja jest uznawana przez aplikację Zimperium zIPS za zagrożenie, zostanie wyświetlone ostrzeżenie o tym, że na urządzeniu jest zainstalowana niezaufana aplikacja.
+Jeśli zainstalujesz aplikację, która zostanie uznana za zagrożenie dla urządzenia, otrzymasz powiadomienie w aplikacji Zimperium zIPS. Jeśli ta aplikacja pozostaje na urządzeniu, nie będzie można uzyskać dostępu do zasobów firmy.  
 
-W takiej sytuacji należy odinstalować tę aplikację, aby natychmiast odzyskać dostęp do firmowej poczty e-mail i danych. Jeśli jej nie odinstalujesz, utracisz dostęp do poczty e-mail i danych do czasu odinstalowania aplikacji.
+Aby rozwiązać problem, wybierz aplikację z listy zagrożeń w aplikacji Zimperium zIPS. Następnie wykonaj instrukcje wyświetlane na ekranie, aby usunąć i odinstalować aplikację.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z administratorem IT. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). 

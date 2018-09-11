@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 61310f5baa64c43d2e818df6c61a36d232922c1c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744741"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312854"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Ustawienia sieci VPN systemu Windows 10 w usłudze Intune
 
@@ -42,6 +42,8 @@ W zależności od wybranych ustawień niektórych wartości nie będzie można s
   - **Serwer domyślny**: określa ten serwer jako serwer domyślny używany przez urządzenia do nawiązania połączenia. Ustaw tylko jeden serwer jako domyślny.
   - **Importuj**: umożliwia przejście do pliku zawierającego rozdzielaną przecinkami listę serwerów w formacie: opis, adres IP lub nazwa FQDN, serwer domyślny. Wybierz pozycję **OK**, aby zaimportować te serwery do listy **Serwery**.
   - **Eksportuj**: umożliwia wyeksportowanie listy serwerów do pliku CSV (plik wartości rozdzielanych przecinkami)
+
+- **Rejestrowanie adresów IP przy użyciu wewnętrznego serwera DNS**: wybierz opcję **Włącz**, aby skonfigurować profil sieci VPN w systemie Windows 10 i dynamicznie rejestrować adresy IP przypisane do interfejsu sieci VPN przy użyciu wewnętrznego serwera DNS, lub wybierz opcję **Wyłącz**, aby nie rejestrować dynamicznie adresów IP.
 
 - **Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,28 +17,29 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e31451abd79c17618377598d29c455c4c0637348
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 4afa12cffbf199d271df912bfcfc1aedb4d8b23c
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150492"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Zmiana nazwy urządzenia z poziomu witryny sieci Web Portal firmy
 
-Dowiedz się, jak zmienić nazwę zarejestrowanego urządzenia zarządzanego z poziomu witryny internetowej Portal firmy. Zmień nazwę urządzenia z jego ogólnej lub domyślnej nazwy modelu na taką, która ułatwi jego szybką identyfikację.  
+Zmień nazwę zarejestrowanego urządzenia zarządzanego z poziomu witryny internetowej Portal firmy. Zmień ogólną lub domyślną nazwę modelu urządzenia na nazwę, którą możesz szybko zidentyfikować.
 
-1. W [witrynie internetowej Portal firmy](https://portal.manage.microsoft.com/HelpDeskDialog) wybierz przycisk __Menu__, a następnie wybierz pozycję __Moje urządzenia__.
+1. Otwórz [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), wybierz przycisk __Menu__, a następnie wybierz pozycję __Urządzenia__.  
 
 2. Wybierz urządzenie, którego nazwę chcesz zmienić.
 
-![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)  
+    ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png)   
 
-3. Wybierz pozycję **Zmień nazwę**.  
+3. Wybierz pozycję **Zmień nazwę**. Jeśli opcja zmiany nazwy nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)** > **Zmień nazwę**.   
 
-   ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)  
-    
+   ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png)   
 
-4. W polu z nazwą urządzenia wpisz nową nazwę dla danego urządzenia. Następnie naciśnij przycisk **Zmień nazwę**. Urządzenie będzie teraz widoczne z nową nazwą.
+    ![Powiększony widok ikony Więcej wyróżnionej czerwoną strzałką.](./media/rename-reset-device-step3-more-1808.png)  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com/HelpDeskDialog).
+4. W polu z nazwą urządzenia wpisz nową nazwę dla danego urządzenia. Następnie naciśnij przycisk **Zmień nazwę**. Urządzenie będzie teraz widoczne z nową nazwą.  
+
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

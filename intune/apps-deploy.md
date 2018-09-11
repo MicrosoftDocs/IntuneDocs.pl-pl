@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46ef614af39a1dd1b44f4f5ff32f53687ccb060a
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
+ms.openlocfilehash: 96b95fcbfdc970976e24553972c5890f35cfddb2
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164573"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329482"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -52,7 +52,7 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W menu usługi **Intune** wybierz pozycję **Aplikacje mobilne**.
+3. W menu **Intune** wybierz opcję **Aplikacje klienckie**.
 4. W sekcji **Zarządzaj** menu wybierz pozycję **Aplikacje**.
 5. W okienku **Aplikacje** wybierz aplikację, którą chcesz przypisać.
 6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
@@ -87,14 +87,14 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
 |Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
 |Użytkownik, dostępne|Użytkownik, niedostępne|Niedostępny|
-|Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstaluj|
-|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstaluj
+|Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstalowanie|
+|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstalowanie
 |Użytkownik, wymagane|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune traktuje jako wymagane
 |Użytkownik, wymagane|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane
 |Użytkownik, dostępne|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane (wymagane i dostępne)
 |Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako dostępne<br><br>Aplikacja jest wyświetlana w Portalu firmy.<br><br>Jeśli aplikacja została już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), ta aplikacja zostaje odinstalowana.<br><br>Jeśli użytkownik wybierze pozycję **Zainstaluj z Portalu firmy**, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
 |Użytkownik, niedostępne|Urządzenie, wymagane|Wymagane|
-|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstaluj|
+|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstalowanie|
 |Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane|
 |Użytkownik, odinstalowywanie|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako odinstalowywanie|
 |Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagane|

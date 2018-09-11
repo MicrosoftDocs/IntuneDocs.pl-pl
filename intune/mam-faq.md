@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c3d0e31520aa2f73eabfce5ebc1d55d4df73946
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: d7207b84dacc47b567c0fc86c3215605965fda6d
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329930"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312802"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -112,10 +112,12 @@ Osobisty numer identyfikacyjny (PIN) jest kodem dostępu służącym do weryfika
 
     - **Numer PIN jest współużytkowany przez aplikacje tego samego wydawcy, aby zwiększyć użyteczność:** w systemie iOS numer PIN danej aplikacji jest używany przez wszystkie aplikacje **tego samego wydawcy aplikacji**. W systemie Android numer PIN danej aplikacji jest współużytkowany przez wszystkie aplikacje.
     - **Zachowanie „Ponownie sprawdź wymagania dostępu po (w minutach)” po ponownym uruchomieniu urządzenia:** „Czasomierz numeru PIN” śledzi liczbę minut bezczynności, które określają, kiedy po raz kolejny pokazać pytanie o numer PIN aplikacji usługi Intune. W systemie iOS na czasomierz numeru PIN nie ma wpływu ponowne uruchomienie urządzenia. W związku z tym ponowne uruchomienie urządzenia nie ma wpływu na liczbę minut, przez które użytkownik jest nieaktywny w aplikacji systemu iOS objętej zasadami numeru PIN usługi Intune. W systemie Android czasomierz numeru PIN jest resetowany przy ponownym uruchomieniu urządzenia. W efekcie aplikacje systemu Android z zasadami numeru PIN usługi Intune prawdopodobnie wyświetlą zapytanie o numer PIN aplikacji niezależnie od wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)” **po ponownym uruchomieniu urządzenia**.  
-    - **Ciągłe działanie czasomierza skojarzonego z numerem PIN:** gdy zostanie wprowadzony numer PIN w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja zostanie wyłączona z pierwszego planu (głównego fokusu wprowadzania) na urządzeniu, czasomierz numeru PIN zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”. 
+    - **Ciągłe działanie czasomierza skojarzonego z numerem PIN:** gdy zostanie wprowadzony numer PIN w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja zostanie wyłączona z pierwszego planu (głównego fokusu wprowadzania) na urządzeniu, czasomierz numeru PIN zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
+
+W przypadku urządzeń z systemem iOS, nawet jeśli numer PIN jest współużytkowany pomiędzy aplikacjami od różnych dostawców, zostanie ponownie wyświetlony monit, jeśli ponownie osiągnięto wartość **Sprawdź ponownie wymagania dostępu po (minuty)** dla aplikacji, która nie jest głównym elementem fokusu wprowadzania danych. Przykładowo użytkownik ma aplikację _A_ od wydawcy _X_ oraz aplikację _B_ od wydawcy _Y_; obie aplikacje współdzielą ten sam numer PIN. Użytkownik skupia się na aplikacji _A_ (na pierwszym planie), a aplikacja _B_ jest zminimalizowana. Po osiągnięciu wartości **Sprawdź ponownie wymagania dostępu po (minuty)** i przełączeniu się przez użytkownika na aplikację _B_ będzie wymagany numer PIN.
 
       >[!NOTE] 
-      > Aby częściej sprawdzać wymagania dostępu użytkownika (tj. monit o podanie numeru PIN), szczególnie w przypadku często używanej aplikacji, zaleca się zmniejszenie wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”. 
+      > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting. 
       
 - **Jak numer PIN usługi Intune działa z numerami PIN wbudowanej aplikacji dla programu Outlook i OneDrive?**<br></br>
 Numer PIN usługi Intune działa w oparciu o czasomierz bazujący na braku aktywności, znany również jako wartość „Ponownie sprawdź wymagania dostępu po (w minutach)”. W efekcie monity o numer PIN usługi Intune są wyświetlane niezależnie od monitów o numer PIN wbudowanej aplikacji dla programu Outlook i OneDrive, które często są domyślnie powiązane z uruchomieniem aplikacji. Jeśli użytkownik jednocześnie otrzymuje obydwa monity o numer PIN, oczekiwane zachowanie powinno określać, że numer PIN usługi Intune ma pierwszeństwo. 
@@ -137,13 +139,13 @@ Administratorzy IT mogą wdrażać zasady ochrony aplikacji, które wymagają sz
 - **Co zostaje zaszyfrowane?**<br></br> Szyfrowane są tylko dane oznaczone jako „firmowe” zgodnie z zasadami ochrony aplikacji administratora IT. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm). W przypadku aplikacji biznesowych zarządzanych przy użyciu Narzędzia opakowującego aplikacje dostępnego w usłudze Intune wszystkie dane aplikacji uznaje się za „firmowe”.
 
 **Jak usługa Intune czyści dane zdalnie?**<br></br>
-Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: pełne czyszczenie urządzenia, selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi oraz selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi. Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz temat [Usuwanie urządzeń za pomocą resetowania do ustawień fabrycznych lub usuwania danych firmy](devices-wipe.md#factory-reset). Aby dowiedzieć się więcej o czyszczeniu selektywnym za pomocą usługi MAM, zobacz sekcję [Usuwanie danych firmy](devices-wipe.md#remove-company-data) i temat [Jak czyścić z aplikacji tylko dane firmowe](apps-selective-wipe.md).
+Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: pełne czyszczenie urządzenia, selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi oraz selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi. Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz temat [Usuwanie urządzeń za pomocą czyszczenia lub wycofywania](devices-wipe.md). Aby dowiedzieć się więcej o czyszczeniu selektywnym za pomocą usługi MAM, zobacz sekcję [Akcja Wycofaj](devices-wipe.md#retire) i temat [Jak czyścić z aplikacji tylko dane firmowe](apps-selective-wipe.md).
 
-- **Co to jest resetowanie do ustawień fabrycznych**<br></br> [Resetowanie do ustawień fabrycznych](devices-wipe.md) usuwa wszystkie dane użytkownika i ustawienia z **urządzenia** przez przywrócenie jego domyślnych ustawień fabrycznych. Urządzenie jest usuwane z usługi Intune.
+- **Co to jest czyszczenie?**<br></br> [Czyszczenie](devices-wipe.md) usuwa wszystkie dane użytkownika i ustawienia z **urządzenia** przez przywrócenie jego domyślnych ustawień fabrycznych. Urządzenie jest usuwane z usługi Intune.
   >[!NOTE]
-  > Resetowanie do ustawień fabrycznych może odbyć się tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami mobilnymi (MDM) usługi Intune.
+  > Czyszczenie może odbyć się tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune.
 
-- **Co to jest selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi?**<br></br> Aby przeczytać o usuwaniu danych firmowych, zobacz temat [Usuwanie urządzeń — Usuwanie danych firmy](devices-wipe.md#remove-company-data).
+- **Co to jest selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi?**<br></br> Aby przeczytać o usuwaniu danych firmowych, zobacz temat [Usuwanie urządzeń — wycofywanie](devices-wipe.md#retire).
 
 - **Co to jest selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi?**<br></br> Selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi po prostu usuwa dane aplikacji firmowych z aplikacji. Żądanie jest inicjowane z użyciem usługi Intune w ramach witryny Azure Portal. Aby dowiedzieć się, jak zainicjować żądanie czyszczenia, zobacz temat [Jak czyścić z aplikacji usługi Intune tylko dane firmowe](apps-selective-wipe.md).
 

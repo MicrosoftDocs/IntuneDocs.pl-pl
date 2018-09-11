@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/23/2018
+ms.date: 8/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d43e95b2f236dc4c03bb3f63670b2b1400243531
-ms.sourcegitcommit: 0303e3b8c510f56e191e6079e3dcdccfc841f530
+ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40251945"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313795"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -71,27 +71,15 @@ Zwykle należy wykonać to zadanie raz. Jeśli usługa ATP jest już włączona 
 
 ## <a name="onboard-devices-using-a-configuration-profile"></a>Dodawanie urządzeń przy użyciu profilu konfiguracji
 
-Usługa Windows Defender zawiera pakiet konfiguracji dołączania, który jest instalowany na urządzeniach. Po zainstalowaniu pakiet komunikuje się z [usługami Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) w celu skanowania plików, wykrywania zagrożeń oraz zgłaszania ryzyka do usługi Windows Defender ATP. Przy użyciu usługi Intune możesz utworzyć profil konfiguracji, który korzysta z tego pakietu konfiguracji. Następnie przypisz ten profil do urządzeń, które dodajesz po raz pierwszy.
+Podczas rejestrowania użytkownika końcowego w usłudze Intune możesz wypchnąć inne ustawienia do urządzeniu przy użyciu profilu konfiguracji. Dotyczy to również usługi Windows Defender ATP.
 
-Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić ponownie. Zwykle jest to jednorazowa czynność.
+Usługa Windows Defender zawiera dołączony pakiet konfiguracji, który komunikuje się z [usługami Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) w celu skanowania plików, wykrywania zagrożeń oraz zgłaszania ryzyka do usługi Windows Defender ATP.
 
-Można również dodać urządzenia przy użyciu [zasad grupy lub programu System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
+Podczas dołączania usługa Intune pobiera automatycznie wygenerowany pakiet konfiguracyjny z usługi Windows Defender ATP. Gdy profil jest wypychany do urządzenia lub na nim wdrażany, ten pakiet konfiguracyjny jest również wypychany do urządzenia. Dzięki temu usługa Windows Defender ATP może monitorować urządzenie pod kątem zagrożeń.
 
-W następnych krokach pokazano, jak dodawać urządzenia przy użyciu usługi Intune.
+Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić ponownie. Można również dodać urządzenia przy użyciu [zasad grupy lub programu System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
 
-#### <a name="download-configuration-package"></a>Pobieranie pakietu konfiguracji
-
-1. W usłudze [Windows Defender Security Center](https://securitycenter.windows.com) wybierz kolejno pozycje **Ustawienia** > **Dołączanie**.
-2. Podaj następujące ustawienia:
-  - **System operacyjny**: Windows 10
-  - **Dodaj maszynę** > **Metoda wdrażania**: Zarządzanie urządzeniami przenośnymi/Microsoft Intune
-3. Wybierz pozycję **Pobierz pakiet** i zapisz plik **WindowsDefenderATPOnboardingPackage.zip**. Wyodrębnij plik.
-
-Ten plik zip zawiera plik **WindowsDefenderATP.onboarding**, który jest wymagany w następnych krokach.
-
-#### <a name="create-the-atp-configuration-profile"></a>Tworzenie profilu konfiguracji usługi ATP
-
-Ten profil korzysta z pakietu dołączania pobranego w poprzednich krokach.
+### <a name="create-the-configuration-profile"></a>Tworzenie profilu konfiguracji
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
@@ -100,10 +88,9 @@ Ten profil korzysta z pakietu dołączania pobranego w poprzednich krokach.
 5. W polu **Typ profilu** wybierz pozycję **Windows Defender ATP (Windows 10 Desktop)**.
 6. Skonfiguruj ustawienia:
 
-  - **Dodaj pakiet konfiguracji**: przeglądaj i wybierz pobrany plik **WindowsDefenderATP.onboarding**. Plik ten umożliwia ustawienie, zgodnie z którym urządzenia będą mogły raportować do usługi Windows Defender ATP.
-  - **Udostępnianie próbek dla wszystkich plików**: umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Windows Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Windows Defender ATP w celu wykonania szczegółowej analizy.
-  - **Usprawnij częstotliwość raportowania danych telemetrycznych**: włącz to ustawienie dla urządzeń narażonych na duże ryzyko, co pozwoli na częstsze przekazywanie danych telemetrycznych do usługi Windows Defender ATP.
-  - **Pakiet konfiguracji odłączania**: jeśli chcesz usunąć lub „odciążyć” monitorowanie usługi Windows Defender ATP, możesz pobrać pakiet odciążania w usłudze [Windows Defender Security Center](https://securitycenter.windows.com) i dodać go. W przeciwnym razie pomiń tę właściwość.
+  - **Typ pakietu konfiguracji klienta usługi Windows Defender ATP**: wybierz pozycję **Dodaj**, aby dodać pakiet konfiguracyjny do profilu. Wybierz pozycję **Odłącz**, aby usunąć pakiet konfiguracyjny z profilu.
+  - **Udostępnianie próbek dla wszystkich plików**: pozycja **Włącz** umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Windows Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Windows Defender ATP w celu wykonania szczegółowej analizy. Pozycja **Nieskonfigurowane** nie udostępnia żadnych przykładów w usłudze Windows Defender ATP.
+  - **Usprawnij częstotliwość raportowania danych telemetrycznych**: pozycja **Włącz** to ustawienie dla urządzeń narażonych na duże ryzyko, co pozwoli na częstsze przekazywanie danych telemetrycznych do usługi Windows Defender ATP.
 
     Dodatkowe informacje na temat ustawień usługi Windows Defender ATP można znaleźć w artykule [Onboard Windows 10 machines using System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) (Dodawanie maszyn z systemem Windows 10 za pomocą programu System Center Configuration Manager).
 

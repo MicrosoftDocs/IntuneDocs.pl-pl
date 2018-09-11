@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b3c374e4ce6baeab8cc6fde3f6c45c63c48e34dd
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 4c268f9061ae624c1f85e386e5633b14334860b7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903079"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313142"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń za pomocą rozwiązania Windows AutoPilot
 Rozwiązanie Windows AutoPilot upraszcza aprowizowanie urządzeń. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu AutoPilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem AutoPilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows AutoPilot (Przegląd rozwiązania Windows AutoPilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -72,11 +72,13 @@ Profile wdrażania rozwiązania AutoPilot służą do konfigurowania urządzeń 
     - **Wdrażanie samodzielne (wersja zapoznawcza)**: (system Windows 10 Insider Preview w kompilacji 17672 lub nowszy) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do aprowizacji urządzenia.
 4. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do usługi Azure AD**.
 5. Wybierz pozycję **Środowisko gotowe do użycia (OOBE, Out-of-box experience)**, skonfiguruj poniższe opcje, a następnie wybierz przycisk **Zapisz**:
-    - **Język (region)**\*: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
-    - **Automatycznie skonfiguruj klawiaturę**\*: jeśli wybrano pozycję **Język (region)**, pomiń stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
+    - **Język (region)***: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
+    - **Automatycznie skonfiguruj klawiaturę***: jeśli wybrano pozycję **Język (region)**, wybierz pozycję **Tak**, aby pominąć stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
     - **Umowa licencyjna użytkownika oprogramowania (EULA, End User License Agreement)**: (system Windows 10 w wersji 1709 lub nowszej) określ, czy umowa licencyjna użytkownika oprogramowania ma być pokazywana użytkownikom.
     - **Ustawienia prywatności**: określ, czy ustawienia prywatności mają być pokazywane użytkownikom.
-    - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika). 
+    - **Ukryj zmianę opcji konta (tylko niejawny program testów systemu Windows)**: wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędu domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika).
+    - **Zastosuj szablon nazwy komputera (tylko niejawny program testów systemu Windows)**: wybierz pozycję **Tak**, aby utworzyć szablon do stosowania podczas określania nazwy urządzenia w trakcie aprowizacji. Nazwy muszą mieć co najwyżej 15 znaków i mogą zawierać litery, cyfry i łączniki. Nazwy nie mogą zawierać samych cyfr. Użyj [makro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać numer seryjny specyficzny dla sprzętu. Zamiennie możesz zastosować [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać losowy ciąg cyfr, gdzie x odpowiada liczbie cyfr do dodania. 
 
 6. Wybierz pozycję **Utwórz**, aby utworzyć profil. Profil wdrażania rozwiązania AutoPilot jest teraz dostępny do przypisania do urządzeń.
 
@@ -105,6 +107,22 @@ Po utworzeniu profilu wdrażania rozwiązania AutoPilot możesz edytować niekt�
 Możesz wyświetlić alert, aby sprawdzić, ile urządzeń z programu AutoPilot nie ma przypisanych profili wdrażania programu AutoPilot. Skorzystaj z informacji w alercie, aby utworzyć profile i przypisać je do nieprzypisanych urządzeń. Po kliknięciu alertu zostanie wyświetlona pełna lista urządzeń w programie Windows AutoPilot.
 
 Aby wyświetlić alerty dotyczące nieprzypisanych urządzeń, w [usłudze Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Przegląd**  >  **Nieprzypisane urządzenia**.  
+
+
+## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Przypisywanie użytkownika do określonego urządzenia rozwiązania Autopilot
+
+Możesz przypisać użytkownika do określonego urządzenia rozwiązania Autopilot. To przypisanie wstępnie wypełnia dane użytkownika z usługi Azure Active Directory na [oznaczonej marką firmy](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) stronie logowania podczas instalowania systemu Windows. Pozwala ono ustawić też niestandardową nazwę powitania. Nie powoduje to wstępnego wypełnienia ani modyfikacji logowania w systemie Windows. W ten sposób można przypisać tylko licencjonowanych użytkowników usługi Intune.
+
+Wymagania wstępne: Portal firmy usługi Azure Active Directory został skonfigurowany.
+
+1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > wybierz urządzenie > **Przypisz użytkownika**.
+    ![Zrzut ekranu przypisywania użytkownika](media/enrollment-autopilot/assign-user.png)
+2. Wybierz użytkownika platformy Azure mającego licencję na korzystanie z usługi Intune, a następnie wybierz pozycję **Wybierz**.
+    ![Zrzut ekranu wybranego użytkownika](media/enrollment-autopilot/select-user.png)
+3. W polu **Nazwa przyjazna dla użytkownika** wpisz przyjazną nazwę lub po prostu zaakceptuj wartość domyślną. Jest to przyjazna nazwa, która jest wyświetlana podczas logowania użytkownika w trakcie instalowania systemu Windows.
+    ![Zrzut ekranu przedstawiający przyjazną nazwę](media/enrollment-autopilot/friendly-name.png)
+4. Wybierz przycisk **OK**.
+
 
 ## <a name="delete-autopilot-devices"></a>Usuwanie urządzeń z rozwiązaniem AutoPilot
 

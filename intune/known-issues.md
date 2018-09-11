@@ -5,7 +5,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 08/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f49b5050f4ce182699f0955bed6224309a4d7c7c
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073839"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347801"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -33,6 +33,13 @@ Aby zgłosić błąd, którego nie ma na tej liście, [otwórz żądanie pomocy 
 Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport z witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migracja
+
+### <a name="export-azure-classic-portal-compliance-policies-to-recreate-these-policies-in-the-intune-azure-portal"></a>Eksportowanie zasad zgodności platformy klasycznego portalu platformy Azure, aby odtworzyć te zasady w witrynie Azure Portal usługi Intune
+
+Zasady zgodności utworzone w klasycznej witrynie Azure Portal będą przestarzałe. Możesz przejrzeć i usunąć wszelkie istniejące zasady zgodności, jednak nie możesz ich zaktualizować. Jeśli musisz migrować jakiekolwiek zasady zgodności do bieżącej witryny Azure Portal usługi Intune, możesz wyeksportować zasady w postaci pliku rozdzielanego przecinkami (pliku CSV). Następnie można użyć szczegółów w pliku, aby utworzyć ponownie zasady w witrynie Azure Portal usługi Intune.
+
+> [!IMPORTANT]
+> Po wycofaniu klasycznego portalu platformy Azure już nie będzie można uzyskać dostępu ani wyświetlić zasad zgodności. Dlatego należy się upewnić, że zasady zostały wyeksportowane, i odtworzyć je ponownie w witrynie Azure Portal przed wycofaniem klasycznego portalu platformy Azure.
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Funkcje starszej wersji klienta usługi Intune są dostępne tylko w konsoli programu Silverlight
 
@@ -52,7 +59,7 @@ Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z 
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Wiele monitów o instalację niektórych aplikacji VPP
 Może być wyświetlanych wiele monitów o zainstalowane niektórych aplikacji VPP, które są już zainstalowane na urządzeniach użytkowników końcowych. Ten problem występuje, jeśli ustawiono opcję **Aktualizacje automatyczne aplikacji** na **Wł.** dla tokenu VPP przekazanego do witryny Azure Portal usługi Intune.    
 
-Aby obejść ten problem, możesz wyłączyć opcję **Aktualizacje automatyczne aplikacji** dla tego tokenu VPP. W tym celu przejdź do usługi Microsoft Intune w witrynie Azure Portal. W usłudze Intune wybierz pozycję **Aplikacje mobilne** > **Tokeny programu VPP dla systemu iOS**. Następnie wybierz token VPP użyty do wdrożenia aplikacji, której dotyczy problem, i wybierz kolejno pozycje **Edytuj** > **Aktualizacje automatyczne aplikacji** > **Wył.** > **Zapisz**. Innym sposobem jest zatrzymanie wdrażania aplikacji, której dotyczy problem, jako aplikacji VPP, co spowoduje, że monity nie będą już wyświetlane.    
+Aby obejść ten problem, możesz wyłączyć opcję **Aktualizacje automatyczne aplikacji** dla tego tokenu VPP. W tym celu przejdź do usługi Microsoft Intune w witrynie Azure Portal. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Tokeny programu VPP dla systemu iOS**. Następnie wybierz token VPP użyty do wdrożenia aplikacji, której dotyczy problem, i wybierz kolejno pozycje **Edytuj** > **Aktualizacje automatyczne aplikacji** > **Wył.** > **Zapisz**. Innym sposobem jest zatrzymanie wdrażania aplikacji, której dotyczy problem, jako aplikacji VPP, co spowoduje, że monity nie będą już wyświetlane.    
 
 Jest to znany problem w bieżącej wersji. Wkrótce zostanie wydana poprawka, która rozwiąże ten problem. Po wdrożeniu poprawki użytkownicy nie będą już otrzymywać wielu monitów o instalację aplikacji.
 

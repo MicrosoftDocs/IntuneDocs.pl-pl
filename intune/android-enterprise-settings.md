@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15ac6adbcf262fd14edf11107b032aeda106a15b
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039339"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312900"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Ustawienia kiosku rozwiązania Android enterprise w usłudze Intune
 
@@ -33,14 +33,14 @@ Profile kiosku systemu Android obsługują następujące ustawienia konfiguracji
     - **Automatycznie udzielaj**: uprawnienia są automatycznie udzielane.
     - **Automatycznie odmawiaj**: uprawnienia są automatycznie odrzucane.
 - **Zmiany głośności**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie głośności urządzenia.
-- **Resetowanie do ustawień fabrycznych**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom resetowanie urządzenia do ustawień fabrycznych.
+- **Wyczyść**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom wyczyszczenie urządzenia.
 - **Bezpieczny rozruch**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom ponowne uruchamianie urządzenia w trybie awaryjnym.
 - **Pasek stanu**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dostęp do paska stanu, w tym powiadomień i szybkich ustawień.
 - **Zmiany ustawień sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie konfiguracji sieci Wi-Fi utworzonych przez właściciela urządzenia. Użytkownicy mogą tworzyć własne konfiguracje sieci Wi-Fi.
 - **Konfiguracja punktu dostępu sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom tworzenie i edytowanie jakichkolwiek konfiguracji sieci Wi-Fi.
 - **Funkcje debugowania**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom korzystanie z funkcji debugowania.
 - **Dostosowanie mikrofonu**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dostosowywanie głośności i wyciszanie mikrofonu.
-- **Adresy e-mail na potrzeby ochrony funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**, aby określić adresy e-mail (oddzielane średnikami), za pomocą których można odblokować urządzenie po przeprowadzeniu resetowania do ustawień fabrycznych. Jeśli adres e-mail nie zostanie określony, każda osoba może odblokować urządzenie po przeprowadzeniu resetowania do ustawień fabrycznych.
+- **Adresy e-mail na potrzeby ochrony funkcji czyszczenia**: wybierz pozycję **Adresy e-mail konta Google**, aby określić adresy e-mail (oddzielane średnikami), za pomocą których można odblokować urządzenie po przeprowadzeniu czyszczenia. Jeśli adres e-mail nie zostanie określony, każda osoba może odblokować urządzenie po przeprowadzeniu czyszczenia.
 - **Wyjście bezpieczeństwa sieci**: wybierz pozycję **Włącz**, aby włączyć funkcję wyjścia bezpieczeństwa sieci. Jeśli podczas rozruchu nie można nawiązać połączenia sieciowego, funkcja wyjścia bezpieczeństwa wyświetla użytkownikowi monit o nawiązanie tymczasowego połączenia z siecią w celu odświeżenia zasad urządzenia. Po zastosowaniu zasad sieć tymczasowa zostanie zapomniana, a urządzenie będzie kontynuować rozruch. Umożliwia to nawiązanie połączenia z siecią, gdy w ramach ostatnich zasad nie istnieje odpowiednia sieć, a urządzenie jest uruchamiane w aplikacji w trybie blokady zadania lub użytkownik nie może uzyskać dostępu do ustawień urządzenia.
 - **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom przeprowadzanie instalacji z nieznanych źródeł.
 - **Aktualizacja systemu**: wybierz opcję, aby określić sposób obsługi aktualizacji bezprzewodowych przez urządzenie:

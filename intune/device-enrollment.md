@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7aabb010baa4a5e53ad5e4264edc43e3ca111c70
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1bd9cff2148857ab6b0ea6d6e3c940e1e731c44b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909205"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313165"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,7 +34,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 
 | **Metoda** |  **Wymagane zresetowanie** |    [**Koligacja użytkownika**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) |   **Zablokowane** | **Szczegóły** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Urządzenia są resetowane do ustawień fabrycznych podczas rejestracji. |  Kojarzy każde urządzenie z użytkownikiem.| Użytkownicy nie mogą wyrejestrowywać urządzeń.  | |
+| | Podczas rejestracji urządzenia są czyszczone. |  Kojarzy każde urządzenie z użytkownikiem.| Użytkownicy nie mogą wyrejestrowywać urządzeń.  | |
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie|   Tak |   Nie | [Więcej informacji](./apple-mdm-push-certificate-get.md)|
 |**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  | [Więcej informacji](./device-enrollment-program-enroll-ios.md)|
 |**[Device Enrollment Program](#apple-device-enrollment-program)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](./device-enrollment-program-enroll-ios.md)|
@@ -95,7 +95,7 @@ Więcej informacji o rejestracji urządzeń z systemem iOS przy użyciu programu
 - [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Configurator i Asystenta ustawień](apple-configurator-setup-assistant-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB-Direct
-W celu przeprowadzenia rejestracji bezpośredniej administrator musi ręcznie zarejestrować każde urządzenie, tworząc zasady rejestracji i eksportując je do programu Apple Configurator. Urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności resetowania do ustawień fabrycznych. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu ani zarządzania aplikacjami mobilnymi.
+W celu przeprowadzenia rejestracji bezpośredniej administrator musi ręcznie zarejestrować każde urządzenie, tworząc zasady rejestracji i eksportując je do programu Apple Configurator. Urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności czyszczenia urządzenia. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu ani zarządzania aplikacjami mobilnymi.
 
 Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
 

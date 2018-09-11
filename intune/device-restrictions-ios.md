@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 71ed2458e35934de9da297140d49d6d4128b0784
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321496"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329822"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -81,7 +81,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 - Parowanie z zegarkiem Apple Watch 
 
 > [!NOTE]
-> Firma Apple potwierdza, że w 2018 r. niektóre ustawienia będą dostępne wyłącznie w trybie nadzorowanym. Zalecamy wzięcie tego pod uwagę podczas używania tych ustawień zamiast czekania, aż firma Apple przeprowadzi ich migrację do trybu nadzorowanego:
+> Firma Apple potwierdza, że w 2019 r. niektóre ustawienia będą dostępne wyłącznie w trybie nadzorowanym. Zalecamy wzięcie tego pod uwagę podczas używania tych ustawień zamiast czekania, aż firma Apple przeprowadzi ich migrację do trybu nadzorowanego:
 > - Instalowanie aplikacji przez użytkowników końcowych
 > - Usuwanie aplikacji
 > - FaceTime
@@ -91,6 +91,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 > - Dokumenty i dane iCloud
 > - Gry dla wielu graczy
 > - Dodaj przyjaciół centrum gier
+> - Siri
 
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.

@@ -15,12 +15,12 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 282666de444e9da0dd5e406cb45cdf1b9e66c1b2
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: b7dea97ef74489e3caae7433e8ebbe2b9ed39aa3
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833158"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330045"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,8 +42,8 @@ Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Aplikacje mobilne**.
-4. W obciążeniu **Aplikacje mobilne** wybierz pozycję **Monitor** > **Stan ochrony aplikacji**, aby wyświetlić widok podsumowania:
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
+4. W obciążeniu **Aplikacje klienckie** wybierz pozycję **Monitor** > **Stan ochrony aplikacji**, aby wyświetlić widok podsumowania:
 
 ![Kafelek podsumowania w okienku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-user-status-summary.png)
 

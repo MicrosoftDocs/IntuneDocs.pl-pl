@@ -15,12 +15,12 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 545c5b26b6c908f4a9e7066d3f76cbf774c8fbea
-ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
+ms.openlocfilehash: 6c92b1b660856fb52f6259514ad9075ab96fb2fc
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146700"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313296"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Rejestrowanie urządzeń z systemem iOS w usłudze Intune
 
@@ -55,8 +55,8 @@ Apple School Manager to program zakupu rejestracji urządzeń dla szkół. Podob
 
 ## <a name="apple-configurator"></a>Program Apple Configurator
 Możliwe jest rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator uruchomionego na komputerze Mac. Aby przygotować urządzenia, należy podłączyć je za pomocą portu USB i zainstalować profil rejestracji. Za pomocą programu Apple Configurator można rejestrować urządzenia na dwa sposoby:
-- Rejestracja z użyciem Asystenta ustawień — przywraca ustawienia fabryczne urządzenia i przygotowuje je do uruchomienia Asystenta ustawień, a także instaluje zasady firmy dla nowego użytkownika urządzenia.
-- Rejestracja bezpośrednia — nie powoduje przywrócenia ustawień fabrycznych urządzenia i umożliwia zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda służy do rejestrowania urządzeń bez koligacji użytkownika.
+- Rejestracja z użyciem Asystenta ustawień — czyści dane urządzenia i przygotowuje je do uruchomienia Asystenta ustawień, a także instaluje zasady firmy dla nowego użytkownika urządzenia.
+- Rejestracja bezpośrednia — nie powoduje wyczyszczenia urządzenia i umożliwia zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda służy do rejestrowania urządzeń bez koligacji użytkownika.
 
 Dowiedz się więcej na temat [rejestrowanie programu Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md).
 

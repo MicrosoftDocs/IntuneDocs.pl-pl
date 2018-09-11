@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/23/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,57 +17,68 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 45b087b9617b783517f8296f1726891392764d5f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8ce71a14f9bb7e877fb31e78afdf64d5e492f4a8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019334"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146693"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli utracisz numer PIN lub kod dostępu urządzenia zarejestrowanego w usłudze Intune, możesz zresetować go przy użyciu [witryny sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog). Witryna sieci Web Portal firmy może umożliwiać zarządzanie komputerami i urządzeniami zarejestrowanymi w usłudze Intune oraz wykonywanie większości zadań, które można wykonać przy użyciu aplikacji Portal firmy.
+Jeśli utracisz numer PIN lub hasło, możesz zresetować je przy użyciu [witryny internetowej Portal firmy](https://portal.manage.microsoft.com).  
 
-> [!NOTE]
-> W przypadku korzystania z zarejestrowanego urządzenia firmowego istnieje możliwość, że przycisk Resetuj kod dostępu nie będzie widoczny w witrynie internetowej Portal firmy. W takim przypadku należy skontaktować się z działem pomocy technicznej Twojej firmy w celu uzyskania kodu dostępu.
+Jeśli używasz urządzenia zarejestrowanego przez firmę, możesz nie widzieć opcji umożliwiającej zresetowanie kodu dostępu do urządzenia. Skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania kodu dostępu.
 
-Aby zresetować kod dostępu:
-
-1. W [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog) naciśnij przycisk __menu__ ![Mały obrazek przycisku menu, trzy poziome paski ułożone równolegle do siebie.](/intune/media/CP_hamburger_menu.png), a następnie wybierz pozycję __Moje urządzenia__.
-
-2. Na stronie __Moje urządzenia__ wybierz nazwę urządzenia, którego kod dostępu chcesz zresetować.
-
-   ![Zrzut ekranu strony Moje urządzenia przedstawiający kilka niezidentyfikowanych urządzeń oraz znajdujący się poniżej transparent z monitem o zarejestrowanie urządzeń nieznajdujących się na liście lub zidentyfikowanie tych niezidentyfikowanych.](./media/macOS_enroll_002_tap_here_banner.png)
-
-3. Urządzenie wyświetli się w oknie podręcznym. Naciśnij przycisk **Resetuj kod dostępu**.
-
-   ![Wszystkie opcje dla wybranego urządzenia w witrynie sieci Web Portal firmy, w tym Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu i Zdalne blokowanie. ](./media/iwp-screen-with-all-options.png)
-
-4. Zostanie wyświetlony transparent z prośbą o potwierdzenie zresetowania kodu dostępu i informacją o wylogowaniu urządzenia po wykonaniu tej czynności. Aby zalogować się ponownie, konieczne będzie odczekanie 5 minut.
-
-   ![Transparent z ostrzeżeniem dotyczącym resetowania kodu dostępu urządzenia i wylogowania użytkownika. Przyciskami aktywności użytkownika są Wyloguj i Anuluj.](./media/iwp-reset-passcode-popup.png)
-
-5. Po wybraniu polecenia **Wyloguj** wyświetli się jeden komunikat końcowy informujący o usunięciu kodu dostępu z urządzenia. Jeśli nie masz urządzenia przy sobie, nie usuwaj kodu dostępu, ponieważ osoba mająca fizyczny dostęp do urządzenia będzie mogła uzyskać wgląd w większość zawartych na nim informacji — osobistych lub firmowych. 
-
-   ![Drugi transparent z ostrzeżeniem dotyczącym resetowania kodu dostępu urządzenia i jego usunięcia z urządzenia. Informuje również, że aby ustawić nowy kod dostępu, należy przejść do ustawień urządzenia.](./media/iwp-reset-passcode-2nd-popup.png)
-
-   Różne urządzenia mają różne typy kodów dostępu.
-
-   **Android**: usuwa istniejący kodu dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. 
-  
    > [!NOTE]
-   > Nie można zresetować kodu dostępu w przypadku urządzeń z systemem Android 7.0 lub nowszym. Jeśli zapomnisz, jaki jest kod dostępu, musisz zresetować te urządzenia, przywracając ich ustawienia fabryczne.
+   > Nie można zresetować kodu dostępu w przypadku urządzeń z systemem Android 7.0 lub nowszym. Jeśli zapomnisz, jaki jest kod dostępu, musisz zresetować urządzenie, przywracając ustawienia fabryczne. 
 
-   **iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli do otwierania urządzenia lub dokonywania zakupów używasz czytnika linii papilarnych Touch ID, musisz ponownie go skonfigurować.
+## <a name="reset-your-passcode"></a>Resetowanie kodu dostępu
 
-   **Windows 10 Mobile**: usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Jeśli podczas logowania używasz funkcji rozpoznawania twarzy Windows Hello, funkcja ta w dalszym ciągu będzie obsługiwana.
+1.  Otwórz [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), wybierz przycisk __Menu__, a następnie wybierz pozycję __Urządzenia__.  
+
+2. Wybierz urządzenie, które wymaga zresetowania kodu dostępu.  
+
+    ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
+
+3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)** > **Zresetuj kod dostępu**.   
+
+   ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png)   
+
+    ![Powiększony widok ikony Więcej wyróżnionej czerwoną strzałką.](./media/rename-reset-device-step3-more-1808.png)  
+
+4. Po wyświetleniu monitu kliknij przycisk **Wyloguj się**. Po wyświetleniu monitu zaloguj się ponownie. Musisz zalogować się ponownie w witrynie internetowej Portal firmy w ciągu pięciu minut; w przeciwnym wypadku aplikacja Portal firmy nie zresetuje kodu dostępu urządzenia.  
+
+   > [!NOTE]
+   > Musisz zalogować się ponownie, aby potwierdzić swoją tożsamość. Ma to na celu zapobieganie złośliwym próbom zresetowania kodu dostępu urządzenia.
+
+   ![Przykładowe zrzuty ekranu przedstawiające monit o wylogowanie się z witryny Portal firmy. Przyciskami aktywności użytkownika są Wyloguj i Anuluj.](./media/iwp-reset-passcode-popup-1808.png)
+
+5. Pojawi się komunikat z ostrzeżeniem o usunięciu istniejącego kodu dostępu urządzenia. Kliknij przycisk **Zresetuj kod dostępu**, aby potwierdzić.  
+    > [!WARNING]
+    > Po zresetowaniu kodu dostępu każda osoba, która ma fizyczny dostęp do urządzenia, będzie w stanie uzyskać dostęp do większości informacji osobistych i firmowych na urządzeniu. Jeśli nie masz urządzenia przy sobie, nie resetuj kodu dostępu.  
+
+   ![Zrzut ekranu przedstawiający drugi komunikat o resetowaniu kodu dostępu. Zawiera link prowadzący do dodatkowych informacji o ustawianiu nowego kodu dostępu w dokumentacji, a także poszczególne przyciski umożliwiające zresetowanie kodu dostępu lub anulowanie operacji.](./media/iwp-reset-passcode-popup2-1808.png) 
+
+6. Jeśli resetujesz kod dostępu dla urządzenia z systemem iOS, istniejący kod dostępu zostanie usunięty. W przypadku urządzeń z systemem Windows lub Android otrzymasz tymczasowy kod dostępu umożliwiający odblokowanie urządzenia i ustawienie nowego kodu dostępu. 
+
+   > [!NOTE]
+   > Hasło tymczasowe dla urządzeń z systemem Windows lub Android możesz znaleźć w witrynie Portal firmy, na stronie szczegółów urządzenia. Zobacz sekcję [Konfigurowanie nowego kodu dostępu](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode), aby uzyskać więcej opisów kodów dostępu właściwych dla danego systemu operacyjnego.  
+   
+7. Na urządzeniu przejdź do sekcji **Ustawienia** i zmień tymczasowy kod dostępu. 
+
+8. W prawym górnym rogu witryny internetowej Portal firmy pojawi się flaga. Kliknij, aby odczytać powiadomienie i potwierdzić pomyślne zresetowanie kodu dostępu.  
+
+## <a name="set-up-a-new-passcode"></a>Konfigurowanie nowego kodu dostępu  
+
+W tej sekcji opisano resetowanie kodu dostępu oraz zachowanie związane z hasłem tymczasowym dla każdej platformy urządzeń.  
+
+**Android**: usuwa istniejący kodu dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr.
+
+**iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz czytnika linii papilarnych Touch ID do otwierania urządzenia lub dokonywania zakupów, musisz ponownie go skonfigurować.  
+
+**Windows 10 Mobile**: usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Po skonfigurowaniu rozpoznawanie twarzy Windows Hello nadal będzie działać na urządzeniu.
     
-   **Windows Phone 8.1**: usuwa istniejący kod dostępu i powoduje utworzenie tymczasowego kodu dostępu składającego się z cyfr.
+**Windows Phone 8.1**: usuwa istniejący kod dostępu i powoduje utworzenie tymczasowego kodu dostępu składającego się z cyfr.  
 
-   W przypadku urządzeń z systemem Android i Windows hasło tymczasowe zostanie wyświetlone w polu **Szczegóły urządzenia**. 
-
-6. Odblokuj urządzenie, a następnie ustaw nowy kod dostępu lub zmień tymczasowy kod dostępu, przechodząc w urządzeniu do menu **Ustawienia**.
-
-Aby wyświetlić powiadomienie potwierdzające pomyślne zresetowanie hasła, kliknij flagę powiadomienia u góry po prawej stronie w witrynie sieci Web Portal firmy.
-
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://portal.manage.microsoft.com#HelpDeskDialog).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
