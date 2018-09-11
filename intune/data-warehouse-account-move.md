@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 7b13cfdcaa29edfc780126f3d1d76f5a9e46360f
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b34bb7c3f3db9ebb3cdd89b429aaeb530d7ad796
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330300"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141634"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Przenoszenie danych konta z magazynu danych usługi Intune 
 
@@ -63,8 +63,6 @@ Niektóre wykresy trendów w widoku portalu Azure zostaną zresetowane. Można u
 ## <a name="device-enrollment-charts"></a>Wykresy rejestrowania urządzeń
 1. W portalu Azure przejdź do opcji **Microsoft Intune** -> **Rejestrowanie urządzeń**.
 2. Za pomocą programu Microsoft [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) pobierz dane źródłowe wykresów.
-    - Aby uzyskać informacje na temat stanu rejestracji, zobacz 
-    - Aby uzyskać informacje na temat głównych błędów dotyczących rejestrowania w tym tygodniu, 
     - Aby uzyskać informacje na temat stanu rejestrowania, skopiuj to [zapytanie dotyczące stanu rejestracji](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) i wklej je do programu [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
     - Aby uzyskać informacje na temat głównych błędów dotyczących rejestrowania w tym tygodniu, skopiuj to [zapytanie dotyczące błędów rejestracji](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) i wklej je do programu [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
 
