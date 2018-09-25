@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 140b19ac64003f9ddf481a33e0cf4d423e106ffd
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905380"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028634"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
@@ -70,12 +70,12 @@ Nowe możliwości ograniczania zostaną dodane tylko do witryny Azure Portal.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Gdzie się podziały moje zasady dostępu warunkowego?
 Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal zasady dostępu warunkowego Twojej dzierżawy są w dalszym ciągu wymuszane. Jednak nie można ich wyświetlić ani zmodyfikować z poziomu usługi Intune w witrynie Azure Portal.
 
-Jeśli chcesz wyświetlić lub zmienić zasady dostępu warunkowego w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby uzyskać więcej informacji na temat migrowania zasad dostępu warunkowego, zobacz [Migrowanie zasad klasycznych w witrynie Azure Portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+Jeśli chcesz wyświetlić lub zmienić zasady dostępu warunkowego w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby uzyskać więcej informacji na temat migrowania zasad dostępu warunkowego, zobacz [Migrowanie zasad klasycznych w witrynie Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Gdzie się podziały moje zasady zgodności?
 Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal zasady zgodności Twojej dzierżawy są w dalszym ciągu wymuszane. Jednak nie można ich wyświetlić ani zmodyfikować z poziomu usługi Intune w witrynie Azure Portal.
 
-Jeśli chcesz wyświetlić lub zmienić zasady zgodności w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
+Jeśli chcesz wyświetlić lub zmienić zasady zgodności w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](https://docs.microsoft.com/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Dokąd został przeniesiony program DEP firmy Apple?
 W portalu klasycznym można było skonfigurować usługę Intune tak, aby integrowała się z programem Device Enrollment Program firmy Apple, oraz ręcznie zażądać synchronizacji z usługą firmy Apple:

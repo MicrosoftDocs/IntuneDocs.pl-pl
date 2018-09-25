@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cad4e1d6bcb47981dfb40a1146a3f5148724e08a
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 084b7bead6b294cfbfa94c9b18f539dd0e5db2a8
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330096"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028600"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń
 
@@ -43,7 +43,7 @@ Zasad konfiguracji aplikacji można używać z zarządzanymi aplikacjami, które
 7. Dla każdego ustawienia konfiguracji obsługiwanego przez aplikację wpisz wartości w polach **Nazwa** i **Wartość**, a następnie wybierz przycisk wielokropka (**...**).  
     Aby usunąć konfigurację, wybierz przycisk wielokropka (**...**) i wybierz pozycję **Usuń**.  
     
-Aplikacje współdziałające z zestawem SDK aplikacji usługi Intune obsługują konfiguracje oparte na parach klucz-wartość. Dodatkowe informacje na temat obsługiwanych konfiguracji klucz-wartość można znaleźć w dokumentacji dotyczącej poszczególnych aplikacji. Należy pamiętać, że można użyć tokenów dynamicznie wypełnianych danymi wygenerowanymi przez aplikację. Aby uzyskać informacje o programie Outlook dotyczące ustawień zasad konfiguracji aplikacji dla systemu iOS, zobacz temat [Manage Outlook for iOS app configuration with Microsoft Intune](https://technet.microsoft.com/en-us/library/mt813789(v=exchg.150).aspx) (Zarządzanie programem Outlook w celu konfiguracji aplikacji dla systemu iOS w usłudze Microsoft Intune).
+Aplikacje współdziałające z zestawem SDK aplikacji usługi Intune obsługują konfiguracje oparte na parach klucz-wartość. Dodatkowe informacje na temat obsługiwanych konfiguracji klucz-wartość można znaleźć w dokumentacji dotyczącej poszczególnych aplikacji. Należy pamiętać, że można użyć tokenów dynamicznie wypełnianych danymi wygenerowanymi przez aplikację. Aby uzyskać informacje o programie Outlook dotyczące ustawień zasad konfiguracji aplikacji dla systemu iOS, zobacz temat [Manage Outlook for iOS app configuration with Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx) (Zarządzanie programem Outlook w celu konfiguracji aplikacji dla systemu iOS w usłudze Microsoft Intune).
 
 ## <a name="configuration-values-for-using-tokens"></a>Wartości konfiguracji na potrzeby używania tokenów
 

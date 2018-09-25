@@ -14,12 +14,12 @@ ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9bead87f80cf8d1f102f396bdd6c9573786c1b9e
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: b9efb60d169ba6f88b4765d3fc651f3a0596b230
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474636"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028583"
 ---
 # <a name="view-and-correct-personal-data"></a>Wyświetlanie i poprawianie danych osobowych
 
@@ -33,7 +33,7 @@ Administratorzy usługi Intune mogą wyświetlać niektóre dane osobowe w zale�
 Administratorzy mogą wyświetlać informacje osobiste użytkowników końcowych w różnych blokach interfejsu użytkownika usługi Intune. W następujących artykułach wyjaśniono, do jakich informacji administratorzy mają dostęp, a do jakich nie mają:
 - W artykule [Wyświetlanie szczegółów urządzenia](device-inventory.md) w usłudze Intune wyjaśniono, jak można przejrzeć informacje o urządzeniu użytkownika końcowego.
 - W artykule [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md) wyjaśniono, jak wyświetlić informacje o aplikacjach zainstalowanych na urządzeniu użytkownika końcowego.
-- Artykuł [Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?](https://docs.microsoft.com/en-us/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) zawiera listę danych, które może i których nie może wyświetlać firma użytkownika końcowego. Najlepszym rozwiązaniem jest przejrzyste poinformowanie użytkowników, jakiego rodzaju dane gromadzisz i dlaczego to robisz. Ten artykuł może być pierwszym krokiem na drodze do takiej przejrzystości.
+- Artykuł [Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) zawiera listę danych, które może i których nie może wyświetlać firma użytkownika końcowego. Najlepszym rozwiązaniem jest przejrzyste poinformowanie użytkowników, jakiego rodzaju dane gromadzisz i dlaczego to robisz. Ten artykuł może być pierwszym krokiem na drodze do takiej przejrzystości.
 
 ### <a name="who-can-view-the-data"></a>Kto może wyświetlać dane?
 
