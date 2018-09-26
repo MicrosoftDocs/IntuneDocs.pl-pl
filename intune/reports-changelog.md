@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,30 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: dd9fb36bb1b8c5e66d104f530690c5d236ea25e4
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 08f5437141cc98161af740d7b8cad7c6cc1ff61c
+ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223700"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43821192"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
+
+## <a name="1808"></a>1808
+_Wydanie: sierpień 2018 r._
+
+### <a name="v10-collections"></a>Kolekcje w wersji 1.0  
+
+Teraz można używać wersji 1.0 magazynu danych usługi Intune, ustawiając parametr zapytania `api-version=v1.0`. Aktualizacje kolekcji w magazynie danych są z natury addytywne i nie przerywają działania istniejących scenariuszy.
+
+### <a name="enrollment-failure-collection-released-to-beta"></a>Niepowodzenie rejestracji — kolekcja wydana do wersji beta
+
+Nowa kolekcja `Enrollment Failure` została wydana do wersji beta. Możesz jej użyć, aby zrozumieć, jak działa Twoja rejestracja. W tym celu zapoznaj się z najczęściej występującymi problemami. 
+
 
 ## <a name="1805"></a>1805
 _Wydanie: maj 2018 r._

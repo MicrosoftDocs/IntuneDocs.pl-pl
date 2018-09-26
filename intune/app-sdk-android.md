@@ -3,8 +3,8 @@ title: Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune 
 description: Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android można wdrożyć funkcje zarządzania aplikacjami mobilnymi (MAM, Mobile App Management) usługi Intune w swojej aplikacji systemu Android.
 keywords: SDK
 author: Erikre
-manager: dougeby
 ms.author: erikre
+manager: dougeby
 ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 87333610380ef34e1d832694a30bfe97388bcb62
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: 4c26d9914173c07096caad428afcbd9174625ef7
+ms.sourcegitcommit: a474a6496209ff3b60e014a91526f3d163a45438
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254403"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031307"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -59,13 +59,13 @@ W przypadku ochrony aplikacji bez rejestracji urządzeń _**nie**_ jest wymagane
 
 Zestaw SDK aplikacji usługi Intune to standardowa biblioteka systemu Android bez zewnętrznych zależności. Plik **Microsoft.Intune.MAM.SDK.aar** zawiera zarówno interfejsy niezbędne do włączenia zasad ochrony aplikacji, jak i kod wymagany do celów współpracy z aplikacją Portal firmy usługi Microsoft Intune.
 
-Plik **Microsoft.Intune.MAM.SDK.aar** musi zostać wskazany jako odwołanie do biblioteki systemu Android. W tym celu otwórz swój projekt aplikacji w programie Android Studio, przejdź do menu **File > New > New module** (Plik > Nowy > Nowy moduł) i wybierz pozycję **Import .JAR/.AAR Package** (Importuj pakiet JAR/AAR). Następnie wybierz nasz pakiet archiwum systemu Android Microsoft.Intune.MAM.SDK.aar, aby utworzyć moduł dla naszych plików AAR. Kliknij prawym przyciskiem myszy moduł lub moduły zawierające Twój kod aplikacji, a następnie przejdź do pozycji **Ustawienia modułu** > **karta Zależności** > **ikona +**   >  **Zależności modułu** > Wybierz właśnie utworzony moduł AAR zestawu SDK Zarządzania aplikacjami mobilnymi > **OK**. Da to pewność, że Twój moduł skompiluje się przy użyciu zestawu SDK Zarządzania aplikacjami mobilnymi (MAM) podczas kompilowania Twojego projektu.
+Plik **Microsoft.Intune.MAM.SDK.aar** musi zostać wskazany jako odwołanie do biblioteki systemu Android. Aby określić plik **Microsoft.Intune.MAM.SDK.aar** jako odwołanie do biblioteki systemu Android, otwórz projekt aplikacji w programie Android Studio, a następnie przejdź do pozycji **Plik > Nowy > Nowy moduł** i wybierz pozycję **Importuj pakiet JAR/AAR**. Następnie wybierz pakiet archiwum systemu Android **Microsoft.Intune.MAM.SDK.aar**, aby utworzyć moduł dla plików *AAR*. Kliknij prawym przyciskiem myszy moduł lub moduły zawierające Twój kod aplikacji, a następnie przejdź do pozycji **Ustawienia modułu** > **karta Zależności** > **ikona +**  > **Zależności modułu** > wybierz właśnie utworzony moduł AAR zestawu SDK zarządzania aplikacjami mobilnymi > **OK**. Da to pewność, że Twój moduł skompiluje się przy użyciu zestawu SDK Zarządzania aplikacjami mobilnymi (MAM) podczas kompilowania Twojego projektu.
 
 Ponadto pakiety **Microsoft.Intune.MAM.SDK.Support.v4** i **Microsoft.Intune.MAM.SDK.Support.v7** zawierają odpowiednio warianty plików `android.support.v4` i `android.support.v7` usługi Intune. Nie są one wbudowane w plik Microsoft.Intune.MAM.SDK.aar na wypadek, gdyby aplikacja nie miała uwzględniać bibliotek pomocy technicznej. To standardowe pliki JAR używane zamiast projektów biblioteki systemu Android.
 
 #### <a name="proguard"></a>ProGuard
 
-Jeśli narzędzie [ProGuard](http://proguard.sourceforge.net/) (lub jakikolwiek inny mechanizm zmniejszający/zaciemniający) stanowi krok kompilacji, należy wykluczyć klasy zestawu SDK usługi Intune. W przypadku dołączania pliku aar do Twojej kompilacji nasze reguły są automatycznie integrowane w kroku narzędzia ProGuard oraz przechowywane są niezbędne pliki klasy. 
+Jeśli narzędzie [ProGuard](http://proguard.sourceforge.net/) (lub jakikolwiek inny mechanizm zmniejszający/zaciemniający) stanowi krok kompilacji, należy wykluczyć klasy zestawu SDK usługi Intune. W przypadku dołączania pliku *AAR* do Twojej kompilacji nasze reguły są automatycznie integrowane w kroku narzędzia ProGuard oraz przechowywane są niezbędne pliki klasy. 
 
 Biblioteki uwierzytelniania usługi Azure Active Directory (ADAL, Active Directory Authentication Library) mogą mieć własne ograniczenia dotyczące narzędzia ProGuard. Jeśli aplikacja jest zintegrowana z biblioteką ADAL, postępowanie względem tych ograniczeń powinno być zgodne z dokumentacją ADAL.
 
@@ -135,7 +135,7 @@ Klasy bazowe systemu Android muszą zostać przesłonięte odpowiednimi klasami 
 |android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
 
 ### <a name="renamed-methods"></a>Metody o zmienionej nazwie
-W wielu przypadkach metoda dostępna w klasie systemu Android została oznaczona jako „final” w zastępczej klasie funkcji MAM. W takim przypadku klasa zastępcza funkcji MAM udostępnia metodę o podobnej nazwie (zazwyczaj z sufiksem `MAM`), która powinna zostać przesłonięta zamiast niej. Na przykład przy tworzeniu klasy pochodnej klasy `MAMActivity` zamiast przesłaniać metodę `onCreate()` i wywoływać metodę `super.onCreate()` działanie `Activity` należy przesłonić metodę `onMAMCreate()` i wywołać metodę `super.onMAMCreate()`. Kompilator języka Java powinien wymuszać ograniczenia specyfikacji final, aby zapobiec przypadkowemu przesłonięciu oryginalnej metody zamiast jej równoważnika funkcji MAM.
+W wielu przypadkach metoda dostępna w klasie systemu Android została oznaczona jako „final” w zastępczej klasie funkcji MAM. W takim przypadku klasa zastępcza funkcji MAM udostępnia metodę o podobnej nazwie (z sufiksem `MAM`), która powinna zostać przesłonięta zamiast niej. Na przykład przy tworzeniu klasy pochodnej klasy `MAMActivity` zamiast przesłaniać metodę `onCreate()` i wywoływać metodę `super.onCreate()` działanie `Activity` należy przesłonić metodę `onMAMCreate()` i wywołać metodę `super.onMAMCreate()`. Kompilator języka Java powinien wymuszać ograniczenia specyfikacji final, aby zapobiec przypadkowemu przesłonięciu oryginalnej metody zamiast jej równoważnika funkcji MAM.
 
 ### <a name="mamapplication"></a>MAMApplication
 Jeśli Twoja aplikacja tworzy podklasę `android.app.Application`, wtedy **musisz** zamiast tego utworzyć podklasę `com.microsoft.intune.mam.client.app.MAMApplication`. Jeśli Twoja aplikacja nie tworzy podklasy `android.app.Application`, wtedy **musisz** ustawić `"com.microsoft.intune.mam.client.app.MAMApplication"` jako atrybut `"android:name"` w Twoim tagu AndroidManifest.xml `<application>`.
@@ -143,14 +143,14 @@ Jeśli Twoja aplikacja tworzy podklasę `android.app.Application`, wtedy **musis
 Zamiast metody `PendingIntent.get*` należy użyć metody `MAMPendingIntent.get*`. Następnie można użyć otrzymanego elementu `PendingIntent` w zwykły sposób.
 
 ### <a name="manifest-replacements"></a>Zamiany w manifeście
-Należy pamiętać, że konieczne może być przeprowadzenie niektórych z powyższych zamian klas w obrębie manifestu i kodu języka Java. Ważne:
+Konieczne może być przeprowadzenie niektórych z powyższych zamian klas w obrębie manifestu i kodu języka Java. Ważne:
 * Odwołania manifestu do klasy `android.support.v4.content.FileProvider` muszą zostać zastąpione odwołaniami do klasy `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
 ## <a name="sdk-permissions"></a>Uprawnienia zestawu SDK
 
 Zestaw SDK aplikacji usługi Intune wymaga trzech [uprawnień systemu Android](https://developer.android.com/guide/topics/security/permissions.html) do aplikacji, które mają ten zestaw wbudowany:
 
-* `android.permission.GET_ACCOUNTS` (żądane w czasie wykonywania, jeśli jest wymagane)
+* `android.permission.GET_ACCOUNTS` (żądane w czasie wykonywania, jeśli jest niezbędne)
 
 * `android.permission.MANAGE_ACCOUNTS`
 
@@ -206,7 +206,7 @@ public interface AppPolicy {
 
 /**
  * Restrict where an app can save personal data.
- * This function is now deprecated. Please use getIsSaveToLocationAllowed(SaveLocation, String) instead
+ * This function is now deprecated. Use getIsSaveToLocationAllowed(SaveLocation, String) instead
  * @return True if the app is allowed to save to personal data stores; false otherwise.
  */
 @Deprecated
@@ -367,7 +367,7 @@ Interfejs `MAMNotificationReceiver` po prostu odbiera powiadomienia z usługi In
 >[!NOTE]
 > Blokowanie w metodzie `MAMNotificationReceiver.onReceive` jest bezpieczne, ponieważ jej wywołanie zwrotne nie jest uruchamiane w wątku interfejsu użytkownika.
 
-Interfejs `MAMNotificationReceiver` zgodny z definicją w zestawie SDK jest przedstawiony poniżej:
+Interfejs `MAMNotificationReceiver` zgodny z definicją w zestawie SDK został przedstawiony poniżej:
 
 ```java
 /**
@@ -399,7 +399,7 @@ Następujące powiadomienia są wysyłane do aplikacji i niektóre z nich mogą 
 
 * **WIPE_USER_AUXILIARY_DATA**: aplikacje mogą zarejestrować odbieranie tego powiadomienia, jeśli zestaw SDK aplikacji usługi Intune ma wykonywać domyślne czyszczenie selektywne, ale aplikacja ma usuwać niektóre dane pomocnicze w ramach czyszczenia. To powiadomienie jest niedostępne dla aplikacji z pojedynczą tożsamością i będzie wysyłane tylko do aplikacji mających wiele tożsamości.
 
-* **REFRESH_POLICY**: to powiadomienie jest wysyłane w klasie `MAMUserNotification`. Po otrzymaniu tego powiadomienia wszystkie zasady usługi Intune znajdujące się w pamięci podręcznej muszą zostać unieważnione i zaktualizowane. To działanie jest ogólnie obsługiwane przez zestaw SDK, jednak powinno zostać obsłużone przez aplikację, jeśli zasady są używane w jakikolwiek trwały sposób.
+* **REFRESH_POLICY**: to powiadomienie jest wysyłane w klasie `MAMUserNotification`. Po otrzymaniu tego powiadomienia wszystkie zasady usługi Intune znajdujące się w pamięci podręcznej muszą zostać unieważnione i zaktualizowane. To działanie jest obsługiwane przez zestaw SDK, jednak powinno zostać obsłużone przez aplikację, jeśli zasady są używane w jakikolwiek trwały sposób.
 
 * **MANAGEMENT_REMOVED**: to powiadomienie jest wysyłane w klasie `MAMUserNotification` i informuje aplikację, że przestanie ona być zarządzana. Po wycofaniu z zarządzania aplikacja nie będzie już mieć możliwości odczytu zaszyfrowanych plików, odczytu danych zaszyfrowanych za pomocą klasy MAMDataProtectionManager, interakcji z zaszyfrowanym schowkiem i innego rodzaju uczestnictwa w ekosystemie zarządzanych aplikacji.
 
@@ -448,7 +448,7 @@ Aby skonfigurować aplikację i włączyć odpowiednie uwierzytelnianie, dodaj n
 
 ### <a name="common-adal-configurations"></a>Typowe konfiguracje biblioteki ADAL
 
-Poniżej przedstawiono typowe sposoby konfiguracji aplikacji z uwzględnieniem bibliotek ADAL. Znajdź konfigurację odpowiednią dla aplikacji i upewnij się, że dla parametrów metadanych ADAL ustawiono wymagane wartości (objaśnione powyżej). We wszystkich przypadkach urząd można w razie potrzeby określić dla środowisk innych niż domyślne, ale zwykle jest to niepotrzebne.
+Poniżej przedstawiono typowe sposoby konfiguracji aplikacji z uwzględnieniem bibliotek ADAL. Znajdź konfigurację odpowiednią dla aplikacji i upewnij się, że dla parametrów metadanych ADAL ustawiono wymagane wartości (objaśnione powyżej). We wszystkich przypadkach urząd można w razie potrzeby określić dla środowisk innych niż domyślne, ale jest to niepotrzebne.
 
 1. **Aplikacja nie jest zintegrowana z biblioteką ADAL:**
 
@@ -471,7 +471,7 @@ W witrynie Azure Portal:
 3.  W obszarze **Ustawienia** pod nagłówkiem **Dostęp do interfejsu API** wybierz pozycję **Wymagane uprawnienia**. 
 4.  Kliknij przycisk **+ Dodaj**.
 5.  Kliknij pozycję **Wybierz interfejs API**. 
-6.  W polu wyszukiwania wpisz frazę **Microsoft Mobile Application Management**.
+6.  W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
 7.  Na liście interfejsów API wybierz pozycję **Microsoft Mobile Application Management** i kliknij przycisk Wybierz.
 8.  Wybierz pozycję **Odczyt i zapis danych zarządzania aplikacji użytkownika**.
 9.  Kliknij pozycję **Gotowe**.
@@ -537,7 +537,7 @@ Aby możliwe było wdrożenie integracji z usługą APP-WE, aplikacja musi zarej
 
 2. Po utworzeniu konta użytkownika i pomyślnym zalogowaniu się użytkownika w bibliotece ADAL aplikacja _musi_ wykonać wywołanie `registerAccountForMAM()`.
 
-3. Jeśli konto użytkownika zostało całkowicie usunięte, aplikacja powinna wykonać wywołanie `unregisterAccountForMAM()`, aby usunąć konto z procesu zarządzania w usłudze Intune.
+3. Jeśli konto użytkownika zostało usunięte, aplikacja powinna wykonać wywołanie `unregisterAccountForMAM()`, aby usunąć konto z procesu zarządzania w usłudze Intune.
 
     > [!NOTE]
     > W przypadku tymczasowego wylogowania użytkownika wywołanie `unregisterAccountForMAM()` przez aplikację nie jest wymagane. Wywołanie może zainicjować całkowite wyczyszczenie danych firmowych dla danego użytkownika.
@@ -602,7 +602,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. Aplikacja musi zaimplementować interfejs `MAMServiceAuthenticationCallback`, aby możliwe było zażądanie tokenu ADAL dla danego identyfikatora użytkownika i zasobu przez zestaw SDK. Wystąpienie wywołania zwrotnego musi zostać przekazane do interfejsu `MAMEnrollmentManager` przez wywołanie odpowiedniej metody `registerAuthenticationCallback()`. Token może być wymagany na bardzo wczesnym etapie cyklu życia aplikacji w celu przeprowadzenia ponownych prób rejestracji lub ewidencjonowania odświeżenia zasad ochrony aplikacji, dlatego idealnym miejscem na zarejestrowanie wywołania zwrotnego jest metoda `onMAMCreate()` podklasy `MAMApplication` aplikacji.
+1. Aplikacja musi zaimplementować interfejs `MAMServiceAuthenticationCallback`, aby możliwe było zażądanie tokenu ADAL dla danego identyfikatora użytkownika i zasobu przez zestaw SDK. Wystąpienie wywołania zwrotnego musi zostać przekazane do interfejsu `MAMEnrollmentManager` przez wywołanie odpowiedniej metody `registerAuthenticationCallback()`. Token może być wymagany na wczesnym etapie cyklu życia aplikacji w celu przeprowadzenia ponownych prób rejestracji lub zaewidencjonowania odświeżenia zasad ochrony aplikacji, dlatego idealnym miejscem na zarejestrowanie wywołania zwrotnego jest metoda `onMAMCreate()` podklasy `MAMApplication` aplikacji.
 
 2. Metoda `acquireToken()` powinna uzyskać token dostępu dla żądanego identyfikatora zasobu dla danego użytkownika. Jeśli uzyskanie żądanego tokenu jest niemożliwe, powinna zostać zwrócona wartość null.
 
@@ -708,7 +708,7 @@ Po pierwszej rejestracji konto ma stan `PENDING`, który wskazuje, że początko
 
 Jeśli zostanie uzyskany wynik `COMPANY_PORTAL_REQUIRED`, zestaw SDK zablokuje możliwość wykonywania czynności korzystających z tożsamości, której dotyczyło żądanie rejestracji. Zamiast tego zestaw SDK spowoduje wyświetlenie monitu o pobranie aplikacji Portal firmy. Jeśli nie chcesz, aby w Twojej aplikacji był wyświetlany taki monit, działania mogą obejmować implementację metody `MAMActivity.onMAMCompanyPortalRequired`.
 
-Ta metoda zostaje wywołana zanim zestaw SDK wyświetli domyślny interfejs użytkownika z blokadą. Jeśli w wyniku próby nastąpi zmiana tożsamości działania lub wyrejestrowanie użytkownika, który podjął próbę rejestracji, zestaw SDK nie zablokuje działania. W tej sytuacji ochrona przed wyciekiem danych firmowych zależy od aplikacji. Należy pamiętać, że tylko aplikacje mające wiele tożsamości (omówione w dalszej części) będą mogły zmienić tożsamość działania.
+Ta metoda zostaje wywołana zanim zestaw SDK wyświetli domyślny interfejs użytkownika z blokadą. Jeśli w wyniku próby nastąpi zmiana tożsamości działania lub wyrejestrowanie użytkownika, który podjął próbę rejestracji, zestaw SDK nie zablokuje działania. W tej sytuacji ochrona przed wyciekiem danych firmowych zależy od aplikacji. Tylko aplikacje mające wiele tożsamości (omówione w dalszej części) będą mogły zmienić tożsamość działania.
 
 ### <a name="notifications"></a>Powiadomienia
 
@@ -778,7 +778,7 @@ Usługa Intune umożliwia korzystanie ze wszystkich [funkcji automatycznego twor
 
 ### <a name="keyvalue-backup"></a>Kopie zapasowe typu klucz/wartość
 
-Opcja [Kopie zapasowe typu klucz/wartość](https://developer.android.com/guide/topics/data/keyvaluebackup.html) jest dostępna dla wszystkich interfejsów API w wersji 8 i nowszych. Umożliwia ona przesyłanie danych aplikacji do usługi [Android Backup Service](https://developer.android.com/google/backup/index.html). Ilość danych na użytkownika aplikacji jest ograniczona do 5 MB. Jeśli korzystasz z opcji Kopie zapasowe typu klucz/wartość, użyj klasy **BackupAgentHelper** lub **BackupAgent**.
+Opcja [Kopie zapasowe typu klucz/wartość](https://developer.android.com/guide/topics/data/keyvaluebackup.html) jest dostępna dla wszystkich interfejsów API w wersji 8 i nowszych. Umożliwia ona przesyłanie danych aplikacji do usługi [Android Backup Service](https://developer.android.com/google/backup/index.html). Ilość danych na użytkownika aplikacji jest ograniczona do 5 MB. Jeśli korzystasz z opcji Kopie zapasowe typu klucz/wartość, użyj klasy **BackupAgentHelper** lub **BackupAgent**.
 
 ### <a name="backupagenthelper"></a>BackupAgentHelper
 
@@ -827,7 +827,7 @@ W podręczniku tworzenia kopii zapasowych danych opisano ogólny algorytm przywr
 ## <a name="multi-identity-optional"></a>Wiele tożsamości (opcjonalnie)
 
 ### <a name="overview"></a>Przegląd
-Domyślnie zestaw SDK aplikacji usługi Intune będzie stosować zasady do aplikacji jako całości. Wiele tożsamości to opcjonalna funkcja ochrony aplikacji usługi Intune, którą można włączyć w celu zezwolenia na stosowanie zasad na poziomie poszczególnych tożsamości. Wymaga to znacznie pełniejszego uczestnictwa aplikacji niż inne funkcje ochrony aplikacji.
+Domyślnie zestaw SDK aplikacji usługi Intune będzie stosować zasady do aplikacji jako całości. Wiele tożsamości to opcjonalna funkcja ochrony aplikacji usługi Intune, którą można włączyć w celu zezwolenia na stosowanie zasad na poziomie poszczególnych tożsamości. Wymaga to pełniejszego uczestnictwa aplikacji niż inne funkcje ochrony aplikacji.
 
 Aplikacja *musi* poinformować zestaw SDK aplikacji, gdy zamierza zmienić aktywną tożsamość. W niektórych przypadkach zestaw SDK również powiadomi aplikację, gdy wymagana jest zmiana tożsamości. Jednak w większości przypadków funkcja MAM nie ma informacji, jakie w określonym momencie dane są wyświetlane w interfejsie użytkownika lub używane w wątku, w związku z czym funkcja MAM korzysta z aplikacji, aby ustawić poprawną tożsamość w celu uniknięcia wycieku danych. W poniższych sekcjach zostaną przedstawione pewne konkretne scenariusze, w ramach których wymagana będzie akcja aplikacji.
 
@@ -839,7 +839,7 @@ Po zarejestrowaniu urządzenia lub aplikacji przez użytkownika zestaw SDK rejes
 > [!NOTE]
 > Aktualnie obsługiwana jest tylko jedna tożsamość zarządzana w usłudze Intune na urządzenie.
 
-Należy zauważyć, że tożsamość jest definiowana po prostu jako ciąg. W tożsamościach **jest rozróżniana wielkość liter**, natomiast żądania tożsamości wysyłane do zestawu SDK mogą nie zwracać tej samej wielkości liter, której pierwotnie użyto podczas ustawiania tożsamości.
+Tożsamość jest definiowana jako ciąg. W tożsamościach **jest rozróżniana wielkość liter**, natomiast żądania tożsamości wysyłane do zestawu SDK mogą nie zwracać tej samej wielkości liter, której pierwotnie użyto podczas ustawiania tożsamości.
 
 ### <a name="enabling-multi-identity"></a>Włączanie wielu tożsamości
 
@@ -906,10 +906,10 @@ Wszystkie metody używane do ustawiania tożsamości raportują wynikowe wartoś
 |--|--|
 | SUCCEEDED | Zmiana tożsamości zakończyła się pomyślnie. |
 | NOT_ALLOWED  | Zmiana tożsamości jest niedozwolona. Ma to miejsce, jeśli zostanie podjęta próba ustawienia tożsamości interfejsu użytkownika (kontekstu), gdy dla bieżącego wątku jest już ustawiona inna tożsamość. |
-| CANCELLED | Użytkownik anulował zmianę tożsamości, czyli prawdopodobnie nacisnął przycisk wstecz w monicie o podanie kodu PIN/uwierzytelnienie. |
+| CANCELLED | Użytkownik anulował zmianę tożsamości, czyli prawdopodobnie nacisnął przycisk Wstecz w monicie o podanie kodu PIN lub uwierzytelnienie. |
 | FAILED | Z nieokreślonego powodu nie można zmienić tożsamości.|
 
-Przed wyświetleniem lub użyciem danych firmowych aplikacja *musi* zapewnić, że przełączenie tożsamości zakończyło się pomyślnie. Obecnie przełączanie tożsamości procesu i wątku zawsze powiedzie się dla aplikacji z włączoną obsługą wielu tożsamości, jednak firma Microsoft zastrzega sobie prawo do dodania warunków błędów. Przełączenie tożsamości interfejsu użytkownika może zakończyć się niepowodzeniem w przypadku podania nieprawidłowych argumentów, jeśli będą one powodowały konflikt z tożsamością wątku, lub jeśli użytkownik anulował wymagania dotyczące uruchamiania warunkowego (na przykład przez naciśnięcie przycisku Wstecz na ekranie numeru PIN).
+Przed wyświetleniem lub użyciem danych firmowych aplikacja *musi* zapewnić, że przełączenie tożsamości zakończyło się pomyślnie. Obecnie przełączanie tożsamości procesu i wątku zawsze powiedzie się dla aplikacji z włączoną obsługą wielu tożsamości, jednak firma Microsoft zastrzega sobie prawo do dodania warunków błędów. Przełączenie tożsamości interfejsu użytkownika może zakończyć się niepowodzeniem w przypadku podania nieprawidłowych argumentów, jeśli będą one powodowały konflikt z tożsamością wątku, lub jeśli użytkownik anulował wymagania dotyczące uruchamiania warunkowego (np. przez naciśnięcie przycisku Wstecz na ekranie numeru PIN).
 
 
 W przypadku ustawienia tożsamości na poziomie kontekstu wynik jest raportowany asynchronicznie. Jeśli kontekst jest działaniem, zestaw SDK nie będzie w stanie określić, czy zmiana tożsamości powiodła się, dopóki nie zostanie wykonane warunkowe uruchomienie, co może wymagać od użytkownika wprowadzenia numeru PIN lub podania poświadczeń firmowych. Oczekuje się, że aplikacja zaimplementuje metodę `MAMSetUIIdentityCallback`, aby otrzymać ten wynik. Dla tego parametru jest dozwolone podanie wartości „null”.
@@ -1004,7 +1004,7 @@ Metoda `onMAMIdentitySwitchRequired` jest wywoływana dla wszystkich niejawnych 
     > [!NOTE]
     > Aplikacja z obsługą wielu tożsamości zawsze będzie otrzymywać dane przychodzące z aplikacji zarządzanych i niezarządzanych. Na aplikacji leży odpowiedzialność za to, aby traktować dane z zarządzanych tożsamości w zarządzany sposób.
 
-  Jeśli żądana tożsamość jest zarządzana (w celu sprawdzenia można użyć metody `MAMPolicyManager.getIsIdentityManaged`), ale aplikacja nie może użyć danego konta (ponieważ na przykład konta, takie jak konta e-mail, muszą najpierw zostać skonfigurowane w aplikacji), to należy odmówić przełączenia tożsamości.
+  Jeśli żądana tożsamość jest zarządzana (w celu sprawdzenia można użyć metody `MAMPolicyManager.getIsIdentityManaged`), ale aplikacja nie może użyć danego konta (np. ponieważ konta, takie jak konta e-mail, muszą najpierw zostać skonfigurowane w aplikacji), to należy odmówić przełączenia tożsamości.
 
 ### <a name="preserving-identity-in-async-operations"></a>Zachowywanie tożsamości w operacjach asynchronicznych
 Typowym zachowaniem operacji w wątku interfejsu użytkownika jest wysyłanie zadań w tle do innego wątku. Aplikacja o wielu tożsamościach powinna upewnić się, że te zadania w tle działają z wykorzystaniem odpowiedniej tożsamości, która często jest taka sama, jak tożsamość używana przez działanie, które je wysłało. Zestaw SDK zarządzania aplikacjami mobilnymi zapewnia `MAMAsyncTask` i `MAMIdentityExecutors`, aby ułatwić zachowywanie tożsamości.
@@ -1129,13 +1129,13 @@ Na znakowanie tożsamości pliku ma wpływ tryb offline. Należy uwzględnić na
 
 ### <a name="directory-protection"></a>Ochrona katalogu
 
-Katalogi można chronić przy użyciu tej samej metody `protect`, której używa się do ochrony plików. Należy pamiętać, że ochrona katalogów ma charakter cykliczny i obejmuje wszystkie pliki i podkatalogi w danym katalogu, jak również nowe pliki tworzone w katalogu. Ponieważ ochrona katalogów jest stosowana cyklicznie, wywołanie `protect` może w przypadku bardzo dużych katalogów zająć sporo czasu. W związku z tym aplikacje zapewniające ochronę katalogów zawierających dużą liczbę plików mogą uruchamiać operację `protect` asynchronicznie w ramach wątku w tle.
+Katalogi można chronić przy użyciu tej samej metody `protect`, której używa się do ochrony plików. Ochrona katalogów ma charakter cykliczny i obejmuje wszystkie pliki i podkatalogi w danym katalogu, jak również nowe pliki tworzone w katalogu. Ponieważ ochrona katalogów jest stosowana cyklicznie, wywołanie `protect` może w przypadku dużych katalogów zająć sporo czasu. W związku z tym aplikacje zapewniające ochronę katalogów zawierających dużą liczbę plików mogą uruchamiać operację `protect` asynchronicznie w ramach wątku w tle.
 
 ### <a name="data-protection"></a>Ochrona danych
 
-Nie jest możliwe tagowanie pliku jako należącego do wielu tożsamości. Aplikacje, które muszą przechowywać dane należące do różnych użytkowników w tym samym pliku, mogą robić to ręcznie przy użyciu funkcji oferowanych przez klasę `MAMDataProtectionManager`. Umożliwia to aplikacji szyfrowanie danych i powiązanie ich z określonym użytkownikiem. Zaszyfrowane dane można przechowywać na dysku w pliku. Można tworzyć zapytania dotyczące danych skojarzonych z tożsamością i dane te można później odszyfrować.
+Nie jest możliwe tagowanie pliku jako należącego do wielu tożsamości. Aplikacje, które muszą przechowywać dane należące do różnych użytkowników w tym samym pliku, mogą robić to ręcznie przy użyciu funkcji oferowanych przez klasę `MAMDataProtectionManager`. Umożliwia to aplikacji szyfrowanie danych i powiązanie ich z określonym użytkownikiem. Zaszyfrowane dane można przechowywać na dysku w pliku. Można tworzyć zapytania dotyczące danych skojarzonych z tożsamością. Dane te można później odszyfrować.
 
-Aplikacje korzystające z klasy `MAMDataProtectionManager` powinny zaimplementować odbiornik powiadomień `MANAGEMENT_REMOVED`. Jeśli podczas zapewniania ochrony buforów zostało włączone szyfrowanie plików, po zakończeniu procesu powiadamiania bufory, które były chronione za pomocą tej klasy, nie będą już mogły zostać odczytane. Aplikacja może rozwiązać ten problem przez wywołanie podczas tego procesu powiadamiania metody MAMDataProtectionManager.unprotect dla wszystkich buforów. Należy zauważyć, że bezpieczne jest również wywoływanie ochrony podczas tego procesu powiadamiania, jeśli pożądane jest zachowanie informacji o tożsamości — szyfrowanie jest zawsze wyłączone w czasie powiadamiania.
+Aplikacje korzystające z klasy `MAMDataProtectionManager` powinny zaimplementować odbiornik powiadomień `MANAGEMENT_REMOVED`. Jeśli podczas zapewniania ochrony buforów zostało włączone szyfrowanie plików, po zakończeniu procesu powiadamiania bufory, które były chronione za pomocą tej klasy, nie będą już mogły zostać odczytane. Aplikacja może rozwiązać ten problem przez wywołanie podczas tego procesu powiadamiania metody MAMDataProtectionManager.unprotect dla wszystkich buforów. Bezpieczne jest również wywoływanie ochrony podczas tego procesu powiadamiania, jeśli pożądane jest zachowanie informacji o tożsamości — szyfrowanie jest zawsze wyłączone w czasie powiadamiania.
 
 ```java
 
@@ -1242,7 +1242,7 @@ Jeśli aplikacja została zarejestrowana do odbierania powiadomienia `WIPE_USER_
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Włączanie docelowej konfiguracji funkcji MAM dla aplikacji systemu Android (opcjonalnie)
-Pary klucz-wartość specyficzne dla aplikacji można skonfigurować w konsoli usługi Intune. Te pary klucz-wartość nie są w ogóle interpretowane przez usługę Intune, ale są po prostu przekazywane do aplikacji. W tym celu aplikacje, które mają otrzymywać taką konfigurację, mogą użyć klas `MAMAppConfigManager` i `MAMAppConfig`. Jeśli wiele zasad jest przeznaczonych dla tej samej aplikacji, może istnieć wiele powodujących konflikt wartości dostępnych dla tego samego klucza.
+Pary klucz-wartość specyficzne dla aplikacji można skonfigurować w konsoli usługi Intune. Te pary klucz-wartość nie są w ogóle interpretowane przez usługę Intune, ale są przekazywane do aplikacji. W tym celu aplikacje, które mają otrzymywać taką konfigurację, mogą użyć klas `MAMAppConfigManager` i `MAMAppConfig`. Jeśli wiele zasad jest przeznaczonych dla tej samej aplikacji, może istnieć wiele powodujących konflikt wartości dostępnych dla tego samego klucza.
 
 ### <a name="example"></a>Przykład
 ```
@@ -1462,7 +1462,7 @@ Ograniczenia formatu pliku wykonywalnego dla platformy Dalvik mogą stać się p
 
 * **Przechwytywanie ekranu**: zestaw SDK nie może wymusić nowej wartości ustawienia przechwytywania ekranu w przypadku działań przetworzonych już przez metodę Activity.onCreate. Może to spowodować, że wystąpi okres, w którym dla aplikacji będzie wyłączone tworzenie zrzutów ekranu, ale wciąż będzie to możliwe.
 
-* **Używanie elementów rozpoznawania zawartości**: zasady „transferu lub odbierania” usługi Intune mogą zablokować lub częściowo zablokować użycie elementu rozpoznawania zawartości na potrzeby dostępu do dostawcy zawartości w innej aplikacji. To spowoduje, że metody klasy ContentResolver będą zwracać wartość null lub zgłaszać wartość błędu (np. klasa `openOutputStream` będzie zgłaszać wyjątek `FileNotFoundException` , jeśli jest zablokowana). Aplikacja może określić, czy błąd zapisu danych przez element rozpoznawania zawartości został spowodowany przez zasady (lub może zostać spowodowany przez zasady) za pomocą wywołania:
+* **Używanie elementów rozpoznawania zawartości**: zasady „transferu lub odbierania” usługi Intune mogą zablokować lub częściowo zablokować użycie elementu rozpoznawania zawartości na potrzeby dostępu do dostawcy zawartości w innej aplikacji. Spowoduje to, że metody klasy ContentResolver będą zwracać wartość null lub zgłaszać wartość błędu (np. klasa `openOutputStream` będzie zgłaszać wyjątek `FileNotFoundException`, jeśli jest zablokowana). Aplikacja może określić, czy błąd zapisu danych przez element rozpoznawania zawartości został spowodowany przez zasady (lub może zostać spowodowany przez zasady) za pomocą wywołania:
     ```java
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```
