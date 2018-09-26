@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d7166563-6bb5-4624-b8c8-6b300a997c3a
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85632ffe74b3973f4e87c77933b17f522c991caf
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: a8e386e2d9b161debf65d3e639a90cb8de313ad2
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223547"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602286"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune
 
@@ -28,16 +28,16 @@ Aplikację można skonfigurować przy użyciu usługi Azure Active Directory (Az
 
 ## <a name="authorization"></a>Autoryzacja
 
-Przy użyciu protokołu OAuth 2.0 usługa Azure Active Directory (Azure AD) umożliwia autoryzację dostępu do aplikacji internetowych i internetowych interfejsów API w dzierżawie usługi Azure AD. W tym przewodniku przedstawiono sposób uwierzytelniania aplikacji przy użyciu języka C#. Kod autoryzacji OAuth 2.0 opisano w sekcji 4.1 specyfikacji protokołu OAuth 2.0. Aby uzyskać więcej informacji, zobacz [Autoryzacja dostępu do aplikacji sieci Web przy użyciu protokołu OAuth 2.0 i usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Przy użyciu protokołu OAuth 2.0 usługa Azure Active Directory (Azure AD) umożliwia autoryzację dostępu do aplikacji internetowych i internetowych interfejsów API w dzierżawie usługi Azure AD. W tym przewodniku przedstawiono sposób uwierzytelniania aplikacji przy użyciu języka C#. Kod autoryzacji OAuth 2.0 opisano w sekcji 4.1 specyfikacji protokołu OAuth 2.0. Aby uzyskać więcej informacji, zobacz [Autoryzacja dostępu do aplikacji internetowych przy użyciu protokołu OAuth 2.0 i usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ## <a name="azure-keyvault"></a>Azure KeyVault
 
 Następujący proces używa prywatnej metody do przetwarzania i konwersji klucza aplikacji. Ta prywatna metoda nosi nazwę SecureString. Do przechowywania klucza aplikacji można też użyć usługi Azure KeyVault. Aby uzyskać więcej informacji, zobacz temat [Key Vault](https://azure.microsoft.com/services/key-vault/).
 
-## <a name="create-a-web-app"></a>Tworzenie aplikacji sieci Web
+## <a name="create-a-web-app"></a>Tworzenie aplikacji internetowej
 
-W tej sekcji musisz podać szczegółowe informacje o aplikacji sieci Web, którą chcesz wskazać w usłudze Intune. Aplikacja internetowa to aplikacja typu klient/serwer. Serwer udostępnia aplikację internetową, która obejmuje interfejs użytkownika, zawartość i funkcje. Aplikacje tego typu są oddzielnie obsługiwane w Internecie. Usługa Intune służy do udzielania aplikacji internetowej dostępu do usługi Intune. Przepływ danych jest inicjowany przez aplikację internetową. 
+W tej sekcji musisz podać szczegółowe informacje o aplikacji internetowej, którą chcesz wskazać w usłudze Intune. Aplikacja internetowa to aplikacja typu klient/serwer. Serwer udostępnia aplikację internetową, która obejmuje interfejs użytkownika, zawartość i funkcje. Aplikacje tego typu są oddzielnie obsługiwane w Internecie. Usługa Intune służy do udzielania aplikacji internetowej dostępu do usługi Intune. Przepływ danych jest inicjowany przez aplikację internetową. 
 
 1.  Zaloguj się do [portalu Azure](https://portal.azure.com).
 2.  Przy użyciu pola **Wyszukaj zasoby, usługi i dokumenty** w górnej części witryny Azure Portal wyszukaj pozycję **Azure Active Directory**.
