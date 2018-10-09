@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 9cb87541e45591ae8c4d1e8151fdb781ebd0b364
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 8b77eeb57bb3887e28242ca845ec6e83d4e9a817
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148144"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863077"
 ---
 # <a name="resolve-a-threat-found-by-zimperium-zips"></a>Rozwiązywanie problemu zagrożenia wykrytego przez aplikację Zimperium zIPS
 
@@ -37,12 +37,16 @@ W tym artykule opisano sposób rozpoznawania alertów zagrożeń aplikacji Zimpe
 ## <a name="troubleshoot-virus-or-security-threat"></a>Rozwiązywanie problemów związanych z zagrożeniem ze strony wirusa lub zagrożeniem dla bezpieczeństwa  
 W przypadku wykrycia zagrożenia wirusowego lub zagrożenia dla bezpieczeństwa aplikacja Zimperium zIPS wymusi ograniczenia zgodnie z zasadami dostępu organizacji. Zasady dostępu w firmie mogą uniemożliwiać dostęp do firmowej sieci, aplikacji i poczty e-mail z urządzenia.  
 
-Aplikacja Zimperium zIPS wyświetli monit o podjęcie działania w celu odzyskania utraconego dostępu. Wybierz zagrożenie i wykonaj instrukcje w aplikacji, aby rozwiązać problem.  
+Aplikacja Zimperium zIPS wyświetli monit o podjęcie działania w celu odzyskania utraconego dostępu. Wybierz zagrożenie i wykonaj instrukcje w aplikacji, aby rozwiązać problem.
 
-## <a name="resolve-an-app-threat"></a>Rozwiązywanie zagrożenia aplikacji
+Ponieważ aplikacja jest zintegrowana z firmowym dostawcą zarządzania urządzeniami przenośnymi, zobaczysz również ostrzeżenie o ograniczonym dostępie w aplikacji Portal firmy. Ostrzeżenie zawiera instrukcję o otworzeniu aplikacji Zimperium zIPS w celu rozwiązania zagrożenia wirusowego lub bezpieczeństwa.  
+
+  ![Zrzut ekranu przedstawiający stronę urządzenia w witrynie Portal firmy z ostrzeżeniem aplikacji Zimperium zIPS.](./media/CP-lookout-virus-banner-1808.png)  
+  
+## <a name="troubleshoot-an-app-threat"></a>Rozwiązywanie problemów z zagrożeniem ze strony aplikacji
 
 Jeśli zainstalujesz aplikację, która zostanie uznana za zagrożenie dla urządzenia, otrzymasz powiadomienie w aplikacji Zimperium zIPS. Jeśli ta aplikacja pozostaje na urządzeniu, nie będzie można uzyskać dostępu do zasobów firmy.  
 
 Aby rozwiązać problem, wybierz aplikację z listy zagrożeń w aplikacji Zimperium zIPS. Następnie wykonaj instrukcje wyświetlane na ekranie, aby usunąć i odinstalować aplikację.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   

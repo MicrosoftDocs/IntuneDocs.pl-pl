@@ -3,8 +3,8 @@ title: Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft In
 titlesuffix: ''
 description: Utwórz zasady zgodności urządzeń usługi Intune wykorzystujące poziomy zagrożeń partnera MTD w celu określenia, czy urządzenie przenośne może uzyskiwać dostęp do zasobów firmy.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
@@ -15,12 +15,12 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1152473206826aa2e3f63c7196a3d0538101a948
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: b52452fc78b8e78e88a7a72215dd51b95cb5b704
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046081"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232124"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
