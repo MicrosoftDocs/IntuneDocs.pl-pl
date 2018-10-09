@@ -3,8 +3,8 @@ title: Jak zintegrować usługę Windows Hello dla firm z usługą Microsoft Int
 titleSuffix: ''
 description: Tworzenie zasad umożliwiających kontrolę sposobu korzystania z funkcji Windows Hello dla firm na urządzeniach zarządzanych.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 08/28/2018
 ms.topic: article
@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff3b482f974641dd7255dc98d3af62542d802de9
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: f2a244337b152af7bcf8bf17cf7e643bdb3faa59
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231461"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune
 
