@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4e523e4fb6505b2faaa0aa776b89454524130ba8
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347801"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187856"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -106,6 +106,15 @@ Więcej informacji znajduje się w artykule [Co to jest zgodność urządzeń](d
 
 <!-- ## Enrollment -->
 
+## <a name="conditional-access"></a>Dostęp warunkowy
+
+### <a name="conditional-access-settings-from-intune-do-not-show-up-in-new-console"></a>Ustawienia dostępu warunkowego z usługi Intune nie są wyświetlane w nowej konsoli
+
+Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal ustawienia dostępu warunkowego nadal będą stosowane. Jednak nie pojawią się one w portalu usługi Azure Intune. 
+
+Jeśli chcesz wyświetlać te ustawienia i zarządzać nimi w witrynie Azure Portal, musisz usunąć stare ustawienia z portalu klasycznego i utworzyć je ponownie w witrynie Azure Portal. 
+
+Aby uzyskać więcej informacji, zobacz [Best practices for conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) (Najlepsze rozwiązania dotyczące dostępu warunkowego w usłudze Azure Active Directory).
 
 ## <a name="data-protection"></a>Ochrona danych
 

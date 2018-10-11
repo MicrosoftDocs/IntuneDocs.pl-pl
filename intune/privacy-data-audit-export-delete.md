@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: c646e134f6311e7c365fe38301a9015a752b553f
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313602"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028617"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Inspekcja, eksportowanie i usuwanie danych osobowych w usłudze Intune
 
@@ -56,13 +56,13 @@ Istnieją trzy sposoby usuwania danych osobowych z zarządzania usługi Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Usuwanie użytkownika z usługi Intune
 
-Aby usunąć dane osobowe użytkownika końcowego z usługi Intune, administrator musi [usunąć użytkownika z usługi Azure Active Directory (AAD)](https://docs.microsoft.com/en-us/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). Gdy użytkownik zostanie usunięty z usługi AAD (całkowicie usunięty), usługa Intune otrzyma sygnał o usunięciu od usługi AAD, a następnie automatycznie rozpocznie czyszczenie wszystkich danych osobowych tego użytkownika z usługi Intune. Informacje użytkownika zostaną usunięte z usługi Intune w ciągu 30 dni od akcji usunięcia.
+Aby usunąć dane osobowe użytkownika końcowego z usługi Intune, administrator musi [usunąć użytkownika z usługi Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). Gdy użytkownik zostanie usunięty z usługi AAD (całkowicie usunięty), usługa Intune otrzyma sygnał o usunięciu od usługi AAD, a następnie automatycznie rozpocznie czyszczenie wszystkich danych osobowych tego użytkownika z usługi Intune. Informacje użytkownika zostaną usunięte z usługi Intune w ciągu 30 dni od akcji usunięcia.
 
 ### <a name="reset-device-to-factory-settings"></a>Resetowanie urządzenia do ustawień fabrycznych
 Zresetowanie do ustawień fabrycznych powoduje przywrócenie oryginalnych ustawień fabrycznych dla wszystkich danych firmy i danych osobowych oraz ustawień. Jest to przydatne podczas przekazywania urządzenia następnemu pracownikowi. Usuwane są pliki użytkownika, aplikacje zainstalowane przez użytkownika i ustawienia inne niż domyślne. Te dane są usuwane z usługi Intune w ciągu 30 dni od akcji usunięcia.
 
 ### <a name="user-self-removal-from-intune-management"></a>Samodzielne usunięcie się użytkownika z zarządzania usługi Intune
-Użytkownik może usunąć swoje urządzenie osobiste z systemem [Android lub Windows albo systemem firmy Apple](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) z zarządzania usługi Intune bez pomocy administratora.   
+Użytkownik może usunąć swoje urządzenie osobiste z systemem [Android lub Windows albo systemem firmy Apple](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android.md) z zarządzania usługi Intune bez pomocy administratora.   
 
 ### <a name="retire"></a>Wycofaj
 Działanie **Wycofaj** powoduje usunięcie danych aprowizowanych przez usługę Intune, takich jak aplikacje firmy, dane dotyczące aplikacji, którymi zarządza usługa Intune, ustawienia zasad i profile poczty e-mail aprowizowane za pośrednictwem usługi Intune. Ta akcja nie powoduje usunięcia osobistych danych użytkownika z urządzenia.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321241"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028736"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -82,7 +82,7 @@ Aby można było skonfigurować profile certyfikatów, wykonaj poniższe kroki. 
 Utwórz konto użytkownika domeny, które będzie używane jako konto usługi NDES. To konto należy podać podczas konfigurowania szablonów w wystawiającym urzędzie certyfikacji przed instalacją i konfiguracją usługi NDES. Upewnij się, że użytkownik ma uprawnienia domyślne, **Logowanie lokalnie**, **Logowanie jako usługa** i **Logowanie w trybie wsadowym**. Niektóre organizacje mają zaostrzone zasady wykluczające te uprawnienia.
 
 #### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Krok 2 — Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
-To zadanie obejmuje:
+W tym kroku:
 
 - Konfigurowanie szablonu certyfikatu dla usługi NDES
 - Publikowanie szablonu certyfikatu dla usługi NDES
@@ -145,7 +145,7 @@ Skonfiguruj urząd certyfikacji, tak aby umożliwiał żądającemu podanie okre
 3. Sprawdź, czy certyfikat został opublikowany, wyświetlając go w folderze **Szablony certyfikatów** .
 
 #### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Krok 3 — Konfigurowanie wymagań wstępnych na serwerze usługi NDES
-To zadanie obejmuje:
+W tym kroku:
 
 - Dodawanie usługi NDES do systemu Windows Serwer oraz konfigurowanie usługi IIS do obsługi usługi NDES
 - Dodawanie konta usługi NDES do grupy IIS_IUSR
@@ -156,7 +156,7 @@ To zadanie obejmuje:
    1. W kreatorze wybierz pozycję **Usługi certyfikatów Active Directory**, aby uzyskać dostęp do usług ról ADCS. Zaznacz pozycję **Usługa rejestracji urządzeń sieciowych**, wyczyść pole wyboru **Urząd certyfikacji**, a następnie zakończ pracę kreatora.
 
       > [!TIP]
-      > W oknie **Postęp instalacji** nie zaznaczaj pozycji **Zamknij**. Zamiast tego wybierz link **Skonfiguruj usługi certyfikatów w usłudze Active Directory na serwerze docelowym**. Zostanie otwarty kreator **Konfiguracja usług AD CS**, który będzie używany w ramach następnego zadania. Po otwarciu kreatora Konfiguracja usług AD CS można zamknąć kreatora Dodaj role i funkcje.
+      > W oknie **Postęp instalacji** nie zaznaczaj pozycji **Zamknij**. Zamiast tego wybierz link **Skonfiguruj usługi certyfikatów w usłudze Active Directory na serwerze docelowym**. Zostanie otwarty kreator **Konfiguracja usług AD CS**, który będzie używany w ramach następnego kroku. Po otwarciu kreatora Konfiguracja usług AD CS można zamknąć kreatora Dodaj role i funkcje.
 
    2. Po dodaniu usługi NDES do serwera kreator przeprowadzi również instalację usług IIS. Upewnij się, że usługi IIS są skonfigurowane w następujący sposób:
 
@@ -181,7 +181,7 @@ To zadanie obejmuje:
     `setspn –s http/Server01.contoso.com contoso\NDESService`
 
 #### <a name="step-4---configure-ndes-for-use-with-intune"></a>Krok 4 — Konfigurowanie usługi NDES do użycia z usługą Intune
-To zadanie obejmuje:
+W tym kroku:
 
 - Konfigurowanie usługi NDES do użycia z urzędem wystawiającym certyfikaty
 - Powiązanie certyfikatu uwierzytelniania serwera (SSL) w usługach IIS
@@ -190,7 +190,7 @@ To zadanie obejmuje:
 1. Na serwerze usługi NDES otwórz kreatora Konfiguracja usług AD CS, a następnie wprowadź następujące aktualizacje:
 
     > [!TIP]
-    > Jeśli w poprzednim zadaniu kliknięto odpowiedni link, kreator jest już otwarty. W przeciwnym przypadku otwórz Menedżera serwera, aby przejść do konfiguracji powdrożeniowej usług certyfikatów Active Directory.
+    > Jeśli w poprzednim kroku kliknięto odpowiedni link, kreator jest już otwarty. W przeciwnym przypadku otwórz Menedżera serwera, aby przejść do konfiguracji powdrożeniowej usług certyfikatów Active Directory.
 
    - W polu **Usługi ról** wybierz pozycję **Usługa rejestracji urządzeń sieciowych**.
    - Na stronie **Konto usługi dla usługi rejestracji urządzeń sieciowych** podaj konto usługi NDES.
@@ -202,7 +202,7 @@ To zadanie obejmuje:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\`
 
-    Aby zaktualizować ten klucz, określ wartość **Przeznaczenie** dla szablonu certyfikatu (znajdującą się na karcie **Obsługiwanie żądań**). Następnie zaktualizuj odpowiadający wpis w rejestrze, zastępując istniejące dane nazwą szablonu certyfikatu (a nie nazwą wyświetlaną szablonu) określonego w zadaniu 1. Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
+    Aby zaktualizować ten klucz, określ wartość **Przeznaczenie** dla szablonu certyfikatu (znajdującą się na karcie **Obsługiwanie żądań**). Następnie zaktualizuj odpowiedni wpis w rejestrze, zastępując istniejące dane nazwą szablonu certyfikatu (a nie nazwą wyświetlaną szablonu) określonego w kroku 2. Poniższa tabela zawiera mapowanie celów szablonu certyfikatu na wartości rejestru:
 
     |Cel szablonu certyfikatu (na karcie Obsługiwanie żądań)|Wartość rejestru do edycji|Wartość wyświetlona w konsoli administratora usługi Intune dla profilu SCEP|
     |---|---|---|
@@ -229,7 +229,7 @@ To zadanie obejmuje:
 
     ![Testowanie usługi NDES](./media/SCEP_NDES_URL.png)
 
-    Jeśli zostanie zwrócony komunikat **503 Usługa niedostępna**, sprawdź informacje w Podglądzie zdarzeń. Istnieje prawdopodobieństwo, że pula aplikacji jest zatrzymana z powodu braku prawa dla użytkownika usługi NDES. Te prawa opisano w zadaniu 1.
+    Jeśli zostanie zwrócony komunikat **503 Usługa niedostępna**, sprawdź informacje w Podglądzie zdarzeń. Istnieje prawdopodobieństwo, że pula aplikacji jest zatrzymana z powodu braku prawa dla użytkownika usługi NDES. Te prawa opisano w kroku 1.
 
 ##### <a name="install-and-bind-certificates-on-the-ndes-server"></a>Instalowanie i powiązanie certyfikatów na serwerze usługi NDES
 
@@ -278,7 +278,7 @@ To zadanie obejmuje:
 4. Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
 
 #### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Krok 5 — Włączanie, instalowanie i konfigurowanie łącznika certyfikatów usługi Intune
-To zadanie obejmuje:
+W tym kroku:
 
 - Włączanie obsługi usługi NDES w usłudze Intune.
 - Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES) w środowisku. Aby zwiększyć skalę wdrożenia usługi NDES w organizacji, można zainstalować wiele serwerów usługi NDES z łącznikiem certyfikatów usługi Microsoft Intune na każdym z nich.
@@ -299,7 +299,7 @@ To zadanie obejmuje:
     > [!NOTE]
     > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP jest instalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku używania usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
 
-6. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach Zadania 3.
+6. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach kroku 4.
 
     Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Mimo że wybrany certyfikat nie jest wyświetlany, wybierz pozycję **Dalej**, aby wyświetlić właściwości certyfikatu. Wybierz pozycję **Dalej**, a następnie pozycję **Zainstaluj**.
 
@@ -450,7 +450,7 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Powodzenie  | Powodzenie |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Urząd certyfikacji jest nieprawidłowy lub nieosiągalny. Sprawdź, czy urząd certyfikacji jest dostępny i Twój serwer może się z nim komunikować. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](https://docs.microsoft.com/en-us/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Określone konto nie ma uprawnień do odwołania certyfikatu z urzędu certyfikacji. Zobacz pole Nazwa urzędu certyfikacji w szczegółach komunikatu o zdarzeniu, aby określić urząd certyfikacji.  |
 | 0x00000403 | CertThumbprint_NotFound  | Nie można odnaleźć certyfikatu zgodnego z danymi wejściowymi. Zarejestruj łącznik certyfikatów i spróbuj ponownie. |
 | 0x00000404 | Certificate_NotFound  | Nie można odnaleźć certyfikatu zgodnego z podanymi danymi wejściowymi. Ponownie zarejestruj łącznik certyfikatów i spróbuj ponownie. |

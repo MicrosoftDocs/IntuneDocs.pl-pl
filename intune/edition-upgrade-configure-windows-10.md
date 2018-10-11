@@ -1,35 +1,35 @@
 ---
-title: Uaktualnianie urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
-description: Utwórz profil urządzenia w usłudze Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do nowszych wersji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile.
+title: Uaktualnianie lub używanie trybu S na urządzeniach z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
+description: Utwórz profil urządzenia w usłudze Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do innych wersji. Możesz na przykład uaktualnić system Windows 10 Professional do systemu Windows 10 Enterprise. Możesz również włączyć lub wyłączyć tryb S na urządzeniu przy użyciu profilu konfiguracji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 09/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
-ms.reviewer: coryfe
+ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 994ab8e7d955d18b293e4d9e9661e0c44baaaa1f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f0e4ba42559a068ebefb453aba18060803dc36e0
+ms.sourcegitcommit: f3974c810e172f345853dacd7f2ca0abc11b1a5b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025437"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44389629"
 ---
-# <a name="configure-windows-10-edition-upgrade-profile-in-intune"></a>Konfigurowanie profilu uaktualniania wersji systemu Windows 10 w usłudze Intune
+# <a name="use-a-configuration-profile-to-upgrade-windows-10-or-switch-from-s-mode-in-intune"></a>Uaktualnianie systemu Windows 10 lub wyłączanie trybu S w usłudze Intune przy użyciu profilu konfiguracji
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Skonfiguruj profil uaktualniania w usłudze Intune, aby automatycznie uaktualnić urządzenia z uruchomioną wersją systemu Windows 10 do innej wersji. Dowiedz się również o obsługiwanych ścieżkach uaktualniania.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
-Przed uaktualnianiem urządzeń do najnowszej wersji potrzebujesz jednego z następujących elementów:
+Przed uaktualnieniem urządzeń do najnowszej wersji potrzebujesz następujących elementów:
 
-- Prawidłowego klucza produktu w celu zainstalowanie zaktualizowanej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Desktop). Możesz użyć kluczy aktywacji wielokrotnej (MAK), kluczy serwera zarządzania kluczami (KMS) lub pliku licencji firmy Microsoft, który zawiera informacje licencyjne umożliwiające zainstalowanie zaktualizowanej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Mobile i Windows 10 Holographic).
+- Prawidłowego klucza produktu w celu zainstalowanie zaktualizowanej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Desktop). Można użyć kluczy aktywacji wielokrotnej (MAK), kluczy usługi serwera zarządzania kluczami (KMS) lub też pliku licencji od firmy Microsoft, który zawiera informacje licencyjne umożliwiające zainstalowanie zaktualizowanej wersji systemu Windows na wszystkich docelowych urządzeniach zasad (w przypadku wersji Windows 10 Mobile i Windows 10 Holographic).
 - Urządzenia z systemem Windows 10, którym przypisywane są zasady, zostały zarejestrowane w usłudze Microsoft Intune. Z zasad uaktualniania wersji nie można korzystać w przypadku komputerów z oprogramowaniem klienckim Intune.
 
 ## <a name="supported-upgrade-paths"></a>Obsługiwane ścieżki uaktualniania
@@ -121,25 +121,45 @@ The following lists provide the supported upgrade paths for the Windows 10 editi
 |Mobile|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|
 |Holographic|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png) -->
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia ograniczeń dotyczących urządzeń
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
-4. Wprowadź wartość w polach **Nazwa** i **Opis** dotyczących profilu uaktualnienia wersji.
-5. Z listy rozwijanej **Platforma** wybierz pozycję **Windows 10 lub nowszy**.
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Uaktualnienie wersji**.
-7. W ramach właściwości **Uaktualnienie wersji** wprowadź następujące ustawienia:
-   - **Wersja, do której chcesz uaktualnić** — z listy rozwijanej wybierz wersję systemu — Windows 10 Desktop, Windows 10 Holographic lub Windows 10 Mobile — do której zostaną uaktualnione docelowe urządzenia.
-   - **Klucz produktu** — wprowadź otrzymany od firmy Microsoft klucz produktu, który może zostać użyty do uaktualnienia wszystkich docelowych urządzeń z systemem Windows 10 Desktop. 
-    Po utworzeniu zasad zawierających klucz produktu nie jest możliwe zaktualizowanie takiego klucza i jest on ukryty ze względów bezpieczeństwa. Aby zmienić klucz produktu, ponownie wprowadź cały klucz.
-   - **Plik licencji** — wybierz pozycję **Przeglądaj**, aby wybrać plik licencji otrzymany od firmy Microsoft. Ten plik licencji otrzymany od firmy Microsoft zawiera informacje o licencji dla wersji Windows Holographic lub Windows 10 Mobile, do której są uaktualniane docelowe urządzenia.
-8. Po zakończeniu wybierz pozycję **Utwórz**, aby zapisać zmiany.
+## <a name="upgrade-the-edition"></a>Uaktualnianie wersji
+
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Wprowadź **nazwę** i **opis** profilu. Na przykład wpisz coś takiego: `Windows 10 edition upgrade`
+4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
+5. W polu **Typ profilu** wybierz opcję **Uaktualnienie wersji**.
+6. W ramach właściwości **Uaktualnienie wersji** wprowadź następujące ustawienia:
+
+   - **Docelowa wersja uaktualnienia**: wybierz wersję systemu Windows 10, do której chcesz uaktualnić system. Urządzenia objęte tymi zasadami zostaną uaktualnione do wybranej wersji.
+   - **Klucz produktu**: wprowadź otrzymany od firmy Microsoft klucz produktu. Po utworzeniu zasad zawierających klucz produktu nie jest możliwe zaktualizowanie takiego klucza i jest on ukryty ze względów bezpieczeństwa. Aby zmienić klucz produktu, ponownie wprowadź cały klucz.
+   - **Plik licencji**: w przypadku systemu **Windows 10 Holographic for Business** lub **Windows 10 Mobile** wybierz pozycję **Przeglądaj**, aby wybrać plik licencji otrzymany od firmy Microsoft. Ten plik licencji zawiera informacje o licencjach dla wersji, do których są uaktualniane docelowe urządzenia.
+
+7. Wybierz przycisk **OK**, aby zapisać zmiany. Wybierz pozycję **Utwórz**, aby utworzyć profil.
+
+## <a name="switch-out-of-s-mode"></a>Wyłączanie trybu S
+
+[Tryb S systemu Windows 10](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) zaprojektowano z myślą o bezpieczeństwie i wydajności. Jeśli na urządzeniach uruchamiane są tylko aplikacje ze sklepu Microsoft Store, używanie trybu S ułatwia zadbanie o bezpieczeństwo urządzeń. Jeśli urządzenia wymagają aplikacji, które nie są dostępne w sklepie Microsoft Store, tryb S zostaje wyłączony. Wyłączenie trybu S to działanie jednokierunkowe. Po wyłączeniu trybu S systemu Windows 10 nie można już do niego wrócić.
+
+W poniższych krokach pokazano, jak utworzyć profil sterujący trybem S na urządzeniach z systemem Windows 10 (w wersji 1809 lub nowszej).
+
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Wprowadź **nazwę** i **opis** profilu. Na przykład wpisz coś takiego: `Windows 10 switch off S mode`
+4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
+5. W polu **Typ profilu** wybierz opcję **Uaktualnienie wersji**.
+6. Wybierz pozycję **Mode switch (Windows Insider only)** (Przełącznik trybów — tylko niejawny program testów systemu Windows) i ustaw właściwość **Switch out of S mode** (Wyłączanie trybu S). Dostępne opcje:
+
+    - **Brak konfiguracji**: urządzenie trybu S pozostaje w tym trybie. Użytkownik końcowy może wyłączyć tryb S na urządzeniu.
+    - **Keep in S mode** (Pozostaw w trybie S): uniemożliwia użytkownikowi końcowemu wyłączenie trybu S na urządzeniu.
+    - **Switch** (Wyłącz): wyłącza tryb S na urządzeniu.
+
+7. Wybierz przycisk **OK**, aby zapisać zmiany. Wybierz pozycję **Utwórz**, aby utworzyć profil.
 
 Profil zostanie utworzony i wyświetlony na liście profilów.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Aby przypisać ten profil do grup, zobacz [Jak przypisywać profile urządzeń](device-profile-assign.md).
+[Przypisz ten profil](device-profile-assign.md) do grup.
 
 >[!NOTE]
 >Jeśli później usuniesz przypisanie zasad, wersja systemu Windows na urządzeniu nie zostanie przywrócona i będzie dalej działać normalnie.

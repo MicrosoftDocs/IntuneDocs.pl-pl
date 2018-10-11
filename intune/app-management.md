@@ -15,19 +15,19 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 20e9d4799b9ea4329c8286f0b75ea2a7d555e07b
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 9529560fca1fcd30fc479c0eac8bd7bc967fa952
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253769"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562854"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Jako administrator IT możesz używać usługi Microsoft Intune do zarządzania aplikacjami mobilnymi używanymi przez pracowników firmy. Ta funkcja jest dodatkiem do funkcji zarządzania urządzeniami oraz ochrony danych. Jednym z priorytetów administratora jest zapewnienie, że użytkownicy końcowi mają dostęp do aplikacji, których potrzebują do pracy. Osiągnięcie tego celu może być trudne, ponieważ:
+Jako administrator informatyczny możesz używać usługi Microsoft Intune do zarządzania aplikacjami klienckimi używanymi przez pracowników firmy. Ta funkcja jest dodatkiem do funkcji zarządzania urządzeniami oraz ochrony danych. Jednym z priorytetów administratora jest zapewnienie, że użytkownicy końcowi mają dostęp do aplikacji, których potrzebują do pracy. Osiągnięcie tego celu może być trudne, ponieważ:
 - Istnieje szeroka gama platform urządzeń i typów aplikacji.
 - Konieczne może okazać się zarządzanie aplikacjami zarówno na urządzeniach firmowych, jak i na osobistych urządzeniach użytkowników.
 - Musisz mieć pewność, że sieć i dane pozostaną bezpieczne.
@@ -68,7 +68,7 @@ Większość informacji powiązanych z aplikacjami można znaleźć w obciążen
     Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
 
-    ![Okienko obciążenia „Aplikacje mobilne”](./media/apps-workload.png)
+    ![Okienko obciążenia Aplikacje klienckie](./media/apps-workload.png)
 
 W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje klienckie**.
 

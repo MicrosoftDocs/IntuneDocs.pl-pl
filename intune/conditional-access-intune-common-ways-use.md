@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 59cba4ead614fe0b5deac535efb9bcb303d5810d
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: ee14a7983451ae37113462e1c8f0aac5785f2f09
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253613"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187873"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -45,6 +45,13 @@ Zasady dostępu warunkowego opartego na urządzeniach dla usługi Exchange Onlin
 -   Dowiedz się więcej o [zgodności urządzenia w usłudze Intune](device-compliance.md).
 
 -   Dowiedz się więcej o [ochronie poczty e-mail, usług Office 365 oraz pozostałych usług przy użyciu dostępu warunkowego w usłudze Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+
+> [!NOTE]
+> Na urządzeniach z systemem Android w przypadku włączenia dostępu opartego na urządzeniach dla usługi SharePoint Online użytkownicy muszą włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
+> 1. Uruchomić **aplikację Portal firmy**.
+> 2. Przejść do strony **Ustawienia** za pomocą przycisku wielokropka (...) lub przycisku menu sprzętu.
+> 3. Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**. 
+> 4. W przeglądarce Chrome wylogować się z usługi Office 365 i ponownie uruchomić przeglądarkę Chrome.
 
 ### <a name="conditional-access-for-exchange-on-premises"></a>Dostęp warunkowy do lokalnego programu Exchange
 

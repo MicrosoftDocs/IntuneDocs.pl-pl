@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 08/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 223906d37159ba4081f5a5c055392321ac02e0ab
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d80d7a05dc01298dc7bc347098cf85fbdfc3689f
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020626"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403497"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Wylogowywanie bieżących użytkowników z urządzeń z systemem iOS zarządzanych przez usługę Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Akcja **Wyloguj bieżącego użytkownika** wylogowuje bieżącego użytkownika na udostępnionym urządzeniu iPad, które jest skonfigurowane w celu zarządzania aplikacją Classroom systemu iOS przy użyciu [profilu systemu iOS dla instytucji edukacyjnych](education-settings-configure-ios.md). 
+Akcja **Wyloguj bieżącego użytkownika** powoduje wylogowanie bieżącego użytkownika na udostępnionym urządzeniu iPad. 
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -36,7 +36,7 @@ Akcja **Wyloguj bieżącego użytkownika** wylogowuje bieżącego użytkownika n
 - macOS — nieobsługiwana
 - Android — nieobsługiwana
 
-## <a name="how-to-logout-the-current-user"></a>Jak wylogować bieżącego użytkownika
+## <a name="how-to-log-out-the-current-user"></a>Jak wylogować bieżącego użytkownika
 
 1.  Zaloguj się do portalu Azure Portal.
 2.  Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.

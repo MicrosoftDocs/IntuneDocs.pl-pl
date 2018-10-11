@@ -15,18 +15,18 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d11356c16965e3ba7631275368c9723a2db0ecc9
-ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
+ms.openlocfilehash: eb4a80a9de03844c6fffa5e56f09c375645f9188
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43675019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864545"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad przeglądarki chronionej w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Przeglądarki chronione obejmują programy Microsoft Edge i Intune Managed Browser. Microsoft Edge i Managed Browser to aplikacje służące do przeglądania zasobów internetowych przeznaczone do użytku w organizacji i dostępne do pobrania z publicznych sklepów z aplikacjami. W przypadku skonfigurowania przy użyciu usługi Intune przeglądarki chronione mogą:
+Przeglądarki chronione obejmują programy Microsoft Edge i Intune Managed Browser. Edge i Managed Browser to aplikacje służące do przeglądania zasobów internetowych przeznaczone do użytku w organizacji i dostępne do pobrania z publicznych sklepów z aplikacjami. W przypadku skonfigurowania przy użyciu usługi Intune przeglądarki chronione mogą:
 - służyć do uzyskiwania dostępu do firmowych witryn i aplikacji SaaS z użyciem logowania jednokrotnego za pośrednictwem usługi MyApps, chroniąc jednocześnie dane internetowe;
 - zostać wstępnie skonfigurowany z użyciem listy adresów URL i domen w celu ograniczenia witryn, do których użytkownik może przejść w kontekście firmowym;
 - zostać wstępnie skonfigurowany przy użyciu określonej strony głównej i zakładek.
@@ -53,10 +53,9 @@ Zasady przeglądarki chronionej można tworzyć dla następujących typów urzą
 
 -   Urządzenia z systemem Android 4 i nowszym
 
--   Urządzenia z systemem iOS w wersji 8.0 lub nowszej
+-   Urządzenia z systemem iOS w wersji 10.0 lub nowszej
 
 >[!IMPORTANT]
->Od października 2017 r. aplikacja Intune Managed Browser w aplikacji dla systemu Android obsługuje tylko urządzenia z systemem Android 4.4 lub nowszym. Aplikacja Intune Managed Browser dla systemu iOS będzie obsługiwać wyłącznie urządzenia z systemem iOS 9.0 i nowszym.
 >Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
 
 
@@ -147,14 +146,14 @@ Aplikacje Microsoft Edge i Intune Managed Browser oraz [serwer proxy aplikacji u
 - Użytkownicy aplikacji Managed Browser lub Microsoft Edge mają przypisane do aplikacji [zasady ochrony aplikacji usługi Intune]( app-protection-policy.md).
 
     > [!NOTE]
-    > Zanim zaktualizowane dane przekierowania serwera proxy aplikacji zaczną obowiązywać w aplikacji Managed Browser lub Microsoft Edge, może minąć do 24 godzin.
+    > Zanim zaktualizowane dane przekierowania serwera proxy aplikacji zaczną obowiązywać w aplikacji Managed Browser lub Edge, może minąć do 24 godzin.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Krok 1. Włączenie automatycznego przekierowania do przeglądarki chronionej z poziomu programu Outlook
 Program Outlook musi być skonfigurowany przy użyciu zasad ochrony aplikacji, które powodują włączenie ustawienia **Ogranicz zawartość sieci Web wyświetlaną w programie Managed Browser**.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Krok 2. Przypisanie zasad konfiguracji aplikacji przypisanych do przeglądarki chronionej.
-Ta procedura umożliwia skonfigurowanie aplikacji Managed Browser lub Microsoft Edge, aby korzystała z przekierowywania serwera proxy aplikacji. Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Microsoft Edge, podaj następującą parę klucza i wartości:
+Ta procedura umożliwia skonfigurowanie aplikacji Managed Browser lub Edge, aby korzystała z przekierowywania serwera proxy aplikacji. Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Microsoft Edge, podaj następującą parę klucza i wartości:
 
 | Klucz                                                             | Wartość    |
 |-----------------------------------------------------------------|----------|
@@ -163,7 +162,7 @@ Ta procedura umożliwia skonfigurowanie aplikacji Managed Browser lub Microsoft 
 Aby uzyskać więcej informacji o sposobie używania aplikacji Managed Browser i Microsoft Edge w połączeniu z serwerem proxy aplikacji usługi Azure AD w celu zapewnienia bezproblemowego (i bezpiecznego) dostępu do lokalnych aplikacji internetowych, zobacz wpis w blogu usług Enterprise Mobility + Security [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Razem lepiej: usługi Intune i Azure Active Directory łączą siły, aby zapewnić lepszy dostęp użytkownikom).
 
 > [!NOTE]
-> Aplikacja Microsoft Edge używa tych samych par klucza i wartości, co aplikacja Managed Browser. 
+> Aplikacja Edge używa tych samych par klucza i wartości, co aplikacja Managed Browser. 
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Jak skonfigurować stronę główną dla przeglądarki chronionej
 

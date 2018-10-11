@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
-ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
+ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39481125"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562871"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Ustawienia kiosku dla systemu Windows 10 (i nowszych) w usłudze Intune
 
@@ -45,7 +45,7 @@ Profile kiosku służą do konfigurowania urządzeń z systemem Windows 10 tak, 
 #### <a name="single-full-screen-app-kiosks"></a>Kioski z pojedynczą aplikacją w trybie pełnoekranowym
 Podaj następujące ustawienia:
 
-- **Identyfikator aplikacji platformy uniwersalnej systemu Windows (UWP)**: wprowadź **identyfikator modelu użytkownika aplikacji (AUMID)** aplikacji kiosku. Możesz również wybrać istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Mobile Apps](apps-add.md).
+- **Identyfikator aplikacji platformy uniwersalnej systemu Windows (UWP)**: wprowadź **identyfikator modelu użytkownika aplikacji (AUMID)** aplikacji kiosku. Możesz również wybrać istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Aplikacje klienckie](apps-add.md).
 
     Zobacz [Find the Application User Model ID of an installed app (Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji)](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -62,7 +62,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 Podaj następujące ustawienia:
 
 - **Dodaj aplikację systemu Win32**: aplikacja systemu Win32 to tradycyjna aplikacja klasyczna. Wprowadź wartości pól **Nazwa aplikacji** i **Identyfikator**. **Identyfikator** to w pełni kwalifikowana nazwa ścieżki pliku wykonywalnego określona względem urządzenia.
-- **Dodaj aplikacje zarządzane**: wybierz istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Mobile Apps w usłudze Intune](apps-add.md).
+- **Dodaj aplikacje zarządzane**: wybierz istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Aplikacje klienckie w usłudze Intune](apps-add.md).
 - **Dodaj aplikację według identyfikatora AUMID**: wprowadź [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacje platformy UWP).
 - **Pasek zadań**: wybierz wartość **Włącz**, aby wyświetlać pasek zadań, lub wartość **Nieskonfigurowany**, aby go ukryć na kiosku.
 - **Układ menu Start**: określ plik XML, który opisuje sposób wyświetlania aplikacji w menu Start, w tym ich kolejność. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) zawiera wskazówki i przykładowy kod XML.
@@ -75,7 +75,7 @@ Podaj następujące ustawienia:
 
 ## <a name="kiosk-web-browser-settings"></a>Ustawienia przeglądarki internetowej kiosku
 
-Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że aplikacja przeglądarki internetowej została wdrożona na urządzeniach kiosku przy użyciu usługi [Mobile Apps](apps-add.md).
+Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że aplikacja przeglądarki internetowej została wdrożona na urządzeniach kiosków przy użyciu usługi [Aplikacje klienckie](apps-add.md).
 
 1. Podaj następujące ustawienia:
 
@@ -115,7 +115,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 
 Podaj następujące ustawienia:
 
-- **Dodaj aplikacje zarządzane**: wybierz istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Mobile Apps w usłudze Intune](apps-add.md).
+- **Dodaj aplikacje zarządzane**: wybierz istniejącą aplikację zarządzaną, którą dodano za pomocą usługi [Aplikacje klienckie w usłudze Intune](apps-add.md).
 - **Dodaj aplikację według identyfikatora AUMID**: wprowadź [identyfikator AUMID aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikacje platformy UWP).
 - **Układ menu Start**: określ plik XML, który opisuje sposób wyświetlania aplikacji w menu Start, w tym ich kolejność. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) zawiera wskazówki i oraz plik XML przygotowany dla urządzeń platformy Windows Holographic for Business.
 - **Typ konta użytkownika**: dodaj co najmniej jedno konto użytkownika, które może używać dodanych aplikacji. Obsługiwane opcje obejmują: 

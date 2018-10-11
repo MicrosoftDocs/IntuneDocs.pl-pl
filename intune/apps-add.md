@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b5395ed4095280230c9cf678395df03bbce41ea
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
+ms.openlocfilehash: b92a5c7bcddbecc438aa5e72989ab2302440da7a
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141681"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562888"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -90,7 +90,7 @@ Gdy chcesz określić, które aplikacje są potrzebne Twoim pracownikom, uwzglę
 
 Najpierw na podstawie stopnia poufności danych zawartych w aplikacji musisz określić, która grupa powinna mieć dostęp do aplikacji. Konieczne może być uwzględnienie lub wykluczenie niektórych rodzajów ról w organizacji. Na przykład dla grupy sprzedaży mogą być wymagane tylko niektóre aplikacje biznesowe, a osobom pracującym w dziale technicznym, finansowym, prawniczym lub w księgowości aplikacje biznesowe mogą nie być w ogóle potrzebne. Ponadto grupa sprzedaży może potrzebować dodatkowej ochrony danych oraz dostępu do wewnętrznych usług firmowych na swoich urządzeniach przenośnych. Należy określić, w jaki sposób ta grupa będzie łączyć się z zasobami przy użyciu aplikacji. Czy dane, do których uzyskuje dostęp aplikacja, znajdują się w chmurze, czy na komputerze lokalnym? Trzeba również wiedzieć, jak użytkownicy będą łączyć się z zasobami przy użyciu aplikacji. 
 
-Ponadto usługa Intune obsługuje umożliwianie dostępu do aplikacji mobilnych, które wymagają bezpiecznego dostępu do danych lokalnych, takich jak serwery aplikacji biznesowych. Ten typ dostępu jest zazwyczaj oferowany przy użyciu [zarządzanych przez usługę Intune certyfikatów](certificates-configure.md) kontroli dostępu w połączeniu ze standardową bramą sieci VPN lub serwerem proxy w sieci obwodowej, takim jak serwer proxy aplikacji usługi Azure Active Directory. [Narzędzie opakowujące aplikacje i zestaw SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune może pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej, aby nie mogła przekazywać danych firmowych do aplikacji lub usług konsumenckich.
+Ponadto usługa Intune obsługuje umożliwianie dostępu do aplikacji klienckich, które wymagają bezpiecznego dostępu do danych lokalnych, takich jak serwery aplikacji biznesowych. Ten typ dostępu jest zazwyczaj oferowany przy użyciu [zarządzanych przez usługę Intune certyfikatów](certificates-configure.md) kontroli dostępu w połączeniu ze standardową bramą sieci VPN lub serwerem proxy w sieci obwodowej, takim jak serwer proxy aplikacji usługi Azure Active Directory. [Narzędzie opakowujące aplikacje i zestaw SDK aplikacji](apps-prepare-mobile-application-management.md) usługi Intune może pomóc w zamknięciu udostępnianych danych wewnątrz aplikacji biznesowej, aby nie mogła przekazywać danych firmowych do aplikacji lub usług konsumenckich.
 
 W [przewodniku planowania, projektowania i implementowania wdrożenia usługi Intune](planning-guide.md) znajdują się informacje pomocne przy określaniu sposobu identyfikowania grup organizacyjnych powiązanych z poszczególnymi scenariuszami aplikacji przypadków użycia i podrzędnych przypadków użycia. Aby uzyskać informacje dotyczące przypisywania aplikacji do grup, zobacz temat [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](apps-deploy.md).
 

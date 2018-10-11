@@ -1,11 +1,11 @@
 ---
 title: Korzystanie z urządzenia z systemem Windows i usługi Intune | Microsoft Docs
-description: Lista linków do zadań, które można wykonać na urządzeniu z systemem Windows, gdy urządzenie zostało zarejestrowane w usłudze Intune
+description: Znajdowanie linków do rozwiązywania problemów z urządzeniami z systemem Windows lub zarządzania nimi w aplikacji Portal firmy
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,36 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 645e87ef731cf911824ab16673c01e962c91fb70
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c4018c73c2160a3db5d5c8b8843e803b56f2caa3
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017261"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168968"
 ---
-# <a name="using-your-windows-device-with-intune"></a>Korzystanie z urządzenia z systemem Windows i usługi Intune
+# <a name="using-your-windows-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem Windows z aplikacją Portal firmy usługi Intune
 
-Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
+Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal firmy dla systemu Windows. Ułatwia rozwiązywanie problemów z urządzeniami z systemem Windows i zarządzanie nimi. Kliknij dowolny link, aby wyświetlić więcej szczegółów, procedury i zrzuty ekranu.  
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Usługa Intune obsługuje obecnie następujące wersje systemu Windows.
+Aplikacja Portal firmy obsługuje obecnie następujące wersje systemu Windows.
 
 * Windows 10 (wersje Home, Pro, Education, S i Enterprise)
 * System Windows Phone 8.1 lub nowszy
 * System Windows 8.1 RT
 * Windows 8.1
 
-Istnieją także inne wersje systemu Windows, takie jak [Windows 10 Holographic](https://www.microsoft.com/hololens), które również są obsługiwane przez usługę Intune. Nie zostały one wymienione w tym miejscu, ponieważ służą do bardzo konkretnych zastosowań.
+W aplikacji Portal firmy są również obsługiwane inne wersje systemu Windows, takie jak [Windows 10 Holographic](https://www.microsoft.com/hololens). Te wersje nie są omawiane w tym artykule, ponieważ są przeznaczone do bardzo konkretnych zastosowań.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
+## <a name="enrolling-your-device-and-installing-the-company-portal"></a>Rejestrowanie urządzenia i instalowanie aplikacji Portal firmy
 
 - [Rejestrowanie urządzenia z systemem Windows w usłudze Intune](enroll-your-device-in-intune-windows.md)
 - [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [Jakie informacje może wyświetlać Twoja firma, gdy zarejestrujesz swoje urządzenie w usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [Resetowanie (wymazywanie) danych w przypadku utraty lub kradzieży urządzenia](reset-erase-your-device-cpwebsite.md)
 
-## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
+## <a name="things-you-can-do-after-your-device-is-enrolled-in-management"></a>Czynności, które można wykonywać po zarejestrowaniu urządzenia w rozwiązaniu zarządzania
 
 - [Szyfrowanie urządzenia](encrypt-your-device-windows.md)
 - [Ustawianie lub zmienianie hasła](set-or-change-your-password-windows.md)

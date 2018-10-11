@@ -14,12 +14,12 @@ ms.assetid: 68921fd6-5f50-456c-a3af-83d7bc4b134b
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 085b6a3a68964a200a5d6c462b3710b9744ac99f
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 5613c1284110e85a910db8f156ff4f62a54af4ad
+ms.sourcegitcommit: dc6979f2b14d522530577cc7f212cc822356acc9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474619"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453548"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpieczanie i udostępnianie danych w usłudze Intune
 
@@ -66,7 +66,7 @@ Aby zapoznać się z informacjami na temat danych udostępnianych określonym in
 
 ### <a name="system-center-configuration-manager-data-sharing"></a>Udostępnianie danych programowi System Center Configuration Manager
 
-Usługa Microsoft Intune nie udostępnia żadnych danych programowi System Center Configuration Manager. Microsoft Intune jest produktem lokalnym, który jest wdrażany, zarządzany i obsługiwany bezpośrednio przez klienta. Dane diagnostyczne i dane użycia zbierane przez program Configuration Manager są wykorzystywane wyłącznie w celu ulepszenia procesu instalacji, jakości i bezpieczeństwa przyszłych wersji.
+Usługa Microsoft Intune nie udostępnia żadnych danych programowi System Center Configuration Manager. System Center Configuration Manager jest produktem lokalnym, który jest wdrażany, zarządzany i obsługiwany bezpośrednio przez klienta. Dane diagnostyczne i dane użycia zbierane przez program Configuration Manager są wykorzystywane wyłącznie w celu ulepszenia procesu instalacji, jakości i bezpieczeństwa przyszłych wersji.
 
 Aby dowiedzieć się więcej, zobacz [Dane diagnostyczne i użycia dla programu SCCM](https://docs.microsoft.com/en-us/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data.md). 
 

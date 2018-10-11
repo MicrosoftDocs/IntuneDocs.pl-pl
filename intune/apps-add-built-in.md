@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 908135e93fd3980af9d9e80d9c5cf3b4a8abddc3
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 62a7f2f45ccd98612e56e253945974a8eb193f25
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058754"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562718"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Dodawanie wbudowanych aplikacji do usługi Microsoft Intune
 
@@ -48,7 +48,7 @@ Aby dodać aplikację wbudowaną do dostępnych dla Ciebie aplikacji w usłudze 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 
 Możesz zmodyfikować informacje o wbudowanej aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
-1. W okienku **Aplikacje mobilne — aplikacje** wybierz wbudowaną aplikację, którą chcesz zmodyfikować.  
+1. W okienku **Aplikacje klienckie — aplikacje** wybierz wbudowaną aplikację, którą chcesz zmodyfikować.  
     Zostanie wyświetlone okienko dla wbudowanej aplikacji.
 2. W obszarze **Zarządzaj** wybierz opcję **Właściwości**.
 3. Aby zmodyfikować informacje o wbudowanej aplikacji, wybierz opcję **Konfiguruj**.

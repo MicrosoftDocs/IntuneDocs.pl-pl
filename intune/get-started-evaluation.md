@@ -1,13 +1,13 @@
 ---
 title: Wprowadzenie do usługi Microsoft Intune
 titleSuffix: ''
-description: Wykonaj kilka praktycznych ćwiczeń w celu poznania usługi Intune.
+description: Przejdź przez kilka praktycznych przewodników Szybki start, aby poznać usługę Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/23/2018
-ms.topic: conceptual
+ms.date: 09/20/2018
+ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,35 +15,35 @@ ms.assetid: 6bfab644-c1e2-4154-a254-e95b9a1d75f2
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 8066cd8c2e0fa1d0a9244383497ea6b417f6531b
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 508c4826a14adfa554ff59a8095b6b5a76b41773
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253735"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403531"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jakie korzyści może zapewnić usługa Intune mojej firmie?
-
-Usługa Intune to oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmowych.
+Usługa Microsoft Intune to oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmowych.
 
 ![Diagram architektury wysokiego poziomu dla usługi Microsoft Intune](/intune/media/intunearchitecture.svg)
 
-Rozumiemy, że rozpoczęcie zarządzania urządzeniami przenośnymi może być trudne, ponieważ trzeba podjąć wiele różnych decyzji w imieniu swojej firmy. Te ćwiczenia poprowadzą Cię przez zadania ułatwiające zrozumienie sposobu, w jaki usługa Intune może zostać użyta do ochrony zasobów firmy.
+Rozumiemy, że rozpoczęcie zarządzania urządzeniami przenośnymi może być trudne, ponieważ trzeba podjąć wiele różnych decyzji w imieniu swojej firmy. Poniższe przewodniki Szybki start ułatwiają rozpoczęcie pracy z usługą Intune i szybkie wykonanie niektórych typowych zadań.
 
-## <a name="what-are-the-exercises"></a>Jakie to są ćwiczenia?
+## <a name="quickstarts"></a>Przewodniki Szybki start
 
-Praktyczne ćwiczenia __wprowadzające__ możesz wykonywać w zalecanej kolejności, korzystając ze spisu treści w lewej części strony. Te zadania to:
+Przewodniki Szybki start — __Wprowadzenie__ możesz wykonywać w zalecanej kolejności, korzystając ze spisu treści w lewej części strony.
 
-* [Wprowadzenie do korzystania z platformy Azure](get-started-azure.md) — poznaj interfejs witryny Azure Portal oraz sposób wprowadzania zmian na wyświetlanej stronie.
-* [Wprowadzenie do zarządzania użytkownikami](get-started-users.md) — dodaj użytkownika do usługi Intune, aby umożliwić mu dostęp do zasobów firmy na urządzeniach przenośnych.
-* [Wprowadzenie do grup](get-started-groups.md) — umieszczaj użytkowników w grupach, aby ułatwić zarządzanie zasadami i aplikacjami, do których mogą uzyskiwać dostęp.
-* [Wprowadzenie do zasad](get-started-policies.md) — utwórz zasady, aby uniemożliwić użytkownikom wykonywanie nieautoryzowanych działań na swoich urządzeniach.
-* [Wprowadzenie do rejestrowania urządzeń](get-started-enroll.md) — poznaj środowisko rejestracji, przeprowadzając pełną rejestrację urządzenia z systemem iOS.
-* [Wprowadzenie do dodawania aplikacji](get-started-apps.md) — znajduj i dodawaj aplikacje do urządzeń, aby umożliwić pracownikom wykonywanie zadań.
-
+- [Wypróbuj bezpłatnie usługę Intune](free-trial-sign-up.md) — utwórz bezpłatną subskrypcję w celu wypróbowania usługi Intune w środowisku testowym.    
+- [Tworzenie użytkownika](quickstart-create-user.md) — dodaj użytkownika do usługi Intune, aby umożliwić mu dostęp do zasobów firmy na urządzeniach przenośnych.
+- [Tworzenie grupy](quickstart-create-group.md) — umieść użytkowników w grupach, aby ułatwić zarządzanie zasadami i aplikacjami, do których mogą uzyskiwać dostęp.
+- [Tworzenie zasad](quickstart-create-policy.md) — utwórz zasady zgodności urządzenia dla urządzenia z systemem Windows 10 i przypisz grupę do zasad.
+- [Konfigurowanie automatycznego rejestrowania](quickstart-setup-auto-enrollment.md) — skonfiguruj usługę Microsoft Intune w celu automatycznego rejestrowania urządzeń w przypadku logowania się określonych użytkowników na urządzeniach z systemem Windows 10.
+- [Tworzenie i przypisywanie roli niestandardowej](quickstart-create-custom-role.md) — utwórz i przypisz rolę niestandardową z określonymi uprawnieniami dla działu operacji zabezpieczeń. 
+- [Tworzenie profilu urządzenia poczty e-mail dla systemu iOS](quickstart-email-profile.md) — utwórz profil urządzenia poczty e-mail dla urządzeń z systemem iOS.
+<!--  [Add and assign apps](get-started-apps.md) - Add and assign apps to devices -->
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Przed rozpoczęciem należy aktywować konto administratora i konto dzierżawy usługi Intune. W celu utworzenia tych kont możesz zarejestrować się [tutaj](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Aktualni subskrybenci mogą również wykonać te czynności w ramach aktywnej dzierżawy. W tych artykułach z wprowadzeniem założono, że praca odbywa się na urządzeniach testowych.
+Przed rozpoczęciem należy aktywować konto administratora i konto dzierżawy usługi Intune. Utwórz bezpłatną subskrypcję, aby [wypróbować bezpłatnie usługę Intune ](free-trial-sign-up.md) w środowisku testowym. Aktualni subskrybenci mogą również wykonać te czynności w ramach aktywnej dzierżawy. W tych artykułach z wprowadzeniem założono, że praca odbywa się na urządzeniach testowych.
 
 Upewnij się również, że jesteś administratorem globalnym w swojej organizacji — tylko wtedy będzie możliwe wykonanie wszystkich zadań wprowadzających.
 

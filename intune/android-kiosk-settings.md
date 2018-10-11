@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329387"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602184"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Ustawienia kiosku dla urządzeń z systemem Android w usłudze Intune
 
@@ -27,7 +27,7 @@ Urządzenie można skonfigurować w trybie kiosku z jedną lub wieloma aplikacja
 
 Jeśli profil ograniczeń urządzenia kiosku jest ustawiony na **Tryb kiosku** = **kiosk z pojedynczą aplikacją**, użytkownicy mogą uzyskać dostęp tylko do jednej aplikacji. Podczas uruchamiania urządzenia skonfigurowanego w tym trybie jest uruchamiana konkretna aplikacja. Użytkownicy nie mogą otwierać nowych aplikacji ani zmieniać uruchomionej aplikacji.
 
-1. Upewnij się, że aplikacja, która ma być używana na urządzeniu kiosku została [wdrożona na urządzeniu](apps-deploy.md) i przypisana do grupy urządzeń utworzonej dla kiosków.
+1. Upewnij się, że aplikacja, która ma być używana na urządzeniu kiosku, została [wdrożona na urządzeniu](apps-deploy.md) i przypisana do grupy urządzeń utworzonej dla kiosków.
 2. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. W bloku **Tworzenie profilu** skonfiguruj następujące pola:
      - **Nazwa**
@@ -51,7 +51,7 @@ Aby ustawić kiosk z systemem Android dla wielu aplikacji, wykonaj następujące
 2. [Dodawanie i przypisywanie aplikacji, które mogą być używane w trybie kiosku](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Opcjonalnie) [Dodawanie linków internetowych, które mogą być używane w trybie kiosku](#add-web-links-that-can-be-used-in-kiosk-mode)
 
-### <a name="import-and-deply-the-managed-home-screen-app"></a>Importowanie i wdrażanie aplikacji Managed Home Screen
+### <a name="import-and-deploy-the-managed-home-screen-app"></a>Importowanie i wdrażanie aplikacji Managed Home Screen
 
 1. Przejdź do [strony Managed Home Screen w sklepie Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) i zaloguj się przy użyciu konta, które jest używane dla innych aplikacji zarządzanych ze sklepu Google Play.
 2. Wybierz pozycję **Zatwierdź**.
@@ -59,6 +59,9 @@ Aby ustawić kiosk z systemem Android dla wielu aplikacji, wykonaj następujące
 4. Wybierz pozycję **Aplikacje** > **Managed Home Screen** > **Przypisania** > **Dodaj grupę**.
 5. W obszarze **Typ przypisania** wybierz pozycję **Wymagane**.
 6. Wybierz pozycję **Dołączone grupy** > **Wybierz grupy do uwzględnienia** > wybierz grupę urządzeń utworzoną dla urządzeń kiosków > **Wybierz** > **OK** > **OK** > **Zapisz**.
+
+> [!NOTE]
+> Po dodaniu aplikacji Managed Home Screen do profilu kiosku z wieloma aplikacjami zostanie dodana ikona. Jednak po wybraniu ikony nic się nie dzieje. W wyniku tego nie trzeba dodawać aplikacji Managed Home Screen do profilu kiosku z wieloma aplikacjami.
 
 ### <a name="add-and-assign-apps-that-can-be-used-in-kiosk-mode"></a>Dodawanie i przypisywanie aplikacji, które mogą być używane w trybie kiosku
 
@@ -76,7 +79,7 @@ Dla każdej aplikacji, która ma być dostępna na urządzeniach kiosku, wykonaj
 3. Wybierz pozycję **Konfiguruj** i podaj wymagane informacje. Nie trzeba dodawać obrazu logo, ponieważ zostanie on automatycznie pobrany z obrazu favicon.ico witryny internetowej.
 4. Wybierz przycisk **OK** > **Dodaj**.
 
-Upewnij się, że aplikacja przeglądarki internetowej została wdrożona na urządzeniach kiosku przy użyciu usługi [Mobile Apps](apps-add.md).
+Upewnij się, że aplikacja internetowa została wdrożona na urządzeniach kiosków. Aby uzyskać więcej informacji, zobacz [Dodawanie aplikacji internetowych do usługi Microsoft Intune](web-app.md).
 
 ### <a name="create-a-multi-app-kiosk-profile"></a>Tworzenie profilu kiosku z wieloma aplikacjami
 

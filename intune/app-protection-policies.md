@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 45c394f3aadde63299b8397974f4547c4968c192
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329669"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169036"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -30,7 +30,7 @@ Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Micro
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajduje się w artykule [What are Microsoft Intune app protection policies? (Co to są zasady ochrony aplikacji usługi Microsoft Intune)](app-protection-policy.md).
+Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajdują się w artykule [What are Microsoft Intune app protection policies? (Co to są zasady ochrony aplikacji usługi Microsoft Intune)](app-protection-policy.md).
 
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
@@ -56,24 +56,22 @@ Aby uzyskać informacje o dodawaniu aplikacji biznesowych (LOB) Twojej organizac
    Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy. Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
 
    > [!TIP]
-   > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują.
+   > Te ustawienia zasad obowiązują tylko w przypadku stosowania aplikacji w kontekście pracy. Gdy użytkownicy końcowi używają aplikacji do wykonywania zadania osobistego, te zasady nie obowiązują. Należy pamiętać, że nowo utworzony plik jest uznawany za plik osobisty. 
 
-7. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w okienku **Dodawanie zasad**. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
-8. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**.
-9. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
+7. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**.
+8. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
 Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz [Wdrażanie zasad dla użytkowników](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Wdrażanie zasad dla użytkowników
 
-
 1. W okienku **Zasady ochrony aplikacji** wybierz zasady.
 
-1. W okienku **Zasady** wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka **Intune App Protection — przypisania**. Wybierz pozycję **Wybierz grupy do uwzględnienia** w okienku **Przypisania**, aby otworzyć okienko **Wybieranie grup do uwzględnienia**.
+2. W okienku **Zasady** wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka **Intune App Protection — przypisania**. Wybierz pozycję **Wybierz grupy do uwzględnienia** w okienku **Przypisania**, aby otworzyć okienko **Wybieranie grup do uwzględnienia**.
 
    ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
 
-2.  W okienku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
+3.  W okienku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
 
     ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
 
@@ -127,10 +125,12 @@ Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkow
 
 Aby utworzyć te zasady, przejdź do zasad **Aplikacje klienckie** > **Ochrona aplikacji** w konsoli usługi Intune i kliknij pozycję **Dodaj zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Jeśli chcesz stosować zasady ochrony aplikacji do urządzeń zarządzanych i niezarządzanych, potwierdź, że pozycja **Przeznaczone dla wszystkich typów aplikacji** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, określ dla pozycji **Przeznaczone dla wszystkich typów aplikacji** wartość **Nie**. 
 
-Aby aplikacje systemu iOS były uważane za „Zarządzane”, ustawienie zasad konfiguracji **IntuneMAMUPN** musi zostać wdrożone dla każdej aplikacji. Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+![Zrzut ekranu przedstawiający blok dodawania zasad z wybraną pozycją Dotyczy wszystkich typów aplikacji](./media/app-protection-policies-target-all.png)
+
+Aby aplikacje systemu iOS były uważane za „Zarządzane”, ustawienie zasad konfiguracji **IntuneMAMUPN** musi zostać wdrożone dla każdej aplikacji. Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
-> Informacje dotyczące obsługi zasad ochrony aplikacji stosowanych na podstawie stanu zarządzania urządzeniem przez konkretną wersję systemu iOS zawiera artykuł [MAM protection policies targeted based on management state (Zasady ochrony rozwiązania MAM stosowane na podstawie stanu zarządzania)](whats-new.md#mam-protection-policies-targeted-based-on-management-state-).
+> Informacje dotyczące obsługi zasad ochrony aplikacji stosowanych na podstawie stanu zarządzania urządzeniem przez konkretną wersję systemu iOS zawiera artykuł [MAM protection policies targeted based on management state (Zasady ochrony rozwiązania MAM stosowane na podstawie stanu zarządzania)](whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-).
 
 ## <a name="policy-settings"></a>Ustawienia zasad
 Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wybierz jeden z następujących linków:

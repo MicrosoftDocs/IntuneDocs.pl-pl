@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ee5a39ee8a146fbc6a85a9f4438b8e14a408a735
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 772c800e75f52d9826992bf0adfbfdcf3faba107
+ms.sourcegitcommit: a13d1eafc979a9cfeb4adbdea861e2784c2b1068
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46329984"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -123,6 +123,7 @@ Po wyrejestrowaniu lub wyczyszczeniu urządzenia certyfikaty zostaną usunięte.
 Następujące urzędy certyfikacji innych firm obsługują usługę Intune:
 
 - [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
+- [Wersja repozytorium GitHub EJBCA typu open-source](https://github.com/agerbergt/intune-ejbca-connector)
 
 Jeśli interesuje Cię zintegrowanie urzędu certyfikacji innej firmy z usługą Intune, zapoznaj się ze wskazówkami dotyczącymi interfejsu API:
 

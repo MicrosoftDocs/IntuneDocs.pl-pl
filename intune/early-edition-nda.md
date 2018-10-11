@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/4/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: beee1462c1b6e683287b4d304df386ce525be820
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
+ms.openlocfilehash: 0f6447f4a5cfb2638278a59414e83f744adb8c81
+ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45978267"
 ---
 # <a name="the-early-edition-for-microsoft-intune---september-2018"></a>Wczesna wersja usługi Microsoft Intune — wrzesień 2018
 
@@ -57,6 +57,9 @@ Ustawienie zawsze włączonej sieci VPN będzie znajdować się w oknie ustawie�
 ### <a name="outlook-for-ios-and-android-app-configuration-policy---1828527---"></a>Zasady konfiguracji aplikacji Outlook dla systemów iOS i Android <!--1828527 -->
 Będziesz mieć możliwość utworzenia zasad aplikacji Outlook dla systemów iOS i Android w systemie iOS. Dodatkowe ustawienia konfiguracji będą dodawane po włączeniu w aplikacji Outlook dla systemów iOS i Android.
 
+###  <a name="windows-line-of-business-lob-app-file-extensions----1884873---"></a>Rozszerzenia plików aplikacji biznesowych (LOB) dla systemu Windows <!-- 1884873 -->
+Rozszerzenia plików aplikacji LOB dla systemu Windows obejmują rozszerzenia *msi*, *appx*, *appxbundle*, *msix* i *msixbundle*. Aby dodać aplikację w usłudze Microsoft Intune, wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **typ aplikacji**. Dla aplikacji LOB dla systemu Windows wybierz jako typ aplikacji aplikację **Biznesowa**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny z odpowiednim rozszerzeniem.
+
 ### <a name="remotely-lock-noncompliant-devices----2064495---"></a>Zdalne blokowanie niezgodnych urządzeń <!-- 2064495 -->
 Gdy urządzenie jest niezgodne, będziesz mieć możliwość utworzenia akcji dotyczącej zasad zgodności, która zdalnie zablokuje urządzenie. W obszarze Intune > **Zgodność urządzenia** utwórz nowe zasady lub wybierz istniejące. Wybierz kolejno pozycje **Akcje dotyczące niezgodności** > **Dodaj** i wybierz opcję zdalnego blokowania urządzenia.
 Obsługiwane na: 
@@ -72,6 +75,9 @@ Będziesz mieć możliwość oddzielenia kontroli ustawień transferu danych apl
 ### <a name="use-a-pre-shared-key-in-a-windows-10-wi-fi-profile----2662938---"></a>Używanie klucza wstępnego w profilu sieci Wi-Fi systemu Windows 10 <!-- 2662938 -->
 Będziesz mieć możliwość użycia klucza wstępnego (PSK) z protokołem zabezpieczeń WPA/WPA2-Personal do uwierzytelniania profilu konfiguracji sieci Wi-Fi dla systemu Windows 10.
 Obecnie trzeba zaimportować profil sieci Wi-Fi lub utworzyć profil niestandardowy, aby korzystać z klucza wstępnego. Obszar [Ustawienia sieci Wi-Fi dla systemu Windows 10](wi-fi-settings-windows.md) zawiera listę bieżących ustawień. 
+
+### <a name="app-protection-policy-app-settings-for-web-data----2662995-eeready---"></a>Ustawienia zasad ochrony aplikacji dla danych internetowych <!-- 2662995 eeready -->
+Ustawienia zasad ochrony aplikacji dla zawartości internetowej na urządzeniach z systemami Android i iOS zostaną zaktualizowane w celu ulepszenia obsługi linków internetowych http i https, a także przesyłania danych za pośrednictwem linków uniwersalnych systemu iOS i linków między aplikacjami systemu Android.  
 
 ### <a name="autopilot-device-sync-frequency-increasing-to-every-12-hours----2753673---"></a>Częstotliwość synchronizacji urządzeń rozwiązania Autopilot zwiększona do 12 godzin <!-- 2753673 -->
 Urządzenia rozwiązania Autopilot będą synchronizowane co 12 godzin, zamiast co 24 godziny.

@@ -15,12 +15,12 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6fccfcbceecc9aa0667aa9fd6656c2fcc524d363
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.openlocfilehash: 370b02d06276cefa21339d3617068d5777cb8668
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34569361"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168934"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
@@ -45,7 +45,7 @@ Podczas konfiguracji usługi Mobile Threat Defense (MTD) skonfigurowano zasady s
 
     ![Konfiguracja usługi MTD w witrynie Azure Portal usługi Intune](./media/enable-mtd-connector-1.png)
 
-7. Włącz opcje przełącznika zgodnie z wymaganiami organizacji.
+7. Włącz opcje przełącznika zgodnie z wymaganiami organizacji. Wyświetlane opcje przełącznika są zależne od partnera MTD.
 
 ## <a name="mtd-toggle-options"></a>Opcje przełącznika usługi MTD
 

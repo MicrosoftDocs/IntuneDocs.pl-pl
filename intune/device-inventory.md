@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313182"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187805"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -63,44 +63,38 @@ Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do fi
 
 ## <a name="hardware-device-details"></a>Szczegóły urządzeń
 
-### <a name="windows-and-ios-device-details"></a>Szczegóły urządzeń z systemami Windows i iOS:
-|Szczegóły|Opis|  
-|--------------|----------------------|  
-|Nazwa|Nazwa urządzenia.|
-|Nazwa zarządzania|Nazwa urządzenia używana tylko w konsoli. Zmiana tej nazwy nie spowoduje zmiany nazwy na urządzeniu.|
-|Identyfikator UDID|Unikatowy identyfikator urządzenia.|
-|Identyfikator urządzenia usługi Intune|Identyfikator GUID, który unikatowo identyfikuje urządzenie.|
-|Numer seryjny|Numer seryjny urządzenia od producenta.|
-|Udostępnione urządzenie|Jeśli wybrano pozycję **Tak**, urządzenie jest współużytkowane przez więcej niż jednego użytkownika.|
-|Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń w urządzeniu.|
-|System operacyjny|System operacyjny używany w urządzeniu.|
-|Wersja systemu operacyjnego|Wersja systemu operacyjnego działającego na urządzeniu.|
-|Język systemu operacyjnego|Język ustawiony dla systemu operacyjnego w urządzeniu.|
-|Całkowita ilość miejsca|Całkowita ilość miejsca w urządzeniu (w gigabajtach).|
-|Wolne miejsce w magazynie|Nieużywane miejsce w urządzeniu (w gigabajtach).|
-
-
-### <a name="windows-ios-and-macos-device-details"></a>Szczegóły urządzeń z systemami Windows, iOS i macOS
-|Szczegóły|Opis|  
-|--------------|----------------------|  
-|IMEI|Numer IMEI (International Mobile Equipment Identity) urządzenia.|
-|MEID|Identyfikator sprzętu przenośnego urządzenia.|
-|Producent|Producent urządzenia.|
-|Model|Model urządzenia.|
-|Numer telefonu|Numer telefonu przypisany do urządzenia.|
-|Operator subskrybenta|Operator sieci bezprzewodowej urządzenia.|
-|Technologia sieci komórkowej|System radiowy używany przez urządzenie.|
-|Wi-Fi MAC|Adres MAC (Media Access Control) urządzenia.|
-|Identyfikator ICCID|Identyfikator ICCID (Integrated Circuit Card Identifier), który jest unikatowym numerem identyfikacyjnym karty SIM.|
-|Data rejestracji|Data i godzina rejestracji urządzenia w usłudze Intune.|
-|Ostatni kontakt|Data i godzina ostatniego połączenia urządzenia z usługą Intune.|
-|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|
-|Zarejestrowane w usłudze Azure AD|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Azure Active Directory.|
-|Zgodność|Stan zgodności urządzenia.|
-|Aktywowano program EAS|Jeśli wybrano pozycję **Tak**, urządzenie jest zsynchronizowane ze skrzynką pocztową programu Exchange.|
-|Identyfikator aktywacji programu EAS|Identyfikator programu Exchange ActiveSync urządzenia.|
-|Nadzorowane|Jeśli wybrano pozycję **Tak**, administratorzy mają rozszerzoną kontrolę nad urządzeniem.|
-|Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|
+|Szczegóły|Opis|Platforma| 
+|--------------|----------------------|----|  
+|Nazwa|Nazwa urządzenia.|Windows, iOS|
+|Nazwa zarządzania|Nazwa urządzenia używana tylko w konsoli. Zmiana tej nazwy nie spowoduje zmiany nazwy na urządzeniu.|Windows, iOS|
+|Identyfikator UDID|Unikatowy identyfikator urządzenia.|Windows, iOS|
+|Identyfikator urządzenia usługi Intune|Identyfikator GUID, który unikatowo identyfikuje urządzenie.|Windows, iOS|
+|Numer seryjny|Numer seryjny urządzenia od producenta.|Windows, iOS|
+|Udostępnione urządzenie|Jeśli wybrano pozycję **Tak**, urządzenie jest współużytkowane przez więcej niż jednego użytkownika.|Windows, iOS|
+|Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń w urządzeniu.|Windows, iOS|
+|System operacyjny|System operacyjny używany w urządzeniu.|Windows, iOS|
+|Wersja systemu operacyjnego|Wersja systemu operacyjnego działającego na urządzeniu.|Windows, iOS|
+|Język systemu operacyjnego|Język ustawiony dla systemu operacyjnego w urządzeniu.|Windows, iOS|
+|Całkowita ilość miejsca|Całkowita ilość miejsca w urządzeniu (w gigabajtach).|Windows, iOS|
+|Wolne miejsce w magazynie|Nieużywane miejsce w urządzeniu (w gigabajtach).|Windows, iOS|
+|IMEI|Numer IMEI (International Mobile Equipment Identity) urządzenia.|Windows, iOS, Android|
+|MEID|Identyfikator sprzętu przenośnego urządzenia.|Windows, iOS, Android|
+|Producent|Producent urządzenia.|Windows, iOS, Android|
+|Model|Model urządzenia.|Windows, iOS, Android|
+|Numer telefonu|Numer telefonu przypisany do urządzenia.|Windows, iOS, Android|
+|Operator subskrybenta|Operator sieci bezprzewodowej urządzenia.|Windows, iOS, Android|
+|Technologia sieci komórkowej|System radiowy używany przez urządzenie.|Windows, iOS, Android|
+|Wi-Fi MAC|Adres MAC (Media Access Control) urządzenia.|Windows, iOS, Android|
+|Identyfikator ICCID|Identyfikator ICCID (Integrated Circuit Card Identifier), który jest unikatowym numerem identyfikacyjnym karty SIM.|Windows, iOS, Android|
+|Data rejestracji|Data i godzina rejestracji urządzenia w usłudze Intune.|Windows, iOS, Android|
+|Ostatni kontakt|Data i godzina ostatniego połączenia urządzenia z usługą Intune.|Windows, iOS, Android|
+|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|Windows, iOS, Android|
+|Zarejestrowane w usłudze Azure AD|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Azure Active Directory.|Windows, iOS, Android|
+|Zgodność|Stan zgodności urządzenia.|Windows, iOS, Android|
+|Aktywowano program EAS|Jeśli wybrano pozycję **Tak**, urządzenie jest zsynchronizowane ze skrzynką pocztową programu Exchange.|Windows, iOS, Android|
+|Identyfikator aktywacji programu EAS|Identyfikator programu Exchange ActiveSync urządzenia.|Windows, iOS, Android|
+|Nadzorowane|Jeśli wybrano pozycję **Tak**, administratorzy mają rozszerzoną kontrolę nad urządzeniem.|Windows, iOS, Android|
+|Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|Windows, iOS, Android|
 
 
 

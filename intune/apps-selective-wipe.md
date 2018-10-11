@@ -15,12 +15,12 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 66f26811f5021b71c62a2e994c73e2144409d199
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 3f72747b1a30494304521b23054533b9f360b2fc
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329549"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562752"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -44,7 +44,7 @@ Aby selektywnie usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia
 
     ![Zrzut ekranu przedstawiający okienko usługi Microsoft Intune](./media/apps-selective-wipe01.png)
 
-3.  W okienku **Aplikacje mobilne** wybierz pozycję **Selektywne czyszczenie aplikacji**.
+3.  W okienku **Aplikacje klienckie** wybierz pozycję **Selektywne czyszczenie aplikacji**.
 
 4.  Wybierz pozycję **Nowe żądanie czyszczenia**. Zostanie otwarte okienko **Nowe żądanie czyszczenia**.
 
@@ -62,7 +62,7 @@ Usługa tworzy i śledzi oddzielne żądanie czyszczenia dla każdej chronionej 
 
 Można wygenerować sumaryczny raport informujący o ogólnym stanie żądania czyszczenia oraz o liczbie oczekujących żądań oraz niepowodzeń. Aby uzyskać więcej szczegółów, wykonaj następujące kroki:
 
-1.  W okienku **Aplikacje mobilne — Selektywne czyszczenie aplikacji** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
+1.  W okienku **Aplikacje klienckie — Selektywne czyszczenie aplikacji** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
 
     ![Zrzut ekranu przedstawiający stan żądania czyszczenia w okienku Selektywne czyszczenie aplikacji](./media/wipe-request-status-1.png)
 
@@ -75,7 +75,7 @@ Ponadto można wyświetlić nazwę i typ urządzenia, co może być przydatne po
 
 Czyszczenia ze stanem oczekującym są wyświetlane do czasu ich ręcznego usunięcia. Aby ręcznie usunąć żądanie czyszczenia:
 
-1.  W okienku **Aplikacje mobilne — Selektywne czyszczenie aplikacji**.
+1.  W okienku **Aplikacje klienckie — Selektywne czyszczenie aplikacji**.
 
 2.  Na liście kliknij prawym przyciskiem myszy żądanie czyszczenia do usunięcia, a następnie wybierz pozycję **Usuń żądanie czyszczenia**.
 

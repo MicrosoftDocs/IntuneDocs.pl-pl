@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ca5b09d415466d2ab6ce2f70a53f7fd8444d28f
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 07c07caa7d64e18aae8b44810a4fdcb2b645b9fa
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31835554"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562939"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -50,7 +50,7 @@ W tym artykule:
 
 Aby dowiedzieć się więcej, zobacz następujące artykuły:
 
-- [Autoryzacja dostępu do aplikacji sieci Web przy użyciu protokołu OAuth 2.0 i usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autoryzacja dostępu do aplikacji internetowych przy użyciu protokołu OAuth 2.0 i usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Rozpoczęcie pracy z uwierzytelnianiem w usłudze Azure AD](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
 - [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Koncepcja protokołu OAuth 2.0](https://oauth.net/2/)
@@ -162,7 +162,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Ustawienie **Włącz dostęp**: __odczyt aplikacji usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Aplikacje mobilne
+    - Aplikacje klienckie
     - Kategorie aplikacji mobilnych
     - Zasady ochrony aplikacji
     - Konfiguracje aplikacji
@@ -175,7 +175,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 - Dodatkowo umożliwia wprowadzanie zmian w następujących elementach:
 
-    - Aplikacje mobilne
+    - Aplikacje klienckie
     - Kategorie aplikacji mobilnych
     - Zasady ochrony aplikacji
     - Konfiguracje aplikacji

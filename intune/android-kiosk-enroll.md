@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 515853864236638bc2732f6539d087bd125e3c56
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: c4b9b99a17e435b1d79d2e10565abbd262c89741
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313465"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187822"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise
 
@@ -74,6 +74,7 @@ Aplikacje i zasady można zastosować do przypisanych albo dynamicznych grup urz
     - **Dodaj urządzenia, na których**: enrollmentProfileName
     - W środkowym polu wybierz pozycję **Dopasowanie**.
     - W ostatnim polu wprowadź nazwę profilu rejestracji, który został utworzony wcześniej.
+    Aby uzyskać więcej informacji na temat reguł członkostwa dynamicznego, zobacz [Dynamic membership rules for groups in AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership) (Reguły członkostwa dynamicznego dla grup w usłudze AAD). 
 5. Wybierz pozycję **Dodaj zapytanie** > **Utwórz**.
 
 ### <a name="replace-or-remove-tokens"></a>Zamiana lub usuwanie tokenów

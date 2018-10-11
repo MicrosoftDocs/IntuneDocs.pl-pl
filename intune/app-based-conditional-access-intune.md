@@ -14,12 +14,12 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c467d20a3bf4f2cfb94db5cecfae78b1717993d
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 317a1fa5fd83cbfe95afa51894466f93131bd278
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34561977"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562769"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune
 
@@ -27,7 +27,7 @@ ms.locfileid: "34561977"
 
 [Zasady ochrony aplikacji w usłudze Intune](app-protection-policy.md) pomagają chronić dane firmy na urządzeniach zarejestrowanych w usłudze Intune. Możesz również korzystać z zasad ochrony aplikacji na urządzeniach należących do pracowników, które nie zostały zarejestrowane na potrzeby zarządzania przez usługę Intune. W takim przypadku, nawet jeśli nie zarządzasz danym urządzeniem, musisz upewnić się, że dane i zasoby firmy zostały odpowiednio zabezpieczone.
 
-Dostęp warunkowy oparty na aplikacji oraz zarządzanie aplikacjami mobilnymi tworzą dodatkową warstwę zabezpieczeń i gwarantują, że tylko aplikacje mobilne, które obsługują zasady ochrony aplikacji usługi Intune, mogą uzyskać dostęp do usługi Exchange Online i innych usług pakietu Office 365.
+Dostęp warunkowy oparty na aplikacjach oraz zarządzanie aplikacjami klienckimi tworzą dodatkową warstwę zabezpieczeń i gwarantują, że tylko aplikacje klienckie, które obsługują zasady ochrony aplikacji usługi Intune, mogą uzyskać dostęp do usługi Exchange Online i innych usług pakietu Office 365.
 
 > [!NOTE]
 > Zarządzana aplikacja to taka, dla której zastosowano zasady ochrony aplikacji i która może być zarządzana przez usługę Intune.

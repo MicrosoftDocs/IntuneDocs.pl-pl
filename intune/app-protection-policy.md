@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 08/16/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 4189e9357c7ed135ab219b38f22d34a09ebb5318
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5acdcd0a8c2fcb906f0b40e2c1ab937559c7ae01
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253684"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727581"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -103,7 +103,7 @@ Rozwiązanie MDM:
 
 -   Chronią dane firmy przed wyciekiem do aplikacji i usług dla konsumentów
 
--   Stosują ograniczenia (zapisz jako, schowek, numer PIN itp.) do aplikacji mobilnych
+-   Stosują ograniczenia (zapisz jako, schowek, numer PIN itp.) do aplikacji klienckich
 
 -   Wymazują dane firmowe z aplikacji, nie usuwając tych aplikacji z urządzenia
 
@@ -122,6 +122,18 @@ Należy jednak wziąć pod uwagę następujące ograniczenia:
 -   Na tych urządzeniach nie można dostarczać profilów certyfikatów.
 
 -   Na tych urządzeniach nie można dostarczać ustawień firmowych sieci Wi-Fi i VPN.
+
+## <a name="app-protection-global-policy"></a>Zasady globalne ochrony aplikacji
+
+Administrator usługi OneDrive może przejść do witryny **admin.office.com** i wybrać dostęp **Urządzenia**, aby skonfigurować mechanizmy kontroli **zarządzania aplikacjami mobilnymi** dla aplikacji klienckich usługi OneDrive i programu SharePoint. 
+
+Te ustawienia dostępne w konsoli administratora usługi OneDrive pozwalają skonfigurować specjalne zasady ochrony aplikacji usługi Intune nazywane zasadami **globalnymi**. Te zasady globalne mają zastosowanie do wszystkich użytkowników w dzierżawie i nie umożliwiają sterowania kierowaniem zasad do odbiorców docelowych. 
+
+Po ich włączeniu aplikacje usługi OneDrive i programu SharePoint dla systemów iOS i Android będą domyślnie chronione przy użyciu wybranych ustawień. Po utworzeniu tych zasad informatyk może edytować je w konsoli usługi Intune, a także dodawać więcej aplikacji docelowych i modyfikować wszelkie ustawienia zasad. 
+
+Domyślnie dla danej dzierżawy mogą istnieć tylko jedne zasady **globalne**. Jednak [interfejsy API programu Graph usługi Intune](intune-graph-apis.md) umożliwiają tworzenie dodatkowych zasad globalnych dla poszczególnych dzierżaw, choć nie jest to zalecane. Tworzenie dodatkowych zasad globalnych nie jest zalecane, ponieważ rozwiązywanie problemów z implementacją takich zasad może być bardzo złożone.
+
+Chociaż zasady **globalne** mają zastosowanie do wszystkich użytkowników w dzierżawie, ustawienia te są zastępowane przez dowolne standardowe zasady ochrony aplikacji usługi Intune.
 
 
 ## <a name="multi-identity"></a>Wiele tożsamości

@@ -1,12 +1,11 @@
 ---
-title: Zarządzanie komputerami przy użyciu oprogramowania klienckiego
-titlesuffix: Microsoft Intune
+title: Zarządzanie komputerami przy użyciu oprogramowania klienckiego w usłudze Microsoft Intune — platforma Azure | Microsoft Docs
 description: Zarządzaj komputerami z systemem Windows, instalując oprogramowanie klienckie usługi Intune.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 5a248345a40cd7cfcff3883643562923f9535d3b
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: ef21f22a4808518ce8557b761e4181f8f6a655c3
+ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41910634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45978250"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
@@ -57,6 +56,9 @@ Usługa Intune obsługuje zarządzanie komputerami z systemem Windows jako kompu
 |Uprawnienia administracyjne|Konto używane do instalacji oprogramowania klienckiego musi mieć uprawnienia administratora lokalnego na danym urządzeniu.|
 |Instalator Windows w wersji 3.1|Na komputerze musi być dostępny Instalator Windows w wersji 3.1 lub nowszej.<br /><br />Aby wyświetlić wersję Instalatora Windows na komputerze:<br /><br />  Na komputerze kliknij prawym przyciskiem myszy pozycję **%windir%\System32\msiexec.exe**, a następnie kliknij polecenie **Właściwości**.<br /><br />Najnowszą wersję Instalatora Windows można pobrać ze strony [pakietów redystrybucyjnych Instalatora Windows](http://go.microsoft.com/fwlink/?LinkID=234258) w witrynie Microsoft Developer Network w sieci Web.|
 |Usunięcie niezgodnego oprogramowania klienckiego|Przed zainstalowaniem oprogramowania klienckiego usługi Intune należy odinstalować wszelkie oprogramowanie klienckie programu Configuration Manager, Operations Manager i Service Manager z tego komputera.|
+
+> [!WARNING]
+> Firma Microsoft ogłosiła, że [świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10, aby uniknąć przerw w świadczeniu usług i pomocy technicznej. 
 
 ## <a name="deploying-the-intune-software-client"></a>Wdrażanie oprogramowania klienckiego usługi Intune
 Jako administrator usługi Intune możesz udostępnić użytkownikom oprogramowanie klienckie usługi Intune na kilka sposobów. Aby uzyskać instrukcje, zobacz temat [Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows](install-the-windows-pc-client-with-microsoft-intune.md).

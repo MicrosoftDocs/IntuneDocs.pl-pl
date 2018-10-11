@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d7207b84dacc47b567c0fc86c3215605965fda6d
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3d18413465dd6f87a98da4b1f275392feac27c52
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312802"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169053"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -116,11 +116,11 @@ Osobisty numer identyfikacyjny (PIN) jest kodem dostępu służącym do weryfika
 
 W przypadku urządzeń z systemem iOS, nawet jeśli numer PIN jest współużytkowany pomiędzy aplikacjami od różnych dostawców, zostanie ponownie wyświetlony monit, jeśli ponownie osiągnięto wartość **Sprawdź ponownie wymagania dostępu po (minuty)** dla aplikacji, która nie jest głównym elementem fokusu wprowadzania danych. Przykładowo użytkownik ma aplikację _A_ od wydawcy _X_ oraz aplikację _B_ od wydawcy _Y_; obie aplikacje współdzielą ten sam numer PIN. Użytkownik skupia się na aplikacji _A_ (na pierwszym planie), a aplikacja _B_ jest zminimalizowana. Po osiągnięciu wartości **Sprawdź ponownie wymagania dostępu po (minuty)** i przełączeniu się przez użytkownika na aplikację _B_ będzie wymagany numer PIN.
 
-      >[!NOTE] 
-      > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting. 
+  >[!NOTE] 
+  > Aby częściej sprawdzać wymagania dostępu użytkownika (tj. monit o podanie numeru PIN), szczególnie w przypadku często używanej aplikacji, zaleca się zmniejszenie wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”. 
       
 - **Jak numer PIN usługi Intune działa z numerami PIN wbudowanej aplikacji dla programu Outlook i OneDrive?**<br></br>
-Numer PIN usługi Intune działa w oparciu o czasomierz bazujący na braku aktywności, znany również jako wartość „Ponownie sprawdź wymagania dostępu po (w minutach)”. W efekcie monity o numer PIN usługi Intune są wyświetlane niezależnie od monitów o numer PIN wbudowanej aplikacji dla programu Outlook i OneDrive, które często są domyślnie powiązane z uruchomieniem aplikacji. Jeśli użytkownik jednocześnie otrzymuje obydwa monity o numer PIN, oczekiwane zachowanie powinno określać, że numer PIN usługi Intune ma pierwszeństwo. 
+Numer PIN usługi Intune działa na podstawie czasomierza bazującego na braku aktywności, znany również jako wartość „Ponownie sprawdź wymagania dostępu po (w minutach)”. W efekcie monity o numer PIN usługi Intune są wyświetlane niezależnie od monitów o numer PIN wbudowanej aplikacji dla programu Outlook i OneDrive, które często są domyślnie powiązane z uruchomieniem aplikacji. Jeśli użytkownik jednocześnie otrzymuje obydwa monity o numer PIN, oczekiwane zachowanie powinno określać, że numer PIN usługi Intune ma pierwszeństwo. 
 
 - **Czy numer PIN jest bezpieczny?**<br></br> Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest niewidoczne dla zestawu SDK aplikacji usługi Intune. Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
 
@@ -139,7 +139,7 @@ Administratorzy IT mogą wdrażać zasady ochrony aplikacji, które wymagają sz
 - **Co zostaje zaszyfrowane?**<br></br> Szyfrowane są tylko dane oznaczone jako „firmowe” zgodnie z zasadami ochrony aplikacji administratora IT. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm). W przypadku aplikacji biznesowych zarządzanych przy użyciu Narzędzia opakowującego aplikacje dostępnego w usłudze Intune wszystkie dane aplikacji uznaje się za „firmowe”.
 
 **Jak usługa Intune czyści dane zdalnie?**<br></br>
-Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: pełne czyszczenie urządzenia, selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi oraz selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi. Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz temat [Usuwanie urządzeń za pomocą czyszczenia lub wycofywania](devices-wipe.md). Aby dowiedzieć się więcej o czyszczeniu selektywnym za pomocą usługi MAM, zobacz sekcję [Akcja Wycofaj](devices-wipe.md#retire) i temat [Jak czyścić z aplikacji tylko dane firmowe](apps-selective-wipe.md).
+Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: pełne czyszczenie urządzenia, selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi oraz selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi. Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz [Usuwanie urządzeń za pomocą czyszczenia lub wycofywania](devices-wipe.md). Aby dowiedzieć się więcej o czyszczeniu selektywnym za pomocą usługi MAM, zobacz sekcję [Akcja Wycofaj](devices-wipe.md#retire) i temat [Jak czyścić z aplikacji tylko dane firmowe](apps-selective-wipe.md).
 
 - **Co to jest czyszczenie?**<br></br> [Czyszczenie](devices-wipe.md) usuwa wszystkie dane użytkownika i ustawienia z **urządzenia** przez przywrócenie jego domyślnych ustawień fabrycznych. Urządzenie jest usuwane z usługi Intune.
   >[!NOTE]

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: f49e0bc496f176434577d42d3a372fc4e8bc22d3
+ms.sourcegitcommit: 7063072c94e43aefc6be0072780622a1da8485d5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46119107"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Ustawienia kiosku rozwiązania Android enterprise w usłudze Intune
 
@@ -45,9 +45,9 @@ Profile kiosku systemu Android obsługują następujące ustawienia konfiguracji
 - **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom przeprowadzanie instalacji z nieznanych źródeł.
 - **Aktualizacja systemu**: wybierz opcję, aby określić sposób obsługi aktualizacji bezprzewodowych przez urządzenie:
     - **Ustawienie domyślne urządzenia**: użyte zostaną ustawienia domyślne urządzenia.
-    - **Automatyczne**: aktualizacje są automatycznie instalowane.
-    - **Odłożone**: aktualizacje są odkładane na późniejszy czas.
-    - **Okno obsługi**: użytkownicy są monitowani przez funkcję okna obsługi o zatwierdzenie aktualizacji.
+    - **Automatyczne**: aktualizacje są automatycznie instalowane bez interakcji z użytkownikiem. Ustawienie tych zasad powoduje natychmiastowe instalowanie wszystkich oczekujących aktualizacji.
+    - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu. 
+    - **Okno obsługi**: aktualizacje są instalowane automatycznie w ramach codziennego okna obsługi skonfigurowanego w usłudze Intune. Próba zainstalowania jest podejmowana codziennie przez 30 dni i może zakończyć się niepowodzeniem ze względu na brak miejsca lub niski poziom baterii. Po upływie 30 dni system Android monituje użytkownika o zainstalowanie. To okno jest też używane do instalowania aktualizacji aplikacji ze sklepu Play. Ta opcja jest zalecana w przypadku urządzeń dedykowanych, takich jak kioski, ponieważ umożliwia aktualizowanie aplikacji na pierwszym planie kiosków z pojedynczymi aplikacjami. 
 
 ## <a name="kiosk-settings"></a>Ustawienia kiosku
 

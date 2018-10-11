@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 010ed8511b042d6f764ba947f616d76521588f42
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: bdc7f4f8f796d04f5c709298cd654bc2cdc32d0e
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864612"
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurowanie logowania jednokrotnego w usłudze Microsoft Intune dla urządzeń z systemem iOS
 
@@ -84,7 +84,7 @@ Na przykład gdy użytkownik nawiązuje połączenie z dowolną z tych witryn, u
 > [!NOTE]
 > Te adresy URL muszą być poprawnie sformatowanymi nazwami FQDN. Firma Apple wymaga, aby miały one postać `http://<yourURL.domain>`
 
-Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Wykonywane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 9.0 lub nowszych można jednak użyć pojedynczego symbolu wieloznacznego \*, aby określić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
+Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Wykonywane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 10.0 lub nowszych można jednak użyć pojedynczego symbolu wieloznacznego \*, aby określić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
 Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adresami URL HTTP i HTTPS.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Aplikacje, które będą korzystały z logowania jednokrotnego

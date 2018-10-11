@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
+ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251503"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229079"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
@@ -36,7 +36,7 @@ Jeśli użytkownik zgłasza do działu pomocy technicznej problem techniczny dot
 - Stan użytkownika
 - Przypisania
 - Problemy ze zgodnością
-- Urządzenie nie
+- Urządzenie nie odpowiada
 - Urządzenie nie pobiera ustawień sieci VPN lub Wi-Fi
 - Nie można zainstalować aplikacji
 
@@ -48,7 +48,7 @@ Aby wyświetlić informacje o użytkownikach, w okienku rozwiązywania problemó
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Rozwiązywanie problemów**.
 4. Kliknij pozycję **Wybierz**, aby wybrać użytkownika do rozwiązywania problemów.
-5. Wybierz użytkownika przez wpisanie jego nazwy lub adresu e-mail. Kliknij pozycję **Wybierz**. Informacje dotyczące rozwiązywania problemów użytkownika zostaną wyświetlone w okienku Rozwiązywanie problemów. Te informacje objaśniono w poniższych tabelach.
+5. Wybierz użytkownika przez wpisanie jego nazwy lub adresu e-mail. Kliknij pozycję **Wybierz**. Informacje dotyczące rozwiązywania problemów użytkownika zostaną wyświetlone w okienku Rozwiązywanie problemów. Te informacje objaśniono w poniższej tabeli.
 
 > [!Note]  
 > Dostęp do okienka **Rozwiązywanie problemów** można też uzyskać przez przejście w przeglądarce do strony [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -64,16 +64,18 @@ Okienko **Rozwiązywanie problemów** umożliwia przeglądanie informacji o uży
 | 1.   | Stan konta  | Pokazuje stan bieżącej dzierżawy usługi Intune (**Aktywny** lub **Nieaktywny**).       |
 | 2.   | Wybrany użytkownik  | Nazwa obecnie wybranego użytkownika. Kliknij pozycję **Zmień użytkownika**, aby wybrać nowego użytkownika.       |
 | 3.   | Stan użytkownika  | Wyświetla stan licencji usługi Intune użytkownika, liczbę urządzeń, informacje o zgodności poszczególnych urządzeń, liczbę aplikacji i informacje o zgodności aplikacji.       |
-| 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w okienku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje mobilne<li>Zasady ochrony aplikacji<li>Zasady zgodności<li> Zasady konfiguracji</ul>      |
+| 4.   | Informacje o użytkowniku  | Użyj listy, aby wybrać szczegóły do przejrzenia w okienku. <br>Dostępne są następujące opcje: <ul><li>Aplikacje klienckie<li>Zasady zgodności<li> Zasady konfiguracji<li>Zasady ochrony aplikacji <li>Ograniczenia rejestracji</ul>      |
 | 5.   | Członkostwo w grupach  | Pokazuje grupy, których wybrany użytkownik jest obecnie członkiem.       |
 
-## <a name="mobile-apps-reference"></a>Odwołanie do aplikacji mobilnych
+## <a name="client-apps-reference"></a>Odwołanie do aplikacji klienckich
 
-Aplikacje na urządzeniach lub urządzenia należące do użytkowników zarządzanych przez usługi Intune i Azure Active Directory (AD).
+Aplikacje działające na urządzeniach
+- zarządzanych przez usługi Intune i Azure Active Directory (AD) 
+- należących do użytkowników zarządzanych przez usługi Intune i Azure Active Directory (AD).
 
 ### <a name="properties"></a>Właściwości
 
-Właściwości aplikacji mobilnych.
+Właściwości aplikacji klienckich.
 
 | Właściwość      | Opis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +93,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 | Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
 | Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 | Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
-| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Własność          | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
@@ -100,20 +102,20 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 
 ### <a name="app-protection-status"></a>Stan ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami Enterprise Mobility Solution (EMS). Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami Enterprise Mobility Solution (EMS). Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Stan      | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Nazwa aplikacji    | Nazwa aplikacji                                                           |
 | Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
 | Typ urządzenia | Nazwa typu urządzenia.                                                       |
-| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Zasady    | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
 
 ## <a name="app-protection-policies-reference"></a>Odwołanie do zasad ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 ### <a name="properties"></a>Właściwości
 
@@ -123,7 +125,7 @@ Tabela zawiera podsumowanie stanu zasad ochrony aplikacji dla urządzeń zarząd
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Nazwa        | Nazwa aplikacji.                                                                                                        |
 | Wdrożony    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
-| Platforma    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Platforma    | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Rejestrowanie  | Nazwa typu urządzenia.                                                                                                     |
 | Ostatnia aktualizacja | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 
@@ -136,7 +138,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 | Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
 | Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 | Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
-| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Własność          | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
@@ -157,7 +159,7 @@ Właściwości zasad zgodności.
 | Przypisania    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | Nazwa          | Nazwa aplikacji.                                                                                                        |
 | System operacyjny            | System operacyjny zainstalowany na urządzeniu.                                                                                       |
-| Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Typ zasad   | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
 
 ### <a name="devices"></a>Devices
@@ -169,7 +171,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 | Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
 | Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 | Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
-| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Własność          | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
@@ -178,15 +180,15 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 
 ### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Stan      | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Nazwa aplikacji    | Nazwa aplikacji                                                           |
 | Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
 | Typ urządzenia | Nazwa typu urządzenia.                                                       |
-| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Zasady    | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
 
 ## <a name="configuration-policies-reference"></a>Informacje o zasadach konfiguracji
@@ -202,7 +204,7 @@ Właściwości zasad konfiguracji.
 | Przypisania    | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | Nazwa          | Nazwa aplikacji.                                                                                                        |
 | System operacyjny            | System operacyjny zainstalowany na urządzeniu.                                                                                       |
-| Typ zasad   | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Typ zasad   | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Data ostatniej modyfikacji | Nazwa typu urządzenia.                                                                                                     |
 
 ### <a name="devices"></a>Devices
@@ -214,7 +216,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 | Nazwa urządzenia        | Nazwa typu urządzenia.                                                                                                     |
 | Zarządzany przez         | Sygnatura czasowa modyfikacji zasad.                                                                                              |
 | Typ dołączenia do usługi Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
-| Własność          | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**.                                               |
+| Własność          | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
 | System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
@@ -224,16 +226,53 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 
 ### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Zapewniają one podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stan      | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Stan      | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Nazwa aplikacji    | Nazwa aplikacji                                                           |
 | Nazwa urządzenia | Nazwa typu urządzenia.                                                       |
 | Typ urządzenia | Nazwa typu urządzenia.                                                       |
-| Zasady    | Typ własności urządzenia. Może to być typ **Firma**, **Osobiste** lub **Nieznany**. |
+| Zasady    | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**). |
 | Ostatnia synchronizacja   | Sygnatura czasowa ostatniej synchronizacji urządzenia z usługą Intune.                   |
+
+## <a name="enrollment-failure-reference"></a>Odwołanie do błędów rejestracji
+
+Tabela błędów rejestracji zawiera listę prób rejestracji zakończonych niepowodzeniem. Urządzenie uwzględnione w poniższej tabeli mogło zostać później pomyślnie zarejestrowane podczas innej próby. Niektóre nieudane próby mogą nie być wyświetlane. Informacje o środkach zaradczych nie są dostępne dla wszystkich niepowodzeń.
+
+| Kolumna tabeli | Opis |
+|-------------|----------|
+| Rozpoczęcie rejestracji | Godzina rozpoczęcia rejestrowania przez użytkownika. |
+| System operacyjny | System operacyjny urządzenia. |
+| Wersja systemu operacyjnego | Wersja systemu operacyjnego urządzenia. |
+| Niepowodzenie | Przyczyna niepowodzenia. |
+
+### <a name="failure-details"></a>Szczegóły błędu
+
+Po wybraniu wiersza błędu zostaną wyświetlone bardziej szczegółowe informacje.
+
+| Sekcja | Opis |
+|-------------|----------|
+| Szczegóły błędu | Bardziej szczegółowe wyjaśnienie błędu. |
+| Potencjalne działania korygujące | Zalecane kroki w celu rozwiązania problemu. Niektóre błędy mogą nie mieć działań korygujących. |
+| Zasoby (opcjonalnie) | Linki do dalszych informacji lub obszarów w portalu umożliwiających podjęcie działań. |
+
+### <a name="enrollment-errors"></a>Błędy rejestracji
+
+| Error | Szczegóły |
+|-------------|----------|
+| Limit czasu lub błąd systemu iOS | Przekroczenie limitu czasu między urządzeniem a usługą Intune z powodu zbyt długiego oczekiwania na ukończenie procesu rejestracji przez użytkownika. |
+| Nie znaleziono użytkownika lub licencji | Użytkownik nie ma licencji lub został usunięty z usługi. |
+| Urządzenie jest już zarejestrowane | Ktoś próbował zarejestrować urządzenie, korzystając z aplikacji Portal firmy na urządzeniu, które nadal jest zarejestrowane przez innego użytkownika. |
+| Nie dołączono do usługi Intune | Podjęto próbę rejestracji, podczas gdy urząd zarządzania urządzeniami mobilnymi (MDM) usługi Intune nie został skonfigurowany. |
+| Autoryzacja rejestracji nie powiodła się | Podjęto próbę rejestracji przy użyciu starszej wersji aplikacji Portal firmy. |
+| Urządzenie nie jest obsługiwane | Urządzenie nie spełnia minimalnych wymagań na potrzeby rejestracji w usłudze Intune. |
+| Nie spełniono ograniczeń rejestracji | Ta rejestracja została zablokowana ze względu na ograniczenie rejestracji skonfigurowane przez administratora. |
+| Osiągnięto limit urządzeń | Ta rejestracja została zablokowana ze względu na limit urządzeń skonfigurowany przez administratora. |
+| Dołączanie urządzenia firmy Apple | W przypadku wszystkich urządzeń z systemem iOS możliwość rejestracji została w tej chwili zablokowana z powodu braku lub wygaśnięcia certyfikatu wypychania MDM firmy Apple w usłudze Intune. |
+| Urządzenie nie jest wstępnie zarejestrowane | Urządzenie nie zostało wstępnie zarejestrowane jako firmowe, a wszystkie rejestracje osobiste zostały zablokowane przez administratora. |
+| Funkcja nie jest obsługiwana | Prawdopodobnie użytkownik próbował przeprowadzić rejestrację za pomocą metody niezgodnej z konfiguracją usługi Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Zbieranie dostępnych danych z urządzenia przenośnego
 

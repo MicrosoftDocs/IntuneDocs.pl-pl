@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 27995fb643e4373e2fa6a34c7147c69905f9ccc0
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 841cfdeea1d33876c1b678a531c88663aea3759e
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312648"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403599"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -35,7 +35,7 @@ Należy zwrócić uwagę, że rejestracja w ramach programu DEP nie działa z [m
 ## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
 Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple. 
 
-Obsługa nienadzorowanych urządzeń objętych programem DEP została zakończona w systemie iOS 11. W systemie iOS 11 i nowszych urządzenia skonfigurowane w ramach programu DEP zawsze powinny być nadzorowane. W przyszłych wersjach systemu iOS flaga is_supervised programu DEP zostanie zignorowana.
+Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za przestarzałą w systemie iOS 11. W systemie iOS 11 i nowszych urządzenia skonfigurowane w ramach programu DEP zawsze powinny być nadzorowane. W przyszłych wersjach systemu iOS flaga is_supervised programu DEP zostanie zignorowana.
 
 <!--
 **Steps to enable enrollment programs from Apple**

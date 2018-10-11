@@ -2,8 +2,8 @@
 title: Kontrola RBAC w usłudze Microsoft Intune
 description: Dowiedz się, jak kontrola dostępu na podstawie ról (RBAC) umożliwia kontrolowanie, kto może wykonywać akcje i wprowadzać zmiany w usłudze Microsoft Intune.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: ad5bf36eeb81c5deabc2c3efd73cddcc3db8a70c
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5c75bd80e848bbd309051a9c6f3e149abd7a46ed
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253701"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028702"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune
 
@@ -42,6 +42,7 @@ Od momentu udostępnienia nowej witryny Azure Portal usługa **Azure Active Dire
 
     > [!IMPORTANT]
     > Rola administratora usługi Intune nie zapewnia możliwości zarządzania ustawieniami dostępu warunkowego usługi Azure AD.
+    > Członkowie ról usługi Intune muszą mieć licencje usługi Intune.
 
     > [!TIP]
     > Usługa Intune wyświetla również trzy rozszerzenia usługi Azure AD: **Użytkownicy**, **Grupy** oraz **Dostęp warunkowy**, które są kontrolowane za pomocą usługi Azure AD RBAC. Ponadto **Administrator konta użytkownika** wykonuje tylko działania użytkownika/grupy usługi AAD i nie ma pełnych uprawnień do wykonywania wszystkich działań w usłudze Intune. Aby uzyskać więcej szczegółowych informacji, zobacz temat [RBAC with Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) (Kontrola RBAC przy użyciu usługi Azure AD).

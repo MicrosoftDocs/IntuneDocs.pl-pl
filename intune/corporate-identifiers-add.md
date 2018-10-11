@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bf9eaef010879835abb7cec57c2fbdce6aa1e0a
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: e46951be5048e0bcf2af5b2d4320744f6d6e47e8
+ms.sourcegitcommit: 3785e506ef5fbc474b3e09e87412d4b673bbdbb8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905873"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541959"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -33,7 +33,7 @@ Podczas rejestracji usługa Intune automatycznie przypisuje stan „należące d
 - Zarejestrowano je przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) (wszystkie platformy)
 - Zarejestrowano je przy użyciu programu [Device Enrollment Program](device-enrollment-program-enroll-ios.md) firmy Apple lub przy użyciu narzędzi [Apple School Manager](apple-school-manager-set-up-ios.md) albo [Apple Configurator](apple-configurator-enroll-ios.md) (tylko system iOS)
 - [Zidentyfikowano je jako należące do firmy przed zarejestrowaniem](#identify-corporate-owned-devices-with-imei-or-serial-number) przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
-- Zarejestrowano je w usłudze Azure Active Directory lub pakiecie Enterprise Mobility + Security jako urządzenie z systemem Windows 10 Enterprise
+- Przyłączono je do usługi Azure Active Directory jako urządzenie z systemem Windows 10 Enterprise
 - Na [liście właściwości urządzenia](#change-device-ownership) ustawiono je jako firmowe
 
 Po zarejestrowaniu można [zmieniać ustawienie własności](#change-device-ownership) z **Osobiste** na **Firmowe**.

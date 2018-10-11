@@ -1,11 +1,11 @@
 ---
-title: Korzystanie z urządzenia z systemem iOS lub macOS w usłudze Intune | Microsoft Docs
-description: Lista linków do zadań, które można wykonać na urządzeniu przenośnym z systemem iOS lub macOS po zarejestrowaniu urządzenia w usłudze Intune
+title: Korzystanie z urządzenia z systemem macOS w usłudze Intune | Microsoft Docs
+description: Znajdowanie linków do rozwiązywania problemów z urządzeniem przenośnym z systemem macOS lub zarządzania nim w aplikacji Portal firmy
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 4/20/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 02ccde8299e4ad5d6aacb2abd120c094f752c5e6
-ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
+ms.openlocfilehash: 887b9355bc68edca314a49743b8d11728ca2361a
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2018
-ms.locfileid: "31771860"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168917"
 ---
-# <a name="using-your-macos-device-with-intune"></a>Korzystanie z urządzenia z systemem macOS w usłudze Intune
+# <a name="using-your-macos-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem macOS z aplikacją Portal firmy usługi Intune
 
-Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
+Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal firmy dla systemu macOS. Ułatwia rozwiązywanie problemów z urządzeniem z systemem macOS i zarządzanie nim. Kliknij dowolny link, aby wyświetlić więcej szczegółów, procedury i zrzuty ekranu. 
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-W przypadku urządzeń z systemem macOS usługa Intune obsługuje obecnie system OS X El Capitan 10.11 lub nowszy.
+Aplikacja Portal firmy dla systemu macOS obsługuje obecnie system OS X El Capitan 10.11 lub nowszy dla urządzeń z systemem macOS.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 

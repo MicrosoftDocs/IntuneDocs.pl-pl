@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 09/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4714b0bbe566589d970a5d959f1f361940e5701b
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027472"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187839"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -179,6 +179,9 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 12. W bloku **Nowy** zasad dostępu warunkowego włącz przełącznik **Włącz zasady**, a następnie kliknij pozycję **Utwórz**.
 
     ![Obraz przedstawiający porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-17.png)
+
+> [!NOTE]
+> Jeśli skonfigurujesz opcję **Platformy urządzeń**, próba zapisania zasad zakończy się niepowodzeniem z powodu błędu „Konfiguracja zasad nie jest obsługiwana”. Program Exchange ActiveSync nie może zidentyfikować platformy używanej przez łączące się urządzenie. W związku z tym w przypadku tworzenia zasad dla urządzeń z programem Exchange ActiveSync konfigurowanie konkretnych platform urządzeń nie jest obsługiwane.
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune
 
