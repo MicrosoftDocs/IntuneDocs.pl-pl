@@ -1,11 +1,11 @@
 ---
 title: Korzystanie z urządzenia z systemem Android i usługi Intune | Microsoft Docs
-description: Lista linków do zadań, które użytkownicy końcowi mogą wykonywać na urządzeniach przenośnych z systemem Android, gdy urządzenie jest zarejestrowane w usłudze Intune
+description: Lista linków do rozwiązywania problemów z urządzeniami z systemem Android zarejestrowanymi w usłudze Intune i zarządzania nimi
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 347757a333bcfd8e649cb621f0a95c83f24cdc88
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018672"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168951"
 ---
-# <a name="using-your-android-device-with-intune"></a>Korzystanie z urządzenia z systemem Android i usługi Intune
+# <a name="using-your-android-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem Android z aplikacją Portal firmy usługi Intune
 
-Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
+Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal firmy dla systemu Android. Ułatwia rozwiązywanie problemów z urządzeniem z systemem Android i zarządzanie nim. Kliknij dowolny link, aby wyświetlić więcej szczegółów, procedury i zrzuty ekranu. 
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Usługa Intune obsługuje obecnie system operacyjny Android w wersjach 4.4 i nowszych. Dotyczy to także urządzeń z systemem Samsung Knox w wersji 4.4 i nowszych.
+Aplikacja Portal firmy obsługuje obecnie system Android 4.4 i nowsze wersje. Uwzględniona jest również obsługa urządzeń z systemem Samsung Knox 4.4 i nowszymi wersjami.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 

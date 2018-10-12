@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,19 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 51bca0c2aa10f15511e1644eda9ca6dd11c36f8b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 99570a30130d35a651701749628cd918acf858e0
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864562"
 ---
-# <a name="using-your-ios-device-with-intune"></a>Korzystanie z urządzenia z systemem iOS i usługi Intune
-
-Usługa Intune umożliwia wykonywanie pewnych czynności usprawniających pracę. Oto lista zadań najczęściej zlecanych przez Twoją firmę.
+# <a name="using-your-ios-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem iOS z aplikacją Portal firmy usługi Intune
+Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal firmy dla systemu iOS. Ułatwia rozwiązywanie problemów z urządzeniem z systemem iOS i zarządzanie nim. Kliknij dowolny link, aby wyświetlić więcej szczegółów, procedury i zrzuty ekranu.
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Usługa Intune obsługuje obecnie system operacyjny iOS w wersjach 9.0 i nowszych.
+Aplikacja Portal firmy dla systemu iOS obsługuje obecnie system iOS 10.0 i nowsze wersje.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
