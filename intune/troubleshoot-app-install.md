@@ -3,10 +3,10 @@ title: Rozwiązywanie problemów z instalacją aplikacji
 titlesuffix: Microsoft Intune
 description: Użyj okienka rozwiązywania problemów w usłudze Microsoft Intune do rozwiązywania problemów z instalacją aplikacji.
 keywords: ''
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/29/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 ms.custom: intune-azure
-ms.openlocfilehash: 80b6828f4768ff79f86532ef0d39ff2100b0ef25
-ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
+ms.openlocfilehash: 6e25149199c9362f628fa108d20247bb6b86d895
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241715"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075833"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Rozwiązywanie problemów z instalacją aplikacji
 
