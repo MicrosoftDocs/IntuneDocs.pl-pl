@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb891b2a602cde4510953ce00c4e206d1135fce
-ms.sourcegitcommit: a89af1f0dad61320ab3e31cb64708f14514a5081
+ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46300463"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49424921"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
@@ -49,7 +49,6 @@ Dla urządzeń z systemem Android oznacza to, że resetowanie kodu dostępu na p
 | Urządzenia z systemem Android, wersja 7.x lub starsza | Nie |
 | iOS | Nie |
 | macOS | Nie |
-| iOS | Nie |
 
 Aby utworzyć nowy kod dostępu profilu służbowego, użyj akcji resetowania kodu dostępu. Ta akcja powoduje wyświetlenie monitu o zresetowanie kodu dostępu i utworzenie nowego, tymczasowego kodu dostępu tylko dla profilu służbowego. 
 

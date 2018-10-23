@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: d709681519f2e68d38958d6ec2082b762e22cf60
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255255"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425159"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -34,7 +34,7 @@ Używając usługi Windows Update dla firm, można uprościć środowisko zarzą
   - Niejawny program testów systemu Windows — wolny
   - Wydanie w ramach niejawnego programu testów systemu Windows 
       
-  Aby uzyskać więcej informacji o dostępnych kanałach obsługi, zobacz [Omówienie systemu Windows jako usługi](https://docs.microsoft.com/en-us/windows/deployment/update/waas-overview#servicing-channels).
+  Aby uzyskać więcej informacji o dostępnych kanałach obsługi, zobacz [Omówienie systemu Windows jako usługi](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 - **Ustawienia opóźnień**: skonfiguruj ustawienia opóźnień aktualizacji w celu opóźnienia instalacji aktualizacji grup urządzeń. Użyj tych ustawień, aby wdrażać aktualizacje w etapach i móc śledzić ich postęp.
 - **Wstrzymywanie**: odłóż instalację aktualizacji, jeśli zostanie wykryty problem w dowolnym momencie wdrażania aktualizacji.
 - **Okno obsługi**: skonfiguruj godziny, w których można instalować aktualizacje.

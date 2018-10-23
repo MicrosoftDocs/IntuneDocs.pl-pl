@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 55df1b152ee32456d577afacedd034583e591e3e
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: fc49d7ba7cdc5b986c06f8a84ececc8339a812a2
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058725"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425108"
 ---
 # <a name="intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Intune
 Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
@@ -44,7 +44,7 @@ Administratorzy IT mogą wymusić zasady, które powodują szyfrowanie danych za
 Administratorzy IT mogą zdalnie czyścić dane firmowe z aplikacji zarządzanej przez usługę Intune. Ta funkcja jest oparta na tożsamości i usuwa tylko pliki, które są skojarzone z tożsamością firmową użytkownika końcowego. Funkcja wymaga w tym celu współdziałania ze strony aplikacji. Aplikacja może określić tożsamość, dla której powinno zostać wykonane czyszczenie, na podstawie ustawień użytkownika. Jeśli te określone ustawienia użytkownika są niedostępne w aplikacji, domyślne zachowanie to wyczyszczenie katalogu aplikacji i powiadomienie użytkownika końcowego, że dostęp został usunięty.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Wymuszanie użycia programu Managed Browser
-Administratorzy IT mogą wymusić otwieranie linków sieci Web w danej aplikacji za pomocą [aplikacji Intune Managed Browser](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies). Ta funkcja gwarantuje, że linki wyświetlane w środowisku firmowym są przechowywane w domenie aplikacji zarządzanych przez usługę Intune.
+Administratorzy IT mogą wymusić otwieranie linków sieci Web w danej aplikacji za pomocą [aplikacji Intune Managed Browser](app-configuration-managed-browser.md). Ta funkcja gwarantuje, że linki wyświetlane w środowisku firmowym są przechowywane w domenie aplikacji zarządzanych przez usługę Intune.
 
 ### <a name="enforce-a-pin-policy"></a>Wymuszanie zasad numeru PIN
 Administratorzy IT mogą wymagać od użytkowników końcowych wprowadzania numeru PIN przed uzyskaniem dostępu do danych firmowych w aplikacji. Gwarantuje to, że osoba korzystająca z aplikacji jest tą samą osobą, która początkowo zalogowała się przy użyciu swojego konta służbowego. Gdy użytkownicy końcowi skonfigurują swoje numery PIN, zestaw SDK aplikacji usługi Intune będzie używać usługi Azure Active Directory do weryfikowania poświadczeń użytkowników końcowych względem zarejestrowanego konta usługi Intune.
