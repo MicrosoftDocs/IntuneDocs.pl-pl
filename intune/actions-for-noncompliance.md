@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c8bc523f2796f8af7cb4801cdb13a60b7e2eb5d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: fae8faf54c7b41bb547912853285cf09ec9c46d5
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905737"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828112"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń — Intune
 
@@ -26,13 +26,21 @@ Dostępna jest funkcja **Akcje w przypadku braku zgodności**, za pomocą które
 ## <a name="overview"></a>Przegląd
 Domyślnie po wykryciu przez usługę Intune urządzenia, które nie jest zgodne, usługa Intune natychmiast oznacza to urządzenie jako niezgodne. [Dostęp warunkowy](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) usługi Azure Active Directory (AD) blokuje wtedy dane urządzenie. **Akcje dotyczące niezgodności** zapewniają także elastyczność w przypadku podejmowania decyzji o postępowaniu z urządzeniami niezgodnymi. Możesz na przykład zdecydować, aby nie blokować urządzenia natychmiast i przyznać użytkownikowi okres prolongaty, aby mógł zapewnić zgodność.
 
-Istnieją dwa rodzaje działań:
+Istnieje kilka typów działań:
 
-- **Powiadom użytkowników końcowych za pośrednictwem poczty e-mail**: dostosuj powiadomienie e-mail przed wysłaniem go do użytkownika końcowego. Możesz dostosować adresatów, temat oraz treść wiadomości, w tym logo firmy oraz informacje kontaktowe.
+- **Wyślij wiadomość e-mail do użytkownika końcowego**: dostosuj powiadomienie e-mail przed wysłaniem go do użytkownika końcowego. Możesz dostosować adresatów, temat oraz treść wiadomości, w tym logo firmy oraz informacje kontaktowe.
 
     Ponadto usługa Intune dołącza do powiadomienia e-mail szczegółowe informacje dotyczące niezgodnych urządzeń.
 
+- **Zdalnie zablokuj niezgodne urządzenie**: w przypadku urządzeń, które nie są zgodne, możesz zastosować zdalną blokadę. Następnie wyświetlany jest monit, w którym użytkownik jest proszony o podanie numeru PIN lub hasła w celu odblokowania urządzenia. Więcej informacji na temat funkcji [zdalnego blokowania](device-remote-lock.md). 
+
 - **Oznacz urządzenie jako niezgodne**: utwórz harmonogram z liczbą dni, po których urządzenie zostanie oznaczone jako niezgodne. Akcję można skonfigurować tak, by następowała od razu, ale można również przyznać użytkownikowi okres prolongaty.
+
+W tym artykule wyjaśniono, jak:
+
+- Utworzyć szablon powiadomień wiadomości
+- Utworzyć akcję w przypadku niezgodności, np. wysłanie wiadomości e-mail lub zdalne zablokowanie urządzenia
+
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -44,48 +52,57 @@ Istnieją dwa rodzaje działań:
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows](compliance-policy-create-windows.md)
 
-- W przypadku blokowania urządzeniom dostępu do zasobów firmowych przy użyciu zasad zgodności urządzeń musisz mieć skonfigurowany dostęp warunkowy usługi Azure AD. Aby uzyskać wskazówki, zobacz [Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
-
-- Należy utworzyć szablon wiadomości z powiadomieniem. W przypadku wysyłania wiadomość e-mail do użytkowników ten szablon służy do tworzenia akcji dotyczących braku zgodności.
+- W przypadku blokowania urządzeniom dostępu do zasobów firmowych przy użyciu zasad zgodności urządzeń musisz mieć skonfigurowany dostęp warunkowy usługi Azure AD. Aby uzyskać wskazówki, zobacz artykuł [Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) lub [Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="create-a-notification-message-template"></a>Tworzenie szablonu wiadomości z powiadomieniem
 
-1. Zaloguj się do [witryny Azure Portal](https://portal.azure.com) przy użyciu poświadczeń usługi Intune. 
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Zgodność urządzenia**, a następnie pozycję **Powiadomienia**. 
-4. Wybierz pozycję **Utwórz powiadomienie**, a następnie wprowadź następujące informacje:
+Aby wysyłać wiadomości e-mail do użytkowników, należy utworzyć szablon wiadomości z powiadomieniem. Gdy urządzenie jest niezgodne, szczegółowe informacje wprowadzone w szablonie są wyświetlane w wiadomości e-mail wysyłanej do użytkowników.
 
-   - Nazwa
-   - Temat
-   - Wiadomość
-   - Nagłówek wiadomości e-mail — dołącz logo firmy
-   - Stopka wiadomości e-mail — dołącz nazwę firmy
-   - Stopka wiadomości e-mail — dołącz informacje kontaktowe
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz pozycję **Zgodność urządzenia** > **Powiadomienia**.
+3. Wybierz pozycję **Utwórz powiadomienie**. Wprowadź następujące informacje:
+
+   - **Nazwa**
+   - **Temat**
+   - **Wiadomość**
+   - **Nagłówek wiadomości e-mail — dołącz logo firmy**
+   - **Stopka wiadomości e-mail — dołącz nazwę firmy**
+   - **Stopka wiadomości e-mail — dołącz informacje kontaktowe**
 
    ![Przykład powiadomienia dotyczącego zgodności w usłudze Intune](./media/actionsfornoncompliance-1.PNG)
 
-Gdy skończysz dodawać informacje, wybierz pozycję **Utwórz**. Szablon wiadomości z powiadomieniem jest gotowy do użytku.
+4. Gdy skończysz dodawać informacje, wybierz pozycję **Utwórz**. Szablon wiadomości z powiadomieniem jest gotowy do użytku.
 
 > [!NOTE]
 > Można również edytować wcześniej utworzony szablon powiadomienia.
 
 ## <a name="add-actions-for-noncompliance"></a>Dodawanie akcji w przypadku niezgodności
 
-Domyślnie usługa Intune automatycznie tworzy akcję w przypadku niezgodności. Jeśli dane urządzenie nie jest zgodne z zasadami zgodności, ta akcja oznacza je jako niezgodne. Możesz dostosować, jak długo urządzenie będzie oznaczone jako niezgodne. Tej akcji nie można usunąć.
+Podczas tworzenia zasad zgodności urządzeń usługa Intune automatycznie tworzy akcję w przypadku niezgodności. Jeśli dane urządzenie nie jest zgodne z zasadami zgodności, ta akcja oznacza je jako niezgodne. Możesz dostosować, jak długo urządzenie będzie oznaczone jako niezgodne. Tej akcji nie można usunąć.
 
-Akcję można dodać podczas tworzenia nowej zasady zgodności lub aktualizowania istniejącej zasady zgodności. 
+Podczas tworzenia zasady zgodności lub aktualizowania istniejącej zasady można także dodać kolejną akcję. 
 
-1. W witrynie [Azure Portal](https://portal.azure.com) otwórz usługę **Microsoft Intune** i wybierz pozycję **Zgodność urządzenia**.
+1. W witrynie [Azure Portal](https://portal.azure.com) otwórz pozycję **Microsoft Intune** > **Zgodność urządzenia**.
 2. Wybierz pozycję **Zasady**, wybierz jedną z zasad, a następnie wybierz pozycję **Właściwości**. 
 
-  Nie masz jeszcze zasad? Utwórz zasady dla systemu [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) lub innej platformy.
+    Nie masz jeszcze zasad? Utwórz zasady dla systemu [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) lub innej platformy.
   
-  > [!NOTE]
-  > W tym momencie urządzenia JAMF i urządzenia przeznaczone dla grup urządzeń nie mogą odbierać akcji dotyczących zgodności.
+    > [!NOTE]
+    > W tym momencie urządzenia JAMF i urządzenia przeznaczone dla grup urządzeń nie mogą odbierać akcji dotyczących zgodności.
 
-3. Wybierz pozycję **Akcje w przypadku braku zgodności**, a następnie wybierz pozycję **Dodaj**, aby wprowadzić parametry akcji. Możesz wybrać wcześniej utworzony szablon wiadomości, dodać dodatkowych adresatów oraz zaktualizować harmonogram okresu prolongaty. W harmonogramie możesz wprowadzić liczbę dni (od 0 do 365), a następnie możesz wymusić zasady dostępu warunkowego. Jeśli jako liczbę dni wprowadzisz **0**, dostęp warunkowy **natychmiast** zablokuje dostęp do zasobów firmowych.
+3. Wybierz pozycje **Akcje w przypadku niezgodności** > **Dodaj**.
+4. Wybierz swoją **akcję**: 
 
-4. Po zakończeniu wybierz pozycję **Dodaj** > **OK**, aby zapisać zmiany.
+    - **Wyślij wiadomość e-mail do użytkowników końcowych**: wyślij wiadomość e-mail do użytkownika, gdy urządzenie jest niezgodne. Ponadto: 
+    
+         - Wybierz wcześniej utworzony **szablon wiadomości**
+         - Wprowadź dowolnych **dodatkowych adresatów** przez wybranie grup
+    
+    - **Zdalnie zablokuj niezgodne urządzenie:**: zablokuj urządzenie, gdy jest ono niezgodne. Ta akcja wymusza wprowadzenie przez użytkownika numeru PIN lub hasła w celu odblokowania urządzenia. 
+    
+    - **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady dostępu warunkowego. Jeśli wprowadzisz **0** jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Na przykład można natychmiastowo zablokować dostęp do zasobów firmowych, jeśli urządzenie jest niezgodne.
+
+5. Po zakończeniu wybierz pozycję **Dodaj** > **OK**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
-Monitoruj aktywność zgodności urządzeń, uruchamiając raporty. Aby uzyskać wskazówki, zobacz [Monitorowanie zgodności urządzenia w usłudze Intune](device-compliance-monitor.md).
+[Monitorowanie aktywności zgodności urządzeń](device-compliance-monitor.md).

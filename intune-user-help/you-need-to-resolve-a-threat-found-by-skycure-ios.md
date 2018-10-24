@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: a4bdb394407155be8716cf8039f997f3905f3998
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 86cd3f37215ec42cc89c865136e6ecd5dc3b9c11
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148436"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863012"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Usuwanie zagrożenia wykrytego przez aplikację Symantec Endpoint Protection Mobile
 
@@ -32,9 +32,9 @@ Usługa Symantec Endpoint Protection (SEP) Mobile to mobilna usługa ochrony prz
 * Synchronizowanie plików firmowych z usługą OneDrive
 * Uzyskiwanie dostępu do aplikacji firmowych
 
-W tym artykule opisano sposób rozpoznawania alertów zagrożeń aplikacji SEP Mobile oraz działania, które należy podjąć, aby je rozwiązać. 
+W tym artykule opisano, jak odzyskać dostęp do zasobów firmowych, gdy aplikacja SEP Mobile wykryje zagrożenie dla bezpieczeństwa lub aplikacji.  
 
-## <a name="resolve-virus-or-security-threat"></a>Rozwiązywanie zagrożeń wirusowych lub zagrożeń dla bezpieczeństwa  
+## <a name="troubleshoot-a-virus-or-security-threat"></a>Rozwiązywanie problemów związanych z zagrożeniem ze strony wirusa lub zagrożeniem dla bezpieczeństwa
 
 1. Podczas próby uzyskania dostępu do firmowej poczty e-mail lub witryn internetowych otrzymasz komunikat podobny do przedstawionego na poniższym zrzucie ekranu. Naciśnij link **portal zarządzania urządzeniami**, aby otworzyć [witrynę internetową Portal firmy](https://portal.manage.microsoft.com/devices).
 
@@ -43,11 +43,13 @@ W tym artykule opisano sposób rozpoznawania alertów zagrożeń aplikacji SEP M
 2. Wybierz urządzenie.  
 3. Przeczytaj ostrzeżenie wyświetlane pod urządzeniem. Zostanie wyświetlone zalecenie otworzenia aplikacji SEP Mobile w celu rozwiązania zagrożenia wirusowego lub zagrożenia dla bezpieczeństwa.    
 
-## <a name="resolve-an-app-threat"></a>Rozwiązywanie zagrożenia aplikacji  
+    ![Zrzut ekranu przedstawiający stronę urządzenia w witrynie Portal firmy z ostrzeżeniem aplikacji SEP Mobile.](./media/CP-lookout-virus-banner-1808.png)
+
+## <a name="troubleshoot-an-app-threat"></a>Rozwiązywanie problemów z zagrożeniem ze strony aplikacji
 
 Jeśli zainstalujesz aplikację, która zostanie uznana za zagrożenie dla urządzenia, otrzymasz powiadomienie w aplikacji SEP Mobile. Jeśli ta aplikacja pozostaje na urządzeniu, nie będzie można uzyskać dostępu do zasobów firmy.  
 
 Aby rozwiązać problem, wybierz aplikację z listy zagrożeń w aplikacji SEP Mobile. Następnie wykonaj instrukcje wyświetlane na ekranie, aby usunąć i odinstalować aplikację.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   
 

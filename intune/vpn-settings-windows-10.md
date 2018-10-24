@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/26/2018
+ms.date: 9/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: faf07b58c4480689d5f6f44bf09d6100a2eae9db
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312854"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48827857"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Ustawienia sieci VPN systemu Windows 10 w usłudze Intune
 
@@ -43,7 +43,7 @@ W zależności od wybranych ustawień niektórych wartości nie będzie można s
   - **Importuj**: umożliwia przejście do pliku zawierającego rozdzielaną przecinkami listę serwerów w formacie: opis, adres IP lub nazwa FQDN, serwer domyślny. Wybierz pozycję **OK**, aby zaimportować te serwery do listy **Serwery**.
   - **Eksportuj**: umożliwia wyeksportowanie listy serwerów do pliku CSV (plik wartości rozdzielanych przecinkami)
 
-- **Rejestrowanie adresów IP przy użyciu wewnętrznego serwera DNS**: wybierz opcję **Włącz**, aby skonfigurować profil sieci VPN w systemie Windows 10 i dynamicznie rejestrować adresy IP przypisane do interfejsu sieci VPN przy użyciu wewnętrznego serwera DNS, lub wybierz opcję **Wyłącz**, aby nie rejestrować dynamicznie adresów IP.
+- **Rejestrowanie adresów IP przy użyciu wewnętrznego serwera DNS**: wybierz opcję **Włącz**, aby skonfigurować profil sieci VPN w systemie Windows 10 i dynamicznie rejestrować adresy IP przypisane do interfejsu sieci VPN przy użyciu wewnętrznego serwera DNS. Wybierz opcję **Wyłącz**, aby nie rejestrować dynamicznie adresów IP.
 
 - **Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 
@@ -59,12 +59,12 @@ W zależności od wybranych ustawień niektórych wartości nie będzie można s
   - **PPTP**
 
   Po wybraniu typu połączenia sieci VPN może również być konieczne zdefiniowanie następujących ustawień:  
-    - **Zawsze włączone**: włącz, aby automatycznie łączyć się z połączeniem sieci VPN po wystąpieniu następujących sytuacji: 
+    - **Zawsze włączone**: wybierz opcję **Włącz**, aby automatycznie łączyć się z połączeniem sieci VPN po wystąpieniu następujących zdarzeń: 
       - Użytkownik zaloguje się na urządzeniu
       - Sieć na urządzeniu zostanie zmieniona
       - Ekran na urządzeniu zostanie włączony ponownie po wyłączeniu 
 
-    - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania użytkowników na serwerze sieci VPN. Użycie **certyfikatów** powoduje udostępnienie rozszerzonych możliwości, takich jak środowisko bezobsługowe, sieć VPN na żądanie i sieć VPN dla aplikacji.
+    - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania użytkowników na serwerze sieci VPN. Użycie **certyfikatów** powoduje udostępnienie rozszerzonych funkcji, takich jak środowisko bezobsługowe, sieć VPN na żądanie i sieć VPN dla aplikacji.
     - **Pamiętaj poświadczenia przy każdym logowaniu**: wybierz tę opcję, aby poświadczenia uwierzytelniania były buforowane.
     - **Niestandardowy kod XML**: wprowadź niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN.
     - **Kod EAP XML**: wprowadź polecenia EAP XML do konfiguracji połączenia z siecią VPN.
@@ -114,7 +114,7 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 
 ## <a name="conditional-access"></a>Dostęp warunkowy
 
-- **Dostęp warunkowy dla tego połączenia VPN**: umożliwia przepływ zgodności urządzenia od klienta. Po włączeniu klient VPN będzie podejmować próby komunikacji z usługą Azure Active Directory (AD), aby uzyskać certyfikat do użycia na potrzeby uwierzytelniania. Sieć VPN należy skonfigurować do używania uwierzytelniania certyfikatów, a serwer sieci VPN musi mieć relację zaufania z serwerem zwracanym przez usługę Azure AD.
+- **Dostęp warunkowy dla tego połączenia VPN**: umożliwia przepływ zgodności urządzenia od klienta. Po włączeniu klient VPN komunikuje się z usługą Azure Active Directory (AD), aby uzyskać certyfikat do użycia na potrzeby uwierzytelniania. Sieć VPN należy skonfigurować do używania uwierzytelniania certyfikatów, a serwer sieci VPN musi mieć relację zaufania z serwerem zwracanym przez usługę Azure AD.
 
 - **Logowanie jednokrotne z certyfikatem alternatywnym**: na potrzeby zgodności urządzeń użyj certyfikatu innego niż certyfikat uwierzytelniania sieci VPN podczas uwierzytelniania Kerberos. Wprowadź certyfikat z następującymi ustawieniami:
 
@@ -124,7 +124,17 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 
 ## <a name="dns-settings"></a>Ustawienia DNS
 
-**Domena i serwery dla tego połączenia VPN**: dodaj domeny i serwer DNS do użycia w sieci VPN. Możesz wybrać serwery DNS do użycia przez połączenie z siecią VPN po jego nawiązaniu. Dla każdego serwera wprowadź:
+- **Lista wyszukiwania sufiksów DNS**: w obszarze **Sufiksy DNS** wprowadź sufiks DNS i wybierz polecenie **Dodaj**. Można dodawać wiele sufiksów.
+
+  Korzystając z sufiksów DNS, możesz wyszukać zasób sieciowy za pomocą jego krótkiej nazwy, zamiast w pełni kwalifikowanej nazwy domeny (FQDN). Podczas wyszukiwania przy użyciu krótkiej nazwy sufiks jest automatycznie określany przez serwer DNS. Na przykład sufiks `utah.contoso.com` znajduje się na liście sufiksów DNS. Wyślij polecenie ping `DEV-comp`. W tym scenariuszu jest on rozpoznawany jako `DEV-comp.utah.contoso.com`.
+
+  Sufiksy DNS są rozpoznawane w podanej kolejności; ponadto można zmienić kolejność. Na przykład sufiksy `colorado.contoso.com` i `utah.contoso.com` są na liście sufiksów DNS i oba zawierają zasób o nazwie `DEV-comp`. Ponieważ sufiks `colorado.contoso.com` jest pierwszy na liście, zostaje rozpoznany jako `DEV-comp.colorado.contoso.com`.
+  
+  Aby zmienić kolejność, kliknij symbol kropek po lewej stronie sufiksu DNS, a następnie przeciągnij sufiks do góry:
+
+  ![Wybór symbolu trzech kropek oraz kliknięcie i przeciągnięcie sufiksu DNS w celu jego przeniesienia](./media/vpn-settings-windows10-move-dns-suffix.png)
+
+- **Domena i serwery dla tego połączenia VPN**: dodaj domeny i serwer DNS do użycia w sieci VPN. Możesz wybrać serwery DNS do użycia przez połączenie z siecią VPN po jego nawiązaniu. Dla każdego serwera wprowadź:
 - **Domeny**
 - **Serwer DNS**
 - **Serwer proxy**

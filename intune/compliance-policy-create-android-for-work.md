@@ -2,10 +2,10 @@
 title: Tworzenie zasad zgodności profilu służbowego systemu Android w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: W usłudze Microsoft Intune dla urządzeń z profilami służbowymi systemu Android można tworzyć i konfigurować zasady zgodności. Można wybrać, czy zezwolić na dostęp urządzeniom z wyłączonymi zabezpieczeniami systemu, ustawić dopuszczalny poziom zagrożenia, sprawdzić, czy jest zainstalowana aplikacja Google Play, wprowadzić minimalną i maksymalną wersję systemu operacyjnego, określić wymagania dotyczące hasła i zezwalać na aplikacje ładowane bezpośrednio.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 0c7f1c7c47f2fa4c950cbffeaf8fe274fe239a63
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905091"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828163"
 ---
 # <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z profilami służbowymi systemu Android w usłudze Intune
 
@@ -113,7 +113,11 @@ Jeśli w przedsiębiorstwie są używane profile służbowe systemu Android, mo�
 - **Blokuj aplikacje z nieznanych źródeł**: nie musisz konfigurować tego ustawienia, ponieważ urządzenia z profilami służbowymi systemu Android zawsze ograniczają instalację z nieznanych źródeł.
 - **Integralność środowiska uruchomieniowego aplikacji Portal firmy**: sprawdza, czy aplikacja Portal firmy ma zainstalowane domyślne środowisko uruchomieniowe, jest poprawnie podpisana, nie jest w trybie debugowania i została zainstalowana ze znanego źródła.
 - **Blokuj debugowanie USB na urządzeniu**: nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB na urządzeniach z profilami służbowymi systemu Android zostało już wyłączone.
-- **Minimalny poziom poprawki bezpieczeństwa**: wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie `YYYY-MM-DD`.
+- **Minimalny poziom poprawki bezpieczeństwa**: wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie *RRRR-MM-DD*.
+- **Aplikacje z ograniczeniami**: możesz ograniczyć aplikacje poprzez dodanie ich identyfikatorów pakietu do zasad. Następnie, jeśli urządzenie ma zainstalowaną aplikację, zostanie oznaczone jako niezgodne. 
+   - **Nazwa aplikacji**: wprowadź przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu. 
+   - **Identyfikator pakietu aplikacji**: wprowadź unikatowy identyfikator pakietu dla dostawcy aplikacji. W przypadku systemu Android identyfikator pakietu aplikacji jest pobierany z adresu URL aplikacji w sklepie. Jeśli na przykład adres URL aplikacji w sklepie to *https://play.google.com/store/apps/details?id=com.Slack*, identyfikator pakietu aplikacji = *com.Slack*.
+
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 

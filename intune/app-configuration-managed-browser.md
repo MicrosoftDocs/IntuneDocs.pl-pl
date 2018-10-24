@@ -1,42 +1,40 @@
 ---
-title: Zarządzanie dostępem do sieci Web za pomocą aplikacji Managed Browser
+title: Zarządzanie dostępem do Internetu z przeglądarką zabezpieczoną przy użyciu zasad
 titlesuffix: Microsoft Intune
-description: Informacje o wdrażaniu aplikacji Managed Browser w celu ograniczenia przeglądania sieci Web i transferu danych sieci Web do innych aplikacji.
+description: Użyj przeglądarki zabezpieczonej przy użyciu zasad, aby ograniczyć przeglądanie oraz transfer danych w Internecie.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
-ms.reviewer: maxles
+ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb4a80a9de03844c6fffa5e56f09c375645f9188
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864545"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863165"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad przeglądarki chronionej w usłudze Microsoft Intune
+# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad przeglądarki chronionej w usłudze Microsoft Intune  
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Przeglądarki chronione obejmują programy Microsoft Edge i Intune Managed Browser. Edge i Managed Browser to aplikacje służące do przeglądania zasobów internetowych przeznaczone do użytku w organizacji i dostępne do pobrania z publicznych sklepów z aplikacjami. W przypadku skonfigurowania przy użyciu usługi Intune przeglądarki chronione mogą:
-- służyć do uzyskiwania dostępu do firmowych witryn i aplikacji SaaS z użyciem logowania jednokrotnego za pośrednictwem usługi MyApps, chroniąc jednocześnie dane internetowe;
-- zostać wstępnie skonfigurowany z użyciem listy adresów URL i domen w celu ograniczenia witryn, do których użytkownik może przejść w kontekście firmowym;
-- zostać wstępnie skonfigurowany przy użyciu określonej strony głównej i zakładek.
+Korzystając z przeglądarki zabezpieczonej przy użyciu zasad usługi Intune (Microsoft Edge lub Intune Managed Browser), możesz upewnić się, że do witryn internetowych zawsze uzyskuje się dostęp z zastosowanymi zabezpieczeniami.  W przypadku skonfigurowania przy użyciu usługi Intune przeglądarki chronione mogą korzystać z następujących funkcji:
 
-Aplikacje Microsoft Edge i Managed Browser są zintegrowane z zestawem SDK usługi Intune, dlatego można do nich również zastosować zasady ochrony aplikacji, takie jak:
-- Kontrolowanie użycia funkcji wycinania, kopiowania i wklejania
-- Zapobieganie przechwytywaniu ekranu
-- Zapewnienie, że linki do zawartości wybierane przez użytkowników są otwierane tylko w innych aplikacjach zarządzanych.
+- Zasady ochrony aplikacji.
+- Dostęp warunkowy.
+- Logowanie jednokrotne.
+- Ustawienia konfiguracji aplikacji.
+- Integracja serwera proxy aplikacji platformy Azure.
 
-Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](app-protection-policy.md)?
+## <a name="getting-started"></a>Wprowadzenie
 
 Te ustawienia można zastosować do:
 
@@ -57,9 +55,7 @@ Zasady przeglądarki chronionej można tworzyć dla następujących typów urzą
 
 >[!IMPORTANT]
 >Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
-
-
-Programy Microsoft Edge i Intune Managed Browser obsługują otwieranie zawartości internetowej od [partnerów aplikacji usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Dostęp warunkowy dla przeglądarek chronionych
 
@@ -94,11 +90,11 @@ Po skonfigurowaniu powyższych zasad użytkownicy będą musieli uzyskiwać dost
 
 Program Managed Browser nie obsługuje klasycznych zasad dostępu warunkowego. Aby uzyskać więcej informacji, zobacz artykuł [Migrate classic policies in the Azure portal (Migrowanie zasad klasycznych w witrynie Azure Portal)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration).
 
-##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Logowanie jednokrotne do aplikacji internetowych połączonych z usługą Azure AD w aplikacji Intune Managed Browser
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Logowanie jednokrotne do aplikacji internetowych połączonych z usługą Azure AD w przeglądarkach zabezpieczonych przy użyciu zasad
 
-Aplikacja Intune Managed Browser w systemach iOS i Android może teraz korzystać z logowania jednokrotnego do wszystkich aplikacji internetowych (SaaS i lokalnych), które są połączone z usługą Azure AD. Gdy w systemie iOS jest obecna aplikacja Microsoft Authenticator lub gdy w systemie Android jest obecna aplikacja Portal firmy usługi Intune, użytkownicy aplikacji Intune Managed Browser mogą uzyskiwać dostęp do aplikacji internetowych połączonych z usługą Azure AD bez konieczności ponownego wprowadzania poświadczeń.
+Przeglądarka Microsoft Edge i Intune Managed Browser w systemach iOS i Android może teraz korzystać z logowania jednokrotnego do wszystkich aplikacji internetowych (SaaS i lokalnych), które są połączone z usługą Azure AD. Gdy w systemie iOS jest obecna aplikacja Microsoft Authenticator lub gdy w systemie Android jest obecna aplikacja Portal firmy usługi Intune, użytkownicy przeglądarki zabezpieczonej przy użyciu zasad mogą uzyskiwać dostęp do aplikacji internetowych połączonych z usługą Azure AD bez konieczności ponownego wprowadzania poświadczeń.
 
-Logowanie jednokrotne w aplikacji Intune Managed Browser wymaga, aby urządzenie było zarejestrowane przez aplikację Microsoft Authenticator w systemie iOS lub przez aplikację Portal firmy usługi Intune w systemie Android. Użytkownikom z aplikacją Authenticator lub Portal firmy usługi Intune zostanie wyświetlony monit o zarejestrowanie urządzenia, gdy przejdą do aplikacji internetowej połączonej z usługą Azure AD w aplikacji Intune Managed Browser, a ich urządzenie nie zostało jeszcze zarejestrowane przez inną aplikację. Po zarejestrowaniu urządzenia przy użyciu konta zarządzanego przez usługę Intune dla tego konta zostanie włączone logowanie jednokrotne dla aplikacji internetowych połączonych z usługą Azure AD. 
+Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikację Microsoft Authenticator w systemie iOS lub przez aplikację Portal firmy usługi Intune w systemie Android. Użytkownikom z aplikacją Authenticator lub Portal firmy usługi Intune zostanie wyświetlony monit o zarejestrowanie urządzenia, gdy przejdą do aplikacji internetowej połączonej z usługą Azure AD w przeglądarce zabezpieczonej przy użyciu zasad, a ich urządzenie nie zostało jeszcze zarejestrowane przez inną aplikację. Po zarejestrowaniu urządzenia przy użyciu konta zarządzanego przez usługę Intune dla tego konta zostanie włączone logowanie jednokrotne dla aplikacji internetowych połączonych z usługą Azure AD. 
 
 > [!NOTE]
 > Rejestracja urządzenia to proste zaewidencjonowanie go w usłudze Azure AD. Nie wymaga pełnej rejestracji urządzenia ani nie daje działowi IT żadnych dodatkowych uprawnień na urządzeniu.

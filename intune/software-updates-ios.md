@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: fdd33ea0b5d8189712c6390861131c684cfaa67d
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313500"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101957"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Intune
 
@@ -23,7 +23,7 @@ Zasady aktualizacji oprogramowania umożliwiają wymuszenie automatycznej instal
 
 Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli aktualizacja jest dostępna i nie jest to czas zastrzeżony, urządzenie pobiera i instaluje najnowszą aktualizację systemu operacyjnego. Aktualizacja urządzenia nie wymaga interakcji użytkownika. Zasady nie uniemożliwiają użytkownikom ręcznego aktualizowania systemu operacyjnego.
 
-Ta funkcja obsługuje urządzenia z systemem iOS 10.3 lub nowszym.
+Ta funkcja obsługuje urządzenia z systemem iOS w wersji 10.3 lub nowszej. Ustawienie opóźnienia jest dostępne w systemie iOS w wersji 11.3 i nowszych.
 
 ## <a name="configure-the-policy"></a>Konfigurowanie zasad
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).

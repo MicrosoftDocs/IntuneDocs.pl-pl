@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
-ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.openlocfilehash: 652157f41f0fbefa14e9f22fea01c918cb7704a1
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40251587"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169502"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -39,13 +39,13 @@ Przed uruchomieniem narzędzia opakowującego aplikacje należy spełnić pewne 
 
 * Pobierz [narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) z witryny GitHub.
 
-* Komputer z systemem macOS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi Xcode w wersji 5 lub nowszej.
+* Komputer z systemem macOS X 10.8.5 lub nowszym z zainstalowanym zestawem narzędzi Xcode w wersji 9 lub nowszej.
 
 * Aplikacje wejściowe systemu iOS muszą być opracowane i podpisane przez Twoją firmę lub niezależnego dostawcę oprogramowania.
 
   * Plik aplikacji wejściowej musi mieć rozszerzenie **ipa** lub **app**.
 
-  * Aplikacja wejściowa musi być skompilowana dla systemu iOS 8.0. lub nowsza wersja.
+  * Aplikacja wejściowa musi być skompilowana dla systemu iOS w wersji 10 lub nowszej.
 
   * Aplikacja wejściowa nie może być zaszyfrowana.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/27/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 58b157cfe639651aa65e8dfb510b857d0128589a
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313795"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102127"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -89,6 +89,10 @@ Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić 
 6. Skonfiguruj ustawienia:
 
   - **Typ pakietu konfiguracji klienta usługi Windows Defender ATP**: wybierz pozycję **Dodaj**, aby dodać pakiet konfiguracyjny do profilu. Wybierz pozycję **Odłącz**, aby usunąć pakiet konfiguracyjny z profilu.
+  
+    > [!NOTE] 
+    > Jeśli zostało prawidłowo nawiązane połączenie z usługą Windows Defender ATP, usługa Intune automatycznie **doda** dla Ciebie profil konfiguracji.
+  
   - **Udostępnianie próbek dla wszystkich plików**: pozycja **Włącz** umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Windows Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Windows Defender ATP w celu wykonania szczegółowej analizy. Pozycja **Nieskonfigurowane** nie udostępnia żadnych przykładów w usłudze Windows Defender ATP.
   - **Usprawnij częstotliwość raportowania danych telemetrycznych**: pozycja **Włącz** to ustawienie dla urządzeń narażonych na duże ryzyko, co pozwoli na częstsze przekazywanie danych telemetrycznych do usługi Windows Defender ATP.
 

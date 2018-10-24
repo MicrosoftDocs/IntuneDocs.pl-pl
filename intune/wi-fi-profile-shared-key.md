@@ -14,12 +14,12 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb88bf64db8eaa82a68f56f8c3235030539f1959
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 72aa45d154cc3913f5b2e3895486a8296bb7f1cf
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190643"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169451"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -70,7 +70,7 @@ Po następnym zameldowaniu się urządzenia zasady zostaną zastosowane, a profi
 
 ## <a name="android-or-windows-wi-fi-profile-example"></a>Przykład profilu sieci Wi-Fi systemu Android lub Windows
 
-Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi systemu Android lub Windows. 
+Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi systemu Android lub Windows. W przykładzie przedstawiono odpowiedni format i więcej szczegółowych informacji. Jest to tylko przykład, który nie stanowi zalecanej konfiguracji w Twoim środowisku.
 
 > [!IMPORTANT]
 >
@@ -122,7 +122,8 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ## <a name="eap-based-wi-fi-profile-example"></a>Przykład profilu sieci Wi-Fi z użyciem protokołu EAP
-Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi z użyciem protokołu EAP:
+Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi z użyciem protokołu EAP: w przykładzie przedstawiono odpowiedni format i więcej szczegółowych informacji. Jest to tylko przykład, który nie stanowi zalecanej konfiguracji w Twoim środowisku.
+
 
 ```
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">

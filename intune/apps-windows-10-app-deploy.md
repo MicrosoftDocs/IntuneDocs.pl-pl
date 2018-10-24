@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/31/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7508f2c2eca06ceacf203103ab2cad53abc39a65
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
+ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347436"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866358"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
 Obecnie usługa Microsoft Intune obsługuje różne typy aplikacji i scenariusze wdrażania na urządzeniach z systemem Windows 10. Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń. Poniżej znajdziesz więcej szczegółowych informacji na temat obsługiwanych scenariuszy w systemie Windows 10. Dodatkowo przedstawiono istotne informacje, o których należy pamiętać podczas wdrażania aplikacji w systemie Windows. 
 
-Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje biznesowe i aplikacje dostępne w sklepie Microsoft dla Firm.
+Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje biznesowe i aplikacje dostępne w sklepie Microsoft dla Firm. Rozszerzenia plików aplikacji dla systemu Windows to **msi**, **appx**, **appxbundle**, **msix** i **msixbundle**.  
 
 > [!Note]
 > Minimalna wymagana wersja systemu Windows 10 umożliwiająca wdrażanie aplikacji w kontekście urządzenia to aktualizacja z [23 maja 2018 r. — KB4100403 (kompilacja systemu operacyjnego 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
@@ -46,9 +46,6 @@ W zależności od typu aplikacji aplikację można zainstalować na urządzeniu 
     - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno wymaganą, jak i dostępną intencję.
 - **Kontekst urządzenia**: po wdrożeniu aplikacji w kontekście urządzenia zarządzana aplikacja zostanie zainstalowana bezpośrednio na urządzeniu przez usługę Intune.
     - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft dla Firm licencjonowane online mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
-
-> [!Note]
-> Wdrażanie pakietów MSI za pośrednictwem funkcji MDM w kontekście urządzenia nie jest jeszcze obsługiwane na urządzeniach z systemem Windows 10.
 
 Po wdrożeniu aplikacji w kontekście urządzenia instalacja zakończy się powodzeniem pod warunkiem, że wskazane urządzenie obsługuje kontekst urządzenia. Ponadto wdrażanie w kontekście urządzenia podlega następującym warunkom:
 - Jeśli aplikacja jest wdrażana w kontekście urządzenia i wskazany jest użytkownik, instalacja zakończy się niepowodzeniem, a w konsoli administratora zostanie wyświetlony następujący stan i komunikat o błędzie:

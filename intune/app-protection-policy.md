@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 64e58ef4d27d2f967eff8c503842345879799168
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: fea87d72e8d8485c1cde3038d357b8d6bc7f1c71
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232209"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102006"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -30,66 +30,71 @@ ms.locfileid: "48232209"
 Zasady ochrony aplikacji w usłudze Microsoft Intune wspomagają ochronę danych firmowych i zapobiegają utracie danych.
 
 ## <a name="how-you-can-protect-app-data"></a>Jak możesz chronić dane aplikacji
-Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych.  Zatem umożliwiając pracownikom wydajną pracę, warto również zapobiegać nieumyślnej lub umyślnej utracie danych.  Ponadto chcesz mieć możliwość ochrony danych firmowych, do których dostęp jest uzyskiwany za pomocą urządzeń, nawet w przypadku, gdy nie są zarządzane przez Ciebie.
+Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych. Zatem umożliwiając pracownikom wydajną pracę, warto zapobiegać nieumyślnej lub umyślnej utracie danych. Należy również chronić dane firmowe, do których można uzyskać dostęp z urządzeń, które nie są zarządzane przez firmę.
 
-Aby lepiej chronić dane firmy, możesz skorzystać z zasad ochrony aplikacji w usłudze Intune. Ponieważ zasady ochrony aplikacji w usłudze Intune są **niezależne od jakichkolwiek rozwiązań do zarządzania urządzeniami mobilnymi (MDM, mobile device management)**, możesz używać ich do ochrony danych firmy bez względu na to, czy urządzenia zostały zarejestrowane w rozwiązaniach do zarządzania urządzeniami. Wdrażając **zasady na poziomie aplikacji**, można ograniczyć dostęp do zasobów firmy i objęcia danych kontrolą działu IT.
+Zasad ochrony aplikacji usługi Intune można użyć **niezależnie od wszelkich rozwiązań do zarządzania urządzeniami przenośnymi (MDM)**. Ta niezależność pomaga w ochronie danych firmy bez konieczności zarejestrowania urządzenia w rozwiązaniu do zarządzania urządzeniami. Wdrażając **zasady na poziomie aplikacji**, można ograniczyć dostęp do zasobów firmy i objęcia danych kontrolą działu IT.
 
 Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchamianych na urządzeniach, które są:
 
-- **Zarejestrowane w usłudze Microsoft Intune:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
+- **Zarejestrowane w usłudze Microsoft Intune:** te urządzenia są przeważnie urządzeniami należącymi do firmy.
 
-- **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM) innej firmy:** urządzenia w tej kategorii są przeważnie urządzeniami należącymi do firmy.
+- **Zarejestrowane w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM) innej firmy:** te urządzenia są przeważnie urządzeniami należącymi do firmy.
 
   > [!NOTE]
   > Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami bezpiecznego kontenera ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
 
-- **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi :** urządzenia w tej kategorii są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązań MDM.
+- **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi:** te urządzenia są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązaniach MDM.
 
 > [!IMPORTANT]
 > Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Możesz także chronić dostęp do lokalnych skrzynek pocztowych programu Exchange, tworząc zasady ochrony aplikacji usługi Intune dla aplikacji Outlook dla systemów iOS i Android, obsługiwane przez hybrydowe nowoczesne uwierzytelnianie. Przed użyciem tej funkcji upewnij się, że spełnione są [Wymagania dotyczące programu Outlook dla systemów iOS i Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zasady ochrony aplikacji nie są obsługiwane w przypadku innych aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
 
 **Do istotnych korzyści zapewnianych przez zasady ochrony aplikacji należą:**
 
--   Ochrona danych firmy na poziomie aplikacji.  Ponieważ zarządzanie aplikacjami mobilnymi nie wymaga zarządzania urządzeniami, można chronić dane firmy zarówno na urządzeniach zarządzanych, jak i niezarządzanych. Zarządzanie skupia się na tożsamości użytkownika, co eliminuje konieczność zarządzania urządzeniem.
+-   Ochrona danych firmy na poziomie aplikacji. Ponieważ zarządzanie aplikacjami mobilnymi nie wymaga zarządzania urządzeniami, dane firmowe można chronić zarówno na urządzeniach zarządzanych, jak i niezarządzanych. Zarządzanie skupia się na tożsamości użytkownika, co eliminuje konieczność zarządzania urządzeniem.
 
--   Zasady nie mają wpływu na produktywność użytkownika końcowego i nie są stosowane podczas korzystania z aplikacji w kontekście prywatnym.  Zasady są stosowane wyłącznie w kontekście służbowym, dzięki czemu możesz chronić dane firmowe, nie ingerując w dane prywatne.
+-   Zasady nie mają wpływu na produktywność użytkownika końcowego i nie są stosowane podczas korzystania z aplikacji w kontekście prywatnym. Zasady są stosowane wyłącznie w kontekście służbowym, co daje możliwość ochrony danych firmowych bez ingerowania w dane prywatne.
 
-Dodatkowe korzyści można uzyskać, używając jednocześnie rozwiązań MDM i zasad ochrony aplikacji. Firmy mogą w tym samym czasie korzystać z zasad ochrony aplikacji łącznie z rozwiązaniem MDM lub bez niego. Na przykład pracownik może używać telefonu otrzymanego od firmy oraz prywatnego tabletu.  W takiej sytuacji telefon firmowy jest zarejestrowany w rozwiązaniu MDM i chroniony przez zasady ochrony aplikacji, natomiast urządzenie prywatne jest chronione tylko przez zasady ochrony aplikacji.
+Dodatkowe korzyści można uzyskać, używając jednocześnie rozwiązań MDM i zasad ochrony aplikacji. Firmy mogą w tym samym czasie korzystać z zasad ochrony aplikacji łącznie z rozwiązaniem MDM lub bez niego. Przypuśćmy na przykład, że pracownik używa zarówno telefonu otrzymanego od firmy jak i własnego prywatnego tabletu. Telefon firmowy jest zarejestrowany w rozwiązaniu MDM i chroniony przez zasady ochrony aplikacji, natomiast urządzenie prywatne jest chronione tylko przez zasady ochrony aplikacji.
 
-- **Rozwiązanie MDM zapewnia ochronę urządzenia**.  Możesz na przykład zastosować zabezpieczenie dostępu do urządzenia numerem PIN lub wdrożyć na urządzeniu aplikacje zarządzane. Możesz również wdrażać aplikacje na urządzeniach za pośrednictwem rozwiązania MDM, aby mieć lepszą kontrolę nad zarządzaniem aplikacjami.
+- **Rozwiązanie MDM zapewnia ochronę urządzenia**. Możesz na przykład zastosować zabezpieczenie dostępu do urządzenia numerem PIN lub wdrożyć na urządzeniu aplikacje zarządzane. Możesz również wdrażać aplikacje na urządzeniach za pośrednictwem rozwiązania MDM, aby mieć lepszą kontrolę nad zarządzaniem aplikacjami.
 
-- **Zasady ochrony aplikacji zapewniają stosowanie zabezpieczeń warstwy aplikacji**. Możesz na przykład zastosować wymaganie numeru PIN w celu otwarcia aplikacji w kontekście służbowym lub, jeśli dane mogą być udostępniane innym aplikacjom, uniemożliwić zapisywanie firmowych danych aplikacji w prywatnej lokalizacji magazynu.
+- **Zasady ochrony aplikacji zapewniają stosowanie zabezpieczeń warstwy aplikacji**. Możesz na przykład:
+  - Wymagać numeru PIN w celu otwarcia aplikacji w kontekście służbowym 
+  - Kontrolować udostępnianie danych między aplikacjami 
+  - Uniemożliwić zapisywanie danych aplikacji firmowej w osobistej lokalizacji przechowywania
 
 
-### <a name="supported-platforms-for-app-protection-polices"></a>Platformy obsługiwane przez zasady ochrony aplikacji
-Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji pakietu Office. Aby uzyskać więcej informacji, zobacz [wymagania systemowe pakietu Office](https://products.office.com/en-US/office-system-requirements).
+### <a name="supported-platforms-for-app-protection-policies"></a>Platformy obsługiwane przez zasady ochrony aplikacji
+Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji mobilnych pakietu Office. Aby uzyskać szczegółowe informacje, zobacz sekcję **Aplikacje mobilne** w temacie [Wymagania systemowe pakietu Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
 Urządzenia z systemem Windows nie są obecne obsługiwane. Jednak podczas rejestrowania urządzeń z systemem Windows 10 w usłudze Intune możesz użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
-##  <a name="how-app-protection-policies-protect-app-data"></a>W jaki sposób zasady ochrony aplikacji chronią dane aplikacji
 
-####  <a name="apps-without-app-protection-policies"></a>Aplikacje bez zasad ochrony aplikacji
+
+## <a name="how-app-protection-policies-protect-app-data"></a>W jaki sposób zasady ochrony aplikacji chronią dane aplikacji
+
+#### <a name="apps-without-app-protection-policies"></a>Aplikacje bez zasad ochrony aplikacji
 
 ![Obraz przedstawiający swobodne przemieszczanie się danych między aplikacjami w sytuacji, gdy zasady ochrony aplikacji nie zostały wdrożone](./media/apps-without-protection-policies.png)
 
-W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu.  Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na rysunku oznaczają nieograniczone przemieszczanie się danych między aplikacjami (firmowymi i prywatnymi) oraz do lokalizacji magazynu.
+W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu. Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na poprzednim rysunku oznaczają nieograniczone przemieszczanie się danych między aplikacjami zarówno firmowymi, jak i prywatnymi oraz do lokalizacji magazynu.
 
 
 ### <a name="data-protection-with-app-protection-policies"></a>Ochrona danych za pomocą zasad ochrony aplikacji
 
-![Obraz przedstawiający sposób ochrony danych firmowych po zastosowaniu zasad ochrony aplikacji ](./media/apps-with-protection-policies.png)
+![Obraz pokazujący sposób ochrony danych firmowych po zastosowaniu zasad ochrony aplikacji ](./media/apps-with-protection-policies.png)
 
 
-Zasady ochrony aplikacji pozwalają zapobiegać zapisywaniu danych firmy w lokalnym magazynie urządzenia. Ponadto ograniczają ruch danych do innych aplikacji, które nie są chronione przy użyciu zasad ochrony aplikacji. Ustawienia zasad ochrony aplikacji obejmują:
-- Zasady przenoszenia danych, takie jak **Nie zezwalaj na używanie polecenia Zapisz jako** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
-- Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu**, **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora**.
+Zasady ochrony aplikacji pozwalają zapobiec zapisywaniu danych firmowych w magazynie lokalnym urządzenia. Można również ograniczyć przenoszenie danych do innych aplikacji, które nie są chronione przez zasady ochrony aplikacji. Ustawienia zasad ochrony aplikacji obejmują:
+- Zasady relokacji danych, takie jak **Nie zezwalaj na używanie polecenia Zapisz jako** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
+- Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu** i **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora**.
 
-### <a name="data-protection-with-app-protection-policies-on-devices-managed-by-a-mdm-solution"></a>Ochrona danych za pomocą zasad ochrony aplikacji na urządzeniach zarządzanych przez rozwiązanie MDM
+### <a name="data-protection-with-app-protection-policies-on-devices-managed-by-a-mobile-device-management-solution"></a>Ochrona danych za pomocą zasad ochrony aplikacji na urządzeniach zarządzanych przez rozwiązanie zarządzania urządzeniami mobilnymi
 
 ![Obraz przedstawiający sposób działania zasad ochrony aplikacji na urządzeniach BYOD](./media/app-protection-policies-with-mdm.png)
 
 **W przypadku urządzeń zarejestrowanych w rozwiązaniu MDM**-
 
-Ilustracja powyżej przedstawia warstwy ochrony zapewniane łącznie przez rozwiązanie MDM i zasady ochrony aplikacji.
+Powyższa ilustracja przedstawia warstwy ochrony zapewniane łącznie przez rozwiązanie MDM i zasady ochrony aplikacji.
 
 Rozwiązanie MDM:
 
@@ -103,7 +108,7 @@ Rozwiązanie MDM:
 
 -   Chronią dane firmy przed wyciekiem do aplikacji i usług dla konsumentów
 
--   Stosują ograniczenia (zapisz jako, schowek, numer PIN itp.) do aplikacji klienckich
+-   Stosują ograniczenia, takie jak *zapisz jako*, *schowek*, *numer PIN*, do aplikacji klienckich
 
 -   Wymazują dane firmowe z aplikacji, nie usuwając tych aplikacji z urządzenia
 
@@ -117,9 +122,9 @@ Powyższy rysunek przedstawia sposób działania zasad ochrony danych na poziomi
 W przypadku urządzeń BYOD niezarejestrowanych w rozwiązaniu MDM zasady ochrony aplikacji wspomagają ochronę danych firmowych na poziomie aplikacji.
 Należy jednak wziąć pod uwagę następujące ograniczenia:
 
--   Na tym urządzeniu nie można wdrażać aplikacji.  Użytkownik końcowy musi uzyskać aplikacje ze sklepu.
+-   Na urządzeniach nie można wdrażać aplikacji. Użytkownik końcowy musi uzyskać aplikacje ze sklepu.
 
--   Na tych urządzeniach nie można dostarczać profilów certyfikatów.
+-   Na urządzeniach nie można dostarczać profili certyfikatów.
 
 -   Na tych urządzeniach nie można dostarczać ustawień firmowych sieci Wi-Fi i VPN.
 
@@ -129,9 +134,9 @@ Administrator usługi OneDrive może przejść do witryny **admin.office.com** i
 
 Te ustawienia dostępne w konsoli administratora usługi OneDrive pozwalają skonfigurować specjalne zasady ochrony aplikacji usługi Intune nazywane zasadami **globalnymi**. Te zasady globalne mają zastosowanie do wszystkich użytkowników w dzierżawie i nie umożliwiają sterowania kierowaniem zasad do odbiorców docelowych. 
 
-Po ich włączeniu aplikacje usługi OneDrive i programu SharePoint dla systemów iOS i Android będą domyślnie chronione przy użyciu wybranych ustawień. Po utworzeniu tych zasad informatyk może edytować je w konsoli usługi Intune, a także dodawać więcej aplikacji docelowych i modyfikować wszelkie ustawienia zasad. 
+Po ich włączeniu aplikacje usługi OneDrive i programu SharePoint dla systemów iOS i Android będą domyślnie chronione przy użyciu wybranych ustawień. Informatyk może edytować te zasady w konsoli usługi Intune, aby dodawać więcej aplikacji docelowych i modyfikować wszelkie ustawienia zasad. 
 
-Domyślnie dla danej dzierżawy mogą istnieć tylko jedne zasady **globalne**. Jednak [interfejsy API programu Graph usługi Intune](intune-graph-apis.md) umożliwiają tworzenie dodatkowych zasad globalnych dla poszczególnych dzierżaw, choć nie jest to zalecane. Tworzenie dodatkowych zasad globalnych nie jest zalecane, ponieważ rozwiązywanie problemów z implementacją takich zasad może być bardzo złożone.
+Domyślnie dla danej dzierżawy mogą istnieć tylko jedne zasady **globalne**. [Interfejsy API programu Graph usługi Intune](intune-graph-apis.md) umożliwiają tworzenie dodatkowych zasad globalnych dla poszczególnych dzierżaw, jednak nie jest to zalecane. Tworzenie dodatkowych zasad globalnych nie jest zalecane, ponieważ rozwiązywanie problemów z implementacją takich zasad może być bardzo złożone.
 
 Chociaż zasady **globalne** mają zastosowanie do wszystkich użytkowników w dzierżawie, ustawienia te są zastępowane przez dowolne standardowe zasady ochrony aplikacji usługi Intune.
 
@@ -140,13 +145,13 @@ Chociaż zasady **globalne** mają zastosowanie do wszystkich użytkowników w d
 
 Aplikacje, które obsługują wiele tożsamości, umożliwiają uzyskiwanie dostępu do tych samych aplikacji przy użyciu różnych kont (służbowych i osobistych), podczas gdy zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane w kontekście służbowym.
 
-Jeśli na przykład użytkownik uruchamia aplikację OneDrive przy użyciu konta służbowego, nie może przenieść plików do lokalizacji magazynu osobistego. Jeśli jednak użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.
+Przypuśćmy na przykład, że użytkownik uruchamia aplikację OneDrive przy użyciu konta służbowego. W kontekście służbowym nie może przenieść plików do osobistej lokalizacji przechowywania. Później, jeśli użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.
 
 - Dowiedz się więcej o aplikacjach, które obsługują [zarządzanie aplikacjami mobilnymi (MAM) i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
 
-##  <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Następne kroki
 
 [Sposoby tworzenia i wdrażania zasad ochrony aplikacji w usłudze Microsoft Intune](app-protection-policies.md)
 
 ## <a name="see-also"></a>Zobacz też
-Aplikacje innych firm, takie jak aplikacja mobilna Salesforce współpracują w określony sposób z usługą Intune, aby chronić dane firmowe. Aby dowiedzieć się więcej o tym, jak aplikacja Salesforce współpracuje w szczególności z usługą Intune (z uwzględnieniem ustawień konfiguracji aplikacji MDM), zobacz temat [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf) (Aplikacja Salesforce i usługa Microsoft Intune).
+Aplikacje innych firm, takie jak aplikacja mobilna Salesforce, współpracują w określony sposób z usługą Intune, aby chronić dane firmowe. Aby dowiedzieć się więcej o tym, jak aplikacja Salesforce współpracuje w szczególności z usługą Intune (z uwzględnieniem ustawień konfiguracji aplikacji MDM), zobacz temat [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf) (Aplikacja Salesforce i usługa Microsoft Intune).

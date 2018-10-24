@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b92a5c7bcddbecc438aa5e72989ab2302440da7a
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: 5bcaabd66a2a9a24c3ee3f7c49cf7689d1f60eed
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562888"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863148"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
 
@@ -61,6 +61,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Wbudowana aplikacja systemu iOS  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Wbudowana aplikacja systemu Android  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Aplikacje internetowe  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
+| Aplikacja systemu Windows (Win32)  | Aplikacja LOB  | Wybierz aplikację **Aplikacja systemu Windows (Win32)** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wybierz plik instalacyjny z rozszerzeniem **.intunewin**.  |
 
 Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
 
@@ -194,3 +195,4 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Aplikacje pakietu Office 365 dla systemu Windows 10](apps-add-office365.md)
 - [Aplikacje pakietu Office 365 dla systemu macOS](apps-add-office365-macos.md)
 - [Aplikacje wbudowane](apps-add-built-in.md)
+- [Aplikacje Win32](apps-win32-app-management.md) 

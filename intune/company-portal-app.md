@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bd388131445715a4037cc0480c194d338212dbb0
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 2defc433ef39562750c4579f302a9c5367c6464a
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329977"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828248"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -34,7 +34,7 @@ Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzys
 Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w obciążeniu **Aplikacje klienckie** wybierz kolejno pozycje **Konfiguracja** > **Znakowanie Portalu firmy**, po czym skonfiguruj wymagane ustawienia.  
 
 > [!Note]       
-> Gdy użytkownik zainicjuje przepływ pracy w celu uzyskania pomocy dotyczącej problemu, aplikacja Portal firmy w systemie Windows 10 wyśle dzienniki aplikacji bezpośrednio do firmy Microsoft. Ułatwia to rozwiązywanie i usuwanie problemów, które zostały zgłoszone firmie Microsoft.  
+> Jeśli używasz platformy Azure Government, użytkownik końcowy ma możliwość zdecydowania o sposobie udostępnienia dzienników aplikacji, gdy rozpocznie proces uzyskiwania pomocy dotyczącej problemu. Jeśli jednak nie używasz platformy Azure Government, aplikacja Portal firmy w systemie Windows 10 będzie wysyłać dzienniki aplikacji bezpośrednio do firmy Microsoft, gdy użytkownik zainicjuje proces w celu uzyskania pomocy dotyczącej problemu. Wysłanie dzienników aplikacji do firmy Microsoft ułatwi rozwiązywanie i usuwanie problemów. 
 
 ## <a name="company-information-and-privacy-statement"></a>Informacje o firmie i zasady zachowania poufności informacji        
 Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Zasady zachowania poufności są wyświetlane, gdy użytkownik kliknie odpowiedni link.
