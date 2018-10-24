@@ -15,19 +15,16 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d4c41d3a4cdfada81b91a3dffeffdfe15e8a470f
-ms.sourcegitcommit: 17094728cfd9eb3f77ca39745fdcde9be0a8dda1
+ms.openlocfilehash: 3b0da7cf77fd7c1b977fcd2ddb86b95eff8804f8
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48812825"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425006"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
 
-|Dotyczy: usługa Intune w witrynie Azure Portal |
-|--|
-|Szukasz dokumentacji dotyczącej usługi Intune w portalu klasycznym? [Przejdź tutaj](/intune/introduction-intune?toc=/intune-classic/toc.json).|
-| |
+Dotyczy: usługa Intune w witrynie Azure Portal
 
 W celu zapewnienia, że użytkownicy końcowi spełniają wymagania obowiązujące w organizacji, można wykorzystać usługę Azure Active Directory i zasady dostępu warunkowego usługi Microsoft Intune. Te zasady można stosować na komputerach Mac, które są [zarządzane za pomocą narzędzia Jamf Pro](conditional-access-integrate-jamf.md). Wymaga to dostępu do konsol usługi Intune i narzędzia Jamf Pro.
 

@@ -15,12 +15,12 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f0680f601d59695828355496ef7b817335dc0d4
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: ac8b70cd370d0c22a615d0d0bdc215cb3a332520
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48827976"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425176"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -78,7 +78,7 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | **Wymagaj minimalnej wersji zestawu SDK zasad ochrony aplikacji usługi Intune** | Wybierz pozycję **Tak**, aby wymagać minimalnej wersji zestawu SDK zasad ochrony aplikacji usługi Intune w używanej aplikacji. Jeśli wersja zestawu SDK zasad ochrony aplikacji usługi Intune danej aplikacji nie spełnia wymagań, dostęp zostanie dla użytkownika zablokowany. <br> <br> Aby dowiedzieć się więcej na temat zestawu SDK zasad ochrony aplikacji usługi Intune, zobacz temat [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md). <br><br> Ten format ustawień zasad obsługuje wartości główna.pomocnicza, główna.pomocnicza.kompilacja, główna.pomocnicza.kompilacja.poprawka. <br><br> ***Uwaga:** wymaga, aby aplikacja zawierała zestaw SDK usługi Intune w wersji 7.0.1 lub nowszej.* <br><br>  Wartość domyślna: **Nie** |
 
 > [!NOTE]
-> Aby dowiedzieć się więcej na temat tego, w jaki sposób wiele ustawień ochrony aplikacji usługi Intune skonfigurowanych w sekcji Dostęp dla tego samego zestawu aplikacji i użytkowników działa w systemie iOS, zobacz [Funkcje MAM usługi Intune — często zadawane pytania](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios) i [Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune](app-protection-policies-access-actions.md).
+> Aby dowiedzieć się więcej na temat tego, w jaki sposób wiele ustawień ochrony aplikacji usługi Intune skonfigurowanych w sekcji Dostęp dla tego samego zestawu aplikacji i użytkowników działa w systemie iOS, zobacz [Funkcje MAM usługi Intune — często zadawane pytania](https://docs.microsoft.com/intune/mam-faq#app-experience-on-ios) i [Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune](app-protection-policies-access-actions.md).
 
 ##  <a name="add-ins-for-outlook-app"></a>Dodatki dla aplikacji Outlook
 
@@ -117,9 +117,9 @@ Jeśli użytkownik wyraża zgodę na udostępnianie danych między kontami, jak 
 
 |Uprawnienia programu Microsoft Graph  |Opis  |
 |---------|---------|
-|Uprawnienia do odczytu dla [osób](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference#people-permissions)     |Zezwala aplikacji na odczytywanie uporządkowanej listy osób odpowiednich dla zalogowanego użytkownika. Lista może zawierać kontakty lokalne, kontakty z sieci społecznościowych lub katalog Twojej organizacji i osoby, z którymi kontaktowano się ostatnio (np. za pomocą poczty e-mail i programu Skype).         |
-|Uprawnienia do odczytu dla [kalendarzy](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Fgraph%2Fdocs%2Fconcepts%2Fpermissions_reference%23calendars-permissions&data=04%7C01%7CCem.Aykan%40microsoft.com%7C59705402acc347cdf0d908d5b1d82d53%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636610464378331622%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwifQ%3D%3D%7C-1&sdata=fABkrlIxqggnB%2Bc%2BR%2BbFpuenhSg7OHfBhWcbv3ahmAU%3D&reserved=0)     |Zezwala aplikacji na odczytywanie wydarzeń w kalendarzach użytkownika. Zawiera spotkania w kalendarzach zalogowanego użytkownika, ich godziny, lokalizacje i uczestników.         |
-|Uprawnienia do odczytu dla [profilu użytkownika](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Fgraph%2Fdocs%2Fconcepts%2Fpermissions_reference%23user-permissions&data=04%7C01%7CCem.Aykan%40microsoft.com%7C59705402acc347cdf0d908d5b1d82d53%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636610464378341626%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwifQ%3D%3D%7C-1&sdata=RcnVIpntjyR4TXafOYTV0SffZuZWpshQQWY0e2VkkXg%3D&reserved=0)     |Zezwala użytkownikom na logowanie się do aplikacji oraz zezwala aplikacji na odczytywanie profilu zalogowanych użytkowników. Umożliwia również aplikacji odczytywanie podstawowych informacji o firmie dla zalogowanych użytkowników.         |
+|Uprawnienia do odczytu dla [osób](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Zezwala aplikacji na odczytywanie uporządkowanej listy osób odpowiednich dla zalogowanego użytkownika. Lista może zawierać kontakty lokalne, kontakty z sieci społecznościowych lub katalog Twojej organizacji i osoby, z którymi kontaktowano się ostatnio (np. za pomocą poczty e-mail i programu Skype).         |
+|Uprawnienia do odczytu dla [kalendarzy](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Zezwala aplikacji na odczytywanie wydarzeń w kalendarzach użytkownika. Zawiera spotkania w kalendarzach zalogowanego użytkownika, ich godziny, lokalizacje i uczestników.         |
+|Uprawnienia do odczytu dla [profilu użytkownika](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Zezwala użytkownikom na logowanie się do aplikacji oraz zezwala aplikacji na odczytywanie profilu zalogowanych użytkowników. Umożliwia również aplikacji odczytywanie podstawowych informacji o firmie dla zalogowanych użytkowników.         |
 |Subscriptions     |Ten zakres nie jest dostępny i nie jest jeszcze używany. Obejmuje on subskrypcje udostępniane przez organizację użytkownika aplikacjom i usługom firmy Microsoft, takim jak usługa Office 365.         |
 |Szczegółowe informacje     |Ten zakres nie jest dostępny i nie jest jeszcze używany. Obejmuje on zainteresowania skojarzone z kontem zalogowanego użytkownika na podstawie używania przez niego usług firmy Microsoft.         |
 
@@ -127,6 +127,6 @@ Jeśli użytkownik wyraża zgodę na udostępnianie danych między kontami, jak 
 
 - Dowiedz się więcej o [informacjach i funkcjach usługi LinkedIn w aplikacjach firmy Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
 - Więcej informacji na temat wersji połączeń konta usługi LinkedIn znajdziesz na [stronie harmonogramu działania dla usługi Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Dowiedz się więcej o [Konfigurowaniu połączeń konta usługi LinkedIn](https://docs.microsoft.com/en-us/azure/active-directory/linkedin-integration).
+- Dowiedz się więcej o [Konfigurowaniu połączeń konta usługi LinkedIn](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
 - Aby uzyskać więcej informacji o danych, które są współużytkowane przez konta usługi LinkedIn i konta służbowe Microsoft użytkowników, zobacz [LinkedIn in Microsoft applications at your work or school (Usługa LinkedIn w aplikacjach firmy Microsoft w miejscu pracy lub nauki)](https://www.linkedin.com/help/linkedin/answer/84077).
 
