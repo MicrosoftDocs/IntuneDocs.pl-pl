@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e37a45122ab4950e2a85cc1c6f6696759d429a3f
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828282"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652142"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Wersja wczesna usługi Microsoft Intune — październik 2018
 
@@ -44,9 +44,6 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 ### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Używanie ustawień zalecanych przez firmę Microsoft z punktami odniesienia zabezpieczeń <!-- 2055484 -->
 Usługa Intune umożliwia integrację z innymi usługami koncentrującymi się na zabezpieczeniach, w tym z usługą Windows Defender ATP i usługą Office 365 ATP. Klienci pytają o typową strategię i spójny zestaw kompleksowych przepływów pracy zabezpieczeń w usługach Microsoft 365. Naszym celem jest dopasowanie strategii w celu utworzenia rozwiązań, które łączą operacje zabezpieczeń i typowe zadania administratora. W usłudze Intune staramy się osiągnąć ten cel, publikując zestaw „punktów odniesienia zabezpieczeń” zalecanych przez firmę Microsoft (**Intune** > **Punkty odniesienia zabezpieczeń**).  Administrator będzie mógł tworzyć zasady zabezpieczeń bezpośrednio z tych punktów odniesienia, a następnie wdrożyć je dla użytkowników. Można również dostosować rekomendacje dotyczące najlepszych rozwiązań do potrzeb swojej organizacji. Usługa Intune zapewnia, że urządzenia pozostają w zgodności z tymi punktami odniesienia, i powiadamia administratorów użytkowników lub urządzeń, które nie są zgodne.
 
-### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Usunięcie możliwości czyszczenia przez administratorów urządzeń osobistych i resetowania kodów dostępu <!-- 2934699 -->
-Aby użytkownicy mogli przestać martwić się tym, że firmowi administratorzy mają możliwość czyszczenia urządzeń osobistych użytkowników, zdalne działania [Wyczyść](devices-wipe.md#wipe) i [Zresetuj kod dostępu](device-passcode-reset.md) przestaną mieć zastosowanie wobec urządzeń osobistych. Aby włączyć te działania w przypadku urządzeń, które są własnością Twojej organizacji, przełącz typ własności urządzenia na firmowy.
-
 ### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Obsługa rozwiązania Autopilot w przypadku hybrydowych urządzeń przyłączonych do usługi Azure Active Directory <!-- 1048100 -->
 Za pomocą rozwiązania Autopilot będzie można skonfigurować hybrydowe urządzenia przyłączone do usługi Azure Active Directory. Aby używać hybrydowego rozwiązania Autopilot, urządzenia muszą być przyłączone do sieci w organizacji.
 
@@ -56,7 +53,7 @@ Aby utworzyć tag zakresu, wybierz pozycję **Role usługi Intune** > **Zakres (
 Aby dodać tag zakresu do przypisania roli, wybierz pozycję **Role usługi Intune** > **Wszystkie role** > **Menedżer zasad i profilów** > **Przypisania** > **Zakres (tagi)**.
 Aby dodać tag zakresu do profilu konfiguracji, wybierz pozycję **Konfiguracja urządzenia** > **Profile** > wybierz profil > **Właściwości** > **Zakres (tagi)**.
 
-## <a name="tenant-health-dashboard----1124854---"></a>Pulpit nawigacyjny kondycji dzierżawy <!-- 1124854 -->
+### <a name="tenant-health-dashboard----1124854---"></a>Pulpit nawigacyjny kondycji dzierżawy <!-- 1124854 -->
 Na stronie Stan dzierżawy w usłudze Intune znajdziesz informacje o stanie dzierżawy w jednym miejscu. Strona jest podzielona na 4 sekcje:  
 - **Szczegóły dzierżawy**: zawiera informacje takie jak urząd zarządzania urządzeniami przenośnymi, suma zarejestrowanych urządzeń w Twojej dzierżawie i liczba licencji. Ta sekcja zawiera także bieżącą wersję usługi dla Twojej dzierżawy.
 - **Stan łącznika**: zawiera informacje dla skonfigurowanych łączników, takich jak program VPP firmy Apple, Sklep Windows dla Firm i łączniki certyfikatów. Na podstawie ich bieżącego stanu łączniki są oznaczane flagami *Dobra kondycja*, *Ostrzeżenie* lub *Zła kondycja*.

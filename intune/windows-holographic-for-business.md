@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 81a11ce35cbf0f256f59bf26d317933977750d6e
-ms.sourcegitcommit: b33ff64514abdc5e939ff59ea722b3704cd56c78
+ms.openlocfilehash: 87ae986e1f7a2b00c1a29208a163ee449e114f17
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49065768"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425295"
 ---
 # <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami HoloLens oraz z urządzeniami systemem Windows Holographic i korzystanie z nich za pomocą usługi Intune
 
@@ -73,7 +73,7 @@ Usługa Microsoft Intune może wdrażać aplikacje uniwersalne systemu Windows n
 - Aby dowiedzieć się więcej na temat tworzenia aplikacji dla urządzeń Microsoft HoloLens, zobacz temat [Aplikacje rzeczywistości mieszanej dla urządzeń Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
 
 > [!NOTE]
-> Urządzenia HoloLens z systemem Windows 10 Holographic dla firm 1607 nie obsługują aplikacji licencjonowanych online ze sklepu Microsoft Store dla Firm. Aby dowiedzieć się więcej, zobacz temat [Instalowanie aplikacji na urządzeniach HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
+> Urządzenia HoloLens z systemem Windows 10 Holographic dla firm 1607 nie obsługują aplikacji licencjonowanych online ze sklepu Microsoft Store dla Firm. Aby dowiedzieć się więcej, zobacz temat [Instalowanie aplikacji na urządzeniach HoloLens](https://docs.microsoft.com/hololens/hololens-install-apps).
 
 ## <a name="device-actions"></a>Działania na urządzeniach
 Usługa Intune oferuje pewne wbudowane działania umożliwiające administratorom IT wykonywanie różnorodnych zadań lokalnie na urządzeniu lub zdalnie za pośrednictwem usługi Intune w witrynie Azure Portal. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
