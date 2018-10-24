@@ -3,10 +3,10 @@ title: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Informat
 titlesuffix: Microsoft Intune
 description: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: c1d530059d7c5b5f759516e86d4ee3dbf8512aa5
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347311"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799629"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -46,19 +46,27 @@ Podczas dodawania zasad funkcji WIP należy zrozumieć kilka koncepcji:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, musisz skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](app-protection-policies-configure-windows-10.md).
+Aby można było utworzyć zasady ochrony aplikacji w funkcji WIP, musisz skonfigurować dostawcę usług MAM. Dowiedz się więcej na temat [konfiguracji dostawcy usług MAM za pomocą usługi Intune](app-protection-policies-configure-windows-10.md).  
+
+> [!IMPORTANT]
+> Funkcja WIP nie obsługuje wielu tożsamości, jednorazowo może istnieć tylko jedna zarządzana tożsamość.
 
 Ponadto wymagane są następujące licencje i aktualizacje:
 
 -   Licencja usługi [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
 -   [Aktualizacja systemu Windows dla twórców](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-> [!IMPORTANT]
-> Funkcja WIP nie obsługuje wielu tożsamości, jednorazowo może istnieć tylko jedna zarządzana tożsamość.
+
+
+
 
 ## <a name="to-add-a-wip-app-protection-policy"></a>Aby dodać zasady ochrony aplikacji w funkcji WIP
 
 Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczące funkcji WIP.
+
+> [!TIP]  
+> Aby uzyskać powiązane informacje dotyczące tworzenia zasad funkcji WIP usługi Intune, w tym dostępnych ustawień i sposobu ich konfigurowania, zobacz [Create a Windows Information Protection (WIP) policy with MAM using the Azure portal for Microsoft Intune ](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) (Tworzenie zasad rozwiązania Windows Information Protection (WIP) przy użyciu funkcji MAM w witrynie Azure Portal dla usługi Microsoft Intune) w bibliotece dokumentacji dotyczącej zabezpieczeń systemu Windows. 
+
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**.
@@ -123,7 +131,7 @@ Podczas pracy z aplikacjami obsługującymi funkcję WIP i nieznanych aplikacji 
 ### <a name="what-are-the-protection-modes"></a>Jakie są tryby ochrony?
 
 #### <a name="block"></a>Zablokowanie
-Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji. Może to obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
+Funkcja WIP szuka niewłaściwych praktyk udostępniania danych i powstrzymuje użytkownika przed ukończeniem akcji. Zablokowane akcje mogą obejmować udostępnianie informacji aplikacjom nieobjętym firmową ochroną oraz udostępnianie danych firmowych innym osobom i urządzeniem poza organizacją.
 
 #### <a name="allow-overrides"></a>Zezwalaj na przesłonięcia
 Funkcja WIP szuka niewłaściwych przypadków udostępniania danych, ostrzegając użytkowników, gdy robią coś, co zostanie uznane za potencjalnie niebezpieczne. Ten tryb pozwala jednak użytkownikowi przesłonić zasady i udostępnić dane, przy czym dana akcja jest rejestrowana w dzienniku inspekcji.

@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af5c7492563c8df0168eff3250ae1bbad2cc323e
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147721"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260253"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
@@ -80,8 +80,17 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenia z systemem operacyjnym m
 
 9. Pierwszy wyświetlony ekran w aplikacji Portal firmy zawiera monit o **zalogowanie**. Użyj tego samego konta służbowego, którego użyto do zalogowania się w witrynie internetowej Portal firmy.
 
-10. Portal firmy potwierdzi informacje o Twoim koncie, a następnie wyświetli stan **rejestracji urządzenia** i **zgodności urządzenia**. Żółtymi trójkątami oznaczono akcje, które należy wykonać, aby zabezpieczyć urządzenie z systemem macOS na potrzeby zadań związanych ze szkołą lub pracą. Kliknij przycisk **Rozpocznij**, aby rozpocząć rejestrację. Dowiedz się, [jakie dane może wyświetlać Twoja organizacja](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) podczas rejestrowania urządzenia.
+10. Portal firmy potwierdzi informacje o Twoim koncie, a następnie pokaże stan **rejestracji urządzenia** i **zgodności urządzenia**. Żółtymi trójkątami oznaczono akcje, które należy wykonać, aby zabezpieczyć urządzenie z systemem macOS na potrzeby zadań związanych ze szkołą lub pracą. Kliknij przycisk **Rozpocznij**, aby rozpocząć rejestrację. 
 
-11. Może zostać wyświetlony monit o podanie informacji logowania na komputerze. Rejestracja urządzenia w zarządzaniu może potrwać kilka minut. W tym czasie można robić inne rzeczy na urządzeniu. Gdy konfigurowanie dostępu do zasobów firmy zostanie zakończone, pojawi się odpowiedni komunikat.  
+11. Po wyświetleniu monitu wpisz informacje logowania dla komputera.  
+
+Rejestracja urządzenia w zarządzaniu może potrwać kilka minut. W tym czasie można robić inne rzeczy na urządzeniu. Gdy konfigurowanie dostępu do zasobów firmy zostanie zakończone, pojawi się odpowiedni komunikat.  
+
+## <a name="unverified-profiles"></a>Profile niezweryfikowane
+W przypadku wyświetlania zainstalowanych profilów zarządzania urządzeniami przenośnymi (MDM) dla urządzenia z systemem macOS niektóre profile mogą mieć stan **Niezweryfikowany**. Tak długo, jak w obszarze **Profil zarządzania** jest pokazywany stan **Zweryfikowany**, nie musisz się martwić.  
+
+Profil zarządzania definiuje połączenia kanału zarządzania urządzeniami przenośnymi. Tak długo, jak profil zarządzania jest zweryfikowany, inne profile dostarczane do maszyny za pośrednictwem tego kanału dziedziczą cechy zabezpieczeń profilu zarządzania.
+
+Ponadto, ponieważ inne profile nie wymagają indywidualnych weryfikacji, są szybciej generowane i dostarczane do urządzeń. 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

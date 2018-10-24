@@ -1,11 +1,11 @@
 ---
-title: Instalowanie aplikacji Portal firmy i logowanie się do niej | Microsoft Docs
+title: Instalowanie aplikacji Portal firmy i logowanie się do niej w systemie iOS | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 984c9212a4aa3221a4de5e02d96f912d800e9490
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: f8ca89168e46e038b57fba9cc2e159416795e112
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146379"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260202"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalowanie aplikacji Portal firmy i logowanie się do niej
 
-Portal firmy jest aplikacją instalowaną na urządzeniu z systemem iOS w celu uzyskiwania dostępu do firmowych aplikacji, poczty e-mail i sieci. Przed uzyskaniem dostępu należy zainstalować aplikację Portal firmy, a następnie użyć tej aplikacji do zarejestrowania urządzenia w usłudze Microsoft Intune. Aby uzyskać więcej informacji, zobacz [What happens if you install the Company Portal app and enroll your device in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md) (Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?).
+Zainstaluj aplikację Portal firmy na urządzeniu z systemem iOS, aby uzyskiwać dostęp do służbowych aplikacji, poczty e-mail i sieci. Aplikacja ta umożliwia zarejestrowanie urządzenia w programie Microsoft Intune i zabezpieczenie dostępu do niego przy użyciu zasobów służbowych. Aby uzyskać więcej informacji, zobacz [What happens if you install the Company Portal app and enroll your device in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md) (Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?).
 
 1.  Otwórz stronę sklepu **App Store** i wyszukaj **portal firmy Intune**.
 

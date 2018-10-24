@@ -1,11 +1,11 @@
 ---
-title: Usuwanie urządzenia z systemem Windows z usługi Intune
-description: Opis sposobu usunięcia urządzenia z systemem Windows z usługi Intune
+title: Usuwanie urządzenia z systemem Windows z zarządzania za pomocą usługi Intune
+description: Opis sposobu usuwania urządzenia z systemem Windows z zarządzania w usłudze Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/01/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,39 +17,56 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6090ea3509c1f355c21e02ae155bdb9035f6c508
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5984ac8ebe825a187b33945699a5fadc27e0c0cc
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148782"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828418"
 ---
-# <a name="remove-your-windows-device-from-intune-management"></a>Usuwanie urządzenia z systemem Windows z zarządzania za pomocą usługi Intune
+# <a name="remove-your-windows-device-from-management"></a>Usuwanie urządzenia z systemem Windows z zarządzania
 
-Usuń zarejestrowane urządzenie z systemem Windows z usługi Intune, gdy już nie chcesz lub nie musisz:  
+Usuń zarejestrowane urządzenie z systemem Windows z zarządzania w usłudze Intune, gdy już nie chcesz lub nie musisz:  
 * Korzystać z urządzenia do pracy lub nauki. 
 * Uzyskiwać dostępu do służbowych aplikacji, poczty e-mail lub innych zasobów.
 
-Po usunięciu urządzenia nie będziesz mieć możliwości uzyskania za jego pomocą dostępu do służbowych zasobów. Urządzenia z systemem Windows, które można usunąć z usługi Intune:  
+Po wyrejestrowaniu urządzenia utracisz dostęp urządzenia do zasobów służbowych. Poniższe urządzenia z systemem Windows można usunąć z zarządzania.  
 * Urządzenia z systemem Windows 10 
 * Komputer z systemem Windows 8.1
-* Urządzenie mobilne z systemem Windows 8.1
+* Telefon z systemem Windows 8.1
  
-Aby uzyskać więcej informacji o tym, co się stanie po usunięciu urządzenia z zarządzania za pomocą usługi Intune, zobacz temat [Co się stanie w przypadku usunięcia urządzenia z usługi Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
+Aby uzyskać więcej informacji o tym, co się stanie po usunięciu urządzenia z zarządzania, zobacz temat [Co się stanie w przypadku usunięcia urządzenia z usługi Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).  
 
 ## <a name="remove-your-windows-10-device"></a>Usuwanie urządzenia z systemem Windows 10
-Aby usunąć urządzenie z systemem Windows 10 z usługi Intune, wykonaj poniższe kroki.
+Aby usunąć urządzenie z systemem Windows 10 z zarządzania, wykonaj poniższe kroki.
 
-### <a name="via-the-company-portal-app"></a>Za pomocą aplikacji Portal firmy
+### <a name="remove-in-company-portal-app-home-page"></a>Usuwanie w aplikacji Portal firmy, **strona główna**  
 
 1. Otwórz aplikację Portal firmy.
-2. Zaloguj się przy użyciu poświadczeń konta służbowego.
-3. W obszarze **Moje urządzenia** wybierz urządzenie, które chcesz usunąć.
-4. W górnym prawym rogu aplikacji, wybierz ikonę **Zobacz więcej**.
-5. Wybierz pozycję **Usuń**. 
-6. Aby potwierdzić zamiar usunięcia urządzenia, wybierz opcję **Usuń urządzenie**.
+2. Na **stronie głównej** przejdź w dół do sekcji **Moje urządzenia**.
+3. Wybierz urządzenie, które chcesz usunąć.
+3. W górnym prawym rogu aplikacji, wybierz ikonę **Zobacz więcej**.
+4. Wybierz pozycję **Usuń**. 
+5. Aby potwierdzić zamiar usunięcia urządzenia, wybierz pozycję **Usuń**.  
 
-### <a name="via-device-settings-app"></a>Za pomocą aplikacji urządzenia Ustawienia
+### <a name="remove-in-company-portal-app-device-context-menu"></a>Usuwanie w aplikacji Portal firmy, menu kontekstowe urządzenia  
+
+1. Otwórz aplikację Portal firmy i przejdź do pozycji **Moje urządzenia**.
+
+    ![Przykładowy zrzut ekranu przedstawiający aplikację Portal firmy dla systemu Windows, strona główna z wyróżnieniem sekcji Moje urządzenia.](./media/1809_CheckAccess_Context_Select_Device.png)
+
+2. Kliknij prawym przyciskiem myszy lub naciśnij i przytrzymaj urządzenie, aby otworzyć jego [menu kontekstowe](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+
+3. Wybierz pozycję **Usuń**.  
+
+    ![Przykładowy zrzut ekranu aplikacji Portal firmy dla systemu Windows, strona główna. Menu kontekstowe urządzenia jest widoczne w sekcji **Moje urządzenia** strony i przedstawia akcje „Zmień nazwę”, „Usuń” oraz „Sprawdź dostęp”.](./media/1809_DeviceContextMenu_Windows_CP.png)  
+
+5. W potwierdzeniu kliknij pozycję **Dowiedz się więcej**, aby przeczytać dalsze informacje na temat możliwych zmian dostępu do zasobów służbowych. Aby potwierdzić zamiar usunięcia urządzenia, wybierz pozycję **Usuń**.   
+
+     ![Przykładowy zrzut ekranu aplikacji Portal firmy dla systemu Windows, strona główna. Nad urządzeniem pojawi się pole zmiany nazwy, w którym użytkownik może wpisać nową nazwę i kliknąć opcję Zmień nazwę lub Anuluj.](./media/1808_RemoveDevice_Popup.png)  
+
+
+### <a name="remove-in-device-settings-app"></a>Usuwanie w aplikacji urządzenia Ustawienia
 1. Otwórz aplikację Ustawienia. 
 2. Przejdź kolejno do pozycji **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki**.
 3. Wybierz podłączone konto, które chcesz usunąć > **Rozłącz**.
@@ -63,14 +80,15 @@ Aby usunąć komputer z systemem Windows 8.1 z usługi Intune, wykonaj poniższe
 3.  W obszarze **Włączanie zarządzania urządzeniami** wybierz pozycję **Wyłącz**.
 4.  W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
 
-## <a name="remove-your-windows-81-mobile-device"></a>Usuwanie urządzenia przenośnego z systemem Windows 8.1
-Aby usunąć urządzenie przenośne z systemem Windows 8.1 z usługi Intune, wykonaj poniższe kroki.
+## <a name="remove-your-windows-81-phone"></a>Usuwanie telefonu z systemem Windows 8.1
+Aby usunąć telefon z systemem Windows 8.1 z usługi Intune, wykonaj poniższe kroki.
 
 1.  Przejdź do pozycji **Ustawienia** > **Miejsce pracy**.
 2.  Naciśnij konto firmowe, które chcesz wyrejestrować.
 3.  W dolnej części ekranu naciśnij pozycję **Usuń**.
 4.  W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.  
-## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Usuwanie danych osobowych po usunięciu aplikacji Portal firmy
+## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Usuwanie danych osobowych po usunięciu aplikacji Portal firmy  
+
 Istnieją dwa rodzaje danych, które aplikacja Portal firmy przechowuje na urządzeniu z systemem Windows:
 
 -   **Dzienniki diagnostyczne**: dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.

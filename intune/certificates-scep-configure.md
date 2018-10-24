@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2018
+ms.date: 10/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
+ms.openlocfilehash: 48bf2e6daf05dba6baebbd49be45a17a5a56e820
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028736"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828299"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tworzenia i przypisywania profilów certyfikatów prostego protokołu rejestrowania certyfikatów (SCEP) za pomocą usługi Intune.
 
@@ -350,6 +348,113 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.
 6. W okienku **Certyfikat SCEP** skonfiguruj następujące ustawienia:
 
+   - **Typ certyfikatu**: wybierz pozycję **Użytkownik** w przypadku certyfikatów użytkownika. Wybierz pozycję **Urządzenie** w przypadku urządzeń bez użytkowników, takich jak kioski. Certyfikaty typu **Urządzenie** są dostępne dla następujących platform:  
+     - iOS
+     - Windows 8.1 i nowsze
+     - System Windows 10 lub nowszy
+
+   - **Format nazwy podmiotu**: wybierz sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
+
+        **Typ certyfikatu Użytkownik**  
+
+        W nazwie podmiotu można uwzględnić adres e-mail użytkownika. Wybierz spośród opcji:
+
+        - **Nieskonfigurowany**
+        - **Nazwa pospolita**
+        - **Nazwa pospolita obejmująca adres e-mail**
+        - **Nazwa pospolita jako adres e-mail**
+        - **Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)**
+        - **Numer seryjny**
+        - **Niestandardowy**: po wybraniu tej opcji zostanie również wyświetlone pole tekstowe **Niestandardowy**. Użyj tego pola do wprowadzenia niestandardowego formatu nazwy podmiotu, w tym zmiennych. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
+
+            - **CN={{UserName}}**: główna nazwa użytkownika, taka jak janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}**: identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
+            - **CN={{SERIALNUMBER}}**: unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
+            - **CN={{IMEINumber}}**: unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
+            - **CN={{OnPrem_Distinguished_Name}}**: sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+
+                Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+
+            - **CN = {{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
+
+                Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+
+            Przy użyciu kombinacji jednej lub wielu spośród tych zmiennych i ciągów statycznych można utworzyć niestandardowy format nazwy podmiotu, na przykład:  
+
+            **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+
+            W tym przykładzie utworzono format nazwy podmiotu, który oprócz zmiennych CN i E używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. Temat [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) zawiera opis tej funkcji i ciągi obsługiwane przez nią.
+
+        **Typ certyfikatu Urządzenie**  
+
+        Jeśli używasz typu certyfikatu **Urządzenie**, możesz również używać następujących zmiennych certyfikatu urządzenia dla wartości:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
+        >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
+
+
+   - **Nazwa alternatywna podmiotu**: określ sposób automatycznego tworzenia wartości dla nazwy alternatywnej podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
+
+        **Typ certyfikatu Użytkownik**  
+
+        Następujące atrybuty są dostępne:
+
+        - Adres e-mail
+        - Główna nazwa użytkownika (UPN)
+
+            Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta będzie używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu należy ustawić nazwę UPN. 
+
+        **Typ certyfikatu Urządzenie**  
+
+        Pole tekstowe formatu tabeli, które można dostosować. Następujące atrybuty są dostępne:
+
+        - systemem DNS,
+        - Adres e-mail
+        - Główna nazwa użytkownika (UPN)
+
+        W przypadku typu certyfikatu **Urządzenie** możesz używać następujących zmiennych certyfikatu urządzenia dla wartości:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
+        >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
+
    - **Okres ważności certyfikatu**: jeśli dla wystawiającego urzędu certyfikacji uruchomiono polecenie `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`, które dopuszcza niestandardowy okres ważności, możesz określić ilość czasu pozostałego do wygaśnięcia certyfikatu.<br>Możesz podać okres krótszy niż okres ważności w szablonie certyfikatu, ale nie dłuższy. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić jeden rok, ale nie pięć lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
    - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): podaj miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:
      - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie u dostawcy magazynu kluczy oprogramowania**
@@ -357,40 +462,17 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - **Zarejestruj w usłudze Passport, w przeciwnym razie niepowodzenie (system Windows 10 i nowsze)**
      - **Zarejestruj u dostawcy magazynu kluczy oprogramowania**
 
-   - **Format nazwy podmiotu**: wybierz z listy sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Jeśli certyfikat przeznaczony jest dla użytkownika, możesz również uwzględnić w nazwie podmiotu adres e-mail tego użytkownika. Wybierz spośród opcji:
-     - **Nieskonfigurowany**
-     - **Nazwa pospolita**
-     - **Nazwa pospolita obejmująca adres e-mail**
-     - **Nazwa pospolita jako adres e-mail**
-     - **Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)**
-     - **Numer seryjny**
-     - **Niestandardowy**: po wybraniu tej opcji jest wyświetlane kolejne pole listy rozwijanej. Użyj tego pola do podania niestandardowego formatu nazwy podmiotu. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
-       - **CN={{UserName}}**: główna nazwa użytkownika, taka jak janedoe@contoso.com
-       - **CN={{AAD_Device_ID}}**: identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
-       - **CN={{SERIALNUMBER}}**: unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
-       - **CN={{IMEINumber}}**: unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
-       - **CN={{OnPrem_Distinguished_Name}}**: sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
-
-          Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
-
-       - **CN = {{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
-
-          Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
-
-       Przy użyciu jednej z tych zmiennych lub ich kombinacji oraz ciągów statycznych możesz utworzyć niestandardowy format nazwy podmiotu, taki jak: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. <br/> W tym przykładzie utworzono format nazwy podmiotu, który oprócz zmiennych CN i E używa ciągów dla wartości jednostki organizacyjnej, organizacji, lokalizacji, stanu i kraju. Temat [Funkcja CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) zawiera opis tej funkcji i ciągi obsługiwane przez nią.
-
-- **Nazwa alternatywna podmiotu**: określ sposób automatycznego tworzenia wartości dla nazwy alternatywnej podmiotu w żądaniu certyfikatu przez usługę Intune. Jeśli na przykład jako typ certyfikatu został wybrany typ użytkownika, w alternatywnej nazwie podmiotu można uwzględnić główną nazwę użytkownika (nazwę UPN). Jeśli certyfikat klienta jest używany do uwierzytelniania go wobec serwera zasad sieciowych, dla alternatywnej nazwy podmiotu musisz ustawić nazwę UPN.
-- **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:
-  - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany.
-  - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego.
-- **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu.
-- **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
-- **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu.
-- **Rozszerzone użycie klucza**: użyj polecenia **Dodaj**, aby dodać wartości w zależności od przeznaczenia certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
-- **Ustawienia rejestracji**
-  - **Próg odnawiania (%)**: podaj wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
-  - **Adresy URL serwerów SCEP**: podaj co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP.
-  - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
+   - **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:
+     - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany.
+     - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego.
+   - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu.
+   - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
+   - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu.
+   - **Rozszerzone użycie klucza**: użyj polecenia **Dodaj**, aby dodać wartości w zależności od przeznaczenia certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
+   - **Ustawienia rejestracji**
+     - **Próg odnawiania (%)**: podaj wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
+     - **Adresy URL serwerów SCEP**: podaj co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP.
+     - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
 
 Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
