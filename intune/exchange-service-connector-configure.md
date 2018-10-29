@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,20 @@ ms.assetid: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6be3694a18cd0df09b52b535a0fcd2050bf7a98
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 46d28ba8d9d8c6ec2adf2b41adbb9e7336676811
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231248"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642995"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Konfiguracja łącznika usługi Exchange dla programów Intune i Exchange Online
-
 W tym artykule opisano, jak połączyć usługę Microsoft Intune z usługą Exchange Online lub nową usługą Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej jest w wersji **nowej**, czy **starszej**, skontaktuj się z menedżerem ds. klientów.
 
+Za pomocą łącznika **Service to Service Connector** można zarządzać programem Exchange ActiveSync (EAS) i urządzeniami zarządzanymi przez usługę Intune z poziomu jednej konsoli administracyjnej.  Łącznik nie jest wymagany do włączenia dostępu warunkowego dla usługi Exchange Online.
+
 ## <a name="service-to-service-connector-requirements"></a>Wymagania dotyczące łącznika Service To Service Connector
-Łącznik **Service To Service Connector** obsługuje tylko usługę Exchange Online lub usługę Exchange Online w wersji dedykowanej i nie ma wymagań dotyczących infrastruktury lokalnej.
+Łącznik **Service To Service Connector** obsługuje tylko usługę Exchange Online lub usługę Exchange Online w wersji dedykowanej i nie ma wymagań dotyczących infrastruktury lokalnej. 
 
 
 |              Wymaganie               |                                                                                                            Więcej informacji                                                                                                            |
@@ -68,5 +69,4 @@ Po pomyślnym skonfigurowaniu łącznika Exchange Service to Service sprawdź po
 
 Możesz również sprawdzić **Stan połączenia** oraz godzinę i datę ostatniej pomyślnej próby synchronizacji.
 
-## <a name="next-steps"></a>Następne kroki
-[Monitorowanie dostępu warunkowego programu Exchange w usłudze Microsoft Intune](conditional-access-exchange-monitor.md)
+ 

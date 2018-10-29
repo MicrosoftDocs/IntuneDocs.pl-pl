@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f2a244337b152af7bcf8bf17cf7e643bdb3faa59
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 183518caed7276719204830a38b1b9d552a79428
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231461"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642890"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune
 
@@ -52,7 +52,7 @@ Użyj tego artykułu, aby utworzyć domyślne zasady usługi Windows Hello dla f
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Tworzenie zasad usługi Windows Hello dla firm
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > **Monitorowanie + zarządzanie** > **Intune**.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
 
 2. W okienku usługi Intune wybierz pozycję **Rejestrowanie urządzenia**, a następnie pozycję **Rejestracja w systemie Windows** > **Windows Hello dla firm**.
 

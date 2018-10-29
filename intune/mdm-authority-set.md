@@ -15,12 +15,12 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f4687b3a2b1064fbfe3a9c8aa9da6cc7d336d78
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 41296e2c5fd1bddfc65bb343d86f4891fff9452d
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906043"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425193"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -32,7 +32,10 @@ Możliwe są następujące konfiguracje:
 
 - **Autonomiczna usługa Intune** — zarządzanie tylko w chmurze konfigurowane przy użyciu witryny Azure Portal. Ta konfiguracja zawiera pełny zestaw funkcji oferowanych przez usługę Intune. [Ustaw urząd MDM w konsoli usługi Intune](#set-mdm-authority-to-intune).
 
-- **Hybrydowa usługa Intune** — integracja rozwiązania usługi Intune w chmurze z programem System Center Configuration Manager. Konfigurowanie usługi Intune odbywa się przy użyciu konsoli programu Configuration Manager. [Ustaw urząd MDM w programie Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-intune-subscription).
+- **Hybrydowa usługa Intune** — integracja rozwiązania usługi Intune w chmurze z programem System Center Configuration Manager. Konfigurowanie usługi Intune odbywa się przy użyciu konsoli programu Configuration Manager. [Ustaw urząd MDM w programie Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-intune-subscription). 
+
+    > [!Important]
+    >Dołączanie nowych klientów programu hybrydowego zarządzania urządzeniami przenośnymi zostanie wyłączone w kolejnej wersji. Aby uzyskać więcej informacji, zobacz [blog MC146431 Plan for Change](https://blogs.technet.microsoft.com/intunesupport/2018/08/14/move-from-hybrid-mobile-device-management-to-intune-on-azure/) (MC146431: planowanie zmian).
 
 - **Zarządzanie urządzeniami przenośnymi w usłudze Office 365** — integracja usługi Office 365 z rozwiązaniem usługi Intune w chmurze. Konfigurowanie usługi Intune odbywa się przy użyciu centrum administracyjnego usługi Office 365. Ta konfiguracja zawiera podzbiór możliwości dostępnych w ramach autonomicznej usługi Intune. Ustaw urząd MDM przy użyciu centrum administracyjnego usługi Office 365.
 
@@ -63,7 +66,7 @@ Dodanie zgody na udostępnianie danych ma miejsce:
 - Podczas włączania i przekazywania certyfikatów wypychania MDM firmy Apple.
 - Podczas włączania dowolnych usługi firmy Apple takich jak Device Enrollment Program, School Manager czy Volume Purchasing Program (program zakupów zbiorczych).
 
-W każdym przypadku zgoda ściśle dotyczy uruchamiania usługi zarządzania urządzeniami przenośnymi. Może to być na przykład potwierdzenie, że administrator IT zezwolił na rejestrację urządzeń firmy Google lub Apple. Dokumentacja opisująca, jakie informacje są udostępniane po wprowadzeniu nowych przepływów pracy, jest dostępna w następujących lokalizacjach:
+W każdym przypadku zgoda jest ściśle powiązana z uruchamianiem usługi zarządzania urządzeniami przenośnymi. Będzie to na przykład potwierdzenie, że administrator IT autoryzował urządzenia firmy Apple lub Google do zarejestrowania. Dokumentacja opisująca, jakie informacje są udostępniane po wprowadzeniu nowych przepływów pracy, jest dostępna w następujących lokalizacjach:
 - [Dane wysyłane przez usługę Intune do firmy Google](https://aka.ms/Data-intune-sends-to-google)
 - [Dane wysyłane przez usługę Intune do firmy Apple](https://aka.ms/data-intune-sends-to-apple)
 
@@ -79,7 +82,7 @@ Po zmianie na nowy urząd MDM prawdopodobnie wystąpi czas przejścia (maksymaln
 Przejrzyj następujące informacje w celu przygotowania do zmiany urzędu MDM:
 - Musisz mieć program Configuration Manager w wersji 1610 lub nowszej, aby opcja zmiany urzędu MDM była dostępna.
 - Połączenie się urządzenia z usługą może potrwać do ośmiu godzin po zmianie urzędu MDM.
-- Utwórz kolekcję użytkowników programu Configuration Manager zawierającą wszystkich użytkowników obecnie zarządzanych przez autonomiczną usługę Intune, która będzie używana podczas konfigurowania subskrypcji usługi Intune w konsoli programu Configuration Manager. Ułatwia to zapewnienie, że użytkownik i jego urządzenia będą mieć przypisaną licencję programu Configuration Manager i będą zarządzani w środowisku hybrydowym po zastosowaniu zmiany urzędu MDM.
+- Utwórz kolekcję użytkowników programu Configuration Manager zawierającą wszystkich użytkowników obecnie zarządzanych przez autonomiczną usługę Intune, która będzie używana podczas konfigurowania subskrypcji usługi Intune w konsoli programu Configuration Manager. Ta kolekcja ułatwia zapewnienie, że użytkownik i jego urządzenia będą mieć przypisaną licencję programu Configuration Manager i będą zarządzani w środowisku hybrydowym po zastosowaniu zmiany urzędu MDM.
 - Upewnij się, że administrator IT również należy do tej kolekcji użytkowników.  
 - Przed zmianą urząd MDM będzie wyświetlany jako **Ustaw na usługę Microsoft Intune** (autonomiczną) w konsoli administracyjnej usługi Intune.
 - Przed zmianą urzędu MDM urząd MDM powinien być wyświetlany jako **Ustaw na usługę Microsoft Intune** (autonomiczny dzierżawca) w konsoli administracyjnej usługi Microsoft Intune.
@@ -88,7 +91,7 @@ Przejrzyj następujące informacje w celu przygotowania do zmiany urzędu MDM:
 
 - W [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) usuń rolę Menedżer rejestracji urządzeń. Aby uzyskać szczegółowe informacje, zobacz [Usuwanie menedżera rejestracji urządzeń z usługi Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune#delete-a-device-enrollment-manager-from-intune).
 - Wyłącz wszystkie skonfigurowane mapowania grupy urządzeń. Aby uzyskać szczegółowe informacje, zobacz [Kategoryzowanie urządzeń za pomocą mapowania grup urządzeń w usłudze Microsoft Intune](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune).
-- Zmiana urzędu MDM powinna przebiec bez zauważalnego wpływu na użytkowników końcowych. Można jednak zakomunikować tę zmianę użytkownikom, aby upewnić się, że ich urządzenia są włączone i połączą się z usługą wkrótce po zmianie. Dzięki temu najwięcej urządzeń połączy się i zarejestruje w usłudze za pomocą nowego urzędu najszybciej, jak to możliwe.
+- Zmiana urzędu MDM powinna przebiec bez zauważalnego wpływu na użytkowników końcowych. Można jednak zakomunikować tę zmianę użytkownikom, aby upewnić się, że ich urządzenia są włączone i połączą się z usługą wkrótce po zmianie. Dzięki temu środkowi ostrożności najwięcej urządzeń połączy się i zarejestruje w usłudze za pomocą nowego urzędu najszybciej, jak to możliwe.
 - Jeśli przed zmianą urzędu MDM używasz autonomicznej usługi Intune do zarządzania urządzeniami z systemem iOS, musisz się upewnić, że ten sam certyfikat usługi Apple Push Notification service (APNs), który był wcześniej używany w usłudze Intune, zostanie odnowiony i użyty do ponownego skonfigurowania dzierżawy w programie Configuration Manager (rozwiązaniu hybrydowym).    
 
     > [!IMPORTANT]  
@@ -102,7 +105,7 @@ Przejrzyj następujące informacje w celu przygotowania do zmiany urzędu MDM:
 4. Wybierz kolekcję użytkowników tak, aby zawierała wszystkich użytkowników, którzy będą w dalszym ciągu zarządzani przez nowy hybrydowy urząd MDM.
 5. Kliknij przycisk **Dalej** i ukończ pracę kreatora. Urząd MDM został zmieniony na **program Configuration Manager**.
 6. Zaloguj się w [konsoli administracyjnej usługi Microsoft Intune](http://manage.microsoft.com) przy użyciu tej samej dzierżawy usługi Intune i upewnij się, że urząd MDM został zmieniony na opcję **Ustaw Menedżera konfiguracji**.
-7. Po zmianie urzędu MDM na program Configuration Manager możesz skonfigurować [rejestrowanie dla systemu iOS](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/enroll-hybrid-ios-mac) i [rejestrowanie dla systemu Android](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/enroll-hybrid-android).
+7. Po zmianie urzędu MDM na program Configuration Manager możesz skonfigurować [rejestrowanie dla systemu iOS](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac) i [rejestrowanie dla systemu Android](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-android).
 8. W konsoli programu Configuration Manager skonfiguruj i wdróż nowe ustawienia i aplikacje z nowego urzędu MDM (rozwiązanie hybrydowe).
 
 Kiedy następnym razem urządzenia połączą się z usługą, zsynchronizuje ona i odbierze nowe ustawienia z nowego urzędu MDM.
@@ -125,13 +128,13 @@ Urzędu MDM nie można zmienić z powrotem na Nieznany. Urząd MDM jest używany
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Czego można się spodziewać po zmianie urzędu MDM
 
-- Kiedy usługa Intune wykryje zmianę urzędu MDM dzierżawy, wysyła komunikat z powiadomieniem do wszystkich zarejestrowanych urządzeń w celu ich zameldowania i przeprowadzenia synchronizacji z usługą (jest to wykonywane poza zaplanowanym regularnym meldowaniem). W związku z tym po zmianie urzędu MDM dla dzierżawy z autonomicznej usługi Intune na rozwiązanie hybrydowe wszystkie urządzenia, które są włączone i online, połączą się z usługą, otrzymają nowy urząd MDM i będą zarządzane przez rozwiązanie hybrydowe. Nie ma żadnych zakłóceń w zarządzaniu tymi urządzeniami i ich ochronie.
+- Kiedy usługa Intune wykryje zmianę urzędu MDM dzierżawy, wysyła komunikat z powiadomieniem do wszystkich zarejestrowanych urządzeń w celu ich zameldowania i przeprowadzenia synchronizacji z usługą (to powiadomienie jest wykonywane poza zaplanowanym regularnym zaewidencjonowaniem). W związku z tym po zmianie urzędu MDM dla dzierżawy z autonomicznej usługi Intune na rozwiązanie hybrydowe wszystkie urządzenia, które są włączone i online, połączą się z usługą, otrzymają nowy urząd MDM i będą zarządzane przez rozwiązanie hybrydowe. Nie ma żadnych zakłóceń w zarządzaniu tymi urządzeniami i ich ochronie.
 - Nawet w przypadku urządzeń, które są włączone i w trybie online podczas zmiany urzędu MDM (lub wkrótce po niej), nastąpi opóźnienie do ośmiu godzin (w zależności od czasu następnego zaplanowanego regularnego ewidencjonowania), zanim urządzenia zostaną zarejestrowane w usłudze z nowym urzędem MDM.    
 
   > [!IMPORTANT]    
   > W czasie między zmianą urzędu MDM a przekazaniem odnowionego certyfikatu usługi APNs do nowego urzędu rejestracje nowych urządzeń i meldowanie urządzeń z systemem iOS zakończy się niepowodzeniem. Dlatego ważne jest przejrzenie i przekazanie certyfikatu usługi APNs do nowego urzędu jak najszybciej po zmianie urzędu MDM.
 
-- Użytkownicy mogą szybko zmienić nowy urząd MDM, ręcznie uruchamiając ewidencjonowanie z poziomu urządzenia do usługi. Mogą to łatwo zrobić, używając aplikacji Portal firmy i inicjując sprawdzenie zgodności urządzenia.
+- Użytkownicy mogą szybko zmienić nowy urząd MDM, ręcznie uruchamiając ewidencjonowanie z poziomu urządzenia do usługi. Mogą oni łatwo wprowadzić tę zmianę, używając aplikacji Portal firmy i inicjując sprawdzenie zgodności urządzenia.
 - Aby sprawdzić, czy wszystko działa prawidłowo po zaewidencjonowaniu urządzeń i zsynchronizowaniu ich z usługą po zmianie urzędu MDM, wyszukaj urządzenia w konsoli programu Configuration Manager. Urządzenia, które wcześniej były zarządzane przez usługę Intune, są teraz wyświetlane jako urządzenia zarządzane w konsoli programu Configuration Manager.    
 - Istnieje okres przejściowy, gdy urządzenie jest w trybie offline podczas zmiany urzędu MDM, do czasu zaewidencjonowania tego urządzenia w usłudze. Aby zagwarantować, że urządzenie pozostanie chronione i w pełni funkcjonalne w tym okresie przejściowym, poniższe profile pozostaną na urządzeniu przez siedem dni (lub dopóki urządzenie nie połączy się z nowym urzędem MDM i nie odbierze nowych ustawień, które zastąpią istniejące):
     - Profil poczty e-mail

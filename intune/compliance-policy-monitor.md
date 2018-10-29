@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0af5fb071c6abb01a2819a5d9c73f4e01bf7cb7a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
+ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312836"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410367"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -140,6 +140,9 @@ Raport **Zgodność urządzenia** > **Zgodność ustawienia** przedstawia łącz
 ![Wyświetlanie listy wszystkich urządzeń w różnych zasadach](./media/compliance-policy-monitor/idc-10.png)
 
 Po wybraniu określonego ustawienia możesz zobaczyć **stan zgodności**, **alias e-mail użytkownika**, **model urządzenia** oraz **lokalizację** dla każdego urządzenia objętego danym ustawieniem.
+
+> [!NOTE]
+> Urządzenia z systemem Windows 10 dołączone do usługi Azure AD mogą wyświetlać konto systemowe jako niezgodnego użytkownika. Jest to oczekiwane zachowanie i nie ma wpływu na ogólną zgodność urządzenia. 
 
 ## <a name="view-status-of-device-policies"></a>Wyświetlanie stanu zasad dotyczących urządzenia
 

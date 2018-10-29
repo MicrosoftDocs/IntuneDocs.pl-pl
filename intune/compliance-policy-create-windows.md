@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11ccace4ca8e43e09b8aebeb92530629cf50a472
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: e38e6f615220135e9c4c9c786ab260f5921890ea
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602320"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642912"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -119,8 +119,6 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 
 Aby uzyskać szczegółowe informacje o sposobie działania usługi HAS, zobacz [Zaświadczanie o kondycji CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
-Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Windows Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
-
 ### <a name="device-properties"></a>Właściwości urządzenia
 
 - **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym **główna.pomocnicza.kompilacja.aktualizacja_zbiorcza**. Aby uzyskać prawidłową wartość, otwórz wiersz polecenia i wpisz `ver`. Polecenie `ver` zwraca wersję w następującym formacie:
@@ -183,6 +181,8 @@ Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) ja
   - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
+  
+  Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Windows Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

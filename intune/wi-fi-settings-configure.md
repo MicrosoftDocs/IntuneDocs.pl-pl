@@ -1,59 +1,56 @@
 ---
-title: Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Intune
-titleSuffix: Microsoft Intune
-description: Informacje dotyczące konfigurowania ustawień sieci Wi-Fi na zarządzanych urządzeniach przy użyciu usługi Microsoft Intune.
+title: Tworzenie profilu sieci Wi-Fi dla urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z krokami tworzenia profilu konfiguracji urządzeń sieci Wi-Fi w usłudze Microsoft Intune. Twórz profile dla systemu Android, systemu Android dla firm, kiosku systemu Android, systemów iOS, macOS i Windows 10 i nowszych oraz platformy Windows Holographic for Business. Te profile umożliwiają tworzenie połączenia sieci Wi-Fi na potrzeby korzystania z certyfikatów, wybierania typu protokołu EAP i metody uwierzytelniania, włączania serwer proxy i wykonywania innych czynności.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: df2e2f81008c6dedf5660a8a9eff4bf2cfe2ec6b
-ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
+ms.openlocfilehash: 16273910220dae238e15910af0557dd8b73646b9
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46505737"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425261"
 ---
-# <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia sieci Wi-Fi w usłudze Microsoft Intune
+# <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Dodawanie i używanie ustawień sieci Wi-Fi dla urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Aby przypisać ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profili sieci Wi-Fi usługi Microsoft Intune. W przypadku przypisania profilu sieci Wi-Fi użytkownicy mogą uzyskiwać dostęp do sieci Wi-Fi organizacji bez konieczności samodzielnego konfigurowania.
 
-Aby przypisać ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profili sieci Wi-Fi usługi Microsoft Intune. W przypadku przypisania profilu sieci Wi-Fi użytkownicy mają dostęp do firmowej sieci Wi-Fi bez konieczności samodzielnego konfigurowania połączenia.
+Załóżmy, że instalujesz nową sieć Wi-Fi o nazwie Sieć Wi-Fi firmy Contoso. Następnie chcesz skonfigurować wszystkie urządzenia z systemem iOS tak, aby łączyły się z tą siecią. Oto proces:
 
-Załóżmy, że zainstalowano nową sieć Wi-Fi o nazwie Sieć Wi-Fi firmy Contoso i że chcesz skonfigurować wszystkie urządzenia z systemem iOS do łączenia się z tą siecią. Oto proces:
-
-1. Utwórz profil sieci Wi-Fi zawierający ustawienia wymagane do łączenia się z siecią bezprzewodową Sieć Wi-Fi firmy Contoso.
+1. Utwórz profil sieci Wi-Fi zawierający ustawienia potrzebne do łączenia się z siecią bezprzewodową Sieć Wi-Fi firmy Contoso.
 2. Przypisz profil do grupy obejmującej wszystkich użytkowników urządzeń z systemem iOS.
-3. Użytkownicy znajdują nową sieć Wi-Fi firmy Contoso na liście sieci bezprzewodowych w urządzeniu i mogą się łatwo z nią łączyć.
+3. Użytkownicy znajdują nową sieć Wi-Fi firmy Contoso na liście sieci bezprzewodowych w urządzeniu. Mogą następnie połączyć się z siecią przy użyciu wybranej metody uwierzytelniania.
+
+Wykonaj kroki opisane w tym artykule, aby utworzyć profil sieci Wi-Fi. Następnie zapoznaj się z tematami opisującymi ustawienia i szczegóły specyficzne dla poszczególnych platform.
 
 ## <a name="supported-device-platforms"></a>Obsługiwane platformy urządzeń
 
 Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
 
 - System Android 4 lub nowszy
-- Profile służbowe systemu Android
+- System Android dla firm i kiosk systemu Android
 - System iOS 8.0 i nowsze
 - macOS (Mac OS X 10.11 lub nowszy)
+- System Windows 10 lub nowsze, system Windows 10 Mobile i platforma Windows Holographic for Business
 
-Na urządzeniach z systemem Windows 8.1, Windows 10, Windows 10 Mobile lub Windows Holographic for Business możesz zaimportować konfigurację sieci Wi-Fi, która została wcześniej wyeksportowana z innego urządzenia.
+> [!NOTE]
+> Na urządzeniach z systemem Windows 8.1 można zaimportować konfigurację sieci Wi-Fi, która została wcześniej wyeksportowana z innego urządzenia.
 
-Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedzę z zakresu konfigurowania profilów sieci Wi-Fi, a następnie zapoznaj się z tematami dotyczącymi poszczególnych platform, aby dowiedzieć się więcej o charakterystyce urządzeń.
+## <a name="create-a-wi-fi-device-profile"></a>Tworzenie profilu urządzenia sieci Wi-Fi
 
-## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia sieci Wi-Fi
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Microsoft Intune**. 
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Wprowadź **nazwę** i **opis** profilu sieci Wi-Fi.
+4. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której mają zostać zastosowane ustawienia sieci Wi-Fi. Dostępne opcje:
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
-2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
-3. W okienku profilów wybierz pozycję **Utwórz profil**.
-4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu sieci Wi-Fi.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia sieci Wi-Fi. Obecnie dla ustawień sieci Wi-Fi można wybrać jedną z następujących platform:
     - **Android**
     - **Android enterprise**
     - **iOS**
@@ -62,19 +59,24 @@ Skorzystaj z informacji zawartych w tym temacie, aby uzyskać podstawową wiedz�
     - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
 
+5. W polu **Typ profilu** wybierz pozycję **Sieć Wi-Fi**.
 
-6. Dla urządzeń firmy Apple lub urządzeń z systemem Android na liście rozwijanej **Typ sieci Wi-Fi** wybierz pozycję **Podstawowa** lub **Enterprise**. Możesz użyć opcji **Podstawowa**, aby dostarczyć podstawowe funkcje, takie jak nazwa sieci i identyfikator SSID. Opcja **Firmowa** umożliwia dostarczenie bardziej zaawansowanych informacji, takich jak protokół uwierzytelniania rozszerzonego (EAP), o ile jest używany przez sieć Wi-Fi. 
+    - W przypadku urządzeń z **systemem Android dla firm** działających jako kiosk można kolejno wybrać pozycje **Tylko właściciel urządzenia** > **Sieć Wi-Fi**.
+    - W przypadku **systemu Windows 8.1 i nowszych** można wybrać pozycję **Importowanie sieci Wi-Fi**. Ta opcja pozwala zaimportować ustawienia sieci Wi-Fi jako plik XML wyeksportowany wcześniej z innego urządzenia.
 
-   Profil **Importowanie sieci Wi-Fi** (dla systemu Windows 8.1 i nowszego) pozwala zaimportować ustawienia sieci Wi-Fi jako plik XML wyeksportowany wcześniej z innego urządzenia.
-1. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
-    - [Ustawienia systemu Android i profilu służbowego w systemie Android](wi-fi-settings-android.md)
-    - [Ustawienia systemu iOS](wi-fi-settings-ios.md)
-    - [macOS settings](wi-fi-settings-macos.md) (Ustawienia systemu macOS)
-    - [Ustawienia systemu Windows 8.1 i nowszego](wi-fi-settings-import-windows-8-1.md) (w tym systemu Windows Holographic for Business)
-1. Gdy skończysz, wróć do okienka **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
+6. Niektóre ustawienia sieci Wi-Fi są inne dla każdej platformy. Aby wyświetlić ustawienia dla określonej platformy, wybierz pozycję:
 
-Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
+    - [Android](wi-fi-settings-android.md)
+    - [System Android dla firm i kiosk systemu Android](wi-fi-settings-android-enterprise.md)
+    - [iOS](wi-fi-settings-ios.md)
+    - [macOS](wi-fi-settings-macos.md)
+    - [Windows 10 lub nowszy](wi-fi-settings-windows.md)
+    - [Windows 8.1 lub nowszy](wi-fi-settings-import-windows-8-1.md), w tym platforma Windows Holographic for Business
+
+    Większość platform ma ustawienia typu **Podstawowe** i **Przedsiębiorstwo**. Opcja **Podstawowe** udostępnia funkcje, takie jak nazwa sieci i identyfikator SSID. Opcja **Przedsiębiorstwo** umożliwia podawanie bardziej zaawansowanych informacji, takich jak protokół uwierzytelniania rozszerzonego (EAP).
+
+7. Po zakończeniu dodawania ustawień sieci Wi-Fi wybierz pozycję **Utwórz profil** > **Utwórz**, aby dodać profil konfiguracji. Profil zostanie utworzony i wyświetlony na liście profilów (**Konfiguracja urządzenia** > **Profile**).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
+Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypisz ten profil](device-profile-assign.md).

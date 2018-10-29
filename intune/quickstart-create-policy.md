@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/17/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 73e1e0a27d128d567a924e6f2b343026b11f1a44
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 9d9169ab353da30e0f7b292cea4f5b9c93e316aa
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581782"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391556"
 ---
 # <a name="quickstart-add-a-device-compliance-policy-for-a-windows-10-device"></a>Przewodnik Szybki start: dodawanie zasad zgodności urządzeń dla urządzenia z systemem Windows 10
 Zasady zgodności urządzeń w usłudze Intune dla systemu Windows określają reguły i ustawienia, które urządzenia z systemem Windows muszą spełnić, aby zostały uznane za zgodne. Można je wykorzystać do stosowania [dostępu warunkowego](https://docs.microsoft.com/intune/conditional-access), aby zezwolić na dostęp do zasobów firmy lub go zablokować. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności.
@@ -53,4 +53,4 @@ Gdy te zasady nie będą już potrzebne, usuń je. Aby to zrobić, wybierz zasad
 W tym przewodniku Szybki start utworzono i przypisano proste zasady zgodności urządzeń. Aby zarejestrować urządzenie z systemem Windows 10, które otrzyma te zasady, przejdź do przewodnika Szybki start dotyczącego konfigurowania automatycznego rejestrowania. 
  
 > [!div class="nextstepaction"]
-> [Konfigurowanie automatycznego rejestrowania](quickstart-setup-auto-enrollment.md)
+> [Ustawianie długości hasła urządzenia](quickstart-set-password-length-android.md)

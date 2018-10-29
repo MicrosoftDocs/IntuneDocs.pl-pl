@@ -1,7 +1,7 @@
 ---
-title: Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+title: Konfigurowanie ustawień sieci Wi-Fi dla urządzeń z systemem Android dla firm oraz urządzeń kiosku — Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Tworzenie lub dodawanie profilu konfiguracji urządzeń w sieci Wi-Fi dla systemu Android. Zapoznaj się z różnymi ustawieniami, w tym dotyczącymi dodawania certyfikatów, wybierania typu protokołu EAP i wybierania metody uwierzytelniania w usłudze Microsoft Intune.
+description: Tworzenie lub dodawanie profilu konfiguracji urządzeń w sieci Wi-Fi dla systemu Android dla firm i kiosku systemu Android. Zapoznaj się z różnymi ustawieniami, w tym dotyczącymi dodawania certyfikatów, wybierania typu protokołu EAP i wybierania metody uwierzytelniania w usłudze Microsoft Intune. W przypadku urządzeń kiosku należy także wprowadzić klucz wstępny sieci.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -13,18 +13,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7c0d11e7670134c6a2cd9ce2eb72714ba64aa03
+ms.openlocfilehash: c2983f2f7b7079f73c857bf7caafe4236373c5dc
 ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424989"
+ms.locfileid: "49431947"
 ---
-# <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune
+# <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android w usłudze Microsoft Intune
 
-Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem Android. Usługa Microsoft Intune oferuje wiele funkcji, w tym uwierzytelnianie do sieci, dodawanie klucza wstępnego lub protokołu SCEP i inne.
-
-Te ustawienia sieci Wi-Fi są podzielone na dwie kategorie: ustawienia podstawowe i ustawienia na poziomie przedsiębiorstwa.
+Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem Android dla firm i urządzeniach kiosku systemu Android. Usługa Microsoft Intune oferuje wiele funkcji, w uwierzytelnianie do sieci, korzystanie z klucza wstępnego i inne.
 
 W tym artykule opisano te ustawienia.
 
@@ -32,7 +30,25 @@ W tym artykule opisano te ustawienia.
 
 [Utwórz profil urządzenia](device-profile-create.md).
 
-## <a name="basic-profile"></a>Profil podstawowy
+## <a name="device-owner-only---kiosk"></a>Tylko właściciel urządzenia — kiosk
+
+Wybierz tę opcję w przypadku używania urządzenia z systemem Android dla firm jako kiosku.
+
+- **Nazwa sieci**: wprowadź nazwę połączenia sieci Wi-Fi. Ta wartość to nazwa, którą użytkownicy zobaczą podczas przeglądania listy dostępnych połączeń na swoich urządzeniach.
+- **Identyfikator SSID**: identyfikator zestawu usług (ang. **service set identifier**). To ustawienie to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Połącz automatycznie**: wybierz pozycję **Włącz**, aby automatycznie łączyć się z tą siecią, gdy urządzenie jest w zasięgu. Wybierz pozycję **Wyłącz**, aby zapobiec automatycznemu łączeniu się przez urządzenia.
+- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **Typ sieci Wi-Fi**: wybierz protokół zabezpieczeń do uwierzytelniania sieci Wi-Fi. Dostępne opcje:
+
+  - **Otwórz (bez uwierzytelniania)**: tej opcji można używać tylko, jeśli sieć jest niezabezpieczona.
+  - **Klucz wstępny protokołu WEP**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
+  - **Klucz wstępny funkcji WPA**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
+
+Wybierz przycisk **OK**, aby zapisać zmiany.
+
+## <a name="work-profile-only"></a>Tylko profil służbowy
+
+### <a name="basic-settings"></a>Ustawienia podstawowe
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
 - **Identyfikator SSID**: identyfikator zestawu usług (ang. **service set identifier**). To ustawienie to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia.
@@ -103,6 +119,5 @@ Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przy
 
 ## <a name="more-resources"></a>Dodatkowe zasoby
 
+- Informacje o ustawieniach dostępnych dla urządzeń z systemem Android można znaleźć w temacie [Ustawienia sieci Wi-Fi dla urządzeń z systemem Android](wi-fi-settings-android.md).
 - [Omówienie ustawień sieci Wi-Fi](wi-fi-settings-configure.md), w tym informacje na temat innych platform.
-
-- Używasz urządzeń z systemem Android dla firm lub urządzeń kiosku systemu Android? Jeśli tak, zapoznaj się z [ustawieniami sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android](wi-fi-settings-android-enterprise.md).
