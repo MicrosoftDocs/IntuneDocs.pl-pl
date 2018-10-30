@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f41c228e7b5dd4084e7ebb2fab1148913b76880f
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: f08e6275bb8f3dfb689dcc7e14d92ab65d588471
+ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642954"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50149108"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
@@ -29,9 +29,7 @@ ms.locfileid: "49642954"
 Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień aplikacji profilu służbowego systemu Android. Deweloper aplikacji musi ujawnić ustawienia konfiguracji aplikacji zarządzane w systemie Android, aby określić ustawienia konfiguracji dla aplikacji. Przypisz zasady konfiguracji aplikacji do grupy użytkowników, wobec których chcesz zastosować ustawienia.  Ustawienia zasad są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
 > [!Note]  
-> Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.<p></p>
-> Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta.<p></p>
-> W przypadku programów Microsoft Word, Microsoft Excel i Microsoft PowerPoint należy korzystać z aplikacji w wersji 16.0.9327.1000 lub nowszej.
+> Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -80,7 +78,9 @@ W przypadku urządzeń z systemem Android używaj następujących par klucz/wart
 | **Wartości** | <ul><li>Jedna nazwa UPN lub więcej nazw UPN rozdzielonych znakiem <code>;</code>.</li><li>Jedynymi dopuszczonymi kontami są zarządzane konta użytkownika zdefiniowane przez ten klucz.</li><li> W przypadku urządzeń zarejestrowanych w usłudze Intune token <code>{{userprincipalname}}</code> może służyć do reprezentowania zarejestrowanego konta użytkownika.</li></ul> |
 
    > [!NOTE]
-   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości należy użyć programu Outlook dla systemu Android 2.2.222 lub jego nowszej wersji. 
+   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości należy użyć programu Outlook dla systemu Android 2.2.222 lub jego nowszej wersji.<p></p>
+   > Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta.<p></p>
+   > W przypadku programów Microsoft Word, Microsoft Excel i Microsoft PowerPoint należy korzystać z aplikacji w wersji 16.0.9327.1000 lub nowszej. 
 
 ## <a name="enter-the-json-editor"></a>Edytor JSON
 
@@ -96,7 +96,7 @@ Po uruchomieniu przypisanej aplikacji na urządzeniu uruchamiane są ustawienia 
 
 ## <a name="preconfigure-the-permissions-grant-state-for-apps"></a>Wstępna konfiguracja stanu uprawnień dla aplikacji
 
-Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika. Na przykład jeśli aplikacja używa mikrofonu urządzenia, użytkownik otrzyma monit o przyznanie aplikacji uprawnienia do użycia mikrofonu.
+Możesz również wstępnie skonfigurować uprawnienia dla aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika. Na przykład jeśli aplikacja używa mikrofonu urządzenia, użytkownik otrzyma monit o przyznanie aplikacji uprawnienia do użycia mikrofonu.
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
