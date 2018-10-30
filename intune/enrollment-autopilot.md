@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b6381a7a5a8032340910d2c8ff2a0f7db91ef2dd
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: aa51cbea1ab1ea5f1bfc903a17638192aca59326
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828129"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075901"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -152,6 +152,16 @@ Jeśli nie interesuje Cię zarządzanie urządzeniami przenośnymi, rozwiązania
 - Wyświetlać zmian w przypisaniach profilów wykonanych w innym portalu.
 - Synchronizować przypisań profilów wykonanych w innym portalu.
 - Wyświetlać zmian wprowadzonych na liście urządzeń w innym portalu
+
+## <a name="redeploying-windows-autopilot"></a>Ponowne wdrożenie rozwiązania Windows Autopilot
+
+Możliwe jest grupowanie urządzeń z systemem Windows według identyfikatora korelatora podczas rejestrowania przy użyciu [rozwiązania Autopilot dla istniejących urządzeń](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) za pośrednictwem programu Configuration Manager. Identyfikator korelatora jest parametrem pliku konfiguracji rozwiązania Autopilot. [Atrybut urządzenia w usłudze Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) zostanie automatycznie ustawiony na wartość „OfflineAutopilotprofile-<correlator ID>”. Dzięki temu można utworzyć dowolne grupy dynamiczne usługi Azure AD na podstawie identyfikatora korelatora przy użyciu atrybutu enrollmentprofileName dla rejestracji rozwiązania Autopilot w trybie offline.
+
+Jeśli uaktualniasz starsze wersje Windows, które nie obsługują rejestracji rozwiązania Autopilot, możesz użyć profilu rozwiązania Autopilot w trybie offline. Rozwiązanie Autopilot może pomóc podczas czystej instalacji systemu Windows 10 w wersji 1809 lub nowszej. W ramach profilu w trybie offline można określić identyfikator korelatora. 
+
+OSTRZEŻENIE: Ponieważ identyfikator korelatora nie jest wstępnie wymieniony w usłudze Intune, użytkownicy mogą wybrać do rejestracji dowolny identyfikator korelatora. Jeśli użytkownik utworzy identyfikator korelatora pasujący do nazwy profilu rozwiązania Autopilot lub profilu programu DEP firmy Apple, urządzenie zostanie dodane do dowolnej dynamicznej grupy urządzeń usługi Azure AD na podstawie atrybutu enrollmentProfileName. Aby uniknąć tego konfliktu:
+- Zawsze twórz reguły grupy dynamicznej wymagające dopasowania względem *całej* wartości atrybutu enrollmentProfileName.
+- Nigdy nie nadawaj profilom rozwiązania Autopilot lub programu DEP firmy Apple nazw rozpoczynających się od „OfflineAutopilotprofile-”.
 
 ## <a name="next-steps"></a>Następne kroki
 Po skonfigurowaniu rozwiązania Windows Autopilot dla zarejestrowanych urządzeń z systemem Windows 10 dowiedz się, jak zarządzać tymi urządzeniami. Aby uzyskać więcej informacji, zobacz artykuł [Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?](https://docs.microsoft.com/intune/device-management)

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 723e7584e1aaf22859b293a93ddbead56f6256e7
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 3165c29da5cc23e9f206dbe3e1dc0ba72c758d47
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866443"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643148"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,17 +40,30 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Monitor and troubleshoot
 ### Role-based access control
 
--->   
+-->     
+## <a name="week-of-october-15-2018"></a>Tydzień 15 października 2018 r.
+
+### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device-----2637704----"></a>Monit o podanie numeru PIN podczas zmieniania odcisków palców lub twarzy w funkcji Face ID na urządzeniu z systemem iOS  <!-- 2637704  -->
+Użytkownicy są teraz monitowani o podanie numeru PIN po wprowadzeniu zmian biometrycznych na urządzeniu z systemem iOS. Obejmuje to zmiany zarejestrowanych odcisków palców lub twarzy w funkcji Face ID. Chronometraż monitu zależy od konfiguracji limitu czasu *Ponownie sprawdź wymagania dostępu po (minuty)*.  Jeśli numer PIN nie jest ustawiony, użytkownik jest monitowany o ustawienie go. 
+ 
+Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer.
+
 
 ## <a name="week-of-october-1-2018"></a>Tydzień 1 października 2018 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
 
+#### <a name="access-to-key-profile-properties-using-the-company-portal-app----772203---"></a>Dostęp do kluczowych właściwości profilu za pomocą aplikacji Portal firmy <!-- 772203 -->
+Użytkownicy końcowi mogą teraz uzyskiwać dostęp do kluczowych właściwości konta i akcji takich jak resetowanie hasła z aplikacji Portal firmy. 
+
+#### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>Klawiatury innych firm mogą zostać zablokowane przez ustawienia aplikacji w systemie iOS <!-- 1248481 -->
+Na urządzeniach z systemem iOS administratorzy usługi Intune mogą zablokować możliwość korzystania z klawiatur innych firm podczas uzyskiwania dostępu do danych organizacji w aplikacjach chronionych przez zasady. Gdy zasady ochrony aplikacji (APP) są ustawione na blokowanie klawiatur innych firm, użytkownik urządzenia otrzymuje komunikat podczas pierwszej próby interakcji z danymi firmowymi przy użyciu klawiatury innej firmy. Wszystkie opcje inne niż klawiatura macierzysta są zablokowane, a użytkownicy urządzenia nie będą ich widzieć. Użytkownicy urządzenia zobaczą tylko raz komunikat w oknie dialogowym. 
+
 #### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices----1248496---"></a>Dostęp do konta użytkownika w przypadku aplikacji usługi Intune na zarządzanych urządzeniach z systemami Android i iOS <!-- 1248496 -->
 Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. 
 
-#### <a name="outlook-mobile-app-configuration-policy---1828527---"></a>Zasady konfiguracji aplikacji Outlook Mobile <!--1828527 -->
-Teraz możesz utworzyć zasady konfiguracji aplikacji Outlook Mobile dla systemów iOS i Android. Dodatkowe ustawienia konfiguracji będą dodawane w miarę ich włączania dla aplikacji Outlook Mobile.
+#### <a name="outlook-ios-and-android-app-configuration-policy---1828527---"></a>Zasady konfiguracji aplikacji Outlook dla systemów iOS i Android <!--1828527 -->
+Można teraz utworzyć zasady konfiguracji aplikacji Outlook dla systemów iOS i Android przeznaczone dla użytkowników lokalnych, którzy korzystają z uwierzytelniania podstawowego przy użyciu protokołu ActiveSync. Dodatkowe ustawienia konfiguracji będą dodawane w miarę ich włączania w aplikacji Outlook dla systemów iOS i Android.
 
 #### <a name="office-365-pro-plus-language-packs----1833450---"></a>Pakiety językowe usługi Office 365 Pro Plus <!-- 1833450 -->
 Jako administrator usługi Intune możesz wdrożyć dodatkowe języki dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz pozycję **Microsoft Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w bloku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w bloku **Ustawienia pakietu aplikacji**.
@@ -61,6 +74,11 @@ Rozszerzenia plików aplikacji LOB dla systemu Windows obejmują teraz rozszerze
 #### <a name="windows-10-app-deployment-using-intune----2309001---"></a>Wdrażanie aplikacji systemu Windows 10 przy użyciu usługi Intune <!-- 2309001 -->
 Korzystając z istniejącej obsługi aplikacji biznesowych i aplikacji z portalu Microsoft Store dla Firm, administratorzy mogą użyć usługi Intune do wdrożenia większości aplikacji używanych w organizacji dla użytkowników końcowych na urządzeniach z systemem Windows 10. Administratorzy mogą dodawać, instalować i deinstalować aplikacje dla użytkowników systemu Windows 10 w różnych formatach, takich jak MSI, Setup.exe lub MSP. Usługa Intune oceni reguły wymagań przed pobraniem i zainstalowaniem, powiadamiając użytkowników końcowych o stanie wymagań dotyczących ponownego uruchomienia za pomocą Centrum akcji systemu Windows 10. Ta funkcja skutecznie umożliwia zainteresowanym organizacjom przeniesienie obciążenia do usługi Intune i chmury. Jest ona obecnie dostępna w publicznej wersji zapoznawczej i planujemy dodanie do niej znaczących nowych możliwości w ciągu kilku następnych miesięcy. 
 
+#### <a name="end-user-device-and-app-content-menu----2771453---"></a>Manu kontekstowe na urządzeniach użytkowników końcowych i w aplikacjach <!-- 2771453 -->
+Użytkownicy końcowi mogą teraz korzystać z menu kontekstowego na urządzeniach i aplikacjach w celu wyzwolenia typowych akcji, takich jak zmiana nazwy urządzenia lub sprawdzenie zgodności. 
+
+#### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows <!-- 2771518 -->
+Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows za pomocą skrótów klawiaturowych (akceleratorów).
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
@@ -136,6 +154,12 @@ Profil rozwiązania Autopilot możesz zastosować do zarejestrowanych urządzeń
 
 #### <a name="create-and-assign-multiple-enrollment-status--page-profiles-to-azure-ad-groups----2526564---"></a>Tworzenie i przypisywanie wielu profilów strony ze stanem rejestracji do grup usługi Azure AD <!-- 2526564 -->
 Teraz możesz [utworzyć i przypisać](windows-enrollment-status.md) wiele profilów strony stanu rejestracji dla grup usługi Azure ADD.
+
+#### <a name="migration-from-device-enrollment-program-to-apple-business-manager-in-intune---2748613--"></a>Migracja z programu Device Enrollment Program do usługi Apple Business Manager w usłudze Intune <!--2748613-->
+Usługa Apple Business Manager (ABM) działa w usłudze Intune i można uaktualnić konto z programu Device Enrollment Program (DEP) do usługi ABM. Proces w usłudze Intune jest taki sam. Aby uaktualnić swoje konto Apple z programu DEP do usługi ABM, przejdź na stronę [ https://support.apple.com/en-us/HT208817 ]( https://support.apple.com/en-us/HT208817).
+
+### <a name="alert-and-enrollment-status-tabs-on-the-device-enrollment-overview-page---2748656--"></a>Karty alertów i stanu rejestracji na stronie przeglądu rejestracji urządzenia <!--2748656-->
+Alerty i błędy rejestracji pojawiają się teraz na osobnych kartach na stronie przeglądu rejestracji urządzenia.
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami
 
@@ -221,7 +245,7 @@ Możesz teraz włączyć tryb przetwarzania standardów FIPS dla profilów sieci
 #### <a name="control-s-mode-on-windows-10-and-later-devices---public-preview----1958649---"></a>Kontrolowanie trybu S na urządzeniach z systemem Windows 10 i nowszymi — publiczna wersja zapoznawcza <!-- 1958649 -->
 Dzięki tej aktualizacji funkcji możesz utworzyć profil konfiguracji urządzenia, który wyłącza tryb S urządzenia z systemem Windows 10 lub uniemożliwia użytkownikom wyłączenie trybu S na urządzeniu. Ta funkcja znajduje się w pozycji Intune > **Konfiguracja urządzenia** > **Profile** >  **System Windows 10 i nowszy** > **Uaktualnienie wersji i przełączenie trybu**.
 Artykuł [Wprowadzenie do systemu Windows 10 w trybie S](https://www.microsoft.com/windows/s-mode) zawiera więcej informacji na temat trybu S.
-Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (w wersji zapoznawczej).
+Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (w wersji zapoznawczej).
 
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Pakiet konfiguracji zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender jest automatycznie dodawany do profilu konfiguracji <!-- 2144658 -->
@@ -230,7 +254,7 @@ Dotyczy systemu Windows 10 lub nowszych.
 
 #### <a name="require-users-to-connect-during-device-setup---2311457--"></a>Wymaganie od użytkowników nawiązania połączenia podczas konfigurowania urządzenia <!--2311457-->
 Możesz teraz ustawić profile urządzeń i wymagać, aby to urządzenie połączyło się z siecią przed przejściem poza stronę Sieć podczas konfigurowania systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
-Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (w wersji zapoznawczej).
+Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (w wersji zapoznawczej).
 
 
 #### <a name="restricts-apps-and-block-access-to-company-resources-on-ios-and-android-enterprise-devices----2451462---"></a>Ograniczanie aplikacji i blokowanie dostępu do zasobów firmy na urządzeniach z systemem iOS i Android Enterprise <!-- 2451462 -->
@@ -263,7 +287,7 @@ Jest teraz dostępna możliwość uruchomienia aplikacji Portal firmy w trybie p
 
 #### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Przypisywanie użytkownika i przyjaznej nazwy do urządzenia rozwiązania AutoPilot <!--1346521 -->
 Możesz teraz [przypisać użytkownika do pojedynczego urządzenia rozwiązania Autopilot](enrollment-autopilot.md). Administratorzy będą także mogli nadać przyjazne nazwy witające użytkownika podczas konfigurowania urządzenia za pomocą rozwiązania Autopilot.
-Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (w wersji zapoznawczej).
+Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (w wersji zapoznawczej).
 
 #### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Korzystanie z licencji programu VPP do wstępnego aprowizowania aplikacji Portal firmy podczas rejestracji w programie DEP <!-- 1608345 -->
 Można już używać licencji urządzeń zakupionych w ramach programu VPP (Volume Purchase Program) do wstępnej aprowizacji aplikacji Portal firmy podczas rejestracji w programie DEP (Device Enrollment Program). W tym celu podczas [tworzenia lub edytowania profilu rejestracji](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) należy określić token programu VPP, który zostanie użyty do zainstalowania aplikacji Portal firmy. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji dla aplikacji Portal firmy. W przypadkach, gdy token wygaśnie lub zabraknie dla niego licencji, usługa Intune wypchnie aplikację Portal firmy ze sklepu App Store (spowoduje to wyświetlenie monitu o podanie identyfikatora Apple ID).
@@ -275,11 +299,11 @@ Wymagane jest potwierdzenie w celu usunięcia tokenu programu Volume Purchase Pr
 Możesz [zablokować rejestrowanie urządzeń osobistych z systemem Windows](enrollment-restrictions-set.md#set-device-type-restrictions) za pomocą rozwiązania do [zarządzania urządzeniami mobilnymi](windows-enroll.md) w usłudze Intune. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](manage-windows-pcs-with-microsoft-intune.md). Ta funkcja będzie wprowadzana w ciągu kolejnych kilku tygodni, dlatego może nie być od razu widoczna w interfejsie użytkownika.
 
 #### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Określanie wzorców nazw maszyn w profilu rozwiązania AutoPilot <!--1849855-->
-Możesz [określić szablon nazwy komputera](enrollment-autopilot.md#create-an-autopilot-deployment-profile), aby wygenerować i ustawić [nazwę komputera](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) podczas rejestrowania za pomocą rozwiązania AutoPilot. Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (w wersji zapoznawczej).
+Możesz [określić szablon nazwy komputera](enrollment-autopilot.md#create-an-autopilot-deployment-profile), aby wygenerować i ustawić [nazwę komputera](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) podczas rejestrowania za pomocą rozwiązania AutoPilot. Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (w wersji zapoznawczej).
 
 
 #### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>W przypadku profilów rozwiązania Windows AutoPilot można ukryć opcje zmiany konta na stronach logowania firmy i błędu domeny <!--1901669 -->
-Istnieją [nowe opcje profilu rozwiązania Windows Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile) przeznaczone dla administratorów i umożliwiające ukrycie opcji zmiany konta na stronach logowania firmy i błędu domeny. Ukrywanie tych opcji wymaga skonfigurowania znakowania firmowego w usłudze Azure Active Directory. Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (w wersji zapoznawczej).
+Istnieją [nowe opcje profilu rozwiązania Windows Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile) przeznaczone dla administratorów i umożliwiające ukrycie opcji zmiany konta na stronach logowania firmy i błędu domeny. Ukrywanie tych opcji wymaga skonfigurowania znakowania firmowego w usłudze Azure Active Directory. Dotyczy: najnowsza kompilacja [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (w wersji zapoznawczej).
 
 
 
@@ -310,7 +334,7 @@ Na podstawie opinii klientów dodaliśmy nowe funkcje do witryny internetowej Po
 - Zwiększona wydajność dużych wykazów aplikacji
 - Zwiększona dostępność dla wszystkich użytkowników  
 
-[Dokumentacja witryny internetowej Portal firmy usługi Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website) została zaktualizowana w celu odzwierciedlenia tych zmian. Aby wyświetlić przykład rozszerzeń aplikacji, zobacz [UI updates for Intune end-user apps (Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune)](whats-new-app-ui.md).  
+[Dokumentacja witryny internetowej Portal firmy usługi Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) została zaktualizowana w celu odzwierciedlenia tych zmian. Aby wyświetlić przykład rozszerzeń aplikacji, zobacz [UI updates for Intune end-user apps (Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune)](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
 
@@ -469,7 +493,7 @@ Jako administrator masz możliwość odzyskania licencji aplikacji programu VPP 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
 #### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963-eenotready---"></a>Wybieranie kategorii urządzeń przy użyciu ustawień opcji Uzyskaj dostęp do miejsca pracy lub nauki <!-- 1058963 eenotready --> 
-Jeśli włączono [mapowanie grup urządzeń](https://docs.microsoft.com/en-us/intune/device-group-mapping), w systemie Windows 10 po dokonaniu rejestracji przy użyciu przycisku **Połącz** w obszarze **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** zostanie teraz wyświetlony monit o wybranie kategorii urządzenia. 
+Jeśli włączono [mapowanie grup urządzeń](https://docs.microsoft.com/intune/device-group-mapping), w systemie Windows 10 po dokonaniu rejestracji przy użyciu przycisku **Połącz** w obszarze **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** zostanie teraz wyświetlony monit o wybranie kategorii urządzenia. 
 
 #### <a name="use-samaccountname-as-the-account-username-for-email-profiles----1500307---"></a>Używanie atrybutu SAMAccountName jako nazwy użytkownika konta dla profilów poczty e-mail <!-- 1500307 -->
 Możesz używać lokalnego atrybutu **sAMAccountName** jako nazwy użytkownika konta w profilach poczty e-mail dla systemu Android, iOS i Windows 10. Możesz również pobrać domenę z atrybutu `domain` lub `ntdomain` w usłudze Azure Active Directory (Azure AD). Ewentualnie można wprowadzić niestandardową domenę statyczną.
@@ -678,8 +702,8 @@ Administratorzy usługi Intune mogą określić wymaganie dotyczące uruchamiani
 #### <a name="line-of-business-lob-app-support-for-macos----1473977---"></a>Obsługa aplikacji biznesowych dla systemu macOS <!-- 1473977 -->
 Usługa Microsoft Intune będzie umożliwiać instalowanie aplikacji biznesowych (LOB) dla systemu macOS z witryny Azure Portal. Aplikację LOB dla systemu macOS będzie można dodać do usługi Intune po jej wstępnym przetworzeniu za pomocą narzędzia dostępnego w usłudze GitHub. W witrynie Azure Portal wybierz pozycję **Aplikacje klienckie** w bloku **Intune**. W bloku **Aplikacje klienckie** wybierz pozycję **Aplikacje** > **Dodaj**. W bloku **Dodaj aplikację** wybierz pozycję **Aplikacja biznesowa**. 
 
-#### <a name="built-in-all-users-and-all-devices-group-for-android-for-work-afw-app-assignment----1813073---"></a>Wbudowane grupy Wszyscy użytkownicy i Wszystkie urządzenia na potrzeby przypisywania aplikacji Android for Work (AFW) <!-- 1813073 -->
-Można użyć wbudowanych grup **Wszyscy użytkownicy** i **Wszystkie urządzenia** na potrzeby przypisywania aplikacji AFW. Aby uzyskać więcej informacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune](apps-inc-exl-assignments.md).
+#### <a name="built-in-all-users-and-all-devices-group-for-android-enterprise-work-profile-app-assignment----1813073---"></a>Wbudowane grupy Wszyscy użytkownicy i Wszystkie urządzenia na potrzeby przypisywania aplikacji profilu służbowego Android Enterprise <!-- 1813073 -->
+Można użyć wbudowanych grup **Wszyscy użytkownicy** i **Wszystkie urządzenia** na potrzeby przypisywania aplikacji profilu służbowego Android Enterprise. Aby uzyskać więcej informacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune](apps-inc-exl-assignments.md).
 
 #### <a name="intune-will-reinstall-required-apps-that-are-uninstalled-by-users----1947010---"></a>Usługa Intune zainstaluje wymagane aplikacje, które są odinstalowywane przez użytkowników <!-- 1947010 -->
 Jeśli użytkownik końcowy odinstaluje wymaganą aplikację, usługa Intune automatycznie ponownie instaluje aplikację w ciągu 24 godzin, nie czekając na zakończenie 7-dniowego cyklu ponownej oceny.
@@ -707,10 +731,10 @@ Dzięki tej aktualizacji administratorzy mogą włączyć ustawienie Zawsze wł�
 
 W przypadku profilów edukacyjnych są dostępne nowe ustawienia w kategorii **Drukarki**: **Drukarki**, **Drukarka domyślna**, **Dodaj nowe drukarki**.
 
-#### <a name="show-caller-id-in-personal-profile---android-for-work---1098984---"></a>Pokazywanie identyfikatora rozmówcy w profilu osobistym — Android for Work <!--1098984 -->
+#### <a name="show-caller-id-in-personal-profile---android-enterprise-work-profile---1098984---"></a>Pokazywanie identyfikatora rozmówcy w profilu osobistym — profil służbowy Android Enterprise <!--1098984 -->
 Użytkownicy końcowy korzystający z profilu osobistego na urządzeniu mogą nie widzieć identyfikatora rozmówcy dla kontaktu służbowego. 
 
-Ta aktualizacja wprowadza nowe ustawienie w obszarze **Android for Work** > **Ograniczenia dotyczące urządzeń** > **Ustawienia profilu służbowego**:
+Ta aktualizacja wprowadza nowe ustawienie w obszarze **Android Enterprise** > **Ograniczenia dotyczące urządzeń** > **Ustawienia profilu służbowego**:
 - Wyświetlanie identyfikatora rozmówcy dla kontaktu służbowego w profilu osobistym
 
 Po włączeniu (bez konfigurowania) szczegóły rozmówcy dla kontaktu służbowego są wyświetlane w profilu osobistym. Po zablokowaniu numer rozmówcy dla kontaktu służbowego nie jest wyświetlany w profilu osobistym. 
@@ -736,12 +760,12 @@ Następujące technologie zależne są włączane automatycznie podczas konfigur
 #### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Użycie niestandardowej nazwy podmiotu w certyfikacie SCEP <!-- 2064190 -->
 Istnieje możliwość użycia nazwy pospolitej **OnPremisesSamAccountName** w niestandardowej nazwie podmiotu dla profilu certyfikatu SCEP. Na przykład możesz użyć nazwy `CN={OnPremisesSamAccountName})`.
 
-####  <a name="block-camera-and-screen-captures-on-android-for-work----1098977---"></a>Blokowanie aparatu i przechwytywania ekranu w aplikacji Android for Work <!-- 1098977 -->
+####  <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles----1098977---"></a>Blokowanie aparatu i przechwytywania ekranu w profilach służbowych Android Enterprise <!-- 1098977 -->
 Podczas konfigurowania ograniczeń urządzenia z systemem Android można zablokować dwie nowe właściwości: 
 - Aparat: blokuje dostęp do wszystkich aparatów w urządzeniu
 - Przechwytywanie ekranu: blokuje przechwytywanie ekranu i wyświetlanie zawartości na urządzeniach wyświetlających, które nie mają zabezpieczonego wyjścia wideo
 
-Dotyczy aplikacji Android for Work.
+Dotyczy profilów służbowych Android Enterprise.
 
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
@@ -807,7 +831,7 @@ Aplikacja Portal firmy dla urządzeń z systemem macOS została zaktualizowana p
 Aby uzyskać więcej informacji, zobacz [Wysyłanie błędów w przypadku systemu macOS](/intune-user-help/send-errors-macos).
 
 #### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10----1195010-wnready---"></a>Usługa Intune dostosowuje się do systemu Fluent Design System w aplikacji Portal firmy dla systemu Windows 10 <!-- 1195010 WNready -->
-Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizowana w celu dodania [widoku nawigacji systemu Fluent Design System](https://docs.microsoft.com/en-us/windows/uwp/design/basics/navigation-basics). Wzdłuż boku aplikacji znajduje się statyczna, pionowa lista wszystkich stron najwyższego poziomu. Kliknij dowolny link, aby szybko wyświetlać strony i przełączać się między nimi. Jest to pierwsza z kilku aktualizacji, które będą wprowadzane w ramach naszych ciągłych wysiłków mających na celu stworzenie bardziej adaptacyjnego, empatycznego, znanego środowiska pracy w usłudze Intune. Aby wyświetlić zaktualizowany wygląd, przejdź do obszaru [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md).
+Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizowana w celu dodania [widoku nawigacji systemu Fluent Design System](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Wzdłuż boku aplikacji znajduje się statyczna, pionowa lista wszystkich stron najwyższego poziomu. Kliknij dowolny link, aby szybko wyświetlać strony i przełączać się między nimi. Jest to pierwsza z kilku aktualizacji, które będą wprowadzane w ramach naszych ciągłych wysiłków mających na celu stworzenie bardziej adaptacyjnego, empatycznego, znanego środowiska pracy w usłudze Intune. Aby wyświetlić zaktualizowany wygląd, przejdź do obszaru [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md).
 
 ## <a name="week-of-april-16-2018"></a>Tydzień od 16 kwietnia 2018 r.
 
@@ -816,7 +840,7 @@ Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizo
 W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS są teraz dostępne dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują wersję 4.0.7x i nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
 
 > [!NOTE]
-> Ta zmiana dotyczy tylko systemu iOS. W przypadku platform systemów Android i macOS oraz programu Android for Work nadal będzie dostępna tylko jedna opcja oprogramowania Cisco AnyConnect.
+> Ta zmiana dotyczy tylko systemu iOS. W przypadku platform systemów Android i macOS oraz profilu służbowego Android Enterprise nadal będzie dostępna tylko jedna opcja oprogramowania Cisco AnyConnect.
 
 #### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Urządzenia z systemem macOS zarejestrowane w oprogramowaniu Jamf można obecnie zarejestrować w usłudze Intune <!-- 2370684 -->
 
@@ -872,7 +896,7 @@ Teraz możesz użyć rozwiązania App Policy Protection (APP) i funkcji dostępu
 
 Firma Apple właśnie wydała system macOS 10.14. W grudniu 2018 r. usługa Intune przejdzie na obsługę systemu macOS 10.12 i nowszych wersji. 
 
-### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 
 Począwszy od grudnia, użytkownicy końcowi na urządzeniach z systemem macOS 10.11 lub wcześniejszym nie będą mogli korzystać z Portalu firmy w celu rejestracji w usłudze Intune. Będą musieli uaktualnić swoje urządzenia do systemu macOS 10.12 lub nowszego i uaktualnić aplikację Portal firmy do najnowszej wersji, aby nadal otrzymywać pomoc techniczną oraz nowe funkcje. 
 
@@ -886,13 +910,14 @@ System macOS 10.12 i jego nowsze wersje są obecnie obsługiwane na następując
 
 Od grudnia użytkownicy końcowi, którzy mają urządzenia inne niż te wymienione powyżej, nie będą mogli uzyskać dostępu do najnowszej wersji aplikacji Portal firmy dla systemu macOS. Istniejące zarejestrowane urządzenia z nieobsługiwanymi wersjami systemu macOS starszymi niż macOS 10.12 będą nadal zarządzane i wyświetlane w konsoli administracyjnej usługi Intune.
 
-### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 
-Poproś użytkowników końcowych, aby do grudnia 2018 r. uaktualnili swoje urządzenia do obsługiwanej wersji systemu operacyjnego. 
+- Poproś użytkowników końcowych, aby do grudnia 2018 r. uaktualnili swoje urządzenia do obsługiwanej wersji systemu operacyjnego. 
 - Sprawdź raporty usługi Intune w konsoli usługi Intune na platformie Azure, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji Urządzenia > Wszystkie urządzenia i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwiają określenie, kto w organizacji ma urządzenia z systemem macOS 10.11. 
 - Jeśli korzystasz z hybrydowego zarządzania urządzeniami mobilnymi (MDM), przejdź do pozycji Zasoby i zgodność > Urządzenia w konsoli programu Configuration Manager, kliknij prawym przyciskiem myszy kolumny, aby dodać kolumny System operacyjny i Wersja klienta, a następnie sortuj według systemu operacyjnego. Należy pamiętać, że hybrydowe zarządzanie urządzeniami mobilnymi jest przestarzałe i należy przejść na usługę Intune na platformie Azure najszybciej, jak to możliwe. 
  
-Informacje dodatkowe [https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)
+#### <a name="additional-information"></a>Dodatkowe informacje
+Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
  
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Planowana zmiana: nowe środowisko pomocy technicznej usługi Intune dla klientów wersji Premier 
@@ -901,7 +926,7 @@ Jako klient korzystający z pomocy technicznej Microsoft Premier możesz obecnie
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 Po 3 grudnia nie będzie można tworzyć żądań pomocy technicznej w portalu MPO.  Po podjęciu takiej próby zobaczysz monit o przejście do usługi Intune na platformie Azure, którego nie będzie można odrzucić. W tym miejscu możesz utworzyć żądanie pomocy technicznej, które zostanie przekierowane do dedykowanego działu pomocy technicznej firmy Microsoft, który w odpowiednim czasie zdiagnozuje i rozwiąże problem. Żądań pomocy technicznej utworzonych w portalu MPO nie można wyświetlić w witrynie Azure Portal, dlatego nie należy już tworzyć żądań pomocy technicznej w portalu MPO.  
 
-Jeśli korzystasz z hybrydowego oprogramowania do zarządzania urządzeniami mobilnymi (hybrydowe oprogramowanie MDM) lub współzarządzania, możesz nadal używać portalu MPO do tworzenia żądań pomocy technicznej dla programu ConfigMgr, ale żądania pomocy technicznej dla usługi Intune tworzyć w witrynie Azure Portal. Przypominamy, że hybrydowe zarządzanie urządzeniami mobilnymi jest przestarzałe i należy zaplanować jak najszybsze przejście do usługi Intune na platformie Azure. Aby uzyskać więcej informacji, zobacz artykuł dotyczący przechodzenia z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure.
+Jeśli korzystasz z hybrydowego oprogramowania do zarządzania urządzeniami mobilnymi (hybrydowe oprogramowanie MDM) lub współzarządzania, możesz nadal używać portalu MPO do tworzenia żądań pomocy technicznej dla programu ConfigMgr, ale żądania pomocy technicznej dla usługi Intune tworzyć w witrynie Azure Portal. Przypominamy, że hybrydowe zarządzanie urządzeniami mobilnymi jest przestarzałe i należy zaplanować jak najszybsze przejście do usługi Intune na platformie Azure. Aby uzyskać więcej informacji, zobacz [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
 
 Zauważ, że tylko użytkownicy z rolami administratora globalnego, administratora usługi Intune i administratora pomocy technicznej usługi mogą tworzyć bilety pomocy technicznej w witrynie Azure Portal.
 
@@ -912,7 +937,8 @@ Zauważ, że tylko użytkownicy z rolami administratora globalnego, administrato
 - Kliknij pozycję Informacje dodatkowe, aby uzyskać więcej informacji i pomocne linki.
 
 #### <a name="additional-information"></a>Dodatkowe informacje
-[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+Aby uzyskać więcej informacji, zobacz [wpis w blogu zespołu pomocy technicznej usługi Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
+
 
 ### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Wymagana akcja: zaktualizuj ustawienia hasła zasad zgodności lub ograniczeń urządzenia z systemem Android w usłudze Intune
 Usługa Intune będzie usuwać dostępny typ hasła „ustawienie domyślne urządzenia” dla systemu Android w wersji 4.4 i nowszej. Z powodu różnic między platformami Android i domyślnymi ustawieniami urządzeń ta zasada jest często traktowana jako opcjonalna przez urządzenie. Aby wyjaśnić nieporozumienia dotyczące wymuszania tego ustawienia w systemie Android, w przyszłym wydaniu usuniemy to ustawienie z interfejsu użytkownika. 

@@ -4,6 +4,7 @@ description: Utwórz zasady konfiguracji, aby określić ustawienia programu Mic
 keywords: ''
 author: Erikre
 ms.author: erikre
+ms.reviewer: smithre4
 manager: dougeby
 ms.date: 10/04/2018
 ms.topic: article
@@ -12,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7fc9f34bbd3d14ac4291582247b1e45169c2cccc
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 24ed1a895dd3e4cad6111b40913b43fa9c6a3cec
+ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828935"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48903526"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Ustawienia konfiguracji programu Microsoft Outlook 
 
@@ -29,27 +30,15 @@ Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z syste
 
 Podczas dodawania zasad konfiguracji w usłudze Intune możesz wprowadzić określone ustawienia, aby skonfigurować program Microsoft Outlook. W okienku **Ustawienia konfiguracji** możesz określić konfigurację konta poczty e-mail.
 
-### <a name="email-account-settings"></a>Ustawienia konta e-mail
+### <a name="basic-authentication-email-account-settings"></a>Ustawienia konta e-mail w przypadku uwierzytelniania podstawowego
+Program Outlook dla systemów iOS i Android umożliwia administratorom programu Exchange „wypychanie” konfiguracji kont do ich lokalnych użytkowników, którzy korzystają z uwierzytelniania podstawowego przy użyciu protokołu ActiveSync. Aby uzyskać więcej informacji, zobacz [Account setup in Outlook for iOS and Android using Basic authentication](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/account-setup) (Konfiguracja kont w programie Outlook dla systemów iOS i Android przy użyciu uwierzytelniania podstawowego). Aby włączyć konfigurację konta, można skonfigurować następujące ustawienia:
 
-Poniższe ustawienia konfiguracji są specyficzne dla programu Microsoft Outlook.
-
-- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera programu Exchange.
+- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera programu Exchange w środowisku lokalnym (np. mail.contoso.com).
 - **Nazwa konta e-mail**: wprowadź nazwę wyświetlaną konta e-mail. Ta nazwa jest widoczna na urządzeniach użytkowników.
-- **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (AAD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
+- **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (Azure AD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
   - **Główna nazwa użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
   - **Podstawowy adres SMTP**: pobiera nazwę w formacie adresu e-mail, takiego jak `user1@contoso.com`
-  - **Nazwa konta SAM**: wymaga domeny, takiej jak `domain\user1`.
-
-    Wprowadź też następujące ustawienia:  
-    - **Źródło nazwy domeny użytkownika**: wybierz pozycję **AAD** (Azure Active Directory) lub **Niestandardowe**.
-
-      Podczas wybierania pobierania atrybutów z usługi **AAD** wprowadź następujące ustawienia:
-      - **Atrybut nazwy domeny użytkownika z usługi AAD**: wybierz pobieranie atrybutu użytkownika **Pełna nazwa domeny** lub **Nazwa NetBIOS**
-
-      Podczas wybierania atrybutów **Niestandardowe** wprowadź następujące ustawienia:
-      - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
-
-- **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej głównej nazwy jako adresu e-mail, lub wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania do programu Exchange.
+- **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej głównej nazwy jako adresu e-mail, lub wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania do programu Exchange. Zalecane jest wybranie pozycji **Podstawowy adres SMTP**.
 - **Domena konta**: (opcjonalnie) domena konta.
 
 ## <a name="next-steps"></a>Następne kroki

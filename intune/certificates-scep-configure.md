@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/1/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 48bf2e6daf05dba6baebbd49be45a17a5a56e820
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: b6ee53d0c5801a80319e33637ee68fb7b701a127
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828299"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391692"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -36,11 +36,13 @@ Serwer usługi NDES musi być przyłączony do domeny hostującej urząd certyfi
 
 - **Łącznik certyfikatów usługi Microsoft Intune**: używając witryny Azure Portal, pobierz instalator **łącznika certyfikatów** (**NDESConnectorSetup.exe**). Następnie możesz uruchomić program **NDESConnectorSetup.exe** na serwerze hostującym rolę usługi rejestracji urządzeń sieciowych (NDES), na którym chcesz zainstalować łącznik certyfikatów.
 
-  - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale możesz wystawiać i odwoływać certyfikaty, gdy jest on włączony.
+  - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
 
 - **Serwer proxy aplikacji internetowej** (opcjonalnie): jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
   - Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
   - Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
+  
+- **Serwer proxy aplikacji usługi Azure AD** (opcjonalnie): serwera proxy aplikacji usługi Azure AD można używać zamiast dedykowanego serwer proxy aplikacji internetowej (WAP) w celu publikowania serwera usługi NDES w Internecie. Aby uzyskać więcej informacji, zobacz [Zapewnianie bezpiecznego dostępu zdalnego do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Dodatkowe
 
@@ -64,7 +66,7 @@ Zaleca się publikowanie serwera usługi NDES za pośrednictwem serwera proxy, t
 |**Szablon certyfikatu**|Skonfiguruj ten szablon na serwerze urzędu wystawiającego certyfikaty.|
 |**Certyfikat uwierzytelniania klienta**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
 |**Certyfikat uwierzytelniania serwera**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować jako plik **.cer** z głównego urzędu certyfikacji lub dowolnego urządzenia uznającego główny urząd certyfikacji za zaufany, a następnie przypisać go do urządzeń, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w formacie pliku **cer** z głównego urzędu certyfikacji lub z dowolnego urządzenia traktującego główny urząd certyfikacji jako zaufany. Następnie należy przypisać go do urządzeń, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
 ### <a name="accounts"></a>Konta
 
@@ -96,7 +98,10 @@ W tym kroku:
 
    Szablon wymaga następującej konfiguracji:
 
-   - Podaj przyjazną **nazwę wyświetlaną szablonu**.
+   - W obszarze **Ogólne**:
+   
+       - Upewnij się, że właściwość **Publikuj certyfikat w usłudze Active Directory** **nie** jest zaznaczona.
+       - Podaj przyjazną **nazwę wyświetlaną szablonu**.
 
    - W obszarze **Nazwa podmiotu** wybierz pozycję **Podaj w żądaniu**. (Zabezpieczenia są wymuszane przez moduł zasad usługi Intune dla usługi NDES).
 
@@ -158,17 +163,21 @@ W tym kroku:
 
    2. Po dodaniu usługi NDES do serwera kreator przeprowadzi również instalację usług IIS. Upewnij się, że usługi IIS są skonfigurowane w następujący sposób:
 
-   3. **Serwer sieci Web** > **Zabezpieczenia** > **Filtrowanie żądań**
+       - **Serwer sieci Web** > **Zabezpieczenia** > **Filtrowanie żądań**
 
-   4. **Serwer sieci Web** > **Projektowanie aplikacji** > **ASP.NET 3.5**. Podczas instalacji programu ASP .NET 3.5 zostanie zainstalowany program .NET Framework 3.5. Podczas instalacji programu .NET Framework 3.5 należy zainstalować zarówno podstawowy składnik **.NET Framework 3.5**, jak i składnik **Aktywacja HTTP**.
+       - **Serwer sieci Web** > **Projektowanie aplikacji** > **ASP.NET 3.5** 
 
-   5. **Serwer sieci Web** > **Projektowanie aplikacji** > **ASP.NET 4.5**. Podczas instalacji programu ASP .NET 4.5 zostanie zainstalowany program .NET Framework 4.5. Podczas instalowania programu .NET Framework 4.5 należy zainstalować podstawowy składnik **.NET Framework 4.5**, składnik **ASP .NET 4.5** oraz składnik **Usługi WCF** > **Aktywacja HTTP**.
+            Podczas instalacji programu ASP .NET 3.5 zostanie zainstalowany program .NET Framework 3.5. Podczas instalacji programu .NET Framework 3.5 należy zainstalować zarówno podstawowy składnik **.NET Framework 3.5**, jak i składnik **Aktywacja HTTP**.
 
-   6. **Narzędzia do zarządzania** > **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** > **Zgodność z metabazą usług IIS 6**
+       - **Serwer sieci Web** > **Projektowanie aplikacji** > **ASP.NET 4.5** 
 
-   7. **Narzędzia do zarządzania** > **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** > **Zgodność z usługą WMI dla usług IIS 6**
+            Podczas instalacji programu ASP .NET 4.5 zostanie zainstalowany program .NET Framework 4.5. Podczas instalowania programu .NET Framework 4.5 należy zainstalować podstawowy składnik **.NET Framework 4.5**, składnik **ASP .NET 4.5** oraz składnik **Usługi WCF** > **Aktywacja HTTP**.
 
-   8. Na serwerze dodaj konto usługi NDES jako element członkowski grupy **IIS_IUSR**.
+       - **Narzędzia do zarządzania** > **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** > **Zgodność z metabazą usług IIS 6**
+
+       - **Narzędzia do zarządzania** > **Zgodność z narzędziami zarządzania usługami IIS w wersji 6** > **Zgodność z usługą WMI dla usług IIS 6**
+
+       - Na serwerze dodaj konto usługi NDES jako element członkowski grupy **IIS_IUSR**.
 
 2. Aby ustawić nazwę SPN konta usługi NDES, w oknie wiersza polecenia z podwyższonym poziomem uprawnień uruchom następujące polecenie:
 
@@ -222,7 +231,7 @@ W tym kroku:
 
     ![Maksymalna długość adresu URL i zapytania w programie IIS](./media/SCEP_IIS_max_URL.png)
 
-5. Uruchom ponownie serwer. Aby sfinalizować te zmiany, nie wystarczy uruchomić polecenie **iisreset** na serwerze.
+5. Uruchom ponownie serwer. Nie używaj polecenia **iisreset**; nie spowoduje ono sfinalizowania tych zmian.
 6. Przejdź do pliku `http://*FQDN*/certsrv/mscep/mscep.dll`. Powinna zostać wyświetlona strona usługi NDES podobna do następującej:
 
     ![Testowanie usługi NDES](./media/SCEP_NDES_URL.png)
@@ -253,7 +262,7 @@ W tym kroku:
 
     - **Ulepszone użycie klucza**: musi to być wartość **Uwierzytelnianie klienta**
 
-    - **Nazwa podmiotu**: ta wartość musi być nazwą DNS serwera, na którym jest instalowany certyfikat (serwera usługi NDES).
+    - **Nazwa podmiotu**: ta wartość musi być nazwą DNS serwera, na którym jest instalowany certyfikat (serwera usługi NDES)
 
 ##### <a name="configure-iis-request-filtering"></a>Konfigurowanie filtrowania żądań w usługach IIS
 
@@ -283,13 +292,16 @@ W tym kroku:
 
 ##### <a name="download-install-and-configure-the-certificate-connector"></a>Pobieranie, instalowanie i konfigurowanie łącznika certyfikatów
 
-![ConnectorDownload](./media/certificates-download-connector.png)
+> [!IMPORTANT] 
+> Łącznik certyfikatów usługi Microsoft Intune **musi** zostać zainstalowany na osobnym serwerze systemu Windows. Nie można go zainstalować w wystawiającym urzędzie certyfikacji. **Musi** także być zainstalowany na tym samym serwerze jako rola usługi rejestracji urządzeń sieciowych (NDES).
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Konfiguracja urządzenia**, a następnie pozycję **Urząd certyfikacji**.
-4. Wybierz pozycję **Dodaj**, a następnie pozycję **Pobierz plik łącznika**. Zapisz pobraną zawartość w lokalizacji dostępnej z serwera, na którym zostanie ona zainstalowana.
-5. Po zakończeniu pobierania przejdź do serwera hostującego rolę usługi rejestracji urządzeń sieciowych (NDES). Następnie:
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz kolejno pozycje **Konfiguracja urządzenia** > **Urząd certyfikacji** > **Dodaj**.
+3. Pobierz i zapisz plik łącznika. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
+
+    ![ConnectorDownload](./media/certificates-download-connector.png)
+
+4. Po zakończeniu pobierania przejdź do serwera hostującego rolę usługi rejestracji urządzeń sieciowych (NDES). Następnie:
 
     1. Upewnij się, że jest zainstalowany program .NET 4.5 Framework, ponieważ jest on wymagany przez łącznik certyfikatów usługi NDES. Program .NET 4.5 Framework jest automatycznie dołączany do systemu Windows Server 2012 R2 i nowszych wersji.
     2. Uruchom instalator (**NDESConnectorSetup.exe**). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. Usługa internetowa CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.
@@ -297,34 +309,34 @@ W tym kroku:
     > [!NOTE]
     > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP jest instalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku używania usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
 
-6. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach kroku 4.
+5. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, kliknij pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach kroku 4.
 
     Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune** . Mimo że wybrany certyfikat nie jest wyświetlany, wybierz pozycję **Dalej**, aby wyświetlić właściwości certyfikatu. Wybierz pozycję **Dalej**, a następnie pozycję **Zainstaluj**.
 
     > [!IMPORTANT]
     > Nie można zarejestrować łącznika certyfikatów usługi Intune z włączoną opcją Konfiguracja zwiększonych zabezpieczeń programu Internet Explorer. Aby można było korzystać z łącznika certyfikatów usługi Intune, należy [wyłączyć opcję Konfiguracja zwiększonych zabezpieczeń programu IE](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).
 
-7. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
+6. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
 
     > [!TIP]
     > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
     >
     > <install_Path>\NDESConnectorUI\NDESConnectorUI.exe
 
-8. W interfejsie użytkownika **łącznika certyfikatów** :
+7. W interfejsie użytkownika **łącznika certyfikatów** :
 
     Wybierz pozycję **Zaloguj** i podaj poświadczenia administratora usługi Intune lub administratora dzierżawy z uprawnieniami administratora globalnego.
 
     > [!IMPORTANT]
     > Konto użytkownika musi mieć przypisaną prawidłową licencję usługi Intune. Jeśli konto użytkownika nie ma prawidłowej licencji usługi Intune, działanie pliku NDESConnectorUI.exe zakończy się niepowodzeniem.
 
-    Jeśli Twoja organizacja korzysta z serwera proxy i serwer usługi NDES wymaga go na potrzeby dostępu do Internetu, wybierz pozycję **Użyj serwera proxy**, a następnie podaj nazwę serwera proxy, port oraz poświadczenia konta, aby nawiązać połączenie.
+    Jeśli Twoja organizacja korzysta z serwera proxy i serwer usługi NDES wymaga go na potrzeby dostępu do Internetu, wybierz pozycję **Użyj serwera proxy**. Następnie wprowadź nazwę serwera proxy, port oraz poświadczenia konta, aby nawiązać połączenie.
 
     Wybierz kartę **Zaawansowane** i podaj poświadczenia konta z uprawnieniem **Wystawianie certyfikatów i zarządzanie nimi** dla wystawiającego urzędu certyfikacji. **Zastosuj** zmiany.
 
     Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
 
-9. Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**. Kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** i wybierz polecenie **Uruchom ponownie**.
+8. Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**. Kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** > **Uruchom ponownie**.
 
 Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj następujący adres URL. Powinien zostać zwrócony błąd **403**:
 
@@ -335,18 +347,19 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 
 ## <a name="create-a-scep-certificate-profile"></a>Tworzenie profilu certyfikatu protokołu SCEP
 
-1. W witrynie Azure Portal otwórz usługę Microsoft Intune.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu SCEP.
 4. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego certyfikatu protokołu SCEP. Obecnie dla ustawień ograniczeń dotyczących urządzeń można wybrać jedną z następujących platform:
    - **Android**
+   - **Android Enterprise**
    - **iOS**
    - **macOS**
    - **Windows Phone 8.1**
    - **Windows 8.1 lub nowszy**
    - **Windows 10 lub nowszy**
 5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.
-6. W okienku **Certyfikat SCEP** skonfiguruj następujące ustawienia:
+6. Podaj następujące ustawienia:
 
    - **Typ certyfikatu**: wybierz pozycję **Użytkownik** w przypadku certyfikatów użytkownika. Wybierz pozycję **Urządzenie** w przypadku urządzeń bez użytkowników, takich jak kioski. Certyfikaty typu **Urządzenie** są dostępne dla następujących platform:  
      - iOS
@@ -403,13 +416,14 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         "{{MEID}}",
         ```
 
-        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS = {{AzureADDeviceId}}.domain.com`.
+        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład nazwę pospolitą można dodać jako `CN = {{DeviceName}}text`.
 
         > [!IMPORTANT]
-        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
+        >  - W statycznym tekście podmiotu nawiasy klamrowe **{}** nie otaczające zmiennej spowodują błąd. 
         >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
+        >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem. 
 
 
    - **Nazwa alternatywna podmiotu**: określ sposób automatycznego tworzenia wartości dla nazwy alternatywnej podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
@@ -428,8 +442,6 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         Pole tekstowe formatu tabeli, które można dostosować. Następujące atrybuty są dostępne:
 
         - systemem DNS,
-        - Adres e-mail
-        - Główna nazwa użytkownika (UPN)
 
         W przypadku typu certyfikatu **Urządzenie** możesz używać następujących zmiennych certyfikatu urządzenia dla wartości:  
 
@@ -447,13 +459,14 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         "{{MEID}}",
         ```
 
-        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS = {{AzureADDeviceId}}.domain.com`.
+        Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
         >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
         >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
+        >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w alternatywnej nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
 
    - **Okres ważności certyfikatu**: jeśli dla wystawiającego urzędu certyfikacji uruchomiono polecenie `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`, które dopuszcza niestandardowy okres ważności, możesz określić ilość czasu pozostałego do wygaśnięcia certyfikatu.<br>Możesz podać okres krótszy niż okres ważności w szablonie certyfikatu, ale nie dłuższy. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić jeden rok, ale nie pięć lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
    - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): podaj miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:

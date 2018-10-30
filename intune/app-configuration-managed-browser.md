@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: c3edbf3663d3226f806bf36af97b97cdf4d169c1
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863165"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357091"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu za pomocą zasad przeglądarki chronionej w usłudze Microsoft Intune  
+# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -36,26 +36,37 @@ Korzystając z przeglądarki zabezpieczonej przy użyciu zasad usługi Intune (M
 
 ## <a name="getting-started"></a>Wprowadzenie
 
+Microsoft Edge i Intune Managed Browser to aplikacje przeglądarki sieci Web przeznaczone do użytku w organizacji i dostępne do pobrania przez użytkowników końcowych z publicznych sklepów z aplikacjami. 
+
+Wymagania zasad przeglądarki dotyczące systemu operacyjnego:
+- system Android (4 lub nowszy) lub
+- system iOS (8.0 lub nowszy).
+
+Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
+
+>[!NOTE]
+>Aplikacja Managed Browser nie obsługuje protokołu szyfrowania Secure Sockets Layer, wersja 3 (SSLv3).
+
+
+## <a name="application-protection-policies-for-protected-browsers"></a>Zasady ochrony aplikacji dla chronionych przeglądarek
+
+Aplikacje Microsoft Edge i Managed Browser są zintegrowane z zestawem SDK usługi Intune, dlatego można do nich również zastosować zasady ochrony aplikacji, takie jak:
+- Kontrolowanie użycia funkcji wycinania, kopiowania i wklejania.
+- Zapobieganie przechwytywaniu ekranu.
+- Zapewnianie otwierania linków firmowych tylko w ramach zarządzanych aplikacji i przeglądarek.
+
+Aby uzyskać szczegółowe informacje, zobacz [Co to są zasady ochrony aplikacji](app-protection-policy.md)?
+
 Te ustawienia można zastosować do:
 
 - Urządzeń zarejestrowanych w usłudze Intune
 - Urządzeń zarejestrowanych w innym produkcie MDM
 - Urządzeń niezarządzanych
 
-Jeśli użytkownicy zainstalują aplikację Managed Browser ze sklepu z aplikacjami, a usługa Intune nie będzie nią zarządzać, to aplikacja ta może służyć jako podstawowa przeglądarka sieci Web z obsługą logowania jednokrotnego za pośrednictwem witryny Microsoft MyApps. Użytkownicy są przekierowywani bezpośrednio do witryny MyApps, w której mogą wyświetlić wszystkie aprowizowane aplikacje SaaS.
+>[!NOTE]
+>Jeśli użytkownicy zainstalują aplikację Managed Browser ze sklepu z aplikacjami, a usługa Intune nie będzie nią zarządzać, to aplikacja ta może służyć jako podstawowa przeglądarka sieci Web z obsługą logowania jednokrotnego za pośrednictwem witryny Microsoft MyApps. Użytkownicy są przekierowywani bezpośrednio do witryny MyApps, w której mogą wyświetlić wszystkie aprowizowane aplikacje SaaS.
 Kiedy aplikacje Managed Browser lub Microsoft Edge nie są zarządzane przez usługę Intune, nie mogą uzyskać dostępu do danych z innych aplikacji zarządzanych przez usługę Intune. 
 
-Aplikacja Managed Browser nie obsługuje protokołu szyfrowania Secure Sockets Layer, wersja 3 (SSLv3).
-
-Zasady przeglądarki chronionej można tworzyć dla następujących typów urządzeń:
-
--   Urządzenia z systemem Android 4 i nowszym
-
--   Urządzenia z systemem iOS w wersji 10.0 lub nowszej
-
->[!IMPORTANT]
->Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
-    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Dostęp warunkowy dla przeglądarek chronionych
 
@@ -82,7 +93,7 @@ Aby ograniczyć aplikacje internetowe usługi Azure AD do używania aplikacji In
 8. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, a następnie wybierz użytkowników lub grupy, do których chcesz przypisać te zasady. 
 
     > [!NOTE]
-    > Użytkownicy muszą również zostać objęci zasadami ochrony aplikacji usługi Intune. Aby uzyskać więcej informacji na temat tworzenia zasad ochrony aplikacji usługi Intune, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
+    > Użytkownicy muszą również zostać objęci zasadami Intune App Protection w celu odbierania zasad konfiguracji aplikacji. Aby uzyskać więcej informacji na temat tworzenia zasad ochrony aplikacji usługi Intune, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
 
 9. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**, aby wybrać, które aplikacje mają być chronione przez te zasady.
 
@@ -101,6 +112,9 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Tworzenie konfiguracji aplikacji przeglądarki chronionej
 
+>[!IMPORTANT]
+>Aby można było zastosować konfiguracje aplikacji, chroniona przeglądarka użytkownika lub inna aplikacja na urządzeniu musi być już zarządzana przez [zasady ochrony aplikacji usługi Intune]( app-protection-policy.md).
+
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3.  W bloku **Aplikacje klienckie** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
@@ -114,8 +128,6 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 11. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.
 12. Nowa konfiguracja zostanie utworzona i wyświetlona w bloku **Konfiguracja aplikacji**.
 
->[!IMPORTANT]
->Obecnie aplikacja Managed Browser stosuje rejestrację automatyczną. Aby można było zastosować konfiguracje aplikacji, inna aplikacja na urządzeniu musi być już zarządzana przez zasady ochrony aplikacji usługi Intune.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Przypisywanie utworzonych ustawień konfiguracji
 
@@ -275,18 +287,7 @@ Aby uzyskać listę ustawień przechowywanych w dziennikach aplikacji, zobacz te
 ### <a name="turn-off-usage-data"></a>Wyłączanie danych użycia
 Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług. Użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoich urządzeniach. Użytkownik nie kontroluje zbierania tych danych.
 
-
 -   Na urządzeniach z systemem iOS nie można otwierać odwiedzanych przez użytkowników witryn sieci Web z certyfikatem nieważnym lub niezaufanym.
--   Ustawienia przeglądarki wbudowanej na urządzeniach użytkowników nie są używane w programie Managed Browser. Aplikacja Managed Browser nie ma dostępu do tych ustawień.
-
--   Jeśli w zasadach ochrony aplikacji skojarzonych z programem Managed Browser są skonfigurowane opcje **Wymagaj prostego numeru PIN w celu udzielenia dostępu** lub **Wymagaj poświadczeń firmowych w celu udzielenia dostępu**, a użytkownik wybierze link Pomoc na stronie uwierzytelniania, umożliwi to przeglądanie dowolnych witryn internetowych bez względu na to, czy zostały one dodane w zasadach do listy blokowanych witryn.
-
--   Program Managed Browser może zablokować dostęp do witryn tylko w przypadku uzyskiwania do nich bezpośredniego dostępu. Dostęp do witryny nie jest blokowany, jeśli jest on uzyskiwany za pomocą usług pośrednich (na przykład usługi tłumaczenia).
-
--   W celu umożliwienia uwierzytelniania i uzyskania dostępu do dokumentacji usługi Intune, witryna **&#42;.microsoft.com** jest wyłączona z ustawień listy dozwolonych lub zablokowanych witryn. Jest ona zawsze dozwolona.
-
-### <a name="turn-off-usage-data"></a>Wyłączanie danych użycia
-Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług. Użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoich urządzeniach. Użytkownik nie kontroluje zbierania tych danych.
 
 ## <a name="next-steps"></a>Następne kroki
 

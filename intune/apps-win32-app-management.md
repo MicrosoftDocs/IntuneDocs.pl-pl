@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c2774a8172eb389742a3fdbf805717b6bc134b43
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866375"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357108"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
@@ -32,7 +32,7 @@ Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami 
 - Klient z systemem Windows 10 musi być: 
     - Przyłączony do usługi Azure Active Directory (AAD) lub hybrydowej usługi Azure Active Directory
     - Zarejestrowany w usłudze Intune (zarządzany przez rozwiązanie MDM)
-- Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację w publicznej wersji zapoznawczej 
+- Rozmiar aplikacji systemu Windows jest ograniczony do 2 GB na aplikację w publicznej wersji zapoznawczej 
 
 > [!NOTE]
 > Obecnie testujemy wersje Pro i Education systemu Windows 10 w wersji 1607 i chętnie poznamy Twoją opinię.
@@ -51,7 +51,7 @@ Narzędzie [Microsoft Intune Win32 App Upload Prep Tool](https://github.com/Micr
 |    `-h`     |    Pomoc    |
 |    `-c <setup_folder>`     |    Folder instalacji dla wszystkich plików instalacji.    |
 |   ` -s <setup_file>`     |    Plik instalacji (taki jak *setup.exe* lub *setup.msi*).    |
-|    `-o <output_file>`     |    Folder wyjściowy dla wygenerowanego pliku *intunewin*.    |
+|    `-o <output_folder>`     |    Folder wyjściowy dla wygenerowanego pliku *intunewin*.    |
 |    `-q`       |    Tryb cichy    |
 
 ### <a name="example-commands"></a>Przykładowe polecenia

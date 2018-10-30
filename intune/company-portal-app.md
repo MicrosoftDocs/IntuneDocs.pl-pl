@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2defc433ef39562750c4579f302a9c5367c6464a
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
+ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828248"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307410"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -61,7 +61,7 @@ Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pr
 
 
 ## <a name="company-branding-customization"></a>Dostosowywanie oznaczeń marki       
-Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło.     
+Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło. Aby szybko wyświetlić podgląd konfiguracji oznaczeń marki bez urządzenia testowego, możesz przejść do witryny [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Należy zauważyć, że przesłane logo będzie używane w szablonach wiadomości e-mail.      
 
 ### <a name="theme-color"></a>Kolor motywu
 Zastosuj kolor motywu w Portalu firmy. Wybierz kolor standardowy lub wprowadź sześciocyfrowy kod szesnastkowy koloru niestandardowego.
@@ -82,3 +82,30 @@ Przekaż logo firmy, aby było widoczne w całym środowisku użytkownika usług
 |**Wyświetl nazwę firmy obok logo**| Wybierz tę opcję, aby wyświetlić wprowadzoną nazwę firmy obok załadowanego logo. |
 
 Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień w portalu internetowym usługi Intune** w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje.
+
+## <a name="windows-company-portal-keyboard-shortcuts"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows
+
+Użytkownicy końcowi mogą wyzwalać akcje nawigacji, aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows za pomocą skrótów klawiaturowych (akceleratorów).
+
+Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla systemu Windows.
+
+| Obszar | Opis | Skrót klawiaturowy |
+|:------------------:|:--------------:|:-----------------:|
+| Menu nawigacji | Nawigacja | Alt + M |
+|  | Domowy | Alt + H |
+|  | Wszystkie aplikacje | Alt + A |
+|  | Zainstalowane aplikacje | ALT + I |
+|  | Wyślij opinię | Alt + F |
+|  | Mój profil | Alt + U |
+|  | Ustawienia | Alt + T |
+| Strona główna — kafelek urządzenia | Zmień nazwę | F2 |
+|  | Usuń | CTRL + D lub Delete |
+|  | Sprawdź dostęp | Ctrl + M lub F9 |
+| Szczegóły urządzenia | Zmień nazwę | F2 |
+|  | Usuń | CTRL + D lub Delete |
+|  | Sprawdź dostęp | Ctrl + M lub F9 |
+| Szczegóły aplikacji | Instalowanie | CTRL + I |
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune](store-apps-company-portal-app.md)

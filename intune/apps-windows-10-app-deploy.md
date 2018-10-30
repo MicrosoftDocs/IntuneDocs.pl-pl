@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,21 +15,23 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 61bb874fd914c69669197110ee5901ccfbc3f594
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866358"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075614"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
 Obecnie usługa Microsoft Intune obsługuje różne typy aplikacji i scenariusze wdrażania na urządzeniach z systemem Windows 10. Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń. Poniżej znajdziesz więcej szczegółowych informacji na temat obsługiwanych scenariuszy w systemie Windows 10. Dodatkowo przedstawiono istotne informacje, o których należy pamiętać podczas wdrażania aplikacji w systemie Windows. 
 
-Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje biznesowe i aplikacje dostępne w sklepie Microsoft dla Firm. Rozszerzenia plików aplikacji dla systemu Windows to **msi**, **appx**, **appxbundle**, **msix** i **msixbundle**.  
+Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje biznesowe i aplikacje dostępne w sklepie Microsoft dla Firm. Rozszerzenia plików aplikacji dla systemu Windows to **msi**, **appx** i **appxbundle**.  
 
 > [!Note]
-> Minimalna wymagana wersja systemu Windows 10 umożliwiająca wdrażanie aplikacji w kontekście urządzenia to aktualizacja z [23 maja 2018 r. — KB4100403 (kompilacja systemu operacyjnego 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
+> Do wdrażania nowoczesnych aplikacji wymagane są co najmniej następujące aktualizacje systemu Windows 10:
+> - Dla systemu Windows 10 1803: [23 maja 2018 r. — KB4100403 (kompilacja systemu operacyjnego 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
+> - Dla systemu Windows 10 1709 [21 czerwca 2018 r. — KB4284822 (kompilacja systemu operacyjnego 16299.522)](https://support.microsoft.com/help/4284822).
 
 ## <a name="windows-10-line-of-business-apps"></a>Aplikacje biznesowe dla systemu Windows 10
 
@@ -44,8 +46,13 @@ W zależności od typu aplikacji aplikację można zainstalować na urządzeniu 
 
 - **Kontekst użytkownika**: po wdrożeniu aplikacji w kontekście użytkownika zarządzana aplikacja zostanie zainstalowana na urządzeniu tego użytkownika, gdy zaloguje się on na urządzeniu. Należy pamiętać, że instalacja aplikacji nie powiedzie się, jeśli użytkownik nie zaloguje się na urządzeniu. 
     - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno wymaganą, jak i dostępną intencję.
+    - Aplikacje Win32 tworzone jako aplikacje typu **Tryb użytkownika** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno **wymaganą**, jak i **dostępną** intencję. 
 - **Kontekst urządzenia**: po wdrożeniu aplikacji w kontekście urządzenia zarządzana aplikacja zostanie zainstalowana bezpośrednio na urządzeniu przez usługę Intune.
     - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft dla Firm licencjonowane online mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
+    - Aplikacje Win32 tworzone jako aplikacje typu **Tryb komputera** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały tylko **wymaganą** intencję.
+
+> [!NOTE]
+> Dla aplikacji Win32 tworzonych jako aplikacje typu **Tryb podwójny** administrator musi dla wszystkich przypisań skojarzonych z tym wystąpieniem określić, czy aplikacja będzie działać jako aplikacja **trybu użytkownika**, czy aplikacja **trybu komputera**. Nie można zmienić kontekstu wdrożenia dla poszczególnych przypisań.  
 
 Po wdrożeniu aplikacji w kontekście urządzenia instalacja zakończy się powodzeniem pod warunkiem, że wskazane urządzenie obsługuje kontekst urządzenia. Ponadto wdrażanie w kontekście urządzenia podlega następującym warunkom:
 - Jeśli aplikacja jest wdrażana w kontekście urządzenia i wskazany jest użytkownik, instalacja zakończy się niepowodzeniem, a w konsoli administratora zostanie wyświetlony następujący stan i komunikat o błędzie:
