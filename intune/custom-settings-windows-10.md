@@ -1,62 +1,87 @@
 ---
-title: Ustawienia niestandardowe dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Konfiguruj ustawienia niestandardowe OMA-URI na urządzeniach z systemem Windows 10 przy użyciu niestandardowego profilu w usłudze Microsoft Intune.
+title: Dodawanie ustawień niestandardowych dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Dodaj lub utwórz profil niestandardowy w celu użycia ustawień identyfikatora URI OMA dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune. Użyj profilu niestandardowego, aby dodać ustawienia niestandardowe.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/18/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdbb6643a4ee8aace0db22cd7f9189f7ac6445f0
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 78ed923c7502744ccd7f23e341049ce8ee8a8d86
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232830"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983214"
 ---
-# <a name="custom-oma-uri-settings-for-windows-10-devices---intune"></a>Niestandardowe ustawienia OMA-URI dla urządzeń z systemem Windows 10 — Intune
+# <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows 10 w usłudze Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia niestandardowe dla urządzeń z systemem Windows 10 przy użyciu „profili niestandardowych”. Profile niestandardowe to funkcja w usłudze Intune. Służą one do dodawania ustawień i funkcji urządzeń, które nie są wbudowane w usłudze Intune.
 
-Profil **niestandardowy** usługi Microsoft Intune dla systemów Windows 10 i Windows 10 Mobile umożliwia wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Tych ustawień można użyć do sterowania funkcjami na urządzeniach. System Windows 10 zapewnia dostęp do wielu ustawień dostawcy usług konfiguracji, takich jak [Dostawca usług konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Profile niestandardowe systemu Windows 10 używają ustawień jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania różnych funkcji. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania funkcji na urządzeniu. 
 
-Jeśli szukasz konkretnego ustawienia, pamiętaj, że [profil ograniczeń urządzenia z systemem Windows 10](device-restrictions-windows-10.md) zawiera wiele ustawień, które są wbudowane w usłudze Intune i nie wymagają wartości niestandardowych.
+System Windows 10 zapewnia dostęp do wielu ustawień dostawcy usług konfiguracji, takich jak [Dostawca usług konfiguracji zasad](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 
-## <a name="configure-custom-settings"></a>Konfigurowanie ustawień niestandardowych
+Jeśli szukasz określonego ustawienia, pamiętaj, że [profil ograniczeń urządzenia z systemem Windows 10](device-restrictions-windows-10.md) zawiera wiele wbudowanych ustawień. Dzięki temu być może nie trzeba będzie wprowadzać wartości niestandardowych.
 
-1. Utwórz nowy profil konfiguracji, używając typu profilu **Niestandardowy**. Odpowiednią procedurę można znaleźć w temacie [Jak skonfigurować niestandardowe ustawienia urządzenia](custom-settings-configure.md).
-2. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**, aby utworzyć nowe ustawienie. Możesz również kliknąć przycisk **Eksportuj**, aby utworzyć listę wszystkich wartości skonfigurowanych w pliku wartości rozdzielanych przecinkami (.csv).
-3. Dla każdego ustawienia OMA-URI, które chcesz dodać, wprowadź następujące informacje:
+Ten artykuł zawiera następujące informacje:
 
-- **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-- **Opis**: opcjonalnie wprowadź opis ustawienia.
-- **OMA-URI (z uwzględnieniem wielkości liter)**: wprowadź identyfikator OMA-URI, dla którego chcesz podać ustawienie.
-- **Typ danych**: Wybierz spośród opcji:
-  - **Ciąg**
-  - **Ciąg (XML)**
-  - **Data i godzina**
-  - **Liczba całkowita**
-  - **Liczba zmiennoprzecinkowa**
-  - **Wartość logiczna**
-  - **Base64**
-- **Wartość**: wprowadź wartość lub plik w celu skojarzenia z wprowadzonym identyfikatorem OMA-URI.
+- Jak utworzyć profil niestandardowy dla urządzeń z systemem Windows 10
+- Lista zalecanych ustawień identyfikatora OMA-URI
+- Przykład profilu niestandardowego, który otwiera połączenie sieci VPN
 
-4. Gdy wszystko będzie gotowe, wybierz pozycję **OK**. W obszarze **Tworzenie profilu** wybierz pozycję **Utwórz**. Profil zostanie utworzony i wyświetlony na liście profilów.
+## <a name="create-the-profile"></a>Tworzenie profilu
+
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Podaj następujące ustawienia:
+
+    - **Nazwa**: wprowadź nazwę profilu, na przykład `windows 10 custom profile`.
+    - **Opis:** wprowadź opis profilu.
+    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
+    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+
+4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
+
+    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
+    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+
+        - String
+        - Ciąg (plik XML)
+        - Data i godzina
+        - Integer
+        - Liczba zmiennoprzecinkowa
+        - Boolean
+        - Base64 (plik)
+
+    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+
+    Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
+
+5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
 
 ## <a name="example"></a>Przykład
+
 W poniższym przykładzie włączono ustawienie **Connectivity/AllowVPNOverCellular**. To ustawienie pozwala urządzeniu z systemem Windows 10 na otwarcie połączenia sieci VPN w sieci komórkowej.
 
 ![Przykład zasad niestandardowych zawierających ustawienia sieci VPN](./media/custom-policy-example.png)
 
 ## <a name="find-the-policies-you-can-configure"></a>Wyszukiwanie zasad, które można skonfigurować
 
-Pełna lista wszystkich dostawców usług konfiguracji obsługiwanych w systemie Windows 10 jest przedstawiona w artykule [Configuration service provider reference (Informacje dotyczące dostawcy usług konfiguracji)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
+Pełna lista wszystkich dostawców usług konfiguracji obsługiwanych w systemie Windows 10 znajduje się w artykule [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usług konfiguracji).
 
 Nie wszystkie ustawienia są zgodne ze wszystkimi wersjami systemu Windows 10. Artykuł [Configuration service provider reference (Informacje dotyczące dostawcy usług konfiguracji)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) zawiera informacje o tym, które wersje są obsługiwane przez każdego dostawcę usług konfiguracji.
 
-Ponadto usługa Intune nie obsługuje wszystkich wymienionych ustawień. Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
+Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artykule [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usług konfiguracji). Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
+
+## <a name="next-steps"></a>Następne kroki
+
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).

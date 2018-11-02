@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c94357d90f89e77be03df0db9ba9e2d89836623b
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: 57de118c2e13182a0d26aa36d1dc5b1f7ea9c4e9
+ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799527"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136968"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń
 
@@ -39,7 +39,7 @@ Zasad konfiguracji aplikacji można używać z zarządzanymi aplikacjami, które
       — opis profilu, który będzie wyświetlany w witrynie Azure Portal
     - **Typ rejestracji urządzenia**  
       Wybierz pozycję **Zarządzaj aplikacjami**.
-6. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, którą chcesz skonfigurować. Wybierz aplikację z listy aplikacji zatwierdzonych i zsynchronizowanych z usługą Intune.
+6. Wybierz pozycję  **Skojarzona aplikacja** , aby wybrać aplikację, którą chcesz skonfigurować. Wybierz aplikację z listy aplikacji zatwierdzonych i zsynchronizowanych z usługą Intune.
 7. Dla każdego ustawienia konfiguracji obsługiwanego przez aplikację wpisz wartości w polach **Nazwa** i **Wartość**, a następnie wybierz przycisk wielokropka (**...**).  
     Aby usunąć konfigurację, wybierz przycisk wielokropka (**...**) i wybierz pozycję **Usuń**.  
     
@@ -51,13 +51,13 @@ Usługa Intune może generować pewne tokeny i wysyłać je do aplikacji zarząd
 
 Usługa Intune obsługuje następujące typy tokenów w ustawieniach konfiguracji. Inne niestandardowe pary klucz/wartość nie są obsługiwane.
 
-- \{\{userprincipalname\}\}—na przykład **John@contoso.com**
-- \{\{mail\}\}—na przykład **John@contoso.com**
-- \{\{partialupn\}\}—na przykład **Jan**
-- \{\{accountid\}\}—na przykład **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- \{\{userid\}\}—na przykład **3ec2c00f-b125-4519-acf0-302ac3761822**
-- \{\{username\}\}—na przykład **Jan Nowak**
-- \{\{PrimarySMTPAddress\}\}—na przykład **testuser@ad.domain.com** 
+- \{\{userprincipalname\}\} — na przykład John@contoso.com
+- \{\{mail\}\} — na przykład John@contoso.com
+- \{\{partialupn\}\} — na przykład Jan
+- \{\{accountid\}\} — na przykład fc0dc142-71d8-4b12-bbea-bae2a8514c81
+- \{\{userid\}\} — na przykład 3ec2c00f-b125-4519-acf0-302ac3761822
+- \{\{username\}\} — na przykład Jan Nowak
+- \{\{PrimarySMTPAddress\}\} — na przykład testuser@ad.domain.com
 
 
 > [!Note]  

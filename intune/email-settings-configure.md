@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 9aac9d7523673d6907bf75bf91e1e9802a381ec2
+ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905312"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50149057"
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
 
@@ -67,9 +67,13 @@ Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w art
 
 ## <a name="further-information"></a>Dodatkowe informacje
 
-### <a name="remove-an-email-profile"></a>Usuwanie profilu poczty e-mail
+## <a name="remove-an-email-profile"></a>Usuwanie profilu poczty e-mail
 
-Jeśli chcesz usunąć profil poczty e-mail z urządzenia, zmodyfikuj przypisanie i usuń wszystkie grupy, których urządzenie jest członkiem. Nie można usunąć profilu poczty e-mail w ten sposób, gdy jest to jedyny profil poczty e-mail na urządzeniu.
+Profile poczty e-mail są przypisywane do grup urządzeń, a nie grup użytkowników. Istnieją różne sposoby usuwania profilu poczty e-mail z urządzenia, nawet wtedy, gdy w urządzeniu istnieje tylko jeden profil poczty e-mail:
+
+- **Opcja 1**. Otwórz profil poczty e-mail (**Konfiguracja urządzenia** > **Profile**) i wybierz pozycję **Przypisania**. Karta **Dołączanie** zawiera grupy, które zostały przypisane do profilu. Kliknij prawym przyciskiem myszy grupę > **Usuń**. Pamiętaj o **zapisaniu** zmian.
+
+- **Opcja 2**. [Wyczyść lub wycofaj urządzenie](devices-wipe.md). Tych akcji można używać do selektywnego lub pełnego usuwania danych i ustawień.
 
 ### <a name="securing-email-access"></a>Zabezpieczenie dostępu do poczty e-mail
 

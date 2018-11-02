@@ -14,12 +14,12 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb7d8b35cb88223a3fbfa45e0ad8e2f8d2852a96
-ms.sourcegitcommit: ab801d715aa26f6d97f1a0c42a07e55146a14e6f
+ms.openlocfilehash: af80dd180e8fdbaeb633bdffaad90ccdf02d5380
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35289027"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959574"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 Rozszerzenie do zarządzania usługi Intune pozwala przekazywać skrypty programu PowerShell w usłudze Intune w celu uruchamiania ich na urządzeniach z systemem Windows 10. Rozszerzenie do zarządzania uzupełnia możliwości funkcji zarządzania urządzeniami mobilnymi (MDM, Mobile Device Management) z systemem Windows 10 i ułatwia migrację do nowoczesnego zarządzania.
@@ -33,7 +33,7 @@ Rozszerzenie do zarządzania usługi Intune uzupełnia możliwości usług MDM d
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
-- Urządzenia muszą być przyłączone do usługi Azure AD. Nie dotyczy to urządzeń przyłączonych do usługi Hybrid AD.
+- Urządzenia muszą być przyłączone do usługi Azure AD. Rozszerzenie zarządzania w usłudze Intune obsługuje urządzenia dołączone do usługi Azure Active Directory, urządzenia dołączone do domeny hybrydowej oraz wspólnie zarządzane, zarejestrowane urządzenia z systemem Windows.
 - Na urządzeniach musi działać system Windows 10 w wersji 1607 lub nowszej.
 - Automatyczna rejestracja w usłudze MDM musi zostać [włączona w usłudze Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) i urządzenia muszą być automatycznie rejestrowane w usłudze Intune.
 

@@ -1,42 +1,68 @@
 ---
-title: Ustawienia niestandardowe w usłudze Microsoft Intune dla urządzeń z systemem Windows Phone 8.1
+title: Dodawanie ustawień niestandardowych dla urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Dowiedz się więcej na temat ustawień, których można używać w niestandardowym profilu systemu Windows Phone 8.1.
+description: Dodaj lub utwórz profil niestandardowy w celu użycia ustawień identyfikatora URI OMA dla urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b21464016dff3396b25861af568fa90d8b7a260f
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f2202d7abf80c6a78fd365a4629e970bc9ec36ce
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834757"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983095"
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-phone-81"></a>Niestandardowe ustawienia urządzeń w usłudze Microsoft Intune dla urządzeń z systemem Windows Phone 8.1
+# <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows Phone 8.1 w usłudze Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia niestandardowe dla urządzeń z systemem Windows Phone 8.1 przy użyciu „profili niestandardowych”. Profile niestandardowe to funkcja w usłudze Intune. Służą one do dodawania ustawień i funkcji urządzeń, które nie są wbudowane w usłudze Intune.
 
-Profil **niestandardowy** systemu Windows Phone 8.1 w usłudze Microsoft Intune umożliwia przypisanie ustawień OMA-URI, których można użyć do sterowania funkcjami na urządzeniach z systemem Windows Phone 8.1. Są to ustawienia standardowe używane przez wielu producentów urządzeń przenośnych do sterowania funkcjami urządzeń.
+Profile niestandardowe systemu Windows Phone 8.1 używają ustawień jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania różnych funkcji. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania funkcji na urządzeniu.
 
-Ta funkcja ma umożliwić przypisanie ustawień, których nie można skonfigurować przy użyciu zasad usługi Intune.
+W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z systemem Windows Phone 8.1. 
 
-## <a name="custom-policy-settings-for-windows-phone-81-devices"></a>Ustawienia zasad niestandardowych dla urządzeń z systemem Windows Phone 8.1
+## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [How to configure custom device settings in Microsoft Intune](custom-settings-configure.md) (Jak skonfigurować niestandardowe ustawienia urządzenia w usłudze Microsoft Intune).
-2. W okienku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**, aby dodać co najmniej jedno ustawienie OMA-URI.
-3. W okienku **Dodawanie wiersza** skonfiguruj następujące wartości dla każdego ustawienia:
-    - **Nazwa** — wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis** — podaj opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające jego wyszukanie.
-    - **OMA-URI** — określ identyfikator OMA-URI, dla którego chcesz podać ustawienie.
-    - **Typ danych** — wybierz typ danych, przy pomocy którego określisz to ustawienie OMA-URI. Wybierz jeden z następujących typów: **Ciąg**, **Ciąg (XML)**, **Data i godzina**, **Liczba całkowita**, **Liczba zmiennoprzecinkowa**, **Wartość logiczna** lub **Base64**.
-    - **Wartość** — wprowadź wartość lub plik do skojarzenia z wprowadzonym identyfikatorem OMA-URI.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Podaj następujące ustawienia:
 
-4. Gdy wszystko będzie gotowe, kliknij przycisk **OK**, a następnie, jeśli to konieczne, dodaj więcej ustawień.
+    - **Nazwa**: wprowadź nazwę profilu, na przykład `windows phone custom profile`.
+    - **Opis:** wprowadź opis profilu.
+    - **Platforma**: wybierz system **Windows Phone 8.1**.
+    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+
+4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
+
+    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis**: wprowadź opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające wyszukanie profilu.
+    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
+    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+
+        - String
+        - Ciąg (plik XML)
+        - Data i godzina
+        - Integer
+        - Liczba zmiennoprzecinkowa
+        - Boolean
+        - Base64 (plik)
+
+    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+
+    Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
+
+5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
+
+## <a name="next-steps"></a>Następne kroki
+
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).
+
+Zobacz, jak utworzyć profil niestandardowy na [urządzeniach z systemem Windows 10](custom-settings-windows-10.md).

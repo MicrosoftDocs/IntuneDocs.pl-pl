@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/24/2016
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,60 +14,71 @@ ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: maxles
+ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1c57c8bfa9f2727ec201acb506f5a41327fddc75
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146657"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959506"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
+Aplikacje zarządzane są konfigurowane tak, aby spełniały wymagania organizacji dotyczące bezpieczeństwa oraz chroniły dane służbowe. Te aplikacje są udostępniane w urządzeniu z możliwością automatycznego instalowania lub używania. 
 
-Aplikacje zarządzane to aplikacje, które dział pomocy technicznej Twojej firmy może skonfigurować w celu wspomagania ochrony danych firmowych dostępnych w tych aplikacjach. Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej na urządzeniu z systemem Android, możesz zauważyć, że aplikacja działa w sposób nieco inny od spodziewanego. Na przykład może okazać się niemożliwe kopiowanie i wklejanie chronionych danych firmowych lub zapisywanie tych danych w określonych lokalizacjach.
+Zanim otrzymasz i zainstalujesz aplikację zarządzaną, organizacja skonfiguruje jej uprawnienia. Mogą one ograniczać funkcjonalność aplikacji lub interakcje użytkowników, aby chronić danych aplikację przed udostępnianiem lub używaniem przez nieautoryzowane osoby. Organizacja może na przykład zablokować kopiowanie i wklejanie w aplikacji. Może także ograniczyć zapisywanie danych w lokalnym magazynie urządzenia.
 
-Różne aplikacje zarządzane mogą również współpracować ze sobą na urządzeniu, aby umożliwić wykonywanie codziennych zadań z zachowaniem ochrony danych firmowych. Na przykład jeśli otwierasz plik firmowy w jednej aplikacji zarządzanej, a do wyświetlenia tego pliku jest wymagana inna aplikacja zarządzana, automatycznie otwiera się aplikacja zarządzana, która umożliwia wyświetlenie pliku. Jeśli wymagana aplikacja jest niedostępna, pewne akcje, takie jak otwieranie dokumentu lub uzyskiwanie dostępu do linku sieci Web z dokumentu zarządzanego, mogą być niedostępne.
+Aby zmaksymalizować ochronę danych, organizacja może skonfigurować kilka aplikacji zarządzanych do współpracy. Przykład:
+1. Łączysz się z siecią organizacji w aplikacji Managed Browser, takiej jak program Microsoft Edge.
+2. Klikasz link, aby otworzyć plik prezentacji współpracownika.
+3. Odpowiednia aplikacja zarządzana, taka jak program Microsoft PowerPoint, otwiera plik.
 
-Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświetlany komunikat podobny do poniższego, który informuje o tym, że otwierana aplikacja jest zarządzana.
+Organizacje mogą wymagać używania aplikacji zarządzanej do wykonania określonego zadania, takiego jak otwieranie pliku służbowego lub uzyskiwanie dostępu do linku internetowego. Jeśli nie masz aplikacji, kontynuowanie zadania może okazać się niemożliwe. Niektóre aplikacje zarządzane są udostępniane do zainstalowania, ale nie są wymagane.
 
-![Komunikat dotyczący otwierania zarządzanej aplikacji](./media/managed-apps-message.png)
+## <a name="how-do-i-know-im-using-a-managed-app"></a>Jak mogę sprawdzić, czy używam aplikacji zarządzanej?
+Gdy po raz pierwszy uzyskujesz dostęp do danych służbowych w aplikacji zarządzanej, jest wyświetlany komunikat podobny do poniższego przykładowego zrzutu ekranu. Komunikat zawiera monit o ponowne uruchomienie aplikacji przed kontynuowaniem.
 
-## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
-Aplikacje zarządzane można uzyskać na kilka sposobów:
+![Zrzut ekranu przedstawiający komunikat wyświetlany, gdy użytkownik otwiera aplikację zarządzaną w urządzeniu. Komunikat to: „Twoja organizacja nie chroni teraz danych w tej aplikacji. Aby kontynuować, musisz ponownie uruchomić aplikację”. Pod komunikatem znajduje się przycisk OK.](./media/managed-apps-message.png)
 
--   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu dział pomocy technicznej Twojej firmy. Aby uzyskać informacje na temat rejestrowania, zobacz [Rejestrowanie urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md).
+## <a name="commonly-managed-apps"></a>Popularne aplikacje zarządzane  
+Oto przykładowe często wymagane lub dostępne aplikacje zarządzane w miejscach pracy i nauki:
 
--   Zainstaluj aplikację ze Sklepu Play, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
+-   Microsoft Edge
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?
-Oto kilka przykładowych opcji, którymi dział pomocy technicznej Twojej firmy może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
-
--   Dostęp do określonych witryn sieci Web
-
--   Transfery danych między aplikacjami
-
--   Zapisywanie plików
-
--   Operacje kopiowania i wklejania
-
--   Wymagania dotyczące uzyskiwania dostępu za pomocą numeru PIN
-
--   Logowanie przy użyciu poświadczeń firmowych
-
--   Możliwość tworzenia kopii zapasowej w chmurze
-
--   Możliwość tworzenia zrzutów ekranu
-
--   Wymagania dotyczące szyfrowania danych
-
-Do typowych aplikacji, którymi może zarządzać dział IT, należą między innymi:
-
--   Intune Managed Browser
-
--   Przeglądarka usługi Microsoft Azure Information Protection
+-   Microsoft Outlook
 
 -   Microsoft Word, Excel i PowerPoint
+
+## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
+Najpierw należy zainstalować aplikację Portal firmy, a w razie potrzeby objąć urządzenie zarządzaniem. Następnie należy skorzystać z jednego z trzech sposobów uzyskania aplikacji zarządzanych.
+* Organizacja automatycznie instaluje aplikacje w urządzeniu w momencie rejestracji. Aby uzyskać informacje na temat rejestracji, zobacz [Rejestrowanie urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md).
+* Organizacja udostępnia aplikacje zarządzane przeznaczone dla Ciebie w aplikacji Portal firmy. Przejdź do witryny internetowej lub aplikacji Portal firmy, aby wyszukiwać, przeglądać i instalować te aplikacje. 
+* Instalujesz aplikację ze sklepu Google Play, a następnie logujesz się do niej przy użyciu konta służbowego.  
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?
+Poniższa lista zawiera opis ustawień, którymi dział pomocy technicznej w firmie może zarządzać w aplikacji. Te ustawienia mają wpływ na sposób wyświetlania danych służbowych w urządzeniu, uzyskiwania do nich dostępu oraz używania ich w inny sposób:
+
+* Dostęp do określonych witryn sieci Web  
+
+* Dostęp do wewnętrznych witryn internetowych firmy przy użyciu programu Edge i serwera proxy usługi Azure Active Directory  
+
+* Minimalna wersja aplikacji, wersja systemu operacyjnego
+
+* Możliwość udostępniania i przenoszenia danych między aplikacjami  
+
+* Sposób i lokalizacja zapisywania plików  
+
+* Funkcja kopiowania i wklejania  
+
+* Wymagania dotyczące uzyskiwania dostępu za pomocą numeru PIN  
+
+* Sposób logowania przy użyciu poświadczeń firmowych  
+
+* Możliwość tworzenia kopii zapasowej danych w chmurze  
+
+* Możliwość tworzenia zrzutów ekranu  
+
+* Wymagania dotyczące szyfrowania danych  
 
 Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

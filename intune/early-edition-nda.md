@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
-ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
+ms.openlocfilehash: a13d9b6ee37dc42e90d7c99538c9fd2e5e0d1b7b
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49652142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001596"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Wersja wczesna usługi Microsoft Intune — październik 2018
 
@@ -118,8 +118,9 @@ Użytkownicy końcowi będą mogli uzyskiwać dostęp do kluczowych akcji dotycz
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Token VPP firmy Apple używany przez inne rozwiązanie MDM <!-- 1488946 -->
 Usługa Intune wykryje i wyświetli szczegółowe informacje, jeśli token programu VPP (Volume Purchase Program) jest używany zarówno przez usługę Intune, jak i inne rozwiązanie MDM.
 
-### <a name="ios-version-number-and-build-number-are-shown----1892471---"></a>Numer wersji i numer kompilacji systemu iOS są wyświetlane <!-- 1892471 -->
-W polu **Zgodność urządzenia** > **Zgodność urządzenia** jest wyświetlana wersja systemu operacyjnego iOS. W ramach przyszłej aktualizacji będzie także wyświetlany numer kompilacji.
+### <a name="ios-and-macos-version-numbers-and-build-numbers-are-shown----1892471---"></a>Są wyświetlane numery wersji i numery kompilacji systemów iOS i macOS <!-- 1892471 -->
+W polu **Zgodność urządzenia** > **Zgodność urządzenia** jest wyświetlana wersja systemu operacyjnego iOS i macOS. W ramach przyszłej aktualizacji będzie także wyświetlany numer kompilacji dla obydwu platform.
+
 Po wydaniu aktualizacji zabezpieczeń firma Apple zwykle pozostawia numer wersji bez zmian, lecz aktualizuje numer kompilacji. Wyświetlając numer kompilacji, można łatwo sprawdzić, czy aktualizacja luk w zabezpieczeniach została zainstalowana.
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Wycofane urządzenia na pulpicie nawigacyjnym zgodności urządzeń <!-- 1981119 -->

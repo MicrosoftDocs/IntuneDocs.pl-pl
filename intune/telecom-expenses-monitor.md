@@ -15,17 +15,17 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16d57ee6a722e8d840b8e8a09ba583698fcb67be
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: e4c44552a0df369767bb91749351674af9eab4b3
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562905"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959557"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurowanie usługi do zarządzania wydatkami telekomunikacyjnymi w usłudze Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune umożliwia zarządzanie wydatkami telekomunikacyjnymi poniesionymi w związku z użyciem danych na urządzeniach przenośnych należących do firmy. W tym celu usługa Intune została zintegrowana z rozwiązaniem Datalert do zarządzania wydatkami telekomunikacyjnymi firmy Saaswedo. Rozwiązanie Datalert to oprogramowanie do zarządzania wydatkami telekomunikacyjnymi w czasie rzeczywistym, które umożliwia zarządzanie danymi dotyczącymi użycia rozwiązań telekomunikacyjnych. Pomaga unikać kosztownych i nieoczekiwanych nadwyżek użycia roamingu na urządzeniach zarządzanych przez usługę Intune.
+Usługa Intune umożliwia zarządzanie wydatkami telekomunikacyjnymi poniesionymi w związku z użyciem danych na urządzeniach przenośnych należących do firmy. W tym celu usługa Intune została zintegrowana z [rozwiązaniem Datalert do zarządzania wydatkami telekomunikacyjnymi](http://datalert.biz/get-started) firmy Saaswedo. Rozwiązanie Datalert to oprogramowanie do zarządzania wydatkami telekomunikacyjnymi w czasie rzeczywistym, które umożliwia zarządzanie danymi dotyczącymi użycia rozwiązań telekomunikacyjnych. Pomaga unikać kosztownych i nieoczekiwanych nadwyżek użycia roamingu na urządzeniach zarządzanych przez usługę Intune.
 
 Integracja usługi Intune z rozwiązaniem Datalert umożliwia centralne ustawianie, monitorowanie i wymuszanie limitów użycia danych w roamingu i połączeniach krajowych. Automatyczne alerty są wyzwalane, gdy limity przekroczą zdefiniowane progi. Możesz skonfigurować usługę tak, aby stosować różne akcje do konkretnych osób lub grup użytkowników końcowych (np. wyłączać funkcję roamingu w przypadku przekroczenia wartości progowej). Raporty, które zawierają informacje dotyczące użycia danych i informacje monitorowania, są dostępne w konsoli zarządzania usługi Datalert.
 
@@ -61,19 +61,31 @@ Przed rozpoczęciem upewnij się, że masz już subskrypcję usług Intune i Dat
 
 2. W konsoli zarządzania usługi Datalert przejdź do karty **Settings** (Ustawienia), a następnie do pozycji **MDM configuration** (Konfiguracja zarządzania urządzeniami przenośnymi).
 
-3. Wybierz pozycję **Unblock** (Odblokuj), aby umożliwić wprowadzanie ustawień na stronie.
+3. Wybierz pozycję **Unblock** (Odblokuj) w dolnej części strony, co umożliwi modyfikowanie ustawień na stronie.
 
-4. W pozycji **Server MDM** (Serwerowe zarządzanie urządzeniami przenośnymi) wybierz opcję **Microsoft Intune**.
+4. W sekcji **Intune/Datalert Connection** (Połączenie usługi Intune/Datalert) wybierz pozycję **Microsoft Intune** w obszarze **Server MDM** (Oprogramowanie MDM serwera).    
 
-5. W pozycji **Azure AD domain** (Domena usługi Azure AD) wprowadź identyfikator dzierżawy platformy Azure, a następnie wybierz przycisk **Connection** (Połączenie).
+5. W pozycji **Azure AD domain** (Domena usługi Azure AD) wprowadź identyfikator dzierżawy platformy Azure, a następnie wybierz pozycję **Connection** (Połączenie).
 
-    Wybranie przycisku **Connection** spowoduje, że usługa Datalert zostanie zewidencjonowana w usłudze Intune, aby uzyskać pewność, że nie istnieją wcześniejsze połączenia usługi Datalert z usługą Intune. Po kilku sekundach zostanie wyświetlona strona logowania firmy Microsoft, po czym nastąpi uwierzytelnienie usługi Datalert na platformie Azure.
+    Wybranie przycisku **Connection** (Połączenie) spowoduje, że usługa Datalert zostanie zewidencjonowana w usłudze Intune, aby uzyskać pewność, że nie istnieją wcześniejsze połączenia usługi Datalert z usługą Intune. Po kilku sekundach zostanie wyświetlona strona logowania firmy Microsoft, po czym nastąpi uwierzytelnienie usługi Datalert na platformie Azure.
 
-6. Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony podziękowania usługi Datalert, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli weryfikacja nie powiedzie się, zobaczysz komunikat w kolorze czerwonym. Skontaktuj się z pomocą techniczną firmy Datalert, aby uzyskać pomoc.
+6. Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony **podziękowania** usługi Datalert, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli weryfikacja nie powiedzie się, zobaczysz komunikat w kolorze czerwonym. Skontaktuj się z pomocą techniczną firmy Datalert, aby uzyskać pomoc.
 
     Na poniższym zrzucie ekranu przedstawiono zielone znaczniki wyświetlane po pomyślnym nawiązaniu połączenia.
 
-   ![Strona usługi Datalert przedstawiająca pomyślne nawiązanie połączenia](./media/tem-mdm-configuration-mdm-server-page.png)
+   ![Strona usługi Datalert przedstawiająca pomyślne nawiązanie połączenia](./media/tem-datalert-connection.png)
+
+7. W sekcji **Datalert App/ADAL Consent** (Zgoda dotycząca aplikacji/biblioteki ADAL usługi Datalert) ustaw przełącznik w położeniu **On** (Wł.). Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony **podziękowania** usługi Datalert, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli weryfikacja nie powiedzie się, zobaczysz komunikat w kolorze czerwonym. Skontaktuj się z pomocą techniczną firmy Datalert, aby uzyskać pomoc.    
+
+    Na poniższym zrzucie ekranu przedstawiono zielone znaczniki wyświetlane po pomyślnym nawiązaniu połączenia.
+
+   ![Strona usługi Datalert przedstawiająca pomyślne nawiązanie połączenia](./media/tem-datalert-adal-consent.png)
+
+8. W sekcji **MDM Profiles management (optional)** (Zarządzanie profilami MDM (opcjonalne)) ustaw przełącznik w położeniu **On** (Wł.), aby odczytywać dostępne profile w usłudze Intune. Ułatwi to konfigurowanie zasad. Na stronie uwierzytelniania firmy Microsoft wybierz opcję **Akceptuj**. Nastąpi przekierowanie do strony **podziękowania** usługi Datalert, która po kilku sekundach zostanie zamknięta. Usługa Datalert zweryfikuje połączenie i wyświetli zielone znaczniki obok zweryfikowanych elementów listy. Jeśli weryfikacja nie powiedzie się, zobaczysz komunikat w kolorze czerwonym. Skontaktuj się z pomocą techniczną firmy Datalert, aby uzyskać pomoc.    
+
+    Na poniższym zrzucie ekranu przedstawiono zielone znaczniki wyświetlane po pomyślnym nawiązaniu połączenia.
+
+   ![Strona usługi Datalert przedstawiająca pomyślne nawiązanie połączenia](./media/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Krok 2: Sprawdzenie, czy funkcja zarządzania wydatkami telekomunikacyjnymi jest aktywna w usłudze Intune
 

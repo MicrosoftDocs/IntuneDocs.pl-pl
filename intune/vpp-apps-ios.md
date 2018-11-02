@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a5333f4e94db0b41b81dcb2589133956c040725
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: e7b1c8f35dcb4bcf7a4d2872221c6bb8905ab8f5
+ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903509"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225441"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -93,7 +93,7 @@ Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfi
         > Zmiana kraju spowoduje zaktualizowanie metadanych aplikacji i adresu URL sklepu przy następnej synchronizacji z usługą firmy Apple w przypadku aplikacji utworzonych za pomocą tego tokenu. Jeśli aplikacja nie istnieje w nowym sklepie krajowym, nie zostanie zaktualizowana.
 
     - **Typ konta programu VPP** — wybierz opcję **Biznes** lub **Edukacja**.
-    - **Aktualizacje automatyczne aplikacji** — wybierz **Wł.** lub **Wył.**, aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune wykrywa aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypycha je do urządzenia po jego zaewidencjonowaniu. Automatyczne aktualizacje aplikacji dla aplikacji VPP firmy Apple będą automatycznie aktualizować tylko aplikacje wdrażane za pomocą intencji instalacji **Wymagana**. W przypadku aplikacji wdrożonych za pomocą intencji instalacji **Dostępna** automatyczna aktualizacja generuje dla Ciebie (administratora) powiadomienie o dostępności nowej wersji aplikacji. Użytkownik musi kliknąć przycisk Zainstaluj, aby zainstalować nowszą wersję aplikacji. Ponadto użytkownik zobaczy aplikację jako nie zainstalowaną w witrynie Portal firmy, nawet jeśli jest zainstalowana wcześniejsza wersja aplikacji. W takim przypadku użytkownik może ponownie zainstalować aplikację.
+    - **Aktualizacje automatyczne aplikacji** — wybierz pozycję **Wł.** lub **Wył.**, aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune wykrywa aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypycha je do urządzenia po jego zaewidencjonowaniu. Automatyczne aktualizacje aplikacji dla aplikacji VPP firmy Apple będą automatycznie aktualizować tylko aplikacje wdrażane za pomocą intencji instalacji **Wymagana**. W przypadku aplikacji wdrożonych za pomocą intencji instalacji **Dostępna** automatyczna aktualizacja generuje dla Ciebie (administratora) powiadomienie o dostępności nowej wersji aplikacji. Użytkownik musi kliknąć przycisk Zainstaluj, aby zainstalować nowszą wersję aplikacji. Ponadto użytkownik zobaczy aplikację jako nie zainstalowaną w witrynie Portal firmy, nawet jeśli jest zainstalowana wcześniejsza wersja aplikacji. W takim przypadku użytkownik może ponownie zainstalować aplikację.
     
         > [!NOTE]
         > Automatyczne aktualizacje aplikacji działają zarówno w przypadku aplikacji licencjonowanych dla urządzenia, jak i użytkownika dla systemu iOS w wersji 11.0 i nowszej.

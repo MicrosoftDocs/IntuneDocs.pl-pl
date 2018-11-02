@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 677b3853d1923a52572d8088c885f794175c4d52
-ms.sourcegitcommit: a13d1eafc979a9cfeb4adbdea861e2784c2b1068
+ms.openlocfilehash: 67a1eba8208140306c697b7fe7dddb987e4b75c9
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46330001"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001613"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Ustawienia ograniczeń urządzenia z systemem iOS w usłudze Microsoft Intune
 
@@ -215,8 +215,8 @@ Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi 
 -   **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji (tylko nadzorowany)** — zezwalaj na dołączanie urządzenia tylko do sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu sieci Wi-Fi usługi Intune.
 
 - **Zasady użycia danych komórkowych (tylko aplikacje zarządzane)** — umożliwia definiowanie typów danych, których aplikacje zarządzane mogą używać podczas pracy w sieciach komórkowych. Wybierz spośród opcji:
-    - **Zablokuj użycie danych komórkowych** — możesz zablokować użycie danych komórkowych dla ** wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
-    - **Zablokuj użycie danych komórkowych podczas roamingu** — możesz zablokować użycie danych komórkowych podczas roamingu dla ** wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
+    - **Zablokuj użycie danych komórkowych** — możesz zablokować użycie danych komórkowych dla **wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
+    - **Zablokuj użycie danych komórkowych podczas roamingu** — możesz zablokować użycie danych komórkowych podczas roamingu dla **wszystkich zarządzanych aplikacji** lub **wybrać określone aplikacje**.
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 

@@ -1,62 +1,56 @@
 ---
 title: Korzystanie z niestandardowych ustawień urządzenia w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodawanie lub tworzenie profilu umożliwiającego korzystanie z niestandardowych ustawień dla urządzeń z systemami Windows, Android i iOS za pomocą usługi Microsoft Intune
+description: Dodawanie lub tworzenie profilu umożliwiającego korzystanie z niestandardowych ustawień dla urządzeń z systemami Windows Phone, Windows 8.1, Windows 10 lub nowszym, Android, Anndroid Enterprise, macOS oraz iOS za pomocą usługi Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/06/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d917d2449e75b89db00d453b72940a93efb03321
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 3106f71b59019a1cf71680c51be6dfcb4ce10b0d
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905006"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983078"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Tworzenie profilu z ustawieniami niestandardowymi w usłudze Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+## <a name="what-are-custom-profiles"></a>Czym są profile niestandardowe
 
-Usługa Intune może nie mieć wbudowanych wszystkich ustawień, których potrzebujesz. Możesz też zechcieć skorzystać z ustawień dostępnych w innych profilach urządzeń. Aby dodać te ustawienia, utwórz profil urządzenia i skonfiguruj go z użyciem niestandardowych ustawień urządzenia.
+Usługa Microsoft Intune zawiera wiele wbudowanych ustawień do kontrolowania różnych funkcji na urządzeniu. Profile niestandardowe można również tworzyć. Profile niestandardowe świetnie się sprawdzają, gdy chcesz użyć ustawień i funkcji urządzenia, które nie są wbudowane w usłudze Intune. Takie profile zawierają funkcje i ustawienia, które możesz kontrolować na urządzeniach w organizacji. Możesz na przykład utworzyć profil niestandardowy, który ustawia tę samą funkcję dla każdego urządzenia z systemem iOS.
 
-W tym artykule wymieniono podstawowe kroki tworzenia profilu z ustawieniami niestandardowymi. Zawiera on również linki do szczegółowych opisów tworzenia ustawień niestandardowych dla różnych platform.
+Aby uzyskać więcej informacji na temat profilów konfiguracji, zobacz [Co to są profile urządzeń w usłudze Microsoft Intune?](device-profiles.md). 
 
-## <a name="custom-settings-on-different-platforms"></a>Ustawienia niestandardowe na różnych platformach
-Konfiguracja ustawień niestandardowych przebiega różnie w zależności od platformy. Na przykład w celu sterowania funkcjami urządzeń z systemami Android i Windows można określić wartości Open Mobile Alliance Uniform Resource Identifier (OMA-URI). W przypadku urządzeń firmy Apple można zaimportować plik utworzony za pomocą programu [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12).
+Ten artykuł zawiera linki do instrukcji tworzenia profilów niestandardowych dla systemów Android, Android Enterprise, iOS, macOS i Windows.
 
-## <a name="create-the-profile"></a>Tworzenie profilu
+## <a name="available-platforms"></a>Dostępne platformy
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. W obszarze **Konfiguracja urządzeń** wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
-4. Wprowadź **nazwę** i **opis** profilu niestandardowego.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której mają zostać zastosowane ustawienia niestandardowe. Można wybrać dowolną z następujących platform:
+Konfiguracja ustawień niestandardowych przebiega różnie w zależności od platformy. Na przykład w celu sterowania funkcjami urządzeń z systemami Android i Windows można określić wartości Open Mobile Alliance Uniform Resource Identifier (OMA-URI). W przypadku urządzeń firmy Apple można zaimportować plik utworzony za pomocą programu [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) lub [Apple Profile Manager](https://support.apple.com/profile-manager).
 
-    - **Android**
-    - **Android enterprise**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 lub nowszy**
-    - **Windows 10 lub nowszy**
+Profile niestandardowe są tworzone podobnie, jak profile wbudowane, i są dostępne na następujących platformach:
 
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Niestandardowy**.
-7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Poniższe linki dają dostęp do większej ilości szczegółów na temat niestandardowych ustawień dla każdej platformy:
+- [Android](custom-settings-android.md)
+- [Android Enterprise](custom-settings-android-for-work.md)
+- [iOS](custom-settings-ios.md)
+- [macOS](custom-settings-macos.md)
+- [Windows 10](custom-settings-windows-10.md)
+- [Windows Holographic for Business](custom-settings-windows-holographic.md)
+- [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-    - [Ustawienia systemu Android](custom-settings-android.md)
-    - [Ustawienia systemu iOS](custom-settings-ios.md)
-    - [macOS settings](custom-settings-macos.md) (Ustawienia systemu macOS)
-    - [Ustawienia systemu Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
-    - [Windows 10 settings](custom-settings-windows-10.md) (Ustawienia systemu Windows 10)
-    - [Ustawienia systemu Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Ustawienia profilu służbowego w systemie Android](custom-settings-android-for-work.md)
+## <a name="next-steps"></a>Następne kroki
 
-8. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**.
+Wybierz platformę i rozpocznij pracę:
 
-Profil zostanie utworzony i wyświetlony na liście profilów. Aby przypisać ten profil do grup, zobacz [Jak przypisywać profile urządzeń](device-profile-assign.md).
+- [Android](custom-settings-android.md)
+- [Android Enterprise](custom-settings-android-for-work.md)
+- [iOS](custom-settings-ios.md)
+- [macOS](custom-settings-macos.md)
+- [Windows 10](custom-settings-windows-10.md)
+- [Windows Holographic for Business](custom-settings-windows-holographic.md)
+- [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)

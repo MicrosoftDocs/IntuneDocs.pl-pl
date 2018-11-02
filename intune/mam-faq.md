@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 57c69c1610168aa25d33c8124c38f585eb715251
+ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643029"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225458"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -181,6 +181,15 @@ Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udos
 Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określonej kolejności na urządzeniach użytkowników końcowych, kiedy będą próbowali uzyskać dostęp do aplikacji docelowej ze swojego konta firmowego. Ogólnie rzecz biorąc, pierwszeństwo miałoby czyszczenie, następnie blokada, a następnie ostrzeżenie z możliwością odrzucenia. Na przykład jeśli ma zastosowanie do określonego użytkownika/aplikacji, ustawienie minimalnej wersji systemu operacyjnego iOS, które ostrzega użytkownika o konieczności uaktualnienia wersji systemu iOS, zostanie zastosowane po ustawieniu minimalnej wersji systemu operacyjnego iOS, które blokuje dostęp użytkownika. Dlatego w scenariuszu, w którym administrator IT skonfigurował minimalną wersję systemu operacyjnego iOS na 11.0.0.0 i minimalną wersję systemu operacyjnego iOS (tylko ostrzeżenie) na 11.1.0.0, a urządzenie próbujące uzyskać dostęp do aplikacji ma system operacyjny iOS 10, użytkownik końcowy zostałby zablokowany na podstawie bardziej restrykcyjnego ustawienia minimalnej wersji systemu operacyjnego iOS, które powoduje zablokowanie dostępu.
 
 Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotyczące wersji zestawu SDK aplikacji usługi Intune, następnie wymaganie dotyczące wersji aplikacji, a potem wymaganie dotyczące wersji systemu operacyjnego iOS. Następnie sprawdzane są ostrzeżenia dla wszystkich typów ustawień w tej samej kolejności. Zaleca się, aby wymaganie dotyczące wersji zestawu SDK aplikacji usługi Intune było konfigurowane tylko na podstawie wskazówek od zespołu produktu usługi Intune dla podstawowych scenariuszy blokowania.
+
+## <a name="app-protection-policies---policy-refresh"></a>Zasady ochrony aplikacji — odświeżanie zasad
+- Aplikacje są zaewidencjonowane w usłudze App Service co 30 minut.
+- 30-minutowy próg opiera się na czasomierzu.
+    - Jeśli aplikacja jest aktywna w 30 minucie, zostanie zaewidencjonowana w 30 minucie.
+    - Jeśli aplikacja jest uśpiona w 30 minucie, zostanie zaewidencjonowana w następnym cyklu.
+- Jeśli do użytkownika nie przypisano żadnych zasad, zaewidencjonowanie następuje co osiem godzin.
+- Jeśli nie przypisano żadnej licencji usługi Intune, zaewidencjonowanie następuje co 24 godziny.
+
 
 ## <a name="see-also"></a>Zobacz też
 - [Implementowanie własnego planu dotyczącego usługi Intune](planning-guide-onboarding.md)

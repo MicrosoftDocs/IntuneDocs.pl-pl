@@ -1,12 +1,12 @@
 ---
 title: Dodawanie aplikacji Win32 do usługi Microsoft Intune
 titlesuffix: ''
-description: Dowiedz się, jak dodać aplikacje Win32 do usługi Microsoft Intune i zarządzać nimi.
+description: Dowiedz się, jak dodawać i dostarczać aplikacje Win32 oraz zarządzać nimi w usłudze Microsoft Intune. Ten temat zawiera omówienie możliwości dostarczania aplikacji Win32 i zarządzania nimi w usłudze Intune, a także informacje dotyczące rozwiązywania problemów z aplikacjami Win32.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
-ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
+ms.openlocfilehash: d5a678e76db516034c8b6d20d58855fd281f31f8
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357108"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959591"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
-Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami Win32. O ile klienci połączeni z chmurą mogą zarządzać aplikacjami Win32 za pomocą programu Configuration Manager, klienci korzystający tylko z usługi Intune będą mieć większe możliwości zarządzania aplikacjami biznesowymi Win32. Ten dokument zawiera omówienie funkcji zarządzania aplikacjami Win32 w usłudze Intune i informacje dotyczące rozwiązywania problemów.
+Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami Win32. O ile klienci połączeni z chmurą mogą zarządzać aplikacjami Win32 za pomocą programu Configuration Manager, klienci korzystający tylko z usługi Intune będą mieć większe możliwości zarządzania aplikacjami biznesowymi Win32. Ten temat zawiera omówienie funkcji zarządzania aplikacjami Win32 w usłudze Intune i informacje dotyczące rozwiązywania problemów.
 
 ## <a name="prerequisites-for-public-preview"></a>Wymagania wstępne dla publicznej wersji zapoznawczej
 
