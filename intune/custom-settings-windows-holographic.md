@@ -1,11 +1,11 @@
 ---
 title: Niestandardowe ustawienia urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: 'Utwórz profil niestandardowy w celu użycia ustawień identyfikatora URI OMA dla urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune. Ustawienia dostawcy usług konfiguracji zasad dostępne do użycia to: AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates i ApplicationLaunchRestrictions.'
+description: 'Dodaj lub utwórz profil niestandardowy w celu użycia ustawień identyfikatora URI OMA dla urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune, w tym dla urządzenia Microsoft Hololens. Ustawienia dostawcy usług konfiguracji zasad dostępne do użycia to: AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates i ApplicationLaunchRestrictions.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/26/2018
+ms.date: 10/24/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,39 +13,57 @@ ms.topic: article
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b8ba5078d304c0e9d6b10e4efb868642323c901c
-ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
+ms.openlocfilehash: 863ef32d05fed601eaf38f749aa30e1c4b657cc9
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403582"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983163"
 ---
-# <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Niestandardowe ustawienia urządzeń z systemem Windows Holographic for Business w usłudze Intune
+# <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows Holographic for Business w usłudze Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia niestandardowe dla urządzeń z systemem Windows Holographic for Business przy użyciu „profili niestandardowych”. Profile niestandardowe to funkcja w usłudze Intune. Służą one do dodawania ustawień i funkcji urządzeń, które nie są wbudowane w usłudze Intune.
 
- Profil **niestandardowy** usługi Microsoft Intune dla systemu Windows Holographic for Business umożliwia wdrożenie ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier), których można użyć do sterowania funkcjami na urządzeniach. System Windows Holographic for Business udostępnia wiele ustawień dostawców usługi konfiguracji (CSP). Aby zapoznać się z omówieniem dostawcy usługi konfiguracji, zobacz [Introduction to configuration service providers (CSPs) for IT pros](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) (Wprowadzenie do dostawców usługi konfiguracji dla specjalistów IT). Aby uzyskać informacje o konkretnym dostawcy usługi konfiguracji obsługiwanym w systemie Windows Holographic, zobacz [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic).
+Profile niestandardowe systemu Windows Holographic for Business używają ustawień jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania różnych funkcji. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania funkcji na urządzeniu.
 
-Jeśli szukasz konkretnego ustawienia, pamiętaj, że [profil ograniczeń urządzenia z systemem Windows Holographic for Business](device-restrictions-windows-holographic.md) zawiera wiele wbudowanych ustawień i nie wymaga określenia wartości niestandardowych.
+System Windows Holographic for Business udostępnia wiele ustawień dostawców usługi konfiguracji (CSP). Aby zapoznać się z omówieniem dostawcy usługi konfiguracji, zobacz [Introduction to configuration service providers (CSPs) for IT pros](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) (Wprowadzenie do dostawców usługi konfiguracji dla specjalistów IT). Aby uzyskać informacje o konkretnym dostawcy usługi konfiguracji obsługiwanym w systemie Windows Holographic, zobacz [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic).
 
-## <a name="create-the-custom-oma-uri-profile"></a>Tworzenie niestandardowego profilu OMA-URI
+Jeśli szukasz określonego ustawienia, pamiętaj, że [profil ograniczeń urządzenia z systemem Windows Holographic for Business](device-restrictions-windows-holographic.md) zawiera wiele wbudowanych ustawień. Dzięki temu być może nie trzeba będzie wprowadzać wartości niestandardowych.
 
-1. Aby rozpocząć pracę, postępuj zgodnie z instrukcjami w artykule [Configure custom device settings in Microsoft Intune (Konfigurowanie niestandardowych ustawień urządzeń w usłudze Microsoft Intune)](custom-settings-configure.md).
-2. W obszarze **Tworzenie profilu** wybierz pozycję **Ustawienia**, aby dodać co najmniej jedno ustawienie OMA-URI.
-3. W obszarze **Ustawienia niestandardowe OMA-URI** kliknij przycisk **Dodaj**, aby dodać nową wartość. Możesz również kliknąć przycisk **Eksportuj**, aby utworzyć listę wszystkich wartości skonfigurowanych w pliku wartości rozdzielanych przecinkami (.csv).
-4. Dla każdego ustawienia OMA-URI, które chcesz dodać, wprowadź następujące informacje:
-  - **Nazwa ustawienia**: wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-  - **Opis ustawienia**: opcjonalnie wprowadź opis ustawienia.
-  - **Typ danych**: Wybierz spośród opcji:
-    - **Ciąg**
-    - **Ciąg (XML)**
-    - **Data i godzina**
-    - **Liczba całkowita**
-    - **Liczba zmiennoprzecinkowa**
-    - **Wartość logiczna**
-  - **OMA-URI (z uwzględnieniem wielkości liter)**: wprowadź identyfikator OMA-URI, dla którego chcesz podać ustawienie.
-  - **Wartość** — wprowadź wartość, która będzie kojarzona z wprowadzonym identyfikatorem OMA-URI.
-5. Gdy skończysz, w obszarze **Tworzenie profilu** kliknij pozycję **Utwórz**. Profil zostanie utworzony i wyświetlony na liście profilów.
+W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z systemem Windows Holographic for Business. Zawiera on także listę zalecanych ustawień identyfikatora OMA-URI.
+
+## <a name="create-the-profile"></a>Tworzenie profilu
+
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Podaj następujące ustawienia:
+
+    - **Nazwa**: wprowadź nazwę profilu, na przykład `hololens custom profile`.
+    - **Opis:** wprowadź opis profilu.
+    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
+    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+
+4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
+
+    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
+    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+
+        - String
+        - Ciąg (plik XML)
+        - Data i godzina
+        - Integer
+        - Liczba zmiennoprzecinkowa
+        - Boolean
+        - Base64 (plik)
+
+    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+
+    Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
+
+5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
 
 ## <a name="recommended-custom-settings"></a>Zalecane ustawienia niestandardowe
 
@@ -145,6 +163,12 @@ Następujące ustawienia są przydatne w przypadku urządzeń z systemem Windows
 
 ## <a name="find-the-policies-you-can-configure"></a>Wyszukiwanie zasad, które można skonfigurować
 
-W tabeli [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic) znajduje się pełna lista wszystkich dostawców usługi konfiguracji (CSP) obsługiwanych w systemie Windows Holographic. Nie wszystkie ustawienia są zgodne ze wszystkimi wersjami systemu Windows Holographic. Tabela w artykule poświęconym systemowi Windows zawiera informacje o wersjach obsługiwanych w przypadku poszczególnych dostawców usług konfiguracji.
+W tabeli [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic) znajduje się pełna lista wszystkich dostawców usługi konfiguracji (CSP) obsługiwanych w systemie Windows Holographic. Nie wszystkie ustawienia są zgodne ze wszystkimi wersjami systemu Windows Holographic. Tabela [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic) zawiera listę obsługiwanych wersji dla każdego dostawcy usług konfiguracji.
 
-Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artykule. Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
+Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w tabeli [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (Dostawcy usługi konfiguracji obsługiwani w systemie Windows Holographic). Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
+
+## <a name="next-steps"></a>Następne kroki
+
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).
+
+Zobacz, jak utworzyć profil niestandardowy na [urządzeniach z systemem Windows 10](custom-settings-windows-10.md).
