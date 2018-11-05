@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
-ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
+ms.openlocfilehash: 6df3f16940a9478756cc1f268ad98b7c9d3f044e
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001562"
 ---
 # <a name="using-your-android-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem Android z aplikacją Portal firmy usługi Intune
 
@@ -30,9 +30,9 @@ Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Aplikacja Portal firmy obsługuje obecnie system Android 4.4 i nowsze wersje. Uwzględniona jest również obsługa urządzeń z systemem Samsung Knox 4.4 i nowszymi wersjami.
+Aplikacja Portal firmy obsługuje obecnie system Android 4.4 i nowsze wersje. Obejmuje to urządzenia z rozwiązaniem Samsung Knox, na których działa system Android 4.4 i jego nowsze wersje.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
+## <a name="enrolling-in-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
 - [Rejestracja urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md)
 - [Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
