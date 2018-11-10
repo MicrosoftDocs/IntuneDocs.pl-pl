@@ -1,27 +1,10 @@
 ---
-title: Dodawanie aplikacji Win32 do usługi Microsoft Intune
-titlesuffix: ''
-description: Dowiedz się, jak dodawać i dostarczać aplikacje Win32 oraz zarządzać nimi w usłudze Microsoft Intune. Ten temat zawiera omówienie możliwości dostarczania aplikacji Win32 i zarządzania nimi w usłudze Intune, a także informacje dotyczące rozwiązywania problemów z aplikacjami Win32.
-keywords: ''
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 10/23/2018
-ms.topic: article
-ms.prod: ''
-ms.service: microsoft-intune
-ms.technology: ''
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-ms.reviewer: mghadial
-ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: d5a678e76db516034c8b6d20d58855fd281f31f8
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959591"
+title: Dodawanie aplikacji Win32 do usługi Microsoft Intune titlesuffix: description: Dowiedz się, jak dodawać i dostarczać aplikacje Win32 oraz zarządzać nimi w usłudze Microsoft Intune. Ten temat zawiera omówienie możliwości dostarczania aplikacji Win32 i zarządzania nimi w usłudze Intune, a także informacje dotyczące rozwiązywania problemów z aplikacjami Win32. keywords: author: Erikre ms.author: erikre manager: dougeby <<<<<<< HEAD ms.date: 10/23/2018 ======= ms.date: 10/19/2018
+>>>>>>> 14fdd9aac5e66324acfe83ae31b126d8216d7da4 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
+
+ms.reviewer: mghadial ms.suite: ems ms.custom: intune-azure
 ---
+
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
 Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami Win32. O ile klienci połączeni z chmurą mogą zarządzać aplikacjami Win32 za pomocą programu Configuration Manager, klienci korzystający tylko z usługi Intune będą mieć większe możliwości zarządzania aplikacjami biznesowymi Win32. Ten temat zawiera omówienie funkcji zarządzania aplikacjami Win32 w usłudze Intune i informacje dotyczące rozwiązywania problemów.
@@ -32,7 +15,7 @@ Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami 
 - Klient z systemem Windows 10 musi być: 
     - Przyłączony do usługi Azure Active Directory (AAD) lub hybrydowej usługi Azure Active Directory
     - Zarejestrowany w usłudze Intune (zarządzany przez rozwiązanie MDM)
-- Rozmiar aplikacji systemu Windows jest ograniczony do 2 GB na aplikację w publicznej wersji zapoznawczej 
+- Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację w publicznej wersji zapoznawczej 
 
 > [!NOTE]
 > Obecnie testujemy wersje Pro i Education systemu Windows 10 w wersji 1607 i chętnie poznamy Twoją opinię.
@@ -109,6 +92,11 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
 3.  Dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
 
     Na przykład: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+    > [!NOTE]
+    > Możesz skonfigurować aplikację Win32, aby została zainstalowana w kontekście **Użytkownik** lub **System**. Kontekst **Użytkownik** odwołuje się tylko do danego użytkownika. Kontekst **System** odwołuje się do wszystkich użytkowników urządzenia z systemem Windows 10.
+    >
+    > Użytkownicy końcowi nie muszą być zalogowani na urządzeniu, aby instalować aplikacje Win32.
 
 4.  Po zakończeniu wybierz przycisk **OK**.
 
@@ -233,7 +221,6 @@ Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Mic
 ### <a name="troubleshooting-areas-to-consider"></a>Obszary rozwiązywania problemów do uwzględnienia
 - Sprawdź ustawienie celu, aby upewnić się, że agent jest zainstalowany na urządzeniu — aplikacja Win32 przeznaczona dla grupy lub skrypt programu PowerShell przeznaczony dla grupy spowoduje utworzenie zasad instalacji agenta dla grupy zabezpieczeń.
 - Sprawdź wersję systemu operacyjnego — system Windows 10 1607 lub nowszy.  
-- Czy użytkownik usługi AAD jest zalogowany na komputerze klienta?
 - Sprawdź jednostkę SKU systemu Windows 10 — system Windows 10 S lub system Windows z włączonym trybem S nie obsługują instalacji za pomocą pliku MSI.
 
 ## <a name="next-steps"></a>Następne kroki

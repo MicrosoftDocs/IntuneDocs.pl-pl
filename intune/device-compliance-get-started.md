@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a70b6369bab130918bad472172995e6296ee4a6
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 226713d893e05c2c2aeea49cde2ce92591d06391
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391573"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915703"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -153,7 +153,7 @@ Zasady zgodności można również stosować bez dostępu warunkowego. Jeśli za
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sposoby wdrażania zasad zgodności urządzeń
 Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników lub urządzeń w grupach urządzeń. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność wszystkich urządzeń użytkownika. Na urządzeniach z systemem Windows 10 w wersji 1803 lub nowszej zaleca się wdrażanie do grupy urządzeń, *jeśli* użytkownik podstawowy nie zarejestrował urządzenia. Użycie grup urządzeń w tym scenariuszu ułatwia raportowanie zgodności.
 
-Domyślne **ustawienia zasad zgodności** (witryna Azure Portal > Zgodność urządzenia) obejmują następujące ustawienia:
+Zestaw wbudowanych **ustawień zasad zgodności** (witryna Azure Portal > Zgodność urządzenia) ocenianych na wszystkich urządzeniach zarejestrowanych w usłudze Intune. Należą do nich:
 
 - **Oznacz urządzenia bez przypisanych zasad zgodności jako**: ta właściwość ma dwie wartości:
 
@@ -171,7 +171,7 @@ Domyślne **ustawienia zasad zgodności** (witryna Azure Portal > Zgodność urz
 
 - **Okres ważności stanu zgodności (dni)**: podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni.
 
-Wszystkie urządzenia mają **domyślne zasady zgodności urządzeń** (Witryna Azure Portal > Zgodność urządzenia > Zasady zgodności). Zasady domyślne umożliwiają monitorowanie tych ustawień.
+Wszystkie urządzenia mają **wbudowane zasady zgodności urządzeń** (witryna Azure Portal > Zgodność urządzenia > Zgodność z zasadami). Wbudowane zasady umożliwiają monitorowanie tych ustawień.
 
 Aby uzyskać informacje o czasie potrzebnym na odebranie zasad przez urządzenia mobilne po wdrożeniu tych zasad, zobacz artykuł [Rozwiązywanie problemów z profilami urządzeń](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 

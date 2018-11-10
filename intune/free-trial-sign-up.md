@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 11/01/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37445cb2536e02937cf3002dc1cb56ab4b78f12f
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2f150db2e1d5fbc8e08bb7f7fcee50f0eda23ca7
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581397"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915686"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Przewodnik Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
@@ -70,20 +70,27 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
 Po utworzeniu konta w celu korzystania z wersji próbnej na adres e-mail podany w procesie tworzenia konta zostanie wysłana wiadomość e-mail zawierająca informacje o koncie. Stanowi ona potwierdzenie, że Twoja wersja próbna jest aktywna.
 
+> [!TIP]
+> Praca z witryną Azure Portal może być efektywniejsza w trybie normalnym niż w trybie prywatnym.
+
 ## <a name="set-the-mdm-authority-to-intune"></a>Ustawianie usługi Intune jako urzędu MDM
 
-Ustawienie urzędu zarządzania urządzeniami przenośnymi (MDM) określa metodę zarządzania urządzeniami. Jako administrator systemów informatycznych, musisz ustawić urząd MDM, aby użytkownicy mogli zarejestrować urządzenia do zarządzania.
+Po zarejestrowaniu się w witrynie Azure Portal i wybraniu usługi Intune może pojawić się pomarańczowy baner wskazujący, że nie ustawiono jeszcze urzędu MDM. Ustawienie urzędu zarządzania urządzeniami przenośnymi (MDM) określa metodę zarządzania urządzeniami. Urząd MDM musi być ustawiony, aby użytkownicy mogli zarejestrować urządzenia na potrzeby zarządzania.
 
 Aby ustawić usługę Intune jako urząd MDM, wykonaj następujące czynności.
 
 1. Otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com**. 
 2. Wybierz pozycję **Wszystkie usługi** > **Microsoft Intune**.
-3. Wybierz pomarańczowy transparent, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**. 
+3. Wybierz baner wskazujący, że zarządzanie urządzeniami nie zostało włączone, lub, jeśli baner nie zostanie wyświetlony natychmiast, wybierz pozycję **Rejestracja urządzeń**. Blok **Wybór urzędu MDM** zostanie wyświetlony, jeśli zarządzanie urządzeniami nie zostało jeszcze włączone.
 
     > [!NOTE]
     > Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
 
-4. W obszarze **Urząd zarządzania urządzeniami przenośnymi** ustaw jako urząd MDM **Urząd MDM usługi Intune**.
+    ![Obraz bloku Wybór urzędu MDM](./media/choose-mdm-authority.png) 
+
+4. W obszarze **Wybór urzędu MDM** ustaw jako urząd MDM **Urząd MDM usługi Intune**.
+
+Aby uzyskać więcej informacji na temat urzędu MDM, zobacz [Ustawianie urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurowanie niestandardowej nazwy domeny (opcjonalnie)
 
@@ -120,4 +127,4 @@ Istnieją dwa portale, których można użyć:
 W tym przewodniku Szybki start utworzono bezpłatną subskrypcję w celu wypróbowania usługi Intune w środowisku testowym i opcjonalnie skonfigurowano niestandardową nazwę domeny. Aby dowiedzieć się więcej na temat usługi Microsoft Intune, przejdź do kolejnego przewodnika Szybki start w celu dodania użytkowników i przypisania licencji.
 
 > [!div class="nextstepaction"]
-> [Tworzenie użytkownika](get-started-users.md)
+> [Tworzenie użytkownika](quickstart-create-user.md)

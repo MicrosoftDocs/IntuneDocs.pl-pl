@@ -1,34 +1,30 @@
 ---
-title: Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
+title: Konfigurowanie ustawień poczty e-mail w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Dowiedz się, jak skonfigurować usługę Microsoft Intune pod kątem tworzenia połączeń z firmowymi serwerami poczty e-mail na zarządzanych urządzeniach.
+description: Utwórz profil poczty e-mail w usłudze Microsoft Intune i wdróż go w urządzeniach z rozwiązaniem Android Enterprise oraz z systemami iOS i Windows. Profil poczty e-mail pozwala skonfigurować wspólne ustawienia poczty e-mail, w tym serwer poczty e-mail i metodę uwierzytelniania połączenia z firmową pocztą e-mail w urządzeniach, którymi zarządzasz.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9aac9d7523673d6907bf75bf91e1e9802a381ec2
-ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
+ms.openlocfilehash: 41f16cf0dacc059546a09145a0c241f7c2a4a076
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50149057"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236326"
 ---
-# <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune
+# <a name="add-email-settings-to-devices-using-intune"></a>Dodawanie ustawień poczty e-mail do urządzeń przy użyciu usługi Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Usługa Microsoft Intune obejmuje różne ustawienia poczty e-mail, które można wdrożyć w urządzeniach w organizacji. Administrator IT może tworzyć profile poczty e-mail z konkretnymi ustawieniami połączenia z serwerem poczty, takim jak usługa Office 365 lub Gmail. Użytkownicy mogą nawiązywać połączenia, uwierzytelniać się i synchronizować konta e-mail organizacji w swoich urządzeniach przenośnych. Utworzenie i wdrożenie profilu poczty e-mail umożliwia używanie standardowych ustawień w wielu urządzeniach. Pomaga też zmniejszyć liczbę zgłoszeń od użytkowników końcowych, którzy nie znają prawidłowych ustawień poczty e-mail.
 
-Profilów poczty e-mail można używać do konfigurowania zarządzanych urządzeń za pomocą ustawień niezbędnych do połączenia się z firmową pocztą e-mail i synchronizowania się z nią. Stanowi to gwarancję, że ustawienia są standardowe dla wszystkich urządzeń, a także pomaga zmniejszyć liczbę telefonów od użytkowników końcowych, którzy nie znają prawidłowych ustawień poczty e-mail.
-
-Wbudowany klient poczty e-mail jest obsługiwany w przypadku większości platform. Większość aplikacji poczty e-mail innych firm nie jest obecnie obsługiwana.
-
-Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty e-mail na następujących typach urządzeń:
+Profile poczty e-mail mogą służyć do konfigurowania wbudowanych ustawień poczty e-mail dla następujących urządzeń:
 
 - System Android Samsung Knox Standard 4.0 i nowsze wersje
 - Urządzenia profilu służbowego systemu Android
@@ -36,17 +32,15 @@ Profile poczty e-mail mogą służyć do konfigurowania klienta natywnego poczty
 - System Windows Phone 8.1 lub nowszy
 - System Windows 10 Mobile Desktop i Windows 10 Mobile
 
-Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedzę z zakresu konfigurowania profilów poczty e-mail, a następnie zapoznaj się z tematami dotyczącymi poszczególnych platform, aby dowiedzieć się więcej o charakterystyce urządzeń.
+W tym artykule przedstawiono sposób tworzenia profilu poczty e-mail w usłudze Microsoft Intune. Zawiera on też linki dotyczące bardziej szczegółowych ustawień na innych platformach.
 
-## <a name="create-a-device-profile-containing-email-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia poczty e-mail
+## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
-2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
-3. W okienku profilów wybierz pozycję **Utwórz profil**.
-4. W okienku **Utwórz profil** uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu poczty e-mail.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia, do której chcesz zastosować ustawienia poczty e-mail. Obecnie dla ustawień poczty e-mail urządzenia można wybrać jedną z następujących platform:
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+3. Wprowadź **nazwę** i **opis** profilu poczty e-mail.
+4. Wybierz **platformę** z listy rozwijanej. Dostępne opcje:
+
     - **Android** (tylko system Samsung Android Knox Standard)
     - **Android enterprise**
     - **iOS**
@@ -54,18 +48,16 @@ Skorzystaj z informacji zawartych w tym artykule, aby uzyskać podstawową wiedz
     - **Windows Phone 8.1**
     - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Poczta e-mail**.
-7. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe informacje na temat ustawień każdej z platform podano w następujących tematach:
+
+5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Poczta e-mail**.
+6. Ustawienia, które można skonfigurować, mogą różnić się zależnie od platformy. Aby uzyskać konkretne ustawienia, wybierz platformę:
+
     - [Android work profile and Samsung Knox Standard settings (Ustawienia profilu służbowego w systemie Android i systemu Samsung Knox Standard)](email-settings-android.md)
     - [Ustawienia systemu iOS](email-settings-ios.md)
     - [Ustawienia systemu Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Windows 10 settings](email-settings-windows-10.md) (Ustawienia systemu Windows 10)
-8. Gdy skończysz, wróć do okienka **Tworzenie profilu**, a następnie wybierz pozycję **Utwórz**.
 
-Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
-Wskazówki umożliwiające przypisanie tego profilu do grup znajdują się w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń).
-
-## <a name="further-information"></a>Dodatkowe informacje
+Gdy wprowadzisz ustawienia i utworzysz profil, profil będzie wyświetlany na liście profilów. Następnie [przypisz ten profil do grup](device-profile-assign.md).
 
 ## <a name="remove-an-email-profile"></a>Usuwanie profilu poczty e-mail
 
@@ -75,26 +67,31 @@ Profile poczty e-mail są przypisywane do grup urządzeń, a nie grup użytkowni
 
 - **Opcja 2**. [Wyczyść lub wycofaj urządzenie](devices-wipe.md). Tych akcji można używać do selektywnego lub pełnego usuwania danych i ustawień.
 
-### <a name="securing-email-access"></a>Zabezpieczenie dostępu do poczty e-mail
+## <a name="secure-email-access"></a>Bezpieczny dostęp do poczty e-mail
 
-Profile poczty e-mail mogą być chronione przy użyciu jednej z dwóch metod:
+Profile poczty e-mail można zabezpieczyć przy użyciu następujących metod:
 
-1. **Certyfikaty** — podczas tworzenia profilu poczty e-mail wybierasz profil certyfikatu utworzony wcześniej w usłudze Intune. Jest on znany jako certyfikat tożsamości i jest używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub certyfikatu głównego) w celu określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest przypisywany do komputera, który uwierzytelnia połączenie poczty e-mail — zwykle jest to natywny serwer poczty.
-Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [How to configure certificates with Intune](certificates-configure.md) (Jak skonfigurować certyfikaty z użyciem usługi Intune).
-2. **Nazwa użytkownika i hasło** — użytkownik jest uwierzytelniany na natywnym serwerze poczty e-mail przez podanie nazwy użytkownika i hasła.
-Hasło nie znajduje się w profilu poczty e-mail, więc użytkownik musi je podać podczas łączenia z kontem e-mail.
+- **Certyfikaty**: podczas tworzenia profilu poczty e-mail wybierasz profil certyfikatu utworzony wcześniej w usłudze Intune. Ten certyfikat jest znany pod nazwą certyfikatu tożsamości. Służy on do uwierzytelniania względem profilu zaufanego certyfikatu lub certyfikatu głównego w celu określenia, czy urządzenie użytkownika może nawiązać połączenie. Zaufany certyfikat jest przypisywany do komputera, który uwierzytelnia połączenie poczty e-mail. Zwykle jest to natywny serwer poczty.
 
+  Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [How to configure certificates with Intune](certificates-configure.md) (Jak skonfigurować certyfikaty z użyciem usługi Intune).
 
-### <a name="how-intune-handles-existing-email-accounts"></a>Obsługa istniejących kont poczty e-mail przez usługę Intune
+- **Nazwa użytkownika i hasło**: użytkownik jest uwierzytelniany na natywnym serwerze poczty e-mail przez podanie nazwy użytkownika i hasła. Hasło nie istnieje w profilu poczty e-mail. W takiej sytuacji użytkownik musi wprowadzić hasło podczas łączenia się z kontem e-mail.
 
-Jeśli użytkownik skonfigurował już konto e-mail, wynik przypisania profilu poczty e-mail usługi Intune zależy od platformy urządzeń:
+## <a name="how-intune-handles-existing-email-accounts"></a>Obsługa istniejących kont poczty e-mail przez usługę Intune
 
-- **iOS**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Duplikat profilu poczty e-mail blokuje możliwość przypisywania profilu usługi Intune. W takim przypadku w witrynie Portal firmy zostanie wyświetlony komunikat dla użytkownika z informacją, że profil nie jest zgodny, oraz monitem o usunięcie ręcznie skonfigurowanego profilu. Aby uniknąć takich sytuacji, poleć użytkownikom, aby dokonali rejestracji przed zainstalowaniem profilu poczty e-mail — dzięki temu usługa Intune będzie mogła samodzielnie skonfigurować profil.
+Jeśli użytkownik skonfigurował już konto e-mail, może przypisać profil poczty e-mail w sposób odpowiedni dla danej platformy.
+
+- **iOS**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Duplikat profilu poczty e-mail blokuje możliwość przypisywania profilu usługi Intune. W takim przypadku w aplikacji Portal firmy zostanie wyświetlony komunikat dla użytkownika z informacją, że profil nie jest zgodny, oraz monitem o ręczne usunięcie skonfigurowanego profilu. Aby uniknąć takich sytuacji, poleć użytkownikom, aby dokonali rejestracji *przed* zainstalowaniem profilu poczty e-mail — dzięki temu usługa Intune będzie mogła samodzielnie skonfigurować profil.
+
 - **Windows**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika.
-- **Android Samsung Knox Standard**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune.
-Ponieważ system Android nie używa nazwy hosta do identyfikowania profilu, nie zalecamy tworzenia wielu profilów poczty e-mail do użycia dla tego samego adresu e-mail na różnych hostach, ponieważ będą one się nawzajem zastępować.
-- **Profile służbowe w systemie Android** Usługa Intune udostępnia dwa służbowe profile poczty e-mail systemu Android — jeden dla aplikacji poczty e-mail Gmail i drugi dla aplikacji Nine Work. Aplikacje te, dostępne w sklepie Google Play, są instalowane w profilu służbowym urządzenia, dlatego powstanie zduplikowanych profilów jest wykluczone. Obie aplikacje obsługują połączenia z programem Exchange. Aby włączyć łączność za pośrednictwem poczty e-mail, wdróż jedną z tych aplikacji na urządzeniach użytkowników, a następnie utwórz i wdróż odpowiedni profil poczty e-mail. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
 
-### <a name="update-an-email-profile"></a>Aktualizowanie profilu poczty e-mail
+- **Android Samsung Knox Standard**: istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie adresu e-mail i zastępowane przez profil usługi Intune. System Android nie identyfikuje profilu przy użyciu nazwy hosta. Nie twórz wielu profilów poczty e-mail przy użyciu tego samego adresu e-mail na różnych hostach. Profile będą się zastępować.
+
+- **Profile służbowe w systemie Android**: usługa Intune udostępnia dwa służbowe profile poczty e-mail systemu Android — jeden dla aplikacji Gmail i drugi dla aplikacji Nine Work. Te aplikacje są dostępne w sklepie Google Play i są instalowane w profilu służbowym urządzenia. Nie tworzą one zduplikowanych profilów. Obie aplikacje obsługują połączenia z programem Exchange. Aby użyć połączenia poczty e-mail, wdróż jedną z tych aplikacji poczty e-mail w urządzeniach użytkowników. Następnie utwórz i wdróż odpowiedni profil poczty e-mail. Aplikacje poczty e-mail, takie jak Nine Work, mogą nie być bezpłatne. Sprawdź szczegóły licencji aplikacji lub skontaktuj się z producentem aplikacji, jeśli masz jakieś pytania.
+
+## <a name="changes-to-assigned-email-profiles"></a>Zmiany w przypisanych profilach poczty e-mail
 
 W przypadku wprowadzenia zmian w zakresie przypisanego wcześniej profilu poczty e-mail użytkownicy końcowi mogą zobaczyć monit o zatwierdzenie nowej konfiguracji ich ustawień poczty e-mail.
+
+## <a name="next-steps"></a>Następne kroki
+Utworzony profil nie wykonuje jeszcze żadnych czynności. Następnie [przypisz profil do urządzeń](device-profile-assign.md).

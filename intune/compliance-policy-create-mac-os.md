@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bbb09944db602b4b5a70c89e8089b1692c45223
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: a0d9d0ac3c0cd8804ffc401cd3041d5b9a17e64f
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321445"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236411"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem macOS w usłudze Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zasady zgodności urządzeń z systemem macOS w usłudze Intune określają reguły i ustawienia, które urządzenia z systemem macOS muszą spełniać, aby zapewnić zgodność. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
@@ -90,6 +88,17 @@ Zapora chroni urządzenia przed nieautoryzowanym dostępem sieciowym. Zapora umo
 - **Zapora**: wybierz pozycję **Włącz**, aby ułatwić ochronę urządzeń przed nieautoryzowanym dostępem. Włączenie tej funkcji umożliwia obsługę przychodzących połączeń internetowych i używanie trybu niewidzialności. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje wyłączenie zapory i zezwolenie na ruch sieciowy (nie będzie on blokowany).
 - **Połączenia przychodzące**: **blokuj** wszystkie przychodzące połączenia sieciowe poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania, w tym udostępnianie ekranu, dostęp zdalny, udostępnianie utworów muzycznych w usłudze iTunes i inne. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje zezwolenie na połączenia przychodzące i udostępnianie usług. 
 - **Tryb niewidzialności**: **włącz** tryb niewidzialności, aby zapobiegać odpowiadaniu przez komputer na żądania sondowania, które mogą być wykonywane przez złośliwych użytkowników. Gdy ta opcja jest włączona, urządzenie nadal odpowiada na przychodzące żądania w przypadku autoryzowanych aplikacji. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje wyłączenie trybu niewidzialności.
+
+### <a name="gatekeeper"></a>Program Gatekeeper
+
+**Zezwalaj na aplikacje pobrane z tych lokalizacji**: umożliwia instalowanie na urządzeniach obsługiwanych aplikacji z różnych lokalizacji. Dostępne opcje lokalizacji:
+
+- **Nieskonfigurowane**: wartość domyślna. Opcja Gatekeeper nie ma wpływu na zgodność. 
+- **Mac App Store**: zezwala na instalowanie aplikacji tylko ze sklepu Mac App Store. Nie można instalować aplikacji od innych firm ani zidentyfikowanych deweloperów. Jeśli użytkownik wybierze program Gatekeeper w celu zainstalowania aplikacji spoza sklepu Mac App Store, urządzenie zostanie uznane za niezgodne.
+- **Mac App Store i zidentyfikowani deweloperzy**: zezwala na instalowanie aplikacji ze sklepu Mac App Store oraz od zidentyfikowanych deweloperów. System macOS sprawdza tożsamość deweloperów oraz przeprowadza kilka innych testów, aby zweryfikować integralność aplikacji. Jeśli użytkownik wybierze program Gatekeeper w celu zainstalowania aplikacji z innego źródła, urządzenie zostanie uznane za niezgodne.
+- **Dowolne miejsce**: instalować można aplikacje z dowolnego miejsca i od dowolnego dewelopera. To najmniej bezpieczna opcja.
+
+Aby uzyskać więcej szczegółowych informacji z dokumentacji firmy Apple, zobacz [Program Gatekeeper w systemie macOS](https://support.apple.com/HT202491).
 
 ## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
 

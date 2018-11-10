@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 10/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d7dbb0214bb80fa0f72808c15eacc6799c0807cc
-ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
+ms.openlocfilehash: 3a7285edfa2dcb50cc5fd28e4fefc1be4c3b9e10
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679277"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -30,29 +30,31 @@ Dowiedz się, jak tworzyć i przypisywać zasady ochrony aplikacji usługi Micro
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Bardziej szczegółowy opis działania zasad ochrony aplikacji oraz scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune znajdują się w artykule [What are Microsoft Intune app protection policies? (Co to są zasady ochrony aplikacji usługi Microsoft Intune)](app-protection-policy.md).
+Zasady ochrony aplikacji można stosować do aplikacji działających na urządzeniach, które mogą być zarządzane przez usługę Intune lub nie. Aby uzyskać bardziej szczegółowy opis działania zasad ochrony aplikacji oraz informacje dotyczące scenariuszy obsługiwanych przy użyciu zasad ochrony aplikacji usługi Intune, zobacz [What are Microsoft Intune app protection policies? (Co to są zasady ochrony aplikacji usługi Microsoft Intune)](app-protection-policy.md).
 
 Jeśli szukasz listy aplikacji z obsługą zasad MAM, zobacz [listę aplikacji z zarządzaniem aplikacjami mobilnymi](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 Aby uzyskać informacje o dodawaniu aplikacji biznesowych (LOB) Twojej organizacji do usługi Microsoft Intune w celu przygotowania do zastosowania zasad ochrony aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji
-1. W obciążeniu **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji** w sekcji **Zarządzanie**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
-2. Wybierz pozycję **Dodaj zasady**.
+1. W portalu usługi Intune przejdź do obszaru **Aplikacje klienckie** > **Zasady ochrony aplikacji**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
+2. Wybierz pozycję **Utwórz zasady**.
 
    ![Zrzut ekranu przedstawiający blok „Dodawanie zasad”](./media/app-protection-add-policy.png)
 
-3. Wpisz nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. W razie potrzeby dla każdej platformy można utworzyć większą liczbę zasad.
+3. Określ nazwę zasad, dodaj ich krótki opis i wybierz typ platformy swoich zasad. Dla każdej platformy można utworzyć większą liczbę zasad.
 
-4. Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami.
+4. Wybierz pozycję **Aplikacje**, aby otworzyć blok **Aplikacje**, w którym jest wyświetlana lista dostępnych aplikacji. Z listy wybierz jedną lub więcej aplikacji do powiązania z tworzonymi zasadami. W celu utworzenia zasad wybierz co najmniej jedną aplikację.  
+
 5. Po wybraniu aplikacji wybierz pozycję **Wybierz**, aby zapisać swoje opcje.
 
-    > [!IMPORTANT]
-    > W celu utworzenia zasad należy wybrać co najmniej jedną aplikację.
+6. W bloku **Dodawanie zasad** wybierz pozycję **Skonfiguruj wymagane ustawienia**, aby otworzyć obszar **Ustawienia**.
 
-6. Wybierz pozycję **Skonfiguruj wymagane ustawienia** w bloku **Dodawanie zasad**, aby otworzyć obszar **Ustawienia**.
+   Istnieją trzy kategorie ustawień zasad:
+   - **Relokacja danych** — ta grupa obejmuje kontrolki ochrony przed utratą danych ograniczające działania takie jak wycinanie, kopiowanie, wklejanie i zapisywanie pod nową nazwą. Te ustawienia określają, jak użytkownicy używają danych w aplikacjach.
+   - **Wymagania dotyczące dostępu** — ta grupa zawiera opcje numeru PIN dla poszczególnych aplikacji, które określają, w jaki sposób użytkownik uzyskuje dostęp do aplikacji w kontekście służbowym.  
+   - **Uruchamianie warunkowe** — ta grupa zawiera ustawienia takie jak minimalna wersja systemu operacyjnego, wykrywanie urządzeń ze zdjętymi zabezpieczeniami systemu i z dostępem do konta root oraz okresy prolongaty trybu offline.
 
-   Istnieją dwie kategorie ustawień zasad, **Przeniesienie danych** i **Dostęp**.  Zasady relokacji danych są stosowane w przypadku przenoszenia danych do i z aplikacji. Zasady dostępu określają, jak użytkownicy końcowi uzyskują dostęp do aplikacji w kontekście roboczym.
    Ustawienia zasad mają wartości domyślne, co ułatwia rozpoczęcie pracy. Jeśli wartości domyślne spełniają Twoje wymagania, nie musisz wprowadzać żadnych zmian.
 
    > [!TIP]
@@ -61,17 +63,17 @@ Aby uzyskać informacje o dodawaniu aplikacji biznesowych (LOB) Twojej organizac
 7. Wybierz pozycję **OK**, aby zapisać tę konfigurację. Znajdziesz się ponownie w bloku **Dodawanie zasad**.
 8. Wybierz pozycję **Utwórz**, aby utworzyć zasady i zapisać ustawienia.
 
-Po zakończeniu tworzenia zasad zgodnie z opisem w poprzedniej procedurze nie są one wdrażane dla żadnych użytkowników. Aby wdrożyć zasady, zobacz [Wdrażanie zasad dla użytkowników](app-protection-policies.md#deploy-a-policy-to-users).
+Nowe tworzone zasady nie zostaną wdrożone dla żadnych użytkowników, dopóki tego jawnie to zrobisz. Aby wdrożyć zasady, zobacz [Wdrażanie zasad dla użytkowników](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Wdrażanie zasad dla użytkowników
 
 1. W okienku **Zasady ochrony aplikacji** wybierz zasady.
 
-2. W okienku **Zasady** wybierz pozycję **Przypisania**. Spowoduje to otwarcie okienka **Intune App Protection — przypisania**. Wybierz pozycję **Wybierz grupy do uwzględnienia** w okienku **Przypisania**, aby otworzyć okienko **Wybieranie grup do uwzględnienia**.
+2. W okienku ***Intune App Protection** wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania**. Na karcie *Dołączanie* wybierz pozycję **Wybierz grupy do uwzględnienia**. 
 
    ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
 
-3.  W okienku **Dodawanie grupy użytkowników** zostanie wyświetlona lista grup użytkowników. Jest to lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
+3.  Zostanie wyświetlona lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
 
     ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
 
@@ -93,18 +95,18 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 
 ### <a name="to-change-the-list-of-apps-associated-with-the-policy"></a>Aby zmienić listę aplikacji powiązanych z zasadami
 
-1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z właśnie wybranymi zasadami.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić.
 
-2.  W okienku zasad wybierz pozycję **Aplikacje docelowe**, aby otworzyć listę aplikacji.
+2.  W okienku *Intune App Protection* wybierz pozycję **Aplikacje docelowe**, aby otworzyć listę aplikacji.
 
-3.  Usuń lub dodaj aplikacje do listy i wybierz pozycję **Zapisz**, aby zapisać zmiany.
+3.  Usuń aplikacje z listy lub dodaj je do niej, a następnie wybierz ikonę **Zapisz**, aby zapisać zmiany.
 
 ### <a name="to-change-the-list-of-user-groups"></a>Aby zmienić listę grup użytkowników
 
 
-1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z wybranymi zasadami.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić.
 
-2.  W okienku zasad wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania** zawierające listę bieżących grup użytkowników, których dotyczą dane zasady.
+2.  W okienku *Intune App Protection* wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania** zawierające listę bieżących grup użytkowników, których dotyczą dane zasady.
 
 3.  Aby dodać nową grupę użytkowników do zasad, na karcie **Uwzględnianie** wybierz pozycję **Wybierz grupy do uwzględnienia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby wdrożyć zasady dla wybranej grupy.
 
@@ -112,23 +114,25 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 
 ### <a name="to-change-policy-settings"></a>Aby zmienić ustawienia zasad
 
-1.  W okienku **Zasady ochrony aplikacji** wybierz zasady do zmodyfikowania, aby otworzyć okienko powiązane z właśnie wybranymi zasadami.
+1.  W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić.
 
-2.  Wybierz pozycję **Ustawienia zasad**, aby otworzyć okienko **Ustawienia zasad**.
+2.  W okienku *Intune App Protection* wybierz pozycję **Właściwości**, aby otworzyć listę obszarów ustawień, które możesz edytować. 
 
-3.  Zmień ustawienia i wybierz ikonę **Zapisz**, aby zapisać zmiany.
+3.  Wybierz obszar ustawień zawierający ustawienia, które chcesz zmienić, takie jak **Relokacja danych** lub **Wymagania dotyczące dostępu**. Następnie zmień te ustawienia na nowe wartości.
+
+4.  Wybierz ikonę **Zapisz**, aby zapisać zmiany. Powtórz te czynności, aby wybrać obszar ustawień, zmodyfikować go i zapisać zmiany, dopóki nie zostaną zakończone wszystkie zmiany. Następnie możesz zamknąć okienko *Intune App Protection — właściwości*. 
 
 ## <a name="target-app-protection-policies-based-on-device-management-state"></a>Zasady ochrony aplikacji docelowych oparte na stanie zarządzania urządzeniem
-W wielu organizacjach jest powszechne korzystanie przez użytkowników końcowych zarówno z urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami mobilnymi usługi Intune, takich jak urządzenia należące do firmy, jak i urządzeń niezarządzanych chronionych tylko za pomocą zasad ochrony aplikacji usługi Intune, takich jak urządzenia BYOD.
+W wielu organizacjach powszechne jest zezwalanie na korzystanie przez użytkowników końcowych zarówno z urządzeń zarządzanych przez rozwiązanie do zarządzania urządzeniami mobilnymi usługi Intune, takich jak urządzenia należące do firmy, jak i z urządzeń niezarządzanych, które są chronione tylko za pomocą zasad ochrony aplikacji usługi Intune. Urządzenia niezarządzane są często określane jako urządzenia BYOD.
 
-Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkownika, ustawienia ochrony dla użytkownika zwyczajowo stosują się zarówno do urządzeń zarejestrowanych (zarządzanych przez rozwiązanie MDM), jak i niezarejestrowanych (niezarządzanych przez rozwiązanie MDM). Dlatego można określić zasady ochrony aplikacji usługi Intune dla zarejestrowanych lub niezarejestrowanych w usłudze Intune urządzeń z systemem iOS lub Android. Jedne zasady ochrony mogą być przeznaczone dla urządzeń niezarządzanych, w przypadku których są wdrożone ścisłe środki ochrony przed utratą danych, a inne zasady mogą być przeznaczone dla urządzeń zarządzanych przez rozwiązanie MDM, w przypadku których środki ochrony przed utratą danych mogą być mniej restrykcyjne. 
+Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkownika, ustawienia ochrony dla użytkownika można stosować zarówno do urządzeń zarejestrowanych (zarządzanych przez rozwiązanie MDM), jak i niezarejestrowanych (niezarządzanych przez rozwiązanie MDM). W związku z tym można określić zasady ochrony aplikacji usługi Intune dla zarejestrowanych lub niezarejestrowanych w usłudze Intune urządzeń z systemem iOS lub Android. Jedne zasady ochrony mogą być przeznaczone dla urządzeń niezarządzanych, w przypadku których są wdrożone ścisłe środki ochrony przed utratą danych, a inne zasady mogą być przeznaczone dla urządzeń zarządzanych przez rozwiązanie MDM, w przypadku których środki ochrony przed utratą danych mogą być mniej restrykcyjne. 
 
-Aby utworzyć te zasady, przejdź do zasad **Aplikacje klienckie** > **Ochrona aplikacji** w konsoli usługi Intune i kliknij pozycję **Dodaj zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Jeśli chcesz stosować zasady ochrony aplikacji do urządzeń zarządzanych i niezarządzanych, potwierdź, że pozycja **Przeznaczone dla wszystkich typów aplikacji** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, określ dla pozycji **Przeznaczone dla wszystkich typów aplikacji** wartość **Nie**. 
+Aby utworzyć te zasady, przejdź do zasad **Aplikacje klienckie** > **Ochrona aplikacji** w konsoli usługi Intune, a następnie kliknij pozycję **Utwórz zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Aby zastosować zasady ochrony aplikacji do zarówno do urządzeń zarządzanych, jak i niezarządzanych, potwierdź, że pozycja **Przeznaczone dla wszystkich typów aplikacji** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, ustaw pozycję **Przeznaczone dla wszystkich typów aplikacji** na wartość **Nie**. 
 
-![Zrzut ekranu przedstawiający blok dodawania zasad z wybraną pozycją Dotyczy wszystkich typów aplikacji](./media/app-protection-policies-target-all.png)
+![Zrzut ekranu przedstawiający blok Dodawanie zasad z wybraną pozycją Dotyczy wszystkich typów aplikacji](./media/app-protection-policies-target-all.png)
 
 W przypadku systemu iOS są wymagane dodatkowe ustawienia konfiguracji aplikacji przeznaczone dla ustawień zasad ochrony aplikacji na urządzeniach zarejestrowanych w usłudze Intune:
-- Ustawienie **IntuneMAMUPN** musi być skonfigurowane dla wszystkich aplikacji zarządzanych przez oprogramowanie MDM.  Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- Ustawienie **IntuneMAMUPN** musi być skonfigurowane dla wszystkich aplikacji zarządzanych przez oprogramowanie MDM. Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - Ustawienie **IntuneMAMDeviceID** musi być skonfigurowane dla wszystkich aplikacji innych firm lub aplikacji biznesowych zarządzanych przez rozwiązanie MDM. Ustawienie **IntuneMAMDeviceID** powinno zostać skonfigurowane do tokenu identyfikacyjnego urządzenia. Na przykład `key=IntuneMAMDeviceID, value={{deviceID}}`. Aby uzyskać więcej informacji, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
 - Jeśli skonfigurowane zostanie tylko ustawienie **IntuneMAMDeviceID**, zasady ochrony aplikacji usługi Intune uznają urządzenie za niezarządzane.  
 

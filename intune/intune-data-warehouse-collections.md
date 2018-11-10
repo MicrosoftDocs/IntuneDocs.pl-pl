@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: 4df55309587ac079cfeaec299d70635b090e300b
-ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
+ms.openlocfilehash: e54b35d677d34067bfbd0ad6aad86e3dfe17fb90
+ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43821635"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50971486"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -499,7 +499,7 @@ Jednostka **termsAndConditions** reprezentuje metadane i zawartość danych waru
 |    description    |    Opis danych warunków i postanowień.     |         |
 |    title    |    Tytuł danych warunków i postanowień.     |    Firmowe zasady zarządzania urządzeniami        |
 |    summaryOfTerms    |    Podsumowanie warunków przekazanych użytkownikowi.     |    Akceptuję warunki i postanowienia.    |
-|    termsAndConditionsBodyText    |    Treść danych warunków i postanowień.       |    * Szyfrowanie urządzenia * Wymuszanie 6-cyfrowego numeru PIN    |
+|    termsAndConditionsBodyText    |    Treść danych warunków i postanowień.       |    *Szyfrowanie urządzenia* Wymuszanie 6-cyfrowego numeru PIN    |
 |    isDeleted    |    Wartość True lub False wskazująca, czy wartość została usunięta.     |    Fałsz    |
 |    startDateInclusiveUTC    |    Data rozpoczęcia obowiązywania warunków i postanowień.     |    23.08.2018 4:01:34    |
 |    endDateEclusiveUTC    |    Data zakończenia obowiązywania warunków i postanowień.     |    31.12.9999 0:00:00    |

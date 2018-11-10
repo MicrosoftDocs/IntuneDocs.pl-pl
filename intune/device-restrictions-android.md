@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 2e3b356cc7c09b00916c24340dbbe1923540889b
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313703"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915737"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Ustawienia ograniczeń urządzeń z systemami Android i Samsung Knox Standard w usłudze Intune
 
@@ -39,7 +39,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Geolokalizacja (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie z informacji o lokalizacji na urządzeniu.
 - **Wyłączanie (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi wyłączanie urządzenia.<br>Po wyłączeniu nie można ustawić opcji **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**.
 - **Przechwytywanie ekranu (tylko rozwiązanie Samsung Knox)** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
-- **Asystent głosowy (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie z oprogramowania Voice Assistant na urządzeniu.
+- **Asystent głosowy (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie z usługi i aplikacji S Voice na urządzeniu. Nie dotyczy asystenta Bixby ani asystenta głosowego ułatwień dostępu, który odczytuje zawartość ekranu na głos.
 - **Usługa YouTube (tylko rozwiązanie Samsung Knox)** — umożliwia korzystanie z aplikacji YouTube na urządzeniu.
 - **Urządzenia udostępnione (tylko rozwiązanie Samsung Knox)** — umożliwia skonfigurowanie zarządzanego urządzenia z systemem Samsung Knox Standard jako urządzenia udostępnionego. W tym trybie użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie nadal będzie zarządzane, niezależnie od tego, czy jest używane.<br>Gdy jest używana w połączeniu z profilem certyfikatu SCEP, funkcja ta umożliwia użytkownikom końcowym udostępnianie urządzenia z tym samym zestawem aplikacji wszystkim użytkownikom, ale przy użyciu ich własnych certyfikatów użytkownika SCEP.  Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.  Funkcja ta jest ograniczona tylko do aplikacji LOB.
 - **Zablokuj możliwość zmiany daty i godziny (Samsung Knox)** — uniemożliwia użytkownikowi zmianę ustawień daty i godziny na urządzeniu. 

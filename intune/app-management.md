@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 99d217c2d1960a1ca163bf697bfbd28e5406b58f
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 25236453f0440978eda34e3a1a8b1b93daf4c6e1
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075850"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025172"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -94,7 +94,7 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Zarządzanie aplika
 - **Licencje aplikacji**: przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami. Aby uzyskać więcej informacji, zobacz:
     - [Aplikacje dla systemu iOS zakupione w ramach programu zakupów zbiorczych (VPP)](vpp-apps-ios.md).
     - [Aplikacje nabyte w ramach zakupów zbiorczych w sklepie Microsoft Store dla Firm](windows-store-for-business.md).
-- **Odnalezione aplikacje**: wyświetlanie wszystkich aplikacji, które zostały przypisane przez usługę Intune i zainstalowane na urządzeniu. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Odnalezione aplikacje**: wyświetlanie aplikacji, które zostały przypisane przez usługę Intune lub zainstalowane na urządzeniu. Aby uzyskać więcej informacji, zobacz [Wyświetlanie szczegółów urządzenia w usłudze Intune](device-inventory.md).
 - **Stan instalacji aplikacji**: wyświetlanie stanu utworzonego przez siebie przypisania aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Stan ochrony aplikacji**: wyświetlanie stanu zasad ochrony aplikacji dla wybranego użytkownika.
 - **Dzienniki inspekcji**: wyświetlanie działań wszystkich administratorów IT związane z aplikacją usługi Intune.

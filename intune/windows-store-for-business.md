@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 11/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d1fe40b1cb5a496b3111b2630718a3dd17486ab
-ms.sourcegitcommit: 63b74a60aafa8d2d6af0594448ae0471fbd79194
+ms.openlocfilehash: c30d20592a95f7894bb040f9e8fe5a2e3ddd0166
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494017"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915754"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
@@ -89,4 +89,15 @@ W przypadku przypisania aplikacji ze Sklepu Microsoft dla Firm licencja będzie 
 * Zmniejsz zakres bieżącego przypisania i skieruj je tylko do użytkowników, dla których masz wystarczającą liczbę licencji.
 * Kup więcej kopii aplikacji w Sklepie Microsoft dla Firm.
 
+## <a name="remove-apps"></a>Usuwanie aplikacji
 
+Aby usunąć aplikację synchronizowaną ze sklepem Microsoft Store dla firm, należy zalogować się do sklepu Microsoft Store dla firm i zwrócić aplikację.
+
+![Zrzut ekranu przedstawiający szczegóły usuwania aplikacji](./media/microsoft-store-for-business-01.png)
+
+> [!NOTE]
+> Ukrycie aplikacji w sklepie prywatnym nie zapobiega synchronizowaniu jej przez usługę Intune. Jest konieczne zwrócenie aplikacji.
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune](vpp-apps.md)

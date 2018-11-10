@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d013ad2aefbfee5eea8f240277b0f84c2c6bf05a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 05dfd1e756a7c05d29116cd9077182225f3b9fa5
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679308"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów urządzeń w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -130,9 +130,9 @@ Usunięcie profilu lub usunięcie urządzenia z grupy zawierającej profil powod
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Profil ograniczeń urządzenia został zmieniony, ale zmiany nie zostały zastosowane
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej przy użyciu usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjny profil został już zastosowany do urządzenia.
 
-Zmiana profilu na wartość mniej bezpieczną w zależności od platformy urządzenia będzie wiązać się ze zresetowaniem zasad zabezpieczeń. Na przykład w systemie Windows na pulpicie szybko przesuń palcem od prawej strony i wybierz pozycję **Ustawienia** > **Panel sterowania**. Wybierz aplet **Konta użytkowników** .
+Zmiana wartości na obniżającą poziom zabezpieczeń profilu będzie wiązać się ze zresetowaniem zasad zabezpieczeń. Na przykład w systemie Windows 8.1 na pulpicie szybko przesuń palcem od prawej strony i wybierz pozycję **Ustawienia** > **Panel sterowania**. Wybierz aplet **Konta użytkowników** . W menu nawigacji po lewej stronie (u dołu ekranu) znajduje się link **Resetuj zasady zabezpieczeń**. Wybierz go, a następnie wybierz opcję **Resetuj zasady**.
 
-W menu nawigacji po lewej stronie (u dołu ekranu) znajduje się link **Resetuj zasady zabezpieczeń**. Wybierz go, a następnie wybierz opcję **Resetuj zasady**. W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, Windows Phone 8.1 lub nowszym oraz iOS, zastosowanie mniej restrykcyjnego profilu może wymagać wycofania i ponownego zarejestrowania urządzenia w usłudze.
+W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym, iOS oraz Windows 10, zastosowanie mniej restrykcyjnego profilu może wymagać wycofania i ponownego zarejestrowania urządzenia w usłudze.
 
 ## <a name="next-steps"></a>Następne kroki
 Potrzebujesz dodatkowej pomocy? Zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).

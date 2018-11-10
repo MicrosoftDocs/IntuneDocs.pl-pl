@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87ae986e1f7a2b00c1a29208a163ee449e114f17
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 03d52c53b6e3152a5a262ca8bd6d158d5980b2c8
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425295"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236394"
 ---
 # <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami HoloLens oraz z urządzeniami systemem Windows Holographic i korzystanie z nich za pomocą usługi Intune
 
@@ -68,6 +68,10 @@ Przy użyciu usługi Intune możesz dodawać aplikacje do urządzeń z systemem 
 
 Usługa Microsoft Intune może wdrażać aplikacje uniwersalne systemu Windows na urządzeniach Microsoft HoloLens z systemem Windows Holographic for Business. Możesz bezpośrednio przekazać pakiety aplikacji w witrynie Intune Azure Portal lub wdrożyć je ze sklepu Microsoft Store dla Firm. Aby uzyskać więcej informacji o związanych z tym obszarach, zobacz następujące artykuły:
 - Jeśli chcesz wdrażać aplikacje biznesowe (LOB, Line-of-Business) za pomocą witryny Intune Azure Portal, zobacz temat [Sposób dodawania aplikacji biznesowych systemu Windows do usługi Microsoft Intune](lob-apps-windows.md).
+
+    > [!NOTE]
+    > Maksymalny rozmiar pakietu dozwolony przez usługę Intune to 8 GB. Ten rozmiar pakietu jest dostępny tylko dla aplikacji biznesowych przekazanych do usługi Intune.
+
 - Jeśli chcesz wdrażać aplikacje za pomocą portalu Microsoft Store dla Firm, zobacz temat [Jak zarządzać aplikacjami zakupionymi w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune](windows-store-for-business.md). 
 - Aby dowiedzieć się więcej o zarządzaniu aplikacjami za pomocą usługi Microsoft Intune, zobacz temat [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune](app-management.md).
 - Aby dowiedzieć się więcej na temat tworzenia aplikacji dla urządzeń Microsoft HoloLens, zobacz temat [Aplikacje rzeczywistości mieszanej dla urządzeń Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 

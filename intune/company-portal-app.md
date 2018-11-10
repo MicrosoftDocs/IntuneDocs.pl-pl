@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307410"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236292"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -60,28 +60,48 @@ Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pr
 | **Dodatkowe informacje**| 120 | Wyświetlane na stronie **Kontakt z działem IT**. |
 
 
-## <a name="company-branding-customization"></a>Dostosowywanie oznaczeń marki       
-Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło. Aby szybko wyświetlić podgląd konfiguracji oznaczeń marki bez urządzenia testowego, możesz przejść do witryny [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Należy zauważyć, że przesłane logo będzie używane w szablonach wiadomości e-mail.      
+## <a name="company-identity-branding-customization"></a>Dostosowywanie znakowania tożsamości firmy      
+Portal firmy można dostosować, wprowadzając logo i nazwę firmy, kolor motywu oraz tło.     
 
-### <a name="theme-color"></a>Kolor motywu
+### <a name="theme-color-and-logo-in-the-company-portal"></a>Kolor motywu i logo w Portalu firmy
 Zastosuj kolor motywu w Portalu firmy. Wybierz kolor standardowy lub wprowadź sześciocyfrowy kod szesnastkowy koloru niestandardowego.
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Typ koloru**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. |
-|**Wybierz kolor** lub **Kod szesnastkowy koloru**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. Te opcje są dostępne w zależności od wybranego **typu koloru**.  |
+|**Wybierz kolor standardowy lub wprowadź sześciocyfrowy kod szesnastkowy**| Wybierz pozycję **Standardowy**, aby wybrać kolor. Wybierz pozycję **Niestandardowy**, aby wybrać kolor na podstawie wartości kodu szesnastkowego.|
+|**Wybierz kolor motywu**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. |
+|**Wyświetl**| Wybierz, czy mają być wyświetlane **logo i nazwa firmy**, **tylko logo firmy** czy **tylko nazwa firmy**. |
+|**Przekaż logo firmy**|Możesz przekazać logo firmy, aby było wyświetlane w Portalu firmy. Kolor tekstu jest wybierany automatycznie, aby zapewnić najwyższy poziom kontrastu. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 x 400 pikseli</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
-### <a name="company-logo"></a>Logo firmy
-Przekaż logo firmy, aby było widoczne w całym środowisku użytkownika usługi Intune.
+Po przekazaniu logo w obszarze podglądu będą wyświetlane logo i kolor motywu. Jeśli wybrano wyświetlanie nazwy firmy, będzie ona wyświetlana w kolorze czarnym lub białym w Portalu firmy. Jej kolor zostanie wybrany automatycznie, aby zapewnić najwyższy poziom kontrastu na podstawie koloru motywu. Nazwa firmy nie będzie wyświetlana w obszarze podglądu na ekranie. 
+
+### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logo do użycia na białym lub jasnym tle
+Wybierz logo, które będzie wyglądać najlepiej na białym lub jasnym tle.
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Wyświetl logo firmy**|Po włączeniu tej opcji możesz przekazać logo firmy, aby było wyświetlane w portalu firmy. Można przekazać dwa logo: jedno wyświetlane, gdy tło portalu firmy jest białe, i drugie — wyświetlane, gdy tło Portalu firmy ma wybrany przez użytkownika kolor motywu. |
-|**Przekaż logo do użycia na tle koloru motywu**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 400 pikseli i mieć rozmiar nie większy niż 750 KB. |
-|**Przekaż logo do użycia na jasnym tle**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Plik logo musi być w formacie png lub jpg, mieć rozdzielczość maksymalnie 400 x 400 pikseli i mieć rozmiar nie większy niż 750 KB. |
-|**Wyświetl nazwę firmy obok logo**| Wybierz tę opcję, aby wyświetlić wprowadzoną nazwę firmy obok załadowanego logo. |
+|**Przekaż logo**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 x 400 pikseli</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
-Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień w portalu internetowym usługi Intune** w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje.
+### <a name="brand-image-for-company-portal"></a>Obraz marki dla Portalu firmy
+
+Możesz wyświetlać obraz marki Twojej firmy. Obsługa obrazu marki jest dodawana do aplikacji Portal firmy, ale obraz może nie być widoczny na wszystkich platformach.
+
+|Nazwa pola|Więcej informacji|
+|---|---|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p><ul><li>Zalecana szerokość obrazu: więcej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+
+Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
+
+- Skontaktuj się z działem marketingu lub działem graficznym. Być może są już dostępne zatwierdzone obrazy marki. Mogą one również pomóc w optymalizacji obrazów. 
+
+- Rozważ użycie obrazu w orientacji poziomej i pionowej. Obraz powinien mieć wystarczającą ilość tła wokół punktu centralnego. Obraz może zostać przycięty inaczej w zależności od rozmiaru i orientacji urządzenia. 
+
+- Nie używaj ogólnego obrazu. Obraz powinien odzwierciedlać markę firmy i kojarzyć się użytkownikom z firmą. Jeśli nie masz własnego obrazu, lepszym rozwiązaniem jest brak obrazu niż użycie ogólnego obrazu, który nie ma znaczenia dla użytkownika. 
+
+- Usuń niepotrzebne metadane. Plik obrazu może zawierać metadane, takie jak profil aparatu, lokalizację geograficzną, tytuł, podpis itp. Użyj narzędzia do optymalizacji obrazów, aby usunąć te informacje w celu zachowania jakości przy spełnieniu wymagania dotyczącego limitu rozmiaru pliku. 
+
+Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
+
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows
 

@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 66426e9e22c2624b9828440906e3b1b947f4b60a
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410773"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Przewodnik Szybki start: tworzenie i przypisywanie roli niestandardowej
 
@@ -47,7 +47,7 @@ Podczas tworzenia roli niestandardowej można ustawić uprawnienia dla różnych
 
 Aby operator zabezpieczeń mógł używać nowych uprawnień, należy przypisać tę rolę do grupy, która zawiera tego użytkownika zabezpieczeń.
 
-1. W usłudze Intune wybierz pozycję **Role** > **Wszystkie role** > **Pomoc techniczna dla urządzeń zdalnych**.
+1. W usłudze Intune wybierz pozycję **Role** > **Wszystkie role** > **Operacje zabezpieczeń**.
 2. W obszarze **Role usługi Intune** wybierz pozycję **Przypisania** > **Przypisz**.
 3. W polu **Nazwa przypisania** wprowadź tekst *Sec ops* (Operacje zabezpieczeń).
 4. Wybierz pozycję **Członek (grupy)** > **Dodaj**.

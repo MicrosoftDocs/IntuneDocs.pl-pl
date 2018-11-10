@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59e2ab4635c8488b99781ac123aacd0854967dc8
-ms.sourcegitcommit: c3ac9e5f6240223cb5dfed8b44c7425066d6ea86
+ms.openlocfilehash: b3de4d79e6121505718a75ffe64102bb1bc18347
+ms.sourcegitcommit: 244456907e3ab4a4389d32d06060606a9591cfba
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49380035"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751647"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Ustawienia kiosku dla systemu Windows 10 (i nowszych) w usłudze Intune
 
@@ -105,7 +105,7 @@ W przypadku wybrania trybu kiosku z wieloma aplikacjami wprowadź następujące 
 
     - **Nazwa aplikacji**: wymagana. Wprowadź nazwę aplikacji.
     - **Ścieżka lokalna**: wymagana. Wprowadź ścieżkę do pliku wykonywalnego, taką jak `C:\Program Files (x86)\Microsoft VS Code\Code.exe` lub `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: opcjonalny. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Win32. To ustawienie określa początkowy układ kafelka na pulpicie. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: podaj identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji Win32. To ustawienie określa początkowy układ kafelka na pulpicie. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
     - **Rozmiar kafelka**: wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
   
   - **Dodaj według identyfikatora AUMID**: użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows, na przykład Notatnik lub Kalkulator. Wprowadź następujące właściwości: 

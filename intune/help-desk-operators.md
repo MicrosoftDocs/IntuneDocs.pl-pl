@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
-ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
+ms.openlocfilehash: 90756da72ecdcbd049b14b45014433bb5843a5ed
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229079"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236666"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
@@ -96,13 +96,14 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 | Własność          | Typ własności urządzenia (**Firmowe**, **Osobiste** lub **Nieznany**).                                               |
 | Zgodne z usługą Intune   | Nazwa typu urządzenia.                                                                                                     |
 | Zgodne z usługą Azure AD | Stan każdej aplikacji użytkowników objętej ochroną aplikacji. Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**. |
+| Instalacja aplikacji | Wskazuje, czy instalacja aplikacji na poszczególnych urządzeniach zakończyła się powodzeniem lub niepowodzeniem. |
 | System operacyjny                 | System operacyjny zainstalowany na urządzeniu.                                                                                       |
 | Wersja systemu operacyjnego         | Numer wersji systemu operacyjnego urządzenia.                                                                                  |
 | Ostatnie zaewidencjonowanie      | Nazwa typu urządzenia.                                                                                                     |
 
 ### <a name="app-protection-status"></a>Stan ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami Enterprise Mobility Solution (EMS). Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami Enterprise Mobility Solution (EMS). Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -115,7 +116,7 @@ Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z 
 
 ## <a name="app-protection-policies-reference"></a>Odwołanie do zasad ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 ### <a name="properties"></a>Właściwości
 
@@ -180,7 +181,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 
 ### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -193,7 +194,7 @@ Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z 
 
 ## <a name="configuration-policies-reference"></a>Informacje o zasadach konfiguracji
 
-Dostępne są zasady konfiguracji aplikacji dla aplikacji mobilnych z konfiguracją specyficzną dla dostawcy. 
+Dostępne są zasady konfiguracji aplikacji dla aplikacji mobilnych z konfiguracją specyficzną dla dostawcy. 
 
 ### <a name="properties"></a>Właściwości
 
@@ -226,7 +227,7 @@ Urządzenia zarządzane przez usługę Intune albo użytkowników zarządzanych 
 
 ### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
+Dostępne są zasady ochrony aplikacji dla aplikacji mobilnych zintegrowanych z technologiami EMS. Te zasady zapewniają podstawową ochronę danych firmowych pobieranych przez aplikacje mobilne, w tym aplikacje mobilne pakietu Office. 
 
 | Właściwość    | Opis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
