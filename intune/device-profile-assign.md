@@ -14,12 +14,12 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa1a1b1085d196411a03a6228eefa808399397ea
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 439c89f7b0158111f63d2d8327291c2b5a5c1e38
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024808"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298075"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -48,9 +48,6 @@ Możesz na przykład chcieć przypisać profil urządzenia do wszystkich urządz
 Podczas wykluczania są uwzględniani tylko członkowie konkretnych grup. Urządzenia skojarzone z użytkownikami nie są uwzględniane. Jednak urządzenia nieskojarzone z żadnym użytkownikiem nie otrzymają zasad. Dzieje się tak, ponieważ te urządzenia nie mają relacji z grupą **Wszyscy użytkownicy**.
 
 Jeśli dołączysz grupę **Wszystkie urządzenia**, a wykluczysz grupę **Wszyscy użytkownicy**, zasady zostaną zastosowane do wszystkich urządzeń. W tym przypadku celem jest wykluczenie z zasad urządzeń, które są skojarzone z użytkownikami. Jednak urządzenia nie zostaną wykluczone, ponieważ funkcja wykluczania porównuje tylko członków grup.
-
->[!TIP]
->Wykluczenia nie są dostępne w zasadach zgodności lub na potrzeby przypisania aplikacji. Aby wykluczyć członków z przypisania, można użyć przypisań **Dostępny** i **Nie dotyczy**. Można na przykład przypisać aplikację do grupy **Wszyscy użytkownicy firmowi** z celem **Dostępny** oraz do grupy **Wyższa kadra kierownicza** z celem **Nie dotyczy**. Aplikacja zostanie przypisana do wszystkich użytkowników *z wyjątkiem* użytkowników w grupie **Wyższa kadra kierownicza**. W przypadku przypisania aplikacji do grupy **Wszyscy użytkownicy firmowi** z celem **Wymagany** użytkownicy w grupie **Wyższa kadra kierownicza** również zostaną dołączeni do przypisania.
 
 ## <a name="next-steps"></a>Następne kroki
 Zobacz artykuł [How to monitor device profiles](device-profile-monitor.md) (Sposoby monitorowania profili urządzeń), aby uzyskać wskazówki dotyczące monitorowania przypisań profilu urządzenia.

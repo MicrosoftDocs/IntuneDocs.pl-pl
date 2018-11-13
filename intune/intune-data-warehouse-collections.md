@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: e54b35d677d34067bfbd0ad6aad86e3dfe17fb90
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 5fb0de1af9c8336cb277572faf526f1471108591
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50971486"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225955"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -165,7 +165,7 @@ Jednostka **DeviceConfigurationProfileDeviceActivity** zawiera liczbę urządze�
 | Niepowodzenie    | Liczba unikatowych urządzeń w stanie Niepowodzenie.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
-Jednostka  **DeviceConfigurationProfileUserActivity**  zawiera liczbę użytkowników w stanie Sukces, Oczekiwanie, Niepowodzenie lub Błąd na dzień. Ta liczba odzwierciedla profile konfiguracji urządzeń przypisane do jednostki. Jeśli na przykład użytkownik jest w stanie Sukces dla wszystkich przypisanych mu zasad, zwiększa to w danym dniu licznik powodzeń o 1. Jeśli do użytkownika są przypisane dwa profile, jeden w stanie Sukces i drugi w stanie Błąd, uwzględniany jest użytkownik w stanie Błąd. Jednostka  **DeviceConfigurationProfileUserActivity**  zawiera liczbę użytkowników w określonym stanie w danym dniu z 30 ostatnich dni. 
+Jednostka **DeviceConfigurationProfileUserActivity** zawiera liczbę użytkowników w stanie Sukces, Oczekiwanie, Niepowodzenie lub Błąd na dzień. Ta liczba odzwierciedla profile konfiguracji urządzeń przypisane do jednostki. Jeśli na przykład użytkownik jest w stanie Sukces dla wszystkich przypisanych mu zasad, zwiększa to w danym dniu licznik powodzeń o 1. Jeśli do użytkownika są przypisane dwa profile, jeden w stanie Sukces i drugi w stanie Błąd, uwzględniany jest użytkownik w stanie Błąd. Jednostka **DeviceConfigurationProfileUserActivity** zawiera liczbę użytkowników w określonym stanie w danym dniu z 30 ostatnich dni. 
 
 | Właściwość  | Opis  | Przykład  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
