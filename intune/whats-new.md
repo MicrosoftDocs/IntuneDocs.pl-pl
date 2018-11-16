@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7fd8c7f6f2c3dd5e6e8af323ccbb41a1ab779df
-ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
+ms.openlocfilehash: 1180e085c0584f3da535947cad60c41d06a8026a
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51025240"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576974"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz również dowiedzieć się o [nadchodzących zmianach](#whats-coming), [ważnych powiadomieniach](#notices) o usłudze oraz uzyskać informacje o [poprzednich wersjach](whats-new-archive.md). Niektóre funkcje mogą być wprowadzane przez kilka tygodni i nie być dostępne dla wszystkich klientów w pierwszym tygodniu.
+Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz również sprawdzić informacje o nadchodzących zmianach, [ważnych powiadomieniach](#notices) oraz [poprzednich wersjach](whats-new-archive.md). Niektóre funkcje mogą być wprowadzane przez kilka tygodni i nie być dostępne dla wszystkich klientów w pierwszym tygodniu.
 
 > [!Note]
 > Aby uzyskać informacje na temat nowych funkcji w ramach hybrydowego zarządzania urządzeniami przenośnymi, odwiedź stronę [Co nowego w funkcjach hybrydowych](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
@@ -41,6 +41,21 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->     
+## <a name="week-of-november-5-2018"></a>Tydzień 5 listopada 2018 r.
+
+### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Obsługa uwierzytelniania OAuth z systemu iOS 12 w profilach poczty e-mail systemu iOS <!--2155106 -->
+
+Profile poczty e-mail systemu iOS w usłudze Intune obsługują uwierzytelnianie OAuth (Open Authorization) z systemu iOS 12. Aby wyświetlić tę funkcję, utwórz nowy profil (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **E-mail** dla typu profilu) lub zaktualizuj istniejący profil poczty e-mail systemu iOS. Po włączeniu uwierzytelniania OAuth w profilu, który jest już wdrożony u użytkowników, użytkownicy ci są monitowani o ponowne uwierzytelnienie, a następnie o ponowne pobranie poczty e-mail.
+
+Więcej informacji na temat korzystania z protokołu OAuth w profilu poczty e-mail podano w [artykule poświęconym profilom poczty e-mail systemu iOS](email-settings-ios.md).
+
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Obsługa rozwiązania Autopilot w przypadku urządzeń przyłączonych hybrydowo do usługi Azure Active Directory (wersja zapoznawcza) <!-- 1048100-->
+Za pomocą rozwiązania Autopilot możesz teraz skonfigurować urządzenia przyłączone hybrydowo do usługi Azure Active Directory. Aby używać hybrydowego rozwiązania Autopilot, urządzenia muszą być przyłączone do sieci w organizacji. Aby uzyskać więcej informacji, zobacz [Wdrażanie hybrydowych urządzeń przyłączonych do usługi Active Directory przy użyciu usługi Intune i programu Windows Autopilot](windows-autopilot-hybrid.md).
+Ta funkcja będzie stopniowo wprowadzana dla użytkowników w ciągu kilku następnych dni. W związku z tym wykonanie tych kroków może nie być możliwe do momentu wdrożenia jej na Twoim koncie.
+
+### <a name="app-protection-policy-app-settings-for-web-data----2662995----"></a>Ustawienia zasad ochrony aplikacji dla danych internetowych <!-- 2662995  -->
+Ustawienia zasad ochrony aplikacji dla zawartości internetowej na urządzeniach z systemami Android i iOS zostaną zaktualizowane w celu ulepszenia obsługi linków internetowych http i https, a także przesyłania danych za pośrednictwem linków uniwersalnych systemu iOS i linków między aplikacjami systemu Android.  
+
 ## <a name="week-of-october-29-2018"></a>Tydzień 29 października 2018 r.
 
 
@@ -112,10 +127,6 @@ Będzie można przypisać profile rozwiązania Autopilot do wirtualnej grupy wsz
 #### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nowa funkcja warunków użytkowania usługi Azure Active Directory <!-- 2870393 -->
 Usługa Azure Active Directory udostępnia funkcję warunków użytkowania, której można użyć zamiast istniejących warunków i postanowień usługi Intune. Funkcja warunków użytkowania usługi Azure AD zapewnia większą elastyczność w związku z tym, które warunki wyświetlić i kiedy, lepszą obsługę lokalizacji, większą kontrolę sposobu renderowania i ulepszone raportowanie. Funkcja warunków użytkowania usługi Azure AD wymaga usługi Azure Active Directory Premium P1, która jest również częścią pakietu Enterprise Mobility + Security E3. Aby dowiedzieć się więcej, zobacz artykuł [Zarządzanie warunkami i postanowieniami obowiązującymi w firmie na potrzeby dostępu użytkowników](terms-and-conditions-create.md).
 
-### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Obsługa rozwiązania Autopilot w przypadku urządzeń przyłączonych hybrydowo do usługi Azure Active Directory (wersja zapoznawcza) <!-- 1048100-->
-Za pomocą rozwiązania Autopilot możesz teraz skonfigurować urządzenia przyłączone hybrydowo do usługi Azure Active Directory. Aby używać hybrydowego rozwiązania Autopilot, urządzenia muszą być przyłączone do sieci w organizacji. Aby uzyskać więcej informacji, zobacz [Wdrażanie hybrydowych urządzeń przyłączonych do usługi Active Directory przy użyciu usługi Intune i programu Windows Autopilot](windows-autopilot-hybrid.md).
-Ta funkcja będzie stopniowo wprowadzana dla użytkowników w ciągu kilku następnych dni. W związku z tym wykonanie tych kroków może nie być możliwe do momentu wdrożenia jej na Twoim koncie.
-
 ### <a name="android-device-owner-mode-support---3188762--"></a>Obsługa trybu Właściciel urządzenia z systemem Android <!--3188762-->
 W przypadku rejestracji w rozwiązaniu Samsung Knox Mobile Enrollment usługa Intune obsługuje teraz rejestrowanie urządzeń w trybie zarządzania Właściciel urządzenia z systemem Android. Użytkownicy korzystający z sieci komórkowej lub Wi-Fi mogą za pomocą kilku naciśnięć zarejestrować urządzenie przy jego pierwszym włączeniu. Aby uzyskać więcej informacji, zobacz temat [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md) (Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung).
 
@@ -130,7 +141,10 @@ Zasady ochrony aplikacji usługi Intune pozwalają skonfigurować różne ustawi
 - **Wymagania dotyczące dostępu** — ta grupa zawiera opcje numeru PIN dla poszczególnych aplikacji, które określają, w jaki sposób użytkownik uzyskuje dostęp do aplikacji w kontekście służbowym.  
 - **Uruchamianie warunkowe** — ta grupa zawiera ustawienia takie jak minimalna wersja systemu operacyjnego, wykrywanie urządzeń ze zdjętymi zabezpieczeniami systemu i z dostępem do konta root oraz okresy prolongaty trybu offline.  
   
-Działanie ustawień nie ulega zmianie, ale będzie można je łatwiej znaleźć podczas pracy z przepływem tworzenia zasad. 
+Działanie ustawień nie ulega zmianie, ale będzie można je łatwiej znaleźć podczas pracy z przepływem tworzenia zasad.
+
+### <a name="new-intune-device-subscription-sku---3312071--"></a>Nowa wersja SKU subskrypcji usługi Intune dla urządzeń !--3312071-->
+W celu ułatwienia obniżania kosztów zarządzania urządzeniami w przedsiębiorstwach udostępniono nową wersję SKU subskrypcji opartej na urządzeniach. Ta wersja SKU subskrypcji usługi Intune dla urządzeń jest licencjonowana na urządzenie i jest subskrypcją miesięczną. Cena zależy od programu licencjonowania. Jest dostępna w kanałach sprzedaży Direct Channel, Enterprise Agreement (EA), Microsoft Products and Services Program (MPSA) oraz Open i Cloud Solution Provider (CSP).
 
 ### <a name="intune-apps"></a>Aplikacje usługi Intune
 
@@ -619,7 +633,7 @@ Możesz używać lokalnego atrybutu **sAMAccountName** jako nazwy użytkownika k
 
 Aby korzystać z tej funkcji, należy zsynchronizować atrybut `sAMAccountName` z lokalnego środowiska usługi Active Directory z usługą Azure AD.
 
-Dotyczy: [Andoid](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 i nowsze](email-settings-windows-10.md)
+Dotyczy: [Android](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 i nowsze wersje](email-settings-windows-10.md)
 
 #### <a name="see-device-configuration-profiles-in-conflict----1556983---"></a>Wyświetlanie profilów konfiguracji urządzeń będących w konflikcie <!-- 1556983 -->
 W sekcji **Konfiguracji urządzenia** jest wyświetlana lista istniejących profilów. Dzięki tej aktualizacji zostanie dodana nowa kolumna ze szczegółowymi informacjami o profilach, które są w konflikcie. Możesz wybrać wiersz z konfliktem, aby wyświetlić ustawienia i profil powodujące konflikt. 
@@ -675,7 +689,7 @@ Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą
 
 ## <a name="week-of-june-18-2018"></a>Tydzień od 18 czerwca 2018 r.
 
-### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Obsługa zasad ochrony aplikacji usługi Intune w przeglądarce Edge dla urządzeń przenośnych <!-- 1817882 -->
+### <a name="microsoft-edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Obsługa zasad ochrony aplikacji usługi Intune w przeglądarce Microsoft Edge dla urządzeń przenośnych <!-- 1817882 -->
 
 Przeglądarka Microsoft Edge dla urządzeń przenośnych obsługuje teraz zasady ochrony aplikacji zdefiniowane w usłudze Intune.
 
@@ -784,7 +798,7 @@ Aby wyświetlić unikatowy identyfikator urządzenia (UDID) dla urządzeń z sys
 Na urządzeniach zarządzanych przez oprogramowanie MDM w usłudze Microsoft Intune czasami operacje instalacji aplikacji mogą zakończyć się niepowodzeniem. W takich sytuacjach zrozumienie przyczyny niepowodzenia lub rozwiązanie problemu może okazać się wyzwaniem. Udostępniamy publiczną wersję zapoznawczą naszej funkcji rozwiązywania problemów z aplikacjami. W obszarach poszczególnych urządzeń zauważysz nowy węzeł o nazwie **Aplikacje zarządzane**. Ta pozycja służy do wyświetlania listy aplikacji dostarczonych za pomocą oprogramowania MDM usługi Intune. Wewnątrz węzła znajduje się lista stanów instalacji aplikacji. Po wybraniu aplikacji zostanie wyświetlony widok rozwiązywania problemów związanych z tą aplikacją. W widoku rozwiązywania problemów zostanie przedstawiony cały cykl życia aplikacji, np. czas utworzenia i zmodyfikowania aplikacji, wybrania jej jako docelowej i dostarczenia do urządzenia. Ponadto jeśli instalacja aplikacji zakończyła się niepowodzeniem, zostanie wyświetlony kod błędu i użyteczny komunikat dotyczący przyczyny tego błędu. 
 
 #### <a name="intune-app-protection-policies-and-microsoft-edge----1818968---"></a>Zasady ochrony aplikacji usługi Intune i przeglądarka Microsoft Edge <!-- 1818968 -->
-Przeglądarka Microsoft Edge dla urządzeń przenośnych (iOS i Android) obsługuje teraz zasady ochrony aplikacji w usłudze Microsoft Intune. Użytkownicy urządzeń z systemami iOS i Android, którzy logują się przy użyciu kont firmowych usługi Azure AD w aplikacji Edge, będą chronieni przez usługę Intune. Na urządzeniach z systemem iOS zasady **Wymagaj programu Managed Browser dla zawartości internetowej** pozwolą użytkownikom na otwieranie linków w przeglądarce Edge, gdy jest ona zarządzana.
+Przeglądarka Microsoft Edge dla urządzeń przenośnych (iOS i Android) obsługuje teraz zasady ochrony aplikacji w usłudze Microsoft Intune. Użytkownicy urządzeń z systemami iOS i Android, którzy logują się przy użyciu kont firmowych usługi Azure AD w aplikacji Edge, będą chronieni przez usługę Intune. Na urządzeniach z systemem iOS zasady **Wymagaj programu Managed Browser dla zawartości internetowej** pozwolą użytkownikom na otwieranie linków w przeglądarce Microsoft Edge, gdy jest ona zarządzana.
 
 ## <a name="week-of-may-14-2018"></a>Tydzień od 14 maja 2018 r.
 
@@ -1010,6 +1024,21 @@ Aby wyświetlić zaktualizowany wygląd, przejdź do obszaru [Co nowego w interf
 Teraz możesz użyć rozwiązania App Policy Protection (APP) i funkcji dostępu warunkowego usługi Intune w celu ochrony dostępu do lokalnych danych programu Exchange za pomocą programu Outlook Mobile. Aby dodać lub zmodyfikować zasady ochrony aplikacji w witrynie Azure Portal, wybierz pozycję **Microsoft Intune** > **Aplikacje klienckie** > **Zasady ochrony aplikacji**. Przed użyciem tej funkcji upewnij się, że spełnione są [Wymagania dotyczące programu Outlook dla systemów iOS i Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
 
 ## <a name="notices"></a>Uwagi
+
+### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Planowanie pod kątem zmian: aktualizacje zwiększające wydajność dla usługi Intune for Education <!--1750215-->
+Dodajemy kilka aktualizacji do usługi Intune for Education w celu zwiększenia szybkości i niezawodności podczas przypisywania ustawień do użytkowników lub urządzeń. W ramach tej zmiany pod koniec listopada przeniesiemy Twoje przypisania zasad lub ustawień do nowych grup.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+
+Jako klient z usługą Intune for Education masz dwie grupy dynamiczne usługi Azure Active Directory (Azure AD): „Wszyscy użytkownicy” i „Wszystkie urządzenia”. Wskutek zastosowania tych aktualizacji te grupy usługi Azure AD „Wszyscy użytkownicy” i „Wszystkie urządzenia”nie będą widoczne w konsoli usługi Intune for Education. Jednak nadal będą widoczne w konsoli usługi Intune na platformie Azure pod zmienionymi nazwami „Wszyscy użytkownicy (przestarzałe, nie używaj)” i „Wszystkie urządzenia (przestarzałe, nie używaj)”.
+
+Po wdrożeniu tych aktualizacji nie będzie już trzeba używać grup usługi Azure AD, aby przypisywać aplikacje i ustawienia w usłudze Intune. Zamiast tego przeniesiemy Twoje przypisania ustawień do nowych grup w konsoli usługi Intune for Education, które będą wyświetlane jako „Wszyscy użytkownicy” i „Wszystkie urządzenia”, tak jak wcześniej. Te zmiany zostaną wprowadzone na zapleczu, więc nie dostrzeżesz różnicy w konsoli usługi Intune for Education. Zmiany te nie powinny mieć żadnego wpływu na Twoich użytkowników końcowych ani na zarejestrowane urządzenia. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Nie musisz nic robić w związku z przenoszeniem przez nas Twoich przypisań zasad. Jeśli obecnie przypisujesz zasady w konsoli usługi Intune for Education, rób to nadal.
+
+Jeśli obecnie przypisujesz zasady do grup usługi Azure AD wymienionych powyżej w usłudze Intune na platformie Azure, zamiast tego zacznij przypisywać je do grup „Wszyscy użytkownicy” i „Wszystkie urządzenia” w konsoli usługi Intune for Education. Gdy zobaczysz w konsoli grupy usługi Azure AD określone w ich nazwach jako przestarzałe, przestań przypisywać zasady w usłudze Azure AD. Jeśli obecnie nie używasz tych grup ze zmienionymi nazwami do żadnych celów, najlepiej je usuń.
+
 
 ### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Planowanie zmian: w grudniu usługa Intune przejdzie na obsługę systemu macOS w wersji 10.12 i nowszych <!--2970975--> 
 

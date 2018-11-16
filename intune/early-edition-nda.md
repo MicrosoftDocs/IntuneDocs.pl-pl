@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2018
+ms.date: 11/5/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bacaf8ff4119d4cd40483b65ea45e283d98a51f1
-ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
+ms.openlocfilehash: 2f21df636ab429969429c6dbdf540daaa67a8f88
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51025206"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576770"
 ---
 # <a name="the-early-edition-for-microsoft-intune---november-2018"></a>Wczesna wersja usługi Microsoft Intune — listopad 2018
 
@@ -44,11 +44,6 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 ### <a name="uninstalling-apps-on-corporate-owned-supervised-ios-devices----1281677---"></a>Odinstalowywanie aplikacji na nadzorowanych urządzeniach z systemem iOS należących do firmy <!-- 1281677 -->
 Będzie można usunąć dowolną aplikację na nadzorowanych urządzeniach z systemem iOS należących do firmy. Dowolną aplikację można usunąć, określając jako cel grupę użytkowników lub urządzeń za pomocą typu przypisania **Odinstaluj**. W przypadku osobistych lub nienadzorowanych urządzeń z systemem iOS będzie można w dalszym ciągu usunąć tylko aplikacje zainstalowane przy użyciu usługi Intune.
 
-### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Obsługa uwierzytelniania OAuth z systemu iOS 12 w profilach poczty e-mail systemu iOS <!--2155106 -->
-Profile poczty e-mail systemu iOS w usłudze Intune będą obsługiwać uwierzytelnianie OAuth z systemu iOS 12. Aby wyświetlić tę funkcję, wybierz pozycję **Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**. W bloku tworzenia profilu możesz włączyć lub wyłączyć pozycję **OAuth**. Jeśli to ustawienie jest włączone:
-1. Urządzenia, które są już wybrane, otrzymają nowy profil.
-2. Użytkownicy końcowi zostaną poproszeni o ponowne podanie poświadczeń.
-
 ### <a name="track-installation-of-office-proplus---2620217--"></a>Śledzenie instalacji pakietu Office ProPlus <!--2620217-->
 Będzie można śledzić postęp instalacji pakietu [Office ProPlus](apps-add-office365.md) przy użyciu [strony stanu rejestracji](windows-enrollment-status.md).
 
@@ -69,7 +64,7 @@ Nowe ustawienie umożliwi użytkownikom przełączanie się między aplikacją M
 Będziesz mieć lepszą kontrolę nad przypisaniami zasad ochrony aplikacji. Po zapisaniu i zastosowaniu przypisań zasad ochrony aplikacji będą one dotyczyć bezpośrednio tylko wybranych użytkowników.
 
 ### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nowe ustawienia przeglądarki Microsoft Edge dla systemu Windows 10 i nowszych <!-- 3174639 -->
-Zostanie dodane nowe ustawienie ułatwiające kontrolowanie przeglądarki Microsoft Edge na urządzeniach i zarządzanie nią. Aby uzyskać listę bieżących ustawień, zobacz [Ograniczenia urządzeń dla systemu Windows 10 (i nowszych)](device-restrictions-windows-10.md#edge-browser).
+Zostanie dodane nowe ustawienie ułatwiające kontrolowanie przeglądarki Microsoft Edge na urządzeniach i zarządzanie nią. Aby uzyskać listę bieżących ustawień, zobacz [Ograniczenia urządzeń dla systemu Windows 10 (i nowszych)](device-restrictions-windows-10.md#microsoft-edge-browser).
 
 ### <a name="select-apps-tracked-on-the-enrollment-status-page---2531007---"></a>Wybieranie śledzonych aplikacji na stronie stanu rejestracji <!-- 2531007 -->
 Będzie można wybrać śledzone aplikacje na stronie stanu rejestracji.
@@ -113,10 +108,10 @@ Ustawienia zasad ochrony aplikacji dla zawartości internetowej na urządzeniach
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Token VPP firmy Apple używany przez inne rozwiązanie MDM <!-- 1488946 -->
 Usługa Intune wykryje i wyświetli szczegółowe informacje, jeśli token programu VPP (Volume Purchase Program) jest używany zarówno przez usługę Intune, jak i inne rozwiązanie MDM.
 
-### <a name="ios-and-macos-version-numbers-and-build-numbers-are-shown----1892471---"></a>Są wyświetlane numery wersji i numery kompilacji systemów iOS i macOS <!-- 1892471 -->
-W polu **Zgodność urządzenia** > **Zgodność urządzenia** jest wyświetlana wersja systemu operacyjnego iOS i macOS. W ramach przyszłej aktualizacji będzie także wyświetlany numer kompilacji dla obydwu platform.
+### <a name="ios-and-macos-version-numbers-and-build-numbers-are-available-in-compliance-policies----1892471---"></a>Numery wersji oraz numery kompilacji systemów iOS i macOS są dostępne w zasadach zgodności <!-- 1892471 -->
+W polu **Zgodność urządzenia** > **Zgodność urządzenia** są wyświetlane wersje systemów operacyjnych iOS oraz macOS i można ich używać w zasadach zgodności. W ramach przyszłej aktualizacji konfigurowalny będzie także numer kompilacji dla obydwu platform.
 
-Po wydaniu aktualizacji zabezpieczeń firma Apple zwykle pozostawia numer wersji bez zmian, lecz aktualizuje numer kompilacji. Wyświetlając numer kompilacji, można łatwo sprawdzić, czy aktualizacja luk w zabezpieczeniach została zainstalowana.
+Po wydaniu aktualizacji zabezpieczeń firma Apple zwykle pozostawia numer wersji bez zmian, lecz aktualizuje numer kompilacji. Na podstawie numeru kompilacji w zasadach zgodności można łatwo sprawdzić, czy została zainstalowana aktualizacja eliminująca luki w zabezpieczeniach.
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Wycofane urządzenia na pulpicie nawigacyjnym zgodności urządzeń <!-- 1981119 -->
 W ramach przyszłej aktualizacji wycofane urządzenia zostaną usunięte z pulpitu nawigacyjnego zgodności urządzeń. Spowoduje to zmianę liczb dotyczących zgodności.

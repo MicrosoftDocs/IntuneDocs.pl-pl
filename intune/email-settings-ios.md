@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/21/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d27e90655e54051d73989202d2bc849a66208f5
-ms.sourcegitcommit: 488be75cbee88455b33c68a3ec2acb864d461bf8
+ms.openlocfilehash: a6fd10ab6a1e9dd7249e2ae1d4bf558d190276ed
+ms.sourcegitcommit: b0ee8626191961dc07f9f7f9d8e6a5fb09c63350
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41910806"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51505882"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS — Intune
 
@@ -44,15 +44,32 @@ Ustawienia profilu poczty e-mail umożliwiają skonfigurowanie urządzeń z syst
       Podczas wybierania atrybutów **Niestandardowe** wprowadź następujące ustawienia:
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
-- **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej głównej nazwy jako adresu e-mail, lub wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania do programu Exchange.
+- **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej nazwy użytkownika jako adresu e-mail. Wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania się do programu Exchange.
 - **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**. Uwierzytelnianie Azure Multi-Factor Authentication nie jest obsługiwane.
   - W przypadku wybrania pozycji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który jest używany do uwierzytelniania połączenia z programem Exchange.
-- **Protokół SSL**: wybierz pozycję **Włącz**, aby użyć komunikacji SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
+- **Protokół SSL**: wybierz pozycję **Włącz**, aby użyć protokołu SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
+- **Protokół OAuth**: wybierz pozycję **Włącz**, aby użyć protokołu OAuth (Open Authorization) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z programem Exchange. Jeśli serwer OAuth korzysta z uwierzytelniania przy użyciu certyfikatu, wybierz opcję **Certyfikat** w obszarze **Metoda uwierzytelniania** i dołącz certyfikat do profilu. Możesz też wybrać opcję **Nazwa użytkownika i hasło** w obszarze **Metoda uwierzytelniania**. Jeśli korzystasz z protokołu OAuth, sprawdź następujące elementy:
+
+  - Przed skierowaniem tego profilu do użytkowników upewnij się, że rozwiązanie poczty e-mail obsługuje protokół OAuth. Instalacja usługi Office 365 Exchange Online obsługuje uwierzytelnianie za pomocą protokołu OAuth. Instalacja lokalna programu Exchange i rozwiązania partnerów lub innych firm mogą nie obsługiwać protokołu OAuth. Instalacja lokalna programu Exchange może być skonfigurowana pod kątem obsługi nowoczesnego uwierzytelniania — zobacz wpis na blogu [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) (Ogłoszenie hybrydowego nowoczesnego uwierzytelniania dla lokalnej instalacji programu Exchange).
+
+    Jeśli profil poczty e-mail korzysta z uwierzytelniania Oauth, a usługa poczty e-mail go nie obsługuje, opcja **Wprowadź ponownie hasło** będzie wydawała się uszkodzona. Na przykład gdy użytkownik wybierze opcję **Wprowadź ponownie hasło** w ustawieniach urządzenia firmy Apple, nic się nie stanie.
+
+  - Po włączeniu uwierzytelniania OAuth użytkownicy końcowi będą korzystać z innego środowiska logowania do konta e-mail z „nowoczesnym uwierzytelnianiem”, które obsługuje uwierzytelnianie wieloskładnikowe (MFA). 
+
+  - W niektórych organizacjach użytkownicy końcowi nie mają możliwości skorzystania z [dostępu samoobsługowego do aplikacji](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). W tym scenariuszu logowanie za pomocą nowoczesnego uwierzytelniania może zakończyć się niepowodzeniem, jeśli administrator nie utworzy aplikacji firmowej „Konta systemu iOS” i nie przydzieli użytkownikom dostępu do aplikacji w usłudze Azure AD.
+
+    Domyślną czynnością jest dodanie aplikacji przy użyciu funkcji **Dodaj aplikację** w [panelu dostępu do aplikacji](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **bez zatwierdzenia firmy**. Aby uzyskać więcej informacji, zobacz [Assign users to applications (Przypisywanie użytkowników do aplikacji)](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+
+  > [!NOTE]
+  > Włączenie uwierzytelniania OAuth będzie miało następujące skutki:  
+  > 1. Urządzeniom, które są już wybrane jako docelowe, zostaną przypisane nowe profile.
+  > 2. Użytkownikom końcowym wyświetli się monit o ponowne wprowadzenie swoich poświadczeń.
+
 - **S/MIME**: wybierz pozycję **Włącz protokół S/MIME**, aby wysyłać wychodzącą pocztę e-mail przy użyciu podpisywania S/MIME. Po włączeniu można również zaszyfrować wiadomości e-mail do adresatów, którzy mogą odbierać zaszyfrowane wiadomości e-mail i odszyfrować wiadomości e-mail odbierane od nadawców.
-  - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu PKCS, który będzie używany do uwierzytelniania połączenia z programem Exchange i/lub szyfrowania wymian wiadomości e-mail.
+  - Jeśli wybierzesz opcję **Certyfikat**, wybierz istniejący profil certyfikatu PKCS do uwierzytelniania połączenia z programem Exchange lub szyfrowania wymiany wiadomości e-mail.
 - **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
 - **Zezwalaj na przenoszenie wiadomości na inne konta poczty e-mail**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom przenoszenie wiadomości e-mail między różnymi kontami skonfigurowanymi na ich urządzeniu.
-- **Zezwalaj na wysyłanie wiadomości e-mail przy użyciu aplikacji innych firm**: wybierz pozycję **Włącz**, aby zezwalać użytkownikowi na wybranie jego profilu jako domyślnego konta wysyłania poczty e-mail i zezwalaj aplikacjom innych firm na otwieranie poczty e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.
+- **Zezwalaj na wysyłanie wiadomości e-mail przy użyciu aplikacji innych firm**: wybierz pozycję **Włącz**, aby zezwalać użytkownikowi na wybranie jego profilu jako domyślnego konta do wysyłania poczty e-mail. Umożliwia to aplikacjom innych firm otwieranie wiadomości e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.
 - **Synchronizuj ostatnio używane adresy e-mail**: wybierz pozycję **Włącz**, aby zezwalać użytkownikom na synchronizowanie z serwerem listy adresów e-mail, które były ostatnio używane na urządzeniu.
 
 ## <a name="next-steps"></a>Następne kroki

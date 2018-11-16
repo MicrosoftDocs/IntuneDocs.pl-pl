@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
-ms.openlocfilehash: fb88f703048eaa122bb406d8adb1fc9face764c4
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: ffc1f0140f98b17e060df3308af779ddcb77549e
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410756"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51510928"
 ---
 # <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Przewodnik Szybki start: tworzenie użytkownika i przypisywanie mu licencji
 
@@ -61,7 +61,9 @@ Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodzą
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku Szybki start utworzono użytkownika i przypisano licencję temu użytkownikowi. Teraz można przypisać tego użytkownika do grupy.
+W tym przewodniku Szybki start utworzono użytkownika i przypisano licencję temu użytkownikowi. Aby uzyskać więcej informacji na temat dodawania użytkowników do usługi Intune, zobacz [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](users-add.md).
+
+Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Tworzenie grupy](quickstart-create-group.md)
+> [Przewodnik Szybki start: tworzenie grupy do zarządzania użytkownikami](quickstart-create-group.md)

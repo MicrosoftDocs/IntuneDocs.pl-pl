@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: 63295d7e05889f5a8beb44e399f36a4fbe27544d
+ms.sourcegitcommit: 76c7b315b83eb6cb5b996facf1d250fb3e22f1bc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679257"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51276119"
 ---
-# <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie?
+# <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jakie informacje może zobaczyć moja organizacja, gdy zarejestruję swoje urządzenie?
 
-Gdy zarejestrujesz urządzenie w usłudze Microsoft Intune, Twoja firma nie będzie mogła wyświetlać Twoich informacji osobistych. Gdy rejestrujesz urządzenie, dajesz firmie uprawnienia do wyświetlania określonych fragmentów informacji na swoim urządzeniu, takich jak model urządzenia i jego numer seryjny. Firma używa tych informacji w celu ochrony danych firmowych znajdujących się na urządzeniu.
+Gdy zarejestrujesz urządzenie w usłudze Microsoft Intune, Twoja organizacja nie będzie widzieć Twoich informacji osobistych. Gdy rejestrujesz urządzenie, dajesz organizacji uprawnienia do wyświetlania określonych fragmentów informacji na swoim urządzeniu, takich jak model urządzenia i jego numer seryjny. Organizacja używa tych informacji w celu ochrony danych firmowych znajdujących się na urządzeniu.
 
-**Czego Twoja firma nigdy nie zobaczy:**
+**Czego Twoja organizacja nigdy nie zobaczy:**
 
 - Historia połączeń i przeglądania sieci Web
 - Wiadomości e-mail i SMS
@@ -35,20 +35,23 @@ Gdy zarejestrujesz urządzenie w usłudze Microsoft Intune, Twoja firma nie będ
 - Kalendarz
 -   Hasła
 - Obrazy, w tym dane z aparatu i aplikacji Zdjęcia
+- Pliki
 
-**Co Twoja firma widzi zawsze:**
+**Co Twoja organizacja widzi zawsze:**
 
 - Model urządzenia, np. Google Pixel
-- Producent urządzenia, np. Microsoft
-- System operacyjny, np. iOS
-- Nazwy aplikacji, np. Microsoft Word
+- Producent urządzenia, na przykład Microsoft
+- Wersja systemu operacyjnego, na przykład iOS 12.0.1
+- Nazwy aplikacji, na przykład Microsoft Word: na urządzeniach osobistych Twoja organizacja może wyświetlać tylko spis aplikacji zarządzanych. Na urządzeniach należących do firmy organizacja może wyświetlać spis wszystkich aplikacji.
 - Właściciel urządzenia
 - Nazwa urządzenia
-- Numer seryjny
+- Numer seryjny urządzenia
+- IMEI
 
-**Co firma może widzieć:**
+**Co organizacja może widzieć:**
 
--  Numer telefonu: w przypadku urządzeń **należących do firmy** może być widoczny Twój pełny numer telefonu. w przypadku urządzeń **prywatnych** dla firmy widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. **Typ własności** poszczególnych urządzeń można sprawdzić, otwierając stronę **Szczegóły urządzenia** odnoszącą się do tego urządzenia.
--  Lokalizacja: firma nigdy nie widzi lokalizacji urządzenia; wyjątkiem są nadzorowane urządzenia z systemem iOS, które zostały utracone. [Jak to sprawdzić?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Spis aplikacji: firma korzystająca z usługi Mobile Threat Defense może przeglądać dodatkowe informacje o aplikacjach na urządzeniu z systemem iOS. Dowiedz się więcej na temat usługi [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
-- Informacje o sieci: niektóre informacje na temat połączeń sieciowych dla urządzeń z systemem Android mogą być dostępne dla działu pomocy technicznej Twojej firmy. Na przykład jeśli firma wymaga, aby urządzenia znajdowały się w konkretnym budynku, urządzenie będzie identyfikować sieć, do której jest podłączone. 
+-  Numer telefonu: w przypadku urządzeń **należących do firmy** może być widoczny Twój pełny numer telefonu. W przypadku urządzeń **prywatnych** dla organizacji widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. **Typ własności** poszczególnych urządzeń można sprawdzić, otwierając stronę **Szczegóły urządzenia** odnoszącą się do tego urządzenia.
+- Ilość wolnego miejsca na urządzeniu: jeśli nie możesz zainstalować wymaganej aplikacji, organizacja może zobaczyć ilość wolnego miejsca na urządzeniu, aby sprawdzić, czy miejsca nie jest za mało.  
+-  Lokalizacja: organizacja nigdy nie widzi lokalizacji urządzenia; wyjątkiem są nadzorowane urządzenia z systemem iOS, które zostały utracone. [Jak to sprawdzić?](https://go.microsoft.com/fwlink/?linkid=853816)
+- Spis aplikacji: organizacja korzystająca z usługi Mobile Threat Defense może przeglądać dodatkowe informacje o aplikacjach na urządzeniu z systemem iOS. Dowiedz się więcej na temat usługi [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Informacje o sieci: niektóre informacje na temat połączeń sieciowych dla urządzeń z systemem Android mogą być dostępne dla działu pomocy technicznej Twojej organizacji. Na przykład jeśli organizacja wymaga, aby urządzenia znajdowały się w konkretnym budynku, urządzenie będzie identyfikować sieć, do której jest podłączone. 

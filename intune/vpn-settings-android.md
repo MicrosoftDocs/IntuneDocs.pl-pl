@@ -1,6 +1,6 @@
 ---
 title: Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Podczas tworzenia profilu konfiguracji sieci VPN dla urządzeń z systemem Android i urządzeń z programem Android for Work wprowadź nazwę połączenia, adres IP lub nazwę FQDN serwera sieci VPN, wybierz sposób uwierzytelniania użytkowników przy użyciu serwera sieci VPN, a następnie wybierz typ połączenia Citrix, SonicWall, Check Point Capsule, Pulse Secure i Edge.
+description: Podczas tworzenia profilu konfiguracji sieci VPN dla urządzeń z systemem Android i urządzeń z programem Android for Work wprowadź nazwę połączenia, adres IP lub nazwę FQDN serwera sieci VPN, wybierz sposób uwierzytelniania użytkowników przy użyciu serwera sieci VPN, a następnie wybierz typ połączenia Citrix, SonicWall, Check Point Capsule, Pulse Secure i Microsoft Edge.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f02a76def463c4ef1c3ee24b021df3185d263ecf
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
+ms.openlocfilehash: 113d2e52783f3c7e9f013d2cc239efad45408c87
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279325"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576821"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Intune
 

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/26/2018
+ms.date: 11/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a95f68f0a9794047b8adb7f9ab729bb4905f2379
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: ac0348736e5975633776c86dee88555dfceb6919
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679393"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576889"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Ustawienia ograniczeń urządzeń dla systemu Windows 10 (i nowszych) w usłudze Intune
 W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 10.
@@ -31,7 +31,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Przechwytywanie ekranu (tylko dla urządzeń przenośnych)** — umożliwia użytkownikowi przechwycenie ekranu urządzenia w formie obrazu.
 - **Kopiuj i wklej (tylko urządzenia przenośne)** — umożliwia kopiowanie i wklejanie między aplikacjami na urządzeniu.
 - **Ręczne wyrejestrowanie**— umożliwia użytkownikowi ręczne usunięcie konta firmowego z urządzenia.
-   - To ustawienie zasad nie jest stosowane, jeśli komputer jest przyłączony do usługi Azure Active Directory i włączono automatyczne rejestrowanie. 
+   - To ustawienie zasad nie jest stosowane, jeśli komputer jest przyłączony do usługi Azure AD i włączono automatyczne rejestrowanie. 
    - To ustawienie zasad nie ma zastosowania do komputerów z systemem Windows 10 Home.
 - **Ręczne instalowanie certyfikatu głównego (tylko dla urządzeń przenośnych)** — uniemożliwia użytkownikowi ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji.
 
@@ -51,9 +51,9 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Odnajdywanie urządzeń** — blokuje wykrywanie urządzenia przez inne urządzenia.
 - **Przełącznik zadań (tylko urządzenia przenośne)** — blokuje przełącznik zadań na urządzeniu.
 - **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)** — w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
-- **Obszar roboczy pisma odręcznego** — blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Jeśli to ustawienie nie zostanie skonfigurowane, obszar roboczy pisma odręcznego będzie dostępny (funkcja będzie włączona), a użytkownik będzie mógł używać jej na ekranie blokady urządzenia.
+- **Obszar roboczy pisma odręcznego** — blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Jeśli to ustawienie ma wartość **Nie skonfigurowano**, obszar roboczy pisma odręcznego będzie dostępny (funkcja będzie włączona), a użytkownik będzie mógł używać jej na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie** — pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
-- **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)** — wybierz pozycję **Wymagane**, aby wymagać, żeby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
+- **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)** — wybierz pozycję **Wymagane**, aby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
 
 ## <a name="password"></a>Hasło
 -   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
@@ -70,14 +70,14 @@ Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodze
 
 ## <a name="personalization"></a>Personalizacja
 
-- **Adres URL obrazu tła pulpitu (tylko dla komputerów stacjonarnych)** — pozwala określić adres URL obrazu w formacie JPEG, który będzie używany jako tapeta pulpitu systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
+- **Adres URL obrazu tła pulpitu (tylko dla komputerów stacjonarnych)** — pozwala wprowadzić adres URL obrazu w formacie JPEG, który będzie używany jako tapeta pulpitu systemu Windows. Użytkownicy nie mogą zmieniać obrazu.
 
 ## <a name="privacy"></a>Ochrona prywatności
 
 -   **Personalizacja danych wejściowych** — nie zezwala na korzystanie z chmurowych usług przetwarzania mowy razem z aplikacją Cortana, funkcją dyktowania czy aplikacjami ze Sklepu Microsoft. Jeśli zezwolisz na te usługi, firma Microsoft może zbierać dane dotyczące głosu w celu usprawnienia świadczonej usługi.
 -   **Automatyczne akceptowanie w przypadku monitów o wyrażenie zgody przez użytkownika dotyczących parowania i prywatności** — zezwala systemowi Windows na automatyczne akceptowanie komunikatów dotyczących parowania i prywatności wyświetlanych w uruchamianych aplikacjach.
-- **Publikuj działania użytkownika**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań.
-- **Tylko działania lokalne**: ustaw tę pozycję na wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych.
+- **Publikuj działania użytkownika**: ustaw wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań.
+- **Tylko działania lokalne**: ustaw wartość **Blokuj**, aby uniemożliwić udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych.
 
 Można zdefiniować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Można także zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
 
@@ -98,7 +98,7 @@ Można zdefiniować informacje, do których mogą uzyskiwać dostęp wszystkie a
 - **Telefon** — określ, czy ta aplikacja może uzyskiwać dostęp do telefonu.
 - **Urządzenia radiowe** — niektóre aplikacje używają urządzeń radiowych (np. Bluetooth) w urządzeniu do wysyłania lub odbierania danych i muszą te urządzenia radiowe włączać lub wyłączać. Określ, czy ta aplikacja będzie mogła sterować tymi urządzeniami radiowymi.
 - **Zadania** — określ, czy ta aplikacja może uzyskiwać dostęp do zadań użytkownika.
-- **Zaufane urządzenia** — określ, czy ta aplikacja może używać zaufanych urządzeń (sprzętu, z którym już nawiązano połączenie lub dołączonego do tego komputera, tabletu lub telefonu), na przykład telewizorów, projektorów, itp.
+- **Zaufane urządzenia** — określ, czy ta aplikacja może używać zaufanych urządzeń (sprzętu, z którym już nawiązano połączenie lub dołączonego do tego komputera, tabletu lub telefonu). na przykład telewizorów, projektorów, itp.
 - **Opinie i diagnostyka** — określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
 - **Synchronizacja z urządzeniami** — określ, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym komputerem, tabletem lub telefonem.
 
@@ -153,38 +153,38 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 -   **DVR z gry (tylko dla komputerów stacjonarnych)** — pozwala określić, czy nagrania i emisje z gier są dozwolone.
 -   **Tylko aplikacje ze sklepu** — Określa, czy użytkownicy mogą instalować aplikacje z miejsc innych niż sklep z aplikacjami.
 
-## <a name="edge-browser"></a>Przeglądarka Microsoft Edge
+## <a name="microsoft-edge-browser"></a>Przeglądarka Microsoft Edge
 
--   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Edge na urządzeniu.
--   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Pozwala to zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
+-   **Przeglądarka Microsoft Edge (tylko urządzenia przenośne)** — umożliwia korzystanie z przeglądarki Microsoft Edge na urządzeniu.
+-   **Rozwijanie paska adresu (tylko wersja klasyczna)** — uniemożliwia przeglądarce Microsoft Edge wyświetlanie sugestii na liście rozwijanej podczas wpisywania tekstu. Ta opcja pozwala zmniejszyć wykorzystanie przepustowości sieci w ramach komunikacji między przeglądarką Microsoft Edge a usługami firmy Microsoft.
 -   **Synchronizuj ulubione między przeglądarkami firmy Microsoft (tylko wersja klasyczna)** — umożliwia synchronizowanie ulubionych między przeglądarkami Internet Explorer i Microsoft Edge.
--   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Edge do wysyłania nagłówków „Nie śledź” do witryn sieci Web odwiedzanych przez użytkowników.
+-   **Wysyłaj nagłówki Nie śledź** — umożliwia skonfigurowanie przeglądarki Microsoft Edge do wysyłania nagłówków „Nie śledź” do witryn internetowych odwiedzanych przez użytkowników.
 -   **Pliki cookie** — umożliwia przeglądarce na urządzeniu zapisywanie plików cookie z Internetu.
--   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Edge.
+-   **JavaScript** — umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Microsoft Edge.
 -   **Wyskakujące okienka** — umożliwia blokowanie wyskakujących okienek w przeglądarce (tylko system Windows 10 Desktop).
 -   **Sugestie wyszukiwania** — umożliwia sugerowanie witryn przez wyszukiwarkę podczas wpisywania wyszukiwanych fraz.
 -   **Wysyłaj ruch intranetowy do programu Internet Explorer** — umożliwia użytkownikom otwieranie intranetowych witryn sieci Web w programie Internet Explorer (tylko system Windows 10 Desktop).
 -   **Autowypełnianie** — umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce (tylko system Windows 10 Desktop).
 -   **Menedżer haseł** — włącza lub wyłącza funkcję menedżera haseł w przeglądarce Microsoft Edge.
 -   **Lokalizacja listy witryn trybu przedsiębiorstwa** — określa lokalizację listy witryn sieci Web, które można otwierać w trybie przedsiębiorstwa. Użytkownicy nie mogą edytować tej listy.<br>(Tylko system Windows 10 Desktop).
--   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Edge.
--   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Edge na urządzeniu.
+-   **Narzędzia programistyczne** — uniemożliwia użytkownikowi końcowemu otwieranie narzędzi programistycznych przeglądarki Microsoft Edge.
+-   **Rozszerzenia** — umożliwia użytkownikowi końcowemu instalowanie rozszerzeń przeglądarki Microsoft Edge na urządzeniu.
 -   **Przeglądanie InPrivate** — uniemożliwia otwieranie sesji przeglądania InPrivate przez użytkownika końcowego.
--   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Edge.
+-   **Pokaż stronę pierwszego uruchomienia** — wyłącza wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Microsoft Edge.
     -   **Adres URL pierwszego uruchomienia** — umożliwia podanie adresu URL strony wyświetlanej przy pierwszym uruchomieniu przeglądarki Microsoft Edge (tylko system Windows 10 Mobile).
 -   **Strony główne** — umożliwia dodanie listy witryn, które mają być używane jako strony główne w przeglądarce Microsoft Edge (tylko wersja Desktop).
 -   **Zmiany strony startowej** — umożliwia użytkownikom zmienianie stron startowych wyświetlanych po otwarciu przeglądarki Microsoft Edge. Użyj ustawienia Strony główne, aby wskazać stronę (lub listę stron) otwieraną podczas uruchamiania przeglądarki Microsoft Edge.
 -   **Blokuj dostęp do flag informacji** — uniemożliwia użytkownikowi końcowemu uzyskanie dostępu do strony about:flags przeglądarki Microsoft Edge zawierającej ustawienia programistyczne i eksperymentalne.
 -   **Adres IP lokalnego hosta dla protokołu WebRTC** — blokuje wyświetlanie adresu IP lokalnego hosta użytkownika podczas nawiązywania połączeń telefonicznych przy użyciu protokołu WebRTC.
 -   **Domyślna wyszukiwarka** — pozwala określić domyślną wyszukiwarkę. Użytkownicy końcowi mogą w dowolnym momencie zmienić tę wartość.
--   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Edge.
+-   **Wyczyść dane przeglądania przy zamykaniu** — włącza czyszczenie historii i danych przeglądania przy zamykaniu przeglądarki Microsoft Edge.
 -   **Zbieranie danych dynamicznych kafelków** — wyłącza zbieranie informacji z dynamicznych kafelków podczas przypinania witryn przez użytkowników z przeglądarki Microsoft Edge do menu Start.
 -  **Lista Ulubione** — określa ścieżkę pliku ulubionych. Na przykład http://contoso.com/favorites.html.
--  **Ograniczanie zmian ulubionych** — wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 
+-  **Ograniczanie zmian ulubionych**  -  wybierz ustawienie **Blokuj**, aby uniemożliwić użytkownikom dodawanie, importowanie, sortowanie lub edytowanie listy Ulubione. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
 
-- **Filtr SmartScreen dla przeglądarki Microsoft Edge** — włącz filtr SmartScreen dla przeglądarki Edge używany podczas uzyskiwania dostępu do witryn i pobierania plików.
+- **Filtr SmartScreen dla przeglądarki Microsoft Edge** — włącz filtr SmartScreen dla przeglądarki Microsoft Edge używany podczas uzyskiwania dostępu do witryn i pobierania plików.
 - **Dostęp do złośliwych witryn** — zablokuj użytkownikom możliwość ignorowania ostrzeżeń filtru Windows Defender SmartScreen oraz przechodzenia do witryny.
 - **Pobieranie niezweryfikowanych plików** — zablokuj użytkownikom możliwość ignorowania ostrzeżeń filtru Windows Defender SmartScreen oraz pobierania niezweryfikowanych plików.
 
@@ -235,7 +235,27 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 
 ## <a name="start"></a>Początek
 
-- **Odpinanie aplikacji od paska zadań** — uniemożliwia użytkownikowi odpinanie aplikacji od menu Start.
+- **Układ menu Start** — w celu dostosowania menu Start na urządzeniach stacjonarnych można przekazać plik XML zawierający dostosowania, w tym kolejność wyświetlania aplikacji i nie tylko. Użytkownicy nie mogą zmieniać wprowadzonego w ten sposób układu menu Start.
+- **Przypinaj witryny internetowe do kafelków w menu Start** — zaimportuj obrazy z przeglądarki Microsoft Edge, które będą wyświetlane jako linki w menu Start systemu Windows dla urządzeń stacjonarnych.
+- **Odpinanie aplikacji od paska zadań** — ustawienie **Blokuj** uniemożliwia użytkownikowi odpinanie aplikacji od menu Start.
+- **Szybkie przełączanie użytkowników** — ustawienie **Blokuj** uniemożliwia przełączanie się między zalogowanymi jednocześnie użytkownikami bez wylogowywania się.
+- **Najczęściej używane aplikacje** — ustawienie **Blokuj** powoduje ukrycie najczęściej używanych aplikacji w menu Start. Powoduje też wyłączenie odpowiedniego przełącznika w aplikacji Ustawienia.
+- **Ostatnio dodane aplikacje** — ustawienie **Blokuj** powoduje ukrycie ostatnio dodanych aplikacji w menu Start. Powoduje też wyłączenie odpowiedniego przełącznika w aplikacji Ustawienia.
+- **Tryb ekranu startowego** — określ sposób wyświetlania ekranu startowego. Wybierz opcję wyświetlania **Pełny ekran** lub **Niepełny ekran**.
+- **Ostatnio otwierane elementy list szybkiego dostępu** — ustawienie **Blokuj** pozwala ukryć listy szybkiego dostępu do ostatnich elementów w menu Start i na pasku zadań. Powoduje też wyłączenie odpowiedniego przełącznika w aplikacji Ustawienia.
+- **Lista aplikacji** — wybierz sposób wyświetlania aplikacji Ustawienia. Dostępne opcje: 
+  - Zwiń
+  - Zwiń i wyłącz aplikację Ustawienia 
+  - Usuwa i wyłącza aplikację Ustawienia
+- **Przycisk zasilania** — ustawienie **Blokuj** powoduje ukrycie przycisku zasilania w menu Start.
+- **Kafelek użytkownika** — ustawienie **Blokuj** powoduje ukrycie kafelka użytkownika w menu Start.
+  - **Blokada** — ustawienie **Blokuj** powoduje ukrycie opcji `Lock` na kafelku użytkownika w menu Start.
+  - **Wyloguj się** — ustawienie **Blokuj** powoduje ukrycie opcji `Sign out` na kafelku użytkownika w menu Start.
+- **Zamknij** — ustawienie **Blokuj** powoduje ukrycie opcji `Update and shut down` i `Shut down` na przycisku zasilania w menu Start.
+- **Uśpienie** — ustawienie **Blokuj** powoduje ukrycie opcji `Sleep` na przycisku zasilania w menu Start.
+- **Hibernacja** — ustawienie **Blokuj** powoduje ukrycie opcji `Hibernate` na przycisku zasilania w menu Start.
+- **Przełącz konto** — ustawienie **Blokuj** powoduje ukrycie opcji `Switch account` na kafelku użytkownika w menu Start.
+- **Opcje ponownego uruchamiania** — ustawienie **Blokuj** powoduje ukrycie opcji `Update and restart` i `Restart` na przycisku zasilania w menu Start.
 - **Folder Dokumenty w menu Start** — pozwala ukryć lub pokazać folder Dokumenty w menu Start systemu Windows.
 - **Folder Pliki do pobrania w menu Start** — pozwala ukryć lub pokazać folder pobranych plików w menu Start systemu Windows.
 - **Folder Eksplorator plików w menu Start** — pozwala ukryć lub pokazać aplikację Eksplorator plików w menu Start systemu Windows.
@@ -269,7 +289,7 @@ Kiosk to urządzenie, na którym jest zwykle uruchamiana jedna aplikacja lub zes
 #### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
 Podaj następujące ustawienia:
 
-- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika, konto domeny usługi AD lub dane logowanie konta usługi Azure AD skojarzonego z aplikacją kiosku.
+- **Konto użytkownika** — podaj lokalne (na urządzeniu) konto użytkownika, konto domeny usługi AD lub konto usługi Azure AD skojarzone z aplikacją kiosku.
   - Konto lokalne: wprowadź w formacie `devicename\accountname`, `.\accountname` lub `accountname`
   - Konto domeny: wprowadź w formacie `domain\accountname`
   - Konto usługi Azure AD: wprowadź w formacie `AzureAD\emailaddress`. Pamiętaj, aby wprowadzić nazwę „AzureAD”, ponieważ jest to ustalona nazwa domeny. Następnie podaj adres e-mail usługi Azure AD. Na przykład wprowadź `AzureAD\user@contoso.onmicrosoft.com`.
@@ -300,7 +320,7 @@ Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istni
 
   Artykuł [Create a Windows 10 kiosk that runs multiple apps (Tworzenie kiosku z systemem Windows 10 obsługującego wiele aplikacji)](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) zawiera więcej szczegółowych informacji na temat używania i tworzenia plików XML.
 
-- **Przypisani użytkownicy** — dodaj co najmniej jedno konta użytkownika, które może używać dodanych aplikacji. Po zalogowaniu przy użyciu konta będą dostępne tylko aplikacje określone w konfiguracji. Konto może być kontem lokalnym na urządzeniu lub danymi logowania konta usługi Azure AD skojarzonego z aplikacją kiosku.
+- **Przypisani użytkownicy** — dodaj co najmniej jedno konta użytkownika, które może używać dodanych aplikacji. Po zalogowaniu przy użyciu konta będą dostępne tylko aplikacje określone w konfiguracji. Konto może być kontem lokalnym na urządzeniu lub kontem usługi Azure AD skojarzonym z aplikacją kiosku.
 
     W przypadku kiosków w miejscach publicznych z włączonym automatycznym logowaniem należy użyć typu użytkownika z najniższymi uprawnieniami (na przykład lokalnego standardowego konta użytkownika). Aby skonfigurować konto usługi Azure Active Directory (AD) pod kątem trybu kiosku, użyj formatu `domain\user@tenant.com`.
 
@@ -347,7 +367,7 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 ## <a name="network-proxy"></a>Serwer proxy sieci
 
 -   **Automatycznie wykrywaj ustawienia proxy** — po włączeniu tego ustawienia urządzenie spróbuje znaleźć ścieżkę do skryptu PAC.
--   **Użyj skryptu serwera proxy** — zaznacz tę opcję, jeśli chcesz określić ścieżkę do skryptu PAC, aby skonfigurować serwer proxy.
+-   **Użyj skryptu serwera proxy** — wybierz tę opcję, jeśli chcesz określić ścieżkę do skryptu PAC, aby skonfigurować serwer proxy.
     -   **Adres URL skryptu konfiguracji** — wprowadź adres URL skryptu PAC, którego chcesz użyć do skonfigurowania serwera proxy.
 -   **Użyj ręcznego serwera proxy** — wybierz tę opcję, jeśli chcesz ręcznie wprowadzać informacje o serwerze proxy.
     -   **Adres** — wprowadź nazwę lub adres IP serwera proxy.
@@ -374,12 +394,15 @@ Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie
 
 ## <a name="cloud-printer"></a>Drukarka w chmurze
 
-- **Adres URL na potrzeby wykrywania drukarek** — punkt końcowy służący do wykrywania drukarek w chmurze.
-- **Adres URL urzędu dostępu do drukarek** — punkt końcowy uwierzytelniania na potrzeby pobierania tokenów OAuth.
-- **Identyfikator GUID aplikacji klienta natywnego platformy Azure** — identyfikator GUID aplikacji klienckiej uprawnionej do pobierania tokenów OAuth z urzędu OAuthAuthority.
-- **Identyfikator URI zasobu usługi drukowania** — identyfikator URI zasobu OAuth dla usługi drukowania skonfigurowanej w witrynie Azure Portal.
-- **Maksymalna liczba drukarek do uwzględnienia w zapytaniu (tylko wersja mobilna)** — maksymalna liczba drukarek, która powinna zostać uwzględniona w zapytaniu z punktu końcowego wykrywania.
-- **Identyfikator URI zasobu usługi wykrywania drukarek** — identyfikator URI zasobu OAuth dla usługi wykrywania drukarek skonfigurowany w witrynie Azure Portal.
+- **Adres URL na potrzeby wykrywania drukarek** — wprowadź adres URL służący do wykrywania drukarek w chmurze.
+- **Adres URL urzędu dostępu do drukarek** — wprowadź adres URL punktu końcowego uwierzytelniania na potrzeby pobierania tokenów OAuth. Na przykład wpisz coś takiego: `https://login.microsoftonline.com/your Azure AD Tenant ID`.
+- **Identyfikator GUID aplikacji klienta natywnego platformy Azure** — wprowadź identyfikator GUID aplikacji klienckiej autoryzowanej do pobierania tokenów OAuth z urzędu OAuthAuthority.
+- **Identyfikator URI zasobu usługi drukowania** — wprowadź identyfikator URI zasobu OAuth dla usługi drukowania skonfigurowanej w witrynie Azure Portal. Na przykład wpisz coś takiego: `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
+- **Maksymalna liczba drukarek do uwzględnienia w zapytaniu (tylko wersja mobilna)** — wprowadź maksymalną liczbę drukarek, która powinna zostać uwzględniona w zapytaniu. Na przykład wprowadź `10`.
+- **Identyfikator URI zasobu usługi wykrywania drukarek** — wprowadź identyfikator URI zasobu OAuth dla usługi wykrywania drukarek skonfigurowany w witrynie Azure Portal. Na przykład wpisz coś takiego: `http://MopriaDiscoveryService/CloudPrint`.
+
+> [!TIP]
+> Po skonfigurowaniu [hybrydowego drukowania w chmurze systemu Windows Server](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview) można skonfigurować te ustawienia, a następnie wdrożyć je na urządzeniach z systemem Windows.
 
 ## <a name="local-printer"></a>Drukarka lokalna
 - **Drukarki** — lista dodanych drukarek lokalnych.

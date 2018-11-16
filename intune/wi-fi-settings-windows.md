@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/8/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 2252c81757b7745ed15ca86a4e7db310f03df19d
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298160"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune
 
@@ -57,6 +57,9 @@ W tym artykule opisano te ustawienia.
   - **WPA/WPA2-Personal**: opcja zapewniająca większe bezpieczeństwo, która jest często używana w przypadku łączności Wi-Fi. Aby uzyskać lepsze zabezpieczenia, możesz także wprowadzić hasło w postaci klucza wstępnego lub klucz sieci. 
 
     - **Klucz wstępny** (PSK): opcjonalnie. Wyświetlana po wybraniu typu zabezpieczeń **WPA/WPA2-Personal**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego. Wprowadź ciąg zawierający od 8 do 64 znaków. Jeśli hasło lub klucz sieci ma 64 znaki, wprowadź znaki szesnastkowe.
+    
+      > [!NOTE]
+      > Jeśli zapiszesz profil Wi-Fi, wprowadzona wartość klucza wstępnego nie zostanie wyświetlona z przyczyn bezpieczeństwa. Znak wodny klucza wstępnego nadal będzie wyświetlany jako **Nieskonfigurowany**, mimo że klucz wstępny jest zapisany w profilu. Aby zmienić klucz wstępny, wprowadź nowy klucz i zapisz profil. Jeśli zapiszesz klucz wstępny, edytujesz zasadę i zostawisz pole klucza wstępnego puste, to nadal używany będzie istniejący klucz wstępny.
 
 - **Ustawienia serwera proxy firmy**: wybierz sposób użycia ustawień serwera proxy w organizacji. Dostępne opcje:
   - **Brak**: nie są konfigurowane żadne ustawienia serwera proxy.

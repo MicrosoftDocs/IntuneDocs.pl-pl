@@ -15,12 +15,12 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 120478644743619dbcfc5e8e36806a1109924331
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 7ce54f3bc51735c763359b3e59832454d0a89fad
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50972778"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298092"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Active Directory przy użyciu usługi Intune i rozwiązania Windows Autopilot (wersja zapoznawcza)
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory. Aby to zrobić, wykonaj poniższe czynności.
@@ -30,7 +30,7 @@ Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Pomyślnie skonfigurowano [urządzenia przyłączone do hybrydowej usługi Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
+- Pomyślnie skonfigurowano [urządzenia przyłączone do hybrydowej usługi Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
     - [Sprawdzono rejestrację za pomocą polecenia cmdlet Get-MsolDevice]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration).
 
 Urządzenia, które mają zostać zarejestrowane, muszą spełniać również następujące warunki:
@@ -65,7 +65,7 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 
 ## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Zwiększanie limitu kont komputerów w jednostce organizacyjnej
 
-Łącznik usługi Intune dla usługi Active Directory tworzy komputery rejestrujące się za pomocą rozwiązania Autopilot w lokalnej domenie usługi Active Directory. Komputer hostujący łącznik usługi Intune musi mieć uprawnienie do tworzenia obiektów komputerów w ramach domeny. 
+Łącznik usługi Intune dla usługi Active Directory tworzy komputery rejestrujące się za pomocą rozwiązania Autopilot w lokalnej domenie usługi Active Directory. Komputer hostujący łącznik usługi Intune musi mieć uprawnienia do tworzenia obiektów komputerów w ramach domeny. 
 
 W przypadku niektórych domen komputerom nie są przyznawane uprawnienia do tworzenia komputerów. Możliwe jest również, że administratorzy nie chcą zwiększać limitu kont komputerów na poziomie domeny. W takich sytuacjach prawa można delegować do jednostki organizacyjnej, w której tworzone są urządzenia przyłączone do hybrydowej usługi Active Directory.
 
@@ -110,7 +110,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 Łącznik usługi Intune dla usługi Active Directory musi być zainstalowany na komputerze z systemem Windows Server 2016, który ma dostęp do Internetu i usługi Active Directory. W celu zwiększenia skalowalności i dostępności lub obsługi wielu domen usługi Active Directory można zainstalować wiele łączników w danym środowisku. Zaleca się instalowanie łącznika na serwerze, na którym nie są uruchomione inne łączniki usługi Intune.
 
-1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** > **Dodaj łącznik**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** > **Dodaj łącznik**. 
 2. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
 3. Otwórz pobrany plik konfiguracji łącznika, aby zainstalować łącznik (ODJConnectorBootstrapper.exe).
 4. Po zakończeniu instalacji wybierz pozycję **Konfiguruj**.
@@ -124,7 +124,7 @@ Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, postępuj
 
 
 ## <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycje **Grupy** > **Nowa grupa**.
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Grupy** > **Nowa grupa**.
 2. W bloku **Grupa**:
     1. Dla ustawienia **Typ grupy** wybierz pozycję **Zabezpieczenia**.
     2. Wpisz odpowiedni tekst w polach **Nazwa grupy** i **Opis grupy**.
@@ -175,7 +175,7 @@ Po zarejestrowaniu urządzeń z rozwiązaniem Autopilot ich nazwy zmienią się 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Tworzenie i przypisywanie profilu wdrażania rozwiązania Autopilot
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot.
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Profile wdrażania**  >  **Utwórz profil**.
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Podaj **nazwę** i opcjonalny **opis**.
 3. W obszarze **Tryb wdrożenia** wybierz pozycję **Sterowane przez użytkownika**.
 4. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączone do hybrydowej usługi Azure AD (wersja zapoznawcza)**.
@@ -188,21 +188,21 @@ Zmiana stanu urządzenia z wartości **Nieprzypisane** do wartości **Przypisywa
 
 ## <a name="turn-on-the-enrollment-status-page-optional"></a>Włączanie strony stanu rejestracji (opcjonalnie)
 
-1.  W usłudze [Intune](https://aka.ms/intuneportal) wybierz **Rejestracja urządzenia** > **Rejestracja systemu Windows** > **Strona ze stanem rejestracji (wersja zapoznawcza)**.
-2.  W bloku **Strona ze stanem rejestracji** wybierz pozycje **Domyślne** > **Ustawienia**.
-3.  Aby **wyświetlić postęp instalacji aplikacji i profilu**, wybierz pozycję **Tak**.
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz **Rejestracja urządzenia** > **Rejestracja systemu Windows** > **Strona ze stanem rejestracji (wersja zapoznawcza)**.
+2. W bloku **Strona ze stanem rejestracji** wybierz pozycje **Domyślne** > **Ustawienia**.
+3. Aby **wyświetlić postęp instalacji aplikacji i profilu**, wybierz pozycję **Tak**.
 4. Zgodnie z potrzebami skonfiguruj inne opcje.
-5.  Wybierz polecenie **Zapisz**.
+5. Wybierz polecenie **Zapisz**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Tworzenie i przypisywanie profilu przyłączania do domeny
 
-1. W usłudze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 2. Wprowadź następujące właściwości:
    - **Nazwa**: wprowadź opisową nazwę nowego profilu.
    - **Opis:** wprowadź opis profilu.
    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
    - **Typ profilu**: wybierz pozycję **Przyłączanie do domeny (wersja zapoznawcza)**.
-3.  Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i **Jednostka organizacyjna** (opcjonalnie). 
+3. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i **Jednostka organizacyjna** (opcjonalnie). 
 4. Wybierz pozycję **OK** > **Utwórz**. Profil zostanie utworzony i wyświetlony na liście.
 5. Aby przypisać ten profil, wykonaj kroki w obszarze [Przypisywanie profilu urządzenia](device-profile-assign.md#assign-a-device-profile). 
 

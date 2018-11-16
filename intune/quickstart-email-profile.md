@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/29/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b797951c878dd90cbb7bb716b5108f94f48921c5
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 21dda51d2ddde74f07fcc173c5a4dd2a13c9c8b8
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231954"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225751"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Przewodnik Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
 
@@ -69,7 +69,7 @@ Jeśli nie zamierzasz używać utworzonego profilu w dodatkowych samouczkach ani
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku Szybki start utworzono profil poczty e-mail dla urządzeń z systemem iOS. Teraz za pomocą tego profilu można ustalić, czy urządzenie z systemem iOS jest zgodne, tworząc zasady zgodności oznaczające jako niezgodne wszystkie urządzenia z systemem iOS, które nie pasują do profilu. W celu zapewnienia dodatkowej ochrony można utworzyć zasady dostępu warunkowego blokujące niezgodnym urządzeniom z systemem iOS dostęp do poczty e-mail.
+W tym przewodniku Szybki start utworzono profil poczty e-mail dla urządzeń z systemem iOS. Teraz za pomocą tego profilu można ustalić, czy urządzenie z systemem iOS jest zgodne, tworząc zasady zgodności oznaczające jako niezgodne wszystkie urządzenia z systemem iOS, które nie pasują do profilu. W celu zapewnienia dodatkowej ochrony można utworzyć zasady dostępu warunkowego blokujące niezgodnym urządzeniom z systemem iOS dostęp do poczty e-mail. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md)
+> [Samouczek: chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych](tutorial-protect-email-on-enrolled-devices.md)

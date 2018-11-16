@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 11/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2a4b4a4b2b0df706504e76b418c5b87eb66b1111
-ms.sourcegitcommit: 23997b701365bb514347d75edc2357eff1f1443f
+ms.openlocfilehash: 87f49c9aafa8b6f9f281a00e4d7bd297c354f90b
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237667"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51511042"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
@@ -391,6 +391,28 @@ Po rozwiązaniu problemów z tokenem VPP należy wyczyścić urządzenia, które
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Informowanie użytkowników, aby ponownie uruchomili proces rejestracji
 Po wyczyszczeniu zablokowanych urządzeń możesz poprosić użytkowników o ponowne uruchomienie procesu rejestracji.
+
+## <a name="macos-issues"></a>Problemy z systemem macOS
+
+### <a name="macos-enrollment-errors"></a>Błędy rejestracji systemu macOS
+**Komunikat o błędzie 1:** *Prawdopodobnie używasz maszyny wirtualnej. Upewnij się, że została ona w pełni skonfigurowana, łącznie z numerem seryjnym i modelem sprzętu. Jeśli to nie jest maszyna wirtualna, skontaktuj się z pomocą techniczną.*  
+
+**Komunikat o błędzie 2:** *Mamy problem z objęciem urządzenia zarządzaniem. Ten problem może być spowodowany tym, że używasz maszyny wirtualnej, masz zastrzeżony numer seryjny albo to urządzenie jest już przypisane do kogoś innego. Dowiedz się, jak rozwiązać te problemy, lub skontaktuj się z pomocą techniczną w swojej firmie.*
+
+**Problem:** Przyczyny tego komunikatu mogą być następujące:  
+* Maszyna wirtualna z systemem macOS nie jest skonfigurowana poprawnie  
+* Włączono ograniczenia dotyczące urządzeń, w myśl których urządzenie musi należeć do firmy lub mieć numer seryjny zarejestrowany w usłudze Intune  
+* Urządzenie zostało już zarejestrowane i ciągle jest przypisane w usłudze Intune do kogoś innego  
+
+**Rozwiązanie:** Najpierw skontaktuj się z użytkownikiem i dowiedz się, jakie problemy ma ze swoim urządzeniem. Następnie zastosuj najtrafniejsze z następujących rozwiązań:
+* Jeśli użytkownik rejestruje maszynę wirtualną do testowania, upewnij się, że została w pełni skonfigurowana, aby usługa Intune mogła rozpoznać jej numer seryjny i model sprzętu. Dowiedz się więcej na temat tego, jak [konfigurować maszyny wirtualne](macos-enroll.md#enroll-virtual-macos-machines-for-testing) w usłudze Intune.  
+* Jeśli w organizacji masz włączone ograniczenia rejestracji, które blokują urządzenia osobiste z systemem macOS, musisz ręcznie [dodać numer seryjny urządzenia osobistego](corporate-identifiers-add.md#manually-enter-corporate-identifiers) do usługi Intune.  
+* Jeśli urządzenie jest nadal przypisane do innego użytkownika w usłudze Intune, jego poprzedni właściciel nie użył aplikacji Portal firmy do usunięcia lub zresetowania go. Aby wyczyścić nieaktualny rekord urządzenia z usługi Intune:  
+
+    1. Przejdź do [usługi Intune w witrynie Azure Portal](https://portal.manage.microsoft.com) i zaloguj się przy użyciu poświadczeń administracyjnych.
+    2. Przejdź do pozycji Intune > **Urządzenia** > **Wszystkie urządzenia**.  
+    3. Znajdź urządzenie, dla którego występuje problem z rejestracją. Ogranicz liczbę wyników, wyszukując według nazwy urządzenia lub adresu MAC/sprzętu.
+    4. Wybierz urządzenie, a następnie pozycję **Usuń**. Usuń wszystkie inne wpisy skojarzone z urządzeniem.  
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu System Center Configuration Manager z usługą Intune
 ### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają

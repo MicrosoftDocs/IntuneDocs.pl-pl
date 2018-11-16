@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: 5c83af252b1c728b9e3d4015cdc8bb4fd3668ad1
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410773"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561928"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Przewodnik Szybki start: tworzenie i przypisywanie roli niestandardowej
 
@@ -64,7 +64,9 @@ Jeśli nie chcesz już używać nowej roli niestandardowej, możesz ją usunąć
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku Szybki start utworzono rolę niestandardową do operacji zabezpieczeń i przypisano ją grupie. Poniższy artykuł pozwala dowiedzieć się więcej na temat problemów z zabezpieczeniami.
+W tym przewodniku Szybki start utworzono rolę niestandardową do operacji zabezpieczeń i przypisano ją grupie. Aby uzyskać więcej informacji na temat ról w usłudze Intune, zobacz [Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Microsoft Intune](role-based-access-control.md)
+
+Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md)
+> [Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS](quickstart-email-profile.md)
